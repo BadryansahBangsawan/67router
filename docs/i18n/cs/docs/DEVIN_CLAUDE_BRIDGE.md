@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` umožňuje skutečnému běhovému prostředí Claude Code používat místní
-koncový bod Anthropic Messages služby OmniRoute, zatímco oficiální Devin CLI poskytuje odpovědi
+koncový bod Anthropic Messages služby 67router, zatímco oficiální Devin CLI poskytuje odpovědi
 modelu přes ACP stdio. Nemění stávající poskytovatele Anthropic, Claude OAuth, Claude Web ani
 `devin-cli`.
 
@@ -21,7 +21,7 @@ směrování vyžadující nástroje vyhne.
 > prokázal klientem prováděné kroky `Read`, `Edit` a `Bash`, úspěšné výsledky `npm test`,
 > rozpoznání projektových příkazů a dovedností, směrování výhradně přes Devin a nulovou odchozí
 > komunikaci Claude. Připnutí bylo následně zvýšeno na `2.1.258` (generaci CLI, za kterou se
-> vydává identita Claude služby OmniRoute, a první řadu, která nativně obsahuje úroveň Fable
+> vydává identita Claude služby 67router, a první řadu, která nativně obsahuje úroveň Fable
 > 5.1). U nového připnutí byla na připnutém základním obrazu ověřena instalační vrstva a
 > `claude --version` a úspěšně prochází jednotková sada testů mostu, `compose config` i
 > statický důkaz izolace — offline scénář s mocky a živá sada tří scénářů však dosud nebyly
@@ -53,11 +53,11 @@ nástrojů používají viditelnou značku zkrácení.
 Parser přijímá jednu samostatnou obálku `<tool>{...}</tool>` v každém tahu modelu. Ověřuje
 název podle seznamu nástrojů v požadavku, validuje argumenty vůči JSON Schema daného nástroje,
 odmítá kombinaci popisného textu a akcí a povoluje jeden omezený pokus o opravu. Claude Code
-poté výsledný Anthropic `tool_use` spustí místně a odešle `tool_result` zpět přes OmniRoute.
+poté výsledný Anthropic `tool_use` spustí místně a odešle `tool_result` zpět přes 67router.
 
 ## Automatické směrování
 
-Poskytovatel může být zařazen do fondů kandidátů `auto/*` služby OmniRoute, pokud není
+Poskytovatel může být zařazen do fondů kandidátů `auto/*` služby 67router, pokud není
 zablokován. Způsobilost kandidáta nezaručuje jeho výběr: strategie směrování dané kombinace
 (například last-known-good) může upřednostnit jiného poskytovatele. Pokud požadujete, aby
 každý požadavek procházel přes Devin, použijte `dva/<model>` nebo kombinaci upřednostňující
@@ -70,17 +70,17 @@ zakázané. Služby Compose:
 
 - běží s UID/GID `10001:10001`, kořenovým souborovým systémem pouze pro čtení, odebranými oprávněními a
   volbou `no-new-privileges`;
-- používají soukromý adresář `/home/bridge`, vyhrazený svazek s konfigurací Claude, izolovaná data OmniRoute
+- používají soukromý adresář `/home/bridge`, vyhrazený svazek s konfigurací Claude, izolovaná data 67router
   a samostatný svazek `devin-auth`;
 - připojují pouze jednorázové pracovní prostory a důkazy `.sandbox`;
 - nepřipojují domovský adresář hostitele, Klíčenku, přihlašovací údaje SSH či cloudových služeb ani soket Dockeru;
 - vytvářejí explicitní prostředí a odstraňují proměnné API/OAuth/směrování Anthropic;
 - směrují inferenci Claude Code výhradně na `http://omniroute:20128` pomocí klíče platného pouze lokálně.
 
-Offline profil používá interní síť. V živém profilu přistupuje OmniRoute k
+Offline profil používá interní síť. V živém profilu přistupuje 67router k
 oficiálním koncovým bodům Devin pouze prostřednictvím `network-guard`; ostatní cíle jsou zamítnuty.
 Claude Code má samostatnou ochranu odchozího provozu, která vše blokuje, a může přistupovat pouze k místní službě
-OmniRoute prostřednictvím `NO_PROXY`. Auditní soubory ochranných mechanismů připojuje pouze příslušný proces ochrany.
+67router prostřednictvím `NO_PROXY`. Auditní soubory ochranných mechanismů připojuje pouze příslušný proces ochrany.
 Skripty před exportem důkazů bez tokenů ověřují vlastnictví souborů, režim, počet odkazů
 a každé rozhodnutí.
 

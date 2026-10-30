@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic`, gerçek Claude Code çalışma zamanının OmniRoute'un yerel Anthropic
+`devin-cli-agentic`, gerçek Claude Code çalışma zamanının 67router'un yerel Anthropic
 Messages uç noktasını kullanmasını sağlarken resmî Devin CLI, ACP stdio üzerinden model yanıtlarını
 sağlar. Mevcut Anthropic, Claude OAuth, Claude Web veya `devin-cli` sağlayıcılarını
 değiştirmez.
@@ -20,7 +20,7 @@ combo yönlendirmesi onu kullanmaz.
 > `swe-1-7-lightning` modeli üzerinden üç yalıtılmış senaryoyu tamamladı; bu son canlı çalıştırma,
 > istemciye ait `Read`, `Edit` ve `Bash` turlarını, başarılı `npm test` sonuçlarını, proje komutu ve
 > beceri keşfini, yalnızca Devin üzerinden yönlendirmeyi ve Claude'a sıfır çıkışı doğruladı. Ardından
-> sabitleme `2.1.258` sürümüne yükseltildi (OmniRoute'un Claude kimliğinin taklit ettiği CLI nesli ve
+> sabitleme `2.1.258` sürümüne yükseltildi (67router'un Claude kimliğinin taklit ettiği CLI nesli ve
 > Fable 5.1 katmanını yerel olarak sunan ilk sürüm). Yeni sabitlemede, sabitlenmiş temel imaj üzerinde
 > kurulum katmanı ve `claude --version` doğrulandı; köprü birim testleri, `compose config` ve
 > statik yalıtım kanıtı başarılı — ancak çevrimdışı sahte senaryo ve canlı üç senaryolu
@@ -52,11 +52,11 @@ Ayrıştırıcı, her model turunda tek bir bağımsız `<tool>{...}</tool>` zar
 isteğin araç listesine göre denetler, bağımsız değişkenleri ilgili aracın JSON Schema'sına göre
 doğrular, anlatı ile eylemlerin karıştırılmasını reddeder ve sınırlandırılmış tek bir düzeltmeye
 izin verir. Ardından Claude Code, elde edilen Anthropic `tool_use` işlemini yerel olarak yürütür
-ve `tool_result` sonucunu OmniRoute üzerinden geri gönderir.
+ve `tool_result` sonucunu 67router üzerinden geri gönderir.
 
 ## Otomatik yönlendirme
 
-Sağlayıcı, engellenmediği sürece OmniRoute'un `auto/*` aday havuzlarında kullanılabilir.
+Sağlayıcı, engellenmediği sürece 67router'un `auto/*` aday havuzlarında kullanılabilir.
 Aday uygunluğu seçilmeyi garanti etmez: combo'nun yönlendirme stratejisi (örneğin,
 last-known-good) başka bir sağlayıcıyı tercih edebilir. Her isteğin Devin üzerinden
 geçmesini zorunlu kılmak istediğinizde `dva/<model>` veya Devin'i önceliklendiren bir combo kullanın.
@@ -68,7 +68,7 @@ edilir. Compose hizmetleri:
 
 - UID/GID `10001:10001` ile, salt okunur bir kök dosya sistemi, kaldırılmış yetenekler ve
   `no-new-privileges` ile çalışır;
-- özel bir `/home/bridge`, ayrılmış bir Claude yapılandırma birimi, yalıtılmış OmniRoute verileri
+- özel bir `/home/bridge`, ayrılmış bir Claude yapılandırma birimi, yalıtılmış 67router verileri
   ve ayrı bir `devin-auth` birimi kullanır;
 - yalnızca tek kullanımlık `.sandbox` çalışma alanlarını/kanıtlarını bağlar;
 - ana makinenin ev dizinini, Keychain'i, SSH'yi, bulut kimlik bilgilerini veya Docker soketini bağlamaz;
@@ -76,10 +76,10 @@ edilir. Compose hizmetleri:
 - Claude Code çıkarımını yalnızca, sadece yerel olarak kullanılabilen bir anahtarla
   `http://omniroute:20128` adresine yönlendirir.
 
-Çevrimdışı profil bir iç ağ kullanır. Canlı profilde OmniRoute, resmi Devin uç noktalarına
+Çevrimdışı profil bir iç ağ kullanır. Canlı profilde 67router, resmi Devin uç noktalarına
 yalnızca `network-guard` üzerinden erişir; ilgisiz hedefler reddedilir.
 Claude Code'un ayrı bir tüm giden trafiği reddetme koruması vardır ve yalnızca `NO_PROXY`
-üzerinden yerel OmniRoute hizmetine erişebilir. Koruma denetim dosyaları yalnızca ilgili
+üzerinden yerel 67router hizmetine erişebilir. Koruma denetim dosyaları yalnızca ilgili
 koruma süreçleri tarafından bağlanır. Betikler, token içermeyen kanıtları dışa aktarmadan
 önce dosya sahipliğini, kipini, bağlantı sayısını ve her kararı doğrular.
 

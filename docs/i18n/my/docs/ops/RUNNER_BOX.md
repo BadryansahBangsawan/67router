@@ -5,7 +5,7 @@
 ---
 
 ကိုယ်တိုင်ဟို့စ်တင်ထားသော pool သည် **.113** စက် (`tomni-proxmox-113`) ပေါ်တွင် အလုပ်လုပ်ပါသည်။ 2026-10-18 မှစ၍
-OmniRoute runner တစ်ခုစီတွင် **တာဝန်တစ်ခု**၊ label တစ်ခုနှင့် ၎င်း၏ workload ကို တိုင်းတာရရှိထားသည့်အတိုင်း သတ်မှတ်ထားသော memory/CPU budget တစ်ခုစီ ရှိပါသည်။
+67router runner တစ်ခုစီတွင် **တာဝန်တစ်ခု**၊ label တစ်ခုနှင့် ၎င်း၏ workload ကို တိုင်းတာရရှိထားသည့်အတိုင်း သတ်မှတ်ထားသော memory/CPU budget တစ်ခုစီ ရှိပါသည်။
 Turbopack slot ကို build အတွက် လိုအပ်သည့် resource များ ပေးထားပြီး၊ အခြား slot များကို ၎င်းတို့၏
 တိုင်းတာရရှိထားသည့် အမြင့်ဆုံးအသုံးပြုမှုများအတိုင်း သတ်မှတ်ထားပါသည်။ Turbopack build၊ Release-Green
 webpack build နှင့် lint job တို့ တစ်ချိန်တည်း တိုက်ဆိုင်သည့်အခါမှသာ စက်တွင် သတ်မှတ်ပမာဏထက် ပိုမိုခွဲဝေသုံးစွဲပါသည်။ ထိုအခြေအနေကို host swap (16 GB) က ထိန်းပေးပြီး pull-request Build များသည်
@@ -27,7 +27,7 @@ hosted ပတ်ဝန်းကျင်တွင် အလုပ်လုပ်
 | swap      | 16 GB                                             | `omniroute-113-5` သည် swap ပိတ်ထားပြီး (`MemorySwapMax=0`) အလုပ်လုပ်သဖြင့် ထိန်းချုပ်မရသော build တစ်ခုသည် စက်ကို swap အသုံးပြုစေမည့်အစား ၎င်း၏ ကန့်သတ်ချက်သို့ ရောက်သောအခါ ရပ်တန့်ခံရပါသည်                                                                                                                                                                                                                                                                                        |
 | `/tmp`    | **12 GB tmpfs = RAM**                             | ထိုနေရာတွင် သိမ်းထားသည့် မည်သည့်အရာမဆို memory ကို အသုံးပြုပါသည်။ ကျန်ရှိနေသောအရာများကို 3 h ကြာပြီးနောက် ရှင်းလင်းပါသည်                                                                                                                                                                                                                                                                                                                                                          |
 | CPU       | 32 cores ပေါ်တွင် load 60 ရှိသည်ကို တွေ့ရှိခဲ့သည် | quota များ မသတ်မှတ်မီ စက်တစ်ခုတည်းပေါ်ရှိ Turbopack build တစ်ခု (~1166 % CPU) နှင့် coverage suite တစ်ခုတို့က အခြား listener များ၏ heartbeat များအတွက် resource မလုံလောက်စေခဲ့ပါသည် (`The self-hosted runner lost communication`၊ #16853)                                                                                                                                                                                                                                         |
-| runners   | **6 listeners**                                   | OmniRoute 4 ခု + OmniHeuris + OmniMind။ `omniroute-113-3/-4/-7/-8` ကို ပိတ်ထားသည် (`systemctl enable --now` ဖြင့် တစ်ခုကို ပြန်ဖွင့်နိုင်သည်)                                                                                                                                                                                                                                                                                                                                     |
+| runners   | **6 listeners**                                   | 67router 4 ခု + OmniHeuris + OmniMind။ `omniroute-113-3/-4/-7/-8` ကို ပိတ်ထားသည် (`systemctl enable --now` ဖြင့် တစ်ခုကို ပြန်ဖွင့်နိုင်သည်)                                                                                                                                                                                                                                                                                                                                      |
 
 ကန့်သတ်ချက်များကို unit တစ်ခုစီ၏ `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 တွင် ထားရှိပြီး (ယခင်တန်ဖိုးများကို `override.conf.bak-20261018` အဖြစ် သိမ်းထားသည်)၊
@@ -81,7 +81,7 @@ SIGTERM ပို့ပါ — `next-build`, `npm run build`, `build-next-isolat
 Runner ၏ မူလ `KillMode=process` သည် unit တစ်ခုကို ရပ်တန့်ခြင်း သို့မဟုတ်
 ပြန်လည်စတင်ခြင်းပြုသည့်အခါ `Runner.Worker → npm → next-build` ကို ဆက်လက်
 အသက်ရှင်စေသည် — ချိတ်ဆက်ထားသော job မရှိသည့် orphan build သည် RAM နှင့်
-CPU ကို ဆက်လက်သုံးစွဲနေမည်။ OmniRoute unit တိုင်းတွင်
+CPU ကို ဆက်လက်သုံးစွဲနေမည်။ 67router unit တိုင်းတွင်
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ဟူသော drop-in တစ်ခုနှင့် `KillMode=mixed` ပါရှိသည်။ ပထမဦးစွာ listener သို့ SIGTERM
 ပို့ပြီး `TimeoutStop` တွင် cgroup တစ်ခုလုံးသို့ SIGKILL ပို့သည်။ ၎င်းသည် unit ကို
@@ -127,7 +127,7 @@ idle ဖြစ်နေချိန်တွင်သာ** ပြန်လည်
   backend-only `next build` (~5–6 GB; webpack) လိုအပ်သော nightly များနှင့် `quality.yml` `lint-guard` ကို run သည်။ `omniroute-113`
   တွင် 2026-10-18 အထိ `MemoryHigh=4G` သာ ရှိခဲ့သည် — promptfoo build သည် ထိုနေရာတွင် memory ကို ထပ်ခါတလဲလဲ reclaim လုပ်ရင်း 54 minutes ကြာခဲ့သည်။
   8 GB သည် throttling ကို ဖယ်ရှားပေးသည်။
-- **ရည်ရွယ်ချက်ရှိရှိ listener အရေအတွက် လျှော့ထားသည်။** OmniRoute unit လေးခုကို 2026-08-29 တွင် disable လုပ်ခဲ့သည် — ထပ်တိုး
+- **ရည်ရွယ်ချက်ရှိရှိ listener အရေအတွက် လျှော့ထားသည်။** 67router unit လေးခုကို 2026-08-29 တွင် disable လုပ်ခဲ့သည် — ထပ်တိုး
   listener တစ်ခုစီသည် အထက်ပါ memory budget ကို မျှဝေသုံးစွဲမည့် tenant နောက်တစ်ခု ဖြစ်သည်။ Janitor ၏ အများဆုံးကန့်သတ်ချက်မှာ 6 ဖြစ်သည် (`MAX_ACTIVE_RUNNERS=6` in cron)။ ၎င်းသည်
   စက်ပေါ်ရှိ `Runner.Listener` တိုင်းကို ရေတွက်ပြီး OmniHeuris + OmniMind က ကျွန်ုပ်တို့၏ လေးခုအပြင် နောက်ထပ်နှစ်ခု ထည့်ပေးသည်။
 - **မည်သည့် runner မဆို အလုပ်များနေစဉ် `/tmp` သို့မဟုတ် `_work` ကို လက်ဖြင့် မည်သည့်အခါမျှ မရှင်းလင်းပါနှင့်။**

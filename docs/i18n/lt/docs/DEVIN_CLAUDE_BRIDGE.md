@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` leidžia tikrajai Claude Code vykdymo aplinkai naudoti OmniRoute vietinį Anthropic
+`devin-cli-agentic` leidžia tikrajai Claude Code vykdymo aplinkai naudoti 67router vietinį Anthropic
 Messages galinį tašką, o oficiali Devin CLI per ACP stdio pateikia modelio atsakymus. Jis
 nekeičia esamų Anthropic, Claude OAuth, Claude Web ar `devin-cli` teikėjų.
 
@@ -18,7 +18,7 @@ metaduomenys atitinkamai pažymėti, todėl derinių maršruto parinkimas, kuria
 > `3000.2.17` ir modelį `swe-1-7-lightning`; šis galutinis tiesioginis vykdymas patvirtino kliento valdomus `Read`,
 > `Edit` ir `Bash` veiksmus, sėkmingus `npm test` rezultatus, projekto komandų ir gebėjimų
 > aptikimą, maršruto parinkimą tik per Devin ir tai, kad nebuvo jokio išeinančio Claude srauto. Tada fiksuota versija buvo pakelta iki `2.1.258`
-> (CLI kartos, kuria apsimeta OmniRoute Claude tapatybė, ir pirmosios versijos, kurioje
+> (CLI kartos, kuria apsimeta 67router Claude tapatybė, ir pirmosios versijos, kurioje
 > Fable 5.1 lygis pateikiamas savaime). Naudojant naują fiksuotą versiją, fiksuotame baziniame atvaizde buvo
 > patikrintas diegimo sluoksnis ir `claude --version`, o tilto vienetinių testų rinkinys, `compose config` ir
 > statinis izoliacijos įrodymas yra sėkmingi, tačiau autonominis maketinis scenarijus ir tiesioginis trijų scenarijų
@@ -50,12 +50,12 @@ naudojamas matomas sutrumpinimo žymeklis.
 Analizatorius priima vieną atskirą `<tool>{...}</tool>` apvalkalą per kiekvieną modelio atsakymą. Jis patikrina
 pavadinimą pagal užklausos įrankių sąrašą, patvirtina argumentus pagal to įrankio JSON
 Schema, atmeta pasakojimo ir veiksmų mišinį bei leidžia vieną ribotą taisymo bandymą. Tada Claude Code
-vietoje įvykdo gautą Anthropic `tool_use` ir per OmniRoute išsiunčia
+vietoje įvykdo gautą Anthropic `tool_use` ir per 67router išsiunčia
 `tool_result`.
 
 ## Automatinis maršruto parinkimas
 
-Kai teikėjas neužblokuotas, jį galima įtraukti į OmniRoute `auto/*` kandidatų telkinius.
+Kai teikėjas neužblokuotas, jį galima įtraukti į 67router `auto/*` kandidatų telkinius.
 Tinkamumas būti kandidatu negarantuoja pasirinkimo: derinio maršruto parinkimo strategija (pavyzdžiui,
 paskutinis sėkmingas variantas) gali teikti pirmenybę kitam teikėjui. Kai reikalaujate, kad kiekviena užklausa
 būtų nukreipta per Devin, naudokite `dva/<model>` arba derinį, kuriame pirmenybė teikiama Devin.
@@ -67,16 +67,16 @@ laikomi draudžiamais. Compose paslaugos:
 
 - veikia su UID/GID `10001:10001`, turi tik skaitomą šakninę failų sistemą, pašalintas galimybes ir
   `no-new-privileges`;
-- naudoja privatų `/home/bridge`, atskirą Claude konfigūracijos tomą, izoliuotus OmniRoute duomenis
+- naudoja privatų `/home/bridge`, atskirą Claude konfigūracijos tomą, izoliuotus 67router duomenis
   ir atskirą `devin-auth` tomą;
 - prijungia tik vienkartines `.sandbox` darbo sritis ir įrodymus;
 - neprijungia pagrindinio kompiuterio namų katalogo, Keychain, SSH, debesijos prisijungimo duomenų ar Docker lizdo;
 - sukuria aiškiai apibrėžtas aplinkas ir pašalina Anthropic API/OAuth/maršruto parinkimo kintamuosius;
 - nukreipia Claude Code išvadų generavimą tik į `http://omniroute:20128`, naudojant tik vietinį raktą.
 
-Neprisijungęs profilis naudoja vidinį tinklą. Aktyviajame profilyje OmniRoute oficialius
+Neprisijungęs profilis naudoja vidinį tinklą. Aktyviajame profilyje 67router oficialius
 Devin galinius taškus pasiekia tik per `network-guard`; nesusijusios paskirties vietos yra blokuojamos.
-Claude Code turi atskirą visą išeinantį srautą blokuojančią apsaugą ir per `NO_PROXY` gali pasiekti tik vietinę OmniRoute
+Claude Code turi atskirą visą išeinantį srautą blokuojančią apsaugą ir per `NO_PROXY` gali pasiekti tik vietinę 67router
 paslaugą. Apsaugos audito failus prijungia tik atitinkamas apsaugos procesas.
 Prieš eksportuodami įrodymus be prieigos raktų, scenarijai patikrina failų savininkus, režimą, nuorodų skaičių
 ir kiekvieną sprendimą.

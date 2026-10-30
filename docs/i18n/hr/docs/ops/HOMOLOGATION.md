@@ -4,7 +4,7 @@
 
 ---
 
-E2E validacija u stvarnom okruženju za OmniRoute implementaciju koja se izvodi na homologacijskom VPS-u
+E2E validacija u stvarnom okruženju za 67router implementaciju koja se izvodi na homologacijskom VPS-u
 (`HOMOLOG_BASE_URL`, npr. `http://192.168.0.15:20128`). Jedna naredba zamjenjuje ručni
 kontrolni popis izdanja STOP #2 automatiziranim izvođenjem koje generira dokaze.
 

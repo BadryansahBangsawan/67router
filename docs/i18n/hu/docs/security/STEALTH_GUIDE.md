@@ -8,11 +8,11 @@
 > **Legutóbbi frissítés:** 2026-09-02 — v3.8.51
 > **Célközönség:** Szolgáltatóspecifikus rejtőzködő integrációkat karbantartó mérnökök.
 
-Az OmniRoute olyan szolgáltatókkal integrálódik, amelyek peremhálózatai aktívan ujjlenyomatozzák a nem hivatalos klienseket (TLS JA3/JA4, fejlécek sorrendje, JSON-törzs szerkezete, integritási tokenek). Ez az oldal az OmniRoute által biztosított rejtőzködési felületeket és azok megvalósítási helyét dokumentálja.
+Az 67router olyan szolgáltatókkal integrálódik, amelyek peremhálózatai aktívan ujjlenyomatozzák a nem hivatalos klienseket (TLS JA3/JA4, fejlécek sorrendje, JSON-törzs szerkezete, integritási tokenek). Ez az oldal az 67router által biztosított rejtőzködési felületeket és azok megvalósítási helyét dokumentálja.
 
 ## Jogi és etikai tájékoztató
 
-A rejtőzködési funkciók azért léteznek, hogy az OmniRoute kompatibilitási rétegként működhessen a felhasználók saját hivatalos fiókjai (Claude Code CLI, Codex, Antigravity, Cursor stb.) és az OmniRoute egységes API-ja között. Ezek **nem** használhatók csalásészlelés megkerülésére, hitelesítő adatok megosztására vagy a szolgáltatói felhasználási feltételek megsértésére. A karbantartók elvárják az üzemeltetőktől, hogy betartsák a fiókok létrehozásakor elfogadott upstream felhasználási feltételeket.
+A rejtőzködési funkciók azért léteznek, hogy az 67router kompatibilitási rétegként működhessen a felhasználók saját hivatalos fiókjai (Claude Code CLI, Codex, Antigravity, Cursor stb.) és az 67router egységes API-ja között. Ezek **nem** használhatók csalásészlelés megkerülésére, hitelesítő adatok megosztására vagy a szolgáltatói felhasználási feltételek megsértésére. A karbantartók elvárják az üzemeltetőktől, hogy betartsák a fiókok létrehozásakor elfogadott upstream felhasználási feltételeket.
 
 ---
 
@@ -71,7 +71,7 @@ A profilokat a rögzített csomag támogatja, de a valós WAF-elfogadás a helyi
 
 ## Claude Code lopakodó csomag
 
-Amikor a `cliCompatMode` be van kapcsolva, az OmniRoute úgy alakítja át a kimenő Claude-kéréseket, hogy azok megkülönböztethetetlenek legyenek a `claude-cli` forgalmától. Három modul működik együtt:
+Amikor a `cliCompatMode` be van kapcsolva, az 67router úgy alakítja át a kimenő Claude-kéréseket, hogy azok megkülönböztethetetlenek legyenek a `claude-cli` forgalmától. Három modul működik együtt:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -87,7 +87,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (kliensoldali tartalomkivonat)
 
-Szerveroldali integritás-ellenőrzés, amelyet a hivatalos Claude Code CLI a Bun/Zig segítségével számít ki. Az OmniRoute ezt az `xxhash-wasm` használatával valósítja meg újra:
+Szerveroldali integritás-ellenőrzés, amelyet a hivatalos Claude Code CLI a Bun/Zig segítségével számít ki. Az 67router ezt az `xxhash-wasm` használatával valósítja meg újra:
 
 1. A törzs szerializálása `cch=00000;` helyőrzővel
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -133,7 +133,7 @@ Ugyanezen csomag kapcsolódó moduljai:
 
 ## Antigravity lopakodó mód
 
-Az Antigravity-kérések bájtról bájtra megőrzik a hívó szövegét. Az OmniRoute nem szúr zéró szélességű karaktereket a promptokba, és nem nevez át vagy injektál eszközöket egy IDE-kliens utánzásához.
+Az Antigravity-kérések bájtról bájtra megőrzik a hívó szövegét. Az 67router nem szúr zéró szélességű karaktereket a promptokba, és nem nevez át vagy injektál eszközöket egy IDE-kliens utánzásához.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -143,13 +143,13 @@ Továbbítás előtt eltávolítja a Stainless SDK jelölőit (`x-stainless-lang
 
 Az `ANTIGRAVITY_CREDITS=always` (amelyet az `open-sse/executors/antigravity.ts` használ fel) **minden** kérést az Antigravity AI Credit Overages szolgáltatáson (fizetős Google-krediteken) keresztül irányít, ahelyett, hogy a Google ingyenes csomagjának kvótája korlátozná a használatot. Ez funkcióként van dokumentálva, de **ez az általunk látott szolgáltatásifeltétel-sértési jelentések messze leggyakoribb oka** — több Google Ultra-fiókot is letiltottak `403 / "service disabled for ToS violation" / insufficient_quota` hibával, miután néhány órán át `=always` beállítással futottak.
 
-A felsőbb rétegbeli szabályérvényesítés **a Google oldalán** történik, ezt az OmniRoute nem tudja megakadályozni. A környezeti változó neve és a meglévő dokumentáció azt a benyomást kelti, hogy biztonságosan bekapcsolható; ez nem így van.
+A felsőbb rétegbeli szabályérvényesítés **a Google oldalán** történik, ezt az 67router nem tudja megakadályozni. A környezeti változó neve és a meglévő dokumentáció azt a benyomást kelti, hogy biztonságosan bekapcsolható; ez nem így van.
 
 **Miért vált ez ki agresszívebb visszaélés-észlelést, mint a kizárólag ingyenes csomagra korlátozott használat:**
 
 - Az egyetlen Google-fiókon keresztüli tartós, automatizált költést másként jelölik meg, mint amikor az ingyenes csomag eléri a kvótát, majd leáll.
 - A kredittúllépéseknek nincs sebességkorlátjuk, ezért egy hibásan konfigurált kliens percek alatt több száz USD-t költhet el, és API-kulcs-viszonteladásnak vagy botforgalomnak tűnhet.
-- Ha több OmniRoute-felhasználó párhuzamosan, ugyanarról a külső IP-címről használ túllépési krediteket, az tovább erősíti a jelzést.
+- Ha több 67router-felhasználó párhuzamosan, ugyanarról a külső IP-címről használ túllépési krediteket, az tovább erősíti a jelzést.
 
 **Javasolt eljárás:**
 
@@ -188,7 +188,7 @@ Szolgáltatónként kapcsolható környezeti változóval (lásd alább). Ha ki 
 
 ## MITM-proxy (Antigravity, Linux/macOS/Windows)
 
-Azon CLI-k esetében, amelyek bináris fájljai nem irányíthatók át az `OPENAI_BASE_URL` használatával, az OmniRoute helyi, TLS-t lezáró proxyt futtat. A végpontok a `src/app/api/cli-tools/antigravity-mitm/` alatt találhatók.
+Azon CLI-k esetében, amelyek bináris fájljai nem irányíthatók át az `OPENAI_BASE_URL` használatával, az 67router helyi, TLS-t lezáró proxyt futtat. A végpontok a `src/app/api/cli-tools/antigravity-mitm/` alatt találhatók.
 
 | Metódus | Végpont                                 | Cél                                                 |
 | ------- | --------------------------------------- | --------------------------------------------------- |
@@ -221,7 +221,7 @@ A `getLinuxCertConfig()` végigjár egy prioritási listát, és az első létez
 
 A tanúsítvány fájlneve: `omniroute-mitm.crt`. Az ujjlenyomat egyeztetése a `getCertFingerprint()` használatával történik (a DER SHA-1-kivonata).
 
-Emellett az `updateNssDatabases()` felhasználónkénti NSS-adatbázisokba telepíti a tanúsítványt, ha a `certutil` elérhető: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, valamint minden Firefox-profilba (a snap-verziókat is beleértve), **`OmniRoute MITM Root CA`** becenévvel.
+Emellett az `updateNssDatabases()` felhasználónkénti NSS-adatbázisokba telepíti a tanúsítványt, ha a `certutil` elérhető: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, valamint minden Firefox-profilba (a snap-verziókat is beleértve), **`67router MITM Root CA`** becenévvel.
 
 ### macOS / Windows
 
@@ -269,7 +269,7 @@ A szolgáltató IP-címe **mindig megmarad** — a kapcsoló csak a kérés hál
 
 ## Bejövő fejlécek megtisztítása
 
-Az OmniRoute továbbítás előtt megtisztítja a bejövő kliensfejléceket, így a Cursorból érkező kérés nem szivárogtatja ki a `User-Agent: Cursor/X.Y.Z` értéket egy Claude upstream felé. A tiltólistát lásd a `src/shared/constants/upstreamHeaders.ts` fájlban; ez szinkronban van tartva a Zod-sémákkal és az egységtesztekkel.
+Az 67router továbbítás előtt megtisztítja a bejövő kliensfejléceket, így a Cursorból érkező kérés nem szivárogtatja ki a `User-Agent: Cursor/X.Y.Z` értéket egy Claude upstream felé. A tiltólistát lásd a `src/shared/constants/upstreamHeaders.ts` fájlban; ez szinkronban van tartva a Zod-sémákkal és az egységtesztekkel.
 
 ---
 

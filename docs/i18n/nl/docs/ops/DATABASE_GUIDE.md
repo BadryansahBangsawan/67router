@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort samengevat**: OmniRoute gebruikt **SQLite met WAL-journaling** als primaire opslag, met **AES-256-GCM**-versleuteling van gevoelige velden wanneer deze zijn opgeslagen. Deze handleiding behandelt het schema, migraties, back-ups/herstel en operationele draaiboeken.
+> **Kort samengevat**: 67router gebruikt **SQLite met WAL-journaling** als primaire opslag, met **AES-256-GCM**-versleuteling van gevoelige velden wanneer deze zijn opgeslagen. Deze handleiding behandelt het schema, migraties, back-ups/herstel en operationele draaiboeken.
 
 **Bronnen:**
 
@@ -19,7 +19,7 @@
 
 ## Waarom SQLite?
 
-OmniRoute heeft om verschillende redenen voor SQLite gekozen in plaats van PostgreSQL/MySQL:
+67router heeft om verschillende redenen voor SQLite gekozen in plaats van PostgreSQL/MySQL:
 
 | Factor               | SQLite                                      | PostgreSQL                                        |
 | -------------------- | ------------------------------------------- | ------------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute heeft om verschillende redenen voor SQLite gekozen in plaats van Postg
 | **Back-up**          | Kopie van één bestand                       | `pg_dump` of momentopname van het bestandssysteem |
 | **Gebruiksscenario** | Installatie per gebruiker, ingebed          | SaaS met meerdere tenants                         |
 
-Voor implementaties met **één gebruiker en één instantie** (het primaire gebruiksscenario van OmniRoute) is SQLite eenvoudiger en sneller.
+Voor implementaties met **één gebruiker en één instantie** (het primaire gebruiksscenario van 67router) is SQLite eenvoudiger en sneller.
 
 ### WAL-journaling
 
@@ -50,7 +50,7 @@ De standaard cachegrootte is **65.536 KiB (64 MiB)**. SQLite interpreteert een n
 `cache_size` als een benaderde bovengrens in KiB en wijst pagina's naar behoefte toe.
 **Instellingen > Systeem en opslag > Cachegrootte** accepteert gehele waarden van **1 tot
 1.000.000 KiB**; wanneer de instelling wordt opgeslagen, wordt deze toegepast op de actieve databaseverbinding
-en OmniRoute herstelt de opgeslagen waarde bij het opstarten.
+en 67router herstelt de opgeslagen waarde bij het opstarten.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Architectuur van domeinmodules
 
-De database van OmniRoute bevat **110 TypeScript-modules op het hoogste niveau** in `src/lib/db/`. Elke domeinmodule:
+De database van 67router bevat **110 TypeScript-modules op het hoogste niveau** in `src/lib/db/`. Elke domeinmodule:
 
 - Beheert één of meer specifieke tabellen
 - Exporteert getypeerde CRUD-functies
@@ -90,7 +90,7 @@ De database van OmniRoute bevat **110 TypeScript-modules op het hoogste niveau**
 
 ### De 110 DB-modules op het hoogste niveau
 
-OmniRoute heeft **110 TypeScript-bestanden op het hoogste niveau** in `src/lib/db/`. Hieronder staat een selectie van kernmodules; raadpleeg de directorylijst voor de volledige lijst:
+67router heeft **110 TypeScript-bestanden op het hoogste niveau** in `src/lib/db/`. Hieronder staat een selectie van kernmodules; raadpleeg de directorylijst voor de volledige lijst:
 
 | Module                  | Tabellen                                                       | Verantwoordelijkheid                                                              |
 | ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ De volledige lijst met circa 30+ tabellen staat in `src/lib/db/migrations/`.
 
 ## Migraties
 
-OmniRoute gebruikt **geversioneerde, idempotente migraties** in `src/lib/db/migrations/`. Elke migratie is één SQL-bestand met de naam `NNN_description.sql`.
+67router gebruikt **geversioneerde, idempotente migraties** in `src/lib/db/migrations/`. Elke migratie is één SQL-bestand met de naam `NNN_description.sql`.
 
 ### Naamgeving van migraties
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Niet-achterwaarts-compatibele wijzigingen** (bijvoorbeeld het verwijderen van kolommen) zijn lastig. OmniRoute ondersteunt GEEN downgrade — zodra een migratie is toegepast, is de schemawijziging permanent. Houd hier rekening mee bij het plannen.
+> **Niet-achterwaarts-compatibele wijzigingen** (bijvoorbeeld het verwijderen van kolommen) zijn lastig. 67router ondersteunt GEEN downgrade — zodra een migratie is toegepast, is de schemawijziging permanent. Houd hier rekening mee bij het plannen.
 
 ---
 
@@ -310,7 +310,7 @@ Om prestatieredenen worden de volgende gegevens als platte tekst opgeslagen:
 
 ## Aandachtspunten voor versleuteling (v3.8.16+)
 
-OmniRoute gebruikt **`migrateLegacyEncryptedString()`** om twee versleutelingsmethoden transparant af te handelen:
+67router gebruikt **`migrateLegacyEncryptedString()`** om twee versleutelingsmethoden transparant af te handelen:
 
 - **Verouderd** (vóór v3.5.0): op XOR gebaseerde 'versleuteling' (geen echte cryptografie)
 - **Huidig**: AES-256-GCM met een correcte IV en authenticatietag
@@ -399,7 +399,7 @@ Voor een back-up zonder downtime van een actieve database:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Dit gebruikt de online back-up-API van SQLite — veilig om uit te voeren terwijl OmniRoute actief is.
+Dit gebruikt de online back-up-API van SQLite — veilig om uit te voeren terwijl 67router actief is.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Compactie
 
-Langdurig actieve OmniRoute-instanties hebben baat bij het af en toe uitvoeren van `VACUUM`:
+Langdurig actieve 67router-instanties hebben baat bij het af en toe uitvoeren van `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Alle gegevens opnieuw instellen (wissen)
 
 ```bash
-# Stop OmniRoute eerst
+# Stop 67router eerst
 omniroute stop
 
 # Verwijder het databasebestand
@@ -613,7 +613,7 @@ Een ander proces houdt een schrijfvergrendeling vast. U kunt:
 
 - Wachten tot het andere proces klaar is (controleer met `lsof | grep storage.sqlite`)
 - Het andere proces beëindigen
-- OmniRoute opnieuw starten als het probleem aanhoudt
+- 67router opnieuw starten als het probleem aanhoudt
 
 ### "Beperking voor externe sleutel mislukt"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 De migratie is in een transactie uitgevoerd en zou dus moeten zijn teruggedraaid. Als dat niet is gebeurd:
 
-1. **Stop OmniRoute** (voorkom verdere pogingen)
+1. **Stop 67router** (voorkom verdere pogingen)
 2. **Controleer de databasestatus** met `sqlite3`
 3. **Herstel handmatig** de gedeeltelijke migratie
-4. **Start OmniRoute opnieuw** (de migratie wordt opnieuw geprobeerd)
+4. **Start 67router opnieuw** (de migratie wordt opnieuw geprobeerd)
 
 Test migraties altijd eerst op een kopie om dit te voorkomen.
 

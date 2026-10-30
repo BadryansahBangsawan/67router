@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publica artefactos npm + Docker. Estas puertas proporcionan procedencia, inventario (SBOM) y escaneo de CVE, todo de código abierto (OSS), integrado en los flujos de trabajo de lanzamiento.
+67router publica artefactos npm + Docker. Estas puertas proporcionan procedencia, inventario (SBOM) y escaneo de CVE, todo de código abierto (OSS), integrado en los flujos de trabajo de lanzamiento.
 Postura de **asesoramiento primero** — informan ahora, y se promueven a bloqueo después del primer lanzamiento exitoso.
 
 | Puerta                | Herramienta                                    | Dónde                         | ¿Bloquea?                    | Salida                                       |
@@ -40,7 +40,7 @@ Ambas puertas **OMITEN elegantemente** (salida 0) cuando la herramienta está au
 
 - **Cadena:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Confirmado a través de `package-lock.json` — exactamente un paquete en todo el árbol de dependencias (`@openai/codex-security`) declara `extract-zip`, y exactamente un paquete (`promptfoo`) declara `@openai/codex-security`.
 - **No existe ninguna versión corregida en ninguna parte de la cadena.** `extract-zip@2.0.1` (publicado en 2020) es la versión final del paquete — no tiene mantenimiento. La versión actual de npm-latest (`0.1.29`) de `@openai/codex-security` todavía utiliza `extract-zip@2.0.1`.
-- **Inaccesible desde producción.** `promptfoo` es solo una devDependency (nunca aparece en `dependencies`), y ningún archivo en `src/`, `open-sse/` o `bin/` importa el paquete npm `extract-zip` — el propio asistente `extractZip()` de OmniRoute (`src/lib/versionManager/binaryManager.ts:93`) utiliza los comandos nativos `unzip`/`tar` y no está relacionado. `@openai/codex-security` también incluye su propia protección contra el recorrido de enlaces simbólicos además de la devolución de llamada onEntry de extract-zip.
+- **Inaccesible desde producción.** `promptfoo` es solo una devDependency (nunca aparece en `dependencies`), y ningún archivo en `src/`, `open-sse/` o `bin/` importa el paquete npm `extract-zip` — el propio asistente `extractZip()` de 67router (`src/lib/versionManager/binaryManager.ts:93`) utiliza los comandos nativos `unzip`/`tar` y no está relacionado. `@openai/codex-security` también incluye su propia protección contra el recorrido de enlaces simbólicos además de la devolución de llamada onEntry de extract-zip.
 - **No** utilice un alias para `extract-zip` a través de `overrides` en `package.json` — el único reemplazo directo viable es Electron-org-internal y es incompatible con la API de las propias comprobaciones onEntry/defaultDirMode/defaultFileMode de `@openai/codex-security`; anularlo rompería silenciosamente las comprobaciones de seguridad de ese paquete.
 - **Línea base:** el `vulnCount` (3) medido por osv ya está muy por debajo de la línea base congelada `config/quality/quality-baseline.json` (27) — no se necesita ningún cambio de ajuste.
 - **Protección contra regresiones:** `tests/unit/extract-zip-14482-exposure.test.ts` afirma la cadena y el invariante de no importación en producción mencionado anteriormente; falla la CI si alguno de ellos se rompe (por ejemplo, si una futura PR hace que `extract-zip` sea accesible desde producción).

@@ -26,11 +26,11 @@ Tunnel ကို tool turn များအတွက်သာ လိုအပ်�
 1. **ChatGPT Web (Codex)** provider ကိုဖွင့်ပြီး connection တစ်ခုထည့်ပါ။
 2. ChatGPT Cookie header အပြည့်အစုံ၊ tunnel ID၊ runtime key နှင့် custom connector
    အမည်ကို ကူးထည့်ပါ။ Tool အသုံးပြုနိုင်သည့် စနစ်ထည့်သွင်းမှုအသစ်များတွင် အသစ်ဖန်တီးထားပြီး
-   `OmniRoute Codex v2` ဟု အတိအကျအမည်ပေးထားသော connector ကို အသုံးပြုရမည်ဖြစ်ကာ Authentication ကို None၊ Permissions ကို Allow all
+   `67router Codex v2` ဟု အတိအကျအမည်ပေးထားသော connector ကို အသုံးပြုရမည်ဖြစ်ကာ Authentication ကို None၊ Permissions ကို Allow all
    actions ဟု သတ်မှတ်ရမည်။
-3. Connection check ကို လုပ်ဆောင်ပါ။ OmniRoute သည် browser မှတစ်ဆင့် လုပ်ဆောင်သော Temporary Chat ကိုဖွင့်ပြီး
+3. Connection check ကို လုပ်ဆောင်ပါ။ 67router သည် browser မှတစ်ဆင့် လုပ်ဆောင်သော Temporary Chat ကိုဖွင့်ပြီး
    account အတွက် Sol နှင့် Pro ရရှိနိုင်ခြင်းရှိမရှိ စစ်ဆေးသည်။
-4. Connection ကို သိမ်းဆည်းပါ။ OmniRoute သည် ကူးထည့်ထားသော cookie ကို အတည်ပြုပြီးသား
+4. Connection ကို သိမ်းဆည်းပါ။ 67router သည် ကူးထည့်ထားသော cookie ကို အတည်ပြုပြီးသား
    Playwright storage state ဖြင့် အစားထိုးပြီး encrypted
    credential abstraction မှတစ်ဆင့် runtime key နှင့်အတူ သိမ်းဆည်းသည်။
 
@@ -59,7 +59,7 @@ connector နှင့် tool round-trip တို့၏ အခြေအနေ�
 
 Free/Go အကောင့်များတွင် Luna route များကို အသုံးပြုနိုင်သည်။ Sol အသုံးပြုနိုင်သော အကောင့်များတွင် Instant မှ High အထိ အသုံးပြုနိုင်ပြီး Pro အသုံးပြုနိုင်သော အကောင့်များတွင် Extra High နှင့် Pro ကိုလည်း ထပ်မံအသုံးပြုနိုင်သည်။ Route တစ်ခုစီတွင် သတ်မှတ်ထားသော backend model နှင့် reasoning effort ရှိသည်။ ယင်းနှင့် ကွဲလွဲနေသော Responses effort ကို အတိအလင်း သတ်မှတ်ပါက ရွေးချယ်ထားသော browser mode ကို တိတ်တဆိတ် ပြောင်းလဲမည့်အစား လုံခြုံစွာ ပိတ်ပင်၍ မအောင်မြင်စေပါသည်။
 
-အဟောင်းဖြစ်သော `Codex Native` သို့မဟုတ် `OmniRoute Codex` connector ကို အမည်ပြောင်းခြင်း သို့မဟုတ် ပြန်လည်အသုံးပြုခြင်း မပြုပါနှင့်။ ChatGPT သည် အများသုံး MCP contract ကို connector identity အလိုက် cache လုပ်ထားပြီး အပ်ဒိတ်လုပ်ထားသော bridge သည် direct turn-token contract အသစ်ကို အသုံးပြုသည်။ Runtime သည် အဆိုပါ legacy identity များကို ငြင်းပယ်ပြီး `OmniRoute Codex v2` connector အသစ်တစ်ခုကို လိုအပ်သည်။
+အဟောင်းဖြစ်သော `Codex Native` သို့မဟုတ် `67router Codex` connector ကို အမည်ပြောင်းခြင်း သို့မဟုတ် ပြန်လည်အသုံးပြုခြင်း မပြုပါနှင့်။ ChatGPT သည် အများသုံး MCP contract ကို connector identity အလိုက် cache လုပ်ထားပြီး အပ်ဒိတ်လုပ်ထားသော bridge သည် direct turn-token contract အသစ်ကို အသုံးပြုသည်။ Runtime သည် အဆိုပါ legacy identity များကို ငြင်းပယ်ပြီး `67router Codex v2` connector အသစ်တစ်ခုကို လိုအပ်သည်။
 
 ## လုံခြုံရေးပုံစံ
 
@@ -79,18 +79,18 @@ Free/Go အကောင့်များတွင် Luna route များက
 
 ## မျက်နှာပြင်မရှိသော VPS နှင့် Docker
 
-npm၊ systemd နှင့် PM2 တပ်ဆင်မှုများအတွက် OmniRoute သည် အသုံးများသော Chrome နှင့် Chromium လမ်းကြောင်းများကို ရှာဖွေသိရှိသည်။
+npm၊ systemd နှင့် PM2 တပ်ဆင်မှုများအတွက် 67router သည် အသုံးများသော Chrome နှင့် Chromium လမ်းကြောင်းများကို ရှာဖွေသိရှိသည်။
 တစ်နည်းအားဖြင့် `CHATGPT_WEB_CODEX_CHROME_PATH` ကို သတ်မှတ်နိုင်သည်။ ChatGPT သည် အမှန်တကယ် headless ဖြစ်သော browser ပုံစံကို ငြင်းပယ်သောကြောင့် runtime turn များတွင် headed
 Chrome ကို တမင်အသုံးပြုထားသည်။ ထို့ကြောင့် မျက်နှာပြင်မရှိသော host သည်
-သီးသန့် Xvfb display တစ်ခုဖြင့် OmniRoute ကို လုပ်ဆောင်ရမည်ဖြစ်ပြီး Chrome လမ်းကြောင်းကို သတ်မှတ်ရုံဖြင့် display တစ်ခု မရရှိနိုင်ပါ။
+သီးသန့် Xvfb display တစ်ခုဖြင့် 67router ကို လုပ်ဆောင်ရမည်ဖြစ်ပြီး Chrome လမ်းကြောင်းကို သတ်မှတ်ရုံဖြင့် display တစ်ခု မရရှိနိုင်ပါ။
 
 Docker `web` profile သည် အတွင်းပိုင်း Compose
 network ပေါ်တွင် `chatgpt-web-codex-browser` ကို စတင်သည်။ Sidecar သည် Xvfb အတွင်း headed Chrome ကို လုပ်ဆောင်သောကြောင့် ရုပ်ပိုင်းဆိုင်ရာ display မလိုအပ်ပါ။ ၎င်း၏ CDP
 port ကို host ပေါ်တွင် ထုတ်ဖော်ထားခြင်းမရှိပါ။ ကာကွယ်ထားသော browser profile volume သည်
-OmniRoute data volume နှင့် သီးခြားဖြစ်ပြီး browser သည် လုံလောက်သော shared memory ကို ရရှိသည်။ အတွင်းပိုင်း CDP proxy သည်
+67router data volume နှင့် သီးခြားဖြစ်ပြီး browser သည် လုံလောက်သော shared memory ကို ရရှိသည်။ အတွင်းပိုင်း CDP proxy သည်
 Compose network အတွင်းရှိ port `9223` ပေါ်တွင်သာ နားထောင်ပြီး Chrome သည် sidecar အတွင်းရှိ loopback နှင့်သာ ဆက်စပ်ထားသည်။
 
-`DATA_DIR` အောက်ရှိ supervisor lease တစ်ခုက OmniRoute process အများအပြားအား
+`DATA_DIR` အောက်ရှိ supervisor lease တစ်ခုက 67router process အများအပြားအား
 တူညီသော tunnel နှင့် broker state ကို ပိုင်ဆိုင်ခြင်းမှ တားဆီးပေးသည်။ ပဋိပက္ခတစ်ခုကို doctor က အစီရင်ခံသည်။
 
 ## အပြန်အလှန်တုံ့ပြန်သော ပြန်လည်ရယူမှု

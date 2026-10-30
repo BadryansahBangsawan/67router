@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan sistem plugin bergaya WordPress. Plugin merupakan direktori
+67router menyediakan sistem plugin bergaya WordPress. Plugin merupakan direktori
 mandiri — masing-masing dengan manifes `plugin.json` dan sebuah file entri — yang terhubung
 ke pipeline permintaan (`onRequest` / `onResponse` / `onError`) serta ke
 peristiwa siklus hidup (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -152,7 +152,7 @@ tetap diizinkan.
 
 ### Direktori plugin
 
-Plugin berada di bawah direktori data OmniRoute:
+Plugin berada di bawah direktori data 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

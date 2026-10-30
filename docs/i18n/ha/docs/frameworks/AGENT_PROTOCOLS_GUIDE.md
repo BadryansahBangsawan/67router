@@ -7,15 +7,15 @@
 > **Tushe:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute yana samar da ɓangarori uku daban-daban masu alaƙa da wakilai. Da farko suna iya kama da juna, amma suna magance matsaloli daban-daban. Yi amfani da wannan shafin don zaɓar wanda ya dace.
+67router yana samar da ɓangarori uku daban-daban masu alaƙa da wakilai. Da farko suna iya kama da juna, amma suna magance matsaloli daban-daban. Yi amfani da wannan shafin don zaɓar wanda ya dace.
 
 ## A Taƙaice
 
 | Ɓangare                        | Ya fi dacewa da                                                                                                                                           | Hanyar sadarwa                       | Ma'auni                       |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
 | **A2A — Wakili-zuwa-Wakili**   | Haɗin gwiwa tsakanin wakilai da wakilan takwarorinsu waɗanda ke amfani da ƙa'idar A2A                                                                     | JSON-RPC 2.0 ta HTTP                 | A2A v0.3 (buɗaɗɗen ƙayyadewa) |
-| **ACP — Rijistar Wakilan CLI** | Gano / yin rajista / ƙaddamar da wakilan shirye-shiryen CLI da aka girka a na'urar mai amfani (Cursor, Cline, Codex CLI, Claude Code, Aider, da sauransu) | HTTP REST                            | Na musamman ga OmniRoute      |
-| **Wakilan Cloud**              | Miƙa ayyukan shirye-shirye masu ɗaukar lokaci zuwa sabis na cloud na waje (Codex Cloud, Devin, Jules, Cursor Cloud)                                       | HTTP REST + ayyuka masu amfani da DB | Na musamman ga OmniRoute      |
+| **ACP — Rijistar Wakilan CLI** | Gano / yin rajista / ƙaddamar da wakilan shirye-shiryen CLI da aka girka a na'urar mai amfani (Cursor, Cline, Codex CLI, Claude Code, Aider, da sauransu) | HTTP REST                            | Na musamman ga 67router       |
+| **Wakilan Cloud**              | Miƙa ayyukan shirye-shirye masu ɗaukar lokaci zuwa sabis na cloud na waje (Codex Cloud, Devin, Jules, Cursor Cloud)                                       | HTTP REST + ayyuka masu amfani da DB | Na musamman ga 67router       |
 
 Dukkan ukun masu zaman kansu ne — zaɓi kowane haɗinsu da kake so.
 
@@ -38,14 +38,14 @@ Kana buƙatar sabis na cloud ya yi aiki a wajen wannan na'urar (Codex Cloud / Cu
 ## 1. A2A — Wakili-zuwa-Wakili
 
 **Ƙayyadewa:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint na OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Endpoint na 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Katin Wakili:** `GET /.well-known/agent.json`
 
 ### Lokacin amfani
 
-- Gina tsarin wakilai da yawa inda OmniRoute yake ɗaya daga cikin takwarorin
-- Bayar da basirar turawa ta OmniRoute (smart-routing, quota-management, da sauransu) ga wakilai a cikin frameworks kamar Google ADK ko hanyoyin haɗin wakilai na gama-gari
-- Ƙunshe OmniRoute a bayan daidaitacciyar hanyar ganowa + kira
+- Gina tsarin wakilai da yawa inda 67router yake ɗaya daga cikin takwarorin
+- Bayar da basirar turawa ta 67router (smart-routing, quota-management, da sauransu) ga wakilai a cikin frameworks kamar Google ADK ko hanyoyin haɗin wakilai na gama-gari
+- Ƙunshe 67router a bayan daidaitacciyar hanyar ganowa + kira
 
 ### Hanyoyin aiki
 
@@ -69,12 +69,12 @@ Duba [A2A-SERVER.md](./A2A-SERVER.md) don cikakkun bayanan hanyar sadarwa, tsari
 
 ## 2. ACP — Rijistar Wakilan CLI
 
-**Ƙarshen OmniRoute:** `GET /api/acp/agents`
+**Ƙarshen 67router:** `GET /api/acp/agents`
 **Tushe:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Mene ne wannan
 
-ACP ita ce **ma'ajiyar wakilan CLI ta cikin gida** ta OmniRoute. Tana gano waɗanne CLI na rubuta lamba ne aka shigar a kan na'urar mai masaukin baki (Cursor, Cline, Claude Code, Codex CLI, Continue, da sauransu), tana tantance nau'ikansu, sannan tana nuna su a allon sarrafawa domin mai amfani ya iya saita kowane CLI ya yi nuni zuwa OmniRoute.
+ACP ita ce **ma'ajiyar wakilan CLI ta cikin gida** ta 67router. Tana gano waɗanne CLI na rubuta lamba ne aka shigar a kan na'urar mai masaukin baki (Cursor, Cline, Claude Code, Codex CLI, Continue, da sauransu), tana tantance nau'ikansu, sannan tana nuna su a allon sarrafawa domin mai amfani ya iya saita kowane CLI ya yi nuni zuwa 67router.
 
 Fuskar HTTP ma'ajiyar cikin gida ce da ke tallafa wa mahaɗin mai amfani na "CLI Tools" da kuma
 bin sawun sawun-yatsan CLI (duba [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). A wani ɓangaren kuma,
@@ -114,8 +114,8 @@ Tsarin body na POST (`customAgentBodySchema` a cikin `src/app/api/acp/agents/rou
 
 ### Yanayin amfani
 
-- Shafin "CLI Tools" na allon sarrafawa yana jera abubuwan da aka shigar kuma yana taimaka maka ka saita kowannensu ya yi nuni zuwa OmniRoute
-- Wakilai na musamman suna bai wa ƙwararrun masu amfani damar yin rajistar CLI na cikin gida/na mallaka waɗanda OmniRoute bai san da su ta tsoho ba
+- Shafin "CLI Tools" na allon sarrafawa yana jera abubuwan da aka shigar kuma yana taimaka maka ka saita kowannensu ya yi nuni zuwa 67router
+- Wakilai na musamman suna bai wa ƙwararrun masu amfani damar yin rajistar CLI na cikin gida/na mallaka waɗanda 67router bai san da su ta tsoho ba
 - Sakamakon ganowa yana samar da bayanai ga matrix na sawun-yatsa na `cli-tools`
 
 ### Lokutan da bai kamata a yi amfani da ACP ba
@@ -127,12 +127,12 @@ Tsarin body na POST (`customAgentBodySchema` a cikin `src/app/api/acp/agents/rou
 
 ## 3. Wakilan Cloud
 
-**Endpoints na OmniRoute:** `/api/v1/agents/tasks/*` (zagayowar rayuwa) + `/api/cloud/*` (haɗin ginin ciki)
+**Endpoints na 67router:** `/api/v1/agents/tasks/*` (zagayowar rayuwa) + `/api/cloud/*` (haɗin ginin ciki)
 **Tushe:** `src/lib/cloudAgent/`
 
 ### Mene ne
 
-Haɗaɗɗiyar mahaɗa ce ga wakilan rubuta lamba na cloud daga wasu kamfanoni. Kana aika prompt + URL na repo, OmniRoute ya tura zuwa wakilin cloud da ya dace, ya riƙa duba matsayi, sannan ya mayar da sakamako.
+Haɗaɗɗiyar mahaɗa ce ga wakilan rubuta lamba na cloud daga wasu kamfanoni. Kana aika prompt + URL na repo, 67router ya tura zuwa wakilin cloud da ya dace, ya riƙa duba matsayi, sannan ya mayar da sakamako.
 
 ### Wakilan da ake tallafawa (4, duk an tabbatar da su a cikin `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Dukansu suna da “ayyuka masu ɗaukar dogon lokaci”, amma a matakai daban-dab
 
 | Fanni                    | A2A                                                                                  | Cloud Agents                            |
 | ------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------- |
-| Ma'auni                  | Buɗaɗɗen A2A v0.3                                                                    | Na musamman ga OmniRoute                |
-| Inda sarrafawa ke gudana | A cikin OmniRoute (yana amfani da haɗe-haɗen da aka saita)                           | Na waje (sabobin Codex / Devin / Jules) |
+| Ma'auni                  | Buɗaɗɗen A2A v0.3                                                                    | Na musamman ga 67router                 |
+| Inda sarrafawa ke gudana | A cikin 67router (yana amfani da haɗe-haɗen da aka saita)                            | Na waje (sabobin Codex / Devin / Jules) |
 | Tsawon aikin             | Tsohon TTL na asali minti 5 (ana iya daidaita shi a cikin `TaskManager`)             | Daga mintuna zuwa awanni                |
 | Fahimtar repo            | A'a (yana tura prompts kawai)                                                        | E (URL na repo + branch)                |
 | Yanayin amfani           | Haɗin gwiwar agents, samar da smart routing a matsayin sabis                         | Wakilta “aiwatar da feature X a repo Y” |
@@ -182,7 +182,7 @@ Dukansu suna da “ayyuka masu ɗaukar dogon lokaci”, amma a matakai daban-dab
 
 ## Misalan Haɗawa
 
-### Gano damar A2A na OmniRoute
+### Gano damar A2A na 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Yana mayar da Agent Card tare da dukkan skills guda 6, transports, da version.
 
-### Kiran OmniRoute a matsayin A2A agent
+### Kiran 67router a matsayin A2A agent
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Jigon OmniRoute   │
+                │   Jigon 67router   │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

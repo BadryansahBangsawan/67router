@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` butun OmniRoute katalogingizni — modellar, kombolar va
+`@omniroute/opencode-plugin-v2` butun 67router katalogingizni — modellar, kombolar va
 avto-kombolarni — ko‘rsatiladigan nomlar, narxlar va bepul tarif limitlari bilan OpenCode v2 model
 tanlagichiga qo‘shadi.
 
@@ -15,7 +15,7 @@ hech narsa umumiy emas, shuning uchun birini yangilash hech qachon boshqasini ya
 ## Talablar
 
 - OpenCode v2.
-- Ulanish mumkin bo‘lgan OmniRoute shlyuzi (standart bo‘yicha `http://localhost:20128`).
+- Ulanish mumkin bo‘lgan 67router shlyuzi (standart bo‘yicha `http://localhost:20128`).
 - Node.js 22 yoki 24.
 
 ## O‘rnatish
@@ -79,7 +79,7 @@ imkoniyatlari cheklangan tanlagich hech qachon tushunarsiz bo‘lib qolmaydi.
 | `baseURL`                        | talab qilinadi                                        | Shlyuz ildiz manzili, faqat `http(s)`; zarur joylarda `/v1` suffiksi qo‘shiladi                                                                                   |
 | `apiKey`                         | ulangan hisob ma’lumotlari, so‘ng `OMNIROUTE_API_KEY` | `/v1/*` uchun chat kaliti                                                                                                                                         |
 | `managementReadToken`            | `apiKey` qiymatiga qaytadi                            | `/api/*` uchun kalit — odatda ayni kalit **emas**                                                                                                                 |
-| `displayName`                    | `"OmniRoute"`                                         | Tanlash ro‘yxatidagi provayder nomi                                                                                                                               |
+| `displayName`                    | `"67router"`                                          | Tanlash ro‘yxatidagi provayder nomi                                                                                                                               |
 | `timeoutMs`                      | `10000`                                               | Har bir so‘rov nuqtasi uchun olish kutish vaqti (avtomatik kombinatsiyalar 5 soniyadan foydalanadi)                                                               |
 | `modelCacheTtlMs`                | `300000`                                              | Katalog keshi TTL muddati; diskdagi surat sovuq ishga tushirishni tezlashtiradi                                                                                   |
 | `timeouts`                       | `timeoutMs` qiymatiga qaytadi                         | Har bir so‘rov nuqtasi uchun millisekundlardagi vaqt limitlari: `models`, `combos`, `autoCombos`, `enrichment`                                                    |
@@ -117,7 +117,7 @@ Buni oʻchirish uchun `"geminiSanitization": false` ni belgilang.
 
 | Alomat                                                       | Sabab                                                                                                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Tanlash oynasida OmniRoute modeli ko‘rinmaydi                | Kalit aniqlanmagan (ishga tushirishdagi ogohlantirishni tekshiring) yoki shlyuzga ulanib bo‘lmaydi                                   |
+| Tanlash oynasida 67router modeli ko‘rinmaydi                 | Kalit aniqlanmagan (ishga tushirishdagi ogohlantirishni tekshiring) yoki shlyuzga ulanib bo‘lmaydi                                   |
 | Xom model identifikatorlari, kombinatsiyalar va narxlar yo‘q | Boshqaruv so‘nggi nuqtalari tokenni rad etdi — `managementReadToken` ni sozlang                                                      |
 | Qisqa yoki bo‘sh `freeOnly` katalogi                         | Boshqaruv tokeni yo‘q yoki token rad etilgan — xost jurnalidagi yangilash xulosasi satrini (`unmatched-free` soni) o‘qing            |
 | `opencode-<id>/…` ga biriktirilgan seans                     | v1 plagini `opencode-<id>` ni e’lon qilgan; v2 esa faqat `<id>` ni e’lon qiladi, shuning uchun modelni `<id>/…` ostida qayta tanlang |

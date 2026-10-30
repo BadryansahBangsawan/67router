@@ -25,7 +25,7 @@
 Завантажте початковий файл із модального вікна імпорту (**Завантажити шаблон CSV**). Приклад:
 
 ```csv
-# Імпорт провайдерів OmniRoute (позиційні стовпці)
+# Імпорт провайдерів 67router (позиційні стовпці)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

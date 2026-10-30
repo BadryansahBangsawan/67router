@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, ଚାଟ୍ର ସମାନ ପ୍ରଦାନକାରୀ id `cursor` (ଉପନାମ `cu`) ମାଧ୍ୟମରେ `POST /v1/images/generations` ଉପରେ Cursor ପ୍ଲାନ୍ର **ପ୍ରତିଛବି ଉତ୍ପାଦନ** ଉପଲବ୍ଧ କରାଏ।
+67router, ଚାଟ୍ର ସମାନ ପ୍ରଦାନକାରୀ id `cursor` (ଉପନାମ `cu`) ମାଧ୍ୟମରେ `POST /v1/images/generations` ଉପରେ Cursor ପ୍ଲାନ୍ର **ପ୍ରତିଛବି ଉତ୍ପାଦନ** ଉପଲବ୍ଧ କରାଏ।
 
 | କ୍ଷେତ୍ର              | ମୂଲ୍ୟ                                                                           |
 | -------------------- | ------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute, ଚାଟ୍ର ସମାନ ପ୍ରଦାନକାରୀ id `curso
 
 ## Agent CLI କାହିଁକି
 
-OmniRoute ମଧ୍ୟରେ Cursor ଚାଟ୍ `agent.v1.AgentService/Run` (protobuf) ବ୍ୟବହାର କରେ। ସେହି ପଥ ବିଲ୍ଟ-ଇନ୍ କ୍ଲାଏଣ୍ଟ ଟୁଲ୍ଗୁଡ଼ିକୁ (shell, write, …) **ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ**। ପ୍ରତିଛବି ଉତ୍ପାଦନ ହେଉଛି ଏକ Cursor-ନେଟିଭ୍ ଟୁଲ୍, ଯାହା seat ବିପକ୍ଷରେ **`agent` CLI** ଦ୍ୱାରା ନିଷ୍ପାଦିତ ହୁଏ। ତେଣୁ ପ୍ରତିଛବି ହ୍ୟାଣ୍ଡଲର୍ ଏକ ଲକ୍ କରାଯାଇଥିବା ପ୍ରମ୍ପ୍ଟ ଏବଂ ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ ଏକ ଅସ୍ଥାୟୀ workspace (କମ୍ୟୁନିଟି seat bridgeଗୁଡ଼ିକ ସହ ସମାନ ଗଠନ) ସହିତ `agent` ସ୍ପନ୍ କରେ, ତା’ପରେ OpenAI-ସୁସଙ୍ଗତ `b64_json` ଫେରାଏ।
+67router ମଧ୍ୟରେ Cursor ଚାଟ୍ `agent.v1.AgentService/Run` (protobuf) ବ୍ୟବହାର କରେ। ସେହି ପଥ ବିଲ୍ଟ-ଇନ୍ କ୍ଲାଏଣ୍ଟ ଟୁଲ୍ଗୁଡ଼ିକୁ (shell, write, …) **ପ୍ରତ୍ୟାଖ୍ୟାନ କରେ**। ପ୍ରତିଛବି ଉତ୍ପାଦନ ହେଉଛି ଏକ Cursor-ନେଟିଭ୍ ଟୁଲ୍, ଯାହା seat ବିପକ୍ଷରେ **`agent` CLI** ଦ୍ୱାରା ନିଷ୍ପାଦିତ ହୁଏ। ତେଣୁ ପ୍ରତିଛବି ହ୍ୟାଣ୍ଡଲର୍ ଏକ ଲକ୍ କରାଯାଇଥିବା ପ୍ରମ୍ପ୍ଟ ଏବଂ ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ ଏକ ଅସ୍ଥାୟୀ workspace (କମ୍ୟୁନିଟି seat bridgeଗୁଡ଼ିକ ସହ ସମାନ ଗଠନ) ସହିତ `agent` ସ୍ପନ୍ କରେ, ତା’ପରେ OpenAI-ସୁସଙ୍ଗତ `b64_json` ଫେରାଏ।
 
 ## ପ୍ରବେଶ ପ୍ରତିବନ୍ଧକ (Hard Rules #15 + #17)
 
@@ -34,7 +34,7 @@ process spawn ହେବା ପୂର୍ବରୁ `403` ମିଳିବ। ଅବ
 
 `CURSOR_IMG_MAX_CONCURRENT`କୁ
 Node ମଡ୍ୟୁଲ୍ instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) ମଧ୍ୟରେ ସୀମିତ ଏକ in-memory counter/queue ଦ୍ୱାରା ପ୍ରୟୋଗ କରାଯାଏ।
-ଏହା ଗୋଟିଏ OmniRoute process ମଧ୍ୟରେ ସମସାମୟିକ `agent` spawnଗୁଡ଼ିକୁ ସଠିକ୍ ଭାବେ ସୀମିତ କରେ, କିନ୍ତୁ ସମାନ Cursor seat ଅଂଶୀଦାର କରୁଥିବା
+ଏହା ଗୋଟିଏ 67router process ମଧ୍ୟରେ ସମସାମୟିକ `agent` spawnଗୁଡ଼ିକୁ ସଠିକ୍ ଭାବେ ସୀମିତ କରେ, କିନ୍ତୁ ସମାନ Cursor seat ଅଂଶୀଦାର କରୁଥିବା
 ଏକାଧିକ process/instance ମଧ୍ୟରେ ସମନ୍ୱୟ **କରେ ନାହିଁ**
 (ଉଦାହରଣ ସ୍ୱରୂପ, ଏକ multi-replica deployment) — ପ୍ରତ୍ୟେକ instance ନିଜର ସ୍ୱାଧୀନ ସୀମା ପ୍ରୟୋଗ କରେ।
 ଏକ single-instance deployment (ଡିଫଲ୍ଟ) ପାଇଁ ଏହା ସଠିକ୍; horizontally scaled
@@ -44,7 +44,7 @@ Cursor ପ୍ରତିଛବି trafficକୁ ଗୋଟିଏ instanceକୁ rou
 ## ଆବଶ୍ୟକତାଗୁଡ଼ିକ
 
 1. ଡ୍ୟାସ୍ବୋର୍ଡରେ ଏକ ସଂଯୁକ୍ତ Cursor ଆକାଉଣ୍ଟ (OAuth କିମ୍ବା `crsr_…` API key)।
-2. OmniRoute process ପାଇଁ Cursor Agent ବାଇନାରି ଉପଲବ୍ଧ ଥିବା ଆବଶ୍ୟକ:
+2. 67router process ପାଇଁ Cursor Agent ବାଇନାରି ଉପଲବ୍ଧ ଥିବା ଆବଶ୍ୟକ:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, କିମ୍ବା
    - `~/.local/bin/agent`, କିମ୍ବା
    - Cursor connection ଉପରେ `providerSpecificData.agentBin`।

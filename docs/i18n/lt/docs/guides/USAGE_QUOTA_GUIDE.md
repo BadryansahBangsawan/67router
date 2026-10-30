@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: OmniRoute seka kiekvienos užklausos žetonų naudojimą, apskaičiuoja kainą, taiko kiekvienam API raktui nustatytą kvotą ir pateikia analizę valdymo skydelyje. Šiame vadove paaiškinama, kaip visa tai veikia.
+> **Trumpai**: 67router seka kiekvienos užklausos žetonų naudojimą, apskaičiuoja kainą, taiko kiekvienam API raktui nustatytą kvotą ir pateikia analizę valdymo skydelyje. Šiame vadove paaiškinama, kaip visa tai veikia.
 
 **Šaltiniai:**
 
@@ -17,7 +17,7 @@
 
 ## Apžvalga
 
-Kiekvienai per OmniRoute perduodamai užklausai sugeneruojamas **naudojimo įrašas**, kuriame užfiksuojama:
+Kiekvienai per 67router perduodamai užklausai sugeneruojamas **naudojimo įrašas**, kuriame užfiksuojama:
 
 - **Tapatybė**: kuris API raktas, teikėjas, modelis ir derinys
 - **Žetonai**: užklausos žetonai, užbaigimo žetonai, podėlyje esantys žetonai ir bendras kiekis
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Kai teikėjai naudojimo duomenų negrąžina (kai kurie žiniatinklio slapukais pagrįsti teikėjai), OmniRoute **apytiksliai apskaičiuoja** žetonų skaičių taikydama `~4 chars per token` euristiką (žr. `open-sse/services/autoCombo/pipelineRouter.ts`).
+Kai teikėjai naudojimo duomenų negrąžina (kai kurie žiniatinklio slapukais pagrįsti teikėjai), 67router **apytiksliai apskaičiuoja** žetonų skaičių taikydama `~4 chars per token` euristiką (žr. `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Podėlyje esantys žetonai
 
-OmniRoute seka `cached_tokens` atskirai nuo `prompt_tokens`, nes:
+67router seka `cached_tokens` atskirai nuo `prompt_tokens`, nes:
 
 - Taikant Anthropic užklausų podėlį, už podėlyje esančius žetonus taikomas mažesnis tarifas (10 % įprasto tarifo)
 - Kai kurie teikėjai grąžina `cache_read_input_tokens`, kuriems turėtų būti taikoma kitokia kaina
@@ -117,7 +117,7 @@ Kainodaros duomenys automatiškai sinchronizuojami iš LiteLLM per `/api/pricing
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Modeliams, kurių kainodaros duomenų nėra, OmniRoute **apytiksliai apskaičiuoja išlaidas** naudodama vidutinius vidinius tarifus (gautus iš LiteLLM kainodaros duomenų).
+Modeliams, kurių kainodaros duomenų nėra, 67router **apytiksliai apskaičiuoja išlaidas** naudodama vidutinius vidinius tarifus (gautus iš LiteLLM kainodaros duomenų).
 
 ---
 

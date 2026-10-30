@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute může při událostech platformy odesílat HTTP webhooky. Použijte je k integraci se
+67router může při událostech platformy odesílat HTTP webhooky. Použijte je k integraci se
 Slackem, PagerDuty, Datadogem, interními službami pro upozornění nebo libovolným HTTP přijímačem.
 
 Dispečer podepisuje každé doručení pomocí HMAC-SHA256, při přechodných
@@ -54,7 +54,7 @@ chyby jednotlivých webhooků, takže jeden nefunkční přijímač nemůže blo
 
 ## Podepisování pomocí HMAC
 
-Pokud má webhook nastavený `secret`, OmniRoute podepíše tělo JSON a odešle:
+Pokud má webhook nastavený `secret`, 67router podepíše tělo JSON a odešle:
 
 ```
 Content-Type: application/json
@@ -209,7 +209,7 @@ Stránka řídicího panelu na adrese `/dashboard/webhooks` (viz
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Testovací doručení webhooku z OmniRoute",
+    "message": "Testovací doručení webhooku z 67router",
     "webhookId": "<uuid>"
   }
 }

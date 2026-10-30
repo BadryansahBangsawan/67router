@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Mmelite ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-abịa na sistemụ plugin yiri nke WordPress. Plugins bụ ndekọ
+67router na-abịa na sistemụ plugin yiri nke WordPress. Plugins bụ ndekọ
 nwere onwe ha — nke ọ bụla nwere manifest `plugin.json` na faịlụ mbata — ndị na-ejikọta
 na usoro nhazi arịrịọ (`onRequest` / `onResponse` / `onError`) nakwa na
 mmemme okirikiri ndụ (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ ka ha gafee.
 
 ### Ndekọ plugin
 
-Plugin dị n'okpuru ndekọ data OmniRoute:
+Plugin dị n'okpuru ndekọ data 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

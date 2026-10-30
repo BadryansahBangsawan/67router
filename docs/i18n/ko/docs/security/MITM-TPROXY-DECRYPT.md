@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY 투명 복호화는 OmniRoute의 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) /
+TPROXY 투명 복호화는 67router의 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) /
 [AgentBridge](../frameworks/AGENTBRIDGE.md) MITM 스택을 위한 **다섯 번째 캡처 모드**입니다.
 커널 TPROXY + 정책 라우팅을 사용하여 Linux에서 로컬 아웃바운드 HTTPS 트래픽을
 가로채고 **복호화**합니다. 이때 `/etc/hosts`를 스푸핑하거나 OS 전역 시스템 프록시
@@ -54,7 +54,7 @@ TPROXY 투명 복호화는 대신 **커널** 계층에서 트래픽을 전달합
 - 시스템 전역 프록시 변경으로 인해 영향을 주고 싶지 않은 경우.
 
 가로채기는 커널에서 이루어지므로 원본 프로세스에는 **구성 변경이 필요하지
-않습니다**. 단, 해당 프로세스가 OmniRoute에서 설치한 동적 CA를 신뢰해야 합니다
+않습니다**. 단, 해당 프로세스가 67router에서 설치한 동적 CA를 신뢰해야 합니다
 ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) 참조).
 
 ---
@@ -73,7 +73,7 @@ TPROXY 투명 복호화는 대신 **커널** 계층에서 트래픽을 전달합
 예외를 발생시키는 대신 `null`을 반환합니다. 그러면 캡처 모드 상태에
 `available: false`가 표시되고, 대시보드 토글은
 "TPROXY 복호화에는 Linux + root + 네이티브 애드온이 필요합니다"라는 툴팁과 함께 **비활성화**되며,
-OmniRoute의 나머지 기능은 계속 작동합니다.
+67router의 나머지 기능은 계속 작동합니다.
 
 ---
 
@@ -239,7 +239,7 @@ CA 인증서가 OS 신뢰 저장소의 **전용 슬롯**인 `omniroute-tproxy-ca
 | **오류 정제**                     | 라우트의 오류 응답은 `sanitizeErrorMessage()`를 거칩니다(엄격한 규칙 #12).                                                                                                                                                                                                                                                                                               |
 
 **MITM CA는 강력한 권한을 제공합니다.** 모든 호스트에 서명할 수 있으며 OS에서 신뢰하는
-CA를 사용하면 OmniRoute가 가로채는 모든 내용을 복호화할 수 있습니다. 이 기능은 명시적인
+CA를 사용하면 67router가 가로채는 모든 내용을 복호화할 수 있습니다. 이 기능은 명시적인
 로컬 전용 TPROXY 캡처 모드로 제한되고 기본적으로 비활성화되어 있으며, 해당 모드를
 중지하면 신뢰 저장소 항목이 제거됩니다.
 
@@ -338,7 +338,7 @@ TPROXY용 **환경 변수는 없습니다**. 모든 구성은 POST 본문 또는
 ### 충돌 후에도 방화벽 규칙이 남아 있음
 
 `revertTproxy()`는 적용 작업의 정확한 역연산이며 멱등성을 보장합니다. 모드를
-중지하면 규칙이 되돌려집니다. 세션 도중 OmniRoute가 강제 종료된 경우 AgentBridge
+중지하면 규칙이 되돌려집니다. 세션 도중 67router가 강제 종료된 경우 AgentBridge
 **복구** 작업(`POST /api/tools/agent-bridge/repair`)을 사용하여 남겨진 시스템
 상태(DNS 스푸핑, 루트 CA, 시스템 프록시)를 되돌리세요. TPROXY `mangle` 규칙과
 경로도 재부팅 시 자동으로 초기화됩니다.

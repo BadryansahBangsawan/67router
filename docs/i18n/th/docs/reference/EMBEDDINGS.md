@@ -4,9 +4,9 @@
 
 ---
 
-หมายเหตุสำหรับผู้ดูแลระบบเกี่ยวกับ `POST /v1/embeddings` เมื่อ OmniRoute อยู่ด้านหน้าของ
+หมายเหตุสำหรับผู้ดูแลระบบเกี่ยวกับ `POST /v1/embeddings` เมื่อ 67router อยู่ด้านหน้าของ
 Hindsight 0.9.1 (`encode(list[str])` สำหรับข้อความเท่านั้น) และ Memorix 1.6.0 (เกตสื่อของ Jina)
-ตรวจสอบกับระบบจริงแล้วเมื่อ 2026-08-17 โดยใช้ OmniRoute 3.8.49 ที่
+ตรวจสอบกับระบบจริงแล้วเมื่อ 2026-08-17 โดยใช้ 67router 3.8.49 ที่
 `https://omniroute.jaguar-fish.ts.net/v1` ไม่มีข้อมูลลับด้านล่าง
 
 ## id ของโมเดลที่ใช้งานได้
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` แบบเนทีฟไม่สามารถทำงานได้ด้วย GitOps เพียงอย่างเดียว ต้องเพิ่มคีย์
 Google AI Studio เป็นการเชื่อมต่อของผู้ให้บริการ `gemini` (ผ่านแดชบอร์ดหรือ
-นำเข้า `GEMINI_API_KEY` ไปยัง OmniRoute) ข้อมูลลับดังกล่าวไม่มีอยู่ใน repo นี้
+นำเข้า `GEMINI_API_KEY` ไปยัง 67router) ข้อมูลลับดังกล่าวไม่มีอยู่ใน repo นี้
 
 ### เส้นทางมัลติโหมดของ Jina
 
@@ -100,7 +100,7 @@ Google AI Studio เป็นการเชื่อมต่อของผู
 
 ### อ็อบเจกต์รูปภาพของ Jina / Memorix
 
-รายการรูปภาพมาตรฐานของ OmniRoute (PNG ขนาด 28×28, 784 พิกเซล — Jina ปฏิเสธรูปขนาด 1×1):
+รายการรูปภาพมาตรฐานของ 67router (PNG ขนาด 28×28, 784 พิกเซล — Jina ปฏิเสธรูปขนาด 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Google AI Studio เป็นการเชื่อมต่อของผู
 
 embedding ของ Hindsight รองรับเฉพาะข้อความ (`encode(list[str])`) และไม่ส่ง
 อ็อบเจกต์รูปภาพ ให้กำหนด URL ฐานสำหรับ embedding ที่เข้ากันได้กับ OpenAI ของ Hindsight
-ไปยัง `/v1` ของ OmniRoute และใช้ id ที่ใช้งานได้จากตารางด้านบน
+ไปยัง `/v1` ของ 67router และใช้ id ที่ใช้งานได้จากตารางด้านบน
 (`jina-ai/jina-embeddings-v5-omni-small` หรือ
 `openrouter/google/gemini-embedding-2`) อย่าตั้งค่าโมเดลเป็น
 `gemini-embedding-2` แบบไม่มีคำนำหน้า เว้นแต่จะมีคีย์ API ของ `gemini`
@@ -158,11 +158,11 @@ embedding ของ Hindsight รองรับเฉพาะข้อคว�
 ### Memorix 1.6.0
 
 Memorix จะถือว่าเป็นสื่อแบบเนทีฟเฉพาะเมื่อ `baseUrl` ตรงกับ `/jina\.ai/i`
-เท่านั้น URL ของ OmniRoute จะยังคงใช้เส้นทางสำหรับข้อความเท่านั้น แม้ว่าโมเดลจะเป็น
-Jina omni ก็ตาม เกตดังกล่าวเป็นปัญหาของไคลเอนต์ Memorix นอกจากนี้ OmniRoute
+เท่านั้น URL ของ 67router จะยังคงใช้เส้นทางสำหรับข้อความเท่านั้น แม้ว่าโมเดลจะเป็น
+Jina omni ก็ตาม เกตดังกล่าวเป็นปัญหาของไคลเอนต์ Memorix นอกจากนี้ 67router
 ยังปฏิเสธ body รูปแบบ `{image: "data:..."}` ของ Jina ที่ Memorix จะส่งหากเกต
 เปิดอยู่ ดังนั้นไคลเอนต์ที่เข้ากันได้กับ Jina จึงไม่สามารถสร้าง embedding จากรูปภาพ
-ผ่าน OmniRoute ได้หากไม่ใช้ schema มาตรฐาน `{type,source}`
+ผ่าน 67router ได้หากไม่ใช้ schema มาตรฐาน `{type,source}`
 
 ให้ใช้ `jina-ai/jina-embeddings-v5-omni-small` สำหรับข้อความ อย่ากำหนด
-`base_url` ของ Memorix ไปที่ `https://api.jina.ai` — ให้ OmniRoute เป็นฮอปเดียวเท่านั้น
+`base_url` ของ Memorix ไปที่ `https://api.jina.ai` — ให้ 67router เป็นฮอปเดียวเท่านั้น

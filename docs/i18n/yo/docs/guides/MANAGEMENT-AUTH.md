@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ní **ẹbí ìdánimọ̀ mẹ́rin** tí ó lè fún àṣẹ láti ṣàkóso àwọn ọ̀nà ìṣàkóso (management routes).
+67router ní **ẹbí ìdánimọ̀ mẹ́rin** tí ó lè fún àṣẹ láti ṣàkóso àwọn ọ̀nà ìṣàkóso (management routes).
 Wọn kì í ṣe ohun tí a lè fi pàṣípààrọ̀. Àwọn `sk-…
 ` (Inference API keys) kì í ṣàkóso
 sẹ̀fà (server) àyàfi bí a bá fún wọn ní àṣẹ `manage` tàbí `admin` ní pàtó.

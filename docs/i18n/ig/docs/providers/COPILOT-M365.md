@@ -39,7 +39,7 @@ URL zuru ezu nwere ụdị a:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Na OmniRoute, gaa na **Providers → Add Provider**, họrọ **Microsoft 365 Copilot
+6. Na 67router, gaa na **Providers → Add Provider**, họrọ **Microsoft 365 Copilot
    (BizChat)**, wee mado ozi njirimara ahụ n'ụdị a:
 
 ```
@@ -55,9 +55,9 @@ Kama iji aka detuo uru ndị ahụ site na URL WebSocket, ị nwere ike ibupụ 
 1. Mepee **DevTools → Network**.
 2. Malite ma ọ bụ gaa n'ihu na mkparịta ụka BizChat (nke a na-akpalite njikọ WebSocket).
 3. Pịa aka nri na panel Network wee họrọ **Save all as HAR with content**.
-4. Na OmniRoute, jiri bọtịnụ **Import .har file** dị na dialog njikọ onye na-eweta ọrụ.
+4. Na 67router, jiri bọtịnụ **Import .har file** dị na dialog njikọ onye na-eweta ọrụ.
 
-OmniRoute na-enyocha HAR maka URL WebSocket Chathub, wepụta
+67router na-enyocha HAR maka URL WebSocket Chathub, wepụta
 `access_token` na `chathubPath`, ma mejupụta mpaghara ozi njirimara na-akpaghị aka. Mbubata
 HAR na-akọwa oge JWT ga-agwụ ma gosipụta oge token fọdụrụ.
 
@@ -80,7 +80,7 @@ Iji zere iji aka nweta ya ọzọ, ị nwere ike ịchekwa Microsoft refresh tok
 | `tier`         | `individual` (ndabara), `edu`, ma ọ bụ `enterprise`                    |
 
 Nweta refresh token ahụ site na usoro Microsoft device-code ma ọ bụ authorization-code
-nke scope ya bụ `substrate.office.com/sydney`. Mgbe edobere `refreshToken`, OmniRoute
+nke scope ya bụ `substrate.office.com/sydney`. Mgbe edobere `refreshToken`, 67router
 na-emegharị `access_token` tupu arịrịọ ọ bụla, ka ị ghara ịdị mkpa
 ịnweta ya ọzọ mgbe oge nkeji ~75 ọ bụla gwụsịrị.
 

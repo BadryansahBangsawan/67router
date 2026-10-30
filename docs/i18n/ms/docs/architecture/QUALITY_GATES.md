@@ -4,7 +4,7 @@
 
 ---
 
-Dokumen ini ialah rujukan berwibawa untuk semua gerbang kualiti CI dalam OmniRoute.
+Dokumen ini ialah rujukan berwibawa untuk semua gerbang kualiti CI dalam 67router.
 Ia menerangkan setiap gerbang, perkara yang disahkan, tugas CI yang menjalankannya, sama ada ia menggunakan
 garis dasar ratchet atau dasar lulus/gagal, dan sama ada ia menyekat binaan atau sekadar bersifat nasihat.
 
@@ -271,14 +271,14 @@ Dijalankan selepas `build`. Menyekat penggabungan jika gagal.
 
 Aliran kerja ini dijalankan mengikut jadual cron (dan `workflow_dispatch`), tidak sekali-kali pada PR. Semuanya bersifat nasihat.
 
-| Aliran Kerja           | Mengesahkan                                                                                                                                                                          | Menyekat    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `nightly-property`     | Ujian sifat fast-check dengan seed rawak + kiraan larian yang tinggi                                                                                                                 | **Nasihat** |
-| `nightly-resilience`   | Get pertumbuhan heap, suntikan kerosakan chaos, beban/soak k6                                                                                                                        | **Nasihat** |
-| `nightly-llm-security` | Pengawal suntikan promptfoo (mod sekat) + prob garak (dilangkau tanpa rahsia pembekal)                                                                                               | **Nasihat** |
-| `nightly-schemathesis` | Fuzzing kontrak OpenAPI (schemathesis) terhadap OmniRoute langsung menggunakan `docs/openapi.yaml` — mengemukakan pelanggaran spesifikasi / 500 yang tidak dikendalikan (Fase 8 B.4) | **Nasihat** |
-| `nightly-mutation`     | Skor ujian mutasi Stryker ke atas lorong unit pantas — mutan yang terselamat mendedahkan assert yang lemah                                                                           | **Nasihat** |
-| `nightly-compat`       | Matriks keserasian enjin Node merentasi julat `engines.node` yang disokong                                                                                                           | **Nasihat** |
+| Aliran Kerja           | Mengesahkan                                                                                                                                                                         | Menyekat    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `nightly-property`     | Ujian sifat fast-check dengan seed rawak + kiraan larian yang tinggi                                                                                                                | **Nasihat** |
+| `nightly-resilience`   | Get pertumbuhan heap, suntikan kerosakan chaos, beban/soak k6                                                                                                                       | **Nasihat** |
+| `nightly-llm-security` | Pengawal suntikan promptfoo (mod sekat) + prob garak (dilangkau tanpa rahsia pembekal)                                                                                              | **Nasihat** |
+| `nightly-schemathesis` | Fuzzing kontrak OpenAPI (schemathesis) terhadap 67router langsung menggunakan `docs/openapi.yaml` — mengemukakan pelanggaran spesifikasi / 500 yang tidak dikendalikan (Fase 8 B.4) | **Nasihat** |
+| `nightly-mutation`     | Skor ujian mutasi Stryker ke atas lorong unit pantas — mutan yang terselamat mendedahkan assert yang lemah                                                                          | **Nasihat** |
+| `nightly-compat`       | Matriks keserasian enjin Node merentasi julat `engines.node` yang disokong                                                                                                          | **Nasihat** |
 
 Garis dasar prestasi (heap, TTFB, masa binaan) direkodkan, bukan digetkan: lihat [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -553,7 +553,7 @@ benar yang semakin bertambah memberikan gambaran palsu tentang kualiti.
 
 ## Peralatan ejen: LSP-dalam-gelung (pilihan)
 
-Selain gerbang CI, OmniRoute menyediakan perancah `agent-lsp` **pilihan**
+Selain gerbang CI, 67router menyediakan perancah `agent-lsp` **pilihan**
 (`.mcp.json` peringkat projek, Fasa 7 Tugasan 15). Cipta `.mcp.json`
 untuk mendedahkan pelayan bahasa TypeScript kepada ejen pengekodan, supaya mereka menyelesaikan simbol /
 diagnostik **sebelum** menulis kod — pendamping kompilasi-sebelum-mendakwa kepada

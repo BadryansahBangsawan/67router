@@ -8,7 +8,7 @@
 
 ## 快速開始 — 使用原生 `agentrouter` 提供者（建議）
 
-對大多數使用者而言，**不需要任何特殊設定**。OmniRoute 隨附內建的 `agentrouter` 提供者，其中已完整內建 Claude Code 線路格式（請參閱 `open-sse/config/providerRegistry.ts` → `agentrouter`）。使用方式如下：
+對大多數使用者而言，**不需要任何特殊設定**。67router 隨附內建的 `agentrouter` 提供者，其中已完整內建 Claude Code 線路格式（請參閱 `open-sse/config/providerRegistry.ts` → `agentrouter`）。使用方式如下：
 
 1. 開啟 **儀表板 → 提供者 → 新增提供者**。
 2. 從清單中選取 **AgentRouter**。
@@ -22,18 +22,18 @@
 
 ## 進階：透過 Claude Code 相容提供者類型連線
 
-OmniRoute 也可透過 **Claude Code 相容**提供者類型（`anthropic-compatible-cc-*`）支援 AgentRouter（以及類似的中繼服務），該類型會使用正確的線路格式與 Anthropic Messages API 通訊。將一般的 `openai-compatible-chat` 提供者指向 `https://agentrouter.org` 將**無法**運作 — 上游 WAF 會拒絕看起來不像 Claude Code 的請求。
+67router 也可透過 **Claude Code 相容**提供者類型（`anthropic-compatible-cc-*`）支援 AgentRouter（以及類似的中繼服務），該類型會使用正確的線路格式與 Anthropic Messages API 通訊。將一般的 `openai-compatible-chat` 提供者指向 `https://agentrouter.org` 將**無法**運作 — 上游 WAF 會拒絕看起來不像 Claude Code 的請求。
 
 ---
 
 ## 先決條件
 
 - AgentRouter 帳戶與 API 金鑰。新註冊使用者可透過專案 [README](../README.md) 中的聯盟連結取得免費點數。
-- 執行 OmniRoute 時已啟用 `ENABLE_CC_COMPATIBLE_PROVIDER` 功能旗標（請參閱下方說明）。
+- 執行 67router 時已啟用 `ENABLE_CC_COMPATIBLE_PROVIDER` 功能旗標（請參閱下方說明）。
 
 ## 1. 啟用 CC 相容提供者類型
 
-Claude Code 相容提供者類型受到功能旗標控管，因為它傳送的流量會高度模擬官方 Claude Code 用戶端。請在啟動 OmniRoute 前設定環境變數來啟用：
+Claude Code 相容提供者類型受到功能旗標控管，因為它傳送的流量會高度模擬官方 Claude Code 用戶端。請在啟動 67router 前設定環境變數來啟用：
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

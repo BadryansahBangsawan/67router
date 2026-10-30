@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** spás oibre `electron/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Soláthraíonn OmniRoute aip deisce trasardáin (Windows / macOS / Linux) atá tógtha ar
+Soláthraíonn 67router aip deisce trasardáin (Windows / macOS / Linux) atá tógtha ar
 **Electron 41** + **electron-builder 26.10**. Tosaíonn an aip deisce freastalaí
 neamhspleách Next.js mar phróiseas mac, díríonn sí `BrowserWindow` air, agus cuireann sí
 tráidire córais, uathnuashonraitheoir, droichead IPC, agus túsú rúin gan chumraíocht leis.
@@ -47,7 +47,7 @@ Deimhnithe ó `electron/package.json`:
 | `better-sqlite3`    | fréamh `^13.0.2` (réamhleaganacha Node-API — ní gá Electron a atógáil) |
 | Leagan na haipe     | `3.8.0`                                                                |
 | Aitheantas na haipe | `online.omniroute.desktop`                                             |
-| Ainm an táirge      | `OmniRoute`                                                            |
+| Ainm an táirge      | `67router`                                                             |
 
 ## Scripteanna (`package.json` fréimhe)
 
@@ -198,7 +198,7 @@ b’fhearr an comhad `.env` a úsáid, ansin scor go hiomlán (tráidire, **Scoi
 - `BrowserWindow`: 1400×900 (íosmhéid 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, na cnaipí tráchta ag `{ x: 16, y: 16 }`.
 - Windows/Linux: barra teidil dúchasach.
-- Íoslaghdaíonn an cnaipe dúnta go dtí an tráidire; tá **Oscail OmniRoute**, **Oscail an Deais** (brabhsálaí seachtrach), fo-roghchlár **Port an Fhreastalaí**, **Seiceáil le haghaidh Nuashonruithe**, **Scoir** i roghchlár an tráidire.
+- Íoslaghdaíonn an cnaipe dúnta go dtí an tráidire; tá **Oscail 67router**, **Oscail an Deais** (brabhsálaí seachtrach), fo-roghchlár **Port an Fhreastalaí**, **Seiceáil le haghaidh Nuashonruithe**, **Scoir** i roghchlár an tráidire.
 
 ## Beartas Slándála Inneachair
 

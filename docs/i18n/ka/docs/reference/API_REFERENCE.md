@@ -6,7 +6,7 @@
 
 🌐 **ენები:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API-ის ძირითადი ცნობარი. ის მოიცავს საჯარო `/v1` ინტერფეისსა და ყველაზე ხშირად გამოყენებულ მართვის საბოლოო წერტილებს; ამომწურავი წყაროებია მანქანის მიერ წაკითხვადი [`docs/openapi.yaml`](../openapi.yaml) და `src/app/api/`-ში განთავსებული მარშრუტების ხე.
+67router API-ის ძირითადი ცნობარი. ის მოიცავს საჯარო `/v1` ინტერფეისსა და ყველაზე ხშირად გამოყენებულ მართვის საბოლოო წერტილებს; ამომწურავი წყაროებია მანქანის მიერ წაკითხვადი [`docs/openapi.yaml`](../openapi.yaml) და `src/app/api/`-ში განთავსებული მარშრუტების ხე.
 
 OpenAI-თან თავსებადი პროტოკოლისა და პროვაიდერების შესაძლებლობების დეტალური მატრიცისთვის იხილეთ
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | პასუხი      | `HIT` ან `MISS` (არასტრიმინგული)                                                                                                                                                                                          |
 | `X-OmniRoute-Idempotent` | პასუხი      | `true`, თუ დუბლირება აღმოიფხვრა                                                                                                                                                                                           |
 | `X-OmniRoute-Progress`   | პასუხი      | `enabled`, თუ პროგრესის თვალყურის დევნება ჩართულია                                                                                                                                                                        |
-| `X-OmniRoute-Session-Id` | პასუხი      | OmniRoute-ის მიერ გამოყენებული ფაქტობრივი სესიის ID                                                                                                                                                                       |
+| `X-OmniRoute-Session-Id` | პასუხი      | 67router-ის მიერ გამოყენებული ფაქტობრივი სესიის ID                                                                                                                                                                        |
 | `X-OmniRoute-Request-Id` | პასუხი      | მოთხოვნის კორელაციის id (როდესაც ცნობილია)                                                                                                                                                                                |
-| `X-OmniRoute-Version`    | პასუხი      | OmniRoute-ის აგების ვერსია (ყოველთვის წარმოდგენილია)                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | პასუხი      | 67router-ის აგების ვერსია (ყოველთვის წარმოდგენილია)                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | პასუხი      | USD-ში გამოხატული თანხა, რომელიც კეშმა დაზოგა HIT-ისას (მხოლოდ კეშის თანხვედრები)                                                                                                                                         |
 | `X-OmniRoute-Decision`   | პასუხი      | მარშრუტიზაციის ტრასა: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` არის კომბინაციის სტრატეგია, ან `single` არაკომბინირებული მოთხოვნისთვის) — დასრულების პასუხებში ყოველთვის წარმოდგენილია                |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### ანგარიშის მიბმა თითოეული მოთხოვნისთვის
 
-როდესაც პროვაიდერს რამდენიმე კავშირი (ანგარიში ან გასაღები) აქვს, OmniRoute ჩვეულებრივ ერთ-ერთს
+როდესაც პროვაიდერს რამდენიმე კავშირი (ანგარიში ან გასაღები) აქვს, 67router ჩვეულებრივ ერთ-ერთს
 ანგარიშის შერჩევის საკუთარი სტრატეგიით ირჩევს. ამის ნაცვლად, მოთხოვნას შეუძლია ერთი კონკრეტული კავშირი
 `x-omniroute-connection` სათაურის მეშვეობით მიაბას:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ Claude Code მორგებულ სათაურებს `ANTHROPIC_CUST
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Claude Code მორგებულ სათაურებს `ANTHROPIC_CUST
 ## ექსკლუზიური მართული სესიის იჯარები
 
 ექსკლუზიური მართული სესიის იჯარა არჩევითი, კლიენტისგან დამოუკიდებელი მარშრუტიზაციის კონტრაქტია: ერთი აქტიური მფლობელი
-ფლობს ერთ შესაფერის OmniRoute კავშირს. ის არ გასცემს მოდელს იჯარით, არ მოითხოვს OAuth-ს, არ განსაზღვრავს
+ფლობს ერთ შესაფერის 67router კავშირს. ის არ გასცემს მოდელს იჯარით, არ მოითხოვს OAuth-ს, არ განსაზღვრავს
 კონკრეტულ კლიენტს და არ მოითხოვს კონკრეტულ პროვაიდერს.
 
 ავთენტიფიკაციისთვის გამოყენებულ API გასაღებს უნდა ჰქონდეს `lease:exclusive` მოქმედების სფერო და ცალსახად მითითებული, არაცარიელი
@@ -190,7 +190,7 @@ X-OmniRoute-Lease-Owner: vlo_<43-base64url-characters>
 
 ეს არჩევითი სტატუსის მოქმედება ერთ მონაცემთა ბაზის ტრანზაქციაში იზღუდება გაუმჭვირვალე მფლობელით, ავთენტიფიცირებული მართული API გასაღებითა და ზუსტი
 აქტიური თაობით. `displayName` მხოლოდ კონფიგურირებული კავშირის სახელია, რომელსაც დასაწყისისა და დასასრულის ჰარეები მოცილებული აქვს;
-ის არის `null`, როდესაც უსაფრთხო კონფიგურირებული სახელი არ არსებობს. OmniRoute არასდროს ანაცვლებს მას
+ის არის `null`, როდესაც უსაფრთხო კონფიგურირებული სახელი არ არსებობს. 67router არასდროს ანაცვლებს მას
 ელფოსტის მისამართით ან გენერირებული ანგარიშის იდენტობით. პროვაიდერის მნიშვნელობა არასენსიტიური საჩვენებელი წარწერაა და არასდროს
 არის გენერირებული თავსებადი პროვაიდერის იდენტიფიკატორი. ავტორიზაციის მონაცემები, ტოკენები, cookie-ები, კავშირის ან API
 გასაღების ნედლი იდენტიფიკატორები, მფლობელის ჰეშები, შემზღუდავი საიდუმლოებები და მარშრუტიზაციის შიდა მონაცემები გამორიცხულია.
@@ -231,7 +231,7 @@ X-OmniRoute-Lease-Generation: 1
 
 ეს პასუხი მხოლოდ იმას ნიშნავს, რომ ჩვეულებრივი შესაფერისი ნაკრები არაცარიელი იყო და ყველა თავისუფალი კანდიდატი
 უცხო აქტიურ იჯარას ეკავა. მხარდაჭერის არმქონე მოდელები/პროვაიდერები, პოლიტიკასთან შეუსაბამობა, დაყოვნების პერიოდი, კვოტა,
-მდგომარეობა და შესაფერისობის სხვა ჩვეულებრივი წარუმატებლობები OmniRoute-ის არსებულ პასუხებს ინარჩუნებს.
+მდგომარეობა და შესაფერისობის სხვა ჩვეულებრივი წარუმატებლობები 67router-ის არსებულ პასუხებს ინარჩუნებს.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request დოკუმენტებს და **უცვლე�
 ```
 
 მშობლიური `{ image | audio | video | pdf }` მნიშვნელობები შეიძლება იყოს საჯარო HTTPS URL, `data:` URI ან დაუმუშავებელი
-base64. OmniRoute ამ ობიექტებს სტრიქონებად არ გარდაქმნის და მშობლიურ სურათების URL-ებს არ ჩამოტვირთავს — საჯარო
+base64. 67router ამ ობიექტებს სტრიქონებად არ გარდაქმნის და მშობლიურ სურათების URL-ებს არ ჩამოტვირთავს — საჯარო
 მედიას თავად Jina იღებს. Jina-ს დამატებითი ველები (`task`, `normalized`, `truncate`, `embedding_type`)
 გადაიგზავნება. მხოლოდ ტექსტისთვის განკუთვნილი Jina SKU-ები კვლავ უარყოფს არატექსტურ დოკუმენტებს.
 
@@ -453,7 +453,7 @@ Azure-ის საბოლოო პასუხი გამომძახ�
 
 ### Vertex AI DeepSeek OCR-ის ავტორიზაცია და საბოლოო წერტილის განსაზღვრა
 
-`vertex-deepseek-ocr` ხელახლა იყენებს იმავე Vertex AI ავტორიზაციას, რომელსაც OmniRoute უკვე უჭერს მხარს
+`vertex-deepseek-ocr` ხელახლა იყენებს იმავე Vertex AI ავტორიზაციას, რომელსაც 67router უკვე უჭერს მხარს
 ჩატის/სურათების ტრაფიკისთვის (`open-sse/executors/vertex.ts`): კავშირის API-გასაღები არის ან
 Service Account JSON ავტორიზაციის მონაცემები (რომლებიც JWT-bearer ნაკადის მეშვეობით იცვლება მოკლევადიან OAuth წვდომის ტოკენზე),
 ან უკვე შექმნილი OAuth წვდომის ტოკენი, რომელიც უცვლელად გამოიყენება. ზედა დონის საბოლოო წერტილის URL არის Vertex-ის
@@ -477,7 +477,7 @@ Authorization: Bearer your-api-key
 
 ### მოდელების ფასები (`pricing`)
 
-ჩანაწერი შეიცავს `pricing` ობიექტს, როდესაც OmniRoute-მა მოდელის ფასი იცის. ფასი აღებულია
+ჩანაწერი შეიცავს `pricing` ობიექტს, როდესაც 67router-მა მოდელის ფასი იცის. ფასი აღებულია
 ფასების ცხრილიდან, რომელსაც ხარჯების აღრიცხვა იყენებს: ჩაშენებული ნაგულისხმევი მნიშვნელობები, სინქრონიზებული ფასები და
 `/api/pricing`-ის მეშვეობით დაყენებული გადაფარვები. ეს ჩამონათვალის ფასებია, ამიტომ გამოწერაზე დაფუძნებული მომწოდებლებიც
 აჩვენებენ თითოეული ტოკენის ფასს.
@@ -631,8 +631,8 @@ GET /api/v1/provider-plugin-manifest
 
 ## აუდიოს გენერაცია ElevenLabs-ით
 
-OmniRoute-ში დააკონფიგურირეთ `elevenlabs` პროვაიდერის კავშირი თქვენი ElevenLabs API გასაღებით.
-კლიენტები ავთენტიფიკაციას გადიან თავიანთი **OmniRoute** გასაღებით (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+67router-ში დააკონფიგურირეთ `elevenlabs` პროვაიდერის კავშირი თქვენი ElevenLabs API გასაღებით.
+კლიენტები ავთენტიფიკაციას გადიან თავიანთი **67router** გასაღებით (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 კარიბჭე შენახულ პროვაიდერის გასაღებს გადასცემს, როგორც `xi-api-key`. არასოდეს გაგზავნოთ ElevenLabs-ის გასაღები
 კარიბჭის bearer-ტოკენის სახით.
 
@@ -697,7 +697,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 შეზღუდვისთვის და `429`-ს კვოტის ლიმიტისთვის. არსებობის შემთხვევაში უცვლელად ინახება `character-cost`, `song-id`, `request-id` და `retry-after`
 სათაურები. უფასო საკრედიტო ბალანსი არ იძლევა ყველა მუსიკალურ მოდელზე, გამომავალ ფორმატსა თუ API ფუნქციაზე
 წვდომის გარანტიას: თითოეული მოთხოვნის უფლებამოსილებას ElevenLabs განსაზღვრავს.
-გაერთიანებული საბოლოო წერტილი შეცდომის სტატუსის კოდებს OmniRoute-ის ნორმალიზებულ შეცდომის კონვერტში ინარჩუნებს.
+გაერთიანებული საბოლოო წერტილი შეცდომის სტატუსის კოდებს 67router-ის ნორმალიზებულ შეცდომის კონვერტში ინარჩუნებს.
 
 Upstream კონტრაქტები: [ხმოვანი ეფექტები](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [მუსიკის კომპოზიცია](https://elevenlabs.io/docs/api-reference/music/compose) და
@@ -738,7 +738,7 @@ Upstream კონტრაქტები: [ხმოვანი ეფექ�
 
 ყველა POST მარშრუტი ერთსა და იმავე ფორმას იყენებს: `Bearer your-api-key` + Zod-ით ვალიდირებული JSON სხეული (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` და ა.შ.; იხილეთ `src/shared/validation/schemas.ts`). სქემის ვალიდაციის წარუმატებლობისას ბრუნდება 4xx.
 
-კლიენტებისთვის, რომლებსაც `Authorization: Bearer ...`-ის დართვა არ შეუძლიათ, OmniRoute ასევე იღებს API გასაღებებს URL-ში — ან მოთხოვნის სტრიქონთან თავსებადობის საშუალებით (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), ან ქვემოთ დოკუმენტირებული სპეციალური `/api/v1/vscode/{token}/...` ენდპოინტების მეშვეობით.
+კლიენტებისთვის, რომლებსაც `Authorization: Bearer ...`-ის დართვა არ შეუძლიათ, 67router ასევე იღებს API გასაღებებს URL-ში — ან მოთხოვნის სტრიქონთან თავსებადობის საშუალებით (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), ან ქვემოთ დოკუმენტირებული სპეციალური `/api/v1/vscode/{token}/...` ენდპოინტების მეშვეობით.
 
 ```bash
 # ხელახალი რანჟირება (ღრუბლოვანი რეესტრის პროვაიდერი ან OpenAI-თან თავსებადი პროვაიდერის კვანძი ფორმატით "<prefix>/<model>")
@@ -900,7 +900,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, იგივე API გასაღები, რაც Parallel Search-ს აქვს) მხოლოდ Markdown-ს
 აბრუნებს — ნებისმიერი სხვა `format` იწვევს `400`-ს — და კონტენტს 100,000 სიმბოლომდე ზღუდავს. როდესაც
 სამიზნე გვერდის ამოღება შეუძლებელია, ზედა დონის სერვისი ამის შესახებ HTTP 200 პასუხში იტყობინება;
-OmniRoute ამას ფიქსირებული შეტყობინების მქონე `422` პასუხად გარდაქმნის.
+67router ამას ფიქსირებული შეტყობინების მქონე `422` პასუხად გარდაქმნის.
 
 | მეთოდი | მისამართი       | აღწერა                                                        |
 | ------ | --------------- | ------------------------------------------------------------- |
@@ -963,14 +963,14 @@ codex OAuth კავშირს და `wreq-js` ტრანსპორტ�
 OpenAI **Codex CLI** მოდელის სახელს კლიენტის მხარეს ამოწმებს, როდესაც
 `supports_websockets = true`, და **უარყოფს პროვაიდერის პრეფიქსიან id-ებს**, როგორიცაა
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). გაგზავნეთ **სუფთა** id (მაგალითად, `gpt-5.5`). OmniRoute-ის ხიდი
+a ChatGPT account`). გაგზავნეთ **სუფთა** id (მაგალითად, `gpt-5.5`). 67router-ის ხიდი
 მხოლოდ codex-ს ემსახურება, ამიტომ ზედა დონის სერვისში გვირაბის შექმნამდე ის სუფთა id-ს ხელახლა განსაზღვრავს, როგორც codex მოდელს
 (`resolveCodexWsModelInfo`) — მიუხედავად იმისა, რომ სუფთა
 `gpt-5.5` HTTP-ის მეშვეობით სხვა პროვაიდერთან იქნებოდა მარშრუტიზებული.
 
 #### OpenAI Codex CLI-ის კონფიგურაცია
 
-მიუთითეთ Codex CLI-ს OmniRoute-ზე `~/.codex/config.toml`-ში WebSocket-ის
+მიუთითეთ Codex CLI-ს 67router-ზე `~/.codex/config.toml`-ში WebSocket-ის
 მხარდაჭერის მქონე მორგებული პროვაიდერის დამატებით (არსებულ კონფიგურაციაზე ზემოქმედების თავიდან ასაცილებლად
 გამოიყენეთ ცალკე `CODEX_HOME`):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # ბოლოში დახრილი ხაზი არ უნდა ჰქონდეს; WS URL მისგან მიიღება (საწარმოო გარემოში გამოიყენეთ https/wss)
 wire_api = "responses"                    # ერთადერთი მხარდაჭერილი მნიშვნელობა 2026 წლის თებერვლიდან
 supports_websockets = true                # რთავს Responses-over-WS ტრანსპორტს
-env_key = "OMNIROUTE_API_KEY"             # შეიცავს OmniRoute API გასაღებს (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # შეიცავს 67router API გასაღებს (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API გასაღები (ნებისმიერი გასაღები, თუ REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router API გასაღები (ნებისმიერი გასაღები, თუ REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI `base_url + /responses` მისამართს WebSocket კავშირად აახლებს, ხოლო OmniRoute მას
+CLI `base_url + /responses` მისამართს WebSocket კავშირად აახლებს, ხოლო 67router მას
 არჩეულ codex OAuth კავშირთან გვირაბით აკავშირებს. სრულად შემოწმებულია ლოკალურ
 სერვერთან: ChatGPT აბრუნებს `codex.rate_limits` + `response.created`-ს და პასუხს
 ნაკადის სახით გადასცემს.
@@ -1075,7 +1075,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### შეზღუდვის ზღვრის მიხედვით კორექტირების ფორმულა
 
-OmniRoute მხარს უჭერს კვოტის პროაქტიულ შეზღუდვის ზღვრებს ზედა დონის რესურსის ამოწურვის თავიდან ასაცილებლად (კონფიგურირდება კავშირის
+67router მხარს უჭერს კვოტის პროაქტიულ შეზღუდვის ზღვრებს ზედა დონის რესურსის ამოწურვის თავიდან ასაცილებლად (კონფიგურირდება კავშირის
 `quotaWindowThresholds`-ით, პროვაიდერის ნაგულისხმევი მნიშვნელობებით ან მდგრადობის გლობალური პარამეტრებით). როდესაც კვოტის ფანჯარაზე
 აქტიურია შეზღუდვის ზღვარი (მაგ., `cutoff = 25%`), ტექსტის რენდერერი დარჩენილ ლიმიტს შემდეგნაირად ითვლის:
 
@@ -1623,7 +1623,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - ტოკენიანი ფსევდონიმები ხელახლა იყენებენ იმავე დამმუშავებლებს, რომლებსაც `/v1/*` და `/api/tags`; პასუხების სტრუქტურა უცვლელი რჩება.
 - ყოველთვის უპირატესობა მიანიჭეთ `Authorization: Bearer ...`-ს, როდესაც კლიენტს მორგებული სათაურების მხარდაჭერა აქვს.
-- URL-ზე დაფუძნებული ტოკენები შეიძლება გამოჩნდეს რევერსული პროქსის ჟურნალებში, ბრაუზერის ისტორიასა და OmniRoute-ის გარეთ არსებულ ტელემეტრიაში. განიხილეთ ისინი თავსებადობის ვარიანტად და არა ავთენტიფიკაციის ნაგულისხმევ რეჟიმად.
+- URL-ზე დაფუძნებული ტოკენები შეიძლება გამოჩნდეს რევერსული პროქსის ჟურნალებში, ბრაუზერის ისტორიასა და 67router-ის გარეთ არსებულ ტელემეტრიაში. განიხილეთ ისინი თავსებადობის ვარიანტად და არა ავთენტიფიკაციის ნაგულისხმევ რეჟიმად.
 
 ---
 
@@ -1731,7 +1731,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Webhook-ები
 
-OmniRoute-ის მოვლენებისთვის გამავალი webhook-გამოწერები (მოთხოვნის დასრულება, კვოტის ამოწურვა, გასაღების როტაცია და ა.შ.).
+67router-ის მოვლენებისთვის გამავალი webhook-გამოწერები (მოთხოვნის დასრულება, კვოტის ამოწურვა, გასაღების როტაცია და ა.შ.).
 
 | მეთოდი | გზა                       | აღწერა                                                                      |
 | ------ | ------------------------- | --------------------------------------------------------------------------- |
@@ -1764,7 +1764,7 @@ OmniRoute-ის მოვლენებისთვის გამავა�
 
 ## აგენტების პროტოკოლი
 
-ღრუბლოვანი აგენტების ამოცანები (Claude Code, Codex Cloud, OpenHands და ა.შ.), რომლებიც დისტანციურად სრულდება OmniRoute-ის მომხმარებლების სახელით.
+ღრუბლოვანი აგენტების ამოცანები (Claude Code, Codex Cloud, OpenHands და ა.შ.), რომლებიც დისტანციურად სრულდება 67router-ის მომხმარებლების სახელით.
 
 | მეთოდი | მისამართი                     | აღწერა                                                                                                                                                       |
 | ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1810,7 +1810,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## მდგრადობა (გაფართოებული)
 
-OmniRoute უზრუნველყოფს დროებითი შეფერხებების მართვის სამ დამოუკიდებელ მექანიზმს; ქვემოთ მოცემული მართვის endpoint-ები ოპერატორებს მათი მდგომარეობის წაკითხვისა და პარამეტრების ხელით შეცვლის საშუალებას აძლევს:
+67router უზრუნველყოფს დროებითი შეფერხებების მართვის სამ დამოუკიდებელ მექანიზმს; ქვემოთ მოცემული მართვის endpoint-ები ოპერატორებს მათი მდგომარეობის წაკითხვისა და პარამეტრების ხელით შეცვლის საშუალებას აძლევს:
 
 | მოქმედების არეალი   | მდგომარეობის საცავი                                      | წაკითხვა                                  | ჩამოყრა / გასუფთავება                                            |
 | ------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
@@ -1845,7 +1845,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## უნარები
 
-უნარების ჩარჩო OmniRoute-ის მორგებული შესრულებადი დამმუშავებლებით გასაფართოებლად, ასევე მარკეტპლეისის ინტეგრაციები.
+უნარების ჩარჩო 67router-ის მორგებული შესრულებადი დამმუშავებლებით გასაფართოებლად, ასევე მარკეტპლეისის ინტეგრაციები.
 
 | მეთოდი | გზა                               | აღწერა                                                                                                                                         |
 | ------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1882,7 +1882,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## MCP სერვერი
 
-OmniRoute-ს მოჰყვება ჩაშენებული Model Context Protocol სერვერი 3 ტრანსპორტით (stdio, SSE, streamable-http) და მოქმედების არეებით შეზღუდული ხელსაწყოებით. ქვემოთ მოცემული მართვის პანელის ენდფოინთები კითხულობენ სტატუსის/აუდიტის მონაცემებს და HTTP ტრანსპორტების პროქსირებას ახორციელებენ.
+67router-ს მოჰყვება ჩაშენებული Model Context Protocol სერვერი 3 ტრანსპორტით (stdio, SSE, streamable-http) და მოქმედების არეებით შეზღუდული ხელსაწყოებით. ქვემოთ მოცემული მართვის პანელის ენდფოინთები კითხულობენ სტატუსის/აუდიტის მონაცემებს და HTTP ტრანსპორტების პროქსირებას ახორციელებენ.
 
 | მეთოდი | მისამართი | აღწერა |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1904,7 +1904,7 @@ OmniRoute-ს მოჰყვება ჩაშენებული Model Cont
 
 ## A2A სერვერი
 
-OmniRoute უზრუნველყოფს A2A (აგენტებს შორის) JSON-RPC 2.0 ბოლო წერტილს, ასევე REST გარსს ინსპექტირებისა და საინფორმაციო დაფის გამოყენებისთვის.
+67router უზრუნველყოფს A2A (აგენტებს შორის) JSON-RPC 2.0 ბოლო წერტილს, ასევე REST გარსს ინსპექტირებისა და საინფორმაციო დაფის გამოყენებისთვის.
 
 ### JSON-RPC
 
@@ -2133,7 +2133,7 @@ GET /.well-known/agent.json
 
 ## CLI ხელსაწყოების მართვა
 
-მართეთ CLI ხელსაწყოები, რომლებიც ინტეგრირებულია OmniRoute-თან (antigravity, commandCode,
+მართეთ CLI ხელსაწყოები, რომლებიც ინტეგრირებულია 67router-თან (antigravity, commandCode,
 devin-cli და სხვ.). სრული სიისთვის იხილეთ [პროვაიდერების ცნობარი](./PROVIDER_REFERENCE.md).
 
 | მეთოდი | მისამართი                               | აღწერა                                                                                                                                                                                     |
@@ -2244,7 +2244,7 @@ devin-cli და სხვ.). სრული სიისთვის იხი
 
 ## პლაგინები
 
-მართეთ OmniRoute-ის პლაგინები (მესამე მხარის გაფართოებები).
+მართეთ 67router-ის პლაგინები (მესამე მხარის გაფართოებები).
 
 | მეთოდი | გზა                                | აღწერა                             |
 | ------ | ---------------------------------- | ---------------------------------- |

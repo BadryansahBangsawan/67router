@@ -4,7 +4,7 @@
 
 ---
 
-Nígbà tí OmniRoute bá ń ṣiṣẹ́ nínú Docker, ìlànà “Gbé wọlé láti Zed Keychain” tí ó jẹ́ àṣà kì í ṣiṣẹ́
+Nígbà tí 67router bá ń ṣiṣẹ́ nínú Docker, ìlànà “Gbé wọlé láti Zed Keychain” tí ó jẹ́ àṣà kì í ṣiṣẹ́
 nítorí pé container náà kò lè dé ọ̀dọ̀ daemon keychain ti OS host (libsecret lórí Linux,
 Keychain lórí macOS, Credential Manager lórí Windows), àti pé àwọn directory config Zed lórí
 filesystem host kò hàn nínú container ní àìyídá.
@@ -20,7 +20,7 @@ filesystem host kò hàn nínú container ní àìyídá.
    máa ń bá iṣẹ́ keychain OS sọ̀rọ̀ nípasẹ̀ Unix socket tàbí session D-Bus.
    Kò sí èyíkéyìí tí a bridge sínú container ní àìyídá, nítorí náà kíkà credential máa ń kùnà ní gbogbo ìgbà.
 
-OmniRoute máa ń ṣàwárí environment Docker nípasẹ̀ heuristics méjì:
+67router máa ń ṣàwárí environment Docker nípasẹ̀ heuristics méjì:
 
 - Wíwà `/.dockerenv` (èyí tí daemon Docker kọ nígbà tí container bá bẹ̀rẹ̀).
 - Ìfarahàn string `docker` nínú `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Nígbà tí èyíkéyìí nínú heuristics wọ̀nyí bá ṣiṣẹ́, route �
 
 1. Ṣí **Dashboard → Providers → Zed**.
 2. Panel **Manual Token Import** máa hàn ní ìsàlẹ̀ kaadi ìgbéwọlé keychain. Nígbà tí
-   OmniRoute bá ṣàwárí Docker, panel yìí máa ṣí fúnra rẹ̀ lẹ́yìn ìgbìyànjú àkọ́kọ́ tí ó kùnà
+   67router bá ṣàwárí Docker, panel yìí máa ṣí fúnra rẹ̀ lẹ́yìn ìgbìyànjú àkọ́kọ́ tí ó kùnà
    láti gbé wọlé láti keychain.
 3. Yan provider láti inú dropdown (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, tàbí DeepSeek).

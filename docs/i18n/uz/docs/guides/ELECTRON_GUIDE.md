@@ -7,7 +7,7 @@
 > **Haqiqat manbasi:** `electron/` ish maydoni
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute **Electron 41** + **electron-builder 26.10** asosida yaratilgan, platformalararo ish stoli ilovasi (Windows / macOS / Linux) bilan taqdim etiladi. Ish stoli ilovasi Next.js avtonom serverini yordamchi jarayon sifatida ishga tushiradi, `BrowserWindow` oynasini unga yoʻnaltiradi hamda tizim treyi, avtomatik yangilovchi, IPC koʻprigi va sozlashni talab qilmaydigan maxfiy kalitlarni boshlangʻich sozlash imkoniyatlarini qoʻshadi.
+67router **Electron 41** + **electron-builder 26.10** asosida yaratilgan, platformalararo ish stoli ilovasi (Windows / macOS / Linux) bilan taqdim etiladi. Ish stoli ilovasi Next.js avtonom serverini yordamchi jarayon sifatida ishga tushiradi, `BrowserWindow` oynasini unga yoʻnaltiradi hamda tizim treyi, avtomatik yangilovchi, IPC koʻprigi va sozlashni talab qilmaydigan maxfiy kalitlarni boshlangʻich sozlash imkoniyatlarini qoʻshadi.
 
 ## Arxitektura
 
@@ -42,7 +42,7 @@ OmniRoute **Electron 41** + **electron-builder 26.10** asosida yaratilgan, platf
 | `better-sqlite3`     | asosiy `^13.0.2` (Node-API tayyor yigʻmalari — Electron uchun qayta yigʻish talab qilinmaydi) |
 | Ilova versiyasi      | `3.8.0`                                                                                       |
 | Ilova identifikatori | `online.omniroute.desktop`                                                                    |
-| Mahsulot nomi        | `OmniRoute`                                                                                   |
+| Mahsulot nomi        | `67router`                                                                                    |
 
 ## Skriptlar (asosiy `package.json`)
 
@@ -192,7 +192,7 @@ ishlash vaqti sozlamalari uchun (qarang:
 - `BrowserWindow`: 1400×900 (minimal 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, boshqaruv tugmalari `{ x: 16, y: 16 }` koordinatasida.
 - Windows/Linux: tizimning standart sarlavha paneli.
-- Yopish tugmasi oynani tizim lotogiga kichraytiradi; tizim lotogi menyusida **OmniRouteʼni ochish**, **Boshqaruv panelini ochish** (tashqi brauzerda), **Server porti** quyi menyusi, **Yangilanishlarni tekshirish**, **Chiqish** bandlari mavjud.
+- Yopish tugmasi oynani tizim lotogiga kichraytiradi; tizim lotogi menyusida **67routerʼni ochish**, **Boshqaruv panelini ochish** (tashqi brauzerda), **Server porti** quyi menyusi, **Yangilanishlarni tekshirish**, **Chiqish** bandlari mavjud.
 
 ## Kontent xavfsizligi siyosati
 

@@ -7,7 +7,7 @@
 > **Isi mmalite eziokwu:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute nwere ike izipu HTTP webhooks mgbe ihe omume dị n'elu ikpo okwu mere. Jiri ha jikọta ya na
+67router nwere ike izipu HTTP webhooks mgbe ihe omume dị n'elu ikpo okwu mere. Jiri ha jikọta ya na
 Slack, PagerDuty, Datadog, ọrụ ịdọ aka ná ntị dị n'ime, ma ọ bụ ihe nnata HTTP ọ bụla.
 
 Dispatcher ahụ na-eji HMAC-SHA256 abịanye aka na nnyefe ọ bụla, na-anwale ọzọ mgbe
@@ -54,7 +54,7 @@ njehie nke webhook ọ bụla ka otu receiver ọjọọ ghara igbochi ndị ọ
 
 ## Ịbịanye Aka na HMAC
 
-Mgbe webhook nwere `secret`, OmniRoute na-abịanye aka na JSON body ma zipụ:
+Mgbe webhook nwere `secret`, 67router na-abịanye aka na JSON body ma zipụ:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Ihu dashboard dị na `/dashboard/webhooks` (lee
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

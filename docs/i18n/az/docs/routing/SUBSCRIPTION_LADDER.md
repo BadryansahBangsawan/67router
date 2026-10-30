@@ -10,7 +10,7 @@
 
 ## Bunun mövcudluq səbəbi
 
-OmniRoute artıq xərclə bağlı iki suala cavab verir, lakin onların heç biri əksər operatorların verdiyi sual deyil.
+67router artıq xərclə bağlı iki suala cavab verir, lakin onların heç biri əksər operatorların verdiyi sual deyil.
 
 | Mövcud mexanizm                                          | Cavab verdiyi sual                                |
 | -------------------------------------------------------- | ------------------------------------------------- |

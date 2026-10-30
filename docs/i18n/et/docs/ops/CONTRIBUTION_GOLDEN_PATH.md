@@ -123,7 +123,7 @@ dokumenteeritud käsitsi kontrolli.
 - CLI kataloogid asuvad eraldi kataloogis `bin/cli/locales/`.
 - Säilitage ICU kohatäited ja sildid täpselt. Ärge tõlkige toote-, teenusepakkuja- või mudelinimesid,
   protokolli- ja päisenimesid, käske, koodi/JSON-i identifikaatoreid, URL-e, keskkonnamuutujaid ega
-  kaitstud termineid, nagu `OmniRoute`, `OAuth`, `MCP` ja `A2A`. Praegune lähteloend asub failis
+  kaitstud termineid, nagu `67router`, `OAuth`, `MCP` ja `A2A`. Praegune lähteloend asub failis
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Sihitud tsükkel**
@@ -270,7 +270,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # kasuta mujal (CI-s) ko
 - **Võta tagasi.** `run` valideerib edutatud pesa uuesti ning vahetab `current` ja `previous` tagasi, kui
   see kontroll nurjub. Esimesel valideerimisel nurjunud kandidaati ei edutata kunagi.
 
-Kõik kirjutatakse gitignore'i lisatud kataloogi `_artifacts/candidate/`; olemasolevat OmniRoute'i
+Kõik kirjutatakse gitignore'i lisatud kataloogi `_artifacts/candidate/`; olemasolevat 67router'i
 installatsiooni ega selle andmekataloogi ei muudeta kunagi. Edutatud CLI asub failis
 `_artifacts/candidate/current/prefix/bin/omniroute`; kasutamisel käivita see oma muutujaga `DATA_DIR`.
 Väljumiskoodid: `0` õnnestumine, `1` nurjunud valideerimine või edutamine, `2` kasutusviga või puuduv koosteversioon.

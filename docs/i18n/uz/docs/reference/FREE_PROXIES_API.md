@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute `free_proxies` jadvalida tashqi provayderlardan (1proxy, proxifly, iplocate, webshare) sinxronlangan, saralangan bepul proksilar toʻplamini taqdim etadi. Boshqaruv panelida ular **Sozlamalar → Bepul proksilar** boʻlimida koʻrsatiladi. Ushbu hujjat roʻyxat marshruti taqdim etadigan server tomonidagi filtrlash, saralash, hisoblash va sinxronlash xatolari haqidagi hisobotlarni yoritadi.
+67router `free_proxies` jadvalida tashqi provayderlardan (1proxy, proxifly, iplocate, webshare) sinxronlangan, saralangan bepul proksilar toʻplamini taqdim etadi. Boshqaruv panelida ular **Sozlamalar → Bepul proksilar** boʻlimida koʻrsatiladi. Ushbu hujjat roʻyxat marshruti taqdim etadigan server tomonidagi filtrlash, saralash, hisoblash va sinxronlash xatolari haqidagi hisobotlarni yoritadi.
 
 ## Roʻyxat marshruti — `GET /api/settings/free-proxies`
 

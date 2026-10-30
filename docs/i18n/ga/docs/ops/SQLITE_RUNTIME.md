@@ -4,7 +4,7 @@
 
 ---
 
-Réitíonn OmniRoute a thiománaí SQLite ag am tosaithe trí shlabhra cúltaca 5 chéim:
+Réitíonn 67router a thiománaí SQLite ag am tosaithe trí shlabhra cúltaca 5 chéim:
 
 1. **`better-sqlite3` cuachta** (trí `dependencies` in `package.json`)
    — an ceann is tapa, dénártha dúchasach, suiteáilte ag `npm install` nuair atá uirlisí tógála ar fáil.
@@ -28,13 +28,13 @@ Réitíonn OmniRoute a thiománaí SQLite ag am tosaithe trí shlabhra cúltaca 
 - **Gan uirlisí tógála**: Ní féidir le roinnt timpeallachtaí (Windows corparáideach gan VS Build
   Tools, íomhánna íosta Docker) `better-sqlite3` a thiomsú. Faigheann an suiteálaí ag am rite
   dénártha réamhthógtha ó chlárlann npm; cinntíonn na tiománaithe cúltaca
-  go dtosóidh OmniRoute fós fiú má theipeann air sin.
+  go dtosóidh 67router fós fiú má theipeann air sin.
 - **Córais aerbhearnaithe**: Mura féidir clárlann npm a bhaint amach, ráthaíonn `node:sqlite`
   nó `sql.js` feidhmiúlacht bhunúsach.
 
 ## Bailíochtú beart draíochta
 
-Sula lódálann OmniRoute comhad `.node` atá suiteáilte ag am rite, léann sé na chéad 8
+Sula lódálann 67router comhad `.node` atá suiteáilte ag am rite, léann sé na chéad 8
 mbeart agus cuireann sé iad i gcomparáid le bearta draíochta aitheanta na n-ardán:
 
 | Ardán                  | Bearta (heics) | Lipéad      |
@@ -104,9 +104,9 @@ Cur chun feidhme:
 ## Toipeolaíocht scríbhneora aonair (ní thacaítear le HA)
 
 Ritheann slabhra cúltaca an tiománaí thuas fós in **aon phróiseas amháin**. Is
-**scríbhneoir aonair** é SQLite réamhshocraithe OmniRoute:
+**scríbhneoir aonair** é SQLite réamhshocraithe 67router:
 
-- Ná ceangail dhá mhacasamhail OmniRoute leis an gcomhad `storage.sqlite` céanna.
+- Ná ceangail dhá mhacasamhail 67router leis an gcomhad `storage.sqlite` céanna.
 - Scaoileann atosú coimeádáin, imscaradh Recreate, marú OOM, nó atosú HEALTHCHECK
   gach seisiún SSE atá ar siúl. Níl aon fholmhú seisiúin ar an gconair chaighdeánach.
 - Maróidh beogacht an cheolfhoireannaitheora a mheasann `/healthz` mall a bheith marbh an t-aon

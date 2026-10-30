@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nodrošina atlasītu bezmaksas starpniekserveru kopu tabulā `free_proxies`,
+67router nodrošina atlasītu bezmaksas starpniekserveru kopu tabulā `free_proxies`,
 kas tiek sinhronizēta no ārējiem nodrošinātājiem (1proxy, proxifly, iplocate, webshare).
 Informācijas panelī tie ir pieejami sadaļā **Iestatījumi → Bezmaksas starpniekserveri**.
 Šajā dokumentā aprakstīta servera pusē veiktā filtrēšana, kārtošana, skaitīšana un

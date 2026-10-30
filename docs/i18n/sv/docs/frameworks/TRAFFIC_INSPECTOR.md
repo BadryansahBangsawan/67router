@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector är OmniRoutes inbyggda felsökningsverktyg för HTTPS-trafik — ett verktyg liknande Charles Proxy / mitmweb / HTTP Toolkit som är **LLM-medvetet** och **agentmedvetet**. Det finns på `/dashboard/tools/traffic-inspector` och tar emot trafik i realtid från upp till 5 samtidiga insamlingskällor.
+Traffic Inspector är 67routers inbyggda felsökningsverktyg för HTTPS-trafik — ett verktyg liknande Charles Proxy / mitmweb / HTTP Toolkit som är **LLM-medvetet** och **agentmedvetet**. Det finns på `/dashboard/tools/traffic-inspector` och tar emot trafik i realtid från upp till 5 samtidiga insamlingskällor.
 
 **Plats i instrumentpanelen:** `/dashboard/tools/traffic-inspector`
 **Grupp i sidofältet:** Verktyg (efter AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector är OmniRoutes inbyggda felsökningsverktyg för HTTPS-trafik 
 
 ### Det som gör Traffic Inspector unikt
 
-| Funktion                                                                  | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Webbaserat                                                                |    ✓    |    ✗    |    ✗    |                ✓                |
-| Öppen källkod                                                             |    ✓    |    ✗    | delvis  |                ✓                |
-| **Agentmedvetet** (vet om begäran kommer från Antigravity/Copilot/etc.)   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-medvetet** (tolkar OpenAI-/Anthropic-/Gemini-format, token, modell) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Synlig modellmappning** (gemini-3-flash → claude-sonnet-4.7)            |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Uppdelning av proxy-/uppströmslatens**                                  | delvis  |    ✗    |    ✗    |                ✓                |
-| **Integrerat med OmniRoutes** routning, reservvägar och kostnader         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Systemomfattande proxyfelsökning** (valfri app på datorn)               |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Insamling från anpassad värd** (DNS-omdirigering per värd)              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY-miljövariabelläge**                                          |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Konversationsvy** (flervändningsbubblor, tool_use/tool_result)          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sammanslagning av SSE-strömmar** (återskapar från deltahändelser)       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sessionsinspelning** (namngiven, exporterbar som .har/.jsonl)           |    ✗    |    ✓    |    ✓    |                ✓                |
+| Funktion                                                                  | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Webbaserat                                                                |    ✓    |    ✗    |    ✗    |               ✓                |
+| Öppen källkod                                                             |    ✓    |    ✗    | delvis  |               ✓                |
+| **Agentmedvetet** (vet om begäran kommer från Antigravity/Copilot/etc.)   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-medvetet** (tolkar OpenAI-/Anthropic-/Gemini-format, token, modell) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Synlig modellmappning** (gemini-3-flash → claude-sonnet-4.7)            |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Uppdelning av proxy-/uppströmslatens**                                  | delvis  |    ✗    |    ✗    |               ✓                |
+| **Integrerat med 67routers** routning, reservvägar och kostnader          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Systemomfattande proxyfelsökning** (valfri app på datorn)               |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Insamling från anpassad värd** (DNS-omdirigering per värd)              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY-miljövariabelläge**                                          |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Konversationsvy** (flervändningsbubblor, tool_use/tool_result)          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sammanslagning av SSE-strömmar** (återskapar från deltahändelser)       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sessionsinspelning** (namngiven, exporterbar som .har/.jsonl)           |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arkitektur i ett stycke
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true om SSE-svar
   mappedTo: string | null; // x-omniroute-mapped-header
-  costEstimateUsd: number | null; // uppskattad kostnad baserat på OmniRoute-prissättning
+  costEstimateUsd: number | null; // uppskattad kostnad baserat på 67router-prissättning
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Systemproxyn återställdes inte
 
-Om OmniRoute kraschar medan det systemomfattande proxyläget är aktivt:
+Om 67router kraschar medan det systemomfattande proxyläget är aktivt:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Bassökväg: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Lista förfrågningar (filtrerbara: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Detaljer för en enskild förfrågan                                                         |
 | DELETE | `/requests`                 | Rensa minnesbufferten                                                                     |
-| POST   | `/requests/{id}/replay`     | Kör samma förfrågan igen via OmniRoute-routern                                            |
+| POST   | `/requests/{id}/replay`     | Kör samma förfrågan igen via 67router-routern                                             |
 | PUT    | `/requests/{id}/annotation` | Spara eller uppdatera en anteckning för en förfrågan                                      |
 
 ### WebSocket

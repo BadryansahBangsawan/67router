@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY transparent decrypt shi ne **yanayin kama zirga-zirga na 5** na OmniRoute don tarin MITM na
+TPROXY transparent decrypt shi ne **yanayin kama zirga-zirga na 5** na 67router don tarin MITM na
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Yana tarewa tare da **warware ɓoyewar** zirga-zirgar HTTPS mai fita daga na’ura a Linux
 ta amfani da TPROXY na kernel + policy routing — **ba tare da** yin kwaikwayon `/etc/hosts` ba kuma
@@ -53,7 +53,7 @@ Yi amfani da shi idan kana son kama tare da warware ɓoyewar zirga-zirga daga pr
 - ba ka son ka dagula shi ta hanyar sauya system-wide proxy.
 
 Saboda tarewar tana faruwa a cikin kernel, process ɗin da ya fara zirga-zirgar baya buƙatar **wani
-canjin configuration** — amma dole ne process ɗin ya amince da dynamic CA da OmniRoute
+canjin configuration** — amma dole ne process ɗin ya amince da dynamic CA da 67router
 ke girkawa (duba [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ ba a gina addon ba), mai loda addon (`src/mitm/tproxy/transparentSocket.ts::load
 zai dawo da `null` maimakon jefa kuskure. Sannan matsayin capture-mode zai nuna
 `available: false`, za a **kashe** maɓallin dashboard tare da tooltip
 "TPROXY decrypt yana buƙatar Linux + root + native addon", kuma sauran sassan
-OmniRoute za su ci gaba da aiki.
+67router za su ci gaba da aiki.
 
 ---
 
@@ -261,7 +261,7 @@ turawa tana kare kanta daga wannan da alamar soket ta ƙetarewa (**SO_MARK**):
 | **Tsabtace kurakurai**                | Error responses na route suna wucewa ta `sanitizeErrorMessage()` (Doka Mai Tsauri #12).                                                                                                                                                                                                                                                                                                                                                      |
 
 **MITM CA wata iko ce mai ƙarfi.** CA da OS ya amince da ita, wadda za ta iya sa hannu ga kowane
-host, tana nufin cewa za a iya warware duk wani abu da OmniRoute ya katse. An killace ta a bayan
+host, tana nufin cewa za a iya warware duk wani abu da 67router ya katse. An killace ta a bayan
 yanayin kama zirga-zirgar TPROXY na musamman, na cikin gida kawai, a kashe ta tsohuwa, kuma ana cire
 entry ɗin trust-store lokacin da ka dakatar da yanayin.
 
@@ -371,7 +371,7 @@ yana dawo da `available: false` idan addon ɗin ya ɓace.
 ### Tsofaffin dokokin firewall bayan faɗuwar tsarin
 
 `revertTproxy()` shi ne kishiyar apply kai tsaye kuma yana da idempotent. Tsayar da
-yanayin yana mayar da dokokin; idan an kashe OmniRoute a tsakiyar zaman, yi amfani da
+yanayin yana mayar da dokokin; idan an kashe 67router a tsakiyar zaman, yi amfani da
 aikin AgentBridge **Repair** (`POST /api/tools/agent-bridge/repair`) don warware
 yanayin tsarin da aka bari babu mai kula da shi (DNS spoof, root CA, system proxy).
 Dokokin TPROXY na `mangle` da route ɗin ma suna gogewa ta atomatik lokacin sake kunna

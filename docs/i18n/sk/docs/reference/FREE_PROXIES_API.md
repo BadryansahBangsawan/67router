@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute poskytuje starostlivo vybranú skupinu bezplatných proxy serverov v tabuľke `free_proxies`,
+67router poskytuje starostlivo vybranú skupinu bezplatných proxy serverov v tabuľke `free_proxies`,
 synchronizovanú z externých poskytovateľov (1proxy, proxifly, iplocate, webshare).
 Ovládací panel ich zobrazuje v časti **Nastavenia → Bezplatné proxy servery**. Tento dokument
 opisuje filtrovanie, zoraďovanie, počítanie a hlásenie chýb synchronizácie na strane servera,

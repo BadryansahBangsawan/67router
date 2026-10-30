@@ -6,7 +6,7 @@
 
 ## Forbhreathnú
 
-Is **spleáchas roghnach, neamhchriticiúil** é Redis in OmniRoute — leanann an feidhmchlár de bheith ag obair ar bhealach maolaithe (cúltacaí
+Is **spleáchas roghnach, neamhchriticiúil** é Redis in 67router — leanann an feidhmchlár de bheith ag obair ar bhealach maolaithe (cúltacaí
 sa chuimhne) nuair nach mbíonn Redis ar fáil. I dtimpeallacht táirgthe, laghdaíonn tiúnadh Redis an mhoill do cheithre ualach oibre
 ar leith:
 
@@ -17,7 +17,7 @@ ar leith:
 | Stór cuóta                    | `redisQuotaStore.ts`          | Singilton `getRedisClient(url)` ar leith           | `<prefix>quota:*` inchumraithe de réir áisc              |
 | Scoradán ciorcaid réamhthéimh | `redisCircuitBreakerStore.ts` | Cliant ar leith in `circuitBreakerFactory.ts`      | `<prefix>warmup:cb:<connectionId>`                       |
 
-Roinneann na ceithre ualach oibre an réimír ainmspáis céanna ionas gur féidir le OmniRoute cómhaireachtáil le feidhmchláir eile ar
+Roinneann na ceithre ualach oibre an réimír ainmspáis céanna ionas gur féidir le 67router cómhaireachtáil le feidhmchláir eile ar
 áis Redis amháin (m.sh. `127.0.0.1:6379`). Féach [Ainmspású Eochrach](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ Roinneann na ceithre ualach oibre an réimír ainmspáis céanna ionas gur féid
 
 ## Ainmspású Eochrach
 
-Roinneann OmniRoute ásc Redis le cibé rud eile a ritheann ar an óstach. Gan ainmspás,
+Roinneann 67router ásc Redis le cibé rud eile a ritheann ar an óstach. Gan ainmspás,
 d’fhéadfadh eochracha amhail `auth:api_key:<sha256>` nó `rl:*` teacht salach ar eochracha ó fheidhmchláir eile
 a úsáideann an Redis céanna (ritheann an ásc seo Redis ar `127.0.0.1:6379` taobh le seirbhísí eile).
 
-Socraigh `REDIS_KEY_PREFIX` mar theaghrán neamhfholamh chun réimír a chur le **gach** eochair OmniRoute:
+Socraigh `REDIS_KEY_PREFIX` mar theaghrán neamhfholamh chun réimír a chur le **gach** eochair 67router:
 
 ```bash
-# .env — déantar omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* de gach eochair OmniRoute
+# .env — déantar omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* de gach eochair 67router
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # fág spás do thaisce leathanaigh an OS
 maxmemory-policy allkeys-lru         # díshealbhaigh iontrálacha seanchaite ón taisce fíordheimhnithe faoi bhrú
 
-# Marthanacht (roghnach — tá OmniRoute sábháilte ar thuairt gan í)
+# Marthanacht (roghnach — tá 67router sábháilte ar thuairt gan í)
 save 300 1                           # tóg seat gach 5 nóiméad ar a laghad má athraíodh ≥1 eochair
 appendonly no                        # níl AOF de dhíth; is féidir na sonraí a athghiniúint
 appendfsync no                       # gan forchostas fsync (is leor RDB)

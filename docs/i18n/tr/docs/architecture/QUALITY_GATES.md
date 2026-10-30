@@ -4,7 +4,7 @@
 
 ---
 
-Bu belge, OmniRoute'taki tüm CI kalite kapıları için yetkili referanstır.
+Bu belge, 67router'taki tüm CI kalite kapıları için yetkili referanstır.
 Her kapıyı, neyi doğruladığını, hangi CI işinde çalıştığını, bir ratchet temel çizgisi mi
 yoksa geçti/kaldı politikası mı kullandığını ve derlemeyi engelleyip engellemediğini ya da yalnızca danışman niteliğinde olup olmadığını açıklar.
 
@@ -266,14 +266,14 @@ Yalnızca pull request'lerde çalışır.
 
 Bunlar bir cron zamanlamasıyla (ve `workflow_dispatch` ile) çalışır, asla PR'larda çalışmaz. Tümü tavsiye niteliğindedir.
 
-| İş akışı               | Doğrular                                                                                                                                                                  | Engelleyici |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `nightly-property`     | rastgele tohum + yüksek çalıştırma sayısıyla fast-check özellik (property) testleri                                                                                       | **Tavsiye** |
-| `nightly-resilience`   | heap-büyüme kapısı, kaos hata enjeksiyonu, k6 yük/soak                                                                                                                    | **Tavsiye** |
-| `nightly-llm-security` | promptfoo enjeksiyon koruması (engelleme modu) + garak sondaları (sağlayıcı secret'ı yoksa atlanır)                                                                       | **Tavsiye** |
-| `nightly-schemathesis` | `docs/openapi.yaml` kullanarak canlı bir OmniRoute'a karşı OpenAPI sözleşme fuzzing'i (schemathesis) — spec ihlallerini / işlenmemiş 500'leri ortaya çıkarır (Fase 8 B.4) | **Tavsiye** |
-| `nightly-mutation`     | hızlı birim testi hattı üzerinde Stryker mutasyon testi skoru — hayatta kalan mutantlar zayıf assert'leri ortaya çıkarır                                                  | **Tavsiye** |
-| `nightly-compat`       | desteklenen `engines.node` aralıkları genelinde Node motor uyumluluğu matrisi                                                                                             | **Tavsiye** |
+| İş akışı               | Doğrular                                                                                                                                                                 | Engelleyici |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `nightly-property`     | rastgele tohum + yüksek çalıştırma sayısıyla fast-check özellik (property) testleri                                                                                      | **Tavsiye** |
+| `nightly-resilience`   | heap-büyüme kapısı, kaos hata enjeksiyonu, k6 yük/soak                                                                                                                   | **Tavsiye** |
+| `nightly-llm-security` | promptfoo enjeksiyon koruması (engelleme modu) + garak sondaları (sağlayıcı secret'ı yoksa atlanır)                                                                      | **Tavsiye** |
+| `nightly-schemathesis` | `docs/openapi.yaml` kullanarak canlı bir 67router'a karşı OpenAPI sözleşme fuzzing'i (schemathesis) — spec ihlallerini / işlenmemiş 500'leri ortaya çıkarır (Fase 8 B.4) | **Tavsiye** |
+| `nightly-mutation`     | hızlı birim testi hattı üzerinde Stryker mutasyon testi skoru — hayatta kalan mutantlar zayıf assert'leri ortaya çıkarır                                                 | **Tavsiye** |
+| `nightly-compat`       | desteklenen `engines.node` aralıkları genelinde Node motor uyumluluğu matrisi                                                                                            | **Tavsiye** |
 
 Performans taban çizgileri (heap, TTFB, derleme süresi) kaydedilir, kapılanmaz: bkz. [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -551,7 +551,7 @@ izin listesine sahip yeşil bir geçit, sahte bir kalite algısı yaratır.
 
 ## Ajan araçları: Döngü içinde LSP (isteğe bağlı)
 
-CI geçitlerine ek olarak OmniRoute, **isteğe bağlı** bir `agent-lsp` iskeleti
+CI geçitlerine ek olarak 67router, **isteğe bağlı** bir `agent-lsp` iskeleti
 (proje düzeyinde bir `.mcp.json`, Aşama 7 Görev 15) sunar. Kodlama ajanlarına bir TypeScript dil sunucusu
 sağlamak için `.mcp.json` oluşturun; böylece ajanlar kod yazmadan **önce** sembolleri /
 tanılamaları çözümler — bu, `typecheck:core` için derle-önce-iddia-et yaklaşımını destekleyen

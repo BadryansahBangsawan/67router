@@ -7,11 +7,11 @@
 හවුල් executable manifest එක, සීමා කළ child environments සහ ස්ථිර
 Gemini සැකසුම සඳහා, [CLI දියත් කිරීමේ ගිවිසුම්](./CLI-LAUNCH-CONTRACTS.md) බලන්න.
 
-OmniRoute සමඟ backend ලෙස භාවිත කිරීමට coding
-CLI එකක් (Codex, Claude Code, OpenCode, Cline, …) වින්යාස කරන `setup-*` විධාන පෙළක් OmniRoute සපයයි — එම නිසා
-මෙවලම **එක්** endpoint එකක් සමඟ සන්නිවේදනය කරන අතර OmniRoute විසින් ස්වයංක්රීය fallback සමඟ
+67router සමඟ backend ලෙස භාවිත කිරීමට coding
+CLI එකක් (Codex, Claude Code, OpenCode, Cline, …) වින්යාස කරන `setup-*` විධාන පෙළක් 67router සපයයි — එම නිසා
+මෙවලම **එක්** endpoint එකක් සමඟ සන්නිවේදනය කරන අතර 67router විසින් ස්වයංක්රීය fallback සමඟ
 නිවැරදි provider වෙත ඉල්ලීම් යොමු කරයි. සෑම විධානයක්ම ක්රියාත්මක වන
-OmniRoute instance එකකින් (දේශීය හෝ දුරස්ථ) **සජීවී** model catalog එක කියවා, **ඔබගේ**
+67router instance එකකින් (දේශීය හෝ දුරස්ථ) **සජීවී** model catalog එක කියවා, **ඔබගේ**
 පරිගණකයේ ඇති මෙවලමෙහිම config file එකට ලියයි. මෙවලම සහාය දක්වන සෑම අවස්ථාවකදීම API key එක
 environment variable එකක් මඟින් යොමු කෙරේ. මෙවලමට දේශීය environment file එකක් ස්ථිරව සුරකින විධාන පහතින් සඳහන් කර ඇත.
 
@@ -53,7 +53,7 @@ CLI වෙත සපයා ඇති management endpoint එක, context එක 
 
 - [Claude Code වින්යාසය](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI වින්යාසය](./CODEX-CLI-CONFIGURATION.md)
-- [දුරස්ථ ප්රකාරය](./REMOTE-MODE.md) — ඔබගේ laptop එකෙන් දුරස්ථ OmniRoute එකක් (VPS / Tailnet) පාලනය කරන්න
+- [දුරස්ථ ප්රකාරය](./REMOTE-MODE.md) — ඔබගේ laptop එකෙන් දුරස්ථ 67router එකක් (VPS / Tailnet) පාලනය කරන්න
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot extension එක; එයට editor එක තුළින්ම ඔබ වෙනුවෙන් මෙම
   `setup-*` විධාන ද ක්රියාත්මක කළ හැක
 
@@ -87,7 +87,7 @@ CLI වෙත සපයා ඇති management endpoint එක, context එක 
 
 ධජ පිළිබඳ සටහන් (විධාන මූලාශ්රය තුළ සත්යාපනය කර ඇත):
 
-- `--remote <url>` — දුරස්ථ OmniRoute එකකින් නාමාවලිය ලබා ගනී (`--port`
+- `--remote <url>` — දුරස්ථ 67router එකකින් නාමාවලිය ලබා ගනී (`--port`
   සහ සක්රිය සන්දර්භය අභිබවා යයි). `--api-key <key>` මඟින් එම
   සේවාදායකය සඳහා අක්තපත්රය සපයයි (පෙරනිමිය `OMNIROUTE_API_KEY` පරිසර විචල්යය හෝ සක්රිය සන්දර්භයේ token එකයි).
 - `--only <patterns>` — කොමාවෙන් වෙන් කළ උපතන්තු; ගැළපෙන model ID පමණක්
@@ -107,7 +107,7 @@ CLI වෙත සපයා ඇති management endpoint එක, context එක 
   **codex** වෙත `-c model_providers.omniroute.*` තර්ක හරහාත් ලැබේ. **`--model` අනිවාර්යයෙන්ම
   අවශ්ය එකම ධාවන ඉලක්කය Qwen වේ** — එය නොමැතිව `omniroute run qwen` ධාවනය කළහොත් පැහැදිලි
   දෝෂයක් සමඟ `2` කේතයෙන් පිටවේ.
-- `--port <port>` — දේශීය OmniRoute port එක (පෙරනිමිය `20128`, `--remote`
+- `--port <port>` — දේශීය 67router port එක (පෙරනිමිය `20128`, `--remote`
   සකසා ඇති විට නොසලකා හරී). සියලු `setup-*` විධානවල සහ දියත්කාරක දෙකෙහිම ඇත.
 - `omniroute run` පිටවීමේ කේත: උප CLI එකේම පිටවීමේ කේතය
   වෙනස් නොකර ප්රචාරණය කරයි; `2` = වලංගු නොවන තර්ක (සහාය නොදක්වන ඉලක්කය, අවශ්ය
@@ -152,7 +152,7 @@ MITM, සහ මාර්ගෝපදේශ-පමණක් නාමාවල�
 
 ## දේශීය භාවිතය
 
-OmniRoute `localhost:20128` මත ක්රියාත්මක වන විට, ඔබේ මෙවලම සඳහා සැකසුම් විධානය ක්රියාත්මක කරන්න. නාමාවලිය දේශීය සේවාදායකයෙන් ලබාගැනේ.
+67router `localhost:20128` මත ක්රියාත්මක වන විට, ඔබේ මෙවලම සඳහා සැකසුම් විධානය ක්රියාත්මක කරන්න. නාමාවලිය දේශීය සේවාදායකයෙන් ලබාගැනේ.
 
 ```bash
 # Codex: ගැළපෙන සෑම ආකෘතියකටම පැතිකඩක් ~/.codex/ තුළ ලියන්න
@@ -179,8 +179,8 @@ omniroute setup-continue --dry-run
 කිසිදු වින්යාසයක් නොලියා දියත් කරන්න (පරිසර-ආදේශනය පමණි):
 
 ```bash
-omniroute launch                 # Claude Code → දේශීය OmniRoute
-omniroute launch-codex           # Codex CLI → දේශීය OmniRoute
+omniroute launch                 # Claude Code → දේශීය 67router
+omniroute launch-codex           # Codex CLI → දේශීය 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -198,7 +198,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## දුරස්ථ භාවිතය
 
-ඕනෑම සැකසුම් විධානයක් `--remote` + `--api-key` සමඟ දුරස්ථ OmniRoute එකකට යොමු කරන්න. නාමාවලිය දුරස්ථ පද්ධතියෙන් ලබාගෙන, වින්යාසය ඔබේ දේශීය යන්ත්රයේ ලියනු ලැබේ.
+ඕනෑම සැකසුම් විධානයක් `--remote` + `--api-key` සමඟ දුරස්ථ 67router එකකට යොමු කරන්න. නාමාවලිය දුරස්ථ පද්ධතියෙන් ලබාගෙන, වින්යාසය ඔබේ දේශීය යන්ත්රයේ ලියනු ලැබේ.
 
 ```bash
 # දුරස්ථ VPS එකකට එරෙහිව OpenCode, glm/kimi ආකෘති පමණක් තබාගන්න
@@ -236,7 +236,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-ආකාර දෙකම එක් 5dive **සත්යාපන පැතිකඩක්** ලියන අතර, එම පැතිකඩට බැඳී ඇති සෑම `claude` ස්ථානයක්ම ඉන්පසු OmniRoute සමඟ සන්නිවේදනය කරයි. මෙම ඉලක්කයට විශේෂිත කරුණු තුනක් ඇත:
+ආකාර දෙකම එක් 5dive **සත්යාපන පැතිකඩක්** ලියන අතර, එම පැතිකඩට බැඳී ඇති සෑම `claude` ස්ථානයක්ම ඉන්පසු 67router සමඟ සන්නිවේදනය කරයි. මෙම ඉලක්කයට විශේෂිත කරුණු තුනක් ඇත:
 
 - **එය සමූහ සත්කාරකය මත root ලෙස ක්රියාත්මක වේ.** 5dive හි ක්රියාපද දේශීය systemd ඒකක සහ root සතු තත්ත්ව නාමාවලියක් මත ක්රියා කරයි; දුරස්ථ ප්රකාරයක් නොමැත. එය දැනටමත් root ලෙස ක්රියාත්මක නොවේ නම් ක්රියාපටිපාටිය `sudo` හරහා නැවත ක්රියාත්මක වේ (`--no-sudo` එය අක්රිය කර ඒ වෙනුවට විධානය මුද්රණය කරයි).
 - **අන්ත ලක්ෂ්යය loopback එකක් නොවේ නම් එය `https://` විය යුතුය.** සෑම ඉල්ලීමකදීම නියෝජිතයාගේ API යතුර එම URL එක හරහා ගමන් කරන අතර, යන්ත්රයෙන් පිටත ඇති සංකේතනය නොකළ අන්ත ලක්ෂ්යයක් 5dive ප්රතික්ෂේප කරයි. පුද්ගලික LAN ලිපිනයක් වුවද මෙයට ව්යතිරේකයක් නොවේ.
@@ -244,13 +244,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API යතුර 5dive වෙත **stdin** හරහා (`--api-key=-`) ලබාදෙන බැවින්, එය කිසිවිටෙකත් `ps` ප්රතිදානයේ නොපෙන්වයි.
 
-පැතිකඩ තනි ආකෘතියකට නොව OmniRoute **සංයෝජනයකට** යොමු කිරීමෙන් සමූහයට සැපයුම්කරු අසාර්ථක වීමකදී මාරුවීමේ හැකියාව ලැබේ: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) හි සටහන් කර ඇති ධාවනය අතරතුර ප්රධාන අන්ත ලක්ෂ්යය සම්පූර්ණයෙන්ම බිඳ වැටුණු විට, නියෝජිතයා ඉතිරි පියවර උපස්ථය මත සම්පූර්ණ කළ අතර බිඳ වැටීම පරිශීලකයාට කිසිවිටෙකත් නිරාවරණය නොකළේය.
+පැතිකඩ තනි ආකෘතියකට නොව 67router **සංයෝජනයකට** යොමු කිරීමෙන් සමූහයට සැපයුම්කරු අසාර්ථක වීමකදී මාරුවීමේ හැකියාව ලැබේ: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) හි සටහන් කර ඇති ධාවනය අතරතුර ප්රධාන අන්ත ලක්ෂ්යය සම්පූර්ණයෙන්ම බිඳ වැටුණු විට, නියෝජිතයා ඉතිරි පියවර උපස්ථය මත සම්පූර්ණ කළ අතර බිඳ වැටීම පරිශීලකයාට කිසිවිටෙකත් නිරාවරණය නොකළේය.
 
 ---
 
 ## මූලික URL සම්මුතීන් (`/v1` අවශ්ය මෙවලම්)
 
-OmniRoute විසින් OpenAI අතුරුමුහුණත `/v1` හිද, Anthropic අතුරුමුහුණත මූලයේද,
+67router විසින් OpenAI අතුරුමුහුණත `/v1` හිද, Anthropic අතුරුමුහුණත මූලයේද,
 ස්වදේශීය Gemini අතුරුමුහුණත `/v1beta` හිද නිරාවරණය කරයි. සෑම අනුකලනයක්ම එහි
 මෙවලම අපේක්ෂා කරන ආකෘතියට සම්බන්ධ කර ඇත (විධාන මූලාශ්රය තුළ සත්යාපනය කර ඇත):
 
@@ -272,7 +272,7 @@ OmniRoute විසින් OpenAI අතුරුමුහුණත `/v1` හ�
 ## යාවත්කාලීන කිරීමේදී ස්වදේශීය පරායත්තතා රඳවා ගැනීම: `--include=optional`
 
 ඔබ `omniroute update` මඟින් යාවත්කාලීන කරන විට (තහවුරු කිරීමෙන් පසු, හෝ `--apply` සමඟ),
-OmniRoute විසින් ස්ථාපනය තුළ `--include=optional` පෙරනිමියෙන් ඇතුළත් කර ක්රියාත්මක කරයි:
+67router විසින් ස්ථාපනය තුළ `--include=optional` පෙරනිමියෙන් ඇතුළත් කර ක්රියාත්මක කරයි:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -300,14 +300,14 @@ omniroute update --dry-run
 `@google/gemini-cli` 0.50.0 සමඟ ගිවිසුම සත්යාපනය කර ඇත: CLI විසින්
 `GOOGLE_GEMINI_BASE_URL` පිළිපදින අතර එයට එරෙහිව
 `POST /v1beta/models/<model>:generateContent` (සහ `:streamGenerateContent?alt=sse`)
-නිකුත් කරයි — එය හරියටම OmniRoute හි ස්වදේශීය Gemini අතුරුමුහුණතයි (`/v1beta`).
+නිකුත් කරයි — එය හරියටම 67router හි ස්වදේශීය Gemini අතුරුමුහුණතයි (`/v1beta`).
 `omniroute run gemini` එය ස්වයංක්රීයව සම්බන්ධ කරයි:
 
-- `GOOGLE_GEMINI_BASE_URL` → සක්රිය OmniRoute මූලික URL එක (මූලය, `/v1` නොමැතිව);
-- `GEMINI_API_KEY` → විසඳාගත් OmniRoute අක්තපත්රය (විකල්පය/පරිසරය/සන්දර්භය);
+- `GOOGLE_GEMINI_BASE_URL` → සක්රිය 67router මූලික URL එක (මූලය, `/v1` නොමැතිව);
+- `GEMINI_API_KEY` → විසඳාගත් 67router අක්තපත්රය (විකල්පය/පරිසරය/සන්දර්භය);
 - `gemini-api-key` සත්යාපනය තෝරන `.gemini/settings.json` සහිත **තාවකාලික හුදකලා
   `GEMINI_CLI_HOME` එකක්**, එමඟින් ගබඩා කර ඇති Google OAuth සැසියක් (Code Assist)
-  කිසිවිටෙක OmniRoute වෙත යොමු කළ දියත් කිරීම අභිබවා නොයයි — පිටවීමෙන් පසු ඉවත් කරනු ලැබේ;
+  කිසිවිටෙක 67router වෙත යොමු කළ දියත් කිරීම අභිබවා නොයයි — පිටවීමෙන් පසු ඉවත් කරනු ලැබේ;
 - **පරිසර සනීපාරක්ෂාව**: උප-ක්රියාවලියේ පරිසරයෙන් `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` සහ `GOOGLE_GENAI_USE_GCA` (මේවා සත්යාපනය
   Vertex/Code Assist වෙත යළි යොමු කරනු ඇත) ඉවත් කරන අතර,
@@ -331,7 +331,7 @@ Gemini හි වැඩබිම්-විශ්වාස ආරක්ෂකය 
 ## සත්ය smoke sweep පරීක්ෂාව (අභිමතයෙන් සක්රිය කළ හැකි)
 
 නිර්ණායක launch-plan ප්රතිගමන පරීක්ෂණ CI තුළ ධාවනය වේ (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). සත්ය OmniRoute සේවාදායකයකට එරෙහිව සත්ය
+`tests/unit/cli/run-execution.test.ts`). සත්ය 67router සේවාදායකයකට එරෙහිව සත්ය
 binary ගොනු වලංගු කිරීමට, අභිමතයෙන් සක්රිය කළ හැකි harness එකක්
 `tests/integration/upstream-cli-smoke.int.test.ts` හි ඇත. එය කිසිවිටෙක ස්වයංක්රීයව
 ධාවනය නොවේ (`RUN_CLI_SMOKE=1` නොමැති නම් සෑම උප-පරීක්ෂණයක්ම මඟ හරියි), අක්තපත්රය env-var

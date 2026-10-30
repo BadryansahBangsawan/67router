@@ -4,7 +4,7 @@
 
 ---
 
-> **Go hachomair**: Úsáideann OmniRoute **SQLite le dialannú WAL** mar a phríomhstór, agus criptiú **AES-256-GCM** á úsáid aige le haghaidh réimsí íogaire atá á stóráil. Clúdaíonn an treoir seo an scéimre, ascnaimh, cúltaca/aisghabháil, agus treoirleabhair oibríochtúla.
+> **Go hachomair**: Úsáideann 67router **SQLite le dialannú WAL** mar a phríomhstór, agus criptiú **AES-256-GCM** á úsáid aige le haghaidh réimsí íogaire atá á stóráil. Clúdaíonn an treoir seo an scéimre, ascnaimh, cúltaca/aisghabháil, agus treoirleabhair oibríochtúla.
 
 **Foinsí:**
 
@@ -19,7 +19,7 @@
 
 ## Cén fáth SQLite?
 
-Roghnaigh OmniRoute SQLite seachas PostgreSQL/MySQL ar roinnt cúiseanna:
+Roghnaigh 67router SQLite seachas PostgreSQL/MySQL ar roinnt cúiseanna:
 
 | Fachtóir           | SQLite                                      | PostgreSQL                                       |
 | ------------------ | ------------------------------------------- | ------------------------------------------------ |
@@ -30,7 +30,7 @@ Roghnaigh OmniRoute SQLite seachas PostgreSQL/MySQL ar roinnt cúiseanna:
 | **Cúltaca**        | Cóip aonchomhaid                            | `pg_dump` nó seat den chóras comhad              |
 | **Cás úsáide**     | Suiteáil in aghaidh an úsáideora, leabaithe | SaaS ilthionónta                                 |
 
-I gcás imscaradh **aonúsáideora, aonáis** (príomhchás úsáide OmniRoute), tá SQLite níos simplí agus níos tapa.
+I gcás imscaradh **aonúsáideora, aonáis** (príomhchás úsáide 67router), tá SQLite níos simplí agus níos tapa.
 
 ### Dialannú WAL
 
@@ -50,7 +50,7 @@ Is é **65,536 KiB (64 MiB)** méid réamhshocraithe na taisce. Léirmhíníonn 
 `cache_size` diúltach mar neasteorainn uachtarach in KiB agus leithdháileann sé leathanaigh de réir mar is gá.
 Glacann **Socruithe > Córas & Stóras > Méid na Taisce** le luachanna slánuimhreacha ó **1 go
 1,000,000 KiB**; nuair a shábháiltear an socrú, cuirtear i bhfeidhm é ar an gceangal beo leis an mbunachar sonraí,
-agus athchóiríonn OmniRoute an luach marthanach ag am tosaithe.
+agus athchóiríonn 67router an luach marthanach ag am tosaithe.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Ailtireacht Modúl Fearainn
 
-Tá **110 modúl TypeScript ardleibhéil** i mbunachar sonraí OmniRoute in `src/lib/db/`. Déanann gach modúl fearainn na nithe seo a leanas:
+Tá **110 modúl TypeScript ardleibhéil** i mbunachar sonraí 67router in `src/lib/db/`. Déanann gach modúl fearainn na nithe seo a leanas:
 
 - Tá tábla sonrach amháin nó níos mó faoina chúram
 - Easpórtálann sé feidhmeanna CRUD clóscríofa
@@ -90,7 +90,7 @@ Tá **110 modúl TypeScript ardleibhéil** i mbunachar sonraí OmniRoute in `src
 
 ### Na 110 Modúl Ardleibhéil Bunachair Sonraí
 
-Tá **110 comhad TypeScript ardleibhéil** ag OmniRoute in `src/lib/db/`. Seo thíos sampla de na croímhodúil; féach liostú na comhadlainne chun an liosta iomlán a fháil:
+Tá **110 comhad TypeScript ardleibhéil** ag 67router in `src/lib/db/`. Seo thíos sampla de na croímhodúil; féach liostú na comhadlainne chun an liosta iomlán a fháil:
 
 | Modúl                   | Táblaí                                                         | Freagracht                                                                           |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Tá an liosta iomlán de thart ar 30+ tábla in `src/lib/db/migrations/`.
 
 ## Aistrithe
 
-Úsáideann OmniRoute **aistrithe le leaganacha agus idéimpiteacha** in `src/lib/db/migrations/`. Is comhad SQL aonair é gach aistriú darb ainm `NNN_description.sql`.
+Úsáideann 67router **aistrithe le leaganacha agus idéimpiteacha** in `src/lib/db/migrations/`. Is comhad SQL aonair é gach aistriú darb ainm `NNN_description.sql`.
 
 ### Ainmniú Aistrithe
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> Tá **athruithe nach bhfuil comhoiriúnach siar** (m.sh., colúin a scriosadh) casta. NÍ thacaíonn OmniRoute le híosghrádú — a luaithe a chuirtear aistriú i bhfeidhm, bíonn an t-athrú scéimre buan. Déan pleanáil dá réir.
+> Tá **athruithe nach bhfuil comhoiriúnach siar** (m.sh., colúin a scriosadh) casta. NÍ thacaíonn 67router le híosghrádú — a luaithe a chuirtear aistriú i bhfeidhm, bíonn an t-athrú scéimre buan. Déan pleanáil dá réir.
 
 ---
 
@@ -310,7 +310,7 @@ Ar chúiseanna feidhmíochta, stóráiltear na nithe seo a leanas mar ghnáth-th
 
 ## Forchoimeádais maidir le Criptiú (v3.8.16+)
 
-Úsáideann OmniRoute **`migrateLegacyEncryptedString()`** chun dhá scéim chriptithe a láimhseáil go trédhearcach:
+Úsáideann 67router **`migrateLegacyEncryptedString()`** chun dhá scéim chriptithe a láimhseáil go trédhearcach:
 
 - **Oidhreachta** (roimh v3.5.0): "criptiú" bunaithe ar XOR (ní fíorchripteagrafaíocht é)
 - **Reatha**: AES-256-GCM le IV ceart agus clib fíordheimhnithe
@@ -399,7 +399,7 @@ Chun cúltaca a dhéanamh de bhunachar sonraí beo gan aga neamhfhónaimh:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Úsáideann sé seo API cúltaca ar líne SQLite — tá sé sábháilte é a rith agus OmniRoute ar siúl.
+Úsáideann sé seo API cúltaca ar líne SQLite — tá sé sábháilte é a rith agus 67router ar siúl.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Dlúthú
 
-Baineann áscanna OmniRoute a ritheann ar feadh tréimhsí fada tairbhe as `VACUUM` ó am go chéile:
+Baineann áscanna 67router a ritheann ar feadh tréimhsí fada tairbhe as `VACUUM` ó am go chéile:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Athshocrú (Glanadh) na Sonraí Uile
 
 ```bash
-# Stop OmniRoute ar dtús
+# Stop 67router ar dtús
 omniroute stop
 
 # Scrios an comhad DB
@@ -612,7 +612,7 @@ Tá glas scríofa á choinneáil ag próiseas eile. Déan ceann díobh seo:
 
 - Fan go gcríochnóidh an próiseas eile (seiceáil `lsof | grep storage.sqlite`)
 - Cuir deireadh leis an bpróiseas eile
-- Má mhaireann an fhadhb, atosaigh OmniRoute
+- Má mhaireann an fhadhb, atosaigh 67router
 
 ### "Theip ar shrian na heochrach coigríche"
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Rith an t-ascnamh in idirbheart, mar sin ba cheart gur rolladh siar é. Murar rolladh:
 
-1. **Stop OmniRoute** (cuir cosc ar iarrachtaí breise)
+1. **Stop 67router** (cuir cosc ar iarrachtaí breise)
 2. **Seiceáil staid an DB** le `sqlite3`
 3. **Deisigh de láimh** an t-ascnamh páirteach
-4. **Rith OmniRoute arís** (bainfear triail eile as an ascnamh)
+4. **Rith 67router arís** (bainfear triail eile as an ascnamh)
 
 Chun é seo a chosc, déan ascnaimh a thástáil ar chóip ar dtús i gcónaí.
 

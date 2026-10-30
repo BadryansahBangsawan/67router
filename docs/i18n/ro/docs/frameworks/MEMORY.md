@@ -7,7 +7,7 @@
 > **Sursa oficială:** `src/lib/memory/` și `src/app/api/memory/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40 (dezactivată implicit + recuperarea decalajului cuantizării int8)
 
-OmniRoute oferă memorie conversațională persistentă, asociată cheii API (și,
+67router oferă memorie conversațională persistentă, asociată cheii API (și,
 opțional, ID-ului sesiunii). Amintirile sunt extrase automat din răspunsurile LLM
 prin identificarea simplă a unor tipare regex și reinjectate în solicitările
 ulterioare sub forma unui mesaj system inițial (sau a primului mesaj al
@@ -608,7 +608,7 @@ TTL implicit de 5 min).
 
 ## Alegerea unui furnizor de încorporări (v3.8.16+)
 
-Motorul de memorie OmniRoute acceptă **patru surse de încorporări** (`src/lib/memory/embedding/`). Fiecare presupune compromisuri diferite privind **latența, costul, calitatea modelului și complexitatea configurării**.
+Motorul de memorie 67router acceptă **patru surse de încorporări** (`src/lib/memory/embedding/`). Fiecare presupune compromisuri diferite privind **latența, costul, calitatea modelului și complexitatea configurării**.
 
 ### Sursele de încorporări
 
@@ -1029,13 +1029,13 @@ Worker-ul ascultă numai pe interfața loopback, pe care protecția SSRF a `Gene
 Acest adaptor nu relaxează protecția respectivă: gazda este fixată în cod la `127.0.0.1`, iar schema de
 configurare (`ClaudeMemBackendConfigSchema`, `.strict()`) acceptă numai:
 
-| Cheie       | Tip    | Implicit | Note                                                                                                                   |
-| ----------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —        | Obligatoriu, 1024–65535. Portul workerului claude-mem din fișierul său de setări (implicit `37700 + uid % 100`).       |
-| `project`   | string | —        | Proiectul claude-mem de utilizat. Nesetat → fiecare cheie API OmniRoute este asociată propriului proiect (`apiKeyId`). |
-| `timeoutMs` | number | `5000`   | Timp de expirare per solicitare, 100–30000.                                                                            |
+| Cheie       | Tip    | Implicit | Note                                                                                                                  |
+| ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —        | Obligatoriu, 1024–65535. Portul workerului claude-mem din fișierul său de setări (implicit `37700 + uid % 100`).      |
+| `project`   | string | —        | Proiectul claude-mem de utilizat. Nesetat → fiecare cheie API 67router este asociată propriului proiect (`apiKeyId`). |
+| `timeoutMs` | number | `5000`   | Timp de expirare per solicitare, 100–30000.                                                                           |
 
-Activați-l prin `PUT /api/settings/memory` și reporniți OmniRoute (backendurile sunt înregistrate
+Activați-l prin `PUT /api/settings/memory` și reporniți 67router (backendurile sunt înregistrate
 o singură dată, în `initMemoryBackends()`):
 
 ```json
@@ -1052,7 +1052,7 @@ Mapare și limite:
 
 - ID-urile sunt `claude-mem:<observationId>`; `get`/`delete` ignoră ID-urile altor backenduri fără un
   apel de rețea.
-- `create` → `POST /api/memory/save`; câmpurile OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; câmpurile 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) sunt transmise în `metadata.omniroute` din claude-mem și sunt restituite la citire.
 - `search` → `GET /api/search?format=json&type=observations`, restrâns la `maxTokens`
   (caractere / 4). `list` → endpointul paginat al workerului pentru observații (`total` este o limită inferioară — workerul
@@ -1064,16 +1064,16 @@ Mapare și limite:
 - Injectarea în prompt (`retrieval.ts`) și instrumentele MCP `omniroute_memory_*` citesc în continuare direct din SQLite
   — acestea nu trec prin `memoryManager`, astfel încât acest backend nu le furnizează date.
 
-**Rutarea propriilor apeluri LLM ale claude-mem prin OmniRoute.** claude-mem comprimă observațiile
+**Rutarea propriilor apeluri LLM ale claude-mem prin 67router.** claude-mem comprimă observațiile
 cu un LLM (implicit: Claude Agent SDK). Furnizorul său `openai-compatible` poate indica în schimb spre
-OmniRoute, beneficiind de fallbackul combo și de urmărirea costurilor. În `~/.claude-mem/settings.json`:
+67router, beneficiind de fallbackul combo și de urmărirea costurilor. În `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<cheie API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model sau combo OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<cheie API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model sau combo 67router>"
 }
 ```
 

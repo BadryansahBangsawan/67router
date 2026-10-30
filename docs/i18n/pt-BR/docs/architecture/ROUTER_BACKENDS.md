@@ -20,10 +20,10 @@ A função de um mecanismo é descrita por **dois eixos independentes**, codific
 `RouterBackendDefinition` do registro:
 
 1. **Ciclo de vida** (`RouterBackendLifecycle`) — _como o mecanismo é executado_:
-   - `in-process` — é executado dentro do processo Node do OmniRoute (o pipeline TS nativo).
-   - `supervised` — um processo filho local que o OmniRoute instala/inicia/interrompe/verifica
+   - `in-process` — é executado dentro do processo Node do 67router (o pipeline TS nativo).
+   - `supervised` — um processo filho local que o 67router instala/inicia/interrompe/verifica
      por meio do `ServiceSupervisor` e depois consome como uma conexão de provedor.
-   - `external` — um endpoint HTTP para o qual o OmniRoute encaminha solicitações, mas que **não** gerencia
+   - `external` — um endpoint HTTP para o qual o 67router encaminha solicitações, mas que **não** gerencia
      (configurado por uma URL-base em uma variável de ambiente).
    - `disabled` — registrado, mas não selecionável.
 2. **Eixo de seleção** (backend de roteamento do relay) — _se o relay encaminha solicitações para ele_:

@@ -4,7 +4,7 @@
 
 ---
 
-Palaidiet `omniroute` CLI savā klēpjdatorā, kamēr pats OmniRoute darbojas citur
+Palaidiet `omniroute` CLI savā klēpjdatorā, kamēr pats 67router darbojas citur
 (VPS, mājas serverī vai citā ierīcē jūsu Tailnet tīklā). Vienreiz piesakieties ar
 `omniroute connect`, un turpmāk **katra** CLI komanda tiks izpildīta attālajā
 serverī — tās pašas komandas, tā pati izvade, tikai izpilde notiek attāli.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← izveido lokālu Codex profilu no 
 ## Kā tas darbojas
 
 ```
-jūsu klēpjdators                         attālais OmniRoute (VPS)
+jūsu klēpjdators                         attālais 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (parole → pilnvara)        │
 │  konteksts: vps    │ ───────────────►  │ izveido tvēruma piekļuves      │
@@ -109,7 +109,7 @@ atrodas serverī, nevis jūsu datorā, tāpēc piekrišanas ekrāns **uzkaras uz
 laikiem un nekad neizsniedz kodu** — parastajā rezerves variantā „ielīmējiet
 atzvanīšanas URL” nav nekā, ko ielīmēt. (Tas ir Google puses ierobežojums: tāda
 pati uzkāršanās notiek jebkurā starpniekserverī, kas izmanto komplektācijā iekļauto
-Antigravity darbvirsmas klientu, ne tikai OmniRoute.)
+Antigravity darbvirsmas klientu, ne tikai 67router.)
 
 Informācijas panelis to nosaka, pirms nonākat strupceļā: atverot **Pakalpojumu sniedzēji → Antigravity →
 Savienot** no adreses, kas nav localhost, vispārīgais paziņojums „kopējiet atzvanīšanas URL”
@@ -117,7 +117,7 @@ tiek aizstāts ar abiem tālāk norādītajiem risinājumiem, kuros jūsu resurs
 jau ir aizpildīti. (Arī LAN adrese tiek ņemta vērā — attiecībā uz šo atzvanīšanu
 `192.168.x.x` nav localhost.)
 
-Ir divi atbalstīti veidi, kā savienot Antigravity ar attālu OmniRoute.
+Ir divi atbalstīti veidi, kā savienot Antigravity ar attālu 67router.
 
 ### A variants — lokālais pieteikšanās palīgrīks (ieteicams)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Pēc tam **attālajā** informācijas panelī atveriet **Pakalpojumu sniedzēji → Antigravity → Savienot** un ielīmējiet
 `omniroute-cred-v1.…` datu bloku **2. darbības** laukā (tas pieņem gan
-atzvanīšanas URL, gan akreditācijas datu bloku). OmniRoute to atkodē, servera pusē
+atzvanīšanas URL, gan akreditācijas datu bloku). 67router to atkodē, servera pusē
 izpilda Cloud Code sākotnējo iestatīšanu un saglabā savienojumu.
 
 > Datu blokā ir atsvaidzināšanas pilnvara — izturieties pret to kā pret paroli. Izmantojot nosūtīšanu, tas
@@ -196,7 +196,7 @@ tunelēt otru, konkrētajam pakalpojumu sniedzējam paredzētu portu.
 ## Codex / Grok savienošana attālā instalācijā (pakalpojumu sniedzēji ar fiksētu atgriezeniskās cilpas adresi)
 
 Codex, xAI (`xai-oauth`) un Grok CLI (`grok-cli`) savā augšupējā OAuth lietotnē reģistrē
-**fiksētu** atgriezeniskās cilpas `redirect_uri`. OmniRoute to nevar mainīt — pakalpojumu
+**fiksētu** atgriezeniskās cilpas `redirect_uri`. 67router to nevar mainīt — pakalpojumu
 sniedzējs vienmēr novirza pārlūkprogrammu atpakaļ uz to pašu iepriekš definēto adresi:
 
 | Pakalpojumu sniedzējs | Fiksētais atzvanīšanas URL, uz kuru novirza pakalpojumu sniedzējs |
@@ -205,7 +205,7 @@ sniedzējs vienmēr novirza pārlūkprogrammu atpakaļ uz to pašu iepriekš def
 | `xai-oauth`           | `http://127.0.0.1:56121/callback`                                 |
 | `grok-cli`            | `http://127.0.0.1:56122/callback`                                 |
 
-`localhost` šeit nozīmē **datoru, kurā darbojas pārlūkprogramma**, savukārt OmniRoute PKCE
+`localhost` šeit nozīmē **datoru, kurā darbojas pārlūkprogramma**, savukārt 67router PKCE
 atzvanīšanas serveris klausās **servera** atgriezeniskās cilpas interfeisā. Atverot informācijas paneli
 LAN adresē, piemēram, `http://192.168.0.15:20128`, tie nekad nesavienojas: autorizācijas
 kods tiek piegādāts jūsu klēpjdatora adresei `localhost:1455`, kur nekas neklausās,
@@ -225,7 +225,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Ir nepieciešamas divas pārsūtīšanas; arī tikai vienas pieslēgvietas pārsūtīšana nedarbosies:
 
 - **`20128`** (informācijas paneļa pieslēgvieta) padara izcelsmi par īstu lokālo `localhost`, kas
-  vispār ļauj OmniRoute palaist PKCE atzvanīšanas serveri — LAN izcelsme nekad
+  vispār ļauj 67router palaist PKCE atzvanīšanas serveri — LAN izcelsme nekad
   nesasniedz šo atzaru.
 - **`1455`** (pakalpojumu sniedzēja fiksētā atzvanīšanas pieslēgvieta) ir vieta, uz kuru pārlūkprogramma tiek novirzīta
   atpakaļ; tai pa tuneli jāsasniedz servera atgriezeniskās cilpas interfeiss.
@@ -345,7 +345,7 @@ omniroute contexts current         # aktīvais serveris, autentifikācijas statu
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

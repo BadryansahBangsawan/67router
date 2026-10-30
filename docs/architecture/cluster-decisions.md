@@ -16,7 +16,7 @@ Two opt-in compose profiles (`memory`, `bifrost`) for the existing 8-service dep
 
 ## Why this is conservative
 
-OmniRoute's existing deployment shape is already lean and proven:
+67router's existing deployment shape is already lean and proven:
 
 - **`redis:7-alpine`** handles the rate-limit/cache workload at production scale.
 - **SQLite + sqlite-vec + FTS5** cover local memory + vector + text-search (see [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -51,7 +51,7 @@ The two profiles here are **scale-out options for deployments that hit the SQLit
 
 - You run ≥3 `omniroute` replicas and want provider rotation centralised in a single Go process.
 - You want a single audit/logging surface for upstream-provider requests across all replicas.
-- You want horizontal scaling of the Tier-1 routing layer independent of the OmniRoute replicas.
+- You want horizontal scaling of the Tier-1 routing layer independent of the 67router replicas.
 
 **What it adds:**
 

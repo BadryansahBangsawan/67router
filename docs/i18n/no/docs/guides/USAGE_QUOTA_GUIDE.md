@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: OmniRoute sporer tokenbruken for hver forespørsel, beregner kostnader, håndhever kvoter per API-nøkkel og viser analyse i dashbordet. Denne veiledningen forklarer hvordan alt fungerer.
+> **Kort fortalt**: 67router sporer tokenbruken for hver forespørsel, beregner kostnader, håndhever kvoter per API-nøkkel og viser analyse i dashbordet. Denne veiledningen forklarer hvordan alt fungerer.
 
 **Kilder:**
 
@@ -17,7 +17,7 @@
 
 ## Oversikt
 
-Hver forespørsel som går gjennom OmniRoute, genererer en **brukspost** som registrerer:
+Hver forespørsel som går gjennom 67router, genererer en **brukspost** som registrerer:
 
 - **Identitet**: hvilken API-nøkkel, leverandør, modell og kombinasjon
 - **Tokener**: ledeteksttokener, fullføringstokener, bufrede tokener og totalt antall
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-For leverandører som ikke returnerer bruksdata (enkelte leverandører som bruker nettinformasjonskapsler), **estimerer** OmniRoute antall tokener ved hjelp av en tommelfingerregel på `~4 tegn per token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
+For leverandører som ikke returnerer bruksdata (enkelte leverandører som bruker nettinformasjonskapsler), **estimerer** 67router antall tokener ved hjelp av en tommelfingerregel på `~4 tegn per token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Bufrede tokener
 
-OmniRoute sporer `cached_tokens` separat fra `prompt_tokens` fordi:
+67router sporer `cached_tokens` separat fra `prompt_tokens` fordi:
 
 - Anthropics ledetekstbufring tar en redusert pris for bufrede tokener (10 % av normal pris)
 - Enkelte leverandører returnerer `cache_read_input_tokens`, som bør prises annerledes
@@ -117,7 +117,7 @@ Prisdata synkroniseres automatisk fra LiteLLM via endepunktet `/api/pricing/sync
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-For modeller uten prisdata bruker OmniRoute **estimert kostnad** basert på interne gjennomsnittspriser (hentet fra prisdataene til LiteLLM).
+For modeller uten prisdata bruker 67router **estimert kostnad** basert på interne gjennomsnittspriser (hentet fra prisdataene til LiteLLM).
 
 ---
 

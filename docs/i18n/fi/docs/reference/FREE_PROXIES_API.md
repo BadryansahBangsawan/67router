@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sisältää kuratoidun valikoiman ilmaisia välityspalvelimia `free_proxies`-taulussa,
+67router sisältää kuratoidun valikoiman ilmaisia välityspalvelimia `free_proxies`-taulussa,
 joka synkronoidaan ulkoisilta palveluntarjoajilta (1proxy, proxifly, iplocate, webshare).
 Hallintapaneelissa ne näkyvät kohdassa **Asetukset → Ilmaiset välityspalvelimet**. Tässä dokumentissa
 käsitellään luetteloreitin tarjoamaa palvelinpuolen suodatusta, lajittelua, laskentaa ja

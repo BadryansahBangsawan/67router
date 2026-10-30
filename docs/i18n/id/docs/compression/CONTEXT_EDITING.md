@@ -4,15 +4,15 @@
 
 ---
 
-**Pengeditan Konteks** yang didelegasikan adalah fitur pengelolaan konteks khusus Claude. Tidak seperti mesin kompresi lokal OmniRoute (Caveman, RTK, LLMLingua, pipeline bertumpuk) — yang menulis ulang isi permintaan _sebelum_ meninggalkan proksi — Pengeditan Konteks meminta **penyedia** untuk menghapus blok penggunaan alat/hasil alat yang sudah usang dari jendela konteksnya sendiri yang sedang berjalan. OmniRoute hanya menambahkan parameter isi (`context_management.edits[]`); Claude yang melakukan penghapusan sebenarnya berdasarkan tokenizer-nya sendiri.
+**Pengeditan Konteks** yang didelegasikan adalah fitur pengelolaan konteks khusus Claude. Tidak seperti mesin kompresi lokal 67router (Caveman, RTK, LLMLingua, pipeline bertumpuk) — yang menulis ulang isi permintaan _sebelum_ meninggalkan proksi — Pengeditan Konteks meminta **penyedia** untuk menghapus blok penggunaan alat/hasil alat yang sudah usang dari jendela konteksnya sendiri yang sedang berjalan. 67router hanya menambahkan parameter isi (`context_management.edits[]`); Claude yang melakukan penghapusan sebenarnya berdasarkan tokenizer-nya sendiri.
 
-Pada dasarnya, ini merupakan kemampuan yang didelegasikan: penyedia lain menolak parameter tersebut, sehingga OmniRoute membatasi cakupannya secara ketat hanya untuk Claude dan relay yang kompatibel dengan Claude Code.
+Pada dasarnya, ini merupakan kemampuan yang didelegasikan: penyedia lain menolak parameter tersebut, sehingga 67router membatasi cakupannya secara ketat hanya untuk Claude dan relay yang kompatibel dengan Claude Code.
 
 Sumber acuan: `open-sse/config/contextEditing.ts` (id strategi, injeksi isi, ekstraksi telemetri), `open-sse/executors/base.ts` (gerbang injeksi + fallback 400), dan `open-sse/services/compression/types.ts` (bentuk konfigurasi + nilai default).
 
 ## Yang dilakukan `clear_tool_uses`
 
-OmniRoute menginjeksikan satu pengeditan ke dalam isi Anthropic Messages yang dikirim:
+67router menginjeksikan satu pengeditan ke dalam isi Anthropic Messages yang dikirim:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute menginjeksikan satu pengeditan ke dalam isi Anthropic Messages yang di
 - `trigger.value: 100000` — setelah token masukan permintaan melampaui ambang batas ini, Claude mulai menghapus pasangan penggunaan alat/hasil alat lama (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, nilai default Anthropic).
 - `keep.value: 3` — N pasangan penggunaan alat/hasil alat terbaru dipertahankan tanpa perubahan (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Versi beta diumumkan melalui header `anthropic-beta: context-management-2025-06-27`, yang sudah dipancarkan OmniRoute pada permintaan Claude.
+Versi beta diumumkan melalui header `anthropic-beta: context-management-2025-06-27`, yang sudah dipancarkan 67router pada permintaan Claude.
 
-Injeksi dilakukan oleh `applyContextEditingToBody()` dan bersifat **idempoten**: jika pengeditan `clear_tool_uses` sudah ada dalam isi (ditambahkan oleh pemanggilan sebelumnya atau disediakan oleh klien), isi tersebut dibiarkan apa adanya. Jika pengeditan `clear_thinking_20251015` juga ada, OmniRoute melakukan pengurutan stabil untuk memindahkan pengeditan `clear_thinking` ke depan, karena Anthropic mengharuskan `clear_thinking` mendahului `clear_tool_uses` dalam array `edits[]`.
+Injeksi dilakukan oleh `applyContextEditingToBody()` dan bersifat **idempoten**: jika pengeditan `clear_tool_uses` sudah ada dalam isi (ditambahkan oleh pemanggilan sebelumnya atau disediakan oleh klien), isi tersebut dibiarkan apa adanya. Jika pengeditan `clear_thinking_20251015` juga ada, 67router melakukan pengurutan stabil untuk memindahkan pengeditan `clear_thinking` ke depan, karena Anthropic mengharuskan `clear_thinking` mendahului `clear_tool_uses` dalam array `edits[]`.
 
 ## Tombol pengaktifan per kombinasi
 
@@ -125,7 +125,7 @@ Claude asli menyertakan fitur beta dalam `ANTHROPIC_BETA_BASE` dan tidak melewat
 
 ## Telemetri `applied_edits`
 
-Setelah respons Claude diterima, OmniRoute mencatat seberapa banyak konteks yang benar-benar
+Setelah respons Claude diterima, 67router mencatat seberapa banyak konteks yang benar-benar
 dibersihkan oleh provider. Data ini **tidak** dialirkan — data diekstrak dari isi respons
 non-streaming dengan upaya terbaik dan tidak pernah memengaruhi respons (kegagalan telemetri
 diabaikan).
@@ -159,16 +159,16 @@ RTK/Caveman/LLMLingua.
 
 ## Hubungan dengan mesin kompresi lokal
 
-| Aspek                 | Mesin lokal (Caveman / RTK / LLMLingua / stacked)   | Context Editing yang Didelegasikan               |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------ |
-| Tempat dijalankan     | Di OmniRoute, sebelum permintaan meninggalkan proxy | Di penyedia (Claude), di sisi server             |
-| Yang diedit           | Teks prompt / konteks / hasil alat                  | Blok penggunaan alat / hasil alat yang lama      |
-| Cakupan penyedia      | Semua penyedia                                      | Hanya `claude` + `anthropic-compatible-cc-*`     |
-| Pengalih              | Pengaturan mode kompresi                            | `contextEditing.enabled`                         |
-| Mode kegagalan        | Fail-open (teks asli)                               | Fallback 400: hapus parameter, coba ulang sekali |
-| Telemetri penghematan | `engine: <engine id>`                               | `engine: "context-editing"`                      |
+| Aspek                 | Mesin lokal (Caveman / RTK / LLMLingua / stacked)  | Context Editing yang Didelegasikan               |
+| --------------------- | -------------------------------------------------- | ------------------------------------------------ |
+| Tempat dijalankan     | Di 67router, sebelum permintaan meninggalkan proxy | Di penyedia (Claude), di sisi server             |
+| Yang diedit           | Teks prompt / konteks / hasil alat                 | Blok penggunaan alat / hasil alat yang lama      |
+| Cakupan penyedia      | Semua penyedia                                     | Hanya `claude` + `anthropic-compatible-cc-*`     |
+| Pengalih              | Pengaturan mode kompresi                           | `contextEditing.enabled`                         |
+| Mode kegagalan        | Fail-open (teks asli)                              | Fallback 400: hapus parameter, coba ulang sekali |
+| Telemetri penghematan | `engine: <engine id>`                              | `engine: "context-editing"`                      |
 
-Keduanya saling melengkapi: mesin lokal mengompresi byte yang dikirim OmniRoute; Context Editing memungkinkan
+Keduanya saling melengkapi: mesin lokal mengompresi byte yang dikirim 67router; Context Editing memungkinkan
 Claude memangkas konteks yang berjalan di sepanjang giliran percakapan. Keduanya dapat diaktifkan bersama-sama.
 
 ## Lihat Juga

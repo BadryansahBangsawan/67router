@@ -6,7 +6,7 @@
 
 ## Overzicht
 
-OmniRoute CLI-opdrachten verifiëren zich bij de lokale beheer-API met een
+67router CLI-opdrachten verifiëren zich bij de lokale beheer-API met een
 `HMAC-SHA256(machine-id, salt)`-token dat via de requestheader
 `x-omniroute-cli-token` wordt verzonden.
 

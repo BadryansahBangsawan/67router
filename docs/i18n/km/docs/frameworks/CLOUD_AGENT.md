@@ -7,7 +7,7 @@
 > **ប្រភពសច្ចភាព:** `src/lib/cloudAgent/` និង `src/app/api/v1/agents/tasks/`
 > **បានធ្វើបច្ចុប្បន្នភាពចុងក្រោយ:** 2026-06-28 — v3.8.40 (ធ្វើឱ្យ frontmatter ថ្មីឡើងវិញ; agent ចំនួន 4 រួមទាំង cursor-cloud)
 
-OmniRoute សម្របសម្រួល agent សរសេរកូដរបស់ភាគីទីបីដែលដំណើរការលើ cloud (Codex Cloud, Cursor,
+67router សម្របសម្រួល agent សរសេរកូដរបស់ភាគីទីបីដែលដំណើរការលើ cloud (Codex Cloud, Cursor,
 Devin, Jules) ជា task ដែលដំណើរការរយៈពេលយូរ។ agent នីមួយៗត្រូវបានរុំព័ទ្ធនៅពីក្រោយ interface ឯកសណ្ឋានមួយ ដើម្បីឱ្យ
 client អាចបញ្ជូន prompt + URL របស់ repo និងទទួលលទ្ធផលដោយមិនចាំបាច់ដោះស្រាយជាមួយ
 API ជាក់លាក់របស់ provider។

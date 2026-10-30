@@ -13,7 +13,7 @@
 ## ၎င်းသည် ဘာလဲ
 
 Local Corpus သည် operator တစ်ဦးအား အတိအလင်း အတည်ပြုထားသော စာသားဖိုင် directory တစ်ခုကို
-OmniRoute ၏ MCP server တွင် အသုံးပြုနိုင်ရန် လုပ်ဆောင်ပေးသည်။ ဖိုင်များသည် မူလ directory ထဲတွင်သာ ရှိနေသည်။ OmniRoute သည်
+67router ၏ MCP server တွင် အသုံးပြုနိုင်ရန် လုပ်ဆောင်ပေးသည်။ ဖိုင်များသည် မူလ directory ထဲတွင်သာ ရှိနေသည်။ 67router သည်
 canonical root path ကိုသာ SQLite ထဲတွင် သိမ်းဆည်းပြီး memory အတွင်း search index တစ်ခုကို ထိန်းသိမ်းထားသည်။ Corpus အကြောင်းအရာကို
 repository သို့မဟုတ် database ထဲသို့ ကူးယူခြင်း မပြုပါ။
 

@@ -113,7 +113,7 @@ jew kontroll manwali dokumentat adattat għall-bidla.
 - Il-katalgi tas-CLI jinsabu separatament taħt `bin/cli/locales/`.
 - Żomm il-placeholders u t-tags tal-ICU eżattament kif inhuma. Tittraduċix ismijiet ta’ prodotti/providers/mudelli,
   ismijiet ta’ protokolli u headers, kmandi, identifikaturi ta’ code/JSON, URLs, varjabbli tal-ambjent, jew
-  termini protetti bħal `OmniRoute`, `OAuth`, `MCP`, u `A2A`. Il-lista sors attwali tinsab f’
+  termini protetti bħal `67router`, `OAuth`, `MCP`, u `A2A`. Il-lista sors attwali tinsab f’
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ċiklu mmirat**
@@ -265,7 +265,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # erġa’ uża tarball 
   meta dak il-kontroll ifalli. Kandidat li jfalli l-ewwel validazzjoni qatt ma jiġi promoss.
 
 Kollox jinkiteb taħt `_artifacts/candidate/`, li huwa injorat minn git; installazzjoni eżistenti
-ta’ OmniRoute u d-direttorju tad-data tagħha qatt ma jintmessu. Is-CLI promoss huwa
+ta’ 67router u d-direttorju tad-data tagħha qatt ma jintmessu. Is-CLI promoss huwa
 `_artifacts/candidate/current/prefix/bin/omniroute`; meta tużah, ibdieh bid-`DATA_DIR` tiegħek.
 Kodiċijiet tal-ħruġ: `0` suċċess, `1` validazzjoni jew promozzjoni falluta, `2` żball fl-użu jew
 build nieqes.

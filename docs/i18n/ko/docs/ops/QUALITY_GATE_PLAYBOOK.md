@@ -4,7 +4,7 @@
 
 ---
 
-> **이 문서의 목적.** OmniRoute의 품질 게이트 시스템을 업계 모범 사례와 비교하여
+> **이 문서의 목적.** 67router의 품질 게이트 시스템을 업계 모범 사례와 비교하여
 > 비판적으로 평가하고, **추가로** 모든 품질 체크포인트의 포괄적인 목록과 동일한 시스템을
 > 모든 프로젝트에 적용할 수 있는 **도구 독립적 재현 계획**을 제공합니다. 기억에 의존하지 않고
 > 실제 저장소 상태를 바탕으로 2026-06-16에 생성되었습니다.
@@ -104,62 +104,62 @@
 
 ### 1. 스타일 및 서식(결정적, 신속)
 
-- **OmniRoute:** lint-staged를 통한 Prettier + ESLint(pre-commit), 2칸 들여쓰기/큰따옴표/100열.
+- **67router:** lint-staged를 통한 Prettier + ESLint(pre-commit), 2칸 들여쓰기/큰따옴표/100열.
 - **일반:** 자동 수정 가능한 포매터 하나 + 린터 하나를 staged 파일에 대해 pre-commit에서 실행.
 
 ### 2. 타입
 
-- **OmniRoute:** `typecheck:core`(차단) + `typecheck:noimplicit:core`(권고) + `type-coverage` 래칫 92.17% + 파일별 any 예산.
+- **67router:** `typecheck:core`(차단) + `typecheck:noimplicit:core`(권고) + `type-coverage` 래칫 92.17% + 파일별 any 예산.
 - **일반:** CI에서 엄격한 타입 검사 + 래칫 방식의 타입 커버리지 지표 + 파일별 `any`/탈출구 예산.
 
 ### 3. 테스트(강도)
 
-- **OmniRoute:** 서로 겹치지 않는 러너 2개(Node 네이티브 + vitest), 샤드 8개, 전역 커버리지 60/60/60/60 + 래칫 약 76% + **핵심 모듈을 위한 모듈별 하한 8개** + 야간 속성 기반 테스트 + 야간 **변이 테스트**.
+- **67router:** 서로 겹치지 않는 러너 2개(Node 네이티브 + vitest), 샤드 8개, 전역 커버리지 60/60/60/60 + 래칫 약 76% + **핵심 모듈을 위한 모듈별 하한 8개** + 야간 속성 기반 테스트 + 야간 **변이 테스트**.
 - **일반:** 테스트 러너 + **절대적** 커버리지 하한(제로 방지) + 커버리지 **래칫**(회귀 방지) + **고위험 코드의 모듈별 하한**(굿하트의 법칙 방지) + 순수 로직에 대한 속성 기반 테스트 + 테스트 품질의 실질적인 척도로서 야간 **변이 테스트**.
 
 ### 4. 테스트 정책(편법 방지)
 
-- **OmniRoute:** `pr-test-policy`(프로덕션 코드에 테스트 요구), `check-test-masking`(약화된 어서션 차단), `pr-evidence`(성공 주장에 증거 블록 요구), `test-discovery`(모든 테스트가 러너에 의해 수집되도록 보장).
+- **67router:** `pr-test-policy`(프로덕션 코드에 테스트 요구), `check-test-masking`(약화된 어서션 차단), `pr-evidence`(성공 주장에 증거 블록 요구), `test-discovery`(모든 테스트가 러너에 의해 수집되도록 보장).
 - **일반:** "새 코드 ⇒ 새 테스트" 게이트 + 제거된 어서션/항진식 탐지기 + 증거 요구사항(TDD 또는 현행 테스트) + glob 외부에 고립된 테스트가 없도록 보장.
 
 ### 5. 복잡도 및 코드 건전성(래칫)
 
-- **OmniRoute:** ESLint 경고(3769↓), jscpd 중복(5.72%↓), 순환 복잡도+최대 줄 수 복잡도(1800↓), sonarjs 인지 복잡도(753↓), knip 미사용 코드/미사용 export(339↓), 파일별 파일 크기(동결, 축소만 허용), 순환 의존성(커스텀 Tarjan, 차단).
+- **67router:** ESLint 경고(3769↓), jscpd 중복(5.72%↓), 순환 복잡도+최대 줄 수 복잡도(1800↓), sonarjs 인지 복잡도(753↓), knip 미사용 코드/미사용 export(339↓), 파일별 파일 크기(동결, 축소만 허용), 순환 의존성(커스텀 Tarjan, 차단).
 - **일반:** 모든 건전성 지표(경고, 중복, 순환 **및** 인지 복잡도, 미사용 코드, 파일 크기, import 순환)에 래칫 적용. 방향은 항상 "악화 금지".
 
 ### 6. 정적 보안(SAST + 비밀 정보)
 
-- **OmniRoute:** CodeQL(알림 래칫 = 0), gitleaks(`[extend] useDefault=true` — 매우 중요!), SonarQube, 커스텀 보안 규칙(public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL(알림 래칫 = 0), gitleaks(`[extend] useDefault=true` — 매우 중요!), SonarQube, 커스텀 보안 규칙(public-creds, error-helper, route-guard-membership, route-validation).
 - **일반:** 알림 래칫을 적용한 SAST(CodeQL/Sonar/semgrep) + **상속된 기본 규칙 세트**를 사용하는 비밀 정보 스캐너(기본값을 재정의하는 커스텀 설정은 사각지대를 만듦) + 프로젝트별 Hard Rule 보안 게이트.
 
 ### 7. 공급망(의존성)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot(SCA), license-checker(SPDX 허용 목록), lockfile-lint(HTTPS+sha512+registry), `check-deps` 안티 슬롭스쿼팅(허용 목록 + 사용 기간 ≥72시간).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot(SCA), license-checker(SPDX 허용 목록), lockfile-lint(HTTPS+sha512+registry), `check-deps` 안티 슬롭스쿼팅(허용 목록 + 사용 기간 ≥72시간).
 - **일반:** 다중 소스 SCA + 라이선스 허용 목록 + lockfile 무결성 검사 + 사용 기간/타이포스쿼팅 검사를 포함한 의존성 허용 목록 + 그룹화된 업데이트 봇.
 
 ### 8. 공급망(빌드 및 릴리스)
 
-- **OmniRoute:** SBOM(CycloneDX + syft), SLSA 출처 증명(`--provenance`), OpenSSF Scorecard(매주), 워크플로 강화(zizmor: artipacked→`persist-credentials:false`, 캐시 포이즈닝, 토큰 권한).
+- **67router:** SBOM(CycloneDX + syft), SLSA 출처 증명(`--provenance`), OpenSSF Scorecard(매주), 워크플로 강화(zizmor: artipacked→`persist-credentials:false`, 캐시 포이즈닝, 토큰 권한).
 - **일반:** 게시 시 SBOM 생성 + 서명된 출처 증명(SLSA L2+) + 예약 실행되는 Scorecard + 모든 워크플로 강화(최소 권한 토큰, 푸시하지 않는 checkout에서는 자격 증명 유지 금지, action을 SHA로 고정).
 
 ### 9. 계약 및 API
 
-- **OmniRoute:** oasdiff(파괴적 OpenAPI 변경), schemathesis(야간 계약 퍼징), openapi-coverage(문서화된 route 비율, 래칫 38.3%), openapi-security-tiers(spec 대 route-guard).
+- **67router:** oasdiff(파괴적 OpenAPI 변경), schemathesis(야간 계약 퍼징), openapi-coverage(문서화된 route 비율, 래칫 38.3%), openapi-security-tiers(spec 대 route-guard).
 - **일반:** 파괴적 변경 계약 diff(oasdiff/buf) + spec에 대한 속성 기반 퍼징(schemathesis) + 래칫 방식의 문서화 커버리지 + spec↔코드 일관성.
 
 ### 10. 문서 및 i18n(부패 방지)
 
-- **OmniRoute:** docs-sync(미러링된 버전), docs-counts-sync(문서와 코드 간 수치), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage(`--threshold=65` + 래칫 80.1%).
+- **67router:** docs-sync(미러링된 버전), docs-counts-sync(문서와 코드 간 수치), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage(`--threshold=65` + 래칫 80.1%).
 - **일반:** 문서와 코드 간 버전/개수/환경 변수 동기화(신뢰가 아닌 게이트) + 내부 링크 검증 + 래칫 방식의 i18n 커버리지.
 
 ### 11. 환각 방지/일관성(드문 범주)
 
-- **OmniRoute:** known-symbols(문자열 디스패치 ⇒ 현행 심볼), provider-consistency, fetch-targets(클라이언트 fetch ⇒ 실제 route), docs-symbols, db-rules(Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols(문자열 디스패치 ⇒ 현행 심볼), provider-consistency, fetch-targets(클라이언트 fetch ⇒ 실제 route), docs-symbols, db-rules(Hard Rules #2/#5), migration-numbering.
 - **일반:** 모든 "중복된 진실의 원천"(레지스트리, 문자열 디스패치, 계층 간 참조)에 대해 양쪽이 일치함을 입증하는 게이트 적용. 타입 검사/테스트가 잡지 못하는 부패를 탐지.
 
 ### 12. 복원력 및 도메인(제품별)
 
-- **OmniRoute:** chaos(장애 주입), heap-growth(누수), k6(소크), promptfoo+garak(LLM 레드팀 OWASP LLM Top 10), 복원력 법칙 3가지(circuit-breaker/cooldown/lockout).
+- **67router:** chaos(장애 주입), heap-growth(누수), k6(소크), promptfoo+garak(LLM 레드팀 OWASP LLM Top 10), 복원력 법칙 3가지(circuit-breaker/cooldown/lockout).
 - **일반:** **여러분의** 도메인에 존재하는 장애 모드를 식별하고 각각에 대한 게이트를 마련합니다(야간 실행이어도 무방). AI 앱의 경우: 인젝션 레드팀. 분산 시스템의 경우: chaos + 누수 + 소크.
 
 ---

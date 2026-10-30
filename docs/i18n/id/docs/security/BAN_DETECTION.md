@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memindai respons galat dari upstream untuk mencari sinyal yang menunjukkan bahwa **akun penyedia mati secara permanen** (ditangguhkan / dinonaktifkan / diblokir karena pelanggaran ToS) dan, ketika ditemukan kecocokan, memindahkan koneksi tersebut ke **status terminal `banned`** agar tidak lagi dipilih untuk permintaan. Inilah yang dikonfigurasi oleh kartu pengaturan **Security → Banned Keywords** ("Kata kunci tambahan yang memicu deteksi pemblokiran akun permanen. Kata kunci bawaan selalu berlaku.").
+67router memindai respons galat dari upstream untuk mencari sinyal yang menunjukkan bahwa **akun penyedia mati secara permanen** (ditangguhkan / dinonaktifkan / diblokir karena pelanggaran ToS) dan, ketika ditemukan kecocokan, memindahkan koneksi tersebut ke **status terminal `banned`** agar tidak lagi dipilih untuk permintaan. Inilah yang dikonfigurasi oleh kartu pengaturan **Security → Banned Keywords** ("Kata kunci tambahan yang memicu deteksi pemblokiran akun permanen. Kata kunci bawaan selalu berlaku.").
 
 Halaman ini mendokumentasikan daftar bawaan, alur deteksi, cakupannya, cara menambahkan kata kunci khusus dengan aman, dan cara memulihkan koneksi yang ditandai. Status terminal itu sendiri merupakan bagian dari model ketahanan — lihat
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Status terminal").

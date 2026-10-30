@@ -4,7 +4,7 @@
 
 ---
 
-Deze handleiding beschrijft hoe je Kiro-accounts (een door AWS gehoste AI-codeerassistent) aan OmniRoute toevoegt,
+Deze handleiding beschrijft hoe je Kiro-accounts (een door AWS gehoste AI-codeerassistent) aan 67router toevoegt,
 met speciale aandacht voor het gelijktijdig gebruiken van meerdere accounts zonder sessieconflicten.
 
 ---
@@ -22,10 +22,10 @@ het eerste account in.
 
 ---
 
-## Hoe OmniRoute dit oplost (v3.8.0+)
+## Hoe 67router dit oplost (v3.8.0+)
 
-Vanaf v3.8.0 roept OmniRoute tijdens elke import van een Kiro-verbinding `registerClient()` (AWS SSO OIDC) aan.
-Hierdoor krijgt elke OmniRoute-verbinding een eigen toegewezen OIDC-clientregistratie.
+Vanaf v3.8.0 roept 67router tijdens elke import van een Kiro-verbinding `registerClient()` (AWS SSO OIDC) aan.
+Hierdoor krijgt elke 67router-verbinding een eigen toegewezen OIDC-clientregistratie.
 Omdat elke clientregistratie onafhankelijk is, heeft het vernieuwen of opnieuw verifiëren van
 één account geen invloed op het vernieuwingstoken van andere accounts.
 
@@ -59,7 +59,7 @@ krijgen automatisch een eigen clientregistratie.
 
 ### Vereisten
 
-- OmniRoute v3.8.0 of nieuwer.
+- 67router v3.8.0 of nieuwer.
 - Een werkend Kiro-account (e-mailadres + wachtwoord, of aanmelden via Google of GitHub).
 - Optioneel een tweede Kiro-account.
 
@@ -70,7 +70,7 @@ krijgen automatisch een eigen clientregistratie.
    - **Token importeren** — plak een vernieuwingstoken dat begint met `aorAAAAAG`.
    - **API-sleutel** — plak een langlevende Kiro-/CodeWhisperer-API-sleutel.
    - **Aanmelden met Google / GitHub** — voltooi de OAuth-stroom in de browser.
-   - **Automatisch importeren** — klik op de knop; OmniRoute leest de referenties uit de
+   - **Automatisch importeren** — klik op de knop; 67router leest de referenties uit de
      lokale kiro-cli-database of `~/.aws/sso/cache`.
 3. De verbinding wordt opgeslagen. Bij stromen met vernieuwingstokens wordt automatisch een toegewezen
    OIDC-client geregistreerd. Bij stromen met API-sleutels wordt de sleutel door AWS gevalideerd en wordt er geen vernieuwingstoken opgeslagen.
@@ -126,7 +126,7 @@ Authenticatie met API-sleutels is bedoeld voor langlevende bearer-referenties va
 2. Kies **API Key**.
 3. Plak de API-sleutel en kies de AWS-regio: **Auto-detect** (standaard), **US East
    (N. Virginia)** of **Europe (Frankfurt)**.
-4. OmniRoute valideert de sleutel en slaat de verbinding op, vastgezet op de regio waarin de
+4. 67router valideert de sleutel en slaat de verbinding op, vastgezet op de regio waarin de
    sleutel werkt.
 
 ### API
@@ -176,7 +176,7 @@ naar `https://q.<region>.amazonaws.com/generateAssistantResponse` — inclusief 
 ## Verloopdatum van OIDC-clients
 
 Openbare AWS SSO OIDC-clients verlopen doorgaans na 90 dagen
-(`clientSecretExpiresAt`). OmniRoute slaat dit tijdstip op in `providerSpecificData`
+(`clientSecretExpiresAt`). 67router slaat dit tijdstip op in `providerSpecificData`
 ten behoeve van observeerbaarheid. Als een verbinding na ongeveer 90 dagen niet meer wordt vernieuwd, importeert u de
 verbinding opnieuw om een nieuwe OIDC-clientregistratie te verkrijgen. Automatische herregistratie bij
 het verlopen wordt bijgehouden als een toekomstige verbetering.
@@ -197,7 +197,7 @@ via AWS SSO OIDC.
 ### Importeren mislukt met "Token validation failed"
 
 - Controleer of het vernieuwingstoken begint met `aorAAAAAG`.
-- Controleer of OmniRoute `https://oidc.us-east-1.amazonaws.com` (of de geconfigureerde
+- Controleer of 67router `https://oidc.us-east-1.amazonaws.com` (of de geconfigureerde
   regio) kan bereiken. Als u zich achter een bedrijfsproxy bevindt, stelt u een proxy op providerniveau in via
   **Dashboard → Settings → Proxies**.
 
@@ -205,7 +205,7 @@ via AWS SSO OIDC.
 
 - Controleer of de sleutel een Kiro-/CodeWhisperer-API-sleutel is en geen vernieuwingstoken.
 - Controleer of de AWS-regio overeenkomt met de sleutel/het account. `us-east-1` is de standaardwaarde.
-- De sleutel moet `ListAvailableProfiles` kunnen aanroepen; anders kan OmniRoute
+- De sleutel moet `ListAvailableProfiles` kunnen aanroepen; anders kan 67router
   de vereiste `profileArn` niet bepalen.
 
 Raadpleeg voor andere problemen het algemene bestand [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

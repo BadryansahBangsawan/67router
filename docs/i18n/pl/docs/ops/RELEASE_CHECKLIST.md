@@ -46,7 +46,7 @@ przywraca ono w pełni automatyczny proces, który projekt miał do wersji v3.8.
 gwarancję WS1.3 (wyciek tokenu nie umożliwia samodzielnego opublikowania — token nie istnieje).
 
 **Konfiguracja jednorazowa (właściciel):** npmjs.com → pakiet `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: właściciel `diegosouzapw`, repozytorium `OmniRoute`, przepływ pracy `npm-publish.yml`
+Publisher_ → GitHub: właściciel `diegosouzapw`, repozytorium `67router`, przepływ pracy `npm-publish.yml`
 (środowisko: brak). Dopóki taka konfiguracja nie istnieje, automatyczny krok kończy się błędem `ENEEDAUTH`:
 uruchom ponownie z `publish_mode=staged` (poniżej) albo `direct`.
 

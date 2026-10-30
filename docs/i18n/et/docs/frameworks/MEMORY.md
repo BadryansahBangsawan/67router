@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/memory/` ja `src/app/api/memory/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40 (vaikimisi väljas + int8 kvantimise järelejõudmine)
 
-OmniRoute pakub püsivat vestlusmälu, mis on seotud API-võtmega (ja
+67router pakub püsivat vestlusmälu, mis on seotud API-võtmega (ja
 valikuliselt seansi ID-ga). Mälukirjed eraldatakse LLM-i vastustest automaatselt
 kergekaalulise regulaaravaldiste mustrisobituse abil ning lisatakse järgmistesse
 päringutesse juhtiva süsteemisõnumina (või esimese kasutajasõnumina teenusepakkujate
@@ -642,7 +642,7 @@ vaikimisi TTL 5 min).
 
 ## Manustamisteenuse pakkuja valimine (v3.8.16+)
 
-OmniRoute'i mälumängur toetab **nelja manustamisallikat** (`src/lib/memory/embedding/`). Igal neist on erinevad kompromissid **latentsuse, maksumuse, mudeli kvaliteedi ja seadistamise keerukuse** vahel.
+67router'i mälumängur toetab **nelja manustamisallikat** (`src/lib/memory/embedding/`). Igal neist on erinevad kompromissid **latentsuse, maksumuse, mudeli kvaliteedi ja seadistamise keerukuse** vahel.
 
 ### Manustamisallikad
 
@@ -1067,10 +1067,10 @@ See adapter ei leevenda seda kaitset: host on püsiväärtusena `127.0.0.1` ning
 | Võti        | Tüüp   | Vaikeväärtus | Märkused                                                                                                         |
 | ----------- | ------ | ------------ | ---------------------------------------------------------------------------------------------------------------- |
 | `port`      | number | —            | Kohustuslik, 1024–65535. claude-mem tööprotsessi port selle seadistuste failist (vaikimisi `37700 + uid % 100`). |
-| `project`   | string | —            | Kasutatav claude-mem projekt. Määramata → iga OmniRoute API-võti vastendatakse oma projektile (`apiKeyId`).      |
+| `project`   | string | —            | Kasutatav claude-mem projekt. Määramata → iga 67router API-võti vastendatakse oma projektile (`apiKeyId`).       |
 | `timeoutMs` | number | `5000`       | Päringupõhine ajalõpp, 100–30000.                                                                                |
 
-Lubage see päringuga `PUT /api/settings/memory` ja taaskäivitage OmniRoute (taustsüsteemid registreeritakse
+Lubage see päringuga `PUT /api/settings/memory` ja taaskäivitage 67router (taustsüsteemid registreeritakse
 üks kord funktsioonis `initMemoryBackends()`):
 
 ```json
@@ -1087,7 +1087,7 @@ Vastendamine ja piirangud:
 
 - ID-d on kujul `claude-mem:<observationId>`; `get`/`delete` eiravad teiste taustsüsteemide ID-sid ilma
   võrgupäringuta.
-- `create` → `POST /api/memory/save`; OmniRoute'i väljad (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router'i väljad (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) edastatakse claude-memi väljal `metadata.omniroute` ja taastatakse lugemisel.
 - `search` → `GET /api/search?format=json&type=observations`, kärbituna väärtuseni `maxTokens`
   (tähemärgid / 4). `list` → tööprotsessi lehekülgedeks jaotatud vaatluste lõpp-punkt (`total` on alampiir — tööprotsess
@@ -1099,16 +1099,16 @@ Vastendamine ja piirangud:
 - Viiba sisestamine (`retrieval.ts`) ja `omniroute_memory_*` MCP-tööriistad loevad endiselt SQLite'i
   otse — need ei kasuta `memoryManager`-i, seega ei varusta see taustsüsteem neid andmetega.
 
-**claude-memi enda LLM-kutsete marsruutimine OmniRoute'i kaudu.** claude-mem tihendab vaatlusi
+**claude-memi enda LLM-kutsete marsruutimine 67router'i kaudu.** claude-mem tihendab vaatlusi
 LLM-iga (vaikimisi Claude Agent SDK). Selle `openai-compatible` pakkuja saab suunata
-hoopis OmniRoute'i, kasutades kombineeritud tõrkesiiret ja kulude jälgimist. Failis `~/.claude-mem/settings.json`:
+hoopis 67router'i, kasutades kombineeritud tõrkesiiret ja kulude jälgimist. Failis `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute'i API-võti>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute'i mudel või kombinatsioon>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router'i API-võti>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router'i mudel või kombinatsioon>"
 }
 ```
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR** : OmniRoute intègre une surveillance de l’état de santé, un pilotage automatique des fournisseurs, un suivi des quotas et des points d’intégration pour l’observabilité. Ce guide présente le tableau de bord, les alertes et le dépannage.
+> **TL;DR** : 67router intègre une surveillance de l’état de santé, un pilotage automatique des fournisseurs, un suivi des quotas et des points d’intégration pour l’observabilité. Ce guide présente le tableau de bord, les alertes et le dépannage.
 
 **Sources :**
 
@@ -20,7 +20,7 @@
 
 ## Vue d’ensemble
 
-OmniRoute comporte **3 niveaux de surveillance** :
+67router comporte **3 niveaux de surveillance** :
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Pour chaque combo :
 
 ## API de vérification de l’état
 
-OmniRoute expose **deux** points de terminaison HTTP de vérification de l’état. Ils ne sont pas interchangeables pour les orchestrateurs.
+67router expose **deux** points de terminaison HTTP de vérification de l’état. Ils ne sont pas interchangeables pour les orchestrateurs.
 
 | Chemin                       | Objectif                                                                                      | Charge                                              | Utilisation                                                                                    |
 | ---------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ point de terminaison. Utilisez `failed` + `failedConnections` pour les échecs d
 
 ### Recommandations pour les sondes Kubernetes
 
-OmniRoute est un **processus Node unique** (une seule boucle d’événements). Le `HEALTHCHECK` Docker standard cible le point de terminaison léger `/healthz`. `/api/monitoring/health` est **trop lourd** pour les intervalles des sondes d’activité de kubelet.
+67router est un **processus Node unique** (une seule boucle d’événements). Le `HEALTHCHECK` Docker standard cible le point de terminaison léger `/healthz`. `/api/monitoring/health` est **trop lourd** pour les intervalles des sondes d’activité de kubelet.
 
 | Sonde                 | Cible recommandée                                                                                  | Remarques                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Voir aussi : [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (s
 
 ### Chien de garde systemd (boucle d'événements figée)
 
-Sur un hôte systemd, OmniRoute indique au gestionnaire de services lorsqu'il est prêt et continue à lui envoyer des signaux périodiques, afin qu'un serveur dont la boucle d'événements est bloquée soit tué et redémarré au lieu de rester actif et silencieux. Les signaux sont envoyés depuis la propre boucle d'événements du serveur : lorsqu'elle se bloque, ils s'arrêtent et systemd redémarre le service dès que `WatchdogSec` s'écoule sans en recevoir.
+Sur un hôte systemd, 67router indique au gestionnaire de services lorsqu'il est prêt et continue à lui envoyer des signaux périodiques, afin qu'un serveur dont la boucle d'événements est bloquée soit tué et redémarré au lieu de rester actif et silencieux. Les signaux sont envoyés depuis la propre boucle d'événements du serveur : lorsqu'elle se bloque, ils s'arrêtent et systemd redémarre le service dès que `WatchdogSec` s'écoule sans en recevoir.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) écrit déjà une unité utilisateur avec cette configuration. Une unité que vous écrivez vous-même (avec la valeur par défaut `Type=simple`) ne bénéficie d'aucun chien de garde ; ajoutez donc ces lignes à sa section `[Service]` :
 
@@ -443,7 +443,7 @@ La configuration de la vérification de l'état des jetons est gérée en intern
 
 ### Canaux intégrés
 
-OmniRoute prend en charge **3 canaux d'alerte** :
+67router prend en charge **3 canaux d'alerte** :
 
 | Canal                       | Configuration    | Cas d'utilisation                |
 | --------------------------- | ---------------- | -------------------------------- |
@@ -559,7 +559,7 @@ Créez un fichier `~/.omniroute/dashboard.json` :
 ### « Le quota est indiqué comme normal, mais je vois des erreurs 429 »
 
 - Une erreur 429 signifie que le fournisseur indique que vous avez épuisé votre quota
-- Le suivi des quotas d’OmniRoute peut être **obsolète** — les données du fournisseur en amont font foi
+- Le suivi des quotas de 67router peut être **obsolète** — les données du fournisseur en amont font foi
 - Les données de quota sont actualisées automatiquement par le moniteur de quota interne
 
 ### « La combinaison échoue, mais toutes les cibles semblent opérationnelles »
@@ -572,7 +572,7 @@ Créez un fichier `~/.omniroute/dashboard.json` :
 
 - Exécutez `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Si le résultat est « ok » — fausse alerte, la vérification de l’état de santé est trop stricte
-- Pour tout autre résultat — **arrêtez OmniRoute** et suivez le [guide de reprise après sinistre](./DATABASE_GUIDE.md#disaster-recovery)
+- Pour tout autre résultat — **arrêtez 67router** et suivez le [guide de reprise après sinistre](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### « La pression sur le tas mémoire est critique »
 

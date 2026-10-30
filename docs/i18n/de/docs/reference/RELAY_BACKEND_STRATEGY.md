@@ -6,7 +6,7 @@
 
 ## Zusammenfassung
 
-OmniRoute unterstützt jetzt drei Relay-Modi für `/api/v1/relay/chat/completions`:
+67router unterstützt jetzt drei Relay-Modi für `/api/v1/relay/chat/completions`:
 
 - `ts`: Verwendet das TypeScript-Relay innerhalb des Prozesses.
 - `bifrost`: Erzwingt die Verwendung des Bifrost-Gateways.
@@ -45,12 +45,12 @@ Wenn Sie derzeit 9router und CLIPROXYAPI vergleichen:
 
 ## Vertrag der Backend-Grenze
 
-Die stabile Produktgrenze ist die OmniRoute-Relay-API, nicht die Dashboard-Implementierung. Das Next.js-Dashboard kann lokale Dienste installieren, konfigurieren und überwachen, aber das Anfrage-Routing sollte über die Relay-API erfolgen und hinter dieser Grenze übergeben werden.
+Die stabile Produktgrenze ist die 67router-Relay-API, nicht die Dashboard-Implementierung. Das Next.js-Dashboard kann lokale Dienste installieren, konfigurieren und überwachen, aber das Anfrage-Routing sollte über die Relay-API erfolgen und hinter dieser Grenze übergeben werden.
 
 Langfristige Backend-Optionen:
 
 - Behalten Sie das TypeScript-Relay als prozessinternen Richtlinien- und Fallback-Pfad bei. Authentifizierung, Allowlists, Anfragenormalisierung, Abrechnung und Sicherheitsprüfungen verbleiben hier, bevor eine Übergabe an ein Backend erfolgt.
-- Verwenden Sie Bifrost als bevorzugten Tier-1-Sidecar mit hohem Durchsatz, wenn die Bereitstellung eine geringere Routing-Varianz, eine zentralisierte Provider-Rotation oder eine horizontale Skalierung über mehrere OmniRoute-Replikate hinweg erfordert.
+- Verwenden Sie Bifrost als bevorzugten Tier-1-Sidecar mit hohem Durchsatz, wenn die Bereitstellung eine geringere Routing-Varianz, eine zentralisierte Provider-Rotation oder eine horizontale Skalierung über mehrere 67router-Replikate hinweg erfordert.
 - Behalten Sie 9router und CLIPROXYAPI als eingebettete Kompatibilitätsdienste bei. Sie werden als überwachte lokale Prozesse ausgeführt und sind sinnvoll, wenn ihr Provider-/CLI-Verhalten dem gewünschten Adapter entspricht. Sie sollten jedoch nicht zur standardmäßigen Tier-1-Routing-Engine werden.
 - Lassen Sie das Dashboard keine beliebigen Service-URLs an den Hauptpfad übergeben. Von der Benutzeroberfläche bereitgestellte URLs sind Konfigurationseingaben. Der Routing-Code sollte registrierte, zustandsgeprüfte Backends anhand serverseitiger Einstellungen und des Supervisor-Status auflösen.
 - Bevorzugen Sie derzeit Loopback-HTTP für überwachte Dienste, da die verwalteten Prozesse bereits HTTP-kompatible APIs bereitstellen, der Route-Guard die Grenze prüfen kann und das Fehler-/Fallback-Verhalten in den Anfragelogs sichtbar ist. Ein zukünftiger SDK- oder Socket-Transport lohnt sich nur, wenn er die p99-Routing-Latenz messbar reduziert, ohne die Isolation oder die Fallback-Semantik zu schwächen.

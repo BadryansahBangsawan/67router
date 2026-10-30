@@ -4,7 +4,7 @@
 
 ---
 
-Xi servizzi ġew integrati f’OmniRoute u aktar tard tneħħew minħabba li l-persuni li
+Xi servizzi ġew integrati f’67router u aktar tard tneħħew minħabba li l-persuni li
 joperawhom talbu dan. Din il-paġna hija r-reġistru permanenti ta’ dawk it-tneħħijiet. L-uniku
 għan tagħha huwa li tipprevjeni li jerġgħu jiddaħħlu bi żball: kontributur li jsib fork antik,
 tarball ta’ npm fil-cache, issue arkivjata jew talba biex “jiġi rrestawrat il-fornitur X”
@@ -19,10 +19,10 @@ irid ikun illinkjat mill-entrata.
 ## Politika
 
 1. **Talba għat-tneħħija minn operatur ta’ servizz tiġi rrispettata, mhux innegozjata.**
-   OmniRoute mhuwiex affiljat ma’ ebda servizz upstream. Meta l-operatur ta’ servizz jitlob
+   67router mhuwiex affiljat ma’ ebda servizz upstream. Meta l-operatur ta’ servizz jitlob
    li l-integrazzjoni titneħħa, din titneħħa, kemm jekk l-integrazzjoni kienet tuża API
    uffiċjali kif ukoll jekk le.
-2. **“Imneħħi” tfisser minn kull superfiċje kkontrollata minn OmniRoute.** L-eżekutur,
+2. **“Imneħħi” tfisser minn kull superfiċje kkontrollata minn 67router.** L-eżekutur,
    l-entrata fir-reġistru, l-id u l-alias tal-fornitur, il-lista tal-mudelli, l-endpoints,
    il-varjabbli tal-ambjent, l-ikona, il-kards tad-dashboard, ir-referenza ġġenerata
    tal-fornitur, `FREE_TIERS.md`, ir-referenza tal-ambjent, l-għadd fir-README,
@@ -37,7 +37,7 @@ irid ikun illinkjat mill-entrata.
    li terġa’ żżid l-id jew l-alias ma’ kwalunkwe katalgu tal-fornituri, li żżid id-domains ma’
    eżekutur, li taċċetta PR ta’ kontributur li “jirrestawraha”, li żżidha mal-katalgu
    tal-mudelli bla ħlas, jew li tiddokumenta mod manwali kif wieħed jilħaqha permezz ta’
-   OmniRoute. Agħlaq dawn il-PRs u l-issues b’link għal din il-paġna.
+   67router. Agħlaq dawn il-PRs u l-issues b’link għal din il-paġna.
 4. **Żomm l-entrata minima.** Irreġistra biss dak li reviżur jeħtieġ biex jagħraf
    introduzzjoni mill-ġdid: identifikaturi, domains, dati u l-pull request li wettqet
    it-tneħħija. Tiddeskrivix kif kienet taħdem l-integrazzjoni.
@@ -53,7 +53,7 @@ irid ikun illinkjat mill-entrata.
 | 2026-08-12 | `puter`           | `pu`     | `puter.com`                                                              | Is-sid ta' Puter (Nariman Jelveh)                                                                                                                                    | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Fornitur b'ċavetta API. Il-migrazzjoni `152_remove_puter_provider.sql` tnaddaf il-konfigurazzjoni maħżuna.                                                                                                                                                                                                                                                                                                                                              |
 | 2026-09-02 | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                  | L-operatur tas-servizz (email tal-appoġġ)                                                                                                                            | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Fornitur mingħajr ċavetta. Talba bil-miktub waslet fit-2026-08-30. Il-kwistjonijiet u d-diskussjoni ddedikati tħassru, u t-titli tal-PRs inbidlu.                                                                                                                                                                                                                                                                                                       |
 | 2026-09-21 | `gemini-business` | `gembiz` | `business.gemini.google`                                                 | Deċiżjoni ta' sid il-proġett (kwistjoni [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                            | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Fornitur tal-web ibbażat fuq cookies. Google waqqfet l-endpoint `BardFrontendService/StreamGenerate` li kien jimmira lejh l-eżekutur; is-sostitut (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT inizjalizzat minn `__Secure-C_SES`/`csesidx`) ma jistax jinbena jew jiġi vvalidat mingħajr kont attiv ta' Gemini Enterprise/Workspace, li l-proġett m'għandux. Għalhekk twaqqaf minflok ma nkiteb mill-ġdid mingħajr verifika. |
-| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Deċiżjoni ta' sid il-proġett (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fornitur b'awtentikazzjoni permezz ta' cookies, mhux tneħħija mitluba mill-operatur. `studio-api.suno.ai` ġie sospiż (503); il-host attiv jeħtieġ skambju ta' Clerk JWT flimkien ma' dipendenza mħallsa biex issolvi l-hCaptcha, li OmniRoute għażel li ma jżidx għal fornitur wieħed tal-mużika. `kie/suno-v4.0` u `kie/suno-v3.5` (ospitati minn kie.ai) mhumiex affettwati u jibqgħu appoġġjati.                                                     |
+| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Deċiżjoni ta' sid il-proġett (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fornitur b'awtentikazzjoni permezz ta' cookies, mhux tneħħija mitluba mill-operatur. `studio-api.suno.ai` ġie sospiż (503); il-host attiv jeħtieġ skambju ta' Clerk JWT flimkien ma' dipendenza mħallsa biex issolvi l-hCaptcha, li 67router għażel li ma jżidx għal fornitur wieħed tal-mużika. `kie/suno-v4.0` u `kie/suno-v3.5` (ospitati minn kie.ai) mhumiex affettwati u jibqgħu appoġġjati.                                                      |
 | 2026-10-10 | `opencode`        | `oc`     | `opencode.ai/zen/v1` (livell bla ħlas; host kondiviż ma' `opencode-zen`) | Tneħħija preventiva (deċiżjoni ta' sid il-proġett), b'rispett għat-talba pubblika tal-operatur ta' OpenCode biex jitneħħa mill-proġett upstream 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Jitneħħa biss il-fornitur mingħajr ċavetta "OpenCode Free". L-`opencode-zen` u l-`opencode-go` awtentikati, il-mudelli kollha tal-katalgu Zen u l-kuntratti tat-talbiet tagħhom, l-integrazzjonijiet tal-klijent OpenCode u `@omniroute/opencode-plugin*` jibqgħu. Il-migrazzjoni `207_remove_opencode_free_provider.sql` tmexxi lejn Zen il-konnessjonijiet preċedenti li għandhom ċavetta API u tnaddaf il-konfigurazzjoni mingħajr ċavetta.          |
 
 ## Kif iżżid entrata
@@ -68,6 +68,6 @@ Meta tasal talba ġdida għat-tneħħija:
    għal fornitur b’API key u konnessjonijiet maħżuna (żid migrazzjoni).
 3. Żid ringiela waħda mat-tabella t’hawn fuq u l-identifikaturi ma’
    `tests/unit/removed-providers-blocklist.test.ts`, fl-istess PR.
-4. Wieġeb lill-operatur ladarba l-PR jiġi merged, billi telenka x’tneħħa u dak li OmniRoute
+4. Wieġeb lill-operatur ladarba l-PR jiġi merged, billi telenka x’tneħħa u dak li 67router
    ma jistax ibiddel (verżjonijiet ta’ npm u Docker diġà ppubblikati, l-istorja ta’ git,
    forks ta’ partijiet terzi).

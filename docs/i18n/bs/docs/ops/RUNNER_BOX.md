@@ -5,7 +5,7 @@
 ---
 
 Samostalno hostovani skup izvršava se na serveru **.113** (`tomni-proxmox-113`). Od 2026-10-18 svaki
-OmniRoute runner ima **jednu ulogu**, jednu oznaku i memorijski/CPU budžet prilagođen izmjerenom
+67router runner ima **jednu ulogu**, jednu oznaku i memorijski/CPU budžet prilagođen izmjerenom
 radnom opterećenju. Turbopack slot dobija resurse potrebne za build; ostali slotovi dimenzionirani su prema
 izmjerenim vršnim vrijednostima. Server prekoračuje raspoložive resurse samo kada se Turbopack build poklopi s Release-Green
 webpack buildom i lint zadatkom; swap hosta (16 GB) to apsorbuje, a pošto se buildovi za pull requestove
@@ -27,7 +27,7 @@ Izmjereno 2026-10-18:
 | swap      | 16 GB                                   | `omniroute-113-5` radi s isključenim swapom (`MemorySwapMax=0`), tako da se nekontrolisani build prekida kada dostigne svoje ograničenje umjesto da prebaci server na swap                                                                                                                                                                                                                    |
 | `/tmp`    | **12 GB tmpfs = RAM**                   | sve što se tamo smjesti zauzima memoriju; preostale datoteke uklanjaju se nakon 3 h                                                                                                                                                                                                                                                                                                           |
 | CPU       | zabilježeno opterećenje 60 na 32 jezgre | prije uvođenja kvota, jedan Turbopack build (~1166 % CPU) zajedno s paketom testova pokrivenosti na istom serveru blokirao je heartbeat signale ostalih listenera (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                       |
-| runneri   | **6 listenera**                         | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` su onemogućeni (`systemctl enable --now` ponovo aktivira jedan)                                                                                                                                                                                                                                                               |
+| runneri   | **6 listenera**                         | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` su onemogućeni (`systemctl enable --now` ponovo aktivira jedan)                                                                                                                                                                                                                                                                |
 
 Ograničenja se nalaze u `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` svake jedinice
 (prethodne vrijednosti sačuvane su kao `override.conf.bak-20261018`) i primijenjena su uživo pomoću
@@ -73,7 +73,7 @@ prijavljuje posao kao otkazan, a listener se sam vraća online.
 
 Zadani `KillMode=process` runnera ostavlja `Runner.Worker → npm → next-build`
 aktivnim kada se jedinica zaustavi ili ponovo pokrene — napušteni build nastavlja trošiti RAM i
-CPU bez povezanog posla. Svaka OmniRoute jedinica ima drop-in konfiguraciju
+CPU bez povezanog posla. Svaka 67router jedinica ima drop-in konfiguraciju
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 s `KillMode=mixed`: prvo šalje SIGTERM listeneru, a zatim SIGKILL cijeloj cgroup grupi pri
 `TimeoutStop`. Stupa na snagu pri sljedećem ponovnom pokretanju jedinice — ponovo pokrećite **jedan runner
@@ -116,7 +116,7 @@ odjednom, samo kada nije aktivan**, pri čemu provjera neaktivnosti i ponovno po
   potreban samo backend `next build` (~5–6 GB; webpack) i `quality.yml` `lint-guard`. `omniroute-113`
   je imao `MemoryHigh=4G` do 2026-10-18 — promptfoo build se tamo 54 minute probijao kroz povrat memorije;
   8 GB uklanja ograničavanje.
-- **Namjerno manje listenera.** Četiri OmniRoute jedinice onemogućene su 2026-08-29 — svaki dodatni
+- **Namjerno manje listenera.** Četiri 67router jedinice onemogućene su 2026-08-29 — svaki dodatni
   listener još je jedan korisnik prethodno navedenog memorijskog budžeta. Gornja granica janitora je 6 (`MAX_ACTIVE_RUNNERS=6` u cronu): on broji
   svaki `Runner.Listener` na sistemu, a OmniHeuris + OmniMind dodaju dva na naša četiri.
 - **Nikada nemojte ručno čistiti `/tmp` ili `_work` dok je bilo koji runner zauzet.**

@@ -218,7 +218,7 @@ Reguły oczyszczania stosowane do `upstreamDetails`:
 4. Tablice są ograniczane do 32 elementów.
 
 Tylko miejsca wywołania dysponujące przeanalizowaną treścią błędu dostawcy powinny przekazywać
-`upstreamDetails`. Wewnętrzne błędy OmniRoute (błędy analizy SSE, pusta treść, blokady mechanizmów
+`upstreamDetails`. Wewnętrzne błędy 67router (błędy analizy SSE, pusta treść, blokady mechanizmów
 ochronnych) nie mogą go zawierać.
 
 NIE przekazuj nieprzetworzonych wartości `err.stack`, `err.message` ani żadnych ciągów pochodzących
@@ -231,7 +231,7 @@ rekurencyjny mechanizm oczyszczania jest zawsze uruchamiany przed serializacją.
 zawierające BigInt lub zawierające złośliwą metodę `toJSON()` są bezpiecznie odrzucane i nie kwalifikują
 się do przekazania. OCR i moderacja stosują tę samą regułę; treści z usługi nadrzędnej, które nie są
 formatem JSON, są puste lub mają błędnie oznaczony typ, są konwertowane do kanonicznej koperty błędu
-JSON OmniRoute.
+JSON 67router.
 
 ## Znane ograniczenie CodeQL: własne sanitizery nie są rozpoznawane
 

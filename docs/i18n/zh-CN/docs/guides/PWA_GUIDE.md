@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute 以可完整安装的渐进式 Web 应用形式提供。当您通过任何移动浏览器访问仪表板时——Android（Chrome）或 iOS（Safari）——都可以选择“添加到主屏幕”，无需应用商店即可获得类似原生应用的体验。
+67router 以可完整安装的渐进式 Web 应用形式提供。当您通过任何移动浏览器访问仪表板时——Android（Chrome）或 iOS（Safari）——都可以选择“添加到主屏幕”，无需应用商店即可获得类似原生应用的体验。
 
 ## 什么是 PWA？
 
-渐进式 Web 应用可将 OmniRoute Web 仪表板变成一个外观和使用体验都类似原生移动应用的程序。安装后，它可以：
+渐进式 Web 应用可将 67router Web 仪表板变成一个外观和使用体验都类似原生移动应用的程序。安装后，它可以：
 
 - 使用专属图标从主屏幕启动
 - 以全屏模式打开——没有浏览器地址栏或标签页界面
@@ -20,26 +20,26 @@ OmniRoute 以可完整安装的渐进式 Web 应用形式提供。当您通过�
 
 ### Android（Chrome）
 
-1. 在 Chrome 中打开 OmniRoute 仪表板：`http://YOUR_IP:20128`
-2. Chrome 会自动显示 **“将 OmniRoute 添加到主屏幕”**横幅，或者：
+1. 在 Chrome 中打开 67router 仪表板：`http://YOUR_IP:20128`
+2. Chrome 会自动显示 **“将 67router 添加到主屏幕”**横幅，或者：
    - 点击 **⋮** 菜单（三个点）→ **“添加到主屏幕”**或**“安装应用”**
 3. 确认提示
-4. OmniRoute 将作为独立应用显示在您的主屏幕上
+4. 67router 将作为独立应用显示在您的主屏幕上
 
 ### iOS（Safari）
 
-1. 在 Safari 中打开 OmniRoute 仪表板：`http://YOUR_IP:20128`
+1. 在 Safari 中打开 67router 仪表板：`http://YOUR_IP:20128`
 2. 点击**共享**按钮（带箭头的方框）
 3. 向下滚动并点击**“添加到主屏幕”**
-4. 为其命名（默认为“OmniRoute”），然后点击**添加**
-5. OmniRoute 将使用应用图标显示在您的主屏幕上
+4. 为其命名（默认为“67router”），然后点击**添加**
+5. 67router 将使用应用图标显示在您的主屏幕上
 
 ### 桌面端（Chrome / Edge）
 
-1. 打开 OmniRoute 仪表板
-2. 点击地址栏中的**安装图标**（或 ⋮ →“安装 OmniRoute...”）
+1. 打开 67router 仪表板
+2. 点击地址栏中的**安装图标**（或 ⋮ →“安装 67router...”）
 3. 确认提示
-4. OmniRoute 将作为独立窗口打开——没有标签页，也没有地址栏
+4. 67router 将作为独立窗口打开——没有标签页，也没有地址栏
 
 ## 功能
 
@@ -49,7 +49,7 @@ OmniRoute 以可完整安装的渐进式 Web 应用形式提供。当您通过�
 
 ### 离线支持
 
-OmniRoute 包含一个提供智能缓存功能的服务工作线程（`sw.js`）：
+67router 包含一个提供智能缓存功能的服务工作线程（`sw.js`）：
 
 | 资源类型                                              | 策略               | 行为                                                                         |
 | ----------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ OmniRoute 包含一个提供智能缓存功能的服务工作线程（`sw.js`）
 
 ### 应用图标
 
-OmniRoute 提供了针对各个平台优化的图标：
+67router 提供了针对各个平台优化的图标：
 
 | 文件                   | 尺寸            | 使用方                     |
 | ---------------------- | --------------- | -------------------------- |
@@ -94,8 +94,8 @@ OmniRoute 提供了针对各个平台优化的图标：
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ OmniRoute 提供了针对各个平台优化的图标：
 
 ## 与 Termux（Android）配合使用
 
-通过 Termux 在 Android 上运行 OmniRoute 时，PWA 可无缝工作：
+通过 Termux 在 Android 上运行 67router 时，PWA 可无缝工作：
 
-1. 在 Termux 中启动 OmniRoute：`npx omniroute`
+1. 在 Termux 中启动 67router：`npx omniroute`
 2. 在同一部手机上打开 Chrome：`http://localhost:20128`
 3. 通过“添加到主屏幕”安装 PWA
 4. PWA 会连接到本地 Termux 服务器 — 所有内容均在设备上运行
@@ -156,7 +156,7 @@ OmniRoute 提供了针对各个平台优化的图标：
 
 ## 从其他设备使用
 
-可在任何能够通过浏览器访问 OmniRoute 服务器的设备上安装 PWA：
+可在任何能够通过浏览器访问 67router 服务器的设备上安装 PWA：
 
 - **另一部手机/平板电脑**：访问 `http://PHONE_IP:20128` 并安装 PWA
 - **笔记本电脑**：使用 Chrome/Edge 打开，并将其安装为桌面 PWA

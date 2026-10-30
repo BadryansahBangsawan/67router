@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot**, உங்கள் OmniRoute வழங்கும் ஒவ்வொரு மாடலையும் _நேட்டிவ்_ GitHub Copilot Chat
+**OmniCopilot**, உங்கள் 67router வழங்கும் ஒவ்வொரு மாடலையும் _நேட்டிவ்_ GitHub Copilot Chat
 மாடல் தேர்வியில் சேர்க்கிறது. இரண்டாவது பக்கப்பட்டியோ, தனியான அரட்டை UI-யோ இல்லை — Copilot-இன் agent mode, tool calling,
 MCP servers மற்றும் custom instructions அனைத்தும் தொடர்ந்து செயல்படும்; நீங்கள் தேர்ந்தெடுக்கும் மாடலில் மட்டும் இயங்கும்.
 
@@ -23,13 +23,13 @@ MCP servers மற்றும் custom instructions அனைத்தும�
 
 ## அமைத்தல்
 
-1. **OmniRoute-ஐ இயக்குங்கள்** — `npm install -g omniroute && omniroute` (`http://localhost:20128`-இல் dashboard).
-2. **நீட்டிப்பை நிறுவுங்கள்** — Extensions காட்சியில் "OmniRoute" என்பதைத் தேடுங்கள்.
-3. **ஒரு மாடலைத் தேர்ந்தெடுங்கள்** — Copilot Chat → மாடல் தேர்வி → **Manage Models…** → **OmniRoute**, பின்னர்
+1. **67router-ஐ இயக்குங்கள்** — `npm install -g omniroute && omniroute` (`http://localhost:20128`-இல் dashboard).
+2. **நீட்டிப்பை நிறுவுங்கள்** — Extensions காட்சியில் "67router" என்பதைத் தேடுங்கள்.
+3. **ஒரு மாடலைத் தேர்ந்தெடுங்கள்** — Copilot Chat → மாடல் தேர்வி → **Manage Models…** → **67router**, பின்னர்
    உங்களுக்குத் தேவையானவற்றைக் குறியிடுங்கள்.
 
-OmniRoute இயல்புநிலை port-இல் இயங்கும்போது எதையும் உள்ளமைக்கத் தேவையில்லை. தொலைநிலை instance ஒன்றுக்கு,
-**Activity Bar-இல் உள்ள OmniRoute icon-ஐ** திறந்து (அல்லது `OmniRoute: Manage Connection`-ஐ இயக்கி) பின்வருவனவற்றை அமைக்கவும்:
+67router இயல்புநிலை port-இல் இயங்கும்போது எதையும் உள்ளமைக்கத் தேவையில்லை. தொலைநிலை instance ஒன்றுக்கு,
+**Activity Bar-இல் உள்ள 67router icon-ஐ** திறந்து (அல்லது `67router: Manage Connection`-ஐ இயக்கி) பின்வருவனவற்றை அமைக்கவும்:
 
 - **Server URL** — server root, எ.கா. `http://192.168.0.15:20128`. `/v1` suffix-ஐ
   நீட்டிப்பு சேர்க்கும்; அதைச் சேர்க்க வேண்டாம்.
@@ -74,7 +74,7 @@ HTTP 400 — Model '<id>' என்பது image-generation மாடல்; �
 
 எனவே, தேர்வியை அடைவதற்கு முன் அவை அவற்றின் `type` field அடிப்படையில் வடிகட்டப்படுகின்றன. **Responses-API
 மாடல்கள் வைத்துக்கொள்ளப்படுகின்றன** — ஒவ்வொரு Codex / GPT-5.x entry-யும் `supported_endpoints: ["responses"]` என அறிவிக்கிறது;
-OmniRoute அவற்றை `/v1/chat/completions`-க்காக மாற்றுவதால், அவற்றை முழுமையாகப் பயன்படுத்தலாம்.
+67router அவற்றை `/v1/chat/completions`-க்காக மாற்றுவதால், அவற்றை முழுமையாகப் பயன்படுத்தலாம்.
 
 ### நீங்கள் ஒருபோதும் உள்ளமைக்காத வழங்குநர்கள்
 
@@ -87,7 +87,7 @@ dashboard settings-இல் உள்ள `blockedProviders`-க்கு அவ
 
 ## VS Code தாவலுக்குள் Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` என்பது வெளிப்புற உலாவிக்குப் பதிலாக Simple Browser வழியாக OmniRoute dashboard-ஐ editor தாவலில் காட்சிப்படுத்துகிறது. உட்பொதித்தல் என்பது **server-இல் விருப்பத் தேர்வாக இயக்கப்பட வேண்டியது**; இதற்காக `DASHBOARD_ALLOW_EMBED=vscode` பயன்படுத்தப்படுகிறது. இது இயல்புநிலை `frame-ancestors 'none'` +
+`omnicopilot.dashboardOpen: "editor"` என்பது வெளிப்புற உலாவிக்குப் பதிலாக Simple Browser வழியாக 67router dashboard-ஐ editor தாவலில் காட்சிப்படுத்துகிறது. உட்பொதித்தல் என்பது **server-இல் விருப்பத் தேர்வாக இயக்கப்பட வேண்டியது**; இதற்காக `DASHBOARD_ALLOW_EMBED=vscode` பயன்படுத்தப்படுகிறது. இது இயல்புநிலை `frame-ancestors 'none'` +
 `X-Frame-Options: DENY` என்பதற்குப் பதிலாக, HTML பக்கங்களை
 `frame-ancestors 'self' vscode-webview:` என்பதுடன் வழங்குகிறது. API பரப்பு (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) எந்த நிலையிலும் கடுமையான headers-ஐத் தொடர்ந்து பயன்படுத்தும்.
 
@@ -116,7 +116,7 @@ npm start
 
 ## VS Code-க்குள் இருந்து உங்கள் பிற கருவிகளை உள்ளமைத்தல்
 
-**`OmniRoute: Configure Coding CLI`**, Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
+**`67router: Configure Coding CLI`**, Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo மற்றும் Roo ஆகியவற்றுக்கான, பயன்படுத்தத் தயாரான profiles-ஐ எழுத `omniroute` CLI-ஐ இயக்குகிறது — இவை
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md)-இல் விவரிக்கப்பட்டுள்ள அதே configs ஆகும். API key, command line-இல் ஒருபோதும் வழங்கப்படாமல்,
 `OMNIROUTE_API_KEY` environment variable வழியாக CLI-க்கு வழங்கப்படுகிறது.
@@ -125,20 +125,20 @@ Kilo மற்றும் Roo ஆகியவற்றுக்கான, ப�
 
 ## சிக்கல் தீர்த்தல்
 
-| அறிகுறி                                                        | காரணம் / தீர்வு                                                                                                                                                                                                                                                                                                           |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| picker-இல் OmniRoute models எதுவும் இல்லை                      | Server-ஐ அணுக முடியவில்லை. status-bar புள்ளி சாம்பல் நிறமாக மாறும்; `OmniRoute: Check Connection`-ஐ இயக்கவும். Discovery வடிவமைப்பின்படி அமைதியாக நடைபெறும்; கேள்வி கேட்பதற்குப் பதிலாக எந்த models-ஐயும் வழங்காது.                                                                                                       |
-| ஒவ்வொரு model-உம் இருமுறை தோன்றுகிறது                          | நீங்கள் 1.0.1-ஐ விடப் பழைய OmniCopilot பதிப்பைப் பயன்படுத்துகிறீர்கள் — update செய்யவும். extension இப்போது `?prefix=alias`-ஐ கோருகிறது.                                                                                                                                                                                  |
-| முன்பு பட்டியலிடப்பட்ட image/audio model இப்போது காணப்படவில்லை | 1.0.1 முதல் இது வேண்டுமென்றே செய்யப்பட்ட மாற்றம் — அதனால் chat request-க்கு ஒருபோதும் பதிலளிக்க முடியாது.                                                                                                                                                                                                                 |
-| Activity Bar-இல் panel காணப்படவில்லை                           | VS Code, கூடுதல் view containers-ஐ Activity Bar-இன் அடிப்பகுதியில் உள்ள **"…"** overflow-க்குள் நகர்த்துகிறது; right-click மூலம் மறைக்கப்பட்ட container தொடர்ந்து மறைந்தே இருக்கும். Activity Bar-ஐ right-click செய்து → **OmniRoute**-ஐத் தேர்வுசெய்யவும், அல்லது `OmniRoute: Manage Connection` மூலம் அதைத் திறக்கவும். |
-| `editor` mode இருந்தும் Dashboard browser-இல் திறக்கிறது       | server, `DASHBOARD_ALLOW_EMBED=vscode` உடன் **build** செய்யப்படவில்லை (மேலே பார்க்கவும்) — முன்பே build செய்யப்பட்ட install-இல் startup நேரத்தில் அதை அமைப்பதால் எந்த மாற்றமும் ஏற்படாது. தானாக மாறும் fallback திட்டமிட்ட நடத்தையாகும்.                                                                                  |
-| providers-ஐ மாற்றிய பிறகும் Models பட்டியல் பழையதாக உள்ளது     | `OmniRoute: Refresh Models`-ஐப் பயன்படுத்தவும் அல்லது panel-இல் உள்ள ↻ link-ஐத் தேர்ந்தெடுக்கவும்.                                                                                                                                                                                                                        |
+| அறிகுறி                                                        | காரணம் / தீர்வு                                                                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| picker-இல் 67router models எதுவும் இல்லை                       | Server-ஐ அணுக முடியவில்லை. status-bar புள்ளி சாம்பல் நிறமாக மாறும்; `67router: Check Connection`-ஐ இயக்கவும். Discovery வடிவமைப்பின்படி அமைதியாக நடைபெறும்; கேள்வி கேட்பதற்குப் பதிலாக எந்த models-ஐயும் வழங்காது.                                                                                                      |
+| ஒவ்வொரு model-உம் இருமுறை தோன்றுகிறது                          | நீங்கள் 1.0.1-ஐ விடப் பழைய OmniCopilot பதிப்பைப் பயன்படுத்துகிறீர்கள் — update செய்யவும். extension இப்போது `?prefix=alias`-ஐ கோருகிறது.                                                                                                                                                                                |
+| முன்பு பட்டியலிடப்பட்ட image/audio model இப்போது காணப்படவில்லை | 1.0.1 முதல் இது வேண்டுமென்றே செய்யப்பட்ட மாற்றம் — அதனால் chat request-க்கு ஒருபோதும் பதிலளிக்க முடியாது.                                                                                                                                                                                                               |
+| Activity Bar-இல் panel காணப்படவில்லை                           | VS Code, கூடுதல் view containers-ஐ Activity Bar-இன் அடிப்பகுதியில் உள்ள **"…"** overflow-க்குள் நகர்த்துகிறது; right-click மூலம் மறைக்கப்பட்ட container தொடர்ந்து மறைந்தே இருக்கும். Activity Bar-ஐ right-click செய்து → **67router**-ஐத் தேர்வுசெய்யவும், அல்லது `67router: Manage Connection` மூலம் அதைத் திறக்கவும். |
+| `editor` mode இருந்தும் Dashboard browser-இல் திறக்கிறது       | server, `DASHBOARD_ALLOW_EMBED=vscode` உடன் **build** செய்யப்படவில்லை (மேலே பார்க்கவும்) — முன்பே build செய்யப்பட்ட install-இல் startup நேரத்தில் அதை அமைப்பதால் எந்த மாற்றமும் ஏற்படாது. தானாக மாறும் fallback திட்டமிட்ட நடத்தையாகும்.                                                                                |
+| providers-ஐ மாற்றிய பிறகும் Models பட்டியல் பழையதாக உள்ளது     | `67router: Refresh Models`-ஐப் பயன்படுத்தவும் அல்லது panel-இல் உள்ள ↻ link-ஐத் தேர்ந்தெடுக்கவும்.                                                                                                                                                                                                                       |
 
 ---
 
 ## மேலும் பார்க்கவும்
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — மற்ற அனைத்து குறியீட்டுக் கருவிகளும்
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — தொலைநிலை OmniRoute-ஐ இயக்குதல்
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — தொலைநிலை 67router-ஐ இயக்குதல்
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` ஒப்பந்தம்
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — நீட்சியின் சொந்த அட்டவணைக் குறிப்புகள்

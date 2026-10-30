@@ -6,7 +6,7 @@
 
 ## Xülasə
 
-OmniRoute artıq `/api/v1/relay/chat/completions` üçün üç retranslyasiya rejimini dəstəkləyir:
+67router artıq `/api/v1/relay/chat/completions` üçün üç retranslyasiya rejimini dəstəkləyir:
 
 - `ts`: TypeScript retranslyasiyasını proses daxilində istifadə edir.
 - `bifrost`: Bifrost şlüzündən istifadəni məcburi edir.
@@ -45,12 +45,12 @@ Hazırda 9router/CLIPROXYAPI müqayisəsi aparırsınızsa:
 
 ## Backend sərhədi müqaviləsi
 
-Sabit məhsul sərhədi idarə panelinin reallaşdırılması deyil, OmniRoute retranslyasiya API-sidir. Next.js idarə paneli lokal xidmətləri quraşdıra, konfiqurasiya edə və nəzarətdə saxlaya bilər, lakin sorğu marşrutlaşdırması retranslyasiya API-si vasitəsilə daxil olmalı və həmin sərhədin arxasında təhvil verilməlidir.
+Sabit məhsul sərhədi idarə panelinin reallaşdırılması deyil, 67router retranslyasiya API-sidir. Next.js idarə paneli lokal xidmətləri quraşdıra, konfiqurasiya edə və nəzarətdə saxlaya bilər, lakin sorğu marşrutlaşdırması retranslyasiya API-si vasitəsilə daxil olmalı və həmin sərhədin arxasında təhvil verilməlidir.
 
 Uzunmüddətli backend seçimləri:
 
 - TypeScript retranslyasiyasını prosesdaxili siyasət və ehtiyat yol kimi saxlayın. Hər hansı backend-ə təhvil vermədən əvvəl autentifikasiya, icazə siyahıları, sorğuların normallaşdırılması, uçot və təhlükəsizlik yoxlamaları burada qalır.
-- Yerləşdirmə daha aşağı marşrutlaşdırma dəyişkənliyi, mərkəzləşdirilmiş provayder rotasiyası və ya bir neçə OmniRoute replikası üzrə miqyaslanma tələb etdikdə, üstünlük verilən yüksək ötürmə qabiliyyətli Tier-1 yan prosesi kimi Bifrost-dan istifadə edin.
+- Yerləşdirmə daha aşağı marşrutlaşdırma dəyişkənliyi, mərkəzləşdirilmiş provayder rotasiyası və ya bir neçə 67router replikası üzrə miqyaslanma tələb etdikdə, üstünlük verilən yüksək ötürmə qabiliyyətli Tier-1 yan prosesi kimi Bifrost-dan istifadə edin.
 - 9router və CLIPROXYAPI-ni daxilə yerləşdirilmiş uyğunluq xidmətləri kimi saxlayın. Onlar nəzarət olunan lokal proseslər kimi işləyir və onların provayder/CLI davranışı arzu olunan adapter olduqda faydalıdır, lakin standart Tier-1 marşrutlaşdırma mühərrikinə çevrilməməlidirlər.
 - İdarə panelinin intensiv istifadə olunan yola ixtiyari xidmət URL-ləri ötürməsinə imkan verməyin. UI tərəfindən təqdim olunan URL-lər konfiqurasiya girişləridir; marşrutlaşdırma kodu qeydiyyatdan keçmiş və işləkliyi yoxlanmış backend-ləri server tərəfli parametrlərdən və nəzarətçi vəziyyətindən müəyyən etməlidir.
 - Hazırda nəzarət olunan xidmətlər üçün loopback HTTP-yə üstünlük verin, çünki idarə olunan proseslər artıq HTTP ilə uyğun API-lər təqdim edir, marşrut qoruyucusu sərhədi audit edə bilir və nasazlıq/ehtiyat keçid davranışı sorğu jurnallarında görünür. Gələcək SDK və ya soket nəqli yalnız izolyasiyanı və ya ehtiyat keçid semantikasını zəiflətmədən p99 marşrutlaşdırma gecikməsini nəzərəçarpacaq dərəcədə azaldarsa əlavə edilməyə dəyər.

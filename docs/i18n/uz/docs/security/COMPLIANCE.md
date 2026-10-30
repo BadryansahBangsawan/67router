@@ -7,7 +7,7 @@
 > **Haqiqiy manba:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute maʼmuriy amallar, autentifikatsiya hodisalari, provayder hisob maʼlumotlarining hayotiy siklidagi oʻzgarishlar va MCP vositasi chaqiruvlarini SQLite asosidagi audit jadvallariga yozib boradi. Ushbu sahifada nimalar jurnalga yozilishi, ular qayerda saqlanishi, qancha vaqt saqlab turilishi, API kalitlari jurnalga yozilishdan qanday voz kechishi va maʼlumotlarni qanday soʻrash mumkinligi bayon etiladi.
+67router maʼmuriy amallar, autentifikatsiya hodisalari, provayder hisob maʼlumotlarining hayotiy siklidagi oʻzgarishlar va MCP vositasi chaqiruvlarini SQLite asosidagi audit jadvallariga yozib boradi. Ushbu sahifada nimalar jurnalga yozilishi, ular qayerda saqlanishi, qancha vaqt saqlab turilishi, API kalitlari jurnalga yozilishdan qanday voz kechishi va maʼlumotlarni qanday soʻrash mumkinligi bayon etiladi.
 
 Amalga oshirish kodi `src/lib/compliance/index.ts` (T-43 — "Muvofiqlik nazorati") va `src/lib/compliance/providerAudit.ts` fayllarida joylashgan. Audit yozuvlari hech qachon istisno chiqarmaydi: har qanday nosozlik yuz berganda chaqiruv jimgina eʼtiborsiz qoldiriladi, shuning uchun audit jurnaliga yozish asosiy soʻrov oqimini buzmaydi.
 

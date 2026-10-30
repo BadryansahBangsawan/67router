@@ -11,7 +11,7 @@ reprezentowane jako cztery rodziny providerów. Region to dane połączenia, a n
 
 ## Decyzja
 
-| Rodzina providera                          | ID OmniRoute            | Region globalny | Region Chiny |
+| Rodzina providera                          | ID 67router             | Region globalny | Region Chiny |
 | ------------------------------------------ | ----------------------- | --------------- | ------------ |
 | Alibaba Cloud Model Studio (pay as you go) | `alibaba`               | Singapore       | Beijing      |
 | Alibaba Cloud Token Plan                   | `bailian-coding-plan`   | Singapore       | Beijing      |

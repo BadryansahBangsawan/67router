@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (አማርኛ)
+# 67router Auto-Combo Engine (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ለእያንዳንዱ ቶከን በጣም ርካ
 
 **ምን ይከሰታል፦**
 
-1. OmniRoute በ`src/sse/handlers/chat.ts` ውስጥ ያለውን `auto/` ቅድመ ቅጥያ ይለያል
+1. 67router በ`src/sse/handlers/chat.ts` ውስጥ ያለውን `auto/` ቅድመ ቅጥያ ይለያል
 2. ሁሉንም **ንቁ የአቅራቢ ግንኙነቶች** ከውሂብ ጎታው ይጠይቃል
 3. ትክክለኛ ማረጋገጫዎች (API ቁልፍ ወይም OAuth ቶከን) ያላቸውን ያጣራል
 4. ለእያንዳንዱ ግንኙነት ሞዴሉን ይወስናል (`connection.defaultModel` ወይም የአቅራቢው የመጀመሪያ ሞዴል)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # ለእያንዳንዱ ቶከን በጣም ርካ
 - የሞዴል መቆለፊያ — `isModelLocked(provider, connectionId, model)`
 
 እያንዳንዱ እጩ የዚህን API ቁልፍ `excluded` ጠቋሚም ይይዛል። ማግለያዎች
-ለእያንዳንዱ API ቁልፍ (`auto_candidate_overrides` ሰንጠረዥ፣ ፍልሰት `128`) ተለይተው ይከማቻሉ — OmniRoute
+ለእያንዳንዱ API ቁልፍ (`auto_candidate_overrides` ሰንጠረዥ፣ ፍልሰት `128`) ተለይተው ይከማቻሉ — 67router
 የ`users` ሰንጠረዥ የሌለው ባለአንድ-ተከራይ ስርዓት ስለሆነ፣ `apiKeyId` ከእውነተኛ በአንድ ጠሪ የሚለይ
 ማንነት ጋር በጣም የቀረበው ነው — እና በ
 `open-sse/services/autoCombo/virtualFactory.ts` ውስጥ ባለው የእጩዎች ስብስብ ማነቆ ላይ፣ ንጹሕና በአሃድ የተፈተነውን
@@ -179,7 +179,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 ሁለት የተለመዱ ስህተቶች፦
 
 - **`auto` የእርስዎን ኮምቦዎች አይጠቀምም።** `auto`/`auto/*` የራሱን ውቅር የማያስፈልገው የዕጩዎች ስብስብ ይገነባል፤ እንዲሁም አንድ ኮምቦ ቃል በቃል `auto` ተብሎ ካልተሰየመ በስተቀር ቋሚ ተደርገው የተቀመጡ ኮምቦዎችን አያማክርም (አይመከርም)። በኮምቦ በኩል ለማዘዋወር፣ ትክክለኛውን ስሙን ይላኩ — `auto` አይደለም።
-- **`openrouter/auto` እውነተኛ ክፍያ የሚጠይቅ የOpenRouter ምርት** ("Auto Best Available") ነው፣ የOmniRoute ተለዋጭ ስም አይደለም። ይህ የOpenRouter መዝገብ (`open-sse/config/providers/registry/openrouter/index.ts`) ብቸኛው ቋሚ የሞዴል ግቤት ሲሆን ክፍያውም ለብቻው ይሰላል። ከ `auto` ስብስቦች ለማስወገድ Settings → Routing → Hide paid models የሚለውን ይጠቀሙ።
+- **`openrouter/auto` እውነተኛ ክፍያ የሚጠይቅ የOpenRouter ምርት** ("Auto Best Available") ነው፣ የ67router ተለዋጭ ስም አይደለም። ይህ የOpenRouter መዝገብ (`open-sse/config/providers/registry/openrouter/index.ts`) ብቸኛው ቋሚ የሞዴል ግቤት ሲሆን ክፍያውም ለብቻው ይሰላል። ከ `auto` ስብስቦች ለማስወገድ Settings → Routing → Hide paid models የሚለውን ይጠቀሙ።
 
 ይህ ሰነድ ስለሚያብራራው የመጀመሪያ ግራ መጋባት [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) እና [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111)ን ይመልከቱ።
 
@@ -276,7 +276,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## ሁሉም የማዞሪያ ስልቶች
 
-የOmniRoute combo engine **20 የማዞሪያ ስልቶችን** ይደግፋል (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` ውስጥ የተወሰኑ)። Auto Combo engine ራሱ በ`auto` ስልት ስር ይቀርባል፤ ሌሎቹ ደግሞ ለተከማቹ combos ይገኛሉ።
+የ67router combo engine **20 የማዞሪያ ስልቶችን** ይደግፋል (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` ውስጥ የተወሰኑ)። Auto Combo engine ራሱ በ`auto` ስልት ስር ይቀርባል፤ ሌሎቹ ደግሞ ለተከማቹ combos ይገኛሉ።
 
 | ስልት                 | መግለጫ                                                                                                                                                                                |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -324,7 +324,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ### የኤጀንቲክ ፓይፕላይን ሁነታ
 
-ቢያንስ ሁለት ሞዴሎች ያሉት የ`pipeline` ጥምር፣ `config.agenticOrchestration.enabled`ን በመጠቀም የእቅድ አውጪ/ፈጻሚ ማስተላለፊያን ሊመርጥ ይችላል። የመጀመሪያው ዒላማ እቅድ ማውጣትን እና የመጨረሻ መልሶችን ይቆጣጠራል፤ ሁለተኛው ዒላማ የደንበኛውን ቤተኛ የመሳሪያ ጥሪዎች ያወጣል። OmniRoute ከጥያቄው ፕሮቶኮል የመሳሪያ ውጤት ቀጣይነቶችን ይለያል፣ ሌላ የመሳሪያ ዙር ያስፈልግ እንደሆነ እቅድ አውጪውን ይጠይቃል፣ እና ፈጻሚውን ወይም እቅድ አውጪውን ከደንበኛው ጋር የሚገናኘው የመጨረሻ ደረጃ አድርጎ በተለዋዋጭ ሁኔታ ይመርጣል።
+ቢያንስ ሁለት ሞዴሎች ያሉት የ`pipeline` ጥምር፣ `config.agenticOrchestration.enabled`ን በመጠቀም የእቅድ አውጪ/ፈጻሚ ማስተላለፊያን ሊመርጥ ይችላል። የመጀመሪያው ዒላማ እቅድ ማውጣትን እና የመጨረሻ መልሶችን ይቆጣጠራል፤ ሁለተኛው ዒላማ የደንበኛውን ቤተኛ የመሳሪያ ጥሪዎች ያወጣል። 67router ከጥያቄው ፕሮቶኮል የመሳሪያ ውጤት ቀጣይነቶችን ይለያል፣ ሌላ የመሳሪያ ዙር ያስፈልግ እንደሆነ እቅድ አውጪውን ይጠይቃል፣ እና ፈጻሚውን ወይም እቅድ አውጪውን ከደንበኛው ጋር የሚገናኘው የመጨረሻ ደረጃ አድርጎ በተለዋዋጭ ሁኔታ ይመርጣል።
 
 ከሁለተኛው ዒላማ በኋላ ያሉ ተጨማሪ ሞዴሎች በቅደም ተከተል የፈጻሚ ምትኬዎች ይሆናሉ። ያልተሳካ የHTTP ምላሽ ወይም የማጓጓዣ ልዩ ሁኔታ ወደ ቀጣዩ ፈጻሚ ያሸጋግራል፤ ተመሳሳዩን የእቅድ አውጪ ውሳኔ እና ቤተኛ መሳሪያዎች ይዞ ቢቀጥልም፣ የዚያን ፈጻሚ የራሱን የደረጃ መመሪያ እና የተፈታ ግንኙነት ይጠቀማል። የመጀመሪያው የተሳካ ምላሽ SSE ዥረትን ጨምሮ ሳይቀየር ይመለሳል፤ የተሳካ ዥረት ከጀመረ በኋላ የሚከሰቱ ውድቀቶች እዚህ ዳግም ሊሞከሩ አይችሉም። ሁሉም ፈጻሚዎች ካልተሳኩ፣ የመጨረሻው ውድቀት ይመለሳል። የደንበኛ ማቋረጦች መላኩን ያቆማሉ።
 
@@ -832,11 +832,11 @@ offline-friendly) «የክብደት መገለጫዎች በየጥቅሉ» ሰን�
 
 ### በቅድመ ሁኔታ የተገደበ ቀጥታ የመጀመሪያ ሙከራ (በCI ውስጥ **አይደለም** — እውነተኛ አቅራቢዎች)
 
-| ትእዛዝ                                   | የሚያደርገው                                                                           |
-| :------------------------------------- | :-------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`ን በመጠቀም በሂደት ውስጥ እውነተኛ ማዘዋወር፤ የቀጥታ OmniRoute DB ቅጽበተ ግልባጭ ይወስዳል |
-| `npm run test:combo:live:vps`          | በቀጥታ OmniRoute አገልጋይ ላይ የHTTP ጥሪዎችን ያደርጋል (`COMBO_LIVE_BASE_URL`ን ያዘጋጁ)           |
-| `npm run test:combo:live:vps:failover` | ተመሳሳይ፣ ነገር ግን ሆን ተብለው ከተዘጋጁ የመቀያየሪያ ሁኔታዎች ጋር                                      |
+| ትእዛዝ                                   | የሚያደርገው                                                                          |
+| :------------------------------------- | :------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`ን በመጠቀም በሂደት ውስጥ እውነተኛ ማዘዋወር፤ የቀጥታ 67router DB ቅጽበተ ግልባጭ ይወስዳል |
+| `npm run test:combo:live:vps`          | በቀጥታ 67router አገልጋይ ላይ የHTTP ጥሪዎችን ያደርጋል (`COMBO_LIVE_BASE_URL`ን ያዘጋጁ)           |
+| `npm run test:combo:live:vps:failover` | ተመሳሳይ፣ ነገር ግን ሆን ተብለው ከተዘጋጁ የመቀያየሪያ ሁኔታዎች ጋር                                     |
 
 እነዚህ የመጀመሪያ ሙከራዎች እውነተኛውን የግንኙነት መንገድ (combo → provider → completion) ይፈትሻሉ።
 ቀጥታ የመግቢያ ማስረጃዎችን እና የVPS መዳረሻን ስለሚፈልጉ፣ ሆን ተብለው ከCI ውጭ ተደርገዋል።

@@ -7,7 +7,7 @@
 > **Fonte di riferimento:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Ultimo aggiornamento:** 2026-06-28 — v3.8.40
 
-OmniRoute include un framework di valutazione generico che può essere utilizzato per confrontare configurazioni di routing, singoli provider/modelli o le suite "golden set" incluse.
+67router include un framework di valutazione generico che può essere utilizzato per confrontare configurazioni di routing, singoli provider/modelli o le suite "golden set" incluse.
 Usalo per verificare le modifiche al routing, convalidare nuovi provider e autorizzare i rilasci prima di promuoverli al traffico di produzione.
 
 Il framework è implementato come segue:

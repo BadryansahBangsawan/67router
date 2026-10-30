@@ -24,9 +24,9 @@
 ## 儀表板設定
 
 1. 開啟 **ChatGPT Web (Codex)** 提供者並新增連線。
-2. 貼上完整的 ChatGPT Cookie 標頭、通道 ID、執行階段金鑰，以及自訂連接器名稱。具備新工具功能的設定必須使用新建立且名稱完全為 `OmniRoute Codex v2` 的連接器，並將驗證設為 None、權限設為允許所有動作。
-3. 執行連線檢查。OmniRoute 會開啟由瀏覽器支援的暫時聊天，並偵測該帳戶是否可使用 Sol 和 Pro。
-4. 儲存連線。OmniRoute 會以已驗證的 Playwright 儲存狀態取代貼上的 Cookie，並透過加密的認證抽象層將其與執行階段金鑰一併儲存。
+2. 貼上完整的 ChatGPT Cookie 標頭、通道 ID、執行階段金鑰，以及自訂連接器名稱。具備新工具功能的設定必須使用新建立且名稱完全為 `67router Codex v2` 的連接器，並將驗證設為 None、權限設為允許所有動作。
+3. 執行連線檢查。67router 會開啟由瀏覽器支援的暫時聊天，並偵測該帳戶是否可使用 Sol 和 Pro。
+4. 儲存連線。67router 會以已驗證的 Playwright 儲存狀態取代貼上的 Cookie，並透過加密的認證抽象層將其與執行階段金鑰一併儲存。
 
 成功儲存後，原始 Cookie 不會被保留。工作階段過期時，請開啟連線、貼上新的完整 Cookie 標頭，然後重新執行檢查。編輯對話方塊中的診斷狀態會分別回報瀏覽器、儲存狀態、登入、暫時聊天、通道、連接器，以及工具往返測試的狀態。若要在工作階段輪替時自動更新 Cookie，請參閱 [Browser Session Sync Extension](../guides/SESSION-SYNC-EXTENSION.md) 中的配套工具。
 
@@ -49,7 +49,7 @@
 
 Free／Go 帳戶會提供 Luna 路由。支援 Sol 的帳戶會提供 Instant 至 High，而支援 Pro 的帳戶還會提供 Extra High 和 Pro。每個路由都有固定的後端模型和推理強度；若明確指定了與其衝突的 Responses 推理強度，系統會採取封閉式失敗，而不是悄然變更所選的瀏覽器模式。
 
-請勿重新命名或重複使用較舊的 `Codex Native` 或 `OmniRoute Codex` 連接器。ChatGPT 會依連接器身分快取公用 MCP 合約，而更新後的橋接器使用新的直接輪次權杖合約。執行階段會拒絕這些舊版身分，並要求使用新的 `OmniRoute Codex v2` 連接器。
+請勿重新命名或重複使用較舊的 `Codex Native` 或 `67router Codex` 連接器。ChatGPT 會依連接器身分快取公用 MCP 合約，而更新後的橋接器使用新的直接輪次權杖合約。執行階段會拒絕這些舊版身分，並要求使用新的 `67router Codex v2` 連接器。
 
 ## 安全性模型
 
@@ -62,11 +62,11 @@ Free／Go 帳戶會提供 Luna 路由。支援 Sol 的帳戶會提供 Instant �
 
 ## 無顯示器的 VPS 與 Docker
 
-對於 npm、systemd 及 PM2 安裝，OmniRoute 會偵測常見的 Chrome 與 Chromium 路徑。或者，也可以設定 `CHATGPT_WEB_CODEX_CHROME_PATH`。執行階段回合刻意使用有介面的 Chrome，因為 ChatGPT 會拒絕真正的無頭瀏覽器形式。因此，無顯示器的主機必須透過私有 Xvfb 顯示器執行 OmniRoute；僅設定 Chrome 路徑並不會提供顯示器。
+對於 npm、systemd 及 PM2 安裝，67router 會偵測常見的 Chrome 與 Chromium 路徑。或者，也可以設定 `CHATGPT_WEB_CODEX_CHROME_PATH`。執行階段回合刻意使用有介面的 Chrome，因為 ChatGPT 會拒絕真正的無頭瀏覽器形式。因此，無顯示器的主機必須透過私有 Xvfb 顯示器執行 67router；僅設定 Chrome 路徑並不會提供顯示器。
 
-Docker `web` 設定檔會在內部 Compose 網路上啟動 `chatgpt-web-codex-browser`。輔助容器會在 Xvfb 內執行有介面的 Chrome，因此不需要實體顯示器。其 CDP 連接埠不會發布至主機。受保護的瀏覽器設定檔磁碟區與 OmniRoute 資料磁碟區彼此分離，且瀏覽器會獲得足夠的共用記憶體。內部 CDP Proxy 僅監聽 Compose 網路內的連接埠 `9223`；Chrome 在輔助容器中仍只繫結至回送介面。
+Docker `web` 設定檔會在內部 Compose 網路上啟動 `chatgpt-web-codex-browser`。輔助容器會在 Xvfb 內執行有介面的 Chrome，因此不需要實體顯示器。其 CDP 連接埠不會發布至主機。受保護的瀏覽器設定檔磁碟區與 67router 資料磁碟區彼此分離，且瀏覽器會獲得足夠的共用記憶體。內部 CDP Proxy 僅監聽 Compose 網路內的連接埠 `9223`；Chrome 在輔助容器中仍只繫結至回送介面。
 
-`DATA_DIR` 下的監督程式租約可防止多個 OmniRoute 程序同時擁有相同的通道與代理程式狀態。doctor 會回報衝突。
+`DATA_DIR` 下的監督程式租約可防止多個 67router 程序同時擁有相同的通道與代理程式狀態。doctor 會回報衝突。
 
 ## 互動式復原
 

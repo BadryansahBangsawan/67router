@@ -14,7 +14,7 @@
 配額共享引擎會將提供者以時間為基礎的配額（例如 Codex 的
 5 小時視窗、Kimi 的 1500 req/h）公平分配給共用相同連線的多個 API 金鑰。
 
-**其解決的問題：** OmniRoute 會透過同一個上游提供者帳戶代理許多 API 金鑰。
+**其解決的問題：** 67router 會透過同一個上游提供者帳戶代理許多 API 金鑰。
 若沒有共享邏輯，金鑰 A 突然產生的大量請求可能會耗盡該小時的提供者配額，
 導致金鑰 B 和 C 在視窗重設之前都遭到封鎖。引擎透過以下方式避免此問題：
 
@@ -115,7 +115,7 @@ Redis 驅動程式：使用 Lua EVAL 指令碼進行不可分割的遞增操作�
 
 - 資料表：`quota_consumption`（請參閱遷移檔案 `073_quota_pools.sql` / `074_quota_consumption.sql`）。
 - 最適合單一執行個體部署。
-- 所有持久化資料皆儲存在現有的 OmniRoute SQLite DB（`DATA_DIR/storage.sqlite`）中。
+- 所有持久化資料皆儲存在現有的 67router SQLite DB（`DATA_DIR/storage.sqlite`）中。
 
 ### Redis（選用、多執行個體）
 

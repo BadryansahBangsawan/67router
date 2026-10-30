@@ -7,7 +7,7 @@
 > **အမှန်တကယ် ကိုးကားရမည့် ရင်းမြစ်:** `src/lib/memory/` နှင့် `src/app/api/memory/`
 > **နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-06-28 — v3.8.40 (ပုံသေဖြင့် ပိတ်ထားခြင်း + int8 quantization အမီလိုက်မွမ်းမံမှု)
 
-OmniRoute သည် API key (နှင့် ရွေးချယ်နိုင်သော session id) ဖြင့် ခွဲခြားသတ်မှတ်ထားသည့် အမြဲတမ်းသိမ်းဆည်းထားသော စကားဝိုင်းမှတ်ဉာဏ်ကို ပံ့ပိုးပေးသည်။ ပေါ့ပါးသော regex ပုံစံတိုက်ဆိုင်စစ်ဆေးမှုမှတစ်ဆင့် LLM တုံ့ပြန်ချက်များမှ မှတ်ဉာဏ်များကို အလိုအလျောက် ထုတ်ယူပြီး နောက်ဆက်တွဲ request များတွင် ရှေ့ဆုံး system message အဖြစ် (သို့မဟုတ် system role ကို လက်မခံသော provider များအတွက် ပထမဆုံး user message အဖြစ်) ပြန်လည်ထည့်သွင်းပေးသည်။
+67router သည် API key (နှင့် ရွေးချယ်နိုင်သော session id) ဖြင့် ခွဲခြားသတ်မှတ်ထားသည့် အမြဲတမ်းသိမ်းဆည်းထားသော စကားဝိုင်းမှတ်ဉာဏ်ကို ပံ့ပိုးပေးသည်။ ပေါ့ပါးသော regex ပုံစံတိုက်ဆိုင်စစ်ဆေးမှုမှတစ်ဆင့် LLM တုံ့ပြန်ချက်များမှ မှတ်ဉာဏ်များကို အလိုအလျောက် ထုတ်ယူပြီး နောက်ဆက်တွဲ request များတွင် ရှေ့ဆုံး system message အဖြစ် (သို့မဟုတ် system role ကို လက်မခံသော provider များအတွက် ပထမဆုံး user message အဖြစ်) ပြန်လည်ထည့်သွင်းပေးသည်။
 
 > **မှတ်ဉာဏ်ကို ပုံသေအားဖြင့် ပိတ်ထားသည် (v3.8.30+)။** `DEFAULT_MEMORY_SETTINGS.enabled` သည်
 > ယခု `false` ဖြစ်သည် (`src/lib/memory/settings.ts`)။ မှတ်ဉာဏ်ကို ဖွင့်ထားပါက
@@ -591,7 +591,7 @@ method များပါဝင်သည့် ယေဘုယျ key/value `mem
 
 ## Embedding Provider ရွေးချယ်ခြင်း (v3.8.16+)
 
-OmniRoute ၏ memory engine သည် **embedding source လေးမျိုး** (`src/lib/memory/embedding/`) ကို ပံ့ပိုးပေးသည်။ တစ်ခုချင်းစီတွင် **ကြာချိန်၊ ကုန်ကျစရိတ်၊ model အရည်အသွေးနှင့် စနစ်ထည့်သွင်းမှု ရှုပ်ထွေးခြင်း** တို့အကြား အားသာချက်၊ အားနည်းချက် မတူညီကြပါသည်။
+67router ၏ memory engine သည် **embedding source လေးမျိုး** (`src/lib/memory/embedding/`) ကို ပံ့ပိုးပေးသည်။ တစ်ခုချင်းစီတွင် **ကြာချိန်၊ ကုန်ကျစရိတ်၊ model အရည်အသွေးနှင့် စနစ်ထည့်သွင်းမှု ရှုပ်ထွေးခြင်း** တို့အကြား အားသာချက်၊ အားနည်းချက် မတူညီကြပါသည်။
 
 ### Embedding Source များ
 
@@ -1009,13 +1009,13 @@ Worker သည် loopback နှင့်သာ ချိတ်ဆက်ထာ�
 ဤ adapter သည် ထို guard ကို ဖြေလျှော့မထားပါ။ Host ကို `127.0.0.1` အဖြစ် တိတိကျကျ သတ်မှတ်ထားပြီး config
 schema (`ClaudeMemBackendConfigSchema`, `.strict()`) သည် အောက်ပါတို့ကိုသာ လက်ခံသည်-
 
-| ကီး         | အမျိုးအစား | မူလတန်ဖိုး | မှတ်ချက်များ                                                                                                                            |
-| ----------- | ---------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number     | —          | မဖြစ်မနေ လိုအပ်ပြီး 1024–65535 အတွင်း ဖြစ်ရမည်။ ၎င်း၏ ဆက်တင်ဖိုင်မှ claude-mem worker port ဖြစ်သည် (မူလတန်ဖိုး `37700 + uid % 100`)။    |
-| `project`   | string     | —          | အသုံးပြုမည့် claude-mem project။ မသတ်မှတ်ထားပါက → OmniRoute API key တစ်ခုစီသည် ၎င်း၏ ကိုယ်ပိုင် project (`apiKeyId`) နှင့် ချိတ်ဆက်မည်။ |
-| `timeoutMs` | number     | `5000`     | request တစ်ခုစီအတွက် timeout ဖြစ်ပြီး 100–30000 အတွင်း ဖြစ်ရမည်။                                                                        |
+| ကီး         | အမျိုးအစား | မူလတန်ဖိုး | မှတ်ချက်များ                                                                                                                           |
+| ----------- | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number     | —          | မဖြစ်မနေ လိုအပ်ပြီး 1024–65535 အတွင်း ဖြစ်ရမည်။ ၎င်း၏ ဆက်တင်ဖိုင်မှ claude-mem worker port ဖြစ်သည် (မူလတန်ဖိုး `37700 + uid % 100`)။   |
+| `project`   | string     | —          | အသုံးပြုမည့် claude-mem project။ မသတ်မှတ်ထားပါက → 67router API key တစ်ခုစီသည် ၎င်း၏ ကိုယ်ပိုင် project (`apiKeyId`) နှင့် ချိတ်ဆက်မည်။ |
+| `timeoutMs` | number     | `5000`     | request တစ်ခုစီအတွက် timeout ဖြစ်ပြီး 100–30000 အတွင်း ဖြစ်ရမည်။                                                                       |
 
-၎င်းကို `PUT /api/settings/memory` မှတစ်ဆင့် ဖွင့်ပြီး OmniRoute ကို ပြန်လည်စတင်ပါ (backend များကို
+၎င်းကို `PUT /api/settings/memory` မှတစ်ဆင့် ဖွင့်ပြီး 67router ကို ပြန်လည်စတင်ပါ (backend များကို
 `initMemoryBackends()` တွင် တစ်ကြိမ်သာ register လုပ်သည်)။
 
 ```json
@@ -1032,7 +1032,7 @@ config ကို log မှတ်တမ်းတင်ပြီး (`claude-mem.
 
 - ID များသည် `claude-mem:<observationId>` ပုံစံဖြစ်သည်။ `get`/`delete` သည် အခြား backend များ၏ ID များကို
   network call မပြုလုပ်ဘဲ လျစ်လျူရှုသည်။
-- `create` → `POST /api/memory/save`; OmniRoute field များဖြစ်သော (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router field များဖြစ်သော (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) ကို claude-mem ၏ `metadata.omniroute` အတွင်း ထည့်သွင်းပို့ဆောင်ပြီး ဖတ်ရှုသည့်အခါ မူလအတိုင်း ပြန်လည်ရရှိသည်။
 - `search` → `GET /api/search?format=json&type=observations` ဖြစ်ပြီး `maxTokens`
   (chars / 4) အထိ ဖြတ်တောက်ထားသည်။ `list` → worker ၏ စာမျက်နှာခွဲထားသော observations endpoint (`total` သည် အနည်းဆုံးအရေအတွက်ဖြစ်သည် — worker သည်
@@ -1044,16 +1044,16 @@ config ကို log မှတ်တမ်းတင်ပြီး (`claude-mem.
 - Prompt injection (`retrieval.ts`) နှင့် `omniroute_memory_*` MCP tool များသည် SQLite ကို
   တိုက်ရိုက်ဖတ်နေဆဲဖြစ်သည် — ၎င်းတို့သည် `memoryManager` မှတစ်ဆင့် မသွားသောကြောင့် ဤ backend မှ data မပေးနိုင်ပါ။
 
-**claude-mem ၏ ကိုယ်ပိုင် LLM call များကို OmniRoute မှတစ်ဆင့် လမ်းကြောင်းသတ်မှတ်ခြင်း။** claude-mem သည် observation များကို
+**claude-mem ၏ ကိုယ်ပိုင် LLM call များကို 67router မှတစ်ဆင့် လမ်းကြောင်းသတ်မှတ်ခြင်း။** claude-mem သည် observation များကို
 LLM ဖြင့် ချုံ့သည် (မူလတန်ဖိုး- Claude Agent SDK)။ ၎င်း၏ `openai-compatible` provider ကို
-OmniRoute သို့ ညွှန်ပြနိုင်ပြီး combo fallback နှင့် ကုန်ကျစရိတ်ခြေရာခံခြင်းကို အသုံးပြုနိုင်သည်။ `~/.claude-mem/settings.json` တွင်-
+67router သို့ ညွှန်ပြနိုင်ပြီး combo fallback နှင့် ကုန်ကျစရိတ်ခြေရာခံခြင်းကို အသုံးပြုနိုင်သည်။ `~/.claude-mem/settings.json` တွင်-
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

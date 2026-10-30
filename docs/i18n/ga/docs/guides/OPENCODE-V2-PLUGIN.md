@@ -4,7 +4,7 @@
 
 ---
 
-Cuireann `@omniroute/opencode-plugin-v2` do chatalóg OmniRoute ar fad — samhlacha, teaglamaí agus
+Cuireann `@omniroute/opencode-plugin-v2` do chatalóg 67router ar fad — samhlacha, teaglamaí agus
 uath-theaglamaí — i roghnóir samhlacha OpenCode v2, mar aon le hainmneacha taispeána, praghsáil agus
 buiséid sraithe saor in aisce.
 
@@ -15,7 +15,7 @@ roinntear aon rud eatarthu, mar sin ní chuireann uasghrádú ceann amháin iall
 ## Riachtanais
 
 - OpenCode v2.
-- Geata OmniRoute atá inrochtana (`http://localhost:20128` de réir réamhshocraithe).
+- Geata 67router atá inrochtana (`http://localhost:20128` de réir réamhshocraithe).
 - Node.js 22 nó 24.
 
 ## Suiteáil
@@ -78,7 +78,7 @@ agus ainmníonn sé an críochphointe agus an méid a cailleadh — mar sin ní 
 | `baseURL`                        | riachtanach                                | Fréamh an gheata, `http(s)` amháin; cuirtear an iarmhír `/v1` leis nuair is gá                                                                        |
 | `apiKey`                         | dintiúr nasctha, ansin `OMNIROUTE_API_KEY` | Eochair chomhrá le haghaidh `/v1/*`                                                                                                                   |
 | `managementReadToken`            | téann sé siar chuig `apiKey`               | Eochair le haghaidh `/api/*` — de ghnáth **ní** hí an eochair chéanna í                                                                               |
-| `displayName`                    | `"OmniRoute"`                              | Ainm an tsoláthraí sa roghnóir                                                                                                                        |
+| `displayName`                    | `"67router"`                               | Ainm an tsoláthraí sa roghnóir                                                                                                                        |
 | `timeoutMs`                      | `10000`                                    | Teorainn ama aisghabhála do gach críochphointe (úsáideann uath-theaglamaí 5s)                                                                         |
 | `modelCacheTtlMs`                | `300000`                                   | TTL thaisce na catalóige; réamhthéann seat diosca tosuithe fuara                                                                                      |
 | `timeouts`                       | téann sé siar chuig `timeoutMs`            | Teorainneacha ama do gach críochphointe ina ms: `models`, `combos`, `autoCombos`, `enrichment`                                                        |
@@ -116,7 +116,7 @@ Socraigh `"geminiSanitization": false` chun é a mhúchadh.
 
 | Siomptóm                                                 | Cúis                                                                                                                                            |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ní thaispeánann an roghnóir aon samhail OmniRoute        | Níor réitíodh aon eochair (seiceáil an rabhadh tosaithe), nó ní féidir an geata a bhaint amach                                                  |
+| Ní thaispeánann an roghnóir aon samhail 67router         | Níor réitíodh aon eochair (seiceáil an rabhadh tosaithe), nó ní féidir an geata a bhaint amach                                                  |
 | Aitheantais amh samhlacha, gan teaglamaí, gan phraghsáil | Dhiúltaigh na críochphointí bainistíochta don chomhartha — socraigh `managementReadToken`                                                       |
 | Catalóg `freeOnly` ghearr nó fholamh                     | Gan chomhartha bainistíochta nó diúltaíodh don chomhartha — léigh an líne achoimre athnuachana (comhaireamh `unmatched-free`) i loga an óstaigh |
 | Seisiún pionnáilte le `opencode-<id>/…`                  | D’fhoilsigh an breiseán v1 `opencode-<id>`; foilsíonn v2 `<id>` lom, mar sin roghnaigh an tsamhail arís faoi `<id>/…`                           |

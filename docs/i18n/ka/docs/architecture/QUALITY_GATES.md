@@ -4,7 +4,7 @@
 
 ---
 
-ეს დოკუმენტი OmniRoute-ში CI-ის ხარისხის ყველა ბარიერის ავტორიტეტული ცნობარია.
+ეს დოკუმენტი 67router-ში CI-ის ხარისხის ყველა ბარიერის ავტორიტეტული ცნობარია.
 იგი აღწერს თითოეულ ბარიერს, რას ამოწმებს ის, რომელ CI დავალებაში სრულდება, იყენებს თუ არა
 ეტალონის ეტაპობრივი გამკაცრების ან ჩაბარება/ჩავარდნის პოლიტიკას და ბლოკავს თუ არა აგებას, თუ მხოლოდ სარეკომენდაციო ხასიათი აქვს.
 
@@ -259,14 +259,14 @@ BASE_REF=origin/release/vX.Y.Z npm run i18n:check-value-drift
 
 მიმდინარეობს cron-ის განრიგით (და `workflow_dispatch`-ით), არასოდეს PR-ებზე. ყოველივე კონსულტატიურია.
 
-| Workflow               | ამოწმებს                                                                                                                                                      | ბლოკავს           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `nightly-property`     | fast-check-ის property ტესტები შემთხვევითი seed-ით + მაღალი გაშვებების რაოდენობით                                                                             | **კონსულტატიური** |
-| `nightly-resilience`   | heap-growth-ის შემოწმება, chaos fault-injection, k6 load/soak                                                                                                 | **კონსულტატიური** |
-| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (გამოტოვდება provider secret-ის გარეშე)                                                                 | **კონსულტატიური** |
-| `nightly-schemathesis` | OpenAPI კონტრაქტის fuzzing (schemathesis) ცოცხალ OmniRoute-თან `docs/openapi.yaml`-ის გამოყენებით — აჩენს სპეც დარღვევებს / გაუმკლავებელ 500-ებს (Fase 8 B.4) | **კონსულტატიური** |
-| `nightly-mutation`     | Stryker mutation-testing score fast unit ლეინზე — გადარჩენილი მუტანტები აჩვენებენ სუსტ assert-ებს                                                             | **კონსულტატიური** |
-| `nightly-compat`       | Node engine თავსებადობის მატრიცა მხარდაჭერილი `engines.node` დიაპაზონებში                                                                                     | **კონსულტატიური** |
+| Workflow               | ამოწმებს                                                                                                                                                     | ბლოკავს           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| `nightly-property`     | fast-check-ის property ტესტები შემთხვევითი seed-ით + მაღალი გაშვებების რაოდენობით                                                                            | **კონსულტატიური** |
+| `nightly-resilience`   | heap-growth-ის შემოწმება, chaos fault-injection, k6 load/soak                                                                                                | **კონსულტატიური** |
+| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (გამოტოვდება provider secret-ის გარეშე)                                                                | **კონსულტატიური** |
+| `nightly-schemathesis` | OpenAPI კონტრაქტის fuzzing (schemathesis) ცოცხალ 67router-თან `docs/openapi.yaml`-ის გამოყენებით — აჩენს სპეც დარღვევებს / გაუმკლავებელ 500-ებს (Fase 8 B.4) | **კონსულტატიური** |
+| `nightly-mutation`     | Stryker mutation-testing score fast unit ლეინზე — გადარჩენილი მუტანტები აჩვენებენ სუსტ assert-ებს                                                            | **კონსულტატიური** |
+| `nightly-compat`       | Node engine თავსებადობის მატრიცა მხარდაჭერილი `engines.node` დიაპაზონებში                                                                                    | **კონსულტატიური** |
 
 Performance baselines (heap, TTFB, build time) იწერება, ბლოკირებას არ ექვემდებარება: იხ. [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -536,7 +536,7 @@ job არასდროს ასრულებს push-ს `release/*`-შ�
 
 ## აგენტის ხელსაწყოები: LSP-in-the-loop (არჩევითი)
 
-CI-ის შემოწმებების გარდა, OmniRoute-ს მოჰყვება **არჩევითი** `agent-lsp`-ის საწყისი სტრუქტურა
+CI-ის შემოწმებების გარდა, 67router-ს მოჰყვება **არჩევითი** `agent-lsp`-ის საწყისი სტრუქტურა
 (პროექტის დონის `.mcp.json`, Fase 7 Task 15). შექმენით `.mcp.json`,
 რათა კოდის დამწერ აგენტებს TypeScript-ის ენის სერვერზე წვდომა მისცეთ და მათ კოდის დაწერამდე
 ამოხსნან სიმბოლოები / დიაგნოსტიკა — `typecheck:core`-ის კომპილაცია-მტკიცებამდე მიდგომის თანამგზავრი,

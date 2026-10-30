@@ -53,7 +53,7 @@ nke gaara agafe n’ọnọdụ nkịtị. Bucket ahụ na-adị nwayọ ọzọ
 njehie `400 content-blocked` ndị na-apụta mgbe ụfọdụ mgbe Claude Code ma ọ bụ Codex CLI
 mere ọtụtụ oku tool-use / message-send n’usoro ọsọ ọsọ.
 
-## Usoro mbelata nsogbu etinyelarị na OmniRoute
+## Usoro mbelata nsogbu etinyelarị na 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — burst guard nke na-amanye ka e nwee
    oghere opekata mpe 500 ms n’etiti arịrịọ outbound ọ bụla gaa na URL `agentrouter:*`.

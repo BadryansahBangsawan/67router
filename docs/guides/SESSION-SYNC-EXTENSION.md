@@ -6,19 +6,19 @@ lastUpdated: 2026-09-09
 
 # Browser Session Sync Extension
 
-> **⚠️ Third-party software — not audited by the OmniRoute team.** The extension and local
+> **⚠️ Third-party software — not audited by the 67router team.** The extension and local
 > bridge described on this page live in a separate, independently maintained repository
 > ([`avichal15/omniroute-session-sync`](https://github.com/avichal15/omniroute-session-sync)).
 > The security properties listed below (loopback-only traffic, Cloud Sync enforcement, no
 > disk persistence, etc.) are the author's own description of that project's behavior — they
-> have not been independently verified by the OmniRoute team. Install and use it at your own
+> have not been independently verified by the 67router team. Install and use it at your own
 > risk, and review its source before granting it access to your provider credentials.
 
-OmniRoute supports several web-interface provider adapters, including ChatGPT Web, Gemini Web, Z.ai Web, Qwen Web, Grok Web, and DeepSeek Web. These adapters use session cookies from your browser rather than traditional API keys.
+67router supports several web-interface provider adapters, including ChatGPT Web, Gemini Web, Z.ai Web, Qwen Web, Grok Web, and DeepSeek Web. These adapters use session cookies from your browser rather than traditional API keys.
 
-Web session cookies periodically expire or rotate. When that happens, requests sent to that provider fail until a fresh Cookie header is pasted into OmniRoute's dashboard.
+Web session cookies periodically expire or rotate. When that happens, requests sent to that provider fail until a fresh Cookie header is pasted into 67router's dashboard.
 
-The [OmniRoute Session Sync](https://github.com/avichal15/omniroute-session-sync) companion extension automates this renewal path locally:
+The [67router Session Sync](https://github.com/avichal15/omniroute-session-sync) companion extension automates this renewal path locally:
 
 ```
 [ Google Chrome Extension ]
@@ -32,7 +32,7 @@ The [OmniRoute Session Sync](https://github.com/avichal15/omniroute-session-sync
       | 4. Checks that Cloud Sync is disabled
       | 5. PUT /api/providers/:id
       v
-[ OmniRoute Management API (Port 20128) ]
+[ 67router Management API (Port 20128) ]
       |
       | 6. Encrypts and persists updated cookie in storage.sqlite
       v
@@ -46,7 +46,7 @@ The [OmniRoute Session Sync](https://github.com/avichal15/omniroute-session-sync
 - **Automatic Cookie Detection:** Listens to `chrome.cookies.onChanged` across configured provider domains with per-provider debouncing (including Qwen's apex `qwen.ai` domain and legacy hosts).
 - **Chunked Token Reassembly:** Handles multi-part session cookies (such as ChatGPT's numeric token chunks) in sequence.
 - **Single Connection Mapping:** You choose the exact connection ID each browser provider updates. Other accounts and official API providers remain unaffected.
-- **Supervised Sidecar Runtime:** The local bridge runs on port 20129 as an independent, supervised sidecar process alongside OmniRoute (port 20128). This decouples bridge liveness from OmniRoute's event loop, so pending browser session updates remain queued and retry automatically if OmniRoute is restarting.
+- **Supervised Sidecar Runtime:** The local bridge runs on port 20129 as an independent, supervised sidecar process alongside 67router (port 20128). This decouples bridge liveness from 67router's event loop, so pending browser session updates remain queued and retry automatically if 67router is restarting.
 - **Priority Fallback Combos:** Easily creates or updates a `browser-sessions` combo containing up to eight browser models ordered by priority.
 
 ---
@@ -56,8 +56,8 @@ The [OmniRoute Session Sync](https://github.com/avichal15/omniroute-session-sync
 Session Sync operates strictly locally:
 
 1. **Loopback Only:** All network communication stays on `127.0.0.1`. Requests presenting non-loopback Host headers are rejected.
-2. **Cloud Sync Enforcement:** The bridge queries OmniRoute settings before every write. If Cloud Sync is enabled, credential updates are refused.
-3. **No Plaintext Persistence on Disk:** The sync bridge holds cookies in memory only during transmission to OmniRoute. Cookies are never written to disk files, state records, or diagnostic logs.
+2. **Cloud Sync Enforcement:** The bridge queries 67router settings before every write. If Cloud Sync is enabled, credential updates are refused.
+3. **No Plaintext Persistence on Disk:** The sync bridge holds cookies in memory only during transmission to 67router. Cookies are never written to disk files, state records, or diagnostic logs.
 4. **Isolated User State:** Pairing metadata, non-secret acknowledgement hashes, and connection mappings live in `%USERPROFILE%\.omniroute\session-sync\state.json`, protected by user-only ACLs (`0600`).
 5. **One-Time Pairing:** Extension registration requires an owner-generated 8-character pairing code that expires in 5 minutes.
 
@@ -67,9 +67,9 @@ Session Sync operates strictly locally:
 
 ### Prerequisites
 
-- Node.js 24 LTS (or matching OmniRoute runtime).
+- Node.js 24 LTS (or matching 67router runtime).
 - Google Chrome 120 or newer.
-- Local OmniRoute instance running on port 20128.
+- Local 67router instance running on port 20128.
 - Existing provider connections configured under the target web providers.
 
 ### Step 1: Install the Session Sync Repository
@@ -89,9 +89,9 @@ Run the embedded setup command:
 npm run setup:embedded
 ```
 
-This adds `--import=.../bridge/omniroute-preload.mjs` to OmniRoute's local `.env` and configures autostart via Windows Task Scheduler (`OmniRoute Session Sync`).
+This adds `--import=.../bridge/omniroute-preload.mjs` to 67router's local `.env` and configures autostart via Windows Task Scheduler (`67router Session Sync`).
 
-Start OmniRoute with integrated sync:
+Start 67router with integrated sync:
 
 ```bash
 npm run start:integrated
@@ -108,7 +108,7 @@ npm run status
 1. Open Chrome and navigate to `chrome://extensions`.
 2. Enable **Developer mode** in the top right.
 3. Click **Load unpacked** and select the `extension/` folder from the `omniroute-session-sync` directory.
-4. Verify that **OmniRoute Session Sync** (v2.0.1) is listed.
+4. Verify that **67router Session Sync** (v2.0.1) is listed.
 
 ### Step 4: Pair and Map Connections
 
@@ -117,7 +117,7 @@ npm run status
    npm run pair
    ```
 2. Click the extension icon in Chrome, paste the code into the popup, and click **Connect**.
-3. For each provider, select your OmniRoute connection from the dropdown and click **Apply**.
+3. For each provider, select your 67router connection from the dropdown and click **Apply**.
 4. Sign in to the provider website in Chrome, then click **Sync** and **Test**.
 
 ---
@@ -126,7 +126,7 @@ npm run status
 
 In the popup's **Model Fallback** section, select and order your preferred models (for example, `chatgpt-web/gpt-5.5`, `gemini-web/gemini-3.5-flash`, `qwen-web/qwen3.7-plus`, `zai-web/glm-5.3`).
 
-Click **Save fallback** to create or update the `browser-sessions` combo in OmniRoute. You can then route inference requests to:
+Click **Save fallback** to create or update the `browser-sessions` combo in 67router. You can then route inference requests to:
 
 ```json
 {
@@ -135,4 +135,4 @@ Click **Save fallback** to create or update the `browser-sessions` combo in Omni
 }
 ```
 
-If one provider session expires or hits an upstream quota limit, OmniRoute automatically falls back to the next available browser model in your list.
+If one provider session expires or hits an upstream quota limit, 67router automatically falls back to the next available browser model in your list.

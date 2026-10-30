@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute are trei mecanisme de reziliență distincte, dar înrudite. Fiecare are un domeniu de aplicare și un scop diferit. Ține-le separate atunci când depanezi comportamentul de rutare.
+67router are trei mecanisme de reziliență distincte, dar înrudite. Fiecare are un domeniu de aplicare și un scop diferit. Ține-le separate atunci când depanezi comportamentul de rutare.
 
 ![Modelul de reziliență pe 3 straturi](../diagrams/exported/resilience-3layers.svg)
 
@@ -158,7 +158,7 @@ Cele trei antete de afinitate de sesiune nu sunt niciodată transmise mai depart
 
 ### Lease-uri exclusive de conexiune pentru sesiuni gestionate
 
-**Domeniu de aplicare:** un client / o sesiune HTTP gestionată activ(ă) deține o conexiune OmniRoute eligibilă.
+**Domeniu de aplicare:** un client / o sesiune HTTP gestionată activ(ă) deține o conexiune 67router eligibilă.
 
 **Scop:** oferirea unei dețineri exclusive și durabile a conexiunii pentru clienții care au nevoie de o barieră strictă de rutare de-a lungul cererilor. Aceasta diferă de afinitatea de sesiune, care este o preferință flexibilă de continuitate: un lease exclusiv persistă starea ciclului de viață în SQLite, impune unicitatea globală a proprietarului activ și a conexiunii active și respinge o generație învechită înainte de trimiterea către furnizor.
 
@@ -172,7 +172,7 @@ doar hash-ul său SHA-256. Fiecare barieră finală de trimitere leagă, de asem
 cererilor reținute și din anteturile executorului upstream.
 
 Dacă rutarea obișnuită are candidați gestionați eligibili, dar fiecare candidat liber este ocupat de un lease
-activ străin, OmniRoute returnează HTTP `429`, un cod lease-capacity-unavailable, o stare waiting-for-capacity
+activ străin, 67router returnează HTTP `429`, un cod lease-capacity-unavailable, o stare waiting-for-capacity
 și un `Retry-After` mărginit, derivat din cea mai apropiată expirare relevantă. Eligibilitatea goală obișnuită
 nu reprezintă contenție de lease-uri și își păstrează semantica existentă a erorilor de rutare.
 
@@ -196,7 +196,7 @@ Mecanismele conexe rămân separate:
   conexiunii), pentru alți furnizori `getQuotaScopedModelForProvider()`.
 - `404` blochează modelul simplu (`getModelLockKey()` restrânge `not_found`).
 - Orice alt status — eșecurile de transport/server `5xx` și `502`-ul sintetizat de
-  OmniRoute din validarea calității — blochează doar tuplul **exact**
+  67router din validarea calității — blochează doar tuplul **exact**
   furnizor/conexiune/model. Un stream defect pe un model nu este o dovadă
   despre cota contului; înainte de această regulă, un singur răspuns gol pe
   `codex/gpt-5.6-luna` elimina din rutare toate modelele `gpt-5*` ale acelei
@@ -335,7 +335,7 @@ concurență per model**, câte un `model=cap` pe linie) sau prin
   concurente sub formă de numere întregi pozitive.
 - **Cozi locale, fără descoperire:** cererile în exces așteaptă în coadă local,
   cu semantica existentă de coadă/timeout (erori de admitere tipizate
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute nu descoperă și nu
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router nu descoperă și nu
   deduce politica upstream — aplică exact plafoanele configurate de operator. O
   poartă de model saturată nu dezactivează niciodată furnizorul și nu creează
   niciodată o blocare permanentă a modelului; comportamentul upstream
@@ -444,7 +444,7 @@ Verificarea admiterii în sine este o funcție pură (`open-sse/services/rateLim
 ### Plasa de siguranță pentru activarea automată a limitării ratei și protecția conexiunilor (`rateLimitProtection`)
 
 **Plasa de siguranță pentru activarea automată** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, implicit `true`):
-Implicit, OmniRoute activează automat protecția cozii de limitare a ratei pentru toate conexiunile active ale furnizorilor cu cheie API (`getProviderCategory(provider) === "apikey"`). Acest lucru asigură că cererile primite către cheile API upstream sensibile la rate sunt puse în coadă și limitate prin Bottleneck, în loc să genereze rafale de erori 429 de la upstream. Plasa de siguranță poate fi suprascrisă prin variabila de mediu `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` o dezactivează, `true`/`1`/`on` o forțează activată), care are prioritate față de setarea persistentizată din panoul de control (**Setări → Reziliență** / `PATCH /api/resilience`).
+Implicit, 67router activează automat protecția cozii de limitare a ratei pentru toate conexiunile active ale furnizorilor cu cheie API (`getProviderCategory(provider) === "apikey"`). Acest lucru asigură că cererile primite către cheile API upstream sensibile la rate sunt puse în coadă și limitate prin Bottleneck, în loc să genereze rafale de erori 429 de la upstream. Plasa de siguranță poate fi suprascrisă prin variabila de mediu `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` o dezactivează, `true`/`1`/`on` o forțează activată), care are prioritate față de setarea persistentizată din panoul de control (**Setări → Reziliență** / `PATCH /api/resilience`).
 
 **Semantica câmpului `rateLimitProtection` per conexiune:**
 Protecția per conexiune împotriva limitării ratei este urmărită prin câmpul boolean `rateLimitProtection` de pe conexiunile furnizorilor (persistentizat ca `rate_limit_protection` în SQLite):
@@ -792,7 +792,7 @@ pe IP este același semnal ca o cotă epuizată. Limitări oneste:
 > pentru agenți să rămână sub bugetul de context de 40k. Este varianta condensată, destinată agenților, a
 > secțiunilor de mai sus; secțiunile numerotate rămân referința completă.
 
-OmniRoute are trei mecanisme de eșec temporar înrudite, dar distincte. Păstrați-le
+67router are trei mecanisme de eșec temporar înrudite, dar distincte. Păstrați-le
 sferele de aplicare separate atunci când depanați comportamentul de rutare. Consultați
 [diagrama de reziliență pe 3 niveluri](../diagrams/exported/resilience-3layers.svg)
 (sursă: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

@@ -10,7 +10,7 @@
 > โหมดบล็อก injection ในฐานะขอบเขตที่บังคับใช้ (#16413) และสิ่งใดที่เห็นการตอบกลับก่อน post-call)
 
 Guardrails บังคับใช้มาตรการด้านความปลอดภัย นโยบาย และการแปลงเนื้อหาที่ขอบเขต
-ระหว่าง OmniRoute กับผู้ให้บริการ upstream Guardrail แต่ละตัวสามารถตรวจสอบ (และ
+ระหว่าง 67router กับผู้ให้บริการ upstream Guardrail แต่ละตัวสามารถตรวจสอบ (และ
 เลือกได้ว่าจะปฏิเสธ แปลง หรือใส่คำอธิบายประกอบ) payload ของคำขอ (`preCall`) และ
 การตอบกลับจาก upstream (`postCall`)
 
@@ -111,7 +111,7 @@ OpenAI รูปภาพที่ซ้อนอยู่ในผลลัพ�
 (`allowedQuotas`) หรือโมเดล (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) bridge จะเลือกเฉพาะ
 โมเดล reroute และ describe ที่ key นั้นใช้ได้ บน connection ที่ key นั้นใช้ได้เท่านั้น
-จากนั้นการเรียก describe จะผ่าน self-loop ของ OmniRoute เสมอพร้อมกับ
+จากนั้นการเรียก describe จะผ่าน self-loop ของ 67router เสมอพร้อมกับ
 header `x-omniroute-self-loop-key-id` เพื่อให้ chat request ฝั่งรับ
 บังคับใช้นโยบาย connection และโมเดลของ key นั้นอีกครั้ง `enforceApiKeyPolicy()`
 จะเคารพ header นั้นเฉพาะเมื่อมาพร้อมกับ self-loop bearer เท่านั้น จึงสามารถ
@@ -139,7 +139,7 @@ fail-open เดิมไว้ (meta `{ skipped: true, reason: "no_permitted_vi
 ถอดข้อความที่พรอมป์นี้ร้องขอโดยเฉพาะ ดังนั้นการเรียก describe เองจึงขอรายละเอียด
 สูงเสมอ ไม่ว่าคำขอขาเข้าเดิมจะใช้ระดับรายละเอียดใด สิ่งนี้
 มีผลเฉพาะ body ของคำขอ describe ภายในเท่านั้น; ไม่เปลี่ยนวิธีที่
-OmniRoute ส่งต่อ `image_url.detail` ของผู้เรียกในคำขอหลัก —
+67router ส่งต่อ `image_url.detail` ของผู้เรียกในคำขอหลัก —
 ค่าเริ่มต้นนั้นถูกใช้แยกต่างหาก และเฉพาะสำหรับ OpenCode client ที่ตรวจพบเท่านั้น ใน
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`)
 สาขา wire-format ของ Anthropic ใน describe self-loop ไม่มีฟิลด์ `detail`
@@ -224,7 +224,7 @@ latencySamples, averageLatencyMs, lastUsedAt }` สำหรับ `vision`, `au
 
 การ์ด Vision Bridge เดิมใต้การตั้งค่า AI เป็นลิงก์เพื่อความเข้ากันได้ไปยังหน้าใหม่; มันไม่ได้เป็นเจ้าของฟอร์มสำเนาที่สองอีกต่อไป Media Providers ยังลิงก์เวิร์กโฟลว์ Image-to-Text และ Speech-to-Text ไปยังแท็บ Modality Bridge ที่เกี่ยวข้องโดยไม่ลบ Speech-to-Text playground เดิมออก
 
-**การข้าม admission ของ self-loop:** เมื่อการเรียก describe ถูกราวต์ผ่าน self-loop `/v1` ของ OmniRoute เอง (โมเดล provider แบบ non-standard) คำขอย่อยจะส่ง
+**การข้าม admission ของ self-loop:** เมื่อการเรียก describe ถูกราวต์ผ่าน self-loop `/v1` ของ 67router เอง (โมเดล provider แบบ non-standard) คำขอย่อยจะส่ง
 `x-omniroute-admission-bypass: internal` และถูก authenticate ด้วย credential ของ self-loop ที่ resolve มา — sentinel `sk_omniroute` ภายในเครื่องใน local mode หรือ env key `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` ที่ผู้ดูแลระบบตั้งค่าไว้ (#1350) เพื่อให้ deployment ที่ตั้ง `REQUIRE_API_KEY=true` ยังรันการเรียก describe ได้ การ bypass นี้จะถูกยอมรับเฉพาะ credential เหล่านั้นเท่านั้น ดังนั้น client ภายนอกจึงไม่สามารถใช้เฮดเดอร์นี้ข้าม admission ได้
 
 ค่า default แบบเดิมอยู่ใน `src/shared/constants/visionBridgeDefaults.ts`; ส่วนค่า default ของ mode/task-aware/cache ใหม่และตัว resolve การตั้งค่าอยู่ใน
@@ -406,7 +406,7 @@ CPU ของกระบวนการลูกและค่า RSS สู�
 
 แต่ละเฟรมถูกจำกัดไว้ที่ 4 MiB เฟรมดิบทั้งหมดรวมกันไม่เกิน 23 MiB และ
 การตอบกลับของโบรกเกอร์ที่ผ่านการซีเรียลไลซ์ไม่เกิน 32 MiB ไดเรกทอรีชั่วคราวส่วนตัวจะถูกลบ
-ใน `finally` OmniRoute ไม่ได้รวม FFmpeg มาให้และไม่ยอมรับพาธ
+ใน `finally` 67router ไม่ได้รวม FFmpeg มาให้และไม่ยอมรับพาธ
 ของไฟล์ปฏิบัติการแบบกำหนดเอง ก่อนสร้างคำบรรยาย บริดจ์จะใช้กระบวนการขจัดข้อมูลภาพซ้ำ
 แบบระมัดระวัง โดยลด JPEG แต่ละภาพเป็นบัฟเฟอร์ระดับสีเทาขนาด 16×16 และ
 เปรียบเทียบกับเฟรมล่าสุดที่เก็บไว้เท่านั้น สำหรับงบประมาณคำบรรยายที่ร้องขอ
@@ -448,7 +448,7 @@ JPEG ที่สมบูรณ์ยังคงถูกจำกัดไว
 ช่วง `start`/`end` ที่เป็นค่าจำกัดและอยู่ภายในระยะเวลาที่ตรวจสอบได้ รวมถึง
 `source` ที่อยู่ในรายการอนุญาต (`client`, `embedded` หรือ `audio-bridge`) โดย `confidence` มีค่าเริ่มต้นเป็น
 `1` และต้องอยู่ระหว่าง `0` ถึง `1` คิวที่ซ้ำกันทุกประการจะถูกรวมเข้าด้วยกัน
-OmniRoute จะไม่เริ่มการถอดเสียงจากเมทาดาทานี้ คิวที่ผ่านการตรวจสอบจะถูก
+67router จะไม่เริ่มการถอดเสียงจากเมทาดาทานี้ คิวที่ผ่านการตรวจสอบจะถูก
 คัดลอกไปยังผลลัพธ์ที่อธิบายไว้ พร้อมแหล่งที่มา ความเชื่อมั่น และช่วงเวลา และ
 แสดงผลเป็นข้อสังเกตที่ไม่น่าเชื่อถือควบคู่กับคำบรรยายเฟรม ข้อความที่ไม่ถูกต้อง
 อยู่นอกช่วง หรือไม่มีที่มาจะถูกปฏิเสธ แทนที่จะนำไปปะปนกับ
@@ -906,7 +906,7 @@ dispatch) มีสอง job:
   previous instructions…", DAN-style jailbreaks) จะตรวจสอบว่า response มี
   `error.code === "SECURITY_001"` กล่าวคือ guard ปฏิเสธ request จริง
 - **`garak` (advisory)** — รัน garak `--probes promptinject,dan,leakreplay`
-  กับอินสแตนซ์ OmniRoute ที่รันอยู่ในเครื่อง (`http://localhost:20128/v1`) ถูก gate ด้วย
+  กับอินสแตนซ์ 67router ที่รันอยู่ในเครื่อง (`http://localhost:20128/v1`) ถูก gate ด้วย
   provider secret (`PROMPTFOO_PROVIDER_KEY`); ข้ามอย่างเรียบร้อยและมี suffix
   `|| true` ดังนั้นจึงรายงานผลโดยไม่ทำให้ CI ล้มเหลว
 

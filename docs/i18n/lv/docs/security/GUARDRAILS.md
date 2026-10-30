@@ -10,7 +10,7 @@
 > bloķēšanas režīms kā obligāta robeža (#16413) un kas redz atbildi pirms pēcizsaukuma apstrādes)
 
 Aizsargmehānismi nodrošina drošības, politikas un satura transformācijas
-robežā starp OmniRoute un augšupvērstajiem (upstream) nodrošinātājiem. Katrs
+robežā starp 67router un augšupvērstajiem (upstream) nodrošinātājiem. Katrs
 aizsargmehānisms var pārbaudīt (un pēc izvēles noraidīt, pārveidot vai
 anotēt) pieprasījumu saturu (`preCall`) un augšupvērstās atbildes (`postCall`).
 
@@ -114,7 +114,7 @@ Kad izsaucēja API atslēga ierobežo `allowedConnections`, kvotu kopas
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), tilts izvēlas
 tikai tos pāradresācijas un apraksta modeļus, ko atslēga drīkst izmantot, un
 savienojumus, ko atslēga drīkst izmantot. Apraksta izsaukums pēc tam vienmēr
-iet caur OmniRoute pašciklu ar galveni `x-omniroute-self-loop-key-id`, tāpēc
+iet caur 67router pašciklu ar galveni `x-omniroute-self-loop-key-id`, tāpēc
 saņemošais tērzēšanas pieprasījums vēlreiz īsteno šīs atslēgas savienojumu un
 modeļu politiku. `enforceApiKeyPolicy()` ievēro šo galveni tikai kopā ar
 pašcikla bearer, tāpēc tas var tikai sašaurināt piekļuvi, un id, kuru neizdodas
@@ -145,7 +145,7 @@ OCR precizitāti tieši tam teksta pārrakstīšanas uzdevumam, ko šī uzvedne
 pieprasa, tāpēc pats apraksta izsaukums vienmēr pieprasa augstu detalizāciju
 neatkarīgi no tā, kādu detalizācijas līmeni izmantoja sākotnējais ienākošais
 pieprasījums. Tas ietekmē tikai iekšējā apraksta pieprasījuma ķermeni; tas
-nemaina to, kā OmniRoute pārsūta izsaucēja paša `image_url.detail` galvenajā
+nemaina to, kā 67router pārsūta izsaucēja paša `image_url.detail` galvenajā
 pieprasījumā — šis noklusējums tiek lietots atsevišķi un tikai atklātiem
 OpenCode klientiem, funkcijā `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Apraksta pašcikla Anthropic
@@ -242,7 +242,7 @@ Speech-to-Text darbplūsmas ar atbilstošajām Modality Bridge cilnēm, neaiztie
 esošo Speech-to-Text izmēģinājumu vidi.
 
 **Self-loop pieļaušanas apiešana:** kad describe izsaukums tiek maršrutēts caur
-OmniRoute paša `/v1` self-loop (nestandarta nodrošinātāja modelis),
+67router paša `/v1` self-loop (nestandarta nodrošinātāja modelis),
 apakšpieprasījums sūta `x-omniroute-admission-bypass: internal` un tiek
 autentificēts ar atrisināto self-loop akreditācijas datu — lokālo
 `sk_omniroute` marķieri lokālajā režīmā vai operatora konfigurēto
@@ -446,13 +446,13 @@ autorizēta galapunkta, ne fiksēta vērtētāja. Arī finansiālie ietaupījumi
 izmaksu aplēsi vienam izsaukumam; skripts nekad neizdomā nevienu no šiem
 rezultātiem.
 
-Katrs kadrs ir ierobežots līdz 4 MiB, visi neapstrādātie kadri kopā — līdz 23 MiB, bet serializētā broker atbilde — līdz 32 MiB. Privāts pagaidu katalogs tiek dzēsts `finally` blokā. OmniRoute neietver FFmpeg un nepieņem pielāgotu izpildāmā faila ceļu. Pirms parakstīšanas tilts veic konservatīvu vizuālās deduplikācijas gājienu: katrs JPEG tiek samazināts līdz 16×16 pelēktoņu buferim un tiek salīdzināts tikai ar pēdējo saglabāto kadru. Pieprasītajam parakstu budžetam virs viena kadra ieguve nodrošina ierobežotu kandidātu kopu līdz divkāršam šī budžeta apjomam un nekad vairāk par 16 kadriem. Pieprasītais griestu ierobežojums tiek piemērots tikai pēc deduplikācijas, un gala retināšanas laikā, ja budžets ir vismaz divi, tiek saglabāts pirmais un pēdējais izvēlētais kandidāts. Versijā atzīmētā `grayscale-16x16-mean-cells-v2` politika izmanto lielāko no vidējās spilgtuma (luma) deltas un sīktēlu šūnu attiecības, kuru normalizētā delta ir vismaz 0.05. Dublikātu slieksnis ir konstante 0.04, kas izvēlēta paredzamības dēļ, nevis atklāta kā izpildlaika iestatījums. Šis sekundārais augsta kontrasta signāls saglabā nelielas kustības un redzamā teksta izmaiņas, ko salīdzinājums, balstīts tikai uz vidējo vērtību, var paslēpt. Salīdzinātāja vai dekodētāja kļūdas darbojas pēc fail-open principa un saglabā pārklājumu. Izvades metadatos tiek atdalīti izvilktie kandidāti, veiksmīgi izmantotie kadri un atmestie vizuālie dublikāti.
+Katrs kadrs ir ierobežots līdz 4 MiB, visi neapstrādātie kadri kopā — līdz 23 MiB, bet serializētā broker atbilde — līdz 32 MiB. Privāts pagaidu katalogs tiek dzēsts `finally` blokā. 67router neietver FFmpeg un nepieņem pielāgotu izpildāmā faila ceļu. Pirms parakstīšanas tilts veic konservatīvu vizuālās deduplikācijas gājienu: katrs JPEG tiek samazināts līdz 16×16 pelēktoņu buferim un tiek salīdzināts tikai ar pēdējo saglabāto kadru. Pieprasītajam parakstu budžetam virs viena kadra ieguve nodrošina ierobežotu kandidātu kopu līdz divkāršam šī budžeta apjomam un nekad vairāk par 16 kadriem. Pieprasītais griestu ierobežojums tiek piemērots tikai pēc deduplikācijas, un gala retināšanas laikā, ja budžets ir vismaz divi, tiek saglabāts pirmais un pēdējais izvēlētais kandidāts. Versijā atzīmētā `grayscale-16x16-mean-cells-v2` politika izmanto lielāko no vidējās spilgtuma (luma) deltas un sīktēlu šūnu attiecības, kuru normalizētā delta ir vismaz 0.05. Dublikātu slieksnis ir konstante 0.04, kas izvēlēta paredzamības dēļ, nevis atklāta kā izpildlaika iestatījums. Šis sekundārais augsta kontrasta signāls saglabā nelielas kustības un redzamā teksta izmaiņas, ko salīdzinājums, balstīts tikai uz vidējo vērtību, var paslēpt. Salīdzinātāja vai dekodētāja kļūdas darbojas pēc fail-open principa un saglabā pārklājumu. Izvades metadatos tiek atdalīti izvilktie kandidāti, veiksmīgi izmantotie kadri un atmestie vizuālie dublikāti.
 
 Nepārprotami atzīmēta video daļa var pieprasīt laika zīmogotu kontaktlapu. Tilts veido ne vairāk kā 4 kolonnu un 16 kadru JPEG režģi. Katra 512 pikseļu šūna iekodē savu avota laika zīmogu augsta kontrasta apakšējā joslā, savukārt tie paši laika zīmogi paliek teksta metadatos tālākai saistīšanai un auditam. Pilnais JPEG paliek ierobežots līdz 32 MiB. Ja `sharp` nevar dekodēt vai salikt režģi, tilts atgriežas pie atsevišķajiem JPEG kadriem; klienta pārtraukums joprojām izplatās caur kontaktlapas operāciju.
 
 Virzīšanas pierādījumi ir apzināti atdalīti no sintētiskās kompozīcijas mikroetalontesta. `scripts/perf/video-bridge-contact-sheet-eval.ts` definē shēmas versijotu A/B apvalku reāliem ar OpenAI saderīgiem redzes modeļiem. Tas mēra nodrošinātāja ziņotos tokenus, pilno reālo aizkavi no sākuma līdz beigām (ieskaitot lapas kompozīciju), modeļa izsaukumu skaitu un manifestā definētu faktu saglabāšanu. Neapstrādātas modeļa atbildes netiek ierakstītas pārskatā; tiek saglabāti tikai SHA-256 kontrolsummas un atbilstošo faktu ID. Apvalks neveic tīkla vai maksas modeļa izsaukumus, ja vien nav nodots `--execute-real` un nav konfigurēti `--model`, `OMNIROUTE_BASE_URL` un `OMNIROUTE_API_KEY`. Bez šīs skaidras reālās palaišanas tā mašīnlasāmais verdikts paliek `HOLD`; sintētiskie slodzes/izsaukumu skaita mērījumi paši par sevi nav virzīšanas pierādījumi.
 
-Izsaucēji var pievienot neobligātu `transcript.cues` masīvu atbalstītai video daļai, ja viņu rīcībā jau ir salāgots teksts. Katrai norādei jāietver `text`, galīgs `start`/`end` intervāls izpētītā ilguma robežās un baltajā sarakstā iekļauts `source` (`client`, `embedded` vai `audio-bridge`); `confidence` pēc noklusējuma ir `1` un tai jāpaliek starp `0` un `1`. Precīzi dublikātu norādes tiek apvienotas. OmniRoute nekad neuzsāk transkripciju no šiem metadatiem: pārbaudītās norādes tiek nokopētas aprakstītajā rezultātā kopā ar avotu, uzticamību un intervālu un tiek attēlotas kā neuzticami novērojumi blakus kadru parakstiem. Nederīgs, ārpus diapazona esošs vai bez izcelsmes norādes teksts tiek noraidīts, nevis sajaukts parakstu plūsmā. Abi pieprasījuma ķermeņa transkripta kanāli normalizē norādīto izcelsmi uz `client`, ieskaitot pašu izvirzītas `embedded` vai `audio-bridge` etiķetes. Tikai serverim piederošs adapters var piešķirt šīs uzticamās etiķetes, izmantojot tikai kodā pieejamo `trustedSource` argumentu; pieprasījuma JSON lauks nevar sasniegt šo argumentu. Transkripta teksts paliek neuzticams, no multivides atvasināts saturs neatkarīgi no tā izcelsmes, un tas nekad nedrīkst noteikt autorizāciju.
+Izsaucēji var pievienot neobligātu `transcript.cues` masīvu atbalstītai video daļai, ja viņu rīcībā jau ir salāgots teksts. Katrai norādei jāietver `text`, galīgs `start`/`end` intervāls izpētītā ilguma robežās un baltajā sarakstā iekļauts `source` (`client`, `embedded` vai `audio-bridge`); `confidence` pēc noklusējuma ir `1` un tai jāpaliek starp `0` un `1`. Precīzi dublikātu norādes tiek apvienotas. 67router nekad neuzsāk transkripciju no šiem metadatiem: pārbaudītās norādes tiek nokopētas aprakstītajā rezultātā kopā ar avotu, uzticamību un intervālu un tiek attēlotas kā neuzticami novērojumi blakus kadru parakstiem. Nederīgs, ārpus diapazona esošs vai bez izcelsmes norādes teksts tiek noraidīts, nevis sajaukts parakstu plūsmā. Abi pieprasījuma ķermeņa transkripta kanāli normalizē norādīto izcelsmi uz `client`, ieskaitot pašu izvirzītas `embedded` vai `audio-bridge` etiķetes. Tikai serverim piederošs adapters var piešķirt šīs uzticamās etiķetes, izmantojot tikai kodā pieejamo `trustedSource` argumentu; pieprasījuma JSON lauks nevar sasniegt šo argumentu. Transkripta teksts paliek neuzticams, no multivides atvasināts saturs neatkarīgi no tā izcelsmes, un tas nekad nedrīkst noteikt autorizāciju.
 
 Pieredzējis izsaucējs var tam pašam video nodrošināt `audioTranscript` celiņu; tas tiek uzskatīts par klienta sniegtu tekstu, nevis pierādījumu servera transkripcijai. Apvienošanas šuve izpilda vizuālos un audio novērojumus vienā termiņā un pārtraukšanas signālā, sakārto tos kopējā laika skalā, apvieno precīzus dublikātus un ziņo daļēju rezultātu, kad veiksmīga ir tikai viena puse. Nederīgs `audioTranscript` degradejas līdz šim daļējam rezultātam — vizuālais apraksts tiek saglabāts, un audio zars reģistrē attīrītu kļūdas kodu — tā vietā, lai izgāztu visu video. Katra zara pieejamība, daļējā rezultāta karodziņš un attīrītie kļūdu kodi tiek saglabāti aprakstītajā rezultātā, aizsargmēru metadatos (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), rezultātu kešatmiņas metadatos un tilta apvienošanas skaitītājos. Noklusējuma Video Bridge ceļš neizsauc runas pārveidi tekstā un nelejupielādē otro multivides kopiju; bez šī skaidri norādītā celiņa tas paliek tikai video režīmā.
 
@@ -935,7 +935,7 @@ palaišana) ir divi darbi:
   previous instructions…", DAN stila jailbreak uzbrukumi) pārbauda, ka atbilde satur
   `error.code === "SECURITY_001"`, t.i., ka aizsargs faktiski noraidīja pieprasījumu.
 - **`garak` (konsultatīvs)** — izpilda garak `--probes promptinject,dan,leakreplay`
-  pret lokālu OmniRoute instanci (`http://localhost:20128/v1`). Tas ir atkarīgs no
+  pret lokālu 67router instanci (`http://localhost:20128/v1`). Tas ir atkarīgs no
   pakalpojumu sniedzēja slepenās atslēgas (`PROMPTFOO_PROVIDER_KEY`); graciozi izlaižas
   un tam ir piedēklis `|| true`, tāpēc tas ziņo, neizjaucot CI.
 

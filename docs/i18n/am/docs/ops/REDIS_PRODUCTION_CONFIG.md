@@ -6,7 +6,7 @@
 
 ## አጠቃላይ እይታ
 
-Redis በOmniRoute ውስጥ **አማራጭ፣ ወሳኝ ያልሆነ ጥገኝነት** ነው — Redis በማይገኝበት ጊዜ መተግበሪያው በተገቢ ሁኔታ ወደ አማራጭ አሠራር (በማህደረ ትውስታ ውስጥ
+Redis በ67router ውስጥ **አማራጭ፣ ወሳኝ ያልሆነ ጥገኝነት** ነው — Redis በማይገኝበት ጊዜ መተግበሪያው በተገቢ ሁኔታ ወደ አማራጭ አሠራር (በማህደረ ትውስታ ውስጥ
 የሚሠሩ አማራጮች) ይሸጋገራል። በምርት አካባቢ Redisን ማስተካከል ለአራት የተለያዩ
 የሥራ ጫናዎች መዘግየትን ይቀንሳል፦
 
@@ -17,7 +17,7 @@ Redis በOmniRoute ውስጥ **አማራጭ፣ ወሳኝ ያልሆነ ጥገኝ�
 | የኮታ ማከማቻ               | `redisQuotaStore.ts`          | የተለየ `getRedisClient(url)` singleton                  | `<prefix>quota:*` ለእያንዳንዱ instance ሊዋቀር የሚችል    |
 | የማሟሟቂያ circuit breaker | `redisCircuitBreakerStore.ts` | በ`circuitBreakerFactory.ts` ውስጥ ያለ የተለየ ደንበኛ          | `<prefix>warmup:cb:<connectionId>`              |
 
-አራቱም የሥራ ጫናዎች OmniRoute ከሌሎች መተግበሪያዎች ጋር በአንድ
+አራቱም የሥራ ጫናዎች 67router ከሌሎች መተግበሪያዎች ጋር በአንድ
 Redis instance (ለምሳሌ `127.0.0.1:6379`) ላይ አብሮ እንዲሠራ አንድ የnamespace ቅድመ ቅጥያ ይጋራሉ። [የቁልፍ Namespace አደረጃጀት](#key-namespacing)ን ይመልከቱ።
 
 ---
@@ -41,14 +41,14 @@ Redis instance (ለምሳሌ `127.0.0.1:6379`) ላይ አብሮ እንዲሠራ 
 
 ## የቁልፍ Namespace አደረጃጀት
 
-OmniRoute የRedis instanceን በhost ላይ ከሚሠሩ ሌሎች ማናቸውም ነገሮች ጋር ይጋራል። Namespace ከሌለ፣
+67router የRedis instanceን በhost ላይ ከሚሠሩ ሌሎች ማናቸውም ነገሮች ጋር ይጋራል። Namespace ከሌለ፣
 እንደ `auth:api_key:<sha256>` ወይም `rl:*` ያሉ ቁልፎች ተመሳሳዩን Redis ከሚጠቀሙ ሌሎች መተግበሪያዎች
 ቁልፎች ጋር ሊጋጩ ይችላሉ (ይህ instance Redisን ከሌሎች አገልግሎቶች ጎን ለጎን በ`127.0.0.1:6379` ላይ ያስኬዳል)።
 
-ለ**እያንዳንዱ** የOmniRoute ቁልፍ ቅድመ ቅጥያ ለማከል `REDIS_KEY_PREFIX`ን ባዶ ያልሆነ ሕብረቁምፊ ያድርጉ፦
+ለ**እያንዳንዱ** የ67router ቁልፍ ቅድመ ቅጥያ ለማከል `REDIS_KEY_PREFIX`ን ባዶ ያልሆነ ሕብረቁምፊ ያድርጉ፦
 
 ```bash
-# .env — ሁሉም የOmniRoute ቁልፎች omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ይሆናሉ
+# .env — ሁሉም የ67router ቁልፎች omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ይሆናሉ
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -102,7 +102,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ለOS ገጽ መሸጎጫ ቦታ ይተዉ
 maxmemory-policy allkeys-lru         # በጫና ጊዜ የቆዩ የማረጋገጫ መሸጎጫ ግቤቶችን ያስወጡ
 
-# ዘላቂነት (አማራጭ — OmniRoute ያለዚህም ብልሽትን የሚቋቋም ነው)
+# ዘላቂነት (አማራጭ — 67router ያለዚህም ብልሽትን የሚቋቋም ነው)
 save 300 1                           # ≥1 ቁልፍ ከተቀየረ ቢያንስ በየ5 ደቂቃው snapshot ያድርጉ
 appendonly no                        # AOF አያስፈልግም፤ ውሂቡ እንደገና ሊፈጠር ይችላል
 appendfsync no                       # የfsync ተጨማሪ ወጪ የለም (RDB በቂ ነው)

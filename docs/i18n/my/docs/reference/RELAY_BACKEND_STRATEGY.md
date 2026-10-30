@@ -6,7 +6,7 @@
 
 ## အကျဉ်းချုပ်
 
-OmniRoute သည် ယခုအခါ `/api/v1/relay/chat/completions` အတွက် relay mode သုံးမျိုးကို ပံ့ပိုးထားသည်-
+67router သည် ယခုအခါ `/api/v1/relay/chat/completions` အတွက် relay mode သုံးမျိုးကို ပံ့ပိုးထားသည်-
 
 - `ts`: TypeScript relay ကို process အတွင်း အသုံးပြုသည်။
 - `bifrost`: Bifrost gateway ကို မဖြစ်မနေ အသုံးပြုသည်။
@@ -45,12 +45,12 @@ Request rate မြင့်မားစွာဖြင့် လည်ပတ်
 
 ## Backend နယ်နိမိတ်ဆိုင်ရာ သဘောတူညီချက်
 
-တည်ငြိမ်သော product boundary သည် dashboard implementation မဟုတ်ဘဲ OmniRoute relay API ဖြစ်သည်။ Next.js dashboard သည် local service များကို ထည့်သွင်းခြင်း၊ စီစဉ်သတ်မှတ်ခြင်းနှင့် ကြီးကြပ်ခြင်းတို့ ပြုလုပ်နိုင်သော်လည်း request routing သည် relay API မှတစ်ဆင့် ဝင်ရောက်ပြီး ထို boundary နောက်ကွယ်သို့ လွှဲပြောင်းပေးသင့်သည်။
+တည်ငြိမ်သော product boundary သည် dashboard implementation မဟုတ်ဘဲ 67router relay API ဖြစ်သည်။ Next.js dashboard သည် local service များကို ထည့်သွင်းခြင်း၊ စီစဉ်သတ်မှတ်ခြင်းနှင့် ကြီးကြပ်ခြင်းတို့ ပြုလုပ်နိုင်သော်လည်း request routing သည် relay API မှတစ်ဆင့် ဝင်ရောက်ပြီး ထို boundary နောက်ကွယ်သို့ လွှဲပြောင်းပေးသင့်သည်။
 
 ရေရှည် backend ရွေးချယ်မှုများ-
 
 - TypeScript relay ကို in-process policy နှင့် fallback path အဖြစ် ဆက်လက်ထားရှိပါ။ Backend တစ်ခုခုသို့ မလွှဲပြောင်းမီ Auth၊ allowlist များ၊ request normalization၊ accounting နှင့် safety check များကို ဤနေရာတွင် ဆက်လက်ထားရှိပါ။
-- Deployment သည် routing ကွဲပြားမှု နည်းပါးခြင်း၊ ဗဟိုမှ စီမံသည့် provider အလှည့်ကျအသုံးပြုမှု သို့မဟုတ် OmniRoute replica အများအပြားသို့ scale-out လုပ်ခြင်းကို လိုအပ်သည့်အခါ Bifrost ကို ဦးစားပေး high-throughput Tier-1 sidecar အဖြစ် အသုံးပြုပါ။
+- Deployment သည် routing ကွဲပြားမှု နည်းပါးခြင်း၊ ဗဟိုမှ စီမံသည့် provider အလှည့်ကျအသုံးပြုမှု သို့မဟုတ် 67router replica အများအပြားသို့ scale-out လုပ်ခြင်းကို လိုအပ်သည့်အခါ Bifrost ကို ဦးစားပေး high-throughput Tier-1 sidecar အဖြစ် အသုံးပြုပါ။
 - 9router နှင့် CLIPROXYAPI ကို ထည့်သွင်းမြှုပ်နှံထားသော compatibility service များအဖြစ် ဆက်လက်ထားရှိပါ။ ၎င်းတို့သည် ကြီးကြပ်ထားသော local process များအဖြစ် လည်ပတ်ပြီး ၎င်းတို့၏ provider/CLI လုပ်ဆောင်ပုံကို လိုချင်သော adapter အဖြစ် အသုံးပြုသည့်အခါ အသုံးဝင်သော်လည်း ပုံသေ Tier-1 routing engine မဖြစ်သင့်ပါ။
 - Dashboard မှ မည်သည့် service URL ကိုမဆို hot path သို့ တိုက်ရိုက်ပေးပို့ခွင့် မပြုပါနှင့်။ UI မှ ပေးသော URL များသည် configuration input များသာဖြစ်သည်။ Routing code သည် server-side setting များနှင့် supervisor state တို့မှ မှတ်ပုံတင်ထားပြီး health check ပြုလုပ်ထားသော backend များကို ရှာဖွေအသုံးပြုသင့်သည်။
 - စီမံကြီးကြပ်ထားသော process များသည် HTTP-compatible API များကို အသင့်ဖော်ထုတ်ထားပြီး၊ route guard က boundary ကို audit လုပ်နိုင်ကာ failure/fallback လုပ်ဆောင်ပုံကို request log များတွင် မြင်နိုင်သောကြောင့် လက်ရှိတွင် supervised service များအတွက် loopback HTTP ကို ဦးစားပေးပါ။ အနာဂတ် SDK သို့မဟုတ် socket transport တစ်ခုသည် isolation သို့မဟုတ် fallback semantics ကို မအားနည်းစေဘဲ p99 routing latency ကို တိုင်းတာနိုင်လောက်အောင် လျှော့ချပေးနိုင်မှသာ ထည့်သွင်းရန် ထိုက်တန်သည်။

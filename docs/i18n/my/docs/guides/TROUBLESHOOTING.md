@@ -8,17 +8,17 @@
 
 🌐 **ဘာသာစကားများ:** 🇺🇸 [အင်္ဂလိပ်](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRoute အတွက် အဖြစ်များသော ပြဿနာများနှင့် ဖြေရှင်းနည်းများ။
+67router အတွက် အဖြစ်များသော ပြဿနာများနှင့် ဖြေရှင်းနည်းများ။
 
 ---
 
 ## အမြန်ကိုးကားချက်
 
-**OmniRoute ကို စသုံးတာလား?** ဒီနေရာကနေ စပါ — အောက်ပါနည်းလမ်းတွေက ပြဿနာတွေရဲ့ 90% ကို ဖြေရှင်းပေးနိုင်ပါတယ်။
+**67router ကို စသုံးတာလား?** ဒီနေရာကနေ စပါ — အောက်ပါနည်းလမ်းတွေက ပြဿနာတွေရဲ့ 90% ကို ဖြေရှင်းပေးနိုင်ပါတယ်။
 
 | ဒီစာကို တွေ့ရတယ်              | ဆိုလိုတာက                                             | လုပ်ဆောင်ရန်                                                                                                                                    |
 | ----------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| "Can't connect"               | OmniRoute အလုပ်လုပ်မနေပါ                              | `omniroute` သို့မဟုတ် `docker restart omniroute` ကို run ပါ                                                                                     |
+| "Can't connect"               | 67router အလုပ်လုပ်မနေပါ                               | `omniroute` သို့မဟုတ် `docker restart omniroute` ကို run ပါ                                                                                     |
 | "Invalid API key"             | သင့် key မှားနေသည် သို့မဟုတ် သက်တမ်းကုန်သွားသည်       | provider ၏ website မှ key ကို ပြန်လည်ကူးယူပါ                                                                                                    |
 | "Rate limit exceeded"         | request များလွန်းစွာ ပို့နေသည်                        | 1 မိနစ်စောင့်ပါ၊ သို့မဟုတ် အလိုအလျောက် fallback လုပ်ရန် `model: "auto"` ကို အသုံးပြုပါ                                                          |
 | "Quota exceeded"              | သင်၏ အခမဲ့/အခပေး quota အားလုံးကို အသုံးပြုပြီးဖြစ်သည် | provider များကို ထပ်မံချိတ်ဆက်ပါ၊ သို့မဟုတ် အခမဲ့ provider များ (Kiro, Pollinations) ကို အသုံးပြုပါ                                             |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # heavyweight လက်ခံမ�
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # နှေးကွေးသော upstream များအတွက် ကန့်သတ်စောင့်ဆိုင်းချိန်ကို မူလ RATE_LIMIT_MAX_WAIT_MS ထက် ကျော်လွန်အောင် တိုးပါ
 ```
 
-၎င်းတို့ကို OmniRoute process environment (daemon၊ ဥပမာ LaunchAgent plist သို့မဟုတ် `systemctl edit` မှတစ်ဆင့်) တွင် သတ်မှတ်ပြီးနောက် OmniRoute ကို ပြန်လည်စတင်ပါ။ Rotation flag သည် အကျိုးသက်ရောက်မှုအများဆုံး တစ်ခုတည်းသော ထိန်းချုပ်မှုဖြစ်သည်- ၎င်းသည် ပြင်းထန်သော မအောင်မြင်မှုတစ်ခုကို pool ထဲရှိ ကောင်းမွန်စွာအလုပ်လုပ်သော provider ဖြင့် နောက်ကွယ်တွင် အလိုအလျောက် ပြန်လည်ကြိုးစားမှုအဖြစ် ပြောင်းလဲပေးသည်။
+၎င်းတို့ကို 67router process environment (daemon၊ ဥပမာ LaunchAgent plist သို့မဟုတ် `systemctl edit` မှတစ်ဆင့်) တွင် သတ်မှတ်ပြီးနောက် 67router ကို ပြန်လည်စတင်ပါ။ Rotation flag သည် အကျိုးသက်ရောက်မှုအများဆုံး တစ်ခုတည်းသော ထိန်းချုပ်မှုဖြစ်သည်- ၎င်းသည် ပြင်းထန်သော မအောင်မြင်မှုတစ်ခုကို pool ထဲရှိ ကောင်းမွန်စွာအလုပ်လုပ်သော provider ဖြင့် နောက်ကွယ်တွင် အလိုအလျောက် ပြန်လည်ကြိုးစားမှုအဖြစ် ပြောင်းလဲပေးသည်။
 
 **မှတ်ချက်**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` သည် heavyweight — context ရှည်လျားသော — request များ တစ်ချိန်တည်း လုပ်ဆောင်နိုင်သည့် အရေအတွက်ကို ကန့်သတ်သည်။ ဤကန့်သတ်ချက်သည် လက်ခံခွင့် gate ဖြစ်ပြီး provider rate limiter မဟုတ်ပါ။ **#503-fanout အပ်ဒိတ်:** ယခု var ကို မူလအတိုင်း သတ်မှတ်မထားတော့ပါ (အထက်ပါအတိုင်း တိတိကျကျ configure လုပ်ထားမှသာ ယခု အကျိုးသက်ရောက်သည်) — ထိုအစား heavyweight လက်ခံမှုကို host ၏ အမှန်တကယ် memory ceiling ပေါ်မူတည်၍ အလိုအလျောက် ချိန်ညှိသည့် byte budget (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) ဖြင့် ကန့်သတ်ထားသောကြောင့် deployment အသစ်တစ်ခုသည် ဤ var ကို လုံးဝမသတ်မှတ်ဘဲ `503 chat_admission_busy` ငြင်းပယ်မှု ပိုနည်းလာသည်ကို တွေ့ရသင့်သည်။ သို့သော် ဤနေရာတွင် တိတိကျကျ သတ်မှတ်ခြင်းသည် မှတ်တမ်းတွင် ဖော်ပြထားသည့်အတိုင်း အလုပ်လုပ်ဆဲဖြစ်သည်။ တိတိကျကျ သတ်မှတ်သော byte-budget override များကို 8 MiB–2 GiB အတွင်း ကန့်သတ်ထားသည်။ `413 body_exceeds_budget` သည် ယာယီမဟုတ်ပါ- ထို byte budget ကို တိုးမြှင့်ပါ၊ `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` ကို လျှော့ချပါ သို့မဟုတ် process memory ceiling ကို တိုးမြှင့်ပါ။ `inflight_bytes_budget` ကြောင့် load လျှော့ချခြင်းသည် ယာယီ resource ယှဉ်ပြိုင်မှုဖြစ်ပြီး ပြန်လည်ကြိုးစားနိုင်ဆဲဖြစ်သည်။ Provider တစ်ခုချင်းစီအလိုက် rate limiting (`open-sse/services/rateLimitManager.ts`) ကို `RATE_LIMIT_MAX_WAIT_MS`၊ `RATE_LIMIT_MAX_QUEUE_DEPTH` နှင့် `RATE_LIMIT_AUTO_ENABLE` တို့ဖြင့် သီးခြားစီ ထိန်းချုပ်ထားသည် — `.env.example` ကို ကြည့်ပါ။
 
 **အလုပ်လုပ်ကြောင်း အတည်ပြုနည်း**: သင်၏ agent/cron ကို အချိန်တိုအတွင်း နှစ်ကြိမ်ဆက်တိုက် လုပ်ဆောင်ပြီး နှစ်ကြိမ်လုံး အောင်မြင်ကြောင်း အတည်ပြုပါ။ ဖြေရှင်းချက်မပြုမီ ဒုတိယအကြိမ် လုပ်ဆောင်မှုသည် ပုံမှန်အားဖြင့် `429`/`401` ကို ဖြစ်ပေါ်စေသည်။ ဖြေရှင်းချက်ပြုလုပ်ပြီးနောက် မအောင်မြင်မှုများ (ရှိပါက) ကို နောက်ကွယ်တွင် အလိုအလျောက် ပြန်လည်ကြိုးစားပြီး ခေါ်ဆိုမှု ပြီးဆုံးသွားပါမည်။ ထို့ပြင် `curl /monitoring/health` ကို အသုံးပြုပြီး provider connection များရှိ `rateLimitedUntil` field နှင့် သက်ရောက်မှုရှိသော provider များအတွက် `circuitBreakers.providerBreakers[].state` ကို စောင့်ကြည့်နိုင်သည် — state သည် `CLOSED`၊ `DEGRADED`၊ `OPEN` သို့မဟုတ် `HALF_OPEN` တို့ထဲမှ တစ်ခုဖြစ်သည် (`src/shared/utils/circuitBreaker.ts` ကို ကြည့်ပါ)။ ဆက်တိုက် မအောင်မြင်နေသော provider သည် reset window က probe တစ်ခုကို ဖြတ်သန်းခွင့်မပြုမီ `CLOSED → DEGRADED → OPEN` သို့ ပြောင်းသွားမည် (`HALF_OPEN`)။
 
-**429 ကို ဆက်လက်တွေ့နေရပါက**: ထို provider အတွက် လက်ရှိအသုံးပြုနေသော account သည် ၎င်း၏ _quota_ ကို အမှန်တကယ် ကုန်ဆုံးသွားပြီဖြစ်သည် (rate သာမဟုတ်ပါ)။ OmniRoute dashboard → Providers → Accounts တွင် တူညီသော provider အတွက် ဒုတိယ account တစ်ခု ထည့်ပါ သို့မဟုတ် အခြားအခမဲ့ provider (ဥပမာ `routeway`၊ `auggie`) တစ်ခုနှင့် ရောနှောအသုံးပြုပါ။ Rotation သည် ယာယီ rate/400/401 ပြဿနာများအတွက်သာ အထောက်အကူပြုသည်။ Quota လုံးဝကုန်ဆုံးမှုအတွက် ဒုတိယ credential သို့မဟုတ် အခြား provider တစ်ခု လိုအပ်သည်။
+**429 ကို ဆက်လက်တွေ့နေရပါက**: ထို provider အတွက် လက်ရှိအသုံးပြုနေသော account သည် ၎င်း၏ _quota_ ကို အမှန်တကယ် ကုန်ဆုံးသွားပြီဖြစ်သည် (rate သာမဟုတ်ပါ)။ 67router dashboard → Providers → Accounts တွင် တူညီသော provider အတွက် ဒုတိယ account တစ်ခု ထည့်ပါ သို့မဟုတ် အခြားအခမဲ့ provider (ဥပမာ `routeway`၊ `auggie`) တစ်ခုနှင့် ရောနှောအသုံးပြုပါ။ Rotation သည် ယာယီ rate/400/401 ပြဿနာများအတွက်သာ အထောက်အကူပြုသည်။ Quota လုံးဝကုန်ဆုံးမှုအတွက် ဒုတိယ credential သို့မဟုတ် အခြား provider တစ်ခု လိုအပ်သည်။
 
 **Vision model များ (`auto/vision`၊ `bazaarlink/*`) တွင် 403 တွေ့ရပါက**: ချိတ်ဆက်ထားသော account တွင် vision ပါဝင်သည့် အခပေးအစီအစဉ် မရှိခြင်း သို့မဟုတ် API key တွင် လုံလောက်သော permission မရှိခြင်းဖြစ်သည်။ Provider dashboard တွင် key scope က vision/multimodal ကို ထည့်သွင်းထားကြောင်း အတည်ပြုပါ သို့မဟုတ် အခပေးအဆင့် account တစ်ခုကို ချိတ်ဆက်ပြီး ၎င်းကို vision target အဖြစ် ဆက်လက်ထားရှိပါ။
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # နှေးကွေးသေ�
 
 `npm install -g omniroute` ကို လုပ်ဆောင်သည့်အခါ `npm warn ERESOLVE`၊ peer dependency အသိပေးချက်များနှင့် `deprecated` မက်ဆေ့ချ်များကဲ့သို့ သတိပေးချက်အများအပြားကို တွေ့ရနိုင်ပါသည်။ **၎င်းတို့သည် မျှော်လင့်ထားသည့် သတိပေးချက်များဖြစ်ပြီး အန္တရာယ်မရှိပါ။** Output ထဲတွင် `added <N> packages` ဟု မြင်ရပါက installation အောင်မြင်ပါသည်။
 
-Peer dependency ဖြေရှင်းမှုဆိုင်ရာ သတိပေးချက်များကို ဖျောက်ထားရန် OmniRoute က ပံ့ပိုးထားသည့် အောက်ပါ install ပုံစံကို အသုံးပြုပါ။
+Peer dependency ဖြေရှင်းမှုဆိုင်ရာ သတိပေးချက်များကို ဖျောက်ထားရန် 67router က ပံ့ပိုးထားသည့် အောက်ပါ install ပုံစံကို အသုံးပြုပါ။
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` သည် `ERESOLVE` နှင့် peer dependency အသိပေးချက်များကိုသာ ဖျောက်ပေးပါသည်။ Deprecation အသိပေးချက်များသည် transitive third-party package များမှ လာသောကြောင့် ဆက်လက်မြင်ရမည်ဖြစ်ပြီး၊ ၎င်းတို့သည် installation မအောင်မြင်ကြောင်း ညွှန်ပြခြင်းမဟုတ်ပါ။
 
-OmniRoute က ထိန်းချုပ်ထားခြင်းမရှိသော third-party package များရှိ ခေတ်နောက်ကျနေသည့် peer dependency range များကြောင့် ဤသတိပေးချက်များ ဖြစ်ပေါ်လာခြင်းဖြစ်သည်။
+67router က ထိန်းချုပ်ထားခြင်းမရှိသော third-party package များရှိ ခေတ်နောက်ကျနေသည့် peer dependency range များကြောင့် ဤသတိပေးချက်များ ဖြစ်ပေါ်လာခြင်းဖြစ်သည်။
 
 1. **`marked-terminal` က `marked >=1 <16` ကို လိုအပ်သော်လည်း `marked@18` ကို တွေ့ရှိသည်** — လက်တွေ့အသုံးပြုရာတွင် ကောင်းမွန်စွာ အလုပ်လုပ်ပါသည်။ Upstream peer range ကသာ ခေတ်နောက်ကျနေခြင်းဖြစ်သည်။
 2. **`deprecated prebuild-install@7.1.3`** — transitive native binary ရယူရေး helper တစ်ခုဖြစ်သည်။ ၎င်းကို pinned လုပ်ထားသော `wreq-js` transport binding အား install လုပ်ရန်
@@ -104,19 +104,19 @@ npm warn install-scripts allowScripts တွင် ခွင့်ပြုထ�
 
 ### ဤသတိပေးချက်ကို လျစ်လျူရှုနိုင်ပါသလား။
 
-**တစ်စိတ်တစ်ပိုင်းအားဖြင့် လျစ်လျူရှုနိုင်သော်လည်း script များမပါဘဲ လုပ်ဆောင်ရန် မအကြံပြုပါ။** OmniRoute တွင် ပြဿနာဖြစ်လျှင် အစားထိုးအသုံးပြုနိုင်သော နည်းလမ်းများ ပါဝင်သည်။ standalone bundle မှ native `better-sqlite3` binding များကို load မလုပ်နိုင်ပါက application သည် `node:sqlite` သို့မဟုတ် `sql.js` ကဲ့သို့သော အခြား driver များကို အဆင့်ဆင့် အစားထိုးအသုံးပြုသည် ([SQLite Runtime Resolution](../ops/SQLITE_RUNTIME.md) ကို ကြည့်ပါ)။ Server သည် စတင်နိုင်ဆဲဖြစ်သော်လည်း `sql.js` ကဲ့သို့သော WASM fallback များပေါ်တွင် လုပ်ဆောင်ခြင်းသည် SQLite WAL (Write-Ahead Logging) mode ကို ပိတ်စေပြီး memory နှင့် disk-sync အပိုဝန်ကို မြင့်တက်စေသည်။
+**တစ်စိတ်တစ်ပိုင်းအားဖြင့် လျစ်လျူရှုနိုင်သော်လည်း script များမပါဘဲ လုပ်ဆောင်ရန် မအကြံပြုပါ။** 67router တွင် ပြဿနာဖြစ်လျှင် အစားထိုးအသုံးပြုနိုင်သော နည်းလမ်းများ ပါဝင်သည်။ standalone bundle မှ native `better-sqlite3` binding များကို load မလုပ်နိုင်ပါက application သည် `node:sqlite` သို့မဟုတ် `sql.js` ကဲ့သို့သော အခြား driver များကို အဆင့်ဆင့် အစားထိုးအသုံးပြုသည် ([SQLite Runtime Resolution](../ops/SQLITE_RUNTIME.md) ကို ကြည့်ပါ)။ Server သည် စတင်နိုင်ဆဲဖြစ်သော်လည်း `sql.js` ကဲ့သို့သော WASM fallback များပေါ်တွင် လုပ်ဆောင်ခြင်းသည် SQLite WAL (Write-Ahead Logging) mode ကို ပိတ်စေပြီး memory နှင့် disk-sync အပိုဝန်ကို မြင့်တက်စေသည်။
 
 ### မည်သည့် script များ အမှန်တကယ် လိုအပ်သနည်း။
 
-ပိတ်ဆို့ခံထားရသော script အားလုံးသည် OmniRoute ကို လုပ်ဆောင်ရန် မရှိမဖြစ်လိုအပ်သည် မဟုတ်ပါ-
+ပိတ်ဆို့ခံထားရသော script အားလုံးသည် 67router ကို လုပ်ဆောင်ရန် မရှိမဖြစ်လိုအပ်သည် မဟုတ်ပါ-
 
-- **မရှိမဖြစ်လိုအပ်သော (`omniroute`, `better-sqlite3`):** OmniRoute သည် Next.js standalone application bundle (`dist/`) မှ လုပ်ဆောင်သည်။ ထည့်သွင်းစဉ်အတွင်း npm သည် လက်ရှိ host အတွက် သီးသန့် native SQLite driver ကို အပေါ်ဆုံးအဆင့်ရှိ `node_modules/better-sqlite3/` ထဲသို့ download လုပ်ခြင်း သို့မဟုတ် compile လုပ်ခြင်း ပြုလုပ်သည်။ ထို့နောက် OmniRoute ၏ `postinstall` script (`scripts/build/postinstall.mjs`) သည် အဆိုပါ host-specific binary များကို စစ်ဆေးပြီး standalone server က အသုံးပြုနိုင်စေရန် `dist/node_modules/` ထဲသို့ ကူးယူသည်။ `omniroute` ၏ postinstall script ကို ပိတ်ဆို့ထားပါက ဤကူးယူမှုအဆင့်ကို ကျော်သွားမည်ဖြစ်သည်။
+- **မရှိမဖြစ်လိုအပ်သော (`omniroute`, `better-sqlite3`):** 67router သည် Next.js standalone application bundle (`dist/`) မှ လုပ်ဆောင်သည်။ ထည့်သွင်းစဉ်အတွင်း npm သည် လက်ရှိ host အတွက် သီးသန့် native SQLite driver ကို အပေါ်ဆုံးအဆင့်ရှိ `node_modules/better-sqlite3/` ထဲသို့ download လုပ်ခြင်း သို့မဟုတ် compile လုပ်ခြင်း ပြုလုပ်သည်။ ထို့နောက် 67router ၏ `postinstall` script (`scripts/build/postinstall.mjs`) သည် အဆိုပါ host-specific binary များကို စစ်ဆေးပြီး standalone server က အသုံးပြုနိုင်စေရန် `dist/node_modules/` ထဲသို့ ကူးယူသည်။ `omniroute` ၏ postinstall script ကို ပိတ်ဆို့ထားပါက ဤကူးယူမှုအဆင့်ကို ကျော်သွားမည်ဖြစ်သည်။
 - **ရွေးချယ်နိုင်သော/ဆင့်ပွားမှီခိုမှု (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** ၎င်းတို့သည် build အထောက်အကူပြုကိရိယာများ၊ watcher tool များ သို့မဟုတ် system keychain utility များဖြစ်သည်။ ၎င်းတို့ကို ခွင့်ပြုခြင်းဖြင့် build သတိပေးချက်များကို တားဆီးနိုင်သော်လည်း အဓိက routing လုပ်ဆောင်ချက်အတွက် မလိုအပ်ပါ။
-- **ချန်လှပ်ထားသော (`onnxruntime-node`):** Local AI embedding များအတွက် ရွေးချယ်နိုင်သော dependency ဖြစ်ပြီး OmniRoute လုပ်ဆောင်ရန် **မလိုအပ်ပါ**။ ၎င်း၏ postinstall script သည် NuGet မှ ~300MB ရှိသော CUDA asset များကို download လုပ်သည်။ ပံ့ပိုးထားသော hardware တွင် local ONNX acceleration ကို အသုံးပြုရန် ရည်ရွယ်ထားကြောင်း သေချာမှသာ ၎င်းကို allow-list ထဲသို့ ထည့်ပါ။
+- **ချန်လှပ်ထားသော (`onnxruntime-node`):** Local AI embedding များအတွက် ရွေးချယ်နိုင်သော dependency ဖြစ်ပြီး 67router လုပ်ဆောင်ရန် **မလိုအပ်ပါ**။ ၎င်း၏ postinstall script သည် NuGet မှ ~300MB ရှိသော CUDA asset များကို download လုပ်သည်။ ပံ့ပိုးထားသော hardware တွင် local ONNX acceleration ကို အသုံးပြုရန် ရည်ရွယ်ထားကြောင်း သေချာမှသာ ၎င်းကို allow-list ထဲသို့ ထည့်ပါ။
 
 ### အကြံပြုထားသော ဖြေရှင်းနည်း
 
-Global install ပြုလုပ်စဉ် လိုအပ်သော install script များကို ခွင့်ပြုပြီး သတိပေးချက်များကို ဖယ်ရှားရန် OmniRoute နှင့် ၎င်း၏ native dependency များအတွက် `--allow-scripts` ကို ထည့်သွင်းအသုံးပြုပါ-
+Global install ပြုလုပ်စဉ် လိုအပ်သော install script များကို ခွင့်ပြုပြီး သတိပေးချက်များကို ဖယ်ရှားရန် 67router နှင့် ၎င်း၏ native dependency များအတွက် `--allow-scripts` ကို ထည့်သွင်းအသုံးပြုပါ-
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -143,14 +143,14 @@ omniroute doctor
 
 Gemini Web တောင်းဆိုမှုတစ်ခုသည် Playwright Chromium ကို ထည့်သွင်းထားခြင်းမရှိကြောင်း မက်ဆေ့ချ်နှင့်အတူ `503` ကို ပြန်ပေးပါက npm package ရှိနေသော်လည်း browser binary ပျောက်ဆုံးနေခြင်းဖြစ်သည်။ Playwright သည် browser download များကို npm package ထည့်သွင်းခြင်းနှင့် သီးခြားစီ ရည်ရွယ်ချက်ရှိရှိ ထားရှိသောကြောင့် browser ကို မထည့်သွင်းမချင်း ဤတုံ့ပြန်မှုကို ရရှိခြင်းမှာ ပုံမှန်ဖြစ်သည်။
 
-Global npm installation အတွက် browser cache သည် တူညီသော Playwright installation နှင့် သက်ဆိုင်စေရန် OmniRoute package ၏ directory မှ Chromium ကို ထည့်သွင်းပါ-
+Global npm installation အတွက် browser cache သည် တူညီသော Playwright installation နှင့် သက်ဆိုင်စေရန် 67router package ၏ directory မှ Chromium ကို ထည့်သွင်းပါ-
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-ထည့်သွင်းပြီးနောက် OmniRoute ကို ပြန်လည်စတင်ကာ Gemini Web တောင်းဆိုမှုကို ထပ်မံကြိုးစားပါ။ OmniRoute ကို Docker image တစ်ခုမှ အသုံးပြုပါက Chromium နှင့် ၎င်း၏ dependencies များကို တစ်ပါတည်း ထည့်သွင်းပေးထားသော `-web` image (သို့မဟုတ် `runner-web` build target) ကို အသုံးပြုပါ။ Base image တွင် ၎င်းတို့ မပါဝင်ပါ။
+ထည့်သွင်းပြီးနောက် 67router ကို ပြန်လည်စတင်ကာ Gemini Web တောင်းဆိုမှုကို ထပ်မံကြိုးစားပါ။ 67router ကို Docker image တစ်ခုမှ အသုံးပြုပါက Chromium နှင့် ၎င်း၏ dependencies များကို တစ်ပါတည်း ထည့်သွင်းပေးထားသော `-web` image (သို့မဟုတ် `runner-web` build target) ကို အသုံးပြုပါ။ Base image တွင် ၎င်းတို့ မပါဝင်ပါ။
 
 ---
 
@@ -180,7 +180,7 @@ npx playwright install chromium
 
 **ဤသည်မှာ မှားယွင်းသတိပေးချက်တစ်ခုသာ ဖြစ်သည်။ မည်သည့်အရာမျှ ကူးစက်ခံထားရခြင်းမရှိသလို မည်သည့်လုပ်ဆောင်ချက်မျှ ပြုလုပ်ရန်မလိုအပ်ပါ။**
 
-Avast နှင့် AVG တို့သည် HTTP request ပုံစံနှင့်တူသော link အများအပြားပါဝင်သည့် plain-text/Markdown ဖိုင်များကို အန္တရာယ်ရှိသည်ဟု သတ်မှတ်သည့် heuristic ကို အသုံးပြုကြသည်။ OmniRoute ၏ `README.md` ကို npm package ထဲတွင် ထည့်သွင်းဖြန့်ချိထားသည် (`package.json` → `files` တွင် စာရင်းသွင်းထားသည်)။ ထို့ကြောင့် global install ပြုလုပ်သောအခါ ၎င်းသည် `node_modules/omniroute/README.md` သို့ ရောက်ရှိသွားပြီး `http://localhost:20128/...` ဥပမာ ~15 ခု (MCP HTTP/SSE endpoint များ၊ A2A `.well-known` URL နှင့် `curl` snippet များ) ပါဝင်သည်။ ထိုမျှသော link သိပ်သည်းမှုသည် heuristic ကို သတိပေးချက်ထုတ်စေရန် လုံလောက်သည်။
+Avast နှင့် AVG တို့သည် HTTP request ပုံစံနှင့်တူသော link အများအပြားပါဝင်သည့် plain-text/Markdown ဖိုင်များကို အန္တရာယ်ရှိသည်ဟု သတ်မှတ်သည့် heuristic ကို အသုံးပြုကြသည်။ 67router ၏ `README.md` ကို npm package ထဲတွင် ထည့်သွင်းဖြန့်ချိထားသည် (`package.json` → `files` တွင် စာရင်းသွင်းထားသည်)။ ထို့ကြောင့် global install ပြုလုပ်သောအခါ ၎င်းသည် `node_modules/omniroute/README.md` သို့ ရောက်ရှိသွားပြီး `http://localhost:20128/...` ဥပမာ ~15 ခု (MCP HTTP/SSE endpoint များ၊ A2A `.well-known` URL နှင့် `curl` snippet များ) ပါဝင်သည်။ ထိုမျှသော link သိပ်သည်းမှုသည် heuristic ကို သတိပေးချက်ထုတ်စေရန် လုံလောက်သည်။
 
 ဤပြဿနာသည် မကြာသေးမီကမှ စတင်ခဲ့ပါကလည်း ဖိုင်၏ သဘောသဘာဝ ပြောင်းလဲသွားခြင်းမရှိပါ။ README ၏ endpoint ဇယားတွင် MCP HTTP + SSE + A2A တို့ကို ထပ်မံထည့်သွင်းခဲ့ပြီး `curl` ဥပမာများလည်း ပိုမိုပါဝင်လာသဖြင့် သတ်မှတ်ထားသော threshold ကို ကျော်လွန်သွားခြင်းဖြစ်သည်။
 
@@ -190,7 +190,7 @@ Avast နှင့် AVG တို့သည် HTTP request ပုံစံန�
 
 1. **Notification များကို ရပ်တန့်ပါ** — antivirus ထဲတွင် install directory ကို exclude လုပ်ပါ
    (Avast: Settings → Exceptions)။ သင့် global `node_modules` path နှင့်/သို့မဟုတ်
-   OmniRoute data dir (`~/.omniroute/`) ကို ထည့်သွင်းပါ။
+   67router data dir (`~/.omniroute/`) ကို ထည့်သွင်းပါ။
 2. **မှားယွင်းသတိပေးချက်ကို အစီရင်ခံပါ** — <https://www.avast.com/false-positive-file-form.php> သို့ သွားပြီး
    quarantine လုပ်ထားသော `README.md` ကို ပူးတွဲပေးပို့ပါ။ Text ဖိုင်တစ်ခုအပေါ် vendor ၏ heuristic က
    လွန်ကဲစွာ တုံ့ပြန်ခြင်းဖြစ်သောကြောင့် ဤနည်းလမ်းသည် လူတိုင်းအတွက် အထောက်အကူဖြစ်စေမည့် ဖြေရှင်းချက်ဖြစ်သည်။
@@ -249,7 +249,7 @@ hash suffix ပါသော package directory များအပါအဝင်)
 
 ### Login စာမျက်နှာ ပျက်သွားခြင်း သို့မဟုတ် "Module self-registration" အမှား ပြသခြင်း
 
-**အကြောင်းရင်း:** သင်သည် OmniRoute က ခွင့်ပြုထားသည့် လုံခြုံသော runtime အနိမ့်ဆုံးသတ်မှတ်ချက်၏ ပြင်ပတွင်ရှိသော Node.js ဗားရှင်းတစ်ခုကို အသုံးပြုနေပါသည်။ အဖြစ်အများဆုံးအခြေအနေမှာ OmniRoute က သတ်မှတ်ထားသည့် လုံခြုံရေးပြင်ဆင်ချက်ပါဝင်သော အနိမ့်ဆုံးအဆင့်ထက် နိမ့်နေသည့် Node 22 သို့မဟုတ် 24 patch level အဟောင်းကို အသုံးပြုနေခြင်းဖြစ်သည်။
+**အကြောင်းရင်း:** သင်သည် 67router က ခွင့်ပြုထားသည့် လုံခြုံသော runtime အနိမ့်ဆုံးသတ်မှတ်ချက်၏ ပြင်ပတွင်ရှိသော Node.js ဗားရှင်းတစ်ခုကို အသုံးပြုနေပါသည်။ အဖြစ်အများဆုံးအခြေအနေမှာ 67router က သတ်မှတ်ထားသည့် လုံခြုံရေးပြင်ဆင်ချက်ပါဝင်သော အနိမ့်ဆုံးအဆင့်ထက် နိမ့်နေသည့် Node 22 သို့မဟုတ် 24 patch level အဟောင်းကို အသုံးပြုနေခြင်းဖြစ်သည်။
 
 **လက္ခဏာများ:**
 
@@ -265,7 +265,7 @@ hash suffix ပါသော package directory များအပါအဝင်)
    nvm use 24
    ```
 2. သင်၏ဗားရှင်းကို စစ်ဆေးပါ: `node --version` သည် 24.x LTS line တွင် `v24.0.0` သို့မဟုတ် ၎င်းထက်အသစ်ကို ပြသသင့်သည်
-3. OmniRoute ကို ပြန်လည်ထည့်သွင်းပါ: `npm install -g omniroute`
+3. 67router ကို ပြန်လည်ထည့်သွင်းပါ: `npm install -g omniroute`
 4. ပြန်လည်စတင်ပါ: `omniroute`
 
 > **ပံ့ပိုးထားသော လုံခြုံသည့်ဗားရှင်းများ:** `>=22.22.2 <23` သို့မဟုတ် `>=24.0.0 <27`။ Node.js 24.x LTS (Krypton) နှင့် Node.js 26 တို့ကို အပြည့်အဝ ပံ့ပိုးထားသည်။
@@ -348,13 +348,13 @@ omniroute
 
 **အကြောင်းရင်း:** Node.js 22 တွင် undici@8 dispatcher သည် Node ၏ built-in `fetch()` implementation နှင့် တွဲဖက်အသုံးပြု၍ မရပါ။
 
-**ဖြေရှင်းချက် (v3.5.5+):** Proxy dispatcher ဖွင့်ထားသည့်အခါ OmniRoute သည် ယခု undici ၏ ကိုယ်ပိုင် `fetch()` function ကို အသုံးပြုသဖြင့် တစ်သမတ်တည်း အလုပ်လုပ်စေသည်။ v3.5.5+ သို့ အပ်ဒိတ်လုပ်ပါ။
+**ဖြေရှင်းချက် (v3.5.5+):** Proxy dispatcher ဖွင့်ထားသည့်အခါ 67router သည် ယခု undici ၏ ကိုယ်ပိုင် `fetch()` function ကို အသုံးပြုသဖြင့် တစ်သမတ်တည်း အလုပ်လုပ်စေသည်။ v3.5.5+ သို့ အပ်ဒိတ်လုပ်ပါ။
 
 ### WSL အောက်ရှိ MITM proxy: Windows host ပေါ်မှ desktop app များကို ကြားဖြတ်ဖမ်းယူခြင်း မရှိပါ
 
-**အကြောင်းရင်း:** MITM proxy နှင့် ၎င်း၏ CA certificate ကို OmniRoute အလုပ်လုပ်နေသည့် ပတ်ဝန်းကျင်ထဲတွင် ထည့်သွင်းထားသည်။ WSL အောက်တွင် ထိုပတ်ဝန်းကျင်သည် Linux guest ဖြစ်သော်လည်း AI desktop app များ (Kiro, Trae, Copilot, Zed, …) သည် Windows host ပေါ်တွင် အလုပ်လုပ်သည်။ Host app များသည် guest ၏ certificate store ကို ယုံကြည်ခြင်းမရှိသကဲ့သို့ guest ၏ system proxy မှတစ်ဆင့်လည်း လမ်းကြောင်းမပို့သောကြောင့် desktop ကြားဖြတ်ဖမ်းယူမှု အလုပ်မလုပ်ပါ။
+**အကြောင်းရင်း:** MITM proxy နှင့် ၎င်း၏ CA certificate ကို 67router အလုပ်လုပ်နေသည့် ပတ်ဝန်းကျင်ထဲတွင် ထည့်သွင်းထားသည်။ WSL အောက်တွင် ထိုပတ်ဝန်းကျင်သည် Linux guest ဖြစ်သော်လည်း AI desktop app များ (Kiro, Trae, Copilot, Zed, …) သည် Windows host ပေါ်တွင် အလုပ်လုပ်သည်။ Host app များသည် guest ၏ certificate store ကို ယုံကြည်ခြင်းမရှိသကဲ့သို့ guest ၏ system proxy မှတစ်ဆင့်လည်း လမ်းကြောင်းမပို့သောကြောင့် desktop ကြားဖြတ်ဖမ်းယူမှု အလုပ်မလုပ်ပါ။
 
-**အကြံပြုချက်:** ကြားဖြတ်ဖမ်းယူလိုသော desktop app များနှင့် တူညီသည့် OS ပေါ်တွင် OmniRoute ကို မူရင်းပုံစံဖြင့် အလုပ်လုပ်ပါ (Windows app များအတွက် Windows၊ macOS/Linux အတွက်လည်း အလားတူ)။ Host app များကို ပစ်မှတ်ထားစဉ် OmniRoute ကို WSL အတွင်း ဆက်လက်ထားရှိလိုပါက ထုတ်ပေးထားသော CA certificate ကို Windows host တွင် ကိုယ်တိုင် ယုံကြည်မှုပေးပြီး host app တစ်ခုချင်းစီ၏ network/proxy ဆက်တင်များကို WSL proxy endpoint သို့ ညွှန်ပြရန် လိုအပ်သည် — ဤနည်းလမ်းသည် ပံ့ပိုးမထားသည့်အပြင် ပျက်လွယ်သော စီစဉ်မှုဖြစ်သည်။
+**အကြံပြုချက်:** ကြားဖြတ်ဖမ်းယူလိုသော desktop app များနှင့် တူညီသည့် OS ပေါ်တွင် 67router ကို မူရင်းပုံစံဖြင့် အလုပ်လုပ်ပါ (Windows app များအတွက် Windows၊ macOS/Linux အတွက်လည်း အလားတူ)။ Host app များကို ပစ်မှတ်ထားစဉ် 67router ကို WSL အတွင်း ဆက်လက်ထားရှိလိုပါက ထုတ်ပေးထားသော CA certificate ကို Windows host တွင် ကိုယ်တိုင် ယုံကြည်မှုပေးပြီး host app တစ်ခုချင်းစီ၏ network/proxy ဆက်တင်များကို WSL proxy endpoint သို့ ညွှန်ပြရန် လိုအပ်သည် — ဤနည်းလမ်းသည် ပံ့ပိုးမထားသည့်အပြင် ပျက်လွယ်သော စီစဉ်မှုဖြစ်သည်။
 
 ---
 
@@ -381,7 +381,7 @@ omniroute
 
 ### OAuth Token သက်တမ်းကုန်ဆုံးခြင်း
 
-OmniRoute သည် token များကို အလိုအလျောက် ပြန်လည်ဆန်းသစ်သည်။ ပြဿနာများ ဆက်ရှိနေပါက:
+67router သည် token များကို အလိုအလျောက် ပြန်လည်ဆန်းသစ်သည်။ ပြဿနာများ ဆက်ရှိနေပါက:
 
 1. Dashboard → Provider → Reconnect
 2. Provider connection ကို ဖျက်ပြီး ပြန်လည်ထည့်သွင်းပါ
@@ -592,7 +592,7 @@ Format ပြောင်းလဲမှုဆိုင်ရာ ပြဿနာ
 
 ### အစုလိုက်အပြုံလိုက် တစ်ပြိုင်နက်တည်း တောင်းဆိုမှုကို တားဆီးခြင်း
 
-တစ်ပြိုင်နက်တည်း တောင်းဆိုမှုများစွာက နှုန်းကန့်သတ်ထားသော ပံ့ပိုးသူတစ်ခုသို့ ရောက်ရှိလာသည့်အခါ OmniRoute သည် တောင်းဆိုမှုများကို အစဉ်လိုက်လုပ်ဆောင်စေရန်နှင့် ဆင့်ကဲမအောင်မြင်မှုများကို တားဆီးရန် mutex + အလိုအလျောက် နှုန်းကန့်သတ်မှုကို အသုံးပြုသည်။ API key ပံ့ပိုးသူများအတွက် ၎င်းကို အလိုအလျောက် လုပ်ဆောင်သည်။
+တစ်ပြိုင်နက်တည်း တောင်းဆိုမှုများစွာက နှုန်းကန့်သတ်ထားသော ပံ့ပိုးသူတစ်ခုသို့ ရောက်ရှိလာသည့်အခါ 67router သည် တောင်းဆိုမှုများကို အစဉ်လိုက်လုပ်ဆောင်စေရန်နှင့် ဆင့်ကဲမအောင်မြင်မှုများကို တားဆီးရန် mutex + အလိုအလျောက် နှုန်းကန့်သတ်မှုကို အသုံးပြုသည်။ API key ပံ့ပိုးသူများအတွက် ၎င်းကို အလိုအလျောက် လုပ်ဆောင်သည်။
 
 ### Chat တောင်းဆိုမှုများသည် 503 / chat_admission_busy ဖြင့် မအောင်မြင်ခြင်း
 
@@ -628,7 +628,7 @@ Structure-based response သည် အလားတူ type နှင့် code 
 tool အနည်းဆုံး `64` ခု သို့မဟုတ် ခန့်မှန်း token အနည်းဆုံး `32,000` ခု ပါဝင်လျှင်၊ သို့မဟုတ် ကန့်သတ်ထားသော structure ခန့်မှန်းမှုက
 ကြည့်ရှုပြီး node `10,000` ခု သို့မဟုတ် အနက် `12` ဟူသော ၎င်း၏ကန့်သတ်ချက်များကို ကုန်ဆုံးစေလျှင် structurally heavy ဖြစ်သည်။
 
-**အကြောင်းရင်း-** ၎င်းသည် upstream ပံ့ပိုးသူ၏ ချို့ယွင်းမှုမဟုတ်ဘဲ OmniRoute အတွင်း ရည်ရွယ်ချက်ရှိရှိ လုပ်ဆောင်သည့် ဝန်လျှော့ချမှုဖြစ်သည်။
+**အကြောင်းရင်း-** ၎င်းသည် upstream ပံ့ပိုးသူ၏ ချို့ယွင်းမှုမဟုတ်ဘဲ 67router အတွင်း ရည်ရွယ်ချက်ရှိရှိ လုပ်ဆောင်သည့် ဝန်လျှော့ချမှုဖြစ်သည်။
 Process တစ်ခုစီသည် ကြီးမားသော request body ကို ထိန်းသိမ်းပြီး parse မလုပ်မီ ကန့်သတ်ထားသော heavyweight capacity ကို ကြိုတင်သတ်မှတ်ထားရန်
 process-local guard တစ်ခုကို အသုံးပြုသည်။ Heavyweight lease တစ်ခုကို SSE
 response ၏ သက်တမ်းတစ်လျှောက်လုံး ဆက်လက်ထိန်းထားသည်။
@@ -674,7 +674,7 @@ false` နှင့် လုံလောက်ကျယ်ပြန့်သေ
 
 ## ရွေးချယ်အသုံးပြုနိုင်သော RAG / LLM ချို့ယွင်းမှု အမျိုးအစားခွဲခြားချက် (ပြဿနာ 16 ခု)
 
-OmniRoute အသုံးပြုသူအချို့သည် gateway ကို RAG သို့မဟုတ် agent stack များ၏ ရှေ့တွင် ထားရှိအသုံးပြုကြသည်။ ထိုသို့သော ဖွဲ့စည်းပုံများတွင် ထူးဆန်းသည့် ဖြစ်စဉ်ပုံစံတစ်ခုကို မကြာခဏ တွေ့ရတတ်သည်။ OmniRoute သည် ပုံမှန်ကောင်းမွန်နေပုံရသော်လည်း (provider များ အလုပ်လုပ်နေခြင်း၊ routing profile များ မှန်ကန်ခြင်း၊ rate limit သတိပေးချက်များ မရှိခြင်း) နောက်ဆုံးအဖြေမှာ မှားယွင်းနေဆဲဖြစ်သည်။
+67router အသုံးပြုသူအချို့သည် gateway ကို RAG သို့မဟုတ် agent stack များ၏ ရှေ့တွင် ထားရှိအသုံးပြုကြသည်။ ထိုသို့သော ဖွဲ့စည်းပုံများတွင် ထူးဆန်းသည့် ဖြစ်စဉ်ပုံစံတစ်ခုကို မကြာခဏ တွေ့ရတတ်သည်။ 67router သည် ပုံမှန်ကောင်းမွန်နေပုံရသော်လည်း (provider များ အလုပ်လုပ်နေခြင်း၊ routing profile များ မှန်ကန်ခြင်း၊ rate limit သတိပေးချက်များ မရှိခြင်း) နောက်ဆုံးအဖြေမှာ မှားယွင်းနေဆဲဖြစ်သည်။
 
 လက်တွေ့တွင် ဤဖြစ်ရပ်များသည် gateway ကိုယ်တိုင်ကြောင့် မဟုတ်ဘဲ downstream RAG pipeline ကြောင့် ဖြစ်ပေါ်လေ့ရှိသည်။
 
@@ -693,17 +693,17 @@ OmniRoute အသုံးပြုသူအချို့သည် gateway က�
 
 1. မမှန်ကန်သော တုံ့ပြန်ချက်တစ်ခုကို စုံစမ်းသည့်အခါ အောက်ပါတို့ကို မှတ်တမ်းတင်ပါ-
    - အသုံးပြုသူ၏ task နှင့် request
-   - OmniRoute ရှိ route သို့မဟုတ် provider combo
+   - 67router ရှိ route သို့မဟုတ် provider combo
    - downstream တွင် အသုံးပြုခဲ့သော RAG context များ (retrieved document များ၊ tool call များ စသည်)
 2. ဖြစ်ရပ်ကို WFGY ProblemMap နံပါတ် တစ်ခု သို့မဟုတ် နှစ်ခု (`No.1` … `No.16`) နှင့် ချိတ်ဆက်သတ်မှတ်ပါ။
-3. ထိုနံပါတ်ကို OmniRoute log များနှင့်အတူ သင့်ကိုယ်ပိုင် dashboard၊ runbook သို့မဟုတ် incident tracker တွင် သိမ်းဆည်းပါ။
+3. ထိုနံပါတ်ကို 67router log များနှင့်အတူ သင့်ကိုယ်ပိုင် dashboard၊ runbook သို့မဟုတ် incident tracker တွင် သိမ်းဆည်းပါ။
 4. သင်၏ RAG stack၊ retriever သို့မဟုတ် routing strategy ကို ပြောင်းလဲရန် လိုအပ်ခြင်းရှိမရှိ ဆုံးဖြတ်ရန် သက်ဆိုင်ရာ WFGY စာမျက်နှာကို အသုံးပြုပါ။
 
 စာသားအပြည့်အစုံနှင့် လက်တွေ့အသုံးချနည်းများကို ဤနေရာတွင် ရရှိနိုင်သည် (MIT license၊ စာသားသီးသန့်)-
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-OmniRoute ၏ နောက်ကွယ်တွင် RAG သို့မဟုတ် agent pipeline များကို အသုံးမပြုပါက ဤအပိုင်းကို လျစ်လျူရှုနိုင်သည်။
+67router ၏ နောက်ကွယ်တွင် RAG သို့မဟုတ် agent pipeline များကို အသုံးမပြုပါက ဤအပိုင်းကို လျစ်လျူရှုနိုင်သည်။
 
 ---
 
@@ -727,7 +727,7 @@ v3.8.0 release အတွက် သီးသန့်ဖြစ်သော ပြ
 
 1. သင့် platform အတွက် Devin CLI ကို ထည့်သွင်းပါ
 2. `.env` တွင် `CLI_DEVIN_BIN=/usr/local/bin/devin` (သို့မဟုတ် တကယ့် path) ဟု သတ်မှတ်ပါ
-3. OmniRoute ကို ပြန်လည်စတင်ပြီး **Dashboard → CLI Tools** မှတစ်ဆင့် ထပ်မံစမ်းသပ်ပါ
+3. 67router ကို ပြန်လည်စတင်ပြီး **Dashboard → CLI Tools** မှတစ်ဆင့် ထပ်မံစမ်းသပ်ပါ
 
 ### Model cooldown ပိတ်မိနေခြင်း (ကိုယ်တိုင် ပြန်လည်သတ်မှတ်ရန်)
 
@@ -782,7 +782,7 @@ v3.8.0 release အတွက် သီးသန့်ဖြစ်သော ပြ
 
 1. ကျပန်း secret တစ်ခု ထုတ်လုပ်ပါ- `openssl rand -hex 32`
 2. Production server env (နှင့် bridge နှင့် ဆက်သွယ်သည့် မည်သည့် client မဆို) တွင် `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` ဟု သတ်မှတ်ပါ
-3. OmniRoute ကို ပြန်လည်စတင်ပါ
+3. 67router ကို ပြန်လည်စတင်ပါ
 
 ### Responses API: background mode ကို synchronous အဖြစ် အဆင့်လျှော့ထားခြင်း
 

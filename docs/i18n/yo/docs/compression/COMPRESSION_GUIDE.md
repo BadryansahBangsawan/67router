@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Yorùbá)
+# 🗜️ Prompt Compression Guide — 67router (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Àkótán
 
-OmniRoute ń ṣe ìlànà ìfúnpọ̀ prompt onímodulu kan tí ń ṣiṣẹ́ **ṣáájú láìdúró** kí àwọn ìbéèrè tó dé ọ̀dọ̀ àwọn olupèsè upstream. Èyí túmọ̀ sí pé fífi token rẹ pamọ́ máa ń ṣẹlẹ̀ láìfarahàn — kò sí ìyípadà tí o nílò láti ṣe sí ìṣàn iṣẹ́ rẹ.
+67router ń ṣe ìlànà ìfúnpọ̀ prompt onímodulu kan tí ń ṣiṣẹ́ **ṣáájú láìdúró** kí àwọn ìbéèrè tó dé ọ̀dọ̀ àwọn olupèsè upstream. Èyí túmọ̀ sí pé fífi token rẹ pamọ́ máa ń ṣẹlẹ̀ láìfarahàn — kò sí ìyípadà tí o nílò láti ṣe sí ìṣàn iṣẹ́ rẹ.
 
 ```
 Ìbéèrè Oníbàárà
@@ -122,15 +122,15 @@ prompt èdè àdánidá tó kù. A lè ṣètò àwọn ìlànà Títòpọ̀ k�
 
 ## Ìṣirò Ìfipamọ́ Láti Orísun Ìṣáájú
 
-OmniRoute ṣàkọsílẹ̀ àwọn ìfipamọ́ ìfúnpọ̀ láti orísun méjì: àwọn ìwọ̀n ìdánwò iṣẹ́ akanṣe ìpilẹ̀ṣẹ̀ àti
-àkójọpọ̀ ẹ̀rọ OmniRoute fúnra rẹ̀.
+67router ṣàkọsílẹ̀ àwọn ìfipamọ́ ìfúnpọ̀ láti orísun méjì: àwọn ìwọ̀n ìdánwò iṣẹ́ akanṣe ìpilẹ̀ṣẹ̀ àti
+àkójọpọ̀ ẹ̀rọ 67router fúnra rẹ̀.
 
 | Orísun  | Nọ́mbà README ìpilẹ̀ṣẹ̀ tí a lò níbí                                                                                       |
 | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` tóóki àbájáde díẹ̀, `65%` ìfipamọ́ àbájáde ní ìpíndọ́gba ìwọ̀n ìdánwò, ààlà `22-87%`, àti irinṣẹ́ ìfúnpọ̀ ìwọlé `~46%` |
 | RTK     | Ìfipamọ́ `60-90%` lórí àbájáde àṣẹ; àpẹẹrẹ sáà `~118,000 -> ~23,900` tóóki, tàbí `79.7%` tí a fipamọ́ (`~80%`)            |
 
-Fún àwọn ẹrù irinṣẹ́/àyíká-ọ̀rọ̀ tí ó ní àbárí, àkójọpọ̀ aiyipada OmniRoute to àwọn ẹ̀rọ náà léraléra:
+Fún àwọn ẹrù irinṣẹ́/àyíká-ọ̀rọ̀ tí ó ní àbárí, àkójọpọ̀ aiyipada 67router to àwọn ẹ̀rọ náà léraléra:
 
 ```txt
 RTK -> Caveman
@@ -530,12 +530,12 @@ kúrò, kì í jẹ́ àṣìṣe láéláé; àṣàyàn tí kò yọrí sí ar
 a ó sì fò ó gẹ́gẹ́ bí `no_styles`), ó so àwọn ìtọ́nisọ́nà tí a yàn pọ̀ ní ìtòlẹ́sẹẹsẹ àkójọ,
 ó fi gbólóhùn ààlà kún un **lẹ́ẹ̀kan ṣoṣo** (pẹ̀lú gbólóhùn ààbò, `SAFETY_BOUNDARIES` tàbí
 ìtumọ̀ rẹ̀, nígbà tí a bá yan `less-code` tàbí `ponytail`), ó sì bẹ̀rẹ̀ block náà pẹ̀lú
-àmì idempotency kan ṣoṣo (`[OmniRoute Output Styles]`), nítorí náà fífi í sílò lẹ́ẹ̀kan sí i
+àmì idempotency kan ṣoṣo (`[67router Output Styles]`), nítorí náà fífi í sílò lẹ́ẹ̀kan sí i
 kò ní ṣe ohunkóhun. Nígbà tí èdè tí a yanjú (wo Àṣàyàn èdè ní ìsàlẹ̀) bá ní ìtumọ̀,
 ìtọ́nisọ́nà tí a ṣe sí àdúgbò ni a ó fi sínú rẹ̀ dípò ti Gẹ̀ẹ́sì.
 
 Lórí body tí ó ní array `messages` tí kò ṣófo, àyẹ̀wò idempotency máa ń ṣiṣẹ́ ṣáájú
-content bypass: nígbà tí àmì `[OmniRoute Output Styles]` bá ti wà nínú field `system`
+content bypass: nígbà tí àmì `[67router Output Styles]` bá ti wà nínú field `system`
 ìpele-òkè (string kan tàbí array content-block) tàbí nínú system message tí content rẹ̀
 jẹ́ string, a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí `already_applied`, kò sì ní sí àyẹ̀wò
 keyword kankan. Bí kò bá rí bẹ́ẹ̀, content bypass kan (`shouldBypassCavemanOutputMode()`
@@ -564,7 +564,7 @@ tí ó bá rí:
 Lórí body tí kò ní array `messages` (tàbí tí ó ní èyí tí ó ṣófo), kò sí content bypass
 tí yóò ṣiṣẹ́, a kò sì ní ṣàyẹ̀wò field `system` ìpele-òkè. A ó fi block náà kún un lẹ́yìn
 ọ̀rọ̀ field `instructions` tí ó jẹ́ string, àyàfi bí field náà bá ti ní àmì
-`[OmniRoute Output Styles]`, nígbà náà a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí
+`[67router Output Styles]`, nígbà náà a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí
 `already_applied`. Nígbà tí body kò bá ní field `instructions` tí ó jẹ́ string ṣùgbọ́n
 ó ní `input` (string kan tàbí array), block náà yóò di `instructions`, yóò sì rọ́pò iye
 tí kì í ṣe string èyíkéyìí tí field náà ní tẹ́lẹ̀. Body tí kò ní field `instructions`
@@ -593,8 +593,8 @@ config compression máa ń tọ́jú àṣàyàn náà bí:
 Ìbámu-sẹ́yìn: nígbà tí `outputStyles` bá ṣófo, setting àtijọ́
 `cavemanOutputMode.enabled` máa ń darí sí `terse-prose` ní
 `cavemanOutputMode.intensity`. Block náà yóò bẹ̀rẹ̀ pẹ̀lú àmì
-`[OmniRoute Output Styles]`, níbi tí injector àtijọ́ `applyCavemanOutputMode()` ti kọ
-`[OmniRoute Caveman Output Mode]`. Ní ìsàlẹ̀ àmì náà, ọ̀rọ̀ náà bá injection àtijọ́ mu
+`[67router Output Styles]`, níbi tí injector àtijọ́ `applyCavemanOutputMode()` ti kọ
+`[67router Caveman Output Mode]`. Ní ìsàlẹ̀ àmì náà, ọ̀rọ̀ náà bá injection àtijọ́ mu
 ní en, pt-BR, es, de, fr, it, ru, id àti vi; ní ja àti zh ó ní àyè àfikún kan ṣáájú
 gbólóhùn ààlà náà. `terse-prose` ní ìtumọ̀ sí pt-BR, es, de, fr, it, ru, zh, ja, id àti
 vi, nítorí náà request tí èdè tí a yanjú fún un jẹ́ `hu` máa ń gba ọ̀rọ̀ Gẹ̀ẹ́sì níbi tí

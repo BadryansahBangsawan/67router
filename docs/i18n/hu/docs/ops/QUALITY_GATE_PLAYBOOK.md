@@ -4,7 +4,7 @@
 
 ---
 
-> **Mi ez a dokumentum?** Az OmniRoute minőségkapu-rendszerének kritikai értékelése,
+> **Mi ez a dokumentum?** Az 67router minőségkapu-rendszerének kritikai értékelése,
 > összehasonlítva az iparági bevált gyakorlatokkal, **valamint** az összes minőségi
 > ellenőrzési pont átfogó katalógusa és egy **eszközfüggetlen replikációs terv**, amelynek
 > segítségével ugyanez a rendszer bármely projektre alkalmazható. A tényleges adattár állapota
@@ -102,62 +102,62 @@ Az alábbi 12 kategória újrafelhasználható formában alkotja a „minőségb
 
 ### 1. Stílus és formázás (determinisztikus, gyors)
 
-- **OmniRoute:** Prettier + ESLint a lint-staged segítségével (pre-commit), 2 szóköz/dupla idézőjelek/100 oszlop.
+- **67router:** Prettier + ESLint a lint-staged segítségével (pre-commit), 2 szóköz/dupla idézőjelek/100 oszlop.
 - **Általános:** egy automatikus javításra képes formázó + egy linter, amelyek pre-commit során futnak az előkészített fájlokon.
 
 ### 2. Típusok
 
-- **OmniRoute:** `typecheck:core` (blokkoló) + `typecheck:noimplicit:core` (tájékoztató) + `type-coverage` fokozatosan szigorított 92,17%-os küszöbértékkel + fájlonkénti any-keret.
+- **67router:** `typecheck:core` (blokkoló) + `typecheck:noimplicit:core` (tájékoztató) + `type-coverage` fokozatosan szigorított 92,17%-os küszöbértékkel + fájlonkénti any-keret.
 - **Általános:** szigorú típusellenőrzés a CI-ban + fokozatosan szigorított típuslefedettségi mérőszám + fájlonkénti `any`-/kiskapu-keret.
 
 ### 3. Tesztek (intenzitás)
 
-- **OmniRoute:** 2, egymást nem átfedő futtató (natív Node + vitest), 8 szegmens, globális lefedettség: 60/60/60/60 + fokozatosan szigorított ~76%-os küszöb + **8 modulonkénti minimumérték a kritikus modulokhoz** + éjszakai tulajdonságalapú tesztek + éjszakai **mutációs tesztelés**.
+- **67router:** 2, egymást nem átfedő futtató (natív Node + vitest), 8 szegmens, globális lefedettség: 60/60/60/60 + fokozatosan szigorított ~76%-os küszöb + **8 modulonkénti minimumérték a kritikus modulokhoz** + éjszakai tulajdonságalapú tesztek + éjszakai **mutációs tesztelés**.
 - **Általános:** tesztfuttató(k) + **abszolút** lefedettségi minimumérték (a nulla ellen) + lefedettségi **szigorítás** (a visszaesés ellen) + **modulonkénti minimumértékek a magas kockázatú kódhoz** (a Goodhart-hatás ellen) + tulajdonságalapú tesztelés a tiszta logikához + éjszakai **mutációs tesztelés** mint a tesztminőség valódi mérőszáma.
 
 ### 4. Tesztelési szabályzat (kijátszás ellen)
 
-- **OmniRoute:** `pr-test-policy` (az éles kódhoz teszt szükséges), `check-test-masking` (blokkolja a gyengített ellenőrzéseket), `pr-evidence` (a sikerességi állításhoz bizonyítékblokk szükséges), `test-discovery` (minden tesztet begyűjt valamelyik futtató).
+- **67router:** `pr-test-policy` (az éles kódhoz teszt szükséges), `check-test-masking` (blokkolja a gyengített ellenőrzéseket), `pr-evidence` (a sikerességi állításhoz bizonyítékblokk szükséges), `test-discovery` (minden tesztet begyűjt valamelyik futtató).
 - **Általános:** „új kód ⇒ új teszt” ellenőrzési kapu + eltávolított ellenőrzéseket/tautológiákat észlelő eszköz + bizonyítékkövetelmény (TDD vagy élő teszt) + annak garantálása, hogy egyetlen teszt se maradjon gazdátlanul a globmintákon kívül.
 
 ### 5. Komplexitás és kódállapot (fokozatos szigorítások)
 
-- **OmniRoute:** ESLint-figyelmeztetések (3769↓), jscpd-duplikáció (5,72%↓), ciklomatikus komplexitás + maximális sorszám (1800↓), kognitív komplexitás sonarjs használatával (753↓), holt kód/nem használt exportok knip használatával (339↓), fájlonkénti fájlméret (befagyasztott, csak csökkenthető), körkörös függőségek (egyedi Tarjan-algoritmus, blokkoló).
+- **67router:** ESLint-figyelmeztetések (3769↓), jscpd-duplikáció (5,72%↓), ciklomatikus komplexitás + maximális sorszám (1800↓), kognitív komplexitás sonarjs használatával (753↓), holt kód/nem használt exportok knip használatával (339↓), fájlonkénti fájlméret (befagyasztott, csak csökkenthető), körkörös függőségek (egyedi Tarjan-algoritmus, blokkoló).
 - **Általános:** minden kódállapot-mérőszám fokozatos szigorítása (figyelmeztetések, duplikáció, ciklomatikus **és** kognitív komplexitás, holt kód, fájlméret, importálási ciklusok). Az irány mindig: „ne legyen visszaesés”.
 
 ### 6. Statikus biztonság (SAST + titkos adatok)
 
-- **OmniRoute:** CodeQL (a riasztások szigorítási küszöbe = 0), gitleaks (`[extend] useDefault=true` — kritikus fontosságú!), SonarQube, egyedi biztonsági szabályok (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (a riasztások szigorítási küszöbe = 0), gitleaks (`[extend] useDefault=true` — kritikus fontosságú!), SonarQube, egyedi biztonsági szabályok (public-creds, error-helper, route-guard-membership, route-validation).
 - **Általános:** SAST (CodeQL/Sonar/semgrep) riasztási szigorítással + titokszkenner **örökölt alapértelmezett szabálykészlettel** (az alapértelmezést felülíró egyedi konfiguráció = vakfolt) + projektspecifikus Hard Rule biztonsági kapuk.
 
 ### 7. Ellátási lánc (függőségek)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-engedélyezési lista), lockfile-lint (HTTPS+sha512+registry), `check-deps` a slopsquatting ellen (engedélyezési lista + kor ≥72 óra).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-engedélyezési lista), lockfile-lint (HTTPS+sha512+registry), `check-deps` a slopsquatting ellen (engedélyezési lista + kor ≥72 óra).
 - **Általános:** több forrást használó SCA + licencengedélyezési lista + zárolási fájl integritásának ellenőrzése + függőségi engedélyezési lista kor-/typosquatting-ellenőrzéssel + csoportosított frissítéseket kezelő bot.
 
 ### 8. Ellátási lánc (build és kiadás)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA-eredetigazolás (`--provenance`), OpenSSF Scorecard (hetente), munkafolyamatok megerősítése (zizmor: artipacked→`persist-credentials:false`, gyorsítótár-mérgezés, tokenjogosultságok).
+- **67router:** SBOM (CycloneDX + syft), SLSA-eredetigazolás (`--provenance`), OpenSSF Scorecard (hetente), munkafolyamatok megerősítése (zizmor: artipacked→`persist-credentials:false`, gyorsítótár-mérgezés, tokenjogosultságok).
 - **Általános:** SBOM létrehozása közzétételkor + aláírt eredetigazolás (SLSA L2+) + ütemezett Scorecard + minden munkafolyamat megerősítése (minimális jogosultságú tokenek, ne legyenek megőrzött hitelesítő adatok a módosításokat nem feltöltő checkout esetén, az actionök SHA alapján rögzítve).
 
 ### 9. Szerződések és API
 
-- **OmniRoute:** oasdiff (törő OpenAPI-változások), schemathesis (éjszakai szerződés-fuzzolás), openapi-coverage (dokumentált útvonalak százalékos aránya, fokozatosan szigorított 38,3%), openapi-security-tiers (specifikáció és útvonalvédelem összevetése).
+- **67router:** oasdiff (törő OpenAPI-változások), schemathesis (éjszakai szerződés-fuzzolás), openapi-coverage (dokumentált útvonalak százalékos aránya, fokozatosan szigorított 38,3%), openapi-security-tiers (specifikáció és útvonalvédelem összevetése).
 - **Általános:** törő változásokat észlelő szerződés-összehasonlítás (oasdiff/buf) + specifikáció szerinti tulajdonságalapú fuzzolás (schemathesis) + fokozatosan szigorított dokumentációs lefedettség + a specifikáció és a kód konzisztenciája.
 
 ### 10. Dokumentáció és i18n (elavulás ellen)
 
-- **OmniRoute:** docs-sync (tükrözött verziók), docs-counts-sync (a dokumentációban és a kódban szereplő számok összevetése), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + fokozatosan szigorított 80,1%).
+- **67router:** docs-sync (tükrözött verziók), docs-counts-sync (a dokumentációban és a kódban szereplő számok összevetése), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + fokozatosan szigorított 80,1%).
 - **Általános:** verziók/számok/környezeti változók szinkronizálása a dokumentáció és a kód között (ellenőrzési kapu, nem bizalmi alap) + belső hivatkozások ellenőrzése + fokozatosan szigorított i18n-lefedettség.
 
 ### 11. Hallucináció elleni védelem / konzisztencia (a ritka kategória)
 
-- **OmniRoute:** known-symbols (sztringalapú diszpécselés ⇒ létező szimbólum), provider-consistency, fetch-targets (kliensoldali fetch ⇒ valós útvonal), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (sztringalapú diszpécselés ⇒ létező szimbólum), provider-consistency, fetch-targets (kliensoldali fetch ⇒ valós útvonal), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Általános:** minden „duplikált igazságforráshoz” (regiszter, sztringalapú diszpécselés, rétegek közötti hivatkozások) olyan kapu, amely bizonyítja, hogy mindkét oldal egyezik. Ez észleli azt az elavulást, amelyet a típusellenőrzés és a tesztek nem.
 
 ### 12. Ellenálló képesség és szakterület (termékspecifikus)
 
-- **OmniRoute:** chaos (hibainjektálás), heap-growth (memóriaszivárgás), k6 (tartósterheléses teszt), promptfoo+garak (LLM-red team az OWASP LLM Top 10 alapján), a reziliencia 3 törvénye (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (hibainjektálás), heap-growth (memóriaszivárgás), k6 (tartósterheléses teszt), promptfoo+garak (LLM-red team az OWASP LLM Top 10 alapján), a reziliencia 3 törvénye (circuit-breaker/cooldown/lockout).
 - **Általános:** azonosítsd a **saját** szakterületed meghibásodási módjait, és mindegyikhez legyen ellenőrzési kapu — még ha csak éjszakánként fut is. AI-alkalmazásoknál: injektálás elleni red team tesztelés. Elosztott rendszereknél: káoszteszt + szivárgásteszt + tartósterheléses teszt.
 
 ---

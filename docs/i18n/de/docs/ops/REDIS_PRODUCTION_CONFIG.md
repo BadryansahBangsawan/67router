@@ -6,7 +6,7 @@
 
 ## Übersicht
 
-Redis ist eine **optionale, nicht zwingende Abhängigkeit** in OmniRoute — die Anwendung arbeitet bei nicht verfügbarem Redis mit eingeschränkter Funktionalität weiter (In-Memory-
+Redis ist eine **optionale, nicht zwingende Abhängigkeit** in 67router — die Anwendung arbeitet bei nicht verfügbarem Redis mit eingeschränkter Funktionalität weiter (In-Memory-
 Fallbacks). In Produktionsumgebungen reduziert die Optimierung von Redis die Latenz für vier unterschiedliche
 Workloads:
 
@@ -17,7 +17,7 @@ Workloads:
 | Kontingentspeicher                | `redisQuotaStore.ts`          | Separates `getRedisClient(url)`-Singleton                          | `<prefix>quota:*` pro Instanz konfigurierbar                   |
 | Circuit Breaker für das Aufwärmen | `redisCircuitBreakerStore.ts` | Separater Client in `circuitBreakerFactory.ts`                     | `<prefix>warmup:cb:<connectionId>`                             |
 
-Alle vier Workloads verwenden dasselbe Namespace-Präfix, damit OmniRoute zusammen mit anderen Anwendungen auf einer
+Alle vier Workloads verwenden dasselbe Namespace-Präfix, damit 67router zusammen mit anderen Anwendungen auf einer
 einzelnen Redis-Instanz betrieben werden kann (z. B. `127.0.0.1:6379`). Siehe [Schlüssel-Namespaces](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ einzelnen Redis-Instanz betrieben werden kann (z. B. `127.0.0.1:6379`). Siehe [S
 
 ## Schlüssel-Namespaces
 
-OmniRoute verwendet eine Redis-Instanz gemeinsam mit allen anderen Anwendungen, die auf dem Host ausgeführt werden. Ohne einen Namespace
+67router verwendet eine Redis-Instanz gemeinsam mit allen anderen Anwendungen, die auf dem Host ausgeführt werden. Ohne einen Namespace
 könnten Schlüssel wie `auth:api_key:<sha256>` oder `rl:*` mit Schlüsseln anderer Anwendungen kollidieren,
 die dasselbe Redis verwenden (diese Instanz führt Redis auf `127.0.0.1:6379` zusammen mit anderen Diensten aus).
 
-Setzen Sie `REDIS_KEY_PREFIX` auf eine nicht leere Zeichenfolge, um **jedem** OmniRoute-Schlüssel ein Präfix voranzustellen:
+Setzen Sie `REDIS_KEY_PREFIX` auf eine nicht leere Zeichenfolge, um **jedem** 67router-Schlüssel ein Präfix voranzustellen:
 
 ```bash
-# .env — alle OmniRoute-Schlüssel werden zu omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — alle 67router-Schlüssel werden zu omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # Platz für den Seiten-Cache des Betriebssystems lassen
 maxmemory-policy allkeys-lru         # veraltete Auth-Cache-Einträge bei Speicherdruck entfernen
 
-# Persistenz (optional — OmniRoute ist auch ohne sie absturzsicher)
+# Persistenz (optional — 67router ist auch ohne sie absturzsicher)
 save 300 1                           # mindestens alle 5 Minuten einen Snapshot erstellen, wenn sich ≥1 Schlüssel geändert hat
 appendonly no                        # AOF nicht erforderlich; Daten können neu erzeugt werden
 appendfsync no                       # kein fsync-Mehraufwand (RDB ist ausreichend)

@@ -4,7 +4,7 @@
 
 ---
 
-Lorsque OmniRoute s’exécute dans Docker, le processus standard « Importer depuis le trousseau Zed » échoue, car le conteneur ne peut pas accéder au service de trousseau du système d’exploitation hôte (`libsecret` sous Linux, Trousseaux d’accès sous macOS, Gestionnaire d’informations d’identification sous Windows) et les répertoires de configuration de Zed présents sur le système de fichiers hôte ne sont pas visibles par défaut à l’intérieur du conteneur.
+Lorsque 67router s’exécute dans Docker, le processus standard « Importer depuis le trousseau Zed » échoue, car le conteneur ne peut pas accéder au service de trousseau du système d’exploitation hôte (`libsecret` sous Linux, Trousseaux d’accès sous macOS, Gestionnaire d’informations d’identification sous Windows) et les répertoires de configuration de Zed présents sur le système de fichiers hôte ne sont pas visibles par défaut à l’intérieur du conteneur.
 
 ## Pourquoi l’importation depuis le trousseau échoue dans Docker
 
@@ -13,7 +13,7 @@ Deux problèmes bloquants surviennent à l’intérieur d’un conteneur :
 1. **Isolation du système de fichiers** — `isZedInstalled()` recherche `~/.config/zed` (Linux), `~/Library/Application Support/Zed` (macOS) ou l’équivalent sous Windows. Ces chemins se trouvent sur l’hôte et ne sont pas accessibles à moins d’être explicitement montés en tant que volumes.
 2. **Isolation IPC** — Même lorsque le répertoire de configuration est monté, le module natif `keytar` communique avec le service de trousseau du système d’exploitation via un socket Unix ou une session D-Bus. Aucun des deux n’est relié par défaut au conteneur, de sorte que la lecture des identifiants échoue systématiquement.
 
-OmniRoute détecte l’environnement Docker à l’aide de deux heuristiques :
+67router détecte l’environnement Docker à l’aide de deux heuristiques :
 
 - Présence de `/.dockerenv` (écrit par le démon Docker au démarrage du conteneur).
 - Présence de la chaîne `docker` dans `/proc/1/cgroup` (cgroup v1 sous Linux).
@@ -23,7 +23,7 @@ Lorsque l’une de ces heuristiques se déclenche, la route d’importation renv
 ## Utilisation de l’onglet Importation manuelle du jeton
 
 1. Ouvrez **Tableau de bord → Fournisseurs → Zed**.
-2. Le panneau **Importation manuelle du jeton** apparaît sous la carte d’importation depuis le trousseau. Lorsqu’OmniRoute détecte Docker, ce panneau se déploie automatiquement après la première tentative infructueuse d’importation depuis le trousseau.
+2. Le panneau **Importation manuelle du jeton** apparaît sous la carte d’importation depuis le trousseau. Lorsque 67router détecte Docker, ce panneau se déploie automatiquement après la première tentative infructueuse d’importation depuis le trousseau.
 3. Sélectionnez le fournisseur dans la liste déroulante (OpenAI, Anthropic, Google, Mistral, xAI, OpenRouter ou DeepSeek).
 4. Collez la clé API dans le champ de mot de passe.
 5. Cliquez sur **Importer**.

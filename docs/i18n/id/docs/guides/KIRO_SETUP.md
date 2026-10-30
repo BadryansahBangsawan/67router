@@ -4,7 +4,7 @@
 
 ---
 
-Panduan ini membahas cara menambahkan akun Kiro (asisten pengodean AI yang dihosting AWS) ke OmniRoute,
+Panduan ini membahas cara menambahkan akun Kiro (asisten pengodean AI yang dihosting AWS) ke 67router,
 dengan fokus pada menjalankan beberapa akun secara bersamaan tanpa konflik sesi.
 
 ---
@@ -22,11 +22,11 @@ akun pertama.
 
 ---
 
-## Cara OmniRoute Mengatasi Hal Ini (v3.8.0+)
+## Cara 67router Mengatasi Hal Ini (v3.8.0+)
 
-Mulai dari v3.8.0, OmniRoute memanggil `registerClient()` (AWS SSO OIDC) selama setiap
+Mulai dari v3.8.0, 67router memanggil `registerClient()` (AWS SSO OIDC) selama setiap
 impor koneksi Kiro. Hal ini memberikan pendaftaran klien OIDC khusus kepada setiap koneksi
-OmniRoute. Karena setiap pendaftaran klien bersifat independen, penyegaran atau
+67router. Karena setiap pendaftaran klien bersifat independen, penyegaran atau
 autentikasi ulang satu akun tidak memengaruhi token penyegaran akun lainnya.
 
 Isolasi berlaku untuk metode impor token penyegaran, sementara autentikasi kunci API sepenuhnya
@@ -59,7 +59,7 @@ menerima pendaftaran kliennya sendiri secara otomatis.
 
 ### Prasyarat
 
-- OmniRoute v3.8.0 atau yang lebih baru.
+- 67router v3.8.0 atau yang lebih baru.
 - Akun Kiro yang berfungsi (email + kata sandi, atau login Google maupun GitHub).
 - Secara opsional, akun Kiro kedua.
 
@@ -70,7 +70,7 @@ menerima pendaftaran kliennya sendiri secara otomatis.
    - **Impor Token** — tempelkan token penyegaran yang diawali dengan `aorAAAAAG`.
    - **Kunci API** — tempelkan kunci API Kiro / CodeWhisperer berjangka panjang.
    - **Login Google / GitHub** — selesaikan alur OAuth di browser.
-   - **Impor Otomatis** — klik tombol tersebut; OmniRoute membaca kredensial dari
+   - **Impor Otomatis** — klik tombol tersebut; 67router membaca kredensial dari
      database kiro-cli lokal atau `~/.aws/sso/cache`.
 3. Koneksi disimpan. Alur token penyegaran secara otomatis mendaftarkan klien
    OIDC khusus. Alur kunci API memvalidasi kunci dengan AWS dan tidak menyimpan token penyegaran.
@@ -127,7 +127,7 @@ tidak menggunakan penyegaran OAuth, sehingga menghindari pembatalan sesi OIDC be
 2. Pilih **API Key**.
 3. Tempelkan API key dan pilih wilayah AWS: **Deteksi otomatis** (default), **AS Timur
    (Virginia Utara)**, atau **Eropa (Frankfurt)**.
-4. OmniRoute memvalidasi key tersebut dan menyimpan koneksi yang ditetapkan ke wilayah tempat
+4. 67router memvalidasi key tersebut dan menyimpan koneksi yang ditetapkan ke wilayah tempat
    key tersebut berfungsi.
 
 ### API
@@ -177,7 +177,7 @@ ke `https://q.<region>.amazonaws.com/generateAssistantResponse` — termasuk `us
 ## Kedaluwarsa Klien OIDC
 
 Klien publik AWS SSO OIDC biasanya kedaluwarsa setelah 90 hari
-(`clientSecretExpiresAt`). OmniRoute menyimpan timestamp ini dalam `providerSpecificData`
+(`clientSecretExpiresAt`). 67router menyimpan timestamp ini dalam `providerSpecificData`
 untuk observabilitas. Jika suatu koneksi berhenti melakukan refresh setelah sekitar 90 hari, impor ulang
 koneksi tersebut untuk mendapatkan registrasi klien OIDC baru. Registrasi ulang otomatis saat
 kedaluwarsa direncanakan sebagai peningkatan di masa mendatang.
@@ -198,7 +198,7 @@ melalui AWS SSO OIDC.
 ### Impor gagal dengan pesan "Token validation failed"
 
 - Pastikan refresh token diawali dengan `aorAAAAAG`.
-- Pastikan OmniRoute dapat mengakses `https://oidc.us-east-1.amazonaws.com` (atau region yang
+- Pastikan 67router dapat mengakses `https://oidc.us-east-1.amazonaws.com` (atau region yang
   dikonfigurasi). Jika Anda berada di balik proxy perusahaan, atur proxy tingkat provider di
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ melalui AWS SSO OIDC.
 
 - Pastikan key tersebut adalah API key Kiro / CodeWhisperer, bukan refresh token.
 - Pastikan region AWS sesuai dengan key/akun. `us-east-1` adalah nilai default.
-- Key harus dapat memanggil `ListAvailableProfiles`; jika tidak, OmniRoute tidak dapat
+- Key harus dapat memanggil `ListAvailableProfiles`; jika tidak, 67router tidak dapat
   menemukan `profileArn` yang diperlukan.
 
 Untuk masalah lainnya, lihat [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) utama.

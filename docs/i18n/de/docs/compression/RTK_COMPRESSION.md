@@ -4,7 +4,7 @@
 
 ---
 
-Die RTK-Komprimierung ist OmniRoutes befehlsorientierte Komprimierungs-Engine für Terminal- und Tool-Ausgaben. Sie ist
+Die RTK-Komprimierung ist 67routers befehlsorientierte Komprimierungs-Engine für Terminal- und Tool-Ausgaben. Sie ist
 für Sitzungen mit Coding-Agenten konzipiert, bei denen der Kontextzuwachs hauptsächlich durch Testprotokolle, Build-Ausgaben,
 Ausgaben von Paketmanagern, Shell-Transkripte, Docker-Ausgaben, git-Ausgaben und Stacktraces entsteht.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Diese Reihenfolge komprimiert zuerst störende Maschinenausgaben und lässt Caveman anschließend die verbleibenden Fließtexte verdichten.
 
 Das vorgelagerte RTK-Projekt gibt Einsparungen von `60-90%` bei Befehlsausgaben an. Die Beispielsitzung in seiner README reduziert sich von
-`~118,000` Standard-Tokens auf `~23,900` RTK-Tokens, was einer Einsparung von `79.7%` (`~80%`) entspricht. OmniRoute verwendet
+`~118,000` Standard-Tokens auf `~23,900` RTK-Tokens, was einer Einsparung von `79.7%` (`~80%`) entspricht. 67router verwendet
 diesen vorgelagerten Durchschnitt für die Berechnung der gestapelten Einsparungen zusammen mit der Caveman-Eingabekomprimierung:
 
 ```txt
@@ -54,7 +54,7 @@ RTK lädt Filter in dieser Reihenfolge:
 2. Globale Filter aus `DATA_DIR/rtk/filters.toml` und `DATA_DIR/rtk/filters.json`.
 3. Integrierte Filter aus `open-sse/services/compression/engines/rtk/filters/`.
 
-Innerhalb desselben Gültigkeitsbereichs haben RTK-TOML-Filter nach Schema v1 Vorrang vor OmniRoute-JSON-Filtern. TOML-
+Innerhalb desselben Gültigkeitsbereichs haben RTK-TOML-Filter nach Schema v1 Vorrang vor 67router-JSON-Filtern. TOML-
 `match_command`-Ausdrücke werden vor der Prüfung des Befehlstyps ausgewertet, sodass ein importierter befehlsspezifischer
 Filter einen allgemeineren Filter im selben Gültigkeitsbereich überschreiben kann. Der Projektbereich hat weiterhin Vorrang vor dem globalen
 Bereich, unabhängig vom Dateiformat.
@@ -84,7 +84,7 @@ Benutzerdefinierte Filter können aus einem einzelnen Filterobjekt oder einem Ar
 
 ## Kompatibilität mit RTK-TOML-Schema v1
 
-OmniRoute kann deklarative Filterdateien gemäß RTK-TOML-Schema v1 parsen, validieren, testen und installieren.
+67router kann deklarative Filterdateien gemäß RTK-TOML-Schema v1 parsen, validieren, testen und installieren.
 Die unterstützten Felder sind `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` sowie eingebettete Tests vom Typ `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Unbekannte Felder, ungültige oder unsichere reguläre Ausdrücke, gleichzeitig 
 validiert, aber nicht installiert oder geladen werden. Fehler beim Laden benutzerdefinierter Dateien werden weiterhin
 nach dem Fail-open-Prinzip behandelt: Die ungültige Datei wird übersprungen, und die übrigen Filter funktionieren weiterhin.
 
-OmniRoute empfängt die Werkzeugausgabe, nachdem der Client sie bereits erfasst hat, daher kann `filter_stderr = true`
+67router empfängt die Werkzeugausgabe, nachdem der Client sie bereits erfasst hat, daher kann `filter_stderr = true`
 die Prozesserfassung nicht ändern. Das Feld wird als wirkungslose Operation akzeptiert, und die Validierung gibt eine Warnung zurück.
 Dies wird bewusst als **Kompatibilität mit RTK-TOML-Schema v1** und nicht als vollständige Kompatibilität
 mit der ausführbaren RTK-Datei, Shell-Hooks, Rust-Befehlsimplementierungen oder der Struktur des Trust-Stores bezeichnet.

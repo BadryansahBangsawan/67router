@@ -6,7 +6,7 @@
 
 ## Muhtasari
 
-OmniRoute sasa inatumia modi tatu za upelekaji kwa `/api/v1/relay/chat/completions`:
+67router sasa inatumia modi tatu za upelekaji kwa `/api/v1/relay/chat/completions`:
 
 - `ts`: Tumia kipelekaji cha TypeScript ndani ya mchakato.
 - `bifrost`: Lazimisha matumizi ya lango la Bifrost.
@@ -45,12 +45,12 @@ Ikiwa kwa sasa unalinganisha 9router/CLIPROXYAPI:
 
 ## Mkataba wa mpaka wa backend
 
-Mpaka thabiti wa bidhaa ni API ya upelekaji ya OmniRoute, si utekelezaji wa dashibodi. Dashibodi ya Next.js inaweza kusakinisha, kusanidi, na kusimamia huduma za ndani, lakini uelekezaji wa maombi unapaswa kuingia kupitia API ya upelekaji na kukabidhiwa nyuma ya mpaka huo.
+Mpaka thabiti wa bidhaa ni API ya upelekaji ya 67router, si utekelezaji wa dashibodi. Dashibodi ya Next.js inaweza kusakinisha, kusanidi, na kusimamia huduma za ndani, lakini uelekezaji wa maombi unapaswa kuingia kupitia API ya upelekaji na kukabidhiwa nyuma ya mpaka huo.
 
 Chaguo za muda mrefu za backend:
 
 - Weka kipelekaji cha TypeScript kama njia ya sera ya ndani ya mchakato na ya akiba. Uthibitishaji, orodha za ruhusa, urekebishaji wa maombi, uhasibu, na ukaguzi wa usalama vibaki hapa kabla ya kukabidhi kwa backend yoyote.
-- Tumia Bifrost kama sidecar inayopendelewa ya Tier-1 yenye uwezo wa juu wa uchakataji wakati usambazaji unahitaji utofauti mdogo wa uelekezaji, mzunguko wa watoa huduma uliowekwa kati, au upanuzi katika nakala nyingi za OmniRoute.
+- Tumia Bifrost kama sidecar inayopendelewa ya Tier-1 yenye uwezo wa juu wa uchakataji wakati usambazaji unahitaji utofauti mdogo wa uelekezaji, mzunguko wa watoa huduma uliowekwa kati, au upanuzi katika nakala nyingi za 67router.
 - Weka 9router na CLIPROXYAPI kama huduma za uoanifu zilizopachikwa. Huendeshwa kama michakato ya ndani inayosimamiwa na ni muhimu wakati tabia zake za mtoa huduma/CLI ndizo adapta inayohitajika, lakini hazipaswi kuwa injini chaguo-msingi ya uelekezaji ya Tier-1.
 - Usiruhusu dashibodi ipitishe URL holela za huduma kwenye njia inayotumika sana. URL zinazotolewa na UI ni ingizo za usanidi; msimbo wa uelekezaji unapaswa kutatua backend zilizosajiliwa na zilizokaguliwa kiafya kutoka kwenye mipangilio ya upande wa seva na hali ya msimamizi.
 - Kwa sasa, pendelea HTTP ya loopback kwa huduma zinazosimamiwa kwa sababu michakato inayodhibitiwa tayari hutoa API zinazooana na HTTP, kilinda njia kinaweza kukagua mpaka, na tabia ya kushindwa/kurudi kwenye njia ya akiba inaonekana katika kumbukumbu za maombi. Usafirishaji wa baadaye wa SDK au soketi unafaa kuongezwa tu ikiwa unapunguza kwa kiwango kinachopimika ucheleweshaji wa uelekezaji wa p99 bila kudhoofisha utengaji au semantiki za njia ya akiba.

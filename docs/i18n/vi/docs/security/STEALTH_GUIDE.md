@@ -8,11 +8,11 @@
 > **Cập nhật lần cuối:** 2026-09-02 — v3.8.51
 > **Đối tượng:** Các kỹ sư duy trì những tích hợp ẩn mình dành riêng cho từng nhà cung cấp.
 
-OmniRoute tích hợp với các nhà cung cấp có hệ thống biên chủ động nhận diện dấu vân tay của các client không chính thức (TLS JA3/JA4, thứ tự header, cấu trúc phần thân JSON, token toàn vẹn). Trang này mô tả các bề mặt ẩn mình mà OmniRoute cung cấp và nơi chúng được triển khai.
+67router tích hợp với các nhà cung cấp có hệ thống biên chủ động nhận diện dấu vân tay của các client không chính thức (TLS JA3/JA4, thứ tự header, cấu trúc phần thân JSON, token toàn vẹn). Trang này mô tả các bề mặt ẩn mình mà 67router cung cấp và nơi chúng được triển khai.
 
 ## Thông báo Pháp lý và Đạo đức
 
-Các tính năng ẩn mình tồn tại để OmniRoute có thể hoạt động như một lớp tương thích giữa các tài khoản chính thức do người dùng sở hữu (Claude Code CLI, Codex, Antigravity, Cursor, v.v.) và API hợp nhất của OmniRoute. Chúng **không** nhằm mục đích né tránh cơ chế phát hiện gian lận, chia sẻ thông tin xác thực hoặc vi phạm Điều khoản Dịch vụ của nhà cung cấp. Đội ngũ bảo trì yêu cầu các đơn vị vận hành tuân thủ ToS của thượng nguồn mà họ đã chấp thuận khi tạo tài khoản.
+Các tính năng ẩn mình tồn tại để 67router có thể hoạt động như một lớp tương thích giữa các tài khoản chính thức do người dùng sở hữu (Claude Code CLI, Codex, Antigravity, Cursor, v.v.) và API hợp nhất của 67router. Chúng **không** nhằm mục đích né tránh cơ chế phát hiện gian lận, chia sẻ thông tin xác thực hoặc vi phạm Điều khoản Dịch vụ của nhà cung cấp. Đội ngũ bảo trì yêu cầu các đơn vị vận hành tuân thủ ToS của thượng nguồn mà họ đã chấp thuận khi tạo tài khoản.
 
 ---
 
@@ -55,7 +55,7 @@ Các hồ sơ này được package đã ghim hỗ trợ, nhưng khả năng đ�
 
 ## Gói ẩn mình Claude Code
 
-Khi `cliCompatMode` được bật, OmniRoute định hình lại các yêu cầu Claude gửi đi để chúng không thể phân biệt được với lưu lượng từ `claude-cli`. Ba mô-đun phối hợp với nhau:
+Khi `cliCompatMode` được bật, 67router định hình lại các yêu cầu Claude gửi đi để chúng không thể phân biệt được với lưu lượng từ `claude-cli`. Ba mô-đun phối hợp với nhau:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hàm băm nội dung ứng dụng khách)
 
-Kiểm tra tính toàn vẹn phía máy chủ mà Claude Code CLI chính thức tính toán thông qua Bun/Zig. OmniRoute triển khai lại bằng `xxhash-wasm`:
+Kiểm tra tính toàn vẹn phía máy chủ mà Claude Code CLI chính thức tính toán thông qua Bun/Zig. 67router triển khai lại bằng `xxhash-wasm`:
 
 1. Tuần tự hóa phần thân với phần giữ chỗ `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Các mô-đun liên quan trong cùng gói:
 
 ## Ẩn mình Antigravity
 
-Các yêu cầu Antigravity giữ nguyên từng byte văn bản của bên gọi. OmniRoute không chèn ký tự có độ rộng bằng 0 vào prompt hoặc đổi tên/chèn công cụ để bắt chước một ứng dụng khách IDE.
+Các yêu cầu Antigravity giữ nguyên từng byte văn bản của bên gọi. 67router không chèn ký tự có độ rộng bằng 0 vào prompt hoặc đổi tên/chèn công cụ để bắt chước một ứng dụng khách IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Loại bỏ các dấu hiệu của Stainless SDK (`x-stainless-lang`, `x-stainl
 
 `ANTIGRAVITY_CREDITS=always` (được sử dụng bởi `open-sse/executors/antigravity.ts`) định tuyến **mọi** yêu cầu qua phần tín dụng vượt mức Antigravity AI Credit Overages (tín dụng Google trả phí), thay vì để hạn ngạch gói miễn phí của Google giới hạn hoạt động. Điều này được ghi nhận trong tài liệu như một tính năng, nhưng đây **là loại báo cáo vi phạm Điều khoản dịch vụ phổ biến nhất mà chúng tôi ghi nhận** — nhiều tài khoản Google Ultra đã bị khóa với lỗi `403 / "service disabled for ToS violation" / insufficient_quota` sau khi chạy trong vài giờ với `=always`.
 
-Việc thực thi được tiến hành ở **phía Google**, OmniRoute không thể ngăn chặn. Tên biến môi trường và tài liệu hiện có khiến tùy chọn này có vẻ an toàn để bật; thực tế không phải vậy.
+Việc thực thi được tiến hành ở **phía Google**, 67router không thể ngăn chặn. Tên biến môi trường và tài liệu hiện có khiến tùy chọn này có vẻ an toàn để bật; thực tế không phải vậy.
 
 **Lý do điều này kích hoạt cơ chế phát hiện lạm dụng mạnh hơn so với việc chỉ sử dụng gói miễn phí:**
 
 - Hoạt động chi tiêu tự động kéo dài trên một tài khoản Google duy nhất bị đánh dấu khác với trường hợp gói miễn phí đạt hạn ngạch rồi dừng lại.
 - Tín dụng vượt mức không có giới hạn tốc độ, vì vậy một ứng dụng khách cấu hình sai có thể tiêu hết vài trăm USD trong vài phút và trông giống hoạt động bán lại khóa API hoặc lưu lượng bot.
-- Nhiều người dùng OmniRoute đồng thời sử dụng tín dụng vượt mức từ cùng một IP bên ngoài sẽ làm tín hiệu này trầm trọng hơn.
+- Nhiều người dùng 67router đồng thời sử dụng tín dụng vượt mức từ cùng một IP bên ngoài sẽ làm tín hiệu này trầm trọng hơn.
 
 **Cấu hình khuyến nghị:**
 
@@ -172,7 +172,7 @@ Bật/tắt theo từng nhà cung cấp thông qua biến môi trường (xem b�
 
 ## Proxy MITM (Antigravity, Linux/macOS/Windows)
 
-Đối với các CLI có tệp nhị phân không thể được chuyển hướng thông qua `OPENAI_BASE_URL`, OmniRoute chạy một proxy cục bộ có chức năng chấm dứt TLS. Các endpoint nằm trong `src/app/api/cli-tools/antigravity-mitm/`.
+Đối với các CLI có tệp nhị phân không thể được chuyển hướng thông qua `OPENAI_BASE_URL`, 67router chạy một proxy cục bộ có chức năng chấm dứt TLS. Các endpoint nằm trong `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Phương thức | Endpoint                                | Mục đích                                               |
 | ----------- | --------------------------------------- | ------------------------------------------------------ |
@@ -205,7 +205,7 @@ Máy chủ đích bị chặn: **`daily-cloudcode-pa.googleapis.com`** (upstream
 
 Tên tệp chứng chỉ: `omniroute-mitm.crt`. Đối chiếu dấu vân tay thông qua `getCertFingerprint()` (SHA-1 của DER).
 
-Ngoài ra, `updateNssDatabases()` cài đặt vào các cơ sở dữ liệu NSS theo từng người dùng khi `certutil` khả dụng: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, tất cả hồ sơ Firefox (bao gồm cả snap), với biệt danh **`OmniRoute MITM Root CA`**.
+Ngoài ra, `updateNssDatabases()` cài đặt vào các cơ sở dữ liệu NSS theo từng người dùng khi `certutil` khả dụng: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, tất cả hồ sơ Firefox (bao gồm cả snap), với biệt danh **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -253,7 +253,7 @@ IP của nhà cung cấp **luôn được giữ nguyên** — công tắc này c
 
 ## Làm sạch header đầu vào
 
-OmniRoute loại bỏ các header của ứng dụng khách đầu vào trước khi chuyển tiếp, để một yêu cầu đến từ Cursor không làm lộ `User-Agent: Cursor/X.Y.Z` cho máy chủ thượng nguồn Claude. Xem `src/shared/constants/upstreamHeaders.ts` để biết danh sách từ chối, được duy trì đồng bộ chặt chẽ với các schema Zod và bài kiểm thử đơn vị.
+67router loại bỏ các header của ứng dụng khách đầu vào trước khi chuyển tiếp, để một yêu cầu đến từ Cursor không làm lộ `User-Agent: Cursor/X.Y.Z` cho máy chủ thượng nguồn Claude. Xem `src/shared/constants/upstreamHeaders.ts` để biết danh sách từ chối, được duy trì đồng bộ chặt chẽ với các schema Zod và bài kiểm thử đơn vị.
 
 ---
 

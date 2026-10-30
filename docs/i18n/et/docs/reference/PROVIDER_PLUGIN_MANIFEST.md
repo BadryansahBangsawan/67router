@@ -14,7 +14,7 @@ OAuthi vaikeväärtusi, päiseid või protsessi keskkonnaolekut importimata.
 Sama manifest on HTTP kaudu saadaval aadressil
 `GET /api/v1/provider-plugin-manifest` protsessiväliselt töötavate külgprotsesside jaoks.
 
-OmniRoute edastab selle URL-i Bifrostile ja CLIProxyAPI-le
+67router edastab selle URL-i Bifrostile ja CLIProxyAPI-le
 päringupäise `X-OmniRoute-Provider-Manifest-Url` kaudu. Määrake
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, kui külgprotsess vajab kohaliku päringu päritolu
 asemel avalikku või konteinerivõrgu URL-i.
@@ -32,7 +32,7 @@ tegema tingimusteta päringu.
 
 Liigutada teenusepakkuja metaandmed pluginalepingu suunas, et madalama
 latentsusega külgprotsess saaks lõpuks kuuma päringutee üle võtta, samal ajal kui
-OmniRoute säilitab TypeScripti marsruudi reeglite jõustamise kihina ja
+67router säilitab TypeScripti marsruudi reeglite jõustamise kihina ja
 varuvariandina. Manifest on lisanduv: see ei muuda iseseisvalt päringute
 marsruutimist.
 
@@ -76,7 +76,7 @@ selle asemel et TypeScripti lähtekoodi uuesti läbi lugeda.
 | `usage-fetch`        | Kasutuse või kvoodi hankija (`getUsageForProvider`) on ühendatud.                 |
 | `usage-supported`    | Kasutus-API aktsepteerib seda teenusepakkujat (`isSupportedUsageConnection`).     |
 
-`usage-fetch` on mõeldud ainult tuvastamiseks. See näitab, et OmniRoute oskab
+`usage-fetch` on mõeldud ainult tuvastamiseks. See näitab, et 67router oskab
 teenusepakkuja kasutusandmeid lugeda; see ei aktiveeri andmete hankimist, ei muuda
 kvoodisemantikat ega tähenda, et juhtpaneeli kvoodividin on teenusepakkuja jaoks
 lubatud — seda vidinat juhib eraldi `USAGE_SUPPORTED_PROVIDERS`. Tõeallikas on

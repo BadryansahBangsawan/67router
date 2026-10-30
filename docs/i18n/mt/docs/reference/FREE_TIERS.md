@@ -9,9 +9,9 @@
 > **L-aħħar riċerka:** 2026-06-17 — riċerka fuq il-web għal kull fornitur (dokumentazzjoni uffiċjali + aħbarijiet tal-aħħar 7 ijiem, dawra ta’ 50 aġent b’verifika avversarjali) li aġġornat kull kwota tas-saff bla ħlas + ToS. **Verifika mill-ġdid parzjali 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — ara n-nota bid-data hawn taħt).
 > **Sors awtorevoli (katalgu):** `open-sse/config/freeModelCatalog.ts` (baġits għal kull mudell, b’pools de-duplikati). Iċ-ċifri tal-baġit tat-tokens hawn taħt ġejjin minn riċerka diretta fuq il-web u huma **approssimazzjoni** — ara [Metodoloġija u twissijiet](#methodology--caveats).
 
-## Fil-qosor — kemm inferenza bla ħlas jiġbor tassew OmniRoute?
+## Fil-qosor — kemm inferenza bla ħlas jiġbor tassew 67router?
 
-Dawn iċ-ċifri jiddeskrivu kontijiet separati ta’ partijiet terzi u kundizzjonijiet ta’ eliġibbiltà fil-katalgu kollu. OmniRoute ma jagħtikx dan il-baġit: trid tikseb il-kontijiet jew il-kredenzjali meħtieġa, tqabbad fornituri eliġibbli, u tirrispetta l-limiti tagħhom. Il-kapaċità li tista’ tintuża fir-realtà tista’ tkun inqas, inkluż żero fuq installazzjoni ġdida mingħajr rotta eliġibbli. Il-fornituri mmarkati `tos: avoid` huma esklużi mir-routing awtomatiku b’mod awtomatiku.
+Dawn iċ-ċifri jiddeskrivu kontijiet separati ta’ partijiet terzi u kundizzjonijiet ta’ eliġibbiltà fil-katalgu kollu. 67router ma jagħtikx dan il-baġit: trid tikseb il-kontijiet jew il-kredenzjali meħtieġa, tqabbad fornituri eliġibbli, u tirrispetta l-limiti tagħhom. Il-kapaċità li tista’ tintuża fir-realtà tista’ tkun inqas, inkluż żero fuq installazzjoni ġdida mingħajr rotta eliġibbli. Il-fornituri mmarkati `tos: avoid` huma esklużi mir-routing awtomatiku b’mod awtomatiku.
 
 **Iċċekkjat 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) joffri kreditu promozzjonali ta’ darba ta’ $5 li jeħtieġ metodu ta’ ħlas u jiskadi wara 30 jum. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) jippubblika limiti tar-rata skont il-proġett/mudell/saff; jibqa’ barra miċ-ċifra ewlenija mensili kkwantifikata.
 
@@ -80,7 +80,7 @@ krediti bla ħlas. Il-bidliet ta’ Nous huma spjegati fid-dettall fin-nota tal-
 
 ## Żewġ reġimi — l-għadd kontra d-deċiżjoni
 
-OmniRoute jwieġeb il-mistoqsija "huwa bla ħlas?" permezz ta’ żewġ reġimi li intenzjonalment jaqraw
+67router jwieġeb il-mistoqsija "huwa bla ħlas?" permezz ta’ żewġ reġimi li intenzjonalment jaqraw
 minn sorsi differenti:
 
 | Reġim            | Sors tal-verità                                                                                                                                                                              | Fejn jintuża                                                                                                                                      |
@@ -128,7 +128,7 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 
 ### ⚠️ Attenzjoni — klawżoli dwar użu personali / proxy li ta' min tivverifika (16)
 
-> L-aċċess bla ħlas tagħhom huwa reali u OmniRoute jista' jidderieġi t-traffiku lejhom; il-klawżoli hawn taħt huma sempliċement importanti li tkun taf bihom. Dawk ibbażati fuq OAuth/mingħajr ċavetta ma jistgħux jiġu kkwantifikati f'tokens, għalhekk mhumiex inklużi fiċ-ċifra ewlenija (mhux għax ma jistgħux jintużaw).
+> L-aċċess bla ħlas tagħhom huwa reali u 67router jista' jidderieġi t-traffiku lejhom; il-klawżoli hawn taħt huma sempliċement importanti li tkun taf bihom. Dawk ibbażati fuq OAuth/mingħajr ċavetta ma jistgħux jiġu kkwantifikati f'tokens, għalhekk mhumiex inklużi fiċ-ċifra ewlenija (mhux għax ma jistgħux jintużaw).
 
 | Fornitur         | Nota                                                                                                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -142,7 +142,7 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 | `fireworks`      | It-ToS jipprojbixxi b'mod espliċitu l-użu bħala proxy/intermedjarju, it-trasferimenti taċ-ċwievet tal-API u s-sottoliċenzjar (Taqsimiet 2.1 u 2.2(i)(j)); proxies personali self-hosted mhumiex…             |
 | `friendliai`     | It-Taqsima 8(e) u 8(f) tat-ToS tipprojbixxi b'mod espliċitu l-użu ta' FriendliAI bħala proxy jew il-permess ta' aċċess lil partijiet terzi fuq bażi awtonoma, u tipprojbixxi l-bejgħ mill-ġdid/…             |
 | `iflytek`        | It-Taqsima 2.4(3) tal-iFlytek Spark LLM Service Agreement tipprojbixxi b'mod espliċitu "l-użu ta' kwalunkwe metodu awtomatizzat jew programmatiku biex tiġi estratta data jew output…                        |
-| `kiro`           | Il-FAQ ta' Kiro tipprojbixxi b'mod espliċitu l-użu ma' "OpenClaw u għodod simili li jużaw oqfsa ta' partijiet terzi" — proxy tal-IA self-hosted (bħal OmniRoute) li jidderieġi…                              |
+| `kiro`           | Il-FAQ ta' Kiro tipprojbixxi b'mod espliċitu l-użu ma' "OpenClaw u għodod simili li jużaw oqfsa ta' partijiet terzi" — proxy tal-IA self-hosted (bħal 67router) li jidderieġi…                               |
 | `modal`          | It-Taqsima 1.3 tat-ToS tipprojbixxi b'mod espliċitu "il-kiri, il-bejgħ mill-ġdid jew kwalunkwe permess ieħor lil parti terza biex taċċessa jew tuża direttament is-Servizz" — il-bini ta' proxy self-hosted… |
 | `muse-spark-web` | It-ToS ta' Meta jipprojbixxi b'mod espliċitu l-aċċess awtomatizzat mingħajr permess minn qabel, ir-reverse engineering mingħajr permess bil-miktub, u l-evażjoni ta' miżuri teknoloġiċi…                     |
 | `nlpcloud`       | It-ToS jipprojbixxi b'mod espliċitu "it-twaqqif ta' proxy jew apparat ieħor li jippermetti lil oħrajn jaċċessaw is-Servizz permezz tiegħu" u jagħti biss liċenzja mhux trasferibbli,…                        |
@@ -304,7 +304,7 @@ Il-biċċa l-kbira taċ-ċifri ta' "tokens b'xejn fix-xahar" f'dan il-qasam huma
 
 - **`360ai`** — Il-freeNote inkluża "Mudelli Free 360 AI Brain b'xejn" tidher skaduta. L-aċċess attwali jirrikjedi applikazzjoni u huwa bi ħlas. It-tokens promozzjonali ta' darba (100M–250M) mill-perjodu tat-tnedija fl-2023 setgħu kienu l-bażi għal…
 - **`agentrouter`** — Il-freeNote inkluża tagħna tgħid "$200 fi krediti b'xejn mar-reġistrazzjoni." Ir-realtà attwali turi li r-reġistrazzjonijiet standard (mingħajr riferiment) jirċievu biss $100; ir-reġistrazzjonijiet permezz ta' riferiment jistgħu jiksbu $200, iżda kumment mill-komunità minn April 2026…
-- **`agy`** — Il-freeNote inkluża tagħna tgħid "(xejn)", u għalhekk timplika li m'hemm l-ebda livell b'xejn, iżda Antigravity għandha livell b'xejn li jirrikjedi OAuth. Madankollu, it-ToS jipprojbixxu espliċitament l-użu ta' dan il-livell b'xejn permezz ta' proxy bħal OmniRoute …
+- **`agy`** — Il-freeNote inkluża tagħna tgħid "(xejn)", u għalhekk timplika li m'hemm l-ebda livell b'xejn, iżda Antigravity għandha livell b'xejn li jirrikjedi OAuth. Madankollu, it-ToS jipprojbixxu espliċitament l-użu ta' dan il-livell b'xejn permezz ta' proxy bħal 67router …
 - **`ai21`** — Sar aktar restrittiv: il-perjodu ta' prova naqas minn "3 xhur" għal 7 ijiem. L-ammont ta' kreditu ta' $10 baqa' l-istess, iżda l-validità naqset drastikament minn madwar 90 jum għal 7 ijiem.
 - **`aimlapi`** — Inbidel b'mod sinifikanti. Il-freeNote inkluża kienet tirreklama "$0.025/jum fi krediti b'xejn — aktar minn 200 mudell", iżda l-livell b'xejn issa huwa sospiż/twaqqaf. L-allokazzjoni ta' kreditu ta' $0.025/jum (50,000 kreditu/jum, 10 talbiet/k…
 - **`amazon-q`** — Il-freeNote inkluża tagħna tgħid "(xejn)" — ir-realtà hija agħar: il-prodott issa twaqqaf għal reġistrazzjonijiet ġodda (15 ta' Mejju 2026). Qabel, il-livell b'xejn kien joffri 50 talba aġentika/xahar + talbiet inline bla lim…

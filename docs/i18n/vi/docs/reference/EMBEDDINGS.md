@@ -4,9 +4,9 @@
 
 ---
 
-Ghi chú vận hành cho `POST /v1/embeddings` khi OmniRoute đứng trước
+Ghi chú vận hành cho `POST /v1/embeddings` khi 67router đứng trước
 Hindsight 0.9.1 (`encode(list[str])` chỉ hỗ trợ văn bản) và Memorix 1.6.0 (cổng
-phương tiện Jina). Đã xác minh trực tiếp vào 2026-08-17 với OmniRoute 3.8.49 tại
+phương tiện Jina). Đã xác minh trực tiếp vào 2026-08-17 với 67router 3.8.49 tại
 `https://omniroute.jaguar-fish.ts.net/v1`. Không có thông tin bí mật nào bên dưới.
 
 ## Các id mô hình hoạt động
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` gốc không thể hoạt động chỉ bằng GitOps. Phải thêm khóa
 Google AI Studio dưới dạng kết nối nhà cung cấp `gemini` (trang tổng quan hoặc
-`GEMINI_API_KEY` được nhập vào OmniRoute). Thông tin bí mật đó không có trong repo này.
+`GEMINI_API_KEY` được nhập vào 67router). Thông tin bí mật đó không có trong repo này.
 
 ### Đường dẫn đa phương thức Jina
 
@@ -100,7 +100,7 @@ Sử dụng `POST /v1/embeddings` cho đến khi có bí danh.
 
 ### Đối tượng hình ảnh Jina / Memorix
 
-Mục hình ảnh chuẩn của OmniRoute (PNG 28×28, 784 pixel — Jina từ chối 1×1):
+Mục hình ảnh chuẩn của 67router (PNG 28×28, 784 pixel — Jina từ chối 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Việc trộn `{ "text": "..." }` với `{ "image": "data:..." }` cũng dẫn đ
 
 Các phép nhúng của Hindsight chỉ hỗ trợ văn bản (`encode(list[str])`). Nó không gửi
 đối tượng hình ảnh. Trỏ URL cơ sở cho phép nhúng tương thích OpenAI của Hindsight đến
-`/v1` của OmniRoute và sử dụng một id hoạt động trong bảng bên trên
+`/v1` của 67router và sử dụng một id hoạt động trong bảng bên trên
 (`jina-ai/jina-embeddings-v5-omni-small` hoặc
 `openrouter/google/gemini-embedding-2`). Không đặt mô hình thành
 `gemini-embedding-2` trần trừ khi cổng có khóa API `gemini`.
@@ -157,11 +157,11 @@ Các phép nhúng của Hindsight chỉ hỗ trợ văn bản (`encode(list[str]
 ### Memorix 1.6.0
 
 Memorix chỉ coi `baseUrl` khớp với `/jina\.ai/i` là phương tiện gốc. URL
-OmniRoute vẫn đi theo đường dẫn chỉ hỗ trợ văn bản ngay cả khi mô hình là Jina omni.
-Cổng đó là vấn đề của máy khách Memorix. Độc lập với vấn đề này, OmniRoute vẫn từ chối
+67router vẫn đi theo đường dẫn chỉ hỗ trợ văn bản ngay cả khi mô hình là Jina omni.
+Cổng đó là vấn đề của máy khách Memorix. Độc lập với vấn đề này, 67router vẫn từ chối
 phần thân Jina `{image: "data:..."}` mà Memorix sẽ gửi nếu cổng được
-mở, vì vậy các máy khách tương thích Jina không thể nhúng hình ảnh thông qua OmniRoute
+mở, vì vậy các máy khách tương thích Jina không thể nhúng hình ảnh thông qua 67router
 nếu không dùng lược đồ chuẩn `{type,source}`.
 
 Sử dụng `jina-ai/jina-embeddings-v5-omni-small` cho văn bản. Không trỏ `base_url`
-của Memorix đến `https://api.jina.ai` — hãy giữ OmniRoute là chặng trung gian duy nhất.
+của Memorix đến `https://api.jina.ai` — hãy giữ 67router là chặng trung gian duy nhất.

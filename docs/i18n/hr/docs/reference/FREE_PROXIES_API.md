@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute isporučuje odabrani skup besplatnih proxy poslužitelja u tablici `free_proxies`,
+67router isporučuje odabrani skup besplatnih proxy poslužitelja u tablici `free_proxies`,
 sinkroniziran iz vanjskih izvora (1proxy, proxifly, iplocate, webshare).
 Nadzorna ploča prikazuje ih pod **Postavke → Besplatni proxy poslužitelji**. Ovaj dokument
 obuhvaća filtriranje, sortiranje, prebrojavanje i prijavljivanje pogrešaka sinkronizacije

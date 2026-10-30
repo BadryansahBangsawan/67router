@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute dispone di **due** sistemi di corsie locali al processo con ambiti differenti. Sono
+67router dispone di **due** sistemi di corsie locali al processo con ambiti differenti. Sono
 complementari; gli operatori devono sapere quale dei due stanno osservando.
 
 ## 1. Ammissione a livello di byte per l'intero processo (`chatBodyAdmission.ts`)

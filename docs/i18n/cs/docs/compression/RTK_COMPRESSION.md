@@ -4,7 +4,7 @@
 
 ---
 
-Komprese RTK je modul OmniRoute pro kompresi terminálového výstupu a výstupu nástrojů, který zohledňuje příkazy. Je
+Komprese RTK je modul 67router pro kompresi terminálového výstupu a výstupu nástrojů, který zohledňuje příkazy. Je
 navržen pro relace programovacích agentů, ve kterých většina nárůstu kontextu pochází z protokolů testů, výstupu sestavení,
 nadbytečného výstupu správců balíčků, přepisů shellu, výstupu Dockeru, výstupu gitu a trasování zásobníku.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Toto pořadí nejprve zkomprimuje zahlcený strojový výstup a poté umožní Cavemanu zestručnit zbývající text.
 
 Původní RTK uvádí úsporu `60-90%` u výstupu příkazů. Ukázková relace v jeho souboru README se zmenší z
-`~118,000` standardních tokenů na `~23,900` tokenů RTK, což představuje úsporu `79.7%` (`~80%`). OmniRoute používá
+`~118,000` standardních tokenů na `~23,900` tokenů RTK, což představuje úsporu `79.7%` (`~80%`). 67router používá
 tento původní průměr k výpočtu úspory při zřetězení s kompresí vstupu Cavemanu:
 
 ```txt
@@ -54,7 +54,7 @@ RTK načítá filtry v tomto pořadí:
 2. Globální filtry z `DATA_DIR/rtk/filters.toml` a `DATA_DIR/rtk/filters.json`.
 3. Vestavěné filtry z `open-sse/services/compression/engines/rtk/filters/`.
 
-V rámci stejného rozsahu mají filtry schématu RTK TOML v1 přednost před filtry OmniRoute JSON. Výrazy TOML
+V rámci stejného rozsahu mají filtry schématu RTK TOML v1 přednost před filtry 67router JSON. Výrazy TOML
 `match_command` se kontrolují před porovnáním typu příkazu, takže importovaný filtr specifický pro příkaz
 může v daném rozsahu přepsat obecnější filtr. Rozsah projektu má stále přednost před globálním
 rozsahem bez ohledu na formát souboru.
@@ -84,7 +84,7 @@ přeskočeny a uvedeny v diagnostice `/api/context/rtk/filters`. Neplatné vesta
 
 ## Kompatibilita se schématem RTK TOML v1
 
-OmniRoute dokáže analyzovat, ověřovat, testovat a instalovat deklarativní soubory filtrů používající schéma RTK TOML v1.
+67router dokáže analyzovat, ověřovat, testovat a instalovat deklarativní soubory filtrů používající schéma RTK TOML v1.
 Podporována jsou pole `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` a vložené testy `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ i zachování, soubory větší než 1 MiB a odkazy na neznámé filtry jsou odm
 testy selžou, lze ověřit za účelem kontroly, ale nelze jej nainstalovat ani načíst. Selhání při načítání
 vlastních souborů zůstávají v režimu fail-open: neplatný soubor je přeskočen a zbývající filtry nadále fungují.
 
-OmniRoute přijímá výstup nástroje až poté, co jej klient zachytil, takže `filter_stderr = true`
+67router přijímá výstup nástroje až poté, co jej klient zachytil, takže `filter_stderr = true`
 nemůže změnit zachytávání procesu. Pole je přijato jako operace bez účinku a ověření vrátí varování.
 Tato funkce je záměrně popisována jako **kompatibilita se schématem RTK TOML v1**, nikoli jako plná kompatibilita
 se spustitelným souborem RTK, shellovými hooky, implementacemi příkazů v jazyce Rust ani jeho strukturou úložiště důvěryhodnosti.

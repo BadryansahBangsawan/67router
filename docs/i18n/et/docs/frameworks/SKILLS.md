@@ -7,29 +7,29 @@
 > **Tõeallikas:** `src/lib/skills/` ja `src/app/api/skills/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute pakub laiendatavat oskuste raamistikku, mis võimaldab keelemudelitel (ja operaatoritel) kombineerida korduskasutatavaid võimekusi — alates failisüsteemist lugemisest ja HTTP-päringutest kuni liivakastis koodi käitamise ning kureeritud turuplatsi oskusteni.
+67router pakub laiendatavat oskuste raamistikku, mis võimaldab keelemudelitel (ja operaatoritel) kombineerida korduskasutatavaid võimekusi — alates failisüsteemist lugemisest ja HTTP-päringutest kuni liivakastis koodi käitamise ning kureeritud turuplatsi oskusteni.
 
-Oskus on versioonitud ja skeemiga määratletud tööüksus. OmniRoute saab lisada oskused tööriistade definitsioonidena väljaminevatesse päringutesse, püüda kinni mudelilt naasvad tööriistakutsed, käitada sobivat töötlejat ning edastada tulemuse mudelile tagasi, et vestlus saaks jätkuda. Mudel ei näe kunagi teostust — ainult tööriista liidest.
+Oskus on versioonitud ja skeemiga määratletud tööüksus. 67router saab lisada oskused tööriistade definitsioonidena väljaminevatesse päringutesse, püüda kinni mudelilt naasvad tööriistakutsed, käitada sobivat töötlejat ning edastada tulemuse mudelile tagasi, et vestlus saaks jätkuda. Mudel ei näe kunagi teostust — ainult tööriista liidest.
 
 ---
 
 ## Agendioskused vs Omni oskused
 
-OmniRoute'il on kaks erinevat, kuid teineteist täiendavat oskuste süsteemi:
+67router'il on kaks erinevat, kuid teineteist täiendavat oskuste süsteemi:
 
 | Mõõde            | **Omni oskused** (see dokument)                                                     | **Agendioskused**                                                                                |
 | :--------------- | :---------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
 | Eesmärk          | LLM-i tööriistade lisamine + liivakastis käitamine                                  | SKILL.md kataloog välistele agentidele avastamiseks ja kasutamiseks                              |
 | Tõeallikas       | `src/lib/skills/` + turuplats                                                       | `src/lib/agentSkills/` + kataloog `skills/`                                                      |
 | Käitusrežiim     | Lisatakse väljaminevatesse päringutesse, käitatakse tööriistakutse sündmuste korral | Staatiline markdown-kataloog + REST/MCP/A2A avastuslõpp-punktid                                  |
-| Kes seda kasutab | OmniRoute ise (kombineeritud marsruutimine, sissetulevad LLM-kutsed)                | Välised agendid, MCP-kliendid, A2A-orkestreerijad                                                |
+| Kes seda kasutab | 67router ise (kombineeritud marsruutimine, sissetulevad LLM-kutsed)                 | Välised agendid, MCP-kliendid, A2A-orkestreerijad                                                |
 | Arv              | Muutuv (turuplatsi juhitud)                                                         | 45 kataloogikirjet (23 API + 21 CLI + 1 konfiguratsioon)                                         |
 | Vorming          | `SkillDefinition` koos tööriista skeemi + töötlejaga                                | `SKILL.md` frontmatter + markdown-keha                                                           |
 | Avastamine       | `/api/skills/*` REST + `omniroute_skills_*` MCP-tööriistad                          | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP-tööriistad + A2A `list-capabilities` |
 
-**Omni oskused** moodustavad käitusmootori — need määratlevad, mida OmniRoute _saab teha_, kui LLM kutsub välja tööriista.
+**Omni oskused** moodustavad käitusmootori — need määratlevad, mida 67router _saab teha_, kui LLM kutsub välja tööriista.
 
-**Agendioskused** moodustavad dokumentatsioonikataloogi — need selgitavad välistele agentidele, _kuidas kasutada_ OmniRoute'i REST API-t ja CLI-d, kasutades struktureeritud SKILL.md-faile, mida saab lisada otse agendi viipadesse.
+**Agendioskused** moodustavad dokumentatsioonikataloogi — need selgitavad välistele agentidele, _kuidas kasutada_ 67router'i REST API-t ja CLI-d, kasutades struktureeritud SKILL.md-faile, mida saab lisada otse agendi viipadesse.
 
 Agendioskuste kataloogi, generaatori, MCP-tööriistade ja A2A-oskuse kohta vaadake [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Agendioskuste kataloogi, generaatori, MCP-tööriistade ja A2A-oskuse kohta vaad
 
 Samas registris eksisteerib kõrvuti kolm oskuste allikat:
 
-1. **Sisseehitatud oskused** (`src/lib/skills/builtins.ts`) — tarnitakse koos OmniRoute'iga. Katavad levinud kasutusjuhud:
+1. **Sisseehitatud oskused** (`src/lib/skills/builtins.ts`) — tarnitakse koos 67router'iga. Katavad levinud kasutusjuhud:
    - `file_read`, `file_write` — API-võtmepõhine liivakasti tööruum asukohas `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — väljaminev HTTP `safeOutboundFetch` kaudu seadistusega `guard: "public-only"`
    - `web_search` — vahemäluga ühendatav otsingupakkuja (`executeWebSearch`)
    - `eval_code` — Docker-liivakastis `node` või `python` käitamine
    - `execute_command` — Docker-liivakastis shell-käsu käitamine
    - `browser` — Playwrightil põhinev aluskarkass, vaikimisi keelatud (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute'i turuplats) — hangitakse aadressilt `https://skillsmp.com/api/v1/skills/search`. Nõuab seadetes väärtust `skillsmpApiKey`.
+2. **SkillsMP** (67router'i turuplats) — hangitakse aadressilt `https://skillsmp.com/api/v1/skills/search`. Nõuab seadetes väärtust `skillsmpApiKey`.
 3. **SkillsSH** (`skills.sh` kogukonnakataloog) — hangitakse aadressilt `https://skills.sh/api/search`. Autentimine pole vajalik; SKILL.md sisu tõmmatakse GitHubi toorvaatest.
 
 Üks „aktiivne pakkuja” määrab, millisest kataloogist juhtpaneel oskusi installib (`src/lib/skills/providerSettings.ts`). Seda saab vahetada jaotises **Seaded → Mälu ja oskused**. Vaikeväärtus: `skillsmp`.
@@ -442,7 +442,7 @@ ujukomaarvulist `0.6`-laadset lävendit ega `registry.ts`-i hindamist ei ole.
 
 ## Sisseehitatud oskuste kataloog
 
-OmniRoute sisaldab hoolikalt valitud sisseehitatud oskuste komplekti asukohas `src/lib/skills/builtin/`. Kõige levinumad neist on järgmised.
+67router sisaldab hoolikalt valitud sisseehitatud oskuste komplekti asukohas `src/lib/skills/builtin/`. Kõige levinumad neist on järgmised.
 
 ### Brauseri automatiseerimise oskus
 

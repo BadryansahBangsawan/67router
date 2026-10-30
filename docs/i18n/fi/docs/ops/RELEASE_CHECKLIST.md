@@ -46,7 +46,7 @@ se palauttaa projektin versioon v3.8.48 asti käyttämän täysin automaattisen 
 samalla WS1.3-takuun (vuotanut token ei yksinään voi julkaista — tokenia ei ole).
 
 **Kertaluonteinen määritys (omistaja):** npmjs.com → paketti `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: omistaja `diegosouzapw`, repositorio `OmniRoute`, työnkulku `npm-publish.yml`
+Publisher_ → GitHub: omistaja `diegosouzapw`, repositorio `67router`, työnkulku `npm-publish.yml`
 (ympäristö: ei mitään). Kunnes tämä on määritetty, automaattinen vaihe epäonnistuu virheeseen `ENEEDAUTH`:
 käynnistä työnkulku uudelleen asetuksella `publish_mode=staged` (alla) tai `direct`.
 

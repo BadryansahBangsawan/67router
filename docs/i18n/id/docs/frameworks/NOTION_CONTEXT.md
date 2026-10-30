@@ -11,11 +11,11 @@
 
 ## Apa ini
 
-OmniRoute dapat terhubung ke ruang kerja **Notion** sebagai **sumber konteks** — basis
+67router dapat terhubung ke ruang kerja **Notion** sebagai **sumber konteks** — basis
 pengetahuan baca/tulis yang diakses agen melalui server MCP bawaan. Setelah token
 integrasi Notion dikonfigurasi, alat MCP memungkinkan LLM mencari halaman dan basis data,
 membaca konten halaman dan struktur blok, mengueri basis data dengan filter/pengurutan,
-serta menambahkan blok baru — semuanya diproksikan melalui OmniRoute (dengan percobaan
+serta menambahkan blok baru — semuanya diproksikan melalui 67router (dengan percobaan
 ulang, batas waktu, dan klasifikasi kesalahan), sehingga model tidak pernah mengakses
 API Notion secara langsung.
 
@@ -42,7 +42,7 @@ melalui API REST pengaturan.
 > [!NOTE]
 > Token tersebut adalah **token integrasi internal Notion**. Buat integrasi di
 > <https://www.notion.com/my-integrations>, lalu bagikan halaman/basis data yang ingin
-> Anda izinkan untuk diakses OmniRoute kepada integrasi tersebut (model izin Notion
+> Anda izinkan untuk diakses 67router kepada integrasi tersebut (model izin Notion
 > berbasis pembagian akses, bukan mencakup seluruh ruang kerja).
 
 ### Mengonfigurasi melalui REST
@@ -61,7 +61,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Ketiga metode memerlukan autentikasi dasbor (`isAuthenticated`). Pada `POST`,
-OmniRoute menyimpan token dan langsung menjalankan pencarian uji dengan 1 hasil; jika
+67router menyimpan token dan langsung menjalankan pencarian uji dengan 1 hasil; jika
 Notion mengembalikan objek kesalahan, token akan dihapus dan panggilan gagal dengan
 `400`.
 

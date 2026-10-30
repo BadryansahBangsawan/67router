@@ -4,7 +4,7 @@
 
 ---
 
-> **In breve**: OmniRoute utilizza **SQLite con journaling WAL** come archivio principale, con crittografia **AES-256-GCM** dei dati inattivi per i campi sensibili. Questa guida illustra lo schema, le migrazioni, il backup/ripristino e le procedure operative.
+> **In breve**: 67router utilizza **SQLite con journaling WAL** come archivio principale, con crittografia **AES-256-GCM** dei dati inattivi per i campi sensibili. Questa guida illustra lo schema, le migrazioni, il backup/ripristino e le procedure operative.
 
 **Fonti:**
 
@@ -19,7 +19,7 @@
 
 ## Perché SQLite?
 
-OmniRoute ha scelto SQLite anziché PostgreSQL/MySQL per diversi motivi:
+67router ha scelto SQLite anziché PostgreSQL/MySQL per diversi motivi:
 
 | Fattore           | SQLite                                      | PostgreSQL                              |
 | ----------------- | ------------------------------------------- | --------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute ha scelto SQLite anziché PostgreSQL/MySQL per diversi motivi:
 | **Backup**        | Copia di un singolo file                    | `pg_dump` o snapshot del file system    |
 | **Caso d'uso**    | Installazione per utente, integrata         | SaaS multi-tenant                       |
 
-Per le distribuzioni **a singolo utente e a singola istanza** (il caso d'uso principale di OmniRoute), SQLite è più semplice e veloce.
+Per le distribuzioni **a singolo utente e a singola istanza** (il caso d'uso principale di 67router), SQLite è più semplice e veloce.
 
 ### Journaling WAL
 
@@ -50,7 +50,7 @@ La dimensione predefinita della cache è **65.536 KiB (64 MiB)**. SQLite interpr
 `cache_size` come limite massimo approssimativo in KiB e alloca le pagine su richiesta.
 **Impostazioni > Sistema e archiviazione > Dimensione cache** accetta valori interi da **1 a
 1.000.000 KiB**; il salvataggio dell'impostazione la applica alla connessione attiva del database
-e OmniRoute ripristina il valore memorizzato all'avvio.
+e 67router ripristina il valore memorizzato all'avvio.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Architettura dei moduli di dominio
 
-Il database di OmniRoute contiene **110 moduli TypeScript di primo livello** in `src/lib/db/`. Ogni modulo di dominio:
+Il database di 67router contiene **110 moduli TypeScript di primo livello** in `src/lib/db/`. Ogni modulo di dominio:
 
 - Gestisce una o più tabelle specifiche
 - Esporta funzioni CRUD tipizzate
@@ -90,7 +90,7 @@ Il database di OmniRoute contiene **110 moduli TypeScript di primo livello** in 
 
 ### I 110 moduli DB di primo livello
 
-OmniRoute contiene **110 file TypeScript di primo livello** in `src/lib/db/`. Di seguito è riportato un campione dei moduli principali; consulta l'elenco della directory per la lista completa:
+67router contiene **110 file TypeScript di primo livello** in `src/lib/db/`. Di seguito è riportato un campione dei moduli principali; consulta l'elenco della directory per la lista completa:
 
 | Modulo                  | Tabelle                                                        | Responsabilità                                                                         |
 | ----------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ L'elenco completo di oltre 30 tabelle si trova in `src/lib/db/migrations/`.
 
 ## Migrazioni
 
-OmniRoute utilizza **migrazioni versionate e idempotenti** in `src/lib/db/migrations/`. Ogni migrazione è costituita da un singolo file SQL denominato `NNN_description.sql`.
+67router utilizza **migrazioni versionate e idempotenti** in `src/lib/db/migrations/`. Ogni migrazione è costituita da un singolo file SQL denominato `NNN_description.sql`.
 
 ### Denominazione delle migrazioni
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> Le **modifiche incompatibili con le versioni precedenti** (ad esempio, l'eliminazione di colonne) sono complesse. OmniRoute NON supporta il downgrade: una volta applicata una migrazione, la modifica dello schema è permanente. Pianifica di conseguenza.
+> Le **modifiche incompatibili con le versioni precedenti** (ad esempio, l'eliminazione di colonne) sono complesse. 67router NON supporta il downgrade: una volta applicata una migrazione, la modifica dello schema è permanente. Pianifica di conseguenza.
 
 ---
 
@@ -310,7 +310,7 @@ Per motivi di prestazioni, i seguenti dati vengono memorizzati in testo non crit
 
 ## Considerazioni sulla crittografia (v3.8.16+)
 
-OmniRoute utilizza **`migrateLegacyEncryptedString()`** per gestire in modo trasparente due schemi di crittografia:
+67router utilizza **`migrateLegacyEncryptedString()`** per gestire in modo trasparente due schemi di crittografia:
 
 - **Legacy** (precedente alla v3.5.0): "crittografia" basata su XOR (non è vera crittografia)
 - **Attuale**: AES-256-GCM con IV e tag di autenticazione appropriati
@@ -399,7 +399,7 @@ Per eseguire il backup senza tempi di inattività di un DB attivo:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Questo comando utilizza l'API di backup online di SQLite ed è sicuro eseguirlo mentre OmniRoute è in funzione.
+Questo comando utilizza l'API di backup online di SQLite ed è sicuro eseguirlo mentre 67router è in funzione.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Compattazione
 
-Le istanze OmniRoute in esecuzione per lunghi periodi traggono vantaggio dall'esecuzione occasionale di `VACUUM`:
+Le istanze 67router in esecuzione per lunghi periodi traggono vantaggio dall'esecuzione occasionale di `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Reimpostare (cancellare) tutti i dati
 
 ```bash
-# Arrestare prima OmniRoute
+# Arrestare prima 67router
 omniroute stop
 
 # Eliminare il file del database
@@ -613,7 +613,7 @@ Un altro processo mantiene un blocco di scrittura. È possibile:
 
 - Attendere il completamento dell'altro processo (verificare con `lsof | grep storage.sqlite`)
 - Terminare l'altro processo
-- Se il problema persiste, riavviare OmniRoute
+- Se il problema persiste, riavviare 67router
 
 ### "Vincolo di chiave esterna non soddisfatto"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 La migrazione è stata eseguita in una transazione, quindi dovrebbe essere stato effettuato il rollback. In caso contrario:
 
-1. **Arrestare OmniRoute** (per impedire ulteriori tentativi)
+1. **Arrestare 67router** (per impedire ulteriori tentativi)
 2. **Verificare lo stato del database** con `sqlite3`
 3. **Correggere manualmente** la migrazione parziale
-4. **Eseguire nuovamente** OmniRoute (la migrazione verrà ritentata)
+4. **Eseguire nuovamente** 67router (la migrazione verrà ritentata)
 
 Per evitare questo problema, testare sempre prima le migrazioni su una copia.
 

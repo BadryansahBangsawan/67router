@@ -7,7 +7,7 @@
 > **ប្រភពយោងចម្បង:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **បានធ្វើបច្ចុប្បន្នភាពចុងក្រោយ:** 2026-06-28 — v3.8.40
 
-OmniRoute អាចបញ្ជូន HTTP webhooks នៅពេលមានព្រឹត្តិការណ៍លើវេទិកា។ ប្រើពួកវាដើម្បីធ្វើសមាហរណកម្មជាមួយ
+67router អាចបញ្ជូន HTTP webhooks នៅពេលមានព្រឹត្តិការណ៍លើវេទិកា។ ប្រើពួកវាដើម្បីធ្វើសមាហរណកម្មជាមួយ
 Slack, PagerDuty, Datadog, សេវាជូនដំណឹងផ្ទៃក្នុង ឬកម្មវិធីទទួល HTTP ណាមួយ។
 
 កម្មវិធីបញ្ជូនចុះហត្ថលេខាលើការបញ្ជូននីមួយៗដោយប្រើ HMAC-SHA256 ព្យាយាមម្តងទៀតនៅពេលមាន
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, សេវាជូនដំណឹងផ្ទៃក�
 
 ## ការចុះហត្ថលេខា HMAC
 
-នៅពេល webhook មួយមាន `secret` OmniRoute ចុះហត្ថលេខាលើ JSON body ហើយផ្ញើ៖
+នៅពេល webhook មួយមាន `secret` 67router ចុះហត្ថលេខាលើ JSON body ហើយផ្ញើ៖
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "ការផ្ញើ webhook សាកល្បងពី OmniRoute",
+    "message": "ការផ្ញើ webhook សាកល្បងពី 67router",
     "webhookId": "<uuid>"
   }
 }

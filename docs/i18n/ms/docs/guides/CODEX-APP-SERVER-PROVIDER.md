@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute menyediakan **dua** cara untuk menggunakan OpenAI Codex:
+67router menyediakan **dua** cara untuk menggunakan OpenAI Codex:
 
 | Penyedia               | Cara ia berkomunikasi dengan OpenAI                                                                                                                                                                  | Peringatan penggunaan                                                 |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | **`codex`**            | Memainkan semula token OAuth ChatGPT/OpenAI anda secara langsung kepada Responses API                                                                                                                | **Ya** — sesi rasmi tidak dibenarkan untuk penggunaan proksi/penghala |
-| **`codex-app-server`** | Mengendalikan **`codex app-server` milik Codex CLI sendiri** melalui JSON-RPC/WebSocket; CLI memiliki dan memperbaharui sendiri OAuthnya (`~/.codex/auth.json`) sama seperti sesi `codex` interaktif | **Tidak** — OmniRoute tidak pernah memainkan semula token kepada API  |
+| **`codex-app-server`** | Mengendalikan **`codex app-server` milik Codex CLI sendiri** melalui JSON-RPC/WebSocket; CLI memiliki dan memperbaharui sendiri OAuthnya (`~/.codex/auth.json`) sama seperti sesi `codex` interaktif | **Tidak** — 67router tidak pernah memainkan semula token kepada API   |
 
 Oleh sebab `codex-app-server` tidak pernah memainkan semula token, ia tidak
 tertakluk pada peringatan penggunaan main semula sesi. Ia memerlukan **Codex CLI
@@ -21,7 +21,7 @@ mestilah **telah dilog masuk**.
 ## 1. Seni bina
 
 ```
-┌─ Aplikasi OmniRoute ─────────────┐        ┌─ Sidecar codex-app-server ──────────┐
+┌─ Aplikasi 67router ─────────────┐        ┌─ Sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token keupayaan)             │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ sihat — ia hanya menulis apabila fail tersebut tiada atau tokennya telah lapuk
 - **Pengguna awam, tiada codex dipasang secara setempat** — tidak berkaitan:
   sidecar mempunyai CLI tersebut. Pengguna hanya membuat pengesahan melalui
   papan pemuka.
-- **OmniRoute bare-metal (tanpa sidecar, codex hos)** — halakan
+- **67router bare-metal (tanpa sidecar, codex hos)** — halakan
   `OMNIROUTE_CODEX_APPSERVER_WS` kepada `codex app-server` anda sendiri dan
   pastikan codex hos telah dilog masuk; petunjuk "codex tidak dipasang" muncul
   jika binari tiada.

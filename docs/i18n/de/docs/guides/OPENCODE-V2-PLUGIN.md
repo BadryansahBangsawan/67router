@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` integriert Ihren gesamten OmniRoute-Katalog — Modelle, Combos und
+`@omniroute/opencode-plugin-v2` integriert Ihren gesamten 67router-Katalog — Modelle, Combos und
 Auto-Combos — in die Modellauswahl von OpenCode v2, einschließlich Anzeigenamen, Preisen und
 Budgets für die kostenlose Nutzung.
 
@@ -16,7 +16,7 @@ Aktualisierung des einen niemals eine Aktualisierung des anderen erzwingt.
 ## Voraussetzungen
 
 - OpenCode v2.
-- Ein erreichbares OmniRoute-Gateway (standardmäßig `http://localhost:20128`).
+- Ein erreichbares 67router-Gateway (standardmäßig `http://localhost:20128`).
 - Node.js 22 oder 24.
 
 ## Installation
@@ -82,7 +82,7 @@ ungeklärt.
 | `baseURL`                        | erforderlich                                      | Gateway-Stamm-URL, nur `http(s)`; das Suffix `/v1` wird bei Bedarf hinzugefügt                                                                                    |
 | `apiKey`                         | verbundene Zugangsdaten, dann `OMNIROUTE_API_KEY` | Chat-Schlüssel für `/v1/*`                                                                                                                                        |
 | `managementReadToken`            | greift auf `apiKey` zurück                        | Schlüssel für `/api/*` — normalerweise **nicht** derselbe                                                                                                         |
-| `displayName`                    | `"OmniRoute"`                                     | Anbietername in der Auswahl                                                                                                                                       |
+| `displayName`                    | `"67router"`                                      | Anbietername in der Auswahl                                                                                                                                       |
 | `timeoutMs`                      | `10000`                                           | Zeitüberschreitung pro Endpunkt beim Abruf (automatische Kombinationen verwenden 5 s)                                                                             |
 | `modelCacheTtlMs`                | `300000`                                          | TTL des Katalog-Caches; ein Festplatten-Snapshot beschleunigt Kaltstarts                                                                                          |
 | `timeouts`                       | greift auf `timeoutMs` zurück                     | Zeitbudgets pro Endpunkt in ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                                    |
@@ -119,12 +119,12 @@ Legen Sie `"geminiSanitization": false` fest, um diese Funktion zu deaktivieren.
 
 ## Fehlerbehebung
 
-| Symptom                                                | Ursache                                                                                                                                               |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Der Modellauswahldialog zeigt kein OmniRoute-Modell an | Es wurde kein Schlüssel ermittelt (prüfen Sie die Warnung beim Start), oder das Gateway ist nicht erreichbar                                          |
-| Rohe Modell-IDs, keine Kombinationen, keine Preise     | Die Verwaltungsendpunkte haben das Token abgelehnt — setzen Sie `managementReadToken`                                                                 |
-| Kurzer oder leerer `freeOnly`-Katalog                  | Kein Verwaltungstoken oder ein abgelehntes Token — lesen Sie die Zusammenfassungszeile der Aktualisierung (Anzahl `unmatched-free`) im Host-Protokoll |
-| Eine Sitzung ist an `opencode-<id>/…` gebunden         | Das v1-Plugin hat `opencode-<id>` veröffentlicht; v2 veröffentlicht nur `<id>`, wählen Sie daher das Modell unter `<id>/…` erneut aus                 |
+| Symptom                                               | Ursache                                                                                                                                               |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Der Modellauswahldialog zeigt kein 67router-Modell an | Es wurde kein Schlüssel ermittelt (prüfen Sie die Warnung beim Start), oder das Gateway ist nicht erreichbar                                          |
+| Rohe Modell-IDs, keine Kombinationen, keine Preise    | Die Verwaltungsendpunkte haben das Token abgelehnt — setzen Sie `managementReadToken`                                                                 |
+| Kurzer oder leerer `freeOnly`-Katalog                 | Kein Verwaltungstoken oder ein abgelehntes Token — lesen Sie die Zusammenfassungszeile der Aktualisierung (Anzahl `unmatched-free`) im Host-Protokoll |
+| Eine Sitzung ist an `opencode-<id>/…` gebunden        | Das v1-Plugin hat `opencode-<id>` veröffentlicht; v2 veröffentlicht nur `<id>`, wählen Sie daher das Modell unter `<id>/…` erneut aus                 |
 
 Umgebungsvariablen müssen den opencode-Serverprozess erreichen: Wenn der Host
 als Dienst ausgeführt wird, unterscheiden sich die Shell, in der `opencode models`

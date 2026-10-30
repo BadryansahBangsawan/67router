@@ -6,7 +6,7 @@
 
 ## Taƙaitaccen bayani
 
-Yanzu OmniRoute yana goyon bayan hanyoyin relay guda uku don `/api/v1/relay/chat/completions`:
+Yanzu 67router yana goyon bayan hanyoyin relay guda uku don `/api/v1/relay/chat/completions`:
 
 - `ts`: Yi amfani da relay na TypeScript kai tsaye a cikin tsari guda.
 - `bifrost`: Tilasta amfani da gateway na Bifrost.
@@ -45,12 +45,12 @@ Idan a halin yanzu kana kwatanta 9router/CLIPROXYAPI:
 
 ## Yarjejeniyar iyakar backend
 
-Tsayayyar iyakar samfur ita ce relay API na OmniRoute, ba aiwatarwar dashboard ba. Dashboard na Next.js na iya girkawa, daidaitawa, da sa ido kan local services, amma routing na buƙatu ya kamata ya shiga ta relay API sannan a miƙa shi a bayan wannan iyaka.
+Tsayayyar iyakar samfur ita ce relay API na 67router, ba aiwatarwar dashboard ba. Dashboard na Next.js na iya girkawa, daidaitawa, da sa ido kan local services, amma routing na buƙatu ya kamata ya shiga ta relay API sannan a miƙa shi a bayan wannan iyaka.
 
 Zaɓuɓɓukan backend na dogon lokaci:
 
 - Ci gaba da riƙe relay na TypeScript a matsayin hanyar manufofi da fallback da ke gudana cikin tsari guda. Auth, allowlists, daidaita buƙatu, lissafi, da binciken aminci su ci gaba da kasancewa a nan kafin kowane miƙa aiki zuwa backend.
-- Yi amfani da Bifrost a matsayin sidecar na Tier-1 da aka fi so don babban throughput idan deployment yana buƙatar ƙarancin sauyin routing, juyawar provider daga wuri guda, ko scale-out a tsakanin replicas na OmniRoute da yawa.
+- Yi amfani da Bifrost a matsayin sidecar na Tier-1 da aka fi so don babban throughput idan deployment yana buƙatar ƙarancin sauyin routing, juyawar provider daga wuri guda, ko scale-out a tsakanin replicas na 67router da yawa.
 - Ci gaba da riƙe 9router da CLIPROXYAPI a matsayin ayyukan dacewa da aka saka a ciki. Suna gudana a matsayin local processes da ake sa ido a kansu, kuma suna da amfani idan halayen provider/CLI nasu su ne adapter da ake so, amma bai kamata su zama tsohon routing engine na Tier-1 ba.
 - Kada a sa dashboard ya tura arbitrary service URLs zuwa hanyar da ake yawan amfani da ita. URLs da UI ya bayar bayanan configuration ne; lambar routing ya kamata ta nemo backends da aka yi wa rajista kuma aka tabbatar da lafiyarsu daga saitunan ɓangaren server da matsayin supervisor.
 - A yau, fi son loopback HTTP don supervised services saboda managed processes sun riga sun samar da APIs masu dacewa da HTTP, route guard zai iya bincikar iyakar, sannan ana iya ganin halayen gazawa/fallback a cikin request logs. Ƙara SDK ko socket transport a nan gaba zai dace ne kawai idan yana rage p99 routing latency a zahiri ba tare da raunana keɓancewa ko ma’anar fallback ba.

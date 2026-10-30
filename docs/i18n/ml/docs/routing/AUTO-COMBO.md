@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (മലയാളം)
+# 67router Auto-Combo Engine (മലയാളം)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ഓരോ ടോക്കണിനും ഏറ�
 
 **എന്താണ് സംഭവിക്കുന്നത്:**
 
-1. `src/sse/handlers/chat.ts`-ൽ OmniRoute `auto/` പ്രിഫിക്സ് കണ്ടെത്തുന്നു
+1. `src/sse/handlers/chat.ts`-ൽ 67router `auto/` പ്രിഫിക്സ് കണ്ടെത്തുന്നു
 2. ഡാറ്റാബേസിൽനിന്ന് എല്ലാ **സജീവ പ്രൊവൈഡർ കണക്ഷനുകളും** ക്വറി ചെയ്യുന്നു
 3. സാധുവായ ക്രെഡൻഷ്യലുകളുള്ളവയിലേക്ക് ഫിൽട്ടർ ചെയ്യുന്നു (API കീ അല്ലെങ്കിൽ OAuth ടോക്കൺ)
 4. ഓരോ കണക്ഷനുമുള്ള മോഡൽ നിർണ്ണയിക്കുന്നു (`connection.defaultModel` അല്ലെങ്കിൽ പ്രൊവൈഡറുടെ ആദ്യ മോഡൽ)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # ഓരോ ടോക്കണിനും ഏറ�
 
 ഓരോ കാൻഡിഡേറ്റിലും ഈ API കീയുടെ `excluded` ഫ്ലാഗും ഉൾപ്പെടുന്നു. ഒഴിവാക്കലുകൾ ഓരോ API കീയ്ക്കും
 വേർതിരിച്ച് സംഭരിക്കുന്നു (`auto_candidate_overrides` ടേബിൾ, മൈഗ്രേഷൻ `128`) — `users` ടേബിൾ ഇല്ലാത്ത
-സിംഗിൾ-ടെനന്റ് സംവിധാനമാണ് OmniRoute, അതിനാൽ യഥാർത്ഥ ഓരോ കോളറിനുമുള്ള ഏറ്റവും അടുത്ത ഐഡന്റിറ്റി
+സിംഗിൾ-ടെനന്റ് സംവിധാനമാണ് 67router, അതിനാൽ യഥാർത്ഥ ഓരോ കോളറിനുമുള്ള ഏറ്റവും അടുത്ത ഐഡന്റിറ്റി
 `apiKeyId` ആണ് — കൂടാതെ പൂർണ്ണമായും യൂണിറ്റ്-ടെസ്റ്റ് ചെയ്ത
 `filterExcludedCandidates()` (`open-sse/services/autoCombo/candidateOverrides.ts`) വഴി
 `open-sse/services/autoCombo/virtualFactory.ts`-ലെ കാൻഡിഡേറ്റ്-പൂൾ ചോക്ക്പോയിന്റിൽ അവ നടപ്പാക്കുന്നു.
@@ -189,7 +189,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 സാധാരണയായി സംഭവിക്കുന്ന രണ്ട് പിഴവുകൾ:
 
 - **`auto` നിങ്ങളുടെ കോംബോകൾ ഉപയോഗിക്കുന്നില്ല.** `auto`/`auto/*` സ്വന്തമായി ഒരു സീറോ-കോൺഫിഗ് കാൻഡിഡേറ്റ് പൂൾ നിർമ്മിക്കുന്നു; കൂടാതെ ഒരു കോംബോയുടെ പേര് അക്ഷരാർഥത്തിൽ `auto` ആണെങ്കിൽ മാത്രമേ നിലനിർത്തിയ കോംബോകൾ പരിശോധിക്കൂ (ശുപാർശ ചെയ്യുന്നില്ല). ഒരു കോംബോയിലൂടെ റൂട്ട് ചെയ്യാൻ അതിന്റെ കൃത്യമായ പേര് അയയ്ക്കുക — `auto` അല്ല.
-- **`openrouter/auto` എന്നത് പണം നൽകേണ്ട യഥാർത്ഥ OpenRouter ഉൽപ്പന്നമാണ്** ("Auto Best Available"), OmniRoute അപരനാമമല്ല. OpenRouter രജിസ്ട്രിയിലെ (`open-sse/config/providers/registry/openrouter/index.ts`) ഒരേയൊരു സ്റ്റാറ്റിക് മോഡൽ എൻട്രിയാണിത്; ഇതിന് പ്രത്യേകം ബിൽ ഈടാക്കുകയും ചെയ്യും. `auto` പൂളുകളിൽ നിന്ന് ഇതിനെ ഒഴിവാക്കാൻ ക്രമീകരണങ്ങൾ → റൂട്ടിംഗ് → പണം നൽകേണ്ട മോഡലുകൾ മറയ്ക്കുക ഉപയോഗിക്കുക.
+- **`openrouter/auto` എന്നത് പണം നൽകേണ്ട യഥാർത്ഥ OpenRouter ഉൽപ്പന്നമാണ്** ("Auto Best Available"), 67router അപരനാമമല്ല. OpenRouter രജിസ്ട്രിയിലെ (`open-sse/config/providers/registry/openrouter/index.ts`) ഒരേയൊരു സ്റ്റാറ്റിക് മോഡൽ എൻട്രിയാണിത്; ഇതിന് പ്രത്യേകം ബിൽ ഈടാക്കുകയും ചെയ്യും. `auto` പൂളുകളിൽ നിന്ന് ഇതിനെ ഒഴിവാക്കാൻ ക്രമീകരണങ്ങൾ → റൂട്ടിംഗ് → പണം നൽകേണ്ട മോഡലുകൾ മറയ്ക്കുക ഉപയോഗിക്കുക.
 
 ഇവിടെ രേഖപ്പെടുത്തിയിരിക്കുന്ന യഥാർത്ഥ ആശയക്കുഴപ്പത്തെക്കുറിച്ച് അറിയാൻ [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992), [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) എന്നിവ കാണുക.
 
@@ -286,7 +286,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## എല്ലാ റൂട്ടിംഗ് തന്ത്രങ്ങളും
 
-OmniRoute-ന്റെ കോംബോ എഞ്ചിൻ **20 റൂട്ടിംഗ് തന്ത്രങ്ങളെ** പിന്തുണയ്ക്കുന്നു (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` എന്നതിൽ പ്രഖ്യാപിച്ചിരിക്കുന്നു). Auto Combo എഞ്ചിൻ തന്നെ `auto` തന്ത്രത്തിന് കീഴിൽ ലഭ്യമാണ്; മറ്റുള്ളവ സേവ് ചെയ്ത കോംബോകൾക്കായി ലഭ്യമാണ്.
+67router-ന്റെ കോംബോ എഞ്ചിൻ **20 റൂട്ടിംഗ് തന്ത്രങ്ങളെ** പിന്തുണയ്ക്കുന്നു (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` എന്നതിൽ പ്രഖ്യാപിച്ചിരിക്കുന്നു). Auto Combo എഞ്ചിൻ തന്നെ `auto` തന്ത്രത്തിന് കീഴിൽ ലഭ്യമാണ്; മറ്റുള്ളവ സേവ് ചെയ്ത കോംബോകൾക്കായി ലഭ്യമാണ്.
 
 | തന്ത്രം             | വിവരണം                                                                                                                                                                                                                                                            |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -334,7 +334,7 @@ OmniRoute-ന്റെ കോംബോ എഞ്ചിൻ **20 റൂട്ട�
 
 ### ഏജന്റിക് പൈപ്പ്ലൈൻ മോഡ്
 
-കുറഞ്ഞത് രണ്ട് മോഡലുകളുള്ള ഒരു `pipeline` കോംബോയ്ക്ക് `config.agenticOrchestration.enabled` ഉപയോഗിച്ച് പ്ലാനർ/എക്സിക്യൂട്ടർ റൂട്ടിംഗ് തിരഞ്ഞെടുക്കാനാകും. ആദ്യ ടാർഗറ്റ് പ്ലാനിംഗും അന്തിമ ഉത്തരങ്ങളും കൈകാര്യം ചെയ്യുന്നു; രണ്ടാമത്തെ ടാർഗറ്റ് ക്ലയന്റ്-നേറ്റീവ് ടൂൾ കോളുകൾ പുറപ്പെടുവിക്കുന്നു. അഭ്യർത്ഥനാ പ്രോട്ടോക്കോളിൽനിന്ന് ടൂൾ-റിസൾട്ട് തുടർച്ചകൾ OmniRoute കണ്ടെത്തുകയും, മറ്റൊരു ടൂൾ റൗണ്ട് ആവശ്യമാണോ എന്ന് പ്ലാനറോട് ചോദിക്കുകയും, ക്ലയന്റിന് ദൃശ്യമാകുന്ന അന്തിമ ഘട്ടമായി എക്സിക്യൂട്ടറെയോ പ്ലാനറെയോ ഡൈനാമിക്കായി തിരഞ്ഞെടുക്കുകയും ചെയ്യുന്നു.
+കുറഞ്ഞത് രണ്ട് മോഡലുകളുള്ള ഒരു `pipeline` കോംബോയ്ക്ക് `config.agenticOrchestration.enabled` ഉപയോഗിച്ച് പ്ലാനർ/എക്സിക്യൂട്ടർ റൂട്ടിംഗ് തിരഞ്ഞെടുക്കാനാകും. ആദ്യ ടാർഗറ്റ് പ്ലാനിംഗും അന്തിമ ഉത്തരങ്ങളും കൈകാര്യം ചെയ്യുന്നു; രണ്ടാമത്തെ ടാർഗറ്റ് ക്ലയന്റ്-നേറ്റീവ് ടൂൾ കോളുകൾ പുറപ്പെടുവിക്കുന്നു. അഭ്യർത്ഥനാ പ്രോട്ടോക്കോളിൽനിന്ന് ടൂൾ-റിസൾട്ട് തുടർച്ചകൾ 67router കണ്ടെത്തുകയും, മറ്റൊരു ടൂൾ റൗണ്ട് ആവശ്യമാണോ എന്ന് പ്ലാനറോട് ചോദിക്കുകയും, ക്ലയന്റിന് ദൃശ്യമാകുന്ന അന്തിമ ഘട്ടമായി എക്സിക്യൂട്ടറെയോ പ്ലാനറെയോ ഡൈനാമിക്കായി തിരഞ്ഞെടുക്കുകയും ചെയ്യുന്നു.
 
 രണ്ടാമത്തെ ടാർഗറ്റിന് ശേഷമുള്ള അധിക മോഡലുകൾ ക്രമത്തിലുള്ള എക്സിക്യൂട്ടർ ബാക്കപ്പുകളാണ്. പരാജയപ്പെട്ട HTTP പ്രതികരണമോ ട്രാൻസ്പോർട്ട് എക്സെപ്ഷനോ അടുത്ത എക്സിക്യൂട്ടറിലേക്ക് നീങ്ങുന്നു; അതേ പ്ലാനർ തീരുമാനവും നേറ്റീവ് ടൂളുകളും നിലനിർത്തിക്കൊണ്ട്, ആ എക്സിക്യൂട്ടറുടെ സ്വന്തം ഘട്ട പ്രോംപ്റ്റും പരിഹരിച്ച കണക്ഷനും ഉപയോഗിക്കുന്നു. വിജയകരമായ ആദ്യ പ്രതികരണം SSE സ്ട്രീമിംഗ് ഉൾപ്പെടെ മാറ്റമില്ലാതെ തിരികെ നൽകുന്നു; വിജയകരമായ സ്ട്രീം ആരംഭിച്ചതിന് ശേഷമുള്ള പരാജയങ്ങൾ ഇവിടെ വീണ്ടും ശ്രമിക്കാനാകില്ല. എല്ലാ എക്സിക്യൂട്ടറുകളും പരാജയപ്പെട്ടാൽ, അവസാന പരാജയം തിരികെ നൽകുന്നു. ക്ലയന്റ് അബോർട്ടുകൾ ഡിസ്പാച്ച് നിർത്തുന്നു.
 
@@ -838,11 +838,11 @@ Tier 1-ന് (സബ്സ്ക്രിപ്ഷൻ) ശക്തമായ �
 
 ### നിയന്ത്രിത ലൈവ് സ്മോക്ക് (CI-യിൽ ഇല്ല — യഥാർഥ ദാതാക്കൾ)
 
-| കമാൻഡ്                                 | ഇത് ചെയ്യുന്നത്                                                                                                  |
-| :------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ഉപയോഗിച്ചുള്ള ഇൻ-പ്രോസസ് യഥാർഥ റൂട്ടിംഗ്; ഒരു ലൈവ് OmniRoute DB-യുടെ സ്നാപ്ഷോട്ട് എടുക്കുന്നു |
-| `npm run test:combo:live:vps`          | ഒരു ലൈവ് OmniRoute സെർവറിലേക്കുള്ള HTTP കോളുകൾ (`COMBO_LIVE_BASE_URL` സജ്ജമാക്കുക)                               |
-| `npm run test:combo:live:vps:failover` | അതേ രീതി, എന്നാൽ മനഃപൂർവമായ ഫെയിൽഓവർ സാഹചര്യങ്ങളോടെ                                                              |
+| കമാൻഡ്                                 | ഇത് ചെയ്യുന്നത്                                                                                                 |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ഉപയോഗിച്ചുള്ള ഇൻ-പ്രോസസ് യഥാർഥ റൂട്ടിംഗ്; ഒരു ലൈവ് 67router DB-യുടെ സ്നാപ്ഷോട്ട് എടുക്കുന്നു |
+| `npm run test:combo:live:vps`          | ഒരു ലൈവ് 67router സെർവറിലേക്കുള്ള HTTP കോളുകൾ (`COMBO_LIVE_BASE_URL` സജ്ജമാക്കുക)                               |
+| `npm run test:combo:live:vps:failover` | അതേ രീതി, എന്നാൽ മനഃപൂർവമായ ഫെയിൽഓവർ സാഹചര്യങ്ങളോടെ                                                             |
 
 ഈ സ്മോക്ക് ടെസ്റ്റുകൾ യഥാർഥ വയർ പാത്ത് (കോംബോ → ദാതാവ് → കംപ്ലീഷൻ) പരിശോധിക്കുന്നു. ലൈവ്
 ക്രെഡൻഷ്യലുകളും VPS ആക്സസും ആവശ്യമുള്ളതിനാൽ ഇവ മനഃപൂർവം CI-യിൽ നിന്ന് ഒഴിവാക്കിയിരിക്കുന്നു.

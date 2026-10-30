@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **آخری بار اپ ڈیٹ کیا گیا:** 2026-06-28 — v3.8.40
 
-OmniRoute ایک WordPress طرز کے پلگ اِن سسٹم کے ساتھ آتا ہے۔ پلگ اِن خود کفیل
+67router ایک WordPress طرز کے پلگ اِن سسٹم کے ساتھ آتا ہے۔ پلگ اِن خود کفیل
 ڈائریکٹریاں ہیں — ہر ایک میں ایک `plugin.json` مینی فیسٹ اور ایک انٹری فائل ہوتی ہے — جو
 درخواست کی پائپ لائن (`onRequest` / `onResponse` / `onError`) اور
 لائف سائیکل ایونٹس (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) سے
@@ -153,7 +153,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Plugin ڈائریکٹری
 
-Plugins، OmniRoute data ڈائریکٹری کے تحت موجود ہوتے ہیں:
+Plugins، 67router data ڈائریکٹری کے تحت موجود ہوتے ہیں:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

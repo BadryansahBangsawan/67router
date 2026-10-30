@@ -13,7 +13,7 @@
 
 ## यह क्या है
 
-OmniRoute एक **Obsidian** वॉल्ट से **संदर्भ स्रोत** के रूप में जुड़ता है — एक स्थानीय Markdown
+67router एक **Obsidian** वॉल्ट से **संदर्भ स्रोत** के रूप में जुड़ता है — एक स्थानीय Markdown
 ज्ञान आधार, जिसे एजेंट अंतर्निहित MCP सर्वर के माध्यम से पढ़ते और लिखते हैं। यह
 एकीकरण डेस्कटॉप ऐप के भीतर चल रहे **Obsidian Local REST API** कम्युनिटी प्लगइन से संचार करता है,
 जिससे एजेंट नोट खोज सकते हैं, फ़ाइलें पढ़/लिख/पैच कर सकते हैं, वॉल्ट की सूची देख सकते हैं, दैनिक/साप्ताहिक
@@ -75,7 +75,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault sync
 
 `src/app/api/settings/obsidian/webdav/route.ts`, एक वैकल्पिक WebDAV-समर्थित
-vault sync (`src/lib/obsidianSync.ts` द्वारा संचालित) प्रबंधित करता है। इसे सक्षम करने पर OmniRoute को एक
+vault sync (`src/lib/obsidianSync.ts` द्वारा संचालित) प्रबंधित करता है। इसे सक्षम करने पर 67router को एक
 स्थानीय vault डायरेक्टरी की ओर इंगित किया जाता है और एक random WebDAV username/password जोड़ी बनाई जाती है:
 
 ```bash
@@ -110,8 +110,8 @@ server की environment identity inherit नहीं कर सकता। �
 ## MCP टूल्स (22)
 
 `open-sse/mcp-server/tools/obsidianTools.ts` में परिभाषित। टोकन/base-URL को
-प्रत्येक कॉल के लिए हल किया जाता है (पहले प्रति-API-key, फिर ग्लोबल)। OmniRoute **sync server**
-से संपर्क करने वाले टूल्स (चार `obsidian_sync_*` टूल्स) को इसके अतिरिक्त OmniRoute सेटिंग्स
+प्रत्येक कॉल के लिए हल किया जाता है (पहले प्रति-API-key, फिर ग्लोबल)। 67router **sync server**
+से संपर्क करने वाले टूल्स (चार `obsidian_sync_*` टूल्स) को इसके अतिरिक्त 67router सेटिंग्स
 में कॉन्फ़िगर किए गए sync auth token की आवश्यकता होती है।
 
 ### रीड टूल्स (`read:obsidian`)
@@ -129,7 +129,7 @@ server की environment identity inherit नहीं कर सकता। �
 | `obsidian_get_periodic_note` | किसी तारीख़ के लिए दैनिक/साप्ताहिक/मासिक periodic note प्राप्त करें (छोड़ने पर आज की तारीख़)। |
 | `obsidian_get_tags`          | सभी vault tags को उनकी frequencies के साथ सूचीबद्ध करें।                                      |
 | `obsidian_list_commands`     | उपलब्ध Obsidian command IDs सूचीबद्ध करें (`obsidian_execute_command` के साथ उपयोग करें)।     |
-| `obsidian_sync_status`       | OmniRoute sync server की स्थिति: चालू, vault name, port, uptime, अंतिम sync।                  |
+| `obsidian_sync_status`       | 67router sync server की स्थिति: चालू, vault name, port, uptime, अंतिम sync।                   |
 | `obsidian_sync_conflicts`    | अनसुलझे sync conflicts सूचीबद्ध करें (path, conflict path, detected-at)।                      |
 
 ### राइट टूल्स (`write:obsidian`)

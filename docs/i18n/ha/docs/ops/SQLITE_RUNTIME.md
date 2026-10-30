@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana gano direban SQLite ɗinsa lokacin farawa ta hanyar jerin madadin matakai 5:
+67router yana gano direban SQLite ɗinsa lokacin farawa ta hanyar jerin madadin matakai 5:
 
 1. **`better-sqlite3` da aka haɗa** (ta hanyar `dependencies` a cikin `package.json`)
    — shi ne mafi sauri, binary na asali, kuma `npm install` ne ke shigar da shi idan akwai kayan aikin ginawa.
@@ -28,13 +28,13 @@ OmniRoute yana gano direban SQLite ɗinsa lokacin farawa ta hanyar jerin madadin
 - **Babu kayan aikin ginawa**: Wasu muhalli (Windows na kamfani ba tare da VS Build
   Tools ba, ko ƙananan hotunan Docker) ba za su iya haɗa `better-sqlite3` ba. Mai shigarwa
   na lokacin aiki yana samo binary da aka riga aka gina daga rajistar npm; direbobin
-  madadin suna tabbatar da cewa OmniRoute zai iya farawa ko da hakan ya gaza.
+  madadin suna tabbatar da cewa 67router zai iya farawa ko da hakan ya gaza.
 - **Tsarukan da aka ware daga hanyar sadarwa**: Idan ba za a iya isa ga rajistar npm ba, `node:sqlite`
   ko `sql.js` suna tabbatar da samuwar ainihin ayyuka.
 
 ## Tantance magic-byte
 
-Kafin loda fayil ɗin `.node` da aka shigar a lokacin aiki, OmniRoute yana karanta bytes 8
+Kafin loda fayil ɗin `.node` da aka shigar a lokacin aiki, 67router yana karanta bytes 8
 na farko kuma yana kwatanta su da sanannun magic bytes na dandali:
 
 | Dandali               | Bytes (hex)   | Lakabi      |
@@ -104,9 +104,9 @@ Aiwatarwa:
 ## Tsarin marubuci guda ɗaya (ba a tallafa wa HA)
 
 Jerin madadin direbobin da ke sama har yanzu yana aiki ne cikin **process guda ɗaya**. SQLite
-na tsohon tsarin OmniRoute **marubuci guda ɗaya** ne:
+na tsohon tsarin 67router **marubuci guda ɗaya** ne:
 
-- Kada a haɗa replicas biyu na OmniRoute da fayil ɗin `storage.sqlite` guda ɗaya.
+- Kada a haɗa replicas biyu na 67router da fayil ɗin `storage.sqlite` guda ɗaya.
 - Sake farawa na container, Recreate deploy, OOM kill, ko sake farawa na HEALTHCHECK yana katse
   duk wani SSE session da ke gudana. Babu session drain a daidaitacciyar hanyar.
 - Liveness na orchestrator da ke ɗaukar `/healthz` mai jinkiri a matsayin wanda ya mutu zai kashe replica

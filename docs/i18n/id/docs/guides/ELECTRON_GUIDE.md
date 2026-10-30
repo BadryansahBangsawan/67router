@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** workspace `electron/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan aplikasi desktop lintas platform (Windows / macOS / Linux) yang dibangun dengan
+67router menyediakan aplikasi desktop lintas platform (Windows / macOS / Linux) yang dibangun dengan
 **Electron 41** + **electron-builder 26.10**. Aplikasi desktop menjalankan server mandiri Next.js
 sebagai proses anak, mengarahkan `BrowserWindow` ke server tersebut, serta menambahkan
 tray sistem, pembaru otomatis, jembatan IPC, dan bootstrap rahasia tanpa konfigurasi.
@@ -45,7 +45,7 @@ Dikonfirmasi dari `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (prebuild Node-API — tanpa rebuild Electron) |
 | Versi aplikasi     | `3.8.0`                                                     |
 | ID aplikasi        | `online.omniroute.desktop`                                  |
-| Nama produk        | `OmniRoute`                                                 |
+| Nama produk        | `67router`                                                  |
 
 ## Skrip (`package.json` root)
 
@@ -196,7 +196,7 @@ sebaiknya gunakan file `.env`, lalu tutup sepenuhnya (baki sistem, **Keluar**) d
 - `BrowserWindow`: 1400×900 (min 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, tombol kontrol jendela di `{ x: 16, y: 16 }`.
 - Windows/Linux: bilah judul native.
-- Tombol tutup meminimalkan aplikasi ke baki sistem; menu baki memiliki **Buka OmniRoute**, **Buka Dasbor** (browser eksternal), submenu **Port Server**, **Periksa Pembaruan**, **Keluar**.
+- Tombol tutup meminimalkan aplikasi ke baki sistem; menu baki memiliki **Buka 67router**, **Buka Dasbor** (browser eksternal), submenu **Port Server**, **Periksa Pembaruan**, **Keluar**.
 
 ## Kebijakan Keamanan Konten
 

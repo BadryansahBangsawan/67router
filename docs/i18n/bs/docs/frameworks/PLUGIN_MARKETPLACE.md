@@ -11,7 +11,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute isporučuje sistem dodataka u WordPress stilu. Dodaci su samostalni direktoriji — svaki sa `plugin.json` manifestom i ulaznom datotekom — koji se povezuju na cjevovod zahtjeva (`onRequest` / `onResponse` / `onError`) i na događaje životnog ciklusa (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
+67router isporučuje sistem dodataka u WordPress stilu. Dodaci su samostalni direktoriji — svaki sa `plugin.json` manifestom i ulaznom datotekom — koji se povezuju na cjevovod zahtjeva (`onRequest` / `onResponse` / `onError`) i na događaje životnog ciklusa (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
 
 **Tržište dodataka** (Plugin Marketplace) je sloj za otkrivanje iznad tog sistema. Ono izlaže katalog dodataka koji se mogu instalirati i koji se može pregledavati. Po zadanim postavkama, katalog je mali ugrađeni početni registar; operater ga može usmjeriti na prilagođeni URL udaljenog registra, u kojem slučaju je dohvaćanje ojačano SSRF zaštitom koja razrješava DNS (pogledajte [Sigurnost](#security)).
 
@@ -120,7 +120,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Direktorij dodataka
 
-Dodaci se nalaze u OmniRoute podatkovnom direktoriju:
+Dodaci se nalaze u 67router podatkovnom direktoriju:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -7,29 +7,29 @@
 > **Həqiqət mənbəyi:** `src/lib/skills/` və `src/app/api/skills/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute dil modellərinə (və operatorlara) təkrar istifadə edilə bilən imkanlar yaratmağa şərait yaradan genişləndirilə bilən Bacarıqlar çərçivəsini təqdim edir — fayl sistemi oxumalarından və HTTP sorğularından tutmuş izolyasiya edilmiş kod icrasına və seçilmiş marketplace bacarıqlarına qədər.
+67router dil modellərinə (və operatorlara) təkrar istifadə edilə bilən imkanlar yaratmağa şərait yaradan genişləndirilə bilən Bacarıqlar çərçivəsini təqdim edir — fayl sistemi oxumalarından və HTTP sorğularından tutmuş izolyasiya edilmiş kod icrasına və seçilmiş marketplace bacarıqlarına qədər.
 
-Bacarıq versiyalaşdırılmış, sxemlə müəyyən edilmiş iş vahididir. OmniRoute bacarıqları alət tərifləri kimi gedən sorğulara daxil edə, modeldən geri gələn alət çağırışlarını ələ keçirə, uyğun emalçını işə sala və nəticəni modelə geri ötürə bilər ki, söhbət davam etsin. Model heç vaxt reallaşdırmanı görmür — yalnız alət interfeysini görür.
+Bacarıq versiyalaşdırılmış, sxemlə müəyyən edilmiş iş vahididir. 67router bacarıqları alət tərifləri kimi gedən sorğulara daxil edə, modeldən geri gələn alət çağırışlarını ələ keçirə, uyğun emalçını işə sala və nəticəni modelə geri ötürə bilər ki, söhbət davam etsin. Model heç vaxt reallaşdırmanı görmür — yalnız alət interfeysini görür.
 
 ---
 
 ## Agent Skills və Omni Skills
 
-OmniRoute bir-birindən fərqli, lakin bir-birini tamamlayan iki bacarıq sisteminə malikdir:
+67router bir-birindən fərqli, lakin bir-birini tamamlayan iki bacarıq sisteminə malikdir:
 
 | Ölçü              | **Omni Skills** (bu sənəd)                                            | **Agent Skills**                                                                               |
 | :---------------- | :-------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Məqsəd            | LLM alətlərinin daxil edilməsi + izolyasiya edilmiş icra              | Xarici agentlərin aşkarlaması və istifadə etməsi üçün SKILL.md kataloqu                        |
 | Həqiqət mənbəyi   | `src/lib/skills/` + marketplace                                       | `src/lib/agentSkills/` + `skills/` qovluğu                                                     |
 | İş vaxtı rejimi   | Gedən sorğulara daxil edilir, alət çağırışı hadisələrində icra olunur | Statik markdown kataloqu + REST/MCP/A2A aşkarlama son nöqtələri                                |
-| Kim istifadə edir | OmniRoute özü (combo marşrutlaşdırması, daxil olan LLM çağırışları)   | Xarici agentlər, MCP müştəriləri, A2A orkestratorları                                          |
+| Kim istifadə edir | 67router özü (combo marşrutlaşdırması, daxil olan LLM çağırışları)    | Xarici agentlər, MCP müştəriləri, A2A orkestratorları                                          |
 | Say               | Dəyişkən (marketplace tərəfindən müəyyən edilir)                      | 45 kataloq qeydi (23 API + 21 CLI + 1 konfiqurasiya)                                           |
 | Format            | Alət sxemi + emalçı ilə `SkillDefinition`                             | `SKILL.md` ön maddəsi + markdown məzmunu                                                       |
 | Aşkarlama         | `/api/skills/*` REST + `omniroute_skills_*` MCP alətləri              | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP alətləri + A2A `list-capabilities` |
 
-**Omni Skills** icra mühərrikidir — LLM aləti çağırdıqda OmniRoute-un _nə edə biləcəyini_ müəyyən edir.
+**Omni Skills** icra mühərrikidir — LLM aləti çağırdıqda 67router-un _nə edə biləcəyini_ müəyyən edir.
 
-**Agent Skills** sənədləşdirmə kataloqudur — onlar birbaşa agent göstərişlərinə ötürülə bilən strukturlaşdırılmış SKILL.md faylları vasitəsilə xarici agentlərə OmniRoute-un REST API və CLI interfeysindən _necə istifadə etməyi_ izah edir.
+**Agent Skills** sənədləşdirmə kataloqudur — onlar birbaşa agent göstərişlərinə ötürülə bilən strukturlaşdırılmış SKILL.md faylları vasitəsilə xarici agentlərə 67router-un REST API və CLI interfeysindən _necə istifadə etməyi_ izah edir.
 
 Agent Skills kataloqu, generatoru, MCP alətləri və A2A bacarığı üçün [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) sənədinə baxın.
 
@@ -41,14 +41,14 @@ Agent Skills kataloqu, generatoru, MCP alətləri və A2A bacarığı üçün [d
 
 Eyni reyestrdə üç bacarıq mənbəyi birlikdə mövcuddur:
 
-1. **Daxili bacarıqlar** (`src/lib/skills/builtins.ts`) — OmniRoute ilə birlikdə təqdim olunur. Ümumi istifadə hallarını əhatə edir:
+1. **Daxili bacarıqlar** (`src/lib/skills/builtins.ts`) — 67router ilə birlikdə təqdim olunur. Ümumi istifadə hallarını əhatə edir:
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` altında hər API açarı üçün ayrıca izolyasiya edilmiş iş sahəsi
    - `http_request` — `guard: "public-only"` ilə `safeOutboundFetch` üzərindən gedən HTTP sorğuları
    - `web_search` — keşləmə ilə dəyişdirilə bilən axtarış provayderi (`executeWebSearch`)
    - `eval_code` — Docker-də izolyasiya edilmiş `node` və ya `python` icrası
    - `execute_command` — Docker-də izolyasiya edilmiş shell əmrinin icrası
    - `browser` — Playwright əsaslı ilkin struktur, standart olaraq deaktivdir (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute Marketplace) — `https://skillsmp.com/api/v1/skills/search` ünvanından əldə edilir. Parametrlərdə `skillsmpApiKey` tələb olunur.
+2. **SkillsMP** (67router Marketplace) — `https://skillsmp.com/api/v1/skills/search` ünvanından əldə edilir. Parametrlərdə `skillsmpApiKey` tələb olunur.
 3. **SkillsSH** (`skills.sh` icma kataloqu) — `https://skills.sh/api/search` ünvanından əldə edilir. Autentifikasiya tələb olunmur; SKILL.md məzmunu birbaşa GitHub raw-dan alınır.
 
 Tək bir "aktiv provayder" idarəetmə panelinin hansı kataloqdan quraşdırma apardığını idarə edir (`src/lib/skills/providerSettings.ts`). Onu **Parametrlər → Yaddaş və Bacarıqlar** bölməsində dəyişdirin. Standart: `skillsmp`.
@@ -442,7 +442,7 @@ bölməsində baxın; `0.6` tipli onluq hədd və `registry.ts` daxilində qiym�
 
 ## Daxili Bacarıqlar Kataloqu
 
-OmniRoute `src/lib/skills/builtin/` daxilində seçilmiş daxili bacarıqlar dəsti ilə təqdim olunur. Ən çox istifadə olunanlar:
+67router `src/lib/skills/builtin/` daxilində seçilmiş daxili bacarıqlar dəsti ilə təqdim olunur. Ən çox istifadə olunanlar:
 
 ### Brauzer Avtomatlaşdırma Bacarığı
 

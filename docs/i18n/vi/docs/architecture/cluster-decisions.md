@@ -14,7 +14,7 @@ Hai profile compose tùy chọn (`memory`, `bifrost`) cho mô hình triển khai
 
 ## Tại sao cách tiếp cận này thận trọng
 
-Mô hình triển khai hiện tại của OmniRoute vốn đã gọn nhẹ và được kiểm chứng:
+Mô hình triển khai hiện tại của 67router vốn đã gọn nhẹ và được kiểm chứng:
 
 - **`redis:7-alpine`** xử lý khối lượng công việc giới hạn tốc độ/bộ nhớ đệm ở quy mô production.
 - **SQLite + sqlite-vec + FTS5** đáp ứng nhu cầu bộ nhớ cục bộ + vector + tìm kiếm văn bản (xem [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Hai profile này là **các tùy chọn mở rộng quy mô dành cho những m�
 
 - Bạn chạy ≥3 bản sao `omniroute` và muốn tập trung hóa việc luân chuyển nhà cung cấp trong một tiến trình Go duy nhất.
 - Bạn muốn có một nơi kiểm toán/ghi nhật ký duy nhất cho các yêu cầu gửi đến nhà cung cấp thượng nguồn trên tất cả các bản sao.
-- Bạn muốn mở rộng theo chiều ngang lớp định tuyến Tier-1 độc lập với các bản sao OmniRoute.
+- Bạn muốn mở rộng theo chiều ngang lớp định tuyến Tier-1 độc lập với các bản sao 67router.
 
 **Thành phần được bổ sung:**
 

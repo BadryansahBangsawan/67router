@@ -10,7 +10,7 @@
 
 ## Ìdí tí èyí fi wà
 
-OmniRoute ti ń dáhùn ìbéèrè méjì nípa iye owó tẹ́lẹ̀, kò sì sí èyíkéyìí nínú wọn tó jẹ́ èyí tí ọ̀pọ̀ jù lọ àwọn olùṣiṣẹ́ máa ń béèrè.
+67router ti ń dáhùn ìbéèrè méjì nípa iye owó tẹ́lẹ̀, kò sì sí èyíkéyìí nínú wọn tó jẹ́ èyí tí ọ̀pọ̀ jù lọ àwọn olùṣiṣẹ́ máa ń béèrè.
 
 | Ètò tó ti wà                                             | Ohun tí ó ń dáhùn                                  |
 | -------------------------------------------------------- | -------------------------------------------------- |

@@ -48,7 +48,7 @@ JWT na nalantad sa pamamagitan ng tunnel ay **hindi** makakapag-trigger sa code 
 | Linux+Firefox/Chromium | pag-update sa NSS DB ng bawat profile sa pamamagitan ng `certutil -d sql:<profile>`                               |
 
 Ito rin ang mga command na ginagamit ng `mitmproxy`, Charles Proxy, Fiddler, at
-Caddy. Ang katunayang umiiral ang mga ito sa OmniRoute ay nakadokumento sa
+Caddy. Ang katunayang umiiral ang mga ito sa 67router ay nakadokumento sa
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigasyon sa v3.8.6**:
@@ -108,7 +108,7 @@ para sa mga operator na hindi pa naa-update ang kanilang automation. Aalisin ito
 sa v3.9.
 
 **Bakit namin ito pinapanatili**: Ang pag-import mula sa Zed ang pinakamadaling paraan ng onboarding para sa mga user
-na gumagamit na ng Zed at gustong kopyahin ang kanilang mga provider key sa OmniRoute
+na gumagamit na ng Zed at gustong kopyahin ang kanilang mga provider key sa 67router
 nang hindi muling nagpe-paste.
 
 ---
@@ -120,7 +120,7 @@ nang hindi muling nagpe-paste.
 **Bakit na-flag**: muling ine-export ng chunk ang `execFileWithPassword`,
 `runElevatedPowerShell`, at ang pinagsasaluhang helper na `quotePowerShell`. Itinuturing ang mga ito ng
 AI classifier ng Socket.dev bilang isang generic na "toolkit para sa pagpapatakbo sa host + pagtataas ng
-pribilehiyo." Sa loob ng OmniRoute, ginagamit lamang ang mga ito ng landas sa pag-install ng MITM cert
+pribilehiyo." Sa loob ng 67router, ginagamit lamang ang mga ito ng landas sa pag-install ng MITM cert
 (§1) at ng `execFileWithPassword` para sa pagpapatakbo ng command na `sudo`.
 
 **Mitigasyon sa v3.8.6**:
@@ -170,7 +170,7 @@ pisikal na alisin sa bundle ang mga landas na may mataas na pribilehiyo.
 
 ---
 
-## §5 — Pagsulat pabalik ng kredensyal sa OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Pagsulat pabalik ng kredensyal sa 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Mga source file**:
 
@@ -203,7 +203,7 @@ rawBody)`) bago i-parse ang JSON. Kung nakatakda ang secret, kinakailangan ang l
    `rateLimitedUntil`, `updatedAt`). Isa itong **breaking change** para sa mga user
    na umaasa sa remote token sync — kailangan nilang tahasang mag-opt in.
 
-**Bakit namin ito pinananatili**: Ang Cloud Sync ang tanging paraan para sa isang tenant ng OmniRoute Cloud
+**Bakit namin ito pinananatili**: Ang Cloud Sync ang tanging paraan para sa isang tenant ng 67router Cloud
 na maisentralisa ang mga kredensyal ng team. Ginagawang malinaw ng pag-aayos ang threat model:
 "lumalagda ang server, nagbe-verify ang client, nag-o-opt in ang operator."
 

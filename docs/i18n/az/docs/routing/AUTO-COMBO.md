@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Azərbaycan dili)
+# 67router Auto-Combo Engine (Azərbaycan dili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # hər token üzrə ən ucuz
 
 **Nə baş verir:**
 
-1. OmniRoute `src/sse/handlers/chat.ts` daxilində `auto/` prefiksini aşkarlayır
+1. 67router `src/sse/handlers/chat.ts` daxilində `auto/` prefiksini aşkarlayır
 2. Verilənlər bazasından bütün **aktiv provayder bağlantılarını** sorğulayır
 3. Etibarlı etimadnamələri (API açarı və ya OAuth tokeni) olanları filtrləyir
 4. Hər bağlantı üzrə modeli müəyyən edir (`connection.defaultModel` və ya provayderin ilk modeli)
@@ -89,7 +89,7 @@ ilə zənginləşdirilmiş cari namizədlər hovuzunu sadalayan **yalnız oxuma*
 
 Hər namizəd həmçinin bu API açarının `excluded` bayrağını daşıyır. İstisnalar
 hər API açarı üzrə saxlanılır (`auto_candidate_overrides` cədvəli, `128` miqrasiyası) —
-OmniRoute `users` cədvəli olmayan tək icarəçili sistemdir, buna görə də `apiKeyId`
+67router `users` cədvəli olmayan tək icarəçili sistemdir, buna görə də `apiKeyId`
 real çağırışçı identifikasiyasına ən yaxın seçimdir — və saf, vahid testlərlə sınaqdan
 keçirilmiş `filterExcludedCandidates()` (`open-sse/services/autoCombo/candidateOverrides.ts`)
 vasitəsilə `open-sse/services/autoCombo/virtualFactory.ts` daxilində namizəd hovuzunun
@@ -192,7 +192,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
   edilmir). Combo vasitəsilə yönləndirmək üçün `auto` deyil, onun dəqiq adını
   göndərin.
 - **`openrouter/auto` real, ödənişli OpenRouter məhsuludur** ("Auto Best
-  Available"), OmniRoute aliası deyil. O, OpenRouter reyestrinin
+  Available"), 67router aliası deyil. O, OpenRouter reyestrinin
   (`open-sse/config/providers/registry/openrouter/index.ts`) yeganə statik model
   qeydidir və ayrıca hesablanır. Onu `auto` hovuzlarından çıxarmaq üçün
   Settings → Routing → Hide paid models seçimindən istifadə edin.
@@ -294,7 +294,7 @@ müəyyən edilmiş dəyərlər mühərrikin mövcud `config.modePack` / `config
 
 ## Bütün Marşrutlaşdırma Strategiyaları
 
-OmniRoute-un kombinasiya mühərriki **20 marşrutlaşdırma strategiyasını** dəstəkləyir (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` daxilində elan edilib). Auto Combo mühərrikinin özü `auto` strategiyası vasitəsilə təqdim olunur; digərləri yadda saxlanılan kombinasiyalar üçün əlçatandır.
+67router-un kombinasiya mühərriki **20 marşrutlaşdırma strategiyasını** dəstəkləyir (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` daxilində elan edilib). Auto Combo mühərrikinin özü `auto` strategiyası vasitəsilə təqdim olunur; digərləri yadda saxlanılan kombinasiyalar üçün əlçatandır.
 
 | Strategiya          | Təsvir                                                                                                                                                                                                                |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -338,7 +338,7 @@ Sərt rotasiya üçün `round-robin` istifadə edin; `weighted` strategiyasında
 
 Ən azı iki modeli olan `pipeline` kombinasiyası
 `config.agenticOrchestration.enabled` vasitəsilə planlaşdırıcı/işə salıcı marşrutlaşdırmasını aktivləşdirə bilər. Birinci hədəf planlaşdırmaya və yekun cavablara cavabdehdir;
-ikinci hədəf isə müştərinin doğma formatında alət çağırışları yaradır. OmniRoute sorğu protokolundan alət nəticələrinin
+ikinci hədəf isə müştərinin doğma formatında alət çağırışları yaradır. 67router sorğu protokolundan alət nəticələrinin
 davamlarını aşkarlayır, planlaşdırıcıdan başqa bir alət raundunun lazım olub-olmadığını
 soruşur və dinamik şəkildə ya işə salıcını, ya da planlaşdırıcını müştəriyə təqdim olunan yekun
 mərhələyə çevirir.
@@ -868,11 +868,11 @@ Bu test dəsti CI-da (`test:integration` işi) `--test-concurrency=1` və
 
 ### Şərtli canlı tüstü testi (CI-da DEYİL — real provayderlər)
 
-| Əmr                                    | Nə edir                                                                                               |
-| :------------------------------------- | :---------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ilə prosesdaxili real marşrutlaşdırma; canlı OmniRoute DB-nin ani surətini yaradır |
-| `npm run test:combo:live:vps`          | Canlı OmniRoute serverinə HTTP çağırışları (`COMBO_LIVE_BASE_URL` təyin edin)                         |
-| `npm run test:combo:live:vps:failover` | Eyni əməliyyat, qəsdən yaradılmış avtomatik keçid ssenariləri ilə                                     |
+| Əmr                                    | Nə edir                                                                                              |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ilə prosesdaxili real marşrutlaşdırma; canlı 67router DB-nin ani surətini yaradır |
+| `npm run test:combo:live:vps`          | Canlı 67router serverinə HTTP çağırışları (`COMBO_LIVE_BASE_URL` təyin edin)                         |
+| `npm run test:combo:live:vps:failover` | Eyni əməliyyat, qəsdən yaradılmış avtomatik keçid ssenariləri ilə                                    |
 
 Bu tüstü testləri real ötürmə yolunu (kombinasiya → provayder → tamamlama) yoxlayır. Onlar
 real giriş məlumatları və VPS-ə giriş tələb etdiyinə görə qəsdən CI-dan çıxarılıb.

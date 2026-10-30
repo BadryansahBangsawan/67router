@@ -4,9 +4,9 @@
 
 ---
 
-הערות למפעילים עבור `POST /v1/embeddings` כאשר OmniRoute נמצא לפני
+הערות למפעילים עבור `POST /v1/embeddings` כאשר 67router נמצא לפני
 Hindsight 0.9.1 ‏(`encode(list[str])` לטקסט בלבד) ו-Memorix 1.6.0 (שער המדיה של
-Jina). אומת בסביבה חיה ב-2026-08-17 מול OmniRoute 3.8.49 בכתובת
+Jina). אומת בסביבה חיה ב-2026-08-17 מול 67router 3.8.49 בכתובת
 `https://omniroute.jaguar-fish.ts.net/v1`. אין סודות להלן.
 
 ## מזהי מודלים פעילים
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` המקורי אינו יכול לפעול באמצעות GitOps בלבד. יש להוסיף מפתח של Google AI
 Studio כחיבור לספק `gemini` (דרך לוח הבקרה או באמצעות ייבוא
-`GEMINI_API_KEY` אל OmniRoute). הסוד הזה אינו נמצא במאגר זה.
+`GEMINI_API_KEY` אל 67router). הסוד הזה אינו נמצא במאגר זה.
 
 ### הנתיב הרב-אופני של Jina
 
@@ -100,7 +100,7 @@ Studio כחיבור לספק `gemini` (דרך לוח הבקרה או באמצע�
 
 ### אובייקט תמונה של Jina / Memorix
 
-פריט התמונה הקנוני של OmniRoute ‏(PNG בגודל 28×28, ‏784 פיקסלים — Jina דוחה 1×1):
+פריט התמונה הקנוני של 67router ‏(PNG בגודל 28×28, ‏784 פיקסלים — Jina דוחה 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Studio כחיבור לספק `gemini` (דרך לוח הבקרה או באמצע�
 
 ההטמעות של Hindsight הן לטקסט בלבד (`encode(list[str])`). הוא אינו שולח
 אובייקטי תמונה. יש להפנות את כתובת ה-URL הבסיסית של ההטמעות תואמות-OpenAI של Hindsight אל
-`/v1` של OmniRoute ולהשתמש במזהה פעיל מהטבלה לעיל
+`/v1` של 67router ולהשתמש במזהה פעיל מהטבלה לעיל
 (`jina-ai/jina-embeddings-v5-omni-small` או
 `openrouter/google/gemini-embedding-2`). אין להגדיר את המודל למזהה ללא הקידומת
 `gemini-embedding-2`, אלא אם קיים בשער מפתח API עבור `gemini`.
@@ -157,11 +157,11 @@ Studio כחיבור לספק `gemini` (דרך לוח הבקרה או באמצע�
 ### Memorix 1.6.0
 
 Memorix מתייחס רק ל-`baseUrl` שתואם ל-`/jina\.ai/i` כאל מדיה מקורית. כתובת
-URL של OmniRoute נשארת בנתיב המיועד לטקסט בלבד, גם כאשר המודל הוא Jina omni.
-השער הזה הוא בעיה בלקוח Memorix. ללא תלות בכך, OmniRoute עדיין דוחה
+URL של 67router נשארת בנתיב המיועד לטקסט בלבד, גם כאשר המודל הוא Jina omni.
+השער הזה הוא בעיה בלקוח Memorix. ללא תלות בכך, 67router עדיין דוחה
 את גוף הבקשה של Jina במבנה `{image: "data:..."}` ש-Memorix היה שולח אילו השער
-היה נפתח, ולכן לקוחות תואמי-Jina אינם יכולים להטמיע תמונות דרך OmniRoute
+היה נפתח, ולכן לקוחות תואמי-Jina אינם יכולים להטמיע תמונות דרך 67router
 ללא הסכימה הקנונית `{type,source}`.
 
 יש להשתמש ב-`jina-ai/jina-embeddings-v5-omni-small` עבור טקסט. אין להפנות את
-`base_url` של Memorix אל `https://api.jina.ai` — יש להשאיר את OmniRoute כתחנה היחידה.
+`base_url` של Memorix אל `https://api.jina.ai` — יש להשאיר את 67router כתחנה היחידה.

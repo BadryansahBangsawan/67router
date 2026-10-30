@@ -5,7 +5,7 @@
 ---
 
 TPROXY شفاف ڈی کرپشن، [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
-MITM اسٹیک کے لیے OmniRoute کا **5واں کیپچر موڈ** ہے۔ یہ Linux پر kernel TPROXY + policy routing استعمال کرتے ہوئے مقامی outbound HTTPS ٹریفک کو intercept اور **decrypt** کرتا ہے — `/etc/hosts` کو spoof کیے **بغیر** اور پورے OS کی system-proxy ترتیبات میں تبدیلی کیے **بغیر**۔ یہ headless ماحول کے لیے موزوں ہے
+MITM اسٹیک کے لیے 67router کا **5واں کیپچر موڈ** ہے۔ یہ Linux پر kernel TPROXY + policy routing استعمال کرتے ہوئے مقامی outbound HTTPS ٹریفک کو intercept اور **decrypt** کرتا ہے — `/etc/hosts` کو spoof کیے **بغیر** اور پورے OS کی system-proxy ترتیبات میں تبدیلی کیے **بغیر**۔ یہ headless ماحول کے لیے موزوں ہے
 (صاف کرنے کے لیے کوئی DNS ترامیم نہیں) اور firewall قواعد reboot ہونے پر خودکار طور پر flush ہو جاتے ہیں۔
 
 دوسرے کیپچر موڈز کے برعکس، TPROXY کو فی host کسی setup کی ضرورت نہیں: یہ ہدف port پر **کسی بھی** destination host کو شفاف طور پر intercept کرتا ہے، ہر SNI hostname کے لیے فوری طور پر جاری کردہ leaf certificate کے ذریعے TLS ختم کرتا ہے، decrypt شدہ تبادلے کو capture کرتا ہے، اور request کو اصل destination کے لیے دوبارہ encrypt کرتا ہے۔
@@ -44,7 +44,7 @@ TPROXY شفاف ڈی کرپشن اس کے بجائے **kernel** کی سطح پر
 - جسے آپ system-wide proxy کی تبدیلی سے متاثر نہ کرنا چاہتے ہوں۔
 
 چونکہ interception، kernel میں ہوتا ہے، اس لیے اصل process کو **کسی
-configuration تبدیلی** کی ضرورت نہیں — تاہم process کو OmniRoute کی نصب کردہ dynamic CA پر اعتماد کرنا ضروری ہے
+configuration تبدیلی** کی ضرورت نہیں — تاہم process کو 67router کی نصب کردہ dynamic CA پر اعتماد کرنا ضروری ہے
 ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) دیکھیں)۔
 
 ---
@@ -63,7 +63,7 @@ addon build نہ کیا گیا ہو)، تو addon loader (`src/mitm/tproxy/trans
 exception پھینکنے کے بجائے `null` لوٹاتا ہے۔ اس کے بعد capture-mode status
 `available: false` رپورٹ کرتا ہے، dashboard toggle اس tooltip کے ساتھ
 **غیر فعال** ہو جاتا ہے: "TPROXY decrypt کے لیے Linux + root + native addon درکار ہیں"،
-اور OmniRoute کا باقی حصہ کام کرتا رہتا ہے۔
+اور 67router کا باقی حصہ کام کرتا رہتا ہے۔
 
 ---
 
@@ -254,7 +254,7 @@ anchor ڈائریکٹری پر `mkdir -p` چلاتی ہے، staged فائل کو
 | **خرابیوں کی تطہیر**                    | روٹ کے خرابی والے جوابات `sanitizeErrorMessage()` سے گزرتے ہیں (سخت اصول #12)۔                                                                                                                                                                                                                                                                                                         |
 
 **MITM CA ایک طاقتور صلاحیت ہے۔** OS کا قابلِ اعتماد CA، جو کسی بھی
-ہوسٹ کے لیے دستخط کر سکتا ہو، اس کا مطلب ہے کہ OmniRoute جس چیز کو بھی انٹرسیپٹ کرے اسے ڈکرپٹ کیا جا سکتا ہے۔ اسے
+ہوسٹ کے لیے دستخط کر سکتا ہو، اس کا مطلب ہے کہ 67router جس چیز کو بھی انٹرسیپٹ کرے اسے ڈکرپٹ کیا جا سکتا ہے۔ اسے
 واضح، صرف مقامی TPROXY کیپچر موڈ کے پیچھے محدود رکھا گیا ہے، یہ بطور ڈیفالٹ بند ہوتا ہے، اور جب آپ یہ موڈ
 روکتے ہیں تو ٹرسٹ اسٹور کا اندراج ہٹا دیا جاتا ہے۔
 
@@ -364,7 +364,7 @@ POST باڈی یا اوپر دی گئی ڈیفالٹ اقدار کے ذریعے 
 ### کریش کے بعد باقی رہ جانے والے فائر وال قواعد
 
 `revertTproxy()`، اطلاق کے عین برعکس ہے اور idempotent ہے۔ موڈ روکنے سے
-قواعد واپس پلٹ جاتے ہیں؛ اگر OmniRoute کو سیشن کے دوران بند کر دیا گیا تھا، تو تنہا رہ جانے والی
+قواعد واپس پلٹ جاتے ہیں؛ اگر 67router کو سیشن کے دوران بند کر دیا گیا تھا، تو تنہا رہ جانے والی
 سسٹم حالت (DNS spoof، root CA، سسٹم پراکسی) کو واپس لینے کے لیے AgentBridge کی
 **مرمت** کارروائی (`POST /api/tools/agent-bridge/repair`) استعمال کریں۔ TPROXY کے `mangle`
 قواعد اور روٹ بھی ری بوٹ پر خودکار طور پر صاف ہو جاتے ہیں۔

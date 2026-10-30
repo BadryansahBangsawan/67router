@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute는 외부 제공업체(1proxy, proxifly, iplocate, webshare)에서 동기화된 엄선된 무료 프록시 풀을 `free_proxies` 테이블로 제공합니다.
+67router는 외부 제공업체(1proxy, proxifly, iplocate, webshare)에서 동기화된 엄선된 무료 프록시 풀을 `free_proxies` 테이블로 제공합니다.
 대시보드에서는 **Settings → Free Proxies** 아래에 이러한 프록시가 표시됩니다. 이 문서에서는
 목록 라우트가 제공하는 서버 측 필터링, 정렬, 집계 및 동기화 오류 보고를
 다룹니다.

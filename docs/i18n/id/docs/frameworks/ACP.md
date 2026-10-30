@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memisahkan **penemuan CLI**, **Agent Client Protocol native**, dan
+67router memisahkan **penemuan CLI**, **Agent Client Protocol native**, dan
 **adaptor stdio lama**. Menemukan biner yang terinstal tidak membuktikan
 autentikasi, kompatibilitas model, atau kesiapannya untuk menangani prompt.
 

@@ -7,7 +7,7 @@
 > **Sumber acuan:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute mencatat tindakan administratif, peristiwa autentikasi, perubahan
+67router mencatat tindakan administratif, peristiwa autentikasi, perubahan
 siklus hidup kredensial penyedia, dan pemanggilan alat MCP ke tabel audit
 berbasis SQLite. Halaman ini membahas apa saja yang dicatat, lokasi penyimpanannya,
 berapa lama data dipertahankan, bagaimana API key dapat memilih untuk tidak

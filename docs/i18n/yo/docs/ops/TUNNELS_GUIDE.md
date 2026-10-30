@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute lè ṣí olupèsè agbègbè rẹ̀ (`http://localhost:20128`) sí íńtánẹ́ẹ̀tì
+67router lè ṣí olupèsè agbègbè rẹ̀ (`http://localhost:20128`) sí íńtánẹ́ẹ̀tì
 gbangba nípasẹ̀ àwọn ẹ̀yìn-ọ̀nà tunnel mẹ́ta. Èyí wúlò fún:
 
 - Àwọn ìpèpadà OAuth láti ọ̀dọ̀ àwọn olupèsè cloud (Antigravity, Gemini, Cursor) tí wọ́n nílò
@@ -15,7 +15,7 @@ gbangba nípasẹ̀ àwọn ẹ̀yìn-ọ̀nà tunnel mẹ́ta. Èyí wúlò fú
 - Pípín instance agbègbè rẹ pẹ̀lú àwọn alábàáṣiṣẹ́ láìsí fífi VM kan ránṣẹ́ síṣẹ́.
 - Ìdánwò lórí ẹ̀rọ alágbèéká, láti ọ̀nà jíjìn, tàbí láàárín àwọn nẹ́tíwọ́ọ̀kì.
 
-Gbogbo àwọn ẹ̀yìn-ọ̀nà mẹ́tẹ̀ẹ̀ta ni a ń ṣàkóso láàrín process — OmniRoute ń bẹ̀rẹ̀/dá
+Gbogbo àwọn ẹ̀yìn-ọ̀nà mẹ́tẹ̀ẹ̀ta ni a ń ṣàkóso láàrín process — 67router ń bẹ̀rẹ̀/dá
 binary tàbí SDK tó wà lẹ́yìn dúró láti dashboard tàbí REST API. Kò nílò ìṣètò
 reverse-proxy tàbí systemd.
 
@@ -41,7 +41,7 @@ fún mode méjì, tí a yàn nípa bóyá a pèsè ìṣètò named-tunnel:
 http://localhost:<apiPort>` ó sì ń yọ URL `*.trycloudflare.com` tí a yàn
   jáde láti stdout. Àwọn URL náà jẹ́ ti ìgbà díẹ̀, wọ́n sì máa ń yí padà ní gbogbo ìgbà tí a bá tún un bẹ̀rẹ̀.
 - **Named tunnel (yíyàn àfikún).** Nígbà tí `CLOUDFLARED_CONFIG` bá tọ́ka sí
-  `config.yml` cloudflared tí a ń ṣàkóso ní agbègbè, OmniRoute máa ń ṣiṣẹ́ `cloudflared tunnel --no-autoupdate
+  `config.yml` cloudflared tí a ń ṣàkóso ní agbègbè, 67router máa ń ṣiṣẹ́ `cloudflared tunnel --no-autoupdate
 --config <path> run`, èyí tó ń fún ọ ní **hostname aláìyípadà tí a dárúkọ**. Ìṣètò náà
   ń pèsè UUID tunnel, `credentials-file`, àti ìtọ́sọ́nà `ingress`, nítorí náà a kì í
   fi `--url` ránṣẹ́, bẹ́ẹ̀ ni kò nílò token dashboard Zero Trust. `run` máa ń ka
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ó sì ń yọ URL `*.trycloudflare.com` tí a yàn
 
 Àwọn ìhùwàsí pàtàkì:
 
-- **Fífì sílẹ̀ láìfọwọ́ṣe.** Ní ìlò àkọ́kọ́, OmniRoute máa ń gba binary `cloudflared`
+- **Fífì sílẹ̀ láìfọwọ́ṣe.** Ní ìlò àkọ́kọ́, 67router máa ń gba binary `cloudflared`
   tuntun jù lọ láti àwọn release GitHub osìṣẹ́ (fífì sílẹ̀ tí a ṣàkóso wà lábẹ́
   `DATA_DIR/cloudflared/`). A máa ń ṣàyẹ̀wò SHA256 asset tí a gbà sílẹ̀ pẹ̀lú
   manifest release kí a tó ṣiṣẹ́ ẹ.
@@ -68,7 +68,7 @@ http://localhost:<apiPort>` ó sì ń yọ URL `*.trycloudflare.com` tí a yàn
    ```
 
 2. Kọ `~/.cloudflared/config.yml` kan tó ń darí hostname rẹ sí port API agbègbè
-   OmniRoute (àìyípadà 20128):
+   67router (àìyípadà 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ http://localhost:<apiPort>` ó sì ń yọ URL `*.trycloudflare.com` tí a yàn
      - service: http_status:404
    ```
 
-3. Tọ́ka OmniRoute sí ìṣètò náà, kí o sì (tún) bẹ̀rẹ̀ tunnel náà:
+3. Tọ́ka 67router sí ìṣètò náà, kí o sì (tún) bẹ̀rẹ̀ tunnel náà:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # àṣàyàn — èyí máa kọjá hostname tí OmniRoute ń jábọ̀; bí bẹ́ẹ̀ kọ́, a ó kà á láti
+   # àṣàyàn — èyí máa kọjá hostname tí 67router ń jábọ̀; bí bẹ́ẹ̀ kọ́, a ó kà á láti
    # òfin ingress àkọ́kọ́ inú ìṣètò náà:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Tàbí nípasẹ̀ dashboard: **Settings → Tunnels → Cloudflare**.
 
 ### Àwọn env var àṣàyàn
 
-| Àyípadà                                              | Ìdí lílò                                                                                                                                                                                     |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Ṣàtúnkọ ọ̀nà fáìlì aláṣẹ méjì. Tí a bá ṣètò rẹ̀ tí ó sì fẹsẹ̀ múlẹ̀, OmniRoute yóò lò ó dípò gbígbàsílẹ̀.                                                                                         |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Ìlànà ìgbéwọlé (àiyípadà àkọ́kọ́ `http2`; pẹ̀lú `quic`, `auto`).                                                                                                                                |
-| `CLOUDFLARED_CONFIG`                                 | Ọ̀nà sí cloudflared `config.yml` tí a ń ṣàkóso ní agbègbè. Nígbà tí a bá ṣètò rẹ̀, OmniRoute yóò ṣiṣẹ́ oju-ọ̀nà **tí a dárúkọ/tí ó dúró pẹ́** (`tunnel --config <path> run`) dípò oju-ọ̀nà kíákíá. |
-| `CLOUDFLARED_HOSTNAME`                               | Ṣàtúnkọ orúkọ agbalejo gbogbogbò tí oju-ọ̀nà tí a dárúkọ ròyìn (fún àpẹẹrẹ, `ai.example.com`). Nígbà tí a kò bá ṣètò rẹ̀, a ó kà á láti orúkọ agbalejo `ingress` àkọ́kọ́ inú àtòjọ ìṣètò náà.    |
+| Àyípadà                                              | Ìdí lílò                                                                                                                                                                                    |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Ṣàtúnkọ ọ̀nà fáìlì aláṣẹ méjì. Tí a bá ṣètò rẹ̀ tí ó sì fẹsẹ̀ múlẹ̀, 67router yóò lò ó dípò gbígbàsílẹ̀.                                                                                         |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Ìlànà ìgbéwọlé (àiyípadà àkọ́kọ́ `http2`; pẹ̀lú `quic`, `auto`).                                                                                                                               |
+| `CLOUDFLARED_CONFIG`                                 | Ọ̀nà sí cloudflared `config.yml` tí a ń ṣàkóso ní agbègbè. Nígbà tí a bá ṣètò rẹ̀, 67router yóò ṣiṣẹ́ oju-ọ̀nà **tí a dárúkọ/tí ó dúró pẹ́** (`tunnel --config <path> run`) dípò oju-ọ̀nà kíákíá. |
+| `CLOUDFLARED_HOSTNAME`                               | Ṣàtúnkọ orúkọ agbalejo gbogbogbò tí oju-ọ̀nà tí a dárúkọ ròyìn (fún àpẹẹrẹ, `ai.example.com`). Nígbà tí a kò bá ṣètò rẹ̀, a ó kà á láti orúkọ agbalejo `ingress` àkọ́kọ́ inú àtòjọ ìṣètò náà.   |
 
 ## 2. ngrok
 
@@ -172,7 +172,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Ìdáhùn náà ní `publicUrl` tí a yàn sí i (fún àpẹẹrẹ,
 `https://abcd-1234.ngrok-free.app`). Àwọn domain àdáni, àwọn agbègbè, àti àwọn òfin policy
-gbọdọ̀ jẹ́ ṣíṣe àtúnṣe wọn nínú dashboard ngrok — OmniRoute fúnra rẹ̀ kàn ń darí URL
+gbọdọ̀ jẹ́ ṣíṣe àtúnṣe wọn nínú dashboard ngrok — 67router fúnra rẹ̀ kàn ń darí URL
 àfojúsùn agbègbè náà lọ sí SDK.
 
 ## 3. Tailscale Funnel
@@ -186,14 +186,14 @@ gbogbogbò náà ní àpẹẹrẹ `https://<machine>.<tailnet>.ts.net/`.
 
 ### Àwọn ohun tí a nílò ṣáájú
 
-1. Fi Tailscale sori ẹ̀rọ (tàbí jẹ́ kí OmniRoute ṣe é — wo endpoint `install` ní ìsàlẹ̀).
-2. Wọlé (`tailscale login` tàbí nípasẹ̀ endpoint `login` ti OmniRoute).
+1. Fi Tailscale sori ẹ̀rọ (tàbí jẹ́ kí 67router ṣe é — wo endpoint `install` ní ìsàlẹ̀).
+2. Wọlé (`tailscale login` tàbí nípasẹ̀ endpoint `login` ti 67router).
 3. Mú Funnel ṣiṣẹ́ fún tailnet rẹ nínú console alákóso Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 Lórí Linux àti macOS, daemon (`tailscaled`) nílò `sudo` láti ṣàkóso rẹ̀. Àwọn
 endpoint POST gba field `sudoPassword` tí kò pọndandan, èyí tí a máa ń fi ránṣẹ́ sí
-ibi ìpamọ́ ọ̀rọ̀ aṣínà MITM ti OmniRoute (`getCachedPassword` / `setCachedPassword`) fún
+ibi ìpamọ́ ọ̀rọ̀ aṣínà MITM ti 67router (`getCachedPassword` / `setCachedPassword`) fún
 àkókò tí ìpè náà bá fi ń ṣiṣẹ́. Windows ń lo service tí a fi sori ẹ̀rọ ní àìyípadà ní
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -254,7 +254,7 @@ lọ́tọ̀.
 
 ## Àwọn ohun tó yẹ ká gbé yẹ̀ wò fún callback OAuth
 
-Nígbà tí o bá ṣí OmniRoute síta nípasẹ̀ tunnel, dashboard àti àwọn ìṣàn OAuth gbọ́dọ̀
+Nígbà tí o bá ṣí 67router síta nípasẹ̀ tunnel, dashboard àti àwọn ìṣàn OAuth gbọ́dọ̀
 kọ àwọn URL callback ní lílo hostname **gbangba**, kì í ṣe `localhost`. Bí bẹ́ẹ̀ kọ́,
 olùpèsè OAuth yóò darí aṣàmúlò padà sí URL tí àwọn server rẹ̀ kò lè dé,
 ìfọwọ́sowọ́pọ̀ náà yóò sì kùnà.
@@ -270,7 +270,7 @@ tí ń yí padà ṣì lè jẹ́ lílò fún ìṣàkóso UI déédé lẹ́yì
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-kí o sì tún OmniRoute bẹ̀rẹ̀ kí o tó bẹ̀rẹ̀ OAuth. Fún Cloudflare Quick
+kí o sì tún 67router bẹ̀rẹ̀ kí o tó bẹ̀rẹ̀ OAuth. Fún Cloudflare Quick
 Tunnels tí ń yí padà, URL náà máa ń yí padà lẹ́yìn gbogbo ìtún-bẹ̀rẹ̀, nítorí náà yan ngrok pẹ̀lú domain
 tí a ti fi pamọ́ tàbí Tailscale Funnel fún lílo OAuth ní production.
 
@@ -285,14 +285,14 @@ Dashboard náà ń ṣàfihàn ipò tunnel lábẹ́ **Settings → Tunnels**:
 - Ìfiránṣẹ́ àṣìṣe tó ṣẹ̀ṣẹ̀ kẹ́yìn, bí ó bá wà.
 
 Fún àbójútó pẹ̀lú ètò, máa poll àwọn endpoint `GET` fún backend kọ̀ọ̀kan. Ṣíṣe backend ju
-ọ̀kan lọ ní àkókò kan náà jẹ́ ìfàyègbà; OmniRoute yóò tọpinpin ọ̀kọ̀ọ̀kan
+ọ̀kan lọ ní àkókò kan náà jẹ́ ìfàyègbà; 67router yóò tọpinpin ọ̀kọ̀ọ̀kan
 lọ́tọ̀.
 
 ## Yíyanjú ìṣòro
 
 ### "cloudflared binary not found"
 
-OmniRoute máa ń gbìyànjú láti fi í sí ẹ̀rọ fúnra rẹ̀ ní ìgbà àkọ́kọ́ tí a bá lò ó. Tí a bá dí ìfísílẹ̀ náà
+67router máa ń gbìyànjú láti fi í sí ẹ̀rọ fúnra rẹ̀ ní ìgbà àkọ́kọ́ tí a bá lò ó. Tí a bá dí ìfísílẹ̀ náà
 (nẹ́tíwọ́ọ̀kì tí a ní ààlà, kò sí àyè sí GitHub), gba `cloudflared` sílẹ̀ fúnra rẹ
 láti <https://github.com/cloudflare/cloudflared/releases> kí o sì ṣètò
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

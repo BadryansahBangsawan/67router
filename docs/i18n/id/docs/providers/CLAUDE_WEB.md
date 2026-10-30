@@ -180,7 +180,7 @@ Claude Web dengan kredensial, sehingga kasus yang dilewati tersebut bukan bukti 
 
 ### Penyiapan
 
-1. Jalankan OmniRoute dengan `npm run dev` atau instalasi yang telah dibangun.
+1. Jalankan 67router dengan `npm run dev` atau instalasi yang telah dibangun.
 2. Buka Dasbor → Penyedia → Tambahkan Penyedia.
 3. Pilih kategori Cookie Web dan Claude Web.
 4. Tempelkan header Cookie lengkap yang disalin dari permintaan `claude.ai` yang telah diautentikasi.

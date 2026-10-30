@@ -6,7 +6,7 @@
 
 # Vodič kroz šemu baze podataka i operacije
 
-> **TL;DR**: OmniRoute koristi **SQLite sa WAL žurnaliranjem** kao primarnu pohranu, uz **AES-256-GCM** enkripciju u stanju mirovanja za osjetljiva polja. Ovaj vodič pokriva šemu, migracije, sigurnosne kopije/oporavak i operativne priručnike.
+> **TL;DR**: 67router koristi **SQLite sa WAL žurnaliranjem** kao primarnu pohranu, uz **AES-256-GCM** enkripciju u stanju mirovanja za osjetljiva polja. Ovaj vodič pokriva šemu, migracije, sigurnosne kopije/oporavak i operativne priručnike.
 
 **Izvori:**
 
@@ -21,7 +21,7 @@
 
 ## Zašto SQLite?
 
-OmniRoute je odabrao SQLite umjesto PostgreSQL/MySQL iz nekoliko razloga:
+67router je odabrao SQLite umjesto PostgreSQL/MySQL iz nekoliko razloga:
 
 | Faktor                | SQLite                                  | PostgreSQL                            |
 | --------------------- | --------------------------------------- | ------------------------------------- |
@@ -32,7 +32,7 @@ OmniRoute je odabrao SQLite umjesto PostgreSQL/MySQL iz nekoliko razloga:
 | **Sigurnosna kopija** | Kopija jedne datoteke                   | `pg_dump` ili snimak sistema datoteka |
 | **Slučaj upotrebe**   | Instalacija po korisniku, ugrađeno      | Multi-tenant SaaS                     |
 
-Za implementacije sa **jednim korisnikom i jednom instancom** (primarni slučaj upotrebe OmniRoute-a), SQLite je jednostavniji i brži.
+Za implementacije sa **jednim korisnikom i jednom instancom** (primarni slučaj upotrebe 67router-a), SQLite je jednostavniji i brži.
 
 ### WAL žurnaliranje
 
@@ -49,7 +49,7 @@ db.pragma(`cache_size = -${DEFAULT_DATABASE_SETTINGS.optimization.cacheSize}`);
 WAL omogućava **istovremena čitanja** tokom upisa — važno za kontrolnu ploču, koja vrši upite dok se zahtjevi snimaju.
 
 Zadana veličina keša je **65,536 KiB (64 MiB)**. SQLite interpretira negativan `cache_size` kao približnu gornju granicu u KiB i dodjeljuje stranice na zahtjev.
-**Settings > System & Storage > Cache Size** prihvata cjelobrojne vrijednosti od **1 do 1,000,000 KiB**; spremanje postavke primjenjuje je na aktivnu konekciju baze podataka, a OmniRoute vraća sačuvanu vrijednost pri pokretanju.
+**Settings > System & Storage > Cache Size** prihvata cjelobrojne vrijednosti od **1 do 1,000,000 KiB**; spremanje postavke primjenjuje je na aktivnu konekciju baze podataka, a 67router vraća sačuvanu vrijednost pri pokretanju.
 
 ---
 
@@ -80,7 +80,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Arhitektura domenskih modula
 
-OmniRoute baza podataka ima **110 TypeScript modula najvišeg nivoa** u `src/lib/db/`. Svaki domenski modul:
+67router baza podataka ima **110 TypeScript modula najvišeg nivoa** u `src/lib/db/`. Svaki domenski modul:
 
 - Posjeduje jednu ili više specifičnih tabela
 - Eksportuje tipizirane CRUD funkcije
@@ -89,7 +89,7 @@ OmniRoute baza podataka ima **110 TypeScript modula najvišeg nivoa** u `src/lib
 
 ### 110 DB modula najvišeg nivoa
 
-OmniRoute ima **110 TypeScript datoteka najvišeg nivoa** u `src/lib/db/`. Ispod je uzorak osnovnih modula; pogledajte listu direktorija za kompletnu listu:
+67router ima **110 TypeScript datoteka najvišeg nivoa** u `src/lib/db/`. Ispod je uzorak osnovnih modula; pogledajte listu direktorija za kompletnu listu:
 
 | Modul                   | Tabele                                                         | Odgovornost                                                                          |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -185,7 +185,7 @@ Kompletna lista od ~30+ tabela se nalazi u `src/lib/db/migrations/`.
 
 ## Migracije
 
-OmniRoute koristi **verzionisane, idempotentne migracije** u `src/lib/db/migrations/`. Svaka migracija je pojedinačna SQL datoteka nazvana `NNN_description.sql`.
+67router koristi **verzionisane, idempotentne migracije** u `src/lib/db/migrations/`. Svaka migracija je pojedinačna SQL datoteka nazvana `NNN_description.sql`.
 
 ### Imenovanje migracija
 
@@ -255,7 +255,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Promjene koje nisu kompatibilne unazad** (npr. brisanje kolona) su komplikovane. OmniRoute NE podržava vraćanje na prethodnu verziju (downgrade) — kada se migracija primijeni, promjena šeme je trajna. Planirajte u skladu s tim.
+> **Promjene koje nisu kompatibilne unazad** (npr. brisanje kolona) su komplikovane. 67router NE podržava vraćanje na prethodnu verziju (downgrade) — kada se migracija primijeni, promjena šeme je trajna. Planirajte u skladu s tim.
 
 ---
 
@@ -309,7 +309,7 @@ Iz razloga performansi, sljedeće se čuva u čistom tekstu (plaintext):
 
 ## Upozorenja o enkripciji (v3.8.16+)
 
-OmniRoute koristi **`migrateLegacyEncryptedString()`** za transparentno rukovanje dvjema šemama enkripcije:
+67router koristi **`migrateLegacyEncryptedString()`** za transparentno rukovanje dvjema šemama enkripcije:
 
 - **Naslijeđeno** (prije v3.5.0): XOR-bazirana "enkripcija" (nije prava kriptografija)
 - **Trenutno**: AES-256-GCM sa odgovarajućim IV i auth tagom
@@ -397,7 +397,7 @@ Za sigurnosnu kopiju aktivne baze podataka bez zastoja:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Ovo koristi SQLite-ov API za online sigurnosne kopije — sigurno za pokretanje dok OmniRoute radi.
+Ovo koristi SQLite-ov API za online sigurnosne kopije — sigurno za pokretanje dok 67router radi.
 
 ---
 
@@ -440,7 +440,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Kompakcija
 
-OmniRoute instance koje dugo rade imaju koristi od povremenog `VACUUM`:
+67router instance koje dugo rade imaju koristi od povremenog `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -572,7 +572,7 @@ EOF
 ### Resetovanje (brisanje) svih podataka
 
 ```bash
-# Prvo zaustavite OmniRoute
+# Prvo zaustavite 67router
 omniroute stop
 
 # Izbrišite datoteku baze podataka
@@ -610,7 +610,7 @@ Drugi proces drži zaključavanje za pisanje. Ili:
 
 - Sačekajte da drugi proces završi (provjerite `lsof | grep storage.sqlite`)
 - Ugasite drugi proces
-- Ako se problem nastavi, ponovo pokrenite OmniRoute
+- Ako se problem nastavi, ponovo pokrenite 67router
 
 ### "Foreign key constraint failed"
 
@@ -640,10 +640,10 @@ PRAGMA mmap_size = 0;
 
 Migracija je pokrenuta u transakciji, pa bi se trebala vratiti na prethodno stanje. Ako nije:
 
-1. **Zaustavite OmniRoute** (spriječite dalje pokušaje)
+1. **Zaustavite 67router** (spriječite dalje pokušaje)
 2. **Provjerite stanje baze podataka** pomoću `sqlite3`
 3. **Ručno popravite** djelimičnu migraciju
-4. **Ponovo pokrenite** OmniRoute (migracija će biti ponovo pokušana)
+4. **Ponovo pokrenite** 67router (migracija će biti ponovo pokušana)
 
 Da biste ovo spriječili, uvijek prvo testirajte migracije na kopiji.
 

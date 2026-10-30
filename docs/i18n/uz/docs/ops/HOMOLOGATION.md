@@ -4,7 +4,7 @@
 
 ---
 
-Homologatsiya VPS’ida ishlayotgan OmniRoute deploy’ini real muhitda E2E validatsiyadan oʻtkazish
+Homologatsiya VPS’ida ishlayotgan 67router deploy’ini real muhitda E2E validatsiyadan oʻtkazish
 (`HOMOLOG_BASE_URL`, masalan, `http://192.168.0.15:20128`). Bitta buyruq relizning
 qoʻlda bajariladigan STOP #2 nazorat roʻyxatini avtomatlashtirilgan, dalillar yaratuvchi ishga tushirish bilan almashtiradi.
 

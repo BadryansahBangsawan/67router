@@ -14,7 +14,7 @@
 프로세스 외부에서 실행되는 사이드카를 위해 같은 매니페스트를 HTTP의
 `GET /api/v1/provider-plugin-manifest`에서도 사용할 수 있습니다.
 
-OmniRoute는 `X-OmniRoute-Provider-Manifest-Url` 요청 헤더를 통해 해당 URL을
+67router는 `X-OmniRoute-Provider-Manifest-Url` 요청 헤더를 통해 해당 URL을
 Bifrost와 CLIProxyAPI에 알립니다. 사이드카에서 로컬 요청 오리진 대신 공개
 또는 컨테이너 네트워크 URL이 필요한 경우 `OMNIROUTE_PROVIDER_MANIFEST_URL`을
 설정하세요.
@@ -31,7 +31,7 @@ HTTP 엔드포인트는 `Cache-Control: public, max-age=60`과 강력한 `ETag`�
 ## 목표
 
 핫 요청 경로를 궁극적으로 지연 시간이 더 짧은 사이드카가 담당할 수 있도록
-제공자 메타데이터를 플러그인 계약 형태로 전환하는 한편, OmniRoute는
+제공자 메타데이터를 플러그인 계약 형태로 전환하는 한편, 67router는
 TypeScript 경로를 정책 게이트 및 폴백으로 유지합니다. 매니페스트는 부가적인
 기능으로, 그 자체로 요청 라우팅을 변경하지 않습니다.
 
@@ -73,7 +73,7 @@ TypeScript 경로를 정책 게이트 및 폴백으로 유지합니다. 매니�
 | `usage-fetch`        | 사용량 또는 할당량 페처(`getUsageForProvider`)가 연결되어 있습니다.              |
 | `usage-supported`    | 사용량 API가 이 제공자를 허용합니다(`isSupportedUsageConnection`).               |
 
-`usage-fetch`는 검색 용도로만 사용됩니다. 이는 OmniRoute가 해당 제공자의
+`usage-fetch`는 검색 용도로만 사용됩니다. 이는 67router가 해당 제공자의
 사용량을 읽는 방법을 알고 있음을 나타낼 뿐이며, 가져오기를 활성화하거나
 할당량 의미 체계를 변경하거나 해당 제공자에 대해 Dashboard 할당량 위젯이
 활성화되었음을 의미하지 않습니다. 해당 위젯은 별도로

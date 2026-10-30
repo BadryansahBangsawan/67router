@@ -8,11 +8,11 @@
 > **Son yenilənmə:** 2026-09-02 — v3.8.51
 > **Auditoriya:** Provayderə xas gizlilik inteqrasiyalarını dəstəkləyən mühəndislər.
 
-OmniRoute sərhəd sistemləri qeyri-rəsmi klientlərin aktiv şəkildə rəqəmsal izini çıxaran (TLS JA3/JA4, başlıqların sıralanması, JSON gövdəsinin forması, bütövlük tokenləri) provayderlərlə inteqrasiya olunur. Bu səhifədə OmniRoute-un təqdim etdiyi gizlilik səthləri və onların harada həyata keçirildiyi sənədləşdirilir.
+67router sərhəd sistemləri qeyri-rəsmi klientlərin aktiv şəkildə rəqəmsal izini çıxaran (TLS JA3/JA4, başlıqların sıralanması, JSON gövdəsinin forması, bütövlük tokenləri) provayderlərlə inteqrasiya olunur. Bu səhifədə 67router-un təqdim etdiyi gizlilik səthləri və onların harada həyata keçirildiyi sənədləşdirilir.
 
 ## Hüquqi və Etik Bildiriş
 
-Gizlilik funksiyaları OmniRoute-un istifadəçiyə məxsus rəsmi hesablar (Claude Code CLI, Codex, Antigravity, Cursor və s.) ilə OmniRoute-un vahid API-si arasında uyğunluq qatı kimi fəaliyyət göstərə bilməsi üçün mövcuddur. Onlar fırıldaqçılığın aşkarlanmasından yayınmaq, giriş məlumatlarını paylaşmaq və ya provayderin Xidmət Şərtlərini pozmaq üçün **nəzərdə tutulmayıb**. Dəstəkləyicilər operatorlardan hesabları yaradarkən qəbul etdikləri yuxarı axın xidmətlərinin Xidmət Şərtlərinə riayət etmələrini gözləyirlər.
+Gizlilik funksiyaları 67router-un istifadəçiyə məxsus rəsmi hesablar (Claude Code CLI, Codex, Antigravity, Cursor və s.) ilə 67router-un vahid API-si arasında uyğunluq qatı kimi fəaliyyət göstərə bilməsi üçün mövcuddur. Onlar fırıldaqçılığın aşkarlanmasından yayınmaq, giriş məlumatlarını paylaşmaq və ya provayderin Xidmət Şərtlərini pozmaq üçün **nəzərdə tutulmayıb**. Dəstəkləyicilər operatorlardan hesabları yaradarkən qəbul etdikləri yuxarı axın xidmətlərinin Xidmət Şərtlərinə riayət etmələrini gözləyirlər.
 
 ---
 
@@ -62,7 +62,7 @@ Profillər sabitlənmiş paket tərəfindən dəstəklənir, lakin real WAF qəb
 
 ## Claude Code Gizlilik Paketi
 
-`cliCompatMode` aktiv olduqda, OmniRoute gedən Claude sorğularını `claude-cli` trafiki ilə fərqləndirilməsi mümkün olmayacaq şəkildə yenidən formalaşdırır. Üç modul birlikdə işləyir:
+`cliCompatMode` aktiv olduqda, 67router gedən Claude sorğularını `claude-cli` trafiki ilə fərqləndirilməsi mümkün olmayacaq şəkildə yenidən formalaşdırır. Üç modul birlikdə işləyir:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -78,7 +78,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Müştəri Məzmun Heşi)
 
-Rəsmi Claude Code CLI-nin Bun/Zig vasitəsilə hesabladığı server tərəfli bütövlük yoxlaması. OmniRoute bunu `xxhash-wasm` ilə yenidən həyata keçirir:
+Rəsmi Claude Code CLI-nin Bun/Zig vasitəsilə hesabladığı server tərəfli bütövlük yoxlaması. 67router bunu `xxhash-wasm` ilə yenidən həyata keçirir:
 
 1. Gövdəni `cch=00000;` yer tutucusu ilə seriallaşdırın
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -124,7 +124,7 @@ Eyni paketdəki əlaqəli modullar:
 
 ## Antigravity Gizliliyi
 
-Antigravity sorğuları çağıran tərəfin mətnini bayt-bayt olduğu kimi saxlayır. OmniRoute IDE müştərisini təqlid etmək üçün sorğulara sıfır enli simvollar əlavə etmir və ya alətlərin adını dəyişdirmir/onları daxil etmir.
+Antigravity sorğuları çağıran tərəfin mətnini bayt-bayt olduğu kimi saxlayır. 67router IDE müştərisini təqlid etmək üçün sorğulara sıfır enli simvollar əlavə etmir və ya alətlərin adını dəyişdirmir/onları daxil etmir.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -134,13 +134,13 @@ Yönləndirmədən əvvəl Stainless SDK markerlərini (`x-stainless-lang`, `x-s
 
 `ANTIGRAVITY_CREDITS=always` (`open-sse/executors/antigravity.ts` tərəfindən istifadə olunur) Google-un pulsuz səviyyə kvotasının sorğuları məhdudlaşdırmasına imkan vermək əvəzinə **hər** sorğunu Antigravity AI Credit Overages (ödənişli Google kreditləri) vasitəsilə yönləndirir. Bu, funksiya kimi sənədləşdirilib, lakin **gördüyümüz Xidmət Şərtləri pozuntusu hesabatlarının ən geniş yayılmış səbəbidir** — bir neçə Google Ultra hesabı `=always` ilə bir neçə saat işlədikdən sonra `403 / "service disabled for ToS violation" / insufficient_quota` xətası ilə bloklanıb.
 
-Yuxarı axın məhdudiyyətlərinin tətbiqi **Google tərəfindədir** və OmniRoute-un qarşısını ala biləcəyi bir şey deyil. Mühit dəyişəninin adı və mövcud sənədlər bunun təhlükəsiz şəkildə aktivləşdirilə bilən parametr olduğu təəssüratını yaradır; əslində isə belə deyil.
+Yuxarı axın məhdudiyyətlərinin tətbiqi **Google tərəfindədir** və 67router-un qarşısını ala biləcəyi bir şey deyil. Mühit dəyişəninin adı və mövcud sənədlər bunun təhlükəsiz şəkildə aktivləşdirilə bilən parametr olduğu təəssüratını yaradır; əslində isə belə deyil.
 
 **Bunun sui-istifadə aşkarlamasını yalnız pulsuz səviyyədən istifadəyə nisbətən daha aqressiv şəkildə işə salmasının səbəbləri:**
 
 - Tək Google hesabında davamlı avtomatlaşdırılmış xərcləmə, pulsuz səviyyənin kvotaya çatıb dayanmasından fərqli şəkildə işarələnir.
 - Kredit artıqlarında sürət həddi yoxdur, buna görə yanlış konfiqurasiya edilmiş müştəri bir neçə dəqiqə ərzində yüzlərlə USD xərcləyə və API açarının yenidən satılması və ya bot trafiki kimi görünə bilər.
-- Eyni xarici IP-dən paralel olaraq əlavə kreditlərdən istifadə edən bir neçə OmniRoute istifadəçisi bu siqnalı gücləndirir.
+- Eyni xarici IP-dən paralel olaraq əlavə kreditlərdən istifadə edən bir neçə 67router istifadəçisi bu siqnalı gücləndirir.
 
 **Tövsiyə olunan yanaşma:**
 
@@ -179,7 +179,7 @@ Env vasitəsilə hər provayder üçün ayrıca aktivləşdirin və ya deaktivl�
 
 ## MITM Proksisi (Antigravity, Linux/macOS/Windows)
 
-Binar faylları `OPENAI_BASE_URL` vasitəsilə yönləndirilə bilməyən CLI-lər üçün OmniRoute lokal TLS sonlandırıcı proksi işlədir. Son nöqtələr `src/app/api/cli-tools/antigravity-mitm/` altında yerləşir.
+Binar faylları `OPENAI_BASE_URL` vasitəsilə yönləndirilə bilməyən CLI-lər üçün 67router lokal TLS sonlandırıcı proksi işlədir. Son nöqtələr `src/app/api/cli-tools/antigravity-mitm/` altında yerləşir.
 
 | Metod  | Son nöqtə                               | Məqsəd                                                    |
 | ------ | --------------------------------------- | --------------------------------------------------------- |
@@ -212,7 +212,7 @@ Hədəf tutulan host: **`daily-cloudcode-pa.googleapis.com`** (Antigravity-nin y
 
 Sertifikat faylının adı: `omniroute-mitm.crt`. Barmaq izi uyğunluğu `getCertFingerprint()` vasitəsilə yoxlanılır (DER-in SHA-1 heşi).
 
-Əlavə olaraq, `certutil` mövcud olduqda `updateNssDatabases()` sertifikatı istifadəçiyə aid NSS verilənlər bazalarına quraşdırır: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, bütün Firefox profilləri (snap daxil olmaqla); ləqəb isə **`OmniRoute MITM Root CA`** olur.
+Əlavə olaraq, `certutil` mövcud olduqda `updateNssDatabases()` sertifikatı istifadəçiyə aid NSS verilənlər bazalarına quraşdırır: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, bütün Firefox profilləri (snap daxil olmaqla); ləqəb isə **`67router MITM Root CA`** olur.
 
 ### macOS / Windows
 
@@ -260,7 +260,7 @@ Provayder IP-si **həmişə qorunur** — keçid yalnız sorğunun şəbəkə ü
 
 ## Daxil Olan Başlıqların Təmizlənməsi
 
-OmniRoute yönləndirmədən əvvəl daxil olan müştəri başlıqlarını təmizləyir ki, Cursor-dan gələn sorğu Claude yuxarı axınına `User-Agent: Cursor/X.Y.Z` məlumatını sızdırmasın. Zod sxemləri və vahid testləri ilə sinxron saxlanılan qadağa siyahısı üçün `src/shared/constants/upstreamHeaders.ts` faylına baxın.
+67router yönləndirmədən əvvəl daxil olan müştəri başlıqlarını təmizləyir ki, Cursor-dan gələn sorğu Claude yuxarı axınına `User-Agent: Cursor/X.Y.Z` məlumatını sızdırmasın. Zod sxemləri və vahid testləri ilə sinxron saxlanılan qadağa siyahısı üçün `src/shared/constants/upstreamHeaders.ts` faylına baxın.
 
 ---
 

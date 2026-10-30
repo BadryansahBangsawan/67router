@@ -6,7 +6,7 @@
 
 ## Tóm tắt
 
-OmniRoute hiện hỗ trợ ba chế độ chuyển tiếp cho `/api/v1/relay/chat/completions`:
+67router hiện hỗ trợ ba chế độ chuyển tiếp cho `/api/v1/relay/chat/completions`:
 
 - `ts`: Sử dụng bộ chuyển tiếp TypeScript trong tiến trình.
 - `bifrost`: Bắt buộc sử dụng cổng Bifrost.
@@ -45,12 +45,12 @@ Nếu hiện tại bạn đang so sánh 9router/CLIPROXYAPI:
 
 ## Hợp đồng ranh giới backend
 
-Ranh giới sản phẩm ổn định là API chuyển tiếp OmniRoute, không phải phần triển khai dashboard. Dashboard Next.js có thể cài đặt, cấu hình và giám sát các dịch vụ cục bộ, nhưng hoạt động định tuyến yêu cầu phải đi vào qua API chuyển tiếp và được bàn giao phía sau ranh giới đó.
+Ranh giới sản phẩm ổn định là API chuyển tiếp 67router, không phải phần triển khai dashboard. Dashboard Next.js có thể cài đặt, cấu hình và giám sát các dịch vụ cục bộ, nhưng hoạt động định tuyến yêu cầu phải đi vào qua API chuyển tiếp và được bàn giao phía sau ranh giới đó.
 
 Các lựa chọn backend dài hạn:
 
 - Giữ bộ chuyển tiếp TypeScript làm đường dẫn chính sách trong tiến trình và đường dẫn dự phòng. Xác thực, danh sách cho phép, chuẩn hóa yêu cầu, ghi nhận mức sử dụng và kiểm tra an toàn vẫn được thực hiện tại đây trước mọi hoạt động bàn giao cho backend.
-- Sử dụng Bifrost làm sidecar Tier-1 có thông lượng cao được ưu tiên khi bản triển khai cần mức biến động định tuyến thấp hơn, cơ chế luân chuyển nhà cung cấp tập trung hoặc mở rộng quy mô trên nhiều bản sao OmniRoute.
+- Sử dụng Bifrost làm sidecar Tier-1 có thông lượng cao được ưu tiên khi bản triển khai cần mức biến động định tuyến thấp hơn, cơ chế luân chuyển nhà cung cấp tập trung hoặc mở rộng quy mô trên nhiều bản sao 67router.
 - Giữ 9router và CLIPROXYAPI làm các dịch vụ tương thích nhúng. Chúng chạy dưới dạng các tiến trình cục bộ được giám sát và hữu ích khi hành vi nhà cung cấp/CLI của chúng là adapter mong muốn, nhưng không nên trở thành công cụ định tuyến Tier-1 mặc định.
 - Không để dashboard truyền các URL dịch vụ tùy ý vào luồng xử lý chính. URL do UI cung cấp là đầu vào cấu hình; mã định tuyến nên phân giải các backend đã đăng ký và được kiểm tra tình trạng hoạt động từ cài đặt phía máy chủ cùng trạng thái của trình giám sát.
 - Hiện tại, nên ưu tiên HTTP loopback cho các dịch vụ được giám sát vì các tiến trình được quản lý đã cung cấp API tương thích HTTP, cơ chế bảo vệ tuyến có thể kiểm tra ranh giới và hành vi lỗi/dự phòng hiển thị trong nhật ký yêu cầu. Chỉ nên bổ sung SDK hoặc phương thức truyền qua socket trong tương lai nếu chúng làm giảm đáng kể độ trễ định tuyến p99 mà không làm suy yếu khả năng cô lập hoặc ngữ nghĩa dự phòng.

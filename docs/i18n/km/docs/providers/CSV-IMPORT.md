@@ -25,7 +25,7 @@ Dashboard → អ្នកផ្ដល់សេវា → **នាំចូល�
 ទាញយកឯកសារចាប់ផ្ដើមពី modal នាំចូល (**ទាញយកគំរូ CSV**)។ ឧទាហរណ៍៖
 
 ```csv
-# ការនាំចូលអ្នកផ្ដល់សេវារបស់ OmniRoute (ជួរឈរតាមលំដាប់ទីតាំង)
+# ការនាំចូលអ្នកផ្ដល់សេវារបស់ 67router (ជួរឈរតាមលំដាប់ទីតាំង)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

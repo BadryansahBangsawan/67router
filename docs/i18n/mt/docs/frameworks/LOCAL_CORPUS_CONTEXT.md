@@ -12,7 +12,7 @@
 
 ## X'inhu
 
-Local Corpus jippermetti lil operatur jesponi direttorju wieħed ta' fajls tat-test approvat b'mod espliċitu lis-server MCP ta' OmniRoute. Il-fajls jibqgħu fid-direttorju oriġinali tagħhom: OmniRoute jaħżen biss il-mogħdija ewlenija kanonika f'SQLite u jżomm indiċi tat-tiftix fil-memorja. Ma jikkupjax il-kontenut tal-korpus fir-repożitorju jew fil-bażi tad-data.
+Local Corpus jippermetti lil operatur jesponi direttorju wieħed ta' fajls tat-test approvat b'mod espliċitu lis-server MCP ta' 67router. Il-fajls jibqgħu fid-direttorju oriġinali tagħhom: 67router jaħżen biss il-mogħdija ewlenija kanonika f'SQLite u jżomm indiċi tat-tiftix fil-memorja. Ma jikkupjax il-kontenut tal-korpus fir-repożitorju jew fil-bażi tad-data.
 
 L-aġġornament tal-indiċi huwa inkrementali. Fajls mhux mibdula jerġgħu jintużaw abbażi tad-daqs u l-ħin tal-modifika, fajls mibdula jerġgħu jinqraw u jiġu soġġetti għal hashing b'SHA-256, u fajls imħassra jitneħħew. It-tiftix jaġġorna indiċi li jkollu aktar minn 30 sekonda; min jagħmel it-talba jista' wkoll jitlob aġġornament immedjat.
 

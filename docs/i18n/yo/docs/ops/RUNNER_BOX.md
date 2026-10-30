@@ -5,7 +5,7 @@
 ---
 
 Pool tí a gbàlejò fúnra wa ń ṣiṣẹ́ lórí ẹ̀rọ **.113** (`tomni-proxmox-113`). Láti 2026-10-18, runner
-OmniRoute kọ̀ọ̀kan ní **ipa kan**, label kan, àti ìpín memory/CPU tí a ṣe ní ìwọ̀n iṣẹ́ tí workload rẹ̀
+67router kọ̀ọ̀kan ní **ipa kan**, label kan, àti ìpín memory/CPU tí a ṣe ní ìwọ̀n iṣẹ́ tí workload rẹ̀
 fi hàn. Slot Turbopack ń gba ohun tí build náà nílò; a ṣe àwọn slot yòókù ní ìwọ̀n peak tí a
 wọn fún wọn. Ẹ̀rọ náà máa ń ṣe overcommit nìkan nígbà tí build Turbopack bá ṣẹlẹ̀ lẹ́ẹ̀kan náà pẹ̀lú build
 webpack Release-Green àti iṣẹ́ lint kan; swap host (16 GB) ń gba èyí, àti nítorí pé àwọn Build pull-request ń ṣiṣẹ́
@@ -27,7 +27,7 @@ A wọn ní 2026-10-18:
 | swap       | 16 GB                      | `omniroute-113-5` ń ṣiṣẹ́ pẹ̀lú swap tí a pa (`MemorySwapMax=0`), nítorí náà build tí ó jáde kúrò ní ìṣàkóso ni a máa gé ní cap rẹ̀ dípò kí ó fi ẹ̀rọ náà ṣe swap                                                                                                                                                                                                          |
 | `/tmp`     | **12 GB tmpfs = RAM**      | ohunkóhun tí a fi síbẹ̀ jẹ́ memory; a máa ń pa àwọn ohun tó ṣẹ́kù rẹ́ lẹ́yìn 3 h                                                                                                                                                                                                                                                                                            |
 | CPU        | a rí load 60 lórí 32 cores | ṣáájú àwọn quota náà, build Turbopack kan (~1166 % CPU) pẹ̀lú suite coverage kan lórí ẹ̀rọ kan náà mú kí àwọn heartbeat listener yòókù má rí resource tó tó (`The self-hosted runner lost communication`, #16853)                                                                                                                                                        |
-| runners    | **6 listeners**            | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` wà ní disabled (`systemctl enable --now` máa ń mú ọ̀kan padà)                                                                                                                                                                                                                                           |
+| runners    | **6 listeners**            | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` wà ní disabled (`systemctl enable --now` máa ń mú ọ̀kan padà)                                                                                                                                                                                                                                            |
 
 Àwọn limit náà wà nínú `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ti unit kọ̀ọ̀kan
 (a pa àwọn iye tẹ́lẹ̀ mọ́ gẹ́gẹ́ bí `override.conf.bak-20261018`), a sì lò wọ́n láìdá iṣẹ́ dúró pẹ̀lú
@@ -76,7 +76,7 @@ padà sí online fúnra rẹ̀.
 
 `KillMode=process` àtìlẹ́yìn runner máa ń fi `Runner.Worker → npm → next-build`
 sílẹ̀ láàyè nígbà tí unit kan bá dúró tàbí tún bẹ̀rẹ̀ — build aláìní-olùtọ́jú náà
-máa ń bá a lọ ní jíjẹ RAM àti CPU láìsí job tí a so mọ́ ọn. Gbogbo unit OmniRoute
+máa ń bá a lọ ní jíjẹ RAM àti CPU láìsí job tí a so mọ́ ọn. Gbogbo unit 67router
 ní drop-in kan
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 pẹ̀lú `KillMode=mixed`: SIGTERM sí listener lákọ̀ọ́kọ́, lẹ́yìn náà SIGKILL sí gbogbo
@@ -126,7 +126,7 @@ sí i — tún **runner kan ṣoṣo** bẹ̀rẹ̀ lẹ́ẹ̀kan, nígbà tí 
   tó nílò `next build` backend-nìkan (~5–6 GB; webpack) àti `quality.yml` `lint-guard`.
   `omniroute-113` ní `MemoryHigh=4G` títí di 2026-10-18 — ìkọ́ promptfoo fi ìṣẹ́jú 54 kọjá
   níbẹ̀ nípa jíjẹ́ kí a máa gba memory padà; 8 GB yọ ìdínwọ́ náà kúrò.
-- **Àwọn listener díẹ̀ ní ìmọ̀ọ́mọ̀.** A pa unit OmniRoute mẹ́rin ní 2026-08-29 — listener
+- **Àwọn listener díẹ̀ ní ìmọ̀ọ́mọ̀.** A pa unit 67router mẹ́rin ní 2026-08-29 — listener
   àfikún kọ̀ọ̀kan jẹ́ tenant míràn fún ìṣúná memory tó wà lókè. Òpin janitor jẹ́ 6
   (`MAX_ACTIVE_RUNNERS=6` nínú cron): ó ń ka gbogbo `Runner.Listener` lórí ẹ̀rọ náà,
   OmniHeuris + OmniMind sì ń fi méjì kún mẹ́rin tiwa.

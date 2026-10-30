@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute leveres med en kurateret samling af gratis proxyer i tabellen `free_proxies`,
+67router leveres med en kurateret samling af gratis proxyer i tabellen `free_proxies`,
 som synkroniseres fra eksterne udbydere (1proxy, proxifly, iplocate, webshare).
 Dashboardet viser disse under **Indstillinger → Gratis proxyer**. Dette dokument
 beskriver den serversidefiltrering, sortering, optælling og rapportering af

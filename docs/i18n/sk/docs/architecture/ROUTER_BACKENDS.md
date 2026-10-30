@@ -15,9 +15,9 @@ Toto ADR presne určuje, ako spolu súvisia enginy `ts` (natívny), `bifrost`, `
 Úlohu enginu opisujú **dve nezávislé osi**, ktoré sú spoločne zakódované v položke `RouterBackendDefinition` registra:
 
 1. **Životný cyklus** (`RouterBackendLifecycle`) — _ako engine beží_:
-   - `in-process` — beží v rámci procesu Node aplikácie OmniRoute (natívne spracovanie v TS).
-   - `supervised` — lokálny podradený proces, ktorý OmniRoute inštaluje, spúšťa, zastavuje a kontroluje jeho stav prostredníctvom `ServiceSupervisor`, a následne ho používa ako pripojenie k poskytovateľovi.
-   - `external` — koncový bod HTTP, ktorému OmniRoute odovzdáva požiadavky, ale **nespravuje** ho (konfiguruje sa prostredníctvom základnej URL z premennej prostredia).
+   - `in-process` — beží v rámci procesu Node aplikácie 67router (natívne spracovanie v TS).
+   - `supervised` — lokálny podradený proces, ktorý 67router inštaluje, spúšťa, zastavuje a kontroluje jeho stav prostredníctvom `ServiceSupervisor`, a následne ho používa ako pripojenie k poskytovateľovi.
+   - `external` — koncový bod HTTP, ktorému 67router odovzdáva požiadavky, ale **nespravuje** ho (konfiguruje sa prostredníctvom základnej URL z premennej prostredia).
    - `disabled` — je zaregistrovaný, ale nemožno ho vybrať.
 2. **Os výberu** (smerovací backend sprostredkovateľa) — _či mu sprostredkovateľ odovzdáva požiadavky_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` v súbore

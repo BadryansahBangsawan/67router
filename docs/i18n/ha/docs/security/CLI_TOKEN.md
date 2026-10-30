@@ -6,7 +6,7 @@
 
 ## Bayani
 
-Umarnin OmniRoute CLI suna tantance sahihanci da API na gudanarwa na cikin gida ta amfani da
+Umarnin 67router CLI suna tantance sahihanci da API na gudanarwa na cikin gida ta amfani da
 token na `HMAC-SHA256(machine-id, salt)` da ake aikawa ta cikin kan buƙata na
 `x-omniroute-cli-token`.
 

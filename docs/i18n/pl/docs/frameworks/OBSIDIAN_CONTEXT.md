@@ -20,7 +20,7 @@ lastUpdated: 2026-06-28
 
 ## Czym to jest
 
-OmniRoute łączy się z vaultem **Obsidian** jako **źródłem kontekstu** — lokalną bazą
+67router łączy się z vaultem **Obsidian** jako **źródłem kontekstu** — lokalną bazą
 wiedzy w Markdown, którą agenci odczytują i zapisują przez wbudowany serwer MCP.
 Integracja komunikuje się z wtyczką społecznościową **Obsidian Local REST API**
 działającą wewnątrz aplikacji desktopowej, dzięki czemu agenci mogą wyszukiwać notatki,
@@ -86,7 +86,7 @@ Local REST API.
 
 `src/app/api/settings/obsidian/webdav/route.ts` zarządza opcjonalną synchronizacją
 skarbca opartą na WebDAV (obsługiwaną przez `src/lib/obsidianSync.ts`). Jej włączenie
-wskazuje OmniRoute lokalny katalog skarbca i generuje losową parę nazwy użytkownika
+wskazuje 67router lokalny katalog skarbca i generuje losową parę nazwy użytkownika
 oraz hasła WebDAV:
 
 ```bash
@@ -127,8 +127,8 @@ Obsidian nadal korzystają z globalnej konfiguracji zapasowej. Cztery narzędzia
 
 Zdefiniowane w `open-sse/mcp-server/tools/obsidianTools.ts`. Token/base-URL są
 rozwiązywane per wywołanie (najpierw per-API-key, potem global). Narzędzia trafiające
-w **serwer sync** OmniRoute (cztery narzędzia `obsidian_sync_*`) dodatkowo wymagają
-tokenu auth sync skonfigurowanego w ustawieniach OmniRoute.
+w **serwer sync** 67router (cztery narzędzia `obsidian_sync_*`) dodatkowo wymagają
+tokenu auth sync skonfigurowanego w ustawieniach 67router.
 
 ### Narzędzia odczytu (`read:obsidian`)
 
@@ -145,7 +145,7 @@ tokenu auth sync skonfigurowanego w ustawieniach OmniRoute.
 | `obsidian_get_periodic_note` | Periodyczna notatka daily/weekly/monthly dla daty (dziś, jeśli pominięto).                   |
 | `obsidian_get_tags`          | Lista wszystkich tagów vaultu z ich częstotliwościami.                                       |
 | `obsidian_list_commands`     | Lista dostępnych ID komend Obsidian (użyj z `obsidian_execute_command`).                     |
-| `obsidian_sync_status`       | Status serwera sync OmniRoute: running, nazwa vaultu, port, uptime, last sync.               |
+| `obsidian_sync_status`       | Status serwera sync 67router: running, nazwa vaultu, port, uptime, last sync.                |
 | `obsidian_sync_conflicts`    | Lista nierozwiązanych konfliktów sync (path, conflict path, detected-at).                    |
 
 ### Narzędzia zapisu (`write:obsidian`)

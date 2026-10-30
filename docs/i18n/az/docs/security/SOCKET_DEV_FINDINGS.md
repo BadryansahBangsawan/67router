@@ -48,7 +48,7 @@ ifşa edilmiş JWT bu kod yolunu **tətikləyə bilməz**.
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` vasitəsilə hər profil üzrə NSS DB yeniləməsi                                          |
 
 Bunlar `mitmproxy`, Charles Proxy, Fiddler və Caddy tərəfindən istifadə olunan eyni əmrlərdir.
-Onların OmniRoute daxilində mövcud olması
+Onların 67router daxilində mövcud olması
 `docs/security/STEALTH_GUIDE.md` sənədində qeyd edilib.
 
 **v3.8.6 qarşı tədbiri**:
@@ -107,7 +107,7 @@ hələ yeniləməmiş operatorlar üçün v3.8.5 davranışını qoruyur. Bu bay
 v3.9-da silinəcək.
 
 **Onu saxlamağımızın səbəbi**: Zed idxalı artıq Zed-dən istifadə edən və
-provayder açarlarını yenidən yapışdırmadan OmniRoute-a köçürmək istəyən
+provayder açarlarını yenidən yapışdırmadan 67router-a köçürmək istəyən
 istifadəçilər üçün ən rahat ilkin quraşdırma yoludur.
 
 ---
@@ -119,7 +119,7 @@ istifadəçilər üçün ən rahat ilkin quraşdırma yoludur.
 **İşarələnməsinin səbəbi**: fraqment `execFileWithPassword`,
 `runElevatedPowerShell` və ortaq `quotePowerShell` köməkçi funksiyasını yenidən
 ixrac edir. Socket.dev-in süni intellekt təsnifatçısı onları ümumi "hostda
-icra + imtiyazların yüksəldilməsi alətləri dəsti" kimi qəbul edir. OmniRoute
+icra + imtiyazların yüksəldilməsi alətləri dəsti" kimi qəbul edir. 67router
 daxilində onlar yalnız MITM sertifikatının quraşdırılması yolu (§1) və `sudo`
 əmrlərinin icrası üçün `execFileWithPassword` tərəfindən istifadə olunur.
 
@@ -175,7 +175,7 @@ bilən köməkçi xidmətdir (WordPress üslublu plagin kimi düşünün) — ya
 
 ---
 
-## §5 — OmniRoute Cloud Sync etimadnamələrinin geri yazılması (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync etimadnamələrinin geri yazılması (`api/keys/[id]/route.js`)
 
 **Mənbə faylları**:
 
@@ -209,7 +209,7 @@ səssizcə dəyişdirə bilərdi.
    sinxronizasiyasına güvənən istifadəçilər üçün **geriyə uyğun olmayan dəyişiklikdir**
    — onlar bunu açıq şəkildə aktivləşdirməlidirlər.
 
-**Niyə bunu saxlayırıq**: Cloud Sync, OmniRoute Cloud tenantının komanda
+**Niyə bunu saxlayırıq**: Cloud Sync, 67router Cloud tenantının komanda
 etimadnamələrini mərkəzləşdirməsinin yeganə yoludur. Düzəliş təhdid modelini
 dürüst edir: "server imzalayır, müştəri yoxlayır, operator açıq razılıq verir."
 

@@ -8,7 +8,7 @@
 
 ## त्वरित शुरुआत — मूल `agentrouter` प्रदाता का उपयोग करें (अनुशंसित)
 
-अधिकांश उपयोगकर्ताओं के लिए, **किसी विशेष सेटअप की आवश्यकता नहीं है**। OmniRoute में पूर्ण Claude Code वायर इमेज के साथ एक अंतर्निहित `agentrouter` प्रदाता पहले से शामिल है (`open-sse/config/providerRegistry.ts` → `agentrouter` देखें)। इसका उपयोग करने के लिए:
+अधिकांश उपयोगकर्ताओं के लिए, **किसी विशेष सेटअप की आवश्यकता नहीं है**। 67router में पूर्ण Claude Code वायर इमेज के साथ एक अंतर्निहित `agentrouter` प्रदाता पहले से शामिल है (`open-sse/config/providerRegistry.ts` → `agentrouter` देखें)। इसका उपयोग करने के लिए:
 
 1. **डैशबोर्ड → प्रदाता → प्रदाता जोड़ें** खोलें।
 2. सूची से **AgentRouter** चुनें।
@@ -22,18 +22,18 @@
 
 ## उन्नत: Claude Code संगत प्रदाता प्रकार के माध्यम से कनेक्ट करना
 
-OmniRoute, **Claude Code संगत** प्रदाता प्रकार (`anthropic-compatible-cc-*`) के माध्यम से AgentRouter (और समान रिले) का भी समर्थन करता है, जो सही वायर इमेज के साथ Anthropic Messages API का उपयोग करता है। `https://agentrouter.org` की ओर इंगित करने वाला सामान्य `openai-compatible-chat` प्रदाता काम **नहीं** करेगा — अपस्ट्रीम WAF उन अनुरोधों को अस्वीकार कर देता है जो Claude Code जैसे नहीं दिखते।
+67router, **Claude Code संगत** प्रदाता प्रकार (`anthropic-compatible-cc-*`) के माध्यम से AgentRouter (और समान रिले) का भी समर्थन करता है, जो सही वायर इमेज के साथ Anthropic Messages API का उपयोग करता है। `https://agentrouter.org` की ओर इंगित करने वाला सामान्य `openai-compatible-chat` प्रदाता काम **नहीं** करेगा — अपस्ट्रीम WAF उन अनुरोधों को अस्वीकार कर देता है जो Claude Code जैसे नहीं दिखते।
 
 ---
 
 ## पूर्वापेक्षाएँ
 
 - एक AgentRouter खाता और API कुंजी। नए साइनअप को प्रोजेक्ट [README](../README.md) में दिए गए एफिलिएट लिंक के माध्यम से निःशुल्क क्रेडिट मिलते हैं।
-- `ENABLE_CC_COMPATIBLE_PROVIDER` फ़ीचर फ़्लैग सक्षम करके चल रहा OmniRoute (नीचे देखें)।
+- `ENABLE_CC_COMPATIBLE_PROVIDER` फ़ीचर फ़्लैग सक्षम करके चल रहा 67router (नीचे देखें)।
 
 ## 1. CC-संगत प्रदाता प्रकार सक्षम करें
 
-Claude Code संगत प्रदाता प्रकार को एक फ़ीचर फ़्लैग के पीछे रखा गया है, क्योंकि यह ऐसा ट्रैफ़िक भेजता है जो आधिकारिक Claude Code क्लाइंट से काफ़ी हद तक मेल खाता है। OmniRoute शुरू करने से पहले एक environment variable सेट करके इसे सक्षम करें:
+Claude Code संगत प्रदाता प्रकार को एक फ़ीचर फ़्लैग के पीछे रखा गया है, क्योंकि यह ऐसा ट्रैफ़िक भेजता है जो आधिकारिक Claude Code क्लाइंट से काफ़ी हद तक मेल खाता है। 67router शुरू करने से पहले एक environment variable सेट करके इसे सक्षम करें:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

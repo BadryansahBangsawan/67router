@@ -8,7 +8,7 @@
 
 > **Tõeallikas:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute võimaldab määrata igale puhverserverile **aadressiperekonna väljundliikluse direktiivi**. Vaikimisi valib operatsioonisüsteem IPv4 või IPv6 (kaksikpinu, „Happy Eyeballs“). Kui määrate direktiiviks `ipv4` või `ipv6`, kinnitab OmniRoute kõik selle puhverserveri kaudu loodavad ühendused valitud perekonnale ja **katkestab turvaliselt**, selle asemel et minna üle teisele perekonnale.
+67router võimaldab määrata igale puhverserverile **aadressiperekonna väljundliikluse direktiivi**. Vaikimisi valib operatsioonisüsteem IPv4 või IPv6 (kaksikpinu, „Happy Eyeballs“). Kui määrate direktiiviks `ipv4` või `ipv6`, kinnitab 67router kõik selle puhverserveri kaudu loodavad ühendused valitud perekonnale ja **katkestab turvaliselt**, selle asemel et minna üle teisele perekonnale.
 
 Sellel lehel kirjeldatakse, mis see direktiiv on, miks see olemas on, kus seda seadistada ja kuidas käituskeskkond selle väärtuse lahendab.
 
@@ -122,7 +122,7 @@ Sama välja aktsepteerib ka ülesvoolu puhverserveri kirjete jaoks kasutatav tek
 
 ## Kuidas `auto` lahendatakse
 
-Kui `family` väärtus on `auto`, siis OmniRoute **ei** lisa ühtegi direktiivi — puhverserveri URL-i kasutatakse muutmata kujul ja ühenduse aadressiperekond määratakse olemuslikult.
+Kui `family` väärtus on `auto`, siis 67router **ei** lisa ühtegi direktiivi — puhverserveri URL-i kasutatakse muutmata kujul ja ühenduse aadressiperekond määratakse olemuslikult.
 
 URL-i koostamise ajal (`proxyConfigToUrl` / `normalizeProxyUrl` failis `open-sse/utils/proxyDispatcher.ts`) annab `auto` puhverserver tavalise URL-i ilma markerita:
 
@@ -158,7 +158,7 @@ Seega:
 
 Mitte-`auto` direktiiv liigub ühe sünteetilise päringuparameetrina — `?family=ipv4` või `?family=ipv6` —, mis lisatakse normaliseeritud puhverserveri URL-ile üks kord. `normalizeProxyUrl` eemaldab selle parameetri hoolikalt ja lisab selle uuesti täpselt üks kord, et see ei rikuks kunagi pordi sõelumist.
 
-Dispetšeri loomisel loetakse parameeter ja teisendatakse konkreetseks ühenduse aadressipereks. Kui host on **vastupidise** aadressipere IP-literaal, väljastab OmniRoute erindi (vastuolu korral rakendatakse fail-closed-põhimõtet):
+Dispetšeri loomisel loetakse parameeter ja teisendatakse konkreetseks ühenduse aadressipereks. Kui host on **vastupidise** aadressipere IP-literaal, väljastab 67router erindi (vastuolu korral rakendatakse fail-closed-põhimõtet):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Seejärel fikseeritakse konkreetne aadressipere konnektoris:
 
 ## SOCKS5 ühilduvus
 
-Aadressipere fikseerimine töötab SOCKS5-puhverserveritega, kuid standardne `fetch-socks` ei avalda soklisuvandeid, mida on vaja puhverserverihüppe aadressipere fikseerimiseks. OmniRoute sisaldab selleks oma konnektorit:
+Aadressipere fikseerimine töötab SOCKS5-puhverserveritega, kuid standardne `fetch-socks` ei avalda soklisuvandeid, mida on vaja puhverserverihüppe aadressipere fikseerimiseks. 67router sisaldab selleks oma konnektorit:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

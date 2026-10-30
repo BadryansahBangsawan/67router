@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute では、OpenAI Codex を使用するための方法が **2つ** 提供されています。
+67router では、OpenAI Codex を使用するための方法が **2つ** 提供されています。
 
 | プロバイダー           | OpenAI との通信方法                                                                                                                                                                                   | 利用上の注意                                                                |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | **`codex`**            | ChatGPT/OpenAI OAuth トークンを Responses API に直接再送します                                                                                                                                        | **あり** — 公式セッションはプロキシ／ルーター経由での使用を許可していません |
-| **`codex-app-server`** | JSON-RPC/WebSocket 経由で **Codex CLI 独自の `codex app-server`** を操作します。CLI は、対話型の `codex` セッションとまったく同じように、独自の OAuth（`~/.codex/auth.json`）を管理し、自動更新します | **なし** — OmniRoute が API にトークンを再送することはありません            |
+| **`codex-app-server`** | JSON-RPC/WebSocket 経由で **Codex CLI 独自の `codex app-server`** を操作します。CLI は、対話型の `codex` セッションとまったく同じように、独自の OAuth（`~/.codex/auth.json`）を管理し、自動更新します | **なし** — 67router が API にトークンを再送することはありません             |
 
 `codex-app-server` はトークンを再送しないため、セッション再送に関する
 利用上の注意は該当しません。ただし、**設定された app-server URL から
@@ -20,7 +20,7 @@ Codex CLI に到達可能であること**、およびその CLI が**サイン�
 ## 1. アーキテクチャ
 
 ```
-┌─ OmniRoute アプリ ──────────────┐        ┌─ codex-app-server サイドカー ──────┐
+┌─ 67router アプリ ──────────────┐        ┌─ codex-app-server サイドカー ──────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  （+ ケイパビリティトークン）    │  JSON  │  --ws-auth capability-token         │
@@ -76,7 +76,7 @@ docker compose --profile base --profile codex-app-server up -d
   `~/.codex` をサイドカー（`codex-appserver-home`）にマウントし、サインイン手順を省略します。
 - **ローカルに codex がインストールされていない一般ユーザー** — 問題ありません。
   サイドカーに CLI が含まれています。ユーザーはダッシュボード経由で認証するだけです。
-- **ベアメタルの OmniRoute（サイドカーなし、ホストの codex を使用）** —
+- **ベアメタルの 67router（サイドカーなし、ホストの codex を使用）** —
   `OMNIROUTE_CODEX_APPSERVER_WS` に独自の `codex app-server` を指定し、
   ホストの codex がサインイン済みであることを確認してください。バイナリが存在しない場合は、
   "codex not installed" というヒントが表示されます。

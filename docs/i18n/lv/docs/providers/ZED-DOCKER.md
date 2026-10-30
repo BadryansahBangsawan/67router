@@ -4,7 +4,7 @@
 
 ---
 
-Kad OmniRoute darbojas Docker vidē, standarta plūsma “Importēt no Zed atslēgu saišķa” neizdodas,
+Kad 67router darbojas Docker vidē, standarta plūsma “Importēt no Zed atslēgu saišķa” neizdodas,
 jo konteiners nevar piekļūt resursdatora operētājsistēmas atslēgu saišķa dēmonam (`libsecret` Linux vidē,
 Keychain macOS vidē, Credential Manager Windows vidē), un Zed konfigurācijas direktoriji
 resursdatora failu sistēmā pēc noklusējuma nav redzami konteinerā.
@@ -20,7 +20,7 @@ Konteinerā rodas divas bloķējošas problēmas:
    `keytar` modulis sazinās ar operētājsistēmas atslēgu saišķa pakalpojumu, izmantojot Unix ligzdu vai D-Bus sesiju.
    Pēc noklusējuma neviens no tiem nav savienots ar konteineru, tādēļ akreditācijas datu nolasīšana vienmēr neizdodas.
 
-OmniRoute nosaka Docker vidi, izmantojot divas heiristikas:
+67router nosaka Docker vidi, izmantojot divas heiristikas:
 
 - `/.dockerenv` esamība (Docker dēmons to izveido konteinera palaišanas laikā).
 - Virkne `docker` failā `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Ja nostrādā kāda no heiristikām, importēšanas maršruts atgriež HTTP 422 
 
 1. Atveriet **Informācijas panelis → Pakalpojumu sniedzēji → Zed**.
 2. Zem atslēgu saišķa importēšanas kartītes tiek parādīts panelis **Manuāla pilnvaras importēšana**. Kad
-   OmniRoute nosaka Docker vidi, šis panelis tiek automātiski izvērsts pēc pirmā neveiksmīgā
+   67router nosaka Docker vidi, šis panelis tiek automātiski izvērsts pēc pirmā neveiksmīgā
    atslēgu saišķa importēšanas mēģinājuma.
 3. Nolaižamajā sarakstā atlasiet pakalpojumu sniedzēju (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter vai DeepSeek).

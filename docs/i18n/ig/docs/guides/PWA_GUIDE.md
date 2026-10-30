@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute na-abịa dịka Progressive Web App a pụrụ ịwụnye n'ụzọ zuru ezu. Mgbe ị si na ihe nchọgharị mkpanaka ọ bụla — Android (Chrome) ma ọ bụ iOS (Safari) — banye na dashboard ahụ, ị nwere ike ịhọrọ **"Tinye na Ihuenyo Mbụ"** wee nweta ahụmịhe yiri nke ngwa e wuru maka ngwaọrụ ahụ n'achọghị ụlọ ahịa ngwa.
+67router na-abịa dịka Progressive Web App a pụrụ ịwụnye n'ụzọ zuru ezu. Mgbe ị si na ihe nchọgharị mkpanaka ọ bụla — Android (Chrome) ma ọ bụ iOS (Safari) — banye na dashboard ahụ, ị nwere ike ịhọrọ **"Tinye na Ihuenyo Mbụ"** wee nweta ahụmịhe yiri nke ngwa e wuru maka ngwaọrụ ahụ n'achọghị ụlọ ahịa ngwa.
 
 ## Gịnị Bụ PWA?
 
-Progressive Web App na-agbanwe dashboard weebụ OmniRoute ka ọ bụrụ ihe yiri ma na-arụ ọrụ dịka ngwa mkpanaka e wuru maka ngwaọrụ ahụ. Ozugbo awụnyere ya, ọ:
+Progressive Web App na-agbanwe dashboard weebụ 67router ka ọ bụrụ ihe yiri ma na-arụ ọrụ dịka ngwa mkpanaka e wuru maka ngwaọrụ ahụ. Ozugbo awụnyere ya, ọ:
 
 - Na-amalite site na ihuenyo mbụ gị site na akara ngosi nke ya
 - Na-emepe n'ihuenyo zuru ezu — enweghị ogwe adreesị ihe nchọgharị ma ọ bụ UI taabụ
@@ -20,26 +20,26 @@ Progressive Web App na-agbanwe dashboard weebụ OmniRoute ka ọ bụrụ ihe y
 
 ### Android (Chrome)
 
-1. Mepee dashboard OmniRoute na Chrome: `http://YOUR_IP:20128`
-2. Chrome ga-egosi ọkọlọtọ **"Tinye OmniRoute na Ihuenyo Mbụ"** na-akpaghị aka, ma ọ bụ:
+1. Mepee dashboard 67router na Chrome: `http://YOUR_IP:20128`
+2. Chrome ga-egosi ọkọlọtọ **"Tinye 67router na Ihuenyo Mbụ"** na-akpaghị aka, ma ọ bụ:
    - Pịa menu **⋮** (ntụpọ atọ) → **"Tinye na Ihuenyo Mbụ"** ma ọ bụ **"Wụnye ngwa"**
 3. Kwenye na arịrịọ ahụ
-4. OmniRoute ga-apụta na ihuenyo mbụ gị dịka ngwa kwụụrụ onwe ya
+4. 67router ga-apụta na ihuenyo mbụ gị dịka ngwa kwụụrụ onwe ya
 
 ### iOS (Safari)
 
-1. Mepee dashboard OmniRoute na Safari: `http://YOUR_IP:20128`
+1. Mepee dashboard 67router na Safari: `http://YOUR_IP:20128`
 2. Pịa bọtịnụ **Kekọrịta** (igbe nwere akụ)
 3. Pịgharịa gaa n'okpuru wee pịa **"Tinye na Ihuenyo Mbụ"**
-4. Nye ya aha (aha ndabara bụ "OmniRoute") wee pịa **Tinye**
-5. OmniRoute ga-apụta na ihuenyo mbụ gị yana akara ngosi ngwa ahụ
+4. Nye ya aha (aha ndabara bụ "67router") wee pịa **Tinye**
+5. 67router ga-apụta na ihuenyo mbụ gị yana akara ngosi ngwa ahụ
 
 ### Desktọpụ (Chrome / Edge)
 
-1. Mepee dashboard OmniRoute
-2. Pịa **akara ngosi nwụnye** dị na ogwe adreesị (ma ọ bụ ⋮ → "Wụnye OmniRoute...")
+1. Mepee dashboard 67router
+2. Pịa **akara ngosi nwụnye** dị na ogwe adreesị (ma ọ bụ ⋮ → "Wụnye 67router...")
 3. Kwenye na arịrịọ ahụ
-4. OmniRoute ga-emeghe dịka windo kwụụrụ onwe ya — enweghị taabụ, enweghị ogwe adreesị
+4. 67router ga-emeghe dịka windo kwụụrụ onwe ya — enweghị taabụ, enweghị ogwe adreesị
 
 ## Njirimara
 
@@ -49,7 +49,7 @@ A haziri manifest ahụ na `display: "fullscreen"`, nke pụtara na ngwa awụny
 
 ### Nkwado Mgbe Enweghị Njikọ
 
-OmniRoute nwere service worker (`sw.js`) nke na-enye nchekwa cache nwere ọgụgụ isi:
+67router nwere service worker (`sw.js`) nke na-enye nchekwa cache nwere ọgụgụ isi:
 
 | Ụdị Akụ                                                 | Atụmatụ                                | Omume                                                                                                       |
 | ------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Mgbe netwọkụ adịghị ma onye ọrụ agaa na ibe ọhụrụ, service wor
 
 ### Akara Ngosi Ngwa
 
-OmniRoute na-enye akara ngosi ahaziri maka ikpo okwu ọ bụla:
+67router na-enye akara ngosi ahaziri maka ikpo okwu ọ bụla:
 
 | Faịlụ                  | Nha              | Ndị Na-eji Ya                          |
 | ---------------------- | ---------------- | -------------------------------------- |
@@ -94,8 +94,8 @@ Next.js na-emepụta ya site na `src/app/manifest.ts`:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Dị na `src/shared/components/PwaRegister.tsx`, akụkụ client a:
 
 ## Iji Ya na Termux (Android)
 
-Mgbe a na-eji Termux agba OmniRoute na Android, PWA ahụ na-arụ ọrụ nke ọma n'enweghị nsogbu:
+Mgbe a na-eji Termux agba 67router na Android, PWA ahụ na-arụ ọrụ nke ọma n'enweghị nsogbu:
 
-1. Malite OmniRoute na Termux: `npx omniroute`
+1. Malite 67router na Termux: `npx omniroute`
 2. Mepee Chrome n'otu ekwentị ahụ: `http://localhost:20128`
 3. Wụnye PWA site na "Tinye na Ihuenyo Mbụ"
 4. PWA ahụ na-ejikọta na sava Termux dị na ngwaọrụ ahụ — ihe niile na-arụ n'ime ngwaọrụ ahụ
@@ -156,7 +156,7 @@ Ngwakọta a pụtara na ekwentị Android gị bụ ma **sava** (Termux) ma **c
 
 ## Iji Ya Site na Ngwaọrụ Ndị Ọzọ
 
-Wụnye PWA na ngwaọrụ ọ bụla nke browser ya nwere ike ịbanye na sava OmniRoute gị:
+Wụnye PWA na ngwaọrụ ọ bụla nke browser ya nwere ike ịbanye na sava 67router gị:
 
 - **Ekwentị/mbadamba ọzọ**: Gaa na `http://PHONE_IP:20128` ma wụnye PWA
 - **Laptọọpụ**: Mepee Chrome/Edge ma wụnye ya dị ka PWA desktọọpụ

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute prati potrošnju tokena za svaki zahtjev, izračunava trošak, provodi kvotu po API ključu i prikazuje analitiku na nadzornoj ploči. Ovaj vodič objašnjava kako sve to funkcionira.
+> **TL;DR**: 67router prati potrošnju tokena za svaki zahtjev, izračunava trošak, provodi kvotu po API ključu i prikazuje analitiku na nadzornoj ploči. Ovaj vodič objašnjava kako sve to funkcionira.
 
 **Izvori:**
 
@@ -17,7 +17,7 @@
 
 ## Pregled
 
-Svaki zahtjev koji prolazi kroz OmniRoute generira **zapis o potrošnji** koji obuhvaća:
+Svaki zahtjev koji prolazi kroz 67router generira **zapis o potrošnji** koji obuhvaća:
 
 - **Identitet**: koji API ključ, pružatelj usluge, model i kombinacija
 - **Tokeni**: tokeni upita, tokeni dovršetka, predmemorirani tokeni i ukupan broj
@@ -75,11 +75,11 @@ const usage = response.usage || {
 };
 ```
 
-Za pružatelje usluga koji ne vraćaju podatke o potrošnji (neki pružatelji koji se koriste web-kolačićima), OmniRoute **procjenjuje** broj tokena pomoću heuristike `~4 znaka po tokenu` (pogledajte `open-sse/services/autoCombo/pipelineRouter.ts`).
+Za pružatelje usluga koji ne vraćaju podatke o potrošnji (neki pružatelji koji se koriste web-kolačićima), 67router **procjenjuje** broj tokena pomoću heuristike `~4 znaka po tokenu` (pogledajte `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Predmemorirani tokeni
 
-OmniRoute prati `cached_tokens` odvojeno od `prompt_tokens` jer:
+67router prati `cached_tokens` odvojeno od `prompt_tokens` jer:
 
 - Anthropicovo predmemoriranje upita naplaćuje predmemorirane tokene po sniženoj cijeni (10 % uobičajene cijene)
 - Neki pružatelji usluga vraćaju `cache_read_input_tokens`, čija se cijena treba izračunati drukčije
@@ -118,7 +118,7 @@ Podaci o cijenama automatski se sinkroniziraju iz LiteLLM-a putem krajnje točke
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Za modele bez podataka o cijenama OmniRoute se vraća na **procjenu troška** pomoću internih prosječnih stopa (preuzetih iz LiteLLM-ovih podataka o cijenama).
+Za modele bez podataka o cijenama 67router se vraća na **procjenu troška** pomoću internih prosječnih stopa (preuzetih iz LiteLLM-ovih podataka o cijenama).
 
 ---
 

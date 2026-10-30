@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **آخرین بهروزرسانی:** 2026-06-28 — v3.8.40
 
-OmniRoute همراه با یک سیستم افزونه به سبک WordPress ارائه میشود. افزونهها
+67router همراه با یک سیستم افزونه به سبک WordPress ارائه میشود. افزونهها
 دایرکتوریهای مستقلی هستند — هرکدام دارای یک مانیفست `plugin.json` و یک فایل
 ورودی — که به خط لوله درخواست (`onRequest` / `onResponse` / `onError`) و
 رویدادهای چرخه حیات (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -155,7 +155,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### دایرکتوری افزونهها
 
-افزونهها در دایرکتوری دادهٔ OmniRoute قرار میگیرند:
+افزونهها در دایرکتوری دادهٔ 67router قرار میگیرند:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

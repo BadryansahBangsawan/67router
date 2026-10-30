@@ -1,4 +1,4 @@
-# OmniRoute — Uninstall Guide (မြန်မာ)
+# 67router — Uninstall Guide (မြန်မာ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/UNINSTALL.md) · 🇪🇹 [am](../../../am/docs/guides/UNINSTALL.md) · 🇸🇦 [ar](../../../ar/docs/guides/UNINSTALL.md) · 🇦🇿 [az](../../../az/docs/guides/UNINSTALL.md) · 🇧🇬 [bg](../../../bg/docs/guides/UNINSTALL.md) · 🇧🇩 [bn](../../../bn/docs/guides/UNINSTALL.md) · 🇧🇦 [bs](../../../bs/docs/guides/UNINSTALL.md) · 🇨🇿 [cs](../../../cs/docs/guides/UNINSTALL.md) · 🇩🇰 [da](../../../da/docs/guides/UNINSTALL.md) · 🇩🇪 [de](../../../de/docs/guides/UNINSTALL.md) · 🇬🇷 [el](../../../el/docs/guides/UNINSTALL.md) · 🇪🇸 [es](../../../es/docs/guides/UNINSTALL.md) · 🇪🇪 [et](../../../et/docs/guides/UNINSTALL.md) · 🇮🇷 [fa](../../../fa/docs/guides/UNINSTALL.md) · 🇫🇮 [fi](../../../fi/docs/guides/UNINSTALL.md) · 🇫🇷 [fr](../../../fr/docs/guides/UNINSTALL.md) · 🇮🇪 [ga](../../../ga/docs/guides/UNINSTALL.md) · 🇮🇳 [gu](../../../gu/docs/guides/UNINSTALL.md) · 🇳🇬 [ha](../../../ha/docs/guides/UNINSTALL.md) · 🇮🇱 [he](../../../he/docs/guides/UNINSTALL.md) · 🇮🇳 [hi](../../../hi/docs/guides/UNINSTALL.md) · 🇭🇷 [hr](../../../hr/docs/guides/UNINSTALL.md) · 🇭🇺 [hu](../../../hu/docs/guides/UNINSTALL.md) · 🇦🇲 [hy](../../../hy/docs/guides/UNINSTALL.md) · 🇮🇩 [id](../../../id/docs/guides/UNINSTALL.md) · 🇳🇬 [ig](../../../ig/docs/guides/UNINSTALL.md) · 🇮🇹 [it](../../../it/docs/guides/UNINSTALL.md) · 🇯🇵 [ja](../../../ja/docs/guides/UNINSTALL.md) · 🇬🇪 [ka](../../../ka/docs/guides/UNINSTALL.md) · 🇰🇭 [km](../../../km/docs/guides/UNINSTALL.md) · 🇮🇳 [kn](../../../kn/docs/guides/UNINSTALL.md) · 🇰🇷 [ko](../../../ko/docs/guides/UNINSTALL.md) · 🇱🇹 [lt](../../../lt/docs/guides/UNINSTALL.md) · 🇱🇻 [lv](../../../lv/docs/guides/UNINSTALL.md) · 🇮🇳 [ml](../../../ml/docs/guides/UNINSTALL.md) · 🇮🇳 [mr](../../../mr/docs/guides/UNINSTALL.md) · 🇲🇾 [ms](../../../ms/docs/guides/UNINSTALL.md) · 🇲🇹 [mt](../../../mt/docs/guides/UNINSTALL.md) · 🇳🇵 [ne](../../../ne/docs/guides/UNINSTALL.md) · 🇳🇱 [nl](../../../nl/docs/guides/UNINSTALL.md) · 🇳🇴 [no](../../../no/docs/guides/UNINSTALL.md) · 🇮🇳 [or](../../../or/docs/guides/UNINSTALL.md) · 🇮🇳 [pa](../../../pa/docs/guides/UNINSTALL.md) · 🇵🇭 [phi](../../../phi/docs/guides/UNINSTALL.md) · 🇵🇱 [pl](../../../pl/docs/guides/UNINSTALL.md) · 🇵🇹 [pt](../../../pt/docs/guides/UNINSTALL.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/UNINSTALL.md) · 🇷🇴 [ro](../../../ro/docs/guides/UNINSTALL.md) · 🇷🇺 [ru](../../../ru/docs/guides/UNINSTALL.md) · 🇱🇰 [si](../../../si/docs/guides/UNINSTALL.md) · 🇸🇰 [sk](../../../sk/docs/guides/UNINSTALL.md) · 🇸🇮 [sl](../../../sl/docs/guides/UNINSTALL.md) · 🇷🇸 [sr](../../../sr/docs/guides/UNINSTALL.md) · 🇸🇪 [sv](../../../sv/docs/guides/UNINSTALL.md) · 🇰🇪 [sw](../../../sw/docs/guides/UNINSTALL.md) · 🇮🇳 [ta](../../../ta/docs/guides/UNINSTALL.md) · 🇮🇳 [te](../../../te/docs/guides/UNINSTALL.md) · 🇹🇭 [th](../../../th/docs/guides/UNINSTALL.md) · 🇹🇷 [tr](../../../tr/docs/guides/UNINSTALL.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/UNINSTALL.md) · 🇵🇰 [ur](../../../ur/docs/guides/UNINSTALL.md) · 🇺🇿 [uz](../../../uz/docs/guides/UNINSTALL.md) · 🇻🇳 [vi](../../../vi/docs/guides/UNINSTALL.md) · 🇳🇬 [yo](../../../yo/docs/guides/UNINSTALL.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/UNINSTALL.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/UNINSTALL.md)
 
@@ -6,13 +6,13 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/UNINSTALL.md) · 🇪🇹 [am](../../../am/docs/guides/UNINSTALL.md) · 🇸🇦 [ar](../../../ar/docs/guides/UNINSTALL.md) · 🇦🇿 [az](../../../az/docs/guides/UNINSTALL.md) · 🇧🇬 [bg](../../../bg/docs/guides/UNINSTALL.md) · 🇧🇩 [bn](../../../bn/docs/guides/UNINSTALL.md) · 🇧🇦 [bs](../../../bs/docs/guides/UNINSTALL.md) · 🇨🇿 [cs](../../../cs/docs/guides/UNINSTALL.md) · 🇩🇰 [da](../../../da/docs/guides/UNINSTALL.md) · 🇩🇪 [de](../../../de/docs/guides/UNINSTALL.md) · 🇬🇷 [el](../../../el/docs/guides/UNINSTALL.md) · 🇪🇸 [es](../../../es/docs/guides/UNINSTALL.md) · 🇪🇪 [et](../../../et/docs/guides/UNINSTALL.md) · 🇮🇷 [fa](../../../fa/docs/guides/UNINSTALL.md) · 🇫🇮 [fi](../../../fi/docs/guides/UNINSTALL.md) · 🇫🇷 [fr](../../../fr/docs/guides/UNINSTALL.md) · 🇮🇪 [ga](../../../ga/docs/guides/UNINSTALL.md) · 🇮🇳 [gu](../../../gu/docs/guides/UNINSTALL.md) · 🇳🇬 [ha](../../../ha/docs/guides/UNINSTALL.md) · 🇮🇱 [he](../../../he/docs/guides/UNINSTALL.md) · 🇮🇳 [hi](../../../hi/docs/guides/UNINSTALL.md) · 🇭🇷 [hr](../../../hr/docs/guides/UNINSTALL.md) · 🇭🇺 [hu](../../../hu/docs/guides/UNINSTALL.md) · 🇦🇲 [hy](../../../hy/docs/guides/UNINSTALL.md) · 🇮🇩 [id](../../../id/docs/guides/UNINSTALL.md) · 🇳🇬 [ig](../../../ig/docs/guides/UNINSTALL.md) · 🇮🇹 [it](../../../it/docs/guides/UNINSTALL.md) · 🇯🇵 [ja](../../../ja/docs/guides/UNINSTALL.md) · 🇬🇪 [ka](../../../ka/docs/guides/UNINSTALL.md) · 🇰🇭 [km](../../../km/docs/guides/UNINSTALL.md) · 🇮🇳 [kn](../../../kn/docs/guides/UNINSTALL.md) · 🇰🇷 [ko](../../../ko/docs/guides/UNINSTALL.md) · 🇱🇹 [lt](../../../lt/docs/guides/UNINSTALL.md) · 🇱🇻 [lv](../../../lv/docs/guides/UNINSTALL.md) · 🇮🇳 [ml](../../../ml/docs/guides/UNINSTALL.md) · 🇮🇳 [mr](../../../mr/docs/guides/UNINSTALL.md) · 🇲🇾 [ms](../../../ms/docs/guides/UNINSTALL.md) · 🇲🇹 [mt](../../../mt/docs/guides/UNINSTALL.md) · 🇳🇵 [ne](../../../ne/docs/guides/UNINSTALL.md) · 🇳🇱 [nl](../../../nl/docs/guides/UNINSTALL.md) · 🇳🇴 [no](../../../no/docs/guides/UNINSTALL.md) · 🇮🇳 [or](../../../or/docs/guides/UNINSTALL.md) · 🇮🇳 [pa](../../../pa/docs/guides/UNINSTALL.md) · 🇵🇭 [phi](../../../phi/docs/guides/UNINSTALL.md) · 🇵🇱 [pl](../../../pl/docs/guides/UNINSTALL.md) · 🇵🇹 [pt](../../../pt/docs/guides/UNINSTALL.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/UNINSTALL.md) · 🇷🇴 [ro](../../../ro/docs/guides/UNINSTALL.md) · 🇷🇺 [ru](../../../ru/docs/guides/UNINSTALL.md) · 🇱🇰 [si](../../../si/docs/guides/UNINSTALL.md) · 🇸🇰 [sk](../../../sk/docs/guides/UNINSTALL.md) · 🇸🇮 [sl](../../../sl/docs/guides/UNINSTALL.md) · 🇷🇸 [sr](../../../sr/docs/guides/UNINSTALL.md) · 🇸🇪 [sv](../../../sv/docs/guides/UNINSTALL.md) · 🇰🇪 [sw](../../../sw/docs/guides/UNINSTALL.md) · 🇮🇳 [ta](../../../ta/docs/guides/UNINSTALL.md) · 🇮🇳 [te](../../../te/docs/guides/UNINSTALL.md) · 🇹🇭 [th](../../../th/docs/guides/UNINSTALL.md) · 🇹🇷 [tr](../../../tr/docs/guides/UNINSTALL.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/UNINSTALL.md) · 🇵🇰 [ur](../../../ur/docs/guides/UNINSTALL.md) · 🇺🇿 [uz](../../../uz/docs/guides/UNINSTALL.md) · 🇻🇳 [vi](../../../vi/docs/guides/UNINSTALL.md) · 🇳🇬 [yo](../../../yo/docs/guides/UNINSTALL.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/UNINSTALL.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/UNINSTALL.md)
 
-ဤလမ်းညွှန်တွင် သင့်စနစ်မှ OmniRoute ကို အကြွင်းအကျန်မရှိ သန့်ရှင်းစွာ ဖယ်ရှားနည်းကို ဖော်ပြထားသည်။
+ဤလမ်းညွှန်တွင် သင့်စနစ်မှ 67router ကို အကြွင်းအကျန်မရှိ သန့်ရှင်းစွာ ဖယ်ရှားနည်းကို ဖော်ပြထားသည်။
 
 ---
 
 ## အမြန် Uninstall ပြုလုပ်ခြင်း (v3.6.2+)
 
-OmniRoute တွင် အပြီးသတ်ရှင်းလင်းဖယ်ရှားရန် အသင့်ပါဝင်သော script နှစ်ခုကို ပံ့ပိုးထားသည်-
+67router တွင် အပြီးသတ်ရှင်းလင်းဖယ်ရှားရန် အသင့်ပါဝင်သော script နှစ်ခုကို ပံ့ပိုးထားသည်-
 
 ### သင့်ဒေတာကို ထိန်းသိမ်းထားခြင်း
 
@@ -20,7 +20,7 @@ OmniRoute တွင် အပြီးသတ်ရှင်းလင်းဖယ
 npm run uninstall
 ```
 
-ဤ command သည် OmniRoute application ကို ဖယ်ရှားပေးသော်လည်း `~/.omniroute/` ရှိ သင့် database၊ configuration များ၊ API key များနှင့် provider setting များကို **ထိန်းသိမ်းထားသည်**။ နောက်ပိုင်းတွင် ပြန်လည် install လုပ်ရန် စီစဉ်ထားပြီး လက်ရှိ setup ကို ဆက်လက်ထိန်းသိမ်းလိုပါက ဤနည်းလမ်းကို အသုံးပြုပါ။
+ဤ command သည် 67router application ကို ဖယ်ရှားပေးသော်လည်း `~/.omniroute/` ရှိ သင့် database၊ configuration များ၊ API key များနှင့် provider setting များကို **ထိန်းသိမ်းထားသည်**။ နောက်ပိုင်းတွင် ပြန်လည် install လုပ်ရန် စီစဉ်ထားပြီး လက်ရှိ setup ကို ဆက်လက်ထိန်းသိမ်းလိုပါက ဤနည်းလမ်းကို အသုံးပြုပါ။
 
 ### အပြည့်အစုံ ဖယ်ရှားခြင်း
 
@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- `Settings → Apps → OmniRoute → Uninstall` ကို ဖွင့်ပါ
+- `Settings → Apps → 67router → Uninstall` ကို ဖွင့်ပါ
 - သို့မဟုတ် install directory မှ NSIS uninstaller ကို run ပါ
 
 **macOS:**
@@ -114,7 +114,7 @@ rm -rf ~/.omniroute
 
 ## ဒေတာ Directory များ
 
-ပုံမှန်အားဖြင့် OmniRoute သည် ဒေတာကို အောက်ပါနေရာများတွင် သိမ်းဆည်းသည်-
+ပုံမှန်အားဖြင့် 67router သည် ဒေတာကို အောက်ပါနေရာများတွင် သိမ်းဆည်းသည်-
 
 | Platform                 | ပုံမှန် Path                         | အစားထိုးသတ်မှတ်မှု        |
 | ------------------------ | ------------------------------------ | ------------------------- |

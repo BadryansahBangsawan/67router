@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sisaldab kureeritud tasuta puhverserverite kogumit tabelis `free_proxies`,
+67router sisaldab kureeritud tasuta puhverserverite kogumit tabelis `free_proxies`,
 mida sünkroonitakse väliste teenusepakkujatega (1proxy, proxifly, iplocate, webshare).
 Juhtpaneel kuvab need jaotises **Settings → Free Proxies**. Selles dokumendis
 käsitletakse serveripoolset filtreerimist, sortimist, loendamist ja

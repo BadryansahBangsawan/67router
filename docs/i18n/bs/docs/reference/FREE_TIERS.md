@@ -9,9 +9,9 @@
 > **Posljednje istraživanje:** 2026-06-17 — web-istraživanje za svakog pružatelja usluga (službena dokumentacija + vijesti iz posljednjih 7 dana, prolaz 50 agenata uz kontradiktornu provjeru) kojim su ažurirane sve kvote besplatnih nivoa + Uslovi korištenja. **Djelimična ponovna revizija 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — pogledajte datiranu napomenu u nastavku).
 > **Izvor istine (katalog):** `open-sse/config/freeModelCatalog.ts` (budžeti po MODELU, deduplicirani po zajedničkom fondu). Brojevi budžeta tokena u nastavku potiču iz aktuelnog web-istraživanja i predstavljaju **procjenu** — pogledajte [Metodologiju i ograničenja](#methodology--caveats).
 
-## Ukratko — koliko besplatnog zaključivanja OmniRoute zapravo objedinjuje?
+## Ukratko — koliko besplatnog zaključivanja 67router zapravo objedinjuje?
 
-Ove brojke opisuju odvojene račune trećih strana i uslove prihvatljivosti u cijelom katalogu. OmniRoute ne dodjeljuje ovaj budžet: morate pribaviti potrebne račune ili pristupne podatke, povezati odgovarajuće pružatelje usluga i poštovati njihova ograničenja. Stvarno iskoristivi kapacitet može biti manji, uključujući nulu na novoj instalaciji bez odgovarajuće rute. Pružatelji označeni sa `tos: avoid` podrazumijevano su isključeni iz automatskog usmjeravanja.
+Ove brojke opisuju odvojene račune trećih strana i uslove prihvatljivosti u cijelom katalogu. 67router ne dodjeljuje ovaj budžet: morate pribaviti potrebne račune ili pristupne podatke, povezati odgovarajuće pružatelje usluga i poštovati njihova ograničenja. Stvarno iskoristivi kapacitet može biti manji, uključujući nulu na novoj instalaciji bez odgovarajuće rute. Pružatelji označeni sa `tos: avoid` podrazumijevano su isključeni iz automatskog usmjeravanja.
 
 **Provjereno 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) nudi jednokratni promotivni kredit od $5 koji zahtijeva način plaćanja i ističe nakon 30 dana. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) objavljuje ograničenja stope po projektu/modelu/nivou; i dalje nije uključen u kvantificiranu mjesečnu glavnu brojku.
 
@@ -92,7 +92,7 @@ besplatnih kredita. Promjene za Nous detaljno su opisane u napomeni o pružaocu 
 
 ## Dva režima — brojanje naspram odlučivanja
 
-OmniRoute odgovara na pitanje „je li besplatno?” kroz dva režima koji namjerno čitaju
+67router odgovara na pitanje „je li besplatno?” kroz dva režima koji namjerno čitaju
 različite izvore:
 
 | Režim                       | Izvor istine                                                                                                                                                          | Površine                                                                                                                       |
@@ -140,7 +140,7 @@ Većina podataka o „besplatnim tokenima mjesečno“ u ovom prostoru predstavl
 
 ### ⚠️ Oprez — odredbe o ličnoj upotrebi / proxyju koje vrijedi provjeriti (16)
 
-> Njihov besplatni pristup je stvaran i OmniRoute može usmjeravati zahtjeve prema njima; samo je korisno znati za odredbe navedene u nastavku. One koje koriste OAuth/pristup bez ključa nije moguće kvantificirati u tokenima, pa nisu uključene u broj naveden u naslovu (a ne zato što su neupotrebljive).
+> Njihov besplatni pristup je stvaran i 67router može usmjeravati zahtjeve prema njima; samo je korisno znati za odredbe navedene u nastavku. One koje koriste OAuth/pristup bez ključa nije moguće kvantificirati u tokenima, pa nisu uključene u broj naveden u naslovu (a ne zato što su neupotrebljive).
 
 | Pružalac         | Napomena                                                                                                                                                                                               |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -154,7 +154,7 @@ Većina podataka o „besplatnim tokenima mjesečno“ u ovom prostoru predstavl
 | `fireworks`      | Uslovi korištenja izričito zabranjuju upotrebu proxyja/posrednika, prijenos API ključeva i podlicenciranje (odjeljci 2.1 i 2.2(i)(j)); samostalno hostovani lični proxyji nisu…                        |
 | `friendliai`     | Odjeljci 8(e) i 8(f) uslova korištenja izričito zabranjuju korištenje FriendliAI-ja kao proxyja ili omogućavanje samostalnog pristupa trećim stranama te zabranjuju preprodaju/…                       |
 | `iflytek`        | Odjeljak 2.4(3) ugovora iFlytek Spark LLM Service Agreement izričito zabranjuje „korištenje bilo kakvih automatiziranih ili programskih metoda za izdvajanje podataka ili izlaznih…                    |
-| `kiro`           | Kiro FAQ izričito zabranjuje korištenje s „OpenClawom i sličnim alatima koji koriste sisteme trećih strana“ — samostalno hostovani AI proxy (poput OmniRoutea) koji usm…                               |
+| `kiro`           | Kiro FAQ izričito zabranjuje korištenje s „OpenClawom i sličnim alatima koji koriste sisteme trećih strana“ — samostalno hostovani AI proxy (poput 67routera) koji usm…                                |
 | `modal`          | Odjeljak 1.3 uslova korištenja izričito zabranjuje „iznajmljivanje, preprodaju ili omogućavanje bilo kojoj trećoj strani direktnog pristupa Usluzi ili njenog korištenja“ — izrada samostalno hostova… |
 | `muse-spark-web` | Uslovi korištenja kompanije Meta izričito zabranjuju automatizirani pristup bez prethodne dozvole, obrnuti inženjering bez pisane dozvole i zaobilaženje tehnološ…                                     |
 | `nlpcloud`       | Uslovi korištenja izričito zabranjuju „postavljanje proxyja ili drugog uređaja koji drugima omogućava pristup Usluzi putem njega“ i daju samo neprenosivo,…                                            |
@@ -316,7 +316,7 @@ Većina podataka o „besplatnim tokenima mjesečno“ u ovom prostoru predstavl
 
 - **`360ai`** — Isporučeni freeNote „Besplatni 360 AI Brain modeli“ djeluje zastarjelo. Trenutni pristup zahtijeva prijavu i plaća se. Promotivni tokeni iz perioda lansiranja 2023. godine (jednokratno 100M–250M) možda su bili osnova za…
 - **`agentrouter`** — Naš isporučeni freeNote navodi „$200 besplatnih kredita pri registraciji.“ Trenutno standardne registracije (bez preporuke) dobijaju samo $100; registracije putem preporuke mogu dobiti $200, ali komentar zajednice iz aprila 2026…
-- **`agy`** — Naš isporučeni freeNote navodi „(nema)“, što implicira da ne postoji besplatni nivo, ali Antigravity ipak ima besplatni nivo zaštićen OAuth-om. Međutim, Uslovi korištenja izričito zabranjuju korištenje ovog besplatnog nivoa putem proxyja kao što je OmniRoute …
+- **`agy`** — Naš isporučeni freeNote navodi „(nema)“, što implicira da ne postoji besplatni nivo, ali Antigravity ipak ima besplatni nivo zaštićen OAuth-om. Međutim, Uslovi korištenja izričito zabranjuju korištenje ovog besplatnog nivoa putem proxyja kao što je 67router …
 - **`ai21`** — Postroženo: probni period skraćen je sa „3 mjeseca“ na 7 dana. Iznos kredita od $10 ostao je isti, ali je period važenja naglo smanjen sa ~90 dana na 7 dana.
 - **`aimlapi`** — Značajno promijenjeno. Isporučeni freeNote oglašavao je „$0.025/dan besplatnih kredita — više od 200 modela“, ali je besplatni nivo sada pauziran/ukinut. Dodjela kredita od $0.025/dan (50.000 kredita/dan, 10 zahtjeva/d…
 - **`amazon-q`** — Naš isporučeni freeNote navodi „(nema)“ — stvarnost je gora: proizvod je sada ukinut za nove registracije (15. maj 2026). Ranije je besplatni nivo nudio 50 agentskih zahtjeva mjesečno + neograničene umetn…

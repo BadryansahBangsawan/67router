@@ -1,4 +1,4 @@
-# OmniRoute Architecture (አማርኛ)
+# 67router Architecture (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _መጨረሻ የተዘመነው: 2026-06-28_
 
 ## አጠቃላይ ማጠቃለያ
 
-OmniRoute በNext.js ላይ የተገነባ አካባቢያዊ የAI ማዘዋወሪያ መግቢያ እና ዳሽቦርድ ነው።
+67router በNext.js ላይ የተገነባ አካባቢያዊ የAI ማዘዋወሪያ መግቢያ እና ዳሽቦርድ ነው።
 አንድ ከOpenAI ጋር ተኳሃኝ የሆነ መዳረሻ (`/v1/*`) ያቀርባል፤ ትራፊክንም በትርጉም፣ በአማራጭ ውድቀት መቋቋሚያ፣ በቶከን እድሳት እና በአጠቃቀም ክትትል አማካኝነት ወደ በርካታ የላይኛው ደረጃ አቅራቢዎች ያዘዋውራል።
 
 ዋና ችሎታዎች፦
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[የአሳሽ ዳሽቦርድ]
     end
 
-    subgraph Router[OmniRoute አካባቢያዊ ሂደት]
+    subgraph Router[67router አካባቢያዊ ሂደት]
         API[V1 የተኳኋኝነት API\n/v1/*]
         DASH[ዳሽቦርድ + የአስተዳደር API\n/api/*]
         CORE[SSE + የትርጉም ዋና ክፍል\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ flowchart LR
 
 ## 5) የተካተቱ አገልግሎቶች (v3.8.4)
 
-OmniRoute በአካባቢው የሚሰሩና **የተካተቱ አገልግሎቶች** ተብለው የሚጠሩ የAI መሣሪያ ሂደቶችን
+67router በአካባቢው የሚሰሩና **የተካተቱ አገልግሎቶች** ተብለው የሚጠሩ የAI መሣሪያ ሂደቶችን
 መጫን፣ መቆጣጠር እና ወደእነሱ መምራት ይችላል። አምስት አገልግሎቶች አብረው ይቀርባሉ፦ 9Router፣ CLIProxyAPI፣ Bifrost፣ Mux እና Dario።
 
 የአርክቴክቸር ንብርብሮች፦
@@ -437,7 +437,7 @@ Jules) በወጥ የውሂብ ጎታ የተደገፈ የተግባር የሕይ�
 - የኮታ መሸጎጫ፦ `src/domain/quotaCache.ts`
 - የመቀነስ ሁኔታ፦ `src/domain/degradation.ts`
 - የውቅር ኦዲት፦ `src/domain/configAudit.ts`
-- የOmniRoute ምላሽ metadata ገንቢ፦ `src/domain/omnirouteResponseMeta.ts`
+- የ67router ምላሽ metadata ገንቢ፦ `src/domain/omnirouteResponseMeta.ts`
 - የግምገማ ንዑስ ስርዓት፦ `src/domain/assessment/` — ወቅታዊ የግምገማ ስራዎች
 
 ### E. የፈቃድ መስጫ የስራ ፍሰት
@@ -815,7 +815,7 @@ flowchart LR
         Browser[የዳሽቦርድ አሳሽ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute የአሂድ ጊዜ]
+    subgraph ContainerOrProcess[67router የአሂድ ጊዜ]
         Next[Next.js አገልጋይ\nPORT=20128]
         Core[SSE ኮር + አስፈጻሚዎች]
         MainDB[(storage.sqlite)]
@@ -933,7 +933,7 @@ flowchart LR
 
 ## የአቅራቢዎች ተኳኋኝነት ማትሪክስ
 
-> **ማስታወሻ፦** ከታች ያለው ማትሪክስ በOmniRoute v3.8.0 ውስጥ ከተመዘገቡት 351 አቅራቢዎች ተወካይ ናሙና ነው።
+> **ማስታወሻ፦** ከታች ያለው ማትሪክስ በ67router v3.8.0 ውስጥ ከተመዘገቡት 351 አቅራቢዎች ተወካይ ናሙና ነው።
 > ለዋናው እና በቀጣይነት ለሚዘመነው ዝርዝር፣
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (በራስ-ሰር የመነጨ) ወይም በ
 > `src/shared/constants/providers.ts` የሚገኘውን ዋና ምንጭ (በሚጫንበት ጊዜ በZod የተረጋገጠ) ይመልከቱ።
@@ -1115,7 +1115,7 @@ flowchart LR
 - ከደንበኛው የተቀበለ ጥሬ ጥያቄ
 - በእርግጥ ወደ ላይኛው ምንጭ የተላከ የተተረጎመ ጥያቄ
 - እንደ JSON ዳግም የተገነባ የአቅራቢ ምላሽ፤ በዥረት የተላለፉ ምላሾች ወደ የመጨረሻው ማጠቃለያ እና የዥረት ሜታዳታ ይጠቀለላሉ
-- በOmniRoute የተመለሰ የመጨረሻ የደንበኛ ምላሽ፤ በዥረት የተላለፉ ምላሾች በተመሳሳይ የታመቀ የማጠቃለያ ቅርጽ ይከማቻሉ
+- በ67router የተመለሰ የመጨረሻ የደንበኛ ምላሽ፤ በዥረት የተላለፉ ምላሾች በተመሳሳይ የታመቀ የማጠቃለያ ቅርጽ ይከማቻሉ
 
 ## ደህንነት-ነክ ወሰኖች
 

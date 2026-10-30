@@ -6,7 +6,7 @@
 
 ## ภาพรวม
 
-Redis เป็น **dependency แบบไม่บังคับและไม่ตายตัว** ใน OmniRoute — แอปพลิเคชันจะลดระดับการทำงานอย่างราบรื่น (fallback
+Redis เป็น **dependency แบบไม่บังคับและไม่ตายตัว** ใน 67router — แอปพลิเคชันจะลดระดับการทำงานอย่างราบรื่น (fallback
 ไปใช้หน่วยความจำภายใน) เมื่อ Redis ไม่พร้อมใช้งาน ในระบบ production การปรับแต่ง Redis ช่วยลด latency สำหรับ workload
 ที่แตกต่างกันสี่ประเภท:
 
@@ -17,7 +17,7 @@ Redis เป็น **dependency แบบไม่บังคับและไ
 | ที่เก็บโควตา                  | `redisQuotaStore.ts`          | singleton `getRedisClient(url)` แยกต่างหาก           | `<prefix>quota:*` ที่กำหนดค่าแยกต่อ instance ได้ |
 | circuit breaker สำหรับ warmup | `redisCircuitBreakerStore.ts` | client แยกต่างหากใน `circuitBreakerFactory.ts`       | `<prefix>warmup:cb:<connectionId>`               |
 
-workload ทั้งสี่ประเภทใช้ prefix ของ namespace เดียวกัน เพื่อให้ OmniRoute สามารถทำงานร่วมกับแอปอื่นบน
+workload ทั้งสี่ประเภทใช้ prefix ของ namespace เดียวกัน เพื่อให้ 67router สามารถทำงานร่วมกับแอปอื่นบน
 Redis instance เดียวกันได้ (เช่น `127.0.0.1:6379`) ดู [การกำหนด Namespace ให้คีย์](#การกำหนด-namespace-ให้คีย์)
 
 ---
@@ -41,14 +41,14 @@ Redis instance เดียวกันได้ (เช่น `127.0.0.1:6379`)
 
 ## การกำหนด Namespace ให้คีย์
 
-OmniRoute ใช้ Redis instance ร่วมกับบริการอื่นใดก็ตามที่ทำงานอยู่บนโฮสต์ หากไม่มี namespace
+67router ใช้ Redis instance ร่วมกับบริการอื่นใดก็ตามที่ทำงานอยู่บนโฮสต์ หากไม่มี namespace
 คีย์อย่าง `auth:api_key:<sha256>` หรือ `rl:*` อาจชนกับคีย์จากแอปพลิเคชันอื่น
 ที่ใช้ Redis เดียวกัน (instance นี้เรียกใช้ Redis บน `127.0.0.1:6379` ร่วมกับบริการอื่น)
 
-ตั้งค่า `REDIS_KEY_PREFIX` เป็นสตริงที่ไม่ว่าง เพื่อเพิ่ม prefix ให้กับคีย์ **ทุกคีย์** ของ OmniRoute:
+ตั้งค่า `REDIS_KEY_PREFIX` เป็นสตริงที่ไม่ว่าง เพื่อเพิ่ม prefix ให้กับคีย์ **ทุกคีย์** ของ 67router:
 
 ```bash
-# .env — คีย์ OmniRoute ทั้งหมดจะกลายเป็น omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — คีย์ 67router ทั้งหมดจะกลายเป็น omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # เว้นพื้นที่สำหรับแคชเพจของ OS
 maxmemory-policy allkeys-lru         # ขับรายการแคชการยืนยันตัวตนที่เก่าออกเมื่อหน่วยความจำตึงตัว
 
-# การเก็บข้อมูลถาวร (ไม่บังคับ — OmniRoute ปลอดภัยจากการขัดข้องแม้ไม่มีส่วนนี้)
+# การเก็บข้อมูลถาวร (ไม่บังคับ — 67router ปลอดภัยจากการขัดข้องแม้ไม่มีส่วนนี้)
 save 300 1                           # สร้างสแนปช็อตอย่างน้อยทุก 5 นาที หากมีคีย์เปลี่ยนแปลง ≥1 คีย์
 appendonly no                        # ไม่จำเป็นต้องใช้ AOF เพราะสามารถสร้างข้อมูลขึ้นใหม่ได้
 appendfsync no                       # ไม่มีโอเวอร์เฮดจาก fsync (RDB เพียงพอแล้ว)

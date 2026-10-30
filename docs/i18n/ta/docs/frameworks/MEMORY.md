@@ -7,7 +7,7 @@
 > **அதிகாரப்பூர்வ மூலம்:** `src/lib/memory/` மற்றும் `src/app/api/memory/`
 > **கடைசியாகப் புதுப்பிக்கப்பட்டது:** 2026-06-28 — v3.8.40 (இயல்பாக முடக்கப்பட்டது + int8 அளவாக்க ஒத்திசைவு)
 
-OmniRoute, API விசையின் அடிப்படையில் (மேலும் விருப்பத்திற்கேற்ப அமர்வு id-யின் அடிப்படையில்)
+67router, API விசையின் அடிப்படையில் (மேலும் விருப்பத்திற்கேற்ப அமர்வு id-யின் அடிப்படையில்)
 நிலையான உரையாடல் நினைவகத்தை வழங்குகிறது. இலகுவான regex வடிவப் பொருத்தத்தைப் பயன்படுத்தி
 LLM பதில்களிலிருந்து நினைவுகள் தானாகப் பிரித்தெடுக்கப்பட்டு, அடுத்தடுத்த
 கோரிக்கைகளில் முன்னிலை system செய்தியாக (அல்லது system பங்கை
@@ -596,7 +596,7 @@ LRU போன்ற cache-ஐ (`MEMORY_CACHE_TTL = 1 min`, `MEMORY_MAX_CACHE_SIZ
 
 ## உட்பொதித்தல் வழங்குநரைத் தேர்ந்தெடுத்தல் (v3.8.16+)
 
-OmniRoute-இன் நினைவக இயந்திரம் **நான்கு உட்பொதித்தல் மூலங்களை** ஆதரிக்கிறது (`src/lib/memory/embedding/`). ஒவ்வொன்றுக்கும் **தாமதம், செலவு, மாதிரித் தரம் மற்றும் அமைப்புச் சிக்கல்தன்மை** ஆகியவற்றில் வெவ்வேறு சாதக-பாதகங்கள் உள்ளன.
+67router-இன் நினைவக இயந்திரம் **நான்கு உட்பொதித்தல் மூலங்களை** ஆதரிக்கிறது (`src/lib/memory/embedding/`). ஒவ்வொன்றுக்கும் **தாமதம், செலவு, மாதிரித் தரம் மற்றும் அமைப்புச் சிக்கல்தன்மை** ஆகியவற்றில் வெவ்வேறு சாதக-பாதகங்கள் உள்ளன.
 
 ### உட்பொதித்தல் மூலங்கள்
 
@@ -1009,13 +1009,13 @@ memoryManager.register(sqliteBackend);
 
 worker loopback-இல் மட்டுமே பிணைகிறது; இதை `GenericMemoryBackend`-இன் SSRF பாதுகாப்பு திட்டமிட்டே நிராகரிக்கிறது. இந்த ஏற்பி அந்தப் பாதுகாப்பைத் தளர்த்துவதில்லை: host `127.0.0.1` என நிலையாகக் குறியிடப்பட்டுள்ளது, மேலும் அமைவாக்க schema (`ClaudeMemBackendConfigSchema`, `.strict()`) பின்வருவனவற்றை மட்டுமே ஏற்கிறது:
 
-| விசை        | வகை    | இயல்புநிலை | குறிப்புகள்                                                                                                                                         |
-| ----------- | ------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —          | அவசியம், 1024–65535. அதன் settings கோப்பிலுள்ள claude-mem worker port (இயல்புநிலை `37700 + uid % 100`).                                             |
-| `project`   | string | —          | பயன்படுத்த வேண்டிய claude-mem project. அமைக்கப்படவில்லை எனில் → ஒவ்வொரு OmniRoute API key-யும் அதன் சொந்த project-உடன் (`apiKeyId`) பொருத்தப்படும். |
-| `timeoutMs` | number | `5000`     | ஒவ்வொரு கோரிக்கைக்குமான காலக்கெடு, 100–30000.                                                                                                       |
+| விசை        | வகை    | இயல்புநிலை | குறிப்புகள்                                                                                                                                        |
+| ----------- | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | அவசியம், 1024–65535. அதன் settings கோப்பிலுள்ள claude-mem worker port (இயல்புநிலை `37700 + uid % 100`).                                            |
+| `project`   | string | —          | பயன்படுத்த வேண்டிய claude-mem project. அமைக்கப்படவில்லை எனில் → ஒவ்வொரு 67router API key-யும் அதன் சொந்த project-உடன் (`apiKeyId`) பொருத்தப்படும். |
+| `timeoutMs` | number | `5000`     | ஒவ்வொரு கோரிக்கைக்குமான காலக்கெடு, 100–30000.                                                                                                      |
 
-`PUT /api/settings/memory` மூலம் இதைச் செயல்படுத்தி OmniRoute-ஐ மறுதொடக்கம் செய்யவும் (backends
+`PUT /api/settings/memory` மூலம் இதைச் செயல்படுத்தி 67router-ஐ மறுதொடக்கம் செய்யவும் (backends
 `initMemoryBackends()`-இல் ஒருமுறை மட்டுமே பதிவு செய்யப்படுகின்றன):
 
 ```json
@@ -1032,7 +1032,7 @@ config பதிவு செய்யப்பட்டு (`claude-mem.backend
 
 - ID-கள் `claude-mem:<observationId>` வடிவில் இருக்கும்; `get`/`delete`, பிற backends-இன் ID-களை
   network call செய்யாமல் புறக்கணிக்கும்.
-- `create` → `POST /api/memory/save`; OmniRoute புலங்கள் (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router புலங்கள் (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem-இன் `metadata.omniroute`-இல் அனுப்பப்பட்டு, வாசிக்கும்போது மாற்றமின்றி மீட்டெடுக்கப்படும்.
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens`
   (chars / 4) அளவிற்கு சுருக்கப்படும். `list` → worker-இன் பக்கமிடப்பட்ட observations endpoint (`total` என்பது குறைந்தபட்ச வரம்பு — worker
@@ -1044,16 +1044,16 @@ config பதிவு செய்யப்பட்டு (`claude-mem.backend
 - Prompt injection (`retrieval.ts`) மற்றும் `omniroute_memory_*` MCP கருவிகள் இன்னும் SQLite-ஐ
   நேரடியாக வாசிக்கின்றன — அவை `memoryManager` வழியாகச் செல்வதில்லை; எனவே இந்த backend அவற்றுக்கு தரவை வழங்காது.
 
-**claude-mem-இன் சொந்த LLM அழைப்புகளை OmniRoute வழியாக அனுப்புதல்.** claude-mem observations-ஐ
+**claude-mem-இன் சொந்த LLM அழைப்புகளை 67router வழியாக அனுப்புதல்.** claude-mem observations-ஐ
 LLM மூலம் சுருக்குகிறது (இயல்புநிலை: Claude Agent SDK). அதன் `openai-compatible` provider-ஐ
-OmniRoute-ஐச் சுட்டுமாறு அமைக்கலாம்; இதனால் combo fallback மற்றும் செலவுக் கண்காணிப்பு பயன்படுத்தப்படும். `~/.claude-mem/settings.json`-இல்:
+67router-ஐச் சுட்டுமாறு அமைக்கலாம்; இதனால் combo fallback மற்றும் செலவுக் கண்காணிப்பு பயன்படுத்தப்படும். `~/.claude-mem/settings.json`-இல்:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

@@ -1,10 +1,10 @@
-# Claude Code CLI — Configuration with OmniRoute (Gaeilge)
+# Claude Code CLI — Configuration with 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
 
 ---
 
-Treoraigh CLI **Claude Code** (`claude`) chuig OmniRoute — go háitiúil nó chuig VPS cianda —
+Treoraigh CLI **Claude Code** (`claude`) chuig 67router — go háitiúil nó chuig VPS cianda —
 le próifílí de réir samhla, ar aon dul le socrú Codex.
 
 ---
@@ -12,15 +12,15 @@ le próifílí de réir samhla, ar aon dul le socrú Codex.
 ## Tús tapa
 
 ```bash
-# Tosaigh Claude Code le OmniRoute áitiúil (braitear an comhthéacs gníomhach go huathoibríoch)
+# Tosaigh Claude Code le 67router áitiúil (braitear an comhthéacs gníomhach go huathoibríoch)
 omniroute launch
 
-# Le OmniRoute cianda (tar éis `omniroute connect <host>`, déantar é seo go huathoibríoch)
+# Le 67router cianda (tar éis `omniroute connect <host>`, déantar é seo go huathoibríoch)
 omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # Gin próifílí de réir samhla, ansin seol ceann acu
 omniroute setup-claude            # scríobhann sé ~/.claude/profiles/<name>/settings.json
-omniroute launch --profile glm52  # Claude Code ag úsáid glm/glm-5.2 trí OmniRoute
+omniroute launch --profile glm52  # Claude Code ag úsáid glm/glm-5.2 trí 67router
 ```
 
 ---
@@ -33,7 +33,7 @@ críochphointe saincheaptha le hathróga timpeallachta (níl bratach `--base-url
 | Athróg                                       | Cuspóir                                                                                                        |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | Fréamh-URL an gheata (cuireann Claude Code `/v1/messages` leis). **Gan iarmhír `/v1`.**                        |
-| `ANTHROPIC_AUTH_TOKEN`                       | Seoltar mar `Authorization: Bearer …` é — úsáid do chomhartha rochtana / eochair API OmniRoute                 |
+| `ANTHROPIC_AUTH_TOKEN`                       | Seoltar mar `Authorization: Bearer …` é — úsáid do chomhartha rochtana / eochair API 67router                  |
 | `ANTHROPIC_API_KEY`                          | Rogha eile: seoltar mar `x-api-key` é. Má tá an dá cheann socraithe, bíonn tosaíocht ag `ANTHROPIC_AUTH_TOKEN` |
 | `ANTHROPIC_MODEL`                            | Cuir samhail shonrach i bhfeidhm (sáraíonn sé réamhshocrú roghnóir `/model`)                                   |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → liostaíonn an roghnóir dúchasach `/model` samhlacha `claude*`/`anthropic*` ó `/v1/models`                |
@@ -51,9 +51,9 @@ bhfreastalaí, agus ritheann sé `claude` trí exec.
 
 ## Ailiasanna fionnachtana — nocht samhlacha neamh-Claude sa roghnóir `/model`
 
-Ní liostaíonn fionnachtain samhail gheata Claude Code ach aitheantais a thosaíonn le `claude` nó `anthropic`, mar sin le `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` ní thaispeánann an roghnóir dúchais `/model` de ghnáth samhlacha Claude/Anthropic OmniRoute **amháin** — ní thagann `kimi/kimi-k2.6` ná `glm/glm-5.2` chun cinn riamh, cé go ródófar iad gan aon fhadhb.
+Ní liostaíonn fionnachtain samhail gheata Claude Code ach aitheantais a thosaíonn le `claude` nó `anthropic`, mar sin le `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` ní thaispeánann an roghnóir dúchais `/model` de ghnáth samhlacha Claude/Anthropic 67router **amháin** — ní thagann `kimi/kimi-k2.6` ná `glm/glm-5.2` chun cinn riamh, cé go ródófar iad gan aon fhadhb.
 
-Is féidir le OmniRoute aon tsamhail (agus teaglaim) atá cumasaithe a scáthánú faoi aitheantas `claude/…` ionas go dtéann sí tríd an scagaire sin agus go dtaispeánfar í sa roghnóir:
+Is féidir le 67router aon tsamhail (agus teaglaim) atá cumasaithe a scáthánú faoi aitheantas `claude/…` ionas go dtéann sí tríd an scagaire sin agus go dtaispeánfar í sa roghnóir:
 
 ```
 kimi/kimi-k2.6            →  claude/kimi/kimi-k2.6      "Kimi K2.6 (OmniRoute)"
@@ -61,11 +61,11 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-Nuair a roghnaíonn tú ceann díobh seo in Claude Code, baineann OmniRoute an timfhilleadh `claude/` den aitheantas agus tugtar ar ais go dtí an fíoraitheantas é sula ródófar é — fágtar aitheantas fíor `claude/<real-claude-model>` (an soláthraí OAuth Claude féin) gan bhaint i gcónaí.
+Nuair a roghnaíonn tú ceann díobh seo in Claude Code, baineann 67router an timfhilleadh `claude/` den aitheantas agus tugtar ar ais go dtí an fíoraitheantas é sula ródófar é — fágtar aitheantas fíor `claude/<real-claude-model>` (an soláthraí OAuth Claude féin) gan bhaint i gcónaí.
 
 De réir réamhshocraithe, ní scáthánaítear ach bunaiteantais. Leis an mbratach gnéithe roghnacha `CATALOG_MIRROR_REFINEMENTS_ENABLED` ar siúl, scáthánaítear leaganacha dícheall-réasúnaíochta atá liostaithe ag an gcatalóg cheana féin (m.sh. `codex/gpt-6-sol-high`) mar aon le haon aitheantas eile, ionas gur féidir le Claude Code leibhéal dícheall sainráite a roghnú, agus ní scáthánaítear aitheantais ionsuite `auto/*` nach féidir le conair an iarratais a réadú. Is é `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIANTS` a rialaíonn fós cé acu a liostaítear leaganacha dícheall ar chor ar bith — ní chuireann an scáthán leagan leis riamh nach bhfuil sa bhunchatalóg.
 
-**Tá sé seo múchta de réir réamhshocraithe** agus tá sé faoi rialú geata trí leibhéal (is é an leibhéal is sainiúla a bhuaileann), ionas nach ndúbálann OmniRoute simplí a chatalóg riamh do chliaint nach n-úsáideann Claude Code:
+**Tá sé seo múchta de réir réamhshocraithe** agus tá sé faoi rialú geata trí leibhéal (is é an leibhéal is sainiúla a bhuaileann), ionas nach ndúbálann 67router simplí a chatalóg riamh do chliaint nach n-úsáideann Claude Code:
 
 | Leibhéal  | Cá háit                                                                                                  |
 | --------- | -------------------------------------------------------------------------------------------------------- |
@@ -87,8 +87,8 @@ don ásc seo, in aice leis an gcnaipe faisnéise faoin ailias fionnachtana, agus
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<do OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<d'eochair API OmniRoute>",
+    "ANTHROPIC_BASE_URL": "http://<do 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<d'eochair API 67router>",
     "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
   },
 }
@@ -153,7 +153,7 @@ próifíl amháin do gach samhail ag `~/.claude/profiles/<name>/settings.json`, 
 > gcomhthéacs gníomhach), nó easpórtáil `ANTHROPIC_AUTH_TOKEN` tú féin agus rith
 > `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude`.
 
-**Uathshioncronú tar éis aimsiú samhlacha (roghnach).** Is féidir le OmniRoute na comhaid chéanna
+**Uathshioncronú tar éis aimsiú samhlacha (roghnach).** Is féidir le 67router na comhaid chéanna
 `~/.claude/profiles/<name>/settings.json` a athghiniúint go huathoibríoch aon uair a athraíonn
 sioncronú samhlacha soláthraí an chatalóg bheo — mar sin faigheann samhlacha nua nó athainmnithe
 próifílí gan an t-ordú a rith arís. Tá sé **múchta de réir réamhshocraithe**: scoránaigh é ón
@@ -166,7 +166,7 @@ ná `~/.claude/settings.json` riamh.
 ### Próifílí a ghiniúint + a úsáid
 
 ```bash
-# OmniRoute áitiúil
+# 67router áitiúil
 omniroute setup-claude
 
 # VPS cianda (leabaíonn sé URL an VPS i ngach próifíl)
@@ -190,7 +190,7 @@ omniroute launch --profile kimi-k27
 
 ## Sraitheanna samhlacha (roghnach)
 
-Treoraíonn Claude Code iarratais chuig sraitheanna cumais. Mapáil gach ceann acu chuig samhail OmniRoute trí env /
+Treoraíonn Claude Code iarratais chuig sraitheanna cumais. Mapáil gach ceann acu chuig samhail 67router trí env /
 socruithe más mian leat soláthraithe éagsúla a úsáid do gach sraith:
 
 ```bash
@@ -226,7 +226,7 @@ v2.1.219+ agus `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`. Ní bhíonn ach a
 **`400 Ambiguous model 'claude-…'`** — seolann Claude Code aitheantais samhlacha **gan réimír**
 i gcónaí (m.sh. `claude-opus-4-8`), mar sin nuair atá soláthraí Claude Code (`cc/…`) agus
 soláthraí Claude (`claude/…`) araon nasctha, meaitseálann an t-aitheantas lom dhá bhealach agus
-diúltaíonn OmniRoute tomhas a dhéanamh. Is féidir é a réiteach ar cheachtar bealach: pionnaigh aitheantas a bhfuil réimír air le
+diúltaíonn 67router tomhas a dhéanamh. Is féidir é a réiteach ar cheachtar bealach: pionnaigh aitheantas a bhfuil réimír air le
 `ANTHROPIC_MODEL=cc/claude-opus-4-8`, nó cumasaigh **Tabhair Tosaíocht do Claude Code le haghaidh
 samhlacha Claude gan réimír** — an scorán ar leathanach an tsoláthraí Claude, nó
 `OMNIROUTE_PREFER_CLAUDE_CODE_FOR_UNPREFIXED_CLAUDE_MODELS=true` (díchumasaithe de réir réamhshocraithe;

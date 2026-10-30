@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: OmniRoute juża **SQLite bil-ġurnalar WAL** bħala l-ħażna primarja tiegħu, b’kriptaġġ **AES-256-GCM** għad-data maħżuna għal oqsma sensittivi. Din il-gwida tkopri l-iskema, il-migrazzjonijiet, il-backup/irkupru, u l-proċeduri operattivi.
+> **Fil-qosor**: 67router juża **SQLite bil-ġurnalar WAL** bħala l-ħażna primarja tiegħu, b’kriptaġġ **AES-256-GCM** għad-data maħżuna għal oqsma sensittivi. Din il-gwida tkopri l-iskema, il-migrazzjonijiet, il-backup/irkupru, u l-proċeduri operattivi.
 
 **Sorsi:**
 
@@ -19,7 +19,7 @@
 
 ## Għaliex SQLite?
 
-OmniRoute għażel SQLite minflok PostgreSQL/MySQL għal diversi raġunijiet:
+67router għażel SQLite minflok PostgreSQL/MySQL għal diversi raġunijiet:
 
 | Fattur             | SQLite                                      | PostgreSQL                                     |
 | ------------------ | ------------------------------------------- | ---------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute għażel SQLite minflok PostgreSQL/MySQL għal diversi raġunijiet:
 | **Backup**         | Kopja ta’ fajl wieħed                       | `pg_dump` jew snapshot tas-sistema tal-fajls   |
 | **Każ ta’ użu**    | Installazzjoni għal kull utent, inkorporat  | SaaS għal diversi klijenti                     |
 
-Għal installazzjonijiet b’**utent wieħed u istanza waħda** (il-każ ta’ użu ewlieni ta’ OmniRoute), SQLite huwa aktar sempliċi u aktar veloċi.
+Għal installazzjonijiet b’**utent wieħed u istanza waħda** (il-każ ta’ użu ewlieni ta’ 67router), SQLite huwa aktar sempliċi u aktar veloċi.
 
 ### Ġurnalar WAL
 
@@ -50,7 +50,7 @@ Id-daqs predefinit tal-cache huwa **65,536 KiB (64 MiB)**. SQLite jinterpreta
 `cache_size` negattiv bħala limitu massimu approssimattiv f’KiB u jalloka l-paġni skont il-bżonn.
 **Settings > System & Storage > Cache Size** jaċċetta valuri sħaħ minn **1 sa
 1,000,000 KiB**; meta tissejvja l-konfigurazzjoni, din tiġi applikata għall-konnessjoni attiva mad-database,
-u OmniRoute jirrestawra l-valur maħżun meta jibda.
+u 67router jirrestawra l-valur maħżun meta jibda.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Arkitettura tal-Moduli tad-Dominju
 
-Id-database ta' OmniRoute għandha **110 moduli TypeScript tal-ogħla livell** f'`src/lib/db/`. Kull modulu tad-dominju:
+Id-database ta' 67router għandha **110 moduli TypeScript tal-ogħla livell** f'`src/lib/db/`. Kull modulu tad-dominju:
 
 - Huwa responsabbli għal tabella speċifika waħda jew aktar
 - Jesporta funzjonijiet CRUD ittajpjati
@@ -90,7 +90,7 @@ Id-database ta' OmniRoute għandha **110 moduli TypeScript tal-ogħla livell** f
 
 ### Il-110 Moduli tad-DB tal-Ogħla Livell
 
-OmniRoute għandu **110 fajls TypeScript tal-ogħla livell** f'`src/lib/db/`. Hawn taħt hawn kampjun tal-moduli ewlenin; ara l-lista tad-direttorju għal-lista sħiħa:
+67router għandu **110 fajls TypeScript tal-ogħla livell** f'`src/lib/db/`. Hawn taħt hawn kampjun tal-moduli ewlenin; ara l-lista tad-direttorju għal-lista sħiħa:
 
 | Modulu                  | Tabelli                                                        | Responsabbiltà                                                                             |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Il-lista sħiħa ta’ madwar 30+ tabella tinsab f’`src/lib/db/migrations/`.
 
 ## Migrazzjonijiet
 
-OmniRoute juża **migrazzjonijiet verżjonati u idempotenti** f’`src/lib/db/migrations/`. Kull migrazzjoni hija fajl SQL wieħed bl-isem `NNN_description.sql`.
+67router juża **migrazzjonijiet verżjonati u idempotenti** f’`src/lib/db/migrations/`. Kull migrazzjoni hija fajl SQL wieħed bl-isem `NNN_description.sql`.
 
 ### Għoti ta’ Ismijiet lill-Migrazzjonijiet
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Bidliet mhux kompatibbli b’lura** (eż., it-tneħħija ta’ kolonni) huma diffiċli. OmniRoute MA jappoġġjax downgrade — ladarba migrazzjoni tiġi applikata, il-bidla fl-iskema tkun permanenti. Ippjana kif xieraq.
+> **Bidliet mhux kompatibbli b’lura** (eż., it-tneħħija ta’ kolonni) huma diffiċli. 67router MA jappoġġjax downgrade — ladarba migrazzjoni tiġi applikata, il-bidla fl-iskema tkun permanenti. Ippjana kif xieraq.
 
 ---
 
@@ -310,7 +310,7 @@ Għal raġunijiet ta’ prestazzjoni, dawn li ġejjin jinħażnu bħala test sem
 
 ## Twissijiet dwar il-Kriptaġġ (v3.8.16+)
 
-OmniRoute juża **`migrateLegacyEncryptedString()`** biex jittratta żewġ skemi ta’ kriptaġġ b’mod trasparenti:
+67router juża **`migrateLegacyEncryptedString()`** biex jittratta żewġ skemi ta’ kriptaġġ b’mod trasparenti:
 
 - **Preċedenti** (qabel v3.5.0): “kriptaġġ” ibbażat fuq XOR (mhux kriptografija vera)
 - **Attwali**: AES-256-GCM b’IV u tikketta ta’ awtentikazzjoni xierqa
@@ -399,7 +399,7 @@ Għal backup mingħajr waqfien tas-servizz ta’ DB attiva:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Dan juża l-API tal-backup online ta’ SQLite — jista’ jitħaddem b’mod sikur waqt li OmniRoute jkun qed jaħdem.
+Dan juża l-API tal-backup online ta’ SQLite — jista’ jitħaddem b’mod sikur waqt li 67router jkun qed jaħdem.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Kumpattazzjoni
 
-L-istanzi ta’ OmniRoute li jibqgħu jaħdmu għal żmien twil jibbenefikaw minn `VACUUM` okkażjonali:
+L-istanzi ta’ 67router li jibqgħu jaħdmu għal żmien twil jibbenefikaw minn `VACUUM` okkażjonali:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Irrisettja (Ħassar) id-Data Kollha
 
 ```bash
-# Waqqaf OmniRoute l-ewwel
+# Waqqaf 67router l-ewwel
 omniroute stop
 
 # Ħassar il-fajl tad-DB
@@ -613,7 +613,7 @@ Proċess ieħor qed iżomm lock tal-kitba. Tista’:
 
 - Tistenna li jintemm il-proċess l-ieħor (iċċekkja `lsof | grep storage.sqlite`)
 - Twaqqaf bil-forza l-proċess l-ieħor
-- Jekk il-problema tippersisti, erġa’ ibda OmniRoute
+- Jekk il-problema tippersisti, erġa’ ibda 67router
 
 ### "Il-limitazzjoni taċ-ċavetta barranija falliet"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Il-migrazzjoni twettqet fi tranżazzjoni, għalhekk suppost treġġgħet lura. Jekk le:
 
-1. **Waqqaf OmniRoute** (evita aktar tentattivi)
+1. **Waqqaf 67router** (evita aktar tentattivi)
 2. **Iċċekkja l-istat tad-DB** b’`sqlite3`
 3. **Irranġa manwalment** il-migrazzjoni parzjali
-4. **Erġa’ ħaddem** OmniRoute (il-migrazzjoni terġa’ tiġi ppruvata)
+4. **Erġa’ ħaddem** 67router (il-migrazzjoni terġa’ tiġi ppruvata)
 
 Biex tevita dan, dejjem ittestja l-migrazzjonijiet fuq kopja l-ewwel.
 

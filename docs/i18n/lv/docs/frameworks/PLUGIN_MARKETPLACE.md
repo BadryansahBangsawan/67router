@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute ietver WordPress stila spraudņu sistēmu. Spraudņi ir pašpietiekami
+67router ietver WordPress stila spraudņu sistēmu. Spraudņi ir pašpietiekami
 direktoriji — katram ir `plugin.json` manifests un ieejas fails —, kas pieslēdzas
 pieprasījumu apstrādes konveijeram (`onRequest` / `onResponse` / `onError`) un
 dzīves cikla notikumiem (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -153,7 +153,7 @@ ir atļautas.
 
 ### Spraudņu direktorijs
 
-Spraudņi atrodas OmniRoute datu direktorijā:
+Spraudņi atrodas 67router datu direktorijā:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

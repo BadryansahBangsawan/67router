@@ -5,7 +5,7 @@
 ---
 
 Pool-ul self-hosted rulează pe serverul **.113** (`tomni-proxmox-113`). Începând cu 2026-10-18, fiecare
-runner OmniRoute are **un singur rol**, o singură etichetă și un buget de memorie/CPU dimensionat în funcție de valorile măsurate pentru sarcina sa de lucru.
+runner 67router are **un singur rol**, o singură etichetă și un buget de memorie/CPU dimensionat în funcție de valorile măsurate pentru sarcina sa de lucru.
 Slotul Turbopack primește resursele necesare compilării; celelalte sloturi sunt dimensionate în funcție de
 vârfurile lor măsurate. Serverul face overcommit doar atunci când o compilare Turbopack coincide cu o compilare
 webpack Release-Green și cu un job de lint; swap-ul gazdei (16 GB) absoarbe acest surplus și, deoarece compilările pentru pull request-uri rulează
@@ -27,7 +27,7 @@ Măsurători din 2026-10-18:
 | swap      | 16 GB                                | `omniroute-113-5` rulează cu swap-ul dezactivat (`MemorySwapMax=0`), astfel încât o compilare scăpată de sub control este oprită la atingerea limitei sale, în loc să trimită serverul în swap                                                                                                                                                                                                 |
 | `/tmp`    | **12 GB tmpfs = RAM**                | orice este stocat acolo ocupă memorie; fișierele rămase sunt eliminate după 3 h                                                                                                                                                                                                                                                                                                                |
 | CPU       | sarcină 60 observată pe 32 de nuclee | înainte de aplicarea cotelor, o compilare Turbopack (~1166 % CPU) împreună cu o suită de coverage rulată pe același server au privat de resurse heartbeat-urile celorlalți listeneri (`The self-hosted runner lost communication`, #16853)                                                                                                                                                     |
-| runneri   | **6 listeneri**                      | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sunt dezactivați (`systemctl enable --now` reactivează unul)                                                                                                                                                                                                                                                                   |
+| runneri   | **6 listeneri**                      | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sunt dezactivați (`systemctl enable --now` reactivează unul)                                                                                                                                                                                                                                                                    |
 
 Limitele se află în fișierul `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` al fiecărei unități
 (valorile anterioare sunt păstrate în `override.conf.bak-20261018`) și au fost aplicate în timp real cu
@@ -53,7 +53,7 @@ Regula de 75 de minute nu detectează o compilare la care GitHub a renunțat dej
 
 ## Unitățile runnerilor: KillMode
 
-Valoarea implicită `KillMode=process` a runnerului lasă procesele `Runner.Worker → npm → next-build` active când o unitate este oprită sau repornită — o compilare orfană continuă să consume RAM și CPU fără nicio sarcină atașată. Fiecare unitate OmniRoute are un fișier drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) cu `KillMode=mixed`: mai întâi SIGTERM către procesul listener, apoi SIGKILL către întregul cgroup la `TimeoutStop`. Acesta intră în vigoare la următoarea repornire a unității — reporniți **câte un runner pe rând, numai când este inactiv**, efectuând verificarea stării de inactivitate și repornirea în aceeași comandă.
+Valoarea implicită `KillMode=process` a runnerului lasă procesele `Runner.Worker → npm → next-build` active când o unitate este oprită sau repornită — o compilare orfană continuă să consume RAM și CPU fără nicio sarcină atașată. Fiecare unitate 67router are un fișier drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) cu `KillMode=mixed`: mai întâi SIGTERM către procesul listener, apoi SIGKILL către întregul cgroup la `TimeoutStop`. Acesta intră în vigoare la următoarea repornire a unității — reporniți **câte un runner pe rând, numai când este inactiv**, efectuând verificarea stării de inactivitate și repornirea în aceeași comandă.
 
 ## Reguli de operare
 
@@ -98,7 +98,7 @@ Valoarea implicită `KillMode=process` a runnerului lasă procesele `Runner.Work
   joburile nocturne care necesită un `next build` numai pentru backend (~5–6 GB; webpack) și
   `quality.yml` `lint-guard`. `omniroute-113` a avut `MemoryHigh=4G` până la 2026-10-18 —
   compilarea promptfoo a petrecut 54 de minute recuperând memorie acolo; 8 GB elimină limitarea.
-- **Mai puține procese listener în mod intenționat.** Patru unități OmniRoute au fost dezactivate
+- **Mai puține procese listener în mod intenționat.** Patru unități 67router au fost dezactivate
   pe 2026-08-29 — fiecare listener suplimentar este încă un consumator al bugetului de memorie de
   mai sus. Limita serviciului de curățare este 6 (`MAX_ACTIVE_RUNNERS=6` în cron): acesta numără
   fiecare `Runner.Listener` de pe server, iar OmniHeuris + OmniMind adaugă două la cele patru ale

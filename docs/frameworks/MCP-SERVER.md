@@ -1,10 +1,10 @@
 ---
-title: "OmniRoute MCP Server Documentation"
+title: "67router MCP Server Documentation"
 version: 3.8.51
 lastUpdated: 2026-09-22
 ---
 
-# OmniRoute MCP Server Documentation
+# 67router MCP Server Documentation
 
 > Model Context Protocol server with 110 tools across routing, cache, compression, memory, skills, proxy, pool, Radar, and context source operations.
 >
@@ -12,7 +12,7 @@ lastUpdated: 2026-09-22
 
 ## Installation
 
-OmniRoute MCP is built-in. Start it with:
+67router MCP is built-in. Start it with:
 
 ```bash
 omniroute --mcp
@@ -91,7 +91,7 @@ Cursor, Cline, and compatible MCP client setup.
 | `omniroute_switch_combo`        | `write:combos`        | Activate or deactivate a combo                                                                                                 |
 | `omniroute_create_combo`        | `write:combos`        | Create a validated combo through the existing combo API                                                                        |
 | `omniroute_check_quota`         | `read:quota`          | Quota used/total, percent remaining, reset time, token health                                                                  |
-| `omniroute_route_request`       | `execute:completions` | Send a chat completion through OmniRoute routing                                                                               |
+| `omniroute_route_request`       | `execute:completions` | Send a chat completion through 67router routing                                                                                |
 | `omniroute_cost_report`         | `read:usage`          | Cost report by period (session/day/week/month)                                                                                 |
 | `omniroute_list_models_catalog` | `read:models`         | Full model catalog with capabilities, status, pricing                                                                          |
 | `omniroute_radar_catalog`       | `read:radar`          | Local signed Radar catalog; optional provider/family filters                                                                   |
@@ -154,7 +154,7 @@ receipts and are marked with `source: "mcp_metadata_estimate"`.
 
 ### MCP Accessibility Tree Filter (v3.8.0)
 
-Separate from the compression tools above, OmniRoute includes a post-execution filter that
+Separate from the compression tools above, 67router includes a post-execution filter that
 compresses the **tool results** of MCP browser/accessibility tools before they are returned to the
 agent. This filter is not itself a tool — it runs transparently on any tool result that contains
 verbose accessibility-tree or browser-snapshot text (≥2000 chars).
@@ -251,7 +251,7 @@ frameworks ship alongside the MCP server in v3.8.0 and are documented separately
 ### Cloud Agents
 
 Cloud Agents are out-of-process AI coding agents (codex-cloud, cursor-cloud, devin, jules) wired into
-OmniRoute through the same connection model used for LLM providers. They are exposed via
+67router through the same connection model used for LLM providers. They are exposed via
 their own REST surface (`/api/v1/agents/*`) and are **not** part of the MCP tool catalog
 — calling a Cloud Agent does not consume an MCP scope.
 
@@ -483,7 +483,7 @@ the existing `OMNIROUTE_MCP_ENFORCE_SCOPES`-gated behavior unchanged.
 
 | Variable                                | Default                            | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :-------------------------------------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | Base URL the MCP server uses when calling OmniRoute internal APIs                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | Base URL the MCP server uses when calling 67router internal APIs                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `OMNIROUTE_API_KEY`                     | (empty)                            | API key forwarded as `Authorization: Bearer` to internal API calls                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (only `"true"` enables it) | When enabled, missing scopes deny tool calls and log `scope_denied:<reason>` in audit log. Enforcement is ALSO forced on regardless of this flag for any HTTP/SSE caller resolved from a per-key Authorization header (`source === "authInfo"`) that lacks full `manage`/`admin` scope — e.g. a key holding only the narrow `mcp:connect` bypass scope — so this default is safe only for the local/stdio single-operator flow, never for remote non-loopback access |
 | `OMNIROUTE_MCP_SCOPES`                  | (empty)                            | Comma-separated allowlist of scopes considered "available" by default (used when caller does not provide its own scopes)                                                                                                                                                                                                                                                                                                                                             |

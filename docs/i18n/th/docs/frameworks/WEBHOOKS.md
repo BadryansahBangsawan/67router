@@ -7,7 +7,7 @@
 > **แหล่งข้อมูลอ้างอิงหลัก:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **อัปเดตล่าสุด:** 2026-06-28 — v3.8.40
 
-OmniRoute สามารถส่ง HTTP webhook เมื่อเกิดเหตุการณ์บนแพลตฟอร์มได้ ใช้ webhook เหล่านี้เพื่อผสานการทำงานกับ
+67router สามารถส่ง HTTP webhook เมื่อเกิดเหตุการณ์บนแพลตฟอร์มได้ ใช้ webhook เหล่านี้เพื่อผสานการทำงานกับ
 Slack, PagerDuty, Datadog, บริการแจ้งเตือนภายใน หรือปลายทาง HTTP ใดๆ
 
 ตัวส่งจะลงนามการส่งแต่ละครั้งด้วย HMAC-SHA256 ลองส่งใหม่เมื่อเกิด
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, บริการแจ้งเตือนภา�
 
 ## การลงนามด้วย HMAC
 
-เมื่อ webhook มี `secret` OmniRoute จะลงนาม body แบบ JSON และส่ง:
+เมื่อ webhook มี `secret` 67router จะลงนาม body แบบ JSON และส่ง:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

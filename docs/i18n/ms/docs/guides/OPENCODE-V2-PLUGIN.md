@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` memasukkan keseluruhan katalog OmniRoute anda — model, kombo dan
+`@omniroute/opencode-plugin-v2` memasukkan keseluruhan katalog 67router anda — model, kombo dan
 kombo automatik — ke dalam pemilih model OpenCode v2, lengkap dengan nama paparan, harga dan bajet
 peringkat percuma.
 
@@ -15,7 +15,7 @@ dikongsi antara kedua-duanya, jadi menaik taraf satu pakej tidak akan memaksa pa
 ## Keperluan
 
 - OpenCode v2.
-- Gerbang OmniRoute yang boleh dicapai (`http://localhost:20128` secara lalai).
+- Gerbang 67router yang boleh dicapai (`http://localhost:20128` secara lalai).
 - Node.js 22 atau 24.
 
 ## Pemasangan
@@ -78,7 +78,7 @@ dengan menyatakan titik akhir dan perkara yang hilang — supaya sebab pemilih b
 | `baseURL`                        | diperlukan                                                | Akar get laluan, `http(s)` sahaja; akhiran `/v1` ditambahkan apabila diperlukan                                                |
 | `apiKey`                         | kelayakan yang disambungkan, kemudian `OMNIROUTE_API_KEY` | Kunci sembang untuk `/v1/*`                                                                                                    |
 | `managementReadToken`            | kembali menggunakan `apiKey`                              | Kunci untuk `/api/*` — biasanya **bukan** kunci yang sama                                                                      |
-| `displayName`                    | `"OmniRoute"`                                             | Nama penyedia dalam pemilih                                                                                                    |
+| `displayName`                    | `"67router"`                                              | Nama penyedia dalam pemilih                                                                                                    |
 | `timeoutMs`                      | `10000`                                                   | Had masa pengambilan bagi setiap titik akhir (gabungan automatik menggunakan 5 saat)                                           |
 | `modelCacheTtlMs`                | `300000`                                                  | TTL cache katalog; petikan cakera mempercepatkan permulaan sejuk                                                               |
 | `timeouts`                       | kembali menggunakan `timeoutMs`                           | Peruntukan masa bagi setiap titik akhir dalam ms: `models`, `combos`, `autoCombos`, `enrichment`                               |
@@ -128,7 +128,7 @@ Tetapkan `"geminiSanitization": false` untuk mematikannya.
 
 | Gejala                                       | Punca                                                                                                                    |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Pemilih tidak memaparkan model OmniRoute     | Tiada kunci yang berjaya dikenal pasti (semak amaran permulaan), atau get laluan tidak dapat dicapai                     |
+| Pemilih tidak memaparkan model 67router      | Tiada kunci yang berjaya dikenal pasti (semak amaran permulaan), atau get laluan tidak dapat dicapai                     |
 | ID model mentah, tiada gabungan, tiada harga | Titik akhir pengurusan menolak token — tetapkan `managementReadToken`                                                    |
 | Katalog `freeOnly` pendek atau kosong        | Tiada token pengurusan atau token ditolak — baca baris ringkasan muat semula (kiraan `unmatched-free`) dalam log hos     |
 | Sesi disematkan pada `opencode-<id>/…`       | Pemalam v1 menerbitkan `opencode-<id>`; v2 menerbitkan `<id>` secara langsung, jadi pilih semula model di bawah `<id>/…` |

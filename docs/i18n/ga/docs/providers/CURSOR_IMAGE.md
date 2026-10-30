@@ -4,7 +4,7 @@
 
 ---
 
-Nochtann OmniRoute **giniúint íomhánna** phlean Cursor ar `POST /v1/images/generations` tríd an aitheantas soláthraí céanna agus a úsáidtear don chomhrá: `cursor` (ailias `cu`).
+Nochtann 67router **giniúint íomhánna** phlean Cursor ar `POST /v1/images/generations` tríd an aitheantas soláthraí céanna agus a úsáidtear don chomhrá: `cursor` (ailias `cu`).
 
 | Réimse                       | Luach                                                                                                        |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ Nochtann OmniRoute **giniúint íomhánna** phlean Cursor ar `POST /v1/images/ge
 
 ## Cén fáth an CLI Agent
 
-Úsáideann comhrá Cursor in OmniRoute `agent.v1.AgentService/Run` (protobuf). **Diúltaíonn** an chonair sin d'uirlisí ionsuite cliaint (blaosc, scríobh, …). Is uirlis dhúchasach Cursor í giniúint íomhánna a ritheann an CLI **`agent`** in aghaidh an tsuíocháin. Dá bhrí sin, seolann an láimhseálaí íomhánna `agent` le leid ghlasáilte agus spás oibre sealadach in aghaidh gach iarratais (ar aon dul le droichid suíocháin phobail), agus ansin filleann sé `b64_json` atá comhoiriúnach le OpenAI.
+Úsáideann comhrá Cursor in 67router `agent.v1.AgentService/Run` (protobuf). **Diúltaíonn** an chonair sin d'uirlisí ionsuite cliaint (blaosc, scríobh, …). Is uirlis dhúchasach Cursor í giniúint íomhánna a ritheann an CLI **`agent`** in aghaidh an tsuíocháin. Dá bhrí sin, seolann an láimhseálaí íomhánna `agent` le leid ghlasáilte agus spás oibre sealadach in aghaidh gach iarratais (ar aon dul le droichid suíocháin phobail), agus ansin filleann sé `b64_json` atá comhoiriúnach le OpenAI.
 
 ## Srian rochtana (Rialacha Dochta #15 + #17)
 
@@ -23,12 +23,12 @@ Seo í an t-aon fhormáid `IMAGE_PROVIDERS` a sheolann próiseas páiste (an dé
 
 ## Tá an geata comhthráthachta ar leibhéal an mhodúil (teorainn ásc aonair)
 
-Cuirtear `CURSOR_IMG_MAX_CONCURRENT` i bhfeidhm le cuntar/ciú i gcuimhne atá scóipithe d'ásc mhodúl Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Cuireann sé teorainn cheart le seoltaí comhthráthacha `agent` laistigh de phróiseas OmniRoute amháin, ach **ní** dhéanann sé comhordú thar phróisis/áscanna iomadúla a roinneann an suíochán Cursor céanna (m.sh. imscaradh ilmhacasamhla) — cuireann gach ásc a theorainn neamhspleách féin i bhfeidhm. I gcás imscaradh ásc aonair (an réamhshocrú), tá sé seo beacht; ba cheart d'imscaradh atá scálaithe go cothrománach `CURSOR_IMG_MAX_CONCURRENT` a choinneáil coimeádach in aghaidh an áisc nó trácht íomhánna Cursor a ródú chuig ásc amháin.
+Cuirtear `CURSOR_IMG_MAX_CONCURRENT` i bhfeidhm le cuntar/ciú i gcuimhne atá scóipithe d'ásc mhodúl Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Cuireann sé teorainn cheart le seoltaí comhthráthacha `agent` laistigh de phróiseas 67router amháin, ach **ní** dhéanann sé comhordú thar phróisis/áscanna iomadúla a roinneann an suíochán Cursor céanna (m.sh. imscaradh ilmhacasamhla) — cuireann gach ásc a theorainn neamhspleách féin i bhfeidhm. I gcás imscaradh ásc aonair (an réamhshocrú), tá sé seo beacht; ba cheart d'imscaradh atá scálaithe go cothrománach `CURSOR_IMG_MAX_CONCURRENT` a choinneáil coimeádach in aghaidh an áisc nó trácht íomhánna Cursor a ródú chuig ásc amháin.
 
 ## Riachtanais
 
 1. Cuntas Cursor nasctha sa deais (OAuth nó eochair API `crsr_…`).
-2. Dénártha Cursor Agent ar fáil do phróiseas OmniRoute:
+2. Dénártha Cursor Agent ar fáil do phróiseas 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, nó
    - `~/.local/bin/agent`, nó
    - `providerSpecificData.agentBin` ar an nasc Cursor.

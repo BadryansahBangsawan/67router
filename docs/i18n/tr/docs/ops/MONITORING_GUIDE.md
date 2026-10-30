@@ -4,7 +4,7 @@
 
 ---
 
-> **Özet**: OmniRoute; yerleşik sağlık izleme, sağlayıcı otomatik pilotu, kota takibi ve gözlemlenebilirlik kancalarıyla birlikte gelir. Bu kılavuz; kontrol panelini, uyarıları ve sorun gidermeyi kapsar.
+> **Özet**: 67router; yerleşik sağlık izleme, sağlayıcı otomatik pilotu, kota takibi ve gözlemlenebilirlik kancalarıyla birlikte gelir. Bu kılavuz; kontrol panelini, uyarıları ve sorun gidermeyi kapsar.
 
 **Kaynaklar:**
 
@@ -20,7 +20,7 @@
 
 ## Genel Bakış
 
-OmniRoute, **3 izleme katmanına** sahiptir:
+67router, **3 izleme katmanına** sahiptir:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Her kombinasyon için:
 
 ## Sağlık Kontrolü API'si
 
-OmniRoute **iki** HTTP sağlık yüzeyi sunar. Bunlar orkestratörler için birbirinin yerine kullanılamaz.
+67router **iki** HTTP sağlık yüzeyi sunar. Bunlar orkestratörler için birbirinin yerine kullanılamaz.
 
 | Yol                          | Amaç                                                                       | Yük                                     | Kullanım amacı                                                             |
 | ---------------------------- | -------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ kalıcı durum sayısına ihtiyaç duyduğunuzda ise `staleDbNonOkCount` kullan�
 
 ### Kubernetes probe önerileri
 
-OmniRoute **tek bir Node sürecidir** (tek olay döngüsü). Standart Docker `HEALTHCHECK`, hafif `/healthz` rotasını hedefler. `/api/monitoring/health`, kubelet canlılık aralıkları için **fazla ağırdır**.
+67router **tek bir Node sürecidir** (tek olay döngüsü). Standart Docker `HEALTHCHECK`, hafif `/healthz` rotasını hedefler. `/api/monitoring/health`, kubelet canlılık aralıkları için **fazla ağırdır**.
 
 | Yoklama          | Önerilen hedef                                                                      | Notlar                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ---------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Kubelet **canlılık** yoklamasını `/api/monitoring/health` adresine **yönlen
 
 ### systemd watchdog (donmuş olay döngüsü)
 
-Bir systemd ana makinesinde OmniRoute, hazır olduğunda hizmet yöneticisini bilgilendirir ve düzenli olarak sinyal göndermeye devam eder; böylece olay döngüsü takılan bir sunucu çalışır ve sessiz durumda kalmak yerine sonlandırılıp yeniden başlatılır. Sinyaller sunucunun kendi olay döngüsünden gelir: döngü engellendiğinde sinyaller durur ve `WatchdogSec` süresi boyunca sinyal alınmazsa systemd hizmeti yeniden başlatır.
+Bir systemd ana makinesinde 67router, hazır olduğunda hizmet yöneticisini bilgilendirir ve düzenli olarak sinyal göndermeye devam eder; böylece olay döngüsü takılan bir sunucu çalışır ve sessiz durumda kalmak yerine sonlandırılıp yeniden başlatılır. Sinyaller sunucunun kendi olay döngüsünden gelir: döngü engellendiğinde sinyaller durur ve `WatchdogSec` süresi boyunca sinyal alınmazsa systemd hizmeti yeniden başlatır.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) bunu içeren bir kullanıcı birimini zaten yazar. Kendi yazdığınız birim (varsayılan `Type=simple`) watchdog içermez; bu nedenle aşağıdaki satırları birimin `[Service]` bölümüne ekleyin:
 
@@ -443,7 +443,7 @@ Token sağlığı kontrolü yapılandırması, `tokenHealthCheck.ts` tarafından
 
 ### Yerleşik Kanallar
 
-OmniRoute, **3 uyarı kanalını** destekler:
+67router, **3 uyarı kanalını** destekler:
 
 | Kanal                   | Kurulum             | Kullanım alanı                        |
 | ----------------------- | ------------------- | ------------------------------------- |
@@ -559,7 +559,7 @@ Bir `~/.omniroute/dashboard.json` dosyası oluşturun:
 ### "Kota sağlıklı görünüyor ancak 429 hataları alıyorum"
 
 - 429, sağlayıcının kotanızı tükettiğinizi bildirdiği anlamına gelir
-- OmniRoute'un kota takibi **güncelliğini yitirmiş** olabilir; geçerli bilgi sağlayıcının üst sistemindedir
+- 67router'un kota takibi **güncelliğini yitirmiş** olabilir; geçerli bilgi sağlayıcının üst sistemindedir
 - Kota verileri, dahili kota izleyicisi aracılığıyla otomatik olarak yenilenir
 
 ### "Kombinasyon başarısız oluyor ancak tüm hedefler sağlıklı görünüyor"
@@ -572,7 +572,7 @@ Bir `~/.omniroute/dashboard.json` dosyası oluşturun:
 
 - `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"` komutunu çalıştırın
 - Sonuç "ok" ise yanlış alarmdır; sistem durumu denetimi gereğinden katı davranıyordur
-- Başka bir sonuç alırsanız **OmniRoute'u durdurun** ve [felaket kurtarma kılavuzunu](./DATABASE_GUIDE.md#disaster-recovery) izleyin
+- Başka bir sonuç alırsanız **67router'u durdurun** ve [felaket kurtarma kılavuzunu](./DATABASE_GUIDE.md#disaster-recovery) izleyin
 
 ### "Bellek yığın baskısı kritik düzeyde"
 

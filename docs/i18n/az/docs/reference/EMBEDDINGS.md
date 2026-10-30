@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Hindsight 0.9.1-in (yalnız mətn üçün `encode(list[str])`) və Memorix 1.6.0-ın (Jina media keçidi) qarşısında olduqda `POST /v1/embeddings` üçün operator qeydləri. 2026-08-17 tarixində OmniRoute 3.8.49 ilə `https://omniroute.jaguar-fish.ts.net/v1` ünvanında canlı şəkildə yoxlanılıb. Aşağıda heç bir məxfi məlumat yoxdur.
+67router Hindsight 0.9.1-in (yalnız mətn üçün `encode(list[str])`) və Memorix 1.6.0-ın (Jina media keçidi) qarşısında olduqda `POST /v1/embeddings` üçün operator qeydləri. 2026-08-17 tarixində 67router 3.8.49 ilə `https://omniroute.jaguar-fish.ts.net/v1` ünvanında canlı şəkildə yoxlanılıb. Aşağıda heç bir məxfi məlumat yoxdur.
 
 ## İşlək model id-ləri
 
@@ -76,7 +76,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Doğma `gemini-embedding-2` yalnız GitOps vasitəsilə uğurla işləyə bilməz. Google AI
 Studio açarı `gemini` provayder bağlantısı kimi əlavə edilməlidir (idarəetmə paneli
-vasitəsilə və ya `GEMINI_API_KEY` OmniRoute-a idxal edilməklə). Həmin məxfi məlumat
+vasitəsilə və ya `GEMINI_API_KEY` 67router-a idxal edilməklə). Həmin məxfi məlumat
 bu repoda yoxdur.
 
 ### Jina multimodal yolu
@@ -98,7 +98,7 @@ Alias mövcud olana qədər `POST /v1/embeddings` istifadə edin.
 
 ### Jina / Memorix şəkil obyekti
 
-OmniRoute-un kanonik şəkil elementi (28×28 PNG, 784 piksel — Jina 1×1 ölçüsünü rədd edir):
+67router-un kanonik şəkil elementi (28×28 PNG, 784 piksel — Jina 1×1 ölçüsünü rədd edir):
 
 ```json
 {
@@ -147,7 +147,7 @@ Faktiki nəticə: HTTP **400**
 
 Hindsight vektorlaşdırmaları yalnız mətn üçündür (`encode(list[str])`). O, şəkil
 obyektləri göndərmir. Hindsight-ın OpenAI ilə uyğun vektorlaşdırma əsas URL-sini
-OmniRoute `/v1` ünvanına yönəldin və yuxarıdakı cədvəldən işlək id istifadə edin
+67router `/v1` ünvanına yönəldin və yuxarıdakı cədvəldən işlək id istifadə edin
 (`jina-ai/jina-embeddings-v5-omni-small` və ya
 `openrouter/google/gemini-embedding-2`). Şlüzdə `gemini` API açarı mövcud deyilsə,
 modeli prefikssiz `gemini-embedding-2` olaraq təyin etməyin.
@@ -155,12 +155,12 @@ modeli prefikssiz `gemini-embedding-2` olaraq təyin etməyin.
 ### Memorix 1.6.0
 
 Memorix yalnız `/jina\.ai/i` ilə uyğun gələn `baseUrl` dəyərini doğma media kimi
-qəbul edir. Model Jina omni olsa belə, OmniRoute URL-si yalnız mətn yolunda qalır.
+qəbul edir. Model Jina omni olsa belə, 67router URL-si yalnız mətn yolunda qalır.
 Bu keçid Memorix müştəri problemidir. Bundan asılı olmayaraq, keçid açılsa,
-Memorix-in göndərəcəyi Jina `{image: "data:..."}` gövdəsi OmniRoute tərəfindən yenə
+Memorix-in göndərəcəyi Jina `{image: "data:..."}` gövdəsi 67router tərəfindən yenə
 də rədd edilir. Buna görə Jina ilə uyğun müştərilər kanonik `{type,source}` sxemi
-olmadan OmniRoute vasitəsilə şəkilləri vektorlaşdıra bilməz.
+olmadan 67router vasitəsilə şəkilləri vektorlaşdıra bilməz.
 
 Mətn üçün `jina-ai/jina-embeddings-v5-omni-small` istifadə edin. Memorix
 `base_url` dəyərini `https://api.jina.ai` ünvanına yönəltməyin — yeganə keçid kimi
-OmniRoute-u saxlayın.
+67router-u saxlayın.

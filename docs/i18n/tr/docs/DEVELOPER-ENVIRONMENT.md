@@ -4,7 +4,7 @@
 
 ---
 
-Bu sayfa, projenin yerel `.env` davranışını ve OmniRoute geliştirilirken ortam dosyaları ile gizli bilgilerin nasıl yönetileceğini açıklar.
+Bu sayfa, projenin yerel `.env` davranışını ve 67router geliştirilirken ortam dosyaları ile gizli bilgilerin nasıl yönetileceğini açıklar.
 
 ## .env postinstall davranışı
 

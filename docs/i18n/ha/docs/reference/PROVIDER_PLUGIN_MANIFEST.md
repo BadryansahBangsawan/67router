@@ -14,7 +14,7 @@ lambar executor, tsoffin ƙimomin OAuth, headers, ko yanayin environment na proc
 Ana kuma samun wannan manifest ɗin ta HTTP a
 `GET /api/v1/provider-plugin-manifest` don sidecars da ke gudana a wajen process.
 
-OmniRoute yana sanar da Bifrost da CLIProxyAPI wannan URL ɗin ta hanyar
+67router yana sanar da Bifrost da CLIProxyAPI wannan URL ɗin ta hanyar
 request header na `X-OmniRoute-Provider-Manifest-Url`. Saita
 `OMNIROUTE_PROVIDER_MANIFEST_URL` idan sidecar yana buƙatar URL na jama'a ko na hanyar sadarwar
 container maimakon asalin request na gida.
@@ -30,7 +30,7 @@ dole ne sidecar ya aika request mara sharadi maimakon karɓar `304`.
 ## Manufa
 
 Matsar da metadata na masu samarwa zuwa ga ƙa'idar plugin domin daga ƙarshe sidecar mai
-ƙarancin latency ya iya ɗaukar nauyin hanyar request mai zafi, yayin da OmniRoute ke riƙe
+ƙarancin latency ya iya ɗaukar nauyin hanyar request mai zafi, yayin da 67router ke riƙe
 route na TypeScript a matsayin mashigar manufofi da mafita ta madadin. Manifest ɗin ƙari ne:
 ba ya sauya routing na request da kansa.
 
@@ -74,7 +74,7 @@ sake karanta tushen TypeScript.
 | `usage-fetch`        | Yana da usage ko quota fetcher da aka haɗa (`getUsageForProvider`).                                    |
 | `usage-supported`    | Usage API yana karɓar wannan mai samarwa (`isSupportedUsageConnection`).                               |
 
-`usage-fetch` don ganowa kawai ne. Yana nuna cewa OmniRoute ya san yadda ake karanta usage na
+`usage-fetch` don ganowa kawai ne. Yana nuna cewa 67router ya san yadda ake karanta usage na
 mai samarwar; ba ya kunna fetching, sauya ma'anar quota, ko nuna cewa an kunna
 widget na quota na Dashboard ga mai samarwar — ana sarrafa wannan widget ɗin dabam ta
 `USAGE_SUPPORTED_PROVIDERS`. Tushen gaskiya shi ne `USAGE_FETCHER_PROVIDERS` a cikin

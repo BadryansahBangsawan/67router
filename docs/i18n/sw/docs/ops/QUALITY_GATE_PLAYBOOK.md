@@ -4,7 +4,7 @@
 
 ---
 
-> **Hati hii ni nini.** Tathmini ya kina ya mfumo wa udhibiti wa ubora wa OmniRoute,
+> **Hati hii ni nini.** Tathmini ya kina ya mfumo wa udhibiti wa ubora wa 67router,
 > ikilinganishwa na mbinu bora za sekta, **pamoja na** orodha kamili ya vituo vyote vya
 > ukaguzi wa ubora na **mpango wa kuunakili usiotegemea zana mahususi** ili kutumia mfumo huo
 > katika mradi wowote. Imetolewa tarehe 2026-06-16 kutoka katika hali halisi ya hazina (si kutoka kwenye kumbukumbu).
@@ -101,62 +101,62 @@ ili kuutekeleza kwenye stack yoyote.
 
 ### 1. Mtindo na uumbizaji (thabiti, wa haraka)
 
-- **OmniRoute:** Prettier + ESLint kupitia lint-staged (pre-commit), nafasi 2/nukuu mbili/safu 100.
+- **67router:** Prettier + ESLint kupitia lint-staged (pre-commit), nafasi 2/nukuu mbili/safu 100.
 - **Ya jumla:** kiumbizaji kimoja kinachoweza kurekebisha kiotomatiki + linter moja, vinavyoendeshwa katika pre-commit kwenye faili zilizowekwa kwenye staging.
 
 ### 2. Aina
 
-- **OmniRoute:** `typecheck:core` (inayozuia) + `typecheck:noimplicit:core` (ya ushauri) + ratchet ya `type-coverage` ya 92.17% + bajeti ya any kwa kila faili.
+- **67router:** `typecheck:core` (inayozuia) + `typecheck:noimplicit:core` (ya ushauri) + ratchet ya `type-coverage` ya 92.17% + bajeti ya any kwa kila faili.
 - **Ya jumla:** ukaguzi mkali wa aina katika CI + kipimo cha type-coverage chenye ratchet + bajeti ya `any`/njia ya kukwepa kwa kila faili.
 
 ### 3. Majaribio (kiwango)
 
-- **OmniRoute:** runners 2 zisizoingiliana (Node native + vitest), shards 8, coverage ya jumla ya 60/60/60/60 + ratchet ~76% + **viwango vya chini 8 kwa kila moduli muhimu** + majaribio ya sifa ya kila usiku + **mutation testing** ya kila usiku.
+- **67router:** runners 2 zisizoingiliana (Node native + vitest), shards 8, coverage ya jumla ya 60/60/60/60 + ratchet ~76% + **viwango vya chini 8 kwa kila moduli muhimu** + majaribio ya sifa ya kila usiku + **mutation testing** ya kila usiku.
 - **Ya jumla:** runner/marunner wa majaribio + kiwango cha chini **kabisa** cha coverage (kuzuia sifuri) + **ratchet** ya coverage (kuzuia kurudi nyuma) + **viwango vya chini kwa kila moduli kwa msimbo wenye hatari kubwa** (kuzuia Goodhart) + majaribio yanayotegemea sifa kwa mantiki safi + **mutation testing** ya kila usiku kama kipimo halisi cha ubora wa majaribio.
 
 ### 4. Sera ya majaribio (kuzuia udanganyifu)
 
-- **OmniRoute:** `pr-test-policy` (msimbo wa uzalishaji unahitaji jaribio), `check-test-masking` (huzuia asserts zilizodhoofishwa), `pr-evidence` (dai la mafanikio linahitaji kitalu cha ushahidi), `test-discovery` (kila jaribio linakusanywa na runner).
+- **67router:** `pr-test-policy` (msimbo wa uzalishaji unahitaji jaribio), `check-test-masking` (huzuia asserts zilizodhoofishwa), `pr-evidence` (dai la mafanikio linahitaji kitalu cha ushahidi), `test-discovery` (kila jaribio linakusanywa na runner).
 - **Ya jumla:** kizuizi cha "msimbo mpya ⇒ jaribio jipya" + kigunduzi cha assert iliyoondolewa/tautolojia + sharti la ushahidi (TDD au jaribio linaloendelea kusasishwa) + hakikisho kwamba hakuna jaribio lililotengwa nje ya globs.
 
 ### 5. Uchanganamano na afya ya msimbo (ratchets)
 
-- **OmniRoute:** maonyo ya ESLint (3769↓), urudufishaji wa jscpd (5.72%↓), uchanganamano wa cyclomatic+max-lines (1800↓), uchanganamano wa kiutambuzi wa sonarjs (753↓), msimbo uliokufa/exports zisizotumika za knip (339↓), ukubwa wa faili kwa kila faili (umegandishwa, kupungua tu), vitegemezi vya mzunguko (Tarjan maalum, inayozuia).
+- **67router:** maonyo ya ESLint (3769↓), urudufishaji wa jscpd (5.72%↓), uchanganamano wa cyclomatic+max-lines (1800↓), uchanganamano wa kiutambuzi wa sonarjs (753↓), msimbo uliokufa/exports zisizotumika za knip (339↓), ukubwa wa faili kwa kila faili (umegandishwa, kupungua tu), vitegemezi vya mzunguko (Tarjan maalum, inayozuia).
 - **Ya jumla:** tumia ratchet kwa kila kipimo cha afya (maonyo, urudufishaji, uchanganamano wa cyclomatic **na** wa kiutambuzi, msimbo uliokufa, ukubwa wa faili, mizunguko ya import). Mwelekeo daima uwe "usirudi nyuma".
 
 ### 6. Usalama tuli (SAST + siri)
 
-- **OmniRoute:** CodeQL (ratchet ya arifa = 0), gitleaks (`[extend] useDefault=true` — muhimu sana!), SonarQube, sheria maalum za usalama (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet ya arifa = 0), gitleaks (`[extend] useDefault=true` — muhimu sana!), SonarQube, sheria maalum za usalama (public-creds, error-helper, route-guard-membership, route-validation).
 - **Ya jumla:** SAST (CodeQL/Sonar/semgrep) yenye ratchet ya arifa + kichanganuzi cha siri chenye **seti chaguo-msingi ya sheria iliyorithiwa** (usanidi maalum unaobatilisha chaguo-msingi = upofu) + vizuizi vya usalama vya Hard Rule vinavyohusu mradi mahususi.
 
 ### 7. Mnyororo wa ugavi (vitegemezi)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (orodha ya ruhusa ya SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` ya kuzuia slopsquatting (orodha ya ruhusa + umri ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (orodha ya ruhusa ya SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` ya kuzuia slopsquatting (orodha ya ruhusa + umri ≥72h).
 - **Ya jumla:** SCA ya vyanzo vingi + orodha ya ruhusa ya leseni + ukaguzi wa uadilifu wa lockfile + orodha ya ruhusa ya vitegemezi yenye ukaguzi wa umri/typosquatting + bot ya masasisho yaliyowekwa katika makundi.
 
 ### 8. Mnyororo wa ugavi (ujenzi na utoaji)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), asili ya SLSA (`--provenance`), OpenSSF Scorecard (kila wiki), uimarishaji wa workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), asili ya SLSA (`--provenance`), OpenSSF Scorecard (kila wiki), uimarishaji wa workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Ya jumla:** zalisha SBOM wakati wa kuchapisha + asili iliyotiwa saini (SLSA L2+) + Scorecard iliyoratibiwa + imarisha workflow zote (token zenye ruhusa za kiwango cha chini, kutohifadhi vitambulisho kwenye checkout isiyosukuma msimbo, actions zilizofungwa kwa SHA).
 
 ### 9. Mikataba na API
 
-- **OmniRoute:** oasdiff (mabadiliko yanayovunja OpenAPI), schemathesis (contract fuzz ya kila usiku), openapi-coverage (% ya routes zilizoandikwa, ratchet 38.3%), openapi-security-tiers (spec dhidi ya route-guard).
+- **67router:** oasdiff (mabadiliko yanayovunja OpenAPI), schemathesis (contract fuzz ya kila usiku), openapi-coverage (% ya routes zilizoandikwa, ratchet 38.3%), openapi-security-tiers (spec dhidi ya route-guard).
 - **Ya jumla:** diff ya mkataba ya mabadiliko yanayovunja (oasdiff/buf) + fuzz inayotegemea sifa dhidi ya spec (schemathesis) + coverage ya nyaraka yenye ratchet + ulinganifu wa spec↔msimbo.
 
 ### 10. Nyaraka na i18n (kuzuia kuoza)
 
-- **OmniRoute:** docs-sync (matoleo yaliyoakisiwa), docs-counts-sync (nambari katika nyaraka dhidi ya msimbo), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (matoleo yaliyoakisiwa), docs-counts-sync (nambari katika nyaraka dhidi ya msimbo), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Ya jumla:** sawazisha matoleo/idadi/env-vars kati ya nyaraka na msimbo (kizuizi, si kuamini tu) + thibitisha viungo vya ndani + coverage ya i18n yenye ratchet.
 
 ### 11. Kuzuia uzushi / ulinganifu (kategoria adimu)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (fetch ya client ⇒ route halisi), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (fetch ya client ⇒ route halisi), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Ya jumla:** kwa kila "chanzo cha ukweli kilichorudufishwa" (registry, string dispatch, marejeleo baina ya tabaka), kuwa na kizuizi kinachothibitisha kuwa pande zote mbili zinalingana. Hii hunasa kuoza ambako typecheck/jaribio halinasi.
 
 ### 12. Ustahimilivu na kikoa (mahususi kwa bidhaa)
 
-- **OmniRoute:** chaos (uingizaji wa hitilafu), heap-growth (uvujaji), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), sheria 3 za ustahimilivu (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (uingizaji wa hitilafu), heap-growth (uvujaji), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), sheria 3 za ustahimilivu (circuit-breaker/cooldown/lockout).
 - **Ya jumla:** tambua hali za kushindwa katika kikoa **chako** na uwe na kizuizi (hata kama ni cha kila usiku) kwa kila moja. Kwa programu za AI: red-team ya injection. Kwa mifumo iliyosambazwa: chaos + leak + soak.
 
 ---

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (සිංහල)
+# 🌐 67router Proxy Guide (සිංහල)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **භූගෝලීය අවහිර කිරීම් මඟහරින්න, ඔබේ අනන්යතාව ආරක්ෂා කරගන්න, සහ ඕනෑම ප්රොක්සියක් හරහා AI ගමනාගමනය මාර්ගගත කරන්න — වින්යාස කිරීමේ කිසිදු සංකීර්ණතාවකින් තොරව.**
 
-OmniRoute තුළ HTTP, HTTPS, හෝ SOCKS5 ප්රොක්සි හරහා ඉහළ ප්රවාහ AI සැපයුම්කරුවන්ගේ ගමනාගමනය මාර්ගගත කිරීමට ඔබට ඉඩ සලසන සියලු විශේෂාංග සහිත ප්රොක්සි කළමනාකරණ පද්ධතියක් ඇතුළත් වේ. ඔබ අවහිර කළ කලාපයක සිටියත්, IP මාරු කිරීම අවශ්ය වුවත්, හෝ රහසිගත ඇඟිලි සලකුණුකරණය අවශ්ය වුවත් — මෙම මාර්ගෝපදේශය සියල්ල ආවරණය කරයි.
+67router තුළ HTTP, HTTPS, හෝ SOCKS5 ප්රොක්සි හරහා ඉහළ ප්රවාහ AI සැපයුම්කරුවන්ගේ ගමනාගමනය මාර්ගගත කිරීමට ඔබට ඉඩ සලසන සියලු විශේෂාංග සහිත ප්රොක්සි කළමනාකරණ පද්ධතියක් ඇතුළත් වේ. ඔබ අවහිර කළ කලාපයක සිටියත්, IP මාරු කිරීම අවශ්ය වුවත්, හෝ රහසිගත ඇඟිලි සලකුණුකරණය අවශ්ය වුවත් — මෙම මාර්ගෝපදේශය සියල්ල ආවරණය කරයි.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute සේවාදායකය                     │
+│                       67router සේවාදායකය                     │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ ප්රොක්සි   │    │ ප්රොක්සි    │    │ ප්රොක්සි        │  │
@@ -83,7 +83,7 @@ unsupported_country_region_territory
 
 ## මට්ටම් 4ක ප්රොක්සි පද්ධතිය
 
-OmniRoute විසින් **ස්වාධීන විෂය පථ හතරකදී** ප්රොක්සි වින්යාස කිරීමට සහය දක්වන අතර, ඒවා ප්රමුඛතා අනුපිළිවෙළට නිරාකරණය කෙරේ:
+67router විසින් **ස්වාධීන විෂය පථ හතරකදී** ප්රොක්සි වින්යාස කිරීමට සහය දක්වන අතර, ඒවා ප්රමුඛතා අනුපිළිවෙළට නිරාකරණය කෙරේ:
 
 ```
 ප්රමුඛතා නිරාකරණ අනුපිළිවෙළ (ඉහළම → පහළම):
@@ -96,7 +96,7 @@ OmniRoute විසින් **ස්වාධීන විෂය පථ හත�
 
 ### නිරාකරණය ක්රියා කරන ආකාරය
 
-OmniRoute විසින් ඉහළ මට්ටමේ සැපයුම්කරුවකු වෙත ඉල්ලීමක් යවන විට, එය එක් එක් මට්ටම අනුපිළිවෙළින් පරීක්ෂා කරන `resolveProxyForConnectionFromRegistry()` අමතයි:
+67router විසින් ඉහළ මට්ටමේ සැපයුම්කරුවකු වෙත ඉල්ලීමක් යවන විට, එය එක් එක් මට්ටම අනුපිළිවෙළින් පරීක්ෂා කරන `resolveProxyForConnectionFromRegistry()` අමතයි:
 
 1. **ගිණුම් මට්ටම** — මෙම නිශ්චිත සම්බන්ධතා ID එකට ප්රොක්සියක් පවරා තිබේද?
 2. **සැපයුම්කරු මට්ටම** — මෙම සැපයුම්කරුට (උදා., `openai`) ප්රොක්සියක් පවරා තිබේද?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ආයාතය/නිර්යාතය
 
-ප්රොක්සි **උපස්ථ/ප්රතිසාධන** පද්ධතියට ඇතුළත් වේ. ඔබගේ OmniRoute වින්යාසය නිර්යාත කරන විට:
+ප්රොක්සි **උපස්ථ/ප්රතිසාධන** පද්ධතියට ඇතුළත් වේ. ඔබගේ 67router වින්යාසය නිර්යාත කරන විට:
 
 1. **උපකරණ පුවරුව → සැකසීම් → උපස්ථය** වෙත යන්න
 2. **නිර්යාත කරන්න** ක්ලික් කරන්න — ප්රොක්සි රෙජිස්ට්රිය සහ පැවරුම් ඇතුළත් වේ
@@ -248,7 +248,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### පැරණි පද්ධති සංක්රමණය
 
-ඔබ පැරණි අනුවාදයක (රෙජිස්ට්රියට පෙර) ප්රොක්සි වින්යාස කර ඇත්නම්, OmniRoute ඒවා ස්වයංක්රීයව සංක්රමණය කරයි:
+ඔබ පැරණි අනුවාදයක (රෙජිස්ට්රියට පෙර) ප්රොක්සි වින්යාස කර ඇත්නම්, 67router ඒවා ස්වයංක්රීයව සංක්රමණය කරයි:
 
 ```
 Legacy key_value store → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Legacy key_value store → proxy_registry + proxy_assignments
 
 > 🆕 **[@oyi77](https://github.com/oyi77) විසින් දායක කරන ලදී** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (ගැටලුව [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-ලොව පුරා ඇති **නොමිලේ, වලංගු කළ proxies සිය ගණනකට** ප්රවේශය ලබා දීම සඳහා OmniRoute, **[1proxy](https://1proxy-api.aitradepulse.com)** ප්රජා වේදිකාව සමඟ ඒකාබද්ධ වේ. තමන්ගේම proxy යටිතල පහසුකම් නොමැති පරිශීලකයන් සඳහා මෙය ඉතා සුදුසුය.
+ලොව පුරා ඇති **නොමිලේ, වලංගු කළ proxies සිය ගණනකට** ප්රවේශය ලබා දීම සඳහා 67router, **[1proxy](https://1proxy-api.aitradepulse.com)** ප්රජා වේදිකාව සමඟ ඒකාබද්ධ වේ. තමන්ගේම proxy යටිතල පහසුකම් නොමැති පරිශීලකයන් සඳහා මෙය ඉතා සුදුසුය.
 
 ### එය ක්රියා කරන ආකාරය
 
@@ -273,7 +273,7 @@ Legacy key_value store → proxy_registry + proxy_assignments
 └─────────────┘      දක්වා      └─────────────────┘     අනුව        └────────────┘
 ```
 
-1. **සමමුහුර්ත කිරීම** — OmniRoute විසින් 1proxy API වෙතින් වලංගු කළ proxies ලබා ගනී
+1. **සමමුහුර්ත කිරීම** — 67router විසින් 1proxy API වෙතින් වලංගු කළ proxies ලබා ගනී
 2. **ගබඩා කිරීම** — Proxies, `source = 'oneproxy'` සමඟ එම `proxy_registry` වගුවෙහිම සුරකිනු ලැබේ
 3. **පෙරීම** — ප්රොටෝකෝලය, රට සහ ගුණාත්මක ලකුණු අනුව පෙරන්න
 4. **මාරු කිරීම** — ගුණාත්මකභාවය, අහඹු හෝ අනුක්රමික ක්රමෝපායන් භාවිතයෙන් හොඳම proxy එක තෝරන්න
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## හඳුනාගැනීම් වැළැක්වීම සහ රහසිගත ක්රියාකාරිත්වය
 
-OmniRoute හුදෙක් proxy එකක් හරහා ගමනාගමනය යොමු කිරීම පමණක් නොකරයි — එය ගමනාගමනය නීත්යානුකූල ලෙස පෙනෙන ආකාරයට සකසයි:
+67router හුදෙක් proxy එකක් හරහා ගමනාගමනය යොමු කිරීම පමණක් නොකරයි — එය ගමනාගමනය නීත්යානුකූල ලෙස පෙනෙන ආකාරයට සකසයි:
 
 ### TLS ඇඟිලි සලකුණු ව්යාජකරණය
 
@@ -407,11 +407,11 @@ dashboard එකේ ඇති වර්ණ-කේතනය කළ ලාංඡ�
 
 ## Upstream Proxy මාදිලි
 
-CLIProxyAPI රටාව භාවිත කරන සැපයුම්කරුවන් සඳහා, OmniRoute විසින් upstream proxy මාදිලි තුනකට සහාය දක්වයි:
+CLIProxyAPI රටාව භාවිත කරන සැපයුම්කරුවන් සඳහා, 67router විසින් upstream proxy මාදිලි තුනකට සහාය දක්වයි:
 
 | මාදිලිය       | විස්තරය                                                        |
 | ------------- | -------------------------------------------------------------- |
-| `native`      | OmniRoute විසින් proxy මාර්ගගත කිරීම සෘජුව හසුරුවයි (පෙරනිමි)  |
+| `native`      | 67router විසින් proxy මාර්ගගත කිරීම සෘජුව හසුරුවයි (පෙරනිමි)   |
 | `cliproxyapi` | බාහිර CLIProxyAPI instance එකකට පැවරේ                          |
 | `fallback`    | පළමුව native උත්සාහ කර, අසාර්ථක වුවහොත් CLIProxyAPI භාවිත කරයි |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnels API
 
-proxy එකක් හරහා පිටතට ගමනාගමනය යොමු කිරීම වෙනුවට ඔබේ OmniRoute instance එක පොදු අන්තර්ජාලයට (Cloudflare/ngrok/Tailscale) නිරාවරණය කිරීම සඳහා, [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) බලන්න. tunnel REST API එක `/api/tunnels/{cloudflared,ngrok,tailscale}/*` යටතේ පවතින අතර, ඉහත ලේඛනගත කර ඇති පිටතට යන proxy දාමයෙන් ස්වාධීන වේ.
+proxy එකක් හරහා පිටතට ගමනාගමනය යොමු කිරීම වෙනුවට ඔබේ 67router instance එක පොදු අන්තර්ජාලයට (Cloudflare/ngrok/Tailscale) නිරාවරණය කිරීම සඳහා, [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) බලන්න. tunnel REST API එක `/api/tunnels/{cloudflared,ngrok,tailscale}/*` යටතේ පවතින අතර, ඉහත ලේඛනගත කර ඇති පිටතට යන proxy දාමයෙන් ස්වාධීන වේ.
 
 ### 1proxy API
 
@@ -516,7 +516,7 @@ proxy එකක් හරහා පිටතට ගමනාගමනය යො�
 
 ### ප්රොක්සිය හරහා ඇතිවන "socket hang up" දෝෂ
 
-අක්රීය සම්බන්ධතා විසන්ධි කරන අඩු මිල ප්රොක්සි සමඟ මෙය සාමාන්ය තත්ත්වයකි. OmniRoute දැනටමත් පහත ආකාරයෙන් මෙය හසුරුවයි:
+අක්රීය සම්බන්ධතා විසන්ධි කරන අඩු මිල ප්රොක්සි සමඟ මෙය සාමාන්ය තත්ත්වයකි. 67router දැනටමත් පහත ආකාරයෙන් මෙය හසුරුවයි:
 
 - ප්රොක්සි සම්බන්ධතාවල keep-alive අක්රීය කිරීම (`keepAliveTimeout: 1`)
 - pipelining අක්රීය කිරීම (`pipelining: 0`)
@@ -526,7 +526,7 @@ proxy එකක් හරහා පිටතට ගමනාගමනය යො�
 
 ### OAuth අතරතුර "unsupported_country_region_territory"
 
-OAuth ප්රවාහය ආරම්භ කිරීමට **පෙර** ප්රොක්සිය වින්යාස කර ඇති බවට වග බලා ගන්න. OmniRoute විසින් OAuth token හුවමාරුව වින්යාස කළ ප්රොක්සිය හරහා යොමු කරයි. පළමුව global හෝ provider මට්ටමේ ප්රොක්සියක් සකසා, ඉන්පසු සම්බන්ධ වන්න.
+OAuth ප්රවාහය ආරම්භ කිරීමට **පෙර** ප්රොක්සිය වින්යාස කර ඇති බවට වග බලා ගන්න. 67router විසින් OAuth token හුවමාරුව වින්යාස කළ ප්රොක්සිය හරහා යොමු කරයි. පළමුව global හෝ provider මට්ටමේ ප්රොක්සියක් සකසා, ඉන්පසු සම්බන්ධ වන්න.
 
 ### ප්රොක්සිය භාවිත නොවීම
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## ප්රොක්සි සෞඛ්ය පරීක්ෂාව (v3.8.16+)
 
-OmniRoute හි **proxy fast-fail** යාන්ත්රණය (`src/lib/proxyHealth.ts`) ඉක්මන් TCP සම්බන්ධතා පරීක්ෂාවක් මඟින් තත්පර 2කට අඩු කාලයකදී ක්රියා විරහිත ප්රොක්සි හඳුනාගෙන, එක් එක් ඉල්ලීම සඳහා අමතර පිරිවැයක් ඇති වීම වැළැක්වීමට **ප්රතිඵලය හැඹිලිගත කරයි**.
+67router හි **proxy fast-fail** යාන්ත්රණය (`src/lib/proxyHealth.ts`) ඉක්මන් TCP සම්බන්ධතා පරීක්ෂාවක් මඟින් තත්පර 2කට අඩු කාලයකදී ක්රියා විරහිත ප්රොක්සි හඳුනාගෙන, එක් එක් ඉල්ලීම සඳහා අමතර පිරිවැයක් ඇති වීම වැළැක්වීමට **ප්රතිඵලය හැඹිලිගත කරයි**.
 
 ### එය ක්රියා කරන ආකාරය
 
@@ -659,11 +659,11 @@ URL එකේ ඇති අභිරුචි port (`http://host:9999`) සෑ�
 
 ## ප්රොක්සි විශ්ලේෂණ සහ නිරීක්ෂණ හැකියාව
 
-මාර්ගගත කිරීමේ රටා, ප්රමාද ඉහළ යෑම් සහ නැවත නැවත සිදුවන අසාර්ථකවීම් හඳුනාගැනීමට ක්රියාකරුවන්ට උපකාර කිරීම සඳහා OmniRoute එක් එක් ප්රොක්සිය අනුව භාවිතය නිරීක්ෂණය කරයි.
+මාර්ගගත කිරීමේ රටා, ප්රමාද ඉහළ යෑම් සහ නැවත නැවත සිදුවන අසාර්ථකවීම් හඳුනාගැනීමට ක්රියාකරුවන්ට උපකාර කිරීම සඳහා 67router එක් එක් ප්රොක්සිය අනුව භාවිතය නිරීක්ෂණය කරයි.
 
 ### නිරීක්ෂණය කරන්නේ මොනවාද
 
-වින්යාස කළ ප්රොක්සියක් හරහා යන සෑම ඉල්ලීමක් සඳහාම, OmniRoute පහත දෑ වාර්තා කරයි:
+වින්යාස කළ ප්රොක්සියක් හරහා යන සෑම ඉල්ලීමක් සඳහාම, 67router පහත දෑ වාර්තා කරයි:
 
 | මෙට්රිකය     | විස්තරය                                             |
 | ------------ | --------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## භ්රමණ උපායමාර්ග තීරණ වෘක්ෂය
 
-එක් විෂය පථයකට ප්රොක්සි කිහිපයක් පවරා ඇති විට, සෑම ඉල්ලීමක් සඳහාම භාවිත කළ යුත්තේ කුමන ප්රොක්සියදැයි තේරීමට OmniRoute **භ්රමණ උපායමාර්ගයක්** භාවිත කරයි. උපායමාර්ගය විෂය පථ මට්ටමින් වින්යාස කරයි (ගෝලීය, එක් එක් සැපයුම්කරු අනුව, එක් එක් ගිණුම අනුව, එක් එක් සංයෝජනය අනුව).
+එක් විෂය පථයකට ප්රොක්සි කිහිපයක් පවරා ඇති විට, සෑම ඉල්ලීමක් සඳහාම භාවිත කළ යුත්තේ කුමන ප්රොක්සියදැයි තේරීමට 67router **භ්රමණ උපායමාර්ගයක්** භාවිත කරයි. උපායමාර්ගය විෂය පථ මට්ටමින් වින්යාස කරයි (ගෝලීය, එක් එක් සැපයුම්කරු අනුව, එක් එක් ගිණුම අනුව, එක් එක් සංයෝජනය අනුව).
 
 ### ලබාගත හැකි උපායමාර්ග
 

@@ -7,7 +7,7 @@
 > **Sursa adevărului:** spațiul de lucru `electron/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute include o aplicație desktop multiplatformă (Windows / macOS / Linux), construită pe
+67router include o aplicație desktop multiplatformă (Windows / macOS / Linux), construită pe
 **Electron 41** + **electron-builder 26.10**. Aplicația desktop pornește serverul autonom Next.js
 ca proces copil, direcționează un `BrowserWindow` către acesta și adaugă o
 pictogramă în bara de sistem, actualizare automată, o punte IPC și inițializarea fără configurare a secretelor.
@@ -46,7 +46,7 @@ Confirmate din `electron/package.json`:
 | `better-sqlite3`     | rădăcină `^13.0.2` (versiuni Node-API precompilate — fără recompilare Electron) |
 | Versiunea aplicației | `3.8.0`                                                                         |
 | ID-ul aplicației     | `online.omniroute.desktop`                                                      |
-| Numele produsului    | `OmniRoute`                                                                     |
+| Numele produsului    | `67router`                                                                      |
 
 ## Scripturi (`package.json` din rădăcină)
 
@@ -197,7 +197,7 @@ utilizați de preferință fișierul `.env`, apoi închideți complet aplicația
 - `BrowserWindow`: 1400×900 (minim 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, butoanele de control ale ferestrei la `{ x: 16, y: 16 }`.
 - Windows/Linux: bară de titlu nativă.
-- Butonul de închidere minimizează aplicația în zona de notificare; meniul din zona de notificare conține **Deschide OmniRoute**, **Deschide panoul de control** (în browserul extern), submeniul **Port server**, **Verifică actualizările**, **Ieșire**.
+- Butonul de închidere minimizează aplicația în zona de notificare; meniul din zona de notificare conține **Deschide 67router**, **Deschide panoul de control** (în browserul extern), submeniul **Port server**, **Verifică actualizările**, **Ieșire**.
 
 ## Politica de securitate a conținutului
 

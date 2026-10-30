@@ -9,9 +9,9 @@
 > **Dernières recherches :** 2026-06-17 — recherches web par fournisseur (documentation officielle + actualités des 7 derniers jours, analyse par 50 agents avec vérification contradictoire) mettant à jour chaque quota de niveau gratuit ainsi que les conditions d’utilisation. **Réaudit partiel le 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — voir la note datée ci-dessous).
 > **Source de référence (catalogue) :** `open-sse/config/freeModelCatalog.ts` (budgets par MODÈLE, dédupliqués par pool). Les nombres de jetons disponibles ci-dessous proviennent de recherches web en direct et constituent une **approximation** — voir [Méthodologie et réserves](#methodology--caveats).
 
-## TL;DR — quelle quantité d’inférence gratuite OmniRoute agrège-t-il réellement ?
+## TL;DR — quelle quantité d’inférence gratuite 67router agrège-t-il réellement ?
 
-Ces chiffres correspondent à des comptes tiers et à des conditions d’admissibilité distincts dans l’ensemble du catalogue. OmniRoute n’accorde pas ce budget : vous devez obtenir les comptes ou identifiants requis, connecter les fournisseurs admissibles et respecter leurs limites. La capacité réellement utilisable peut être inférieure, voire nulle sur une nouvelle installation ne disposant d’aucune route admissible. Les fournisseurs marqués `tos: avoid` sont exclus par défaut du routage automatique.
+Ces chiffres correspondent à des comptes tiers et à des conditions d’admissibilité distincts dans l’ensemble du catalogue. 67router n’accorde pas ce budget : vous devez obtenir les comptes ou identifiants requis, connecter les fournisseurs admissibles et respecter leurs limites. La capacité réellement utilisable peut être inférieure, voire nulle sur une nouvelle installation ne disposant d’aucune route admissible. Les fournisseurs marqués `tos: avoid` sont exclus par défaut du routage automatique.
 
 **Vérifié le 2026-10-08 :** [Cerebras](https://www.cerebras.ai/pricing) offre un crédit promotionnel unique de 5 $, nécessitant un moyen de paiement et expirant après 30 jours. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publie des limites de débit par projet, modèle et niveau ; il reste exclu du chiffre mensuel quantifié mis en avant.
 
@@ -92,7 +92,7 @@ crédit gratuit. Les modifications concernant Nous sont détaillées dans la not
 
 ## Deux régimes — comptage et décision
 
-OmniRoute répond à la question « est-ce gratuit ? » au moyen de deux régimes qui consultent
+67router répond à la question « est-ce gratuit ? » au moyen de deux régimes qui consultent
 intentionnellement des sources différentes :
 
 | Régime                   | Source de vérité                                                                                                                                                                           | Interfaces                                                                                                                                             |
@@ -140,7 +140,7 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine sont o
 
 ### ⚠️ Prudence — clauses relatives à l’usage personnel ou aux proxys à vérifier (16)
 
-> Leur accès gratuit est bien réel et OmniRoute peut acheminer les requêtes vers ces services ; les clauses ci-dessous méritent simplement d’être connues. Les services utilisant OAuth ou sans clé ne peuvent pas être quantifiés en jetons et ne sont donc pas inclus dans le chiffre principal (et non parce qu’ils seraient inutilisables).
+> Leur accès gratuit est bien réel et 67router peut acheminer les requêtes vers ces services ; les clauses ci-dessous méritent simplement d’être connues. Les services utilisant OAuth ou sans clé ne peuvent pas être quantifiés en jetons et ne sont donc pas inclus dans le chiffre principal (et non parce qu’ils seraient inutilisables).
 
 | Fournisseur      | Remarque                                                                                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine sont o
 | `fireworks`      | Les CGU interdisent explicitement l’utilisation comme proxy/intermédiaire, le transfert de clés API et la concession en sous-licence (articles 2.1 et 2.2(i)(j)) ; les proxys personnels auto-hébergés ne sont p…   |
 | `friendliai`     | Les articles 8(e) et 8(f) des CGU interdisent explicitement d’utiliser FriendliAI comme proxy ou d’autoriser l’accès autonome de tiers, ainsi que la revente/…                                                      |
 | `iflytek`        | L’article 2.4(3) de l’iFlytek Spark LLM Service Agreement interdit explicitement « l’utilisation de toute méthode automatisée ou programmatique pour extraire des données ou des résultats…                         |
-| `kiro`           | La FAQ de Kiro interdit explicitement l’utilisation avec « OpenClaw et des outils similaires qui s’appuient sur des environnements d’exécution tiers » — un proxy d’IA auto-hébergé (comme OmniRoute) achemi…       |
+| `kiro`           | La FAQ de Kiro interdit explicitement l’utilisation avec « OpenClaw et des outils similaires qui s’appuient sur des environnements d’exécution tiers » — un proxy d’IA auto-hébergé (comme 67router) achemi…        |
 | `modal`          | L’article 1.3 des CGU interdit explicitement de « louer, revendre ou permettre de toute autre manière à un tiers d’accéder directement au Service ou de l’utiliser » — la création d’un service auto-hébergé…       |
 | `muse-spark-web` | Les CGU de Meta interdisent explicitement l’accès automatisé sans autorisation préalable, la rétro-ingénierie sans autorisation écrite et le contournement des mesures technologi…                                  |
 | `nlpcloud`       | Les CGU interdisent explicitement de « mettre en place un proxy ou tout autre dispositif permettant à d’autres personnes d’accéder au Service par son intermédiaire » et n’accordent qu’un droit non transférable,… |
@@ -316,7 +316,7 @@ La plupart des chiffres de « jetons gratuits par mois » dans ce domaine sont o
 
 - **`360ai`** — La freeNote fournie « Modèles Free 360 AI Brain » semble obsolète. L’accès actuel est soumis à candidature et payant. Les jetons promotionnels accordés lors du lancement en 2023 (100 M à 250 M en une seule fois) ont peut-être servi de base à…
 - **`agentrouter`** — Notre freeNote fournie indique « 200 $ de crédits gratuits à l’inscription ». En réalité, les inscriptions standard (sans parrainage) ne reçoivent actuellement que 100 $ ; les inscriptions parrainées peuvent recevoir 200 $, mais un commentaire de la communauté datant d’avril 2026…
-- **`agy`** — Notre freeNote fournie indique « (aucun) », ce qui laisse entendre qu’il n’existe aucune offre gratuite, mais Antigravity propose bien une offre gratuite soumise à une authentification OAuth. Cependant, les CGU interdisent explicitement l’utilisation de cette offre gratuite via un proxy comme OmniRoute…
+- **`agy`** — Notre freeNote fournie indique « (aucun) », ce qui laisse entendre qu’il n’existe aucune offre gratuite, mais Antigravity propose bien une offre gratuite soumise à une authentification OAuth. Cependant, les CGU interdisent explicitement l’utilisation de cette offre gratuite via un proxy comme 67router…
 - **`ai21`** — Offre restreinte : la période d’essai est passée de « 3 mois » à 7 jours. Le montant du crédit reste de 10 $, mais sa durée de validité a fortement diminué, passant d’environ 90 jours à 7 jours.
 - **`aimlapi`** — Changement important. La freeNote fournie annonçait « 0,025 $/jour de crédits gratuits — plus de 200 modèles », mais l’offre gratuite est désormais suspendue ou abandonnée. L’allocation de crédits de 0,025 $/jour (50 000 crédits/jour, 10 req/d…
 - **`amazon-q`** — Notre freeNote fournie indique « (aucun) » — la réalité est pire : le produit n’accepte désormais plus de nouvelles inscriptions (15 mai 2026). Auparavant, l’offre gratuite proposait 50 requêtes agentiques par mois ainsi qu’un nombre illimité de complétions en ligne…

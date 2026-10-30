@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-komprimering er bygget rundt motorkontrakter. En modus kan kjøre én motor direkte
+67router-komprimering er bygget rundt motorkontrakter. En modus kan kjøre én motor direkte
 (`caveman` eller `rtk`) eller en deterministisk, stablet pipeline som kjører flere motorer i rekkefølge.
 
 ## Moduser
@@ -43,9 +43,9 @@ har akkumulert historie ennå, stopper ved `below_min_chars` og motoren transfor
 er derfor standard er `aggressive` i stedet for den sikreste profilen.
 
 Pakken løser sitt eget modellomfang og profil fra miljøkonfigurasjonen.
-OmniRoute delegerer aldri beslutningen: adapteren fester modellporten til pakkens
+67router delegerer aldri beslutningen: adapteren fester modellporten til pakkens
 mest restriktive omfang, slik at verts-miljøinnstillinger bare kan innsnevre tillatelseslisten, aldri
-utvide den utover OmniRoutes målte kvitteringer.
+utvide den utover 67routers målte kvitteringer.
 
 ## Motorregister
 
@@ -109,7 +109,7 @@ Caveman-modus fokuserer på semantisk kondensering av vanlig prosa:
 Dashbordvisningen er `Dashboard -> Context & Cache -> Caveman`.
 
 Oppstrømsprosjektet Caveman rapporterer `~75%` færre utdata-tokener, gjennomsnittlig `65%` reduksjon i utdata i referansetester
-med et spenn på `22-87%`, og et verktøy med `~46%` komprimering av inndata. OmniRoute bruker Cavemans tall for inndatasiden
+med et spenn på `22-87%`, og et verktøy med `~46%` komprimering av inndata. 67router bruker Cavemans tall for inndatasiden
 ved dokumentasjon av kombinerte besparelser for ledetekst/kontekst. Cavemans utdatamodus er fortsatt en separat
 funksjon for responsatferd.
 

@@ -90,7 +90,7 @@ npm run lint
 
 - `src/i18n/messages/en.json` 是 UI 源；`config/i18n.json` 是区域设置源。
 - CLI 目录单独位于 `bin/cli/locales/` 下。
-- 必须原样保留 ICU 占位符和标签。不要翻译产品/提供者/模型名称、协议和标头名称、命令、代码/JSON 标识符、URL、环境变量，或 `OmniRoute`、`OAuth`、`MCP` 和 `A2A` 等受保护术语。当前源列表为
+- 必须原样保留 ICU 占位符和标签。不要翻译产品/提供者/模型名称、协议和标头名称、命令、代码/JSON 标识符、URL、环境变量，或 `67router`、`OAuth`、`MCP` 和 `A2A` 等受保护术语。当前源列表为
   `scripts/i18n/glossary/protected-terms.json`。
 
 **针对性循环**
@@ -222,7 +222,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # 重用在其他位置�
   `<dir>.previous`。每次重命名都是原子的；如果流程中途失败，则会撤销已执行的重命名。
 - **回滚。** `run` 会再次验证提升后的槽位，如果检查失败，则交换 `current` 和 `previous` 以执行回滚。首次验证失败的候选版本绝不会被提升。
 
-所有内容都会写入已被 git 忽略的 `_artifacts/candidate/`；现有的 OmniRoute
+所有内容都会写入已被 git 忽略的 `_artifacts/candidate/`；现有的 67router
 安装及其数据目录绝不会被修改。提升后的 CLI 位于
 `_artifacts/candidate/current/prefix/bin/omniroute`；使用时请通过你自己的 `DATA_DIR`
 启动它。退出码：`0` 表示成功，`1` 表示验证或提升失败，`2` 表示用法错误或缺少构建。

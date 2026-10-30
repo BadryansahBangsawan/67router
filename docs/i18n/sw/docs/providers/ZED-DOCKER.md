@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute inapoendeshwa ndani ya Docker, mtiririko wa kawaida wa "Leta kutoka Zed Keychain" hushindwa
+67router inapoendeshwa ndani ya Docker, mtiririko wa kawaida wa "Leta kutoka Zed Keychain" hushindwa
 kwa sababu kontena haliwezi kufikia huduma ya keychain ya Mfumo wa Uendeshaji wa seva mwenyeji (`libsecret` kwenye Linux,
 Keychain kwenye macOS, Credential Manager kwenye Windows), na saraka za usanidi za Zed kwenye
 mfumo wa faili wa seva mwenyeji hazionekani ndani ya kontena kwa chaguo-msingi.
@@ -20,7 +20,7 @@ Matatizo mawili yanayozuia utendaji hutokea ndani ya kontena:
    huwasiliana na huduma ya keychain ya Mfumo wa Uendeshaji kupitia soketi ya Unix au kipindi cha D-Bus.
    Hakuna kati ya hizi inayounganishwa na kontena kwa chaguo-msingi, kwa hivyo usomaji wa taarifa za uthibitishaji hushindwa kila wakati.
 
-OmniRoute hutambua mazingira ya Docker kupitia mbinu mbili za ukadiriaji:
+67router hutambua mazingira ya Docker kupitia mbinu mbili za ukadiriaji:
 
 - Uwepo wa `/.dockerenv` (iliyoandikwa na daemon ya Docker kontena linapoanzishwa).
 - Kuonekana kwa mfuatano `docker` katika `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Mojawapo ya mbinu hizi inapotimizwa, njia ya uletaji hurejesha HTTP 422 ikiwa na
 
 1. Fungua **Dashibodi → Watoa Huduma → Zed**.
 2. Paneli ya **Uletaji wa Tokeni kwa Mkono** huonekana chini ya kadi ya uletaji kutoka keychain. Wakati
-   OmniRoute inapotambua Docker, paneli hii hupanuka kiotomatiki baada ya jaribio la kwanza la
+   67router inapotambua Docker, paneli hii hupanuka kiotomatiki baada ya jaribio la kwanza la
    uletaji kutoka keychain kushindwa.
 3. Chagua mtoa huduma kutoka kwenye orodha kunjuzi (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, au DeepSeek).

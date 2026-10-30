@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute တွင် ခွဲခြားသီးခြားစီသော်လည်း အပြန်အလှန်ဆက်စပ်နေသည့် resilience ယန္တရား သုံးခု ရှိသည်။ ၎င်းတို့တစ်ခုချင်းစီတွင် ကွာခြားသော scope နှင့် ရည်ရွယ်ချက် ရှိသည်။ routing အပြုအမူကို debug လုပ်စဉ် ၎င်းတို့ကို သီးခြားစီ ခွဲခြားထားပါ။
+67router တွင် ခွဲခြားသီးခြားစီသော်လည်း အပြန်အလှန်ဆက်စပ်နေသည့် resilience ယန္တရား သုံးခု ရှိသည်။ ၎င်းတို့တစ်ခုချင်းစီတွင် ကွာခြားသော scope နှင့် ရည်ရွယ်ချက် ရှိသည်။ routing အပြုအမူကို debug လုပ်စဉ် ၎င်းတို့ကို သီးခြားစီ ခွဲခြားထားပါ။
 
 ![resilience 3-အလွှာမော်ဒယ်](../diagrams/exported/resilience-3layers.svg)
 
@@ -185,7 +185,7 @@ Session-affinity header သုံးခုကို upstream သို့ ဘယ
 
 ### သီးသန့် managed session connection lease များ
 
-**အကျုံးဝင်မှု:** active managed HTTP client/session တစ်ခုသည် အရည်အချင်းပြည့်မီသော OmniRoute connection တစ်ခုကို ပိုင်ဆိုင်သည်။
+**အကျုံးဝင်မှု:** active managed HTTP client/session တစ်ခုသည် အရည်အချင်းပြည့်မီသော 67router connection တစ်ခုကို ပိုင်ဆိုင်သည်။
 
 **ရည်ရွယ်ချက်:** request များစွာအတင်း hard routing fence လိုအပ်သော client များအတွက် တာရှည်ခံသော သီးသန့် connection ပိုင်ဆိုင်မှုကို ပေးစွမ်းခြင်း။ ၎င်းသည် soft continuity preference ဖြစ်သော session affinity နှင့် ကွာခြားသည် — သီးသန့် lease တစ်ခုသည် lifecycle state ကို SQLite အတွင်း persist လုပ်ထားပြီး၊ global active-owner နှင့် active-connection uniqueness ကို စည်းကမ်းချက်ဖြင့် အာမခံစေကာ၊ provider dispatch မပြုလုပ်မီ stale generation ကို ပယ်ချသည်။
 
@@ -199,7 +199,7 @@ active connection ID ကိုလည်း ချည်နှောင်ထာ�
 snapshot များနှင့် upstream executor header များမှ ဖယ်ရှားသည်။
 
 ပုံမှန် routing တွင် eligible managed candidate များ ရှိနေသော်လည်း free candidate တိုင်းကို
-foreign active lease မှ သိမ်းပိုက်ထားပါက၊ OmniRoute သည် HTTP `429`၊ lease-capacity-unavailable code၊
+foreign active lease မှ သိမ်းပိုက်ထားပါက၊ 67router သည် HTTP `429`၊ lease-capacity-unavailable code၊
 waiting-for-capacity state နှင့် သက်ဆိုင်ရာ အစောဆုံး သက်တမ်းကုန်ဆုံးချိန်မှ ရရှိသော bounded `Retry-After`
 ကို ပြန်ပေးသည်။ ပုံမှန် empty eligibility သည် lease contention မဟုတ်ပဲ ၎င်း၏ လက်ရှိ routing error semantics
 ကို ထိန်းသိမ်းထားဆဲ ဖြစ်သည်။
@@ -227,7 +227,7 @@ waiting-for-capacity state နှင့် သက်ဆိုင်ရာ အစ
 - `404` က bare model ကို lock လုပ်သည် (`getModelLockKey()` က `not_found` ကို
   ကျဉ်းစောင်းစေသည်)။
 - အခြား status မည်သည်ဖြစ်စေ — `5xx` transport/server ပျက်စီးမှုများနှင့်
-  OmniRoute ကိုယ်တိုင် quality validation မှ synthesized ပြုလုပ်သော `502` —
+  67router ကိုယ်တိုင် quality validation မှ synthesized ပြုလုပ်သော `502` —
   **တိကျသော** provider/connection/model tuple ကိုသာ lock လုပ်သည်။ Model တစ်ခုရှိ
   bad stream တစ်ခုသည် ထို account ၏ quota အကြောင်းကို သက်သေခံပေးခြင်း မဟုတ်ပါ။
   ဤစည်းမျဉ်းမရှိမီက `codex/gpt-5.6-luna` ပေါ်တွင် response အလွတ်
@@ -359,7 +359,7 @@ Connection တစ်ခုသည် ၎င်း၏ `rateLimitOverrides` map အ
 
 - **Connection အလုံးစုံ နှင့် model သီးသန့်:** `maxConcurrent` သည် မျှဝေသုံး connection အလုံးစုံ ceiling အဖြစ် ဆက်လက်တည်ရှိသည်။ နှစ်ခုလုံး သက်ဆိုင်သောအခါ၊ gate နှစ်ခုလုံးကို composite gate တစ်ခုတည်း (`global → provider → account → model`) အတွင်း atomically ရယူသည်။ ထိရောက်သော အပြုအမူမှာ ပိုမိုတင်းကြပ်သော သက်ဆိုင်ရာ ကန့်သတ်ချက် ဖြစ်သည်။
 - **Model-key အတိအကျ ကိုက်ညီမှု:** key သည် routing resolution ပြီးနောက် executor သို့ ပေးပို့သော model string ဖြစ်သည် — ပုံမှန်အားဖြင့် bare upstream model id (`glm-5`) ဖြစ်ပြီး client-side `provider/model` alias မဟုတ်ပါ (`zai/glm-5` သည် `glm-5` နှင့် မကိုက်ညီပါ)။ တန်ဖိုးများမှာ positive-integer တစ်ပြိုင်နက်တည်း တောင်းဆိုမှု ceiling များ ဖြစ်သည်။
-- **Local queueing၊ discovery မပြုခြင်း:** ပိုလျှံသော တောင်းဆိုမှုများသည် ရှိရင်းစွဲ queue/timeout semantics များအတိုင်း local တွင် queue ဝင်သည် (typed `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` admission error များ)။ OmniRoute သည် upstream policy ကို ရှာဖွေတွေ့ရှိခြင်း သို့မဟုတ် ခန့်မှန်းခြင်း မပြုပါ — operator က သတ်မှတ်ထားသော အတိအကျ ceiling များကိုသာ enforce လုပ်သည်။ ပြည့်နေသော model gate သည် provider ကို ဘယ်တော့မှ disable မလုပ်ပါ၊ အမြဲတမ်း model lockout ကိုမျှ မဖန်တီးပါ။ upstream 429/cooldown/fallback အပြုအမူမှာ error backstop အဖြစ် ဆက်လက်တည်ရှိနေသည်။
+- **Local queueing၊ discovery မပြုခြင်း:** ပိုလျှံသော တောင်းဆိုမှုများသည် ရှိရင်းစွဲ queue/timeout semantics များအတိုင်း local တွင် queue ဝင်သည် (typed `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` admission error များ)။ 67router သည် upstream policy ကို ရှာဖွေတွေ့ရှိခြင်း သို့မဟုတ် ခန့်မှန်းခြင်း မပြုပါ — operator က သတ်မှတ်ထားသော အတိအကျ ceiling များကိုသာ enforce လုပ်သည်။ ပြည့်နေသော model gate သည် provider ကို ဘယ်တော့မှ disable မလုပ်ပါ၊ အမြဲတမ်း model lockout ကိုမျှ မဖန်တီးပါ။ upstream 429/cooldown/fallback အပြုအမူမှာ error backstop အဖြစ် ဆက်လက်တည်ရှိနေသည်။
 - **Connection တစ်ခုချင်း၊ process တစ်ခုချင်း scope:** cap များသည် database connection တစ်ခုချင်းစီအတွက် ဖြစ်ပြီး memory အတွင်းတွင် သိမ်းဆည်းထားသောကြောင့်၊ upstream API key တစ်ခုတည်းကို ပြန်လည်အသုံးပြုသော connection နှစ်ခုသည် အချင်းချင်း coordinate မလုပ်ကြပါ။
 - **မသတ်မှတ်ထားခြင်းသည် မပြောင်းလဲခြင်းကို ဆိုလိုသည်:** map ကို ချန်လှပ်ထားခြင်း (သို့မဟုတ် dashboard field ကို ဗလာထားခြင်း) သည် model gate မထပ်ပေါင်းပါ။ မည်သည့် ယေဘုယျ provider ကန့်သတ်ချက်ကိုမျှ အတည်မပြုဘဲ ဥပမာ configuration−
 
@@ -456,7 +456,7 @@ prompt-compression / translation အလုပ်တစ်ခုခု မစတ�
 ### Rate-Limit အလိုအလျောက်ဖွင့်ပေးမှု Safety Net နှင့် Connection ကာကွယ်မှု (`rateLimitProtection`)
 
 **အလိုအလျောက်ဖွင့်ပေးမှု safety net** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, ပုံသေ `true`):
-ပုံသေအတိုင်း OmniRoute သည် active API-key provider connection အားလုံး (`getProviderCategory(provider) === "apikey"`) အတွက် rate-limit queue ကာကွယ်မှုကို အလိုအလျောက်ဖွင့်ပေးသည်။ ၎င်းသည် rate limit ကို ထိခိုက်လွယ်သော upstream API key များသို့ ဝင်လာသော request များကို upstream 429 error များ ဖြစ်ပေါ်အောင် burst ဝင်ရောက်ခြင်းအစား Bottleneck မှတစ်ဆင့် queue ထဲသို့ထည့်ပြီး throttle လုပ်ခံရစေသည်။ ဤ safety net ကို `RATE_LIMIT_AUTO_ENABLE` environment variable ဖြင့် override လုပ်နိုင်သည် (`false`/`0`/`off` သည် ပိတ်ပစ်သည်၊ `true`/`1`/`on` သည် အတင်းအကျပ်ဖွင့်သည်)၊ ၎င်းသည် persist လုပ်ထားသော dashboard setting (**Settings → Resilience** / `PATCH /api/resilience`) ထက် ဦးစားပေးသည်။
+ပုံသေအတိုင်း 67router သည် active API-key provider connection အားလုံး (`getProviderCategory(provider) === "apikey"`) အတွက် rate-limit queue ကာကွယ်မှုကို အလိုအလျောက်ဖွင့်ပေးသည်။ ၎င်းသည် rate limit ကို ထိခိုက်လွယ်သော upstream API key များသို့ ဝင်လာသော request များကို upstream 429 error များ ဖြစ်ပေါ်အောင် burst ဝင်ရောက်ခြင်းအစား Bottleneck မှတစ်ဆင့် queue ထဲသို့ထည့်ပြီး throttle လုပ်ခံရစေသည်။ ဤ safety net ကို `RATE_LIMIT_AUTO_ENABLE` environment variable ဖြင့် override လုပ်နိုင်သည် (`false`/`0`/`off` သည် ပိတ်ပစ်သည်၊ `true`/`1`/`on` သည် အတင်းအကျပ်ဖွင့်သည်)၊ ၎င်းသည် persist လုပ်ထားသော dashboard setting (**Settings → Resilience** / `PATCH /api/resilience`) ထက် ဦးစားပေးသည်။
 
 **Connection တစ်ခုချင်းစီ၏ `rateLimitProtection` အဓိပ္ပာယ်ဖွင့်ဆိုချက်:**
 Connection တစ်ခုချင်းစီ၏ rate-limit ကာကွယ်မှုကို provider connection များပေါ်ရှိ `rateLimitProtection` boolean field ဖြင့် ခြေရာခံထားသည် (SQLite တွင် `rate_limit_protection` အဖြစ် persist လုပ်ထားသည်):
@@ -810,7 +810,7 @@ signal အတူတူပင်ဖြစ်ပါသည်။ ရိုးသာ
 > ၎င်းသည် အပေါ်ရှိ ကဏ္ဍများ၏ အကျဉ်းချုပ်၊ agent-facing ရှုထောင့်ဖြစ်ပြီး;
 > နံပါတ်ရှိသော ကဏ္ဍများမှာ အပြည့်အစုံ ရည်ညွှန်းချက်အဖြစ် ဆက်လက်တည်ရှိသည်။
 
-OmniRoute တွင် ဆက်စပ်သော်လည်း ကွဲပြားသော temporary-failure ယန္တရား သုံးခု ရှိသည်။ routing
+67router တွင် ဆက်စပ်သော်လည်း ကွဲပြားသော temporary-failure ယန္တရား သုံးခု ရှိသည်။ routing
 အပြုအမူကို debug လုပ်သည့်အခါ ၎င်းတို့၏ scope ကို သပ်သပ်စီ ခွဲထားပါ။
 တစ်ချက်ကြည့်လျှင် မြင်နိုင်သော မြေပုံတစ်ခုအတွက်
 [3-အလွှာ resilience diagram](../diagrams/exported/resilience-3layers.svg)

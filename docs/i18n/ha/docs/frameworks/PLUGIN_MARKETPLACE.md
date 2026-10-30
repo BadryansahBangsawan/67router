@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute na zuwa da tsarin plugin mai irin na WordPress. Plugins kundin adireshi ne
+67router na zuwa da tsarin plugin mai irin na WordPress. Plugins kundin adireshi ne
 masu zaman kansu — kowanne yana da manifest na `plugin.json` da fayil ɗin shigarwa — waɗanda ke haɗuwa
 da jerin sarrafa buƙata (`onRequest` / `onResponse` / `onError`) da kuma
 abubuwan zagayowar rayuwa (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -152,7 +152,7 @@ waɗanda ba su cikin tsarin su wuce.
 
 ### Kundin plugin
 
-Plugins suna ƙarƙashin kundin bayanan OmniRoute:
+Plugins suna ƙarƙashin kundin bayanan 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -7,10 +7,10 @@
 关于共享可执行文件清单、受限子环境和持久化
 Gemini 设置，请参阅 [CLI 启动约定](./CLI-LAUNCH-CONTRACTS.md)。
 
-OmniRoute 提供了一系列 `setup-*` 命令，用于配置编码
-CLI（Codex、Claude Code、OpenCode、Cline 等），使其使用 OmniRoute 作为后端——这样
-工具只需连接**一个**端点，OmniRoute 就会将请求路由到正确的提供者，并支持
-自动回退。每个命令都会从正在运行的 OmniRoute（本地或远程）读取**实时**
+67router 提供了一系列 `setup-*` 命令，用于配置编码
+CLI（Codex、Claude Code、OpenCode、Cline 等），使其使用 67router 作为后端——这样
+工具只需连接**一个**端点，67router 就会将请求路由到正确的提供者，并支持
+自动回退。每个命令都会从正在运行的 67router（本地或远程）读取**实时**
 模型目录，并将工具自身的配置文件写入**您的**
 计算机。在工具支持的情况下，API 密钥会通过环境变量引用。会持久化工具本地
 环境文件的命令将在下文注明。
@@ -53,7 +53,7 @@ omniroute providers remove <connection-id> --yes
 
 - [Claude Code 配置](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI 配置](./CODEX-CLI-CONFIGURATION.md)
-- [远程模式](./REMOTE-MODE.md) — 从您的笔记本电脑控制远程 OmniRoute（VPS / Tailnet）
+- [远程模式](./REMOTE-MODE.md) — 从您的笔记本电脑控制远程 67router（VPS / Tailnet）
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot 扩展；它也可以在编辑器内为您运行这些
   `setup-*` 命令
 
@@ -88,7 +88,7 @@ omniroute providers remove <connection-id> --yes
 
 关于标志的说明（已在命令源代码中验证）：
 
-- `--remote <url>` —— 从远程 OmniRoute 获取目录（覆盖 `--port`
+- `--remote <url>` —— 从远程 67router 获取目录（覆盖 `--port`
   和活动上下文）。`--api-key <key>` 提供该服务器的凭据
   （默认使用 `OMNIROUTE_API_KEY` 环境变量或活动上下文的令牌）。
 - `--only <patterns>` —— 以逗号分隔的子字符串；仅保留匹配的模型 ID
@@ -109,7 +109,7 @@ omniroute providers remove <connection-id> --yes
   **codex** 则通过 `-c model_providers.omniroute.*` 参数接收。**Qwen 是唯一强制要求
   `--model` 的运行目标**——不带该参数运行 `omniroute run qwen`
   会以 `2` 退出，并显示明确的错误。
-- `--port <port>` —— 本地 OmniRoute 端口（默认为 `20128`，设置 `--remote`
+- `--port <port>` —— 本地 67router 端口（默认为 `20128`，设置 `--remote`
   时忽略）。所有 `setup-*` 命令和两个启动器均支持此参数。
 - `omniroute run` 退出代码：子 CLI 自身的退出代码会被
   原样传递；`2` = 参数无效（不支持的目标、缺少必需的
@@ -154,7 +154,7 @@ MITM 和仅提供指南的目录条目仍需使用明确的 `setup-*`/手动流�
 
 ## 本地使用
 
-当 OmniRoute 运行在 `localhost:20128` 时，只需为你的工具运行设置命令即可。模型目录会从本地服务器获取。
+当 67router 运行在 `localhost:20128` 时，只需为你的工具运行设置命令即可。模型目录会从本地服务器获取。
 
 ```bash
 # Codex：为每个匹配的模型将一个配置写入 ~/.codex/
@@ -181,8 +181,8 @@ omniroute setup-continue --dry-run
 完全不写入任何配置即可启动（仅注入环境变量）：
 
 ```bash
-omniroute launch                 # Claude Code → 本地 OmniRoute
-omniroute launch-codex           # Codex CLI → 本地 OmniRoute
+omniroute launch                 # Claude Code → 本地 67router
+omniroute launch-codex           # Codex CLI → 本地 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -200,7 +200,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## 远程使用
 
-使用 `--remote` + `--api-key` 将任意设置命令指向远程 OmniRoute。模型目录会从远程获取；配置则写入你的本地计算机。
+使用 `--remote` + `--api-key` 将任意设置命令指向远程 67router。模型目录会从远程获取；配置则写入你的本地计算机。
 
 ```bash
 # 针对远程 VPS 配置 OpenCode，仅保留 glm/kimi 模型
@@ -238,7 +238,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-这两种形式都会写入一个 5dive **身份验证配置**，此后绑定到该配置的每个 `claude` 席位都会与 OmniRoute 通信。此目标有三项特殊之处：
+这两种形式都会写入一个 5dive **身份验证配置**，此后绑定到该配置的每个 `claude` 席位都会与 67router 通信。此目标有三项特殊之处：
 
 - **它以 root 身份在集群主机上运行。** 5dive 的操作命令作用于本地 systemd 单元和由 root 所有的状态目录；不存在远程模式。该方案在尚未以 root 身份运行时会通过 `sudo` 重新执行（`--no-sudo` 会禁用此行为并改为打印命令）。
 - **除非端点是回环地址，否则必须使用 `https://`。** 智能体的 API 密钥会随每个请求通过该 URL 传输，而且 5dive 拒绝使用指向本机之外的明文端点。专用局域网地址也不例外。
@@ -246,13 +246,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API 密钥通过 **stdin**（`--api-key=-`）传递给 5dive，因此绝不会出现在 `ps` 输出中。
 
-将配置指向 OmniRoute **组合**而非单一模型，才能让集群获得提供者故障转移能力：在 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) 记录的运行中，主要端点在交互中途完全宕机后，智能体通过后备端点完成了剩余步骤，且未向外暴露此次中断。
+将配置指向 67router **组合**而非单一模型，才能让集群获得提供者故障转移能力：在 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) 记录的运行中，主要端点在交互中途完全宕机后，智能体通过后备端点完成了剩余步骤，且未向外暴露此次中断。
 
 ---
 
 ## 基础 URL 约定（哪些工具需要 `/v1`）
 
-OmniRoute 在 `/v1` 提供 OpenAI 接口，在根路径提供 Anthropic 接口，
+67router 在 `/v1` 提供 OpenAI 接口，在根路径提供 Anthropic 接口，
 并在 `/v1beta` 提供原生 Gemini 接口。每项集成都按其工具所需的形式进行配置
 （已在命令源代码中验证）：
 
@@ -274,7 +274,7 @@ OmniRoute 在 `/v1` 提供 OpenAI 接口，在根路径提供 Anthropic 接口�
 ## 更新时保留原生依赖：`--include=optional`
 
 使用 `omniroute update` 更新时（确认后，或使用 `--apply`），
-OmniRoute 会运行已内置 `--include=optional` 的安装命令：
+67router 会运行已内置 `--include=optional` 的安装命令：
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -301,14 +301,14 @@ omniroute update --dry-run
 
 已根据 `@google/gemini-cli` 0.50.0 验证其约定：该 CLI 遵循
 `GOOGLE_GEMINI_BASE_URL`，并向其发送 `POST /v1beta/models/<model>:generateContent`
-（以及 `:streamGenerateContent?alt=sse`）请求——这与 OmniRoute 的原生
+（以及 `:streamGenerateContent?alt=sse`）请求——这与 67router 的原生
 Gemini 接口（`/v1beta`）完全一致。`omniroute run gemini` 会自动完成以下配置：
 
-- `GOOGLE_GEMINI_BASE_URL` → 当前生效的 OmniRoute Base URL（根地址，不含 `/v1`）；
-- `GEMINI_API_KEY` → 解析后的 OmniRoute 凭据（来自选项、环境变量或上下文）；
+- `GOOGLE_GEMINI_BASE_URL` → 当前生效的 67router Base URL（根地址，不含 `/v1`）；
+- `GEMINI_API_KEY` → 解析后的 67router 凭据（来自选项、环境变量或上下文）；
 - 一个**临时且隔离的 `GEMINI_CLI_HOME`**，其 `.gemini/settings.json`
   会选择 `gemini-api-key` 身份验证，因此已存储的 Google OAuth 会话（Code Assist）
-  永远不会覆盖指向 OmniRoute 的启动配置——退出后会将其删除；
+  永远不会覆盖指向 67router 的启动配置——退出后会将其删除；
 - **环境变量卫生处理**：从子进程环境中清除 `GOOGLE_API_KEY`、
   `GOOGLE_GENAI_USE_VERTEXAI` 和 `GOOGLE_GENAI_USE_GCA`（这些变量会将
   身份验证重定向至 Vertex/Code Assist），并设置
@@ -331,7 +331,7 @@ Gemini 的工作区信任防护在无头模式下仍然有效——请自行传�
 ## 真实冒烟扫描（选择启用）
 
 确定性的启动计划回归测试会在 CI 中运行（`tests/unit/cli/run-command.test.ts`、
-`tests/unit/cli/run-execution.test.ts`）。为了针对真实的 OmniRoute 服务器验证真实的二进制文件，
+`tests/unit/cli/run-execution.test.ts`）。为了针对真实的 67router 服务器验证真实的二进制文件，
 项目在 `tests/integration/upstream-cli-smoke.int.test.ts` 中提供了一个选择启用的测试工具。
 它绝不会自动运行（除非设置 `RUN_CLI_SMOKE=1`，否则每个子测试都会跳过）；它通过环境变量的
 名称（绝不会通过值）传递凭据；从所有记录的输出中脱敏形似密钥的字符串；跳过未安装对应

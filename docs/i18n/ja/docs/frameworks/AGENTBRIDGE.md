@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge は、IDE AI エージェントからの HTTPS トラフィックを傍受し、OmniRoute の統合ルーティングエンジンを通じて再ルーティングする、OmniRoute の MITM（中間者）プロキシです。**10 種類の IDE エージェント** — Antigravity、Kiro、GitHub Copilot、GHE Copilot、OpenAI Codex、Cursor、Zed、Claude Code、Open Code、および Trae（調査中） — をサポートしており、OmniRoute は市場において AI コーディングアシスタントを最も幅広くカバーする MITM プロキシとなっています。
+AgentBridge は、IDE AI エージェントからの HTTPS トラフィックを傍受し、67router の統合ルーティングエンジンを通じて再ルーティングする、67router の MITM（中間者）プロキシです。**10 種類の IDE エージェント** — Antigravity、Kiro、GitHub Copilot、GHE Copilot、OpenAI Codex、Cursor、Zed、Claude Code、Open Code、および Trae（調査中） — をサポートしており、67router は市場において AI コーディングアシスタントを最も幅広くカバーする MITM プロキシとなっています。
 
 **ダッシュボードの場所:** `/dashboard/tools/agent-bridge`
 **サイドバーグループ:** Tools（Cloud Agents の後）
@@ -16,34 +16,34 @@ AgentBridge は、IDE AI エージェントからの HTTPS トラフィックを
 
 ### AgentBridge とは?
 
-IDE エージェント(GitHub Copilot、Cursor、Claude Code など)が API コールを行うと、アップストリームの AI プロバイダー(OpenAI、Anthropic など)に直接接続します。AgentBridge は、エージェント側の設定変更を一切必要とせず、TLS レベルでその接続を透過的にインターセプトし、OmniRoute を経由してリクエストを書き換えます。
+IDE エージェント(GitHub Copilot、Cursor、Claude Code など)が API コールを行うと、アップストリームの AI プロバイダー(OpenAI、Anthropic など)に直接接続します。AgentBridge は、エージェント側の設定変更を一切必要とせず、TLS レベルでその接続を透過的にインターセプトし、67router を経由してリクエストを書き換えます。
 
 これにより、次のことが可能になります。
 
-- **任意のエージェントを任意のプロバイダーへ振り替え**: Copilot が OpenAI と通信している? Anthropic Claude、Gemini、あるいは OmniRoute の 375 のプロバイダーのいずれかにリダイレクトできます。
+- **任意のエージェントを任意のプロバイダーへ振り替え**: Copilot が OpenAI と通信している? Anthropic Claude、Gemini、あるいは 67router の 375 のプロバイダーのいずれかにリダイレクトできます。
 - **モデルマッピングの適用**: `gemini-3-flash` → `claude-sonnet-4.7` をハンドラーレベルで透過的に変換します。
 - **すべてのエージェントトラフィックを可視化**: インターセプトされたすべてのリクエストは [Traffic Inspector](./TRAFFIC_INSPECTOR.md) に公開されます。
-- **OmniRoute のレジリエンスを適用**: コンボルーティング、サーキットブレーカー、フォールバック、コスト追跡が IDE エージェントのトラフィックにもそのまま機能します。
+- **67router のレジリエンスを適用**: コンボルーティング、サーキットブレーカー、フォールバック、コスト追跡が IDE エージェントのトラフィックにもそのまま機能します。
 
 ### 市場におけるポジショニング
 
-| 機能                       | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot             |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                 |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex               |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                 |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries             |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                |    —    |    —     |        ✓        |             ✓             |
-| Open Code                  |    —    |    —     |        ✓        |             ✓             |
-| Trae                       |    —    |    —     |        —        |         🔍 調査中         |
-| ダッシュボード UI          |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector          |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute ルーティング     |    ✗    |    ✗     |        ✗        |             ✓             |
-| モデルマッピング UI        |    ✗    |    ✗     |        ✗        |             ✓             |
-| バイパスリスト             |    ✗    |    ✗     |        ✓        |             ✓             |
-| アップストリーム CA 証明書 |    ✗    |    ✗     |        ✓        |             ✓             |
+| 機能                       | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot             |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                 |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex               |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                 |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries             |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                |    —    |    —     |        ✓        |            ✓             |
+| Open Code                  |    —    |    —     |        ✓        |            ✓             |
+| Trae                       |    —    |    —     |        —        |        🔍 調査中         |
+| ダッシュボード UI          |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector          |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router ルーティング      |    ✗    |    ✗     |        ✗        |            ✓             |
+| モデルマッピング UI        |    ✗    |    ✗     |        ✗        |            ✓             |
+| バイパスリスト             |    ✗    |    ✗     |        ✓        |            ✓             |
+| アップストリーム CA 証明書 |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (ポート 443、CJS 子プロセス)
     │  Host ヘッダーの SNI によってターゲットを解決
     │  AgentBridge CA によって署名された SNI ごとの TLS 証明書を生成
     ├── バイパスリストに一致？ → TCP パススルー（復号なし）
-    ├── ターゲットに一致？ → fetch → OmniRoute ルーター（ポート 20128）
+    ├── ターゲットに一致？ → fetch → 67router ルーター（ポート 20128）
     │       └── handler.intercept() — TypeScript
     │               ├── リクエスト本文／ヘッダーに対して maskSecrets()
     │               ├── TrafficBuffer.push() — Traffic Inspector に公開
@@ -207,7 +207,7 @@ IDE が MITM 接続を受け入れるには、事前に AgentBridge CA 証明書
 **Linux（NSS — Chrome/Firefox）：**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS（キーチェーン）：**
@@ -266,10 +266,10 @@ GitHub Copilot の `/etc/hosts` エントリ例：
 
 各エージェントカードのモデルマッピングテーブルを使用して、ソース → ターゲットのマッピングを定義します。
 
-| ソースモデル（エージェントネイティブ） | ターゲットモデル（OmniRoute） |
-| -------------------------------------- | ----------------------------- |
-| `gpt-4o`                               | `claude-sonnet-4.7`           |
-| `*`（ワイルドカード）                  | `claude-haiku-4.7`            |
+| ソースモデル（エージェントネイティブ） | ターゲットモデル（67router） |
+| -------------------------------------- | ---------------------------- |
+| `gpt-4o`                               | `claude-sonnet-4.7`          |
+| `*`（ワイルドカード）                  | `claude-haiku-4.7`           |
 
 ワイルドカード `*` は、認識されないすべてのモデルを指定されたターゲットにマッピングします。設定は `agent_bridge_mappings` テーブルに永続化されます。
 
@@ -283,7 +283,7 @@ GitHub Copilot の `/etc/hosts` エントリ例：
 
 ### 3.5 リスクに関する注意事項
 
-AgentBridge は、IDE がアップストリームプロバイダーとの認証に使用する認証情報（OAuth トークン、API キー）をインターセプトします。これらは**ログ記録前にマスクされます**（§2.7 を参照）が、OmniRoute の MITM レイヤーからは参照できます。各エージェントを初めて有効化すると、閉じることができるリスク通知モーダルが表示されます。
+AgentBridge は、IDE がアップストリームプロバイダーとの認証に使用する認証情報（OAuth トークン、API キー）をインターセプトします。これらは**ログ記録前にマスクされます**（§2.7 を参照）が、67router の MITM レイヤーからは参照できます。各エージェントを初めて有効化すると、閉じることができるリスク通知モーダルが表示されます。
 
 ### 3.6 メンテナンスと診断
 
@@ -403,7 +403,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### 機密性の高いホストのバイパスリスト
 
-バイパスリストにより、金融機関、OAuth/SSO プロバイダー、およびその他の機密性の高いホストは**決して復号されません**。これらの TLS トラフィックは透過的な TCP トンネルとして通過するため、OmniRoute が平文を参照することはありません。
+バイパスリストにより、金融機関、OAuth/SSO プロバイダー、およびその他の機密性の高いホストは**決して復号されません**。これらの TLS トラフィックは透過的な TCP トンネルとして通過するため、67router が平文を参照することはありません。
 
 デフォルトのバイパスパターンには、以下が含まれます。
 
@@ -454,7 +454,7 @@ sudo fuser -k 443/tcp  # 強制終了（取り扱いに注意）
 
 AgentBridgeの起動後にIDEでTLSエラーが表示される場合：
 
-1. 証明書がインストールされていることを確認します：`security find-certificate -c "OmniRoute AgentBridge"`（macOS）または`certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
+1. 証明書がインストールされていることを確認します：`security find-certificate -c "67router AgentBridge"`（macOS）または`certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
 2. 一部のアプリは独自の信頼ストアを使用します（Firefox、Linux上のChrome）。「Trust Cert」を再度実行し、NSS/Firefox固有の証明書ストアを確認してください。
 3. 信頼設定後にIDEを再起動してください。進行中のTLSセッションでは、以前の信頼状態が使用されます。
 
@@ -505,7 +505,7 @@ ipconfig /flushdns
 AgentBridgeがインターセプトしているものの、すべてのリクエストが失敗する場合：
 
 1. `/dashboard/providers`で少なくとも1つのプロバイダーが接続されていることを確認します
-2. OmniRouteサーバーのログを確認します：`.env`で`APP_LOG_LEVEL=debug`を設定
+2. 67routerサーバーのログを確認します：`.env`で`APP_LOG_LEVEL=debug`を設定
 3. `OMNIROUTE_BASE_URL`が正しいルーターエンドポイントを指していることを確認します（デフォルト：`http://127.0.0.1:20128`）
 
 ---

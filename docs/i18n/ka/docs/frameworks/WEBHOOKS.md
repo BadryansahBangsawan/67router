@@ -7,7 +7,7 @@
 > **სიმართლის წყარო:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **ბოლო განახლება:** 2026-06-28 — v3.8.40
 
-OmniRoute-ს შეუძლია პლატფორმის მოვლენებზე HTTP ვებჰუკების გააქტიურება. გამოიყენეთ ისინი
+67router-ს შეუძლია პლატფორმის მოვლენებზე HTTP ვებჰუკების გააქტიურება. გამოიყენეთ ისინი
 Slack-თან, PagerDuty-სთან, Datadog-თან, შიდა შეტყობინებების სერვისებთან ან ნებისმიერ HTTP მიმღებთან ინტეგრაციისთვის.
 
 დისპეტჩერი თითოეულ მიწოდებას HMAC-SHA256-ით ხელს აწერს, დროებითი
@@ -54,7 +54,7 @@ Slack-თან, PagerDuty-სთან, Datadog-თან, შიდა შე�
 
 ## HMAC ხელმოწერა
 
-როდესაც ვებჰუკს აქვს `secret`, OmniRoute JSON სხეულს ხელს აწერს და აგზავნის:
+როდესაც ვებჰუკს აქვს `secret`, 67router JSON სხეულს ხელს აწერს და აგზავნის:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "სატესტო ვებჰუკის მიწოდება OmniRoute-იდან",
+    "message": "სატესტო ვებჰუკის მიწოდება 67router-იდან",
     "webhookId": "<uuid>"
   }
 }

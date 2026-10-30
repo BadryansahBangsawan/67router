@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** `src/lib/cloudAgent/` dan `src/app/api/v1/agents/tasks/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40 (penyegaran frontmatter; 4 agen termasuk cursor-cloud)
 
-OmniRoute mengorkestrasi agen pemrograman pihak ketiga yang di-hosting di cloud (Codex Cloud, Cursor,
+67router mengorkestrasi agen pemrograman pihak ketiga yang di-hosting di cloud (Codex Cloud, Cursor,
 Devin, Jules) sebagai tugas yang berjalan lama. Setiap agen dibungkus di balik antarmuka yang seragam sehingga
 klien dapat mengirimkan prompt + URL repositori dan menerima hasil tanpa harus berurusan dengan
 API khusus penyedia.

@@ -113,7 +113,7 @@ testin tai dokumentoidun manuaalisen tarkistuksen.
 - CLI-katalogit sijaitsevat erikseen hakemistossa `bin/cli/locales/`.
 - Säilytä ICU-paikkamerkit ja tagit täsmälleen ennallaan. Älä käännä tuote-, palveluntarjoaja- tai mallinimiä,
   protokollien ja otsakkeiden nimiä, komentoja, koodi-/JSON-tunnisteita, URL-osoitteita, ympäristömuuttujia tai
-  suojattuja termejä, kuten `OmniRoute`, `OAuth`, `MCP` ja `A2A`. Nykyinen lähdeluettelo on
+  suojattuja termejä, kuten `67router`, `OAuth`, `MCP` ja `A2A`. Nykyinen lähdeluettelo on
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Kohdennettu silmukka**
@@ -252,7 +252,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # käytä muualla (CI:ss
 - **Palauta edeltäjä.** `run` validoi käyttöön otetun paikan uudelleen ja vaihtaa `current`- ja `previous`-paikat takaisin, jos
   tarkistus epäonnistuu. Ensimmäisen validoinnin läpäisemätöntä ehdokasta ei koskaan oteta käyttöön.
 
-Kaikki kirjoitetaan Gitin ohittamaan `_artifacts/candidate/`-hakemistoon; olemassa olevaan OmniRoute-asennukseen
+Kaikki kirjoitetaan Gitin ohittamaan `_artifacts/candidate/`-hakemistoon; olemassa olevaan 67router-asennukseen
 ja sen datahakemistoon ei koskaan kosketa. Käyttöön otettu CLI on
 `_artifacts/candidate/current/prefix/bin/omniroute`; käynnistä se omalla `DATA_DIR`-arvollasi, kun käytät
 sitä. Poistumiskoodit: `0` onnistuminen, `1` epäonnistunut validointi tai käyttöönotto, `2` käyttövirhe tai puuttuva käännös.

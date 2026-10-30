@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute determina il proprio driver SQLite all'avvio tramite una catena di fallback in 5 passaggi:
+67router determina il proprio driver SQLite all'avvio tramite una catena di fallback in 5 passaggi:
 
 1. **`better-sqlite3` incluso** (tramite `dependencies` in `package.json`)
    — il più veloce, con binario nativo, installato da `npm install` quando sono presenti gli strumenti di compilazione.
@@ -28,13 +28,13 @@ OmniRoute determina il proprio driver SQLite all'avvio tramite una catena di fal
 - **Assenza di strumenti di compilazione**: alcuni ambienti (Windows aziendale senza VS Build
   Tools, immagini Docker minimali) non possono compilare `better-sqlite3`. Il programma di installazione
   in fase di esecuzione recupera un binario precompilato dal registro npm; i driver di fallback
-  garantiscono che OmniRoute possa comunque avviarsi anche in caso di errore.
+  garantiscono che 67router possa comunque avviarsi anche in caso di errore.
 - **Sistemi isolati dalla rete**: se il registro npm non è raggiungibile, `node:sqlite`
   o `sql.js` garantiscono le funzionalità di base.
 
 ## Convalida dei byte magici
 
-Prima di caricare un file `.node` installato in fase di esecuzione, OmniRoute legge i primi 8
+Prima di caricare un file `.node` installato in fase di esecuzione, 67router legge i primi 8
 byte e li confronta con i valori magici noti delle piattaforme:
 
 | Piattaforma            | Byte (esadecimali) | Etichetta   |
@@ -104,9 +104,9 @@ Implementazione:
 ## Topologia a singolo writer (HA non supportata)
 
 La catena di fallback dei driver descritta sopra viene comunque eseguita in **un unico processo**. Per impostazione predefinita, SQLite
-in OmniRoute utilizza **un singolo writer**:
+in 67router utilizza **un singolo writer**:
 
-- Non collegare due repliche OmniRoute allo stesso file `storage.sqlite`.
+- Non collegare due repliche 67router allo stesso file `storage.sqlite`.
 - Il riavvio di un container, un deployment Recreate, una terminazione per OOM o un riavvio dovuto a HEALTHCHECK interrompe
   ogni sessione SSE in corso. Nel percorso standard non è previsto alcun drenaggio delle sessioni.
 - Una verifica di liveness dell'orchestratore che considera morto un endpoint `/healthz` lento terminerà l'unica

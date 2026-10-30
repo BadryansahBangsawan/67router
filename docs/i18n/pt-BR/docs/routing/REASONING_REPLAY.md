@@ -7,7 +7,7 @@
 > **Fonte da verdade:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute captura o `reasoning_content` do assistente produzido por modelos no modo de raciocínio e o reproduz de forma transparente em solicitações com múltiplos turnos quando o provedor upstream exige isso. Isso elimina os erros HTTP 400 que provedores rigorosos geram quando o histórico da conversa de um cliente não contém o raciocínio do turno anterior.
+O 67router captura o `reasoning_content` do assistente produzido por modelos no modo de raciocínio e o reproduz de forma transparente em solicitações com múltiplos turnos quando o provedor upstream exige isso. Isso elimina os erros HTTP 400 que provedores rigorosos geram quando o histórico da conversa de um cliente não contém o raciocínio do turno anterior.
 
 ## Por Que Isso Existe
 
@@ -17,7 +17,7 @@ Vários provedores no modo de raciocínio rejeitam um turno subsequente, a menos
 Parâmetro incorreto: o reasoning_content no modo de raciocínio deve ser enviado de volta para a API.
 ```
 
-No entanto, clientes comuns (Cursor, Cline, Roo Code, OpenAI SDK) removem o `reasoning_content` do histórico que reproduzem. O OmniRoute o restaura a partir de um cache no lado do servidor para que a solicitação recebida pelo upstream seja consistente. A issue #1628 introduziu a persistência híbrida em memória/SQLite para que o cache sobreviva a reinicializações do processo.
+No entanto, clientes comuns (Cursor, Cline, Roo Code, OpenAI SDK) removem o `reasoning_content` do histórico que reproduzem. O 67router o restaura a partir de um cache no lado do servidor para que a solicitação recebida pelo upstream seja consistente. A issue #1628 introduziu a persistência híbrida em memória/SQLite para que o cache sobreviva a reinicializações do processo.
 
 ## Arquitetura
 

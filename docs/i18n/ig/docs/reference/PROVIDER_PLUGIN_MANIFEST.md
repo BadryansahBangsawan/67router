@@ -14,7 +14,7 @@ koodu executor, ntọala ndabara OAuth, header, ma ọ bụ ọnọdụ environm
 Manifest ahụ dịkwa site na HTTP na
 `GET /api/v1/provider-plugin-manifest` maka sidecar ndị na-agba ọsọ n'èzí process.
 
-OmniRoute na-ezisa URL ahụ nye Bifrost na CLIProxyAPI site na header arịrịọ
+67router na-ezisa URL ahụ nye Bifrost na CLIProxyAPI site na header arịrịọ
 `X-OmniRoute-Provider-Manifest-Url`. Tọọ
 `OMNIROUTE_PROVIDER_MANIFEST_URL` mgbe sidecar chọrọ URL netwọkụ ọha ma ọ bụ nke container
 kama origin arịrịọ mpaghara.
@@ -30,7 +30,7 @@ sidecar ga-ezipụ arịrịọ na-enweghị condition kama ịnakwere `304`.
 ## Ebumnuche
 
 Bugharịa metadata onye na-eweta ka ọ bụrụ nkwekọrịta ngwa mgbakwunye ka sidecar nwere
-latency dị ala nwee ike ijikwa ụzọ arịrịọ a na-ejikarị eme ihe n'ọdịnihu, ebe OmniRoute
+latency dị ala nwee ike ijikwa ụzọ arịrịọ a na-ejikarị eme ihe n'ọdịnihu, ebe 67router
 na-edobe route TypeScript dịka ọnụ ụzọ amụma na fallback. Manifest ahụ bụ mgbakwunye:
 ọ naghị agbanwe routing arịrịọ n'onwe ya.
 
@@ -74,7 +74,7 @@ integration kwesịrị ile ya anya dịka azịza igwe nwere ike ịgụ nye �
 | `usage-fetch`        | Nwere fetcher usage ma ọ bụ quota ejikọrọ (`getUsageForProvider`).            |
 | `usage-supported`    | API usage na-anabata onye na-eweta a (`isSupportedUsageConnection`).          |
 
-`usage-fetch` bụ naanị maka nchọpụta. Ọ na-egosi na OmniRoute maara otu esi agụ usage maka
+`usage-fetch` bụ naanị maka nchọpụta. Ọ na-egosi na 67router maara otu esi agụ usage maka
 onye na-eweta; ọ naghị eme ka fetching rụọ ọrụ, gbanwee semantics quota, ma ọ bụ gosi na
 widget quota Dashboard agbanyere maka onye na-eweta — a na-achịkwa widget ahụ iche site na
 `USAGE_SUPPORTED_PROVIDERS`. Isi mmalite nke eziokwu bụ `USAGE_FETCHER_PROVIDERS` dị na

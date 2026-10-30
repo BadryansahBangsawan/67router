@@ -7,10 +7,10 @@
 共有実行可能ファイルのマニフェスト、制限された子プロセス環境、永続的な
 Gemini セットアップについては、[CLI 起動コントラクト](./CLI-LAUNCH-CONTRACTS.md)を参照してください。
 
-OmniRoute には、コーディング CLI（Codex、Claude Code、OpenCode、Cline、…）が
-OmniRoute をバックエンドとして使用するよう構成する、一連の `setup-*` コマンドが付属しています。これにより、
-ツールは **1 つ**のエンドポイントと通信し、OmniRoute が自動フォールバックを使用して
-適切なプロバイダーへルーティングします。各コマンドは、実行中の OmniRoute（ローカルまたはリモート）から
+67router には、コーディング CLI（Codex、Claude Code、OpenCode、Cline、…）が
+67router をバックエンドとして使用するよう構成する、一連の `setup-*` コマンドが付属しています。これにより、
+ツールは **1 つ**のエンドポイントと通信し、67router が自動フォールバックを使用して
+適切なプロバイダーへルーティングします。各コマンドは、実行中の 67router（ローカルまたはリモート）から
 **最新の**モデルカタログを読み取り、**あなたの**マシン上にあるツール固有の設定ファイルへ書き込みます。
 ツールが対応している場合、API キーは環境変数を介して参照されます。ツールローカルの環境ファイルを
 永続化するコマンドについては、以下に明記しています。
@@ -52,7 +52,7 @@ CLI に指定された管理エンドポイント、コンテキスト、また�
 
 - [Claude Code の設定](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI の設定](./CODEX-CLI-CONFIGURATION.md)
-- [リモートモード](./REMOTE-MODE.md) — ノート PC からリモートの OmniRoute（VPS／Tailnet）を操作
+- [リモートモード](./REMOTE-MODE.md) — ノート PC からリモートの 67router（VPS／Tailnet）を操作
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot 拡張機能。エディター内からこれらの
   `setup-*` コマンドを実行することもできます
 
@@ -85,7 +85,7 @@ CLI に指定された管理エンドポイント、コンテキスト、また�
 
 フラグに関する注記（コマンドのソースで確認済み）：
 
-- `--remote <url>` — リモートの OmniRoute からカタログを取得します（`--port`
+- `--remote <url>` — リモートの 67router からカタログを取得します（`--port`
   とアクティブなコンテキストを上書きします）。`--api-key <key>` はその
   サーバーの認証情報を指定します（デフォルトは `OMNIROUTE_API_KEY` 環境変数、またはアクティブなコンテキストのトークンです）。
 - `--only <patterns>` — カンマ区切りの部分文字列です。一致するモデル ID のみを
@@ -106,7 +106,7 @@ CLI に指定された管理エンドポイント、コンテキスト、また�
   **codex** には `-c model_providers.omniroute.*` 引数を介して渡されます。**Qwen は、
   `--model` を必須とする唯一の実行ターゲットです**。これを指定せずに `omniroute run qwen` を
   実行すると、明示的なエラーとともに `2` で終了します。
-- `--port <port>` — ローカルの OmniRoute ポートです（デフォルトは `20128`。`--remote`
+- `--port <port>` — ローカルの 67router ポートです（デフォルトは `20128`。`--remote`
   が設定されている場合は無視されます）。すべての `setup-*` と両方のランチャーに存在します。
 - `omniroute run` の終了コード：子 CLI 自体の終了コードがそのまま
   伝播されます。`2` = 無効な引数（未対応のターゲット、必須の
@@ -150,7 +150,7 @@ IDE 専用、MITM、およびガイド専用のカタログエントリは、明
 
 ## ローカルでの使用
 
-OmniRoute が `localhost:20128` で実行されている状態で、お使いのツール用のセットアップコマンドを実行するだけです。カタログはローカルサーバーから取得されます。
+67router が `localhost:20128` で実行されている状態で、お使いのツール用のセットアップコマンドを実行するだけです。カタログはローカルサーバーから取得されます。
 
 ```bash
 # Codex: 一致したモデルごとのプロファイルを ~/.codex/ に書き込む
@@ -177,8 +177,8 @@ omniroute setup-continue --dry-run
 設定を一切書き込まずに起動します（環境変数の注入のみ）。
 
 ```bash
-omniroute launch                 # Claude Code → ローカルの OmniRoute
-omniroute launch-codex           # Codex CLI → ローカルの OmniRoute
+omniroute launch                 # Claude Code → ローカルの 67router
+omniroute launch-codex           # Codex CLI → ローカルの 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -196,7 +196,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## リモートでの使用
 
-任意のセットアップコマンドに `--remote` と `--api-key` を指定し、リモートの OmniRoute を参照させます。カタログはリモートから取得され、設定はローカルマシンに書き込まれます。
+任意のセットアップコマンドに `--remote` と `--api-key` を指定し、リモートの 67router を参照させます。カタログはリモートから取得され、設定はローカルマシンに書き込まれます。
 
 ```bash
 # リモート VPS 上の OpenCode で、glm/kimi モデルのみを保持
@@ -234,7 +234,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-どちらの形式でも、1つの 5dive **認証プロファイル**を書き込みます。そのプロファイルに紐付けられたすべての `claude` シートは、その後 OmniRoute と通信します。このターゲットには、以下の3つの固有事項があります。
+どちらの形式でも、1つの 5dive **認証プロファイル**を書き込みます。そのプロファイルに紐付けられたすべての `claude` シートは、その後 67router と通信します。このターゲットには、以下の3つの固有事項があります。
 
 - **フリートホスト上で root として実行されます。** 5dive のコマンドはローカルの systemd ユニットと root 所有の状態ディレクトリに作用するため、リモートモードはありません。すでに root でない場合、レシピは `sudo` 経由で自身を再実行します（`--no-sudo` を指定すると、この動作を無効化し、代わりにコマンドを表示します）。
 - **ループバックでない限り、エンドポイントは `https://` でなければなりません。** エージェントの API キーはリクエストのたびにその URL を通じて送信されるため、5dive はマシン外部への平文エンドポイントを拒否します。プライベート LAN アドレスも例外ではありません。
@@ -242,13 +242,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API キーは **stdin**（`--api-key=-`）で 5dive に渡されるため、`ps` の出力には表示されません。
 
-プロファイルを単一モデルではなく OmniRoute の **combo** に向けることで、フリートでプロバイダーのフェイルオーバーが利用可能になります。[#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) に記録された実行では、プライマリエンドポイントがターンの途中で完全にダウンした際、エージェントは残りのステップをフォールバック上で完了し、障害が表面化することはありませんでした。
+プロファイルを単一モデルではなく 67router の **combo** に向けることで、フリートでプロバイダーのフェイルオーバーが利用可能になります。[#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) に記録された実行では、プライマリエンドポイントがターンの途中で完全にダウンした際、エージェントは残りのステップをフォールバック上で完了し、障害が表面化することはありませんでした。
 
 ---
 
 ## ベース URL の規則（`/v1` を必要とするツール）
 
-OmniRoute は、OpenAI 互換インターフェースを `/v1`、Anthropic 互換インターフェースをルート、
+67router は、OpenAI 互換インターフェースを `/v1`、Anthropic 互換インターフェースをルート、
 ネイティブ Gemini インターフェースを `/v1beta` で公開します。各インテグレーションは、
 ツールが想定する形式に合わせて設定されています（コマンドのソースで確認済み）。
 
@@ -270,7 +270,7 @@ OmniRoute は、OpenAI 互換インターフェースを `/v1`、Anthropic 互�
 ## 更新時にネイティブ依存関係を維持する：`--include=optional`
 
 `omniroute update` で更新すると（確認後、または `--apply` を指定した場合）、
-OmniRoute は `--include=optional` を組み込んだ次のインストールコマンドを実行します。
+67router は `--include=optional` を組み込んだ次のインストールコマンドを実行します。
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -299,13 +299,13 @@ omniroute update --dry-run
 `@google/gemini-cli` 0.50.0 に対して契約を確認済みです。この CLI は
 `GOOGLE_GEMINI_BASE_URL` を尊重し、そこに対して
 `POST /v1beta/models/<model>:generateContent`
-（および `:streamGenerateContent?alt=sse`）を発行します。これは OmniRoute の
+（および `:streamGenerateContent?alt=sse`）を発行します。これは 67router の
 ネイティブ Gemini インターフェース（`/v1beta`）と正確に一致します。
 `omniroute run gemini` はこれを自動的に構成します。
 
-- `GOOGLE_GEMINI_BASE_URL` → アクティブな OmniRoute の Base URL（ルート、`/v1` なし）。
-- `GEMINI_API_KEY` → 解決済みの OmniRoute 認証情報（オプション／環境変数／コンテキスト）。
-- `gemini-api-key` 認証を選択する `.gemini/settings.json` を含む、**一時的で隔離された `GEMINI_CLI_HOME`**。これにより、保存済みの Google OAuth セッション（Code Assist）が OmniRoute 向けの起動設定を上書きすることはありません。終了後に削除されます。
+- `GOOGLE_GEMINI_BASE_URL` → アクティブな 67router の Base URL（ルート、`/v1` なし）。
+- `GEMINI_API_KEY` → 解決済みの 67router 認証情報（オプション／環境変数／コンテキスト）。
+- `gemini-api-key` 認証を選択する `.gemini/settings.json` を含む、**一時的で隔離された `GEMINI_CLI_HOME`**。これにより、保存済みの Google OAuth セッション（Code Assist）が 67router 向けの起動設定を上書きすることはありません。終了後に削除されます。
 - **環境変数の衛生管理**：子プロセスの環境から `GOOGLE_API_KEY`、
   `GOOGLE_GENAI_USE_VERTEXAI`、`GOOGLE_GENAI_USE_GCA`（認証先を Vertex/Code Assist
   に変更する可能性があるもの）を除去し、念には念を入れたフォールバックとして
@@ -328,7 +328,7 @@ Gemini のワークスペース信頼ガードはヘッドレスモードでも�
 ## 実環境スモークスイープ（オプトイン）
 
 決定論的な起動プランの回帰テストは CI で実行されます（`tests/unit/cli/run-command.test.ts`、
-`tests/unit/cli/run-execution.test.ts`）。実際の OmniRoute サーバーに対して実際のバイナリを検証するために、
+`tests/unit/cli/run-execution.test.ts`）。実際の 67router サーバーに対して実際のバイナリを検証するために、
 オプトイン形式のテストハーネスが `tests/integration/upstream-cli-smoke.int.test.ts` に用意されています。
 これは自動的には実行されません（`RUN_CLI_SMOKE=1` が設定されていない限り、すべてのサブテストがスキップされます）。
 認証情報は値ではなく環境変数名で渡され、記録される出力からキー形式の文字列が編集除去されます。

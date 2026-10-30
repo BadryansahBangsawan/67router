@@ -48,7 +48,7 @@ JWT som exponeras via en tunnel **kan inte** utlösa denna kodväg.
 | Linux+Firefox/Chromium | uppdatering av NSS-databasen per profil via `certutil -d sql:<profile>`                                           |
 
 Detta är samma kommandon som används av `mitmproxy`, Charles Proxy, Fiddler och
-Caddy. Att de finns i OmniRoute är dokumenterat i
+Caddy. Att de finns i 67router är dokumenterat i
 `docs/security/STEALTH_GUIDE.md`.
 
 **Åtgärd i v3.8.6**:
@@ -110,7 +110,7 @@ kommer att tas bort i v3.9.
 
 **Varför vi behåller det**: Zed-import är den enklaste introduktionsvägen för
 användare som redan använder Zed och vill spegla sina leverantörsnycklar till
-OmniRoute utan att klistra in dem igen.
+67router utan att klistra in dem igen.
 
 ---
 
@@ -121,7 +121,7 @@ OmniRoute utan att klistra in dem igen.
 **Varför det flaggades**: kodsegmentet återexporterar `execFileWithPassword`,
 `runElevatedPowerShell` och den delade hjälpfunktionen `quotePowerShell`.
 Socket.devs AI-klassificerare tolkar dem som en allmän verktygslåda för
-"körning på värdsystemet + behörighetshöjning". Inom OmniRoute används de
+"körning på värdsystemet + behörighetshöjning". Inom 67router används de
 endast av installationsflödet för MITM-certifikat (§1) och av
 `execFileWithPassword` för körning av `sudo`-kommandon.
 
@@ -176,7 +176,7 @@ kompanjontjänst (jämför med ett WordPress-tillägg) — strikt anmälan kräv
 
 ---
 
-## §5 — Återskrivning av autentiseringsuppgifter för OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Återskrivning av autentiseringsuppgifter för 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Källfiler**:
 
@@ -209,7 +209,7 @@ rawBody)`) innan JSON-innehållet tolkas. Om hemligheten är angiven krävs
    `rateLimitedUntil`, `updatedAt`). Detta är en **bakåtinkompatibel ändring** för användare
    som förlitade sig på fjärrsynkronisering av token — de måste uttryckligen välja att aktivera den.
 
-**Varför vi behåller det**: Cloud Sync är det enda sättet för en OmniRoute Cloud-klientorganisation
+**Varför vi behåller det**: Cloud Sync är det enda sättet för en 67router Cloud-klientorganisation
 att centralisera teamets autentiseringsuppgifter. Korrigeringen gör hotmodellen tydlig:
 "servern signerar, klienten verifierar, operatören väljer att aktivera funktionen."
 

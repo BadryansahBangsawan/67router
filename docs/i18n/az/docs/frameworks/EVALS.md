@@ -7,7 +7,7 @@
 > **Əsas mənbə:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute, marşrutlaşdırma konfiqurasiyalarını, ayrı-ayrı provayderləri/modelləri və ya paketə daxil edilmiş "qızıl dəst" paketlərini müqayisəli qiymətləndirmək üçün istifadə edə biləcəyiniz ümumi qiymətləndirmə çərçivəsi ilə birlikdə təqdim olunur.
+67router, marşrutlaşdırma konfiqurasiyalarını, ayrı-ayrı provayderləri/modelləri və ya paketə daxil edilmiş "qızıl dəst" paketlərini müqayisəli qiymətləndirmək üçün istifadə edə biləcəyiniz ümumi qiymətləndirmə çərçivəsi ilə birlikdə təqdim olunur.
 İstehsal trafikinə keçirməzdən əvvəl marşrutlaşdırma dəyişikliklərini yoxlamaq, yeni provayderləri təsdiqləmək və buraxılışları nəzarətdən keçirmək üçün ondan istifadə edin.
 
 Çərçivə aşağıdakı kimi həyata keçirilib:

@@ -4,7 +4,7 @@
 
 ---
 
-Ang OmniRoute ay may tatlong magkakaiba ngunit magkakaugnay na mekanismo ng resilience. Bawat isa ay may ibang saklaw at layunin. Panatilihing hiwalay ang mga ito kapag nagde-debug ng routing behavior.
+Ang 67router ay may tatlong magkakaiba ngunit magkakaugnay na mekanismo ng resilience. Bawat isa ay may ibang saklaw at layunin. Panatilihing hiwalay ang mga ito kapag nagde-debug ng routing behavior.
 
 ![3-layer na modelo ng resilience](../diagrams/exported/resilience-3layers.svg)
 
@@ -220,7 +220,7 @@ Ang tatlong session-affinity na header ay hindi kailanman ipinapasa upstream —
 
 ### Mga eksklusibong lease ng koneksyon para sa managed na session
 
-**Saklaw:** isang aktibong managed na HTTP client/session ang nagmamay-ari ng isang karapat-dapat na OmniRoute na koneksyon.
+**Saklaw:** isang aktibong managed na HTTP client/session ang nagmamay-ari ng isang karapat-dapat na 67router na koneksyon.
 
 **Layunin:** magbigay ng matibay na eksklusibong pagmamay-ari ng koneksyon para sa mga client
 na nangangailangan ng matigas na hangganan sa routing sa mga request. Iba ito sa session
@@ -246,7 +246,7 @@ aktibong connection ID. Ang mga lease control header ay tinatanggal mula sa mga 
 mga upstream executor header.
 
 Kung ang ordinaryong routing ay may mga karapat-dapat na managed candidate ngunit ang bawat libreng candidate ay
-okupado ng isang dayuhang aktibong lease, ang OmniRoute ay nagbabalik ng HTTP `429`, lease-capacity-unavailable na
+okupado ng isang dayuhang aktibong lease, ang 67router ay nagbabalik ng HTTP `429`, lease-capacity-unavailable na
 code, isang waiting-for-capacity na estado, at isang may hangganang `Retry-After` na hinango mula sa pinakamaagang
 kaugnay na expiry.
 Ang ordinaryong empty eligibility ay hindi lease contention at pinapanatili ang umiiral nitong routing error semantics.
@@ -270,7 +270,7 @@ Ang mga kaugnay na mekanismo ay nananatiling hiwalay:
   connection), para sa ibang mga provider ang `getQuotaScopedModelForProvider()`.
 - Ang `404` ay nagla-lock ng bare na modelo (pinaliliit ng `getModelLockKey()` ang `not_found`).
 - Anumang ibang status — mga `5xx` transport/server failure at ang sariling synthesized
-  `502` ng OmniRoute mula sa validation ng kalidad — nagla-lock lamang sa **eksaktong**
+  `502` ng 67router mula sa validation ng kalidad — nagla-lock lamang sa **eksaktong**
   tuple ng provider/connection/model. Ang isang sirang stream sa isang modelo ay hindi
   ebidensya tungkol sa quota ng account; bago ang panuntunang ito, isang walang-lamang
   response sa `codex/gpt-5.6-luna` ang nag-aalis ng bawat modelong `gpt-5*` ng connection
@@ -388,7 +388,7 @@ Itakda ito sa connection modal (**Mga override ng rate limit → Mga limit ng co
 
 - **Buong-koneksyon laban sa tiyak na modelo:** nananatili ang `maxConcurrent` bilang pinagsamang limit ng buong koneksyon. Kapag parehong nalalapat, parehong kinukuha ang mga gate nang atomiko sa parehong composite gate (`global → provider → account → model`); ang epektibong pag-uugali ay ang mas mahigpit na nalalapat na limit.
 - **Eksaktong pagtutugma ng model-key:** ang key ay ang model string na ipinapasa sa executor pagkatapos ng routing resolution — karaniwan itong hubad na upstream model id (`glm-5`), hindi ang client-side na `provider/model` alias (ang `zai/glm-5` ay hindi tumutugma sa `glm-5`). Ang mga value ay mga positibong-integer na limit ng concurrent request.
-- **Lokal na pagpila, walang discovery:** ang mga labis na request ay pumipila nang lokal gamit ang umiiral na semantika ng queue/timeout (mga typed na `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` na admission error). Hindi tinituklas o hinihinuha ng OmniRoute ang upstream policy — ipinapatupad nito ang eksaktong mga limit na ikinonpigura ng operator. Ang isang saturated na model gate ay hindi kailanman nagdi-disable ng provider at hindi kailanman lumilikha ng permanenteng model lockout; ang upstream na 429/cooldown/fallback na pag-uugali ay nananatiling error backstop.
+- **Lokal na pagpila, walang discovery:** ang mga labis na request ay pumipila nang lokal gamit ang umiiral na semantika ng queue/timeout (mga typed na `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` na admission error). Hindi tinituklas o hinihinuha ng 67router ang upstream policy — ipinapatupad nito ang eksaktong mga limit na ikinonpigura ng operator. Ang isang saturated na model gate ay hindi kailanman nagdi-disable ng provider at hindi kailanman lumilikha ng permanenteng model lockout; ang upstream na 429/cooldown/fallback na pag-uugali ay nananatiling error backstop.
 - **Saklaw na per-connection, per-process:** ang mga cap ay bawat database connection at naka-hold sa memorya, kaya ang dalawang koneksyon na muling gumagamit ng parehong upstream API key ay hindi nagko-coordinate sa isa't isa.
 - **Ang hindi naka-configure ay nangangahulugang walang pagbabago:** ang pagbubukod ng map (o pag-iwan ng blangko sa dashboard field) ay hindi nagdaragdag ng model gate. Halimbawang konpigurasyon nang hindi nag-aatas ng anumang unibersal na limit ng provider:
 
@@ -450,7 +450,7 @@ Ang admission check mismo ay isang purong function (`open-sse/services/rateLimit
 ### Auto-Enable Safety Net ng Rate-Limit at Proteksyon ng Koneksyon (`rateLimitProtection`)
 
 **Safety net ng auto-enable** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, default na `true`):
-Sa default, awtomatikong pinagagana ng OmniRoute ang proteksyon ng rate-limit queue para sa lahat ng aktibong API-key provider connection (`getProviderCategory(provider) === "apikey"`). Tinitiyak nito na ang mga papasok na request sa mga rate-sensitive na upstream API key ay nakapila at na-throttle sa pamamagitan ng Bottleneck sa halip na mag-burst patungo sa mga upstream 429 error. Maaaring i-override ang safety net sa pamamagitan ng environment variable na `RATE_LIMIT_AUTO_ENABLE` (ang `false`/`0`/`off` ay nagdi-disable, ang `true`/`1`/`on` ay nagpipilit na i-on), na may prayoridad kaysa sa naka-persist na setting ng dashboard (**Settings → Resilience** / `PATCH /api/resilience`).
+Sa default, awtomatikong pinagagana ng 67router ang proteksyon ng rate-limit queue para sa lahat ng aktibong API-key provider connection (`getProviderCategory(provider) === "apikey"`). Tinitiyak nito na ang mga papasok na request sa mga rate-sensitive na upstream API key ay nakapila at na-throttle sa pamamagitan ng Bottleneck sa halip na mag-burst patungo sa mga upstream 429 error. Maaaring i-override ang safety net sa pamamagitan ng environment variable na `RATE_LIMIT_AUTO_ENABLE` (ang `false`/`0`/`off` ay nagdi-disable, ang `true`/`1`/`on` ay nagpipilit na i-on), na may prayoridad kaysa sa naka-persist na setting ng dashboard (**Settings → Resilience** / `PATCH /api/resilience`).
 
 **Semantika ng per-connection na `rateLimitProtection`:**
 Ang per-connection na proteksyon ng rate-limit ay sinusubaybayan sa pamamagitan ng boolean field na `rateLimitProtection` sa mga provider connection (naka-persist bilang `rate_limit_protection` sa SQLite):
@@ -797,7 +797,7 @@ quota. Mga tapat na limitasyon:
 > manatili ang gabay ng agent sa ilalim ng 40k context budget. Ito ang pinaikli, nakaharap-sa-agent
 > na view ng mga seksyon sa itaas; ang mga naka-numero na seksyon ang nananatiling buong sanggunian.
 
-May tatlong magkakaugnay ngunit magkakaibang mekanismo ng pansamantalang kabiguan ang OmniRoute.
+May tatlong magkakaugnay ngunit magkakaibang mekanismo ng pansamantalang kabiguan ang 67router.
 Panatilihing hiwalay ang kanilang saklaw kapag nagde-debug ng pag-uugali ng pagruruta. Tingnan ang
 [3-layer resilience diagram](../diagrams/exported/resilience-3layers.svg)
 (pinagmulan: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

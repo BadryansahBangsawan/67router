@@ -52,7 +52,7 @@ mirovanja. Riječ je o istom ograničivaču učestalosti zahtjeva, vezanom uz IP
 povremene pogreške `400 content-blocked` kada Claude Code ili Codex CLI
 brzo uzastopno izvršava više poziva za uporabu alata / slanje poruka.
 
-## Ublažavanja već primijenjena u OmniRouteu
+## Ublažavanja već primijenjena u 67routeru
 
 1. **`open-sse/services/wafRateLimit.ts`** — zaštita od rafalnog slanja koja nameće
    minimalni razmak od 500 ms između odlaznih zahtjeva prema bilo kojem URL-u

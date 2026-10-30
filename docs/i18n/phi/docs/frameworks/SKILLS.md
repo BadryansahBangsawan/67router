@@ -7,29 +7,29 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/skills/` at `src/app/api/skills/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Nagbibigay ang OmniRoute ng napapalawak na framework ng Skills na nagpapahintulot sa mga language model (at operator) na bumuo ng mga kakayahang magagamit muli — mula sa pagbabasa ng filesystem at mga HTTP request hanggang sa pagpapatakbo ng code sa sandbox at mga piniling kasanayan mula sa marketplace.
+Nagbibigay ang 67router ng napapalawak na framework ng Skills na nagpapahintulot sa mga language model (at operator) na bumuo ng mga kakayahang magagamit muli — mula sa pagbabasa ng filesystem at mga HTTP request hanggang sa pagpapatakbo ng code sa sandbox at mga piniling kasanayan mula sa marketplace.
 
-Ang isang kasanayan ay isang unit ng trabaho na may bersyon at tinukoy ng schema. Maaaring i-inject ng OmniRoute ang mga kasanayan bilang mga depinisyon ng tool sa mga papalabas na request, harangin ang mga tool call na nagmumula sa modelo, patakbuhin ang katugmang handler, at ibalik ang resulta sa modelo upang maipagpatuloy ang pag-uusap. Hindi kailanman nakikita ng modelo ang implementasyon — tanging ang interface ng tool.
+Ang isang kasanayan ay isang unit ng trabaho na may bersyon at tinukoy ng schema. Maaaring i-inject ng 67router ang mga kasanayan bilang mga depinisyon ng tool sa mga papalabas na request, harangin ang mga tool call na nagmumula sa modelo, patakbuhin ang katugmang handler, at ibalik ang resulta sa modelo upang maipagpatuloy ang pag-uusap. Hindi kailanman nakikita ng modelo ang implementasyon — tanging ang interface ng tool.
 
 ---
 
 ## Agent Skills kumpara sa Omni Skills
 
-May dalawang magkaiba ngunit magkaugnay na sistema ng kasanayan ang OmniRoute:
+May dalawang magkaiba ngunit magkaugnay na sistema ng kasanayan ang 67router:
 
 | Dimensyon                   | **Omni Skills** (dokumentong ito)                                          | **Agent Skills**                                                                                  |
 | :-------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | Layunin                     | Pag-inject ng LLM tool + pagpapatakbo sa sandbox                           | Catalog ng SKILL.md na maaaring tuklasin at gamitin ng mga panlabas na agent                      |
 | Pinagmumulan ng katotohanan | `src/lib/skills/` + marketplace                                            | `src/lib/agentSkills/` + direktoryong `skills/`                                                   |
 | Runtime mode                | Ini-inject sa mga papalabas na request, isinasagawa sa mga tool-call event | Static na markdown catalog + mga endpoint sa pagtuklas na REST/MCP/A2A                            |
-| Gumagamit nito              | Ang OmniRoute mismo (combo routing, mga papasok na LLM call)               | Mga panlabas na agent, MCP client, A2A orchestrator                                               |
+| Gumagamit nito              | Ang 67router mismo (combo routing, mga papasok na LLM call)                | Mga panlabas na agent, MCP client, A2A orchestrator                                               |
 | Bilang                      | Nagbabago (nakabatay sa marketplace)                                       | 45 entry sa catalog (23 API + 21 CLI + 1 config)                                                  |
 | Format                      | `SkillDefinition` na may tool schema + handler                             | `SKILL.md` frontmatter + markdown body                                                            |
 | Pagtuklas                   | `/api/skills/*` REST + mga MCP tool na `omniroute_skills_*`                | `/api/agent-skills/*` REST + mga MCP tool na `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-Ang **Omni Skills** ang execution engine — tinutukoy ng mga ito kung ano ang _kayang gawin_ ng OmniRoute kapag tumawag ng tool ang isang LLM.
+Ang **Omni Skills** ang execution engine — tinutukoy ng mga ito kung ano ang _kayang gawin_ ng 67router kapag tumawag ng tool ang isang LLM.
 
-Ang **Agent Skills** ang catalog ng dokumentasyon — ipinapaliwanag ng mga ito sa mga panlabas na agent _kung paano gamitin_ ang REST API at CLI ng OmniRoute, gamit ang mga nakaayos na SKILL.md file na maaaring direktang ilagay sa mga prompt ng agent.
+Ang **Agent Skills** ang catalog ng dokumentasyon — ipinapaliwanag ng mga ito sa mga panlabas na agent _kung paano gamitin_ ang REST API at CLI ng 67router, gamit ang mga nakaayos na SKILL.md file na maaaring direktang ilagay sa mga prompt ng agent.
 
 Para sa catalog, generator, mga MCP tool, at A2A skill ng Agent Skills, tingnan ang [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Para sa catalog, generator, mga MCP tool, at A2A skill ng Agent Skills, tingnan 
 
 Magkakasamang umiiral sa iisang registry ang tatlong pinagmumulan ng mga kasanayan:
 
-1. **Mga built-in na kasanayan** (`src/lib/skills/builtins.ts`) — kasama sa OmniRoute. Sinasaklaw ang mga karaniwang kaso:
+1. **Mga built-in na kasanayan** (`src/lib/skills/builtins.ts`) — kasama sa 67router. Sinasaklaw ang mga karaniwang kaso:
    - `file_read`, `file_write` — sandbox workspace para sa bawat API key sa ilalim ng `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — papalabas na HTTP sa pamamagitan ng `safeOutboundFetch` na may `guard: "public-only"`
    - `web_search` — naisasaksak na search provider na may caching (`executeWebSearch`)
    - `eval_code` — pagpapatakbo ng `node` o `python` sa Docker sandbox
    - `execute_command` — shell command sa Docker sandbox
    - `browser` — scaffolding na gumagamit ng Playwright, naka-disable bilang default (`builtin/browser.ts`)
-2. **SkillsMP** (ang OmniRoute Marketplace) — kinukuha mula sa `https://skillsmp.com/api/v1/skills/search`. Nangangailangan ng `skillsmpApiKey` sa Settings.
+2. **SkillsMP** (ang 67router Marketplace) — kinukuha mula sa `https://skillsmp.com/api/v1/skills/search`. Nangangailangan ng `skillsmpApiKey` sa Settings.
 3. **SkillsSH** (community catalog ng `skills.sh`) — kinukuha mula sa `https://skills.sh/api/search`. Hindi kailangan ng authentication; kinukuha ang nilalaman ng SKILL.md mula sa GitHub raw.
 
 Isang "aktibong provider" ang kumokontrol kung saang catalog nag-i-install ang dashboard (`src/lib/skills/providerSettings.ts`). Palitan ito sa ilalim ng **Settings → Memory & Skills**. Default: `skillsmp`.
@@ -442,7 +442,7 @@ dokumentong ito; walang float na threshold na gaya ng `0.6` at walang pagmamarka
 
 ## Catalog ng mga Built-in na Skill
 
-Kasama sa OmniRoute ang isang piniling hanay ng mga built-in na skill sa `src/lib/skills/builtin/`. Narito ang mga pinakakaraniwan:
+Kasama sa 67router ang isang piniling hanay ng mga built-in na skill sa `src/lib/skills/builtin/`. Narito ang mga pinakakaraniwan:
 
 ### Skill sa Browser Automation
 

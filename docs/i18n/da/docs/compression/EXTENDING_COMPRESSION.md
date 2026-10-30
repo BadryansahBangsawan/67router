@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: OmniRoutes komprimeringsmotor er **udvidelig** — du kan registrere brugerdefinerede motorer, levere sprogpakker til nye sprog og sammensætte stakkede pipelines. Denne vejledning viser hvordan.
+> **Kort fortalt**: 67routers komprimeringsmotor er **udvidelig** — du kan registrere brugerdefinerede motorer, levere sprogpakker til nye sprog og sammensætte stakkede pipelines. Denne vejledning viser hvordan.
 
 **Relaterede vejledninger:**
 
@@ -232,7 +232,7 @@ i strategivælgeren via dens `id`. Test integrationen ved at sammensætte den i 
 
 ## Oprettelse af sprogpakker
 
-Komprimering i hulemandsstil bruger **sprogspecifikke regelpakker** til at håndtere fyldord, forbehold og omstændelige formuleringer på hvert naturligt sprog. OmniRoute leveres med **6 sprogpakker**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Komprimering i hulemandsstil bruger **sprogspecifikke regelpakker** til at håndtere fyldord, forbehold og omstændelige formuleringer på hvert naturligt sprog. 67router leveres med **6 sprogpakker**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Pakkestruktur
 
@@ -391,7 +391,7 @@ Outputtet fra motor N bliver inputtet til motor N+1.
 
 ### Komprimeringstilstande
 
-OmniRoute vælger **ÉN tilstand pr. anmodning** baseret på konfiguration, tærskler for automatisk aktivering og kombinationstilsidesættelser.
+67router vælger **ÉN tilstand pr. anmodning** baseret på konfiguration, tærskler for automatisk aktivering og kombinationstilsidesættelser.
 De tilgængelige tilstande er defineret i `open-sse/services/compression/types.ts` (typen `CompressionMode`):
 
 | Tilstand     | Motorer              | Anvendelse                                                                                                                                                                                                               |
@@ -511,10 +511,10 @@ For at styre den via konfiguration skal du indstille `mode: "stacked"` og angive
 
 ## Politik for synkronisering med upstream
 
-OmniRoutes komprimeringsmotorer krediterer flere upstream-projekter i README
+67routers komprimeringsmotorer krediterer flere upstream-projekter i README
 ("inspireret af RTK, Caveman, LLMLingua-2, Troglodita"). Et almindeligt spørgsmål
 fra bidragydere er: **Når upstream-RTK tilføjer et nyt værktøjsfilter, eller Caveman
-tilføjer en regelpakke, hvordan når det så frem til OmniRoute?** Dette afsnit er
+tilføjer en regelpakke, hvordan når det så frem til 67router?** Dette afsnit er
 det autoritative svar.
 
 ### Leverandørkopier kontra uafhængige implementeringer
@@ -537,7 +537,7 @@ Der er **ingen automatisk sporing af upstream-udgivelser og ingen
 `compression-sync`-etiket** — helt bevidst. Fordi motorerne er
 genimplementeringer, flettes et upstream-RTK-filter eller en Caveman-regelpakke
 ikke ind som kode; det **udtrykkes på ny som en ny regel eller et nyt filter i
-OmniRoutes eget format** (se
+67routers eget format** (se
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) og indarbejdes ad
 hoc via en almindelig PR. Udvidelsespunkterne ovenfor (brugerdefineret motor,
 sprogpakke, RTK-filter) er den godkendte måde at bidrage med et sådant element på.
@@ -551,7 +551,7 @@ Nylige eksempler på netop dette forløb:
 ### Headroom (proxy til inputkomprimering)
 
 Headroom er **fuldt ud intern** — et fastlåst leverandørkopieret snapshot af
-`gcf`-codec'et plus OmniRoutes egne `smartcrusher`- / `toon`- / `tabular`-lag.
+`gcf`-codec'et plus 67routers egne `smartcrusher`- / `toon`- / `tabular`-lag.
 Der er ingen aktiv upstream at spore ud over leverandørkopien; opdateringer til
 `gcf` opdateres manuelt, når codec'et ændres, og valideres igen i forhold til
 kontrollen af komprimeringsbudgettet (`check:compression-budget`).
@@ -559,7 +559,7 @@ kontrollen af komprimeringsbudgettet (`check:compression-budget`).
 ### Forslag til en upstream-inspireret forbedring
 
 1. **Opret ikke en leverandørkopi** — udtryk upstream-reglen eller -filteret på
-   ny i OmniRoutes format.
+   ny i 67routers format.
 2. Tilføj det via det tilsvarende udvidelsespunkt nedenfor (sprogpakke,
    RTK-filter eller brugerdefineret motor).
 3. Henvis til upstream-projektet i PR-beskrivelsen (kreditering) i stedet for at

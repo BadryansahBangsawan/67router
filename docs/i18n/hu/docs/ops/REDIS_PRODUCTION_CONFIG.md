@@ -6,7 +6,7 @@
 
 ## Áttekintés
 
-A Redis egy **opcionális, laza függőség** az OmniRoute-ban — ha a Redis nem érhető el, az alkalmazás szabályozottan csökkentett funkcionalitásra vált (memórián belüli tartalékmegoldásokra). Éles környezetben a Redis finomhangolása négy különböző feladattípus késleltetését csökkenti:
+A Redis egy **opcionális, laza függőség** az 67router-ban — ha a Redis nem érhető el, az alkalmazás szabályozottan csökkentett funkcionalitásra vált (memórián belüli tartalékmegoldásokra). Éles környezetben a Redis finomhangolása négy különböző feladattípus késleltetését csökkenti:
 
 | Feladattípus                    | Megvalósító                   | Klienspéldányosító                                            | Kulcsminta                                              |
 | ------------------------------- | ----------------------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
@@ -15,7 +15,7 @@ A Redis egy **opcionális, laza függőség** az OmniRoute-ban — ha a Redis ne
 | Kvótatároló                     | `redisQuotaStore.ts`          | Különálló `getRedisClient(url)` singleton                     | `<prefix>quota:*`, példányonként konfigurálható         |
 | Bemelegítési áramkör-megszakító | `redisCircuitBreakerStore.ts` | Különálló kliens a `circuitBreakerFactory.ts` fájlban         | `<prefix>warmup:cb:<connectionId>`                      |
 
-Mind a négy feladattípus közös névtérelőtagot használ, így az OmniRoute más alkalmazásokkal együtt is használhat egyetlen Redis-példányt (például `127.0.0.1:6379`). Lásd: [Kulcsok névterezése](#key-namespacing).
+Mind a négy feladattípus közös névtérelőtagot használ, így az 67router más alkalmazásokkal együtt is használhat egyetlen Redis-példányt (például `127.0.0.1:6379`). Lásd: [Kulcsok névterezése](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Mind a négy feladattípus közös névtérelőtagot használ, így az OmniRoute
 
 ## Kulcsok névterezése
 
-Az OmniRoute ugyanazt a Redis-példányt használja, mint a gazdagépen futó egyéb szolgáltatások. Névtér nélkül az olyan kulcsok, mint az `auth:api_key:<sha256>` vagy az `rl:*`, ütközhetnek az ugyanazt a Redist használó más alkalmazások kulcsaival (ezen a példányon a Redis a `127.0.0.1:6379` címen fut más szolgáltatások mellett).
+Az 67router ugyanazt a Redis-példányt használja, mint a gazdagépen futó egyéb szolgáltatások. Névtér nélkül az olyan kulcsok, mint az `auth:api_key:<sha256>` vagy az `rl:*`, ütközhetnek az ugyanazt a Redist használó más alkalmazások kulcsaival (ezen a példányon a Redis a `127.0.0.1:6379` címen fut más szolgáltatások mellett).
 
-Állítsa a `REDIS_KEY_PREFIX` értékét nem üres karakterláncra, hogy az OmniRoute **minden** kulcsa előtagot kapjon:
+Állítsa a `REDIS_KEY_PREFIX` értékét nem üres karakterláncra, hogy az 67router **minden** kulcsa előtagot kapjon:
 
 ```bash
-# .env — minden OmniRoute-kulcs a következővé válik: omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — minden 67router-kulcs a következővé válik: omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # maradjon hely az operációs rendszer lapgyorsítótárának
 maxmemory-policy allkeys-lru         # terhelés alatt távolítsa el az elavult hitelesítési gyorsítótár-bejegyzéseket
 
-# Perzisztencia (opcionális — az OmniRoute enélkül is összeomlásbiztos)
+# Perzisztencia (opcionális — az 67router enélkül is összeomlásbiztos)
 save 300 1                           # legalább 5 percenként készítsen pillanatképet, ha ≥1 kulcs megváltozott
 appendonly no                        # nincs szükség AOF-re; az adatok újra előállíthatók
 appendfsync no                       # nincs fsync-többletterhelés (az RDB elegendő)

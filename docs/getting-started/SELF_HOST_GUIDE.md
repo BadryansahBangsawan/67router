@@ -1,10 +1,10 @@
 ---
-title: "🚀 Self-Host Guide — OmniRoute (零月费自托管 / zero-fee self-host)"
+title: "🚀 Self-Host Guide — 67router (零月费自托管 / zero-fee self-host)"
 version: 3.8.52
 lastUpdated: 2026-10-05
 ---
 
-# 🚀 Self-Host Guide — OmniRoute
+# 🚀 Self-Host Guide — 67router
 
 > **TL;DR** — three commands, one local endpoint, zero monthly fees. No SaaS
 > billing, no multi-tenant isolation, no hosted prompt-processing hop. Your
@@ -26,14 +26,14 @@ docker compose -f docker-compose.selfhost.yml up -d
 open http://127.0.0.1:20128
 ```
 
-This is the **self-host carrier** for OmniRoute's "零月费 + 自托管" product
+This is the **self-host carrier** for 67router's "零月费 + 自托管" product
 form: a packaged container/binary you run on your own machine in 5 minutes.
 
 ---
 
 ## Why this guide exists
 
-OmniRoute ships a sophisticated `docker-compose.yml` with profiles
+67router ships a sophisticated `docker-compose.yml` with profiles
 (`base`, `web`, `cli`, `host`, `cliproxyapi`, `memory`, `bifrost`). Each app
 service is profile-gated, so a bare `docker compose up -d` only starts Redis.
 That is correct for power users who pick a profile — but it is _not_ a
@@ -168,7 +168,7 @@ http://127.0.0.1:20128/v1
 ```
 
 For provider choice, see the
-[Free Tiers Guide](./FREE-TIERS-GUIDE.md) — OmniRoute aggregates 150+ free
+[Free Tiers Guide](./FREE-TIERS-GUIDE.md) — 67router aggregates 150+ free
 tiers into one endpoint, so you can run `model: "auto"` to pick the best free
 option per request.
 
@@ -336,7 +336,7 @@ Two ways to fix it, without changing the documented default:
   plus the `omniroute-data:` entry under the top-level `volumes:`. Note that
   this changes where your data lives:
   - a new named volume starts **empty** — on an existing install, copy
-    `./data` into it first, or OmniRoute will boot as a fresh instance;
+    `./data` into it first, or 67router will boot as a fresh instance;
   - `bin/snapshot-data.sh` and `bin/restore-data.sh` read/write `./data` on
     the host directly, so they will not see a named volume's contents unless
     you back it up separately, for example:

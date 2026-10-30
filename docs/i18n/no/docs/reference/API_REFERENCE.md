@@ -6,7 +6,7 @@
 
 🌐 **Språk:** 🇺🇸 [Engelsk](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Hovedreferanse for OmniRoute-API-et. Den dekker det offentlige `/v1`-grensesnittet og de mest brukte administrasjonsendepunktene. Den maskinlesbare [`docs/openapi.yaml`](../openapi.yaml) og rutetreet under `src/app/api/` er de uttømmende kildene.
+Hovedreferanse for 67router-API-et. Den dekker det offentlige `/v1`-grensesnittet og de mest brukte administrasjonsendepunktene. Den maskinlesbare [`docs/openapi.yaml`](../openapi.yaml) og rutetreet under `src/app/api/` er de uttømmende kildene.
 
 For den spesifikke OpenAI-kompatible protokollen og matrisen over leverandørfunksjoner, se
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Svar        | `HIT` eller `MISS` (uten strømming)                                                                                                                                                                       |
 | `X-OmniRoute-Idempotent` | Svar        | `true` hvis deduplisert                                                                                                                                                                                   |
 | `X-OmniRoute-Progress`   | Svar        | `enabled` hvis fremdriftssporing er på                                                                                                                                                                    |
-| `X-OmniRoute-Session-Id` | Svar        | Gjeldende økt-ID brukt av OmniRoute                                                                                                                                                                       |
+| `X-OmniRoute-Session-Id` | Svar        | Gjeldende økt-ID brukt av 67router                                                                                                                                                                        |
 | `X-OmniRoute-Request-Id` | Svar        | Korrelasjons-ID for forespørselen (når den er kjent)                                                                                                                                                      |
-| `X-OmniRoute-Version`    | Svar        | Byggversjonen til OmniRoute (alltid til stede)                                                                                                                                                            |
+| `X-OmniRoute-Version`    | Svar        | Byggversjonen til 67router (alltid til stede)                                                                                                                                                             |
 | `X-OmniRoute-Cost-Saved` | Svar        | USD som hurtigbufferen sparte ved et treff (bare hurtigbuffertreff)                                                                                                                                       |
 | `X-OmniRoute-Decision`   | Svar        | Rutingsspor: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` er kombinasjonsstrategien, eller `single` for en forespørsel uten kombinasjon) – alltid til stede i fullføringssvar            |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Feste en konto per forespørsel
 
-Når en leverandør har flere tilkoblinger (kontoer eller nøkler), velger OmniRoute normalt én
+Når en leverandør har flere tilkoblinger (kontoer eller nøkler), velger 67router normalt én
 via strategien for kontovalg. En forespørsel kan i stedet festes til én bestemt tilkobling
 med headeren `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ annen konto per prosjekt:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Kilde: `src/sse/handlers/chat.ts` (lesing av header), `src/sse/services/auth.ts`
 ## Eksklusive administrerte øktleier
 
 Eksklusiv administrert øktleie er en valgfri, klientnøytral rutingskontrakt: Én aktiv eier
-har én kvalifisert OmniRoute-tilkobling. Den leier ikke en modell, krever ikke OAuth, identifiserer
+har én kvalifisert 67router-tilkobling. Den leier ikke en modell, krever ikke OAuth, identifiserer
 ikke en bestemt klient og krever ikke en bestemt leverandør.
 
 API-nøkkelen som brukes til autentisering, må ha rettigheten `lease:exclusive` og en eksplisitt, ikke-tom
@@ -191,7 +191,7 @@ En aktiv leieeier kan eksplisitt be om personvernsikre visningsmetadata for sin 
 Denne valgfrie statushandlingen sikres av den ugjennomsiktige eieren, den autentiserte administrerte API-nøkkelen
 og den nøyaktige aktive generasjonen i én databasetransaksjon. `displayName` er bare det konfigurerte
 tilkoblingsnavnet uten innledende og etterfølgende mellomrom. Verdien er `null` når det ikke finnes noe sikkert
-konfigurert navn. OmniRoute erstatter det aldri med en e-postadresse eller generert kontoidentitet. Leverandørverdien
+konfigurert navn. 67router erstatter det aldri med en e-postadresse eller generert kontoidentitet. Leverandørverdien
 er en ikke-sensitiv visningsetikett og aldri en generert identifikator for en kompatibel leverandør.
 Påloggingsopplysninger, tokener, informasjonskapsler, rå tilkoblings- eller API-nøkkel-ID-er, eierhasher,
 avgrensningshemmeligheter og interne rutingsdata er utelatt.
@@ -233,7 +233,7 @@ Midlertidig ressurskonflikt returnerer HTTP `429` med `Retry-After` og:
 
 Dette svaret betyr bare at det ordinære settet med kvalifiserte tilkoblinger ikke var tomt, og at alle ledige kandidater
 ble holdt av en fremmed aktiv leie. Modeller/leverandører som ikke støttes, manglende samsvar med retningslinjer,
-nedkjøling, kvote, tilstand og andre ordinære kvalifiseringsfeil beholder sine eksisterende OmniRoute-svar.
+nedkjøling, kvote, tilstand og andre ordinære kvalifiseringsfeil beholder sine eksisterende 67router-svar.
 
 ### `x-omniroute-compression`
 
@@ -306,7 +306,7 @@ EmbeddingsV5Request-dokumenter og **videresender dem uendret** til `https://api.
 ```
 
 Opprinnelige `{ image | audio | video | pdf }`-verdier kan være en offentlig HTTPS-URL, en `data:`-URI eller rå
-base64. OmniRoute konverterer ikke disse objektene til strenger og henter heller ikke opprinnelige bilde-URL-er – Jina henter
+base64. 67router konverterer ikke disse objektene til strenger og henter heller ikke opprinnelige bilde-URL-er – Jina henter
 offentlige medier selv. Ekstra Jina-felter (`task`, `normalized`, `truncate`, `embedding_type`) blir
 videresendt. Jina-SKU-er som kun støtter tekst, avviser fortsatt dokumenter som ikke er tekst.
 
@@ -456,7 +456,7 @@ klienten, slik at klientkoden ikke trenger særbehandling for leverandøren.
 
 ### Autentisering og endepunktløsing for Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` gjenbruker den samme Vertex AI-autentiseringen som OmniRoute allerede støtter for
+`vertex-deepseek-ocr` gjenbruker den samme Vertex AI-autentiseringen som 67router allerede støtter for
 chat-/bildetrafikk (`open-sse/executors/vertex.ts`): Tilkoblingens API-nøkkel er enten en
 Service Account JSON-legitimasjon (som veksles inn i et kortvarig OAuth-tilgangstoken via JWT-bærerflyten)
 eller et allerede utstedt OAuth-tilgangstoken som brukes direkte. Endepunkt-URL-en oppstrøms er Vertex'
@@ -480,7 +480,7 @@ Authorization: Bearer your-api-key
 
 ### Modellpriser (`pricing`)
 
-En oppføring inneholder et `pricing`-objekt når OmniRoute kjenner modellens pris. Prisen kommer
+En oppføring inneholder et `pricing`-objekt når 67router kjenner modellens pris. Prisen kommer
 fra pristabellen som brukes til kostnadsregnskap: innebygde standardverdier, synkroniserte priser og
 overstyringer angitt via `/api/pricing`. Dette er listepriser, så leverandører med abonnement viser også
 en pris per token.
@@ -634,8 +634,8 @@ Bruk dette endepunktet når en sidecar kjører utenfor prosessen og ikke kan imp
 
 ## ElevenLabs-lydgenerering
 
-Konfigurer en `elevenlabs`-leverandørtilkobling i OmniRoute med ElevenLabs-API-nøkkelen din.
-Klienter autentiserer seg med **OmniRoute**-nøkkelen sin (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Konfigurer en `elevenlabs`-leverandørtilkobling i 67router med ElevenLabs-API-nøkkelen din.
+Klienter autentiserer seg med **67router**-nøkkelen sin (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gatewayen leverer den lagrede leverandørnøkkelen som `xi-api-key`. Send aldri en ElevenLabs-nøkkel
 som gatewayens bearer-token.
 
@@ -700,7 +700,7 @@ ruter returnerer oppstrømsstatuskoder og feilmeldingsinnhold uendret, inkludert
 abonnementsbegrensning og `429` for en kvotegrense. Hodene `character-cost`, `song-id`, `request-id` og `retry-after`
 bevares når de finnes. En kostnadsfri kredittsaldo garanterer ikke tilgang til alle
 musikkmodeller, utdataformater eller API-funksjoner: ElevenLabs avgjør tilgangsrettighetene for hver forespørsel.
-Det samlede endepunktet bevarer feilstatuskoder i OmniRoutes normaliserte feilkonvolutt.
+Det samlede endepunktet bevarer feilstatuskoder i 67routers normaliserte feilkonvolutt.
 
 Oppstrømskontrakter: [lydeffekter](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [musikkkomposisjon](https://elevenlabs.io/docs/api-reference/music/compose) og
@@ -741,7 +741,7 @@ Oppstrømskontrakter: [lydeffekter](https://elevenlabs.io/docs/api-reference/tex
 
 Alle POST-ruter følger samme struktur: `Bearer your-api-key` + Zod-validert JSON-innhold (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` osv., se `src/shared/validation/schemas.ts`). 4xx returneres ved skjemafeil.
 
-For klienter som ikke kan legge ved `Authorization: Bearer ...`, godtar OmniRoute også API-nøkler i URL-en, enten via kompatible spørringsparametere (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) eller via de dedikerte `/api/v1/vscode/{token}/...`-endepunktene som er dokumentert nedenfor.
+For klienter som ikke kan legge ved `Authorization: Bearer ...`, godtar 67router også API-nøkler i URL-en, enten via kompatible spørringsparametere (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) eller via de dedikerte `/api/v1/vscode/{token}/...`-endepunktene som er dokumentert nedenfor.
 
 ```bash
 # Omrangering (leverandør fra skyregisteret eller en OpenAI-kompatibel leverandørnode som "<prefix>/<model>")
@@ -903,7 +903,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, samme API-nøkkel som Parallel Search) returnerer kun
 Markdown — ethvert annet `format` gir en `400` — og begrenser innholdet til 100 000 tegn. Når
 selve målsiden ikke kan hentes ut, rapporterer oppstrømstjenesten dette i en HTTP 200-respons;
-OmniRoute eksponerer det som en `422` med en fast melding.
+67router eksponerer det som en `422` med en fast melding.
 
 | Metode | Bane            | Beskrivelse                                                             |
 | ------ | --------------- | ----------------------------------------------------------------------- |
@@ -964,14 +964,14 @@ må være det aktive startpunktet (noe den er som standard når `app/server-ws.m
 OpenAI **Codex CLI** validerer modellnavnet på klientsiden når
 `supports_websockets = true` og **avviser leverandørprefiksede ID-er** som
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Send den **rene** ID-en (f.eks. `gpt-5.5`). OmniRoutes bro støtter
+a ChatGPT account`). Send den **rene** ID-en (f.eks. `gpt-5.5`). 67routers bro støtter
 bare codex, så den slår opp en ren ID på nytt som en codex-modell
 (`resolveCodexWsModelInfo`) før tunnelen opprettes mot oppstrømstjenesten — selv om en ren
 `gpt-5.5` ellers ville blitt rutet til en annen leverandør over HTTP.
 
 #### Konfigurere OpenAI Codex CLI
 
-Pek Codex CLI mot OmniRoute ved å legge til en egendefinert leverandør med WebSocket-
+Pek Codex CLI mot 67router ved å legge til en egendefinert leverandør med WebSocket-
 støtte i `~/.codex/config.toml` (bruk en separat `CODEX_HOME` for å unngå å endre
 en eksisterende konfigurasjon):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # ingen avsluttende skråstrek; WS-URL-en utledes (bruk https/wss i produksjon)
 wire_api = "responses"                    # eneste støttede verdi siden februar 2026
 supports_websockets = true                # aktiverer Responses-over-WS-transporten
-env_key = "OMNIROUTE_API_KEY"             # inneholder OmniRoute-API-nøkkelen (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # inneholder 67router-API-nøkkelen (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # en OmniRoute-API-nøkkel (hvilken som helst nøkkel hvis REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # en 67router-API-nøkkel (hvilken som helst nøkkel hvis REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI-et oppgraderer `base_url + /responses` til en WebSocket, og OmniRoute oppretter en tunnel
+CLI-et oppgraderer `base_url + /responses` til en WebSocket, og 67router oppretter en tunnel
 til den valgte codex OAuth-tilkoblingen. Validert fra ende til ende mot den lokale
 serveren: ChatGPT returnerer `codex.rate_limits` + `response.created` og strømmer
 fullføringen.
@@ -1076,7 +1076,7 @@ Ved bruk av `/api/usage/om-usage` bør kallende parter merke seg forskjellen mel
 
 #### Formelen for grensejustering
 
-OmniRoute støtter proaktive kvotegrenser for å forhindre uttømming hos oppstrømsleverandøren (konfigurert via tilkoblingens
+67router støtter proaktive kvotegrenser for å forhindre uttømming hos oppstrømsleverandøren (konfigurert via tilkoblingens
 `quotaWindowThresholds`, leverandørens standardverdier eller globale innstillinger for robusthet). Når en terskelverdi
 (f.eks. `cutoff = 25%`) er aktiv for et kvotevindu, beregner tekstgjengiveren den gjenværende kvoten slik:
 
@@ -1623,7 +1623,7 @@ Merknader:
 
 - De tokeniserte aliasene gjenbruker de samme håndtererne som `/v1/*` og `/api/tags`; svarformatene forblir identiske.
 - Foretrekk `Authorization: Bearer ...` når klienten støtter egendefinerte headere.
-- URL-baserte tokener kan forekomme i logger fra reverse-proxyer, nettleserhistorikk og telemetri utenfor OmniRoute. Behandle dem som et kompatibilitetsalternativ, ikke som standard autentiseringsmetode.
+- URL-baserte tokener kan forekomme i logger fra reverse-proxyer, nettleserhistorikk og telemetri utenfor 67router. Behandle dem som et kompatibilitetsalternativ, ikke som standard autentiseringsmetode.
 
 ---
 
@@ -1731,7 +1731,7 @@ Rutingskombinasjoner på høyere nivå (allerede oppsummert under `/api/combos*`
 
 ## Webhooks
 
-Utgående webhook-abonnementer for OmniRoute-hendelser (fullføring av forespørsler, oppbrukt kvote, nøkkelrotasjon osv.).
+Utgående webhook-abonnementer for 67router-hendelser (fullføring av forespørsler, oppbrukt kvote, nøkkelrotasjon osv.).
 
 | Metode | Bane                      | Beskrivelse                                                               |
 | ------ | ------------------------- | ------------------------------------------------------------------------- |
@@ -1764,7 +1764,7 @@ Brukes av delsystemet for automatisk nøkkeladministrasjon til å utstede og rot
 
 ## Agentprotokoll
 
-Skyagentoppgaver (Claude Code, Codex Cloud, OpenHands osv.) som kjøres eksternt på vegne av OmniRoute-brukere.
+Skyagentoppgaver (Claude Code, Codex Cloud, OpenHands osv.) som kjøres eksternt på vegne av 67router-brukere.
 
 | Metode | Bane                          | Beskrivelse                                                                                                                                                           |
 | ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1810,7 +1810,7 @@ Utgående HTTP(S)-/SOCKS-proxyer som kan tilordnes leverandører, kontoer eller 
 
 ## Robusthet (utvidet)
 
-OmniRoute har tre uavhengige mekanismer for midlertidige feil. Administrasjonsendepunktene nedenfor gjør det mulig for operatører å lese og overstyre dem:
+67router har tre uavhengige mekanismer for midlertidige feil. Administrasjonsendepunktene nedenfor gjør det mulig for operatører å lese og overstyre dem:
 
 | Omfang                   | Tilstandslagring                             | Les                                       | Tilbakestill / tøm                                  |
 | ------------------------ | -------------------------------------------- | ----------------------------------------- | --------------------------------------------------- |
@@ -1845,7 +1845,7 @@ En fullstendig konseptuell referanse og standardverdier for bryteren finnes i [`
 
 ## Ferdigheter
 
-Rammeverk for ferdigheter som utvider OmniRoute med egendefinerte kjørbare behandlere, samt integrasjoner med markedsplasser.
+Rammeverk for ferdigheter som utvider 67router med egendefinerte kjørbare behandlere, samt integrasjoner med markedsplasser.
 
 | Metode | Sti                               | Beskrivelse                                                                                                                            |
 | ------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1882,7 +1882,7 @@ Vedvarende lager for samtale-/faktaminner, avgrenset per API-nøkkel/økt.
 
 ## MCP-server
 
-OmniRoute leveres med en innebygd Model Context Protocol-server med 3 transporter (stdio, SSE, streamable-http) og omfangsbegrensede verktøy. Endepunktene for kontrollpanelet nedenfor leser status-/revisjonsdata og fungerer som proxy for HTTP-transportene.
+67router leveres med en innebygd Model Context Protocol-server med 3 transporter (stdio, SSE, streamable-http) og omfangsbegrensede verktøy. Endepunktene for kontrollpanelet nedenfor leser status-/revisjonsdata og fungerer som proxy for HTTP-transportene.
 
 | Metode | Bane | Beskrivelse |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1904,7 +1904,7 @@ OmniRoute leveres med en innebygd Model Context Protocol-server med 3 transporte
 
 ## A2A-server
 
-OmniRoute tilbyr et A2A-endepunkt (Agent-to-Agent) basert på JSON-RPC 2.0, i tillegg til et REST-grensesnitt for inspeksjon og bruk i kontrollpanelet.
+67router tilbyr et A2A-endepunkt (Agent-to-Agent) basert på JSON-RPC 2.0, i tillegg til et REST-grensesnitt for inspeksjon og bruk i kontrollpanelet.
 
 ### JSON-RPC
 
@@ -2133,7 +2133,7 @@ Endepunkter kun for administratorer til operasjonell administrasjon.
 
 ## Administrasjon av CLI-verktøy
 
-Administrer CLI-verktøy som integreres med OmniRoute (antigravity, commandCode,
+Administrer CLI-verktøy som integreres med 67router (antigravity, commandCode,
 devin-cli osv.). Se [Leverandørreferanse](./PROVIDER_REFERENCE.md) for hele listen.
 
 | Metode | Bane                                    | Beskrivelse                                                                                                                                                              |
@@ -2244,7 +2244,7 @@ Se [Ferdighetsrammeverk](../frameworks/SKILLS.md) for fullstendig informasjon.
 
 ## Programtillegg
 
-Administrer OmniRoute-programtillegg (tredjepartsutvidelser).
+Administrer 67router-programtillegg (tredjepartsutvidelser).
 
 | Metode | Bane                               | Beskrivelse                                    |
 | ------ | ---------------------------------- | ---------------------------------------------- |

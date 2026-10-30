@@ -5,11 +5,11 @@
 ---
 
 > **Hali:** Inapatikana kwa matumizi ya jumla.
-> **Walengwa:** Waendeshaji wanaounganisha OpenCode na usakinishaji wa OmniRoute.
+> **Walengwa:** Waendeshaji wanaounganisha OpenCode na usakinishaji wa 67router.
 > **Chanzo rasmi (schema ya usanidi):** `src/shared/services/opencodeConfig.ts`
 > **Chanzo rasmi (kifurushi cha npm):** `@omniroute/opencode-provider/` (workspace inayoweza kuchapishwa)
 
-[OpenCode](https://opencode.ai) ni kiteja cha AI cha CLI/desktop kinachotumia mawakala. Husoma katalogi yake ya watoa huduma kutoka `~/.config/opencode/opencode.json` (au `opencode.jsonc`) na kufuata schema iliyo katika `https://opencode.ai/config.json`. OmniRoute hujitambulisha kwa OpenCode kama mmoja wa watoa huduma hao — kila ombi hupitia kiolesura cha kawaida cha OmniRoute kinachooana na OpenAI cha `/v1`, hivyo OpenCode hunufaika kiotomatiki na uelekezaji wa Auto-Combo, vivunja saketi, sera za funguo, uangalizi, n.k.
+[OpenCode](https://opencode.ai) ni kiteja cha AI cha CLI/desktop kinachotumia mawakala. Husoma katalogi yake ya watoa huduma kutoka `~/.config/opencode/opencode.json` (au `opencode.jsonc`) na kufuata schema iliyo katika `https://opencode.ai/config.json`. 67router hujitambulisha kwa OpenCode kama mmoja wa watoa huduma hao — kila ombi hupitia kiolesura cha kawaida cha 67router kinachooana na OpenAI cha `/v1`, hivyo OpenCode hunufaika kiotomatiki na uelekezaji wa Auto-Combo, vivunja saketi, sera za funguo, uangalizi, n.k.
 
 Kuna **njia mbili za ujumuishaji zinazotumika**. Chagua moja — zote hutengeneza usanidi sawa.
 
@@ -17,16 +17,16 @@ Kuna **njia mbili za ujumuishaji zinazotumika**. Chagua moja — zote hutengenez
 
 ## Njia ya 1 — Kizalishaji cha CLI (bila kusakinisha npm)
 
-Inapendekezwa kwa watumiaji wa mwisho. Huja pamoja na OmniRoute. Huandika `opencode.json` mahali ilipo.
+Inapendekezwa kwa watumiaji wa mwisho. Huja pamoja na 67router. Huandika `opencode.json` mahali ilipo.
 
 ```bash
-# Baada ya kusakinisha OmniRoute (npm i -g @omniroute/cli au nakala ya ndani)
+# Baada ya kusakinisha 67router (npm i -g @omniroute/cli au nakala ya ndani)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Kwa ndani, CLI huita `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), hivyo `opencode.json` iliyopo huhifadhi watoa huduma wengine na maoni yake. Ingizo la OmniRoute huongezwa/hubadilishwa kwa njia atomiki.
+Kwa ndani, CLI huita `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), hivyo `opencode.json` iliyopo huhifadhi watoa huduma wengine na maoni yake. Ingizo la 67router huongezwa/hubadilishwa kwa njia atomiki.
 
 Faili inayotokana (katalogi chaguomsingi ya modeli):
 
@@ -90,8 +90,8 @@ Njia zote mbili huzalisha `provider.omniroute.npm: "@ai-sdk/openai-compatible"` 
 ```
 Kiolesura cha OpenCode/wakala
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (kiolesura cha OpenAI cha OmniRoute)
-         → kishughulikiaji cha OmniRoute /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (kiolesura cha OpenAI cha 67router)
+         → kishughulikiaji cha 67router /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → uelekezaji wa combo / Auto-Combo / kitekelezaji
                → mtoa huduma wa juu
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Unaweza kubatilisha kupitia `models: [...]`. Nyongeza zinazopendekezwa:
 
-- `"auto"` — huonyesha [Auto-Combo](../routing/AUTO-COMBO.md) ya OmniRoute, kipanga-njia kisichohitaji usanidi. Huiruhusu OpenCode kuchagua "modeli bora zaidi inayopatikana" bila wewe kuweka katalogi moja kwa moja kwenye msimbo.
-- `"<combo-name>"` — mchanganyiko wowote uliofafanua kwenye dashibodi; OmniRoute huutatua kwa uwazi.
+- `"auto"` — huonyesha [Auto-Combo](../routing/AUTO-COMBO.md) ya 67router, kipanga-njia kisichohitaji usanidi. Huiruhusu OpenCode kuchagua "modeli bora zaidi inayopatikana" bila wewe kuweka katalogi moja kwa moja kwenye msimbo.
+- `"<combo-name>"` — mchanganyiko wowote uliofafanua kwenye dashibodi; 67router huutatua kwa uwazi.
 
 ---
 
@@ -135,12 +135,12 @@ Uondoaji huu wa nakala ni **hitilafu ya kawaida zaidi** inayoonekana katika usan
 
 ## Hali za uthibitishaji
 
-| Mpangilio wa OmniRoute                                        | Thamani inayopendekezwa ya `apiKey`                                      |
+| Mpangilio wa 67router                                         | Thamani inayopendekezwa ya `apiKey`                                      |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `REQUIRE_API_KEY=false` (chaguo-msingi kwa matumizi ya ndani) | `sk_omniroute` (kishikilia nafasi halisi)                                |
 | `REQUIRE_API_KEY=true`                                        | Ufunguo halisi wa API wa kila mtumiaji kutoka Dashibodi → Funguo za API. |
 
-Kwa viteja vya mtindo wa Anthropic vinavyotuma `x-api-key` + `anthropic-version`, `extractApiKey` ya OmniRoute pia hukubali ufunguo kutoka `x-api-key`. OpenCode hutumia kiolesura cha OpenAI, kwa hivyo daima itatuma `Authorization: Bearer ${apiKey}` — hakuna hali maalum ya Anthropic inayotumika hapa.
+Kwa viteja vya mtindo wa Anthropic vinavyotuma `x-api-key` + `anthropic-version`, `extractApiKey` ya 67router pia hukubali ufunguo kutoka `x-api-key`. OpenCode hutumia kiolesura cha OpenAI, kwa hivyo daima itatuma `Authorization: Bearer ${apiKey}` — hakuna hali maalum ya Anthropic inayotumika hapa.
 
 ---
 
@@ -149,15 +149,15 @@ Kwa viteja vya mtindo wa Anthropic vinavyotuma `x-api-key` + `anthropic-version`
 | Dalili                                                         | Sababu                                                                                                   | Suluhisho                                                                                                              |
 | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `404` kwa kila ombi lenye URL iliyo na `/v1/v1/`               | Usanidi uliopitwa na wakati kutoka programu-jalizi ya kabla ya v3.8 ulioweka kiambishi `/v1` mara mbili. | Zalisha upya kupitia Njia ya 1 au 2.                                                                                   |
-| `401 Invalid API key`                                          | OmniRoute ina `REQUIRE_API_KEY=true` na ufunguo hautambuliki.                                            | Unda ufunguo kwenye dashibodi, au weka `REQUIRE_API_KEY=false` (kwa matumizi ya ndani pekee) na utumie `sk_omniroute`. |
-| Orodha ya modeli ni tupu katika kiolesura cha OpenCode         | Modeli zote 4 za chaguo-msingi zimefichwa katika mwonekano wa mtoa huduma wa OmniRoute.                  | Pitisha `models: ["auto", ...]` ili kuonyesha zile ulizowasha.                                                         |
+| `401 Invalid API key`                                          | 67router ina `REQUIRE_API_KEY=true` na ufunguo hautambuliki.                                             | Unda ufunguo kwenye dashibodi, au weka `REQUIRE_API_KEY=false` (kwa matumizi ya ndani pekee) na utumie `sk_omniroute`. |
+| Orodha ya modeli ni tupu katika kiolesura cha OpenCode         | Modeli zote 4 za chaguo-msingi zimefichwa katika mwonekano wa mtoa huduma wa 67router.                   | Pitisha `models: ["auto", ...]` ili kuonyesha zile ulizowasha.                                                         |
 | Hitilafu ya OpenCode 500 yenye `cannot read property 'models'` | OpenCode ya zamani (< 0.1.x) haikukubali `models` zilizowekwa ndani ya usanidi.                          | Sasisha OpenCode hadi toleo linalofuata skema ya v1 (`opencode.ai/config.json`).                                       |
 
 ---
 
 ## Tazama pia
 
-- [Marejeleo ya API](../reference/API_REFERENCE.md) — huduma zote za OmniRoute REST
+- [Marejeleo ya API](../reference/API_REFERENCE.md) — huduma zote za 67router REST
 - [Auto-Combo](../routing/AUTO-COMBO.md) — maana ya `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Chanzo: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

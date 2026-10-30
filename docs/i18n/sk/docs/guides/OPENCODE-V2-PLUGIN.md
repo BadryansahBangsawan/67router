@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` sprístupňuje celý váš katalóg OmniRoute — modely, kombinácie a
+`@omniroute/opencode-plugin-v2` sprístupňuje celý váš katalóg 67router — modely, kombinácie a
 automatické kombinácie — vo výbere modelov OpenCode v2 spolu so zobrazovanými názvami, cenami a
 limitmi bezplatnej úrovne.
 
@@ -15,7 +15,7 @@ nič medzi nimi nie je zdieľané, takže aktualizácia jedného nikdy nevynúti
 ## Požiadavky
 
 - OpenCode v2.
-- Dostupná brána OmniRoute (predvolene `http://localhost:20128`).
+- Dostupná brána 67router (predvolene `http://localhost:20128`).
 - Node.js 22 alebo 24.
 
 ## Inštalácia
@@ -78,7 +78,7 @@ pričom uvedie koncový bod a chýbajúce údaje — zhoršená podoba výberu t
 | `baseURL`                        | povinné                                                  | Koreňová adresa brány, iba `http(s)`; prípona `/v1` sa pridá tam, kde je potrebná                                                                   |
 | `apiKey`                         | pripojené prihlasovacie údaje, potom `OMNIROUTE_API_KEY` | Kľúč pre chat pre `/v1/*`                                                                                                                           |
 | `managementReadToken`            | použije `apiKey`, ak nie je nastavené                    | Kľúč pre `/api/*` — zvyčajne **nie je** rovnaký                                                                                                     |
-| `displayName`                    | `"OmniRoute"`                                            | Názov poskytovateľa vo výbere                                                                                                                       |
+| `displayName`                    | `"67router"`                                             | Názov poskytovateľa vo výbere                                                                                                                       |
 | `timeoutMs`                      | `10000`                                                  | Časový limit načítania pre jednotlivé koncové body (automatické kombinácie používajú 5 s)                                                           |
 | `modelCacheTtlMs`                | `300000`                                                 | TTL vyrovnávacej pamäte katalógu; snímka na disku urýchľuje studené štarty                                                                          |
 | `timeouts`                       | použije `timeoutMs`, ak nie je nastavené                 | Limity jednotlivých koncových bodov v ms: `models`, `combos`, `autoCombos`, `enrichment`                                                            |
@@ -128,7 +128,7 @@ Ak to chcete vypnúť, nastavte `"geminiSanitization": false`.
 
 | Príznak                                             | Príčina                                                                                                                      |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Výber nezobrazuje žiadny model OmniRoute            | Nepodarilo sa nájsť žiadny kľúč (skontrolujte upozornenie pri spustení) alebo je brána nedostupná                            |
+| Výber nezobrazuje žiadny model 67router             | Nepodarilo sa nájsť žiadny kľúč (skontrolujte upozornenie pri spustení) alebo je brána nedostupná                            |
 | Nespracované ID modelov, žiadne kombinácie ani ceny | Koncové body správy odmietli token — nastavte `managementReadToken`                                                          |
 | Krátky alebo prázdny katalóg `freeOnly`             | Chýba token správy alebo bol odmietnutý — v protokole hostiteľa si pozrite súhrnný riadok obnovenia (počet `unmatched-free`) |
 | Relácia pripnutá k `opencode-<id>/…`                | Doplnok v1 zverejnil `opencode-<id>`; v2 zverejňuje iba `<id>`, preto znova vyberte model v rámci `<id>/…`                   |

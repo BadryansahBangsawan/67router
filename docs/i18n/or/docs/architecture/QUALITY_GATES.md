@@ -4,7 +4,7 @@
 
 ---
 
-ଏହି ଡକ୍ୟୁମେଣ୍ଟଟି OmniRoute ର ସମସ୍ତ CI ଗୁଣବତ୍ତା ଗେଟ୍ ପାଇଁ ପ୍ରାମାଣିକ ସନ୍ଦର୍ଭ।
+ଏହି ଡକ୍ୟୁମେଣ୍ଟଟି 67router ର ସମସ୍ତ CI ଗୁଣବତ୍ତା ଗେଟ୍ ପାଇଁ ପ୍ରାମାଣିକ ସନ୍ଦର୍ଭ।
 ଏହା ପ୍ରତ୍ୟେକ ଗେଟ୍, ଏହା କ’ଣ ଯାଞ୍ଚ କରେ, କେଉଁ CI ଜବ୍ରେ ଏହା ଚାଲେ, ଏହା
 ଏକ ରାଚେଟ୍ ବେସ୍ଲାଇନ୍ କିମ୍ବା ଏକ ପାସ୍/ଫେଲ୍ ନୀତି ବ୍ୟବହାର କରେ କି ନାହିଁ, ଏବଂ ଏହା ବିଲ୍ଡ୍କୁ ଅବରୋଧ କରେ କିମ୍ବା କେବଳ ପରାମର୍ଶମୂଳକ—ତାହା ବର୍ଣ୍ଣନା କରେ।
 
@@ -215,14 +215,14 @@ BASE_REF=origin/release/vX.Y.Z npm run i18n:check-value-drift
 
 ଏଗୁଡ଼ିକ cron ସୂଚୀରେ (ଏବଂ `workflow_dispatch`) ଚାଲେ, କେବେବି PR ଉପରେ ନାହିଁ। ସମସ୍ତ ପରାମର୍ଶଦାତା।
 
-| ୱାର୍କଫ୍ଲୋ              | ବୈଧ କରେ                                                                                                                                                      | ଅବରୋଧକାରୀ       |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| `nightly-property`     | ରାଣ୍ଡମ୍ seed + ଉଚ୍ଚ run ସଂଖ୍ୟା ସହିତ fast-check property ଟେଷ୍ଟ                                                                                                | **ପରାମର୍ଶଦାତା** |
-| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                        | **ପରାମର୍ଶଦାତା** |
-| `nightly-llm-security` | promptfoo injection ଗାର୍ଡ୍ (block ମୋଡ୍) + garak probes (provider secret ବିନା ଛଡ଼ାଯାଏ)                                                                        | **ପରାମର୍ଶଦାତା** |
-| `nightly-schemathesis` | `docs/openapi.yaml` ବ୍ୟବହାର କରି ଚାଲୁଥିବା OmniRoute ବିରୁଦ୍ଧରେ OpenAPI contract fuzzing (schemathesis) — spec ଉଲ୍ଲଂଘନ / unhandled 500s ପ୍ରକାଶ କରେ (Fase 8 B.4) | **ପରାମର୍ଶଦାତା** |
-| `nightly-mutation`     | ଦ୍ରୁତ unit lane ଉପରେ Stryker mutation-testing ସ୍କୋର — ବଞ୍ଚିଥିବା mutant ଗୁଡ଼ିକ ଦୁର୍ବଳ assert ପ୍ରକାଶ କରେ                                                       | **ପରାମର୍ଶଦାତା** |
-| `nightly-compat`       | ସମର୍ଥିତ `engines.node` ରେଞ୍ଜ ମଧ୍ୟରେ Node engine ସୁସଂଗତି ମ୍ୟାଟ୍ରିକ୍ସ                                                                                          | **ପରାମର୍ଶଦାତା** |
+| ୱାର୍କଫ୍ଲୋ              | ବୈଧ କରେ                                                                                                                                                     | ଅବରୋଧକାରୀ       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `nightly-property`     | ରାଣ୍ଡମ୍ seed + ଉଚ୍ଚ run ସଂଖ୍ୟା ସହିତ fast-check property ଟେଷ୍ଟ                                                                                               | **ପରାମର୍ଶଦାତା** |
+| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                       | **ପରାମର୍ଶଦାତା** |
+| `nightly-llm-security` | promptfoo injection ଗାର୍ଡ୍ (block ମୋଡ୍) + garak probes (provider secret ବିନା ଛଡ଼ାଯାଏ)                                                                       | **ପରାମର୍ଶଦାତା** |
+| `nightly-schemathesis` | `docs/openapi.yaml` ବ୍ୟବହାର କରି ଚାଲୁଥିବା 67router ବିରୁଦ୍ଧରେ OpenAPI contract fuzzing (schemathesis) — spec ଉଲ୍ଲଂଘନ / unhandled 500s ପ୍ରକାଶ କରେ (Fase 8 B.4) | **ପରାମର୍ଶଦାତା** |
+| `nightly-mutation`     | ଦ୍ରୁତ unit lane ଉପରେ Stryker mutation-testing ସ୍କୋର — ବଞ୍ଚିଥିବା mutant ଗୁଡ଼ିକ ଦୁର୍ବଳ assert ପ୍ରକାଶ କରେ                                                      | **ପରାମର୍ଶଦାତା** |
+| `nightly-compat`       | ସମର୍ଥିତ `engines.node` ରେଞ୍ଜ ମଧ୍ୟରେ Node engine ସୁସଂଗତି ମ୍ୟାଟ୍ରିକ୍ସ                                                                                         | **ପରାମର୍ଶଦାତା** |
 
 Performance baseline ଗୁଡ଼ିକ (heap, TTFB, build time) ରେକର୍ଡ କରାଯାଏ, gate କରାଯାଏ ନାହିଁ: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) ଦେଖନ୍ତୁ (`npm run perf:lts-baseline`)।
 
@@ -489,7 +489,7 @@ jobଟି କେବେବି `release/*`କୁ push କରେ ନାହିଁ �
 
 ## ଏଜେଣ୍ଟ୍ ଟୁଲିଂ: LSP-ଇନ୍-ଦ-ଲୁପ୍ (ଇଚ୍ଛାଧୀନ)
 
-CI ଗେଟ୍ଗୁଡ଼ିକ ବ୍ୟତୀତ, OmniRoute ଏକ **ଇଚ୍ଛାଧୀନ** `agent-lsp` ସ୍କାଫୋଲ୍ଡ୍
+CI ଗେଟ୍ଗୁଡ଼ିକ ବ୍ୟତୀତ, 67router ଏକ **ଇଚ୍ଛାଧୀନ** `agent-lsp` ସ୍କାଫୋଲ୍ଡ୍
 (ଏକ ପ୍ରୋଜେକ୍ଟ-ସ୍ତରୀୟ `.mcp.json`, Fase 7 Task 15) ସହିତ ଆସେ। କୋଡିଂ ଏଜେଣ୍ଟ୍ମାନଙ୍କ ପାଇଁ ଏକ TypeScript ଲାଙ୍ଗୁଏଜ୍ ସର୍ଭର୍ ଉପଲବ୍ଧ କରାଇବାକୁ `.mcp.json`
 ସୃଷ୍ଟି କରନ୍ତୁ, ଯାହାଦ୍ୱାରା ସେମାନେ କୋଡ୍ ଲେଖିବା **ପୂର୍ବରୁ** ସିମ୍ବଲ୍ /
 ଡାୟାଗ୍ନୋଷ୍ଟିକ୍ସ ସମାଧାନ କରନ୍ତି — ଏହା `typecheck:core`ର ଏକ କମ୍ପାଇଲ୍-ବିଫୋର୍-କ୍ଲେମ୍ ସହଯୋଗୀ, ଯାହା ଉତ୍ସରେ ହିଁ

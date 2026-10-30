@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute에는 서로 구별되지만 관련된 세 가지 복원력(resilience) 메커니즘이 있습니다. 각각의 범위와 목적이 다릅니다. 라우팅 동작을 디버깅할 때는 이들을 구분해서 생각하세요.
+67router에는 서로 구별되지만 관련된 세 가지 복원력(resilience) 메커니즘이 있습니다. 각각의 범위와 목적이 다릅니다. 라우팅 동작을 디버깅할 때는 이들을 구분해서 생각하세요.
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -214,7 +214,7 @@ Claude Code 2.1.263에서 캡처됨).
 
 ### 독점 관리형 세션 연결 리스
 
-**범위:** 하나의 활성 관리형 HTTP 클라이언트/세션이 하나의 적격 OmniRoute 연결을 소유합니다.
+**범위:** 하나의 활성 관리형 HTTP 클라이언트/세션이 하나의 적격 67router 연결을 소유합니다.
 
 **목적:** 요청 전반에 걸쳐 확고한 라우팅 경계가 필요한 클라이언트에게 지속적인 독점 연결
 소유권을 제공합니다. 이는 소프트한 연속성 선호에 해당하는 세션 어피니티와는 다릅니다.
@@ -237,7 +237,7 @@ SHA-256 해시만 저장됩니다. 모든 최종 디스패치 펜스는 인증�
 업스트림 실행기 헤더에서 제거됩니다.
 
 일반 라우팅에 적격한 관리형 후보가 존재하지만 모든 유휴 후보가
-외부 활성 리스에 의해 점유되어 있는 경우, OmniRoute는 HTTP `429`, 리스 용량 사용 불가(lease-capacity-unavailable) 코드,
+외부 활성 리스에 의해 점유되어 있는 경우, 67router는 HTTP `429`, 리스 용량 사용 불가(lease-capacity-unavailable) 코드,
 용량 대기(waiting-for-capacity) 상태, 그리고 가장 이른 관련 만료 시각에서 파생된 상한이 있는 `Retry-After`를 반환합니다.
 일반적인 빈 적격성은 리스 경합이 아니며 기존 라우팅 오류 의미 체계를 그대로 유지합니다.
 
@@ -260,7 +260,7 @@ SHA-256 해시만 저장됩니다. 모든 최종 디스패치 펜스는 인증�
   codex의 경우 전체 `codex` / `spark` 범위(해당 커넥션의 모든 `gpt-5*` 모델),
   다른 provider의 경우 `getQuotaScopedModelForProvider()`.
 - `404`는 개별 모델을 잠급니다(`getModelLockKey()`가 `not_found`를 좁힘).
-- 그 외 모든 상태 — `5xx` 전송/서버 실패와 OmniRoute 자체 품질 검증에서 합성된
+- 그 외 모든 상태 — `5xx` 전송/서버 실패와 67router 자체 품질 검증에서 합성된
   `502` — 은 **정확한(exact)** provider/connection/model 튜플만 잠급니다.
   한 모델의 불량 스트림은 해당 계정의 쿼터에 대한 증거가 아닙니다; 이 규칙이
   적용되기 전에는 `codex/gpt-5.6-luna`에서 빈 응답 한 번이 발생하면 해당
@@ -383,7 +383,7 @@ OAuth / API-key `connectionCooldown` 기본 쿨다운 및 최대 백오프 단�
 - **정확한 모델 키 일치:** 키는 라우팅 해석 후 실행기(executor)에 전달되는 모델 문자열입니다 — 일반적으로 클라이언트 측 `provider/model` 별칭이 아닌 순수 업스트림 모델 id(`glm-5`)입니다 (`zai/glm-5`는
   `glm-5`와 일치하지 않습니다). 값은 양의 정수 동시 요청 상한입니다.
 - **로컬 큐잉, 디스커버리 없음:** 초과 요청은 기존 큐/타임아웃 의미(타입화된 `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` 수락 오류)에 따라 로컬에서 큐잉됩니다. OmniRoute는 업스트림 정책을 탐지하거나 추론하지 않습니다 — 운영자가 구성한 정확한 상한만을 강제합니다. 포화된 모델 게이트는 프로바이더를 비활성화하지 않으며 영구적인 모델 잠금을 만들지도 않습니다; 업스트림 429/쿨다운/폴백 동작이 오류 안전장치로 남아 있습니다.
+  `SEMAPHORE_QUEUE_FULL` 수락 오류)에 따라 로컬에서 큐잉됩니다. 67router는 업스트림 정책을 탐지하거나 추론하지 않습니다 — 운영자가 구성한 정확한 상한만을 강제합니다. 포화된 모델 게이트는 프로바이더를 비활성화하지 않으며 영구적인 모델 잠금을 만들지도 않습니다; 업스트림 429/쿨다운/폴백 동작이 오류 안전장치로 남아 있습니다.
 - **연결별, 프로세스별 범위:** 상한은 데이터베이스 연결별이며 인메모리에 유지되므로, 동일한 업스트림 API 키를 재사용하는 두 연결은 서로 조율하지 않습니다.
 - **미구성은 변경 없음:** 맵을 생략하거나(또는 대시보드 필드를 비워 두면) 모델 게이트가 추가되지 않습니다. 보편적인 프로바이더 제한을 단정하지 않는 구성 예시:
 
@@ -522,7 +522,7 @@ antigravity 쿼터 패밀리나 codex 스코프를 넘나드는 별칭은 자기
 ### 레이트 리밋 자동 활성화 안전망 및 연결 보호 (`rateLimitProtection`)
 
 **자동 활성화 안전망** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, 기본값 `true`):
-기본적으로 OmniRoute는 모든 활성 API 키 프로바이더 연결(`getProviderCategory(provider) === "apikey"`)에 대해 레이트 리밋 큐 보호를 자동으로 활성화합니다. 이를 통해 레이트에 민감한 업스트림 API 키로 들어오는 요청이 업스트림 429 오류로 폭주하는 대신 Bottleneck을 통해 큐에 쌓이고 스로틀링되도록 보장합니다. 이 안전망은 `RATE_LIMIT_AUTO_ENABLE` 환경 변수로 재정의할 수 있으며(`false`/`0`/`off`는 비활성화, `true`/`1`/`on`은 강제 활성화), 환경 변수가 대시보드에 저장된 설정(**설정 → 복원력** / `PATCH /api/resilience`)보다 우선합니다.
+기본적으로 67router는 모든 활성 API 키 프로바이더 연결(`getProviderCategory(provider) === "apikey"`)에 대해 레이트 리밋 큐 보호를 자동으로 활성화합니다. 이를 통해 레이트에 민감한 업스트림 API 키로 들어오는 요청이 업스트림 429 오류로 폭주하는 대신 Bottleneck을 통해 큐에 쌓이고 스로틀링되도록 보장합니다. 이 안전망은 `RATE_LIMIT_AUTO_ENABLE` 환경 변수로 재정의할 수 있으며(`false`/`0`/`off`는 비활성화, `true`/`1`/`on`은 강제 활성화), 환경 변수가 대시보드에 저장된 설정(**설정 → 복원력** / `PATCH /api/resilience`)보다 우선합니다.
 
 **연결별 `rateLimitProtection`의 의미:**
 연결별 레이트 리밋 보호는 프로바이더 연결의 `rateLimitProtection` 불리언 필드로 추적됩니다(SQLite에는 `rate_limit_protection`으로 저장됨):
@@ -805,7 +805,7 @@ connectionId)`) — 형제 대상들이 고정된
 
 > 에이전트 가이드가 40k 컨텍스트 예산을 넘지 않도록 `AGENTS.md` → "Resilience Runtime State"에서 그대로 이동되었습니다 (PR #12743). 이것은 위 섹션들을 압축한 에이전트용 뷰이며, 번호가 매겨진 섹션들이 전체 참조로 남아 있습니다.
 
-OmniRoute에는 서로 관련되어 있지만 구분되는 세 가지 일시적 장애 메커니즘이 있습니다. 라우팅 동작을 디버깅할 때 이들의 범위를 구분해서 다루세요. 한눈에 파악할 수 있는 맵은 [3계층 복원력 다이어그램](../diagrams/exported/resilience-3layers.svg) (소스: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))을 참조하세요.
+67router에는 서로 관련되어 있지만 구분되는 세 가지 일시적 장애 메커니즘이 있습니다. 라우팅 동작을 디버깅할 때 이들의 범위를 구분해서 다루세요. 한눈에 파악할 수 있는 맵은 [3계층 복원력 다이어그램](../diagrams/exported/resilience-3layers.svg) (소스: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))을 참조하세요.
 
 ### 프로바이더 서킷 브레이커
 

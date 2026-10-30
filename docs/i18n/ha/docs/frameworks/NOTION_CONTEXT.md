@@ -11,11 +11,11 @@
 
 ## Mene ne wannan
 
-OmniRoute na iya haɗuwa da filin aiki na **Notion** a matsayin **tushen mahallin bayanai** — ma'ajiyar
+67router na iya haɗuwa da filin aiki na **Notion** a matsayin **tushen mahallin bayanai** — ma'ajiyar
 ilimi ta karantawa/rubutawa wadda wakilai ke samu ta uwar garken MCP da ke ciki. Da zarar an
 saita token na haɗin Notion, kayan aikin MCP suna ba LLM damar bincika shafuka da rumbunan bayanai,
 karanta abun cikin shafi da bishiyoyin tubalan, yin tambaya ga rumbunan bayanai tare da matatu/tsarawa, da ƙara sabbin
-tubala — duk ana bi da su ta cikin OmniRoute (tare da sake gwadawa, iyakar lokacin jira, da rarraba kurakurai)
+tubala — duk ana bi da su ta cikin 67router (tare da sake gwadawa, iyakar lokacin jira, da rarraba kurakurai)
 don kada samfurin ya taɓa Notion API kai tsaye.
 
 Haɗin wani siririn kundi ne mai ƙarfi a kan Notion REST API na hukuma
@@ -40,7 +40,7 @@ Babu **environment variable** don token na Notion — ana adana shi a cikin tebu
 > [!NOTE]
 > Token ɗin **token na haɗin cikin gida na Notion** ne. Ƙirƙiri haɗi a
 > <https://www.notion.com/my-integrations>, sannan ka raba shafuka/rumbunan bayanan da kake son
-> OmniRoute ya samu damar shiga da wannan haɗin (tsarin izinin Notion ya dogara ne da rabawa,
+> 67router ya samu damar shiga da wannan haɗin (tsarin izinin Notion ya dogara ne da rabawa,
 > ba ga dukkan filin aiki ba).
 
 ### Saitawa ta REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Duk hanyoyin guda uku suna buƙatar tantancewar dashboard (`isAuthenticated`). A kan `POST`,
-OmniRoute yana adana token sannan nan take ya gudanar da binciken gwaji mai sakamako 1; idan Notion
+67router yana adana token sannan nan take ya gudanar da binciken gwaji mai sakamako 1; idan Notion
 ya dawo da abin kuskure, za a share token ɗin kuma kiran ya gaza da `400`.
 
 ## Kayan aikin MCP (6)

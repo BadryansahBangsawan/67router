@@ -8,17 +8,17 @@
 
 🌐 **اللغات:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-المشكلات الشائعة وحلولها في OmniRoute.
+المشكلات الشائعة وحلولها في 67router.
 
 ---
 
 ## مرجع سريع
 
-**هل أنت جديد على OmniRoute؟** ابدأ من هنا — فهذه الحلول تعالج 90% من المشكلات:
+**هل أنت جديد على 67router؟** ابدأ من هنا — فهذه الحلول تعالج 90% من المشكلات:
 
 | ما أراه                        | ما يعنيه                               | ما يجب فعله                                                                                  |
 | ------------------------------ | -------------------------------------- | -------------------------------------------------------------------------------------------- |
-| "يتعذر الاتصال"                | OmniRoute لا يعمل                      | شغّل `omniroute` أو `docker restart omniroute`                                               |
+| "يتعذر الاتصال"                | 67router لا يعمل                       | شغّل `omniroute` أو `docker restart omniroute`                                               |
 | "مفتاح API غير صالح"           | مفتاحك غير صحيح أو منتهي الصلاحية      | أعد نسخ المفتاح من موقع موفّر الخدمة                                                         |
 | "تم تجاوز حد المعدل"           | أنت ترسل طلبات كثيرة جدًا              | انتظر دقيقة واحدة، أو استخدم `model: "auto"` للتبديل الاحتياطي التلقائي                      |
 | "تم تجاوز الحصة"               | لقد استنفدت حصتك المجانية/المدفوعة     | صِل المزيد من الموفّرين، أو استخدم الموفّرين المجانيين (Kiro، Pollinations)                  |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # سقف قبول صريح للط�
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ارفع الانتظار المحدود ليتجاوز القيمة الافتراضية لـ RATE_LIMIT_MAX_WAIT_MS للخدمات المنبع البطيئة
 ```
 
-عيّن هذه المتغيرات في بيئة عملية OmniRoute (الخدمة الخلفية، مثلًا عبر ملف plist الخاص بـ LaunchAgent أو `systemctl edit`)، ثم أعد تشغيل OmniRoute. راية التدوير هي الأداة المنفردة الأعلى تأثيرًا: فهي تحوّل الفشل الحتمي إلى إعادة محاولة شفافة لدى مزوّد سليم في المجموعة.
+عيّن هذه المتغيرات في بيئة عملية 67router (الخدمة الخلفية، مثلًا عبر ملف plist الخاص بـ LaunchAgent أو `systemctl edit`)، ثم أعد تشغيل 67router. راية التدوير هي الأداة المنفردة الأعلى تأثيرًا: فهي تحوّل الفشل الحتمي إلى إعادة محاولة شفافة لدى مزوّد سليم في المجموعة.
 
 **ملاحظة**: يحدّ `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` من عدد الطلبات الثقيلة — ذات السياق الطويل — التي تعمل في الوقت نفسه؛ وهذا الحد هو بوابة قبول، وليس مقيّد معدّل خاصًا بالمزوّد. **تحديث #503-fanout:** لم يعد هذا المتغير معيّنًا افتراضيًا (ولا يُطبّق الآن إلا عند ضبطه صراحةً، كما هو موضح أعلاه) — وبدلًا من ذلك، يُدار قبول الطلبات الثقيلة من خلال ميزانية بايت مشتقة تلقائيًا (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) تتدرج ذاتيًا بناءً على حد الذاكرة الفعلي للمضيف، ولذلك ينبغي أن يشهد النشر الجديد حالات رفض `503 chat_admission_busy` أقل بكثير من دون ضبط هذا المتغير إطلاقًا؛ ومع ذلك، يظل ضبطه صراحةً هنا يعمل تمامًا كما هو موثّق. تُحصر تجاوزات ميزانية البايت الصريحة ضمن نطاق 8 MiB–2 GiB. الخطأ `413 body_exceeds_budget` ليس مؤقتًا: زِد ميزانية البايت هذه، أو اخفض `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`، أو زِد حد ذاكرة العملية. أما إسقاط `inflight_bytes_budget` فهو تنافس مؤقت وتظل إعادة المحاولة ممكنة. يُدار تقييد المعدّل لكل مزوّد (`open-sse/services/rateLimitManager.ts`) بشكل منفصل بواسطة `RATE_LIMIT_MAX_WAIT_MS` و`RATE_LIMIT_MAX_QUEUE_DEPTH` و`RATE_LIMIT_AUTO_ENABLE` — راجع `.env.example`.
 
 **كيفية التحقق من نجاح الإصلاح**: شغّل الوكيل/مهمة cron مرتين بتتابع سريع وتأكد من نجاحهما. قبل الإصلاح، عادةً ما يُنتج التشغيل الثاني الخطأ `429`/`401`. بعد الإصلاح، تُعاد محاولة حالات الفشل (إن وجدت) بشفافية ويكتمل الاستدعاء. يمكنك أيضًا تنفيذ `curl /monitoring/health` ومراقبة الحقل `rateLimitedUntil` في اتصالات المزوّدين، وكذلك `circuitBreakers.providerBreakers[].state` للمزوّدين المتأثرين — تكون الحالة واحدة من `CLOSED` أو `DEGRADED` أو `OPEN` أو `HALF_OPEN` (راجع `src/shared/utils/circuitBreaker.ts`)، وسينتقل المزوّد الذي يستمر في الفشل عبر `CLOSED → DEGRADED → OPEN` قبل أن تسمح نافذة إعادة التهيئة بمرور طلب اختبار (`HALF_OPEN`).
 
-**إذا استمر ظهور 429**: فهذا يعني أن الحساب النشط لدى ذلك المزوّد قد استنفد بالفعل _حصته_ (وليس المعدّل فقط). أضف حسابًا ثانيًا للمزوّد نفسه في لوحة معلومات OmniRoute ← Providers ← Accounts، أو أضف مزوّدًا مجانيًا آخر إلى المزيج (مثل `routeway` أو `auggie`). لا يساعد التدوير إلا في حالات تقييد المعدّل/400/401 المؤقتة؛ أما استنفاد الحصة بالكامل فيتطلب بيانات اعتماد ثانية أو مزوّدًا مختلفًا.
+**إذا استمر ظهور 429**: فهذا يعني أن الحساب النشط لدى ذلك المزوّد قد استنفد بالفعل _حصته_ (وليس المعدّل فقط). أضف حسابًا ثانيًا للمزوّد نفسه في لوحة معلومات 67router ← Providers ← Accounts، أو أضف مزوّدًا مجانيًا آخر إلى المزيج (مثل `routeway` أو `auggie`). لا يساعد التدوير إلا في حالات تقييد المعدّل/400/401 المؤقتة؛ أما استنفاد الحصة بالكامل فيتطلب بيانات اعتماد ثانية أو مزوّدًا مختلفًا.
 
 **إذا ظهر 403 مع نماذج الرؤية (`auto/vision`، `bazaarlink/*`)**: يفتقر الحساب المتصل إلى خطة مدفوعة تشمل الرؤية، أو أن مفتاح API لا يملك أذونات كافية. تحقّق في لوحة معلومات المزوّد من أن نطاق المفتاح يشمل الرؤية/الوسائط المتعددة، أو صِل حسابًا من مستوى مدفوع واجعله هدف الرؤية.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ارفع الانتظار ال�
 
 عند تشغيل `npm install -g omniroute`، قد ترى عددًا كبيرًا من التحذيرات مثل `npm warn ERESOLVE`، وإشعارات تبعيات peer، ورسائل `deprecated`. **هذه التحذيرات متوقعة وغير ضارة.** يكون التثبيت قد نجح إذا رأيت `added <N> packages` في المخرجات.
 
-لإخفاء تحذيرات حل تبعيات peer، استخدم صيغة التثبيت المدعومة من OmniRoute:
+لإخفاء تحذيرات حل تبعيات peer، استخدم صيغة التثبيت المدعومة من 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 يخفي `--legacy-peer-deps` إشعارات `ERESOLVE` وتبعيات peer فقط. تظل إشعارات الإهمال ظاهرة لأنها تأتي من حزم خارجية انتقالية؛ وهي لا تشير إلى فشل التثبيت.
 
-تأتي التحذيرات من نطاقات قديمة لتبعيات peer في حزم خارجية لا يتحكم فيها OmniRoute:
+تأتي التحذيرات من نطاقات قديمة لتبعيات peer في حزم خارجية لا يتحكم فيها 67router:
 
 1. **يتطلب `marked-terminal` الإصدار `marked >=1 <16`، ولكن عُثر على `marked@18`** — يعمل بصورة سليمة عمليًا؛ فنطاق peer في المشروع الأصلي قديم فحسب.
 2. **`deprecated prebuild-install@7.1.3`** — أداة مساعدة انتقالية لجلب الملفات الثنائية الأصلية. لا تُستخدم
@@ -104,19 +104,19 @@ npm warn install-scripts تم حظر البرامج النصية للتثبيت 
 
 ### هل يمكن تجاهل هذا التحذير؟
 
-**جزئيًا، لكن لا يُنصح بالتشغيل دون البرامج النصية.** يتضمن OmniRoute آليات بديلة مرنة: إذا تعذّر تحميل ارتباطات `better-sqlite3` الأصلية من الحزمة المستقلة، ينتقل التطبيق إلى برامج تشغيل بديلة مثل `node:sqlite` أو `sql.js` (راجع [تحديد بيئة تشغيل SQLite](../ops/SQLITE_RUNTIME.md)). سيظل الخادم يعمل، لكن التشغيل باستخدام بدائل WASM مثل `sql.js` يعطّل وضع WAL (التسجيل المسبق للكتابة) في SQLite، ويزيد من الحمل على الذاكرة ومزامنة القرص.
+**جزئيًا، لكن لا يُنصح بالتشغيل دون البرامج النصية.** يتضمن 67router آليات بديلة مرنة: إذا تعذّر تحميل ارتباطات `better-sqlite3` الأصلية من الحزمة المستقلة، ينتقل التطبيق إلى برامج تشغيل بديلة مثل `node:sqlite` أو `sql.js` (راجع [تحديد بيئة تشغيل SQLite](../ops/SQLITE_RUNTIME.md)). سيظل الخادم يعمل، لكن التشغيل باستخدام بدائل WASM مثل `sql.js` يعطّل وضع WAL (التسجيل المسبق للكتابة) في SQLite، ويزيد من الحمل على الذاكرة ومزامنة القرص.
 
 ### ما البرامج النصية المطلوبة فعليًا؟
 
-ليست كل البرامج النصية المحظورة ضرورية لتشغيل OmniRoute:
+ليست كل البرامج النصية المحظورة ضرورية لتشغيل 67router:
 
-- **أساسية (`omniroute`، `better-sqlite3`):** يعمل OmniRoute من حزمة تطبيق Next.js مستقلة (`dist/`). أثناء التثبيت، ينزّل npm برنامج تشغيل SQLite الأصلي الخاص بالنظام المضيف أو يترجمه في `node_modules/better-sqlite3/` ذي المستوى الأعلى. بعد ذلك، يتحقق البرنامج النصي `postinstall` الخاص بـ OmniRoute ‏(`scripts/build/postinstall.mjs`) من هذه الملفات الثنائية الخاصة بالنظام المضيف وينسخها إلى `dist/node_modules/` حتى يتمكن الخادم المستقل من الوصول إليها. إذا حُظر البرنامج النصي postinstall الخاص بـ `omniroute`، فسيتم تخطي خطوة النسخ هذه.
+- **أساسية (`omniroute`، `better-sqlite3`):** يعمل 67router من حزمة تطبيق Next.js مستقلة (`dist/`). أثناء التثبيت، ينزّل npm برنامج تشغيل SQLite الأصلي الخاص بالنظام المضيف أو يترجمه في `node_modules/better-sqlite3/` ذي المستوى الأعلى. بعد ذلك، يتحقق البرنامج النصي `postinstall` الخاص بـ 67router ‏(`scripts/build/postinstall.mjs`) من هذه الملفات الثنائية الخاصة بالنظام المضيف وينسخها إلى `dist/node_modules/` حتى يتمكن الخادم المستقل من الوصول إليها. إذا حُظر البرنامج النصي postinstall الخاص بـ `omniroute`، فسيتم تخطي خطوة النسخ هذه.
 - **اختيارية/انتقالية (`keytar`، `@parcel/watcher`، `@swc/core`، `protobufjs`، `esbuild`):** هذه أدوات مساعدة للبناء، أو أدوات لمراقبة التغييرات، أو أدوات لسلسلة مفاتيح النظام. يؤدي السماح بها إلى منع تحذيرات البناء، لكنها ليست مطلوبة لوظائف التوجيه الأساسية.
-- **مستبعدة (`onnxruntime-node`):** تبعية اختيارية لتضمينات الذكاء الاصطناعي المحلية، وهي **غير** مطلوبة لتشغيل OmniRoute. ينزّل البرنامج النصي postinstall الخاص بها نحو 300MB من أصول CUDA من NuGet؛ لا تُدرجها في قائمة السماح إلا إذا كنت تنوي صراحةً استخدام تسريع ONNX المحلي على أجهزة مدعومة.
+- **مستبعدة (`onnxruntime-node`):** تبعية اختيارية لتضمينات الذكاء الاصطناعي المحلية، وهي **غير** مطلوبة لتشغيل 67router. ينزّل البرنامج النصي postinstall الخاص بها نحو 300MB من أصول CUDA من NuGet؛ لا تُدرجها في قائمة السماح إلا إذا كنت تنوي صراحةً استخدام تسريع ONNX المحلي على أجهزة مدعومة.
 
 ### الإصلاح الموصى به
 
-للسماح بالبرامج النصية المطلوبة أثناء التثبيت العام وإخفاء التحذيرات، مرّر `--allow-scripts` لـ OmniRoute وتبعياته الأصلية:
+للسماح بالبرامج النصية المطلوبة أثناء التثبيت العام وإخفاء التحذيرات، مرّر `--allow-scripts` لـ 67router وتبعياته الأصلية:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ omniroute doctor
 يفصل Playwright عمدًا تنزيلات المتصفح عن تثبيت حزمة npm،
 لذلك تكون هذه الاستجابة متوقعة إلى أن يتم تثبيت المتصفح.
 
-عند استخدام تثبيت عام لـ npm، ثبّت Chromium من دليل حزمة OmniRoute
+عند استخدام تثبيت عام لـ npm، ثبّت Chromium من دليل حزمة 67router
 بحيث تنتمي ذاكرة التخزين المؤقت للمتصفح إلى تثبيت Playwright نفسه:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-أعد تشغيل OmniRoute بعد التثبيت، ثم أعد محاولة طلب Gemini Web. إذا كنت
-تشغّل OmniRoute من صورة Docker، فاستخدم صورة `-web` (أو هدف البناء `runner-web`)،
+أعد تشغيل 67router بعد التثبيت، ثم أعد محاولة طلب Gemini Web. إذا كنت
+تشغّل 67router من صورة Docker، فاستخدم صورة `-web` (أو هدف البناء `runner-web`)،
 التي تتضمن Chromium واعتمادياته؛ أما الصورة الأساسية فلا تتضمنها.
 
 ---
@@ -186,7 +186,7 @@ npx playwright install chromium
 
 **هذه نتيجة إيجابية كاذبة. لا توجد أي إصابة، ولا يلزم اتخاذ أي إجراء.**
 
-يشغّل Avast وAVG آلية استدلالية تضع علامة على الملفات النصية العادية/ملفات Markdown التي تحتوي على العديد من الروابط التي تبدو كطلبات HTTP. يأتي ملف `README.md` الخاص بـ OmniRoute ضمن حزمة npm (فهو مدرج في `package.json` ← `files`)، ولذلك يُوضَع في `node_modules/omniroute/README.md` عند التثبيت العام — ويحتوي على نحو 15 مثالًا من نوع `http://localhost:20128/...` (نقاط نهاية MCP الخاصة بـ HTTP/SSE، وعنوان URL الخاص بـ A2A `.well-known`، ومقتطفات `curl`). كثافة الروابط هذه كافية لتشغيل الآلية الاستدلالية.
+يشغّل Avast وAVG آلية استدلالية تضع علامة على الملفات النصية العادية/ملفات Markdown التي تحتوي على العديد من الروابط التي تبدو كطلبات HTTP. يأتي ملف `README.md` الخاص بـ 67router ضمن حزمة npm (فهو مدرج في `package.json` ← `files`)، ولذلك يُوضَع في `node_modules/omniroute/README.md` عند التثبيت العام — ويحتوي على نحو 15 مثالًا من نوع `http://localhost:20128/...` (نقاط نهاية MCP الخاصة بـ HTTP/SSE، وعنوان URL الخاص بـ A2A `.well-known`، ومقتطفات `curl`). كثافة الروابط هذه كافية لتشغيل الآلية الاستدلالية.
 
 إذا بدأ هذا مؤخرًا فقط: لم تتغير طبيعة الملف. توسّع جدول نقاط النهاية في README (أُضيفت MCP HTTP وSSE وA2A)، كما أُضيف المزيد من أمثلة `curl`، ما جعله يتجاوز الحد.
 
@@ -196,7 +196,7 @@ npx playwright install chromium
 
 1. **أوقف الإشعارات** — استثنِ دليل التثبيت في برنامج مكافحة الفيروسات لديك
    (Avast: الإعدادات ← الاستثناءات)، مع إضافة مسار `node_modules` العام و/أو دليل بيانات
-   OmniRoute (`~/.omniroute/`).
+   67router (`~/.omniroute/`).
 2. **أبلغ عن النتيجة الإيجابية الكاذبة** — <https://www.avast.com/false-positive-file-form.php>،
    مع إرفاق ملف `README.md` الموضوع في الحجر الصحي. هذا هو الإصلاح الذي يفيد الجميع، لأن
    الآلية الاستدلالية للمورّد تبالغ في رد فعلها تجاه ملف نصي.
@@ -256,7 +256,7 @@ Next.js المستقل)، يكون هذا كافيًا لتشغيل الآلية
 
 ### تعطُّل صفحة تسجيل الدخول أو ظهور خطأ "Module self-registration"
 
-**السبب:** أنت تستخدم إصدارًا من Node.js خارج الحد الأدنى المعتمد لبيئة التشغيل الآمنة في OmniRoute. والحالة الأكثر شيوعًا هي استخدام مستوى تصحيح قديم من Node 22 أو 24 يقل عن الحد الأمني المحدَّث الذي يتطلبه OmniRoute.
+**السبب:** أنت تستخدم إصدارًا من Node.js خارج الحد الأدنى المعتمد لبيئة التشغيل الآمنة في 67router. والحالة الأكثر شيوعًا هي استخدام مستوى تصحيح قديم من Node 22 أو 24 يقل عن الحد الأمني المحدَّث الذي يتطلبه 67router.
 
 **الأعراض:**
 
@@ -272,7 +272,7 @@ Next.js المستقل)، يكون هذا كافيًا لتشغيل الآلية
    nvm use 24
    ```
 2. تحقّق من إصدارك: يجب أن يعرض `node --version` الإصدار `v24.0.0` أو إصدارًا أحدث ضمن خط LTS من 24.x
-3. أعد تثبيت OmniRoute: `npm install -g omniroute`
+3. أعد تثبيت 67router: `npm install -g omniroute`
 4. أعد التشغيل: `omniroute`
 
 > **الإصدارات الآمنة المدعومة:** `>=22.22.2 <23` أو `>=24.0.0 <27`. يحظى كل من Node.js 24.x LTS (Krypton) وNode.js 26 بدعم كامل.
@@ -353,13 +353,13 @@ omniroute
 
 **السبب:** في Node.js 22، لا يتوافق موزّع undici@8 مع تنفيذ `fetch()` المضمّن في Node.
 
-**الإصلاح (v3.5.5+):** يستخدم OmniRoute الآن دالة `fetch()` الخاصة بـ undici عند تنشيط موزّع وكيل، مما يضمن سلوكًا متسقًا. حدّث إلى v3.5.5+.
+**الإصلاح (v3.5.5+):** يستخدم 67router الآن دالة `fetch()` الخاصة بـ undici عند تنشيط موزّع وكيل، مما يضمن سلوكًا متسقًا. حدّث إلى v3.5.5+.
 
 ### وكيل MITM ضمن WSL: لا يتم اعتراض تطبيقات سطح المكتب على مضيف Windows
 
-**السبب:** يتم تثبيت وكيل MITM وشهادة CA الخاصة به داخل البيئة التي يعمل فيها OmniRoute. في WSL، تكون هذه البيئة هي نظام Linux الضيف، بينما تعمل تطبيقات الذكاء الاصطناعي لسطح المكتب (Kiro وTrae وCopilot وZed و…) على مضيف Windows. لا تثق تطبيقات المضيف بمخزن شهادات النظام الضيف ولا تمرّر اتصالاتها عبر وكيل النظام الضيف، ولذلك لا يتم تفعيل اعتراض تطبيقات سطح المكتب هناك.
+**السبب:** يتم تثبيت وكيل MITM وشهادة CA الخاصة به داخل البيئة التي يعمل فيها 67router. في WSL، تكون هذه البيئة هي نظام Linux الضيف، بينما تعمل تطبيقات الذكاء الاصطناعي لسطح المكتب (Kiro وTrae وCopilot وZed و…) على مضيف Windows. لا تثق تطبيقات المضيف بمخزن شهادات النظام الضيف ولا تمرّر اتصالاتها عبر وكيل النظام الضيف، ولذلك لا يتم تفعيل اعتراض تطبيقات سطح المكتب هناك.
 
-**التوصية:** شغّل OmniRoute مباشرةً على نظام التشغيل نفسه الذي تعمل عليه تطبيقات سطح المكتب التي تريد اعتراضها (Windows لتطبيقات Windows؛ وينطبق الأمر نفسه على macOS/Linux). يتطلب إبقاء OmniRoute داخل WSL مع استهداف تطبيقات المضيف الوثوق يدويًا بشهادة CA التي تم إنشاؤها على مضيف Windows، وتوجيه إعدادات الشبكة/الوكيل لكل تطبيق على المضيف إلى نقطة نهاية وكيل WSL — وهذا إعداد غير مدعوم وهش.
+**التوصية:** شغّل 67router مباشرةً على نظام التشغيل نفسه الذي تعمل عليه تطبيقات سطح المكتب التي تريد اعتراضها (Windows لتطبيقات Windows؛ وينطبق الأمر نفسه على macOS/Linux). يتطلب إبقاء 67router داخل WSL مع استهداف تطبيقات المضيف الوثوق يدويًا بشهادة CA التي تم إنشاؤها على مضيف Windows، وتوجيه إعدادات الشبكة/الوكيل لكل تطبيق على المضيف إلى نقطة نهاية وكيل WSL — وهذا إعداد غير مدعوم وهش.
 
 ---
 
@@ -386,7 +386,7 @@ omniroute
 
 ### انتهاء صلاحية رمز OAuth المميز
 
-يحدّث OmniRoute الرموز المميزة تلقائيًا. إذا استمرت المشكلات:
+يحدّث 67router الرموز المميزة تلقائيًا. إذا استمرت المشكلات:
 
 1. لوحة التحكم → المزوّد → إعادة الاتصال
 2. احذف اتصال المزوّد وأضفه من جديد
@@ -599,7 +599,7 @@ curl http://localhost:20128/api/monitoring/health
 
 ### منع الاندفاع المتزامن
 
-عندما تصل طلبات متزامنة كثيرة إلى موفّر خاضع لتحديد معدل الطلبات، يستخدم OmniRoute قفل mutex مع التحديد التلقائي لمعدل الطلبات لتسلسل الطلبات ومنع حالات الفشل المتتابعة. يحدث هذا تلقائيًا لموفّري مفاتيح API.
+عندما تصل طلبات متزامنة كثيرة إلى موفّر خاضع لتحديد معدل الطلبات، يستخدم 67router قفل mutex مع التحديد التلقائي لمعدل الطلبات لتسلسل الطلبات ومنع حالات الفشل المتتابعة. يحدث هذا تلقائيًا لموفّري مفاتيح API.
 
 ### فشل طلبات الدردشة مع 503 / chat_admission_busy
 
@@ -635,7 +635,7 @@ curl http://localhost:20128/api/monitoring/health
 أو `64` أداة على الأقل، أو `32,000` رمزًا مميزًا مقدّرًا على الأقل، أو عندما يستنفد تقدير البنية المحدود
 حدوده البالغة `10,000` عقدة تمت زيارتها أو عمقًا قدره `12`.
 
-**السبب:** هذا إجراء متعمّد لتخفيف الحمل داخل OmniRoute، وليس فشلًا لدى الموفّر المنبع.
+**السبب:** هذا إجراء متعمّد لتخفيف الحمل داخل 67router، وليس فشلًا لدى الموفّر المنبع.
 تستخدم كل عملية آلية حماية محلية للعملية لحجز سعة محدودة للطلبات الثقيلة قبل الاحتفاظ
 بنص طلب كبير وتحليله. يظل حجز الطلب الثقيل محتجزًا طوال عمر استجابة SSE.
 
@@ -679,7 +679,7 @@ false` و`maxInflightBytes` ذات القيمة السخية إلى أن الم�
 
 ## تصنيف اختياري لإخفاقات RAG / LLM ‏(16 مشكلة)
 
-يضع بعض مستخدمي OmniRoute البوابة أمام حِزم RAG أو الوكلاء. في هذه الإعدادات، من الشائع ملاحظة نمط غريب: يبدو OmniRoute سليمًا (المزوّدون يعملون، وملفات تعريف التوجيه سليمة، ولا توجد تنبيهات بشأن حدود المعدل)، لكن الإجابة النهائية تظل خاطئة.
+يضع بعض مستخدمي 67router البوابة أمام حِزم RAG أو الوكلاء. في هذه الإعدادات، من الشائع ملاحظة نمط غريب: يبدو 67router سليمًا (المزوّدون يعملون، وملفات تعريف التوجيه سليمة، ولا توجد تنبيهات بشأن حدود المعدل)، لكن الإجابة النهائية تظل خاطئة.
 
 عمليًا، تنشأ هذه الحوادث عادةً من مسار RAG اللاحق، وليس من البوابة نفسها.
 
@@ -698,17 +698,17 @@ false` و`maxInflightBytes` ذات القيمة السخية إلى أن الم�
 
 1. عند التحقيق في استجابة سيئة، سجّل:
    - مهمة المستخدم وطلبه
-   - تركيبة المسار أو المزوّد في OmniRoute
+   - تركيبة المسار أو المزوّد في 67router
    - أي سياق RAG مستخدم في المراحل اللاحقة (المستندات المسترجعة، واستدعاءات الأدوات، وما إلى ذلك)
 2. اربط الحادث برقم واحد أو رقمين من WFGY ProblemMap (`No.1` … `No.16`).
-3. خزّن الرقم في لوحة المعلومات أو دليل التشغيل أو متتبّع الحوادث الخاص بك بجوار سجلات OmniRoute.
+3. خزّن الرقم في لوحة المعلومات أو دليل التشغيل أو متتبّع الحوادث الخاص بك بجوار سجلات 67router.
 4. استخدم صفحة WFGY المقابلة لتحديد ما إذا كنت بحاجة إلى تغيير حزمة RAG أو المسترجِع أو استراتيجية التوجيه.
 
 يتوفر النص الكامل والوصفات العملية هنا (ترخيص MIT، نص فقط):
 
 [ملف README الخاص بـ WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-يمكنك تجاهل هذا القسم إذا كنت لا تشغّل مسارات RAG أو الوكلاء خلف OmniRoute.
+يمكنك تجاهل هذا القسم إذا كنت لا تشغّل مسارات RAG أو الوكلاء خلف 67router.
 
 ---
 
@@ -732,7 +732,7 @@ false` و`maxInflightBytes` ذات القيمة السخية إلى أن الم�
 
 1. ثبّت Devin CLI لمنصتك
 2. عيّن `CLI_DEVIN_BIN=/usr/local/bin/devin` (أو المسار الفعلي) في `.env`
-3. أعد تشغيل OmniRoute واختبر مجددًا من **لوحة المعلومات → أدوات CLI**
+3. أعد تشغيل 67router واختبر مجددًا من **لوحة المعلومات → أدوات CLI**
 
 ### توقف فترة تهدئة النموذج (إعادة ضبط يدوية)
 
@@ -787,7 +787,7 @@ false` و`maxInflightBytes` ذات القيمة السخية إلى أن الم�
 
 1. أنشئ سرًا عشوائيًا: `openssl rand -hex 32`
 2. عيّن `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` في بيئة خادم الإنتاج (وفي أي عميل يتصل بالجسر)
-3. أعد تشغيل OmniRoute
+3. أعد تشغيل 67router
 
 ### Responses API: خفض وضع الخلفية إلى الوضع المتزامن
 

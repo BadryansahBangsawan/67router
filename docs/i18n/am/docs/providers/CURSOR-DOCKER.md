@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute በDocker ውስጥ ሲሰራ፣ ኮንቴይነሩ በhost ላይ ያለውን የCursor ጭነት ማየት ስለማይችል የቀድሞዎቹ **ከCursor IDE አስመጣ** /
+67router በDocker ውስጥ ሲሰራ፣ ኮንቴይነሩ በhost ላይ ያለውን የCursor ጭነት ማየት ስለማይችል የቀድሞዎቹ **ከCursor IDE አስመጣ** /
 `cursor-agent` ሂደቶች አይሰሩም። በምትኩ **በCursor ይግቡ**ን (deep-control PKCE) ይጠቀሙ።
 
 ## የIDE / CLI ማስመጣት በDocker ውስጥ የማይሰራበት ምክንያት
@@ -13,7 +13,7 @@ OmniRoute በDocker ውስጥ ሲሰራ፣ ኮንቴይነሩ በhost ላይ ያ
    `~/.config/Cursor/User/globalStorage/state.vscdb` ያሉ የLinux ዱካዎችን በኮንቴይነሩ _ውስጥ_ ይፈልጋል።
    በDocker Desktop for macOS ላይ የhost IDE DB በነባሪ አይጫንም፣ እና
    hostው Darwin ቢሆንም የኮንቴይነሩ OS Linux ነው።
-2. **የ`cursor-agent` binary የለም** — ይፋዊ የOmniRoute images
+2. **የ`cursor-agent` binary የለም** — ይፋዊ የ67router images
    `cursor-agent`ን አያካትቱም። ቀደም ሲል የሚገኙ ሞዴሎች
    `cursor-agent --list-models`ን በshell ያስኬዱ ነበር፣ ካልተሳካም ወደ ቋሚ catalog ይመለሱ ነበር።
 3. **የተሳሳተ binary** — የmacOS `cursor-agent`ን ወደ Linux
@@ -23,11 +23,11 @@ OmniRoute በDocker ውስጥ ሲሰራ፣ ኮንቴይነሩ በhost ላይ ያ
 
 1. **ዳሽቦርድ → አቅራቢዎች → Cursor**ን ይክፈቱ።
 2. **በCursor ይግቡ** የሚለውን tab ይምረጡ።
-3. **በCursor ይግቡ**ን ጠቅ ያድርጉ — OmniRoute
+3. **በCursor ይግቡ**ን ጠቅ ያድርጉ — 67router
    `https://cursor.com/loginDeepControl?…`ን በ**host** browserዎ ውስጥ ይከፍታል።
-4. በbrowserው ውስጥ መግባቱን ያጽድቁ፣ ከዚያም ወደ ዳሽቦርዱ ይመለሱ። OmniRoute
+4. በbrowserው ውስጥ መግባቱን ያጽድቁ፣ ከዚያም ወደ ዳሽቦርዱ ይመለሱ። 67router
    tokens እስኪደርሱ ድረስ `api2.cursor.sh/auth/poll`ን በየጊዜው ይፈትሻል።
-5. OmniRoute የ**መዳረሻ + ማደሻ** tokensን ያከማቻል እና በ
+5. 67router የ**መዳረሻ + ማደሻ** tokensን ያከማቻል እና በ
    `https://api2.cursor.sh/auth/exchange_user_api_key` በኩል ያድሳቸዋል።
 
 ይህ መንገድ Cursor IDE ወይም `cursor-agent` በኮንቴይነሩ ውስጥ እንዲኖር አይፈልግም።
@@ -36,10 +36,10 @@ OmniRoute በDocker ውስጥ ሲሰራ፣ ኮንቴይነሩ በhost ላይ ያ
 
 በመለያ የገባ ግንኙነት ሲኖር፣ **የሚገኙ ሞዴሎች / ራስ-ሰር ማመሳሰል** የግንኙነቱን bearer token በመጠቀም የCursorን
 HTTP `AiService/AvailableModels` catalog ቅድሚያ ይሰጣል።
-ይህ ካልተሳካ፣ OmniRoute አሁንም የhost `cursor-agent`ን (ካለ) ይሞክራል፣ ከዚያም
+ይህ ካልተሳካ፣ 67router አሁንም የhost `cursor-agent`ን (ካለ) ይሞክራል፣ ከዚያም
 ወደ ቋሚው registry seed ይመለሳል።
 
-OmniRoute ሁልጊዜ **`auto`**ን በcatalog ውስጥ ያቀርባል (የሚታየው “Auto”)፣ እንዲሁም
+67router ሁልጊዜ **`auto`**ን በcatalog ውስጥ ያቀርባል (የሚታየው “Auto”)፣ እንዲሁም
 የOpenCodex ዓይነት router modes የሆኑትን **`auto-cost`**፣ **`auto-balance`** እና
 **`auto-intelligence`**ን ያቀርባል። በwire ላይ እነዚህ ወደ Cursor `default` ሞዴል
 (ለሶስቱ variants ከ`optimization` ModelParameter ጋር) ይዛመዳሉ። premium ሞዴሎች የአጠቃቀም መጠናቸው ሲያልቅ
@@ -86,7 +86,7 @@ Windows በተለምዶ **ጠቅላላ**፣ **Auto + Composer** እና **API**�
 ## ባዶ turns / አጠቃቀም ማለቅ
 
 Cursor Runን ተቀብሎ ምንም የassistant ጽሑፍ ሳይመልስ ሲቀር (premium
-አጠቃቀም ሲያልቅ የተለመደ ነው)፣ OmniRoute እርምጃ ሊወሰድበት የሚችል **429** (የquota ምልክቶች) ወይም
+አጠቃቀም ሲያልቅ የተለመደ ነው)፣ 67router እርምጃ ሊወሰድበት የሚችል **429** (የquota ምልክቶች) ወይም
 መመሪያ ያለው **502** ያሳያል — ባዶ “አቅራቢው ባዶ ይዘት መለሰ” መልዕክት አይደለም።
 እንደ `not_found: AI Model Not Found` (የአጠቃቀም ጊዜ መስኮት ሲያልቅ) ያሉ የstreaming ብልሽቶች
 እንደ **የCursor rate limit / አጠቃቀም አልፏል** ተብለው ይመደባሉ እና ያንን መልዕክት
@@ -96,7 +96,7 @@ Cursor Runን ተቀብሎ ምንም የassistant ጽሑፍ ሳይመልስ ሲ�
 
 ## የclient ስሪት (headless)
 
-የአካባቢ `cursor-agent` ጭነት ከሌለ፣ OmniRoute
+የአካባቢ `cursor-agent` ጭነት ከሌለ፣ 67router
 `x-cursor-client-version`ን መጀመሪያ በenv `CURSOR_AGENT_CLI_VERSION`፣ ከዚያ በdisk-cached
 የCursor installer script scrape፣ ከዚያም በpinned build id ይወስናል። ሲያስፈልግ በ
 `CURSOR_AGENT_CLI_VERSION` ይተኩት።

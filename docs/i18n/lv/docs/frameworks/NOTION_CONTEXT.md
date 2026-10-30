@@ -11,11 +11,11 @@
 
 ## Kas tas ir
 
-OmniRoute var izveidot savienojumu ar **Notion** darbvietu kā **konteksta avotu** — lasāmu un rakstāmu
+67router var izveidot savienojumu ar **Notion** darbvietu kā **konteksta avotu** — lasāmu un rakstāmu
 zināšanu bāzi, kurai aģenti piekļūst, izmantojot iebūvēto MCP serveri. Kad ir konfigurēts Notion
 integrācijas pilnvaras marķieris, MCP rīki ļauj LLM meklēt lapās un datubāzēs,
 lasīt lapu saturu un bloku kokus, vaicāt datubāzes ar filtriem/kārtošanu un pievienot jaunus
-blokus — tas viss tiek starpniekots caur OmniRoute (ar atkārtotiem mēģinājumiem, noildzi un kļūdu klasifikāciju),
+blokus — tas viss tiek starpniekots caur 67router (ar atkārtotiem mēģinājumiem, noildzi un kļūdu klasifikāciju),
 lai modelis nekad tieši nepiekļūtu Notion API.
 
 Integrācija ir vienkāršs, pastiprināti aizsargāts oficiālās Notion REST API
@@ -40,7 +40,7 @@ SQLite tabulā `key_value` (nosaukumvieta `notion`, atslēga `integration_token`
 > [!NOTE]
 > Pilnvaras marķieris ir **Notion iekšējās integrācijas pilnvaras marķieris**. Izveidojiet integrāciju vietnē
 > <https://www.notion.com/my-integrations>, pēc tam kopīgojiet ar šo integrāciju tās lapas/datubāzes, kurām
-> OmniRoute ir jāpiekļūst (Notion atļauju modeļa pamatā ir kopīgošana,
+> 67router ir jāpiekļūst (Notion atļauju modeļa pamatā ir kopīgošana,
 > nevis piekļuve visai darbvietai).
 
 ### Konfigurēšana, izmantojot REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Visām trim metodēm ir nepieciešama informācijas paneļa autentifikācija (`isAuthenticated`). Saņemot `POST`,
-OmniRoute saglabā pilnvaras marķieri un nekavējoties izpilda testa meklēšanu ar 1 rezultātu; ja Notion
+67router saglabā pilnvaras marķieri un nekavējoties izpilda testa meklēšanu ar 1 rezultātu; ja Notion
 atgriež kļūdas objektu, pilnvaras marķieris tiek notīrīts un izsaukums neizdodas ar `400`.
 
 ## MCP rīki (6)

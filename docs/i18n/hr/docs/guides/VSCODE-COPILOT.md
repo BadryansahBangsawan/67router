@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** stavlja svaki model koji poslužuje vaš OmniRoute u _izvorni_ birač modela za GitHub Copilot Chat.
+**OmniCopilot** stavlja svaki model koji poslužuje vaš 67router u _izvorni_ birač modela za GitHub Copilot Chat.
 Nema dodatne bočne trake ni zasebnog sučelja za razgovor — Copilotov agentski način rada, pozivanje alata,
 MCP poslužitelji i prilagođene upute nastavljaju raditi, samo na modelu koji odaberete.
 
@@ -23,13 +23,13 @@ MCP poslužitelji i prilagođene upute nastavljaju raditi, samo na modelu koji o
 
 ## Postavljanje
 
-1. **Pokrenite OmniRoute** — `npm install -g omniroute && omniroute` (nadzorna ploča na `http://localhost:20128`).
-2. **Instalirajte proširenje** — potražite "OmniRoute" u prikazu Proširenja.
-3. **Odaberite model** — Copilot Chat → birač modela → **Upravljanje modelima…** → **OmniRoute**, a zatim označite
+1. **Pokrenite 67router** — `npm install -g omniroute && omniroute` (nadzorna ploča na `http://localhost:20128`).
+2. **Instalirajte proširenje** — potražite "67router" u prikazu Proširenja.
+3. **Odaberite model** — Copilot Chat → birač modela → **Upravljanje modelima…** → **67router**, a zatim označite
    modele koje želite.
 
-Nije potrebno ništa konfigurirati kada OmniRoute radi na zadanom priključku. Za udaljenu instancu otvorite
-**ikonu OmniRoute na traci aktivnosti** (ili pokrenite `OmniRoute: Manage Connection`) i postavite:
+Nije potrebno ništa konfigurirati kada 67router radi na zadanom priključku. Za udaljenu instancu otvorite
+**ikonu 67router na traci aktivnosti** (ili pokrenite `67router: Manage Connection`) i postavite:
 
 - **URL poslužitelja** — korijenska adresa poslužitelja, npr. `http://192.168.0.15:20128`. Proširenje
   dodaje sufiks `/v1`; nemojte ga uključiti.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' model je za generiranje slika i ne može se upotreblja
 
 stoga se filtriraju prema svojem polju `type` prije nego što dođu do birača. **Modeli Responses API-ja
 zadržavaju se** — svaki unos Codex / GPT-5.x oglašava `supported_endpoints: ["responses"]`,
-a OmniRoute ih prevodi za `/v1/chat/completions`, pa su potpuno upotrebljivi.
+a 67router ih prevodi za `/v1/chat/completions`, pa su potpuno upotrebljivi.
 
 ### Pružatelji koje nikada niste konfigurirali
 
@@ -87,7 +87,7 @@ dodajte ih u `blockedProviders` u postavkama nadzorne ploče; u proširenju se n
 
 ## Nadzorna ploča unutar kartice VS Codea
 
-`omnicopilot.dashboardOpen: "editor"` prikazuje nadzornu ploču OmniRoutea u kartici uređivača putem
+`omnicopilot.dashboardOpen: "editor"` prikazuje nadzornu ploču 67routera u kartici uređivača putem
 Simple Browsera umjesto u vanjskom pregledniku. Ugrađivanje se **mora izričito omogućiti na poslužitelju** putem
 `DASHBOARD_ALLOW_EMBED=vscode`, čime se HTML stranice poslužuju sa zaglavljem
 `frame-ancestors 'self' vscode-webview:` umjesto zadanog `frame-ancestors 'none'` +
@@ -120,7 +120,7 @@ Pogledajte [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) i problem
 
 ## Konfiguriranje drugih alata unutar VS Codea
 
-**`OmniRoute: Configure Coding CLI`** koristi `omniroute` CLI za zapisivanje profila spremnih za uporabu
+**`67router: Configure Coding CLI`** koristi `omniroute` CLI za zapisivanje profila spremnih za uporabu
 za Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo i Roo — istih konfiguracija koje su opisane u
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API ključ prosljeđuje se CLI-ju putem
@@ -130,20 +130,20 @@ varijable okruženja `OMNIROUTE_API_KEY`, nikada putem naredbenog retka.
 
 ## Rješavanje problema
 
-| Simptom                                                       | Uzrok / rješenje                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| U biraču nema modela OmniRoutea                               | Poslužitelj nije dostupan. Točka na statusnoj traci postaje siva; pokrenite `OmniRoute: Check Connection`. Otkrivanje je namjerno neprimjetno i ne dodaje modele umjesto prikazivanja upita.                                                                                   |
-| Svaki se model pojavljuje dvaput                              | Upotrebljavate verziju OmniCopilota stariju od 1.0.1 — ažurirajte je. Proširenje sada šalje zahtjev s `?prefix=alias`.                                                                                                                                                         |
-| Model za slike/zvuk prije je bio naveden, ali više nije       | Namjerno od verzije 1.0.1 — takav model nikada nije mogao odgovoriti na zahtjev za razgovor.                                                                                                                                                                                   |
-| Ploča nedostaje na traci aktivnosti                           | VS Code premješta dodatne spremnike prikaza u izbornik viška **"…"** pri dnu trake aktivnosti, a spremnik skriven desnim klikom ostaje skriven. Desnom tipkom miša kliknite traku aktivnosti → označite **OmniRoute** ili ga otvorite naredbom `OmniRoute: Manage Connection`. |
-| Nadzorna ploča otvara se u pregledniku unatoč načinu `editor` | Poslužitelj nije **izgrađen** s `DASHBOARD_ALLOW_EMBED=vscode` (pogledajte iznad) — postavljanje te varijable pri pokretanju unaprijed izgrađene instalacije ne čini ništa. Povratak na preglednik namjeran je.                                                                |
-| Popis modela zastario je nakon promjene pružatelja            | `OmniRoute: Refresh Models` ili poveznica ↻ na ploči.                                                                                                                                                                                                                          |
+| Simptom                                                       | Uzrok / rješenje                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| U biraču nema modela 67routera                                | Poslužitelj nije dostupan. Točka na statusnoj traci postaje siva; pokrenite `67router: Check Connection`. Otkrivanje je namjerno neprimjetno i ne dodaje modele umjesto prikazivanja upita.                                                                                  |
+| Svaki se model pojavljuje dvaput                              | Upotrebljavate verziju OmniCopilota stariju od 1.0.1 — ažurirajte je. Proširenje sada šalje zahtjev s `?prefix=alias`.                                                                                                                                                       |
+| Model za slike/zvuk prije je bio naveden, ali više nije       | Namjerno od verzije 1.0.1 — takav model nikada nije mogao odgovoriti na zahtjev za razgovor.                                                                                                                                                                                 |
+| Ploča nedostaje na traci aktivnosti                           | VS Code premješta dodatne spremnike prikaza u izbornik viška **"…"** pri dnu trake aktivnosti, a spremnik skriven desnim klikom ostaje skriven. Desnom tipkom miša kliknite traku aktivnosti → označite **67router** ili ga otvorite naredbom `67router: Manage Connection`. |
+| Nadzorna ploča otvara se u pregledniku unatoč načinu `editor` | Poslužitelj nije **izgrađen** s `DASHBOARD_ALLOW_EMBED=vscode` (pogledajte iznad) — postavljanje te varijable pri pokretanju unaprijed izgrađene instalacije ne čini ništa. Povratak na preglednik namjeran je.                                                              |
+| Popis modela zastario je nakon promjene pružatelja            | `67router: Refresh Models` ili poveznica ↻ na ploči.                                                                                                                                                                                                                         |
 
 ---
 
 ## Vidi također
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — svi ostali alati za programiranje
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje udaljenim OmniRouteom
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — upravljanje udaljenim 67routerom
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — ugovor za `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — vlastite bilješke proširenja o katalogu

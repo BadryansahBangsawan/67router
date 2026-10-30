@@ -4,7 +4,7 @@
 
 ---
 
-Transparentno dešifriranje TPROXY je OmniRouteov **5. način zajema** za sklad MITM
+Transparentno dešifriranje TPROXY je 67routerov **5. način zajema** za sklad MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Na Linuxu prestreza in **dešifrira** lokalni odhodni promet HTTPS z uporabo jedrnega
 TPROXY-ja in usmerjanja na podlagi pravilnikov — **brez** potvarjanja datoteke `/etc/hosts` ter
@@ -53,7 +53,7 @@ Uporabite ga, kadar želite zajeti in dešifrirati promet procesa, ki:
 - ga ne želite motiti s spremembo sistemskega posredniškega strežnika.
 
 Ker prestrezanje poteka v jedru, izvorni proces **ne potrebuje nobene
-spremembe konfiguracije** — vendar mora zaupati dinamični overiteljici, ki jo namesti OmniRoute
+spremembe konfiguracije** — vendar mora zaupati dinamični overiteljici, ki jo namesti 67router
 (glejte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ dodatek ni preveden), nalagalnik dodatka (`src/mitm/tproxy/transparentSocket.ts:
 vrne `null`, namesto da bi sprožil izjemo. Stanje načina zajemanja nato sporoči
 `available: false`, preklopnik na nadzorni plošči je **onemogočen** z opisom orodja
 »Dešifriranje TPROXY zahteva Linux + root + izvorni dodatek«, preostali del
-OmniRoute pa še naprej deluje.
+67router pa še naprej deluje.
 
 ---
 
@@ -260,7 +260,7 @@ zanka. Pot posredovanja se pred tem zaščiti z oznako vtičnice za obhod
 | **Sanitizacija napak**                       | Odgovori poti z napakami se obdelajo prek `sanitizeErrorMessage()` (strogo pravilo št. 12).                                                                                                                                                                                                                                                                                                                                    |
 
 **Overitelj potrdil MITM omogoča zelo zmogljivo funkcionalnost.** Overitelj potrdil, ki mu operacijski sistem zaupa in ki lahko podpiše potrdilo za katerega koli
-gostitelja, pomeni, da je mogoče dešifrirati vse, kar OmniRoute prestreže. Zaščiten je z
+gostitelja, pomeni, da je mogoče dešifrirati vse, kar 67router prestreže. Zaščiten je z
 izrecnim, zgolj lokalnim načinom prestrezanja TPROXY, ki je privzeto izklopljen, vnos v
 shrambi zaupanja pa se odstrani, ko način zaustavite.
 
@@ -372,7 +372,7 @@ Izvornega dodatka ni mogoče naložiti. Preverite, ali uporabljate Linux, ali st
 ### Zastarela pravila požarnega zidu po sesutju
 
 `revertTproxy()` je natančno nasprotje uveljavitve in je idempotentna. Ustavitev
-načina razveljavi pravila; če je bil OmniRoute zaustavljen med sejo, uporabite dejanje
+načina razveljavi pravila; če je bil 67router zaustavljen med sejo, uporabite dejanje
 **Repair** storitve AgentBridge (`POST /api/tools/agent-bridge/repair`), da razveljavite osirotelo
 stanje sistema (ponarejanje DNS, korenski CA, sistemski posredniški strežnik). Pravila TPROXY
 `mangle` in pot se ob ponovnem zagonu prav tako samodejno počistijo.

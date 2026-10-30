@@ -4,7 +4,7 @@
 
 ---
 
-La compressione RTK è il motore di compressione di OmniRoute sensibile ai comandi per l'output del terminale e degli strumenti. È
+La compressione RTK è il motore di compressione di 67router sensibile ai comandi per l'output del terminale e degli strumenti. È
 progettata per le sessioni degli agenti di programmazione, in cui la maggior parte della crescita del contesto deriva da log dei test, output di compilazione,
 rumore dei gestori di pacchetti, trascrizioni della shell, output di Docker, output di git e stack trace.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Quest'ordine comprime prima l'output macchina ridondante, quindi consente a Caveman di condensare il testo rimanente.
 
 Il progetto RTK upstream dichiara un risparmio del `60-90%` sull'output dei comandi. La sessione di esempio nel suo README passa da
-`~118,000` token standard a `~23,900` token RTK, con un risparmio del `79.7%` (`~80%`). OmniRoute utilizza
+`~118,000` token standard a `~23,900` token RTK, con un risparmio del `79.7%` (`~80%`). 67router utilizza
 questa media upstream per calcolare il risparmio della concatenazione con la compressione dell'input di Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK carica i filtri nel seguente ordine:
 2. Filtri globali da `DATA_DIR/rtk/filters.toml` e `DATA_DIR/rtk/filters.json`.
 3. Filtri integrati da `open-sse/services/compression/engines/rtk/filters/`.
 
-All'interno dello stesso ambito, i filtri TOML con schema RTK v1 hanno la precedenza sui filtri JSON di OmniRoute. Le espressioni TOML
+All'interno dello stesso ambito, i filtri TOML con schema RTK v1 hanno la precedenza sui filtri JSON di 67router. Le espressioni TOML
 `match_command` vengono verificate prima della corrispondenza per tipo di comando, in modo che un filtro importato specifico per un comando
 possa sostituire un filtro più generico nello stesso ambito. L'ambito del progetto continua ad avere la precedenza sull'ambito globale,
 indipendentemente dal formato del file.
@@ -84,7 +84,7 @@ ignorati e segnalati dalla diagnostica di `/api/context/rtk/filters`. I filtri i
 
 ## Compatibilità con lo schema RTK TOML v1
 
-OmniRoute può analizzare, convalidare, testare e installare file di filtri dichiarativi utilizzando lo schema RTK TOML v1.
+67router può analizzare, convalidare, testare e installare file di filtri dichiarativi utilizzando lo schema RTK TOML v1.
 I campi supportati sono `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` e i test inline `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ I campi sconosciuti, le espressioni regolari non valide o non sicure, le regole 
 convalidato per l'ispezione, ma non può essere installato o caricato. Gli errori di caricamento dei file personalizzati rimangono
 fail-open: il file non valido viene ignorato e i filtri rimanenti continuano a funzionare.
 
-OmniRoute riceve l'output dello strumento dopo che il client lo ha già acquisito, pertanto `filter_stderr = true`
+67router riceve l'output dello strumento dopo che il client lo ha già acquisito, pertanto `filter_stderr = true`
 non può modificare l'acquisizione del processo. Il campo viene accettato come no-op e la convalida restituisce un avviso.
 Questa funzionalità viene intenzionalmente descritta come **compatibilità con lo schema RTK TOML v1**, non come compatibilità completa
 con l'eseguibile RTK, gli hook della shell, le implementazioni dei comandi Rust o la struttura del relativo archivio di attendibilità.

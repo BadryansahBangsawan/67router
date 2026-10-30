@@ -7,7 +7,7 @@
 > **ਸੱਚਾਈ ਦਾ ਸਰੋਤ:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **ਆਖਰੀ ਅੱਪਡੇਟ:** 2026-06-28 — v3.8.40
 
-OmniRoute ਪਲੇਟਫਾਰਮ ਇਵੈਂਟਾਂ 'ਤੇ HTTP ਵੈੱਬਹੁੱਕ ਟ੍ਰਿਗਰ ਕਰ ਸਕਦਾ ਹੈ। ਇਨ੍ਹਾਂ ਦੀ ਵਰਤੋਂ
+67router ਪਲੇਟਫਾਰਮ ਇਵੈਂਟਾਂ 'ਤੇ HTTP ਵੈੱਬਹੁੱਕ ਟ੍ਰਿਗਰ ਕਰ ਸਕਦਾ ਹੈ। ਇਨ੍ਹਾਂ ਦੀ ਵਰਤੋਂ
 Slack, PagerDuty, Datadog, ਅੰਦਰੂਨੀ ਅਲਰਟਿੰਗ ਸੇਵਾਵਾਂ ਜਾਂ ਕਿਸੇ ਵੀ HTTP ਰਿਸੀਵਰ ਨਾਲ ਏਕੀਕਰਨ ਲਈ ਕਰੋ।
 
 ਡਿਸਪੈਚਰ ਹਰ ਡਿਲੀਵਰੀ ਨੂੰ HMAC-SHA256 ਨਾਲ ਸਾਈਨ ਕਰਦਾ ਹੈ, ਅਸਥਾਈ
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, ਅੰਦਰੂਨੀ ਅਲਰਟਿੰਗ ਸੇਵ
 
 ## HMAC ਸਾਈਨਿੰਗ
 
-ਜਦੋਂ ਕਿਸੇ ਵੈੱਬਹੁੱਕ ਕੋਲ `secret` ਹੁੰਦਾ ਹੈ, ਤਾਂ OmniRoute JSON ਬਾਡੀ ਨੂੰ ਸਾਈਨ ਕਰਦਾ ਹੈ ਅਤੇ ਇਹ ਭੇਜਦਾ ਹੈ:
+ਜਦੋਂ ਕਿਸੇ ਵੈੱਬਹੁੱਕ ਕੋਲ `secret` ਹੁੰਦਾ ਹੈ, ਤਾਂ 67router JSON ਬਾਡੀ ਨੂੰ ਸਾਈਨ ਕਰਦਾ ਹੈ ਅਤੇ ਇਹ ਭੇਜਦਾ ਹੈ:
 
 ```
 Content-Type: application/json
@@ -207,7 +207,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute ਤੋਂ ਟੈਸਟ ਵੈੱਬਹੁੱਕ ਡਿਲਿਵਰੀ",
+    "message": "67router ਤੋਂ ਟੈਸਟ ਵੈੱਬਹੁੱਕ ਡਿਲਿਵਰੀ",
     "webhookId": "<uuid>"
   }
 }

@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (ქართული)
+# Codex CLI — Configuration with 67router (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-OmniRoute-ზე, როგორც OpenAI-თან თავსებად ბეკენდზე, მიმართული Codex CLI-ის გამოყენების სრული გზამკვლევი.
+67router-ზე, როგორც OpenAI-თან თავსებად ბეკენდზე, მიმართული Codex CLI-ის გამოყენების სრული გზამკვლევი.
 
 ---
 
@@ -61,18 +61,18 @@ command -v codex
 codex --version
 ```
 
-### ლოკალური OmniRoute ავთენტიფიკაციის გარეშე: საკმარისია დროებითი გასაღები
+### ლოკალური 67router ავთენტიფიკაციის გარეშე: საკმარისია დროებითი გასაღები
 
 Codex ამოწმებს, არსებობს თუ არა `env_key`-ით მითითებული გარემოს ცვლადი,
 **მანამდე**, სანამ პირველი მოთხოვნა CLI-ს დატოვებს. თუ თქვენი **ლოკალური**
-OmniRoute-ის ინსტანცია ავთენტიფიკაციას არ საჭიროებს, ნებისმიერი არაცარიელი
+67router-ის ინსტანცია ავთენტიფიკაციას არ საჭიროებს, ნებისმიერი არაცარიელი
 დროებითი მნიშვნელობა გამოდგება:
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-თუ თქვენი OmniRoute სერვერი დაცულია ან დისტანციურია, ამის ნაცვლად გამოიყენეთ რეალური გასაღები.
+თუ თქვენი 67router სერვერი დაცულია ან დისტანციურია, ამის ნაცვლად გამოიყენეთ რეალური გასაღები.
 
 > **ჰოსტის გავრცელებული ვარიანტები**
 >
@@ -88,19 +88,19 @@ export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 
 Codex CLI-მ `wire_api = "chat"` (Chat Completions) 2026 წლის თებერვალში მოძველებულად გამოაცხადა და ახლა **მოითხოვს** `wire_api = "responses"`-ს (OpenAI Responses API). `wire_api = "chat"`-ის დაყენება v0.138-დან მოყოლებული გაშვებისთანავე ავარიულ დასრულებას იწვევს.
 
-ბევრი პროვაიდერი, მათ შორის GLM და Kimi, კვლავ მხოლოდ Chat Completions-ის საბოლოო წერტილს გვთავაზობს. DeepSeek V4 ახლა გვთავაზობს როგორც ნატიურ Responses API-ს, ასევე Anthropic-თან თავსებად საბოლოო წერტილს; OmniRoute ნაგულისხმევად Responses-ს იყენებს და DeepSeek-ის თითოეულ კავშირს Anthropic-თან თავსებადობის არჩევის საშუალებას აძლევს.
+ბევრი პროვაიდერი, მათ შორის GLM და Kimi, კვლავ მხოლოდ Chat Completions-ის საბოლოო წერტილს გვთავაზობს. DeepSeek V4 ახლა გვთავაზობს როგორც ნატიურ Responses API-ს, ასევე Anthropic-თან თავსებად საბოლოო წერტილს; 67router ნაგულისხმევად Responses-ს იყენებს და DeepSeek-ის თითოეულ კავშირს Anthropic-თან თავსებადობის არჩევის საშუალებას აძლევს.
 
-**OmniRoute ამას გამჭვირვალედ აგვარებს:**
+**67router ამას გამჭვირვალედ აგვარებს:**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute ირჩევს პროვაიდერის ნატიურ პროტოკოლს და საჭიროების შემთხვევაში გარდაქმნის
+  → POST /v1/responses (67router)
+    → 67router ირჩევს პროვაიდერის ნატიურ პროტოკოლს და საჭიროების შემთხვევაში გარდაქმნის
     → POST /responses (DeepSeek V4) ან /chat/completions (Mistral / GLM / Kimi / სხვები)
 ```
 
-OmniRoute-ის გამოყენებისას ცალკე გარდამქმნელი პროქსი არასდროს გჭირდებათ. **ყველა მოდელი იყენებს `wire_api = "responses"`-ს** — დანარჩენს OmniRoute ამუშავებს.
+67router-ის გამოყენებისას ცალკე გარდამქმნელი პროქსი არასდროს გჭირდებათ. **ყველა მოდელი იყენებს `wire_api = "responses"`-ს** — დანარჩენს 67router ამუშავებს.
 
 > **`wire_api` ნაგულისხმევი მნიშვნელობაა** — ველის ნაგულისხმევი მნიშვნელობაა `"responses"` და მისი `config.toml`-დან სრულად გამოტოვება შეიძლება. ის ცხადად მხოლოდ მაშინ მიუთითეთ, თუ თქვენი განზრახვის დოკუმენტირება გსურთ.
 
@@ -121,7 +121,7 @@ OmniRoute-ის გამოყენებისას ცალკე გა�
 
 ### კონტექსტის ფანჯრები მოდელების მიხედვით
 
-| მოდელი                               | OmniRoute ID                         | კონტექსტის ფანჯარა      | `auto_compact` | `tool_output_limit` |
+| მოდელი                               | 67router ID                          | კონტექსტის ფანჯარა      | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | ----------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k საიმედო (მაქს. 1M) | 350,000        | 32,768              |
 | Kimi K2.7 (მსჯელობით)                | `kmc/kimi-k2.7`                      | 131,072                 | 112,000        | 32,768              |
@@ -149,16 +149,16 @@ OmniRoute-ის გამოყენებისას ცალკე გა�
 
 ## მოდელის პრეფიქსი: `cx/`
 
-OmniRoute-ში ყველა Codex მოდელი იყენებს `cx/` პრეფიქსს:
+67router-ში ყველა Codex მოდელი იყენებს `cx/` პრეფიქსს:
 
-| Codex CLI-ის სახელი     | OmniRoute-ის მოდელი |
+| Codex CLI-ის სახელი     | 67router-ის მოდელი  |
 | ----------------------- | ------------------- |
 | `cx/gpt-5.5`            | GPT-5.5 სტანდარტული |
 | `cx/gpt-5.4`            | GPT-5.4 სტანდარტული |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini        |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini  |
 
-სხვა პროვაიდერები საკუთარ პრეფიქსებს იყენებენ (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — პრეფიქსი OmniRoute-ის პროვაიდერის ფსევდონიმს ემთხვევა.
+სხვა პროვაიდერები საკუთარ პრეფიქსებს იყენებენ (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — პრეფიქსი 67router-ის პროვაიდერის ფსევდონიმს ემთხვევა.
 
 ---
 
@@ -188,9 +188,9 @@ model_reasoning_effort = "xhigh"   # ან ultra, როცა მხარდ�
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### OmniRoute-ის აზროვნების ბიუჯეტი (სერვერის პარამეტრი)
+### 67router-ის აზროვნების ბიუჯეტი (სერვერის პარამეტრი)
 
-OmniRoute-ის ჰოსტზე **Settings → AI → Thinking Budget** უნდა იყოს დაყენებული **`passthrough`**-ზე, რათა Codex-ის ინტენსივობა/შეჯამება ზედა დონის სერვისამდე მივიდეს. რეჟიმი **`auto` შლის** კლიენტის ყველა `reasoning` / `reasoning_effort` ველს და აზროვნების პანელებს ცარიელს დატოვებს მაშინაც კი, როდესაც Codex სწორადაა კონფიგურირებული.
+67router-ის ჰოსტზე **Settings → AI → Thinking Budget** უნდა იყოს დაყენებული **`passthrough`**-ზე, რათა Codex-ის ინტენსივობა/შეჯამება ზედა დონის სერვისამდე მივიდეს. რეჟიმი **`auto` შლის** კლიენტის ყველა `reasoning` / `reasoning_effort` ველს და აზროვნების პანელებს ცარიელს დატოვებს მაშინაც კი, როდესაც Codex სწორადაა კონფიგურირებული.
 
 სრული სახელმძღვანელო: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -276,10 +276,10 @@ codex -p chat     # cx/gpt-5.5, ინტენსივობა დაყე�
 
 ## პროფილების ავტომატურად გენერირება `omniroute setup-codex`-ით
 
-თუ OmniRoute-ს VPS-ზე უშვებთ, შეგიძლიათ პროფილის ფაილები მოქმედი მოდელების კატალოგიდან ავტომატურად დააგენერიროთ:
+თუ 67router-ს VPS-ზე უშვებთ, შეგიძლიათ პროფილის ფაილები მოქმედი მოდელების კატალოგიდან ავტომატურად დააგენერიროთ:
 
 ```bash
-# VPS-იდან (იყენებს ლოკალურ OmniRoute-ს 20128 პორტზე)
+# VPS-იდან (იყენებს ლოკალურ 67router-ს 20128 პორტზე)
 omniroute setup-codex
 
 # ნებისმიერი მოწყობილობიდან — მიუთითეთ თქვენი VPS
@@ -306,7 +306,7 @@ omniroute setup-codex --codex-home /path/to/.codex
 როდესაც უთითებთ `--api-key`-ს ან `OMNIROUTE_API_KEY`-ს, ახლად განსაზღვრული პროვაიდერი მიმართავს
 `env_key = "OMNIROUTE_API_KEY"`-ს; თავად გასაღები არასოდეს ინახება და არც წინასწარ
 ნახვაში გამოისახება. დააყენეთ ეს ცვლადი იმ გარემოში, საიდანაც Codex-ს უშვებთ. მიწოდებული
-გასაღების გარეშე ახალ განსაზღვრებას გასაღები არ სჭირდება — ეს განკუთვნილია OmniRoute-ის იმ ინსტანციისთვის,
+გასაღების გარეშე ახალ განსაზღვრებას გასაღები არ სჭირდება — ეს განკუთვნილია 67router-ის იმ ინსტანციისთვის,
 რომელიც კონფიგურირებულია არაავთენტიფიცირებული მოთხოვნების მისაღებად.
 
 ქვემოთ აღწერილი, სურვილისამებრ ჩასართავი კატალოგის ავტომატური სინქრონიზაცია ინარჩუნებს პროვაიდერის განსაზღვრებებს, რომლებიც უკვე
@@ -314,16 +314,16 @@ omniroute setup-codex --codex-home /path/to/.codex
 აშკარა დაყენებით ან მართვის პანელიდან. პროვაიდერის არსებული პარამეტრები გამოტოვებულია
 `--dry-run`-ის წინასწარი ნახვიდან, რადგან შესაძლოა ისინი ოპერატორის მიერ მართულ ავტორიზაციის მონაცემებს შეიცავდეს.
 
-OmniRoute-ს ასევე შეუძლია ამავე პროფილის ფაილების **ავტომატურად სინქრონიზაცია** მას შემდეგ, რაც პროვაიდერის მოდელების წარმატებული აღმოჩენა/იმპორტი მოქმედ კატალოგს შეცვლის. ეს ფუნქცია **სურვილისამებრ ჩასართავია და ნაგულისხმევად გამორთულია**: ჩართეთ ის **CLI Code-ის მართვის პანელიდან** („CLI profile auto-sync“ → Codex), ან დააყენეთ `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (ის ასევე ითვალისწინებს `CLI_ALLOW_CONFIG_WRITES`-ს, რომელიც ნაგულისხმევად ჩართულია). ჩართვისას ის მხოლოდ ცალკეულ `~/.codex/*.config.toml` პროფილის ფაილებს წერს; ის არასოდეს ცვლის აქტიურ/ნაგულისხმევ `~/.codex/config.toml`-ს, Codex-lb-ის პარამეტრებს, ავთენტიფიკაციას ან პროვაიდერის არჩევანს.
+67router-ს ასევე შეუძლია ამავე პროფილის ფაილების **ავტომატურად სინქრონიზაცია** მას შემდეგ, რაც პროვაიდერის მოდელების წარმატებული აღმოჩენა/იმპორტი მოქმედ კატალოგს შეცვლის. ეს ფუნქცია **სურვილისამებრ ჩასართავია და ნაგულისხმევად გამორთულია**: ჩართეთ ის **CLI Code-ის მართვის პანელიდან** („CLI profile auto-sync“ → Codex), ან დააყენეთ `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (ის ასევე ითვალისწინებს `CLI_ALLOW_CONFIG_WRITES`-ს, რომელიც ნაგულისხმევად ჩართულია). ჩართვისას ის მხოლოდ ცალკეულ `~/.codex/*.config.toml` პროფილის ფაილებს წერს; ის არასოდეს ცვლის აქტიურ/ნაგულისხმევ `~/.codex/config.toml`-ს, Codex-lb-ის პარამეტრებს, ავთენტიფიკაციას ან პროვაიდერის არჩევანს.
 
 ---
 
 ## Codex-ის გაშვება `omniroute launch-codex`-ით
 
-Codex-ის გაშვებამდე ამოწმებს თქვენი OmniRoute ინსტანციის მდგომარეობას:
+Codex-ის გაშვებამდე ამოწმებს თქვენი 67router ინსტანციის მდგომარეობას:
 
 ```bash
-# ლოკალურ OmniRoute-თან გაშვება (ნაგულისხმევი პორტი 20128)
+# ლოკალურ 67router-თან გაშვება (ნაგულისხმევი პორტი 20128)
 omniroute launch-codex
 
 # კონკრეტული პროფილით გაშვება
@@ -473,7 +473,7 @@ codex debug models --bundled       # ჩაშენებული მოდე
 
 ## ხანგრძლივი ამოცანები
 
-OmniRoute-ის ორ ნაგულისხმევ პარამეტრს შეუძლია შეუმჩნევლად ჩაშალოს Codex CLI-ის მრავალსაათიანი სესიები. არცერთი მათგანი არ არის Codex CLI-ის პარამეტრი — ორივე OmniRoute-ის მხარესაა. მომხმარებლები, რომლებსაც კონფიგურაცია გადააქვთ ზედა დონის პროქსიებიდან, რომლებიც ანგარიშებს ამაგრებენ და უმოქმედობის შეზღუდვებს თიშავენ, ხშირად ორივე პრობლემას აწყდებიან და ასკვნიან, რომ OmniRoute-ს „ხანგრძლივი სესიის შენარჩუნება არ შეუძლია“.
+67router-ის ორ ნაგულისხმევ პარამეტრს შეუძლია შეუმჩნევლად ჩაშალოს Codex CLI-ის მრავალსაათიანი სესიები. არცერთი მათგანი არ არის Codex CLI-ის პარამეტრი — ორივე 67router-ის მხარესაა. მომხმარებლები, რომლებსაც კონფიგურაცია გადააქვთ ზედა დონის პროქსიებიდან, რომლებიც ანგარიშებს ამაგრებენ და უმოქმედობის შეზღუდვებს თიშავენ, ხშირად ორივე პრობლემას აწყდებიან და ასკვნიან, რომ 67router-ს „ხანგრძლივი სესიის შენარჩუნება არ შეუძლია“.
 
 | სიმპტომი                                                                                | სავარაუდო მიზეზი                                                                                  | პარამეტრი                |
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------ |
@@ -495,7 +495,7 @@ OmniRoute-ის ორ ნაგულისხმევ პარამეტ�
 
 **რა ფუჭდება, როდესაც მნიშვნელობა 0-ად რჩება**
 
-Codex-ის მრავალეტაპიანი საუბრის თითოეული მოთხოვნა დამოუკიდებლად მარშრუტიზდება აქტიური კომბინირებული სტრატეგიით და თითოეულ ჯერზე შეიძლება **სხვადასხვა ანგარიშზე** მოხვდეს. ეს არღვევს ზედა დონის სესიის / prompt-cache-ის უწყვეტობას. OmniRoute Codex-ის სესიის სათაურებს (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) და სხეულის ისეთ ველებს, როგორებიცაა `prompt_cache_key` / `session_id`, მხოლოდ მაშინ ამოწმებს, როდესაც TTL `0`-ზე მეტია (`extractSessionAffinityKey` ფაილში `src/sse/services/auth.ts`).
+Codex-ის მრავალეტაპიანი საუბრის თითოეული მოთხოვნა დამოუკიდებლად მარშრუტიზდება აქტიური კომბინირებული სტრატეგიით და თითოეულ ჯერზე შეიძლება **სხვადასხვა ანგარიშზე** მოხვდეს. ეს არღვევს ზედა დონის სესიის / prompt-cache-ის უწყვეტობას. 67router Codex-ის სესიის სათაურებს (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) და სხეულის ისეთ ველებს, როგორებიცაა `prompt_cache_key` / `session_id`, მხოლოდ მაშინ ამოწმებს, როდესაც TTL `0`-ზე მეტია (`extractSessionAffinityKey` ფაილში `src/sse/services/auth.ts`).
 
 **რეკომენდაცია მრავალსაათიანი ერთი ამოცანისთვის**
 
@@ -517,13 +517,13 @@ Codex-ის მრავალეტაპიანი საუბრის �
 
 Codex-ის reasoning / tool ეტაპი, რომელიც 10 წუთზე მეტხანს ჩუმად რჩება და **არცერთ რეალურ upstream chunk-ს** არ იღებს, SSE-ის უმოქმედობის watchdog-ის მიერ იძულებით იხურება (`open-sse/utils/stream.ts`). კლიენტი ხშირად მხოლოდ კავშირის მოულოდნელ გაწყვეტას ხედავს — რაც შეესაბამება აღწერას: „ავტომატურად შეჩერდა ყოველგვარი შეტყობინების გარეშე“.
 
-კრიტიკული დეტალი: OmniRoute-ის სინთეზური SSE **heartbeat არ ანულებს** უმოქმედობის ტაიმერს. `lastChunkTime` განახლდება მხოლოდ რეალური upstream body chunk-ის მიღებისას. მოდელი, რომელიც ჩუმად აგრძელებს „ფიქრს“, watchdog-ის თვალსაზრისით არაფრით განსხვავდება გაჭედილი upstream-ისგან.
+კრიტიკული დეტალი: 67router-ის სინთეზური SSE **heartbeat არ ანულებს** უმოქმედობის ტაიმერს. `lastChunkTime` განახლდება მხოლოდ რეალური upstream body chunk-ის მიღებისას. მოდელი, რომელიც ჩუმად აგრძელებს „ფიქრს“, watchdog-ის თვალსაზრისით არაფრით განსხვავდება გაჭედილი upstream-ისგან.
 
 Undici-ს body-ის უმოქმედობასთან დაკავშირებული პარამეტრი: `FETCH_BODY_TIMEOUT_MS` (ნაგულისხმევად ასევე იგივე 10-წუთიანი საბაზისო მნიშვნელობა აქვს; `0` მას გამორთავს). სტრიმინგისას `FETCH_TIMEOUT_MS` მხოლოდ კავშირის დამყარებას / პირველი headers-ის მიღებას მოიცავს — სტრიმის გააქტიურების შემდეგ შეფერხებებს `STREAM_IDLE_TIMEOUT_MS` და `FETCH_BODY_TIMEOUT_MS` მართავს.
 
 **რეკომენდაცია მრავალსაათიანი ერთეული დავალებისთვის**
 
-OmniRoute-ის პროცესის გარემოში (`.env` / compose / systemd):
+67router-ის პროცესის გარემოში (`.env` / compose / systemd):
 
 ```bash
 # ხანგრძლივი reasoning ეტაპებისთვის გამორთეთ სტრიმის უმოქმედობისა და body-ის უმოქმედობის შეზღუდვები
@@ -539,12 +539,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-ამ env vars-ის შეცვლის შემდეგ გადატვირთეთ OmniRoute.
+ამ env vars-ის შეცვლის შემდეგ გადატვირთეთ 67router.
 
 ### კონკრეტული ინსტრუქცია — მრავალსაათიანი Codex-ის დავალება
 
 1. **მიამაგრეთ ანგარიში:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12სთ) ან `86400` (მაქს. 24სთ).
-2. **გაზარდეთ / გამორთეთ უმოქმედობის შეზღუდვები** OmniRoute-ის გარემოში:
+2. **გაზარდეთ / გამორთეთ უმოქმედობის შეზღუდვები** 67router-ის გარემოში:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -552,7 +552,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. შეინარჩუნეთ Codex-ის ჩვეულებრივი `config.toml` (`wire_api = "responses"`, სწორი `base_url`, `OMNIROUTE_API_KEY`) — ამ ორი ქცევის სამართავად Codex-ის მხარეს affinity/idle პარამეტრები არ არსებობს.
-4. გადატვირთეთ OmniRoute, შემდეგ კი გაუშვით Codex-ის ხანგრძლივი დავალება.
+4. გადატვირთეთ 67router, შემდეგ კი გაუშვით Codex-ის ხანგრძლივი დავალება.
 
 ### ნაგულისხმევი მნიშვნელობების გადაწყვეტილება (#7287)
 
@@ -565,13 +565,13 @@ FETCH_BODY_TIMEOUT_MS=0
 
 ### უმოქმედობით გამოწვეული გათიშვების დიაგნოსტიკა
 
-როდესაც უმოქმედობის watchdog ამოქმედდება, OmniRoute ჟურნალში წერს დაახლოებით ასეთ სტრიქონს:
+როდესაც უმოქმედობის watchdog ამოქმედდება, 67router ჟურნალში წერს დაახლოებით ასეთ სტრიქონს:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-მოძებნეთ `Idle timeout: no data from` (ან კოდი `stream_idle_timeout` / შეცდომის სახელი `StreamIdleTimeoutError`). პროვაიდერის სეგმენტი არის ის მნიშვნელობა, რომელიც OmniRoute-მა ამ მოთხოვნისთვის გამოიყენა (`codex`, სხვა პროვაიდერის id, ან `provider`, თუ უცნობია) — ის ყოველთვის პირდაპირი მნიშვნელობით `codex` არ არის.
+მოძებნეთ `Idle timeout: no data from` (ან კოდი `stream_idle_timeout` / შეცდომის სახელი `StreamIdleTimeoutError`). პროვაიდერის სეგმენტი არის ის მნიშვნელობა, რომელიც 67router-მა ამ მოთხოვნისთვის გამოიყენა (`codex`, სხვა პროვაიდერის id, ან `provider`, თუ უცნობია) — ის ყოველთვის პირდაპირი მნიშვნელობით `codex` არ არის.
 
 ---
 
@@ -581,16 +581,16 @@ FETCH_BODY_TIMEOUT_MS=0
 კონფიგურაციიდან წაშალეთ `wire_api = "chat"`. მიუთითეთ `wire_api = "responses"` ან გამოტოვეთ ეს ველი (v0.138-დან ნაგულისხმევი მნიშვნელობაა `"responses"`).
 
 **`Error: model not found`**
-შეამოწმეთ, რომ მოდელი OmniRoute-ში სწორი პრეფიქსით არსებობს. გამოიყენეთ `omniroute models list` ან გახსენით `/dashboard/providers/<provider>`.
+შეამოწმეთ, რომ მოდელი 67router-ში სწორი პრეფიქსით არსებობს. გამოიყენეთ `omniroute models list` ან გახსენით `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 დარწმუნდით, რომ `OMNIROUTE_API_KEY` ექსპორტირებულია: `echo $OMNIROUTE_API_KEY`.
 
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
-Codex პირველი მოთხოვნის გაგზავნამდე ამოწმებს, არსებობს თუ არა გარემოს ცვლადი. დაცული სერვერებისთვის მოახდინეთ რეალური გასაღების ექსპორტი, ხოლო თუ თქვენი **ლოკალური** OmniRoute-ის ინსტანცია ავტორიზაციას არ საჭიროებს, გამოიყენეთ არაცარიელი დროებითი მნიშვნელობა, მაგალითად `OMNIROUTE_API_KEY=local`. თუ ის `~/.bashrc`-ში ან `~/.zshrc`-ში დაამატეთ, ხელახლა გაუშვით გარსი.
+Codex პირველი მოთხოვნის გაგზავნამდე ამოწმებს, არსებობს თუ არა გარემოს ცვლადი. დაცული სერვერებისთვის მოახდინეთ რეალური გასაღების ექსპორტი, ხოლო თუ თქვენი **ლოკალური** 67router-ის ინსტანცია ავტორიზაციას არ საჭიროებს, გამოიყენეთ არაცარიელი დროებითი მნიშვნელობა, მაგალითად `OMNIROUTE_API_KEY=local`. თუ ის `~/.bashrc`-ში ან `~/.zshrc`-ში დაამატეთ, ხელახლა გაუშვით გარსი.
 
 **`Connection refused`**
-შეამოწმეთ, რომ OmniRoute გაშვებულია და `base_url`-ის ჰოსტი/პორტი თქვენი ქსელისთვის სწორია (ლოკალური, Tailscale ან VPS).
+შეამოწმეთ, რომ 67router გაშვებულია და `base_url`-ის ჰოსტი/პორტი თქვენი ქსელისთვის სწორია (ლოკალური, Tailscale ან VPS).
 
 **სესია კონტექსტის ლიმიტთან მიახლოებისას ითიშება**
 ცალსახად მიუთითეთ `model_context_window` და `model_auto_compact_token_limit`. იხილეთ ზემოთ მოცემული კონტექსტის ფანჯრის ცხრილი.
@@ -602,4 +602,4 @@ Codex პირველი მოთხოვნის გაგზავნა
 დარწმუნდით, რომ ფაილი არსებობს მისამართზე `~/.codex/<name>.config.toml` (`profile-` პრეფიქსის გარეშე). გაუშვით `ls ~/.codex/*.config.toml`.
 
 **Codex-ის ხანგრძლივი დავალება შესრულებისას შუაში წყდება / სვლებს შორის ანგარიშებს ცვლის**
-იხილეთ [ხანგრძლივად შესრულებადი დავალებები](#long-running-tasks). ჩართეთ სესიის მიბმა (TTL დავალების ხანგრძლივობაზე მეტი უნდა იყოს) და გაზარდეთ ან გამორთეთ `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. OmniRoute-ის ჟურნალებში `grep`-ით მოძებნეთ `Idle timeout: no data from`.
+იხილეთ [ხანგრძლივად შესრულებადი დავალებები](#long-running-tasks). ჩართეთ სესიის მიბმა (TTL დავალების ხანგრძლივობაზე მეტი უნდა იყოს) და გაზარდეთ ან გამორთეთ `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. 67router-ის ჟურნალებში `grep`-ით მოძებნეთ `Idle timeout: no data from`.

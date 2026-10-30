@@ -9,9 +9,9 @@
 > **Huling sinaliksik:** 2026-06-17 — pananaliksik sa web para sa bawat provider (mga opisyal na dokumento + balita sa nakalipas na 7 araw, 50-agent na pagsusuri na may adversarial verification) na nag-update sa bawat free-tier quota + ToS. **Bahagyang muling pag-audit noong 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — tingnan ang tala na may petsa sa ibaba).
 > **Pinagmumulan ng katotohanan (catalog):** `open-sse/config/freeModelCatalog.ts` (mga budget sa bawat MODEL, inalisan ng duplikasyon ayon sa pool). Ang mga bilang ng token budget sa ibaba ay mula sa aktuwal na pananaliksik sa web at isang **pagtatantiya** — tingnan ang [Pamamaraan at mga paalala](#methodology--caveats).
 
-## TL;DR — gaano karaming libreng inference ang aktuwal na pinagsasama-sama ng OmniRoute?
+## TL;DR — gaano karaming libreng inference ang aktuwal na pinagsasama-sama ng 67router?
 
-Inilalarawan ng mga bilang na ito ang magkakahiwalay na third-party account at mga kondisyon sa pagiging kwalipikado sa buong catalog. Hindi ibinibigay ng OmniRoute ang budget na ito: kailangan mong kumuha ng mga kinakailangang account o credential, ikonekta ang mga kwalipikadong provider, at sundin ang kanilang mga limitasyon. Maaaring mas mababa ang aktuwal na magagamit na kapasidad, kabilang ang zero sa isang bagong installation na walang kwalipikadong ruta. Ang mga provider na minarkahang `tos: avoid` ay hindi isinasama sa awtomatikong routing bilang default.
+Inilalarawan ng mga bilang na ito ang magkakahiwalay na third-party account at mga kondisyon sa pagiging kwalipikado sa buong catalog. Hindi ibinibigay ng 67router ang budget na ito: kailangan mong kumuha ng mga kinakailangang account o credential, ikonekta ang mga kwalipikadong provider, at sundin ang kanilang mga limitasyon. Maaaring mas mababa ang aktuwal na magagamit na kapasidad, kabilang ang zero sa isang bagong installation na walang kwalipikadong ruta. Ang mga provider na minarkahang `tos: avoid` ay hindi isinasama sa awtomatikong routing bilang default.
 
 **Sinuri noong 2026-10-08:** Nag-aalok ang [Cerebras](https://www.cerebras.ai/pricing) ng isang beses na $5 promotional credit na nangangailangan ng paraan ng pagbabayad at nag-e-expire pagkalipas ng 30 araw. Inilalathala ng [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) ang mga rate limit ayon sa project/model/tier; nananatili itong hindi kasama sa binilang na buwanang headline.
 
@@ -24,7 +24,7 @@ Inilalarawan ng mga bilang na ito ang magkakahiwalay na third-party account at m
 | **+ nasa likod ng panrehiyong identity check**    | **+~6M**           | `modelscope` (pag-bind sa Alibaba Cloud + real-name verification sa mainland China). Tunay na umuulit na quota, inilalantad bilang `gatedRecurringTokens` / `gatedProviders` at sa dashboard. Hindi kailanman isinasama sa pangunahing bilang: +~6M sa likod ng panrehiyong identity verification.                                                                           |
 | Teoretikal na maximum (lahat ng rate limit, 24/7) | ~10B               | Kabuuan ng bawat rate limit ng provider kapag ini-extrapolate sa walang tigil na paggamit. **Hindi isang garantiya** — huwag itong gawing headline.                                                                                                                                                                                                                          |
 
-**Tapat na headline:** _Pinagsasama-sama ng OmniRoute ang **~1.62B nakadokumentong libreng token bawat buwan** (hanggang ~2.22B sa una mong buwan kasama ang mga signup credit) mula sa 34 free-tier pool — bukod pa sa mahabang hanay ng mga permanenteng libreng provider na walang cap — at lalo pa itong napapalawak ng compression ng RTK + Caveman (15–95% na pagtitipid sa token)._
+**Tapat na headline:** _Pinagsasama-sama ng 67router ang **~1.62B nakadokumentong libreng token bawat buwan** (hanggang ~2.22B sa una mong buwan kasama ang mga signup credit) mula sa 34 free-tier pool — bukod pa sa mahabang hanay ng mga permanenteng libreng provider na walang cap — at lalo pa itong napapalawak ng compression ng RTK + Caveman (15–95% na pagtitipid sa token)._
 
 > **Bakit bumaba ito mula sa dating ~1.94B.** Ang pag-refresh noong 2026-06-17 ay pagwawasto para sa katapatan, hindi pagkawala: inaalis na ngayon sa `gemini` ang mga duplicate ayon sa pool (dati itong napalaki dahil hiwalay na binibilang ang bawat variant ng Flash, 462M → 60M), itinama ang `cloudflare-ai` sa tunay nitong 10k-Neurons/araw (122M → 30M), muling inuri ang `doubao` bilang isang beses na credit sa pag-sign up (hindi umuulit), at inalis ang mga itinigil nang tier (`chutes`/`phind`/`kluster` ay itinigil na). Bahagya itong nabawi ng `llm7` (wastong 5M/araw → 150M) at ng mga bagong libreng provider (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -92,7 +92,7 @@ libreng credit. Nakadetalye ang mga pagbabago sa Nous sa tala tungkol sa provide
 
 ## Dalawang rehimen — pagbibilang kumpara sa pagpapasya
 
-Sinasagot ng OmniRoute ang "libre ba ito?" sa pamamagitan ng dalawang rehimen na sadyang kumukuha
+Sinasagot ng 67router ang "libre ba ito?" sa pamamagitan ng dalawang rehimen na sadyang kumukuha
 mula sa magkaibang source:
 
 | Rehimen                       | Pinagmumulan ng katotohanan                                                                                                                                                          | Mga pinaggagamitan                                                                                                                     |
@@ -140,7 +140,7 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 
 ### ⚠️ Pag-iingat — mga sugnay sa personal na paggamit / proxy na dapat suriin (16)
 
-> Totoo ang kanilang libreng access at maaaring mag-route ang OmniRoute sa kanila; mahalaga lamang na malaman ang mga sugnay sa ibaba. Hindi nasusukat sa dami ng token ang mga gumagamit ng OAuth/walang key, kaya hindi sila kasama sa bilang sa headline (hindi dahil hindi sila magagamit).
+> Totoo ang kanilang libreng access at maaaring mag-route ang 67router sa kanila; mahalaga lamang na malaman ang mga sugnay sa ibaba. Hindi nasusukat sa dami ng token ang mga gumagamit ng OAuth/walang key, kaya hindi sila kasama sa bilang sa headline (hindi dahil hindi sila magagamit).
 
 | Provider         | Tala                                                                                                                                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 | `fireworks`      | Tahasang ipinagbabawal ng ToS ang paggamit bilang proxy/intermediary, paglilipat ng API key, at pagbibigay ng sublicense (Mga Seksiyon 2.1 at 2.2(i)(j)); ang mga self-hosted na personal proxy ay h…                     |
 | `friendliai`     | Tahasang ipinagbabawal ng Seksiyon 8(e) at 8(f) ng ToS ang paggamit sa FriendliAI bilang proxy o ang pagpayag sa third-party access bilang standalone, at ipinagbabawal ang muling pagbebenta/…                           |
 | `iflytek`        | Tahasang ipinagbabawal ng Seksiyon 2.4(3) ng iFlytek Spark LLM Service Agreement ang "paggamit ng anumang awtomatiko o programmatic na pamamaraan upang kumuha ng data o output…                                          |
-| `kiro`           | Tahasang ipinagbabawal ng FAQ ng Kiro ang paggamit kasama ng "OpenClaw at mga katulad na tool na gumagamit ng mga third-party harness" — isang self-hosted na AI proxy (tulad ng OmniRoute) na nagru-route…               |
+| `kiro`           | Tahasang ipinagbabawal ng FAQ ng Kiro ang paggamit kasama ng "OpenClaw at mga katulad na tool na gumagamit ng mga third-party harness" — isang self-hosted na AI proxy (tulad ng 67router) na nagru-route…                |
 | `modal`          | Tahasang ipinagbabawal ng Seksiyon 1.3 ng ToS ang "pagpapaupa, muling pagbebenta, o pagbibigay sa anumang third party ng direktang access sa o paggamit ng Serbisyo" — ang pagbuo ng self-hoste…                          |
 | `muse-spark-web` | Tahasang ipinagbabawal ng ToS ng Meta ang awtomatikong access nang walang paunang pahintulot, reverse engineering nang walang nakasulat na pahintulot, at pag-iwas sa mga teknolohika…                                    |
 | `nlpcloud`       | Tahasang ipinagbabawal ng ToS ang "pag-set up ng proxy o iba pang device na nagbibigay-daan sa iba na i-access ang Serbisyo sa pamamagitan nito" at nagbibigay lamang ng hindi naililipat na,…                            |
@@ -316,7 +316,7 @@ Karamihan sa mga bilang ng "libreng token kada buwan" sa larangang ito ay mga ka
 
 - **`360ai`** — Mukhang luma na ang ipinadalang freeNote na "Mga libreng modelo ng 360 AI Brain." Ang kasalukuyang access ay nangangailangan ng aplikasyon at may bayad. Maaaring nakabatay ito sa mga pampromosyong token noong paglulunsad noong 2023 (isang beses na 100M–250M)…
 - **`agentrouter`** — Sinasabi ng ipinadala naming freeNote na "$200 na libreng credit sa pag-sign up." Sa kasalukuyan, $100 lamang ang natatanggap ng mga karaniwang pag-sign up (walang referral); maaaring makatanggap ng $200 ang mga pag-sign up gamit ang referral, ngunit may komento mula sa komunidad noong Abril 2026…
-- **`agy`** — Sinasabi ng ipinadala naming freeNote na "(wala)," na nagpapahiwatig na walang libreng tier, ngunit mayroon talagang libreng tier ang Antigravity na nangangailangan ng OAuth. Gayunman, tahasang ipinagbabawal ng ToS ang paggamit sa libreng tier na ito sa pamamagitan ng proxy gaya ng OmniRoute …
+- **`agy`** — Sinasabi ng ipinadala naming freeNote na "(wala)," na nagpapahiwatig na walang libreng tier, ngunit mayroon talagang libreng tier ang Antigravity na nangangailangan ng OAuth. Gayunman, tahasang ipinagbabawal ng ToS ang paggamit sa libreng tier na ito sa pamamagitan ng proxy gaya ng 67router …
 - **`ai21`** — Hinigpitan: umikli ang panahon ng trial mula "3 buwan" tungo sa 7 araw. Nanatiling $10 ang halaga ng credit, ngunit lubhang umikli ang bisa mula ~90 araw tungo sa 7 araw.
 - **`aimlapi`** — Malaki ang ipinagbago. Inanunsyo ng ipinadalang freeNote ang "$0.025/araw na libreng credit — 200+ modelo," ngunit naka-pause/itinigil na ngayon ang libreng tier. Ang alokasyon na $0.025/araw na credit (50,000 credit/araw, 10 kahilingan/a…
 - **`amazon-q`** — Sinasabi ng ipinadala naming freeNote na "(wala)" — mas malala ang katotohanan: itinigil na ngayon ang produkto para sa mga bagong pag-sign up (Mayo 15, 2026). Dati, nag-aalok ang libreng tier ng 50 agentic na kahilingan/buwan + walang limitasyong inlin…

@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Magyar)
+# 67router A2A Server Documentation (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — Az OmniRoute mint intelligens útválasztó ügynök
+> Agent-to-Agent Protocol v0.3 — Az 67router mint intelligens útválasztó ügynök
 
 Az A2A felületnek két oldala van:
 
@@ -19,7 +19,7 @@ A feladatokat az `A2ATaskManager` követi nyomon (`src/lib/a2a/taskManager.ts`, 
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Visszaadja az OmniRoute képességeit, készségeit és hitelesítési követelményeit leíró Ügynökkártyát.
+Visszaadja az 67router képességeit, készségeit és hitelesítési követelményeit leíró Ügynökkártyát.
 
 Az Ügynökkártya `version` mezőjének forrása a `process.env.npm_package_version` (lásd: `src/app/.well-known/agent.json/route.ts:13`), így minden kiadáskor automatikusan szinkronban marad a `package.json` fájllal.
 
@@ -145,22 +145,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Elérhető készségek
 
-Az OmniRoute 6 A2A-készséget tesz elérhetővé, amelyek a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` helyen vannak bekötve. Minden készségmodul a `src/lib/a2a/skills/` könyvtárban található.
+Az 67router 6 A2A-készséget tesz elérhetővé, amelyek a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` helyen vannak bekötve. Minden készségmodul a `src/lib/a2a/skills/` könyvtárban található.
 
 | Készség                 | ID                   | Leírás                                                                                                                                                                          | Címkék                           | Példák                                                  |
 | :---------------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------- | :------------------------------------------------------ |
-| Intelligens útválasztás | `smart-routing`      | Az OmniRoute kombinációs motorja és pontozási rendszere segítségével az optimális szolgáltatón/kombináción keresztül irányítja a promptot                                       | útválasztás, szolgáltatók        | "Irányítsd ezt a promptot a legjobb modellen keresztül" |
+| Intelligens útválasztás | `smart-routing`      | Az 67router kombinációs motorja és pontozási rendszere segítségével az optimális szolgáltatón/kombináción keresztül irányítja a promptot                                        | útválasztás, szolgáltatók        | "Irányítsd ezt a promptot a legjobb modellen keresztül" |
 | Kvótakezelés            | `quota-management`   | Szolgáltatónként jelenti a kvótaállapotot, és segít a hívóknak eldönteni, mikor kell korlátozni vagy váltani                                                                    | kvóta, szolgáltatók              | "Ellenőrizd az anthropic kvótáját"                      |
 | Szolgáltató-felfedezés  | `provider-discovery` | Felsorolja a telepített szolgáltatókat képességeikkel, ingyenes csomag jelzőikkel és OAuth-állapotukkal                                                                         | szolgáltatók, felfedezés         | "Milyen szolgáltatók érhetők el?"                       |
 | Költségelemzés          | `cost-analysis`      | A katalógus és a közelmúltbeli használat alapján megbecsüli egy kérés/beszélgetés költségét                                                                                     | költség, használat               | "Becsüld meg ennek a beszélgetésnek a költségét"        |
 | Állapotjelentés         | `health-report`      | Szolgáltatónként összesíti a circuit breaker, a cooldown és a lockout állapotát                                                                                                 | állapot, hibatűrés               | "Mutasd az összes szolgáltató állapotát"                |
-| Képességek listázása    | `list-capabilities`  | A teljes, 45 bejegyzésből álló Agent Skills-katalógust (23 API + 21 CLI + 1 konfiguráció) markdown-táblázatként adja vissza, nyers SKILL.md URL-ekkel a kontextus-injektáláshoz | katalógus, felfedezés, készségek | "Sorold fel az összes OmniRoute-képességet"             |
+| Képességek listázása    | `list-capabilities`  | A teljes, 45 bejegyzésből álló Agent Skills-katalógust (23 API + 21 CLI + 1 konfiguráció) markdown-táblázatként adja vissza, nyers SKILL.md URL-ekkel a kontextus-injektáláshoz | katalógus, felfedezés, készségek | "Sorold fel az összes 67router-képességet"              |
 
 > Az Agent Cardot naprakészen kell tartani az élő, 375 szolgáltatót tartalmazó katalógushoz igazítva; a szolgáltatók száma és az ingyenes/hitelesítés nélküli metaadatok a futásidejű regiszterből származnak.
 
 ### A `list-capabilities` készség részletei
 
-A `list-capabilities` készség különösen hasznos olyan külső ágensek számára, amelyeknek API-hívások küldése előtt fel kell ismerniük, mit kínál az OmniRoute. Strukturált markdown-táblázat artefaktumot ad vissza:
+A `list-capabilities` készség különösen hasznos olyan külső ágensek számára, amelyeknek API-hívások küldése előtt fel kell ismerniük, mit kínál az 67router. Strukturált markdown-táblázat artefaktumot ad vissza:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -186,7 +186,7 @@ A JSON-RPC `/a2a` végpont a kanonikus A2A belépési pont. Az alábbi REST-vég
 | `/.well-known/agent.json`    | GET     | Ügynökkártya (A2A-felderítés)                                   | (nyilvános, 3600 másodpercig gyorsítótárazva) |
 | `/api/a2a/tasks`             | POST    | Bejövő delegálás az OmniConductor flottának (Conductor PRD RF5) | Bearer és `OMNIROUTE_API_KEY` + `a2aEnabled`  |
 
-**Bejövő Conductor-delegálás (`POST /api/a2a/tasks`):** a külső A2A-ügynökök az OmniRoute-on keresztül delegálják a kódolási munkát az OmniConductor flottának. Törzs: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — csak a Conductor-flotta képességei (az Ügynökkártyán közzétettek) delegálhatók; a `metadata.conductor.repo.url` megadása kötelező (a flotta git-tárolókon dolgozik). Az útvonal a központ `POST /v1/tasks` kérésére fordítja le a hívást a kiszolgálóoldali `CONDUCTOR_ORCHESTRATOR_TOKEN` használatával (tartalék: `CONDUCTOR_HUB_TOKEN`), és `201 { conductor_task_id, state: "submitted" }` választ ad vissza; a feladatállapotok az SSE→A2A tükrözésen (RF1) keresztül jutnak vissza, és a `GET /api/a2a/tasks?skill=conductor` végponton tekinthetők meg.
+**Bejövő Conductor-delegálás (`POST /api/a2a/tasks`):** a külső A2A-ügynökök az 67router-on keresztül delegálják a kódolási munkát az OmniConductor flottának. Törzs: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — csak a Conductor-flotta képességei (az Ügynökkártyán közzétettek) delegálhatók; a `metadata.conductor.repo.url` megadása kötelező (a flotta git-tárolókon dolgozik). Az útvonal a központ `POST /v1/tasks` kérésére fordítja le a hívást a kiszolgálóoldali `CONDUCTOR_ORCHESTRATOR_TOKEN` használatával (tartalék: `CONDUCTOR_HUB_TOKEN`), és `201 { conductor_task_id, state: "submitted" }` választ ad vissza; a feladatállapotok az SSE→A2A tükrözésen (RF1) keresztül jutnak vissza, és a `GET /api/a2a/tasks?skill=conductor` végponton tekinthetők meg.
 
 ---
 

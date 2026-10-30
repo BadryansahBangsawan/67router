@@ -6,7 +6,7 @@
 
 # Rješavanje problema sa relejima
 
-Releji (Vercel, Deno, Cloudflare) prekidaju uzvodnu konekciju na serverless backendu tako da OmniRoute može ostvariti izlazni saobraćaj (egress) iz stabilnog regiona, dok se API ključ provajdera čuva na strani servera. Ovaj dokument pokriva dva režima greške na koje operateri nailaze u produkciji i puteve oporavka koje OmniRoute nudi za svaki od njih.
+Releji (Vercel, Deno, Cloudflare) prekidaju uzvodnu konekciju na serverless backendu tako da 67router može ostvariti izlazni saobraćaj (egress) iz stabilnog regiona, dok se API ključ provajdera čuva na strani servera. Ovaj dokument pokriva dva režima greške na koje operateri nailaze u produkciji i puteve oporavka koje 67router nudi za svaki od njih.
 
 ## Kako se pohranjuje auth releja
 
@@ -25,7 +25,7 @@ U trenutku zahtjeva, `extractRelayAuth(notes)` vraća onaj oblik koji je prisuta
 
 1. Otvorite **Settings → Proxy Pool**.
 2. Redovi releja kojima nedostaje autentifikacija prikazuju žutu oznaku `auth missing` i dugme **Repair**.
-3. Kliknite na **Repair**. OmniRoute poziva `POST /api/settings/proxies/[id]/repair-relay`, koji:
+3. Kliknite na **Repair**. 67router poziva `POST /api/settings/proxies/[id]/repair-relay`, koji:
    - dekriptuje `relayAuthEnc` sa **trenutnim** ključem,
    - zapisuje plaintext `relayAuth` nazad u `notes`,
    - vraća `{ repaired: true, mode: "recovered" }`.
@@ -48,7 +48,7 @@ U korisničkom interfejsu, samo dugme **Repair** pokreće modal za ponovno raspo
 
 **Simptom:** test proxy-ja (dugme `speed`) pokazuje da je relej aktivan, ali zahtjevi i dalje povremeno ne uspijevaju.
 
-Provjerite zaglavlja za prepoznavanje releja (relay awareness headers) koja vraća OmniRoute auto-test sonda (pogledajte **Settings → Proxy Pool** i brojače `relayTested` / `relayAlive`):
+Provjerite zaglavlja za prepoznavanje releja (relay awareness headers) koja vraća 67router auto-test sonda (pogledajte **Settings → Proxy Pool** i brojače `relayTested` / `relayAlive`):
 
 - `x-relay-url` — koji relej backend je odgovorio.
 - `x-relay-mode` — `ts` | `bifrost` | `auto` za taj zahtjev.

@@ -1,16 +1,16 @@
 ---
-title: "🗜️ Prompt Compression Guide — OmniRoute"
+title: "🗜️ Prompt Compression Guide — 67router"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# 🗜️ Prompt Compression Guide — OmniRoute
+# 🗜️ Prompt Compression Guide — 67router
 
 > Save 15-95% on eligible context automatically. For a quick overview, see the [README Compression section](../README.md#%EF%B8%8F-prompt-compression--save-15-95-eligible-tokens-automatically).
 
 ## Overview
 
-OmniRoute implements a modular prompt compression pipeline that runs **proactively** before requests hit upstream providers. This means your token savings happen transparently — no changes needed to your workflow.
+67router implements a modular prompt compression pipeline that runs **proactively** before requests hit upstream providers. This means your token savings happen transparently — no changes needed to your workflow.
 
 ```
 Client Request
@@ -124,15 +124,15 @@ compression combos assigned to routing combos.
 
 ## Upstream Savings Math
 
-OmniRoute documents compression savings from two sources: upstream project benchmarks and
-OmniRoute's own engine composition.
+67router documents compression savings from two sources: upstream project benchmarks and
+67router's own engine composition.
 
 | Source  | Upstream README number used here                                                                                      |
 | ------- | --------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` fewer output tokens, `65%` benchmark average output savings, `22-87%` range, and `~46%` input compression tool |
 | RTK     | `60-90%` command-output savings; sample session `~118,000 -> ~23,900` tokens, or `79.7%` saved (`~80%`)               |
 
-For overlapping tool/context payloads, the default OmniRoute combo stacks the engines:
+For overlapping tool/context payloads, the default 67router combo stacks the engines:
 
 ```txt
 RTK -> Caveman
@@ -534,12 +534,12 @@ unchanged, skipped as `no_styles`), concatenates the selected instructions in ca
 order,
 appends the boundaries clause **once** (plus the safety clause, `SAFETY_BOUNDARIES` or its
 translation, when `less-code` or `ponytail` is selected), and starts the block with a
-single idempotency marker (`[OmniRoute Output Styles]`), so re-applying is a no-op. When
+single idempotency marker (`[67router Output Styles]`), so re-applying is a no-op. When
 the resolved language (see Language selection below) has a translation, the localized
 instruction is injected instead of English.
 
 On a body with a non-empty `messages` array, the idempotency check runs before the
-content bypass: when the `[OmniRoute Output Styles]` marker is already in the top-level
+content bypass: when the `[67router Output Styles]` marker is already in the top-level
 `system` field (a string or a content-block array) or in a system message with string
 content, the body is left unchanged as `already_applied` and no keyword check runs.
 Otherwise a content bypass (`shouldBypassCavemanOutputMode()` in
@@ -565,7 +565,7 @@ never creates a new `messages[0]`, places the block in the first of these it fin
 On a body without a `messages` array (or with an empty one), no content bypass runs and
 a top-level `system` field is not consulted. The block is appended after the text of a
 string `instructions` field, unless that field already contains the
-`[OmniRoute Output Styles]` marker, in which case the body is left unchanged as
+`[67router Output Styles]` marker, in which case the body is left unchanged as
 `already_applied`. When the body has no string `instructions` field but carries `input`
 (a string or an array), the block becomes `instructions`, replacing any non-string value
 that field held. A body with neither a string `instructions` field nor a string or array
@@ -591,8 +591,8 @@ compression config persists the selection as:
 
 Back-compat: while `outputStyles` is empty, the legacy `cavemanOutputMode.enabled`
 setting maps to `terse-prose` at `cavemanOutputMode.intensity`. The block then starts
-with the `[OmniRoute Output Styles]` marker, where the legacy `applyCavemanOutputMode()`
-injector wrote `[OmniRoute Caveman Output Mode]`. Below the marker, the text matches the
+with the `[67router Output Styles]` marker, where the legacy `applyCavemanOutputMode()`
+injector wrote `[67router Caveman Output Mode]`. Below the marker, the text matches the
 legacy injection in en, pt-BR, es, de, fr, it, ru, id and vi; in ja and zh it carries one
 extra space before the boundaries clause. `terse-prose` translates into pt-BR, es, de,
 fr, it, ru, zh, ja, id and vi, so a request whose resolved language is `hu` gets the

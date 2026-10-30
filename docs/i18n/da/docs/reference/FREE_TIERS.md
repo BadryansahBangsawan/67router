@@ -9,9 +9,9 @@
 > **Senest undersøgt:** 2026-06-17 — webresearch for hver udbyder (officiel dokumentation + nyheder fra de seneste 7 dage, gennemgang med 50 agenter og kontradiktorisk verificering), hvor alle kvoter for gratisniveauer og brugsvilkår blev opdateret. **Delvis genkontrol 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — se den daterede bemærkning nedenfor).
 > **Autoritativ kilde (katalog):** `open-sse/config/freeModelCatalog.ts` (budgetter pr. model, dubletter fjernet på puljeniveau). Tallene for tokenbudgetter nedenfor stammer fra aktuel webresearch og er en **tilnærmelse** — se [Metode og forbehold](#methodology--caveats).
 
-## Kort fortalt — hvor meget gratis inferens samler OmniRoute faktisk?
+## Kort fortalt — hvor meget gratis inferens samler 67router faktisk?
 
-Disse tal beskriver separate tredjepartskonti og kvalifikationskrav på tværs af kataloget. OmniRoute tildeler ikke dette budget: Du skal selv anskaffe de nødvendige konti eller legitimationsoplysninger, forbinde kvalificerede udbydere og overholde deres grænser. Den faktiske brugbare kapacitet kan være lavere, herunder nul på en ny installation uden en kvalificeret rute. Udbydere markeret med `tos: avoid` udelukkes som standard fra automatisk routing.
+Disse tal beskriver separate tredjepartskonti og kvalifikationskrav på tværs af kataloget. 67router tildeler ikke dette budget: Du skal selv anskaffe de nødvendige konti eller legitimationsoplysninger, forbinde kvalificerede udbydere og overholde deres grænser. Den faktiske brugbare kapacitet kan være lavere, herunder nul på en ny installation uden en kvalificeret rute. Udbydere markeret med `tos: avoid` udelukkes som standard fra automatisk routing.
 
 **Kontrolleret 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) tilbyder en kampagnekredit på $5, som kun kan bruges én gang, kræver en betalingsmetode og udløber efter 30 dage. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) offentliggør hastighedsgrænser efter projekt/model/niveau; den indgår fortsat ikke i det kvantificerede månedlige hovedtal.
 
@@ -93,7 +93,7 @@ Nous er beskrevet nærmere i udbyderbemærkningen nedenfor.
 
 ## To regimer — optælling kontra afgørelse
 
-OmniRoute besvarer spørgsmålet "er det gratis?" gennem to regimer, der
+67router besvarer spørgsmålet "er det gratis?" gennem to regimer, der
 bevidst læser fra forskellige kilder:
 
 | Regime                  | Autoritativ kilde                                                                                                                                                            | Anvendelsesflader                                                                                                                |
@@ -141,7 +141,7 @@ De fleste tal for "gratis tokens pr. måned" på dette område er summen af mær
 
 ### ⚠️ Forsigtig — klausuler om personlig brug/proxybrug, som bør kontrolleres (16)
 
-> Deres gratis adgang er reel, og OmniRoute kan route til dem; klausulerne nedenfor er blot værd at kende. Dem med OAuth/nøglefri adgang kan ikke kvantificeres i tokens, så de indgår ikke i overskriftens tal (ikke fordi de er ubrugelige).
+> Deres gratis adgang er reel, og 67router kan route til dem; klausulerne nedenfor er blot værd at kende. Dem med OAuth/nøglefri adgang kan ikke kvantificeres i tokens, så de indgår ikke i overskriftens tal (ikke fordi de er ubrugelige).
 
 | Provider         | Note                                                                                                                                                                                        |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -155,7 +155,7 @@ De fleste tal for "gratis tokens pr. måned" på dette område er summen af mær
 | `fireworks`      | ToS forbyder udtrykkeligt brug som proxy/mellemled, overdragelse af API-nøgler og underlicensering (afsnit 2.1 og 2.2(i)(j)); selvhostede personlige proxyer er i…                          |
 | `friendliai`     | ToS afsnit 8(e) og 8(f) forbyder udtrykkeligt at bruge FriendliAI som proxy eller at give tredjeparter selvstændig adgang og forbyder videresalg/…                                          |
 | `iflytek`        | Afsnit 2.4(3) i iFlytek Spark LLM Service Agreement forbyder udtrykkeligt "at bruge automatiserede eller programmatiske metoder til at udtrække data eller output…                          |
-| `kiro`           | Kiro FAQ forbyder udtrykkeligt brug med "OpenClaw og lignende værktøjer, der benytter tredjepartsharnesses" — en selvhostet AI-proxy (som OmniRoute), der rou…                              |
+| `kiro`           | Kiro FAQ forbyder udtrykkeligt brug med "OpenClaw og lignende værktøjer, der benytter tredjepartsharnesses" — en selvhostet AI-proxy (som 67router), der rou…                               |
 | `modal`          | ToS afsnit 1.3 forbyder udtrykkeligt at "udleje, videresælge eller på anden måde give tredjeparter direkte adgang til eller brug af tjenesten" — at bygge en selvhoste…                     |
 | `muse-spark-web` | Meta ToS forbyder udtrykkeligt automatiseret adgang uden forudgående tilladelse, reverse engineering uden skriftlig tilladelse og omgåelse af teknologiske…                                 |
 | `nlpcloud`       | ToS forbyder udtrykkeligt "at opsætte en proxy eller anden enhed, som giver andre adgang til tjenesten gennem den" og tildeler kun en ikke-overdragelig,…                                   |
@@ -317,7 +317,7 @@ De fleste tal for "gratis tokens pr. måned" på dette område er summen af mær
 
 - **`360ai`** — Den medfølgende freeNote "Gratis 360 AI Brain-modeller" ser ud til at være forældet. Aktuel adgang kræver en ansøgning og er betalingsbaseret. Kampagnetokens fra lanceringen i 2023 (100M–250M som engangstildeling) kan have været grundlaget for…
 - **`agentrouter`** — Vores medfølgende freeNote siger "$200 i gratis kredit ved tilmelding." Aktuelt modtager standardtilmeldinger (uden henvisning) kun $100; tilmeldinger via henvisning kan få $200, men en kommentar fra fællesskabet fra april 2026…
-- **`agy`** — Vores medfølgende freeNote siger "(ingen)", hvilket antyder, at der ikke findes et gratis niveau, men Antigravity har et gratis OAuth-beskyttet niveau. Vilkårene forbyder dog udtrykkeligt brug af dette gratis niveau gennem en proxy som OmniRoute …
+- **`agy`** — Vores medfølgende freeNote siger "(ingen)", hvilket antyder, at der ikke findes et gratis niveau, men Antigravity har et gratis OAuth-beskyttet niveau. Vilkårene forbyder dog udtrykkeligt brug af dette gratis niveau gennem en proxy som 67router …
 - **`ai21`** — Strammet: Prøveperioden er reduceret fra "3 måneder" til 7 dage. Kreditbeløbet på $10 er uændret, men gyldigheden er faldet markant fra ~90 dage til 7 dage.
 - **`aimlapi`** — Ændret markant. Den medfølgende freeNote annoncerede "$0.025/dag i gratis kredit — 200+ modeller", men det gratis niveau er nu sat på pause/udgået. Kredittildelingen på $0.025/dag (50.000 kreditter/dag, 10 anm./d…
 - **`amazon-q`** — Vores medfølgende freeNote siger "(ingen)" — virkeligheden er værre: Produktet er nu lukket for nye tilmeldinger (15. maj 2026). Tidligere tilbød det gratis niveau 50 agentbaserede anmodninger/måned + ubegrænset inline…

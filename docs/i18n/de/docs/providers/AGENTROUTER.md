@@ -12,7 +12,7 @@ konzipiert und akzeptiert daher nur Datenverkehr, der dem Übertragungsformat vo
 
 ## Schnellstart — den nativen `agentrouter`-Provider verwenden (empfohlen)
 
-Für die meisten Benutzer ist **keine besondere Einrichtung erforderlich**. OmniRoute enthält einen integrierten
+Für die meisten Benutzer ist **keine besondere Einrichtung erforderlich**. 67router enthält einen integrierten
 `agentrouter`-Provider, in dem das vollständige Übertragungsformat von Claude Code bereits hinterlegt ist (siehe
 `open-sse/config/providerRegistry.ts` → `agentrouter`). So verwenden Sie ihn:
 
@@ -34,7 +34,7 @@ die Basis-URL, den Chat-Pfad oder den Header-Satz überschreiben möchten.
 
 ## Fortgeschritten: Verbindung über den Claude-Code-kompatiblen Provider-Typ
 
-OmniRoute unterstützt AgentRouter (und ähnliche Relay-Dienste) auch über den
+67router unterstützt AgentRouter (und ähnliche Relay-Dienste) auch über den
 **Claude-Code-kompatiblen** Provider-Typ (`anthropic-compatible-cc-*`), der die
 Anthropic Messages API mit dem korrekten Übertragungsformat verwendet. Ein generischer
 `openai-compatible-chat`-Provider, der auf `https://agentrouter.org` verweist, funktioniert
@@ -47,14 +47,14 @@ Code aussehen.
 
 - Ein AgentRouter-Konto und ein API-Schlüssel. Neuanmeldungen erhalten über den Affiliate-Link
   in der Projekt-[README](../README.md) kostenloses Guthaben.
-- Eine laufende OmniRoute-Instanz, bei der das Feature-Flag `ENABLE_CC_COMPATIBLE_PROVIDER` aktiviert ist
+- Eine laufende 67router-Instanz, bei der das Feature-Flag `ENABLE_CC_COMPATIBLE_PROVIDER` aktiviert ist
   (siehe unten).
 
 ## 1. Den CC-kompatiblen Provider-Typ aktivieren
 
 Der Claude-Code-kompatible Provider-Typ ist durch ein Feature-Flag geschützt, da er
 Datenverkehr sendet, der dem offiziellen Claude-Code-Client sehr ähnlich ist. Aktivieren Sie ihn,
-indem Sie vor dem Start von OmniRoute eine Umgebungsvariable setzen:
+indem Sie vor dem Start von 67router eine Umgebungsvariable setzen:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

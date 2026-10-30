@@ -5,11 +5,11 @@
 ---
 
 > **Stádas:** Ar fáil go ginearálta.
-> **Lucht léitheoireachta:** Oibreoirí atá ag nascadh OpenCode le himscaradh OmniRoute.
+> **Lucht léitheoireachta:** Oibreoirí atá ag nascadh OpenCode le himscaradh 67router.
 > **Foinse na fírinne (scéimre cumraíochta):** `src/shared/services/opencodeConfig.ts`
 > **Foinse na fírinne (pacáiste npm):** `@omniroute/opencode-provider/` (spás oibre infoilsithe)
 
-Is cliant AI gníomhach CLI/deisce é [OpenCode](https://opencode.ai). Léann sé a chatalóg soláthraithe ó `~/.config/opencode/opencode.json` (nó `opencode.jsonc`) agus leanann sé an scéimre ag `https://opencode.ai/config.json`. Cuireann OmniRoute é féin ar fáil do OpenCode mar cheann de na soláthraithe sin — téann gach iarratas trí chomhéadan caighdeánach OmniRoute atá comhoiriúnach le OpenAI, `/v1`, ionas go mbaineann OpenCode tairbhe go huathoibríoch as ródú Auto-Combo, scoradáin chiorcaid, beartais eochracha, inbhraiteacht, srl.
+Is cliant AI gníomhach CLI/deisce é [OpenCode](https://opencode.ai). Léann sé a chatalóg soláthraithe ó `~/.config/opencode/opencode.json` (nó `opencode.jsonc`) agus leanann sé an scéimre ag `https://opencode.ai/config.json`. Cuireann 67router é féin ar fáil do OpenCode mar cheann de na soláthraithe sin — téann gach iarratas trí chomhéadan caighdeánach 67router atá comhoiriúnach le OpenAI, `/v1`, ionas go mbaineann OpenCode tairbhe go huathoibríoch as ródú Auto-Combo, scoradáin chiorcaid, beartais eochracha, inbhraiteacht, srl.
 
 Tá **dhá chonair chomhtháthaithe a dtacaítear leo** ann. Roghnaigh ceann amháin — gineann siad an chumraíocht chéanna.
 
@@ -17,16 +17,16 @@ Tá **dhá chonair chomhtháthaithe a dtacaítear leo** ann. Roghnaigh ceann amh
 
 ## Conair 1 — gineadóir CLI (ní gá npm a shuiteáil)
 
-Molta d’úsáideoirí deiridh. Tagann sé le OmniRoute. Scríobhann sé `opencode.json` san áit chéanna.
+Molta d’úsáideoirí deiridh. Tagann sé le 67router. Scríobhann sé `opencode.json` san áit chéanna.
 
 ```bash
-# Tar éis OmniRoute a shuiteáil (npm i -g @omniroute/cli nó clón áitiúil)
+# Tar éis 67router a shuiteáil (npm i -g @omniroute/cli nó clón áitiúil)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Sa chúlra, glaonn an CLI ar `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), mar sin coinníonn `opencode.json` atá ann cheana a sholáthraithe agus a nótaí tráchta eile. Cuirtear iontráil OmniRoute leis nó cuirtear ceann nua ina háit go hadamhach.
+Sa chúlra, glaonn an CLI ar `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), mar sin coinníonn `opencode.json` atá ann cheana a sholáthraithe agus a nótaí tráchta eile. Cuirtear iontráil 67router leis nó cuirtear ceann nua ina háit go hadamhach.
 
 An comhad a ghintear (catalóg réamhshocraithe samhlacha):
 
@@ -90,8 +90,8 @@ Táirgeann an dá chonair an `provider.omniroute.npm: "@ai-sdk/openai-compatible
 ```
 Comhéadan úsáideora/gníomhaire OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (comhéadan OpenAI OmniRoute)
-         → láimhseálaí OmniRoute /v1/chat/completions (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (comhéadan OpenAI 67router)
+         → láimhseálaí 67router /v1/chat/completions (open-sse/handlers/chatCore.ts)
             → ródú teaglama / Auto-Combo / riteoir
                → soláthraí réamhtheachtach
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Is féidir leat iad a shárú trí `models: [...]`. Breiseanna molta:
 
-- `"auto"` — nochtann sé ródaire [Auto-Combo](../routing/AUTO-COMBO.md) OmniRoute nach dteastaíonn aon chumraíocht uaidh. Ligeann sé do OpenCode “an tsamhail is fearr atá ar fáil” a roghnú gan an chatalóg a chódú go crua.
-- `"<combo-name>"` — teaglaim ar bith atá sainithe agat sa deais; réitíonn OmniRoute í go trédhearcach.
+- `"auto"` — nochtann sé ródaire [Auto-Combo](../routing/AUTO-COMBO.md) 67router nach dteastaíonn aon chumraíocht uaidh. Ligeann sé do OpenCode “an tsamhail is fearr atá ar fáil” a roghnú gan an chatalóg a chódú go crua.
+- `"<combo-name>"` — teaglaim ar bith atá sainithe agat sa deais; réitíonn 67router í go trédhearcach.
 
 ---
 
@@ -135,29 +135,29 @@ Is é an dí-dhúbailt seo **an chúis bhriste is coitianta** a fheictear i gcum
 
 ## Modhanna fíordheimhnithe
 
-| Socrú OmniRoute                                   | Luach molta `apiKey`                                             |
+| Socrú 67router                                    | Luach molta `apiKey`                                             |
 | ------------------------------------------------- | ---------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (réamhshocrú go háitiúil) | `sk_omniroute` (ionadchoinneálaí litriúil)                       |
 | `REQUIRE_API_KEY=true`                            | Fíoreochair API in aghaidh an úsáideora ó Deais → Eochracha API. |
 
-I gcás cliant ar nós Anthropic a sheolann `x-api-key` + `anthropic-version`, glacann `extractApiKey` OmniRoute leis an eochair ó `x-api-key` freisin. Úsáideann OpenCode comhéadan OpenAI, mar sin seolfaidh sé `Authorization: Bearer ${apiKey}` i gcónaí — níl aon chás speisialta Anthropic i bhfeidhm anseo.
+I gcás cliant ar nós Anthropic a sheolann `x-api-key` + `anthropic-version`, glacann `extractApiKey` 67router leis an eochair ó `x-api-key` freisin. Úsáideann OpenCode comhéadan OpenAI, mar sin seolfaidh sé `Authorization: Bearer ${apiKey}` i gcónaí — níl aon chás speisialta Anthropic i bhfeidhm anseo.
 
 ---
 
 ## Fabhtcheartú
 
-| Siomptóm                                           | Cúis                                                                                    | Réiteach                                                                                                           |
-| -------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `404` ar gach iarratas le URL ina bhfuil `/v1/v1/` | Cumraíocht as dáta ó bhreiseán réamh-v3.8 a chuir `/v1` leis faoi dhó.                  | Athghin trí Chonair 1 nó 2.                                                                                        |
-| `401 Invalid API key`                              | Tá `REQUIRE_API_KEY=true` ag OmniRoute agus ní aithnítear an eochair.                   | Cruthaigh an eochair sa deais, nó socraigh `REQUIRE_API_KEY=false` (go háitiúil amháin) agus úsáid `sk_omniroute`. |
-| Liosta samhlacha folamh i gcomhéadan OpenCode      | Tá na 4 shamhlacha réamhshocraithe uile folaithe in infheictheacht soláthraí OmniRoute. | Cuir `models: ["auto", ...]` ar aghaidh chun na cinn atá cumasaithe agat a nochtadh.                               |
-| OpenCode 500 le `cannot read property 'models'`    | Níor ghlac leagan níos sine de OpenCode (< 0.1.x) le `models` inlíne.                   | Uasghrádaigh OpenCode go leagan a leanann scéimre v1 (`opencode.ai/config.json`).                                  |
+| Siomptóm                                           | Cúis                                                                                   | Réiteach                                                                                                           |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `404` ar gach iarratas le URL ina bhfuil `/v1/v1/` | Cumraíocht as dáta ó bhreiseán réamh-v3.8 a chuir `/v1` leis faoi dhó.                 | Athghin trí Chonair 1 nó 2.                                                                                        |
+| `401 Invalid API key`                              | Tá `REQUIRE_API_KEY=true` ag 67router agus ní aithnítear an eochair.                   | Cruthaigh an eochair sa deais, nó socraigh `REQUIRE_API_KEY=false` (go háitiúil amháin) agus úsáid `sk_omniroute`. |
+| Liosta samhlacha folamh i gcomhéadan OpenCode      | Tá na 4 shamhlacha réamhshocraithe uile folaithe in infheictheacht soláthraí 67router. | Cuir `models: ["auto", ...]` ar aghaidh chun na cinn atá cumasaithe agat a nochtadh.                               |
+| OpenCode 500 le `cannot read property 'models'`    | Níor ghlac leagan níos sine de OpenCode (< 0.1.x) le `models` inlíne.                  | Uasghrádaigh OpenCode go leagan a leanann scéimre v1 (`opencode.ai/config.json`).                                  |
 
 ---
 
 ## Féach freisin
 
-- [Tagairt API](../reference/API_REFERENCE.md) — dromchla iomlán REST OmniRoute
+- [Tagairt API](../reference/API_REFERENCE.md) — dromchla iomlán REST 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — cad is brí le `model: "auto"`
 - [README `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - Foinse: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

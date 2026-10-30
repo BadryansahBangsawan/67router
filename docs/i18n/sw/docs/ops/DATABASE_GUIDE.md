@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa ufupi**: OmniRoute hutumia **SQLite yenye uandishi wa kumbukumbu wa WAL** kama hifadhi yake msingi, pamoja na usimbaji fiche wa **AES-256-GCM** kwa data nyeti iliyohifadhiwa. Mwongozo huu unashughulikia skima, uhamishaji, kuhifadhi nakala/kurejesha, na miongozo ya kiutendaji.
+> **Kwa ufupi**: 67router hutumia **SQLite yenye uandishi wa kumbukumbu wa WAL** kama hifadhi yake msingi, pamoja na usimbaji fiche wa **AES-256-GCM** kwa data nyeti iliyohifadhiwa. Mwongozo huu unashughulikia skima, uhamishaji, kuhifadhi nakala/kurejesha, na miongozo ya kiutendaji.
 
 **Vyanzo:**
 
@@ -19,7 +19,7 @@
 
 ## Kwa Nini SQLite?
 
-OmniRoute ilichagua SQLite badala ya PostgreSQL/MySQL kwa sababu kadhaa:
+67router ilichagua SQLite badala ya PostgreSQL/MySQL kwa sababu kadhaa:
 
 | Kipengele          | SQLite                                       | PostgreSQL                                     |
 | ------------------ | -------------------------------------------- | ---------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute ilichagua SQLite badala ya PostgreSQL/MySQL kwa sababu kadhaa:
 | **Nakala rudufu**  | Kunakili faili moja                          | `pg_dump` au taswira ya mfumo wa faili         |
 | **Matumizi**       | Usakinishaji kwa kila mtumiaji, imepachikwa  | SaaS yenye wapangaji wengi                     |
 
-Kwa usambazaji wa **mtumiaji mmoja, instansi moja** (matumizi makuu ya OmniRoute), SQLite ni rahisi na ya haraka zaidi.
+Kwa usambazaji wa **mtumiaji mmoja, instansi moja** (matumizi makuu ya 67router), SQLite ni rahisi na ya haraka zaidi.
 
 ### Uandishi wa Kumbukumbu wa WAL
 
@@ -50,7 +50,7 @@ Ukubwa chaguo-msingi wa akiba ni **65,536 KiB (64 MiB)**. SQLite hufasiri thaman
 `cache_size` kama kikomo cha juu cha kukadiria katika KiB na hugawa kurasa inapohitajika.
 **Settings > System & Storage > Cache Size** hukubali thamani kamili kuanzia **1 hadi
 1,000,000 KiB**; kuhifadhi mpangilio huo huutekeleza kwenye muunganisho unaotumika wa hifadhidata,
-na OmniRoute hurejesha thamani iliyohifadhiwa wakati wa kuanza.
+na 67router hurejesha thamani iliyohifadhiwa wakati wa kuanza.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Usanifu wa Moduli za Kikoa
 
-Hifadhidata ya OmniRoute ina **moduli 110 za kiwango cha juu za TypeScript** katika `src/lib/db/`. Kila moduli ya kikoa:
+Hifadhidata ya 67router ina **moduli 110 za kiwango cha juu za TypeScript** katika `src/lib/db/`. Kila moduli ya kikoa:
 
 - Inamiliki jedwali moja au zaidi mahususi
 - Inasafirisha vitendaji vya CRUD vyenye aina zilizobainishwa
@@ -90,7 +90,7 @@ Hifadhidata ya OmniRoute ina **moduli 110 za kiwango cha juu za TypeScript** kat
 
 ### Moduli 110 za Kiwango cha Juu za Hifadhidata
 
-OmniRoute ina **faili 110 za kiwango cha juu za TypeScript** katika `src/lib/db/`. Hapa chini kuna sampuli ya moduli za msingi; tazama orodha ya saraka kwa orodha kamili:
+67router ina **faili 110 za kiwango cha juu za TypeScript** katika `src/lib/db/`. Hapa chini kuna sampuli ya moduli za msingi; tazama orodha ya saraka kwa orodha kamili:
 
 | Moduli                  | Majedwali                                                      | Jukumu                                                                             |
 | ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Orodha kamili ya majedwali ~30+ ipo katika `src/lib/db/migrations/`.
 
 ## Uhamishaji
 
-OmniRoute hutumia **uhamishaji wenye matoleo na unaoweza kurudiwa bila kubadilisha matokeo** katika `src/lib/db/migrations/`. Kila uhamishaji ni faili moja ya SQL yenye jina `NNN_description.sql`.
+67router hutumia **uhamishaji wenye matoleo na unaoweza kurudiwa bila kubadilisha matokeo** katika `src/lib/db/migrations/`. Kila uhamishaji ni faili moja ya SQL yenye jina `NNN_description.sql`.
 
 ### Utoaji wa Majina ya Uhamishaji
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Mabadiliko yasiyoendana na matoleo ya awali** (kwa mfano, kuondoa safu wima) ni magumu. OmniRoute HAITUMII urejeshaji wa toleo la awali — pindi uhamishaji unapotumika, mabadiliko ya muundo wa data huwa ya kudumu. Panga ipasavyo.
+> **Mabadiliko yasiyoendana na matoleo ya awali** (kwa mfano, kuondoa safu wima) ni magumu. 67router HAITUMII urejeshaji wa toleo la awali — pindi uhamishaji unapotumika, mabadiliko ya muundo wa data huwa ya kudumu. Panga ipasavyo.
 
 ---
 
@@ -310,7 +310,7 @@ Kwa sababu za utendaji, yafuatayo huhifadhiwa kama maandishi wazi:
 
 ## Tahadhari za Usimbaji Fiche (v3.8.16+)
 
-OmniRoute hutumia **`migrateLegacyEncryptedString()`** kushughulikia mifumo miwili ya usimbaji fiche kwa uwazi:
+67router hutumia **`migrateLegacyEncryptedString()`** kushughulikia mifumo miwili ya usimbaji fiche kwa uwazi:
 
 - **Ya zamani** (kabla ya v3.5.0): "usimbaji fiche" unaotegemea XOR (si usimbaji fiche halisi)
 - **Ya sasa**: AES-256-GCM yenye IV sahihi na lebo ya uthibitishaji
@@ -399,7 +399,7 @@ Kwa hifadhi nakala ya DB inayotumika bila muda wa kusitisha huduma:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Hii hutumia API ya hifadhi nakala ya mtandaoni ya SQLite — ni salama kutekeleza wakati OmniRoute inaendelea kufanya kazi.
+Hii hutumia API ya hifadhi nakala ya mtandaoni ya SQLite — ni salama kutekeleza wakati 67router inaendelea kufanya kazi.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Mfinyazo
 
-Matukio ya OmniRoute yanayoendeshwa kwa muda mrefu hunufaika na utekelezaji wa mara kwa mara wa `VACUUM`:
+Matukio ya 67router yanayoendeshwa kwa muda mrefu hunufaika na utekelezaji wa mara kwa mara wa `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Weka Upya (Futa) Data Yote
 
 ```bash
-# Simamisha OmniRoute kwanza
+# Simamisha 67router kwanza
 omniroute stop
 
 # Futa faili ya DB
@@ -613,7 +613,7 @@ Mchakato mwingine unashikilia kufuli ya uandishi. Fanya mojawapo ya yafuatayo:
 
 - Subiri mchakato mwingine ukamilike (kagua `lsof | grep storage.sqlite`)
 - Sitisha mchakato mwingine
-- Ikiwa hali hiyo inaendelea, anzisha OmniRoute upya
+- Ikiwa hali hiyo inaendelea, anzisha 67router upya
 
 ### "Kizuizi cha ufunguo wa kigeni kimeshindwa"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Uhamishaji uliendeshwa ndani ya muamala, kwa hivyo ulipaswa kutenduliwa. Ikiwa haukutenduliwa:
 
-1. **Simamisha OmniRoute** (zuia majaribio zaidi)
+1. **Simamisha 67router** (zuia majaribio zaidi)
 2. **Kagua hali ya DB** kwa kutumia `sqlite3`
 3. **Rekebisha wewe mwenyewe** uhamishaji usiokamilika
-4. **Endesha OmniRoute tena** (uhamishaji utajaribiwa tena)
+4. **Endesha 67router tena** (uhamishaji utajaribiwa tena)
 
 Ili kuzuia hali hii, daima jaribu uhamishaji kwenye nakala kwanza.
 

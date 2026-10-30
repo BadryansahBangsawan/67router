@@ -7,7 +7,7 @@
 > **Fonte ufficiale:** workspace `electron/`
 > **Ultimo aggiornamento:** 2026-06-28 — v3.8.40
 
-OmniRoute include un'app desktop multipiattaforma (Windows / macOS / Linux) basata su
+67router include un'app desktop multipiattaforma (Windows / macOS / Linux) basata su
 **Electron 41** + **electron-builder 26.10**. L'app desktop avvia il server standalone
 Next.js come processo figlio, indirizza una `BrowserWindow` verso di esso e aggiunge
 un'icona nella barra di sistema, aggiornamenti automatici, un bridge IPC e l'inizializzazione
@@ -46,7 +46,7 @@ Confermate da `electron/package.json`:
 | `better-sqlite3`   | radice `^13.0.2` (prebuild Node-API — nessuna ricompilazione Electron) |
 | Versione app       | `3.8.0`                                                                |
 | ID app             | `online.omniroute.desktop`                                             |
-| Nome prodotto      | `OmniRoute`                                                            |
+| Nome prodotto      | `67router`                                                             |
 
 ## Script (`package.json` radice)
 
@@ -197,7 +197,7 @@ di runtime come `CONTEXT_LENGTH_<PROVIDER>` (vedere
 - `BrowserWindow`: 1400×900 (minimo 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, pulsanti di controllo della finestra in `{ x: 16, y: 16 }`.
 - Windows/Linux: barra del titolo nativa.
-- Il pulsante di chiusura riduce a icona nella barra di sistema; il relativo menu contiene **Apri OmniRoute**, **Apri dashboard** (browser esterno), il sottomenu **Porta del server**, **Controlla aggiornamenti**, **Esci**.
+- Il pulsante di chiusura riduce a icona nella barra di sistema; il relativo menu contiene **Apri 67router**, **Apri dashboard** (browser esterno), il sottomenu **Porta del server**, **Controlla aggiornamenti**, **Esci**.
 
 ## Politica di sicurezza dei contenuti
 

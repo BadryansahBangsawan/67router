@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute គ្រប់គ្រងថា **ប្រភពដើមរបស់កម្មវិធីរុករក** ណាខ្លះអាចអានការឆ្លើយតបឆ្លងប្រភពដើម
+67router គ្រប់គ្រងថា **ប្រភពដើមរបស់កម្មវិធីរុករក** ណាខ្លះអាចអានការឆ្លើយតបឆ្លងប្រភពដើម
 ពីបញ្ជីអនុញ្ញាតកណ្ដាលតែមួយ។ ម៉ូដែលនេះមានលក្ខណៈ **បិទជាមុនតាមលំនាំដើម**៖
 គ្មានប្រភពដើមណាមួយត្រូវបានអនុញ្ញាតឡើយ រហូតដល់អ្នកជ្រើសអនុញ្ញាតវា។ ទំព័រនេះពន្យល់ពីរបៀបដែលបញ្ជីអនុញ្ញាត
 ត្រូវបានដោះស្រាយ ថាតើ `CORS_ALLOW_ALL=true` ពិតជាបើកឱ្យចូលប្រើអ្វីខ្លះ (ហើយអ្វីដែលសំខាន់គឺ វា
@@ -45,13 +45,13 @@ middleware (`src/server/authz/pipeline.ts`) — កម្មវិធីគ្�
 ## ម៉ូដែលការគំរាមកំហែង — អ្វីដែល `CORS_ALLOW_ALL=true` ពិតជាបើកឱ្យចូលប្រើ
 
 ការព្រមានទូទៅរបស់ OWASP ("CORS ដែលប្រើអក្សរជំនួស = គេហទំព័រណាមួយក៏អាចហៅ API របស់អ្នកបាន") គួរត្រូវបាន
-យកចិត្តទុកដាក់យ៉ាងម៉ឺងម៉ាត់ ប៉ុន្តែការបើកចំហរបស់ OmniRoute មានវិសាលភាព **តូចជាងករណីទូទៅ**
+យកចិត្តទុកដាក់យ៉ាងម៉ឺងម៉ាត់ ប៉ុន្តែការបើកចំហរបស់ 67router មានវិសាលភាព **តូចជាងករណីទូទៅ**
 ដោយសារតែការពិតជាក់លាក់មួយនៃការអនុវត្ត៖
 
 > **`applyCorsHeaders()` កណ្ដាលមិនដែលបញ្ចេញ
 > `Access-Control-Allow-Credentials` ទេ។** កម្មវិធីរុករកនឹងមិនបើកឱ្យឃើញការឆ្លើយតបឆ្លងប្រភពដើមដែល _មានព័ត៌មានសម្គាល់អត្តសញ្ញាណ_
 > (ដែលមាន cookie) ឡើយ លុះត្រាតែម៉ាស៊ីនមេផ្ញើ
-> `Access-Control-Allow-Credentials: true`។ ផ្លូវ CORS រួមរបស់ OmniRoute មិនដែល
+> `Access-Control-Allow-Credentials: true`។ ផ្លូវ CORS រួមរបស់ 67router មិនដែល
 > ធ្វើដូច្នោះទេ។
 
 អត្ថន័យរបស់វាសម្រាប់ផ្ទៃប្រើប្រាស់នីមួយៗ ទោះបីជាប្រើ `CORS_ALLOW_ALL=true` ក៏ដោយ៖
@@ -91,7 +91,7 @@ Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ក�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- ប្រសិនបើ OmniRoute ដំណើរការនៅពីក្រោយ reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- ប្រសិនបើ 67router ដំណើរការនៅពីក្រោយ reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) នោះ CORS **មិនមែន** ជាការគ្រប់គ្រងតែមួយគត់របស់អ្នកទេ — ឧបករណ៍ការពារ route
   សម្រាប់ loopback នៅតែការពារ route ដែលអាច spawn បាន (សូមមើល
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md))។ កុំក្លែង
@@ -107,7 +107,7 @@ Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ក�
 អ្នកស្ទើរតែមិនត្រូវការ wildcard ទេ សូម្បីតែក្នុង dev។ អនុញ្ញាតតែ dev server ដែលអ្នកប្រើ៖
 
 ```bash
-# Dev server របស់ Vite (5173) + Next.js (3000) ដែលហៅទៅកាន់ OmniRoute មូលដ្ឋាន
+# Dev server របស់ Vite (5173) + Next.js (3000) ដែលហៅទៅកាន់ 67router មូលដ្ឋាន
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +127,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   ប្រភពដើមសម្រាប់ការគ្រប់គ្រង/dashboard ក្នុង config ដែលមានភាពអនុញ្ញាតខ្ពស់ណាមួយឡើយ ពួកវាត្រូវតែរក្សាស្ថានភាព
   fail-closed ឱ្យបានពេញលេញ។
 
-## ឧទាហរណ៍៖ reverse proxy នៅពីមុខ OmniRoute
+## ឧទាហរណ៍៖ reverse proxy នៅពីមុខ 67router
 
-CORS ត្រូវបានអនុវត្តដោយ OmniRoute ផ្ទាល់ ដូច្នេះជាទូទៅ proxy **មិនគួរ** បន្ថែម ឬ
+CORS ត្រូវបានអនុវត្តដោយ 67router ផ្ទាល់ ដូច្នេះជាទូទៅ proxy **មិនគួរ** បន្ថែម ឬ
 សរសេរឡើងវិញនូវ header `Access-Control-*` ទេ (header ស្ទួនធ្វើឱ្យ browser មិនដំណើរការ)។ បញ្ចប់ TLS
-ហើយបញ្ជូនបន្ត — ទុកឱ្យ OmniRoute ឆ្លើយតបនឹង preflight៖
+ហើយបញ្ជូនបន្ត — ទុកឱ្យ 67router ឆ្លើយតបនឹង preflight៖
 
 ```nginx
-# nginx — បញ្ជូនបន្តទៅ OmniRoute; កុំបញ្ចូល Access-Control-* នៅទីនេះ
+# nginx — បញ្ជូនបន្តទៅ 67router; កុំបញ្ចូល Access-Control-* នៅទីនេះ
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +142,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # រក្សាទុក header សម្រាប់ការបញ្ជូនបន្ត៖ proxy នៅលើ host ដូចគ្នាតភ្ជាប់ពី loopback ហើយ header ទាំងនេះ
-    # ជាអ្វីដែលប្រាប់ OmniRoute ថាអ្នកហៅមិនមែនជា operator ក្នុងមូលដ្ឋានទេ។ proxy ដែលមិនបន្ថែម header ទាំងនេះសោះ
+    # ជាអ្វីដែលប្រាប់ 67router ថាអ្នកហៅមិនមែនជា operator ក្នុងមូលដ្ឋានទេ។ proxy ដែលមិនបន្ថែម header ទាំងនេះសោះ
     # នឹងធ្វើឱ្យអ្នកហៅពីចម្ងាយទាំងអស់មើលទៅដូចជាអ្នកហៅក្នុងមូលដ្ឋាន។ ក៏មិនត្រូវកំណត់ X-Forwarded-For ទៅជា 127.0.0.1 ដែរ។
 }
 ```
 
-កំណត់ origin របស់ browser ដែលត្រូវបានអនុញ្ញាតនៅក្នុង OmniRoute (`CORS_ALLOWED_ORIGINS` ឬផ្ទាំង
+កំណត់ origin របស់ browser ដែលត្រូវបានអនុញ្ញាតនៅក្នុង 67router (`CORS_ALLOWED_ORIGINS` ឬផ្ទាំង
 Security) មិនមែននៅក្នុង proxy ទេ។
 
 ## ឯកសារប្រភព

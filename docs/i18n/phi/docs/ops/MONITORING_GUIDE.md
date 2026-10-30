@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Ang OmniRoute ay may kasamang built-in na pagsubaybay sa kalusugan, provider autopilot, pagsubaybay sa quota, at mga observability hook. Tinatalakay ng gabay na ito ang dashboard, mga alerto, at pag-troubleshoot.
+> **TL;DR**: Ang 67router ay may kasamang built-in na pagsubaybay sa kalusugan, provider autopilot, pagsubaybay sa quota, at mga observability hook. Tinatalakay ng gabay na ito ang dashboard, mga alerto, at pag-troubleshoot.
 
 **Mga source:**
 
@@ -20,7 +20,7 @@
 
 ## Pangkalahatang-ideya
 
-May **3 layer ng pagsubaybay** ang OmniRoute:
+May **3 layer ng pagsubaybay** ang 67router:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -104,7 +104,7 @@ Para sa bawat combo:
 
 ## Health Check API
 
-Naglalantad ang OmniRoute ng **dalawang** HTTP health endpoint. Hindi maaaring pagpalitin ang mga ito para sa mga orchestrator.
+Naglalantad ang 67router ng **dalawang** HTTP health endpoint. Hindi maaaring pagpalitin ang mga ito para sa mga orchestrator.
 
 | Path                         | Layunin                                                             | Bigat                                        | Gamitin para sa                                                                       |
 | ---------------------------- | ------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -183,7 +183,7 @@ endpoint na ito. Gamitin ang `failed` + `failedConnections` para sa mga kasaluku
 
 ### Mga rekomendasyon sa Kubernetes probe
 
-Ang OmniRoute ay isang **iisang Node process** (isang event loop). Tina-target ng karaniwang Docker `HEALTHCHECK` ang magaan na `/healthz`. **Masyadong mabigat** ang `/api/monitoring/health` para sa mga agwat ng kubelet liveness.
+Ang 67router ay isang **iisang Node process** (isang event loop). Tina-target ng karaniwang Docker `HEALTHCHECK` ang magaan na `/healthz`. **Masyadong mabigat** ang `/api/monitoring/health` para sa mga agwat ng kubelet liveness.
 
 | Probe           | Inirerekomendang target                                                               | Mga tala                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -230,7 +230,7 @@ Kaugnay: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (mga p
 
 ### systemd watchdog (naka-freeze na event loop)
 
-Sa isang systemd host, ipinapaalam ng OmniRoute sa service manager kapag handa na ito at patuloy itong nagpi-ping, upang patayin at i-restart ang isang server na na-stuck ang event loop sa halip na manatiling tumatakbo ngunit tahimik. Nagmumula ang mga ping sa sariling event loop ng server: kapag na-block ito, humihinto ang mga ito, at nire-restart ng systemd ang service kapag lumipas ang `WatchdogSec` nang walang natatanggap na ping.
+Sa isang systemd host, ipinapaalam ng 67router sa service manager kapag handa na ito at patuloy itong nagpi-ping, upang patayin at i-restart ang isang server na na-stuck ang event loop sa halip na manatiling tumatakbo ngunit tahimik. Nagmumula ang mga ping sa sariling event loop ng server: kapag na-block ito, humihinto ang mga ito, at nire-restart ng systemd ang service kapag lumipas ang `WatchdogSec` nang walang natatanggap na ping.
 
 Ang [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) ay nagsusulat na ng user unit na mayroon nito. Ang unit na ikaw mismo ang gumawa (na may default na `Type=simple`) ay walang watchdog, kaya idagdag ang mga linyang ito sa seksyon nitong `[Service]`:
 
@@ -446,7 +446,7 @@ Panloob na pinangangasiwaan ng `tokenHealthCheck.ts` ang configuration ng pagsus
 
 ### Mga Built-in na Channel
 
-Sinusuportahan ng OmniRoute ang **3 channel ng alerto**:
+Sinusuportahan ng 67router ang **3 channel ng alerto**:
 
 | Channel             | Pag-setup           | Gamit                            |
 | ------------------- | ------------------- | -------------------------------- |
@@ -562,7 +562,7 @@ Gumawa ng `~/.omniroute/dashboard.json`:
 ### "Sinasabi ng quota na healthy ito pero nakakakita ako ng mga 429"
 
 - Ang 429 ay nangangahulugang sinasabi ng provider na nagamit mo na ang iyong quota
-- Maaaring **lipas na** ang pagsubaybay ng OmniRoute sa quota — ang impormasyon ng provider sa upstream ang dapat sundin
+- Maaaring **lipas na** ang pagsubaybay ng 67router sa quota — ang impormasyon ng provider sa upstream ang dapat sundin
 - Awtomatikong nire-refresh ang data ng quota sa pamamagitan ng internal quota monitor
 
 ### "Pumapalya ang combo pero mukhang healthy ang lahat ng target"
@@ -575,7 +575,7 @@ Gumawa ng `~/.omniroute/dashboard.json`:
 
 - Patakbuhin ang `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Kung "ok" — maling alarma ito; masyadong mahigpit ang health check
-- Kung anupaman — **ihinto ang OmniRoute** at sundin ang [gabay sa disaster recovery](./DATABASE_GUIDE.md#disaster-recovery)
+- Kung anupaman — **ihinto ang 67router** at sundin ang [gabay sa disaster recovery](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Kritikal ang pressure sa memory heap"
 

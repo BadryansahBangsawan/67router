@@ -5,11 +5,11 @@
 ---
 
 > **Статус:** Загальнодоступно.
-> **Аудиторія:** Оператори, які підключають OpenCode до розгортання OmniRoute.
+> **Аудиторія:** Оператори, які підключають OpenCode до розгортання 67router.
 > **Джерело істини (схема конфігурації):** `src/shared/services/opencodeConfig.ts`
 > **Джерело істини (пакет npm):** `@omniroute/opencode-provider/` (робоча область, яку можна опублікувати)
 
-[OpenCode](https://opencode.ai) — це агентний ШІ-клієнт із CLI та графічним інтерфейсом для настільних систем. Він читає каталог постачальників із `~/.config/opencode/opencode.json` (або `opencode.jsonc`) і використовує схему за адресою `https://opencode.ai/config.json`. OmniRoute представляє себе в OpenCode як один із таких постачальників — кожен запит проходить через стандартний OpenAI-сумісний інтерфейс OmniRoute `/v1`, тому OpenCode автоматично отримує переваги маршрутизації Auto-Combo, автоматичних вимикачів, політик ключів, спостережуваності тощо.
+[OpenCode](https://opencode.ai) — це агентний ШІ-клієнт із CLI та графічним інтерфейсом для настільних систем. Він читає каталог постачальників із `~/.config/opencode/opencode.json` (або `opencode.jsonc`) і використовує схему за адресою `https://opencode.ai/config.json`. 67router представляє себе в OpenCode як один із таких постачальників — кожен запит проходить через стандартний OpenAI-сумісний інтерфейс 67router `/v1`, тому OpenCode автоматично отримує переваги маршрутизації Auto-Combo, автоматичних вимикачів, політик ключів, спостережуваності тощо.
 
 Підтримуються **два способи інтеграції**. Виберіть один із них — обидва генерують однакову конфігурацію.
 
@@ -17,16 +17,16 @@
 
 ## Спосіб 1 — генератор CLI (без встановлення npm)
 
-Рекомендовано для кінцевих користувачів. Постачається разом з OmniRoute. Записує зміни безпосередньо у файл `opencode.json`.
+Рекомендовано для кінцевих користувачів. Постачається разом з 67router. Записує зміни безпосередньо у файл `opencode.json`.
 
 ```bash
-# Після встановлення OmniRoute (npm i -g @omniroute/cli або локального клонування)
+# Після встановлення 67router (npm i -g @omniroute/cli або локального клонування)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-За лаштунками CLI викликає `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), тому наявний файл `opencode.json` зберігає інших постачальників і коментарі. Запис OmniRoute додається або замінюється атомарно.
+За лаштунками CLI викликає `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), тому наявний файл `opencode.json` зберігає інших постачальників і коментарі. Запис 67router додається або замінюється атомарно.
 
 Отриманий файл (каталог моделей за замовчуванням):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 Інтерфейс/агент OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OpenAI-сумісний інтерфейс OmniRoute)
-         → обробник OmniRoute /v1/chat/completions    (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (OpenAI-сумісний інтерфейс 67router)
+         → обробник 67router /v1/chat/completions    (open-sse/handlers/chatCore.ts)
             → комбінована маршрутизація / Auto-Combo / виконавець
                → зовнішній постачальник
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Їх можна перевизначити через `models: [...]`. Рекомендовані доповнення:
 
-- `"auto"` — надає доступ до [Auto-Combo](../routing/AUTO-COMBO.md) від OmniRoute — маршрутизатора, який не потребує налаштування. Дає змогу OpenCode вибрати «найкращу доступну модель» без жорсткого кодування каталогу.
-- `"<combo-name>"` — будь-яка комбінація, визначена вами на інформаційній панелі; OmniRoute обробляє її прозоро.
+- `"auto"` — надає доступ до [Auto-Combo](../routing/AUTO-COMBO.md) від 67router — маршрутизатора, який не потребує налаштування. Дає змогу OpenCode вибрати «найкращу доступну модель» без жорсткого кодування каталогу.
+- `"<combo-name>"` — будь-яка комбінація, визначена вами на інформаційній панелі; 67router обробляє її прозоро.
 
 ---
 
@@ -135,12 +135,12 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## Режими автентифікації
 
-| Налаштування OmniRoute                                     | Рекомендоване значення `apiKey`                                            |
+| Налаштування 67router                                      | Рекомендоване значення `apiKey`                                            |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (типово для локального середовища) | `sk_omniroute` (буквальне значення-заповнювач)                             |
 | `REQUIRE_API_KEY=true`                                     | Справжній API-ключ окремого користувача з інформаційної панелі → API Keys. |
 
-Для клієнтів у стилі Anthropic, які надсилають `x-api-key` + `anthropic-version`, функція `extractApiKey` OmniRoute також приймає ключ із `x-api-key`. OpenCode використовує інтерфейс OpenAI, тому завжди надсилатиме `Authorization: Bearer ${apiKey}` — особливий випадок для Anthropic тут не застосовується.
+Для клієнтів у стилі Anthropic, які надсилають `x-api-key` + `anthropic-version`, функція `extractApiKey` 67router також приймає ключ із `x-api-key`. OpenCode використовує інтерфейс OpenAI, тому завжди надсилатиме `Authorization: Bearer ${apiKey}` — особливий випадок для Anthropic тут не застосовується.
 
 ---
 
@@ -149,15 +149,15 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 | Симптом                                                               | Причина                                                                         | Виправлення                                                                                                                   |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `404` для кожного запиту з URL, що містить `/v1/v1/`                  | Застаріла конфігурація плагіна версії до v3.8, яка двічі додавала суфікс `/v1`. | Повторно згенеруйте її за допомогою способу 1 або 2.                                                                          |
-| `401 Invalid API key`                                                 | В OmniRoute встановлено `REQUIRE_API_KEY=true`, а ключ невідомий.               | Створіть ключ на інформаційній панелі або встановіть `REQUIRE_API_KEY=false` (лише локально) і використовуйте `sk_omniroute`. |
-| Список моделей в інтерфейсі OpenCode порожній                         | Усі 4 типові моделі приховані в налаштуваннях видимості провайдера OmniRoute.   | Передайте `models: ["auto", ...]`, щоб відобразити ввімкнені вами моделі.                                                     |
+| `401 Invalid API key`                                                 | В 67router встановлено `REQUIRE_API_KEY=true`, а ключ невідомий.                | Створіть ключ на інформаційній панелі або встановіть `REQUIRE_API_KEY=false` (лише локально) і використовуйте `sk_omniroute`. |
+| Список моделей в інтерфейсі OpenCode порожній                         | Усі 4 типові моделі приховані в налаштуваннях видимості провайдера 67router.    | Передайте `models: ["auto", ...]`, щоб відобразити ввімкнені вами моделі.                                                     |
 | Помилка OpenCode 500 із повідомленням `cannot read property 'models'` | Старіші версії OpenCode (< 0.1.x) не підтримували вбудоване поле `models`.      | Оновіть OpenCode до версії, яка відповідає схемі v1 (`opencode.ai/config.json`).                                              |
 
 ---
 
 ## Дивіться також
 
-- [Довідник API](../reference/API_REFERENCE.md) — повний опис REST API OmniRoute
+- [Довідник API](../reference/API_REFERENCE.md) — повний опис REST API 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — що означає `model: "auto"`
 - [README `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - Вихідний код: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -113,7 +113,7 @@ tàbí àyẹ̀wò ọwọ́ tí a ṣàkọsílẹ̀ tó bá ìyípadà náà m
 - Àwọn àkójọ CLI wà ní ọ̀tọ̀ lábẹ́ `bin/cli/locales/`.
 - Pa àwọn placeholder àti tag ICU mọ́ gẹ́gẹ́ bí wọ́n ṣe rí gan-an. Má ṣe túmọ̀ àwọn orúkọ product/provider/model,
   àwọn orúkọ protocol àti header, àwọn àṣẹ, àwọn identifier code/JSON, URL, àwọn environment variable, tàbí
-  àwọn ọ̀rọ̀ tí a dáàbò bò bíi `OmniRoute`, `OAuth`, `MCP`, àti `A2A`. Àkójọ orísun lọ́wọ́lọ́wọ́ ni
+  àwọn ọ̀rọ̀ tí a dáàbò bò bíi `67router`, `OAuth`, `MCP`, àti `A2A`. Àkójọ orísun lọ́wọ́lọ́wọ́ ni
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ìlànà àfojúsùn**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # tún tarball tí a k�
 - **Dá padà.** `run` tún ń fọwọ́sí slot tí a gbé lókè, ó sì ń pààrọ̀ `current` àti `previous` padà nígbà
   tí àyẹ̀wò yẹn bá kùnà. Candidate tí ó kùnà validation àkọ́kọ́ kì í ṣe gbígbé lókè láé.
 
-A kọ gbogbo nǹkan sí abẹ́ `_artifacts/candidate/` tí git kọ̀ sí; fifi-sílẹ̀ OmniRoute
+A kọ gbogbo nǹkan sí abẹ́ `_artifacts/candidate/` tí git kọ̀ sí; fifi-sílẹ̀ 67router
 tí ó ti wà àti data directory rẹ̀ kì í ṣe fífọwọ́ kàn láé. CLI tí a gbé lókè ni
 `_artifacts/candidate/current/prefix/bin/omniroute`; bẹ̀rẹ̀ rẹ̀ pẹ̀lú `DATA_DIR` tirẹ nígbà tí o bá ń lò
 ó. Àwọn exit code: `0` àṣeyọrí, `1` validation tàbí promotion tó kùnà, `2` àṣìṣe lílò tàbí build tí kò sí.

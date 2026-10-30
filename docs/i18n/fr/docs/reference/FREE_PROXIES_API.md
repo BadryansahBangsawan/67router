@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute fournit un ensemble sélectionné de proxys gratuits dans la table `free_proxies`,
+67router fournit un ensemble sélectionné de proxys gratuits dans la table `free_proxies`,
 synchronisé depuis des fournisseurs externes (1proxy, proxifly, iplocate, webshare). Le
 tableau de bord les affiche sous **Paramètres → Proxys gratuits**. Ce document
 décrit le filtrage, le tri, le comptage et le signalement des erreurs de synchronisation

@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge คือพร็อกซี MITM (Man-in-the-Middle) ของ OmniRoute ที่ดักจับทราฟฟิก HTTPS จากเอเจนต์ AI ใน IDE และเปลี่ยนเส้นทางผ่านเอนจินการกำหนดเส้นทางแบบรวมศูนย์ของ OmniRoute โดยรองรับ **เอเจนต์ IDE 10 รายการ** ได้แก่ Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code และ Trae (อยู่ระหว่างการตรวจสอบ) ทำให้ OmniRoute เป็นพร็อกซี MITM สำหรับผู้ช่วยเขียนโค้ด AI ที่ครอบคลุมมากที่สุดในตลาด
+AgentBridge คือพร็อกซี MITM (Man-in-the-Middle) ของ 67router ที่ดักจับทราฟฟิก HTTPS จากเอเจนต์ AI ใน IDE และเปลี่ยนเส้นทางผ่านเอนจินการกำหนดเส้นทางแบบรวมศูนย์ของ 67router โดยรองรับ **เอเจนต์ IDE 10 รายการ** ได้แก่ Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code และ Trae (อยู่ระหว่างการตรวจสอบ) ทำให้ 67router เป็นพร็อกซี MITM สำหรับผู้ช่วยเขียนโค้ด AI ที่ครอบคลุมมากที่สุดในตลาด
 
 **ตำแหน่งแดชบอร์ด:** `/dashboard/tools/agent-bridge`
 **กลุ่มในแถบด้านข้าง:** เครื่องมือ (ถัดจาก Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge คือพร็อกซี MITM (Man-in-the-Middle) ของ Om
 
 ### AgentBridge คืออะไร?
 
-เมื่อ IDE agent (เช่น GitHub Copilot, Cursor, Claude Code) ทำการเรียก API มันจะเชื่อมต่อโดยตรงกับผู้ให้บริการ AI ต้นทาง (OpenAI, Anthropic ฯลฯ) AgentBridge ดักจับการเชื่อมต่อนั้นอย่างโปร่งใสที่ระดับ TLS — โดยไม่ต้องเปลี่ยนแปลงการตั้งค่าของ agent แต่อย่างใด — และเขียนคำขอใหม่ผ่าน OmniRoute
+เมื่อ IDE agent (เช่น GitHub Copilot, Cursor, Claude Code) ทำการเรียก API มันจะเชื่อมต่อโดยตรงกับผู้ให้บริการ AI ต้นทาง (OpenAI, Anthropic ฯลฯ) AgentBridge ดักจับการเชื่อมต่อนั้นอย่างโปร่งใสที่ระดับ TLS — โดยไม่ต้องเปลี่ยนแปลงการตั้งค่าของ agent แต่อย่างใด — และเขียนคำขอใหม่ผ่าน 67router
 
 ซึ่งหมายความว่าคุณสามารถ:
 
-- **เปลี่ยนเส้นทาง agent ใดก็ได้ไปยังผู้ให้บริการใดก็ได้**: Copilot กำลังคุยกับ OpenAI อยู่หรือ? เปลี่ยนเส้นทางไปยัง Anthropic Claude, Gemini หรือผู้ให้บริการ 375 รายของ OmniRoute ได้เลย
+- **เปลี่ยนเส้นทาง agent ใดก็ได้ไปยังผู้ให้บริการใดก็ได้**: Copilot กำลังคุยกับ OpenAI อยู่หรือ? เปลี่ยนเส้นทางไปยัง Anthropic Claude, Gemini หรือผู้ให้บริการ 375 รายของ 67router ได้เลย
 - **ใช้การแมปโมเดล**: `gemini-3-flash` → `claude-sonnet-4.7` อย่างโปร่งใสที่ระดับ handler
 - **สังเกตการณ์ทราฟฟิกของ agent ทั้งหมด**: ทุกคำขอที่ถูกดักจับจะถูกเผยแพร่ไปยัง [Traffic Inspector](./TRAFFIC_INSPECTOR.md)
-- **ใช้ความทนทานของ OmniRoute**: combo routing, circuit breakers, fallbacks และการติดตามต้นทุน ทำงานกับทราฟฟิกของ IDE agent ได้เช่นกัน
+- **ใช้ความทนทานของ 67router**: combo routing, circuit breakers, fallbacks และการติดตามต้นทุน ทำงานกับทราฟฟิกของ IDE agent ได้เช่นกัน
 
 ### การเปรียบเทียบกับตลาด
 
-| ฟีเจอร์                      | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ---------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                  |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot               |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                   |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex                 |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                   |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries               |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                  |    —    |    —     |        ✓        |             ✓             |
-| Open Code                    |    —    |    —     |        ✓        |             ✓             |
-| Trae                         |    —    |    —     |        —        |      🔍 กำลังตรวจสอบ      |
-| หน้าจอแดชบอร์ด               |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector            |    ✗    |    ✗     |        ✓        |             ✓             |
-| การกำหนดเส้นทางของ OmniRoute |    ✗    |    ✗     |        ✗        |             ✓             |
-| หน้าจอแมปโมเดล               |    ✗    |    ✗     |        ✗        |             ✓             |
-| รายการบายพาส                 |    ✗    |    ✗     |        ✓        |             ✓             |
-| ใบรับรอง CA ต้นทาง           |    ✗    |    ✗     |        ✓        |             ✓             |
+| ฟีเจอร์                     | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                 |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot              |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                  |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex                |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                  |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries              |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                 |    —    |    —     |        ✓        |            ✓             |
+| Open Code                   |    —    |    —     |        ✓        |            ✓             |
+| Trae                        |    —    |    —     |        —        |     🔍 กำลังตรวจสอบ      |
+| หน้าจอแดชบอร์ด              |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector           |    ✗    |    ✗     |        ✓        |            ✓             |
+| การกำหนดเส้นทางของ 67router |    ✗    |    ✗     |        ✗        |            ✓             |
+| หน้าจอแมปโมเดล              |    ✗    |    ✗     |        ✗        |            ✓             |
+| รายการบายพาส                |    ✗    |    ✗     |        ✓        |            ✓             |
+| ใบรับรอง CA ต้นทาง          |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (พอร์ต 443, โปรเซสลูก CJS)
     │  ระบุเป้าหมายจาก SNI ของส่วนหัว Host
     │  สร้างใบรับรอง TLS สำหรับแต่ละ SNI ซึ่งลงนามโดย CA ของ AgentBridge
     ├── ตรงกับรายการข้ามหรือไม่? → ส่งผ่าน TCP (ไม่ถอดรหัส)
-    ├── ตรงกับเป้าหมายหรือไม่? → fetch → เราเตอร์ OmniRoute (พอร์ต 20128)
+    ├── ตรงกับเป้าหมายหรือไม่? → fetch → เราเตอร์ 67router (พอร์ต 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() กับเนื้อหาคำขอ/ส่วนหัว
     │               ├── TrafficBuffer.push() — เผยแพร่ไปยัง Traffic Inspector
@@ -205,7 +205,7 @@ hop-by-hop/framing ที่ใช้ร่วมกันออก (รวม�
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ IDE บางตัว — โดยเฉพาะ **Antigravity IDE** แล�
 
 ใช้ตารางการแมปโมเดลในการ์ดของเอเจนต์แต่ละตัวเพื่อกำหนดการแมปจากต้นทาง → เป้าหมาย:
 
-| โมเดลต้นทาง (เนทีฟของเอเจนต์) | โมเดลเป้าหมาย (OmniRoute) |
-| ----------------------------- | ------------------------- |
-| `gpt-4o`                      | `claude-sonnet-4.7`       |
-| `*` (ไวลด์การ์ด)              | `claude-haiku-4.7`        |
+| โมเดลต้นทาง (เนทีฟของเอเจนต์) | โมเดลเป้าหมาย (67router) |
+| ----------------------------- | ------------------------ |
+| `gpt-4o`                      | `claude-sonnet-4.7`      |
+| `*` (ไวลด์การ์ด)              | `claude-haiku-4.7`       |
 
 ไวลด์การ์ด `*` จะแมปโมเดลที่ไม่รู้จักไปยังเป้าหมายที่ระบุ โดยจัดเก็บถาวรไว้ในตาราง `agent_bridge_mappings`
 
@@ -277,7 +277,7 @@ IDE บางตัว — โดยเฉพาะ **Antigravity IDE** แล�
 
 ### 3.5 ประกาศความเสี่ยง
 
-AgentBridge ดักจับข้อมูลประจำตัว (โทเค็น OAuth, API key) ที่ IDE ใช้เพื่อตรวจสอบสิทธิ์กับผู้ให้บริการต้นทาง ข้อมูลเหล่านี้จะถูก **ปิดบังก่อนบันทึกลง log** (ดู §2.7) แต่ยังคงมองเห็นได้ในเลเยอร์ MITM ของ OmniRoute การเปิดใช้งานเอเจนต์แต่ละตัวครั้งแรกจะแสดง modal แจ้งเตือนความเสี่ยงที่สามารถปิดได้
+AgentBridge ดักจับข้อมูลประจำตัว (โทเค็น OAuth, API key) ที่ IDE ใช้เพื่อตรวจสอบสิทธิ์กับผู้ให้บริการต้นทาง ข้อมูลเหล่านี้จะถูก **ปิดบังก่อนบันทึกลง log** (ดู §2.7) แต่ยังคงมองเห็นได้ในเลเยอร์ MITM ของ 67router การเปิดใช้งานเอเจนต์แต่ละตัวครั้งแรกจะแสดง modal แจ้งเตือนความเสี่ยงที่สามารถปิดได้
 
 ### 3.6 การบำรุงรักษาและการวินิจฉัย
 
@@ -397,7 +397,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### รายการบายพาสสำหรับโฮสต์ที่ละเอียดอ่อน
 
-รายการบายพาสช่วยให้มั่นใจว่าสถาบันการเงิน ผู้ให้บริการ OAuth/SSO และโฮสต์ที่ละเอียดอ่อนอื่นๆ จะ **ไม่ถูกถอดรหัสโดยเด็ดขาด** ทราฟฟิก TLS ของโฮสต์เหล่านี้จะถูกส่งผ่านในรูปแบบทันเนล TCP โปร่งใส — OmniRoute จะไม่เห็นข้อความแบบไม่เข้ารหัส
+รายการบายพาสช่วยให้มั่นใจว่าสถาบันการเงิน ผู้ให้บริการ OAuth/SSO และโฮสต์ที่ละเอียดอ่อนอื่นๆ จะ **ไม่ถูกถอดรหัสโดยเด็ดขาด** ทราฟฟิก TLS ของโฮสต์เหล่านี้จะถูกส่งผ่านในรูปแบบทันเนล TCP โปร่งใส — 67router จะไม่เห็นข้อความแบบไม่เข้ารหัส
 
 รูปแบบบายพาสเริ่มต้นประกอบด้วย:
 
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # บังคับยุติกระบวนกา�
 
 หาก IDE แสดงข้อผิดพลาด TLS หลังจากเริ่ม AgentBridge:
 
-1. ตรวจสอบว่าได้ติดตั้งใบรับรองแล้ว: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) หรือ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ตรวจสอบว่าได้ติดตั้งใบรับรองแล้ว: `security find-certificate -c "67router AgentBridge"` (macOS) หรือ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. แอปบางตัวจัดเก็บคลังความเชื่อถือของตนเอง (Firefox, Chrome บน Linux) ให้เรียกใช้ "เชื่อถือใบรับรอง" อีกครั้งและตรวจสอบคลังใบรับรองเฉพาะสำหรับ NSS/Firefox
 3. รีสตาร์ต IDE หลังจากกำหนดให้เชื่อถือแล้ว — เซสชัน TLS ที่กำลังดำเนินการอยู่จะยังใช้สถานะความเชื่อถือเดิม
 
@@ -499,7 +499,7 @@ ipconfig /flushdns
 หาก AgentBridge ดักรับคำขอได้ แต่คำขอทั้งหมดล้มเหลว:
 
 1. ตรวจสอบว่ามีผู้ให้บริการเชื่อมต่ออยู่อย่างน้อยหนึ่งรายที่ `/dashboard/providers`
-2. ตรวจสอบบันทึกของเซิร์ฟเวอร์ OmniRoute: `APP_LOG_LEVEL=debug` ใน `.env`
+2. ตรวจสอบบันทึกของเซิร์ฟเวอร์ 67router: `APP_LOG_LEVEL=debug` ใน `.env`
 3. ตรวจสอบว่า `OMNIROUTE_BASE_URL` ชี้ไปยังปลายทางเราเตอร์ที่ถูกต้อง (ค่าเริ่มต้น: `http://127.0.0.1:20128`)
 
 ---

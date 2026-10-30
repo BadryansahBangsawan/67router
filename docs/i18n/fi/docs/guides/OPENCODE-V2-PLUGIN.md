@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` tuo koko OmniRoute-luettelosi — mallit, yhdistelmät ja
+`@omniroute/opencode-plugin-v2` tuo koko 67router-luettelosi — mallit, yhdistelmät ja
 automaattiset yhdistelmät — OpenCode v2:n mallivalitsimeen näyttönimineen, hintoineen ja maksuttoman tason
 käyttörajoineen.
 
@@ -15,7 +15,7 @@ jaa mitään keskenään, joten toisen päivittäminen ei koskaan pakota päivit
 ## Vaatimukset
 
 - OpenCode v2.
-- Saavutettavissa oleva OmniRoute-yhdyskäytävä (oletuksena `http://localhost:20128`).
+- Saavutettavissa oleva 67router-yhdyskäytävä (oletuksena `http://localhost:20128`).
 - Node.js 22 tai 24.
 
 ## Asennus
@@ -78,7 +78,7 @@ ja nimeää päätepisteen sekä menetetyt tiedot — joten suppeamman mallivali
 | `baseURL`                        | pakollinen                                           | Yhdyskäytävän juuri, vain `http(s)`; pääte `/v1` lisätään tarvittaessa                                                                  |
 | `apiKey`                         | yhdistetty tunnistetieto, sitten `OMNIROUTE_API_KEY` | Keskusteluavain `/v1/*`-rajapinnoille                                                                                                   |
 | `managementReadToken`            | käyttää varalla `apiKey`-arvoa                       | Avain `/api/*`-rajapinnoille — yleensä **ei** sama avain                                                                                |
-| `displayName`                    | `"OmniRoute"`                                        | Palveluntarjoajan nimi valitsimessa                                                                                                     |
+| `displayName`                    | `"67router"`                                         | Palveluntarjoajan nimi valitsimessa                                                                                                     |
 | `timeoutMs`                      | `10000`                                              | Noutojen aikakatkaisu päätepisteittäin (automaattiset yhdistelmät käyttävät 5 sekuntia)                                                 |
 | `modelCacheTtlMs`                | `300000`                                             | Luettelovälimuistin TTL; levylle tallennettu tilannevedos nopeuttaa kylmäkäynnistyksiä                                                  |
 | `timeouts`                       | käyttää varalla `timeoutMs`-arvoa                    | Päätepistekohtaiset aikarajat millisekunteina: `models`, `combos`, `autoCombos`, `enrichment`                                           |
@@ -116,7 +116,7 @@ Poista toiminto käytöstä asetuksella `"geminiSanitization": false`.
 
 | Oire                                                     | Syy                                                                                                                                    |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Valitsimessa ei näy OmniRoute-mallia                     | Avainta ei löytynyt (tarkista käynnistysvaroitus) tai yhdyskäytävään ei saada yhteyttä                                                 |
+| Valitsimessa ei näy 67router-mallia                      | Avainta ei löytynyt (tarkista käynnistysvaroitus) tai yhdyskäytävään ei saada yhteyttä                                                 |
 | Raakoja mallitunnuksia, ei yhdistelmiä eikä hintatietoja | Hallintapäätepisteet hylkäsivät tunnuksen — aseta `managementReadToken`                                                                |
 | Lyhyt tai tyhjä `freeOnly`-luettelo                      | Hallintatunnus puuttuu tai se hylättiin — tarkista isäntälokista päivityksen yhteenvetorivi (`unmatched-free`-määrä)                   |
 | Istunto on kiinnitetty kohteeseen `opencode-<id>/…`      | v1-laajennus julkaisi tunnuksen `opencode-<id>`; v2 julkaisee pelkän `<id>`-tunnuksen, joten valitse malli uudelleen kohdasta `<id>/…` |

@@ -6,7 +6,7 @@
 
 ## Nchịkọta
 
-A na-ekewa ụzọ API njikwa OmniRoute niile n’otu n’ime ọkwa nchekwa atọ.
+A na-ekewa ụzọ API njikwa 67router niile n’otu n’ime ọkwa nchekwa atọ.
 Nhazi a anaghị agbanwe agbanwe, akọwapụtara ya na `src/server/authz/routeGuard.ts`,
 a na-enyochakwa ya tupu ngalaba nyocha njirimara ọ bụla ọzọ amalite.
 
@@ -28,10 +28,10 @@ process — otu CVE a ma ama
 **Ihe GHSA-fhh6-4qxv-rpqj bụ (ụdị mwakpo ahụ):** server njikwa/agent
 na-ekpughe endpoint nke na-amalite subprocess (`npm install`, `node`, browser,
 proxy, `git`, `tar`, …). Ọ bụrụ na enwere ike iru endpoint ahụ site n'èzí host —
-n'ihi na onye na-ahụ maka sistemụ tinyere OmniRoute n'azụ tunnel
+n'ihi na onye na-ahụ maka sistemụ tinyere 67router n'azụ tunnel
 nginx/Cloudflare/Tailscale ma JWT agbapụ, ma ọ bụ na ahazighị auth nke ọma —
 onye mwakpo ahụ na-agbanwe “ịkpọ API” ka ọ bụrụ “ịgba command na host”
-(remote code execution). OmniRoute na-egbochi nke a site n'ịmanye
+(remote code execution). 67router na-egbochi nke a site n'ịmanye
 **nyocha host loopback n'enweghị ọnọdụ ọ bụla, tupu nyocha auth ọ bụla**, na
 route ọ bụla nwere ike ịmalite process: token gbapụrụ site na tunnel ka na-enweghị
 ike iru ebe a na-amalite process.
@@ -122,7 +122,7 @@ maka ndị na-akpọ oku MCP-naanị site n'ebe dị anya, ndị na-ekwesịgh�
 
 #### Nduzi onye ọrụ sistemụ & nyocha ndekọ
 
-Ọ bụrụ na ị na-agba OmniRoute n'azụ reverse proxy ma ọ bụ tunnel (nginx, Caddy, Cloudflare
+Ọ bụrụ na ị na-agba 67router n'azụ reverse proxy ma ọ bụ tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), nyocha loopback ahụ ka na-echebe ụzọ ndị nwere ike
 ịmalite usoro dị n'elu — a na-ajụ arịrịọ nke adreesị onye ahịa ya na-abụghị loopback site na
 `403 LOCAL_ONLY` **tupu nkwenye njirimara amalite**, ya mere JWT agbapụtala enweghị ike iru ebe a na-amalite usoro. Ọrụ abụọ
@@ -160,7 +160,7 @@ nke onye ọrụ sistemụ ka dị:
 - Jiri grep chọọ prefix ndị dị n’elu na reverse-proxy / access logs gị, jikọtara ha na
   adreesị onye ahịa na-abụghị loopback. Nnweta ọ bụla dị otu a nke weghachiri `200` kama
   `403 LOCAL_ONLY` pụtara na proxy ahụ na-ezo IP onye ahịa n’ezie — dozie proxy ahụ.
-- `403 LOCAL_ONLY` dị na logs OmniRoute maka otu n’ime ụzọ ndị a bụ ihe nche
+- `403 LOCAL_ONLY` dị na logs 67router maka otu n’ime ụzọ ndị a bụ ihe nche
   na-arụ ọrụ dịka e bu n’obi, ọ bụghị njehie a ga-egbochi.
 
 #### Ụzọ a pụrụ inweta n’ebe dị anya nwere ọnụ ụzọ nyocha n’ebe a na-akpọ ha

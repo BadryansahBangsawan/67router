@@ -7,29 +7,29 @@
 > **信頼できる情報源:** `src/lib/skills/` および `src/app/api/skills/`
 > **最終更新:** 2026-06-28 — v3.8.40
 
-OmniRoute は、言語モデル（およびオペレーター）が再利用可能な機能を組み合わせられる、拡張可能な Skills フレームワークを提供します。ファイルシステムの読み取りや HTTP リクエストから、サンドボックス化されたコード実行、厳選されたマーケットプレイスのスキルまで対応します。
+67router は、言語モデル（およびオペレーター）が再利用可能な機能を組み合わせられる、拡張可能な Skills フレームワークを提供します。ファイルシステムの読み取りや HTTP リクエストから、サンドボックス化されたコード実行、厳選されたマーケットプレイスのスキルまで対応します。
 
-スキルは、バージョン管理され、スキーマによって定義された作業単位です。OmniRoute は、送信リクエストにスキルをツール定義として注入し、モデルから返されるツール呼び出しをインターセプトして、対応するハンドラーを実行し、その結果をモデルに返すことで会話を継続できます。モデルが実装を参照することはなく、参照できるのはツールインターフェースのみです。
+スキルは、バージョン管理され、スキーマによって定義された作業単位です。67router は、送信リクエストにスキルをツール定義として注入し、モデルから返されるツール呼び出しをインターセプトして、対応するハンドラーを実行し、その結果をモデルに返すことで会話を継続できます。モデルが実装を参照することはなく、参照できるのはツールインターフェースのみです。
 
 ---
 
 ## Agent Skills と Omni Skills
 
-OmniRoute には、明確に異なりながら相互補完的な 2 つのスキルシステムがあります。
+67router には、明確に異なりながら相互補完的な 2 つのスキルシステムがあります。
 
 | 観点             | **Omni Skills**（本ドキュメント）                        | **Agent Skills**                                                                             |
 | :--------------- | :------------------------------------------------------- | :------------------------------------------------------------------------------------------- |
 | 目的             | LLM ツールの注入 + サンドボックス化された実行            | 外部エージェントが検出して利用するための SKILL.md カタログ                                   |
 | 信頼できる情報源 | `src/lib/skills/` + マーケットプレイス                   | `src/lib/agentSkills/` + `skills/` ディレクトリ                                              |
 | ランタイムモード | 送信リクエストに注入され、ツール呼び出しイベント時に実行 | 静的 Markdown カタログ + REST/MCP/A2A 検出エンドポイント                                     |
-| 利用者           | OmniRoute 自体（コンボルーティング、受信 LLM 呼び出し）  | 外部エージェント、MCP クライアント、A2A オーケストレーター                                   |
+| 利用者           | 67router 自体（コンボルーティング、受信 LLM 呼び出し）   | 外部エージェント、MCP クライアント、A2A オーケストレーター                                   |
 | 数               | 可変（マーケットプレイスに依存）                         | 45 件のカタログエントリ（API 23 件 + CLI 21 件 + 設定 1 件）                                 |
 | 形式             | ツールスキーマ + ハンドラーを持つ `SkillDefinition`      | `SKILL.md` フロントマター + Markdown 本文                                                    |
 | 検出             | `/api/skills/*` REST + `omniroute_skills_*` MCP ツール   | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP ツール + A2A `list-capabilities` |
 
-**Omni Skills** は実行エンジンです。LLM がツールを呼び出した際に OmniRoute が「何を実行できるか」を定義します。
+**Omni Skills** は実行エンジンです。LLM がツールを呼び出した際に 67router が「何を実行できるか」を定義します。
 
-**Agent Skills** はドキュメントカタログです。外部エージェントに対し、OmniRoute の REST API と CLI を「どのように使用するか」を説明します。構造化された SKILL.md ファイルは、エージェントのプロンプトに直接取り込めます。
+**Agent Skills** はドキュメントカタログです。外部エージェントに対し、67router の REST API と CLI を「どのように使用するか」を説明します。構造化された SKILL.md ファイルは、エージェントのプロンプトに直接取り込めます。
 
 Agent Skills のカタログ、ジェネレーター、MCP ツール、および A2A スキルについては、[docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) を参照してください。
 
@@ -41,14 +41,14 @@ Agent Skills のカタログ、ジェネレーター、MCP ツール、および
 
 同じレジストリ内に、次の 3 つのスキルソースが共存します。
 
-1. **組み込みスキル**（`src/lib/skills/builtins.ts`）— OmniRoute に同梱されています。一般的なユースケースをカバーします。
+1. **組み込みスキル**（`src/lib/skills/builtins.ts`）— 67router に同梱されています。一般的なユースケースをカバーします。
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` 配下にある API キーごとのサンドボックスワークスペース
    - `http_request` — `guard: "public-only"` を指定した `safeOutboundFetch` 経由の送信 HTTP リクエスト
    - `web_search` — キャッシュ機能を備えた差し替え可能な検索プロバイダー（`executeWebSearch`）
    - `eval_code` — Docker でサンドボックス化された `node` または `python` の実行
    - `execute_command` — Docker でサンドボックス化されたシェルコマンド
    - `browser` — Playwright ベースのスキャフォールディング。デフォルトでは無効（`builtin/browser.ts`）
-2. **SkillsMP**（OmniRoute マーケットプレイス）— `https://skillsmp.com/api/v1/skills/search` から取得されます。Settings で `skillsmpApiKey` を設定する必要があります。
+2. **SkillsMP**（67router マーケットプレイス）— `https://skillsmp.com/api/v1/skills/search` から取得されます。Settings で `skillsmpApiKey` を設定する必要があります。
 3. **SkillsSH**（`skills.sh` コミュニティカタログ）— `https://skills.sh/api/search` から取得されます。認証は不要です。SKILL.md の内容は GitHub raw から取得されます。
 
 単一の「アクティブプロバイダー」によって、ダッシュボードがどのカタログからインストールするかが制御されます（`src/lib/skills/providerSettings.ts`）。**Settings → Memory & Skills** で切り替えます。デフォルトは `skillsmp` です。
@@ -444,7 +444,7 @@ enum SkillMode {
 
 ## 組み込みスキルカタログ
 
-OmniRoute には、`src/lib/skills/builtin/` に厳選された組み込みスキルのセットが付属しています。最も一般的なものは次のとおりです。
+67router には、`src/lib/skills/builtin/` に厳選された組み込みスキルのセットが付属しています。最も一般的なものは次のとおりです。
 
 ### ブラウザー自動化スキル
 

@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge ହେଉଛି OmniRouteର MITM (Man-in-the-Middle) ପ୍ରକ୍ସି, ଯାହା IDE AI ଏଜେଣ୍ଟଗୁଡ଼ିକର HTTPS ଟ୍ରାଫିକ୍କୁ ଅବରୋଧ କରି OmniRouteର ଏକୀକୃତ ରାଉଟିଂ ଇଞ୍ଜିନ୍ ମାଧ୍ୟମରେ ପୁନଃରାଉଟ୍ କରେ। ଏହା **10ଟି IDE ଏଜେଣ୍ଟ** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, ଏବଂ Trae (ଅନୁସନ୍ଧାନାଧୀନ) — କୁ ସମର୍ଥନ କରେ, ଯାହା OmniRouteକୁ ବଜାରରେ AI କୋଡିଂ ସହାୟକମାନଙ୍କ ପାଇଁ ସର୍ବାଧିକ ବ୍ୟାପକ କଭରେଜ୍ ଥିବା MITM ପ୍ରକ୍ସି କରିଥାଏ।
+AgentBridge ହେଉଛି 67routerର MITM (Man-in-the-Middle) ପ୍ରକ୍ସି, ଯାହା IDE AI ଏଜେଣ୍ଟଗୁଡ଼ିକର HTTPS ଟ୍ରାଫିକ୍କୁ ଅବରୋଧ କରି 67routerର ଏକୀକୃତ ରାଉଟିଂ ଇଞ୍ଜିନ୍ ମାଧ୍ୟମରେ ପୁନଃରାଉଟ୍ କରେ। ଏହା **10ଟି IDE ଏଜେଣ୍ଟ** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, ଏବଂ Trae (ଅନୁସନ୍ଧାନାଧୀନ) — କୁ ସମର୍ଥନ କରେ, ଯାହା 67routerକୁ ବଜାରରେ AI କୋଡିଂ ସହାୟକମାନଙ୍କ ପାଇଁ ସର୍ବାଧିକ ବ୍ୟାପକ କଭରେଜ୍ ଥିବା MITM ପ୍ରକ୍ସି କରିଥାଏ।
 
 **ଡ୍ୟାସବୋର୍ଡ ଅବସ୍ଥାନ:** `/dashboard/tools/agent-bridge`
 **ସାଇଡ୍ବାର୍ ଗୋଷ୍ଠୀ:** ଟୁଲ୍ଗୁଡ଼ିକ (Cloud Agents ପରେ)
@@ -16,34 +16,34 @@ AgentBridge ହେଉଛି OmniRouteର MITM (Man-in-the-Middle) ପ୍ରକ�
 
 ### AgentBridge କ'ଣ?
 
-ଯେତେବେଳେ ଏକ IDE ଏଜେଣ୍ଟ (ଯେପରିକି GitHub Copilot, Cursor, Claude Code) କୌଣସି API କଲ୍ କରେ, ଏହା ସିଧାସଳଖ ଅପଷ୍ଟ୍ରିମ୍ AI ପ୍ରୋଭାଇଡର (OpenAI, Anthropic ଇତ୍ୟାଦି) ସହିତ ସଂଯୋଗ କରେ। AgentBridge ସେହି ସଂଯୋଗକୁ TLS ସ୍ତରରେ ସ୍ୱଚ୍ଛ ଭାବରେ ଅଟକାଇଥାଏ — କୌଣସି ଏଜେଣ୍ଟ କନଫିଗରେସନ୍ ପରିବର୍ତ୍ତନ ଆବଶ୍ୟକ ନ କରି — ଏବଂ ଅନୁରୋଧକୁ OmniRoute ମାଧ୍ୟମରେ ପୁନର୍ଲେଖନ କରିଥାଏ।
+ଯେତେବେଳେ ଏକ IDE ଏଜେଣ୍ଟ (ଯେପରିକି GitHub Copilot, Cursor, Claude Code) କୌଣସି API କଲ୍ କରେ, ଏହା ସିଧାସଳଖ ଅପଷ୍ଟ୍ରିମ୍ AI ପ୍ରୋଭାଇଡର (OpenAI, Anthropic ଇତ୍ୟାଦି) ସହିତ ସଂଯୋଗ କରେ। AgentBridge ସେହି ସଂଯୋଗକୁ TLS ସ୍ତରରେ ସ୍ୱଚ୍ଛ ଭାବରେ ଅଟକାଇଥାଏ — କୌଣସି ଏଜେଣ୍ଟ କନଫିଗରେସନ୍ ପରିବର୍ତ୍ତନ ଆବଶ୍ୟକ ନ କରି — ଏବଂ ଅନୁରୋଧକୁ 67router ମାଧ୍ୟମରେ ପୁନର୍ଲେଖନ କରିଥାଏ।
 
 ଏହାର ଅର୍ଥ ଆପଣ କରିପାରିବେ:
 
-- **ଯେକୌଣସି ଏଜେଣ୍ଟକୁ ଯେକୌଣସି ପ୍ରୋଭାଇଡରକୁ ପୁନଃନିର୍ଦ୍ଦେଶ କରନ୍ତୁ**: Copilot OpenAI ସହ କଥା ହେଉଛି କି? ଏହାକୁ Anthropic Claude, Gemini କିମ୍ବା OmniRoute ର 375 ପ୍ରୋଭାଇଡର ମଧ୍ୟରୁ ଯେକୌଣସିକୁ ପୁନଃନିର୍ଦ୍ଦେଶ କରନ୍ତୁ।
+- **ଯେକୌଣସି ଏଜେଣ୍ଟକୁ ଯେକୌଣସି ପ୍ରୋଭାଇଡରକୁ ପୁନଃନିର୍ଦ୍ଦେଶ କରନ୍ତୁ**: Copilot OpenAI ସହ କଥା ହେଉଛି କି? ଏହାକୁ Anthropic Claude, Gemini କିମ୍ବା 67router ର 375 ପ୍ରୋଭାଇଡର ମଧ୍ୟରୁ ଯେକୌଣସିକୁ ପୁନଃନିର୍ଦ୍ଦେଶ କରନ୍ତୁ।
 - **ମଡେଲ୍ ମ୍ୟାପିଂ ପ୍ରୟୋଗ କରନ୍ତୁ**: `gemini-3-flash` → `claude-sonnet-4.7` ହ୍ୟାଣ୍ଡଲର ସ୍ତରରେ ସ୍ୱଚ୍ଛ ଭାବରେ।
 - **ସମସ୍ତ ଏଜେଣ୍ଟ ଟ୍ରାଫିକ୍ ଦେଖନ୍ତୁ**: ପ୍ରତ୍ୟେକ ଅଟକାଯାଇଥିବା ଅନୁରୋଧ [ଟ୍ରାଫିକ୍ ଇନ୍ସପେକ୍ଟର](./TRAFFIC_INSPECTOR.md)କୁ ପ୍ରକାଶିତ ହୁଏ।
-- **OmniRoute ସ୍ଥିରତା ପ୍ରୟୋଗ କରନ୍ତୁ**: କମ୍ବୋ ରାଉଟିଂ, ସର୍କିଟ ବ୍ରେକର, ଫଲବ୍ୟାକ ଏବଂ ଖର୍ଚ୍ଚ ଟ୍ରାକିଂ IDE ଏଜେଣ୍ଟ ଟ୍ରାଫିକ୍ ପାଇଁ ମଧ୍ୟ କାମ କରେ।
+- **67router ସ୍ଥିରତା ପ୍ରୟୋଗ କରନ୍ତୁ**: କମ୍ବୋ ରାଉଟିଂ, ସର୍କିଟ ବ୍ରେକର, ଫଲବ୍ୟାକ ଏବଂ ଖର୍ଚ୍ଚ ଟ୍ରାକିଂ IDE ଏଜେଣ୍ଟ ଟ୍ରାଫିକ୍ ପାଇଁ ମଧ୍ୟ କାମ କରେ।
 
 ### ବଜାର ସହିତ ତୁଳନା
 
-| ବୈଶିଷ୍ଟ୍ୟ                 | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity               |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot            |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex              |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries            |    —    |    ✓     |        —        |             ✓             |
-| Claude Code               |    —    |    —     |        ✓        |             ✓             |
-| Open Code                 |    —    |    —     |        ✓        |             ✓             |
-| Trae                      |    —    |    —     |        —        |    🔍 ଅନୁସନ୍ଧାନ ଚାଲିଛି    |
-| ଡ୍ୟାସବୋର୍ଡ UI             |    ✓    |    ✗     |        ✗        |             ✓             |
-| ଟ୍ରାଫିକ୍ ଇନ୍ସପେକ୍ଟର       |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute ରାଉଟିଂ          |    ✗    |    ✗     |        ✗        |             ✓             |
-| ମଡେଲ୍ ମ୍ୟାପିଂ UI          |    ✗    |    ✗     |        ✗        |             ✓             |
-| ବାଇପାସ ତାଲିକା             |    ✗    |    ✗     |        ✓        |             ✓             |
-| ଅପଷ୍ଟ୍ରିମ୍ CA ସାର୍ଟିଫିକେଟ |    ✗    |    ✗     |        ✓        |             ✓             |
+| ବୈଶିଷ୍ଟ୍ୟ                 | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity               |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot            |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex              |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries            |    —    |    ✓     |        —        |            ✓             |
+| Claude Code               |    —    |    —     |        ✓        |            ✓             |
+| Open Code                 |    —    |    —     |        ✓        |            ✓             |
+| Trae                      |    —    |    —     |        —        |   🔍 ଅନୁସନ୍ଧାନ ଚାଲିଛି    |
+| ଡ୍ୟାସବୋର୍ଡ UI             |    ✓    |    ✗     |        ✗        |            ✓             |
+| ଟ୍ରାଫିକ୍ ଇନ୍ସପେକ୍ଟର       |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router ରାଉଟିଂ           |    ✗    |    ✗     |        ✗        |            ✓             |
+| ମଡେଲ୍ ମ୍ୟାପିଂ UI          |    ✗    |    ✗     |        ✗        |            ✓             |
+| ବାଇପାସ ତାଲିକା             |    ✗    |    ✗     |        ✓        |            ✓             |
+| ଅପଷ୍ଟ୍ରିମ୍ CA ସାର୍ଟିଫିକେଟ |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (ପୋର୍ଟ 443, CJS ଚାଇଲ୍ଡ ପ୍ରକ�
     │  Host ହେଡର୍ SNI ଦ୍ୱାରା ଲକ୍ଷ୍ୟ ନିର୍ଦ୍ଧାରଣ କରେ
     │  AgentBridge CA ଦ୍ୱାରା ସ୍ୱାକ୍ଷରିତ ପ୍ରତି-SNI TLS ପ୍ରମାଣପତ୍ର ସୃଷ୍ଟି କରେ
     ├── ବାଇପାସ୍ ତାଲିକା ସହ ମେଳ? → TCP ପାସ୍ଥ୍ରୁ (ଡିକ୍ରିପ୍ସନ୍ ନାହିଁ)
-    ├── ଲକ୍ଷ୍ୟ ସହ ମେଳ? → fetch → OmniRoute ରାଉଟର୍ (ପୋର୍ଟ 20128)
+    ├── ଲକ୍ଷ୍ୟ ସହ ମେଳ? → fetch → 67router ରାଉଟର୍ (ପୋର୍ଟ 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── ଅନୁରୋଧର ବଡି/ହେଡର୍ଗୁଡ଼ିକରେ maskSecrets()
     │               ├── TrafficBuffer.push() — Traffic Inspectorକୁ ପ୍ରକାଶ କରେ
@@ -204,7 +204,7 @@ IDEଗୁଡ଼ିକ MITM ସଂଯୋଗକୁ ଗ୍ରହଣ କରିବା
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -260,10 +260,10 @@ GitHub Copilot ପାଇଁ `/etc/hosts` ଏଣ୍ଟ୍ରିର ଉଦାହ�
 
 ସୋର୍ସ → ଟାର୍ଗେଟ୍ ମ୍ୟାପିଂ ନିର୍ଦ୍ଧାରଣ କରିବା ପାଇଁ ପ୍ରତ୍ୟେକ ଏଜେଣ୍ଟ କାର୍ଡରେ ଥିବା Model Mapping Table ବ୍ୟବହାର କରନ୍ତୁ:
 
-| ସୋର୍ସ ମଡେଲ୍ (ଏଜେଣ୍ଟର ନେଟିଭ୍) | ଟାର୍ଗେଟ୍ ମଡେଲ୍ (OmniRoute) |
-| ---------------------------- | -------------------------- |
-| `gpt-4o`                     | `claude-sonnet-4.7`        |
-| `*` (ୱାଇଲ୍ଡକାର୍ଡ)            | `claude-haiku-4.7`         |
+| ସୋର୍ସ ମଡେଲ୍ (ଏଜେଣ୍ଟର ନେଟିଭ୍) | ଟାର୍ଗେଟ୍ ମଡେଲ୍ (67router) |
+| ---------------------------- | ------------------------- |
+| `gpt-4o`                     | `claude-sonnet-4.7`       |
+| `*` (ୱାଇଲ୍ଡକାର୍ଡ)            | `claude-haiku-4.7`        |
 
 ୱାଇଲ୍ଡକାର୍ଡ `*` ଯେକୌଣସି ଅଚିହ୍ନା ମଡେଲ୍କୁ ନିର୍ଦ୍ଦିଷ୍ଟ ଟାର୍ଗେଟ୍ରେ ମ୍ୟାପ୍ କରେ। `agent_bridge_mappings` ଟେବୁଲ୍ରେ ସ୍ଥାୟୀ ଭାବେ ସଂରକ୍ଷିତ ହୁଏ।
 
@@ -276,7 +276,7 @@ GitHub Copilot ପାଇଁ `/etc/hosts` ଏଣ୍ଟ୍ରିର ଉଦାହ�
 
 ### 3.5 ବିପଦ ସୂଚନା
 
-AgentBridge ସେହି credentials (OAuth tokens, API keys)କୁ intercept କରେ, ଯାହା IDE upstream providersଙ୍କ ସହ authenticate କରିବା ପାଇଁ ବ୍ୟବହାର କରେ। ଏଗୁଡ଼ିକୁ **logging ପୂର୍ବରୁ mask କରାଯାଏ** (§2.7 ଦେଖନ୍ତୁ), କିନ୍ତୁ OmniRouteର MITM layer ପାଇଁ ଦୃଶ୍ୟମାନ ରହେ। ପ୍ରତ୍ୟେକ agentର ପ୍ରଥମ activation ଏକ dismiss କରାଯାଇପାରୁଥିବା ବିପଦ ସୂଚନା modal ଦେଖାଏ।
+AgentBridge ସେହି credentials (OAuth tokens, API keys)କୁ intercept କରେ, ଯାହା IDE upstream providersଙ୍କ ସହ authenticate କରିବା ପାଇଁ ବ୍ୟବହାର କରେ। ଏଗୁଡ଼ିକୁ **logging ପୂର୍ବରୁ mask କରାଯାଏ** (§2.7 ଦେଖନ୍ତୁ), କିନ୍ତୁ 67routerର MITM layer ପାଇଁ ଦୃଶ୍ୟମାନ ରହେ। ପ୍ରତ୍ୟେକ agentର ପ୍ରଥମ activation ଏକ dismiss କରାଯାଇପାରୁଥିବା ବିପଦ ସୂଚନା modal ଦେଖାଏ।
 
 ### 3.6 ରକ୍ଷଣାବେକ୍ଷଣ ଏବଂ ଡାଏଗ୍ନୋଷ୍ଟିକ୍ସ
 
@@ -396,7 +396,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### ସମ୍ବେଦନଶୀଳ ହୋଷ୍ଟଗୁଡ଼ିକ ପାଇଁ ବାଇପାସ୍ ତାଲିକା
 
-ବାଇପାସ୍ ତାଲିକା ନିଶ୍ଚିତ କରେ ଯେ ଆର୍ଥିକ ସଂସ୍ଥା, OAuth/SSO ପ୍ରଦାନକାରୀ ଏବଂ ଅନ୍ୟାନ୍ୟ ସମ୍ବେଦନଶୀଳ ହୋଷ୍ଟଗୁଡ଼ିକୁ **କେବେବି ଡିକ୍ରିପ୍ଟ କରାଯାଏ ନାହିଁ**। ସେମାନଙ୍କର TLS ଟ୍ରାଫିକ୍ ଏକ ସ୍ୱଚ୍ଛ TCP ଟନେଲ୍ ଭାବରେ ପାର ହୁଏ — OmniRoute କେବେବି ପ୍ଲେନ୍ଟେକ୍ସଟ୍ ଦେଖେ ନାହିଁ।
+ବାଇପାସ୍ ତାଲିକା ନିଶ୍ଚିତ କରେ ଯେ ଆର୍ଥିକ ସଂସ୍ଥା, OAuth/SSO ପ୍ରଦାନକାରୀ ଏବଂ ଅନ୍ୟାନ୍ୟ ସମ୍ବେଦନଶୀଳ ହୋଷ୍ଟଗୁଡ଼ିକୁ **କେବେବି ଡିକ୍ରିପ୍ଟ କରାଯାଏ ନାହିଁ**। ସେମାନଙ୍କର TLS ଟ୍ରାଫିକ୍ ଏକ ସ୍ୱଚ୍ଛ TCP ଟନେଲ୍ ଭାବରେ ପାର ହୁଏ — 67router କେବେବି ପ୍ଲେନ୍ଟେକ୍ସଟ୍ ଦେଖେ ନାହିଁ।
 
 ଡିଫଲ୍ଟ ବାଇପାସ୍ ପ୍ୟାଟର୍ନଗୁଡ଼ିକରେ ଅନ୍ତର୍ଭୁକ୍ତ:
 
@@ -447,7 +447,7 @@ sudo fuser -k 443/tcp  # ବଳପୂର୍ବକ ବନ୍ଦ କରନ୍ତ�
 
 AgentBridge ଆରମ୍ଭ କରିବା ପରେ ଯଦି IDE TLS ତ୍ରୁଟି ଦେଖାଏ:
 
-1. ସାର୍ଟିଫିକେଟ୍ଟି ଇନ୍ଷ୍ଟଲ୍ ହୋଇଛି କି ନାହିଁ ଯାଞ୍ଚ କରନ୍ତୁ: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) କିମ୍ବା `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ସାର୍ଟିଫିକେଟ୍ଟି ଇନ୍ଷ୍ଟଲ୍ ହୋଇଛି କି ନାହିଁ ଯାଞ୍ଚ କରନ୍ତୁ: `security find-certificate -c "67router AgentBridge"` (macOS) କିମ୍ବା `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. କେତେକ ଆପ୍ ନିଜସ୍ୱ ବିଶ୍ୱାସ ଭଣ୍ଡାର ବଜାୟ ରଖନ୍ତି (Firefox, Linuxରେ Chrome)। "Trust Cert" ପୁଣି ଚଲାନ୍ତୁ ଏବଂ NSS/Firefox-ନିର୍ଦ୍ଦିଷ୍ଟ ସାର୍ଟିଫିକେଟ୍ ଭଣ୍ଡାର ଯାଞ୍ଚ କରନ୍ତୁ।
 3. ବିଶ୍ୱସ୍ତ କରିବା ପରେ IDE ପୁନଃଆରମ୍ଭ କରନ୍ତୁ — ଚାଲୁଥିବା TLS ସେସନ୍ଗୁଡ଼ିକ ପୁରୁଣା ବିଶ୍ୱାସ ସ୍ଥିତି ବ୍ୟବହାର କରନ୍ତି।
 
@@ -498,7 +498,7 @@ ipconfig /flushdns
 ଯଦି AgentBridge ଇଣ୍ଟରସେପ୍ଟ କରେ କିନ୍ତୁ ସମସ୍ତ ଅନୁରୋଧ ବିଫଳ ହୁଏ:
 
 1. `/dashboard/providers`ରେ ଅତି କମ୍ରେ ଗୋଟିଏ ପ୍ରଦାନକାରୀ ସଂଯୁକ୍ତ ଅଛି କି ନାହିଁ ଯାଞ୍ଚ କରନ୍ତୁ
-2. OmniRoute ସର୍ଭର୍ ଲଗ୍ଗୁଡ଼ିକ ଯାଞ୍ଚ କରନ୍ତୁ: `.env`ରେ `APP_LOG_LEVEL=debug`
+2. 67router ସର୍ଭର୍ ଲଗ୍ଗୁଡ଼ିକ ଯାଞ୍ଚ କରନ୍ତୁ: `.env`ରେ `APP_LOG_LEVEL=debug`
 3. `OMNIROUTE_BASE_URL` ସଠିକ୍ ରାଉଟର୍ ଏଣ୍ଡ୍ପଏଣ୍ଟକୁ ସୂଚାଉଛି କି ନାହିଁ ଯାଞ୍ଚ କରନ୍ତୁ (ଡିଫଲ୍ଟ: `http://127.0.0.1:20128`)
 
 ---

@@ -20,10 +20,10 @@ Dzinēja lomu apraksta **divas neatkarīgas asis**, kas reģistra
 `RouterBackendDefinition` ir kodētas kopā:
 
 1. **Dzīves cikls** (`RouterBackendLifecycle`) — _kā dzinējs darbojas_:
-   - `in-process` — darbojas OmniRoute Node procesā (vietējais TS konveijers).
-   - `supervised` — lokāls bērnprocess, kuru OmniRoute instalē/palaiž/aptur/pārbauda tā darbspēju,
+   - `in-process` — darbojas 67router Node procesā (vietējais TS konveijers).
+   - `supervised` — lokāls bērnprocess, kuru 67router instalē/palaiž/aptur/pārbauda tā darbspēju,
      izmantojot `ServiceSupervisor`, un pēc tam izmanto kā nodrošinātāja savienojumu.
-   - `external` — HTTP galapunkts, uz kuru OmniRoute nosūta pieprasījumus, bet kuru
+   - `external` — HTTP galapunkts, uz kuru 67router nosūta pieprasījumus, bet kuru
      **nepārvalda** (konfigurēts ar vides bāzes URL).
    - `disabled` — reģistrēts, bet nav atlasāms.
 2. **Atlases ass** (releja maršrutēšanas aizmugursistēma) — _vai relejs uz to nosūta pieprasījumus_:

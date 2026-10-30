@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute dispose de **deux** systèmes locaux au processus pour les files, avec des portées différentes. Ils sont
+67router dispose de **deux** systèmes locaux au processus pour les files, avec des portées différentes. Ils sont
 complémentaires ; les opérateurs doivent savoir lequel ils consultent.
 
 ## 1. Admission globale au processus au niveau des octets (`chatBodyAdmission.ts`)

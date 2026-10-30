@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Nguồn:** `open-sse/services/thinkingBudget.ts`
 
-Thinking Budget kiểm soát việc OmniRoute có **ghi đè các tham số suy luận/tư duy của ứng dụng khách** trên đường gửi tới nhà cung cấp hay không. Tính năng này **không** bật hoặc tắt tính năng nén, định tuyến hay bộ nhớ đệm prompt.
+Thinking Budget kiểm soát việc 67router có **ghi đè các tham số suy luận/tư duy của ứng dụng khách** trên đường gửi tới nhà cung cấp hay không. Tính năng này **không** bật hoặc tắt tính năng nén, định tuyến hay bộ nhớ đệm prompt.
 
 ## Các chế độ
 
-| Chế độ                       | OmniRoute thực hiện                                                                                                                    | Khi nào nên sử dụng                                                                                                                                                                                 |
+| Chế độ                       | 67router thực hiện                                                                                                                     | Khi nào nên sử dụng                                                                                                                                                                                 |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (mặc định) | Giữ nguyên các trường của ứng dụng khách (`reasoning`, `reasoning_effort`, `thinking` của Claude, `thinking_config` của Gemini, v.v.). | **Codex / Desktop / bất kỳ ứng dụng khách nào cần kiểm soát mức độ nỗ lực + bản tóm tắt suy luận.** Bắt buộc để hiển thị bảng tư duy khi ứng dụng khách yêu cầu `reasoning.summary`.                |
 | **`auto`**                   | **Loại bỏ toàn bộ** trường tư duy/suy luận khỏi phần thân yêu cầu trước khi gửi tới thượng nguồn.                                      | Chỉ sử dụng khi bạn chủ ý muốn **nhà cung cấp** tự xác định giá trị mặc định và bạn **không** cần ứng dụng khách kiểm soát quá trình tư duy. **Không phải** là “tự động hiển thị quá trình tư duy”. |
@@ -31,14 +31,14 @@ Nếu một ứng dụng khách (ví dụ: Codex Desktop) gửi `reasoning: { ef
 
 ## Đây **không phải** là gì
 
-| Tính năng                                           | Mối quan hệ                                                                                                                                              |
-| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Nén** (Caveman, RTK, xếp chồng, …)                | Pipeline riêng biệt. Hoạt động trong mọi chế độ thinking-budget.                                                                                         |
-| **Bộ nhớ đệm prompt / ngữ nghĩa**                   | Riêng biệt. Không bị ảnh hưởng bởi chế độ thinking-budget.                                                                                               |
-| **Định tuyến kết hợp / phương án dự phòng**         | Riêng biệt. Không bị ảnh hưởng.                                                                                                                          |
-| **Giới hạn token / ngân sách chi phí của khóa API** | Riêng biệt. Không bị ảnh hưởng.                                                                                                                          |
-| **Bộ nhớ đệm phát lại suy luận**                    | Tái chèn qua nhiều lượt cho các nhà cung cấp nghiêm ngặt (DeepSeek, Kimi, Qwen-thinking, …). Không giống với “hiển thị tư duy” của Desktop.              |
-| **Giải mã `encrypted_content`**                     | **Không thể.** Các blob suy luận riêng tư của OpenAI/Codex là dữ liệu không thể đọc được. OmniRoute không bao giờ giải mã chúng (#7095 / #7176 / #7304). |
+| Tính năng                                           | Mối quan hệ                                                                                                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nén** (Caveman, RTK, xếp chồng, …)                | Pipeline riêng biệt. Hoạt động trong mọi chế độ thinking-budget.                                                                                        |
+| **Bộ nhớ đệm prompt / ngữ nghĩa**                   | Riêng biệt. Không bị ảnh hưởng bởi chế độ thinking-budget.                                                                                              |
+| **Định tuyến kết hợp / phương án dự phòng**         | Riêng biệt. Không bị ảnh hưởng.                                                                                                                         |
+| **Giới hạn token / ngân sách chi phí của khóa API** | Riêng biệt. Không bị ảnh hưởng.                                                                                                                         |
+| **Bộ nhớ đệm phát lại suy luận**                    | Tái chèn qua nhiều lượt cho các nhà cung cấp nghiêm ngặt (DeepSeek, Kimi, Qwen-thinking, …). Không giống với “hiển thị tư duy” của Desktop.             |
+| **Giải mã `encrypted_content`**                     | **Không thể.** Các blob suy luận riêng tư của OpenAI/Codex là dữ liệu không thể đọc được. 67router không bao giờ giải mã chúng (#7095 / #7176 / #7304). |
 
 ## Hiển thị nội dung suy luận (ứng dụng Codex / Responses)
 
@@ -51,7 +51,7 @@ Nếu một ứng dụng khách (ví dụ: Codex Desktop) gửi `reasoning: { ef
 Nếu bạn chỉ nhận được “suy luận riêng tư được mã hóa”, thì có thể:
 
 - chế độ là **`auto`** (yêu cầu của ứng dụng đã bị loại bỏ), hoặc
-- dịch vụ thượng nguồn trả về `encrypted_content` mà không có văn bản tóm tắt (hạn chế của nhà cung cấp; OmniRoute chỉ có thể hiển thị nội dung giữ chỗ, không thể hiển thị văn bản thuần túy).
+- dịch vụ thượng nguồn trả về `encrypted_content` mà không có văn bản tóm tắt (hạn chế của nhà cung cấp; 67router chỉ có thể hiển thị nội dung giữ chỗ, không thể hiển thị văn bản thuần túy).
 
 ## Ví dụ API
 
@@ -71,7 +71,7 @@ Lược đồ (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custo
 
 ### Lưu trữ lâu dài / khởi động lại
 
-Giá trị được lưu dưới khóa cài đặt `thinkingBudget` và được nạp khi tiến trình khởi động (`hydrateThinkingBudgetConfig`). Sau khi thay đổi thông qua cơ sở dữ liệu hoặc một số phương thức không dùng API, hãy **khởi động lại tiến trình OmniRoute** để singleton trong bộ nhớ khớp với dữ liệu trên đĩa.
+Giá trị được lưu dưới khóa cài đặt `thinkingBudget` và được nạp khi tiến trình khởi động (`hydrateThinkingBudgetConfig`). Sau khi thay đổi thông qua cơ sở dữ liệu hoặc một số phương thức không dùng API, hãy **khởi động lại tiến trình 67router** để singleton trong bộ nhớ khớp với dữ liệu trên đĩa.
 
 ## Danh sách kiểm tra dành cho người vận hành
 

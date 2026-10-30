@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nodrošina Cursor plāna **attēlu ģenerēšanu**, izmantojot `POST /v1/images/generations` un to pašu nodrošinātāja ID kā tērzēšanai: `cursor` (aizstājvārds `cu`).
+67router nodrošina Cursor plāna **attēlu ģenerēšanu**, izmantojot `POST /v1/images/generations` un to pašu nodrošinātāja ID kā tērzēšanai: `cursor` (aizstājvārds `cu`).
 
 | Lauks                | Vērtība                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute nodrošina Cursor plāna **attēlu ģenerēšanu**, izmantojot `POST /
 
 ## Kāpēc tiek izmantots Agent CLI
 
-Cursor tērzēšana OmniRoute izmanto `agent.v1.AgentService/Run` (protobuf). Šis ceļš **noraida** iebūvētos klienta rīkus (čaulu, rakstīšanu, …). Attēlu ģenerēšana ir Cursor vietējais rīks, ko **`agent` CLI** izpilda, izmantojot licenci. Tādēļ attēlu apstrādātājs palaiž `agent` ar fiksētu uzvedni un katram pieprasījumam paredzētu pagaidu darbvietu (tādā pašā veidā kā kopienas licenču tilti), pēc tam atgriež ar OpenAI saderīgu `b64_json`.
+Cursor tērzēšana 67router izmanto `agent.v1.AgentService/Run` (protobuf). Šis ceļš **noraida** iebūvētos klienta rīkus (čaulu, rakstīšanu, …). Attēlu ģenerēšana ir Cursor vietējais rīks, ko **`agent` CLI** izpilda, izmantojot licenci. Tādēļ attēlu apstrādātājs palaiž `agent` ar fiksētu uzvedni un katram pieprasījumam paredzētu pagaidu darbvietu (tādā pašā veidā kā kopienas licenču tilti), pēc tam atgriež ar OpenAI saderīgu `b64_json`.
 
 ## Piekļuves ierobežojums (stingrie noteikumi #15 + #17)
 
@@ -36,7 +36,7 @@ pirms tiek veikta jebkāda akreditācijas datu meklēšana vai procesa palaišan
 
 `CURSOR_IMG_MAX_CONCURRENT` tiek ieviests ar atmiņā glabātu skaitītāju/rindu, kas
 piesaistīta Node moduļa instancei (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Tas pareizi ierobežo vienlaicīgas `agent` palaišanas vienā OmniRoute procesā, taču
+Tas pareizi ierobežo vienlaicīgas `agent` palaišanas vienā 67router procesā, taču
 **nekoordinē** vairākus procesus/instances, kas koplieto vienu Cursor licenci
 (piemēram, izvietojumā ar vairākām replikām) — katra instance piemēro savu neatkarīgu
 ierobežojumu. Vienas instances izvietojumā (noklusējums) tas darbojas precīzi;
@@ -47,7 +47,7 @@ instanci.
 ## Prasības
 
 1. Informācijas panelī pievienots Cursor konts (OAuth vai `crsr_…` API atslēga).
-2. OmniRoute procesam pieejams Cursor Agent binārais fails:
+2. 67router procesam pieejams Cursor Agent binārais fails:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, vai
    - `~/.local/bin/agent`, vai
    - `providerSpecificData.agentBin` Cursor savienojumā.

@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** tuo kaikki OmniRouten tarjoamat mallit _suoraan_ GitHub Copilot Chatin
+**OmniCopilot** tuo kaikki 67routerin tarjoamat mallit _suoraan_ GitHub Copilot Chatin
 natiiviin mallinvalitsimeen. Ei toista sivupalkkia eikä erillistä keskustelukäyttöliittymää — Copilotin agenttitila, työkalukutsut,
 MCP-palvelimet ja mukautetut ohjeet toimivat edelleen, mutta käyttävät valitsemaasi mallia.
 
@@ -23,13 +23,13 @@ MCP-palvelimet ja mukautetut ohjeet toimivat edelleen, mutta käyttävät valits
 
 ## Määritys
 
-1. **Käynnistä OmniRoute** — `npm install -g omniroute && omniroute` (hallintapaneeli osoitteessa `http://localhost:20128`).
-2. **Asenna laajennus** — etsi laajennusnäkymässä hakusanalla "OmniRoute".
-3. **Valitse malli** — Copilot Chat → mallinvalitsin → **Manage Models…** → **OmniRoute** ja valitse sitten
+1. **Käynnistä 67router** — `npm install -g omniroute && omniroute` (hallintapaneeli osoitteessa `http://localhost:20128`).
+2. **Asenna laajennus** — etsi laajennusnäkymässä hakusanalla "67router".
+3. **Valitse malli** — Copilot Chat → mallinvalitsin → **Manage Models…** → **67router** ja valitse sitten
    haluamasi mallit.
 
-Mitään ei tarvitse määrittää, kun OmniRoute käyttää oletusporttia. Etäinstanssia varten avaa
-**OmniRoute-kuvake toimintopalkissa** (tai suorita `OmniRoute: Manage Connection`) ja määritä:
+Mitään ei tarvitse määrittää, kun 67router käyttää oletusporttia. Etäinstanssia varten avaa
+**67router-kuvake toimintopalkissa** (tai suorita `67router: Manage Connection`) ja määritä:
 
 - **Palvelimen URL-osoite** — palvelimen juuriosoite, esim. `http://192.168.0.15:20128`. Laajennus lisää
   `/v1`-päätteen; älä sisällytä sitä osoitteeseen.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 joten ne suodatetaan `type`-kentän perusteella ennen mallinvalitsimeen päätymistä. **Responses-API-mallit
 säilytetään** — jokainen Codex- / GPT-5.x-tietue ilmoittaa `supported_endpoints: ["responses"]`,
-ja OmniRoute muuntaa ne `/v1/chat/completions`-rajapintaa varten, joten ne ovat täysin käyttökelpoisia.
+ja 67router muuntaa ne `/v1/chat/completions`-rajapintaa varten, joten ne ovat täysin käyttökelpoisia.
 
 ### Palveluntarjoajat, joita et ole määrittänyt
 
@@ -88,7 +88,7 @@ muutoksia.
 
 ## Hallintapaneeli VS Code -välilehdellä
 
-`omnicopilot.dashboardOpen: "editor"` näyttää OmniRoute-hallintapaneelin editorivälilehdellä Simple Browserin kautta ulkoisen selaimen sijaan. Upottaminen on **otettava erikseen käyttöön palvelimella** asetuksella `DASHBOARD_ALLOW_EMBED=vscode`, jolloin HTML-sivut toimitetaan otsakkeella `frame-ancestors 'self' vscode-webview:` oletusarvoisten otsakkeiden `frame-ancestors 'none'` + `X-Frame-Options: DENY` sijaan. API-rajapinnat (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilyttävät tiukat otsakkeet kummassakin tapauksessa.
+`omnicopilot.dashboardOpen: "editor"` näyttää 67router-hallintapaneelin editorivälilehdellä Simple Browserin kautta ulkoisen selaimen sijaan. Upottaminen on **otettava erikseen käyttöön palvelimella** asetuksella `DASHBOARD_ALLOW_EMBED=vscode`, jolloin HTML-sivut toimitetaan otsakkeella `frame-ancestors 'self' vscode-webview:` oletusarvoisten otsakkeiden `frame-ancestors 'none'` + `X-Frame-Options: DENY` sijaan. API-rajapinnat (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilyttävät tiukat otsakkeet kummassakin tapauksessa.
 
 > ⚠️ **Tämä on käännösaikainen, ei ajonaikainen asetus.** Next.js kääntää `headers()`-määrityksen reittiluetteloon, joten `next.config.mjs` lukee muuttujan pakettia käännettäessä
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).
@@ -114,27 +114,27 @@ Katso [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) ja ongelma
 
 ## Muiden työkalujen määrittäminen VS Codesta käsin
 
-**`OmniRoute: Configure Coding CLI`** käyttää `omniroute`-komentorivityökalua kirjoittaakseen käyttövalmiit profiilit työkaluille Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ja Roo — samat määritykset on kuvattu tiedostossa
+**`67router: Configure Coding CLI`** käyttää `omniroute`-komentorivityökalua kirjoittaakseen käyttövalmiit profiilit työkaluille Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ja Roo — samat määritykset on kuvattu tiedostossa
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API-avain välitetään komentorivityökalulle `OMNIROUTE_API_KEY`-ympäristömuuttujan kautta, ei koskaan komentorivillä.
 
 ---
 
 ## Vianmääritys
 
-| Oire                                                            | Syy / korjaus                                                                                                                                                                                                                                                                                             |
-| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OmniRoute-malleja ei näy valitsimessa                           | Palvelimeen ei saada yhteyttä. Tilarivin piste muuttuu harmaaksi; suorita `OmniRoute: Check Connection`. Mallien etsintä on tarkoituksella hiljainen eikä kehota käyttäjää, vaan jättää mallit lisäämättä.                                                                                                |
-| Jokainen malli näkyy kahdesti                                   | Käytössäsi on OmniCopilot-versio, joka on vanhempi kuin 1.0.1 — päivitä se. Laajennus pyytää nyt `?prefix=alias`.                                                                                                                                                                                         |
-| Aiemmin luettelossa ollut kuva-/äänimalli on kadonnut           | Tämä on tarkoituksellista versiosta 1.0.1 lähtien — kyseinen malli ei pystynyt koskaan vastaamaan keskustelupyyntöön.                                                                                                                                                                                     |
-| Paneeli puuttuu aktiviteettipalkista                            | VS Code siirtää ylimääräiset näkymäsäilöt aktiviteettipalkin alareunan **"…"**-ylivuotovalikkoon, ja hiiren kakkospainikkeella piilotettu säilö pysyy piilotettuna. Napsauta aktiviteettipalkkia hiiren kakkospainikkeella → valitse **OmniRoute** tai avaa se komennolla `OmniRoute: Manage Connection`. |
-| Hallintapaneeli avautuu selaimessa `editor`-tilasta huolimatta  | Palvelinta ei **käännetty** asetuksella `DASHBOARD_ALLOW_EMBED=vscode` (katso yllä) — sen asettaminen valmiiksi käännetyn asennuksen käynnistyksen yhteydessä ei vaikuta mihinkään. Vararatkaisu on tarkoituksellinen.                                                                                    |
-| Malliluettelo ei päivity palveluntarjoajien vaihtamisen jälkeen | Suorita `OmniRoute: Refresh Models` tai käytä paneelin ↻-linkkiä.                                                                                                                                                                                                                                         |
+| Oire                                                            | Syy / korjaus                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 67router-malleja ei näy valitsimessa                            | Palvelimeen ei saada yhteyttä. Tilarivin piste muuttuu harmaaksi; suorita `67router: Check Connection`. Mallien etsintä on tarkoituksella hiljainen eikä kehota käyttäjää, vaan jättää mallit lisäämättä.                                                                                               |
+| Jokainen malli näkyy kahdesti                                   | Käytössäsi on OmniCopilot-versio, joka on vanhempi kuin 1.0.1 — päivitä se. Laajennus pyytää nyt `?prefix=alias`.                                                                                                                                                                                       |
+| Aiemmin luettelossa ollut kuva-/äänimalli on kadonnut           | Tämä on tarkoituksellista versiosta 1.0.1 lähtien — kyseinen malli ei pystynyt koskaan vastaamaan keskustelupyyntöön.                                                                                                                                                                                   |
+| Paneeli puuttuu aktiviteettipalkista                            | VS Code siirtää ylimääräiset näkymäsäilöt aktiviteettipalkin alareunan **"…"**-ylivuotovalikkoon, ja hiiren kakkospainikkeella piilotettu säilö pysyy piilotettuna. Napsauta aktiviteettipalkkia hiiren kakkospainikkeella → valitse **67router** tai avaa se komennolla `67router: Manage Connection`. |
+| Hallintapaneeli avautuu selaimessa `editor`-tilasta huolimatta  | Palvelinta ei **käännetty** asetuksella `DASHBOARD_ALLOW_EMBED=vscode` (katso yllä) — sen asettaminen valmiiksi käännetyn asennuksen käynnistyksen yhteydessä ei vaikuta mihinkään. Vararatkaisu on tarkoituksellinen.                                                                                  |
+| Malliluettelo ei päivity palveluntarjoajien vaihtamisen jälkeen | Suorita `67router: Refresh Models` tai käytä paneelin ↻-linkkiä.                                                                                                                                                                                                                                        |
 
 ---
 
 ## Katso myös
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — kaikki muut koodaustyökalut
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — etäkäytössä olevan OmniRouten ohjaaminen
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — etäkäytössä olevan 67routerin ohjaaminen
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models`-rajapintasopimus
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — laajennuksen omat luettelomuistiinpanot

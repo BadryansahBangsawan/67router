@@ -15,7 +15,7 @@ Kiintiönjakojärjestelmä jakaa palveluntarjoajan aikaperusteisen kiintiön (es
 5 tunnin ikkuna, Kimin 1500 pyyntöä/h) oikeudenmukaisesti useille API-avaimille, jotka käyttävät
 samaa yhteyttä.
 
-**Ratkaistava ongelma:** OmniRoute välittää useiden API-avainten pyynnöt samalle ulkoisen
+**Ratkaistava ongelma:** 67router välittää useiden API-avainten pyynnöt samalle ulkoisen
 palveluntarjoajan tilille. Ilman jakologiikkaa avaimen A aiheuttama kuormituspiikki voi kuluttaa
 palveluntarjoajan koko tuntikiintiön, jolloin avaimet B ja C estetään, kunnes ikkuna nollautuu.
 Järjestelmä estää tämän seuraavasti:
@@ -120,7 +120,7 @@ Redis-ajuri: Lua EVAL -komentosarja atomiseen kasvatukseen — suoritetaan yhten
 
 - Taulu: `quota_consumption` (katso migraatiot `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Soveltuu parhaiten yhden instanssin käyttöönottoihin.
-- Kaikki pysyväistallennus tapahtuu nykyisessä OmniRoute SQLite -tietokannassa (`DATA_DIR/storage.sqlite`).
+- Kaikki pysyväistallennus tapahtuu nykyisessä 67router SQLite -tietokannassa (`DATA_DIR/storage.sqlite`).
 
 ### Redis (valinnainen, useita instansseja)
 

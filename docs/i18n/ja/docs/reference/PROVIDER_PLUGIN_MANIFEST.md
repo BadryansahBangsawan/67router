@@ -14,7 +14,7 @@
 同じマニフェストは、別プロセスで実行されるサイドカー向けに、HTTP の
 `GET /api/v1/provider-plugin-manifest` でも利用できます。
 
-OmniRoute は、`X-OmniRoute-Provider-Manifest-Url` リクエストヘッダーを介して、
+67router は、`X-OmniRoute-Provider-Manifest-Url` リクエストヘッダーを介して、
 その URL を Bifrost と CLIProxyAPI に通知します。サイドカーがローカルのリクエスト元ではなく、
 公開 URL またはコンテナネットワーク URL を必要とする場合は、
 `OMNIROUTE_PROVIDER_MANIFEST_URL` を設定してください。
@@ -31,7 +31,7 @@ HTTP エンドポイントは、`Cache-Control: public, max-age=60` と強い
 ## 目標
 
 プロバイダーのメタデータをプラグイン契約へ移行し、将来的に低レイテンシーのサイドカーが
-高頻度のリクエストパスを担えるようにする一方で、OmniRoute は TypeScript ルートを
+高頻度のリクエストパスを担えるようにする一方で、67router は TypeScript ルートを
 ポリシーゲートおよびフォールバックとして維持します。マニフェストは追加的なものであり、
 それ自体がリクエストルーティングを変更することはありません。
 
@@ -74,7 +74,7 @@ TypeScript ソースを読み直すのではなく、「このプロバイダー
 | `usage-fetch`        | 接続済みの使用量またはクォータ取得機能（`getUsageForProvider`）があります。              |
 | `usage-supported`    | 使用量 API がこのプロバイダーを受け入れます（`isSupportedUsageConnection`）。            |
 
-`usage-fetch` は検出専用です。これは、OmniRoute がそのプロバイダーの使用量を読み取る方法を
+`usage-fetch` は検出専用です。これは、67router がそのプロバイダーの使用量を読み取る方法を
 認識していることを示しますが、取得の有効化、クォータのセマンティクスの変更、
 またはそのプロバイダーに対して Dashboard のクォータウィジェットが有効であることを意味しません。
 このウィジェットは `USAGE_SUPPORTED_PROVIDERS` によって別途制御されます。信頼できる唯一の情報源は、

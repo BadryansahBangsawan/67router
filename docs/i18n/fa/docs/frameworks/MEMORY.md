@@ -7,7 +7,7 @@
 > **منبع حقیقت:** `src/lib/memory/` و `src/app/api/memory/`
 > **آخرین بهروزرسانی:** 2026-06-28 — v3.8.40 (غیرفعال بهصورت پیشفرض + تکمیل کوانتیزهسازی int8)
 
-OmniRoute حافظهٔ مکالمهای پایداری را ارائه میدهد که بر اساس کلید API (و
+67router حافظهٔ مکالمهای پایداری را ارائه میدهد که بر اساس کلید API (و
 در صورت تمایل، شناسهٔ نشست) کلیدگذاری میشود. حافظهها بهطور خودکار از پاسخهای LLM
 از طریق تطبیق سبکوزن الگوهای regex استخراج شده و بهعنوان یک پیام system ابتدایی
 (یا برای ارائهدهندگانی که نقش system را رد میکنند، بهعنوان نخستین پیام user)
@@ -598,7 +598,7 @@ metadata?}` → تابع `createMemory()` را پوشش میدهد. فقط ۴ ن
 
 ## انتخاب ارائهدهندهٔ تعبیهسازی (v3.8.16+)
 
-موتور حافظهٔ OmniRoute از **چهار منبع تعبیهسازی** (`src/lib/memory/embedding/`) پشتیبانی میکند. هرکدام از نظر **تأخیر، هزینه، کیفیت مدل و پیچیدگی راهاندازی** موازنههای متفاوتی دارند.
+موتور حافظهٔ 67router از **چهار منبع تعبیهسازی** (`src/lib/memory/embedding/`) پشتیبانی میکند. هرکدام از نظر **تأخیر، هزینه، کیفیت مدل و پیچیدگی راهاندازی** موازنههای متفاوتی دارند.
 
 ### منابع تعبیهسازی
 
@@ -1020,13 +1020,13 @@ Claude Code / Codex / Cursor که نشستهای کدنویسی را بهعنو�
 این آداپتور آن محافظ را تضعیف نمیکند: میزبان بهصورت hard-coded روی `127.0.0.1` تنظیم شده است و schema
 پیکربندی (`ClaudeMemBackendConfigSchema`، `.strict()`) فقط موارد زیر را میپذیرد:
 
-| کلید        | نوع  | پیشفرض | توضیحات                                                                                                                             |
-| ----------- | ---- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | عدد  | —      | الزامی، 1024–65535. پورت worker مربوط به claude-mem از فایل تنظیمات آن (پیشفرض `37700 + uid % 100`).                                |
-| `project`   | رشته | —      | پروژه claude-mem که باید استفاده شود. در صورت تنظیمنبودن ← هر کلید API در OmniRoute به پروژه اختصاصی خودش (`apiKeyId`) نگاشت میشود. |
-| `timeoutMs` | عدد  | `5000` | مهلت زمانی هر درخواست، 100–30000.                                                                                                   |
+| کلید        | نوع  | پیشفرض | توضیحات                                                                                                                            |
+| ----------- | ---- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | عدد  | —      | الزامی، 1024–65535. پورت worker مربوط به claude-mem از فایل تنظیمات آن (پیشفرض `37700 + uid % 100`).                               |
+| `project`   | رشته | —      | پروژه claude-mem که باید استفاده شود. در صورت تنظیمنبودن ← هر کلید API در 67router به پروژه اختصاصی خودش (`apiKeyId`) نگاشت میشود. |
+| `timeoutMs` | عدد  | `5000` | مهلت زمانی هر درخواست، 100–30000.                                                                                                  |
 
-آن را از طریق `PUT /api/settings/memory` فعال کرده و OmniRoute را مجدداً راهاندازی کنید (backendها فقط یکبار، در `initMemoryBackends()` ثبت میشوند):
+آن را از طریق `PUT /api/settings/memory` فعال کرده و 67router را مجدداً راهاندازی کنید (backendها فقط یکبار، در `initMemoryBackends()` ثبت میشوند):
 
 ```json
 {
@@ -1040,7 +1040,7 @@ Claude Code / Codex / Cursor که نشستهای کدنویسی را بهعنو�
 نگاشت و محدودیتها:
 
 - شناسهها بهشکل `claude-mem:<observationId>` هستند؛ `get`/`delete` شناسههای متعلق به backendهای دیگر را بدون برقراری تماس شبکه نادیده میگیرند.
-- `create` ← `POST /api/memory/save`؛ فیلدهای OmniRoute (`apiKeyId`، `sessionId`، `type`، `key`، `metadata`) در `metadata.omniroute` متعلق به claude-mem قرار میگیرند و هنگام خواندن، بدون تغییر بازگردانده میشوند.
+- `create` ← `POST /api/memory/save`؛ فیلدهای 67router (`apiKeyId`، `sessionId`، `type`، `key`، `metadata`) در `metadata.omniroute` متعلق به claude-mem قرار میگیرند و هنگام خواندن، بدون تغییر بازگردانده میشوند.
 - `search` ← `GET /api/search?format=json&type=observations`، با محدودسازی به `maxTokens`
   (تعداد نویسهها / 4). `list` ← endpoint صفحهبندیشده observations در worker (`total` یک کران پایین است — worker مقدار `hasMore` را برمیگرداند، نه تعداد را).
 - observations ثبتشده توسط hook به این صورت نگاشت میشوند: `discovery` ← `factual`، `decision` ← `procedural` و
@@ -1049,14 +1049,14 @@ Claude Code / Codex / Cursor که نشستهای کدنویسی را بهعنو�
   (`expiresAt` نادیده گرفته میشود). claude-mem ذخیرهسازیهای یکسان را بهجای upsert بر اساس `key`، تکراریزدایی میکند.
 - تزریق prompt (`retrieval.ts`) و ابزارهای MCP با نام `omniroute_memory_*` همچنان مستقیماً SQLite را میخوانند — آنها از `memoryManager` عبور نمیکنند؛ بنابراین این backend دادهای در اختیارشان قرار نمیدهد.
 
-**مسیریابی فراخوانیهای LLM خود claude-mem از طریق OmniRoute.** claude-mem با استفاده از یک LLM، observations را فشرده میکند (پیشفرض: Claude Agent SDK). provider با نام `openai-compatible` میتواند در عوض به OmniRoute اشاره کند و از fallback ترکیبی و ردیابی هزینه بهرهمند شود. در `~/.claude-mem/settings.json`:
+**مسیریابی فراخوانیهای LLM خود claude-mem از طریق 67router.** claude-mem با استفاده از یک LLM، observations را فشرده میکند (پیشفرض: Claude Agent SDK). provider با نام `openai-compatible` میتواند در عوض به 67router اشاره کند و از fallback ترکیبی و ردیابی هزینه بهرهمند شود. در `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<کلید API در OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<مدل یا ترکیب OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<کلید API در 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<مدل یا ترکیب 67router>"
 }
 ```
 

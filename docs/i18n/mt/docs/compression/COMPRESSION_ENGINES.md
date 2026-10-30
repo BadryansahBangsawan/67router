@@ -4,7 +4,7 @@
 
 ---
 
-Il-kompressjoni ta’ OmniRoute hija mibnija madwar kuntratti tal-magni. Modalità tista’ tħaddem magna waħda direttament
+Il-kompressjoni ta’ 67router hija mibnija madwar kuntratti tal-magni. Modalità tista’ tħaddem magna waħda direttament
 (`caveman` jew `rtk`) jew pipeline deterministiku f’saffi li jeżegwixxi diversi magni wara xulxin.
 
 ## Modi
@@ -43,9 +43,9 @@ akkumulatx storja tieqaf f'`below_min_chars` u l-magna ma tittrasforma xejn. Dan
 huwa għalhekk li d-default huwa `aggressive` aktar milli l-aktar profil sikur.
 
 Il-pakkett isolvi l-ambitu tal-mudell u l-profil tiegħu stess mill-konfigurazzjoni tal-ambjent tiegħu.
-OmniRoute qatt ma jiddelega d-deċiżjoni: l-adapter jiffissa l-bieb tal-mudell għall-aktar
+67router qatt ma jiddelega d-deċiżjoni: l-adapter jiffissa l-bieb tal-mudell għall-aktar
 ambitu restrittiv tal-pakkett, għalhekk is-settings tal-ambjent ospitanti jistgħu biss iddejqu l-allowlist, qatt ma
-jwessgħuha lil hinn mill-irċevuti mkejla ta' OmniRoute.
+jwessgħuha lil hinn mill-irċevuti mkejla ta' 67router.
 
 ## Reġistru tal-Engines
 
@@ -109,7 +109,7 @@ Il-modalità Caveman tiffoka fuq il-kondensazzjoni semantika ta’ proża normal
 Is-sezzjoni tad-dashboard hija `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman upstream jirrapporta `~75%` inqas tokens tal-output, iffrankar medju ta’ `65%` fl-output fil-benchmarks
-b’firxa ta’ `22-87%`, u għodda b’kompressjoni tal-input ta’ `~46%`. OmniRoute juża ċ-ċifra ta’ Caveman għan-naħa tal-input
+b’firxa ta’ `22-87%`, u għodda b’kompressjoni tal-input ta’ `~46%`. 67router juża ċ-ċifra ta’ Caveman għan-naħa tal-input
 meta jiddokumenta l-iffrankar akkumulat tal-prompt/kuntest; il-modalità tal-output ta’ Caveman tibqa’ karatteristika separata
 tal-imġiba tar-rispons.
 

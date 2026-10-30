@@ -15,9 +15,9 @@ Bu ADR `ts` (yerli), `bifrost`, `cliproxy`, `9router` və VibeProxy ilə uyğun 
 Mühərrikin rolu reyestrin `RouterBackendDefinition` daxilində birlikdə kodlaşdırılmış **iki müstəqil ox** ilə təsvir edilir:
 
 1. **Həyat dövrü** (`RouterBackendLifecycle`) — _mühərrikin necə işlədiyi_:
-   - `in-process` — OmniRoute Node prosesi daxilində işləyir (yerli TS emal xətti).
-   - `supervised` — OmniRoute-un `ServiceSupervisor` vasitəsilə quraşdırdığı/başlatdığı/dayandırdığı/sağlamlığını yoxladığı və sonra provayder bağlantısı kimi istifadə etdiyi lokal alt prosesdir.
-   - `external` — OmniRoute-un sorğuları yönləndirdiyi, lakin **idarə etmədiyi** HTTP son nöqtəsidir (mühit dəyişənində baza URL-i ilə konfiqurasiya edilir).
+   - `in-process` — 67router Node prosesi daxilində işləyir (yerli TS emal xətti).
+   - `supervised` — 67router-un `ServiceSupervisor` vasitəsilə quraşdırdığı/başlatdığı/dayandırdığı/sağlamlığını yoxladığı və sonra provayder bağlantısı kimi istifadə etdiyi lokal alt prosesdir.
+   - `external` — 67router-un sorğuları yönləndirdiyi, lakin **idarə etmədiyi** HTTP son nöqtəsidir (mühit dəyişənində baza URL-i ilə konfiqurasiya edilir).
    - `disabled` — qeydiyyatdan keçirilib, lakin seçilə bilməz.
 2. **Seçim oxu** (relay marşrutlaşdırma backend-i) — _relay-in sorğuları ona yönləndirib-yönləndirməməsi_:
    `src/app/api/v1/relay/chat/completions/routingBackend.ts` daxilində

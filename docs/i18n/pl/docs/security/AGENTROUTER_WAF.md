@@ -52,7 +52,7 @@ bezczynności. Jest to ten sam mechanizm ograniczania częstotliwości, powiąza
 sporadyczne błędy `400 content-blocked`, gdy Claude Code lub Codex CLI
 wykonuje wiele wywołań użycia narzędzi lub wysyłania wiadomości w krótkich odstępach czasu.
 
-## Środki zaradcze już zastosowane w OmniRoute
+## Środki zaradcze już zastosowane w 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — zabezpieczenie przed seriami żądań, które wymusza
    minimalny odstęp 500 ms między wychodzącymi żądaniami do dowolnego adresu URL `agentrouter:*`.

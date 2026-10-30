@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute steuert anhand einer einzigen, zentralisierten Positivliste, welche
+67router steuert anhand einer einzigen, zentralisierten Positivliste, welche
 **Browser-Ursprünge** Cross-Origin-Antworten lesen dürfen. Das Modell ist
 **standardmäßig restriktiv**: Kein Ursprung ist erlaubt, bis Sie ihn ausdrücklich
 freigeben. Diese Seite dokumentiert, wie die Positivliste ausgewertet wird, was
@@ -50,7 +50,7 @@ Für jede Anfrage berechnet die Middleware den Wert von
 ## Bedrohungsmodell — was `CORS_ALLOW_ALL=true` wirklich offenlegt
 
 Die allgemeine OWASP-Warnung („Wildcard-CORS = jede Website kann Ihre API
-aufrufen“) sollte ernst genommen werden, doch die Offenlegung durch OmniRoute
+aufrufen“) sollte ernst genommen werden, doch die Offenlegung durch 67router
 ist **begrenzter als im allgemeinen Fall**, und zwar aufgrund einer konkreten
 Implementierungseigenschaft:
 
@@ -58,7 +58,7 @@ Implementierungseigenschaft:
 > `Access-Control-Allow-Credentials` aus.** Ein Browser stellt eine
 > _authentifizierte_ (Cookies enthaltende) Cross-Origin-Antwort nicht bereit,
 > sofern der Server nicht `Access-Control-Allow-Credentials: true` sendet.
-> OmniRoutes gemeinsamer CORS-Pfad tut dies niemals.
+> 67routers gemeinsamer CORS-Pfad tut dies niemals.
 
 Das bedeutet für die einzelnen Oberflächen selbst bei `CORS_ALLOW_ALL=true`:
 
@@ -100,7 +100,7 @@ explizite Positivliste wird unabhängig von diesen CORS-Leitlinien nachverfolgt.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Wenn OmniRoute hinter einem Reverse-Proxy/Tunnel (nginx, Caddy, Cloudflare
+- Wenn 67router hinter einem Reverse-Proxy/Tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) ausgeführt wird, ist CORS **nicht** Ihr einziger Schutzmechanismus — der Loopback-Routenschutz
   schützt weiterhin Routen, die Prozesse starten können (siehe
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Fälschen Sie nicht
@@ -116,7 +116,7 @@ explizite Positivliste wird unabhängig von diesen CORS-Leitlinien nachverfolgt.
 Selbst in der Entwicklung benötigen Sie den Platzhalter nur selten. Lassen Sie ausschließlich die verwendeten Entwicklungsserver zu:
 
 ```bash
-# Vite- (5173) und Next.js-Entwicklungsserver (3000), die ein lokales OmniRoute aufrufen
+# Vite- (5173) und Next.js-Entwicklungsserver (3000), die ein lokales 67router aufrufen
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -136,14 +136,14 @@ Neustart erforderlich ist.
   Ursprünge für Verwaltung und Dashboard nicht in eine permissive Konfiguration auf; sie müssen weiterhin strikt
   standardmäßig gesperrt bleiben.
 
-## Beispiel: Reverse-Proxy vor OmniRoute
+## Beispiel: Reverse-Proxy vor 67router
 
-CORS wird von OmniRoute selbst durchgesetzt, daher sollte der Proxy im Allgemeinen **keine**
+CORS wird von 67router selbst durchgesetzt, daher sollte der Proxy im Allgemeinen **keine**
 `Access-Control-*`-Header hinzufügen oder umschreiben (doppelte Header verursachen Fehler in Browsern). Terminieren Sie TLS
-und leiten Sie die Anfragen weiter — überlassen Sie OmniRoute die Beantwortung der Preflight-Anfrage:
+und leiten Sie die Anfragen weiter — überlassen Sie 67router die Beantwortung der Preflight-Anfrage:
 
 ```nginx
-# nginx — an OmniRoute weiterleiten; hier KEINE Access-Control-*-Header einfügen
+# nginx — an 67router weiterleiten; hier KEINE Access-Control-*-Header einfügen
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -151,12 +151,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Behalten Sie die Weiterleitungs-Header bei: Ein Proxy auf demselben Host stellt die Verbindung über die Loopback-Adresse her, und sie
-    # teilen OmniRoute mit, dass der Aufrufer nicht der lokale Betreiber ist. Ein Proxy, der keinen dieser Header hinzufügt,
+    # teilen 67router mit, dass der Aufrufer nicht der lokale Betreiber ist. Ein Proxy, der keinen dieser Header hinzufügt,
     # lässt jeden entfernten Aufrufer wie einen lokalen erscheinen. Setzen Sie X-Forwarded-For außerdem niemals auf 127.0.0.1.
 }
 ```
 
-Legen Sie die zulässigen Browser-Ursprünge in OmniRoute (`CORS_ALLOWED_ORIGINS` oder auf der
+Legen Sie die zulässigen Browser-Ursprünge in 67router (`CORS_ALLOWED_ORIGINS` oder auf der
 Registerkarte „Sicherheit“) fest, nicht im Proxy.
 
 ## Quelldateien

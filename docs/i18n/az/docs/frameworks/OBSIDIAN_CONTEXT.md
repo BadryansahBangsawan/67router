@@ -13,7 +13,7 @@
 
 ## Bu nədir
 
-OmniRoute **Obsidian** anbarına **kontekst mənbəyi** kimi qoşulur — bu, agentlərin
+67router **Obsidian** anbarına **kontekst mənbəyi** kimi qoşulur — bu, agentlərin
 daxili MCP serveri vasitəsilə oxuduğu və yazdığı lokal Markdown bilik bazasıdır.
 İnteqrasiya masaüstü tətbiqinin daxilində işləyən icma tərəfindən hazırlanmış
 **Obsidian Local REST API** plaqini ilə əlaqə qurur. Bunun sayəsində agentlər qeydlərdə
@@ -80,7 +80,7 @@ son nöqtəsini çağıraraq doğrulayır.
 
 `src/app/api/settings/obsidian/webdav/route.ts`, `src/lib/obsidianSync.ts` tərəfindən
 idarə olunan, WebDAV əsaslı istəyə bağlı kassa sinxronizasiyasını idarə edir. Onun
-aktivləşdirilməsi OmniRoute-u lokal kassa qovluğuna yönəldir və təsadüfi WebDAV
+aktivləşdirilməsi 67router-u lokal kassa qovluğuna yönəldir və təsadüfi WebDAV
 istifadəçi adı/parol cütü yaradır:
 
 ```bash
@@ -119,25 +119,25 @@ qoruyur.
 
 ## MCP alətləri (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` faylında müəyyən edilib. Token/baza URL-i hər çağırış üçün müəyyənləşdirilir (əvvəlcə API açarına aid olan, sonra qlobal). OmniRoute **sinxronizasiya serverinə** müraciət edən alətlər (dörd `obsidian_sync_*` aləti) əlavə olaraq OmniRoute parametrlərində konfiqurasiya edilmiş sinxronizasiya autentifikasiya tokenini tələb edir.
+`open-sse/mcp-server/tools/obsidianTools.ts` faylında müəyyən edilib. Token/baza URL-i hər çağırış üçün müəyyənləşdirilir (əvvəlcə API açarına aid olan, sonra qlobal). 67router **sinxronizasiya serverinə** müraciət edən alətlər (dörd `obsidian_sync_*` aləti) əlavə olaraq 67router parametrlərində konfiqurasiya edilmiş sinxronizasiya autentifikasiya tokenini tələb edir.
 
 ### Oxuma alətləri (`read:obsidian`)
 
-| Alət                         | Təsvir                                                                                                              |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Local REST API-nin əlçatan və autentifikasiya edilmiş olub-olmadığını yoxlayır.                                     |
-| `obsidian_search_simple`     | Qeyd məzmununda tam mətn axtarışı aparır; fayl yolları ilə birlikdə fraqmentləri qaytarır.                          |
-| `obsidian_search_structured` | JSON Logic ifadəsindən istifadə edərək axtarış aparır (and/or/regex/path filtrləri).                                |
-| `obsidian_read_note`         | Anbara nəzərən nisbi yol ilə qeydi oxuyur; istəyə görə konkret başlığı/bloku/frontmatter-i oxuyur.                  |
-| `obsidian_list_vault`        | Anbardakı fayl və qovluqları siyahıya alır (elementlər ağacı).                                                      |
-| `obsidian_get_document_map`  | Qeydin başlıq strukturunu başlıqlar → sətir nömrələri xəritəsi kimi əldə edir.                                      |
-| `obsidian_get_note_metadata` | Tam məzmun olmadan frontmatter-i, teqləri, keçidləri, simvol/söz sayını əldə edir.                                  |
-| `obsidian_get_active_file`   | Hazırda Obsidian-da aktiv olan faylın yolunu və məzmununu əldə edir.                                                |
-| `obsidian_get_periodic_note` | Verilmiş tarix üçün gündəlik/həftəlik/aylıq dövri qeydi əldə edir (buraxılarsa, bu gün).                            |
-| `obsidian_get_tags`          | Bütün anbar teqlərini istifadə tezlikləri ilə birlikdə siyahıya alır.                                               |
-| `obsidian_list_commands`     | Mövcud Obsidian əmr ID-lərini siyahıya alır (`obsidian_execute_command` ilə istifadə üçün).                         |
-| `obsidian_sync_status`       | OmniRoute sinxronizasiya serverinin statusu: işləmə vəziyyəti, anbar adı, port, işləmə müddəti, son sinxronizasiya. |
-| `obsidian_sync_conflicts`    | Həll olunmamış sinxronizasiya münaqişələrini siyahıya alır (yol, münaqişə yolu, aşkarlanma vaxtı).                  |
+| Alət                         | Təsvir                                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `obsidian_check_status`      | Local REST API-nin əlçatan və autentifikasiya edilmiş olub-olmadığını yoxlayır.                                    |
+| `obsidian_search_simple`     | Qeyd məzmununda tam mətn axtarışı aparır; fayl yolları ilə birlikdə fraqmentləri qaytarır.                         |
+| `obsidian_search_structured` | JSON Logic ifadəsindən istifadə edərək axtarış aparır (and/or/regex/path filtrləri).                               |
+| `obsidian_read_note`         | Anbara nəzərən nisbi yol ilə qeydi oxuyur; istəyə görə konkret başlığı/bloku/frontmatter-i oxuyur.                 |
+| `obsidian_list_vault`        | Anbardakı fayl və qovluqları siyahıya alır (elementlər ağacı).                                                     |
+| `obsidian_get_document_map`  | Qeydin başlıq strukturunu başlıqlar → sətir nömrələri xəritəsi kimi əldə edir.                                     |
+| `obsidian_get_note_metadata` | Tam məzmun olmadan frontmatter-i, teqləri, keçidləri, simvol/söz sayını əldə edir.                                 |
+| `obsidian_get_active_file`   | Hazırda Obsidian-da aktiv olan faylın yolunu və məzmununu əldə edir.                                               |
+| `obsidian_get_periodic_note` | Verilmiş tarix üçün gündəlik/həftəlik/aylıq dövri qeydi əldə edir (buraxılarsa, bu gün).                           |
+| `obsidian_get_tags`          | Bütün anbar teqlərini istifadə tezlikləri ilə birlikdə siyahıya alır.                                              |
+| `obsidian_list_commands`     | Mövcud Obsidian əmr ID-lərini siyahıya alır (`obsidian_execute_command` ilə istifadə üçün).                        |
+| `obsidian_sync_status`       | 67router sinxronizasiya serverinin statusu: işləmə vəziyyəti, anbar adı, port, işləmə müddəti, son sinxronizasiya. |
+| `obsidian_sync_conflicts`    | Həll olunmamış sinxronizasiya münaqişələrini siyahıya alır (yol, münaqişə yolu, aşkarlanma vaxtı).                 |
 
 ### Yazma alətləri (`write:obsidian`)
 

@@ -42,7 +42,7 @@ ospitat partikolari jew integrazzjoni esterna huma disponibbli bħalissa.
 | Offerti għall-partitarji                    | Implimentati bħala feed separat iffirmat, disponibbli biss live, u paġna fid-dashboard. Il-klijent jerġa' jivvalida l-iskema magħluqa tal-benefiċċji, iżomm l-aħħar cache tajba, jiffiltra l-entrati skaduti, u jimmarka l-offerti tal-imsieħba b'mod espliċitu.                                      |
 | Intelliġenza u rikonoxximent tal-partitarji | Implimentati bħala feed strett iffirmat u disponibbli biss live, b'ELO proprjetà ta' Radar, informazzjoni fattwali dwar kemm il-katalgu huwa aġġornat u x-xejriet tiegħu, badge lokali vverifikat tal-partitarju, paġna fid-dashboard, u kmandi CLI lokali biss għall-istatus/għas-sinkronizzazzjoni. |
 | Pagamenti u email tranżazzjonali            | Mhux implimentati fil-klijent OSS. Ix-xiri, id-donazzjonijiet, ir-rieżami tal-irċevuti, l-irkupru, u t-twassil tal-posta elettronika jappartjenu lis-servizz privat; id-disponibbiltà ospitata xorta tiddependi mill-iskjerament sorveljat u mill-konfigurazzjoni tal-fornitur tiegħu.                |
-| Fluss ta' ħidma tal-aġent tar-riċerka       | Mhuwiex parti minn dan ir-rilaxx tal-klijent. Il-kontenut ikkurat tal-feed jibqa' data min-naħa tas-server; ebda aġent awtonomu tar-riċerka ma jaħdem f'installazzjoni ta' OmniRoute.                                                                                                                 |
+| Fluss ta' ħidma tal-aġent tar-riċerka       | Mhuwiex parti minn dan ir-rilaxx tal-klijent. Il-kontenut ikkurat tal-feed jibqa' data min-naħa tas-server; ebda aġent awtonomu tar-riċerka ma jaħdem f'installazzjoni ta' 67router.                                                                                                                  |
 
 ---
 
@@ -120,7 +120,7 @@ Meta t-tnejn ikunu mixgħula, il-fluss tas-sinkronizzazzjoni jkun:
    li jinbidel kuljum għal rieżami manwali tal-abbuż; dawk it-tabelli ma jippersistu la ċ-ċavetta u lanqas l-IP fil-forma mhux ipproċessata tagħhom.
    Ir-reġistri tal-aċċess tal-infrastruttura u l-outbox encrypted tal-konsenja huma konfini operazzjonali
    separati.
-3. OmniRoute qatt ma jibgħat prompts, risposti, konverżazzjonijiet, kredenzjali tal-fornituri, traffiku tal-mudelli,
+3. 67router qatt ma jibgħat prompts, risposti, konverżazzjonijiet, kredenzjali tal-fornituri, traffiku tal-mudelli,
    uptime, latenza, jew il-konfigurazzjoni lokali tal-fornituri lis-servizz Radar.
 4. Ir-risposta tiġi vverifikata, validata, u maħżuna lokalment fil-cache (ara
    [Mudell tas-sigurtà](#security-model)). Radar għandu eżattament erba’ mogħdijiet tan-network fuq in-naħa tas-server:
@@ -244,13 +244,13 @@ li diġà għandu waħda jattivaha.
 ### Attivazzjoni minn tarf sa tarf u konfigurazzjoni ggwidata
 
 Is-servizz privat tal-feed u dan il-klijent OSS għandhom fruntiera deliberatament limitata: is-servizz
-joħroġ u jivvalida ċ-ċavetta tas-sostenitur, filwaqt li l-installazzjoni lokali ta' OmniRoute tikkodifika ċ-ċavetta,
+joħroġ u jivvalida ċ-ċavetta tas-sostenitur, filwaqt li l-installazzjoni lokali ta' 67router tikkodifika ċ-ċavetta,
 tissinkronizza artefatti ffirmati min-naħa tas-server, u tiggwida l-konfigurazzjoni tal-fornitur. L-ordni tal-validazzjoni assistita hija:
 
 1. Ikseb ċavetta maħruġa mill-ġdid jew irkuprata mit-talba tal-kontributur, plans/checkout, il-proċess
    ta’ rkupru, jew mingħand operatur awtorizzat ta’ server privat. Twaħħalx iċ-ċavetta mhux ipproċessata fil-logs,
    screenshots, kummenti tal-issues, jew argumenti tal-linja tal-kmand.
-2. Attiva l-feature flag `RADAR_ENABLED` fuq l-installazzjoni lokali ta’ OmniRoute. Dan jesponi l-UI
+2. Attiva l-feature flag `RADAR_ENABLED` fuq l-installazzjoni lokali ta’ 67router. Dan jesponi l-UI
    iżda jibqa’ inattiv fuq in-network sakemm jiġi ssejvjat l-opt-in separat.
 3. Iftaħ `/dashboard/radar`, waħħal iċ-ċavetta, u attiva. Il-browser jibgħat talba lokali waħda
    `POST /api/radar/settings` b’`{ optIn: true, supporterKey }`; iċ-ċavetta tiġi kkodifikata lokalment u
@@ -315,7 +315,7 @@ jerġgħu jiġu sinkronizzati.
 ### Sostituzzjonijiet permezz ta’ varjabbli tal-ambjent li jiffaċilitaw il-forks
 
 Żewġ varjabbli tal-ambjent jippermettu lill-forks u lil min iħaddem is-servizz fuq l-infrastruttura tiegħu jippuntaw il-klijent lejn il-feed tagħhom stess minflok
-is-servizz predefinit OmniRoute — ara
+is-servizz predefinit 67router — ara
 [Kif tospita feed int stess](#how-to-self-host-a-feed) hawn taħt:
 
 | Var                 | Għan                                                                                                                   |
@@ -469,7 +469,7 @@ Id-dashboard jipprovdi erba’ azzjonijiet lokali:
 Il-pubblikazzjonijiet tal-katalgu jużaw `schemaVersion: 2`. `contextWindow` u kull wieħed minn `tools`, `vision`, u
 `thinking` huma indipendentement `number | null` / `boolean | null`: `null` ifisser mhux magħruf, filwaqt li
 `false` jfisser li sors uffiċjali tal-fornitur ikkonfermat minn D16 jgħid b’mod espliċitu li l-kapaċità hija nieqsa.
-Il-flags interni tar-reġistru/tal-ispeċifikazzjoni tal-mudell ta’ OmniRoute qatt ma jiġu promossi direttament għal fatti tal-feed. Il-klijent
+Il-flags interni tar-reġistru/tal-ispeċifikazzjoni tal-mudell ta’ 67router qatt ma jiġu promossi direttament għal fatti tal-feed. Il-klijent
 xorta jaċċetta snapshots v1; minħabba li l-builder l-antik kien juża `false` bħala placeholder għal nuqqas, `false` f’v1 jiġi
 normalizzat għal mhux magħruf filwaqt li `true` f’v1 jibqa’ fattwali. Verżjonijiet mhux magħrufa tal-iskema jfallu b’mod sigur u l-
 aħħar cache validu jibqa’ disponibbli. Kull mudell v2 b’kuntest/kapaċità mhux null għandu jġorr
@@ -530,7 +530,7 @@ Il-familji tar-rotot lokali ta’ Radar hawn taħt jappoġġjaw l-UI taħt `src/
 | `/api/radar/local-model-state` | DELETE | Ineħħi l-fields tal-override li jistgħu jiġu editjati filwaqt li jippreserva kwalunkwe tombstone.                                     |
 
 **Regola stretta: dawn ir-rotot qatt ma jagħmluha ta’ proxy għas-servizz tal-feed.** Il-browser jikkomunika biss
-mas-server OmniRoute lokali. L-erba’ moduli li jikkomunikaw mas-servizz Radar huma
+mas-server 67router lokali. L-erba’ moduli li jikkomunikaw mas-servizz Radar huma
 `src/lib/radar/sync.ts` (katalgu), `src/lib/radar/referralsSync.ts` (riferimenti), u
 `src/lib/radar/offersSync.ts` (offerti) flimkien ma’
 `src/lib/radar/intelSync.ts` (Intel); kollha jitħaddmu fuq in-naħa tas-server, qatt fuq in-naħa tal-klijent. Dan iżomm
@@ -572,7 +572,7 @@ Intel huwa artifatt iffirmat f’`GET /v1/intel/latest`. Ir-`RadarIntelFeedSchem
 
 `syncRadarIntel()` japplika l-istess Bearer fuq in-naħa tas-server, timeout ta’ 30 sekonda, limitu ta’ stream ta’ 10 MiB, verifika Ed25519 tal-bytes eżatti, skema stretta, rekwiżit ta’ `live` fil-body/header, limitu minimu tal-verżjoni, u preservazzjoni tal-aħħar cache valida bħall-offerti. Wara li snapshot attiva u vverifikata tiġi ppersistita, il-klijent jidderiva `radar:<sha256(supporter key)>`, jaħżen biss dik l-identità unidirezzjonali, u joħroġ l-avveniment dedikat ta’ rikonoxximent `radar_supporter`. Il-badge `radar-supporter` tiegħu hija idempotenti u tagħti żero XP; qatt ma taġġorna l-leaderboards jew terġa’ tuża `token_share`. `/dashboard/radar/intel` jirrendi l-badge biss minn metadata vverifikata tal-cache lokali.
 
-Is-CLI tesponi `omniroute radar status` u `omniroute radar sync`. It-tnejn jikkomunikaw biss mal-API lokali ta’ OmniRoute. `status` iwettaq `GET /api/radar/status` għall-qari biss; `sync` jibgħat `POST /api/radar/sync-all` wieħed u jistampa riżultat għal kull feed. L-ebda kmand ma jaqra, jaċċetta, jew jistampa ċ-ċavetta tal-partitarju, u l-ebda wieħed minnhom ma jikkuntattja direttament lis-servizz Radar.
+Is-CLI tesponi `omniroute radar status` u `omniroute radar sync`. It-tnejn jikkomunikaw biss mal-API lokali ta’ 67router. `status` iwettaq `GET /api/radar/status` għall-qari biss; `sync` jibgħat `POST /api/radar/sync-all` wieħed u jistampa riżultat għal kull feed. L-ebda kmand ma jaqra, jaċċetta, jew jistampa ċ-ċavetta tal-partitarju, u l-ebda wieħed minnhom ma jikkuntattja direttament lis-servizz Radar.
 
 ---
 

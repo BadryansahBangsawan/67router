@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, başlangıçta SQLite sürücüsünü 5 adımlı bir geri dönüş zinciri üzerinden çözümler:
+67router, başlangıçta SQLite sürücüsünü 5 adımlı bir geri dönüş zinciri üzerinden çözümler:
 
 1. **Paketle birlikte gelen `better-sqlite3`** (`package.json` içindeki `dependencies` aracılığıyla)
    — en hızlı seçenektir, yerel ikili dosya kullanır ve derleme araçları mevcut olduğunda `npm install` tarafından yüklenir.
@@ -28,13 +28,13 @@ OmniRoute, başlangıçta SQLite sürücüsünü 5 adımlı bir geri dönüş zi
 - **Derleme araçlarının olmaması**: Bazı ortamlar (VS Build Tools bulunmayan kurumsal
   Windows sistemleri, minimal Docker imajları) `better-sqlite3` paketini derleyemez. Çalışma zamanı
   yükleyicisi, npm kayıt defterinden önceden derlenmiş bir ikili dosyayı çözümler; geri dönüş
-  sürücüleri ise bu işlem başarısız olsa bile OmniRoute'un başlatılabilmesini sağlar.
+  sürücüleri ise bu işlem başarısız olsa bile 67router'un başlatılabilmesini sağlar.
 - **Ağdan yalıtılmış sistemler**: npm kayıt defterine erişilemiyorsa `node:sqlite`
   veya `sql.js`, temel işlevselliği garanti eder.
 
 ## Sihirli bayt doğrulaması
 
-OmniRoute, çalışma zamanında yüklenmiş bir `.node` dosyasını yüklemeden önce ilk 8
+67router, çalışma zamanında yüklenmiş bir `.node` dosyasını yüklemeden önce ilk 8
 baytı okur ve bunları bilinen platform sihirli değerleriyle eşleştirir:
 
 | Platform             | Baytlar (hex) | Etiket      |
@@ -107,9 +107,9 @@ Uygulama:
 ## Tek yazıcılı topoloji (HA desteklenmez)
 
 Yukarıdaki sürücü geri dönüş zinciri yine de **tek bir süreçte** çalışır. Varsayılan
-SQLite yapılandırmasında OmniRoute **tek yazıcılıdır**:
+SQLite yapılandırmasında 67router **tek yazıcılıdır**:
 
-- İki OmniRoute replikasını aynı `storage.sqlite` dosyasına bağlamayın.
+- İki 67router replikasını aynı `storage.sqlite` dosyasına bağlamayın.
 - Bir konteyner yeniden başlatması, Recreate dağıtımı, OOM sonlandırması veya HEALTHCHECK
   yeniden başlatması, devam eden tüm SSE oturumlarını keser. Standart yolda oturumların
   kontrollü şekilde sonlandırılması yoktur.

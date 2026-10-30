@@ -8,7 +8,7 @@
 
 > **信頼できる唯一の情報源:** `open-sse/utils/proxyFamily.ts`、`open-sse/utils/proxyDispatcher.ts`、`open-sse/utils/proxyFetch.ts`、`open-sse/utils/socksConnectorWithFamily.ts`、`open-sse/utils/proxyFamilyResolve.ts`、`src/shared/validation/schemas.ts`、`src/lib/db/proxies.ts`、`src/lib/db/upstreamProxy.ts`、`src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRouteでは、各プロキシに**アドレスファミリーのエグレス指定**を設定できます。デフォルトでは、OSがIPv4またはIPv6を選択します（デュアルスタック、「Happy Eyeballs」）。この指定を`ipv4`または`ipv6`に設定すると、OmniRouteはそのプロキシを経由するすべての接続を選択したファミリーに固定し、別のファミリーへフォールバックすることなく**フェイルクローズ**します。
+67routerでは、各プロキシに**アドレスファミリーのエグレス指定**を設定できます。デフォルトでは、OSがIPv4またはIPv6を選択します（デュアルスタック、「Happy Eyeballs」）。この指定を`ipv4`または`ipv6`に設定すると、67routerはそのプロキシを経由するすべての接続を選択したファミリーに固定し、別のファミリーへフォールバックすることなく**フェイルクローズ**します。
 
 このページでは、この指定の概要、存在する理由、設定する場所、およびランタイムでの解決方法について説明します。
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto`の解決方法
 
-`family`が`auto`の場合、OmniRouteはどのディレクティブも追加**しません**。プロキシURLはそのまま使用され、接続ファミリーは固有の情報に基づいて決定されます。
+`family`が`auto`の場合、67routerはどのディレクティブも追加**しません**。プロキシURLはそのまま使用され、接続ファミリーは固有の情報に基づいて決定されます。
 
 URLの構築時（`open-sse/utils/proxyDispatcher.ts`の`proxyConfigToUrl` / `normalizeProxyUrl`）、`auto`プロキシはマーカーのないプレーンURLになります。
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 `auto` 以外のディレクティブは、単一の合成クエリマーカー（`?family=ipv4` または `?family=ipv6`）として、正規化されたプロキシ URL に一度だけ追加されます。`normalizeProxyUrl` は、ポート解析を壊すことがないよう、このマーカーを正確に一度だけ削除してから再追加します。
 
-ディスパッチャーの構築時に、このマーカーが読み取られ、具体的な接続ファミリーに変換されます。ホストが**反対側**のファミリーに属する IP リテラルの場合、OmniRoute は例外をスローします（矛盾がある場合はフェイルクローズします）。
+ディスパッチャーの構築時に、このマーカーが読み取られ、具体的な接続ファミリーに変換されます。ホストが**反対側**のファミリーに属する IP リテラルの場合、67router は例外をスローします（矛盾がある場合はフェイルクローズします）。
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 の互換性
 
-ファミリーの固定は SOCKS5 プロキシでも機能しますが、標準の `fetch-socks` では、プロキシホップのファミリーを固定するために必要なソケットオプションが公開されていません。そのため、OmniRoute には独自のコネクターが含まれています。
+ファミリーの固定は SOCKS5 プロキシでも機能しますが、標準の `fetch-socks` では、プロキシホップのファミリーを固定するために必要なソケットオプションが公開されていません。そのため、67router には独自のコネクターが含まれています。
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

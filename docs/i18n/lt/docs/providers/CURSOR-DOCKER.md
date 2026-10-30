@@ -4,7 +4,7 @@
 
 ---
 
-Kai OmniRoute veikia Docker viduje, senieji **Importuoti iš Cursor IDE** /
+Kai 67router veikia Docker viduje, senieji **Importuoti iš Cursor IDE** /
 `cursor-agent` procesai neveikia, nes konteineris nemato pagrindinio kompiuterio Cursor
 diegimo. Vietoje jų naudokite **Prisijungti naudojant Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ diegimo. Vietoje jų naudokite **Prisijungti naudojant Cursor** (deep-control PK
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _konteinerio viduje_.
    Naudojant Docker Desktop sistemoje macOS, pagrindinio kompiuterio IDE DB pagal numatytąsias nuostatas nėra prijungta, o
    konteinerio OS yra Linux, net kai pagrindiniame kompiuteryje veikia Darwin.
-2. **Nėra `cursor-agent` vykdomojo failo** — oficialiuose OmniRoute atvaizduose
+2. **Nėra `cursor-agent` vykdomojo failo** — oficialiuose 67router atvaizduose
    `cursor-agent` nėra. Anksčiau skiltis „Galimi modeliai“ vykdydavo
    `cursor-agent --list-models` ir nesėkmės atveju naudodavo statinį katalogą.
 3. **Netinkamas vykdomasis failas** — **neprijunkite** macOS skirto `cursor-agent` prie Linux
@@ -24,11 +24,11 @@ diegimo. Vietoje jų naudokite **Prisijungti naudojant Cursor** (deep-control PK
 
 1. Atidarykite **Valdymo skydas → Teikėjai → Cursor**.
 2. Pasirinkite kortelę **Prisijungti naudojant Cursor**.
-3. Spustelėkite **Prisijungti naudojant Cursor** — OmniRoute jūsų **pagrindinio kompiuterio** naršyklėje atidarys
+3. Spustelėkite **Prisijungti naudojant Cursor** — 67router jūsų **pagrindinio kompiuterio** naršyklėje atidarys
    `https://cursor.com/loginDeepControl?…`.
-4. Patvirtinkite prisijungimą naršyklėje, tada grįžkite į valdymo skydą. OmniRoute
+4. Patvirtinkite prisijungimą naršyklėje, tada grįžkite į valdymo skydą. 67router
    periodiškai tikrina `api2.cursor.sh/auth/poll`, kol gauna prieigos raktus.
-5. OmniRoute išsaugo **prieigos ir atnaujinimo** prieigos raktus bei atnaujina juos per
+5. 67router išsaugo **prieigos ir atnaujinimo** prieigos raktus bei atnaujina juos per
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Šiam būdui konteinerio viduje nereikia Cursor IDE arba `cursor-agent`.
@@ -37,10 +37,10 @@ diegimo. Vietoje jų naudokite **Prisijungti naudojant Cursor** (deep-control PK
 
 Esant prisijungusiam ryšiui, **Galimi modeliai / Automatinis sinchronizavimas** pirmiausia naudoja Cursor
 HTTP `AiService/AvailableModels` katalogą su ryšio Bearer prieigos raktu.
-Jei tai nepavyksta, OmniRoute vis tiek bando naudoti pagrindinio kompiuterio `cursor-agent` (kai jis yra), o tada
+Jei tai nepavyksta, 67router vis tiek bando naudoti pagrindinio kompiuterio `cursor-agent` (kai jis yra), o tada
 statinio registro pradinį rinkinį.
 
-OmniRoute kataloge visada pateikia **`auto`** (rodoma kaip „Auto“), taip pat
+67router kataloge visada pateikia **`auto`** (rodoma kaip „Auto“), taip pat
 OpenCodex stiliaus maršruto parinkimo režimus **`auto-cost`**, **`auto-balance`** ir
 **`auto-intelligence`**. Persiunčiant jie susiejami su Cursor `default` modeliu
 (trims variantams pridedant `optimization` ModelParameter). Kai aukščiausios klasės modelių naudojimo limitas išnaudotas, rinkitės
@@ -87,7 +87,7 @@ IDE importavimas nebėra būtinas).
 ## Tušti atsakymai / išnaudotas naudojimo limitas
 
 Kai Cursor priima vykdymo užklausą, bet negrąžina asistento teksto (tai dažnai nutinka išnaudojus aukščiausios klasės
-modelių naudojimo limitą), OmniRoute pateikia aiškų **429** (kvotos požymiai) arba
+modelių naudojimo limitą), 67router pateikia aiškų **429** (kvotos požymiai) arba
 **502** su nurodymais, o ne vien tik „Teikėjas grąžino tuščią turinį“. Srautinio perdavimo
 klaidos, tokios kaip `not_found: AI Model Not Found` (išnaudotas naudojimo laikotarpio limitas),
 klasifikuojamos kaip **viršytas Cursor užklausų dažnio / naudojimo limitas**, o šis pranešimas išsaugomas
@@ -97,7 +97,7 @@ Cursor plano limitus.
 
 ## Kliento versija (be grafinės sąsajos)
 
-Kai nėra vietinio `cursor-agent` diegimo, OmniRoute nustato
+Kai nėra vietinio `cursor-agent` diegimo, 67router nustato
 `x-cursor-client-version` pirmiausia iš aplinkos kintamojo `CURSOR_AGENT_CLI_VERSION`, tada iš diske podėliuotos
 Cursor diegimo scenarijaus analizės, o galiausiai naudoja fiksuotą komponavimo ID. Kai reikia, nurodykite kitą reikšmę naudodami
 `CURSOR_AGENT_CLI_VERSION`.

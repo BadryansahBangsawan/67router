@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute separerar **CLI-identifiering**, **inbyggt Agent Client Protocol** och
+67router separerar **CLI-identifiering**, **inbyggt Agent Client Protocol** och
 **äldre stdio-adaptrar**. Att hitta en installerad binärfil bevisar inte dess
 autentisering, modellkompatibilitet eller beredskap att hantera en prompt.
 

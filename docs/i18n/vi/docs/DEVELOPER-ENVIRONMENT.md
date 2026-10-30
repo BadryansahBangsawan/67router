@@ -4,7 +4,7 @@
 
 ---
 
-Trang này giải thích cách dự án xử lý tệp `.env` cục bộ cũng như cách quản lý các tệp môi trường và bí mật khi phát triển OmniRoute.
+Trang này giải thích cách dự án xử lý tệp `.env` cục bộ cũng như cách quản lý các tệp môi trường và bí mật khi phát triển 67router.
 
 ## Hành vi postinstall của .env
 

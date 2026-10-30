@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/lib/memory/` og `src/app/api/memory/`
 > **Senest opdateret:** 2026-06-28 — v3.8.40 (deaktiveret som standard + efterbehandling med int8-kvantisering)
 
-OmniRoute leverer vedvarende samtalehukommelse, der er knyttet til API-nøglen (og
+67router leverer vedvarende samtalehukommelse, der er knyttet til API-nøglen (og
 eventuelt sessions-id'et). Hukommelser udtrækkes automatisk fra LLM-svar
 via letvægtsmønstergenkendelse med regulære udtryk og indsættes igen i efterfølgende
 anmodninger som en indledende systemmeddelelse (eller den første brugermeddelelse for udbydere, der
@@ -632,7 +632,7 @@ standard-TTL på 5 min).
 
 ## Valg af embeddingudbyder (v3.8.16+)
 
-OmniRoutes hukommelsesmotor understøtter **fire embeddingkilder** (`src/lib/memory/embedding/`). De har hver forskellige afvejninger med hensyn til **latenstid, omkostninger, modelkvalitet og opsætningskompleksitet**.
+67routers hukommelsesmotor understøtter **fire embeddingkilder** (`src/lib/memory/embedding/`). De har hver forskellige afvejninger med hensyn til **latenstid, omkostninger, modelkvalitet og opsætningskompleksitet**.
 
 ### Embeddingkilderne
 
@@ -1052,13 +1052,13 @@ Workeren binder kun til loopback, hvilket `GenericMemoryBackend`s SSRF-beskyttel
 Denne adapter lemper ikke denne beskyttelse: værten er hardkodet til `127.0.0.1`, og konfigurationsskemaet
 (`ClaudeMemBackendConfigSchema`, `.strict()`) accepterer kun:
 
-| Nøgle       | Type   | Standardværdi | Bemærkninger                                                                                                              |
-| ----------- | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —             | Påkrævet, 1024–65535. claude-mem-workerens port fra dens indstillingsfil (standard: `37700 + uid % 100`).                 |
-| `project`   | string | —             | claude-mem-projektet, der skal bruges. Ikke angivet → hver OmniRoute API-nøgle knyttes til sit eget projekt (`apiKeyId`). |
-| `timeoutMs` | number | `5000`        | Timeout pr. anmodning, 100–30000.                                                                                         |
+| Nøgle       | Type   | Standardværdi | Bemærkninger                                                                                                             |
+| ----------- | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `port`      | number | —             | Påkrævet, 1024–65535. claude-mem-workerens port fra dens indstillingsfil (standard: `37700 + uid % 100`).                |
+| `project`   | string | —             | claude-mem-projektet, der skal bruges. Ikke angivet → hver 67router API-nøgle knyttes til sit eget projekt (`apiKeyId`). |
+| `timeoutMs` | number | `5000`        | Timeout pr. anmodning, 100–30000.                                                                                        |
 
-Aktivér den via `PUT /api/settings/memory`, og genstart OmniRoute (backends registreres
+Aktivér den via `PUT /api/settings/memory`, og genstart 67router (backends registreres
 én gang i `initMemoryBackends()`):
 
 ```json
@@ -1075,7 +1075,7 @@ Tilknytning og begrænsninger:
 
 - ID'er er `claude-mem:<observationId>`; `get`/`delete` ignorerer ID'er fra andre backends uden et
   netværkskald.
-- `create` → `POST /api/memory/save`; OmniRoute-felterne (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router-felterne (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) medsendes i claude-mems `metadata.omniroute` og bevares gennem en skrive-/læsecyklus.
 - `search` → `GET /api/search?format=json&type=observations`, beskåret til `maxTokens`
   (tegn / 4). `list` → workerens paginerede observationsendpoint (`total` er en nedre grænse — workeren
@@ -1087,16 +1087,16 @@ Tilknytning og begrænsninger:
 - Prompt-injektion (`retrieval.ts`) og `omniroute_memory_*`-MCP-værktøjerne læser stadig direkte fra SQLite
   — de går ikke gennem `memoryManager`, så denne backend leverer ikke data til dem.
 
-**Routing af claude-mems egne LLM-kald gennem OmniRoute.** claude-mem komprimerer observationer
+**Routing af claude-mems egne LLM-kald gennem 67router.** claude-mem komprimerer observationer
 med en LLM (standard: Claude Agent SDK). Dens `openai-compatible`-udbyder kan i stedet pege på
-OmniRoute og dermed benytte combo-fallback og omkostningssporing. I `~/.claude-mem/settings.json`:
+67router og dermed benytte combo-fallback og omkostningssporing. I `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API-nøgle>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute-model eller -combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API-nøgle>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router-model eller -combo>"
 }
 ```
 

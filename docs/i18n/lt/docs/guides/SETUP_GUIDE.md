@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Lietuvių)
+# 📖 Setup Guide — 67router (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Išsami „OmniRoute“ sąrankos dokumentacija. Trumpąją versiją rasite [README greitosios pradžios skiltyje](../README.md#-quick-start).
+> Išsami „67router“ sąrankos dokumentacija. Trumpąją versiją rasite [README greitosios pradžios skiltyje](../README.md#-quick-start).
 
 ## Turinys
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR paketas](https://aur.archlinux.org/packages/omniroute-bin) įdiegia „OmniRoute“ ir pateikia systemd naudotojo paslaugą.
+[AUR paketas](https://aur.archlinux.org/packages/omniroute-bin) įdiegia „67router“ ir pateikia systemd naudotojo paslaugą.
 
 ### Iš pirminio kodo
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Pastaba „Windows“ naudotojams:** pagal numatytąsias nuostatas „OmniRoute“ naudoja `%APPDATA%\omniroute`, kai senojo `%USERPROFILE%\.omniroute` katalogo nėra. Norėdami pasirinkti kitą duomenų katalogo vietą, nustatykite `DATA_DIR`.
+> **Pastaba „Windows“ naudotojams:** pagal numatytąsias nuostatas „67router“ naudoja `%APPDATA%\omniroute`, kai senojo `%USERPROFILE%\.omniroute` katalogo nėra. Norėdami pasirinkti kitą duomenų katalogo vietą, nustatykite `DATA_DIR`.
 
 > **Pastaba:** pirmą kartą paleidus `npm install`, `.env` automatiškai sugeneruojamas iš `.env.example`. Vėlesni diegimai neperrašys esamo `.env`, todėl tinkinimai bus išsaugoti. Norėdami sugeneruoti jį iš naujo, prieš kartodami komandą ištrinkite `.env`.
 
@@ -64,7 +64,7 @@ Išsamią „Docker“ sąranką, įskaitant „Compose“ profilius ir „Caddy
 
 ### Darbalaukio programa (Electron)
 
-„OmniRoute“ pateikiama su darbalaukio apvalkalu, sukurtu naudojant Electron 41 ir electron-builder 26.10. Galimi scenarijai (darbo srities šakniniame kataloge):
+„67router“ pateikiama su darbalaukio apvalkalu, sukurtu naudojant Electron 41 ir electron-builder 26.10. Galimi scenarijai (darbo srities šakniniame kataloge):
 
 ```bash
 npm run electron:dev          # Paleisti darbalaukio programą su automatiniu perkrovimu
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Naudojant kartu su aplinkos kintamaisiais (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` ir kt.), „OmniRoute“ egzempliorių galima visiškai automatizuotai paleisti scenarijais.
+Naudojant kartu su aplinkos kintamaisiais (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` ir kt.), „67router“ egzempliorių galima visiškai automatizuotai paleisti scenarijais.
 
 ### CLI parinktys
 
@@ -99,7 +99,7 @@ Naudojant kartu su aplinkos kintamaisiais (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRI
 | `omniroute config`      | CLI įrankio konfigūravimas — konfigūracijų sąrašas, gavimas, nustatymas ir tikrinimas   |
 | `omniroute status`      | Neprisijungus pasiekiamas būsenos skydelis — versija, DB, įrankiai, konfigūracija       |
 | `omniroute logs`        | Srautiniu būdu gauti naudojimo žurnalus iš API (palaiko `--follow`)                     |
-| `omniroute update`      | Patikrinti arba pritaikyti „OmniRoute“ naujinimus                                       |
+| `omniroute update`      | Patikrinti arba pritaikyti „67router“ naujinimus                                        |
 | `omniroute provider`    | Valdyti teikėjų ryšius — pridėti, išvardyti, pašalinti, išbandyti, nustatyti numatytąjį |
 | `omniroute --port 3000` | Nustatyti pagrindinį / API prievadą į 3000                                              |
 | `omniroute --mcp`       | Paleisti MCP serverį (stdio perdavimo būdas)                                            |
@@ -165,7 +165,7 @@ Veikia su Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode ir su OpenAI
 
 #### Automatinė konfigūracija naudojant `setup-*`
 
-Užuot rankiniu būdu įklijavę bazinį URL ir raktą, leiskite „OmniRoute“ pagal dabartinį modelių katalogą įrašyti kiekvieno įrankio konfigūraciją. Kiekvienam įrankiui skirta viena komanda:
+Užuot rankiniu būdu įklijavę bazinį URL ir raktą, leiskite „67router“ pagal dabartinį modelių katalogą įrašyti kiekvieno įrankio konfigūraciją. Kiekvienam įrankiui skirta viena komanda:
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml profiliai
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json ir ~/.qwen/.env
 ```
 
-Kiekviena komanda priima `--remote <url> --api-key <key>`, kad vietinis įrankis būtų sukonfigūruotas darbui su **nuotoliniu** „OmniRoute“, taip pat `--dry-run`, kad būtų galima peržiūrėti pakeitimus. Norėdami paleisti CLI su įterptais tinkamais aplinkos kintamaisiais visiškai neįrašant konfigūracijos, naudokite bendrąją paleidimo priemonę `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); senesnės konkretiems įrankiams skirtos paleidimo priemonės `omniroute launch` (Claude Code) ir `omniroute launch-codex` (Codex) tebėra prieinamos.
+Kiekviena komanda priima `--remote <url> --api-key <key>`, kad vietinis įrankis būtų sukonfigūruotas darbui su **nuotoliniu** „67router“, taip pat `--dry-run`, kad būtų galima peržiūrėti pakeitimus. Norėdami paleisti CLI su įterptais tinkamais aplinkos kintamaisiais visiškai neįrašant konfigūracijos, naudokite bendrąją paleidimo priemonę `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); senesnės konkretiems įrankiams skirtos paleidimo priemonės `omniroute launch` (Claude Code) ir `omniroute launch-codex` (Codex) tebėra prieinamos.
 
 Visą lentelę (ką kiekviena komanda įrašo, visas žymas, vietinį ir nuotolinį režimus bei bazinio URL `/v1` susitarimus) rasite skiltyje **[CLI integracijos](./CLI-INTEGRATIONS.md)**.
 
@@ -270,15 +270,15 @@ Daugumai diegimų reikia tik šių dviejų kintamųjų:
 | Kintamasis               | Numatytoji reikšmė          | Paskirtis                                                                                                                                                                       |
 | ------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                    | Bendroji bazinė reikšmė išorinio serverio atsako pradžios, paslėptiems Undici, TLS kontrolinio atspaudo užklausų ir API tilto užklausų / tarpinio serverio skirtiesiems laikams |
-| `STREAM_IDLE_TIMEOUT_MS` | perima `REQUEST_TIMEOUT_MS` | Didžiausias tarpas tarp srautinio perdavimo fragmentų, kuriam praėjus OmniRoute nutraukia SSE srautą                                                                            |
+| `STREAM_IDLE_TIMEOUT_MS` | perima `REQUEST_TIMEOUT_MS` | Didžiausias tarpas tarp srautinio perdavimo fragmentų, kuriam praėjus 67router nutraukia SSE srautą                                                                             |
 
 Atgalinis suderinamumas išlaikomas: esami `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` ir kiti kiekvieno sluoksnio skirtojo laiko kintamieji vis dar veikia ir pakeičia bendrąją bazinę reikšmę.
 
 ### Pastabos, susijusios su teikėjais
 
-Su Claude Code suderinamiems išoriniams serveriams (`anthropic-compatible-cc-*`) OmniRoute nustato siunčiamą `X-Stainless-Timeout` antraštę pagal apskaičiuotą gavimo skirtąjį laiką, kad teikėjo skaitymo skirtasis laikas atitiktų jūsų aplinkos konfigūraciją.
+Su Claude Code suderinamiems išoriniams serveriams (`anthropic-compatible-cc-*`) 67router nustato siunčiamą `X-Stainless-Timeout` antraštę pagal apskaičiuotą gavimo skirtąjį laiką, kad teikėjo skaitymo skirtasis laikas atitiktų jūsų aplinkos konfigūraciją.
 
-Naudojant trečiųjų šalių su Claude Code suderinamus atvirkštinius tarpinius serverius, OmniRoute išlaiko konservatyvų numatytąjį `anthropic-beta` rinkinį ir, kai `Client Cache Control` paliekamas kaip `Auto`, persiunčia tik kliento pateiktas `cache_control` žymas. Įjunkite kiekvienam ryšiui skirtą „Enable redact-thinking beta“ parinktį tik tada, kai išorinis serveris aiškiai reikalauja redaguotų Claude mąstymo srautų.
+Naudojant trečiųjų šalių su Claude Code suderinamus atvirkštinius tarpinius serverius, 67router išlaiko konservatyvų numatytąjį `anthropic-beta` rinkinį ir, kai `Client Cache Control` paliekamas kaip `Auto`, persiunčia tik kliento pateiktas `cache_control` žymas. Įjunkite kiekvienam ryšiui skirtą „Enable redact-thinking beta“ parinktį tik tada, kai išorinis serveris aiškiai reikalauja redaguotų Claude mąstymo srautų.
 
 ### Išplėstiniai skirtojo laiko perrašymai
 
@@ -296,11 +296,11 @@ Naudojant trečiųjų šalių su Claude Code suderinamus atvirkštinius tarpiniu
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | API tilto serverio palaikomojo ryšio skirtasis laikas                                     |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | API tilto serverio lizdo neveiklumo skirtasis laikas (`0` jį išjungia)                    |
 
-> **Pastaba:** Srautinio perdavimo užklausoms `FETCH_TIMEOUT_MS` taikomas tik ryšio užmezgimui / pirmojo išorinio serverio atsako laukimui. Kai srautas tampa aktyvus, OmniRoute jį nutraukia tik esant faktinei prastovai (`STREAM_IDLE_TIMEOUT_MS`) arba Undici atsako turinio neveiklumui (`FETCH_BODY_TIMEOUT_MS`).
+> **Pastaba:** Srautinio perdavimo užklausoms `FETCH_TIMEOUT_MS` taikomas tik ryšio užmezgimui / pirmojo išorinio serverio atsako laukimui. Kai srautas tampa aktyvus, 67router jį nutraukia tik esant faktinei prastovai (`STREAM_IDLE_TIMEOUT_MS`) arba Undici atsako turinio neveiklumui (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Suderinamumas su atvirkštiniu tarpiniu serveriu
 
-Jei OmniRoute naudojate už Nginx, Caddy, Cloudflare ar kito atvirkštinio tarpinio serverio, įsitikinkite, kad tarpinio serverio skirtieji laikai taip pat yra ilgesni už OmniRoute srauto / gavimo skirtuosius laikus.
+Jei 67router naudojate už Nginx, Caddy, Cloudflare ar kito atvirkštinio tarpinio serverio, įsitikinkite, kad tarpinio serverio skirtieji laikai taip pat yra ilgesni už 67router srauto / gavimo skirtuosius laikus.
 
 ---
 

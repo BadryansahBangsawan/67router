@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute zaznamenáva administratívne akcie, udalosti autentifikácie, zmeny životného cyklu prihlasovacích údajov poskytovateľov a volania nástrojov MCP do auditných tabuliek podporovaných databázou SQLite. Táto stránka opisuje, čo sa zaznamenáva, kde sa údaje nachádzajú, ako dlho sa uchovávajú, ako môžu kľúče API zrušiť účasť na zaznamenávaní a ako údaje vyhľadávať.
+67router zaznamenáva administratívne akcie, udalosti autentifikácie, zmeny životného cyklu prihlasovacích údajov poskytovateľov a volania nástrojov MCP do auditných tabuliek podporovaných databázou SQLite. Táto stránka opisuje, čo sa zaznamenáva, kde sa údaje nachádzajú, ako dlho sa uchovávajú, ako môžu kľúče API zrušiť účasť na zaznamenávaní a ako údaje vyhľadávať.
 
 Implementácia sa nachádza v `src/lib/compliance/index.ts` (T-43 — „Kontrolné mechanizmy súladu“) a `src/lib/compliance/providerAudit.ts`. Zápisy auditu nikdy nevyvolávajú výnimky: pri akomkoľvek zlyhaní sa volanie potichu ignoruje, aby auditné zaznamenávanie nemohlo narušiť hlavný tok požiadavky.
 

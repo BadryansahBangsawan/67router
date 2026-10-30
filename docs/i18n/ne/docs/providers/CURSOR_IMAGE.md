@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ले च्याटकै समान provider id `cursor` (उपनाम `cu`) मार्फत `POST /v1/images/generations` मा Cursor योजनाको **छवि निर्माण** उपलब्ध गराउँछ।
+67router ले च्याटकै समान provider id `cursor` (उपनाम `cu`) मार्फत `POST /v1/images/generations` मा Cursor योजनाको **छवि निर्माण** उपलब्ध गराउँछ।
 
 | फिल्ड                | मान                                                                            |
 | -------------------- | ------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute ले च्याटकै समान provider id `cursor` (उप
 
 ## Agent CLI किन
 
-OmniRoute मा Cursor च्याटले `agent.v1.AgentService/Run` (protobuf) प्रयोग गर्छ। उक्त मार्गले अन्तर्निर्मित क्लाइन्ट उपकरणहरू (shell, write, …) **अस्वीकार गर्छ**। छवि निर्माण भनेको seat विरुद्ध **`agent` CLI** द्वारा कार्यान्वयन गरिने Cursor-मूल उपकरण हो। त्यसैले छवि ह्यान्डलरले सुरक्षित रूपमा निश्चित गरिएको prompt र प्रत्येक अनुरोधका लागि छुट्टै अस्थायी workspace सहित `agent` सुरु गर्छ (community seat bridges कै संरचनामा), त्यसपछि OpenAI-सङ्गत `b64_json` फर्काउँछ।
+67router मा Cursor च्याटले `agent.v1.AgentService/Run` (protobuf) प्रयोग गर्छ। उक्त मार्गले अन्तर्निर्मित क्लाइन्ट उपकरणहरू (shell, write, …) **अस्वीकार गर्छ**। छवि निर्माण भनेको seat विरुद्ध **`agent` CLI** द्वारा कार्यान्वयन गरिने Cursor-मूल उपकरण हो। त्यसैले छवि ह्यान्डलरले सुरक्षित रूपमा निश्चित गरिएको prompt र प्रत्येक अनुरोधका लागि छुट्टै अस्थायी workspace सहित `agent` सुरु गर्छ (community seat bridges कै संरचनामा), त्यसपछि OpenAI-सङ्गत `b64_json` फर्काउँछ।
 
 ## पहुँच प्रतिबन्ध (कडा नियमहरू #15 + #17)
 
@@ -23,12 +23,12 @@ OmniRoute मा Cursor च्याटले `agent.v1.AgentService/Run` (proto
 
 ## Concurrency gate मोड्युल-स्तरीय छ (एकल-instance सीमा)
 
-`CURSOR_IMG_MAX_CONCURRENT` लाई Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) को दायरामा रहेको in-memory counter/queue द्वारा लागू गरिन्छ। यसले एउटा OmniRoute process भित्रका समकालीन `agent` spawn हरूलाई सही रूपमा सीमित गर्छ, तर समान Cursor seat साझा गर्ने धेरै process/instance हरूबीच समन्वय **गर्दैन** (जस्तै, multi-replica deployment)—प्रत्येक instance ले आफ्नै स्वतन्त्र सीमा लागू गर्छ। एकल-instance deployment (पूर्वनिर्धारित) का लागि यो सटीक हुन्छ; तेर्सो रूपमा scale गरिएका deployment हरूले प्रत्येक instance मा `CURSOR_IMG_MAX_CONCURRENT` लाई न्यून राख्नुपर्छ वा Cursor छवि traffic लाई एउटै instance तर्फ route गर्नुपर्छ।
+`CURSOR_IMG_MAX_CONCURRENT` लाई Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) को दायरामा रहेको in-memory counter/queue द्वारा लागू गरिन्छ। यसले एउटा 67router process भित्रका समकालीन `agent` spawn हरूलाई सही रूपमा सीमित गर्छ, तर समान Cursor seat साझा गर्ने धेरै process/instance हरूबीच समन्वय **गर्दैन** (जस्तै, multi-replica deployment)—प्रत्येक instance ले आफ्नै स्वतन्त्र सीमा लागू गर्छ। एकल-instance deployment (पूर्वनिर्धारित) का लागि यो सटीक हुन्छ; तेर्सो रूपमा scale गरिएका deployment हरूले प्रत्येक instance मा `CURSOR_IMG_MAX_CONCURRENT` लाई न्यून राख्नुपर्छ वा Cursor छवि traffic लाई एउटै instance तर्फ route गर्नुपर्छ।
 
 ## आवश्यकताहरू
 
 1. dashboard मा जडान गरिएको Cursor खाता (OAuth वा `crsr_…` API key)।
-2. OmniRoute process का लागि उपलब्ध Cursor Agent binary:
+2. 67router process का लागि उपलब्ध Cursor Agent binary:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, वा
    - `~/.local/bin/agent`, वा
    - Cursor जडानमा `providerSpecificData.agentBin`।

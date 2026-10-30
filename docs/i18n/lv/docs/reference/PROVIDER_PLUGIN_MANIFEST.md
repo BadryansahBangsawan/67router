@@ -14,7 +14,7 @@ izpildītāja kodu, OAuth noklusējuma vērtības, galvenes vai procesa vides st
 Tas pats manifests ir pieejams, izmantojot HTTP:
 `GET /api/v1/provider-plugin-manifest` ārpus procesa palaistiem blakusprocesiem.
 
-OmniRoute norāda šo URL Bifrost un CLIProxyAPI, izmantojot
+67router norāda šo URL Bifrost un CLIProxyAPI, izmantojot
 `X-OmniRoute-Provider-Manifest-Url` pieprasījuma galveni. Iestatiet
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, ja blakusprocesam lokālā pieprasījuma izcelsmes
 vietā ir nepieciešams publisks vai konteinera tīkla URL.
@@ -31,7 +31,7 @@ jāpieņem `304`.
 ## Mērķis
 
 Virzīt pakalpojumu sniedzēju metadatus uz spraudņa līgumu, lai pieprasījumu aktīvo
-ceļu ar laiku varētu pārvaldīt mazāka latentuma blakusprocess, kamēr OmniRoute
+ceļu ar laiku varētu pārvaldīt mazāka latentuma blakusprocess, kamēr 67router
 saglabā TypeScript maršrutu kā politiku piemērošanas vārteju un rezerves variantu.
 Manifests ir papildinošs: pats par sevi tas nemaina pieprasījumu maršrutēšanu.
 
@@ -75,7 +75,7 @@ nevis atkārtoti jālasa TypeScript pirmkods.
 | `usage-fetch`        | Ir piesaistīts lietojuma vai kvotas izgūšanas mehānisms (`getUsageForProvider`).    |
 | `usage-supported`    | Lietojuma API pieņem šo pakalpojumu sniedzēju (`isSupportedUsageConnection`).       |
 
-`usage-fetch` ir paredzēts tikai noteikšanai. Tas norāda, ka OmniRoute prot nolasīt
+`usage-fetch` ir paredzēts tikai noteikšanai. Tas norāda, ka 67router prot nolasīt
 pakalpojumu sniedzēja lietojumu; tas neaktivizē izgūšanu, nemaina kvotu semantiku un
 nenozīmē, ka informācijas paneļa kvotu logrīks šim pakalpojumu sniedzējam ir iespējots —
 šī logrīka pieejamību atsevišķi kontrolē `USAGE_SUPPORTED_PROVIDERS`. Patiesības avots ir

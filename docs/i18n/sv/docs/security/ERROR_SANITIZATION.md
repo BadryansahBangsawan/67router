@@ -215,7 +215,7 @@ Saneringsregler som tillämpas på `upstreamDetails`:
 3. Djupgräns: nästling bortom 4 nivåer ersätts med strängen `"[truncated]"`.
 4. Arrayer begränsas till 32 element.
 
-Endast anropsplatser med en parsad felsvarskropp från leverantören ska skicka `upstreamDetails`. Interna OmniRoute-fel
+Endast anropsplatser med en parsad felsvarskropp från leverantören ska skicka `upstreamDetails`. Interna 67router-fel
 (SSE-parsningsfel, tomt innehåll, blockeringar från skyddsmekanismer) får inte inkludera det.
 
 Skicka INTE råa `err.stack`, `err.message` eller någon sträng från ett körningsundantag till

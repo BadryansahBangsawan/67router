@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jinkludi saff ta’ gamifikazzjoni li jaħdem primarjament lokalment u li jippremja lill-utenti talli
+67router jinkludi saff ta’ gamifikazzjoni li jaħdem primarjament lokalment u li jippremja lill-utenti talli
 jinvolvu ruħhom mal-pjattaforma — billi jagħmlu talbiet, jaqilbu l-fornituri, joħolqu
 kombinazzjonijiet, jaqsmu tokens, u jikkontribwixxu għall-komunità. L-istat kollu jinsab
 f’SQLite; il-federazzjoni ma’ servers tal-komunità hija fakultattiva u bbażata fuq push.
@@ -36,7 +36,7 @@ tokens, premjijiet għall-istediniet).
 | Klassifiki           | Ambiti globali, ta’ kull ġimgħa, ta’ kull xahar, tal-qsim ta’ tokens, u tal-kontribuzzjonijiet           |
 | Qsim ta’ Tokens      | Ittrasferixxi krediti bejn l-utenti permezz ta’ reġistru b’entrata doppja                                |
 | Stieden u Ifdi       | Kodiċijiet ta’ riferiment b’ħażna bil-hash SHA-256                                                       |
-| Servers tal-Komunità | Oħloq federazzjoni ma’ istanzi esterni ta’ OmniRoute                                                     |
+| Servers tal-Komunità | Oħloq federazzjoni ma’ istanzi esterni ta’ 67router                                                      |
 | Kontra l-Qerq        | Punteġġ ikkalkulat mis-server, limitazzjoni tar-rata, identifikazzjoni ta’ anomaliji permezz ta’ z-score |
 
 ### Prinċipji tad-Disinn
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tabelli tad-Database
 
-It-tabelli kollha jinsabu fid-database SQLite prinċipali ta’ OmniRoute, maħluqa mill-migrazzjoni
+It-tabelli kollha jinsabu fid-database SQLite prinċipali ta’ 67router, maħluqa mill-migrazzjoni
 `060_create_gamification.sql`. Il-ġurnalar WAL jintiret mis-singleton
 `getDbInstance()` f’`src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ It-tabelli kollha jinsabu fid-database SQLite prinċipali ta’ OmniRoute, maħl
 
 ### Modulu tad-Dominju: `src/lib/db/gamification.ts`
 
-Isegwi l-mudell standard ta’ OmniRoute — jimporta `getDbInstance()` minn
+Isegwi l-mudell standard ta’ 67router — jimporta `getDbInstance()` minn
 `core.ts` u jesporta funzjonijiet CRUD bit-tipi definiti. Ma jintuża ebda SQL dirett fil-handlers tar-rotot.
 
 Funzjonijiet ewlenin:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Azzjoni           | XP  | Deskrizzjoni                                                                |
 | ----------------- | --- | --------------------------------------------------------------------------- |
-| `request`         | 1   | Għal kull talba tal-API mgħoddija minn OmniRoute                            |
+| `request`         | 1   | Għal kull talba tal-API mgħoddija minn 67router                             |
 | `provider_switch` | 5   | Qlib għal fornitur differenti                                               |
 | `model_switch`    | 3   | Qlib għal mudell differenti                                                 |
 | `combo_create`    | 10  | Ħolqien ta’ combo ġdida                                                     |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (uniku, indiċjat) |
 | `token_hash` | SHA-256(raw_token)           |
 
-It-token mhux ipproċessat jintbagħat lura lill-utent darba biss fil-ħin tal-ħolqien. OmniRoute
+It-token mhux ipproċessat jintbagħat lura lill-utent darba biss fil-ħin tal-ħolqien. 67router
 qatt ma jerġa’ jaħżnu jew jurih — jippersisti biss il-hash.
 
 ### Prevenzjoni tal-Awto-Riferiment
@@ -703,7 +703,7 @@ L-amministraturi jistgħu jikkonsultaw ir-rekord sħiħ tal-awditjar permezz ta�
 
 ## Rotot tal-API
 
-Ir-rotot kollha jsegwu l-mudell standard OmniRoute:
+Ir-rotot kollha jsegwu l-mudell standard 67router:
 
 ```
 Rotta → Talba preliminari CORS → Validazzjoni tal-korp (Zod) → Awtentikazzjoni (extractApiKey)

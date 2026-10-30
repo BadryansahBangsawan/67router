@@ -1,4 +1,4 @@
-# OmniRoute — Deployment Guide on VM with Cloudflare (Eesti)
+# 67router — Deployment Guide on VM with Cloudflare (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/VM_DEPLOYMENT_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/VM_DEPLOYMENT_GUIDE.md)
 
-Täielik juhend OmniRoute'i installimiseks ja konfigureerimiseks virtuaalmasinas (VPS), mille domeeni hallatakse Cloudflare'i kaudu.
+Täielik juhend 67router'i installimiseks ja konfigureerimiseks virtuaalmasinas (VPS), mille domeeni hallatakse Cloudflare'i kaudu.
 
 ---
 
@@ -84,7 +84,7 @@ ufw enable
 
 ---
 
-## 2. Installi OmniRoute
+## 2. Installi 67router
 
 ### 2.1 Loo konfiguratsiooni kataloog
 
@@ -194,7 +194,7 @@ server {
     return 444;
 }
 
-# OmniRoute — HTTPS
+# 67router — HTTPS
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
@@ -237,16 +237,16 @@ server {
 NGINX
 ```
 
-Hoidke pöördproksi voo ajalõpud vastavuses oma OmniRoute ajalõpu keskkonnamuutujatega. Kui tõstate
+Hoidke pöördproksi voo ajalõpud vastavuses oma 67router ajalõpu keskkonnamuutujatega. Kui tõstate
 `FETCH_TIMEOUT_MS` / `STREAM_IDLE_TIMEOUT_MS`, tõstke ka `proxy_read_timeout` / `proxy_send_timeout`
 samast lävest kõrgemale.
 
-OmniRoute kasutab `NEXT_PUBLIC_BASE_URL` kui kanoonilist brauseripoolset päritolu OAuth
+67router kasutab `NEXT_PUBLIC_BASE_URL` kui kanoonilist brauseripoolset päritolu OAuth
 tagasikutsete ja loodud avalike linkide jaoks. Autenditud juhtpaneeli kirjutused kasutavad sama päritolu päringuid
 pluss seansipõhist CSRF-kaitset, seega ei vaja need staatilist avalikku baas-URL-i. Ülaltoodud
 `X-Forwarded-*` päised on endiselt kasulikud marsruutimise metaandmed, kuid need ei asenda
 selgesõnalise avaliku URL-i seadmist, kui OAuth või loodud brauserilingid seda vajavad. Lubage
-`OMNIROUTE_TRUST_PROXY` ainult siis, kui OmniRoute ei ole klientidele otse kättesaadav ja teie proksi
+`OMNIROUTE_TRUST_PROXY` ainult siis, kui 67router ei ole klientidele otse kättesaadav ja teie proksi
 eemaldab/taastab sissetulevad edastatud päised.
 
 ### 3.3 Lubamine ja testimine
@@ -255,7 +255,7 @@ eemaldab/taastab sissetulevad edastatud päised.
 # Eemaldage vaikekonfiguratsioon
 rm -f /etc/nginx/sites-enabled/default
 
-# Lubage OmniRoute
+# Lubage 67router
 ln -sf /etc/nginx/sites-available/omniroute /etc/nginx/sites-enabled/omniroute
 
 # Testige ja laadige uuesti
@@ -417,7 +417,7 @@ Vaata lisaks ka [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) Cloudflare Tunnel'i juhen
 | 22    | SSH         | Avalik (koos fail2baniga)        |
 | 80    | nginx HTTP  | Suunamine → HTTPS                |
 | 443   | nginx HTTPS | Cloudflare Proxy kaudu           |
-| 20128 | OmniRoute   | Ainult localhost (nginx-i kaudu) |
+| 20128 | 67router    | Ainult localhost (nginx-i kaudu) |
 
 ## Väikese mäluga / väikese VPS-i optimeerimine
 
@@ -428,4 +428,4 @@ Väiksemates VPS-i instantsides (1 GB RAM-i või vähem) toimuvate deploy'i jaok
 - **Piira V8 heap'i** — sea `OMNIROUTE_MEMORY_MB` (nt. `512`), et jooksukeskkond ei kalibreeriks ülemist piiri suuremaks kui VM-i mälu. Vaata `docs/reference/ENVIRONMENT.md`.
 - **Raskete ülesannete lubamine skaleerub automaatselt heap'i piiriga** — kui `OMNIROUTE_MEMORY_MB` on seatud ülalmainitud väärtusele, siis sisendvoogude baitside piirang (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) arvutatakse automaatselt sellest samast ülemisest piirist, nii et mälu piiratud VM saab automaatselt väiksema samaaegsete päringute eelarve ilma lisaseadistuseta; liigsed päringud saadavad taaskäivitatava `503` vea koos `Retry-After` parameetriga, mitte ei võistle mälu pärast. Sea vana hea `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` päringute arvu piirang ainult siis, kui vajad sellele lisaks kõva ülemist piiri.
 - **Väldi `next build` käivitamist VPS-il** — kompileeri kohalikult ja deploy eraldiseisva väljundi (`.next/standalone/`).
-- **Jälgi `top` / `free -m` abil** — OmniRoute kasutab tüüpiliselt 200-400 MB RSS-i tühikäigul 1 GB suuruses VM-is.
+- **Jälgi `top` / `free -m` abil** — 67router kasutab tüüpiliselt 200-400 MB RSS-i tühikäigul 1 GB suuruses VM-is.

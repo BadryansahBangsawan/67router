@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: Uża l-kontijiet tiegħek stess ma’ fornituri eliġibbli. OmniRoute jgħaqqad il-konnessjonijiet li tikkonfigura; ma jipprovdix il-baġit aggregat ta’ tokens reklamat. L-aċċess bla ħlas jista’ jirrikjedi reġistrazzjoni, API key, approvazzjoni, jew metodu ta’ ħlas. Il-limiti, il-politiki tal-privatezza, u t-termini tal-fornituri jibqgħu japplikaw.
+> **Fil-qosor**: Uża l-kontijiet tiegħek stess ma’ fornituri eliġibbli. 67router jgħaqqad il-konnessjonijiet li tikkonfigura; ma jipprovdix il-baġit aggregat ta’ tokens reklamat. L-aċċess bla ħlas jista’ jirrikjedi reġistrazzjoni, API key, approvazzjoni, jew metodu ta’ ħlas. Il-limiti, il-politiki tal-privatezza, u t-termini tal-fornituri jibqgħu japplikaw.
 
 ---
 
@@ -15,7 +15,7 @@ jfisser endpoint mingħajr awtentikazzjoni, kwota rikorrenti, aċċess bla limit
 approvazzjoni manwali, jew promozzjoni temporanja. Xi għażliet jeħtieġu kont, API key,
 karta ta’ kreditu, KYC, jew aċċettazzjoni ta’ termini speċifiċi għall-fornitur.
 
-OmniRoute **jiġbor flimkien** il-konnessjonijiet ikkonfigurati f’endpoint wieħed. Xorta trid tirreġistra separatament ma’ kull fornitur li jeħtieġ kont. Qabbad dawk il-kontijiet u uża `model: "auto"` biex tidderieġi t-talbiet fost id-destinazzjonijiet eliġibbli. Installazzjoni ġdida tista’ ma jkollha ebda destinazzjoni eliġibbli li ma teħtieġx ċavetta; l-installazzjoni ta’ OmniRoute waħedha ma tiggarantix tweġiba ta’ chat b’suċċess.
+67router **jiġbor flimkien** il-konnessjonijiet ikkonfigurati f’endpoint wieħed. Xorta trid tirreġistra separatament ma’ kull fornitur li jeħtieġ kont. Qabbad dawk il-kontijiet u uża `model: "auto"` biex tidderieġi t-talbiet fost id-destinazzjonijiet eliġibbli. Installazzjoni ġdida tista’ ma jkollha ebda destinazzjoni eliġibbli li ma teħtieġx ċavetta; l-installazzjoni ta’ 67router waħedha ma tiggarantix tweġiba ta’ chat b’suċċess.
 
 ---
 
@@ -60,7 +60,7 @@ Dawn il-fornituri għandhom **livelli bla ħlas** b’limiti speċifiċi:
 
 ## Kif Tgħaqqad il-Livelli Bla Ħlas
 
-Il-vantaġġ ta’ OmniRoute huwa li **jgħaqqad diversi livelli bla ħlas**. Minflok tiddependi fuq fornitur wieħed, tqabbad diversi fornituri bla ħlas u tħalli lil OmniRoute jagħżel awtomatikament l-aħjar wieħed għal kull talba.
+Il-vantaġġ ta’ 67router huwa li **jgħaqqad diversi livelli bla ħlas**. Minflok tiddependi fuq fornitur wieħed, tqabbad diversi fornituri bla ħlas u tħalli lil 67router jagħżel awtomatikament l-aħjar wieħed għal kull talba.
 
 ### Eżempju: Kopertura Usa’ tal-Livelli Bla Ħlas
 
@@ -71,7 +71,7 @@ Qabbad diversi fornituri biex tnaqqas id-dipendenza fuq kwota waħda:
 3. **Pollinations** — aċċess mingħajr ċavetta, b’limitu fuq ir-rata
 4. **LongCat** — għotja ta’ darba mar-reġistrazzjoni (teħtieġ KYC)
 
-Imbagħad uża `model: "auto"` u OmniRoute:
+Imbagħad uża `model: "auto"` u 67router:
 
 - L-ewwel jipprova l-konnessjoni eliġibbli bl-ogħla klassifikazzjoni
 - Jekk il-kwota jew il-kontroll tas-saħħa tagħha jfallu → jipprova l-fornitur ikkonfigurat li jmiss
@@ -105,7 +105,7 @@ aċċess bla limitu/bla ċavetta, krediti mar-reġistrazzjoni, entrati li twaqqf
 
 ### Pass 5: Ikklikkja Connect
 
-Għal fornitur `NOAUTH`, OmniRoute ma jitlobx kredenzjali tas-servizz upstream. Dan ma jiggarantixxix li s-servizz upstream jaċċetta klijenti ta’ partijiet terzi jew li għandu kapaċità disponibbli. Fornituri OAuth u dawk b’API key għandhom jiġu kkonnettjati permezz tal-proċess dokumentat tal-kont tagħhom. Il-klijent tiegħek xorta juża l-API key ta’ OmniRoute murija f’**Dashboard → Endpoints** meta l-awtentikazzjoni tar-router tkun attivata.
+Għal fornitur `NOAUTH`, 67router ma jitlobx kredenzjali tas-servizz upstream. Dan ma jiggarantixxix li s-servizz upstream jaċċetta klijenti ta’ partijiet terzi jew li għandu kapaċità disponibbli. Fornituri OAuth u dawk b’API key għandhom jiġu kkonnettjati permezz tal-proċess dokumentat tal-kont tagħhom. Il-klijent tiegħek xorta juża l-API key ta’ 67router murija f’**Dashboard → Endpoints** meta l-awtentikazzjoni tar-router tkun attivata.
 
 ### Pass 6: Irrepeti
 
@@ -115,7 +115,7 @@ Ikkonnettja diversi fornituri li t-termini u l-mudell tal-privatezza tagħhom ja
 
 ## Kif Taqra l-Katalgu B'mod Korrett
 
-- `NOAUTH` tfisser li OmniRoute ma titolbokx kredenzjali ta' fornitur; ma
+- `NOAUTH` tfisser li 67router ma titolbokx kredenzjali ta' fornitur; ma
   tiggarantixxix disponibbiltà kontinwa, privatezza, jew kapaċità bla limitu.
 - `hasFree` hija metadata għall-iskoperta. Tista' tirrappreżenta kwota rikorrenti, aċċess mingħajr ċavetta,
   kreditu mar-reġistrazzjoni, programm ta' approvazzjoni, jew promozzjoni.
@@ -128,15 +128,15 @@ Ikkonnettja diversi fornituri li t-termini u l-mudell tal-privatezza tagħhom ja
 
 ---
 
-## Kif OmniRoute Jittejjeb il-Livelli Bla Ħlas
+## Kif 67router Jittejjeb il-Livelli Bla Ħlas
 
 ### 1. Alternattiva Awtomatika
 
-Jekk fornitur bla ħlas ikun okkupat jew mhux disponibbli, OmniRoute awtomatikament jipprova lil dak li jmiss. M’għandek bżonn tagħmel xejn.
+Jekk fornitur bla ħlas ikun okkupat jew mhux disponibbli, 67router awtomatikament jipprova lil dak li jmiss. M’għandek bżonn tagħmel xejn.
 
 ### 2. Rotot Intelliġenti
 
-OmniRoute jagħżel l-**aħjar fornitur bla ħlas** għal kull talba abbażi ta’:
+67router jagħżel l-**aħjar fornitur bla ħlas** għal kull talba abbażi ta’:
 
 - Veloċità — Liema fornitur huwa l-aktar veloċi bħalissa?
 - Kwalità — Liema fornitur huwa l-aħjar għal dan il-kompitu?
@@ -144,13 +144,13 @@ OmniRoute jagħżel l-**aħjar fornitur bla ħlas** għal kull talba abbażi ta�
 
 ### 3. Iffrankar tat-Tokens
 
-Il-pipeline tal-kompressjoni ta’ OmniRoute jista’ jnaqqas it-tokens eliġibbli tal-prompt u tal-output tal-għodod. L-
+Il-pipeline tal-kompressjoni ta’ 67router jista’ jnaqqas it-tokens eliġibbli tal-prompt u tal-output tal-għodod. L-
 iffrankar effettiv jiddependi mill-kontenut, mill-engines magħżula, mill-kontabbiltà tal-fornitur, u mis-settings
 tal-fedeltà; il-kompressjoni ma timmultiplikax kull kwota tal-fornitur b’ammont fiss.
 
 ### 4. Appoġġ għal Diversi Kontijiet
 
-Jekk it-termini tal-fornitur jippermettu diversi kontijiet jew kredenzjali, OmniRoute jista’ jittratta kull
+Jekk it-termini tal-fornitur jippermettu diversi kontijiet jew kredenzjali, 67router jista’ jittratta kull
 konnessjoni bħala kandidat separat għar-rotot. Toħloqx kontijiet addizzjonali biex tevita
 l-kwota jew il-politika tal-aċċess ta’ fornitur.
 
@@ -165,7 +165,7 @@ Il-katalgu attiv, bid-duplikati tal-pools eliminati, bħalissa jirrapporta:
 | Għotja rikorrenti kkwantifikata             | **~1.62B tokens/xahar** | Il-pools kondiviżi jingħaddu darba; il-fornituri mingħajr limitu huma esklużi mis-somma |
 | L-ewwel xahar b’għotjiet ta’ reġistrazzjoni |       **~2.22B tokens** | It-total rikorrenti flimkien ma’ krediti ta’ darba u rikorrenti                         |
 
-Dawn huma stimi għall-katalgu kollu mifruxa fuq kontijiet eliġibbli separati, mhux kwota pprovduta minn OmniRoute jew tbassir għal installazzjoni ġdida. Il-kapaċità li tista’ tuża tiddependi mill-fornituri li tqabbad u mill-kundizzjonijiet attwali tagħhom. Il-valuri jiġu kkalkolati minn `open-sse/config/freeModelCatalog.ts`; ara r-
+Dawn huma stimi għall-katalgu kollu mifruxa fuq kontijiet eliġibbli separati, mhux kwota pprovduta minn 67router jew tbassir għal installazzjoni ġdida. Il-kapaċità li tista’ tuża tiddependi mill-fornituri li tqabbad u mill-kundizzjonijiet attwali tagħhom. Il-valuri jiġu kkalkolati minn `open-sse/config/freeModelCatalog.ts`; ara r-
 [Referenza tal-Livelli Bla Ħlas](../reference/FREE_TIERS.md) għad-deduplikazzjoni tal-pools, il-markaturi tat-ToS,
 l-entrati li twaqqfu, u l-metodoloġija tal-krediti ta’ reġistrazzjoni.
 
@@ -192,7 +192,7 @@ tal-produzzjoni tiegħek. Il-volumi tax-xogħol kritiċi għandu jkollhom altern
 
 Il-kompromessi jistgħu jinkludu limiti stretti, listi ta’ stennija, KYC, verifika b’karta ta’ kreditu, taħriġ fuq
 il-prompts, privatezza aktar dgħajfa, nuqqas ta’ SLA, tibdil frekwenti fil-mudelli, restrizzjonijiet ġeografiċi, użu żejjed bi ħlas jew
-riskju marbut mal-politika tal-kont. OmniRoute juri l-metadata disponibbli; int tagħżel x’tattiva.
+riskju marbut mal-politika tal-kont. 67router juri l-metadata disponibbli; int tagħżel x’tattiva.
 
 ### "Kif nista’ nikseb aktar kwota bla ħlas?"
 
@@ -211,7 +211,7 @@ paġna tal-Klassifikazzjonijiet tal-Fornituri Bla Ħlas bħala indikatur tal-kwa
 
 ## X'Imiss?
 
-- **[Gwida għall-Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ħalli lil OmniRoute jagħżel l-aħjar AI għalik
+- **[Gwida għall-Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ħalli lil 67router jagħżel l-aħjar AI għalik
 - **[Gwida għall-Fornituri](./PROVIDERS-GUIDE.md)** — Qabbad aktar fornituri
 - **[Soluzzjoni tal-Problemi](../guides/TROUBLESHOOTING.md)** — Irranġa problemi komuni
 - **[Referenza għal-Livelli Bla Ħlas](../reference/FREE_TIERS.md)** — Lista sħiħa tal-livelli bla ħlas

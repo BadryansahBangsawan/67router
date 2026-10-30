@@ -6,7 +6,7 @@
 
 ## အကျဉ်းချုပ်
 
-OmniRoute CLI command များသည် `x-omniroute-cli-token` request header မှတစ်ဆင့် ပေးပို့သော
+67router CLI command များသည် `x-omniroute-cli-token` request header မှတစ်ဆင့် ပေးပို့သော
 `HMAC-SHA256(machine-id, salt)` token ကို အသုံးပြုပြီး local management API တွင်
 စစ်မှန်ကြောင်းအတည်ပြုသည်။
 

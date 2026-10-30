@@ -1,4 +1,4 @@
-# OmniRoute — Uninstall Guide (ខ្មែរ)
+# 67router — Uninstall Guide (ខ្មែរ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/UNINSTALL.md) · 🇪🇹 [am](../../../am/docs/guides/UNINSTALL.md) · 🇸🇦 [ar](../../../ar/docs/guides/UNINSTALL.md) · 🇦🇿 [az](../../../az/docs/guides/UNINSTALL.md) · 🇧🇬 [bg](../../../bg/docs/guides/UNINSTALL.md) · 🇧🇩 [bn](../../../bn/docs/guides/UNINSTALL.md) · 🇧🇦 [bs](../../../bs/docs/guides/UNINSTALL.md) · 🇨🇿 [cs](../../../cs/docs/guides/UNINSTALL.md) · 🇩🇰 [da](../../../da/docs/guides/UNINSTALL.md) · 🇩🇪 [de](../../../de/docs/guides/UNINSTALL.md) · 🇬🇷 [el](../../../el/docs/guides/UNINSTALL.md) · 🇪🇸 [es](../../../es/docs/guides/UNINSTALL.md) · 🇪🇪 [et](../../../et/docs/guides/UNINSTALL.md) · 🇮🇷 [fa](../../../fa/docs/guides/UNINSTALL.md) · 🇫🇮 [fi](../../../fi/docs/guides/UNINSTALL.md) · 🇫🇷 [fr](../../../fr/docs/guides/UNINSTALL.md) · 🇮🇪 [ga](../../../ga/docs/guides/UNINSTALL.md) · 🇮🇳 [gu](../../../gu/docs/guides/UNINSTALL.md) · 🇳🇬 [ha](../../../ha/docs/guides/UNINSTALL.md) · 🇮🇱 [he](../../../he/docs/guides/UNINSTALL.md) · 🇮🇳 [hi](../../../hi/docs/guides/UNINSTALL.md) · 🇭🇷 [hr](../../../hr/docs/guides/UNINSTALL.md) · 🇭🇺 [hu](../../../hu/docs/guides/UNINSTALL.md) · 🇦🇲 [hy](../../../hy/docs/guides/UNINSTALL.md) · 🇮🇩 [id](../../../id/docs/guides/UNINSTALL.md) · 🇳🇬 [ig](../../../ig/docs/guides/UNINSTALL.md) · 🇮🇹 [it](../../../it/docs/guides/UNINSTALL.md) · 🇯🇵 [ja](../../../ja/docs/guides/UNINSTALL.md) · 🇬🇪 [ka](../../../ka/docs/guides/UNINSTALL.md) · 🇮🇳 [kn](../../../kn/docs/guides/UNINSTALL.md) · 🇰🇷 [ko](../../../ko/docs/guides/UNINSTALL.md) · 🇱🇹 [lt](../../../lt/docs/guides/UNINSTALL.md) · 🇱🇻 [lv](../../../lv/docs/guides/UNINSTALL.md) · 🇮🇳 [ml](../../../ml/docs/guides/UNINSTALL.md) · 🇮🇳 [mr](../../../mr/docs/guides/UNINSTALL.md) · 🇲🇾 [ms](../../../ms/docs/guides/UNINSTALL.md) · 🇲🇹 [mt](../../../mt/docs/guides/UNINSTALL.md) · 🇲🇲 [my](../../../my/docs/guides/UNINSTALL.md) · 🇳🇵 [ne](../../../ne/docs/guides/UNINSTALL.md) · 🇳🇱 [nl](../../../nl/docs/guides/UNINSTALL.md) · 🇳🇴 [no](../../../no/docs/guides/UNINSTALL.md) · 🇮🇳 [or](../../../or/docs/guides/UNINSTALL.md) · 🇮🇳 [pa](../../../pa/docs/guides/UNINSTALL.md) · 🇵🇭 [phi](../../../phi/docs/guides/UNINSTALL.md) · 🇵🇱 [pl](../../../pl/docs/guides/UNINSTALL.md) · 🇵🇹 [pt](../../../pt/docs/guides/UNINSTALL.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/UNINSTALL.md) · 🇷🇴 [ro](../../../ro/docs/guides/UNINSTALL.md) · 🇷🇺 [ru](../../../ru/docs/guides/UNINSTALL.md) · 🇱🇰 [si](../../../si/docs/guides/UNINSTALL.md) · 🇸🇰 [sk](../../../sk/docs/guides/UNINSTALL.md) · 🇸🇮 [sl](../../../sl/docs/guides/UNINSTALL.md) · 🇷🇸 [sr](../../../sr/docs/guides/UNINSTALL.md) · 🇸🇪 [sv](../../../sv/docs/guides/UNINSTALL.md) · 🇰🇪 [sw](../../../sw/docs/guides/UNINSTALL.md) · 🇮🇳 [ta](../../../ta/docs/guides/UNINSTALL.md) · 🇮🇳 [te](../../../te/docs/guides/UNINSTALL.md) · 🇹🇭 [th](../../../th/docs/guides/UNINSTALL.md) · 🇹🇷 [tr](../../../tr/docs/guides/UNINSTALL.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/UNINSTALL.md) · 🇵🇰 [ur](../../../ur/docs/guides/UNINSTALL.md) · 🇺🇿 [uz](../../../uz/docs/guides/UNINSTALL.md) · 🇻🇳 [vi](../../../vi/docs/guides/UNINSTALL.md) · 🇳🇬 [yo](../../../yo/docs/guides/UNINSTALL.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/UNINSTALL.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/UNINSTALL.md)
 
@@ -6,13 +6,13 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/UNINSTALL.md) · 🇪🇹 [am](../../../am/docs/guides/UNINSTALL.md) · 🇸🇦 [ar](../../../ar/docs/guides/UNINSTALL.md) · 🇦🇿 [az](../../../az/docs/guides/UNINSTALL.md) · 🇧🇬 [bg](../../../bg/docs/guides/UNINSTALL.md) · 🇧🇩 [bn](../../../bn/docs/guides/UNINSTALL.md) · 🇧🇦 [bs](../../../bs/docs/guides/UNINSTALL.md) · 🇨🇿 [cs](../../../cs/docs/guides/UNINSTALL.md) · 🇩🇰 [da](../../../da/docs/guides/UNINSTALL.md) · 🇩🇪 [de](../../../de/docs/guides/UNINSTALL.md) · 🇬🇷 [el](../../../el/docs/guides/UNINSTALL.md) · 🇪🇸 [es](../../../es/docs/guides/UNINSTALL.md) · 🇪🇪 [et](../../../et/docs/guides/UNINSTALL.md) · 🇮🇷 [fa](../../../fa/docs/guides/UNINSTALL.md) · 🇫🇮 [fi](../../../fi/docs/guides/UNINSTALL.md) · 🇫🇷 [fr](../../../fr/docs/guides/UNINSTALL.md) · 🇮🇪 [ga](../../../ga/docs/guides/UNINSTALL.md) · 🇮🇳 [gu](../../../gu/docs/guides/UNINSTALL.md) · 🇳🇬 [ha](../../../ha/docs/guides/UNINSTALL.md) · 🇮🇱 [he](../../../he/docs/guides/UNINSTALL.md) · 🇮🇳 [hi](../../../hi/docs/guides/UNINSTALL.md) · 🇭🇷 [hr](../../../hr/docs/guides/UNINSTALL.md) · 🇭🇺 [hu](../../../hu/docs/guides/UNINSTALL.md) · 🇦🇲 [hy](../../../hy/docs/guides/UNINSTALL.md) · 🇮🇩 [id](../../../id/docs/guides/UNINSTALL.md) · 🇳🇬 [ig](../../../ig/docs/guides/UNINSTALL.md) · 🇮🇹 [it](../../../it/docs/guides/UNINSTALL.md) · 🇯🇵 [ja](../../../ja/docs/guides/UNINSTALL.md) · 🇬🇪 [ka](../../../ka/docs/guides/UNINSTALL.md) · 🇮🇳 [kn](../../../kn/docs/guides/UNINSTALL.md) · 🇰🇷 [ko](../../../ko/docs/guides/UNINSTALL.md) · 🇱🇹 [lt](../../../lt/docs/guides/UNINSTALL.md) · 🇱🇻 [lv](../../../lv/docs/guides/UNINSTALL.md) · 🇮🇳 [ml](../../../ml/docs/guides/UNINSTALL.md) · 🇮🇳 [mr](../../../mr/docs/guides/UNINSTALL.md) · 🇲🇾 [ms](../../../ms/docs/guides/UNINSTALL.md) · 🇲🇹 [mt](../../../mt/docs/guides/UNINSTALL.md) · 🇲🇲 [my](../../../my/docs/guides/UNINSTALL.md) · 🇳🇵 [ne](../../../ne/docs/guides/UNINSTALL.md) · 🇳🇱 [nl](../../../nl/docs/guides/UNINSTALL.md) · 🇳🇴 [no](../../../no/docs/guides/UNINSTALL.md) · 🇮🇳 [or](../../../or/docs/guides/UNINSTALL.md) · 🇮🇳 [pa](../../../pa/docs/guides/UNINSTALL.md) · 🇵🇭 [phi](../../../phi/docs/guides/UNINSTALL.md) · 🇵🇱 [pl](../../../pl/docs/guides/UNINSTALL.md) · 🇵🇹 [pt](../../../pt/docs/guides/UNINSTALL.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/UNINSTALL.md) · 🇷🇴 [ro](../../../ro/docs/guides/UNINSTALL.md) · 🇷🇺 [ru](../../../ru/docs/guides/UNINSTALL.md) · 🇱🇰 [si](../../../si/docs/guides/UNINSTALL.md) · 🇸🇰 [sk](../../../sk/docs/guides/UNINSTALL.md) · 🇸🇮 [sl](../../../sl/docs/guides/UNINSTALL.md) · 🇷🇸 [sr](../../../sr/docs/guides/UNINSTALL.md) · 🇸🇪 [sv](../../../sv/docs/guides/UNINSTALL.md) · 🇰🇪 [sw](../../../sw/docs/guides/UNINSTALL.md) · 🇮🇳 [ta](../../../ta/docs/guides/UNINSTALL.md) · 🇮🇳 [te](../../../te/docs/guides/UNINSTALL.md) · 🇹🇭 [th](../../../th/docs/guides/UNINSTALL.md) · 🇹🇷 [tr](../../../tr/docs/guides/UNINSTALL.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/UNINSTALL.md) · 🇵🇰 [ur](../../../ur/docs/guides/UNINSTALL.md) · 🇺🇿 [uz](../../../uz/docs/guides/UNINSTALL.md) · 🇻🇳 [vi](../../../vi/docs/guides/UNINSTALL.md) · 🇳🇬 [yo](../../../yo/docs/guides/UNINSTALL.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/UNINSTALL.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/UNINSTALL.md)
 
-មគ្គុទ្ទេសក៍នេះរៀបរាប់អំពីវិធីលុប OmniRoute ចេញពីប្រព័ន្ធរបស់អ្នកឱ្យបានស្អាត។
+មគ្គុទ្ទេសក៍នេះរៀបរាប់អំពីវិធីលុប 67router ចេញពីប្រព័ន្ធរបស់អ្នកឱ្យបានស្អាត។
 
 ---
 
 ## ការលុបការដំឡើងរហ័ស (v3.6.2+)
 
-OmniRoute ផ្តល់ស្គ្រីបភ្ជាប់មកជាមួយចំនួនពីរសម្រាប់ការលុបចេញដោយស្អាត៖
+67router ផ្តល់ស្គ្រីបភ្ជាប់មកជាមួយចំនួនពីរសម្រាប់ការលុបចេញដោយស្អាត៖
 
 ### រក្សាទិន្នន័យរបស់អ្នក
 
@@ -20,7 +20,7 @@ OmniRoute ផ្តល់ស្គ្រីបភ្ជាប់មកជាម�
 npm run uninstall
 ```
 
-វាលុបកម្មវិធី OmniRoute ប៉ុន្តែ **រក្សាទុក** មូលដ្ឋានទិន្នន័យ ការកំណត់រចនាសម្ព័ន្ធ API keys និងការកំណត់របស់អ្នកផ្តល់សេវា នៅក្នុង `~/.omniroute/`។ ប្រើជម្រើសនេះ ប្រសិនបើអ្នកមានគម្រោងដំឡើងឡើងវិញនៅពេលក្រោយ និងចង់រក្សាការរៀបចំរបស់អ្នក។
+វាលុបកម្មវិធី 67router ប៉ុន្តែ **រក្សាទុក** មូលដ្ឋានទិន្នន័យ ការកំណត់រចនាសម្ព័ន្ធ API keys និងការកំណត់របស់អ្នកផ្តល់សេវា នៅក្នុង `~/.omniroute/`។ ប្រើជម្រើសនេះ ប្រសិនបើអ្នកមានគម្រោងដំឡើងឡើងវិញនៅពេលក្រោយ និងចង់រក្សាការរៀបចំរបស់អ្នក។
 
 ### ការលុបចេញទាំងស្រុង
 
@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows៖**
 
-- បើក `Settings → Apps → OmniRoute → Uninstall`
+- បើក `Settings → Apps → 67router → Uninstall`
 - ឬដំណើរការកម្មវិធីលុបការដំឡើង NSIS ពីថតដំឡើង
 
 **macOS៖**
@@ -114,7 +114,7 @@ rm -rf ~/.omniroute
 
 ## ថតទិន្នន័យ
 
-តាមលំនាំដើម OmniRoute រក្សាទុកទិន្នន័យនៅទីតាំងខាងក្រោម៖
+តាមលំនាំដើម 67router រក្សាទុកទិន្នន័យនៅទីតាំងខាងក្រោម៖
 
 | វេទិកា        | ផ្លូវលំនាំដើម                      | ការកំណត់ជំនួស                  |
 | ------------- | ---------------------------------- | ------------------------------ |

@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuerlig, inkrementell export av OmniRoute-anropsloggar till ett externt analyslager.
+Kontinuerlig, inkrementell export av 67router-anropsloggar till ett externt analyslager.
 
 Fliken Logs i instrumentpanelen lagrar förfrågningshistorik i SQLite (`call_logs`), vars storlek begränsas genom
 rotation och kvarhållning. Loggexport skickar regelbundet ut samma postuppsättning så att den kan leva längre än

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nodala **CLI noteikšanu**, **vietējo Agent Client Protocol** un
+67router nodala **CLI noteikšanu**, **vietējo Agent Client Protocol** un
 **mantotos stdio adapterus**. Instalēta binārā faila atrašana neapliecina tā
 autentifikāciju, modeļa saderību vai gatavību apstrādāt uzvedni.
 

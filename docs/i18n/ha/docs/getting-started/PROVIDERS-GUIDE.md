@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Hausa)
+# Providers Guide: Connect AI Models to 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **A Taƙaice**: Mai samarwa haɗi ne zuwa sabis na AI (kamar OpenAI, Anthropic, Google). Kana buƙatar aƙalla mai samarwa guda ɗaya don amfani da OmniRoute.
+> **A Taƙaice**: Mai samarwa haɗi ne zuwa sabis na AI (kamar OpenAI, Anthropic, Google). Kana buƙatar aƙalla mai samarwa guda ɗaya don amfani da 67router.
 
 ---
 
 ## Mene Ne Mai Bayar da Sabis?
 
-Ka ɗauki mai bayar da sabis kamar **kamfanin sadarwar waya**. Kamar yadda kake buƙatar kamfanin sadarwar waya don yin kira, kana buƙatar mai bayar da sabis na AI don amfani da samfuran AI. OmniRoute kamar waya ce da ke aiki da **dukkan kamfanonin sadarwa** — za ka iya sauyawa tsakaninsu ta atomatik.
+Ka ɗauki mai bayar da sabis kamar **kamfanin sadarwar waya**. Kamar yadda kake buƙatar kamfanin sadarwar waya don yin kira, kana buƙatar mai bayar da sabis na AI don amfani da samfuran AI. 67router kamar waya ce da ke aiki da **dukkan kamfanonin sadarwa** — za ka iya sauyawa tsakaninsu ta atomatik.
 
 ### Nau'ikan Masu Bayar da Sabis
 
@@ -30,7 +30,7 @@ Duba **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** don umarnin saitawa na gab
 
 ### Saitin mai ba da sabis kyauta na farkon amfani, idan ana so
 
-Jagoran farkon amfani yana bayar da katin **Saita masu ba da sabis kyauta** a sarari. Yana samo jerin waɗanda suka cancanta a halin yanzu daga rajistar masu ba da sabis marasa buƙatar tantancewa ta OmniRoute, sannan ya ba ka damar dubawa da cire zaɓin kowane mai ba da sabis kafin tabbatarwa. OmniRoute yana nuna sanarwar taka-tsantsan ta mai ba da sabis da kuma mahaɗi zuwa shafinsa domin ka fara duba sharuɗɗan ɓangare na uku, keɓantawa, samuwa, da iyakokin yawan buƙatu.
+Jagoran farkon amfani yana bayar da katin **Saita masu ba da sabis kyauta** a sarari. Yana samo jerin waɗanda suka cancanta a halin yanzu daga rajistar masu ba da sabis marasa buƙatar tantancewa ta 67router, sannan ya ba ka damar dubawa da cire zaɓin kowane mai ba da sabis kafin tabbatarwa. 67router yana nuna sanarwar taka-tsantsan ta mai ba da sabis da kuma mahaɗi zuwa shafinsa domin ka fara duba sharuɗɗan ɓangare na uku, keɓantawa, samuwa, da iyakokin yawan buƙatu.
 
 Wannan matakin na zaɓi ne: kammala jagoran ba ya taɓa ƙirƙirar haɗin masu ba da sabis kyauta a ɓoye. Yana ƙirƙirar masu ba da sabis waɗanda har yanzu babu su kawai, yana barin haɗin da aka riga aka keɓance ba tare da taɓa su ba, kuma yana bayar da rahoton waɗanda aka ƙirƙira, waɗanda aka riga aka saita, da waɗanda suka gaza ɗaya bayan ɗaya. Bayan samun sakamako na wani ɓangare, za ka iya sake gwada waɗanda suka gaza kawai cikin aminci.
 
@@ -74,7 +74,7 @@ Wannan matakin na zaɓi ne: kammala jagoran ba ya taɓa ƙirƙirar haɗin masu b
 
 ### Zaɓi D: Samfuran MLX na Cikin Gida (Apple Silicon)
 
-Ga kwamfutocin Mac masu Apple Silicon da ƙwaƙwalwar haɗaka, OmniRoute yana goyon bayan haɗawa da samfuran MLX na cikin gida da ke gudana ta `mlx-lm.server` a matsayin masu ba da sabis na cikin gida masu dacewa da OpenAI.
+Ga kwamfutocin Mac masu Apple Silicon da ƙwaƙwalwar haɗaka, 67router yana goyon bayan haɗawa da samfuran MLX na cikin gida da ke gudana ta `mlx-lm.server` a matsayin masu ba da sabis na cikin gida masu dacewa da OpenAI.
 
 #### Abubuwan da Ake Buƙata Tun Farko
 
@@ -104,14 +104,14 @@ Ga kwamfutocin Mac masu Apple Silicon da ƙwaƙwalwar haɗaka, OmniRoute yana go
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Haɗa a Allon Sarrafawa na OmniRoute**:
+3. **Haɗa a Allon Sarrafawa na 67router**:
    - Je zuwa **Masu Ba da Sabis** → **Ƙara Mai Ba da Sabis**
    - Zaɓi **MLX Gemma 26B** ko **MLX Qwen 3.8 27B**
    - Danna **Haɗa** (ba a buƙatar maɓallin API)
 
 4. **Yi amfani da OpenCode**:
    ```bash
-   # Saita OpenCode don amfani da OmniRoute
+   # Saita OpenCode don amfani da 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@ Dole ne ka sarrafa wannan da hannu:
 - Gudanar da su biyun a na'urori daban-daban, ko
 - Dakatar da ɗaya kafin kaddamar da ɗayan
 
-OmniRoute ba ya sarrafa hanyoyin aikin sabar MLX ta atomatik — yana tura buƙatu ne kawai zuwa maƙuraran da suka dace da OpenAI waɗanda ka saita.
+67router ba ya sarrafa hanyoyin aikin sabar MLX ta atomatik — yana tura buƙatu ne kawai zuwa maƙuraran da suka dace da OpenAI waɗanda ka saita.
 
 #### Goyon Bayan Kiran Kayan Aiki
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Ƙwaƙwalwa ta ƙare        | Tabbatar samfur guda ɗaya ne kawai ke gudana; rufe sauran manhajoji; duba Activity Monitor            |
 | An ƙi haɗi               | Tabbatar sabar tana gudana a tashar da ta dace (11435/11436)                                          |
 | Amsoshi suna jinkiri     | Buƙata ta farko tana loda samfurin cikin ƙwaƙwalwa (~30-60s); buƙatun da suka biyo baya suna da sauri |
-| Kiran kayan aiki ya gaza | Tabbatar samfurin yana goyon bayan kayan aiki; duba log na OmniRoute don kurakuran fassara            |
+| Kiran kayan aiki ya gaza | Tabbatar samfurin yana goyon bayan kayan aiki; duba log na 67router don kurakuran fassara             |
 
 ---
 
@@ -230,12 +230,12 @@ Yanzu an haɗa mai bayar da sabis ɗinka. Za ka iya amfani da shi tare da `model
 
 ## Amfani da Masu Bayarwa da Yawa
 
-OmniRoute yana aiki mafi kyau tare da **masu bayarwa da yawa**. Wannan yana ba ka:
+67router yana aiki mafi kyau tare da **masu bayarwa da yawa**. Wannan yana ba ka:
 
-- **Sauyawa ta atomatik** — Idan mai bayarwa ɗaya ya gaza, OmniRoute zai gwada na gaba
-- **Inganta farashi** — OmniRoute yana zaɓar mai bayarwa mafi arha ga kowace buƙata
-- **Inganta sauri** — OmniRoute yana zaɓar mai bayarwa mafi sauri ga kowace buƙata
-- **Inganta inganci** — OmniRoute yana zaɓar mai bayarwa mafi kyau ga kowane aiki
+- **Sauyawa ta atomatik** — Idan mai bayarwa ɗaya ya gaza, 67router zai gwada na gaba
+- **Inganta farashi** — 67router yana zaɓar mai bayarwa mafi arha ga kowace buƙata
+- **Inganta sauri** — 67router yana zaɓar mai bayarwa mafi sauri ga kowace buƙata
+- **Inganta inganci** — 67router yana zaɓar mai bayarwa mafi kyau ga kowane aiki
 
 ### Saitin da Aka Ba da Shawara
 
@@ -245,7 +245,7 @@ Haɗa aƙalla **masu bayarwa 3** don samun ƙwarewa mafi kyau:
 2. **Mai bayarwa mai sauri guda ɗaya** (Groq, Cerebras) — Don amsoshi cikin sauri
 3. **Mai bayarwa mai inganci guda ɗaya** (OpenAI, Anthropic, Google) — Don ayyuka masu sarƙaƙiya
 
-Sannan yi amfani da `model: "auto"` kuma OmniRoute zai zaɓi mafi dacewa ta atomatik ga kowace buƙata.
+Sannan yi amfani da `model: "auto"` kuma 67router zai zaɓi mafi dacewa ta atomatik ga kowace buƙata.
 
 ---
 
@@ -254,25 +254,25 @@ Sannan yi amfani da `model: "auto"` kuma OmniRoute zai zaɓi mafi dacewa ta atom
 ### OpenAI
 
 1. Sami maɓallin API: https://platform.openai.com/api-keys
-2. A cikin OmniRoute: Masu Bayarwa → Ƙara Mai Bayarwa → OpenAI
+2. A cikin 67router: Masu Bayarwa → Ƙara Mai Bayarwa → OpenAI
 3. Liƙa maɓallin API → Haɗa
 
 ### Anthropic
 
 1. Sami maɓallin API: https://console.anthropic.com/
-2. A cikin OmniRoute: Masu Bayarwa → Ƙara Mai Bayarwa → Anthropic
+2. A cikin 67router: Masu Bayarwa → Ƙara Mai Bayarwa → Anthropic
 3. Liƙa maɓallin API → Haɗa
 
 ### Google (Gemini)
 
 1. Sami maɓallin API: https://aistudio.google.com/apikey
-2. A cikin OmniRoute: Masu Bayarwa → Ƙara Mai Bayarwa → Gemini
+2. A cikin 67router: Masu Bayarwa → Ƙara Mai Bayarwa → Gemini
 3. Liƙa maɓallin API → Haɗa
 
 ### DeepSeek
 
 1. Sami maɓallin API: https://platform.deepseek.com/
-2. A cikin OmniRoute: Masu Bayarwa → Ƙara Mai Bayarwa → DeepSeek
+2. A cikin 67router: Masu Bayarwa → Ƙara Mai Bayarwa → DeepSeek
 3. Liƙa maɓallin API → Haɗa
 
 ### Qoder: zaɓi hanyar jigilar bayanan shaida
@@ -280,12 +280,12 @@ Sannan yi amfani da `model: "auto"` kuma OmniRoute zai zaɓi mafi dacewa ta atom
 Qoder yana buƙatar bayanan shaida. Hanyoyinsa biyu na jigilar bayanan suna da iyawa daban-daban; sunan samfuri
 kawai ba ya bayyana abin da wata haɗi ta musamman za ta iya yi.
 
-| Bayanan shaida                                    | Hanyar jigilar OmniRoute                              | Kiran kayan aiki na mai kira                                   | Watsawa kai tsaye                                                            |
-| ------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| PAT da ya fara da `pt-`                           | Tsarin `qodercli` na gida a kan uwar-garken OmniRoute | Ba ya goyon baya                                               | Ana tara shi: ana fitar da SSE ne kawai bayan CLI ya dawo da cikakkiyar amsa |
-| Alamar samun dama wadda ba PAT ba ko maɓallin API | Mashigar HTTP mai dacewa da OpenAI ta DashScope       | Ana miƙa shi kai tsaye, bisa sharadin samfuri/maɓallin na sama | Hanyar HTTP/SSE ta sama                                                      |
+| Bayanan shaida                                    | Hanyar jigilar 67router                              | Kiran kayan aiki na mai kira                                   | Watsawa kai tsaye                                                            |
+| ------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| PAT da ya fara da `pt-`                           | Tsarin `qodercli` na gida a kan uwar-garken 67router | Ba ya goyon baya                                               | Ana tara shi: ana fitar da SSE ne kawai bayan CLI ya dawo da cikakkiyar amsa |
+| Alamar samun dama wadda ba PAT ba ko maɓallin API | Mashigar HTTP mai dacewa da OpenAI ta DashScope      | Ana miƙa shi kai tsaye, bisa sharadin samfuri/maɓallin na sama | Hanyar HTTP/SSE ta sama                                                      |
 
-Don PAT, girka Qoder CLI a kan uwar-garke ko kwantena ɗaya da OmniRoute. Dole ne a iya gano fayil ɗin aiwatarwa
+Don PAT, girka Qoder CLI a kan uwar-garke ko kwantena ɗaya da 67router. Dole ne a iya gano fayil ɗin aiwatarwa
 a matsayin `qodercli`, ko a saita `CLI_QODER_BIN` zuwa hanyar fayil ɗin aiwatarwarsa. CLI da aka
 girka a kan uwar-garken Docker kawai ba ya kasancewa kai tsaye a cikin kwantenar. Rashin
 fayilolin aiwatarwa yana haifar da bayyanannen kuskure da ke jagorantar ka zuwa girkawa ko saitin hanya.
@@ -318,16 +318,16 @@ da iyakar lokaci mai daidaituwa ƙarin ingantawa ne daban; wannan halayyar ba ta
 ### Groq
 
 1. Sami maɓallin API: https://console.groq.com/
-2. A cikin OmniRoute: Masu Bayarwa → Ƙara Mai Bayarwa → Groq
+2. A cikin 67router: Masu Bayarwa → Ƙara Mai Bayarwa → Groq
 3. Liƙa maɓallin API → Haɗa
 
 ---
 
 ## Tambayoyin da Aka Fi Yi
 
-### "Shin sai na biya kafin in yi amfani da OmniRoute?"
+### "Shin sai na biya kafin in yi amfani da 67router?"
 
-**A'a!** OmniRoute kyauta ne kuma tushen sa a buɗe yake. Za ka iya amfani da masu samar da sabis na kyauta (Kiro, Pollinations) ba tare da biyan komai ba. Za ka biya ne kawai idan ka zaɓi yin amfani da masu samar da sabis na biya.
+**A'a!** 67router kyauta ne kuma tushen sa a buɗe yake. Za ka iya amfani da masu samar da sabis na kyauta (Kiro, Pollinations) ba tare da biyan komai ba. Za ka biya ne kawai idan ka zaɓi yin amfani da masu samar da sabis na biya.
 
 ### "Wane mai samar da sabis ya kamata in fara da shi?"
 
@@ -335,11 +335,11 @@ Fara da **Kiro AI** — kyauta ne, ba ya buƙatar API key, kuma yana ba ka damar
 
 ### "Zan iya amfani da masu samar da sabis da yawa a lokaci guda?"
 
-**Eh!** Wannan shi ne ainihin manufar OmniRoute. Haɗa masu samar da sabis da yawa sannan ka yi amfani da `model: "auto"` domin OmniRoute ya zaɓi mafi dacewa ga kowace buƙata.
+**Eh!** Wannan shi ne ainihin manufar 67router. Haɗa masu samar da sabis da yawa sannan ka yi amfani da `model: "auto"` domin 67router ya zaɓi mafi dacewa ga kowace buƙata.
 
 ### "Me zai faru idan wani mai samar da sabis ya daina aiki?"
 
-OmniRoute yana tsallake masu samar da sabis da suka gaza ta atomatik, sannan ya gwada na gaba. Ba ka buƙatar yin komai.
+67router yana tsallake masu samar da sabis da suka gaza ta atomatik, sannan ya gwada na gaba. Ba ka buƙatar yin komai.
 
 ### "Ta yaya zan cire haɗin mai samar da sabis?"
 
@@ -347,13 +347,13 @@ Je zuwa Providers → danna mai samar da sabis ɗin → danna **Disconnect**.
 
 ### "Zan iya amfani da API keys da nake da su?"
 
-**Eh!** Idan kana da API keys na OpenAI, Anthropic, Google, da sauransu, za ka iya amfani da su a cikin OmniRoute. Kawai liƙa su yayin haɗa mai samar da sabis.
+**Eh!** Idan kana da API keys na OpenAI, Anthropic, Google, da sauransu, za ka iya amfani da su a cikin 67router. Kawai liƙa su yayin haɗa mai samar da sabis.
 
 ---
 
 ## Me Zai Biyo Baya?
 
-- **[Jagorar Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Bari OmniRoute ya zaɓa maka AI mafi dacewa
+- **[Jagorar Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Bari 67router ya zaɓa maka AI mafi dacewa
 - **[Jagorar Matakan Kyauta](./FREE-TIERS-GUIDE.md)** — Sami AI kyauta ba tare da katin kuɗi ba
 - **[Magance Matsaloli](../guides/TROUBLESHOOTING.md)** — Gyara matsalolin da aka fi samu
 - **[Bayanin Masu Bayarwa](../reference/PROVIDER_REFERENCE.md)** — Cikakken jerin masu bayarwa 226

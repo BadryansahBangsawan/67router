@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute toimitetaan täysin asennettavana progressiivisena verkkosovelluksena (PWA). Kun käytät hallintapaneelia millä tahansa mobiiliselaimella — Androidilla (Chrome) tai iOS:llä (Safari) — voit valita "Lisää Koti-valikkoon" ja saada natiivisovelluksen kaltaisen käyttökokemuksen ilman sovelluskauppaa.
+67router toimitetaan täysin asennettavana progressiivisena verkkosovelluksena (PWA). Kun käytät hallintapaneelia millä tahansa mobiiliselaimella — Androidilla (Chrome) tai iOS:llä (Safari) — voit valita "Lisää Koti-valikkoon" ja saada natiivisovelluksen kaltaisen käyttökokemuksen ilman sovelluskauppaa.
 
 ## Mikä on PWA?
 
-Progressiivinen verkkosovellus muuttaa OmniRoute-verkkohallintapaneelin sovellukseksi, joka näyttää ja tuntuu natiivilta mobiilisovellukselta. Asennuksen jälkeen se:
+Progressiivinen verkkosovellus muuttaa 67router-verkkohallintapaneelin sovellukseksi, joka näyttää ja tuntuu natiivilta mobiilisovellukselta. Asennuksen jälkeen se:
 
 - Käynnistyy aloitusnäytöltä omasta kuvakkeestaan
 - Avautuu koko näytön tilassa — selaimen osoitepalkkia tai välilehtikäyttöliittymää ei näytetä
@@ -20,26 +20,26 @@ Progressiivinen verkkosovellus muuttaa OmniRoute-verkkohallintapaneelin sovelluk
 
 ### Android (Chrome)
 
-1. Avaa OmniRoute-hallintapaneeli Chromessa: `http://YOUR_IP:20128`
-2. Chrome näyttää automaattisesti **"Lisää OmniRoute aloitusnäyttöön"** -bannerin, tai:
+1. Avaa 67router-hallintapaneeli Chromessa: `http://YOUR_IP:20128`
+2. Chrome näyttää automaattisesti **"Lisää 67router aloitusnäyttöön"** -bannerin, tai:
    - Napauta **⋮**-valikkoa (kolme pistettä) → **"Lisää aloitusnäyttöön"** tai **"Asenna sovellus"**
 3. Vahvista kehote
-4. OmniRoute ilmestyy aloitusnäytöllesi itsenäisenä sovelluksena
+4. 67router ilmestyy aloitusnäytöllesi itsenäisenä sovelluksena
 
 ### iOS (Safari)
 
-1. Avaa OmniRoute-hallintapaneeli Safarissa: `http://YOUR_IP:20128`
+1. Avaa 67router-hallintapaneeli Safarissa: `http://YOUR_IP:20128`
 2. Napauta **Jaa**-painiketta (nuolella varustettu laatikko)
 3. Vieritä alaspäin ja napauta **"Lisää Koti-valikkoon"**
-4. Anna sille nimi (oletuksena "OmniRoute") ja napauta **Lisää**
-5. OmniRoute ilmestyy aloitusnäytöllesi sovelluskuvakkeena
+4. Anna sille nimi (oletuksena "67router") ja napauta **Lisää**
+5. 67router ilmestyy aloitusnäytöllesi sovelluskuvakkeena
 
 ### Työpöytä (Chrome / Edge)
 
-1. Avaa OmniRoute-hallintapaneeli
-2. Napsauta osoitepalkin **asennuskuvaketta** (tai ⋮ → "Asenna OmniRoute...")
+1. Avaa 67router-hallintapaneeli
+2. Napsauta osoitepalkin **asennuskuvaketta** (tai ⋮ → "Asenna 67router...")
 3. Vahvista kehote
-4. OmniRoute avautuu itsenäiseen ikkunaan — ei välilehtiä eikä osoitepalkkia
+4. 67router avautuu itsenäiseen ikkunaan — ei välilehtiä eikä osoitepalkkia
 
 ## Ominaisuudet
 
@@ -49,7 +49,7 @@ Sovellusmanifestissa on asetus `display: "fullscreen"`, mikä tarkoittaa, että 
 
 ### Offline-tuki
 
-OmniRoute sisältää service workerin (`sw.js`), joka tarjoaa älykkään välimuistitallennuksen:
+67router sisältää service workerin (`sw.js`), joka tarjoaa älykkään välimuistitallennuksen:
 
 | Resurssityyppi                                                 | Strategia                                   | Toiminta                                                                                                             |
 | -------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Kun verkkoyhteys ei ole käytettävissä ja käyttäjä siirtyy uudelle sivulle,
 
 ### Sovelluskuvakkeet
 
-OmniRoute tarjoaa kullekin alustalle optimoidut kuvakkeet:
+67router tarjoaa kullekin alustalle optimoidut kuvakkeet:
 
 | Tiedosto               | Koko              | Käyttökohde                          |
 | ---------------------- | ----------------- | ------------------------------------ |
@@ -94,8 +94,8 @@ Next.js luo sen tiedoston `src/app/manifest.ts` kautta:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Tiedostossa `src/shared/components/PwaRegister.tsx` sijaitseva asiakaskomponentt
 
 ## Käyttö Termuxin kanssa (Android)
 
-Kun OmniRoutea käytetään Androidissa Termuxin kautta, PWA toimii saumattomasti:
+Kun 67routeria käytetään Androidissa Termuxin kautta, PWA toimii saumattomasti:
 
-1. Käynnistä OmniRoute Termuxissa: `npx omniroute`
+1. Käynnistä 67router Termuxissa: `npx omniroute`
 2. Avaa Chrome samassa puhelimessa: `http://localhost:20128`
 3. Asenna PWA valitsemalla "Lisää aloitusnäyttöön"
 4. PWA muodostaa yhteyden paikalliseen Termux-palvelimeen — kaikki suoritetaan laitteessa
@@ -156,7 +156,7 @@ Tämä yhdistelmä tarkoittaa, että Android-puhelimesi toimii sekä **palvelime
 
 ## Käyttö muilta laitteilta
 
-Asenna PWA mille tahansa laitteelle, jonka selaimella voi käyttää OmniRoute-palvelintasi:
+Asenna PWA mille tahansa laitteelle, jonka selaimella voi käyttää 67router-palvelintasi:
 
 - **Toinen puhelin/tabletti**: Siirry osoitteeseen `http://PHONE_IP:20128` ja asenna PWA
 - **Kannettava tietokone**: Avaa Chrome/Edge ja asenna se työpöydän PWA-sovelluksena

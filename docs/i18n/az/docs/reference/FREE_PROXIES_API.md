@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute xarici provayderlərdən (1proxy, proxifly, iplocate, webshare)
+67router xarici provayderlərdən (1proxy, proxifly, iplocate, webshare)
 sinxronlaşdırılan, seçilmiş pulsuz proksi toplusunu `free_proxies` cədvəlində təqdim edir.
 İdarəetmə panelində bunlar **Parametrlər → Pulsuz proksilər** bölməsində göstərilir. Bu sənəd
 siyahı marşrutunun təqdim etdiyi server tərəfli filtrləmə, çeşidləmə, sayma və sinxronizasiya xətalarının

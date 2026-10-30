@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Nazadnje posodobljeno:** 2026-06-28 — v3.8.40
 
-OmniRoute zajame `reasoning_content`, ki ga ustvari pomočnik v modelih z načinom razmišljanja, in ga pri večkrožnih zahtevah pregledno ponovno predvaja, kadar to zahteva nadrejeni ponudnik. S tem odpravi napake HTTP 400, ki jih strogi ponudniki vrnejo, kadar v zgodovini pogovora odjemalca manjka sklepanje iz prejšnjega kroga.
+67router zajame `reasoning_content`, ki ga ustvari pomočnik v modelih z načinom razmišljanja, in ga pri večkrožnih zahtevah pregledno ponovno predvaja, kadar to zahteva nadrejeni ponudnik. S tem odpravi napake HTTP 400, ki jih strogi ponudniki vrnejo, kadar v zgodovini pogovora odjemalca manjka sklepanje iz prejšnjega kroga.
 
 ## Zakaj to obstaja
 
@@ -17,7 +17,7 @@ Več ponudnikov z načinom razmišljanja zavrne nadaljevalni krog, če **prejšn
 Neveljaven parameter: reasoning_content v načinu razmišljanja je treba poslati nazaj API-ju.
 ```
 
-Vendar običajni odjemalci (Cursor, Cline, Roo Code, OpenAI SDK) odstranijo `reasoning_content` iz zgodovine, ki jo ponovno pošljejo. OmniRoute ga obnovi iz strežniškega predpomnilnika, tako da je zahteva, ki jo prejme nadrejeni ponudnik, skladna. Zadeva #1628 je uvedla hibridno trajno shranjevanje v pomnilniku/SQLite, da predpomnilnik preživi ponovne zagone procesa.
+Vendar običajni odjemalci (Cursor, Cline, Roo Code, OpenAI SDK) odstranijo `reasoning_content` iz zgodovine, ki jo ponovno pošljejo. 67router ga obnovi iz strežniškega predpomnilnika, tako da je zahteva, ki jo prejme nadrejeni ponudnik, skladna. Zadeva #1628 je uvedla hibridno trajno shranjevanje v pomnilniku/SQLite, da predpomnilnik preživi ponovne zagone procesa.
 
 ## Arhitektura
 

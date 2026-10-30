@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: OmniRoute ichki holat monitoringi, provayder avtopiloti, kvota kuzatuvi va kuzatuvchanlik ilgaklari bilan birga taqdim etiladi. Ushbu qoʻllanma boshqaruv paneli, ogohlantirishlar va nosozliklarni bartaraf etishni qamrab oladi.
+> **Qisqacha**: 67router ichki holat monitoringi, provayder avtopiloti, kvota kuzatuvi va kuzatuvchanlik ilgaklari bilan birga taqdim etiladi. Ushbu qoʻllanma boshqaruv paneli, ogohlantirishlar va nosozliklarni bartaraf etishni qamrab oladi.
 
 **Manbalar:**
 
@@ -20,7 +20,7 @@
 
 ## Umumiy koʻrinish
 
-OmniRouteʼda **3 ta monitoring qatlami** mavjud:
+67routerʼda **3 ta monitoring qatlami** mavjud:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Har bir kombinatsiya uchun:
 
 ## Holatni tekshirish API’si
 
-OmniRoute **ikkita** HTTP holat tekshiruvi interfeysini taqdim etadi. Orkestratorlar uchun ular o‘zaro almashtirib ishlatilmaydi.
+67router **ikkita** HTTP holat tekshiruvi interfeysini taqdim etadi. Orkestratorlar uchun ular o‘zaro almashtirib ishlatilmaydi.
 
 | Yo‘l                         | Maqsad                                                                   | Yuklama                                  | Quyidagilar uchun foydalaning                                                       |
 | ---------------------------- | ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ saqlanib qoluvchi holatlar soni kerak bo‘lganda esa `staleDbNonOkCount`dan foy
 
 ### Kubernetes tekshiruvlari bo‘yicha tavsiyalar
 
-OmniRoute — **yagona Node jarayoni** (bitta event loop). Standart Docker `HEALTHCHECK` yengil `/healthz`ga yo‘naltirilgan. `/api/monitoring/health` kubelet liveness intervallari uchun **haddan tashqari og‘ir**.
+67router — **yagona Node jarayoni** (bitta event loop). Standart Docker `HEALTHCHECK` yengil `/healthz`ga yo‘naltirilgan. `/api/monitoring/health` kubelet liveness intervallari uchun **haddan tashqari og‘ir**.
 
 | Tekshiruv                   | Tavsiya etilgan nishon                                                                   | Izohlar                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -227,7 +227,7 @@ Bog‘liq: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (voq
 
 ### systemd kuzatuvchisi (muzlab qolgan voqealar sikli)
 
-systemd xostida OmniRoute xizmat menejeriga tayyor bo‘lganini bildiradi va unga muntazam signal yuborib turadi. Shu sababli voqealar sikli tiqilib qolgan server ishlayotgan, ammo javobsiz holatda qolish o‘rniga o‘ldiriladi va qayta ishga tushiriladi. Signallar serverning o‘z voqealar siklidan yuboriladi: u bloklanganda signallar to‘xtaydi va `WatchdogSec` muddati davomida birorta ham signal kelmasa, systemd xizmatni qayta ishga tushiradi.
+systemd xostida 67router xizmat menejeriga tayyor bo‘lganini bildiradi va unga muntazam signal yuborib turadi. Shu sababli voqealar sikli tiqilib qolgan server ishlayotgan, ammo javobsiz holatda qolish o‘rniga o‘ldiriladi va qayta ishga tushiriladi. Signallar serverning o‘z voqealar siklidan yuboriladi: u bloklanganda signallar to‘xtaydi va `WatchdogSec` muddati davomida birorta ham signal kelmasa, systemd xizmatni qayta ishga tushiradi.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) allaqachon ushbu sozlamalarga ega foydalanuvchi unitini yaratadi. O‘zingiz yozgan unit (standart `Type=simple`) kuzatuvchiga ega bo‘lmaydi, shuning uchun uning `[Service]` bo‘limiga quyidagi qatorlarni qo‘shing:
 
@@ -443,7 +443,7 @@ Token holatini tekshirish sozlamalari `tokenHealthCheck.ts` tomonidan ichki tarz
 
 ### Oʻrnatilgan kanallar
 
-OmniRoute **3 ta ogohlantirish kanalini** qoʻllab-quvvatlaydi:
+67router **3 ta ogohlantirish kanalini** qoʻllab-quvvatlaydi:
 
 | Kanal                    | Sozlash               | Qoʻllanish holati                 |
 | ------------------------ | --------------------- | --------------------------------- |
@@ -559,7 +559,7 @@ Hozircha istalgan HTTP asosidagi monitoring tizimi (Prometheus blackbox exporter
 ### "Kvota sog‘lom holatda ekanini ko‘rsatmoqda, ammo 429 xatolarini ko‘ryapman"
 
 - 429 provayder kvotangizni ishlatib bo‘lganingizni bildirayotganini anglatadi
-- OmniRoute kvota kuzatuvi **eskirgan** bo‘lishi mumkin — haqiqiy ma’lumot provayder tomonida
+- 67router kvota kuzatuvi **eskirgan** bo‘lishi mumkin — haqiqiy ma’lumot provayder tomonida
 - Kvota ma’lumotlari ichki kvota monitori orqali avtomatik ravishda yangilanadi
 
 ### "Kombinatsiya ishlamayapti, ammo barcha maqsadlar sog‘lom ko‘rinmoqda"
@@ -572,7 +572,7 @@ Hozircha istalgan HTTP asosidagi monitoring tizimi (Prometheus blackbox exporter
 
 - `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"` buyrug‘ini ishga tushiring
 - Agar "ok" bo‘lsa — bu yolg‘on ogohlantirish, holat tekshiruvi haddan tashqari qat’iy ishlamoqda
-- Boshqa har qanday natija bo‘lsa — **OmniRoute’ni to‘xtating** va [favqulodda tiklash qo‘llanmasi](./DATABASE_GUIDE.md#disaster-recovery)ga amal qiling
+- Boshqa har qanday natija bo‘lsa — **67router’ni to‘xtating** va [favqulodda tiklash qo‘llanmasi](./DATABASE_GUIDE.md#disaster-recovery)ga amal qiling
 
 ### "Xotira uyumiga bosim kritik darajada"
 

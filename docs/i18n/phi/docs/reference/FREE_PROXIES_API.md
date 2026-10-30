@@ -4,7 +4,7 @@
 
 ---
 
-Nagbibigay ang OmniRoute ng piniling koleksiyon ng mga libreng proxy sa talahanayang `free_proxies`,
+Nagbibigay ang 67router ng piniling koleksiyon ng mga libreng proxy sa talahanayang `free_proxies`,
 na sini-sync mula sa mga panlabas na provider (1proxy, proxifly, iplocate, webshare). Makikita
 ang mga ito sa dashboard sa ilalim ng **Settings → Free Proxies**. Tinatalakay ng dokumentong ito
 ang pag-filter, pag-sort, pagbibilang, at pag-uulat ng mga error sa pag-sync sa panig ng server

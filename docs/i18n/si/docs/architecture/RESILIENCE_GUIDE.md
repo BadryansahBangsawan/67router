@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute හි වෙනස් නමුත් අන්යෝන්යව සම්බන්ධ resilience යාන්ත්රණ තුනක් ඇත. සෑම එකක්ම වෙනස් විෂය පථයක් සහ අරමුණක් ඇත. Routing හැසිරීම debug කරන විට ඒවා වෙන වෙනම තබා ගන්න.
+67router හි වෙනස් නමුත් අන්යෝන්යව සම්බන්ධ resilience යාන්ත්රණ තුනක් ඇත. සෑම එකක්ම වෙනස් විෂය පථයක් සහ අරමුණක් ඇත. Routing හැසිරීම debug කරන විට ඒවා වෙන වෙනම තබා ගන්න.
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -197,7 +197,7 @@ Session-affinity header තුන කිසිදා upstream වෙත යව�
 
 ### සුවිශේෂී කළමනාකරණය කළ session සම්බන්ධතා leases
 
-**විෂය පථය:** එක් සක්රීය කළමනාකරණය කළ HTTP client/session එකක් සුදුසුකම් ලත් OmniRoute සම්බන්ධතාවයක් හිමිකර ගනී.
+**විෂය පථය:** එක් සක්රීය කළමනාකරණය කළ HTTP client/session එකක් සුදුසුකම් ලත් 67router සම්බන්ධතාවයක් හිමිකර ගනී.
 
 **අරමුණ:** ඉල්ලීම් හරහා දැඩි routing fence එකක් අවශ්ය වන client සඳහා කල් පවතින සුවිශේෂී සම්බන්ධතා හිමිකාරිත්වය සැපයීම. මෙය soft continuity මනාපයක් වන session affinity වෙනස් වේ:
 සුවිශේෂී lease එකක් SQLite තුළ lifecycle තත්ත්වය persist කරයි, ගෝලීය සක්රීය-හිමිකරු සහ සක්රීය-සම්බන්ධතා අනන්යතාව බලාත්මක කරයි, සහ provider dispatch ට පෙර කල් ඉකුත් වූ generation එකක් ප්රතික්ෂේප කරයි.
@@ -212,7 +212,7 @@ Session-affinity header තුන කිසිදා upstream වෙත යව�
 upstream executor ශීර්ෂක වලින් ඉවත් කරනු ලැබේ.
 
 සාමාන්ය රවුටින් තුළ සුදුසුකම් ලත් කළමනාකරණය කරන ලද අපේක්ෂකයන් සිටියද, සෑම නිදහස් අපේක්ෂකයෙක්ම
-විදේශීය සක්රීය lease එකකින් අත්පත් කරගෙන තිබේ නම්, OmniRoute HTTP `429`, lease-capacity-unavailable කේතයක්,
+විදේශීය සක්රීය lease එකකින් අත්පත් කරගෙන තිබේ නම්, 67router HTTP `429`, lease-capacity-unavailable කේතයක්,
 capacity එකක් සඳහා රඳී සිටින තත්ත්වයක්, සහ අදාළ වැඩිම ඉක්මන් කල් ඉකුත්වීමෙන් ලබාගත් සීමිත `Retry-After` අගයක් ලබා දෙයි.
 සාමාන්ය හිස් සුදුසුකම යනු lease තරඟකාරීත්වය නොවන අතර එහි පවතින රවුටින් දෝෂ අර්ථ නිරූපණය එලෙසම පවතී.
 
@@ -236,7 +236,7 @@ capacity එකක් සඳහා රඳී සිටින තත්ත්ව�
   ආකෘතියක්ම), වෙනත් සපයන්නන් සඳහා `getQuotaScopedModelForProvider()`.
 - `404` නිරුපද්රිත ආකෘතිය අගුළු දමයි (`getModelLockKey()` `not_found` පටු කරයි).
 - වෙනත් ඕනෑම තත්ත්වයක් — `5xx` ප්රවාහන/සේවාදායක අසාර්ථකතා සහ ගුණාත්මකභාවය
-  වලංගු කිරීමෙන් OmniRoute විසින්ම සංශ්ලේෂණය කරන ලද `502` — අගුළු දමන්නේ
+  වලංගු කිරීමෙන් 67router විසින්ම සංශ්ලේෂණය කරන ලද `502` — අගුළු දමන්නේ
   **හරියටම** සපයන්නා/සම්බන්ධතාවය/ආකෘතිය තුන් ගණන පමණි. එක් ආකෘතියක ඇති නරක
   ප්රවාහයක් ගිණුමේ කෝටාව ගැන සාක්ෂියක් නොවේ; මෙම නීතියට පෙර
   `codex/gpt-5.6-luna` මත එක් හිස් ප්රතිචාරයක් එම සම්බන්ධතාවයේ සෑම `gpt-5*`
@@ -376,7 +376,7 @@ concurrency caps**, එක් පේළියකට එක් `model=cap`) හ�
   සමගාමී-ඉල්ලීම් සීමා වේ.
 - **දේශීය පෝලිම් කිරීම, සොයාගැනීමක් නොමැත:** අතිරේක ඉල්ලීම් පවතින
   queue/timeout semantics සමඟ දේශීයව පෝලිම් වේ (වර්ගීකෘත
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` admission errors). OmniRoute
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` admission errors). 67router
   upstream policy සොයාගැනීමක් හෝ අනුමාන කිරීමක් නොකරයි — operator විසින්
   සකසා ඇති නිශ්චිත සීමා පමණක් ක්රියාත්මක කරයි. සංතෘප්ත model gate එකක්
   provider අක්රිය නොකරන අතර ස්ථිර model lockout එකක්ද නිර්මාණය නොකරයි;
@@ -547,7 +547,7 @@ prompt-compression / translation කාර්යයකට පෙර සිදු
 ### Rate-Limit ස්වයංක්රීය-සක්රීය ආරක්ෂක ජාලය සහ සම්බන්ධතා ආරක්ෂණය (`rateLimitProtection`)
 
 **ස්වයංක්රීය-සක්රීය ආරක්ෂක ජාලය** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, පෙරනිමි `true`):
-පෙරනිමියෙන්, OmniRoute සියලුම සක්රීය API-key provider සම්බන්ධතා සඳහා (`getProviderCategory(provider) === "apikey"`) rate-limit පෝලිම් ආරක්ෂණය ස්වයංක්රීයව සක්රීය කරයි. මෙය rate-සංවේදී upstream API keys වෙත එන ඉල්ලීම් upstream 429 දෝෂවලට කඩා නොවැටී Bottleneck හරහා පෝලිම්ගත කර throttle කරන බව සහතික කරයි. ආරක්ෂක ජාලය `RATE_LIMIT_AUTO_ENABLE` පරිසර විචල්යය හරහා අභිබවා යා හැක (`false`/`0`/`off` අක්රීය කරයි, `true`/`1`/`on` බලෙන් සක්රීය කරයි), එය ගබඩා කර ඇති dashboard සැකසුමට (**Settings → Resilience** / `PATCH /api/resilience`) වඩා ප්රමුඛතාවය ගනී.
+පෙරනිමියෙන්, 67router සියලුම සක්රීය API-key provider සම්බන්ධතා සඳහා (`getProviderCategory(provider) === "apikey"`) rate-limit පෝලිම් ආරක්ෂණය ස්වයංක්රීයව සක්රීය කරයි. මෙය rate-සංවේදී upstream API keys වෙත එන ඉල්ලීම් upstream 429 දෝෂවලට කඩා නොවැටී Bottleneck හරහා පෝලිම්ගත කර throttle කරන බව සහතික කරයි. ආරක්ෂක ජාලය `RATE_LIMIT_AUTO_ENABLE` පරිසර විචල්යය හරහා අභිබවා යා හැක (`false`/`0`/`off` අක්රීය කරයි, `true`/`1`/`on` බලෙන් සක්රීය කරයි), එය ගබඩා කර ඇති dashboard සැකසුමට (**Settings → Resilience** / `PATCH /api/resilience`) වඩා ප්රමුඛතාවය ගනී.
 
 **සෑම සම්බන්ධතාවකටම `rateLimitProtection` හි අර්ථකථනය:**
 සෑම සම්බන්ධතාවකටම rate-limit ආරක්ෂණය provider සම්බන්ධතාවල `rateLimitProtection` boolean ක්ෂේත්රය හරහා නිරීක්ෂණය කරනු ලැබේ (SQLite හි `rate_limit_protection` ලෙස ගබඩා කර ඇත):
@@ -879,7 +879,7 @@ IP-බාල්දිගත rate limit එකක් ඉවර වූ කෝට�
 
 > නියෝජිත මාර්ගෝපදේශය 40k සන්දර්භ අයවැය යටතේ රැඳී සිටීම සඳහා `AGENTS.md` → "ඔරොත්තු දැක්වීමේ ධාවන කාලීන තත්ත්වය" වෙතින් වචනානුසාරයෙන් ගෙන එන ලදි (PR #12743). එය ඉහත කොටස්වල සංක්ෂිප්ත, නියෝජිතයා-මුහුණුවර දර්ශනයයි; අංකිත කොටස් සම්පූර්ණ සඳහන ලෙස පවතී.
 
-OmniRoute හි සම්බන්ධ නමුත් වෙනස් තාවකාලික-අසාර්ථකත්ව යාන්ත්රණ තුනක් ඇත. මාර්ග හැසිරීම නිදොස්කරණය කරන විට ඒවායේ විෂය පථය වෙන වෙනම තබන්න. එක බැල්මක සිතියමක් සඳහා
+67router හි සම්බන්ධ නමුත් වෙනස් තාවකාලික-අසාර්ථකත්ව යාන්ත්රණ තුනක් ඇත. මාර්ග හැසිරීම නිදොස්කරණය කරන විට ඒවායේ විෂය පථය වෙන වෙනම තබන්න. එක බැල්මක සිතියමක් සඳහා
 [ස්ථර-3 ඔරොත්තු දැක්වීමේ රූපසටහන](../diagrams/exported/resilience-3layers.svg)
 (මූලාශ්රය: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))
 බලන්න.

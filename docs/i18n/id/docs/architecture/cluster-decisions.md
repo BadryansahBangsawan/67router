@@ -14,7 +14,7 @@ Dua profil compose opsional (`memory`, `bifrost`) untuk deployment 8 layanan yan
 
 ## Mengapa pendekatan ini konservatif
 
-Bentuk deployment OmniRoute yang ada sudah ramping dan terbukti:
+Bentuk deployment 67router yang ada sudah ramping dan terbukti:
 
 - **`redis:7-alpine`** menangani beban kerja pembatasan laju/cache pada skala produksi.
 - **SQLite + sqlite-vec + FTS5** mencakup memori lokal + vektor + pencarian teks (lihat [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Kedua profil ini merupakan **opsi scale-out untuk deployment yang telah mencapai
 
 - Anda menjalankan ≥3 replika `omniroute` dan ingin rotasi penyedia dipusatkan dalam satu proses Go.
 - Anda menginginkan satu tempat audit/pencatatan untuk permintaan ke penyedia upstream di seluruh replika.
-- Anda menginginkan penskalaan horizontal lapisan perutean Tier-1 yang independen dari replika OmniRoute.
+- Anda menginginkan penskalaan horizontal lapisan perutean Tier-1 yang independen dari replika 67router.
 
 **Yang ditambahkan:**
 

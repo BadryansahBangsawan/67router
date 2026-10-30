@@ -4,7 +4,7 @@
 
 ---
 
-Hogyan becsüli meg, rögzíti és jelenti az OmniRoute minden egyes kérés költségét — és miért
+Hogyan becsüli meg, rögzíti és jelenti az 67router minden egyes kérés költségét — és miért
 **megtakarításkövető**, nem pedig számla az irányítópulton megjelenő összeg.
 
 Lásd még: [Felhasználói útmutató](./USER_GUIDE.md) · [Funkciógaléria](./FEATURES.md)
@@ -13,11 +13,11 @@ Lásd még: [Felhasználói útmutató](./USER_GUIDE.md) · [Funkciógaléria](.
 
 ## Mi ez (és mi nem)
 
-Az OmniRoute minden egyes befejezéshez kérésenkénti USD-költséget rendel úgy, hogy a tokenek
+Az 67router minden egyes befejezéshez kérésenkénti USD-költséget rendel úgy, hogy a tokenek
 számát megszorozza az adott modell díjszabásával. Ezek az adatok szolgáltatják a **Költségek** irányítópult,
 az `omniroute cost` / `omniroute usage` CLI, a CSV-/JSON-exportok és az API-kulcsonkénti költségkeretek alapját.
 
-> **Az irányítópulton látható „költség” egy megtakarításkövető, nem pedig számla.** Az OmniRoute soha nem számít fel díjat
+> **Az irányítópulton látható „költség” egy megtakarításkövető, nem pedig számla.** Az 67router soha nem számít fel díjat
 > — a kéréseidet olyan szolgáltatókhoz irányítja, amelyeket már csatlakoztattál (saját
 > előfizetéseid, ingyenes csomagjaid és API-kulcsaid). Ha a „$290 teljes költség” teljes egészében ingyenes
 > modelleken halmozódott fel, az nagyjából azt jelenti, hogy **$290 összeget _nem_ fizettél ki** egy fizetős API-nak. Ez az érték annak
@@ -29,7 +29,7 @@ látható »költség« egy megtakarításkövető, nem pedig számla”).
 
 Mivel az érték becslés:
 
-- Az OmniRoute által az egyes modellekhez használt ártáblázattól függ. Az áradattal nem rendelkező modellek
+- Az 67router által az egyes modellekhez használt ártáblázattól függ. Az áradattal nem rendelkező modellek
   `0` költséggel járulnak hozzá (a böngészőben „Korábbi / Ingyenes” sorként jelennek meg).
 - Az ingyenes csomagok és előfizetések forgalmához is tartozik _becsült_ költség — ez a
   megtakarított összeg, nem pedig fizetendő tartozás.
@@ -47,7 +47,7 @@ A költségek egy ártáblázatból származnak, amelyet a rendszer a következ�
 2. **Szinkronizált külső árak** — a LiteLLM nyilvános
    `model_prices_and_context_window.json` fájljából lekérve, ha a szinkronizálás engedélyezve van (külön
    `pricing_synced` névtérben tárolva, így soha nem írja felül a saját beállításaidat).
-3. **Beépített alapértékek** — az OmniRoute részeként szállítva.
+3. **Beépített alapértékek** — az 67router részeként szállítva.
 
 A külső árak szinkronizálása **külön engedélyezendő**, és alapértelmezés szerint ki van kapcsolva. A kapcsolódó környezeti változók
 (lásd: [`.env.example`](../../.env.example)):
@@ -191,7 +191,7 @@ Eltérő jelzés hiányában mindegyikhez felügyeleti hitelesítés szükséges
 
 ## CLI
 
-Az OmniRoute CLI-ja költség-, használati és árképzési parancsokat tesz elérhetővé (regisztrálva a
+Az 67router CLI-ja költség-, használati és árképzési parancsokat tesz elérhetővé (regisztrálva a
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) fájlban).
 
 ### `omniroute cost`

@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` lisab kogu teie OmniRoute'i kataloogi — mudelid, kombinatsioonid ja
+`@omniroute/opencode-plugin-v2` lisab kogu teie 67router'i kataloogi — mudelid, kombinatsioonid ja
 automaatsed kombinatsioonid — OpenCode v2 mudelivalijasse koos kuvatavate nimede, hinnastuse ning
 tasuta kasutustaseme limiitidega.
 
@@ -15,7 +15,7 @@ need ei jaga omavahel midagi, mistõttu ühe uuendamine ei sunni kunagi teist uu
 ## Nõuded
 
 - OpenCode v2.
-- Kättesaadav OmniRoute'i lüüs (vaikimisi `http://localhost:20128`).
+- Kättesaadav 67router'i lüüs (vaikimisi `http://localhost:20128`).
 - Node.js 22 või 24.
 
 ## Paigaldamine
@@ -77,7 +77,7 @@ iga otspunkti kohta ühe korra, nimetades otspunkti ja kaotsi läinud andmed —
 | `baseURL`                        | nõutav                                                 | Lüüsijuur, ainult `http(s)`; järelliide `/v1` lisatakse vajaduse korral                                                          |
 | `apiKey`                         | ühendatud identimisteave, seejärel `OMNIROUTE_API_KEY` | Vestluse võti `/v1/*` jaoks                                                                                                      |
 | `managementReadToken`            | kasutab varuvariandina `apiKey`                        | Võti `/api/*` jaoks — tavaliselt **ei ole** see sama võti                                                                        |
-| `displayName`                    | `"OmniRoute"`                                          | Teenusepakkuja nimi valijas                                                                                                      |
+| `displayName`                    | `"67router"`                                           | Teenusepakkuja nimi valijas                                                                                                      |
 | `timeoutMs`                      | `10000`                                                | Päringu ajalõpp lõpp-punkti kohta (automaatsed kombinatsioonid kasutavad 5 s)                                                    |
 | `modelCacheTtlMs`                | `300000`                                               | Kataloogi vahemälu TTL; kettal olev hetktõmmis kiirendab külmkäivitusi                                                           |
 | `timeouts`                       | kasutab varuvariandina `timeoutMs`                     | Lõpp-punktipõhised ajalimiidid millisekundites: `models`, `combos`, `autoCombos`, `enrichment`                                   |
@@ -115,7 +115,7 @@ Selle väljalülitamiseks määrake `"geminiSanitization": false`.
 
 | Sümptom                                                    | Põhjus                                                                                                             |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Valijas ei kuvata ühtegi OmniRoute'i mudelit               | Ühtegi võtit ei leitud (kontrollige käivitushoiatust) või lüüs pole kättesaadav                                    |
+| Valijas ei kuvata ühtegi 67router'i mudelit                | Ühtegi võtit ei leitud (kontrollige käivitushoiatust) või lüüs pole kättesaadav                                    |
 | Mudelite toor-ID-d, kombinatsioonid ja hinnateave puuduvad | Haldusotspunktid keeldusid tõendist — määrake `managementReadToken`                                                |
 | Lühike või tühi `freeOnly` kataloog                        | Haldustõend puudub või sellest keelduti — vaadake hosti logist värskendamise kokkuvõtterida (`unmatched-free` arv) |
 | Seanss on kinnitatud valikule `opencode-<id>/…`            | v1 pistikprogramm avaldas `opencode-<id>`; v2 avaldab ainult `<id>`, seega valige mudel uuesti jaotisest `<id>/…`  |

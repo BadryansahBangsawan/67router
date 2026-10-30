@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute huja na mkusanyiko ulioratibiwa wa proksi zisizolipishwa katika jedwali la `free_proxies`,
+67router huja na mkusanyiko ulioratibiwa wa proksi zisizolipishwa katika jedwali la `free_proxies`,
 unaosawazishwa kutoka kwa watoa huduma wa nje (1proxy, proxifly, iplocate, webshare).
 Dashibodi huonyesha hizi chini ya **Mipangilio → Proksi Zisizolipishwa**. Hati hii
 inaelezea uchujaji, upangaji, uhesabuji na uripoti wa hitilafu za usawazishaji

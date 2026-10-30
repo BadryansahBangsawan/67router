@@ -25,7 +25,7 @@
 가져오기 모달에서 시작용 파일을 다운로드하세요(**CSV 템플릿 다운로드**). 예시:
 
 ```csv
-# OmniRoute 제공업체 가져오기(위치 기반 열)
+# 67router 제공업체 가져오기(위치 기반 열)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

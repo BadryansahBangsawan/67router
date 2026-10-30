@@ -8,17 +8,17 @@
 
 🌐 **Harsuna:** 🇺🇸 [Turanci](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Matsalolin da aka fi fuskanta da hanyoyin magance su na OmniRoute.
+Matsalolin da aka fi fuskanta da hanyoyin magance su na 67router.
 
 ---
 
 ## Bayani Cikin Sauri
 
-**Sabon mai amfani da OmniRoute ne?** Fara daga nan — waɗannan suna warware kashi 90% na matsaloli:
+**Sabon mai amfani da 67router ne?** Fara daga nan — waɗannan suna warware kashi 90% na matsaloli:
 
 | Ina ganin wannan                           | Abin da yake nufi                                | Abin da za a yi                                                                                             |
 | ------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| "Ba a iya haɗawa"                          | OmniRoute ba ya aiki                             | Gudanar da `omniroute` ko `docker restart omniroute`                                                        |
+| "Ba a iya haɗawa"                          | 67router ba ya aiki                              | Gudanar da `omniroute` ko `docker restart omniroute`                                                        |
 | "Mabuɗin API ba daidai ba ne"              | Mabuɗinka ba daidai ba ne ko ya ƙare             | Sake kwafe mabuɗin daga shafin yanar gizon mai samarwa                                                      |
 | "An wuce iyakar buƙatu"                    | Kana aika buƙatu da yawa                         | Jira minti 1, ko amfani da `model: "auto"` domin komawa madadin ta atomatik                                 |
 | "An wuce ƙayyadadden kaso"                 | Ka ƙare ƙayyadadden kaso na kyauta/biya          | Haɗa ƙarin masu samarwa, ko amfani da masu samarwa na kyauta (Kiro, Pollinations)                           |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # takamaiman iyakar shigar da many
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ƙara iyakantaccen lokacin jira ya wuce tsohuwar ƙimar RATE_LIMIT_MAX_WAIT_MS don upstreams masu jinkiri
 ```
 
-Saita waɗannan a cikin muhallin process na OmniRoute (daemon ɗin, misali ta LaunchAgent plist ko `systemctl edit`), sannan a sake kunna OmniRoute. Alamar rotation ita ce mafi tasiri guda ɗaya: tana sauya mummunar gazawa zuwa sake gwadawa a bayyane ta hanyar amfani da ingantaccen mai bayarwa a cikin tarin.
+Saita waɗannan a cikin muhallin process na 67router (daemon ɗin, misali ta LaunchAgent plist ko `systemctl edit`), sannan a sake kunna 67router. Alamar rotation ita ce mafi tasiri guda ɗaya: tana sauya mummunar gazawa zuwa sake gwadawa a bayyane ta hanyar amfani da ingantaccen mai bayarwa a cikin tarin.
 
 **Lura**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` yana iyakance adadin manyan buƙatu — masu dogon context — da za su gudana lokaci guda; iyakar ƙofar karɓa ce, ba mai iyakance yawan buƙatun mai bayarwa ba. **Sabuntawar #503-fanout:** ba a ƙara saita wannan var ta tsohuwa ba (yanzu yana aiki ne kawai idan an saita shi kai tsaye, kamar yadda ke sama) — maimakon haka, ana sarrafa karɓar manyan buƙatu ta byte budget da ake samarwa ta atomatik (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) wanda ke daidaita kansa bisa ainihin iyakar memory na host, don haka sabon deployment ya kamata ya ga raguwar ƙin buƙatu na `503 chat_admission_busy` sosai ba tare da saita wannan var ɗin ko kaɗan ba; saita shi kai tsaye a nan har yanzu yana aiki daidai kamar yadda aka bayyana. Ana taƙaita takamaiman sauye-sauyen byte-budget zuwa 8 MiB–2 GiB. `413 body_exceeds_budget` ba kuskure ne na wucin gadi ba: ƙara wannan byte budget ɗin, rage `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, ko ƙara iyakar memory na process. Zubar da buƙata saboda `inflight_bytes_budget` cunkoso ne na ɗan lokaci kuma har yanzu ana iya sake gwadawa. Ana sarrafa iyakance yawan buƙatu na kowane mai bayarwa (`open-sse/services/rateLimitManager.ts`) daban ta `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, da `RATE_LIMIT_AUTO_ENABLE` — duba `.env.example`.
 
 **Yadda za a tabbatar ya yi aiki**: gudanar da agent/cron naka sau biyu cikin gajeren lokaci sannan ka tabbatar duka sun yi nasara. Kafin gyaran, gudanarwa ta biyu yawanci tana haifar da `429`/`401`. Bayan gyaran, ana sake gwada gazawa (idan akwai) a bayyane kuma kiran ya kammala. Hakanan za ka iya amfani da `curl /monitoring/health` ka lura da filin `rateLimitedUntil` a kan haɗin masu bayarwa da kuma `circuitBreakers.providerBreakers[].state` na masu bayarwar da abin ya shafa — state ɗin yana ɗaya daga cikin `CLOSED`, `DEGRADED`, `OPEN`, ko `HALF_OPEN` (duba `src/shared/utils/circuitBreaker.ts`), kuma mai bayarwar da ke ci gaba da gazawa zai sauya daga `CLOSED → DEGRADED → OPEN` kafin tagar sake farawa ta bari gwaji ya wuce (`HALF_OPEN`).
 
-**Idan har yanzu kana ganin 429**: account mai aiki na wannan mai bayarwar ya ƙare ainihin _quota_ ɗinsa (ba iyakance yawan buƙatu kawai ba). Ƙara account na biyu na wannan mai bayarwar a cikin dashboard na OmniRoute → Providers → Accounts, ko haɗa wani mai bayarwa na kyauta (misali `routeway`, `auggie`). Rotation yana taimakawa ne kawai ga iyakance yawan buƙatu/400/401 na wucin gadi; cikakken ƙarewar quota yana buƙatar credential na biyu ko wani mai bayarwa daban.
+**Idan har yanzu kana ganin 429**: account mai aiki na wannan mai bayarwar ya ƙare ainihin _quota_ ɗinsa (ba iyakance yawan buƙatu kawai ba). Ƙara account na biyu na wannan mai bayarwar a cikin dashboard na 67router → Providers → Accounts, ko haɗa wani mai bayarwa na kyauta (misali `routeway`, `auggie`). Rotation yana taimakawa ne kawai ga iyakance yawan buƙatu/400/401 na wucin gadi; cikakken ƙarewar quota yana buƙatar credential na biyu ko wani mai bayarwa daban.
 
 **Idan kana ganin 403 a vision models (`auto/vision`, `bazaarlink/*`)**: account ɗin da aka haɗa ba shi da tsarin biya wanda ya haɗa da vision, ko API key ɗin ba shi da isassun izini. Tabbatar a dashboard na mai bayarwar cewa scope na key ɗin ya haɗa da vision/multimodal, ko haɗa account na matakin biya sannan ka riƙe shi a matsayin vision target.
 
@@ -71,7 +71,7 @@ Saita waɗannan a cikin muhallin process na OmniRoute (daemon ɗin, misali ta La
 
 Lokacin da ka gudanar da `npm install -g omniroute`, za ka iya ganin tarin gargadi kamar `npm warn ERESOLVE`, sanarwar peer-dependency, da saƙonnin `deprecated`. **Ana sa ran waɗannan kuma ba su da illa.** Shigarwar ta yi nasara idan ka ga `added <N> packages` a cikin sakamakon.
 
-Don ɓoye gargadin warware peer-dependency, yi amfani da tsarin shigarwa da OmniRoute ke tallafawa:
+Don ɓoye gargadin warware peer-dependency, yi amfani da tsarin shigarwa da 67router ke tallafawa:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` yana ɓoye `ERESOLVE` da sanarwar peer-dependency ne kawai. Sanarwar daina tallafi za ta ci gaba da bayyana saboda tana fitowa daga fakitin wasu ɓangarori da aka dogara da su kai tsaye ba; ba ta nuna cewa shigarwar ta gaza ba.
 
-Gargadin yana fitowa ne daga tsofaffin iyakokin peer-dependency a cikin fakitin wasu ɓangarori waɗanda OmniRoute ba ya sarrafawa:
+Gargadin yana fitowa ne daga tsofaffin iyakokin peer-dependency a cikin fakitin wasu ɓangarori waɗanda 67router ba ya sarrafawa:
 
 1. **`marked-terminal` yana buƙatar `marked >=1 <16`, amma an sami `marked@18`** — yana aiki lafiya a aikace; iyakar peer ta upstream ce kawai ta tsufa.
 2. **`deprecated prebuild-install@7.1.3`** — mataimakin ɗauko native-binary ne da aka dogara da shi kai tsaye ba. Ba a
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Za a iya yin watsi da wannan gargadin?
 
-**A wani ɓangare, amma ba a ba da shawarar gudanarwa ba tare da scripts ba.** OmniRoute yana da hanyoyin madadin da ke aiki ba tare da katsewa ba: idan ba za a iya loda native bindings na `better-sqlite3` daga standalone bundle ba, manhajar za ta koma amfani da wasu drivers kamar `node:sqlite` ko `sql.js` (duba [Warware SQLite Runtime](../ops/SQLITE_RUNTIME.md)). Har yanzu server zai fara aiki, amma gudanarwa a kan hanyoyin madadin WASM kamar `sql.js` tana kashe yanayin SQLite WAL (Write-Ahead Logging) kuma tana ƙara yawan amfani da memory da nauyin disk-sync.
+**A wani ɓangare, amma ba a ba da shawarar gudanarwa ba tare da scripts ba.** 67router yana da hanyoyin madadin da ke aiki ba tare da katsewa ba: idan ba za a iya loda native bindings na `better-sqlite3` daga standalone bundle ba, manhajar za ta koma amfani da wasu drivers kamar `node:sqlite` ko `sql.js` (duba [Warware SQLite Runtime](../ops/SQLITE_RUNTIME.md)). Har yanzu server zai fara aiki, amma gudanarwa a kan hanyoyin madadin WASM kamar `sql.js` tana kashe yanayin SQLite WAL (Write-Ahead Logging) kuma tana ƙara yawan amfani da memory da nauyin disk-sync.
 
 ### Waɗanne scripts ne ainihin ake buƙata?
 
-Ba duk scripts da aka toshe ba ne suke da muhimmanci don gudanar da OmniRoute:
+Ba duk scripts da aka toshe ba ne suke da muhimmanci don gudanar da 67router:
 
-- **Masu muhimmanci (`omniroute`, `better-sqlite3`):** OmniRoute yana aiki daga Next.js standalone application bundle (`dist/`). Yayin shigarwa, npm yana sauke ko compile native SQLite driver da ya dace da host a cikin babban `node_modules/better-sqlite3/`. Sannan script ɗin `postinstall` na OmniRoute (`scripts/build/postinstall.mjs`) yana tabbatarwa tare da kwafe waɗannan binaries da suka dace da host zuwa `dist/node_modules/` domin standalone server ya iya samun damar amfani da su. Idan an toshe postinstall script na `omniroute`, za a tsallake wannan matakin kwafewa.
+- **Masu muhimmanci (`omniroute`, `better-sqlite3`):** 67router yana aiki daga Next.js standalone application bundle (`dist/`). Yayin shigarwa, npm yana sauke ko compile native SQLite driver da ya dace da host a cikin babban `node_modules/better-sqlite3/`. Sannan script ɗin `postinstall` na 67router (`scripts/build/postinstall.mjs`) yana tabbatarwa tare da kwafe waɗannan binaries da suka dace da host zuwa `dist/node_modules/` domin standalone server ya iya samun damar amfani da su. Idan an toshe postinstall script na `omniroute`, za a tsallake wannan matakin kwafewa.
 - **Na zaɓi/transitive (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Waɗannan mataimakan build ne, kayan aikin watcher, ko utilities na system keychain. Ba su izini yana hana gargadin build, amma ba a buƙatar su don ainihin aikin routing.
-- **Wanda aka cire (`onnxruntime-node`):** Wannan optional dependency ne don local AI embeddings kuma **ba** a buƙatarsa domin OmniRoute ya yi aiki. Postinstall script ɗinsa yana sauke kusan 300MB na kadarorin CUDA daga NuGet; kada a saka shi cikin allow-list sai dai idan kana da niyyar amfani da local ONNX acceleration a kan hardware mai goyon bayansa.
+- **Wanda aka cire (`onnxruntime-node`):** Wannan optional dependency ne don local AI embeddings kuma **ba** a buƙatarsa domin 67router ya yi aiki. Postinstall script ɗinsa yana sauke kusan 300MB na kadarorin CUDA daga NuGet; kada a saka shi cikin allow-list sai dai idan kana da niyyar amfani da local ONNX acceleration a kan hardware mai goyon bayansa.
 
 ### Gyaran da aka ba da shawara
 
-Don ba da izinin install scripts da ake buƙata yayin global install da kuma kawar da gargadin, yi amfani da `--allow-scripts` don OmniRoute da native dependencies nasa:
+Don ba da izinin install scripts da ake buƙata yayin global install da kuma kawar da gargadin, yi amfani da `--allow-scripts` don 67router da native dependencies nasa:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -143,14 +143,14 @@ omniroute doctor
 
 Idan buƙatar Gemini Web ta dawo da `503` tare da saƙon cewa ba a shigar da Playwright Chromium ba, kunshin npm yana nan amma binary na burauzar ya ɓace. Playwright da gangan yana ware sauke burauza daga shigar da kunshin npm, don haka ana sa ran wannan amsa har sai an shigar da burauzar.
 
-Don shigarwar npm ta duniya, shigar da Chromium daga kundin adireshin kunshin OmniRoute domin cache na burauzar ya kasance mallakin wannan shigarwar Playwright ɗin:
+Don shigarwar npm ta duniya, shigar da Chromium daga kundin adireshin kunshin 67router domin cache na burauzar ya kasance mallakin wannan shigarwar Playwright ɗin:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Sake kunna OmniRoute bayan shigarwar, sannan a sake gwada buƙatar Gemini Web. Idan kuna gudanar da OmniRoute daga hoton Docker, yi amfani da hoton `-web` (ko maƙasudin ginawa na `runner-web`), wanda ya ƙunshi Chromium da abubuwan da yake dogaro da su; hoton tushe ba ya ƙunshe da su.
+Sake kunna 67router bayan shigarwar, sannan a sake gwada buƙatar Gemini Web. Idan kuna gudanar da 67router daga hoton Docker, yi amfani da hoton `-web` (ko maƙasudin ginawa na `runner-web`), wanda ya ƙunshi Chromium da abubuwan da yake dogaro da su; hoton tushe ba ya ƙunshe da su.
 
 ---
 
@@ -180,7 +180,7 @@ Sake kunna OmniRoute bayan shigarwar, sannan a sake gwada buƙatar Gemini Web. I
 
 **Wannan sakamakon ƙarya ne. Babu abin da ya kamu, kuma ba a buƙatar ɗaukar wani mataki.**
 
-Avast da AVG suna gudanar da wata hanyar hasashe da ke yi wa fayilolin rubutu na yau da kullum/Markdown masu ɗauke da hanyoyin haɗi da yawa masu kama da buƙatun HTTP alama. Ana haɗa `README.md` na OmniRoute a cikin kunshin npm (an jera shi a `package.json` → `files`), don haka yana sauka a `node_modules/omniroute/README.md` yayin shigarwa ta duniya — kuma yana ɗauke da misalai kusan 15 na `http://localhost:20128/...` (wuraren ƙarshen MCP na HTTP/SSE, URL ɗin A2A na `.well-known`, da gutsattsarin `curl`). Yawan waɗannan hanyoyin haɗi ya isa ya kunna wannan hanyar hasashe.
+Avast da AVG suna gudanar da wata hanyar hasashe da ke yi wa fayilolin rubutu na yau da kullum/Markdown masu ɗauke da hanyoyin haɗi da yawa masu kama da buƙatun HTTP alama. Ana haɗa `README.md` na 67router a cikin kunshin npm (an jera shi a `package.json` → `files`), don haka yana sauka a `node_modules/omniroute/README.md` yayin shigarwa ta duniya — kuma yana ɗauke da misalai kusan 15 na `http://localhost:20128/...` (wuraren ƙarshen MCP na HTTP/SSE, URL ɗin A2A na `.well-known`, da gutsattsarin `curl`). Yawan waɗannan hanyoyin haɗi ya isa ya kunna wannan hanyar hasashe.
 
 Idan wannan ya fara ne kwanan nan kawai: nau'in fayil ɗin bai canza ba. README ya faɗaɗa teburin wuraren ƙarshensa (an ƙara MCP HTTP + SSE + A2A) da ƙarin misalan `curl`, wanda ya sa ya wuce iyakar da aka saita.
 
@@ -190,7 +190,7 @@ Fayil ɗin takardu ne marasa aiki kuma ba shi da wani abun da za a iya aiwatarwa
 
 1. **Dakatar da sanarwar** — cire kundin shigarwar daga binciken antivirus ɗinka
    (Avast: Settings → Exceptions), ta ƙara hanyar `node_modules` ta duniya da/ko kundin
-   bayanan OmniRoute (`~/.omniroute/`).
+   bayanan 67router (`~/.omniroute/`).
 2. **Kai rahoton sakamakon ƙaryar** — <https://www.avast.com/false-positive-file-form.php>,
    tare da haɗa `README.md` da aka keɓe. Wannan ne gyaran da zai taimaki kowa, domin hanyar
    hasashen mai samarwar ce take wuce gona da iri kan fayil ɗin rubutu.
@@ -255,7 +255,7 @@ shirin sanya hannu kan lambar; har sai an yi hakan, sabbin fitowa za su iya maim
 
 ### Shafin shiga yana rushewa ko yana nuna kuskuren "Module self-registration"
 
-**Dalili:** Kana amfani da sigar Node.js da ba ta cikin mafi ƙarancin amintaccen yanayin aiki da OmniRoute ya amince da shi. Abin da ya fi faruwa shi ne amfani da tsohuwar sigar gyaran Node 22 ko 24 wadda ba ta kai mafi ƙarancin matakin tsaro da OmniRoute ke buƙata ba.
+**Dalili:** Kana amfani da sigar Node.js da ba ta cikin mafi ƙarancin amintaccen yanayin aiki da 67router ya amince da shi. Abin da ya fi faruwa shi ne amfani da tsohuwar sigar gyaran Node 22 ko 24 wadda ba ta kai mafi ƙarancin matakin tsaro da 67router ke buƙata ba.
 
 **Alamomi:**
 
@@ -271,7 +271,7 @@ shirin sanya hannu kan lambar; har sai an yi hakan, sabbin fitowa za su iya maim
    nvm use 24
    ```
 2. Tabbatar da sigarka: `node --version` ya kamata ya nuna `v24.0.0` ko mafi sabuwa a jerin 24.x LTS
-3. Sake shigar da OmniRoute: `npm install -g omniroute`
+3. Sake shigar da 67router: `npm install -g omniroute`
 4. Sake farawa: `omniroute`
 
 > **Amintattun sigogin da ake tallafawa:** `>=22.22.2 <23` ko `>=24.0.0 <27`. Ana tallafa wa Node.js 24.x LTS (Krypton) da Node.js 26 gaba ɗaya.
@@ -354,13 +354,13 @@ omniroute
 
 **Dalili:** A kan Node.js 22, dispatcher na undici@8 bai dace da ginannen aiwatarwar `fetch()` ta Node ba.
 
-**Gyara (v3.5.5+):** Yanzu OmniRoute yana amfani da aikin `fetch()` na undici kansa lokacin da dispatcher na proxy yake aiki, domin tabbatar da daidaitaccen aiki. Sabunta zuwa v3.5.5+.
+**Gyara (v3.5.5+):** Yanzu 67router yana amfani da aikin `fetch()` na undici kansa lokacin da dispatcher na proxy yake aiki, domin tabbatar da daidaitaccen aiki. Sabunta zuwa v3.5.5+.
 
 ### Proxy na MITM ƙarƙashin WSL: ba a kama manhajojin tebur da ke kan Windows host
 
-**Dalili:** Ana shigar da proxy na MITM da takardar shaidar CA ɗinsa a cikin mahallin da OmniRoute yake gudana. A ƙarƙashin WSL, wannan mahallin shi ne Linux guest, yayin da manhajojin tebur na AI (Kiro, Trae, Copilot, Zed, …) suke gudana a kan Windows host. Manhajojin host ba sa amincewa da ma'ajiyar takardun shaida ta guest kuma ba sa bi ta proxy na tsarin guest, saboda haka kama zirga-zirgar manhajojin tebur ba ya aiki a wurin.
+**Dalili:** Ana shigar da proxy na MITM da takardar shaidar CA ɗinsa a cikin mahallin da 67router yake gudana. A ƙarƙashin WSL, wannan mahallin shi ne Linux guest, yayin da manhajojin tebur na AI (Kiro, Trae, Copilot, Zed, …) suke gudana a kan Windows host. Manhajojin host ba sa amincewa da ma'ajiyar takardun shaida ta guest kuma ba sa bi ta proxy na tsarin guest, saboda haka kama zirga-zirgar manhajojin tebur ba ya aiki a wurin.
 
-**Shawara:** Gudanar da OmniRoute kai tsaye a kan OS ɗaya da manhajojin tebur da kake son kama zirga-zirgarsu (Windows don manhajojin Windows; haka nan ga macOS/Linux). Barin OmniRoute a cikin WSL yayin da ake nufin manhajojin host yana buƙatar amincewa da takardar shaidar CA da aka ƙirƙira da hannu a kan Windows host, sannan a saita saitunan hanyar sadarwa/proxy na kowace manhajar host zuwa wurin ƙarshen proxy na WSL — wannan tsari ne marar tallafi kuma mai sauƙin samun matsala.
+**Shawara:** Gudanar da 67router kai tsaye a kan OS ɗaya da manhajojin tebur da kake son kama zirga-zirgarsu (Windows don manhajojin Windows; haka nan ga macOS/Linux). Barin 67router a cikin WSL yayin da ake nufin manhajojin host yana buƙatar amincewa da takardar shaidar CA da aka ƙirƙira da hannu a kan Windows host, sannan a saita saitunan hanyar sadarwa/proxy na kowace manhajar host zuwa wurin ƙarshen proxy na WSL — wannan tsari ne marar tallafi kuma mai sauƙin samun matsala.
 
 ---
 
@@ -387,7 +387,7 @@ omniroute
 
 ### Token na OAuth Ya Ƙare
 
-OmniRoute yana sabunta tokens ta atomatik. Idan matsalolin suka ci gaba:
+67router yana sabunta tokens ta atomatik. Idan matsalolin suka ci gaba:
 
 1. Dashboard → Provider → Reconnect
 2. Goge haɗin mai samarwar sannan ka sake ƙara shi
@@ -600,7 +600,7 @@ Bayanan martabar masu samarwa suna goyon bayan waɗannan saitunan:
 
 ### Kariya daga cunkoson buƙatu lokaci guda
 
-Lokacin da buƙatu masu yawa na lokaci guda suka isa ga mai samarwa da aka iyakance ƙimarsa, OmniRoute yana amfani da mutex + iyakance ƙimar atomatik don jera buƙatun ɗaya bayan ɗaya da hana gazawa mai yaɗuwa. Wannan yana faruwa ta atomatik ga masu samarwa masu amfani da maɓallin API.
+Lokacin da buƙatu masu yawa na lokaci guda suka isa ga mai samarwa da aka iyakance ƙimarsa, 67router yana amfani da mutex + iyakance ƙimar atomatik don jera buƙatun ɗaya bayan ɗaya da hana gazawa mai yaɗuwa. Wannan yana faruwa ta atomatik ga masu samarwa masu amfani da maɓallin API.
 
 ### Buƙatun hira suna gazawa da 503 / chat_admission_busy
 
@@ -636,7 +636,7 @@ A matakan iyaka na tsoho, ana ɗaukar buƙata mai nauyin tsari idan tana da aƙa
 aƙalla tools `64`, ko aƙalla kiyasin tokens `32,000`, ko kuma idan ƙididdigar tsari mai iyaka
 ta kai iyakokinta na nodes `10,000` da aka ziyarta ko zurfin `12`.
 
-**Dalili:** Wannan rage kaya ne da aka yi da gangan a cikin OmniRoute, ba gazawar mai samarwa na upstream ba.
+**Dalili:** Wannan rage kaya ne da aka yi da gangan a cikin 67router, ba gazawar mai samarwa na upstream ba.
 Kowane process yana amfani da kariya ta cikin process don tanadar iyakantacciyar damar buƙatu masu nauyi kafin ya riƙe
 kuma ya tantance babban jikin buƙata. Ana ci gaba da riƙe hayar buƙata mai nauyi har tsawon rayuwar amsar SSE.
 
@@ -680,7 +680,7 @@ don saitunan karɓar buƙatu na hukuma.
 
 ## Rarrabuwar gazawar RAG / LLM ta zaɓi (matsaloli 16)
 
-Wasu masu amfani da OmniRoute suna sanya gateway a gaban tsarin RAG ko na wakilai. A irin waɗannan saituna, ana yawan ganin wani baƙon tsari: OmniRoute yana nuna cewa komai yana aiki yadda ya kamata (masu samarwa suna aiki, bayanan martabar routing suna daidai, babu faɗakarwar iyakar amfani), amma har yanzu amsar ƙarshe ba daidai ba ce.
+Wasu masu amfani da 67router suna sanya gateway a gaban tsarin RAG ko na wakilai. A irin waɗannan saituna, ana yawan ganin wani baƙon tsari: 67router yana nuna cewa komai yana aiki yadda ya kamata (masu samarwa suna aiki, bayanan martabar routing suna daidai, babu faɗakarwar iyakar amfani), amma har yanzu amsar ƙarshe ba daidai ba ce.
 
 A aikace, waɗannan matsalolin galibi suna fitowa ne daga tsarin RAG na ƙasa, ba daga gateway ɗin kansa ba.
 
@@ -699,17 +699,17 @@ Manufar mai sauƙi ce:
 
 1. Lokacin da kuke binciken amsa mara kyau, tattara:
    - aikin mai amfani da buƙatarsa
-   - haɗin route ko provider a OmniRoute
+   - haɗin route ko provider a 67router
    - duk wani context na RAG da aka yi amfani da shi a ƙasa (takardun da aka samo, kiran kayan aiki, da sauransu)
 2. Daidaita matsalar da lamba ɗaya ko biyu na WFGY ProblemMap (`No.1` … `No.16`).
-3. Ajiye lambar a dashboard, runbook, ko tsarin bin diddigin matsalolinku kusa da logs na OmniRoute.
+3. Ajiye lambar a dashboard, runbook, ko tsarin bin diddigin matsalolinku kusa da logs na 67router.
 4. Yi amfani da shafin WFGY da ya dace don yanke shawarar ko kuna buƙatar canza tsarin RAG, retriever, ko dabarun routing ɗinku.
 
 Cikakken rubutu da takamaiman hanyoyin aiwatarwa suna nan (lasisin MIT, rubutu kaɗai):
 
 [README na WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Za ku iya yin watsi da wannan sashe idan ba ku gudanar da tsarin RAG ko na wakilai a bayan OmniRoute ba.
+Za ku iya yin watsi da wannan sashe idan ba ku gudanar da tsarin RAG ko na wakilai a bayan 67router ba.
 
 ---
 
@@ -733,7 +733,7 @@ Matsalolin da suka shafi fitowar v3.8.0 musamman da hanyoyin wucin gadi na magan
 
 1. Shigar da Devin CLI na platform ɗinku
 2. Saita `CLI_DEVIN_BIN=/usr/local/bin/devin` (ko ainihin path ɗin) a cikin `.env`
-3. Sake kunna OmniRoute sannan ku sake gwadawa daga **Dashboard → Kayan Aikin CLI**
+3. Sake kunna 67router sannan ku sake gwadawa daga **Dashboard → Kayan Aikin CLI**
 
 ### Cooldown na model ya maƙale (sake saiti da hannu)
 
@@ -788,7 +788,7 @@ Matsalolin da suka shafi fitowar v3.8.0 musamman da hanyoyin wucin gadi na magan
 
 1. Ƙirƙiri random secret: `openssl rand -hex 32`
 2. Saita `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` a cikin env na production server (da duk wani client da ke sadarwa da bridge)
-3. Sake kunna OmniRoute
+3. Sake kunna 67router
 
 ### Responses API: an rage background mode zuwa synchronous
 

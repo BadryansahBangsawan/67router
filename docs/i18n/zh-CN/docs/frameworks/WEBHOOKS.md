@@ -7,7 +7,7 @@
 > **事实来源：** `src/lib/webhookDispatcher.ts`、`src/lib/db/webhooks.ts`、`src/app/api/webhooks/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 可以在平台事件发生时触发 HTTP webhook。可使用它们与 Slack、PagerDuty、Datadog、内部告警服务或任何 HTTP 接收端集成。
+67router 可以在平台事件发生时触发 HTTP webhook。可使用它们与 Slack、PagerDuty、Datadog、内部告警服务或任何 HTTP 接收端集成。
 
 调度器使用 HMAC-SHA256 对每次投递进行签名，在发生暂时性故障时重试，跟踪每个 webhook 的投递健康状况，并自动禁用持续失败的端点。
 
@@ -47,7 +47,7 @@ OmniRoute 可以在平台事件发生时触发 HTTP webhook。可使用它们与
 
 ## HMAC 签名
 
-当 webhook 配置了 `secret` 时，OmniRoute 会对 JSON 正文进行签名并发送：
+当 webhook 配置了 `secret` 时，67router 会对 JSON 正文进行签名并发送：
 
 ```
 Content-Type: application/json
@@ -197,7 +197,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "来自 OmniRoute 的测试 webhook 投递",
+    "message": "来自 67router 的测试 webhook 投递",
     "webhookId": "<uuid>"
   }
 }

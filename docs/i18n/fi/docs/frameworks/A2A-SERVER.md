@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Suomi)
+# 67router A2A Server Documentation (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — OmniRoute älykkäänä reititysagenttina
+> Agent-to-Agent Protocol v0.3 — 67router älykkäänä reititysagenttina
 
 A2A-rajapinnalla on kaksi puolta:
 
@@ -19,7 +19,7 @@ Tehtäviä hallinnoi `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, oletusarvoi
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Palauttaa Agent Card -kuvauksen, joka sisältää OmniRouten ominaisuudet, taidot ja todennusvaatimukset.
+Palauttaa Agent Card -kuvauksen, joka sisältää 67routerin ominaisuudet, taidot ja todennusvaatimukset.
 
 Agent Card -kuvauksen `version`-kentän arvo saadaan muuttujasta `process.env.npm_package_version` (katso `src/app/.well-known/agent.json/route.ts:13`), joten se pysyy automaattisesti synkronoituna `package.json`-tiedoston kanssa jokaisessa julkaisussa.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Käytettävissä olevat taidot
 
-OmniRoute tarjoaa 6 A2A-taitoa, jotka on kytketty tiedostossa `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Jokainen taitomoduuli sijaitsee hakemistossa `src/lib/a2a/skills/`.
+67router tarjoaa 6 A2A-taitoa, jotka on kytketty tiedostossa `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Jokainen taitomoduuli sijaitsee hakemistossa `src/lib/a2a/skills/`.
 
 | Taito                         | ID                   | Kuvaus                                                                                                                                                                  | Tagit                      | Esimerkit                                     |
 | :---------------------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------------------------------- |
-| Älykäs reititys               | `smart-routing`      | Reitittää kehotteen optimaalisen palveluntarjoajan/yhdistelmän kautta OmniRouten yhdistelmämoottorin ja pisteytyksen avulla                                             | routing, providers         | "Reititä tämä kehote parhaan mallin kautta"   |
+| Älykäs reititys               | `smart-routing`      | Reitittää kehotteen optimaalisen palveluntarjoajan/yhdistelmän kautta 67routerin yhdistelmämoottorin ja pisteytyksen avulla                                             | routing, providers         | "Reititä tämä kehote parhaan mallin kautta"   |
 | Kiintiöiden hallinta          | `quota-management`   | Raportoi palveluntarjoajakohtaisen kiintiön tilan ja auttaa kutsujia päättämään, milloin kuristaa tai vaihtaa                                                           | quota, providers           | "Tarkista anthropicin kiintiö"                |
 | Palveluntarjoajien löytäminen | `provider-discovery` | Listaa asennetut palveluntarjoajat ominaisuuksineen, ilmaistason lippuineen ja OAuth-tiloineen                                                                          | providers, discovery       | "Mitä palveluntarjoajia on saatavilla?"       |
 | Kustannusanalyysi             | `cost-analysis`      | Arvioi pyynnön/keskustelun kustannukset katalogin ja viimeaikaisen käytön perusteella                                                                                   | cost, usage                | "Arvioi tämän keskustelun kustannukset"       |
 | Kuntoraportti                 | `health-report`      | Koostaa circuit breaker -, cooldown- ja lockout-tilat palveluntarjoajittain                                                                                             | health, resilience         | "Näytä kaikkien palveluntarjoajien kuntotila" |
-| Ominaisuuksien listaus        | `list-capabilities`  | Palauttaa täyden 45 kohteen Agent Skills -katalogin (23 API + 21 CLI + 1 config) markdown-taulukkona, jossa on raakat SKILL.md-URL-osoitteet kontekstin injektoimiseksi | catalog, discovery, skills | "Listaa kaikki OmniRouten ominaisuudet"       |
+| Ominaisuuksien listaus        | `list-capabilities`  | Palauttaa täyden 45 kohteen Agent Skills -katalogin (23 API + 21 CLI + 1 config) markdown-taulukkona, jossa on raakat SKILL.md-URL-osoitteet kontekstin injektoimiseksi | catalog, discovery, skills | "Listaa kaikki 67routerin ominaisuudet"       |
 
 > Agent Card tulee pitää ajan tasalla reaaliaikaisen 375 palveluntarjoajan katalogin kanssa; palveluntarjoajien lukumäärät sekä ilmais- ja autentikoinnittomuusmetatiedot ovat peräisin ajonaikaisesta rekisteristä.
 
 ### `list-capabilities`-taidon yksityiskohdat
 
-`list-capabilities`-taito on erityisen hyödyllinen ulkoisille agenteille, joiden on selvitettävä, mitä OmniRoute tarjoaa, ennen API-kutsujen lähettämistä. Se palauttaa jäsennellyn markdown-taulukkoartefaktin:
+`list-capabilities`-taito on erityisen hyödyllinen ulkoisille agenteille, joiden on selvitettävä, mitä 67router tarjoaa, ennen API-kutsujen lähettämistä. Se palauttaa jäsennellyn markdown-taulukkoartefaktin:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC-päätepiste `/a2a` on ensisijainen A2A-käyttöpiste. Alla olevat REST
 | `/.well-known/agent.json`    | GET       | Agenttikortti (A2A-haku)                                        | (julkinen, välimuistissa 3600 s)             |
 | `/api/a2a/tasks`             | POST      | Saapuva delegointi OmniConductor-kalustolle (Conductor PRD RF5) | Bearer vs `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Saapuva Conductor-delegointi (`POST /api/a2a/tasks`):** ulkoiset A2A-agentit delegoivat ohjelmointityötä OmniConductor-kalustolle OmniRouten kautta. Runko: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — vain Conductor-kaluston taidot (Agent Cardissa ilmoitetut) ovat delegoitavissa; `metadata.conductor.repo.url` on pakollinen (kalusto työskentelee git-repositorioiden parissa). Reitti muunnetaan keskittimen `POST /v1/tasks` -pyynnöksi käyttämällä palvelinpuolen `CONDUCTOR_ORCHESTRATOR_TOKEN`-tunnusta (varalla `CONDUCTOR_HUB_TOKEN`) ja palauttaa vastauksen `201 { conductor_task_id, state: "submitted" }`; tehtävien tilat välittyvät takaisin SSE→A2A-peilauksen (RF1) kautta ja näkyvät pyynnöllä `GET /api/a2a/tasks?skill=conductor`.
+**Saapuva Conductor-delegointi (`POST /api/a2a/tasks`):** ulkoiset A2A-agentit delegoivat ohjelmointityötä OmniConductor-kalustolle 67routerin kautta. Runko: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — vain Conductor-kaluston taidot (Agent Cardissa ilmoitetut) ovat delegoitavissa; `metadata.conductor.repo.url` on pakollinen (kalusto työskentelee git-repositorioiden parissa). Reitti muunnetaan keskittimen `POST /v1/tasks` -pyynnöksi käyttämällä palvelinpuolen `CONDUCTOR_ORCHESTRATOR_TOKEN`-tunnusta (varalla `CONDUCTOR_HUB_TOKEN`) ja palauttaa vastauksen `201 { conductor_task_id, state: "submitted" }`; tehtävien tilat välittyvät takaisin SSE→A2A-peilauksen (RF1) kautta ja näkyvät pyynnöllä `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

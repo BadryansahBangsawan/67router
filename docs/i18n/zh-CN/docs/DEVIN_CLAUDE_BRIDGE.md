@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` 允许真正的 Claude Code 运行时使用 OmniRoute 的本地 Anthropic
+`devin-cli-agentic` 允许真正的 Claude Code 运行时使用 67router 的本地 Anthropic
 Messages 端点，同时由官方 Devin CLI 通过 ACP stdio 提供模型响应。它
 不会修改现有的 Anthropic、Claude OAuth、Claude Web 或 `devin-cli` 提供者。
 
@@ -18,7 +18,7 @@ Messages 端点，同时由官方 Devin CLI 通过 ACP stdio 提供模型响应�
 > `3000.2.17` 和模型 `swe-1-7-lightning` 完成了三个相互隔离的场景；该次最终实时运行验证了客户端负责执行的 `Read`、
 > `Edit` 和 `Bash` 轮次、成功的 `npm test` 结果、项目命令和技能
 > 发现、仅使用 Devin 的路由，以及零 Claude 出站流量。之后，固定版本已提升至 `2.1.258`
-> （即 OmniRoute 的 Claude 身份所模拟的 CLI 版本，也是首个原生提供
+> （即 67router 的 Claude 身份所模拟的 CLI 版本，也是首个原生提供
 > Fable 5.1 层级的版本）。在新固定版本上，已基于固定的基础镜像验证安装层和 `claude --version`，
 > 且桥接器单元测试套件、`compose config` 和
 > 静态隔离证明均已通过——但尚未重新运行离线模拟场景和实时三场景
@@ -48,11 +48,11 @@ Claude Code 提供的工具。图像和未知块会明确失败。大型工具�
 解析器接受每个模型轮次中一个独立的 `<tool>{...}</tool>` 信封。它会根据请求的
 工具列表检查名称，依据该工具的 JSON Schema 验证参数，拒绝混合叙述/操作，
 并允许一次有界修复。随后 Claude Code 会在本地执行生成的 Anthropic `tool_use`，
-并通过 OmniRoute 发回 `tool_result`。
+并通过 67router 发回 `tool_result`。
 
 ## 自动路由
 
-当该提供者未被阻止时，它有资格进入 OmniRoute 的 `auto/*` 候选池。
+当该提供者未被阻止时，它有资格进入 67router 的 `auto/*` 候选池。
 具备候选资格并不保证会被选中：组合的路由策略（例如
 last-known-good）可能会优先选择其他提供者。当你要求每个请求都必须通过 Devin 时，
 请使用 `dva/<model>` 或 Devin 优先组合。
@@ -63,16 +63,16 @@ last-known-good）可能会优先选择其他提供者。当你要求每个请�
 
 - 以 UID/GID `10001:10001` 运行，使用只读根文件系统、移除 capabilities，并启用
   `no-new-privileges`；
-- 使用私有的 `/home/bridge`、专用 Claude 配置卷、隔离的 OmniRoute 数据，
+- 使用私有的 `/home/bridge`、专用 Claude 配置卷、隔离的 67router 数据，
   以及单独的 `devin-auth` 卷；
 - 仅挂载可丢弃的 `.sandbox` 工作区/证据；
 - 不挂载宿主机主目录、Keychain、SSH、云凭据或 Docker socket；
 - 构造显式环境并移除 Anthropic API/OAuth/路由变量；
 - 仅将 Claude Code 推理请求定向到 `http://omniroute:20128`，并使用仅限本地的密钥。
 
-离线配置使用内部网络。在实时配置中，OmniRoute 仅通过 `network-guard` 访问
+离线配置使用内部网络。在实时配置中，67router 仅通过 `network-guard` 访问
 Devin 官方端点；其他无关目标均被拒绝。Claude Code 使用单独的全拒绝出站防护，
-并且只能通过 `NO_PROXY` 访问本地 OmniRoute 服务。防护审计文件仅挂载到对应的
+并且只能通过 `NO_PROXY` 访问本地 67router 服务。防护审计文件仅挂载到对应的
 防护进程。脚本会验证文件所有权、模式、链接数和每项决策，然后再导出不含令牌的证据。
 
 独立运行隔离证明：

@@ -15,9 +15,9 @@ ADR a na-akọwapụta kpọmkwem otú injin `ts` (nke dị n'ime sistemụ), `b
 A na-akọwa ọrụ injin site na **axis abụọ na-adabereghị na ibe ha**, ndị e jikọtara ọnụ n'ime `RouterBackendDefinition` nke ndekọ ahụ:
 
 1. **Usoro ndụ** (`RouterBackendLifecycle`) — _otu injin si arụ ọrụ_:
-   - `in-process` — na-arụ ọrụ n'ime usoro Node nke OmniRoute (pipeline TS nke dị n'ime sistemụ).
-   - `supervised` — usoro nwa dị na mpaghara nke OmniRoute na-etinye/na-amalite/na-akwụsị/na-enyocha ahụike ya site na `ServiceSupervisor`, ma mesịa jiri ya dịka njikọ onye na-eweta ọrụ.
-   - `external` — endpoint HTTP nke OmniRoute na-ezigara arịrịọ ma ọ **naghị** ejikwa ya (a na-ahazi ya site na URL ntọala env).
+   - `in-process` — na-arụ ọrụ n'ime usoro Node nke 67router (pipeline TS nke dị n'ime sistemụ).
+   - `supervised` — usoro nwa dị na mpaghara nke 67router na-etinye/na-amalite/na-akwụsị/na-enyocha ahụike ya site na `ServiceSupervisor`, ma mesịa jiri ya dịka njikọ onye na-eweta ọrụ.
+   - `external` — endpoint HTTP nke 67router na-ezigara arịrịọ ma ọ **naghị** ejikwa ya (a na-ahazi ya site na URL ntọala env).
    - `disabled` — edebanyere ya n'akwụkwọ mana enweghị ike ịhọrọ ya.
 2. **Axis nhọrọ** (backend nhazi ụzọ relay) — _ma relay ọ na-ezigara ya arịrịọ_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` n'ime

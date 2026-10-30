@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Cursor rejasidagi **tasvir yaratish** imkoniyatini chat bilan bir xil provayder identifikatori — `cursor` (`cu` taxallusi) orqali `POST /v1/images/generations` manzilida taqdim etadi.
+67router Cursor rejasidagi **tasvir yaratish** imkoniyatini chat bilan bir xil provayder identifikatori — `cursor` (`cu` taxallusi) orqali `POST /v1/images/generations` manzilida taqdim etadi.
 
 | Maydon                           | Qiymat                                                                                      |
 | -------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute Cursor rejasidagi **tasvir yaratish** imkoniyatini chat bilan bir xil 
 
 ## Nega Agent CLI ishlatiladi
 
-OmniRoute'dagi Cursor chati `agent.v1.AgentService/Run` (protobuf) dan foydalanadi. Ushbu yoʻl ichki mijoz vositalarini (shell, write, …) **rad etadi**. Tasvir yaratish — foydalanuvchi oʻrni hisobidan **`agent` CLI** tomonidan bajariladigan Cursor'ning ichki vositasi. Shu sababli tasvir ishlovchisi qulflangan prompt va har bir soʻrov uchun vaqtinchalik ish maydoni bilan `agent` jarayonini ishga tushiradi (hamjamiyatdagi foydalanuvchi oʻrni koʻpriklari bilan bir xil shaklda), soʻng OpenAI bilan mos `b64_json` qaytaradi.
+67router'dagi Cursor chati `agent.v1.AgentService/Run` (protobuf) dan foydalanadi. Ushbu yoʻl ichki mijoz vositalarini (shell, write, …) **rad etadi**. Tasvir yaratish — foydalanuvchi oʻrni hisobidan **`agent` CLI** tomonidan bajariladigan Cursor'ning ichki vositasi. Shu sababli tasvir ishlovchisi qulflangan prompt va har bir soʻrov uchun vaqtinchalik ish maydoni bilan `agent` jarayonini ishga tushiradi (hamjamiyatdagi foydalanuvchi oʻrni koʻpriklari bilan bir xil shaklda), soʻng OpenAI bilan mos `b64_json` qaytaradi.
 
 ## Kirishni cheklash (Qatʼiy qoidalar #15 + #17)
 
@@ -37,7 +37,7 @@ qarang.
 
 `CURSOR_IMG_MAX_CONCURRENT` Node moduli instansiga taalluqli xotiradagi hisoblagich/navbat
 orqali qoʻllanadi (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-U bitta OmniRoute jarayoni ichida parallel `agent` ishga tushirishlarini toʻgʻri cheklaydi,
+U bitta 67router jarayoni ichida parallel `agent` ishga tushirishlarini toʻgʻri cheklaydi,
 ammo bir xil Cursor foydalanuvchi oʻrnidan foydalanadigan bir nechta jarayon/instanslar
 orasida muvofiqlashtirishni amalga oshirmaydi (masalan, bir nechta replika bilan joylashtirishda)
 — har bir instans oʻzining mustaqil cheklovini qoʻllaydi. Bitta instansli joylashtirish
@@ -48,7 +48,7 @@ yoki Cursor tasvir trafigi bitta instansga yoʻnaltirilishi kerak.
 ## Talablar
 
 1. Boshqaruv panelida ulangan Cursor hisobi (OAuth yoki `crsr_…` API kaliti).
-2. OmniRoute jarayoni uchun mavjud Cursor Agent binar fayli:
+2. 67router jarayoni uchun mavjud Cursor Agent binar fayli:
    - `CURSOR_AGENT_BIN=/path/to/agent` muhit oʻzgaruvchisi, yoki
    - `~/.local/bin/agent`, yoki
    - Cursor ulanishidagi `providerSpecificData.agentBin`.

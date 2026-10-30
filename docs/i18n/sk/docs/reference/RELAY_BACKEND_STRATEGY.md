@@ -6,7 +6,7 @@
 
 ## Súhrn
 
-OmniRoute teraz podporuje tri režimy prenosu pre `/api/v1/relay/chat/completions`:
+67router teraz podporuje tri režimy prenosu pre `/api/v1/relay/chat/completions`:
 
 - `ts`: Používa prenos TypeScript v rámci procesu.
 - `bifrost`: Vynúti bránu Bifrost.
@@ -45,12 +45,12 @@ Ak momentálne porovnávate 9router/CLIPROXYAPI:
 
 ## Kontrakt hranice backendu
 
-Stabilnou produktovou hranicou je prenosové API OmniRoute, nie implementácia ovládacieho panela. Ovládací panel Next.js môže inštalovať, konfigurovať a dohliadať na lokálne služby, ale smerovanie požiadaviek by malo vstupovať cez prenosové API a odovzdávať ich za touto hranicou.
+Stabilnou produktovou hranicou je prenosové API 67router, nie implementácia ovládacieho panela. Ovládací panel Next.js môže inštalovať, konfigurovať a dohliadať na lokálne služby, ale smerovanie požiadaviek by malo vstupovať cez prenosové API a odovzdávať ich za touto hranicou.
 
 Dlhodobé voľby backendu:
 
 - Zachovajte prenos TypeScript ako cestu v rámci procesu na uplatňovanie politík a prepnutie pri zlyhaní. Autentifikácia, zoznamy povolených položiek, normalizácia požiadaviek, účtovanie a bezpečnostné kontroly zostávajú na tejto úrovni pred každým odovzdaním backendu.
-- Používajte Bifrost ako preferovaný sidecar 1. úrovne s vysokou priepustnosťou, keď nasadenie vyžaduje nižšiu variabilitu smerovania, centralizovanú rotáciu poskytovateľov alebo horizontálne škálovanie medzi viacerými replikami OmniRoute.
+- Používajte Bifrost ako preferovaný sidecar 1. úrovne s vysokou priepustnosťou, keď nasadenie vyžaduje nižšiu variabilitu smerovania, centralizovanú rotáciu poskytovateľov alebo horizontálne škálovanie medzi viacerými replikami 67router.
 - Zachovajte 9router a CLIPROXYAPI ako vstavané služby kompatibility. Bežia ako lokálne procesy pod dohľadom a sú užitočné, keď je požadovaným adaptérom ich správanie poskytovateľa/CLI, nemali by sa však stať predvoleným smerovacím mechanizmom 1. úrovne.
 - Nedovoľte, aby ovládací panel odovzdával ľubovoľné adresy URL služieb do hlavnej cesty. Adresy URL poskytnuté používateľským rozhraním sú konfiguračnými vstupmi; smerovací kód by mal vyhľadávať registrované backendy s overeným stavom z nastavení na strane servera a zo stavu dohľadu.
 - V súčasnosti uprednostňujte HTTP cez lokálne rozhranie pre služby pod dohľadom, pretože spravované procesy už poskytujú API kompatibilné s HTTP, ochranná vrstva trasy môže túto hranicu auditovať a správanie pri zlyhaní či prepnutí na záložnú cestu je viditeľné v protokoloch požiadaviek. Budúci prenos cez SDK alebo soket má význam pridať iba vtedy, ak merateľne zníži latenciu smerovania p99 bez oslabenia izolácie alebo sémantiky prepnutia na záložnú cestu.

@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute salvestab mõtlemisrežiimi mudelite loodud assistendi `reasoning_content`-i ja taasesitab selle mitmevoorulistes päringutes läbipaistvalt, kui ülesvoolu teenusepakkuja seda nõuab. See kõrvaldab HTTP 400 vead, mille ranged teenusepakkujad tagastavad juhul, kui kliendi vestlusajaloost puudub eelmise vooru arutluskäik.
+67router salvestab mõtlemisrežiimi mudelite loodud assistendi `reasoning_content`-i ja taasesitab selle mitmevoorulistes päringutes läbipaistvalt, kui ülesvoolu teenusepakkuja seda nõuab. See kõrvaldab HTTP 400 vead, mille ranged teenusepakkujad tagastavad juhul, kui kliendi vestlusajaloost puudub eelmise vooru arutluskäik.
 
 ## Miks see olemas on
 
@@ -17,7 +17,7 @@ Mitu mõtlemisrežiimi teenusepakkujat lükkavad jätkuvooru tagasi, kui **eelmi
 Vale parameeter: mõtlemisrežiimis tuleb reasoning_content API-le tagasi saata.
 ```
 
-Kuid tavapärased kliendid (Cursor, Cline, Roo Code, OpenAI SDK) eemaldavad `reasoning_content`-i ajaloost, mille nad uuesti saadavad. OmniRoute taastab selle serveripoolsest vahemälust, et ülesvoolu teenusele nähtav päring oleks järjepidev. Probleem #1628 lisas hübriidse mälu/SQLite'i püsimälu, et vahemälu säiliks ka pärast protsessi taaskäivitamist.
+Kuid tavapärased kliendid (Cursor, Cline, Roo Code, OpenAI SDK) eemaldavad `reasoning_content`-i ajaloost, mille nad uuesti saadavad. 67router taastab selle serveripoolsest vahemälust, et ülesvoolu teenusele nähtav päring oleks järjepidev. Probleem #1628 lisas hübriidse mälu/SQLite'i püsimälu, et vahemälu säiliks ka pärast protsessi taaskäivitamist.
 
 ## Arhitektuur
 

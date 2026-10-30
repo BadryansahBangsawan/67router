@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ራሱ በሌላ ቦታ (በVPS፣ በቤት ሰርቨር፣ በTailnetዎ ላይ ባለ ሌላ ማሽን) ላይ እየሰራ፣ `omniroute` CLIን በላፕቶፕዎ ላይ ያስኪዱ።
+67router ራሱ በሌላ ቦታ (በVPS፣ በቤት ሰርቨር፣ በTailnetዎ ላይ ባለ ሌላ ማሽን) ላይ እየሰራ፣ `omniroute` CLIን በላፕቶፕዎ ላይ ያስኪዱ።
 በ`omniroute connect` አንድ ጊዜ ይግቡ፤ ከዚያ በኋላ **እያንዳንዱ** የCLI ትዕዛዝ ያንን የርቀት
 ሰርቨር ይጠቀማል — ተመሳሳይ ትዕዛዞች፣ ተመሳሳይ ውጤት፣ በርቀት ሰርቨሩ ላይ መፈጸማቸው ብቻ ይለያል።
 
@@ -23,7 +23,7 @@ omniroute configure codex                # ← ከርቀት ካታሎጉ የአ�
 ## እንዴት እንደሚሰራ
 
 ```
-የእርስዎ ላፕቶፕ                         የርቀት OmniRoute (VPS)
+የእርስዎ ላፕቶፕ                         የርቀት 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (የይለፍ ቃል → ቶከን)       │
 │  ዐውድ፦ vps       │ ───────────────►  │ ወሰን ያለው የመዳረሻ ቶከን ይፈጥራል │
@@ -105,7 +105,7 @@ Antigravity የGoogle firstparty/nativeapp ፈቃድ መስጫ ገጽን ይጠ�
 ተንጠልጥሎ ይቀራል እና ምንም ኮድ አያወጣም** — መደበኛው የ"callback URLን ለጥፍ"
 አማራጭ የሚለጠፍ ነገር አይኖረውም። (ይህ ከGoogle ወገን የሆነ ገደብ ነው፦
 በጥቅሉ የቀረበውን Antigravity desktop client በሚጠቀም ማንኛውም proxy ላይ ተመሳሳይ
-መንጠልጠል ይከሰታል፤ በOmniRoute ላይ ብቻ አይደለም።)
+መንጠልጠል ይከሰታል፤ በ67router ላይ ብቻ አይደለም።)
 
 dashboardው እርስዎ ከመቆምዎ በፊት ይህን ያውቃል፦ ከlocalhost ውጭ ከሆነ አድራሻ
 **Providers → Antigravity → Connect**ን ሲከፍቱ፣ አጠቃላዩን "callback URLን ቅዳ"
@@ -113,7 +113,7 @@ dashboardው እርስዎ ከመቆምዎ በፊት ይህን ያውቃል፦ �
 አስቀድመው ተሞልተዋል። (የLAN አድራሻም ይቆጠራል — ይህን callback በተመለከተ
 `192.168.x.x` localhost አይደለም።)
 
-Antigravityን ከርቀት OmniRoute ጋር ለማገናኘት ሁለት የሚደገፉ መንገዶች አሉ።
+Antigravityን ከርቀት 67router ጋር ለማገናኘት ሁለት የሚደገፉ መንገዶች አሉ።
 
 ### አማራጭ A — የአካባቢ መግቢያ ረዳት (የሚመከር)
 
@@ -151,7 +151,7 @@ npx omniroute login antigravity --no-push
 
 ከዚያ በ**ርቀት** dashboard ውስጥ፦ **Providers → Antigravity → Connect**፣ እና
 የ`omniroute-cred-v1.…` blobን በ**Step 2** መስክ ውስጥ ይለጥፉ (callback URLን ወይም
-credential blobን ይቀበላል)። OmniRoute ዲኮድ ያደርገዋል፣ Cloud Code
+credential blobን ይቀበላል)። 67router ዲኮድ ያደርገዋል፣ Cloud Code
 onboardingን በአገልጋዩ በኩል ያስኬዳል፣ እና ግንኙነቱን በቋሚነት ያስቀምጣል።
 
 > blobው refresh token ይዟል — እንደ የይለፍ ቃል ይያዙት። በpush መንገድ ላይ
@@ -192,7 +192,7 @@ blob አያስፈልግም። ግንኙነቱ ገባሪ እንደሆነ እስ�
 ## Codex / Grokን በርቀት ጭነት ላይ ማገናኘት (ቋሚ-loopback አቅራቢዎች)
 
 Codex፣ xAI (`xai-oauth`) እና Grok CLI (`grok-cli`) ከዋናው OAuth መተግበሪያቸው ጋር **ቋሚ** loopback
-`redirect_uri` ይመዘግባሉ። OmniRoute ይህን መቀየር አይችልም — አቅራቢው
+`redirect_uri` ይመዘግባሉ። 67router ይህን መቀየር አይችልም — አቅራቢው
 ሁልጊዜ አሳሹን ወደዚያው በኮድ የተወሰነ አድራሻ ይመልሳል፦
 
 | አቅራቢ        | አቅራቢው የሚያዞርበት ቋሚ callback             |
@@ -201,7 +201,7 @@ Codex፣ xAI (`xai-oauth`) እና Grok CLI (`grok-cli`) ከዋናው OAuth መ�
 | `xai-oauth` | `http://127.0.0.1:56121/callback`     |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`     |
 
-እዚያ ያለው `localhost` ማለት **አሳሹን የሚያስኬደው ማሽን** ሲሆን፣ የOmniRoute PKCE
+እዚያ ያለው `localhost` ማለት **አሳሹን የሚያስኬደው ማሽን** ሲሆን፣ የ67router PKCE
 callback አገልጋይ ደግሞ በ**አገልጋዩ** loopback ላይ ያዳምጣል። ዳሽቦርዱን እንደ
 `http://192.168.0.15:20128` ባለ LAN አድራሻ ላይ ከፈቱ፣ ሁለቱ ፈጽሞ አይገናኙም፦ የፈቃድ
 ኮዱ ምንም ነገር ወደማያዳምጥበት የራስዎ ላፕቶፕ `localhost:1455` ይላካል፣
@@ -221,7 +221,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 ሁለት forwards ያስፈልጋሉ፣ አንዱን ብቻ ወደፊት ማስተላለፍ አሁንም አይሠራም፦
 
 - **`20128`** (የዳሽቦርዱ port) originን ትክክለኛ-localhost ያደርገዋል፤ ይህም
-  OmniRoute የPKCE callback አገልጋዩን እንዲያስጀምር የሚያደርገው ነው — የLAN origin
+  67router የPKCE callback አገልጋዩን እንዲያስጀምር የሚያደርገው ነው — የLAN origin
   ወደዚያ branch ፈጽሞ አይደርስም።
 - **`1455`** (የአቅራቢው ቋሚ callback port) አሳሹ የሚመለስበት ቦታ
   ነው፤ በtunnel በኩል ወደ አገልጋዩ loopback መድረስ አለበት።
@@ -338,7 +338,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

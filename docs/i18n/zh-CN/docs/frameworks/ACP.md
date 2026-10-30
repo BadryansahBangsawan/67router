@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 将 **CLI 发现**、**原生 Agent Client Protocol** 和
+67router 将 **CLI 发现**、**原生 Agent Client Protocol** 和
 **旧版 stdio 适配器**区分开来。发现已安装的二进制文件并不能证明其
 身份验证、模型兼容性或处理提示词的就绪状态。
 

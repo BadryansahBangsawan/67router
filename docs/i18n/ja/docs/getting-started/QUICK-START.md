@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (日本語)
+# Quick Start: Get 67router Running in 3 Minutes (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **要約**: インストール → 対象プロバイダーに接続 → IDE の接続先を OmniRoute に設定。完了。
+> **要約**: インストール → 対象プロバイダーに接続 → IDE の接続先を 67router に設定。完了。
 
 ---
 
-## ステップ 1: OmniRoute をインストールする
+## ステップ 1: 67router をインストールする
 
 お好みの方法を選択してください。
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## ステップ 2: OmniRoute を起動する
+## ステップ 2: 67router を起動する
 
 ```bash
 omniroute
 ```
 
-OmniRoute は `http://localhost:20128` で起動します。ダッシュボードが自動的に開きます。
+67router は `http://localhost:20128` で起動します。ダッシュボードが自動的に開きます。
 
 ---
 
@@ -57,7 +57,7 @@ OmniRoute は `http://localhost:20128` で起動します。ダッシュボー�
 
 ## ステップ 4: 動作を確認する
 
-[API Keys](http://localhost:20128/dashboard/api-manager) で新しいキーを作成します。このキーは再表示されないため、安全に保管してください。このキーはツールから OmniRoute にアクセスするためのものであり、上流プロバイダーにアクセスするためのものではない点に注意してください。
+[API Keys](http://localhost:20128/dashboard/api-manager) で新しいキーを作成します。このキーは再表示されないため、安全に保管してください。このキーはツールから 67router にアクセスするためのものであり、上流プロバイダーにアクセスするためのものではない点に注意してください。
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 
 ---
 
-## ステップ 5: IDE または CLI の接続先を OmniRoute に設定する
+## ステップ 5: IDE または CLI の接続先を 67router に設定する
 
 IDE または CLI ツールで、次のように設定します。
 
@@ -77,7 +77,7 @@ API キー:   [Dashboard → Endpoints からコピー]
 モデル:     auto
 ```
 
-これで完了です！IDE から、プロバイダーが自動選択される OmniRoute を使用できるようになりました。
+これで完了です！IDE から、プロバイダーが自動選択される 67router を使用できるようになりました。
 
 ### IDE の例: VSCode／Continue.dev
 
@@ -92,7 +92,7 @@ API キー:   [Dashboard → Endpoints からコピー]
     apiKey: <YOUR_KEY>
 ```
 
-3. Continue.dev のチャットペインで `OmniRoute - Auto` を選択すると、OmniRoute にリクエストが送信されます。
+3. Continue.dev のチャットペインで `OmniRoute - Auto` を選択すると、67router にリクエストが送信されます。
 4. （任意）読者向けの演習 — IDE を使って、その他すべての構築済み設定を `config.yaml` に追加してみましょう 😊
 
 ### CLI の例: Codex CLI
@@ -110,19 +110,19 @@ Windows の場合（コマンドプロンプト）:
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. 次に、OmniRoute 用に構成して Codex を起動します。以下を実行してください。
+2. 次に、67router 用に構成して Codex を起動します。以下を実行してください。
 
 ```
 omniroute launch-codex --model auto
 ```
 
-`codex` とコマンドラインパラメーターを使用し、エンドポイントと API キーを指定して手動で設定することもできますが、上記のコマンドを使用すれば、OmniRoute がすべてを自動的に処理します。
+`codex` とコマンドラインパラメーターを使用し、エンドポイントと API キーを指定して手動で設定することもできますが、上記のコマンドを使用すれば、67router がすべてを自動的に処理します。
 
 汎用ランチャーを使えば、他の CLI も同様に 1 つのコマンドで起動できます。`omniroute run <target>` は `claude`、`codex`、`aider`、`goose`、`opencode`、`qwen`、`gemini` をサポートしています（[CLI 連携](../guides/CLI-INTEGRATIONS.md)を参照してください）。
 
-3. これで CLI から OmniRoute にリクエストが送信されます。
+3. これで CLI から 67router にリクエストが送信されます。
 
-### ツールが OmniRoute にルーティングされていることを確認する
+### ツールが 67router にルーティングされていることを確認する
 
 左側のサイドバーから [Monitoring/Logs](http://localhost:20128/dashboard/logs) をクリックすると、リクエストの詳細を確認できます。さらにクリックしていくと、より詳しい情報が表示されます。なお、お気に入りのハーネスからどのような情報が送信されているかも確認できます。これは学習やデバッグの観点で役立ちます。
 
@@ -130,7 +130,7 @@ omniroute launch-codex --model auto
 
 ## 次のステップ
 
-- **[自動コンボガイド](./AUTO-COMBO-GUIDE.md)** — OmniRoute に最適な AI を選択させる
+- **[自動コンボガイド](./AUTO-COMBO-GUIDE.md)** — 67router に最適な AI を選択させる
 - **[プロバイダーガイド](./PROVIDERS-GUIDE.md)** — その他のプロバイダー（無料・有料）に接続する
 - **[無料枠ガイド](./FREE-TIERS-GUIDE.md)** — プロバイダーの利用規約と無料枠の上限を確認する
 - **[トラブルシューティング](../guides/TROUBLESHOOTING.md)** — よくある問題を解決する
@@ -141,23 +141,23 @@ omniroute launch-codex --model auto
 
 ### 「API キーは必要ですか？」
 
-OmniRoute API キーは、ツールの認証に使用されます。アップストリームの認証情報はプロバイダーによって異なり、API キーやアカウントへのログインが必要な場合があります。無料での利用が保証されているわけではありません。
+67router API キーは、ツールの認証に使用されます。アップストリームの認証情報はプロバイダーによって異なり、API キーやアカウントへのログインが必要な場合があります。無料での利用が保証されているわけではありません。
 
 ### 「`auto` とは何ですか？」
 
-`auto` を指定すると、OmniRoute がリクエストごとに最適なプロバイダーを自動的に選択します。速度、コスト、品質、可用性が考慮されます。詳細については、[自動組み合わせガイド](./AUTO-COMBO-GUIDE.md)を参照してください。
+`auto` を指定すると、67router がリクエストごとに最適なプロバイダーを自動的に選択します。速度、コスト、品質、可用性が考慮されます。詳細については、[自動組み合わせガイド](./AUTO-COMBO-GUIDE.md)を参照してください。
 
 ### 「料金はいくらですか？」
 
-OmniRoute 自体は**無料のオープンソース**です。料金が発生するのは、利用するプロバイダーに対してのみです。多くのプロバイダーには無料利用枠があります。詳しくは、[無料利用枠ガイド](./FREE-TIERS-GUIDE.md)を参照してください。
+67router 自体は**無料のオープンソース**です。料金が発生するのは、利用するプロバイダーに対してのみです。多くのプロバイダーには無料利用枠があります。詳しくは、[無料利用枠ガイド](./FREE-TIERS-GUIDE.md)を参照してください。
 
 ### 「Claude Code / Cursor / Copilot で使用できますか？」
 
-**はい！** OmniRoute は、OpenAI 形式をサポートするすべてのツールで動作します。ベース URL を `http://localhost:20128/v1` に設定するだけです。具体的なセットアップ手順については、[CLI ツールガイド](../reference/CLI-TOOLS.md)を参照してください。
+**はい！** 67router は、OpenAI 形式をサポートするすべてのツールで動作します。ベース URL を `http://localhost:20128/v1` に設定するだけです。具体的なセットアップ手順については、[CLI ツールガイド](../reference/CLI-TOOLS.md)を参照してください。
 
 ### 「プロバイダーが停止した場合はどうなりますか？」
 
-OmniRoute は、障害が発生したプロバイダーを自動的にスキップし、次のプロバイダーを試します。ユーザー側で対応する必要はありません。詳細については、[自動組み合わせガイド](./AUTO-COMBO-GUIDE.md)を参照してください。
+67router は、障害が発生したプロバイダーを自動的にスキップし、次のプロバイダーを試します。ユーザー側で対応する必要はありません。詳細については、[自動組み合わせガイド](./AUTO-COMBO-GUIDE.md)を参照してください。
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute include un set atent selecționat de proxy-uri gratuite în tabelul `free_proxies`,
+67router include un set atent selecționat de proxy-uri gratuite în tabelul `free_proxies`,
 sincronizat de la furnizori externi (1proxy, proxifly, iplocate, webshare).
 Panoul de control le afișează în **Setări → Proxy-uri gratuite**. Acest document
 descrie filtrarea, sortarea, numărarea și raportarea erorilor de sincronizare pe

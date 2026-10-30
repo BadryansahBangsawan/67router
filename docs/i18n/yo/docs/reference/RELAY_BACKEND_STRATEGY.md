@@ -6,7 +6,7 @@
 
 ## Àkótán
 
-OmniRoute ti ń ṣe àtìlẹ́yìn fún àwọn ipò relay mẹ́ta báyìí fún `/api/v1/relay/chat/completions`:
+67router ti ń ṣe àtìlẹ́yìn fún àwọn ipò relay mẹ́ta báyìí fún `/api/v1/relay/chat/completions`:
 
 - `ts`: Lo relay TypeScript nínú process náà.
 - `bifrost`: Fipá mú lílo gateway Bifrost.
@@ -45,12 +45,12 @@ Tí o bá ń fi 9router/CLIPROXYAPI wéra lọ́wọ́lọ́wọ́:
 
 ## Àdéhùn ààlà backend
 
-Ààlà product tó dúró ṣinṣin ni API relay OmniRoute, kì í ṣe implementation dashboard. Dashboard Next.js lè fi àwọn service local sílẹ̀, configure wọn, kí ó sì supervise wọn, ṣùgbọ́n request routing gbọ́dọ̀ wọlé nípasẹ̀ API relay, kí handoff sì ṣẹlẹ̀ lẹ́yìn ààlà yẹn.
+Ààlà product tó dúró ṣinṣin ni API relay 67router, kì í ṣe implementation dashboard. Dashboard Next.js lè fi àwọn service local sílẹ̀, configure wọn, kí ó sì supervise wọn, ṣùgbọ́n request routing gbọ́dọ̀ wọlé nípasẹ̀ API relay, kí handoff sì ṣẹlẹ̀ lẹ́yìn ààlà yẹn.
 
 Àwọn àṣàyàn backend fún ìgbà pípẹ́:
 
 - Pa relay TypeScript mọ́ gẹ́gẹ́ bí ọ̀nà policy àti fallback inú process. Auth, allowlists, request normalization, accounting, àti àwọn àyẹ̀wò safety dúró síbí ṣáájú handoff sí backend èyíkéyìí.
-- Lo Bifrost gẹ́gẹ́ bí sidecar Tier-1 high-throughput tí a fẹ́ràn jù nígbà tí deployment bá nílò variance routing tó kéré sí i, rotation provider tó wà ní àárín gbùngbùn, tàbí scale-out kọjá ọ̀pọ̀ replica OmniRoute.
+- Lo Bifrost gẹ́gẹ́ bí sidecar Tier-1 high-throughput tí a fẹ́ràn jù nígbà tí deployment bá nílò variance routing tó kéré sí i, rotation provider tó wà ní àárín gbùngbùn, tàbí scale-out kọjá ọ̀pọ̀ replica 67router.
 - Pa 9router àti CLIPROXYAPI mọ́ gẹ́gẹ́ bí àwọn service compatibility embedded. Wọ́n ń ṣiṣẹ́ gẹ́gẹ́ bí àwọn process local tí a ń supervise, wọ́n sì wúlò nígbà tí ìhùwàsí provider/CLI wọn bá jẹ́ adapter tí a fẹ́, ṣùgbọ́n wọn kò gbọ́dọ̀ di engine routing Tier-1 àìyípadà.
 - Má ṣe jẹ́ kí dashboard fi àwọn URL service aláìlódì sí hot path. Àwọn URL tí UI pèsè jẹ́ àwọn input configuration; kóòdù routing gbọ́dọ̀ resolve àwọn backend tí a forúkọsílẹ̀, tí a sì ti ṣe health-check wọn láti inú àwọn setting server-side àti state supervisor.
 - Fẹ́ràn loopback HTTP fún àwọn service tí a ń supervise lónìí nítorí àwọn process tí a ń manage ti ń pèsè àwọn API tó bá HTTP mu, route guard lè audit ààlà náà, ìhùwàsí failure/fallback sì hàn nínú request logs. Ó yẹ kí a fi transport SDK tàbí socket kan kún un lọ́jọ́ iwájú nìkan tí ó bá dín latency routing p99 kù lọ́nà tí a lè wọn, láìsọ isolation tàbí semantics fallback di aláìlágbára.

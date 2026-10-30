@@ -6,7 +6,7 @@
 
 ## Pangkalahatang-ideya
 
-Ang lahat ng ruta ng API sa pamamahala ng OmniRoute ay inuuri sa isa sa tatlong antas ng
+Ang lahat ng ruta ng API sa pamamahala ng 67router ay inuuri sa isa sa tatlong antas ng
 proteksiyon. Hindi nagbabago ang pag-uuri, tinutukoy ito sa `src/server/authz/routeGuard.ts`,
 at sinusuri bago tumakbo ang anumang iba pang sangay ng awtentikasyon.
 
@@ -28,9 +28,9 @@ Cloudflared/Ngrok tunnel) — isang kilalang klase ng CVE
 **Ano ang GHSA-fhh6-4qxv-rpqj (ang klase ng pag-atake):** naglalantad ang isang management/agent server
 ng endpoint na naglulunsad ng subprocess (`npm install`, `node`, isang browser,
 isang proxy, `git`, `tar`, …). Kung maaabot ang endpoint na iyon mula sa labas ng host — dahil
-inilagay ng operator ang OmniRoute sa likod ng isang nginx/Cloudflare/Tailscale tunnel at may
+inilagay ng operator ang 67router sa likod ng isang nginx/Cloudflare/Tailscale tunnel at may
 na-leak na JWT, o mali ang pagkaka-configure ng auth — nagagawa ng attacker na gawing "magpatakbo
-ng command sa host" (remote code execution) ang "tumawag sa isang API." Isinasara ng OmniRoute
+ng command sa host" (remote code execution) ang "tumawag sa isang API." Isinasara ng 67router
 ang kahinaang ito sa pamamagitan ng **walang-kondisyong pagpapatupad ng pagsusuri sa loopback host,
 bago ang anumang pagsusuri sa auth**, sa bawat route na maaaring maglunsad ng process: kahit ang
 na-leak na token sa pamamagitan ng tunnel ay hindi pa rin makakarating sa spawn.
@@ -120,7 +120,7 @@ para sa mga remote na MCP-only caller na hindi dapat mangailangan ng malawak na 
 
 #### Patnubay para sa operator at pag-audit
 
-Kung pinapatakbo mo ang OmniRoute sa likod ng reverse proxy o tunnel (nginx, Caddy, Cloudflare
+Kung pinapatakbo mo ang 67router sa likod ng reverse proxy o tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), pinoprotektahan pa rin ng loopback check ang mga route sa itaas na
 may kakayahang mag-spawn — ang isang request na may non-loopback na client address ay tinatanggihan gamit ang
 `403 LOCAL_ONLY` **bago patakbuhin ang auth**, kaya hindi makakaabot sa spawn ang isang leaked na JWT. May natitira pang dalawang
@@ -158,7 +158,7 @@ responsibilidad ang operator:
 - Hanapin gamit ang grep sa iyong reverse-proxy / access logs ang mga prefix sa itaas na ipinares sa
   isang hindi loopback na client address. Anumang ganoong hit na nagbalik ng `200` sa halip na
   `403 LOCAL_ONLY` ay nangangahulugang itinatago ng proxy ang tunay na client IP — ayusin ang proxy.
-- Ang `403 LOCAL_ONLY` sa mga log ng OmniRoute para sa isa sa mga path na ito ay nangangahulugang
+- Ang `403 LOCAL_ONLY` sa mga log ng 67router para sa isa sa mga path na ito ay nangangahulugang
   gumagana ang guard ayon sa nilalayon, hindi isang error na dapat pigilan.
 
 #### Mga route na maaabot nang malayuan na may call-site probe gate

@@ -7,11 +7,11 @@
 မျှဝေထားသော executable manifest၊ ကန့်သတ်ထားသည့် child environment များနှင့် အမြဲတမ်းသိမ်းဆည်းထားသော
 Gemini setup အကြောင်းကို [CLI စတင်ခြင်းဆိုင်ရာ သဘောတူညီချက်များ](./CLI-LAUNCH-CONTRACTS.md) တွင် ကြည့်ပါ။
 
-OmniRoute တွင် coding CLI (Codex, Claude Code, OpenCode, Cline, …) ကို
-၎င်း၏ backend အဖြစ် OmniRoute အသုံးပြုရန် စီစဉ်ပေးသည့် `setup-*` command မျိုးစုံ ပါဝင်သည် — ထို့ကြောင့်
-tool သည် endpoint **တစ်ခုတည်း** နှင့် ဆက်သွယ်ပြီး OmniRoute က သင့်တော်သော provider ထံသို့
+67router တွင် coding CLI (Codex, Claude Code, OpenCode, Cline, …) ကို
+၎င်း၏ backend အဖြစ် 67router အသုံးပြုရန် စီစဉ်ပေးသည့် `setup-*` command မျိုးစုံ ပါဝင်သည် — ထို့ကြောင့်
+tool သည် endpoint **တစ်ခုတည်း** နှင့် ဆက်သွယ်ပြီး 67router က သင့်တော်သော provider ထံသို့
 အလိုအလျောက် အရန်ပြောင်းသုံးခြင်းဖြင့် လမ်းကြောင်းခွဲပေးသည်။ Command တစ်ခုစီသည် လည်ပတ်နေသော
-OmniRoute (local သို့မဟုတ် remote) မှ **လက်ရှိအသုံးပြုနေသော** model catalog ကို ဖတ်ပြီး
+67router (local သို့မဟုတ် remote) မှ **လက်ရှိအသုံးပြုနေသော** model catalog ကို ဖတ်ပြီး
 tool ကိုယ်ပိုင် config file ကို **သင့်** စက်ပေါ်တွင် ရေးသားသည်။ Tool က ပံ့ပိုးသည့်နေရာတိုင်းတွင်
 API key ကို environment variable ဖြင့် ရည်ညွှန်းထားသည်။ Tool-local environment file ကို
 အမြဲတမ်းသိမ်းဆည်းသော command များကို အောက်တွင် မှတ်သားဖော်ပြထားသည်။
@@ -56,7 +56,7 @@ tool တစ်ခုချင်းစီဆိုင်ရာ အသေးစ�
 
 - [Claude Code စီစဉ်သတ်မှတ်ခြင်း](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI စီစဉ်သတ်မှတ်ခြင်း](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — သင့် laptop မှ remote OmniRoute (VPS / Tailnet) ကို ထိန်းချုပ်အသုံးပြုပါ
+- [Remote Mode](./REMOTE-MODE.md) — သင့် laptop မှ remote 67router (VPS / Tailnet) ကို ထိန်းချုပ်အသုံးပြုပါ
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot extension ဖြစ်ပြီး editor အတွင်းမှ
   ဤ `setup-*` command များကိုလည်း သင့်အတွက် လုပ်ဆောင်ပေးနိုင်သည်
 
@@ -91,7 +91,7 @@ Command တိုင်းသည် **လက်ရှိအသုံးပြု
 
 flag များနှင့်ပတ်သက်သော မှတ်ချက်များ (command source တွင် အတည်ပြုပြီးဖြစ်သည်):
 
-- `--remote <url>` — အဝေးရှိ OmniRoute တစ်ခုမှ catalog ကို ရယူသည် (`--port`
+- `--remote <url>` — အဝေးရှိ 67router တစ်ခုမှ catalog ကို ရယူသည် (`--port`
   နှင့် လက်ရှိအသုံးပြုနေသော context ကို အစားထိုးလွှမ်းမိုးသည်)။ `--api-key <key>` သည် ထို
   server အတွက် credential ကို ပေးသည် (`OMNIROUTE_API_KEY` env var သို့မဟုတ် လက်ရှိ context ၏ token ကို မူလသတ်မှတ်ချက်အဖြစ် အသုံးပြုသည်)။
 - `--only <patterns>` — ကော်မာဖြင့်ခွဲထားသော substring များဖြစ်ပြီး ကိုက်ညီသော model ID များကိုသာ
@@ -112,7 +112,7 @@ flag များနှင့်ပတ်သက်သော မှတ်ချ�
   **codex** သည် `-c model_providers.omniroute.*` args မှတစ်ဆင့် ရရှိသည်။ **Qwen သည် `--model` ကို
   မဖြစ်မနေလိုအပ်သည့် တစ်ခုတည်းသော run target ဖြစ်သည်** — ၎င်းမပါဘဲ `omniroute run qwen` ကို လုပ်ဆောင်ပါက
   ရှင်းလင်းသော error တစ်ခုနှင့်အတူ `2` ဖြင့် ထွက်သည်။
-- `--port <port>` — ဒေသတွင်း OmniRoute port (မူလသတ်မှတ်ချက် `20128` ဖြစ်ပြီး `--remote`
+- `--port <port>` — ဒေသတွင်း 67router port (မူလသတ်မှတ်ချက် `20128` ဖြစ်ပြီး `--remote`
   သတ်မှတ်ထားသည့်အခါ လျစ်လျူရှုသည်)။ `setup-*` အားလုံးနှင့် launcher နှစ်ခုလုံးတွင် ပါရှိသည်။
 - `omniroute run` ၏ exit code များ — child CLI ၏ ကိုယ်ပိုင် exit code ကို
   မပြောင်းလဲဘဲ ဆက်လက်ပို့ပေးသည်။ `2` = မမှန်ကန်သော argument များ (မပံ့ပိုးသော target၊ လိုအပ်သည့်
@@ -157,7 +157,7 @@ MITM နှင့် လမ်းညွှန်သီးသန့် catalog en
 
 ## စက်တွင်း အသုံးပြုမှု
 
-OmniRoute ကို `localhost:20128` တွင် လည်ပတ်ထားပြီး သင့်ကိရိယာအတွက် setup command ကိုသာ run ပါ။ catalog ကို local server မှ ရယူပါမည်။
+67router ကို `localhost:20128` တွင် လည်ပတ်ထားပြီး သင့်ကိရိယာအတွက် setup command ကိုသာ run ပါ။ catalog ကို local server မှ ရယူပါမည်။
 
 ```bash
 # Codex: ကိုက်ညီသော model တစ်ခုစီအတွက် profile တစ်ခုကို ~/.codex/ ထဲသို့ ရေးပါ
@@ -184,8 +184,8 @@ omniroute setup-continue --dry-run
 မည်သည့် config ကိုမျှ မရေးဘဲ စတင်ပါ (env-injection သီးသန့်)-
 
 ```bash
-omniroute launch                 # Claude Code → local OmniRoute
-omniroute launch-codex           # Codex CLI → local OmniRoute
+omniroute launch                 # Claude Code → local 67router
+omniroute launch-codex           # Codex CLI → local 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -203,7 +203,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## အဝေးမှ အသုံးပြုမှု
 
-မည်သည့် setup command ကိုမဆို `--remote` + `--api-key` ဖြင့် အဝေးရှိ OmniRoute သို့ ညွှန်ပါ။ catalog ကို remote မှ ရယူပြီး config ကို သင့် local machine ပေါ်တွင် ရေးပါမည်။
+မည်သည့် setup command ကိုမဆို `--remote` + `--api-key` ဖြင့် အဝေးရှိ 67router သို့ ညွှန်ပါ။ catalog ကို remote မှ ရယူပြီး config ကို သင့် local machine ပေါ်တွင် ရေးပါမည်။
 
 ```bash
 # Remote VPS ရှိ OpenCode အတွက် glm/kimi model များကိုသာ ထားပါ
@@ -241,7 +241,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-ပုံစံနှစ်မျိုးလုံးသည် 5dive **auth profile** တစ်ခုကို ရေးပေးပြီး ထို profile နှင့် ချိတ်ထားသော `claude` seat အားလုံးသည် ထို့နောက် OmniRoute နှင့် ဆက်သွယ်ပါမည်။ ဤ target အတွက် သီးခြားဖြစ်သော အချက်သုံးချက်ရှိသည်-
+ပုံစံနှစ်မျိုးလုံးသည် 5dive **auth profile** တစ်ခုကို ရေးပေးပြီး ထို profile နှင့် ချိတ်ထားသော `claude` seat အားလုံးသည် ထို့နောက် 67router နှင့် ဆက်သွယ်ပါမည်။ ဤ target အတွက် သီးခြားဖြစ်သော အချက်သုံးချက်ရှိသည်-
 
 - **၎င်းသည် fleet host ပေါ်တွင် root အဖြစ် လည်ပတ်သည်။** 5dive ၏ verb များသည် local systemd unit များနှင့် root ပိုင်ဆိုင်သော state dir တစ်ခုအပေါ် လုပ်ဆောင်သောကြောင့် remote mode မရှိပါ။ root မဖြစ်သေးသည့်အခါ recipe သည် `sudo` မှတစ်ဆင့် ပြန်လည် execute လုပ်သည် (`--no-sudo` သည် ယင်းကို ပိတ်ပြီး အစားထိုးအနေဖြင့် command ကို ထုတ်ပြသည်)။
 - **Loopback မဟုတ်ပါက endpoint သည် `https://` ဖြစ်ရမည်။** Agent ၏ API key သည် request တိုင်းတွင် ထို URL မှတစ်ဆင့် ပါသွားပြီး 5dive သည် စက်ပြင်ပသို့ plaintext ဖြင့် ဆက်သွယ်သည့် endpoint ကို လက်မခံပါ။ Private LAN address သည်လည်း ခြွင်းချက်မဟုတ်ပါ။
@@ -249,13 +249,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API key ကို **stdin** (`--api-key=-`) မှတစ်ဆင့် 5dive ထံ လွှဲပေးသောကြောင့် ၎င်းသည် `ps` output တွင် လုံးဝပေါ်လာမည်မဟုတ်ပါ။
 
-Profile ကို model တစ်ခုတည်းအစား OmniRoute **combo** တစ်ခုသို့ ညွှန်ခြင်းဖြင့် fleet provider failover ကို ရရှိစေသည်။ [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) တွင် မှတ်တမ်းတင်ထားသော run အတွင်း primary endpoint သည် turn တစ်ခု၏ အလယ်တွင် လုံးဝ ရပ်တန့်သွားသောအခါ agent သည် ကျန်ရှိသော အဆင့်များကို fallback ပေါ်တွင် ပြီးဆုံးစေခဲ့ပြီး ပြတ်တောက်မှုကို အသုံးပြုသူထံ မဖော်ပြခဲ့ပါ။
+Profile ကို model တစ်ခုတည်းအစား 67router **combo** တစ်ခုသို့ ညွှန်ခြင်းဖြင့် fleet provider failover ကို ရရှိစေသည်။ [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) တွင် မှတ်တမ်းတင်ထားသော run အတွင်း primary endpoint သည် turn တစ်ခု၏ အလယ်တွင် လုံးဝ ရပ်တန့်သွားသောအခါ agent သည် ကျန်ရှိသော အဆင့်များကို fallback ပေါ်တွင် ပြီးဆုံးစေခဲ့ပြီး ပြတ်တောက်မှုကို အသုံးပြုသူထံ မဖော်ပြခဲ့ပါ။
 
 ---
 
 ## Base URL သတ်မှတ်ချက်များ (`/v1` ကို လိုအပ်သည့် ကိရိယာများ)
 
-OmniRoute သည် OpenAI မျက်နှာပြင်ကို `/v1` တွင်၊ Anthropic မျက်နှာပြင်ကို root တွင်၊
+67router သည် OpenAI မျက်နှာပြင်ကို `/v1` တွင်၊ Anthropic မျက်နှာပြင်ကို root တွင်၊
 နှင့် မူရင်း Gemini မျက်နှာပြင်ကို `/v1beta` တွင် ဖော်ထုတ်ပေးသည်။ ပေါင်းစည်းမှုတစ်ခုစီကို
 ၎င်း၏ကိရိယာက မျှော်လင့်ထားသည့် ပုံစံအတိုင်း ချိတ်ဆက်သတ်မှတ်ထားသည် (command source တွင် အတည်ပြုပြီးဖြစ်သည်):
 
@@ -277,7 +277,7 @@ OmniRoute သည် OpenAI မျက်နှာပြင်ကို `/v1` တ�
 ## Update လုပ်စဉ် native dependencies များကို ထိန်းသိမ်းထားခြင်း: `--include=optional`
 
 `omniroute update` ဖြင့် update လုပ်သည့်အခါ (အတည်ပြုပြီးနောက် သို့မဟုတ် `--apply` ဖြင့်)
-OmniRoute သည် `--include=optional` ကို မူလကတည်းက ထည့်သွင်းထားသော install command ကို လုပ်ဆောင်သည်။
+67router သည် `--include=optional` ကို မူလကတည်းက ထည့်သွင်းထားသော install command ကို လုပ်ဆောင်သည်။
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -306,15 +306,15 @@ exit 1 ပြန်ပေးသည်)၊ `--apply` (အတည်ပြုချ
 `@google/gemini-cli` 0.50.0 နှင့် တိုက်ဆိုင်စစ်ဆေး၍ contract ကို အတည်ပြုပြီးဖြစ်သည်။ CLI သည်
 `GOOGLE_GEMINI_BASE_URL` ကို လိုက်နာပြီး ၎င်းထံသို့
 `POST /v1beta/models/<model>:generateContent`
-(နှင့် `:streamGenerateContent?alt=sse`) ကို ပေးပို့သည် — OmniRoute ၏ native
+(နှင့် `:streamGenerateContent?alt=sse`) ကို ပေးပို့သည် — 67router ၏ native
 Gemini surface (`/v1beta`) နှင့် အတိအကျပင် ဖြစ်သည်။ `omniroute run gemini` က
 ၎င်းကို အလိုအလျောက် ချိတ်ဆက်သတ်မှတ်ပေးသည်-
 
-- `GOOGLE_GEMINI_BASE_URL` → လက်ရှိအသုံးပြုနေသော OmniRoute base URL (root၊ `/v1` မပါ)၊
-- `GEMINI_API_KEY` → ဆုံးဖြတ်ရရှိထားသော OmniRoute credential (option/env/context)၊
+- `GOOGLE_GEMINI_BASE_URL` → လက်ရှိအသုံးပြုနေသော 67router base URL (root၊ `/v1` မပါ)၊
+- `GEMINI_API_KEY` → ဆုံးဖြတ်ရရှိထားသော 67router credential (option/env/context)၊
 - `gemini-api-key` auth ကို ရွေးချယ်ထားသည့် `.gemini/settings.json` ပါဝင်သော
   **ယာယီ သီးခြားခွဲထားသည့် `GEMINI_CLI_HOME`**၊ ထို့ကြောင့် သိမ်းဆည်းထားသော Google OAuth session
-  (Code Assist) က OmniRoute သို့ ဦးတည်ထားသည့် launch ကို မည်သည့်အခါမျှ ကျော်လွှားအစားထိုးမည်မဟုတ်ပါ —
+  (Code Assist) က 67router သို့ ဦးတည်ထားသည့် launch ကို မည်သည့်အခါမျှ ကျော်လွှားအစားထိုးမည်မဟုတ်ပါ —
   exit ပြီးနောက် ဖယ်ရှားပစ်သည်၊
 - **env သန့်ရှင်းရေး**- child env မှ `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` နှင့် `GOOGLE_GENAI_USE_GCA` (auth ကို Vertex/Code Assist သို့
@@ -339,7 +339,7 @@ ACP registration သည် `/dashboard/acp-agents` အတွက် agent-protoco
 ## လက်တွေ့ smoke sweep (ရွေးချယ်ဖွင့်သုံးနိုင်သည်)
 
 တိကျသေချာစွာ ထပ်တလဲလဲလုပ်ဆောင်နိုင်သော launch-plan regression ကို CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`) တွင် လုပ်ဆောင်ပါသည်။ လက်တွေ့ OmniRoute server နှင့် လက်တွေ့ binary များကို စစ်ဆေးအတည်ပြုရန် ရွေးချယ်ဖွင့်သုံးနိုင်သော harness ကို
+`tests/unit/cli/run-execution.test.ts`) တွင် လုပ်ဆောင်ပါသည်။ လက်တွေ့ 67router server နှင့် လက်တွေ့ binary များကို စစ်ဆေးအတည်ပြုရန် ရွေးချယ်ဖွင့်သုံးနိုင်သော harness ကို
 `tests/integration/upstream-cli-smoke.int.test.ts` တွင် ထည့်သွင်းထားပါသည်။ ၎င်းသည် အလိုအလျောက် မည်သည့်အခါမျှ မလုပ်ဆောင်ပါ
 (`RUN_CLI_SMOKE=1` မသတ်မှတ်ထားလျှင် sub-test တစ်ခုစီကို ကျော်သွားမည်)၊ အထောက်အထားကို တန်ဖိုးဖြင့်မဟုတ်ဘဲ env-var
 အမည်ဖြင့် ပေးပို့သည်၊ မှတ်တမ်းတင်ထားသော output များမှ key ပုံစံ string များကို ဖုံးကွယ်သည်၊

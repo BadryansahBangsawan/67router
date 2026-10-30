@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute vključuje skrbno izbran nabor brezplačnih posredniških strežnikov v tabeli `free_proxies`,
+67router vključuje skrbno izbran nabor brezplačnih posredniških strežnikov v tabeli `free_proxies`,
 sinhroniziranih z zunanjimi ponudniki (1proxy, proxifly, iplocate, webshare).
 Nadzorna plošča jih prikazuje pod **Nastavitve → Brezplačni posredniški strežniki**. Ta dokument
 opisuje strežniško filtriranje, razvrščanje, štetje in poročanje o napakah pri sinhronizaciji,

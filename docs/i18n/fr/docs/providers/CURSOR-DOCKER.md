@@ -4,7 +4,7 @@
 
 ---
 
-Lorsque OmniRoute s’exécute dans Docker, les anciens flux **Importer depuis Cursor IDE** /
+Lorsque 67router s’exécute dans Docker, les anciens flux **Importer depuis Cursor IDE** /
 `cursor-agent` échouent, car le conteneur ne peut pas accéder à l’installation
 de Cursor sur l’hôte. Utilisez plutôt **Se connecter avec Cursor** (PKCE deep-control).
 
@@ -14,7 +14,7 @@ de Cursor sur l’hôte. Utilisez plutôt **Se connecter avec Cursor** (PKCE dee
    `~/.config/Cursor/User/globalStorage/state.vscdb` _à l’intérieur_ du conteneur.
    Avec Docker Desktop pour macOS, la base de données de l’IDE hôte n’est pas montée par défaut, et
    le système d’exploitation du conteneur est Linux même lorsque l’hôte est Darwin.
-2. **Absence du binaire `cursor-agent`** — Les images OmniRoute officielles n’incluent pas
+2. **Absence du binaire `cursor-agent`** — Les images 67router officielles n’incluent pas
    `cursor-agent`. Auparavant, Modèles disponibles exécutait
    `cursor-agent --list-models` dans un shell, puis se rabattait sur un catalogue statique.
 3. **Binaire incorrect** — Ne montez **pas** par liaison un `cursor-agent` macOS dans un
@@ -24,11 +24,11 @@ de Cursor sur l’hôte. Utilisez plutôt **Se connecter avec Cursor** (PKCE dee
 
 1. Ouvrez **Tableau de bord → Fournisseurs → Cursor**.
 2. Sélectionnez l’onglet **Se connecter avec Cursor**.
-3. Cliquez sur **Se connecter avec Cursor** — OmniRoute ouvre
+3. Cliquez sur **Se connecter avec Cursor** — 67router ouvre
    `https://cursor.com/loginDeepControl?…` dans le navigateur de votre **hôte**.
-4. Autorisez la connexion dans le navigateur, puis revenez au tableau de bord. OmniRoute
+4. Autorisez la connexion dans le navigateur, puis revenez au tableau de bord. 67router
    interroge `api2.cursor.sh/auth/poll` jusqu’à la réception des jetons.
-5. OmniRoute stocke les jetons **d’accès + d’actualisation** et les actualise via
+5. 67router stocke les jetons **d’accès + d’actualisation** et les actualise via
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Cette méthode ne nécessite ni Cursor IDE ni `cursor-agent` à l’intérieur du conteneur.
@@ -37,10 +37,10 @@ Cette méthode ne nécessite ni Cursor IDE ni `cursor-agent` à l’intérieur d
 
 Avec une connexion authentifiée, **Modèles disponibles / Synchronisation automatique** privilégie le
 catalogue HTTP `AiService/AvailableModels` de Cursor à l’aide du jeton Bearer de la connexion.
-En cas d’échec, OmniRoute essaie tout de même le `cursor-agent` de l’hôte (s’il est présent), puis
+En cas d’échec, 67router essaie tout de même le `cursor-agent` de l’hôte (s’il est présent), puis
 les données initiales du registre statique.
 
-OmniRoute expose toujours **`auto`** dans le catalogue (affiché comme « Auto »), ainsi que
+67router expose toujours **`auto`** dans le catalogue (affiché comme « Auto »), ainsi que
 les modes de routage de style OpenCodex **`auto-cost`**, **`auto-balance`** et
 **`auto-intelligence`**. Dans les échanges réseau, ceux-ci correspondent au modèle `default` de Cursor
 (avec un `ModelParameter` `optimization` pour les trois variantes). Privilégiez
@@ -87,7 +87,7 @@ seule n’est plus nécessaire).
 ## Tours vides / quota épuisé
 
 Lorsque Cursor accepte une exécution mais ne renvoie aucun texte d’assistant (ce qui est courant lorsque le quota
-premium est épuisé), OmniRoute présente une erreur **429** exploitable (avec des indications sur le quota) ou
+premium est épuisé), 67router présente une erreur **429** exploitable (avec des indications sur le quota) ou
 une erreur **502** accompagnée d’instructions — et non un simple message « Le fournisseur a renvoyé un contenu vide ». Les échecs
 de streaming tels que `not_found: AI Model Not Found` (fenêtre d’utilisation épuisée) sont
 classés comme **limite de débit Cursor / utilisation dépassée** et conservent ce message
@@ -97,7 +97,7 @@ les limites de l’abonnement Cursor.
 
 ## Version du client (sans interface graphique)
 
-Sans installation locale de `cursor-agent`, OmniRoute détermine
+Sans installation locale de `cursor-agent`, 67router détermine
 `x-cursor-client-version` à partir de la variable d’environnement `CURSOR_AGENT_CLI_VERSION`, puis d’une
 analyse, mise en cache sur disque, du script d’installation de Cursor, et enfin d’un identifiant de build épinglé. Remplacez-la à l’aide de
 `CURSOR_AGENT_CLI_VERSION` si nécessaire.

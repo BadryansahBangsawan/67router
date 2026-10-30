@@ -7,7 +7,7 @@
 > **Sanningskälla:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute kan utlösa HTTP-webhooks vid plattformshändelser. Använd dem för att integrera med
+67router kan utlösa HTTP-webhooks vid plattformshändelser. Använd dem för att integrera med
 Slack, PagerDuty, Datadog, interna aviseringstjänster eller valfri HTTP-mottagare.
 
 Dispatcher-komponenten signerar varje leverans med HMAC-SHA256, försöker igen vid tillfälliga
@@ -54,7 +54,7 @@ fel per webhook så att en felaktig mottagare inte kan blockera de andra.
 
 ## HMAC-signering
 
-När en webhook har en `secret` signerar OmniRoute JSON-brödtexten och skickar:
+När en webhook har en `secret` signerar 67router JSON-brödtexten och skickar:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Instrumentpanelsidan på `/dashboard/webhooks` (se
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Testleverans av webhook från OmniRoute",
+    "message": "Testleverans av webhook från 67router",
     "webhookId": "<uuid>"
   }
 }

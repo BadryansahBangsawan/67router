@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookieプロバイダーを使用すると、APIキーの代わりに既存のブラウザーセッションを通じてOmniRouteからAIサービスを利用できます。Webサイト経由ですでにサービスへのアクセス権があり、OmniRouteでも同じ認証済みセッションを使用したい場合に便利です。
+Web Cookieプロバイダーを使用すると、APIキーの代わりに既存のブラウザーセッションを通じて67routerからAIサービスを利用できます。Webサイト経由ですでにサービスへのアクセス権があり、67routerでも同じ認証済みセッションを使用したい場合に便利です。
 
 APIキープロバイダーとは異なり、Web Cookieプロバイダーは、ブラウザーがWebサイトに送信する認証情報を使用して認証します。
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie`リクエストヘッダーには、ブラウザーが正常に使用した認証情報がそのまま含まれています。
 
-ほとんどのWeb Cookieプロバイダーでは、この値をOmniRouteに貼り付けます。
+ほとんどのWeb Cookieプロバイダーでは、この値を67routerに貼り付けます。
 
 ---
 
@@ -63,7 +63,7 @@ DevTools
 4. ページを更新します。
 5. 認証済みのチャットまたは会話のリクエストを開きます。
 6. 必要な認証情報をコピーします。
-7. OmniRouteを開きます。
+7. 67routerを開きます。
 8. **Providers → Add Provider**に移動します。
 9. 使用するWeb Cookieプロバイダーを選択します。
 10. 認証情報を貼り付けます。
@@ -92,17 +92,17 @@ DevTools
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) は、登録不要で利用できる無料の一般消費者向けチャットプラットフォームです。初回アクセス時に匿名でセッションが作成され、`uid`、`si_usr_id`、`si_ses_id` の3つの Cookie によって維持されます。OmniRoute は、単一のモデル ID（`notrack-c`、エイリアスは `ntw`）を介して、同じ `/api/dispatch` エンドポイントをプロキシします。
+NoTrack ([notrack.ai](https://notrack.ai)) は、登録不要で利用できる無料の一般消費者向けチャットプラットフォームです。初回アクセス時に匿名でセッションが作成され、`uid`、`si_usr_id`、`si_ses_id` の3つの Cookie によって維持されます。67router は、単一のモデル ID（`notrack-c`、エイリアスは `ntw`）を介して、同じ `/api/dispatch` エンドポイントをプロキシします。
 
 ### 接続手順
 
 1. ブラウザで [notrack.ai](https://notrack.ai) を開き、匿名セッション Cookie が設定されるまで待ちます。
 2. **DevTools → Network** を開き、ページを更新して、任意の `/api` リクエストをクリックします。
 3. **Request Headers** で、`Cookie` ヘッダーの値全体をコピーします。
-4. OmniRoute で、**Providers → Add Provider → NoTrack Web (Free)** に移動します。
+4. 67router で、**Providers → Add Provider → NoTrack Web (Free)** に移動します。
 5. Cookie 文字列を `apiKey` フィールドに貼り付け、**Save** をクリックします。
 
-OmniRoute は、貼り付けられた文字列から `uid`、`si_usr_id`、`si_ses_id` を抽出し、それらのペアのみを含むクリーンな `Cookie` ヘッダーを再構築します。また、存在する場合は `nt_session`（ログイン済みアカウントに設定される `ntk_…` トークン）も追加されます。3つのうちいずれかが欠けている場合、運用者が別の形式を試せるよう、貼り付けられた元の文字列が変更されずに転送されます。
+67router は、貼り付けられた文字列から `uid`、`si_usr_id`、`si_ses_id` を抽出し、それらのペアのみを含むクリーンな `Cookie` ヘッダーを再構築します。また、存在する場合は `nt_session`（ログイン済みアカウントに設定される `ntk_…` トークン）も追加されます。3つのうちいずれかが欠けている場合、運用者が別の形式を試せるよう、貼り付けられた元の文字列が変更されずに転送されます。
 
 ### モデル ID
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## ブラウザーではCookieが機能するがOmniRouteでは機能しない
+## ブラウザーではCookieが機能するが67routerでは機能しない
 
 一部のプロバイダーには、認証済みリクエストでのみ送信されるCookieが含まれています。
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menentukan pemacu SQLite semasa permulaan melalui rantaian sandaran 5 langkah:
+67router menentukan pemacu SQLite semasa permulaan melalui rantaian sandaran 5 langkah:
 
 1. **`better-sqlite3` terbina dalam** (melalui `dependencies` dalam `package.json`)
    — paling pantas, binari natif, dipasang oleh `npm install` apabila alat binaan tersedia.
@@ -28,13 +28,13 @@ OmniRoute menentukan pemacu SQLite semasa permulaan melalui rantaian sandaran 5 
 - **Tiada alat binaan**: Sesetengah persekitaran (Windows korporat tanpa VS Build
   Tools, imej Docker minimum) tidak boleh mengkompil `better-sqlite3`. Pemasang semasa
   jalanan mendapatkan binari prabina daripada registri npm; pemacu sandaran
-  memastikan OmniRoute masih boleh dimulakan walaupun proses tersebut gagal.
+  memastikan 67router masih boleh dimulakan walaupun proses tersebut gagal.
 - **Sistem terpencil daripada rangkaian**: Jika registri npm tidak dapat dicapai, `node:sqlite`
   atau `sql.js` menjamin kefungsian asas.
 
 ## Pengesahan bait magik
 
-Sebelum memuatkan fail `.node` yang dipasang semasa jalanan, OmniRoute membaca 8
+Sebelum memuatkan fail `.node` yang dipasang semasa jalanan, 67router membaca 8
 bait pertama dan memadankannya dengan bait magik platform yang diketahui:
 
 | Platform              | Bait (heks)   | Label       |
@@ -104,9 +104,9 @@ Pelaksanaan:
 ## Topologi penulis tunggal (HA tidak disokong)
 
 Rantaian sandaran pemacu di atas masih berjalan dalam **satu proses**. Secara lalai, SQLite
-OmniRoute ialah **penulis tunggal**:
+67router ialah **penulis tunggal**:
 
-- Jangan sambungkan dua replika OmniRoute kepada fail `storage.sqlite` yang sama.
+- Jangan sambungkan dua replika 67router kepada fail `storage.sqlite` yang sama.
 - Mulakan semula bekas, penggunaan Recreate, penghentian OOM atau mula semula HEALTHCHECK akan menamatkan
   setiap sesi SSE yang sedang berjalan. Tiada pengosongan sesi pada laluan standard.
 - Keaktifan pengatur yang menganggap `/healthz` perlahan sebagai mati akan menamatkan satu-satunya

@@ -113,7 +113,7 @@ Playwright o una comprobación manual documentada adecuada al cambio.
 - Los catálogos de la CLI se encuentran por separado en `bin/cli/locales/`.
 - Conserva exactamente los marcadores de posición y las etiquetas de ICU. No traduzcas nombres de productos/proveedores/modelos,
   nombres de protocolos y encabezados, comandos, identificadores de código/JSON, URL, variables de entorno ni
-  términos protegidos como `OmniRoute`, `OAuth`, `MCP` y `A2A`. La lista fuente actual es
+  términos protegidos como `67router`, `OAuth`, `MCP` y `A2A`. La lista fuente actual es
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ciclo específico**
@@ -268,7 +268,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # reutiliza un tarball c
   se promueve.
 
 Todo se escribe en el directorio `_artifacts/candidate/`, ignorado por git; nunca se modifican una
-instalación existente de OmniRoute ni su directorio de datos. La CLI promovida se encuentra en
+instalación existente de 67router ni su directorio de datos. La CLI promovida se encuentra en
 `_artifacts/candidate/current/prefix/bin/omniroute`; iníciala con tu propio `DATA_DIR` cuando la
 utilices. Códigos de salida: `0` indica éxito, `1` una validación o promoción fallida y `2` un error
 de uso o una compilación inexistente.

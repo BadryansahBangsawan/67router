@@ -4,7 +4,7 @@
 
 ---
 
-> **Mis dokument see on.** OmniRoute’i kvaliteediväravate süsteemi kriitiline hinnang,
+> **Mis dokument see on.** 67router’i kvaliteediväravate süsteemi kriitiline hinnang,
 > mida võrreldakse valdkonna parimate tavadega, **ning lisaks** kõigi kvaliteedi
 > kontrollpunktide põhjalik kataloog ja **tööriistast sõltumatu juurutusplaan**, mille abil rakendada sama süsteemi
 > mis tahes projektile. Loodud 2026-06-16 tegeliku hoidla oleku põhjal (mitte mälu järgi).
@@ -103,62 +103,62 @@ mille abil saab sama lahenduse rakendada mis tahes tehnoloogiapinus.
 
 ### 1. Stiil ja vormindus (deterministlik, kiire)
 
-- **OmniRoute:** Prettier + ESLint lint-stagedi kaudu (pre-commit), 2 tühikut / topeltjutumärgid / 100 veergu.
+- **67router:** Prettier + ESLint lint-stagedi kaudu (pre-commit), 2 tühikut / topeltjutumärgid / 100 veergu.
 - **Üldine:** üks automaatselt parandav vormindaja + üks linter, mis töötavad pre-commit-etapis staged-failidel.
 
 ### 2. Tüübid
 
-- **OmniRoute:** `typecheck:core` (blokeeriv) + `typecheck:noimplicit:core` (soovituslik) + `type-coverage` lävend 92.17% + failipõhine any-piirmäär.
+- **67router:** `typecheck:core` (blokeeriv) + `typecheck:noimplicit:core` (soovituslik) + `type-coverage` lävend 92.17% + failipõhine any-piirmäär.
 - **Üldine:** range tüübikontroll CI-s + järk-järgult tõstetav tüübikaetuse mõõdik + failipõhine `any`/möödapääsu piirmäär.
 
 ### 3. Testid (intensiivsus)
 
-- **OmniRoute:** 2 mittekattuvat testikäitajat (Node native + vitest), 8 jaotist, üldine kaetus 60/60/60/60 + lävend ~76% + **8 moodulipõhist alampiiri kriitilistele moodulitele** + igaöised omaduspõhised testid + igaöine **mutatsioonitestimine**.
+- **67router:** 2 mittekattuvat testikäitajat (Node native + vitest), 8 jaotist, üldine kaetus 60/60/60/60 + lävend ~76% + **8 moodulipõhist alampiiri kriitilistele moodulitele** + igaöised omaduspõhised testid + igaöine **mutatsioonitestimine**.
 - **Üldine:** testikäitaja(d) + kaetuse **absoluutne** alampiir (nulltaseme vältimiseks) + kaetuse **järk-järgult tõstetav lävend** (regressiooni vältimiseks) + **moodulipõhised alampiirid suure riskiga koodile** (Goodharti efekti vältimiseks) + omaduspõhine testimine puhta loogika jaoks + igaöine **mutatsioonitestimine** kui testide kvaliteedi tegelik mõõdik.
 
 ### 4. Testimispoliitika (manipuleerimisvastane)
 
-- **OmniRoute:** `pr-test-policy` (tootmiskood nõuab testi), `check-test-masking` (blokeerib nõrgestatud väited), `pr-evidence` (edu väitmine nõuab tõendiplokki), `test-discovery` (iga testi kogub mõni testikäitaja).
+- **67router:** `pr-test-policy` (tootmiskood nõuab testi), `check-test-masking` (blokeerib nõrgestatud väited), `pr-evidence` (edu väitmine nõuab tõendiplokki), `test-discovery` (iga testi kogub mõni testikäitaja).
 - **Üldine:** „uus kood ⇒ uus test“ kontrollvärav + eemaldatud väidete / tautoloogiate tuvastaja + tõendinõue (TDD või toimiv test) + garantii, et ükski test ei jää glob-mustritest väljapoole ega muutu orvuks.
 
 ### 5. Keerukus ja koodi tervis (järk-järgult karmistuvad lävendid)
 
-- **OmniRoute:** ESLint-hoiatused (3769↓), jscpd dubleerimine (5.72%↓), tsüklomaatiline keerukus + maksimaalne ridade arv (1800↓), kognitiivne keerukus sonarjs-i järgi (753↓), surnud kood / kasutamata ekspordid knipi järgi (339↓), failipõhine failisuurus (külmutatud, ainult kahanev), ringsõltuvused (kohandatud Tarjani algoritm, blokeeriv).
+- **67router:** ESLint-hoiatused (3769↓), jscpd dubleerimine (5.72%↓), tsüklomaatiline keerukus + maksimaalne ridade arv (1800↓), kognitiivne keerukus sonarjs-i järgi (753↓), surnud kood / kasutamata ekspordid knipi järgi (339↓), failipõhine failisuurus (külmutatud, ainult kahanev), ringsõltuvused (kohandatud Tarjani algoritm, blokeeriv).
 - **Üldine:** karmista järk-järgult iga koodi tervise mõõdikut (hoiatused, dubleerimine, tsüklomaatiline **ja** kognitiivne keerukus, surnud kood, failisuurus, imporditsüklid). Suund on alati „ära lase halveneda“.
 
 ### 6. Staatiline turve (SAST + saladused)
 
-- **OmniRoute:** CodeQL (hoiatuste lävend = 0), gitleaks (`[extend] useDefault=true` — kriitilise tähtsusega!), SonarQube, kohandatud turbereeglid (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (hoiatuste lävend = 0), gitleaks (`[extend] useDefault=true` — kriitilise tähtsusega!), SonarQube, kohandatud turbereeglid (public-creds, error-helper, route-guard-membership, route-validation).
 - **Üldine:** SAST (CodeQL/Sonar/semgrep) koos hoiatuste järk-järgult karmistuva lävendiga + saladuste skanner **päritud vaikereeglistikuga** (vaikereegleid alistav kohandatud konfiguratsioon = pimeala) + projektipõhised rangete reeglite turvakontrollid.
 
 ### 7. Tarneahel (sõltuvused)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-i lubatute loend), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (lubatute loend + vanus ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-i lubatute loend), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (lubatute loend + vanus ≥72h).
 - **Üldine:** mitme allikaga SCA + litsentside lubatute loend + lukufaili tervikluskontroll + sõltuvuste lubatute loend koos vanuse- ja kirjaveopõhise domeenikaaperduse kontrolliga + uuendusi rühmitav robot.
 
 ### 8. Tarneahel (koostamine ja väljalase)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA päritolutõend (`--provenance`), OpenSSF Scorecard (iganädalane), töövoogude tugevdamine (zizmor: artipacked→`persist-credentials:false`, vahemälu mürgitamine, lubade jagamine tokenite kaupa).
+- **67router:** SBOM (CycloneDX + syft), SLSA päritolutõend (`--provenance`), OpenSSF Scorecard (iganädalane), töövoogude tugevdamine (zizmor: artipacked→`persist-credentials:false`, vahemälu mürgitamine, lubade jagamine tokenite kaupa).
 - **Üldine:** genereeri avaldamisel SBOM + allkirjastatud päritolutõend (SLSA L2+) + ajastatud Scorecard + tugevda kõiki töövooge (minimaalsete õigustega tokenid, mittekirjutava checkout'i puhul talletatud mandaatide puudumine, SHA järgi kinnitatud tegevused).
 
 ### 9. Lepingud ja API
 
-- **OmniRoute:** oasdiff (OpenAPI murdvate muudatuste tuvastamiseks), schemathesis (igaöine lepingute hägustestimine), openapi-coverage (dokumenteeritud marsruutide %, lävend 38.3%), openapi-security-tiers (spetsifikatsioon vs route-guard).
+- **67router:** oasdiff (OpenAPI murdvate muudatuste tuvastamiseks), schemathesis (igaöine lepingute hägustestimine), openapi-coverage (dokumenteeritud marsruutide %, lävend 38.3%), openapi-security-tiers (spetsifikatsioon vs route-guard).
 - **Üldine:** murdvate muudatuste lepingudiff (oasdiff/buf) + spetsifikatsiooni vastu tehtav omaduspõhine hägustestimine (schemathesis) + järk-järgult tõstetav dokumentatsioonikaetus + spetsifikatsiooni ja koodi kooskõla.
 
 ### 10. Dokumentatsioon ja i18n (iganemisvastane)
 
-- **OmniRoute:** docs-sync (peegeldatud versioonid), docs-counts-sync (arvud dokumentatsioonis vs koodis), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + lävend 80.1%).
+- **67router:** docs-sync (peegeldatud versioonid), docs-counts-sync (arvud dokumentatsioonis vs koodis), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + lävend 80.1%).
 - **Üldine:** sünkrooni versioonid, arvud ja keskkonnamuutujad dokumentatsiooni ning koodi vahel (kontrollvärav, mitte usaldus) + valideeri siselingid + järk-järgult tõstetav i18n-kaetus.
 
 ### 11. Hallutsinatsioonivastasus / kooskõla (haruldane kategooria)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ olemasolev sümbol), provider-consistency, fetch-targets (kliendi fetch ⇒ tegelik marsruut), docs-symbols, db-rules (ranged reeglid #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ olemasolev sümbol), provider-consistency, fetch-targets (kliendi fetch ⇒ tegelik marsruut), docs-symbols, db-rules (ranged reeglid #2/#5), migration-numbering.
 - **Üldine:** iga „dubleeritud tõeallika“ (register, string dispatch, kihtidevahelised viited) jaoks kontrollvärav, mis tõendab mõlema poole vastavust. Tuvastab iganemise, mida tüübikontroll ja testid ei tuvasta.
 
 ### 12. Vastupidavus ja valdkond (tootespetsiifiline)
 
-- **OmniRoute:** chaos (tõrgete sisestamine), heap-growth (leke), k6 (kestvustest), promptfoo+garak (LLM-i red-team-testimine OWASP LLM Top 10 alusel), 3 vastupidavusseadust (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (tõrgete sisestamine), heap-growth (leke), k6 (kestvustest), promptfoo+garak (LLM-i red-team-testimine OWASP LLM Top 10 alusel), 3 vastupidavusseadust (circuit-breaker/cooldown/lockout).
 - **Üldine:** tuvasta **oma** valdkonna tõrkerežiimid ja loo igaühe jaoks kontrollvärav (isegi kui seda käitatakse ainult öösiti). AI-rakenduste puhul: sisestusrünnete red-team-testimine. Hajussüsteemide puhul: kaose-, lekke- ja kestvustestimine.
 
 ---

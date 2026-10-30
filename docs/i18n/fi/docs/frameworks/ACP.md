@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute erottaa toisistaan **CLI-työkalujen tunnistamisen**, **natiivin Agent Client Protocol -toteutuksen** ja
+67router erottaa toisistaan **CLI-työkalujen tunnistamisen**, **natiivin Agent Client Protocol -toteutuksen** ja
 **vanhat stdio-sovittimet**. Asennetun binääritiedoston löytyminen ei osoita sen
 todennusta, malliyhteensopivuutta tai valmiutta käsitellä kehotetta.
 

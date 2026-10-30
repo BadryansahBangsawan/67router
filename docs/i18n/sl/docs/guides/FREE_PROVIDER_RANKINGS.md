@@ -4,7 +4,7 @@
 
 ---
 
-> **Na kratko**: OmniRoute razvršča svoje **brezplačne** ponudnike glede na kakovost modelov z uporabo **Arena AI
+> **Na kratko**: 67router razvršča svoje **brezplačne** ponudnike glede na kakovost modelov z uporabo **Arena AI
 > (v slogu LMArena) ocen ELO**. V nadzorni plošči odprite stran **Razvrstitev brezplačnih ponudnikov**,
 > da preverite, kateri brezplačni ponudniki ponujajo najzmogljivejše modele za vašo nalogo —
 > skupno ali filtrirano po kategoriji (programiranje, pregled, dokumentacija, odpravljanje napak).
@@ -13,7 +13,7 @@
 
 ## Kaj je to
 
-OmniRoute registrira 375 ponudnikov, vključno s 155 vnosi v katalogu, označenimi kot **brezplačno/brez-avtentikacije**
+67router registrira 375 ponudnikov, vključno s 155 vnosi v katalogu, označenimi kot **brezplačno/brez-avtentikacije**
 (brez avtentikacije, OAuth z brezplačnim nivojem ali API ključ z brezplačnim nivojem — glejte
 [Vodnik po brezplačnih nivojih](../getting-started/FREE-TIERS-GUIDE.md) in celoten
 [imenik brezplačnih nivojev](../reference/FREE_TIERS.md)). Težava je v tem: brezplačni ponudniki se
@@ -128,9 +128,9 @@ in `code` — iz API-ja lestvice Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Vsak vnos na lestvici
 vsebuje ime modela, ponudnika, ELO `score`, interval zaupanja in število glasov.
 
-Kategorije lestvice se preslikajo v kategorije opravil OmniRoute:
+Kategorije lestvice se preslikajo v kategorije opravil 67router:
 
-| Lestvica Arena | Kategorije opravil OmniRoute                      |
+| Lestvica Arena | Kategorije opravil 67router                       |
 | -------------- | ------------------------------------------------- |
 | `text`         | `default`, `review`, `documentation`, `debugging` |
 | `code`         | `coding`                                          |
@@ -167,7 +167,7 @@ Sinhronizacija se **privzeto izvaja**:
 
 - Izvede se enkrat ob zagonu strežnika in nato periodično glede na časovnik
   (`src/lib/arenaEloSync.ts`, povezano iz `src/instrumentation-node.ts`).
-- Je **neblokirajoča in nikoli usodna** — če pridobivanje podatkov iz nadrejenega vira ne uspe, OmniRoute še naprej
+- Je **neblokirajoča in nikoli usodna** — če pridobivanje podatkov iz nadrejenega vira ne uspe, 67router še naprej
   deluje, lestvice pa preprosto prikazujejo zadnje veljavne podatke (ali prazno stanje).
 
 Nadzirata jo dve spremenljivki okolja (dokumentirani v
@@ -202,7 +202,7 @@ prilagodljivo ujemanje (`findMatchingIntelligence` v `src/lib/freeProviderRankin
 3. Ujemanje predpone (ime modela na lestvici je predpona ID-ja v registru).
 
 Na strani sinhronizacije se znane predpone ponudnikov (`anthropic/`, `openai/`, `google/`, …)
-odstranijo, majhen zemljevid vzdevkov pa razširi kanonična imena v različice, ki jih OmniRoute uporablja
+odstranijo, majhen zemljevid vzdevkov pa razširi kanonična imena v različice, ki jih 67router uporablja
 interno, zato je modele mogoče najti pod katerim koli imenom.
 
 ### Kako se ponudnik razvrsti

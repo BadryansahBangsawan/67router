@@ -5,7 +5,7 @@
 ---
 
 Der Self-Hosted-Pool läuft auf dem **.113**-Host (`tomni-proxmox-113`). Seit dem 2026-10-18 hat jeder
-OmniRoute-Runner **genau eine Rolle**, ein Label sowie ein Arbeitsspeicher-/CPU-Budget, das an der gemessenen Auslastung
+67router-Runner **genau eine Rolle**, ein Label sowie ein Arbeitsspeicher-/CPU-Budget, das an der gemessenen Auslastung
 seines Workloads ausgerichtet ist. Der Turbopack-Slot erhält die für den Build erforderlichen Ressourcen; die anderen Slots sind entsprechend ihren
 gemessenen Spitzenwerten dimensioniert. Der Host ist nur dann überbucht, wenn ein Turbopack-Build gleichzeitig mit einem Release-Green-
 webpack-Build und einem Lint-Job ausgeführt wird; der Host-Swap (16 GB) fängt dies ab. Da Builds für Pull Requests
@@ -27,7 +27,7 @@ Gemessen am 2026-10-18:
 | Swap      | 16 GB                                | `omniroute-113-5` läuft mit deaktiviertem Swap (`MemorySwapMax=0`), sodass ein außer Kontrolle geratener Build beim Erreichen seines Limits beendet wird, anstatt den Host zum Swappen zu bringen                                                                                                                                                                                                                                            |
 | `/tmp`    | **12 GB tmpfs = RAM**                | Alles, was dort abgelegt wird, belegt Arbeitsspeicher; verbliebene Dateien werden nach 3 h entfernt                                                                                                                                                                                                                                                                                                                                          |
 | CPU       | Load von 60 bei 32 Kernen beobachtet | Vor Einführung der Quoten führte ein Turbopack-Build (ca. 1166 % CPU) zusammen mit einer Coverage-Suite auf demselben Host dazu, dass die Heartbeats der anderen Listener keine Ressourcen mehr erhielten (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                              |
-| Runner    | **6 Listener**                       | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sind deaktiviert (`systemctl enable --now` reaktiviert einen davon)                                                                                                                                                                                                                                                                                                          |
+| Runner    | **6 Listener**                       | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sind deaktiviert (`systemctl enable --now` reaktiviert einen davon)                                                                                                                                                                                                                                                                                                           |
 
 Die Limits befinden sich für jede Unit in `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (vorherige Werte wurden als `override.conf.bak-20261018` beibehalten) und wurden im laufenden Betrieb mit
@@ -81,7 +81,7 @@ als abgebrochen, und der Listener geht von selbst wieder online.
 Das standardmäßige `KillMode=process` des Runners lässt
 `Runner.Worker → npm → next-build` weiterlaufen, wenn eine Unit gestoppt oder neu
 gestartet wird — ein verwaister Build verbraucht weiterhin RAM und CPU, obwohl ihm
-kein Job zugeordnet ist. Jede OmniRoute-Unit besitzt eine Drop-in-Datei
+kein Job zugeordnet ist. Jede 67router-Unit besitzt eine Drop-in-Datei
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 mit `KillMode=mixed`: zuerst SIGTERM an den Listener, bei `TimeoutStop` dann SIGKILL
 an die gesamte cgroup. Die Einstellung wird beim nächsten Neustart der Unit wirksam
@@ -129,7 +129,7 @@ die Prüfung auf Inaktivität und der Neustart im selben Befehl erfolgen müssen
   Läufe aus, die einen reinen Backend-`next build` benötigen (~5–6 GB; webpack), sowie `quality.yml`
   `lint-guard`. `omniroute-113` hatte bis zum 2026-10-18 `MemoryHigh=4G` — der promptfoo-Build kämpfte
   sich dort 54 Minuten lang durch Speicher-Rückgewinnung; 8 GB beseitigen die Drosselung.
-- **Bewusst weniger Listener.** Vier OmniRoute-Units wurden am 2026-08-29 deaktiviert — jeder zusätzliche
+- **Bewusst weniger Listener.** Vier 67router-Units wurden am 2026-08-29 deaktiviert — jeder zusätzliche
   Listener ist ein weiterer Nutzer des oben genannten Speicherbudgets. Die Obergrenze des Janitors
   beträgt 6 (`MAX_ACTIVE_RUNNERS=6` in cron): Er zählt jeden `Runner.Listener` auf dem System, und
   OmniHeuris + OmniMind kommen als zwei weitere zu unseren vier hinzu.

@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute může zpřístupnit svůj místní server (`http://localhost:20128`) veřejnému
+67router může zpřístupnit svůj místní server (`http://localhost:20128`) veřejnému
 internetu prostřednictvím tří tunelových backendů. To je užitečné pro:
 
 - Zpětná volání OAuth od cloudových poskytovatelů (Antigravity, Gemini, Cursor), která potřebují
@@ -15,7 +15,7 @@ internetu prostřednictvím tří tunelových backendů. To je užitečné pro:
 - Sdílení místní instance s kolegy bez nasazování virtuálního počítače.
 - Testování z mobilních zařízení, na dálku nebo napříč sítěmi.
 
-Všechny tři backendy jsou spravovány v rámci procesu — OmniRoute spouští a zastavuje příslušný
+Všechny tři backendy jsou spravovány v rámci procesu — 67router spouští a zastavuje příslušný
 binární soubor nebo SDK z řídicího panelu či REST API. Není nutné nastavovat reverzní proxy ani
 systemd.
 
@@ -41,7 +41,7 @@ dva režimy, které se vybírají podle toho, zda je poskytnuta konfigurace pojm
 http://localhost:<apiPort>` a zpracuje přidělenou adresu URL `*.trycloudflare.com`
   ze standardního výstupu. Adresy URL jsou dočasné a při každém restartu se mění.
 - **Pojmenovaný tunel (volitelný).** Když `CLOUDFLARED_CONFIG` odkazuje na místně spravovaný
-  soubor `config.yml` nástroje cloudflared, OmniRoute spustí `cloudflared tunnel --no-autoupdate
+  soubor `config.yml` nástroje cloudflared, 67router spustí `cloudflared tunnel --no-autoupdate
 --config <path> run`, čímž získáte **stabilní pojmenovaný název hostitele**. Konfigurace
   poskytuje UUID tunelu, `credentials-file` a směrování `ingress`, takže se
   nepředává `--url` a není vyžadován žádný token z řídicího panelu Zero Trust. Příkaz `run` načítá
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` a zpracuje přidělenou adresu URL `*.trycloudflare.
 
 Klíčové chování:
 
-- **Automatická instalace.** Při prvním použití OmniRoute stáhne nejnovější binární soubor
+- **Automatická instalace.** Při prvním použití 67router stáhne nejnovější binární soubor
   `cloudflared` z oficiálních vydání na GitHubu (spravovaná instalace se nachází v
   `DATA_DIR/cloudflared/`). Kontrolní součet SHA256 staženého artefaktu je před spuštěním ověřen podle
   manifestu vydání.
@@ -68,7 +68,7 @@ Klíčové chování:
    ```
 
 2. Vytvořte soubor `~/.cloudflared/config.yml`, který směruje váš název hostitele na místní
-   port API OmniRoute (výchozí je 20128):
+   port API 67router (výchozí je 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Klíčové chování:
      - service: http_status:404
    ```
 
-3. Nastavte OmniRoute tak, aby používal tuto konfiguraci, a (znovu) spusťte tunel:
+3. Nastavte 67router tak, aby používal tuto konfiguraci, a (znovu) spusťte tunel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # volitelné — přepíše název hostitele hlášený OmniRoute; jinak se načte z prvního
+   # volitelné — přepíše název hostitele hlášený 67router; jinak se načte z prvního
    # pravidla ingress v konfiguraci:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Nebo prostřednictvím řídicího panelu: **Nastavení → Tunely → Cloudflar
 
 ### Volitelné proměnné prostředí
 
-| Proměnná                                             | Účel                                                                                                                                                                                           |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Přepíše cestu k binárnímu souboru. Pokud je nastavena a platná, OmniRoute ji použije namísto stahování.                                                                                        |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportní protokol (výchozí `http2`; podporovány jsou také `quic` a `auto`).                                                                                                                 |
-| `CLOUDFLARED_CONFIG`                                 | Cesta k lokálně spravovanému souboru `config.yml` nástroje cloudflared. Je-li nastavena, OmniRoute spustí **pojmenovaný/trvalý** tunel (`tunnel --config <path> run`) namísto rychlého tunelu. |
-| `CLOUDFLARED_HOSTNAME`                               | Přepíše veřejný název hostitele hlášený pojmenovaným tunelem (např. `ai.example.com`). Není-li nastavena, načte se z prvního názvu hostitele `ingress` v konfiguraci.                          |
+| Proměnná                                             | Účel                                                                                                                                                                                          |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Přepíše cestu k binárnímu souboru. Pokud je nastavena a platná, 67router ji použije namísto stahování.                                                                                        |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportní protokol (výchozí `http2`; podporovány jsou také `quic` a `auto`).                                                                                                                |
+| `CLOUDFLARED_CONFIG`                                 | Cesta k lokálně spravovanému souboru `config.yml` nástroje cloudflared. Je-li nastavena, 67router spustí **pojmenovaný/trvalý** tunel (`tunnel --config <path> run`) namísto rychlého tunelu. |
+| `CLOUDFLARED_HOSTNAME`                               | Přepíše veřejný název hostitele hlášený pojmenovaným tunelem (např. `ai.example.com`). Není-li nastavena, načte se z prvního názvu hostitele `ingress` v konfiguraci.                         |
 
 ## 2. ngrok
 
@@ -172,7 +172,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Odpověď obsahuje přiřazenou adresu `publicUrl` (např.
 `https://abcd-1234.ngrok-free.app`). Vlastní domény, regiony a pravidla zásad
-je nutné nakonfigurovat v řídicím panelu ngrok — samotný OmniRoute pouze předává
+je nutné nakonfigurovat v řídicím panelu ngrok — samotný 67router pouze předává
 adresu URL místního cíle sadě SDK.
 
 ## 3. Tailscale Funnel
@@ -186,14 +186,14 @@ adresa URL má tvar `https://<machine>.<tailnet>.ts.net/`.
 
 ### Předpoklady
 
-1. Nainstalujte Tailscale (nebo to nechte provést OmniRoute — viz koncový bod `install` níže).
-2. Přihlaste se (`tailscale login` nebo prostřednictvím koncového bodu `login` služby OmniRoute).
+1. Nainstalujte Tailscale (nebo to nechte provést 67router — viz koncový bod `install` níže).
+2. Přihlaste se (`tailscale login` nebo prostřednictvím koncového bodu `login` služby 67router).
 3. Povolte Funnel pro svůj tailnet v konzoli pro správu Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 V systémech Linux a macOS vyžaduje ovládání démona (`tailscaled`) příkaz `sudo`.
 Koncové body POST přijímají volitelné pole `sudoPassword`, které je po dobu
-volání předáno do mezipaměti hesel MITM služby OmniRoute (`getCachedPassword` / `setCachedPassword`).
+volání předáno do mezipaměti hesel MITM služby 67router (`getCachedPassword` / `setCachedPassword`).
 Systém Windows používá výchozí instalaci služby v umístění
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -254,7 +254,7 @@ nezávislý.
 
 ## Důležité informace o zpětném volání OAuth
 
-Pokud OmniRoute zpřístupníte prostřednictvím tunelu, řídicí panel a procesy OAuth
+Pokud 67router zpřístupníte prostřednictvím tunelu, řídicí panel a procesy OAuth
 musí vytvářet adresy URL zpětného volání s použitím **veřejného** názvu hostitele,
 nikoli `localhost`. Jinak poskytovatel OAuth přesměruje uživatele zpět na adresu
 URL, ke které se jeho servery nemohou připojit, a navázání spojení selže.
@@ -271,7 +271,7 @@ Nastavte:
 NEXT_PUBLIC_BASE_URL=https://<váš-hostitel-tunelu>
 ```
 
-a před zahájením OAuth restartujte OmniRoute. U dočasných tunelů Cloudflare Quick
+a před zahájením OAuth restartujte 67router. U dočasných tunelů Cloudflare Quick
 Tunnel se adresa URL po každém restartu změní, proto pro produkční použití OAuth
 upřednostněte ngrok s rezervovanou doménou nebo Tailscale Funnel.
 
@@ -287,14 +287,14 @@ upřednostněte ngrok s rezervovanou doménou nebo Tailscale Funnel.
 - Poslední chybovou zprávu, pokud existuje.
 
 Pro programové monitorování se pravidelně dotazujte jednotlivých endpointů `GET`
-pro každý backend. Souběžný provoz více backendů je povolen; OmniRoute bude každý
+pro každý backend. Souběžný provoz více backendů je povolen; 67router bude každý
 z nich sledovat nezávisle.
 
 ## Řešení problémů
 
 ### „Binární soubor cloudflared nebyl nalezen“
 
-OmniRoute se při prvním použití pokusí o automatickou instalaci. Pokud je instalace
+67router se při prvním použití pokusí o automatickou instalaci. Pokud je instalace
 zablokována (omezená síť, chybějící přístup ke GitHubu), stáhněte `cloudflared`
 ručně z <https://github.com/cloudflare/cloudflared/releases> a nastavte
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

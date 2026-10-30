@@ -4,18 +4,18 @@
 
 ---
 
-Ushbu hujjat OmniRouteʼga qoʻshilgan, qayta aloqa asosida ishlaydigan adaptiv marshrutlash poydevorini tavsiflaydi. U ataylab ixcham qilingan: hujjat tiplashtirilgan marshrutlash natijalari kanalini, mavjud auto-combo baholagichiga uzatiladigan onlayn sifat signalini, ixtiyoriy OpenTelemetry eksportchisini va tushuntirish imkoniyatini taʼminlovchi endpointni taqdim etadi. U mavjud barqarorlik stekini (avariya uzgichi, ulanishni vaqtincha toʻxtatish, modelni bloklash, holat matritsasi, avtopilot) **almashtirmaydi** — balki uni toʻldiradi.
+Ushbu hujjat 67routerʼga qoʻshilgan, qayta aloqa asosida ishlaydigan adaptiv marshrutlash poydevorini tavsiflaydi. U ataylab ixcham qilingan: hujjat tiplashtirilgan marshrutlash natijalari kanalini, mavjud auto-combo baholagichiga uzatiladigan onlayn sifat signalini, ixtiyoriy OpenTelemetry eksportchisini va tushuntirish imkoniyatini taʼminlovchi endpointni taqdim etadi. U mavjud barqarorlik stekini (avariya uzgichi, ulanishni vaqtincha toʻxtatish, modelni bloklash, holat matritsasi, avtopilot) **almashtirmaydi** — balki uni toʻldiradi.
 
 ## 1. Arxitekturaviy kontekst
 
-OmniRoute — **soʻrovlarning tezkor yoʻli** va **boshqaruv/intellekt tekisligi**ga ega maʼlumotlar tekisligidir. Tezkor yoʻl tez, xotiradan samarali foydalanuvchi, asinxron, barqaror va oldindan bashorat qilinadigan boʻlib qolishi kerak. Baholash, sifatni hisoblash, tajribalar va tarixiy tahlil boshqaruv tekisligiga tegishli.
+67router — **soʻrovlarning tezkor yoʻli** va **boshqaruv/intellekt tekisligi**ga ega maʼlumotlar tekisligidir. Tezkor yoʻl tez, xotiradan samarali foydalanuvchi, asinxron, barqaror va oldindan bashorat qilinadigan boʻlib qolishi kerak. Baholash, sifatni hisoblash, tajribalar va tarixiy tahlil boshqaruv tekisligiga tegishli.
 
 ```
 AI agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   maʼlumotlar tekisligi (tezkor, sinxron, xotirada)
+│    67router        │   maʼlumotlar tekisligi (tezkor, sinxron, xotirada)
 │  marshrutlash /     │
 │  zaxiraga oʻtish    │
 │  holat / himoya     │
@@ -222,7 +222,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK ishlatilmaydi).
 - Spanlar GenAI semantik konvensiyalariga (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) hamda OmniRoute marshrutlash
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) hamda 67router marshrutlash
   atributlariga (natija, holat, ttft, qayta urinishlar, zaxira variant) amal qiladi.
 - `record()` faqat cheklangan bufer navbatiga qo‘shadi (O(1)); fon taymeri
   `POST {endpoint}/v1/traces` orqali asinxron yuboradi. Ortiqcha yuklama paytida
@@ -246,7 +246,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
 
 ## 6. Baholash qatlamini integratsiya qilish (Future AGI uchun tayyorgarlik)
 
-OmniRoute Future AGI (yoki istalgan baholovchi)ni **bog‘liqlik emas, balki
+67router Future AGI (yoki istalgan baholovchi)ni **bog‘liqlik emas, balki
 potensial intellekt/baholash bekendi** sifatida ko‘radi. Integratsiya nuqtalari:
 
 - `RoutingEventSink` hodisalarni baholovchiga asinxron yo‘naltirishi mumkin.

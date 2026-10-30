@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Türkçe)
+# 67router A2A Server Documentation (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — Akıllı bir yönlendirme aracısı olarak OmniRoute
+> Agent-to-Agent Protocol v0.3 — Akıllı bir yönlendirme aracısı olarak 67router
 
 A2A yüzeyi iki arayüze sahiptir:
 
@@ -19,7 +19,7 @@ Görevler `A2ATaskManager` tarafından izlenir (`src/lib/a2a/taskManager.ts`, va
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute'un kabiliyetlerini, yeteneklerini ve kimlik doğrulama gereksinimlerini açıklayan Aracı Kartı'nı döndürür.
+67router'un kabiliyetlerini, yeteneklerini ve kimlik doğrulama gereksinimlerini açıklayan Aracı Kartı'nı döndürür.
 
 Aracı Kartı'nın `version` alanı `process.env.npm_package_version` kaynağından alınır (bkz. `src/app/.well-known/agent.json/route.ts:13`); böylece her sürümde `package.json` ile otomatik olarak senkronize kalır.
 
@@ -154,22 +154,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Mevcut Beceriler
 
-OmniRoute, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` içinde tanımlanmış 6 A2A becerisi sunar. Her beceri modülü `src/lib/a2a/skills/` dizininde bulunur.
+67router, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` içinde tanımlanmış 6 A2A becerisi sunar. Her beceri modülü `src/lib/a2a/skills/` dizininde bulunur.
 
 | Beceri             | ID                   | Açıklama                                                                                                                                                                   | Etiketler                  | Örnekler                                     |
 | :----------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------- |
-| Smart Routing      | `smart-routing`      | OmniRoute'un combo motorunu ve puanlama sistemini kullanarak bir istemi en uygun sağlayıcı/kombo üzerinden yönlendirir                                                     | routing, providers         | "Bu istemi en iyi model üzerinden yönlendir" |
+| Smart Routing      | `smart-routing`      | 67router'un combo motorunu ve puanlama sistemini kullanarak bir istemi en uygun sağlayıcı/kombo üzerinden yönlendirir                                                      | routing, providers         | "Bu istemi en iyi model üzerinden yönlendir" |
 | Quota Management   | `quota-management`   | Sağlayıcı bazında kota durumunu raporlar; çağıranların ne zaman kısıtlama yapmaya veya sağlayıcı değiştirmeye karar vermesine yardımcı olur                                | quota, providers           | "anthropic için kotayı kontrol et"           |
 | Provider Discovery | `provider-discovery` | Yüklü sağlayıcıları yetenekleri, ücretsiz katman bayrakları ve OAuth durumuyla birlikte listeler                                                                           | providers, discovery       | "Hangi sağlayıcılar mevcut?"                 |
 | Cost Analysis      | `cost-analysis`      | Katalog ve son kullanım verilerine dayanarak bir isteğin/konuşmanın maliyetini tahmin eder                                                                                 | cost, usage                | "Bu konuşmanın maliyetini tahmin et"         |
 | Health Report      | `health-report`      | Sağlayıcı başına circuit breaker, cooldown ve lockout durumlarını bir araya getirir                                                                                        | health, resilience         | "Tüm sağlayıcıların sağlık durumunu göster"  |
-| List Capabilities  | `list-capabilities`  | 45 girdilik Agent Skills kataloğunun tamamını (23 API + 21 CLI + 1 config), bağlam enjeksiyonu için ham SKILL.md URL'leriyle birlikte bir markdown tablosu olarak döndürür | catalog, discovery, skills | "Tüm OmniRoute yeteneklerini listele"        |
+| List Capabilities  | `list-capabilities`  | 45 girdilik Agent Skills kataloğunun tamamını (23 API + 21 CLI + 1 config), bağlam enjeksiyonu için ham SKILL.md URL'leriyle birlikte bir markdown tablosu olarak döndürür | catalog, discovery, skills | "Tüm 67router yeteneklerini listele"         |
 
 > Agent Card, canlı 375 sağlayıcılı katalogla uyumlu tutulmalıdır; sağlayıcı sayıları ile ücretsiz/kimlik doğrulamasız (no-auth) meta verileri çalışma zamanı kayıt defterinden (runtime registry) alınır.
 
 ### `list-capabilities` Beceri Detayı
 
-`list-capabilities` becerisi, API çağrıları göndermeden önce OmniRoute'un neler sunduğunu keşfetmesi gereken harici aracılar (agent) için özellikle kullanışlıdır. Yapılandırılmış bir markdown tablosu çıktısı (artifact) döndürür:
+`list-capabilities` becerisi, API çağrıları göndermeden önce 67router'un neler sunduğunu keşfetmesi gereken harici aracılar (agent) için özellikle kullanışlıdır. Yapılandırılmış bir markdown tablosu çıktısı (artifact) döndürür:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -195,7 +195,7 @@ JSON-RPC uç noktası `/a2a`, standart A2A giriş noktasıdır. Aşağıdaki RES
 | `/.well-known/agent.json`    | GET    | Agent Card (A2A keşfi)                                      | (herkese açık, 3600 sn önbelleğe alınır)      |
 | `/api/a2a/tasks`             | POST   | OmniConductor filosuna gelen delegasyon (Conductor PRD RF5) | Bearer ile `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Gelen Conductor delegasyonu (`POST /api/a2a/tasks`):** Harici A2A ajanları, kodlama işlerini OmniRoute üzerinden OmniConductor filosuna devreder. Gövde: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — yalnızca Conductor filosu yetenekleri (Agent Card üzerinde duyurulanlar) devredilebilir; `metadata.conductor.repo.url` zorunludur (filo, git depoları üzerinde çalışır). Rota, sunucu tarafındaki `CONDUCTOR_ORCHESTRATOR_TOKEN` (yedek olarak `CONDUCTOR_HUB_TOKEN`) kullanılarak hub'ın `POST /v1/tasks` çağrısına dönüştürülür ve `201 { conductor_task_id, state: "submitted" }` döndürür; görev durumları SSE→A2A yansıtıcısı (RF1) üzerinden geri aktarılır ve `GET /api/a2a/tasks?skill=conductor` aracılığıyla görüntülenebilir.
+**Gelen Conductor delegasyonu (`POST /api/a2a/tasks`):** Harici A2A ajanları, kodlama işlerini 67router üzerinden OmniConductor filosuna devreder. Gövde: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — yalnızca Conductor filosu yetenekleri (Agent Card üzerinde duyurulanlar) devredilebilir; `metadata.conductor.repo.url` zorunludur (filo, git depoları üzerinde çalışır). Rota, sunucu tarafındaki `CONDUCTOR_ORCHESTRATOR_TOKEN` (yedek olarak `CONDUCTOR_HUB_TOKEN`) kullanılarak hub'ın `POST /v1/tasks` çağrısına dönüştürülür ve `201 { conductor_task_id, state: "submitted" }` döndürür; görev durumları SSE→A2A yansıtıcısı (RF1) üzerinden geri aktarılır ve `GET /api/a2a/tasks?skill=conductor` aracılığıyla görüntülenebilir.
 
 ---
 

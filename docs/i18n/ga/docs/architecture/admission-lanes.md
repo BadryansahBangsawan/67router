@@ -4,7 +4,7 @@
 
 ---
 
-Tá **dhá** chóras lána atá áitiúil don phróiseas ag OmniRoute, agus scóip dhifriúla acu. Tá siad
+Tá **dhá** chóras lána atá áitiúil don phróiseas ag 67router, agus scóip dhifriúla acu. Tá siad
 comhlántach; ba cheart d’oibreoirí a bheith ar an eolas cé acu ceann a bhfuil siad ag féachaint air.
 
 ## 1. Próiseas iontrála ar leibhéal beart ar fud an phróisis (`chatBodyAdmission.ts`)

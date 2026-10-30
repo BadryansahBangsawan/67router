@@ -10,7 +10,7 @@
 > mode blokir injeksi sebagai batas wajib (#16413), dan apa yang melihat respons sebelum post-call)
 
 Guardrail menegakkan keamanan, kebijakan, dan transformasi konten pada batas
-antara OmniRoute dan penyedia upstream. Setiap guardrail dapat memeriksa (dan
+antara 67router dan penyedia upstream. Setiap guardrail dapat memeriksa (dan
 secara opsional menolak, mentransformasi, atau memberi anotasi) payload
 permintaan (`preCall`) dan respons upstream (`postCall`).
 
@@ -115,7 +115,7 @@ Ketika kunci API pemanggil membatasi `allowedConnections`, pool kuota
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), bridge hanya
 memilih model reroute dan describe yang boleh digunakan kunci tersebut, pada
 koneksi yang boleh digunakan kunci tersebut. Panggilan describe kemudian selalu
-melewati self-loop OmniRoute dengan header `x-omniroute-self-loop-key-id`,
+melewati self-loop 67router dengan header `x-omniroute-self-loop-key-id`,
 sehingga permintaan chat penerima menerapkan kembali kebijakan koneksi dan
 model kunci tersebut. `enforceApiKeyPolicy()` menghormati header tersebut hanya
 bersama dengan bearer self-loop, sehingga hanya dapat mempersempit akses, dan
@@ -145,7 +145,7 @@ tidak bergantung pada sinyal klien apa pun. Sampling detail rendah menurunkan
 akurasi OCR tepat untuk tugas transkripsi teks yang diminta prompt ini,
 sehingga panggilan describe itu sendiri selalu meminta detail tinggi terlepas
 dari tingkat detail apa yang digunakan permintaan masuk asli. Ini hanya
-memengaruhi body permintaan describe internal; tidak mengubah cara OmniRoute
+memengaruhi body permintaan describe internal; tidak mengubah cara 67router
 meneruskan `image_url.detail` milik pemanggil pada permintaan utama — default
 tersebut diterapkan secara terpisah, dan hanya untuk klien OpenCode yang
 terdeteksi, di `defaultImageDetail()`
@@ -223,7 +223,7 @@ Halaman dashboard khususnya adalah
 
 Kartu Vision Bridge lama di bawah pengaturan AI kini menjadi tautan kompatibilitas ke halaman baru; ia tidak lagi memiliki salinan kedua dari formulir tersebut. Media Providers juga menautkan alur kerja Image-to-Text dan Speech-to-Text ke tab Modality Bridge yang sesuai tanpa menghapus playground Speech-to-Text yang sudah ada.
 
-**Bypass admission self-loop:** ketika panggilan describe dirutekan melalui self-loop `/v1` milik OmniRoute sendiri (model penyedia non-standar), sub-permintaan mengirim
+**Bypass admission self-loop:** ketika panggilan describe dirutekan melalui self-loop `/v1` milik 67router sendiri (model penyedia non-standar), sub-permintaan mengirim
 `x-omniroute-admission-bypass: internal` dan diautentikasi dengan kredensial self-loop yang terselesaikan — sentinel `sk_omniroute` lokal dalam mode lokal, atau kunci env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` yang dikonfigurasi operator (#1350) agar deployment `REQUIRE_API_KEY=true` tetap dapat menjalankan panggilan describe. Bypass hanya berlaku untuk kredensial yang persis tersebut, sehingga klien eksternal tidak dapat menggunakan header itu untuk melewati admission.
 
 Default legacy berada di `src/shared/constants/visionBridgeDefaults.ts`; default mode/task-aware/cache yang baru beserta resolver pengaturan berada di
@@ -342,7 +342,7 @@ Filter yang hilang, bukti cacat/kosong, kesalahan detektor, atau timeout pra-ana
 
 Setiap frame dibatasi hingga 4 MiB, semua frame mentah secara keseluruhan hingga 23 MiB, dan
 respons broker terserialisasi hingga 32 MiB. Direktori sementara privat dihapus
-di dalam `finally`. OmniRoute tidak membundel FFmpeg dan tidak menerima path
+di dalam `finally`. 67router tidak membundel FFmpeg dan tidak menerima path
 executable kustom. Sebelum pemberian caption, bridge menerapkan satu tahap
 deduplikasi visual yang konservatif: setiap JPEG direduksi menjadi buffer
 grayscale 16×16 dan hanya dibandingkan dengan frame terakhir yang dipertahankan.
@@ -386,7 +386,7 @@ yang didukung ketika mereka sudah memiliki teks yang selaras. Setiap cue harus
 membawa `text`, interval `start`/`end` yang berhingga di dalam durasi yang
 di-probe, dan `source` yang termasuk daftar putih (`client`, `embedded`, atau
 `audio-bridge`); `confidence` secara default `1` dan harus tetap berada antara
-`0` dan `1`. Cue duplikat persis digabungkan. OmniRoute tidak pernah memulai
+`0` dan `1`. Cue duplikat persis digabungkan. 67router tidak pernah memulai
 transkripsi dari metadata ini: cue yang tervalidasi disalin ke hasil yang
 dideskripsikan beserta source, confidence, dan interval, dan dirender sebagai
 observasi tidak tepercaya di samping caption frame. Teks yang tidak valid, di
@@ -1015,7 +1015,7 @@ manual) memiliki dua job:
   instruksi sebelumnya…", jailbreak gaya DAN) menegaskan bahwa respons membawa
   `error.code === "SECURITY_001"`, yaitu guard benar-benar menolak permintaan tersebut.
 - **`garak` (advisori)** — menjalankan garak `--probes promptinject,dan,leakreplay`
-  terhadap instance OmniRoute lokal (`http://localhost:20128/v1`). Digerbangi oleh
+  terhadap instance 67router lokal (`http://localhost:20128/v1`). Digerbangi oleh
   secret provider (`PROMPTFOO_PROVIDER_KEY`); dilewati secara graceful dan diakhiri
   `|| true`, sehingga melaporkan tanpa menggagalkan CI.
 

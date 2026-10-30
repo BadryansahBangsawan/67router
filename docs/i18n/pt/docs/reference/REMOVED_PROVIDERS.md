@@ -4,7 +4,7 @@
 
 ---
 
-Alguns serviços foram integrados no OmniRoute e posteriormente removidos porque as pessoas que os operam
+Alguns serviços foram integrados no 67router e posteriormente removidos porque as pessoas que os operam
 assim o solicitaram. Esta página é o registo permanente dessas remoções. O seu único objetivo é
 impedir que sejam reintroduzidos acidentalmente: um colaborador que encontre um fork antigo, um tarball npm
 em cache, um issue arquivado ou um pedido para "restaurar o fornecedor X" precisa de um local que diga **não
@@ -17,10 +17,10 @@ pedido, e essa autorização tem de estar ligada a partir da entrada.
 
 ## Política
 
-1. **Um pedido de remoção feito pelo operador de um serviço é respeitado, não negociado.** O OmniRoute
+1. **Um pedido de remoção feito pelo operador de um serviço é respeitado, não negociado.** O 67router
    não está afiliado a nenhum serviço externo. Quando o operador de um serviço pede que a
    integração seja removida, esta é removida, independentemente de a integração utilizar ou não uma API oficial.
-2. **"Removido" abrange todas as superfícies controladas pelo OmniRoute.** Executor, entrada no registo, id e
+2. **"Removido" abrange todas as superfícies controladas pelo 67router.** Executor, entrada no registo, id e
    alias do fornecedor, lista de modelos, endpoints, variáveis de ambiente, ícone, cartões do painel,
    referência do fornecedor gerada, `FREE_TIERS.md`, referência de ambiente, contagens no README,
    réplicas de `llm.txt`, testes dedicados e snapshots dourados, comentários no código, marcadores do CHANGELOG
@@ -31,7 +31,7 @@ pedido, e essa autorização tem de estar ligada a partir da entrada.
 3. **Nunca reintroduza uma entrada desta página sem autorização escrita.** Isso inclui
    voltar a adicionar o id ou alias a qualquer catálogo de fornecedores, adicionar os domínios a um executor,
    aceitar um PR de um colaborador que o "restaure", adicioná-lo ao catálogo de modelos gratuitos ou
-   documentar uma forma manual de lhe aceder através do OmniRoute. Encerre esses PRs e issues com uma
+   documentar uma forma manual de lhe aceder através do 67router. Encerre esses PRs e issues com uma
    ligação para esta página.
 4. **Mantenha a entrada mínima.** Registe apenas o que um revisor necessita para reconhecer uma
    reintrodução: identificadores, domínios, datas e o pull request que efetuou a remoção.
@@ -48,7 +48,7 @@ pedido, e essa autorização tem de estar ligada a partir da entrada.
 | 2026-08-12  | `puter`           | `pu`     | `puter.com`                                                               | Proprietário do Puter (Nariman Jelveh)                                                                                                                                | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Fornecedor com chave de API. A migração `152_remove_puter_provider.sql` limpa a configuração armazenada.                                                                                                                                                                                                                                                                                                                                              |
 | 2026-09-02  | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                   | Operador do serviço (e-mail de suporte)                                                                                                                               | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Fornecedor sem chave. Pedido escrito recebido em 2026-08-30. As issues e a discussão dedicadas foram eliminadas e os PR tiveram os títulos alterados.                                                                                                                                                                                                                                                                                                 |
 | 2026-09-21  | `gemini-business` | `gembiz` | `business.gemini.google`                                                  | Decisão do proprietário do projeto (issue [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                           | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Fornecedor Web baseado em cookies. A Google descontinuou o endpoint `BardFrontendService/StreamGenerate` utilizado pelo executor; o substituto (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, JWT Bearer inicializado a partir de `__Secure-C_SES`/`csesidx`) não pode ser implementado nem validado sem uma conta Gemini Enterprise/Workspace ativa, que o projeto não possui. Foi descontinuado em vez de ser reescrito sem validação. |
-| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                          | Decisão do proprietário do projeto (`#14224`)                                                                                                                         | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fornecedor com autenticação por cookies, não uma remoção exigida pelo operador. `studio-api.suno.ai` foi suspenso (503); o host ativo exige uma troca por um JWT do Clerk, além de uma dependência paga para resolver hCaptcha, que o OmniRoute optou por não adicionar para um único fornecedor de música. `kie/suno-v4.0` e `kie/suno-v3.5` (alojados em kie.ai) não são afetados e continuam a ser suportados.                                     |
+| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                          | Decisão do proprietário do projeto (`#14224`)                                                                                                                         | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Fornecedor com autenticação por cookies, não uma remoção exigida pelo operador. `studio-api.suno.ai` foi suspenso (503); o host ativo exige uma troca por um JWT do Clerk, além de uma dependência paga para resolver hCaptcha, que o 67router optou por não adicionar para um único fornecedor de música. `kie/suno-v4.0` e `kie/suno-v3.5` (alojados em kie.ai) não são afetados e continuam a ser suportados.                                      |
 | 2026-10-10  | `opencode`        | `oc`     | `opencode.ai/zen/v1` (nível gratuito; host partilhado com `opencode-zen`) | Remoção preventiva (decisão do proprietário do projeto), respeitando o pedido público do operador do OpenCode para remoção do projeto 9router a montante (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Apenas o fornecedor sem chave «OpenCode Free» é removido. Os fornecedores autenticados `opencode-zen` e `opencode-go`, todos os modelos do catálogo Zen e respetivos contratos de pedidos, as integrações do cliente OpenCode e `@omniroute/opencode-plugin*` permanecem. A migração `207_remove_opencode_free_provider.sql` transfere para o Zen as ligações legadas que contêm uma chave de API e limpa a configuração sem chave.                   |
 
 ## Adicionar uma entrada
@@ -63,5 +63,5 @@ Quando chegar um novo pedido de remoção:
    fornecedor com chave de API e ligações armazenadas (adicione uma migração).
 3. Adicione uma linha à tabela acima e os identificadores a
    `tests/unit/removed-providers-blocklist.test.ts`, no mesmo PR.
-4. Responda ao operador depois de o PR ser integrado, indicando o que foi removido e o que o OmniRoute
+4. Responda ao operador depois de o PR ser integrado, indicando o que foi removido e o que o 67router
    não pode alterar (versões npm e Docker já publicadas, histórico git e forks de terceiros).

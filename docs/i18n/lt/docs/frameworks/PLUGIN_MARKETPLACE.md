@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-„OmniRoute“ pateikiama su į „WordPress“ panašia papildinių sistema. Papildiniai yra savarankiški
+„67router“ pateikiama su į „WordPress“ panašia papildinių sistema. Papildiniai yra savarankiški
 katalogai — kiekviename jų yra `plugin.json` manifestas ir įvesties failas — kurie prisijungia
 prie užklausų apdorojimo grandinės (`onRequest` / `onResponse` / `onError`) ir
 gyvavimo ciklo įvykių (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -152,7 +152,7 @@ nenurodyti raktai yra leidžiami.
 
 ### Papildinių katalogas
 
-Papildiniai laikomi OmniRoute duomenų kataloge:
+Papildiniai laikomi 67router duomenų kataloge:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

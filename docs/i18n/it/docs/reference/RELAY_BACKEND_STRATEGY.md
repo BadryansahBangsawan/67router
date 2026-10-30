@@ -6,7 +6,7 @@
 
 ## Riepilogo
 
-OmniRoute ora supporta tre modalità di inoltro per `/api/v1/relay/chat/completions`:
+67router ora supporta tre modalità di inoltro per `/api/v1/relay/chat/completions`:
 
 - `ts`: utilizza l'inoltro TypeScript nello stesso processo.
 - `bifrost`: forza l'uso del gateway Bifrost.
@@ -45,12 +45,12 @@ Se stai attualmente confrontando 9router e CLIPROXYAPI:
 
 ## Contratto del confine del backend
 
-Il confine stabile del prodotto è l'API di inoltro di OmniRoute, non l'implementazione della dashboard. La dashboard Next.js può installare, configurare e supervisionare i servizi locali, ma il routing delle richieste deve entrare attraverso l'API di inoltro ed essere trasferito oltre tale confine.
+Il confine stabile del prodotto è l'API di inoltro di 67router, non l'implementazione della dashboard. La dashboard Next.js può installare, configurare e supervisionare i servizi locali, ma il routing delle richieste deve entrare attraverso l'API di inoltro ed essere trasferito oltre tale confine.
 
 Scelte di backend a lungo termine:
 
 - Mantieni l'inoltro TypeScript come percorso interno al processo per le policy e il fallback. Autenticazione, allowlist, normalizzazione delle richieste, contabilizzazione e controlli di sicurezza restano qui prima di qualsiasi passaggio al backend.
-- Utilizza Bifrost come sidecar Tier-1 preferito ad alto throughput quando il deployment richiede una minore variabilità del routing, una rotazione centralizzata dei provider o una scalabilità orizzontale tra più repliche di OmniRoute.
+- Utilizza Bifrost come sidecar Tier-1 preferito ad alto throughput quando il deployment richiede una minore variabilità del routing, una rotazione centralizzata dei provider o una scalabilità orizzontale tra più repliche di 67router.
 - Mantieni 9router e CLIPROXYAPI come servizi di compatibilità integrati. Vengono eseguiti come processi locali supervisionati e sono utili quando il loro comportamento relativo a provider/CLI è l'adattatore desiderato, ma non devono diventare il motore di routing Tier-1 predefinito.
 - Non consentire alla dashboard di passare URL di servizi arbitrari al percorso critico. Gli URL forniti dall'interfaccia utente sono input di configurazione; il codice di routing deve risolvere i backend registrati e sottoposti a controlli di integrità tramite le impostazioni lato server e lo stato del supervisore.
 - Al momento, preferisci HTTP su loopback per i servizi supervisionati, perché i processi gestiti espongono già API compatibili con HTTP, la protezione della route può verificare il confine e il comportamento in caso di errore/fallback è visibile nei log delle richieste. Un futuro trasporto tramite SDK o socket merita di essere aggiunto solo se riduce in modo misurabile la latenza di routing p99 senza indebolire l'isolamento o la semantica di fallback.

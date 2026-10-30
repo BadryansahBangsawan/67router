@@ -5,7 +5,7 @@
 ---
 
 > **每個目錄與根目錄檔案的一行說明。**
-> 最後更新：2026-06-28 — OmniRoute v3.8.40
+> 最後更新：2026-06-28 — 67router v3.8.40
 >
 > 使用此導覽圖快速瀏覽程式碼庫。如需深入瞭解，請前往對應的專屬文件連結。
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | 完整發布流程（技能、husky、conventional commits、部署）                      |
 | `COVERAGE_PLAN.md`          | 覆蓋率目標與目前狀態                                                         |
 | `FREE_TIERS.md`             | 精選免費方案提供者（48+ 個免費方案 + 11 個 OAuth）                           |
-| `CLI-TOOLS.md`              | 外部 CLI 整合 + 內部 OmniRoute CLI                                           |
+| `CLI-TOOLS.md`              | 外部 CLI 整合 + 內部 67router CLI                                            |
 | `I18N.md`                   | i18n 架構、新增語言、67 個語系                                               |
 | `UNINSTALL.md`              | 完整解除安裝步驟                                                             |
 | `PROVIDER_REFERENCE.md`     | 375 個提供者的**自動產生**目錄（重新產生：`npm run gen:provider-reference`） |

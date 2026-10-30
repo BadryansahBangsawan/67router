@@ -10,7 +10,7 @@
 
 ## Kwa nini hii ipo
 
-OmniRoute tayari inajibu maswali mawili kuhusu gharama, na hakuna hata moja ambalo waendeshaji wengi huuliza.
+67router tayari inajibu maswali mawili kuhusu gharama, na hakuna hata moja ambalo waendeshaji wengi huuliza.
 
 | Utaratibu uliopo                                         | Unajibu                                                             |
 | -------------------------------------------------------- | ------------------------------------------------------------------- |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute biedt **beeldgeneratie** via het Cursor-abonnement aan op `POST /v1/images/generations`, met dezelfde provider-id als voor chat: `cursor` (alias `cu`).
+67router biedt **beeldgeneratie** via het Cursor-abonnement aan op `POST /v1/images/generations`, met dezelfde provider-id als voor chat: `cursor` (alias `cu`).
 
 | Veld                 | Waarde                                                                                           |
 | -------------------- | ------------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute biedt **beeldgeneratie** via het Cursor-abonnement aan op `POST /v1/im
 
 ## Waarom de Agent CLI
 
-Cursor-chat in OmniRoute gebruikt `agent.v1.AgentService/Run` (protobuf). Dat pad **weigert** ingebouwde clienttools (shell, write, …). Beeldgeneratie is een Cursor-eigen tool die door de **`agent` CLI** wordt uitgevoerd voor de seat. De afbeeldingshandler start daarom `agent` met een vergrendelde prompt en een tijdelijke werkruimte per aanvraag (dezelfde opzet als community-seatbridges) en retourneert vervolgens OpenAI-compatibele `b64_json`.
+Cursor-chat in 67router gebruikt `agent.v1.AgentService/Run` (protobuf). Dat pad **weigert** ingebouwde clienttools (shell, write, …). Beeldgeneratie is een Cursor-eigen tool die door de **`agent` CLI** wordt uitgevoerd voor de seat. De afbeeldingshandler start daarom `agent` met een vergrendelde prompt en een tijdelijke werkruimte per aanvraag (dezelfde opzet als community-seatbridges) en retourneert vervolgens OpenAI-compatibele `b64_json`.
 
 ## Toegangsbeperking (harde regels #15 + #17)
 
@@ -37,7 +37,7 @@ krijgen een `403` voordat referenties worden opgezocht of een proces wordt gesta
 `CURSOR_IMG_MAX_CONCURRENT` wordt afgedwongen door een teller/wachtrij in het geheugen
 die is gekoppeld aan de Node-module-instantie
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Dit beperkt het aantal gelijktijdig gestarte `agent`-processen binnen één OmniRoute-proces
+Dit beperkt het aantal gelijktijdig gestarte `agent`-processen binnen één 67router-proces
 correct, maar coördineert **niet** tussen meerdere processen/instanties die dezelfde
 Cursor-seat delen (bijvoorbeeld een implementatie met meerdere replica's) — elke instantie
 dwingt haar eigen onafhankelijke limiet af. Voor een implementatie met één instantie
@@ -48,7 +48,7 @@ naar één instantie routeren.
 ## Vereisten
 
 1. Een verbonden Cursor-account in het dashboard (OAuth of een `crsr_…`-API-sleutel).
-2. Het binaire bestand Cursor Agent moet beschikbaar zijn voor het OmniRoute-proces:
+2. Het binaire bestand Cursor Agent moet beschikbaar zijn voor het 67router-proces:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, of
    - `~/.local/bin/agent`, of
    - `providerSpecificData.agentBin` op de Cursor-verbinding.

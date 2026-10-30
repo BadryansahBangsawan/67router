@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute huchanganua majibu ya hitilafu kutoka kwa watoa huduma wa juu ili kutafuta ishara zinazoonyesha kuwa
+67router huchanganua majibu ya hitilafu kutoka kwa watoa huduma wa juu ili kutafuta ishara zinazoonyesha kuwa
 **akaunti ya mtoa huduma imekufa kabisa** (imesimamishwa / imezimwa / imepigwa marufuku kwa kukiuka ToS) na, zinapolingana,
 huhamisha muunganisho huo hadi kwenye **hali ya mwisho ya `banned`** ili usichaguliwe tena
 kwa maombi. Hiki ndicho kinachosanidiwa na kadi ya mipangilio ya **Security → Banned Keywords**

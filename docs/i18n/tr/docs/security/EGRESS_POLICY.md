@@ -8,7 +8,7 @@
 
 > **Doğru bilginin kaynağı:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute, her proxy'nin bir **adres ailesi çıkış yönergesi** taşımasına olanak tanır. Varsayılan olarak işletim sistemi IPv4 veya IPv6'yı seçer (çift yığın, "Happy Eyeballs"). Yönergeyi `ipv4` veya `ipv6` olarak ayarladığınızda OmniRoute, söz konusu proxy üzerinden kurulan her bağlantıyı seçilen aileye sabitler ve diğer aileye geri dönmek yerine **güvenli biçimde başarısız olur**.
+67router, her proxy'nin bir **adres ailesi çıkış yönergesi** taşımasına olanak tanır. Varsayılan olarak işletim sistemi IPv4 veya IPv6'yı seçer (çift yığın, "Happy Eyeballs"). Yönergeyi `ipv4` veya `ipv6` olarak ayarladığınızda 67router, söz konusu proxy üzerinden kurulan her bağlantıyı seçilen aileye sabitler ve diğer aileye geri dönmek yerine **güvenli biçimde başarısız olur**.
 
 Bu sayfa, yönergenin ne olduğunu, neden var olduğunu, nerede yapılandırıldığını ve çalışma zamanında nasıl çözümlendiğini açıklar.
 
@@ -122,7 +122,7 @@ Proxy CRUD/atama API'sinin geri kalanı için [PROXY_GUIDE.md](../ops/PROXY_GUID
 
 ## `auto` Nasıl Çözümlenir?
 
-`family`, `auto` olduğunda OmniRoute herhangi bir yönerge **eklemez** — proxy URL'si olduğu gibi kullanılır ve bağlantı ailesi kendiliğinden belirlenir.
+`family`, `auto` olduğunda 67router herhangi bir yönerge **eklemez** — proxy URL'si olduğu gibi kullanılır ve bağlantı ailesi kendiliğinden belirlenir.
 
 URL oluşturma sırasında (`open-sse/utils/proxyDispatcher.ts` içindeki `proxyConfigToUrl` / `normalizeProxyUrl`), bir `auto` proxy, işaretçi içermeyen düz bir URL üretir:
 
@@ -158,7 +158,7 @@ Dolayısıyla:
 
 `auto` olmayan bir yönerge, normalleştirilmiş proxy URL'sine bir kez eklenen tek bir sentetik sorgu işaretçisi — `?family=ipv4` veya `?family=ipv6` — olarak taşınır. `normalizeProxyUrl`, port ayrıştırmasını hiçbir zaman bozmaması için bu işaretçiyi kaldırıp tam olarak bir kez yeniden eklemeye özen gösterir.
 
-Dispatcher oluşturulduğunda işaretçi okunur ve somut bir bağlantı ailesine dönüştürülür. Ana makine, **zıt** aileden bir IP değişmez değeri ise OmniRoute hata fırlatır (çelişki durumunda bağlantı reddedilir):
+Dispatcher oluşturulduğunda işaretçi okunur ve somut bir bağlantı ailesine dönüştürülür. Ana makine, **zıt** aileden bir IP değişmez değeri ise 67router hata fırlatır (çelişki durumunda bağlantı reddedilir):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Ardından somut aile bağlayıcıda sabitlenir:
 
 ## SOCKS5 Uyumluluğu
 
-Aile sabitleme, SOCKS5 proxy'leriyle çalışır ancak standart `fetch-socks`, proxy atlamasının ailesini sabitlemek için gereken soket seçeneklerini kullanıma açmaz. OmniRoute bunun için kendi bağlayıcısını sunar:
+Aile sabitleme, SOCKS5 proxy'leriyle çalışır ancak standart `fetch-socks`, proxy atlamasının ailesini sabitlemek için gereken soket seçeneklerini kullanıma açmaz. 67router bunun için kendi bağlayıcısını sunar:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

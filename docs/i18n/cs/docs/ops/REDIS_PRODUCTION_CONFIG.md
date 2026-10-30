@@ -6,7 +6,7 @@
 
 ## Přehled
 
-Redis je v OmniRoute **volitelná, měkká závislost** — pokud Redis není dostupný, aplikace se elegantně přepne na náhradní řešení v paměti. V produkčním prostředí snižuje vyladění Redis latenci u čtyř různých typů zátěže:
+Redis je v 67router **volitelná, měkká závislost** — pokud Redis není dostupný, aplikace se elegantně přepne na náhradní řešení v paměti. V produkčním prostředí snižuje vyladění Redis latenci u čtyř různých typů zátěže:
 
 | Typ zátěže          | Ovladač                       | Továrna klienta                                              | Vzor klíče                                                          |
 | ------------------- | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Redis je v OmniRoute **volitelná, měkká závislost** — pokud Redis není do
 | Úložiště kvót       | `redisQuotaStore.ts`          | Samostatný singleton `getRedisClient(url)`                   | `<prefix>quota:*` konfigurovatelné pro každou instanci              |
 | Jistič zahřívání    | `redisCircuitBreakerStore.ts` | Samostatný klient v `circuitBreakerFactory.ts`               | `<prefix>warmup:cb:<connectionId>`                                  |
 
-Všechny čtyři typy zátěže sdílejí jednu předponu jmenného prostoru, takže OmniRoute může na jedné instanci Redis (např. `127.0.0.1:6379`) koexistovat s dalšími aplikacemi. Viz [Jmenné prostory klíčů](#jmenné-prostory-klíčů).
+Všechny čtyři typy zátěže sdílejí jednu předponu jmenného prostoru, takže 67router může na jedné instanci Redis (např. `127.0.0.1:6379`) koexistovat s dalšími aplikacemi. Viz [Jmenné prostory klíčů](#jmenné-prostory-klíčů).
 
 ---
 
@@ -38,12 +38,12 @@ Všechny čtyři typy zátěže sdílejí jednu předponu jmenného prostoru, ta
 
 ## Jmenné prostory klíčů
 
-OmniRoute sdílí instanci Redis se vším ostatním, co běží na daném hostiteli. Bez jmenného prostoru by mohlo dojít ke kolizi klíčů, jako jsou `auth:api_key:<sha256>` nebo `rl:*`, s klíči jiných aplikací používajících stejný Redis (tato instance provozuje Redis na `127.0.0.1:6379` společně s dalšími službami).
+67router sdílí instanci Redis se vším ostatním, co běží na daném hostiteli. Bez jmenného prostoru by mohlo dojít ke kolizi klíčů, jako jsou `auth:api_key:<sha256>` nebo `rl:*`, s klíči jiných aplikací používajících stejný Redis (tato instance provozuje Redis na `127.0.0.1:6379` společně s dalšími službami).
 
-Nastavte `REDIS_KEY_PREFIX` na neprázdný řetězec, který bude přidán před **každý** klíč OmniRoute:
+Nastavte `REDIS_KEY_PREFIX` na neprázdný řetězec, který bude přidán před **každý** klíč 67router:
 
 ```bash
-# .env — všechny klíče OmniRoute budou mít podobu omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — všechny klíče 67router budou mít podobu omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ponechá prostor pro stránkovací mezipaměť OS
 maxmemory-policy allkeys-lru         # při nedostatku paměti odstraní zastaralé položky ověřovací mezipaměti
 
-# Perzistence (volitelné — OmniRoute je bezpečný při pádu i bez ní)
+# Perzistence (volitelné — 67router je bezpečný při pádu i bez ní)
 save 300 1                           # snímek alespoň každých 5 min, pokud se změnil ≥1 klíč
 appendonly no                        # AOF není potřeba; data lze znovu vygenerovat
 appendfsync no                       # žádná režie fsync (RDB je dostačující)

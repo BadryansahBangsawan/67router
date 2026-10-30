@@ -113,7 +113,7 @@ production build និងឈុតតេស្តទូលំទូលាយជ
 - កាតាឡុក CLI ស្ថិតនៅដាច់ដោយឡែកក្រោម `bin/cli/locales/`។
 - រក្សាទុក placeholder និង tag របស់ ICU ឱ្យដូចដើមទាំងស្រុង។ កុំបកប្រែឈ្មោះ product/provider/model
   ឈ្មោះ protocol និង header ពាក្យបញ្ជា identifier របស់ code/JSON URL environment variable ឬ
-  ពាក្យដែលបានការពារ ដូចជា `OmniRoute`, `OAuth`, `MCP` និង `A2A`។ បញ្ជីប្រភពបច្ចុប្បន្នគឺ
+  ពាក្យដែលបានការពារ ដូចជា `67router`, `OAuth`, `MCP` និង `A2A`។ បញ្ជីប្រភពបច្ចុប្បន្នគឺ
   `scripts/i18n/glossary/protected-terms.json`។
 
 **វដ្តចំគោលដៅ**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ប្រើ tarball �
 - **Rollback។** `run` validate slot ដែលបាន promote ម្ដងទៀត ហើយប្ដូរ `current` និង `previous` ត្រឡប់វិញ នៅពេល
   ការពិនិត្យនោះបរាជ័យ។ candidate ដែលបរាជ័យក្នុង validation ដំបូង នឹងមិនត្រូវបាន promote ឡើយ។
 
-អ្វីៗទាំងអស់ត្រូវបានសរសេរនៅក្រោម `_artifacts/candidate/` ដែល git មិនអើពើ; ការដំឡើង OmniRoute
+អ្វីៗទាំងអស់ត្រូវបានសរសេរនៅក្រោម `_artifacts/candidate/` ដែល git មិនអើពើ; ការដំឡើង 67router
 ដែលមានស្រាប់ និង directory ទិន្នន័យរបស់វា មិនត្រូវបានប៉ះពាល់ឡើយ។ CLI ដែលបាន promote គឺ
 `_artifacts/candidate/current/prefix/bin/omniroute`; ចាប់ផ្ដើមវាជាមួយ `DATA_DIR` ផ្ទាល់ខ្លួនរបស់អ្នក នៅពេលអ្នកប្រើ
 វា។ លេខកូដបញ្ចប់៖ `0` ជោគជ័យ, `1` validation ឬ promotion បរាជ័យ, `2` កំហុសក្នុងការប្រើប្រាស់ ឬគ្មាន build។

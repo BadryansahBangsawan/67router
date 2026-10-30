@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` 會將您的整個 OmniRoute 目錄（包括模型、組合與
+`@omniroute/opencode-plugin-v2` 會將您的整個 67router 目錄（包括模型、組合與
 自動組合）整合至 OpenCode v2 的模型選擇器中，並提供顯示名稱、定價與免費方案
 額度。
 
@@ -15,7 +15,7 @@
 ## 系統需求
 
 - OpenCode v2。
-- 可連線的 OmniRoute 閘道（預設為 `http://localhost:20128`）。
+- 可連線的 67router 閘道（預設為 `http://localhost:20128`）。
 - Node.js 22 或 24。
 
 ## 安裝
@@ -77,7 +77,7 @@
 | `baseURL`                        | 必填                                     | 閘道根網址，僅支援 `http(s)`；會在需要時加上 `/v1` 後綴                                           |
 | `apiKey`                         | 已連線的認證，接著是 `OMNIROUTE_API_KEY` | 用於 `/v1/*` 的聊天金鑰                                                                           |
 | `managementReadToken`            | 後援使用 `apiKey`                        | 用於 `/api/*` 的金鑰——通常與前者**不同**                                                          |
-| `displayName`                    | `"OmniRoute"`                            | 選擇器中顯示的提供者名稱                                                                          |
+| `displayName`                    | `"67router"`                             | 選擇器中顯示的提供者名稱                                                                          |
 | `timeoutMs`                      | `10000`                                  | 各端點的擷取逾時時間（自動組合使用 5 秒）                                                         |
 | `modelCacheTtlMs`                | `300000`                                 | 目錄快取 TTL；磁碟快照可加速冷啟動                                                                |
 | `timeouts`                       | 後援使用 `timeoutMs`                     | 各端點的時間預算（毫秒）：`models`、`combos`、`autoCombos`、`enrichment`                          |
@@ -115,7 +115,7 @@
 
 | 症狀                                | 原因                                                                                        |
 | ----------------------------------- | ------------------------------------------------------------------------------------------- |
-| 選擇器未顯示任何 OmniRoute 模型     | 未解析到金鑰（請檢查啟動警告），或無法連線至閘道                                            |
+| 選擇器未顯示任何 67router 模型      | 未解析到金鑰（請檢查啟動警告），或無法連線至閘道                                            |
 | 顯示原始模型 ID，沒有組合與價格資訊 | 管理端點拒絕權杖 — 請設定 `managementReadToken`                                             |
 | `freeOnly` 目錄很短或為空           | 沒有管理權杖，或權杖遭拒絕 — 請查看主機日誌中的重新整理摘要行（`unmatched-free` 計數）      |
 | 工作階段固定於 `opencode-<id>/…`    | v1 外掛程式發布的是 `opencode-<id>`；v2 則直接發布 `<id>`，因此請在 `<id>/…` 下重新選取模型 |

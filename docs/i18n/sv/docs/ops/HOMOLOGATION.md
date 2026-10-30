@@ -4,7 +4,7 @@
 
 ---
 
-Validering från början till slut (E2E) i en verklig miljö av OmniRoute-distributionen som körs på VPS:en för homologering
+Validering från början till slut (E2E) i en verklig miljö av 67router-distributionen som körs på VPS:en för homologering
 (`HOMOLOG_BASE_URL`, t.ex. `http://192.168.0.15:20128`). Ett enda kommando ersätter den manuella
 checklistan för release STOP #2 med en automatiserad körning som genererar verifieringsunderlag.
 

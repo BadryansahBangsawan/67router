@@ -7,15 +7,15 @@
 > **Allikas:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute pakub kolme erinevat agentidega seotud liidest. Esmapilgul näivad need sarnased, kuid lahendavad erinevaid probleeme. Kasutage seda lehte sobiva liidese valimiseks.
+67router pakub kolme erinevat agentidega seotud liidest. Esmapilgul näivad need sarnased, kuid lahendavad erinevaid probleeme. Kasutage seda lehte sobiva liidese valimiseks.
 
 ## Lühidalt
 
 | Liides                          | Sobib kõige paremini                                                                                                                                       | Transport                               | Standard                   |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------- |
 | **A2A — agentidevaheline**      | Koostööks teiste agentidega, mis kasutavad A2A-protokolli                                                                                                  | JSON-RPC 2.0 üle HTTP                   | A2A v0.3 (avatud standard) |
-| **ACP — CLI-agentide register** | Kasutaja arvutisse installitud CLI-kodeerimisagentide tuvastamiseks, registreerimiseks ja käivitamiseks (Cursor, Cline, Codex CLI, Claude Code, Aider jne) | HTTP REST                               | OmniRoute'i-spetsiifiline  |
-| **Pilveagendid**                | Pikaajaliste kodeerimisülesannete edastamiseks välistele pilveteenustele (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + andmebaasipõhised ülesanded | OmniRoute'i-spetsiifiline  |
+| **ACP — CLI-agentide register** | Kasutaja arvutisse installitud CLI-kodeerimisagentide tuvastamiseks, registreerimiseks ja käivitamiseks (Cursor, Cline, Codex CLI, Claude Code, Aider jne) | HTTP REST                               | 67router'i-spetsiifiline   |
+| **Pilveagendid**                | Pikaajaliste kodeerimisülesannete edastamiseks välistele pilveteenustele (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + andmebaasipõhised ülesanded | 67router'i-spetsiifiline   |
 
 Need kolm on üksteisest sõltumatud — valige neist mistahes alamhulk.
 
@@ -38,14 +38,14 @@ Kas vajate pilveteenust, mis teeks tööd väljaspool seda masinat (Codex Cloud 
 ## 1. A2A — agentidevaheline
 
 **Spetsifikatsioon:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute'i lõpp-punkt:** `POST /a2a` (JSON-RPC 2.0)
+**67router'i lõpp-punkt:** `POST /a2a` (JSON-RPC 2.0)
 **Agendikaart:** `GET /.well-known/agent.json`
 
 ### Millal kasutada
 
-- Mitme agendiga süsteemi loomisel, kus OmniRoute on üks osalistest
-- OmniRoute'i marsruutimisvõimekuse (nutikas marsruutimine, kvoodihaldus jne) pakkumiseks selliste raamistike agentidele nagu Google ADK või üldistes agendivõrkudes
-- OmniRoute'i mähkimiseks standardse tuvastus- ja käivitusliidese taha
+- Mitme agendiga süsteemi loomisel, kus 67router on üks osalistest
+- 67router'i marsruutimisvõimekuse (nutikas marsruutimine, kvoodihaldus jne) pakkumiseks selliste raamistike agentidele nagu Google ADK või üldistes agendivõrkudes
+- 67router'i mähkimiseks standardse tuvastus- ja käivitusliidese taha
 
 ### Meetodid
 
@@ -69,12 +69,12 @@ Transpordi üksikasjade, agendikaardi struktuuri, ülesannete TTL-i seadistuse j
 
 ## 2. ACP — CLI-agentide register
 
-**OmniRoute'i lõpp-punkt:** `GET /api/acp/agents`
+**67router'i lõpp-punkt:** `GET /api/acp/agents`
 **Lähtekood:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Mis see on
 
-ACP on OmniRoute'i **kohalik CLI-agentide loend**. See tuvastab, millised programmeerimise CLI-d on hostis installitud (Cursor, Cline, Claude Code, Codex CLI, Continue jne), määrab nende versioonid ja kuvab need juhtpaneelil, et kasutaja saaks iga CLI seadistada kasutama OmniRoute'i.
+ACP on 67router'i **kohalik CLI-agentide loend**. See tuvastab, millised programmeerimise CLI-d on hostis installitud (Cursor, Cline, Claude Code, Codex CLI, Continue jne), määrab nende versioonid ja kuvab need juhtpaneelil, et kasutaja saaks iga CLI seadistada kasutama 67router'i.
 
 HTTP-liides on sisemine loend, millel põhinevad „CLI Tools“ kasutajaliides ja CLI-sõrmejälgede jälgimine (vt [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Eraldi toetab sisemine protsessihaldur registreeritud Gemini käivitaja jaoks natiivset Agent Client Protocoli ning teiste lepingute jaoks pärand-stdio-adaptereid. Nende eraldiseisvate režiimide ja piirangute kohta vt [ACP register ja käivitajad](./ACP.md).
 
@@ -110,8 +110,8 @@ POST-päringu keha kuju (`customAgentBodySchema` failis `src/app/api/acp/agents/
 
 ### Kasutusjuhud
 
-- Juhtpaneeli leht „CLI Tools“ loetleb installitud tööriistad ja aitab iga neist OmniRoute'i kasutama seadistada
-- Kohandatud agendid võimaldavad kogenud kasutajatel registreerida sisemisi või omanduslikke CLI-sid, mida OmniRoute vaikimisi ei tunne
+- Juhtpaneeli leht „CLI Tools“ loetleb installitud tööriistad ja aitab iga neist 67router'i kasutama seadistada
+- Kohandatud agendid võimaldavad kogenud kasutajatel registreerida sisemisi või omanduslikke CLI-sid, mida 67router vaikimisi ei tunne
 - Tuvastustulemus täidab `cli-tools` sõrmejäljemaatriksit
 
 ### Millal ACP-d MITTE kasutada
@@ -120,12 +120,12 @@ POST-päringu keha kuju (`customAgentBodySchema` failis `src/app/api/acp/agents/
 
 ## 3. Pilveagendid
 
-**OmniRoute'i lõpp-punktid:** `/api/v1/agents/tasks/*` (elutsükkel) + `/api/cloud/*` (tugitaristu)
+**67router'i lõpp-punktid:** `/api/v1/agents/tasks/*` (elutsükkel) + `/api/cloud/*` (tugitaristu)
 **Lähtekood:** `src/lib/cloudAgent/`
 
 ### Mis see on
 
-Ühtne liides kolmandate osapoolte pilvepõhiste programmeerimisagentide kasutamiseks. Saadate viiba ja hoidla URL-i, OmniRoute edastab need õigele pilveagendile, küsib perioodiliselt olekut ning tagastab tulemused.
+Ühtne liides kolmandate osapoolte pilvepõhiste programmeerimisagentide kasutamiseks. Saadate viiba ja hoidla URL-i, 67router edastab need õigele pilveagendile, küsib perioodiliselt olekut ning tagastab tulemused.
 
 ### Toetatud agendid (3, kõik kinnitatud kataloogis `src/lib/cloudAgent/agents/`)
 
@@ -166,8 +166,8 @@ Mõlemal on „pikaajalised ülesanded“, kuid eri kihtidel:
 
 | Aspekt             | A2A                                                                                | Pilveagendid                                 |
 | ------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| Standard           | Avatud A2A v0.3                                                                    | OmniRoute’i-spetsiifiline                    |
-| Kus arvutus toimub | OmniRoute’i sees (kasutab konfigureeritud kombinatsioone)                          | Väliselt (Codexi / Devini / Julesi serverid) |
+| Standard           | Avatud A2A v0.3                                                                    | 67router’i-spetsiifiline                     |
+| Kus arvutus toimub | 67router’i sees (kasutab konfigureeritud kombinatsioone)                           | Väliselt (Codexi / Devini / Julesi serverid) |
 | Ülesande kestus    | Vaikimisi TTL 5 min (konfigureeritav komponendis `TaskManager`)                    | Minutitest tundideni                         |
 | Hoidlateadlik      | Ei (edastab ainult viibad)                                                         | Jah (hoidla URL + haru)                      |
 | Kasutusjuht        | Agentidevaheline koostöö, nutikas marsruutimine teenusena                          | Delegeeri „rakenda funktsioon X hoidlas Y“   |
@@ -175,7 +175,7 @@ Mõlemal on „pikaajalised ülesanded“, kuid eri kihtidel:
 
 ## Integratsiooninäited
 
-### OmniRoute’i A2A-võimekuste tuvastamine
+### 67router’i A2A-võimekuste tuvastamine
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -183,7 +183,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Tagastab agendikaardi kõigi 6 oskuse, transpordimeetodi ja versiooniga.
 
-### OmniRoute’i kutsumine A2A-agendina
+### 67router’i kutsumine A2A-agendina
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -257,7 +257,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute'i tuum  │
+                │   67router'i tuum  │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

@@ -14,7 +14,7 @@ CLIProxyAPI 或未來的 Go/Rust 路由器等 sidecar 使用。TypeScript 註冊
 對於程序外執行的 sidecar，也可透過 HTTP
 `GET /api/v1/provider-plugin-manifest` 取得相同的資訊清單。
 
-OmniRoute 會透過 `X-OmniRoute-Provider-Manifest-Url` 要求標頭，
+67router 會透過 `X-OmniRoute-Provider-Manifest-Url` 要求標頭，
 向 Bifrost 和 CLIProxyAPI 公告該 URL。當 sidecar 需要使用公開或容器
 網路 URL，而非本機要求來源時，請設定
 `OMNIROUTE_PROVIDER_MANIFEST_URL`。
@@ -30,7 +30,7 @@ sidecar 必須發出無條件要求，而非接受 `304`。
 ## 目標
 
 將提供者中繼資料逐步移向外掛契約，使低延遲 sidecar 最終能接管
-高頻要求路徑，同時 OmniRoute 保留 TypeScript 路由作為政策閘道與後援。
+高頻要求路徑，同時 67router 保留 TypeScript 路由作為政策閘道與後援。
 此資訊清單是附加性的：它本身不會變更要求路由。
 
 ## 契約
@@ -72,7 +72,7 @@ sidecar 必須發出無條件要求，而非接受 `304`。
 | `usage-fetch`        | 已連接用量或配額擷取器（`getUsageForProvider`）。       |
 | `usage-supported`    | 用量 API 接受此提供者（`isSupportedUsageConnection`）。 |
 
-`usage-fetch` 僅供探索使用。它表示 OmniRoute 知道如何讀取該提供者的用量；
+`usage-fetch` 僅供探索使用。它表示 67router 知道如何讀取該提供者的用量；
 它不會啟用擷取、變更配額語意，也不表示已為該提供者啟用儀表板配額小工具——
 該小工具由 `USAGE_SUPPORTED_PROVIDERS` 另行控管。唯一真實來源是
 `open-sse/services/usage/fetcherProviders.ts` 中的 `USAGE_FETCHER_PROVIDERS`。

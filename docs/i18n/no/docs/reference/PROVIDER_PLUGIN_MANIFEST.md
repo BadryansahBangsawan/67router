@@ -14,7 +14,7 @@ eksekveringskode, OAuth-standardverdier, headere eller tilstanden til prosessmil
 Det samme manifestet er tilgjengelig over HTTP på
 `GET /api/v1/provider-plugin-manifest` for sideprosesser som kjører utenfor prosessen.
 
-OmniRoute annonserer denne URL-en til Bifrost og CLIProxyAPI via
+67router annonserer denne URL-en til Bifrost og CLIProxyAPI via
 request-headeren `X-OmniRoute-Provider-Manifest-Url`. Angi
 `OMNIROUTE_PROVIDER_MANIFEST_URL` når sideprosessen trenger en offentlig URL eller
 en URL i containernettverket i stedet for den lokale opprinnelsen til forespørselen.
@@ -32,7 +32,7 @@ godta en `304`.
 
 Flytt leverandørmetadata mot en programtilleggskontrakt, slik at den aktive
 forespørselsbanen etter hvert kan eies av en sideprosess med lavere latens, mens
-OmniRoute beholder TypeScript-ruten som policyport og reservemekanisme. Manifestet
+67router beholder TypeScript-ruten som policyport og reservemekanisme. Manifestet
 er additivt: Det endrer ikke rutingen av forespørsler i seg selv.
 
 ## Kontrakt
@@ -75,7 +75,7 @@ bør behandle den som det maskinlesbare svaret på «hva kan denne leverandøren
 | `usage-fetch`        | Har en tilkoblet innhenter for bruk eller kvote (`getUsageForProvider`).             |
 | `usage-supported`    | Bruks-API-et godtar denne leverandøren (`isSupportedUsageConnection`).               |
 
-`usage-fetch` er kun for oppdagelse. Den angir at OmniRoute vet hvordan bruk kan leses for
+`usage-fetch` er kun for oppdagelse. Den angir at 67router vet hvordan bruk kan leses for
 leverandøren. Den aktiverer ikke innhenting, endrer ikke kvotesemantikken og innebærer heller
 ikke at kvotekontrollprogrammet i Dashboard er aktivert for leverandøren — dette styres separat av
 `USAGE_SUPPORTED_PROVIDERS`. Sannhetskilden er `USAGE_FETCHER_PROVIDERS` i

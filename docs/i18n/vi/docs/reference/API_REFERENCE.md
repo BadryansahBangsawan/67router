@@ -6,7 +6,7 @@
 
 🌐 **Ngôn ngữ:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Tài liệu tham khảo cốt lõi cho API OmniRoute. Tài liệu này trình bày bề mặt công khai `/v1` và các endpoint quản lý được sử dụng nhiều nhất; [`docs/openapi.yaml`](../openapi.yaml) ở định dạng máy có thể đọc được và cây route trong `src/app/api/` là các nguồn tài liệu đầy đủ nhất.
+Tài liệu tham khảo cốt lõi cho API 67router. Tài liệu này trình bày bề mặt công khai `/v1` và các endpoint quản lý được sử dụng nhiều nhất; [`docs/openapi.yaml`](../openapi.yaml) ở định dạng máy có thể đọc được và cây route trong `src/app/api/` là các nguồn tài liệu đầy đủ nhất.
 
 Để xem giao thức tương thích với OpenAI và ma trận khả năng của nhà cung cấp, hãy tham khảo
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Phản hồi | `HIT` hoặc `MISS` (không truyền phát)                                                                                                                                                                                   |
 | `X-OmniRoute-Idempotent` | Phản hồi | `true` nếu đã được khử trùng lặp                                                                                                                                                                                        |
 | `X-OmniRoute-Progress`   | Phản hồi | `enabled` nếu tính năng theo dõi tiến trình đang bật                                                                                                                                                                    |
-| `X-OmniRoute-Session-Id` | Phản hồi | ID phiên hiệu lực được OmniRoute sử dụng                                                                                                                                                                                |
+| `X-OmniRoute-Session-Id` | Phản hồi | ID phiên hiệu lực được 67router sử dụng                                                                                                                                                                                 |
 | `X-OmniRoute-Request-Id` | Phản hồi | id tương quan của yêu cầu (khi xác định được)                                                                                                                                                                           |
-| `X-OmniRoute-Version`    | Phản hồi | Phiên bản bản dựng OmniRoute (luôn có)                                                                                                                                                                                  |
+| `X-OmniRoute-Version`    | Phản hồi | Phiên bản bản dựng 67router (luôn có)                                                                                                                                                                                   |
 | `X-OmniRoute-Cost-Saved` | Phản hồi | Số USD tiết kiệm được nhờ bộ nhớ đệm khi có HIT (chỉ áp dụng cho lượt truy cập bộ nhớ đệm)                                                                                                                              |
 | `X-OmniRoute-Decision`   | Phản hồi | Dấu vết định tuyến: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` là chiến lược tổ hợp hoặc `single` đối với yêu cầu không phải tổ hợp) — luôn có trong các phản hồi hoàn tất                           |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Ghim tài khoản cho từng yêu cầu
 
-Khi một nhà cung cấp có nhiều kết nối (tài khoản hoặc khóa), OmniRoute thường chọn một kết nối
+Khi một nhà cung cấp có nhiều kết nối (tài khoản hoặc khóa), 67router thường chọn một kết nối
 thông qua chiến lược lựa chọn tài khoản. Thay vào đó, một yêu cầu có thể ghim một kết nối cụ thể
 bằng header `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ cho từng dự án:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -139,7 +139,7 @@ Nguồn: `src/sse/handlers/chat.ts` (đọc header), `src/sse/services/auth.ts` 
 
 ## Quyền thuê phiên được quản lý độc quyền
 
-Quyền thuê phiên được quản lý độc quyền là một hợp đồng định tuyến có chủ đích tham gia và không phụ thuộc vào ứng dụng khách: một chủ sở hữu đang hoạt động nắm giữ một kết nối OmniRoute đủ điều kiện. Cơ chế này không cho thuê mô hình, không yêu cầu OAuth, không xác định một ứng dụng khách cụ thể và cũng không yêu cầu một nhà cung cấp cụ thể.
+Quyền thuê phiên được quản lý độc quyền là một hợp đồng định tuyến có chủ đích tham gia và không phụ thuộc vào ứng dụng khách: một chủ sở hữu đang hoạt động nắm giữ một kết nối 67router đủ điều kiện. Cơ chế này không cho thuê mô hình, không yêu cầu OAuth, không xác định một ứng dụng khách cụ thể và cũng không yêu cầu một nhà cung cấp cụ thể.
 
 Khóa API dùng để xác thực phải có phạm vi `lease:exclusive` và danh sách `allowedConnections` tường minh, không rỗng. Ranh giới thao tác thay đổi cơ sở dữ liệu buộc cả hai trường phải đồng thời hợp lệ khi tạo khóa và khi cập nhật một phần.
 
@@ -182,7 +182,7 @@ Chủ sở hữu quyền thuê đang hoạt động có thể yêu cầu rõ rà
 }
 ```
 
-Thao tác trạng thái có chủ đích tham gia này được bảo vệ bằng chủ sở hữu bất minh, khóa API được quản lý đã xác thực và thế hệ đang hoạt động chính xác trong một giao dịch cơ sở dữ liệu duy nhất. `displayName` chỉ là tên kết nối đã cấu hình sau khi loại bỏ khoảng trắng thừa; giá trị này là `null` khi không tồn tại tên đã cấu hình an toàn. OmniRoute không bao giờ thay thế bằng email hoặc danh tính tài khoản được tạo. Giá trị nhà cung cấp là một nhãn hiển thị không nhạy cảm và không bao giờ là mã định danh nhà cung cấp tương thích được tạo. Thông tin xác thực, token, cookie, mã định danh thô của kết nối hoặc khóa API, giá trị băm của chủ sở hữu, bí mật phân rào và dữ liệu định tuyến nội bộ đều bị loại trừ.
+Thao tác trạng thái có chủ đích tham gia này được bảo vệ bằng chủ sở hữu bất minh, khóa API được quản lý đã xác thực và thế hệ đang hoạt động chính xác trong một giao dịch cơ sở dữ liệu duy nhất. `displayName` chỉ là tên kết nối đã cấu hình sau khi loại bỏ khoảng trắng thừa; giá trị này là `null` khi không tồn tại tên đã cấu hình an toàn. 67router không bao giờ thay thế bằng email hoặc danh tính tài khoản được tạo. Giá trị nhà cung cấp là một nhãn hiển thị không nhạy cảm và không bao giờ là mã định danh nhà cung cấp tương thích được tạo. Thông tin xác thực, token, cookie, mã định danh thô của kết nối hoặc khóa API, giá trị băm của chủ sở hữu, bí mật phân rào và dữ liệu định tuyến nội bộ đều bị loại trừ.
 
 Các truy vấn dùng sai khóa, sai chủ sở hữu, thế hệ cũ, quyền thuê bị thiếu, hết hạn, đã giải phóng hoặc bị vô hiệu hóa đều trả về cùng lỗi `409 LEASE_FENCE_STALE` mà không kèm siêu dữ liệu kết nối. Ứng dụng khách đã nhận phản hồi chờ dung lượng không có liên kết đang hoạt động để kiểm tra. Khi quá trình định tuyến chuyển đổi một quyền thuê đang hoạt động, cùng một thế hệ vẫn còn hiệu lực và trạng thái sẽ trả về liên kết mới một cách nguyên tử, không bao giờ trả về liên kết cũ. Các ứng dụng khách hiện có không bị ảnh hưởng vì phản hồi nhận, gia hạn, giải phóng và chờ vẫn giữ nguyên cấu trúc trước đây.
 
@@ -208,7 +208,7 @@ Tranh chấp tạm thời trả về HTTP `429` kèm theo `Retry-After` và:
 }
 ```
 
-Phản hồi này chỉ có nghĩa là tập hợp đủ điều kiện thông thường không rỗng và mọi ứng viên còn trống đều đang được một quyền thuê đang hoạt động của chủ sở hữu khác nắm giữ. Các mô hình/nhà cung cấp không được hỗ trợ, chính sách không khớp, thời gian chờ, hạn ngạch, tình trạng hoạt động và các lỗi đủ điều kiện thông thường khác vẫn giữ nguyên phản hồi OmniRoute hiện có.
+Phản hồi này chỉ có nghĩa là tập hợp đủ điều kiện thông thường không rỗng và mọi ứng viên còn trống đều đang được một quyền thuê đang hoạt động của chủ sở hữu khác nắm giữ. Các mô hình/nhà cung cấp không được hỗ trợ, chính sách không khớp, thời gian chờ, hạn ngạch, tình trạng hoạt động và các lỗi đủ điều kiện thông thường khác vẫn giữ nguyên phản hồi 67router hiện có.
 
 ### `x-omniroute-compression`
 
@@ -280,7 +280,7 @@ EmbeddingsV5Request gốc của Jina và **chuyển tiếp nguyên vẹn** chún
 ```
 
 Các giá trị `{ image | audio | video | pdf }` gốc có thể là URL HTTPS công khai, URI `data:` hoặc dữ liệu
-base64 thô. OmniRoute không chuyển các đối tượng đó thành chuỗi hoặc tải các URL hình ảnh gốc — Jina tự truy xuất
+base64 thô. 67router không chuyển các đối tượng đó thành chuỗi hoặc tải các URL hình ảnh gốc — Jina tự truy xuất
 phương tiện công khai. Các trường Jina bổ sung (`task`, `normalized`, `truncate`, `embedding_type`) được
 chuyển tiếp. Các SKU Jina chỉ hỗ trợ văn bản vẫn từ chối tài liệu không phải văn bản.
 
@@ -430,7 +430,7 @@ bên gọi, vì vậy mã phía máy khách không cần xử lý riêng theo t�
 
 ### Xác thực và phân giải endpoint cho Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` sử dụng lại cơ chế xác thực Vertex AI mà OmniRoute đã hỗ trợ cho
+`vertex-deepseek-ocr` sử dụng lại cơ chế xác thực Vertex AI mà 67router đã hỗ trợ cho
 lưu lượng trò chuyện/hình ảnh (`open-sse/executors/vertex.ts`): khóa API của kết nối là thông tin xác thực
 Service Account JSON (được trao đổi lấy mã truy cập OAuth có thời hạn ngắn thông qua luồng JWT-bearer)
 hoặc một mã truy cập OAuth đã được cấp sẵn và được sử dụng nguyên trạng. URL endpoint thượng nguồn là
@@ -454,7 +454,7 @@ Authorization: Bearer your-api-key
 
 ### Giá mô hình (`pricing`)
 
-Một mục sẽ chứa đối tượng `pricing` khi OmniRoute biết giá của mô hình. Giá này lấy từ
+Một mục sẽ chứa đối tượng `pricing` khi 67router biết giá của mô hình. Giá này lấy từ
 bảng giá được hệ thống hạch toán chi phí sử dụng: các giá trị mặc định tích hợp sẵn, giá đã đồng bộ và
 các giá ghi đè được đặt thông qua `/api/pricing`. Đây là giá niêm yết, vì vậy các nhà cung cấp theo gói đăng ký cũng
 hiển thị giá trên mỗi token.
@@ -608,8 +608,8 @@ Sử dụng điểm cuối này khi một sidecar chạy ngoài tiến trình v�
 
 ## Tạo âm thanh bằng ElevenLabs
 
-Cấu hình một kết nối nhà cung cấp `elevenlabs` trong OmniRoute bằng khóa API ElevenLabs của bạn.
-Ứng dụng khách xác thực bằng khóa **OmniRoute** của chúng (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Cấu hình một kết nối nhà cung cấp `elevenlabs` trong 67router bằng khóa API ElevenLabs của bạn.
+Ứng dụng khách xác thực bằng khóa **67router** của chúng (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 cổng cung cấp khóa nhà cung cấp đã lưu dưới dạng `xi-api-key`. Tuyệt đối không gửi khóa ElevenLabs
 làm bearer token của cổng.
 
@@ -674,7 +674,7 @@ tuyến gốc trả về nguyên trạng mã trạng thái và phần thân lỗ
 gói dịch vụ và `429` cho giới hạn hạn ngạch. Các tiêu đề `character-cost`, `song-id`, `request-id` và `retry-after`
 được giữ nguyên khi có. Số dư tín dụng miễn phí không đảm bảo quyền truy cập vào mọi
 mô hình nhạc, định dạng đầu ra hoặc tính năng API: ElevenLabs quyết định quyền sử dụng cho từng yêu cầu.
-Điểm cuối hợp nhất giữ nguyên mã trạng thái lỗi trong lớp bao lỗi đã chuẩn hóa của OmniRoute.
+Điểm cuối hợp nhất giữ nguyên mã trạng thái lỗi trong lớp bao lỗi đã chuẩn hóa của 67router.
 
 Hợp đồng ngược dòng: [hiệu ứng âm thanh](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [sáng tác nhạc](https://elevenlabs.io/docs/api-reference/music/compose) và
@@ -715,7 +715,7 @@ Hợp đồng ngược dòng: [hiệu ứng âm thanh](https://elevenlabs.io/doc
 
 Tất cả các route POST đều tuân theo cùng một cấu trúc: `Bearer your-api-key` + nội dung JSON được Zod xác thực (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, v.v.; xem `src/shared/validation/schemas.ts`). Mã 4xx được trả về khi xác thực schema thất bại.
 
-Đối với các client không thể đính kèm `Authorization: Bearer ...`, OmniRoute cũng chấp nhận khóa API trong URL thông qua khả năng tương thích với chuỗi truy vấn (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) hoặc các endpoint chuyên dụng `/api/v1/vscode/{token}/...` được mô tả bên dưới.
+Đối với các client không thể đính kèm `Authorization: Bearer ...`, 67router cũng chấp nhận khóa API trong URL thông qua khả năng tương thích với chuỗi truy vấn (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) hoặc các endpoint chuyên dụng `/api/v1/vscode/{token}/...` được mô tả bên dưới.
 
 ```bash
 # Xếp hạng lại (nhà cung cấp trong registry đám mây hoặc một node nhà cung cấp tương thích với OpenAI dưới dạng "<prefix>/<model>")
@@ -877,7 +877,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, sử dụng cùng API key với Parallel Search) chỉ trả về Markdown
 — mọi `format` khác đều dẫn đến lỗi `400` — và giới hạn nội dung ở 100.000 ký tự. Khi
 không thể trích xuất chính trang đích, dịch vụ thượng nguồn báo lỗi đó bên trong phản hồi HTTP 200;
-OmniRoute biểu thị trường hợp này bằng lỗi `422` với một thông báo cố định.
+67router biểu thị trường hợp này bằng lỗi `422` với một thông báo cố định.
 
 | Phương thức | Đường dẫn       | Mô tả                                                                  |
 | ----------- | --------------- | ---------------------------------------------------------------------- |
@@ -940,14 +940,14 @@ phải là entrypoint đang hoạt động (theo mặc định là như vậy kh
 **Codex CLI** của OpenAI xác thực tên model ở phía client khi
 `supports_websockets = true` và **từ chối các ID có tiền tố nhà cung cấp** như
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Hãy gửi ID **nguyên bản** (ví dụ: `gpt-5.5`). Cầu nối của OmniRoute
+a ChatGPT account`). Hãy gửi ID **nguyên bản** (ví dụ: `gpt-5.5`). Cầu nối của 67router
 chỉ dành cho codex, vì vậy nó phân giải lại một ID nguyên bản thành model codex
 (`resolveCodexWsModelInfo`) trước khi tạo đường hầm tới thượng nguồn — mặc dù một ID nguyên bản
 `gpt-5.5` lẽ ra sẽ được định tuyến đến nhà cung cấp khác qua HTTP.
 
 #### Cấu hình OpenAI Codex CLI
 
-Trỏ Codex CLI đến OmniRoute bằng cách thêm một nhà cung cấp tùy chỉnh có hỗ trợ WebSocket
+Trỏ Codex CLI đến 67router bằng cách thêm một nhà cung cấp tùy chỉnh có hỗ trợ WebSocket
 vào `~/.codex/config.toml` (sử dụng một `CODEX_HOME` riêng để tránh thay đổi
 cấu hình hiện có):
 
@@ -960,15 +960,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # không có dấu gạch chéo ở cuối; URL WS được suy ra (sử dụng https/wss trong môi trường production)
 wire_api = "responses"                    # giá trị duy nhất được hỗ trợ kể từ tháng 2 năm 2026
 supports_websockets = true                # bật cơ chế truyền tải Responses-qua-WS
-env_key = "OMNIROUTE_API_KEY"             # chứa OmniRoute API key (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # chứa 67router API key (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # một OmniRoute API key (bất kỳ key nào nếu REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # một 67router API key (bất kỳ key nào nếu REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI nâng cấp `base_url + /responses` thành WebSocket và OmniRoute tạo đường hầm cho kết nối đó
+CLI nâng cấp `base_url + /responses` thành WebSocket và 67router tạo đường hầm cho kết nối đó
 tới kết nối OAuth codex đã chọn. Đã được xác thực đầu cuối với máy chủ
 cục bộ: ChatGPT trả về `codex.rate_limits` + `response.created` và truyền phát
 phần hoàn thành.
@@ -1052,7 +1052,7 @@ Khi sử dụng `/api/usage/om-usage`, bên gọi nên lưu ý sự khác biệt
 
 #### Công thức điều chỉnh ngưỡng cắt
 
-OmniRoute hỗ trợ ngưỡng cắt hạn ngạch chủ động để ngăn cạn kiệt tài nguyên thượng nguồn (được cấu hình qua
+67router hỗ trợ ngưỡng cắt hạn ngạch chủ động để ngăn cạn kiệt tài nguyên thượng nguồn (được cấu hình qua
 `quotaWindowThresholds` của kết nối, giá trị mặc định của nhà cung cấp hoặc cài đặt khả năng phục hồi toàn cục). Khi một ngưỡng cắt
 (ví dụ: `cutoff = 25%`) đang hoạt động trên một cửa sổ hạn ngạch, trình kết xuất văn bản sẽ tính hạn mức còn lại như sau:
 
@@ -1601,7 +1601,7 @@ Lưu ý:
 
 - Các bí danh có token tái sử dụng cùng các trình xử lý như `/v1/*` và `/api/tags`; cấu trúc phản hồi vẫn giữ nguyên.
 - Ưu tiên sử dụng `Authorization: Bearer ...` bất cứ khi nào máy khách hỗ trợ header tùy chỉnh.
-- Token dựa trên URL có thể xuất hiện trong nhật ký reverse proxy, lịch sử trình duyệt và dữ liệu đo từ xa bên ngoài OmniRoute. Hãy xem chúng là một tùy chọn tương thích, không phải chế độ xác thực mặc định.
+- Token dựa trên URL có thể xuất hiện trong nhật ký reverse proxy, lịch sử trình duyệt và dữ liệu đo từ xa bên ngoài 67router. Hãy xem chúng là một tùy chọn tương thích, không phải chế độ xác thực mặc định.
 
 ---
 
@@ -1709,7 +1709,7 @@ Các combo định tuyến cấp cao hơn (đã được tóm tắt trong `/api/
 
 ## Webhook
 
-Các đăng ký webhook gửi đi cho các sự kiện OmniRoute (hoàn tất yêu cầu, cạn hạn ngạch, xoay vòng khóa, v.v.).
+Các đăng ký webhook gửi đi cho các sự kiện 67router (hoàn tất yêu cầu, cạn hạn ngạch, xoay vòng khóa, v.v.).
 
 | Phương thức | Đường dẫn                 | Mô tả                                                                  |
 | ----------- | ------------------------- | ---------------------------------------------------------------------- |
@@ -1742,7 +1742,7 @@ Các đăng ký webhook gửi đi cho các sự kiện OmniRoute (hoàn tất y�
 
 ## Giao thức tác tử
 
-Các tác vụ tác tử đám mây (Claude Code, Codex Cloud, OpenHands, v.v.) được thực thi từ xa thay mặt cho người dùng OmniRoute.
+Các tác vụ tác tử đám mây (Claude Code, Codex Cloud, OpenHands, v.v.) được thực thi từ xa thay mặt cho người dùng 67router.
 
 | Phương thức | Đường dẫn                     | Mô tả                                                                                                                                                       |
 | ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1788,7 +1788,7 @@ Các proxy HTTP(S)/SOCKS đi ra có thể được gán cho nhà cung cấp, tà
 
 ## Khả năng phục hồi (mở rộng)
 
-OmniRoute cung cấp ba cơ chế xử lý lỗi tạm thời độc lập; các endpoint quản lý bên dưới cho phép người vận hành đọc và ghi đè chúng:
+67router cung cấp ba cơ chế xử lý lỗi tạm thời độc lập; các endpoint quản lý bên dưới cho phép người vận hành đọc và ghi đè chúng:
 
 | Phạm vi                   | Nơi lưu trữ trạng thái                           | Đọc                                       | Đặt lại / xóa                                     |
 | ------------------------- | ------------------------------------------------ | ----------------------------------------- | ------------------------------------------------- |
@@ -1823,7 +1823,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Kỹ năng
 
-Framework kỹ năng để mở rộng OmniRoute bằng các trình xử lý thực thi tùy chỉnh, cùng với các tích hợp marketplace.
+Framework kỹ năng để mở rộng 67router bằng các trình xử lý thực thi tùy chỉnh, cùng với các tích hợp marketplace.
 
 | Phương thức | Đường dẫn                         | Mô tả                                                                                                                             |
 | ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -1860,7 +1860,7 @@ Kho lưu trữ bộ nhớ hội thoại/thông tin thực tế lâu dài, đư�
 
 ## Máy chủ MCP
 
-OmniRoute cung cấp một máy chủ Model Context Protocol được nhúng sẵn với 3 phương thức truyền tải (stdio, SSE, streamable-http) và các công cụ có phạm vi. Các endpoint dashboard bên dưới đọc dữ liệu trạng thái/kiểm tra và ủy nhiệm các phương thức truyền tải HTTP.
+67router cung cấp một máy chủ Model Context Protocol được nhúng sẵn với 3 phương thức truyền tải (stdio, SSE, streamable-http) và các công cụ có phạm vi. Các endpoint dashboard bên dưới đọc dữ liệu trạng thái/kiểm tra và ủy nhiệm các phương thức truyền tải HTTP.
 
 | Phương thức | Đường dẫn | Mô tả |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1882,7 +1882,7 @@ OmniRoute cung cấp một máy chủ Model Context Protocol được nhúng s�
 
 ## Máy chủ A2A
 
-OmniRoute cung cấp một điểm cuối A2A (Agent-to-Agent) JSON-RPC 2.0 cùng với một lớp bọc REST phục vụ việc kiểm tra/sử dụng bảng điều khiển.
+67router cung cấp một điểm cuối A2A (Agent-to-Agent) JSON-RPC 2.0 cùng với một lớp bọc REST phục vụ việc kiểm tra/sử dụng bảng điều khiển.
 
 ### JSON-RPC
 
@@ -2108,7 +2108,7 @@ Các endpoint chỉ dành cho quản trị viên để quản lý vận hành.
 
 ## Quản lý công cụ CLI
 
-Quản lý các công cụ CLI tích hợp với OmniRoute (antigravity, commandCode,
+Quản lý các công cụ CLI tích hợp với 67router (antigravity, commandCode,
 devin-cli, v.v.). Xem [Tài liệu tham khảo về nhà cung cấp](./PROVIDER_REFERENCE.md) để biết danh sách đầy đủ.
 
 | Phương thức | Đường dẫn                               | Mô tả                                                                                                                                                         |
@@ -2219,7 +2219,7 @@ Xem [Khung kỹ năng](../frameworks/SKILLS.md) để biết đầy đủ chi ti
 
 ## Plugin
 
-Quản lý các plugin OmniRoute (tiện ích mở rộng của bên thứ ba).
+Quản lý các plugin 67router (tiện ích mở rộng của bên thứ ba).
 
 | Phương thức | Đường dẫn                          | Mô tả                             |
 | ----------- | ---------------------------------- | --------------------------------- |

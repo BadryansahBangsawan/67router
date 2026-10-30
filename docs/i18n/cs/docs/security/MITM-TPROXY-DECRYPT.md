@@ -4,7 +4,7 @@
 
 ---
 
-Transparentní dešifrování TPROXY je **5. režim zachytávání** OmniRoute pro MITM stack
+Transparentní dešifrování TPROXY je **5. režim zachytávání** 67router pro MITM stack
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Na Linuxu zachytává a **dešifruje** místní odchozí provoz HTTPS pomocí kernelového
 TPROXY + směrování na základě zásad — **bez** podvržení `/etc/hosts` a
@@ -53,7 +53,7 @@ Použijte jej, pokud chcete zachytávat a dešifrovat provoz procesu, který:
 - nechcete narušit změnou celosystémové proxy.
 
 Protože k zachytávání dochází v kernelu, původní proces **nevyžaduje žádnou
-změnu konfigurace** — musí však důvěřovat dynamické CA, kterou OmniRoute
+změnu konfigurace** — musí však důvěřovat dynamické CA, kterou 67router
 nainstaluje (viz [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ nesestavený addon), loader addonu (`src/mitm/tproxy/transparentSocket.ts::loadT
 vrátí `null` namísto vyvolání výjimky. Stav režimu zachytávání poté uvádí
 `available: false`, přepínač na řídicím panelu je **deaktivován** a zobrazuje tooltip
 „Dešifrování TPROXY vyžaduje Linux + root + nativní addon“ a zbytek
-OmniRoute funguje dál.
+67router funguje dál.
 
 ---
 
@@ -266,7 +266,7 @@ nekonečná smyčka. Cesta přeposlání se tomu brání pomocí značky socketu
 | **Sanitizace chyb**                  | Chybové odpovědi této trasy procházejí funkcí `sanitizeErrorMessage()` (Pevné pravidlo č. 12).                                                                                                                                                                                                                                                                                                                                                          |
 
 **CA pro MITM představuje mocný nástroj.** CA, které operační systém důvěřuje a které může podepsat certifikát pro libovolného
-hostitele, znamená, že lze dešifrovat vše, co OmniRoute zachytí. Je dostupná pouze v rámci
+hostitele, znamená, že lze dešifrovat vše, co 67router zachytí. Je dostupná pouze v rámci
 explicitního režimu zachytávání TPROXY omezeného na místní přístup, který je ve výchozím nastavení vypnutý, a položka v úložišti
 důvěryhodných certifikátů se při zastavení tohoto režimu odstraní.
 
@@ -377,7 +377,7 @@ Nativní doplněk nelze načíst. Ověřte, že používáte Linux, sestavili js
 ### Zastaralá pravidla firewallu po pádu
 
 `revertTproxy()` je přesným opakem použití pravidel a je idempotentní. Zastavení
-režimu vrátí pravidla zpět; pokud byl OmniRoute ukončen během relace, použijte akci
+režimu vrátí pravidla zpět; pokud byl 67router ukončen během relace, použijte akci
 **Repair** služby AgentBridge (`POST /api/tools/agent-bridge/repair`), která vrátí zpět osiřelý stav
 systému (podvržení DNS, kořenovou CA, systémový proxy server). Pravidla `mangle` TPROXY a trasa se také
 automaticky vyprázdní při restartu systému.

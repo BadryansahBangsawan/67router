@@ -13,7 +13,7 @@
 ## Ohun tí ó jẹ́
 
 Local Corpus ń jẹ́ kí olùṣàkóso fi àkójọpọ̀ fáìlì ọ̀rọ̀ kan ṣoṣo tí a fọwọ́ sí ní pàtó hàn sí
-sáfà MCP ti OmniRoute. Àwọn fáìlì náà dúró sínú àkójọpọ̀ fáìlì ìpilẹ̀ṣẹ̀ wọn: OmniRoute ń fi
+sáfà MCP ti 67router. Àwọn fáìlì náà dúró sínú àkójọpọ̀ fáìlì ìpilẹ̀ṣẹ̀ wọn: 67router ń fi
 ọ̀nà-gbòǹgbò canonical nìkan pamọ́ sínú SQLite, ó sì ń ṣètójú àtọ́ka ìṣàwárí inú ìrántí. Kì í
 ṣe àdàkọ àkóónú corpus sínú ibi ìpamọ́ kóòdù tàbí ibi ìpamọ́ dátà.
 

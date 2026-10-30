@@ -4,16 +4,16 @@
 
 ---
 
-Dua cara untuk menempatkan Cursor di belakang OmniRoute tanpa sesi IDE:
+Dua cara untuk menempatkan Cursor di belakang 67router tanpa sesi IDE:
 
 1. **Penyedia `cursor-api`** (kartu "Cursor API", alias `cua`): penyedia berbasis kunci API
    yang menyimpan kunci API pengguna Cursor (`crsr_…`, dibuat di
-   `https://cursor.com/dashboard/api`). Setiap klien OmniRoute kemudian dapat mengakses
+   `https://cursor.com/dashboard/api`). Setiap klien 67router kemudian dapat mengakses
    model Cursor melalui `/v1/chat/completions` sebagai `cursor-api/<model>` atau
    `cua/<model>`, dengan lapisan kuota, fallback, dan pencatatan seperti biasa. Penyedia IDE
    (`cursor`, sesi OAuth/IDE) tidak berubah.
-2. **Passthrough Cursor CLI**: arahkan Cursor CLI (`agent`) ke OmniRoute sehingga
-   setiap RPC yang dibuat CLI diautentikasi dengan kunci API OmniRoute, diteruskan
+2. **Passthrough Cursor CLI**: arahkan Cursor CLI (`agent`) ke 67router sehingga
+   setiap RPC yang dibuat CLI diautentikasi dengan kunci API 67router, diteruskan
    ke Cursor menggunakan kredensial koneksi `cursor-api`, dan dicatat di
    halaman Logs.
 
@@ -60,7 +60,7 @@ Catatan:
 
 - Daftar model untuk `cursor-api` berasal dari registri statis Cursor (daftar
   yang sama yang digunakan sebagai fallback oleh penyedia IDE); instalasi `cursor-agent` tidak
-  diperlukan pada host OmniRoute.
+  diperlukan pada host 67router.
 - `POST /api/providers/{id}/refresh-cursor` hanya untuk penyedia IDE `cursor`;
   koneksi `cursor-api` tidak memiliki sesi IDE yang perlu diperbarui.
 
@@ -68,7 +68,7 @@ Catatan:
 
 Untuk `cursor` / `cu` dan `cursor-api` / `cua`, normalizer effort Claude bersama
 mempertahankan ID model yang diminta tanpa perubahan. Cursor dapat mengiklankan sufiks seperti
-`-low` sebagai bagian dari ID model sebenarnya, bukan sebagai alias effort OmniRoute.
+`-low` sebagai bagian dari ID model sebenarnya, bukan sebagai alias effort 67router.
 Executor Cursor mempertahankan kecocokan persis dengan katalog aktif; jika tidak ada
 kecocokan, resolver model yang sudah ada menangani fallback dari sufiks ke parameter.
 
@@ -83,19 +83,19 @@ Rute: `src/app/api/cursor-cli/[...path]/route.ts` →
 didaftarkan di `src/shared/constants/publicApiRoutes.ts` karena handler
 menerapkan autentikasinya sendiri:
 
-| Path                                                                                                                            | Autentikasi yang diharapkan dari CLI | Yang dilakukan OmniRoute                                                                                                                                                                   |
+| Path                                                                                                                            | Autentikasi yang diharapkan dari CLI | Yang dilakukan 67router                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <OmniRoute API key>`         | Memvalidasi kunci, menerbitkan JWT HS256 berdurasi 1 jam (ditandatangani dengan `JWT_SECRET`), lalu mengembalikannya                                                                       |
+| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <67router API key>`          | Memvalidasi kunci, menerbitkan JWT HS256 berdurasi 1 jam (ditandatangani dengan `JWT_SECRET`), lalu mengembalikannya                                                                       |
 | setiap path lainnya (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                  | Memverifikasi penerbit/audiens/kedaluwarsa, memilih koneksi `cursor-api` yang aktif, mengganti header Authorization dengan token Cursor hasil pertukaran, lalu mengalirkan respons kembali |
 
 CLI mendekode `exp` dari token apa pun yang diterimanya, sehingga memberinya token
 buram membuatnya melakukan pertukaran ulang sebelum hampir setiap permintaan; JWT
-yang diterbitkan menghindari hal tersebut. Respons 401 dari OmniRoute membuat CLI
+yang diterbitkan menghindari hal tersebut. Respons 401 dari 67router membuat CLI
 melakukan pertukaran ulang.
 
 ### Penyiapan
 
-1. Buat kunci API OmniRoute (Dasbor → Kunci API) dan koneksi `cursor-api`.
+1. Buat kunci API 67router (Dasbor → Kunci API) dan koneksi `cursor-api`.
 2. Atur CLI agar menggunakan HTTP/1.1 untuk stream agen. Di
    `~/.cursor/cli-config.json`:
 
@@ -107,7 +107,7 @@ melakukan pertukaran ulang.
    yang dikonfigurasi secara terpisah dan hanya RPC bidang kontrol yang melewati
    endpoint.
 
-3. Jalankan CLI menggunakan OmniRoute:
+3. Jalankan CLI menggunakan 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,18 +116,18 @@ melakukan pertukaran ulang.
    ```
 
 Setiap hop muncul di Log dengan penyedia `cursor-api`, jenis permintaan `cursor-cli`,
-path `/api/cursor-cli/<rpc>`, yang dikaitkan dengan kunci API OmniRoute dan
+path `/api/cursor-cli/<rpc>`, yang dikaitkan dengan kunci API 67router dan
 koneksi yang melayaninya.
 
 ### Mode kegagalan
 
-| Situasi                                                  | Respons kepada CLI                                |
-| -------------------------------------------------------- | ------------------------------------------------- |
-| Kunci OmniRoute tidak dikenal dan `REQUIRE_API_KEY=true` | 401 `unauthenticated` saat pertukaran             |
-| `REQUIRE_API_KEY=false`                                  | sesi anonim (mencerminkan perilaku `/v1/*`)       |
-| JWT sesi kedaluwarsa / asing / dimanipulasi              | 401, CLI melakukan pertukaran ulang               |
-| Kunci API OmniRoute dicabut setelah pertukaran           | 401 pada RPC berikutnya                           |
-| Tidak ada koneksi `cursor-api` yang aktif                | 503 `unavailable`                                 |
-| Cursor menolak kunci milik koneksi                       | 401 `unauthenticated`, sesi yang di-cache dihapus |
-| Upstream tidak dapat dijangkau                           | 502 `unavailable` (pesan yang telah disanitasi)   |
-| `JWT_SECRET` tidak ditetapkan                            | 503 saat pertukaran                               |
+| Situasi                                                 | Respons kepada CLI                                |
+| ------------------------------------------------------- | ------------------------------------------------- |
+| Kunci 67router tidak dikenal dan `REQUIRE_API_KEY=true` | 401 `unauthenticated` saat pertukaran             |
+| `REQUIRE_API_KEY=false`                                 | sesi anonim (mencerminkan perilaku `/v1/*`)       |
+| JWT sesi kedaluwarsa / asing / dimanipulasi             | 401, CLI melakukan pertukaran ulang               |
+| Kunci API 67router dicabut setelah pertukaran           | 401 pada RPC berikutnya                           |
+| Tidak ada koneksi `cursor-api` yang aktif               | 503 `unavailable`                                 |
+| Cursor menolak kunci milik koneksi                      | 401 `unauthenticated`, sesi yang di-cache dihapus |
+| Upstream tidak dapat dijangkau                          | 502 `unavailable` (pesan yang telah disanitasi)   |
+| `JWT_SECRET` tidak ditetapkan                           | 503 saat pertukaran                               |

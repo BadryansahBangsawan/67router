@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Az OmniRoute nyomon követi minden kérés tokenhasználatát, kiszámítja a költséget, API-kulcsonként érvényesíti a kvótát, és megjeleníti az analitikai adatokat az irányítópulton. Ez az útmutató elmagyarázza a teljes működést.
+> **TL;DR**: Az 67router nyomon követi minden kérés tokenhasználatát, kiszámítja a költséget, API-kulcsonként érvényesíti a kvótát, és megjeleníti az analitikai adatokat az irányítópulton. Ez az útmutató elmagyarázza a teljes működést.
 
 **Források:**
 
@@ -17,7 +17,7 @@
 
 ## Áttekintés
 
-Minden, az OmniRoute-on keresztülhaladó kérés létrehoz egy **használati rekordot**, amely a következőket rögzíti:
+Minden, az 67router-on keresztülhaladó kérés létrehoz egy **használati rekordot**, amely a következőket rögzíti:
 
 - **Identitás**: melyik API-kulcs, szolgáltató, modell és kombináció
 - **Tokenek**: prompttokenek, választokenek, gyorsítótárazott tokenek és összes token
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Azoknál a szolgáltatóknál, amelyek nem adnak vissza használati adatokat (például egyes webes cookie-alapú szolgáltatók), az OmniRoute egy `~4 karakter tokenenként` heurisztikával **becsüli meg** a tokenek számát (lásd: `open-sse/services/autoCombo/pipelineRouter.ts`).
+Azoknál a szolgáltatóknál, amelyek nem adnak vissza használati adatokat (például egyes webes cookie-alapú szolgáltatók), az 67router egy `~4 karakter tokenenként` heurisztikával **becsüli meg** a tokenek számát (lásd: `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Gyorsítótárazott tokenek
 
-Az OmniRoute a `cached_tokens` értékét a `prompt_tokens` értékétől elkülönítve követi nyomon, mert:
+Az 67router a `cached_tokens` értékét a `prompt_tokens` értékétől elkülönítve követi nyomon, mert:
 
 - Az Anthropic prompt-gyorsítótárazása kedvezményes díjat számít fel a gyorsítótárazott tokenekért (a normál díj 10%-át)
 - Egyes szolgáltatók `cache_read_input_tokens` értéket adnak vissza, amelyet eltérően kell árazni
@@ -117,7 +117,7 @@ Az árképzési adatok automatikusan szinkronizálódnak a LiteLLM-ből az `/api
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Az árképzési adatokkal nem rendelkező modellek esetén az OmniRoute belső átlagárak használatával **megbecsüli a költséget** (a LiteLLM árképzési adatai alapján).
+Az árképzési adatokkal nem rendelkező modellek esetén az 67router belső átlagárak használatával **megbecsüli a költséget** (a LiteLLM árképzési adatai alapján).
 
 ---
 

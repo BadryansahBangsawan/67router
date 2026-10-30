@@ -4,7 +4,7 @@
 
 ---
 
-> **Go hachomair**: Rianaíonn OmniRoute úsáid chomharthaí gach iarratais, ríomhann sé an costas, forfheidhmíonn sé cuóta in aghaidh na heochrach API, agus taispeánann sé anailísíocht sa deais. Mínítear sa treoir seo conas a oibríonn sé ar fad.
+> **Go hachomair**: Rianaíonn 67router úsáid chomharthaí gach iarratais, ríomhann sé an costas, forfheidhmíonn sé cuóta in aghaidh na heochrach API, agus taispeánann sé anailísíocht sa deais. Mínítear sa treoir seo conas a oibríonn sé ar fad.
 
 **Foinsí:**
 
@@ -17,7 +17,7 @@
 
 ## Forléargas
 
-Gineann gach iarratas a théann trí OmniRoute **taifead úsáide** ina ngabhtar:
+Gineann gach iarratas a théann trí 67router **taifead úsáide** ina ngabhtar:
 
 - **Aitheantas**: cén eochair API, soláthraí, samhail agus teaglaim
 - **Comharthaí**: comharthaí leid, comharthaí comhlánaithe, comharthaí taiscthe, iomlán
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-I gcás soláthraithe nach dtugann sonraí úsáide ar ais (roinnt soláthraithe fianán gréasáin), déanann OmniRoute **meastachán** ar chomharthaí trí heorastúil `~4 charachtar in aghaidh an chomhartha` a úsáid (féach `open-sse/services/autoCombo/pipelineRouter.ts`).
+I gcás soláthraithe nach dtugann sonraí úsáide ar ais (roinnt soláthraithe fianán gréasáin), déanann 67router **meastachán** ar chomharthaí trí heorastúil `~4 charachtar in aghaidh an chomhartha` a úsáid (féach `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Comharthaí Taiscthe
 
-Rianaíonn OmniRoute `cached_tokens` ar leithligh ó `prompt_tokens` mar:
+Rianaíonn 67router `cached_tokens` ar leithligh ó `prompt_tokens` mar:
 
 - Gearrann taisceáil leid Anthropic ráta laghdaithe ar chomharthaí taiscthe (10% den ghnáthráta)
 - Tugann roinnt soláthraithe `cache_read_input_tokens` ar ais agus ba cheart praghas difriúil a chur orthu
@@ -117,7 +117,7 @@ Déantar sonraí praghsála a shioncronú go huathoibríoch ó LiteLLM tríd an 
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-I gcás samhlacha nach bhfuil sonraí praghsála ar fáil dóibh, úsáideann OmniRoute **meastachán costais** bunaithe ar mheánrátaí inmheánacha (a fhaightear ó shonraí praghsála LiteLLM).
+I gcás samhlacha nach bhfuil sonraí praghsála ar fáil dóibh, úsáideann 67router **meastachán costais** bunaithe ar mheánrátaí inmheánacha (a fhaightear ó shonraí praghsála LiteLLM).
 
 ---
 

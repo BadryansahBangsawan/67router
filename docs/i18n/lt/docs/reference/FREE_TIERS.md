@@ -9,9 +9,9 @@
 > **Paskutinį kartą tirta:** 2026-06-17 — kiekvieno teikėjo tyrimas internete (oficiali dokumentacija + pastarųjų 7 dienų naujienos, 50 agentų patikra su oponentiniu verifikavimu), atnaujinant visas nemokamų lygių kvotas ir paslaugų teikimo sąlygas. **Dalinis pakartotinis auditas 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — žr. toliau pateiktą pastabą su data).
 > **Patikimas šaltinis (katalogas):** `open-sse/config/freeModelCatalog.ts` (kiekvieno MODELIO biudžetai, bendri fondai nedubliuojami). Toliau pateikti žetonų biudžeto skaičiai gauti atliekant tiesioginį tyrimą internete ir yra **apytiksliai** — žr. [Metodika ir išlygos](#methodology--caveats).
 
-## TL;DR — kiek nemokamų išvadų generavimo išteklių iš tikrųjų sujungia OmniRoute?
+## TL;DR — kiek nemokamų išvadų generavimo išteklių iš tikrųjų sujungia 67router?
 
-Šie skaičiai apibūdina atskiras trečiųjų šalių paskyras ir tinkamumo sąlygas visame kataloge. OmniRoute šio biudžeto nesuteikia: turite gauti reikiamas paskyras arba prisijungimo duomenis, prijungti reikalavimus atitinkančius teikėjus ir laikytis jų apribojimų. Faktiškai panaudojamas pajėgumas gali būti mažesnis, įskaitant nulį naujame dieginyje, kuriame nėra nė vieno tinkamo maršruto. Teikėjai, pažymėti `tos: avoid`, pagal numatytuosius nustatymus neįtraukiami į automatinį maršruto parinkimą.
+Šie skaičiai apibūdina atskiras trečiųjų šalių paskyras ir tinkamumo sąlygas visame kataloge. 67router šio biudžeto nesuteikia: turite gauti reikiamas paskyras arba prisijungimo duomenis, prijungti reikalavimus atitinkančius teikėjus ir laikytis jų apribojimų. Faktiškai panaudojamas pajėgumas gali būti mažesnis, įskaitant nulį naujame dieginyje, kuriame nėra nė vieno tinkamo maršruto. Teikėjai, pažymėti `tos: avoid`, pagal numatytuosius nustatymus neįtraukiami į automatinį maršruto parinkimą.
 
 **Patikrinta 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) siūlo vienkartinį $5 reklaminį kreditą, kuriam gauti reikia mokėjimo metodo ir kuris nustoja galioti po 30 dienų. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) skelbia projektų, modelių ir lygių spartos apribojimus; jis ir toliau neįtraukiamas į kiekybiškai įvertintą mėnesio suvestinį skaičių.
 
@@ -93,7 +93,7 @@ pakeitimai išsamiai aprašyti toliau pateiktoje teikėjo pastaboje.
 
 ## Du režimai — skaičiavimas ir sprendimų priėmimas
 
-OmniRoute į klausimą „ar tai nemokama?“ atsako taikydama du režimus, kurie
+67router į klausimą „ar tai nemokama?“ atsako taikydama du režimus, kurie
 specialiai remiasi skirtingais šaltiniais:
 
 | Režimas                    | Pirminis duomenų šaltinis                                                                                                                                                   | Naudojimo vietos                                                                                                                              |
@@ -141,25 +141,25 @@ Dauguma šioje srityje nurodomų „nemokamų žetonų per mėnesį“ skaičių
 
 ### ⚠️ Atsargiai — verta patikrinti nuostatas dėl asmeninio naudojimo / tarpinių serverių (16)
 
-> Jų nemokama prieiga yra reali ir „OmniRoute“ gali į juos nukreipti užklausas; toliau pateiktas nuostatas tiesiog verta žinoti. OAuth / rakto nereikalaujančių paslaugų kiekio negalima išreikšti žetonais, todėl jos neįtrauktos į antraštėje nurodytą skaičių (ne todėl, kad jų negalima naudoti).
+> Jų nemokama prieiga yra reali ir „67router“ gali į juos nukreipti užklausas; toliau pateiktas nuostatas tiesiog verta žinoti. OAuth / rakto nereikalaujančių paslaugų kiekio negalima išreikšti žetonais, todėl jos neįtrauktos į antraštėje nurodytą skaičių (ne todėl, kad jų negalima naudoti).
 
-| Paslaugų teikėjas | Pastaba                                                                                                                                                                                           |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `agy`             | „Google Antigravity“ ToS aiškiai draudžia naudoti trečiųjų šalių programinę įrangą, įrankius ar paslaugas (įskaitant tarpinius serverius), kad paslauga būtų pasiekiama per OAuth; tai…           |
-| `ai21`            | ToS §4.2/§8.2 draudžia sublicencijuoti arba platinti API prieigą trečiosioms šalims; §3.3 apriboja bandomųjų / vertinimo produktų naudojimą iki „vidinio vertinimo…                               |
-| `amazon-q`        | Naujiems naudotojams produktas nebeteikiamas; esamiems naudotojams taikoma AWS Customer Agreement, reglamentuojanti valdomų paslaugų naudojimą — savarankiškai talpinamas asm…                    |
-| `blackbox`        | ToS aiškiai draudžia sublicencijuoti, perparduoti, suteikti paslaugą trečiosioms šalims ir kurti išvestines paslaugas — savarankiškai talpinamas asm…                                             |
-| `coze`            | „Coze“ ToS aiškiai apriboja naudojimą iki „asmeninio ir nekomercinio naudojimo“ ir draudžia nuomoti, platinti, sublicencijuoti ar perparduoti paslaugą; s…                                        |
-| `duckduckgo-web`  | „Duck.ai“ ToS (duckduckgo.com/duckai/privacy-terms) aiškiai draudžia „automatizuotai teikti užklausas ir kurti ar siūlyti DI paslaugas“ bei apeiti…                                               |
-| `featherless-ai`  | Individualūs planai aiškiai apriboti „interaktyviu naudojimu arba pirkėjo atliekamu prototipų kūrimu ir eksperimentavimu“ — išvadų perpardavimui ir naudojimui per tarpinį serverį rei…           |
-| `fireworks`       | ToS aiškiai draudžia naudojimą per tarpinį serverį / tarpininką, API raktų perdavimą ir sublicencijavimą (2.1 ir 2.2(i)(j) skyriai); savarankiškai talpinami asmeniniai tarpiniai serveriai nė…   |
-| `friendliai`      | ToS 8(e) ir 8(f) skyriai aiškiai draudžia naudoti „FriendliAI“ kaip tarpinį serverį arba atskirai suteikti prieigą trečiosioms šalims, taip pat draudžia perparduoti /…                           |
-| `iflytek`         | „iFlytek Spark LLM Service Agreement“ 2.4(3) skyriuje aiškiai draudžiama „naudoti bet kokius automatizuotus ar programinius metodus duomenims arba rezultatams išgauti…                           |
-| `kiro`            | „Kiro“ DUK aiškiai draudžia naudoti su „OpenClaw ir panašiais įrankiais, naudojančiais trečiųjų šalių vykdymo aplinkas“ — savarankiškai talpinamas DI tarpinis serveris (pvz., „OmniRoute“), nuk… |
-| `modal`           | ToS 1.3 skyriuje aiškiai draudžiama „nuomoti, perparduoti ar kitaip leisti bet kuriai trečiajai šaliai tiesiogiai pasiekti arba naudoti Paslaugą“ — savarankiškai talpinamo…                      |
-| `muse-spark-web`  | „Meta“ ToS aiškiai draudžia automatizuotą prieigą be išankstinio leidimo, atvirkštinę inžineriją be rašytinio leidimo ir technologinių priemonių apėjimą…                                         |
-| `nlpcloud`        | ToS aiškiai draudžia „sukurti tarpinį serverį ar kitą įrenginį, leidžiantį kitiems per jį pasiekti Paslaugą“, ir suteikia tik neperleidžiamą,…                                                    |
-| `t3-web`          | ToS aiškiai apriboja paskyras tik asmeniniam naudojimui, draudžia dalytis prisijungimo duomenimis su trečiosiomis šalimis ir automatizuotą / robotų / duomenų rinkimo prieigą — s…                |
+| Paslaugų teikėjas | Pastaba                                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `agy`             | „Google Antigravity“ ToS aiškiai draudžia naudoti trečiųjų šalių programinę įrangą, įrankius ar paslaugas (įskaitant tarpinius serverius), kad paslauga būtų pasiekiama per OAuth; tai…          |
+| `ai21`            | ToS §4.2/§8.2 draudžia sublicencijuoti arba platinti API prieigą trečiosioms šalims; §3.3 apriboja bandomųjų / vertinimo produktų naudojimą iki „vidinio vertinimo…                              |
+| `amazon-q`        | Naujiems naudotojams produktas nebeteikiamas; esamiems naudotojams taikoma AWS Customer Agreement, reglamentuojanti valdomų paslaugų naudojimą — savarankiškai talpinamas asm…                   |
+| `blackbox`        | ToS aiškiai draudžia sublicencijuoti, perparduoti, suteikti paslaugą trečiosioms šalims ir kurti išvestines paslaugas — savarankiškai talpinamas asm…                                            |
+| `coze`            | „Coze“ ToS aiškiai apriboja naudojimą iki „asmeninio ir nekomercinio naudojimo“ ir draudžia nuomoti, platinti, sublicencijuoti ar perparduoti paslaugą; s…                                       |
+| `duckduckgo-web`  | „Duck.ai“ ToS (duckduckgo.com/duckai/privacy-terms) aiškiai draudžia „automatizuotai teikti užklausas ir kurti ar siūlyti DI paslaugas“ bei apeiti…                                              |
+| `featherless-ai`  | Individualūs planai aiškiai apriboti „interaktyviu naudojimu arba pirkėjo atliekamu prototipų kūrimu ir eksperimentavimu“ — išvadų perpardavimui ir naudojimui per tarpinį serverį rei…          |
+| `fireworks`       | ToS aiškiai draudžia naudojimą per tarpinį serverį / tarpininką, API raktų perdavimą ir sublicencijavimą (2.1 ir 2.2(i)(j) skyriai); savarankiškai talpinami asmeniniai tarpiniai serveriai nė…  |
+| `friendliai`      | ToS 8(e) ir 8(f) skyriai aiškiai draudžia naudoti „FriendliAI“ kaip tarpinį serverį arba atskirai suteikti prieigą trečiosioms šalims, taip pat draudžia perparduoti /…                          |
+| `iflytek`         | „iFlytek Spark LLM Service Agreement“ 2.4(3) skyriuje aiškiai draudžiama „naudoti bet kokius automatizuotus ar programinius metodus duomenims arba rezultatams išgauti…                          |
+| `kiro`            | „Kiro“ DUK aiškiai draudžia naudoti su „OpenClaw ir panašiais įrankiais, naudojančiais trečiųjų šalių vykdymo aplinkas“ — savarankiškai talpinamas DI tarpinis serveris (pvz., „67router“), nuk… |
+| `modal`           | ToS 1.3 skyriuje aiškiai draudžiama „nuomoti, perparduoti ar kitaip leisti bet kuriai trečiajai šaliai tiesiogiai pasiekti arba naudoti Paslaugą“ — savarankiškai talpinamo…                     |
+| `muse-spark-web`  | „Meta“ ToS aiškiai draudžia automatizuotą prieigą be išankstinio leidimo, atvirkštinę inžineriją be rašytinio leidimo ir technologinių priemonių apėjimą…                                        |
+| `nlpcloud`        | ToS aiškiai draudžia „sukurti tarpinį serverį ar kitą įrenginį, leidžiantį kitiems per jį pasiekti Paslaugą“, ir suteikia tik neperleidžiamą,…                                                   |
+| `t3-web`          | ToS aiškiai apriboja paskyras tik asmeniniam naudojimui, draudžia dalytis prisijungimo duomenimis su trečiosiomis šalimis ir automatizuotą / robotų / duomenų rinkimo prieigą — s…               |
 
 ### ✅ Iš esmės leidžiama — atsargiai / neaišku / leidžiama (likusieji)
 
@@ -317,7 +317,7 @@ Dauguma šioje srityje nurodomų „nemokamų žetonų per mėnesį“ skaičių
 
 - **`360ai`** — Pateiktas freeNote „Nemokami 360 AI Brain modeliai“ yra pasenęs. Dabar prieiga suteikiama tik pateikus paraišką ir yra mokama. Šio teiginio pagrindas galėjo būti 2023 m. pristatymo laikotarpio vienkartiniai reklaminiai žetonai (100M–250M)…
 - **`agentrouter`** — Mūsų pateiktame freeNote teigiama: „$200 nemokamų kreditų užsiregistravus.“ Šiuo metu įprastai (be rekomendacijos) užsiregistravę naudotojai gauna tik $100; užsiregistravus su rekomendacija galima gauti $200, tačiau 2026 m. balandžio bendruomenės komentaras…
-- **`agy`** — Mūsų pateiktame freeNote nurodyta „(nėra)“, tarsi nemokamo plano nebūtų, tačiau Antigravity turi nemokamą planą, kuriam būtina OAuth prieiga. Vis dėlto naudojimo sąlygose aiškiai draudžiama šį nemokamą planą naudoti per tarpinį serverį, pvz., OmniRoute …
+- **`agy`** — Mūsų pateiktame freeNote nurodyta „(nėra)“, tarsi nemokamo plano nebūtų, tačiau Antigravity turi nemokamą planą, kuriam būtina OAuth prieiga. Vis dėlto naudojimo sąlygose aiškiai draudžiama šį nemokamą planą naudoti per tarpinį serverį, pvz., 67router …
 - **`ai21`** — Sąlygos sugriežtintos: bandomasis laikotarpis sutrumpėjo nuo „3 mėnesių“ iki 7 dienų. $10 kreditų suma nepasikeitė, tačiau jų galiojimas smarkiai sutrumpėjo — nuo maždaug 90 iki 7 dienų.
 - **`aimlapi`** — Gerokai pasikeitė. Pateiktame freeNote buvo reklamuojama „$0.025 per dieną nemokamų kreditų — daugiau nei 200 modelių“, tačiau nemokamas planas dabar pristabdytas arba nutrauktas. $0.025 per dieną kreditų skyrimas (50 000 kreditų per dieną, 10 užklausų p…
 - **`amazon-q`** — Mūsų pateiktame freeNote nurodyta „(nėra)“, tačiau tikroji padėtis dar blogesnė: naujų registracijų priėmimas dabar nutrauktas (2026 m. gegužės 15 d.). Anksčiau nemokamas planas suteikė 50 agentinių užklausų per mėnesį ir neribotą įterpt…

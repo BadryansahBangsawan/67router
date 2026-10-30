@@ -7,7 +7,7 @@
 > **Haqiqiy manba:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute platforma hodisalari yuz berganda HTTP vebhuklarini ishga tushirishi mumkin. Ulardan
+67router platforma hodisalari yuz berganda HTTP vebhuklarini ishga tushirishi mumkin. Ulardan
 Slack, PagerDuty, Datadog, ichki ogohlantirish xizmatlari yoki istalgan HTTP qabul qiluvchisi bilan integratsiya qilish uchun foydalaning.
 
 Dispetcher har bir yetkazib berishni HMAC-SHA256 bilan imzolaydi, vaqtinchalik
@@ -54,7 +54,7 @@ xatolarini yutadi, shu sababli bitta nosoz qabul qiluvchi boshqalarini bloklay o
 
 ## HMAC bilan imzolash
 
-Vebhukda `secret` mavjud bo‘lsa, OmniRoute JSON tanasini imzolaydi va quyidagilarni yuboradi:
+Vebhukda `secret` mavjud bo‘lsa, 67router JSON tanasini imzolaydi va quyidagilarni yuboradi:
 
 ```
 Content-Type: application/json
@@ -205,7 +205,7 @@ qabul qiluvchi foydali yuk va imzoni qabul qilishini tezda tekshirish uchun qula
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute’dan webhook sinov yetkazib berishi",
+    "message": "67router’dan webhook sinov yetkazib berishi",
     "webhookId": "<uuid>"
   }
 }

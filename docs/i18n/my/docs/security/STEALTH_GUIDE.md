@@ -8,11 +8,11 @@
 > **နောက်ဆုံးမွမ်းမံသည့်ရက်:** 2026-09-02 — v3.8.51
 > **ရည်ရွယ်ဖတ်ရှုသူများ:** Provider တစ်ခုချင်းစီအလိုက် stealth integration များကို ထိန်းသိမ်းနေသော အင်ဂျင်နီယာများ။
 
-OmniRoute သည် တရားဝင်မဟုတ်သော client များကို ၎င်းတို့၏ edge များက တက်ကြွစွာ fingerprint ပြုလုပ်သည့် provider များနှင့် ချိတ်ဆက်ပေါင်းစည်းထားသည် (TLS JA3/JA4၊ header အစီအစဉ်၊ JSON body ပုံသဏ္ဌာန်၊ integrity token များ)။ ဤစာမျက်နှာတွင် OmniRoute က ဖော်ထုတ်ပေးထားသော stealth မျက်နှာပြင်များနှင့် ၎င်းတို့ကို အကောင်အထည်ဖော်ထားသည့်နေရာများကို မှတ်တမ်းတင်ထားသည်။
+67router သည် တရားဝင်မဟုတ်သော client များကို ၎င်းတို့၏ edge များက တက်ကြွစွာ fingerprint ပြုလုပ်သည့် provider များနှင့် ချိတ်ဆက်ပေါင်းစည်းထားသည် (TLS JA3/JA4၊ header အစီအစဉ်၊ JSON body ပုံသဏ္ဌာန်၊ integrity token များ)။ ဤစာမျက်နှာတွင် 67router က ဖော်ထုတ်ပေးထားသော stealth မျက်နှာပြင်များနှင့် ၎င်းတို့ကို အကောင်အထည်ဖော်ထားသည့်နေရာများကို မှတ်တမ်းတင်ထားသည်။
 
 ## ဥပဒေနှင့် ကျင့်ဝတ်ဆိုင်ရာ အသိပေးချက်
 
-Stealth အင်္ဂါရပ်များသည် သုံးစွဲသူပိုင် တရားဝင် account များ (Claude Code CLI, Codex, Antigravity, Cursor စသည်တို့) နှင့် OmniRoute ၏ ပေါင်းစည်းထားသော API ကြားတွင် OmniRoute က compatibility layer တစ်ခုအဖြစ် လုပ်ဆောင်နိုင်ရန် တည်ရှိခြင်းဖြစ်သည်။ ၎င်းတို့သည် လိမ်လည်မှုရှာဖွေခြင်းကို ရှောင်လွှဲရန်၊ အထောက်အထားများကို မျှဝေရန် သို့မဟုတ် provider ၏ ဝန်ဆောင်မှုစည်းမျဉ်းများကို ချိုးဖောက်ရန်အတွက် **မဟုတ်ပါ**။ ထိန်းသိမ်းသူများသည် operator များအနေဖြင့် account များဖန်တီးစဉ် လက်မှတ်ရေးထိုးသဘောတူခဲ့သော upstream ToS ကို လိုက်နာရန် မျှော်လင့်ထားသည်။
+Stealth အင်္ဂါရပ်များသည် သုံးစွဲသူပိုင် တရားဝင် account များ (Claude Code CLI, Codex, Antigravity, Cursor စသည်တို့) နှင့် 67router ၏ ပေါင်းစည်းထားသော API ကြားတွင် 67router က compatibility layer တစ်ခုအဖြစ် လုပ်ဆောင်နိုင်ရန် တည်ရှိခြင်းဖြစ်သည်။ ၎င်းတို့သည် လိမ်လည်မှုရှာဖွေခြင်းကို ရှောင်လွှဲရန်၊ အထောက်အထားများကို မျှဝေရန် သို့မဟုတ် provider ၏ ဝန်ဆောင်မှုစည်းမျဉ်းများကို ချိုးဖောက်ရန်အတွက် **မဟုတ်ပါ**။ ထိန်းသိမ်းသူများသည် operator များအနေဖြင့် account များဖန်တီးစဉ် လက်မှတ်ရေးထိုးသဘောတူခဲ့သော upstream ToS ကို လိုက်နာရန် မျှော်လင့်ထားသည်။
 
 ---
 
@@ -55,7 +55,7 @@ Profile များကို pin လုပ်ထားသော package က ပ
 
 ## Claude Code Stealth Bundle
 
-`cliCompatMode` ကို ဖွင့်ထားသည့်အခါ OmniRoute သည် အပြင်သို့ပို့မည့် Claude တောင်းဆိုမှုများကို `claude-cli` traffic နှင့် ခွဲခြားမရအောင် ပြန်လည်ပုံဖော်ပေးသည်။ Module သုံးခုက ပူးပေါင်းလုပ်ဆောင်သည်-
+`cliCompatMode` ကို ဖွင့်ထားသည့်အခါ 67router သည် အပြင်သို့ပို့မည့် Claude တောင်းဆိုမှုများကို `claude-cli` traffic နှင့် ခွဲခြားမရအောင် ပြန်လည်ပုံဖော်ပေးသည်။ Module သုံးခုက ပူးပေါင်းလုပ်ဆောင်သည်-
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Client Content Hash)
 
-တရားဝင် Claude Code CLI က Bun/Zig မှတစ်ဆင့် တွက်ချက်သည့် server-side integrity check ဖြစ်သည်။ OmniRoute က ၎င်းကို `xxhash-wasm` ဖြင့် ပြန်လည်အကောင်အထည်ဖော်ထားသည်-
+တရားဝင် Claude Code CLI က Bun/Zig မှတစ်ဆင့် တွက်ချက်သည့် server-side integrity check ဖြစ်သည်။ 67router က ၎င်းကို `xxhash-wasm` ဖြင့် ပြန်လည်အကောင်အထည်ဖော်ထားသည်-
 
 1. Body ကို `cch=00000;` placeholder ဖြင့် serialize လုပ်ပါ
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Bundle တစ်ခုတည်းထဲရှိ ဆက်စပ် module မ�
 
 ## Antigravity Stealth
 
-Antigravity တောင်းဆိုမှုများသည် ခေါ်ဆိုသူ၏စာသားကို byte-for-byte မပြောင်းလဲဘဲ ထိန်းသိမ်းထားသည်။ OmniRoute သည် prompt များထဲသို့ zero-width စာလုံးများ မထည့်သွင်းသလို IDE client တစ်ခုကို တုပရန် tool များ၏အမည်ကို ပြောင်းခြင်း/ထည့်သွင်းခြင်းလည်း မပြုလုပ်ပါ။
+Antigravity တောင်းဆိုမှုများသည် ခေါ်ဆိုသူ၏စာသားကို byte-for-byte မပြောင်းလဲဘဲ ထိန်းသိမ်းထားသည်။ 67router သည် prompt များထဲသို့ zero-width စာလုံးများ မထည့်သွင်းသလို IDE client တစ်ခုကို တုပရန် tool များ၏အမည်ကို ပြောင်းခြင်း/ထည့်သွင်းခြင်းလည်း မပြုလုပ်ပါ။
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Forward မလုပ်မီ Stainless SDK marker များ (`x-stainless-la
 
 `ANTIGRAVITY_CREDITS=always` (`open-sse/executors/antigravity.ts` က အသုံးပြုသည်) သည် Google ၏ free-tier quota ဖြင့် ကန့်သတ်ခွင့်ပြုမည့်အစား တောင်းဆိုမှု **တိုင်းကို** Antigravity AI Credit Overages (အခပေး Google credit များ) မှတစ်ဆင့် route လုပ်သည်။ ၎င်းကို feature တစ်ခုအဖြစ် မှတ်တမ်းတင်ထားသော်လည်း **ကျွန်ုပ်တို့တွေ့ရသည့် ToS ချိုးဖောက်မှုဆိုင်ရာ report များထဲတွင် အဖြစ်အများဆုံး တစ်ခုတည်းသောအကြောင်းရင်းဖြစ်သည်** — `=always` ဖြင့် နာရီအနည်းငယ် အသုံးပြုပြီးနောက် Google Ultra account အများအပြားသည် `403 / "service disabled for ToS violation" / insufficient_quota` ဖြင့် ပိတ်ပင်ခံခဲ့ရသည်။
 
-Upstream enforcement သည် OmniRoute က ကာကွယ်နိုင်သည့်အရာမဟုတ်ဘဲ **Google ဘက်တွင်** ဖြစ်သည်။ Env var အမည်နှင့် ရှိပြီးသား docs များကြောင့် ၎င်းသည် ဘေးကင်းစွာ ပြောင်းဖွင့်နိုင်သည့် setting တစ်ခုဟု ထင်ရသော်လည်း အမှန်မှာ မဟုတ်ပါ။
+Upstream enforcement သည် 67router က ကာကွယ်နိုင်သည့်အရာမဟုတ်ဘဲ **Google ဘက်တွင်** ဖြစ်သည်။ Env var အမည်နှင့် ရှိပြီးသား docs များကြောင့် ၎င်းသည် ဘေးကင်းစွာ ပြောင်းဖွင့်နိုင်သည့် setting တစ်ခုဟု ထင်ရသော်လည်း အမှန်မှာ မဟုတ်ပါ။
 
 **ဤအရာက free-tier သီးသန့်အသုံးပြုမှုထက် abuse detection ကို ပိုမိုပြင်းထန်စွာ ဖြစ်စေသည့်အကြောင်းရင်းများ-**
 
 - Google account တစ်ခုတည်းတွင် အလိုအလျောက် ငွေသုံးစွဲမှုကို ဆက်တိုက်လုပ်ဆောင်ခြင်းသည် free-tier က quota ပြည့်ပြီး ရပ်သွားခြင်းနှင့်မတူဘဲ အခြားပုံစံဖြင့် flag လုပ်ခံရသည်။
 - Credit overage များတွင် rate အမြင့်ဆုံးကန့်သတ်ချက် မရှိသောကြောင့် မှားယွင်းစွာ configure လုပ်ထားသည့် client တစ်ခုသည် မိနစ်ပိုင်းအတွင်း USD ရာပေါင်းများစွာ ကုန်ဆုံးစေနိုင်ပြီး API key ပြန်လည်ရောင်းချခြင်း သို့မဟုတ် bot traffic ကဲ့သို့ မြင်ရနိုင်သည်။
-- တူညီသော external IP မှ OmniRoute user အများအပြားက overage credit များကို ပြိုင်တူအသုံးပြုခြင်းသည် သံသယဖြစ်စေသည့် signal ကို ပိုမိုပြင်းထန်စေသည်။
+- တူညီသော external IP မှ 67router user အများအပြားက overage credit များကို ပြိုင်တူအသုံးပြုခြင်းသည် သံသယဖြစ်စေသည့် signal ကို ပိုမိုပြင်းထန်စေသည်။
 
 **အကြံပြုထားသော ရပ်တည်ချက်-**
 
@@ -172,7 +172,7 @@ Provider တစ်ခုချင်းစီအတွက် env မှတစ်
 
 ## MITM Proxy (Antigravity, Linux/macOS/Windows)
 
-Binary များကို `OPENAI_BASE_URL` မှတစ်ဆင့် လမ်းကြောင်းပြောင်း၍မရသော CLI များအတွက် OmniRoute သည် TLS ကို အဆုံးသတ်ပေးသည့် local proxy တစ်ခုကို လုပ်ဆောင်သည်။ Endpoint များသည် `src/app/api/cli-tools/antigravity-mitm/` အောက်တွင် ရှိသည်။
+Binary များကို `OPENAI_BASE_URL` မှတစ်ဆင့် လမ်းကြောင်းပြောင်း၍မရသော CLI များအတွက် 67router သည် TLS ကို အဆုံးသတ်ပေးသည့် local proxy တစ်ခုကို လုပ်ဆောင်သည်။ Endpoint များသည် `src/app/api/cli-tools/antigravity-mitm/` အောက်တွင် ရှိသည်။
 
 | နည်းလမ်း | Endpoint                                | ရည်ရွယ်ချက်                                              |
 | -------- | --------------------------------------- | -------------------------------------------------------- |
@@ -205,7 +205,7 @@ Binary များကို `OPENAI_BASE_URL` မှတစ်ဆင့် လ�
 
 Certificate ဖိုင်အမည်: `omniroute-mitm.crt`။ `getCertFingerprint()` မှတစ်ဆင့် fingerprint ကိုက်ညီမှု စစ်ဆေးသည် (DER ၏ SHA-1)။
 
-ထို့အပြင် `certutil` ကို အသုံးပြုနိုင်သည့်အခါ `updateNssDatabases()` သည် အသုံးပြုသူတစ်ဦးချင်းစီ၏ NSS DB များဖြစ်သော `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` နှင့် Firefox profile အားလုံး (snap အပါအဝင်) ထဲသို့ **`OmniRoute MITM Root CA`** ဟူသော nickname ဖြင့် ထည့်သွင်းသည်။
+ထို့အပြင် `certutil` ကို အသုံးပြုနိုင်သည့်အခါ `updateNssDatabases()` သည် အသုံးပြုသူတစ်ဦးချင်းစီ၏ NSS DB များဖြစ်သော `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` နှင့် Firefox profile အားလုံး (snap အပါအဝင်) ထဲသို့ **`67router MITM Root CA`** ဟူသော nickname ဖြင့် ထည့်သွင်းသည်။
 
 ### macOS / Windows
 
@@ -253,7 +253,7 @@ Provider IP ကို **အမြဲတမ်း မူလအတိုင်း 
 
 ## ဝင်လာသော Header များကို သန့်စင်ခြင်း
 
-OmniRoute သည် request တစ်ခု Cursor မှ ဝင်ရောက်လာသည့်အခါ `User-Agent: Cursor/X.Y.Z` ကို Claude upstream သို့ မပေါက်ကြားစေရန် မပို့မီ ဝင်လာသော client header များကို ဖယ်ရှားသန့်စင်သည်။ Zod schema များနှင့် unit test များနှင့် အမြဲတစ်ပြေးညီ ထိန်းသိမ်းထားသော denylist ကို `src/shared/constants/upstreamHeaders.ts` တွင် ကြည့်ပါ။
+67router သည် request တစ်ခု Cursor မှ ဝင်ရောက်လာသည့်အခါ `User-Agent: Cursor/X.Y.Z` ကို Claude upstream သို့ မပေါက်ကြားစေရန် မပို့မီ ဝင်လာသော client header များကို ဖယ်ရှားသန့်စင်သည်။ Zod schema များနှင့် unit test များနှင့် အမြဲတစ်ပြေးညီ ထိန်းသိမ်းထားသော denylist ကို `src/shared/constants/upstreamHeaders.ts` တွင် ကြည့်ပါ။
 
 ---
 

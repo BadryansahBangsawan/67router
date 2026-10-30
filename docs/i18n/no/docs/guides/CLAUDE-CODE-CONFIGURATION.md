@@ -1,10 +1,10 @@
-# Claude Code CLI — Configuration with OmniRoute (Norsk)
+# Claude Code CLI — Configuration with 67router (Norsk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
 
 ---
 
-Koble **Claude Code**-CLI-en (`claude`) til OmniRoute — lokalt eller på en ekstern VPS —
+Koble **Claude Code**-CLI-en (`claude`) til 67router — lokalt eller på en ekstern VPS —
 med profiler per modell, tilsvarende Codex-oppsettet.
 
 ---
@@ -12,15 +12,15 @@ med profiler per modell, tilsvarende Codex-oppsettet.
 ## Hurtigstart
 
 ```bash
-# Start Claude Code mot en lokal OmniRoute (oppdager automatisk den aktive konteksten)
+# Start Claude Code mot en lokal 67router (oppdager automatisk den aktive konteksten)
 omniroute launch
 
-# Mot en ekstern OmniRoute (etter `omniroute connect <host>` skjer dette automatisk)
+# Mot en ekstern 67router (etter `omniroute connect <host>` skjer dette automatisk)
 omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # Generer profiler per modell, og start deretter en av dem
 omniroute setup-claude            # skriver ~/.claude/profiles/<name>/settings.json
-omniroute launch --profile glm52  # Claude Code som bruker glm/glm-5.2 via OmniRoute
+omniroute launch --profile glm52  # Claude Code som bruker glm/glm-5.2 via 67router
 ```
 
 ---
@@ -33,7 +33,7 @@ endepunkt ved hjelp av miljøvariabler (det har ikke noe `--base-url`-flagg):
 | Variabel                                     | Formål                                                                                         |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | Gatewayens rot-URL (Claude Code legger til `/v1/messages`). **Ingen `/v1`-suffiks.**           |
-| `ANTHROPIC_AUTH_TOKEN`                       | Sendes som `Authorization: Bearer …` — bruk OmniRoute-tilgangstokenet/API-nøkkelen din         |
+| `ANTHROPIC_AUTH_TOKEN`                       | Sendes som `Authorization: Bearer …` — bruk 67router-tilgangstokenet/API-nøkkelen din          |
 | `ANTHROPIC_API_KEY`                          | Alternativ: sendes som `x-api-key`. Hvis begge er angitt, har `ANTHROPIC_AUTH_TOKEN` prioritet |
 | `ANTHROPIC_MODEL`                            | Tving bruk av en bestemt modell (overstyrer standardvalget i `/model`-velgeren)                |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → den innebygde `/model`-velgeren viser `claude*`/`anthropic*`-modeller fra `/v1/models`   |
@@ -52,10 +52,10 @@ bare fungerer), helsesjekker serveren og kjører `claude`.
 
 Claude Codes gateway-modelloppdagelse lister bare ID-er som begynner med `claude`
 eller `anthropic`, så med `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` viser den
-innebygde `/model`-velgeren normalt **bare** OmniRoutes Claude/Anthropic-modeller — en
+innebygde `/model`-velgeren normalt **bare** 67routers Claude/Anthropic-modeller — en
 `kimi/kimi-k2.6` eller `glm/glm-5.2` dukker aldri opp, selv om den ruter helt fint.
 
-OmniRoute kan speile enhver aktivert modell (og kombinasjon) under en `claude/…`-ID
+67router kan speile enhver aktivert modell (og kombinasjon) under en `claude/…`-ID
 slik at den passerer filteret og vises i velgeren:
 
 ```
@@ -64,7 +64,7 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-Når du velger en av disse i Claude Code, fjerner OmniRoute `claude/`-innpakningen
+Når du velger en av disse i Claude Code, fjerner 67router `claude/`-innpakningen
 tilbake til den virkelige ID-en før ruting — en ekte `claude/<real-claude-model>`-ID
 (den faktiske Claude OAuth-leverandøren) forblir alltid urørt.
 
@@ -77,7 +77,7 @@ hele tatt listes, styres fortsatt av `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIANTS`
 speilet legger aldri til en variant som grunnkatalogen ikke har.
 
 **Dette er av som standard** og styres av en port med tre nivåer (mest spesifikke
-vinner), slik at en vanlig OmniRoute aldri dobler katalogen sin for klienter som ikke
+vinner), slik at en vanlig 67router aldri dobler katalogen sin for klienter som ikke
 bruker Claude Code:
 
 | Nivå       | Hvor                                                                             |
@@ -109,8 +109,8 @@ for denne instansen, ved siden av informasjonsknappen for discovery-aliaset, med
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<din OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<din OmniRoute API-nøkkel>",
+    "ANTHROPIC_BASE_URL": "http://<din 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<din 67router API-nøkkel>",
     "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
   },
 }
@@ -175,7 +175,7 @@ profil per modell til `~/.claude/profiles/<name>/settings.json`, med de
 > aktive konteksten), eller eksporter `ANTHROPIC_AUTH_TOKEN` selv og kjør
 > `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude`.
 
-**Automatisk synkronisering etter modelloppdagelse (valgfritt).** OmniRoute kan automatisk generere disse
+**Automatisk synkronisering etter modelloppdagelse (valgfritt).** 67router kan automatisk generere disse
 `~/.claude/profiles/<name>/settings.json`-filene på nytt hver gang en synkronisering av leverandørmodeller
 endrer den aktive katalogen — slik at nye modeller eller modeller med endrede navn får profiler uten at kommandoen må
 kjøres på nytt. Dette er **slått av som standard**: slå det på fra **CLI Code-kontrollpanelet** («Automatisk synkronisering
@@ -186,7 +186,7 @@ den aktive Claude-standardkonfigurasjonen, autentiseringen eller `~/.claude/sett
 ### Generere og bruke profiler
 
 ```bash
-# Lokal OmniRoute
+# Lokal 67router
 omniroute setup-claude
 
 # Ekstern VPS (bygger inn VPS-URL-en i hver profil)
@@ -210,7 +210,7 @@ omniroute launch --profile kimi-k27
 
 ## Modellnivåer (valgfritt)
 
-Claude Code ruter til kapabilitetsnivåer. Knytt hvert nivå til en OmniRoute-modell via miljøvariabler /
+Claude Code ruter til kapabilitetsnivåer. Knytt hvert nivå til en 67router-modell via miljøvariabler /
 innstillinger hvis du ønsker ulike leverandører per nivå:
 
 ```bash
@@ -246,7 +246,7 @@ v2.1.219+ og `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`. Bare modell-ID-er a
 **`400 Ambiguous model 'claude-…'`** — Claude Code sender alltid modell-ID-er
 **uten prefiks** (f.eks. `claude-opus-4-8`), så når både Claude Code (`cc/…`)- og
 Claude (`claude/…`)-leverandørene er tilkoblet, samsvarer ID-en uten prefiks med to ruter, og
-OmniRoute nekter å gjette. Løs det på én av følgende måter: Fest en ID med prefiks ved hjelp av
+67router nekter å gjette. Løs det på én av følgende måter: Fest en ID med prefiks ved hjelp av
 `ANTHROPIC_MODEL=cc/claude-opus-4-8`, eller aktiver **Foretrekk Claude Code for
 Claude-modeller uten prefiks** — bryteren på Claude-leverandørsiden, eller
 `OMNIROUTE_PREFER_CLAUDE_CODE_FOR_UNPREFIXED_CLAUDE_MODELS=true` (av som standard;

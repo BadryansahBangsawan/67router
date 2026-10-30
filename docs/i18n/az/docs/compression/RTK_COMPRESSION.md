@@ -4,7 +4,7 @@
 
 ---
 
-RTK sıxışdırması terminal və alət çıxışları üçün OmniRoute-un əmrləri nəzərə alan sıxışdırma mühərrikidir. O,
+RTK sıxışdırması terminal və alət çıxışları üçün 67router-un əmrləri nəzərə alan sıxışdırma mühərrikidir. O,
 kontekst artımının böyük hissəsinin test jurnallarından, yığma çıxışından, paket meneceri səs-küyündən,
 shell transkriptlərindən, Docker çıxışından, git çıxışından və stek izləmələrindən qaynaqlandığı kodlaşdırma agenti sessiyaları üçün nəzərdə tutulub.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Bu ardıcıllıq əvvəlcə səs-küylü maşın çıxışını sıxışdırır, sonra Caveman-ə qalan mətni yığcamlaşdırmağa imkan verir.
 
 İlkin RTK mənbəyinə görə, əmr çıxışında `60-90%` qənaət əldə edilir. Onun README sənədindəki nümunə sessiya
-`~118,000` standart tokendən `~23,900` RTK tokeninə enir ki, bu da `79.7%` qənaət (`~80%`) deməkdir. OmniRoute,
+`~118,000` standart tokendən `~23,900` RTK tokeninə enir ki, bu da `79.7%` qənaət (`~80%`) deməkdir. 67router,
 Caveman giriş sıxışdırması ilə birlikdə yığılmış qənaətin hesablanması üçün həmin ilkin orta göstəricidən istifadə edir:
 
 ```txt
@@ -54,7 +54,7 @@ RTK filtrləri bu ardıcıllıqla yükləyir:
 2. `DATA_DIR/rtk/filters.toml` və `DATA_DIR/rtk/filters.json` fayllarından qlobal filtrlər.
 3. `open-sse/services/compression/engines/rtk/filters/` daxilindən daxili filtrlər.
 
-Eyni əhatə daxilində RTK TOML schema v1 filtrləri OmniRoute JSON filtrlərindən üstündür. İdxal edilmiş
+Eyni əhatə daxilində RTK TOML schema v1 filtrləri 67router JSON filtrlərindən üstündür. İdxal edilmiş
 əmrə xas filtrin həmin əhatədə daha geniş filtri əvəz edə bilməsi üçün TOML `match_command` ifadələri
 əmr növünə görə uyğunlaşdırmadan əvvəl yoxlanılır. Fayl formatından asılı olmayaraq, layihə əhatəsi
 qlobal əhatədən üstün olaraq qalır.
@@ -86,7 +86,7 @@ dərhal xətaya səbəb olur.
 
 ## RTK TOML sxemi v1 uyğunluğu
 
-OmniRoute RTK TOML sxemi v1-dən istifadə edən deklarativ filtr fayllarını təhlil, yoxlama, sınaq və quraşdırma qabiliyyətinə malikdir.
+67router RTK TOML sxemi v1-dən istifadə edən deklarativ filtr fayllarını təhlil, yoxlama, sınaq və quraşdırma qabiliyyətinə malikdir.
 Dəstəklənən sahələr bunlardır: `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` və `[[tests.<filter>]]` daxili testləri.
@@ -95,7 +95,7 @@ Naməlum sahələr, etibarsız və ya təhlükəli müntəzəm ifadələr, eyni 
 yoxlama məqsədilə validasiya edilə bilər, lakin quraşdırıla və ya yüklənə bilməz. Fərdi faylların yüklənməsi zamanı baş verən
 xətalarda sistem açıq qalır: etibarsız fayl ötürülür və qalan filtrlər işləməyə davam edir.
 
-OmniRoute alət çıxışını müştəri artıq əldə etdikdən sonra qəbul edir, buna görə də `filter_stderr = true`
+67router alət çıxışını müştəri artıq əldə etdikdən sonra qəbul edir, buna görə də `filter_stderr = true`
 proses çıxışının əldə edilməsini dəyişə bilməz. Bu sahə heç bir əməliyyat yerinə yetirməyən parametr kimi qəbul edilir və validasiya xəbərdarlıq qaytarır.
 Bu, məqsədli şəkildə RTK icra faylı, qabıq qarmaqları, Rust əmr reallaşdırmaları və ya onun etibar anbarının strukturu ilə tam uyğunluq deyil, **RTK TOML sxemi v1 uyğunluğu** kimi təsvir edilir.
 

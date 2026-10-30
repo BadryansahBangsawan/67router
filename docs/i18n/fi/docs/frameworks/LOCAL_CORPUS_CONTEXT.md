@@ -13,8 +13,8 @@
 ## Mikä se on
 
 Local Corpus antaa ylläpitäjän asettaa yhden erikseen hyväksytyn tekstitiedostohakemiston
-OmniRouten MCP-palvelimen käytettäväksi. Tiedostot säilyvät alkuperäisessä hakemistossaan:
-OmniRoute tallentaa SQLite-tietokantaan vain kanonisen juuripolun ja ylläpitää hakemistoa
+67routerin MCP-palvelimen käytettäväksi. Tiedostot säilyvät alkuperäisessä hakemistossaan:
+67router tallentaa SQLite-tietokantaan vain kanonisen juuripolun ja ylläpitää hakemistoa
 muistissa. Se ei kopioi korpuksen sisältöä repositorioon tai tietokantaan.
 
 Indeksi päivitetään inkrementaalisesti. Muuttumattomat tiedostot käytetään uudelleen koon

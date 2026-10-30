@@ -4,7 +4,7 @@
 
 ---
 
-> **Özet**: OmniRoute, birincil veri deposu olarak **WAL günlüklemeli SQLite** kullanır ve hassas alanlarda duran veriler için **AES-256-GCM** şifrelemesi uygular. Bu kılavuz şemayı, geçişleri, yedekleme/kurtarma işlemlerini ve operasyonel çalışma kılavuzlarını kapsar.
+> **Özet**: 67router, birincil veri deposu olarak **WAL günlüklemeli SQLite** kullanır ve hassas alanlarda duran veriler için **AES-256-GCM** şifrelemesi uygular. Bu kılavuz şemayı, geçişleri, yedekleme/kurtarma işlemlerini ve operasyonel çalışma kılavuzlarını kapsar.
 
 **Kaynaklar:**
 
@@ -19,7 +19,7 @@
 
 ## Neden SQLite?
 
-OmniRoute, çeşitli nedenlerle PostgreSQL/MySQL yerine SQLite'ı tercih etmiştir:
+67router, çeşitli nedenlerle PostgreSQL/MySQL yerine SQLite'ı tercih etmiştir:
 
 | Faktör             | SQLite                                  | PostgreSQL                                   |
 | ------------------ | --------------------------------------- | -------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute, çeşitli nedenlerle PostgreSQL/MySQL yerine SQLite'ı tercih etmişt
 | **Yedekleme**      | Tek dosyalı kopya                       | `pg_dump` veya dosya sistemi anlık görüntüsü |
 | **Kullanım alanı** | Kullanıcı başına kurulum, gömülü        | Çok kiracılı SaaS                            |
 
-**Tek kullanıcılı, tek örnekli** dağıtımlarda (OmniRoute'un birincil kullanım alanı) SQLite daha basit ve daha hızlıdır.
+**Tek kullanıcılı, tek örnekli** dağıtımlarda (67router'un birincil kullanım alanı) SQLite daha basit ve daha hızlıdır.
 
 ### WAL Günlükleme
 
@@ -50,7 +50,7 @@ Varsayılan önbellek boyutu **65.536 KiB'dir (64 MiB)**. SQLite, negatif bir
 `cache_size` değerini KiB cinsinden yaklaşık bir üst sınır olarak yorumlar ve sayfaları gerektiğinde tahsis eder.
 **Ayarlar > Sistem ve Depolama > Önbellek Boyutu**, **1 ile
 1.000.000 KiB** arasındaki tam sayı değerlerini kabul eder; ayarın kaydedilmesi, değeri etkin veritabanı bağlantısına uygular
-ve OmniRoute, kalıcı değeri başlangıçta geri yükler.
+ve 67router, kalıcı değeri başlangıçta geri yükler.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Alan Modülü Mimarisi
 
-OmniRoute'un veritabanında `src/lib/db/` altında **110 üst düzey TypeScript modülü** bulunur. Her alan modülü:
+67router'un veritabanında `src/lib/db/` altında **110 üst düzey TypeScript modülü** bulunur. Her alan modülü:
 
 - Bir veya daha fazla belirli tablonun sahibidir
 - Tür tanımlı CRUD işlevlerini dışa aktarır
@@ -90,7 +90,7 @@ OmniRoute'un veritabanında `src/lib/db/` altında **110 üst düzey TypeScript 
 
 ### 110 Üst Düzey Veritabanı Modülü
 
-OmniRoute'un `src/lib/db/` altında **110 üst düzey TypeScript dosyası** bulunur. Aşağıda temel modüllerden bir örneklem yer almaktadır; tam liste için dizin içeriğine bakın:
+67router'un `src/lib/db/` altında **110 üst düzey TypeScript dosyası** bulunur. Aşağıda temel modüllerden bir örneklem yer almaktadır; tam liste için dizin içeriğine bakın:
 
 | Modül                   | Tablolar                                                       | Sorumluluk                                                                       |
 | ----------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Yaklaşık 30'dan fazla tablonun tam listesi `src/lib/db/migrations/` içindedir
 
 ## Geçişler
 
-OmniRoute, `src/lib/db/migrations/` dizininde **sürümlendirilmiş ve idempotent geçişler** kullanır. Her geçiş, `NNN_description.sql` olarak adlandırılan tek bir SQL dosyasıdır.
+67router, `src/lib/db/migrations/` dizininde **sürümlendirilmiş ve idempotent geçişler** kullanır. Her geçiş, `NNN_description.sql` olarak adlandırılan tek bir SQL dosyasıdır.
 
 ### Geçişlerin Adlandırılması
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Geriye dönük uyumsuz değişiklikler** (ör. sütunların kaldırılması) karmaşıktır. OmniRoute sürüm düşürmeyi DESTEKLEMEZ — bir geçiş uygulandıktan sonra şema değişikliği kalıcıdır. Planlamanızı buna göre yapın.
+> **Geriye dönük uyumsuz değişiklikler** (ör. sütunların kaldırılması) karmaşıktır. 67router sürüm düşürmeyi DESTEKLEMEZ — bir geçiş uygulandıktan sonra şema değişikliği kalıcıdır. Planlamanızı buna göre yapın.
 
 ---
 
@@ -310,7 +310,7 @@ Performans nedenleriyle aşağıdakiler düz metin olarak saklanır:
 
 ## Şifrelemeyle İlgili Uyarılar (v3.8.16+)
 
-OmniRoute, iki şifreleme şemasını şeffaf biçimde işlemek için **`migrateLegacyEncryptedString()`** kullanır:
+67router, iki şifreleme şemasını şeffaf biçimde işlemek için **`migrateLegacyEncryptedString()`** kullanır:
 
 - **Eski** (v3.5.0 öncesi): XOR tabanlı "şifreleme" (gerçek kriptografi değildir)
 - **Güncel**: Uygun IV ve kimlik doğrulama etiketiyle AES-256-GCM
@@ -398,7 +398,7 @@ Zamanlama, varsayılan olarak her 30 saniyede bir tetiklenen ve cron ifadesini s
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Bu komut, SQLite'ın çevrimiçi yedekleme API'sini kullanır — OmniRoute çalışırken güvenle yürütülebilir.
+Bu komut, SQLite'ın çevrimiçi yedekleme API'sini kullanır — 67router çalışırken güvenle yürütülebilir.
 
 ---
 
@@ -441,7 +441,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Sıkıştırma
 
-Uzun süre çalışan OmniRoute örnekleri, ara sıra `VACUUM` çalıştırılmasından fayda sağlar:
+Uzun süre çalışan 67router örnekleri, ara sıra `VACUUM` çalıştırılmasından fayda sağlar:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -573,7 +573,7 @@ EOF
 ### Tüm Verileri Sıfırlama (Silme)
 
 ```bash
-# Önce OmniRoute'u durdurun
+# Önce 67router'u durdurun
 omniroute stop
 
 # Veritabanı dosyasını silin
@@ -611,7 +611,7 @@ Başka bir işlem, yazma kilidini tutuyor. Şunlardan birini yapın:
 
 - Diğer işlemin tamamlanmasını bekleyin (`lsof | grep storage.sqlite` ile kontrol edin)
 - Diğer işlemi sonlandırın
-- Sorun devam ederse OmniRoute'u yeniden başlatın
+- Sorun devam ederse 67router'u yeniden başlatın
 
 ### "Yabancı anahtar kısıtlaması başarısız oldu"
 
@@ -641,10 +641,10 @@ PRAGMA mmap_size = 0;
 
 Geçiş bir işlem içinde çalıştırıldığı için geri alınmış olmalıdır. Alınmadıysa:
 
-1. **OmniRoute'u durdurun** (daha fazla denemeyi önleyin)
+1. **67router'u durdurun** (daha fazla denemeyi önleyin)
 2. `sqlite3` ile **veritabanı durumunu kontrol edin**
 3. Kısmi geçişi **manuel olarak düzeltin**
-4. OmniRoute'u **yeniden çalıştırın** (geçiş yeniden denenecektir)
+4. 67router'u **yeniden çalıştırın** (geçiş yeniden denenecektir)
 
 Bunu önlemek için geçişleri her zaman önce bir kopya üzerinde test edin.
 

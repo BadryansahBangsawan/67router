@@ -4,9 +4,9 @@
 
 ---
 
-Àwọn àkọsílẹ̀ fún olùṣiṣẹ́ lórí `POST /v1/embeddings` nígbà tí OmniRoute bá wà níwájú
+Àwọn àkọsílẹ̀ fún olùṣiṣẹ́ lórí `POST /v1/embeddings` nígbà tí 67router bá wà níwájú
 Hindsight 0.9.1 (`encode(list[str])` fún ọ̀rọ̀ nìkan) àti Memorix 1.6.0 (ẹnu-ọ̀nà mídíà
-Jina). A ṣàyẹ̀wò rẹ̀ lórí ètò tó ń ṣiṣẹ́ ní 2026-08-17 pẹ̀lú OmniRoute 3.8.49 ní
+Jina). A ṣàyẹ̀wò rẹ̀ lórí ètò tó ń ṣiṣẹ́ ní 2026-08-17 pẹ̀lú 67router 3.8.49 ní
 `https://omniroute.jaguar-fish.ts.net/v1`. Kò sí àṣírí kankan ní ìsàlẹ̀.
 
 ## Àwọn ID awoṣe tó ń ṣiṣẹ́
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` abinibi kò lè ṣàṣeyọrí láti inú GitOps nìkan. A gbọ́dọ̀ fi
 kọ́kọ́rọ́ Google AI Studio kún un gẹ́gẹ́ bí ìsopọ̀ olùpèsè `gemini` (dashboard tàbí
-`GEMINI_API_KEY` tí a gbé wọ OmniRoute). Àṣírí yẹn kò sí nínú repo yìí.
+`GEMINI_API_KEY` tí a gbé wọ 67router). Àṣírí yẹn kò sí nínú repo yìí.
 
 ### Ọ̀nà multimodal Jina
 
@@ -100,7 +100,7 @@ Lo `POST /v1/embeddings` títí orúkọ míì yóò fi wà.
 
 ### Ohun àwòrán Jina / Memorix
 
-Ohun àwòrán àṣẹ̀dá OmniRoute (PNG 28×28, àwọn píkíṣẹ́lì 784 — Jina kọ 1×1):
+Ohun àwòrán àṣẹ̀dá 67router (PNG 28×28, àwọn píkíṣẹ́lì 784 — Jina kọ 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Ohun tó ṣẹlẹ̀ gan-an: HTTP **400**
 
 Àwọn embeddings Hindsight jẹ́ ti ọ̀rọ̀ nìkan (`encode(list[str])`). Kò fi
 àwọn ohun àwòrán ránṣẹ́. Tọ URL ìpìlẹ̀ embeddings tó bá OpenAI mu ti Hindsight
-sí OmniRoute `/v1`, kí o sì lo ID tó ń ṣiṣẹ́ láti inú tábìlì òkè
+sí 67router `/v1`, kí o sì lo ID tó ń ṣiṣẹ́ láti inú tábìlì òkè
 (`jina-ai/jina-embeddings-v5-omni-small` tàbí
 `openrouter/google/gemini-embedding-2`). Má ṣe ṣètò awoṣe sí
 `gemini-embedding-2` lásán àyàfi tí kọ́kọ́rọ́ API `gemini` bá wà lórí ẹnu-ọ̀nà náà.
@@ -157,11 +157,11 @@ sí OmniRoute `/v1`, kí o sì lo ID tó ń ṣiṣẹ́ láti inú tábìlì ò
 ### Memorix 1.6.0
 
 Memorix máa ń ka `baseUrl` tó bá `/jina\.ai/i` mu nìkan sí mídíà abinibi. URL
-OmniRoute yóò dúró lórí ọ̀nà ọ̀rọ̀-nìkan kódà bí awoṣe náà bá jẹ́ Jina omni.
-Ẹnu-ọ̀nà yẹn jẹ́ ìṣòro oníbàárà Memorix. Láìka èyí sí, OmniRoute ṣì ń kọ
+67router yóò dúró lórí ọ̀nà ọ̀rọ̀-nìkan kódà bí awoṣe náà bá jẹ́ Jina omni.
+Ẹnu-ọ̀nà yẹn jẹ́ ìṣòro oníbàárà Memorix. Láìka èyí sí, 67router ṣì ń kọ
 ara Jina `{image: "data:..."}` tí Memorix ìbá fi ránṣẹ́ bí ẹnu-ọ̀nà náà bá
-ṣí, nítorí náà àwọn oníbàárà tó bá Jina mu kò lè fi àwọn àwòrán sínú embeddings nípasẹ̀ OmniRoute
+ṣí, nítorí náà àwọn oníbàárà tó bá Jina mu kò lè fi àwọn àwòrán sínú embeddings nípasẹ̀ 67router
 láìlo schema àṣẹ̀dá `{type,source}`.
 
 Lo `jina-ai/jina-embeddings-v5-omni-small` fún ọ̀rọ̀. Má ṣe tọ Memorix
-`base_url` sí `https://api.jina.ai` — jẹ́ kí OmniRoute nìkan ni ìpele àárín.
+`base_url` sí `https://api.jina.ai` — jẹ́ kí 67router nìkan ni ìpele àárín.

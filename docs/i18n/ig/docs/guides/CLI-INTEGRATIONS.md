@@ -7,11 +7,11 @@
 Maka manifest nke executable a na-ekekọrịta, gburugburu ụmụ usoro nwere mmachi na nhazi
 Gemini na-adịgide adịgide, lee [nkwekọrịta mmalite CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute na-eweta ezinụlọ iwu `setup-*` ndị na-ahazi CLI maka ide koodu
-(Codex, Claude Code, OpenCode, Cline, …) ka o jiri OmniRoute dịka backend ya — nke mere na
-ngwaọrụ ahụ na-ekwurịta okwu na endpoint **otu**, OmniRoute wee ziga arịrịọ ahụ n’ebe provider
+67router na-eweta ezinụlọ iwu `setup-*` ndị na-ahazi CLI maka ide koodu
+(Codex, Claude Code, OpenCode, Cline, …) ka o jiri 67router dịka backend ya — nke mere na
+ngwaọrụ ahụ na-ekwurịta okwu na endpoint **otu**, 67router wee ziga arịrịọ ahụ n’ebe provider
 kwesịrị ekwesị site na auto-fallback. Iwu ọ bụla na-agụ katalọgụ model **dị ugbu a** site na
-OmniRoute na-agba ọsọ (nke dị na mpaghara ma ọ bụ nke dị anya), wee dee faịlụ config nke
+67router na-agba ọsọ (nke dị na mpaghara ma ọ bụ nke dị anya), wee dee faịlụ config nke
 ngwaọrụ ahụ n’onwe ya na kọmputa **gị**. A na-ezo aka na API key site na environment variable
 n’ebe ọ bụla ngwaọrụ ahụ kwadoro ya. E depụtara n’okpuru iwu ndị na-echekwa faịlụ environment
 nke ngwaọrụ ahụ n’onwe ya.
@@ -54,7 +54,7 @@ nkọwa miri emi nke ngwaọrụ nke ọ bụla:
 
 - [Nhazi Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Nhazi Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — jiri laptọọpụ gị chịkwaa OmniRoute dị anya (VPS / Tailnet)
+- [Remote Mode](./REMOTE-MODE.md) — jiri laptọọpụ gị chịkwaa 67router dị anya (VPS / Tailnet)
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — extension OmniCopilot; ọ nwekwara ike ịrụ
   iwu `setup-*` ndị a maka gị site n’ime editor
 
@@ -90,7 +90,7 @@ sava ahụ ma dee nhazi ahụ na mpaghara.
 
 Nkọwa gbasara flags (a nyochachara na source nke command ahụ):
 
-- `--remote <url>` — na-eweta catalog site na OmniRoute dị anya (ọ na-akarị `--port`
+- `--remote <url>` — na-eweta catalog site na 67router dị anya (ọ na-akarị `--port`
   na context na-arụ ọrụ). `--api-key <key>` na-enye credential maka
   server ahụ (ndabara ya bụ env var `OMNIROUTE_API_KEY`, ma ọ bụ token nke context na-arụ ọrụ).
 - `--only <patterns>` — substrings ndị e ji rikoma kewaa; debe naanị ID model ndị dabara
@@ -111,7 +111,7 @@ Nkọwa gbasara flags (a nyochachara na source nke command ahụ):
   **codex** site na args `-c model_providers.omniroute.*`. **Qwen bụ naanị target nke run
   nke na-achọrịrị `--model`** — `omniroute run qwen` na-enweghị ya na-eji
   `2` kwụsị ma gosipụta njehie doro anya.
-- `--port <port>` — port OmniRoute mpaghara (ndabara `20128`, a na-eleghara ya anya mgbe edobere `--remote`).
+- `--port <port>` — port 67router mpaghara (ndabara `20128`, a na-eleghara ya anya mgbe edobere `--remote`).
   Ọ dị na `setup-*` niile na launcher abụọ ahụ.
 - Koodu ọpụpụ `omniroute run`: a na-ebufe koodu ọpụpụ nke CLI nwa ahụ
   otu ọ dị; `2` = arguments ezighi ezi (target anaghị akwado, `--model` achọrọ adịghị,
@@ -156,7 +156,7 @@ egosi ha dịka targets enwere ike ibido.
 
 ## Ojiji n'ime mpaghara
 
-Mgbe OmniRoute na-agba na `localhost:20128`, naanị mee iwu nhazi maka ngwaọrụ gị. A na-ewepụta katalọgụ ahụ site na sava mpaghara ahụ.
+Mgbe 67router na-agba na `localhost:20128`, naanị mee iwu nhazi maka ngwaọrụ gị. A na-ewepụta katalọgụ ahụ site na sava mpaghara ahụ.
 
 ```bash
 # Codex: dee profaịlụ maka ụdịdị ọ bụla dakọtara n'ime ~/.codex/
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Malite ya n'edeghị nhazi ọ bụla ma ọlị (naanị ntinye env):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute mpaghara
-omniroute launch-codex           # Codex CLI → OmniRoute mpaghara
+omniroute launch                 # Claude Code → 67router mpaghara
+omniroute launch-codex           # Codex CLI → 67router mpaghara
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Ojiji tere aka
 
-Jiri `--remote` + `--api-key` tụọ iwu nhazi ọ bụla aka na OmniRoute dị tere aka. A na-ewepụta katalọgụ ahụ site na nke dị tere aka; a na-ede nhazi ahụ na kọmputa mpaghara gị.
+Jiri `--remote` + `--api-key` tụọ iwu nhazi ọ bụla aka na 67router dị tere aka. A na-ewepụta katalọgụ ahụ site na nke dị tere aka; a na-ede nhazi ahụ na kọmputa mpaghara gị.
 
 ```bash
 # OpenCode megide VPS dị tere aka, debe naanị ụdịdị glm/kimi
@@ -240,7 +240,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Ụdị abụọ ahụ na-ede otu **profaịlụ nkwenye** 5dive, ma oche `claude` ọ bụla e jikọrọ na profaịlụ ahụ ga-ekwurịta okwu na OmniRoute. Ihe atọ metụtara ebe ezubere a kpọmkwem:
+Ụdị abụọ ahụ na-ede otu **profaịlụ nkwenye** 5dive, ma oche `claude` ọ bụla e jikọrọ na profaịlụ ahụ ga-ekwurịta okwu na 67router. Ihe atọ metụtara ebe ezubere a kpọmkwem:
 
 - **Ọ na-agba na kọmputa nnabata ìgwè ahụ, dịka root.** Ngwaa 5dive na-arụ ọrụ na unit systemd mpaghara na ndekọ ọnọdụ nke root nwe; enweghị ọnọdụ tere aka. Usoro ahụ na-eji `sudo` maliteghachi onwe ya mgbe ọ bụghịbu root (`--no-sudo` na-agbanyụ nke ahụ ma bipụta iwu ahụ kama).
 - **Ebe njedebe ahụ ga-abụrịrị `https://` ma ọ bụrụ na ọ bụghị loopback.** Igodo API nke onye nnọchi anya ahụ na-eso URL ahụ na arịrịọ ọ bụla, 5dive na-ajụkwa ebe njedebe ederede nkịtị dị n'èzí kọmputa ahụ. Adreesị LAN nzuzo abụghị ihe ewepụrụ.
@@ -248,14 +248,14 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 A na-enye 5dive igodo API ahụ na **stdin** (`--api-key=-`), ya mere ọ dịghị mgbe ọ na-apụta na mmepụta `ps`.
 
-Ịtụ profaịlụ ahụ aka na **combo** OmniRoute kama otu ụdịdị bụ ihe na-eme ka ìgwè ahụ nweta failover onye na-eweta: mgbe ebe njedebe bụ isi kwụsịrị kpamkpam n'etiti ntụgharị n'ime ọsọ e dekọrọ na
+Ịtụ profaịlụ ahụ aka na **combo** 67router kama otu ụdịdị bụ ihe na-eme ka ìgwè ahụ nweta failover onye na-eweta: mgbe ebe njedebe bụ isi kwụsịrị kpamkpam n'etiti ntụgharị n'ime ọsọ e dekọrọ na
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), onye nnọchi anya ahụ mechara nzọụkwụ ndị fọdụrụ na fallback ahụ ma ọ dịghị mgbe o gosipụtara nkwụsị ọrụ ahụ.
 
 ---
 
 ## Usoro Base URL (ngwaọrụ ndị chọrọ `/v1`)
 
-OmniRoute na-enye ihu njikọ OpenAI na `/v1`, ihu njikọ Anthropic na root,
+67router na-enye ihu njikọ OpenAI na `/v1`, ihu njikọ Anthropic na root,
 yana ihu njikọ Gemini nke ya na `/v1beta`. A haziri njikọ ọ bụla dịka ụdị
 ngwaọrụ ya tụrụ anya ya si dị (a kwadoro nke a na isi mmalite iwu ahụ):
 
@@ -277,7 +277,7 @@ ngwaọrụ ya tụrụ anya ya si dị (a kwadoro nke a na isi mmalite iwu ah�
 ## Idobe native deps mgbe a na-emelite: `--include=optional`
 
 Mgbe ị ji `omniroute update` emelite (mgbe ị kwadoro ya, ma ọ bụ jiri `--apply`),
-OmniRoute na-eji `--include=optional` arụnyere n'ime ya mee nrụnye ahụ:
+67router na-eji `--include=optional` arụnyere n'ime ya mee nrụnye ahụ:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -305,13 +305,13 @@ omniroute update --dry-run
 E nyochara nkwekọrịta a megide `@google/gemini-cli` 0.50.0: CLI na-asọpụrụ
 `GOOGLE_GEMINI_BASE_URL` ma na-eziga `POST /v1beta/models/<model>:generateContent`
 (yana `:streamGenerateContent?alt=sse`) na ya — nke dabara kpọmkwem na ihu Gemini
-nke OmniRoute (`/v1beta`). `omniroute run gemini` na-ahazi nke ahụ na-akpaghị aka:
+nke 67router (`/v1beta`). `omniroute run gemini` na-ahazi nke ahụ na-akpaghị aka:
 
-- `GOOGLE_GEMINI_BASE_URL` → Base URL OmniRoute na-arụ ọrụ ugbu a (mgbọrọgwụ, enweghị `/v1`);
-- `GEMINI_API_KEY` → nzere OmniRoute e kpebiri iji (nhọrọ/env/context);
+- `GOOGLE_GEMINI_BASE_URL` → Base URL 67router na-arụ ọrụ ugbu a (mgbọrọgwụ, enweghị `/v1`);
+- `GEMINI_API_KEY` → nzere 67router e kpebiri iji (nhọrọ/env/context);
 - **`GEMINI_CLI_HOME` nwa oge e kewapụrụ iche** nke `.gemini/settings.json` ya
   na-ahọrọ nkwenye `gemini-api-key`, ka nnọkọ Google OAuth echekwara (Code Assist)
-  ghara imeri mmalite e duziri gaa OmniRoute — a na-ewepụ ya mgbe mmemme kwụsịrị;
+  ghara imeri mmalite e duziri gaa 67router — a na-ewepụ ya mgbe mmemme kwụsịrị;
 - **ịdị ọcha env**: a na-ewepụ `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` na `GOOGLE_GENAI_USE_GCA` na env nke child process (ndị a ga-atụgharị
   nkwenye gaa Vertex/Code Assist), ma debe `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -334,7 +334,7 @@ njikọ agent-protocol maka `/dashboard/acp-agents`.
 ## Nnwale anwụrụ ọkụ n'ezie (nhọrọ ịbanye)
 
 Nnwale nlọghachi nke atụmatụ mmalite a pụrụ ịkọ kpọmkwem na-agba na CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). Iji nyochaa faịlụ binary N'EZIOKWU megide sava OmniRoute N'EZIOKWU,
+`tests/unit/cli/run-execution.test.ts`). Iji nyochaa faịlụ binary N'EZIOKWU megide sava 67router N'EZIOKWU,
 e nwere usoro nnwale a na-ahọrọ ịbanye na ya na
 `tests/integration/upstream-cli-smoke.int.test.ts`. Ọ naghị agba ọsọ na-akpaghị aka
 (nnwale nta ọ bụla na-amafe ma ọ bụrụ na `RUN_CLI_SMOKE=1` adịghị), ọ na-ebufe nzere site na AHA env-var

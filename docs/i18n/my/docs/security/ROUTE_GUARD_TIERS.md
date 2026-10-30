@@ -6,7 +6,7 @@
 
 ## ခြုံငုံသုံးသပ်ချက်
 
-OmniRoute စီမံခန့်ခွဲမှု API route အားလုံးကို ကာကွယ်မှုအဆင့် သုံးဆင့်အနက်
+67router စီမံခန့်ခွဲမှု API route အားလုံးကို ကာကွယ်မှုအဆင့် သုံးဆင့်အနက်
 တစ်ဆင့်အဖြစ် ခွဲခြားထားသည်။ ဤခွဲခြားမှုသည် ပြောင်းလဲခြင်းမရှိဘဲ `src/server/authz/routeGuard.ts`
 တွင် သတ်မှတ်ထားပြီး အခြား auth branch တစ်ခုခု မလုပ်ဆောင်မီ အကဲဖြတ်သည်။
 
@@ -19,7 +19,7 @@ OmniRoute စီမံခန့်ခွဲမှု API route အားလု�
 
 ဤ route များသည် child process များကို စတင်လုပ်ဆောင်စေခြင်း သို့မဟုတ် runtime code ကို execute လုပ်ခြင်း ပြုလုပ်သည်။ ၎င်းတို့ကို loopback မဟုတ်သော traffic အတွက် ဖွင့်ပေးထားပါက တရားဝင် JWT တစ်ခုကို ရရှိထားသော တိုက်ခိုက်သူတစ်ဦးသည် (ဥပမာ Cloudflared/Ngrok tunnel မှတစ်ဆင့်) process စတင်လုပ်ဆောင်ခြင်းကို လှုံ့ဆော်နိုင်မည်ဖြစ်ပြီး၊ ၎င်းသည် လူသိများသော CVE အမျိုးအစားတစ်ခုဖြစ်သည် ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj))။
 
-**GHSA-fhh6-4qxv-rpqj ဆိုသည်မှာ အဘယ်နည်း (တိုက်ခိုက်မှုပုံစံ):** management/agent server တစ်ခုက subprocess တစ်ခုကို စတင်ပေးသည့် endpoint (`npm install`, `node`, browser တစ်ခု၊ proxy တစ်ခု၊ `git`, `tar`, …) ကို ဖွင့်ပေးထားသည်။ အကယ်၍ ထို endpoint ကို host ပြင်ပမှ ဝင်ရောက်နိုင်ပါက — operator က OmniRoute ကို nginx/Cloudflare/Tailscale tunnel နောက်တွင် ထားရှိပြီး JWT ပေါက်ကြားသွားခြင်း သို့မဟုတ် auth ကို မှားယွင်းစွာ configure လုပ်ထားခြင်းကြောင့် — တိုက်ခိုက်သူသည် "API တစ်ခုကို ခေါ်ဆိုခြင်း" ကို "host ပေါ်တွင် command တစ်ခုကို run ခြင်း" (remote code execution) အဖြစ် ပြောင်းလဲနိုင်သည်။ OmniRoute သည် spawn လုပ်နိုင်သော route တိုင်းတွင် **မည်သည့် auth စစ်ဆေးမှုမတိုင်မီမဆို၊ ခြွင်းချက်မရှိ loopback host စစ်ဆေးမှုကို အကောင်အထည်ဖော်ခြင်း** ဖြင့် ဤအန္တရာယ်ကို ပိတ်ဆို့ထားသည်။ ထို့ကြောင့် tunnel မှတစ်ဆင့် token ပေါက်ကြားသွားလျှင်ပင် spawn လုပ်ဆောင်ချက်သို့ မရောက်ရှိနိုင်ပါ။
+**GHSA-fhh6-4qxv-rpqj ဆိုသည်မှာ အဘယ်နည်း (တိုက်ခိုက်မှုပုံစံ):** management/agent server တစ်ခုက subprocess တစ်ခုကို စတင်ပေးသည့် endpoint (`npm install`, `node`, browser တစ်ခု၊ proxy တစ်ခု၊ `git`, `tar`, …) ကို ဖွင့်ပေးထားသည်။ အကယ်၍ ထို endpoint ကို host ပြင်ပမှ ဝင်ရောက်နိုင်ပါက — operator က 67router ကို nginx/Cloudflare/Tailscale tunnel နောက်တွင် ထားရှိပြီး JWT ပေါက်ကြားသွားခြင်း သို့မဟုတ် auth ကို မှားယွင်းစွာ configure လုပ်ထားခြင်းကြောင့် — တိုက်ခိုက်သူသည် "API တစ်ခုကို ခေါ်ဆိုခြင်း" ကို "host ပေါ်တွင် command တစ်ခုကို run ခြင်း" (remote code execution) အဖြစ် ပြောင်းလဲနိုင်သည်။ 67router သည် spawn လုပ်နိုင်သော route တိုင်းတွင် **မည်သည့် auth စစ်ဆေးမှုမတိုင်မီမဆို၊ ခြွင်းချက်မရှိ loopback host စစ်ဆေးမှုကို အကောင်အထည်ဖော်ခြင်း** ဖြင့် ဤအန္တရာယ်ကို ပိတ်ဆို့ထားသည်။ ထို့ကြောင့် tunnel မှတစ်ဆင့် token ပေါက်ကြားသွားလျှင်ပင် spawn လုပ်ဆောင်ချက်သို့ မရောက်ရှိနိုင်ပါ။
 
 **LOCAL_ONLY အစုအပြည့်အစုံ။** တရားဝင်အကိုးအကားရင်းမြစ်မှာ `src/server/authz/routeGuard.ts` အတွင်းရှိ `LOCAL_ONLY_API_PREFIXES` / `LOCAL_ONLY_API_PATTERNS` ဖြစ်ပြီး၊ အောက်ပါဇယားသည် လက်ရှိအခြေအနေကို ထင်ဟပ်ဖော်ပြထားသည်။ `check-route-guard-membership` gate သည် spawn လုပ်နိုင်သော prefix များအောက်ရှိ `route.ts` တစ်ခုစီတိုင်းကို စာရင်းကောက်ယူပြီး၊ တစ်ခုခုကို local-only အဖြစ် အမျိုးအစားမသတ်မှတ်ထားပါက CI ကို မအောင်မြင်စေသည်။
 
@@ -102,7 +102,7 @@ remote MCP-only caller များအတွက် privilege ပိုနည်�
 
 #### Operator လမ်းညွှန်ချက်နှင့် auditing
 
-OmniRoute ကို reverse proxy သို့မဟုတ် tunnel (nginx, Caddy, Cloudflare
+67router ကို reverse proxy သို့မဟုတ် tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) နောက်ကွယ်တွင် လုပ်ဆောင်ပါက loopback စစ်ဆေးမှုသည် အထက်ပါ
 spawn လုပ်နိုင်သော route များကို ဆက်လက်ကာကွယ်ပေးသည် — client address သည် non-loopback ဖြစ်သော
 request ကို **auth မလုပ်ဆောင်မီ** `403 LOCAL_ONLY` ဖြင့် ငြင်းပယ်သောကြောင့်
@@ -115,7 +115,7 @@ request ကို **auth မလုပ်ဆောင်မီ** `403 LOCAL_ONLY`
 
 - `/dashboard/settings/security` ရှိ **Authorization Inventory** ကို ဖွင့်ပါ။ ၎င်းတွင် လက်ရှိ LOCAL_ONLY prefix စာရင်း၊ bypass လုပ်နိုင်သော prefix များနှင့် compile-time process စတင်နိုင်သော ("cannot be made bypassable") အစုကို ပြသသည်။
 - အထက်ပါ prefix များနှင့် non-loopback client လိပ်စာ တွဲလျက်ရှိမရှိကို သင်၏ reverse-proxy / access log များတွင် grep ဖြင့် ရှာပါ။ ထိုကဲ့သို့သော request တစ်ခုခုသည် `403 LOCAL_ONLY` အစား `200` ပြန်ခဲ့ပါက proxy က client IP အစစ်ကို ဖုံးကွယ်နေခြင်းဖြစ်သည် — proxy ကို ပြင်ဆင်ပါ။
-- OmniRoute ၏ log များတွင် ဤ path များထဲမှ တစ်ခုအတွက် `403 LOCAL_ONLY` တွေ့ရခြင်းသည် guard က ရည်ရွယ်ထားသည့်အတိုင်း အလုပ်လုပ်နေခြင်းဖြစ်ပြီး ဖျောက်ပစ်ရမည့် error မဟုတ်ပါ။
+- 67router ၏ log များတွင် ဤ path များထဲမှ တစ်ခုအတွက် `403 LOCAL_ONLY` တွေ့ရခြင်းသည် guard က ရည်ရွယ်ထားသည့်အတိုင်း အလုပ်လုပ်နေခြင်းဖြစ်ပြီး ဖျောက်ပစ်ရမည့် error မဟုတ်ပါ။
 
 #### Call-site probe gate ပါသော အဝေးမှ ရယူနိုင်သည့် route များ
 

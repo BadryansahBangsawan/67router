@@ -13,7 +13,7 @@
 
 O Motor de Partilha de Quotas distribui de forma justa a quota temporal de um fornecedor (por exemplo, janela de 5 horas do Codex, 1500 pedidos/h do Kimi) entre várias chaves de API que partilham a mesma ligação.
 
-**Problema que resolve:** o OmniRoute encaminha várias chaves de API para a mesma conta do fornecedor a montante. Sem lógica de partilha, um pico de pedidos da chave A pode esgotar a quota do fornecedor para essa hora, deixando as chaves B e C bloqueadas até a janela ser reiniciada. O motor evita isto ao:
+**Problema que resolve:** o 67router encaminha várias chaves de API para a mesma conta do fornecedor a montante. Sem lógica de partilha, um pico de pedidos da chave A pode esgotar a quota do fornecedor para essa hora, deixando as chaves B e C bloqueadas até a janela ser reiniciada. O motor evita isto ao:
 
 1. Monitorizar o consumo contínuo de cada chave por dimensão (%, pedidos, tokens, $).
 2. Aplicar um algoritmo de partilha justa que conserva a capacidade: uma chave pode utilizar quotas inativas enquanto o conjunto global não estiver saturado.
@@ -106,7 +106,7 @@ Controlador Redis: script Lua EVAL para incremento atómico — é executado com
 
 - Tabela: `quota_consumption` (consulte a migração `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Mais adequado para implementações de instância única.
-- Toda a persistência é efetuada na BD SQLite existente do OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toda a persistência é efetuada na BD SQLite existente do 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opcional, várias instâncias)
 

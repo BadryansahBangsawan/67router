@@ -15,7 +15,7 @@
 - [ネイティブアプリ向け OAuth 2.0（PKCE）](https://developers.google.com/identity/protocols/oauth2/native-app) — インストール型アプリの OAuth client_id / client_secret は公開情報であり、実際のセキュリティは PKCE によって提供されます。
 - [Firebase API キー](https://firebase.google.com/docs/projects/api-keys) — Web クライアント識別子は設計上、公開情報です。
 
-OmniRoute では、`.env` を設定しないユーザーでも、すぐに動作する OAuth フローを利用できるよう、これらの値を埋め込む必要があります。フォールバックが埋め込まれていない場合、「クローンして実行するだけ」の手順に従うすべてのユーザーに対して、Gemini / Antigravity プロバイダーが動作しなくなります。
+67router では、`.env` を設定しないユーザーでも、すぐに動作する OAuth フローを利用できるよう、これらの値を埋め込む必要があります。フォールバックが埋め込まれていない場合、「クローンして実行するだけ」の手順に従うすべてのユーザーに対して、Gemini / Antigravity プロバイダーが動作しなくなります。
 
 しかし、`AIzaSy…`、`GOCSPX-…`、`…apps.googleusercontent.com` のようなリテラル値は、**GitHub Secret Scanning**、**Semgrep**、および類似のパターンスキャナーによって検出されます。その結果、リリースのたびに誤検知が大量に発生し、プッシュ保護によって正当なコミットがブロックされ、運用担当者がアラートフィードを信頼しなくなります。
 

@@ -10,7 +10,7 @@ bilang apat na pamilya ng provider. Ang rehiyon ay datos ng koneksyon, hindi isa
 
 ## Desisyon
 
-| Pamilya ng provider                                 | OmniRoute ID            | Pandaigdigang rehiyon | Rehiyon ng China |
+| Pamilya ng provider                                 | 67router ID             | Pandaigdigang rehiyon | Rehiyon ng China |
 | --------------------------------------------------- | ----------------------- | --------------------- | ---------------- |
 | Alibaba Cloud Model Studio (bayad ayon sa paggamit) | `alibaba`               | Singapore             | Beijing          |
 | Alibaba Cloud Token Plan                            | `bailian-coding-plan`   | Singapore             | Beijing          |

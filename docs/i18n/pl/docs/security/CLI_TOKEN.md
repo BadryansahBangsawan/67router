@@ -6,7 +6,7 @@
 
 ## Omówienie
 
-Polecenia CLI OmniRoute uwierzytelniają się w lokalnym interfejsie API zarządzania za pomocą tokenu
+Polecenia CLI 67router uwierzytelniają się w lokalnym interfejsie API zarządzania za pomocą tokenu
 `HMAC-SHA256(machine-id, salt)` wysyłanego w nagłówku żądania
 `x-omniroute-cli-token`.
 

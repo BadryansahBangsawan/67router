@@ -5,9 +5,9 @@
 ---
 
 Các relay (Vercel, Deno, Cloudflare) chấm dứt kết nối upstream trên một
-backend serverless để OmniRoute có thể gửi lưu lượng đi từ một khu vực ổn định, đồng thời giữ
+backend serverless để 67router có thể gửi lưu lượng đi từ một khu vực ổn định, đồng thời giữ
 khóa API của nhà cung cấp ở phía máy chủ. Tài liệu này trình bày hai chế độ lỗi
-mà các đơn vị vận hành gặp phải trong môi trường production và các phương án khôi phục mà OmniRoute cung cấp cho
+mà các đơn vị vận hành gặp phải trong môi trường production và các phương án khôi phục mà 67router cung cấp cho
 từng trường hợp.
 
 ## Cách lưu trữ thông tin xác thực relay
@@ -34,7 +34,7 @@ Blob `relayAuthEnc` đã lưu không thể giải mã được nữa, vì vậy
 1. Mở **Settings → Proxy Pool**.
 2. Các hàng relay thiếu thông tin xác thực sẽ hiển thị huy hiệu `auth missing` màu vàng và nút
    **Repair**.
-3. Nhấp vào **Repair**. OmniRoute gọi
+3. Nhấp vào **Repair**. 67router gọi
    `POST /api/settings/proxies/[id]/repair-relay`, thao tác này:
    - giải mã `relayAuthEnc` bằng khóa **hiện tại**,
    - ghi lại `relayAuth` dạng văn bản thuần vào `notes`,
@@ -66,7 +66,7 @@ token không thể khôi phục, vì vậy bạn không cần phải tự tìm h
 **Triệu chứng:** kiểm tra proxy (nút `speed`) cho thấy relay đang hoạt động nhưng các yêu cầu
 vẫn thỉnh thoảng thất bại.
 
-Hãy kiểm tra các header nhận biết relay do probe kiểm tra tự động của OmniRoute trả về
+Hãy kiểm tra các header nhận biết relay do probe kiểm tra tự động của 67router trả về
 (xem **Settings → Proxy Pool** và các bộ đếm `relayTested` / `relayAlive`):
 
 - `x-relay-url` — backend relay nào đã phản hồi.

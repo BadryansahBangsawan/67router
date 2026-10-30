@@ -4,7 +4,7 @@
 
 ---
 
-Ciągły, przyrostowy eksport dzienników wywołań OmniRoute do zewnętrznego magazynu analitycznego.
+Ciągły, przyrostowy eksport dzienników wywołań 67router do zewnętrznego magazynu analitycznego.
 
 Karta panelu Dzienniki przechowuje historię żądań w SQLite (`call_logs`), której rozmiar jest ograniczony przez
 rotację i retencję. Eksport dzienników wysyła ten sam zestaw rekordów zgodnie z harmonogramem, dzięki czemu mogą one być przechowywane

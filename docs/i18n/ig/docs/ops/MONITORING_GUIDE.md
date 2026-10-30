@@ -4,7 +4,7 @@
 
 ---
 
-> **Nchịkọta dị mkpirikpi**: OmniRoute nwere nlekọta ahụike arụnyere n'ime ya, autopilot nke ndị na-enye ọrụ, nsuso oke ojiji, na hooks maka nlele usoro. Ntuziaka a na-akọwa dashboard, ọkwa ịdọ aka ná ntị, na idozi nsogbu.
+> **Nchịkọta dị mkpirikpi**: 67router nwere nlekọta ahụike arụnyere n'ime ya, autopilot nke ndị na-enye ọrụ, nsuso oke ojiji, na hooks maka nlele usoro. Ntuziaka a na-akọwa dashboard, ọkwa ịdọ aka ná ntị, na idozi nsogbu.
 
 **Isi mmalite:**
 
@@ -20,7 +20,7 @@
 
 ## Nchịkọta
 
-OmniRoute nwere **ọkwa nlekọta 3**:
+67router nwere **ọkwa nlekọta 3**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Maka combo ọ bụla:
 
 ## API Nlele Ahụike
 
-OmniRoute na-ewepụta ụzọ HTTP **abụọ** maka nlele ahụike. A pụghị iji ha dochie ibe ha n’ime ndị nhazi ọrụ.
+67router na-ewepụta ụzọ HTTP **abụọ** maka nlele ahụike. A pụghị iji ha dochie ibe ha n’ime ndị nhazi ọrụ.
 
 | Ụzọ                          | Ebumnuche                                                                   | Ibu                            | Jiri ya maka                                                             |
 | ---------------------------- | --------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------ |
@@ -180,7 +180,7 @@ endpoint a. Jiri `failed` + `failedConnections` maka ọdịda probe ozugbo, yan
 
 ### Ntụnye probe Kubernetes
 
-OmniRoute bụ **otu Node process** (otu event loop). Docker `HEALTHCHECK` ndabara na-elekwasị anya na `/healthz` dị mfe. `/api/monitoring/health` **dị oke arọ** maka oge liveness nke kubelet.
+67router bụ **otu Node process** (otu event loop). Docker `HEALTHCHECK` ndabara na-elekwasị anya na `/healthz` dị mfe. `/api/monitoring/health` **dị oke arọ** maka oge liveness nke kubelet.
 
 | Nnyocha             | Ebumnuche akwadoro                                                                       | Nkọwa                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Ihe ndị metụtara ya: [#10052](https://github.com/diegosouzapw/OmniRoute/issu
 
 ### watchdog nke systemd (event loop jụrụ akpụ)
 
-Na host systemd, OmniRoute na-agwa onye njikwa service mgbe ọ dị njikere ma na-aga n'ihu izigara ya ping, ka e wee gbuo ma malitegharịa server nke event loop ya rapaara kama ịhapụ ya ka ọ na-arụ ọrụ ma gbachi nkịtị. Ping ndị ahụ na-esite na event loop nke server n'onwe ya: mgbe ọ gbochiri, ha na-akwụsị, systemd wee malitegharịa service ahụ ozugbo `WatchdogSec` gafere na-enwetaghị nke ọ bụla.
+Na host systemd, 67router na-agwa onye njikwa service mgbe ọ dị njikere ma na-aga n'ihu izigara ya ping, ka e wee gbuo ma malitegharịa server nke event loop ya rapaara kama ịhapụ ya ka ọ na-arụ ọrụ ma gbachi nkịtị. Ping ndị ahụ na-esite na event loop nke server n'onwe ya: mgbe ọ gbochiri, ha na-akwụsị, systemd wee malitegharịa service ahụ ozugbo `WatchdogSec` gafere na-enwetaghị nke ọ bụla.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) edeela unit onye ọrụ nwere nke a. Unit ị dere n'onwe gị (`Type=simple` bụ ndabara) anaghị enweta watchdog, ya mere tinye ahịrị ndị a na ngalaba `[Service]` ya:
 
@@ -443,7 +443,7 @@ interface TokenHealth {
 
 ### Ọwa Ndị E Wuru N'ime Sistemụ
 
-OmniRoute na-akwado **ọwa ịdọ aka ná ntị 3**:
+67router na-akwado **ọwa ịdọ aka ná ntị 3**:
 
 | Ọwa              | Ntọlite               | Ihe eji ya eme            |
 | ---------------- | --------------------- | ------------------------- |
@@ -559,7 +559,7 @@ Mepụta `~/.omniroute/dashboard.json`:
 ### "Quota na-ekwu na ọ dị mma mana ana m ahụ 429s"
 
 - 429 pụtara na provider na-ekwu na i jirila quota gị niile
-- Nsochi quota nke OmniRoute nwere ike ịbụ **ihe ochie** — eziokwu nke provider dị na upstream
+- Nsochi quota nke 67router nwere ike ịbụ **ihe ochie** — eziokwu nke provider dị na upstream
 - A na-eme ka data quota dị ọhụrụ na-akpaghị aka site na quota monitor dị n'ime sistemụ
 
 ### "Combo anaghị arụ ọrụ mana target niile yiri ka ha dị mma"
@@ -572,7 +572,7 @@ Mepụta `~/.omniroute/dashboard.json`:
 
 - Gbaa `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Ọ bụrụ na ọ bụ "ok" — ọ bụ mkpu ụgha, nnyocha ahụike ahụ siri ike karịa ka o kwesịrị
-- Ọ bụrụ na ọ bụ ihe ọ bụla ọzọ — **kwụsị OmniRoute** ma soro [ntuziaka mgbake mgbe ọdachi gasịrị](./DATABASE_GUIDE.md#disaster-recovery)
+- Ọ bụrụ na ọ bụ ihe ọ bụla ọzọ — **kwụsị 67router** ma soro [ntuziaka mgbake mgbe ọdachi gasịrị](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Nrụgide memory heap dị n'ogo dị oke egwu"
 

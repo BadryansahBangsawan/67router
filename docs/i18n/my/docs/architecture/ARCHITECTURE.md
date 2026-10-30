@@ -1,4 +1,4 @@
-# OmniRoute Architecture (မြန်မာ)
+# 67router Architecture (မြန်မာ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည့�
 
 ## အနှစ်ချုပ်
 
-OmniRoute သည် Next.js ကို အခြေခံတည်ဆောက်ထားသော local AI routing gateway နှင့် dashboard တစ်ခုဖြစ်သည်။
+67router သည် Next.js ကို အခြေခံတည်ဆောက်ထားသော local AI routing gateway နှင့် dashboard တစ်ခုဖြစ်သည်။
 ၎င်းသည် OpenAI နှင့် တွဲဖက်အသုံးပြုနိုင်သော endpoint (`/v1/*`) တစ်ခုတည်းကို ပံ့ပိုးပေးပြီး translation၊ fallback၊ token refresh နှင့် usage tracking တို့ဖြင့် upstream provider များစွာအကြား traffic ကို လမ်းကြောင်းခွဲပေးသည်။
 
 အဓိကလုပ်ဆောင်နိုင်စွမ်းများ-
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Browser Dashboard]
     end
 
-    subgraph Router[OmniRoute Local Process]
+    subgraph Router[67router Local Process]
         API[V1 Compatibility API\n/v1/*]
         DASH[Dashboard + Management API\n/api/*]
         CORE[SSE + Translation Core\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth provider module များ (`src/lib/oauth/providers/` အောက်�
 
 ## 5) ထည့်သွင်းထားသော ဝန်ဆောင်မှုများ (v3.8.4)
 
-OmniRoute သည် စက်တွင်း၌ လည်ပတ်နေသော AI ကိရိယာ process များကို ထည့်သွင်းခြင်း၊ ကြီးကြပ်ခြင်းနှင့် လမ်းကြောင်းပို့ခြင်းတို့ ပြုလုပ်နိုင်ပြီး ၎င်းတို့ကို **ထည့်သွင်းထားသော ဝန်ဆောင်မှုများ** ဟု ခေါ်သည်။ 9Router၊ CLIProxyAPI၊ Bifrost၊ Mux နှင့် Dario စုစုပေါင်း ငါးခုကို တစ်ပါတည်း ထည့်သွင်းပေးထားသည်။
+67router သည် စက်တွင်း၌ လည်ပတ်နေသော AI ကိရိယာ process များကို ထည့်သွင်းခြင်း၊ ကြီးကြပ်ခြင်းနှင့် လမ်းကြောင်းပို့ခြင်းတို့ ပြုလုပ်နိုင်ပြီး ၎င်းတို့ကို **ထည့်သွင်းထားသော ဝန်ဆောင်မှုများ** ဟု ခေါ်သည်။ 9Router၊ CLIProxyAPI၊ Bifrost၊ Mux နှင့် Dario စုစုပေါင်း ငါးခုကို တစ်ပါတည်း ထည့်သွင်းပေးထားသည်။
 
 ဗိသုကာအလွှာများ-
 
@@ -426,7 +426,7 @@ lockout/budget/fallback logic ကို ကိုယ်တိုင် စုစ
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — အချိန်မှန် အကဲဖြတ်သည့် job များ
 
 ### E. Authorization Pipeline
@@ -803,7 +803,7 @@ flowchart LR
         Browser[ဒက်ရှ်ဘုတ် ဘရောက်ဇာ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute အလုပ်လုပ်သည့် ပတ်ဝန်းကျင်]
+    subgraph ContainerOrProcess[67router အလုပ်လုပ်သည့် ပတ်ဝန်းကျင်]
         Next[Next.js ဆာဗာ\nPORT=20128]
         Core[SSE ပင်မစနစ် + လုပ်ဆောင်ကိရိယာများ]
         MainDB[(storage.sqlite)]
@@ -921,7 +921,7 @@ Provider တစ်ခုစီတွင် `BaseExecutor` (`open-sse/executors/b
 
 ## Provider လိုက်ဖက်ညီမှု မက်ထရစ်
 
-> **မှတ်ချက်:** အောက်ပါမက်ထရစ်သည် OmniRoute v3.8.0 တွင် မှတ်ပုံတင်ထားသော provider 351 ခုအနက် ကိုယ်စားပြုနမူနာတစ်ခု ဖြစ်သည်။
+> **မှတ်ချက်:** အောက်ပါမက်ထရစ်သည် 67router v3.8.0 တွင် မှတ်ပုံတင်ထားသော provider 351 ခုအနက် ကိုယ်စားပြုနမူနာတစ်ခု ဖြစ်သည်။
 > စံအဖြစ်သတ်မှတ်ထားပြီး စဉ်ဆက်မပြတ် အပ်ဒိတ်လုပ်ထားသော စာရင်းအတွက်
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (အလိုအလျောက် ဖန်တီးထားသည်) သို့မဟုတ်
 > `src/shared/constants/providers.ts` ရှိ အရင်းအမြစ်အမှန်ကို ကိုးကားပါ (ဖွင့်တင်စဉ် Zod ဖြင့် အတည်ပြုထားသည်)။
@@ -1104,7 +1104,7 @@ Runtime အခြေအနေကို မြင်နိုင်သည့် �
 - client ထံမှ လက်ခံရရှိသည့် မူရင်း request
 - upstream သို့ အမှန်တကယ် ပေးပို့ခဲ့သည့် ဘာသာပြန်ထားသော request
 - JSON အဖြစ် ပြန်လည်တည်ဆောက်ထားသည့် provider response; streamed response များကို stream metadata နှင့် နောက်ဆုံး summary အဖြစ် အကျဉ်းချုံ့ထားသည်
-- OmniRoute က ပြန်ပေးသည့် နောက်ဆုံး client response; streamed response များကိုလည်း တူညီသော အကျဉ်းချုပ်ပုံစံဖြင့် သိမ်းဆည်းထားသည်
+- 67router က ပြန်ပေးသည့် နောက်ဆုံး client response; streamed response များကိုလည်း တူညီသော အကျဉ်းချုပ်ပုံစံဖြင့် သိမ်းဆည်းထားသည်
 
 ## လုံခြုံရေးအရ အရေးကြီးသော နယ်နိမိတ်များ
 

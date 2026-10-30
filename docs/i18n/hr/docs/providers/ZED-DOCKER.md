@@ -4,7 +4,7 @@
 
 ---
 
-Kada se OmniRoute pokreće unutar Dockera, standardni postupak „Uvoz iz Zed privjeska ključeva” ne uspijeva
+Kada se 67router pokreće unutar Dockera, standardni postupak „Uvoz iz Zed privjeska ključeva” ne uspijeva
 jer spremnik ne može pristupiti servisu privjeska ključeva glavnog operacijskog sustava (libsecret na Linuxu,
 Keychain na macOS-u, Credential Manager na Windowsu), a direktoriji Zed konfiguracije na
 datotečnom sustavu glavnog računala prema zadanim postavkama nisu vidljivi unutar spremnika.
@@ -20,7 +20,7 @@ Unutar spremnika pojavljuju se dva problema koja onemogućuju rad:
    komunicira sa servisom privjeska ključeva operacijskog sustava putem Unix utičnice ili D-Bus sesije.
    Ni jedno ni drugo prema zadanim postavkama nije povezano sa spremnikom, pa čitanje vjerodajnica uvijek ne uspijeva.
 
-OmniRoute otkriva Docker okruženje pomoću dviju heuristika:
+67router otkriva Docker okruženje pomoću dviju heuristika:
 
 - Prisutnost datoteke `/.dockerenv` (koju Dockerov servis zapisuje pri pokretanju spremnika).
 - Pojavljivanje niza `docker` u `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Kada se aktivira bilo koja heuristika, ruta za uvoz vraća HTTP 422 s
 
 1. Otvorite **Nadzorna ploča → Pružatelji usluga → Zed**.
 2. Ploča **Ručni uvoz tokena** pojavljuje se ispod kartice za uvoz iz privjeska ključeva. Kada
-   OmniRoute otkrije Docker, ta se ploča automatski proširuje nakon prvog neuspjelog
+   67router otkrije Docker, ta se ploča automatski proširuje nakon prvog neuspjelog
    pokušaja uvoza iz privjeska ključeva.
 3. Odaberite pružatelja usluga iz padajućeg izbornika (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter ili DeepSeek).

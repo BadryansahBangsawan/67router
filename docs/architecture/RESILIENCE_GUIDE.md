@@ -6,7 +6,7 @@ lastUpdated: 2026-10-18
 
 # Resilience Guide
 
-OmniRoute has three distinct but related resilience mechanisms. Each has a different scope and purpose. Keep them separate when debugging routing behavior.
+67router has three distinct but related resilience mechanisms. Each has a different scope and purpose. Keep them separate when debugging routing behavior.
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -221,7 +221,7 @@ The three session-affinity headers are never forwarded upstream — executors bu
 
 ### Exclusive managed session connection leases
 
-**Scope:** one active managed HTTP client/session owns one eligible OmniRoute connection.
+**Scope:** one active managed HTTP client/session owns one eligible 67router connection.
 
 **Purpose:** provide durable exclusive connection ownership for clients that need a hard routing
 fence across requests. This differs from session affinity, which is a soft continuity preference:
@@ -243,7 +243,7 @@ active connection ID. Lease control headers are removed from logs, retained requ
 upstream executor headers.
 
 If ordinary routing has eligible managed candidates but every free candidate is occupied by a
-foreign active lease, OmniRoute returns HTTP `429`, lease-capacity-unavailable code, a
+foreign active lease, 67router returns HTTP `429`, lease-capacity-unavailable code, a
 waiting-for-capacity state, and a bounded `Retry-After` derived from the earliest relevant expiry.
 Ordinary empty eligibility is not lease contention and keeps its existing routing error semantics.
 
@@ -266,7 +266,7 @@ to (`resolveLockoutScope()` in `open-sse/services/accountFallback/exactModelLock
   for codex the whole `codex` / `spark` scope (every `gpt-5*` model of the
   connection), for other providers `getQuotaScopedModelForProvider()`.
 - `404` locks the bare model (`getModelLockKey()` narrows `not_found`).
-- Any other status — `5xx` transport/server failures and OmniRoute's own
+- Any other status — `5xx` transport/server failures and 67router's own
   synthesized `502` from quality validation — locks the **exact**
   provider/connection/model tuple only. A bad stream on one model is not evidence
   about the account's quota; before this rule one empty response on
@@ -401,7 +401,7 @@ concurrency caps**, one `model=cap` per line) or via
   match `glm-5`). Values are positive-integer concurrent-request ceilings.
 - **Local queueing, no discovery:** excess requests queue locally with the
   existing queue/timeout semantics (typed `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` admission errors). OmniRoute does not discover or
+  `SEMAPHORE_QUEUE_FULL` admission errors). 67router does not discover or
   infer upstream policy — it enforces the exact ceilings the operator
   configured. A saturated model gate never disables the provider and never
   creates a permanent model lockout; upstream 429/cooldown/fallback behavior
@@ -568,7 +568,7 @@ it is unit-testable without a real Bottleneck limiter.
 ### Rate-Limit Auto-Enable Safety Net & Connection Protection (`rateLimitProtection`)
 
 **Auto-enable safety net** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, default `true`):
-By default, OmniRoute automatically enables rate-limit queue protection for all active API-key provider connections (`getProviderCategory(provider) === "apikey"`). This ensures incoming requests to rate-sensitive upstream API keys are queued and throttled through Bottleneck rather than bursting into upstream 429 errors. The safety net can be overridden via the `RATE_LIMIT_AUTO_ENABLE` environment variable (`false`/`0`/`off` disables, `true`/`1`/`on` forces on), which takes precedence over the persisted dashboard setting (**Settings → Resilience** / `PATCH /api/resilience`).
+By default, 67router automatically enables rate-limit queue protection for all active API-key provider connections (`getProviderCategory(provider) === "apikey"`). This ensures incoming requests to rate-sensitive upstream API keys are queued and throttled through Bottleneck rather than bursting into upstream 429 errors. The safety net can be overridden via the `RATE_LIMIT_AUTO_ENABLE` environment variable (`false`/`0`/`off` disables, `true`/`1`/`on` forces on), which takes precedence over the persisted dashboard setting (**Settings → Resilience** / `PATCH /api/resilience`).
 
 **Semantics of per-connection `rateLimitProtection`:**
 Per-connection rate-limit protection is tracked via the `rateLimitProtection` boolean field on provider connections (persisted as `rate_limit_protection` in SQLite):
@@ -899,7 +899,7 @@ rate limit is the same signal as an exhausted quota. Honest limits:
 > guide stays under the 40k context budget. It is the condensed, agent-facing view of the
 > sections above; the numbered sections remain the full reference.
 
-OmniRoute has three related but distinct temporary-failure mechanisms. Keep their
+67router has three related but distinct temporary-failure mechanisms. Keep their
 scope separate when debugging routing behavior. See the
 [3-layer resilience diagram](../diagrams/exported/resilience-3layers.svg)
 (source: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

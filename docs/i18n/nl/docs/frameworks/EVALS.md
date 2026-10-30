@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute wordt geleverd met een generiek evaluatieframework waarmee je routeringsconfiguraties, afzonderlijke providers/modellen of de meegeleverde 'golden set'-suites kunt benchmarken. Gebruik het om routeringswijzigingen te verifiëren, nieuwe providers te valideren en releases te blokkeren of goed te keuren voordat je ze naar productieverkeer promoveert.
+67router wordt geleverd met een generiek evaluatieframework waarmee je routeringsconfiguraties, afzonderlijke providers/modellen of de meegeleverde 'golden set'-suites kunt benchmarken. Gebruik het om routeringswijzigingen te verifiëren, nieuwe providers te valideren en releases te blokkeren of goed te keuren voordat je ze naar productieverkeer promoveert.
 
 Het framework is als volgt geïmplementeerd:
 

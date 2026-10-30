@@ -6,7 +6,7 @@
 
 # Model grananja i izdavanja
 
-OmniRoute koristi model izdavanja sa **paralelnim ciklusima**: namjenska `release/vX.Y.Z` grana za aktivni ciklus, `main` za objavljenu liniju, i nepromjenjiva `vX.Y.Z` oznaka (tag) kada se taj ciklus isporuči. Vidjeti commit-e na `release/*` _i_ na `main` je očekivano — nije greška.
+67router koristi model izdavanja sa **paralelnim ciklusima**: namjenska `release/vX.Y.Z` grana za aktivni ciklus, `main` za objavljenu liniju, i nepromjenjiva `vX.Y.Z` oznaka (tag) kada se taj ciklus isporuči. Vidjeti commit-e na `release/*` _i_ na `main` je očekivano — nije greška.
 
 Detalji za održavatelje se nalaze u `CLAUDE.md` (Strogo pravilo #21) i [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md). Ova stranica je javni sažetak namijenjen saradnicima.
 

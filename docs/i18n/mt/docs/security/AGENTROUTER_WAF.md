@@ -52,7 +52,7 @@ attività. Dan huwa l-istess rate limiter marbut mal-IP u maċ-ċavetta li jikka
 żbalji intermittenti `400 content-blocked` meta Claude Code jew Codex CLI
 jagħmel diversi sejħiet ta’ użu ta’ għodod / bgħit ta’ messaġġi wara xulxin malajr.
 
-## Mitigazzjonijiet diġà applikati f’OmniRoute
+## Mitigazzjonijiet diġà applikati f’67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — protezzjoni kontra żidiet f’daqqa li tinforza
    intervall minimu ta’ 500 ms bejn talbiet outbound lejn kwalunkwe URL

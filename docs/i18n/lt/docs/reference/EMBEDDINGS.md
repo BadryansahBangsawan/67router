@@ -4,9 +4,9 @@
 
 ---
 
-Operatoriaus pastabos dėl `POST /v1/embeddings`, kai „OmniRoute“ yra prieš
+Operatoriaus pastabos dėl `POST /v1/embeddings`, kai „67router“ yra prieš
 „Hindsight“ 0.9.1 (tik tekstui skirtas `encode(list[str])`) ir „Memorix“ 1.6.0 („Jina“ medijos
-patikra). Tiesiogiai patikrinta 2026-08-17 naudojant „OmniRoute“ 3.8.49 adresu
+patikra). Tiesiogiai patikrinta 2026-08-17 naudojant „67router“ 3.8.49 adresu
 `https://omniroute.jaguar-fish.ts.net/v1`. Toliau nėra jokių paslapčių.
 
 ## Veikiantys modelių ID
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Savarankiškas `gemini-embedding-2` negali veikti vien naudojant „GitOps“. „Google AI
 Studio“ raktas turi būti pridėtas kaip `gemini` teikėjo ryšys (valdymo skydelyje arba
-importuojant `GEMINI_API_KEY` į „OmniRoute“). Šios paslapties šioje saugykloje nėra.
+importuojant `GEMINI_API_KEY` į „67router“). Šios paslapties šioje saugykloje nėra.
 
 ### „Jina“ daugiarūšio turinio kelias
 
@@ -100,7 +100,7 @@ Naudokite `POST /v1/embeddings`, kol bus sukurtas alternatyvus kelias.
 
 ### „Jina“ / „Memorix“ vaizdo objektas
 
-Kanoninis „OmniRoute“ vaizdo elementas (28×28 PNG, 784 pikseliai — „Jina“ atmeta 1×1):
+Kanoninis „67router“ vaizdo elementas (28×28 PNG, 784 pikseliai — „Jina“ atmeta 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Faktinis rezultatas: HTTP **400**
 
 „Hindsight“ įterpiniai skirti tik tekstui (`encode(list[str])`). Vaizdo objektai
 nesiunčiami. Nukreipkite „Hindsight“ su „OpenAI“ suderinamą įterpinių bazinį URL į
-„OmniRoute“ `/v1` ir naudokite veikiantį ID iš pirmiau pateiktos lentelės
+„67router“ `/v1` ir naudokite veikiantį ID iš pirmiau pateiktos lentelės
 (`jina-ai/jina-embeddings-v5-omni-small` arba
 `openrouter/google/gemini-embedding-2`). Nenustatykite modelio kaip
 `gemini-embedding-2` be prefikso, nebent šliuze yra `gemini` API raktas.
@@ -157,11 +157,11 @@ nesiunčiami. Nukreipkite „Hindsight“ su „OpenAI“ suderinamą įterpini�
 ### Memorix 1.6.0
 
 „Memorix“ savarankiška medija laiko tik tokį `baseUrl`, kuris atitinka `/jina\.ai/i`.
-Naudojant „OmniRoute“ URL liekama tik tekstui skirtame kelyje, net jei modelis yra
-„Jina omni“. Ši patikra yra „Memorix“ kliento problema. Be to, „OmniRoute“ vis tiek
+Naudojant „67router“ URL liekama tik tekstui skirtame kelyje, net jei modelis yra
+„Jina omni“. Ši patikra yra „Memorix“ kliento problema. Be to, „67router“ vis tiek
 atmeta „Jina“ `{image: "data:..."}` užklausos turinį, kurį „Memorix“ siųstų, jei patikra
 būtų sėkminga, todėl su „Jina“ suderinami klientai negali įterpti vaizdų per
-„OmniRoute“ nenaudodami kanoninės `{type,source}` schemos.
+„67router“ nenaudodami kanoninės `{type,source}` schemos.
 
 Tekstui naudokite `jina-ai/jina-embeddings-v5-omni-small`. Nenukreipkite „Memorix“
-`base_url` į `https://api.jina.ai` — palikite „OmniRoute“ kaip vienintelį tarpinį mazgą.
+`base_url` į `https://api.jina.ai` — palikite „67router“ kaip vienintelį tarpinį mazgą.

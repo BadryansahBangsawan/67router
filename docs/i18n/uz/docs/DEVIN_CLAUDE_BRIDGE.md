@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` haqiqiy Claude Code bajarilish muhitiga OmniRoute’ning mahalliy Anthropic
+`devin-cli-agentic` haqiqiy Claude Code bajarilish muhitiga 67router’ning mahalliy Anthropic
 Messages so‘nggi nuqtasidan foydalanish imkonini beradi, ayni paytda rasmiy Devin CLI model
 javoblarini ACP stdio orqali taqdim etadi. U mavjud Anthropic, Claude OAuth, Claude Web yoki
 `devin-cli` provayderlarini o‘zgartirmaydi.
@@ -21,7 +21,7 @@ belgilangan, shu sababli vositalarni talab qiladigan kombinatsiyali marshrutlash
 > yakunladi; o‘sha yakuniy jonli ishga tushirish mijoz boshqaruvidagi `Read`, `Edit` va `Bash`
 > bosqichlarini, muvaffaqiyatli `npm test` natijalarini, loyiha buyruqlari va ko‘nikmalarining
 > aniqlanishini, faqat Devin orqali marshrutlashni hamda Claude tomon chiquvchi trafik yo‘qligini
-> tasdiqladi. Shundan so‘ng mahkamlangan versiya `2.1.258` ga ko‘tarildi (bu OmniRoute’ning Claude
+> tasdiqladi. Shundan so‘ng mahkamlangan versiya `2.1.258` ga ko‘tarildi (bu 67router’ning Claude
 > identifikatori o‘zini tanishtiradigan CLI avlodi va Fable 5.1 darajasini bevosita taqdim etadigan
 > birinchi liniyadir). Yangi mahkamlangan versiyada o‘rnatish qatlami va `claude --version`
 > mahkamlangan asosiy tasvirda tekshirildi, shuningdek ko‘prikning modul testlari, `compose config`
@@ -56,11 +56,11 @@ Parser har bir model bosqichida bitta alohida `<tool>{...}</tool>` konvertini qa
 nomni so‘rovdagi vositalar ro‘yxati bilan solishtiradi, argumentlarni o‘sha vositaning JSON
 Schema’siga muvofiq tekshiradi, bayon va amallar aralashmasini rad etadi hamda bitta
 chegaralangan tuzatishga ruxsat beradi. Keyin Claude Code hosil bo‘lgan Anthropic `tool_use`
-amalini mahalliy ravishda bajaradi va `tool_result` natijasini OmniRoute orqali qayta yuboradi.
+amalini mahalliy ravishda bajaradi va `tool_result` natijasini 67router orqali qayta yuboradi.
 
 ## Avtomatik marshrutlash
 
-Provayder bloklanmagan bo‘lsa, OmniRoute’ning `auto/*` nomzodlar to‘plamlarida qatnashishi
+Provayder bloklanmagan bo‘lsa, 67router’ning `auto/*` nomzodlar to‘plamlarida qatnashishi
 mumkin. Nomzod sifatida yaroqlilik tanlanishni kafolatlamaydi: kombinatsiyaning marshrutlash
 strategiyasi (masalan, oxirgi muvaffaqiyatli variant) boshqa provayderni afzal ko‘rishi mumkin.
 Har bir so‘rov Devin orqali o‘tishi talab qilinsa, `dva/<model>` yoki Devin’ni birinchi o‘ringa
@@ -73,16 +73,16 @@ taqiqlangan deb hisoblanadi. Compose xizmatlari:
 
 - faqat o‘qish uchun mo‘ljallangan ildiz fayl tizimi, olib tashlangan imkoniyatlar va
   `no-new-privileges` bilan UID/GID `10001:10001` sifatida ishlaydi;
-- shaxsiy `/home/bridge`, maxsus Claude konfiguratsiya jildi, izolyatsiyalangan OmniRoute ma’lumotlari
+- shaxsiy `/home/bridge`, maxsus Claude konfiguratsiya jildi, izolyatsiyalangan 67router ma’lumotlari
   va alohida `devin-auth` jildidan foydalanadi;
 - faqat bir martalik `.sandbox` ish maydonlari/dalillarini ulaydi;
 - xostning uy katalogi, Keychain, SSH, bulut hisob ma’lumotlari yoki Docker soketini ulamaydi;
 - muhitlarni aniq belgilangan holda yaratadi va Anthropic API/OAuth/marshrutlash o‘zgaruvchilarini olib tashlaydi;
 - Claude Code inferensiyasini faqat mahalliy kalit bilan `http://omniroute:20128` manziliga yo‘naltiradi.
 
-Oflayn profil ichki tarmoqdan foydalanadi. Jonli profilda OmniRoute rasmiy Devin
+Oflayn profil ichki tarmoqdan foydalanadi. Jonli profilda 67router rasmiy Devin
 so‘nggi nuqtalariga faqat `network-guard` orqali ulanadi; aloqador bo‘lmagan manzillar bloklanadi.
-Claude Code alohida, barcha tashqi trafikni bloklovchi himoyaga ega va `NO_PROXY` orqali faqat mahalliy OmniRoute
+Claude Code alohida, barcha tashqi trafikni bloklovchi himoyaga ega va `NO_PROXY` orqali faqat mahalliy 67router
 xizmatiga ulana oladi. Himoya auditi fayllari faqat tegishli himoya jarayoni tomonidan ulanadi.
 Skriptlar tokensiz dalillarni eksport qilishdan oldin fayl egasi, rejimi, havolalar soni va har bir qarorni
 tekshiradi.

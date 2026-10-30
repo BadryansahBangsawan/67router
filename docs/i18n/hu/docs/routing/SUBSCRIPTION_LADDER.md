@@ -10,7 +10,7 @@
 
 ## Miért létezik ez?
 
-Az OmniRoute már megválaszol két költségekkel kapcsolatos kérdést, de egyik sem az, amelyet a legtöbb üzemeltető feltesz.
+Az 67router már megválaszol két költségekkel kapcsolatos kérdést, de egyik sem az, amelyet a legtöbb üzemeltető feltesz.
 
 | Meglévő mechanizmus                                      | Ezt válaszolja meg                            |
 | -------------------------------------------------------- | --------------------------------------------- |

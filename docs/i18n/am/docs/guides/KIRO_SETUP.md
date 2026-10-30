@@ -4,7 +4,7 @@
 
 ---
 
-ይህ መመሪያ Kiro (በAWS የሚስተናገድ AI የኮድ ረዳት) መለያዎችን ወደ OmniRoute ማከልን፣
+ይህ መመሪያ Kiro (በAWS የሚስተናገድ AI የኮድ ረዳት) መለያዎችን ወደ 67router ማከልን፣
 በክፍለ-ጊዜ ግጭት ሳይኖር በርካታ መለያዎችን በአንድ ጊዜ ማስኬድ ላይ በማተኮር ይሸፍናል።
 
 ---
@@ -22,10 +22,10 @@
 
 ---
 
-## OmniRoute ይህን እንዴት እንደሚፈታው (v3.8.0+)
+## 67router ይህን እንዴት እንደሚፈታው (v3.8.0+)
 
-ከv3.8.0 ጀምሮ፣ OmniRoute በእያንዳንዱ የKiro ግንኙነት ማስመጣት ወቅት
-`registerClient()` (AWS SSO OIDC) ይጠራል። ይህ ለእያንዳንዱ የOmniRoute ግንኙነት የራሱን የተወሰነ የOIDC
+ከv3.8.0 ጀምሮ፣ 67router በእያንዳንዱ የKiro ግንኙነት ማስመጣት ወቅት
+`registerClient()` (AWS SSO OIDC) ይጠራል። ይህ ለእያንዳንዱ የ67router ግንኙነት የራሱን የተወሰነ የOIDC
 ደንበኛ ምዝገባ ይሰጣል። እያንዳንዱ የደንበኛ ምዝገባ ራሱን የቻለ ስለሆነ፣ አንድ መለያን ማደስ ወይም
 እንደገና ማረጋገጥ በማንኛውም ሌላ መለያ የማደሻ ቶከን ላይ ተጽዕኖ አያሳድርም።
 
@@ -59,7 +59,7 @@
 
 ### ቅድመ ሁኔታዎች
 
-- OmniRoute v3.8.0 ወይም ከዚያ በኋላ።
+- 67router v3.8.0 ወይም ከዚያ በኋላ።
 - የሚሰራ የKiro መለያ (ኢሜይል + የይለፍ ቃል፣ Google፣ ወይም GitHub መግቢያ)።
 - እንደ አማራጭ ሁለተኛ የKiro መለያ።
 
@@ -70,7 +70,7 @@
    - **ቶከን አስመጣ** — በ`aorAAAAAG` የሚጀምር የማደሻ ቶከን ይለጥፉ።
    - **API ቁልፍ** — የረጅም ጊዜ የKiro / CodeWhisperer API ቁልፍ ይለጥፉ።
    - **የGoogle / GitHub መግቢያ** — የOAuth ፍሰቱን በአሳሹ ውስጥ ያጠናቅቁ።
-   - **ራስ-ሰር ማስመጣት** — አዝራሩን ጠቅ ያድርጉ፤ OmniRoute ማረጋገጫዎችን ከአካባቢያዊው
+   - **ራስ-ሰር ማስመጣት** — አዝራሩን ጠቅ ያድርጉ፤ 67router ማረጋገጫዎችን ከአካባቢያዊው
      የkiro-cli የውሂብ ጎታ ወይም `~/.aws/sso/cache` ያነባል።
 3. ግንኙነቱ ይቀመጣል። የማደሻ-ቶከን ፍሰቶች የተወሰነ
    የOIDC ደንበኛን በራስ-ሰር ይመዘግባሉ። የAPI-ቁልፍ ፍሰቶች ቁልፉን በAWS ያረጋግጣሉ እና የማደሻ ቶከን አያከማቹም።
@@ -125,7 +125,7 @@ curl -X POST http://localhost:20128/api/oauth/kiro/import \
 2. **API ቁልፍ**ን ይምረጡ።
 3. የAPI ቁልፉን ይለጥፉ እና የAWS ክልሉን ይምረጡ፦ **በራስ-ሰር ለይ** (ነባሪ)፣ **የአሜሪካ ምሥራቅ
    (ሰሜናዊ ቨርጂኒያ)** ወይም **አውሮፓ (ፍራንክፈርት)**።
-4. OmniRoute ቁልፉን ያረጋግጣል እና ግንኙነቱን ቁልፉ በሚሠራበት ክልል ላይ አጣብቆ ያስቀምጣል።
+4. 67router ቁልፉን ያረጋግጣል እና ግንኙነቱን ቁልፉ በሚሠራበት ክልል ላይ አጣብቆ ያስቀምጣል።
 
 ### API
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/oauth/kiro/api-key \
 ## የOIDC ደንበኛ ጊዜ ማብቃት
 
 የAWS SSO OIDC የሕዝብ ደንበኞች በአብዛኛው ከ90 ቀናት በኋላ ጊዜያቸው ያበቃል
-(`clientSecretExpiresAt`)። OmniRoute ይህን የጊዜ ማህተም ለታዛቢነት በ`providerSpecificData`
+(`clientSecretExpiresAt`)። 67router ይህን የጊዜ ማህተም ለታዛቢነት በ`providerSpecificData`
 ውስጥ ያከማቻል። አንድ ግንኙነት ከ~90 ቀናት በኋላ መታደስ ካቆመ፣
 አዲስ የOIDC ደንበኛ ምዝገባ ለማግኘት ግንኙነቱን እንደገና ያስመጡ። ጊዜው ሲያበቃ በራስ-ሰር እንደገና መመዝገብ
 እንደ ወደፊት ማሻሻያ ተመዝግቧል።
@@ -192,7 +192,7 @@ curl -X POST http://localhost:20128/api/oauth/kiro/api-key \
 ### ማስመጣት በ"Token validation failed" ይከሽፋል
 
 - የrefresh token በ`aorAAAAAG` መጀመሩን ያረጋግጡ።
-- OmniRoute ወደ `https://oidc.us-east-1.amazonaws.com` (ወይም ወደ ተዋቀረው
+- 67router ወደ `https://oidc.us-east-1.amazonaws.com` (ወይም ወደ ተዋቀረው
   ክልል) መድረስ መቻሉን ያረጋግጡ። ከድርጅት proxy ጀርባ ከሆኑ፣
   በ**Dashboard → Settings → Proxies** ውስጥ የprovider ደረጃ proxy ያቀናብሩ።
 
@@ -200,7 +200,7 @@ curl -X POST http://localhost:20128/api/oauth/kiro/api-key \
 
 - ቁልፉ የKiro / CodeWhisperer API ቁልፍ እንጂ refresh token አለመሆኑን ያረጋግጡ።
 - የAWS ክልሉ ከቁልፉ/መለያው ጋር መዛመዱን ያረጋግጡ። `us-east-1` ነባሪው ነው።
-- ቁልፉ `ListAvailableProfiles`ን መጥራት መቻል አለበት፤ አለበለዚያ OmniRoute
+- ቁልፉ `ListAvailableProfiles`ን መጥራት መቻል አለበት፤ አለበለዚያ 67router
   አስፈላጊውን `profileArn` መፍታት አይችልም።
 
 ለሌሎች ችግሮች፣ ዋናውን [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) ይመልከቱ።

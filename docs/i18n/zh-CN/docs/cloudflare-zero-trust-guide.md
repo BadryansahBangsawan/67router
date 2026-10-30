@@ -4,11 +4,11 @@
 
 ---
 
-本指南记录了保护 **OmniRoute** 并将应用安全暴露到互联网的网络基础设施黄金标准，**无需开放任何端口（Zero Inbound）**。
+本指南记录了保护 **67router** 并将应用安全暴露到互联网的网络基础设施黄金标准，**无需开放任何端口（Zero Inbound）**。
 
 ## 您的虚拟机上做了什么？
 
-我们通过 PM2 以 **Split-Port** 模式启动了 OmniRoute：
+我们通过 PM2 以 **Split-Port** 模式启动了 67router：
 
 - **端口 `20128`：** 仅运行 **API** `/v1`。
 - **端口 `20129`：** 仅运行可视化管理 **Dashboard**。
@@ -25,7 +25,7 @@
 
 1. 访问您的 **Cloudflare Zero Trust** 面板（One.dash.cloudflare.com）。
 2. 在左侧菜单中，前往 **Networks > Tunnels**。
-3. 点击 **Add a Tunnel**，选择 **Cloudflared**，命名为 `OmniRoute-VM`。
+3. 点击 **Add a Tunnel**，选择 **Cloudflared**，命名为 `67router-VM`。
 4. 屏幕会生成一个名为 "Install and run a connector" 的命令。**您只需复制 Token（`--token` 后面的长字符串）**。
 5. 通过 SSH 登录您的虚拟机（或 Proxmox 终端），执行：
    ```bash
@@ -63,14 +63,14 @@
 
 1. 在 Zero Trust 面板中，前往 **Access > Applications > Add an application**。
 2. 选择 **Self-hosted**。
-3. 在 **Application name** 中，填入 `OmniRoute Panel`。
+3. 在 **Application name** 中，填入 `67router Panel`。
 4. 在 **Application domain** 中，填入 `omniroute.yourdomain.com`（与"路由 2"中设置的一致）。
 5. 点击 **Next**。
 6. 在 **Rule action** 中选择 `Allow`。在 Rule 名称中填入 `Admin Only`。
 7. 在 **Include** 中，"Selector" 选择 `Emails`，输入您的邮箱，例如 `admin@example.com`。
 8. 保存（`Add application`）。
 
-> **效果：** 如果您尝试打开 `omniroute.yourdomain.com`，将不再直接进入您的 OmniRoute 应用！而是跳转到一个精美的 Cloudflare 页面，要求输入邮箱地址。只有您（或您填写的邮箱）输入后，Outlook/Gmail 会收到一个 6 位临时验证码，验证通过后才会解除隧道限制，允许访问 `20129` 端口。
+> **效果：** 如果您尝试打开 `omniroute.yourdomain.com`，将不再直接进入您的 67router 应用！而是跳转到一个精美的 Cloudflare 页面，要求输入邮箱地址。只有您（或您填写的邮箱）输入后，Outlook/Gmail 会收到一个 6 位临时验证码，验证通过后才会解除隧道限制，允许访问 `20129` 端口。
 
 ---
 
@@ -81,7 +81,7 @@ Zero Trust Dashboard 不适用于 API 路由（`api.yourdomain.com`），因为�
 1. 访问 Cloudflare **常规面板**（dash.cloudflare.com），进入您的域名。
 2. 在左侧菜单中，前往 **Security > WAF > Rate limiting rules**。
 3. 点击 **Create rule**。
-4. **Name：** `Anti-Abuse OmniRoute API`
+4. **Name：** `Anti-Abuse 67router API`
 5. **If incoming requests match...**
    - Field 选择：`Hostname`
    - Operator：`equals`
@@ -100,7 +100,7 @@ Zero Trust Dashboard 不适用于 API 路由（`api.yourdomain.com`），因为�
 ## 完成
 
 1. 您的虚拟机 **没有任何端口暴露** 在 `/etc/ufw` 中。
-2. OmniRoute 仅通过 `cloudflared` 进行 HTTPS 出站通信，不直接接收来自外部的 TCP 连接。
+2. 67router 仅通过 `cloudflared` 进行 HTTPS 出站通信，不直接接收来自外部的 TCP 连接。
 3. 您的 OpenAI 请求已混淆处理，因为我们已全局配置通过 SOCKS5 代理发送（云端不关心 SOCKS5，因为流量是入站的）。
 4. 您的 Web 管理面板具有邮件两步验证。
 5. 您的 API 在边缘层受 Cloudflare 速率限制，且仅传输 Bearer Token。

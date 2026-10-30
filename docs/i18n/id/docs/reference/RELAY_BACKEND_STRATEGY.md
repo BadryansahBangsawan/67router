@@ -6,7 +6,7 @@
 
 ## Ringkasan
 
-OmniRoute kini mendukung tiga mode relai untuk `/api/v1/relay/chat/completions`:
+67router kini mendukung tiga mode relai untuk `/api/v1/relay/chat/completions`:
 
 - `ts`: Menggunakan relai TypeScript dalam proses.
 - `bifrost`: Memaksa penggunaan gateway Bifrost.
@@ -45,12 +45,12 @@ Jika saat ini Anda membandingkan 9router/CLIPROXYAPI:
 
 ## Kontrak batas backend
 
-Batas produk yang stabil adalah API relai OmniRoute, bukan implementasi dasbor. Dasbor Next.js dapat menginstal, mengonfigurasi, dan mengawasi layanan lokal, tetapi perutean permintaan harus masuk melalui API relai dan diserahkan di balik batas tersebut.
+Batas produk yang stabil adalah API relai 67router, bukan implementasi dasbor. Dasbor Next.js dapat menginstal, mengonfigurasi, dan mengawasi layanan lokal, tetapi perutean permintaan harus masuk melalui API relai dan diserahkan di balik batas tersebut.
 
 Pilihan backend jangka panjang:
 
 - Pertahankan relai TypeScript sebagai jalur kebijakan dan fallback dalam proses. Autentikasi, daftar yang diizinkan, normalisasi permintaan, pencatatan penggunaan, dan pemeriksaan keamanan tetap dilakukan di sini sebelum serah terima ke backend mana pun.
-- Gunakan Bifrost sebagai sidecar Tier-1 ber-throughput tinggi yang diutamakan ketika deployment memerlukan variansi perutean yang lebih rendah, rotasi penyedia terpusat, atau penskalaan horizontal di beberapa replika OmniRoute.
+- Gunakan Bifrost sebagai sidecar Tier-1 ber-throughput tinggi yang diutamakan ketika deployment memerlukan variansi perutean yang lebih rendah, rotasi penyedia terpusat, atau penskalaan horizontal di beberapa replika 67router.
 - Pertahankan 9router dan CLIPROXYAPI sebagai layanan kompatibilitas tertanam. Keduanya berjalan sebagai proses lokal yang diawasi dan berguna ketika perilaku penyedia/CLI mereka merupakan adaptor yang diinginkan, tetapi keduanya tidak boleh menjadi mesin perutean Tier-1 default.
 - Jangan izinkan dasbor meneruskan URL layanan arbitrer ke jalur utama. URL yang diberikan melalui UI merupakan input konfigurasi; kode perutean harus menetapkan backend yang terdaftar dan telah diperiksa kesehatannya dari pengaturan sisi server serta status supervisor.
 - Untuk saat ini, prioritaskan HTTP loopback bagi layanan yang diawasi karena proses terkelola tersebut sudah menyediakan API yang kompatibel dengan HTTP, penjaga rute dapat mengaudit batas tersebut, dan perilaku kegagalan/fallback terlihat dalam log permintaan. Transport SDK atau socket pada masa mendatang hanya layak ditambahkan jika dapat menurunkan latensi perutean p99 secara terukur tanpa melemahkan isolasi atau semantik fallback.

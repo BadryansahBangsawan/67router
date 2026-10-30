@@ -4,7 +4,7 @@
 
 ---
 
-Kada se OmniRoute izvodi unutar Dockera, zastarjeli postupci **Uvoz iz Cursor IDE-a** /
+Kada se 67router izvodi unutar Dockera, zastarjeli postupci **Uvoz iz Cursor IDE-a** /
 `cursor-agent` ne uspijevaju jer spremnik ne može vidjeti instalaciju Cursora na
 glavnom računalu. Umjesto toga upotrijebite **Prijavu putem Cursora** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ glavnom računalu. Umjesto toga upotrijebite **Prijavu putem Cursora** (deep-con
    `~/.config/Cursor/User/globalStorage/state.vscdb` _unutar_ spremnika.
    U Docker Desktopu za macOS baza podataka IDE-a s glavnog računala nije zadano montirana, a
    operacijski sustav spremnika jest Linux čak i kada je glavno računalo Darwin.
-2. **Nema binarne datoteke `cursor-agent`** — službene OmniRoute slike ne sadrže
+2. **Nema binarne datoteke `cursor-agent`** — službene 67router slike ne sadrže
    `cursor-agent`. Dostupni modeli prethodno su pokretali
    `cursor-agent --list-models` i, u slučaju neuspjeha, koristili statički katalog.
 3. **Pogrešna binarna datoteka** — **nemojte** bind-montirati macOS verziju programa `cursor-agent` u Linux
@@ -24,11 +24,11 @@ glavnom računalu. Umjesto toga upotrijebite **Prijavu putem Cursora** (deep-con
 
 1. Otvorite **Nadzorna ploča → Pružatelji usluga → Cursor**.
 2. Odaberite karticu **Prijava putem Cursora**.
-3. Kliknite **Prijava putem Cursora** — OmniRoute otvara
+3. Kliknite **Prijava putem Cursora** — 67router otvara
    `https://cursor.com/loginDeepControl?…` u pregledniku na vašem **glavnom računalu**.
-4. Odobrite prijavu u pregledniku, a zatim se vratite na nadzornu ploču. OmniRoute
+4. Odobrite prijavu u pregledniku, a zatim se vratite na nadzornu ploču. 67router
    periodički provjerava `api2.cursor.sh/auth/poll` dok tokeni ne stignu.
-5. OmniRoute pohranjuje tokene za **pristup + osvježavanje** i osvježava ih putem
+5. 67router pohranjuje tokene za **pristup + osvježavanje** i osvježava ih putem
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ovaj postupak ne zahtijeva Cursor IDE ni `cursor-agent` unutar spremnika.
@@ -37,10 +37,10 @@ Ovaj postupak ne zahtijeva Cursor IDE ni `cursor-agent` unutar spremnika.
 
 Uz prijavljenu vezu, **Dostupni modeli / Automatska sinkronizacija** daju prednost Cursorovu
 HTTP katalogu `AiService/AvailableModels` koristeći bearer token veze.
-Ako to ne uspije, OmniRoute i dalje pokušava upotrijebiti `cursor-agent` glavnog računala (kada je dostupan), a zatim
+Ako to ne uspije, 67router i dalje pokušava upotrijebiti `cursor-agent` glavnog računala (kada je dostupan), a zatim
 početne podatke statičkog registra.
 
-OmniRoute u katalogu uvijek izlaže **`auto`** (prikaz „Automatski”), kao i
+67router u katalogu uvijek izlaže **`auto`** (prikaz „Automatski”), kao i
 načine usmjerivača u stilu OpenCodexa **`auto-cost`**, **`auto-balance`** i
 **`auto-intelligence`**. Pri prijenosu se oni mapiraju na Cursorov model `default`
 (s `optimization` parametrom ModelParameter za tri varijante). Dajte prednost
@@ -87,7 +87,7 @@ više nije potreban).
 ## Prazni odgovori / iskorištena kvota
 
 Kada Cursor prihvati pokretanje, ali ne vrati tekst asistenta (što je uobičajeno kada je premium
-kvota iscrpljena), OmniRoute prikazuje koristan odgovor **429** (naznake vezane uz kvotu) ili
+kvota iscrpljena), 67router prikazuje koristan odgovor **429** (naznake vezane uz kvotu) ili
 **502** sa smjernicama — umjesto same poruke „Pružatelj usluga vratio je prazan sadržaj”. Pogreške
 strujanja kao što je `not_found: AI Model Not Found` (iscrpljeno razdoblje upotrebe)
 klasificiraju se kao **prekoračenje Cursorova ograničenja brzine / upotrebe** i zadržavaju tu poruku
@@ -97,7 +97,7 @@ ograničenja Cursorova plana.
 
 ## Verzija klijenta (bez grafičkog sučelja)
 
-Bez lokalne instalacije programa `cursor-agent`, OmniRoute određuje
+Bez lokalne instalacije programa `cursor-agent`, 67router određuje
 `x-cursor-client-version` putem varijable okruženja `CURSOR_AGENT_CLI_VERSION`, zatim iz predmemoriranog na disku
 dohvaćanja Cursorove instalacijske skripte, a potom iz fiksiranog ID-a međuverzije. Prema potrebi
 postavite vlastitu vrijednost putem `CURSOR_AGENT_CLI_VERSION`.

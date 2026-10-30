@@ -7,7 +7,7 @@
 > **Nguồn đáng tin cậy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Cập nhật lần cuối:** 2026-09-22 — các không gian tên phạm vi trỏ đến MCP-SERVER.md
 
-OmniRoute có một quy trình ủy quyền nhận biết tuyến đường, kiểm soát mọi yêu cầu API. Phân loại là **xác định** và **đóng khi lỗi** — bất cứ thứ gì không thể phân loại sẽ được xếp vào loại `MANAGEMENT` và yêu cầu một phiên hoặc mã thông báo cấp quản lý. Trang này giải thích mô hình cho các kỹ sư duy trì các tuyến đường hoặc thiết kế các điểm cuối mới.
+67router có một quy trình ủy quyền nhận biết tuyến đường, kiểm soát mọi yêu cầu API. Phân loại là **xác định** và **đóng khi lỗi** — bất cứ thứ gì không thể phân loại sẽ được xếp vào loại `MANAGEMENT` và yêu cầu một phiên hoặc mã thông báo cấp quản lý. Trang này giải thích mô hình cho các kỹ sư duy trì các tuyến đường hoặc thiết kế các điểm cuối mới.
 
 ![Quy trình AuthZ (3 lớp tuyến đường + đánh giá chính sách)](../diagrams/exported/authz-pipeline.svg)
 

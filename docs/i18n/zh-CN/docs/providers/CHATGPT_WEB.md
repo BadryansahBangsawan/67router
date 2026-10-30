@@ -26,11 +26,11 @@
 1. 打开 **ChatGPT Web (Codex)** 提供者并添加连接。
 2. 粘贴完整的 ChatGPT Cookie 标头、隧道 ID、运行时密钥和自定义连接器
    名称。支持新工具的设置必须使用新创建且名称完全为
-   `OmniRoute Codex v2` 的连接器，将 Authentication 设置为 None，并将 Permissions 设置为 Allow all
+   `67router Codex v2` 的连接器，将 Authentication 设置为 None，并将 Permissions 设置为 Allow all
    actions。
-3. 运行连接检查。OmniRoute 会打开一个由浏览器支持的 Temporary Chat，并检测
+3. 运行连接检查。67router 会打开一个由浏览器支持的 Temporary Chat，并检测
    该账户是否可以使用 Sol 和 Pro。
-4. 保存连接。OmniRoute 会将粘贴的 Cookie 替换为经过验证的
+4. 保存连接。67router 会将粘贴的 Cookie 替换为经过验证的
    Playwright 存储状态，并通过加密凭据抽象层将其与运行时密钥一起存储。
 
 成功保存后，原始 Cookie 不会被保留。会话过期时，请打开
@@ -58,7 +58,7 @@
 
 Free/Go 账户提供 Luna 路由。具备 Sol 能力的账户提供从 Instant 到 High 的路由，而具备 Pro 能力的账户还会提供 Extra High 和 Pro。每个路由都有固定的后端模型和推理强度；如果显式指定的 Responses 推理强度与其冲突，请求将关闭并失败，而不会静默更改所选的浏览器模式。
 
-请勿重命名或重复使用旧的 `Codex Native` 或 `OmniRoute Codex` 连接器。ChatGPT 会根据连接器身份缓存公共 MCP 合约，而更新后的桥接器使用新的直接交互轮次令牌合约。运行时会拒绝这些旧身份，并要求使用新的 `OmniRoute Codex v2` 连接器。
+请勿重命名或重复使用旧的 `Codex Native` 或 `67router Codex` 连接器。ChatGPT 会根据连接器身份缓存公共 MCP 合约，而更新后的桥接器使用新的直接交互轮次令牌合约。运行时会拒绝这些旧身份，并要求使用新的 `67router Codex v2` 连接器。
 
 ## 安全模型
 
@@ -71,18 +71,18 @@ Free/Go 账户提供 Luna 路由。具备 Sol 能力的账户提供从 Instant �
 
 ## 无显示器的 VPS 和 Docker
 
-对于 npm、systemd 和 PM2 安装，OmniRoute 会检测常见的 Chrome 和 Chromium 路径。
+对于 npm、systemd 和 PM2 安装，67router 会检测常见的 Chrome 和 Chromium 路径。
 或者，也可以设置 `CHATGPT_WEB_CODEX_CHROME_PATH`。运行时轮次会特意使用有界面的
 Chrome，因为 ChatGPT 会拒绝真正的无头浏览器形态。因此，无显示器主机必须通过私有
-Xvfb 显示运行 OmniRoute；仅设置 Chrome 路径并不能提供显示环境。
+Xvfb 显示运行 67router；仅设置 Chrome 路径并不能提供显示环境。
 
 Docker `web` 配置文件会在内部 Compose 网络上启动 `chatgpt-web-codex-browser`。
 该边车容器在 Xvfb 内运行有界面的 Chrome，因此不需要物理显示器。其 CDP
-端口不会发布到主机。受保护的浏览器配置文件卷与 OmniRoute 数据卷相互独立，
+端口不会发布到主机。受保护的浏览器配置文件卷与 67router 数据卷相互独立，
 并且浏览器会获得足够的共享内存。内部 CDP 代理仅侦听 Compose 网络内的端口
 `9223`；Chrome 在边车容器中仍仅绑定到回环地址。
 
-`DATA_DIR` 下的监督器租约可防止多个 OmniRoute 进程同时持有相同的隧道和代理状态。
+`DATA_DIR` 下的监督器租约可防止多个 67router 进程同时持有相同的隧道和代理状态。
 doctor 会报告冲突。
 
 ## 交互式恢复

@@ -15,9 +15,9 @@ Bu ADR, katkıda bulunanların mimari açıdan farklı iki kavramı birbirine ka
 Bir motorun rolü, kayıt defterinin `RouterBackendDefinition` yapısında birlikte kodlanan **iki bağımsız eksenle** tanımlanır:
 
 1. **Yaşam döngüsü** (`RouterBackendLifecycle`) — _motorun nasıl çalıştığı_:
-   - `in-process` — OmniRoute Node işleminin içinde çalışır (yerel TS işlem hattı).
-   - `supervised` — OmniRoute'un `ServiceSupervisor` aracılığıyla kurduğu/başlattığı/durdurduğu/sağlık kontrolünü yaptığı ve ardından sağlayıcı bağlantısı olarak kullandığı yerel bir alt işlemdir.
-   - `external` — OmniRoute'un istek gönderdiği ancak **yönetmediği** bir HTTP uç noktasıdır
+   - `in-process` — 67router Node işleminin içinde çalışır (yerel TS işlem hattı).
+   - `supervised` — 67router'un `ServiceSupervisor` aracılığıyla kurduğu/başlattığı/durdurduğu/sağlık kontrolünü yaptığı ve ardından sağlayıcı bağlantısı olarak kullandığı yerel bir alt işlemdir.
+   - `external` — 67router'un istek gönderdiği ancak **yönetmediği** bir HTTP uç noktasıdır
      (bir ortam değişkeni taban URL'siyle yapılandırılır).
    - `disabled` — kayıtlıdır ancak seçilemez.
 2. **Seçim ekseni** (aktarıcı yönlendirme arka ucu) — _aktarıcının ona istek gönderip göndermediği_:

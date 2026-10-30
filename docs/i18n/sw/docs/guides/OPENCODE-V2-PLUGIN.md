@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` huweka katalogi yako yote ya OmniRoute — modeli, michanganyiko na
+`@omniroute/opencode-plugin-v2` huweka katalogi yako yote ya 67router — modeli, michanganyiko na
 michanganyiko otomatiki — kwenye kiteua modeli cha OpenCode v2, pamoja na majina ya kuonyesha, bei na
 viwango vya matumizi bila malipo.
 
@@ -15,7 +15,7 @@ kinachoshirikiwa kati yake, kwa hivyo kusasisha moja hakulazimishi kamwe kusasis
 ## Mahitaji
 
 - OpenCode v2.
-- Lango la OmniRoute linalofikika (`http://localhost:20128` kwa chaguo-msingi).
+- Lango la 67router linalofikika (`http://localhost:20128` kwa chaguo-msingi).
 - Node.js 22 au 24.
 
 ## Usakinishaji
@@ -78,7 +78,7 @@ ikitaja ncha ya huduma na kilichopotea — kwa hivyo kiteua kilichodhoofika haki
 | `baseURL`                        | inahitajika                                               | Mzizi wa lango, `http(s)` pekee; kiambishi tamati cha `/v1` huongezwa panapohitajika                                                                 |
 | `apiKey`                         | kitambulisho kilichounganishwa, kisha `OMNIROUTE_API_KEY` | Ufunguo wa gumzo wa `/v1/*`                                                                                                                          |
 | `managementReadToken`            | hutumia `apiKey` ikiwa haijawekwa                         | Ufunguo wa `/api/*` — kwa kawaida **si** uleule                                                                                                      |
-| `displayName`                    | `"OmniRoute"`                                             | Jina la mtoa huduma katika kiteuzi                                                                                                                   |
+| `displayName`                    | `"67router"`                                              | Jina la mtoa huduma katika kiteuzi                                                                                                                   |
 | `timeoutMs`                      | `10000`                                                   | Muda wa kusubiri wa uletaji kwa kila endpoint (michanganyiko ya kiotomatiki hutumia sekunde 5)                                                       |
 | `modelCacheTtlMs`                | `300000`                                                  | TTL ya akiba ya katalogi; taswira ya diski huharakisha uanzishaji baridi                                                                             |
 | `timeouts`                       | hutumia `timeoutMs` ikiwa haijawekwa                      | Vikomo vya muda kwa kila endpoint katika ms: `models`, `combos`, `autoCombos`, `enrichment`                                                          |
@@ -116,7 +116,7 @@ Weka `"geminiSanitization": false` ili kukizima.
 
 | Dalili                                                          | Sababu                                                                                                                                                        |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kiteuzi hakionyeshi modeli yoyote ya OmniRoute                  | Hakuna ufunguo uliopatikana (angalia onyo la wakati wa kuanza), au lango halifikiki                                                                           |
+| Kiteuzi hakionyeshi modeli yoyote ya 67router                   | Hakuna ufunguo uliopatikana (angalia onyo la wakati wa kuanza), au lango halifikiki                                                                           |
 | Vitambulisho ghafi vya modeli, hakuna michanganyiko, hakuna bei | Miisho ya usimamizi ilikataa tokeni — weka `managementReadToken`                                                                                              |
 | Katalogi ya `freeOnly` ni fupi au tupu                          | Hakuna tokeni ya usimamizi au tokeni ilikataliwa — soma mstari wa muhtasari wa uonyeshaji upya (idadi ya `unmatched-free`) kwenye kumbukumbu ya seva pangishi |
 | Kipindi kimefungwa kwa `opencode-<id>/…`                        | Programu-jalizi ya v1 ilichapisha `opencode-<id>`; v2 huchapisha `<id>` moja kwa moja, kwa hivyo chagua tena modeli chini ya `<id>/…`                         |

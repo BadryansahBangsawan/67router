@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Kiswahili)
+# 🌐 67router Proxy Guide (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Pita vizuizi vya kijiografia, linda utambulisho wako, na pitisha trafiki ya AI kupitia proksi yoyote — bila utata wowote wa usanidi.**
 
-OmniRoute inajumuisha mfumo kamili wa usimamizi wa proksi unaokuwezesha kupitisha trafiki ya watoa huduma wa AI wa upande wa juu kupitia proksi za HTTP, HTTPS, au SOCKS5. Iwe uko katika eneo lililozuiwa, unahitaji ubadilishaji wa IP, au unataka ufichaji wa alama za utambulisho — mwongozo huu unashughulikia kila kitu.
+67router inajumuisha mfumo kamili wa usimamizi wa proksi unaokuwezesha kupitisha trafiki ya watoa huduma wa AI wa upande wa juu kupitia proksi za HTTP, HTTPS, au SOCKS5. Iwe uko katika eneo lililozuiwa, unahitaji ubadilishaji wa IP, au unataka ufichaji wa alama za utambulisho — mwongozo huu unashughulikia kila kitu.
 
 ---
 
@@ -51,7 +51,7 @@ Hata nje ya maeneo yaliyozuiwa, proksi zinafaa kwa:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Seva ya OmniRoute                       │
+│                       Seva ya 67router                       │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Rejista ya  │    │ Kisambazaji  │    │ Uchotaji         │  │
@@ -84,7 +84,7 @@ Hata nje ya maeneo yaliyozuiwa, proksi zinafaa kwa:
 
 ## Mfumo wa Proksi wa Ngazi 4
 
-OmniRoute inasaidia usanidi wa proksi katika **mawanda manne huru**, yanayotatuliwa kulingana na mpangilio wa kipaumbele:
+67router inasaidia usanidi wa proksi katika **mawanda manne huru**, yanayotatuliwa kulingana na mpangilio wa kipaumbele:
 
 ```
 Mpangilio wa Utatuzi wa Kipaumbele (cha juu zaidi → cha chini zaidi):
@@ -97,7 +97,7 @@ Mpangilio wa Utatuzi wa Kipaumbele (cha juu zaidi → cha chini zaidi):
 
 ### Jinsi Utatuzi Unavyofanya Kazi
 
-OmniRoute inapotuma ombi kwa mtoa huduma wa nje, huita `resolveProxyForConnectionFromRegistry()` ambayo hukagua kila ngazi kwa mpangilio:
+67router inapotuma ombi kwa mtoa huduma wa nje, huita `resolveProxyForConnectionFromRegistry()` ambayo hukagua kila ngazi kwa mpangilio:
 
 1. **Ngazi ya akaunti** — Je, kuna proksi iliyokabidhiwa kwa kitambulisho hiki mahususi cha muunganisho?
 2. **Ngazi ya mtoa huduma** — Je, kuna proksi iliyokabidhiwa kwa mtoa huduma huyu (k.m., `openai`)?
@@ -239,7 +239,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Uingizaji/Uhamishaji
 
-Proksi zinajumuishwa katika mfumo wa **Hifadhi Nakala/Rejesha**. Unapohamisha usanidi wako wa OmniRoute:
+Proksi zinajumuishwa katika mfumo wa **Hifadhi Nakala/Rejesha**. Unapohamisha usanidi wako wa 67router:
 
 1. Nenda kwenye **Dashibodi → Mipangilio → Hifadhi Nakala**
 2. Bofya **Hamisha** — sajili ya proksi na makabidhiano yanajumuishwa
@@ -249,7 +249,7 @@ Sajili ya proksi pia inasaidia **upsert kwa host+port** — ukiingiza proksi amb
 
 ### Uhamishaji kutoka Mfumo wa Zamani
 
-Ikiwa ulisanidi proksi katika toleo la zamani (kabla ya registry), OmniRoute huzihamisha kiotomatiki:
+Ikiwa ulisanidi proksi katika toleo la zamani (kabla ya registry), 67router huzihamisha kiotomatiki:
 
 ```
 Hifadhi ya zamani ya key_value → proxy_registry + proxy_assignments
@@ -263,7 +263,7 @@ Hili hutokea mara moja wakati wa uanzishaji wa kwanza baada ya kusasisha. Tumia 
 
 > 🆕 **Imechangiwa na [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Suala [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute huunganishwa na jukwaa la jumuiya la **[1proxy](https://1proxy-api.aitradepulse.com)** ili kutoa ufikiaji wa **mamia ya proksi zisizolipishwa na zilizothibitishwa** kutoka kote ulimwenguni. Hii ni bora kwa watumiaji ambao hawana miundombinu yao wenyewe ya proksi.
+67router huunganishwa na jukwaa la jumuiya la **[1proxy](https://1proxy-api.aitradepulse.com)** ili kutoa ufikiaji wa **mamia ya proksi zisizolipishwa na zilizothibitishwa** kutoka kote ulimwenguni. Hii ni bora kwa watumiaji ambao hawana miundombinu yao wenyewe ya proksi.
 
 ### Jinsi Inavyofanya Kazi
 
@@ -275,7 +275,7 @@ OmniRoute huunganishwa na jukwaa la jumuiya la **[1proxy](https://1proxy-api.ait
 └─────────────┘                └─────────────────┘              └──────────┘
 ```
 
-1. **Usawazishaji** — OmniRoute hupakua proksi zilizothibitishwa kutoka API ya 1proxy
+1. **Usawazishaji** — 67router hupakua proksi zilizothibitishwa kutoka API ya 1proxy
 2. **Uhifadhi** — Proksi huhifadhiwa kwenye jedwali lilelile la `proxy_registry` zikiwa na `source = 'oneproxy'`
 3. **Uchujaji** — Chuja kulingana na itifaki, nchi na alama ya ubora
 4. **Mzunguko** — Chagua proksi bora kwa kutumia mikakati ya ubora, nasibu au mfuatano
@@ -375,7 +375,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Kuzuia Utambuzi na Kuficha Utambulisho
 
-OmniRoute haipitishi tu trafiki kupitia proksi — huifanya trafiki ionekane halali:
+67router haipitishi tu trafiki kupitia proksi — huifanya trafiki ionekane halali:
 
 ### Uigaji wa Alama ya Utambulisho ya TLS
 
@@ -409,13 +409,13 @@ Beji pia huonyesha IP ya proksi iliyotambuliwa kwa ajili ya uthibitishaji.
 
 ## Modi za Proksi ya Juu
 
-Kwa watoa huduma wanaotumia muundo wa CLIProxyAPI, OmniRoute inasaidia modi tatu za proksi ya juu:
+Kwa watoa huduma wanaotumia muundo wa CLIProxyAPI, 67router inasaidia modi tatu za proksi ya juu:
 
-| Modi          | Maelezo                                                                         |
-| ------------- | ------------------------------------------------------------------------------- |
-| `native`      | OmniRoute hushughulikia moja kwa moja upitishaji kupitia proksi (chaguo-msingi) |
-| `cliproxyapi` | Hukabidhi jukumu kwa instansi ya nje ya CLIProxyAPI                             |
-| `fallback`    | Hujaribu modi asilia kwanza, kisha hutumia CLIProxyAPI ikishindikana            |
+| Modi          | Maelezo                                                                        |
+| ------------- | ------------------------------------------------------------------------------ |
+| `native`      | 67router hushughulikia moja kwa moja upitishaji kupitia proksi (chaguo-msingi) |
+| `cliproxyapi` | Hukabidhi jukumu kwa instansi ya nje ya CLIProxyAPI                            |
+| `fallback`    | Hujaribu modi asilia kwanza, kisha hutumia CLIProxyAPI ikishindikana           |
 
 Sanidi kwa kila mtoa huduma:
 
@@ -478,7 +478,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API ya Tunnels
 
-Kwa kuweka instansi yako ya OmniRoute wazi kwenye intaneti ya umma (Cloudflare/ngrok/Tailscale) badala ya kuelekeza trafiki ya kutoka kupitia proksi, angalia [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API ya REST ya tunnel inapatikana chini ya `/api/tunnels/{cloudflared,ngrok,tailscale}/*` na inajitegemea kutoka kwenye mnyororo wa proksi ya trafiki inayotoka uliofafanuliwa hapo juu.
+Kwa kuweka instansi yako ya 67router wazi kwenye intaneti ya umma (Cloudflare/ngrok/Tailscale) badala ya kuelekeza trafiki ya kutoka kupitia proksi, angalia [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API ya REST ya tunnel inapatikana chini ya `/api/tunnels/{cloudflared,ngrok,tailscale}/*` na inajitegemea kutoka kwenye mnyororo wa proksi ya trafiki inayotoka uliofafanuliwa hapo juu.
 
 ### API ya 1proxy
 
@@ -518,7 +518,7 @@ Weka `ENABLE_SOCKS5_PROXY=true` katika faili yako ya `.env` kisha uanzishe upya.
 
 ### Hitilafu za "socket hang up" kupitia proksi
 
-Hili ni jambo la kawaida kwa proksi za bei nafuu ambazo hukata miunganisho isiyotumika. OmniRoute tayari hushughulikia hili kwa:
+Hili ni jambo la kawaida kwa proksi za bei nafuu ambazo hukata miunganisho isiyotumika. 67router tayari hushughulikia hili kwa:
 
 - Kuzima keep-alive kwenye miunganisho ya proksi (`keepAliveTimeout: 1`)
 - Kuzima pipelining (`pipelining: 0`)
@@ -528,7 +528,7 @@ Ikiwa tatizo litaendelea, jaribu proksi tofauti au utumie kipengele cha kubadili
 
 ### "unsupported_country_region_territory" wakati wa OAuth
 
-Hakikisha proksi imesanidiwa **kabla** ya kuanzisha mtiririko wa OAuth. OmniRoute hupitisha ubadilishanaji wa tokeni za OAuth kupitia proksi iliyosanidiwa. Weka kwanza proksi ya kimataifa au ya kiwango cha mtoa huduma, kisha unganisha.
+Hakikisha proksi imesanidiwa **kabla** ya kuanzisha mtiririko wa OAuth. 67router hupitisha ubadilishanaji wa tokeni za OAuth kupitia proksi iliyosanidiwa. Weka kwanza proksi ya kimataifa au ya kiwango cha mtoa huduma, kisha unganisha.
 
 ### Proksi haitumiki
 
@@ -596,7 +596,7 @@ CREATE TABLE proxy_assignments (
 
 ## Ukaguzi wa Afya ya Proksi (v3.8.16+)
 
-Utaratibu wa **kushindwa haraka kwa proksi** wa OmniRoute (`src/lib/proxyHealth.ts`) hutambua proksi zisizofanya kazi ndani ya <2s kupitia ukaguzi wa haraka wa muunganisho wa TCP, kisha **huhifadhi matokeo kwenye akiba** ili kuepuka gharama ya ziada kwa kila ombi.
+Utaratibu wa **kushindwa haraka kwa proksi** wa 67router (`src/lib/proxyHealth.ts`) hutambua proksi zisizofanya kazi ndani ya <2s kupitia ukaguzi wa haraka wa muunganisho wa TCP, kisha **huhifadhi matokeo kwenye akiba** ili kuepuka gharama ya ziada kwa kila ombi.
 
 ### Jinsi Unavyofanya Kazi
 
@@ -661,11 +661,11 @@ Porti maalum katika URL (`http://host:9999`) hupewa kipaumbele kila wakati kulik
 
 ## Uchanganuzi na Uangalizi wa Proksi
 
-OmniRoute hufuatilia matumizi ya kila proksi ili kuwasaidia waendeshaji kutambua mifumo ya uelekezaji, ongezeko la ghafla la ucheleweshaji, na hitilafu zinazojirudia.
+67router hufuatilia matumizi ya kila proksi ili kuwasaidia waendeshaji kutambua mifumo ya uelekezaji, ongezeko la ghafla la ucheleweshaji, na hitilafu zinazojirudia.
 
 ### Kinachofuatiliwa
 
-Kwa kila ombi linalopitia proksi iliyosanidiwa, OmniRoute hurekodi:
+Kwa kila ombi linalopitia proksi iliyosanidiwa, 67router hurekodi:
 
 | Kipimo       | Maelezo                                                                       |
 | ------------ | ----------------------------------------------------------------------------- |
@@ -727,7 +727,7 @@ ORDER BY latency_ms DESC;
 
 ## Mti wa Maamuzi wa Mkakati wa Mzunguko
 
-Proksi nyingi zinapowekwa kwenye mawanda fulani, OmniRoute hutumia **mkakati wa mzunguko** kuchagua proksi ya kutumia kwa kila ombi. Mkakati husanidiwa katika kiwango cha mawanda (kimataifa, kwa kila mtoa huduma, kwa kila akaunti, kwa kila mchanganyiko).
+Proksi nyingi zinapowekwa kwenye mawanda fulani, 67router hutumia **mkakati wa mzunguko** kuchagua proksi ya kutumia kwa kila ombi. Mkakati husanidiwa katika kiwango cha mawanda (kimataifa, kwa kila mtoa huduma, kwa kila akaunti, kwa kila mchanganyiko).
 
 ### Mikakati Inayopatikana
 

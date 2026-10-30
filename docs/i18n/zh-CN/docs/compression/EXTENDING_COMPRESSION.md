@@ -4,7 +4,7 @@
 
 ---
 
-> **简而言之**：OmniRoute 的压缩引擎是**可插拔的**——你可以注册自定义引擎、为新语言提供语言包，并组合堆叠式管道。本指南将介绍具体方法。
+> **简而言之**：67router 的压缩引擎是**可插拔的**——你可以注册自定义引擎、为新语言提供语言包，并组合堆叠式管道。本指南将介绍具体方法。
 
 **相关指南：**
 
@@ -231,7 +231,7 @@ export default definePlugin({
 
 ## 创建语言包
 
-穴居人风格压缩使用**特定语言的规则包**来处理每种自然语言中的填充词、委婉表达和冗长模式。OmniRoute 内置 **6 个语言包**：`en`、`es`、`fr`、`de`、`ja`、`pt-BR`。
+穴居人风格压缩使用**特定语言的规则包**来处理每种自然语言中的填充词、委婉表达和冗长模式。67router 内置 **6 个语言包**：`en`、`es`、`fr`、`de`、`ja`、`pt-BR`。
 
 ### 语言包结构
 
@@ -387,7 +387,7 @@ await loadRulePack("./my-custom-rules/hi/filler.json");
 
 ### 压缩模式
 
-OmniRoute 会根据配置、自动触发阈值和组合覆盖，为每个请求选择**一种模式**。
+67router 会根据配置、自动触发阈值和组合覆盖，为每个请求选择**一种模式**。
 可用模式定义在 `open-sse/services/compression/types.ts` 中（类型为 `CompressionMode`）：
 
 | 模式         | 引擎                 | 使用场景                                                                                                                                             |
@@ -504,10 +504,10 @@ const result = applyStackedCompression(body, [
 
 ## 上游同步策略
 
-OmniRoute 的压缩引擎在 README 中注明了对多个上游项目的致谢
+67router 的压缩引擎在 README 中注明了对多个上游项目的致谢
 （“灵感来自 RTK、Caveman、LLMLingua-2、Troglodita”）。贡献者经常提出的一个
 问题是：**当上游 RTK 添加新的工具过滤器，或 Caveman 添加规则包时，这些改进
-如何进入 OmniRoute？** 本节给出了权威答案。
+如何进入 67router？** 本节给出了权威答案。
 
 ### 内置副本与独立实现
 
@@ -526,7 +526,7 @@ OmniRoute 的压缩引擎在 README 中注明了对多个上游项目的致谢
 
 我们**没有自动跟踪上游版本发布，也没有 `compression-sync`
 标签**——这是有意为之。由于这些引擎是重新实现的，因此上游 RTK
-过滤器或 Caveman 规则包不会以代码形式直接合并；相反，它会**使用 OmniRoute
+过滤器或 Caveman 规则包不会以代码形式直接合并；相反，它会**使用 67router
 自己的格式重新表达为新规则/过滤器**（请参阅
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)），然后通过普通 PR
 按需引入。上述扩展点（自定义引擎、语言包、RTK 过滤器）是贡献此类改进的官方方式。
@@ -540,13 +540,13 @@ OmniRoute 的压缩引擎在 README 中注明了对多个上游项目的致谢
 ### Headroom（输入压缩代理）
 
 Headroom **完全由内部实现**——由固定版本的内置 `gcf` 编解码器快照，以及
-OmniRoute 自有的 `smartcrusher` / `toon` / `tabular` 层组成。除内置副本外，
+67router 自有的 `smartcrusher` / `toon` / `tabular` 层组成。除内置副本外，
 没有需要持续跟踪的上游；当编解码器发生变化时，会手动更新 `gcf`，并针对压缩预算
 门禁（`check:compression-budget`）重新进行验证。
 
 ### 提议一项受上游启发的改进
 
-1. **不要内置源代码**——请使用 OmniRoute 的格式重新表达上游规则/过滤器。
+1. **不要内置源代码**——请使用 67router 的格式重新表达上游规则/过滤器。
 2. 通过下方对应的扩展点添加它（语言包、RTK 过滤器或自定义引擎）。
 3. 在 PR 描述中引用上游项目（署名），不要复制其带有许可证的源代码。
 4. 包含测试，并确认 `check:compression-budget` 门禁仍能通过。

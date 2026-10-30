@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publie des artefacts npm + Docker. Ces contrôles fournissent la provenance,
+67router publie des artefacts npm + Docker. Ces contrôles fournissent la provenance,
 l’inventaire (SBOM) et l’analyse des CVE, entièrement basés sur des logiciels libres et intégrés aux workflows de publication.
 Posture **d’abord consultative** — ils produisent actuellement des rapports et deviendront bloquants après la 1re
 publication réussie.
@@ -65,7 +65,7 @@ Conformément à la branche « aucune correction en amont » de la procédure de
   npm-latest actuelle de `@openai/codex-security` (`0.1.29`) dépend toujours de `extract-zip@2.0.1`.
 - **Inaccessible depuis la production.** `promptfoo` est uniquement une devDependency (jamais répertoriée
   sous `dependencies`), et aucun fichier sous `src/`, `open-sse/` ou `bin/` n’importe le
-  paquet npm `extract-zip` — la fonction auxiliaire `extractZip()` propre à OmniRoute
+  paquet npm `extract-zip` — la fonction auxiliaire `extractZip()` propre à 67router
   (`src/lib/versionManager/binaryManager.ts:93`) exécute les outils natifs `unzip`/`tar`
   dans un shell et n’a aucun lien avec ce paquet. `@openai/codex-security` fournit également sa propre protection
   contre la traversée par liens symboliques en complément du callback onEntry d’extract-zip.

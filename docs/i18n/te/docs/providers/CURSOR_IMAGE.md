@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, చాట్కు ఉపయోగించే అదే provider id అయిన `cursor` (alias `cu`) ద్వారా `POST /v1/images/generations` వద్ద Cursor ప్లాన్ **చిత్ర సృష్టి**ని అందుబాటులో ఉంచుతుంది.
+67router, చాట్కు ఉపయోగించే అదే provider id అయిన `cursor` (alias `cu`) ద్వారా `POST /v1/images/generations` వద్ద Cursor ప్లాన్ **చిత్ర సృష్టి**ని అందుబాటులో ఉంచుతుంది.
 
 | ఫీల్డ్               | విలువ                                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute, చాట్కు ఉపయోగించే అదే provider id 
 
 ## Agent CLI ఎందుకు
 
-OmniRouteలో Cursor చాట్ `agent.v1.AgentService/Run` (protobuf)ను ఉపయోగిస్తుంది. ఆ మార్గం అంతర్నిర్మిత క్లయింట్ సాధనాలను (shell, write, …) **తిరస్కరిస్తుంది**. చిత్ర సృష్టి అనేది seatకు వ్యతిరేకంగా **`agent` CLI** ద్వారా అమలు చేయబడే Cursor-స్థానిక సాధనం. అందువల్ల చిత్ర హ్యాండ్లర్, లాక్ చేసిన ప్రాంప్ట్ మరియు ప్రతి అభ్యర్థనకు ప్రత్యేకమైన తాత్కాలిక workspaceతో `agent`ను ప్రారంభిస్తుంది (community seat bridges మాదిరిగానే), ఆపై OpenAIకు అనుకూలమైన `b64_json`ను అందిస్తుంది.
+67routerలో Cursor చాట్ `agent.v1.AgentService/Run` (protobuf)ను ఉపయోగిస్తుంది. ఆ మార్గం అంతర్నిర్మిత క్లయింట్ సాధనాలను (shell, write, …) **తిరస్కరిస్తుంది**. చిత్ర సృష్టి అనేది seatకు వ్యతిరేకంగా **`agent` CLI** ద్వారా అమలు చేయబడే Cursor-స్థానిక సాధనం. అందువల్ల చిత్ర హ్యాండ్లర్, లాక్ చేసిన ప్రాంప్ట్ మరియు ప్రతి అభ్యర్థనకు ప్రత్యేకమైన తాత్కాలిక workspaceతో `agent`ను ప్రారంభిస్తుంది (community seat bridges మాదిరిగానే), ఆపై OpenAIకు అనుకూలమైన `b64_json`ను అందిస్తుంది.
 
 ## యాక్సెస్ పరిమితి (కఠిన నియమాలు #15 + #17)
 
@@ -35,7 +35,7 @@ binary) ప్రారంభించే ఏకైక `IMAGE_PROVIDERS` ఫా�
 
 `CURSOR_IMG_MAX_CONCURRENT`, Node module instanceకు పరిమితమైన in-memory counter/queue ద్వారా
 అమలు చేయబడుతుంది (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-ఇది ఒక OmniRoute processలో ఏకకాలంలో జరిగే `agent` spawnలను సరిగ్గా పరిమితం చేస్తుంది,
+ఇది ఒక 67router processలో ఏకకాలంలో జరిగే `agent` spawnలను సరిగ్గా పరిమితం చేస్తుంది,
 కానీ ఒకే Cursor seatను పంచుకునే అనేక processలు/instanceల మధ్య
 (ఉదా. multi-replica deployment) సమన్వయం చేయదు — ప్రతి instance తన స్వంత స్వతంత్ర పరిమితిని అమలు చేస్తుంది.
 single-instance deploymentకు (డిఫాల్ట్) ఇది ఖచ్చితంగా పనిచేస్తుంది; horizontally scaled
@@ -45,7 +45,7 @@ Cursor చిత్ర ట్రాఫిక్ను ఒకే instanceకు �
 ## అవసరాలు
 
 1. dashboardలో కనెక్ట్ చేసిన Cursor ఖాతా (OAuth లేదా `crsr_…` API key).
-2. OmniRoute processకు అందుబాటులో ఉన్న Cursor Agent binary:
+2. 67router processకు అందుబాటులో ఉన్న Cursor Agent binary:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, లేదా
    - `~/.local/bin/agent`, లేదా
    - Cursor connectionలో `providerSpecificData.agentBin`.

@@ -4,7 +4,7 @@
 
 ---
 
-Ang mga Web Cookie provider ay nagbibigay-daan sa OmniRoute na gumamit ng isang serbisyong AI sa pamamagitan ng kasalukuyan mong browser session sa halip na API key. Kapaki-pakinabang ang mga ito kapag mayroon ka nang access sa isang serbisyo sa pamamagitan ng website nito at gusto mong gamitin ng OmniRoute ang parehong authenticated session.
+Ang mga Web Cookie provider ay nagbibigay-daan sa 67router na gumamit ng isang serbisyong AI sa pamamagitan ng kasalukuyan mong browser session sa halip na API key. Kapaki-pakinabang ang mga ito kapag mayroon ka nang access sa isang serbisyo sa pamamagitan ng website nito at gusto mong gamitin ng 67router ang parehong authenticated session.
 
 Hindi tulad ng mga API-key provider, gumagamit ang mga Web Cookie provider ng mga credential na ipinapadala ng iyong browser sa website para sa authentication.
 
@@ -49,7 +49,7 @@ DevTools
 
 Ang `Cookie` request header ay naglalaman ng eksaktong impormasyon sa authentication na matagumpay na ginamit ng iyong browser.
 
-Para sa karamihan ng mga Web Cookie provider, ito ang value na dapat i-paste sa OmniRoute.
+Para sa karamihan ng mga Web Cookie provider, ito ang value na dapat i-paste sa 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Pareho ang proseso ng pag-setup para sa karamihan ng mga Web Cookie provider.
 4. I-refresh ang page.
 5. Magbukas ng authenticated na chat o conversation request.
 6. Kopyahin ang mga kinakailangang credential sa authentication.
-7. Buksan ang OmniRoute.
+7. Buksan ang 67router.
 8. Pumunta sa **Providers → Add Provider**.
 9. Piliin ang iyong Web Cookie provider.
 10. I-paste ang mga credential.
@@ -92,17 +92,17 @@ Magkakaiba ang paraan ng pag-store ng authentication ng iba't ibang website. Ang
 
 ## NoTrack (notrack-web)
 
-Ang NoTrack ([notrack.ai](https://notrack.ai)) ay isang libreng platform ng chat para sa mga consumer na hindi nangangailangan ng pag-sign up — ginagawa nang anonymous ang session sa unang pagbisita at nananatili ito sa pamamagitan ng tatlong cookie: `uid`, `si_usr_id`, at `si_ses_id`. Ipinoproxy ng OmniRoute ang parehong `/api/dispatch` endpoint sa pamamagitan ng iisang model id (`notrack-c`, alias na `ntw`).
+Ang NoTrack ([notrack.ai](https://notrack.ai)) ay isang libreng platform ng chat para sa mga consumer na hindi nangangailangan ng pag-sign up — ginagawa nang anonymous ang session sa unang pagbisita at nananatili ito sa pamamagitan ng tatlong cookie: `uid`, `si_usr_id`, at `si_ses_id`. Ipinoproxy ng 67router ang parehong `/api/dispatch` endpoint sa pamamagitan ng iisang model id (`notrack-c`, alias na `ntw`).
 
 ### Mga hakbang sa pagkonekta
 
 1. Buksan ang [notrack.ai](https://notrack.ai) sa iyong browser at hayaang maitakda ang cookie ng anonymous na session.
 2. Buksan ang **DevTools → Network**, i-refresh ang pahina, at i-click ang anumang `/api` request.
 3. Sa **Request Headers**, kopyahin ang buong value ng `Cookie` header.
-4. Sa OmniRoute, pumunta sa **Providers → Add Provider → NoTrack Web (Free)**.
+4. Sa 67router, pumunta sa **Providers → Add Provider → NoTrack Web (Free)**.
 5. I-paste ang string ng cookie sa `apiKey` field at i-click ang **Save**.
 
-Kinukuha ng OmniRoute ang `uid`, `si_usr_id`, at `si_ses_id` mula sa na-paste na string at muling bumubuo ng malinis na `Cookie` header na naglalaman lamang ng mga pair na iyon — kasama ang `nt_session` (ang `ntk_…` token na itinakda para sa mga naka-log in na account) kapag mayroon. Kung may nawawala sa tatlo, ipapasa nang walang pagbabago ang orihinal na na-paste na string upang makapag-eksperimento ang mga operator sa mga alternatibong format.
+Kinukuha ng 67router ang `uid`, `si_usr_id`, at `si_ses_id` mula sa na-paste na string at muling bumubuo ng malinis na `Cookie` header na naglalaman lamang ng mga pair na iyon — kasama ang `nt_session` (ang `ntk_…` token na itinakda para sa mga naka-log in na account) kapag mayroon. Kung may nawawala sa tatlo, ipapasa nang walang pagbabago ang orihinal na na-paste na string upang makapag-eksperimento ang mga operator sa mga alternatibong format.
 
 ### Mga model id
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Gumagana ang Cookie sa Browser ngunit Hindi sa OmniRoute
+## Gumagana ang Cookie sa Browser ngunit Hindi sa 67router
 
 May ilang provider na nagsasama ng mga cookie na ipinapadala lamang sa panahon ng mga authenticated request.
 

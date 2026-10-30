@@ -7,7 +7,7 @@
 > **Pirminis šaltinis:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute gali padaryti savo vietinį serverį (`http://localhost:20128`) pasiekiamą iš viešojo
+67router gali padaryti savo vietinį serverį (`http://localhost:20128`) pasiekiamą iš viešojo
 interneto per tris tunelių realizacijas. Tai naudinga:
 
 - OAuth atgaliniams iškvietimams iš debesijos paslaugų teikėjų (Antigravity, Gemini, Cursor), kuriems reikia
@@ -15,7 +15,7 @@ interneto per tris tunelių realizacijas. Tai naudinga:
 - Norint bendrinti vietinį egzempliorių su komandos nariais nediegiant VM.
 - Testuojant mobiliuosiuose įrenginiuose, nuotoliniu būdu arba skirtinguose tinkluose.
 
-Visos trys realizacijos valdomos tame pačiame procese — OmniRoute paleidžia ir sustabdo atitinkamą
+Visos trys realizacijos valdomos tame pačiame procese — 67router paleidžia ir sustabdo atitinkamą
 dvejetainį failą arba SDK iš valdymo skydelio ar per REST API. Atvirkštinio tarpinio serverio ar systemd konfigūruoti
 nereikia.
 
@@ -41,7 +41,7 @@ du režimus, pasirenkamus pagal tai, ar pateikta vardinio tunelio konfigūracija
 http://localhost:<apiPort>` ir iš standartinės išvesties išgauna priskirtą `*.trycloudflare.com` URL.
   URL yra laikini ir keičiasi po kiekvieno paleidimo iš naujo.
 - **Vardinis tunelis (pasirenkamas).** Kai `CLOUDFLARED_CONFIG` nurodo vietoje valdomą
-  cloudflared `config.yml`, OmniRoute vykdo `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml`, 67router vykdo `cloudflared tunnel --no-autoupdate
 --config <path> run`, todėl gaunate **pastovų vardinį pagrindinio kompiuterio adresą**. Konfigūracijoje
   pateikiami tunelio UUID, `credentials-file` ir `ingress` maršruto parinkimo duomenys, todėl
   `--url` neperduodamas ir Zero Trust valdymo skydelio prieigos raktas nereikalingas. `run` nuskaito
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ir iš standartinės išvesties išgauna priskirtą 
 
 Pagrindinės veikimo ypatybės:
 
-- **Automatinis diegimas.** Naudojant pirmą kartą, OmniRoute atsisiunčia naujausią `cloudflared`
+- **Automatinis diegimas.** Naudojant pirmą kartą, 67router atsisiunčia naujausią `cloudflared`
   dvejetainį failą iš oficialių GitHub leidimų (valdomas diegimas saugomas kataloge
   `DATA_DIR/cloudflared/`). Prieš vykdant patikrinama atsisiųsto ištekliaus SHA256 kontrolinė suma pagal
   leidimo manifestą.
@@ -68,7 +68,7 @@ Pagrindinės veikimo ypatybės:
    ```
 
 2. Sukurkite `~/.cloudflared/config.yml`, nukreipiantį jūsų pagrindinio kompiuterio adresą į vietinį
-   OmniRoute API prievadą (numatytasis — 20128):
+   67router API prievadą (numatytasis — 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Pagrindinės veikimo ypatybės:
      - service: http_status:404
    ```
 
-3. Nurodykite OmniRoute konfigūracijos failą ir (iš naujo) paleiskite tunelį:
+3. Nurodykite 67router konfigūracijos failą ir (iš naujo) paleiskite tunelį:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # neprivaloma — pakeičia OmniRoute pateikiamą pagrindinio kompiuterio adresą; kitu atveju jis nuskaitomas iš
+   # neprivaloma — pakeičia 67router pateikiamą pagrindinio kompiuterio adresą; kitu atveju jis nuskaitomas iš
    # pirmosios konfigūracijos ingress taisyklės:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -122,9 +122,9 @@ Arba valdymo skydelyje: **Settings → Tunnels → Cloudflare**.
 
 | Kintamasis                                           | Paskirtis                                                                                                                                                                                                |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Nepaisyti numatytojo dvejetainio failo kelio. Jei nustatytas ir galiojantis, „OmniRoute“ jį naudoja užuot atsisiuntusi.                                                                                  |
+| `CLOUDFLARED_BIN`                                    | Nepaisyti numatytojo dvejetainio failo kelio. Jei nustatytas ir galiojantis, „67router“ jį naudoja užuot atsisiuntusi.                                                                                   |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transporto protokolas (numatytasis `http2`; taip pat `quic`, `auto`).                                                                                                                                    |
-| `CLOUDFLARED_CONFIG`                                 | Kelias į vietoje valdomą „cloudflared“ failą `config.yml`. Kai nustatytas, „OmniRoute“ paleidžia **vardinį / nuolatinį** tunelį (`tunnel --config <path> run`), o ne spartųjį tunelį.                    |
+| `CLOUDFLARED_CONFIG`                                 | Kelias į vietoje valdomą „cloudflared“ failą `config.yml`. Kai nustatytas, „67router“ paleidžia **vardinį / nuolatinį** tunelį (`tunnel --config <path> run`), o ne spartųjį tunelį.                     |
 | `CLOUDFLARED_HOSTNAME`                               | Nepaisyti vardinio tunelio nurodyto viešojo pagrindinio kompiuterio vardo (pvz., `ai.example.com`). Jei nenustatyta, jis nuskaitomas iš pirmojo `ingress` pagrindinio kompiuterio vardo konfigūracijoje. |
 
 ## 2. ngrok
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Atsakyme pateikiamas priskirtas `publicUrl` (pvz.,
-`https://abcd-1234.ngrok-free.app`). Pasirinktiniai domenai, regionai ir strategijos taisyklės turi būti konfigūruojami ngrok valdymo skydelyje — pati OmniRoute tik perduoda vietinio paskirties taško URL SDK.
+`https://abcd-1234.ngrok-free.app`). Pasirinktiniai domenai, regionai ir strategijos taisyklės turi būti konfigūruojami ngrok valdymo skydelyje — pati 67router tik perduoda vietinio paskirties taško URL SDK.
 
 ## 3. Tailscale Funnel
 
@@ -179,12 +179,12 @@ Realizacija iškviečia `tailscale funnel --bg <port>` (foninį režimą). Vieš
 
 ### Būtinosios sąlygos
 
-1. Įdiekite Tailscale (arba leiskite tai padaryti OmniRoute — žr. toliau aprašytą `install` galinį tašką).
-2. Prisijunkite (`tailscale login` arba naudodami OmniRoute `login` galinį tašką).
+1. Įdiekite Tailscale (arba leiskite tai padaryti 67router — žr. toliau aprašytą `install` galinį tašką).
+2. Prisijunkite (`tailscale login` arba naudodami 67router `login` galinį tašką).
 3. Įjunkite Funnel savo „tailnet“ tinkle, naudodami Tailscale administravimo konsolę:
    <https://login.tailscale.com/admin/settings/features>.
 
-Linux ir macOS sistemose tarnybai (`tailscaled`) valdyti reikia `sudo`. POST galiniai taškai priima pasirinktinį lauką `sudoPassword`, kuris užklausos vykdymo laikotarpiu perduodamas OmniRoute MITM slaptažodžių podėliui (`getCachedPassword` / `setCachedPassword`). Windows naudojama numatytoji tarnybos diegimo vieta `C:\Program Files\Tailscale\tailscale.exe`.
+Linux ir macOS sistemose tarnybai (`tailscaled`) valdyti reikia `sudo`. POST galiniai taškai priima pasirinktinį lauką `sudoPassword`, kuris užklausos vykdymo laikotarpiu perduodamas 67router MITM slaptažodžių podėliui (`getCachedPassword` / `setCachedPassword`). Windows naudojama numatytoji tarnybos diegimo vieta `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### REST galiniai taškai
 
@@ -242,7 +242,7 @@ nepriklausoma.
 
 ## OAuth atgalinio iškvietimo aspektai
 
-Kai OmniRoute pasiekiamas per tunelį, valdymo skydelis ir OAuth srautai turi
+Kai 67router pasiekiamas per tunelį, valdymo skydelis ir OAuth srautai turi
 sudaryti atgalinio iškvietimo URL pagal **viešąjį** pagrindinio kompiuterio vardą, o ne `localhost`. Priešingu atveju
 OAuth teikėjas nukreipia naudotoją atgal į URL, kurio jo serveriai negali pasiekti,
 todėl apsikeitimas nepavyksta.
@@ -258,7 +258,7 @@ Nustatykite:
 NEXT_PUBLIC_BASE_URL=https://<jūsų-tunelio-pagrindinio-kompiuterio-vardas>
 ```
 
-ir prieš pradėdami OAuth iš naujo paleiskite OmniRoute. Laikinųjų Cloudflare Quick
+ir prieš pradėdami OAuth iš naujo paleiskite 67router. Laikinųjų Cloudflare Quick
 Tunnel tunelių URL pasikeičia po kiekvieno paleidimo iš naujo, todėl produkcinėje aplinkoje naudojant OAuth
 pirmenybę teikite ngrok su rezervuotu domenu arba Tailscale Funnel.
 
@@ -273,14 +273,14 @@ Valdymo skydelyje tunelio būsena rodoma skiltyje **Nustatymai → Tuneliai**:
 - Paskutinis klaidos pranešimas, jei toks yra.
 
 Norėdami stebėti programiškai, periodiškai siųskite užklausas į kiekvienos posistemės `GET` galinius taškus. Vienu metu galima
-vykdyti daugiau nei vieną posistemę; OmniRoute kiekvieną jų stebės
+vykdyti daugiau nei vieną posistemę; 67router kiekvieną jų stebės
 atskirai.
 
 ## Trikčių šalinimas
 
 ### „cloudflared dvejetainis failas nerastas“
 
-Pirmą kartą naudojant OmniRoute bando jį įdiegti automatiškai. Jei diegimas blokuojamas
+Pirmą kartą naudojant 67router bando jį įdiegti automatiškai. Jei diegimas blokuojamas
 (ribojamas tinklas, nėra prieigos prie GitHub), atsisiųskite `cloudflared` rankiniu būdu iš
 <https://github.com/cloudflare/cloudflared/releases> ir nustatykite
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

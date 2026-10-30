@@ -25,7 +25,7 @@ Esimene rida, mille esimese veeru väärtus on sõna-sõnalt `provider` (tõstut
 Laadige impordi modaalaknast alla algfail (**Download CSV template**). Näide:
 
 ```csv
-# OmniRoute'i teenusepakkujate import (positsioonilised veerud)
+# 67router'i teenusepakkujate import (positsioonilised veerud)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

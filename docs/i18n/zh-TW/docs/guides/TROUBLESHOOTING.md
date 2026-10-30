@@ -8,17 +8,17 @@
 
 🌐 **語言：** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRoute 的常見問題與解決方案。
+67router 的常見問題與解決方案。
 
 ---
 
 ## 快速參考
 
-**第一次使用 OmniRoute？** 從這裡開始——這些方法能解決 90% 的問題：
+**第一次使用 67router？** 從這裡開始——這些方法能解決 90% 的問題：
 
 | 我看到這個           | 代表什麼                        | 該怎麼做                                                                          |
 | -------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
-| "無法連線"           | OmniRoute 尚未執行              | 執行 `omniroute` 或 `docker restart omniroute`                                    |
+| "無法連線"           | 67router 尚未執行               | 執行 `omniroute` 或 `docker restart omniroute`                                    |
 | "無效的 API 金鑰"    | 您的金鑰錯誤或已過期            | 從提供者網站重新複製金鑰                                                          |
 | "超出速率限制"       | 您傳送了過多請求                | 等待 1 分鐘，或使用 `model: "auto"` 進行自動備援                                  |
 | "超出配額"           | 您已用完免費／付費配額          | 連接更多提供者，或使用免費提供者（Kiro、Pollinations）                            |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # 明確設定重量級請求的�
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # 對於緩慢的上游，將有限等待時間提高至超過 RATE_LIMIT_MAX_WAIT_MS 的預設值
 ```
 
-請在 OmniRoute 程序環境中設定這些變數（即常駐程式，例如透過 LaunchAgent plist 或 `systemctl edit`），然後重新啟動 OmniRoute。輪替旗標是效果最顯著的單一調整項目：它會將硬性失敗轉換為對集區中健康提供者的透明重試。
+請在 67router 程序環境中設定這些變數（即常駐程式，例如透過 LaunchAgent plist 或 `systemctl edit`），然後重新啟動 67router。輪替旗標是效果最顯著的單一調整項目：它會將硬性失敗轉換為對集區中健康提供者的透明重試。
 
 **注意**：`OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` 會限制可同時執行的重量級（長上下文）請求數量；此限制是准入閘門，而非提供者速率限制器。**#503-fanout 更新：**此變數預設不再設定（現在只有在明確設定時才會生效，如上所示）——重量級請求的准入改由自動推導的位元組預算（`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`）控管，該預算會根據主機的實際記憶體上限自行調整，因此全新部署即使完全不設定此變數，也應該會遇到少得多的 `503 chat_admission_busy` 拒絕；在此明確設定它仍會完全依照文件所述運作。明確指定的位元組預算覆寫值會限制在 8 MiB–2 GiB 之間。`413 body_exceeds_budget` 並非暫時性錯誤：請提高該位元組預算、降低 `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`，或提高程序記憶體上限。`inflight_bytes_budget` 卸載表示暫時性的資源爭用，仍可重試。各提供者的速率限制（`open-sse/services/rateLimitManager.ts`）由 `RATE_LIMIT_MAX_WAIT_MS`、`RATE_LIMIT_MAX_QUEUE_DEPTH` 與 `RATE_LIMIT_AUTO_ENABLE` 分別控管——請參閱 `.env.example`。
 
 **如何驗證修正是否生效**：快速連續執行代理程式／cron 兩次，並確認兩次皆成功。修正前，第二次執行通常會拋出 `429`/`401`。修正後，失敗（如果有）會被透明地重試，且呼叫會完成。您也可以執行 `curl /monitoring/health`，並觀察提供者連線上的 `rateLimitedUntil` 欄位，以及受影響提供者的 `circuitBreakers.providerBreakers[].state`——其狀態會是 `CLOSED`、`DEGRADED`、`OPEN` 或 `HALF_OPEN` 其中之一（請參閱 `src/shared/utils/circuitBreaker.ts`）；持續失敗的提供者會依序從 `CLOSED → DEGRADED → OPEN` 切換，直到重設時間視窗允許探測請求通過（`HALF_OPEN`）。
 
-**如果仍看到 429**：該提供者目前使用中的帳戶確實已耗盡其_配額_（不只是速率限制）。請在 OmniRoute 儀表板 → Providers → Accounts 中，為同一提供者新增第二個帳戶，或混用另一個免費提供者（例如 `routeway`、`auggie`）。輪替只能處理暫時性的速率限制／400／401；硬性配額耗盡需要第二組憑證或不同的提供者。
+**如果仍看到 429**：該提供者目前使用中的帳戶確實已耗盡其_配額_（不只是速率限制）。請在 67router 儀表板 → Providers → Accounts 中，為同一提供者新增第二個帳戶，或混用另一個免費提供者（例如 `routeway`、`auggie`）。輪替只能處理暫時性的速率限制／400／401；硬性配額耗盡需要第二組憑證或不同的提供者。
 
 **如果在視覺模型（`auto/vision`、`bazaarlink/*`）上看到 403**：已連線的帳戶沒有包含視覺功能的付費方案，或 API 金鑰權限不足。請在提供者儀表板中確認金鑰範圍包含視覺／多模態功能，或連線付費方案帳戶並將其保留為視覺功能的目標提供者。
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # 對於緩慢的上游，將有�
 
 執行 `npm install -g omniroute` 時，您可能會看到大量警告，例如 `npm warn ERESOLVE`、對等依賴項通知及 `deprecated` 訊息。**這些都是預期中的情況，並且不會造成影響。** 如果輸出中出現 `added <N> packages`，即表示安裝成功。
 
-若要隱藏對等依賴項解析警告，請使用 OmniRoute 支援的安裝方式：
+若要隱藏對等依賴項解析警告，請使用 67router 支援的安裝方式：
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` 只會隱藏 `ERESOLVE` 和對等依賴項通知。棄用通知仍會顯示，因為它們來自遞移的第三方套件；這些通知並不表示安裝失敗。
 
-這些警告來自 OmniRoute 無法控制的第三方套件中過時的對等依賴項版本範圍：
+這些警告來自 67router 無法控制的第三方套件中過時的對等依賴項版本範圍：
 
 1. **`marked-terminal` 要求 `marked >=1 <16`，但找到的是 `marked@18`** — 實際使用時運作正常；只是上游的對等依賴項版本範圍已過時。
 2. **`deprecated prebuild-install@7.1.3`** — 這是遞移依賴的原生二進位檔擷取輔助工具。它不會
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### 可以忽略此警告嗎？
 
-**部分可以，但不建議在不執行指令碼的情況下運作。** OmniRoute 包含完善的後備機制：如果無法從獨立套件載入原生 `better-sqlite3` 繫結，應用程式會改用 `node:sqlite` 或 `sql.js` 等替代驅動程式（請參閱 [SQLite 執行階段解析](../ops/SQLITE_RUNTIME.md)）。伺服器仍會啟動，但使用 `sql.js` 這類 WASM 後備方案時，將停用 SQLite WAL（預寫式記錄）模式，並增加記憶體與磁碟同步的額外負擔。
+**部分可以，但不建議在不執行指令碼的情況下運作。** 67router 包含完善的後備機制：如果無法從獨立套件載入原生 `better-sqlite3` 繫結，應用程式會改用 `node:sqlite` 或 `sql.js` 等替代驅動程式（請參閱 [SQLite 執行階段解析](../ops/SQLITE_RUNTIME.md)）。伺服器仍會啟動，但使用 `sql.js` 這類 WASM 後備方案時，將停用 SQLite WAL（預寫式記錄）模式，並增加記憶體與磁碟同步的額外負擔。
 
 ### 實際需要哪些指令碼？
 
-並非所有遭封鎖的指令碼都是執行 OmniRoute 所必需的：
+並非所有遭封鎖的指令碼都是執行 67router 所必需的：
 
-- **必要（`omniroute`、`better-sqlite3`）：** OmniRoute 從 Next.js 獨立應用程式套件（`dist/`）執行。安裝期間，npm 會下載或編譯頂層 `node_modules/better-sqlite3/` 中主機專用的原生 SQLite 驅動程式。接著，OmniRoute 的 `postinstall` 指令碼（`scripts/build/postinstall.mjs`）會驗證這些主機專用二進位檔，並將其複製到 `dist/node_modules/`，讓獨立伺服器可以存取。如果 `omniroute` 的 postinstall 指令碼遭到封鎖，就會略過此複製步驟。
+- **必要（`omniroute`、`better-sqlite3`）：** 67router 從 Next.js 獨立應用程式套件（`dist/`）執行。安裝期間，npm 會下載或編譯頂層 `node_modules/better-sqlite3/` 中主機專用的原生 SQLite 驅動程式。接著，67router 的 `postinstall` 指令碼（`scripts/build/postinstall.mjs`）會驗證這些主機專用二進位檔，並將其複製到 `dist/node_modules/`，讓獨立伺服器可以存取。如果 `omniroute` 的 postinstall 指令碼遭到封鎖，就會略過此複製步驟。
 - **選用／遞移相依套件（`keytar`、`@parcel/watcher`、`@swc/core`、`protobufjs`、`esbuild`）：** 這些是建置輔助工具、檔案監看工具或系統鑰匙圈公用程式。允許其執行可避免建置警告，但核心路由功能並不需要它們。
-- **排除（`onnxruntime-node`）：** 這是用於本機 AI 嵌入的選用相依套件，OmniRoute 執行時**不需要**它。其 postinstall 指令碼會從 NuGet 下載約 300MB 的 CUDA 資產；除非您明確打算在支援的硬體上使用本機 ONNX 加速，否則請勿將其加入允許清單。
+- **排除（`onnxruntime-node`）：** 這是用於本機 AI 嵌入的選用相依套件，67router 執行時**不需要**它。其 postinstall 指令碼會從 NuGet 下載約 300MB 的 CUDA 資產；除非您明確打算在支援的硬體上使用本機 ONNX 加速，否則請勿將其加入允許清單。
 
 ### 建議的修正方式
 
-若要在全域安裝期間允許執行必要的安裝指令碼並消除警告，請為 OmniRoute 及其原生相依套件傳入 `--allow-scripts`：
+若要在全域安裝期間允許執行必要的安裝指令碼並消除警告，請為 67router 及其原生相依套件傳入 `--allow-scripts`：
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ omniroute doctor
 Playwright 刻意將瀏覽器下載與 npm 套件安裝分開，因此在安裝瀏覽器之前，
 出現此回應是正常的。
 
-若使用全域 npm 安裝，請從 OmniRoute 套件的目錄安裝 Chromium，
+若使用全域 npm 安裝，請從 67router 套件的目錄安裝 Chromium，
 讓瀏覽器快取屬於同一個 Playwright 安裝：
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-安裝完成後重新啟動 OmniRoute，然後再次嘗試 Gemini Web 請求。如果您
-透過 Docker 映像執行 OmniRoute，請使用 `-web` 映像（或 `runner-web`
+安裝完成後重新啟動 67router，然後再次嘗試 Gemini Web 請求。如果您
+透過 Docker 映像執行 67router，請使用 `-web` 映像（或 `runner-web`
 建置目標），其中已包含 Chromium 及其相依項目；基礎映像則
 不包含。
 
@@ -187,7 +187,7 @@ npx playwright install chromium
 
 **這是誤判。沒有任何檔案受到感染，也不需要採取任何動作。**
 
-Avast 和 AVG 會執行一項啟發式檢測，將包含大量看似 HTTP 請求連結的純文字/Markdown 檔案標記出來。OmniRoute 的 `README.md` 包含在 npm 套件中（它列於 `package.json` → `files`），因此進行全域安裝時，該檔案會位於 `node_modules/omniroute/README.md`，而且其中包含約 15 個 `http://localhost:20128/...` 範例（MCP HTTP/SSE 端點、A2A `.well-known` URL，以及 `curl` 程式碼片段）。如此高的連結密度足以觸發該啟發式檢測。
+Avast 和 AVG 會執行一項啟發式檢測，將包含大量看似 HTTP 請求連結的純文字/Markdown 檔案標記出來。67router 的 `README.md` 包含在 npm 套件中（它列於 `package.json` → `files`），因此進行全域安裝時，該檔案會位於 `node_modules/omniroute/README.md`，而且其中包含約 15 個 `http://localhost:20128/...` 範例（MCP HTTP/SSE 端點、A2A `.well-known` URL，以及 `curl` 程式碼片段）。如此高的連結密度足以觸發該啟發式檢測。
 
 如果這個問題最近才開始出現：檔案的性質並未改變。README 擴充了端點表格（新增了 MCP HTTP + SSE + A2A）以及更多 `curl` 範例，使其超過了觸發門檻。
 
@@ -195,7 +195,7 @@ Avast 和 AVG 會執行一項啟發式檢測，將包含大量看似 HTTP 請求
 
 **處理方式：**
 
-1. **停止通知** — 在防毒軟體中排除安裝目錄（Avast：設定 → 例外），加入您的全域 `node_modules` 路徑及/或 OmniRoute 資料目錄（`~/.omniroute/`）。
+1. **停止通知** — 在防毒軟體中排除安裝目錄（Avast：設定 → 例外），加入您的全域 `node_modules` 路徑及/或 67router 資料目錄（`~/.omniroute/`）。
 2. **回報誤判** — <https://www.avast.com/false-positive-file-form.php>，並附上遭隔離的 `README.md`。這才是對所有人都有幫助的解決方式，因為問題在於提供者的啟發式檢測對文字檔反應過度。
 
 **為什麼我們不從自身這一側「修正」問題：**所有範例都是 `http://localhost`，而 localhost 若沒有自簽憑證所帶來的麻煩，就無法使用 `https`。為了規避單一提供者的啟發式檢測而竄改文件，等於為了迎合掃描器的錯誤而損害所有讀者的使用體驗。
@@ -233,7 +233,7 @@ Avast 和 AVG 會執行一項啟發式檢測，將包含大量看似 HTTP 請求
 
 ### 登入頁面當機或顯示「Module self-registration」錯誤
 
-**原因：** 您執行的 Node.js 版本不符合 OmniRoute 核准的安全執行環境最低版本要求。最常見的情況是執行較舊的 Node 22 或 24 修補版本，低於 OmniRoute 要求的安全修補最低版本。
+**原因：** 您執行的 Node.js 版本不符合 67router 核准的安全執行環境最低版本要求。最常見的情況是執行較舊的 Node 22 或 24 修補版本，低於 67router 要求的安全修補最低版本。
 
 **症狀：**
 
@@ -249,7 +249,7 @@ Avast 和 AVG 會執行一項啟發式檢測，將包含大量看似 HTTP 請求
    nvm use 24
    ```
 2. 驗證您的版本：`node --version` 應在 24.x LTS 系列中顯示 `v24.0.0` 或更新版本
-3. 重新安裝 OmniRoute：`npm install -g omniroute`
+3. 重新安裝 67router：`npm install -g omniroute`
 4. 重新啟動：`omniroute`
 
 > **受支援的安全版本：** `>=22.22.2 <23` 或 `>=24.0.0 <27`。完整支援 Node.js 24.x LTS (Krypton) 和 Node.js 26。
@@ -330,13 +330,13 @@ omniroute
 
 **原因：** 在 Node.js 22 上，undici@8 dispatcher 與 Node 內建的 `fetch()` 實作不相容。
 
-**修正（v3.5.5+）：** 當 Proxy dispatcher 啟用時，OmniRoute 現在會使用 undici 自有的 `fetch()` 函式，以確保行為一致。請更新至 v3.5.5+。
+**修正（v3.5.5+）：** 當 Proxy dispatcher 啟用時，67router 現在會使用 undici 自有的 `fetch()` 函式，以確保行為一致。請更新至 v3.5.5+。
 
 ### WSL 下的 MITM Proxy：Windows 主機上的桌面應用程式未被攔截
 
-**原因：** MITM Proxy 及其 CA 憑證會安裝到 OmniRoute 執行所在的環境。在 WSL 下，該環境是 Linux 客體，而 AI 桌面應用程式（Kiro、Trae、Copilot、Zed，……）則執行於 Windows 主機上。主機應用程式不信任客體的憑證存放區，也不會透過客體的系統 Proxy 路由，因此無法對桌面應用程式進行攔截。
+**原因：** MITM Proxy 及其 CA 憑證會安裝到 67router 執行所在的環境。在 WSL 下，該環境是 Linux 客體，而 AI 桌面應用程式（Kiro、Trae、Copilot、Zed，……）則執行於 Windows 主機上。主機應用程式不信任客體的憑證存放區，也不會透過客體的系統 Proxy 路由，因此無法對桌面應用程式進行攔截。
 
-**建議：** 請在與欲攔截之桌面應用程式相同的作業系統上原生執行 OmniRoute（Windows 應用程式使用 Windows；macOS/Linux 亦同）。若將 OmniRoute 保留在 WSL 中並以主機應用程式為目標，則必須在 Windows 主機上手動信任產生的 CA 憑證，並將每個主機應用程式的網路／Proxy 設定指向 WSL Proxy 端點——此設定方式不受支援且容易失效。
+**建議：** 請在與欲攔截之桌面應用程式相同的作業系統上原生執行 67router（Windows 應用程式使用 Windows；macOS/Linux 亦同）。若將 67router 保留在 WSL 中並以主機應用程式為目標，則必須在 Windows 主機上手動信任產生的 CA 憑證，並將每個主機應用程式的網路／Proxy 設定指向 WSL Proxy 端點——此設定方式不受支援且容易失效。
 
 ---
 
@@ -363,7 +363,7 @@ omniroute
 
 ### OAuth Token 已過期
 
-OmniRoute 會自動重新整理 Token。如果問題持續發生：
+67router 會自動重新整理 Token。如果問題持續發生：
 
 1. 儀表板 → 提供者 → 重新連線
 2. 刪除並重新新增提供者連線
@@ -575,7 +575,7 @@ curl http://localhost:20128/api/monitoring/health
 
 ### 防止驚群效應
 
-當大量並行請求觸及受速率限制的提供者時，OmniRoute 會使用互斥鎖與自動速率限制來將請求序列化，並防止連鎖失敗。對 API 金鑰提供者而言，此機制會自動運作。
+當大量並行請求觸及受速率限制的提供者時，67router 會使用互斥鎖與自動速率限制來將請求序列化，並防止連鎖失敗。對 API 金鑰提供者而言，此機制會自動運作。
 
 ### 聊天請求因 503 / chat_admission_busy 而失敗
 
@@ -611,7 +611,7 @@ curl http://localhost:20128/api/monitoring/health
 至少 `64` 個工具、至少 `32,000` 個估算權杖，或有界結構估算
 耗盡其 `10,000` 個已造訪節點或深度 `12` 的界限時，即視為結構上重量級的請求。
 
-**原因：** 這是 OmniRoute 內部刻意執行的負載卸除，而非上游提供者故障。
+**原因：** 這是 67router 內部刻意執行的負載卸除，而非上游提供者故障。
 每個處理程序都會使用處理程序本機防護機制，在保留並剖析大型請求本文之前，
 預留有限的重量級容量。在 SSE 回應的整個生命週期內，重量級租約都會維持占用。
 
@@ -653,7 +653,7 @@ false` 且 `maxInflightBytes` 充足，表示自動推算的預算已正常
 
 ## 選用的 RAG / LLM 失敗分類（16 個問題）
 
-部分 OmniRoute 使用者會將閘道置於 RAG 或代理堆疊前方。在這類設定中，經常會看到一種奇怪的情況：OmniRoute 看起來運作正常（提供者在線、路由設定檔正常、沒有速率限制警示），但最終答案仍然是錯誤的。
+部分 67router 使用者會將閘道置於 RAG 或代理堆疊前方。在這類設定中，經常會看到一種奇怪的情況：67router 看起來運作正常（提供者在線、路由設定檔正常、沒有速率限制警示），但最終答案仍然是錯誤的。
 
 實務上，這類事件通常源自下游 RAG 管線，而不是閘道本身。
 
@@ -672,17 +672,17 @@ false` 且 `maxInflightBytes` 充足，表示自動推算的預算已正常
 
 1. 調查不良回應時，請記錄：
    - 使用者任務與請求
-   - OmniRoute 中的路由或提供者組合
+   - 67router 中的路由或提供者組合
    - 下游使用的任何 RAG 上下文（檢索到的文件、工具呼叫等）
 2. 將事件對應至一或兩個 WFGY ProblemMap 編號（`No.1` … `No.16`）。
-3. 在你自己的儀表板、操作手冊或事件追蹤器中，將該編號與 OmniRoute 日誌一併儲存。
+3. 在你自己的儀表板、操作手冊或事件追蹤器中，將該編號與 67router 日誌一併儲存。
 4. 使用對應的 WFGY 頁面來判斷是否需要變更 RAG 堆疊、檢索器或路由策略。
 
 完整內容與具體操作方式請參閱此處（MIT 授權，純文字）：
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-如果你未在 OmniRoute 後方執行 RAG 或代理管線，可以忽略本節。
+如果你未在 67router 後方執行 RAG 或代理管線，可以忽略本節。
 
 ---
 
@@ -706,7 +706,7 @@ v3.8.0 版本特有的問題及其目前的因應措施。如果修正已包含�
 
 1. 安裝適用於你平台的 Devin CLI
 2. 在 `.env` 中設定 `CLI_DEVIN_BIN=/usr/local/bin/devin`（或實際路徑）
-3. 重新啟動 OmniRoute，並從 **儀表板 → CLI 工具**重新測試
+3. 重新啟動 67router，並從 **儀表板 → CLI 工具**重新測試
 
 ### 模型冷卻卡住（手動重設）
 
@@ -761,7 +761,7 @@ v3.8.0 版本特有的問題及其目前的因應措施。如果修正已包含�
 
 1. 產生隨機密鑰：`openssl rand -hex 32`
 2. 在正式環境伺服器的環境中設定 `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>`（以及任何與橋接通訊的用戶端）
-3. 重新啟動 OmniRoute
+3. 重新啟動 67router
 
 ### Responses API：背景模式降級為同步模式
 

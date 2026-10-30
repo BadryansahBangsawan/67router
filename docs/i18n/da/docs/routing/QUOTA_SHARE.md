@@ -15,7 +15,7 @@ Kvotedelingsmotoren fordeler en udbyders tidsbaserede kvote (f.eks. Codex'
 5-timersvindue, Kimi 1500 req/h) retfærdigt på tværs af flere API-nøgler, der
 deler den samme forbindelse.
 
-**Problem, den løser:** OmniRoute videresender mange API-nøgler gennem den samme
+**Problem, den løser:** 67router videresender mange API-nøgler gennem den samme
 konto hos upstream-udbyderen. Uden delingslogik kan en pludselig belastning fra
 nøgle A opbruge udbyderens kvote for hele timen, så nøgle B og C blokeres, indtil
 vinduet nulstilles. Motoren forhindrer dette ved at:
@@ -123,7 +123,7 @@ Redis-kommando.
 
 - Tabel: `quota_consumption` (se migrering `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Bedst til installationer med én instans.
-- Al persistens findes i den eksisterende OmniRoute SQLite-database (`DATA_DIR/storage.sqlite`).
+- Al persistens findes i den eksisterende 67router SQLite-database (`DATA_DIR/storage.sqlite`).
 
 ### Redis (valgfri, flere instanser)
 

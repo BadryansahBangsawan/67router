@@ -4,7 +4,7 @@
 
 ---
 
-> **X’inhu dan id-dokument.** Valutazzjoni kritika tas-sistema ta’ gradi ta’ kwalità ta’ OmniRoute,
+> **X’inhu dan id-dokument.** Valutazzjoni kritika tas-sistema ta’ gradi ta’ kwalità ta’ 67router,
 > imqabbla mal-aħjar prattiki tal-industrija, **flimkien ma’** katalgu komprensiv tal-punti kollha ta’
 > kontroll tal-kwalità u **pjan ta’ replikazzjoni indipendenti mill-għodda** biex l-istess sistema tiġi applikata għal
 > kwalunkwe proġett. Iġġenerat fis-2026-06-16 mill-istat reali tar-repożitorju (mhux mill-memorja).
@@ -105,62 +105,62 @@ biex jiġi replikat fuq kwalunkwe stack.
 
 ### 1. Stil u fformattjar (deterministiċi, veloċi)
 
-- **OmniRoute:** Prettier + ESLint permezz ta’ lint-staged (pre-commit), 2-spazji/virgoletti doppji/100col.
+- **67router:** Prettier + ESLint permezz ta’ lint-staged (pre-commit), 2-spazji/virgoletti doppji/100col.
 - **Ġeneriku:** formatter wieħed li jista’ jirranġa awtomatikament + linter wieħed, li jaħdmu f’pre-commit fuq fajls staged.
 
 ### 2. Tipi
 
-- **OmniRoute:** `typecheck:core` (imblokkanti) + `typecheck:noimplicit:core` (konsultattiv) + ratchet ta’ `type-coverage` ta’ 92.17% + baġit ta’ any għal kull fajl.
+- **67router:** `typecheck:core` (imblokkanti) + `typecheck:noimplicit:core` (konsultattiv) + ratchet ta’ `type-coverage` ta’ 92.17% + baġit ta’ any għal kull fajl.
 - **Ġeneriku:** typecheck strett fis-CI + metrika ta’ type-coverage b’ratchet + baġit ta’ `any`/escape-hatch għal kull fajl.
 
 ### 3. Testijiet (intensità)
 
-- **OmniRoute:** 2 runners mingħajr sovrappożizzjoni (Node nattiv + vitest), 8 shards, kopertura globali 60/60/60/60 + ratchet ta’ ~76% + **8 limiti minimi għal kull modulu għal moduli kritiċi** + testijiet tal-proprjetajiet kull lejl + **ittestjar tal-mutazzjonijiet** kull lejl.
+- **67router:** 2 runners mingħajr sovrappożizzjoni (Node nattiv + vitest), 8 shards, kopertura globali 60/60/60/60 + ratchet ta’ ~76% + **8 limiti minimi għal kull modulu għal moduli kritiċi** + testijiet tal-proprjetajiet kull lejl + **ittestjar tal-mutazzjonijiet** kull lejl.
 - **Ġeneriku:** runner(s) tat-testijiet + limitu minimu **assolut** tal-kopertura (kontra ż-żero) + **ratchet** tal-kopertura (kontra r-rigressjoni) + **limiti minimi għal kull modulu għal kodiċi ta’ riskju għoli** (kontra Goodhart) + ittestjar ibbażat fuq il-proprjetajiet għal-loġika pura + **ittestjar tal-mutazzjonijiet** kull lejl bħala l-kejl reali tal-kwalità tat-testijiet.
 
 ### 4. Politika tat-testijiet (kontra l-manipulazzjoni)
 
-- **OmniRoute:** `pr-test-policy` (kodiċi tal-produzzjoni jeħtieġ test), `check-test-masking` (jimblokka asserts imdgħajfa), `pr-evidence` (pretensjoni ta’ suċċess teħtieġ blokka ta’ evidenza), `test-discovery` (kull test jinġabar minn runner).
+- **67router:** `pr-test-policy` (kodiċi tal-produzzjoni jeħtieġ test), `check-test-masking` (jimblokka asserts imdgħajfa), `pr-evidence` (pretensjoni ta’ suċċess teħtieġ blokka ta’ evidenza), `test-discovery` (kull test jinġabar minn runner).
 - **Ġeneriku:** gate ta’ "kodiċi ġdid ⇒ test ġdid" + rilevatur ta’ asserts imneħħija/tautoloġiji + rekwiżit ta’ evidenza (TDD jew test ħaj) + garanzija li l-ebda test ma jibqa’ orfni barra l-globs.
 
 ### 5. Kumplessità u saħħa tal-kodiċi (ratchets)
 
-- **OmniRoute:** twissijiet tal-ESLint (3769↓), duplikazzjoni ta’ jscpd (5.72%↓), kumplessità ċiklomatika+max-lines (1800↓), kumplessità konjittiva ta’ sonarjs (753↓), kodiċi mejjet/exports mhux użati ta’ knip (339↓), daqs tal-fajl għal kull fajl (iffriżat, jista’ jonqos biss), dipendenzi ċirkolari (Tarjan personalizzat, imblokkanti).
+- **67router:** twissijiet tal-ESLint (3769↓), duplikazzjoni ta’ jscpd (5.72%↓), kumplessità ċiklomatika+max-lines (1800↓), kumplessità konjittiva ta’ sonarjs (753↓), kodiċi mejjet/exports mhux użati ta’ knip (339↓), daqs tal-fajl għal kull fajl (iffriżat, jista’ jonqos biss), dipendenzi ċirkolari (Tarjan personalizzat, imblokkanti).
 - **Ġeneriku:** applika ratchet għal kull metrika tas-saħħa (twissijiet, duplikazzjoni, kumplessità ċiklomatika **u** konjittiva, kodiċi mejjet, daqs tal-fajl, ċikli tal-importazzjonijiet). Id-direzzjoni dejjem tkun "tirrigressax".
 
 ### 6. Sigurtà statika (SAST + sigrieti)
 
-- **OmniRoute:** CodeQL (ratchet tat-twissijiet = 0), gitleaks (`[extend] useDefault=true` — kruċjali!), SonarQube, regoli tas-sigurtà personalizzati (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet tat-twissijiet = 0), gitleaks (`[extend] useDefault=true` — kruċjali!), SonarQube, regoli tas-sigurtà personalizzati (public-creds, error-helper, route-guard-membership, route-validation).
 - **Ġeneriku:** SAST (CodeQL/Sonar/semgrep) b’ratchet tat-twissijiet + skaner tas-sigrieti b’**sett ta’ regoli default li jintiret** (konfigurazzjoni personalizzata li tissostitwixxi d-default = għama) + gates tas-sigurtà speċifiċi għall-proġett ibbażati fuq Hard Rules.
 
 ### 7. Katina tal-provvista (dipendenzi)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (allowlist SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` kontra slopsquatting (allowlist + età ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (allowlist SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` kontra slopsquatting (allowlist + età ≥72h).
 - **Ġeneriku:** SCA minn diversi sorsi + allowlist tal-liċenzji + kontroll tal-integrità tal-lockfile + allowlist tad-dipendenzi b’kontroll tal-età/typosquatting + bot ta’ aġġornamenti raggruppati.
 
 ### 8. Katina tal-provvista (build u release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), provenjenza SLSA (`--provenance`), OpenSSF Scorecard (kull ġimgħa), tisħiħ tal-workflows (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, permessi tat-token).
+- **67router:** SBOM (CycloneDX + syft), provenjenza SLSA (`--provenance`), OpenSSF Scorecard (kull ġimgħa), tisħiħ tal-workflows (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, permessi tat-token).
 - **Ġeneriku:** iġġenera SBOM mal-pubblikazzjoni + provenjenza ffirmata (SLSA L2+) + Scorecard skedat + saħħaħ il-workflows kollha (tokens bl-inqas privileġġi, ebda kredenzjali ppersistiti waqt checkout minn min mhux pusher, actions ippinjati permezz ta’ SHA).
 
 ### 9. Kuntratti u API
 
-- **OmniRoute:** oasdiff (bidla inkompatibbli fl-OpenAPI), schemathesis (fuzzing tal-kuntratti kull lejl), openapi-coverage (% ta’ routes dokumentati, ratchet ta’ 38.3%), openapi-security-tiers (spec kontra route-guard).
+- **67router:** oasdiff (bidla inkompatibbli fl-OpenAPI), schemathesis (fuzzing tal-kuntratti kull lejl), openapi-coverage (% ta’ routes dokumentati, ratchet ta’ 38.3%), openapi-security-tiers (spec kontra route-guard).
 - **Ġeneriku:** diff tal-kuntratt għal bidliet inkompatibbli (oasdiff/buf) + fuzzing ibbażat fuq il-proprjetajiet kontra l-ispeċifikazzjoni (schemathesis) + kopertura tad-dokumentazzjoni b’ratchet + konsistenza bejn l-ispeċifikazzjoni u l-kodiċi.
 
 ### 10. Dokumentazzjoni u i18n (kontra d-degradazzjoni)
 
-- **OmniRoute:** docs-sync (verżjonijiet riflessi), docs-counts-sync (numri fid-dokumentazzjoni kontra l-kodiċi), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet ta’ 80.1%).
+- **67router:** docs-sync (verżjonijiet riflessi), docs-counts-sync (numri fid-dokumentazzjoni kontra l-kodiċi), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet ta’ 80.1%).
 - **Ġeneriku:** issinkronizza verżjonijiet/għadd/varjabbli tal-ambjent bejn id-dokumentazzjoni u l-kodiċi (gate, mhux fiduċja) + ivvalida links interni + kopertura tal-i18n b’ratchet.
 
 ### 11. Kontra l-alluċinazzjonijiet / konsistenza (il-kategorija rari)
 
-- **OmniRoute:** known-symbols (dispatch b’string ⇒ simbolu ħaj), provider-consistency, fetch-targets (fetch mill-client ⇒ route reali), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (dispatch b’string ⇒ simbolu ħaj), provider-consistency, fetch-targets (fetch mill-client ⇒ route reali), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Ġeneriku:** għal kull "sors tal-verità duplikat" (reġistru, dispatch b’string, referenzi bejn saffi), gate li jipprova li ż-żewġ naħat jaqblu. Jinduna bid-degradazzjoni li typecheck/test ma jaqbdux.
 
 ### 12. Reżiljenza u dominju (speċifiċi għall-prodott)
 
-- **OmniRoute:** chaos (injezzjoni ta’ ħsarat), heap-growth (tnixxija), k6 (soak), promptfoo+garak (red-team tal-LLM skont OWASP LLM Top 10), it-3 liġijiet tar-reżiljenza (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (injezzjoni ta’ ħsarat), heap-growth (tnixxija), k6 (soak), promptfoo+garak (red-team tal-LLM skont OWASP LLM Top 10), it-3 liġijiet tar-reżiljenza (circuit-breaker/cooldown/lockout).
 - **Ġeneriku:** identifika l-modi ta’ ħsara tad-dominju **tiegħek** u jkollok gate (anke jekk kull lejl) għal kull wieħed. Għal apps tal-AI: red-team tal-injezzjoni. Għal sistemi distribwiti: chaos + leak + soak.
 
 ---

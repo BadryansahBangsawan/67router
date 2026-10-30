@@ -4,7 +4,7 @@
 
 ---
 
-Diese Seite erläutert das lokale Verhalten der `.env`-Datei des Projekts und beschreibt den Umgang mit Umgebungsdateien und Geheimnissen bei der Entwicklung von OmniRoute.
+Diese Seite erläutert das lokale Verhalten der `.env`-Datei des Projekts und beschreibt den Umgang mit Umgebungsdateien und Geheimnissen bei der Entwicklung von 67router.
 
 ## Verhalten von .env bei postinstall
 

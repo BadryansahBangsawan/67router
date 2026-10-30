@@ -5,7 +5,7 @@
 ---
 
 > **Enovrstični opis vsakega imenika in datoteke v korenskem imeniku.**
-> Nazadnje posodobljeno: 2026-06-28 — OmniRoute v3.8.40
+> Nazadnje posodobljeno: 2026-06-28 — 67router v3.8.40
 >
 > Uporabite ta zemljevid za hitro krmarjenje po kodni zbirki. Za podrobnejši pregled sledite povezavam do namenske dokumentacije.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Celoten postopek izdaje (veščine, husky, konvencionalne potrditve, uvedba)                          |
 | `COVERAGE_PLAN.md`          | Cilji pokritosti in trenutno stanje                                                                 |
 | `FREE_TIERS.md`             | Izbrani ponudniki brezplačnih paketov (48+ brezplačnih + 11 OAuth)                                  |
-| `CLI-TOOLS.md`              | Zunanje integracije CLI + notranji CLI OmniRoute                                                    |
+| `CLI-TOOLS.md`              | Zunanje integracije CLI + notranji CLI 67router                                                     |
 | `I18N.md`                   | Arhitektura i18n, dodajanje jezika, 67 področnih nastavitev                                         |
 | `UNINSTALL.md`              | Koraki za čisto odstranitev                                                                         |
 | `PROVIDER_REFERENCE.md`     | **Samodejno ustvarjen** katalog 375 ponudnikov (ponovna izdelava: `npm run gen:provider-reference`) |

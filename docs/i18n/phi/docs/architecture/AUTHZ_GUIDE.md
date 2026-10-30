@@ -7,7 +7,7 @@
 > **Pinagmulan ng katotohanan:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Huling na-update:** 2026-09-22 — ang mga namespace ng saklaw ay tumuturo sa MCP-SERVER.md
 
-Ang OmniRoute ay may pipeline ng awtorisasyon na may kamalayan sa ruta na nagbabantay sa bawat kahilingan ng API. Ang klasipikasyon ay **deterministic** at **fail-closed** — anumang hindi maiklasipika ay nagtatapos bilang `MANAGEMENT` at nangangailangan ng session o token na pang-pamamahala. Ipinaliliwanag ng pahinang ito ang modelo para sa mga inhinyero na nagpapanatili ng mga ruta o nagdidisenyo ng mga bagong endpoint.
+Ang 67router ay may pipeline ng awtorisasyon na may kamalayan sa ruta na nagbabantay sa bawat kahilingan ng API. Ang klasipikasyon ay **deterministic** at **fail-closed** — anumang hindi maiklasipika ay nagtatapos bilang `MANAGEMENT` at nangangailangan ng session o token na pang-pamamahala. Ipinaliliwanag ng pahinang ito ang modelo para sa mga inhinyero na nagpapanatili ng mga ruta o nagdidisenyo ng mga bagong endpoint.
 
 ![AuthZ pipeline (3 klase ng ruta + pagsusuri ng patakaran)](../diagrams/exported/authz-pipeline.svg)
 

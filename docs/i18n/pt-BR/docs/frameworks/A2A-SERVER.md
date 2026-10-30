@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Português (Brasil))
+# 67router A2A Server Documentation (Português (Brasil))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Protocolo Agent-to-Agent v0.3 — OmniRoute como um agente de roteamento inteligente
+> Protocolo Agent-to-Agent v0.3 — 67router como um agente de roteamento inteligente
 
 A superfície A2A tem duas interfaces:
 
@@ -19,7 +19,7 @@ As tarefas são rastreadas pelo `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, 
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Retorna o Agent Card que descreve os recursos, as habilidades e os requisitos de autenticação do OmniRoute.
+Retorna o Agent Card que descreve os recursos, as habilidades e os requisitos de autenticação do 67router.
 
 O campo `version` do Agent Card é obtido de `process.env.npm_package_version` (consulte `src/app/.well-known/agent.json/route.ts:13`), portanto, ele permanece sincronizado automaticamente com o `package.json` a cada versão lançada.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Habilidades Disponíveis
 
-O OmniRoute expõe 6 habilidades A2A conectadas em `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Cada módulo de habilidade reside em `src/lib/a2a/skills/`.
+O 67router expõe 6 habilidades A2A conectadas em `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Cada módulo de habilidade reside em `src/lib/a2a/skills/`.
 
 | Habilidade         | ID                   | Descrição                                                                                                                                                             | Tags                       | Exemplos                                          |
 | :----------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------------ |
-| Smart Routing      | `smart-routing`      | Encaminha um prompt pelo provedor/combo ideal usando o motor de combos do OmniRoute + pontuação                                                                       | routing, providers         | "Encaminhe este prompt pelo melhor modelo"        |
+| Smart Routing      | `smart-routing`      | Encaminha um prompt pelo provedor/combo ideal usando o motor de combos do 67router + pontuação                                                                        | routing, providers         | "Encaminhe este prompt pelo melhor modelo"        |
 | Quota Management   | `quota-management`   | Relata o estado de cota por provedor, ajudando os chamadores a decidir quando limitar/alternar                                                                        | quota, providers           | "Verifique a cota da anthropic"                   |
 | Provider Discovery | `provider-discovery` | Lista os provedores instalados com capacidades, sinalizações de nível gratuito e status de OAuth                                                                      | providers, discovery       | "Quais provedores estão disponíveis?"             |
 | Cost Analysis      | `cost-analysis`      | Estima o custo de uma requisição/conversa com base no catálogo + uso recente                                                                                          | cost, usage                | "Estime o custo desta conversa"                   |
 | Health Report      | `health-report`      | Agrega o estado de circuit breaker, cooldown e bloqueio por provedor                                                                                                  | health, resilience         | "Mostre o status de saúde de todos os provedores" |
-| List Capabilities  | `list-capabilities`  | Retorna o catálogo completo de 45 entradas de Agent Skills (23 API + 21 CLI + 1 config) como uma tabela markdown com URLs brutas de SKILL.md para injeção de contexto | catalog, discovery, skills | "Liste todas as capacidades do OmniRoute"         |
+| List Capabilities  | `list-capabilities`  | Retorna o catálogo completo de 45 entradas de Agent Skills (23 API + 21 CLI + 1 config) como uma tabela markdown com URLs brutas de SKILL.md para injeção de contexto | catalog, discovery, skills | "Liste todas as capacidades do 67router"          |
 
 > O Agent Card deve ser mantido alinhado com o catálogo ativo de 375 provedores; as contagens de provedores e os metadados de gratuidade/sem autenticação são obtidos do registro em tempo de execução.
 
 ### Detalhes da Habilidade `list-capabilities`
 
-A habilidade `list-capabilities` é particularmente útil para agentes externos que precisam descobrir o que o OmniRoute expõe antes de enviar chamadas de API. Ela retorna um artefato de tabela markdown estruturada:
+A habilidade `list-capabilities` é particularmente útil para agentes externos que precisam descobrir o que o 67router expõe antes de enviar chamadas de API. Ela retorna um artefato de tabela markdown estruturada:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ O endpoint JSON-RPC `/a2a` é o ponto de entrada A2A canônico. Os endpoints RES
 | `/.well-known/agent.json`    | GET    | Agent Card (descoberta A2A)                                         | (público, armazenado em cache por 3600s)               |
 | `/api/a2a/tasks`             | POST   | Delegação de entrada para a frota OmniConductor (Conductor PRD RF5) | Bearer em relação a `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Delegação de entrada do Conductor (`POST /api/a2a/tasks`):** agentes A2A externos delegam trabalhos de programação à frota OmniConductor por meio do OmniRoute. Corpo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — somente as skills da frota Conductor (aquelas anunciadas no Agent Card) podem receber delegações; `metadata.conductor.repo.url` é obrigatório (a frota trabalha em repositórios git). A rota é convertida em `POST /v1/tasks` do hub usando o `CONDUCTOR_ORCHESTRATOR_TOKEN` do servidor (com fallback para `CONDUCTOR_HUB_TOKEN`) e retorna `201 { conductor_task_id, state: "submitted" }`; os estados das tarefas retornam pelo espelho SSE→A2A (RF1) e ficam visíveis por meio de `GET /api/a2a/tasks?skill=conductor`.
+**Delegação de entrada do Conductor (`POST /api/a2a/tasks`):** agentes A2A externos delegam trabalhos de programação à frota OmniConductor por meio do 67router. Corpo: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — somente as skills da frota Conductor (aquelas anunciadas no Agent Card) podem receber delegações; `metadata.conductor.repo.url` é obrigatório (a frota trabalha em repositórios git). A rota é convertida em `POST /v1/tasks` do hub usando o `CONDUCTOR_ORCHESTRATOR_TOKEN` do servidor (com fallback para `CONDUCTOR_HUB_TOKEN`) e retorna `201 { conductor_task_id, state: "submitted" }`; os estados das tarefas retornam pelo espelho SSE→A2A (RF1) e ficam visíveis por meio de `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

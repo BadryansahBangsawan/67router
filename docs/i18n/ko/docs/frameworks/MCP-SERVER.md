@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (한국어)
+# 67router MCP Server Documentation (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## 설치
 
-OmniRoute MCP는 기본 제공됩니다. 다음 명령으로 시작합니다.
+67router MCP는 기본 제공됩니다. 다음 명령으로 시작합니다.
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ Claude Desktop, Cursor, Cline 및 호환되는 MCP 클라이언트 설정은 [MC
 | `omniroute_switch_combo`        | `write:combos`        | 콤보 활성화 또는 비활성화                                                                                                       |
 | `omniroute_create_combo`        | `write:combos`        | 기존 콤보 API를 통해 검증된 콤보 생성                                                                                           |
 | `omniroute_check_quota`         | `read:quota`          | 사용된/전체 할당량, 남은 비율, 재설정 시간, 토큰 상태                                                                           |
-| `omniroute_route_request`       | `execute:completions` | OmniRoute 라우팅을 통해 채팅 완성 요청 전송                                                                                     |
+| `omniroute_route_request`       | `execute:completions` | 67router 라우팅을 통해 채팅 완성 요청 전송                                                                                      |
 | `omniroute_cost_report`         | `read:usage`          | 기간별 비용 보고서(세션/일/주/월)                                                                                               |
 | `omniroute_list_models_catalog` | `read:models`         | 기능, 상태 및 가격 정보를 포함한 전체 모델 카탈로그                                                                             |
 | `omniroute_radar_catalog`       | `read:radar`          | 로컬 서명된 Radar 카탈로그. 선택적으로 제공자/제품군 필터 사용 가능                                                             |
@@ -151,7 +151,7 @@ grep 모드를 통해 계속 사용할 수 있습니다. 저장, 검색, 목록 
 
 ### MCP 접근성 트리 필터 (v3.8.0)
 
-위의 압축 도구와 별개로, OmniRoute에는 MCP 브라우저/접근성 도구의 **도구 결과**가
+위의 압축 도구와 별개로, 67router에는 MCP 브라우저/접근성 도구의 **도구 결과**가
 에이전트에 반환되기 전에 압축하는 실행 후 필터가 포함되어 있습니다. 이 필터 자체는 도구가 아니며,
 상세한 접근성 트리 또는 브라우저 스냅샷 텍스트(2,000자 이상)가 포함된 모든 도구 결과에 투명하게
 적용됩니다.
@@ -247,7 +247,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 ### 클라우드 에이전트
 
-클라우드 에이전트는 LLM 제공자에 사용되는 것과 동일한 연결 모델을 통해 OmniRoute에 연동된
+클라우드 에이전트는 LLM 제공자에 사용되는 것과 동일한 연결 모델을 통해 67router에 연동된
 프로세스 외부 AI 코딩 에이전트(codex-cloud, cursor-cloud, devin, jules)입니다. 이들은
 자체 REST 인터페이스(`/api/v1/agents/*`)를 통해 노출되며 MCP 도구 카탈로그의 일부가
 **아닙니다**. 즉, 클라우드 에이전트를 호출해도 MCP 범위가 소비되지 않습니다.
@@ -480,7 +480,7 @@ HTTP/SSE에서 `open-sse/mcp-server/httpTransport.ts`는 이제
 
 | 변수                                    | 기본값                               | 용도                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | :-------------------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`             | MCP 서버가 OmniRoute 내부 API를 호출할 때 사용하는 기본 URL                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`             | MCP 서버가 67router 내부 API를 호출할 때 사용하는 기본 URL                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `OMNIROUTE_API_KEY`                     | (비어 있음)                          | 내부 API 호출 시 `Authorization: Bearer`로 전달되는 API 키                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"`인 경우에만 활성화) | 활성화하면 필요한 범위가 없을 경우 도구 호출을 거부하고 감사 로그에 `scope_denied:<reason>`을 기록합니다. 또한 키별 Authorization 헤더에서 확인된 모든 HTTP/SSE 호출자(`source === "authInfo"`)가 전체 `manage`/`admin` 범위를 보유하지 않은 경우(예: 제한적인 `mcp:connect` 우회 범위만 보유한 키), 이 플래그와 관계없이 적용이 강제로 활성화됩니다. 따라서 이 기본값은 로컬/stdio 단일 운영자 흐름에만 안전하며, 원격 비루프백 액세스에는 절대 안전하지 않습니다. |
 | `OMNIROUTE_MCP_SCOPES`                  | (비어 있음)                          | 기본적으로 "사용 가능"한 것으로 간주되는 쉼표로 구분된 범위 허용 목록(호출자가 자체 범위를 제공하지 않을 때 사용)                                                                                                                                                                                                                                                                                                                                                   |

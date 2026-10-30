@@ -6,7 +6,7 @@
 
 ## Povzetek
 
-OmniRoute zdaj podpira tri načine posredovanja za `/api/v1/relay/chat/completions`:
+67router zdaj podpira tri načine posredovanja za `/api/v1/relay/chat/completions`:
 
 - `ts`: Uporabi posredovanje TypeScript znotraj procesa.
 - `bifrost`: Vsili prehod Bifrost.
@@ -45,12 +45,12 @@ Pri velikem številu zahtev (veliko število žetonov/dan, skoraj konstantna pre
 
 ## Pogodba meje zalednega sistema
 
-Stabilna meja izdelka je posredniški API OmniRoute, ne implementacija nadzorne plošče. Nadzorna plošča Next.js lahko namešča, konfigurira in nadzira lokalne storitve, vendar mora usmerjanje zahtev vstopiti skozi posredniški API in se predati naprej za to mejo.
+Stabilna meja izdelka je posredniški API 67router, ne implementacija nadzorne plošče. Nadzorna plošča Next.js lahko namešča, konfigurira in nadzira lokalne storitve, vendar mora usmerjanje zahtev vstopiti skozi posredniški API in se predati naprej za to mejo.
 
 Dolgoročne izbire zalednega sistema:
 
 - Posredovanje TypeScript ohranite kot pot za pravilnike in nadomestno izvajanje znotraj procesa. Preverjanje pristnosti, seznami dovoljenih entitet, normalizacija zahtev, obračunavanje in varnostna preverjanja ostanejo tukaj pred kakršno koli predajo zalednemu sistemu.
-- Bifrost uporabite kot prednostni visokozmogljivi stranski proces 1. ravni, kadar uvedba zahteva manjšo variabilnost usmerjanja, centralizirano izmenjevanje ponudnikov ali horizontalno skaliranje čez več replik OmniRoute.
+- Bifrost uporabite kot prednostni visokozmogljivi stranski proces 1. ravni, kadar uvedba zahteva manjšo variabilnost usmerjanja, centralizirano izmenjevanje ponudnikov ali horizontalno skaliranje čez več replik 67router.
 - 9router in CLIPROXYAPI ohranite kot vdelani združljivostni storitvi. Izvajata se kot nadzorovana lokalna procesa in sta uporabna, kadar je želeni prilagojevalnik njuno delovanje za ponudnike/CLI, vendar ne smeta postati privzeti usmerjevalni mehanizem 1. ravni.
 - Nadzorni plošči ne omogočite, da v glavno pot posreduje poljubne URL-je storitev. URL-ji, ki jih zagotovi uporabniški vmesnik, so konfiguracijski vhodi; usmerjevalna koda mora razreševati registrirane zaledne sisteme s preverjenim zdravjem iz nastavitev na strani strežnika in stanja nadzornega procesa.
 - Za nadzorovane storitve trenutno dajte prednost protokolu HTTP prek vmesnika loopback, ker upravljani procesi že zagotavljajo API-je, združljive s protokolom HTTP, varovalo poti lahko revidira mejo, delovanje ob napakah in preklopu na nadomestno pot pa je vidno v dnevnikih zahtev. Prihodnji prenos prek SDK-ja ali vtičnice je smiselno dodati le, če merljivo zmanjša zakasnitev usmerjanja p99, ne da bi oslabil izolacijo ali semantiko preklopa na nadomestno pot.

@@ -4,9 +4,9 @@
 
 ---
 
-Nótaí d’oibreoirí maidir le `POST /v1/embeddings` nuair atá OmniRoute os comhair
+Nótaí d’oibreoirí maidir le `POST /v1/embeddings` nuair atá 67router os comhair
 Hindsight 0.9.1 (`encode(list[str])` téacs-amháin) agus Memorix 1.6.0 (geata meán
-Jina). Fíoraithe beo ar 2026-08-17 i gcoinne OmniRoute 3.8.49 ag
+Jina). Fíoraithe beo ar 2026-08-17 i gcoinne 67router 3.8.49 ag
 `https://omniroute.jaguar-fish.ts.net/v1`. Níl aon rún thíos.
 
 ## Aitheantais samhlacha a oibríonn
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Ní féidir le `gemini-embedding-2` dúchasach oibriú ó GitOps amháin. Ní mór eochair Google AI
 Studio a chur leis mar nasc soláthraí `gemini` (an painéal nó
-`GEMINI_API_KEY` arna hiompórtáil isteach in OmniRoute). Níl an rún sin sa stór seo.
+`GEMINI_API_KEY` arna hiompórtáil isteach in 67router). Níl an rún sin sa stór seo.
 
 ### Conair ilmhódach Jina
 
@@ -100,7 +100,7 @@ Studio a chur leis mar nasc soláthraí `gemini` (an painéal nó
 
 ### Oibiacht íomhá Jina / Memorix
 
-Mír íomhá chanónach OmniRoute (PNG 28×28, 784 picteilín — diúltaíonn Jina do 1×1):
+Mír íomhá chanónach 67router (PNG 28×28, 784 picteilín — diúltaíonn Jina do 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Tugann `{ "text": "..." }` measctha le `{ "image": "data:..." }` an 400 céanna.
 
 Is téacs-amháin iad leabuithe Hindsight (`encode(list[str])`). Ní sheolann sé
 oibiachtaí íomhá. Socraigh bun-URL leabuithe Hindsight atá comhoiriúnach le OpenAI chuig
-OmniRoute `/v1` agus úsáid aitheantas a oibríonn ón tábla thuas
+67router `/v1` agus úsáid aitheantas a oibríonn ón tábla thuas
 (`jina-ai/jina-embeddings-v5-omni-small` nó
 `openrouter/google/gemini-embedding-2`). Ná socraigh an tsamhail mar
 `gemini-embedding-2` lom mura bhfuil eochair API `gemini` ann ar an ngeata.
@@ -157,11 +157,11 @@ OmniRoute `/v1` agus úsáid aitheantas a oibríonn ón tábla thuas
 ### Memorix 1.6.0
 
 Ní dhéileálann Memorix ach le `baseUrl` a mheaitseálann `/jina\.ai/i` mar mheáin dhúchasacha. Fanann
-URL OmniRoute ar an gconair téacs-amháin fiú nuair is Jina omni an tsamhail.
-Fadhb leis an gcliant Memorix is ea an geata sin. Ar leithligh uaidh sin, diúltaíonn OmniRoute fós
+URL 67router ar an gconair téacs-amháin fiú nuair is Jina omni an tsamhail.
+Fadhb leis an gcliant Memorix is ea an geata sin. Ar leithligh uaidh sin, diúltaíonn 67router fós
 don chorp Jina `{image: "data:..."}` a sheolfadh Memorix dá n-osclófaí an geata,
-mar sin ní féidir le cliaint atá comhoiriúnach le Jina íomhánna a leabú trí OmniRoute
+mar sin ní féidir le cliaint atá comhoiriúnach le Jina íomhánna a leabú trí 67router
 gan an scéimre chanónach `{type,source}`.
 
 Úsáid `jina-ai/jina-embeddings-v5-omni-small` le haghaidh téacs. Ná treoraigh
-`base_url` Memorix chuig `https://api.jina.ai` — coinnigh OmniRoute mar an t-aon léim amháin.
+`base_url` Memorix chuig `https://api.jina.ai` — coinnigh 67router mar an t-aon léim amháin.

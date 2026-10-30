@@ -10,7 +10,7 @@
 
 ## បរិបទ
 
-បច្ចុប្បន្ន OmniRoute បង្ហាញមុខងារ persistence ដែលផ្តោតលើដែនពី `src/lib/db/` ខណៈដែលការតភ្ជាប់រួម ដែលត្រឡប់ដោយ `src/lib/db/core.ts` អនុវត្តតាមកិច្ចសន្យា `SqliteAdapter` បែបសមកាលកម្មនៅក្នុង `src/lib/db/adapters/types.ts`។ Adapter នោះគាំទ្រ SQLite runtime ជាច្រើន ប៉ុន្តែផ្ទៃប្រើប្រាស់របស់វានៅតែមានទម្រង់តាម SQLite៖ prepared statements បែបសមកាលកម្ម, `pragma`, transaction ប្រភេទ deferred និង immediate, ការបម្រុងទុកបែប native/ចម្លងឯកសារ, checkpoint និង handle មូលដ្ឋានទិន្នន័យមូលដ្ឋាន។
+បច្ចុប្បន្ន 67router បង្ហាញមុខងារ persistence ដែលផ្តោតលើដែនពី `src/lib/db/` ខណៈដែលការតភ្ជាប់រួម ដែលត្រឡប់ដោយ `src/lib/db/core.ts` អនុវត្តតាមកិច្ចសន្យា `SqliteAdapter` បែបសមកាលកម្មនៅក្នុង `src/lib/db/adapters/types.ts`។ Adapter នោះគាំទ្រ SQLite runtime ជាច្រើន ប៉ុន្តែផ្ទៃប្រើប្រាស់របស់វានៅតែមានទម្រង់តាម SQLite៖ prepared statements បែបសមកាលកម្ម, `pragma`, transaction ប្រភេទ deferred និង immediate, ការបម្រុងទុកបែប native/ចម្លងឯកសារ, checkpoint និង handle មូលដ្ឋានទិន្នន័យមូលដ្ឋាន។
 
 ផ្លូវ startup និង recovery បច្ចុប្បន្នក៏គ្រប់គ្រងវដ្តជីវិតឯកសារ SQLite ផងដែរ។ `src/lib/db/core.ts` កំណត់ទីតាំង `storage.sqlite`, រក្សាទុក adapter សកលមួយសម្រាប់ដំណើរការទាំងមូល, ធ្វើ checkpoint លើ WAL, រក្សាទុកតារាងដែលបានជ្រើសរើសក្នុងអំឡុងពេល recovery និងលុបឯកសាររួមដំណើររបស់ SQLite នៅពេលស្ថាបនាមូលដ្ឋានទិន្នន័យឡើងវិញ។ ការជ្រើសរើស driver នៅក្នុង `src/lib/db/adapters/driverFactory.ts` ជ្រើសរើសក្នុងចំណោម SQLite runtime ដែលបានគាំទ្រ; វាមិនមែនជា abstraction សម្រាប់ backend ខាងក្រៅទេ។
 

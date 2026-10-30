@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` permite que el runtime real de Claude Code use el endpoint local de mensajes
-de Anthropic de OmniRoute mientras la CLI oficial de Devin proporciona respuestas del modelo mediante ACP stdio. No
+de Anthropic de 67router mientras la CLI oficial de Devin proporciona respuestas del modelo mediante ACP stdio. No
 modifica los proveedores existentes Anthropic, Claude OAuth, Claude Web ni `devin-cli`.
 
 Para las llamadas a herramientas controladas por el cliente, enrute mediante `devin-cli-agentic` (alias `dva`), el
@@ -18,7 +18,7 @@ metadatos de su modelo están marcados en consecuencia para que el enrutamiento 
 > `3000.2.17` y el modelo `swe-1-7-lightning`; esa ejecución final en vivo demostró turnos de `Read`,
 > `Edit` y `Bash` controlados por el cliente, resultados correctos de `npm test`, detección de comandos y
 > habilidades del proyecto, enrutamiento exclusivo mediante Devin y cero tráfico saliente hacia Claude. Después, la fijación se actualizó a `2.1.258`
-> (la generación de la CLI cuya identidad de Claude suplanta OmniRoute y la primera línea que incluye
+> (la generación de la CLI cuya identidad de Claude suplanta 67router y la primera línea que incluye
 > de forma nativa el nivel Fable 5.1). Con la nueva fijación, se verificaron la capa de instalación y `claude --version`
 > en la imagen base fijada, y pasan el conjunto de pruebas unitarias del puente, `compose config` y la
 > prueba estática de aislamiento; sin embargo, el escenario simulado sin conexión y el conjunto en vivo de tres escenarios
@@ -51,11 +51,11 @@ El analizador acepta un sobre independiente `<tool>{...}</tool>` por turno del m
 el nombre con la lista de herramientas de la solicitud, valida los argumentos con el JSON Schema de esa herramienta,
 rechaza la combinación de narrativa y acciones y permite una reparación limitada. Luego, Claude Code
 ejecuta localmente el `tool_use` de Anthropic resultante y devuelve el `tool_result` mediante
-OmniRoute.
+67router.
 
 ## Enrutamiento automático
 
-El proveedor puede incluirse en los grupos de candidatos `auto/*` de OmniRoute cuando no está bloqueado.
+El proveedor puede incluirse en los grupos de candidatos `auto/*` de 67router cuando no está bloqueado.
 La elegibilidad como candidato no garantiza su selección: la estrategia de enrutamiento de la combinación (por ejemplo,
 el último proveedor que funcionó) puede preferir otro proveedor. Use `dva/<model>` o una combinación que priorice Devin cuando
 necesite que todas las solicitudes se procesen mediante Devin.
@@ -67,17 +67,17 @@ prohibidas. Los servicios de Compose:
 
 - se ejecutan con UID/GID `10001:10001`, con un sistema de archivos raíz de solo lectura, capacidades descartadas y
   `no-new-privileges`;
-- usan un `/home/bridge` privado, un volumen de configuración dedicado para Claude, datos de OmniRoute aislados
+- usan un `/home/bridge` privado, un volumen de configuración dedicado para Claude, datos de 67router aislados
   y un volumen `devin-auth` independiente;
 - montan únicamente espacios de trabajo y evidencias desechables de `.sandbox`;
 - no montan el directorio de inicio del host, Keychain, credenciales SSH, credenciales de la nube ni el socket de Docker;
 - construyen entornos explícitos y eliminan las variables de API/OAuth/enrutamiento de Anthropic;
 - dirigen la inferencia de Claude Code únicamente a `http://omniroute:20128` con una clave exclusivamente local.
 
-El perfil sin conexión utiliza una red interna. En el perfil activo, OmniRoute accede a los
+El perfil sin conexión utiliza una red interna. En el perfil activo, 67router accede a los
 endpoints oficiales de Devin únicamente a través de `network-guard`; se deniegan los destinos no relacionados.
 Claude Code cuenta con una protección de salida independiente que deniega todo y solo puede acceder al servicio
-local de OmniRoute mediante `NO_PROXY`. Los archivos de auditoría de las protecciones son montados únicamente por
+local de 67router mediante `NO_PROXY`. Los archivos de auditoría de las protecciones son montados únicamente por
 su proceso de protección correspondiente. Los scripts verifican la propiedad, el modo y el número de enlaces de los archivos, así como cada decisión, antes de exportar
 evidencias sin tokens.
 

@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O OmniRoute suporta agora três modos de encaminhamento para `/api/v1/relay/chat/completions`:
+O 67router suporta agora três modos de encaminhamento para `/api/v1/relay/chat/completions`:
 
 - `ts`: utiliza o encaminhamento TypeScript no processo.
 - `bifrost`: força a utilização do gateway Bifrost.
@@ -45,12 +45,12 @@ Se está atualmente a comparar o 9router e a CLIPROXYAPI:
 
 ## Contrato de fronteira do backend
 
-A fronteira estável do produto é a API de encaminhamento do OmniRoute, não a implementação do dashboard. O dashboard Next.js pode instalar, configurar e supervisionar serviços locais, mas o encaminhamento de pedidos deve entrar através da API de encaminhamento e ser transferido para outro componente atrás dessa fronteira.
+A fronteira estável do produto é a API de encaminhamento do 67router, não a implementação do dashboard. O dashboard Next.js pode instalar, configurar e supervisionar serviços locais, mas o encaminhamento de pedidos deve entrar através da API de encaminhamento e ser transferido para outro componente atrás dessa fronteira.
 
 Opções de backend a longo prazo:
 
 - Mantenha o encaminhamento TypeScript como caminho de políticas e alternativa no processo. A autenticação, as listas de permissões, a normalização de pedidos, a contabilização e as verificações de segurança permanecem aqui antes de qualquer transferência para o backend.
-- Utilize o Bifrost como o sidecar Tier-1 preferencial para elevado débito quando a implementação necessitar de menor variação no encaminhamento, rotação centralizada de fornecedores ou expansão horizontal por várias réplicas do OmniRoute.
+- Utilize o Bifrost como o sidecar Tier-1 preferencial para elevado débito quando a implementação necessitar de menor variação no encaminhamento, rotação centralizada de fornecedores ou expansão horizontal por várias réplicas do 67router.
 - Mantenha o 9router e a CLIPROXYAPI como serviços de compatibilidade incorporados. São executados como processos locais supervisionados e são úteis quando o respetivo comportamento de fornecedor/CLI é o adaptador pretendido, mas não devem tornar-se o motor de encaminhamento Tier-1 predefinido.
 - Não permita que o dashboard introduza URLs de serviços arbitrários no caminho crítico. Os URLs fornecidos pela IU são dados de configuração; o código de encaminhamento deve resolver backends registados e sujeitos a verificações de integridade a partir das definições do servidor e do estado do supervisor.
 - Atualmente, dê preferência a HTTP por loopback para serviços supervisionados, porque os processos geridos já expõem APIs compatíveis com HTTP, a proteção da rota pode auditar a fronteira e o comportamento de falha/recurso a alternativa é visível nos registos de pedidos. Só vale a pena adicionar futuramente um transporte por SDK ou socket se este reduzir de forma mensurável a latência de encaminhamento p99 sem enfraquecer o isolamento nem a semântica de recurso a alternativa.

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **கடைசியாகப் புதுப்பிக்கப்பட்டது:** 2026-06-28 — v3.8.40
 
-OmniRoute, WordPress பாணியிலான செருகுநிரல் அமைப்புடன் வழங்கப்படுகிறது. செருகுநிரல்கள் தன்னிறைவான
+67router, WordPress பாணியிலான செருகுநிரல் அமைப்புடன் வழங்கப்படுகிறது. செருகுநிரல்கள் தன்னிறைவான
 கோப்பகங்கள் — ஒவ்வொன்றிலும் ஒரு `plugin.json` மேனிஃபெஸ்ட் மற்றும் ஒரு நுழைவுக் கோப்பு இருக்கும் — அவை
 கோரிக்கை செயலாக்கத் தொடரிலும் (`onRequest` / `onResponse` / `onError`), மேலும்
 வாழ்க்கைச்சுழற்சி நிகழ்வுகளிலும் (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -155,7 +155,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Plugin கோப்பகம்
 
-Plugin-கள் OmniRoute தரவுக் கோப்பகத்தின் கீழ் உள்ளன:
+Plugin-கள் 67router தரவுக் கோப்பகத்தின் கீழ் உள்ளன:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

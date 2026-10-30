@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute dispose de trois mécanismes de résilience distincts mais liés. Chacun a une portée et un objectif différents. Gardez-les séparés lors du débogage du comportement de routage.
+67router dispose de trois mécanismes de résilience distincts mais liés. Chacun a une portée et un objectif différents. Gardez-les séparés lors du débogage du comportement de routage.
 
 ![Modèle de résilience à 3 couches](../diagrams/exported/resilience-3layers.svg)
 
@@ -192,7 +192,7 @@ Les trois en-têtes d'affinité de session ne sont jamais transmis en amont — 
 
 ### Baux exclusifs de connexion à session gérée
 
-**Portée :** un client/session HTTP géré actif possède une connexion OmniRoute éligible.
+**Portée :** un client/session HTTP géré actif possède une connexion 67router éligible.
 
 **Objectif :** fournir une propriété de connexion exclusive et durable aux clients qui ont besoin d'une barrière de routage stricte d'une requête à l'autre. Cela diffère de l'affinité de session, qui est une préférence de continuité souple : un bail exclusif persiste l'état du cycle de vie dans SQLite, impose l'unicité globale du propriétaire actif et de la connexion active, et rejette une génération obsolète avant l'aiguillage vers le fournisseur.
 
@@ -206,7 +206,7 @@ authentifiée et l'ID de connexion active. Les en-têtes de contrôle de bail so
 des instantanés de requêtes conservés et des en-têtes de l'exécuteur amont.
 
 Si le routage ordinaire dispose de candidats gérés éligibles mais que chaque candidat libre est occupé
-par un bail actif étranger, OmniRoute renvoie HTTP `429`, un code d'indisponibilité de capacité de bail,
+par un bail actif étranger, 67router renvoie HTTP `429`, un code d'indisponibilité de capacité de bail,
 un état d'attente de capacité et un `Retry-After` borné dérivé de l'expiration pertinente la plus proche.
 Une éligibilité ordinaire vide ne constitue pas une contention de bail et conserve sa sémantique
 d'erreur de routage existante.
@@ -231,7 +231,7 @@ Les mécanismes associés restent distincts :
   connexion), pour les autres fournisseurs `getQuotaScopedModelForProvider()`.
 - `404` verrouille le modèle seul (`getModelLockKey()` restreint `not_found`).
 - Tout autre statut — les échecs de transport/serveur `5xx` et le `502` synthétisé
-  par OmniRoute lui-même lors de la validation de qualité — ne verrouille que le
+  par 67router lui-même lors de la validation de qualité — ne verrouille que le
   tuple **exact** provider/connection/model. Un flux défectueux sur un modèle ne
   prouve rien concernant le quota du compte ; avant cette règle, une seule réponse
   vide sur `codex/gpt-5.6-luna` retirait du routage tous les modèles `gpt-5*` de
@@ -374,7 +374,7 @@ de débit → Plafonds de concurrence par modèle**, un `model=cap` par ligne) o
 - **Mise en file d'attente locale, sans découverte :** les requêtes
   excédentaires sont mises en file d'attente localement avec la sémantique de
   file/délai d'attente existante (erreurs d'admission typées
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ne découvre ni ne
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ne découvre ni ne
   déduit la politique amont — il applique les plafonds exacts configurés par
   l'opérateur. Une porte de modèle saturée ne désactive jamais le fournisseur et
   ne crée jamais de verrouillage permanent du modèle ; le comportement amont
@@ -484,7 +484,7 @@ La vérification d'admission elle-même est une fonction pure (`open-sse/service
 ### Filet de sécurité d'activation automatique de la limitation de débit et protection des connexions (`rateLimitProtection`)
 
 **Filet de sécurité d'activation automatique** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, par défaut `true`) :
-Par défaut, OmniRoute active automatiquement la protection par file d'attente de limitation de débit pour toutes les connexions actives de fournisseurs à clé API (`getProviderCategory(provider) === "apikey"`). Cela garantit que les requêtes entrantes vers des clés API amont sensibles au débit sont mises en file d'attente et limitées via Bottleneck, plutôt que de provoquer des rafales d'erreurs 429 amont. Le filet de sécurité peut être remplacé via la variable d'environnement `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` désactive, `true`/`1`/`on` force l'activation), qui prime sur le paramètre persistant du tableau de bord (**Paramètres → Résilience** / `PATCH /api/resilience`).
+Par défaut, 67router active automatiquement la protection par file d'attente de limitation de débit pour toutes les connexions actives de fournisseurs à clé API (`getProviderCategory(provider) === "apikey"`). Cela garantit que les requêtes entrantes vers des clés API amont sensibles au débit sont mises en file d'attente et limitées via Bottleneck, plutôt que de provoquer des rafales d'erreurs 429 amont. Le filet de sécurité peut être remplacé via la variable d'environnement `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` désactive, `true`/`1`/`on` force l'activation), qui prime sur le paramètre persistant du tableau de bord (**Paramètres → Résilience** / `PATCH /api/resilience`).
 
 **Sémantique du champ `rateLimitProtection` par connexion :**
 La protection contre la limitation de débit par connexion est suivie via le champ booléen `rateLimitProtection` des connexions de fournisseurs (persisté sous `rate_limit_protection` dans SQLite) :
@@ -856,7 +856,7 @@ quota épuisé. Limites assumées :
 > guide de l'agent reste sous le budget de contexte de 40k. Il s'agit de la vue condensée,
 > destinée à l'agent, des sections ci-dessus ; les sections numérotées restent la référence complète.
 
-OmniRoute dispose de trois mécanismes de défaillance temporaire liés mais distincts. Gardez leur
+67router dispose de trois mécanismes de défaillance temporaire liés mais distincts. Gardez leur
 portée séparée lors du débogage du comportement de routage. Voir le
 [diagramme de résilience à 3 couches](../diagrams/exported/resilience-3layers.svg)
 (source : [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

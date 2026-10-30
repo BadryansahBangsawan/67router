@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (中文 (繁體))
+# Codex CLI — Configuration with 67router (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-將 Codex CLI 指向 OmniRoute 作為 OpenAI 相容後端的完整指南。
+將 Codex CLI 指向 67router 作為 OpenAI 相容後端的完整指南。
 
 ---
 
@@ -59,17 +59,17 @@ command -v codex
 codex --version
 ```
 
-### 本機未驗證的 OmniRoute：使用佔位金鑰即可
+### 本機未驗證的 67router：使用佔位金鑰即可
 
 在第一個請求離開 CLI **之前**，Codex 會驗證 `env_key` 所指定的環境變數
-是否存在。如果你的**本機** OmniRoute 執行個體不需要驗證，
+是否存在。如果你的**本機** 67router 執行個體不需要驗證，
 使用任何非空白佔位值即可：
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-如果你的 OmniRoute 伺服器受到保護或位於遠端，請改用真實金鑰。
+如果你的 67router 伺服器受到保護或位於遠端，請改用真實金鑰。
 
 > **常見主機選項**
 >
@@ -85,19 +85,19 @@ export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 
 Codex CLI 已於 2026 年 2 月棄用 `wire_api = "chat"`（Chat Completions），現在**要求**使用 `wire_api = "responses"`（OpenAI Responses API）。自 v0.138 起，設定 `wire_api = "chat"` 會導致啟動時立即當機。
 
-包括 GLM 和 Kimi 在內的許多提供者，目前仍只提供 Chat Completions 端點。DeepSeek V4 現在除了 Anthropic 相容端點之外，也提供原生 Responses API；OmniRoute 預設使用 Responses，並允許每個 DeepSeek 連線選擇 Anthropic 相容模式。
+包括 GLM 和 Kimi 在內的許多提供者，目前仍只提供 Chat Completions 端點。DeepSeek V4 現在除了 Anthropic 相容端點之外，也提供原生 Responses API；67router 預設使用 Responses，並允許每個 DeepSeek 連線選擇 Anthropic 相容模式。
 
-**OmniRoute 會以透明方式解決此問題：**
+**67router 會以透明方式解決此問題：**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute 選擇提供者的原生協定，並在需要時進行轉譯
+  → POST /v1/responses (67router)
+    → 67router 選擇提供者的原生協定，並在需要時進行轉譯
     → POST /responses (DeepSeek V4) 或 /chat/completions (Mistral / GLM / Kimi / 其他)
 ```
 
-使用 OmniRoute 時，你完全不需要額外的轉譯代理。**所有模型都使用 `wire_api = "responses"`**——其餘部分由 OmniRoute 處理。
+使用 67router 時，你完全不需要額外的轉譯代理。**所有模型都使用 `wire_api = "responses"`**——其餘部分由 67router 處理。
 
 > **`wire_api` 是預設值**——此欄位預設為 `"responses"`，可完全從 `config.toml` 省略。只有在需要明確記錄設定意圖時，才應明確設定此欄位。
 
@@ -118,7 +118,7 @@ Codex CLI
 
 ### 各模型的上下文視窗
 
-| 模型                                  | OmniRoute ID                         | 上下文視窗           | `auto_compact` | `tool_output_limit` |
+| 模型                                  | 67router ID                          | 上下文視窗           | `auto_compact` | `tool_output_limit` |
 | ------------------------------------- | ------------------------------------ | -------------------- | -------------- | ------------------- |
 | GPT-5.5                               | `cx/gpt-5.5`                         | 可靠 400k（最大 1M） | 350,000        | 32,768              |
 | Kimi K2.7（思考型）                   | `kmc/kimi-k2.7`                      | 131,072              | 112,000        | 32,768              |
@@ -146,16 +146,16 @@ Codex CLI
 
 ## 模型前綴：`cx/`
 
-OmniRoute 中的所有 Codex 模型皆使用 `cx/` 前綴：
+67router 中的所有 Codex 模型皆使用 `cx/` 前綴：
 
-| Codex CLI 名稱          | OmniRoute 模型     |
+| Codex CLI 名稱          | 67router 模型      |
 | ----------------------- | ------------------ |
 | `cx/gpt-5.5`            | GPT-5.5 標準版     |
 | `cx/gpt-5.4`            | GPT-5.4 標準版     |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini       |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini |
 
-其他提供者使用各自的前綴（`kmc/`、`glm/`、`ds/`、`ollamacloud/`、`opencode-go/`、`mistral/`）— 前綴與 OmniRoute 提供者別名一致。
+其他提供者使用各自的前綴（`kmc/`、`glm/`、`ds/`、`ollamacloud/`、`opencode-go/`、`mistral/`）— 前綴與 67router 提供者別名一致。
 
 ---
 
@@ -185,9 +185,9 @@ model_reasoning_effort = "xhigh"   # 支援時也可使用 ultra
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### OmniRoute 思考預算（伺服器設定）
+### 67router 思考預算（伺服器設定）
 
-在 OmniRoute 主機上，**Settings → AI → Thinking Budget** 必須設為 **`passthrough`**，Codex 的強度／摘要設定才能傳到上游。**`auto` 模式會移除**所有用戶端的 `reasoning` / `reasoning_effort` 欄位，即使 Codex 已正確設定，也會導致思考面板內容為空。
+在 67router 主機上，**Settings → AI → Thinking Budget** 必須設為 **`passthrough`**，Codex 的強度／摘要設定才能傳到上游。**`auto` 模式會移除**所有用戶端的 `reasoning` / `reasoning_effort` 欄位，即使 Codex 已正確設定，也會導致思考面板內容為空。
 
 完整指南：[THINKING_BUDGET.md](./THINKING_BUDGET.md)。
 
@@ -273,10 +273,10 @@ codex -p chat     # cx/gpt-5.5，未設定強度（伺服器預設值）
 
 ## 使用 `omniroute setup-codex` 自動產生設定檔
 
-若您在 VPS 上執行 OmniRoute，可以從即時模型目錄自動產生設定檔：
+若您在 VPS 上執行 67router，可以從即時模型目錄自動產生設定檔：
 
 ```bash
-# 從 VPS 執行（使用連接埠 20128 上的本機 OmniRoute）
+# 從 VPS 執行（使用連接埠 20128 上的本機 67router）
 omniroute setup-codex
 
 # 從任何機器執行——指向您的 VPS
@@ -304,22 +304,22 @@ omniroute setup-codex --codex-home /path/to/.codex
 `env_key = "OMNIROUTE_API_KEY"`；金鑰本身絕不會儲存，也不會顯示在
 預覽中。請在啟動 Codex 的環境中設定該變數。若未提供
 金鑰，新定義將不要求金鑰，適用於已設定為接受未驗證請求的
-OmniRoute 執行個體。
+67router 執行個體。
 
 下文所述的選擇性目錄自動同步會保留覆寫設定中既有的提供者定義，
 但不會初始化新的提供者設定；請先透過明確設定或儀表板設定提供者。
 試執行預覽會省略既有的提供者設定，因為其中可能包含由操作人員管理的憑證。
 
-在成功探索／匯入提供者模型並變更即時目錄後，OmniRoute 也可以**自動同步**這些相同的設定檔。此功能**需選擇啟用，且預設為關閉**：可從 **CLI Code 儀表板**切換（「CLI 設定檔自動同步」→ Codex），或設定 `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true`（亦會遵循 `CLI_ALLOW_CONFIG_WRITES`，其預設為啟用）。啟用後，它只會寫入個別的 `~/.codex/*.config.toml` 設定檔；絕不會變更作用中／預設的 `~/.codex/config.toml`、Codex-lb 設定、驗證或提供者選擇。
+在成功探索／匯入提供者模型並變更即時目錄後，67router 也可以**自動同步**這些相同的設定檔。此功能**需選擇啟用，且預設為關閉**：可從 **CLI Code 儀表板**切換（「CLI 設定檔自動同步」→ Codex），或設定 `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true`（亦會遵循 `CLI_ALLOW_CONFIG_WRITES`，其預設為啟用）。啟用後，它只會寫入個別的 `~/.codex/*.config.toml` 設定檔；絕不會變更作用中／預設的 `~/.codex/config.toml`、Codex-lb 設定、驗證或提供者選擇。
 
 ---
 
 ## 使用 `omniroute launch-codex` 啟動 Codex
 
-在啟動 Codex 前，先對您的 OmniRoute 執行個體進行健康狀態檢查：
+在啟動 Codex 前，先對您的 67router 執行個體進行健康狀態檢查：
 
 ```bash
-# 使用本機 OmniRoute 啟動（預設連接埠為 20128）
+# 使用本機 67router 啟動（預設連接埠為 20128）
 omniroute launch-codex
 
 # 使用指定的設定檔啟動
@@ -469,7 +469,7 @@ codex debug models --bundled       # 以 JSON 列出內建模型目錄
 
 ## 長時間執行的任務
 
-OmniRoute 的兩項預設值可能會在不知不覺中破壞持續數小時的 Codex CLI 工作階段。兩者都不是 Codex CLI 設定，而是位於 OmniRoute 端。從會固定帳號並停用閒置中止機制的上游代理移轉設定時，使用者經常會同時遇到這兩個問題，並因此認為 OmniRoute「無法維持長時間工作階段」。
+67router 的兩項預設值可能會在不知不覺中破壞持續數小時的 Codex CLI 工作階段。兩者都不是 Codex CLI 設定，而是位於 67router 端。從會固定帳號並停用閒置中止機制的上游代理移轉設定時，使用者經常會同時遇到這兩個問題，並因此認為 67router「無法維持長時間工作階段」。
 
 | 症狀                                               | 可能原因                                         | 調整項目                 |
 | -------------------------------------------------- | ------------------------------------------------ | ------------------------ |
@@ -491,7 +491,7 @@ OmniRoute 的兩項預設值可能會在不知不覺中破壞持續數小時的 
 
 **維持為 0 時會發生什麼問題**
 
-多輪 Codex 對話中的每一輪都會由目前啟用的組合策略獨立路由，因此**每一輪都可能落到不同的帳號**。這會破壞上游工作階段／提示快取的連續性。只有當 TTL 大於 `0` 時，OmniRoute 才會查閱 Codex 工作階段標頭（`x-codex-session-id` / `x-session-id` / `x-omniroute-session`）以及 `prompt_cache_key` / `session_id` 等本文欄位（`src/sse/services/auth.ts` 中的 `extractSessionAffinityKey`）。
+多輪 Codex 對話中的每一輪都會由目前啟用的組合策略獨立路由，因此**每一輪都可能落到不同的帳號**。這會破壞上游工作階段／提示快取的連續性。只有當 TTL 大於 `0` 時，67router 才會查閱 Codex 工作階段標頭（`x-codex-session-id` / `x-session-id` / `x-omniroute-session`）以及 `prompt_cache_key` / `session_id` 等本文欄位（`src/sse/services/auth.ts` 中的 `extractSessionAffinityKey`）。
 
 **針對持續數小時的單一任務之建議**
 
@@ -513,13 +513,13 @@ OmniRoute 的兩項預設值可能會在不知不覺中破壞持續數小時的 
 
 Codex 的推理／工具回合若超過 10 分鐘保持靜默，且**沒有真正的上游資料區塊**，就會被 SSE 閒置監控程式（`open-sse/utils/stream.ts`）強制關閉。用戶端通常只會看到連線直接中斷——這與「在沒有任何通知的情況下自動停止」的現象一致。
 
-關鍵細節：OmniRoute 合成的 SSE **心跳不會重設**閒置計時。只有真正的上游回應本文區塊才會更新 `lastChunkTime`。從監控程式的角度來看，仍在「思考」但保持安靜的模型，與停滯的上游沒有任何差別。
+關鍵細節：67router 合成的 SSE **心跳不會重設**閒置計時。只有真正的上游回應本文區塊才會更新 `lastChunkTime`。從監控程式的角度來看，仍在「思考」但保持安靜的模型，與停滯的上游沒有任何差別。
 
 相關的 Undici 回應本文閒置設定：`FETCH_BODY_TIMEOUT_MS`（預設值也是相同的 10 分鐘基準；設為 `0` 可停用）。對於串流，`FETCH_TIMEOUT_MS` 只涵蓋連線建立／首批標頭；串流啟用後，停滯狀況由 `STREAM_IDLE_TIMEOUT_MS` 與 `FETCH_BODY_TIMEOUT_MS` 控制。
 
 **針對持續數小時的單一任務之建議**
 
-在 OmniRoute 處理程序的環境中（`.env` / compose / systemd）：
+在 67router 處理程序的環境中（`.env` / compose / systemd）：
 
 ```bash
 # 停用串流閒置與回應本文閒置逾時，以支援長時間推理回合
@@ -535,12 +535,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-變更這些環境變數後，請重新啟動 OmniRoute。
+變更這些環境變數後，請重新啟動 67router。
 
 ### 具體做法——持續數小時的 Codex 任務
 
 1. **固定帳戶：** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200`（12 小時）或 `86400`（上限 24 小時）。
-2. **提高／停用閒置逾時**，請在 OmniRoute 的環境中設定：
+2. **提高／停用閒置逾時**，請在 67router 的環境中設定：
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -548,7 +548,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. 保留一般的 Codex `config.toml` 設定（`wire_api = "responses"`、正確的 `base_url`、`OMNIROUTE_API_KEY`）——Codex 端不存在可控制這兩種行為的親和性／閒置設定。
-4. 重新啟動 OmniRoute，然後開始長時間執行的 Codex 任務。
+4. 重新啟動 67router，然後開始長時間執行的 Codex 任務。
 
 ### 預設值決策（#7287）
 
@@ -561,13 +561,13 @@ FETCH_BODY_TIMEOUT_MS=0
 
 ### 診斷閒置中斷
 
-當閒置監控程式觸發時，OmniRoute 會記錄格式如下的日誌：
+當閒置監控程式觸發時，67router 會記錄格式如下的日誌：
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-搜尋 `Idle timeout: no data from`（或代碼 `stream_idle_timeout`／錯誤名稱 `StreamIdleTimeoutError`）。提供者區段會顯示 OmniRoute 為該請求使用的值（`codex`、其他提供者 ID，或在未知時顯示 `provider`）——它不一定永遠是字面值 `codex`。
+搜尋 `Idle timeout: no data from`（或代碼 `stream_idle_timeout`／錯誤名稱 `StreamIdleTimeoutError`）。提供者區段會顯示 67router 為該請求使用的值（`codex`、其他提供者 ID，或在未知時顯示 `provider`）——它不一定永遠是字面值 `codex`。
 
 ---
 
@@ -577,16 +577,16 @@ FETCH_BODY_TIMEOUT_MS=0
 從設定中移除 `wire_api = "chat"`。設定 `wire_api = "responses"`，或省略此欄位（自 v0.138 起預設為 `"responses"`）。
 
 **`Error: model not found`**
-確認模型存在於 OmniRoute 中，且具有正確的前綴。使用 `omniroute models list`，或開啟 `/dashboard/providers/<provider>`。
+確認模型存在於 67router 中，且具有正確的前綴。使用 `omniroute models list`，或開啟 `/dashboard/providers/<provider>`。
 
 **`Authentication error`**
 確認已匯出 `OMNIROUTE_API_KEY`：`echo $OMNIROUTE_API_KEY`。
 
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
-Codex 會在發出第一個請求之前，驗證該環境變數是否存在。對於受保護的伺服器，請匯出真實的金鑰；若您的**本機** OmniRoute 執行個體不需要驗證，則可使用非空白的預留值，例如 `OMNIROUTE_API_KEY=local`。如果您已將其新增至 `~/.bashrc` 或 `~/.zshrc`，請重新啟動 shell。
+Codex 會在發出第一個請求之前，驗證該環境變數是否存在。對於受保護的伺服器，請匯出真實的金鑰；若您的**本機** 67router 執行個體不需要驗證，則可使用非空白的預留值，例如 `OMNIROUTE_API_KEY=local`。如果您已將其新增至 `~/.bashrc` 或 `~/.zshrc`，請重新啟動 shell。
 
 **`Connection refused`**
-確認 OmniRoute 正在執行，且 `base_url` 的主機／連接埠對您的網路而言是正確的（本機、Tailscale 或 VPS）。
+確認 67router 正在執行，且 `base_url` 的主機／連接埠對您的網路而言是正確的（本機、Tailscale 或 VPS）。
 
 **工作階段在接近上下文限制時當機**
 明確設定 `model_context_window` 和 `model_auto_compact_token_limit`。請參閱上方的上下文視窗表格。
@@ -598,4 +598,4 @@ Codex 會在發出第一個請求之前，驗證該環境變數是否存在。�
 確認檔案存在於 `~/.codex/<name>.config.toml`（沒有 `profile-` 前綴）。執行 `ls ~/.codex/*.config.toml`。
 
 **長時間執行的 Codex 任務在執行途中中斷／不同回合之間切換帳戶**
-請參閱[長時間執行的任務](#long-running-tasks)。啟用工作階段親和性（TTL 應長於任務執行時間），並提高或停用 `STREAM_IDLE_TIMEOUT_MS`／`FETCH_BODY_TIMEOUT_MS`。使用 grep 在 OmniRoute 日誌中搜尋 `Idle timeout: no data from`。
+請參閱[長時間執行的任務](#long-running-tasks)。啟用工作階段親和性（TTL 應長於任務執行時間），並提高或停用 `STREAM_IDLE_TIMEOUT_MS`／`FETCH_BODY_TIMEOUT_MS`。使用 grep 在 67router 日誌中搜尋 `Idle timeout: no data from`。

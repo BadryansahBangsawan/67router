@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Paskutinį kartą atnaujinta:** 2026-09-22 — aprėpties vardų sritys nurodo į MCP-SERVER.md
 
-OmniRoute turi maršrutą atpažįstančią autorizacijos sistemą, kuri kontroliuoja kiekvieną API užklausą. Klasifikacija yra **deterministinė** ir **uždaroma gedimo atveju** — viskas, kas negali būti klasifikuota, tampa `MANAGEMENT` ir reikalauja sesijos arba valdymo lygio prieigos rakto. Šiame puslapyje paaiškinamas modelis inžinieriams, prižiūrintiems maršrutus arba kuriantiems naujus galinius taškus.
+67router turi maršrutą atpažįstančią autorizacijos sistemą, kuri kontroliuoja kiekvieną API užklausą. Klasifikacija yra **deterministinė** ir **uždaroma gedimo atveju** — viskas, kas negali būti klasifikuota, tampa `MANAGEMENT` ir reikalauja sesijos arba valdymo lygio prieigos rakto. Šiame puslapyje paaiškinamas modelis inžinieriams, prižiūrintiems maršrutus arba kuriantiems naujus galinius taškus.
 
 ![Autorizacijos sistema (3 maršrutų klasės + politikos vertinimas)](../diagrams/exported/authz-pipeline.svg)
 

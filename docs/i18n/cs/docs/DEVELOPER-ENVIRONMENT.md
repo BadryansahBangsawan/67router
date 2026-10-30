@@ -4,7 +4,7 @@
 
 ---
 
-Tato stránka vysvětluje chování lokálního souboru `.env` v projektu a postupy pro práci se soubory prostředí a tajnými údaji při vývoji OmniRoute.
+Tato stránka vysvětluje chování lokálního souboru `.env` v projektu a postupy pro práci se soubory prostředí a tajnými údaji při vývoji 67router.
 
 ## Chování .env při postinstall
 

@@ -6,7 +6,7 @@
 
 Informácie o zdieľanom manifeste spustiteľných súborov, obmedzených prostrediach podradených procesov a trvalom nastavení Gemini nájdete v dokumente [Kontrakty spúšťania CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute poskytuje rodinu príkazov `setup-*`, ktoré nakonfigurujú programátorské CLI (Codex, Claude Code, OpenCode, Cline, …) tak, aby používalo OmniRoute ako svoj backend — nástroj tak komunikuje s **jedným** koncovým bodom a OmniRoute smeruje požiadavky k správnemu poskytovateľovi s automatickým záložným prepnutím. Každý príkaz načíta **aktuálny** katalóg modelov zo spustenej inštancie OmniRoute (lokálnej alebo vzdialenej) a zapíše konfiguračný súbor daného nástroja na **vašom** počítači. Kľúč API sa všade, kde to nástroj podporuje, odkazuje prostredníctvom premennej prostredia. Príkazy, ktoré trvalo ukladajú lokálny súbor prostredia nástroja, sú uvedené nižšie.
+67router poskytuje rodinu príkazov `setup-*`, ktoré nakonfigurujú programátorské CLI (Codex, Claude Code, OpenCode, Cline, …) tak, aby používalo 67router ako svoj backend — nástroj tak komunikuje s **jedným** koncovým bodom a 67router smeruje požiadavky k správnemu poskytovateľovi s automatickým záložným prepnutím. Každý príkaz načíta **aktuálny** katalóg modelov zo spustenej inštancie 67router (lokálnej alebo vzdialenej) a zapíše konfiguračný súbor daného nástroja na **vašom** počítači. Kľúč API sa všade, kde to nástroj podporuje, odkazuje prostredníctvom premennej prostredia. Príkazy, ktoré trvalo ukladajú lokálny súbor prostredia nástroja, sú uvedené nižšie.
 
 K dispozícii je aj všeobecný spúšťač — `omniroute run <target>` — ktorý spustí `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` alebo `gemini` so správne nastaveným prostredím bez zapisovania akejkoľvek konfigurácie. Ciele a ich aliasy pochádzajú z kanonického manifestu `bin/cli/cli-manifest.mjs` (`claude-code|cc|anthropic`, `codex-cli|openai-codex|openai`, `goose-cli`, `open-code`, `qwen-code`, `gemini-cli`) a `omniroute completion` ponúka rovnaké názvy cieľov odvodené z manifestu. Staršie spúšťače pre jednotlivé nástroje — `omniroute launch` (Claude Code) a `omniroute launch-codex` (Codex) — zostávajú dostupné.
 
@@ -28,7 +28,7 @@ Informácie o jednorazovom, ručne vykonanom základnom nastavení dvoch najboha
 
 - [Konfigurácia Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfigurácia Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Vzdialený režim](./REMOTE-MODE.md) — ovládajte vzdialenú inštanciu OmniRoute (VPS / Tailnet) zo svojho notebooku
+- [Vzdialený režim](./REMOTE-MODE.md) — ovládajte vzdialenú inštanciu 67router (VPS / Tailnet) zo svojho notebooku
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — rozšírenie OmniCopilot; tieto príkazy
   `setup-*` môže za vás spúšťať aj priamo v editore
 
@@ -64,7 +64,7 @@ servera a konfigurácia sa zapíše lokálne.
 
 Poznámky k príznakom (overené v zdrojovom kóde príkazu):
 
-- `--remote <url>` — načíta katalóg zo vzdialeného OmniRoute (prepíše `--port`
+- `--remote <url>` — načíta katalóg zo vzdialeného 67router (prepíše `--port`
   a aktívny kontext). `--api-key <key>` poskytuje prihlasovací údaj pre tento
   server (predvolene premenná prostredia `OMNIROUTE_API_KEY` alebo token aktívneho kontextu).
 - `--only <patterns>` — čiarkami oddelené podreťazce; ponechá iba ID modelov, ktoré sa zhodujú
@@ -85,7 +85,7 @@ Poznámky k príznakom (overené v zdrojovom kóde príkazu):
   **codex** prostredníctvom argumentov `-c model_providers.omniroute.*`. **Qwen je jediný cieľ príkazu run,
   ktorý striktne vyžaduje `--model`** — `omniroute run qwen` bez neho skončí
   s kódom `2` a explicitnou chybou.
-- `--port <port>` — lokálny port OmniRoute (predvolene `20128`, ignoruje sa, keď je nastavené `--remote`).
+- `--port <port>` — lokálny port 67router (predvolene `20128`, ignoruje sa, keď je nastavené `--remote`).
   Je prítomný vo všetkých príkazoch `setup-*` a oboch spúšťačoch.
 - Návratové kódy `omniroute run`: vlastný návratový kód podradeného CLI sa odovzdá
   bez zmeny; `2` = neplatné argumenty (nepodporovaný cieľ, chýbajúce povinné
@@ -130,7 +130,7 @@ nie sú prezentované ako spustiteľné ciele.
 
 ## Lokálne použitie
 
-Keď OmniRoute beží na `localhost:20128`, stačí spustiť príkaz na nastavenie vášho
+Keď 67router beží na `localhost:20128`, stačí spustiť príkaz na nastavenie vášho
 nástroja. Katalóg sa načíta z lokálneho servera.
 
 ```bash
@@ -158,8 +158,8 @@ omniroute setup-continue --dry-run
 Spustenie bez zapísania akejkoľvek konfigurácie (iba vloženie premenných prostredia):
 
 ```bash
-omniroute launch                 # Claude Code → lokálny OmniRoute
-omniroute launch-codex           # Codex CLI → lokálny OmniRoute
+omniroute launch                 # Claude Code → lokálny 67router
+omniroute launch-codex           # Codex CLI → lokálny 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -177,7 +177,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Vzdialené použitie
 
-Nasmerujte ľubovoľný nastavovací príkaz na vzdialený OmniRoute pomocou `--remote` + `--api-key`.
+Nasmerujte ľubovoľný nastavovací príkaz na vzdialený 67router pomocou `--remote` + `--api-key`.
 Katalóg sa načíta zo vzdialeného servera a konfigurácia sa zapíše na vašom lokálnom počítači.
 
 ```bash
@@ -220,7 +220,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Obe formy zapíšu jeden **autorizačný profil** 5dive a každé pracovné miesto `claude` naviazané na tento
-profil potom komunikuje s OmniRoute. Pre tento cieľ sú špecifické tri veci:
+profil potom komunikuje s 67router. Pre tento cieľ sú špecifické tri veci:
 
 - **Spúšťa sa na hostiteľovi flotily ako root.** Príkazy 5dive pracujú s lokálnymi jednotkami systemd
   a stavovým adresárom vlastneným používateľom root; vzdialený režim nie je k dispozícii. Recept sa opätovne spustí cez
@@ -238,7 +238,7 @@ profil potom komunikuje s OmniRoute. Pre tento cieľ sú špecifické tri veci:
 API kľúč sa odovzdáva nástroju 5dive cez **stdin** (`--api-key=-`), takže sa nikdy nezobrazí vo
 výstupe `ps`.
 
-Nasmerovanie profilu na **kombináciu** OmniRoute namiesto jedného modelu poskytne
+Nasmerovanie profilu na **kombináciu** 67router namiesto jedného modelu poskytne
 flotile prepnutie pri zlyhaní poskytovateľa: keď primárny koncový bod počas interakcie úplne prestal fungovať
 v behu zaznamenanom v
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), agent dokončil
@@ -248,7 +248,7 @@ zostávajúce kroky cez záložný koncový bod bez toho, aby používateľovi o
 
 ## Konvencie základnej URL (ktoré nástroje vyžadujú `/v1`)
 
-OmniRoute sprístupňuje rozhranie OpenAI na `/v1`, rozhranie Anthropic v koreňovej ceste
+67router sprístupňuje rozhranie OpenAI na `/v1`, rozhranie Anthropic v koreňovej ceste
 a natívne rozhranie Gemini na `/v1beta`. Každá integrácia je nastavená do podoby, ktorú
 jej nástroj očakáva (overené v zdrojovom kóde príkazu):
 
@@ -270,7 +270,7 @@ jej nástroj očakáva (overené v zdrojovom kóde príkazu):
 ## Zachovanie natívnych závislostí pri aktualizácii: `--include=optional`
 
 Keď vykonáte aktualizáciu pomocou `omniroute update` (po potvrdení alebo s `--apply`),
-OmniRoute spustí inštaláciu so zabudovaným parametrom `--include=optional`:
+67router spustí inštaláciu so zabudovaným parametrom `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -299,13 +299,13 @@ potvrdenie), `--changelog`, `--no-backup`, `--yes`.
 Kontrakt bol overený voči `@google/gemini-cli` 0.50.0: CLI rešpektuje
 `GOOGLE_GEMINI_BASE_URL` a odosiela požiadavky `POST /v1beta/models/<model>:generateContent`
 (a `:streamGenerateContent?alt=sse`) na túto adresu — presne na natívne rozhranie
-Gemini v OmniRoute (`/v1beta`). Príkaz `omniroute run gemini` to nakonfiguruje automaticky:
+Gemini v 67router (`/v1beta`). Príkaz `omniroute run gemini` to nakonfiguruje automaticky:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktívna základná URL OmniRoute (koreňová cesta, bez `/v1`);
-- `GEMINI_API_KEY` → určené prihlasovacie údaje OmniRoute (voľba/prostredie/kontext);
+- `GOOGLE_GEMINI_BASE_URL` → aktívna základná URL 67router (koreňová cesta, bez `/v1`);
+- `GEMINI_API_KEY` → určené prihlasovacie údaje 67router (voľba/prostredie/kontext);
 - **dočasný izolovaný adresár `GEMINI_CLI_HOME`**, ktorého `.gemini/settings.json`
   vyberá autentifikáciu `gemini-api-key`, takže uložená relácia Google OAuth (Code Assist)
-  nikdy neprepíše spustenie smerované na OmniRoute — po ukončení sa adresár odstráni;
+  nikdy neprepíše spustenie smerované na 67router — po ukončení sa adresár odstráni;
 - **hygiena prostredia**: z prostredia podradeného procesu sa odstránia
   `GOOGLE_API_KEY`, `GOOGLE_GENAI_USE_VERTEXAI` a `GOOGLE_GENAI_USE_GCA` (ktoré by
   presmerovali autentifikáciu na Vertex/Code Assist) a ako dodatočná poistka sa nastaví
@@ -329,7 +329,7 @@ integráciou protokolu agentov pre `/dashboard/acp-agents`.
 
 Deterministické regresné testy plánu spúšťania sa vykonávajú v CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Na overenie SKUTOČNÝCH binárnych súborov voči SKUTOČNÉMU
-serveru OmniRoute je k dispozícii voliteľný testovací nástroj v
+serveru 67router je k dispozícii voliteľný testovací nástroj v
 `tests/integration/upstream-cli-smoke.int.test.ts`. Nikdy sa nespúšťa automaticky
 (každý čiastkový test sa preskočí, pokiaľ nie je nastavené `RUN_CLI_SMOKE=1`), prihlasovací údaj odovzdáva pomocou
 NÁZVU premennej prostredia (nikdy nie pomocou jej hodnoty), z každého zaznamenaného výstupu odstraňuje reťazce

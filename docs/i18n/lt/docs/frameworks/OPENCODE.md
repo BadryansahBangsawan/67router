@@ -5,11 +5,11 @@
 ---
 
 > **Būsena:** Visuotinai prieinama.
-> **Auditorija:** Administratoriai, integruojantys OpenCode su OmniRoute diegimu.
+> **Auditorija:** Administratoriai, integruojantys OpenCode su 67router diegimu.
 > **Pagrindinis šaltinis (konfigūracijos schema):** `src/shared/services/opencodeConfig.ts`
 > **Pagrindinis šaltinis (npm paketas):** `@omniroute/opencode-provider/` (publikuojama darbo sritis)
 
-[OpenCode](https://opencode.ai) yra agentinis CLI / darbalaukio DI klientas. Teikėjų katalogą jis nuskaito iš `~/.config/opencode/opencode.json` (arba `opencode.jsonc`) ir vadovaujasi schema, esančia adresu `https://opencode.ai/config.json`. OmniRoute pateikia save OpenCode kaip vieną iš šių teikėjų — kiekviena užklausa perduodama per standartinę, su OpenAI suderinamą OmniRoute `/v1` sąsają, todėl OpenCode automatiškai naudojasi Auto-Combo maršruto parinkimu, grandinės išjungikliais, raktų politikomis, stebimumu ir kitomis funkcijomis.
+[OpenCode](https://opencode.ai) yra agentinis CLI / darbalaukio DI klientas. Teikėjų katalogą jis nuskaito iš `~/.config/opencode/opencode.json` (arba `opencode.jsonc`) ir vadovaujasi schema, esančia adresu `https://opencode.ai/config.json`. 67router pateikia save OpenCode kaip vieną iš šių teikėjų — kiekviena užklausa perduodama per standartinę, su OpenAI suderinamą 67router `/v1` sąsają, todėl OpenCode automatiškai naudojasi Auto-Combo maršruto parinkimu, grandinės išjungikliais, raktų politikomis, stebimumu ir kitomis funkcijomis.
 
 Palaikomi **du integravimo būdai**. Pasirinkite vieną — abu sugeneruoja tą pačią konfigūraciją.
 
@@ -17,16 +17,16 @@ Palaikomi **du integravimo būdai**. Pasirinkite vieną — abu sugeneruoja tą 
 
 ## 1 būdas — CLI generatorius (nereikia diegti npm paketo)
 
-Rekomenduojama galutiniams naudotojams. Platinamas kartu su OmniRoute. Atnaujina `opencode.json` vietoje.
+Rekomenduojama galutiniams naudotojams. Platinamas kartu su 67router. Atnaujina `opencode.json` vietoje.
 
 ```bash
-# Įdiegus OmniRoute (npm i -g @omniroute/cli arba naudojant vietinę klonuotą kopiją)
+# Įdiegus 67router (npm i -g @omniroute/cli arba naudojant vietinę klonuotą kopiją)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Viduje CLI iškviečia `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), todėl esamame `opencode.json` išsaugomi kiti teikėjai ir komentarai. OmniRoute įrašas pridedamas arba pakeičiamas atominiu būdu.
+Viduje CLI iškviečia `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), todėl esamame `opencode.json` išsaugomi kiti teikėjai ir komentarai. 67router įrašas pridedamas arba pakeičiamas atominiu būdu.
 
 Gautas failas (numatytasis modelių katalogas):
 
@@ -90,8 +90,8 @@ Abu būdai sukuria tą pačią reikšmę `provider.omniroute.npm: "@ai-sdk/opena
 ```
 OpenCode naudotojo sąsaja / agentas
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (su OpenAI suderinama OmniRoute sąsaja)
-         → OmniRoute /v1/chat/completions apdorojimo priemonė     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (su OpenAI suderinama 67router sąsaja)
+         → 67router /v1/chat/completions apdorojimo priemonė     (open-sse/handlers/chatCore.ts)
             → kombinuotas maršruto parinkimas / Auto-Combo / vykdyklė
                → išorinis teikėjas
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Galite pakeisti naudodami `models: [...]`. Rekomenduojami papildymai:
 
-- `"auto"` — pateikia OmniRoute [Auto-Combo](../routing/AUTO-COMBO.md) nulinės konfigūracijos maršruto parinkiklį. Leidžia OpenCode pasirinkti „geriausią prieinamą modelį“, kataloge jo nenurodant tiesiogiai.
-- `"<combo-name>"` — bet koks derinys, kurį apibrėžėte valdymo skydelyje; OmniRoute jį skaidriai nustato.
+- `"auto"` — pateikia 67router [Auto-Combo](../routing/AUTO-COMBO.md) nulinės konfigūracijos maršruto parinkiklį. Leidžia OpenCode pasirinkti „geriausią prieinamą modelį“, kataloge jo nenurodant tiesiogiai.
+- `"<combo-name>"` — bet koks derinys, kurį apibrėžėte valdymo skydelyje; 67router jį skaidriai nustato.
 
 ---
 
@@ -135,12 +135,12 @@ Pagalbinė funkcija priima abi formas ir pateikia tiksliai vieną `/v1`:
 
 ## Autentifikavimo režimai
 
-| OmniRoute nuostata                          | Rekomenduojama `apiKey` reikšmė                                         |
+| 67router nuostata                           | Rekomenduojama `apiKey` reikšmė                                         |
 | ------------------------------------------- | ----------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (numatyta lokaliai) | `sk_omniroute` (pažodinis vietos rezervavimo tekstas)                   |
 | `REQUIRE_API_KEY=true`                      | Tikras kiekvieno naudotojo API raktas iš valdymo skydelio → API raktai. |
 
-Anthropic stiliaus klientams, siunčiantiems `x-api-key` + `anthropic-version`, OmniRoute funkcija `extractApiKey` taip pat priima raktą iš `x-api-key`. OpenCode naudoja OpenAI sąsają, todėl visada siųs `Authorization: Bearer ${apiKey}` — Anthropic specialusis atvejis čia netaikomas.
+Anthropic stiliaus klientams, siunčiantiems `x-api-key` + `anthropic-version`, 67router funkcija `extractApiKey` taip pat priima raktą iš `x-api-key`. OpenCode naudoja OpenAI sąsają, todėl visada siųs `Authorization: Bearer ${apiKey}` — Anthropic specialusis atvejis čia netaikomas.
 
 ---
 
@@ -149,15 +149,15 @@ Anthropic stiliaus klientams, siunčiantiems `x-api-key` + `anthropic-version`, 
 | Požymis                                                 | Priežastis                                                                     | Sprendimas                                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | `404` kiekvienoje užklausoje, kurios URL turi `/v1/v1/` | Pasenusi iki v3.8 naudoto papildinio konfigūracija, kuri dukart pridėjo `/v1`. | Iš naujo sugeneruokite naudodami 1 arba 2 būdą.                                                                        |
-| `401 Invalid API key`                                   | OmniRoute turi `REQUIRE_API_KEY=true`, o raktas nežinomas.                     | Sukurkite raktą valdymo skydelyje arba nustatykite `REQUIRE_API_KEY=false` (tik lokaliai) ir naudokite `sk_omniroute`. |
-| OpenCode naudotojo sąsajoje modelių sąrašas tuščias     | Visi 4 numatytieji modeliai paslėpti OmniRoute teikėjo matomumo nuostatose.    | Perduokite `models: ["auto", ...]`, kad būtų rodomi jūsų įjungti modeliai.                                             |
+| `401 Invalid API key`                                   | 67router turi `REQUIRE_API_KEY=true`, o raktas nežinomas.                      | Sukurkite raktą valdymo skydelyje arba nustatykite `REQUIRE_API_KEY=false` (tik lokaliai) ir naudokite `sk_omniroute`. |
+| OpenCode naudotojo sąsajoje modelių sąrašas tuščias     | Visi 4 numatytieji modeliai paslėpti 67router teikėjo matomumo nuostatose.     | Perduokite `models: ["auto", ...]`, kad būtų rodomi jūsų įjungti modeliai.                                             |
 | OpenCode 500 su `cannot read property 'models'`         | Senesnė OpenCode (< 0.1.x) versija nepriėmė įterptinio `models`.               | Atnaujinkite OpenCode į versiją, atitinkančią v1 schemą (`opencode.ai/config.json`).                                   |
 
 ---
 
 ## Taip pat žr.
 
-- [API dokumentacija](../reference/API_REFERENCE.md) — visa OmniRoute REST sąsaja
+- [API dokumentacija](../reference/API_REFERENCE.md) — visa 67router REST sąsaja
 - [Auto-Combo](../routing/AUTO-COMBO.md) — ką reiškia `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Šaltinis: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

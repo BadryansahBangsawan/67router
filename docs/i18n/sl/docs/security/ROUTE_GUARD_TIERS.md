@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Vse poti upravljalnega API-ja OmniRoute so razvrščene v eno od treh ravni
+Vse poti upravljalnega API-ja 67router so razvrščene v eno od treh ravni
 zaščite. Razvrstitev je statična, določena v `src/server/authz/routeGuard.ts`,
 in se preveri, preden se izvede katera koli druga veja preverjanja pristnosti.
 
@@ -28,10 +28,10 @@ procesov — kar je znan razred CVE
 **Kaj je GHSA-fhh6-4qxv-rpqj (razred napada):** strežnik za upravljanje/agent
 izpostavi končno točko, ki zažene podproces (`npm install`, `node`, brskalnik,
 posredniški strežnik, `git`, `tar`, …). Če je ta končna točka dosegljiva zunaj
-gostitelja — ker je upravljavec OmniRoute postavil za tunel
+gostitelja — ker je upravljavec 67router postavil za tunel
 nginx/Cloudflare/Tailscale in je JWT ušel ali pa je bilo preverjanje pristnosti
 napačno konfigurirano — napadalec spremeni »klic API-ja« v »izvajanje ukaza na
-gostitelju« (oddaljeno izvajanje kode). OmniRoute to prepreči tako, da na vsaki
+gostitelju« (oddaljeno izvajanje kode). 67router to prepreči tako, da na vsaki
 poti, ki lahko zažene proces, **brezpogojno uveljavi preverjanje gostitelja
 povratne zanke pred vsakršnim preverjanjem pristnosti**: razkrit žeton prek
 tunela še vedno ne more doseči zagona procesa.
@@ -123,7 +123,7 @@ potrebovati širokega upravljavskega dostopa.
 
 #### Navodila za upravljavce in revidiranje
 
-Če OmniRoute izvajate za povratnim posredniškim strežnikom ali tunelom (nginx,
+Če 67router izvajate za povratnim posredniškim strežnikom ali tunelom (nginx,
 Caddy, Cloudflare Tunnel, Tailscale, Ngrok), preverjanje povratne zanke še vedno
 ščiti zgornje poti, ki omogočajo zagon procesov — zahteva, katere naslov
 odjemalca ni naslov povratne zanke, je zavrnjena z `403 LOCAL_ONLY` **pred
@@ -162,7 +162,7 @@ procesa. Upravljavcem ostajata dve odgovornosti:
 - V dnevnikih povratnega posredniškega strežnika/dostopa poiščite zgornje predpone, povezane z
   naslovom odjemalca, ki ni naslov povratne zanke. Vsak tak zadetek, ki je vrnil `200` namesto
   `403 LOCAL_ONLY`, pomeni, da posredniški strežnik prikriva pravi IP odjemalca — popravite posredniški strežnik.
-- Vnos `403 LOCAL_ONLY` v dnevnikih OmniRoute za eno od teh poti pomeni, da varovalo
+- Vnos `403 LOCAL_ONLY` v dnevnikih 67router za eno od teh poti pomeni, da varovalo
   deluje, kot je predvideno, in ni napaka, ki bi jo bilo treba prezreti.
 
 #### Oddaljeno dostopne poti z varovalom preverjanja na mestu klica

@@ -9,9 +9,9 @@
 > **Nghiên cứu gần nhất:** 2026-06-17 — nghiên cứu web theo từng nhà cung cấp (tài liệu chính thức + tin tức trong 7 ngày gần nhất, lượt rà soát bằng 50 tác tử có xác minh đối kháng), cập nhật mọi hạn mức gói miễn phí + ToS. **Tái kiểm toán một phần vào 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — xem ghi chú có ngày tháng bên dưới).
 > **Nguồn thông tin chuẩn (danh mục):** `open-sse/config/freeModelCatalog.ts` (ngân sách theo từng MÔ HÌNH, đã loại bỏ trùng lặp theo nhóm). Các số liệu ngân sách token bên dưới đến từ nghiên cứu web trực tiếp và chỉ là một **ước tính** — xem [Phương pháp luận & lưu ý](#methodology--caveats).
 
-## Tóm tắt — OmniRoute thực sự tổng hợp được bao nhiêu tài nguyên suy luận miễn phí?
+## Tóm tắt — 67router thực sự tổng hợp được bao nhiêu tài nguyên suy luận miễn phí?
 
-Các số liệu này mô tả những tài khoản bên thứ ba và điều kiện đủ riêng biệt trong toàn bộ danh mục. OmniRoute không cấp ngân sách này: bạn phải có được các tài khoản hoặc thông tin xác thực bắt buộc, kết nối các nhà cung cấp đủ điều kiện và tuân thủ giới hạn của họ. Dung lượng thực tế có thể sử dụng có thể thấp hơn, bao gồm bằng không trên một bản cài đặt mới không có tuyến đủ điều kiện. Theo mặc định, các nhà cung cấp được đánh dấu `tos: avoid` sẽ bị loại khỏi quá trình định tuyến tự động.
+Các số liệu này mô tả những tài khoản bên thứ ba và điều kiện đủ riêng biệt trong toàn bộ danh mục. 67router không cấp ngân sách này: bạn phải có được các tài khoản hoặc thông tin xác thực bắt buộc, kết nối các nhà cung cấp đủ điều kiện và tuân thủ giới hạn của họ. Dung lượng thực tế có thể sử dụng có thể thấp hơn, bao gồm bằng không trên một bản cài đặt mới không có tuyến đủ điều kiện. Theo mặc định, các nhà cung cấp được đánh dấu `tos: avoid` sẽ bị loại khỏi quá trình định tuyến tự động.
 
 **Đã kiểm tra vào 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) cung cấp khoản tín dụng khuyến mại một lần trị giá $5, yêu cầu phương thức thanh toán và hết hạn sau 30 ngày. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) công bố giới hạn tốc độ theo dự án/mô hình/cấp; dịch vụ này vẫn không nằm trong con số tổng hàng tháng được định lượng.
 
@@ -80,7 +80,7 @@ tín dụng miễn phí. Các thay đổi đối với Nous được trình bày
 
 ## Hai cơ chế — thống kê và quyết định
 
-OmniRoute trả lời câu hỏi "có miễn phí không?" thông qua hai cơ chế chủ đích sử dụng
+67router trả lời câu hỏi "có miễn phí không?" thông qua hai cơ chế chủ đích sử dụng
 các nguồn khác nhau:
 
 | Cơ chế                  | Nguồn dữ liệu chuẩn                                                                                                                                                                        | Phạm vi áp dụng                                                                                                                                |
@@ -128,7 +128,7 @@ Hầu hết các số liệu về "token miễn phí mỗi tháng" trong lĩnh v
 
 ### ⚠️ Thận trọng — các điều khoản về sử dụng cá nhân / proxy đáng để kiểm tra (16)
 
-> Quyền truy cập miễn phí của họ là có thật và OmniRoute có thể định tuyến đến họ; các điều khoản bên dưới chỉ là những điều đáng lưu ý. Những dịch vụ dùng OAuth/không cần khóa không thể định lượng bằng token, vì vậy chúng không được tính vào con số tiêu đề (không phải vì chúng không thể sử dụng).
+> Quyền truy cập miễn phí của họ là có thật và 67router có thể định tuyến đến họ; các điều khoản bên dưới chỉ là những điều đáng lưu ý. Những dịch vụ dùng OAuth/không cần khóa không thể định lượng bằng token, vì vậy chúng không được tính vào con số tiêu đề (không phải vì chúng không thể sử dụng).
 
 | Nhà cung cấp     | Ghi chú                                                                                                                                                                                              |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Hầu hết các số liệu về "token miễn phí mỗi tháng" trong lĩnh v
 | `fireworks`      | ToS nghiêm cấm rõ ràng việc sử dụng proxy/trung gian, chuyển giao khóa API và cấp phép lại (Mục 2.1 và 2.2(i)(j)); proxy cá nhân tự lưu trữ không…                                                   |
 | `friendliai`     | Mục 8(e) và 8(f) trong ToS nghiêm cấm rõ ràng việc sử dụng FriendliAI làm proxy hoặc cho phép bên thứ ba truy cập độc lập, đồng thời cấm bán lại/…                                                   |
 | `iflytek`        | Mục 2.4(3) của iFlytek Spark LLM Service Agreement nghiêm cấm rõ ràng "sử dụng bất kỳ phương thức tự động hoặc lập trình nào để trích xuất dữ liệu hoặc đầu ra…                                      |
-| `kiro`           | FAQ của Kiro nghiêm cấm rõ ràng việc sử dụng với "OpenClaw và các công cụ tương tự tận dụng bộ khung của bên thứ ba" — một proxy AI tự lưu trữ (như OmniRoute) định tuyến…                           |
+| `kiro`           | FAQ của Kiro nghiêm cấm rõ ràng việc sử dụng với "OpenClaw và các công cụ tương tự tận dụng bộ khung của bên thứ ba" — một proxy AI tự lưu trữ (như 67router) định tuyến…                            |
 | `modal`          | Mục 1.3 trong ToS nghiêm cấm rõ ràng việc "cho thuê, bán lại hoặc bằng cách khác cho phép bất kỳ bên thứ ba nào truy cập trực tiếp vào hoặc sử dụng Dịch vụ" — việc xây dựng một dịch vụ tự lưu trữ… |
 | `muse-spark-web` | ToS của Meta nghiêm cấm rõ ràng việc truy cập tự động khi chưa được cho phép trước, kỹ thuật đảo ngược khi chưa có sự cho phép bằng văn bản và việc né tránh các biện pháp công nghệ…                |
 | `nlpcloud`       | ToS nghiêm cấm rõ ràng việc "thiết lập proxy hoặc thiết bị khác cho phép người khác truy cập Dịch vụ thông qua thiết bị đó" và chỉ cấp quyền không thể chuyển nhượng,…                               |
@@ -304,7 +304,7 @@ Hầu hết các số liệu về "token miễn phí mỗi tháng" trong lĩnh v
 
 - **`360ai`** — freeNote được cung cấp sẵn, "Các mô hình Free 360 AI Brain", có vẻ đã lỗi thời. Quyền truy cập hiện tại yêu cầu đăng ký xét duyệt và trả phí. Các token khuyến mãi trong giai đoạn ra mắt năm 2023 (100M–250M, cấp một lần) có thể là cơ sở cho…
 - **`agentrouter`** — freeNote được cung cấp sẵn của chúng tôi ghi "$200 tín dụng miễn phí khi đăng ký." Thực tế hiện tại cho thấy người dùng đăng ký thông thường (không qua giới thiệu) chỉ nhận được $100; người dùng đăng ký qua giới thiệu có thể nhận $200, nhưng một bình luận cộng đồng từ tháng 4 năm 2026…
-- **`agy`** — freeNote được cung cấp sẵn của chúng tôi ghi "(không có)", ngụ ý không có gói miễn phí, nhưng Antigravity thực sự có một gói miễn phí yêu cầu OAuth. Tuy nhiên, ToS nghiêm cấm rõ ràng việc sử dụng gói miễn phí này thông qua một proxy như OmniRoute …
+- **`agy`** — freeNote được cung cấp sẵn của chúng tôi ghi "(không có)", ngụ ý không có gói miễn phí, nhưng Antigravity thực sự có một gói miễn phí yêu cầu OAuth. Tuy nhiên, ToS nghiêm cấm rõ ràng việc sử dụng gói miễn phí này thông qua một proxy như 67router …
 - **`ai21`** — Bị thu hẹp: thời hạn dùng thử giảm từ "3 tháng" xuống còn 7 ngày. Số tín dụng $10 vẫn giữ nguyên, nhưng thời hạn hiệu lực giảm mạnh từ khoảng 90 ngày xuống còn 7 ngày.
 - **`aimlapi`** — Đã thay đổi đáng kể. freeNote được cung cấp sẵn quảng bá "$0.025 tín dụng miễn phí/ngày — hơn 200 mô hình", nhưng gói miễn phí hiện đã bị tạm dừng/ngừng cung cấp. Mức phân bổ tín dụng $0.025/ngày (50.000 tín dụng/ngày, 10 yêu cầu/ngày…
 - **`amazon-q`** — freeNote được cung cấp sẵn của chúng tôi ghi "(không có)" — thực tế còn tệ hơn: sản phẩm hiện đã ngừng tiếp nhận đăng ký mới (ngày 15 tháng 5 năm 2026). Trước đây, gói miễn phí cung cấp 50 yêu cầu tác tử/tháng + nội tuyến không giới hạn…

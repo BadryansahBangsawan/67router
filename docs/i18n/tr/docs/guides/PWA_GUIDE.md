@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute, tamamen kurulabilir bir Progressive Web App olarak sunulur. Kontrol paneline herhangi bir mobil tarayıcıdan — Android (Chrome) veya iOS (Safari) — eriştiğinizde, **"Ana Ekrana Ekle"** seçeneğini kullanarak uygulama mağazasına ihtiyaç duymadan yerel uygulama benzeri bir deneyim elde edebilirsiniz.
+67router, tamamen kurulabilir bir Progressive Web App olarak sunulur. Kontrol paneline herhangi bir mobil tarayıcıdan — Android (Chrome) veya iOS (Safari) — eriştiğinizde, **"Ana Ekrana Ekle"** seçeneğini kullanarak uygulama mağazasına ihtiyaç duymadan yerel uygulama benzeri bir deneyim elde edebilirsiniz.
 
 ## PWA Nedir?
 
-Progressive Web App, OmniRoute web kontrol panelini yerel bir mobil uygulama gibi görünen ve çalışan bir uygulamaya dönüştürür. Kurulduktan sonra:
+Progressive Web App, 67router web kontrol panelini yerel bir mobil uygulama gibi görünen ve çalışan bir uygulamaya dönüştürür. Kurulduktan sonra:
 
 - Kendine ait simgesiyle ana ekranınızdan başlatılır
 - Tam ekran açılır — tarayıcı adres çubuğu veya sekme arayüzü gösterilmez
@@ -20,26 +20,26 @@ Progressive Web App, OmniRoute web kontrol panelini yerel bir mobil uygulama gib
 
 ### Android (Chrome)
 
-1. OmniRoute kontrol panelini Chrome'da açın: `http://YOUR_IP:20128`
-2. Chrome otomatik olarak **"OmniRoute'u Ana ekrana ekle"** başlıklı bir banner gösterir veya:
+1. 67router kontrol panelini Chrome'da açın: `http://YOUR_IP:20128`
+2. Chrome otomatik olarak **"67router'u Ana ekrana ekle"** başlıklı bir banner gösterir veya:
    - **⋮** menüsüne (üç nokta) dokunun → **"Ana ekrana ekle"** veya **"Uygulamayı yükle"**
 3. İstemi onaylayın
-4. OmniRoute, bağımsız bir uygulama olarak ana ekranınızda görünür
+4. 67router, bağımsız bir uygulama olarak ana ekranınızda görünür
 
 ### iOS (Safari)
 
-1. OmniRoute kontrol panelini Safari'de açın: `http://YOUR_IP:20128`
+1. 67router kontrol panelini Safari'de açın: `http://YOUR_IP:20128`
 2. **Paylaş** düğmesine (ok bulunan kutu) dokunun
 3. Aşağı kaydırın ve **"Ana Ekrana Ekle"** seçeneğine dokunun
-4. Bir ad verin (varsayılan olarak "OmniRoute") ve **Ekle** seçeneğine dokunun
-5. OmniRoute, uygulama simgesiyle ana ekranınızda görünür
+4. Bir ad verin (varsayılan olarak "67router") ve **Ekle** seçeneğine dokunun
+5. 67router, uygulama simgesiyle ana ekranınızda görünür
 
 ### Masaüstü (Chrome / Edge)
 
-1. OmniRoute kontrol panelini açın
-2. Adres çubuğundaki **yükleme simgesine** tıklayın (veya ⋮ → "OmniRoute'u yükle...")
+1. 67router kontrol panelini açın
+2. Adres çubuğundaki **yükleme simgesine** tıklayın (veya ⋮ → "67router'u yükle...")
 3. İstemi onaylayın
-4. OmniRoute bağımsız bir pencerede açılır — sekme veya adres çubuğu gösterilmez
+4. 67router bağımsız bir pencerede açılır — sekme veya adres çubuğu gösterilmez
 
 ## Özellikler
 
@@ -49,7 +49,7 @@ Manifest, `display: "fullscreen"` ile yapılandırılmıştır; bu, yüklenen uy
 
 ### Çevrimdışı Destek
 
-OmniRoute, akıllı önbelleğe alma sağlayan bir service worker (`sw.js`) içerir:
+67router, akıllı önbelleğe alma sağlayan bir service worker (`sw.js`) içerir:
 
 | Varlık Türü                                                       | Strateji                         | Davranış                                                                                                            |
 | ----------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Ağ kullanılamadığında ve kullanıcı yeni bir sayfaya gittiğinde service w
 
 ### Uygulama Simgeleri
 
-OmniRoute, her platform için optimize edilmiş simgeler sağlar:
+67router, her platform için optimize edilmiş simgeler sağlar:
 
 | Dosya                  | Boyut            | Kullanıldığı Yer                      |
 | ---------------------- | ---------------- | ------------------------------------- |
@@ -94,8 +94,8 @@ Next.js tarafından `src/app/manifest.ts` üzerinden oluşturulur:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Kök layout, PWA uyumluluğu için gerekli tüm meta etiketlerini sağlar:
 
 ## Termux (Android) ile Kullanım
 
-OmniRoute, Android üzerinde Termux aracılığıyla çalıştırıldığında PWA sorunsuz şekilde çalışır:
+67router, Android üzerinde Termux aracılığıyla çalıştırıldığında PWA sorunsuz şekilde çalışır:
 
-1. OmniRoute'u Termux'ta başlatın: `npx omniroute`
+1. 67router'u Termux'ta başlatın: `npx omniroute`
 2. Aynı telefonda Chrome'u açın: `http://localhost:20128`
 3. PWA'yı "Ana Ekrana Ekle" seçeneğiyle yükleyin
 4. PWA, yerel Termux sunucusuna bağlanır — her şey cihaz üzerinde çalışır
@@ -156,7 +156,7 @@ Bu kombinasyon, Android telefonunuzun hem **sunucu** (Termux) hem de **istemci**
 
 ## Diğer Cihazlardan Kullanım
 
-PWA'yı, OmniRoute sunucunuza tarayıcı erişimi olan herhangi bir cihaza yükleyin:
+PWA'yı, 67router sunucunuza tarayıcı erişimi olan herhangi bir cihaza yükleyin:
 
 - **Başka bir telefon/tablet**: `http://PHONE_IP:20128` adresine gidin ve PWA'yı yükleyin
 - **Dizüstü bilgisayar**: Chrome/Edge'i açın ve masaüstü PWA olarak yükleyin

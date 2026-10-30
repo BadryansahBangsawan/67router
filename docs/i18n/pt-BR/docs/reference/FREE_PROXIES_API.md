@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute fornece um conjunto selecionado de proxies gratuitos na tabela `free_proxies`,
+O 67router fornece um conjunto selecionado de proxies gratuitos na tabela `free_proxies`,
 sincronizado a partir de provedores externos (1proxy, proxifly, iplocate, webshare). O
 dashboard exibe esses proxies em **Configurações → Proxies gratuitos**. Este documento
 aborda a filtragem, a ordenação, a contagem e o relatório de erros de sincronização

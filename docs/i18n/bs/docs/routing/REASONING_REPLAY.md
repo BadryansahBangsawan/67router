@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute bilježi `reasoning_content` asistenta koji generišu modeli s načinom razmišljanja i transparentno ga ponovo koristi u zahtjevima s više poteza kada to zahtijeva nadređeni pružalac usluge. Time se uklanjaju HTTP 400 greške koje strogi pružaoci usluga prijavljuju kada u historiji razgovora klijenta nedostaje obrazloženje iz prethodnog poteza.
+67router bilježi `reasoning_content` asistenta koji generišu modeli s načinom razmišljanja i transparentno ga ponovo koristi u zahtjevima s više poteza kada to zahtijeva nadređeni pružalac usluge. Time se uklanjaju HTTP 400 greške koje strogi pružaoci usluga prijavljuju kada u historiji razgovora klijenta nedostaje obrazloženje iz prethodnog poteza.
 
 ## Zašto ovo postoji
 
@@ -17,7 +17,7 @@ Nekoliko pružalaca usluga s načinom razmišljanja odbija naredni potez osim ak
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Međutim, uobičajeni klijenti (Cursor, Cline, Roo Code, OpenAI SDK) uklanjaju `reasoning_content` iz historije koju ponovo šalju. OmniRoute ga vraća iz predmemorije na strani servera kako bi zahtjev koji nadređeni servis vidi bio dosljedan. Problem #1628 uveo je hibridnu postojanost u memoriji/SQLite-u kako bi predmemorija preživjela ponovna pokretanja procesa.
+Međutim, uobičajeni klijenti (Cursor, Cline, Roo Code, OpenAI SDK) uklanjaju `reasoning_content` iz historije koju ponovo šalju. 67router ga vraća iz predmemorije na strani servera kako bi zahtjev koji nadređeni servis vidi bio dosljedan. Problem #1628 uveo je hibridnu postojanost u memoriji/SQLite-u kako bi predmemorija preživjela ponovna pokretanja procesa.
 
 ## Arhitektura
 

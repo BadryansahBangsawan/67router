@@ -27,7 +27,7 @@ Prva linija čija je prva kolona doslovna riječ `provider` (bilo koje veličine
 Preuzmite početnu datoteku iz modala za uvoz (**Download CSV template**). Primjer:
 
 ```csv
-# OmniRoute uvoz provajdera (pozicione kolone)
+# 67router uvoz provajdera (pozicione kolone)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

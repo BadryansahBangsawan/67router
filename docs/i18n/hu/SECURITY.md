@@ -6,7 +6,7 @@
 
 ## Sérülékenységek bejelentése
 
-Ha biztonsági sérülékenységet fedez fel az OmniRoute-ban, kérjük, felelősségteljesen jelentse:
+Ha biztonsági sérülékenységet fedez fel az 67router-ban, kérjük, felelősségteljesen jelentse:
 
 1. **NE** nyisson nyilvános GitHub-hibajegyet
 2. Használja a [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new) felületét
@@ -53,7 +53,7 @@ A 3.8.59 után következő verzió a **3.9.0**, amely megnyitja a hosszú távú
 
 ## Biztonsági architektúra
 
-Az OmniRoute többrétegű biztonsági modellt valósít meg:
+Az 67router többrétegű biztonsági modellt valósít meg:
 
 ```
 Kérés → CORS → Authz-folyamat (osztályozás → szabályzatok → kikényszerítés)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Védőkorlát-keretrendszer
 
-Az OmniRoute egy menet közben újratölthető **védőkorlát-nyilvántartást** (`src/lib/guardrails/`) tartalmaz, amelyben 3 beépített védőkorlát található prioritás szerint rendezve:
+Az 67router egy menet közben újratölthető **védőkorlát-nyilvántartást** (`src/lib/guardrails/`) tartalmaz, amelyben 3 beépített védőkorlát található prioritás szerint rendezve:
 
 | Védőkorlát         | Prioritás | Cél                                                                                                          |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |

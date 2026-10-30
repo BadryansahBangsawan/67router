@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuerlig, trinnvis eksport av OmniRoute-anropslogger til et eksternt analyselager.
+Kontinuerlig, trinnvis eksport av 67router-anropslogger til et eksternt analyselager.
 
 Fanen Logger i kontrollpanelet lagrer forespørselshistorikken i SQLite (`call_logs`), som er begrenset av
 rotasjon og oppbevaring. Loggeksport sender det samme postsettet ut etter en tidsplan, slik at det kan bevares

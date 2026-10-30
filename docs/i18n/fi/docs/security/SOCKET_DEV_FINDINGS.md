@@ -48,7 +48,7 @@ JWT **ei voi** käynnistää tätä koodipolkua.
 | Linux+Firefox/Chromium | profiilikohtainen NSS-tietokannan päivitys komennolla `certutil -d sql:<profile>`                                 |
 
 Nämä ovat samat komennot, joita `mitmproxy`, Charles Proxy, Fiddler ja
-Caddy käyttävät. Niiden sisältyminen OmniRouteen on dokumentoitu tiedostossa
+Caddy käyttävät. Niiden sisältyminen 67routeriin on dokumentoitu tiedostossa
 `docs/security/STEALTH_GUIDE.md`.
 
 **Version v3.8.6 lievennys**:
@@ -103,7 +103,7 @@ poistetaan versiossa v3.9.
 
 **Miksi säilytämme sen**: Zed-tuonti on käyttäjäystävällisin aloitustapa
 käyttäjille, jotka jo käyttävät Zediä ja haluavat kopioida palveluntarjoajiensa
-avaimet OmniRouteen syöttämättä niitä uudelleen.
+avaimet 67routeriin syöttämättä niitä uudelleen.
 
 ---
 
@@ -114,7 +114,7 @@ avaimet OmniRouteen syöttämättä niitä uudelleen.
 **Miksi merkitty**: lohko vie uudelleen `execFileWithPassword`- ja
 `runElevatedPowerShell`-toiminnot sekä jaetun `quotePowerShell`-aputoiminnon. Socket.dev:n
 tekoälyluokittelija tulkitsee ne yleiskäyttöiseksi "isäntäjärjestelmän komentojen suoritus- ja
-käyttöoikeuksien korotustyökaluksi". OmniRoutessa niitä käytetään vain MITM-varmenteen
+käyttöoikeuksien korotustyökaluksi". 67routerissa niitä käytetään vain MITM-varmenteen
 asennuspolulla (§1) ja `execFileWithPassword`-toiminnossa `sudo`-komentojen suorittamiseen.
 
 **v3.8.6:n lievennys**:
@@ -164,7 +164,7 @@ poistaa korotettuja oikeuksia käyttävät polut fyysisesti paketista.
 
 ---
 
-## §5 — OmniRoute Cloud Sync -tunnistetietojen takaisinkirjoitus (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync -tunnistetietojen takaisinkirjoitus (`api/keys/[id]/route.js`)
 
 **Lähdetiedostot**:
 
@@ -198,7 +198,7 @@ rawBody)`) ennen JSON-jäsennystä. Jos salaisuus on asetettu, allekirjoitus
    käyttäjille, jotka luottivat etätokenien synkronointiin — heidän on otettava se
    nimenomaisesti käyttöön.
 
-**Miksi säilytämme sen**: Cloud Sync on OmniRoute Cloud -vuokraajan ainoa tapa
+**Miksi säilytämme sen**: Cloud Sync on 67router Cloud -vuokraajan ainoa tapa
 keskittää tiimin tunnistetiedot. Korjaus tekee uhkamallista rehellisen:
 "palvelin allekirjoittaa, asiakas tarkistaa, operaattori ottaa käyttöön."
 

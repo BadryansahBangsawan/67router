@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute saab platvormisündmuste korral käivitada HTTP-veebihaake. Kasutage neid lõimimiseks
+67router saab platvormisündmuste korral käivitada HTTP-veebihaake. Kasutage neid lõimimiseks
 Slacki, PagerDuty, Datadogi, sisemiste teavitusteenuste või mis tahes HTTP-vastuvõtjaga.
 
 Dispetšer allkirjastab iga edastuse HMAC-SHA256 abil, proovib ajutiste
@@ -54,7 +54,7 @@ iga veebihaagi vead, et üks vigane vastuvõtja ei saaks teisi blokeerida.
 
 ## HMAC-allkirjastamine
 
-Kui veebihaagil on `secret`, allkirjastab OmniRoute JSON-sisu ja saadab:
+Kui veebihaagil on `secret`, allkirjastab 67router JSON-sisu ja saadab:
 
 ```
 Content-Type: application/json
@@ -206,7 +206,7 @@ Juhtpaneeli leht aadressil `/dashboard/webhooks` (vt
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

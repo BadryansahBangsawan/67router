@@ -5,10 +5,10 @@
 ---
 
 Relays (Vercel, Deno, Cloudflare) suna kawo ƙarshen haɗin upstream a kan
-backend marar sabar domin OmniRoute ya iya fita daga tabbataccen yanki yayin da ake
+backend marar sabar domin 67router ya iya fita daga tabbataccen yanki yayin da ake
 ajiye provider API key a ɓangaren sabar. Wannan takarda tana bayanin nau'ikan matsala
 biyu da masu gudanarwa suke fuskanta a production da kuma hanyoyin farfaɗowa da
-OmniRoute ke samarwa ga kowannensu.
+67router ke samarwa ga kowannensu.
 
 ## Yadda ake adana relay auth
 
@@ -35,7 +35,7 @@ Ba za a iya sake warware ɓoyayyen blob na `relayAuthEnc` da aka adana ba, sabod
 1. Buɗe **Settings → Proxy Pool**.
 2. Layukan relay da auth ɗinsu ya ɓace suna nuna alamar rawaya ta `auth missing` da
    maɓallin **Repair**.
-3. Danna **Repair**. OmniRoute zai kira
+3. Danna **Repair**. 67router zai kira
    `POST /api/settings/proxies/[id]/repair-relay`, wanda zai:
    - warware ɓoyewar `relayAuthEnc` da **current** key,
    - sake rubuta plaintext `relayAuth` cikin `notes`,
@@ -67,7 +67,7 @@ a iya dawo da token ɗin ba, saboda haka ba sai kun neme shi da kanku ba.
 **Alama:** gwajin proxy (maɓallin `speed`) yana nuna relay ɗin yana aiki amma requests
 har yanzu suna gazawa lokaci-lokaci.
 
-Duba relay awareness headers da auto-test probe na OmniRoute ya dawo da su
+Duba relay awareness headers da auto-test probe na 67router ya dawo da su
 (duba **Settings → Proxy Pool** da counters na `relayTested` / `relayAlive`):
 
 - `x-relay-url` — relay backend ɗin da ya amsa.

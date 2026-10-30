@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute እንደ ዋና ማከማቻው **SQLite ከWAL journaling ጋር** ይጠቀማል፤ ለሚስጥራዊ መስኮች ደግሞ በማከማቻ ላይ **AES-256-GCM** ምስጠራን ይጠቀማል። ይህ መመሪያ schema፣ migrations፣ backup/recovery እና የክወና runbooksን ይሸፍናል።
+> **TL;DR**: 67router እንደ ዋና ማከማቻው **SQLite ከWAL journaling ጋር** ይጠቀማል፤ ለሚስጥራዊ መስኮች ደግሞ በማከማቻ ላይ **AES-256-GCM** ምስጠራን ይጠቀማል። ይህ መመሪያ schema፣ migrations፣ backup/recovery እና የክወና runbooksን ይሸፍናል።
 
 **ምንጮች፦**
 
@@ -19,7 +19,7 @@
 
 ## SQLite ለምን?
 
-OmniRoute በPostgreSQL/MySQL ፈንታ SQLiteን የመረጠው በበርካታ ምክንያቶች ነው፦
+67router በPostgreSQL/MySQL ፈንታ SQLiteን የመረጠው በበርካታ ምክንያቶች ነው፦
 
 | መለኪያ               | SQLite                       | PostgreSQL                         |
 | ------------------ | ---------------------------- | ---------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute በPostgreSQL/MySQL ፈንታ SQLiteን የመረጠው በበርካ�
 | **Backup**         | የአንድ ፋይል ቅጂ                  | `pg_dump` ወይም የfilesystem snapshot |
 | **የአጠቃቀም ሁኔታ**     | ለእያንዳንዱ ተጠቃሚ የሚጫን፣ የተካተተ     | ባለብዙ ተከራይ SaaS                     |
 
-ለ**አንድ ተጠቃሚ፣ አንድ instance** deployments (የOmniRoute ዋና የአጠቃቀም ሁኔታ)፣ SQLite ቀላልና ፈጣን ነው።
+ለ**አንድ ተጠቃሚ፣ አንድ instance** deployments (የ67router ዋና የአጠቃቀም ሁኔታ)፣ SQLite ቀላልና ፈጣን ነው።
 
 ### WAL Journaling
 
@@ -50,7 +50,7 @@ WAL በጽሑፍ ሥራዎች ወቅት **በአንድ ጊዜ ማንበብን** 
 `cache_size`ን በKiB እንደ ግምታዊ ከፍተኛ ገደብ ይተረጉማል እና ገጾችን እንደ አስፈላጊነቱ ይመድባል።
 **Settings > System & Storage > Cache Size** ከ**1 እስከ
 1,000,000 KiB** ያሉ ኢንቲጀር እሴቶችን ይቀበላል፤ ቅንብሩን ማስቀመጥ በቀጥታ በሚሠራው database connection ላይ ይተገብረዋል፣
-እና OmniRoute ሲጀመር የተቀመጠውን እሴት መልሶ ይጭናል።
+እና 67router ሲጀመር የተቀመጠውን እሴት መልሶ ይጭናል።
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## የጎራ ሞጁል አርክቴክቸር
 
-የOmniRoute የውሂብ ጎታ በ`src/lib/db/` ውስጥ **110 ከፍተኛ-ደረጃ TypeScript ሞጁሎች** አሉት። እያንዳንዱ የጎራ ሞጁል፦
+የ67router የውሂብ ጎታ በ`src/lib/db/` ውስጥ **110 ከፍተኛ-ደረጃ TypeScript ሞጁሎች** አሉት። እያንዳንዱ የጎራ ሞጁል፦
 
 - አንድ ወይም ከዚያ በላይ የተወሰኑ ሰንጠረዦችን ይቆጣጠራል
 - ዓይነት-የተወሰነላቸው CRUD ተግባራትን ወደ ውጭ ይልካል
@@ -90,7 +90,7 @@ DATA_DIR=/custom/path omniroute
 
 ### 110ዎቹ ከፍተኛ-ደረጃ DB ሞጁሎች
 
-OmniRoute በ`src/lib/db/` ውስጥ **110 ከፍተኛ-ደረጃ TypeScript ፋይሎች** አሉት። ከዚህ በታች የዋና ሞጁሎች ናሙና ቀርቧል፤ ሙሉውን ዝርዝር ለማየት የማውጫውን ዝርዝር ይመልከቱ፦
+67router በ`src/lib/db/` ውስጥ **110 ከፍተኛ-ደረጃ TypeScript ፋይሎች** አሉት። ከዚህ በታች የዋና ሞጁሎች ናሙና ቀርቧል፤ ሙሉውን ዝርዝር ለማየት የማውጫውን ዝርዝር ይመልከቱ፦
 
 | ሞጁል                     | ሰንጠረዦች                                                         | ኃላፊነት                                                  |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------ |
@@ -186,7 +186,7 @@ const providers = await listProviders();
 
 ## ማይግሬሽኖች
 
-OmniRoute በ`src/lib/db/migrations/` ውስጥ **የስሪት ቁጥር ያላቸው፣ ዳግም ቢሄዱም ተመሳሳይ ውጤት የሚሰጡ ማይግሬሽኖችን** ይጠቀማል። እያንዳንዱ ማይግሬሽን `NNN_description.sql` ተብሎ የተሰየመ አንድ SQL ፋይል ነው።
+67router በ`src/lib/db/migrations/` ውስጥ **የስሪት ቁጥር ያላቸው፣ ዳግም ቢሄዱም ተመሳሳይ ውጤት የሚሰጡ ማይግሬሽኖችን** ይጠቀማል። እያንዳንዱ ማይግሬሽን `NNN_description.sql` ተብሎ የተሰየመ አንድ SQL ፋይል ነው።
 
 ### የማይግሬሽን አሰያየም
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **ከቀድሞ ስሪቶች ጋር የማይጣጣሙ ለውጦች** (ለምሳሌ፣ columnsን ማስወገድ) አስቸጋሪ ናቸው። OmniRoute downgradeን አይደግፍም — አንዴ ማይግሬሽን ከተተገበረ በኋላ የschemaው ለውጥ ቋሚ ነው። በዚህ መሠረት ያቅዱ።
+> **ከቀድሞ ስሪቶች ጋር የማይጣጣሙ ለውጦች** (ለምሳሌ፣ columnsን ማስወገድ) አስቸጋሪ ናቸው። 67router downgradeን አይደግፍም — አንዴ ማይግሬሽን ከተተገበረ በኋላ የschemaው ለውጥ ቋሚ ነው። በዚህ መሠረት ያቅዱ።
 
 ---
 
@@ -310,7 +310,7 @@ STORAGE_ENCRYPTION_KEY=<your-key>
 
 ## የምስጠራ ጥንቃቄዎች (v3.8.16+)
 
-OmniRoute ሁለት የምስጠራ ዘዴዎችን በግልጽነት ለማስተናገድ **`migrateLegacyEncryptedString()`**ን ይጠቀማል፦
+67router ሁለት የምስጠራ ዘዴዎችን በግልጽነት ለማስተናገድ **`migrateLegacyEncryptedString()`**ን ይጠቀማል፦
 
 - **የቀድሞ** (ከ-v3.5.0 በፊት)፦ በXOR ላይ የተመሠረተ "ምስጠራ" (እውነተኛ ክሪፕቶግራፊ አይደለም)
 - **የአሁኑ**፦ AES-256-GCM ከትክክለኛ IV እና የማረጋገጫ መለያ ጋር
@@ -399,7 +399,7 @@ omniroute backup auto enable --cron "0 2 * * *" --retention 7
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-ይህ የSQLiteን የመስመር ላይ ምትኬ API ይጠቀማል — OmniRoute እየሠራ ሳለ ማስኬዱ ደህንነቱ የተጠበቀ ነው።
+ይህ የSQLiteን የመስመር ላይ ምትኬ API ይጠቀማል — 67router እየሠራ ሳለ ማስኬዱ ደህንነቱ የተጠበቀ ነው።
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### ማጠቃለያ
 
-ለረጅም ጊዜ የሚሰሩ የOmniRoute ኢንስታንሶች አልፎ አልፎ `VACUUM` በማድረግ ይጠቀማሉ፦
+ለረጅም ጊዜ የሚሰሩ የ67router ኢንስታንሶች አልፎ አልፎ `VACUUM` በማድረግ ይጠቀማሉ፦
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### ሁሉንም ውሂብ ዳግም ማስጀመር (ማጥፋት)
 
 ```bash
-# መጀመሪያ OmniRouteን ያቁሙ
+# መጀመሪያ 67routerን ያቁሙ
 omniroute stop
 
 # የDB ፋይሉን ይሰርዙ
@@ -613,7 +613,7 @@ EOF
 
 - ሌላው ሂደት እስኪጠናቀቅ ይጠብቁ (`lsof | grep storage.sqlite`ን ይፈትሹ)
 - ሌላውን ሂደት ያቋርጡ
-- ችግሩ ከቀጠለ OmniRouteን እንደገና ያስጀምሩ
+- ችግሩ ከቀጠለ 67routerን እንደገና ያስጀምሩ
 
 ### "የውጭ ቁልፍ ገደብ አልተሳካም"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 ፍልሰቱ በግብይት ውስጥ የተከናወነ ስለሆነ ወደ ነበረበት መመለስ ነበረበት። ካልተመለሰ፦
 
-1. **OmniRouteን ያቁሙ** (ተጨማሪ ሙከራዎችን ለመከላከል)
+1. **67routerን ያቁሙ** (ተጨማሪ ሙከራዎችን ለመከላከል)
 2. **የDBውን ሁኔታ ይፈትሹ** `sqlite3`ን በመጠቀም
 3. **በእጅ ያስተካክሉ** ከፊል ፍልሰቱን
-4. **እንደገና ያስኪዱ** OmniRouteን (ፍልሰቱ እንደገና ይሞከራል)
+4. **እንደገና ያስኪዱ** 67routerን (ፍልሰቱ እንደገና ይሞከራል)
 
 ይህን ለመከላከል ሁልጊዜ ፍልሰቶችን መጀመሪያ በቅጂ ላይ ይፈትሹ።
 

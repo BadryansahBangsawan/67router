@@ -7,7 +7,7 @@
 > **Isi iyi nke eziokwu:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute nwere ike ime ka sava mpaghara ya (`http://localhost:20128`) dịrị ịntanetị
+67router nwere ike ime ka sava mpaghara ya (`http://localhost:20128`) dịrị ịntanetị
 ọha site na backend ọwara atọ. Nke a bara uru maka:
 
 - Nlaghachi OAuth sitere n'aka ndị na-eweta ọrụ igwe ojii (Antigravity, Gemini, Cursor) nke chọrọ
@@ -15,7 +15,7 @@ OmniRoute nwere ike ime ka sava mpaghara ya (`http://localhost:20128`) dịrị 
 - Ịkekọrịta instance mpaghara gị na ndị otu gị n'ebunyeghị VM.
 - Nnwale site na ekwentị, ebe dị anya, ma ọ bụ n'ofe netwọkụ.
 
-A na-ejikwa backend atọ ahụ n'ime process — OmniRoute na-amalite/akwụsị binary
+A na-ejikwa backend atọ ahụ n'ime process — 67router na-amalite/akwụsị binary
 ma ọ bụ SDK dị n'okpuru site na dashboard ma ọ bụ REST API. Achọghị nhazi
 reverse-proxy ma ọ bụ systemd.
 
@@ -41,7 +41,7 @@ object `status` nwere otu ụdị, nke nwere mpaghara `phase`, `running`, `publi
 http://localhost:<apiPort>` ma na-enyocha URL `*.trycloudflare.com` e kenyere
   site na stdout. URL ndị a bụ nwa oge ma na-agbanwe na mmalitegharị ọ bụla.
 - **Named tunnel (nhọrọ).** Mgbe `CLOUDFLARED_CONFIG` na-atụ aka na
-  `config.yml` nke cloudflared a na-ejikwa na mpaghara, OmniRoute na-agba `cloudflared tunnel --no-autoupdate
+  `config.yml` nke cloudflared a na-ejikwa na mpaghara, 67router na-agba `cloudflared tunnel --no-autoupdate
 --config <path> run`, nke na-enye gị **hostname aha ya doro anya ma na-adịgide**. Nhazi ahụ
   na-enye UUID nke ọwara, `credentials-file`, na ntụgharị `ingress`, ya mere anaghị
   enyefe `--url`, achọghịkwa token dashboard Zero Trust. `run` na-agụ
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ma na-enyocha URL `*.trycloudflare.com` e kenyere
 
 Omume ndị dị mkpa:
 
-- **Ntinye akpaka.** N'iji ya nke mbụ, OmniRoute na-ebudata binary `cloudflared`
+- **Ntinye akpaka.** N'iji ya nke mbụ, 67router na-ebudata binary `cloudflared`
   kacha ọhụrụ site na releases GitHub gọọmentị (ntinye a na-ejikwa dị n'okpuru
   `DATA_DIR/cloudflared/`). A na-enyocha SHA256 nke asset ebudatara megide manifest nke
   release ahụ tupu e mee ya.
@@ -68,7 +68,7 @@ Omume ndị dị mkpa:
    ```
 
 2. Dee `~/.cloudflared/config.yml` nke na-atụgharị hostname gị gaa na port API mpaghara
-   nke OmniRoute (ndabara bụ 20128):
+   nke 67router (ndabara bụ 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Omume ndị dị mkpa:
      - service: http_status:404
    ```
 
-3. Mee ka OmniRoute tụọ aka na nhazi ahụ ma (malitegharị) ọwara ahụ:
+3. Mee ka 67router tụọ aka na nhazi ahụ ma (malitegharị) ọwara ahụ:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # nhọrọ — na-edochi hostname OmniRoute na-akọ; ma ọ bụghị ya, a ga-agụ ya site na
+   # nhọrọ — na-edochi hostname 67router na-akọ; ma ọ bụghị ya, a ga-agụ ya site na
    # iwu ingress mbụ nke nhazi ahụ:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Ma ọ bụ site na dashboard: **Settings → Tunnels → Cloudflare**.
 
 ### Env vars nhọrọ
 
-| Ngbanwe                                              | Ebumnuche                                                                                                                                                                                    |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Dochie ụzọ faịlụ binary ahụ. Ọ bụrụ na edobere ya ma bụrụ nke ziri ezi, OmniRoute ga-eji ya kama ibudata ya.                                                                                 |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocol mbufe (ndabara bụ `http2`; e nwekwara `quic`, `auto`).                                                                                                                              |
-| `CLOUDFLARED_CONFIG`                                 | Ụzọ gaa na cloudflared `config.yml` a na-elekọta na mpaghara. Mgbe edobere ya, OmniRoute na-agba ọwara **nwere aha/na-adịgide adịgide** (`tunnel --config <path> run`) kama ọwara ngwa ngwa. |
-| `CLOUDFLARED_HOSTNAME`                               | Dochie aha nnabata ọha nke ọwara nwere aha na-akọ (dịka `ai.example.com`). Mgbe edoghị ya, a na-agụ ya site na aha nnabata `ingress` mbụ dị na nhazi ahụ.                                    |
+| Ngbanwe                                              | Ebumnuche                                                                                                                                                                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Dochie ụzọ faịlụ binary ahụ. Ọ bụrụ na edobere ya ma bụrụ nke ziri ezi, 67router ga-eji ya kama ibudata ya.                                                                                 |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocol mbufe (ndabara bụ `http2`; e nwekwara `quic`, `auto`).                                                                                                                             |
+| `CLOUDFLARED_CONFIG`                                 | Ụzọ gaa na cloudflared `config.yml` a na-elekọta na mpaghara. Mgbe edobere ya, 67router na-agba ọwara **nwere aha/na-adịgide adịgide** (`tunnel --config <path> run`) kama ọwara ngwa ngwa. |
+| `CLOUDFLARED_HOSTNAME`                               | Dochie aha nnabata ọha nke ọwara nwere aha na-akọ (dịka `ai.example.com`). Mgbe edoghị ya, a na-agụ ya site na aha nnabata `ingress` mbụ dị na nhazi ahụ.                                   |
 
 ## 2. ngrok
 
@@ -172,7 +172,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Nzaghachi ahụ gụnyere `publicUrl` e kenyere (dịka ọmụmaatụ,
 `https://abcd-1234.ngrok-free.app`). A ghaghị ịhazi ngalaba omenala, mpaghara, na iwu policy
-na dashboard ngrok — OmniRoute n'onwe ya na-ebufe naanị URL ebumnuche mpaghara
+na dashboard ngrok — 67router n'onwe ya na-ebufe naanị URL ebumnuche mpaghara
 gaa na SDK.
 
 ## 3. Tailscale Funnel
@@ -186,14 +186,14 @@ Mmejuputa ahụ na-akpọ `tailscale funnel --bg <port>` (ọnọdụ ndabere). 
 
 ### Ihe ndị achọrọ tupu ịmalite
 
-1. Wụnye Tailscale (ma ọ bụ kwe ka OmniRoute mee ya — lee endpoint `install` dị n'okpuru).
-2. Banye (`tailscale login` ma ọ bụ site na endpoint `login` nke OmniRoute).
+1. Wụnye Tailscale (ma ọ bụ kwe ka 67router mee ya — lee endpoint `install` dị n'okpuru).
+2. Banye (`tailscale login` ma ọ bụ site na endpoint `login` nke 67router).
 3. Kwado Funnel maka tailnet gị na console nchịkwa Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 Na Linux na macOS, daemon (`tailscaled`) chọrọ `sudo` iji chịkwaa ya. Endpoint
 POST na-anabata field `sudoPassword` nhọrọ, nke a na-ebufe na cache okwuntughe MITM
-nke OmniRoute (`getCachedPassword` / `setCachedPassword`) ruo oge oku ahụ na-adị. Windows
+nke 67router (`getCachedPassword` / `setCachedPassword`) ruo oge oku ahụ na-adị. Windows
 na-eji nrụnye service ndabara dị na
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -254,7 +254,7 @@ n'onwe ya.
 
 ## Ihe ndị a ga-atụle gbasara OAuth callback
 
-Mgbe ị na-eme ka a nweta OmniRoute site na tunnel, dashboard na usoro OAuth ga-
+Mgbe ị na-eme ka a nweta 67router site na tunnel, dashboard na usoro OAuth ga-
 eji aha host **ọha** wuo URL callback, ọ bụghị `localhost`. Ma ọ bụghị ya,
 onye na-enye OAuth ga-akpọghachi onye ọrụ na URL nke sava ya enweghị ike iru,
 usoro njikọ ahụ agaghịkwa aga nke ọma.
@@ -271,7 +271,7 @@ Tọọ:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-ma malitegharịa OmniRoute tupu ịmalite OAuth. Maka Cloudflare Quick Tunnels ndị
+ma malitegharịa 67router tupu ịmalite OAuth. Maka Cloudflare Quick Tunnels ndị
 na-adịru nwa oge, URL na-agbanwe mgbe ọ bụla e malitegharịrị ya, ya mere maka iji
 OAuth na production, họrọ ngrok nwere domain edobere iche ma ọ bụ Tailscale
 Funnel.
@@ -287,14 +287,14 @@ Dashboard na-egosi ọnọdụ tunnel n'okpuru **Settings → Tunnels**:
 - Ozi njehie ikpeazụ, ma ọ bụrụ na e nwere.
 
 Maka nlekota site na mmemme, na-enyocha endpoint `GET` nke backend ọ bụla mgbe
-niile. A na-ekwe ka ihe karịrị otu backend rụọ ọrụ n'otu oge; OmniRoute ga-
+niile. A na-ekwe ka ihe karịrị otu backend rụọ ọrụ n'otu oge; 67router ga-
 eso nke ọ bụla n'onwe ya.
 
 ## Ịdozi nsogbu
 
 ### "ahụghị binary cloudflared"
 
-OmniRoute na-anwa ịwụnye ya na-akpaghị aka mgbe e ji ya rụọ ọrụ na nke mbụ. Ọ
+67router na-anwa ịwụnye ya na-akpaghị aka mgbe e ji ya rụọ ọrụ na nke mbụ. Ọ
 bụrụ na egbochiri nrụnye ahụ (netwọk amachibidoro, enweghị ohere ịnweta GitHub),
 jiri aka budata `cloudflared` site na
 <https://github.com/cloudflare/cloudflared/releases> ma tọọ

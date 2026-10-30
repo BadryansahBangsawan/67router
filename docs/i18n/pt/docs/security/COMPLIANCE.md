@@ -7,7 +7,7 @@
 > **Fonte fidedigna:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute regista ações administrativas, eventos de autenticação, alterações
+O 67router regista ações administrativas, eventos de autenticação, alterações
 ao ciclo de vida das credenciais dos fornecedores e invocações de ferramentas
 MCP em tabelas de auditoria suportadas por SQLite. Esta página descreve o que é
 registado, onde é armazenado, durante quanto tempo é conservado, como as chaves

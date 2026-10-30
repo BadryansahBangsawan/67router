@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute järjestab oma **tasuta** pakkujad mudeli kvaliteedi järgi, kasutades **Arena AI
+> **TL;DR**: 67router järjestab oma **tasuta** pakkujad mudeli kvaliteedi järgi, kasutades **Arena AI
 > (LMArena-laadseid) ELO-punkte**. Ava juhtpaneelil leht **Tasuta pakkujate edetabel**, et näha, millised tasuta pakkujad pakuvad sinu ülesande jaoks kõige võimekamaid mudeleid —
 > kas üldarvestuses või kategooria järgi filtreerituna (programmeerimine, ülevaatus, dokumentatsioon, silumine).
 
@@ -12,7 +12,7 @@
 
 ## Mis see on
 
-OmniRoute registreerib 375 pakkujat, sealhulgas 155 kataloogikirjet, mis on märgistatud **tasuta/autentimiseta**
+67router registreerib 375 pakkujat, sealhulgas 155 kataloogikirjet, mis on märgistatud **tasuta/autentimiseta**
 (autentimiseta, tasuta taseme OAuth või tasuta taseme API-võti — vaata
 [Tasuta tasemete juhendit](../getting-started/FREE-TIERS-GUIDE.md) ja täielikku
 [Tasuta tasemete kataloogi](../reference/FREE_TIERS.md)). Konks on selles: tasuta pakkujate
@@ -129,9 +129,9 @@ Arena ELO sünkroonimismootor (`src/lib/arenaEloSync.ts`) hangib Arena AI edetab
 ja `code`. Iga edetabelikirje sisaldab mudeli nime, tarnijat, ELO `score`-i,
 usaldusvahemikku ja häälte arvu.
 
-Edetabeli kategooriad vastendatakse OmniRoute'i ülesandekategooriatega:
+Edetabeli kategooriad vastendatakse 67router'i ülesandekategooriatega:
 
-| Arena edetabel | OmniRoute'i ülesandekategooriad                   |
+| Arena edetabel | 67router'i ülesandekategooriad                    |
 | -------------- | ------------------------------------------------- |
 | `text`         | `default`, `review`, `documentation`, `debugging` |
 | `code`         | `coding`                                          |
@@ -169,7 +169,7 @@ Sünkroonimine on **vaikimisi sisse lülitatud**:
 - See käivitatakse üks kord serveri käivitamisel ja seejärel perioodilise taimeriga
   (`src/lib/arenaEloSync.ts`, ühendatud failist `src/instrumentation-node.ts`).
 - See on **mitteblokeeriv ega põhjusta kunagi kriitilist tõrget** — kui andmete
-  hankimine lähteallikast nurjub, jätkab OmniRoute tööd ning pingereas kuvatakse lihtsalt
+  hankimine lähteallikast nurjub, jätkab 67router tööd ning pingereas kuvatakse lihtsalt
   viimased korrektsed andmed (või tühi olek).
 
 Seda juhivad kaks keskkonnamuutujat (dokumenteeritud failis
@@ -204,7 +204,7 @@ paindlikku vastendamist (`findMatchingIntelligence` failis `src/lib/freeProvider
 3. Prefiksi vaste (edetabelis olev mudelinimi on registri-ID prefiks).
 
 Sünkroonimise poolel eemaldatakse tuntud tarnijaprefiksid (`anthropic/`, `openai/`,
-`google/`, …) ning väike pseudonüümikaart laiendab kanoonilised nimed OmniRoute'i
+`google/`, …) ning väike pseudonüümikaart laiendab kanoonilised nimed 67router'i
 sisemiselt kasutatavateks variantideks, et mudelid oleksid leitavad mis tahes nime all.
 
 ### Kuidas tarnija pingerida määratakse

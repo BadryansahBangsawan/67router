@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker daxilində işlədikdə, standart "Zed Keychain-dən idxal" prosesi uğursuz olur,
+67router Docker daxilində işlədikdə, standart "Zed Keychain-dən idxal" prosesi uğursuz olur,
 çünki konteyner host əməliyyat sisteminin açar zənciri xidmətinə (Linux-da libsecret,
 macOS-da Keychain, Windows-da Credential Manager) daxil ola bilmir və host fayl sistemindəki
 Zed konfiqurasiya qovluqları standart olaraq konteyner daxilində görünmür.
@@ -20,7 +20,7 @@ Konteyner daxilində iki əngəlləyici problem yaranır:
    modulu Unix soketi və ya D-Bus sessiyası vasitəsilə əməliyyat sisteminin açar zənciri xidməti
    ilə əlaqə qurur. Standart olaraq bunların heç biri konteynerə ötürülmür, buna görə də giriş məlumatlarının oxunması həmişə uğursuz olur.
 
-OmniRoute Docker mühitini iki evristika vasitəsilə aşkarlayır:
+67router Docker mühitini iki evristika vasitəsilə aşkarlayır:
 
 - `/.dockerenv` faylının mövcudluğu (konteyner başladılarkən Docker demonu tərəfindən yazılır).
 - `/proc/1/cgroup` daxilində `docker` sətrinin olması (Linux cgroup v1).
@@ -32,7 +32,7 @@ Bu evristikalardan hər hansı biri işə düşdükdə, idxal marşrutu
 
 1. **İdarəetmə paneli → Provayderlər → Zed** bölməsini açın.
 2. **Əl ilə Token İdxalı** paneli açar zəncirindən idxal kartının altında görünür.
-   OmniRoute Docker-i aşkarladıqda, açar zəncirindən ilk uğursuz idxal cəhdindən sonra
+   67router Docker-i aşkarladıqda, açar zəncirindən ilk uğursuz idxal cəhdindən sonra
    bu panel avtomatik olaraq genişlənir.
 3. Açılan siyahıdan provayderi seçin (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter və ya DeepSeek).

@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` huruhusu mazingira halisi ya utekelezaji ya Claude Code kutumia endpoint ya ndani ya
-Anthropic Messages ya OmniRoute huku Devin CLI rasmi ikitoa majibu ya modeli kupitia ACP stdio. Haiwabadilishi
+Anthropic Messages ya 67router huku Devin CLI rasmi ikitoa majibu ya modeli kupitia ACP stdio. Haiwabadilishi
 watoa huduma waliopo wa Anthropic, Claude OAuth, Claude Web, au `devin-cli`.
 
 Kwa miito ya zana inayomilikiwa na mteja, pitisha kupitia `devin-cli-agentic` (jina mbadala `dva`), yaani
@@ -18,7 +18,7 @@ modeli yake imetiwa alama ipasavyo ili uelekezaji wa mseto unaohitaji zana uiepu
 > `3000.2.17` na modeli `swe-1-7-lightning`; utekelezaji huo wa mwisho wa moja kwa moja ulithibitisha zamu za `Read`,
 > `Edit`, na `Bash` zinazomilikiwa na mteja, matokeo yaliyofaulu ya `npm test`, ugunduzi wa amri na ujuzi wa
 > mradi, uelekezaji kupitia Devin pekee, na trafiki sifuri inayotoka kwenda Claude. Kisha toleo lililofungwa lilipandishwa hadi `2.1.258`
-> (kizazi cha CLI ambacho utambulisho wa Claude wa OmniRoute huiga, na laini ya kwanza inayojumuisha
+> (kizazi cha CLI ambacho utambulisho wa Claude wa 67router huiga, na laini ya kwanza inayojumuisha
 > daraja la Fable 5.1 moja kwa moja). Kwenye toleo jipya lililofungwa, safu ya usakinishaji na `claude --version`
 > zilithibitishwa kwenye image ya msingi iliyofungwa, na mkusanyiko wa majaribio ya kitengo wa daraja, `compose config` pamoja na
 > uthibitisho tuli wa utengaji hufaulu — lakini hali ya mock ya nje ya mtandao na mkusanyiko wa moja kwa moja wa hali tatu
@@ -51,11 +51,11 @@ Kichanganuzi hukubali bahasha moja huru ya `<tool>{...}</tool>` kwa kila zamu ya
 jina dhidi ya orodha ya zana ya ombi, huthibitisha hoja dhidi ya JSON Schema ya zana hiyo,
 hukataa mchanganyiko wa maelezo na vitendo, na kuruhusu jaribio moja la urekebishaji lenye kikomo. Kisha Claude Code
 hutekeleza `tool_use` ya Anthropic inayotokana na hilo ndani ya mazingira ya ndani na kutuma `tool_result` kupitia
-OmniRoute.
+67router.
 
 ## Uelekezaji otomatiki
 
-Mtoa huduma anastahiki kujumuishwa katika makundi ya wagombea ya `auto/*` ya OmniRoute wakati hajazuiwa.
+Mtoa huduma anastahiki kujumuishwa katika makundi ya wagombea ya `auto/*` ya 67router wakati hajazuiwa.
 Ustahiki wa kuwa mgombea hauhakikishi kuchaguliwa: mkakati wa uelekezaji wa mseto (kwa mfano,
 last-known-good) unaweza kumpendelea mtoa huduma mwingine. Tumia `dva/<model>` au mseto unaotanguliza Devin wakati
 unahitaji kila ombi lipitie Devin.
@@ -67,16 +67,16 @@ vimekatazwa. Huduma za Compose:
 
 - huendeshwa kama UID/GID `10001:10001`, zikiwa na mfumo wa faili wa mizizi wa kusoma pekee, uwezo ulioondolewa, na
   `no-new-privileges`;
-- hutumia `/home/bridge` ya faragha, ujazo mahususi wa usanidi wa Claude, data ya OmniRoute iliyotengwa,
+- hutumia `/home/bridge` ya faragha, ujazo mahususi wa usanidi wa Claude, data ya 67router iliyotengwa,
   na ujazo tofauti wa `devin-auth`;
 - hupachika tu maeneo ya kazi/ushahidi ya `.sandbox` yanayoweza kutupwa;
 - hazipachiki saraka ya nyumbani ya seva mwenyeji, Keychain, vitambulisho vya SSH, vitambulisho vya wingu, au soketi ya Docker;
 - huunda mazingira yaliyobainishwa wazi na kuondoa vigezo vya API/OAuth/uelekezaji vya Anthropic;
 - huelekeza uchakataji wa Claude Code kwa `http://omniroute:20128` pekee kwa kutumia ufunguo wa ndani pekee.
 
-Wasifu wa nje ya mtandao hutumia mtandao wa ndani. Katika wasifu wa moja kwa moja, OmniRoute hufikia
+Wasifu wa nje ya mtandao hutumia mtandao wa ndani. Katika wasifu wa moja kwa moja, 67router hufikia
 vituo rasmi vya Devin kupitia `network-guard` pekee; maeneo mengine yasiyohusiana yanakataliwa.
-Claude Code ina ulinzi tofauti wa kutoka unaokataa kila kitu na inaweza kufikia huduma ya ndani ya OmniRoute
+Claude Code ina ulinzi tofauti wa kutoka unaokataa kila kitu na inaweza kufikia huduma ya ndani ya 67router
 pekee kupitia `NO_PROXY`. Faili za ukaguzi za ulinzi hupachikwa tu na mchakato husika wa ulinzi. Skripti
 huthibitisha umiliki wa faili, modi, idadi ya viungo na kila uamuzi kabla ya kuhamisha
 ushahidi usio na tokeni.

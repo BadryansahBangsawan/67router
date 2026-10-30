@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Posledná aktualizácia:** 2026-09-22 — menné priestory rozsahu ukazujú na MCP-SERVER.md
 
-OmniRoute má autorizačný pipeline, ktorý je citlivý na trasy a stráži každú požiadavku API. Klasifikácia je **deterministická** a **fail-closed** — čokoľvek, čo nemožno klasifikovať, skončí ako `MANAGEMENT` a vyžaduje reláciu alebo token s úrovňou riadenia. Táto stránka vysvetľuje model pre inžinierov, ktorí udržiavajú trasy alebo navrhujú nové koncové body.
+67router má autorizačný pipeline, ktorý je citlivý na trasy a stráži každú požiadavku API. Klasifikácia je **deterministická** a **fail-closed** — čokoľvek, čo nemožno klasifikovať, skončí ako `MANAGEMENT` a vyžaduje reláciu alebo token s úrovňou riadenia. Táto stránka vysvetľuje model pre inžinierov, ktorí udržiavajú trasy alebo navrhujú nové koncové body.
 
 ![AuthZ pipeline (3 triedy trás + vyhodnotenie politiky)](../diagrams/exported/authz-pipeline.svg)
 

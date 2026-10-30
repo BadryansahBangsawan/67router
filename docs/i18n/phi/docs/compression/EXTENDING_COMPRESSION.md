@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Ang compression engine ng OmniRoute ay **pluggable** — maaari kang magrehistro ng mga custom na engine, maghatid ng mga language pack para sa mga bagong wika, at bumuo ng magkakapatong na pipeline. Ipinapakita ng gabay na ito kung paano.
+> **TL;DR**: Ang compression engine ng 67router ay **pluggable** — maaari kang magrehistro ng mga custom na engine, maghatid ng mga language pack para sa mga bagong wika, at bumuo ng magkakapatong na pipeline. Ipinapakita ng gabay na ito kung paano.
 
 **Mga kaugnay na gabay:**
 
@@ -232,7 +232,7 @@ ang engine sa strategy selector sa pamamagitan ng `id` nito. Subukan ang integra
 
 ## Paglikha ng mga Language Pack
 
-Gumagamit ang Caveman-style compression ng **mga rule pack na partikular sa wika** upang pangasiwaan ang mga filler, pag-aalinlangan, at maligoy na pattern sa bawat natural na wika. Kasama sa OmniRoute ang **6 na language pack**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Gumagamit ang Caveman-style compression ng **mga rule pack na partikular sa wika** upang pangasiwaan ang mga filler, pag-aalinlangan, at maligoy na pattern sa bawat natural na wika. Kasama sa 67router ang **6 na language pack**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Istruktura ng Pack
 
@@ -391,7 +391,7 @@ Ang output ng engine N ang nagiging input ng engine N+1.
 
 ### Mga Mode ng Compression
 
-Pumipili ang OmniRoute ng **ISANG mode sa bawat request** batay sa configuration, mga auto-trigger threshold, at mga combo override.
+Pumipili ang 67router ng **ISANG mode sa bawat request** batay sa configuration, mga auto-trigger threshold, at mga combo override.
 Ang mga available na mode ay tinukoy sa `open-sse/services/compression/types.ts` (type na `CompressionMode`):
 
 | Mode         | Mga Engine           | Gamit                                                                                                                                                                                                                  |
@@ -511,10 +511,10 @@ Upang kontrolin ito mula sa config, itakda ang `mode: "stacked"` at ibigay ang a
 
 ## Patakaran sa Pag-sync sa Upstream
 
-Kinikilala ng mga compression engine ng OmniRoute sa README ang ilang upstream na proyekto
+Kinikilala ng mga compression engine ng 67router sa README ang ilang upstream na proyekto
 ("hango sa RTK, Caveman, LLMLingua-2, Troglodita"). Isang karaniwang tanong ng mga contributor
 ay: **kapag nagdagdag ang upstream RTK ng bagong tool filter o nagdagdag ang Caveman ng rule
-pack, paano ito nakararating sa OmniRoute?** Ang seksyong ito ang opisyal na sagot.
+pack, paano ito nakararating sa 67router?** Ang seksyong ito ang opisyal na sagot.
 
 ### Mga vendored na kopya kumpara sa mga independiyenteng implementasyon
 
@@ -535,7 +535,7 @@ nakasaad sa README na "hango sa" sa halip na "kasamang naka-bundle".
 **Walang awtomatikong pagsubaybay sa mga upstream release at walang `compression-sync`
 label** — sinadya ito. Dahil mga muling implementasyon ang mga engine, ang isang upstream RTK
 filter o Caveman rule pack ay hindi isinasama bilang code; sa halip, ito ay **muling ipinapahayag bilang bagong
-rule/filter sa sariling format ng OmniRoute** (tingnan ang
+rule/filter sa sariling format ng 67router** (tingnan ang
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) at idinaragdag nang ad-hoc sa pamamagitan ng
 karaniwang PR. Ang mga extension point sa itaas (custom engine, language pack, RTK filter)
 ang mga awtorisadong paraan upang mag-ambag nito.
@@ -549,14 +549,14 @@ Mga kamakailang halimbawa ng mismong daloy na ito:
 ### Headroom (proxy para sa input compression)
 
 Ang Headroom ay **ganap na internal** — isang naka-pin na vendored snapshot ng `gcf` codec kasama ang
-sariling mga layer na `smartcrusher` / `toon` / `tabular` ng OmniRoute. Walang aktibong
+sariling mga layer na `smartcrusher` / `toon` / `tabular` ng 67router. Walang aktibong
 upstream na susubaybayan maliban sa vendored na kopya; mano-manong nire-refresh ang mga update sa `gcf`
 kapag nagbabago ang codec at muling bina-validate laban sa compression budget
 gate (`check:compression-budget`).
 
 ### Pagmumungkahi ng pagpapahusay na hango sa upstream
 
-1. **Huwag mag-vendor** — muling ipahayag ang upstream rule/filter sa format ng OmniRoute.
+1. **Huwag mag-vendor** — muling ipahayag ang upstream rule/filter sa format ng 67router.
 2. Idagdag ito sa pamamagitan ng katugmang extension point sa ibaba (language pack, RTK filter, o
    custom engine).
 3. Banggitin ang upstream na proyekto sa paglalarawan ng PR (attribution), sa halip na

@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (हिन्दी)
+# 🗜️ Prompt Compression Guide — 67router (हिन्दी)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## अवलोकन
 
-OmniRoute एक मॉड्यूलर प्रॉम्प्ट कम्प्रेशन पाइपलाइन लागू करता है, जो अनुरोधों के अपस्ट्रीम प्रदाताओं तक पहुँचने से **पहले ही सक्रिय रूप से** चलती है। इसका अर्थ है कि आपके टोकन की बचत पारदर्शी रूप से होती है — आपके वर्कफ़्लो में किसी बदलाव की आवश्यकता नहीं है।
+67router एक मॉड्यूलर प्रॉम्प्ट कम्प्रेशन पाइपलाइन लागू करता है, जो अनुरोधों के अपस्ट्रीम प्रदाताओं तक पहुँचने से **पहले ही सक्रिय रूप से** चलती है। इसका अर्थ है कि आपके टोकन की बचत पारदर्शी रूप से होती है — आपके वर्कफ़्लो में किसी बदलाव की आवश्यकता नहीं है।
 
 ```
 क्लाइंट अनुरोध
@@ -120,15 +120,15 @@ RTK -> Caveman
 
 ## अपस्ट्रीम बचत का गणित
 
-OmniRoute दो स्रोतों से प्राप्त कम्प्रेशन बचत का दस्तावेज़ीकरण करता है: अपस्ट्रीम प्रोजेक्ट बेंचमार्क और
-OmniRoute की अपनी इंजन संरचना।
+67router दो स्रोतों से प्राप्त कम्प्रेशन बचत का दस्तावेज़ीकरण करता है: अपस्ट्रीम प्रोजेक्ट बेंचमार्क और
+67router की अपनी इंजन संरचना।
 
 | स्रोत   | यहाँ उपयोग की गई अपस्ट्रीम README संख्या                                                            |
 | ------- | --------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` कम आउटपुट टोकन, `65%` बेंचमार्क औसत आउटपुट बचत, `22-87%` सीमा, और `~46%` इनपुट कम्प्रेशन टूल |
 | RTK     | `60-90%` कमांड-आउटपुट बचत; नमूना सत्र में `~118,000 -> ~23,900` टोकन, या `79.7%` बचत (`~80%`)       |
 
-ओवरलैप होने वाले टूल/कॉन्टेक्स्ट पेलोड के लिए, डिफ़ॉल्ट OmniRoute कॉम्बो इंजनों को क्रमबद्ध करता है:
+ओवरलैप होने वाले टूल/कॉन्टेक्स्ट पेलोड के लिए, डिफ़ॉल्ट 67router कॉम्बो इंजनों को क्रमबद्ध करता है:
 
 ```txt
 RTK -> Caveman
@@ -514,12 +514,12 @@ settings API किसी भी style id को स्वीकार करत
 को कैटलॉग क्रम में जोड़ता है,
 सीमाओं वाला खंड **एक बार** जोड़ता है (साथ ही सुरक्षा खंड, `SAFETY_BOUNDARIES` या उसका
 अनुवाद, जब `less-code` या `ponytail` चुना गया हो), और block को एकल idempotency marker
-(`[OmniRoute Output Styles]`) से शुरू करता है, इसलिए इसे दोबारा लागू करना no-op होता है।
+(`[67router Output Styles]`) से शुरू करता है, इसलिए इसे दोबारा लागू करना no-op होता है।
 जब हल की गई भाषा (नीचे भाषा चयन देखें) का अनुवाद उपलब्ध होता है, तो अंग्रेज़ी के बजाय
 स्थानीयकृत निर्देश डाला जाता है।
 
 गैर-रिक्त `messages` array वाले body पर, idempotency जाँच content bypass से पहले चलती
-है: जब `[OmniRoute Output Styles]` marker पहले से शीर्ष-स्तरीय `system` field (एक string
+है: जब `[67router Output Styles]` marker पहले से शीर्ष-स्तरीय `system` field (एक string
 या content-block array) में या string content वाले system message में मौजूद हो, तो body
 को `already_applied` के रूप में अपरिवर्तित छोड़ दिया जाता है और कोई keyword जाँच नहीं
 चलती। अन्यथा, एक content bypass (`shouldBypassCavemanOutputMode()` जो
@@ -546,7 +546,7 @@ keyword जाँच छोड़ दी जाती है।
 
 `messages` array के बिना (या रिक्त array वाले) body पर कोई content bypass नहीं चलता और
 शीर्ष-स्तरीय `system` field नहीं देखी जाती। block को string `instructions` field के
-text के बाद जोड़ा जाता है, जब तक उस field में पहले से `[OmniRoute Output Styles]`
+text के बाद जोड़ा जाता है, जब तक उस field में पहले से `[67router Output Styles]`
 marker न हो; उस स्थिति में body को `already_applied` के रूप में अपरिवर्तित छोड़ दिया
 जाता है। जब body में string `instructions` field नहीं होती, लेकिन उसमें `input` (एक
 string या array) मौजूद होता है, तो block `instructions` बन जाता है और उस field में
@@ -574,8 +574,8 @@ dashboard में: **Compression Context → Compression Settings**
 
 पिछली संगतता: जब `outputStyles` रिक्त हो, तो legacy
 `cavemanOutputMode.enabled` setting, `cavemanOutputMode.intensity` पर `terse-prose`
-से map होती है। इसके बाद block `[OmniRoute Output Styles]` marker से शुरू होता है,
-जबकि legacy `applyCavemanOutputMode()` injector `[OmniRoute Caveman Output Mode]`
+से map होती है। इसके बाद block `[67router Output Styles]` marker से शुरू होता है,
+जबकि legacy `applyCavemanOutputMode()` injector `[67router Caveman Output Mode]`
 लिखता था। marker के नीचे, text en, pt-BR, es, de, fr, it, ru, id और vi में legacy
 injection से मेल खाता है; ja और zh में boundaries clause से पहले एक अतिरिक्त space
 होता है। `terse-prose` का pt-BR, es, de, fr, it, ru, zh, ja, id और vi में अनुवाद होता

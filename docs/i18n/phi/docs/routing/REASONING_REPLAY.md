@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Kinukuha ng OmniRoute ang `reasoning_content` ng assistant na nililikha ng mga thinking-mode model at malinaw itong muling ipinapasa sa mga multi-turn request kapag hinihingi ito ng upstream provider. Inaalis nito ang mga HTTP 400 error na ibinabalik ng mahihigpit na provider kapag nawawala sa history ng pag-uusap ng client ang reasoning mula sa nakaraang turn.
+Kinukuha ng 67router ang `reasoning_content` ng assistant na nililikha ng mga thinking-mode model at malinaw itong muling ipinapasa sa mga multi-turn request kapag hinihingi ito ng upstream provider. Inaalis nito ang mga HTTP 400 error na ibinabalik ng mahihigpit na provider kapag nawawala sa history ng pag-uusap ng client ang reasoning mula sa nakaraang turn.
 
 ## Bakit Ito Umiiral
 
@@ -17,7 +17,7 @@ Tinatanggihan ng ilang thinking-mode provider ang follow-up turn maliban kung **
 Param Incorrect: Ang reasoning_content sa thinking mode ay dapat muling ipasa sa API.
 ```
 
-Ngunit karaniwang inaalis ng mga client (Cursor, Cline, Roo Code, OpenAI SDK) ang `reasoning_content` mula sa history na muli nilang ipinapasa. Ibinabalik ito ng OmniRoute mula sa server-side cache upang maging pare-pareho ang request na nakikita ng upstream. Ipinakilala ng Issue #1628 ang hybrid memory/SQLite persistence upang manatili ang cache kahit mag-restart ang proseso.
+Ngunit karaniwang inaalis ng mga client (Cursor, Cline, Roo Code, OpenAI SDK) ang `reasoning_content` mula sa history na muli nilang ipinapasa. Ibinabalik ito ng 67router mula sa server-side cache upang maging pare-pareho ang request na nakikita ng upstream. Ipinakilala ng Issue #1628 ang hybrid memory/SQLite persistence upang manatili ang cache kahit mag-restart ang proseso.
 
 ## Arkitektura
 

@@ -4,18 +4,18 @@
 
 ---
 
-Dva načina, kako Cursor postaviti za OmniRoute brez seje IDE:
+Dva načina, kako Cursor postaviti za 67router brez seje IDE:
 
 1. **Ponudnik `cursor-api`** (kartica »Cursor API«, vzdevek `cua`): ponudnik s
    ključem API, ki hrani uporabniški ključ API za Cursor (`crsr_…`, ustvarjen na
-   `https://cursor.com/dashboard/api`). Vsak odjemalec OmniRoute lahko nato
+   `https://cursor.com/dashboard/api`). Vsak odjemalec 67router lahko nato
    dostopa do modelov Cursor prek `/v1/chat/completions` kot
    `cursor-api/<model>` ali `cua/<model>`, z običajnimi plastmi za kvote,
    nadomestne možnosti in beleženje. Ponudnik IDE (`cursor`, seja OAuth/IDE)
    ostane nespremenjen.
 2. **Neposredno posredovanje Cursor CLI**: usmerite Cursor CLI (`agent`) v
-   OmniRoute, tako da je vsak klic RPC, ki ga izvede CLI, overjen s ključem API
-   za OmniRoute, posredovan v Cursor s poverilnico povezave `cursor-api` in
+   67router, tako da je vsak klic RPC, ki ga izvede CLI, overjen s ključem API
+   za 67router, posredovan v Cursor s poverilnico povezave `cursor-api` in
    zabeležen na strani Logs.
 
 ## Zakaj se ključ izmenja
@@ -61,7 +61,7 @@ Opombe:
 
 - Seznam modelov za `cursor-api` prihaja iz statičnega registra Cursor (istega
   seznama, ki ga ponudnik IDE uporabi kot nadomestno možnost); namestitev
-  `cursor-agent` na gostitelju OmniRoute ni potrebna.
+  `cursor-agent` na gostitelju 67router ni potrebna.
 - `POST /api/providers/{id}/refresh-cursor` je namenjen samo ponudniku IDE
   `cursor`; povezave `cursor-api` nimajo seje IDE, ki bi jo bilo treba obnoviti.
 
@@ -70,7 +70,7 @@ Opombe:
 Za `cursor` / `cu` in `cursor-api` / `cua` skupni normalizator ravni napora za
 Claude pusti zahtevani ID modela nespremenjen. Cursor lahko pripono, kot je
 `-low`, objavi kot del dejanskega ID-ja modela in ne kot vzdevek ravni napora
-OmniRoute. Izvajalnik Cursor ohrani natančno ujemanje z aktivnim katalogom; kadar
+67router. Izvajalnik Cursor ohrani natančno ujemanje z aktivnim katalogom; kadar
 ujemanja ni, njegov obstoječi razreševalnik modelov poskrbi za nadomestno
 pretvorbo pripone v parameter.
 
@@ -85,18 +85,18 @@ Pot: `src/app/api/cursor-cli/[...path]/route.ts` →
 registrirana v `src/shared/constants/publicApiRoutes.ts`, ker obravnavalnik
 izvaja lastno preverjanje pristnosti:
 
-| Pot                                                                                                                        | Preverjanje pristnosti, pričakovano od CLI-ja | Kaj naredi OmniRoute                                                                                                                                                                  |
+| Pot                                                                                                                        | Preverjanje pristnosti, pričakovano od CLI-ja | Kaj naredi 67router                                                                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                         | `Bearer <ključ API OmniRoute>`                | Preveri ključ, ustvari JWT HS256 z veljavnostjo 1 ure (podpisan z `JWT_SECRET`) in ga vrne                                                                                            |
+| `POST /auth/exchange_user_api_key`                                                                                         | `Bearer <ključ API 67router>`                 | Preveri ključ, ustvari JWT HS256 z veljavnostjo 1 ure (podpisan z `JWT_SECRET`) in ga vrne                                                                                            |
 | vse druge poti (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <ta JWT>`                             | Preveri izdajatelja, ciljno občinstvo in čas poteka, izbere aktivno povezavo `cursor-api`, zamenja glavo Authorization za izmenjani žeton Cursor ter pretočno posreduje odgovor nazaj |
 
 CLI dekodira `exp` iz vsakega prejetega žetona, zato bi zaradi neprosojnega
 žetona pred skoraj vsako zahtevo znova izvedel izmenjavo; ustvarjeni JWT to
-prepreči. Odgovor 401 iz OmniRoute povzroči, da CLI znova izvede izmenjavo.
+prepreči. Odgovor 401 iz 67router povzroči, da CLI znova izvede izmenjavo.
 
 ### Nastavitev
 
-1. Ustvarite ključ API OmniRoute (Nadzorna plošča → Ključi API) in povezavo
+1. Ustvarite ključ API 67router (Nadzorna plošča → Ključi API) in povezavo
    `cursor-api`.
 2. Nastavite CLI tako, da za tok agenta uporablja HTTP/1.1. V datoteki
    `~/.cursor/cli-config.json`:
@@ -109,7 +109,7 @@ prepreči. Odgovor 401 iz OmniRoute povzroči, da CLI znova izvede izmenjavo.
    konfiguriranim gostiteljem agenta, skozi končno točko pa potekajo samo
    klici RPC nadzorne ravnine.
 
-3. Zaženite CLI prek OmniRoute:
+3. Zaženite CLI prek 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -119,17 +119,17 @@ prepreči. Odgovor 401 iz OmniRoute povzroči, da CLI znova izvede izmenjavo.
 
 Vsak korak se v dnevnikih prikaže s ponudnikom `cursor-api`, vrsto zahteve
 `cursor-cli` in potjo `/api/cursor-cli/<rpc>` ter je pripisan ključu API
-OmniRoute in povezavi, ki ga je obdelala.
+67router in povezavi, ki ga je obdelala.
 
 ### Načini napak
 
-| Situacija                                        | Odgovor CLI-ju                                          |
-| ------------------------------------------------ | ------------------------------------------------------- |
-| Neznan ključ OmniRoute in `REQUIRE_API_KEY=true` | 401 `unauthenticated` ob izmenjavi                      |
-| `REQUIRE_API_KEY=false`                          | anonimna seja (enako kot vedenje `/v1/*`)               |
-| Potekel / tuj / spremenjen JWT seje              | 401, CLI znova izvede izmenjavo                         |
-| Ključ API OmniRoute preklican po izmenjavi       | 401 ob naslednjem klicu RPC                             |
-| Ni aktivne povezave `cursor-api`                 | 503 `unavailable`                                       |
-| Cursor zavrne ključ povezave                     | 401 `unauthenticated`, predpomnjena seja je odstranjena |
-| Višjestopenjska storitev ni dosegljiva           | 502 `unavailable` (sanirano sporočilo)                  |
-| `JWT_SECRET` ni nastavljen                       | 503 ob izmenjavi                                        |
+| Situacija                                       | Odgovor CLI-ju                                          |
+| ----------------------------------------------- | ------------------------------------------------------- |
+| Neznan ključ 67router in `REQUIRE_API_KEY=true` | 401 `unauthenticated` ob izmenjavi                      |
+| `REQUIRE_API_KEY=false`                         | anonimna seja (enako kot vedenje `/v1/*`)               |
+| Potekel / tuj / spremenjen JWT seje             | 401, CLI znova izvede izmenjavo                         |
+| Ključ API 67router preklican po izmenjavi       | 401 ob naslednjem klicu RPC                             |
+| Ni aktivne povezave `cursor-api`                | 503 `unavailable`                                       |
+| Cursor zavrne ključ povezave                    | 401 `unauthenticated`, predpomnjena seja je odstranjena |
+| Višjestopenjska storitev ni dosegljiva          | 502 `unavailable` (sanirano sporočilo)                  |
+| `JWT_SECRET` ni nastavljen                      | 503 ob izmenjavi                                        |

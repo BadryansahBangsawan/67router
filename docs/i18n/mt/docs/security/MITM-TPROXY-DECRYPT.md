@@ -4,7 +4,7 @@
 
 ---
 
-Id-dekriptaġġ trasparenti TPROXY huwa l-**5 mod ta' qbid** ta' OmniRoute għall-munzell MITM ta'
+Id-dekriptaġġ trasparenti TPROXY huwa l-**5 mod ta' qbid** ta' 67router għall-munzell MITM ta'
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Dan jinterċetta u **jiddekripta** traffiku HTTPS lokali ħiereġ fuq Linux
 bl-użu ta' TPROXY tal-kernel + routing ibbażat fuq politika — **mingħajr** ma jiffalsifika `/etc/hosts` u
@@ -53,7 +53,7 @@ Użah meta trid taqbad u tiddekripta traffiku minn proċess li:
 - ma tridx tfixklu b'bidla fil-proxy għas-sistema kollha.
 
 Minħabba li l-interċettazzjoni sseħħ fil-kernel, il-proċess li joriġina t-traffiku ma jeħtieġ **ebda
-bidla fil-konfigurazzjoni** — iżda l-proċess irid jafda s-CA dinamika li OmniRoute
+bidla fil-konfigurazzjoni** — iżda l-proċess irid jafda s-CA dinamika li 67router
 jinstalla (ara [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ l-addon mhux mibni), il-loader tal-addon (`src/mitm/tproxy/transparentSocket.ts:
 jirritorna `null` minflok ma jarmi eċċezzjoni. L-istatus tal-modalità tal-qbid imbagħad jirrapporta
 `available: false`, it-toggle tad-dashboard ikun **diżattivat** bit-tooltip
 "Id-deċifrar TPROXY jeħtieġ Linux + root + l-addon nattiv", u l-bqija ta'
-OmniRoute jibqa' jaħdem.
+67router jibqa' jaħdem.
 
 ---
 
@@ -269,7 +269,7 @@ kontra dan b'marka ta' bypass fuq is-socket (**SO_MARK**):
 | **Sanitizzazzjoni tal-iżbalji**                | It-tweġibiet ta’ żball tar-route jgħaddu minn `sanitizeErrorMessage()` (Regola Stretta #12).                                                                                                                                                                                                                                                                                                                  |
 
 **Il-CA MITM hija kapaċità qawwija.** CA fdata mis-sistema operattiva li tista’ tiffirma għal kwalunkwe
-host tfisser li kull ħaġa li OmniRoute tinterċetta tista’ tiġi dekriptata. Din hija protetta wara l-modalità
+host tfisser li kull ħaġa li 67router tinterċetta tista’ tiġi dekriptata. Din hija protetta wara l-modalità
 espliċita ta’ qbid TPROXY għal aċċess lokali biss, diżattivata b’mod awtomatiku, u l-entrata
 fil-maħżen tal-fiduċja titneħħa meta twaqqaf il-modalità.
 
@@ -379,7 +379,7 @@ jirritorna `available: false` meta l-addon ikun nieqes.
 ### Regoli tal-firewall li jibqgħu wara crash
 
 `revertTproxy()` huwa l-invers eżatt tal-applikazzjoni u huwa idempotenti. Meta twaqqaf
-il-modalità, ir-regoli jitreġġgħu lura; jekk OmniRoute twaqqaf f'nofs sessjoni, uża l-azzjoni
+il-modalità, ir-regoli jitreġġgħu lura; jekk 67router twaqqaf f'nofs sessjoni, uża l-azzjoni
 **Tiswija** ta' AgentBridge (`POST /api/tools/agent-bridge/repair`) biex tneħħi l-istat
 orfni tas-sistema (spoof tad-DNS, CA ewlenija, proxy tas-sistema). Ir-regoli `mangle`
 ta' TPROXY u r-rotta jitneħħew ukoll awtomatikament meta terġa' titħaddem is-sistema.

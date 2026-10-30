@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/cloudAgent/` na `src/app/api/v1/agents/tasks/`
 > **Ilisasishwa mara ya mwisho:** 2026-06-28 — v3.8.40 (usasishaji wa frontmatter; mawakala 4 ikijumuisha cursor-cloud)
 
-OmniRoute huratibu mawakala wa uandishi wa msimbo wanaopangishwa kwenye wingu na wahusika wengine (Codex Cloud, Cursor,
+67router huratibu mawakala wa uandishi wa msimbo wanaopangishwa kwenye wingu na wahusika wengine (Codex Cloud, Cursor,
 Devin, Jules) kama majukumu yanayoendelea kwa muda mrefu. Kila wakala huwekwa nyuma ya kiolesura kimoja ili
 wateja waweze kuwasilisha prompt + URL ya repo na kupokea matokeo bila kushughulikia
 API mahususi za watoa huduma.

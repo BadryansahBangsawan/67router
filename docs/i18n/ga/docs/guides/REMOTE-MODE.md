@@ -4,7 +4,7 @@
 
 ---
 
-Rith an CLI `omniroute` ar do ríomhaire glúine agus OmniRoute féin ag rith áit éigin eile
+Rith an CLI `omniroute` ar do ríomhaire glúine agus 67router féin ag rith áit éigin eile
 (VPS, freastalaí baile, ríomhaire eile ar do Tailnet). Logálann tú isteach uair amháin le
 `omniroute connect`, agus as sin amach díríonn **gach** ordú CLI ar an gcianfhreastalaí
 sin — na horduithe céanna, an t-aschur céanna, ach iad curtha i gcrích ar an gcianfhreastalaí.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← scríobhtar próifíl áitiúil C
 ## Conas a oibríonn sé
 
 ```
-do ríomhaire glúine                       OmniRoute cianda (VPS)
+do ríomhaire glúine                       67router cianda (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (pasfhocal → comhartha)    │
 │  comhthéacs: vps   │ ───────────────►  │ eisítear comhartha rochtana    │
@@ -109,7 +109,7 @@ bhfreastalaí, ní ar do ríomhaire, mar sin **crochann an scáileán toilithe g
 ní eisíonn sé cód riamh** — níl aon rud le greamú ag an ngnáthrogha chúltaca
 "greamaigh URL an aisghlaoigh". (Is srian de chuid Google é seo: tarlaíonn an chrochadh
 céanna in aon seachfhreastalaí a úsáideann an cliant deisce Antigravity atá cuachta
-leis, ní in OmniRoute amháin.)
+leis, ní in 67router amháin.)
 
 Aimsíonn an deais é seo sula dtéann tú i bhfostú: nuair a osclaítear **Soláthraithe → Antigravity →
 Ceangail** ó sheoladh nach localhost é, cuirtear an dá réiteach thíos in ionad an fhógra
@@ -117,7 +117,7 @@ chineálaigh "cóipeáil URL an aisghlaoigh", agus d'óstach agus do phort líon
 cheana féin i ngach ceann acu. (Áirítear seoladh LAN — ní localhost é `192.168.x.x`
 a mhéid a bhaineann leis an aisghlaoch seo.)
 
-Tá dhá bhealach tacaithe ann chun Antigravity a nascadh le OmniRoute cianda.
+Tá dhá bhealach tacaithe ann chun Antigravity a nascadh le 67router cianda.
 
 ### Rogha A — cúntóir logála isteach áitiúil (molta)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Ansin, sa deais **chianda**: **Soláthraithe → Antigravity → Ceangail**, agus greamaigh
 an blob `omniroute-cred-v1.…` isteach sa réimse **Céim 2** (glacann sé le URL
-aisghlaoigh nó le blob dintiúir). Díchódaíonn OmniRoute é, ritheann sé ionduchtú
+aisghlaoigh nó le blob dintiúir). Díchódaíonn 67router é, ritheann sé ionduchtú
 Cloud Code ar thaobh an fhreastalaí, agus coinníonn sé an nasc.
 
 > Tá comhartha athnuachana sa bhlob — caith leis mar fhocal faire. Ar chonair an bhrú,
@@ -198,7 +198,7 @@ port a bhaineann go sonrach leis an soláthraí le cur trí thollán.
 
 Cláraíonn Codex, xAI (`xai-oauth`) agus Grok CLI (`grok-cli`) `redirect_uri`
 aisfhillte **fosaithe** lena bhfeidhmchlár OAuth réamhtheachtach. Ní féidir le
-OmniRoute é a athrú — seolann an soláthraí an brabhsálaí ar ais chuig an seoladh
+67router é a athrú — seolann an soláthraí an brabhsálaí ar ais chuig an seoladh
 céanna atá códaithe go crua i gcónaí:
 
 | Soláthraí   | Aisghlao fosaithe a ndéanann an soláthraí atreorú chuige |
@@ -208,7 +208,7 @@ céanna atá códaithe go crua i gcónaí:
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                        |
 
 Ciallaíonn `localhost` ansin **an ríomhaire ar a bhfuil an brabhsálaí ag rith**,
-agus éisteann freastalaí aisghlao PKCE OmniRoute ar aisfhilleadh an
+agus éisteann freastalaí aisghlao PKCE 67router ar aisfhilleadh an
 **fhreastalaí**. Oscail an painéal ag seoladh LAN amhail
 `http://192.168.0.15:20128` agus ní thagann an dá cheann le chéile choíche:
 seachadtar an cód údaraithe chuig `localhost:1455` do ríomhaire glúine féin, áit
@@ -230,7 +230,7 @@ Tá dhá chur ar aghaidh riachtanach, agus teipeann fós mura gcuirtear ach cean
 amháin ar aghaidh:
 
 - Fágann **`20128`** (port an phainéil) gur fíor-óstach logánta é an tionscnamh,
-  rud a chuireann ar OmniRoute freastalaí aisghlao PKCE a thosú ar chor ar bith —
+  rud a chuireann ar 67router freastalaí aisghlao PKCE a thosú ar chor ar bith —
   ní shroicheann tionscnamh LAN an brainse sin choíche.
 - Is é **`1455`** (port aisghlao fosaithe an tsoláthraí) an áit a seoltar an
   brabhsálaí ar ais chuici; ní mór dó dul tríd an tollán chuig aisfhilleadh an
@@ -348,7 +348,7 @@ omniroute contexts current         # an freastalaí gníomhach, stádas fíordhe
 
 ```text
   | Ainm    | URL Bunúsach              | Fíordheimhniú | Scóip | Cur Síos
-● | vps     | http://100.67.86.91:20128 | comhartha | riarthóir | OmniRoute cianda (…)
+● | vps     | http://100.67.86.91:20128 | comhartha | riarthóir | 67router cianda (…)
   | réamhshocrú | http://localhost:20128    | ✗     |       |
 ```
 

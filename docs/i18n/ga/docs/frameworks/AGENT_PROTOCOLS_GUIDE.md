@@ -7,15 +7,15 @@
 > **Foinse:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Cuireann OmniRoute trí chomhéadan éagsúla a bhaineann le gníomhairí ar fáil. Tá cuma chomhchosúil orthu ar an gcéad amharc, ach réitíonn siad fadhbanna éagsúla. Úsáid an leathanach seo chun an ceann ceart a roghnú.
+Cuireann 67router trí chomhéadan éagsúla a bhaineann le gníomhairí ar fáil. Tá cuma chomhchosúil orthu ar an gcéad amharc, ach réitíonn siad fadhbanna éagsúla. Úsáid an leathanach seo chun an ceann ceart a roghnú.
 
 ## Go hachomair
 
 | Comhéadan                          | Is fearr é le haghaidh                                                                                                                                   | Iompar                                             | Caighdeán                      |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------ |
 | **A2A — Gníomhaire le Gníomhaire** | Comhoibriú idir gníomhairí le piarghníomhairí a úsáideann prótacal A2A                                                                                   | JSON-RPC 2.0 thar HTTP                             | A2A v0.3 (sonraíocht oscailte) |
-| **ACP — Clárlann Gníomhairí CLI**  | Gníomhairí códúcháin CLI atá suiteáilte ar ríomhaire an úsáideora a bhrath / a chlárú / a lainseáil (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                                          | Sainiúil do OmniRoute          |
-| **Gníomhairí Néalríomhaireachta**  | Tascanna códúcháin fadtréimhseacha a chur faoi bhráid seirbhísí seachtracha néalríomhaireachta (Codex Cloud, Devin, Jules, Cursor Cloud)                 | HTTP REST + tascanna le tacaíocht bunachair sonraí | Sainiúil do OmniRoute          |
+| **ACP — Clárlann Gníomhairí CLI**  | Gníomhairí códúcháin CLI atá suiteáilte ar ríomhaire an úsáideora a bhrath / a chlárú / a lainseáil (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                                          | Sainiúil do 67router           |
+| **Gníomhairí Néalríomhaireachta**  | Tascanna códúcháin fadtréimhseacha a chur faoi bhráid seirbhísí seachtracha néalríomhaireachta (Codex Cloud, Devin, Jules, Cursor Cloud)                 | HTTP REST + tascanna le tacaíocht bunachair sonraí | Sainiúil do 67router           |
 
 Tá na trí cinn neamhspleách ar a chéile — roghnaigh aon fhothacar díobh.
 
@@ -38,14 +38,14 @@ An dteastaíonn seirbhís néalríomhaireachta uait chun obair a dhéanamh lasmu
 ## 1. A2A — Gníomhaire le Gníomhaire
 
 **Sonraíocht:** [A2A v0.3](https://a2a-protocol.org)
-**Críochphointe OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Críochphointe 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Cárta Gníomhaire:** `GET /.well-known/agent.json`
 
 ### Cathain ba cheart é a úsáid
 
-- Córas ilghníomhaire a thógáil ina bhfuil OmniRoute ar cheann de na piaraí
-- Faisnéis ródúcháin OmniRoute (ródú cliste, bainistiú cuótaí, etc.) a chur ar fáil do ghníomhairí i gcreataí amhail Google ADK nó i mogaill ghinearálta gníomhairí
-- OmniRoute a fhilleadh taobh thiar de chomhéadan caighdeánach aimsithe + agartha
+- Córas ilghníomhaire a thógáil ina bhfuil 67router ar cheann de na piaraí
+- Faisnéis ródúcháin 67router (ródú cliste, bainistiú cuótaí, etc.) a chur ar fáil do ghníomhairí i gcreataí amhail Google ADK nó i mogaill ghinearálta gníomhairí
+- 67router a fhilleadh taobh thiar de chomhéadan caighdeánach aimsithe + agartha
 
 ### Modhanna
 
@@ -69,12 +69,12 @@ Féach ar [A2A-SERVER.md](./A2A-SERVER.md) le haghaidh sonraí iompair, strucht�
 
 ## 2. ACP — Clárlann Gníomhairí CLI
 
-**Críochphointe OmniRoute:** `GET /api/acp/agents`
+**Críochphointe 67router:** `GET /api/acp/agents`
 **Foinse:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Céard atá ann
 
-Is é ACP **fardal áitiúil gníomhairí CLI** OmniRoute. Aimsíonn sé cé na huirlisí CLI códaithe atá suiteáilte ar an óstríomhaire (Cursor, Cline, Claude Code, Codex CLI, Continue, srl.), cinneann sé a leaganacha, agus taispeánann sé iad ar an deais ionas gur féidir leis an úsáideoir gach CLI a chumrú chun OmniRoute a úsáid.
+Is é ACP **fardal áitiúil gníomhairí CLI** 67router. Aimsíonn sé cé na huirlisí CLI códaithe atá suiteáilte ar an óstríomhaire (Cursor, Cline, Claude Code, Codex CLI, Continue, srl.), cinneann sé a leaganacha, agus taispeánann sé iad ar an deais ionas gur féidir leis an úsáideoir gach CLI a chumrú chun 67router a úsáid.
 
 Is fardal inmheánach é an comhéadan HTTP a chumhachtaíonn an Chomhéadain "CLI Tools" agus
 rianú méarloirg CLI (féach [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Ar leithligh uaidh sin,
@@ -114,8 +114,8 @@ Cruth an choirp do POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
 
 ### Cásanna úsáide
 
-- Liostaíonn leathanach "CLI Tools" na deaise a bhfuil suiteáilte agus cabhraíonn sé leat gach ceann acu a threorú chuig OmniRoute
-- Ligeann gníomhairí saincheaptha d’ardúsáideoirí uirlisí CLI inmheánacha/dílseánaigh nach bhfuil OmniRoute ar an eolas fúthu de réir réamhshocraithe a chlárú
+- Liostaíonn leathanach "CLI Tools" na deaise a bhfuil suiteáilte agus cabhraíonn sé leat gach ceann acu a threorú chuig 67router
+- Ligeann gníomhairí saincheaptha d’ardúsáideoirí uirlisí CLI inmheánacha/dílseánaigh nach bhfuil 67router ar an eolas fúthu de réir réamhshocraithe a chlárú
 - Cuireann toradh an bhraite sonraí ar fáil don mhaitrís méarloirg `cli-tools`
 
 ### Cathain NÁ húsáid ACP
@@ -127,12 +127,12 @@ Cruth an choirp do POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
 
 ## 3. Gníomhairí Néalríomhaireachta
 
-**Críochphointí OmniRoute:** `/api/v1/agents/tasks/*` (saolré) + `/api/cloud/*` (bonneagar nasctha)
+**Críochphointí 67router:** `/api/v1/agents/tasks/*` (saolré) + `/api/cloud/*` (bonneagar nasctha)
 **Foinse:** `src/lib/cloudAgent/`
 
 ### Cad é atá ann
 
-Comhéadan aonfhoirmeach thar ghníomhairí códaithe néalríomhaireachta tríú páirtí. Cuireann tú leid + URL stórtha isteach, seolann OmniRoute chuig an ngníomhaire néalríomhaireachta ceart é, déanann sé stádas a pholláil, agus seolann sé na torthaí ar ais.
+Comhéadan aonfhoirmeach thar ghníomhairí códaithe néalríomhaireachta tríú páirtí. Cuireann tú leid + URL stórtha isteach, seolann 67router chuig an ngníomhaire néalríomhaireachta ceart é, déanann sé stádas a pholláil, agus seolann sé na torthaí ar ais.
 
 ### Gníomhairí a dtacaítear leo (4, iad uile deimhnithe in `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Tá “tascanna fadtéarmacha” ag an dá cheann, ach ag sraitheanna éagsúla:
 
 | Gné                  | A2A                                                                                 | Gníomhairí Néalríomhaireachta                       |
 | -------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Caighdeán            | Open A2A v0.3                                                                       | Sonrach do OmniRoute                                |
-| Cá ritheann an ríomh | Laistigh de OmniRoute (úsáideann sé teaglamaí cumraithe)                            | Go seachtrach (freastalaithe Codex / Devin / Jules) |
+| Caighdeán            | Open A2A v0.3                                                                       | Sonrach do 67router                                 |
+| Cá ritheann an ríomh | Laistigh de 67router (úsáideann sé teaglamaí cumraithe)                             | Go seachtrach (freastalaithe Codex / Devin / Jules) |
 | Fad an taisc         | TTL réamhshocraithe 5 nóiméad (inchumraithe in `TaskManager`)                       | Nóiméid go huaireanta                               |
 | Feasach ar stór      | Níl (ní sheolann sé ach leideanna)                                                  | Tá (URL an stóir + brainse)                         |
 | Cás úsáide           | Comhoibriú trasghníomhairí, ródú cliste mar sheirbhís                               | “Cuir gné X i bhfeidhm i stór Y” a tharmligean      |
@@ -182,7 +182,7 @@ Tá “tascanna fadtéarmacha” ag an dá cheann, ach ag sraitheanna éagsúla:
 
 ## Samplaí Comhtháthaithe
 
-### Faigh amach cumais A2A OmniRoute
+### Faigh amach cumais A2A 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Seolann sé an Cárta Gníomhaire ar ais leis na 6 scil, na hiompróirí agus an leagan go léir.
 
-### Glaoigh ar OmniRoute mar ghníomhaire A2A
+### Glaoigh ar 67router mar ghníomhaire A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Croí OmniRoute    │
+                │   Croí 67router    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

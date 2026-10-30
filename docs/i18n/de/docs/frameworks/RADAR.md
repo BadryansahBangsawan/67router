@@ -42,7 +42,7 @@ gehostete Bereitstellung oder externe Integration derzeit verfügbar ist.
 | Unterstützerangebote                    | Als separater signierter, ausschließlich live verfügbarer Feed und als Dashboard-Seite implementiert. Der Client revalidiert das geschlossene Vorteilschema, bewahrt den letzten gültigen Cache, filtert abgelaufene Einträge und kennzeichnet Partnerangebote ausdrücklich.                                |
 | Informationen und Unterstützererkennung | Als strikter signierter, ausschließlich live verfügbarer Feed mit Radar-eigener ELO, sachlichen Angaben zu Aktualität und Trends des Katalogs, einem verifizierten lokalen Unterstützerabzeichen, einer Dashboard-Seite und ausschließlich lokalen CLI-Status- und Synchronisierungsbefehlen implementiert. |
 | Zahlungen und Transaktions-E-Mails      | Im OSS-Client nicht implementiert. Kauf, Spende, Belegprüfung, Wiederherstellung und E-Mail-Versand gehören zum privaten Dienst; die Verfügbarkeit des gehosteten Dienstes hängt weiterhin von dessen überwachter Bereitstellung und Anbieterkonfiguration ab.                                              |
-| Arbeitsbereich Forschungsagent          | Nicht Bestandteil dieses Client-Releases. Die Inhalte des kuratierten Feeds bleiben serverseitige Daten; in einer OmniRoute-Installation wird kein autonomer Forschungsagent ausgeführt.                                                                                                                    |
+| Arbeitsbereich Forschungsagent          | Nicht Bestandteil dieses Client-Releases. Die Inhalte des kuratierten Feeds bleiben serverseitige Daten; in einer 67router-Installation wird kein autonomer Forschungsagent ausgeführt.                                                                                                                     |
 
 ---
 
@@ -120,7 +120,7 @@ Wenn beide aktiviert sind, sieht der Synchronisierungspfad wie folgt aus:
    der IP-Adresse für die manuelle Missbrauchsprüfung; in diesen Tabellen werden weder der Schlüssel noch die IP-Adresse in Rohform gespeichert.
    Infrastruktur-Zugriffsprotokolle und die verschlüsselte Versand-Outbox bilden separate betriebliche
    Grenzen.
-3. OmniRoute sendet niemals Prompts, Antworten, Konversationen, Provider-Anmeldedaten, Modellverkehr,
+3. 67router sendet niemals Prompts, Antworten, Konversationen, Provider-Anmeldedaten, Modellverkehr,
    Verfügbarkeit, Latenz oder die lokale Provider-Konfiguration an den Radar-Dienst.
 4. Die Antwort wird verifiziert, validiert und lokal zwischengespeichert (siehe
    [Sicherheitsmodell](#security-model)). Radar verfügt über genau vier serverseitige Netzwerkpfade:
@@ -244,11 +244,11 @@ der bereits einen besitzt.
 ### Durchgängige Aktivierung und geführte Einrichtung
 
 Der private Feed-Dienst und dieser OSS-Client besitzen bewusst eine klar abgegrenzte Schnittstelle: Der Dienst
-stellt den Supporter-Schlüssel aus und validiert ihn, während die lokale OmniRoute-Installation den Schlüssel verschlüsselt,
+stellt den Supporter-Schlüssel aus und validiert ihn, während die lokale 67router-Installation den Schlüssel verschlüsselt,
 signierte Artefakte serverseitig synchronisiert und durch die Anbietereinrichtung führt. Die Reihenfolge der unterstützten Validierung lautet:
 
 1. Beziehen Sie einen neu ausgestellten oder wiederhergestellten Schlüssel über den Anspruch für Mitwirkende, Pläne/Checkout, den Wiederherstellungsprozess oder einen autorisierten Betreiber eines privaten Servers. Fügen Sie den Rohschlüssel nicht in Protokolle, Screenshots, Issue-Kommentare oder Befehlszeilenargumente ein.
-2. Aktivieren Sie das Feature-Flag `RADAR_ENABLED` in der lokalen OmniRoute-Installation. Dadurch wird die Benutzeroberfläche verfügbar, bleibt jedoch netzwerkinaktiv, bis die separate Einwilligung gespeichert wurde.
+2. Aktivieren Sie das Feature-Flag `RADAR_ENABLED` in der lokalen 67router-Installation. Dadurch wird die Benutzeroberfläche verfügbar, bleibt jedoch netzwerkinaktiv, bis die separate Einwilligung gespeichert wurde.
 3. Öffnen Sie `/dashboard/radar`, fügen Sie den Schlüssel ein und aktivieren Sie ihn. Der Browser sendet einmalig lokal einen `POST /api/radar/settings` mit `{ optIn: true, supporterKey }`; der Schlüssel wird lokal verschlüsselt, und die Antwort enthält nur `omr_****<last4>`.
 4. Lassen Sie auf dem Aktivierungsbildschirm die Katalogsynchronisierung durchlaufen oder wählen Sie **Jetzt synchronisieren**. Vergewissern Sie sich, dass die Seite `live`, eine Feed-Version und eine Abrufzeit meldet. Für eine authentifizierte lokale Diagnose meldet `GET /api/radar/status` den Einwilligungs-/Schlüsselstatus sowie die vier Cache-Zustände, ohne den Schlüssel zurückzugeben. Mit `POST /api/radar/sync-all` können Katalog, Empfehlungen, Angebote und Intel explizit aktualisiert werden.
 5. Öffnen Sie `/dashboard/radar/setup?provider=<provider>`. Folgen Sie der vom Anbieter bereitgestellten Anmeldedaten-URL, wählen Sie **API-Schlüssel hinzufügen**, speichern Sie über das tatsächliche Anbieterformular, kehren Sie zur Anleitung zurück und führen Sie **Verbindung testen** aus. Die Anleitung verwendet die regulären Routen `/api/providers` und `/api/providers/<connection-id>/test`; sie erstellt keine separaten Radar-Anmeldedaten.
@@ -288,7 +288,7 @@ erneut synchronisiert werden.
 ### Fork-freundliche Umgebungsvariablen zum Überschreiben
 
 Zwei Umgebungsvariablen ermöglichen Forks und selbstgehosteten Installationen, den Client statt auf den
-standardmäßigen OmniRoute-Dienst auf einen eigenen Feed zu verweisen — siehe
+standardmäßigen 67router-Dienst auf einen eigenen Feed zu verweisen — siehe
 [So hosten Sie einen Feed selbst](#how-to-self-host-a-feed) weiter unten:
 
 | Variable            | Zweck                                                                                                                                               |
@@ -456,7 +456,7 @@ Katalogveröffentlichungen verwenden `schemaVersion: 2`. `contextWindow` und jew
 `tools`, `vision` und `thinking` sind unabhängig voneinander `number | null` /
 `boolean | null`: `null` bedeutet unbekannt, während `false` bedeutet, dass eine durch
 D16 bestätigte offizielle Anbieterquelle ausdrücklich angibt, dass die Fähigkeit nicht
-vorhanden ist. Interne Registry-/Modellspezifikations-Flags von OmniRoute werden niemals
+vorhanden ist. Interne Registry-/Modellspezifikations-Flags von 67router werden niemals
 direkt zu Feed-Fakten hochgestuft. Der Client akzeptiert weiterhin v1-Snapshots; da der
 alte Builder `false` als Platzhalter für Abwesenheit verwendete, wird `false` aus v1 zu
 „unbekannt“ normalisiert, während `true` aus v1 weiterhin als Fakt gilt. Unbekannte
@@ -523,7 +523,7 @@ Die folgenden lokalen Radar-Routenfamilien unterstützen die Benutzeroberfläche
 | `/api/radar/local-model-state` | DELETE  | Löscht bearbeitbare Überschreibungsfelder, während ein vorhandener Tombstone erhalten bleibt.                                                        |
 
 **Strikte Regel: Diese Routen fungieren niemals als Proxy für den Feed-Dienst.** Der Browser kommuniziert ausschließlich
-mit dem lokalen OmniRoute-Server. Die vier Module, die auf den Radar-Dienst zugreifen, sind
+mit dem lokalen 67router-Server. Die vier Module, die auf den Radar-Dienst zugreifen, sind
 `src/lib/radar/sync.ts` (Katalog), `src/lib/radar/referralsSync.ts` (Empfehlungen) und
 `src/lib/radar/offersSync.ts` (Angebote) sowie `src/lib/radar/intelSync.ts` (Intel); alle werden
 serverseitig und niemals clientseitig ausgeführt. Dadurch bleiben
@@ -566,7 +566,7 @@ Intel ist ein signiertes Artefakt unter `GET /v1/intel/latest`. Das geschlossene
 
 `syncRadarIntel()` wendet dieselben Regeln wie für Angebote an: serverseitige Bearer-Authentifizierung, ein Timeout von 30 Sekunden, eine gestreamte Obergrenze von 10 MiB, Ed25519-Verifizierung der exakten Bytes, strikte Schemavalidierung, die Anforderung `live` für Body und Header, eine Versionsuntergrenze sowie die Beibehaltung des letzten gültigen Caches. Nachdem ein verifizierter Live-Snapshot gespeichert wurde, leitet der Client `radar:<sha256(supporter key)>` ab, speichert nur diese nicht umkehrbare Identität und erzeugt das dedizierte Erkennungsereignis `radar_supporter`. Das Badge `radar-supporter` ist idempotent und vergibt null XP; es aktualisiert niemals Bestenlisten und verwendet `token_share` nicht erneut. `/dashboard/radar/intel` rendert das Badge ausschließlich anhand verifizierter lokaler Cache-Metadaten.
 
-Die CLI stellt `omniroute radar status` und `omniroute radar sync` bereit. Beide kommunizieren ausschließlich mit der lokalen OmniRoute-API. `status` führt ein schreibgeschütztes `GET /api/radar/status` aus; `sync` sendet einmalig `POST /api/radar/sync-all` und gibt für jeden Feed ein Ergebnis aus. Keiner der beiden Befehle liest, akzeptiert oder gibt den Supporter-Key aus, und keiner kontaktiert den Radar-Dienst direkt.
+Die CLI stellt `omniroute radar status` und `omniroute radar sync` bereit. Beide kommunizieren ausschließlich mit der lokalen 67router-API. `status` führt ein schreibgeschütztes `GET /api/radar/status` aus; `sync` sendet einmalig `POST /api/radar/sync-all` und gibt für jeden Feed ein Ergebnis aus. Keiner der beiden Befehle liest, akzeptiert oder gibt den Supporter-Key aus, und keiner kontaktiert den Radar-Dienst direkt.
 
 ---
 

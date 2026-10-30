@@ -7,7 +7,7 @@
 > **सत्यको स्रोत:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **अन्तिम अद्यावधिक:** 2026-06-28 — v3.8.40
 
-OmniRoute ले प्लेटफर्म घटनाहरूमा HTTP वेबहुकहरू ट्रिगर गर्न सक्छ। तिनलाई
+67router ले प्लेटफर्म घटनाहरूमा HTTP वेबहुकहरू ट्रिगर गर्न सक्छ। तिनलाई
 Slack, PagerDuty, Datadog, आन्तरिक चेतावनी सेवाहरू, वा कुनै पनि HTTP रिसिभरसँग एकीकृत गर्न प्रयोग गर्नुहोस्।
 
 डिस्प्याचरले प्रत्येक डेलिभरीलाई HMAC-SHA256 मार्फत हस्ताक्षर गर्छ, अस्थायी
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, आन्तरिक चेतावनी सेव
 
 ## HMAC हस्ताक्षर
 
-वेबहुकमा `secret` हुँदा OmniRoute ले JSON बडीमा हस्ताक्षर गर्छ र निम्न पठाउँछ:
+वेबहुकमा `secret` हुँदा 67router ले JSON बडीमा हस्ताक्षर गर्छ र निम्न पठाउँछ:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute sleduje využitie tokenov pri každej požiadavke, vypočítava náklady, vynucuje kvótu pre jednotlivé API kľúče a zobrazuje analytické údaje na ovládacom paneli. Táto príručka vysvetľuje, ako to celé funguje.
+> **TL;DR**: 67router sleduje využitie tokenov pri každej požiadavke, vypočítava náklady, vynucuje kvótu pre jednotlivé API kľúče a zobrazuje analytické údaje na ovládacom paneli. Táto príručka vysvetľuje, ako to celé funguje.
 
 **Zdroje:**
 
@@ -17,7 +17,7 @@
 
 ## Prehľad
 
-Každá požiadavka, ktorá prechádza cez OmniRoute, vytvára **záznam o využití**, ktorý zachytáva:
+Každá požiadavka, ktorá prechádza cez 67router, vytvára **záznam o využití**, ktorý zachytáva:
 
 - **Identitu**: ktorý API kľúč, poskytovateľ, model a kombinácia
 - **Tokeny**: tokeny výzvy, tokeny dokončenia, tokeny z vyrovnávacej pamäte a celkový počet
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Pri poskytovateľoch, ktorí údaje o využití nevracajú (niektorí poskytovatelia využívajúci webové súbory cookie), OmniRoute tokeny **odhaduje** pomocou heuristiky `~4 znaky na token` (pozrite si `open-sse/services/autoCombo/pipelineRouter.ts`).
+Pri poskytovateľoch, ktorí údaje o využití nevracajú (niektorí poskytovatelia využívajúci webové súbory cookie), 67router tokeny **odhaduje** pomocou heuristiky `~4 znaky na token` (pozrite si `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokeny vo vyrovnávacej pamäti
 
-OmniRoute sleduje `cached_tokens` oddelene od `prompt_tokens`, pretože:
+67router sleduje `cached_tokens` oddelene od `prompt_tokens`, pretože:
 
 - Ukladanie výziev Anthropic do vyrovnávacej pamäte účtuje za tokeny vo vyrovnávacej pamäti zníženú sadzbu (10 % bežnej sadzby)
 - Niektorí poskytovatelia vracajú `cache_read_input_tokens`, ktoré by mali mať odlišnú cenu
@@ -117,7 +117,7 @@ Cenové údaje sa automaticky synchronizujú zo služby LiteLLM prostredníctvom
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Pri modeloch bez cenových údajov používa OmniRoute ako náhradné riešenie **odhad nákladov** pomocou interných priemerných sadzieb (získaných z cenových údajov služby LiteLLM).
+Pri modeloch bez cenových údajov používa 67router ako náhradné riešenie **odhad nákladov** pomocou interných priemerných sadzieb (získaných z cenových údajov služby LiteLLM).
 
 ---
 

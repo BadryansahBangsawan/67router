@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jesponi l-**ġenerazzjoni tal-immaġnijiet** tal-pjan Cursor fuq `POST /v1/images/generations` permezz tal-istess id tal-fornitur bħaċ-chat: `cursor` (magħruf ukoll bħala `cu`).
+67router jesponi l-**ġenerazzjoni tal-immaġnijiet** tal-pjan Cursor fuq `POST /v1/images/generations` permezz tal-istess id tal-fornitur bħaċ-chat: `cursor` (magħruf ukoll bħala `cu`).
 
 | Qasam                    | Valur                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute jesponi l-**ġenerazzjoni tal-immaġnijiet** tal-pjan Cursor fuq `POST
 
 ## Għaliex l-Agent CLI
 
-Iċ-chat ta’ Cursor f’OmniRoute juża `agent.v1.AgentService/Run` (protobuf). Dik ir-rotta **tirrifjuta** l-għodod integrati tal-klijent (shell, write, …). Il-ġenerazzjoni tal-immaġnijiet hija għodda nattiva ta’ Cursor eżegwita mill-**`agent` CLI** permezz tal-post allokat. Għalhekk, il-handler tal-immaġnijiet iniedi `agent` bi prompt imsakkar u workspace temporanju għal kull talba (bl-istess struttura bħall-bridges tal-postijiet allokati tal-komunità), imbagħad jirritorna `b64_json` kompatibbli ma’ OpenAI.
+Iċ-chat ta’ Cursor f’67router juża `agent.v1.AgentService/Run` (protobuf). Dik ir-rotta **tirrifjuta** l-għodod integrati tal-klijent (shell, write, …). Il-ġenerazzjoni tal-immaġnijiet hija għodda nattiva ta’ Cursor eżegwita mill-**`agent` CLI** permezz tal-post allokat. Għalhekk, il-handler tal-immaġnijiet iniedi `agent` bi prompt imsakkar u workspace temporanju għal kull talba (bl-istess struttura bħall-bridges tal-postijiet allokati tal-komunità), imbagħad jirritorna `b64_json` kompatibbli ma’ OpenAI.
 
 ## Restrizzjoni tal-aċċess (Regoli Stretti #15 + #17)
 
@@ -36,7 +36,7 @@ tal-livell `LOCAL_ONLY`.
 
 `CURSOR_IMG_MAX_CONCURRENT` jiġi infurzat permezz ta’ counter/queue fil-memorja, limitat
 għall-istanza tal-modulu Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Dan jillimita b’mod korrett it-tnedijiet simultanji ta’ `agent` fi ħdan proċess OmniRoute
+Dan jillimita b’mod korrett it-tnedijiet simultanji ta’ `agent` fi ħdan proċess 67router
 wieħed, iżda **ma** jikkoordinax bejn diversi proċessi/istanzi li jaqsmu l-istess post
 allokat ta’ Cursor (eż. deployment b’diversi repliki) — kull istanza tinforza l-limitu
 indipendenti tagħha. Għal deployment b’istanza waħda (il-konfigurazzjoni predefinita),
@@ -47,7 +47,7 @@ tal-immaġnijiet ta’ Cursor lejn istanza waħda.
 ## Rekwiżiti
 
 1. Kont Cursor ikkonnettjat fid-dashboard (OAuth jew API key `crsr_…`).
-2. Il-binarju Cursor Agent irid ikun disponibbli għall-proċess OmniRoute:
+2. Il-binarju Cursor Agent irid ikun disponibbli għall-proċess 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, jew
    - `~/.local/bin/agent`, jew
    - `providerSpecificData.agentBin` fuq il-konnessjoni Cursor.

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute OpenAI Codex’dan foydalanishning **ikki** usulini taqdim etadi:
+67router OpenAI Codex’dan foydalanishning **ikki** usulini taqdim etadi:
 
 | Provayder              | OpenAI bilan qanday aloqa qiladi                                                                                                                                                                                                 | Foydalanish bo‘yicha ogohlantirish                                              |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | **`codex`**            | ChatGPT/OpenAI OAuth tokeningizni to‘g‘ridan-to‘g‘ri Responses API’ga qayta uzatadi                                                                                                                                              | **Ha** — rasmiy sessiyadan proksi/router orqali foydalanishga ruxsat berilmagan |
-| **`codex-app-server`** | **Codex CLI’ning o‘z `codex app-server` xizmatini** JSON-RPC/WebSocket orqali boshqaradi; CLI interaktiv `codex` sessiyasidagi kabi o‘z OAuth ma’lumotlariga (`~/.codex/auth.json`) egalik qiladi va ularni avtomatik yangilaydi | **Yo‘q** — OmniRoute hech qachon tokenni API’ga qayta uzatmaydi                 |
+| **`codex-app-server`** | **Codex CLI’ning o‘z `codex app-server` xizmatini** JSON-RPC/WebSocket orqali boshqaradi; CLI interaktiv `codex` sessiyasidagi kabi o‘z OAuth ma’lumotlariga (`~/.codex/auth.json`) egalik qiladi va ularni avtomatik yangilaydi | **Yo‘q** — 67router hech qachon tokenni API’ga qayta uzatmaydi                  |
 
 `codex-app-server` hech qachon tokenni qayta uzatmagani sababli, unga
 sessiyani qayta uzatish bo‘yicha foydalanish ogohlantirishi taalluqli emas. Biroq u
@@ -21,7 +21,7 @@ talab qiladi va ushbu CLI tizimga **kirgan** bo‘lishi kerak.
 ## 1. Arxitektura
 
 ```
-┌─ OmniRoute ilovasi ─────────────┐        ┌─ codex-app-server yordamchi konteyneri ┐
+┌─ 67router ilovasi ─────────────┐        ┌─ codex-app-server yordamchi konteyneri ┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                     │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456           │
 │  (+ imkoniyat tokeni)            │  JSON  │  --ws-auth capability-token           │
@@ -81,7 +81,7 @@ yozmaydi — u faqat fayl mavjud bo‘lmaganda yoki uning tokeni eskirganda yoza
 - **Ommaviy foydalanuvchi, mahalliy qurilmada codex o‘rnatilmagan** — bu ahamiyatsiz:
   yordamchi konteynerda CLI mavjud. Foydalanuvchi faqat boshqaruv paneli orqali
   autentifikatsiyadan o‘tadi.
-- **Bare-metal OmniRoute (yordamchi konteyner yo‘q, xostda codex mavjud)** —
+- **Bare-metal 67router (yordamchi konteyner yo‘q, xostda codex mavjud)** —
   `OMNIROUTE_CODEX_APPSERVER_WS`’ni o‘zingizning `codex app-server` xizmatingizga
   yo‘naltiring va xostdagi codex tizimga kirganiga ishonch hosil qiling; agar bajariluvchi
   fayl mavjud bo‘lmasa, «codex o‘rnatilmagan» maslahati ko‘rsatiladi.

@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` ajoute l’intégralité de votre catalogue OmniRoute — modèles, combos et
+`@omniroute/opencode-plugin-v2` ajoute l’intégralité de votre catalogue 67router — modèles, combos et
 auto-combos — au sélecteur de modèles d’OpenCode v2, avec les noms d’affichage, les tarifs et les
 budgets du niveau gratuit.
 
@@ -15,7 +15,7 @@ ils ne partagent rien, donc la mise à niveau de l’un n’impose jamais celle 
 ## Prérequis
 
 - OpenCode v2.
-- Une passerelle OmniRoute accessible (`http://localhost:20128` par défaut).
+- Une passerelle 67router accessible (`http://localhost:20128` par défaut).
 - Node.js 22 ou 24.
 
 ## Installation
@@ -78,7 +78,7 @@ en indiquant son nom et les informations perdues — ainsi, un sélecteur dégra
 | `baseURL`                        | obligatoire                                    | Racine de la passerelle, `http(s)` uniquement ; le suffixe `/v1` est ajouté si nécessaire                                                                             |
 | `apiKey`                         | identifiant connecté, puis `OMNIROUTE_API_KEY` | Clé de conversation pour `/v1/*`                                                                                                                                      |
 | `managementReadToken`            | utilise `apiKey` par défaut                    | Clé pour `/api/*` — généralement **différente**                                                                                                                       |
-| `displayName`                    | `"OmniRoute"`                                  | Nom du fournisseur dans le sélecteur                                                                                                                                  |
+| `displayName`                    | `"67router"`                                   | Nom du fournisseur dans le sélecteur                                                                                                                                  |
 | `timeoutMs`                      | `10000`                                        | Délai d’expiration des requêtes par point de terminaison (5 s pour les combinaisons automatiques)                                                                     |
 | `modelCacheTtlMs`                | `300000`                                       | Durée de vie du cache du catalogue ; un instantané sur disque accélère les démarrages à froid                                                                         |
 | `timeouts`                       | utilise `timeoutMs` par défaut                 | Délais impartis par point de terminaison, en ms : `models`, `combos`, `autoCombos`, `enrichment`                                                                      |
@@ -116,7 +116,7 @@ Définissez `"geminiSanitization": false` pour désactiver ce comportement.
 
 | Symptôme                                                  | Cause                                                                                                                                          |
 | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Le sélecteur n’affiche aucun modèle OmniRoute             | Aucune clé n’a été trouvée (vérifiez l’avertissement au démarrage), ou la passerelle est inaccessible                                          |
+| Le sélecteur n’affiche aucun modèle 67router              | Aucune clé n’a été trouvée (vérifiez l’avertissement au démarrage), ou la passerelle est inaccessible                                          |
 | Identifiants de modèle bruts, sans combinaisons ni tarifs | Les points de terminaison de gestion ont refusé le jeton — définissez `managementReadToken`                                                    |
 | Catalogue `freeOnly` court ou vide                        | Aucun jeton de gestion ou jeton refusé — consultez la ligne de résumé de l’actualisation (compteur `unmatched-free`) dans le journal de l’hôte |
 | Une session épinglée à `opencode-<id>/…`                  | Le plugin v1 publiait `opencode-<id>` ; la v2 publie directement `<id>`, alors sélectionnez de nouveau le modèle sous `<id>/…`                 |

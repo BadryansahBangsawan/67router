@@ -8,11 +8,11 @@
 > **Viimeksi päivitetty:** 2026-09-02 — v3.8.51
 > **Kohderyhmä:** Palveluntarjoajakohtaisia häivetoteutuksia ylläpitävät insinöörit.
 
-OmniRoute integroituu palveluntarjoajiin, joiden reunapalvelut tunnistavat aktiivisesti epävirallisia asiakasohjelmia sormenjälkien perusteella (TLS JA3/JA4, otsakkeiden järjestys, JSON-pyynnön rungon rakenne, eheystunnisteet). Tällä sivulla kuvataan OmniRouten tarjoamat häiveominaisuudet ja niiden toteutussijainnit.
+67router integroituu palveluntarjoajiin, joiden reunapalvelut tunnistavat aktiivisesti epävirallisia asiakasohjelmia sormenjälkien perusteella (TLS JA3/JA4, otsakkeiden järjestys, JSON-pyynnön rungon rakenne, eheystunnisteet). Tällä sivulla kuvataan 67routerin tarjoamat häiveominaisuudet ja niiden toteutussijainnit.
 
 ## Oikeudellinen ja eettinen huomautus
 
-Häiveominaisuudet ovat olemassa, jotta OmniRoute voi toimia yhteensopivuuskerroksena käyttäjän omistamien virallisten tilien (Claude Code CLI, Codex, Antigravity, Cursor jne.) ja OmniRouten yhtenäisen API:n välillä. Niitä **ei** ole tarkoitettu petosten tunnistamisen kiertämiseen, tunnistetietojen jakamiseen tai palveluntarjoajien käyttöehtojen rikkomiseen. Ylläpitäjät edellyttävät, että operaattorit noudattavat niitä ylävirran käyttöehtoja, jotka he hyväksyivät tilejä luodessaan.
+Häiveominaisuudet ovat olemassa, jotta 67router voi toimia yhteensopivuuskerroksena käyttäjän omistamien virallisten tilien (Claude Code CLI, Codex, Antigravity, Cursor jne.) ja 67routerin yhtenäisen API:n välillä. Niitä **ei** ole tarkoitettu petosten tunnistamisen kiertämiseen, tunnistetietojen jakamiseen tai palveluntarjoajien käyttöehtojen rikkomiseen. Ylläpitäjät edellyttävät, että operaattorit noudattavat niitä ylävirran käyttöehtoja, jotka he hyväksyivät tilejä luodessaan.
 
 ---
 
@@ -76,7 +76,7 @@ ennen kuin ilmoitat vastaavuudesta ylävirran selaimen kanssa.
 
 ## Claude Code -häivepaketti
 
-Kun `cliCompatMode` on käytössä, OmniRoute muotoilee lähtevät Claude-pyynnöt uudelleen niin, ettei niitä voi erottaa `claude-cli`-liikenteestä. Kolme moduulia toimii yhdessä:
+Kun `cliCompatMode` on käytössä, 67router muotoilee lähtevät Claude-pyynnöt uudelleen niin, ettei niitä voi erottaa `claude-cli`-liikenteestä. Kolme moduulia toimii yhdessä:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -92,7 +92,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (asiakassisällön tiiviste)
 
-Palvelinpuolen eheystarkistus, jonka virallinen Claude Code CLI laskee Bun/Zigillä. OmniRoute toteuttaa sen uudelleen `xxhash-wasm`-paketilla:
+Palvelinpuolen eheystarkistus, jonka virallinen Claude Code CLI laskee Bun/Zigillä. 67router toteuttaa sen uudelleen `xxhash-wasm`-paketilla:
 
 1. Serialisoi runko käyttäen `cch=00000;`-paikkamerkkiä
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -138,7 +138,7 @@ Saman paketin rinnakkaismoduulit:
 
 ## Antigravity-häive
 
-Antigravity-pyynnöt säilyttävät kutsujan tekstin tavu tavulta. OmniRoute ei lisää kehotteisiin nollaleveyksisiä merkkejä eikä nimeä työkaluja uudelleen tai lisää niitä jäljitelläkseen IDE-asiakasohjelmaa.
+Antigravity-pyynnöt säilyttävät kutsujan tekstin tavu tavulta. 67router ei lisää kehotteisiin nollaleveyksisiä merkkejä eikä nimeä työkaluja uudelleen tai lisää niitä jäljitelläkseen IDE-asiakasohjelmaa.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -148,13 +148,13 @@ Poistaa Stainless SDK -merkinnät (`x-stainless-lang`, `x-stainless-package-vers
 
 `ANTIGRAVITY_CREDITS=always` (käytössä tiedostossa `open-sse/executors/antigravity.ts`) reitittää **jokaisen** pyynnön Antigravity AI Credit Overages -ylityslaskutuksen kautta (maksulliset Google-krediitit) sen sijaan, että Googlen maksuttoman tason kiintiön annettaisiin rajoittaa käyttöä. Tämä on dokumentoitu ominaisuutena, mutta se on **yleisin näkemämme ilmoitettu käyttöehtorikkomus** — useita Google Ultra -tilejä on estetty muutaman tunnin käytön jälkeen vastauksella `403 / "service disabled for ToS violation" / insufficient_quota`, kun käytössä on ollut `=always`.
 
-Ylävirran valvonta tapahtuu **Googlen puolella**, eikä OmniRoute voi estää sitä. Ympäristömuuttujan nimi ja nykyinen dokumentaatio saavat asetuksen vaikuttamaan turvalliselta ottaa käyttöön, mutta sitä se ei ole.
+Ylävirran valvonta tapahtuu **Googlen puolella**, eikä 67router voi estää sitä. Ympäristömuuttujan nimi ja nykyinen dokumentaatio saavat asetuksen vaikuttamaan turvalliselta ottaa käyttöön, mutta sitä se ei ole.
 
 **Miksi tämä käynnistää väärinkäytön tunnistuksen herkemmin kuin pelkkä maksuttoman tason käyttö:**
 
 - Jatkuva automatisoitu rahankäyttö yhdellä Google-tilillä merkitään eri tavalla kuin maksuttoman tason käyttö, joka saavuttaa kiintiön ja pysähtyy.
 - Krediittien ylityskäytöllä ei ole nopeusrajoitusta, joten väärin määritetty asiakasohjelma voi kuluttaa satoja Yhdysvaltain dollareita minuuteissa ja näyttää API-avainten jälleenmyynniltä tai bottiliikenteeltä.
-- Useiden OmniRoute-käyttäjien rinnakkainen ylityskrediittien käyttö samasta ulkoisesta IP-osoitteesta voimistaa signaalia.
+- Useiden 67router-käyttäjien rinnakkainen ylityskrediittien käyttö samasta ulkoisesta IP-osoitteesta voimistaa signaalia.
 
 **Suositeltu toimintatapa:**
 
@@ -193,7 +193,7 @@ Ota käyttöön tai poista käytöstä palveluntarjoajakohtaisesti ympäristömu
 
 ## MITM-välityspalvelin (Antigravity, Linux/macOS/Windows)
 
-CLI-työkaluille, joiden binääritiedostoja ei voi uudelleenohjata `OPENAI_BASE_URL`-muuttujan avulla, OmniRoute suorittaa paikallista TLS-yhteydet päättävää välityspalvelinta. Päätepisteet sijaitsevat hakemistossa `src/app/api/cli-tools/antigravity-mitm/`.
+CLI-työkaluille, joiden binääritiedostoja ei voi uudelleenohjata `OPENAI_BASE_URL`-muuttujan avulla, 67router suorittaa paikallista TLS-yhteydet päättävää välityspalvelinta. Päätepisteet sijaitsevat hakemistossa `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Menetelmä | Päätepiste                              | Tarkoitus                                         |
 | --------- | --------------------------------------- | ------------------------------------------------- |
@@ -226,7 +226,7 @@ Siepattava kohdeisäntä: **`daily-cloudcode-pa.googleapis.com`** (Antigravityn 
 
 Varmenteen tiedostonimi: `omniroute-mitm.crt`. Sormenjäljen täsmäytys funktiolla `getCertFingerprint()` (DER-muodon SHA-1).
 
-Lisäksi `updateNssDatabases()` asentaa varmenteen käyttäjäkohtaisiin NSS-tietokantoihin, kun `certutil` on käytettävissä: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ja kaikki Firefox-profiilit (mukaan lukien snap) lempinimellä **`OmniRoute MITM Root CA`**.
+Lisäksi `updateNssDatabases()` asentaa varmenteen käyttäjäkohtaisiin NSS-tietokantoihin, kun `certutil` on käytettävissä: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ja kaikki Firefox-profiilit (mukaan lukien snap) lempinimellä **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -274,7 +274,7 @@ Palveluntarjoajan IP-osoite **säilytetään aina** — valitsin muokkaa vain py
 
 ## Saapuvien otsakkeiden puhdistus
 
-OmniRoute puhdistaa saapuvat asiakasohjelman otsakkeet ennen välittämistä, jotta Cursorista saapuva pyyntö ei vuoda `User-Agent: Cursor/X.Y.Z` -otsaketta Claude-ylävirtaan. Estolista on tiedostossa `src/shared/constants/upstreamHeaders.ts`, ja se pidetään synkronoituna Zod-skeemojen ja yksikkötestien kanssa.
+67router puhdistaa saapuvat asiakasohjelman otsakkeet ennen välittämistä, jotta Cursorista saapuva pyyntö ei vuoda `User-Agent: Cursor/X.Y.Z` -otsaketta Claude-ylävirtaan. Estolista on tiedostossa `src/shared/constants/upstreamHeaders.ts`, ja se pidetään synkronoituna Zod-skeemojen ja yksikkötestien kanssa.
 
 ---
 

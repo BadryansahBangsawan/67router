@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 원본:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 플랫폼 이벤트 발생 시 HTTP 웹훅을 전송할 수 있습니다. 이를 사용하여
+67router는 플랫폼 이벤트 발생 시 HTTP 웹훅을 전송할 수 있습니다. 이를 사용하여
 Slack, PagerDuty, Datadog, 내부 알림 서비스 또는 모든 HTTP 수신기와 통합할 수 있습니다.
 
 디스패처는 각 전송을 HMAC-SHA256으로 서명하고, 일시적인 장애가 발생하면
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, 내부 알림 서비스 또는 모든 HTTP 수신기�
 
 ## HMAC 서명
 
-웹훅에 `secret`이 있으면 OmniRoute는 JSON 본문에 서명하고 다음 헤더를 전송합니다.
+웹훅에 `secret`이 있으면 67router는 JSON 본문에 서명하고 다음 헤더를 전송합니다.
 
 ```
 Content-Type: application/json
@@ -205,7 +205,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute의 테스트 웹훅 전송",
+    "message": "67router의 테스트 웹훅 전송",
     "webhookId": "<uuid>"
   }
 }

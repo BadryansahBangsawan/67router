@@ -4,7 +4,7 @@
 
 ---
 
-OmniRouteはnpmとDockerのアーティファクトを公開しています。これらのゲートは、プロベナンス、インベントリ（SBOM）、CVEスキャンをすべてOSSとして提供し、リリースワークフローに組み込まれています。**アドバイザリ優先**の姿勢 — まずは報告し、最初のグリーンリリース後にブロックするよう昇格させます。
+67routerはnpmとDockerのアーティファクトを公開しています。これらのゲートは、プロベナンス、インベントリ（SBOM）、CVEスキャンをすべてOSSとして提供し、リリースワークフローに組み込まれています。**アドバイザリ優先**の姿勢 — まずは報告し、最初のグリーンリリース後にブロックするよう昇格させます。
 
 | ゲート                | ツール                                         | 場所                          | ブロックするか？       | 出力                                         |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :--------------------- | :------------------------------------------- |
@@ -40,7 +40,7 @@ osvまたはTrivyが新たに公開されたCVEによって赤くなった場合
 
 - **連鎖:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`。`package-lock.json` で確認済み — 依存関係ツリー全体で、`extract-zip` を宣言しているパッケージは1つ (`@openai/codex-security`) だけであり、`@openai/codex-security` を宣言しているパッケージも1つ (`promptfoo`) だけです。
 - **連鎖内のどこにも修正版リリースが存在しません。** `extract-zip@2.0.1` (2020年公開) はこのパッケージの最終リリースであり、メンテナンスされていません。`@openai/codex-security` の現在の npm-latest (`0.1.29`) は、依然として `extract-zip@2.0.1` を使用しています。
-- **本番環境からは到達不能。** `promptfoo` は devDependency のみであり (`dependencies` には決してリストされません)、`src/`、`open-sse/`、または `bin/` の下のどのファイルも `extract-zip` npm パッケージをインポートしていません — OmniRoute 独自の `extractZip()` ヘルパー (`src/lib/versionManager/binaryManager.ts:93`) はネイティブの `unzip`/`tar` を呼び出しており、無関係です。`@openai/codex-security` も、extract-zip の onEntry コールバックの上に独自のシンボリックリンクトラバーサルガードを搭載しています。
+- **本番環境からは到達不能。** `promptfoo` は devDependency のみであり (`dependencies` には決してリストされません)、`src/`、`open-sse/`、または `bin/` の下のどのファイルも `extract-zip` npm パッケージをインポートしていません — 67router 独自の `extractZip()` ヘルパー (`src/lib/versionManager/binaryManager.ts:93`) はネイティブの `unzip`/`tar` を呼び出しており、無関係です。`@openai/codex-security` も、extract-zip の onEntry コールバックの上に独自のシンボリックリンクトラバーサルガードを搭載しています。
 - `package.json` の `overrides` を介して `extract-zip` をエイリアス**しないでください** — 唯一の実行可能なドロップイン代替品は Electron-org-internal であり、`@openai/codex-security` 独自の onEntry/defaultDirMode/defaultFileMode チェックとはAPI互換性がありません。これをオーバーライドすると、そのパッケージのセキュリティチェックがサイレントに破損します。
 - **ベースライン:** 測定された osv `vulnCount` (3) は、凍結された `config/quality/quality-baseline.json` ベースライン (27) をすでに大幅に下回っています — ラチェット変更は不要です。
 - **リグレッションガード:** `tests/unit/extract-zip-14482-exposure.test.ts` は、上記の連鎖と本番環境からのインポートなしの不変条件をアサートします。どちらかが破られた場合 (例: 将来のPRで `extract-zip` が本番環境から到達可能になった場合)、CIは失敗します。

@@ -9,9 +9,9 @@
 > **Laatst onderzocht:** 2026-06-17 — webonderzoek per provider (officiële documentatie + nieuws van de afgelopen 7 dagen, controle door 50 agents met adversariële verificatie), waarbij elk quotum en elke ToS voor gratis niveaus opnieuw is gecontroleerd. **Gedeeltelijke hercontrole op 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — zie de gedateerde opmerking hieronder).
 > **Bron van waarheid (catalogus):** `open-sse/config/freeModelCatalog.ts` (budgetten per model, ontdubbeld per pool). De onderstaande aantallen voor tokenbudgetten zijn afkomstig uit actueel webonderzoek en vormen een **schatting** — zie [Methodologie en kanttekeningen](#methodology--caveats).
 
-## TL;DR — hoeveel gratis inferentie voegt OmniRoute daadwerkelijk samen?
+## TL;DR — hoeveel gratis inferentie voegt 67router daadwerkelijk samen?
 
-Deze cijfers beschrijven afzonderlijke accounts bij derden en geschiktheidsvoorwaarden binnen de catalogus. OmniRoute verstrekt dit budget niet: u moet zelf de vereiste accounts of referenties verkrijgen, geschikte providers verbinden en hun limieten naleven. De daadwerkelijk bruikbare capaciteit kan lager zijn, waaronder nul bij een nieuwe installatie zonder geschikte route. Providers die zijn gemarkeerd met `tos: avoid`, worden standaard uitgesloten van automatische routering.
+Deze cijfers beschrijven afzonderlijke accounts bij derden en geschiktheidsvoorwaarden binnen de catalogus. 67router verstrekt dit budget niet: u moet zelf de vereiste accounts of referenties verkrijgen, geschikte providers verbinden en hun limieten naleven. De daadwerkelijk bruikbare capaciteit kan lager zijn, waaronder nul bij een nieuwe installatie zonder geschikte route. Providers die zijn gemarkeerd met `tos: avoid`, worden standaard uitgesloten van automatische routering.
 
 **Gecontroleerd op 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) biedt een eenmalig promotietegoed van $5 waarvoor een betaalmethode vereist is en dat na 30 dagen verloopt. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publiceert limieten per project/model/niveau; het blijft buiten het gekwantificeerde maandelijkse hoofdcijfer.
 
@@ -94,7 +94,7 @@ de onderstaande provideropmerking.
 
 ## Twee regimes — tellen versus beslissen
 
-OmniRoute beantwoordt de vraag "is het gratis?" via twee regimes die bewust
+67router beantwoordt de vraag "is het gratis?" via twee regimes die bewust
 verschillende bronnen gebruiken:
 
 | Regime                 | Bron van waarheid                                                                                                                                                                         | Toepassingen                                                                                                                    |
@@ -143,7 +143,7 @@ De meeste cijfers voor 'gratis tokens per maand' in deze sector zijn optelsommen
 
 ### ⚠️ Let op — clausules over persoonlijk gebruik/proxygebruik die de moeite van het controleren waard zijn (16)
 
-> Hun gratis toegang is echt en OmniRoute kan verzoeken naar hen routeren; de onderstaande clausules zijn simpelweg goed om te kennen. De OAuth-/sleutelloze opties zijn niet in tokens kwantificeerbaar en staan daarom niet in het prominente cijfer (niet omdat ze onbruikbaar zijn).
+> Hun gratis toegang is echt en 67router kan verzoeken naar hen routeren; de onderstaande clausules zijn simpelweg goed om te kennen. De OAuth-/sleutelloze opties zijn niet in tokens kwantificeerbaar en staan daarom niet in het prominente cijfer (niet omdat ze onbruikbaar zijn).
 
 | Provider         | Opmerking                                                                                                                                                                                                      |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -157,7 +157,7 @@ De meeste cijfers voor 'gratis tokens per maand' in deze sector zijn optelsommen
 | `fireworks`      | De ToS verbieden expliciet proxy-/intermediair gebruik, overdracht van API-sleutels en sublicentiëring (secties 2.1 en 2.2(i)(j)); zelfgehoste persoonlijke proxy's zijn n…                                    |
 | `friendliai`     | Sectie 8(e) en 8(f) van de ToS verbieden expliciet het gebruik van FriendliAI als proxy of het zelfstandig verlenen van toegang aan derden, en verbieden doorverkoop/…                                         |
 | `iflytek`        | Sectie 2.4(3) van de iFlytek Spark LLM Service Agreement verbiedt expliciet "het gebruik van geautomatiseerde of programmatische methoden om gegevens of uitvoer te extraheren…                                |
-| `kiro`           | De FAQ van Kiro verbiedt expliciet gebruik met "OpenClaw en vergelijkbare tools die gebruikmaken van harnassen van derden" — een zelfgehoste AI-proxy (zoals OmniRoute) die rou…                               |
+| `kiro`           | De FAQ van Kiro verbiedt expliciet gebruik met "OpenClaw en vergelijkbare tools die gebruikmaken van harnassen van derden" — een zelfgehoste AI-proxy (zoals 67router) die rou…                                |
 | `modal`          | Sectie 1.3 van de ToS verbiedt expliciet "de Dienst te verhuren, door te verkopen of anderszins derden directe toegang tot of gebruik van de Dienst te verlenen" — het bouwen van een zelfgehoste…             |
 | `muse-spark-web` | De ToS van Meta verbieden expliciet geautomatiseerde toegang zonder voorafgaande toestemming, reverse-engineering zonder schriftelijke toestemming en het omzeilen van technologi…                             |
 | `nlpcloud`       | De ToS verbieden expliciet "het opzetten van een proxy of ander apparaat waarmee anderen via deze proxy of dit apparaat toegang tot de Dienst kunnen krijgen" en verlenen uitsluitend een niet-overdraagbare,… |
@@ -319,7 +319,7 @@ De meeste cijfers voor 'gratis tokens per maand' in deze sector zijn optelsommen
 
 - **`360ai`** — De meegeleverde freeNote "Gratis 360 AI Brain-modellen" lijkt verouderd. De huidige toegang vereist een aanvraag en is betaald. De promotionele tokens uit de lanceringsperiode in 2023 (eenmalig 100M–250M) vormden mogelijk de basis voor…
 - **`agentrouter`** — Onze meegeleverde freeNote vermeldt "$200 aan gratis tegoed bij registratie." In werkelijkheid ontvangen standaardregistraties (zonder verwijzing) momenteel slechts $100; registraties via een verwijzing kunnen $200 krijgen, maar een communityreactie uit april 2026…
-- **`agy`** — Onze meegeleverde freeNote vermeldt "(geen)", wat suggereert dat er geen gratis niveau is, maar Antigravity heeft wel een gratis niveau waarvoor OAuth vereist is. De gebruiksvoorwaarden verbieden echter expliciet om dit gratis niveau via een proxy zoals OmniRoute te gebruiken …
+- **`agy`** — Onze meegeleverde freeNote vermeldt "(geen)", wat suggereert dat er geen gratis niveau is, maar Antigravity heeft wel een gratis niveau waarvoor OAuth vereist is. De gebruiksvoorwaarden verbieden echter expliciet om dit gratis niveau via een proxy zoals 67router te gebruiken …
 - **`ai21`** — Versoberd: de proefperiode is verkort van "3 maanden" naar 7 dagen. Het tegoed van $10 is hetzelfde gebleven, maar de geldigheid is sterk afgenomen van circa 90 dagen naar 7 dagen.
 - **`aimlapi`** — Aanzienlijk gewijzigd. De meegeleverde freeNote adverteerde met "$0.025/dag aan gratis tegoed — meer dan 200 modellen", maar het gratis niveau is nu gepauzeerd/beëindigd. De dagelijkse toewijzing van $0.025 aan tegoed (50.000 credits/dag, 10 verzoeken/d…
 - **`amazon-q`** — Onze meegeleverde freeNote vermeldt "(geen)" — de werkelijkheid is nog slechter: het product is nu niet meer beschikbaar voor nieuwe registraties (15 mei 2026). Voorheen bood het gratis niveau 50 agentische verzoeken/maand plus onbeperkte inlin…

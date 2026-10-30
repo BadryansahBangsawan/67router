@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tuvastab käivitamisel oma SQLite'i draiveri viieastmelise varuahela kaudu:
+67router tuvastab käivitamisel oma SQLite'i draiveri viieastmelise varuahela kaudu:
 
 1. **Kaasapandud `better-sqlite3`** (`package.json` faili `dependencies` kaudu)
    — kiireim, kasutab natiivset binaarfaili ja installitakse käsuga `npm install`, kui kompileerimistööriistad on saadaval.
@@ -28,13 +28,13 @@ OmniRoute tuvastab käivitamisel oma SQLite'i draiveri viieastmelise varuahela k
 - **Kompileerimistööriistad puuduvad**: mõned keskkonnad (ettevõtte Windows ilma VS Build
   Toolsita, minimaalsed Dockeri tõmmised) ei suuda paketti `better-sqlite3` kompileerida. Käitusaegne
   installer hangib npm-i registrist eelkompileeritud binaarfaili; varudraiverid
-  tagavad, et OmniRoute käivitub ka siis, kui see ebaõnnestub.
+  tagavad, et 67router käivitub ka siis, kui see ebaõnnestub.
 - **Võrgust eraldatud süsteemid**: kui npm-i register pole kättesaadav, tagab `node:sqlite`
   või `sql.js` põhifunktsionaalsuse.
 
 ## Signatuurbaitide valideerimine
 
-Enne käituse ajal installitud `.node` faili laadimist loeb OmniRoute esimesed 8
+Enne käituse ajal installitud `.node` faili laadimist loeb 67router esimesed 8
 baiti ja võrdleb neid teadaolevate platvormisignatuuridega:
 
 | Platvorm                 | Baidid (hex)  | Silt        |
@@ -107,9 +107,9 @@ Teostus:
 ## Ühe kirjutajaga topoloogia (HA pole toetatud)
 
 Ülaltoodud draiverite varuahel töötab endiselt **ühes protsessis**. SQLite'i
-vaikekonfiguratsiooniga OmniRoute kasutab **ühte kirjutajat**:
+vaikekonfiguratsiooniga 67router kasutab **ühte kirjutajat**:
 
-- Ära ühenda kahte OmniRoute'i replikaati sama `storage.sqlite` failiga.
+- Ära ühenda kahte 67router'i replikaati sama `storage.sqlite` failiga.
 - Konteineri taaskäivitamine, Recreate-juurutus, OOM-i tõttu lõpetamine või HEALTHCHECK-i
   taaskäivitus katkestab kõik pooleliolevad SSE-seansid. Standardlahenduses seansse
   enne sulgemist ei tühjendata.

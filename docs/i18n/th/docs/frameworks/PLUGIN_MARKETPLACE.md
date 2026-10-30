@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **อัปเดตล่าสุด:** 2026-06-28 — v3.8.40
 
-OmniRoute มาพร้อมระบบปลั๊กอินแบบ WordPress ปลั๊กอินแต่ละตัวเป็นไดเรกทอรีที่แยกเป็นอิสระ
+67router มาพร้อมระบบปลั๊กอินแบบ WordPress ปลั๊กอินแต่ละตัวเป็นไดเรกทอรีที่แยกเป็นอิสระ
 โดยแต่ละไดเรกทอรีมีไฟล์แมนิเฟสต์ `plugin.json` และไฟล์เริ่มต้น ซึ่งเชื่อมต่อ
 เข้ากับไปป์ไลน์คำขอ (`onRequest` / `onResponse` / `onError`) และ
 เหตุการณ์วงจรชีวิต (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### ไดเรกทอรีปลั๊กอิน
 
-ปลั๊กอินอยู่ภายใต้ไดเรกทอรีข้อมูลของ OmniRoute:
+ปลั๊กอินอยู่ภายใต้ไดเรกทอรีข้อมูลของ 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

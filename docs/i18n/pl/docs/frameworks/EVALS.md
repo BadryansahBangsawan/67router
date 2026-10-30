@@ -9,7 +9,7 @@ lastUpdated: 2026-06-28
 > **Źródło prawdy:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Ostatnia aktualizacja:** 2026-06-28 — v3.8.40
 
-OmniRoute dostarcza generyczny framework ewaluacji, którym możesz benchmarkować
+67router dostarcza generyczny framework ewaluacji, którym możesz benchmarkować
 konfiguracje routingu, pojedyncze providery/modele albo dołączone suite'y
 „golden set”. Używaj go do weryfikacji zmian w routingu, walidacji nowych
 providerów oraz bramkowania release'ów przed wypuszczeniem ich na ruch

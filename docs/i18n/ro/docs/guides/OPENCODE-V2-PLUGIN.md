@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` adaugă întregul catalog OmniRoute — modele, combinații și
+`@omniroute/opencode-plugin-v2` adaugă întregul catalog 67router — modele, combinații și
 combinații automate — în selectorul de modele din OpenCode v2, împreună cu denumirile afișate,
 prețurile și limitele nivelului gratuit.
 
@@ -16,7 +16,7 @@ celuilalt.
 ## Cerințe
 
 - OpenCode v2.
-- Un gateway OmniRoute accesibil (`http://localhost:20128` în mod implicit).
+- Un gateway 67router accesibil (`http://localhost:20128` în mod implicit).
 - Node.js 22 sau 24.
 
 ## Instalare
@@ -79,7 +79,7 @@ atunci când se întâmplă acest lucru, indicând endpointul și ceea ce s-a pi
 | `baseURL`                        | obligatoriu                                     | Rădăcina gateway-ului, doar `http(s)`; sufixul `/v1` este adăugat acolo unde este necesar                                                               |
 | `apiKey`                         | acreditarea conectată, apoi `OMNIROUTE_API_KEY` | Cheia pentru chat pentru `/v1/*`                                                                                                                        |
 | `managementReadToken`            | revine la `apiKey`                              | Cheia pentru `/api/*` — de obicei **nu** este aceeași                                                                                                   |
-| `displayName`                    | `"OmniRoute"`                                   | Numele furnizorului în selector                                                                                                                         |
+| `displayName`                    | `"67router"`                                    | Numele furnizorului în selector                                                                                                                         |
 | `timeoutMs`                      | `10000`                                         | Timpul-limită de preluare pentru fiecare endpoint (combinațiile automate folosesc 5 s)                                                                  |
 | `modelCacheTtlMs`                | `300000`                                        | TTL-ul cache-ului catalogului; un instantaneu de pe disc accelerează pornirile la rece                                                                  |
 | `timeouts`                       | revine la `timeoutMs`                           | Limite de timp per endpoint, în ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                      |
@@ -117,7 +117,7 @@ Setați `"geminiSanitization": false` pentru a dezactiva această funcționalita
 
 | Simptom                                                   | Cauză                                                                                                                                                            |
 | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selectorul nu afișează niciun model OmniRoute             | Nu a fost identificată nicio cheie (verificați avertismentul de la pornire) sau gateway-ul nu este accesibil                                                     |
+| Selectorul nu afișează niciun model 67router              | Nu a fost identificată nicio cheie (verificați avertismentul de la pornire) sau gateway-ul nu este accesibil                                                     |
 | ID-uri brute ale modelelor, fără combinații, fără prețuri | Endpoint-urile de administrare au refuzat tokenul — setați `managementReadToken`                                                                                 |
 | Catalog `freeOnly` scurt sau gol                          | Nu există niciun token de administrare sau tokenul a fost refuzat — consultați linia cu rezumatul reîmprospătării (numărul `unmatched-free`) din jurnalul gazdei |
 | O sesiune fixată la `opencode-<id>/…`                     | Pluginul v1 a publicat `opencode-<id>`; v2 publică doar `<id>`, așadar selectați din nou modelul din `<id>/…`                                                    |

@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (日本語)
+# 📖 Setup Guide — 67router (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute の完全なセットアップリファレンスです。簡易版については、[README のクイックスタート](../README.md#-quick-start)を参照してください。
+> 67router の完全なセットアップリファレンスです。簡易版については、[README のクイックスタート](../README.md#-quick-start)を参照してください。
 
 ## 目次
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR パッケージ](https://aur.archlinux.org/packages/omniroute-bin)は OmniRoute をインストールし、systemd ユーザーサービスを提供します。
+[AUR パッケージ](https://aur.archlinux.org/packages/omniroute-bin)は 67router をインストールし、systemd ユーザーサービスを提供します。
 
 ### ソースからのインストール
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows に関する注意:** デフォルトでは、従来の `%USERPROFILE%\.omniroute` ディレクトリが存在しない場合、OmniRoute は `%APPDATA%\omniroute` を使用します。別のデータディレクトリの場所を選択するには、`DATA_DIR` を設定してください。
+> **Windows に関する注意:** デフォルトでは、従来の `%USERPROFILE%\.omniroute` ディレクトリが存在しない場合、67router は `%APPDATA%\omniroute` を使用します。別のデータディレクトリの場所を選択するには、`DATA_DIR` を設定してください。
 
 > **注意:** `npm install` は初回実行時に `.env.example` から `.env` を自動生成します。それ以降のインストールでは既存の `.env` は上書きされないため、カスタマイズ内容は保持されます。再生成するには、再実行する前に `.env` を削除してください。
 
@@ -64,7 +64,7 @@ Compose プロファイルや Caddy HTTPS を含む Docker の完全なセット
 
 ### デスクトップアプリ（Electron）
 
-OmniRoute には、Electron 41 + electron-builder 26.10 で構築されたデスクトップラッパーが付属しています。利用可能なスクリプト（ワークスペースルート）は次のとおりです。
+67router には、Electron 41 + electron-builder 26.10 で構築されたデスクトップラッパーが付属しています。利用可能なスクリプト（ワークスペースルート）は次のとおりです。
 
 ```bash
 npm run electron:dev          # ホットリロードを使用してデスクトップ版を実行
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-環境変数（`INITIAL_PASSWORD`、`OMNIROUTE_WS_BRIDGE_SECRET` など）と組み合わせることで、完全にスクリプト化可能な OmniRoute インスタンスを起動できます。
+環境変数（`INITIAL_PASSWORD`、`OMNIROUTE_WS_BRIDGE_SECRET` など）と組み合わせることで、完全にスクリプト化可能な 67router インスタンスを起動できます。
 
 ### CLI オプション
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI ツールの設定 — 設定の一覧表示、取得、設定、検証                     |
 | `omniroute status`      | オフラインステータスダッシュボード — バージョン、DB、ツール、設定       |
 | `omniroute logs`        | API から使用状況ログをストリーミング（`--follow` をサポート）           |
-| `omniroute update`      | OmniRoute の更新を確認または適用                                        |
+| `omniroute update`      | 67router の更新を確認または適用                                         |
 | `omniroute provider`    | プロバイダー接続を管理 — 追加、一覧表示、削除、テスト、デフォルト設定   |
 | `omniroute --port 3000` | 正規/API ポートを 3000 に設定                                           |
 | `omniroute --mcp`       | MCP サーバーを起動（stdio トランスポート）                              |
@@ -165,7 +165,7 @@ Claude Code、Codex CLI、Cursor、Cline、OpenClaw、OpenCode、および OpenA
 
 #### `setup-*` による自動設定
 
-ベース URL とキーを手動で貼り付ける代わりに、OmniRoute にライブモデルカタログから各ツール固有の設定を書き込ませることができます。ツールごとに 1 つのコマンドを使用します。
+ベース URL とキーを手動で貼り付ける代わりに、67router にライブモデルカタログから各ツール固有の設定を書き込ませることができます。ツールごとに 1 つのコマンドを使用します。
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml のプロファイル
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-各コマンドでは、`--remote <url> --api-key <key>` を指定して、ローカルツールを**リモート**の OmniRoute に接続するよう設定できます。また、`--dry-run` で事前確認もできます。適切な環境変数を注入し、設定を一切書き込まずに CLI を起動するには、汎用ランチャーの `omniroute run <target>`（claude、codex、aider、goose、opencode、qwen、gemini）を使用します。従来のツール別ランチャーである `omniroute launch`（Claude Code）および `omniroute launch-codex`（Codex）も引き続き利用できます。
+各コマンドでは、`--remote <url> --api-key <key>` を指定して、ローカルツールを**リモート**の 67router に接続するよう設定できます。また、`--dry-run` で事前確認もできます。適切な環境変数を注入し、設定を一切書き込まずに CLI を起動するには、汎用ランチャーの `omniroute run <target>`（claude、codex、aider、goose、opencode、qwen、gemini）を使用します。従来のツール別ランチャーである `omniroute launch`（Claude Code）および `omniroute launch-codex`（Codex）も引き続き利用できます。
 
 完全な一覧（各コマンドが書き込む内容、すべてのフラグ、ローカルとリモートの違い、ベース URL の `/v1` 規則）については、**[CLI インテグレーション](./CLI-INTEGRATIONS.md)**を参照してください。
 
@@ -270,15 +270,15 @@ curl -X POST http://localhost:20128/a2a \
 | 変数                     | デフォルト値                | 用途                                                                                                                                                                   |
 | ------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                    | アップストリームのレスポンス開始タイムアウト、Undici の内部タイムアウト、TLS フィンガープリント要求、および API ブリッジの要求／プロキシタイムアウトで共有される基準値 |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` を継承 | OmniRoute が SSE ストリームを中断するまでの、ストリーミングチャンク間の最大待機時間                                                                                    |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` を継承 | 67router が SSE ストリームを中断するまでの、ストリーミングチャンク間の最大待機時間                                                                                     |
 
 後方互換性は維持されています。既存の `FETCH_TIMEOUT_MS`、`API_BRIDGE_PROXY_TIMEOUT_MS`、およびその他のレイヤー別タイムアウト変数も引き続き機能し、共有の基準値を上書きします。
 
 ### プロバイダー固有の注意事項
 
-Claude Code 互換のアップストリーム（`anthropic-compatible-cc-*`）では、プロバイダー側の読み取りタイムアウトが環境設定と一致するように、OmniRoute は解決済みのフェッチタイムアウトから送信 `X-Stainless-Timeout` ヘッダーを生成します。
+Claude Code 互換のアップストリーム（`anthropic-compatible-cc-*`）では、プロバイダー側の読み取りタイムアウトが環境設定と一致するように、67router は解決済みのフェッチタイムアウトから送信 `X-Stainless-Timeout` ヘッダーを生成します。
 
-サードパーティー製の Claude Code 互換リバースプロキシでは、OmniRoute はデフォルトの `anthropic-beta` セットを保守的に維持し、`Client Cache Control` が `Auto` のままの場合は、クライアントから提供された `cache_control` マーカーのみを転送します。アップストリームが編集済みの Claude 思考ストリームを明示的に必要とする場合にのみ、接続ごとの「Enable redact-thinking beta」切り替えを有効にしてください。
+サードパーティー製の Claude Code 互換リバースプロキシでは、67router はデフォルトの `anthropic-beta` セットを保守的に維持し、`Client Cache Control` が `Auto` のままの場合は、クライアントから提供された `cache_control` マーカーのみを転送します。アップストリームが編集済みの Claude 思考ストリームを明示的に必要とする場合にのみ、接続ごとの「Enable redact-thinking beta」切り替えを有効にしてください。
 
 ### 高度なタイムアウトの上書き
 
@@ -296,11 +296,11 @@ Claude Code 互換のアップストリーム（`anthropic-compatible-cc-*`）�
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | API ブリッジサーバーでの keep-alive タイムアウト                                       |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | API ブリッジサーバーでのソケット非アクティブタイムアウト（`0` で無効化）               |
 
-> **注:** ストリーミング要求の場合、`FETCH_TIMEOUT_MS` が対象とするのは、接続のセットアップおよびアップストリームからの最初のレスポンスを待機する時間のみです。ストリームがアクティブになった後、OmniRoute が中断するのは、実際に停止状態になった場合（`STREAM_IDLE_TIMEOUT_MS`）または Undici のボディが非アクティブになった場合（`FETCH_BODY_TIMEOUT_MS`）のみです。
+> **注:** ストリーミング要求の場合、`FETCH_TIMEOUT_MS` が対象とするのは、接続のセットアップおよびアップストリームからの最初のレスポンスを待機する時間のみです。ストリームがアクティブになった後、67router が中断するのは、実際に停止状態になった場合（`STREAM_IDLE_TIMEOUT_MS`）または Undici のボディが非アクティブになった場合（`FETCH_BODY_TIMEOUT_MS`）のみです。
 
 ### リバースプロキシの互換性
 
-Nginx、Caddy、Cloudflare、またはその他のリバースプロキシの背後で OmniRoute を実行する場合は、プロキシのタイムアウトも OmniRoute のストリーム／フェッチタイムアウトより長く設定してください。
+Nginx、Caddy、Cloudflare、またはその他のリバースプロキシの背後で 67router を実行する場合は、プロキシのタイムアウトも 67router のストリーム／フェッチタイムアウトより長く設定してください。
 
 ---
 

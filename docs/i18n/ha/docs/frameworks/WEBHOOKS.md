@@ -7,7 +7,7 @@
 > **Tushen gaskiya:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute na iya aika HTTP webhooks lokacin da abubuwan da suka faru a dandali suka auku. Yi amfani da su don haɗawa da
+67router na iya aika HTTP webhooks lokacin da abubuwan da suka faru a dandali suka auku. Yi amfani da su don haɗawa da
 Slack, PagerDuty, Datadog, sabis na faɗakarwa na cikin gida, ko duk wani mai karɓar HTTP.
 
 Mai rarrabawa yana sanya wa kowace isarwa sa hannun HMAC-SHA256, yana sake gwadawa idan an sami
@@ -54,7 +54,7 @@ kurakuran kowane webhook domin kada mai karɓa mara kyau guda ɗaya ya toshe sau
 
 ## Sa Hannun HMAC
 
-Lokacin da webhook yake da `secret`, OmniRoute yana sanya wa JSON body hannu sannan ya aika:
+Lokacin da webhook yake da `secret`, 67router yana sanya wa JSON body hannu sannan ya aika:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Shafin dashboard da ke `/dashboard/webhooks` (duba
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Isarwar webhook ta gwaji daga OmniRoute",
+    "message": "Isarwar webhook ta gwaji daga 67router",
     "webhookId": "<uuid>"
   }
 }

@@ -14,7 +14,7 @@ lastUpdated: 2026-06-28
 > **Source of truth:** `src/lib/cloudAgent/` and `src/app/api/v1/agents/tasks/`
 > **Last updated:** 2026-06-28 — v3.8.40 (frontmatter refresh; 4 agents incl. cursor-cloud)
 
-OmniRoute orkiestruje zewnętrznych, hostowanych w chmurze agentów kodujących (Codex Cloud, Cursor,
+67router orkiestruje zewnętrznych, hostowanych w chmurze agentów kodujących (Codex Cloud, Cursor,
 Devin, Jules) jako długotrwałe taski. Każdy agent jest opakowany jednolitym interfejsem, dzięki czemu
 klienci mogą przesłać prompt + URL repozytorium i otrzymać wyniki bez kontaktu z
 API specyficznymi dla providera.

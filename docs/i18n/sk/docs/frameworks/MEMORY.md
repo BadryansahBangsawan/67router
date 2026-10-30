@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/memory/` a `src/app/api/memory/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40 (predvolene vypnuté + dobehnutie kvantizácie int8)
 
-OmniRoute poskytuje trvalú konverzačnú pamäť viazanú na kľúč API (a
+67router poskytuje trvalú konverzačnú pamäť viazanú na kľúč API (a
 voliteľne na ID relácie). Spomienky sa automaticky extrahujú z odpovedí LLM
 pomocou jednoduchého porovnávania vzorov regulárnych výrazov a opätovne sa vkladajú do následných
 požiadaviek ako úvodná systémová správa (alebo prvá používateľská správa pri poskytovateľoch, ktorí
@@ -637,7 +637,7 @@ predvolená hodnota TTL je 5 min).
 
 ## Výber poskytovateľa vkladania (v3.8.16+)
 
-Pamäťový mechanizmus OmniRoute podporuje **štyri zdroje vkladania** (`src/lib/memory/embedding/`). Každý ponúka iné kompromisy z hľadiska **latencie, nákladov, kvality modelu a zložitosti nastavenia**.
+Pamäťový mechanizmus 67router podporuje **štyri zdroje vkladania** (`src/lib/memory/embedding/`). Každý ponúka iné kompromisy z hľadiska **latencie, nákladov, kvality modelu a zložitosti nastavenia**.
 
 ### Zdroje vkladania
 
@@ -1058,13 +1058,13 @@ Worker sa viaže iba na loopback rozhranie, ktoré ochrana SSRF v `GenericMemory
 Tento adaptér túto ochranu neuvoľňuje: hostiteľ je napevno nastavený na `127.0.0.1` a konfiguračná
 schéma (`ClaudeMemBackendConfigSchema`, `.strict()`) akceptuje iba:
 
-| Kľúč        | Typ    | Predvolené | Poznámky                                                                                                                          |
-| ----------- | ------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —          | Povinné, 1024–65535. Port workera claude-mem z jeho súboru nastavení (predvolene `37700 + uid % 100`).                            |
-| `project`   | string | —          | Projekt claude-mem, ktorý sa má použiť. Ak nie je nastavený → každý kľúč API OmniRoute sa mapuje na vlastný projekt (`apiKeyId`). |
-| `timeoutMs` | number | `5000`     | Časový limit každej požiadavky, 100–30000.                                                                                        |
+| Kľúč        | Typ    | Predvolené | Poznámky                                                                                                                         |
+| ----------- | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —          | Povinné, 1024–65535. Port workera claude-mem z jeho súboru nastavení (predvolene `37700 + uid % 100`).                           |
+| `project`   | string | —          | Projekt claude-mem, ktorý sa má použiť. Ak nie je nastavený → každý kľúč API 67router sa mapuje na vlastný projekt (`apiKeyId`). |
+| `timeoutMs` | number | `5000`     | Časový limit každej požiadavky, 100–30000.                                                                                       |
 
-Povoľte ho prostredníctvom `PUT /api/settings/memory` a reštartujte OmniRoute (backendy sa registrujú
+Povoľte ho prostredníctvom `PUT /api/settings/memory` a reštartujte 67router (backendy sa registrujú
 iba raz, v `initMemoryBackends()`):
 
 ```json
@@ -1081,7 +1081,7 @@ Mapovanie a obmedzenia:
 
 - ID majú formát `claude-mem:<observationId>`; operácie `get`/`delete` ignorujú ID iných backendov bez
   sieťového volania.
-- `create` → `POST /api/memory/save`; polia OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; polia 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) sa prenášajú v `metadata.omniroute` systému claude-mem a pri čítaní sa spätne obnovia.
 - `search` → `GET /api/search?format=json&type=observations`, skrátené podľa `maxTokens`
   (počet znakov / 4). `list` → stránkovaný koncový bod workera pre pozorovania (`total` je dolná hranica — worker
@@ -1093,16 +1093,16 @@ Mapovanie a obmedzenia:
 - Vkladanie do promptu (`retrieval.ts`) a nástroje MCP `omniroute_memory_*` stále čítajú SQLite
   priamo — neprechádzajú cez `memoryManager`, takže tento backend im neposkytuje údaje.
 
-**Smerovanie vlastných volaní LLM systému claude-mem cez OmniRoute.** claude-mem komprimuje pozorovania
+**Smerovanie vlastných volaní LLM systému claude-mem cez 67router.** claude-mem komprimuje pozorovania
 pomocou LLM (predvolene Claude Agent SDK). Jeho poskytovateľ `openai-compatible` môže namiesto toho smerovať
-na OmniRoute a využívať kombinovaný záložný mechanizmus a sledovanie nákladov. V `~/.claude-mem/settings.json`:
+na 67router a využívať kombinovaný záložný mechanizmus a sledovanie nákladov. V `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<kľúč API OmniRoute>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model alebo kombinácia OmniRoute>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<kľúč API 67router>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<model alebo kombinácia 67router>"
 }
 ```
 

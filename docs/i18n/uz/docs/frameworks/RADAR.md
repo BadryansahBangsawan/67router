@@ -43,7 +43,7 @@ joylashtiruvi yoki tashqi integratsiya hozirda mavjud ekaniga va’da bermaydi.
 | Qo‘llab-quvvatlovchilar uchun takliflar                      | Alohida imzolangan, faqat jonli tasma va boshqaruv paneli sahifasi sifatida amalga oshirilgan. Mijoz yopiq imtiyoz sxemasini qayta tekshiradi, so‘nggi yaroqli keshni saqlaydi, muddati tugagan yozuvlarni filtrlab tashlaydi va hamkor takliflarini aniq belgilaydi.                      |
 | Tahliliy ma’lumot va qo‘llab-quvvatlovchilarni e’tirof etish | Radarga tegishli ELO, katalogning yangiligi/trendi haqidagi faktik ma’lumotlar, tasdiqlangan mahalliy qo‘llab-quvvatlovchi nishoni, boshqaruv paneli sahifasi hamda faqat mahalliy CLI holat/sinxronlash buyruqlariga ega qat’iy imzolangan, faqat jonli tasma sifatida amalga oshirilgan. |
 | To‘lovlar va tranzaksion elektron pochta                     | OSS mijozida amalga oshirilmagan. Xarid, xayriya, kvitansiyani tekshirish, tiklash va xat yetkazish yopiq xizmatga tegishli; xostingda mavjudlik hanuz uning nazorat ostidagi joylashtiruvi va provayder konfiguratsiyasiga bog‘liq.                                                       |
-| Tadqiqot agenti ish yo‘nalishi                               | Ushbu mijoz relizining bir qismi emas. Saralangan tasma tarkibi server tomonidagi ma’lumot bo‘lib qoladi; OmniRoute o‘rnatmasida hech qanday avtonom tadqiqot agenti ishlamaydi.                                                                                                           |
+| Tadqiqot agenti ish yo‘nalishi                               | Ushbu mijoz relizining bir qismi emas. Saralangan tasma tarkibi server tomonidagi ma’lumot bo‘lib qoladi; 67router o‘rnatmasida hech qanday avtonom tadqiqot agenti ishlamaydi.                                                                                                            |
 
 ---
 
@@ -122,7 +122,7 @@ Ikkalasi ham yoqilganida sinxronlash jarayoni quyidagicha kechadi:
    qisqartirilgan HMAC qiymati ishlatiladi; ushbu jadvallarda kalit ham, IP manzil ham xom shaklda
    saqlanmaydi. Infratuzilmaga kirish jurnallari va shifrlangan yetkazib berish chiquvchi navbati alohida
    operatsion chegaralardir.
-3. OmniRoute hech qachon Radar xizmatiga promptlar, javoblar, suhbatlar, provayder hisob maʼlumotlari,
+3. 67router hech qachon Radar xizmatiga promptlar, javoblar, suhbatlar, provayder hisob maʼlumotlari,
    model trafigi, ishlash vaqti, kechikish yoki mahalliy provayder konfiguratsiyasini yubormaydi.
 4. Javob tekshiriladi, validatsiya qilinadi va mahalliy keshga saqlanadi (
    [Xavfsizlik modeli](#security-model) bo‘limiga qarang). Radar’da server tomonidagi aynan to‘rtta
@@ -255,14 +255,14 @@ faollashtiradigan joydir.
 ### Boshidan oxirigacha faollashtirish va yoʻnaltirilgan sozlash
 
 Xususiy feed xizmati va ushbu OSS mijozi oʻrtasida ataylab tor chegara mavjud: xizmat
-qoʻllab-quvvatlovchi kalitini beradi va tekshiradi, mahalliy OmniRoute oʻrnatmasi esa kalitni
+qoʻllab-quvvatlovchi kalitini beradi va tekshiradi, mahalliy 67router oʻrnatmasi esa kalitni
 shifrlaydi, imzolangan artefaktlarni server tomonida sinxronlaydi va provayderni sozlash
 jarayoniga yoʻnaltiradi. Yordamchi tekshiruv tartibi quyidagicha:
 
 1. Ishtirokchi daʼvosi, tariflar/toʻlov, tiklash jarayoni yoki vakolatli xususiy server
    operatoridan yangi chiqarilgan yoki tiklangan kalitni oling. Xom kalitni jurnallar,
    skrinshotlar, muammo izohlari yoki buyruq qatori argumentlariga joylamang.
-2. Mahalliy OmniRoute oʻrnatmasida `RADAR_ENABLED` funksiya bayrogʻini yoqing. Bu UIʼni
+2. Mahalliy 67router oʻrnatmasida `RADAR_ENABLED` funksiya bayrogʻini yoqing. Bu UIʼni
    ochadi, ammo alohida rozilik saqlanmaguncha tarmoq boʻyicha hech qanday amal bajarilmaydi.
 3. `/dashboard/radar` sahifasini oching, kalitni joylang va faollashtiring. Brauzer mahalliy
    `POST /api/radar/settings` soʻrovini `{ optIn: true, supporterKey }` bilan yuboradi; kalit mahalliy
@@ -328,7 +328,7 @@ eski keshlangan feedlar esa qayta sinxronlanguncha haqiqiyligicha qoladi.
 ### Forklar uchun qulay env qayta belgilashlari
 
 Ikki env o‘zgaruvchisi forklar va mustaqil xost qiluvchilarga mijozni standart
-OmniRoute xizmati o‘rniga o‘z feediga yo‘naltirish imkonini beradi — quyidagi
+67router xizmati o‘rniga o‘z feediga yo‘naltirish imkonini beradi — quyidagi
 [Feedni mustaqil xost qilish](#how-to-self-host-a-feed) bo‘limiga qarang:
 
 | O‘zgaruvchi         | Maqsad                                                                                                                         |
@@ -456,7 +456,7 @@ Feed’dagi `enabled: false` xavfsizlik istisnosi bo‘lib qoladi: u eskirgan ma
 
 Katalog nashrlari `schemaVersion: 2` dan foydalanadi. `contextWindow` hamda `tools`, `vision` va
 `thinking` maydonlarining har biri mustaqil ravishda `number | null` / `boolean | null` bo‘ladi: `null` noma’lumligini anglatadi, `false` esa D16 tomonidan tasdiqlangan rasmiy provayder manbasi imkoniyat mavjud emasligini aniq bildirishini anglatadi.
-Ichki OmniRoute reyestri/model spetsifikatsiyasi flaglari hech qachon to‘g‘ridan-to‘g‘ri feed faktlariga aylantirilmaydi. Mijoz hali ham v1 snapshot’larini qabul qiladi; eski builder yo‘qlik o‘rinbosari sifatida `false` qiymatidan foydalangani sababli, v1’dagi `false` noma’lum qiymatga normallashtiriladi, v1’dagi `true` esa fakt sifatida qoladi. Noma’lum sxema versiyalari yopiq tarzda rad etiladi va oxirgi haqiqiy kesh mavjud bo‘lib qoladi. Null bo‘lmagan kontekst/imkoniyatga ega har bir v2 modeli hisob ma’lumotlarini talab qilmaydigan HTTPS `metadataEvidenceUrls[]` qiymatini o‘z ichiga olishi shart; aks holda sxema tekshiruvi muvaffaqiyatsiz tugaydi va kesh almashtirilmaydi. Katalog jadvali uchala holatni ham `✓`, `✕` va `?` ko‘rinishida aks ettiradi.
+Ichki 67router reyestri/model spetsifikatsiyasi flaglari hech qachon to‘g‘ridan-to‘g‘ri feed faktlariga aylantirilmaydi. Mijoz hali ham v1 snapshot’larini qabul qiladi; eski builder yo‘qlik o‘rinbosari sifatida `false` qiymatidan foydalangani sababli, v1’dagi `false` noma’lum qiymatga normallashtiriladi, v1’dagi `true` esa fakt sifatida qoladi. Noma’lum sxema versiyalari yopiq tarzda rad etiladi va oxirgi haqiqiy kesh mavjud bo‘lib qoladi. Null bo‘lmagan kontekst/imkoniyatga ega har bir v2 modeli hisob ma’lumotlarini talab qilmaydigan HTTPS `metadataEvidenceUrls[]` qiymatini o‘z ichiga olishi shart; aks holda sxema tekshiruvi muvaffaqiyatsiz tugaydi va kesh almashtirilmaydi. Katalog jadvali uchala holatni ham `✓`, `✕` va `?` ko‘rinishida aks ettiradi.
 
 ### Yo‘naltirilgan kombinatsiyalar va MCP’dan foydalanish
 
@@ -508,7 +508,7 @@ Quyidagi mahalliy Radar route oilalari `src/app/api/radar/` ostidagi UI'ni qoʻl
 | `/api/radar/local-model-state` | DELETE | Har qanday tombstone'ni saqlab qolgan holda tahrirlanadigan qayta belgilash maydonlarini tozalaydi.                                                                    |
 
 **Qatʼiy qoida: bu route'lar feed xizmatini hech qachon proksi qilmaydi.** Brauzer faqat
-mahalliy OmniRoute serveri bilan aloqa qiladi. Radar xizmatiga murojaat qiladigan toʻrtta modul:
+mahalliy 67router serveri bilan aloqa qiladi. Radar xizmatiga murojaat qiladigan toʻrtta modul:
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (yoʻnaltirishlar) va
 `src/lib/radar/offersSync.ts` (takliflar), shuningdek `src/lib/radar/intelSync.ts` (Intel); ularning barchasi
 server tomonida ishlaydi, mijoz tomonida hech qachon ishlamaydi. Bu
@@ -551,7 +551,7 @@ Intel — `GET /v1/intel/latest` dagi imzolangan artefakt. Yopiq `RadarIntelFeed
 
 `syncRadarIntel()` takliflar bilan bir xil server tomonidagi Bearer, 30 soniyalik vaqt cheklovi, 10 MiB oqim cheklovi, aynan baytlar bo‘yicha Ed25519 tekshiruvi, qat’iy sxema, tana/sarlavhada `live` talabi, versiya quyi chegarasi va oxirgi yaroqli keshni saqlash qoidalarini qo‘llaydi. Tekshirilgan jonli snapshot saqlanganidan so‘ng mijoz `radar:<sha256(supporter key)>` ni hosil qiladi, faqat shu bir tomonlama identifikatorni saqlaydi va maxsus `radar_supporter` tan olish hodisasini chiqaradi. Uning `radar-supporter` nishoni idempotent bo‘lib, nol XP beradi; u hech qachon yetakchilar jadvallarini yangilamaydi yoki `token_share` dan qayta foydalanmaydi. `/dashboard/radar/intel` nishonni faqat tekshirilgan mahalliy kesh metama’lumotlari asosida renderlaydi.
 
-CLI `omniroute radar status` va `omniroute radar sync` buyruqlarini taqdim etadi. Har ikkisi ham faqat mahalliy OmniRoute API bilan aloqa qiladi. `status` faqat o‘qish uchun mo‘ljallangan `GET /api/radar/status` so‘rovini bajaradi; `sync` bitta `POST /api/radar/sync-all` so‘rovini yuboradi va har bir tasma uchun natijani chiqaradi. Hech qaysi buyruq supporter kalitini o‘qimaydi, qabul qilmaydi yoki chiqarmaydi va hech biri Radar xizmatiga bevosita murojaat qilmaydi.
+CLI `omniroute radar status` va `omniroute radar sync` buyruqlarini taqdim etadi. Har ikkisi ham faqat mahalliy 67router API bilan aloqa qiladi. `status` faqat o‘qish uchun mo‘ljallangan `GET /api/radar/status` so‘rovini bajaradi; `sync` bitta `POST /api/radar/sync-all` so‘rovini yuboradi va har bir tasma uchun natijani chiqaradi. Hech qaysi buyruq supporter kalitini o‘qimaydi, qabul qilmaydi yoki chiqarmaydi va hech biri Radar xizmatiga bevosita murojaat qilmaydi.
 
 ---
 

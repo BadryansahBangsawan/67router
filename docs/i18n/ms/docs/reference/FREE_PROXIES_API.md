@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menyediakan kumpulan proksi percuma terpilih dalam jadual `free_proxies`,
+67router menyediakan kumpulan proksi percuma terpilih dalam jadual `free_proxies`,
 yang disegerakkan daripada penyedia luaran (1proxy, proxifly, iplocate, webshare).
 Papan pemuka memaparkannya di bawah **Tetapan → Proksi Percuma**. Dokumen ini
 merangkumi penapisan, pengisihan, pengiraan dan pelaporan ralat penyegerakan pada

@@ -8,7 +8,7 @@
 
 ## クイックスタート — ネイティブの `agentrouter` プロバイダーを使用する（推奨）
 
-ほとんどのユーザーには、**特別な設定は必要ありません**。OmniRoute には、Claude Code の完全なワイヤーイメージがあらかじめ組み込まれた `agentrouter` プロバイダーが付属しています（`open-sse/config/providerRegistry.ts` → `agentrouter` を参照）。使用するには、次の手順を実行します。
+ほとんどのユーザーには、**特別な設定は必要ありません**。67router には、Claude Code の完全なワイヤーイメージがあらかじめ組み込まれた `agentrouter` プロバイダーが付属しています（`open-sse/config/providerRegistry.ts` → `agentrouter` を参照）。使用するには、次の手順を実行します。
 
 1. **ダッシュボード → プロバイダー → プロバイダーを追加**を開きます。
 2. リストから **AgentRouter** を選択します。
@@ -22,18 +22,18 @@
 
 ## 高度な設定：Claude Code 互換プロバイダータイプ経由で接続する
 
-OmniRoute は、正しいワイヤーイメージで Anthropic Messages API と通信する **Claude Code 互換**プロバイダータイプ（`anthropic-compatible-cc-*`）を通じて、AgentRouter（および同様のリレー）もサポートしています。`https://agentrouter.org` を指定した汎用の `openai-compatible-chat` プロバイダーは、**動作しません**。Claude Code のように見えないリクエストは、上流の WAF によって拒否されます。
+67router は、正しいワイヤーイメージで Anthropic Messages API と通信する **Claude Code 互換**プロバイダータイプ（`anthropic-compatible-cc-*`）を通じて、AgentRouter（および同様のリレー）もサポートしています。`https://agentrouter.org` を指定した汎用の `openai-compatible-chat` プロバイダーは、**動作しません**。Claude Code のように見えないリクエストは、上流の WAF によって拒否されます。
 
 ---
 
 ## 前提条件
 
 - AgentRouter のアカウントと API キー。新規登録者は、プロジェクトの [README](../README.md) にあるアフィリエイトリンク経由で無料クレジットを受け取れます。
-- `ENABLE_CC_COMPATIBLE_PROVIDER` 機能フラグを有効にして OmniRoute が実行されていること（以下を参照）。
+- `ENABLE_CC_COMPATIBLE_PROVIDER` 機能フラグを有効にして 67router が実行されていること（以下を参照）。
 
 ## 1. CC 互換プロバイダータイプを有効にする
 
-Claude Code 互換プロバイダータイプは、公式 Claude Code クライアントを忠実に模倣したトラフィックを送信するため、機能フラグによって制限されています。OmniRoute を起動する前に、次の環境変数を設定して有効にします。
+Claude Code 互換プロバイダータイプは、公式 Claude Code クライアントを忠実に模倣したトラフィックを送信するため、機能フラグによって制限されています。67router を起動する前に、次の環境変数を設定して有効にします。
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -5,7 +5,7 @@
 ---
 
 Pool ɗin da ake karɓar baƙuncinsa da kai yana aiki a kan na’urar **.113** (`tomni-proxmox-113`). Tun daga 2026-10-18, kowane
-runner na OmniRoute yana da **matsayi guda**, lakabi guda, da kasafin ƙwaƙwalwa/CPU da aka daidaita bisa abin da nauyin aikinsa
+runner na 67router yana da **matsayi guda**, lakabi guda, da kasafin ƙwaƙwalwa/CPU da aka daidaita bisa abin da nauyin aikinsa
 ya nuna a ma’auni. Slot ɗin Turbopack yana samun abin da build ɗin ke buƙata; sauran slots kuwa an daidaita su bisa
 mafi girman amfani da aka auna. Na’urar tana yin overcommit ne kawai idan build na Turbopack ya zo lokaci guda da build na webpack na Release-Green
 da aikin lint; swap na host (16 GB) yana ɗaukar wannan, kuma saboda Builds na pull-request suna gudana a kan hosted runners,
@@ -27,7 +27,7 @@ An auna a 2026-10-18:
 | swap      | 16 GB                    | `omniroute-113-5` yana aiki ba tare da swap ba (`MemorySwapMax=0`) domin a dakatar da build da ya fita daga iko a iyakarsa maimakon ya sa na’urar ta fara amfani da swap                                                                                                                                                                                                                                                                      |
 | `/tmp`    | **12 GB tmpfs = RAM**    | duk abin da aka ajiye a wurin yana cin ƙwaƙwalwa; ana share ragowar bayan awa 3                                                                                                                                                                                                                                                                                                                                                               |
 | CPU       | an ga load 60 a cores 32 | kafin a sanya quotas, build guda na Turbopack (~1166 % CPU) tare da coverage suite a kan na’ura ɗaya sun hana saƙonnin heartbeat na sauran listeners samun albarkatu (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                                    |
-| runners   | **listeners 6**          | OmniRoute 4 + OmniHeuris + OmniMind; an kashe `omniroute-113-3/-4/-7/-8` (`systemctl enable --now` yana sake kunna ɗaya)                                                                                                                                                                                                                                                                                                                      |
+| runners   | **listeners 6**          | 67router 4 + OmniHeuris + OmniMind; an kashe `omniroute-113-3/-4/-7/-8` (`systemctl enable --now` yana sake kunna ɗaya)                                                                                                                                                                                                                                                                                                                       |
 
 Iyakokin suna cikin `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` na kowane unit
 (an adana tsoffin ƙimomi a matsayin `override.conf.bak-20261018`) kuma an yi amfani da su kai tsaye ta
@@ -72,7 +72,7 @@ worker yana bayar da rahoton cewa an soke job ɗin, kuma listener yana komawa on
 
 Tsohon saitin runner na `KillMode=process` yana barin `Runner.Worker → npm → next-build`
 suna aiki lokacin da aka tsayar ko aka sake kunna unit — build marar uwa yana ci gaba da cin RAM da
-CPU ba tare da job da ke haɗe da shi ba. Kowane unit na OmniRoute yana da drop-in
+CPU ba tare da job da ke haɗe da shi ba. Kowane unit na 67router yana da drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 mai ɗauke da `KillMode=mixed`: SIGTERM ga listener da farko, sannan SIGKILL ga dukkan cgroup a
 `TimeoutStop`. Zai fara aiki a sake kunna unit ɗin na gaba — a sake kunna **runner ɗaya a
@@ -115,7 +115,7 @@ kowane lokaci, sai lokacin da ba ya aiki**, tare da binciken rashin aiki da sake
   `next build` na backend kaɗai (~5–6 GB; webpack) da `lint-guard` na `quality.yml`. `omniroute-113`
   yana da `MemoryHigh=4G` har zuwa 2026-10-18 — ginin promptfoo ya shafe minti 54 yana ta dawo da ƙwaƙwalwa
   a can; 8 GB yana kawar da rage saurin.
-- **An rage listeners da gangan.** An kashe units guda huɗu na OmniRoute a 2026-08-29 — kowane ƙarin
+- **An rage listeners da gangan.** An kashe units guda huɗu na 67router a 2026-08-29 — kowane ƙarin
   listener wani mai amfani ne ga kasafin ƙwaƙwalwar da ke sama. Iyakar janitor ita ce 6 (`MAX_ACTIVE_RUNNERS=6` a cikin cron): yana ƙirga
   kowane `Runner.Listener` da ke kan na’urar, kuma OmniHeuris + OmniMind suna ƙara guda biyu a kan namu guda huɗu.
 - **Kada a taɓa tsaftace `/tmp` ko `_work` da hannu yayin da kowane runner ke aiki.** Yin

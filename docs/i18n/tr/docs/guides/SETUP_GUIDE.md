@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Türkçe)
+# 📖 Setup Guide — 67router (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute için eksiksiz kurulum başvurusu. Hızlı sürüm için [README'deki Hızlı Başlangıç](../README.md#-quick-start) bölümüne bakın.
+> 67router için eksiksiz kurulum başvurusu. Hızlı sürüm için [README'deki Hızlı Başlangıç](../README.md#-quick-start) bölümüne bakın.
 
 ## İçindekiler
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR paketi](https://aur.archlinux.org/packages/omniroute-bin), OmniRoute'u kurar ve bir systemd kullanıcı hizmeti sağlar.
+[AUR paketi](https://aur.archlinux.org/packages/omniroute-bin), 67router'u kurar ve bir systemd kullanıcı hizmeti sağlar.
 
 ### Kaynaktan
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows notu:** Eski `%USERPROFILE%\.omniroute` dizini mevcut değilse OmniRoute varsayılan olarak `%APPDATA%\omniroute` dizinini kullanır. Farklı bir veri dizini konumu seçmek için `DATA_DIR` değişkenini ayarlayın.
+> **Windows notu:** Eski `%USERPROFILE%\.omniroute` dizini mevcut değilse 67router varsayılan olarak `%APPDATA%\omniroute` dizinini kullanır. Farklı bir veri dizini konumu seçmek için `DATA_DIR` değişkenini ayarlayın.
 
 > **Not:** `npm install`, ilk çalıştırmada `.env.example` dosyasından otomatik olarak `.env` oluşturur. Sonraki kurulumlar mevcut bir `.env` dosyasının üzerine yazmaz; böylece özelleştirmeler korunur. Yeniden oluşturmak için komutu tekrar çalıştırmadan önce `.env` dosyasını silin.
 
@@ -64,7 +64,7 @@ Compose profilleri ve Caddy HTTPS dahil eksiksiz Docker kurulumu için [Docker K
 
 ### Masaüstü Uygulaması (Electron)
 
-OmniRoute, Electron 41 + electron-builder 26.10 üzerine kurulu bir masaüstü sarmalayıcısıyla birlikte gelir. Kullanılabilir betikler (çalışma alanı kökü):
+67router, Electron 41 + electron-builder 26.10 üzerine kurulu bir masaüstü sarmalayıcısıyla birlikte gelir. Kullanılabilir betikler (çalışma alanı kökü):
 
 ```bash
 npm run electron:dev          # Masaüstü uygulamasını çalışırken yeniden yüklemeyle çalıştır
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Ortam değişkenleriyle (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` vb.) birlikte kullanıldığında bu, tamamen betiklerle yönetilebilen bir OmniRoute örneği başlatmanıza olanak tanır.
+Ortam değişkenleriyle (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` vb.) birlikte kullanıldığında bu, tamamen betiklerle yönetilebilen bir 67router örneği başlatmanıza olanak tanır.
 
 ### CLI Seçenekleri
 
@@ -99,7 +99,7 @@ Ortam değişkenleriyle (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` vb.) b
 | `omniroute config`      | CLI aracı yapılandırması — yapılandırmaları listele, al, ayarla ve doğrula            |
 | `omniroute status`      | Çevrimdışı durum paneli — sürüm, DB, araçlar ve yapılandırma                          |
 | `omniroute logs`        | API'den kullanım günlüklerini akışla (`--follow` desteklenir)                         |
-| `omniroute update`      | OmniRoute güncellemelerini denetle veya uygula                                        |
+| `omniroute update`      | 67router güncellemelerini denetle veya uygula                                         |
 | `omniroute provider`    | Sağlayıcı bağlantılarını yönet — ekle, listele, kaldır, test et ve varsayılanı ayarla |
 | `omniroute --port 3000` | Standart/API portunu 3000 olarak ayarla                                               |
 | `omniroute --mcp`       | MCP sunucusunu başlat (stdio aktarımı)                                                |
@@ -165,7 +165,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode ve OpenAI uyumlu SDK'l
 
 #### `setup-*` ile otomatik yapılandırma
 
-Temel URL'yi ve anahtarı elle yapıştırmak yerine OmniRoute'un canlı model kataloğundan yararlanarak her aracın kendi yapılandırmasını yazmasına izin verin. Her araç için tek komut:
+Temel URL'yi ve anahtarı elle yapıştırmak yerine 67router'un canlı model kataloğundan yararlanarak her aracın kendi yapılandırmasını yazmasına izin verin. Her araç için tek komut:
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml profilleri
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Her biri, yerel bir aracı **uzak** bir OmniRoute'a göre yapılandırmak için `--remote <url> --api-key <key>` seçeneklerini ve önizleme için `--dry-run` seçeneğini kabul eder. Bir CLI'yi doğru ortam değişkenleri eklenmiş ve hiçbir yapılandırma yazılmamış şekilde başlatmak için genel başlatıcı `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) komutunu kullanın; araç başına eski başlatıcılar olan `omniroute launch` (Claude Code) ve `omniroute launch-codex` (Codex) kullanılmaya devam edilebilir.
+Her biri, yerel bir aracı **uzak** bir 67router'a göre yapılandırmak için `--remote <url> --api-key <key>` seçeneklerini ve önizleme için `--dry-run` seçeneğini kabul eder. Bir CLI'yi doğru ortam değişkenleri eklenmiş ve hiçbir yapılandırma yazılmamış şekilde başlatmak için genel başlatıcı `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) komutunu kullanın; araç başına eski başlatıcılar olan `omniroute launch` (Claude Code) ve `omniroute launch-codex` (Codex) kullanılmaya devam edilebilir.
 
 Tam tablo için (her komutun ne yazdığı, tüm seçenekler, yerel ve uzak kullanım, temel URL `/v1` kuralları) **[CLI Entegrasyonları](./CLI-INTEGRATIONS.md)** belgesine bakın.
 
@@ -270,15 +270,15 @@ curl -X POST http://localhost:20128/a2a \
 | Değişken                 | Varsayılan                             | Amaç                                                                                                                                                            |
 | ------------------------ | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                               | Üst kaynak yanıt başlangıcı zaman aşımı, gizli Undici zaman aşımları, TLS parmak izi istekleri ve API köprüsü istek/proxy zaman aşımları için ortak temel değer |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` değerini devralır | OmniRoute'un SSE akışını sonlandırmasından önce akış parçaları arasında izin verilen maksimum süre                                                              |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` değerini devralır | 67router'un SSE akışını sonlandırmasından önce akış parçaları arasında izin verilen maksimum süre                                                               |
 
 Geriye dönük uyumluluk korunur: mevcut `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` ve katmana özgü diğer zaman aşımı değişkenleri çalışmaya devam eder ve ortak temel değeri geçersiz kılar.
 
 ### Sağlayıcıya Özgü Notlar
 
-Claude Code uyumlu üst kaynaklar (`anthropic-compatible-cc-*`) için OmniRoute, sağlayıcı tarafındaki okuma zaman aşımlarının ortam yapılandırmanızla uyumlu kalması amacıyla giden `X-Stainless-Timeout` üst bilgisini çözümlenen getirme zaman aşımından türetir.
+Claude Code uyumlu üst kaynaklar (`anthropic-compatible-cc-*`) için 67router, sağlayıcı tarafındaki okuma zaman aşımlarının ortam yapılandırmanızla uyumlu kalması amacıyla giden `X-Stainless-Timeout` üst bilgisini çözümlenen getirme zaman aşımından türetir.
 
-Üçüncü taraf Claude Code uyumlu ters proxy'ler için OmniRoute, varsayılan `anthropic-beta` kümesini ölçülü tutar ve `Client Cache Control`, `Auto` olarak bırakıldığında yalnızca istemci tarafından sağlanan `cache_control` işaretleyicilerini iletir. Bağlantı başına "Redact-thinking beta'yı etkinleştir" seçeneğini yalnızca üst kaynak özellikle redakte edilmiş Claude düşünme akışlarını gerektiriyorsa etkinleştirin.
+Üçüncü taraf Claude Code uyumlu ters proxy'ler için 67router, varsayılan `anthropic-beta` kümesini ölçülü tutar ve `Client Cache Control`, `Auto` olarak bırakıldığında yalnızca istemci tarafından sağlanan `cache_control` işaretleyicilerini iletir. Bağlantı başına "Redact-thinking beta'yı etkinleştir" seçeneğini yalnızca üst kaynak özellikle redakte edilmiş Claude düşünme akışlarını gerektiriyorsa etkinleştirin.
 
 ### Gelişmiş Zaman Aşımı Geçersiz Kılmaları
 
@@ -296,11 +296,11 @@ Claude Code uyumlu üst kaynaklar (`anthropic-compatible-cc-*`) için OmniRoute,
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                               | API köprüsü sunucusundaki kalıcı bağlantı zaman aşımı                                       |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                  | API köprüsü sunucusundaki soket hareketsizliği zaman aşımı (`0` bunu devre dışı bırakır)    |
 
-> **Not:** Akış istekleri için `FETCH_TIMEOUT_MS` yalnızca bağlantı kurulumunu / ilk üst kaynak yanıtını bekleme süresini kapsar. Akış etkin hâle geldiğinde OmniRoute yalnızca gerçek bir duraklama (`STREAM_IDLE_TIMEOUT_MS`) veya Undici gövde hareketsizliği (`FETCH_BODY_TIMEOUT_MS`) durumunda akışı sonlandırır.
+> **Not:** Akış istekleri için `FETCH_TIMEOUT_MS` yalnızca bağlantı kurulumunu / ilk üst kaynak yanıtını bekleme süresini kapsar. Akış etkin hâle geldiğinde 67router yalnızca gerçek bir duraklama (`STREAM_IDLE_TIMEOUT_MS`) veya Undici gövde hareketsizliği (`FETCH_BODY_TIMEOUT_MS`) durumunda akışı sonlandırır.
 
 ### Ters Proxy Uyumluluğu
 
-OmniRoute'u Nginx, Caddy, Cloudflare veya başka bir ters proxy arkasında çalıştırıyorsanız proxy zaman aşımlarının da OmniRoute akış/getirme zaman aşımlarınızdan daha yüksek olduğundan emin olun.
+67router'u Nginx, Caddy, Cloudflare veya başka bir ters proxy arkasında çalıştırıyorsanız proxy zaman aşımlarının da 67router akış/getirme zaman aşımlarınızdan daha yüksek olduğundan emin olun.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mengontrol **origin browser** mana yang dapat membaca respons lintas origin
+67router mengontrol **origin browser** mana yang dapat membaca respons lintas origin
 melalui satu daftar izin terpusat. Model ini **gagal-tertutup secara default**:
 tidak ada origin yang diizinkan sampai Anda secara eksplisit mengizinkannya. Halaman ini mendokumentasikan cara daftar izin
 ditentukan, apa yang sebenarnya diekspos oleh `CORS_ALLOW_ALL=true` (dan, yang tidak kalah penting, apa yang
@@ -46,13 +46,13 @@ dengan urutan berikut:
 ## Model ancaman — apa yang sebenarnya diekspos oleh `CORS_ALLOW_ALL=true`
 
 Peringatan umum OWASP ("CORS wildcard = situs mana pun dapat memanggil API Anda") memang perlu
-ditanggapi serius, tetapi paparan OmniRoute **lebih sempit daripada kasus umum**,
+ditanggapi serius, tetapi paparan 67router **lebih sempit daripada kasus umum**,
 karena satu fakta implementasi yang konkret:
 
 > **`applyCorsHeaders()` terpusat tidak pernah mengirimkan
 > `Access-Control-Allow-Credentials`.** Browser tidak akan mengekspos respons lintas
 > origin _dengan kredensial_ (yang membawa cookie), kecuali server mengirimkan
-> `Access-Control-Allow-Credentials: true`. Jalur CORS bersama OmniRoute tidak pernah
+> `Access-Control-Allow-Credentials: true`. Jalur CORS bersama 67router tidak pernah
 > melakukannya.
 
 Artinya untuk setiap permukaan, bahkan dengan `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ secara terpisah dari panduan CORS ini.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jika OmniRoute berjalan di belakang reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Jika 67router berjalan di belakang reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **bukan** satu-satunya kontrol Anda — pengaman rute loopback
   tetap melindungi rute yang dapat melakukan spawn (lihat
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Jangan memalsukan
@@ -108,7 +108,7 @@ secara terpisah dari panduan CORS ini.
 Bahkan dalam pengembangan, Anda jarang memerlukan wildcard. Izinkan hanya server pengembangan yang Anda gunakan:
 
 ```bash
-# Server pengembangan Vite (5173) + Next.js (3000) yang memanggil OmniRoute lokal
+# Server pengembangan Vite (5173) + Next.js (3000) yang memanggil 67router lokal
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ memulai ulang.
   masukkan origin pengelolaan/dasbor ke konfigurasi permisif apa pun; origin tersebut harus tetap
   sepenuhnya fail-closed.
 
-## Contoh: reverse proxy di depan OmniRoute
+## Contoh: reverse proxy di depan 67router
 
-CORS diberlakukan oleh OmniRoute sendiri, sehingga proxy umumnya **tidak boleh** menambahkan atau
+CORS diberlakukan oleh 67router sendiri, sehingga proxy umumnya **tidak boleh** menambahkan atau
 menulis ulang header `Access-Control-*` (header ganda menyebabkan masalah pada browser). Akhiri TLS
-dan teruskan — biarkan OmniRoute merespons preflight:
+dan teruskan — biarkan 67router merespons preflight:
 
 ```nginx
-# nginx — teruskan ke OmniRoute; JANGAN menyisipkan Access-Control-* di sini
+# nginx — teruskan ke 67router; JANGAN menyisipkan Access-Control-* di sini
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Pertahankan header penerusan: proxy pada host yang sama terhubung dari loopback, dan header tersebut
-    # memberi tahu OmniRoute bahwa pemanggil bukan operator lokal. Proxy yang tidak menambahkan satu pun
+    # memberi tahu 67router bahwa pemanggil bukan operator lokal. Proxy yang tidak menambahkan satu pun
     # header tersebut membuat setiap pemanggil jarak jauh terlihat lokal. Jangan pernah menetapkan X-Forwarded-For ke 127.0.0.1.
 }
 ```
 
-Tetapkan origin browser yang diizinkan di OmniRoute (`CORS_ALLOWED_ORIGINS` atau
+Tetapkan origin browser yang diizinkan di 67router (`CORS_ALLOWED_ORIGINS` atau
 tab Security), bukan di proxy.
 
 ## File sumber

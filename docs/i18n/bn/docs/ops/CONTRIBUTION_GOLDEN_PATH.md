@@ -113,7 +113,7 @@ production build এবং বিস্তৃত suites চালায়; visu
 - CLI catalogs আলাদাভাবে `bin/cli/locales/`-এর অধীনে থাকে।
 - ICU placeholders এবং tags হুবহু সংরক্ষণ করুন। Product/provider/model names,
   protocol এবং header names, commands, code/JSON identifiers, URLs, environment variables, বা
-  `OmniRoute`, `OAuth`, `MCP`, এবং `A2A`-এর মতো protected terms অনুবাদ করবেন না। বর্তমান source list হলো
+  `67router`, `OAuth`, `MCP`, এবং `A2A`-এর মতো protected terms অনুবাদ করবেন না। বর্তমান source list হলো
   `scripts/i18n/glossary/protected-terms.json`।
 
 **নির্দিষ্ট loop**
@@ -259,7 +259,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # অন্য কোথ
 - **Roll back করুন।** `run` promoted slot-টি আবার validate করে এবং সেই check ব্যর্থ হলে
   `current` ও `previous` আবার অদলবদল করে। প্রথম validation-এ ব্যর্থ কোনো candidate কখনোই promote করা হয় না।
 
-সবকিছু gitignored `_artifacts/candidate/`-এর অধীনে লেখা হয়; বিদ্যমান OmniRoute
+সবকিছু gitignored `_artifacts/candidate/`-এর অধীনে লেখা হয়; বিদ্যমান 67router
 installation এবং তার data directory কখনোই স্পর্শ করা হয় না। Promoted CLI হলো
 `_artifacts/candidate/current/prefix/bin/omniroute`; এটি ব্যবহার করার সময় নিজের `DATA_DIR` দিয়ে
 start করুন। Exit code: সফল হলে `0`, validation বা promotion ব্যর্থ হলে `1`, usage error বা build অনুপস্থিত হলে `2`।

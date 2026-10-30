@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (עברית)
+# 🌐 67router Proxy Guide (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **עקפו חסימות גאוגרפיות, הגנו על זהותכם ונתבו תעבורת בינה מלאכותית דרך כל שרת proxy — ללא מורכבות בהגדרות.**
 
-OmniRoute כוללת מערכת מלאה לניהול שרתי proxy, המאפשרת לנתב תעבורה אל ספקי בינה מלאכותית חיצוניים דרך שרתי proxy מסוג HTTP,‏ HTTPS או SOCKS5. בין אם אתם נמצאים באזור חסום, זקוקים לתחלופת כתובות IP או מעוניינים בטביעת אצבע חשאית — מדריך זה מכסה הכול.
+67router כוללת מערכת מלאה לניהול שרתי proxy, המאפשרת לנתב תעבורה אל ספקי בינה מלאכותית חיצוניים דרך שרתי proxy מסוג HTTP,‏ HTTPS או SOCKS5. בין אם אתם נמצאים באזור חסום, זקוקים לתחלופת כתובות IP או מעוניינים בטביעת אצבע חשאית — מדריך זה מכסה הכול.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       שרת OmniRoute                           │
+│                       שרת 67router                           │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ מרשם        │    │ מנתב         │    │ אחזור            │  │
@@ -83,7 +83,7 @@ unsupported_country_region_territory
 
 ## מערכת Proxy בעלת 4 רמות
 
-OmniRoute תומך בהגדרת Proxy בארבעה **תחומים בלתי תלויים**, הנבדקים לפי סדר עדיפות:
+67router תומך בהגדרת Proxy בארבעה **תחומים בלתי תלויים**, הנבדקים לפי סדר עדיפות:
 
 ```
 סדר פתרון לפי עדיפות (מהגבוהה → לנמוכה):
@@ -96,7 +96,7 @@ OmniRoute תומך בהגדרת Proxy בארבעה **תחומים בלתי תל�
 
 ### כיצד הפתרון פועל
 
-כאשר OmniRoute שולח בקשה לספק במעלה הזרם, הוא קורא לפונקציה `resolveProxyForConnectionFromRegistry()`, שבודקת כל רמה לפי הסדר:
+כאשר 67router שולח בקשה לספק במעלה הזרם, הוא קורא לפונקציה `resolveProxyForConnectionFromRegistry()`, שבודקת כל רמה לפי הסדר:
 
 1. **רמת החשבון** — האם הוקצה Proxy למזהה החיבור הספציפי הזה?
 2. **רמת הספק** — האם הוקצה Proxy לספק הזה (למשל, `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ייבוא/ייצוא
 
-שרתי Proxy נכללים במערכת **גיבוי/שחזור**. בעת ייצוא תצורת OmniRoute שלכם:
+שרתי Proxy נכללים במערכת **גיבוי/שחזור**. בעת ייצוא תצורת 67router שלכם:
 
 1. עברו אל **לוח הבקרה → הגדרות → גיבוי**
 2. לחצו על **ייצוא** — מרשם ה-Proxy וההקצאות נכללים
@@ -248,7 +248,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### מיגרציה ממערכת קודמת
 
-אם הגדרתם שרתי proxy בגרסה ישנה יותר (לפני ה־registry), OmniRoute מעביר אותם אוטומטית:
+אם הגדרתם שרתי proxy בגרסה ישנה יותר (לפני ה־registry), 67router מעביר אותם אוטומטית:
 
 ```
 מאגר key_value מדור קודם → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **נתרם על ידי [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (בעיה [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute משתלב עם הפלטפורמה הקהילתית **[1proxy](https://1proxy-api.aitradepulse.com)** כדי לספק גישה ל**מאות שרתי פרוקסי חינמיים ומאומתים** מרחבי העולם. פתרון זה מושלם למשתמשים שאין להם תשתית פרוקסי משלהם.
+67router משתלב עם הפלטפורמה הקהילתית **[1proxy](https://1proxy-api.aitradepulse.com)** כדי לספק גישה ל**מאות שרתי פרוקסי חינמיים ומאומתים** מרחבי העולם. פתרון זה מושלם למשתמשים שאין להם תשתית פרוקסי משלהם.
 
 ### כיצד זה עובד
 
@@ -273,7 +273,7 @@ OmniRoute משתלב עם הפלטפורמה הקהילתית **[1proxy](https:/
 └─────────────┘     פרוקסי     └─────────────────┘               └──────────┘
 ```
 
-1. **סנכרון** — OmniRoute מושך שרתי פרוקסי מאומתים מה-API של 1proxy
+1. **סנכרון** — 67router מושך שרתי פרוקסי מאומתים מה-API של 1proxy
 2. **אחסון** — שרתי הפרוקסי נשמרים באותה טבלת `proxy_registry` עם `source = 'oneproxy'`
 3. **סינון** — סינון לפי פרוטוקול, מדינה וציון איכות
 4. **החלפה** — בחירת שרת הפרוקסי הטוב ביותר באמצעות אסטרטגיות איכות, בחירה אקראית או בחירה סדרתית
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## מניעת זיהוי ופעולה חשאית
 
-OmniRoute לא רק מנתב תעבורה דרך פרוקסי — הוא גורם לתעבורה להיראות לגיטימית:
+67router לא רק מנתב תעבורה דרך פרוקסי — הוא גורם לתעבורה להיראות לגיטימית:
 
 ### זיוף טביעת אצבע של TLS
 
@@ -407,13 +407,13 @@ OmniRoute לא רק מנתב תעבורה דרך פרוקסי — הוא גור�
 
 ## מצבי פרוקסי במעלה הזרם
 
-עבור ספקים המשתמשים בתבנית CLIProxyAPI, ‏OmniRoute תומך בשלושה מצבי פרוקסי במעלה הזרם:
+עבור ספקים המשתמשים בתבנית CLIProxyAPI, ‏67router תומך בשלושה מצבי פרוקסי במעלה הזרם:
 
-| מצב           | תיאור                                                  |
-| ------------- | ------------------------------------------------------ |
-| `native`      | OmniRoute מטפל ישירות בניתוב דרך הפרוקסי (ברירת המחדל) |
-| `cliproxyapi` | מאציל את הטיפול למופע CLIProxyAPI חיצוני               |
-| `fallback`    | מנסה תחילה מצב מקורי, ואם הוא נכשל עובר ל-CLIProxyAPI  |
+| מצב           | תיאור                                                 |
+| ------------- | ----------------------------------------------------- |
+| `native`      | 67router מטפל ישירות בניתוב דרך הפרוקסי (ברירת המחדל) |
+| `cliproxyapi` | מאציל את הטיפול למופע CLIProxyAPI חיצוני              |
+| `fallback`    | מנסה תחילה מצב מקורי, ואם הוא נכשל עובר ל-CLIProxyAPI |
 
 הגדרה לכל ספק:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API למנהרות
 
-למידע על חשיפת מופע OmniRoute שלך לאינטרנט הציבורי (Cloudflare/ngrok/Tailscale), במקום ניתוב תעבורה יוצאת דרך פרוקסי, עיין בקובץ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). ‏REST API של המנהרה נמצא תחת `/api/tunnels/{cloudflared,ngrok,tailscale}/*` והוא בלתי תלוי בשרשרת הפרוקסי היוצאת המתועדת לעיל.
+למידע על חשיפת מופע 67router שלך לאינטרנט הציבורי (Cloudflare/ngrok/Tailscale), במקום ניתוב תעבורה יוצאת דרך פרוקסי, עיין בקובץ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). ‏REST API של המנהרה נמצא תחת `/api/tunnels/{cloudflared,ngrok,tailscale}/*` והוא בלתי תלוי בשרשרת הפרוקסי היוצאת המתועדת לעיל.
 
 ### API של 1proxy
 
@@ -516,7 +516,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### שגיאות "socket hang up" דרך פרוקסי
 
-זוהי תופעה רגילה בפרוקסי זולים שמנתקים חיבורים לא פעילים. OmniRoute כבר מטפל בכך באמצעות:
+זוהי תופעה רגילה בפרוקסי זולים שמנתקים חיבורים לא פעילים. 67router כבר מטפל בכך באמצעות:
 
 - השבתת keep-alive בחיבורי פרוקסי (`keepAliveTimeout: 1`)
 - השבתת pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### "unsupported_country_region_territory" במהלך OAuth
 
-ודאו שהפרוקסי מוגדר **לפני** התחלת תהליך OAuth. OmniRoute מנתב את החלפת האסימונים של OAuth דרך הפרוקסי המוגדר. תחילה הגדירו פרוקסי גלובלי או פרוקסי ברמת הספק, ולאחר מכן התחברו.
+ודאו שהפרוקסי מוגדר **לפני** התחלת תהליך OAuth. 67router מנתב את החלפת האסימונים של OAuth דרך הפרוקסי המוגדר. תחילה הגדירו פרוקסי גלובלי או פרוקסי ברמת הספק, ולאחר מכן התחברו.
 
 ### לא נעשה שימוש בפרוקסי
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## בדיקת תקינות פרוקסי (v3.8.16+)
 
-מנגנון **הכשל המהיר של פרוקסי** של OmniRoute (`src/lib/proxyHealth.ts`) מזהה שרתי פרוקסי שאינם פעילים בתוך פחות מ-2 שניות באמצעות בדיקת חיבור TCP מהירה, ולאחר מכן **שומר את התוצאה במטמון** כדי למנוע תקורה בכל בקשה.
+מנגנון **הכשל המהיר של פרוקסי** של 67router (`src/lib/proxyHealth.ts`) מזהה שרתי פרוקסי שאינם פעילים בתוך פחות מ-2 שניות באמצעות בדיקת חיבור TCP מהירה, ולאחר מכן **שומר את התוצאה במטמון** כדי למנוע תקורה בכל בקשה.
 
 ### כיצד זה עובד
 
@@ -659,11 +659,11 @@ invalidateProxyHealth("http://user:pass@203.0.113.7:8080");
 
 ## ניתוח נתוני Proxy ויכולת תצפית
 
-OmniRoute עוקב אחר השימוש בכל Proxy כדי לסייע למפעילים לאבחן דפוסי ניתוב, עליות חדות בהשהיה וכשלים חוזרים.
+67router עוקב אחר השימוש בכל Proxy כדי לסייע למפעילים לאבחן דפוסי ניתוב, עליות חדות בהשהיה וכשלים חוזרים.
 
 ### אחר מה מתבצע מעקב
 
-עבור כל בקשה העוברת דרך Proxy מוגדר, OmniRoute מתעד:
+עבור כל בקשה העוברת דרך Proxy מוגדר, 67router מתעד:
 
 | מדד          | תיאור                                              |
 | ------------ | -------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## עץ החלטה לאסטרטגיית רוטציה
 
-כאשר מספר שרתי Proxy משויכים לטווח מסוים, OmniRoute משתמש ב**אסטרטגיית רוטציה** כדי לבחור באיזה מהם להשתמש עבור כל בקשה. האסטרטגיה מוגדרת ברמת הטווח (גלובלית, לפי ספק, לפי חשבון או לפי שילוב).
+כאשר מספר שרתי Proxy משויכים לטווח מסוים, 67router משתמש ב**אסטרטגיית רוטציה** כדי לבחור באיזה מהם להשתמש עבור כל בקשה. האסטרטגיה מוגדרת ברמת הטווח (גלובלית, לפי ספק, לפי חשבון או לפי שילוב).
 
 ### אסטרטגיות זמינות
 

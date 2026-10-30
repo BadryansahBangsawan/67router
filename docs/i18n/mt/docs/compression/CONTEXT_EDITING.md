@@ -4,15 +4,15 @@
 
 ---
 
-Il-**Context Editing** delegat huwa karatteristika għall-ġestjoni tal-kuntest disponibbli biss għal Claude. B’differenza mill-magni lokali ta’ kompressjoni ta’ OmniRoute (Caveman, RTK, LLMLingua, stacked pipelines) — li jiktbu mill-ġdid il-korp tat-talba _qabel_ ma jitlaq mill-proxy — Context Editing jitlob lill-**fornitur** ineħħi blokki qodma tal-użu tal-għodod / tar-riżultati tal-għodod mit-tieqa tal-kuntest attiva tiegħu stess. OmniRoute iżid biss parametru mal-korp (`context_management.edits[]`); Claude jwettaq it-tneħħija effettiva skont it-tokenizer tiegħu stess.
+Il-**Context Editing** delegat huwa karatteristika għall-ġestjoni tal-kuntest disponibbli biss għal Claude. B’differenza mill-magni lokali ta’ kompressjoni ta’ 67router (Caveman, RTK, LLMLingua, stacked pipelines) — li jiktbu mill-ġdid il-korp tat-talba _qabel_ ma jitlaq mill-proxy — Context Editing jitlob lill-**fornitur** ineħħi blokki qodma tal-użu tal-għodod / tar-riżultati tal-għodod mit-tieqa tal-kuntest attiva tiegħu stess. 67router iżid biss parametru mal-korp (`context_management.edits[]`); Claude jwettaq it-tneħħija effettiva skont it-tokenizer tiegħu stess.
 
-Din hija kapaċità delegata min-natura tagħha: fornituri oħra jirrifjutaw il-parametru, għalhekk OmniRoute jillimitaha strettament għal Claude u għal relays kompatibbli ma’ Claude Code.
+Din hija kapaċità delegata min-natura tagħha: fornituri oħra jirrifjutaw il-parametru, għalhekk 67router jillimitaha strettament għal Claude u għal relays kompatibbli ma’ Claude Code.
 
 Sors definittiv: `open-sse/config/contextEditing.ts` (IDs tal-istrateġiji, injezzjoni fil-korp, estrazzjoni tat-telemetrija), `open-sse/executors/base.ts` (kontroll tal-injezzjoni + fallback għal 400), u `open-sse/services/compression/types.ts` (struttura tal-konfigurazzjoni + valur predefinit).
 
 ## X’jagħmel `clear_tool_uses`
 
-OmniRoute jinjetta editjar wieħed fil-korp tal-Anthropic Messages li jintbagħat:
+67router jinjetta editjar wieħed fil-korp tal-Anthropic Messages li jintbagħat:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute jinjetta editjar wieħed fil-korp tal-Anthropic Messages li jintbagħa
 - `trigger.value: 100000` — ladarba t-tokens tal-input tat-talba jaqbżu dan il-limitu, Claude jibda jneħħi pari qodma ta’ użu/riżultat tal-għodod (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, il-valur predefinit ta’ Anthropic).
 - `keep.value: 3` — l-N pari l-aktar reċenti ta’ użu/riżultat tal-għodod jinżammu mhux mittiefsa (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Il-beta tiġi indikata permezz tal-header `anthropic-beta: context-management-2025-06-27`, li OmniRoute diġà jibgħat mat-talbiet ta’ Claude.
+Il-beta tiġi indikata permezz tal-header `anthropic-beta: context-management-2025-06-27`, li 67router diġà jibgħat mat-talbiet ta’ Claude.
 
-L-injezzjoni titwettaq minn `applyContextEditingToBody()` u hija **idempotenti**: jekk editjar `clear_tool_uses` ikun diġà jeżisti fil-korp (miżjud minn sejħa preċedenti jew ipprovdut mill-klijent), il-korp jitħalla kif inhu. Jekk ikun preżenti wkoll editjar `clear_thinking_20251015`, OmniRoute jagħmel ordinament stabbli tal-editjar `clear_thinking` biex ipoġġih fuq quddiem, għax Anthropic jirrikjedi li `clear_thinking` jiġi qabel `clear_tool_uses` fl-array `edits[]`.
+L-injezzjoni titwettaq minn `applyContextEditingToBody()` u hija **idempotenti**: jekk editjar `clear_tool_uses` ikun diġà jeżisti fil-korp (miżjud minn sejħa preċedenti jew ipprovdut mill-klijent), il-korp jitħalla kif inhu. Jekk ikun preżenti wkoll editjar `clear_thinking_20251015`, 67router jagħmel ordinament stabbli tal-editjar `clear_thinking` biex ipoġġih fuq quddiem, għax Anthropic jirrikjedi li `clear_thinking` jiġi qabel `clear_tool_uses` fl-array `edits[]`.
 
 ## Is-swiċċ ta’ attivazzjoni għal kull kombinazzjoni
 
@@ -127,7 +127,7 @@ Claude ġenwin jinkludi l-beta f’`ANTHROPIC_BETA_BASE` u ma jgħaddix minn dan
 
 ## Telemetrija ta’ `applied_edits`
 
-Wara risposta ta’ Claude, OmniRoute jirreġistra kemm kuntest effettivament neħħa l-fornitur. Dan
+Wara risposta ta’ Claude, 67router jirreġistra kemm kuntest effettivament neħħa l-fornitur. Dan
 **ma jiġix streamed** — jiġi estratt mill-body tar-risposta mhux streaming fuq bażi tal-aħjar sforz, u qatt
 ma jaffettwa r-risposta (il-fallimenti tat-telemetrija jiġu injorati).
 
@@ -157,14 +157,14 @@ tal-engine `context-editing`, u tista’ tingħaraf mill-iffrankar ta’ RTK/Cav
 
 | Aspett                       | Magni lokali (Caveman / RTK / LLMLingua / stacked)      | Editjar Delegat tal-Kuntest                               |
 | ---------------------------- | ------------------------------------------------------- | --------------------------------------------------------- |
-| Fejn jaħdem                  | F’OmniRoute, qabel it-talba titlaq mill-proxy           | Għand il-fornitur (Claude), fuq in-naħa tas-server        |
+| Fejn jaħdem                  | F’67router, qabel it-talba titlaq mill-proxy            | Għand il-fornitur (Claude), fuq in-naħa tas-server        |
 | X’jeditja                    | Test tal-prompt / tal-kuntest / tar-riżultat tal-għodda | Blokki qodma tal-użu tal-għodda / tar-riżultat tal-għodda |
 | Ambitu tal-fornitur          | Il-fornituri kollha                                     | `claude` + `anthropic-compatible-cc-*` biss               |
 | Attivazzjoni/diżattivazzjoni | Settings tal-modalità tal-kompressjoni                  | `contextEditing.enabled`                                  |
 | Mod ta’ falliment            | Jibqa’ għaddej f’każ ta’ żball (it-test oriġinali)      | Fallback għal 400: neħħi l-parametru, erġa’ pprova darba  |
 | Telemetrija tal-iffrankar    | `engine: <engine id>`                                   | `engine: "context-editing"`                               |
 
-It-tnejn jikkomplementaw lil xulxin: il-magni lokali jikkompressaw il-bytes li jibgħat OmniRoute; l-Editjar tal-Kuntest jippermetti lil
+It-tnejn jikkomplementaw lil xulxin: il-magni lokali jikkompressaw il-bytes li jibgħat 67router; l-Editjar tal-Kuntest jippermetti lil
 Claude jnaqqas il-kuntest li jkun qed jinżamm matul l-iskambji. Jistgħu jiġu attivati flimkien.
 
 ## Ara Wkoll

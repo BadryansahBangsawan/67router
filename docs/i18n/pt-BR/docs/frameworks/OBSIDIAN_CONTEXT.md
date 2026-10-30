@@ -13,7 +13,7 @@
 
 ## O que é
 
-O OmniRoute conecta-se a um cofre do **Obsidian** como uma **fonte de contexto** — uma
+O 67router conecta-se a um cofre do **Obsidian** como uma **fonte de contexto** — uma
 base de conhecimento local em Markdown que os agentes leem e gravam por meio do servidor
 MCP integrado. A integração se comunica com o plugin da comunidade **Obsidian Local REST API**
 em execução dentro do aplicativo para desktop, permitindo que os agentes pesquisem notas,
@@ -79,7 +79,7 @@ persisti-lo.
 
 `src/app/api/settings/obsidian/webdav/route.ts` gerencia uma sincronização opcional do
 cofre com suporte de WebDAV (controlada por `src/lib/obsidianSync.ts`). Ao habilitá-la,
-o OmniRoute é direcionado para um diretório de cofre local e um par aleatório de nome
+o 67router é direcionado para um diretório de cofre local e um par aleatório de nome
 de usuário/senha do WebDAV é gerado:
 
 ```bash
@@ -118,26 +118,26 @@ configuração do Obsidian por chave mantêm o fallback global. As quatro ferram
 
 Definidas em `open-sse/mcp-server/tools/obsidianTools.ts`. O token e a URL base são resolvidos
 a cada chamada (primeiro por chave de API, depois globalmente). As ferramentas que acessam o **servidor de sincronização**
-do OmniRoute (as quatro ferramentas `obsidian_sync_*`) também exigem o token de autenticação de sincronização configurado
-nas configurações do OmniRoute.
+do 67router (as quatro ferramentas `obsidian_sync_*`) também exigem o token de autenticação de sincronização configurado
+nas configurações do 67router.
 
 ### Ferramentas de leitura (`read:obsidian`)
 
-| Ferramenta                   | Descrição                                                                                                                       |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Verifica se a API REST local está acessível e autenticada.                                                                      |
-| `obsidian_search_simple`     | Pesquisa de texto completo no conteúdo das notas; retorna trechos com caminhos de arquivos.                                     |
-| `obsidian_search_structured` | Pesquisa usando uma expressão JSON Logic (filtros and/or/regex/path).                                                           |
-| `obsidian_read_note`         | Lê uma nota pelo caminho relativo ao vault; opcionalmente, um título/bloco/frontmatter específico.                              |
-| `obsidian_list_vault`        | Lista arquivos e diretórios no vault (árvore de entradas).                                                                      |
-| `obsidian_get_document_map`  | Obtém a estrutura de títulos da nota como um mapa de títulos → números de linha.                                                |
-| `obsidian_get_note_metadata` | Obtém frontmatter, tags, links e contagem de caracteres/palavras sem o conteúdo completo.                                       |
-| `obsidian_get_active_file`   | Obtém o caminho e o conteúdo do arquivo atualmente ativo no Obsidian.                                                           |
-| `obsidian_get_periodic_note` | Obtém a nota periódica diária/semanal/mensal para uma data (hoje, se omitida).                                                  |
-| `obsidian_get_tags`          | Lista todas as tags do vault com suas frequências.                                                                              |
-| `obsidian_list_commands`     | Lista os IDs de comandos disponíveis do Obsidian (use com `obsidian_execute_command`).                                          |
-| `obsidian_sync_status`       | Status do servidor de sincronização do OmniRoute: em execução, nome do vault, porta, tempo de atividade e última sincronização. |
-| `obsidian_sync_conflicts`    | Lista conflitos de sincronização não resolvidos (caminho, caminho do conflito e momento da detecção).                           |
+| Ferramenta                   | Descrição                                                                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `obsidian_check_status`      | Verifica se a API REST local está acessível e autenticada.                                                                     |
+| `obsidian_search_simple`     | Pesquisa de texto completo no conteúdo das notas; retorna trechos com caminhos de arquivos.                                    |
+| `obsidian_search_structured` | Pesquisa usando uma expressão JSON Logic (filtros and/or/regex/path).                                                          |
+| `obsidian_read_note`         | Lê uma nota pelo caminho relativo ao vault; opcionalmente, um título/bloco/frontmatter específico.                             |
+| `obsidian_list_vault`        | Lista arquivos e diretórios no vault (árvore de entradas).                                                                     |
+| `obsidian_get_document_map`  | Obtém a estrutura de títulos da nota como um mapa de títulos → números de linha.                                               |
+| `obsidian_get_note_metadata` | Obtém frontmatter, tags, links e contagem de caracteres/palavras sem o conteúdo completo.                                      |
+| `obsidian_get_active_file`   | Obtém o caminho e o conteúdo do arquivo atualmente ativo no Obsidian.                                                          |
+| `obsidian_get_periodic_note` | Obtém a nota periódica diária/semanal/mensal para uma data (hoje, se omitida).                                                 |
+| `obsidian_get_tags`          | Lista todas as tags do vault com suas frequências.                                                                             |
+| `obsidian_list_commands`     | Lista os IDs de comandos disponíveis do Obsidian (use com `obsidian_execute_command`).                                         |
+| `obsidian_sync_status`       | Status do servidor de sincronização do 67router: em execução, nome do vault, porta, tempo de atividade e última sincronização. |
+| `obsidian_sync_conflicts`    | Lista conflitos de sincronização não resolvidos (caminho, caminho do conflito e momento da detecção).                          |
 
 ### Ferramentas de escrita (`write:obsidian`)
 

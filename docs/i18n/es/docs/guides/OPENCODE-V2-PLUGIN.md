@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` incorpora todo tu catálogo de OmniRoute —modelos, combos y
+`@omniroute/opencode-plugin-v2` incorpora todo tu catálogo de 67router —modelos, combos y
 combos automáticos— al selector de modelos de OpenCode v2, con nombres para mostrar, precios y
 límites del nivel gratuito.
 
@@ -15,7 +15,7 @@ comparte nada entre ambos, por lo que actualizar uno nunca obliga a actualizar e
 ## Requisitos
 
 - OpenCode v2.
-- Una puerta de enlace de OmniRoute accesible (`http://localhost:20128` de forma predeterminada).
+- Una puerta de enlace de 67router accesible (`http://localhost:20128` de forma predeterminada).
 - Node.js 22 o 24.
 
 ## Instalación
@@ -78,7 +78,7 @@ indicando el endpoint y qué se ha perdido, para que un selector degradado nunca
 | `baseURL`                        | obligatorio                                       | Raíz de la puerta de enlace, solo `http(s)`; el sufijo `/v1` se añade cuando es necesario                                                                   |
 | `apiKey`                         | credencial conectada, después `OMNIROUTE_API_KEY` | Clave de chat para `/v1/*`                                                                                                                                  |
 | `managementReadToken`            | recurre a `apiKey`                                | Clave para `/api/*`; normalmente **no** es la misma                                                                                                         |
-| `displayName`                    | `"OmniRoute"`                                     | Nombre del proveedor en el selector                                                                                                                         |
+| `displayName`                    | `"67router"`                                      | Nombre del proveedor en el selector                                                                                                                         |
 | `timeoutMs`                      | `10000`                                           | Tiempo de espera de solicitud por endpoint (las combinaciones automáticas usan 5 s)                                                                         |
 | `modelCacheTtlMs`                | `300000`                                          | TTL de la caché del catálogo; una instantánea en disco agiliza los arranques en frío                                                                        |
 | `timeouts`                       | recurre a `timeoutMs`                             | Límites por endpoint en ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                                  |
@@ -116,7 +116,7 @@ Establezca `"geminiSanitization": false` para desactivarlo.
 
 | Síntoma                                                  | Causa                                                                                                                                                         |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| El selector no muestra ningún modelo de OmniRoute        | No se pudo resolver ninguna clave (compruebe la advertencia de inicio) o no se puede acceder a la puerta de enlace                                            |
+| El selector no muestra ningún modelo de 67router         | No se pudo resolver ninguna clave (compruebe la advertencia de inicio) o no se puede acceder a la puerta de enlace                                            |
 | IDs de modelo sin procesar, sin combinaciones ni precios | Los endpoints de administración rechazaron el token; configure `managementReadToken`                                                                          |
 | Catálogo `freeOnly` corto o vacío                        | No hay token de administración o el token fue rechazado; consulte la línea de resumen de actualización (recuento de `unmatched-free`) en el registro del host |
 | Una sesión está anclada a `opencode-<id>/…`              | El complemento v1 publicó `opencode-<id>`; v2 publica `<id>` directamente, así que vuelva a seleccionar el modelo en `<id>/…`                                 |

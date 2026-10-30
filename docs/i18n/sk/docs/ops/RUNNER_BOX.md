@@ -5,7 +5,7 @@
 ---
 
 Samostatne hostovaný fond beží na serveri **.113** (`tomni-proxmox-113`). Od 2026-10-18 má každý
-runner OmniRoute **jednu úlohu**, jeden štítok a pamäťový/CPU rozpočet nastavený podľa nameranej
+runner 67router **jednu úlohu**, jeden štítok a pamäťový/CPU rozpočet nastavený podľa nameranej
 záťaže. Slot Turbopack má zdroje potrebné na zostavenie; ostatné sloty sú dimenzované podľa svojich
 nameraných špičiek. Server prekračuje dostupnú kapacitu iba vtedy, keď sa zostavenie Turbopack prekrýva
 so zostavením webpack pre Release-Green a úlohou lint; túto situáciu absorbuje swap hostiteľa (16 GB),
@@ -27,7 +27,7 @@ Merané 2026-10-18:
 | swap      | 16 GB                                  | `omniroute-113-5` beží s vypnutým swapom (`MemorySwapMax=0`), takže nekontrolované zostavenie sa ukončí pri dosiahnutí svojho limitu namiesto toho, aby server začal swapovať                                                                                                                                                                                                                          |
 | `/tmp`    | **12 GB tmpfs = RAM**                  | všetko, čo sa tam uloží, zaberá pamäť; zvyšky sa odstraňujú po 3 h                                                                                                                                                                                                                                                                                                                                     |
 | CPU       | zaznamenané zaťaženie 60 na 32 jadrách | pred zavedením kvót jedno zostavenie Turbopack (~1166 % CPU) spolu so súpravou testov pokrytia na tom istom serveri pripravili ostatné listenery o heartbeat komunikáciu (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                         |
-| runnery   | **6 listenerov**                       | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sú deaktivované (`systemctl enable --now` jeden z nich znova aktivuje)                                                                                                                                                                                                                                                                 |
+| runnery   | **6 listenerov**                       | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` sú deaktivované (`systemctl enable --now` jeden z nich znova aktivuje)                                                                                                                                                                                                                                                                  |
 
 Limity sa nachádzajú v súbore `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 každej jednotky (predchádzajúce hodnoty sú uložené ako `override.conf.bak-20261018`) a boli aplikované
@@ -72,7 +72,7 @@ worker nahlási úlohu ako zrušenú a listener sa sám vráti online.
 
 Predvolený režim runnera `KillMode=process` ponechá procesy `Runner.Worker → npm → next-build`
 spustené aj po zastavení alebo reštartovaní jednotky — osirelé zostavenie naďalej spotrebúva RAM a
-CPU bez pripojenej úlohy. Každá jednotka OmniRoute obsahuje doplnkovú konfiguráciu
+CPU bez pripojenej úlohy. Každá jednotka 67router obsahuje doplnkovú konfiguráciu
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 s nastavením `KillMode=mixed`: najprv odošle SIGTERM listeneru a pri
 `TimeoutStop` odošle SIGKILL celej cgroup. Nastavenie sa prejaví pri nasledujúcom reštarte jednotky — reštartujte **vždy iba jeden runner,
@@ -119,7 +119,7 @@ a len keď je nečinný**, pričom kontrola nečinnosti a reštart musia byť v 
   ktoré potrebujú `next build` iba pre backend (~5–6 GB; webpack), a `quality.yml` `lint-guard`.
   `omniroute-113` mal až do 2026-10-18 nastavené `MemoryHigh=4G` — zostavenie promptfoo sa tam
   54 minút prebíjalo opakovaným uvoľňovaním pamäte; 8 GB toto obmedzovanie odstraňuje.
-- **Menej listenerov zámerne.** Štyri jednotky OmniRoute boli 2026-08-29 deaktivované — každý
+- **Menej listenerov zámerne.** Štyri jednotky 67router boli 2026-08-29 deaktivované — každý
   ďalší listener je ďalším nájomníkom vyššie uvedeného pamäťového rozpočtu. Limit janitora je 6
   (`MAX_ACTIVE_RUNNERS=6` v crone): počíta každý `Runner.Listener` v systéme a OmniHeuris +
   OmniMind pridávajú k našim štyrom ďalšie dva.

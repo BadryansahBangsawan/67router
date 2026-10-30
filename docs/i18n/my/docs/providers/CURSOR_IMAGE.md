@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် chat နှင့် တူညီသော provider id ဖြစ်သည့် `cursor` (alias `cu`) ကို အသုံးပြု၍ `POST /v1/images/generations` တွင် Cursor plan ၏ **ပုံဖန်တီးခြင်း** ကို ပံ့ပိုးပေးသည်။
+67router သည် chat နှင့် တူညီသော provider id ဖြစ်သည့် `cursor` (alias `cu`) ကို အသုံးပြု၍ `POST /v1/images/generations` တွင် Cursor plan ၏ **ပုံဖန်တီးခြင်း** ကို ပံ့ပိုးပေးသည်။
 
 | အကွက်                | တန်ဖိုး                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute သည် chat နှင့် တူညီသော provider id ဖ�
 
 ## Agent CLI ကို အသုံးပြုရသည့်အကြောင်းရင်း
 
-OmniRoute ရှိ Cursor chat သည် `agent.v1.AgentService/Run` (protobuf) ကို အသုံးပြုသည်။ ထိုလမ်းကြောင်းသည် built-in client tools များ (shell, write၊ …) ကို **ငြင်းပယ်သည်**။ ပုံဖန်တီးခြင်းသည် seat ကို အသုံးပြု၍ **`agent` CLI** မှ လုပ်ဆောင်ပေးသည့် Cursor-native tool တစ်ခုဖြစ်သည်။ ထို့ကြောင့် image handler သည် ကန့်သတ်ထားသော prompt နှင့် request တစ်ခုချင်းစီအတွက် ယာယီ workspace တစ်ခုဖြင့် `agent` ကို spawn လုပ်ပြီး (community seat bridges များနှင့် ပုံစံတူ) ထို့နောက် OpenAI နှင့် ကိုက်ညီသော `b64_json` ကို ပြန်ပေးသည်။
+67router ရှိ Cursor chat သည် `agent.v1.AgentService/Run` (protobuf) ကို အသုံးပြုသည်။ ထိုလမ်းကြောင်းသည် built-in client tools များ (shell, write၊ …) ကို **ငြင်းပယ်သည်**။ ပုံဖန်တီးခြင်းသည် seat ကို အသုံးပြု၍ **`agent` CLI** မှ လုပ်ဆောင်ပေးသည့် Cursor-native tool တစ်ခုဖြစ်သည်။ ထို့ကြောင့် image handler သည် ကန့်သတ်ထားသော prompt နှင့် request တစ်ခုချင်းစီအတွက် ယာယီ workspace တစ်ခုဖြင့် `agent` ကို spawn လုပ်ပြီး (community seat bridges များနှင့် ပုံစံတူ) ထို့နောက် OpenAI နှင့် ကိုက်ညီသော `b64_json` ကို ပြန်ပေးသည်။
 
 ## ဝင်ရောက်ခွင့်ကန့်သတ်ချက် (Hard Rules #15 + #17)
 
@@ -23,12 +23,12 @@ OmniRoute ရှိ Cursor chat သည် `agent.v1.AgentService/Run` (protobuf)
 
 ## Concurrency gate သည် module အဆင့်တွင်ရှိသည် (instance တစ်ခုတည်းအတွက်သာ ကန့်သတ်ချက်)
 
-`CURSOR_IMG_MAX_CONCURRENT` ကို Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) အတွင်း သီးသန့်သတ်မှတ်ထားသော in-memory counter/queue ဖြင့် ပြဋ္ဌာန်းထားသည်။ ၎င်းသည် OmniRoute process တစ်ခုအတွင်း တစ်ပြိုင်နက်တည်း လုပ်ဆောင်နေသော `agent` spawn များကို မှန်ကန်စွာ ကန့်သတ်ပေးသော်လည်း တူညီသော Cursor seat ကို မျှဝေအသုံးပြုသည့် process/instance များစွာအကြား (ဥပမာ multi-replica deployment) **ညှိနှိုင်းပေးခြင်းမရှိပါ** — instance တစ်ခုချင်းစီသည် ၎င်း၏ကိုယ်ပိုင် သီးခြားကန့်သတ်ချက်ကို ပြဋ္ဌာန်းသည်။ Instance တစ်ခုတည်းပါဝင်သော deployment (မူလပုံသေ) အတွက် ဤကန့်သတ်ချက်သည် တိကျသည်။ Horizontally scaled deployment များတွင် instance တစ်ခုချင်းစီအတွက် `CURSOR_IMG_MAX_CONCURRENT` ကို အနိမ့်ဘက်တွင် ထိန်းသိမ်းထားသင့်သည်၊ သို့မဟုတ် Cursor image traffic ကို instance တစ်ခုတည်းသို့ route လုပ်သင့်သည်။
+`CURSOR_IMG_MAX_CONCURRENT` ကို Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) အတွင်း သီးသန့်သတ်မှတ်ထားသော in-memory counter/queue ဖြင့် ပြဋ္ဌာန်းထားသည်။ ၎င်းသည် 67router process တစ်ခုအတွင်း တစ်ပြိုင်နက်တည်း လုပ်ဆောင်နေသော `agent` spawn များကို မှန်ကန်စွာ ကန့်သတ်ပေးသော်လည်း တူညီသော Cursor seat ကို မျှဝေအသုံးပြုသည့် process/instance များစွာအကြား (ဥပမာ multi-replica deployment) **ညှိနှိုင်းပေးခြင်းမရှိပါ** — instance တစ်ခုချင်းစီသည် ၎င်း၏ကိုယ်ပိုင် သီးခြားကန့်သတ်ချက်ကို ပြဋ္ဌာန်းသည်။ Instance တစ်ခုတည်းပါဝင်သော deployment (မူလပုံသေ) အတွက် ဤကန့်သတ်ချက်သည် တိကျသည်။ Horizontally scaled deployment များတွင် instance တစ်ခုချင်းစီအတွက် `CURSOR_IMG_MAX_CONCURRENT` ကို အနိမ့်ဘက်တွင် ထိန်းသိမ်းထားသင့်သည်၊ သို့မဟုတ် Cursor image traffic ကို instance တစ်ခုတည်းသို့ route လုပ်သင့်သည်။
 
 ## လိုအပ်ချက်များ
 
 1. Dashboard တွင် ချိတ်ဆက်ထားသော Cursor account တစ်ခု (OAuth သို့မဟုတ် `crsr_…` API key)။
-2. OmniRoute process က အသုံးပြုနိုင်သော Cursor Agent binary:
+2. 67router process က အသုံးပြုနိုင်သော Cursor Agent binary:
    - env `CURSOR_AGENT_BIN=/path/to/agent`၊ သို့မဟုတ်
    - `~/.local/bin/agent`၊ သို့မဟုတ်
    - Cursor connection ရှိ `providerSpecificData.agentBin`။

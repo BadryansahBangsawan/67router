@@ -7,7 +7,7 @@
 > **מקור האמת:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **עדכון אחרון:** 2026-06-28 — v3.8.40
 
-OmniRoute יכול לשלוח webhooks מסוג HTTP בתגובה לאירועי פלטפורמה. השתמשו בהם כדי להשתלב עם
+67router יכול לשלוח webhooks מסוג HTTP בתגובה לאירועי פלטפורמה. השתמשו בהם כדי להשתלב עם
 Slack, PagerDuty, Datadog, שירותי התראות פנימיים או כל מקלט HTTP.
 
 הרכיב המשגר חותם על כל מסירה באמצעות HMAC-SHA256, מנסה שוב במקרה של
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, שירותי התראות פנימיים או כל מ
 
 ## חתימת HMAC
 
-כאשר ל-webhook יש `secret`,‏ OmniRoute חותם על גוף ה-JSON ושולח:
+כאשר ל-webhook יש `secret`,‏ 67router חותם על גוף ה-JSON ושולח:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

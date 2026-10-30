@@ -4,7 +4,7 @@
 
 ---
 
-> **ଏହି ଡକ୍ୟୁମେଣ୍ଟଟି କ’ଣ।** ଶିଳ୍ପର ସର୍ବୋତ୍ତମ ପ୍ରଚଳନଗୁଡ଼ିକ ସହ ତୁଳନା କରି OmniRouteର ଗୁଣବତ୍ତା-ଗେଟ୍ ସିଷ୍ଟମ୍ର ଏକ ସମାଲୋଚନାମୂଳକ ମୂଲ୍ୟାଙ୍କନ, **ଏହା ସହିତ** ସମସ୍ତ ଗୁଣବତ୍ତା
+> **ଏହି ଡକ୍ୟୁମେଣ୍ଟଟି କ’ଣ।** ଶିଳ୍ପର ସର୍ବୋତ୍ତମ ପ୍ରଚଳନଗୁଡ଼ିକ ସହ ତୁଳନା କରି 67routerର ଗୁଣବତ୍ତା-ଗେଟ୍ ସିଷ୍ଟମ୍ର ଏକ ସମାଲୋଚନାମୂଳକ ମୂଲ୍ୟାଙ୍କନ, **ଏହା ସହିତ** ସମସ୍ତ ଗୁଣବତ୍ତା
 > ଯାଞ୍ଚବିନ୍ଦୁର ଏକ ବ୍ୟାପକ ତାଲିକା ଏବଂ ସମାନ ସିଷ୍ଟମ୍କୁ ଯେକୌଣସି
 > ପ୍ରକଳ୍ପରେ ପ୍ରୟୋଗ କରିବା ପାଇଁ ଏକ **ଟୁଲ୍-ନିରପେକ୍ଷ ପ୍ରତିକୃତିକରଣ ଯୋଜନା**। ପ୍ରକୃତ ରିପୋଜିଟୋରି ଅବସ୍ଥାରୁ (ସ୍ମୃତିରୁ ନୁହେଁ) 2026-06-16ରେ ସୃଷ୍ଟି କରାଯାଇଛି।
 >
@@ -98,62 +98,62 @@
 
 ### 1. ଶୈଳୀ ଏବଂ ଫର୍ମାଟିଂ (ନିର୍ଦ୍ଧାରିତ, ଦ୍ରୁତ)
 
-- **OmniRoute:** lint-staged ମାଧ୍ୟମରେ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
+- **67router:** lint-staged ମାଧ୍ୟମରେ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
 - **ସାଧାରଣ:** ସ୍ୱୟଂଚାଳିତ ଭାବେ ସଂଶୋଧନଯୋଗ୍ୟ ଗୋଟିଏ formatter + ଗୋଟିଏ linter, ଯାହା staged ଫାଇଲ୍ଗୁଡ଼ିକ ଉପରେ pre-commit ସମୟରେ ଚାଲେ।
 
 ### 2. ଟାଇପ୍
 
-- **OmniRoute:** `typecheck:core` (ଅବରୋଧକ) + `typecheck:noimplicit:core` (ପରାମର୍ଶମୂଳକ) + `type-coverage` ratchet 92.17% + ପ୍ରତି-ଫାଇଲ୍ any-budget।
+- **67router:** `typecheck:core` (ଅବରୋଧକ) + `typecheck:noimplicit:core` (ପରାମର୍ଶମୂଳକ) + `type-coverage` ratchet 92.17% + ପ୍ରତି-ଫାଇଲ୍ any-budget।
 - **ସାଧାରଣ:** CIରେ କଠୋର typecheck + ratcheted type-coverage metric + ପ୍ରତି-ଫାଇଲ୍ `any`/escape-hatch budget।
 
 ### 3. ପରୀକ୍ଷା (ତୀବ୍ରତା)
 
-- **OmniRoute:** ପରସ୍ପର ଅତିବ୍ୟାପ୍ତ ନ ହେଉଥିବା 2ଟି runner (Node native + vitest), 8ଟି shard, ସାମଗ୍ରିକ coverage 60/60/60/60 + ratchet ~76% + **ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ moduleଗୁଡ଼ିକ ପାଇଁ 8ଟି ପ୍ରତି-module ସର୍ବନିମ୍ନ ସୀମା** + ରାତ୍ରିକାଳୀନ property test + ରାତ୍ରିକାଳୀନ **mutation testing**।
+- **67router:** ପରସ୍ପର ଅତିବ୍ୟାପ୍ତ ନ ହେଉଥିବା 2ଟି runner (Node native + vitest), 8ଟି shard, ସାମଗ୍ରିକ coverage 60/60/60/60 + ratchet ~76% + **ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ moduleଗୁଡ଼ିକ ପାଇଁ 8ଟି ପ୍ରତି-module ସର୍ବନିମ୍ନ ସୀମା** + ରାତ୍ରିକାଳୀନ property test + ରାତ୍ରିକାଳୀନ **mutation testing**।
 - **ସାଧାରଣ:** test runner(ଗୁଡ଼ିକ) + **ନିରପେକ୍ଷ** coverage ସର୍ବନିମ୍ନ ସୀମା (ଶୂନ୍ୟ-ବିରୋଧୀ) + coverage **ratchet** (ପଶ୍ଚାଦ୍ଗତି-ବିରୋଧୀ) + **ଉଚ୍ଚ-ବିପଦପୂର୍ଣ୍ଣ code ପାଇଁ ପ୍ରତି-module ସର୍ବନିମ୍ନ ସୀମା** (Goodhart-ବିରୋଧୀ) + ଶୁଦ୍ଧ logic ପାଇଁ property-based testing + test ଗୁଣବତ୍ତାର ପ୍ରକୃତ ମାପ ଭାବେ ରାତ୍ରିକାଳୀନ **mutation testing**।
 
 ### 4. ପରୀକ୍ଷା ନୀତି (ଗେମିଂ-ବିରୋଧୀ)
 
-- **OmniRoute:** `pr-test-policy` (production code ପାଇଁ test ଆବଶ୍ୟକ), `check-test-masking` (ଦୁର୍ବଳ କରାଯାଇଥିବା assertକୁ ଅବରୋଧ କରେ), `pr-evidence` (ସଫଳତା ଦାବି ପାଇଁ evidence block ଆବଶ୍ୟକ), `test-discovery` (ପ୍ରତ୍ୟେକ test ଗୋଟିଏ runner ଦ୍ୱାରା ସଂଗୃହୀତ ହୁଏ)।
+- **67router:** `pr-test-policy` (production code ପାଇଁ test ଆବଶ୍ୟକ), `check-test-masking` (ଦୁର୍ବଳ କରାଯାଇଥିବା assertକୁ ଅବରୋଧ କରେ), `pr-evidence` (ସଫଳତା ଦାବି ପାଇଁ evidence block ଆବଶ୍ୟକ), `test-discovery` (ପ୍ରତ୍ୟେକ test ଗୋଟିଏ runner ଦ୍ୱାରା ସଂଗୃହୀତ ହୁଏ)।
 - **ସାଧାରଣ:** "ନୂଆ code ⇒ ନୂଆ test" gate + assert-removed/tautology detector + ପ୍ରମାଣ ଆବଶ୍ୟକତା (TDD କିମ୍ବା living test) + କୌଣସି test globs ବାହାରେ ଅନାଥ ହୋଇ ନ ରହିବାର ନିଶ୍ଚିତତା।
 
 ### 5. ଜଟିଳତା ଏବଂ code ସ୍ୱାସ୍ଥ୍ୟ (ratchetଗୁଡ଼ିକ)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ପ୍ରତି-ଫାଇଲ୍ file-size (ସ୍ଥିରୀକୃତ, କେବଳ ହ୍ରାସଯୋଗ୍ୟ), circular-deps (custom Tarjan, ଅବରୋଧକ)।
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ପ୍ରତି-ଫାଇଲ୍ file-size (ସ୍ଥିରୀକୃତ, କେବଳ ହ୍ରାସଯୋଗ୍ୟ), circular-deps (custom Tarjan, ଅବରୋଧକ)।
 - **ସାଧାରଣ:** ପ୍ରତ୍ୟେକ health metricକୁ ratchet କରନ୍ତୁ (warning, duplication, cyclomatic **ଏବଂ** cognitive complexity, dead code, file size, import cycle)। ଦିଗ ସର୍ବଦା "ପଶ୍ଚାଦ୍ଗତି କରନ୍ତୁ ନାହିଁ"।
 
 ### 6. ସ୍ଥିର ସୁରକ୍ଷା (SAST + secret)
 
-- **OmniRoute:** CodeQL (ratchet alert = 0), gitleaks (`[extend] useDefault=true` — ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ!), SonarQube, custom security rule (public-creds, error-helper, route-guard-membership, route-validation)।
+- **67router:** CodeQL (ratchet alert = 0), gitleaks (`[extend] useDefault=true` — ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ!), SonarQube, custom security rule (public-creds, error-helper, route-guard-membership, route-validation)।
 - **ସାଧାରଣ:** alert ratchet ସହିତ SAST (CodeQL/Sonar/semgrep) + **ଉତ୍ତରାଧିକାରରେ ମିଳିଥିବା default ruleset** ସହିତ secrets scanner (defaultକୁ override କରୁଥିବା custom config = ଅନ୍ଧତ୍ୱ) + project-ନିର୍ଦ୍ଦିଷ୍ଟ Hard Rule security gate।
 
 ### 7. ଯୋଗାଣ-ଶୃଙ୍ଖଳା (ନିର୍ଭରଶୀଳତା)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ବୟସ ≥72h)।
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ବୟସ ≥72h)।
 - **ସାଧାରଣ:** ବହୁ-ଉତ୍ସ SCA + license allowlist + lockfile integrity check + ବୟସ/typosquatting check ସହିତ dependency allowlist + grouped update bot।
 
 ### 8. ଯୋଗାଣ-ଶୃଙ୍ଖଳା (build ଏବଂ release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ସାପ୍ତାହିକ), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ସାପ୍ତାହିକ), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
 - **ସାଧାରଣ:** publish ସମୟରେ SBOM ସୃଷ୍ଟି କରନ୍ତୁ + signed provenance (SLSA L2+) + ନିର୍ଦ୍ଧାରିତ Scorecard + ସମସ୍ତ workflowକୁ ଦୃଢ଼ କରନ୍ତୁ (ସର୍ବନିମ୍ନ-ବିଶେଷାଧିକାର token, non-pusher checkoutରେ କୌଣସି persisted credential ନୁହେଁ, SHA ଦ୍ୱାରା pinned action)।
 
 ### 9. Contract ଏବଂ API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (ରାତ୍ରିକାଳୀନ contract fuzz), openapi-coverage (% documented route, ratchet 38.3%), openapi-security-tiers (spec ବନାମ route-guard)।
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (ରାତ୍ରିକାଳୀନ contract fuzz), openapi-coverage (% documented route, ratchet 38.3%), openapi-security-tiers (spec ବନାମ route-guard)।
 - **ସାଧାରଣ:** breaking-change contract diff (oasdiff/buf) + spec ବିରୋଧରେ property-based fuzz (schemathesis) + ratcheted documentation coverage + spec↔code ସଙ୍ଗତି।
 
 ### 10. Docs ଏବଂ i18n (କ୍ଷୟ-ବିରୋଧୀ)
 
-- **OmniRoute:** docs-sync (mirrored version), docs-counts-sync (docs ବନାମ codeରେ ସଂଖ୍ୟା), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)।
+- **67router:** docs-sync (mirrored version), docs-counts-sync (docs ବନାମ codeରେ ସଂଖ୍ୟା), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)।
 - **ସାଧାରଣ:** docs ଏବଂ code ମଧ୍ୟରେ version/count/env-var sync କରନ୍ତୁ (gate, ବିଶ୍ୱାସ ନୁହେଁ) + internal link validate କରନ୍ତୁ + ratcheted i18n coverage।
 
 ### 11. ଭ୍ରମୋତ୍ପାଦନ-ବିରୋଧୀ / ସଙ୍ଗତି (ବିରଳ ବର୍ଗ)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ ପ୍ରକୃତ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ ପ୍ରକୃତ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
 - **ସାଧାରଣ:** ପ୍ରତ୍ୟେକ "ନକଲି source of truth" (registry, string dispatch, cross-layer reference) ପାଇଁ, ଉଭୟ ପାର୍ଶ୍ୱ ମେଳ ଖାଉଥିବା ପ୍ରମାଣ କରୁଥିବା ଗୋଟିଏ gate। ଏହା typecheck/test ଧରିପାରୁ ନଥିବା କ୍ଷୟକୁ ଧରେ।
 
 ### 12. ସ୍ଥିତିସ୍ଥାପକତା ଏବଂ domain (product-ନିର୍ଦ୍ଦିଷ୍ଟ)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3ଟି resilience law (circuit-breaker/cooldown/lockout)।
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3ଟି resilience law (circuit-breaker/cooldown/lockout)।
 - **ସାଧାରଣ:** **ଆପଣଙ୍କ** domainର failure modeଗୁଡ଼ିକ ଚିହ୍ନଟ କରନ୍ତୁ ଏବଂ ପ୍ରତ୍ୟେକ ପାଇଁ ଗୋଟିଏ gate ରଖନ୍ତୁ (ରାତ୍ରିକାଳୀନ ହେଲେ ମଧ୍ୟ)। AI app ପାଇଁ: injection red-team। distributed system ପାଇଁ: chaos + leak + soak।
 
 ---

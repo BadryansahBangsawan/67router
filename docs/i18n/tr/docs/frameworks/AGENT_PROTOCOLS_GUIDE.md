@@ -7,15 +7,15 @@
 > **Kaynak:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, ajanlarla ilgili üç farklı arayüz sunar. İlk bakışta benzer görünseler de farklı sorunları çözerler. Doğru olanı seçmek için bu sayfayı kullanın.
+67router, ajanlarla ilgili üç farklı arayüz sunar. İlk bakışta benzer görünseler de farklı sorunları çözerler. Doğru olanı seçmek için bu sayfayı kullanın.
 
 ## Kısaca
 
 | Arayüz                       | En uygun kullanım                                                                                                                       | Aktarım                                  | Standart                 |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------ |
 | **A2A — Ajandan Ajana**      | A2A protokolünü kullanan eş ajanlarla ajanlar arası iş birliği                                                                          | HTTP üzerinden JSON-RPC 2.0              | A2A v0.3 (açık standart) |
-| **ACP — CLI Ajanları Kaydı** | Kullanıcının makinesinde yüklü CLI kodlama ajanlarını (Cursor, Cline, Codex CLI, Claude Code, Aider vb.) algılama / kaydetme / başlatma | HTTP REST                                | OmniRoute'a özgü         |
-| **Bulut Ajanları**           | Uzun süren kodlama görevlerini harici bulut hizmetlerine (Codex Cloud, Devin, Jules, Cursor Cloud) gönderme                             | HTTP REST + veritabanı destekli görevler | OmniRoute'a özgü         |
+| **ACP — CLI Ajanları Kaydı** | Kullanıcının makinesinde yüklü CLI kodlama ajanlarını (Cursor, Cline, Codex CLI, Claude Code, Aider vb.) algılama / kaydetme / başlatma | HTTP REST                                | 67router'a özgü          |
+| **Bulut Ajanları**           | Uzun süren kodlama görevlerini harici bulut hizmetlerine (Codex Cloud, Devin, Jules, Cursor Cloud) gönderme                             | HTTP REST + veritabanı destekli görevler | 67router'a özgü          |
 
 Bu üçü birbirinden bağımsızdır — istediğiniz herhangi bir alt kümeyi seçebilirsiniz.
 
@@ -38,14 +38,14 @@ Bu makinenin dışında iş yapmak için bir bulut hizmetine (Codex Cloud / Curs
 ## 1. A2A — Ajandan Ajana
 
 **Standart:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute uç noktası:** `POST /a2a` (JSON-RPC 2.0)
+**67router uç noktası:** `POST /a2a` (JSON-RPC 2.0)
 **Ajan Kartı:** `GET /.well-known/agent.json`
 
 ### Ne zaman kullanılmalı?
 
-- OmniRoute'un eşlerden biri olduğu çok ajanlı bir sistem oluştururken
-- OmniRoute'un yönlendirme zekâsını (akıllı yönlendirme, kota yönetimi vb.) Google ADK gibi çerçevelerdeki veya genel ajan ağlarındaki ajanlara sunarken
-- OmniRoute'u standart bir keşif + çağırma arayüzünün arkasında sarmalarken
+- 67router'un eşlerden biri olduğu çok ajanlı bir sistem oluştururken
+- 67router'un yönlendirme zekâsını (akıllı yönlendirme, kota yönetimi vb.) Google ADK gibi çerçevelerdeki veya genel ajan ağlarındaki ajanlara sunarken
+- 67router'u standart bir keşif + çağırma arayüzünün arkasında sarmalarken
 
 ### Yöntemler
 
@@ -69,12 +69,12 @@ Aktarım ayrıntıları, ajan kartı yapısı, görev TTL yapılandırması ve y
 
 ## 2. ACP — CLI Ajanları Kayıt Defteri
 
-**OmniRoute uç noktası:** `GET /api/acp/agents`
+**67router uç noktası:** `GET /api/acp/agents`
 **Kaynak:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Nedir?
 
-ACP, OmniRoute'un **yerel CLI ajanı envanteridir**. Ana makinede hangi kodlama CLI'larının yüklü olduğunu (Cursor, Cline, Claude Code, Codex CLI, Continue vb.) algılar, sürümlerini belirler ve kullanıcıların her CLI'ı OmniRoute'u kullanacak şekilde yapılandırabilmesi için bunları kontrol panelinde gösterir.
+ACP, 67router'un **yerel CLI ajanı envanteridir**. Ana makinede hangi kodlama CLI'larının yüklü olduğunu (Cursor, Cline, Claude Code, Codex CLI, Continue vb.) algılar, sürümlerini belirler ve kullanıcıların her CLI'ı 67router'u kullanacak şekilde yapılandırabilmesi için bunları kontrol panelinde gösterir.
 
 HTTP yüzeyi, "CLI Tools" kullanıcı arayüzünü ve CLI parmak izi takibini destekleyen dahili bir envanterdir (bkz. [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Bunun yanında dahili süreç yöneticisi, kayıtlı Gemini başlatıcısı için yerel Agent Client Protocol desteği ve diğer sözleşmeler için eski stdio bağdaştırıcıları sağlar.
 Bu farklı modlar ve sınırlamalar için [ACP kayıt defteri ve başlatıcıları](./ACP.md) bölümüne bakın.
@@ -111,8 +111,8 @@ POST için gövde yapısı (`src/app/api/acp/agents/route.ts` içindeki `customA
 
 ### Kullanım alanları
 
-- Kontrol panelindeki "CLI Tools" sayfası, nelerin yüklü olduğunu listeler ve her birini OmniRoute'a yönlendirmenize yardımcı olur
-- Özel ajanlar, ileri düzey kullanıcıların OmniRoute'un varsayılan olarak tanımadığı dahili/tescilli CLI'ları kaydetmesine olanak tanır
+- Kontrol panelindeki "CLI Tools" sayfası, nelerin yüklü olduğunu listeler ve her birini 67router'a yönlendirmenize yardımcı olur
+- Özel ajanlar, ileri düzey kullanıcıların 67router'un varsayılan olarak tanımadığı dahili/tescilli CLI'ları kaydetmesine olanak tanır
 - Algılama sonucu, `cli-tools` parmak izi matrisini besler
 
 ### ACP ne zaman KULLANILMAMALIDIR?
@@ -121,12 +121,12 @@ POST için gövde yapısı (`src/app/api/acp/agents/route.ts` içindeki `customA
 
 ## 3. Bulut Aracıları
 
-**OmniRoute uç noktaları:** `/api/v1/agents/tasks/*` (yaşam döngüsü) + `/api/cloud/*` (altyapı)
+**67router uç noktaları:** `/api/v1/agents/tasks/*` (yaşam döngüsü) + `/api/cloud/*` (altyapı)
 **Kaynak:** `src/lib/cloudAgent/`
 
 ### Nedir?
 
-Üçüncü taraf bulut kodlama aracıları üzerinde birleşik bir arayüzdür. Bir istem + depo URL'si gönderirsiniz; OmniRoute bunu doğru bulut aracısına iletir, durumu yoklar ve sonuçları döndürür.
+Üçüncü taraf bulut kodlama aracıları üzerinde birleşik bir arayüzdür. Bir istem + depo URL'si gönderirsiniz; 67router bunu doğru bulut aracısına iletir, durumu yoklar ve sonuçları döndürür.
 
 ### Desteklenen aracılar (3, tümü `src/lib/cloudAgent/agents/` içinde doğrulanmıştır)
 
@@ -167,8 +167,8 @@ Her ikisi de "uzun süren görevler" sunar, ancak farklı katmanlarda:
 
 | Unsur                   | A2A                                                                                               | Cloud Agents                                        |
 | ----------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Standart                | Açık A2A v0.3                                                                                     | OmniRoute'a özgü                                    |
-| İşlemin çalıştığı yer   | OmniRoute içinde (yapılandırılmış kombinasyonları kullanır)                                       | Harici (Codex / Devin / Jules sunucuları)           |
+| Standart                | Açık A2A v0.3                                                                                     | 67router'a özgü                                     |
+| İşlemin çalıştığı yer   | 67router içinde (yapılandırılmış kombinasyonları kullanır)                                        | Harici (Codex / Devin / Jules sunucuları)           |
 | Görev süresi            | Varsayılan TTL 5 dk. (`TaskManager` içinde yapılandırılabilir)                                    | Dakikalardan saatlere                               |
 | Depo bilgisine sahip mi | Hayır (yalnızca istemleri iletir)                                                                 | Evet (depo URL'si + dal)                            |
 | Kullanım alanı          | Ajanlar arası iş birliği, hizmet olarak akıllı yönlendirme                                        | "Y deposunda X özelliğini uygula" görevini devretme |
@@ -176,7 +176,7 @@ Her ikisi de "uzun süren görevler" sunar, ancak farklı katmanlarda:
 
 ## Entegrasyon Örnekleri
 
-### OmniRoute'un A2A yeteneklerini keşfetme
+### 67router'un A2A yeteneklerini keşfetme
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -184,7 +184,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Tüm 6 beceriyi, aktarım yöntemlerini ve sürümü içeren Ajan Kartı'nı döndürür.
 
-### OmniRoute'u bir A2A ajanı olarak çağırma
+### 67router'u bir A2A ajanı olarak çağırma
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -258,7 +258,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

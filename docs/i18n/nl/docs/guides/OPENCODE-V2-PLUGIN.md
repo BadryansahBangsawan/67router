@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` voegt je volledige OmniRoute-catalogus — modellen, combo's en
+`@omniroute/opencode-plugin-v2` voegt je volledige 67router-catalogus — modellen, combo's en
 auto-combo's — toe aan de modelkiezer van OpenCode v2, inclusief weergavenamen, prijzen en
 budgetten voor de gratis laag.
 
@@ -16,7 +16,7 @@ dwingt nooit een update van het andere af.
 ## Vereisten
 
 - OpenCode v2.
-- Een bereikbare OmniRoute-gateway (standaard `http://localhost:20128`).
+- Een bereikbare 67router-gateway (standaard `http://localhost:20128`).
 - Node.js 22 of 24.
 
 ## Installatie
@@ -82,7 +82,7 @@ kiezer nooit een raadsel is.
 | `baseURL`                        | vereist                                           | Gateway-root, alleen `http(s)`; het achtervoegsel `/v1` wordt waar nodig toegevoegd                                                                                         |
 | `apiKey`                         | gekoppelde referentie, daarna `OMNIROUTE_API_KEY` | Chatsleutel voor `/v1/*`                                                                                                                                                    |
 | `managementReadToken`            | valt terug op `apiKey`                            | Sleutel voor `/api/*` — meestal **niet** dezelfde                                                                                                                           |
-| `displayName`                    | `"OmniRoute"`                                     | Providernaam in de keuzelijst                                                                                                                                               |
+| `displayName`                    | `"67router"`                                      | Providernaam in de keuzelijst                                                                                                                                               |
 | `timeoutMs`                      | `10000`                                           | Time-out per eindpunt voor ophalen (automatische combinaties gebruiken 5 s)                                                                                                 |
 | `modelCacheTtlMs`                | `300000`                                          | TTL van de cataloguscache; een momentopname op schijf versnelt koude starts                                                                                                 |
 | `timeouts`                       | valt terug op `timeoutMs`                         | Budgetten per eindpunt in ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                                                |
@@ -120,7 +120,7 @@ Stel `"geminiSanitization": false` in om dit uit te schakelen.
 
 | Symptoom                                         | Oorzaak                                                                                                                              |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| De modelkiezer toont geen OmniRoute-model        | Er is geen sleutel gevonden (controleer de waarschuwing bij het opstarten), of de gateway is onbereikbaar                            |
+| De modelkiezer toont geen 67router-model         | Er is geen sleutel gevonden (controleer de waarschuwing bij het opstarten), of de gateway is onbereikbaar                            |
 | Ruwe model-ID's, geen combinaties, geen prijzen  | De beheerendpoints hebben het token geweigerd — stel `managementReadToken` in                                                        |
 | Korte of lege `freeOnly`-catalogus               | Geen beheertoken of een geweigerd token — lees de samenvattingsregel van de vernieuwing (aantal `unmatched-free`) in het hostlogboek |
 | Een sessie die is vastgezet op `opencode-<id>/…` | De v1-plug-in publiceerde `opencode-<id>`; v2 publiceert alleen `<id>`, dus selecteer het model opnieuw onder `<id>/…`               |

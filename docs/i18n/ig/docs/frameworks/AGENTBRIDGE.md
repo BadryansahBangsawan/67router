@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge bụ proxy MITM (Man-in-the-Middle) nke OmniRoute, nke na-egbochi okporo HTTPS sitere n’aka ndị nnọchi anya AI nke IDE ma na-ebughachi ya site na injin ntụgharị ụzọ jikọtara ọnụ nke OmniRoute. Ọ na-akwado **ndị nnọchi anya IDE 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, na Trae (a ka na-enyocha ya) — nke na-eme ka OmniRoute bụrụ proxy MITM nwere nkwado kacha gbasaa maka ndị enyemaka AI na-ede koodu n’ahịa.
+AgentBridge bụ proxy MITM (Man-in-the-Middle) nke 67router, nke na-egbochi okporo HTTPS sitere n’aka ndị nnọchi anya AI nke IDE ma na-ebughachi ya site na injin ntụgharị ụzọ jikọtara ọnụ nke 67router. Ọ na-akwado **ndị nnọchi anya IDE 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, na Trae (a ka na-enyocha ya) — nke na-eme ka 67router bụrụ proxy MITM nwere nkwado kacha gbasaa maka ndị enyemaka AI na-ede koodu n’ahịa.
 
 **Ebe dashboard dị:** `/dashboard/tools/agent-bridge`
 **Otu sidebar:** Ngwaọrụ (mgbe Cloud Agents gasịrị)
@@ -16,34 +16,34 @@ AgentBridge bụ proxy MITM (Man-in-the-Middle) nke OmniRoute, nke na-egbochi ok
 
 ### Gịnị bụ AgentBridge?
 
-Mgbe onye nnọchi anya IDE (dịka GitHub Copilot, Cursor, Claude Code) na-akpọ API, ọ na-ejikọ ozugbo na onye na-enye AI n'elu (OpenAI, Anthropic, wdg). AgentBridge na-ejide njikọ ahụ n'enweghị mmasị na ọkwa TLS — n'enweghị mgbanwe ọ bụla dị mkpa na nhazi nnọchi anya — wee degharịa arịrịọ ahụ site na OmniRoute.
+Mgbe onye nnọchi anya IDE (dịka GitHub Copilot, Cursor, Claude Code) na-akpọ API, ọ na-ejikọ ozugbo na onye na-enye AI n'elu (OpenAI, Anthropic, wdg). AgentBridge na-ejide njikọ ahụ n'enweghị mmasị na ọkwa TLS — n'enweghị mgbanwe ọ bụla dị mkpa na nhazi nnọchi anya — wee degharịa arịrịọ ahụ site na 67router.
 
 Nke a pụtara na ị nwere ike:
 
-- **Dugharịa nnọchi anya ọ bụla gaa na onye na-enye ọ bụla**: Copilot na-akpọ OpenAI? Dugharịa ya gaa na Anthropic Claude, Gemini, ma ọ bụ otu n'ime ndị na-enye OmniRoute 375.
+- **Dugharịa nnọchi anya ọ bụla gaa na onye na-enye ọ bụla**: Copilot na-akpọ OpenAI? Dugharịa ya gaa na Anthropic Claude, Gemini, ma ọ bụ otu n'ime ndị na-enye 67router 375.
 - **Tinye nhazi model**: `gemini-3-flash` → `claude-sonnet-4.7` n'enweghị mmasị na ọkwa onye nhazi.
 - **Lelee okporo ụzọ nnọchi anya niile**: a na-ebipụta arịrịọ ọ bụla e jidere na [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Tinye ike idobe OmniRoute**: combo routing, circuit breakers, fallbacks, na nleba anya ọnụ ahịa na-arụkwa ọrụ maka okporo ụzọ nnọchi anya IDE.
+- **Tinye ike idobe 67router**: combo routing, circuit breakers, fallbacks, na nleba anya ọnụ ahịa na-arụkwa ọrụ maka okporo ụzọ nnọchi anya IDE.
 
 ### Ọnọdụ ma e jiri ya tụnyere ahịa
 
-| Atụmatụ           | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ----------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity       |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot    |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)        |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex      |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE        |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries    |    —    |    ✓     |        —        |             ✓             |
-| Claude Code       |    —    |    —     |        ✓        |             ✓             |
-| Open Code         |    —    |    —     |        ✓        |             ✓             |
-| Trae              |    —    |    —     |        —        |       🔍 Na-enyocha       |
-| Dashboard UI      |    ✓    |    ✗     |        ✗        |             ✓             |
-| Nleba okporo ụzọ  |    ✗    |    ✗     |        ✓        |             ✓             |
-| Nhazi OmniRoute   |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI nhazi model    |    ✗    |    ✗     |        ✗        |             ✓             |
-| Ndepụta bypass    |    ✗    |    ✗     |        ✓        |             ✓             |
-| Asambodo CA n'elu |    ✗    |    ✗     |        ✓        |             ✓             |
+| Atụmatụ           | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ----------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity       |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot    |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)        |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex      |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE        |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries    |    —    |    ✓     |        —        |            ✓             |
+| Claude Code       |    —    |    —     |        ✓        |            ✓             |
+| Open Code         |    —    |    —     |        ✓        |            ✓             |
+| Trae              |    —    |    —     |        —        |      🔍 Na-enyocha       |
+| Dashboard UI      |    ✓    |    ✗     |        ✗        |            ✓             |
+| Nleba okporo ụzọ  |    ✗    |    ✗     |        ✓        |            ✓             |
+| Nhazi 67router    |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI nhazi model    |    ✗    |    ✗     |        ✗        |            ✓             |
+| Ndepụta bypass    |    ✗    |    ✗     |        ✓        |            ✓             |
+| Asambodo CA n'elu |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (ọdụ ụgbọ mmiri 443, usoro nwa CJS)
     │  na-achọpụta ebe a na-aga site na SNI nke nkụnyeisi Host
     │  na-emepụta asambodo TLS maka SNI ọ bụla nke AgentBridge CA bịanyere aka na ya
     ├── Ọ dabara na ndepụta ngafe? → ngafe TCP ozugbo (enweghị izochapụ ezoro ezo)
-    ├── Ọ dabara na ebe a na-aga? → fetch → rawụta OmniRoute (ọdụ ụgbọ mmiri 20128)
+    ├── Ọ dabara na ebe a na-aga? → fetch → rawụta 67router (ọdụ ụgbọ mmiri 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() n'ahụ/nkụnyeisi arịrịọ
     │               ├── TrafficBuffer.push() — na-ebipụta na Traffic Inspector
@@ -205,7 +205,7 @@ OS ga-atụkwasịrịrị asambodo CA nke AgentBridge obi tupu IDE anabata njik
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -262,10 +262,10 @@ Ihe atụ ndenye `/etc/hosts` maka GitHub Copilot:
 
 Jiri Tebụl Njikọ Model dị na kaadị agent ọ bụla kọwaa njikọ site na isi mmalite → ebumnuche:
 
-| Model isi mmalite (nke agent n'onwe ya) | Model ebumnuche (OmniRoute) |
-| --------------------------------------- | --------------------------- |
-| `gpt-4o`                                | `claude-sonnet-4.7`         |
-| `*` (wildcard)                          | `claude-haiku-4.7`          |
+| Model isi mmalite (nke agent n'onwe ya) | Model ebumnuche (67router) |
+| --------------------------------------- | -------------------------- |
+| `gpt-4o`                                | `claude-sonnet-4.7`        |
+| `*` (wildcard)                          | `claude-haiku-4.7`         |
 
 Wildcard `*` na-ejikọta model ọ bụla a na-amataghị na ebumnuche akọwapụtara. A na-echekwa ya n'ime tebụl `agent_bridge_mappings`.
 
@@ -278,7 +278,7 @@ Wildcard `*` na-ejikọta model ọ bụla a na-amataghị na ebumnuche akọwap
 
 ### 3.5 Ọkwa gbasara ihe ize ndụ
 
-AgentBridge na-ejide credentials (OAuth tokens, API keys) nke IDE na-eji akwado njirimara ya n'aka ndị na-eweta ọrụ upstream. A na-**ekpuchi ha tupu e dekọọ ha** (lee §2.7), mana oyi akwa MITM nke OmniRoute nwere ike ịhụ ha. Mgbe a na-arụ ọrụ agent ọ bụla na nke mbụ, a na-egosi modal ọkwa gbasara ihe ize ndụ nke enwere ike imechi.
+AgentBridge na-ejide credentials (OAuth tokens, API keys) nke IDE na-eji akwado njirimara ya n'aka ndị na-eweta ọrụ upstream. A na-**ekpuchi ha tupu e dekọọ ha** (lee §2.7), mana oyi akwa MITM nke 67router nwere ike ịhụ ha. Mgbe a na-arụ ọrụ agent ọ bụla na nke mbụ, a na-egosi modal ọkwa gbasara ihe ize ndụ nke enwere ike imechi.
 
 ### 3.6 Nlekọta & Nchọpụta nsogbu
 
@@ -398,7 +398,7 @@ Nchọpụta na-eji paths ndị metụtara OS na nyocha binary (dịka ọmụma
 
 ### Ndepụta bypass maka hosts nwere mmetụta pụrụ iche
 
-Ndepụta bypass na-eme ka ụlọ ọrụ ego, ndị na-enye OAuth/SSO, na hosts ndị ọzọ nwere mmetụta pụrụ iche ghara ịbụ ndị a na-ewepụtụ encryption ha **mgbe ọ bụla**. Okporo TLS ha na-agafe dịka transparent TCP tunnel — OmniRoute anaghị ahụ plaintext ahụ mgbe ọ bụla.
+Ndepụta bypass na-eme ka ụlọ ọrụ ego, ndị na-enye OAuth/SSO, na hosts ndị ọzọ nwere mmetụta pụrụ iche ghara ịbụ ndị a na-ewepụtụ encryption ha **mgbe ọ bụla**. Okporo TLS ha na-agafe dịka transparent TCP tunnel — 67router anaghị ahụ plaintext ahụ mgbe ọ bụla.
 
 Ụkpụrụ bypass ndabara gụnyere:
 
@@ -449,7 +449,7 @@ N'aka nke ọzọ, hazie port na-achọghị ikike pụrụ iche na ntọala Age
 
 Ọ bụrụ na IDE gosipụta njehie TLS mgbe ịmalitechara AgentBridge:
 
-1. Nyochaa na etinyere asambodo ahụ: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) ma ọ bụ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Nyochaa na etinyere asambodo ahụ: `security find-certificate -c "67router AgentBridge"` (macOS) ma ọ bụ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Ụfọdụ ngwa na-edobe ebe nchekwa ntụkwasị obi nke ha (Firefox, Chrome na Linux). Gbaa "Trust Cert" ọzọ ma lelee ebe nchekwa asambodo pụrụ iche nke NSS/Firefox.
 3. Malitegharịa IDE mgbe ị tụkwasịrị asambodo ahụ obi — nnọkọ TLS ndị na-aga n'ihu na-eji ọnọdụ ntụkwasị obi ochie.
 
@@ -500,7 +500,7 @@ Nchọpụta akpaka na-eji ụzọ nrụnye ndị a na-ejikarị. Ọ bụrụ n
 Ọ bụrụ na AgentBridge na-egbochi arịrịọ mana arịrịọ niile ada:
 
 1. Nyochaa na ejikọrọ opekata mpe otu provider na `/dashboard/providers`
-2. Lelee ndekọ sava OmniRoute: `APP_LOG_LEVEL=debug` na `.env`
+2. Lelee ndekọ sava 67router: `APP_LOG_LEVEL=debug` na `.env`
 3. Nyochaa na `OMNIROUTE_BASE_URL` na-atụ aka na endpoint router ziri ezi (ndabara: `http://127.0.0.1:20128`)
 
 ---

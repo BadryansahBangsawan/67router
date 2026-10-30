@@ -4,7 +4,7 @@ title: "Valid Empty Assistant Turns"
 
 # Valid empty assistant turns
 
-An assistant turn can finish normally without visible text. OmniRoute preserves
+An assistant turn can finish normally without visible text. 67router preserves
 such a turn when the selected execution used a supported native endpoint and the
 original upstream response supplied the protocol's normal terminal. An empty
 response without that evidence retains the existing empty-content guard.

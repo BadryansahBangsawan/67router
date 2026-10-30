@@ -4,7 +4,7 @@
 
 ---
 
-Gdy OmniRoute działa wewnątrz Dockera, starsze mechanizmy **Import from Cursor IDE** /
+Gdy 67router działa wewnątrz Dockera, starsze mechanizmy **Import from Cursor IDE** /
 `cursor-agent` nie działają, ponieważ kontener nie widzi instalacji Cursor
 na hoście. Zamiast tego użyj **Login with Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ na hoście. Zamiast tego użyj **Login with Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _wewnątrz_ kontenera.
    W Docker Desktop dla macOS baza danych IDE hosta nie jest domyślnie zamontowana,
    a systemem operacyjnym kontenera jest Linux, nawet jeśli hostem jest Darwin.
-2. **Brak pliku binarnego `cursor-agent`** — Oficjalne obrazy OmniRoute nie zawierają
+2. **Brak pliku binarnego `cursor-agent`** — Oficjalne obrazy 67router nie zawierają
    `cursor-agent`. Funkcja Available Models wcześniej uruchamiała
    `cursor-agent --list-models`, a w razie niepowodzenia korzystała ze statycznego katalogu.
 3. **Nieprawidłowy plik binarny** — **Nie** montuj w kontenerze Linux pliku
@@ -24,11 +24,11 @@ na hoście. Zamiast tego użyj **Login with Cursor** (deep-control PKCE).
 
 1. Otwórz **Dashboard → Providers → Cursor**.
 2. Wybierz kartę **Login with Cursor**.
-3. Kliknij **Login with Cursor** — OmniRoute otworzy
+3. Kliknij **Login with Cursor** — 67router otworzy
    `https://cursor.com/loginDeepControl?…` w przeglądarce na **hoście**.
-4. Zatwierdź logowanie w przeglądarce, a następnie wróć do panelu. OmniRoute
+4. Zatwierdź logowanie w przeglądarce, a następnie wróć do panelu. 67router
    odpytuje `api2.cursor.sh/auth/poll`, dopóki nie otrzyma tokenów.
-5. OmniRoute przechowuje tokeny **dostępu i odświeżania** oraz odświeża je za pomocą
+5. 67router przechowuje tokeny **dostępu i odświeżania** oraz odświeża je za pomocą
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ta metoda nie wymaga Cursor IDE ani `cursor-agent` wewnątrz kontenera.
@@ -37,10 +37,10 @@ Ta metoda nie wymaga Cursor IDE ani `cursor-agent` wewnątrz kontenera.
 
 W przypadku zalogowanego połączenia funkcja **Available Models / Auto-Sync** preferuje katalog HTTP
 `AiService/AvailableModels` Cursor, używając tokenu Bearer połączenia.
-Jeśli to się nie powiedzie, OmniRoute nadal próbuje użyć `cursor-agent` hosta (gdy jest dostępny),
+Jeśli to się nie powiedzie, 67router nadal próbuje użyć `cursor-agent` hosta (gdy jest dostępny),
 a następnie statycznych danych początkowych rejestru.
 
-OmniRoute zawsze udostępnia w katalogu model **`auto`** (wyświetlany jako „Auto”), a także
+67router zawsze udostępnia w katalogu model **`auto`** (wyświetlany jako „Auto”), a także
 tryby routera w stylu OpenCodex: **`auto-cost`**, **`auto-balance`** oraz
 **`auto-intelligence`**. W komunikacji z Cursor są one mapowane na model `default`
 (z parametrem `optimization` typu ModelParameter dla trzech wariantów). Wybierz
@@ -87,7 +87,7 @@ z IDE nie jest już wymagany).
 ## Puste tury / wyczerpany limit użycia
 
 Gdy Cursor akceptuje Run, ale nie zwraca tekstu asystenta (co często występuje po wyczerpaniu
-limitu użycia modeli premium), OmniRoute zwraca umożliwiający podjęcie działania błąd **429**
+limitu użycia modeli premium), 67router zwraca umożliwiający podjęcie działania błąd **429**
 (wskazujący na limit) lub **502** wraz ze wskazówkami — zamiast samego komunikatu „Provider returned
 empty content”. Błędy przesyłania strumieniowego, takie jak `not_found: AI Model Not Found`
 (wyczerpany limit w oknie użycia), są klasyfikowane jako **przekroczenie limitu szybkości /
@@ -97,7 +97,7 @@ model **`auto`** lub zwiększ limity planu Cursor.
 
 ## Wersja klienta (tryb bez interfejsu)
 
-Bez lokalnej instalacji `cursor-agent` OmniRoute ustala wartość
+Bez lokalnej instalacji `cursor-agent` 67router ustala wartość
 `x-cursor-client-version` kolejno na podstawie zmiennej środowiskowej `CURSOR_AGENT_CLI_VERSION`,
 zapisanego na dysku wyniku analizy skryptu instalacyjnego Cursor, a następnie przypiętego
 identyfikatora kompilacji. W razie potrzeby zastąp tę wartość za pomocą

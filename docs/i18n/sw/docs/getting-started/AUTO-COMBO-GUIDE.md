@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Kiswahili)
+# Auto-Combo: Let 67router Pick the Best AI for You (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **Kwa Ufupi**: Weka modeli yako kuwa `auto` na OmniRoute itachagua kiotomatiki mtoa huduma bora wa AI kwa kila ombi. Hakuna usanidi unaohitajika.
+> **Kwa Ufupi**: Weka modeli yako kuwa `auto` na 67router itachagua kiotomatiki mtoa huduma bora wa AI kwa kila ombi. Hakuna usanidi unaohitajika.
 
 ---
 
 ## Inachofanya
 
-Badala ya kuchagua modeli mahususi ya AI (kama GPT-4o au Claude), unaweza kuiruhusu OmniRoute **ichague kiotomatiki iliyo bora zaidi** kwa kila ombi. Inazingatia:
+Badala ya kuchagua modeli mahususi ya AI (kama GPT-4o au Claude), unaweza kuiruhusu 67router **ichague kiotomatiki iliyo bora zaidi** kwa kila ombi. Inazingatia:
 
 - **Hali** — Je, mtoa huduma anafanya kazi sasa hivi?
 - **Kasi** — Ina kasi kiasi gani?
@@ -18,7 +18,7 @@ Badala ya kuchagua modeli mahususi ya AI (kama GPT-4o au Claude), unaweza kuiruh
 - **Ubora** — Je, inafaa kwa aina hii ya kazi?
 - **Uwezo** — Je, ina mgao uliosalia?
 
-OmniRoute huwapa alama watoa huduma wako wote waliounganishwa na kuchagua aliye bora zaidi. Ikishindwa, hujaribu anayefuata kiotomatiki.
+67router huwapa alama watoa huduma wako wote waliounganishwa na kuchagua aliye bora zaidi. Ikishindwa, hujaribu anayefuata kiotomatiki.
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute huwapa alama watoa huduma wako wote waliounganishwa na kuchagua aliye 
 model: "auto"
 ```
 
-**Hatua ya 2**: Ni hivyo tu! OmniRoute itashughulikia mengine.
+**Hatua ya 2**: Ni hivyo tu! 67router itashughulikia mengine.
 
 **Hatua ya 3** (si lazima): Tumia lahaja kwa kazi mahususi:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Jinsi Inavyofanya Kazi (Toleo Rahisi)
 
-Unapotuma ombi lenye `model: "auto"`, OmniRoute:
+Unapotuma ombi lenye `model: "auto"`, 67router:
 
 1. **Huangalia watoa huduma wako wote waliounganishwa** — Kila mtoa huduma uliyemwongeza (OpenAI, Anthropic, Google, n.k.)
 2. **Humpa kila mmoja alama**, huku ikizingatia mambo yafuatayo miongoni mwa mengine:
@@ -86,7 +86,7 @@ Unapotuma ombi lenye `model: "auto"`, OmniRoute:
    - Ana kasi kiasi gani? (kasi)
    - Je, anafaa kwa kazi hii? (ubora)
 3. **Huchagua aliye bora zaidi** — Mtoa huduma mwenye alama ya juu zaidi hupokea ombi lako
-4. **Hujirekebisha kiotomatiki** — Ikishindwa, OmniRoute hujaribu anayefuata kiotomatiki
+4. **Hujirekebisha kiotomatiki** — Ikishindwa, 67router hujaribu anayefuata kiotomatiki
 
 ### Mfumo wa Utoaji Alama
 
@@ -120,11 +120,11 @@ Kila lahaja hutumia uzito tofauti:
 
 ## Jinsi Inavyoshughulikia Hitilafu
 
-OmniRoute ina **tabaka tatu za ulinzi**:
+67router ina **tabaka tatu za ulinzi**:
 
 ### 1. Uhamishaji Kiotomatiki
 
-Ikiwa mtoa huduma bora zaidi atashindwa, OmniRoute hujaribu anayefuata kiotomatiki. Huhitaji kufanya chochote.
+Ikiwa mtoa huduma bora zaidi atashindwa, 67router hujaribu anayefuata kiotomatiki. Huhitaji kufanya chochote.
 
 ### 2. Kujirekebisha
 
@@ -136,13 +136,13 @@ Ikiwa mtoa huduma anaendelea kushindwa:
 
 ### 3. Uhamishaji wa Dharura
 
-Ikiwa watoa huduma wote watashindwa, OmniRoute huelekeza maombi kwa watoa huduma thabiti wa bure (kama Kiro au Qoder) kama suluhisho la mwisho.
+Ikiwa watoa huduma wote watashindwa, 67router huelekeza maombi kwa watoa huduma thabiti wa bure (kama Kiro au Qoder) kama suluhisho la mwisho.
 
 ---
 
 ## Usaidizi wa Akaunti Nyingi
 
-Ikiwa una akaunti nyingi za mtoa huduma mmoja (kwa mfano, funguo mbili za OpenAI), OmniRoute huchukulia kila moja kama **chaguo tofauti**. Hii inamaanisha:
+Ikiwa una akaunti nyingi za mtoa huduma mmoja (kwa mfano, funguo mbili za OpenAI), 67router huchukulia kila moja kama **chaguo tofauti**. Hii inamaanisha:
 
 - Akaunti A ina kiasi cha matumizi kilichosalia → itumie
 - Akaunti B imewekewa kikomo cha kiwango → iruke
@@ -154,13 +154,13 @@ Kila akaunti hupewa alama kivyake kulingana na hali yake, kiasi chake cha matumi
 
 ## Uchunguzi wa Bandit
 
-Mara kwa mara OmniRoute **huchunguza** watoa huduma wapya ili kugundua chaguo bora zaidi:
+Mara kwa mara 67router **huchunguza** watoa huduma wapya ili kugundua chaguo bora zaidi:
 
 - **Chaguo-msingi**: 5% ya maombi huenda kwa watoa huduma wa nasibu
 - **Auto/smart**: Kiwango cha uchunguzi cha 10%
 - **Huzimwa** wakati zaidi ya 50% ya watoa huduma wana hitilafu
 
-Hii huisaidia OmniRoute kujifunza ni watoa huduma gani wanaofanya kazi vizuri zaidi kwa mifumo yako ya matumizi.
+Hii huisaidia 67router kujifunza ni watoa huduma gani wanaofanya kazi vizuri zaidi kwa mifumo yako ya matumizi.
 
 ---
 
@@ -172,11 +172,11 @@ Hii huisaidia OmniRoute kujifunza ni watoa huduma gani wanaofanya kazi vizuri za
 
 ### "Itakuwaje ikiwa mtoa huduma ataacha kufanya kazi?"
 
-OmniRoute humruka kiotomatiki na kujaribu anayefuata. Ikiwa mtoa huduma ataendelea kushindwa, ataondolewa kwa muda (dakika 5-30). Huhitaji kufanya chochote.
+67router humruka kiotomatiki na kujaribu anayefuata. Ikiwa mtoa huduma ataendelea kushindwa, ataondolewa kwa muda (dakika 5-30). Huhitaji kufanya chochote.
 
 ### "Je, ninaweza kuona ni mtoa huduma gani aliyetumika?"
 
-Angalia vichwa vya majibu — OmniRoute hujumuisha mtoa huduma na modeli iliyotumika katika kila jibu.
+Angalia vichwa vya majibu — 67router hujumuisha mtoa huduma na modeli iliyotumika katika kila jibu.
 
 ### "Je, inajifunza kutokana na matumizi yangu?"
 

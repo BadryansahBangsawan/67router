@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute razrješava svoj SQLite upravljački program pri pokretanju putem lanca zamjenskih opcija u 5 koraka:
+67router razrješava svoj SQLite upravljački program pri pokretanju putem lanca zamjenskih opcija u 5 koraka:
 
 1. **Ugrađeni `better-sqlite3`** (putem `dependencies` u `package.json`)
    — najbrži, izvorna binarna datoteka, instalira ga `npm install` kada su dostupni alati za izgradnju.
@@ -28,13 +28,13 @@ OmniRoute razrješava svoj SQLite upravljački program pri pokretanju putem lanc
 - **Nema alata za izgradnju**: Neka okruženja (poslovni Windows bez VS Build
   Tools, minimalne Docker slike) ne mogu prevesti `better-sqlite3`. Izvršni
   instalacijski program dohvaća unaprijed izgrađenu binarnu datoteku iz npm registra; zamjenski
-  upravljački programi osiguravaju da se OmniRoute ipak pokrene čak i ako to ne uspije.
+  upravljački programi osiguravaju da se 67router ipak pokrene čak i ako to ne uspije.
 - **Izolirani sustavi bez pristupa mreži**: Ako npm registar nije dostupan, `node:sqlite`
   ili `sql.js` jamče osnovnu funkcionalnost.
 
 ## Provjera magičnih bajtova
 
-Prije učitavanja izvršno instalirane `.node` datoteke OmniRoute čita prvih 8
+Prije učitavanja izvršno instalirane `.node` datoteke 67router čita prvih 8
 bajtova i uspoređuje ih s poznatim magičnim vrijednostima platformi:
 
 | Platforma               | Bajtovi (heks.) | Oznaka      |
@@ -104,9 +104,9 @@ Implementacija:
 ## Topologija s jednim pisačem (HA nije podržan)
 
 Prethodno opisani lanac zamjenskih upravljačkih programa i dalje se izvršava u **jednom procesu**. Zadani SQLite
-u OmniRouteu ima **jednog pisača**:
+u 67routeru ima **jednog pisača**:
 
-- Nemojte povezivati dvije replike OmniRoutea s istom datotekom `storage.sqlite`.
+- Nemojte povezivati dvije replike 67routera s istom datotekom `storage.sqlite`.
 - Ponovno pokretanje spremnika, implementacija Recreate, prekid zbog OOM-a ili ponovno pokretanje putem HEALTHCHECK-a prekida
   svaku aktivnu SSE sesiju. Na standardnoj putanji nema postupnog završavanja sesija.
 - Provjera živosti orkestratora koja spor odgovor `/healthz` smatra prekidom rada ugasit će jedinu

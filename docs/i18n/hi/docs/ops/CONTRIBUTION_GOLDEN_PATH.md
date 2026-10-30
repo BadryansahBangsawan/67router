@@ -111,7 +111,7 @@ npm run lint
 - CLI कैटलॉग अलग से `bin/cli/locales/` के अंतर्गत स्थित हैं।
 - ICU प्लेसहोल्डर और टैग को बिल्कुल यथावत रखें। प्रोडक्ट/प्रोवाइडर/मॉडल नाम,
   प्रोटोकॉल और हेडर नाम, कमांड, कोड/JSON पहचानकर्ता, URLs, पर्यावरण चर या
-  `OmniRoute`, `OAuth`, `MCP`, और `A2A` जैसे संरक्षित शब्दों का अनुवाद न करें। वर्तमान स्रोत सूची
+  `67router`, `OAuth`, `MCP`, और `A2A` जैसे संरक्षित शब्दों का अनुवाद न करें। वर्तमान स्रोत सूची
   `scripts/i18n/glossary/protected-terms.json` है।
 
 **केंद्रित लूप**
@@ -262,7 +262,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # कहीं और (C
   candidate को कभी promote नहीं किया जाता।
 
 सब कुछ git द्वारा अनदेखी की जाने वाली `_artifacts/candidate/` के अंतर्गत लिखा जाता है; किसी
-मौजूदा OmniRoute installation और उसकी data directory को कभी नहीं छुआ जाता। Promoted CLI
+मौजूदा 67router installation और उसकी data directory को कभी नहीं छुआ जाता। Promoted CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` है; इसका उपयोग करते समय इसे अपने
 `DATA_DIR` के साथ start करें। Exit codes: सफलता के लिए `0`, validation या promotion विफल होने
 पर `1`, और usage error या build मौजूद न होने पर `2`।

@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: OmniRoute ní àbójútó ìlera tí a ti kọ sínú rẹ̀, autopilot olùpèsè, ìtọ́pa quota, àti àwọn hook àkíyèsí. Ìtọ́sọ́nà yìí ṣàlàyé dashboard, àwọn ìkìlọ̀, àti bí a ṣe ń yanjú àwọn ìṣòro.
+> **Ní ṣókí**: 67router ní àbójútó ìlera tí a ti kọ sínú rẹ̀, autopilot olùpèsè, ìtọ́pa quota, àti àwọn hook àkíyèsí. Ìtọ́sọ́nà yìí ṣàlàyé dashboard, àwọn ìkìlọ̀, àti bí a ṣe ń yanjú àwọn ìṣòro.
 
 **Àwọn orísun:**
 
@@ -20,7 +20,7 @@
 
 ## Àkótán
 
-OmniRoute ní **ìpele àbójútó mẹ́ta**:
+67router ní **ìpele àbójútó mẹ́ta**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Fún combo kọ̀ọ̀kan:
 
 ## API Ìṣàyẹ̀wò Ìlera
 
-OmniRoute ń pèsè ojú-ọ̀nà ìlera HTTP **méjì**. Wọn kò ṣe pàṣípààrọ̀ fún àwọn olùṣàkóso ètò.
+67router ń pèsè ojú-ọ̀nà ìlera HTTP **méjì**. Wọn kò ṣe pàṣípààrọ̀ fún àwọn olùṣàkóso ètò.
 
 | Ojú-ọ̀nà                      | Ète                                                             | Ìwọ̀n                              | Lò ó fún                                                            |
 | ---------------------------- | --------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ endpoint yìí. Lo `failed` + `failedConnections` fún àwọn ìkùnà probe l�
 
 ### Àwọn àbá probe Kubernetes
 
-OmniRoute jẹ́ **Node process kan ṣoṣo** (event loop kan). Docker `HEALTHCHECK` àtẹ̀jáde ń dojú kọ `/healthz` tó fẹ́ẹ́rẹ́. `/api/monitoring/health` **wúwo jù** fún àwọn àkókò-àárín wíwàláàyè kubelet.
+67router jẹ́ **Node process kan ṣoṣo** (event loop kan). Docker `HEALTHCHECK` àtẹ̀jáde ń dojú kọ `/healthz` tó fẹ́ẹ́rẹ́. `/api/monitoring/health` **wúwo jù** fún àwọn àkókò-àárín wíwàláàyè kubelet.
 
 | Ìwádìí            | Àfojúsùn tí a dábàá                                                            | Àwọn àkíyèsí                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Ohun tó jọmọ́: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/1
 
 ### watchdog systemd (event loop tó di)
 
-Lórí host systemd, OmniRoute máa ń sọ fún olùṣàkóso iṣẹ́ nígbà tí ó bá ti múra, ó sì máa ń fi ping ránṣẹ́ sí i, kí server tí event loop rẹ̀ bá di lè jẹ́ pípa kí a sì tún un bẹ̀rẹ̀ dípò kí ó máa ṣiṣẹ́ láìdásí. Àwọn ping náà ń wá láti inú event loop ti server fúnra rẹ̀: nígbà tí ó bá dí, wọ́n máa dáwọ́ dúró, systemd yóò sì tún iṣẹ́ náà bẹ̀rẹ̀ nígbà tí `WatchdogSec` bá kọjá láìsí ping kankan.
+Lórí host systemd, 67router máa ń sọ fún olùṣàkóso iṣẹ́ nígbà tí ó bá ti múra, ó sì máa ń fi ping ránṣẹ́ sí i, kí server tí event loop rẹ̀ bá di lè jẹ́ pípa kí a sì tún un bẹ̀rẹ̀ dípò kí ó máa ṣiṣẹ́ láìdásí. Àwọn ping náà ń wá láti inú event loop ti server fúnra rẹ̀: nígbà tí ó bá dí, wọ́n máa dáwọ́ dúró, systemd yóò sì tún iṣẹ́ náà bẹ̀rẹ̀ nígbà tí `WatchdogSec` bá kọjá láìsí ping kankan.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) ti ń kọ user unit tó ní èyí tẹ́lẹ̀. Unit tí o kọ fúnra rẹ (pẹ̀lú `Type=simple` àìyípadà) kò ní watchdog, nítorí náà fi àwọn ìlà wọ̀nyí kún apá `[Service]` rẹ̀:
 
@@ -443,7 +443,7 @@ interface TokenHealth {
 
 ### Àwọn Ìkànnì Tí a Kọ́ Sínú Ẹ̀rọ
 
-OmniRoute ṣe àtìlẹ́yìn fún **ìkànnì ìkìlọ̀ 3**:
+67router ṣe àtìlẹ́yìn fún **ìkànnì ìkìlọ̀ 3**:
 
 | Ìkànnì            | Ìṣètò                   | Ohun tí a fi ń lò ó            |
 | ----------------- | ----------------------- | ------------------------------ |
@@ -559,7 +559,7 @@ Fún báyìí, ṣàkójọ dátà láti `/api/monitoring/health` pẹ̀lú èt�
 ### "Quota sọ pé ó ní ìlera ṣùgbọ́n mo rí àwọn 429"
 
 - 429 túmọ̀ sí pé olùpèsè náà sọ pé o ti lo quota rẹ
-- Ìtọ́pasẹ̀ quota OmniRoute lè ti **dára jù** — òtítọ́ olùpèsè náà wà ní upstream
+- Ìtọ́pasẹ̀ quota 67router lè ti **dára jù** — òtítọ́ olùpèsè náà wà ní upstream
 - Dátà quota máa ń sọ ara rẹ̀ dọ̀tun nípasẹ̀ olùṣọ́ quota inú ètò
 
 ### "Combo ń kùnà ṣùgbọ́n gbogbo àwọn ibi-àfojúsùn dàbí ẹni pé wọ́n ní ìlera"
@@ -572,7 +572,7 @@ Fún báyìí, ṣàkójọ dátà láti `/api/monitoring/health` pẹ̀lú èt�
 
 - Ṣiṣe `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Tí ó bá jẹ́ "ok" — ìkìlọ̀ èké ni, ìṣàyẹ̀wò ìlera náà le jù
-- Tí ó bá jẹ́ ohun mìíràn — **dá OmniRoute dúró** kí o sì tẹ̀lé [ìtọ́sọ́nà ìmúpadàbọ̀sípò lẹ́yìn àjálù](./DATABASE_GUIDE.md#disaster-recovery)
+- Tí ó bá jẹ́ ohun mìíràn — **dá 67router dúró** kí o sì tẹ̀lé [ìtọ́sọ́nà ìmúpadàbọ̀sípò lẹ́yìn àjálù](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Ìfúnpá heap ìrántí ti burú jáì"
 

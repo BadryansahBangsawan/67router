@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute omogoča **ustvarjanje slik** v okviru paketa Cursor na `POST /v1/images/generations` prek istega ID-ja ponudnika kot klepet: `cursor` (vzdevek `cu`).
+67router omogoča **ustvarjanje slik** v okviru paketa Cursor na `POST /v1/images/generations` prek istega ID-ja ponudnika kot klepet: `cursor` (vzdevek `cu`).
 
 | Polje                  | Vrednost                                                                                       |
 | ---------------------- | ---------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute omogoča **ustvarjanje slik** v okviru paketa Cursor na `POST /v1/imag
 
 ## Zakaj Agent CLI
 
-Klepet Cursor v OmniRoute uporablja `agent.v1.AgentService/Run` (protobuf). Ta pot **zavrača** vgrajena odjemalska orodja (lupino, pisanje, …). Ustvarjanje slik je izvorno orodje Cursor, ki ga **`agent` CLI** izvaja z uporabniško licenco. Zato upravljalnik slik zažene `agent` z zaklenjenim pozivom in začasnim delovnim prostorom za vsako zahtevo (po istem vzorcu kot skupnostni mostovi za uporabniške licence), nato pa vrne `b64_json`, združljiv z OpenAI.
+Klepet Cursor v 67router uporablja `agent.v1.AgentService/Run` (protobuf). Ta pot **zavrača** vgrajena odjemalska orodja (lupino, pisanje, …). Ustvarjanje slik je izvorno orodje Cursor, ki ga **`agent` CLI** izvaja z uporabniško licenco. Zato upravljalnik slik zažene `agent` z zaklenjenim pozivom in začasnim delovnim prostorom za vsako zahtevo (po istem vzorcu kot skupnostni mostovi za uporabniške licence), nato pa vrne `b64_json`, združljiv z OpenAI.
 
 ## Omejitev dostopa (strogi pravili št. 15 in 17)
 
@@ -35,7 +35,7 @@ preostanek ravni `LOCAL_ONLY`, si oglejte v `src/server/authz/policies/managemen
 
 `CURSOR_IMG_MAX_CONCURRENT` uveljavlja števec/čakalna vrsta v pomnilniku, omejena na
 instanco modula Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Pravilno omejuje sočasne zagone `agent` znotraj enega procesa OmniRoute, vendar se
+Pravilno omejuje sočasne zagone `agent` znotraj enega procesa 67router, vendar se
 **ne** usklajuje med več procesi/instancami, ki uporabljajo isto uporabniško licenco
 Cursor (npr. uvedba z več replikami) — vsaka instanca uveljavlja svojo neodvisno omejitev.
 Za uvedbo z eno instanco (privzeto) je omejitev natančna; vodoravno razširjene
@@ -45,7 +45,7 @@ uvedbe naj za vsako instanco nastavijo konservativno vrednost
 ## Zahteve
 
 1. Povezan račun Cursor na nadzorni plošči (OAuth ali ključ API `crsr_…`).
-2. Binarna datoteka Cursor Agent mora biti na voljo procesu OmniRoute:
+2. Binarna datoteka Cursor Agent mora biti na voljo procesu 67router:
    - spremenljivka okolja `CURSOR_AGENT_BIN=/path/to/agent` ali
    - `~/.local/bin/agent` ali
    - `providerSpecificData.agentBin` v povezavi Cursor.

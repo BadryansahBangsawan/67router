@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-„OmniRoute“ gali siųsti HTTP žiniatinklio kablius įvykus platformos įvykiams. Naudokite juos integracijoms su
+„67router“ gali siųsti HTTP žiniatinklio kablius įvykus platformos įvykiams. Naudokite juos integracijoms su
 „Slack“, „PagerDuty“, „Datadog“, vidinėmis įspėjimų tarnybomis ar bet kuriuo HTTP imtuvu.
 
 Dispečeris kiekvieną pristatymą pasirašo naudodamas HMAC-SHA256, pakartotinai bando įvykus laikinosioms
@@ -54,7 +54,7 @@ atskirų žiniatinklio kablių klaidas, todėl vienas netinkamas imtuvas negali 
 
 ## HMAC pasirašymas
 
-Kai žiniatinklio kablys turi `secret`, „OmniRoute“ pasirašo JSON turinį ir išsiunčia:
+Kai žiniatinklio kablys turi `secret`, „67router“ pasirašo JSON turinį ir išsiunčia:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Valdymo skydelio puslapyje `/dashboard/webhooks` (žr.
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Bandomasis žiniatinklio kablio pristatymas iš „OmniRoute“",
+    "message": "Bandomasis žiniatinklio kablio pristatymas iš „67router“",
     "webhookId": "<uuid>"
   }
 }

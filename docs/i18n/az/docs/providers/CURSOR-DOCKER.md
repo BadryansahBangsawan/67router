@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker daxilində işlədikdə köhnə **Cursor IDE-dən idxal et** /
+67router Docker daxilində işlədikdə köhnə **Cursor IDE-dən idxal et** /
 `cursor-agent` axınları uğursuz olur, çünki konteyner host sistemindəki Cursor
 quraşdırmasını görə bilmir. Bunun əvəzinə **Cursor ilə daxil ol** (deep-control PKCE)
 istifadə edin.
@@ -15,7 +15,7 @@ istifadə edin.
    `~/.config/Cursor/User/globalStorage/state.vscdb` kimi Linux yollarını axtarır.
    macOS üçün Docker Desktop-da host IDE verilənlər bazası standart olaraq
    qoşulmur və host Darwin olsa belə, konteynerin əməliyyat sistemi Linux-dur.
-2. **`cursor-agent` binar faylı yoxdur** — Rəsmi OmniRoute obrazlarına
+2. **`cursor-agent` binar faylı yoxdur** — Rəsmi 67router obrazlarına
    `cursor-agent` daxil deyil. Əvvəllər Mövcud Modellər
    `cursor-agent --list-models` əmrini işə salır, uğursuz olduqda isə statik
    kataloqdan istifadə edirdi.
@@ -26,11 +26,11 @@ istifadə edin.
 
 1. **İdarəetmə paneli → Provayderlər → Cursor** bölməsini açın.
 2. **Cursor ilə daxil ol** tabını seçin.
-3. **Cursor ilə daxil ol** düyməsinə klikləyin — OmniRoute
+3. **Cursor ilə daxil ol** düyməsinə klikləyin — 67router
    **host** brauzerinizdə `https://cursor.com/loginDeepControl?…` ünvanını açır.
-4. Brauzerdə girişi təsdiqləyin, sonra idarəetmə panelinə qayıdın. OmniRoute
+4. Brauzerdə girişi təsdiqləyin, sonra idarəetmə panelinə qayıdın. 67router
    tokenlər gələnədək `api2.cursor.sh/auth/poll` ünvanını sorğulayır.
-5. OmniRoute **giriş + yeniləmə** tokenlərini saxlayır və onları
+5. 67router **giriş + yeniləmə** tokenlərini saxlayır və onları
    `https://api2.cursor.sh/auth/exchange_user_api_key` vasitəsilə yeniləyir.
 
 Bu üsul konteyner daxilində Cursor IDE və ya `cursor-agent` tələb etmir.
@@ -40,10 +40,10 @@ Bu üsul konteyner daxilində Cursor IDE və ya `cursor-agent` tələb etmir.
 Daxil olunmuş bağlantı olduqda **Mövcud Modellər / Avtomatik Sinxronizasiya**
 bağlantının bearer tokenindən istifadə edərək Cursor-un HTTP
 `AiService/AvailableModels` kataloquna üstünlük verir. Bu uğursuz olarsa,
-OmniRoute yenə də host sistemindəki `cursor-agent` proqramını (mövcud olduqda),
+67router yenə də host sistemindəki `cursor-agent` proqramını (mövcud olduqda),
 daha sonra isə statik reyestrin ilkin məlumatlarını sınayır.
 
-OmniRoute kataloqda həmişə **`auto`** modelini (göstərilən ad “Auto”), həmçinin
+67router kataloqda həmişə **`auto`** modelini (göstərilən ad “Auto”), həmçinin
 OpenCodex üslublu **`auto-cost`**, **`auto-balance`** və
 **`auto-intelligence`** marşrutlaşdırma rejimlərini təqdim edir. Ötürülmə zamanı
 bunlar Cursor-un `default` modelinə (üç variant üçün `optimization`
@@ -96,7 +96,7 @@ olunmur).
 ## Boş cavablar / istifadə limitinin bitməsi
 
 Cursor Run sorğusunu qəbul edib köməkçi mətni qaytarmadıqda (premium istifadə
-limiti bitdikdə bu hal geniş yayılıb), OmniRoute sadə “Provayder boş məzmun
+limiti bitdikdə bu hal geniş yayılıb), 67router sadə “Provayder boş məzmun
 qaytardı” mesajı əvəzinə əməliyyat aparmağa imkan verən **429** (kvota
 göstəriciləri) və ya təlimatla birlikdə **502** xətası göstərir.
 `not_found: AI Model Not Found` (istifadə pəncərəsi bitib) kimi axın xətaları
@@ -107,7 +107,7 @@ sınayın və ya Cursor planının limitlərini artırın.
 
 ## Müştəri versiyası (başsız rejim)
 
-Lokal `cursor-agent` quraşdırması olmadıqda OmniRoute
+Lokal `cursor-agent` quraşdırması olmadıqda 67router
 `x-cursor-client-version` dəyərini əvvəlcə `CURSOR_AGENT_CLI_VERSION` mühit
 dəyişənindən, sonra Cursor quraşdırma skriptinin diskdə keşlənmiş analizindən,
 daha sonra isə sabitlənmiş build id-dən müəyyən edir. Ehtiyac olduqda

@@ -52,7 +52,7 @@ aktiviti. Ini ialah pengehad kadar terikat IP dan kunci yang sama, yang menyebab
 ralat `400 content-blocked` berselang-seli apabila Claude Code atau Codex CLI
 membuat beberapa panggilan penggunaan alat / penghantaran mesej secara berturut-turut dengan pantas.
 
-## Mitigasi yang telah digunakan dalam OmniRoute
+## Mitigasi yang telah digunakan dalam 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — pelindung lonjakan yang menguatkuasakan
    sela minimum 500 ms antara permintaan keluar ke mana-mana URL `agentrouter:*`.

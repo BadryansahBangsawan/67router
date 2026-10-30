@@ -32,7 +32,7 @@ För varje kandidat i poolen (`open-sse/services/autoCombo/virtualFactory.ts::bu
 direkt efter `filterPaidOnlyCandidates`):
 
 1. **Finns inte alls i `FREE_MODEL_BUDGETS`** → exkluderas. Detta omfattar genuint betalda modeller och
-   alla leverantörer/modeller som OmniRoute ännu inte har klassificerat — nya kandidater börjar som
+   alla leverantörer/modeller som 67router ännu inte har klassificerat — nya kandidater börjar som
    exkluderade, inte inkluderade.
 2. **`freeType: "keyless"`** → godkänns omedelbart, **men endast för en kandidat som faktiskt
    anlände via sökvägen utan autentisering** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -88,7 +88,7 @@ aldrig ett annat, overifierat konto för samma kandidat. Se
 (fall A/B/C för förbikoppling utan nyckel, samt multikontofall 1–5).
 
 `upptäcks automatiskt`: en leverantör/modell som lanseras i morgon med rätt metadata (i
-katalogen, med en användningsadapter, `hardStopGuaranteed: true`) kan användas så snart OmniRoute känner
+katalogen, med en användningsadapter, `hardStopGuaranteed: true`) kan användas så snart 67router känner
 till den — ingen kodändring, ingen post i en vitlista och inget att redigera i denna modul. En som tas bort från
 katalogen försvinner på samma sätt. Se
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` för regressionstestet (via

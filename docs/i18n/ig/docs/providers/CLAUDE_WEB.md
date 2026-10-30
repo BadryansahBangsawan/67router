@@ -174,7 +174,7 @@ ugbu a, ya mere cases ndị ahụ a wụpụrụ abụghị ihe akaebe runtime.
 
 ### Ntọala
 
-1. Malite OmniRoute site na `npm run dev` ma ọ bụ installation e wuru.
+1. Malite 67router site na `npm run dev` ma ọ bụ installation e wuru.
 2. Mepee Dashboard → Providers → Add Provider.
 3. Họrọ category Web Cookie na Claude Web.
 4. Mado header Cookie zuru ezu e depụtaghachiri site na arịrịọ `claude.ai` e nyere ikike.

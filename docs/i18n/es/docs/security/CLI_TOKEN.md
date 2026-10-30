@@ -6,7 +6,7 @@
 
 ## Descripción general
 
-Los comandos de OmniRoute CLI se autentican en la API de administración local mediante un
+Los comandos de 67router CLI se autentican en la API de administración local mediante un
 token `HMAC-SHA256(machine-id, salt)` enviado a través del encabezado de solicitud
 `x-omniroute-cli-token`.
 

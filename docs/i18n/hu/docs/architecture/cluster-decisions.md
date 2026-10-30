@@ -14,7 +14,7 @@ Két opcionálisan bekapcsolható compose-profil (`memory`, `bifrost`) a [`docke
 
 ## Miért konzervatív ez a megközelítés?
 
-Az OmniRoute meglévő telepítési felépítése már most is karcsú és bevált:
+Az 67router meglévő telepítési felépítése már most is karcsú és bevált:
 
 - A **`redis:7-alpine`** éles környezetben, nagy terhelés mellett kezeli a sebességkorlátozási és gyorsítótárazási feladatokat.
 - Az **SQLite + sqlite-vec + FTS5** biztosítja a helyi memóriát, valamint a vektoros és szöveges keresést (lásd: [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Az itt bemutatott két profil **horizontális skálázási lehetőséget kínál
 
 - Ha legalább 3 `omniroute` replikát futtat, és egyetlen Go-folyamatban szeretné központosítani a szolgáltatók rotációját.
 - Ha egyetlen auditálási és naplózási felületet szeretne az összes replika upstream szolgáltatói kéréseihez.
-- Ha az 1. szintű útválasztási réteget az OmniRoute replikáitól függetlenül szeretné horizontálisan skálázni.
+- Ha az 1. szintű útválasztási réteget az 67router replikáitól függetlenül szeretné horizontálisan skálázni.
 
 **Mit ad hozzá:**
 

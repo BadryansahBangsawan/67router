@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: De compressie-engine van OmniRoute is **uitbreidbaar** — je kunt aangepaste engines registreren, taalpakketten voor nieuwe talen leveren en gestapelde pipelines samenstellen. Deze handleiding laat zien hoe.
+> **TL;DR**: De compressie-engine van 67router is **uitbreidbaar** — je kunt aangepaste engines registreren, taalpakketten voor nieuwe talen leveren en gestapelde pipelines samenstellen. Deze handleiding laat zien hoe.
 
 **Gerelateerde handleidingen:**
 
@@ -232,7 +232,7 @@ beschikbaar in de strategiekiezer. Test de integratie door deze in een gestapeld
 
 ## Taalpakketten maken
 
-Compressie in holbewonerstijl gebruikt **taalspecifieke regelpakketten** om stopwoorden, voorbehouden en omslachtige patronen in elke natuurlijke taal te verwerken. OmniRoute wordt geleverd met **6 taalpakketten**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Compressie in holbewonerstijl gebruikt **taalspecifieke regelpakketten** om stopwoorden, voorbehouden en omslachtige patronen in elke natuurlijke taal te verwerken. 67router wordt geleverd met **6 taalpakketten**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Pakketstructuur
 
@@ -391,7 +391,7 @@ De uitvoer van engine N wordt de invoer van engine N+1.
 
 ### Compressiemodi
 
-OmniRoute selecteert **ÉÉN modus per aanvraag** op basis van de configuratie, drempelwaarden voor automatisch activeren en combinatie-overschrijvingen.
+67router selecteert **ÉÉN modus per aanvraag** op basis van de configuratie, drempelwaarden voor automatisch activeren en combinatie-overschrijvingen.
 De beschikbare modi zijn gedefinieerd in `open-sse/services/compression/types.ts` (type `CompressionMode`):
 
 | Modus        | Engines              | Gebruikssituatie                                                                                                                                                                                                                   |
@@ -511,10 +511,10 @@ Om deze via de configuratie aan te sturen, stel je `mode: "stacked"` in en geef 
 
 ## Beleid voor upstreamsynchronisatie
 
-De compressie-engines van OmniRoute vermelden in de README verschillende upstreamprojecten
+De compressie-engines van 67router vermelden in de README verschillende upstreamprojecten
 ("geïnspireerd door RTK, Caveman, LLMLingua-2, Troglodita"). Een veelgestelde vraag van bijdragers
 is: **wanneer upstream RTK een nieuw toolfilter toevoegt of Caveman een regelpakket
-toevoegt, hoe komt dat dan in OmniRoute terecht?** Deze sectie bevat het gezaghebbende antwoord.
+toevoegt, hoe komt dat dan in 67router terecht?** Deze sectie bevat het gezaghebbende antwoord.
 
 ### Gevendoriseerde kopieën versus onafhankelijke implementaties
 
@@ -535,7 +535,7 @@ upstreamkopie om via `git pull` op te halen — en dat is precies waarom in de R
 Er is **geen geautomatiseerde tracking van upstreamreleases en geen `compression-sync`-
 label** — bewust. Omdat de engines herimplementaties zijn, wordt een upstream RTK-
 filter of Caveman-regelpakket niet als code samengevoegd; het wordt **opnieuw uitgedrukt als een nieuwe
-regel/filter in OmniRoutes eigen indeling** (zie
+regel/filter in 67routers eigen indeling** (zie
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) en wordt ad hoc via
 een normale PR toegevoegd. De bovenstaande uitbreidingspunten (aangepaste engine, taalpakket, RTK-filter)
 zijn de goedgekeurde manier om er een bij te dragen.
@@ -549,14 +549,14 @@ Recente voorbeelden van precies deze werkwijze:
 ### Headroom (proxy voor invoercompressie)
 
 Headroom is **volledig intern** — een vastgezette, gevendoriseerde `gcf`-codecsnapshot plus
-OmniRoutes eigen `smartcrusher`- / `toon`- / `tabular`-lagen. Er is geen actieve
+67routers eigen `smartcrusher`- / `toon`- / `tabular`-lagen. Er is geen actieve
 upstream om te volgen buiten de gevendoriseerde kopie; updates voor `gcf` worden
 handmatig vernieuwd wanneer de codec verandert en opnieuw gevalideerd aan de hand van de poort voor het compressiebudget
 (`check:compression-budget`).
 
 ### Een door upstream geïnspireerde verbetering voorstellen
 
-1. **Vendor de code niet** — druk de upstreamregel of het upstreamfilter opnieuw uit in OmniRoutes indeling.
+1. **Vendor de code niet** — druk de upstreamregel of het upstreamfilter opnieuw uit in 67routers indeling.
 2. Voeg deze toe via het bijbehorende uitbreidingspunt hieronder (taalpakket, RTK-filter of
    aangepaste engine).
 3. Verwijs in de PR-beschrijving naar het upstreamproject (bronvermelding), zonder

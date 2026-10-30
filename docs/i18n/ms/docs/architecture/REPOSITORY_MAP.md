@@ -5,7 +5,7 @@
 ---
 
 > **Penerangan satu baris untuk setiap direktori dan fail akar.**
-> Terakhir dikemas kini: 2026-06-28 — OmniRoute v3.8.40
+> Terakhir dikemas kini: 2026-06-28 — 67router v3.8.40
 >
 > Gunakan peta ini untuk menavigasi pangkalan kod dengan pantas. Untuk penerokaan mendalam, ikuti pautan ke dokumentasi khusus.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Aliran keluaran penuh (kemahiran, husky, komit konvensional, penggunaan)                              |
 | `COVERAGE_PLAN.md`          | Sasaran liputan dan keadaan semasa                                                                    |
 | `FREE_TIERS.md`             | Penyedia peringkat percuma yang dipilih susun (48+ percuma + 11 OAuth)                                |
-| `CLI-TOOLS.md`              | Penyepaduan CLI luaran + CLI OmniRoute dalaman                                                        |
+| `CLI-TOOLS.md`              | Penyepaduan CLI luaran + CLI 67router dalaman                                                         |
 | `I18N.md`                   | Seni bina i18n, penambahan bahasa, 67 penempatan                                                      |
 | `UNINSTALL.md`              | Langkah nyahpasang bersih                                                                             |
 | `PROVIDER_REFERENCE.md`     | Katalog 375 penyedia yang **dijana secara automatik** (jana semula: `npm run gen:provider-reference`) |

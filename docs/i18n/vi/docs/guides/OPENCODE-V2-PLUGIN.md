@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` đưa toàn bộ danh mục OmniRoute của bạn — các model, combo và
+`@omniroute/opencode-plugin-v2` đưa toàn bộ danh mục 67router của bạn — các model, combo và
 auto-combo — vào trình chọn model của OpenCode v2, kèm theo tên hiển thị, giá và hạn mức
 gói miễn phí.
 
@@ -15,7 +15,7 @@ plugin thông qua các giao diện khác nhau. Hãy chọn package phù hợp v�
 ## Yêu cầu
 
 - OpenCode v2.
-- Một gateway OmniRoute có thể truy cập được (mặc định là `http://localhost:20128`).
+- Một gateway 67router có thể truy cập được (mặc định là `http://localhost:20128`).
 - Node.js 22 hoặc 24.
 
 ## Cài đặt
@@ -78,7 +78,7 @@ nêu rõ endpoint và những gì bị thiếu — nhờ đó, một trình ch�
 | `baseURL`                        | bắt buộc                                                     | URL gốc của gateway, chỉ hỗ trợ `http(s)`; hậu tố `/v1` được thêm vào khi cần                                                                |
 | `apiKey`                         | thông tin xác thực đã kết nối, sau đó là `OMNIROUTE_API_KEY` | Khóa trò chuyện cho `/v1/*`                                                                                                                  |
 | `managementReadToken`            | dùng `apiKey` làm giá trị dự phòng                           | Khóa cho `/api/*` — thường **không** giống khóa trên                                                                                         |
-| `displayName`                    | `"OmniRoute"`                                                | Tên nhà cung cấp trong bộ chọn                                                                                                               |
+| `displayName`                    | `"67router"`                                                 | Tên nhà cung cấp trong bộ chọn                                                                                                               |
 | `timeoutMs`                      | `10000`                                                      | Thời gian chờ tìm nạp cho mỗi điểm cuối (các tổ hợp tự động dùng 5 giây)                                                                     |
 | `modelCacheTtlMs`                | `300000`                                                     | TTL của bộ nhớ đệm danh mục; ảnh chụp nhanh trên đĩa giúp tăng tốc các lần khởi động nguội                                                   |
 | `timeouts`                       | dùng `timeoutMs` làm giá trị dự phòng                        | Ngân sách thời gian theo mili giây cho từng điểm cuối: `models`, `combos`, `autoCombos`, `enrichment`                                        |
@@ -124,7 +124,7 @@ tham chiếu sẽ mở rộng schema thành "chấp nhận mọi thứ".
 
 | Triệu chứng                                   | Nguyên nhân                                                                                                                    |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Bộ chọn không hiển thị mô hình OmniRoute      | Không phân giải được khóa nào (hãy kiểm tra cảnh báo khi khởi động), hoặc không thể kết nối tới gateway                        |
+| Bộ chọn không hiển thị mô hình 67router       | Không phân giải được khóa nào (hãy kiểm tra cảnh báo khi khởi động), hoặc không thể kết nối tới gateway                        |
 | ID mô hình thô, không có tổ hợp, không có giá | Các endpoint quản lý đã từ chối token — hãy đặt `managementReadToken`                                                          |
 | Danh mục `freeOnly` ngắn hoặc trống           | Không có token quản lý hoặc token bị từ chối — hãy đọc dòng tóm tắt làm mới (số lượng `unmatched-free`) trong nhật ký của host |
 | Một phiên được ghim vào `opencode-<id>/…`     | Plugin v1 đã công bố `opencode-<id>`; v2 công bố trực tiếp `<id>`, vì vậy hãy chọn lại mô hình trong `<id>/…`                  |

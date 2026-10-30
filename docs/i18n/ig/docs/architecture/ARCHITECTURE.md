@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Igbo)
+# 67router Architecture (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Emelitere ikpeazụ: 2026-06-28_
 
 ## Nchịkọta Ndị Isi
 
-OmniRoute bụ ọnụ ụzọ ntụgharị AI mpaghara na dashboard e wuru n'elu Next.js.
+67router bụ ọnụ ụzọ ntụgharị AI mpaghara na dashboard e wuru n'elu Next.js.
 Ọ na-enye otu endpoint dakọtara na OpenAI (`/v1/*`) ma na-ebuga okporo ụzọ gafee ọtụtụ ndị na-eweta ọrụ upstream site na ntụgharị, fallback, mmegharị token, na nsuso ojiji.
 
 Ikike ndị bụ isi:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Dashboard ihe nchọgharị]
     end
 
-    subgraph Router[Usoro Mpaghara OmniRoute]
+    subgraph Router[Usoro Mpaghara 67router]
         API[API Ndakọrịta V1\n/v1/*]
         DASH[Dashboard + API Nlekọta\n/api/*]
         CORE[SSE + Isi Ntụgharị\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modul ndị na-eweta OAuth (faịlụ 27 dị iche iche n'okpuru `src/lib/oauth/
 
 ## 5) Ọrụ Ndị Agbakwunyere (v3.8.4)
 
-OmniRoute nwere ike ịwụnye, ilekọta, ma duru arịrịọ gaa na usoro ngwaọrụ AI ndị na-arụ ọrụ na mpaghara
+67router nwere ike ịwụnye, ilekọta, ma duru arịrịọ gaa na usoro ngwaọrụ AI ndị na-arụ ọrụ na mpaghara
 nke a na-akpọ **ọrụ ndị agbakwunyere**. E tinyere ise: 9Router, CLIProxyAPI, Bifrost, Mux na Dario.
 
 Ọkwa nhazi sistemụ:
@@ -438,7 +438,7 @@ Namespace `src/domain/` na-achịkọta mkpebi amụma n'otu ebe ka route handle
 - Cache quota: `src/domain/quotaCache.ts`
 - Ọnọdụ mbelata arụmọrụ: `src/domain/degradation.ts`
 - Nyocha nhazi: `src/domain/configAudit.ts`
-- Onye na-ewu metadata nzaghachi OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Onye na-ewu metadata nzaghachi 67router: `src/domain/omnirouteResponseMeta.ts`
 - Sistemụ nta nyocha: `src/domain/assessment/` — ọrụ nyocha oge ụfọdụ
 
 ### E. Pipeline Ikike
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Ihe Nchọgharị Dashboard]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[Isi SSE + Ndị Mmezu]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Ndị na-eweta ọrụ ndị ọzọ niile (gụnyere node dakọtara ahaziri ic
 ## Matriks Ndakọrịta nke Ndị Na-eweta Ọrụ
 
 > **Rịba ama:** Matriks dị n'okpuru bụ ihe atụ na-anọchi anya ndị na-eweta ọrụ 351 e debanyere aha na
-> OmniRoute v3.8.0. Maka ndepụta izizi a na-emelite mgbe niile, rụtụ aka na
+> 67router v3.8.0. Maka ndepụta izizi a na-emelite mgbe niile, rụtụ aka na
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (emepụtara na-akpaghị aka) ma ọ bụ isi iyi
 > eziokwu dị na `src/shared/constants/providers.ts` (Zod na-enyocha ya mgbe a na-ebunye ya).
 
@@ -1117,7 +1117,7 @@ Nchekwa payload arịrịọ zuru ezu na-edobe ruo ọkwa payload JSON anọ mak
 - arịrịọ raw enwetara n'aka client
 - arịrịọ a tụgharịrị nke e zigara upstream n’ezie
 - nzaghachi onye na-eweta ọrụ e wughachiri dịka JSON; a na-achịkọta nzaghachi e zigara dịka stream ka ọ bụrụ nchịkọta ikpeazụ tinyere metadata stream
-- nzaghachi ikpeazụ e nyeghachiri client site na OmniRoute; a na-echekwa nzaghachi e zigara dịka stream n’otu ụdị nchịkọta a chịkọtara ọnụ ahụ
+- nzaghachi ikpeazụ e nyeghachiri client site na 67router; a na-echekwa nzaghachi e zigara dịka stream n’otu ụdị nchịkọta a chịkọtara ọnụ ahụ
 
 ## Oke Ndị Metụtara Nchedo
 

@@ -10,7 +10,7 @@
 
 ## コンテキスト
 
-OmniRoute は現在、`src/lib/db/` からドメイン指向の永続化関数を提供しており、
+67router は現在、`src/lib/db/` からドメイン指向の永続化関数を提供しており、
 `src/lib/db/core.ts` が返す共有接続は、`src/lib/db/adapters/types.ts` の同期的な `SqliteAdapter`
 コントラクトを実装しています。このアダプターは複数の SQLite ランタイムをサポートしますが、
 そのインターフェースは依然として SQLite 固有の形をしています。具体的には、同期的なプリペアドステートメント、`pragma`、遅延および即時

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **ଶେଷ ଅଦ୍ୟତନ:** 2026-06-28 — v3.8.40
 
-OmniRoute ଏକ WordPress-ଶୈଳୀର ପ୍ଲଗଇନ୍ ସିଷ୍ଟମ୍ ସହିତ ଆସେ। ପ୍ଲଗଇନ୍ଗୁଡ଼ିକ ସ୍ୱୟଂ-ସମ୍ପୂର୍ଣ୍ଣ
+67router ଏକ WordPress-ଶୈଳୀର ପ୍ଲଗଇନ୍ ସିଷ୍ଟମ୍ ସହିତ ଆସେ। ପ୍ଲଗଇନ୍ଗୁଡ଼ିକ ସ୍ୱୟଂ-ସମ୍ପୂର୍ଣ୍ଣ
 ଡିରେକ୍ଟୋରୀ — ପ୍ରତ୍ୟେକରେ ଏକ `plugin.json` ମାନିଫେଷ୍ଟ ଏବଂ ଏକ ଏଣ୍ଟ୍ରି ଫାଇଲ୍ ଥାଏ — ଯାହା
 ଅନୁରୋଧ ପାଇପଲାଇନ୍ (`onRequest` / `onResponse` / `onError`) ଏବଂ
 ଜୀବନଚକ୍ର ଇଭେଣ୍ଟଗୁଡ଼ିକ (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) ସହିତ ହୁକ୍ ହୁଏ।
@@ -149,7 +149,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Plugin directory
 
-Plugin ଗୁଡ଼ିକ OmniRoute data directory ଅଧୀନରେ ରହେ:
+Plugin ଗୁଡ଼ିକ 67router data directory ଅଧୀନରେ ରହେ:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -8,11 +8,11 @@
 > **Pēdējoreiz atjaunināts:** 2026-09-02 — v3.8.51
 > **Mērķauditorija:** Inženieri, kuri uztur pakalpojumu sniedzējiem specifiskas maskēšanās integrācijas.
 
-OmniRoute integrējas ar pakalpojumu sniedzējiem, kuru perifērijas sistēmas aktīvi veido neoficiālo klientu pirkstu nospiedumus (TLS JA3/JA4, galveņu secība, JSON pamatteksta forma, integritātes marķieri). Šajā lapā ir dokumentētas OmniRoute nodrošinātās maskēšanās saskarnes un to ieviešanas vietas.
+67router integrējas ar pakalpojumu sniedzējiem, kuru perifērijas sistēmas aktīvi veido neoficiālo klientu pirkstu nospiedumus (TLS JA3/JA4, galveņu secība, JSON pamatteksta forma, integritātes marķieri). Šajā lapā ir dokumentētas 67router nodrošinātās maskēšanās saskarnes un to ieviešanas vietas.
 
 ## Juridisks un ētisks paziņojums
 
-Maskēšanās funkcijas pastāv, lai OmniRoute varētu darboties kā saderības slānis starp lietotājiem piederošiem oficiālajiem kontiem (Claude Code CLI, Codex, Antigravity, Cursor utt.) un OmniRoute vienoto API. Tās **nav** paredzētas krāpšanas atklāšanas apiešanai, akreditācijas datu kopīgošanai vai pakalpojumu sniedzēju lietošanas noteikumu pārkāpšanai. Uzturētāji sagaida, ka operatori ievēros augšupējo pakalpojumu lietošanas noteikumus, kuriem tie piekrita, izveidojot kontus.
+Maskēšanās funkcijas pastāv, lai 67router varētu darboties kā saderības slānis starp lietotājiem piederošiem oficiālajiem kontiem (Claude Code CLI, Codex, Antigravity, Cursor utt.) un 67router vienoto API. Tās **nav** paredzētas krāpšanas atklāšanas apiešanai, akreditācijas datu kopīgošanai vai pakalpojumu sniedzēju lietošanas noteikumu pārkāpšanai. Uzturētāji sagaida, ka operatori ievēros augšupējo pakalpojumu lietošanas noteikumus, kuriem tie piekrita, izveidojot kontus.
 
 ---
 
@@ -75,7 +75,7 @@ izmantojot nepārprotami autorizētu aktīvu kontu.
 
 ## Claude Code maskēšanās komplekts
 
-Kad `cliCompatMode` ir ieslēgts, OmniRoute pārveido izejošos Claude pieprasījumus tā, lai tie nebūtu atšķirami no `claude-cli` datplūsmas. Kopā darbojas trīs moduļi:
+Kad `cliCompatMode` ir ieslēgts, 67router pārveido izejošos Claude pieprasījumus tā, lai tie nebūtu atšķirami no `claude-cli` datplūsmas. Kopā darbojas trīs moduļi:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -91,7 +91,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (klienta satura jaucējvērtība)
 
-Servera puses integritātes pārbaude, ko oficiālais Claude Code CLI aprēķina, izmantojot Bun/Zig. OmniRoute to atkārtoti implementē ar `xxhash-wasm`:
+Servera puses integritātes pārbaude, ko oficiālais Claude Code CLI aprēķina, izmantojot Bun/Zig. 67router to atkārtoti implementē ar `xxhash-wasm`:
 
 1. Serializē pamattekstu ar `cch=00000;` vietturi
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -137,7 +137,7 @@ Saistītie moduļi tajā pašā komplektā:
 
 ## Antigravity maskēšanās
 
-Antigravity pieprasījumi saglabā izsaucēja tekstu baitu pa baitam. OmniRoute uzvednēs neievieto nulles platuma rakstzīmes un nepārdēvē/neievieto rīkus, lai atdarinātu IDE klientu.
+Antigravity pieprasījumi saglabā izsaucēja tekstu baitu pa baitam. 67router uzvednēs neievieto nulles platuma rakstzīmes un nepārdēvē/neievieto rīkus, lai atdarinātu IDE klientu.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -147,13 +147,13 @@ Pirms pārsūtīšanas noņem Stainless SDK marķierus (`x-stainless-lang`, `x-s
 
 `ANTIGRAVITY_CREDITS=always` (to izmanto `open-sse/executors/antigravity.ts`) novirza **katru** pieprasījumu caur Antigravity AI Credit Overage mehānismu (maksas Google kredīti), nevis ļauj Google bezmaksas līmeņa kvotai ierobežot pieprasījumus. Tas ir dokumentēts kā funkcija, taču tas ir **visbiežākais mūsu redzētais ziņojumu iemesls par pakalpojuma noteikumu pārkāpumiem** — vairāki Google Ultra konti pēc dažu stundu darbības ar `=always` ir bloķēti ar `403 / "service disabled for ToS violation" / insufficient_quota`.
 
-Ierobežojumus piemēro **Google pusē**, un OmniRoute to nevar novērst. Vides mainīgā nosaukums un esošā dokumentācija rada iespaidu, ka šo iestatījumu var droši ieslēgt; tā nav.
+Ierobežojumus piemēro **Google pusē**, un 67router to nevar novērst. Vides mainīgā nosaukums un esošā dokumentācija rada iespaidu, ka šo iestatījumu var droši ieslēgt; tā nav.
 
 **Kāpēc tas aktivizē ļaunprātīgas izmantošanas noteikšanu agresīvāk nekā tikai bezmaksas līmeņa izmantošana:**
 
 - Ilgstoši automatizēti tēriņi vienā Google kontā tiek atzīmēti citādi nekā bezmaksas līmeņa izmantošana, kas sasniedz kvotu un apstājas.
 - Kredītu pārtēriņam nav ātruma ierobežojuma, tādēļ nepareizi konfigurēts klients dažu minūšu laikā var iztērēt vairākus simtus USD un izskatīties pēc API atslēgu tālākpārdošanas vai robotizētas datplūsmas.
-- Ja vairāki OmniRoute lietotāji paralēli izmanto pārtēriņa kredītus no vienas ārējās IP adreses, tas pastiprina signālu.
+- Ja vairāki 67router lietotāji paralēli izmanto pārtēriņa kredītus no vienas ārējās IP adreses, tas pastiprina signālu.
 
 **Ieteicamā pieeja:**
 
@@ -192,7 +192,7 @@ Ieslēdzams vai izslēdzams katram pakalpojuma sniedzējam, izmantojot vides mai
 
 ## MITM starpniekserveris (Antigravity, Linux/macOS/Windows)
 
-CLI, kuru bināros failus nevar novirzīt, izmantojot `OPENAI_BASE_URL`, OmniRoute palaiž lokālu TLS savienojumu terminējošu starpniekserveri. Galapunkti atrodas zem `src/app/api/cli-tools/antigravity-mitm/`.
+CLI, kuru bināros failus nevar novirzīt, izmantojot `OPENAI_BASE_URL`, 67router palaiž lokālu TLS savienojumu terminējošu starpniekserveri. Galapunkti atrodas zem `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metode | Galapunkts                              | Nolūks                                                |
 | ------ | --------------------------------------- | ----------------------------------------------------- |
@@ -225,7 +225,7 @@ Pārtvertais mērķa resursdators: **`daily-cloudcode-pa.googleapis.com`** (Anti
 
 Sertifikāta faila nosaukums: `omniroute-mitm.crt`. Pirkstu nospieduma atbilstība tiek pārbaudīta, izmantojot `getCertFingerprint()` (DER SHA-1).
 
-Turklāt `updateNssDatabases()` instalē sertifikātu katra lietotāja NSS datubāzēs, ja ir pieejams `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visos Firefox profilos (tostarp snap), ar segvārdu **`OmniRoute MITM Root CA`**.
+Turklāt `updateNssDatabases()` instalē sertifikātu katra lietotāja NSS datubāzēs, ja ir pieejams `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visos Firefox profilos (tostarp snap), ar segvārdu **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -273,7 +273,7 @@ Pakalpojumu sniedzēja IP adrese **vienmēr tiek saglabāta** — slēdzis tikai
 
 ## Ienākošo galveņu sanitizēšana
 
-Pirms pārsūtīšanas OmniRoute attīra ienākošās klienta galvenes, lai no Cursor saņemts pieprasījums nenopludinātu `User-Agent: Cursor/X.Y.Z` Claude augšupējam pakalpojumam. Aizliegto vērtību sarakstu skatiet failā `src/shared/constants/upstreamHeaders.ts`; tas tiek uzturēts sinhroni ar Zod shēmām un vienībtestiem.
+Pirms pārsūtīšanas 67router attīra ienākošās klienta galvenes, lai no Cursor saņemts pieprasījums nenopludinātu `User-Agent: Cursor/X.Y.Z` Claude augšupējam pakalpojumam. Aizliegto vērtību sarakstu skatiet failā `src/shared/constants/upstreamHeaders.ts`; tas tiek uzturēts sinhroni ar Zod shēmām un vienībtestiem.
 
 ---
 

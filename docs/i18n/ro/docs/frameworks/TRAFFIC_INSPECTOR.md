@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector este depanatorul de trafic HTTPS încorporat în OmniRoute — un instrument similar cu Charles Proxy / mitmweb / HTTP Toolkit, care este **conștient de LLM-uri** și **conștient de agenți**. Se află la `/dashboard/tools/traffic-inspector` și primește trafic în timp real de la până la 5 surse de captură simultane.
+Traffic Inspector este depanatorul de trafic HTTPS încorporat în 67router — un instrument similar cu Charles Proxy / mitmweb / HTTP Toolkit, care este **conștient de LLM-uri** și **conștient de agenți**. Se află la `/dashboard/tools/traffic-inspector` și primește trafic în timp real de la până la 5 surse de captură simultane.
 
 **Locație în dashboard:** `/dashboard/tools/traffic-inspector`
 **Grup în bara laterală:** Instrumente (după AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector este depanatorul de trafic HTTPS încorporat în OmniRoute —
 
 ### Ce face ca Traffic Inspector să fie unic
 
-| Funcționalitate                                                                                 | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Bazat pe web                                                                                    |    ✓    |    ✗    |    ✗    |                ✓                |
-| Cu sursă deschisă                                                                               |    ✓    |    ✗    | parțial |                ✓                |
-| **Conștient de agenți** (știe dacă solicitarea provine de la Antigravity/Copilot/etc.)          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Conștient de LLM-uri** (analizează structura OpenAI/Anthropic/Gemini, tokenurile și modelul)  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Maparea modelelor este vizibilă** (gemini-3-flash → claude-sonnet-4.7)                        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Separarea latenței proxy-ului și a serviciului upstream**                                     | parțial |    ✗    |    ✗    |                ✓                |
-| **Integrat cu rutarea, mecanismul de rezervă și costurile OmniRoute**                           |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Depanare proxy la nivelul întregului sistem** (orice aplicație de pe dispozitiv)              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Captură pentru gazde personalizate** (redirecționare DNS pentru fiecare gazdă)                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Mod prin variabila de mediu HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Vizualizare conversație** (bule pentru interacțiuni în mai multe etape, tool_use/tool_result) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Îmbinarea fluxurilor SSE** (reconstruire din evenimente delta)                                |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Înregistrarea sesiunilor** (cu nume, exportabilă ca .har/.jsonl)                              |    ✗    |    ✓    |    ✓    |                ✓                |
+| Funcționalitate                                                                                 | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Bazat pe web                                                                                    |    ✓    |    ✗    |    ✗    |               ✓                |
+| Cu sursă deschisă                                                                               |    ✓    |    ✗    | parțial |               ✓                |
+| **Conștient de agenți** (știe dacă solicitarea provine de la Antigravity/Copilot/etc.)          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Conștient de LLM-uri** (analizează structura OpenAI/Anthropic/Gemini, tokenurile și modelul)  |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Maparea modelelor este vizibilă** (gemini-3-flash → claude-sonnet-4.7)                        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Separarea latenței proxy-ului și a serviciului upstream**                                     | parțial |    ✗    |    ✗    |               ✓                |
+| **Integrat cu rutarea, mecanismul de rezervă și costurile 67router**                            |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Depanare proxy la nivelul întregului sistem** (orice aplicație de pe dispozitiv)              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Captură pentru gazde personalizate** (redirecționare DNS pentru fiecare gazdă)                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Mod prin variabila de mediu HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Vizualizare conversație** (bule pentru interacțiuni în mai multe etape, tool_use/tool_result) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Îmbinarea fluxurilor SSE** (reconstruire din evenimente delta)                                |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Înregistrarea sesiunilor** (cu nume, exportabilă ca .har/.jsonl)                              |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arhitectura într-un singur paragraf
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true dacă răspunsul este SSE
   mappedTo: string | null; // antetul x-omniroute-mapped
-  costEstimateUsd: number | null; // cost estimat pe baza tarifelor OmniRoute
+  costEstimateUsd: number | null; // cost estimat pe baza tarifelor 67router
 }
 ```
 
@@ -394,7 +394,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proxy-ul de sistem nu a fost dezactivat
 
-Dacă OmniRoute se închide neașteptat în timp ce modul proxy la nivel de sistem este activ:
+Dacă 67router se închide neașteptat în timp ce modul proxy la nivel de sistem este activ:
 
 **macOS:**
 
@@ -439,7 +439,7 @@ Calea de bază: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Listează cererile (filtrabile: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Detaliile unei singure cereri                                                          |
 | DELETE | `/requests`                 | Golește memoria tampon din memorie                                                     |
-| POST   | `/requests/{id}/replay`     | Reexecută aceeași cerere prin routerul OmniRoute                                       |
+| POST   | `/requests/{id}/replay`     | Reexecută aceeași cerere prin routerul 67router                                        |
 | PUT    | `/requests/{id}/annotation` | Salvează sau actualizează o notă asociată unei cereri                                  |
 
 ### WebSocket

@@ -4,18 +4,18 @@
 
 ---
 
-यो दस्तावेजले OmniRoute मा थपिएको प्रतिक्रिया-सञ्चालित अनुकूली राउटिङको आधार वर्णन गर्छ। यसलाई जानाजानी सानो राखिएको छ: यसले टाइप गरिएको राउटिङ-परिणाम च्यानल, विद्यमान auto-combo स्कोररलाई इनपुट दिने अनलाइन गुणस्तर सङ्केत, वैकल्पिक OpenTelemetry निर्यातक, र व्याख्येयता endpoint प्रस्तुत गर्छ। यसले विद्यमान resilience stack (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) लाई प्रतिस्थापन **गर्दैन** — बरु त्यसलाई परिपूरक बनाउँछ।
+यो दस्तावेजले 67router मा थपिएको प्रतिक्रिया-सञ्चालित अनुकूली राउटिङको आधार वर्णन गर्छ। यसलाई जानाजानी सानो राखिएको छ: यसले टाइप गरिएको राउटिङ-परिणाम च्यानल, विद्यमान auto-combo स्कोररलाई इनपुट दिने अनलाइन गुणस्तर सङ्केत, वैकल्पिक OpenTelemetry निर्यातक, र व्याख्येयता endpoint प्रस्तुत गर्छ। यसले विद्यमान resilience stack (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) लाई प्रतिस्थापन **गर्दैन** — बरु त्यसलाई परिपूरक बनाउँछ।
 
 ## 1. वास्तुकलागत सन्दर्भ
 
-OmniRoute एउटा data plane हो जसमा **request hot path** र **control/intelligence plane** छन्। hot path छिटो, मेमोरी-कुशल, asynchronous, resilient र पूर्वानुमानयोग्य रहनुपर्छ। मूल्याङ्कन, गुणस्तर स्कोरिङ, प्रयोगहरू र ऐतिहासिक विश्लेषण control plane अन्तर्गत पर्छन्।
+67router एउटा data plane हो जसमा **request hot path** र **control/intelligence plane** छन्। hot path छिटो, मेमोरी-कुशल, asynchronous, resilient र पूर्वानुमानयोग्य रहनुपर्छ। मूल्याङ्कन, गुणस्तर स्कोरिङ, प्रयोगहरू र ऐतिहासिक विश्लेषण control plane अन्तर्गत पर्छन्।
 
 ```
 AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (छिटो, sync, in-memory)
+│    67router        │   data plane (छिटो, sync, in-memory)
 │  राउटिङ / failover  │
 │  health / guardrail │
 │  cache / streaming  │
@@ -219,7 +219,7 @@ OTel सङ्कद्वारा GenAI/OmniRoute स्प्यान एट
   `@opentelemetry/*` SDK प्रयोग गर्दैन)।
 - स्प्यानहरूले GenAI सिमान्टिक कन्भेन्सनहरू (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) का साथै OmniRoute राउटिङ
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) का साथै 67router राउटिङ
   एट्रिब्युटहरू (नतिजा, स्थिति, ttft, पुनःप्रयास, फलब्याक) पालना गर्छन्।
 - `record()` ले सीमित बफरमा मात्र क्यु गर्छ (O(1)); ब्याकग्राउन्ड टाइमरले
   `POST {endpoint}/v1/traces` मार्फत एसिन्क्रोनस रूपमा फ्लस गर्छ। ओभरलोड हुँदा
@@ -241,7 +241,7 @@ OTel सङ्कद्वारा GenAI/OmniRoute स्प्यान एट
 
 ## 6. मूल्याङ्कन-प्लेन एकीकरण (Future AGI तत्परता)
 
-OmniRoute ले Future AGI (वा कुनै पनि मूल्याङ्कनकर्तालाई) **सम्भावित
+67router ले Future AGI (वा कुनै पनि मूल्याङ्कनकर्तालाई) **सम्भावित
 इन्टेलिजेन्स/मूल्याङ्कन ब्याकएन्डका रूपमा लिन्छ, निर्भरताका रूपमा होइन**। एकीकरणका सीमहरू:
 
 - `RoutingEventSink` ले इभेन्टहरू एसिन्क्रोनस रूपमा मूल्याङ्कनकर्तातर्फ फर्वार्ड गर्न सक्छ।

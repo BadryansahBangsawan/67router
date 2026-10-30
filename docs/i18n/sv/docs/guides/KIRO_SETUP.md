@@ -4,7 +4,7 @@
 
 ---
 
-Den här guiden beskriver hur du lägger till Kiro-konton (en AWS-baserad AI-kodningsassistent) i OmniRoute,
+Den här guiden beskriver hur du lägger till Kiro-konton (en AWS-baserad AI-kodningsassistent) i 67router,
 med fokus på att köra flera konton samtidigt utan sessionskonflikter.
 
 ---
@@ -22,10 +22,10 @@ det första kontots token.
 
 ---
 
-## Så löser OmniRoute detta (v3.8.0+)
+## Så löser 67router detta (v3.8.0+)
 
-Från och med v3.8.0 anropar OmniRoute `registerClient()` (AWS SSO OIDC) vid varje
-import av en Kiro-anslutning. Detta ger varje OmniRoute-anslutning en egen dedikerad
+Från och med v3.8.0 anropar 67router `registerClient()` (AWS SSO OIDC) vid varje
+import av en Kiro-anslutning. Detta ger varje 67router-anslutning en egen dedikerad
 OIDC-klientregistrering. Eftersom varje klientregistrering är oberoende påverkar
 uppdatering eller omautentisering av ett konto inte något annat kontos uppdateringstoken.
 
@@ -59,7 +59,7 @@ automatiskt en egen klientregistrering.
 
 ### Förutsättningar
 
-- OmniRoute v3.8.0 eller senare.
+- 67router v3.8.0 eller senare.
 - Ett fungerande Kiro-konto (e-postadress + lösenord eller inloggning med Google eller GitHub).
 - Valfritt ett andra Kiro-konto.
 
@@ -70,7 +70,7 @@ automatiskt en egen klientregistrering.
    - **Importera token** — klistra in en uppdateringstoken som börjar med `aorAAAAAG`.
    - **API-nyckel** — klistra in en långlivad Kiro-/CodeWhisperer-API-nyckel.
    - **Google-/GitHub-inloggning** — slutför OAuth-flödet i webbläsaren.
-   - **Automatisk import** — klicka på knappen; OmniRoute läser autentiseringsuppgifterna från den
+   - **Automatisk import** — klicka på knappen; 67router läser autentiseringsuppgifterna från den
      lokala kiro-cli-databasen eller `~/.aws/sso/cache`.
 3. Anslutningen sparas. Flöden med uppdateringstoken registrerar automatiskt en dedikerad
    OIDC-klient. Flöden med API-nyckel validerar nyckeln mot AWS och lagrar ingen uppdateringstoken.
@@ -127,7 +127,7 @@ inte OAuth-uppdatering och undviker därför att delade OIDC-sessioner ogiltigf�
 2. Välj **API-nyckel**.
 3. Klistra in API-nyckeln och välj AWS-region: **Identifiera automatiskt** (standard), **USA, östra
    (Norra Virginia)** eller **Europa (Frankfurt)**.
-4. OmniRoute validerar nyckeln och sparar anslutningen låst till den region där
+4. 67router validerar nyckeln och sparar anslutningen låst till den region där
    nyckeln fungerar.
 
 ### API
@@ -177,7 +177,7 @@ till `https://q.<region>.amazonaws.com/generateAssistantResponse` — inklusive 
 ## OIDC-klientens giltighetstid
 
 Offentliga AWS SSO OIDC-klienter upphör vanligtvis att gälla efter 90 dagar
-(`clientSecretExpiresAt`). OmniRoute lagrar denna tidsstämpel i `providerSpecificData`
+(`clientSecretExpiresAt`). 67router lagrar denna tidsstämpel i `providerSpecificData`
 för observerbarhet. Om en anslutning slutar uppdateras efter cirka 90 dagar ska du återimportera
 anslutningen för att få en ny OIDC-klientregistrering. Automatisk omregistrering när
 giltighetstiden löper ut är planerad som en framtida förbättring.
@@ -198,7 +198,7 @@ via AWS SSO OIDC.
 ### Importen misslyckas med "Token validation failed"
 
 - Kontrollera att uppdateringstoken börjar med `aorAAAAAG`.
-- Kontrollera att OmniRoute kan nå `https://oidc.us-east-1.amazonaws.com` (eller den konfigurerade
+- Kontrollera att 67router kan nå `https://oidc.us-east-1.amazonaws.com` (eller den konfigurerade
   regionen). Om du befinner dig bakom en företagsproxy anger du en proxy på leverantörsnivå i
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ via AWS SSO OIDC.
 
 - Bekräfta att nyckeln är en API-nyckel för Kiro/CodeWhisperer och inte en uppdateringstoken.
 - Bekräfta att AWS-regionen matchar nyckeln/kontot. `us-east-1` är standardvärdet.
-- Nyckeln måste kunna anropa `ListAvailableProfiles`; annars kan OmniRoute inte
+- Nyckeln måste kunna anropa `ListAvailableProfiles`; annars kan 67router inte
   hämta det `profileArn` som krävs.
 
 För andra problem, se den huvudsakliga filen [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

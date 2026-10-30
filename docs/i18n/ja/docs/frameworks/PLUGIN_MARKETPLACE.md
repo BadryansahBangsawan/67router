@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **最終更新:** 2026-06-28 — v3.8.40
 
-OmniRoute には、WordPress 形式のプラグインシステムが搭載されています。プラグインは自己完結型の
+67router には、WordPress 形式のプラグインシステムが搭載されています。プラグインは自己完結型の
 ディレクトリであり、それぞれに `plugin.json` マニフェストとエントリーファイルが含まれます。プラグインは、
 リクエストパイプライン（`onRequest` / `onResponse` / `onError`）と、
 ライフサイクルイベント（`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`）に
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### プラグインディレクトリ
 
-プラグインは OmniRoute のデータディレクトリ配下に配置されます。
+プラグインは 67router のデータディレクトリ配下に配置されます。
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

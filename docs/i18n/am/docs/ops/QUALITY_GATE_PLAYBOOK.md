@@ -4,7 +4,7 @@
 
 ---
 
-> **ይህ ሰነድ ምንድን ነው።** የOmniRoute የጥራት-በር ስርዓት ወሳኝ ግምገማ፣
+> **ይህ ሰነድ ምንድን ነው።** የ67router የጥራት-በር ስርዓት ወሳኝ ግምገማ፣
 > ከኢንዱስትሪው ምርጥ ልምዶች ጋር የተነጻጸረ፣ **በተጨማሪም** የሁሉም የጥራት
 > ማረጋገጫ ነጥቦች አጠቃላይ ዝርዝር እና ተመሳሳይ ስርዓትን
 > በማንኛውም ፕሮጀክት ላይ ለመተግበር **ከመሣሪያ ያልተገደበ የማባዛት ዕቅድ**። በ2026-06-16 ከትክክለኛው የrepository ሁኔታ (ከትውስታ ሳይሆን) የተፈጠረ።
@@ -101,62 +101,62 @@
 
 ### 1. ቅጥ እና ቅርጸት (ውጤቱ የማይለዋወጥ፣ ፈጣን)
 
-- **OmniRoute:** Prettier + ESLint በ lint-staged (pre-commit) በኩል፣ 2-spaces/double-quotes/100col።
+- **67router:** Prettier + ESLint በ lint-staged (pre-commit) በኩል፣ 2-spaces/double-quotes/100col።
 - **አጠቃላይ:** በራስ-ሰር ሊያስተካክል የሚችል አንድ formatter + አንድ linter፣ በ staged files ላይ በ pre-commit የሚሠሩ።
 
 ### 2. ዓይነቶች
 
-- **OmniRoute:** `typecheck:core` (አጋጅ) + `typecheck:noimplicit:core` (አማካሪ) + `type-coverage` ratchet 92.17% + የእያንዳንዱ ፋይል any-budget።
+- **67router:** `typecheck:core` (አጋጅ) + `typecheck:noimplicit:core` (አማካሪ) + `type-coverage` ratchet 92.17% + የእያንዳንዱ ፋይል any-budget።
 - **አጠቃላይ:** በ CI ውስጥ ጥብቅ typecheck + ወደኋላ እንዳይመለስ የተገደበ type-coverage መለኪያ + የእያንዳንዱ ፋይል `any`/escape-hatch በጀት።
 
 ### 3. ሙከራዎች (ጥንካሬ)
 
-- **OmniRoute:** 2 የማይደራረቡ runners (Node native + vitest)፣ 8 shards፣ አጠቃላይ coverage 60/60/60/60 + ratchet ~76% + **ለወሳኝ modules 8 የእያንዳንዱ module ዝቅተኛ ወሰኖች** + የምሽት property tests + የምሽት **mutation testing**።
+- **67router:** 2 የማይደራረቡ runners (Node native + vitest)፣ 8 shards፣ አጠቃላይ coverage 60/60/60/60 + ratchet ~76% + **ለወሳኝ modules 8 የእያንዳንዱ module ዝቅተኛ ወሰኖች** + የምሽት property tests + የምሽት **mutation testing**።
 - **አጠቃላይ:** test runner(s) + **ፍጹም** coverage ዝቅተኛ ወሰን (ዜሮ እንዳይሆን) + coverage **ratchet** (ወደኋላ እንዳይመለስ) + **ከፍተኛ አደጋ ላለው ኮድ የእያንዳንዱ module ዝቅተኛ ወሰኖች** (የGoodhart ችግርን ለመከላከል) + ለንጹሕ logic property-based ሙከራ + የሙከራ ጥራት ትክክለኛ መለኪያ የሆነ የምሽት **mutation testing**።
 
 ### 4. የሙከራ ፖሊሲ (ሥርዓቱን እንዳይጭበረበር)
 
-- **OmniRoute:** `pr-test-policy` (የምርት ኮድ ሙከራ ይፈልጋል)፣ `check-test-masking` (የተዳከሙ asserts ያግዳል)፣ `pr-evidence` (የስኬት መግለጫ የማስረጃ block ይፈልጋል)፣ `test-discovery` (እያንዳንዱ ሙከራ በ runner እንዲሰበሰብ ያደርጋል)።
+- **67router:** `pr-test-policy` (የምርት ኮድ ሙከራ ይፈልጋል)፣ `check-test-masking` (የተዳከሙ asserts ያግዳል)፣ `pr-evidence` (የስኬት መግለጫ የማስረጃ block ይፈልጋል)፣ `test-discovery` (እያንዳንዱ ሙከራ በ runner እንዲሰበሰብ ያደርጋል)።
 - **አጠቃላይ:** "አዲስ ኮድ ⇒ አዲስ ሙከራ" gate + assert-removed/tautology detector + የማስረጃ መስፈርት (TDD ወይም living test) + ከ globs ውጭ የተተወ ሙከራ እንዳይኖር ዋስትና።
 
 ### 5. ውስብስብነት እና የኮድ ጤንነት (ratchets)
 
-- **OmniRoute:** ESLint-warnings (3769↓)፣ jscpd duplication (5.72%↓)፣ cyclomatic+max-lines complexity (1800↓)፣ cognitive complexity sonarjs (753↓)፣ dead-code/unused-exports knip (339↓)፣ የእያንዳንዱ ፋይል file-size (የተቆለፈ፣ መቀነስ ብቻ)፣ circular-deps (ብጁ Tarjan፣ አጋጅ)።
+- **67router:** ESLint-warnings (3769↓)፣ jscpd duplication (5.72%↓)፣ cyclomatic+max-lines complexity (1800↓)፣ cognitive complexity sonarjs (753↓)፣ dead-code/unused-exports knip (339↓)፣ የእያንዳንዱ ፋይል file-size (የተቆለፈ፣ መቀነስ ብቻ)፣ circular-deps (ብጁ Tarjan፣ አጋጅ)።
 - **አጠቃላይ:** እያንዳንዱን የጤንነት መለኪያ ratchet ማድረግ (ማስጠንቀቂያዎች፣ ድግግሞሽ፣ cyclomatic **እና** cognitive complexity፣ dead code፣ file size፣ import cycles)። አቅጣጫው ሁልጊዜ "ወደኋላ አትመለስ" ነው።
 
 ### 6. የማይንቀሳቀስ ደኅንነት (SAST + ሚስጥሮች)
 
-- **OmniRoute:** CodeQL (ratchet alerts = 0)፣ gitleaks (`[extend] useDefault=true` — ወሳኝ!)፣ SonarQube፣ ብጁ የደኅንነት ደንቦች (public-creds፣ error-helper፣ route-guard-membership፣ route-validation)።
+- **67router:** CodeQL (ratchet alerts = 0)፣ gitleaks (`[extend] useDefault=true` — ወሳኝ!)፣ SonarQube፣ ብጁ የደኅንነት ደንቦች (public-creds፣ error-helper፣ route-guard-membership፣ route-validation)።
 - **አጠቃላይ:** SAST (CodeQL/Sonar/semgrep) ከ alert ratchet ጋር + **የተወረሰ default ruleset** ያለው secrets scanner (default ን የሚተካ custom config = እውርነት) + ለፕሮጀክቱ የተለዩ Hard Rule የደኅንነት gates።
 
 ### 7. የአቅርቦት ሰንሰለት (ጥገኞች)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)፣ license-checker (SPDX allowlist)፣ lockfile-lint (HTTPS+sha512+registry)፣ `check-deps` anti-slopsquatting (allowlist + ዕድሜ ≥72h)።
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA)፣ license-checker (SPDX allowlist)፣ lockfile-lint (HTTPS+sha512+registry)፣ `check-deps` anti-slopsquatting (allowlist + ዕድሜ ≥72h)።
 - **አጠቃላይ:** ከብዙ ምንጮች የሚመጣ SCA + license allowlist + lockfile integrity check + የዕድሜ/typosquatting ማረጋገጫ ያለው dependency allowlist + ዝማኔዎችን በቡድን የሚያቀርብ bot።
 
 ### 8. የአቅርቦት ሰንሰለት (ግንባታ እና ልቀት)
 
-- **OmniRoute:** SBOM (CycloneDX + syft)፣ SLSA provenance (`--provenance`)፣ OpenSSF Scorecard (በየሳምንቱ)፣ workflow ማጠናከር (zizmor: artipacked→`persist-credentials:false`፣ cache-poisoning፣ token-permissions)።
+- **67router:** SBOM (CycloneDX + syft)፣ SLSA provenance (`--provenance`)፣ OpenSSF Scorecard (በየሳምንቱ)፣ workflow ማጠናከር (zizmor: artipacked→`persist-credentials:false`፣ cache-poisoning፣ token-permissions)።
 - **አጠቃላይ:** በ publish ጊዜ SBOM ማመንጨት + የተፈረመ provenance (SLSA L2+) + በመርሐግብር የሚሠራ Scorecard + ሁሉንም workflows ማጠናከር (ዝቅተኛ-መብት tokens፣ non-pusher checkout ላይ የተቀመጡ credentials እንዳይኖሩ፣ actions በ SHA እንዲቆለፉ)።
 
 ### 9. ውሎች እና API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI)፣ schemathesis (የምሽት contract fuzz)፣ openapi-coverage (% የተመዘገቡ routes፣ ratchet 38.3%)፣ openapi-security-tiers (spec ከ route-guard ጋር)።
+- **67router:** oasdiff (breaking-change OpenAPI)፣ schemathesis (የምሽት contract fuzz)፣ openapi-coverage (% የተመዘገቡ routes፣ ratchet 38.3%)፣ openapi-security-tiers (spec ከ route-guard ጋር)።
 - **አጠቃላይ:** breaking-change contract diff (oasdiff/buf) + በ spec ላይ የሚደረግ property-based fuzz (schemathesis) + ወደኋላ እንዳይመለስ የተገደበ የሰነድ coverage + spec↔code ወጥነት።
 
 ### 10. ሰነዶች እና i18n (እንዳያረጁ)
 
-- **OmniRoute:** docs-sync (የተንጸባረቁ versions)፣ docs-counts-sync (በሰነዶች ውስጥ ያሉ numbers ከ code ጋር)፣ env-doc-sync፣ doc-links፣ fabricated-docs፣ cli-i18n፣ i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)።
+- **67router:** docs-sync (የተንጸባረቁ versions)፣ docs-counts-sync (በሰነዶች ውስጥ ያሉ numbers ከ code ጋር)፣ env-doc-sync፣ doc-links፣ fabricated-docs፣ cli-i18n፣ i18n-ui-coverage (`--threshold=65` + ratchet 80.1%)።
 - **አጠቃላይ:** versions/counts/env-vars በ docs እና code መካከል ማመሳሰል (gate እንጂ መተማመን አይደለም) + internal links ማረጋገጥ + ወደኋላ እንዳይመለስ የተገደበ i18n coverage።
 
 ### 11. ቅዠትን መከላከል / ወጥነት (እምብዛም የማይገኘው ምድብ)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ በእውን ያለ symbol)፣ provider-consistency፣ fetch-targets (client fetch ⇒ በእውን ያለ route)፣ docs-symbols፣ db-rules (Hard Rules #2/#5)፣ migration-numbering።
+- **67router:** known-symbols (string dispatch ⇒ በእውን ያለ symbol)፣ provider-consistency፣ fetch-targets (client fetch ⇒ በእውን ያለ route)፣ docs-symbols፣ db-rules (Hard Rules #2/#5)፣ migration-numbering።
 - **አጠቃላይ:** ለእያንዳንዱ "የተደገመ የእውነት ምንጭ" (registry፣ string dispatch፣ cross-layer references)፣ ሁለቱ ወገኖች እንደሚዛመዱ የሚያረጋግጥ gate። typecheck/test የማይይዙትን መበላሸት ይይዛል።
 
 ### 12. የመቋቋም ችሎታ እና ዶሜይን (ለምርቱ የተለየ)
 
-- **OmniRoute:** chaos (fault-injection)፣ heap-growth (leak)፣ k6 (soak)፣ promptfoo+garak (LLM red-team OWASP LLM Top 10)፣ 3ቱ የመቋቋም ችሎታ ሕጎች (circuit-breaker/cooldown/lockout)።
+- **67router:** chaos (fault-injection)፣ heap-growth (leak)፣ k6 (soak)፣ promptfoo+garak (LLM red-team OWASP LLM Top 10)፣ 3ቱ የመቋቋም ችሎታ ሕጎች (circuit-breaker/cooldown/lockout)።
 - **አጠቃላይ:** የ**እርስዎን** ዶሜይን የብልሽት ሁኔታዎች ለይተው ለእያንዳንዳቸው gate (የምሽት ቢሆንም እንኳ) ይኑርዎት። ለ AI apps፦ injection red-team። ለ distributed systems፦ chaos + leak + soak።
 
 ---

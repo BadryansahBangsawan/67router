@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` zpřístupní celý váš katalog OmniRoute — modely, komba a
+`@omniroute/opencode-plugin-v2` zpřístupní celý váš katalog 67router — modely, komba a
 automatická komba — ve výběru modelů OpenCode v2, včetně zobrazovaných názvů, cen a
 limitů bezplatné úrovně.
 
@@ -15,7 +15,7 @@ nic mezi nimi není sdíleno, takže aktualizace jednoho nikdy nevynutí aktuali
 ## Požadavky
 
 - OpenCode v2.
-- Dostupná brána OmniRoute (ve výchozím nastavení `http://localhost:20128`).
+- Dostupná brána 67router (ve výchozím nastavení `http://localhost:20128`).
 - Node.js 22 nebo 24.
 
 ## Instalace
@@ -78,7 +78,7 @@ zobrazí varování s názvem endpointu a informací o tom, co chybí — zhorš
 | `baseURL`                        | povinné                                                | Kořenová adresa brány, pouze `http(s)`; přípona `/v1` se přidává podle potřeby                                                             |
 | `apiKey`                         | připojené přihlašovací údaje, poté `OMNIROUTE_API_KEY` | Klíč pro chat pro `/v1/*`                                                                                                                  |
 | `managementReadToken`            | použije `apiKey` jako záložní hodnotu                  | Klíč pro `/api/*` — obvykle **nejde** o stejný klíč                                                                                        |
-| `displayName`                    | `"OmniRoute"`                                          | Název poskytovatele ve výběru                                                                                                              |
+| `displayName`                    | `"67router"`                                           | Název poskytovatele ve výběru                                                                                                              |
 | `timeoutMs`                      | `10000`                                                | Časový limit načítání pro jednotlivé koncové body (automatické kombinace používají 5 s)                                                    |
 | `modelCacheTtlMs`                | `300000`                                               | TTL mezipaměti katalogu; snímek na disku urychluje studené starty                                                                          |
 | `timeouts`                       | použije `timeoutMs` jako záložní hodnotu               | Časové limity jednotlivých koncových bodů v ms: `models`, `combos`, `autoCombos`, `enrichment`                                             |
@@ -116,7 +116,7 @@ Tuto funkci lze vypnout nastavením `"geminiSanitization": false`.
 
 | Příznak                                                         | Příčina                                                                                                                             |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Výběr nezobrazuje žádný model OmniRoute                         | Nebyl nalezen žádný klíč (zkontrolujte varování při spuštění) nebo je brána nedostupná                                              |
+| Výběr nezobrazuje žádný model 67router                          | Nebyl nalezen žádný klíč (zkontrolujte varování při spuštění) nebo je brána nedostupná                                              |
 | Nezpracované identifikátory modelů, žádné kombinace, žádné ceny | Koncové body správy odmítly token — nastavte `managementReadToken`                                                                  |
 | Krátký nebo prázdný katalog `freeOnly`                          | Chybí token pro správu nebo byl token odmítnut — přečtěte si souhrnný řádek obnovení (počet `unmatched-free`) v protokolu hostitele |
 | Relace připnutá k `opencode-<id>/…`                             | Plugin v1 publikoval `opencode-<id>`; v2 publikuje pouze `<id>`, proto znovu vyberte model pod `<id>/…`                             |

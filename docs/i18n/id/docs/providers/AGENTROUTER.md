@@ -12,7 +12,7 @@ tertentu, flag `anthropic-beta`, header SDK Stainless, dan sebagainya).
 
 ## Mulai cepat — gunakan penyedia native `agentrouter` (direkomendasikan)
 
-Bagi sebagian besar pengguna, **tidak diperlukan penyiapan khusus**. OmniRoute menyertakan
+Bagi sebagian besar pengguna, **tidak diperlukan penyiapan khusus**. 67router menyertakan
 penyedia bawaan `agentrouter` dengan wire image Claude Code lengkap yang sudah terintegrasi (lihat
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Untuk menggunakannya:
 
@@ -34,7 +34,7 @@ URL dasar, jalur chat, atau kumpulan header.
 
 ## Lanjutan: menghubungkan melalui jenis penyedia yang kompatibel dengan Claude Code
 
-OmniRoute juga mendukung AgentRouter (dan relay serupa) melalui jenis penyedia **yang
+67router juga mendukung AgentRouter (dan relay serupa) melalui jenis penyedia **yang
 kompatibel dengan Claude Code** (`anthropic-compatible-cc-*`), yang berkomunikasi menggunakan
 Anthropic Messages API dengan wire image yang benar. Penyedia generik
 `openai-compatible-chat` yang diarahkan ke `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Akun dan kunci API AgentRouter. Pendaftaran baru mendapatkan kredit gratis melalui tautan afiliasi
   dalam [README](../README.md) proyek.
-- OmniRoute berjalan dengan flag fitur `ENABLE_CC_COMPATIBLE_PROVIDER` yang diaktifkan
+- 67router berjalan dengan flag fitur `ENABLE_CC_COMPATIBLE_PROVIDER` yang diaktifkan
   (lihat di bawah).
 
 ## 1. Aktifkan jenis penyedia yang kompatibel dengan CC
 
 Jenis penyedia yang kompatibel dengan Claude Code berada di balik flag fitur karena
 mengirimkan lalu lintas yang sangat menyerupai klien resmi Claude Code. Aktifkan dengan
-menetapkan variabel lingkungan sebelum memulai OmniRoute:
+menetapkan variabel lingkungan sebelum memulai 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

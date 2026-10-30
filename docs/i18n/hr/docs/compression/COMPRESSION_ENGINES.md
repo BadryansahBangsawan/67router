@@ -4,7 +4,7 @@
 
 ---
 
-Kompresija u OmniRouteu temelji se na ugovorima mehanizama. Način rada može izravno pokretati jedan mehanizam
+Kompresija u 67routeru temelji se na ugovorima mehanizama. Način rada može izravno pokretati jedan mehanizam
 (`caveman` ili `rtk`) ili deterministički složeni cjevovod koji redom izvršava više mehanizama.
 
 ## Načini rada
@@ -43,9 +43,9 @@ nije akumulirala povijest staje na `below_min_chars` i mehanizam ne transformira
 Zato je zadana postavka `aggressive`, a ne najsigurniji profil.
 
 Paket rješava vlastiti opseg modela i profil iz svoje konfiguracije okruženja.
-OmniRoute nikada ne delegira odluku: adapter fiksira pristup modelu na najrestriktivniji
+67router nikada ne delegira odluku: adapter fiksira pristup modelu na najrestriktivniji
 opseg paketa, tako da postavke host okruženja mogu samo suziti dopuštenu listu, nikada je
-proširiti izvan OmniRouteovih izmjerenih računa.
+proširiti izvan 67routerovih izmjerenih računa.
 
 ## Registar mehanizama
 
@@ -109,7 +109,7 @@ Način rada Caveman usmjeren je na semantičko sažimanje obične proze:
 Površina nadzorne ploče nalazi se na `Dashboard -> Context & Cache -> Caveman`.
 
 Izvorni Caveman navodi `~75%` manje izlaznih tokena, prosječnu uštedu izlaza od `65%` u referentnim testovima
-s rasponom od `22-87%` te alat za kompresiju ulaza od `~46%`. OmniRoute upotrebljava broj
+s rasponom od `22-87%` te alat za kompresiju ulaza od `~46%`. 67router upotrebljava broj
 za ulaznu kompresiju Cavemana pri dokumentiranju kombiniranih ušteda na upitima/kontekstu; izlazni način
 Cavemana ostaje zasebna značajka ponašanja odgovora.
 

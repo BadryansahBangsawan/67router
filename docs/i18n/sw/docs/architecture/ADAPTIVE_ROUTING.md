@@ -5,7 +5,7 @@
 ---
 
 Hati hii inaelezea msingi wa uelekezaji unaobadilika kulingana na mrejesho ulioongezwa kwenye
-OmniRoute. Umewekwa mdogo kimakusudi: unaanzisha mkondo wa matokeo ya uelekezaji
+67router. Umewekwa mdogo kimakusudi: unaanzisha mkondo wa matokeo ya uelekezaji
 wenye aina zilizobainishwa, ishara ya ubora ya wakati halisi inayolisha kikokotoaji kilichopo cha auto-combo,
 kisafirishaji cha hiari cha OpenTelemetry, na endpoint ya ufafanuzi. **Haubadilishi**
 mfumo uliopo wa ustahimilivu (circuit breaker, connection cooldown,
@@ -13,7 +13,7 @@ model lockout, health matrix, autopilot) — unaukamilisha.
 
 ## 1. Muktadha wa usanifu
 
-OmniRoute ni data plane yenye **njia kuu ya maombi** na **control/intelligence
+67router ni data plane yenye **njia kuu ya maombi** na **control/intelligence
 plane**. Njia kuu lazima ibaki ya haraka, yenye matumizi bora ya kumbukumbu, asynchronous, stahimilivu na
 inayotabirika. Tathmini, ukadiriaji wa ubora, majaribio na uchanganuzi wa kihistoria ni
 sehemu ya control plane.
@@ -23,7 +23,7 @@ Ajenti ya AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (haraka, sync, ndani ya kumbukumbu)
+│    67router        │   data plane (haraka, sync, ndani ya kumbukumbu)
 │  uelekezaji / failover │
 │  afya / guardrail   │
 │  cache / streaming  │
@@ -234,7 +234,7 @@ Faili: `open-sse/services/routing/otel.ts`
 - Span hufuata kanuni za kisemantiki za GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) pamoja na sifa za uelekezaji za
-  OmniRoute (matokeo, hali, ttft, majaribio ya kurudia, njia mbadala).
+  67router (matokeo, hali, ttft, majaribio ya kurudia, njia mbadala).
 - `record()` huingiza tu kwenye bafa yenye kikomo (O(1)); kipima muda cha usuli
   hutuma kwa `POST {endpoint}/v1/traces` kwa njia isiyosawazishwa. Wakati wa mzigo kupita kiasi,
   matukio ya zamani zaidi huondolewa (kihesabu cha `dropped`) — kamwe haitoi shinikizo la nyuma kwenye
@@ -255,7 +255,7 @@ Faili: `open-sse/services/routing/otel.ts`
 
 ## 6. Ujumuishaji wa safu ya tathmini (utayari kwa Future AGI)
 
-OmniRoute huchukulia Future AGI (au mtathmini yeyote) kama **sehemu ya nyuma inayowezekana ya
+67router huchukulia Future AGI (au mtathmini yeyote) kama **sehemu ya nyuma inayowezekana ya
 akili/tathmini, si utegemezi**. Sehemu za ujumuishaji ni:
 
 - `RoutingEventSink` inaweza kutuma matukio kwa mtathmini kwa njia isiyosawazishwa.

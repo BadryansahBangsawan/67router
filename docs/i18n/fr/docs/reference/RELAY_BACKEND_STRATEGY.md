@@ -6,7 +6,7 @@
 
 ## Résumé
 
-OmniRoute prend désormais en charge trois modes de relais pour `/api/v1/relay/chat/completions` :
+67router prend désormais en charge trois modes de relais pour `/api/v1/relay/chat/completions` :
 
 - `ts` : utilise le relais TypeScript au sein du processus.
 - `bifrost` : impose l’utilisation de la passerelle Bifrost.
@@ -45,12 +45,12 @@ Si vous comparez actuellement 9router et CLIPROXYAPI :
 
 ## Contrat de frontière du backend
 
-La frontière stable du produit est l’API de relais OmniRoute, et non l’implémentation du tableau de bord. Le tableau de bord Next.js peut installer, configurer et superviser des services locaux, mais le routage des requêtes doit passer par l’API de relais, puis être transféré derrière cette frontière.
+La frontière stable du produit est l’API de relais 67router, et non l’implémentation du tableau de bord. Le tableau de bord Next.js peut installer, configurer et superviser des services locaux, mais le routage des requêtes doit passer par l’API de relais, puis être transféré derrière cette frontière.
 
 Choix de backend à long terme :
 
 - Conservez le relais TypeScript comme chemin intégré au processus pour les politiques et le repli. L’authentification, les listes d’autorisation, la normalisation des requêtes, la comptabilisation et les contrôles de sécurité restent ici avant tout transfert vers un backend.
-- Utilisez Bifrost comme processus auxiliaire Tier-1 privilégié à haut débit lorsque le déploiement nécessite une variabilité de routage plus faible, une rotation centralisée des fournisseurs ou une mise à l’échelle sur plusieurs réplicas OmniRoute.
+- Utilisez Bifrost comme processus auxiliaire Tier-1 privilégié à haut débit lorsque le déploiement nécessite une variabilité de routage plus faible, une rotation centralisée des fournisseurs ou une mise à l’échelle sur plusieurs réplicas 67router.
 - Conservez 9router et CLIPROXYAPI comme services de compatibilité intégrés. Ils s’exécutent comme des processus locaux supervisés et sont utiles lorsque leur comportement de fournisseur ou de CLI constitue l’adaptateur souhaité, mais ils ne doivent pas devenir le moteur de routage Tier-1 par défaut.
 - Ne permettez pas au tableau de bord de transmettre des URL de service arbitraires au chemin critique. Les URL fournies par l’interface utilisateur sont des entrées de configuration ; le code de routage doit résoudre les backends enregistrés et contrôlés par des vérifications d’état à partir des paramètres côté serveur et de l’état du superviseur.
 - Privilégiez actuellement HTTP sur l’interface de bouclage pour les services supervisés, car les processus gérés exposent déjà des API compatibles HTTP, le garde de route peut auditer la frontière, et le comportement en cas d’échec ou de repli est visible dans les journaux de requêtes. L’ajout futur d’un transport par SDK ou socket ne se justifierait que s’il réduisait de manière mesurable la latence de routage p99 sans affaiblir l’isolation ni la sémantique de repli.

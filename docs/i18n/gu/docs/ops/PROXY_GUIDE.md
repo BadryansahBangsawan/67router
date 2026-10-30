@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (ગુજરાતી)
+# 🌐 67router Proxy Guide (ગુજરાતી)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **ભૌગોલિક અવરોધોને બાયપાસ કરો, તમારી ઓળખ સુરક્ષિત રાખો અને AI ટ્રાફિકને કોઈપણ પ્રોક્સી મારફતે રૂટ કરો — રૂપરેખાંકનની જટિલતા વિના.**
 
-OmniRouteમાં સંપૂર્ણ સુવિધાયુક્ત પ્રોક્સી વ્યવસ્થાપન સિસ્ટમ સામેલ છે, જે તમને અપસ્ટ્રીમ AI પ્રદાતાનો ટ્રાફિક HTTP, HTTPS અથવા SOCKS5 પ્રોક્સી મારફતે રૂટ કરવાની સુવિધા આપે છે. તમે અવરોધિત પ્રદેશમાં હો, IP રોટેશનની જરૂર હોય અથવા સ્ટેલ્થ ફિંગરપ્રિન્ટિંગ ઇચ્છતા હો — આ માર્ગદર્શિકા બધું આવરી લે છે.
+67routerમાં સંપૂર્ણ સુવિધાયુક્ત પ્રોક્સી વ્યવસ્થાપન સિસ્ટમ સામેલ છે, જે તમને અપસ્ટ્રીમ AI પ્રદાતાનો ટ્રાફિક HTTP, HTTPS અથવા SOCKS5 પ્રોક્સી મારફતે રૂટ કરવાની સુવિધા આપે છે. તમે અવરોધિત પ્રદેશમાં હો, IP રોટેશનની જરૂર હોય અથવા સ્ટેલ્થ ફિંગરપ્રિન્ટિંગ ઇચ્છતા હો — આ માર્ગદર્શિકા બધું આવરી લે છે.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute સર્વર                        │
+│                       67router સર્વર                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ પ્રોક્સી      │    │ પ્રોક્સી       │    │ પ્રોક્સી           │  │
@@ -82,7 +82,7 @@ unsupported_country_region_territory
 
 ## 4-સ્તરીય પ્રોક્સી સિસ્ટમ
 
-OmniRoute **ચાર સ્વતંત્ર કાર્યક્ષેત્રો** પર પ્રોક્સી કૉન્ફિગરેશનને સપોર્ટ કરે છે, જે પ્રાથમિકતાના ક્રમમાં નિર્ધારિત થાય છે:
+67router **ચાર સ્વતંત્ર કાર્યક્ષેત્રો** પર પ્રોક્સી કૉન્ફિગરેશનને સપોર્ટ કરે છે, જે પ્રાથમિકતાના ક્રમમાં નિર્ધારિત થાય છે:
 
 ```
 પ્રાથમિકતા નિર્ધારણનો ક્રમ (સૌથી વધુ → સૌથી ઓછો):
@@ -95,7 +95,7 @@ OmniRoute **ચાર સ્વતંત્ર કાર્યક્ષેત્
 
 ### નિર્ધારણ કેવી રીતે કાર્ય કરે છે
 
-જ્યારે OmniRoute કોઈ અપસ્ટ્રીમ પ્રોવાઇડરને વિનંતી મોકલે છે, ત્યારે તે `resolveProxyForConnectionFromRegistry()`ને કૉલ કરે છે, જે દરેક સ્તરને ક્રમ અનુસાર તપાસે છે:
+જ્યારે 67router કોઈ અપસ્ટ્રીમ પ્રોવાઇડરને વિનંતી મોકલે છે, ત્યારે તે `resolveProxyForConnectionFromRegistry()`ને કૉલ કરે છે, જે દરેક સ્તરને ક્રમ અનુસાર તપાસે છે:
 
 1. **એકાઉન્ટ-સ્તર** — શું આ ચોક્કસ કનેક્શન IDને કોઈ પ્રોક્સી સોંપવામાં આવી છે?
 2. **પ્રોવાઇડર-સ્તર** — શું આ પ્રોવાઇડર (દા.ત., `openai`)ને કોઈ પ્રોક્સી સોંપવામાં આવી છે?
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### આયાત/નિકાસ
 
-પ્રોક્સીઓનો સમાવેશ **બૅકઅપ/રિસ્ટોર** સિસ્ટમમાં થાય છે. જ્યારે તમે તમારું OmniRoute કૉન્ફિગરેશન નિકાસ કરો છો:
+પ્રોક્સીઓનો સમાવેશ **બૅકઅપ/રિસ્ટોર** સિસ્ટમમાં થાય છે. જ્યારે તમે તમારું 67router કૉન્ફિગરેશન નિકાસ કરો છો:
 
 1. **Dashboard → Settings → Backup** પર જાઓ
 2. **Export** પર ક્લિક કરો — પ્રોક્સી રજિસ્ટ્રી અને સોંપણીઓનો સમાવેશ થાય છે
@@ -247,7 +247,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### લેગસી માઇગ્રેશન
 
-જો તમે જૂના સંસ્કરણમાં (રજિસ્ટ્રી પહેલાં) પ્રોક્સીઓ ગોઠવી હોય, તો OmniRoute તેમને આપમેળે સ્થાનાંતરિત કરે છે:
+જો તમે જૂના સંસ્કરણમાં (રજિસ્ટ્રી પહેલાં) પ્રોક્સીઓ ગોઠવી હોય, તો 67router તેમને આપમેળે સ્થાનાંતરિત કરે છે:
 
 ```
 Legacy key_value store → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ Legacy key_value store → proxy_registry + proxy_assignments
 
 > 🆕 **આ યોગદાન [@oyi77](https://github.com/oyi77) દ્વારા આપવામાં આવ્યું છે** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (સમસ્યા [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute વિશ્વભરમાંથી **સેંકડો મફત, માન્ય કરાયેલા પ્રોક્સીઓ**ની ઍક્સેસ આપવા માટે **[1proxy](https://1proxy-api.aitradepulse.com)** સમુદાય પ્લેટફોર્મ સાથે એકીકૃત થાય છે. જે વપરાશકર્તાઓ પાસે પોતાનું પ્રોક્સી ઇન્ફ્રાસ્ટ્રક્ચર નથી તેમના માટે આ ઉત્તમ છે.
+67router વિશ્વભરમાંથી **સેંકડો મફત, માન્ય કરાયેલા પ્રોક્સીઓ**ની ઍક્સેસ આપવા માટે **[1proxy](https://1proxy-api.aitradepulse.com)** સમુદાય પ્લેટફોર્મ સાથે એકીકૃત થાય છે. જે વપરાશકર્તાઓ પાસે પોતાનું પ્રોક્સી ઇન્ફ્રાસ્ટ્રક્ચર નથી તેમના માટે આ ઉત્તમ છે.
 
 ### તે કેવી રીતે કાર્ય કરે છે
 
@@ -272,7 +272,7 @@ OmniRoute વિશ્વભરમાંથી **સેંકડો મફત, �
 └─────────────┘   પ્રોક્સીઓ    └─────────────────┘               └──────────┘
 ```
 
-1. **સિંક** — OmniRoute 1proxy API પરથી માન્ય કરાયેલા પ્રોક્સીઓ મેળવે છે
+1. **સિંક** — 67router 1proxy API પરથી માન્ય કરાયેલા પ્રોક્સીઓ મેળવે છે
 2. **સંગ્રહ** — પ્રોક્સીઓ એ જ `proxy_registry` કોષ્ટકમાં `source = 'oneproxy'` સાથે સાચવવામાં આવે છે
 3. **ફિલ્ટર** — પ્રોટોકોલ, દેશ અને ગુણવત્તા સ્કોર પ્રમાણે ફિલ્ટર કરો
 4. **રોટેટ** — ગુણવત્તા, રેન્ડમ અથવા ક્રમિક વ્યૂહરચનાઓનો ઉપયોગ કરીને શ્રેષ્ઠ પ્રોક્સી પસંદ કરો
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## એન્ટી-ડિટેક્શન અને સ્ટેલ્થ
 
-OmniRoute માત્ર પ્રોક્સી મારફતે ટ્રાફિકને રૂટ કરતું નથી — તે ટ્રાફિકને અધિકૃત પણ દર્શાવે છે:
+67router માત્ર પ્રોક્સી મારફતે ટ્રાફિકને રૂટ કરતું નથી — તે ટ્રાફિકને અધિકૃત પણ દર્શાવે છે:
 
 ### TLS ફિંગરપ્રિન્ટ સ્પૂફિંગ
 
@@ -406,11 +406,11 @@ OmniRoute માત્ર પ્રોક્સી મારફતે ટ્ર�
 
 ## અપસ્ટ્રીમ પ્રોક્સી મોડ્સ
 
-CLIProxyAPI પેટર્નનો ઉપયોગ કરતા પ્રદાતાઓ માટે, OmniRoute ત્રણ અપસ્ટ્રીમ પ્રોક્સી મોડ્સને સપોર્ટ કરે છે:
+CLIProxyAPI પેટર્નનો ઉપયોગ કરતા પ્રદાતાઓ માટે, 67router ત્રણ અપસ્ટ્રીમ પ્રોક્સી મોડ્સને સપોર્ટ કરે છે:
 
 | મોડ           | વર્ણન                                                   |
 | ------------- | ------------------------------------------------------- |
-| `native`      | OmniRoute સીધું પ્રોક્સી રૂટિંગ સંભાળે છે (ડિફૉલ્ટ)     |
+| `native`      | 67router સીધું પ્રોક્સી રૂટિંગ સંભાળે છે (ડિફૉલ્ટ)      |
 | `cliproxyapi` | બાહ્ય CLIProxyAPI ઇન્સ્ટન્સને કાર્ય સોંપે છે            |
 | `fallback`    | પહેલાં નેટિવનો પ્રયાસ કરે છે, પછી CLIProxyAPI પર જાય છે |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### ટનલ્સ API
 
-પ્રોક્સી મારફતે આઉટબાઉન્ડ રૂટ કરવાને બદલે તમારા OmniRoute ઇન્સ્ટન્સને જાહેર ઇન્ટરનેટ પર ઉપલબ્ધ કરાવવા (Cloudflare/ngrok/Tailscale) માટે, [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) જુઓ. ટનલ REST API `/api/tunnels/{cloudflared,ngrok,tailscale}/*` હેઠળ ઉપલબ્ધ છે અને ઉપર દસ્તાવેજિત આઉટબાઉન્ડ પ્રોક્સી ચેઇનથી સ્વતંત્ર છે.
+પ્રોક્સી મારફતે આઉટબાઉન્ડ રૂટ કરવાને બદલે તમારા 67router ઇન્સ્ટન્સને જાહેર ઇન્ટરનેટ પર ઉપલબ્ધ કરાવવા (Cloudflare/ngrok/Tailscale) માટે, [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) જુઓ. ટનલ REST API `/api/tunnels/{cloudflared,ngrok,tailscale}/*` હેઠળ ઉપલબ્ધ છે અને ઉપર દસ્તાવેજિત આઉટબાઉન્ડ પ્રોક્સી ચેઇનથી સ્વતંત્ર છે.
 
 ### 1proxy API
 
@@ -515,7 +515,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### પ્રૉક્સી મારફતે "socket hang up" ભૂલો
 
-નિષ્ક્રિય કનેક્શનોને તોડી નાખતા સસ્તા પ્રૉક્સીઓ સાથે આ સામાન્ય છે. OmniRoute પહેલેથી જ આને નીચે મુજબ સંભાળે છે:
+નિષ્ક્રિય કનેક્શનોને તોડી નાખતા સસ્તા પ્રૉક્સીઓ સાથે આ સામાન્ય છે. 67router પહેલેથી જ આને નીચે મુજબ સંભાળે છે:
 
 - પ્રૉક્સી કનેક્શનો પર keep-alive અક્ષમ કરીને (`keepAliveTimeout: 1`)
 - pipelining અક્ષમ કરીને (`pipelining: 0`)
@@ -525,7 +525,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### OAuth દરમિયાન "unsupported_country_region_territory"
 
-OAuth પ્રવાહ શરૂ કરતાં **પહેલાં** પ્રૉક્સી કન્ફિગર થયેલો છે તેની ખાતરી કરો. OmniRoute OAuth token exchangeને કન્ફિગર કરેલા પ્રૉક્સી મારફતે રૂટ કરે છે. પહેલાં વૈશ્વિક અથવા provider-સ્તરનો પ્રૉક્સી સેટ કરો, પછી કનેક્ટ કરો.
+OAuth પ્રવાહ શરૂ કરતાં **પહેલાં** પ્રૉક્સી કન્ફિગર થયેલો છે તેની ખાતરી કરો. 67router OAuth token exchangeને કન્ફિગર કરેલા પ્રૉક્સી મારફતે રૂટ કરે છે. પહેલાં વૈશ્વિક અથવા provider-સ્તરનો પ્રૉક્સી સેટ કરો, પછી કનેક્ટ કરો.
 
 ### પ્રૉક્સીનો ઉપયોગ થતો નથી
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## પ્રૉક્સી હેલ્થ ચેકિંગ (v3.8.16+)
 
-OmniRouteની **proxy fast-fail** પદ્ધતિ (`src/lib/proxyHealth.ts`) ઝડપી TCP કનેક્શન તપાસ દ્વારા <2sમાં નિષ્ક્રિય પ્રૉક્સીઓ શોધે છે અને પછી દરેક વિનંતીનો વધારાનો ભાર ટાળવા માટે **પરિણામને કૅશ કરે છે**.
+67routerની **proxy fast-fail** પદ્ધતિ (`src/lib/proxyHealth.ts`) ઝડપી TCP કનેક્શન તપાસ દ્વારા <2sમાં નિષ્ક્રિય પ્રૉક્સીઓ શોધે છે અને પછી દરેક વિનંતીનો વધારાનો ભાર ટાળવા માટે **પરિણામને કૅશ કરે છે**.
 
 ### તે કેવી રીતે કાર્ય કરે છે
 
@@ -658,11 +658,11 @@ URLમાં આપેલા custom ports (`http://host:9999`) હંમેશ�
 
 ## પ્રોક્સી એનાલિટિક્સ અને અવલોકનક્ષમતા
 
-ઓપરેટરોને રૂટિંગ પેટર્ન, લેટન્સીમાં અચાનક વધારો અને વારંવાર થતી નિષ્ફળતાઓનું નિદાન કરવામાં મદદ કરવા માટે OmniRoute દરેક પ્રોક્સીના ઉપયોગને ટ્રૅક કરે છે.
+ઓપરેટરોને રૂટિંગ પેટર્ન, લેટન્સીમાં અચાનક વધારો અને વારંવાર થતી નિષ્ફળતાઓનું નિદાન કરવામાં મદદ કરવા માટે 67router દરેક પ્રોક્સીના ઉપયોગને ટ્રૅક કરે છે.
 
 ### શું ટ્રૅક કરવામાં આવે છે
 
-કન્ફિગર કરેલા પ્રોક્સી મારફતે થતી દરેક વિનંતી માટે, OmniRoute નીચેની માહિતી રેકોર્ડ કરે છે:
+કન્ફિગર કરેલા પ્રોક્સી મારફતે થતી દરેક વિનંતી માટે, 67router નીચેની માહિતી રેકોર્ડ કરે છે:
 
 | મેટ્રિક      | વર્ણન                                                            |
 | ------------ | ---------------------------------------------------------------- |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## રોટેશન વ્યૂહરચનાનું નિર્ણય વૃક્ષ
 
-જ્યારે કોઈ સ્કોપને એકથી વધુ પ્રોક્સી સોંપવામાં આવે છે, ત્યારે દરેક વિનંતી માટે કયો પ્રોક્સી વાપરવો તે પસંદ કરવા OmniRoute **રોટેશન વ્યૂહરચના**નો ઉપયોગ કરે છે. વ્યૂહરચના સ્કોપ સ્તરે કન્ફિગર કરવામાં આવે છે (વૈશ્વિક, પ્રત્યેક પ્રોવાઇડર, પ્રત્યેક એકાઉન્ટ, પ્રત્યેક સંયોજન).
+જ્યારે કોઈ સ્કોપને એકથી વધુ પ્રોક્સી સોંપવામાં આવે છે, ત્યારે દરેક વિનંતી માટે કયો પ્રોક્સી વાપરવો તે પસંદ કરવા 67router **રોટેશન વ્યૂહરચના**નો ઉપયોગ કરે છે. વ્યૂહરચના સ્કોપ સ્તરે કન્ફિગર કરવામાં આવે છે (વૈશ્વિક, પ્રત્યેક પ્રોવાઇડર, પ્રત્યેક એકાઉન્ટ, પ્રત્યેક સંયોજન).
 
 ### ઉપલબ્ધ વ્યૂહરચનાઓ
 

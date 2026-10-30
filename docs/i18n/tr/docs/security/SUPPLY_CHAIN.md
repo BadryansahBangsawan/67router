@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, npm ve Docker yapıtları yayınlar. Bu geçitler, tümü OSS olan, yayın iş akışlarına entegre edilmiş menşe, envanter (SBOM) ve CVE taraması sağlar.
+67router, npm ve Docker yapıtları yayınlar. Bu geçitler, tümü OSS olan, yayın iş akışlarına entegre edilmiş menşe, envanter (SBOM) ve CVE taraması sağlar.
 **Önce danışmanlık** duruşu — şimdi raporlarlar, ilk
 yeşil yayından sonra engellemeye yükseltirler.
 
@@ -60,7 +60,7 @@ Yukarıdaki CVE Varyans çözümünün "üst akım düzeltmesi yok" dalına gör
 - **Zincirin hiçbir yerinde sabit bir sürüm mevcut değil.** `extract-zip@2.0.1` (2020'de yayınlandı) paketin son sürümüdür — bakımı yapılmamaktadır. `@openai/codex-security`'nin
   mevcut npm-latest (`0.1.29`) hala `extract-zip@2.0.1`'i çekiyor.
 - **Üretimden ulaşılamaz.** `promptfoo` yalnızca devDependency'dir (asla `dependencies` altında listelenmez) ve `src/`, `open-sse/` veya `bin/` altındaki hiçbir dosya
-  `extract-zip` npm paketini içe aktarmaz — OmniRoute'un kendi `extractZip()` yardımcısı
+  `extract-zip` npm paketini içe aktarmaz — 67router'un kendi `extractZip()` yardımcısı
   (`src/lib/versionManager/binaryManager.ts:93`) yerel `unzip`/`tar`'a kabuk komutu gönderir ve ilgisizdir. `@openai/codex-security` ayrıca extract-zip'in onEntry geri çağrısının üzerine kendi sembolik bağlantı geçişi korumasını da gönderir.
 - `package.json` `overrides` aracılığıyla `extract-zip`'i takma ad olarak **kullanmayın** — tek uygun
   yerine geçen Electron-org-internal'dır ve `@openai/codex-security`'nin kendi onEntry/defaultDirMode/defaultFileMode kontrolleriyle API uyumlu değildir;

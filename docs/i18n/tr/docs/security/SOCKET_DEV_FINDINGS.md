@@ -48,7 +48,7 @@ içindeki 17 numaralı katı kurala ve `src/server/authz/routeGuard.ts::isLocalO
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` aracılığıyla profil başına NSS DB güncellemesi                                        |
 
 Bunlar `mitmproxy`, Charles Proxy, Fiddler ve Caddy tarafından kullanılan
-komutlarla aynıdır. Bu komutların OmniRoute içinde bulunduğu
+komutlarla aynıdır. Bu komutların 67router içinde bulunduğu
 `docs/security/STEALTH_GUIDE.md` dosyasında belgelenmiştir.
 
 **v3.8.6 azaltımı**:
@@ -103,7 +103,7 @@ henüz güncellememiş operatörler için v3.8.5 davranışını korur. Bu bayra
 sürümünde kaldırılacaktır.
 
 **Neden koruyoruz**: Zed içe aktarma, hâlihazırda Zed kullanan ve sağlayıcı
-anahtarlarını yeniden yapıştırmadan OmniRoute'a yansıtmak isteyen kullanıcılar
+anahtarlarını yeniden yapıştırmadan 67router'a yansıtmak isteyen kullanıcılar
 için en kullanıcı dostu ilk kullanım yoludur.
 
 ---
@@ -116,7 +116,7 @@ için en kullanıcı dostu ilk kullanım yoludur.
 `runElevatedPowerShell` ve paylaşılan `quotePowerShell` yardımcısını yeniden
 dışa aktarır. Socket.dev'in yapay zekâ sınıflandırıcısı bunları genel amaçlı
 bir "ana makinede yürütme + ayrıcalık yükseltme araç seti" olarak algılar.
-OmniRoute içinde bunlar yalnızca MITM sertifikası kurulum yolu (§1) ve `sudo`
+67router içinde bunlar yalnızca MITM sertifikası kurulum yolu (§1) ve `sudo`
 komutlarını yürütmek üzere `execFileWithPassword` tarafından kullanılır.
 
 **v3.8.6 azaltımı**:
@@ -172,7 +172,7 @@ gerektirir.
 
 ---
 
-## §5 — OmniRoute Cloud Sync kimlik bilgilerinin geri yazılması (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync kimlik bilgilerinin geri yazılması (`api/keys/[id]/route.js`)
 
 **Kaynak dosyalar**:
 
@@ -207,7 +207,7 @@ kanaldaki bir MITM), sağlayıcının OAuth belirteçlerini sessizce değiştire
    güvenen kullanıcılar için **geriye dönük uyumluluğu bozan bir değişikliktir**
    — açıkça etkinleştirmeleri gerekir.
 
-**Neden bunu koruyoruz**: Cloud Sync, bir OmniRoute Cloud kiracısının ekip
+**Neden bunu koruyoruz**: Cloud Sync, bir 67router Cloud kiracısının ekip
 kimlik bilgilerini merkezîleştirmesinin tek yoludur. Düzeltme, tehdit modelini
 açıkça ortaya koyar: "sunucu imzalar, istemci doğrular, operatör açıkça onay verir."
 

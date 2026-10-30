@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** spazju tax-xogħol `electron/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jipprovdi app tad-desktop għal diversi pjattaformi (Windows / macOS / Linux) mibnija fuq
+67router jipprovdi app tad-desktop għal diversi pjattaformi (Windows / macOS / Linux) mibnija fuq
 **Electron 41** + **electron-builder 26.10**. L-app tad-desktop tniedi s-server awtonomu ta’ Next.js
 bħala proċess sekondarju, tidderieġi `BrowserWindow` lejh, u żżid ikona fit-trej
 tas-sistema, aġġornatur awtomatiku, pont IPC, u inizjalizzazzjoni tas-sigrieti mingħajr konfigurazzjoni.
@@ -45,7 +45,7 @@ Ikkonfermati minn `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (prebuilds ta’ Node-API — ma jeħtieġ ebda rebuild ta’ Electron) |
 | Verżjoni tal-app   | `3.8.0`                                                                        |
 | ID tal-app         | `online.omniroute.desktop`                                                     |
-| Isem tal-prodott   | `OmniRoute`                                                                    |
+| Isem tal-prodott   | `67router`                                                                     |
 
 ## Skripts (`package.json` tal-għerq)
 
@@ -196,7 +196,7 @@ ippreferi l-fajl `.env`, imbagħad agħlaq kompletament (trej, **Oħroġ**) u er
 - `BrowserWindow`: 1400×900 (minimu 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, il-buttuni tat-tieqa f’`{ x: 16, y: 16 }`.
 - Windows/Linux: bar nattiva tat-titlu.
-- Il-buttuna tal-għeluq timminimizza fit-trej; il-menu tat-trej għandu **Iftaħ OmniRoute**, **Iftaħ id-Dashboard** (brawżer estern), submenu **Port tas-Server**, **Iċċekkja għal Aġġornamenti**, **Oħroġ**.
+- Il-buttuna tal-għeluq timminimizza fit-trej; il-menu tat-trej għandu **Iftaħ 67router**, **Iftaħ id-Dashboard** (brawżer estern), submenu **Port tas-Server**, **Iċċekkja għal Aġġornamenti**, **Oħroġ**.
 
 ## Politika tas-Sigurtà tal-Kontenut
 

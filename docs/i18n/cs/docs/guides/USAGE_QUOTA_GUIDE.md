@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute sleduje využití tokenů u každého požadavku, vypočítává náklady, vynucuje kvóty pro jednotlivé API klíče a zobrazuje analytická data na řídicím panelu. Tato příručka vysvětluje, jak vše funguje.
+> **TL;DR**: 67router sleduje využití tokenů u každého požadavku, vypočítává náklady, vynucuje kvóty pro jednotlivé API klíče a zobrazuje analytická data na řídicím panelu. Tato příručka vysvětluje, jak vše funguje.
 
 **Zdroje:**
 
@@ -17,7 +17,7 @@
 
 ## Přehled
 
-Každý požadavek, který prochází přes OmniRoute, generuje **záznam o využití**, který zachycuje:
+Každý požadavek, který prochází přes 67router, generuje **záznam o využití**, který zachycuje:
 
 - **Identitu**: který API klíč, poskytovatel, model a kombinace
 - **Tokeny**: tokeny promptu, tokeny dokončení, tokeny z mezipaměti a celkový počet
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-U poskytovatelů, kteří údaje o využití nevracejí (někteří poskytovatelé využívající webové soubory cookie), OmniRoute tokeny **odhaduje** pomocí heuristiky `~4 chars per token` (viz `open-sse/services/autoCombo/pipelineRouter.ts`).
+U poskytovatelů, kteří údaje o využití nevracejí (někteří poskytovatelé využívající webové soubory cookie), 67router tokeny **odhaduje** pomocí heuristiky `~4 chars per token` (viz `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokeny z mezipaměti
 
-OmniRoute sleduje `cached_tokens` odděleně od `prompt_tokens`, protože:
+67router sleduje `cached_tokens` odděleně od `prompt_tokens`, protože:
 
 - Ukládání promptů Anthropic do mezipaměti účtuje za tokeny z mezipaměti sníženou sazbu (10 % běžné ceny)
 - Někteří poskytovatelé vracejí `cache_read_input_tokens`, jejichž cena by měla být stanovena odlišně
@@ -117,7 +117,7 @@ Cenová data se automaticky synchronizují z LiteLLM prostřednictvím koncovéh
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-U modelů bez cenových dat OmniRoute přejde na **odhad nákladů** pomocí interních průměrných sazeb (získaných z cenových dat LiteLLM).
+U modelů bez cenových dat 67router přejde na **odhad nákladů** pomocí interních průměrných sazeb (získaných z cenových dat LiteLLM).
 
 ---
 

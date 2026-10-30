@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 원본:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 세 가지 터널 백엔드를 통해 로컬 서버(`http://localhost:20128`)를 공용
+67router는 세 가지 터널 백엔드를 통해 로컬 서버(`http://localhost:20128`)를 공용
 인터넷에 노출할 수 있습니다. 다음과 같은 경우에 유용합니다.
 
 - 공개적으로 접근 가능한 리디렉션 URL이 필요한 클라우드 제공업체(Antigravity, Gemini, Cursor)의
@@ -15,7 +15,7 @@ OmniRoute는 세 가지 터널 백엔드를 통해 로컬 서버(`http://localho
 - VM을 배포하지 않고 팀원과 로컬 인스턴스 공유.
 - 모바일, 원격 또는 네트워크 간 테스트.
 
-세 백엔드는 모두 프로세스 내에서 관리됩니다. OmniRoute는 대시보드 또는 REST API를 통해
+세 백엔드는 모두 프로세스 내에서 관리됩니다. 67router는 대시보드 또는 REST API를 통해
 기본 바이너리나 SDK를 시작/중지합니다. 리버스 프록시나 systemd 설정은
 필요하지 않습니다.
 
@@ -41,7 +41,7 @@ OmniRoute는 세 가지 터널 백엔드를 통해 로컬 서버(`http://localho
 http://localhost:<apiPort>`를 실행하고 stdout에서 할당된 `*.trycloudflare.com` URL을
   파싱합니다. URL은 일시적이며 재시작할 때마다 변경됩니다.
 - **명명된 터널(선택 사항).** `CLOUDFLARED_CONFIG`가 로컬에서 관리되는
-  cloudflared `config.yml`을 가리키면 OmniRoute는 `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml`을 가리키면 67router는 `cloudflared tunnel --no-autoupdate
 --config <path> run`을 실행하여 **안정적인 명명된 호스트 이름**을 제공합니다. 구성에서
   터널 UUID, `credentials-file`, `ingress` 라우팅을 제공하므로
   `--url`은 전달되지 않으며 Zero Trust 대시보드 토큰도 필요하지 않습니다. `run`은
@@ -50,7 +50,7 @@ http://localhost:<apiPort>`를 실행하고 stdout에서 할당된 `*.trycloudfl
 
 주요 동작:
 
-- **자동 설치.** 처음 사용할 때 OmniRoute는 공식 GitHub 릴리스에서 최신 `cloudflared`
+- **자동 설치.** 처음 사용할 때 67router는 공식 GitHub 릴리스에서 최신 `cloudflared`
   바이너리를 다운로드합니다(관리형 설치 파일은
   `DATA_DIR/cloudflared/` 아래에 저장됨). 다운로드된 자산의 SHA256은 실행 전에
   릴리스 매니페스트와 대조하여 검증됩니다.
@@ -67,7 +67,7 @@ http://localhost:<apiPort>`를 실행하고 stdout에서 할당된 `*.trycloudfl
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. 호스트 이름을 OmniRoute의 로컬
+2. 호스트 이름을 67router의 로컬
    API 포트(기본값 20128)로 라우팅하는 `~/.cloudflared/config.yml`을 작성합니다.
 
    ```yaml
@@ -79,11 +79,11 @@ http://localhost:<apiPort>`를 실행하고 stdout에서 할당된 `*.trycloudfl
      - service: http_status:404
    ```
 
-3. OmniRoute가 해당 구성을 가리키도록 설정한 후 터널을 (재)시작합니다.
+3. 67router가 해당 구성을 가리키도록 설정한 후 터널을 (재)시작합니다.
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # 선택 사항 — OmniRoute가 보고하는 호스트 이름을 재정의합니다. 설정하지 않으면
+   # 선택 사항 — 67router가 보고하는 호스트 이름을 재정의합니다. 설정하지 않으면
    # 구성의 첫 번째 ingress 규칙에서 읽습니다.
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,12 +121,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### 선택적 환경 변수
 
-| 변수                                                 | 용도                                                                                                                                                          |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | 바이너리 경로를 재정의합니다. 설정되어 있고 유효하면 OmniRoute는 다운로드하는 대신 해당 바이너리를 사용합니다.                                                |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | 전송 프로토콜입니다(기본값 `http2`, 그 외 `quic`, `auto` 지원).                                                                                               |
-| `CLOUDFLARED_CONFIG`                                 | 로컬에서 관리하는 cloudflared `config.yml`의 경로입니다. 설정하면 OmniRoute는 빠른 터널 대신 **명명된/영구** 터널(`tunnel --config <path> run`)을 실행합니다. |
-| `CLOUDFLARED_HOSTNAME`                               | 명명된 터널에서 보고하는 공개 호스트 이름을 재정의합니다(예: `ai.example.com`). 설정하지 않으면 구성의 첫 번째 `ingress` 호스트 이름에서 읽습니다.            |
+| 변수                                                 | 용도                                                                                                                                                         |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CLOUDFLARED_BIN`                                    | 바이너리 경로를 재정의합니다. 설정되어 있고 유효하면 67router는 다운로드하는 대신 해당 바이너리를 사용합니다.                                                |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | 전송 프로토콜입니다(기본값 `http2`, 그 외 `quic`, `auto` 지원).                                                                                              |
+| `CLOUDFLARED_CONFIG`                                 | 로컬에서 관리하는 cloudflared `config.yml`의 경로입니다. 설정하면 67router는 빠른 터널 대신 **명명된/영구** 터널(`tunnel --config <path> run`)을 실행합니다. |
+| `CLOUDFLARED_HOSTNAME`                               | 명명된 터널에서 보고하는 공개 호스트 이름을 재정의합니다(예: `ai.example.com`). 설정하지 않으면 구성의 첫 번째 `ingress` 호스트 이름에서 읽습니다.           |
 
 ## 2. ngrok
 
@@ -170,7 +170,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 응답에는 할당된 `publicUrl`(예:
-`https://abcd-1234.ngrok-free.app`)이 포함됩니다. 사용자 지정 도메인, 리전 및 정책 규칙은 ngrok 대시보드에서 구성해야 합니다. OmniRoute 자체는 로컬 대상 URL을 SDK에 전달하기만 합니다.
+`https://abcd-1234.ngrok-free.app`)이 포함됩니다. 사용자 지정 도메인, 리전 및 정책 규칙은 ngrok 대시보드에서 구성해야 합니다. 67router 자체는 로컬 대상 URL을 SDK에 전달하기만 합니다.
 
 ## 3. Tailscale Funnel
 
@@ -180,12 +180,12 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### 사전 요구 사항
 
-1. Tailscale을 설치합니다(또는 OmniRoute가 설치하도록 합니다. 아래의 `install` 엔드포인트 참조).
-2. 로그인합니다(`tailscale login` 또는 OmniRoute의 `login` 엔드포인트 사용).
+1. Tailscale을 설치합니다(또는 67router가 설치하도록 합니다. 아래의 `install` 엔드포인트 참조).
+2. 로그인합니다(`tailscale login` 또는 67router의 `login` 엔드포인트 사용).
 3. Tailscale 관리 콘솔에서 tailnet에 대해 Funnel을 활성화합니다.
    <https://login.tailscale.com/admin/settings/features>.
 
-Linux와 macOS에서 데몬(`tailscaled`)을 제어하려면 `sudo`가 필요합니다. POST 엔드포인트는 선택적 `sudoPassword` 필드를 허용하며, 이 필드는 호출이 지속되는 동안 OmniRoute의 MITM 비밀번호 캐시(`getCachedPassword` / `setCachedPassword`)로 전달됩니다. Windows에서는 `C:\Program Files\Tailscale\tailscale.exe`에 설치된 기본 서비스를 사용합니다.
+Linux와 macOS에서 데몬(`tailscaled`)을 제어하려면 `sudo`가 필요합니다. POST 엔드포인트는 선택적 `sudoPassword` 필드를 허용하며, 이 필드는 호출이 지속되는 동안 67router의 MITM 비밀번호 캐시(`getCachedPassword` / `setCachedPassword`)로 전달됩니다. Windows에서는 `C:\Program Files\Tailscale\tailscale.exe`에 설치된 기본 서비스를 사용합니다.
 
 ### REST 엔드포인트
 
@@ -242,7 +242,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth 콜백 고려 사항
 
-터널을 통해 OmniRoute를 노출할 때 대시보드와 OAuth 흐름은 `localhost`가
+터널을 통해 67router를 노출할 때 대시보드와 OAuth 흐름은 `localhost`가
 아닌 **공개** 호스트 이름을 기준으로 콜백 URL을 구성해야 합니다. 그렇지
 않으면 OAuth 공급자가 해당 서버에서 접근할 수 없는 URL로 사용자를 다시
 리디렉션하여 핸드셰이크가 실패합니다.
@@ -259,7 +259,7 @@ UI 관리에 계속 사용할 수 있습니다.
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-그런 다음 OAuth를 시작하기 전에 OmniRoute를 다시 시작합니다. 임시
+그런 다음 OAuth를 시작하기 전에 67router를 다시 시작합니다. 임시
 Cloudflare Quick Tunnel의 URL은 다시 시작할 때마다 변경되므로, 프로덕션
 OAuth 용도로는 예약 도메인이 있는 ngrok 또는 Tailscale Funnel을 사용하는
 것이 좋습니다.
@@ -275,14 +275,14 @@ OAuth 용도로는 예약 도메인이 있는 ngrok 또는 Tailscale Funnel을 �
 - 마지막 오류 메시지(있는 경우).
 
 프로그래밍 방식으로 모니터링하려면 백엔드별 `GET` 엔드포인트를
-폴링합니다. 둘 이상의 백엔드를 동시에 실행할 수 있으며, OmniRoute는
+폴링합니다. 둘 이상의 백엔드를 동시에 실행할 수 있으며, 67router는
 각 백엔드를 독립적으로 추적합니다.
 
 ## 문제 해결
 
 ### "cloudflared 바이너리를 찾을 수 없음"
 
-OmniRoute는 처음 사용할 때 자동 설치를 시도합니다. 설치가 차단된 경우
+67router는 처음 사용할 때 자동 설치를 시도합니다. 설치가 차단된 경우
 (제한된 네트워크, GitHub 접근 불가)에는
 <https://github.com/cloudflare/cloudflared/releases>에서 `cloudflared`를
 수동으로 다운로드하고 `CLOUDFLARED_BIN=/path/to/cloudflared`로

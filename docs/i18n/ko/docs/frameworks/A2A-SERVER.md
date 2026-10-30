@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (한국어)
+# 67router A2A Server Documentation (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — 지능형 라우팅 에이전트로서의 OmniRoute
+> Agent-to-Agent Protocol v0.3 — 지능형 라우팅 에이전트로서의 67router
 
 A2A 인터페이스는 두 가지 형태로 제공됩니다:
 
@@ -19,7 +19,7 @@ A2A 인터페이스는 두 가지 형태로 제공됩니다:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute의 기능, 스킬 및 인증 요구 사항을 설명하는 에이전트 카드를 반환합니다.
+67router의 기능, 스킬 및 인증 요구 사항을 설명하는 에이전트 카드를 반환합니다.
 
 에이전트 카드의 `version` 필드는 `process.env.npm_package_version`에서 가져오므로(`src/app/.well-known/agent.json/route.ts:13` 참조), 릴리스할 때마다 `package.json`과 자동으로 동기화됩니다.
 
@@ -150,22 +150,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## 사용 가능한 스킬
 
-OmniRoute는 `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`에 연결된 6개의 A2A 스킬을 제공합니다. 각 스킬 모듈은 `src/lib/a2a/skills/`에 위치합니다.
+67router는 `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`에 연결된 6개의 A2A 스킬을 제공합니다. 각 스킬 모듈은 `src/lib/a2a/skills/`에 위치합니다.
 
 | 스킬          | ID                   | 설명                                                                                                                                                    | 태그                       | 예시                                   |
 | :------------ | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------- | :------------------------------------- |
-| 스마트 라우팅 | `smart-routing`      | OmniRoute의 콤보 엔진과 스코어링을 사용해 프롬프트를 최적의 제공자/콤보로 라우팅합니다                                                                  | routing, providers         | "Route this prompt via the best model" |
+| 스마트 라우팅 | `smart-routing`      | 67router의 콤보 엔진과 스코어링을 사용해 프롬프트를 최적의 제공자/콤보로 라우팅합니다                                                                   | routing, providers         | "Route this prompt via the best model" |
 | 쿼터 관리     | `quota-management`   | 제공자별 쿼터 상태를 보고하고, 호출자가 언제 스로틀링하거나 전환할지 결정할 수 있도록 돕습니다                                                          | quota, providers           | "Check quota for anthropic"            |
 | 제공자 검색   | `provider-discovery` | 설치된 제공자를 기능, 프리 티어 여부, OAuth 상태와 함께 나열합니다                                                                                      | providers, discovery       | "What providers are available?"        |
 | 비용 분석     | `cost-analysis`      | 카탈로그와 최근 사용량을 기반으로 요청/대화의 비용을 추정합니다                                                                                         | cost, usage                | "Estimate cost for this conversation"  |
 | 상태 리포트   | `health-report`      | 제공자별 서킷 브레이커, 쿨다운, 잠금 상태를 집계합니다                                                                                                  | health, resilience         | "Show health status of all providers"  |
-| 기능 목록     | `list-capabilities`  | 전체 45개 항목의 Agent Skills 카탈로그(23개 API + 21개 CLI + 1개 config)를 컨텍스트 주입을 위한 원본 SKILL.md URL이 포함된 마크다운 테이블로 반환합니다 | catalog, discovery, skills | "List all OmniRoute capabilities"      |
+| 기능 목록     | `list-capabilities`  | 전체 45개 항목의 Agent Skills 카탈로그(23개 API + 21개 CLI + 1개 config)를 컨텍스트 주입을 위한 원본 SKILL.md URL이 포함된 마크다운 테이블로 반환합니다 | catalog, discovery, skills | "List all 67router capabilities"       |
 
 > Agent Card는 실시간 375개 제공자 카탈로그와 일치하도록 유지되어야 하며, 제공자 수와 무료/인증 불필요 메타데이터는 런타임 레지스트리에서 가져옵니다.
 
 ### `list-capabilities` 스킬 상세
 
-`list-capabilities` 스킬은 API 호출을 보내기 전에 OmniRoute가 제공하는 기능을 파악해야 하는 외부 에이전트에게 특히 유용합니다. 구조화된 마크다운 테이블 아티팩트를 반환합니다:
+`list-capabilities` 스킬은 API 호출을 보내기 전에 67router가 제공하는 기능을 파악해야 하는 외부 에이전트에게 특히 유용합니다. 구조화된 마크다운 테이블 아티팩트를 반환합니다:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -191,7 +191,7 @@ JSON-RPC 엔드포인트 `/a2a`는 표준 A2A 진입점입니다. 아래 REST �
 | `/.well-known/agent.json`    | GET    | 에이전트 카드(A2A 검색)                                   | (공개, 3600초 동안 캐시됨)                       |
 | `/api/a2a/tasks`             | POST   | OmniConductor 플릿으로의 인바운드 위임(Conductor PRD RF5) | Bearer와 `OMNIROUTE_API_KEY` 비교 + `a2aEnabled` |
 
-**인바운드 Conductor 위임(`POST /api/a2a/tasks`):** 외부 A2A 에이전트는 OmniRoute를 통해 코딩 작업을 OmniConductor 플릿에 위임합니다. 본문: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor 플릿 스킬(에이전트 카드에 명시된 스킬)만 위임할 수 있으며, 플릿이 git 저장소에서 작업하므로 `metadata.conductor.repo.url`은 필수입니다. 이 라우트는 서버 측 `CONDUCTOR_ORCHESTRATOR_TOKEN`(대체 값: `CONDUCTOR_HUB_TOKEN`)을 사용하여 허브의 `POST /v1/tasks`로 변환하고 `201 { conductor_task_id, state: "submitted" }`를 반환합니다. 작업 상태는 SSE→A2A 미러(RF1)를 통해 다시 전달되며 `GET /api/a2a/tasks?skill=conductor`를 통해 확인할 수 있습니다.
+**인바운드 Conductor 위임(`POST /api/a2a/tasks`):** 외부 A2A 에이전트는 67router를 통해 코딩 작업을 OmniConductor 플릿에 위임합니다. 본문: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor 플릿 스킬(에이전트 카드에 명시된 스킬)만 위임할 수 있으며, 플릿이 git 저장소에서 작업하므로 `metadata.conductor.repo.url`은 필수입니다. 이 라우트는 서버 측 `CONDUCTOR_ORCHESTRATOR_TOKEN`(대체 값: `CONDUCTOR_HUB_TOKEN`)을 사용하여 허브의 `POST /v1/tasks`로 변환하고 `201 { conductor_task_id, state: "submitted" }`를 반환합니다. 작업 상태는 SSE→A2A 미러(RF1)를 통해 다시 전달되며 `GET /api/a2a/tasks?skill=conductor`를 통해 확인할 수 있습니다.
 
 ---
 

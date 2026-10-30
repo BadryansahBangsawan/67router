@@ -4,7 +4,7 @@
 
 ---
 
-> **Ce este acest document.** O evaluare critică a sistemului de porți de calitate al OmniRoute,
+> **Ce este acest document.** O evaluare critică a sistemului de porți de calitate al 67router,
 > comparat cu cele mai bune practici din industrie, **plus** un catalog cuprinzător al tuturor
 > punctelor de control al calității și un **plan de replicare independent de instrumente** pentru
 > aplicarea aceluiași sistem oricărui proiect. Generat la 2026-06-16 pe baza stării reale a depozitului
@@ -102,62 +102,62 @@ pentru reproducerea pe orice stivă tehnologică.
 
 ### 1. Stil și formatare (deterministe, rapide)
 
-- **OmniRoute:** Prettier + ESLint prin lint-staged (pre-commit), 2 spații/ghilimele duble/100 de coloane.
+- **67router:** Prettier + ESLint prin lint-staged (pre-commit), 2 spații/ghilimele duble/100 de coloane.
 - **Generic:** un formator cu remediere automată + un linter, care rulează în pre-commit pe fișierele din staging.
 
 ### 2. Tipuri
 
-- **OmniRoute:** `typecheck:core` (blocant) + `typecheck:noimplicit:core` (consultativ) + prag progresiv `type-coverage` de 92.17% + buget `any` per fișier.
+- **67router:** `typecheck:core` (blocant) + `typecheck:noimplicit:core` (consultativ) + prag progresiv `type-coverage` de 92.17% + buget `any` per fișier.
 - **Generic:** verificare strictă a tipurilor în CI + metrică progresivă pentru acoperirea tipurilor + buget per fișier pentru `any`/mecanisme de evitare a verificărilor.
 
 ### 3. Teste (intensitate)
 
-- **OmniRoute:** 2 rulatoare fără suprapunere (nativ Node + vitest), 8 segmente, acoperire globală 60/60/60/60 + prag progresiv de ~76% + **8 praguri per modul pentru modulele critice** + teste bazate pe proprietăți în fiecare noapte + **testare prin mutații** în fiecare noapte.
+- **67router:** 2 rulatoare fără suprapunere (nativ Node + vitest), 8 segmente, acoperire globală 60/60/60/60 + prag progresiv de ~76% + **8 praguri per modul pentru modulele critice** + teste bazate pe proprietăți în fiecare noapte + **testare prin mutații** în fiecare noapte.
 - **Generic:** unul sau mai multe rulatoare de teste + prag **absolut** de acoperire (împotriva valorii zero) + prag **progresiv** de acoperire (împotriva regresiilor) + **praguri per modul pentru codul cu risc ridicat** (anti-Goodhart) + teste bazate pe proprietăți pentru logica pură + **testare prin mutații** în fiecare noapte ca măsură reală a calității testelor.
 
 ### 4. Politica de testare (împotriva manipulării)
 
-- **OmniRoute:** `pr-test-policy` (codul de producție necesită un test), `check-test-masking` (blochează aserțiunile slăbite), `pr-evidence` (afirmarea succesului necesită un bloc de dovezi), `test-discovery` (fiecare test este colectat de un rulator).
+- **67router:** `pr-test-policy` (codul de producție necesită un test), `check-test-masking` (blochează aserțiunile slăbite), `pr-evidence` (afirmarea succesului necesită un bloc de dovezi), `test-discovery` (fiecare test este colectat de un rulator).
 - **Generic:** poartă „cod nou ⇒ test nou” + detector pentru aserțiuni eliminate/tautologii + cerință privind dovezile (TDD sau test activ) + garanția că niciun test nu rămâne orfan în afara tiparelor glob.
 
 ### 5. Complexitate și sănătatea codului (praguri progresive)
 
-- **OmniRoute:** avertismente ESLint (3769↓), duplicare jscpd (5.72%↓), complexitate ciclomatică + număr maxim de linii (1800↓), complexitate cognitivă sonarjs (753↓), cod mort/exporturi neutilizate knip (339↓), dimensiunea fișierelor per fișier (înghețată, doar în scădere), dependențe circulare (Tarjan personalizat, blocant).
+- **67router:** avertismente ESLint (3769↓), duplicare jscpd (5.72%↓), complexitate ciclomatică + număr maxim de linii (1800↓), complexitate cognitivă sonarjs (753↓), cod mort/exporturi neutilizate knip (339↓), dimensiunea fișierelor per fișier (înghețată, doar în scădere), dependențe circulare (Tarjan personalizat, blocant).
 - **Generic:** aplicați un prag progresiv fiecărei metrici de sănătate (avertismente, duplicare, complexitate ciclomatică **și** cognitivă, cod mort, dimensiunea fișierelor, cicluri de import). Direcția este întotdeauna „fără regresii”.
 
 ### 6. Securitate statică (SAST + secrete)
 
-- **OmniRoute:** CodeQL (prag progresiv pentru alerte = 0), gitleaks (`[extend] useDefault=true` — esențial!), SonarQube, reguli de securitate personalizate (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (prag progresiv pentru alerte = 0), gitleaks (`[extend] useDefault=true` — esențial!), SonarQube, reguli de securitate personalizate (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generic:** SAST (CodeQL/Sonar/semgrep) cu prag progresiv pentru alerte + scaner de secrete cu **setul implicit de reguli moștenit** (o configurație personalizată care suprascrie setul implicit creează un punct orb) + porți de securitate bazate pe Reguli Stricte specifice proiectului.
 
 ### 7. Lanțul de aprovizionare (dependențe)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (listă de permisiuni SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` împotriva slopsquattingului (listă de permisiuni + vechime ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (listă de permisiuni SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` împotriva slopsquattingului (listă de permisiuni + vechime ≥72h).
 - **Generic:** SCA din mai multe surse + listă de licențe permise + verificarea integrității fișierului de blocare + listă de dependențe permise cu verificarea vechimii/typosquattingului + bot pentru actualizări grupate.
 
 ### 8. Lanțul de aprovizionare (compilare și lansare)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), proveniență SLSA (`--provenance`), OpenSSF Scorecard (săptămânal), consolidarea fluxurilor de lucru (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), proveniență SLSA (`--provenance`), OpenSSF Scorecard (săptămânal), consolidarea fluxurilor de lucru (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Generic:** generați un SBOM la publicare + proveniență semnată (SLSA L2+) + Scorecard programat + consolidați toate fluxurile de lucru (tokenuri cu privilegii minime, fără credențiale persistente la checkout pentru procesele care nu efectuează push, acțiuni fixate prin SHA).
 
 ### 9. Contracte și API
 
-- **OmniRoute:** oasdiff (modificări incompatibile OpenAPI), schemathesis (fuzzing contractual în fiecare noapte), openapi-coverage (% de rute documentate, prag progresiv 38.3%), openapi-security-tiers (specificație comparată cu protecția rutei).
+- **67router:** oasdiff (modificări incompatibile OpenAPI), schemathesis (fuzzing contractual în fiecare noapte), openapi-coverage (% de rute documentate, prag progresiv 38.3%), openapi-security-tiers (specificație comparată cu protecția rutei).
 - **Generic:** diferențiere contractuală pentru modificări incompatibile (oasdiff/buf) + fuzzing bazat pe proprietăți în raport cu specificația (schemathesis) + acoperire progresivă a documentației + consecvență între specificație și cod.
 
 ### 10. Documentație și i18n (împotriva degradării)
 
-- **OmniRoute:** docs-sync (versiuni în oglindă), docs-counts-sync (numerele din documentație comparate cu cele din cod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + prag progresiv 80.1%).
+- **67router:** docs-sync (versiuni în oglindă), docs-counts-sync (numerele din documentație comparate cu cele din cod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + prag progresiv 80.1%).
 - **Generic:** sincronizați versiunile/numerele/variabilele de mediu între documentație și cod (poartă de verificare, nu încredere) + validați linkurile interne + acoperire i18n progresivă.
 
 ### 11. Anti-halucinație/consecvență (categoria rară)
 
-- **OmniRoute:** known-symbols (dispecerizare prin șir ⇒ simbol activ), provider-consistency, fetch-targets (fetch în client ⇒ rută reală), docs-symbols, db-rules (Regulile Stricte #2/#5), migration-numbering.
+- **67router:** known-symbols (dispecerizare prin șir ⇒ simbol activ), provider-consistency, fetch-targets (fetch în client ⇒ rută reală), docs-symbols, db-rules (Regulile Stricte #2/#5), migration-numbering.
 - **Generic:** pentru fiecare „sursă de adevăr duplicată” (registru, dispecerizare prin șir, referințe între straturi), o poartă care demonstrează că ambele părți corespund. Detectează degradarea pe care verificarea tipurilor/testele nu o detectează.
 
 ### 12. Reziliență și domeniu (specifice produsului)
 
-- **OmniRoute:** chaos (injectare de defecțiuni), heap-growth (scurgeri de memorie), k6 (test de durată), promptfoo+garak (red teaming LLM pentru OWASP LLM Top 10), cele 3 legi ale rezilienței (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (injectare de defecțiuni), heap-growth (scurgeri de memorie), k6 (test de durată), promptfoo+garak (red teaming LLM pentru OWASP LLM Top 10), cele 3 legi ale rezilienței (circuit-breaker/cooldown/lockout).
 - **Generic:** identificați modurile de defectare ale domeniului **vostru** și creați o poartă pentru fiecare (chiar dacă rulează doar în fiecare noapte). Pentru aplicațiile AI: red teaming împotriva injectării. Pentru sistemele distribuite: haos + scurgeri de memorie + teste de durată.
 
 ---

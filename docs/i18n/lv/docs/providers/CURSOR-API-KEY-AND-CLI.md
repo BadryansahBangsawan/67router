@@ -4,16 +4,16 @@
 
 ---
 
-Divi veidi, kā izmantot Cursor aiz OmniRoute bez IDE sesijas:
+Divi veidi, kā izmantot Cursor aiz 67router bez IDE sesijas:
 
 1. **`cursor-api` nodrošinātājs** (kartīte „Cursor API”, aizstājvārds `cua`): API atslēgas
    nodrošinātājs, kas glabā Cursor lietotāja API atslēgu (`crsr_…`, ģenerētu vietnē
-   `https://cursor.com/dashboard/api`). Jebkurš OmniRoute klients pēc tam var piekļūt
+   `https://cursor.com/dashboard/api`). Jebkurš 67router klients pēc tam var piekļūt
    Cursor modeļiem, izmantojot `/v1/chat/completions` kā `cursor-api/<model>` vai
    `cua/<model>`, ar ierastajiem kvotu, atkāpšanās un žurnalēšanas slāņiem. IDE
    nodrošinātājs (`cursor`, OAuth/IDE sesija) paliek nemainīts.
-2. **Cursor CLI tranzīta režīms**: konfigurējiet Cursor CLI (`agent`) darbam ar OmniRoute,
-   lai katrs CLI veiktais RPC pieprasījums tiktu autentificēts ar OmniRoute API atslēgu,
+2. **Cursor CLI tranzīta režīms**: konfigurējiet Cursor CLI (`agent`) darbam ar 67router,
+   lai katrs CLI veiktais RPC pieprasījums tiktu autentificēts ar 67router API atslēgu,
    pārsūtīts uz Cursor, izmantojot `cursor-api` savienojuma akreditācijas datus, un
    reģistrēts žurnālu lapā.
 
@@ -59,7 +59,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 Piezīmes:
 
 - `cursor-api` modeļu saraksts tiek iegūts no statiskā Cursor reģistra (tā paša
-  saraksta, ko IDE nodrošinātājs izmanto kā rezerves variantu); OmniRoute resursdatorā
+  saraksta, ko IDE nodrošinātājs izmanto kā rezerves variantu); 67router resursdatorā
   nav jāinstalē `cursor-agent`.
 - `POST /api/providers/{id}/refresh-cursor` ir paredzēts tikai `cursor` IDE
   nodrošinātājam; `cursor-api` savienojumiem nav atjaunojamas IDE sesijas.
@@ -68,7 +68,7 @@ Piezīmes:
 
 `cursor` / `cu` un `cursor-api` / `cua` gadījumā koplietotais Claude piepūles līmeņa
 normalizētājs atstāj pieprasītā modeļa ID nemainītu. Cursor var reklamēt tādu sufiksu
-kā `-low` kā daļu no reāla modeļa ID, nevis kā OmniRoute piepūles līmeņa aizstājvārdu.
+kā `-low` kā daļu no reāla modeļa ID, nevis kā 67router piepūles līmeņa aizstājvārdu.
 Cursor izpildītājs saglabā precīzu atbilstību aktīvajam katalogam; ja atbilstības nav,
 tā esošais modeļu atrisinātājs apstrādā atkāpšanās mehānismu no sufiksa uz parametru.
 
@@ -83,18 +83,18 @@ Maršruts: `src/app/api/cursor-cli/[...path]/route.ts` →
 reģistrēts failā `src/shared/constants/publicApiRoutes.ts`, jo apdarinātājs
 pats nodrošina autentifikāciju:
 
-| Ceļš                                                                                                                          | CLI sagaidītā autentifikācija | OmniRoute darbība                                                                                                                                                             |
+| Ceļš                                                                                                                          | CLI sagaidītā autentifikācija | 67router darbība                                                                                                                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <OmniRoute API key>`  | Validē atslēgu, izveido 1 stundu derīgu HS256 JWT (parakstītu ar `JWT_SECRET`) un atgriež to                                                                                  |
+| `POST /auth/exchange_user_api_key`                                                                                            | `Bearer <67router API key>`   | Validē atslēgu, izveido 1 stundu derīgu HS256 JWT (parakstītu ar `JWT_SECRET`) un atgriež to                                                                                  |
 | visi pārējie ceļi (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <šo JWT>`             | Pārbauda izdevēju/auditoriju/derīguma termiņu, izvēlas aktīvu `cursor-api` savienojumu, aizstāj Authorization galveni ar apmainīto Cursor pilnvaru un straumē atbildi atpakaļ |
 
 CLI dekodē `exp` no jebkuras saņemtās pilnvaras, tāpēc, piešķirot tam necaurspīdīgu
 pilnvaru, tas veic atkārtotu apmaiņu pirms gandrīz katra pieprasījuma; izveidotais JWT to
-novērš. OmniRoute atbilde 401 liek CLI vēlreiz veikt apmaiņu.
+novērš. 67router atbilde 401 liek CLI vēlreiz veikt apmaiņu.
 
 ### Iestatīšana
 
-1. Izveidojiet OmniRoute API atslēgu (Informācijas panelis → API atslēgas) un `cursor-api`
+1. Izveidojiet 67router API atslēgu (Informācijas panelis → API atslēgas) un `cursor-api`
    savienojumu.
 2. Norādiet CLI izmantot HTTP/1.1 aģenta straumei. Failā
    `~/.cursor/cli-config.json`:
@@ -107,7 +107,7 @@ novērš. OmniRoute atbilde 401 liek CLI vēlreiz veikt apmaiņu.
    konfigurētu aģenta resursdatoru, un tikai vadības plaknes RPC tiek sūtīti caur
    galapunktu.
 
-3. Palaidiet CLI, izmantojot OmniRoute:
+3. Palaidiet CLI, izmantojot 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,18 +116,18 @@ novērš. OmniRoute atbilde 401 liek CLI vēlreiz veikt apmaiņu.
    ```
 
 Katrs posms tiek reģistrēts žurnālos ar nodrošinātāju `cursor-api`, pieprasījuma tipu `cursor-cli`,
-ceļu `/api/cursor-cli/<rpc>` un tiek attiecināts uz OmniRoute API atslēgu un
+ceļu `/api/cursor-cli/<rpc>` un tiek attiecināts uz 67router API atslēgu un
 savienojumu, kas to apkalpoja.
 
 ### Kļūmju scenāriji
 
-| Situācija                                            | Atbilde CLI                                      |
-| ---------------------------------------------------- | ------------------------------------------------ |
-| Nezināma OmniRoute atslēga un `REQUIRE_API_KEY=true` | 401 `unauthenticated` apmaiņas laikā             |
-| `REQUIRE_API_KEY=false`                              | anonīma sesija (atbilst `/v1/*` darbībai)        |
-| Sesijas JWT ir beidzies, svešs vai pārveidots        | 401, CLI atkārtoti veic apmaiņu                  |
-| OmniRoute API atslēga atsaukta pēc apmaiņas          | 401 nākamajā RPC                                 |
-| Nav aktīva `cursor-api` savienojuma                  | 503 `unavailable`                                |
-| Cursor noraida savienojuma atslēgu                   | 401 `unauthenticated`, kešotā sesija tiek dzēsta |
-| Augšupējais pakalpojums nav sasniedzams              | 502 `unavailable` (sanitizēts ziņojums)          |
-| `JWT_SECRET` nav iestatīts                           | 503 apmaiņas laikā                               |
+| Situācija                                           | Atbilde CLI                                      |
+| --------------------------------------------------- | ------------------------------------------------ |
+| Nezināma 67router atslēga un `REQUIRE_API_KEY=true` | 401 `unauthenticated` apmaiņas laikā             |
+| `REQUIRE_API_KEY=false`                             | anonīma sesija (atbilst `/v1/*` darbībai)        |
+| Sesijas JWT ir beidzies, svešs vai pārveidots       | 401, CLI atkārtoti veic apmaiņu                  |
+| 67router API atslēga atsaukta pēc apmaiņas          | 401 nākamajā RPC                                 |
+| Nav aktīva `cursor-api` savienojuma                 | 503 `unavailable`                                |
+| Cursor noraida savienojuma atslēgu                  | 401 `unauthenticated`, kešotā sesija tiek dzēsta |
+| Augšupējais pakalpojums nav sasniedzams             | 502 `unavailable` (sanitizēts ziņojums)          |
+| `JWT_SECRET` nav iestatīts                          | 503 apmaiņas laikā                               |

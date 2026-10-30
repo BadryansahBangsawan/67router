@@ -10,7 +10,7 @@
 
 ## Por que razão isto existe
 
-O OmniRoute já responde a duas perguntas sobre custos, mas nenhuma delas é aquela que a maioria dos operadores coloca.
+O 67router já responde a duas perguntas sobre custos, mas nenhuma delas é aquela que a maioria dos operadores coloca.
 
 | Mecanismo existente                                      | Responde a                                       |
 | -------------------------------------------------------- | ------------------------------------------------ |

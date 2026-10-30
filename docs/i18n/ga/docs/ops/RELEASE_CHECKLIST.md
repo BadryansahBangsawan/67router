@@ -45,7 +45,7 @@ athbhunaíonn sé an sreabhadh lán-uathoibríoch a bhí ag an tionscadal suas g
 ráthaíocht WS1.3 á coinneáil aige (ní féidir le comhartha sceite foilsiú leis féin — níl aon chomhartha ann).
 
 **Socrú aonuaire (úinéir):** npmjs.com → pacáiste `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: úinéir `diegosouzapw`, stór `OmniRoute`, sreabhadh oibre `npm-publish.yml`
+Publisher_ → GitHub: úinéir `diegosouzapw`, stór `67router`, sreabhadh oibre `npm-publish.yml`
 (timpeallacht: gan aon cheann). Go dtí go mbeidh sin ann, teipeann ar an gcéim uathoibríoch le `ENEEDAUTH`:
 athsheol le `publish_mode=staged` (thíos) nó `direct`.
 

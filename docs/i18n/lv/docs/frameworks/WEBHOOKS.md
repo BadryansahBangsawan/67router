@@ -7,7 +7,7 @@
 > **Patiesais avots:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute var nosūtīt HTTP tīmekļa aizķeres platformas notikumu gadījumā. Izmantojiet tās integrācijai ar
+67router var nosūtīt HTTP tīmekļa aizķeres platformas notikumu gadījumā. Izmantojiet tās integrācijai ar
 Slack, PagerDuty, Datadog, iekšējiem brīdinājumu pakalpojumiem vai jebkuru HTTP saņēmēju.
 
 Dispečers katru piegādi paraksta ar HMAC-SHA256, īslaicīgu
@@ -54,7 +54,7 @@ atsevišķu tīmekļa aizķeru kļūdas, tāpēc viens problemātisks saņēmēj
 
 ## HMAC parakstīšana
 
-Ja tīmekļa aizķerei ir `secret`, OmniRoute paraksta JSON pamattekstu un nosūta:
+Ja tīmekļa aizķerei ir `secret`, 67router paraksta JSON pamattekstu un nosūta:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Informācijas paneļa lapa `/dashboard/webhooks` (skatiet
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

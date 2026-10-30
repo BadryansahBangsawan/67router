@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY skaidrusis iššifravimas yra **5-asis OmniRoute srauto perėmimo režimas**, skirtas
+TPROXY skaidrusis iššifravimas yra **5-asis 67router srauto perėmimo režimas**, skirtas
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM stekui. Jis perima ir **iššifruoja** vietinį siunčiamą HTTPS srautą Linux sistemoje,
 naudodamas branduolio TPROXY ir strateginį maršruto parinkimą — **neklastodamas** `/etc/hosts` ir
@@ -53,7 +53,7 @@ Naudokite šį režimą, kai norite užfiksuoti ir iššifruoti srautą iš proc
 - nenorite jo trikdyti keisdami visos sistemos tarpinio serverio nustatymus.
 
 Kadangi srautas perimamas branduolyje, srautą inicijuojančiam procesui **nereikia
-keisti konfigūracijos** — tačiau procesas turi pasitikėti dinamine CA, kurią įdiegia OmniRoute
+keisti konfigūracijos** — tačiau procesas turi pasitikėti dinamine CA, kurią įdiegia 67router
 (žr. [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ priedas nesukompiliuotas), priedo įkėliklis (`src/mitm/tproxy/transparentSocke
 grąžina `null`, užuot išmetęs klaidą. Tuomet perėmimo režimo būsena nurodo
 `available: false`, valdymo skydelio perjungiklis yra **išjungtas**, o jo paaiškinime rodoma
 „TPROXY iššifravimui reikia Linux + root + savastinio priedo“; likusi
-OmniRoute dalis veikia toliau.
+67router dalis veikia toliau.
 
 ---
 
@@ -264,7 +264,7 @@ Persiuntimo kelias nuo to apsaugomas naudojant apėjimo lizdo žymę (**SO_MARK*
 | **Klaidų išvalymas**                                    | Maršruto klaidų atsakymai apdorojami naudojant `sanitizeErrorMessage()` (griežtoji taisyklė Nr. 12).                                                                                                                                                                                                                                                                                                                                  |
 
 **MITM CA suteikia galingas galimybes.** OS patikimas CA, galintis pasirašyti bet
-kurio pagrindinio kompiuterio sertifikatą, reiškia, kad viską, ką perima „OmniRoute“,
+kurio pagrindinio kompiuterio sertifikatą, reiškia, kad viską, ką perima „67router“,
 galima iššifruoti. Jis pasiekiamas tik įjungus aiškiai pasirenkamą, tik vietoje
 veikiantį TPROXY srauto perėmimo režimą, kuris pagal numatytąją nuostatą yra
 išjungtas, o sustabdžius režimą įrašas pašalinamas iš patikimų sertifikatų
@@ -377,7 +377,7 @@ grąžina `available: false`.
 ### Po strigties likusios užkardos taisyklės
 
 `revertTproxy()` tiksliai atšaukia pritaikymo veiksmus ir yra idempotentinė. Sustabdžius
-režimą taisyklės atšaukiamos; jei OmniRoute buvo nutraukta seanso metu, naudokite AgentBridge
+režimą taisyklės atšaukiamos; jei 67router buvo nutraukta seanso metu, naudokite AgentBridge
 veiksmą **Taisyti** (`POST /api/tools/agent-bridge/repair`), kad būtų atšaukta likusi sisteminė
 būsena (DNS klastojimas, šakninė CA, sistemos tarpinis serveris). TPROXY `mangle` taisyklės ir maršrutas taip pat
 automatiškai išvalomi paleidus sistemą iš naujo.

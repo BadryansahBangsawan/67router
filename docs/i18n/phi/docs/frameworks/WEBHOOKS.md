@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Maaaring magpadala ang OmniRoute ng mga HTTP webhook kapag may mga event sa platform. Gamitin ang mga ito upang mag-integrate sa
+Maaaring magpadala ang 67router ng mga HTTP webhook kapag may mga event sa platform. Gamitin ang mga ito upang mag-integrate sa
 Slack, PagerDuty, Datadog, mga internal na serbisyo sa pag-alerto, o anumang HTTP receiver.
 
 Nilalagdaan ng dispatcher ang bawat delivery gamit ang HMAC-SHA256, muling sinusubukan kapag may mga pansamantalang
@@ -54,7 +54,7 @@ mga error ng bawat webhook upang hindi ma-block ng isang may problemang receiver
 
 ## Paglagda gamit ang HMAC
 
-Kapag may `secret` ang isang webhook, nilalagdaan ng OmniRoute ang JSON body at ipinapadala ang:
+Kapag may `secret` ang isang webhook, nilalagdaan ng 67router ang JSON body at ipinapadala ang:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Ang pahina ng dashboard sa `/dashboard/webhooks` (tingnan ang
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

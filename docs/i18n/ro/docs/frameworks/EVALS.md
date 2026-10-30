@@ -7,7 +7,7 @@
 > **Sursa adevărului:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute include un cadru generic de evaluare pe care îl puteți utiliza pentru a compara configurații de rutare, furnizori/modele individuale sau suitele „golden set” incluse.
+67router include un cadru generic de evaluare pe care îl puteți utiliza pentru a compara configurații de rutare, furnizori/modele individuale sau suitele „golden set” incluse.
 Utilizați-l pentru a verifica modificările de rutare, a valida furnizori noi și a condiționa lansările înainte de a le promova pentru traficul de producție.
 
 Cadrul este implementat astfel:

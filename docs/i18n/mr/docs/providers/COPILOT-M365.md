@@ -38,7 +38,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute मध्ये **Providers → Add Provider** येथे जा, **Microsoft 365 Copilot
+6. 67router मध्ये **Providers → Add Provider** येथे जा, **Microsoft 365 Copilot
    (BizChat)** निवडा आणि क्रेडेन्शियल पुढील स्वरूपात पेस्ट करा:
 
 ```
@@ -55,9 +55,9 @@ WebSocket URL मधून मूल्ये व्यक्तिचलित�
 1. **DevTools → Network** उघडा.
 2. BizChat संभाषण सुरू करा किंवा पुढे सुरू ठेवा (यामुळे WebSocket कनेक्शन सक्रिय होते).
 3. Network पॅनेलमध्ये उजवे-क्लिक करा आणि **Save all as HAR with content** निवडा.
-4. OmniRoute मध्ये, प्रदाता कनेक्शन संवादातील **Import .har file** बटण वापरा.
+4. 67router मध्ये, प्रदाता कनेक्शन संवादातील **Import .har file** बटण वापरा.
 
-OmniRoute, Chathub WebSocket URL साठी HAR स्कॅन करते, त्यातून
+67router, Chathub WebSocket URL साठी HAR स्कॅन करते, त्यातून
 `access_token` आणि `chathubPath` काढते आणि क्रेडेन्शियल फील्ड आपोआप भरते.
 HAR आयात JWT ची कालबाह्यता डीकोड करते आणि टोकनचा उर्वरित कालावधी दाखवते.
 
@@ -80,7 +80,7 @@ HAR आयात JWT ची कालबाह्यता डीकोड क�
 | `tier`         | `individual` (डीफॉल्ट), `edu` किंवा `enterprise`                     |
 
 `substrate.office.com/sydney` पर्यंत स्कोप केलेल्या Microsoft device-code किंवा authorization-code फ्लोमधून
-रिफ्रेश टोकन मिळवा. `refreshToken` सेट केलेले असल्यास, OmniRoute
+रिफ्रेश टोकन मिळवा. `refreshToken` सेट केलेले असल्यास, 67router
 प्रत्येक विनंतीपूर्वी `access_token` प्री-फ्लाइट-रिफ्रेश करते, त्यामुळे प्रत्येक ~75-मिनिटांच्या
 कालबाह्यतेनंतर तुम्हाला ते पुन्हा मिळवण्याची आवश्यकता नसते.
 

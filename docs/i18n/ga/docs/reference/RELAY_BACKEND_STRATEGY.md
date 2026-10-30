@@ -6,7 +6,7 @@
 
 ## Achoimre
 
-Tacaíonn OmniRoute anois le trí mhodh sealaíochta le haghaidh `/api/v1/relay/chat/completions`:
+Tacaíonn 67router anois le trí mhodh sealaíochta le haghaidh `/api/v1/relay/chat/completions`:
 
 - `ts`: Úsáid an sealaí TypeScript laistigh den phróiseas.
 - `bifrost`: Cuir iallach ar úsáid gheata Bifrost.
@@ -45,12 +45,12 @@ Má tá 9router/CLIPROXYAPI á gcur i gcomparáid agat faoi láthair:
 
 ## Conradh theorainn an innill
 
-Is é API sealaíochta OmniRoute teorainn chobhsaí an táirge, ní cur chun feidhme an deais. Féadfaidh deais Next.js seirbhísí áitiúla a shuiteáil, a chumrú agus a mhaoirsiú, ach ba cheart don ródú iarratas dul isteach tríd an API sealaíochta agus a bheith aistrithe taobh thiar den teorainn sin.
+Is é API sealaíochta 67router teorainn chobhsaí an táirge, ní cur chun feidhme an deais. Féadfaidh deais Next.js seirbhísí áitiúla a shuiteáil, a chumrú agus a mhaoirsiú, ach ba cheart don ródú iarratas dul isteach tríd an API sealaíochta agus a bheith aistrithe taobh thiar den teorainn sin.
 
 Roghanna fadtéarmacha don inneall:
 
 - Coinnigh an sealaí TypeScript mar chonair beartais agus chúltaca laistigh den phróiseas. Fanann fíordheimhniú, liostaí ceadaithe, normalú iarratas, cuntasaíocht agus seiceálacha sábháilteachta anseo roimh aon aistriú chuig inneall.
-- Úsáid Bifrost mar an seachphróiseas Leibhéal-1 ard-tréchuir is fearr nuair atá éagsúlacht ródaithe níos ísle, rothlú láraithe soláthraithe, nó scálú amach thar mhacasamhlacha iomadúla OmniRoute ag teastáil ón imscaradh.
+- Úsáid Bifrost mar an seachphróiseas Leibhéal-1 ard-tréchuir is fearr nuair atá éagsúlacht ródaithe níos ísle, rothlú láraithe soláthraithe, nó scálú amach thar mhacasamhlacha iomadúla 67router ag teastáil ón imscaradh.
 - Coinnigh 9router agus CLIPROXYAPI mar sheirbhísí comhoiriúnachta leabaithe. Ritheann siad mar phróisis áitiúla faoi mhaoirseacht agus bíonn siad úsáideach nuair is é a n-iompar soláthraí/CLI an cuibheoir atá ag teastáil, ach níor cheart dóibh a bheith ina n-inneall ródaithe Leibhéal-1 réamhshocraithe.
 - Ná lig don deais URLanna treallacha seirbhíse a chur isteach sa chonair the. Is ionchuir chumraíochta iad URLanna a sholáthraíonn an comhéadan úsáideora; ba cheart don chód ródaithe innill chláraithe a bhfuil a sláinte seiceáilte a réiteach ó shocruithe ar thaobh an fhreastalaí agus ó staid an mhaoirseora.
 - Tabhair tús áite do HTTP lúb-aisiompaithe le haghaidh seirbhísí faoi mhaoirseacht inniu toisc go nochtann na próisis bhainistithe APIanna atá comhoiriúnach le HTTP cheana féin, gur féidir le garda na conaire iniúchadh a dhéanamh ar an teorainn, agus go mbíonn iompar teipe/cúltaca le feiceáil i logaí iarratas. Ní fiú iompar SDK nó soicéid a chur leis amach anseo ach amháin má laghdaíonn sé aga folaigh ródaithe p99 go hinbhraite gan aonrú ná séimeantaic chúltaca a lagú.

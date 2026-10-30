@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tarjoaa Cursor-tilauksen **kuvien luonnin** reitissä `POST /v1/images/generations` samalla palveluntarjoajatunnuksella kuin keskustelussa: `cursor` (alias `cu`).
+67router tarjoaa Cursor-tilauksen **kuvien luonnin** reitissä `POST /v1/images/generations` samalla palveluntarjoajatunnuksella kuin keskustelussa: `cursor` (alias `cu`).
 
 | Kenttä                   | Arvo                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute tarjoaa Cursor-tilauksen **kuvien luonnin** reitissä `POST /v1/images
 
 ## Miksi Agent CLI:tä käytetään
 
-OmniRouten Cursor-keskustelu käyttää rajapintaa `agent.v1.AgentService/Run` (protobuf). Tämä reitti **hylkää** sisäänrakennetut asiakastyökalut (shell, write, …). Kuvien luonti on Cursorin oma työkalu, jonka **`agent` CLI** suorittaa lisenssipaikkaa vasten. Kuvankäsittelijä käynnistää siksi `agent`-prosessin lukitulla kehotteella ja pyyntökohtaisella tilapäisellä työtilalla (samalla rakenteella kuin yhteisön lisenssipaikkasillat) ja palauttaa sitten OpenAI-yhteensopivan `b64_json`-arvon.
+67routerin Cursor-keskustelu käyttää rajapintaa `agent.v1.AgentService/Run` (protobuf). Tämä reitti **hylkää** sisäänrakennetut asiakastyökalut (shell, write, …). Kuvien luonti on Cursorin oma työkalu, jonka **`agent` CLI** suorittaa lisenssipaikkaa vasten. Kuvankäsittelijä käynnistää siksi `agent`-prosessin lukitulla kehotteella ja pyyntökohtaisella tilapäisellä työtilalla (samalla rakenteella kuin yhteisön lisenssipaikkasillat) ja palauttaa sitten OpenAI-yhteensopivan `b64_json`-arvon.
 
 ## Käyttörajoitus (kiinteät säännöt #15 + #17)
 
@@ -34,7 +34,7 @@ käytäntö, jota sovelletaan muuhun `LOCAL_ONLY`-tasoon.
 
 `CURSOR_IMG_MAX_CONCURRENT` toteutetaan muistin sisäisellä laskurilla/jonolla, jonka käyttöalueena on
 Node-moduulin instanssi (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Se rajoittaa oikein samanaikaisia `agent`-prosessien käynnistyksiä yhdessä OmniRoute-prosessissa, mutta se
+Se rajoittaa oikein samanaikaisia `agent`-prosessien käynnistyksiä yhdessä 67router-prosessissa, mutta se
 **ei** koordinoi useita prosesseja/instansseja, jotka jakavat saman Cursor-lisenssipaikan
 (esimerkiksi usean replikan käyttöönotossa) — jokainen instanssi käyttää omaa itsenäistä rajoitustaan.
 Yhden instanssin käyttöönotossa (oletus) rajoitus on tarkka; vaakasuunnassa skaalatuissa
@@ -44,7 +44,7 @@ Cursor-kuvaliikenne yhteen instanssiin.
 ## Vaatimukset
 
 1. Hallintapaneelissa yhdistetty Cursor-tili (OAuth tai `crsr_…`-API-avain).
-2. Cursor Agent -binääritiedoston on oltava OmniRoute-prosessin käytettävissä:
+2. Cursor Agent -binääritiedoston on oltava 67router-prosessin käytettävissä:
    - ympäristömuuttuja `CURSOR_AGENT_BIN=/path/to/agent`, tai
    - `~/.local/bin/agent`, tai
    - `providerSpecificData.agentBin` Cursor-yhteydessä.

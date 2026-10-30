@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Legutóbbi frissítés:** 2026-06-28 — v3.8.40
 
-Az OmniRoute SQLite-alapú auditálási táblákban rögzíti az adminisztratív műveleteket, a hitelesítési eseményeket, a szolgáltatói hitelesítő adatok életciklusának változásait és az MCP-eszközök meghívásait. Ez az oldal bemutatja, hogy mi kerül naplózásra, hol találhatók az adatok, mennyi ideig őrzi meg őket a rendszer, hogyan tiltható le a naplózás API-kulcsonként, valamint hogyan kérdezhetők le az adatok.
+Az 67router SQLite-alapú auditálási táblákban rögzíti az adminisztratív műveleteket, a hitelesítési eseményeket, a szolgáltatói hitelesítő adatok életciklusának változásait és az MCP-eszközök meghívásait. Ez az oldal bemutatja, hogy mi kerül naplózásra, hol találhatók az adatok, mennyi ideig őrzi meg őket a rendszer, hogyan tiltható le a naplózás API-kulcsonként, valamint hogyan kérdezhetők le az adatok.
 
 A megvalósítás a `src/lib/compliance/index.ts` (T-43 — „Megfelelőségi
 vezérlők”) és a `src/lib/compliance/providerAudit.ts` fájlokban található. Az auditbejegyzések írása soha nem dob kivételt: hiba esetén a rendszer csendben figyelmen kívül hagyja a hívást, így az auditnaplózás nem szakíthatja meg a fő kérésfeldolgozási folyamatot.

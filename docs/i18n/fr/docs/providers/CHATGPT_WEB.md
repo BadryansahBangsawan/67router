@@ -36,9 +36,9 @@ même capacité d’outil locale liée au tour lorsque le tunnel et le connecteu
 ## Configuration du tableau de bord
 
 1. Ouvrez le fournisseur **ChatGPT Web (Codex)** et ajoutez une connexion.
-2. Collez l’en-tête Cookie complet de ChatGPT, l’identifiant du tunnel, la clé d’exécution et le nom personnalisé du connecteur. Les nouvelles configurations prenant en charge les outils doivent utiliser un connecteur nouvellement créé nommé exactement `OmniRoute Codex v2`, avec Authentication défini sur None et Permissions défini sur Allow all actions.
-3. Exécutez la vérification de la connexion. OmniRoute ouvre une conversation temporaire reposant sur un navigateur et détecte si Sol et Pro sont disponibles pour le compte.
-4. Enregistrez la connexion. OmniRoute remplace le cookie collé par l’état de stockage Playwright vérifié et le stocke avec la clé d’exécution au moyen de l’abstraction chiffrée des identifiants.
+2. Collez l’en-tête Cookie complet de ChatGPT, l’identifiant du tunnel, la clé d’exécution et le nom personnalisé du connecteur. Les nouvelles configurations prenant en charge les outils doivent utiliser un connecteur nouvellement créé nommé exactement `67router Codex v2`, avec Authentication défini sur None et Permissions défini sur Allow all actions.
+3. Exécutez la vérification de la connexion. 67router ouvre une conversation temporaire reposant sur un navigateur et détecte si Sol et Pro sont disponibles pour le compte.
+4. Enregistrez la connexion. 67router remplace le cookie collé par l’état de stockage Playwright vérifié et le stocke avec la clé d’exécution au moyen de l’abstraction chiffrée des identifiants.
 
 Le cookie brut n’est pas conservé après un enregistrement réussi. Lorsque la session expire, ouvrez la connexion, collez un nouvel en-tête Cookie complet et relancez la vérification. L’état du diagnostic dans la boîte de dialogue de modification indique séparément l’état du navigateur, de l’état de stockage, de la connexion au compte, de la conversation temporaire, du tunnel, du connecteur et de l’aller-retour de l’outil. Pour automatiser les mises à jour des cookies lors du renouvellement des sessions, consultez l’outil complémentaire dans [Extension de synchronisation des sessions du navigateur](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -65,10 +65,10 @@ High, tandis que les comptes compatibles avec Pro donnent également accès à E
 modèle de backend et un niveau d’effort de raisonnement fixes ; un effort Responses explicite incompatible échoue
 de manière fermée au lieu de modifier silencieusement le mode de navigateur sélectionné.
 
-Ne renommez pas et ne réutilisez pas un ancien connecteur `Codex Native` ou `OmniRoute Codex`. ChatGPT
+Ne renommez pas et ne réutilisez pas un ancien connecteur `Codex Native` ou `67router Codex`. ChatGPT
 met en cache le contrat MCP public selon l’identité du connecteur, tandis que la passerelle mise à jour utilise un
 nouveau contrat direct de jeton de tour. L’environnement d’exécution rejette ces identités obsolètes et exige
-un nouveau connecteur `OmniRoute Codex v2`.
+un nouveau connecteur `67router Codex v2`.
 
 ## Modèle de sécurité
 
@@ -88,19 +88,19 @@ un nouveau connecteur `OmniRoute Codex v2`.
 
 ## VPS sans affichage et Docker
 
-Pour les installations npm, systemd et PM2, OmniRoute détecte les chemins Chrome et Chromium courants.
+Pour les installations npm, systemd et PM2, 67router détecte les chemins Chrome et Chromium courants.
 Vous pouvez également définir `CHATGPT_WEB_CODEX_CHROME_PATH`. Les tours d’exécution utilisent délibérément Chrome
 avec interface graphique, car ChatGPT rejette la configuration d’un navigateur réellement sans interface. Un hôte sans affichage doit donc
-exécuter OmniRoute avec un affichage Xvfb privé ; définir uniquement le chemin de Chrome n’en fournit pas.
+exécuter 67router avec un affichage Xvfb privé ; définir uniquement le chemin de Chrome n’en fournit pas.
 
 Le profil Docker `web` démarre `chatgpt-web-codex-browser` sur le réseau Compose
 interne. Le conteneur auxiliaire exécute Chrome avec interface graphique dans Xvfb ; aucun affichage physique n’est donc nécessaire. Son port CDP
 n’est pas publié sur l’hôte. Le volume protégé du profil du navigateur est distinct du volume de données
-d’OmniRoute, et le navigateur dispose d’une quantité suffisante de mémoire partagée. Le proxy CDP interne
+de 67router, et le navigateur dispose d’une quantité suffisante de mémoire partagée. Le proxy CDP interne
 écoute uniquement sur le port `9223` au sein du réseau Compose ; Chrome reste lié à l’interface de bouclage dans le
 conteneur auxiliaire.
 
-Un bail de supervision sous `DATA_DIR` empêche plusieurs processus OmniRoute de posséder
+Un bail de supervision sous `DATA_DIR` empêche plusieurs processus 67router de posséder
 le même état de tunnel et de courtier. Tout conflit est signalé par le diagnostic.
 
 ## Récupération interactive

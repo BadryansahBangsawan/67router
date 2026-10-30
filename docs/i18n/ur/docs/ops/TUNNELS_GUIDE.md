@@ -7,7 +7,7 @@
 > **حتمی ماخذ:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`، `src/app/api/tunnels/`
 > **آخری بار اپ ڈیٹ کیا گیا:** 2026-06-28 — v3.8.40
 
-OmniRoute اپنے مقامی سرور (`http://localhost:20128`) کو تین ٹنل بیک اینڈز کے ذریعے عوامی
+67router اپنے مقامی سرور (`http://localhost:20128`) کو تین ٹنل بیک اینڈز کے ذریعے عوامی
 انٹرنیٹ پر قابلِ رسائی بنا سکتا ہے۔ یہ درج ذیل صورتوں میں مفید ہے:
 
 - کلاؤڈ فراہم کنندگان (Antigravity، Gemini، Cursor) کی OAuth کال بیکس، جن کے لیے
@@ -15,7 +15,7 @@ OmniRoute اپنے مقامی سرور (`http://localhost:20128`) کو تین ٹ
 - کسی VM کو تعینات کیے بغیر اپنی مقامی انسٹینس کو ٹیم کے ساتھیوں کے ساتھ شیئر کرنا۔
 - موبائل، ریموٹ، یا مختلف نیٹ ورکس کے درمیان ٹیسٹنگ۔
 
-تینوں بیک اینڈز اسی پراسیس کے اندر منظم کیے جاتے ہیں — OmniRoute ڈیش بورڈ یا REST API سے
+تینوں بیک اینڈز اسی پراسیس کے اندر منظم کیے جاتے ہیں — 67router ڈیش بورڈ یا REST API سے
 بنیادی بائنری یا SDK کو شروع/بند کرتا ہے۔ کسی ریورس پراکسی یا systemd سیٹ اپ کی
 ضرورت نہیں ہے۔
 
@@ -41,7 +41,7 @@ OmniRoute اپنے مقامی سرور (`http://localhost:20128`) کو تین ٹ
 http://localhost:<apiPort>` چلاتا ہے اور stdout سے تفویض کردہ `*.trycloudflare.com` URL
   اخذ کرتا ہے۔ URLs عارضی ہوتے ہیں اور ہر بار دوبارہ شروع کرنے پر بدل جاتے ہیں۔
 - **Named tunnel (اختیاری)۔** جب `CLOUDFLARED_CONFIG` مقامی طور پر منظم کردہ
-  cloudflared `config.yml` کی جانب اشارہ کرتا ہے، تو OmniRoute `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` کی جانب اشارہ کرتا ہے، تو 67router `cloudflared tunnel --no-autoupdate
 --config <path> run` چلاتا ہے، جس سے آپ کو ایک **مستحکم، نام زد hostname** ملتا ہے۔ کنفگ
   ٹنل UUID، `credentials-file`، اور `ingress` روٹنگ فراہم کرتی ہے، اس لیے
   `--url` پاس نہیں کیا جاتا اور کسی Zero Trust ڈیش بورڈ ٹوکن کی ضرورت نہیں ہوتی۔ `run`
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` چلاتا ہے اور stdout سے تفویض کرد
 
 اہم طرزِ عمل:
 
-- **خودکار تنصیب۔** پہلی بار استعمال ہونے پر، OmniRoute سرکاری GitHub ریلیزز سے تازہ ترین `cloudflared`
+- **خودکار تنصیب۔** پہلی بار استعمال ہونے پر، 67router سرکاری GitHub ریلیزز سے تازہ ترین `cloudflared`
   بائنری ڈاؤن لوڈ کرتا ہے (منظم تنصیب `DATA_DIR/cloudflared/` کے تحت ہوتی ہے)۔
   عمل درآمد سے پہلے ڈاؤن لوڈ کردہ اثاثے کے SHA256 کی ریلیز مینی فیسٹ کے مقابل تصدیق کی جاتی ہے۔
 - **پراسیس نگرانی۔** cloudflared PID اور متعین شدہ URL کو
@@ -66,7 +66,7 @@ http://localhost:<apiPort>` چلاتا ہے اور stdout سے تفویض کرد
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. ایک `~/.cloudflared/config.yml` لکھیں جو آپ کے hostname کو OmniRoute کے مقامی
+2. ایک `~/.cloudflared/config.yml` لکھیں جو آپ کے hostname کو 67router کے مقامی
    API پورٹ (ڈیفالٹ 20128) کی طرف روٹ کرے:
 
    ```yaml
@@ -78,11 +78,11 @@ http://localhost:<apiPort>` چلاتا ہے اور stdout سے تفویض کرد
      - service: http_status:404
    ```
 
-3. OmniRoute کو کنفگ کی جانب اشارہ کروائیں اور ٹنل کو (دوبارہ) شروع کریں:
+3. 67router کو کنفگ کی جانب اشارہ کروائیں اور ٹنل کو (دوبارہ) شروع کریں:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # اختیاری — OmniRoute کے رپورٹ کردہ hostname کو اوور رائیڈ کرتا ہے؛ بصورتِ دیگر اسے
+   # اختیاری — 67router کے رپورٹ کردہ hostname کو اوور رائیڈ کرتا ہے؛ بصورتِ دیگر اسے
    # کنفگ کے پہلے ingress اصول سے پڑھا جاتا ہے:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -119,12 +119,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### اختیاری env vars
 
-| متغیر                                                | مقصد                                                                                                                                                                    |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | بائنری کا راستہ اوور رائیڈ کرتا ہے۔ اگر یہ سیٹ اور درست ہو، تو OmniRoute اسے ڈاؤن لوڈ کرنے کے بجائے استعمال کرتا ہے۔                                                    |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ٹرانسپورٹ پروٹوکول (ڈیفالٹ `http2`؛ نیز `quic`، `auto`)۔                                                                                                                |
-| `CLOUDFLARED_CONFIG`                                 | مقامی طور پر منظم کردہ cloudflared `config.yml` کا راستہ۔ اسے سیٹ کرنے پر، OmniRoute فوری ٹنل کے بجائے ایک **نامزد/مستقل** ٹنل (`tunnel --config <path> run`) چلاتا ہے۔ |
-| `CLOUDFLARED_HOSTNAME`                               | نامزد ٹنل کے رپورٹ کردہ عوامی ہوسٹ نیم کو اوور رائیڈ کرتا ہے (مثلاً `ai.example.com`)۔ سیٹ نہ ہونے پر، اسے کنفیگ کے پہلے `ingress` ہوسٹ نیم سے پڑھا جاتا ہے۔            |
+| متغیر                                                | مقصد                                                                                                                                                                   |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | بائنری کا راستہ اوور رائیڈ کرتا ہے۔ اگر یہ سیٹ اور درست ہو، تو 67router اسے ڈاؤن لوڈ کرنے کے بجائے استعمال کرتا ہے۔                                                    |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ٹرانسپورٹ پروٹوکول (ڈیفالٹ `http2`؛ نیز `quic`، `auto`)۔                                                                                                               |
+| `CLOUDFLARED_CONFIG`                                 | مقامی طور پر منظم کردہ cloudflared `config.yml` کا راستہ۔ اسے سیٹ کرنے پر، 67router فوری ٹنل کے بجائے ایک **نامزد/مستقل** ٹنل (`tunnel --config <path> run`) چلاتا ہے۔ |
+| `CLOUDFLARED_HOSTNAME`                               | نامزد ٹنل کے رپورٹ کردہ عوامی ہوسٹ نیم کو اوور رائیڈ کرتا ہے (مثلاً `ai.example.com`)۔ سیٹ نہ ہونے پر، اسے کنفیگ کے پہلے `ingress` ہوسٹ نیم سے پڑھا جاتا ہے۔           |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 جواب میں تفویض کردہ `publicUrl` شامل ہوتا ہے (مثلاً
 `https://abcd-1234.ngrok-free.app`)۔ حسبِ ضرورت ڈومینز، ریجنز، اور پالیسی قواعد
-ngrok ڈیش بورڈ میں تشکیل دینا ضروری ہے — خود OmniRoute صرف مقامی ہدف URL کو
+ngrok ڈیش بورڈ میں تشکیل دینا ضروری ہے — خود 67router صرف مقامی ہدف URL کو
 SDK کی جانب فارورڈ کرتا ہے۔
 
 ## 3. Tailscale Funnel
@@ -185,14 +185,14 @@ SDK کی جانب فارورڈ کرتا ہے۔
 
 ### پیشگی تقاضے
 
-1. Tailscale انسٹال کریں (یا OmniRoute کو یہ کام کرنے دیں — ذیل میں `install` اینڈ پوائنٹ دیکھیں)۔
-2. سائن اِن کریں (`tailscale login` یا OmniRoute کے `login` اینڈ پوائنٹ کے ذریعے)۔
+1. Tailscale انسٹال کریں (یا 67router کو یہ کام کرنے دیں — ذیل میں `install` اینڈ پوائنٹ دیکھیں)۔
+2. سائن اِن کریں (`tailscale login` یا 67router کے `login` اینڈ پوائنٹ کے ذریعے)۔
 3. Tailscale ایڈمن کنسول میں اپنے tailnet کے لیے Funnel فعال کریں:
    <https://login.tailscale.com/admin/settings/features>۔
 
 Linux اور macOS پر ڈیمَن (`tailscaled`) کو کنٹرول کرنے کے لیے `sudo` درکار ہوتا ہے۔
 POST اینڈ پوائنٹس ایک اختیاری `sudoPassword` فیلڈ قبول کرتے ہیں، جسے کال کے دورانیے
-کے لیے OmniRoute کے MITM پاس ورڈ کیش (`getCachedPassword` / `setCachedPassword`) کو
+کے لیے 67router کے MITM پاس ورڈ کیش (`getCachedPassword` / `setCachedPassword`) کو
 فارورڈ کیا جاتا ہے۔ Windows پر ڈیفالٹ سروس تنصیب
 `C:\Program Files\Tailscale\tailscale.exe` استعمال ہوتی ہے۔
 
@@ -253,7 +253,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth کال بیک سے متعلق غور طلب امور
 
-جب آپ OmniRoute کو کسی ٹنل کے ذریعے قابل رسائی بناتے ہیں، تو ڈیش بورڈ اور OAuth فلو کو
+جب آپ 67router کو کسی ٹنل کے ذریعے قابل رسائی بناتے ہیں، تو ڈیش بورڈ اور OAuth فلو کو
 کال بیک URLs، `localhost` کے بجائے **عوامی** ہوسٹ نیم کی بنیاد پر بنانے چاہئیں۔ بصورتِ دیگر
 OAuth فراہم کنندہ صارف کو ایسے URL پر واپس بھیجتا ہے جس تک اس کے سرورز رسائی حاصل نہیں کر سکتے،
 اور ہینڈ شیک ناکام ہو جاتا ہے۔
@@ -269,7 +269,7 @@ CSRF ٹوکن کے ساتھ اسی اوریجن پر غیر محفوظ درخو�
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-اور OAuth شروع کرنے سے پہلے OmniRoute کو دوبارہ شروع کریں۔ عارضی Cloudflare Quick
+اور OAuth شروع کرنے سے پہلے 67router کو دوبارہ شروع کریں۔ عارضی Cloudflare Quick
 Tunnels کے لیے URL ہر مرتبہ دوبارہ شروع کرنے پر تبدیل ہو جاتا ہے، اس لیے پروڈکشن میں OAuth کے استعمال کے لیے محفوظ شدہ
 ڈومین کے ساتھ ngrok یا Tailscale Funnel کو ترجیح دیں۔
 
@@ -284,14 +284,14 @@ Tunnels کے لیے URL ہر مرتبہ دوبارہ شروع کرنے پر تب
 - آخری خرابی کا پیغام، اگر کوئی ہو۔
 
 پروگرامیٹک نگرانی کے لیے ہر بیک اینڈ کے `GET` اینڈ پوائنٹس کو وقفے وقفے سے پول کریں۔ بیک وقت ایک سے زیادہ
-بیک اینڈ چلانے کی اجازت ہے؛ OmniRoute ہر ایک کو
+بیک اینڈ چلانے کی اجازت ہے؛ 67router ہر ایک کو
 آزادانہ طور پر ٹریک کرے گا۔
 
 ## مسائل کا حل
 
 ### "cloudflared بائنری نہیں ملی"
 
-OmniRoute پہلے استعمال پر خودکار انسٹالیشن کی کوشش کرتا ہے۔ اگر انسٹالیشن مسدود ہو
+67router پہلے استعمال پر خودکار انسٹالیشن کی کوشش کرتا ہے۔ اگر انسٹالیشن مسدود ہو
 (محدود نیٹ ورک، GitHub تک رسائی نہ ہونا)، تو `cloudflared` کو
 <https://github.com/cloudflare/cloudflared/releases> سے دستی طور پر ڈاؤن لوڈ کریں اور
 `CLOUDFLARED_BIN=/path/to/cloudflared` مقرر کریں۔

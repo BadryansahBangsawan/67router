@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute が Hindsight 0.9.1（テキスト専用 `encode(list[str])`）および Memorix 1.6.0（Jina メディアゲート）の前段にある場合の `POST /v1/embeddings` に関する運用メモ。2026-08-17 に OmniRoute 3.8.49、`https://omniroute.jaguar-fish.ts.net/v1` に対して実環境で検証済み。以下にシークレットは含まれていない。
+67router が Hindsight 0.9.1（テキスト専用 `encode(list[str])`）および Memorix 1.6.0（Jina メディアゲート）の前段にある場合の `POST /v1/embeddings` に関する運用メモ。2026-08-17 に 67router 3.8.49、`https://omniroute.jaguar-fish.ts.net/v1` に対して実環境で検証済み。以下にシークレットは含まれていない。
 
 ## 動作するモデル ID
 
@@ -70,7 +70,7 @@ curl -sS https://omniroute.example/v1/embeddings \
   -d '{"model":"openrouter/google/gemini-embedding-2","input":["alpha","beta"]}'
 ```
 
-ネイティブの `gemini-embedding-2` は GitOps だけでは成功しない。Google AI Studio キーを `gemini` プロバイダー接続として追加する必要がある（ダッシュボード、または OmniRoute にインポートされた `GEMINI_API_KEY`）。そのシークレットはこのリポジトリには含まれていない。
+ネイティブの `gemini-embedding-2` は GitOps だけでは成功しない。Google AI Studio キーを `gemini` プロバイダー接続として追加する必要がある（ダッシュボード、または 67router にインポートされた `GEMINI_API_KEY`）。そのシークレットはこのリポジトリには含まれていない。
 
 ### Jina マルチモーダルパス
 
@@ -91,7 +91,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ### Jina / Memorix の画像オブジェクト
 
-OmniRoute の正規画像項目（28×28 PNG、784 ピクセル — Jina は 1×1 を拒否する）：
+67router の正規画像項目（28×28 PNG、784 ピクセル — Jina は 1×1 を拒否する）：
 
 ```json
 {
@@ -138,10 +138,10 @@ Memorix 1.6.0 / Jina ネイティブ形式：
 
 ### Hindsight 0.9.1
 
-Hindsight の埋め込みはテキスト専用（`encode(list[str])`）。画像オブジェクトは送信しない。Hindsight の OpenAI 互換埋め込みベース URL を OmniRoute の `/v1` に設定し、上表にある動作する ID（`jina-ai/jina-embeddings-v5-omni-small` または `openrouter/google/gemini-embedding-2`）を使用すること。ゲートウェイに `gemini` API キーが存在しない限り、モデルをプレフィックスなしの `gemini-embedding-2` に設定しないこと。
+Hindsight の埋め込みはテキスト専用（`encode(list[str])`）。画像オブジェクトは送信しない。Hindsight の OpenAI 互換埋め込みベース URL を 67router の `/v1` に設定し、上表にある動作する ID（`jina-ai/jina-embeddings-v5-omni-small` または `openrouter/google/gemini-embedding-2`）を使用すること。ゲートウェイに `gemini` API キーが存在しない限り、モデルをプレフィックスなしの `gemini-embedding-2` に設定しないこと。
 
 ### Memorix 1.6.0
 
-Memorix は、`baseUrl` が `/jina\.ai/i` に一致する場合にのみネイティブメディアとして扱う。モデルが Jina omni であっても、OmniRoute の URL ではテキスト専用パスが使用される。このゲートは Memorix クライアント側の問題である。これとは別に、仮にゲートが開いた場合に Memorix が送信する Jina の `{image: "data:..."}` ボディも OmniRoute は拒否する。そのため、Jina 互換クライアントは正規の `{type,source}` スキーマを使用しない限り、OmniRoute 経由で画像を埋め込めない。
+Memorix は、`baseUrl` が `/jina\.ai/i` に一致する場合にのみネイティブメディアとして扱う。モデルが Jina omni であっても、67router の URL ではテキスト専用パスが使用される。このゲートは Memorix クライアント側の問題である。これとは別に、仮にゲートが開いた場合に Memorix が送信する Jina の `{image: "data:..."}` ボディも 67router は拒否する。そのため、Jina 互換クライアントは正規の `{type,source}` スキーマを使用しない限り、67router 経由で画像を埋め込めない。
 
-テキストには `jina-ai/jina-embeddings-v5-omni-small` を使用すること。Memorix の `base_url` を `https://api.jina.ai` に向けず、OmniRoute を唯一の中継点として維持すること。
+テキストには `jina-ai/jina-embeddings-v5-omni-small` を使用すること。Memorix の `base_url` を `https://api.jina.ai` に向けず、67router を唯一の中継点として維持すること。

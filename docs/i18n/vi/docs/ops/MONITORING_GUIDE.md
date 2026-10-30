@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: OmniRoute tích hợp sẵn tính năng giám sát tình trạng, chế độ tự động điều khiển nhà cung cấp, theo dõi hạn mức và các hook quan sát. Hướng dẫn này trình bày bảng điều khiển, cảnh báo và cách khắc phục sự cố.
+> **Tóm tắt**: 67router tích hợp sẵn tính năng giám sát tình trạng, chế độ tự động điều khiển nhà cung cấp, theo dõi hạn mức và các hook quan sát. Hướng dẫn này trình bày bảng điều khiển, cảnh báo và cách khắc phục sự cố.
 
 **Nguồn:**
 
@@ -20,7 +20,7 @@
 
 ## Tổng quan
 
-OmniRoute có **3 lớp giám sát**:
+67router có **3 lớp giám sát**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Theo từng combo:
 
 ## API kiểm tra tình trạng
 
-OmniRoute cung cấp **hai** điểm kiểm tra tình trạng qua HTTP. Chúng không thể thay thế lẫn nhau đối với các trình điều phối.
+67router cung cấp **hai** điểm kiểm tra tình trạng qua HTTP. Chúng không thể thay thế lẫn nhau đối với các trình điều phối.
 
 | Đường dẫn                    | Mục đích                                                                         | Mức tải                             | Dùng cho                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
@@ -177,7 +177,7 @@ endpoint này. Dùng `failed` + `failedConnections` cho các lỗi probe trực 
 
 ### Khuyến nghị về probe Kubernetes
 
-OmniRoute là một **tiến trình Node duy nhất** (một vòng lặp sự kiện). `HEALTHCHECK` mặc định của Docker nhắm đến `/healthz` nhẹ. `/api/monitoring/health` **quá nặng** đối với các khoảng thời gian kiểm tra liveness của kubelet.
+67router là một **tiến trình Node duy nhất** (một vòng lặp sự kiện). `HEALTHCHECK` mặc định của Docker nhắm đến `/healthz` nhẹ. `/api/monitoring/health` **quá nặng** đối với các khoảng thời gian kiểm tra liveness của kubelet.
 
 | Probe            | Mục tiêu được khuyến nghị                                                          | Ghi chú                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -224,7 +224,7 @@ Liên quan: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (c�
 
 ### Watchdog của systemd (vòng lặp sự kiện bị đóng băng)
 
-Trên máy chủ systemd, OmniRoute thông báo cho trình quản lý dịch vụ khi nó đã sẵn sàng và tiếp tục gửi tín hiệu định kỳ, nhờ đó một máy chủ có vòng lặp sự kiện bị kẹt sẽ bị dừng và khởi động lại thay vì tiếp tục chạy nhưng không phản hồi. Các tín hiệu này được gửi từ chính vòng lặp sự kiện của máy chủ: khi vòng lặp bị chặn, chúng sẽ dừng lại và systemd khởi động lại dịch vụ sau khi hết khoảng thời gian `WatchdogSec` mà không nhận được tín hiệu nào.
+Trên máy chủ systemd, 67router thông báo cho trình quản lý dịch vụ khi nó đã sẵn sàng và tiếp tục gửi tín hiệu định kỳ, nhờ đó một máy chủ có vòng lặp sự kiện bị kẹt sẽ bị dừng và khởi động lại thay vì tiếp tục chạy nhưng không phản hồi. Các tín hiệu này được gửi từ chính vòng lặp sự kiện của máy chủ: khi vòng lặp bị chặn, chúng sẽ dừng lại và systemd khởi động lại dịch vụ sau khi hết khoảng thời gian `WatchdogSec` mà không nhận được tín hiệu nào.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) đã tạo một unit người dùng có cấu hình này. Unit do bạn tự tạo (`Type=simple` theo mặc định) không có watchdog, vì vậy hãy thêm các dòng sau vào phần `[Service]` của unit:
 
@@ -440,7 +440,7 @@ Cấu hình kiểm tra tình trạng token được xử lý nội bộ bởi `t
 
 ### Các kênh tích hợp sẵn
 
-OmniRoute hỗ trợ **3 kênh cảnh báo**:
+67router hỗ trợ **3 kênh cảnh báo**:
 
 | Kênh                     | Thiết lập    | Trường hợp sử dụng                           |
 | ------------------------ | ------------ | -------------------------------------------- |
@@ -556,7 +556,7 @@ Tạo tệp `~/.omniroute/dashboard.json`:
 ### "Hạn ngạch báo trạng thái bình thường nhưng tôi thấy lỗi 429"
 
 - 429 có nghĩa là nhà cung cấp cho biết bạn đã sử dụng hết hạn ngạch
-- Dữ liệu theo dõi hạn ngạch của OmniRoute có thể đã **lỗi thời** — dữ liệu của nhà cung cấp ở phía thượng nguồn mới là chính xác
+- Dữ liệu theo dõi hạn ngạch của 67router có thể đã **lỗi thời** — dữ liệu của nhà cung cấp ở phía thượng nguồn mới là chính xác
 - Dữ liệu hạn ngạch được tự động làm mới thông qua trình giám sát hạn ngạch nội bộ
 
 ### "Tổ hợp đang gặp lỗi nhưng tất cả mục tiêu đều có vẻ hoạt động bình thường"
@@ -569,7 +569,7 @@ Tạo tệp `~/.omniroute/dashboard.json`:
 
 - Chạy `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Nếu là "ok" — đây là cảnh báo giả, quy trình kiểm tra trạng thái đang quá nghiêm ngặt
-- Nếu là bất kỳ kết quả nào khác — **hãy dừng OmniRoute** và làm theo [hướng dẫn khôi phục sau thảm họa](./DATABASE_GUIDE.md#disaster-recovery)
+- Nếu là bất kỳ kết quả nào khác — **hãy dừng 67router** và làm theo [hướng dẫn khôi phục sau thảm họa](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Áp lực bộ nhớ heap đang ở mức nghiêm trọng"
 

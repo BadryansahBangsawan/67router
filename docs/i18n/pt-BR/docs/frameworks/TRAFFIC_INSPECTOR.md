@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector é o depurador de tráfego HTTPS integrado do OmniRoute — uma ferramenta semelhante ao Charles Proxy / mitmweb / HTTP Toolkit que é **compatível com LLMs** e **compatível com agentes**. Ele está disponível em `/dashboard/tools/traffic-inspector` e recebe tráfego em tempo real de até 5 fontes de captura simultâneas.
+Traffic Inspector é o depurador de tráfego HTTPS integrado do 67router — uma ferramenta semelhante ao Charles Proxy / mitmweb / HTTP Toolkit que é **compatível com LLMs** e **compatível com agentes**. Ele está disponível em `/dashboard/tools/traffic-inspector` e recebe tráfego em tempo real de até 5 fontes de captura simultâneas.
 
 **Localização no dashboard:** `/dashboard/tools/traffic-inspector`
 **Grupo da barra lateral:** Ferramentas (após AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector é o depurador de tráfego HTTPS integrado do OmniRoute — um
 
 ### O que torna o Traffic Inspector único
 
-| Recurso                                                                                  | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Baseado na Web                                                                           |    ✓    |    ✗    |    ✗    |                ✓                |
-| Código aberto                                                                            |    ✓    |    ✗    | parcial |                ✓                |
-| **Compatível com agentes** (identifica se a solicitação vem do Antigravity/Copilot/etc.) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Compatível com LLMs** (analisa o formato OpenAI/Anthropic/Gemini, tokens e modelo)     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mapeamento de modelos visível** (gemini-3-flash → claude-sonnet-4.7)                   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Separação da latência do proxy/upstream**                                              | parcial |    ✗    |    ✗    |                ✓                |
-| **Integrado ao roteamento, fallback e custo do OmniRoute**                               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Depuração de proxy em todo o sistema** (qualquer aplicativo na máquina)                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Captura de host personalizado** (redirecionamento de DNS por host)                     |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Modo da variável de ambiente HTTP_PROXY**                                              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Visualização de conversas** (balões com múltiplos turnos, tool_use/tool_result)        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mesclador de streams SSE** (reconstrói a partir de eventos delta)                      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Gravação de sessões** (nomeadas, exportáveis como .har/.jsonl)                         |    ✗    |    ✓    |    ✓    |                ✓                |
+| Recurso                                                                                  | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Baseado na Web                                                                           |    ✓    |    ✗    |    ✗    |               ✓                |
+| Código aberto                                                                            |    ✓    |    ✗    | parcial |               ✓                |
+| **Compatível com agentes** (identifica se a solicitação vem do Antigravity/Copilot/etc.) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Compatível com LLMs** (analisa o formato OpenAI/Anthropic/Gemini, tokens e modelo)     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mapeamento de modelos visível** (gemini-3-flash → claude-sonnet-4.7)                   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Separação da latência do proxy/upstream**                                              | parcial |    ✗    |    ✗    |               ✓                |
+| **Integrado ao roteamento, fallback e custo do 67router**                                |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Depuração de proxy em todo o sistema** (qualquer aplicativo na máquina)                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Captura de host personalizado** (redirecionamento de DNS por host)                     |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Modo da variável de ambiente HTTP_PROXY**                                              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Visualização de conversas** (balões com múltiplos turnos, tool_use/tool_result)        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mesclador de streams SSE** (reconstrói a partir de eventos delta)                      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Gravação de sessões** (nomeadas, exportáveis como .har/.jsonl)                         |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arquitetura em um parágrafo
 
@@ -264,7 +264,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true se for uma resposta SSE
   mappedTo: string | null; // cabeçalho x-omniroute-mapped
-  costEstimateUsd: number | null; // custo estimado com base nos preços do OmniRoute
+  costEstimateUsd: number | null; // custo estimado com base nos preços do 67router
 }
 ```
 
@@ -395,7 +395,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proxy do sistema não revertido
 
-Se o OmniRoute falhar enquanto o modo de proxy de todo o sistema estiver ativo:
+Se o 67router falhar enquanto o modo de proxy de todo o sistema estiver ativo:
 
 **macOS:**
 
@@ -440,7 +440,7 @@ Caminho base: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Lista requisições (filtráveis: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Detalhes de uma única requisição                                                       |
 | DELETE | `/requests`                 | Limpa o buffer em memória                                                              |
-| POST   | `/requests/{id}/replay`     | Executa novamente a mesma requisição por meio do roteador OmniRoute                    |
+| POST   | `/requests/{id}/replay`     | Executa novamente a mesma requisição por meio do roteador 67router                     |
 | PUT    | `/requests/{id}/annotation` | Salva ou atualiza uma observação em uma requisição                                     |
 
 ### WebSocket

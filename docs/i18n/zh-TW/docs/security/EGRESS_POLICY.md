@@ -8,7 +8,7 @@
 
 > **真實來源：** `open-sse/utils/proxyFamily.ts`、`open-sse/utils/proxyDispatcher.ts`、`open-sse/utils/proxyFetch.ts`、`open-sse/utils/socksConnectorWithFamily.ts`、`open-sse/utils/proxyFamilyResolve.ts`、`src/shared/validation/schemas.ts`、`src/lib/db/proxies.ts`、`src/lib/db/upstreamProxy.ts`、`src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute 允許每個代理伺服器攜帶一項**位址家族出口指令**。預設情況下，由作業系統選擇 IPv4 或 IPv6（雙堆疊，「Happy Eyeballs」）。當您將指令設為 `ipv4` 或 `ipv6` 時，OmniRoute 會將透過該代理伺服器建立的每個連線固定至所選的位址家族，並採取**失敗時關閉**策略，而不會回退至另一個位址家族。
+67router 允許每個代理伺服器攜帶一項**位址家族出口指令**。預設情況下，由作業系統選擇 IPv4 或 IPv6（雙堆疊，「Happy Eyeballs」）。當您將指令設為 `ipv4` 或 `ipv6` 時，67router 會將透過該代理伺服器建立的每個連線固定至所選的位址家族，並採取**失敗時關閉**策略，而不會回退至另一個位址家族。
 
 本頁說明此指令的用途、存在原因、設定位置，以及執行階段如何解析該指令。
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` 的解析方式
 
-當 `family` 為 `auto` 時，OmniRoute **不會**附加任何指示詞——代理 URL 會保持原樣使用，而連線位址家族則依其固有資訊決定。
+當 `family` 為 `auto` 時，67router **不會**附加任何指示詞——代理 URL 會保持原樣使用，而連線位址家族則依其固有資訊決定。
 
 在建立 URL 時（`open-sse/utils/proxyDispatcher.ts` 中的 `proxyConfigToUrl` / `normalizeProxyUrl`），`auto` 代理會產生不含標記的純 URL：
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 非 `auto` 指示會作為單一合成查詢標記傳遞——`?family=ipv4` 或 `?family=ipv6`——並僅附加一次至正規化後的代理 URL。`normalizeProxyUrl` 會謹慎地移除並重新附加此標記，而且僅執行一次，因此絕不會破壞連接埠解析。
 
-建立 dispatcher 時，會讀取該標記並將其轉換為具體的連線位址家族。如果主機是與指定家族**相反**的 IP 常值，OmniRoute 會擲回錯誤（發生矛盾時採取故障關閉）：
+建立 dispatcher 時，會讀取該標記並將其轉換為具體的連線位址家族。如果主機是與指定家族**相反**的 IP 常值，67router 會擲回錯誤（發生矛盾時採取故障關閉）：
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 相容性
 
-位址家族固定功能可搭配 SOCKS5 代理使用，但原版 `fetch-socks` 並未公開固定代理躍點位址家族所需的 socket 選項。OmniRoute 為此提供了自己的連接器：
+位址家族固定功能可搭配 SOCKS5 代理使用，但原版 `fetch-socks` 並未公開固定代理躍點位址家族所需的 socket 選項。67router 為此提供了自己的連接器：
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

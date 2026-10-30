@@ -7,7 +7,7 @@
 > **Źródło prawdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ostatnia aktualizacja:** 2026-09-22 — przestrzenie nazw zakresu wskazują na MCP-SERVER.md
 
-OmniRoute posiada potok autoryzacji świadomy tras, który kontroluje każde żądanie API. Klasyfikacja jest **deterministyczna** i **zamknięta w przypadku awarii** — wszystko, co nie może zostać sklasyfikowane, trafia jako `MANAGEMENT` i wymaga sesji lub tokenu o uprawnieniach zarządzania. Ta strona wyjaśnia model dla inżynierów utrzymujących trasy lub projektujących nowe punkty końcowe.
+67router posiada potok autoryzacji świadomy tras, który kontroluje każde żądanie API. Klasyfikacja jest **deterministyczna** i **zamknięta w przypadku awarii** — wszystko, co nie może zostać sklasyfikowane, trafia jako `MANAGEMENT` i wymaga sesji lub tokenu o uprawnieniach zarządzania. Ta strona wyjaśnia model dla inżynierów utrzymujących trasy lub projektujących nowe punkty końcowe.
 
 ![Potok AuthZ (3 klasy tras + ocena polityki)](../diagrams/exported/authz-pipeline.svg)
 

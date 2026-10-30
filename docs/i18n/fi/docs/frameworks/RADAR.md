@@ -43,7 +43,7 @@ isännöity käyttöönotto tai ulkoinen integraatio olisi tällä hetkellä saa
 | Tukijatarjoukset                   | Toteutettu erillisenä allekirjoitettuna, vain reaaliaikaisena syötteenä ja hallintapaneelin sivuna. Asiakas validoi suljetun etuskeeman uudelleen, säilyttää viimeisen kelvollisen välimuistin, suodattaa vanhentuneet merkinnät ja merkitsee kumppanitarjoukset erikseen.                                         |
 | Tiedot ja tukijan tunnustaminen    | Toteutettu tiukkana allekirjoitettuna, vain reaaliaikaisena syötteenä, joka sisältää Radarin hallinnoiman ELO-luokituksen, tosiasioihin perustuvat luettelon ajantasaisuus- ja trenditiedot, vahvistetun paikallisen tukijamerkin, hallintapaneelin sivun sekä vain paikalliset CLI-tila- ja synkronointikomennot. |
 | Maksut ja tapahtumasähköpostit     | Ei toteutettu OSS-asiakkaassa. Ostot, lahjoitukset, kuittien tarkistus, palautus ja sähköpostien toimitus kuuluvat yksityiselle palvelulle; saatavuus isännöitynä palveluna riippuu edelleen sen valvotusta käyttöönotosta ja palveluntarjoajan määrityksistä.                                                     |
-| Tutkimusagentin kehityskokonaisuus | Ei kuulu tähän asiakasjulkaisuun. Kuratoitujen syötteiden sisältö säilyy palvelinpuolen datana; OmniRoute-asennuksessa ei suoriteta autonomista tutkimusagenttia.                                                                                                                                                  |
+| Tutkimusagentin kehityskokonaisuus | Ei kuulu tähän asiakasjulkaisuun. Kuratoitujen syötteiden sisältö säilyy palvelinpuolen datana; 67router-asennuksessa ei suoriteta autonomista tutkimusagenttia.                                                                                                                                                   |
 
 ---
 
@@ -121,7 +121,7 @@ Kun molemmat ovat käytössä, synkronointipolku on seuraava:
    väärinkäytösten manuaalista tarkastelua varten; näihin tauluihin ei tallenneta avainta tai IP-osoitetta käsittelemättömässä muodossa.
    Infrastruktuurin käyttölokit ja salattu toimituksen lähtevien viestien jono ovat erillisiä operatiivisia
    rajoja.
-3. OmniRoute ei koskaan lähetä Radar-palveluun kehotteita, vastauksia, keskusteluja, palveluntarjoajien tunnistetietoja, malliliikennettä,
+3. 67router ei koskaan lähetä Radar-palveluun kehotteita, vastauksia, keskusteluja, palveluntarjoajien tunnistetietoja, malliliikennettä,
    käytettävyysaikaa, viivettä tai paikallisia palveluntarjoajamäärityksiä.
 4. Vastaus todennetaan, validoidaan ja tallennetaan paikalliseen välimuistiin (katso
    [Suojausmalli](#security-model)). Radarilla on täsmälleen neljä palvelinpuolen verkkopolkua:
@@ -254,12 +254,12 @@ aktivoi sen.
 ### Kokonaisvaltainen aktivointi ja ohjattu määritys
 
 Yksityisellä syötepalvelulla ja tällä OSS-asiakkaalla on tarkoituksellisesti tarkasti rajattu
-vastuunjako: palvelu myöntää ja vahvistaa tukija-avaimen, kun taas paikallinen OmniRoute-asennus
+vastuunjako: palvelu myöntää ja vahvistaa tukija-avaimen, kun taas paikallinen 67router-asennus
 salaa avaimen, synkronoi allekirjoitetut artefaktit palvelinpuolella ja opastaa palveluntarjoajan
 määrityksessä. Avustetun vahvistuksen järjestys on:
 
 1. Hanki uusi tai palautettu avain tukijan lunastuksesta, paketeista/kassalta, palautuspolusta tai valtuutetulta yksityisen palvelimen ylläpitäjältä. Älä liitä raakaa avainta lokeihin, kuvakaappauksiin, ongelmaraporttien kommentteihin tai komentoriviargumentteihin.
-2. Ota `RADAR_ENABLED`-ominaisuuslippu käyttöön paikallisessa OmniRoute-asennuksessa. Tämä tuo käyttöliittymän näkyviin, mutta verkkoyhteyksiä ei käytetä, ennen kuin erillinen suostumus on tallennettu.
+2. Ota `RADAR_ENABLED`-ominaisuuslippu käyttöön paikallisessa 67router-asennuksessa. Tämä tuo käyttöliittymän näkyviin, mutta verkkoyhteyksiä ei käytetä, ennen kuin erillinen suostumus on tallennettu.
 3. Avaa `/dashboard/radar`, liitä avain ja aktivoi. Selain lähettää paikallisesti yhden `POST /api/radar/settings` -pyynnön, jonka sisältö on `{ optIn: true, supporterKey }`; avain salataan paikallisesti, ja vastaus sisältää vain arvon `omr_****<last4>`.
 4. Anna aktivointinäytön suorittaa luettelon synkronointi tai valitse **Synkronoi nyt**. Varmista, että sivu näyttää tilan `live`, syötteen version ja noutoajan. Todennusta edellyttävää paikallista diagnostiikkaa varten `GET /api/radar/status` ilmoittaa suostumuksen ja avaimen olemassaolon sekä neljä välimuistin tilaa palauttamatta avainta. `POST /api/radar/sync-all` voi päivittää erikseen luettelon, suosittelut, tarjoukset ja Intel-tiedot.
 5. Avaa `/dashboard/radar/setup?provider=<provider>`. Siirry palveluntarjoajan ylläpitämään tunnistetietojen URL-osoitteeseen, valitse **Lisää API-avain**, tallenna oikealla palveluntarjoajan lomakkeella, palaa oppaaseen ja suorita **Testaa yhteys**. Opas käyttää tavallisia `/api/providers`- ja `/api/providers/<connection-id>/test`-reittejä; se ei luo erillistä Radar-tunnistetietoa.
@@ -301,7 +301,7 @@ synkronointiin asti.
 ### Haarautuksia tukevat ympäristömuuttujien ohitukset
 
 Kahden ympäristömuuttujan avulla haarautusten ja itse ylläpidettyjen asennusten
-käyttäjät voivat ohjata asiakkaan oletusarvoisen OmniRoute-palvelun sijasta omaan
+käyttäjät voivat ohjata asiakkaan oletusarvoisen 67router-palvelun sijasta omaan
 syötteeseensä — katso alta
 [Syötteen ylläpitäminen itse](#how-to-self-host-a-feed):
 
@@ -463,7 +463,7 @@ Syötteen `enabled: false` säilyy turvallisuuspoikkeuksena: se ohittaa vanhentu
 Luettelojulkaisut käyttävät arvoa `schemaVersion: 2`. `contextWindow` sekä kukin kentistä `tools`, `vision` ja
 `thinking` ovat toisistaan riippumatta tyyppiä `number | null` / `boolean | null`: `null` tarkoittaa tuntematonta, kun taas
 `false` tarkoittaa, että D16-vahvistettu palveluntarjoajan virallinen lähde ilmoittaa nimenomaisesti ominaisuuden puuttuvan.
-Sisäisiä OmniRoute-rekisterin tai mallimäärityksen lippuja ei koskaan ylennetä suoraan syötteen faktatiedoiksi. Asiakas
+Sisäisiä 67router-rekisterin tai mallimäärityksen lippuja ei koskaan ylennetä suoraan syötteen faktatiedoiksi. Asiakas
 hyväksyy edelleen v1-tilannekuvat; koska vanha muodostin käytti arvoa `false` puuttumisen paikkamerkkinä, v1-version `false`
 normalisoidaan tuntemattomaksi, kun taas v1-version `true` säilyy faktatietona. Tuntemattomat skeemaversiot hylätään turvallisesti, ja
 viimeisin kelvollinen välimuisti säilyy käytettävissä. Jokaisella v2-mallilla, jolla on muu kuin null-arvoinen konteksti tai ominaisuus, on oltava
@@ -524,7 +524,7 @@ Alla olevat paikalliset Radar-reittiperheet palvelevat käyttöliittymää hakem
 | `/api/radar/local-model-state` | DELETE | Tyhjentää muokattavat ohituskentät säilyttäen mahdollisen hautakiven.                                                                                    |
 
 **Ehdoton sääntö: nämä reitit eivät koskaan toimi syötepalvelun proxyna.** Selain kommunikoi vain
-paikallisen OmniRoute-palvelimen kanssa. Radar-palveluun yhteydessä olevat neljä moduulia ovat
+paikallisen 67router-palvelimen kanssa. Radar-palveluun yhteydessä olevat neljä moduulia ovat
 `src/lib/radar/sync.ts` (katalogi), `src/lib/radar/referralsSync.ts` (suosittelut) ja
 `src/lib/radar/offersSync.ts` (tarjoukset) sekä `src/lib/radar/intelSync.ts` (Intel); ne kaikki suoritetaan
 palvelinpuolella, ei koskaan asiakaspuolella. Näin syötteen URL-osoite ja mahdollinen tukija-avain
@@ -568,7 +568,7 @@ Intel on allekirjoitettu artefakti osoitteessa `GET /v1/intel/latest`. Suljettu 
 
 `syncRadarIntel()` käyttää samoja tarjousten kanssa samoja vaatimuksia: palvelinpuolen Bearer-todennusta, 30 sekunnin aikakatkaisua, suoratoistettua 10 MiB:n rajaa, täsmällisten tavujen Ed25519-varmennusta, tiukkaa skeemaa, rungon ja otsakkeen `live`-vaatimusta, version alarajaa sekä viimeisimmän toimivan välimuistin säilyttämistä. Kun varmennettu aktiivinen tilannevedos on tallennettu pysyvästi, asiakas johtaa arvon `radar:<sha256(supporter key)>`, tallentaa vain tämän yksisuuntaisen tunnisteen ja lähettää erillisen `radar_supporter`-tunnustustapahtuman. Sen `radar-supporter`-merkki on idempotentti ja antaa nolla XP:tä; se ei koskaan päivitä tulostaulukoita eikä käytä `token_share`-toimintoa uudelleen. `/dashboard/radar/intel` hahmontaa merkin vain varmennetun paikallisen välimuistin metatiedoista.
 
-CLI tarjoaa komennot `omniroute radar status` ja `omniroute radar sync`. Molemmat viestivät vain paikallisen OmniRoute-API:n kanssa. `status` suorittaa vain luku -tyyppisen pyynnön `GET /api/radar/status`; `sync` lähettää yhden pyynnön `POST /api/radar/sync-all` ja tulostaa tuloksen syötekohtaisesti. Kumpikaan komento ei lue, hyväksy tai tulosta tukija-avainta, eikä kumpikaan ota suoraan yhteyttä Radar-palveluun.
+CLI tarjoaa komennot `omniroute radar status` ja `omniroute radar sync`. Molemmat viestivät vain paikallisen 67router-API:n kanssa. `status` suorittaa vain luku -tyyppisen pyynnön `GET /api/radar/status`; `sync` lähettää yhden pyynnön `POST /api/radar/sync-all` ja tulostaa tuloksen syötekohtaisesti. Kumpikaan komento ei lue, hyväksy tai tulosta tukija-avainta, eikä kumpikaan ota suoraan yhteyttä Radar-palveluun.
 
 ---
 

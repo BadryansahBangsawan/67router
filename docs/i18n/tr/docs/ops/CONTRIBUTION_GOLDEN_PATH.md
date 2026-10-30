@@ -112,7 +112,7 @@ Playwright testi veya belgelenmiş manuel kontrol gerekir.
 - CLI katalogları ayrı olarak `bin/cli/locales/` altında bulunur.
 - ICU yer tutucularını ve etiketlerini tam olarak koruyun. Ürün/sağlayıcı/model adlarını,
   protokol ve başlık adlarını, komutları, kod/JSON tanımlayıcılarını, URL'leri, ortam değişkenlerini veya
-  `OmniRoute`, `OAuth`, `MCP` ve `A2A` gibi korunan terimleri çevirmeyin. Güncel kaynak listesi
+  `67router`, `OAuth`, `MCP` ve `A2A` gibi korunan terimleri çevirmeyin. Güncel kaynak listesi
   `scripts/i18n/glossary/protected-terms.json` dosyasındadır.
 
 **Odaklı döngü**
@@ -259,7 +259,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # başka yerde (CI) olu�
   `current` ile `previous` konumlarını tekrar değiştirir. İlk doğrulamadan geçemeyen bir aday
   hiçbir zaman yayıma alınmaz.
 
-Her şey git tarafından yok sayılan `_artifacts/candidate/` altına yazılır; mevcut bir OmniRoute
+Her şey git tarafından yok sayılan `_artifacts/candidate/` altına yazılır; mevcut bir 67router
 kurulumuna ve onun veri dizinine hiçbir zaman dokunulmaz. Yayıma alınan CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` konumundadır; kullanırken kendi `DATA_DIR`
 değerinizle başlatın. Çıkış kodları: başarı için `0`, başarısız doğrulama veya yayıma alma için `1`,

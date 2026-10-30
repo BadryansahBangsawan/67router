@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute **párhuzamos ciklusú** kiadási modellt használ: az aktív ciklushoz egy külön `release/vX.Y.Z` ág tartozik, a `main` a közzétett kiadási vonal, a ciklus kiadásakor pedig egy módosíthatatlan `vX.Y.Z` címke készül. Teljesen megszokott, hogy commitok kerülnek a `release/*` ágakra _és_ a `main` ágra is — ez nem tévedés.
+Az 67router **párhuzamos ciklusú** kiadási modellt használ: az aktív ciklushoz egy külön `release/vX.Y.Z` ág tartozik, a `main` a közzétett kiadási vonal, a ciklus kiadásakor pedig egy módosíthatatlan `vX.Y.Z` címke készül. Teljesen megszokott, hogy commitok kerülnek a `release/*` ágakra _és_ a `main` ágra is — ez nem tévedés.
 
 A karbantartóknak szóló részletek a `CLAUDE.md` fájlban (21. szigorú szabály) és a
 [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) dokumentumban találhatók. Ez az oldal a közreműködőknek szóló nyilvános összefoglaló.

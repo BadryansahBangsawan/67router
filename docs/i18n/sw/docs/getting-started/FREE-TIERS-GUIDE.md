@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa ufupi**: Tumia akaunti zako mwenyewe za watoa huduma zinazostahiki. OmniRoute huunganisha miunganisho unayosanidi; haitoi bajeti ya jumla ya tokeni iliyotangazwa. Ufikiaji bila malipo unaweza kuhitaji kujisajili, API key, idhini, au njia ya malipo. Vikomo, sera za faragha na masharti ya watoa huduma bado yanatumika.
+> **Kwa ufupi**: Tumia akaunti zako mwenyewe za watoa huduma zinazostahiki. 67router huunganisha miunganisho unayosanidi; haitoi bajeti ya jumla ya tokeni iliyotangazwa. Ufikiaji bila malipo unaweza kuhitaji kujisajili, API key, idhini, au njia ya malipo. Vikomo, sera za faragha na masharti ya watoa huduma bado yanatumika.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Watoa huduma wengi wa AI hutoa aina fulani ya **ufikiaji bila malipo**. Kulingana na mtoa huduma, hii inaweza kumaanisha endpoint isiyohitaji uthibitishaji, kiasi cha matumizi kinachosasishwa mara kwa mara, ufikiaji usio na kikomo lakini wenye kikomo cha kasi, ruzuku ya kujisajili, idhini ya mwenyewe, au ofa ya muda. Baadhi ya chaguo huhitaji akaunti, API key, kadi ya mkopo, KYC, au ukubali masharti mahususi ya mtoa huduma.
 
-OmniRoute **hujumuisha** miunganisho iliyosanidiwa katika endpoint moja. Bado unajisajili kando kwa kila mtoa huduma anayehitaji akaunti. Unganisha akaunti hizo na utumie `model: "auto"` kuelekeza maombi miongoni mwa malengo yanayostahiki. Usakinishaji mpya unaweza kukosa lengo lolote linalostahiki ambalo halihitaji key; kusakinisha OmniRoute pekee hakuhakikishi jibu la mazungumzo litakalofanikiwa.
+67router **hujumuisha** miunganisho iliyosanidiwa katika endpoint moja. Bado unajisajili kando kwa kila mtoa huduma anayehitaji akaunti. Unganisha akaunti hizo na utumie `model: "auto"` kuelekeza maombi miongoni mwa malengo yanayostahiki. Usakinishaji mpya unaweza kukosa lengo lolote linalostahiki ambalo halihitaji key; kusakinisha 67router pekee hakuhakikishi jibu la mazungumzo litakalofanikiwa.
 
 ---
 
@@ -57,7 +57,7 @@ Watoa huduma hawa wana **madaraja ya bila malipo** yenye vikomo maalumu:
 
 ## Jinsi ya Kuunganisha Viwango vya Bila Malipo
 
-Uwezo wa kipekee wa OmniRoute ni **kuunganisha viwango vya bila malipo**. Badala ya kutegemea mtoa huduma mmoja, unaunganisha watoa huduma wengi wa bila malipo na kuiruhusu OmniRoute ichague kiotomatiki mtoa huduma bora kwa kila ombi.
+Uwezo wa kipekee wa 67router ni **kuunganisha viwango vya bila malipo**. Badala ya kutegemea mtoa huduma mmoja, unaunganisha watoa huduma wengi wa bila malipo na kuiruhusu 67router ichague kiotomatiki mtoa huduma bora kwa kila ombi.
 
 ### Mfano: Ufikiaji Mpana Zaidi wa Viwango vya Bila Malipo
 
@@ -68,7 +68,7 @@ Unganisha watoa huduma kadhaa ili kupunguza utegemezi wa kiwango chochote kimoja
 3. **Pollinations** — ufikiaji usiohitaji ufunguo, wenye kikomo cha kasi ya maombi
 4. **LongCat** — mgao wa mara moja baada ya kujisajili (unahitaji KYC)
 
-Kisha tumia `model: "auto"` na OmniRoute itafanya yafuatayo:
+Kisha tumia `model: "auto"` na 67router itafanya yafuatayo:
 
 - Kujaribu kwanza muunganisho unaostahiki wenye nafasi ya juu zaidi
 - Ikiwa kiwango chake cha matumizi kimefikiwa au ukaguzi wa hali unashindwa → kujaribu mtoa huduma anayefuata aliyesanidiwa
@@ -102,7 +102,7 @@ ufikiaji usio na kikomo/usiohitaji ufunguo, salio la kujisajili, vipengee vilivy
 
 ### Hatua ya 5: Bofya Unganisha
 
-Kwa mtoa huduma wa `NOAUTH`, OmniRoute haiombi kitambulisho cha ufikiaji cha huduma ya juu. Hii haihakikishi kwamba huduma ya juu inakubali programu za wahusika wengine au ina uwezo unaopatikana. Watoa huduma wa OAuth na API-key lazima waunganishwe kupitia mtiririko wao wa akaunti ulioandikwa. Programu yako bado hutumia ufunguo wa API wa OmniRoute unaoonyeshwa katika **Dashibodi → Vituo vya Mwisho** wakati uthibitishaji wa kipanga-njia umewashwa.
+Kwa mtoa huduma wa `NOAUTH`, 67router haiombi kitambulisho cha ufikiaji cha huduma ya juu. Hii haihakikishi kwamba huduma ya juu inakubali programu za wahusika wengine au ina uwezo unaopatikana. Watoa huduma wa OAuth na API-key lazima waunganishwe kupitia mtiririko wao wa akaunti ulioandikwa. Programu yako bado hutumia ufunguo wa API wa 67router unaoonyeshwa katika **Dashibodi → Vituo vya Mwisho** wakati uthibitishaji wa kipanga-njia umewashwa.
 
 ### Hatua ya 6: Rudia
 
@@ -112,7 +112,7 @@ Unganisha watoa huduma kadhaa ambao masharti na muundo wao wa faragha unafaa mat
 
 ## Kusoma Katalogi kwa Usahihi
 
-- `NOAUTH` inamaanisha OmniRoute haikuombi kitambulisho cha mtoa huduma; haihakikishi
+- `NOAUTH` inamaanisha 67router haikuombi kitambulisho cha mtoa huduma; haihakikishi
   muda wa huduma, faragha, au uwezo usio na kikomo.
 - `hasFree` ni metadata ya ugunduzi. Inaweza kuwakilisha mgao unaojirudia, ufikiaji usiohitaji ufunguo,
   salio la kujisajili, mpango wa kuidhinishwa, au ofa.
@@ -125,15 +125,15 @@ Unganisha watoa huduma kadhaa ambao masharti na muundo wao wa faragha unafaa mat
 
 ---
 
-## Jinsi OmniRoute Inavyoboresha Viwango vya Bure
+## Jinsi 67router Inavyoboresha Viwango vya Bure
 
 ### 1. Urejeshaji wa Kiotomatiki
 
-Ikiwa mtoa huduma mmoja wa bure ana shughuli nyingi au hafanyi kazi, OmniRoute hujaribu mwingine kiotomatiki. Huhitaji kufanya chochote.
+Ikiwa mtoa huduma mmoja wa bure ana shughuli nyingi au hafanyi kazi, 67router hujaribu mwingine kiotomatiki. Huhitaji kufanya chochote.
 
 ### 2. Uelekezaji Mahiri
 
-OmniRoute huchagua **mtoa huduma bora wa bure** kwa kila ombi kulingana na:
+67router huchagua **mtoa huduma bora wa bure** kwa kila ombi kulingana na:
 
 - Kasi — Ni mtoa huduma gani aliye na kasi zaidi sasa hivi?
 - Ubora — Ni mtoa huduma gani aliye bora zaidi kwa jukumu hili?
@@ -141,13 +141,13 @@ OmniRoute huchagua **mtoa huduma bora wa bure** kwa kila ombi kulingana na:
 
 ### 3. Uokoaji wa Tokeni
 
-Mfumo wa OmniRoute wa mgandamizo unaweza kupunguza tokeni zinazostahiki za kidokezo na matokeo ya zana. Kiasi
+Mfumo wa 67router wa mgandamizo unaweza kupunguza tokeni zinazostahiki za kidokezo na matokeo ya zana. Kiasi
 halisi cha uokoaji kinategemea maudhui, injini zilizochaguliwa, uhasibu wa mtoa huduma, na mipangilio ya
 uaminifu; mgandamizo hauzidishi kila kikomo cha mtoa huduma kwa kiwango kisichobadilika.
 
 ### 4. Usaidizi wa Akaunti Nyingi
 
-Ikiwa masharti ya mtoa huduma yanaruhusu akaunti au vitambulisho vingi, OmniRoute inaweza kuchukulia kila
+Ikiwa masharti ya mtoa huduma yanaruhusu akaunti au vitambulisho vingi, 67router inaweza kuchukulia kila
 muunganisho kama mgombea tofauti wa uelekezaji. Usiunde akaunti za ziada ili kukwepa
 kikomo au sera ya ufikiaji ya mtoa huduma.
 
@@ -162,7 +162,7 @@ Katalogi inayotumika sasa, baada ya kuondoa nakala katika hifadhi shirikishi, in
 | Mgao unaojirudia uliokokotolewa          |       **~1.62B tokeni/mwezi** | Hifadhi shirikishi zimehesabiwa mara moja; watoa huduma wasio na kikomo hawajajumuishwa kwenye jumla |
 | Mwezi wa kwanza wenye mgao wa kujisajili |             **~2.22B tokeni** | Jumla inayojirudia pamoja na mikopo ya mara moja na inayojirudia                                     |
 
-Haya ni makadirio ya katalogi nzima katika akaunti tofauti zinazostahiki, si mgao unaotolewa na OmniRoute wala utabiri wa usakinishaji mpya. Kiwango unachoweza kutumia kinategemea watoa huduma unaowaunganisha na masharti yao ya sasa. Thamani hizi hukokotolewa kutoka `open-sse/config/freeModelCatalog.ts`; angalia
+Haya ni makadirio ya katalogi nzima katika akaunti tofauti zinazostahiki, si mgao unaotolewa na 67router wala utabiri wa usakinishaji mpya. Kiwango unachoweza kutumia kinategemea watoa huduma unaowaunganisha na masharti yao ya sasa. Thamani hizi hukokotolewa kutoka `open-sse/config/freeModelCatalog.ts`; angalia
 [Rejeleo la Viwango vya Bila Malipo](../reference/FREE_TIERS.md) kwa uondoaji wa nakala katika hifadhi shirikishi, viashiria vya ToS,
 vipengee vilivyositishwa, na mbinu ya kukokotoa mikopo ya kujisajili.
 
@@ -189,7 +189,7 @@ uzalishaji. Mizigo muhimu ya kazi inapaswa kuwa na njia mbadala inayofuatiliwa n
 
 Mapatano yanaweza kujumuisha vikomo vikali, orodha za kusubiri, KYC, uthibitishaji wa kadi ya mkopo, mafunzo kwa kutumia
 vidokezo, faragha dhaifu, kutokuwepo kwa SLA, mabadiliko ya mara kwa mara ya modeli, vizuizi vya kijiografia, malipo ya matumizi ya ziada au
-hatari ya sera ya akaunti. OmniRoute huonyesha metadata inayopatikana; wewe ndiye unayechagua cha kuwezesha.
+hatari ya sera ya akaunti. 67router huonyesha metadata inayopatikana; wewe ndiye unayechagua cha kuwezesha.
 
 ### "Ninawezaje kupata kiwango zaidi cha bure?"
 
@@ -208,7 +208,7 @@ ukurasa wa Nafasi za Watoa Huduma wa Bure kama ishara ya ubora na uthibitishe mo
 
 ## Nini Kinachofuata?
 
-- **[Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ruhusu OmniRoute ikuchagulie AI bora zaidi
+- **[Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ruhusu 67router ikuchagulie AI bora zaidi
 - **[Mwongozo wa Watoa Huduma](./PROVIDERS-GUIDE.md)** — Unganisha watoa huduma zaidi
 - **[Utatuzi wa Matatizo](../guides/TROUBLESHOOTING.md)** — Rekebisha matatizo ya kawaida
 - **[Rejeleo la Viwango vya Bila Malipo](../reference/FREE_TIERS.md)** — Orodha kamili ya viwango vya bila malipo

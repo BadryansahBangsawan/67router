@@ -4,7 +4,7 @@
 
 ---
 
-Kun OmniRoute suoritetaan Dockerissa, vanhat **Tuo Cursor IDE:stä**- /
+Kun 67router suoritetaan Dockerissa, vanhat **Tuo Cursor IDE:stä**- /
 `cursor-agent`-työnkulut epäonnistuvat, koska säilö ei näe isäntäkoneen Cursor-
 asennusta. Käytä sen sijaan **Kirjaudu Cursorilla** -toimintoa (deep-control PKCE).
 
@@ -14,7 +14,7 @@ asennusta. Käytä sen sijaan **Kirjaudu Cursorilla** -toimintoa (deep-control P
    `~/.config/Cursor/User/globalStorage/state.vscdb`, säilön _sisältä_.
    Docker Desktop for macOS ei liitä isäntäkoneen IDE-tietokantaa oletusarvoisesti, ja
    säilön käyttöjärjestelmä on Linux, vaikka isäntäkone olisi Darwin.
-2. **Ei `cursor-agent`-binääriä** — Viralliset OmniRoute-levykuvat eivät sisällä
+2. **Ei `cursor-agent`-binääriä** — Viralliset 67router-levykuvat eivät sisällä
    `cursor-agent`-binääriä. Saatavilla olevat mallit suoritti aiemmin
    `cursor-agent --list-models` -komennon ja käytti epäonnistumisen yhteydessä staattista luetteloa.
 3. **Väärä binääri** — **Älä** liitä macOS:n `cursor-agent`-binääriä bind mount
@@ -24,11 +24,11 @@ asennusta. Käytä sen sijaan **Kirjaudu Cursorilla** -toimintoa (deep-control P
 
 1. Avaa **Hallintapaneeli → Palveluntarjoajat → Cursor**.
 2. Valitse **Kirjaudu Cursorilla** -välilehti.
-3. Napsauta **Kirjaudu Cursorilla** — OmniRoute avaa osoitteen
+3. Napsauta **Kirjaudu Cursorilla** — 67router avaa osoitteen
    `https://cursor.com/loginDeepControl?…` **isäntäkoneen** selaimessa.
-4. Hyväksy kirjautuminen selaimessa ja palaa sitten hallintapaneeliin. OmniRoute
+4. Hyväksy kirjautuminen selaimessa ja palaa sitten hallintapaneeliin. 67router
    kyselee `api2.cursor.sh/auth/poll`-rajapintaa, kunnes tunnukset saapuvat.
-5. OmniRoute tallentaa **käyttö- ja päivitystunnukset** ja päivittää ne osoitteen
+5. 67router tallentaa **käyttö- ja päivitystunnukset** ja päivittää ne osoitteen
    `https://api2.cursor.sh/auth/exchange_user_api_key` kautta.
 
 Tämä menetelmä ei vaadi Cursor IDE:tä tai `cursor-agent`-binääriä säilön sisällä.
@@ -37,10 +37,10 @@ Tämä menetelmä ei vaadi Cursor IDE:tä tai `cursor-agent`-binääriä säilö
 
 Kun yhteys on kirjautuneena, **Saatavilla olevat mallit / Automaattinen synkronointi** suosii Cursorin
 HTTP `AiService/AvailableModels` -luetteloa ja käyttää yhteyden Bearer-tunnusta.
-Jos tämä epäonnistuu, OmniRoute yrittää edelleen käyttää isäntäkoneen `cursor-agent`-binääriä
+Jos tämä epäonnistuu, 67router yrittää edelleen käyttää isäntäkoneen `cursor-agent`-binääriä
 (jos se on käytettävissä) ja sen jälkeen staattista rekisterin alkuaineistoa.
 
-OmniRoute näyttää luettelossa aina mallin **`auto`** (näyttönimi ”Auto”) sekä
+67router näyttää luettelossa aina mallin **`auto`** (näyttönimi ”Auto”) sekä
 OpenCodex-tyyliset reititystilat **`auto-cost`**, **`auto-balance`** ja
 **`auto-intelligence`**. Siirtoyhteydessä nämä vastaavat Cursorin `default`-mallia
 (ja kolmessa muunnelmassa käytetään `optimization`-ModelParameter-parametria). Suosi
@@ -87,7 +87,7 @@ ei enää vaadita).
 ## Tyhjät vuorot / käyttökiintiö loppunut
 
 Kun Cursor hyväksyy Run-pyynnön mutta ei palauta avustajan tekstiä (yleistä, kun premium-
-käyttökiintiö on loppunut), OmniRoute näyttää toimintaohjeita sisältävän **429**-virheen (kiintiöviitteet) tai
+käyttökiintiö on loppunut), 67router näyttää toimintaohjeita sisältävän **429**-virheen (kiintiöviitteet) tai
 **502**-virheen ohjeineen — ei pelkkää ”Palveluntarjoaja palautti tyhjää sisältöä” -viestiä. Suoratoiston
 virheet, kuten `not_found: AI Model Not Found` (käyttöjakson kiintiö on loppunut), luokitellaan
 **Cursorin nopeusraja / käyttökiintiö ylitetty** -virheiksi, ja viesti säilytetään
@@ -97,7 +97,7 @@ Cursor-tilauksen rajoja.
 
 ## Asiakasversio (headless)
 
-Ilman paikallista `cursor-agent`-asennusta OmniRoute selvittää
+Ilman paikallista `cursor-agent`-asennusta 67router selvittää
 `x-cursor-client-version`-arvon ensin ympäristömuuttujasta `CURSOR_AGENT_CLI_VERSION`, sitten levylle välimuistiin tallennetusta
 Cursorin asennusskriptin tietojen poiminnasta ja lopuksi kiinnitetystä koontitunnisteesta. Ohita arvo tarvittaessa
 ympäristömuuttujalla `CURSOR_AGENT_CLI_VERSION`.

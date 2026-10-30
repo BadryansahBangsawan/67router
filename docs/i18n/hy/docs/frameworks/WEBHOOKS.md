@@ -7,7 +7,7 @@
 > **Ճշմարտության աղբյուրը՝** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Վերջին թարմացումը՝** 2026-06-28 — v3.8.40
 
-OmniRoute-ը կարող է HTTP վեբհուկներ գործարկել հարթակի իրադարձությունների դեպքում։ Օգտագործեք դրանք՝
+67router-ը կարող է HTTP վեբհուկներ գործարկել հարթակի իրադարձությունների դեպքում։ Օգտագործեք դրանք՝
 Slack-ի, PagerDuty-ի, Datadog-ի, ներքին ահազանգման ծառայությունների կամ ցանկացած HTTP ստացողի հետ ինտեգրվելու համար։
 
 Դիսպետչերը յուրաքանչյուր առաքում ստորագրում է HMAC-SHA256-ով, կրկին փորձում է անցողիկ
@@ -54,7 +54,7 @@ Slack-ի, PagerDuty-ի, Datadog-ի, ներքին ահազանգման ծառայ
 
 ## HMAC ստորագրում
 
-Երբ վեբհուկն ունի `secret`, OmniRoute-ը ստորագրում է JSON մարմինը և ուղարկում՝
+Երբ վեբհուկն ունի `secret`, 67router-ը ստորագրում է JSON մարմինը և ուղարկում՝
 
 ```
 Content-Type: application/json
@@ -209,7 +209,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

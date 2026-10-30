@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (Oʻzbekcha)
+# Quick Start: Get 67router Running in 3 Minutes (Oʻzbekcha)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **Qisqacha**: Oʻrnating → Mos provayderni ulang → IDE’ingizni OmniRoute’ga yoʻnaltiring. Tayyor.
+> **Qisqacha**: Oʻrnating → Mos provayderni ulang → IDE’ingizni 67router’ga yoʻnaltiring. Tayyor.
 
 ---
 
-## 1-qadam: OmniRoute’ni oʻrnatish
+## 1-qadam: 67router’ni oʻrnatish
 
 Oʻzingizga maʼqul usulni tanlang:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## 2-qadam: OmniRoute’ni ishga tushirish
+## 2-qadam: 67router’ni ishga tushirish
 
 ```bash
 omniroute
 ```
 
-OmniRoute `http://localhost:20128` manzilida ishga tushadi. Boshqaruv paneli avtomatik ravishda ochiladi.
+67router `http://localhost:20128` manzilida ishga tushadi. Boshqaruv paneli avtomatik ravishda ochiladi.
 
 ---
 
@@ -57,7 +57,7 @@ Shartlari va kvotasi ehtiyojlaringizga mos keladigan provayderni tanlang. **Dash
 
 ## 4-qadam: Ishlashini tekshirish
 
-[API kalitlari](http://localhost:20128/dashboard/api-manager) boʻlimida yangi kalit yarating. Bu kalit boshqa koʻrsatilmasligi sababli uni saqlab qoʻying. Eʼtibor bering, bu kalit yuqori oqim provayderlariga kirish uchun emas, balki vositalarning OmniRoute’ga kirishi uchun moʻljallangan.
+[API kalitlari](http://localhost:20128/dashboard/api-manager) boʻlimida yangi kalit yarating. Bu kalit boshqa koʻrsatilmasligi sababli uni saqlab qoʻying. Eʼtibor bering, bu kalit yuqori oqim provayderlariga kirish uchun emas, balki vositalarning 67router’ga kirishi uchun moʻljallangan.
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ Ulangan modellaringiz roʻyxatini koʻrishingiz kerak.
 
 ---
 
-## 5-qadam: IDE yoki CLI vositangizni OmniRoute’ga yoʻnaltirish
+## 5-qadam: IDE yoki CLI vositangizni 67router’ga yoʻnaltirish
 
 IDE yoki CLI vositangizda quyidagilarni sozlang:
 
@@ -77,7 +77,7 @@ API kaliti: [Boshqaruv paneli → Endpointlar bo‘limidan nusxalang]
 Model:      auto
 ```
 
-Shu bilan tamom! Endi IDE’ingiz provayderni avtomatik tanlash imkoniyati bilan OmniRoute’dan foydalanadi.
+Shu bilan tamom! Endi IDE’ingiz provayderni avtomatik tanlash imkoniyati bilan 67router’dan foydalanadi.
 
 ### IDE misoli: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ Shu bilan tamom! Endi IDE’ingiz provayderni avtomatik tanlash imkoniyati bilan
     apiKey: <YOUR_KEY>
 ```
 
-3. Continue.dev chat panelida `OmniRoute - Auto` variantini tanlang, shundan soʻng soʻrovlaringiz OmniRoute’ga yuboriladi.
+3. Continue.dev chat panelida `OmniRoute - Auto` variantini tanlang, shundan soʻng soʻrovlaringiz 67router’ga yuboriladi.
 4. (Ixtiyoriy) Oʻquvchi uchun mashq — IDE’ingiz yordamida `config.yaml` fayliga boshqa barcha tayyor konfiguratsiyalarni ham qoʻshing 😊
 
 ### CLI misoli: Codex CLI
@@ -110,19 +110,19 @@ Windows uchun (Command Prompt):
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. Endi Codex’ni OmniRoute uchun sozlangan holda ishga tushiramiz. Quyidagini bajaring:
+2. Endi Codex’ni 67router uchun sozlangan holda ishga tushiramiz. Quyidagini bajaring:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-Endpoint va API kalitini koʻrsatish uchun buni `codex` hamda buyruq qatori parametrlari orqali qoʻlda bajarishingiz mumkin, ammo yuqoridagi buyruq yordamida OmniRoute hammasini siz uchun hal qiladi.
+Endpoint va API kalitini koʻrsatish uchun buni `codex` hamda buyruq qatori parametrlari orqali qoʻlda bajarishingiz mumkin, ammo yuqoridagi buyruq yordamida 67router hammasini siz uchun hal qiladi.
 
 Xuddi shu bitta buyruqli ishga tushirish usuli umumiy ishga tushirgich orqali boshqa CLI vositalari uchun ham ishlaydi — `omniroute run <target>` buyrugʻi `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` va `gemini` vositalarini qoʻllab-quvvatlaydi ([CLI integratsiyalari](../guides/CLI-INTEGRATIONS.md) boʻlimiga qarang).
 
-3. Endi CLI soʻrovlarni OmniRoute’ga yuborishi kerak.
+3. Endi CLI soʻrovlarni 67router’ga yuborishi kerak.
 
-### Vosita soʻrovlarni OmniRoute orqali yoʻnaltirayotganini tasdiqlash
+### Vosita soʻrovlarni 67router orqali yoʻnaltirayotganini tasdiqlash
 
 Chap yon paneldagi [Monitoring/Jurnallar](http://localhost:20128/dashboard/logs) havolasini bosish orqali soʻrov tafsilotlarini koʻrishingiz mumkin. Keyingi boʻlimlarga oʻtib, qoʻshimcha tafsilotlarni koʻrishingiz mumkin. Qoʻshimcha sifatida, sevimli boshqaruv vositangizdan qanday maʼlumotlar yuborilayotganini ham koʻrishingiz mumkin. Bu oʻrganish va nosozliklarni tuzatish nuqtayi nazaridan foydalidir.
 
@@ -130,7 +130,7 @@ Chap yon paneldagi [Monitoring/Jurnallar](http://localhost:20128/dashboard/logs)
 
 ## Keyingi qadamlar
 
-- **[Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)** — OmniRoute siz uchun eng yaxshi AIni tanlasin
+- **[Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)** — 67router siz uchun eng yaxshi AIni tanlasin
 - **[Provayderlar qoʻllanmasi](./PROVIDERS-GUIDE.md)** — Koʻproq provayderlarni ulang (bepul va pullik)
 - **[Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)** — Provayder shartlari va bepul tarif cheklovlarini koʻrib chiqing
 - **[Muammolarni bartaraf etish](../guides/TROUBLESHOOTING.md)** — Keng tarqalgan muammolarni hal qiling
@@ -141,23 +141,23 @@ Chap yon paneldagi [Monitoring/Jurnallar](http://localhost:20128/dashboard/logs)
 
 ### "Menga API kaliti kerakmi?"
 
-OmniRoute API kaliti vositalaringizni autentifikatsiya qiladi. Yuqori darajadagi hisob maʼlumotlari provayderga bogʻliq: ayrimlari API kaliti yoki hisobga kirishni talab qiladi. Bepul foydalanish kafolatlanmaydi.
+67router API kaliti vositalaringizni autentifikatsiya qiladi. Yuqori darajadagi hisob maʼlumotlari provayderga bogʻliq: ayrimlari API kaliti yoki hisobga kirishni talab qiladi. Bepul foydalanish kafolatlanmaydi.
 
 ### "`auto` nima?"
 
-`auto` OmniRouteʼga har bir soʻrov uchun eng yaxshi provayderni avtomatik tanlashni buyuradi. Bunda tezlik, narx, sifat va mavjudlik hisobga olinadi. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
+`auto` 67routerʼga har bir soʻrov uchun eng yaxshi provayderni avtomatik tanlashni buyuradi. Bunda tezlik, narx, sifat va mavjudlik hisobga olinadi. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
 
 ### "Bu qancha turadi?"
 
-OmniRouteʼning oʻzi **bepul va ochiq manbali**. Siz faqat foydalanadigan provayderlaringiz uchun toʻlaysiz. Koʻplab provayderlarda bepul tariflar mavjud — [Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)ga qarang.
+67routerʼning oʻzi **bepul va ochiq manbali**. Siz faqat foydalanadigan provayderlaringiz uchun toʻlaysiz. Koʻplab provayderlarda bepul tariflar mavjud — [Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)ga qarang.
 
 ### "Uni Claude Code / Cursor / Copilot bilan ishlata olamanmi?"
 
-**Ha!** OmniRoute OpenAI formatini qoʻllab-quvvatlaydigan har qanday vosita bilan ishlaydi. Asosiy URL manzilini `http://localhost:20128/v1` qilib belgilang. Muayyan sozlash koʻrsatmalari uchun [CLI vositalari qoʻllanmasi](../reference/CLI-TOOLS.md)ga qarang.
+**Ha!** 67router OpenAI formatini qoʻllab-quvvatlaydigan har qanday vosita bilan ishlaydi. Asosiy URL manzilini `http://localhost:20128/v1` qilib belgilang. Muayyan sozlash koʻrsatmalari uchun [CLI vositalari qoʻllanmasi](../reference/CLI-TOOLS.md)ga qarang.
 
 ### "Agar provayder ishlamay qolsa-chi?"
 
-OmniRoute ishlamay qolgan provayderlarni avtomatik ravishda oʻtkazib yuboradi va keyingisini sinab koʻradi. Hech narsa qilishingiz shart emas. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
+67router ishlamay qolgan provayderlarni avtomatik ravishda oʻtkazib yuboradi va keyingisini sinab koʻradi. Hech narsa qilishingiz shart emas. Batafsil maʼlumot uchun [Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)ga qarang.
 
 ---
 

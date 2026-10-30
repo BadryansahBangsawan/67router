@@ -4,7 +4,7 @@
 
 ---
 
-Easpórtáil leanúnach, incriminteach de logaí glaonna OmniRoute chuig stór anailísíochta seachtrach.
+Easpórtáil leanúnach, incriminteach de logaí glaonna 67router chuig stór anailísíochta seachtrach.
 
 Coinníonn cluaisín an deais Logs stair na n-iarratas in SQLite (`call_logs`), agus tá teorainn léi de bharr
 uainíochta agus coinneála. Seolann easpórtáil logaí an tacar céanna taifead amach de réir sceidil ionas gur féidir leis maireachtáil níos faide ná

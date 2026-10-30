@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: OmniRoute jälgib iga päringu tokenikasutust, arvutab maksumuse, jõustab API-võtmepõhiseid kvoote ja kuvab analüütika juhtpaneelil. Selles juhendis selgitatakse, kuidas see kõik toimib.
+> **Lühidalt**: 67router jälgib iga päringu tokenikasutust, arvutab maksumuse, jõustab API-võtmepõhiseid kvoote ja kuvab analüütika juhtpaneelil. Selles juhendis selgitatakse, kuidas see kõik toimib.
 
 **Allikad:**
 
@@ -17,7 +17,7 @@
 
 ## Ülevaade
 
-Iga OmniRoute'i läbiv päring loob **kasutuskirje**, mis sisaldab järgmist:
+Iga 67router'i läbiv päring loob **kasutuskirje**, mis sisaldab järgmist:
 
 - **Identiteet**: milline API-võti, teenusepakkuja, mudel ja kombinatsioon
 - **Tokenid**: viiba tokenid, vastuse tokenid, vahemällu salvestatud tokenid ja koguarv
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Teenusepakkujate puhul, kes kasutusandmeid ei tagasta (mõned veebiküpsistepõhised teenusepakkujad), OmniRoute **hindab** tokenite arvu heuristilise reegli `~4 märki tokeni kohta` abil (vt `open-sse/services/autoCombo/pipelineRouter.ts`).
+Teenusepakkujate puhul, kes kasutusandmeid ei tagasta (mõned veebiküpsistepõhised teenusepakkujad), 67router **hindab** tokenite arvu heuristilise reegli `~4 märki tokeni kohta` abil (vt `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Vahemällu salvestatud tokenid
 
-OmniRoute jälgib välja `cached_tokens` väljast `prompt_tokens` eraldi, sest:
+67router jälgib välja `cached_tokens` väljast `prompt_tokens` eraldi, sest:
 
 - Anthropicu viipade vahemällu salvestamisel rakendatakse vahemällu salvestatud tokenitele madalamat hinda (10% tavahinnast)
 - Mõned teenusepakkujad tagastavad välja `cache_read_input_tokens`, mille hinnastamine peaks olema erinev
@@ -117,7 +117,7 @@ Hinnaandmed sünkroonitakse automaatselt LiteLLM-ist lõpp-punkti `/api/pricing/
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Hinnaandmeteta mudelite puhul kasutab OmniRoute varuvariandina **hinnangulist kulu**, mis põhineb sisemistel keskmistel määradel (pärinevad LiteLLM-i hinnaandmetest).
+Hinnaandmeteta mudelite puhul kasutab 67router varuvariandina **hinnangulist kulu**, mis põhineb sisemistel keskmistel määradel (pärinevad LiteLLM-i hinnaandmetest).
 
 ---
 

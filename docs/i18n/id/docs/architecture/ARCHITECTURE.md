@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Bahasa Indonesia)
+# 67router Architecture (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,8 +10,8 @@ _Terakhir diperbarui: 2026-06-28_
 
 ## Ringkasan Eksekutif
 
-OmniRoute adalah gateway perutean AI lokal dan dasbor yang dibangun dengan Next.js.
-OmniRoute menyediakan satu endpoint yang kompatibel dengan OpenAI (`/v1/*`) dan merutekan lalu lintas ke beberapa penyedia upstream dengan penerjemahan, fallback, penyegaran token, dan pelacakan penggunaan.
+67router adalah gateway perutean AI lokal dan dasbor yang dibangun dengan Next.js.
+67router menyediakan satu endpoint yang kompatibel dengan OpenAI (`/v1/*`) dan merutekan lalu lintas ke beberapa penyedia upstream dengan penerjemahan, fallback, penyegaran token, dan pelacakan penggunaan.
 
 Kemampuan utama:
 
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Dasbor Browser]
     end
 
-    subgraph Router[Proses Lokal OmniRoute]
+    subgraph Router[Proses Lokal 67router]
         API[API Kompatibilitas V1\n/v1/*]
         DASH[Dasbor + API Manajemen\n/api/*]
         CORE[Inti SSE + Penerjemahan\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modul penyedia OAuth (27 file individual di bawah `src/lib/oauth/providers/`):
 
 ## 5) Layanan Tertanam (v3.8.4)
 
-OmniRoute dapat menginstal, mengawasi, dan merutekan ke proses alat AI yang berjalan secara lokal
+67router dapat menginstal, mengawasi, dan merutekan ke proses alat AI yang berjalan secara lokal
 yang disebut **layanan tertanam**. Lima layanan disertakan: 9Router, CLIProxyAPI, Bifrost, Mux, dan Dario.
 
 Lapisan arsitektur:
@@ -438,7 +438,7 @@ perlu merangkai sendiri logika penguncian/anggaran/fallback.
 - Cache kuota: `src/domain/quotaCache.ts`
 - Status degradasi: `src/domain/degradation.ts`
 - Audit konfigurasi: `src/domain/configAudit.ts`
-- Pembuat metadata respons OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Pembuat metadata respons 67router: `src/domain/omnirouteResponseMeta.ts`
 - Subsistem penilaian: `src/domain/assessment/` — tugas evaluasi berkala
 
 ### E. Pipeline Otorisasi
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Browser Dasbor]
     end
 
-    subgraph ContainerOrProcess[Runtime OmniRoute]
+    subgraph ContainerOrProcess[Runtime 67router]
         Next[Server Next.js\nPORT=20128]
         Core[Inti SSE + Eksekutor]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Semua penyedia lainnya (termasuk node kompatibel khusus) menggunakan `DefaultExe
 ## Matriks Kompatibilitas Penyedia
 
 > **Catatan:** Matriks di bawah ini merupakan sampel representatif dari 351 penyedia yang terdaftar di
-> OmniRoute v3.8.0. Untuk daftar kanonis dan yang terus diperbarui, lihat
+> 67router v3.8.0. Untuk daftar kanonis dan yang terus diperbarui, lihat
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (dibuat secara otomatis) atau sumber
 > acuan di `src/shared/constants/providers.ts` (divalidasi oleh Zod saat dimuat).
 
@@ -1117,7 +1117,7 @@ Tangkapan payload permintaan terperinci menyimpan hingga empat tahap payload JSO
 - permintaan mentah yang diterima dari klien
 - permintaan hasil terjemahan yang benar-benar dikirim ke upstream
 - respons penyedia yang direkonstruksi sebagai JSON; respons yang dialirkan diringkas menjadi ringkasan akhir beserta metadata stream
-- respons akhir klien yang dikembalikan oleh OmniRoute; respons yang dialirkan disimpan dalam bentuk ringkasan ringkas yang sama
+- respons akhir klien yang dikembalikan oleh 67router; respons yang dialirkan disimpan dalam bentuk ringkasan ringkas yang sama
 
 ## Batasan Sensitif Keamanan
 

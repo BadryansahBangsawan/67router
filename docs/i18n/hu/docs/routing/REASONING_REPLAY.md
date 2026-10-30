@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az OmniRoute rögzíti a gondolkodási módot használó modellek által előállított asszisztensi `reasoning_content` tartalmát, és többfordulós kérések esetén transzparens módon újrajátssza azt, amikor a felsőbb szintű szolgáltató ezt megköveteli. Ez kiküszöböli azokat a HTTP 400 hibákat, amelyeket a szigorú szolgáltatók akkor adnak vissza, ha az ügyfél beszélgetési előzményeiből hiányzik az előző forduló érvelési tartalma.
+Az 67router rögzíti a gondolkodási módot használó modellek által előállított asszisztensi `reasoning_content` tartalmát, és többfordulós kérések esetén transzparens módon újrajátssza azt, amikor a felsőbb szintű szolgáltató ezt megköveteli. Ez kiküszöböli azokat a HTTP 400 hibákat, amelyeket a szigorú szolgáltatók akkor adnak vissza, ha az ügyfél beszélgetési előzményeiből hiányzik az előző forduló érvelési tartalma.
 
 ## Miért van erre szükség?
 
@@ -17,7 +17,7 @@ Több gondolkodási módot használó szolgáltató elutasítja a következő fo
 Helytelen paraméter: Gondolkodási módban a reasoning_content tartalmát vissza kell küldeni az API-nak.
 ```
 
-A tipikus kliensek (Cursor, Cline, Roo Code, OpenAI SDK) azonban eltávolítják a `reasoning_content` tartalmát az általuk újrajátszott előzményekből. Az OmniRoute visszaállítja azt egy szerveroldali gyorsítótárból, így a felsőbb szintű szolgáltató által látott kérés konzisztens marad. A #1628 számú probléma vezette be a hibrid memória-/SQLite-alapú perzisztenciát, hogy a gyorsítótár a folyamat újraindítása után is megmaradjon.
+A tipikus kliensek (Cursor, Cline, Roo Code, OpenAI SDK) azonban eltávolítják a `reasoning_content` tartalmát az általuk újrajátszott előzményekből. Az 67router visszaállítja azt egy szerveroldali gyorsítótárból, így a felsőbb szintű szolgáltató által látott kérés konzisztens marad. A #1628 számú probléma vezette be a hibrid memória-/SQLite-alapú perzisztenciát, hogy a gyorsítótár a folyamat újraindítása után is megmaradjon.
 
 ## Architektúra
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် Hindsight 0.9.1 (စာသားသီးသန့် `encode(list[str])`) နှင့် Memorix 1.6.0 (Jina မီဒီယာဂိတ်) တို့၏ ရှေ့တွင်ရှိနေချိန် `POST /v1/embeddings` အတွက် အော်ပရေတာမှတ်စုများ။ `https://omniroute.jaguar-fish.ts.net/v1` ရှိ OmniRoute 3.8.49 နှင့် 2026-08-17 တွင် တိုက်ရိုက်စစ်ဆေးအတည်ပြုထားသည်။ အောက်တွင် လျှို့ဝှက်အချက်အလက်များ မပါဝင်ပါ။
+67router သည် Hindsight 0.9.1 (စာသားသီးသန့် `encode(list[str])`) နှင့် Memorix 1.6.0 (Jina မီဒီယာဂိတ်) တို့၏ ရှေ့တွင်ရှိနေချိန် `POST /v1/embeddings` အတွက် အော်ပရေတာမှတ်စုများ။ `https://omniroute.jaguar-fish.ts.net/v1` ရှိ 67router 3.8.49 နှင့် 2026-08-17 တွင် တိုက်ရိုက်စစ်ဆေးအတည်ပြုထားသည်။ အောက်တွင် လျှို့ဝှက်အချက်အလက်များ မပါဝင်ပါ။
 
 ## အလုပ်လုပ်သော မော်ဒယ် id များ
 
@@ -77,7 +77,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 မူရင်း `gemini-embedding-2` ကို GitOps တစ်ခုတည်းဖြင့် အောင်မြင်အောင် မလုပ်နိုင်ပါ။ Google AI
 Studio key ကို `gemini` provider ချိတ်ဆက်မှုတစ်ခုအဖြစ် ထည့်သွင်းရမည် (dashboard သို့မဟုတ်
-`GEMINI_API_KEY` ကို OmniRoute ထဲသို့ import လုပ်ခြင်း)။ ထိုလျှို့ဝှက် key သည် ဤ repo ထဲတွင် မရှိပါ။
+`GEMINI_API_KEY` ကို 67router ထဲသို့ import လုပ်ခြင်း)။ ထိုလျှို့ဝှက် key သည် ဤ repo ထဲတွင် မရှိပါ။
 
 ### Jina multimodal လမ်းကြောင်း
 
@@ -98,7 +98,7 @@ alias တစ်ခု မရှိသေးသရွေ့ `POST /v1/embeddings`
 
 ### Jina / Memorix ပုံ object
 
-OmniRoute စံသတ်မှတ်ထားသော ပုံ item (28×28 PNG၊ 784 pixels — Jina သည် 1×1 ကို လက်မခံပါ)-
+67router စံသတ်မှတ်ထားသော ပုံ item (28×28 PNG၊ 784 pixels — Jina သည် 1×1 ကို လက်မခံပါ)-
 
 ```json
 {
@@ -147,7 +147,7 @@ Memorix 1.6.0 / Jina မူရင်းပုံစံ-
 
 Hindsight embedding များသည် စာသားသီးသန့် (`encode(list[str])`) ဖြစ်သည်။ ၎င်းသည်
 ပုံ object များကို မပို့ပါ။ Hindsight ၏ OpenAI-compatible embeddings base URL ကို
-OmniRoute `/v1` သို့ ညွှန်ပြီး အထက်ပါဇယားမှ အလုပ်လုပ်သော id တစ်ခု
+67router `/v1` သို့ ညွှန်ပြီး အထက်ပါဇယားမှ အလုပ်လုပ်သော id တစ်ခု
 (`jina-ai/jina-embeddings-v5-omni-small` သို့မဟုတ်
 `openrouter/google/gemini-embedding-2`) ကို အသုံးပြုပါ။ gateway တွင် `gemini` API key
 မရှိပါက မော်ဒယ်ကို prefix မပါသော `gemini-embedding-2` အဖြစ် မသတ်မှတ်ပါနှင့်။
@@ -155,11 +155,11 @@ OmniRoute `/v1` သို့ ညွှန်ပြီး အထက်ပါဇ�
 ### Memorix 1.6.0
 
 Memorix သည် `/jina\.ai/i` နှင့် ကိုက်ညီသော `baseUrl` ကိုသာ မူရင်းမီဒီယာအဖြစ် သတ်မှတ်သည်။
-မော်ဒယ်သည် Jina omni ဖြစ်နေသော်လည်း OmniRoute URL သည် စာသားသီးသန့်လမ်းကြောင်းပေါ်တွင်သာ ရှိနေသည်။
-ထိုဂိတ်သည် Memorix ကလိုင်းယင့် ပြဿနာတစ်ခုဖြစ်သည်။ သီးခြားအနေဖြင့် OmniRoute သည် ဂိတ်
+မော်ဒယ်သည် Jina omni ဖြစ်နေသော်လည်း 67router URL သည် စာသားသီးသန့်လမ်းကြောင်းပေါ်တွင်သာ ရှိနေသည်။
+ထိုဂိတ်သည် Memorix ကလိုင်းယင့် ပြဿနာတစ်ခုဖြစ်သည်။ သီးခြားအနေဖြင့် 67router သည် ဂိတ်
 ပွင့်ခဲ့လျှင် Memorix ပို့မည့် Jina `{image: "data:..."}` body ကိုလည်း လက်မခံသေးသောကြောင့်
 Jina-compatible ကလိုင်းယင့်များသည် စံသတ်မှတ်ထားသော `{type,source}` schema မရှိဘဲ
-OmniRoute မှတစ်ဆင့် ပုံများကို embed မလုပ်နိုင်ပါ။
+67router မှတစ်ဆင့် ပုံများကို embed မလုပ်နိုင်ပါ။
 
 စာသားအတွက် `jina-ai/jina-embeddings-v5-omni-small` ကို အသုံးပြုပါ။ Memorix
-`base_url` ကို `https://api.jina.ai` သို့ မညွှန်ပါနှင့် — OmniRoute ကိုသာ တစ်ခုတည်းသော ကြားခံအဆင့်အဖြစ် ထားပါ။
+`base_url` ကို `https://api.jina.ai` သို့ မညွှန်ပါနှင့် — 67router ကိုသာ တစ်ခုတည်းသော ကြားခံအဆင့်အဖြစ် ထားပါ။

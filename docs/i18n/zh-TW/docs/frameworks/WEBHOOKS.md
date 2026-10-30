@@ -7,7 +7,7 @@
 > **資訊來源：** `src/lib/webhookDispatcher.ts`、`src/lib/db/webhooks.ts`、`src/app/api/webhooks/`
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 可在平台事件發生時觸發 HTTP Webhook。您可以使用它們與
+67router 可在平台事件發生時觸發 HTTP Webhook。您可以使用它們與
 Slack、PagerDuty、Datadog、內部警示服務或任何 HTTP 接收端整合。
 
 分派器會使用 HMAC-SHA256 簽署每次傳遞，在暫時性
@@ -54,7 +54,7 @@ Slack、PagerDuty、Datadog、內部警示服務或任何 HTTP 接收端整合�
 
 ## HMAC 簽署
 
-當 Webhook 具有 `secret` 時，OmniRoute 會簽署 JSON 內文並傳送：
+當 Webhook 具有 `secret` 時，67router 會簽署 JSON 內文並傳送：
 
 ```
 Content-Type: application/json
@@ -206,7 +206,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "來自 OmniRoute 的測試 webhook 傳遞",
+    "message": "來自 67router 的測試 webhook 傳遞",
     "webhookId": "<uuid>"
   }
 }

@@ -8,9 +8,9 @@
 > **Pēdējoreiz atjaunināts:** 2026-09-16
 > **Mērķauditorija:** Inženieri, kuri pievieno, uztur vai atkļūdo iegultos pakalpojumus (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Iegultie pakalpojumi ir lokāli instalēti blakusprocesu rīki, kurus OmniRoute instalē, pārrauga un
+Iegultie pakalpojumi ir lokāli instalēti blakusprocesu rīki, kurus 67router instalē, pārrauga un
 padara pieejamus kā pilnvērtīgus maršrutēšanas mērķus. Atšķirībā no ārējiem pakalpojumu sniedzējiem (kuri ir sasniedzami internetā,
-izmantojot API atslēgas), iegultie pakalpojumi darbojas tajā pašā datorā, kurā darbojas OmniRoute, un sazinās, izmantojot lokālā atgriezeniskā savienojuma interfeisu.
+izmantojot API atslēgas), iegultie pakalpojumi darbojas tajā pašā datorā, kurā darbojas 67router, un sazinās, izmantojot lokālā atgriezeniskā savienojuma interfeisu.
 
 ---
 
@@ -35,7 +35,7 @@ Ir iegulti septiņi pakalpojumi:
 
 | Pakalpojums     | npm pakotne                                 | Noklusējuma ports | Mērķis                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------- | ------------------------------------------- | :---------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                   |       20130       | MI maršrutētājs, ko OmniRoute var izmantot kā apakšpakalpojumu sniedzēju. Modeļi tiek eksponēti kā `9router/{sub}/{model}`                                                                                                                                                                                                                                                                              |
+| **9Router**     | `9router`                                   |       20130       | MI maršrutētājs, ko 67router var izmantot kā apakšpakalpojumu sniedzēju. Modeļi tiek eksponēti kā `9router/{sub}/{model}`                                                                                                                                                                                                                                                                               |
 | **CLIProxyAPI** | GitHub laidiena binārais fails (`cliproxy`) |       8317        | Lokāls starpniekservera adapteris Anthropic CLI autentifikācijas plūsmām. Nodrošina rezerves maršrutēšanu, kad beidzas OAuth pilnvaru derīgums                                                                                                                                                                                                                                                          |
 | **Mux**         | `mux` (bezgalvas `mux server`)              |       8322        | Lokāls aģentu orķestrēšanas dēmons (coder/mux). Tiek pārvaldīts tikai dzīves cikls — tas nav maršrutēšanas mērķis (bez LLM starpniekservera funkcionalitātes).                                                                                                                                                                                                                                          |
 | **Bifrost**     | `@maximhq/bifrost`                          |       8080        | Go MI vārtejas releja aizmugursistēma. Darbības laikā to automātiski atlasa releja maršruts (`/v1/relay/`)                                                                                                                                                                                                                                                                                              |
@@ -45,21 +45,21 @@ Ir iegulti septiņi pakalpojumi:
 
 Visi septiņi izmanto vienu un to pašu pārraudzības modeli:
 
-- OmniRoute tos instalē mapē `DATA_DIR/services/{name}/` (izolēti no paša OmniRoute `package.json`)
-- OmniRoute tos palaiž kā bērnprocesus un uzrauga
-- OmniRoute bērnprocesa vidē ievada īslaicīgu API atslēgu un to rotē bez dīkstāves (ja piemērojams)
+- 67router tos instalē mapē `DATA_DIR/services/{name}/` (izolēti no paša 67router `package.json`)
+- 67router tos palaiž kā bērnprocesus un uzrauga
+- 67router bērnprocesa vidē ievada īslaicīgu API atslēgu un to rotē bez dīkstāves (ja piemērojams)
 - Visi pārvaldības maršruti (`/api/services/*`) ir **TIKAI_LOKĀLI** — pieejami tikai no cilpas interfeisa (stingrais noteikums Nr. 17)
 
 ### Galvenie lēmumi (no projektējuma plāna)
 
-| Lēmums                                                               | Vērtība                                                                               |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| Informācijas paneļa piekļuve 9Router iebūvētajai lietotāja saskarnei | Reversais starpniekserveris adresē `/dashboard/providers/services/9router/embed/*`    |
-| Instalēšanas mehānisms                                               | `npm install {package}`, izmantojot `execFile` (bez čaulas interpolācijas)            |
-| Izmantošanas režīms                                                  | Pakalpojumu sniedzējs maršrutēšanas dzinī reģistrēts kā `9router/{sub}/{model}`       |
-| API atslēgu pārvaldība                                               | OmniRoute tās ģenerē, šifrē glabāšanas laikā (AES-256-GCM) un ievada, izmantojot vidi |
-| Atrašanās vieta informācijas panelī                                  | `/dashboard/providers/services` (trīs cilnes)                                         |
-| Automātiska palaišana                                                | Pārslēdzama katram pakalpojumam, pēc noklusējuma IZSLĒGTA                             |
+| Lēmums                                                               | Vērtība                                                                              |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Informācijas paneļa piekļuve 9Router iebūvētajai lietotāja saskarnei | Reversais starpniekserveris adresē `/dashboard/providers/services/9router/embed/*`   |
+| Instalēšanas mehānisms                                               | `npm install {package}`, izmantojot `execFile` (bez čaulas interpolācijas)           |
+| Izmantošanas režīms                                                  | Pakalpojumu sniedzējs maršrutēšanas dzinī reģistrēts kā `9router/{sub}/{model}`      |
+| API atslēgu pārvaldība                                               | 67router tās ģenerē, šifrē glabāšanas laikā (AES-256-GCM) un ievada, izmantojot vidi |
+| Atrašanās vieta informācijas panelī                                  | `/dashboard/providers/services` (trīs cilnes)                                        |
+| Automātiska palaišana                                                | Pārslēdzama katram pakalpojumam, pēc noklusējuma IZSLĒGTA                            |
 
 ---
 
@@ -221,7 +221,7 @@ Pieprasījumi, kas nav no atgriezeniskās cilpas, saņem `403 LOCAL_ONLY` neatka
 #### `POST /api/services/9router/install`
 
 Instalē 9Router no npm. Izveido `DATA_DIR/services/9router/` ar savu
-`package.json` un `node_modules/`. Nerada konfliktus ar paša OmniRoute atkarībām.
+`package.json` un `node_modules/`. Nerada konfliktus ar paša 67router atkarībām.
 
 **Pieprasījuma pamatteksts** (visi lauki nav obligāti):
 
@@ -382,7 +382,7 @@ Atgriež apvienotu aktuālo un DB statusu, tostarp versijas metadatus un API ats
 #### `POST /api/services/9router/auto-start`
 
 Pārslēdz automātiskās palaišanas karodziņu. Ja `enabled: true`, pakalpojums tiek automātiski
-palaists nākamajā OmniRoute startēšanas reizē (ja pakalpojums ir instalēts).
+palaists nākamajā 67router startēšanas reizē (ja pakalpojums ir instalēts).
 
 **Pieprasījuma pamatteksts:**
 
@@ -591,7 +591,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Šis starpniekserveris:
 
 - Pārsūta pieprasījumu uz `http://127.0.0.1:{port}/{path}` (tikai atgriezeniskās cilpas saskarne)
-- Noņem ienākošās `cookie` un `authorization` galvenes (OmniRoute sesija netiek nopludināta)
+- Noņem ienākošās `cookie` un `authorization` galvenes (67router sesija netiek nopludināta)
 - Ievieto `Authorization: Bearer {apiKey}` 9Router autentifikācijai
 - No atbildes noņem `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*`
 - Pārraksta HTML atbildes, lai ievietotu `<base href>` un normalizētu absolūtos ceļus (`/foo` → `/dashboard/.../embed/foo`)
@@ -628,7 +628,7 @@ procesa palaišanu. Pilnu līmeņu matricu skatiet
 ### API atslēgas ievietošana
 
 9Router un Mux saviem HTTP galapunktiem pieprasa API atslēgu/nesēja pilnvaru.
-OmniRoute:
+67router:
 
 1. Ģenerē atslēgu, izmantojot `crypto.randomBytes(32).toString("base64url")`, ar
    pakalpojumam specifisku prefiksu (`nr_` — 9Router, `mx_` — Mux).
@@ -808,7 +808,7 @@ Ja iegultais pakalpojums nodrošina ar OpenAI saderīgu `/v1/chat/completions` g
 
 1. Pārbaudiet `GET /api/services/{name}/logs` (vai informācijas paneļa sadaļu Logs). Meklējiet
    tādas rindas kā `Error: ENOENT`, `address already in use` vai `Cannot find module`.
-2. Pārbaudiet, vai `npm` ir pieejams PATH: izpildiet `which npm` no tā paša lietotāja konta, kas palaiž OmniRoute.
+2. Pārbaudiet, vai `npm` ir pieejams PATH: izpildiet `which npm` no tā paša lietotāja konta, kas palaiž 67router.
 3. Pārbaudiet, vai pakalpojums ir instalēts: skatiet `GET /api/services/{name}/status`
    lauku `installedVersion`. Ja tā vērtība ir `null`, vispirms veiciet instalēšanu.
 4. Pārbaudiet, vai `DATA_DIR/services/{name}/node_modules/` pastāv un nav tukšs.
@@ -846,7 +846,7 @@ palaišanas laiku palieliniet `healthIntervalMs` līdz 5000 un `stopTimeoutMs` l
 3. Portu katram pakalpojumam var konfigurēt failā `bootstrap.ts`, izmantojot lauku `port`.
 
 **Piezīme:** 9Router pēc noklusējuma izmanto tieši portu 20130, lai izvairītos no konflikta ar
-OmniRoute noklusējuma portu 20128.
+67router noklusējuma portu 20128.
 
 ---
 
@@ -856,13 +856,13 @@ OmniRoute noklusējuma portu 20128.
 
 **Cēloņi:**
 
-- OmniRoute procesam nav rakstīšanas tiesību direktorijā `DATA_DIR` vai tā vecākdirektorijā.
+- 67router procesam nav rakstīšanas tiesību direktorijā `DATA_DIR` vai tā vecākdirektorijā.
 - Sistēma darbojas bezsaknes Docker vidē bez rakstīšanas piekļuves piesaistītajam sējumam.
 
 **Risinājums:**
 
 1. Pārbaudiet `DATA_DIR` (noklusējums: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Pārliecinieties, ka direktorijs pieder lietotājam, kurš palaiž OmniRoute procesu: `chown -R $USER ~/.omniroute/`
+2. Pārliecinieties, ka direktorijs pieder lietotājam, kurš palaiž 67router procesu: `chown -R $USER ~/.omniroute/`
 3. Docker vidē pārliecinieties, ka sējuma montējumam ir pareizās atļaujas konteinera lietotājam.
 
 ---
@@ -910,16 +910,16 @@ sarakstā. Skatiet `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **J: Vai 9Router un CLIProxyAPI būs pieejami produkcijas/mākoņa izvietojumos?**
 
-Jā. Abi pakalpojumi izmanto to pašu lokāli orientēto modeli kā pats OmniRoute. Tie darbojas
+Jā. Abi pakalpojumi izmanto to pašu lokāli orientēto modeli kā pats 67router. Tie darbojas
 tajā pašā iekārtā un sazinās, izmantojot atgriezenisko cilpu. Šeit „produkcija” nozīmē VPS
-vai lokālo serveri, kurā ir izvietots OmniRoute, nevis attālinātu mākoņpakalpojumu sniedzēju.
+vai lokālo serveri, kurā ir izvietots 67router, nevis attālinātu mākoņpakalpojumu sniedzēju.
 
 ---
 
 **J: Kā atkļūdot pārraugu?**
 
 1. Sekojiet SSE žurnāla straumei: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Pārbaudiet strukturētos žurnālus OmniRoute pino izvadē, filtrējot pēc
+2. Pārbaudiet strukturētos žurnālus 67router pino izvadē, filtrējot pēc
    `service:supervisor` nosaukumvietas.
 3. Pārbaudiet DB rindu: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Izmantojiet `GET /api/services/9router/status`, lai vienā izsaukumā skatītu pašreizējo aktīvo stāvokli, PID, darbspēju

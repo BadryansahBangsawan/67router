@@ -7,7 +7,7 @@
 > **የእውነት ምንጭ:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **መጨረሻ የተዘመነው:** 2026-06-28 — v3.8.40
 
-OmniRoute በመድረክ ክስተቶች ጊዜ HTTP webhooks ሊያስነሳ ይችላል። ከ
+67router በመድረክ ክስተቶች ጊዜ HTTP webhooks ሊያስነሳ ይችላል። ከ
 Slack፣ PagerDuty፣ Datadog፣ ውስጣዊ የማንቂያ አገልግሎቶች ወይም ከማንኛውም HTTP ተቀባይ ጋር ለማዋሃድ ይጠቀሙባቸው።
 
 አሰራጩ እያንዳንዱን ርክክብ በHMAC-SHA256 ይፈርማል፣ ጊዜያዊ
@@ -54,7 +54,7 @@ Slack፣ PagerDuty፣ Datadog፣ ውስጣዊ የማንቂያ አገልግሎቶ
 
 ## HMAC ፊርማ
 
-አንድ webhook `secret` ሲኖረው፣ OmniRoute የJSON bodyውን ፈርሞ የሚከተለውን ይልካል፦
+አንድ webhook `secret` ሲኖረው፣ 67router የJSON bodyውን ፈርሞ የሚከተለውን ይልካል፦
 
 ```
 Content-Type: application/json
@@ -206,7 +206,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

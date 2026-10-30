@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute fiksuoja mąstymo režimo modelių sugeneruotą asistento `reasoning_content` ir skaidriai jį atkuria kelių žingsnių užklausose, kai to reikalauja aukštesnio lygio paslaugos teikėjas. Taip pašalinamos HTTP 400 klaidos, kurias griežti paslaugų teikėjai pateikia, kai kliento pokalbio istorijoje trūksta ankstesnio žingsnio samprotavimo.
+67router fiksuoja mąstymo režimo modelių sugeneruotą asistento `reasoning_content` ir skaidriai jį atkuria kelių žingsnių užklausose, kai to reikalauja aukštesnio lygio paslaugos teikėjas. Taip pašalinamos HTTP 400 klaidos, kurias griežti paslaugų teikėjai pateikia, kai kliento pokalbio istorijoje trūksta ankstesnio žingsnio samprotavimo.
 
 ## Kodėl Tai Reikalinga
 
@@ -17,7 +17,7 @@ Kai kurie mąstymo režimo paslaugų teikėjai atmeta tolesnį žingsnį, nebent
 Neteisingas parametras: mąstymo režimo reasoning_content turi būti perduotas atgal API.
 ```
 
-Tačiau įprasti klientai (Cursor, Cline, Roo Code, OpenAI SDK) pašalina `reasoning_content` iš pakartotinai siunčiamos istorijos. OmniRoute jį atkuria iš serverio talpyklos, kad aukštesnio lygio paslaugai siunčiama užklausa būtų nuosekli. Užduotyje #1628 buvo pristatytas hibridinis atminties ir SQLite išsaugojimas, todėl talpykla išlieka ir iš naujo paleidus procesą.
+Tačiau įprasti klientai (Cursor, Cline, Roo Code, OpenAI SDK) pašalina `reasoning_content` iš pakartotinai siunčiamos istorijos. 67router jį atkuria iš serverio talpyklos, kad aukštesnio lygio paslaugai siunčiama užklausa būtų nuosekli. Užduotyje #1628 buvo pristatytas hibridinis atminties ir SQLite išsaugojimas, todėl talpykla išlieka ir iš naujo paleidus procesą.
 
 ## Architektūra
 

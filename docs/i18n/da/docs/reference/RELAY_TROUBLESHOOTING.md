@@ -5,10 +5,10 @@
 ---
 
 Relæer (Vercel, Deno, Cloudflare) afslutter upstream-forbindelsen på en
-serverløs backend, så OmniRoute kan sende udgående trafik fra en stabil region,
+serverløs backend, så 67router kan sende udgående trafik fra en stabil region,
 samtidig med at udbyderens API-nøgle forbliver på serversiden. Dette dokument
 beskriver de to fejltilstande, som operatører støder på i produktion, samt de
-gendannelsesmetoder, OmniRoute leverer til hver af dem.
+gendannelsesmetoder, 67router leverer til hver af dem.
 
 ## Sådan gemmes relægodkendelse
 
@@ -36,7 +36,7 @@ ingen godkendelsesoplysninger.
 1. Åbn **Indstillinger → Proxypulje**.
 2. Relærækker, hvor godkendelse mangler, viser et gult `auth missing`-mærke og
    knappen **Reparer**.
-3. Klik på **Reparer**. OmniRoute kalder
+3. Klik på **Reparer**. 67router kalder
    `POST /api/settings/proxies/[id]/repair-relay`, som:
    - dekrypterer `relayAuthEnc` med den **aktuelle** nøgle,
    - skriver `relayAuth` i klartekst tilbage til `notes`,
@@ -70,7 +70,7 @@ efter den manuelt.
 **Symptom:** Proxytesten (`speed`-knappen) viser, at relæet er oppe, men
 anmodninger mislykkes stadig periodisk.
 
-Kontrollér relæoplysningsheaderne, som returneres af OmniRoutes automatiske
+Kontrollér relæoplysningsheaderne, som returneres af 67routers automatiske
 testprobe (se **Indstillinger → Proxypulje** og tællerne `relayTested` /
 `relayAlive`):
 

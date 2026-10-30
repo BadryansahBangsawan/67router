@@ -5,11 +5,11 @@
 ---
 
 > **Ọnọdụ:** Dị maka ojiji n'ozuzu.
-> **Ndị e zubere maka ha:** Ndị na-ahụ maka sistemụ na-ejikọ OpenCode na nrụnye OmniRoute.
+> **Ndị e zubere maka ha:** Ndị na-ahụ maka sistemụ na-ejikọ OpenCode na nrụnye 67router.
 > **Isi mmalite ziri ezi (schema nhazi):** `src/shared/services/opencodeConfig.ts`
 > **Isi mmalite ziri ezi (ngwugwu npm):** `@omniroute/opencode-provider/` (workspace enwere ike ibipụta)
 
-[OpenCode](https://opencode.ai) bụ ngwa ahịa AI nke nwere ike ịrụ ọrụ dịka agent na CLI/desktop. Ọ na-agụ katalọgụ provider ya site na `~/.config/opencode/opencode.json` (ma ọ bụ `opencode.jsonc`) ma na-agbaso schema dị na `https://opencode.ai/config.json`. OmniRoute na-egosi onwe ya nye OpenCode dịka otu n'ime provider ndị ahụ — arịrịọ ọ bụla na-agafe n'elu `/v1` ọkọlọtọ OmniRoute nke dakọtara na OpenAI, ya mere OpenCode na-erite uru ozugbo site na routing Auto-Combo, circuit breakers, iwu key, observability, wdg.
+[OpenCode](https://opencode.ai) bụ ngwa ahịa AI nke nwere ike ịrụ ọrụ dịka agent na CLI/desktop. Ọ na-agụ katalọgụ provider ya site na `~/.config/opencode/opencode.json` (ma ọ bụ `opencode.jsonc`) ma na-agbaso schema dị na `https://opencode.ai/config.json`. 67router na-egosi onwe ya nye OpenCode dịka otu n'ime provider ndị ahụ — arịrịọ ọ bụla na-agafe n'elu `/v1` ọkọlọtọ 67router nke dakọtara na OpenAI, ya mere OpenCode na-erite uru ozugbo site na routing Auto-Combo, circuit breakers, iwu key, observability, wdg.
 
 E nwere **ụzọ njikọta abụọ a na-akwado**. Họrọ otu — ha abụọ na-emepụta otu nhazi ahụ.
 
@@ -17,16 +17,16 @@ E nwere **ụzọ njikọta abụọ a na-akwado**. Họrọ otu — ha abụọ
 
 ## Ụzọ 1 — generator CLI (achọghị nrụnye npm)
 
-A na-atụ aro ya maka ndị ọrụ ikpeazụ. Ọ na-eso OmniRoute abịa. Ọ na-ede `opencode.json` n'ebe ọ dị ugbu a.
+A na-atụ aro ya maka ndị ọrụ ikpeazụ. Ọ na-eso 67router abịa. Ọ na-ede `opencode.json` n'ebe ọ dị ugbu a.
 
 ```bash
-# Mgbe ị wụnyere OmniRoute (npm i -g @omniroute/cli ma ọ bụ clone mpaghara)
+# Mgbe ị wụnyere 67router (npm i -g @omniroute/cli ma ọ bụ clone mpaghara)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-N'azụ ihe a na-ahụ anya, CLI na-akpọ `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), ya mere `opencode.json` dị adị na-edobe provider ndị ọzọ na comment ya. A na-agbakwunye/edochi ntinye OmniRoute n'ụzọ atomic.
+N'azụ ihe a na-ahụ anya, CLI na-akpọ `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), ya mere `opencode.json` dị adị na-edobe provider ndị ọzọ na comment ya. A na-agbakwunye/edochi ntinye 67router n'ụzọ atomic.
 
 Faịlụ a na-enweta (katalọgụ model ndabara):
 
@@ -90,8 +90,8 @@ Hụ [README nke ngwugwu ahụ](../../@omniroute/opencode-provider/README.md) ma
 ```
 UI/agent OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (elu OpenAI nke OmniRoute)
-         → handler OmniRoute /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (elu OpenAI nke 67router)
+         → handler 67router /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → combo routing / Auto-Combo / executor
                → provider upstream
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Ị nwere ike dochie ya site na `models: [...]`. Ihe mgbakwunye ndị akwadoro:
 
-- `"auto"` — na-eme ka rawụta [Auto-Combo](../routing/AUTO-COMBO.md) nke OmniRoute, nke anaghị achọ nhazi, pụta. Ọ na-enye OpenCode ohere ịhọrọ “ụdị kachasị mma dị” n’ebughị ụzọ tinye katalọgụ ahụ kpọmkwem n'ime koodu.
-- `"<combo-name>"` — combo ọ bụla ị kọwapụtara na dashboard; OmniRoute na-edozi ya n'ụzọ na-adịghị ahụ anya.
+- `"auto"` — na-eme ka rawụta [Auto-Combo](../routing/AUTO-COMBO.md) nke 67router, nke anaghị achọ nhazi, pụta. Ọ na-enye OpenCode ohere ịhọrọ “ụdị kachasị mma dị” n’ebughị ụzọ tinye katalọgụ ahụ kpọmkwem n'ime koodu.
+- `"<combo-name>"` — combo ọ bụla ị kọwapụtara na dashboard; 67router na-edozi ya n'ụzọ na-adịghị ahụ anya.
 
 ---
 
@@ -135,12 +135,12 @@ Mwepụ oyiri a bụ **nsogbu a na-ahụkarị** na nhazi ochie. Ọ bụrụ na
 
 ## Ụdị nyocha njirimara
 
-| Ntọala OmniRoute                             | Uru `apiKey` akwadoro                                       |
+| Ntọala 67router                              | Uru `apiKey` akwadoro                                       |
 | -------------------------------------------- | ----------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (ndabara maka local) | `sk_omniroute` (ihe njide ọnọdụ nkịtị)                      |
 | `REQUIRE_API_KEY=true`                       | API key nke ezigbo onye ọrụ sitere na Dashboard → API Keys. |
 
-Maka klayentị ụdị Anthropic ndị na-eziga `x-api-key` + `anthropic-version`, `extractApiKey` nke OmniRoute na-anabatakwa key sitere na `x-api-key`. OpenCode na-eji interface OpenAI, ya mere ọ ga-eziga `Authorization: Bearer ${apiKey}` mgbe niile — ọnọdụ pụrụ iche nke Anthropic anaghị emetụta ebe a.
+Maka klayentị ụdị Anthropic ndị na-eziga `x-api-key` + `anthropic-version`, `extractApiKey` nke 67router na-anabatakwa key sitere na `x-api-key`. OpenCode na-eji interface OpenAI, ya mere ọ ga-eziga `Authorization: Bearer ${apiKey}` mgbe niile — ọnọdụ pụrụ iche nke Anthropic anaghị emetụta ebe a.
 
 ---
 
@@ -149,15 +149,15 @@ Maka klayentị ụdị Anthropic ndị na-eziga `x-api-key` + `anthropic-versio
 | Mgbaàmà                                                | Ihe kpatara ya                                                        | Ndozi                                                                                                  |
 | ------------------------------------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `404` na arịrịọ ọ bụla nwere URL nke gụnyere `/v1/v1/` | Nhazi ochie sitere na plugin tupu v3.8 nke tinyere `/v1` ugboro abụọ. | Mepụta ya ọzọ site na Ụzọ 1 ma ọ bụ 2.                                                                 |
-| `401 Invalid API key`                                  | OmniRoute nwere `REQUIRE_API_KEY=true`, mana amaghị key ahụ.          | Mepụta key ahụ na dashboard, ma ọ bụ tọọ `REQUIRE_API_KEY=false` (naanị local) ma jiri `sk_omniroute`. |
-| Ndepụta ụdị ghe oghe na UI OpenCode                    | E zoro ụdị ndabara 4 niile na ngosi provider nke OmniRoute.           | Nyefee `models: ["auto", ...]` iji mee ka ndị ị gbanyere pụta.                                         |
+| `401 Invalid API key`                                  | 67router nwere `REQUIRE_API_KEY=true`, mana amaghị key ahụ.           | Mepụta key ahụ na dashboard, ma ọ bụ tọọ `REQUIRE_API_KEY=false` (naanị local) ma jiri `sk_omniroute`. |
+| Ndepụta ụdị ghe oghe na UI OpenCode                    | E zoro ụdị ndabara 4 niile na ngosi provider nke 67router.            | Nyefee `models: ["auto", ...]` iji mee ka ndị ị gbanyere pụta.                                         |
 | OpenCode 500 nwere `cannot read property 'models'`     | OpenCode ochie (< 0.1.x) anaghị anabata `models` etinyere ozugbo.     | Kwalite OpenCode gaa na ụdị na-agbaso schema v1 (`opencode.ai/config.json`).                           |
 
 ---
 
 ## Hụkwa
 
-- [Ntụaka API](../reference/API_REFERENCE.md) — nkọwa zuru ezu nke OmniRoute REST
+- [Ntụaka API](../reference/API_REFERENCE.md) — nkọwa zuru ezu nke 67router REST
 - [Auto-Combo](../routing/AUTO-COMBO.md) — ihe `model: "auto"` pụtara
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Koodu mmalite: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

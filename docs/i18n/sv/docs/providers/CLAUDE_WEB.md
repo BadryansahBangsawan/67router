@@ -137,7 +137,7 @@ så dessa överhoppade fall utgör inget bevis på körning.
 
 ### Konfiguration
 
-1. Starta OmniRoute med `npm run dev` eller en byggd installation.
+1. Starta 67router med `npm run dev` eller en byggd installation.
 2. Öppna Instrumentpanel → Leverantörer → Lägg till leverantör.
 3. Välj kategorin Web Cookie och Claude Web.
 4. Klistra in hela Cookie-huvudet som kopierats från en autentiserad `claude.ai`-begäran.

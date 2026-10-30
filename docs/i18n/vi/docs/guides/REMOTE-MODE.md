@@ -4,7 +4,7 @@
 
 ---
 
-Chạy CLI `omniroute` trên máy tính xách tay của bạn trong khi OmniRoute chạy ở một nơi khác
+Chạy CLI `omniroute` trên máy tính xách tay của bạn trong khi 67router chạy ở một nơi khác
 (một VPS, máy chủ tại nhà hoặc một máy khác trong Tailnet của bạn). Bạn đăng nhập một lần bằng
 `omniroute connect`, và từ đó trở đi, **mọi** lệnh CLI đều nhắm đến máy chủ từ xa đó
 — cùng lệnh, cùng đầu ra, chỉ khác là được thực thi trên máy chủ từ xa.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← ghi một hồ sơ Codex cục b�
 ## Cách hoạt động
 
 ```
-máy tính xách tay của bạn                 OmniRoute từ xa (VPS)
+máy tính xách tay của bạn                 67router từ xa (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (mật khẩu → token)         │
 │  ngữ cảnh: vps     │ ───────────────►  │ cấp một access token có phạm vi│
@@ -106,7 +106,7 @@ không phải trên máy của bạn, vì vậy màn hình đồng ý **bị tre
 bao giờ phát ra mã** — phương án dự phòng thông thường là "dán URL callback"
 không có gì để dán. (Đây là hạn chế từ phía Google: tình trạng treo tương tự xảy
 ra trong bất kỳ proxy nào sử dụng ứng dụng desktop Antigravity đi kèm, không chỉ
-OmniRoute.)
+67router.)
 
 Dashboard phát hiện điều này trước khi bạn bị kẹt: khi mở **Providers → Antigravity →
 Connect** từ một địa chỉ không phải localhost, thông báo chung "sao chép URL callback"
@@ -114,7 +114,7 @@ sẽ được thay thế bằng hai biện pháp khắc phục bên dưới, tro
 bạn đã được điền sẵn. (Địa chỉ LAN cũng được tính — `192.168.x.x` không phải là
 localhost đối với callback này.)
 
-Có hai cách được hỗ trợ để kết nối Antigravity với OmniRoute từ xa.
+Có hai cách được hỗ trợ để kết nối Antigravity với 67router từ xa.
 
 ### Tùy chọn A — trình trợ giúp đăng nhập cục bộ (khuyến nghị)
 
@@ -152,7 +152,7 @@ npx omniroute login antigravity --no-push
 
 Sau đó, trên dashboard **từ xa**: **Providers → Antigravity → Connect**, rồi dán
 blob `omniroute-cred-v1.…` vào trường **Step 2** (trường này chấp nhận URL
-callback hoặc blob thông tin xác thực). OmniRoute sẽ giải mã blob, chạy quy trình
+callback hoặc blob thông tin xác thực). 67router sẽ giải mã blob, chạy quy trình
 onboarding Cloud Code ở phía máy chủ và lưu kết nối.
 
 > Blob chứa refresh token — hãy bảo vệ nó như mật khẩu. Khi sử dụng phương thức
@@ -197,7 +197,7 @@ provider.
 ## Kết nối Codex / Grok trên bản cài đặt từ xa (các nhà cung cấp dùng loopback cố định)
 
 Codex, xAI (`xai-oauth`) và Grok CLI (`grok-cli`) đăng ký một `redirect_uri`
-loopback **cố định** với ứng dụng OAuth thượng nguồn của họ. OmniRoute không thể
+loopback **cố định** với ứng dụng OAuth thượng nguồn của họ. 67router không thể
 thay đổi URI này — nhà cung cấp luôn chuyển hướng trình duyệt trở lại cùng một
 địa chỉ được mã hóa cứng:
 
@@ -208,7 +208,7 @@ thay đổi URI này — nhà cung cấp luôn chuyển hướng trình duyệt 
 | `grok-cli`   | `http://127.0.0.1:56122/callback`                 |
 
 `localhost` ở đây có nghĩa là **máy đang chạy trình duyệt**, trong khi máy chủ
-callback PKCE của OmniRoute lắng nghe trên loopback của **máy chủ**. Nếu mở bảng
+callback PKCE của 67router lắng nghe trên loopback của **máy chủ**. Nếu mở bảng
 điều khiển tại một địa chỉ LAN như `http://192.168.0.15:20128`, hai bên sẽ không
 bao giờ kết nối được với nhau: mã ủy quyền được gửi đến `localhost:1455` trên
 chính laptop của bạn, nơi không có gì đang lắng nghe, và nhà cung cấp không thể
@@ -228,7 +228,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Cần hai chuyển tiếp, và chỉ chuyển tiếp một cổng vẫn sẽ thất bại:
 
 - **`20128`** (cổng bảng điều khiển) khiến origin trở thành localhost thực sự,
-  đây là điều kiện để OmniRoute khởi động máy chủ callback PKCE — origin LAN
+  đây là điều kiện để 67router khởi động máy chủ callback PKCE — origin LAN
   không bao giờ đi vào nhánh đó.
 - **`1455`** (cổng callback cố định của nhà cung cấp) là nơi trình duyệt được
   chuyển hướng trở lại; cổng này phải được truyền qua đường hầm đến loopback
@@ -348,7 +348,7 @@ omniroute contexts current         # máy chủ đang hoạt động, trạng th
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

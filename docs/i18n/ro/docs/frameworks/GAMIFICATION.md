@@ -7,7 +7,7 @@
 > **Sursa adevărului:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute include un strat de gamificare local-first care recompensează utilizatorii pentru
+67router include un strat de gamificare local-first care recompensează utilizatorii pentru
 interacțiunea cu platforma — efectuarea solicitărilor, schimbarea furnizorilor, crearea
 combinațiilor, partajarea tokenurilor și contribuțiile aduse comunității. Întreaga stare este păstrată în
 SQLite; federarea cu serverele comunității este opțională și bazată pe trimiterea datelor.
@@ -36,7 +36,7 @@ tokenurilor, recompense pentru invitații).
 | Clasamente               | Clasamente globale, săptămânale, lunare, pentru partajarea tokenurilor și contribuții |
 | Partajarea tokenurilor   | Transferul creditelor între utilizatori printr-un registru în partidă dublă           |
 | Invitare și valorificare | Coduri de recomandare stocate sub formă de hash SHA-256                               |
-| Servere comunitare       | Federarea cu instanțe OmniRoute externe                                               |
+| Servere comunitare       | Federarea cu instanțe 67router externe                                                |
 | Prevenirea trișării      | Punctaj pe server, limitarea ratei, detectarea anomaliilor prin scor z                |
 
 ### Principii de proiectare
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tabelele bazei de date
 
-Toate tabelele se află în baza de date SQLite principală OmniRoute, creată prin migrarea
+Toate tabelele se află în baza de date SQLite principală 67router, creată prin migrarea
 `060_create_gamification.sql`. Jurnalizarea WAL este moștenită de la instanța singleton
 `getDbInstance()` din `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Toate tabelele se află în baza de date SQLite principală OmniRoute, creată p
 
 ### Modul de domeniu: `src/lib/db/gamification.ts`
 
-Urmează modelul standard OmniRoute — importă `getDbInstance()` din
+Urmează modelul standard 67router — importă `getDbInstance()` din
 `core.ts` și exportă funcții CRUD tipizate. Nu există SQL brut în gestionarii de rute.
 
 Funcții principale:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Acțiune           | XP  | Descriere                                                             |
 | ----------------- | --- | --------------------------------------------------------------------- |
-| `request`         | 1   | Pentru fiecare solicitare API direcționată prin OmniRoute             |
+| `request`         | 1   | Pentru fiecare solicitare API direcționată prin 67router              |
 | `provider_switch` | 5   | Trecerea la un furnizor diferit                                       |
 | `model_switch`    | 3   | Trecerea la un model diferit                                          |
 | `combo_create`    | 10  | Crearea unei combinații noi                                           |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unic, indexat) |
 | `token_hash` | SHA-256(raw_token)         |
 
-Tokenul brut îi este returnat utilizatorului o singură dată, la momentul creării. OmniRoute
+Tokenul brut îi este returnat utilizatorului o singură dată, la momentul creării. 67router
 nu îl mai stochează și nu îl mai afișează niciodată — doar hashul persistă.
 
 ### Prevenirea auto-recomandării
@@ -704,7 +704,7 @@ Administratorii pot interoga întregul jurnal de audit prin `GET /api/gamificati
 
 ## Rute API
 
-Toate rutele urmează modelul standard OmniRoute:
+Toate rutele urmează modelul standard 67router:
 
 ```
 Rută → Verificare preliminară CORS → Validarea corpului (Zod) → Autentificare (extractApiKey)

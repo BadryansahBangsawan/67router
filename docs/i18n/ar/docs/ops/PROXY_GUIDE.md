@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (العربية)
+# 🌐 67router Proxy Guide (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **تجاوز الحظر الجغرافي، واحمِ هويتك، ووجّه حركة مرور الذكاء الاصطناعي عبر أي وكيل — من دون أي تعقيد في الإعداد.**
 
-يتضمن OmniRoute نظامًا متكامل الميزات لإدارة الوكلاء، يتيح لك توجيه حركة المرور إلى مزوّدي الذكاء الاصطناعي في المنبع عبر وكلاء HTTP أو HTTPS أو SOCKS5. سواء كنت في منطقة محظورة، أو تحتاج إلى تدوير عناوين IP، أو ترغب في إخفاء البصمة — يغطي هذا الدليل كل ما تحتاج إليه.
+يتضمن 67router نظامًا متكامل الميزات لإدارة الوكلاء، يتيح لك توجيه حركة المرور إلى مزوّدي الذكاء الاصطناعي في المنبع عبر وكلاء HTTP أو HTTPS أو SOCKS5. سواء كنت في منطقة محظورة، أو تحتاج إلى تدوير عناوين IP، أو ترغب في إخفاء البصمة — يغطي هذا الدليل كل ما تحتاج إليه.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       خادم OmniRoute                          │
+│                       خادم 67router                          │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ سجل         │    │ موزّع        │    │ Fetch (undici)   │  │
@@ -83,7 +83,7 @@ unsupported_country_region_territory
 
 ## نظام الوكيل رباعي المستويات
 
-يدعم OmniRoute إعداد الوكيل على **أربعة نطاقات مستقلة**، ويتم تحديدها وفق ترتيب الأولوية:
+يدعم 67router إعداد الوكيل على **أربعة نطاقات مستقلة**، ويتم تحديدها وفق ترتيب الأولوية:
 
 ```
 ترتيب تحديد الأولوية (من الأعلى → إلى الأدنى):
@@ -96,7 +96,7 @@ unsupported_country_region_territory
 
 ### كيفية تحديد الوكيل
 
-عندما يرسل OmniRoute طلبًا إلى مزوّد خارجي، فإنه يستدعي `resolveProxyForConnectionFromRegistry()`، التي تتحقق من كل مستوى بالترتيب:
+عندما يرسل 67router طلبًا إلى مزوّد خارجي، فإنه يستدعي `resolveProxyForConnectionFromRegistry()`، التي تتحقق من كل مستوى بالترتيب:
 
 1. **مستوى الحساب** — هل يوجد وكيل مُعيّن لمعرّف الاتصال المحدد هذا؟
 2. **مستوى المزوّد** — هل يوجد وكيل مُعيّن لهذا المزوّد (مثلًا، `openai`)؟
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### الاستيراد/التصدير
 
-تُضمّن الوكلاء في نظام **النسخ الاحتياطي/الاستعادة**. عند تصدير إعداد OmniRoute الخاص بك:
+تُضمّن الوكلاء في نظام **النسخ الاحتياطي/الاستعادة**. عند تصدير إعداد 67router الخاص بك:
 
 1. انتقل إلى **لوحة التحكم → الإعدادات → النسخ الاحتياطي**
 2. انقر على **تصدير** — يتم تضمين سجل الوكلاء والتعيينات
@@ -248,7 +248,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ترحيل الإصدارات القديمة
 
-إذا أعددت الوكلاء في إصدار أقدم (قبل السجل)، فإن OmniRoute يرحّلهم تلقائيًا:
+إذا أعددت الوكلاء في إصدار أقدم (قبل السجل)، فإن 67router يرحّلهم تلقائيًا:
 
 ```
 مخزن key_value القديم → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **بمساهمة من [@oyi77](https://github.com/oyi77)** — طلب السحب [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (المشكلة [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-يتكامل OmniRoute مع منصة مجتمع **[1proxy](https://1proxy-api.aitradepulse.com)** لتوفير الوصول إلى **مئات الوكلاء المجانيين الذين جرى التحقق منهم** من جميع أنحاء العالم. وهذا مثالي للمستخدمين الذين لا يملكون بنية تحتية خاصة بهم للوكلاء.
+يتكامل 67router مع منصة مجتمع **[1proxy](https://1proxy-api.aitradepulse.com)** لتوفير الوصول إلى **مئات الوكلاء المجانيين الذين جرى التحقق منهم** من جميع أنحاء العالم. وهذا مثالي للمستخدمين الذين لا يملكون بنية تحتية خاصة بهم للوكلاء.
 
 ### آلية العمل
 
@@ -273,7 +273,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 └─────────────┘               └─────────────────┘               └──────────┘
 ```
 
-1. **المزامنة** — يجلب OmniRoute الوكلاء الذين جرى التحقق منهم من واجهة 1proxy البرمجية
+1. **المزامنة** — يجلب 67router الوكلاء الذين جرى التحقق منهم من واجهة 1proxy البرمجية
 2. **التخزين** — تُحفظ الوكلاء في جدول `proxy_registry` نفسه مع `source = 'oneproxy'`
 3. **التصفية** — تصفية حسب البروتوكول والبلد ودرجة الجودة
 4. **التدوير** — اختيار أفضل وكيل باستخدام استراتيجيات الجودة أو الاختيار العشوائي أو التسلسل
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## مكافحة الاكتشاف والتخفي
 
-لا يكتفي OmniRoute بتوجيه حركة المرور عبر وكيل فحسب — بل يجعل حركة المرور تبدو شرعية:
+لا يكتفي 67router بتوجيه حركة المرور عبر وكيل فحسب — بل يجعل حركة المرور تبدو شرعية:
 
 ### انتحال بصمة TLS
 
@@ -407,11 +407,11 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## أوضاع الوكيل الصاعد
 
-بالنسبة إلى المزوّدين الذين يستخدمون نمط CLIProxyAPI، يدعم OmniRoute ثلاثة أوضاع للوكيل الصاعد:
+بالنسبة إلى المزوّدين الذين يستخدمون نمط CLIProxyAPI، يدعم 67router ثلاثة أوضاع للوكيل الصاعد:
 
 | الوضع         | الوصف                                                       |
 | ------------- | ----------------------------------------------------------- |
-| `native`      | يتولى OmniRoute توجيه الوكيل مباشرةً (الافتراضي)            |
+| `native`      | يتولى 67router توجيه الوكيل مباشرةً (الافتراضي)             |
 | `cliproxyapi` | يفوّض المهمة إلى مثيل CLIProxyAPI خارجي                     |
 | `fallback`    | يجرّب الوضع الأصلي أولًا، ثم يلجأ إلى CLIProxyAPI احتياطيًا |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API الأنفاق
 
-لإتاحة مثيل OmniRoute الخاص بك عبر الإنترنت العام (Cloudflare/ngrok/Tailscale) بدلًا من توجيه حركة المرور الصادرة عبر وكيل، راجع [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). توجد واجهة REST API الخاصة بالأنفاق ضمن `/api/tunnels/{cloudflared,ngrok,tailscale}/*`، وهي مستقلة عن سلسلة الوكلاء الصادرة الموثقة أعلاه.
+لإتاحة مثيل 67router الخاص بك عبر الإنترنت العام (Cloudflare/ngrok/Tailscale) بدلًا من توجيه حركة المرور الصادرة عبر وكيل، راجع [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). توجد واجهة REST API الخاصة بالأنفاق ضمن `/api/tunnels/{cloudflared,ngrok,tailscale}/*`، وهي مستقلة عن سلسلة الوكلاء الصادرة الموثقة أعلاه.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### أخطاء "socket hang up" عبر الوكيل
 
-هذا أمر طبيعي مع الوكلاء الرخيصين الذين يقطعون الاتصالات الخاملة. يتعامل OmniRoute بالفعل مع ذلك من خلال:
+هذا أمر طبيعي مع الوكلاء الرخيصين الذين يقطعون الاتصالات الخاملة. يتعامل 67router بالفعل مع ذلك من خلال:
 
 - تعطيل إبقاء الاتصال نشطًا لاتصالات الوكيل (`keepAliveTimeout: 1`)
 - تعطيل المعالجة المتسلسلة (`pipelining: 0`)
@@ -526,7 +526,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### ظهور "unsupported_country_region_territory" أثناء OAuth
 
-تأكد من إعداد الوكيل **قبل** بدء تدفق OAuth. يوجّه OmniRoute عملية تبادل رمز OAuth عبر الوكيل المُعدّ. عيّن أولاً وكيلاً عامًا أو على مستوى المزوّد، ثم اتصل.
+تأكد من إعداد الوكيل **قبل** بدء تدفق OAuth. يوجّه 67router عملية تبادل رمز OAuth عبر الوكيل المُعدّ. عيّن أولاً وكيلاً عامًا أو على مستوى المزوّد، ثم اتصل.
 
 ### عدم استخدام الوكيل
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## التحقق من سلامة الوكيل (v3.8.16+)
 
-تكتشف آلية **الفشل السريع للوكيل** في OmniRoute ‏(`src/lib/proxyHealth.ts`) الوكلاء المتوقفين خلال أقل من ثانيتين عبر فحص سريع لاتصال TCP، ثم **تخزّن النتيجة مؤقتًا** لتجنب الحمل الإضافي لكل طلب.
+تكتشف آلية **الفشل السريع للوكيل** في 67router ‏(`src/lib/proxyHealth.ts`) الوكلاء المتوقفين خلال أقل من ثانيتين عبر فحص سريع لاتصال TCP، ثم **تخزّن النتيجة مؤقتًا** لتجنب الحمل الإضافي لكل طلب.
 
 ### آلية العمل
 
@@ -659,11 +659,11 @@ invalidateProxyHealth("http://user:pass@203.0.113.7:8080");
 
 ## تحليلات الوكيل وقابلية المراقبة
 
-يتتبّع OmniRoute الاستخدام لكل وكيل لمساعدة المشغّلين على تشخيص أنماط التوجيه، والارتفاعات المفاجئة في زمن الاستجابة، والإخفاقات المتكررة.
+يتتبّع 67router الاستخدام لكل وكيل لمساعدة المشغّلين على تشخيص أنماط التوجيه، والارتفاعات المفاجئة في زمن الاستجابة، والإخفاقات المتكررة.
 
 ### ما الذي يتم تتبّعه
 
-يسجّل OmniRoute لكل طلب يمر عبر وكيل مُهيّأ ما يلي:
+يسجّل 67router لكل طلب يمر عبر وكيل مُهيّأ ما يلي:
 
 | المقياس      | الوصف                                               |
 | ------------ | --------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## شجرة قرار استراتيجية التناوب
 
-عند تعيين عدة وكلاء لنطاق واحد، يستخدم OmniRoute **استراتيجية تناوب** لاختيار الوكيل الذي سيُستخدم لكل طلب. تُهيّأ الاستراتيجية على مستوى النطاق (عام، أو لكل مزوّد، أو لكل حساب، أو لكل تركيبة).
+عند تعيين عدة وكلاء لنطاق واحد، يستخدم 67router **استراتيجية تناوب** لاختيار الوكيل الذي سيُستخدم لكل طلب. تُهيّأ الاستراتيجية على مستوى النطاق (عام، أو لكل مزوّد، أو لكل حساب، أو لكل تركيبة).
 
 ### الاستراتيجيات المتاحة
 

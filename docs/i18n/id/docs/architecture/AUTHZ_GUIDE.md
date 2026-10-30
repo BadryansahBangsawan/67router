@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Terakhir diperbarui:** 2026-09-22 — namespace cakupan mengarah ke MCP-SERVER.md
 
-OmniRoute memiliki pipeline otorisasi yang sadar rute yang menjaga setiap permintaan API. Klasifikasi bersifat **deterministik** dan **fail-closed** — apa pun yang tidak dapat diklasifikasikan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token tingkat manajemen. Halaman ini menjelaskan model untuk insinyur yang memelihara rute atau merancang endpoint baru.
+67router memiliki pipeline otorisasi yang sadar rute yang menjaga setiap permintaan API. Klasifikasi bersifat **deterministik** dan **fail-closed** — apa pun yang tidak dapat diklasifikasikan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token tingkat manajemen. Halaman ini menjelaskan model untuk insinyur yang memelihara rute atau merancang endpoint baru.
 
 ![Pipeline AuthZ (3 kelas rute + evaluasi kebijakan)](../diagrams/exported/authz-pipeline.svg)
 

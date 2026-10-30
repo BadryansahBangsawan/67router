@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Hausa)
+# 67router Architecture (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _An sabunta na ƙarshe: 2026-06-28_
 
 ## Taƙaitaccen Bayani ga Masu Zartarwa
 
-OmniRoute wata ƙofar sarrafa zirga-zirgar AI ta cikin gida ce tare da dashboard, wadda aka gina bisa Next.js.
+67router wata ƙofar sarrafa zirga-zirgar AI ta cikin gida ce tare da dashboard, wadda aka gina bisa Next.js.
 Tana samar da endpoint guda ɗaya mai dacewa da OpenAI (`/v1/*`) sannan tana rarraba zirga-zirga tsakanin upstream providers da yawa tare da fassara, fallback, sabunta token, da bibiyar amfani.
 
 Manyan ƙwarewa:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Allon Sarrafa na Burauza]
     end
 
-    subgraph Router[Tsarin Gida na OmniRoute]
+    subgraph Router[Tsarin Gida na 67router]
         API[API na Daidaituwar V1\n/v1/*]
         DASH[Allon Sarrafawa + API na Gudanarwa\n/api/*]
         CORE[SSE + Jigon Fassara\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modulolin masu samar da OAuth (fayiloli guda 27 a ƙarƙashin `src/lib/oauth/pro
 
 ## 5) Sabis na Ciki (v3.8.4)
 
-OmniRoute na iya girkawa, sa ido, da kuma tura buƙatu zuwa matakan aiki na kayan aikin AI da ke gudana a cikin gida
+67router na iya girkawa, sa ido, da kuma tura buƙatu zuwa matakan aiki na kayan aikin AI da ke gudana a cikin gida
 waɗanda ake kira **sabis na ciki**. Ana kawo guda biyar: 9Router, CLIProxyAPI, Bifrost, Mux da Dario.
 
 Matakan gine-gine:
@@ -438,7 +438,7 @@ riƙa haɗa dabarun lockout/budget/fallback da kansu.
 - Cache na keɓaɓɓen rabo: `src/domain/quotaCache.ts`
 - Halin taɓarɓarewa: `src/domain/degradation.ts`
 - Binciken config: `src/domain/configAudit.ts`
-- Mai gina metadata na martanin OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Mai gina metadata na martanin 67router: `src/domain/omnirouteResponseMeta.ts`
 - Ƙaramin tsarin kimantawa: `src/domain/assessment/` — ayyukan kimantawa na lokaci-lokaci
 
 ### E. Pipeline na Ba da Izini
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Burauzar Allon Sarrafawa]
     end
 
-    subgraph ContainerOrProcess[Yanayin Gudanarwar OmniRoute]
+    subgraph ContainerOrProcess[Yanayin Gudanarwar 67router]
         Next[Sabar Next.js\nPORT=20128]
         Core[Jigon SSE + Masu Aiwaswa]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Duk sauran masu samarwa (har da nodes masu jituwa na musamman) suna amfani da `D
 ## Jadawalin Daidaituwar Masu Bayar da Sabis
 
 > **Lura:** Jadawalin da ke ƙasa samfurin wakilci ne na masu bayar da sabis 351 da aka yi wa rajista a cikin
-> OmniRoute v3.8.0. Don jerin da aka amince da shi kuma ake sabunta shi a kai a kai, duba
+> 67router v3.8.0. Don jerin da aka amince da shi kuma ake sabunta shi a kai a kai, duba
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (wanda aka samar ta atomatik) ko tushen
 > ingantaccen bayani a `src/shared/constants/providers.ts` (wanda Zod ke tabbatar da ingancinsa yayin lodawa).
 
@@ -1117,7 +1117,7 @@ Cikakken ɗaukar payload na buƙata yana adana har zuwa matakai huɗu na payload
 - ɗanyen buƙatar da aka karɓa daga abokin hulɗa
 - buƙatar da aka fassara wadda aka aika zuwa sabis na sama a zahiri
 - amsar mai samar da sabis da aka sake gina ta a matsayin JSON; ana taƙaita amsoshin rafi zuwa taƙaitaccen bayani na ƙarshe tare da metadata na rafi
-- amsar ƙarshe ga abokin hulɗa da OmniRoute ya mayar; ana adana amsoshin rafi a cikin irin wannan taƙaitaccen tsari
+- amsar ƙarshe ga abokin hulɗa da 67router ya mayar; ana adana amsoshin rafi a cikin irin wannan taƙaitaccen tsari
 
 ## Iyakoki Masu Muhimmanci ga Tsaro
 

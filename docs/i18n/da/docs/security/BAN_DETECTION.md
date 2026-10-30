@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute scanner upstream-fejlsvar for signaler, der indikerer, at en udbyderkonto er
+67router scanner upstream-fejlsvar for signaler, der indikerer, at en udbyderkonto er
 **permanent ubrugelig** (suspenderet / deaktiveret / udelukket på grund af brud på tjenestevilkårene), og flytter ved
 et match forbindelsen til en **terminal `banned`-tilstand**, så den ikke
 længere vælges til anmodninger. Dette er, hvad indstillingskortet **Sikkerhed → Forbudte nøgleord**

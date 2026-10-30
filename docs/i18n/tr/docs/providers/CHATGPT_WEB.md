@@ -26,11 +26,11 @@ Tünel yalnızca araç turları için gereklidir. `pro` dahil olmak üzere liste
 1. **ChatGPT Web (Codex)** sağlayıcısını açın ve bir bağlantı ekleyin.
 2. Tam ChatGPT Cookie üstbilgisini, tünel kimliğini, çalışma zamanı anahtarını ve özel bağlayıcı
    adını yapıştırın. Araç özellikli yeni kurulumlarda, adı tam olarak
-   `OmniRoute Codex v2` olan yeni oluşturulmuş bir bağlayıcı kullanılmalı; Authentication değeri None,
+   `67router Codex v2` olan yeni oluşturulmuş bir bağlayıcı kullanılmalı; Authentication değeri None,
    Permissions değeri ise Allow all actions olarak ayarlanmalıdır.
-3. Bağlantı denetimini çalıştırın. OmniRoute, tarayıcı destekli bir Temporary Chat açar ve
+3. Bağlantı denetimini çalıştırın. 67router, tarayıcı destekli bir Temporary Chat açar ve
    hesapta Sol ile Pro'nun kullanılabilir olup olmadığını algılar.
-4. Bağlantıyı kaydedin. OmniRoute, yapıştırılan çerezi doğrulanmış
+4. Bağlantıyı kaydedin. 67router, yapıştırılan çerezi doğrulanmış
    Playwright depolama durumuyla değiştirir ve şifrelenmiş
    kimlik bilgisi soyutlaması aracılığıyla çalışma zamanı anahtarıyla birlikte saklar.
 
@@ -59,7 +59,7 @@ Bunlardan birini diğer modeller gibi bir kombinasyona ekleyin. Codex uygulamas�
 
 Free/Go hesapları Luna rotalarını sunar. Sol özelliğine sahip hesaplar Instant'tan High'a kadar olan rotaları, Pro özelliğine sahip hesaplar ise bunlara ek olarak Extra High ve Pro rotalarını sunar. Her rotanın sabit bir backend modeli ve akıl yürütme eforu vardır; çakışan açık bir Responses eforu, seçili tarayıcı modunu sessizce değiştirmek yerine kapalı biçimde başarısız olur.
 
-Eski bir `Codex Native` veya `OmniRoute Codex` bağlayıcısını yeniden adlandırmayın ya da tekrar kullanmayın. ChatGPT, herkese açık MCP sözleşmesini bağlayıcı kimliğine göre önbelleğe alırken yenilenmiş köprü yeni bir doğrudan tur belirteci sözleşmesi kullanır. Çalışma zamanı bu eski kimlikleri reddeder ve yeni bir `OmniRoute Codex v2` bağlayıcısı gerektirir.
+Eski bir `Codex Native` veya `67router Codex` bağlayıcısını yeniden adlandırmayın ya da tekrar kullanmayın. ChatGPT, herkese açık MCP sözleşmesini bağlayıcı kimliğine göre önbelleğe alırken yenilenmiş köprü yeni bir doğrudan tur belirteci sözleşmesi kullanır. Çalışma zamanı bu eski kimlikleri reddeder ve yeni bir `67router Codex v2` bağlayıcısı gerektirir.
 
 ## Güvenlik modeli
 
@@ -72,12 +72,12 @@ Eski bir `Codex Native` veya `OmniRoute Codex` bağlayıcısını yeniden adland
 
 ## Ekransız VPS ve Docker
 
-OmniRoute; npm, systemd ve PM2 kurulumlarında yaygın Chrome ve Chromium yollarını algılar.
-Alternatif olarak `CHATGPT_WEB_CODEX_CHROME_PATH` değişkenini ayarlayın. Çalışma zamanı turları, ChatGPT gerçek başsız tarayıcı yapısını reddettiği için Chrome'u kasıtlı olarak arayüzlü modda kullanır. Bu nedenle ekransız bir ana makine, OmniRoute'u özel bir Xvfb ekranıyla çalıştırmalıdır; yalnızca Chrome yolunu ayarlamak ekran sağlamaz.
+67router; npm, systemd ve PM2 kurulumlarında yaygın Chrome ve Chromium yollarını algılar.
+Alternatif olarak `CHATGPT_WEB_CODEX_CHROME_PATH` değişkenini ayarlayın. Çalışma zamanı turları, ChatGPT gerçek başsız tarayıcı yapısını reddettiği için Chrome'u kasıtlı olarak arayüzlü modda kullanır. Bu nedenle ekransız bir ana makine, 67router'u özel bir Xvfb ekranıyla çalıştırmalıdır; yalnızca Chrome yolunu ayarlamak ekran sağlamaz.
 
-Docker `web` profili, dahili Compose ağında `chatgpt-web-codex-browser` bileşenini başlatır. Yardımcı konteyner, Chrome'u Xvfb içinde arayüzlü modda çalıştırdığından fiziksel bir ekran gerekmez. CDP portu ana makinede yayımlanmaz. Korumalı tarayıcı profili birimi, OmniRoute veri biriminden ayrıdır ve tarayıcıya yeterli paylaşımlı bellek sağlanır. Dahili CDP proxy'si yalnızca Compose ağı içindeki `9223` portunu dinler; Chrome, yardımcı konteynerde geri döngü arayüzüne bağlı kalır.
+Docker `web` profili, dahili Compose ağında `chatgpt-web-codex-browser` bileşenini başlatır. Yardımcı konteyner, Chrome'u Xvfb içinde arayüzlü modda çalıştırdığından fiziksel bir ekran gerekmez. CDP portu ana makinede yayımlanmaz. Korumalı tarayıcı profili birimi, 67router veri biriminden ayrıdır ve tarayıcıya yeterli paylaşımlı bellek sağlanır. Dahili CDP proxy'si yalnızca Compose ağı içindeki `9223` portunu dinler; Chrome, yardımcı konteynerde geri döngü arayüzüne bağlı kalır.
 
-`DATA_DIR` altındaki bir gözetmen kiralaması, birden fazla OmniRoute işleminin aynı tünel ve aracı durumuna sahip olmasını önler. Bir çakışma, doctor tarafından bildirilir.
+`DATA_DIR` altındaki bir gözetmen kiralaması, birden fazla 67router işleminin aynı tünel ve aracı durumuna sahip olmasını önler. Bir çakışma, doctor tarafından bildirilir.
 
 ## Etkileşimli kurtarma
 

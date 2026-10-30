@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRouten pakkausmoottori on **laajennettavissa** — voit rekisteröidä mukautettuja moottoreita, toimittaa kielipaketteja uusille kielille ja koostaa pinottuja käsittelyputkia. Tässä oppaassa näytetään, miten se tehdään.
+> **TL;DR**: 67routerin pakkausmoottori on **laajennettavissa** — voit rekisteröidä mukautettuja moottoreita, toimittaa kielipaketteja uusille kielille ja koostaa pinottuja käsittelyputkia. Tässä oppaassa näytetään, miten se tehdään.
 
 **Aiheeseen liittyvät oppaat:**
 
@@ -232,7 +232,7 @@ strategiavalitsimessa sen `id`-tunnisteella. Testaa integraatiota yhdistämäll�
 
 ## Kielipakettien luominen
 
-Caveman-tyylinen pakkaus käyttää **kielikohtaisia sääntöpaketteja** käsitelläkseen täytesanoja, varauksellisia ilmaisuja ja monisanaisia rakenteita kussakin luonnollisessa kielessä. OmniRoute sisältää **6 kielipakettia**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Caveman-tyylinen pakkaus käyttää **kielikohtaisia sääntöpaketteja** käsitelläkseen täytesanoja, varauksellisia ilmaisuja ja monisanaisia rakenteita kussakin luonnollisessa kielessä. 67router sisältää **6 kielipakettia**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paketin rakenne
 
@@ -388,7 +388,7 @@ Moottorin N tulosteesta tulee moottorin N+1 syöte.
 
 ### Pakkaustilat
 
-OmniRoute valitsee **YHDEN tilan pyyntöä kohden** määritysten, automaattisen käynnistyksen kynnysarvojen ja yhdistelmäkohtaisten ohitusten perusteella.
+67router valitsee **YHDEN tilan pyyntöä kohden** määritysten, automaattisen käynnistyksen kynnysarvojen ja yhdistelmäkohtaisten ohitusten perusteella.
 Käytettävissä olevat tilat on määritetty tiedostossa `open-sse/services/compression/types.ts` (tyyppi `CompressionMode`):
 
 | Tila         | Moottorit            | Käyttötapaus                                                                                                                                                                                                                                  |
@@ -505,10 +505,10 @@ Jos haluat ohjata sitä konfiguraatiolla, aseta `mode: "stacked"` ja anna vaihet
 
 ## Upstream-synkronointikäytäntö
 
-OmniRouten pakkausmoottoreiden yhteydessä mainitaan README-tiedostossa useita upstream-projekteja
+67routerin pakkausmoottoreiden yhteydessä mainitaan README-tiedostossa useita upstream-projekteja
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita"). Yleinen avustajien
 kysymys kuuluu: **kun upstream-RTK lisää uuden työkalusuodattimen tai Caveman lisää
-sääntöpaketin, miten se päätyy OmniRouteen?** Tämä osio antaa virallisen vastauksen.
+sääntöpaketin, miten se päätyy 67routeriin?** Tämä osio antaa virallisen vastauksen.
 
 ### Vendoroidut kopiot vs. itsenäiset toteutukset
 
@@ -529,7 +529,7 @@ ole — juuri siksi README-tiedostossa lukee "inspired by" eikä "bundled".
 Käytössä **ei tarkoituksellisesti ole automaattista upstream-julkaisujen seurantaa eikä
 `compression-sync`-tunnistetta**. Koska moottorit ovat uudelleentoteutuksia, upstream-RTK:n
 suodatinta tai Cavemanin sääntöpakettia ei yhdistetä koodina, vaan se **ilmaistaan uudelleen uutena
-sääntönä/suodattimena OmniRouten omassa muodossa** (katso
+sääntönä/suodattimena 67routerin omassa muodossa** (katso
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) ja lisätään tapauskohtaisesti
 tavallisen PR:n kautta. Edellä mainitut laajennuspisteet (mukautettu moottori, kielipaketti, RTK-suodatin)
 ovat hyväksytty tapa osallistua tällaisen parannuksen tekemiseen.
@@ -543,14 +543,14 @@ Tuoreita esimerkkejä juuri tästä työnkulusta:
 ### Headroom (syötteenpakkausvälityspalvelin)
 
 Headroom on **täysin sisäinen** — kiinnitetty vendoroitu tilannevedos `gcf`-koodekista sekä
-OmniRouten omat `smartcrusher`- / `toon`- / `tabular`-kerrokset. Vendoroitua kopiota lukuun ottamatta
+67routerin omat `smartcrusher`- / `toon`- / `tabular`-kerrokset. Vendoroitua kopiota lukuun ottamatta
 seurattavaa aktiivista upstream-projektia ei ole; `gcf` päivitetään
 manuaalisesti koodekin muuttuessa ja validoidaan uudelleen pakkausbudjetin
 tarkistusporttia (`check:compression-budget`) vasten.
 
 ### Upstream-projektin inspiroiman parannuksen ehdottaminen
 
-1. **Älä vendoroi** — ilmaise upstream-sääntö/suodatin uudelleen OmniRouten muodossa.
+1. **Älä vendoroi** — ilmaise upstream-sääntö/suodatin uudelleen 67routerin muodossa.
 2. Lisää se alla olevan vastaavan laajennuspisteen kautta (kielipaketti, RTK-suodatin tai
    mukautettu moottori).
 3. Viittaa upstream-projektiin PR:n kuvauksessa (tekijyyden ilmoittamiseksi) sen sijaan, että

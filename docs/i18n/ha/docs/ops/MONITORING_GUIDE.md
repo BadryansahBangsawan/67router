@@ -4,7 +4,7 @@
 
 ---
 
-> **A Taƙaice**: OmniRoute yana zuwa da ginanniyar sa ido kan lafiyar tsarin, autopilot na masu samarwa, bibiyar ƙa'ida, da hooks na observability. Wannan jagorar ta ƙunshi dashboard, faɗakarwa, da warware matsaloli.
+> **A Taƙaice**: 67router yana zuwa da ginanniyar sa ido kan lafiyar tsarin, autopilot na masu samarwa, bibiyar ƙa'ida, da hooks na observability. Wannan jagorar ta ƙunshi dashboard, faɗakarwa, da warware matsaloli.
 
 **Tushe:**
 
@@ -20,7 +20,7 @@
 
 ## Bayani Gabaɗaya
 
-OmniRoute yana da **matakai 3 na sa ido**:
+67router yana da **matakai 3 na sa ido**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Ga kowane combo:
 
 ## API na Duba Lafiya
 
-OmniRoute yana samar da hanyoyin duba lafiyar HTTP guda **biyu**. Ba za a iya amfani da su a madadin juna ga masu tsara tafiyar da sabis ba.
+67router yana samar da hanyoyin duba lafiyar HTTP guda **biyu**. Ba za a iya amfani da su a madadin juna ga masu tsara tafiyar da sabis ba.
 
 | Hanya                        | Manufa                                                                                 | Nauyi                                 | Yi amfani da shi don                                                                    |
 | ---------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -172,7 +172,7 @@ Kada a aika faɗakarwa bisa `provider_connections.test_status` kaɗai yayin tatt
 
 ### Shawarwarin probe na Kubernetes
 
-OmniRoute **process na Node guda ɗaya** ne (event loop guda ɗaya). Tsohon Docker `HEALTHCHECK` yana nufin `/healthz` mai sauƙi. `/api/monitoring/health` yana da **nauyi sosai** don tazarar liveness ta kubelet.
+67router **process na Node guda ɗaya** ne (event loop guda ɗaya). Tsohon Docker `HEALTHCHECK` yana nufin `/healthz` mai sauƙi. `/api/monitoring/health` yana da **nauyi sosai** don tazarar liveness ta kubelet.
 
 | Bincike                      | Manufa da aka ba da shawara                                                    | Bayanan kula                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +219,7 @@ Mai alaƙa: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (bi
 
 ### systemd watchdog (event loop da ya daskare)
 
-A kan host na systemd, OmniRoute yana sanar da mai sarrafa sabis lokacin da ya shirya kuma yana ci gaba da aika masa da ping, don haka ana kashe kuma a sake kunna server da event loop ɗinsa ya makale maimakon ya ci gaba da kasancewa a kunne cikin shiru. Ping ɗin suna fitowa daga event loop na server ɗin kansa: idan ya toshe, suna tsayawa, sannan systemd ya sake kunna sabis ɗin da zarar `WatchdogSec` ya wuce ba tare da ko guda ɗaya ba.
+A kan host na systemd, 67router yana sanar da mai sarrafa sabis lokacin da ya shirya kuma yana ci gaba da aika masa da ping, don haka ana kashe kuma a sake kunna server da event loop ɗinsa ya makale maimakon ya ci gaba da kasancewa a kunne cikin shiru. Ping ɗin suna fitowa daga event loop na server ɗin kansa: idan ya toshe, suna tsayawa, sannan systemd ya sake kunna sabis ɗin da zarar `WatchdogSec` ya wuce ba tare da ko guda ɗaya ba.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) ya riga ya rubuta user unit mai wannan. Unit da kuka rubuta da kanku (`Type=simple` na tsohuwa) ba ya samun watchdog, don haka ƙara waɗannan layukan zuwa sashinsa na `[Service]`:
 
@@ -435,7 +435,7 @@ interface TokenHealth {
 
 ### Tashoshin da Aka Gina Ciki
 
-OmniRoute yana goyon bayan **tashoshin faɗakarwa guda 3**:
+67router yana goyon bayan **tashoshin faɗakarwa guda 3**:
 
 | Tasha             | Saitawa        | Inda ake amfani da ita    |
 | ----------------- | -------------- | ------------------------- |
@@ -551,7 +551,7 @@ A yanzu, tattara bayanai daga `/api/monitoring/health` ta amfani da kowane tsari
 ### "Quota yana nuna yana lafiya amma ina ganin 429s"
 
 - 429 yana nufin provider ya ce ka yi amfani da quota ɗinka
-- Bibiyar quota ta OmniRoute na iya zama **tsohuwa** — ingantaccen bayanin provider yana upstream
+- Bibiyar quota ta 67router na iya zama **tsohuwa** — ingantaccen bayanin provider yana upstream
 - Bayanan quota suna sabuntawa kai tsaye ta internal quota monitor
 
 ### "Combo yana gaza amma duk targets suna nuna suna lafiya"
@@ -564,7 +564,7 @@ A yanzu, tattara bayanai daga `/api/monitoring/health` ta amfani da kowane tsari
 
 - Gudanar da `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Idan "ok" — faɗakarwar ƙarya ce, gwajin lafiyar yana da tsauri fiye da kima
-- Idan wani abu dabam ne — **dakatar da OmniRoute** kuma bi [jagorar farfaɗowa daga bala'i](./DATABASE_GUIDE.md#disaster-recovery)
+- Idan wani abu dabam ne — **dakatar da 67router** kuma bi [jagorar farfaɗowa daga bala'i](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Matsin heap na memory ya kai matakin haɗari"
 

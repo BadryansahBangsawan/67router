@@ -7,7 +7,7 @@
 > **Sumber acuan:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute dapat mengirim webhook HTTP pada peristiwa platform. Gunakan webhook tersebut untuk berintegrasi dengan
+67router dapat mengirim webhook HTTP pada peristiwa platform. Gunakan webhook tersebut untuk berintegrasi dengan
 Slack, PagerDuty, Datadog, layanan peringatan internal, atau penerima HTTP apa pun.
 
 Dispatcher menandatangani setiap pengiriman dengan HMAC-SHA256, mencoba kembali saat terjadi
@@ -54,7 +54,7 @@ kesalahan per webhook sehingga satu penerima yang bermasalah tidak dapat memblok
 
 ## Penandatanganan HMAC
 
-Ketika webhook memiliki `secret`, OmniRoute menandatangani body JSON dan mengirim:
+Ketika webhook memiliki `secret`, 67router menandatangani body JSON dan mengirim:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Halaman dasbor di `/dashboard/webhooks` (lihat
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Pengiriman webhook uji dari OmniRoute",
+    "message": "Pengiriman webhook uji dari 67router",
     "webhookId": "<uuid>"
   }
 }

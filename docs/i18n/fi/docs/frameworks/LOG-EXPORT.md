@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-kutsulokien jatkuva, inkrementaalinen vienti ulkoiseen analytiikkatietovarastoon.
+67router-kutsulokien jatkuva, inkrementaalinen vienti ulkoiseen analytiikkatietovarastoon.
 
 Lokit-hallintapaneelin välilehti säilyttää pyyntöhistorian SQLite-tietokannassa (`call_logs`), jonka kokoa
 rajoittavat kierto ja säilytysaika. Lokivienti lähettää saman tietuejoukon ajastetusti muualle, jotta se säilyy

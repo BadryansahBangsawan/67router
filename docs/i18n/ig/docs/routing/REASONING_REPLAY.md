@@ -7,7 +7,7 @@
 > **Isi mmalite eziokwu:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-ejide `reasoning_content` nke onye enyemaka nke ụdịdị na-eji ọnọdụ iche echiche mepụtara, ma na-akpọghachi ya n'ụzọ a na-adịghị ahụ anya na arịrịọ nwere ọtụtụ ntụgharị mgbe onye na-eweta ọrụ upstream chọrọ ya. Nke a na-ewepụ njehie HTTP 400 nke ndị na-eweta ọrụ nwere iwu siri ike na-ebute mgbe akụkọ mkparịta ụka nke onye ahịa enweghị ntụgharị echiche gara aga.
+67router na-ejide `reasoning_content` nke onye enyemaka nke ụdịdị na-eji ọnọdụ iche echiche mepụtara, ma na-akpọghachi ya n'ụzọ a na-adịghị ahụ anya na arịrịọ nwere ọtụtụ ntụgharị mgbe onye na-eweta ọrụ upstream chọrọ ya. Nke a na-ewepụ njehie HTTP 400 nke ndị na-eweta ọrụ nwere iwu siri ike na-ebute mgbe akụkọ mkparịta ụka nke onye ahịa enweghị ntụgharị echiche gara aga.
 
 ## Ihe Mere Nke A Ji Dị
 
@@ -17,7 +17,7 @@ OmniRoute na-ejide `reasoning_content` nke onye enyemaka nke ụdịdị na-eji 
 Param ezighi ezi: A ga-ezigaghachi reasoning_content dị na ọnọdụ iche echiche na API.
 ```
 
-Mana ndị ahịa a na-ahụkarị (Cursor, Cline, Roo Code, OpenAI SDK) na-ewepụ `reasoning_content` n'akụkọ ha na-akpọghachi. OmniRoute na-eweghachi ya site na cache dị n'akụkụ sava ka arịrịọ upstream na-ahụ wee bụrụ nke kwekọrọ. Issue #1628 webatara nchekwa ngwakọ memory/SQLite ka cache wee dịgide mgbe usoro malitegharịrị.
+Mana ndị ahịa a na-ahụkarị (Cursor, Cline, Roo Code, OpenAI SDK) na-ewepụ `reasoning_content` n'akụkọ ha na-akpọghachi. 67router na-eweghachi ya site na cache dị n'akụkụ sava ka arịrịọ upstream na-ahụ wee bụrụ nke kwekọrọ. Issue #1628 webatara nchekwa ngwakọ memory/SQLite ka cache wee dịgide mgbe usoro malitegharịrị.
 
 ## Nhazi
 

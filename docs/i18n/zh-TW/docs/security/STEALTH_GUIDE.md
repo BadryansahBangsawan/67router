@@ -8,11 +8,11 @@
 > **最後更新：** 2026-09-02 — v3.8.51
 > **適用對象：** 維護提供者特定隱匿整合的工程師。
 
-OmniRoute 會與邊緣節點主動對非官方用戶端進行指紋辨識（TLS JA3/JA4、標頭順序、JSON 主體結構、完整性權杖）的提供者整合。本頁記錄 OmniRoute 所提供的隱匿介面，以及其實作位置。
+67router 會與邊緣節點主動對非官方用戶端進行指紋辨識（TLS JA3/JA4、標頭順序、JSON 主體結構、完整性權杖）的提供者整合。本頁記錄 67router 所提供的隱匿介面，以及其實作位置。
 
 ## 法律與道德聲明
 
-隱匿功能的存在，是為了讓 OmniRoute 能作為使用者自有官方帳戶（Claude Code CLI、Codex、Antigravity、Cursor 等）與 OmniRoute 統一 API 之間的相容層。這些功能**並非**用於規避詐欺偵測、共用憑證，或違反提供者的服務條款。維護者期望營運者遵守建立帳戶時所同意的上游服務條款。
+隱匿功能的存在，是為了讓 67router 能作為使用者自有官方帳戶（Claude Code CLI、Codex、Antigravity、Cursor 等）與 67router 統一 API 之間的相容層。這些功能**並非**用於規避詐欺偵測、共用憑證，或違反提供者的服務條款。維護者期望營運者遵守建立帳戶時所同意的上游服務條款。
 
 ---
 
@@ -55,7 +55,7 @@ OmniRoute 會與邊緣節點主動對非官方用戶端進行指紋辨識（TLS 
 
 ## Claude Code 隱匿套件
 
-當 `cliCompatMode` 開啟時，OmniRoute 會重塑傳出的 Claude 請求，使其與 `claude-cli` 流量無法區分。由三個模組協同運作：
+當 `cliCompatMode` 開啟時，67router 會重塑傳出的 Claude 請求，使其與 `claude-cli` 流量無法區分。由三個模組協同運作：
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts`（用戶端內容雜湊）
 
-這是官方 Claude Code CLI 透過 Bun/Zig 計算的伺服器端完整性檢查。OmniRoute 使用 `xxhash-wasm` 重新實作：
+這是官方 Claude Code CLI 透過 Bun/Zig 計算的伺服器端完整性檢查。67router 使用 `xxhash-wasm` 重新實作：
 
 1. 使用 `cch=00000;` 預留位置序列化請求主體
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ aider, continue.dev, copilot, avante, codecompanion
 
 ## Antigravity 隱匿機制
 
-Antigravity 請求會逐位元組保留呼叫端文字。OmniRoute 不會在提示中插入零寬字元，也不會重新命名或注入工具以模仿 IDE 用戶端。
+Antigravity 請求會逐位元組保留呼叫端文字。67router 不會在提示中插入零寬字元，也不會重新命名或注入工具以模仿 IDE 用戶端。
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Antigravity 請求會逐位元組保留呼叫端文字。OmniRoute 不會在提�
 
 `ANTIGRAVITY_CREDITS=always`（由 `open-sse/executors/antigravity.ts` 使用）會將**每一個**請求都透過 Antigravity AI Credit Overages（付費 Google 點數）路由，而不是讓 Google 的免費方案配額進行限制。這雖被記載為一項功能，但它是**我們所見最常見的單一 ToS 違規回報來源**——多個 Google Ultra 帳號在使用 `=always` 執行數小時後，遭到封鎖並收到 `403 / "service disabled for ToS violation" / insufficient_quota`。
 
-上游的執法發生在 **Google 端**，並非 OmniRoute 所能阻止。環境變數名稱與現有文件讓它聽起來像是可以安全切換的選項；事實並非如此。
+上游的執法發生在 **Google 端**，並非 67router 所能阻止。環境變數名稱與現有文件讓它聽起來像是可以安全切換的選項；事實並非如此。
 
 **為何這比僅使用免費方案更容易觸發濫用偵測：**
 
 - 在單一 Google 帳號上持續進行自動化消費，會產生不同於免費方案達到配額後停止的風險訊號。
 - 額外付費點數沒有速率上限，因此設定錯誤的用戶端可能在幾分鐘內消耗數百美元，並看起來像 API 金鑰轉售或機器人流量。
-- 多名 OmniRoute 使用者從相同外部 IP 平行使用額外付費點數，會進一步加重此風險訊號。
+- 多名 67router 使用者從相同外部 IP 平行使用額外付費點數，會進一步加重此風險訊號。
 
 **建議做法：**
 
@@ -172,7 +172,7 @@ interface CliFingerprint {
 
 ## MITM Proxy（Antigravity、Linux/macOS/Windows）
 
-針對二進位檔無法透過 `OPENAI_BASE_URL` 重新導向的 CLI，OmniRoute 會執行本機 TLS 終止代理伺服器。端點位於 `src/app/api/cli-tools/antigravity-mitm/` 下。
+針對二進位檔無法透過 `OPENAI_BASE_URL` 重新導向的 CLI，67router 會執行本機 TLS 終止代理伺服器。端點位於 `src/app/api/cli-tools/antigravity-mitm/` 下。
 
 | 方法   | 端點                                    | 用途                                           |
 | ------ | --------------------------------------- | ---------------------------------------------- |
@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 憑證檔名：`omniroute-mitm.crt`。透過 `getCertFingerprint()` 比對指紋（DER 的 SHA-1）。
 
-此外，當 `certutil` 可用時，`updateNssDatabases()` 會將憑證安裝至每位使用者的 NSS DB：`~/.pki/nssdb`、`~/snap/chromium/.../nssdb`，以及所有 Firefox 設定檔（包括 snap），其暱稱為 **`OmniRoute MITM Root CA`**。
+此外，當 `certutil` 可用時，`updateNssDatabases()` 會將憑證安裝至每位使用者的 NSS DB：`~/.pki/nssdb`、`~/snap/chromium/.../nssdb`，以及所有 Firefox 設定檔（包括 snap），其暱稱為 **`67router MITM Root CA`**。
 
 ### macOS / Windows
 
@@ -253,7 +253,7 @@ interface CliFingerprint {
 
 ## 傳入標頭清理
 
-OmniRoute 會在轉送前清理傳入的用戶端標頭，因此，來自 Cursor 的請求不會將 `User-Agent: Cursor/X.Y.Z` 洩漏至 Claude 上游。拒絕清單請參閱 `src/shared/constants/upstreamHeaders.ts`；該清單會與 Zod 結構描述及單元測試保持同步。
+67router 會在轉送前清理傳入的用戶端標頭，因此，來自 Cursor 的請求不會將 `User-Agent: Cursor/X.Y.Z` 洩漏至 Claude 上游。拒絕清單請參閱 `src/shared/constants/upstreamHeaders.ts`；該清單會與 Zod 結構描述及單元測試保持同步。
 
 ---
 

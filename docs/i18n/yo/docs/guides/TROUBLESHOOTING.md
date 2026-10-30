@@ -8,17 +8,17 @@
 
 🌐 **Àwọn Èdè:** 🇺🇸 [Gẹ̀ẹ́sì](./TROUBLESHOOTING.md) | 🇪🇹 [Amharic](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [Lárúbáwá](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Èdè Azerbaijan](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Èdè Bulgaria](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [Èdè Bengali](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Èdè Bosnia](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Èdè Czech](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Èdè Denmark](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Èdè Jámánì](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Èdè Giriki](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Èdè Sípáníìṣì](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Èdè Estonia](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [Èdè Persia](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Èdè Finland](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Èdè Faransé](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Èdè Irish](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Gujarati](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [Èdè Hébérù](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Hindi](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Èdè Croatia](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Èdè Hungary](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Èdè Armenia](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Èdè Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Èdè Ítálì](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [Èdè Japan](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [Èdè Georgia](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [Èdè Khmer](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Kannada](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [Èdè Korea](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Èdè Lithuania](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Èdè Latvia](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Malayalam](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Marathi](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Èdè Malay](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Èdè Malta](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [Èdè Myanmar](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [Èdè Nepal](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Èdè Netherlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Èdè Norway](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Odia](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Punjabi](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Èdè Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Èdè Poland](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Èdè Pọtugi (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Èdè Pọtugi (Brazil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Èdè Romania](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Èdè Rọ́ṣíà](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [Èdè Sinhala](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Èdè Slovakia](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Èdè Slovenia](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Èdè Serbia](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Èdè Sweden](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Tamil](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [Èdè Telugu](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [Èdè Thai](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Èdè Tọ́kì](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Èdè Ukraine](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [Èdè Urdu](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Èdè Uzbek](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Èdè Vietnam](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [Èdè Ṣáínà (Rọrùn)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [Èdè Ṣáínà (Ìbílẹ̀)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Àwọn ìṣòro tí ó wọ́pọ̀ àti ojútùú wọn fún OmniRoute.
+Àwọn ìṣòro tí ó wọ́pọ̀ àti ojútùú wọn fún 67router.
 
 ---
 
 ## Ìtọ́kasí Kíákíá
 
-**Ṣé o ṣẹ̀ṣẹ̀ bẹ̀rẹ̀ sí í lo OmniRoute?** Bẹ̀rẹ̀ níbí — àwọn wọ̀nyí ń yanjú 90% àwọn ìṣòro:
+**Ṣé o ṣẹ̀ṣẹ̀ bẹ̀rẹ̀ sí í lo 67router?** Bẹ̀rẹ̀ níbí — àwọn wọ̀nyí ń yanjú 90% àwọn ìṣòro:
 
 | Ohun tí mo rí              | Ohun tí ó túmọ̀ sí                                | Ohun tí o yẹ kí o ṣe                                                                                      |
 | -------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| "Kò lè sopọ̀"               | OmniRoute kò ṣiṣẹ́                                | Ṣiṣe `omniroute` tàbí `docker restart omniroute`                                                          |
+| "Kò lè sopọ̀"               | 67router kò ṣiṣẹ́                                 | Ṣiṣe `omniroute` tàbí `docker restart omniroute`                                                          |
 | "Kọ́kọ́rọ́ API kò tọ́"         | Kọ́kọ́rọ́ rẹ kò tọ́ tàbí ó ti parí                   | Tun kọ́kọ́rọ́ náà ṣe láti ojúlé olùpèsè náà                                                                  |
 | "Ìwọ̀n ìbéèrè ti kọjá"      | O ń fi ìbéèrè púpọ̀ jù ránṣẹ́                      | Dúró fún ìṣẹ́jú 1, tàbí lo `model: "auto"` fún yíyípadà aládàáṣiṣẹ́                                         |
 | "Ìpín ti parí"             | O ti lo gbogbo ìpín ọ̀fẹ́/tí o sanwó fún           | So àwọn olùpèsè míì pọ̀, tàbí lo àwọn olùpèsè ọ̀fẹ́ (Kiro, Pollinations)                                     |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # ààlà ìgbàwọlé tó ṣe k
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # mú ìdúró tó ní ààlà ga ju iye àìròtẹ́lẹ̀ RATE_LIMIT_MAX_WAIT_MS lọ fún àwọn iṣẹ́ òkè tó lọ́ra
 ```
 
-Ṣètò àwọn wọ̀nyí nínú àyíká ìlànà OmniRoute (daemon náà, fún àpẹẹrẹ nípasẹ̀ LaunchAgent plist tàbí `systemctl edit`), lẹ́yìn náà tún OmniRoute bẹ̀rẹ̀. Àṣàyàn yíyípadà náà ni ọ̀nà kan ṣoṣo tó ní ipa jù lọ: ó ń yí ìkùnà tó le padà sí àtúngbìyànjú tí kò hàn sí olumulo pẹ̀lú olùpèsè tó péye nínú àkójọpọ̀ náà.
+Ṣètò àwọn wọ̀nyí nínú àyíká ìlànà 67router (daemon náà, fún àpẹẹrẹ nípasẹ̀ LaunchAgent plist tàbí `systemctl edit`), lẹ́yìn náà tún 67router bẹ̀rẹ̀. Àṣàyàn yíyípadà náà ni ọ̀nà kan ṣoṣo tó ní ipa jù lọ: ó ń yí ìkùnà tó le padà sí àtúngbìyànjú tí kò hàn sí olumulo pẹ̀lú olùpèsè tó péye nínú àkójọpọ̀ náà.
 
 **Àkíyèsí**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` ń fi ààlà sí iye àwọn ìbéèrè tó wuwo — tí àyíká ọ̀rọ̀ wọn gùn — tí ó lè ṣiṣẹ́ lẹ́ẹ̀kan náà; ààlà náà jẹ́ ẹnu-ọ̀nà ìgbàwọlé, kì í ṣe ohun ìdíwọ̀n ìwọ̀n ìbéèrè olùpèsè. **Ìmúdójúìwọ̀n #503-fanout:** a kò ṣètò var yìí nípa àìròtẹ́lẹ̀ mọ́ (ní báyìí, ó máa ń ṣiṣẹ́ kìkì nígbà tí a bá ṣètò rẹ̀ ní tààrà, gẹ́gẹ́ bí òkè) — dípò èyí, ààlà iye byte tí a ṣètò láìfọwọ́ṣe (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) ló ń darí ìgbàwọlé àwọn ìbéèrè tó wuwo, ó sì ń mú ara rẹ̀ bá ààlà ìrántí gidi ti host mu; nítorí náà, fífi ẹ̀yà tuntun sílò yẹ kí ó rí àwọn ìkọ̀sílẹ̀ `503 chat_admission_busy` tó kéré púpọ̀ láìṣètò var yìí rárá; ṣíṣètò rẹ̀ ní tààrà níbí ṣì ń ṣiṣẹ́ gan-an gẹ́gẹ́ bí a ti ṣàkọsílẹ̀ rẹ̀. Àwọn ìkọlélórí ààlà byte tí a ṣètò ní tààrà máa ń dúró láàárín 8 MiB–2 GiB. `413 body_exceeds_budget` kì í ṣe ìṣòro fún ìgbà díẹ̀: mú ààlà byte náà pọ̀ sí i, dín `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` kù, tàbí mú ààlà ìrántí ìlànà náà pọ̀ sí i. Ìyọkúrò `inflight_bytes_budget` jẹ́ ìjà fún ohun àmúlò fún ìgbà díẹ̀, a sì lè tún un gbìyànjú. A ń darí ìdíwọ̀n ìwọ̀n ìbéèrè fún olùpèsè kọ̀ọ̀kan (`open-sse/services/rateLimitManager.ts`) lọ́tọ̀ nípasẹ̀ `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, àti `RATE_LIMIT_AUTO_ENABLE` — wo `.env.example`.
 
 **Bí o ṣe lè ṣàrídájú pé ó ṣiṣẹ́**: ṣiṣẹ́ agent/cron rẹ lẹ́ẹ̀mejì ní kíákíá lẹ́yìn ara wọn, kí o sì jẹ́rìí pé àwọn méjèèjì ṣàṣeyọrí. Ṣáájú àtúnṣe náà, ìṣiṣẹ́ kejì sábà máa ń dá `429`/`401` jáde. Lẹ́yìn àtúnṣe náà, a ó tún àwọn ìkùnà (bí èyíkéyìí bá wà) gbìyànjú láìfi hàn sí olumulo, ìpè náà yóò sì parí. O tún lè lo `curl /monitoring/health`, kí o sì ṣàkíyèsí pápá `rateLimitedUntil` lórí àwọn àsopọ̀ olùpèsè àti `circuitBreakers.providerBreakers[].state` fún àwọn olùpèsè tó kan — ipò náà jẹ́ ọ̀kan lára `CLOSED`, `DEGRADED`, `OPEN`, tàbí `HALF_OPEN` (wo `src/shared/utils/circuitBreaker.ts`), olùpèsè tó sì ń kùnà léraléra yóò yí padà `CLOSED → DEGRADED → OPEN` kí fèrèsé ìtúnṣètò tó jẹ́ kí ìdánwò kan kọjá (`HALF_OPEN`).
 
-**Bí o bá ṣì ń rí 429**: àkọọ́lẹ̀ tó ń ṣiṣẹ́ fún olùpèsè náà ti lo _kótà_ rẹ̀ tán ní tòótọ́ (kì í ṣe ìwọ̀n ìbéèrè nìkan). Fi àkọọ́lẹ̀ kejì kún un fún olùpèsè kan náà nínú pátákó ìṣàkóso OmniRoute → Providers → Accounts, tàbí fi olùpèsè ọ̀fẹ́ mìíràn kún àdàpọ̀ náà (fún àpẹẹrẹ `routeway`, `auggie`). Yíyípadà ń ṣèrànwọ́ kìkì fún ìwọ̀n ìbéèrè/400/401 fún ìgbà díẹ̀; lílo kótà tán pátápátá nílò ẹ̀rí ìfàṣẹ̀sí kejì tàbí olùpèsè mìíràn.
+**Bí o bá ṣì ń rí 429**: àkọọ́lẹ̀ tó ń ṣiṣẹ́ fún olùpèsè náà ti lo _kótà_ rẹ̀ tán ní tòótọ́ (kì í ṣe ìwọ̀n ìbéèrè nìkan). Fi àkọọ́lẹ̀ kejì kún un fún olùpèsè kan náà nínú pátákó ìṣàkóso 67router → Providers → Accounts, tàbí fi olùpèsè ọ̀fẹ́ mìíràn kún àdàpọ̀ náà (fún àpẹẹrẹ `routeway`, `auggie`). Yíyípadà ń ṣèrànwọ́ kìkì fún ìwọ̀n ìbéèrè/400/401 fún ìgbà díẹ̀; lílo kótà tán pátápátá nílò ẹ̀rí ìfàṣẹ̀sí kejì tàbí olùpèsè mìíràn.
 
 **Bí o bá rí 403 lórí àwọn àwòṣe ìríran (`auto/vision`, `bazaarlink/*`)**: àkọọ́lẹ̀ tó sopọ̀ kò ní ètò ìsanwó tó ní ìríran nínú, tàbí API key náà kò ní àwọn àṣẹ tó tó. Ṣàrídájú nínú pátákó ìṣàkóso olùpèsè pé scope kọ́kọ́rọ́ náà ní ìríran/multimodal nínú, tàbí so àkọọ́lẹ̀ ìpele ìsanwó pọ̀ kí o sì fi í sílẹ̀ gẹ́gẹ́ bí ibi àfojúsùn ìríran.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # mú ìdúró tó ní ààlà ga
 
 Nígbà tí o bá ṣiṣẹ́ `npm install -g omniroute`, o lè rí ọ̀pọ̀lọpọ̀ ìkìlọ̀ bíi `npm warn ERESOLVE`, àwọn àkíyèsí ìgbẹ́kẹ̀lé ẹlẹgbẹ́, àti àwọn ìfiránṣẹ́ `deprecated`. **Àwọn wọ̀nyí jẹ́ ohun tí a retí, wọn kò sì léwu.** Fífi ètò náà sílẹ̀ ti ṣàṣeyọrí bí o bá rí `added <N> packages` nínú àbájáde náà.
 
-Láti pa àwọn ìkìlọ̀ nípa yíyanjú ìgbẹ́kẹ̀lé ẹlẹgbẹ́ mọ́, lo ọ̀nà fífi OmniRoute sílẹ̀ tí a ṣe àtìlẹ́yìn fún:
+Láti pa àwọn ìkìlọ̀ nípa yíyanjú ìgbẹ́kẹ̀lé ẹlẹgbẹ́ mọ́, lo ọ̀nà fífi 67router sílẹ̀ tí a ṣe àtìlẹ́yìn fún:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` ń pa `ERESOLVE` àti àwọn àkíyèsí ìgbẹ́kẹ̀lé ẹlẹgbẹ́ nìkan mọ́. Àwọn àkíyèsí pé ohun kan ti di àtijọ́ ṣì máa hàn nítorí pé wọ́n wá láti inú àwọn package ẹnikẹ́ta aláìtààrà; wọn kò túmọ̀ sí pé fífi ètò náà sílẹ̀ kùnà.
 
-Àwọn ìkìlọ̀ náà wá láti àwọn ààlà ìgbẹ́kẹ̀lé ẹlẹgbẹ́ tí ó ti pé nínú àwọn package ẹnikẹ́ta tí OmniRoute kò ṣàkóso:
+Àwọn ìkìlọ̀ náà wá láti àwọn ààlà ìgbẹ́kẹ̀lé ẹlẹgbẹ́ tí ó ti pé nínú àwọn package ẹnikẹ́ta tí 67router kò ṣàkóso:
 
 1. **`marked-terminal` fẹ́ `marked >=1 <16`, ṣùgbọ́n `marked@18` ni a rí** — ó ń ṣiṣẹ́ dáadáa ní ìlò gidi; ààlà ẹlẹgbẹ́ ti orísun òkè náà kàn ti pé.
 2. **`deprecated prebuild-install@7.1.3`** — olùrànlọ́wọ́ aláìtààrà fún gbígba fáìlì binary abinibi. A kò
@@ -104,19 +104,19 @@ npm warn install-scripts Àwọn package 7 ní àwọn install script tí a dí 
 
 ### Ṣé a lè kọ etí dídi sí ìkìlọ̀ yìí?
 
-**Ní apá kan, ṣùgbọ́n a kò gbani nímọ̀ràn láti ṣiṣẹ́ láìsí àwọn script.** OmniRoute ní àwọn ọ̀nà àfidípò tí kò ní fa ìdálẹ́kun: bí a kò bá lè gbé àwọn binding `better-sqlite3` abinibi láti inú bundle adádúró, application náà yóò lo àwọn driver àfidípò bíi `node:sqlite` tàbí `sql.js` (wo [Ìyanjú SQLite Nígbà Ìṣiṣẹ́](../ops/SQLITE_RUNTIME.md)). Server náà yóò ṣì bẹ̀rẹ̀, ṣùgbọ́n lílo àwọn àfidípò WASM bíi `sql.js` máa ń pa ipò SQLite WAL (Write-Ahead Logging) kí ó sì mú kí ìlò memory àti iṣẹ́ ìmúdọ́gba disk pọ̀ sí i.
+**Ní apá kan, ṣùgbọ́n a kò gbani nímọ̀ràn láti ṣiṣẹ́ láìsí àwọn script.** 67router ní àwọn ọ̀nà àfidípò tí kò ní fa ìdálẹ́kun: bí a kò bá lè gbé àwọn binding `better-sqlite3` abinibi láti inú bundle adádúró, application náà yóò lo àwọn driver àfidípò bíi `node:sqlite` tàbí `sql.js` (wo [Ìyanjú SQLite Nígbà Ìṣiṣẹ́](../ops/SQLITE_RUNTIME.md)). Server náà yóò ṣì bẹ̀rẹ̀, ṣùgbọ́n lílo àwọn àfidípò WASM bíi `sql.js` máa ń pa ipò SQLite WAL (Write-Ahead Logging) kí ó sì mú kí ìlò memory àti iṣẹ́ ìmúdọ́gba disk pọ̀ sí i.
 
 ### Àwọn script wo ni a nílò gan-an?
 
-Kì í ṣe gbogbo àwọn script tí a dí ni ó ṣe pàtàkì fún ṣiṣiṣẹ́ OmniRoute:
+Kì í ṣe gbogbo àwọn script tí a dí ni ó ṣe pàtàkì fún ṣiṣiṣẹ́ 67router:
 
-- **Pàtàkì (`omniroute`, `better-sqlite3`):** OmniRoute ń ṣiṣẹ́ láti inú bundle application Next.js adádúró (`dist/`). Nígbà fífìsórí ẹ̀rọ, npm máa ń gba driver SQLite abinibi tó bá host náà mu kalẹ̀ tàbí kó ṣàkójọ rẹ̀ sínú `node_modules/better-sqlite3/` ti ìpele òkè. Lẹ́yìn náà, script `postinstall` ti OmniRoute (`scripts/build/postinstall.mjs`) máa ń ṣàyẹ̀wò àwọn binary tó bá host náà mu, ó sì máa ń da wọ́n kọ sínú `dist/node_modules/` kí server adádúró náà lè wọlé sí wọn. Bí a bá dí script postinstall ti `omniroute`, a ó fo ìgbésẹ̀ dídàkọ yìí.
+- **Pàtàkì (`omniroute`, `better-sqlite3`):** 67router ń ṣiṣẹ́ láti inú bundle application Next.js adádúró (`dist/`). Nígbà fífìsórí ẹ̀rọ, npm máa ń gba driver SQLite abinibi tó bá host náà mu kalẹ̀ tàbí kó ṣàkójọ rẹ̀ sínú `node_modules/better-sqlite3/` ti ìpele òkè. Lẹ́yìn náà, script `postinstall` ti 67router (`scripts/build/postinstall.mjs`) máa ń ṣàyẹ̀wò àwọn binary tó bá host náà mu, ó sì máa ń da wọ́n kọ sínú `dist/node_modules/` kí server adádúró náà lè wọlé sí wọn. Bí a bá dí script postinstall ti `omniroute`, a ó fo ìgbésẹ̀ dídàkọ yìí.
 - **Àṣàyàn/alágbélégbè (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Ìwọ̀nyí jẹ́ àwọn olùrànlọ́wọ́ ìkọ́lé, irinṣẹ́ àkíyèsí ìyípadà, tàbí irinṣẹ́ ibi ìpamọ́ kọ́kọ́rọ́ system. Gígbaniláyè wọn máa ń dènà àwọn ìkìlọ̀ ìkọ́lé, ṣùgbọ́n a kò nílò wọn fún iṣẹ́ ìdarí ipa-ọ̀nà pàtàkì.
-- **Tí a yọ kúrò (`onnxruntime-node`):** Èyí jẹ́ dependency àṣàyàn fún àwọn embedding AI abẹ́lẹ̀, a kò sì **nílò** rẹ̀ kí OmniRoute lè ṣiṣẹ́. Script postinstall rẹ̀ máa ń gba nǹkan bí 300MB àwọn asset CUDA láti NuGet; má ṣe fi í sínú àtòjọ ìgbaniláyè àyàfi bí o bá pinnu ní pàtó láti lo ìmúṣẹ́kánkán ONNX abẹ́lẹ̀ lórí hardware tó ṣe àtìlẹ́yìn.
+- **Tí a yọ kúrò (`onnxruntime-node`):** Èyí jẹ́ dependency àṣàyàn fún àwọn embedding AI abẹ́lẹ̀, a kò sì **nílò** rẹ̀ kí 67router lè ṣiṣẹ́. Script postinstall rẹ̀ máa ń gba nǹkan bí 300MB àwọn asset CUDA láti NuGet; má ṣe fi í sínú àtòjọ ìgbaniláyè àyàfi bí o bá pinnu ní pàtó láti lo ìmúṣẹ́kánkán ONNX abẹ́lẹ̀ lórí hardware tó ṣe àtìlẹ́yìn.
 
 ### Àtúnṣe tí a dábàá
 
-Láti gba àwọn install script tí a nílò láàyè nígbà fífìsórí ẹ̀rọ lápapọ̀ àti láti mú àwọn ìkìlọ̀ dákẹ́, fi `--allow-scripts` ránṣẹ́ fún OmniRoute àti àwọn dependency abinibi rẹ̀:
+Láti gba àwọn install script tí a nílò láàyè nígbà fífìsórí ẹ̀rọ lápapọ̀ àti láti mú àwọn ìkìlọ̀ dákẹ́, fi `--allow-scripts` ránṣẹ́ fún 67router àti àwọn dependency abinibi rẹ̀:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright mọ̀ọ́mọ̀ ya àwọn ìgbàsílẹ̀ aṣàwákiri sọ́tọ
 sórí ẹrọ, nítorí náà ìdáhùn yìí ni a ń retí títí tí a ó fi fi aṣàwákiri náà sórí ẹrọ.
 
 Fún fífi npm sórí ẹrọ káàkiri, fi Chromium sórí ẹrọ láti inú directory package
-OmniRoute kí cache aṣàwákiri náà lè jẹ́ ti fífi Playwright kan náà sórí ẹrọ:
+67router kí cache aṣàwákiri náà lè jẹ́ ti fífi Playwright kan náà sórí ẹrọ:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Tun OmniRoute bẹ̀rẹ̀ lẹ́yìn fífi í sórí ẹrọ, lẹ́yìn náà tún ìbéèrè Gemini Web náà gbìyànjú. Tí o bá
-ń ṣiṣẹ́ OmniRoute láti inú image Docker kan, lo image `-web` (tàbí target build `runner-web`),
+Tun 67router bẹ̀rẹ̀ lẹ́yìn fífi í sórí ẹrọ, lẹ́yìn náà tún ìbéèrè Gemini Web náà gbìyànjú. Tí o bá
+ń ṣiṣẹ́ 67router láti inú image Docker kan, lo image `-web` (tàbí target build `runner-web`),
 èyí tí ó ti ní Chromium àti àwọn dependency rẹ̀ nínú; image ìpìlẹ̀ kò ní wọn.
 
 ---
@@ -187,7 +187,7 @@ Tun OmniRoute bẹ̀rẹ̀ lẹ́yìn fífi í sórí ẹrọ, lẹ́yìn náà 
 **Èyí jẹ́ ìkìlọ̀ èké. Kò sí ohun tí ó ní àkóràn, kò sì sí ìgbésẹ̀ kankan tí a nílò.**
 
 Avast àti AVG ń lo ìlànà heuristic kan tí ń ṣàmì sí àwọn fáìlì plain-text/Markdown tí ó ní ọ̀pọ̀
-ìjápọ̀ tí ó dà bí ìbéèrè HTTP. `README.md` ti OmniRoute wà nínú package npm (a
+ìjápọ̀ tí ó dà bí ìbéèrè HTTP. `README.md` ti 67router wà nínú package npm (a
 ṣe àkójọ rẹ̀ nínú `package.json` → `files`), nítorí náà ó máa ń dé sí `node_modules/omniroute/README.md` nígbà
 ìfiṣọ́pọ̀ àgbáyé — ó sì ní àpẹẹrẹ `http://localhost:20128/...` bíi ~15 (àwọn endpoint MCP
 HTTP/SSE, URL A2A `.well-known`, àti àwọn àpẹẹrẹ `curl`). Ìpọ̀n-ọn àwọn ìjápọ̀ yẹn
@@ -204,7 +204,7 @@ láti quarantine.
 
 1. **Dá àwọn ìfitónilétí dúró** — yọ directory ìfiṣọ́pọ̀ náà kúrò nínú ìṣàyẹ̀wò antivirus rẹ
    (Avast: Settings → Exceptions), nípa fífi path `node_modules` àgbáyé rẹ àti/tàbí
-   directory data OmniRoute (`~/.omniroute/`) kún un.
+   directory data 67router (`~/.omniroute/`) kún un.
 2. **Jábọ̀ ìkìlọ̀ èké náà** — <https://www.avast.com/false-positive-file-form.php>,
    kí o sì so `README.md` tí a yà sọ́tọ̀ mọ́ ọn. Èyí ni àtúnṣe tí ó ń ran gbogbo ènìyàn lọ́wọ́, nítorí
    heuristic olùpèsè náà ló ń fèsì ju bó ṣe yẹ lọ sí fáìlì ọ̀rọ̀ kan.
@@ -264,7 +264,7 @@ títí tí a ó fi ṣe é, àwọn release tuntun lè tún fa èyí.
 
 ### Ojú-ìwé ìwọlé ń jáwọ́ tàbí ó ń fi àṣìṣe "Module self-registration" hàn
 
-**Ìdí:** Ẹ̀yà Node.js tí o ń lò kò sí láàárín ìpele ìṣiṣẹ́ tó ní ààbò tí OmniRoute fọwọ́ sí. Ohun tó wọ́pọ̀ jù ni lílo ìpele àtúnṣe Node 22 tàbí 24 àtijọ́ tí ó kéré ju ìpele ààbò tí a ti ṣàtúnṣe tí OmniRoute nílò lọ.
+**Ìdí:** Ẹ̀yà Node.js tí o ń lò kò sí láàárín ìpele ìṣiṣẹ́ tó ní ààbò tí 67router fọwọ́ sí. Ohun tó wọ́pọ̀ jù ni lílo ìpele àtúnṣe Node 22 tàbí 24 àtijọ́ tí ó kéré ju ìpele ààbò tí a ti ṣàtúnṣe tí 67router nílò lọ.
 
 **Àwọn àmì:**
 
@@ -280,7 +280,7 @@ títí tí a ó fi ṣe é, àwọn release tuntun lè tún fa èyí.
    nvm use 24
    ```
 2. Ṣàyẹ̀wò ẹ̀yà rẹ: `node --version` gbọ́dọ̀ fi `v24.0.0` tàbí tuntun sí i hàn lórí ẹ̀ka 24.x LTS
-3. Tún OmniRoute fi sí ẹrọ: `npm install -g omniroute`
+3. Tún 67router fi sí ẹrọ: `npm install -g omniroute`
 4. Tún un bẹ̀rẹ̀: `omniroute`
 
 > **Àwọn ẹ̀yà ààbò tí a ṣe àtìlẹ́yìn fún:** `>=22.22.2 <23` tàbí `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) àti Node.js 26 ní àtìlẹ́yìn ní kíkún.
@@ -363,13 +363,13 @@ omniroute
 
 **Ìdí:** Lórí Node.js 22, olùpínṣẹ́ undici@8 kò bá ìmúṣẹ `fetch()` tí a kọ sínú Node mu.
 
-**Àtúnṣe (v3.5.5+):** OmniRoute ń lo iṣẹ́ `fetch()` ti undici fúnra rẹ̀ báyìí nígbà tí olùpínṣẹ́ proxy bá ṣiṣẹ́, láti rí i dájú pé ìhùwàsí dúró déédéé. Ṣe ìmúdójúìwọ̀n sí v3.5.5+.
+**Àtúnṣe (v3.5.5+):** 67router ń lo iṣẹ́ `fetch()` ti undici fúnra rẹ̀ báyìí nígbà tí olùpínṣẹ́ proxy bá ṣiṣẹ́, láti rí i dájú pé ìhùwàsí dúró déédéé. Ṣe ìmúdójúìwọ̀n sí v3.5.5+.
 
 ### MITM proxy lábẹ́ WSL: àwọn desktop apps lórí Windows host kò ní dídènà
 
-**Ìdí:** MITM proxy àti CA certificate rẹ̀ máa ń fi sí àyíká tí OmniRoute ti ń ṣiṣẹ́. Lábẹ́ WSL, àyíká yẹn ni Linux guest, nígbà tí àwọn AI desktop apps (Kiro, Trae, Copilot, Zed, …) ń ṣiṣẹ́ lórí Windows host. Àwọn app inú host kò fọkàn tán ibi ìpamọ́ certificate ti guest, wọn kò sì darí ìjápọ̀ wọn gba system proxy ti guest, nítorí náà dídènà desktop kò ṣiṣẹ́ níbẹ̀.
+**Ìdí:** MITM proxy àti CA certificate rẹ̀ máa ń fi sí àyíká tí 67router ti ń ṣiṣẹ́. Lábẹ́ WSL, àyíká yẹn ni Linux guest, nígbà tí àwọn AI desktop apps (Kiro, Trae, Copilot, Zed, …) ń ṣiṣẹ́ lórí Windows host. Àwọn app inú host kò fọkàn tán ibi ìpamọ́ certificate ti guest, wọn kò sì darí ìjápọ̀ wọn gba system proxy ti guest, nítorí náà dídènà desktop kò ṣiṣẹ́ níbẹ̀.
 
-**Ìmọ̀ràn:** Ṣiṣẹ́ OmniRoute lọ́nà abinibi lórí OS kan náà pẹ̀lú àwọn desktop apps tí o fẹ́ dènà (Windows fún àwọn Windows apps; bẹ́ẹ̀ náà fún macOS/Linux). Tí o bá pa OmniRoute mọ́ sínú WSL nígbà tí o ń fojú sí àwọn app inú host, o ní láti fọkàn tán CA certificate tí a ṣẹ̀dá lórí Windows host pẹ̀lú ọwọ́, kí o sì darí ètò network/proxy ti app inú host kọ̀ọ̀kan sí WSL proxy endpoint — ètò ẹlẹgẹ́ tí kò ní àtìlẹ́yìn ni èyí.
+**Ìmọ̀ràn:** Ṣiṣẹ́ 67router lọ́nà abinibi lórí OS kan náà pẹ̀lú àwọn desktop apps tí o fẹ́ dènà (Windows fún àwọn Windows apps; bẹ́ẹ̀ náà fún macOS/Linux). Tí o bá pa 67router mọ́ sínú WSL nígbà tí o ń fojú sí àwọn app inú host, o ní láti fọkàn tán CA certificate tí a ṣẹ̀dá lórí Windows host pẹ̀lú ọwọ́, kí o sì darí ètò network/proxy ti app inú host kọ̀ọ̀kan sí WSL proxy endpoint — ètò ẹlẹgẹ́ tí kò ní àtìlẹ́yìn ni èyí.
 
 ---
 
@@ -396,7 +396,7 @@ omniroute
 
 ### OAuth Token Ti Parí
 
-OmniRoute máa ń sọ àwọn token dọ̀tun láìfọwọ́ṣe. Tí àwọn ìṣòro bá ń bá a lọ:
+67router máa ń sọ àwọn token dọ̀tun láìfọwọ́ṣe. Tí àwọn ìṣòro bá ń bá a lọ:
 
 1. Dashboard → Olùpèsè → Ṣe Ìsopọ̀ Padà
 2. Pa ìsopọ̀ olupèsè rẹ́, kí o sì tún fi kún un
@@ -609,7 +609,7 @@ Lo **Dashboard → Translator** láti ṣàtúnṣe àwọn ìṣòro ìtumọ̀
 
 ### Ìdènà ìkójọpọ̀ ìbéèrè lojiji
 
-Nígbà tí ọ̀pọ̀ ìbéèrè tó ń ṣiṣẹ́ lẹ́ẹ̀kan náà bá dé ọ̀dọ̀ olupèsè tí a fi ìdíwọ̀n ìwọ̀n-ìbéèrè sí, OmniRoute máa ń lo mutex + ìdíwọ̀n ìwọ̀n-ìbéèrè aládàáṣiṣẹ́ láti tò àwọn ìbéèrè ní ọ̀kọ̀ọ̀kan àti láti dènà ìkùnà tó ń tàn ká. Èyí jẹ́ aládàáṣiṣẹ́ fún àwọn olupèsè kọ́kọ́rọ́ API.
+Nígbà tí ọ̀pọ̀ ìbéèrè tó ń ṣiṣẹ́ lẹ́ẹ̀kan náà bá dé ọ̀dọ̀ olupèsè tí a fi ìdíwọ̀n ìwọ̀n-ìbéèrè sí, 67router máa ń lo mutex + ìdíwọ̀n ìwọ̀n-ìbéèrè aládàáṣiṣẹ́ láti tò àwọn ìbéèrè ní ọ̀kọ̀ọ̀kan àti láti dènà ìkùnà tó ń tàn ká. Èyí jẹ́ aládàáṣiṣẹ́ fún àwọn olupèsè kọ́kọ́rọ́ API.
 
 ### Àwọn ìbéèrè ìfọ̀rọ̀wérọ̀ kùnà pẹ̀lú 503 / chat_admission_busy
 
@@ -645,7 +645,7 @@ Ní àwọn ààlà àìpéye, ìbéèrè kan jẹ́ èyí tó wuwo ní ti struc
 ó kéré tán àwọn irinṣẹ́ `64`, tàbí ó kéré tán àwọn token tí a fojú díwọ̀n sí `32,000`, tàbí nígbà tí ìṣírò structure
 tó ní ààlà bá parí gbogbo ààlà rẹ̀ ti àwọn node `10,000` tí a ṣàbẹ̀wò tàbí ìjìnlẹ̀ `12`.
 
-**Okùnfà:** Èyí jẹ́ yíyọ ẹrù kúrò láìròtẹ́lẹ̀ nínú OmniRoute, kì í ṣe ìkùnà olupèsè upstream.
+**Okùnfà:** Èyí jẹ́ yíyọ ẹrù kúrò láìròtẹ́lẹ̀ nínú 67router, kì í ṣe ìkùnà olupèsè upstream.
 Process kọ̀ọ̀kan ń lo guard àdúgbò-process láti fi agbára heavyweight tó lopin pamọ́ kí ó tó dá
 ara ìbéèrè ńlá kan dúró kí ó sì ṣe parsing rẹ̀. Ìyálò heavyweight kan máa ń wà ní dídìmú fún gbogbo àkókò
 ìyè èsì SSE kan.
@@ -690,7 +690,7 @@ fún àwọn ètò admission tó jẹ́ orísun àṣẹ.
 
 ## Àṣàyàn ìpínlẹ̀ ìkùnà RAG / LLM (ìṣòro 16)
 
-Àwọn olùlò OmniRoute kan máa ń fi ẹnubodè náà síwájú àwọn àkójọpọ̀ RAG tàbí aṣojú. Nínú àwọn ètò bẹ́ẹ̀, ó wọ́pọ̀ láti rí àpẹẹrẹ àjèjì kan: OmniRoute dàbí ẹni pé ó wà ní ìlera dáadáa (àwọn olùpèsè ń ṣiṣẹ́, àwọn prófáìlì ìdarí dára, kò sí ìkìlọ̀ ààlà ìbéèrè) ṣùgbọ́n ìdáhùn ìkẹyìn ṣì jẹ́ àṣìṣe.
+Àwọn olùlò 67router kan máa ń fi ẹnubodè náà síwájú àwọn àkójọpọ̀ RAG tàbí aṣojú. Nínú àwọn ètò bẹ́ẹ̀, ó wọ́pọ̀ láti rí àpẹẹrẹ àjèjì kan: 67router dàbí ẹni pé ó wà ní ìlera dáadáa (àwọn olùpèsè ń ṣiṣẹ́, àwọn prófáìlì ìdarí dára, kò sí ìkìlọ̀ ààlà ìbéèrè) ṣùgbọ́n ìdáhùn ìkẹyìn ṣì jẹ́ àṣìṣe.
 
 Ní ìṣe, àwọn ìṣẹ̀lẹ̀ wọ̀nyí sábà máa ń wá láti ọ̀dọ̀ ìlànà RAG tó wà lẹ́yìn rẹ̀, kì í ṣe láti ara ẹnubodè náà.
 
@@ -709,17 +709,17 @@ Tí o bá fẹ́ àwọn ọ̀rọ̀ àpapọ̀ láti ṣàpèjúwe àwọn ìk�
 
 1. Nígbà tí o bá ń ṣèwádìí ìdáhùn tí kò dára, ṣàkọsílẹ̀:
    - iṣẹ́ àti ìbéèrè olùlò
-   - ọ̀nà tàbí àkójọpọ̀ olùpèsè nínú OmniRoute
+   - ọ̀nà tàbí àkójọpọ̀ olùpèsè nínú 67router
    - àyíká-ọ̀rọ̀ RAG èyíkéyìí tí a lò lẹ́yìn rẹ̀ (àwọn ìwé tí a mú padà, àwọn ìpè irinṣẹ́, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ)
 2. Ṣe ìbámu ìṣẹ̀lẹ̀ náà pẹ̀lú nọ́ńbà WFGY ProblemMap kan tàbí méjì (`No.1` … `No.16`).
-3. Fi nọ́ńbà náà pamọ́ sínú dashboard, runbook, tàbí olùtọ́pa ìṣẹ̀lẹ̀ tirẹ lẹ́gbẹ̀ẹ́ àwọn àkọsílẹ̀ OmniRoute.
+3. Fi nọ́ńbà náà pamọ́ sínú dashboard, runbook, tàbí olùtọ́pa ìṣẹ̀lẹ̀ tirẹ lẹ́gbẹ̀ẹ́ àwọn àkọsílẹ̀ 67router.
 4. Lo ojú-ewé WFGY tó bá a mu láti pinnu bóyá o nílò láti yí àkójọpọ̀ RAG, retriever, tàbí ọgbọ́n ìdarí rẹ padà.
 
 Ọ̀rọ̀ kíkún àti àwọn ìlànà tó ṣeé lò wà níbí (ìwé-àṣẹ MIT, ọ̀rọ̀ nìkan):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-O lè foju kọ abala yìí tí o kò bá ń ṣiṣẹ́ àwọn ìlànà RAG tàbí aṣojú lẹ́yìn OmniRoute.
+O lè foju kọ abala yìí tí o kò bá ń ṣiṣẹ́ àwọn ìlànà RAG tàbí aṣojú lẹ́yìn 67router.
 
 ---
 
@@ -743,7 +743,7 @@ O lè foju kọ abala yìí tí o kò bá ń ṣiṣẹ́ àwọn ìlànà RAG t
 
 1. Fi Devin CLI tó yẹ fún platform rẹ sí ẹ̀rọ
 2. Ṣètò `CLI_DEVIN_BIN=/usr/local/bin/devin` (tàbí path gidi) nínú `.env`
-3. Tun OmniRoute bẹ̀rẹ̀, kí o sì tún un dán wò láti **Dashboard → CLI Tools**
+3. Tun 67router bẹ̀rẹ̀, kí o sì tún un dán wò láti **Dashboard → CLI Tools**
 
 ### Cooldown model dì (àtúntò pẹ̀lú ọwọ́)
 
@@ -798,7 +798,7 @@ O lè foju kọ abala yìí tí o kò bá ń ṣiṣẹ́ àwọn ìlànà RAG t
 
 1. Ṣẹ̀dá secret aláìlẹ́sẹ̀-n-tẹ̀lé kan: `openssl rand -hex 32`
 2. Ṣètò `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` nínú env server production (àti nínú client èyíkéyìí tó ń bá afárá náà sọ̀rọ̀)
-3. Tun OmniRoute bẹ̀rẹ̀
+3. Tun 67router bẹ̀rẹ̀
 
 ### Responses API: a dín background mode kù sí synchronous
 

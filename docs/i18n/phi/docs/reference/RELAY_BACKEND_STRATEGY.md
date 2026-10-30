@@ -6,7 +6,7 @@
 
 ## Buod
 
-Sinusuportahan na ngayon ng OmniRoute ang tatlong relay mode para sa `/api/v1/relay/chat/completions`:
+Sinusuportahan na ngayon ng 67router ang tatlong relay mode para sa `/api/v1/relay/chat/completions`:
 
 - `ts`: Gamitin ang TypeScript relay sa loob ng proseso.
 - `bifrost`: Piliting gamitin ang Bifrost gateway.
@@ -45,12 +45,12 @@ Kung kasalukuyan mong inihahambing ang 9router/CLIPROXYAPI:
 
 ## Kontrata ng hangganan ng backend
 
-Ang matatag na hangganan ng produkto ay ang OmniRoute relay API, hindi ang pagpapatupad ng dashboard. Maaaring mag-install, mag-configure, at mangasiwa ang Next.js dashboard ng mga lokal na serbisyo, ngunit dapat pumasok ang request routing sa pamamagitan ng relay API at mag-handoff sa likod ng hangganang iyon.
+Ang matatag na hangganan ng produkto ay ang 67router relay API, hindi ang pagpapatupad ng dashboard. Maaaring mag-install, mag-configure, at mangasiwa ang Next.js dashboard ng mga lokal na serbisyo, ngunit dapat pumasok ang request routing sa pamamagitan ng relay API at mag-handoff sa likod ng hangganang iyon.
 
 Mga pangmatagalang pagpipilian sa backend:
 
 - Panatilihin ang TypeScript relay bilang in-process policy at fallback path. Nananatili rito ang auth, mga allowlist, request normalization, accounting, at mga safety check bago ang anumang backend handoff.
-- Gamitin ang Bifrost bilang piniling high-throughput Tier-1 sidecar kapag kailangan ng deployment ng mas mababang routing variance, sentralisadong provider rotation, o scale-out sa maraming OmniRoute replica.
+- Gamitin ang Bifrost bilang piniling high-throughput Tier-1 sidecar kapag kailangan ng deployment ng mas mababang routing variance, sentralisadong provider rotation, o scale-out sa maraming 67router replica.
 - Panatilihin ang 9router at CLIPROXYAPI bilang mga naka-embed na compatibility service. Tumatakbo ang mga ito bilang mga pinangangasiwaang lokal na proseso at kapaki-pakinabang kapag ang kanilang provider/CLI behavior ang nais na adapter, ngunit hindi dapat maging default na Tier-1 routing engine ang mga ito.
 - Huwag hayaang magpasa ang dashboard ng arbitraryong service URL sa hot path. Ang mga URL na ibinibigay ng UI ay mga configuration input; dapat i-resolve ng routing code ang mga nakarehistro at health-checked na backend mula sa mga server-side setting at supervisor state.
 - Piliin ang loopback HTTP para sa mga pinangangasiwaang serbisyo sa kasalukuyan dahil naglalantad na ang mga managed process ng mga HTTP-compatible API, maaaring i-audit ng route guard ang hangganan, at makikita sa mga request log ang failure/fallback behavior. Sulit lamang magdagdag ng SDK o socket transport sa hinaharap kung masusukat nitong mapababa ang p99 routing latency nang hindi pinahihina ang isolation o fallback semantics.

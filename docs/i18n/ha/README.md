@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Allon Sarrafa na OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Allon Sarrafa na 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Ƙofar AI ta Kyauta
+# 🚀 67router — Ƙofar AI ta Kyauta
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Kada ka taɓa daina rubuta lamba. Kowane kayan aikin AI → masu samarwa 375 — sama da 150 kyauta — ta hanyar endpoint guda ɗaya. Claude Code, Codex, Cursor, Cline, Copilot da Antigravity zuwa Claude / GPT / Gemini na KYAUTA tare da sauyawa ta atomatik idan an samu matsala. Haɗaɗɗen matse bayanai na RTK + Caveman yana rage amfani da tokens da 15–95% (~89% a matsakaici) — kada ka taɓa kaiwa iyaka. Masu samar da AI 375 · matakan kyauta sama da 150 · ~1.62B tokens kyauta/wata · dabarun routing 20 · $0 don farawa."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Kada ka taɓa daina rubuta lamba. Kowane kayan aikin AI → masu samarwa 375 — sama da 150 kyauta — ta hanyar endpoint guda ɗaya. Claude Code, Codex, Cursor, Cline, Copilot da Antigravity zuwa Claude / GPT / Gemini na KYAUTA tare da sauyawa ta atomatik idan an samu matsala. Haɗaɗɗen matse bayanai na RTK + Caveman yana rage amfani da tokens da 15–95% (~89% a matsakaici) — kada ka taɓa kaiwa iyaka. Masu samar da AI 375 · matakan kyauta sama da 150 · ~1.62B tokens kyauta/wata · dabarun routing 20 · $0 don farawa."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Kawo asusun masu samar da sabis naka.** Wannan ƙiyasin jimilla ne daga matakan kyauta na wasu kamfanoni waɗanda ake samun cancantarsu daban-daban, ba tallafin tokan daga OmniRoute ba ne. Yi rajista, sami bayanan shiga inda ake buƙata, sannan ka haɗa masu samar da sabis da za ka iya amfani da su; kowane mai samar da sabis ne ke kula da iyakokinsa, samuwarsa, da sharuɗɗansa.
+> **Kawo asusun masu samar da sabis naka.** Wannan ƙiyasin jimilla ne daga matakan kyauta na wasu kamfanoni waɗanda ake samun cancantarsu daban-daban, ba tallafin tokan daga 67router ba ne. Yi rajista, sami bayanan shiga inda ake buƙata, sannan ka haɗa masu samar da sabis da za ka iya amfani da su; kowane mai samar da sabis ne ke kula da iyakokinsa, samuwarsa, da sharuɗɗansa.
 >
-> Haɗa matakan kyauta da hannu yana da wahala — SDK da dama, iyakokin yawan buƙata da dama, kuma ba ka san ainihin adadin da kake da shi ba. OmniRoute yana lissafa **shigarwar matakin kyauta guda 471 a cikin maɓallan rukuni masu maimaituwa guda 34** kuma yana ƙididdige adadin tokan da aka nuna daga **rukuni 17 masu tabbataccen kasafin wata da aka wallafa tare da iyakokin Groq guda biyar na kowane samfuri**, bayan cire maimaituwa bisa rukuni ɗaya da ake rabawa. Ana nuna keɓantattun ƙididdiga da ake buɗewa kawai bayan tantance shaidar yanki (a yau: ModelScope) a ware, +~6M bayan tantance shaidar yanki, kuma ba a taɓa haɗa su cikin babban adadin da aka nuna ba. Sakamakon yana ci gaba da bayyana a dashboard (`/dashboard/free-tiers`).
+> Haɗa matakan kyauta da hannu yana da wahala — SDK da dama, iyakokin yawan buƙata da dama, kuma ba ka san ainihin adadin da kake da shi ba. 67router yana lissafa **shigarwar matakin kyauta guda 471 a cikin maɓallan rukuni masu maimaituwa guda 34** kuma yana ƙididdige adadin tokan da aka nuna daga **rukuni 17 masu tabbataccen kasafin wata da aka wallafa tare da iyakokin Groq guda biyar na kowane samfuri**, bayan cire maimaituwa bisa rukuni ɗaya da ake rabawa. Ana nuna keɓantattun ƙididdiga da ake buɗewa kawai bayan tantance shaidar yanki (a yau: ModelScope) a ware, +~6M bayan tantance shaidar yanki, kuma ba a taɓa haɗa su cikin babban adadin da aka nuna ba. Sakamakon yana ci gaba da bayyana a dashboard (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Katin kasafin matakin kyauta na OmniRoute: kusan tokan kyauta biliyan 1.62 a kowane wata akai-akai, har zuwa kusan biliyan 2.22 a watan farko tare da kuɗin rajista, daga maɓallan rukuni masu maimaituwa guda 34 da aka rubuta, waɗanda suka ƙunshi shigarwar matakin kyauta guda 471 da aka lissafa a bayan endpoint guda ɗaya. Ƙididdiga ta gaskiya bayan cire maimaituwar rukuni — ana ƙirga kowane rukuni da ake rabawa sau ɗaya, ciki har da rukuni masu maimaituwa guda 17 waɗanda ke da tabbataccen kasafin tokan na wata da aka wallafa tare da iyakokin Groq guda biyar na kowane samfuri; an yi wa masu samar da sabis guda 12 alamar a guje su a kundin haɗarin sharuɗɗa domin kai ne ka yanke shawara. Sandar kasafi ta ƙunshi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (iyakoki guda biyar na kowane samfuri) da ƙananan rukuni, tare da kuɗin rajista na watan farko da masu samar da sabis na kyauta na dindindin waɗanda ba su da iyakar tokan, waɗanda ake nuna su a ware domin kada su taɓa ƙara girman babban adadin. Adadin da aka yi amfani da shi/ya rage kai tsaye a /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Katin kasafin matakin kyauta na 67router: kusan tokan kyauta biliyan 1.62 a kowane wata akai-akai, har zuwa kusan biliyan 2.22 a watan farko tare da kuɗin rajista, daga maɓallan rukuni masu maimaituwa guda 34 da aka rubuta, waɗanda suka ƙunshi shigarwar matakin kyauta guda 471 da aka lissafa a bayan endpoint guda ɗaya. Ƙididdiga ta gaskiya bayan cire maimaituwar rukuni — ana ƙirga kowane rukuni da ake rabawa sau ɗaya, ciki har da rukuni masu maimaituwa guda 17 waɗanda ke da tabbataccen kasafin tokan na wata da aka wallafa tare da iyakokin Groq guda biyar na kowane samfuri; an yi wa masu samar da sabis guda 12 alamar a guje su a kundin haɗarin sharuɗɗa domin kai ne ka yanke shawara. Sandar kasafi ta ƙunshi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (iyakoki guda biyar na kowane samfuri) da ƙananan rukuni, tare da kuɗin rajista na watan farko da masu samar da sabis na kyauta na dindindin waɗanda ba su da iyakar tokan, waɗanda ake nuna su a ware domin kada su taɓa ƙara girman babban adadin. Adadin da aka yi amfani da shi/ya rage kai tsaye a /dashboard/free-tiers."/>
 
 > Takaitaccen bayani mai motsi na shafin `/dashboard/free-tiers` kai tsaye. Cikakkiyar hanya (cire maimaituwar rukuni, matakan kuɗi, sharuɗɗan masu samar da sabis): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Koyo</b></td>
     <td align="center"><a href="#-the-promise">💥 Alƙawarin</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Me Ya Sa OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Me Ya Sa 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Abin da Ya Bambanta Shi</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Matakai uku: shigar kuma ka fara OmniRoute, haɗa mai samarwa da ya cancanta da asusunka ko maɓallin API naka, sannan ka nuna kayan aikinka zuwa localhost:20128/v1 ta amfani da maɓallin API na OmniRoute da model auto. Watsawa na danganta da haɗin da suka cancanta da iyakokin mai samarwa."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Matakai uku: shigar kuma ka fara 67router, haɗa mai samarwa da ya cancanta da asusunka ko maɓallin API naka, sannan ka nuna kayan aikinka zuwa localhost:20128/v1 ta amfani da maɓallin API na 67router da model auto. Watsawa na danganta da haɗin da suka cancanta da iyakokin mai samarwa."/>
 
 ```bash
-# Bayan haɗa mai samarwa, kwafi maɓallin OmniRoute ɗinka daga Dashboard → Endpoints:
+# Bayan haɗa mai samarwa, kwafi maɓallin 67router ɗinka daga Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Me ya sa ake buƙatar OmniRoute?
+# 🤔 Me ya sa ake buƙatar 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Me ya sa ake buƙatar OmniRoute — daina wasa da dashboards 10, maɓallan API da suka mutu da kuɗin da ba ka yi zatonsa ba. Wahalolin yau da kullum goma da mafitansu: ƙuntataccen adadi na ƙarewa ba a amfani da shi ba → yi amfani da subscriptions sosai; iyakar yawan buƙatu a tsakiyar coding → fallback ta atomatik mai matakai 4 (Subscription → API → Mai araha → Kyauta); fitowar kayan aiki na ƙone tokens → matsawa na RTK + Caveman (15–95%); APIs masu tsada → watsawa mai daidaita kuɗi; kowane kayan aiki da saitinsa → endpoint guda, dashboard guda; an toshe AI → proxy mai matakai 3 + TLS stealth; maɓallan da suka mutu → juriya mai layi 3 (circuit breakers, sanyaya maɓalli, kulle model); ƙungiya na rabon subscription ɗaya → taryin maɓallan da ƙuntataccen adadi na adalci; prompts ta girgijen wani → local-first tare da maɓallan da aka ɓoye da AES-256-GCM; babu ganin kuɗin da ake kashewa → bincike kai tsaye (amfani, ƙuntataccen adadi, ceto, jinkirin p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Me ya sa ake buƙatar 67router — daina wasa da dashboards 10, maɓallan API da suka mutu da kuɗin da ba ka yi zatonsa ba. Wahalolin yau da kullum goma da mafitansu: ƙuntataccen adadi na ƙarewa ba a amfani da shi ba → yi amfani da subscriptions sosai; iyakar yawan buƙatu a tsakiyar coding → fallback ta atomatik mai matakai 4 (Subscription → API → Mai araha → Kyauta); fitowar kayan aiki na ƙone tokens → matsawa na RTK + Caveman (15–95%); APIs masu tsada → watsawa mai daidaita kuɗi; kowane kayan aiki da saitinsa → endpoint guda, dashboard guda; an toshe AI → proxy mai matakai 3 + TLS stealth; maɓallan da suka mutu → juriya mai layi 3 (circuit breakers, sanyaya maɓalli, kulle model); ƙungiya na rabon subscription ɗaya → taryin maɓallan da ƙuntataccen adadi na adalci; prompts ta girgijen wani → local-first tare da maɓallan da aka ɓoye da AES-256-GCM; babu ganin kuɗin da ake kashewa → bincike kai tsaye (amfani, ƙuntataccen adadi, ceto, jinkirin p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Yadda buƙatar OmniRoute ke gudana: IDE ko CLI naka (Claude Code, Cursor, Cline…) yana kiran endpoint guda na gida (http://localhost:20128/v1); Smart Router na OmniRoute (matsawa na RTK + Caveman, dabarun watsawa 20, circuit breakers, TLS stealth, MCP, A2A, guardrails) na iya komawa a kan matakai 4 na masu samarwa muddin wata manufa mai lafiya da ta cancanta ta kasance — Mataki 1 Subscription, Mataki 2 API Key, Mataki 3 Mai araha da Mataki 4 Kyauta."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Yadda buƙatar 67router ke gudana: IDE ko CLI naka (Claude Code, Cursor, Cline…) yana kiran endpoint guda na gida (http://localhost:20128/v1); Smart Router na 67router (matsawa na RTK + Caveman, dabarun watsawa 20, circuit breakers, TLS stealth, MCP, A2A, guardrails) na iya komawa a kan matakai 4 na masu samarwa muddin wata manufa mai lafiya da ta cancanta ta kasance — Mataki 1 Subscription, Mataki 2 API Key, Mataki 3 Mai araha da Mataki 4 Kyauta."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Kuna so ku shiga a matsayin Abokin Buɗaɗɗen Tushe?** Waɗannan su ne kamfanonin da ke tallafawa buɗaɗɗen tushe kuma suna taimakawa wajen ci gaba da OmniRoute — kuma muna faɗi a fili inda kowane kuɗin da suka ba mu yake zuwa. Tuntuɓi: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Kuna so ku shiga a matsayin Abokin Buɗaɗɗen Tushe?** Waɗannan su ne kamfanonin da ke tallafawa buɗaɗɗen tushe kuma suna taimakawa wajen ci gaba da 67router — kuma muna faɗi a fili inda kowane kuɗin da suka ba mu yake zuwa. Tuntuɓi: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Founding Open Source Friend"/>
     </td>
     <td>
-      Godiya ga <b>Kimi (Moonshot AI)</b>, Abokinmu na Buɗaɗɗen Tushe na farko, don tallafawa wannan aikin! Kimi shine dakin gwaje-gwaje na AI a bayan iyalai na samfurin K2 da K3 masu buɗaɗɗen nauyi — <b>Kimi K3</b> yana ba da taga mahallin 1M-token, hangen nesa na asali da matakin gaba na coding a farashi mai rahusa fiye da samfuran rufaffiyar, kuma yana aiki kai tsaye tare da Claude Code, Codex da kowane kayan aikin coding da OmniRoute ke bayarwa.
+      Godiya ga <b>Kimi (Moonshot AI)</b>, Abokinmu na Buɗaɗɗen Tushe na farko, don tallafawa wannan aikin! Kimi shine dakin gwaje-gwaje na AI a bayan iyalai na samfurin K2 da K3 masu buɗaɗɗen nauyi — <b>Kimi K3</b> yana ba da taga mahallin 1M-token, hangen nesa na asali da matakin gaba na coding a farashi mai rahusa fiye da samfuran rufaffiyar, kuma yana aiki kai tsaye tare da Claude Code, Codex da kowane kayan aikin coding da 67router ke bayarwa.
       <br/><br/>
-      <b>Abin da tallafin Kimi ke samarwa:</b> Kiredit na API na Kimi yana samar da bututun sakin OmniRoute mai inganci na AI — matakin <i>ingancin haɗawa wanda Kimi K3 ke samarwa</i> wanda ke duba kowane buƙatar ja kafin a tura shi — tare da haɓaka fasali na yau da kullun. Tallafin Kimi na farko yana aiki akan duka hanyoyin: kai tsaye <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) da <a href="https://www.kimi.ai/code?aff=omniroute">shirin coding na Kimi Code</a> (OAuth da maɓallin API). OmniRoute kuma shine aikin buɗaɗɗen tushe na Brazil na farko a cikin shirin tallafi na Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Samu maɓallin API na Kimi tare da ƙarin kiredit 15% →</b></a>
+      <b>Abin da tallafin Kimi ke samarwa:</b> Kiredit na API na Kimi yana samar da bututun sakin 67router mai inganci na AI — matakin <i>ingancin haɗawa wanda Kimi K3 ke samarwa</i> wanda ke duba kowane buƙatar ja kafin a tura shi — tare da haɓaka fasali na yau da kullun. Tallafin Kimi na farko yana aiki akan duka hanyoyin: kai tsaye <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) da <a href="https://www.kimi.ai/code?aff=omniroute">shirin coding na Kimi Code</a> (OAuth da maɓallin API). 67router kuma shine aikin buɗaɗɗen tushe na Brazil na farko a cikin shirin tallafi na Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Samu maɓallin API na Kimi tare da ƙarin kiredit 15% →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
     </td>
     <td>
-      Godiya ga <b>Cheaper Inference</b>, Abokin Buɗaɗɗen Tushe na OmniRoute, don tallafawa wannan aikin! Cheaper Inference wata hanyar shiga ce mai tsada wacce ke sake siyar da samfuran gaba 42 — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok da MiniMax — a bayan wani wuri mai dacewa da OpenAI, yana tura kowane buƙata zuwa mai bayarwa mafi arha ba tare da cajin sama da farashin jerin mai yin samfurin ba.
+      Godiya ga <b>Cheaper Inference</b>, Abokin Buɗaɗɗen Tushe na 67router, don tallafawa wannan aikin! Cheaper Inference wata hanyar shiga ce mai tsada wacce ke sake siyar da samfuran gaba 42 — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok da MiniMax — a bayan wani wuri mai dacewa da OpenAI, yana tura kowane buƙata zuwa mai bayarwa mafi arha ba tare da cajin sama da farashin jerin mai yin samfurin ba.
       <br/><br/>
-      <b>Tallafi na farko a OmniRoute:</b> Cikakkun Taɗi, asalin <code>/v1/responses</code> endpoint, hangen nesa, kiran kayan aiki da samfuran hoto 3 (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, ana iya isa gare su kamar <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Samu maɓallin API →</b></a>
+      <b>Tallafi na farko a 67router:</b> Cikakkun Taɗi, asalin <code>/v1/responses</code> endpoint, hangen nesa, kiran kayan aiki da samfuran hoto 3 (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, ana iya isa gare su kamar <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Samu maɓallin API →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Tallace-tallacen Abokan Hulɗa</b> — takardun shaidar rajista kyauta daga masu bayarwa waɗanda ba mu tallafawa (danna don faɗaɗawa)</sub></summary>
 
-<sub><i>Wannan sashin don lambobin referral/coupon ne kawai. Haɗin gwiwar tallafi suna cikin <b>🤝 Masu Tallafa Mana Masu Buɗaɗɗen Tushe</b> a sama. OmniRoute ba shi da tallafi ko haɗin gwiwa tare da masu bayarwa da aka jera a nan — waɗannan takardun shaidar jama'a ne waɗanda kowa zai iya amfani da su.</i></sub>
+<sub><i>Wannan sashin don lambobin referral/coupon ne kawai. Haɗin gwiwar tallafi suna cikin <b>🤝 Masu Tallafa Mana Masu Buɗaɗɗen Tushe</b> a sama. 67router ba shi da tallafi ko haɗin gwiwa tare da masu bayarwa da aka jera a nan — waɗannan takardun shaidar jama'a ne waɗanda kowa zai iya amfani da su.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — rajistar abokin tarayya · <b>$100 kiredit kyauta</b> akan rajista (sabar kyauta, sa ran jinkiri mafi girma — mafi kyau don gwaji, ba don samarwa ba). Tallafi na farko a OmniRoute tun <b>v3.8.50</b>: Cikakkun Taɗi, tsarin waya mai dacewa da Anthropic da hanyar da ta dace da OpenAI. Samfuran da ake da su sun haɗa da <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> da ƙari. <b><a href="https://agentrouter.org/register?aff=70LM">Ɗauki $100 ɗinku →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — rajistar abokin tarayya · <b>$100 kiredit kyauta</b> akan rajista (sabar kyauta, sa ran jinkiri mafi girma — mafi kyau don gwaji, ba don samarwa ba). Tallafi na farko a 67router tun <b>v3.8.50</b>: Cikakkun Taɗi, tsarin waya mai dacewa da Anthropic da hanyar da ta dace da OpenAI. Samfuran da ake da su sun haɗa da <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> da ƙari. <b><a href="https://agentrouter.org/register?aff=70LM">Ɗauki $100 ɗinku →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Hanyar haɗi ta abokin tarayya — OmniRoute ba shi da tallafi ko haɗin gwiwa tare da wannan mai bayarwa.</i></sub>
+      <sub>⚠️ <i>Hanyar haɗi ta abokin tarayya — 67router ba shi da tallafi ko haɗin gwiwa tare da wannan mai bayarwa.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Kun san wani mai bayarwa tare da takardar shaidar rajista kyauta mai karimci wanda ke amfanar masu amfani da OmniRoute? Buɗe wani batu kuma za mu ƙara shi a nan.</sub>
+<sub>Kun san wani mai bayarwa tare da takardar shaidar rajista kyauta mai karimci wanda ke amfanar masu amfani da 67router? Buɗe wani batu kuma za mu ƙara shi a nan.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Misalai masu motsi na dabarun sarrafa hanyoyin haɗe-haɗe guda 18 daga cikin 20 — tayal ɗaya ga kowace dabara: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized da quota-weighted ba su da motsi; teburin da ke ƙasa yana bayyana dukkan guda 20."/>
 
-> **Haɗin** jerin model ne da OmniRoute ke bi a tsakaninsu **ta atomatik**. Idan quota ya ƙare, provider ya gaza, ko farashi ya yi tashin gwauron zabi, haɗin zai iya matsawa zuwa model mai lafiya na gaba da ya cancanta. 🛡️
+> **Haɗin** jerin model ne da 67router ke bi a tsakaninsu **ta atomatik**. Idan quota ya ƙare, provider ya gaza, ko farashi ya yi tashin gwauron zabi, haɗin zai iya matsawa zuwa model mai lafiya na gaba da ya cancanta. 🛡️
 
 ### ⚡ Babu saiti — kawai yi amfani da `auto`
 
-Babu buƙatar ƙirƙirar haɗi. Saita model ɗinka zuwa `auto` (ko wani nau'insa), sannan OmniRoute zai gina haɗi na kama-da-wane daga providers ɗin da ka haɗa, yana tantance su kai-tsaye:
+Babu buƙatar ƙirƙirar haɗi. Saita model ɗinka zuwa `auto` (ko wani nau'insa), sannan 67router zai gina haɗi na kama-da-wane daga providers ɗin da ka haɗa, yana tantance su kai-tsaye:
 
 <table>
   <tr><th align="left">ID na Model</th><th align="left">Abin da yake ingantawa</th></tr>
@@ -496,7 +498,7 @@ Dukkan dabaru **20** — haɗa su yadda kake so a kowane mataki na haɗi:
 
 ### 🧱 An gina juriya a ciki (matakai 3 masu zaman kansu)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Juriyar OmniRoute — matakai 3 masu zaman kansu da ke gyara kansu, matakin da ya dace da gazawar da ta dace. Mataki na 1 mai katse da'irar mai samarwa (duk mai samarwar): yana katsewa ne kawai a kan 408/5xx, iyakoki OAuth 8× / API-key 12× / local 2×, yana sake saitawa bayan 60s/30s/15s zuwa gwajin HALF-OPEN, farfadowa lokacin da ake buƙata; yayin da yake OPEN combo yana sake tura buƙata zuwa mai samarwa na gaba. Mataki na 2 lokacin jiran haɗi (maɓalli/asusu ɗaya): tushe 5s OAuth / 3s API-key, jinkirin maimaitawa mai ƙaruwa ×2 tare da kariya daga cunkoson buƙatu lokaci guda, 429 yana bin Retry-After, nasara tana share duk yanayin kuskure; ana tsallake maɓalli ɗaya da ke jiran farfadowa yayin da sauran maɓallan ke ci gaba da aiki. Mataki na 3 kulle samfurin (samfuri ɗaya): 429 na kowane samfurin, 404 na local ko hana yanayi suna kulle wannan samfurin kawai — ba haɗin gaba ɗaya ba. Yanayin ƙarshe (an haramta, ya ƙare, kuɗin amfani sun ƙare) na mai gudanarwa ne, ba na lokutan jira ba."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Juriyar 67router — matakai 3 masu zaman kansu da ke gyara kansu, matakin da ya dace da gazawar da ta dace. Mataki na 1 mai katse da'irar mai samarwa (duk mai samarwar): yana katsewa ne kawai a kan 408/5xx, iyakoki OAuth 8× / API-key 12× / local 2×, yana sake saitawa bayan 60s/30s/15s zuwa gwajin HALF-OPEN, farfadowa lokacin da ake buƙata; yayin da yake OPEN combo yana sake tura buƙata zuwa mai samarwa na gaba. Mataki na 2 lokacin jiran haɗi (maɓalli/asusu ɗaya): tushe 5s OAuth / 3s API-key, jinkirin maimaitawa mai ƙaruwa ×2 tare da kariya daga cunkoson buƙatu lokaci guda, 429 yana bin Retry-After, nasara tana share duk yanayin kuskure; ana tsallake maɓalli ɗaya da ke jiran farfadowa yayin da sauran maɓallan ke ci gaba da aiki. Mataki na 3 kulle samfurin (samfuri ɗaya): 429 na kowane samfurin, 404 na local ko hana yanayi suna kulle wannan samfurin kawai — ba haɗin gaba ɗaya ba. Yanayin ƙarshe (an haramta, ya ƙare, kuɗin amfani sun ƙare) na mai gudanarwa ne, ba na lokutan jira ba."/>
 
 <sub>📖 [Injin Auto-Combo](docs/routing/AUTO-COMBO.md) · [Jagorar Juriya](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Dukkan dabaru **20** — haɗa su yadda kake so a kowane mataki na haɗi:
 
 <div align="center">
 
-## 🏆 Abin da Ya Bambanta OmniRoute
+## 🏆 Abin da Ya Bambanta 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Abin da ya bambanta OmniRoute — kwatancen fasaloli na wani takamaiman lokaci da 9router, OpenRouter, CLIProxyAPI da LiteLLM a fannoni 13. OmniRoute: masu samarwa 375, matakan amfani kyauta sama da 150 da aka haɗa, dabarun karkatarwa 20, matse token mai injina 12, sabar MCP da aka gina ciki mai kayan aiki 110, yarjejeniyar wakili ta A2A, ma'adanar bayani mai dorewa, matakan kariya, wakilan gajimare, ɓoye sawun yatsan TLS, Desktop/Termux/PWA da yarukan UI na i18n guda 67. OmniRoute yana ƙarƙashin lasisin MIT kuma ana iya masaukinsa da kai. Ƙwarewa da ƙididdigar masu fafatawa na iya canzawa; duba hanyar binciken da aka haɗa."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Abin da ya bambanta 67router — kwatancen fasaloli na wani takamaiman lokaci da 9router, OpenRouter, CLIProxyAPI da LiteLLM a fannoni 13. 67router: masu samarwa 375, matakan amfani kyauta sama da 150 da aka haɗa, dabarun karkatarwa 20, matse token mai injina 12, sabar MCP da aka gina ciki mai kayan aiki 110, yarjejeniyar wakili ta A2A, ma'adanar bayani mai dorewa, matakan kariya, wakilan gajimare, ɓoye sawun yatsan TLS, Desktop/Termux/PWA da yarukan UI na i18n guda 67. 67router yana ƙarƙashin lasisin MIT kuma ana iya masaukinsa da kai. Ƙwarewa da ƙididdigar masu fafatawa na iya canzawa; duba hanyar binciken da aka haɗa."/>
 
 <sub>📊 Cikakkiyar hanyar bincike &amp; bayanan kowane fasali idan aka kwatanta da 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Tallafa wa OmniRoute
+## 💚 Tallafa wa 67router
 
-OmniRoute na da lasisin MIT kuma ana kula da shi a fili. Idan yana adana maka lokaci ko kuɗi, ga yadda za ka taimaka masa ya ci gaba da kasancewa mai zaman kansa — zaɓi duk abin da ya dace da kai. Tallafi ba ya taɓa shafar fifikon zaɓin hanya; yana sayen bayyanar suna ne, ba matsayi ba.
+67router na da lasisin MIT kuma ana kula da shi a fili. Idan yana adana maka lokaci ko kuɗi, ga yadda za ka taimaka masa ya ci gaba da kasancewa mai zaman kansa — zaɓi duk abin da ya dace da kai. Tallafi ba ya taɓa shafar fifikon zaɓin hanya; yana sayen bayyanar suna ne, ba matsayi ba.
 
 <table>
-  <tr><td nowrap>⭐ <b>Yi wa ma'ajiyar tauraro</b></td><td>Kyauta — yana taimaka wa bayyanar suna da gaske</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Yi wa OmniRoute tauraro</a></td></tr>
+  <tr><td nowrap>⭐ <b>Yi wa ma'ajiyar tauraro</b></td><td>Kyauta — yana taimaka wa bayyanar suna da gaske</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Yi wa 67router tauraro</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Sau ɗaya ko kowane wata · babu kuɗin dandali</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Kyautar kuɗi ta gaggawa sau ɗaya, mai bayarwa ba ya buƙatar yin rajista</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Ƙaramin taimako na sada zumunta</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute na da lasisin MIT kuma ana kula da shi a fili. Idan yana adana maka lo
 
 **🇧🇷 PIX** — nan take, babu kuɗin caji (Brazil)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Lambar QR ta PIX ta OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Lambar QR ta PIX ta 67router"/>
 
 Maɓalli (bazuwar): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Kwafi-da-manna na Pix:
 
 <p><strong>Bayanan masu haɓakawa:</strong> Aikin na iya ƙirƙirar fayil na gida mai suna <code>.env</code> yayin npm install/postinstall domin sauƙaƙa wa masu haɓakawa. Ana yin watsi da wannan fayil da gangan ta hanyar <code>.gitignore</code> (duba <code>.gitignore</code>) kuma ba dole ba ne a taɓa commit ɗinsa — idan aka yi commit ɗinsa bisa kuskure, sauya duk wasu sirrika da aka fallasa sannan a cire fayil ɗin daga tarihin. Duba <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> don jagora kan sarrafa fayilolin muhalli na gida da sirrika.</p>
 
-## 📡 Radar na OmniRoute
+## 📡 Radar na 67router
 
-Babban adadin shirin kyauta har yanzu shi ne **~1.62B tokens/wata** daga kundin da aka bayyana a sama, wanda aka cire maimaituwar bayanai tsakanin rumbuna. Ƙimar rajista ta wucin gadi daga masu samarwa na iya ƙara adadin watan farko daban zuwa **~2.22B**. Radar wani zaɓin ƙarin kundi ne mai sa hannu, ga mutanen da ke son samun sabbin bayanai kan samuwar samfuran kyauta tsakanin fitowar sabbin sigogin OmniRoute; kundin al'umma da duk fasalolin kyauta da ake da su za su ci gaba da kasancewa kyauta.
+Babban adadin shirin kyauta har yanzu shi ne **~1.62B tokens/wata** daga kundin da aka bayyana a sama, wanda aka cire maimaituwar bayanai tsakanin rumbuna. Ƙimar rajista ta wucin gadi daga masu samarwa na iya ƙara adadin watan farko daban zuwa **~2.22B**. Radar wani zaɓin ƙarin kundi ne mai sa hannu, ga mutanen da ke son samun sabbin bayanai kan samuwar samfuran kyauta tsakanin fitowar sabbin sigogin 67router; kundin al'umma da duk fasalolin kyauta da ake da su za su ci gaba da kasancewa kyauta.
 
 Masu tallafawa za su iya samun kundin kai-tsaye da ƙarin damammaki daga masu samarwa. Matsakaicinsa na daban, wanda zai iya sauyawa, shi ne **kimanin 3B tokens/wata a mafi yawa**, gwargwadon samuwar masu samarwa. Wannan matsakaici ba garanti ba ne: masu samarwa za su iya sauya ƙa'idojin amfani, cancanta, samfura, ko yankuna a kowane lokaci.
 
-Radar na zaɓi ne kuma GET-only. Abokin hulɗar OmniRoute ba ya loda prompts, zirga-zirga, saitunan masu samarwa, bayanan telemetry na amfani, ko matsayin kin nuna sanarwa na cikin gida. Ƙara sani game da cancanta da kundin na yanzu a **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar na zaɓi ne kuma GET-only. Abokin hulɗar 67router ba ya loda prompts, zirga-zirga, saitunan masu samarwa, bayanan telemetry na amfani, ko matsayin kin nuna sanarwa na cikin gida. Ƙara sani game da cancanta da kundin na yanzu a **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar na zaɓi ne kuma GET-only. Abokin hulɗar OmniRoute ba ya loda prompts, zi
 - **💸 Honest flat-rate cost** — masu samar da subscription / coding-plan suna nuna **$0** a cikin cost analytics; budget, quota & routing suna ci gaba da ƙididdiga. → [API Reference](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share routing** — raba quota na account da aka haɗa a daidai a kan pooled keys, yana conserving aiki ta yadda ake ba da rance na slices da ke a banƙyama. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 One-command CLI/agent setup** — dokoki 15 da aka yi rajista `setup-*`; `omniroute run` yana ƙaddamar da CLIs 7 (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` yana goyon bayan targets 11 tare da interactive provider+model picker da favorites na kowane context. → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote mode** — tuka OmniRoute mai nisa da scoped tokens (`connect` / `contexts` / `tokens`) + mai taimakon `antigravity` OAuth ga shigarwa a VPS. → [Remote Mode](docs/guides/REMOTE-MODE.md)
+- **🛰️ Remote mode** — tuka 67router mai nisa da scoped tokens (`connect` / `contexts` / `tokens`) + mai taimakon `antigravity` OAuth ga shigarwa a VPS. → [Remote Mode](docs/guides/REMOTE-MODE.md)
 - **🧭 Smarter auto-routing** — combos na `auto/<category>:<tier>`, **Fusion** (model panel + judge), task-aware routing, overrides na model / mode / USD-budget ga kowace buƙata. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Pluggable compression** — injuna 12 masu haɗawa + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Transparent MITM decrypt (TPROXY)** — kama CLIs da ke watsi da proxy env vars, tare da per-SNI CA + trust-store installer. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar na zaɓi ne kuma GET-only. Abokin hulɗar OmniRoute ba ya loda prompts, zi
 
 <br/>
 
-**Ƙaddamar da kowane CLI mai goyon baya ta OmniRoute da umarni guda** — ba a rubuta fayilolin saiti,
+**Ƙaddamar da kowane CLI mai goyon baya ta 67router da umarni guda** — ba a rubuta fayilolin saiti,
 ana saka bayanan tantancewa ga kowane tsari, sannan Qwen/Gemini suna samun keɓantaccen home na wucin gadi:
 
 ```bash
@@ -756,7 +758,7 @@ shiga tarihin shell ɗinka. → [Haɗaɗɗun CLI](docs/guides/CLI-INTEGRATIONS.m
 
 <div align="center">
 
-## 🖥️ Inda OmniRoute Ke Gudana — Ko’ina
+## 🖥️ Inda 67router Ke Gudana — Ko’ina
 
 </div>
 
@@ -772,7 +774,7 @@ shiga tarihin shell ɗinka. → [Haɗaɗɗun CLI](docs/guides/CLI-INTEGRATIONS.m
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Yana gudana <b>a wayarka</b>, 24/7, ba tare da root ba</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Ƙara zuwa Fuskar Farko"</td><td align="left">Cikakken allo, ba tare da intanet ba, ana iya shigarwa daga burauza</td></tr>
   <tr><td align="left" nowrap>🧩 <b>Fulogin OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Haɗawar OpenCode ta asali</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>shigar da ƙarin <b>OmniCopilot</b></td><td align="left">Kowane samfurin OmniRoute a cikin mai zaɓar Copilot Chat na asali — barga &amp; Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>shigar da ƙarin <b>OmniCopilot</b></td><td align="left">Kowane samfurin 67router a cikin mai zaɓar Copilot Chat na asali — barga &amp; Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Daga lambar tushe</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Yi masa gyare-gyare, ba da gudummawa</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ shiga tarihin shell ɗinka. → [Haɗaɗɗun CLI](docs/guides/CLI-INTEGRATIONS.m
 
 <div align="center">
 
-### 🧩 Sabo: OmniRoute a cikin Copilot Chat na asali na VS Code
+### 🧩 Sabo: 67router a cikin Copilot Chat na asali na VS Code
 
 </div>
 
-> Babu sabon sandar gefe, babu sabon UI na hira — duk samfurin da OmniRoute ke samarwa yana bayyana kai tsaye a cikin
+> Babu sabon sandar gefe, babu sabon UI na hira — duk samfurin da 67router ke samarwa yana bayyana kai tsaye a cikin
 > **mai zaɓar samfurin Copilot Chat da kake amfani da shi tuni**. Tun daga VS Code 1.122, samfuran masu samarwa suna aiki
 > ba tare da shiga GitHub ko biyan kuɗin Copilot ba — yanayin wakili, kiran kayan aiki da hangen hoto, duk
 > kyauta.
 
 Shigar da ƙarin **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, saita shi zuwa
-sabar OmniRoute ɗinka (tsohon saitin shi ne `localhost:20128`), sannan buɗe Copilot Chat → mai zaɓar samfuri
-→ **Sarrafa Samfura…** → **OmniRoute**.
+sabar 67router ɗinka (tsohon saitin shi ne `localhost:20128`), sannan buɗe Copilot Chat → mai zaɓar samfuri
+→ **Sarrafa Samfura…** → **67router**.
 
 <table>
   <tr><th align="left">Shago</th><th align="left">Mahaɗi</th><th align="left">Yana aiki da</th></tr>
@@ -801,7 +803,7 @@ sabar OmniRoute ɗinka (tsohon saitin shi ne `localhost:20128`), sannan buɗe Co
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Shigar →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Daga cikin editan: buɗe kallon **Extensions**, bincika **"OmniRoute"**, danna **Install**
+Daga cikin editan: buɗe kallon **Extensions**, bincika **"67router"**, danna **Install**
 — yana aiki iri ɗaya a shagunan biyu. Lambar tushe, matsaloli da littafin matakan wallafawa suna nan a
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Daga cikin editan: buɗe kallon **Extensions**, bincika **"OmniRoute"**, danna *
 > bar tagar terminal a buɗe ba, babu `npm install -g omniroute` da za a riƙa kula da shi.**
 
 An gina shi da [Tauri v2](https://v2.tauri.app/) (jigon Rust mai ƙanƙanta ƙwarai), yana zuwa
-da runtime na Node 24 nasa mai sa hannu kuma yana sarrafa shigarwar OmniRoute mallakar manhajar, don haka ba ya taɓa cin karo da
+da runtime na Node 24 nasa mai sa hannu kuma yana sarrafa shigarwar 67router mallakar manhajar, don haka ba ya taɓa cin karo da
 `node`/`bun` naka na duniya baki ɗaya. Yana **amfani tare da saitunanka da rumbun bayananka na `~/.omniroute/` da suke akwai** — don haka
-OmniRoute ɗin da kake gudanarwa tuni ne, kawai yanzu yana sanye da hula. 🎩
+67router ɗin da kake gudanarwa tuni ne, kawai yanzu yana sanye da hula. 🎩
 
 <table>
   <tr><th align="left">Abin da yake yi</th><th align="left">Yadda yake yi</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Ka fi son saukewa? Ɗauko sabuwar <code>.dmg</code> daga
 <a href="https://github.com/zoispag/omniroute-tray/releases">Fitowar Sabbin Nau'ikan</a>. Lambar tushe, matsaloli da takardun
 ginawa suna nan a <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Aikin al'umma ne daga <a href="https://github.com/zoispag">@zoispag</a> — ba fitowar OmniRoute ta hukuma ba ce.</sub>
+<br/>💛 Aikin al'umma ne daga <a href="https://github.com/zoispag">@zoispag</a> — ba fitowar 67router ta hukuma ba ce.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ ginawa suna nan a <a href="https://github.com/zoispag/omniroute-tray">zoispag/om
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Na sirri kuma mai bai wa na’ura fifiko — ƙofar shiga da sashen sarrafawa na OmniRoute suna aiki a kan na’urarka. Ana aika prompts zuwa mai bayarwa na upstream da aka zaɓa ga kowace buƙata; OmniRoute ba ya ƙara wata hanyar sarrafa prompt da aka ɗauki nauyinta a wani wuri, kuma telemetry a kashe yake ta tsohuwa. Ana rufaffen credentials yayin ajiya da AES-256-GCM; matakan sarrafawa sun haɗa da iyakance API-key, tace IP, iyakokin yawan buƙata, kariya daga prompt-injection, goge upstream-headers, ɓoye PII na zaɓi, kurakurai da aka tsabtace da kuma tarihin binciken SQLite na cikin gida. OmniRoute yana ƙarƙashin lasisin MIT kuma ana iya ɗaukar nauyinsa da kai."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Na sirri kuma mai bai wa na’ura fifiko — ƙofar shiga da sashen sarrafawa na 67router suna aiki a kan na’urarka. Ana aika prompts zuwa mai bayarwa na upstream da aka zaɓa ga kowace buƙata; 67router ba ya ƙara wata hanyar sarrafa prompt da aka ɗauki nauyinta a wani wuri, kuma telemetry a kashe yake ta tsohuwa. Ana rufaffen credentials yayin ajiya da AES-256-GCM; matakan sarrafawa sun haɗa da iyakance API-key, tace IP, iyakokin yawan buƙata, kariya daga prompt-injection, goge upstream-headers, ɓoye PII na zaɓi, kurakurai da aka tsabtace da kuma tarihin binciken SQLite na cikin gida. 67router yana ƙarƙashin lasisin MIT kuma ana iya ɗaukar nauyinsa da kai."/>
 
 <sub>📖 [Izini](docs/architecture/AUTHZ_GUIDE.md) · [Matakan Kariya](docs/security/GUARDRAILS.md) · [Bin Ka’idoji](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ ginawa suna nan a <a href="https://github.com/zoispag/omniroute-tray">zoispag/om
 
 </div>
 
-> Bayan uwar garken, OmniRoute **cikakkiyar cibiyar sarrafa layin umarni ce** mai **umarni sama da 80**, tare da buɗaɗɗun ƙa'idojin wakilai domin wakilin AI ya iya sarrafa ta **da kansa**.
+> Bayan uwar garken, 67router **cikakkiyar cibiyar sarrafa layin umarni ce** mai **umarni sama da 80**, tare da buɗaɗɗun ƙa'idojin wakilai domin wakilin AI ya iya sarrafa ta **da kansa**.
 
 ### ⌨️ CLI na gaske (ba `start` kawai ba)
 
@@ -874,9 +876,9 @@ omniroute setup         # jagorar saitin fara amfani
 omniroute doctor        # gano matsalolin masu samarwa, tashoshi, native deps
 ```
 
-### 🛰️ Yanayin nesa — gudanar da CLI a nan, OmniRoute a kan VPS
+### 🛰️ Yanayin nesa — gudanar da CLI a nan, 67router a kan VPS
 
-OmniRoute na kan uwar garke? Sarrafa shi daga kwamfutar tafi-da-gidanka da **CLI iri ɗaya**. Shiga sau ɗaya
+67router na kan uwar garke? Sarrafa shi daga kwamfutar tafi-da-gidanka da **CLI iri ɗaya**. Shiga sau ɗaya
 da scoped access token; daga nan kowane umarni zai nufi na'urar nesa.
 
 ```bash
@@ -892,13 +894,13 @@ Tokens suna da scopes na `read` / `write` / `admin`; routes masu ƙaddamar da pr
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Gwajin terminal mai motsi da ke nuna OmniRoute CLI — omniroute providers list, omniroute combo list da omniroute health — yana zagayawa a cikin umarni 89 na matakin sama: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Gwajin terminal mai motsi da ke nuna 67router CLI — omniroute providers list, omniroute combo list da omniroute health — yana zagayawa a cikin umarni 89 na matakin sama: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Haɗa wakili — kuma zai sarrafa OmniRoute da kansa
+### 🤝 Haɗa wakili — kuma zai sarrafa 67router da kansa
 
-Bayyana OmniRoute ta hanyar **MCP**, **A2A**, **REST API**, **webhooks** ko **CLI na nesa** — duk wani wakili mai ƙwarewa (ko lambar da ka rubuta) zai sami damar sarrafa dukkan gateway ɗin: routing, providers, combos, cache, compression, memory — kai tsaye. Ana samar da HTTP endpoints na ƙasa a ƙarƙashin `http://localhost:20128`.
+Bayyana 67router ta hanyar **MCP**, **A2A**, **REST API**, **webhooks** ko **CLI na nesa** — duk wani wakili mai ƙwarewa (ko lambar da ka rubuta) zai sami damar sarrafa dukkan gateway ɗin: routing, providers, combos, cache, compression, memory — kai tsaye. Ana samar da HTTP endpoints na ƙasa a ƙarƙashin `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Hanyar sadarwa</th><th align="left">Endpoint / umarni</th><th align="left">Abin da ake amfani da shi</th></tr>
@@ -912,7 +914,7 @@ Bayyana OmniRoute ta hanyar **MCP**, **A2A**, **REST API**, **webhooks** ko **CL
 </table>
 
 ```bash
-# Ba Claude Code cikakken kayan aikin OmniRoute ta hanyar MCP:
+# Ba Claude Code cikakken kayan aikin 67router ta hanyar MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -928,7 +930,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Yadda yake aiki — pipeline, gine-gine & lissafin tanadi
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline ɗin matsawa na OmniRoute: buƙatar abokin ciniki mai token 10,000 don kwatantawa tana wucewa ta hanyar injuna 12 da za a iya haɗawa — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra da OmniGlyph — kuma tana iya isa ga mai samarwa a kusan token 1,080 a cikin misalin stacked da aka rubuta. Ana kare abun ciki da aka tsara ta hanyar matsaran kiyayewa da ƙofofin daidaito na kowane mataki; yanayin lossy na bayyane ko na gwaji na iya canza abun ciki da ya cancanta."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline ɗin matsawa na 67router: buƙatar abokin ciniki mai token 10,000 don kwatantawa tana wucewa ta hanyar injuna 12 da za a iya haɗawa — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra da OmniGlyph — kuma tana iya isa ga mai samarwa a kusan token 1,080 a cikin misalin stacked da aka rubuta. Ana kare abun ciki da aka tsara ta hanyar matsaran kiyayewa da ƙofofin daidaito na kowane mataki; yanayin lossy na bayyane ko na gwaji na iya canza abun ciki da ya cancanta."/>
 
 Combo na stacked na tsoho yana gudanar da `RTK → Caveman`. Idan dukkansu suna aiki a kan kayan aikin tool/context ɗaya, tanadi yana haɗuwa:
 
@@ -940,7 +942,7 @@ range    = 78.4 – 94.6%
 
 Injin kiyayewa yana **kullum kare** code blocks, URLs, JSON da bayanan da aka tsara.
 
-> **Me ya sa ake amfani da token da yawa alhali kaɗan ke cika aikin?** Kowace buƙata tana wucewa ta pipeline ɗin matsawa na OmniRoute **a bayyane** — babu canje-canje a gefen abokin ciniki. Yanzu **tarin injuna 12 da za a iya haɗawa** ne waɗanda ke gudana bisa tsari kuma ana haɗa su da daidaitawa bisa combo na routing — gina bisa ra'ayoyi daga [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), da [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Me ya sa ake amfani da token da yawa alhali kaɗan ke cika aikin?** Kowace buƙata tana wucewa ta pipeline ɗin matsawa na 67router **a bayyane** — babu canje-canje a gefen abokin ciniki. Yanzu **tarin injuna 12 da za a iya haɗawa** ne waɗanda ke gudana bisa tsari kuma ana haɗa su da daidaitawa bisa combo na routing — gina bisa ra'ayoyi daga [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), da [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 Taron injuna 12
 
@@ -1025,7 +1027,7 @@ omniroute
 ```
 
 > 💡 Kuna ganin `npm warn ERESOLVE` ko gargaɗin peer-dep? [Ba su da illa](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Kuna amfani da npm 11 ko na baya?** npm na iya toshe rubutun lifecycle na fakiti sai in an ba su izini. Ana buƙatar `postinstall` na OmniRoute (`node scripts/build/postinstall.mjs`) don shirya fayilolin runtime na asali. Bari fakitocin da aka ambata a gargaɗin npm yayin shigarwa a duniya. Don tsarin fakitin da OmniRoute 3.8.53 ya ba da rahoto:
+> **Kuna amfani da npm 11 ko na baya?** npm na iya toshe rubutun lifecycle na fakiti sai in an ba su izini. Ana buƙatar `postinstall` na 67router (`node scripts/build/postinstall.mjs`) don shirya fayilolin runtime na asali. Bari fakitocin da aka ambata a gargaɗin npm yayin shigarwa a duniya. Don tsarin fakitin da 67router 3.8.53 ya ba da rahoto:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1064,9 +1066,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Ya kamata ku ga samfurori da kuka haɗa an jera su. 🎉 Shi kenan — fara coding, kuma OmniRoute yana auto-routing & fallback a gare ku.
+Ya kamata ku ga samfurori da kuka haɗa an jera su. 🎉 Shi kenan — fara coding, kuma 67router yana auto-routing & fallback a gare ku.
 
-Idan abokin cinikin ku ba zai iya aika alamu na al'ada ba, OmniRoute kuma yana bayyana aliases na dacewa masu alama:
+Idan abokin cinikin ku ba zai iya aika alamu na al'ada ba, 67router kuma yana bayyana aliases na dacewa masu alama:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1116,7 +1118,7 @@ Cikakken jadawali: [Jagorar Docker — RAM na lokacin aiki](docs/guides/DOCKER_G
 
 Ana goyon bayan daidaitaccen `bun install` da girkawa ta global (`bun install -g omniroute`) ta hanyar gano Bun runtime:
 
-- **Ginannen `bun:sqlite`**: OmniRoute yana amfani da ginannen driver na Bun mai suna `bun:sqlite` lokacin da yake gudana ƙarƙashin Bun, sannan ya koma amfani da `better-sqlite3` a Node.js ko `sql.js`.
+- **Ginannen `bun:sqlite`**: 67router yana amfani da ginannen driver na Bun mai suna `bun:sqlite` lokacin da yake gudana ƙarƙashin Bun, sannan ya koma amfani da `better-sqlite3` a Node.js ko `sql.js`.
 - **Zaɓin Webpack bundler ta atomatik a dev**: Development (`bun run dev`) yana gano Bun ta atomatik kuma ya kashe Turbopack don amfani da Webpack domin hana rashin jituwa da native V8 bindings. Production builds (`bun run build`) suna bin `OMNIROUTE_USE_TURBOPACK` daidai kamar a Node: Turbopack ta tsoho, `OMNIROUTE_USE_TURBOPACK=0` don yin build da Webpack (`Dockerfile.bun` yana samar da shi a matsayin `--build-arg`).
 - **Dockerfile na musamman don Bun**: `Dockerfile.bun` mai matakai da yawa don native Bun production deployments (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1200,7 +1202,7 @@ tsari guda a port guda, don haka babu wani package na CLI-kawai a halin yanzu.
 
 <div align="center">
 
-# 🎬 OmniRoute Yana Aiki
+# 🎬 67router Yana Aiki
 
 </div>
 
@@ -1264,7 +1266,7 @@ tsari guda a port guda, don haka babu wani package na CLI-kawai a halin yanzu.
 
 Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kallo 20.220.289** (`v > 0`) · **tashoshi/asusu 1.210 bisa kowace hanyar sadarwa**. Dashboard na asali yana ɗauke da layuka 1.976 (YouTube 1.352 = dogayen bidiyoyi 740 + Shorts 612 · TikTok 334 · Instagram 290); babu wani maimaitaccen bayani da ya rage bayan daidaitawa bisa URL na asali, wanda ke riƙe da mafi girman adadin kallo ga kowane bidiyo. An dakatar da tattara bayanan YouTube a 2026-10-13 (adadin amfani na API ya ƙare daga 14 zuwa 18/10), yayin da aka dakatar da na TikTok/Instagram tun 2026-09-02 (babu kuɗin tattara bayanai); har yanzu bidiyoyi 76 ba su da adadin kallo.
 
-> 🎬 **Ka yi bidiyo game da OmniRoute?** Buɗe [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) ko [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) tare da mahaɗin — za mu nuna shi a nan.
+> 🎬 **Ka yi bidiyo game da 67router?** Buɗe [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) ko [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) tare da mahaɗin — za mu nuna shi a nan.
 
 <br/>
 
@@ -1283,7 +1285,7 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
 | 🟢 **WhatsApp — 🌍 Duniya**                              | [shiga rukunin](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                            |
 | 🟢 **WhatsApp — 🇧🇷 Brazil**                              | [shiga rukunin](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                            |
 | 🌍 **Yanar gizo**                                        | [omniroute.online](https://omniroute.online)                                                                                |
-| 🌍 **🌍Al’ummar StHub OmniRoute (kyauta)**               | [tashar StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                       |
+| 🌍 **🌍Al’ummar StHub 67router (kyauta)**                | [tashar StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                       |
 | 📦 **Lambar tushe**                                      | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                              |
 | 🐛 **Kai rahoton matsala**                               | [buɗe batu](https://github.com/diegosouzapw/OmniRoute/issues) — haɗa sakamakon `npm run system-info`                        |
 | 🤝 **Ba da gudummawa**                                   | [CONTRIBUTING.md](CONTRIBUTING.md) · [Tsarin Rassa da Fitar da Siga](docs/ops/BRANCHING_MODEL.md) · zaɓi `good first issue` |
@@ -1336,8 +1338,8 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Jagorar Mai Amfani</a></b></td><td>Masu samarwa, haɗe-haɗe, haɗawar CLI, turawa</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Jagorar Saitawa</a></b></td><td>Cikakkun hanyoyin girkawa, saitunan kayan aikin CLI, saitin yarjejeniya, daidaita wa'adin jira</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Jagorar Kayan Aikin CLI</a></b></td><td>Saitin kowane kayan aiki don Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Yanayin Nesa</a></b></td><td>Sarrafa OmniRoute na nesa (VPS) daga CLI na kwamfutar tafi-da-gidanka ta amfani da tokens na samun dama masu iyakantaccen iko</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Saitin Claude Code</a></b></td><td>Haɗa Claude Code da OmniRoute (na gida/na nesa) ta amfani da <code>launch</code> + bayanan martaba na kowane samfuri</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Yanayin Nesa</a></b></td><td>Sarrafa 67router na nesa (VPS) daga CLI na kwamfutar tafi-da-gidanka ta amfani da tokens na samun dama masu iyakantaccen iko</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Saitin Claude Code</a></b></td><td>Haɗa Claude Code da 67router (na gida/na nesa) ta amfani da <code>launch</code> + bayanan martaba na kowane samfuri</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Farawa Cikin Sauri</a></b></td><td>Girkawa mai matakai 3 → haɗawa → saitawa</td></tr>
 </table>
 
@@ -1349,7 +1351,7 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
   <tr><td nowrap><b><a href="contrib/podman/README.md">Jagorar Podman</a></b></td><td>Haɗawar Quadlet systemd, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Tura VM</a></b></td><td>Cikakkiyar jagora: saitin VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Turawa zuwa Fly.io</a></b></td><td>Tura zuwa Fly.io tare da ma'ajiyar dindindin</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Jagorar Termux</a></b></td><td>Gudanar da OmniRoute a kan Android ta hanyar Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Jagorar Termux</a></b></td><td>Gudanar da 67router a kan Android ta hanyar Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">Jagorar PWA</a></b></td><td>Girkawar Progressive Web App, caching, tsarin gine-gine</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Jagorar Cirewa</a></b></td><td>Cirewa mai tsabta ga dukkan hanyoyin girkawa</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Saitin Muhalli</a></b></td><td>Cikakkun variables na <code>.env</code> da manazarta</td></tr>
@@ -1404,7 +1406,7 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
 
 # ⭐ Manyan Masu Ba da Gudummawa
 
-> Al'ummar buɗaɗɗen tushe mai kishin aiki ce ke tsara OmniRoute. Waɗannan mutane sun ba da gudummawa ta musamman wadda ke tasiri kai tsaye ga inganci, kwanciyar hankali, da yaɗuwar aikin. **Mun gode.**
+> Al'ummar buɗaɗɗen tushe mai kishin aiki ce ke tsara 67router. Waɗannan mutane sun ba da gudummawa ta musamman wadda ke tasiri kai tsaye ga inganci, kwanciyar hankali, da yaɗuwar aikin. **Mun gode.**
 
 ### Masu ba da gudummawa na waje bisa PRs da aka haɗe
 
@@ -1522,7 +1524,7 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
 
 <sub>An sake dubawa a 2026-10-18 14:44:45 UTC: sauye-sauyen da aka danganta ga GitHub waɗanda API na Masu Ba da Gudummawar ma'ajiyar ya ruwaito don reshen tsoho na <code>release/v3.8.52</code>. API ɗin ya dawo da asali 849 (masu amfani 429, bots 2, marasa suna 418); wannan jadawalin bai haɗa da mai kula da aikin, bots da marasa suna ba, kuma yana riƙe da waɗanda suka yi kunnen doki a gasar. Ya bambanta da jerin martabar PR da aka haɗe da ke sama da kuma ƙidayar metadata ta Git da ke ƙasa.</sub>
 
-> 🙏 Fasalolin waɗannan masu ba da gudummawa, gyaran kurakurai, da inganta ababen more rayuwa, **muhimmin ɓangare ne** na abin da ke sa OmniRoute ya zama abin dogaro kuma mai yalwar fasali. Kowace buƙatar haɗa sauyi, kowane yanayin gwaji, da kowane fayil ɗin fassarar i18n suna da muhimmanci. Mutane irinsu ne ke gina tushen-buɗe.
+> 🙏 Fasalolin waɗannan masu ba da gudummawa, gyaran kurakurai, da inganta ababen more rayuwa, **muhimmin ɓangare ne** na abin da ke sa 67router ya zama abin dogaro kuma mai yalwar fasali. Kowace buƙatar haɗa sauyi, kowane yanayin gwaji, da kowane fayil ɗin fassarar i18n suna da muhimmanci. Mutane irinsu ne ke gina tushen-buɗe.
 
 </div>
 
@@ -1534,7 +1536,7 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
 
 <div align="center">
 
-Godiya ta musamman daga zuciya ga mutanen da ke ɗaukar nauyin OmniRoute daga aljihunsu — kowace gudummawa tana taimaka wa aikin ya ci gaba da kasancewa kyauta, mai cin gashin kansa kuma yana tafiya gaba.
+Godiya ta musamman daga zuciya ga mutanen da ke ɗaukar nauyin 67router daga aljihunsu — kowace gudummawa tana taimaka wa aikin ya ci gaba da kasancewa kyauta, mai cin gashin kansa kuma yana tafiya gaba.
 
 <table>
   <tr>
@@ -1624,7 +1626,7 @@ Godiya ta musamman daga zuciya ga mutanen da ke ɗaukar nauyin OmniRoute daga al
 
 <sub>An sake tabbatar da masu tallafawa na GitHub na jama'a a ranar 2026-10-18 ta hanyar GitHub Sponsors GraphQL API: tallafi 11 na jama'a (6 masu ci gaba, 5 na baya) daga jimillar 14. Matsayin <code>isActive</code> na GitHub ne ke ƙayyade alamun masu ci gaba da ke sama; ana ci gaba da yi wa tsoffin masu tallafawa na jama'a na lokaci ɗaya godiya, yayin da masu tallafawa na sirri ke kasancewa ba tare da bayyana sunayensu ba. Ba a jera gudummawar Ko-fi, Buy Me a Coffee, Liberapay, PIX da crypto ba saboda ba su da bayanan mai tallafawa na jama'a.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Zama mai tallafawa →</a></b> — kowace dala tana taimaka wa OmniRoute ya ci gaba da kasancewa kyauta kuma mai cin gashin kansa.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Zama mai tallafawa →</a></b> — kowace dala tana taimaka wa 67router ya ci gaba da kasancewa kyauta kuma mai cin gashin kansa.
 
 </div>
 
@@ -1696,14 +1698,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin reshen **[9router](https://github.com/decolua/9router)** da kuma sauya aikin Go na **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** zuwa TypeScript — daga nan kuma, kowane ƙaramin tsarin da ke ƙasa ya samo wahayi daga wani aikin buɗaɗɗen tushe da ya riga ya cim ma hakan. Kowannensu ya taimaka wajen tsara wani takamaiman ɓangare na OmniRoute. Wannan ita ce godiyarmu gare su baki ɗaya. 🙏
+67router ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin reshen **[9router](https://github.com/decolua/9router)** da kuma sauya aikin Go na **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** zuwa TypeScript — daga nan kuma, kowane ƙaramin tsarin da ke ƙasa ya samo wahayi daga wani aikin buɗaɗɗen tushe da ya riga ya cim ma hakan. Kowannensu ya taimaka wajen tsara wani takamaiman ɓangare na 67router. Wannan ita ce godiyarmu gare su baki ɗaya. 🙏
 
 > ⭐ an tabbatar da yawan taurari daga REST API na GitHub a ranar 18 ga Oktoba, 2026 — ku je ku ba waɗannan ayyukan tauraro. Adadin ainihin hoton bayanai ne na wannan ranar kuma zai sauya a zahiri.
 
 ### 🧬 Asali & ƙofa
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Ainihin aikin da aka gina wannan reshe a kansa — wanda aka faɗaɗa a nan da API masu halaye da yawa tare da cikakken sake rubutawa a TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Aiwatarwar Go da ta zaburar da wannan sauyawa zuwa JavaScript / TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>Ƙofar AI wadda bayanan farashinta na jama'a ke ciyar da daidaitawar bin diddigin kuɗinmu, kuma tsarin daidaita masu samarwarta ya taimaka wajen tsara hanyar isar da buƙatunmu.</td></tr>
@@ -1711,19 +1713,19 @@ OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin 
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>An ɗauko tsarukansa zuwa dawo da yawo, laƙaban rashin-tunani, binciken yanar gizo na madadin, iyakokin taga mai motsi, ɓoye bayanai a rajista da ingantattun hanyoyin ƙaddamarwa.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>An daidaita tsarin zaɓin kayan aiki, ƙuntata fitarwa da tabbatar da kayan aiki na Cursor Composer zuwa mai aiwatar da Cursor na asali.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>An ɗauko tsarin sabon shiga da juyawar refresh-token zuwa sake tabbatar da OAuth na Codex.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>An faɗaɗa tsoffin saitunan sauyawa masu dacewa da Claude Code da halayen kanun lissafin kuɗi zuwa gadar OmniRoute da saituna ke sarrafawa.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>An daidaita taswirar samfurin Grok ɗinsa, janareton Statsig na fake-TypeError, tsoffin saitunan buƙata da na'ura, da mai sarrafa amsar NDJSON zuwa mai aiwatar da Grok Web na OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>An faɗaɗa tsoffin saitunan sauyawa masu dacewa da Claude Code da halayen kanun lissafin kuɗi zuwa gadar 67router da saituna ke sarrafawa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>An daidaita taswirar samfurin Grok ɗinsa, janareton Statsig na fake-TypeError, tsoffin saitunan buƙata da na'ura, da mai sarrafa amsar NDJSON zuwa mai aiwatar da Grok Web na 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>Babban tushen lambar da aka gada a bayan grok2api-merged; an adana aiwatarwar samfurinsa, kanunsa, payload, Statsig da masu sarrafawa a cikin asalin Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Asalin tushen MIT na payload na Grok da tsoffin saitunan na'ura, janareton Statsig, da mai sarrafa <code>result.response</code> da aka gada ta TQZHR da grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Wani tushen da aka gada wanda grok2api-merged ya ambata saboda shimfiɗar proxy-pool ɗinsa; OmniRoute yana riƙe wannan sanarwar asali amma baya ikirarin ɗauko proxy-pool a cikin iyakantaccen mai aiwatar da Grok Web nasa.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proxy na Grok da cookie ke tabbatar da sahihancinsa da tsarin yawo na <code>result.response.token</code sun taimaka wajen tsara jigilar Grok Web ta OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Wani tushen da aka gada wanda grok2api-merged ya ambata saboda shimfiɗar proxy-pool ɗinsa; 67router yana riƙe wannan sanarwar asali amma baya ikirarin ɗauko proxy-pool a cikin iyakantaccen mai aiwatar da Grok Web nasa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proxy na Grok da cookie ke tabbatar da sahihancinsa da tsarin yawo na <code>result.response.token</code sun taimaka wajen tsara jigilar Grok Web ta 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Aiwatarwar Grok Web ta asali ta yi amfani da ƙirar HTTP/burauza ta uwar garken sama; hanyarta ta HTTP kai tsaye ta samo asali daga GrokProxy, don haka ba a ikirarin ɗauko lamba mai zaman kanta ba.</td></tr>
 </table>
 
 ### 🗜️ Mahalli & matse token — injuna
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Shahararren aikin "me ya sa a yi amfani da token da yawa alhali kaɗan za su yi aikin" — falsafar maganar mutumin kogo tasa ce ke ƙarfafa yanayin matsawar mu na yau da kullum da dokokin cire kalmomin cikewa/tattara bayanai sama da 30.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Matsawar fitarwar umarni mai inganci sosai — ta zaburar da injin RTK ɗinmu, JSON filter DSL, dawo da ɗanyen fitarwa da jerin aikin RTK → Caveman.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Matsawar mahalli da za a iya warwarewa (SmartCrusher) — ta zaburar da injin <code>headroom</code> ɗinmu da tsarin alamar dawo da bayanai na <code>ccr</code>.</td></tr>
@@ -1731,15 +1733,15 @@ OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin 
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>Juyin JS/ONNX (MobileBERT / XLM-RoBERTa) da ake amfani da shi a matsayin tushen worker-thread na injin LLMLingua ɗinmu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Matsawar token ta PT-BR — ita ce ke ƙarfafa fakitin harshen pt-BR ɗinmu: rage maimaita ma’ana da cire kalmomin cikewa da aka daidaita don nahawun Fotigal na Brazil.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Shahararriyar ƙwarewar mai rubuta lambar YAGNI ta "babban mai haɓakawa malalaci" — ta zaburar da Salon Fitarwa na <b>less-code</b>: jagorantar mafi ƙarancin canjin da zai yi aiki wanda ke rage lambar da aka _samar_ (takwaran ɓangaren fitarwa na taƙaitacciyar maganar Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>An daidaita salon amsarsa mai fara da aiki kuma mai dacewa da masu ADHD zuwa taƙaitaccen salon fitarwa na OmniRoute a cikin harsuna biyar.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>An daidaita salon amsarsa mai fara da aiki kuma mai dacewa da masu ADHD zuwa taƙaitaccen salon fitarwa na 67router a cikin harsuna biyar.</td></tr>
 </table>
 
 ### 🧩 Tsare-tsare masu taƙaituwa, binciken token da kayan aiki masu fahimtar lamba
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Tsarin Rubutun Abu Mai Dogaro da Token — tsarin ginshiƙai da take-haɗe-da-layuka nasa ne ya tsara matakin taƙaita jadawalinmu.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Tsarin jadawalinsa mai taƙaituwa da ƙirar bayanin martaba na gama-gari sun taimaka wajen tsara taƙaita jadawalin OmniRoute da tsarin codec na Headroom.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Tsarin jadawalinsa mai taƙaituwa da ƙirar bayanin martaba na gama-gari sun taimaka wajen tsara taƙaita jadawalin 67router da tsarin codec na Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>Aiwatarwar MIT TypeScript da aka shigar kai tsaye tare da faɗaɗa ta a matsayin codec na bayanin martaba na gama-gari na Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Ma’ajiyar wucin gadi ta Brotli/SQLite + bambancin mahalli na kowane zama — ya zaburar da injin <code>session-dedup</code> ɗinmu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Taƙaita fitarwar Bash + bayanan martaba na MCP — ya zaburar da ƙa’idar janyewa daga matsawa da rage bayanan kayan aikin MCP ɗinmu.</td></tr>
@@ -1756,7 +1758,7 @@ OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin 
 ### 🧠 Ƙwaƙwalwa & RAG
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Matakin ƙwaƙwalwa na bai-ɗaya — tsarinsa na proxy a matsayin iyakar rubutawa/karantawa ne ya tsara tsarin gine-ginen ƙwaƙwalwarmu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Wakilai masu riƙe da yanayi tare da ƙwaƙwalwa mai matakai — sun zaburar da tsarinmu mai matakai na Sarrafa Mahallin Bayani da Farfaɗowa (CCR).</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>Rabe-raben ProblemMap na hanyoyin gazawar RAG/LLM guda 16 masu maimaituwa — ƙamus ɗin gama-gari a jagoranmu na warware matsaloli.</td></tr>
@@ -1765,15 +1767,15 @@ OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin 
 ### 🛰️ Binciken zirga-zirga, MITM da proxy mai gaskiya
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Tsarewa/binciken MITM na zirga-zirgar mataimakin shirye-shirye ↔ LLM ya taimaka wajen tsara buƙatun farko na Traffic Inspector. An maye gurbin kayayyaki huɗu da aka samo a baya — haɗa SSE, daidaita tattaunawa, ɓoye sirri da tsabtace headers — da aiwatarwa masu zaman kansu da aka gina daga tushe bisa ƙa'idodin yarjejeniya na jama'a. Fuskokin host-passthrough guda biyu (<code>passthrough.ts</code> da <code>_internal/bypass.cjs</code>) sun ci gaba da kasancewa aiwatarwa na cikin OmniRoute waɗanda aka rarraba su daban; ba a sake rubuta su a matsayin wani ɓangare na wannan sauyawar ba.</td></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Tsarewa/binciken MITM na zirga-zirgar mataimakin shirye-shirye ↔ LLM ya taimaka wajen tsara buƙatun farko na Traffic Inspector. An maye gurbin kayayyaki huɗu da aka samo a baya — haɗa SSE, daidaita tattaunawa, ɓoye sirri da tsabtace headers — da aiwatarwa masu zaman kansu da aka gina daga tushe bisa ƙa'idodin yarjejeniya na jama'a. Fuskokin host-passthrough guda biyu (<code>passthrough.ts</code> da <code>_internal/bypass.cjs</code>) sun ci gaba da kasancewa aiwatarwa na cikin 67router waɗanda aka rarraba su daban; ba a sake rubuta su a matsayin wani ɓangare na wannan sauyawar ba.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Jagorantar proxy ga kowane process a bayyane — ya zaburar da kashe MITM cikin aminci idan aka samu rushewa, wa'adin rashin aiki na socket, danganta process ta <code>/proc</code> da kama zirga-zirga ta TPROXY.</td></tr>
 </table>
 
 ### 📚 Bayanan samfuri, sa ido da UI
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Buɗaɗɗen rumbun bayanai na ƙayyadaddun samfuran AI, farashi da ƙwarewa — ana daidaita shi kai tsaye cikin kundin samfuranmu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Laburaren jadawali mai tushen nodes wanda ke tafiyar da Compression Studio da Combo/Routing Studio namu a ainihin lokaci.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>Nuna jadawalin tafiyar aiki kai tsaye na LangGraph Studio ya zaburar da kallon cascade na ainihin lokaci a Studios namu.</td></tr>
@@ -1786,19 +1788,19 @@ OmniRoute ya ginu ne a kan ayyukan manyan da suka gabata. Ya fara ne a matsayin 
 ### 🛡️ Tsaro
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Jerin zaɓaɓɓun laburare masu tsaro ta asali wanda ke jagorantar zaɓuɓɓukan tsaronmu (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Kayan aiki masu taimakon juna
 
 <table>
-  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da OmniRoute</th></tr>
+  <tr><th align="left">Aiki</th><th align="center">⭐</th><th align="left">Yadda ya zaburar da 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Ya zaburar da kawar da maimaitattun buƙatu, madadin gaggawa mara kuɗi, dabarun Auto-Combo masu iya haɗawa da rarraba niyya ta harsuna da dama.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Sake danganta samfuri bisa asusu, tabbatar da executable-path da halayen plan-label nasa sun taimaka wajen tsara runtime na Antigravity na OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Tsarin ƙirga-lokaci zuwa sake saitin ƙayyadadden amfani mai taƙaitaccen salo ya zaburar da nunin iyakar mai samarwa da ya dace a OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Haɗe-haɗen ACP nasa sun zaburar da gano wakilan CLI da aka shigar ta atomatik a OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Ya gano fuskar ƙayyadadden amfani ta Grok Build; daga nan OmniRoute ya tabbatar tare da gyara tsarin bayanan da ake watsawa kai tsaye da kansa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Sake danganta samfuri bisa asusu, tabbatar da executable-path da halayen plan-label nasa sun taimaka wajen tsara runtime na Antigravity na 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Tsarin ƙirga-lokaci zuwa sake saitin ƙayyadadden amfani mai taƙaitaccen salo ya zaburar da nunin iyakar mai samarwa da ya dace a 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Haɗe-haɗen ACP nasa sun zaburar da gano wakilan CLI da aka shigar ta atomatik a 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Ya gano fuskar ƙayyadadden amfani ta Grok Build; daga nan 67router ya tabbatar tare da gyara tsarin bayanan da ake watsawa kai tsaye da kansa.</td></tr>
 </table>
 
 ## 📄 Lasisi
@@ -1811,7 +1813,7 @@ Lasisin MIT - duba [LICENSE](LICENSE) don ƙarin bayani.
 
 **[⬆ Koma sama](#-omniroute)** · An gina shi da ❤️ don al'ummar AI ta buɗaɗɗen tushe.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Lasisin MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · Lasisin MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- An kunna GitHub Discussions don tambayoyi da amsoshin al'umma -->

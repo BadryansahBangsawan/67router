@@ -13,7 +13,7 @@
 
 ## ၎င်းသည် ဘာလဲ
 
-OmniRoute သည် **Obsidian** vault တစ်ခုကို **context source** အဖြစ် ချိတ်ဆက်ပေးသည် — ၎င်းသည်
+67router သည် **Obsidian** vault တစ်ခုကို **context source** အဖြစ် ချိတ်ဆက်ပေးသည် — ၎င်းသည်
 agent များက built-in MCP server မှတစ်ဆင့် ဖတ်ရှု၊ ရေးသားနိုင်သည့် local Markdown
 knowledge base တစ်ခုဖြစ်သည်။ ဤ integration သည် desktop app အတွင်း လည်ပတ်နေသော
 **Obsidian Local REST API** community plugin နှင့် ဆက်သွယ်သောကြောင့် agent များသည်
@@ -82,7 +82,7 @@ Method အားလုံးသည် dashboard authentication လိုအပ�
 
 `src/app/api/settings/obsidian/webdav/route.ts` သည် ရွေးချယ်အသုံးပြုနိုင်သော WebDAV အခြေပြု
 vault sync ကို စီမံသည် (`src/lib/obsidianSync.ts` က လုပ်ဆောင်ပေးသည်)။ ၎င်းကို ဖွင့်ခြင်းဖြင့်
-OmniRoute ကို local vault directory တစ်ခုသို့ ညွှန်ပေးပြီး ကျပန်း WebDAV username/password
+67router ကို local vault directory တစ်ခုသို့ ညွှန်ပေးပြီး ကျပန်း WebDAV username/password
 အတွဲတစ်ခုကို ထုတ်ပေးသည်-
 
 ```bash
@@ -121,7 +121,7 @@ tool လေးခုသည် ၎င်းတို့၏ သီးခြား 
 
 ## MCP ကိရိယာများ (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` တွင် သတ်မှတ်ထားသည်။ token/base-URL ကို ခေါ်ဆိုမှုတစ်ခုချင်းစီအလိုက် ဖြေရှင်းသတ်မှတ်သည် (API key အလိုက် ဦးစွာ၊ ထို့နောက် global)။ OmniRoute **sync server** ကို အသုံးပြုသည့် ကိရိယာများ (`obsidian_sync_*` ကိရိယာလေးခု) သည် OmniRoute settings တွင် စီစဉ်သတ်မှတ်ထားသော sync auth token ကိုလည်း ထပ်မံလိုအပ်သည်။
+`open-sse/mcp-server/tools/obsidianTools.ts` တွင် သတ်မှတ်ထားသည်။ token/base-URL ကို ခေါ်ဆိုမှုတစ်ခုချင်းစီအလိုက် ဖြေရှင်းသတ်မှတ်သည် (API key အလိုက် ဦးစွာ၊ ထို့နောက် global)။ 67router **sync server** ကို အသုံးပြုသည့် ကိရိယာများ (`obsidian_sync_*` ကိရိယာလေးခု) သည် 67router settings တွင် စီစဉ်သတ်မှတ်ထားသော sync auth token ကိုလည်း ထပ်မံလိုအပ်သည်။
 
 ### ဖတ်ရှုရေးကိရိယာများ (`read:obsidian`)
 
@@ -138,7 +138,7 @@ tool လေးခုသည် ၎င်းတို့၏ သီးခြား 
 | `obsidian_get_periodic_note` | ရက်စွဲတစ်ခုအတွက် နေ့စဉ်/အပတ်စဉ်/လစဉ် periodic note ကို ရယူသည် (ချန်လှပ်ထားပါက ယနေ့ရက်စွဲ)။                           |
 | `obsidian_get_tags`          | vault tag အားလုံးကို ၎င်းတို့၏ အသုံးပြုမှုအကြိမ်ရေများနှင့်အတူ စာရင်းပြုစုသည်။                                       |
 | `obsidian_list_commands`     | ရရှိနိုင်သော Obsidian command ID များကို စာရင်းပြုစုသည် (`obsidian_execute_command` နှင့် အသုံးပြုရန်)။              |
-| `obsidian_sync_status`       | OmniRoute sync server ၏ အခြေအနေ—လည်ပတ်နေခြင်း၊ vault အမည်၊ port၊ uptime နှင့် နောက်ဆုံး sync ကို ရယူသည်။             |
+| `obsidian_sync_status`       | 67router sync server ၏ အခြေအနေ—လည်ပတ်နေခြင်း၊ vault အမည်၊ port၊ uptime နှင့် နောက်ဆုံး sync ကို ရယူသည်။              |
 | `obsidian_sync_conflicts`    | မဖြေရှင်းရသေးသော sync conflict များကို စာရင်းပြုစုသည် (path၊ conflict path၊ တွေ့ရှိသည့်အချိန်)။                      |
 
 ### ရေးသားရေးကိရိယာများ (`write:obsidian`)

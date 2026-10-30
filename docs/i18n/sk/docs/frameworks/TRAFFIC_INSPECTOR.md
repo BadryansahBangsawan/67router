@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector je vstavaný nástroj OmniRoute na ladenie prenosov HTTPS — nástroj podobný Charles Proxy / mitmweb / HTTP Toolkit, ktorý **rozpoznáva LLM** a **rozpoznáva agentov**. Nachádza sa na adrese `/dashboard/tools/traffic-inspector` a prijíma živé prenosy až z 5 súbežných zdrojov zachytávania.
+Traffic Inspector je vstavaný nástroj 67router na ladenie prenosov HTTPS — nástroj podobný Charles Proxy / mitmweb / HTTP Toolkit, ktorý **rozpoznáva LLM** a **rozpoznáva agentov**. Nachádza sa na adrese `/dashboard/tools/traffic-inspector` a prijíma živé prenosy až z 5 súbežných zdrojov zachytávania.
 
 **Umiestnenie v ovládacom paneli:** `/dashboard/tools/traffic-inspector`
 **Skupina na bočnom paneli:** Nástroje (za AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector je vstavaný nástroj OmniRoute na ladenie prenosov HTTPS — 
 
 ### Čím je Traffic Inspector jedinečný
 
-| Funkcia                                                                            |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :-----------------------------: |
-| Webové rozhranie                                                                   |     ✓     |    ✗    |     ✗     |                ✓                |
-| Otvorený zdrojový kód                                                              |     ✓     |    ✗    | čiastočne |                ✓                |
-| **Rozpoznávanie agentov** (vie, či požiadavka pochádza z Antigravity/Copilot/atď.) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Rozpoznávanie LLM** (analyzuje formát OpenAI/Anthropic/Gemini, tokeny, model)    |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Viditeľné mapovanie modelov** (gemini-3-flash → claude-sonnet-4.7)               |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Rozdelenie latencie proxy/servera upstream**                                     | čiastočne |    ✗    |     ✗     |                ✓                |
-| **Integrácia s OmniRoute** – smerovanie, záložné mechanizmy, náklady               |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Ladenie systémového proxy** (ľubovoľná aplikácia v zariadení)                    |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Zachytávanie vlastných hostiteľov** (presmerovanie DNS podľa hostiteľa)          |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Režim premennej prostredia HTTP_PROXY**                                          |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Zobrazenie konverzácie** (viackolové bubliny, tool_use/tool_result)              |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Zlučovanie prúdu SSE** (rekonštrukcia z udalostí delta)                          |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Nahrávanie relácií** (pomenované, exportovateľné vo formáte .har/.jsonl)         |     ✗     |    ✓    |     ✓     |                ✓                |
+| Funkcia                                                                            |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :----------------------------: |
+| Webové rozhranie                                                                   |     ✓     |    ✗    |     ✗     |               ✓                |
+| Otvorený zdrojový kód                                                              |     ✓     |    ✗    | čiastočne |               ✓                |
+| **Rozpoznávanie agentov** (vie, či požiadavka pochádza z Antigravity/Copilot/atď.) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Rozpoznávanie LLM** (analyzuje formát OpenAI/Anthropic/Gemini, tokeny, model)    |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Viditeľné mapovanie modelov** (gemini-3-flash → claude-sonnet-4.7)               |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Rozdelenie latencie proxy/servera upstream**                                     | čiastočne |    ✗    |     ✗     |               ✓                |
+| **Integrácia s 67router** – smerovanie, záložné mechanizmy, náklady                |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Ladenie systémového proxy** (ľubovoľná aplikácia v zariadení)                    |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Zachytávanie vlastných hostiteľov** (presmerovanie DNS podľa hostiteľa)          |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Režim premennej prostredia HTTP_PROXY**                                          |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Zobrazenie konverzácie** (viackolové bubliny, tool_use/tool_result)              |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Zlučovanie prúdu SSE** (rekonštrukcia z udalostí delta)                          |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Nahrávanie relácií** (pomenované, exportovateľné vo formáte .har/.jsonl)         |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### Architektúra v jednom odseku
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, ak ide o odpoveď SSE
   mappedTo: string | null; // hlavička x-omniroute-mapped
-  costEstimateUsd: number | null; // odhadované náklady podľa cien OmniRoute
+  costEstimateUsd: number | null; // odhadované náklady podľa cien 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Systémový proxy server nebol obnovený
 
-Ak OmniRoute zlyhá, kým je aktívny režim systémového proxy servera:
+Ak 67router zlyhá, kým je aktívny režim systémového proxy servera:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Základná cesta: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Zoznam požiadaviek (filtrovateľný: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Podrobnosti jednej požiadavky                                                              |
 | DELETE | `/requests`                 | Vymazanie vyrovnávacej pamäte v pamäti                                                     |
-| POST   | `/requests/{id}/replay`     | Opätovné vykonanie rovnakej požiadavky prostredníctvom smerovača OmniRoute                 |
+| POST   | `/requests/{id}/replay`     | Opätovné vykonanie rovnakej požiadavky prostredníctvom smerovača 67router                  |
 | PUT    | `/requests/{id}/annotation` | Uloženie alebo aktualizácia poznámky k požiadavke                                          |
 
 ### WebSocket

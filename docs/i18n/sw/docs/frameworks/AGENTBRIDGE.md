@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge ni proksi ya MITM (Mtu-katikati) ya OmniRoute ambayo hunasa trafiki ya HTTPS kutoka kwa mawakala wa AI wa IDE na kuielekeza upya kupitia injini jumuishi ya uelekezaji ya OmniRoute. Inatumia **mawakala 10 wa IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, na Trae (inachunguzwa) — na kuifanya OmniRoute kuwa proksi ya MITM yenye usaidizi mpana zaidi kwa wasaidizi wa AI wa uandishi wa msimbo sokoni.
+AgentBridge ni proksi ya MITM (Mtu-katikati) ya 67router ambayo hunasa trafiki ya HTTPS kutoka kwa mawakala wa AI wa IDE na kuielekeza upya kupitia injini jumuishi ya uelekezaji ya 67router. Inatumia **mawakala 10 wa IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, na Trae (inachunguzwa) — na kuifanya 67router kuwa proksi ya MITM yenye usaidizi mpana zaidi kwa wasaidizi wa AI wa uandishi wa msimbo sokoni.
 
 **Mahali pa dashibodi:** `/dashboard/tools/agent-bridge`
 **Kikundi cha utepe wa pembeni:** Zana (baada ya Mawakala wa Wingu)
@@ -16,34 +16,34 @@ AgentBridge ni proksi ya MITM (Mtu-katikati) ya OmniRoute ambayo hunasa trafiki 
 
 ### AgentBridge ni nini?
 
-Wakati wakala wa IDE (k.m., GitHub Copilot, Cursor, Claude Code) anapofanya wito wa API, huunganisha moja kwa moja na mtoa huduma wa AI wa ngazi ya juu (OpenAI, Anthropic, n.k.). AgentBridge hukatiza muunganisho huo kwa uwazi katika kiwango cha TLS — bila kuhitaji mabadiliko yoyote ya usanidi wa wakala — na kuandika upya ombi kupitia OmniRoute.
+Wakati wakala wa IDE (k.m., GitHub Copilot, Cursor, Claude Code) anapofanya wito wa API, huunganisha moja kwa moja na mtoa huduma wa AI wa ngazi ya juu (OpenAI, Anthropic, n.k.). AgentBridge hukatiza muunganisho huo kwa uwazi katika kiwango cha TLS — bila kuhitaji mabadiliko yoyote ya usanidi wa wakala — na kuandika upya ombi kupitia 67router.
 
 Hii inamaanisha unaweza:
 
-- **Kuelekeza upya wakala yeyote kwa mtoa huduma yeyote**: Copilot akizungumza na OpenAI? Muelekeze kwa Anthropic Claude, Gemini, au mojawapo ya watoa huduma 375 wa OmniRoute.
+- **Kuelekeza upya wakala yeyote kwa mtoa huduma yeyote**: Copilot akizungumza na OpenAI? Muelekeze kwa Anthropic Claude, Gemini, au mojawapo ya watoa huduma 375 wa 67router.
 - **Kutumia ramani za modeli**: `gemini-3-flash` → `claude-sonnet-4.7` kwa uwazi katika kiwango cha kishughulikiaji.
 - **Kuchunguza trafiki yote ya wakala**: kila ombi lililokatizwa huchapishwa kwenye [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Kutumia ustahimilivu wa OmniRoute**: uelekezaji wa combo, circuit breakers, fallbacks, na ufuatiliaji wa gharama hufanya kazi kwa trafiki ya wakala wa IDE pia.
+- **Kutumia ustahimilivu wa 67router**: uelekezaji wa combo, circuit breakers, fallbacks, na ufuatiliaji wa gharama hufanya kazi kwa trafiki ya wakala wa IDE pia.
 
 ### Nafasi ikilinganishwa na soko
 
-| Kipengele                 | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity               |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot            |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex              |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries            |    —    |    ✓     |        —        |             ✓             |
-| Claude Code               |    —    |    —     |        ✓        |             ✓             |
-| Open Code                 |    —    |    —     |        ✓        |             ✓             |
-| Trae                      |    —    |    —     |        —        |      🔍 Inachunguzwa      |
-| UI ya Dashibodi           |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector         |    ✗    |    ✗     |        ✓        |             ✓             |
-| Uelekezaji wa OmniRoute   |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI ya ramani za modeli    |    ✗    |    ✗     |        ✗        |             ✓             |
-| Orodha ya bypass          |    ✗    |    ✗     |        ✓        |             ✓             |
-| Cheti cha CA cha upstream |    ✗    |    ✗     |        ✓        |             ✓             |
+| Kipengele                 | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity               |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot            |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex              |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries            |    —    |    ✓     |        —        |            ✓             |
+| Claude Code               |    —    |    —     |        ✓        |            ✓             |
+| Open Code                 |    —    |    —     |        ✓        |            ✓             |
+| Trae                      |    —    |    —     |        —        |     🔍 Inachunguzwa      |
+| UI ya Dashibodi           |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector         |    ✗    |    ✗     |        ✓        |            ✓             |
+| Uelekezaji wa 67router    |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI ya ramani za modeli    |    ✗    |    ✗     |        ✗        |            ✓             |
+| Orodha ya bypass          |    ✗    |    ✗     |        ✓        |            ✓             |
+| Cheti cha CA cha upstream |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (mlango 443, mchakato-toto wa CJS)
     │  hutatua lengwa kwa kutumia SNI ya kichwa cha Host
     │  hutengeneza cheti cha TLS kwa kila SNI kilichotiwa saini na CA ya AgentBridge
     ├── Inalingana na orodha ya kupita? → upitishaji wa moja kwa moja wa TCP (hakuna usimbuaji fiche)
-    ├── Inalingana na lengwa? → fetch → kipanga-njia cha OmniRoute (mlango 20128)
+    ├── Inalingana na lengwa? → fetch → kipanga-njia cha 67router (mlango 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() kwenye mwili/vichwa vya ombi
     │               ├── TrafficBuffer.push() — huchapisha kwa Traffic Inspector
@@ -206,7 +206,7 @@ Cheti cha CA cha AgentBridge lazima kiaminiwe na OS kabla ya IDE kukubali muunga
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -262,10 +262,10 @@ Mfano wa maingizo ya `/etc/hosts` kwa GitHub Copilot:
 
 Tumia Jedwali la Ulinganishaji wa Modeli katika kila kadi ya agenti kufafanua ulinganishaji wa chanzo → lengo:
 
-| Modeli ya chanzo (asilia ya agenti) | Modeli lengwa (OmniRoute) |
-| ----------------------------------- | ------------------------- |
-| `gpt-4o`                            | `claude-sonnet-4.7`       |
-| `*` (wildcard)                      | `claude-haiku-4.7`        |
+| Modeli ya chanzo (asilia ya agenti) | Modeli lengwa (67router) |
+| ----------------------------------- | ------------------------ |
+| `gpt-4o`                            | `claude-sonnet-4.7`      |
+| `*` (wildcard)                      | `claude-haiku-4.7`       |
 
 Wildcard `*` hulinganisha modeli yoyote isiyotambuliwa na lengo lililobainishwa. Huhifadhiwa katika jedwali la `agent_bridge_mappings`.
 
@@ -278,7 +278,7 @@ Wildcard `*` hulinganisha modeli yoyote isiyotambuliwa na lengo lililobainishwa.
 
 ### 3.5 Ilani ya hatari
 
-AgentBridge hunasa vitambulisho vya uthibitishaji (tokeni za OAuth, funguo za API) ambavyo IDE hutumia kujithibitisha kwa watoa huduma wa upstream. Hivi **hufichwa kabla ya kurekodiwa** (angalia §2.7) lakini vinaonekana kwa safu ya MITM ya OmniRoute. Uanzishaji wa kwanza wa kila ajenti huonyesha dirisha la ilani ya hatari linaloweza kufungwa.
+AgentBridge hunasa vitambulisho vya uthibitishaji (tokeni za OAuth, funguo za API) ambavyo IDE hutumia kujithibitisha kwa watoa huduma wa upstream. Hivi **hufichwa kabla ya kurekodiwa** (angalia §2.7) lakini vinaonekana kwa safu ya MITM ya 67router. Uanzishaji wa kwanza wa kila ajenti huonyesha dirisha la ilani ya hatari linaloweza kufungwa.
 
 ### 3.6 Matengenezo na Uchunguzi
 
@@ -398,7 +398,7 @@ Utambuzi hutumia njia maalum za mfumo wa uendeshaji na ukaguzi wa faili tekelezi
 
 ### Orodha ya kupitisha kwa seva pangishi nyeti
 
-Orodha ya kupitisha huhakikisha kwamba taasisi za kifedha, watoa huduma wa OAuth/SSO, na seva pangishi nyingine nyeti **hazisimbuliwi kamwe**. Trafiki yao ya TLS hupita kama handaki la TCP lililo wazi — OmniRoute haioni kamwe maandishi ghafi.
+Orodha ya kupitisha huhakikisha kwamba taasisi za kifedha, watoa huduma wa OAuth/SSO, na seva pangishi nyingine nyeti **hazisimbuliwi kamwe**. Trafiki yao ya TLS hupita kama handaki la TCP lililo wazi — 67router haioni kamwe maandishi ghafi.
 
 Miundo chaguomsingi ya kupitisha inajumuisha:
 
@@ -449,7 +449,7 @@ Vinginevyo, sanidi port isiyohitaji ruhusa za juu katika mipangilio ya AgentBrid
 
 Ikiwa IDE inaonyesha hitilafu za TLS baada ya kuanzisha AgentBridge:
 
-1. Thibitisha kuwa cheti kilisakinishwa: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) au `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Thibitisha kuwa cheti kilisakinishwa: `security find-certificate -c "67router AgentBridge"` (macOS) au `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Baadhi ya programu hudumisha hifadhi yao wenyewe ya uaminifu (Firefox, Chrome kwenye Linux). Endesha "Amini Cheti" tena na ukague hifadhi ya cheti maalum ya NSS/Firefox.
 3. Anzisha upya IDE baada ya kuamini cheti — vipindi vya TLS vinavyoendelea hutumia hali ya zamani ya uaminifu.
 
@@ -500,7 +500,7 @@ Utambuzi wa kiotomatiki hutumia njia za kawaida za usakinishaji. Ikiwa utambuzi 
 Ikiwa AgentBridge inanaswa lakini maombi yote yanashindwa:
 
 1. Thibitisha kuwa angalau mtoa huduma mmoja ameunganishwa kwenye `/dashboard/providers`
-2. Angalia kumbukumbu za seva ya OmniRoute: `APP_LOG_LEVEL=debug` katika `.env`
+2. Angalia kumbukumbu za seva ya 67router: `APP_LOG_LEVEL=debug` katika `.env`
 3. Thibitisha kuwa `OMNIROUTE_BASE_URL` inaelekeza kwenye ncha sahihi ya kipanga njia (chaguo-msingi: `http://127.0.0.1:20128`)
 
 ---

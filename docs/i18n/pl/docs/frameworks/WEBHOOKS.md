@@ -7,7 +7,7 @@
 > **Źródło prawdy:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Ostatnia aktualizacja:** 2026-06-28 — v3.8.40
 
-OmniRoute może wywoływać webhooki HTTP w odpowiedzi na zdarzenia platformy. Używaj ich do integracji ze
+67router może wywoływać webhooki HTTP w odpowiedzi na zdarzenia platformy. Używaj ich do integracji ze
 Slackiem, PagerDuty, Datadogiem, wewnętrznymi usługami alertów lub dowolnym odbiornikiem HTTP.
 
 Dyspozytor podpisuje każde żądanie za pomocą HMAC-SHA256, ponawia je w przypadku
@@ -54,7 +54,7 @@ błędy poszczególnych webhooków, dzięki czemu jeden wadliwy odbiornik nie mo
 
 ## Podpisywanie HMAC
 
-Gdy webhook ma `secret`, OmniRoute podpisuje treść JSON i wysyła:
+Gdy webhook ma `secret`, 67router podpisuje treść JSON i wysyła:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Strona panelu pod adresem `/dashboard/webhooks` (zobacz
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Testowe wysłanie webhooka z OmniRoute",
+    "message": "Testowe wysłanie webhooka z 67router",
     "webhookId": "<uuid>"
   }
 }

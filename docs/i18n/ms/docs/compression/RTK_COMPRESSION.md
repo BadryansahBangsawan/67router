@@ -4,7 +4,7 @@
 
 ---
 
-Pemampatan RTK ialah enjin pemampatan OmniRoute yang menyedari perintah untuk output terminal dan alat. Ia
+Pemampatan RTK ialah enjin pemampatan 67router yang menyedari perintah untuk output terminal dan alat. Ia
 direka bentuk untuk sesi ejen pengekodan yang kebanyakan pertumbuhan konteksnya berpunca daripada log ujian, output binaan,
 hingar pengurus pakej, transkrip shell, output Docker, output git dan jejak tindanan.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Susunan tersebut memampatkan output mesin yang bising terlebih dahulu, kemudian membolehkan Caveman memadatkan prosa yang tinggal.
 
 RTK huluan melaporkan penjimatan output perintah sebanyak `60-90%`. Sesi contoh dalam README-nya berkurang daripada
-`~118,000` token standard kepada `~23,900` token RTK, iaitu penjimatan sebanyak `79.7%` (`~80%`). OmniRoute menggunakan
+`~118,000` token standard kepada `~23,900` token RTK, iaitu penjimatan sebanyak `79.7%` (`~80%`). 67router menggunakan
 purata huluan tersebut untuk pengiraan penjimatan bertindan dengan pemampatan input Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK memuatkan penapis mengikut susunan ini:
 2. Penapis global daripada `DATA_DIR/rtk/filters.toml` dan `DATA_DIR/rtk/filters.json`.
 3. Penapis terbina dalam daripada `open-sse/services/compression/engines/rtk/filters/`.
 
-Dalam skop yang sama, penapis skema TOML RTK v1 diberikan keutamaan berbanding penapis JSON OmniRoute. Ungkapan TOML
+Dalam skop yang sama, penapis skema TOML RTK v1 diberikan keutamaan berbanding penapis JSON 67router. Ungkapan TOML
 `match_command` disemak sebelum pemadanan jenis perintah supaya penapis khusus perintah yang diimport
 boleh mengatasi penapis yang lebih luas dalam skop tersebut. Skop projek masih diberikan keutamaan berbanding skop global,
 tanpa mengira format fail.
@@ -84,7 +84,7 @@ dilangkau dan dilaporkan oleh diagnostik `/api/context/rtk/filters`. Penapis ter
 
 ## Keserasian skema RTK TOML v1
 
-OmniRoute boleh menghuraikan, mengesahkan, menguji dan memasang fail penapis deklaratif menggunakan skema RTK TOML v1.
+67router boleh menghuraikan, mengesahkan, menguji dan memasang fail penapis deklaratif menggunakan skema RTK TOML v1.
 Medan yang disokong ialah `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` dan ujian sebaris `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Medan yang tidak diketahui, ungkapan nalar yang tidak sah atau tidak selamat, pe
 disahkan untuk pemeriksaan tetapi tidak boleh dipasang atau dimuatkan. Kegagalan memuatkan fail tersuai kekal
 terbuka apabila gagal: fail yang tidak sah akan dilangkau dan penapis lain akan terus berfungsi.
 
-OmniRoute menerima output alat selepas klien selesai menangkapnya, jadi `filter_stderr = true`
+67router menerima output alat selepas klien selesai menangkapnya, jadi `filter_stderr = true`
 tidak boleh mengubah penangkapan proses. Medan ini diterima sebagai tanpa operasi dan pengesahan mengembalikan amaran.
 Hal ini sengaja diterangkan sebagai **keserasian skema RTK TOML v1**, bukannya keserasian penuh
 dengan boleh laku RTK, cangkuk shell, pelaksanaan perintah Rust atau susun atur stor amanahnya.

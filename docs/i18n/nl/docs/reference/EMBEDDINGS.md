@@ -4,9 +4,9 @@
 
 ---
 
-Operationele notities voor `POST /v1/embeddings` wanneer OmniRoute vóór
+Operationele notities voor `POST /v1/embeddings` wanneer 67router vóór
 Hindsight 0.9.1 (alleen tekst, `encode(list[str])`) en Memorix 1.6.0 (Jina-mediapoort)
-staat. Live geverifieerd op 2026-08-17 met OmniRoute 3.8.49 op
+staat. Live geverifieerd op 2026-08-17 met 67router 3.8.49 op
 `https://omniroute.jaguar-fish.ts.net/v1`. Hieronder staan geen geheimen.
 
 ## Werkende model-id's
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Native `gemini-embedding-2` kan niet alleen via GitOps werkend worden gemaakt. Een
 Google AI Studio-sleutel moet als een `gemini`-providerverbinding worden toegevoegd
-(via het dashboard of door `GEMINI_API_KEY` in OmniRoute te importeren). Dat geheim
+(via het dashboard of door `GEMINI_API_KEY` in 67router te importeren). Dat geheim
 staat niet in deze repo.
 
 ### Multimodaal pad van Jina
@@ -101,7 +101,7 @@ Gebruik `POST /v1/embeddings` totdat er een alias bestaat.
 
 ### Jina-/Memorix-afbeeldingsobject
 
-Canoniek OmniRoute-afbeeldingsitem (28×28 PNG, 784 pixels — Jina weigert 1×1):
+Canoniek 67router-afbeeldingsitem (28×28 PNG, 784 pixels — Jina weigert 1×1):
 
 ```json
 {
@@ -150,7 +150,7 @@ Feitelijk resultaat: HTTP **400**
 
 Hindsight-embeddings zijn alleen voor tekst (`encode(list[str])`). Het verzendt
 geen afbeeldingsobjecten. Richt de OpenAI-compatibele basis-URL voor embeddings
-van Hindsight op OmniRoute `/v1` en gebruik een werkende id uit de bovenstaande
+van Hindsight op 67router `/v1` en gebruik een werkende id uit de bovenstaande
 tabel (`jina-ai/jina-embeddings-v5-omni-small` of
 `openrouter/google/gemini-embedding-2`). Stel het model niet in op de kale
 `gemini-embedding-2`, tenzij er op de gateway een `gemini`-API-sleutel aanwezig is.
@@ -158,12 +158,12 @@ tabel (`jina-ai/jina-embeddings-v5-omni-small` of
 ### Memorix 1.6.0
 
 Memorix behandelt alleen een `baseUrl` die overeenkomt met `/jina\.ai/i` als
-native media. Een OmniRoute-URL blijft het pad voor alleen tekst gebruiken, zelfs
+native media. Een 67router-URL blijft het pad voor alleen tekst gebruiken, zelfs
 wanneer het model Jina omni is. Die poort is een probleem in de Memorix-client.
-Los daarvan weigert OmniRoute nog steeds de Jina-body `{image: "data:..."}`
+Los daarvan weigert 67router nog steeds de Jina-body `{image: "data:..."}`
 die Memorix zou verzenden als de poort werd geopend. Jina-compatibele clients
-kunnen daarom geen afbeeldingen via OmniRoute embedden zonder het canonieke
+kunnen daarom geen afbeeldingen via 67router embedden zonder het canonieke
 `{type,source}`-schema.
 
 Gebruik `jina-ai/jina-embeddings-v5-omni-small` voor tekst. Richt `base_url` van
-Memorix niet op `https://api.jina.ai` — behoud OmniRoute als de enige tussenstap.
+Memorix niet op `https://api.jina.ai` — behoud 67router als de enige tussenstap.

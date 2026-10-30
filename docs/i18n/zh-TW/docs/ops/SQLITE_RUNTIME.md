@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 在啟動時會透過 5 步驟的備援鏈解析其 SQLite 驅動程式：
+67router 在啟動時會透過 5 步驟的備援鏈解析其 SQLite 驅動程式：
 
 1. **內附的 `better-sqlite3`**（透過 `package.json` 中的 `dependencies`）
    — 速度最快，使用原生二進位檔；當環境中具備建置工具時，由 `npm install` 安裝。
@@ -28,13 +28,13 @@ OmniRoute 在啟動時會透過 5 步驟的備援鏈解析其 SQLite 驅動程�
 - **缺少建置工具**：某些環境（沒有 VS Build Tools 的企業 Windows、
   最小化 Docker 映像檔）無法編譯 `better-sqlite3`。執行階段安裝程式會從
   npm 登錄檔解析預先建置的二進位檔；即使失敗，備援驅動程式也能確保
-  OmniRoute 仍可啟動。
+  67router 仍可啟動。
 - **實體隔離系統**：如果無法連線至 npm 登錄檔，`node:sqlite`
   或 `sql.js` 可確保基本功能。
 
 ## 魔術位元組驗證
 
-載入執行階段安裝的 `.node` 檔案之前，OmniRoute 會讀取前 8 個
+載入執行階段安裝的 `.node` 檔案之前，67router 會讀取前 8 個
 位元組，並比對已知的平台魔術位元組：
 
 | 平台              | 位元組（十六進位） | 標籤        |
@@ -103,9 +103,9 @@ omniroute config db-info  # （若此 CLI 命令存在）
 ## 單一寫入者拓撲（不支援 HA）
 
 上述驅動程式備援鏈仍在**單一程序**中執行。採用預設 SQLite 的
-OmniRoute 是**單一寫入者**：
+67router 是**單一寫入者**：
 
-- 請勿將兩個 OmniRoute 複本連接至同一個 `storage.sqlite` 檔案。
+- 請勿將兩個 67router 複本連接至同一個 `storage.sqlite` 檔案。
 - 容器重新啟動、Recreate 部署、OOM 終止或 HEALTHCHECK 重新啟動，
   都會中斷所有進行中的 SSE 工作階段。預設路徑不會排空工作階段。
 - 若協調器的存活探測將回應緩慢的 `/healthz` 視為停止運作，便會終止唯一的

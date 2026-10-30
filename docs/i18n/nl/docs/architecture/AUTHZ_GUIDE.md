@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Laatst bijgewerkt:** 2026-09-22 — scope-namespaces verwijzen naar MCP-SERVER.md
 
-OmniRoute heeft een route-bewuste autorisatiepipeline die elke API-aanvraag afschermt. Classificatie is **deterministisch** en **fail-closed** — alles wat niet geclassificeerd kan worden, eindigt als `MANAGEMENT` en vereist een sessie of een token van managementkwaliteit. Deze pagina legt het model uit voor engineers die routes onderhouden of nieuwe endpoints ontwerpen.
+67router heeft een route-bewuste autorisatiepipeline die elke API-aanvraag afschermt. Classificatie is **deterministisch** en **fail-closed** — alles wat niet geclassificeerd kan worden, eindigt als `MANAGEMENT` en vereist een sessie of een token van managementkwaliteit. Deze pagina legt het model uit voor engineers die routes onderhouden of nieuwe endpoints ontwerpen.
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 

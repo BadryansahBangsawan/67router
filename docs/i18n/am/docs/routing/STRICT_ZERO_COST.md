@@ -30,7 +30,7 @@
 ከ`filterPaidOnlyCandidates` በኋላ ወዲያውኑ)፦
 
 1. **በ`FREE_MODEL_BUDGETS` ውስጥ ፈጽሞ የሌለ** → ይገለላል። ይህ በእውነት የሚከፈልባቸውን ሞዴሎች እና
-   OmniRoute እስካሁን ያልመደባቸውን ማንኛውንም አቅራቢ/ሞዴል ይሸፍናል — አዲስ እጩዎች ተካተው ሳይሆን ተገልለው ይጀምራሉ።
+   67router እስካሁን ያልመደባቸውን ማንኛውንም አቅራቢ/ሞዴል ይሸፍናል — አዲስ እጩዎች ተካተው ሳይሆን ተገልለው ይጀምራሉ።
 2. **`freeType: "keyless"`** → ወዲያውኑ ያልፋል፣ **ነገር ግን በእውነት
    ማረጋገጫ በማያስፈልገው መንገድ ለመጣ እጩ ብቻ** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`)። ለዚያ እጩ ምንም የመግቢያ ማረጋገጫ የለም፣
@@ -82,7 +82,7 @@ STRICT_ZERO_COST በዚያ ፈቃድ ዝርዝር ውስጥ ያለውን የ**�
 (ቁልፍ-አልባ ማለፊያ ጉዳዮች A/B/C፣ ባለብዙ-መለያ ጉዳዮች 1-5)።
 
 `discovered automatically`፦ ነገ ትክክለኛውን ሜታዳታ ይዞ የሚላክ አቅራቢ/ሞዴል (በ
-ካታሎጉ ውስጥ፣ ከአጠቃቀም አስማሚ ጋር፣ `hardStopGuaranteed: true`) OmniRoute ስለእሱ ባወቀበት
+ካታሎጉ ውስጥ፣ ከአጠቃቀም አስማሚ ጋር፣ `hardStopGuaranteed: true`) 67router ስለእሱ ባወቀበት
 ቅጽበት ጥቅም ላይ ሊውል ይችላል — ምንም የኮድ ለውጥ፣ ምንም የፈቃድ ዝርዝር ግቤት፣ በዚህ ሞጁል ውስጥ የሚስተካከል ምንም ነገር የለም። ከ
 ካታሎጉ የተወገደ አቅራቢ/ሞዴል በተመሳሳይ መንገድ ይጠፋል። የመመለስ ስህተት ማረጋገጫውን
 ለማየት `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts`ን ይመልከቱ (ትክክለኛውን ካታሎግ

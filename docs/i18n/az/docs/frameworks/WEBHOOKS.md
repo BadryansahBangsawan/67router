@@ -7,7 +7,7 @@
 > **Həqiqət mənbəyi:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute platform hadisələri zamanı HTTP webhook-ları işə sala bilər. Onlardan
+67router platform hadisələri zamanı HTTP webhook-ları işə sala bilər. Onlardan
 Slack, PagerDuty, Datadog, daxili xəbərdarlıq xidmətləri və ya istənilən HTTP qəbuledicisi ilə inteqrasiya üçün istifadə edin.
 
 Dispetçer hər çatdırılmanı HMAC-SHA256 ilə imzalayır, müvəqqəti
@@ -54,7 +54,7 @@ hər webhook üzrə xətaları udur ki, nasaz bir qəbuledici digərlərini blok
 
 ## HMAC ilə imzalama
 
-Webhook-un `secret` dəyəri olduqda OmniRoute JSON gövdəsini imzalayır və bunları göndərir:
+Webhook-un `secret` dəyəri olduqda 67router JSON gövdəsini imzalayır və bunları göndərir:
 
 ```
 Content-Type: application/json
@@ -207,7 +207,7 @@ faydalı yükü və imzanı qəbul etdiyini sürətlə yoxlamaq üçün faydalı
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute-dan sınaq webhook çatdırılması",
+    "message": "67router-dan sınaq webhook çatdırılması",
     "webhookId": "<uuid>"
   }
 }

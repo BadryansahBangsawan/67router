@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Malti)
+# 🌐 67router Proxy Guide (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Aqbeż l-imblokki ġeografiċi, ipproteġi l-identità tiegħek, u għaddi t-traffiku tal-IA minn kwalunkwe proxy — mingħajr ebda kumplessità ta’ konfigurazzjoni.**
 
-OmniRoute jinkludi sistema kompluta għall-ġestjoni tal-proxy li tippermettilek tgħaddi t-traffiku lejn il-fornituri upstream tal-IA permezz ta’ proxies HTTP, HTTPS, jew SOCKS5. Kemm jekk tinsab f’reġjun imblokkat, teħtieġ rotazzjoni tal-IP, jew trid fingerprinting diskret — din il-gwida tkopri kollox.
+67router jinkludi sistema kompluta għall-ġestjoni tal-proxy li tippermettilek tgħaddi t-traffiku lejn il-fornituri upstream tal-IA permezz ta’ proxies HTTP, HTTPS, jew SOCKS5. Kemm jekk tinsab f’reġjun imblokkat, teħtieġ rotazzjoni tal-IP, jew trid fingerprinting diskret — din il-gwida tkopri kollox.
 
 ---
 
@@ -51,7 +51,7 @@ Anki barra mir-reġjuni mblokkati, il-proxies huma utli għal:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Server OmniRoute                        │
+│                       Server 67router                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Reġistru    │    │ Dispatcher   │    │ Fetch (undici)   │  │
@@ -84,7 +84,7 @@ Anki barra mir-reġjuni mblokkati, il-proxies huma utli għal:
 
 ## Sistema ta’ Proxy fuq 4 Livelli
 
-OmniRoute jappoġġja konfigurazzjoni tal-proxy f’**erba’ ambiti indipendenti**, solvuti skont l-ordni ta’ prijorità:
+67router jappoġġja konfigurazzjoni tal-proxy f’**erba’ ambiti indipendenti**, solvuti skont l-ordni ta’ prijorità:
 
 ```
 Ordni tar-Riżoluzzjoni tal-Prijorità (l-ogħla → l-aktar baxxa):
@@ -97,7 +97,7 @@ Ordni tar-Riżoluzzjoni tal-Prijorità (l-ogħla → l-aktar baxxa):
 
 ### Kif Taħdem ir-Riżoluzzjoni
 
-Meta OmniRoute jibgħat talba lil fornitur upstream, isejjaħ `resolveProxyForConnectionFromRegistry()` li jiċċekkja kull livell fl-ordni:
+Meta 67router jibgħat talba lil fornitur upstream, isejjaħ `resolveProxyForConnectionFromRegistry()` li jiċċekkja kull livell fl-ordni:
 
 1. **Livell tal-kont** — Hemm proxy assenjat lil dan l-ID speċifiku tal-konnessjoni?
 2. **Livell tal-fornitur** — Hemm proxy assenjat lil dan il-fornitur (eż., `openai`)?
@@ -239,7 +239,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Importazzjoni/Esportazzjoni
 
-Il-proxies huma inklużi fis-sistema ta’ **Backup/Restore**. Meta tesporta l-konfigurazzjoni tiegħek ta’ OmniRoute:
+Il-proxies huma inklużi fis-sistema ta’ **Backup/Restore**. Meta tesporta l-konfigurazzjoni tiegħek ta’ 67router:
 
 1. Mur f’**Dashboard → Settings → Backup**
 2. Ikklikkja **Export** — ir-reġistru tal-proxy u l-assenjazzjonijiet huma inklużi
@@ -249,7 +249,7 @@ Ir-reġistru tal-proxy jappoġġja wkoll **upsert skont host+port** — jekk tim
 
 ### Migrazzjoni Legata
 
-Jekk ikkonfigurajt proxies f’verżjoni eqdem (qabel ir-reġistru), OmniRoute jemigrahom awtomatikament:
+Jekk ikkonfigurajt proxies f’verżjoni eqdem (qabel ir-reġistru), 67router jemigrahom awtomatikament:
 
 ```
 Legacy key_value store → proxy_registry + proxy_assignments
@@ -263,7 +263,7 @@ Dan iseħħ darba biss mal-ewwel tnedija wara l-aġġornament. Uża `migrateLega
 
 > 🆕 **Kontribut minn [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Kwistjoni [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute jintegra mal-pjattaforma tal-komunità **[1proxy](https://1proxy-api.aitradepulse.com)** biex jipprovdi aċċess għal **mijiet ta' proxies bla ħlas u vvalidati** minn madwar id-dinja. Dan huwa ideali għal utenti li m'għandhomx l-infrastruttura tal-proxy tagħhom stess.
+67router jintegra mal-pjattaforma tal-komunità **[1proxy](https://1proxy-api.aitradepulse.com)** biex jipprovdi aċċess għal **mijiet ta' proxies bla ħlas u vvalidati** minn madwar id-dinja. Dan huwa ideali għal utenti li m'għandhomx l-infrastruttura tal-proxy tagħhom stess.
 
 ### Kif Jaħdem
 
@@ -274,7 +274,7 @@ OmniRoute jintegra mal-pjattaforma tal-komunità **[1proxy](https://1proxy-api.a
 └─────────────┘  proxy        └─────────────────┘  kwalità      └───────────┘
 ```
 
-1. **Sinkronizza** — OmniRoute jġib proxies ivvalidati mill-API ta' 1proxy
+1. **Sinkronizza** — 67router jġib proxies ivvalidati mill-API ta' 1proxy
 2. **Aħżen** — Il-proxies jiġu ssejvjati fl-istess tabella `proxy_registry` b'`source = 'oneproxy'`
 3. **Iffiltra** — Iffiltra skont il-protokoll, il-pajjiż u l-punteġġ tal-kwalità
 4. **Alterna** — Agħżel l-aħjar proxy permezz ta' strateġiji bbażati fuq il-kwalità, każwali jew sekwenzjali
@@ -374,7 +374,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Kontra d-Detezzjoni u l-Ħabi
 
-OmniRoute mhux biss jgħaddi t-traffiku minn proxy — jagħmel it-traffiku jidher leġittimu:
+67router mhux biss jgħaddi t-traffiku minn proxy — jagħmel it-traffiku jidher leġittimu:
 
 ### Falsifikazzjoni tal-Marka Diġitali TLS
 
@@ -408,11 +408,11 @@ Il-badge juri wkoll l-IP riżolt tal-proxy għall-verifika.
 
 ## Modi tal-Proxy Upstream
 
-Għall-fornituri li jużaw il-mudell CLIProxyAPI, OmniRoute jappoġġja tliet modi ta’ proxy upstream:
+Għall-fornituri li jużaw il-mudell CLIProxyAPI, 67router jappoġġja tliet modi ta’ proxy upstream:
 
 | Modalità      | Deskrizzjoni                                                          |
 | ------------- | --------------------------------------------------------------------- |
-| `native`      | OmniRoute jimmaniġġja direttament ir-routing tal-proxy (default)      |
+| `native`      | 67router jimmaniġġja direttament ir-routing tal-proxy (default)       |
 | `cliproxyapi` | Jiddelega lil istanza esterna ta’ CLIProxyAPI                         |
 | `fallback`    | L-ewwel jipprova l-modalità nattiva, imbagħad jaqleb għal CLIProxyAPI |
 
@@ -477,7 +477,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API tat-Tunnels
 
-Biex tesponi l-istanza OmniRoute tiegħek għall-internet pubbliku (Cloudflare/ngrok/Tailscale) minflok tibgħat it-traffiku ’l barra permezz ta’ proxy, ara [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). L-API REST tat-tunnel tinsab taħt `/api/tunnels/{cloudflared,ngrok,tailscale}/*` u hija indipendenti mill-katina tal-proxy outbound dokumentata hawn fuq.
+Biex tesponi l-istanza 67router tiegħek għall-internet pubbliku (Cloudflare/ngrok/Tailscale) minflok tibgħat it-traffiku ’l barra permezz ta’ proxy, ara [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). L-API REST tat-tunnel tinsab taħt `/api/tunnels/{cloudflared,ngrok,tailscale}/*` u hija indipendenti mill-katina tal-proxy outbound dokumentata hawn fuq.
 
 ### API ta’ 1proxy
 
@@ -517,7 +517,7 @@ Issettja `ENABLE_SOCKS5_PROXY=true` fil-fajl `.env` tiegħek u erġa' ibda.
 
 ### Żbalji "socket hang up" permezz tal-proxy
 
-Dan huwa normali bi proxies irħas li jagħlqu konnessjonijiet inattivi. OmniRoute diġà jittratta dan billi:
+Dan huwa normali bi proxies irħas li jagħlqu konnessjonijiet inattivi. 67router diġà jittratta dan billi:
 
 - Jiddiżattiva keep-alive fuq il-konnessjonijiet tal-proxy (`keepAliveTimeout: 1`)
 - Jiddiżattiva l-pipelining (`pipelining: 0`)
@@ -527,7 +527,7 @@ Jekk il-problema tippersisti, ipprova proxy differenti jew uża l-karatteristika
 
 ### "unsupported_country_region_territory" matul OAuth
 
-Kun żgur li l-proxy huwa kkonfigurat **qabel** tibda l-fluss OAuth. OmniRoute jidderieġi l-iskambju tat-token OAuth permezz tal-proxy kkonfigurat. L-ewwel issettja proxy globali jew fil-livell tal-fornitur, imbagħad ikkonnettja.
+Kun żgur li l-proxy huwa kkonfigurat **qabel** tibda l-fluss OAuth. 67router jidderieġi l-iskambju tat-token OAuth permezz tal-proxy kkonfigurat. L-ewwel issettja proxy globali jew fil-livell tal-fornitur, imbagħad ikkonnettja.
 
 ### Il-proxy mhux qed jintuża
 
@@ -595,7 +595,7 @@ CREATE TABLE proxy_assignments (
 
 ## Verifika tas-Saħħa tal-Proxy (v3.8.16+)
 
-Il-mekkaniżmu **proxy fast-fail** ta' OmniRoute (`src/lib/proxyHealth.ts`) jiskopri proxies li ma jaħdmux f'<2s permezz ta' verifika rapida tal-konnessjoni TCP, imbagħad **jaħżen ir-riżultat fil-cache** biex jevita spejjeż addizzjonali għal kull talba.
+Il-mekkaniżmu **proxy fast-fail** ta' 67router (`src/lib/proxyHealth.ts`) jiskopri proxies li ma jaħdmux f'<2s permezz ta' verifika rapida tal-konnessjoni TCP, imbagħad **jaħżen ir-riżultat fil-cache** biex jevita spejjeż addizzjonali għal kull talba.
 
 ### Kif Jaħdem
 
@@ -660,11 +660,11 @@ Ports personalizzati fil-URL (`http://host:9999`) dejjem jieħdu preċedenza fuq
 
 ## Analitika u Osservabbiltà tal-Proxy
 
-OmniRoute jimmonitorja l-użu ta’ kull proxy biex jgħin lill-operaturi jiddijanjostikaw ix-xejriet tar-routing, iż-żidiet f’daqqa fil-latenza, u l-ħsarat rikorrenti.
+67router jimmonitorja l-użu ta’ kull proxy biex jgħin lill-operaturi jiddijanjostikaw ix-xejriet tar-routing, iż-żidiet f’daqqa fil-latenza, u l-ħsarat rikorrenti.
 
 ### X’Jiġi Mmonitorjat
 
-Għal kull talba li tgħaddi minn proxy kkonfigurat, OmniRoute jirreġistra:
+Għal kull talba li tgħaddi minn proxy kkonfigurat, 67router jirreġistra:
 
 | Metrika      | Deskrizzjoni                                                     |
 | ------------ | ---------------------------------------------------------------- |
@@ -726,7 +726,7 @@ ORDER BY latency_ms DESC;
 
 ## Siġra tad-Deċiżjonijiet għall-Istrateġija ta’ Rotazzjoni
 
-Meta diversi proxies jiġu assenjati lil ambitu, OmniRoute juża **strateġija ta’ rotazzjoni** biex jagħżel liema wieħed juża għal kull talba. L-istrateġija tiġi kkonfigurata fil-livell tal-ambitu (globali, għal kull fornitur, għal kull kont, għal kull kombinazzjoni).
+Meta diversi proxies jiġu assenjati lil ambitu, 67router juża **strateġija ta’ rotazzjoni** biex jagħżel liema wieħed juża għal kull talba. L-istrateġija tiġi kkonfigurata fil-livell tal-ambitu (globali, għal kull fornitur, għal kull kont, għal kull kombinazzjoni).
 
 ### Strateġiji Disponibbli
 

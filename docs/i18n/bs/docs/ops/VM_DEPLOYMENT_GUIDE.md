@@ -4,11 +4,11 @@
 
 ---
 
-# OmniRoute — Vodič za implementaciju na VM sa Cloudflare-om
+# 67router — Vodič za implementaciju na VM sa Cloudflare-om
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/VM_DEPLOYMENT_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/VM_DEPLOYMENT_GUIDE.md)
 
-Kompletan vodič za instalaciju i konfiguraciju OmniRoute-a na VM-u (VPS) sa domenom koji se upravlja putem Cloudflare-a.
+Kompletan vodič za instalaciju i konfiguraciju 67router-a na VM-u (VPS) sa domenom koji se upravlja putem Cloudflare-a.
 
 ---
 
@@ -86,7 +86,7 @@ ufw enable
 
 ---
 
-## 2. Instalirajte OmniRoute
+## 2. Instalirajte 67router
 
 ### 2.1 Kreirajte direktorij za konfiguraciju
 
@@ -196,7 +196,7 @@ server {
     return 444;
 }
 
-# OmniRoute — HTTPS
+# 67router — HTTPS
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
@@ -239,16 +239,16 @@ server {
 NGINX
 ```
 
-Uskladite timeout vrijednosti reverse-proxy stream-a sa vašim OmniRoute timeout env varijablama. Ako povećate
+Uskladite timeout vrijednosti reverse-proxy stream-a sa vašim 67router timeout env varijablama. Ako povećate
 `FETCH_TIMEOUT_MS` / `STREAM_IDLE_TIMEOUT_MS`, povećajte `proxy_read_timeout` / `proxy_send_timeout`
 iznad istog praga.
 
-OmniRoute koristi `NEXT_PUBLIC_BASE_URL` kao kanonski origin okrenut prema pregledniku za OAuth
+67router koristi `NEXT_PUBLIC_BASE_URL` kao kanonski origin okrenut prema pregledniku za OAuth
 callback-ove i generisane javne linkove. Autentifikovano pisanje u dashboard-u koristi same-origin zahtjeve
 uz session-bound CSRF zaštitu, tako da im nije potreban statični javni bazni URL.
 `X-Forwarded-*` zaglavlja iznad su i dalje korisni metapodaci za rutiranje, ali nisu zamjena
 za postavljanje eksplicitnog javnog URL-a kada OAuth ili generisani linkovi za preglednik zahtijevaju isti. Omogućite
-`OMNIROUTE_TRUST_PROXY` samo ako OmniRoute nije direktno dostupan klijentima i ako vaš proxy
+`OMNIROUTE_TRUST_PROXY` samo ako 67router nije direktno dostupan klijentima i ako vaš proxy
 uklanja/ponovo kreira dolazna forwarded zaglavlja.
 
 ### 3.3 Omogućite i Testirajte
@@ -257,7 +257,7 @@ uklanja/ponovo kreira dolazna forwarded zaglavlja.
 # Uklonite default konfiguraciju
 rm -f /etc/nginx/sites-enabled/default
 
-# Omogućite OmniRoute
+# Omogućite 67router
 ln -sf /etc/nginx/sites-available/omniroute /etc/nginx/sites-enabled/omniroute
 
 # Testirajte i ponovo učitajte
@@ -421,7 +421,7 @@ Pogledajte također [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) za vodič kroz Cloudf
 | 22    | SSH         | Javni (sa fail2ban)          |
 | 80    | nginx HTTP  | Preusmjeravanje → HTTPS      |
 | 443   | nginx HTTPS | Preko Cloudflare Proxy-ja    |
-| 20128 | OmniRoute   | Samo Localhost (preko nginx) |
+| 20128 | 67router    | Samo Localhost (preko nginx) |
 
 ## Optimizacija za malo memorije / mali VPS
 
@@ -432,4 +432,4 @@ Za implementacije na malim VPS instancama (1 GB RAM-a ili manje):
 - **Ograničite V8 heap** — postavite `OMNIROUTE_MEMORY_MB` (npr. `512`) kako runtime ne bi kalibrisao limit veći od VM-a. Pogledajte `docs/reference/ENVIRONMENT.md`.
 - **Teški zahtjevi se automatski skaliraju prema limitu heap-a** -- kada se `OMNIROUTE_MEMORY_MB` postavi kao gore navedeno, budžet bajtova za ingest (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) se izvodi iz istog limita, tako da VM sa ograničenom memorijom već dobija manji budžet za konkurentne zahtjeve bez dodatnog podešavanja; višak zahtjeva dobija ponovljiv `503` sa `Retry-After` umjesto da se takmiče za memoriju. Postavite zastarjeli limit broja zahtjeva `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` samo ako vam je potreban strogi limit povrh toga.
 - **Izbjegavajte `next build` na VPS-u** — build-ajte lokalno i implementirajte standalone izlaz (`.next/standalone/`).
-- **Pratite stanje pomoću `top` / `free -m`** — OmniRoute obično koristi 200-400 MB RSS u stanju mirovanja na VM-u od 1 GB.
+- **Pratite stanje pomoću `top` / `free -m`** — 67router obično koristi 200-400 MB RSS u stanju mirovanja na VM-u od 1 GB.

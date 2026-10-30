@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Čeština)
+# 67router Auto-Combo Engine (Čeština)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # nejlevnější za token
 
 **Co se stane:**
 
-1. OmniRoute detekuje prefix `auto/` v `src/sse/handlers/chat.ts`
+1. 67router detekuje prefix `auto/` v `src/sse/handlers/chat.ts`
 2. Dotáže se databáze na všechna **aktivní připojení poskytovatelů**
 3. Vyfiltruje ta, která mají platné přihlašovací údaje (klíč API nebo token OAuth)
 4. Určí model pro každé připojení (`connection.defaultModel` nebo první model poskytovatele)
@@ -88,7 +88,7 @@ využívá existující čtení odolnosti (nikdy ne nezpracovanou hodnotu `state
 - blokování modelu — `isModelLocked(provider, connectionId, model)`
 
 Každý kandidát rovněž obsahuje příznak `excluded` pro tento klíč API. Vyloučení se ukládají
-pro každý klíč API zvlášť (tabulka `auto_candidate_overrides`, migrace `128`) — OmniRoute je
+pro každý klíč API zvlášť (tabulka `auto_candidate_overrides`, migrace `128`) — 67router je
 jednonájemcový a nemá tabulku `users`, takže `apiKeyId` představuje nejbližší skutečnou identitu
 jednotlivého volajícího — a vynucují se v kritickém bodě fondu kandidátů v
 `open-sse/services/autoCombo/virtualFactory.ts` prostřednictvím čisté, jednotkově testované
@@ -182,7 +182,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Dvě časté nástrahy:
 
 - **`auto` vaše kombinace nepoužívá.** `auto`/`auto/*` vytváří vlastní fond kandidátů bez nutnosti konfigurace a uložené kombinace zohlední pouze v případě, že je některá kombinace doslova pojmenována `auto` (nedoporučuje se). Chcete-li směrovat přes kombinaci, odešlete její přesný název — nikoli `auto`.
-- **`openrouter/auto` je skutečný placený produkt OpenRouter** („Auto Best Available“), nikoli alias OmniRoute. Jde o jedinou statickou položku modelu v registru OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) a je účtována samostatně. Chcete-li ji vyloučit z fondů `auto`, použijte Nastavení → Směrování → Skrýt placené modely.
+- **`openrouter/auto` je skutečný placený produkt OpenRouter** („Auto Best Available“), nikoli alias 67router. Jde o jedinou statickou položku modelu v registru OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) a je účtována samostatně. Chcete-li ji vyloučit z fondů `auto`, použijte Nastavení → Směrování → Skrýt placené modely.
 
 Původní nejasnosti, které tato dokumentace objasňuje, naleznete v [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) a [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111).
 
@@ -282,7 +282,7 @@ hodnoty jsou předány do stávajících vstupů enginu `config.modePack` / `con
 
 ## Všechny strategie směrování
 
-Kombinační engine OmniRoute podporuje **20 strategií směrování** (deklarovaných v `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Samotný engine Auto Combo je dostupný pod strategií `auto`; ostatní strategie jsou k dispozici pro uložené kombinace.
+Kombinační engine 67router podporuje **20 strategií směrování** (deklarovaných v `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Samotný engine Auto Combo je dostupný pod strategií `auto`; ostatní strategie jsou k dispozici pro uložené kombinace.
 
 | Strategie           | Popis                                                                                                                                                                                                                                |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,7 +330,7 @@ Pro striktní rotaci použijte `round-robin`; stejné váhy u strategie `weighte
 
 ### Režim agentního pipeline
 
-Kombinace `pipeline` s alespoň dvěma modely může aktivovat směrování plánovač/executor pomocí `config.agenticOrchestration.enabled`. První cíl zajišťuje plánování a finální odpovědi; druhý cíl generuje volání nástrojů v nativním formátu klienta. OmniRoute rozpoznává pokračování s výsledky nástrojů podle protokolu požadavku, ptá se plánovače, zda je potřeba další kolo nástrojů, a dynamicky určuje, zda bude finálním krokem pro klienta executor, nebo plánovač.
+Kombinace `pipeline` s alespoň dvěma modely může aktivovat směrování plánovač/executor pomocí `config.agenticOrchestration.enabled`. První cíl zajišťuje plánování a finální odpovědi; druhý cíl generuje volání nástrojů v nativním formátu klienta. 67router rozpoznává pokračování s výsledky nástrojů podle protokolu požadavku, ptá se plánovače, zda je potřeba další kolo nástrojů, a dynamicky určuje, zda bude finálním krokem pro klienta executor, nebo plánovač.
 
 Další modely za druhým cílem jsou seřazené záložní executory. Neúspěšná odpověď HTTP nebo výjimka přenosu způsobí přechod k dalšímu executoru, přičemž se zachová stejné rozhodnutí plánovače a nativní nástroje, ale použije se vlastní výzva pro daný krok a vyřešené připojení tohoto executoru. První úspěšná odpověď je vrácena beze změny, včetně streamování SSE; selhání po zahájení úspěšného streamu zde nelze opakovat. Pokud selžou všechny executory, vrátí se poslední selhání. Přerušení ze strany klienta zastaví odesílání.
 
@@ -829,11 +829,11 @@ Tato sada se spouští v CI (úloha `test:integration`) s `--test-concurrency=1`
 
 ### Podmíněné živé smoke testy (NEJSOU v CI — skuteční poskytovatelé)
 
-| Příkaz                                 | Co provádí                                                                          |
-| :------------------------------------- | :---------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Skutečné směrování v procesu s `RUN_COMBO_LIVE=1`; vytvoří snímek živé DB OmniRoute |
-| `npm run test:combo:live:vps`          | HTTP volání na živý server OmniRoute (nastavte `COMBO_LIVE_BASE_URL`)               |
-| `npm run test:combo:live:vps:failover` | Totéž se záměrně vyvolanými scénáři převzetí služeb při selhání                     |
+| Příkaz                                 | Co provádí                                                                         |
+| :------------------------------------- | :--------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Skutečné směrování v procesu s `RUN_COMBO_LIVE=1`; vytvoří snímek živé DB 67router |
+| `npm run test:combo:live:vps`          | HTTP volání na živý server 67router (nastavte `COMBO_LIVE_BASE_URL`)               |
+| `npm run test:combo:live:vps:failover` | Totéž se záměrně vyvolanými scénáři převzetí služeb při selhání                    |
 
 Tyto smoke testy prověřují skutečnou přenosovou cestu (kombo → poskytovatel → dokončení). Z CI jsou záměrně vyloučeny, protože vyžadují živé přihlašovací údaje a přístup k VPS.
 

@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Poslední aktualizace:** 2026-09-22 — jmenné prostory rozsahů odkazují na MCP-SERVER.md
 
-OmniRoute používá autorizační řetězec zohledňující routy, který kontroluje každý požadavek API. Klasifikace je **deterministická** a **fail-closed** — cokoli, co nelze klasifikovat, spadá do kategorie `MANAGEMENT` a vyžaduje relaci nebo token s oprávněními pro správu. Tato stránka vysvětluje model určený technikům, kteří udržují routy nebo navrhují nové koncové body.
+67router používá autorizační řetězec zohledňující routy, který kontroluje každý požadavek API. Klasifikace je **deterministická** a **fail-closed** — cokoli, co nelze klasifikovat, spadá do kategorie `MANAGEMENT` a vyžaduje relaci nebo token s oprávněními pro správu. Tato stránka vysvětluje model určený technikům, kteří udržují routy nebo navrhují nové koncové body.
 
 ![Autorizační řetězec (3 třídy rout + vyhodnocení zásad)](../diagrams/exported/authz-pipeline.svg)
 

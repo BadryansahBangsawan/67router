@@ -8,7 +8,7 @@
 
 ## Sürətli başlanğıc — yerli `agentrouter` provayderindən istifadə edin (tövsiyə olunur)
 
-Əksər istifadəçilər üçün **heç bir xüsusi quraşdırma tələb olunmur**. OmniRoute tam Claude Code trafik formatı əvvəlcədən daxil edilmiş daxili `agentrouter` provayderi ilə gəlir (`open-sse/config/providerRegistry.ts` → `agentrouter` bölməsinə baxın). Ondan istifadə etmək üçün:
+Əksər istifadəçilər üçün **heç bir xüsusi quraşdırma tələb olunmur**. 67router tam Claude Code trafik formatı əvvəlcədən daxil edilmiş daxili `agentrouter` provayderi ilə gəlir (`open-sse/config/providerRegistry.ts` → `agentrouter` bölməsinə baxın). Ondan istifadə etmək üçün:
 
 1. **İdarə paneli → Provayderlər → Provayder əlavə et** bölməsini açın.
 2. Siyahıdan **AgentRouter** seçin.
@@ -22,18 +22,18 @@ Bu təlimatın qalan hissəsi **təkmil yolu** əhatə edir: `anthropic-compatib
 
 ## Təkmil: Claude Code ilə uyğun provayder növü vasitəsilə qoşulma
 
-OmniRoute həmçinin AgentRouter-i (və oxşar relay xidmətlərini) düzgün trafik formatı ilə Anthropic Messages API-dən istifadə edən **Claude Code ilə uyğun** provayder növü (`anthropic-compatible-cc-*`) vasitəsilə də dəstəkləyir. `https://agentrouter.org` ünvanını göstərən ümumi `openai-compatible-chat` provayderi **işləməyəcək** — yuxarı səviyyədəki WAF Claude Code-dan gələn sorğulara bənzəməyən sorğuları rədd edir.
+67router həmçinin AgentRouter-i (və oxşar relay xidmətlərini) düzgün trafik formatı ilə Anthropic Messages API-dən istifadə edən **Claude Code ilə uyğun** provayder növü (`anthropic-compatible-cc-*`) vasitəsilə də dəstəkləyir. `https://agentrouter.org` ünvanını göstərən ümumi `openai-compatible-chat` provayderi **işləməyəcək** — yuxarı səviyyədəki WAF Claude Code-dan gələn sorğulara bənzəməyən sorğuları rədd edir.
 
 ---
 
 ## İlkin tələblər
 
 - AgentRouter hesabı və API açarı. Yeni qeydiyyatdan keçənlər layihənin [README](../README.md) faylındakı tərəfdaş keçidi vasitəsilə pulsuz kreditlər əldə edirlər.
-- `ENABLE_CC_COMPATIBLE_PROVIDER` funksiya bayrağı aktivləşdirilmiş işlək OmniRoute instansiyası (aşağıya baxın).
+- `ENABLE_CC_COMPATIBLE_PROVIDER` funksiya bayrağı aktivləşdirilmiş işlək 67router instansiyası (aşağıya baxın).
 
 ## 1. CC ilə uyğun provayder növünü aktivləşdirin
 
-Claude Code ilə uyğun provayder növü, rəsmi Claude Code klientinin trafikinə çox yaxın trafik göndərdiyi üçün funksiya bayrağı ilə qorunur. OmniRoute-u başlatmazdan əvvəl mühit dəyişəni təyin edərək onu aktivləşdirin:
+Claude Code ilə uyğun provayder növü, rəsmi Claude Code klientinin trafikinə çox yaxın trafik göndərdiyi üçün funksiya bayrağı ilə qorunur. 67router-u başlatmazdan əvvəl mühit dəyişəni təyin edərək onu aktivləşdirin:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

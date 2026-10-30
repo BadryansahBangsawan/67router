@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute compression ကို engine contract များအပေါ် အခြေခံ၍ တည်ဆောက်ထားသည်။ mode တစ်ခုသည် engine တစ်ခုကို တိုက်ရိုက်
+67router compression ကို engine contract များအပေါ် အခြေခံ၍ တည်ဆောက်ထားသည်။ mode တစ်ခုသည် engine တစ်ခုကို တိုက်ရိုက်
 (`caveman` သို့မဟုတ် `rtk`) အသုံးပြုနိုင်သကဲ့သို့ engine အများအပြားကို သတ်မှတ်ထားသောအစီအစဉ်အတိုင်း လုပ်ဆောင်သည့် အဆုံးအဖြတ်တိကျသော stacked pipeline ကိုလည်း အသုံးပြုနိုင်သည်။
 
 ## မုဒ်များ
@@ -44,9 +44,9 @@ stacked pipeline ၏ step config မှတစ်ဆင့် တစ်ဆင့�
 `aggressive` ဖြစ်သည်။
 
 package သည် ၎င်း၏ကိုယ်ပိုင် model scope နှင့် ပရိုဖိုင်ကို ၎င်း၏ environment configuration မှ ဖြေရှင်းသည်။
-OmniRoute သည် ဆုံးဖြတ်ချက်ကို ဘယ်တော့မှ လွှဲမပေးပါ- adapter သည် model gate ကို package ၏
+67router သည် ဆုံးဖြတ်ချက်ကို ဘယ်တော့မှ လွှဲမပေးပါ- adapter သည် model gate ကို package ၏
 အကန့်အသတ်အရှိဆုံး scope သို့ ချိတ်ထားသည်၊ ထို့ကြောင့် host environment ဆက်တင်များသည် allowlist ကို
-ကျဉ်းမြောင်းစေနိုင်သည်၊ OmniRoute ၏ တိုင်းတာထားသော ပြေစာများထက် ကျယ်ပြန့်စေ၍မရပါ။
+ကျဉ်းမြောင်းစေနိုင်သည်၊ 67router ၏ တိုင်းတာထားသော ပြေစာများထက် ကျယ်ပြန့်စေ၍မရပါ။
 
 ## Engine Registry
 
@@ -111,7 +111,7 @@ Dashboard ပေါ်ရှိ တည်နေရာမှာ `Dashboard -> Con
 
 Caveman upstream က output token `~75%` ပိုနည်းခြင်း၊ benchmark များတွင် ပျမ်းမျှ output ချွေတာမှု `65%`
 နှင့် အကွာအဝေး `22-87%`၊ ထို့ပြင် input ချုံ့သိပ်မှု tool `~46%` ရှိကြောင်း အစီရင်ခံထားသည်။
-OmniRoute သည် stacked prompt/context ချွေတာမှုများကို မှတ်တမ်းတင်ရာတွင် Caveman ၏ input-side
+67router သည် stacked prompt/context ချွေတာမှုများကို မှတ်တမ်းတင်ရာတွင် Caveman ၏ input-side
 ကိန်းဂဏန်းကို အသုံးပြုသည်။ Caveman output မုဒ်သည် သီးခြား response-behavior လုပ်ဆောင်ချက်အဖြစ် ဆက်လက်ရှိနေသည်။
 
 ## RTK

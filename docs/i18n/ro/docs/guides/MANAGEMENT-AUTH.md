@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute are **patru familii de credențiale** care pot autoriza rute de management.
+67router are **patru familii de credențiale** care pot autoriza rute de management.
 Acestea nu sunt interschimbabile. Cheile API de inferență (`sk-…`) **nu** gestionează
 serverul decât dacă li s-a acordat explicit domeniul de aplicare (`scope`) `manage` sau `admin`.
 

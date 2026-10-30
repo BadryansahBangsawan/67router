@@ -14,7 +14,7 @@ vykdyklių kodo, numatytųjų OAuth reikšmių, antraščių ar proceso aplinkos
 Tas pats manifestas pasiekiamas per HTTP adresu
 `GET /api/v1/provider-plugin-manifest`, kad jį galėtų naudoti atskirame procese veikiantys „sidecar“ komponentai.
 
-OmniRoute perduoda šį URL Bifrost ir CLIProxyAPI per
+67router perduoda šį URL Bifrost ir CLIProxyAPI per
 `X-OmniRoute-Provider-Manifest-Url` užklausos antraštę. Nustatykite
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, kai „sidecar“ komponentui reikia viešojo arba konteinerio
 tinklo URL, o ne vietinės užklausos kilmės adreso.
@@ -30,7 +30,7 @@ siųsti jo ETag antraštėje `If-None-Match`. Atsakymas `304 Not Modified` netur
 ## Tikslas
 
 Perkelti teikėjų metaduomenis į papildinio sutartį, kad ilgainiui apdorojamų užklausų
-kelias galėtų priklausyti mažesnės delsos „sidecar“ komponentui, o OmniRoute išlaikytų
+kelias galėtų priklausyti mažesnės delsos „sidecar“ komponentui, o 67router išlaikytų
 TypeScript maršrutą kaip politikos vartus ir atsarginį variantą. Manifestas yra papildomas:
 pats savaime jis nekeičia užklausų maršruto parinkimo.
 
@@ -74,7 +74,7 @@ iš naujo analizavę TypeScript šaltinius.
 | `usage-fetch`        | Turi prijungtą naudojimo arba kvotos gavimo priemonę (`getUsageForProvider`).            |
 | `usage-supported`    | Naudojimo API priima šį teikėją (`isSupportedUsageConnection`).                          |
 
-`usage-fetch` skirta tik aptikimui. Ji nurodo, kad OmniRoute moka nuskaityti teikėjo
+`usage-fetch` skirta tik aptikimui. Ji nurodo, kad 67router moka nuskaityti teikėjo
 naudojimo duomenis; ji neaktyvina duomenų gavimo, nekeičia kvotų semantikos ir nereiškia, kad
 teikėjui įjungtas Dashboard kvotos valdiklis — šį valdiklį atskirai valdo
 `USAGE_SUPPORTED_PROVIDERS`. Pirminis tiesos šaltinis yra `USAGE_FETCHER_PROVIDERS`, esantis

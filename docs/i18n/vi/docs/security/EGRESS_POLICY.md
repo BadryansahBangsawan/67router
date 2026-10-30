@@ -8,7 +8,7 @@
 
 > **Nguồn chuẩn:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute cho phép mỗi proxy mang một **chỉ thị họ địa chỉ cho lưu lượng đi ra**. Theo mặc định, hệ điều hành chọn IPv4 hoặc IPv6 (ngăn xếp kép, "Happy Eyeballs"). Khi bạn đặt chỉ thị thành `ipv4` hoặc `ipv6`, OmniRoute sẽ ghim mọi kết nối qua proxy đó vào họ đã chọn và **đóng khi lỗi** thay vì chuyển sang họ còn lại.
+67router cho phép mỗi proxy mang một **chỉ thị họ địa chỉ cho lưu lượng đi ra**. Theo mặc định, hệ điều hành chọn IPv4 hoặc IPv6 (ngăn xếp kép, "Happy Eyeballs"). Khi bạn đặt chỉ thị thành `ipv4` hoặc `ipv6`, 67router sẽ ghim mọi kết nối qua proxy đó vào họ đã chọn và **đóng khi lỗi** thay vì chuyển sang họ còn lại.
 
 Trang này mô tả chỉ thị là gì, tại sao nó tồn tại, nơi bạn cấu hình nó và cách môi trường chạy phân giải nó.
 
@@ -122,7 +122,7 @@ Trường này cũng được chấp nhận trong đối tượng cấu hình pr
 
 ## Cách `auto` được phân giải
 
-Khi `family` là `auto`, OmniRoute **không** nối thêm bất kỳ chỉ thị nào — URL proxy được sử dụng nguyên trạng và họ kết nối được xác định theo đặc tính vốn có.
+Khi `family` là `auto`, 67router **không** nối thêm bất kỳ chỉ thị nào — URL proxy được sử dụng nguyên trạng và họ kết nối được xác định theo đặc tính vốn có.
 
 Tại thời điểm tạo URL (`proxyConfigToUrl` / `normalizeProxyUrl` trong `open-sse/utils/proxyDispatcher.ts`), một proxy `auto` tạo ra URL thuần túy, không có dấu hiệu đánh dấu:
 
@@ -158,7 +158,7 @@ Vì vậy:
 
 Một chỉ thị khác `auto` được truyền dưới dạng một dấu truy vấn tổng hợp duy nhất — `?family=ipv4` hoặc `?family=ipv6` — được nối đúng một lần vào URL proxy đã chuẩn hóa. `normalizeProxyUrl` cẩn thận loại bỏ rồi nối lại dấu này đúng một lần để không bao giờ làm hỏng quá trình phân tích cổng.
 
-Khi dispatcher được tạo, dấu này được đọc và chuyển đổi thành một họ kết nối cụ thể. Nếu máy chủ là một địa chỉ IP dạng literal thuộc họ **đối nghịch**, OmniRoute sẽ ném lỗi (mâu thuẫn được xử lý theo nguyên tắc đóng khi có lỗi):
+Khi dispatcher được tạo, dấu này được đọc và chuyển đổi thành một họ kết nối cụ thể. Nếu máy chủ là một địa chỉ IP dạng literal thuộc họ **đối nghịch**, 67router sẽ ném lỗi (mâu thuẫn được xử lý theo nguyên tắc đóng khi có lỗi):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Sau đó, họ cụ thể được ghim vào connector:
 
 ## Khả năng tương thích SOCKS5
 
-Cơ chế ghim họ hoạt động với proxy SOCKS5, nhưng `fetch-socks` nguyên bản không cung cấp các tùy chọn socket cần thiết để ghim họ của chặng proxy. OmniRoute cung cấp connector riêng cho mục đích đó:
+Cơ chế ghim họ hoạt động với proxy SOCKS5, nhưng `fetch-socks` nguyên bản không cung cấp các tùy chọn socket cần thiết để ghim họ của chặng proxy. 67router cung cấp connector riêng cho mục đích đó:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

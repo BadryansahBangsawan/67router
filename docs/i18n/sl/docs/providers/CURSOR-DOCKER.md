@@ -4,7 +4,7 @@
 
 ---
 
-Ko se OmniRoute izvaja znotraj Dockerja, podedovani postopki **Uvozi iz Cursor IDE** /
+Ko se 67router izvaja znotraj Dockerja, podedovani postopki **Uvozi iz Cursor IDE** /
 `cursor-agent` ne delujejo, ker vsebnik ne more dostopati do namestitve Cursorja
 na gostitelju. Namesto tega uporabite **Prijava s Cursorjem** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ na gostitelju. Namesto tega uporabite **Prijava s Cursorjem** (deep-control PKCE
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _znotraj_ vsebnika.
    V okolju Docker Desktop za macOS zbirka podatkov IDE-ja na gostitelju privzeto ni vpeta,
    operacijski sistem vsebnika pa je Linux, tudi ko je gostitelj Darwin.
-2. **Ni binarne datoteke `cursor-agent`** — Uradne slike OmniRoute ne vsebujejo
+2. **Ni binarne datoteke `cursor-agent`** — Uradne slike 67router ne vsebujejo
    `cursor-agent`. Razdelek Razpoložljivi modeli je prej izvajal
    `cursor-agent --list-models` in ob neuspehu uporabil statični katalog.
 3. **Napačna binarna datoteka** — Binarne datoteke `cursor-agent` za macOS **ne**
@@ -24,11 +24,11 @@ na gostitelju. Namesto tega uporabite **Prijava s Cursorjem** (deep-control PKCE
 
 1. Odprite **Nadzorna plošča → Ponudniki → Cursor**.
 2. Izberite zavihek **Prijava s Cursorjem**.
-3. Kliknite **Prijava s Cursorjem** — OmniRoute v vašem brskalniku na **gostitelju**
+3. Kliknite **Prijava s Cursorjem** — 67router v vašem brskalniku na **gostitelju**
    odpre `https://cursor.com/loginDeepControl?…`.
-4. V brskalniku odobrite prijavo in se nato vrnite na nadzorno ploščo. OmniRoute
+4. V brskalniku odobrite prijavo in se nato vrnite na nadzorno ploščo. 67router
    preverja `api2.cursor.sh/auth/poll`, dokler ne prejme žetonov.
-5. OmniRoute shrani žetona za **dostop in osvežitev** ter ju osvežuje prek
+5. 67router shrani žetona za **dostop in osvežitev** ter ju osvežuje prek
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ta način ne zahteva Cursor IDE-ja ali `cursor-agent` znotraj vsebnika.
@@ -37,10 +37,10 @@ Ta način ne zahteva Cursor IDE-ja ali `cursor-agent` znotraj vsebnika.
 
 Pri prijavljeni povezavi funkcija **Razpoložljivi modeli / Samodejna sinhronizacija** prednostno uporabi Cursorjev
 katalog HTTP `AiService/AvailableModels` z nosilnim žetonom povezave.
-Če to ne uspe, OmniRoute še vedno poskusi uporabiti gostiteljski `cursor-agent` (če je prisoten), nato pa
+Če to ne uspe, 67router še vedno poskusi uporabiti gostiteljski `cursor-agent` (če je prisoten), nato pa
 statični začetni register.
 
-OmniRoute v katalogu vedno ponuja **`auto`** (prikazano kot »Samodejno«) ter
+67router v katalogu vedno ponuja **`auto`** (prikazano kot »Samodejno«) ter
 načine usmerjevalnika v slogu OpenCodex: **`auto-cost`**, **`auto-balance`** in
 **`auto-intelligence`**. Pri prenosu se ti preslikajo v Cursorjev model `default`
 (s parametrom `optimization` vrste ModelParameter za tri različice). Ko je poraba
@@ -87,7 +87,7 @@ uvoz iz IDE-ja ni več potreben).
 ## Prazni odgovori / izčrpana poraba
 
 Ko Cursor sprejme izvajanje, vendar ne vrne besedila pomočnika (kar je pogosto, ko je
-poraba premium storitev izčrpana), OmniRoute prikaže uporabno napako **429** (namigi glede kvote) ali
+poraba premium storitev izčrpana), 67router prikaže uporabno napako **429** (namigi glede kvote) ali
 **502** z navodili — ne zgolj »Ponudnik je vrnil prazno vsebino«. Napake pretakanja,
 kot je `not_found: AI Model Not Found` (izčrpano obdobje porabe), so
 razvrščene kot **Cursorjeva omejitev hitrosti / presežena poraba**, to sporočilo pa se ohrani
@@ -97,7 +97,7 @@ omejitve naročniškega paketa Cursor.
 
 ## Različica odjemalca (brez grafičnega vmesnika)
 
-Brez lokalne namestitve `cursor-agent` OmniRoute določi
+Brez lokalne namestitve `cursor-agent` 67router določi
 `x-cursor-client-version` najprej prek okoljske spremenljivke `CURSOR_AGENT_CLI_VERSION`, nato prek na disku predpomnjenega
 zajema namestitvenega skripta Cursor in nazadnje prek pripetega ID-ja gradnje. Po potrebi jo
 preglasite z `CURSOR_AGENT_CLI_VERSION`.

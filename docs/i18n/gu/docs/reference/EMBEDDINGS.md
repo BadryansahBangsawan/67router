@@ -4,7 +4,7 @@
 
 ---
 
-જ્યારે OmniRoute, Hindsight 0.9.1 (માત્ર-ટેક્સ્ટ `encode(list[str])`) અને Memorix 1.6.0 (Jina મીડિયા ગેટ)ની આગળ હોય ત્યારે `POST /v1/embeddings` માટે ઑપરેટર નોંધો. `https://omniroute.jaguar-fish.ts.net/v1` પર OmniRoute 3.8.49 સામે 2026-08-17ના રોજ લાઇવ ચકાસાયેલ. નીચે કોઈ સિક્રેટ્સ નથી.
+જ્યારે 67router, Hindsight 0.9.1 (માત્ર-ટેક્સ્ટ `encode(list[str])`) અને Memorix 1.6.0 (Jina મીડિયા ગેટ)ની આગળ હોય ત્યારે `POST /v1/embeddings` માટે ઑપરેટર નોંધો. `https://omniroute.jaguar-fish.ts.net/v1` પર 67router 3.8.49 સામે 2026-08-17ના રોજ લાઇવ ચકાસાયેલ. નીચે કોઈ સિક્રેટ્સ નથી.
 
 ## કાર્યરત મોડેલ ids
 
@@ -77,7 +77,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 માત્ર GitOps વડે મૂળ `gemini-embedding-2` સફળ થઈ શકતું નથી. Google AI
 Studio કીને `gemini` પ્રોવાઇડર કનેક્શન તરીકે ઉમેરવી આવશ્યક છે (ડૅશબોર્ડ
-અથવા OmniRouteમાં આયાત કરાયેલ `GEMINI_API_KEY`). તે સિક્રેટ આ repoમાં નથી.
+અથવા 67routerમાં આયાત કરાયેલ `GEMINI_API_KEY`). તે સિક્રેટ આ repoમાં નથી.
 
 ### Jina મલ્ટિમોડલ પાથ
 
@@ -98,7 +98,7 @@ Studio કીને `gemini` પ્રોવાઇડર કનેક્શન �
 
 ### Jina / Memorix ઇમેજ ઑબ્જેક્ટ
 
-OmniRouteનું પ્રમાણભૂત ઇમેજ આઇટમ (28×28 PNG, 784 પિક્સેલ — Jina 1×1ને
+67routerનું પ્રમાણભૂત ઇમેજ આઇટમ (28×28 PNG, 784 પિક્સેલ — Jina 1×1ને
 નકારે છે):
 
 ```json
@@ -149,7 +149,7 @@ Memorix 1.6.0 / Jina મૂળ ફોર્મેટ:
 
 Hindsight એમ્બેડિંગ્સ માત્ર ટેક્સ્ટ માટે છે (`encode(list[str])`). તે ઇમેજ
 ઑબ્જેક્ટ્સ મોકલતું નથી. Hindsightના OpenAI-સુસંગત એમ્બેડિંગ્સ બેઝ URLને
-OmniRoute `/v1` તરફ નિર્દેશિત કરો અને ઉપરના કોષ્ટકમાંથી કોઈ કાર્યરત id
+67router `/v1` તરફ નિર્દેશિત કરો અને ઉપરના કોષ્ટકમાંથી કોઈ કાર્યરત id
 (`jina-ai/jina-embeddings-v5-omni-small` અથવા
 `openrouter/google/gemini-embedding-2`)નો ઉપયોગ કરો. ગેટવે પર `gemini` API
 કી ઉપલબ્ધ ન હોય ત્યાં સુધી મોડેલને પ્રિફિક્સ વિનાના `gemini-embedding-2`
@@ -158,12 +158,12 @@ OmniRoute `/v1` તરફ નિર્દેશિત કરો અને ઉપ
 ### Memorix 1.6.0
 
 Memorix માત્ર `/jina\.ai/i` સાથે મેળ ખાતા `baseUrl`ને મૂળ મીડિયા તરીકે
-ગણે છે. મોડેલ Jina omni હોય ત્યારે પણ OmniRoute URL માત્ર-ટેક્સ્ટ પાથ પર
+ગણે છે. મોડેલ Jina omni હોય ત્યારે પણ 67router URL માત્ર-ટેક્સ્ટ પાથ પર
 રહે છે. તે ગેટ Memorix ક્લાયન્ટની સમસ્યા છે. તેનાથી સ્વતંત્ર રીતે,
 જો ગેટ ખૂલે તો Memorix જે Jina `{image: "data:..."}` બોડી મોકલશે તેને
-OmniRoute હજી પણ નકારે છે; તેથી પ્રમાણભૂત `{type,source}` સ્કીમા વિના
-Jina-સુસંગત ક્લાયન્ટ્સ OmniRoute મારફતે ઇમેજ એમ્બેડ કરી શકતા નથી.
+67router હજી પણ નકારે છે; તેથી પ્રમાણભૂત `{type,source}` સ્કીમા વિના
+Jina-સુસંગત ક્લાયન્ટ્સ 67router મારફતે ઇમેજ એમ્બેડ કરી શકતા નથી.
 
 ટેક્સ્ટ માટે `jina-ai/jina-embeddings-v5-omni-small`નો ઉપયોગ કરો. Memorixના
-`base_url`ને `https://api.jina.ai` તરફ નિર્દેશિત કરશો નહીં — OmniRouteને
+`base_url`ને `https://api.jina.ai` તરફ નિર્દેશિત કરશો નહીં — 67routerને
 એકમાત્ર હોપ તરીકે રાખો.

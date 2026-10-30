@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` ń fi gbogbo àkójọ OmniRoute rẹ — àwọn awoṣe, àwọn àkójọpọ̀ àti
+`@omniroute/opencode-plugin-v2` ń fi gbogbo àkójọ 67router rẹ — àwọn awoṣe, àwọn àkójọpọ̀ àti
 àwọn àkójọpọ̀ aládàáṣe — sínú olùyan awoṣe OpenCode v2, pẹ̀lú àwọn orúkọ àfihàn, iye owó àti
 àwọn ìwọ̀n ìlò ọ̀fẹ́.
 
@@ -15,7 +15,7 @@ ohun tí wọ́n pín láàárín wọn, nítorí náà ṣíṣe ìgbésókè �
 ## Àwọn ohun tí a nílò
 
 - OpenCode v2.
-- Gateway OmniRoute tí a lè dé sí (`http://localhost:20128` nípa àìyípadà).
+- Gateway 67router tí a lè dé sí (`http://localhost:20128` nípa àìyípadà).
 - Node.js 22 tàbí 24.
 
 ## Fífì sínú ẹ̀rọ
@@ -78,7 +78,7 @@ yóò sì dárúkọ endpoint náà àti ohun tí ó sọnù — nítorí náà 
 | `baseURL`                        | ó pọndandan                                          | Gbòngbò ẹnubodè, `http(s)` nìkan; a máa fi ìfikún `/v1` kún un níbi tí ó bá yẹ                                                 |
 | `apiKey`                         | ẹ̀rí ìdánimọ̀ tí a sopọ̀, lẹ́yìn náà `OMNIROUTE_API_KEY` | Kọ́kọ́rọ́ ìfọ̀rọ̀wérọ̀ fún `/v1/*`                                                                                                   |
 | `managementReadToken`            | máa lo `apiKey` bí kò bá sí                          | Kọ́kọ́rọ́ fún `/api/*` — ní ọ̀pọ̀ ìgbà, ó **kì í ṣe** ọ̀kan náà                                                                      |
-| `displayName`                    | `"OmniRoute"`                                        | Orúkọ olùpèsè nínú ohun ìṣàyàn                                                                                                 |
+| `displayName`                    | `"67router"`                                         | Orúkọ olùpèsè nínú ohun ìṣàyàn                                                                                                 |
 | `timeoutMs`                      | `10000`                                              | Àkókò ìdádúró tó pọ̀ jù fún ìgbà ìgbàlódé kọ̀ọ̀kan (àwọn àkópọ̀ aládàáṣiṣẹ́ máa ń lo 5s)                                            |
 | `modelCacheTtlMs`                | `300000`                                             | TTL kaṣe katalọ́ọ̀gù; àwòrán-ìpamọ́ lórí disiki máa ń mú ìbẹ̀rẹ̀ tútù yára                                                          |
 | `timeouts`                       | máa lo `timeoutMs` bí kò bá sí                       | Àwọn ààlà àkókò fún ibi ìpè kọ̀ọ̀kan ní ms: `models`, `combos`, `autoCombos`, `enrichment`                                       |
@@ -124,7 +124,7 @@ A máa ń fi irinṣẹ́ tí ó ní `$ref` ránṣẹ́ láìfọwọ́ kàn á
 
 | Àmì Ìṣòro                                         | Ohun tó fà á                                                                                                   |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Olùyàn kò fi àwòṣe OmniRoute kankan hàn           | Kò sí kọ́kọ́rọ́ tí a rí (ṣàyẹ̀wò ìkìlọ̀ nígbà ìbẹ̀rẹ̀), tàbí a kò lè dé ẹnu-ọ̀nà                                       |
+| Olùyàn kò fi àwòṣe 67router kankan hàn            | Kò sí kọ́kọ́rọ́ tí a rí (ṣàyẹ̀wò ìkìlọ̀ nígbà ìbẹ̀rẹ̀), tàbí a kò lè dé ẹnu-ọ̀nà                                       |
 | Àwọn id àwòṣe lásán, kò sí àkójọpọ̀, kò sí iye owó | Àwọn endpoint ìṣàkóso kọ token náà — ṣètò `managementReadToken`                                                |
 | Kátálọ́ọ̀gù `freeOnly` kúkúrú tàbí òfo              | Kò sí token ìṣàkóso tàbí a kọ token náà — ka ìlà àkótán ìsọdọtun (iye `unmatched-free`) nínú log olùgbàlejò    |
 | Àkókò ìṣiṣẹ́ kan tí a dì mọ́ `opencode-<id>/…`      | Plugin v1 ṣe àtẹ̀jáde `opencode-<id>`; v2 ń ṣe àtẹ̀jáde `<id>` lásán, nítorí náà tún yan àwòṣe náà lábẹ́ `<id>/…` |

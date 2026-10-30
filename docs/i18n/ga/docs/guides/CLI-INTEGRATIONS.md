@@ -7,11 +7,11 @@
 Maidir leis an léiriúchán inrite comhroinnte, timpeallachtaí srianta fochláir agus socrú buan
 Gemini, féach [conarthaí seolta CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-Cuireann OmniRoute teaghlach d’orduithe `setup-*` ar fáil a chumraíonn CLI códúcháin
-(Codex, Claude Code, OpenCode, Cline, …) chun OmniRoute a úsáid mar a inneall — ionas
-go ndéanann an uirlis cumarsáid le críochphointe **amháin** agus go seolann OmniRoute í chuig
+Cuireann 67router teaghlach d’orduithe `setup-*` ar fáil a chumraíonn CLI códúcháin
+(Codex, Claude Code, OpenCode, Cline, …) chun 67router a úsáid mar a inneall — ionas
+go ndéanann an uirlis cumarsáid le críochphointe **amháin** agus go seolann 67router í chuig
 an soláthraí ceart le cúltaca uathoibríoch. Léann gach ordú catalóg **bheo** na samhlacha ó
-OmniRoute atá ag rith (go háitiúil nó go cianda) agus scríobhann sé comhad cumraíochta na
+67router atá ag rith (go háitiúil nó go cianda) agus scríobhann sé comhad cumraíochta na
 huirlise féin ar **do** ríomhaire. Déantar tagairt don eochair API trí athróg timpeallachta
 cibé áit a dtacaíonn an uirlis leis sin. Luaitear thíos na horduithe a stórálann comhad
 timpeallachta áitiúil don uirlis go buan.
@@ -56,7 +56,7 @@ mionléargais do gach uirlis:
 
 - [Cumraíocht Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Cumraíocht Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Mód Cianda](./REMOTE-MODE.md) — rialaigh OmniRoute cianda (VPS / Tailnet) ó do ríomhaire glúine
+- [Mód Cianda](./REMOTE-MODE.md) — rialaigh 67router cianda (VPS / Tailnet) ó do ríomhaire glúine
 - [Comhrá Copilot VS Code](./VSCODE-COPILOT.md) — an eisínteacht OmniCopilot; is féidir léi na
   horduithe `setup-*` seo a rith duit ón eagarthóir freisin
 
@@ -92,7 +92,7 @@ bhfreastalaí sin agus scríobhann sé an chumraíocht go logánta.
 
 Nótaí faoi bhratacha (fíoraithe i bhfoinse an ordaithe):
 
-- `--remote <url>` — faigheann sé an chatalóg ó OmniRoute cianda (sáraíonn sé `--port`
+- `--remote <url>` — faigheann sé an chatalóg ó 67router cianda (sáraíonn sé `--port`
   agus an comhthéacs gníomhach). Soláthraíonn `--api-key <key>` an dintiúr don
   fhreastalaí sin (úsáideann sé athróg timpeallachta `OMNIROUTE_API_KEY` mar réamhshocrú, nó comhartha an chomhthéacs ghníomhaigh).
 - `--only <patterns>` — fotheaghráin scartha le camóga; ná coinnigh ach aitheantais samhlacha a mheaitseálann
@@ -113,7 +113,7 @@ Nótaí faoi bhratacha (fíoraithe i bhfoinse an ordaithe):
   **codex** trí argóintí `-c model_providers.omniroute.*`. **Is é Qwen an t-aon sprioc rite
   a éilíonn `--model` go docht** — scoireann `omniroute run qwen` gan é le cód
   `2` agus earráid shainráite.
-- `--port <port>` — port áitiúil OmniRoute (`20128` mar réamhshocrú, déantar neamhaird de nuair atá `--remote`
+- `--port <port>` — port áitiúil 67router (`20128` mar réamhshocrú, déantar neamhaird de nuair atá `--remote`
   socraithe). Tá sé ar gach ordú `setup-*` agus ar an dá thosaitheoir.
 - Cóid scoir `omniroute run`: iomadaítear cód scoir an CLI linbh féin
   focal ar fhocal; `2` = argóintí neamhbhailí (sprioc nach dtacaítear léi, `--model` riachtanach ar iarraidh,
@@ -158,7 +158,7 @@ ní chuirtear i láthair iad mar spriocanna is féidir a sheoladh.
 
 ## Úsáid áitiúil
 
-Agus OmniRoute ag rith ar `localhost:20128`, níl le déanamh ach an t-ordú socraithe a rith do d’uirlis. Faightear an chatalóg ón bhfreastalaí áitiúil.
+Agus 67router ag rith ar `localhost:20128`, níl le déanamh ach an t-ordú socraithe a rith do d’uirlis. Faightear an chatalóg ón bhfreastalaí áitiúil.
 
 ```bash
 # Codex: scríobh próifíl do gach samhail mheaitseáilte isteach in ~/.codex/
@@ -185,8 +185,8 @@ omniroute setup-continue --dry-run
 Seol gan aon chumraíocht a scríobh ar chor ar bith (instealladh timpeallachta amháin):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute áitiúil
-omniroute launch-codex           # Codex CLI → OmniRoute áitiúil
+omniroute launch                 # Claude Code → 67router áitiúil
+omniroute launch-codex           # Codex CLI → 67router áitiúil
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -204,7 +204,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Úsáid chianda
 
-Dírigh aon ordú socraithe ar OmniRoute cianda le `--remote` + `--api-key`. Faightear an chatalóg ón gcianchóras; scríobhtar an chumraíocht ar do ríomhaire áitiúil.
+Dírigh aon ordú socraithe ar 67router cianda le `--remote` + `--api-key`. Faightear an chatalóg ón gcianchóras; scríobhtar an chumraíocht ar do ríomhaire áitiúil.
 
 ```bash
 # OpenCode i gcoinne VPS chianda, ná coinnigh ach samhlacha glm/kimi
@@ -242,7 +242,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Scríobhann an dá fhoirm próifíl **fíordheimhnithe** amháin do 5dive, agus déanann gach suíochán `claude` atá ceangailte leis an bpróifíl sin cumarsáid le OmniRoute ansin. Baineann trí rud go sonrach leis an sprioc seo:
+Scríobhann an dá fhoirm próifíl **fíordheimhnithe** amháin do 5dive, agus déanann gach suíochán `claude` atá ceangailte leis an bpróifíl sin cumarsáid le 67router ansin. Baineann trí rud go sonrach leis an sprioc seo:
 
 - **Ritheann sé ar óstríomhaire an fhlít, mar root.** Feidhmíonn briathra 5dive ar aonaid áitiúla systemd agus ar chomhadlann staide atá faoi úinéireacht root; níl aon mhód cianda ann. Athsheolann an t-oideas é féin trí `sudo` nuair nach bhfuil sé ag rith mar root cheana féin (múchann `--no-sudo` é sin agus priontálann sé an t-ordú ina ionad).
 - **Ní mór don chríochphointe a bheith ina `https://` mura seoladh aislúibe é.** Seoltar eochair API an ghníomhaire leis an URL sin ar gach iarratas, agus diúltaíonn 5dive do chríochphointe neamhchriptithe lasmuigh den óstríomhaire. Ní eisceacht é seoladh príobháideach LAN.
@@ -250,13 +250,13 @@ Scríobhann an dá fhoirm próifíl **fíordheimhnithe** amháin do 5dive, agus 
 
 Tugtar an eochair API do 5dive ar **stdin** (`--api-key=-`), mar sin ní bhíonn sí le feiceáil riamh in aschur `ps`.
 
-Tríd an bpróifíl a dhíriú ar **theaglaim** OmniRoute seachas ar shamhail aonair, faigheann an flít cúltaca soláthraí: nuair a thit an príomhchríochphointe go hiomlán i lár seala sa rith a taifeadadh ar [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), chríochnaigh an gníomhaire na céimeanna a bhí fágtha aige ar an rogha chúltaca agus níor nocht sé an briseadh seirbhíse riamh.
+Tríd an bpróifíl a dhíriú ar **theaglaim** 67router seachas ar shamhail aonair, faigheann an flít cúltaca soláthraí: nuair a thit an príomhchríochphointe go hiomlán i lár seala sa rith a taifeadadh ar [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), chríochnaigh an gníomhaire na céimeanna a bhí fágtha aige ar an rogha chúltaca agus níor nocht sé an briseadh seirbhíse riamh.
 
 ---
 
 ## Gnásanna don URL bonn (cé na huirlisí a éilíonn `/v1`)
 
-Cuireann OmniRoute comhéadan OpenAI ar fáil ag `/v1`, comhéadan Anthropic ag an bhfréamh,
+Cuireann 67router comhéadan OpenAI ar fáil ag `/v1`, comhéadan Anthropic ag an bhfréamh,
 agus comhéadan dúchasach Gemini ag `/v1beta`. Tá gach comhtháthú cumraithe de réir na foirme a
 mbíonn a uirlis ag súil léi (deimhnithe i bhfoinse an ordaithe):
 
@@ -278,7 +278,7 @@ mbíonn a uirlis ag súil léi (deimhnithe i bhfoinse an ordaithe):
 ## Spleáchais dhúchasacha a choinneáil le linn nuashonraithe: `--include=optional`
 
 Nuair a dhéanann tú nuashonrú le `omniroute update` (tar éis deimhniú, nó le `--apply`),
-ritheann OmniRoute an tsuiteáil agus `--include=optional` ionsuite inti:
+ritheann 67router an tsuiteáil agus `--include=optional` ionsuite inti:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -306,13 +306,13 @@ as dáta), `--apply` (suiteáil gan leid), `--changelog`, `--no-backup`,
 Conradh fíoraithe i gcoinne `@google/gemini-cli` 0.50.0: cloíonn an CLI le
 `GOOGLE_GEMINI_BASE_URL` agus eisíonn sé `POST /v1beta/models/<model>:generateContent`
 (agus `:streamGenerateContent?alt=sse`) chuige — dromchla dúchasach
-Gemini OmniRoute (`/v1beta`) go díreach. Ceanglaíonn `omniroute run gemini` é sin go huathoibríoch:
+Gemini 67router (`/v1beta`) go díreach. Ceanglaíonn `omniroute run gemini` é sin go huathoibríoch:
 
-- `GOOGLE_GEMINI_BASE_URL` → bun-URL gníomhach OmniRoute (fréamh, gan `/v1`);
-- `GEMINI_API_KEY` → dintiúr OmniRoute a réitíodh (rogha/timpeallacht/comhthéacs);
+- `GOOGLE_GEMINI_BASE_URL` → bun-URL gníomhach 67router (fréamh, gan `/v1`);
+- `GEMINI_API_KEY` → dintiúr 67router a réitíodh (rogha/timpeallacht/comhthéacs);
 - **`GEMINI_CLI_HOME` sealadach leithlisithe** a roghnaíonn a `.gemini/settings.json`
   fíordheimhniú `gemini-api-key`, ionas nach sáróidh seisiún stóráilte Google OAuth (Code Assist)
-  an lainseáil atá dírithe ar OmniRoute choíche — baintear é tar éis scoir;
+  an lainseáil atá dírithe ar 67router choíche — baintear é tar éis scoir;
 - **sláinteachas timpeallachta**: glantar `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` agus `GOOGLE_GENAI_USE_GCA` de thimpeallacht an phróisis linbh
   (a dhéanfadh fíordheimhniú a atreorú chuig Vertex/Code Assist), agus socraítear
@@ -336,7 +336,7 @@ comhtháthú prótacail gníomhaire do `/dashboard/acp-agents`.
 
 Ritear aischéimniú cinntitheach an phlean seolta in CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Chun na FÍOR-dhénártha a bhailíochtú i gcoinne FÍORfhreastalaí
-OmniRoute, tá creat tástála roghnach ar fáil ag
+67router, tá creat tástála roghnach ar fáil ag
 `tests/integration/upstream-cli-smoke.int.test.ts`. Ní ritear go huathoibríoch riamh é
 (déantar gach fotheagmháil tástála a scipeáil mura bhfuil `RUN_CLI_SMOKE=1` ann), tugann sé ainm na hathróige timpeallachta
 don dintiúr (ní an luach riamh), folaíonn sé teaghráin atá cosúil le heochracha ó aon aschur taifeadta, scipeálann sé

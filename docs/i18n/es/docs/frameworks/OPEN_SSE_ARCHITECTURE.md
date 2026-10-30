@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: `open-sse/` es el motor principal de streaming que procesa todas las solicitudes a LLM en OmniRoute. Contiene ~1,400 archivos que implementan el flujo de solicitudes, los ejecutores, los servicios, el servidor MCP y la capa de traducción. Esta guía explica cómo encajan todas las piezas.
+> **TL;DR**: `open-sse/` es el motor principal de streaming que procesa todas las solicitudes a LLM en 67router. Contiene ~1,400 archivos que implementan el flujo de solicitudes, los ejecutores, los servicios, el servidor MCP y la capa de traducción. Esta guía explica cómo encajan todas las piezas.
 
 **Fuente:** `open-sse/` (paquete del workspace, ~1,440 archivos `.ts` que no son de prueba)
 
@@ -12,10 +12,10 @@
 
 ## ¿Por qué un paquete de workspace independiente?
 
-`open-sse/` es un **workspace independiente** dentro del monorepo de OmniRoute por varias razones:
+`open-sse/` es un **workspace independiente** dentro del monorepo de 67router por varias razones:
 
 1. **Reutilización** — `open-sse` se publica como `@omniroute/open-sse` en npm, por lo que otros proyectos pueden usarlo de forma independiente
-2. **Límites claros** — el motor de streaming está desacoplado de la capa de interfaz de usuario/base de datos específica de OmniRoute
+2. **Límites claros** — el motor de streaming está desacoplado de la capa de interfaz de usuario/base de datos específica de 67router
 3. **Rendimiento** — el motor no tiene dependencias de Next.js, lo que permite arranques en frío más rápidos en contextos de CLI/serverless
 4. **Versionado** — `open-sse` puede publicar versiones siguiendo su propio calendario
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### ¿Por qué un transformador independiente?
 
-Responses API es el nuevo formato de OpenAI con **conversaciones con estado** (`previous_response_id`). Cuando un cliente envía una solicitud de Responses, OmniRoute:
+Responses API es el nuevo formato de OpenAI con **conversaciones con estado** (`previous_response_id`). Cuando un cliente envía una solicitud de Responses, 67router:
 
 1. Convierte internamente Responses → Chat Completions
 2. La envía al proveedor (cualquier proveedor compatible con Chat Completions)

@@ -25,7 +25,7 @@ La primera línea cuya primera columna sea la palabra literal `provider` (sin di
 Descargue un archivo inicial desde el modal de importación (**Descargar plantilla CSV**). Ejemplo:
 
 ```csv
-# Importación de proveedores de OmniRoute (columnas posicionales)
+# Importación de proveedores de 67router (columnas posicionales)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

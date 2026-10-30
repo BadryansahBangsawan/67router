@@ -5,7 +5,7 @@
 ---
 
 ಸ್ವಯಂ-ಹೋಸ್ಟ್ ಮಾಡಿದ ಪೂಲ್ **.113** ಬಾಕ್ಸ್ನಲ್ಲಿ (`tomni-proxmox-113`) ರನ್ ಆಗುತ್ತದೆ. 2026-10-18 ರಿಂದ ಪ್ರತಿ
-OmniRoute runnerಗೆ **ಒಂದು ಪಾತ್ರ**, ಒಂದು label ಮತ್ತು ಅದರ workloadನಲ್ಲಿ ಅಳೆಯಲಾದ ಬಳಕೆಗೆ ಅನುಗುಣವಾದ memory/CPU
+67router runnerಗೆ **ಒಂದು ಪಾತ್ರ**, ಒಂದು label ಮತ್ತು ಅದರ workloadನಲ್ಲಿ ಅಳೆಯಲಾದ ಬಳಕೆಗೆ ಅನುಗುಣವಾದ memory/CPU
 ಬಜೆಟ್ ಇದೆ. Turbopack slotಗೆ buildಗೆ ಅಗತ್ಯವಿರುವಷ್ಟು ಸಂಪನ್ಮೂಲಗಳು ದೊರೆಯುತ್ತವೆ; ಇತರ slotಗಳನ್ನು ಅವುಗಳ
 ಅಳೆಯಲಾದ ಗರಿಷ್ಠ ಬಳಕೆಗೆ ಅನುಗುಣವಾಗಿ ಗಾತ್ರಗೊಳಿಸಲಾಗಿದೆ. Turbopack build, Release-Green
 webpack build ಮತ್ತು lint job ಒಂದೇ ಸಮಯದಲ್ಲಿ ನಡೆದಾಗ ಮಾತ್ರ ಬಾಕ್ಸ್ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಮಿತಿಮೀರಿ ಹಂಚುತ್ತದೆ;
@@ -28,7 +28,7 @@ Turbopack slot ಹೆಚ್ಚಿನ ಸಮಯ ನಿಷ್ಕ್ರಿಯವಾ
 | swap      | 16 GB                             | `omniroute-113-5` swap ಆಫ್ನೊಂದಿಗೆ (`MemorySwapMax=0`) ರನ್ ಆಗುತ್ತದೆ, ಆದ್ದರಿಂದ ನಿಯಂತ್ರಣ ತಪ್ಪಿದ build ಬಾಕ್ಸ್ ಅನ್ನು swap ಮಾಡುವ ಬದಲು ಅದರ ಮಿತಿಯಲ್ಲಿ ಕೊನೆಗೊಳಿಸಲ್ಪಡುತ್ತದೆ                                                                                                                                                                                                                                                                   |
 | `/tmp`    | **12 GB tmpfs = RAM**             | ಅಲ್ಲಿ ಇರಿಸಲಾದ ಎಲ್ಲವೂ memory ಬಳಸುತ್ತದೆ; ಉಳಿದವುಗಳನ್ನು 3 ಗಂಟೆಗಳ ನಂತರ ಸ್ವಚ್ಛಗೊಳಿಸಲಾಗುತ್ತದೆ                                                                                                                                                                                                                                                                                                                                              |
 | CPU       | 32 coresನಲ್ಲಿ load 60 ಗಮನಿಸಲಾಗಿದೆ | quotaಗಳ ಮೊದಲು, ಅದೇ ಬಾಕ್ಸ್ನಲ್ಲಿ ಒಂದು Turbopack build (~1166 % CPU) ಜೊತೆಗೆ coverage suite ನಡೆದಾಗ ಇತರ listenerಗಳ heartbeatಗಳಿಗೆ ಸಂಪನ್ಮೂಲ ಸಿಗಲಿಲ್ಲ (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                                                |
-| runners   | **6 listeners**                   | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ (`systemctl enable --now` ಅವುಗಳಲ್ಲಿ ಒಂದನ್ನು ಮರಳಿ ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ)                                                                                                                                                                                                                                                                            |
+| runners   | **6 listeners**                   | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ (`systemctl enable --now` ಅವುಗಳಲ್ಲಿ ಒಂದನ್ನು ಮರಳಿ ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ)                                                                                                                                                                                                                                                                             |
 
 ಮಿತಿಗಳು ಪ್ರತಿ unitನ `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`ನಲ್ಲಿ
 ಇವೆ (ಹಿಂದಿನ ಮೌಲ್ಯಗಳನ್ನು `override.conf.bak-20261018` ಆಗಿ ಉಳಿಸಲಾಗಿದೆ) ಮತ್ತು
@@ -77,7 +77,7 @@ SIGTERM ಕಳುಹಿಸಿ — `next-build`, `npm run build`, `build-next-iso
 
 ರನ್ನರ್ನ ಡೀಫಾಲ್ಟ್ `KillMode=process`, ಯೂನಿಟ್ ಅನ್ನು ನಿಲ್ಲಿಸಿದಾಗ ಅಥವಾ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ
 `Runner.Worker → npm → next-build` ಅನ್ನು ಚಾಲನೆಯಲ್ಲೇ ಬಿಡುತ್ತದೆ — ಲಗತ್ತಿಸಲಾದ ಜಾಬ್ ಇಲ್ಲದ
-ಅನಾಥ ಬಿಲ್ಡ್ RAM ಮತ್ತು CPU ಅನ್ನು ಬಳಸುತ್ತಲೇ ಇರುತ್ತದೆ. ಪ್ರತಿಯೊಂದು OmniRoute ಯೂನಿಟ್
+ಅನಾಥ ಬಿಲ್ಡ್ RAM ಮತ್ತು CPU ಅನ್ನು ಬಳಸುತ್ತಲೇ ಇರುತ್ತದೆ. ಪ್ರತಿಯೊಂದು 67router ಯೂನಿಟ್
 `KillMode=mixed` ಹೊಂದಿರುವ ಡ್ರಾಪ್-ಇನ್
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ಅನ್ನು ಹೊಂದಿದೆ: ಮೊದಲು ಲಿಸನರ್ಗೆ SIGTERM, ನಂತರ `TimeoutStop` ನಲ್ಲಿ ಸಂಪೂರ್ಣ cgroup ಗೆ
@@ -126,7 +126,7 @@ SIGKILL. ಯೂನಿಟ್ನ ಮುಂದಿನ ಮರುಪ್ರಾರಂಭ
   `next build` ಅಗತ್ಯವಿರುವ ರಾತ್ರಿಯ ರನ್ಗಳನ್ನು (~5–6 GB; webpack) ಮತ್ತು `quality.yml` `lint-guard` ಅನ್ನು
   ಚಲಾಯಿಸುತ್ತವೆ. 2026-10-18ರವರೆಗೆ `omniroute-113` ನಲ್ಲಿ `MemoryHigh=4G` ಇತ್ತು — promptfoo ಬಿಲ್ಡ್
   ಅಲ್ಲಿ 54 ನಿಮಿಷಗಳ ಕಾಲ ಮೆಮೊರಿಯನ್ನು ಪುನಃಪಡೆಯುತ್ತಾ ಸಾಗಿತು; 8 GB ಥ್ರಾಟ್ಲಿಂಗ್ ಅನ್ನು ನಿವಾರಿಸುತ್ತದೆ.
-- **ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಕಡಿಮೆ ಲಿಸನರ್ಗಳು.** 2026-08-29ರಂದು ನಾಲ್ಕು OmniRoute ಯೂನಿಟ್ಗಳನ್ನು
+- **ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಕಡಿಮೆ ಲಿಸನರ್ಗಳು.** 2026-08-29ರಂದು ನಾಲ್ಕು 67router ಯೂನಿಟ್ಗಳನ್ನು
   ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಯಿತು — ಪ್ರತಿಯೊಂದು ಹೆಚ್ಚುವರಿ ಲಿಸನರ್ ಮೇಲಿನ ಮೆಮೊರಿ ಬಜೆಟ್ಗೆ ಮತ್ತೊಂದು ಟೆನಂಟ್ ಆಗಿದೆ.
   ಜ್ಯಾನಿಟರ್ ಮಿತಿ 6 (`MAX_ACTIVE_RUNNERS=6` in cron): ಇದು ಬಾಕ್ಸ್ನಲ್ಲಿರುವ ಪ್ರತಿಯೊಂದು
   `Runner.Listener` ಅನ್ನು ಎಣಿಸುತ್ತದೆ ಮತ್ತು OmniHeuris + OmniMind ನಮ್ಮ ನಾಲ್ಕಕ್ಕೆ ಇನ್ನೆರಡನ್ನು ಸೇರಿಸುತ್ತವೆ.

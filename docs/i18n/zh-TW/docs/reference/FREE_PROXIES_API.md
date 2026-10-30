@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 在 `free_proxies` 資料表中提供一組精選的免費代理伺服器，
+67router 在 `free_proxies` 資料表中提供一組精選的免費代理伺服器，
 並從外部提供者（1proxy、proxifly、iplocate、webshare）同步資料。
 儀表板會在 **設定 → 免費代理伺服器** 下顯示這些代理伺服器。本文說明
 清單路由所提供的伺服器端篩選、排序、計數及同步錯誤回報功能。

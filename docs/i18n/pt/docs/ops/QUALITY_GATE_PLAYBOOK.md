@@ -4,7 +4,7 @@
 
 ---
 
-> **O que é este documento.** Uma avaliação crítica do sistema de portas de qualidade do OmniRoute,
+> **O que é este documento.** Uma avaliação crítica do sistema de portas de qualidade do 67router,
 > comparado com as melhores práticas da indústria, **mais** um catálogo abrangente de todos os pontos
 > de controlo de qualidade e um **plano de replicação independente de ferramentas** para aplicar o mesmo sistema a
 > qualquer projeto. Gerado em 2026-06-16 a partir do estado real do repositório (não de memória).
@@ -101,62 +101,62 @@ para o replicar em qualquer stack.
 
 ### 1. Estilo e formatação (determinísticos, rápidos)
 
-- **OmniRoute:** Prettier + ESLint através de lint-staged (pre-commit), 2 espaços/aspas duplas/100 colunas.
+- **67router:** Prettier + ESLint através de lint-staged (pre-commit), 2 espaços/aspas duplas/100 colunas.
 - **Genérico:** um formatador com correção automática + um linter, executados em pre-commit nos ficheiros em staging.
 
 ### 2. Tipos
 
-- **OmniRoute:** `typecheck:core` (bloqueante) + `typecheck:noimplicit:core` (consultivo) + patamar progressivo de 92,17% no `type-coverage` + limite de `any` por ficheiro.
+- **67router:** `typecheck:core` (bloqueante) + `typecheck:noimplicit:core` (consultivo) + patamar progressivo de 92,17% no `type-coverage` + limite de `any` por ficheiro.
 - **Genérico:** verificação de tipos estrita em CI + métrica de cobertura de tipos com patamar progressivo + limite de `any`/mecanismos de escape por ficheiro.
 
 ### 3. Testes (intensidade)
 
-- **OmniRoute:** 2 executores sem sobreposição (Node nativo + vitest), 8 fragmentos, cobertura global de 60/60/60/60 + patamar progressivo de ~76% + **8 patamares por módulo para módulos críticos** + testes de propriedades noturnos + **testes de mutação** noturnos.
+- **67router:** 2 executores sem sobreposição (Node nativo + vitest), 8 fragmentos, cobertura global de 60/60/60/60 + patamar progressivo de ~76% + **8 patamares por módulo para módulos críticos** + testes de propriedades noturnos + **testes de mutação** noturnos.
 - **Genérico:** executor(es) de testes + patamar **absoluto** de cobertura (contra valores nulos) + **patamar progressivo** de cobertura (contra regressões) + **patamares por módulo para código de alto risco** (contra a lei de Goodhart) + testes baseados em propriedades para lógica pura + **testes de mutação** noturnos como medida real da qualidade dos testes.
 
 ### 4. Política de testes (contra manipulação)
 
-- **OmniRoute:** `pr-test-policy` (código de produção exige um teste), `check-test-masking` (bloqueia asserções enfraquecidas), `pr-evidence` (uma alegação de sucesso exige um bloco de provas), `test-discovery` (todos os testes são recolhidos por um executor).
+- **67router:** `pr-test-policy` (código de produção exige um teste), `check-test-masking` (bloqueia asserções enfraquecidas), `pr-evidence` (uma alegação de sucesso exige um bloco de provas), `test-discovery` (todos os testes são recolhidos por um executor).
 - **Genérico:** controlo "novo código ⇒ novo teste" + detetor de asserções removidas/tautologias + requisito de provas (TDD ou teste vivo) + garantia de que nenhum teste fica órfão fora dos globs.
 
 ### 5. Complexidade e saúde do código (patamares progressivos)
 
-- **OmniRoute:** avisos do ESLint (3769↓), duplicação do jscpd (5,72%↓), complexidade ciclomática+máximo de linhas (1800↓), complexidade cognitiva do sonarjs (753↓), código morto/exports não utilizados do knip (339↓), tamanho por ficheiro (congelado, apenas pode diminuir), dependências circulares (Tarjan personalizado, bloqueante).
+- **67router:** avisos do ESLint (3769↓), duplicação do jscpd (5,72%↓), complexidade ciclomática+máximo de linhas (1800↓), complexidade cognitiva do sonarjs (753↓), código morto/exports não utilizados do knip (339↓), tamanho por ficheiro (congelado, apenas pode diminuir), dependências circulares (Tarjan personalizado, bloqueante).
 - **Genérico:** aplicar um patamar progressivo a todas as métricas de saúde (avisos, duplicação, complexidade ciclomática **e** cognitiva, código morto, tamanho dos ficheiros, ciclos de importação). A orientação é sempre "não regredir".
 
 ### 6. Segurança estática (SAST + segredos)
 
-- **OmniRoute:** CodeQL (patamar progressivo de alertas = 0), gitleaks (`[extend] useDefault=true` — crítico!), SonarQube, regras de segurança personalizadas (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (patamar progressivo de alertas = 0), gitleaks (`[extend] useDefault=true` — crítico!), SonarQube, regras de segurança personalizadas (public-creds, error-helper, route-guard-membership, route-validation).
 - **Genérico:** SAST (CodeQL/Sonar/semgrep) com patamar progressivo de alertas + scanner de segredos com **conjunto de regras predefinido herdado** (uma configuração personalizada que substitua a predefinida = ponto cego) + controlos de segurança de Regras Rígidas específicos do projeto.
 
 ### 7. Cadeia de fornecimento (dependências)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (lista de permissões SPDX), lockfile-lint (HTTPS+sha512+registo), `check-deps` contra slopsquatting (lista de permissões + idade ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (lista de permissões SPDX), lockfile-lint (HTTPS+sha512+registo), `check-deps` contra slopsquatting (lista de permissões + idade ≥72h).
 - **Genérico:** SCA de múltiplas fontes + lista de permissões de licenças + verificação da integridade do lockfile + lista de permissões de dependências com verificação de idade/typosquatting + bot de atualizações agrupadas.
 
 ### 8. Cadeia de fornecimento (compilação e lançamento)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), proveniência SLSA (`--provenance`), OpenSSF Scorecard (semanal), reforço dos workflows (zizmor: artipacked→`persist-credentials:false`, envenenamento da cache, permissões de tokens).
+- **67router:** SBOM (CycloneDX + syft), proveniência SLSA (`--provenance`), OpenSSF Scorecard (semanal), reforço dos workflows (zizmor: artipacked→`persist-credentials:false`, envenenamento da cache, permissões de tokens).
 - **Genérico:** gerar SBOM na publicação + proveniência assinada (SLSA L2+) + Scorecard agendado + reforçar todos os workflows (tokens com privilégios mínimos, sem credenciais persistentes em checkouts que não efetuam push, ações fixadas por SHA).
 
 ### 9. Contratos e API
 
-- **OmniRoute:** oasdiff (alterações incompatíveis de OpenAPI), schemathesis (fuzzing de contratos noturno), openapi-coverage (% de rotas documentadas, patamar progressivo de 38,3%), openapi-security-tiers (especificação vs. route-guard).
+- **67router:** oasdiff (alterações incompatíveis de OpenAPI), schemathesis (fuzzing de contratos noturno), openapi-coverage (% de rotas documentadas, patamar progressivo de 38,3%), openapi-security-tiers (especificação vs. route-guard).
 - **Genérico:** comparação de contratos para detetar alterações incompatíveis (oasdiff/buf) + fuzzing baseado em propriedades face à especificação (schemathesis) + cobertura da documentação com patamar progressivo + consistência entre especificação e código.
 
 ### 10. Documentação e i18n (contra a degradação)
 
-- **OmniRoute:** docs-sync (versões espelhadas), docs-counts-sync (números na documentação vs. código), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + patamar progressivo de 80,1%).
+- **67router:** docs-sync (versões espelhadas), docs-counts-sync (números na documentação vs. código), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + patamar progressivo de 80,1%).
 - **Genérico:** sincronizar versões/contagens/variáveis de ambiente entre a documentação e o código (controlo, não confiança) + validar ligações internas + cobertura de i18n com patamar progressivo.
 
 ### 11. Contra alucinações / consistência (a categoria rara)
 
-- **OmniRoute:** known-symbols (despacho por string ⇒ símbolo existente), provider-consistency, fetch-targets (fetch do cliente ⇒ rota real), docs-symbols, db-rules (Regras Rígidas #2/#5), migration-numbering.
+- **67router:** known-symbols (despacho por string ⇒ símbolo existente), provider-consistency, fetch-targets (fetch do cliente ⇒ rota real), docs-symbols, db-rules (Regras Rígidas #2/#5), migration-numbering.
 - **Genérico:** para cada "fonte de verdade duplicada" (registo, despacho por string, referências entre camadas), um controlo que demonstre que ambos os lados correspondem. Deteta a degradação que a verificação de tipos e os testes não detetam.
 
 ### 12. Resiliência e domínio (específicos do produto)
 
-- **OmniRoute:** caos (injeção de falhas), crescimento do heap (fugas), k6 (teste de resistência), promptfoo+garak (red team para LLM segundo o OWASP LLM Top 10), as 3 leis da resiliência (disjuntor/período de espera/bloqueio).
+- **67router:** caos (injeção de falhas), crescimento do heap (fugas), k6 (teste de resistência), promptfoo+garak (red team para LLM segundo o OWASP LLM Top 10), as 3 leis da resiliência (disjuntor/período de espera/bloqueio).
 - **Genérico:** identificar os modos de falha do **seu** domínio e ter um controlo (mesmo que noturno) para cada um. Para aplicações de IA: red team contra injeções. Para sistemas distribuídos: caos + fugas + resistência.
 
 ---

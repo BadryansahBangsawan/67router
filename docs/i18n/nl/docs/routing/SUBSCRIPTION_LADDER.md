@@ -10,7 +10,7 @@
 
 ## Waarom dit bestaat
 
-OmniRoute beantwoordt al twee kostenvragen, maar geen van beide is de vraag die de meeste beheerders stellen.
+67router beantwoordt al twee kostenvragen, maar geen van beide is de vraag die de meeste beheerders stellen.
 
 | Bestaand mechanisme                                      | Beantwoordt                                          |
 | -------------------------------------------------------- | ---------------------------------------------------- |

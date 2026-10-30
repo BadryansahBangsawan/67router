@@ -12,7 +12,7 @@
 
 ## 빠른 시작 — 기본 제공 `agentrouter` 공급자 사용(권장)
 
-대부분의 사용자는 **별도의 설정이 필요하지 않습니다**. OmniRoute에는 완전한 Claude Code
+대부분의 사용자는 **별도의 설정이 필요하지 않습니다**. 67router에는 완전한 Claude Code
 통신 형식이 이미 내장된 `agentrouter` 공급자가 기본 제공됩니다
 (`open-sse/config/providerRegistry.ts` → `agentrouter` 참조). 사용 방법은 다음과 같습니다.
 
@@ -34,7 +34,7 @@ AgentRouter 방식의 릴레이에 연결하거나 기본 URL, 채팅 경로 또
 
 ## 고급: Claude Code 호환 공급자 유형을 통한 연결
 
-OmniRoute는 올바른 통신 형식으로 Anthropic Messages API를 사용하는 **Claude Code
+67router는 올바른 통신 형식으로 Anthropic Messages API를 사용하는 **Claude Code
 호환** 공급자 유형(`anthropic-compatible-cc-*`)을 통해 AgentRouter 및 유사한
 릴레이도 지원합니다. `https://agentrouter.org`를 가리키는 일반
 `openai-compatible-chat` 공급자는 **작동하지 않습니다**. 업스트림 WAF가 Claude
@@ -46,13 +46,13 @@ Code처럼 보이지 않는 요청을 거부하기 때문입니다.
 
 - AgentRouter 계정 및 API 키. 신규 가입자는 프로젝트 [README](../README.md)의 제휴
   링크를 통해 무료 크레딧을 받을 수 있습니다.
-- `ENABLE_CC_COMPATIBLE_PROVIDER` 기능 플래그를 활성화하여 실행 중인 OmniRoute
+- `ENABLE_CC_COMPATIBLE_PROVIDER` 기능 플래그를 활성화하여 실행 중인 67router
   인스턴스(아래 참조).
 
 ## 1. CC 호환 공급자 유형 활성화
 
 Claude Code 호환 공급자 유형은 공식 Claude Code 클라이언트와 매우 유사한 트래픽을
-전송하므로 기능 플래그로 제한됩니다. OmniRoute를 시작하기 전에 다음 환경 변수를 설정하여
+전송하므로 기능 플래그로 제한됩니다. 67router를 시작하기 전에 다음 환경 변수를 설정하여
 활성화하십시오.
 
 ```bash

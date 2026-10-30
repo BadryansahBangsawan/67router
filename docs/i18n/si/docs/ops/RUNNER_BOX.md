@@ -5,7 +5,7 @@
 ---
 
 ස්වයං-සත්කාරක සංචිතය **.113** යන්ත්රයෙහි (`tomni-proxmox-113`) ක්රියාත්මක වේ. 2026-10-18 සිට සෑම
-OmniRoute runner එකකටම **එක් භූමිකාවක්**, එක් label එකක් සහ එහි workload සඳහා මනින ලද ප්රමාණයට
+67router runner එකකටම **එක් භූමිකාවක්**, එක් label එකක් සහ එහි workload සඳහා මනින ලද ප්රමාණයට
 ගැළපෙන memory/CPU සීමාවක් ඇත. Turbopack slot එකට build එකට අවශ්ය සම්පත් ලැබෙන අතර, අනෙක් slots ඒවායේ
 මනින ලද උපරිම භාවිතයන්ට අනුව සකසා ඇත. යන්ත්රය අධි-වෙන්කිරීමක් කරන්නේ Turbopack build එකක් Release-Green
 webpack build එකක් සහ lint job එකක් සමඟ එකවර ක්රියාත්මක වන විට පමණි; host swap (16 GB) එය දරාගන්නා අතර,
@@ -27,7 +27,7 @@ pull-request Builds hosted runners මත ක්රියාත්මක වන 
 | swap      | 16 GB                                 | `omniroute-113-5` swap අක්රියව (`MemorySwapMax=0`) ක්රියාත්මක වන නිසා පාලනයෙන් බැහැර වන build එකක් යන්ත්රය swap කිරීම වෙනුවට එහි සීමාවේදී නවත්වනු ලැබේ                                                                                                                                                                                                                                                             |
 | `/tmp`    | **12 GB tmpfs = RAM**                 | එහි තබන ඕනෑම දෙයක් memory භාවිත කරයි; ඉතිරි වූ දේවල් පැය 3කට පසු ඉවත් කෙරේ                                                                                                                                                                                                                                                                                                                                         |
 | CPU       | cores 32ක් මත load 60ක් නිරීක්ෂණය විය | quotas යෙදීමට පෙර, එක් Turbopack build එකක් (~1166 % CPU) සහ එම යන්ත්රයේම coverage suite එකක් අනෙක් listeners වල heartbeats සඳහා සම්පත් හිඟ කළේය (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                             |
-| runners   | **listeners 6ක්**                     | OmniRoute 4ක් + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` අක්රිය කර ඇත (`systemctl enable --now` මඟින් එකක් නැවත සක්රිය කළ හැක)                                                                                                                                                                                                                                                                            |
+| runners   | **listeners 6ක්**                     | 67router 4ක් + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` අක්රිය කර ඇත (`systemctl enable --now` මඟින් එකක් නැවත සක්රිය කළ හැක)                                                                                                                                                                                                                                                                             |
 
 සීමාවන් එක් එක් unit එකේ `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` තුළ ඇත
 (පෙර අගයන් `override.conf.bak-20261018` ලෙස තබා ඇත) සහ ඒවා
@@ -73,7 +73,7 @@ PID අනුව build tree එකට පමණක් SIGTERM යවන්න �
 
 Runner හි පෙරනිමි `KillMode=process` සැකසුම, ඒකකයක් නවත්වන හෝ නැවත ආරම්භ කරන විට
 `Runner.Worker → npm → next-build` සජීවීව තබයි — සම්බන්ධිත job එකක් නොමැති orphan
-build එකක් RAM සහ CPU දිගටම භාවිත කරයි. සෑම OmniRoute ඒකකයකම
+build එකක් RAM සහ CPU දිගටම භාවිත කරයි. සෑම 67router ඒකකයකම
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 තුළ `KillMode=mixed` සහිත drop-in එකක් ඇත: පළමුව listener එකට SIGTERM යවන අතර,
 `TimeoutStop` හිදී සම්පූර්ණ cgroup එකට SIGKILL යවයි. එය ඒකකයේ ඊළඟ restart එකේදී
@@ -117,7 +117,7 @@ build එකක් RAM සහ CPU දිගටම භාවිත කරයි. 
   `next build` එකක් (~5–6 GB; webpack) අවශ්ය රාත්රී job සහ `quality.yml` හි `lint-guard` ධාවනය කරයි. `omniroute-113`
   හි 2026-10-18 දක්වා `MemoryHigh=4G` තිබිණි — promptfoo build එක එහි මිනිත්තු 54ක් පුරා memory reclaim කරමින්
   ඉදිරියට ගියේය; 8 GB මඟින් එම throttling ඉවත් වේ.
-- **අඩු listener ගණනක් තබා ඇත්තේ හිතාමතාය.** OmniRoute unit හතරක් 2026-08-29 දින අක්රිය කරන ලදී — සෑම අමතර
+- **අඩු listener ගණනක් තබා ඇත්තේ හිතාමතාය.** 67router unit හතරක් 2026-08-29 දින අක්රිය කරන ලදී — සෑම අමතර
   listener එකක්ම ඉහත memory budget එකේ තවත් tenant එකකි. ස්වයංක්රීය පිරිසිදුකාරකයේ උපරිම සීමාව 6කි (`MAX_ACTIVE_RUNNERS=6` in cron): එය
   යන්ත්රයේ ඇති සෑම `Runner.Listener` එකක්ම ගණන් කරන අතර, OmniHeuris + OmniMind අපගේ හතරට තවත් දෙකක් එක් කරයි.
 - **කිසියම් runner එකක් කාර්යබහුලව සිටින විට `/tmp` හෝ `_work` කිසිවිටෙක අතින් පිරිසිදු නොකරන්න.**

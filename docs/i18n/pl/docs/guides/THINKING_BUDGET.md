@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Źródło:** `open-sse/services/thinkingBudget.ts`
 
-Budżet rozumowania określa, czy OmniRoute **modyfikuje parametry myślenia/rozumowania klienta** przed przekazaniem żądań do dostawców. **Nie** włącza ani nie wyłącza kompresji, routingu czy pamięci podręcznej promptów.
+Budżet rozumowania określa, czy 67router **modyfikuje parametry myślenia/rozumowania klienta** przed przekazaniem żądań do dostawców. **Nie** włącza ani nie wyłącza kompresji, routingu czy pamięci podręcznej promptów.
 
 ## Tryby
 
-| Tryb                         | Działanie OmniRoute                                                                                                    | Kiedy używać                                                                                                                                                                                |
+| Tryb                         | Działanie 67router                                                                                                     | Kiedy używać                                                                                                                                                                                |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (domyślny) | Pozostawia pola klienta bez zmian (`reasoning`, `reasoning_effort`, `thinking` Claude, `thinking_config` Gemini itp.). | **Codex / Desktop / każdy klient, który powinien kontrolować poziom wysiłku i podsumowania rozumowania.** Wymagany do wyświetlania paneli myślenia, gdy klient żąda `reasoning.summary`.    |
 | **`auto`**                   | **Usuwa wszystkie** pola myślenia/rozumowania z treści żądania przed przekazaniem go do dostawcy nadrzędnego.          | Tylko wtedy, gdy celowo chcesz, aby **dostawca** ustalił wartości domyślne, i **nie** potrzebujesz myślenia kontrolowanego przez klienta. **Nie** oznacza „automatycznie pokazuj myślenie”. |
@@ -38,7 +38,7 @@ Jeśli klient (np. Codex Desktop) wysłał `reasoning: { effort: "ultra", summar
 | **Routing kombinowany / mechanizmy awaryjne**   | Oddzielna funkcja. Bez wpływu.                                                                                                                            |
 | **Limity tokenów klucza API / budżety kosztów** | Oddzielna funkcja. Bez wpływu.                                                                                                                            |
 | **Pamięć podręczna odtwarzania rozumowania**    | Ponowne wstrzykiwanie w wielu turach dla restrykcyjnych dostawców (DeepSeek, Kimi, Qwen-thinking, …). To nie to samo co opcja „pokaż myślenie” w Desktop. |
-| **Odszyfrowywanie `encrypted_content`**         | **Niemożliwe.** Prywatne bloby rozumowania OpenAI/Codex są nieprzezroczyste. OmniRoute nigdy ich nie odszyfrowuje (#7095 / #7176 / #7304).                |
+| **Odszyfrowywanie `encrypted_content`**         | **Niemożliwe.** Prywatne bloby rozumowania OpenAI/Codex są nieprzezroczyste. 67router nigdy ich nie odszyfrowuje (#7095 / #7176 / #7304).                 |
 
 ## Widoczne rozumowanie (klienci Codex / Responses)
 
@@ -51,7 +51,7 @@ Aby klient wyświetlał tekst rozumowania, muszą być spełnione **wszystkie** 
 Jeśli otrzymujesz tylko „zaszyfrowane prywatne rozumowanie”, oznacza to, że:
 
 - użyto trybu **`auto`** (żądanie klienta zostało usunięte) albo
-- usługa nadrzędna zwróciła `encrypted_content` bez tekstu podsumowania (ograniczenie dostawcy; OmniRoute może wyświetlić jedynie symbol zastępczy, a nie zwykły tekst).
+- usługa nadrzędna zwróciła `encrypted_content` bez tekstu podsumowania (ograniczenie dostawcy; 67router może wyświetlić jedynie symbol zastępczy, a nie zwykły tekst).
 
 ## Przykłady API
 
@@ -71,7 +71,7 @@ Schemat (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adap
 
 ### Trwałość / ponowne uruchomienie
 
-Wartość jest przechowywana pod kluczem ustawień `thinkingBudget` i wczytywana podczas uruchamiania procesu (`hydrateThinkingBudgetConfig`). Po zmianie za pośrednictwem bazy danych lub niektórych ścieżek innych niż API **uruchom ponownie proces OmniRoute**, aby stan singletonu w pamięci odpowiadał danym na dysku.
+Wartość jest przechowywana pod kluczem ustawień `thinkingBudget` i wczytywana podczas uruchamiania procesu (`hydrateThinkingBudgetConfig`). Po zmianie za pośrednictwem bazy danych lub niektórych ścieżek innych niż API **uruchom ponownie proces 67router**, aby stan singletonu w pamięci odpowiadał danym na dysku.
 
 ## Lista kontrolna operatora
 

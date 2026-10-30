@@ -5,7 +5,7 @@
 ---
 
 Dette dokumentet beskriver det tilbakemeldingsdrevne grunnlaget for adaptiv ruting som er lagt til i
-OmniRoute. Det er bevisst lite: Det introduserer en typet kanal for rutingsutfall,
+67router. Det er bevisst lite: Det introduserer en typet kanal for rutingsutfall,
 et nettbasert kvalitetssignal som mates inn i den eksisterende auto-combo-poengberegningen, en
 valgfri OpenTelemetry-eksportør og et endepunkt for forklarbarhet. Det **erstatter ikke**
 den eksisterende robusthetsstakken (kretsbryter, nedkjøling av tilkoblinger,
@@ -13,7 +13,7 @@ modellutestenging, helsematrise, autopilot) — det utfyller den.
 
 ## 1. Arkitektonisk kontekst
 
-OmniRoute er et dataplan med en **kritisk forespørselssti** og et **kontroll-/intelligensplan**.
+67router er et dataplan med en **kritisk forespørselssti** og et **kontroll-/intelligensplan**.
 Den kritiske stien må forbli rask, minneeffektiv, asynkron, robust og
 forutsigbar. Evaluering, kvalitetsberegning, eksperimenter og historisk analyse hører
 hjemme i kontrollplanet.
@@ -23,7 +23,7 @@ KI-agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   dataplan (raskt, synkront, i minnet)
+│    67router        │   dataplan (raskt, synkront, i minnet)
 │  ruting / failover  │
 │  helse / rekkverk   │
 │  hurtigbuffer /     │
@@ -240,7 +240,7 @@ Filer: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK).
 - Spans følger GenAI-semantiske konvensjoner (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) i tillegg til OmniRoute-attributter
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) i tillegg til 67router-attributter
   for ruting (resultat, status, ttft, nye forsøk, reservevalg).
 - `record()` legger bare i kø i en avgrenset buffer (O(1)); en bakgrunnstidtaker
   tømmer bufferen asynkront via `POST {endpoint}/v1/traces`. Ved overbelastning
@@ -262,7 +262,7 @@ Filer: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrasjon med evalueringsplanet (beredskap for Future AGI)
 
-OmniRoute behandler Future AGI (eller enhver evaluator) som en **potensiell
+67router behandler Future AGI (eller enhver evaluator) som en **potensiell
 intelligens-/evalueringsbackend, ikke en avhengighet**. Integrasjonspunktene:
 
 - En `RoutingEventSink` kan videresende hendelser asynkront til en evaluator.

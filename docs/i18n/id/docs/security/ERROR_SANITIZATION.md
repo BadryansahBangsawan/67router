@@ -214,7 +214,7 @@ Aturan sanitasi yang diterapkan pada `upstreamDetails`:
 3. Batas kedalaman: struktur bersarang melebihi 4 tingkat diganti dengan string `"[truncated]"`.
 4. Array dibatasi hingga 32 elemen.
 
-Hanya lokasi pemanggilan yang memiliki isi galat penyedia yang telah diurai yang boleh meneruskan `upstreamDetails`. Galat internal OmniRoute
+Hanya lokasi pemanggilan yang memiliki isi galat penyedia yang telah diurai yang boleh meneruskan `upstreamDetails`. Galat internal 67router
 (kegagalan penguraian SSE, konten kosong, blokir guardrail) tidak boleh menyertakannya.
 
 JANGAN meneruskan `err.stack`, `err.message`, atau string mentah apa pun dari pengecualian runtime ke
@@ -225,7 +225,7 @@ Penerusan selektif 4xx upstream mempertahankan bentuk JSON aman dan susunan kata
 pemulihan otomatis klien, tetapi ini bukan penerusan byte demi byte: sanitizer rekursif selalu dijalankan
 sebelum serialisasi. Isi yang siklik, mengandung BigInt, atau memiliki `toJSON()` berbahaya akan ditolak secara tertutup dan tidak
 memenuhi syarat untuk diteruskan. OCR dan moderasi menerapkan aturan yang sama; isi upstream non-JSON, kosong, atau
-berlabel keliru dikonversi menjadi selubung galat JSON OmniRoute kanonis.
+berlabel keliru dikonversi menjadi selubung galat JSON 67router kanonis.
 
 ## Keterbatasan CodeQL yang diketahui: sanitizer kustom tidak dikenali
 

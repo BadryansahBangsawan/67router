@@ -45,7 +45,7 @@ obnovuje plne automatický proces, ktorý projekt používal až do v3.8.48, a z
 záruku WS1.3 (uniknutý token sám osebe nemôže publikovať — žiadny token neexistuje).
 
 **Jednorazové nastavenie (vlastník):** npmjs.com → balík `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: vlastník `diegosouzapw`, repozitár `OmniRoute`, pracovný postup `npm-publish.yml`
+Publisher_ → GitHub: vlastník `diegosouzapw`, repozitár `67router`, pracovný postup `npm-publish.yml`
 (prostredie: žiadne). Kým toto nastavenie neexistuje, automatický krok zlyhá s `ENEEDAUTH`:
 spustite ho znova s `publish_mode=staged` (nižšie) alebo `direct`.
 

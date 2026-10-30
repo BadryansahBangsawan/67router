@@ -7,7 +7,7 @@
 > **事實來源：** `src/lib/db/reasoningCache.ts`、`open-sse/services/reasoningCache.ts`
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 會擷取由思考模式模型產生的助理 `reasoning_content`，並在上游提供者要求時，於多輪請求中透明地重新帶入。這可避免因用戶端的對話歷史缺少上一輪推理內容，而導致嚴格的提供者回傳 HTTP 400 錯誤。
+67router 會擷取由思考模式模型產生的助理 `reasoning_content`，並在上游提供者要求時，於多輪請求中透明地重新帶入。這可避免因用戶端的對話歷史缺少上一輪推理內容，而導致嚴格的提供者回傳 HTTP 400 錯誤。
 
 ## 存在原因
 
@@ -17,7 +17,7 @@ OmniRoute 會擷取由思考模式模型產生的助理 `reasoning_content`，�
 參數不正確：思考模式中的 reasoning_content 必須傳回 API。
 ```
 
-但一般用戶端（Cursor、Cline、Roo Code、OpenAI SDK）會從重新傳送的歷史記錄中移除 `reasoning_content`。OmniRoute 會從伺服器端快取還原它，使上游看到的請求保持一致。Issue #1628 引入了記憶體/SQLite 混合持久化機制，讓快取可在程序重新啟動後繼續保留。
+但一般用戶端（Cursor、Cline、Roo Code、OpenAI SDK）會從重新傳送的歷史記錄中移除 `reasoning_content`。67router 會從伺服器端快取還原它，使上游看到的請求保持一致。Issue #1628 引入了記憶體/SQLite 混合持久化機制，讓快取可在程序重新啟動後繼續保留。
 
 ## 架構
 

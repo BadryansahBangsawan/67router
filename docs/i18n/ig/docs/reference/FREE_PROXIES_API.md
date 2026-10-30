@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-eweta nchịkọta proxy efu ahọpụtara nke ọma na tebụl `free_proxies`,
+67router na-eweta nchịkọta proxy efu ahọpụtara nke ọma na tebụl `free_proxies`,
 nke a na-emekọrịta site n’aka ndị na-enye ọrụ mpụga (1proxy, proxifly, iplocate, webshare). Dashboard ahụ
 na-egosi ha n’okpuru **Settings → Free Proxies**. Akwụkwọ a
 na-akọwa nzacha, nhazi, ngụkọta, na mkpesa njehie mmekọrịta n’akụkụ sava

@@ -14,7 +14,7 @@ codul executorului, valorile implicite OAuth, antetele sau starea mediului de pr
 Același manifest este disponibil prin HTTP la
 `GET /api/v1/provider-plugin-manifest` pentru sidecar-urile care rulează în afara procesului.
 
-OmniRoute comunică acel URL către Bifrost și CLIProxyAPI prin intermediul
+67router comunică acel URL către Bifrost și CLIProxyAPI prin intermediul
 antetului de solicitare `X-OmniRoute-Provider-Manifest-Url`. Setați
 `OMNIROUTE_PROVIDER_MANIFEST_URL` atunci când sidecar-ul necesită un URL public sau din
 rețeaua containerului în locul originii solicitării locale.
@@ -30,7 +30,7 @@ sidecar-ul trebuie să emită o solicitare necondiționată în loc să accepte 
 ## Obiectiv
 
 Mutarea metadatelor furnizorilor către un contract de plugin, astfel încât traseul rapid al solicitărilor
-să poată fi gestionat în cele din urmă de un sidecar cu latență mai mică, în timp ce OmniRoute păstrează
+să poată fi gestionat în cele din urmă de un sidecar cu latență mai mică, în timp ce 67router păstrează
 ruta TypeScript drept mecanism de control al politicilor și soluție de rezervă. Manifestul este aditiv: acesta
 nu modifică singur rutarea solicitărilor.
 
@@ -74,7 +74,7 @@ să recitească sursele TypeScript.
 | `usage-fetch`        | Are configurat un preluator pentru utilizare sau cotă (`getUsageForProvider`).                      |
 | `usage-supported`    | API-ul de utilizare acceptă acest furnizor (`isSupportedUsageConnection`).                          |
 
-`usage-fetch` este destinat exclusiv descoperirii. Acesta indică faptul că OmniRoute știe cum să citească utilizarea pentru
+`usage-fetch` este destinat exclusiv descoperirii. Acesta indică faptul că 67router știe cum să citească utilizarea pentru
 furnizor; nu activează preluarea, nu modifică semantica cotelor și nu implică faptul că
 widgetul pentru cote din Dashboard este activat pentru furnizor — acel widget este controlat separat prin
 `USAGE_SUPPORTED_PROVIDERS`. Sursa adevărului este `USAGE_FETCHER_PROVIDERS` din

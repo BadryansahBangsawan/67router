@@ -4,18 +4,18 @@
 
 ---
 
-Tämä dokumentti kuvaa OmniRouteen lisättyä palautepohjaisen mukautuvan reitityksen perustaa. Se on tarkoituksella suppea: se lisää tyypitetyn reititystulosten kanavan, olemassa olevaa auto-combo-pisteytystä syöttävän reaaliaikaisen laatusignaalin, valinnaisen OpenTelemetry-viejän sekä selitettävyyden rajapinnan. Se **ei** korvaa olemassa olevaa vikasietoisuuspinoa (katkaisija, yhteyden jäähdytysjakso, mallin lukitus, kuntomatriisi, autopilotti), vaan täydentää sitä.
+Tämä dokumentti kuvaa 67routeriin lisättyä palautepohjaisen mukautuvan reitityksen perustaa. Se on tarkoituksella suppea: se lisää tyypitetyn reititystulosten kanavan, olemassa olevaa auto-combo-pisteytystä syöttävän reaaliaikaisen laatusignaalin, valinnaisen OpenTelemetry-viejän sekä selitettävyyden rajapinnan. Se **ei** korvaa olemassa olevaa vikasietoisuuspinoa (katkaisija, yhteyden jäähdytysjakso, mallin lukitus, kuntomatriisi, autopilotti), vaan täydentää sitä.
 
 ## 1. Arkkitehtoninen konteksti
 
-OmniRoute on datataso, jossa on **pyyntöjen kriittinen polku** ja **ohjaus-/älykkyystaso**. Kriittisen polun on pysyttävä nopeana, muistitehokkaana, asynkronisena, vikasietoisena ja ennustettavana. Arviointi, laadun pisteytys, kokeilut ja historiallinen analyysi kuuluvat ohjaustasolle.
+67router on datataso, jossa on **pyyntöjen kriittinen polku** ja **ohjaus-/älykkyystaso**. Kriittisen polun on pysyttävä nopeana, muistitehokkaana, asynkronisena, vikasietoisena ja ennustettavana. Arviointi, laadun pisteytys, kokeilut ja historiallinen analyysi kuuluvat ohjaustasolle.
 
 ```
 AI-agentti / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   datataso (nopea, synkroninen, muistissa)
+│    67router        │   datataso (nopea, synkroninen, muistissa)
 │  reititys / vaihto  │
 │  kunto / suojaukset │
 │  välimuisti / virta │
@@ -221,7 +221,7 @@ Tiedostot: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK:ta).
 - Spanit noudattavat GenAI:n semanttisia käytäntöjä (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) sekä OmniRouten reititys-
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) sekä 67routerin reititys-
   attribuutteja (lopputulos, tila, ttft, uudelleenyritykset, varavaihtoehto).
 - `record()` vain lisää tapahtuman rajattuun puskuriin (O(1)); tausta-ajastin
   tyhjentää puskurin asynkronisesti kutsulla `POST {endpoint}/v1/traces`. Ylikuormituksessa
@@ -243,7 +243,7 @@ Tiedostot: `open-sse/services/routing/otel.ts`
 
 ## 6. Arviointitason integrointi (valmius Future AGI:ta varten)
 
-OmniRoute käsittelee Future AGI:ta (tai mitä tahansa arvioijaa) **mahdollisena
+67router käsittelee Future AGI:ta (tai mitä tahansa arvioijaa) **mahdollisena
 älykkyys-/arviointitaustajärjestelmänä, ei riippuvuutena**. Liitoskohdat:
 
 - `RoutingEventSink` voi välittää tapahtumia arvioijalle asynkronisesti.

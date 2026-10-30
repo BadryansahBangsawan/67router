@@ -15,7 +15,7 @@ Quota Sharing Engine na-ekesa oke ojiji dabere na oge nke onye na-enye ọrụ (
 nke awa 5, Kimi 1500 req/h) n'ụzọ ziri ezi n'etiti ọtụtụ API keys na-eji otu
 njikọ ahụ ọnụ.
 
-**Nsogbu ọ na-edozi:** OmniRoute na-ebufe ọtụtụ API keys site n'otu akaụntụ
+**Nsogbu ọ na-edozi:** 67router na-ebufe ọtụtụ API keys site n'otu akaụntụ
 onye na-enye ọrụ upstream ahụ. Enweghị usoro nkekọrịta, nnukwu arịrịọ sitere na key A nwere ike imecha
 oke onye na-enye ọrụ maka otu awa ahụ, mee ka keys B na C ghara ịrụ ọrụ ruo mgbe windo ahụ malitegharịrị.
 Engine ahụ na-egbochi nke a site na:
@@ -119,7 +119,7 @@ Redis driver: Lua EVAL script maka increment atomic — ọ na-agba ọsọ dị
 
 - Tebụl: `quota_consumption` (lee mbugharị `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Kachasị mma maka mbugharị nwere naanị otu instans.
-- Nchekwa niile dị na OmniRoute SQLite DB dị ugbu a (`DATA_DIR/storage.sqlite`).
+- Nchekwa niile dị na 67router SQLite DB dị ugbu a (`DATA_DIR/storage.sqlite`).
 
 ### Redis (nhọrọ, ọtụtụ instans)
 

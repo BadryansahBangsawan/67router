@@ -4,7 +4,7 @@
 
 ---
 
-„OmniRoute“ pateikiamas su atrinktu nemokamų tarpinių serverių rinkiniu lentelėje `free_proxies`,
+„67router“ pateikiamas su atrinktu nemokamų tarpinių serverių rinkiniu lentelėje `free_proxies`,
 sinchronizuojamu iš išorinių teikėjų (1proxy, proxifly, iplocate, webshare).
 Valdymo skydelyje jie pateikiami skiltyje **Nustatymai → Nemokami tarpiniai serveriai**. Šiame dokumente
 aprašomas serverio pusės filtravimas, rikiavimas, skaičiavimas ir sinchronizavimo klaidų pateikimas,

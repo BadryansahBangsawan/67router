@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Hausa)
+# 🗜️ Prompt Compression Guide — 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Bayani Gabaɗaya
 
-OmniRoute yana aiwatar da bututun matse umarni mai tsarin sassa wanda ke gudana **tun da wuri** kafin buƙatu su isa ga masu samarwa na sama. Wannan yana nufin ana samun tanadin token ɗinka ba tare da ka lura ba — babu buƙatar canza tsarin aikinka.
+67router yana aiwatar da bututun matse umarni mai tsarin sassa wanda ke gudana **tun da wuri** kafin buƙatu su isa ga masu samarwa na sama. Wannan yana nufin ana samun tanadin token ɗinka ba tare da ka lura ba — babu buƙatar canza tsarin aikinka.
 
 ```
 Buƙatar Abokin Ciniki
@@ -122,15 +122,15 @@ haɗaɗɗun saitunan matsewa da aka sanya wa haɗaɗɗun saitunan turawa.
 
 ## Lissafin Tanadin Upstream
 
-OmniRoute yana bayyana tanadin matsawa daga tushe biyu: ma’aunin gwajin ayyukan upstream da kuma
-haɗin injunan OmniRoute da kansa.
+67router yana bayyana tanadin matsawa daga tushe biyu: ma’aunin gwajin ayyukan upstream da kuma
+haɗin injunan 67router da kansa.
 
 | Tushe   | Adadin README na upstream da aka yi amfani da shi a nan                                                                                   |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` raguwar token na fitarwa, matsakaicin tanadin fitarwa na gwaji `65%`, kewayon `22-87%`, da kayan aikin matsawar shigarwa na `~46%` |
 | RTK     | Tanadin fitarwar umarni na `60-90%`; zaman misali na token `~118,000 -> ~23,900`, ko tanadin `79.7%` (`~80%`)                             |
 
-Ga bayanan kayan aiki/mahalli masu karo da juna, haɗin OmniRoute na asali yana jera injunan kamar haka:
+Ga bayanan kayan aiki/mahalli masu karo da juna, haɗin 67router na asali yana jera injunan kamar haka:
 
 ```txt
 RTK -> Caveman
@@ -536,12 +536,12 @@ ba tare da canji ba, ana tsallake shi a matsayin `no_styles`), yana haɗa umarni
 jerin katalog,
 yana ƙara ƙa'idar iyakoki **sau ɗaya** (tare da ƙa'idar tsaro, `SAFETY_BOUNDARIES` ko
 fassararta, idan an zaɓi `less-code` ko `ponytail`), kuma yana fara tubalin da
-alama guda ta hana maimaita aiki (`[OmniRoute Output Styles]`), don haka sake aiwatarwa
+alama guda ta hana maimaita aiki (`[67router Output Styles]`), don haka sake aiwatarwa
 ba ya yin komai. Idan harshen da aka tantance (duba Zaɓin harshe a ƙasa) yana da fassara,
 ana saka umarnin da aka fassara maimakon na Turanci.
 
 A jikin da ke da jerin `messages` mara komai ba, ana gudanar da binciken hana maimaitawa kafin
-kaucewa abun ciki: idan alamar `[OmniRoute Output Styles]` ta riga ta kasance a filin
+kaucewa abun ciki: idan alamar `[67router Output Styles]` ta riga ta kasance a filin
 `system` na babban mataki (string ko jerin tubalan abun ciki) ko kuma a saƙon system mai
 abun ciki na string, ana barin jikin ba tare da canji ba a matsayin `already_applied` kuma ba a
 gudanar da binciken kalmomin maɓalli. In ba haka ba, kaucewar abun ciki
@@ -569,7 +569,7 @@ waɗannan da ya samu:
 A jikin da ba shi da jerin `messages` (ko yake da wanda babu komai a ciki), ba a gudanar da
 kaucewar abun ciki kuma ba a duba filin `system` na babban mataki. Ana ƙara tubalin bayan
 rubutun filin `instructions` na string, sai dai idan filin ya riga ya ƙunshi
-alamar `[OmniRoute Output Styles]`, inda a wannan yanayin ake barin jikin ba tare da canji ba
+alamar `[67router Output Styles]`, inda a wannan yanayin ake barin jikin ba tare da canji ba
 a matsayin `already_applied`. Idan jikin ba shi da filin `instructions` na string amma yana
 ɗauke da `input` (string ko jeri), tubalin yana zama `instructions`, yana maye gurbin duk
 ƙimar da ba string ba da filin ya riƙe. Jikin da ba shi da filin `instructions` na string
@@ -597,8 +597,8 @@ Ta hanyar shirye-shirye, tsarin compression yana adana zaɓin kamar haka:
 Daidaituwa da tsoffin nau'ikan: yayin da `outputStyles` yake babu komai, tsohon saitin
 `cavemanOutputMode.enabled` yana daidaituwa da `terse-prose` a
 `cavemanOutputMode.intensity`. Daga nan tubalin yana farawa da alamar
-`[OmniRoute Output Styles]`, inda tsohon mai saka `applyCavemanOutputMode()` ya rubuta
-`[OmniRoute Caveman Output Mode]`. A ƙarƙashin alamar, rubutun yana daidai da tsohuwar
+`[67router Output Styles]`, inda tsohon mai saka `applyCavemanOutputMode()` ya rubuta
+`[67router Caveman Output Mode]`. A ƙarƙashin alamar, rubutun yana daidai da tsohuwar
 sakawa a en, pt-BR, es, de, fr, it, ru, id da vi; a ja da zh yana ɗauke da ƙarin
 sarari guda kafin ƙa'idar iyakoki. Ana fassara `terse-prose` zuwa pt-BR, es, de,
 fr, it, ru, zh, ja, id da vi, don haka buƙatar da harshenta da aka tantance yake `hu`

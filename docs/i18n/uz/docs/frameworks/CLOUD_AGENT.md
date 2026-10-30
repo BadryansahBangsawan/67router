@@ -7,7 +7,7 @@
 > **Haqiqat manbasi:** `src/lib/cloudAgent/` va `src/app/api/v1/agents/tasks/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40 (frontmatter yangilandi; cursor-cloud bilan birga 4 ta agent)
 
-OmniRoute uchinchi tomon bulutida joylashtirilgan dasturlash agentlarini (Codex Cloud, Cursor,
+67router uchinchi tomon bulutida joylashtirilgan dasturlash agentlarini (Codex Cloud, Cursor,
 Devin, Jules) uzoq davom etuvchi vazifalar sifatida boshqaradi. Har bir agent yagona interfeys
 orqali o‘ralgan, shu sababli mijozlar provayderga xos API’lar bilan ishlamasdan prompt + repo
 URL manzilini yuborishi va natijalarni olishi mumkin.

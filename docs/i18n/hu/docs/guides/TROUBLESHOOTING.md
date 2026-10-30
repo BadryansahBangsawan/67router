@@ -8,17 +8,17 @@
 
 🌐 **Nyelvek:** 🇺🇸 [Angol](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Az OmniRoute gyakori problémái és azok megoldásai.
+Az 67router gyakori problémái és azok megoldásai.
 
 ---
 
 ## Gyors áttekintés
 
-**Most ismerkedsz az OmniRoute-tal?** Kezdd itt — ezek a problémák 90%-át megoldják:
+**Most ismerkedsz az 67router-tal?** Kezdd itt — ezek a problémák 90%-át megoldják:
 
 | Ezt látom                     | Ezt jelenti                                              | Teendő                                                                                                                      |
 | ----------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| "Can't connect"               | Az OmniRoute nem fut                                     | Futtasd az `omniroute` parancsot vagy a `docker restart omniroute` parancsot                                                |
+| "Can't connect"               | Az 67router nem fut                                      | Futtasd az `omniroute` parancsot vagy a `docker restart omniroute` parancsot                                                |
 | "Invalid API key"             | A kulcsod hibás vagy lejárt                              | Másold ki újra a kulcsot a szolgáltató webhelyéről                                                                          |
 | "Rate limit exceeded"         | Túl sok kérést küldesz                                   | Várj 1 percet, vagy használj `model: "auto"` beállítást az automatikus tartalékútvonal-választáshoz                         |
 | "Quota exceeded"              | Felhasználtad az ingyenes/fizetős keretedet              | Csatlakoztass további szolgáltatókat, vagy használj ingyenes szolgáltatókat (Kiro, Pollinations)                            |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # explicit felső korlát a nagy e
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # a korlátozott várakozás növelése a RATE_LIMIT_MAX_WAIT_MS alapértelmezett értéke fölé lassú upstream szolgáltatások esetén
 ```
 
-Állítsa be ezeket az OmniRoute-folyamat környezetében (a démonnál, például a LaunchAgent plist fájlon vagy a `systemctl edit` parancson keresztül), majd indítsa újra az OmniRoute-ot. A rotációs jelző önmagában a leghatékonyabb beállítás: a végleges hibát átlátható újrapróbálkozássá alakítja a készlet egy működő szolgáltatójánál.
+Állítsa be ezeket az 67router-folyamat környezetében (a démonnál, például a LaunchAgent plist fájlon vagy a `systemctl edit` parancson keresztül), majd indítsa újra az 67router-ot. A rotációs jelző önmagában a leghatékonyabb beállítás: a végleges hibát átlátható újrapróbálkozássá alakítja a készlet egy működő szolgáltatójánál.
 
 **Megjegyzés**: Az `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` azt korlátozza, hogy egyszerre hány nagy erőforrás-igényű — hosszú kontextusú — kérés futhat; ez a korlát befogadási kapu, nem pedig szolgáltatói sebességkorlátozó. **#503-fanout frissítés:** ez a változó alapértelmezés szerint már nincs beállítva (mostantól csak akkor érvényesül, ha explicit módon konfigurálják, mint fent) — a nagy erőforrás-igényű kérések befogadását ehelyett egy automatikusan származtatott bájtkeret (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) szabályozza, amely a gazdagép tényleges memóriakorlátjához igazodik. Emiatt egy friss telepítésnél e változó beállítása nélkül is jóval kevesebb `503 chat_admission_busy` elutasításnak kell jelentkeznie; az itt bemutatott explicit beállítás továbbra is pontosan a dokumentált módon működik. Az explicit bájtkeret-felülbírálások 8 MiB és 2 GiB közé vannak korlátozva. A `413 body_exceeds_budget` nem átmeneti hiba: növelje ezt a bájtkeretet, csökkentse az `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` értékét, vagy növelje a folyamat memóriakorlátját. Az `inflight_bytes_budget` miatti terheléscsökkentés átmeneti erőforrás-ütközés, ezért továbbra is újrapróbálható. A szolgáltatónkénti sebességkorlátozást (`open-sse/services/rateLimitManager.ts`) külön a `RATE_LIMIT_MAX_WAIT_MS`, a `RATE_LIMIT_MAX_QUEUE_DEPTH` és a `RATE_LIMIT_AUTO_ENABLE` szabályozza — lásd: `.env.example`.
 
 **A javítás ellenőrzése**: futtassa az ügynököt vagy a cron-feladatot kétszer, rövid időn belül, és ellenőrizze, hogy mindkét futtatás sikeres-e. A javítás előtt a második futtatás jellemzően `429`/`401` hibát ad. A javítás után az esetleges hibákat a rendszer átlátható módon újrapróbálja, és a hívás befejeződik. A `curl /monitoring/health` paranccsal megfigyelheti továbbá a szolgáltatói kapcsolatok `rateLimitedUntil` mezőjét, valamint az érintett szolgáltatókhoz tartozó `circuitBreakers.providerBreakers[].state` értékét — az állapot a `CLOSED`, `DEGRADED`, `OPEN` vagy `HALF_OPEN` értékek egyike lehet (lásd: `src/shared/utils/circuitBreaker.ts`), és egy folyamatosan hibázó szolgáltató állapota `CLOSED → DEGRADED → OPEN` sorrendben változik, mielőtt a visszaállítási időablak engedélyezne egy tesztkérést (`HALF_OPEN`).
 
-**Ha továbbra is 429 hibát lát**: az adott szolgáltató aktív fiókja ténylegesen kimerítette a _kvótáját_ (nem csupán a sebességkorlátot érte el). Adjon hozzá egy második fiókot ugyanahhoz a szolgáltatóhoz az OmniRoute irányítópultján a Providers → Accounts menüpontban, vagy vegyen fel egy másik ingyenes szolgáltatót is (például `routeway`, `auggie`). A rotáció csak az átmeneti sebességkorlátozási, 400-as és 401-es hibákon segít; a kvóta teljes kimerüléséhez egy második hitelesítő adat vagy egy másik szolgáltató szükséges.
+**Ha továbbra is 429 hibát lát**: az adott szolgáltató aktív fiókja ténylegesen kimerítette a _kvótáját_ (nem csupán a sebességkorlátot érte el). Adjon hozzá egy második fiókot ugyanahhoz a szolgáltatóhoz az 67router irányítópultján a Providers → Accounts menüpontban, vagy vegyen fel egy másik ingyenes szolgáltatót is (például `routeway`, `auggie`). A rotáció csak az átmeneti sebességkorlátozási, 400-as és 401-es hibákon segít; a kvóta teljes kimerüléséhez egy második hitelesítő adat vagy egy másik szolgáltató szükséges.
 
 **Ha 403 hibát lát vizuális modelleknél (`auto/vision`, `bazaarlink/*`)**: a csatlakoztatott fiók nem rendelkezik vizuális funkciókat tartalmazó fizetős csomaggal, vagy az API-kulcs jogosultságai nem megfelelőek. Ellenőrizze a szolgáltató irányítópultján, hogy a kulcs hatóköre tartalmazza-e a vizuális/multimodális funkciókat, vagy csatlakoztasson egy fizetős csomaghoz tartozó fiókot, és tartsa meg azt a vizuális kérések céljaként.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # a korlátozott várakozás növ
 
 Az `npm install -g omniroute` futtatásakor számos figyelmeztetés jelenhet meg, például `npm warn ERESOLVE`, peer függőségekkel kapcsolatos értesítések és `deprecated` üzenetek. **Ezek várhatók és ártalmatlanok.** A telepítés sikeres volt, ha a kimenetben az `added <N> packages` üzenet látható.
 
-A peer függőségek feloldásával kapcsolatos figyelmeztetések elrejtéséhez használja az OmniRoute támogatott telepítési módját:
+A peer függőségek feloldásával kapcsolatos figyelmeztetések elrejtéséhez használja az 67router támogatott telepítési módját:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 A `--legacy-peer-deps` csak az `ERESOLVE` és a peer függőségekkel kapcsolatos értesítéseket rejti el. Az elavulásra vonatkozó értesítések továbbra is láthatók maradnak, mivel tranzitív, külső féltől származó csomagoktól erednek; nem jelzik a telepítés sikertelenségét.
 
-A figyelmeztetéseket olyan, külső féltől származó csomagok elavult peerfüggőség-tartományai okozzák, amelyeket az OmniRoute nem felügyel:
+A figyelmeztetéseket olyan, külső féltől származó csomagok elavult peerfüggőség-tartományai okozzák, amelyeket az 67router nem felügyel:
 
 1. **A `marked-terminal` a `marked >=1 <16` verziót igényli, de a talált verzió `marked@18`** — a gyakorlatban megfelelően működik; csupán a felsőbb szintű peer-tartomány elavult.
 2. **`deprecated prebuild-install@7.1.3`** — egy tranzitív segédprogram natív binárisok letöltéséhez. Nem ezt
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Figyelmen kívül hagyható ez a figyelmeztetés?
 
-**Részben igen, de a szkriptek nélküli futtatás nem ajánlott.** Az OmniRoute biztonságos tartalékmegoldásokat tartalmaz: ha a natív `better-sqlite3` kötések nem tölthetők be az önálló csomagból, az alkalmazás alternatív illesztőprogramokra, például a `node:sqlite` vagy a `sql.js` használatára áll át (lásd: [SQLite futtatókörnyezet feloldása](../ops/SQLITE_RUNTIME.md)). A kiszolgáló továbbra is elindul, de a WASM-alapú tartalékmegoldások, például a `sql.js` használata letiltja az SQLite WAL (Write-Ahead Logging, előreíró naplózás) módját, és növeli a memóriahasználatot, valamint a lemezszinkronizálás többletterhelését.
+**Részben igen, de a szkriptek nélküli futtatás nem ajánlott.** Az 67router biztonságos tartalékmegoldásokat tartalmaz: ha a natív `better-sqlite3` kötések nem tölthetők be az önálló csomagból, az alkalmazás alternatív illesztőprogramokra, például a `node:sqlite` vagy a `sql.js` használatára áll át (lásd: [SQLite futtatókörnyezet feloldása](../ops/SQLITE_RUNTIME.md)). A kiszolgáló továbbra is elindul, de a WASM-alapú tartalékmegoldások, például a `sql.js` használata letiltja az SQLite WAL (Write-Ahead Logging, előreíró naplózás) módját, és növeli a memóriahasználatot, valamint a lemezszinkronizálás többletterhelését.
 
 ### Mely szkriptek szükségesek ténylegesen?
 
-Nem minden blokkolt szkript elengedhetetlen az OmniRoute futtatásához:
+Nem minden blokkolt szkript elengedhetetlen az 67router futtatásához:
 
-- **Elengedhetetlen (`omniroute`, `better-sqlite3`):** Az OmniRoute egy önálló Next.js-alkalmazáscsomagból (`dist/`) fut. A telepítés során az npm letölti vagy lefordítja a gazdarendszerhez tartozó natív SQLite-illesztőprogramot a legfelső szintű `node_modules/better-sqlite3/` könyvtárban. Az OmniRoute `postinstall` szkriptje (`scripts/build/postinstall.mjs`) ezután ellenőrzi és a `dist/node_modules/` könyvtárba másolja ezeket a gazdarendszer-specifikus bináris fájlokat, hogy az önálló kiszolgáló hozzáférhessen hozzájuk. Ha az `omniroute` postinstall szkriptje blokkolva van, ez a másolási lépés kimarad.
+- **Elengedhetetlen (`omniroute`, `better-sqlite3`):** Az 67router egy önálló Next.js-alkalmazáscsomagból (`dist/`) fut. A telepítés során az npm letölti vagy lefordítja a gazdarendszerhez tartozó natív SQLite-illesztőprogramot a legfelső szintű `node_modules/better-sqlite3/` könyvtárban. Az 67router `postinstall` szkriptje (`scripts/build/postinstall.mjs`) ezután ellenőrzi és a `dist/node_modules/` könyvtárba másolja ezeket a gazdarendszer-specifikus bináris fájlokat, hogy az önálló kiszolgáló hozzáférhessen hozzájuk. Ha az `omniroute` postinstall szkriptje blokkolva van, ez a másolási lépés kimarad.
 - **Opcionális/tranzitív (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Ezek fordítási segédeszközök, fájlfigyelő eszközök vagy rendszerkulcstár-segédprogramok. Engedélyezésük megszünteti a fordítási figyelmeztetéseket, de az alapvető útválasztási funkciókhoz nem szükségesek.
-- **Kizárt (`onnxruntime-node`):** Ez a helyi MI-beágyazások opcionális függősége, és **nem** szükséges az OmniRoute futtatásához. A postinstall szkriptje körülbelül 300 MB-nyi CUDA-erőforrást tölt le a NuGet szolgáltatásból; ne vegye fel az engedélyezési listára, hacsak nem kíván kifejezetten helyi ONNX-gyorsítást használni támogatott hardveren.
+- **Kizárt (`onnxruntime-node`):** Ez a helyi MI-beágyazások opcionális függősége, és **nem** szükséges az 67router futtatásához. A postinstall szkriptje körülbelül 300 MB-nyi CUDA-erőforrást tölt le a NuGet szolgáltatásból; ne vegye fel az engedélyezési listára, hacsak nem kíván kifejezetten helyi ONNX-gyorsítást használni támogatott hardveren.
 
 ### Ajánlott megoldás
 
-A szükséges telepítési szkriptek globális telepítés közbeni engedélyezéséhez és a figyelmeztetések megszüntetéséhez adja meg a `--allow-scripts` kapcsolót az OmniRoute és natív függőségei számára:
+A szükséges telepítési szkriptek globális telepítés közbeni engedélyezéséhez és a figyelmeztetések megszüntetéséhez adja meg a `--allow-scripts` kapcsolót az 67router és natív függőségei számára:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ nincs telepítve, akkor az npm-csomag jelen van, de a böngésző bináris fájl
 A Playwright szándékosan külön kezeli a böngészők letöltését az npm-csomag
 telepítésétől, ezért ez a válasz a böngésző telepítéséig várható.
 
-Globális npm-telepítés esetén telepítse a Chromiumot az OmniRoute-csomag
+Globális npm-telepítés esetén telepítse a Chromiumot az 67router-csomag
 könyvtárából, hogy a böngésző gyorsítótára ugyanahhoz a Playwright-telepítéshez tartozzon:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-A telepítés után indítsa újra az OmniRoute-ot, majd próbálja meg ismét a Gemini Web-kérést. Ha az
-OmniRoute-ot Docker-lemezképből futtatja, használja a `-web` lemezképet (vagy a `runner-web`
+A telepítés után indítsa újra az 67router-ot, majd próbálja meg ismét a Gemini Web-kérést. Ha az
+67router-ot Docker-lemezképből futtatja, használja a `-web` lemezképet (vagy a `runner-web`
 buildcélt), amely tartalmazza a Chromiumot és annak függőségeit; az alap lemezkép
 nem tartalmazza ezeket.
 
@@ -188,7 +188,7 @@ nem tartalmazza ezeket.
 **Ez téves riasztás. Semmi sem fertőzött, és nincs szükség semmilyen beavatkozásra.**
 
 Az Avast és az AVG olyan heurisztikát futtat, amely megjelöli a sok, HTTP-kérésnek tűnő
-hivatkozást tartalmazó egyszerű szöveges/Markdown-fájlokat. Az OmniRoute `README.md` fájlja
+hivatkozást tartalmazó egyszerű szöveges/Markdown-fájlokat. Az 67router `README.md` fájlja
 az npm-csomag része (szerepel a `package.json` → `files` mezőben), ezért globális telepítéskor
 a `node_modules/omniroute/README.md` helyre kerül — és körülbelül 15
 `http://localhost:20128/...` példát tartalmaz (az MCP HTTP/SSE-végpontokat, az A2A
@@ -206,7 +206,7 @@ visszaállíthatja a karanténból.
 
 1. **Állítsa le az értesítéseket** — adja hozzá a telepítési könyvtárat az antivírus
    kivételeihez (Avast: Beállítások → Kivételek), megadva a globális `node_modules`
-   elérési útját és/vagy az OmniRoute adatkönyvtárát (`~/.omniroute/`).
+   elérési útját és/vagy az 67router adatkönyvtárát (`~/.omniroute/`).
 2. **Jelentse a téves riasztást** — <https://www.avast.com/false-positive-file-form.php>,
    és csatolja a karanténba helyezett `README.md` fájlt. Ez a megoldás mindenkinek segít,
    mivel a gyártó heurisztikája reagál túl egy szövegfájlra.
@@ -274,7 +274,7 @@ kiadásoknál ismét előfordulhat.
 
 ### A bejelentkezési oldal összeomlik, vagy „Module self-registration” hibát jelenít meg
 
-**Ok:** Az OmniRoute által jóváhagyott biztonságos futtatókörnyezeti minimumon kívüli Node.js-verziót használ. A leggyakoribb eset egy olyan régebbi Node 22- vagy 24-javítóverzió használata, amely nem éri el az OmniRoute által megkövetelt, biztonsági javításokat tartalmazó minimumot.
+**Ok:** Az 67router által jóváhagyott biztonságos futtatókörnyezeti minimumon kívüli Node.js-verziót használ. A leggyakoribb eset egy olyan régebbi Node 22- vagy 24-javítóverzió használata, amely nem éri el az 67router által megkövetelt, biztonsági javításokat tartalmazó minimumot.
 
 **Tünetek:**
 
@@ -290,7 +290,7 @@ kiadásoknál ismét előfordulhat.
    nvm use 24
    ```
 2. Ellenőrizze a verziót: a `node --version` parancsnak `v24.0.0` vagy újabb verziót kell megjelenítenie a 24.x LTS-ágon
-3. Telepítse újra az OmniRoute-ot: `npm install -g omniroute`
+3. Telepítse újra az 67router-ot: `npm install -g omniroute`
 4. Indítsa újra: `omniroute`
 
 > **Támogatott biztonságos verziók:** `>=22.22.2 <23` vagy `>=24.0.0 <27`. A Node.js 24.x LTS (Krypton) és a Node.js 26 teljes mértékben támogatott.
@@ -373,13 +373,13 @@ omniroute
 
 **Ok:** Node.js 22 alatt az undici@8 diszpécser nem kompatibilis a Node beépített `fetch()` megvalósításával.
 
-**Javítás (v3.5.5+):** Aktív proxydiszpécser esetén az OmniRoute mostantól az undici saját `fetch()` függvényét használja, így biztosítva a konzisztens működést. Frissítsen v3.5.5+ verzióra.
+**Javítás (v3.5.5+):** Aktív proxydiszpécser esetén az 67router mostantól az undici saját `fetch()` függvényét használja, így biztosítva a konzisztens működést. Frissítsen v3.5.5+ verzióra.
 
 ### MITM proxy WSL alatt: a Windows gazdarendszeren futó asztali alkalmazások forgalma nincs elfogva
 
-**Ok:** A MITM proxy és annak CA-tanúsítványa abba a környezetbe települ, ahol az OmniRoute fut. WSL alatt ez a Linux vendégkörnyezet, míg az AI-alapú asztali alkalmazások (Kiro, Trae, Copilot, Zed, …) a Windows gazdarendszeren futnak. A gazdarendszer alkalmazásai nem bíznak meg a vendégkörnyezet tanúsítványtárolójában, és nem a vendégkörnyezet rendszerproxyján keresztül irányítják a forgalmat, ezért az asztali forgalom elfogása nem működik.
+**Ok:** A MITM proxy és annak CA-tanúsítványa abba a környezetbe települ, ahol az 67router fut. WSL alatt ez a Linux vendégkörnyezet, míg az AI-alapú asztali alkalmazások (Kiro, Trae, Copilot, Zed, …) a Windows gazdarendszeren futnak. A gazdarendszer alkalmazásai nem bíznak meg a vendégkörnyezet tanúsítványtárolójában, és nem a vendégkörnyezet rendszerproxyján keresztül irányítják a forgalmat, ezért az asztali forgalom elfogása nem működik.
 
-**Javaslat:** Futtassa az OmniRoute-ot natívan ugyanazon az operációs rendszeren, amelyen az elfogni kívánt asztali alkalmazások futnak (Windows alkalmazásokhoz Windowson; macOS/Linux esetén hasonlóan). Ha az OmniRoute-ot WSL-en belül tartja, miközben a gazdarendszer alkalmazásait célozza, akkor manuálisan megbízhatóvá kell tennie a létrehozott CA-tanúsítványt a Windows gazdarendszeren, és minden gazdarendszeri alkalmazás hálózati/proxybeállításait a WSL proxyvégpontjára kell irányítania — ez nem támogatott és sérülékeny konfiguráció.
+**Javaslat:** Futtassa az 67router-ot natívan ugyanazon az operációs rendszeren, amelyen az elfogni kívánt asztali alkalmazások futnak (Windows alkalmazásokhoz Windowson; macOS/Linux esetén hasonlóan). Ha az 67router-ot WSL-en belül tartja, miközben a gazdarendszer alkalmazásait célozza, akkor manuálisan megbízhatóvá kell tennie a létrehozott CA-tanúsítványt a Windows gazdarendszeren, és minden gazdarendszeri alkalmazás hálózati/proxybeállításait a WSL proxyvégpontjára kell irányítania — ez nem támogatott és sérülékeny konfiguráció.
 
 ---
 
@@ -406,7 +406,7 @@ omniroute
 
 ### Az OAuth-token lejárt
 
-Az OmniRoute automatikusan frissíti a tokeneket. Ha a problémák továbbra is fennállnak:
+Az 67router automatikusan frissíti a tokeneket. Ha a problémák továbbra is fennállnak:
 
 1. Irányítópult → Szolgáltató → Újracsatlakoztatás
 2. Törölje, majd adja hozzá újra a szolgáltatói kapcsolatot
@@ -619,7 +619,7 @@ A szolgáltatói profilok a következő beállításokat támogatják:
 
 ### Kéréshullámok elleni védelem
 
-Amikor sok egyidejű kérés ér el egy sebességkorlátozott szolgáltatót, az OmniRoute mutexet és automatikus sebességkorlátozást használ a kérések sorosításához és a láncreakciószerű hibák megelőzéséhez. Ez az API-kulcsot használó szolgáltatóknál automatikusan történik.
+Amikor sok egyidejű kérés ér el egy sebességkorlátozott szolgáltatót, az 67router mutexet és automatikus sebességkorlátozást használ a kérések sorosításához és a láncreakciószerű hibák megelőzéséhez. Ez az API-kulcsot használó szolgáltatóknál automatikusan történik.
 
 ### A csevegési kérések 503 / chat_admission_busy hibával meghiúsulnak
 
@@ -656,7 +656,7 @@ erőforrás-igényűnek, ha legalább `200` üzenetet, legalább `64` eszközt v
 becsült tokent tartalmaz, illetve ha a korlátozott struktúrabecslés eléri a `10,000` bejárt
 csomópontból vagy `12` szintű mélységből álló korlátját.
 
-**Ok:** Ez szándékos terheléscsökkentés az OmniRoute-on belül, nem a felsőbb szintű szolgáltató
+**Ok:** Ez szándékos terheléscsökkentés az 67router-on belül, nem a felsőbb szintű szolgáltató
 hibája. Minden folyamat egy folyamaton belüli védelmet használ, hogy korlátozott kapacitást
 foglaljon le a nagy erőforrás-igényű kérések számára, mielőtt megtartaná és feldolgozná a nagy
 kéréstörzset. Egy nagy erőforrás-igényű foglalás az SSE-válasz teljes élettartama alatt fennmarad.
@@ -707,7 +707,7 @@ A hiteles beléptetési beállításokat lásd a [környezeti változók referen
 
 ## Opcionális RAG / LLM hibataxonómia (16 probléma)
 
-Egyes OmniRoute-felhasználók az átjárót RAG- vagy ágensrendszerek elé helyezik. Ezekben a konfigurációkban gyakran megfigyelhető egy furcsa jelenség: az OmniRoute megfelelően működőnek tűnik (a szolgáltatók elérhetők, az útválasztási profilok rendben vannak, nincsenek sebességkorlátozási riasztások), a végső válasz mégis hibás.
+Egyes 67router-felhasználók az átjárót RAG- vagy ágensrendszerek elé helyezik. Ezekben a konfigurációkban gyakran megfigyelhető egy furcsa jelenség: az 67router megfelelően működőnek tűnik (a szolgáltatók elérhetők, az útválasztási profilok rendben vannak, nincsenek sebességkorlátozási riasztások), a végső válasz mégis hibás.
 
 A gyakorlatban ezek az incidensek általában az átjáró utáni RAG-folyamatból erednek, nem magából az átjáróból.
 
@@ -726,17 +726,17 @@ Az elképzelés egyszerű:
 
 1. Hibás válasz kivizsgálásakor rögzítse a következőket:
    - a felhasználói feladat és kérés
-   - az OmniRoute-ban használt útvonal vagy szolgáltatókombináció
+   - az 67router-ban használt útvonal vagy szolgáltatókombináció
    - minden, a feldolgozási lánc későbbi részében használt RAG-kontextus (lekért dokumentumok, eszközhívások stb.)
 2. Rendeltessen az incidenshez egy vagy két WFGY ProblemMap-számot (`No.1` … `No.16`).
-3. Tárolja a számot saját irányítópultján, üzemeltetési kézikönyvében vagy incidenskövetőjében az OmniRoute-naplók mellett.
+3. Tárolja a számot saját irányítópultján, üzemeltetési kézikönyvében vagy incidenskövetőjében az 67router-naplók mellett.
 4. A megfelelő WFGY-oldal alapján döntse el, hogy módosítania kell-e a RAG-rendszert, a lekérőt vagy az útválasztási stratégiát.
 
 A teljes szöveg és a konkrét megoldási receptek itt találhatók (MIT-licenc, csak szöveg):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Ezt a szakaszt figyelmen kívül hagyhatja, ha nem futtat RAG- vagy ágensfolyamatokat az OmniRoute mögött.
+Ezt a szakaszt figyelmen kívül hagyhatja, ha nem futtat RAG- vagy ágensfolyamatokat az 67router mögött.
 
 ---
 
@@ -760,7 +760,7 @@ A v3.8.0 kiadásra jellemző problémák és azok jelenlegi kerülőmegoldásai.
 
 1. Telepítse a platformjához készült Devin CLI-t
 2. Állítsa be a `CLI_DEVIN_BIN=/usr/local/bin/devin` értéket (vagy a tényleges elérési utat) a `.env` fájlban
-3. Indítsa újra az OmniRoute-ot, és tesztelje újra az **Irányítópult → CLI-eszközök** menüből
+3. Indítsa újra az 67router-ot, és tesztelje újra az **Irányítópult → CLI-eszközök** menüből
 
 ### Beragadt modelllehűlés (kézi visszaállítás)
 
@@ -815,7 +815,7 @@ A v3.8.0 kiadásra jellemző problémák és azok jelenlegi kerülőmegoldásai.
 
 1. Hozzon létre egy véletlenszerű titkot: `openssl rand -hex 32`
 2. Állítsa be az `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` értéket az éles kiszolgáló környezetében (és minden olyan kliensen, amely a híddal kommunikál)
-3. Indítsa újra az OmniRoute-ot
+3. Indítsa újra az 67router-ot
 
 ### Responses API: a háttérmód szinkron működésre korlátozódik
 

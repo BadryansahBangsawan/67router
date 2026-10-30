@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector は、OmniRoute に組み込まれた HTTPS トラフィックデバッガーです。Charles Proxy / mitmweb / HTTP Toolkit のようなツールでありながら、**LLM 対応**かつ**エージェント対応**です。`/dashboard/tools/traffic-inspector` で利用でき、最大 5 つの同時キャプチャソースからリアルタイムトラフィックを受信します。
+Traffic Inspector は、67router に組み込まれた HTTPS トラフィックデバッガーです。Charles Proxy / mitmweb / HTTP Toolkit のようなツールでありながら、**LLM 対応**かつ**エージェント対応**です。`/dashboard/tools/traffic-inspector` で利用でき、最大 5 つの同時キャプチャソースからリアルタイムトラフィックを受信します。
 
 **ダッシュボードの場所:** `/dashboard/tools/traffic-inspector`
 **サイドバーグループ:** ツール（AgentBridge の後）
@@ -16,21 +16,21 @@ Traffic Inspector は、OmniRoute に組み込まれた HTTPS トラフィック
 
 ### Traffic Inspector の特長
 
-| 機能                                                                                | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Web ベース                                                                          |    ✓    |    ✗    |    ✗    |                ✓                |
-| オープンソース                                                                      |    ✓    |    ✗    |  一部   |                ✓                |
-| **エージェント対応**（リクエストが Antigravity/Copilot などから送信されたかを識別） |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM 対応**（OpenAI/Anthropic/Gemini の形式、トークン、モデルを解析）              |    ✗    |    ✗    |    ✗    |                ✓                |
-| **モデルマッピングを表示**（gemini-3-flash → claude-sonnet-4.7）                    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **プロキシとアップストリームのレイテンシを分離**                                    |  一部   |    ✗    |    ✗    |                ✓                |
-| **OmniRoute と統合**されたルーティング、フォールバック、コスト                      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **システム全体のプロキシデバッグ**（マシン上のあらゆるアプリ）                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **カスタムホストキャプチャ**（ホスト単位の DNS リダイレクト）                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY 環境変数モード**                                                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **会話ビュー**（複数ターンの吹き出し、tool_use/tool_result）                        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE ストリームマージャー**（差分イベントから再構築）                              |    ✗    |    ✗    |    ✗    |                ✓                |
-| **セッション記録**（名前付き、.har/.jsonl 形式でエクスポート可能）                  |    ✗    |    ✓    |    ✓    |                ✓                |
+| 機能                                                                                | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Web ベース                                                                          |    ✓    |    ✗    |    ✗    |               ✓                |
+| オープンソース                                                                      |    ✓    |    ✗    |  一部   |               ✓                |
+| **エージェント対応**（リクエストが Antigravity/Copilot などから送信されたかを識別） |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM 対応**（OpenAI/Anthropic/Gemini の形式、トークン、モデルを解析）              |    ✗    |    ✗    |    ✗    |               ✓                |
+| **モデルマッピングを表示**（gemini-3-flash → claude-sonnet-4.7）                    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **プロキシとアップストリームのレイテンシを分離**                                    |  一部   |    ✗    |    ✗    |               ✓                |
+| **67router と統合**されたルーティング、フォールバック、コスト                       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **システム全体のプロキシデバッグ**（マシン上のあらゆるアプリ）                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **カスタムホストキャプチャ**（ホスト単位の DNS リダイレクト）                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY 環境変数モード**                                                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **会話ビュー**（複数ターンの吹き出し、tool_use/tool_result）                        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE ストリームマージャー**（差分イベントから再構築）                              |    ✗    |    ✗    |    ✗    |               ✓                |
+| **セッション記録**（名前付き、.har/.jsonl 形式でエクスポート可能）                  |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### アーキテクチャの概要
 
@@ -261,7 +261,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSEレスポンスの場合はtrue
   mappedTo: string | null; // x-omniroute-mappedヘッダー
-  costEstimateUsd: number | null; // OmniRouteの料金に基づく推定コスト
+  costEstimateUsd: number | null; // 67routerの料金に基づく推定コスト
 }
 ```
 
@@ -392,7 +392,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### システムプロキシが元に戻らない
 
-システム全体のプロキシモードが有効な状態で OmniRoute がクラッシュした場合：
+システム全体のプロキシモードが有効な状態で 67router がクラッシュした場合：
 
 **macOS：**
 
@@ -437,7 +437,7 @@ netsh winhttp reset proxy
 | GET      | `/requests`                 | リクエスト一覧（フィルタリング可能: `?profile=llm&host=&agent=&status=&source=&sessionId=`） |
 | GET      | `/requests/{id}`            | 単一リクエストの詳細                                                                         |
 | DELETE   | `/requests`                 | メモリ内バッファをクリア                                                                     |
-| POST     | `/requests/{id}/replay`     | OmniRoute ルーター経由で同じリクエストを再実行                                               |
+| POST     | `/requests/{id}/replay`     | 67router ルーター経由で同じリクエストを再実行                                                |
 | PUT      | `/requests/{id}/annotation` | リクエストのメモを保存または更新                                                             |
 
 ### WebSocket

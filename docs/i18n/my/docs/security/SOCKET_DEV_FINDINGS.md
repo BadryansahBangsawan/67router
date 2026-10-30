@@ -49,7 +49,7 @@ JWT သည် ဤ code path ကို **စတင်လုပ်ဆောင်�
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` မှတစ်ဆင့် profile တစ်ခုချင်းစီ၏ NSS DB ကို update လုပ်ခြင်း                           |
 
 ဤ command များသည် `mitmproxy`, Charles Proxy, Fiddler နှင့်
-Caddy တို့က အသုံးပြုသည့် command များနှင့် အတူတူဖြစ်သည်။ ၎င်းတို့ OmniRoute တွင် ရှိနေသည့်အချက်ကို
+Caddy တို့က အသုံးပြုသည့် command များနှင့် အတူတူဖြစ်သည်။ ၎င်းတို့ 67router တွင် ရှိနေသည့်အချက်ကို
 `docs/security/STEALTH_GUIDE.md` တွင် မှတ်တမ်းတင်ထားသည်။
 
 **v3.8.6 လျော့ပါးရေးအစီအမံ**:
@@ -109,7 +109,7 @@ fingerprint မရှိဘဲ "token N ခု တွေ့ရှိပြီး
 v3.9 တွင် ဖယ်ရှားမည်ဖြစ်သည်။
 
 **ဆက်လက်ထားရှိရသည့်အကြောင်းရင်း**: Zed ကို အသုံးပြုထားပြီးသားဖြစ်ကာ ၎င်းတို့၏ provider key များကို
-ပြန်လည်ကူးထည့်စရာမလိုဘဲ OmniRoute ထဲသို့ ပုံတူကူးလိုသည့် အသုံးပြုသူများအတွက် Zed import သည်
+ပြန်လည်ကူးထည့်စရာမလိုဘဲ 67router ထဲသို့ ပုံတူကူးလိုသည့် အသုံးပြုသူများအတွက် Zed import သည်
 အဆင်ပြေဆုံး စတင်အသုံးပြုမှုနည်းလမ်းဖြစ်သည်။
 
 ---
@@ -121,7 +121,7 @@ v3.9 တွင် ဖယ်ရှားမည်ဖြစ်သည်။
 **သတိပေးခံရသည့်အကြောင်းရင်း**: chunk သည် `execFileWithPassword`,
 `runElevatedPowerShell` နှင့် မျှဝေသုံးစွဲသော `quotePowerShell` helper ကို ပြန်လည် export လုပ်ထားသည်။ Socket.dev ၏
 AI classifier က ၎င်းတို့ကို ယေဘုယျ "host execution + privilege elevation
-toolkit" တစ်ခုအဖြစ် သတ်မှတ်သည်။ OmniRoute အတွင်း၌ ၎င်းတို့ကို MITM cert တပ်ဆင်မှုလမ်းကြောင်း
+toolkit" တစ်ခုအဖြစ် သတ်မှတ်သည်။ 67router အတွင်း၌ ၎င်းတို့ကို MITM cert တပ်ဆင်မှုလမ်းကြောင်း
 (§1) နှင့် `sudo` command လုပ်ဆောင်မှုအတွက် `execFileWithPassword` တို့တွင်သာ အသုံးပြုသည်။
 
 **v3.8.6 လျော့ပါးကာကွယ်မှု**:
@@ -171,7 +171,7 @@ toolkit" တစ်ခုအဖြစ် သတ်မှတ်သည်။ OmniRo
 
 ---
 
-## §5 — OmniRoute Cloud Sync အထောက်အထားများ ပြန်လည်ရေးသားခြင်း (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync အထောက်အထားများ ပြန်လည်ရေးသားခြင်း (`api/keys/[id]/route.js`)
 
 **ရင်းမြစ်ဖိုင်များ**:
 
@@ -204,7 +204,7 @@ rawBody)`) ကို စစ်ဆေးသည်။ secret ကို သတ်�
    အားထားခဲ့သော အသုံးပြုသူများအတွက် **breaking change** ဖြစ်သည် — ၎င်းတို့သည် opt in ကို
    အတိအလင်း ပြုလုပ်ရမည်။
 
-**၎င်းကို ဆက်လက်ထားရှိရသည့် အကြောင်းရင်း**: Cloud Sync သည် OmniRoute Cloud tenant တစ်ခုအတွက်
+**၎င်းကို ဆက်လက်ထားရှိရသည့် အကြောင်းရင်း**: Cloud Sync သည် 67router Cloud tenant တစ်ခုအတွက်
 အဖွဲ့၏ အထောက်အထားများကို တစ်နေရာတည်းတွင် ဗဟိုပြုထားနိုင်သည့် တစ်ခုတည်းသော နည်းလမ်းဖြစ်သည်။
 ပြင်ဆင်ချက်သည် threat model ကို ရှင်းလင်းရိုးသားစေသည်-
 "server က sign လုပ်သည်၊ client က verify လုပ်သည်၊ operator က opt in လုပ်သည်။"

@@ -4,7 +4,7 @@
 
 ---
 
-Cum estimează, înregistrează și raportează OmniRoute costul fiecărei solicitări — și de ce
+Cum estimează, înregistrează și raportează 67router costul fiecărei solicitări — și de ce
 valoarea din panoul de control este un **instrument de urmărire a economiilor**, nu o factură.
 
 Consultați și: [Ghidul utilizatorului](./USER_GUIDE.md) · [Galeria de funcționalități](./FEATURES.md)
@@ -13,11 +13,11 @@ Consultați și: [Ghidul utilizatorului](./USER_GUIDE.md) · [Galeria de funcți
 
 ## Ce este (și ce nu este)
 
-OmniRoute atribuie fiecărei completări un cost în USD per solicitare, înmulțind numărul de
+67router atribuie fiecărei completări un cost în USD per solicitare, înmulțind numărul de
 tokenuri cu tarifele modelului. Aceste valori alimentează panoul de control **Costuri**,
 CLI-ul `omniroute cost` / `omniroute usage`, exporturile CSV/JSON și bugetele per cheie API.
 
-> **„Costul” din panoul de control este un instrument de urmărire a economiilor, nu o factură.** OmniRoute nu vă taxează
+> **„Costul” din panoul de control este un instrument de urmărire a economiilor, nu o factură.** 67router nu vă taxează
 > niciodată — vă direcționează solicitările către furnizorii pe care i-ați conectat deja
 > (propriile abonamente, niveluri gratuite și chei API). Un „cost total de 290 USD” acumulat exclusiv prin modele
 > gratuite înseamnă că, aproximativ, **nu ați plătit 290 USD** unui API cu plată. Valoarea este o _estimare_
@@ -29,7 +29,7 @@ Această interpretare este menționată direct în fișierul [README](../../READ
 
 Deoarece valoarea este o estimare:
 
-- Aceasta depinde de tabelul de prețuri pe care OmniRoute îl are pentru fiecare model. Un model fără o intrare
+- Aceasta depinde de tabelul de prețuri pe care 67router îl are pentru fiecare model. Un model fără o intrare
   de preț contribuie cu un cost de `0` (apare ca un rând „Moștenit / Gratuit” în explorator).
 - Traficul din nivelurile gratuite și abonamente acumulează în continuare un cost _estimat_ — acesta este
   cuantumul pe care îl economisiți, nu o sumă datorată.
@@ -47,7 +47,7 @@ Costurile provin dintr-un tabel de prețuri determinat în următoarea ordine de
 2. **Prețuri externe sincronizate** — preluate din fișierul public
    `model_prices_and_context_window.json` al LiteLLM atunci când sincronizarea este activată (stocate într-un spațiu de nume
    separat, `pricing_synced`, astfel încât să nu suprascrie niciodată setările dumneavoastră).
-3. **Valori implicite predefinite** — incluse în OmniRoute.
+3. **Valori implicite predefinite** — incluse în 67router.
 
 Sincronizarea prețurilor externe este **opțională** și dezactivată în mod implicit. Variabile de mediu relevante
 (consultați [`.env.example`](../../.env.example)):
@@ -197,7 +197,7 @@ Toate acestea necesită autentificare de administrare (loopback/JWT, prin
 
 ## CLI
 
-CLI-ul OmniRoute expune comenzi pentru costuri, utilizare și prețuri (înregistrate în
+CLI-ul 67router expune comenzi pentru costuri, utilizare și prețuri (înregistrate în
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -4,7 +4,7 @@
 
 ---
 
-See dokument kirjeldab OmniRoute’i lisatud tagasisidepõhise adaptiivse marsruutimise
+See dokument kirjeldab 67router’i lisatud tagasisidepõhise adaptiivse marsruutimise
 alust. See on teadlikult väike: see lisab tüübitud marsruutimistulemuste
 kanali, olemasolevat auto-combo hindajat toitva reaalajalise kvaliteedisignaali,
 valikulise OpenTelemetry eksportija ja selgitatavuse otspunkti. See **ei**
@@ -13,7 +13,7 @@ mudeli lukustus, tervisemaatriks, autopiloot) — see täiendab seda.
 
 ## 1. Arhitektuuriline kontekst
 
-OmniRoute on andmetasand, millel on **päringute kuum tee** ja **juhtimis-/intellektitasand**.
+67router on andmetasand, millel on **päringute kuum tee** ja **juhtimis-/intellektitasand**.
 Kuum tee peab jääma kiireks, mälutõhusaks, asünkroonseks, tõrkekindlaks ja
 etteaimatavaks. Hindamine, kvaliteediskoorimine, katsed ja ajalooline analüüs kuuluvad
 juhtimistasandile.
@@ -23,7 +23,7 @@ AI-agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   andmetasand (kiire, sünkroonne, mälusisene)
+│    67router        │   andmetasand (kiire, sünkroonne, mälusisene)
 │  marsruutimine /    │
 │  tõrkesiire          │
 │  tervis / kaitsepiir │
@@ -236,7 +236,7 @@ Failid: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK-d).
 - Ulatused järgivad GenAI semantilisi kokkuleppeid (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) koos OmniRoute'i marsruutimise
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) koos 67router'i marsruutimise
   atribuutidega (tulemus, olek, TTFT, korduskatsed, varuvariant).
 - `record()` lisab kirje ainult piiratud puhvrisse (O(1)); taustal töötav taimer
   saadab andmed asünkroonselt käsuga `POST {endpoint}/v1/traces`. Ülekoormuse korral
@@ -260,7 +260,7 @@ Failid: `open-sse/services/routing/otel.ts`
 
 ## 6. Hindamistasandi integratsioon (valmidus Future AGI jaoks)
 
-OmniRoute käsitleb Future AGI-d (või mis tahes hindajat) **potentsiaalse
+67router käsitleb Future AGI-d (või mis tahes hindajat) **potentsiaalse
 intelligentsi-/hindamistaustsüsteemina, mitte sõltuvusena**. Liidesepunktid:
 
 - `RoutingEventSink` saab sündmusi asünkroonselt hindajale edastada.

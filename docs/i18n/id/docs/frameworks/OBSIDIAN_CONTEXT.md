@@ -13,7 +13,7 @@
 
 ## Apa itu
 
-OmniRoute terhubung ke vault **Obsidian** sebagai **sumber konteks** — basis pengetahuan
+67router terhubung ke vault **Obsidian** sebagai **sumber konteks** — basis pengetahuan
 Markdown lokal yang dibaca dan ditulis agen melalui server MCP bawaan. Integrasi ini
 berkomunikasi dengan plugin komunitas **Obsidian Local REST API** yang berjalan di dalam
 aplikasi desktop, sehingga agen dapat mencari catatan, membaca/menulis/menerapkan patch
@@ -80,7 +80,7 @@ menyimpannya.
 
 `src/app/api/settings/obsidian/webdav/route.ts` mengelola sinkronisasi vault opsional
 yang didukung WebDAV (dijalankan oleh `src/lib/obsidianSync.ts`). Mengaktifkannya akan
-mengarahkan OmniRoute ke direktori vault lokal dan membuat pasangan nama pengguna/kata
+mengarahkan 67router ke direktori vault lokal dan membuat pasangan nama pengguna/kata
 sandi WebDAV acak:
 
 ```bash
@@ -119,8 +119,8 @@ token sinkronisasinya yang terpisah.
 
 Didefinisikan dalam `open-sse/mcp-server/tools/obsidianTools.ts`. Token/base-URL ditentukan
 untuk setiap pemanggilan (per kunci API terlebih dahulu, lalu global). Alat yang mengakses **server sinkronisasi**
-OmniRoute (keempat alat `obsidian_sync_*`) juga memerlukan token autentikasi sinkronisasi yang dikonfigurasi
-dalam pengaturan OmniRoute.
+67router (keempat alat `obsidian_sync_*`) juga memerlukan token autentikasi sinkronisasi yang dikonfigurasi
+dalam pengaturan 67router.
 
 ### Alat baca (`read:obsidian`)
 
@@ -137,7 +137,7 @@ dalam pengaturan OmniRoute.
 | `obsidian_get_periodic_note` | Mendapatkan catatan periodik harian/mingguan/bulanan untuk suatu tanggal (hari ini jika tidak dicantumkan). |
 | `obsidian_get_tags`          | Mencantumkan semua tag vault beserta frekuensinya.                                                          |
 | `obsidian_list_commands`     | Mencantumkan ID perintah Obsidian yang tersedia (digunakan dengan `obsidian_execute_command`).              |
-| `obsidian_sync_status`       | Status server sinkronisasi OmniRoute: berjalan, nama vault, port, waktu aktif, sinkronisasi terakhir.       |
+| `obsidian_sync_status`       | Status server sinkronisasi 67router: berjalan, nama vault, port, waktu aktif, sinkronisasi terakhir.        |
 | `obsidian_sync_conflicts`    | Mencantumkan konflik sinkronisasi yang belum diselesaikan (jalur, jalur konflik, waktu terdeteksi).         |
 
 ### Alat tulis (`write:obsidian`)

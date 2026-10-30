@@ -6,7 +6,7 @@
 
 ## Sammanfattning
 
-OmniRoute stöder nu tre relälägen för `/api/v1/relay/chat/completions`:
+67router stöder nu tre relälägen för `/api/v1/relay/chat/completions`:
 
 - `ts`: Använd TypeScript-reläet i samma process.
 - `bifrost`: Tvinga användning av Bifrost-gatewayen.
@@ -45,12 +45,12 @@ Om du för närvarande jämför 9router/CLIPROXYAPI:
 
 ## Kontrakt för backendgränssnittet
 
-Den stabila produktgränsen är OmniRoutes relä-API, inte implementationen av kontrollpanelen. Next.js-kontrollpanelen kan installera, konfigurera och övervaka lokala tjänster, men dirigeringen av begäranden bör gå in via relä-API:t och överlämnas bakom den gränsen.
+Den stabila produktgränsen är 67routers relä-API, inte implementationen av kontrollpanelen. Next.js-kontrollpanelen kan installera, konfigurera och övervaka lokala tjänster, men dirigeringen av begäranden bör gå in via relä-API:t och överlämnas bakom den gränsen.
 
 Långsiktiga backendval:
 
 - Behåll TypeScript-reläet som princip- och reservväg i samma process. Autentisering, listor över tillåtna objekt, normalisering av begäranden, redovisning och säkerhetskontroller stannar här före överlämning till en backend.
-- Använd Bifrost som den föredragna Tier-1-sidoprocessen för hög genomströmning när distributionen behöver lägre dirigeringsvariation, centraliserad leverantörsrotation eller horisontell skalning över flera OmniRoute-repliker.
+- Använd Bifrost som den föredragna Tier-1-sidoprocessen för hög genomströmning när distributionen behöver lägre dirigeringsvariation, centraliserad leverantörsrotation eller horisontell skalning över flera 67router-repliker.
 - Behåll 9router och CLIPROXYAPI som inbäddade kompatibilitetstjänster. De körs som övervakade lokala processer och är användbara när deras leverantörs-/CLI-beteende är den önskade adaptern, men de bör inte bli standardmotorn för Tier-1-dirigering.
 - Låt inte kontrollpanelen skicka godtyckliga tjänst-URL:er till den mest använda sökvägen. URL:er som anges via användargränssnittet är konfigurationsindata. Dirigeringskoden bör slå upp registrerade och hälsokontrollerade backender från inställningar på serversidan och övervakarens tillstånd.
 - Föredra loopback-HTTP för övervakade tjänster i dag, eftersom de hanterade processerna redan exponerar HTTP-kompatibla API:er, ruttskyddet kan granska gränsen och fel-/reservbeteendet är synligt i begärandeloggarna. En framtida SDK- eller sockettransport är endast värd att lägga till om den mätbart minskar p99-latensen för dirigering utan att försvaga isoleringen eller reservsemantiken.

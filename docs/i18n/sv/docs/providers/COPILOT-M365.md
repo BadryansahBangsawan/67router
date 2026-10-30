@@ -39,7 +39,7 @@ Den fullständiga URL:en har följande format:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Gå till **Providers → Add Provider** i OmniRoute, välj **Microsoft 365 Copilot
+6. Gå till **Providers → Add Provider** i 67router, välj **Microsoft 365 Copilot
    (BizChat)** och klistra in autentiseringsuppgiften i följande format:
 
 ```
@@ -56,9 +56,9 @@ från DevTools:
 1. Öppna **DevTools → Network**.
 2. Starta eller fortsätt en BizChat-konversation (detta utlöser WebSocket-anslutningen).
 3. Högerklicka i Network-panelen och välj **Save all as HAR with content**.
-4. Använd knappen **Import .har file** i dialogrutan för leverantörsanslutningen i OmniRoute.
+4. Använd knappen **Import .har file** i dialogrutan för leverantörsanslutningen i 67router.
 
-OmniRoute söker igenom HAR-filen efter Chathub-WebSocket-URL:en, extraherar
+67router söker igenom HAR-filen efter Chathub-WebSocket-URL:en, extraherar
 `access_token` och `chathubPath` samt fyller i fälten för autentiseringsuppgifter automatiskt.
 HAR-importen avkodar JWT-tokenens utgångstid och visar tokenens återstående livslängd.
 
@@ -82,7 +82,7 @@ För att undvika manuell återhämtning kan du lagra en Microsoft-uppdateringsto
 
 Hämta uppdateringstoken från ett Microsoft-enhetskodflöde eller auktoriseringskodflöde
 med omfattningen `substrate.office.com/sydney`. När `refreshToken` har angetts
-uppdaterar OmniRoute `access_token` före varje begäran, så du behöver inte
+uppdaterar 67router `access_token` före varje begäran, så du behöver inte
 hämta den på nytt efter varje utgång efter cirka 75 minuter.
 
 Om `refreshToken` inte har angetts måste du hämta WebSocket-autentiseringsuppgiften manuellt

@@ -13,7 +13,7 @@
 
 ## Čo to je
 
-OmniRoute sa pripája k trezoru **Obsidian** ako k **zdroju kontextu** — lokálnej znalostnej
+67router sa pripája k trezoru **Obsidian** ako k **zdroju kontextu** — lokálnej znalostnej
 báze vo formáte Markdown, ktorú agenti čítajú a zapisujú prostredníctvom vstavaného servera MCP.
 Integrácia komunikuje s komunitným doplnkom **Obsidian Local REST API**, ktorý je spustený v
 desktopovej aplikácii, takže agenti môžu vyhľadávať poznámky, čítať/zapisovať/upravovať súbory, zobrazovať
@@ -76,7 +76,7 @@ na porte `27124` a pred uložením overí token zavolaním koncového bodu stavu
 ### Synchronizácia trezora cez WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` spravuje voliteľnú synchronizáciu trezora
-cez WebDAV (riadenú pomocou `src/lib/obsidianSync.ts`). Jej povolením sa OmniRoute nasmeruje
+cez WebDAV (riadenú pomocou `src/lib/obsidianSync.ts`). Jej povolením sa 67router nasmeruje
 na lokálny adresár trezora a vygeneruje sa náhodná dvojica používateľského mena a hesla WebDAV:
 
 ```bash
@@ -115,26 +115,26 @@ samostatné správanie synchronizačného tokenu.
 
 Definované v `open-sse/mcp-server/tools/obsidianTools.ts`. Token/základná URL sa zisťujú
 pri každom volaní (najskôr podľa kľúča API, potom globálne). Nástroje, ktoré pristupujú k **synchronizačnému serveru**
-OmniRoute (štyri nástroje `obsidian_sync_*`), navyše vyžadujú autentifikačný token synchronizácie nakonfigurovaný
-v nastaveniach OmniRoute.
+67router (štyri nástroje `obsidian_sync_*`), navyše vyžadujú autentifikačný token synchronizácie nakonfigurovaný
+v nastaveniach 67router.
 
 ### Nástroje na čítanie (`read:obsidian`)
 
-| Nástroj                      | Popis                                                                                                                 |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Skontroluje, či je Local REST API dostupné a autentifikované.                                                         |
-| `obsidian_search_simple`     | Fulltextové vyhľadávanie v obsahu poznámok; vracia úryvky s cestami k súborom.                                        |
-| `obsidian_search_structured` | Vyhľadávanie pomocou výrazu JSON Logic (filtre and/or/regex/path).                                                    |
-| `obsidian_read_note`         | Prečíta poznámku podľa cesty relatívnej k trezoru; voliteľne konkrétny nadpis/blok/frontmatter.                       |
-| `obsidian_list_vault`        | Zobrazí zoznam súborov a adresárov v trezore (strom položiek).                                                        |
-| `obsidian_get_document_map`  | Získa štruktúru nadpisov poznámky ako mapu nadpisov → čísla riadkov.                                                  |
-| `obsidian_get_note_metadata` | Získa frontmatter, značky, odkazy a počet znakov/slov bez celého obsahu.                                              |
-| `obsidian_get_active_file`   | Získa cestu a obsah súboru, ktorý je aktuálne aktívny v Obsidiane.                                                    |
-| `obsidian_get_periodic_note` | Získa dennú/týždennú/mesačnú periodickú poznámku pre dátum (ak sa vynechá, použije sa dnešok).                        |
-| `obsidian_get_tags`          | Zobrazí všetky značky v trezore spolu s ich početnosťou.                                                              |
-| `obsidian_list_commands`     | Zobrazí dostupné ID príkazov Obsidianu (na použitie s `obsidian_execute_command`).                                    |
-| `obsidian_sync_status`       | Stav synchronizačného servera OmniRoute: spustený stav, názov trezoru, port, čas prevádzky a posledná synchronizácia. |
-| `obsidian_sync_conflicts`    | Zobrazí nevyriešené konflikty synchronizácie (cesta, cesta konfliktu, čas zistenia).                                  |
+| Nástroj                      | Popis                                                                                                                |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Skontroluje, či je Local REST API dostupné a autentifikované.                                                        |
+| `obsidian_search_simple`     | Fulltextové vyhľadávanie v obsahu poznámok; vracia úryvky s cestami k súborom.                                       |
+| `obsidian_search_structured` | Vyhľadávanie pomocou výrazu JSON Logic (filtre and/or/regex/path).                                                   |
+| `obsidian_read_note`         | Prečíta poznámku podľa cesty relatívnej k trezoru; voliteľne konkrétny nadpis/blok/frontmatter.                      |
+| `obsidian_list_vault`        | Zobrazí zoznam súborov a adresárov v trezore (strom položiek).                                                       |
+| `obsidian_get_document_map`  | Získa štruktúru nadpisov poznámky ako mapu nadpisov → čísla riadkov.                                                 |
+| `obsidian_get_note_metadata` | Získa frontmatter, značky, odkazy a počet znakov/slov bez celého obsahu.                                             |
+| `obsidian_get_active_file`   | Získa cestu a obsah súboru, ktorý je aktuálne aktívny v Obsidiane.                                                   |
+| `obsidian_get_periodic_note` | Získa dennú/týždennú/mesačnú periodickú poznámku pre dátum (ak sa vynechá, použije sa dnešok).                       |
+| `obsidian_get_tags`          | Zobrazí všetky značky v trezore spolu s ich početnosťou.                                                             |
+| `obsidian_list_commands`     | Zobrazí dostupné ID príkazov Obsidianu (na použitie s `obsidian_execute_command`).                                   |
+| `obsidian_sync_status`       | Stav synchronizačného servera 67router: spustený stav, názov trezoru, port, čas prevádzky a posledná synchronizácia. |
+| `obsidian_sync_conflicts`    | Zobrazí nevyriešené konflikty synchronizácie (cesta, cesta konfliktu, čas zistenia).                                 |
 
 ### Nástroje na zápis (`write:obsidian`)
 

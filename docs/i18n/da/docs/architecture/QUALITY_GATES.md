@@ -4,7 +4,7 @@
 
 ---
 
-Dette dokument er den autoritative reference for alle CI-kvalitetskontroller i OmniRoute.
+Dette dokument er den autoritative reference for alle CI-kvalitetskontroller i 67router.
 Det beskriver hver kontrol, hvad den validerer, hvilket CI-job den kører i, om den bruger
 en ratchet-baseline eller en bestået/ikke bestået-politik, og om den blokerer buildet eller kun er vejledende.
 
@@ -263,14 +263,14 @@ Kører efter `build`. Blokerer merge ved fejl.
 
 Disse kører efter en cron-tidsplan (og `workflow_dispatch`), aldrig på PR'er. Alle er rådgivende.
 
-| Workflow               | Validerer                                                                                                                                                 | Blokerende     |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | fast-check property-tests med et tilfældigt seed + højt kørselsantal                                                                                      | **Rådgivende** |
-| `nightly-resilience`   | heap-vækst-gate, chaos-fejlinjektion, k6-load/soak                                                                                                        | **Rådgivende** |
-| `nightly-llm-security` | promptfoo-injektionsbeskyttelse (blokeringstilstand) + garak-sonder (springes over uden en provider-secret)                                               | **Rådgivende** |
-| `nightly-schemathesis` | OpenAPI-kontraktfuzzing (schemathesis) mod en kørende OmniRoute med `docs/openapi.yaml` — afdækker spec-overtrædelser / ubehandlede 500-fejl (Fase 8 B.4) | **Rådgivende** |
-| `nightly-mutation`     | Stryker-mutationstestscore over den hurtige unit-test-lane — overlevende mutanter afdækker svage asserts                                                  | **Rådgivende** |
-| `nightly-compat`       | Node-engine-kompatibilitetsmatrix på tværs af de understøttede `engines.node`-intervaller                                                                 | **Rådgivende** |
+| Workflow               | Validerer                                                                                                                                                | Blokerende     |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | fast-check property-tests med et tilfældigt seed + højt kørselsantal                                                                                     | **Rådgivende** |
+| `nightly-resilience`   | heap-vækst-gate, chaos-fejlinjektion, k6-load/soak                                                                                                       | **Rådgivende** |
+| `nightly-llm-security` | promptfoo-injektionsbeskyttelse (blokeringstilstand) + garak-sonder (springes over uden en provider-secret)                                              | **Rådgivende** |
+| `nightly-schemathesis` | OpenAPI-kontraktfuzzing (schemathesis) mod en kørende 67router med `docs/openapi.yaml` — afdækker spec-overtrædelser / ubehandlede 500-fejl (Fase 8 B.4) | **Rådgivende** |
+| `nightly-mutation`     | Stryker-mutationstestscore over den hurtige unit-test-lane — overlevende mutanter afdækker svage asserts                                                 | **Rådgivende** |
+| `nightly-compat`       | Node-engine-kompatibilitetsmatrix på tværs af de understøttede `engines.node`-intervaller                                                                | **Rådgivende** |
 
 Performance-baselines (heap, TTFB, byggetid) registreres, men bruges ikke som gate: se [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -541,7 +541,7 @@ tilladelsesliste giver en falsk følelse af kvalitet.
 
 ## Agentværktøjer: LSP-in-the-loop (tilvalg)
 
-Ud over CI-gatene leveres OmniRoute med et **valgfrit** `agent-lsp`-grundskelet
+Ud over CI-gatene leveres 67router med et **valgfrit** `agent-lsp`-grundskelet
 (en `.mcp.json` på projektniveau, Fase 7 Opgave 15). Opret `.mcp.json`
 for at gøre en TypeScript-sprogserver tilgængelig for kodeagenter, så de kan finde symboler /
 diagnostik **før** de skriver kode — et kompilér-før-påstand-supplement til

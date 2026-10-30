@@ -9,7 +9,7 @@
 > **Izvor istine:** `src/lib/cloudAgent/` i `src/app/api/v1/agents/tasks/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40 (osvježavanje frontmatter-a; 4 agenta uklj. cursor-cloud)
 
-OmniRoute orkestrira cloud-hostovane kodirajuće agente trećih strana (Codex Cloud, Cursor, Devin, Jules) kao dugotrajne zadatke. Svaki agent je umotan iza uniformnog interfejsa tako da klijenti mogu poslati prompt + URL repozitorija i primiti rezultate bez bavljenja API-jima specifičnim za provajdera.
+67router orkestrira cloud-hostovane kodirajuće agente trećih strana (Codex Cloud, Cursor, Devin, Jules) kao dugotrajne zadatke. Svaki agent je umotan iza uniformnog interfejsa tako da klijenti mogu poslati prompt + URL repozitorija i primiti rezultate bez bavljenja API-jima specifičnim za provajdera.
 
 Zadatak Cloud agenta **nije** obično dovršavanje chata. To je trajna, višestepena jedinica rada koja može trajati od nekoliko minuta do nekoliko sati, može proizvesti Pull Request kao svoj artefakt, i podržava naknadne poruke i (kod nekih provajdera) kapije za odobrenje plana.
 

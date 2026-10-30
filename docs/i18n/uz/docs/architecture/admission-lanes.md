@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute turli qamrovga ega **ikkita** jarayon ichidagi yoʻlak tizimiga ega. Ular
+67router turli qamrovga ega **ikkita** jarayon ichidagi yoʻlak tizimiga ega. Ular
 bir-birini toʻldiradi; operatorlar qaysi birini kuzatayotganini bilishi kerak.
 
 ## 1. Bayt darajasidagi butun jarayon bo‘yicha qabul qilish (`chatBodyAdmission.ts`)

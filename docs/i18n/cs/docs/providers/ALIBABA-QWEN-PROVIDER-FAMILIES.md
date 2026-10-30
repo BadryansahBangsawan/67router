@@ -10,7 +10,7 @@ reprezentovány jako čtyři rodiny poskytovatelů. Region je údaj připojení,
 
 ## Rozhodnutí
 
-| Rodina poskytovatele                           | OmniRoute ID            | Globální region | Region Čína |
+| Rodina poskytovatele                           | 67router ID             | Globální region | Region Čína |
 | ---------------------------------------------- | ----------------------- | --------------- | ----------- |
 | Alibaba Cloud Model Studio (platba za využití) | `alibaba`               | Singapur        | Peking      |
 | Alibaba Cloud Token Plan                       | `bailian-coding-plan`   | Singapur        | Peking      |

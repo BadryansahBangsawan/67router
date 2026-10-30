@@ -13,7 +13,7 @@
 
 ## Hva det er
 
-OmniRoute kobler til et **Obsidian**-hvelv som en **kontekstkilde** — en lokal Markdown-
+67router kobler til et **Obsidian**-hvelv som en **kontekstkilde** — en lokal Markdown-
 kunnskapsbase som agenter leser fra og skriver til gjennom den innebygde MCP-serveren.
 Integrasjonen kommuniserer med fellesskapstillegget **Obsidian Local REST API**, som kjører
 i skrivebordsappen, slik at agenter kan søke i notater, lese/skrive/oppdatere filer, vise
@@ -76,7 +76,7 @@ og validerer tokenet ved å kalle statusendepunktet til Local REST API før lagr
 ### WebDAV-synkronisering av hvelv
 
 `src/app/api/settings/obsidian/webdav/route.ts` administrerer en valgfri WebDAV-basert
-hvelvsynkronisering (drevet av `src/lib/obsidianSync.ts`). Når den aktiveres, peker OmniRoute mot en
+hvelvsynkronisering (drevet av `src/lib/obsidianSync.ts`). Når den aktiveres, peker 67router mot en
 lokal hvelvmappe og genererer et tilfeldig WebDAV-brukernavn/passord-par:
 
 ```bash
@@ -111,27 +111,27 @@ De fire `obsidian_sync_*`-verktøyene beholder sin separate håndtering av synkr
 ## MCP-verktøy (22)
 
 Definert i `open-sse/mcp-server/tools/obsidianTools.ts`. Tokenet og basis-URL-en løses
-per kall (først per API-nøkkel, deretter globalt). Verktøy som bruker OmniRoute-**synkroniseringsserveren**
+per kall (først per API-nøkkel, deretter globalt). Verktøy som bruker 67router-**synkroniseringsserveren**
 (de fire `obsidian_sync_*`-verktøyene), krever i tillegg autentiseringstokenet for synkronisering som er konfigurert
-i OmniRoute-innstillingene.
+i 67router-innstillingene.
 
 ### Leseverktøy (`read:obsidian`)
 
-| Verktøy                      | Beskrivelse                                                                                           |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Kontroller om det lokale REST-API-et er tilgjengelig og autentisert.                                  |
-| `obsidian_search_simple`     | Fulltekstsøk i notatinnhold; returnerer utdrag med filbaner.                                          |
-| `obsidian_search_structured` | Søk ved hjelp av et JSON Logic-uttrykk (and/or/regex/path-filtre).                                    |
-| `obsidian_read_note`         | Les et notat etter hvelvrelativ bane; eventuelt en bestemt overskrift/blokk/frontmatter.              |
-| `obsidian_list_vault`        | List opp filer og mapper i hvelvet (trestruktur med oppføringer).                                     |
-| `obsidian_get_document_map`  | Hent notatets overskriftsstruktur som en tilordning av overskrifter → linjenumre.                     |
-| `obsidian_get_note_metadata` | Hent frontmatter, tagger, lenker og antall tegn/ord uten hele innholdet.                              |
-| `obsidian_get_active_file`   | Hent banen og innholdet til filen som er aktiv i Obsidian.                                            |
-| `obsidian_get_periodic_note` | Hent det daglige/ukentlige/månedlige periodiske notatet for en dato (i dag hvis utelatt).             |
-| `obsidian_get_tags`          | List opp alle tagger i hvelvet med forekomstfrekvens.                                                 |
-| `obsidian_list_commands`     | List opp tilgjengelige Obsidian-kommando-ID-er (brukes med `obsidian_execute_command`).               |
-| `obsidian_sync_status`       | Status for OmniRoute-synkroniseringsserveren: kjører, hvelvnavn, port, oppetid, siste synkronisering. |
-| `obsidian_sync_conflicts`    | List opp uløste synkroniseringskonflikter (bane, konfliktbane, tidspunkt for oppdagelse).             |
+| Verktøy                      | Beskrivelse                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Kontroller om det lokale REST-API-et er tilgjengelig og autentisert.                                 |
+| `obsidian_search_simple`     | Fulltekstsøk i notatinnhold; returnerer utdrag med filbaner.                                         |
+| `obsidian_search_structured` | Søk ved hjelp av et JSON Logic-uttrykk (and/or/regex/path-filtre).                                   |
+| `obsidian_read_note`         | Les et notat etter hvelvrelativ bane; eventuelt en bestemt overskrift/blokk/frontmatter.             |
+| `obsidian_list_vault`        | List opp filer og mapper i hvelvet (trestruktur med oppføringer).                                    |
+| `obsidian_get_document_map`  | Hent notatets overskriftsstruktur som en tilordning av overskrifter → linjenumre.                    |
+| `obsidian_get_note_metadata` | Hent frontmatter, tagger, lenker og antall tegn/ord uten hele innholdet.                             |
+| `obsidian_get_active_file`   | Hent banen og innholdet til filen som er aktiv i Obsidian.                                           |
+| `obsidian_get_periodic_note` | Hent det daglige/ukentlige/månedlige periodiske notatet for en dato (i dag hvis utelatt).            |
+| `obsidian_get_tags`          | List opp alle tagger i hvelvet med forekomstfrekvens.                                                |
+| `obsidian_list_commands`     | List opp tilgjengelige Obsidian-kommando-ID-er (brukes med `obsidian_execute_command`).              |
+| `obsidian_sync_status`       | Status for 67router-synkroniseringsserveren: kjører, hvelvnavn, port, oppetid, siste synkronisering. |
+| `obsidian_sync_conflicts`    | List opp uløste synkroniseringskonflikter (bane, konfliktbane, tidspunkt for oppdagelse).            |
 
 ### Skriveverktøy (`write:obsidian`)
 

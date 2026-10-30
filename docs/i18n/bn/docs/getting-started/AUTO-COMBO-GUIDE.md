@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (বাংলা)
+# Auto-Combo: Let 67router Pick the Best AI for You (বাংলা)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **সংক্ষেপে**: আপনার মডেল `auto`-তে সেট করুন, আর OmniRoute প্রতিটি অনুরোধের জন্য স্বয়ংক্রিয়ভাবে সেরা AI প্রদানকারী বেছে নেবে। কোনো কনফিগারেশনের প্রয়োজন নেই।
+> **সংক্ষেপে**: আপনার মডেল `auto`-তে সেট করুন, আর 67router প্রতিটি অনুরোধের জন্য স্বয়ংক্রিয়ভাবে সেরা AI প্রদানকারী বেছে নেবে। কোনো কনফিগারেশনের প্রয়োজন নেই।
 
 ---
 
 ## এটি কী করে
 
-নির্দিষ্ট কোনো AI মডেল (যেমন GPT-4o বা Claude) বেছে নেওয়ার পরিবর্তে, প্রতিটি অনুরোধের জন্য OmniRoute-কে **স্বয়ংক্রিয়ভাবে সেরা মডেলটি বেছে নিতে** দিতে পারেন। এটি বিবেচনা করে:
+নির্দিষ্ট কোনো AI মডেল (যেমন GPT-4o বা Claude) বেছে নেওয়ার পরিবর্তে, প্রতিটি অনুরোধের জন্য 67router-কে **স্বয়ংক্রিয়ভাবে সেরা মডেলটি বেছে নিতে** দিতে পারেন। এটি বিবেচনা করে:
 
 - **সচলতা** — প্রদানকারীটি কি এখন কাজ করছে?
 - **গতি** — এটি কত দ্রুত?
@@ -18,7 +18,7 @@
 - **গুণমান** — এই ধরনের কাজে এটি কি ভালো?
 - **সক্ষমতা** — এটির কি অবশিষ্ট কোটা আছে?
 
-OmniRoute আপনার সংযুক্ত সব প্রদানকারীকে স্কোর দেয় এবং সেরাটি বেছে নেয়। সেটি ব্যর্থ হলে, এটি স্বয়ংক্রিয়ভাবে পরেরটি চেষ্টা করে।
+67router আপনার সংযুক্ত সব প্রদানকারীকে স্কোর দেয় এবং সেরাটি বেছে নেয়। সেটি ব্যর্থ হলে, এটি স্বয়ংক্রিয়ভাবে পরেরটি চেষ্টা করে।
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute আপনার সংযুক্ত সব প্রদানকা�
 model: "auto"
 ```
 
-**ধাপ ২**: ব্যস! বাকি কাজ OmniRoute সামলে নেবে।
+**ধাপ ২**: ব্যস! বাকি কাজ 67router সামলে নেবে।
 
 **ধাপ ৩** (ঐচ্ছিক): নির্দিষ্ট কাজের জন্য একটি ভ্যারিয়েন্ট ব্যবহার করুন:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## এটি যেভাবে কাজ করে (সহজ সংস্করণ)
 
-আপনি যখন `model: "auto"` সহ কোনো অনুরোধ পাঠান, তখন OmniRoute:
+আপনি যখন `model: "auto"` সহ কোনো অনুরোধ পাঠান, তখন 67router:
 
 1. **আপনার সংযুক্ত সব প্রদানকারীকে দেখে** — আপনার যোগ করা প্রতিটি প্রদানকারী (OpenAI, Anthropic, Google ইত্যাদি)
 2. **প্রত্যেকটিকে স্কোর দেয়**, অন্যান্য বিষয়ের পাশাপাশি এগুলো বিবেচনা করে:
@@ -86,7 +86,7 @@ curl http://localhost:20128/v1/chat/completions \
    - এটি কত দ্রুত? (গতি)
    - এই কাজে এটি কি ভালো? (গুণমান)
 3. **সেরাটি বেছে নেয়** — সর্বোচ্চ স্কোর পাওয়া প্রদানকারী আপনার অনুরোধটি পায়
-4. **স্বয়ংক্রিয়ভাবে পুনরুদ্ধার করে** — সেটি ব্যর্থ হলে, OmniRoute স্বয়ংক্রিয়ভাবে পরেরটি চেষ্টা করে
+4. **স্বয়ংক্রিয়ভাবে পুনরুদ্ধার করে** — সেটি ব্যর্থ হলে, 67router স্বয়ংক্রিয়ভাবে পরেরটি চেষ্টা করে
 
 ### স্কোরিং ব্যবস্থা
 
@@ -120,11 +120,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## এটি কীভাবে ব্যর্থতা সামলায়
 
-OmniRoute-এ **তিন স্তরের সুরক্ষা** রয়েছে:
+67router-এ **তিন স্তরের সুরক্ষা** রয়েছে:
 
 ### 1. স্বয়ংক্রিয় ফলব্যাক
 
-সেরা প্রদানকারী ব্যর্থ হলে, OmniRoute স্বয়ংক্রিয়ভাবে পরবর্তী প্রদানকারীকে চেষ্টা করে। আপনাকে কিছুই করতে হবে না।
+সেরা প্রদানকারী ব্যর্থ হলে, 67router স্বয়ংক্রিয়ভাবে পরবর্তী প্রদানকারীকে চেষ্টা করে। আপনাকে কিছুই করতে হবে না।
 
 ### 2. স্বয়ংক্রিয় পুনরুদ্ধার
 
@@ -136,13 +136,13 @@ OmniRoute-এ **তিন স্তরের সুরক্ষা** রয়�
 
 ### 3. জরুরি ফলব্যাক
 
-সব প্রদানকারী ব্যর্থ হলে, শেষ অবলম্বন হিসেবে OmniRoute স্থিতিশীল বিনামূল্যের প্রদানকারীর (যেমন Kiro বা Qoder) কাছে রিকোয়েস্ট রুট করে।
+সব প্রদানকারী ব্যর্থ হলে, শেষ অবলম্বন হিসেবে 67router স্থিতিশীল বিনামূল্যের প্রদানকারীর (যেমন Kiro বা Qoder) কাছে রিকোয়েস্ট রুট করে।
 
 ---
 
 ## একাধিক অ্যাকাউন্ট সমর্থন
 
-একই প্রদানকারীর জন্য আপনার একাধিক অ্যাকাউন্ট থাকলে (যেমন, দুটি OpenAI কী), OmniRoute প্রতিটিকে **পৃথক প্রার্থী** হিসেবে বিবেচনা করে। এর অর্থ:
+একই প্রদানকারীর জন্য আপনার একাধিক অ্যাকাউন্ট থাকলে (যেমন, দুটি OpenAI কী), 67router প্রতিটিকে **পৃথক প্রার্থী** হিসেবে বিবেচনা করে। এর অর্থ:
 
 - অ্যাকাউন্ট A-তে কোটা অবশিষ্ট আছে → এটি ব্যবহার করুন
 - অ্যাকাউন্ট B রেট-লিমিটেড → এটি এড়িয়ে যান
@@ -154,13 +154,13 @@ OmniRoute-এ **তিন স্তরের সুরক্ষা** রয়�
 
 ## ব্যান্ডিট অনুসন্ধান
 
-আরও ভালো বিকল্প খুঁজে পেতে OmniRoute মাঝেমধ্যে নতুন প্রদানকারীদের **অনুসন্ধান** করে:
+আরও ভালো বিকল্প খুঁজে পেতে 67router মাঝেমধ্যে নতুন প্রদানকারীদের **অনুসন্ধান** করে:
 
 - **ডিফল্ট**: ৫% রিকোয়েস্ট এলোমেলো প্রদানকারীদের কাছে যায়
 - **Auto/smart**: ১০% অনুসন্ধানের হার
 - ৫০%-এর বেশি প্রদানকারী অস্বাস্থ্যকর হলে **নিষ্ক্রিয়** থাকে
 
-এটি OmniRoute-কে আপনার ব্যবহারের ধরন অনুযায়ী কোন প্রদানকারীরা সবচেয়ে ভালো কাজ করে তা শিখতে সাহায্য করে।
+এটি 67router-কে আপনার ব্যবহারের ধরন অনুযায়ী কোন প্রদানকারীরা সবচেয়ে ভালো কাজ করে তা শিখতে সাহায্য করে।
 
 ---
 
@@ -172,11 +172,11 @@ OmniRoute-এ **তিন স্তরের সুরক্ষা** রয়�
 
 ### "কোনো প্রদানকারী অচল হয়ে গেলে কী হবে?"
 
-OmniRoute স্বয়ংক্রিয়ভাবে সেটিকে এড়িয়ে পরবর্তী প্রদানকারীকে চেষ্টা করে। কোনো প্রদানকারী বারবার ব্যর্থ হলে, সেটিকে সাময়িকভাবে (৫–৩০ মিনিটের জন্য) বাদ দেওয়া হয়। আপনাকে কিছুই করতে হবে না।
+67router স্বয়ংক্রিয়ভাবে সেটিকে এড়িয়ে পরবর্তী প্রদানকারীকে চেষ্টা করে। কোনো প্রদানকারী বারবার ব্যর্থ হলে, সেটিকে সাময়িকভাবে (৫–৩০ মিনিটের জন্য) বাদ দেওয়া হয়। আপনাকে কিছুই করতে হবে না।
 
 ### "কোন প্রদানকারী ব্যবহার করা হয়েছে তা কি আমি দেখতে পারি?"
 
-রেসপন্স হেডার পরীক্ষা করুন—প্রতিটি রেসপন্সে OmniRoute ব্যবহৃত প্রদানকারী ও মডেল অন্তর্ভুক্ত করে।
+রেসপন্স হেডার পরীক্ষা করুন—প্রতিটি রেসপন্সে 67router ব্যবহৃত প্রদানকারী ও মডেল অন্তর্ভুক্ত করে।
 
 ### "এটি কি আমার ব্যবহার থেকে শেখে?"
 

@@ -186,7 +186,7 @@ su prisijungimo duomenimis, todėl šie praleisti atvejai nėra veikimo vykdymo 
 
 ### Sąranka
 
-1. Paleiskite OmniRoute naudodami `npm run dev` arba įdiegtą sukompiliuotą versiją.
+1. Paleiskite 67router naudodami `npm run dev` arba įdiegtą sukompiliuotą versiją.
 2. Atidarykite Dashboard → Providers → Add Provider.
 3. Pasirinkite Web Cookie kategoriją ir Claude Web.
 4. Įklijuokite visą Cookie antraštę, nukopijuotą iš autentifikuotos `claude.ai` užklausos.

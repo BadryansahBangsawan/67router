@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` pievieno visu jūsu OmniRoute katalogu — modeļus, kombinācijas un
+`@omniroute/opencode-plugin-v2` pievieno visu jūsu 67router katalogu — modeļus, kombinācijas un
 automātiskās kombinācijas — OpenCode v2 modeļu atlasītājam, iekļaujot attēlojamos nosaukumus, cenas un bezmaksas līmeņa
 limitus.
 
@@ -15,7 +15,7 @@ tām nekas netiek koplietots, tāpēc vienas jaunināšana nekad neietekmē otru
 ## Prasības
 
 - OpenCode v2.
-- Sasniedzama OmniRoute vārteja (pēc noklusējuma `http://localhost:20128`).
+- Sasniedzama 67router vārteja (pēc noklusējuma `http://localhost:20128`).
 - Node.js 22 vai 24.
 
 ## Instalēšana
@@ -78,7 +78,7 @@ norādot galapunktu un zaudēto informāciju — tādēļ pasliktinātas funkcio
 | `baseURL`                        | obligāts                                                    | Vārtejas saknes URL, tikai `http(s)`; sufikss `/v1` tiek pievienots, kur nepieciešams                                                                      |
 | `apiKey`                         | pievienotie akreditācijas dati, pēc tam `OMNIROUTE_API_KEY` | Tērzēšanas atslēga ceļiem `/v1/*`                                                                                                                          |
 | `managementReadToken`            | izmanto `apiKey`, ja nav norādīts                           | Atslēga ceļiem `/api/*` — parasti tā **nav** tā pati                                                                                                       |
-| `displayName`                    | `"OmniRoute"`                                               | Pakalpojuma sniedzēja nosaukums izvēlnē                                                                                                                    |
+| `displayName`                    | `"67router"`                                                | Pakalpojuma sniedzēja nosaukums izvēlnē                                                                                                                    |
 | `timeoutMs`                      | `10000`                                                     | Katra galapunkta pieprasījuma noildze (automātiskajām kombinācijām tiek izmantotas 5 s)                                                                    |
 | `modelCacheTtlMs`                | `300000`                                                    | Kataloga kešatmiņas TTL; diska momentuzņēmums paātrina auksto palaišanu                                                                                    |
 | `timeouts`                       | izmanto `timeoutMs`, ja nav norādīts                        | Katra galapunkta laika ierobežojumi milisekundēs: `models`, `combos`, `autoCombos`, `enrichment`                                                           |
@@ -120,7 +120,7 @@ Lai to izslēgtu, iestatiet `"geminiSanitization": false`.
 
 | Simptoms                                                     | Cēlonis                                                                                                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Atlasītājā nav redzams neviens OmniRoute modelis             | Nav atrasta neviena atslēga (pārbaudiet brīdinājumu startēšanas laikā), vai arī vārteja nav sasniedzama                                    |
+| Atlasītājā nav redzams neviens 67router modelis              | Nav atrasta neviena atslēga (pārbaudiet brīdinājumu startēšanas laikā), vai arī vārteja nav sasniedzama                                    |
 | Neapstrādāti modeļu ID, nav kombināciju un cenu informācijas | Pārvaldības galapunkti noraidīja pilnvaru — iestatiet `managementReadToken`                                                                |
 | Īss vai tukšs `freeOnly` katalogs                            | Nav pārvaldības pilnvaras vai tā ir noraidīta — resursdatora žurnālā skatiet atsvaidzināšanas kopsavilkuma rindu (`unmatched-free` skaitu) |
 | Sesija ir piesaistīta `opencode-<id>/…`                      | v1 spraudnis publicēja `opencode-<id>`; v2 publicē tikai `<id>`, tāpēc atkārtoti atlasiet modeli sadaļā `<id>/…`                           |

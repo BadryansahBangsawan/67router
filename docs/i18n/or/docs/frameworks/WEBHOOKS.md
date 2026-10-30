@@ -7,7 +7,7 @@
 > **ସତ୍ୟର ମୂଳ ଉତ୍ସ:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **ଶେଷ ଅଦ୍ୟତନ:** 2026-06-28 — v3.8.40
 
-OmniRoute ପ୍ଲାଟଫର୍ମ ଇଭେଣ୍ଟଗୁଡ଼ିକରେ HTTP ୱେବହୁକ୍ ପ୍ରେରଣ କରିପାରେ। Slack, PagerDuty, Datadog, ଆଭ୍ୟନ୍ତରୀଣ ସତର୍କୀକରଣ ସେବା କିମ୍ବା ଯେକୌଣସି HTTP ରିସିଭର୍ ସହ ଏକୀକରଣ କରିବା ପାଇଁ ସେଗୁଡ଼ିକୁ ବ୍ୟବହାର କରନ୍ତୁ।
+67router ପ୍ଲାଟଫର୍ମ ଇଭେଣ୍ଟଗୁଡ଼ିକରେ HTTP ୱେବହୁକ୍ ପ୍ରେରଣ କରିପାରେ। Slack, PagerDuty, Datadog, ଆଭ୍ୟନ୍ତରୀଣ ସତର୍କୀକରଣ ସେବା କିମ୍ବା ଯେକୌଣସି HTTP ରିସିଭର୍ ସହ ଏକୀକରଣ କରିବା ପାଇଁ ସେଗୁଡ଼ିକୁ ବ୍ୟବହାର କରନ୍ତୁ।
 
 ଡିସ୍ପାଚର୍ ପ୍ରତ୍ୟେକ ଡେଲିଭରିକୁ HMAC-SHA256 ଦ୍ୱାରା ସାଇନ୍ କରେ, ଅସ୍ଥାୟୀ ବିଫଳତାରେ ପୁନଃଚେଷ୍ଟା କରେ, ପ୍ରତ୍ୟେକ ୱେବହୁକ୍ର ଡେଲିଭରି ସ୍ଥିତି ଟ୍ରାକ୍ କରେ ଏବଂ ବାରମ୍ବାର ବିଫଳ ହେଉଥିବା ଏଣ୍ଡପଏଣ୍ଟଗୁଡ଼ିକୁ ସ୍ୱତଃ-ଅକ୍ଷମ କରେ।
 
@@ -49,7 +49,7 @@ OmniRoute ପ୍ଲାଟଫର୍ମ ଇଭେଣ୍ଟଗୁଡ଼ିକରେ
 
 ## HMAC ସାଇନିଂ
 
-କୌଣସି ୱେବହୁକ୍ରେ `secret` ଥିଲେ, OmniRoute JSON ବଡିକୁ ସାଇନ୍ କରେ ଏବଂ ନିମ୍ନଲିଖିତଗୁଡ଼ିକ ପଠାଏ:
+କୌଣସି ୱେବହୁକ୍ରେ `secret` ଥିଲେ, 67router JSON ବଡିକୁ ସାଇନ୍ କରେ ଏବଂ ନିମ୍ନଲିଖିତଗୁଡ଼ିକ ପଠାଏ:
 
 ```
 Content-Type: application/json
@@ -200,7 +200,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

@@ -12,7 +12,7 @@ kpọmkwem, flags `anthropic-beta`, headers Stainless SDK, wdg.).
 
 ## Mmalite ngwa ngwa — jiri provider `agentrouter` nke e wuru n’ime ya (a tụrụ aro)
 
-Maka ọtụtụ ndị ọrụ, **ọ dịghị nhazi pụrụ iche achọrọ**. OmniRoute nwere provider
+Maka ọtụtụ ndị ọrụ, **ọ dịghị nhazi pụrụ iche achọrọ**. 67router nwere provider
 `agentrouter` e wuru n’ime ya, nke nwere wire image Claude Code zuru ezu etinyelarị n’ime ya (lee
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Iji ya:
 
@@ -34,7 +34,7 @@ base URL, chat path, ma ọ bụ header set.
 
 ## Nke dị elu: ijikọ site na ụdị provider kwekọrọ na Claude Code
 
-OmniRoute na-akwado AgentRouter (na relay ndị yiri ya) site na ụdị provider
+67router na-akwado AgentRouter (na relay ndị yiri ya) site na ụdị provider
 **Claude Code compatible** (`anthropic-compatible-cc-*`), nke na-eji
 Anthropic Messages API na wire image ziri ezi akparịta ụka. Provider
 `openai-compatible-chat` nkịtị nke na-atụ aka na `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Akaụntụ AgentRouter na API key. Ndị debanyere aha ọhụrụ na-enweta credit efu site na affiliate
   link dị na [README](../README.md) nke project ahụ.
-- OmniRoute na-agba ọsọ mgbe agbanyere feature flag `ENABLE_CC_COMPATIBLE_PROVIDER`
+- 67router na-agba ọsọ mgbe agbanyere feature flag `ENABLE_CC_COMPATIBLE_PROVIDER`
   (lee n’okpuru).
 
 ## 1. Gbanwuo ụdị provider kwekọrọ na CC
 
 A na-echekwa ụdị provider kwekọrọ na Claude Code n’azụ feature flag n’ihi na ọ
 na-eziga traffic nke yiri nnọọ client Claude Code gọọmentị. Gbanwuo ya site
-n’itinye environment variable tupu ịmalite OmniRoute:
+n’itinye environment variable tupu ịmalite 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY-läpinäkyvä salauksen purku on OmniRouten **viides kaappaustila**
+TPROXY-läpinäkyvä salauksen purku on 67routerin **viides kaappaustila**
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md)- / [AgentBridge](../frameworks/AGENTBRIDGE.md)-
 MITM-pinolle. Se sieppaa ja **purkaa salauksen** paikallisesta lähtevästä HTTPS-liikenteestä Linuxissa
 käyttämällä ytimen TPROXY-toimintoa ja käytäntöpohjaista reititystä — **ilman** `/etc/hosts`-tiedoston väärentämistä ja
@@ -53,7 +53,7 @@ Käytä sitä, kun haluat kaapata ja purkaa liikenteen salauksen prosessista, jo
 - jonka toimintaa et halua häiritä järjestelmänlaajuisella välityspalvelinmuutoksella.
 
 Koska sieppaus tapahtuu ytimessä, liikenteen aloittava prosessi **ei tarvitse
-määritysmuutoksia** — mutta prosessin täytyy luottaa OmniRouten asentamaan dynaamiseen varmentajaan
+määritysmuutoksia** — mutta prosessin täytyy luottaa 67routerin asentamaan dynaamiseen varmentajaan
 (katso [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ ei työkaluketjua, lisäosaa ei ole käännetty), lisäosan lataaja (`src/mitm/t
 palauttaa arvon `null` poikkeuksen heittämisen sijaan. Kaappaustilan tila ilmoittaa tällöin
 `available: false`, hallintapaneelin valitsin on **poistettu käytöstä** ja sen työkaluvihje on
 "TPROXY-salauksen purkaminen vaatii Linuxin, root-käyttöoikeudet ja natiivin lisäosan", ja muu
-OmniRoute jatkaa toimintaansa.
+67router jatkaa toimintaansa.
 
 ---
 
@@ -265,7 +265,7 @@ päättymättömän silmukan. Välityspolku estää tämän ohitusmerkinnällä 
 | **Virheiden puhdistus**                       | Reitin virhevastaukset kulkevat `sanitizeErrorMessage()`-funktion kautta (ehdoton sääntö #12).                                                                                                                                                                                                                                                                                                                              |
 
 **MITM-CA on tehokas ominaisuus.** Käyttöjärjestelmän luottama CA, joka voi allekirjoittaa minkä tahansa
-isäntänimen, tarkoittaa, että kaikki OmniRouten sieppaama liikenne voidaan purkaa. Sen käyttö on rajattu
+isäntänimen, tarkoittaa, että kaikki 67routerin sieppaama liikenne voidaan purkaa. Sen käyttö on rajattu
 erikseen käyttöön otettavaan, vain paikalliseen TPROXY-kaappaustilaan, joka on oletusarvoisesti pois käytöstä, ja luottamussäilön
 merkintä poistetaan, kun tila pysäytetään.
 
@@ -375,7 +375,7 @@ palauttaa arvon `available: false`, kun lisäosa puuttuu.
 ### Vanhentuneita palomuurisääntöjä kaatumisen jälkeen
 
 `revertTproxy()` on käyttöönottotoiminnon tarkka käänteistoiminto ja idempotentti. Tilan pysäyttäminen
-kumoaa säännöt. Jos OmniRoute lopetettiin kesken istunnon, käytä AgentBridgen
+kumoaa säännöt. Jos 67router lopetettiin kesken istunnon, käytä AgentBridgen
 **Repair**-toimintoa (`POST /api/tools/agent-bridge/repair`) poistamaan järjestelmään jäänyt
 tila (DNS-väärennös, juurivarmenne, järjestelmän välityspalvelin). Myös TPROXYn `mangle`-säännöt ja reitti
 tyhjennetään automaattisesti uudelleenkäynnistyksen yhteydessä.

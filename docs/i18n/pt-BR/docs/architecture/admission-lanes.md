@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tem **dois** sistemas de faixas locais ao processo, com escopos diferentes. Eles são
+67router tem **dois** sistemas de faixas locais ao processo, com escopos diferentes. Eles são
 complementares; os operadores devem saber qual deles estão observando.
 
 ## 1. Admissão em nível de bytes para todo o processo (`chatBodyAdmission.ts`)

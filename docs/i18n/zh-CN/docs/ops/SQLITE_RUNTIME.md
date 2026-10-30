@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 在启动时通过一个 5 步回退链解析其 SQLite 驱动：
+67router 在启动时通过一个 5 步回退链解析其 SQLite 驱动：
 
 1. **捆绑的 `better-sqlite3`**（通过 `package.json` 中的 `dependencies`）
    — 速度最快，使用原生二进制文件；当构建工具可用时，由 `npm install` 安装。
@@ -27,14 +27,14 @@ OmniRoute 在启动时通过一个 5 步回退链解析其 SQLite 驱动：
   `~/.omniroute/runtime/` 中执行运行时安装可绕过全局 npm 缓存。
 - **缺少构建工具**：某些环境（没有 VS Build Tools 的企业 Windows 环境、
   最小化 Docker 镜像）无法编译 `better-sqlite3`。运行时安装程序会从 npm
-  注册表解析预构建二进制文件；即使该过程失败，回退驱动也能确保 OmniRoute
+  注册表解析预构建二进制文件；即使该过程失败，回退驱动也能确保 67router
   仍然可以启动。
 - **隔离网络系统**：如果无法访问 npm 注册表，`node:sqlite`
   或 `sql.js` 可保证基本功能。
 
 ## 魔数验证
 
-在加载运行时安装的 `.node` 文件之前，OmniRoute 会读取前 8
+在加载运行时安装的 `.node` 文件之前，67router 会读取前 8
 个字节，并与已知的平台魔数进行匹配：
 
 | 平台              | 字节（十六进制） | 标签        |
@@ -102,9 +102,9 @@ omniroute config db-info  #（如果该 CLI 命令存在）
 ## 单写入器拓扑（不支持 HA）
 
 上述驱动回退链仍然在**一个进程**中运行。默认使用 SQLite 的
-OmniRoute 是**单写入器**：
+67router 是**单写入器**：
 
-- 不要将两个 OmniRoute 副本连接到同一个 `storage.sqlite` 文件。
+- 不要将两个 67router 副本连接到同一个 `storage.sqlite` 文件。
 - 容器重启、Recreate 部署、OOM 终止或 HEALTHCHECK 重启都会中断
   所有正在进行的 SSE 会话。默认路径不提供会话排空机制。
 - 如果编排器的存活性检查将响应缓慢的 `/healthz` 视为已失效，它会终止唯一的

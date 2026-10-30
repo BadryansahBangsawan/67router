@@ -9,7 +9,7 @@
 > ሁኮች የሚደርሱባቸው መንገዶች እና የምላሽ ጎዳናዎች፣ የተዋሃዱ ማሰናከያ ራስጌዎች (#16412)፣ የኢንጀክሽን
 > ማገጃ ሁነታ እንደ ግዴታ ወሰን (#16413)፣ እና ከ post-call በፊት ምላሽን የሚያይ ነገር)
 
-ጋርድሬሎች በ OmniRoute እና በ upstream አቅራቢዎች መካከል ባለው ወሰን ላይ ደህንነትን፣ ፖሊሲን እና
+ጋርድሬሎች በ 67router እና በ upstream አቅራቢዎች መካከል ባለው ወሰን ላይ ደህንነትን፣ ፖሊሲን እና
 የይዘት ለውጦችን ያስፈጽማሉ። እያንዳንዱ ጋርድሬል የጥያቄ ፔይሎዶችን (`preCall`) እና የ upstream
 ምላሾችን (`postCall`) መመርመር (እና በአማራጭ መከልከል፣ መለወጥ ወይም ማብራሪያ መስጠት) ይችላል።
 
@@ -101,7 +101,7 @@
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) ሲገድብ፣ ድልድዩ
 ቁልፉ ሊጠቀምባቸው በሚችላቸው ግንኙነቶች ላይ ቁልፉ ሊጠቀምባቸው የሚችላቸውን
 የእንደገና ማምራትና የመግለጫ ሞዴሎች ብቻ ይመርጣል። የመግለጫ ጥሪው ከዚያ በኋላ ሁልጊዜ
-በ`x-omniroute-self-loop-key-id` ራስጌ አማካኝነት በOmniRoute self-loop ውስጥ
+በ`x-omniroute-self-loop-key-id` ራስጌ አማካኝነት በ67router self-loop ውስጥ
 ያልፋል፤ ስለዚህ ጥያቄውን የሚቀበለው የውይይት ጥያቄ የዚያን ቁልፍ
 የግንኙነትና የሞዴል ፖሊሲ እንደገና ያስፈጽማል። `enforceApiKeyPolicy()`
 ያንን ራስጌ የሚያከብረው ከself-loop bearer ጋር በጋራ ሲቀርብ ብቻ ነው፤ ስለዚህ መዳረሻን
@@ -131,7 +131,7 @@
 ለሚጠይቀው የጽሑፍ ግልባጭ ተግባር የOCR ትክክለኛነትን ያበላሻል፤ ስለዚህ የመግለጫ ጥሪው
 የመጀመሪያው ወደ ውስጥ የገባ ጥያቄ ምንም ዓይነት የዝርዝር ደረጃ ቢጠቀምም፣ ሁልጊዜ ከፍተኛ
 ዝርዝር ይጠይቃል። ይህ የሚነካው የውስጣዊውን የመግለጫ ጥያቄ አካል ብቻ ነው፤
-OmniRoute በዋናው ጥያቄ ላይ የጠሪውን `image_url.detail` የሚያስተላልፍበትን መንገድ
+67router በዋናው ጥያቄ ላይ የጠሪውን `image_url.detail` የሚያስተላልፍበትን መንገድ
 አይቀይርም — ያ ነባሪ በተናጠል የሚተገበር ሲሆን፣ የተገኙ OpenCode ደንበኞችን ብቻ
 በ`defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`) ውስጥ ይመለከታል። የመግለጫ
 self-loop የAnthropic wire-format ቅርንጫፍ `detail` መስክ የለውም፣
@@ -250,7 +250,7 @@ model pickerን vision-capable models ብቻ እንዲያሳይ ያጣራል፣ 
 ነባሩን Speech-to-Text playground ሳያስወግድ Image-to-Text እና Speech-to-Text
 workflowsን ከሚዛመዱት Modality Bridge tabs ጋር ያገናኛል።
 
-**የራስ-ዙር admission bypass፦** የመግለጫ ጥሪው በOmniRoute ራሱ
+**የራስ-ዙር admission bypass፦** የመግለጫ ጥሪው በ67router ራሱ
 `/v1` self-loop (መደበኛ ያልሆነ provider model) በኩል ሲተላለፍ፣ ንዑስ-ጥያቄው
 `x-omniroute-admission-bypass: internal`ን ይልካል እና በተፈታው
 self-loop credential ማረጋገጫ ያደርጋል — በlocal mode ውስጥ ያለው የአካባቢ
@@ -391,7 +391,7 @@ broker ግቤት ገደብን ያስፈጽማሉ። የተገደበው queue በ
 
 እያንዳንዱ ፍሬም በ4 MiB፣ ሁሉም ጥሬ ፍሬሞች በአጠቃላይ በ23 MiB፣ እንዲሁም
 ተከታታይ የተደረገው የብሮከር ምላሽ በ32 MiB የተገደበ ነው። የግል ጊዜያዊ ማውጫ
-በ`finally` ውስጥ ይወገዳል። OmniRoute FFmpegን አብሮ አያቀርብም፣ ብጁ
+በ`finally` ውስጥ ይወገዳል። 67router FFmpegን አብሮ አያቀርብም፣ ብጁ
 የማስፈጸሚያ ዱካም አይቀበልም። መግለጫ ጽሑፍ ከመፍጠሩ በፊት፣ ድልድዩ ጥንቃቄ የተሞላበት
 የምስል ተደጋጋሚነት ማስወገጃ ዙር ይተገብራል፦ እያንዳንዱ JPEG ወደ 16×16 ግራጫ-ደረጃ ቋት
 ይቀነሳል፣ እና የሚነጻጸረው በመጨረሻ ከተያዘው ፍሬም ጋር ብቻ ነው። ከአንድ ፍሬም በላይ ለተጠየቀ የመግለጫ ጽሑፍ በጀት፣
@@ -432,7 +432,7 @@ JPEG በ32 MiB የተገደበ ሆኖ ይቆያል። `sharp` ፍርግርጉን
 በተመረመረው የጊዜ ቆይታ ውስጥ ያለ ውሱን የ`start`/`end` ክፍተትን እና በነጭ ዝርዝር የተፈቀደ
 `source` (`client`፣ `embedded` ወይም `audio-bridge`) መያዝ አለበት፤ `confidence` በነባሪ
 `1` ሲሆን በ`0` እና `1` መካከል መቆየት አለበት። ፈጽሞ ተመሳሳይ የሆኑ ፍንጮች ይዋሃዳሉ።
-OmniRoute ከዚህ ሜታዳታ ፈጽሞ የጽሑፍ ቅጂ ማዘጋጀትን አይጀምርም፦ የተረጋገጡ ፍንጮች
+67router ከዚህ ሜታዳታ ፈጽሞ የጽሑፍ ቅጂ ማዘጋጀትን አይጀምርም፦ የተረጋገጡ ፍንጮች
 ከምንጭ፣ ከእርግጠኝነት እና ከክፍተታቸው ጋር ወደተገለጸው ውጤት ይቀዳሉ፣ እና
 ከፍሬም መግለጫ ጽሑፎች ጎን እንደማይታመኑ ምልከታዎች ይቀርባሉ። ልክ ያልሆነ፣
 ከክልል ውጭ የሆነ ወይም የአመጣጥ መረጃ የሌለው ጽሑፍ ከመግለጫ ጽሑፍ ፍሰቱ ጋር ከመቀላቀል ይልቅ ውድቅ ይደረጋል።
@@ -879,7 +879,7 @@ middleware የሚያስተላልፈውን በእያንዳንዱ ጥያቄ የማ
   `error.code === "SECURITY_001"` እንደሚሸከም ያረጋግጣል፣ ማለት ጥበቃው
   ጥያቄውን በእውነት ውድቅ አድርጓል ማለት ነው።
 - **`garak` (ምክራዊ)** — garakን `--probes promptinject,dan,leakreplay` በአካባቢ
-  OmniRoute instance (`http://localhost:20128/v1`) ላይ ያስኬዳል። በአቅራቢ ሚስጥር
+  67router instance (`http://localhost:20128/v1`) ላይ ያስኬዳል። በአቅራቢ ሚስጥር
   (`PROMPTFOO_PROVIDER_KEY`) ላይ የተገደበ ነው፤ በሰላም ይዘለላል እና `|| true`
   ተጨምሮበታል፣ ስለዚህ CIን ሳያውድቅ ሪፖርት ያደርጋል።
 

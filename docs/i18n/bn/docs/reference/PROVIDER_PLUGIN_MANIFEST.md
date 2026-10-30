@@ -14,7 +14,7 @@ import না করেই manifest ব্যবহার করতে পার
 একই manifest HTTP-এর মাধ্যমেও
 `GET /api/v1/provider-plugin-manifest`-এ পাওয়া যায়, যাতে out-of-process চলা sidecar-গুলো এটি ব্যবহার করতে পারে।
 
-OmniRoute,
+67router,
 `X-OmniRoute-Provider-Manifest-Url` request header-এর মাধ্যমে Bifrost এবং CLIProxyAPI-কে ওই URL জানায়।
 sidecar-এর local request origin-এর পরিবর্তে কোনো public বা container
 network URL প্রয়োজন হলে `OMNIROUTE_PROVIDER_MANIFEST_URL` সেট করুন।
@@ -31,7 +31,7 @@ response-এর কোনো body থাকে না; sidecar তার cached 
 ## লক্ষ্য
 
 Provider metadata-কে একটি plugin চুক্তির দিকে নিয়ে যাওয়া, যাতে শেষ পর্যন্ত
-কম latency-র কোনো sidecar hot request path-এর মালিকানা নিতে পারে, আর OmniRoute
+কম latency-র কোনো sidecar hot request path-এর মালিকানা নিতে পারে, আর 67router
 TypeScript route-কে policy gate এবং fallback হিসেবে ধরে রাখে। Manifestটি additive:
 এটি নিজে থেকে request routing পরিবর্তন করে না।
 
@@ -75,7 +75,7 @@ machine-readable উত্তর হিসেবে এটিকে বিবে
 | `usage-fetch`        | একটি সংযুক্ত usage বা quota fetcher (`getUsageForProvider`) রয়েছে।           |
 | `usage-supported`    | usage API এই provider-কে গ্রহণ করে (`isSupportedUsageConnection`)।            |
 
-`usage-fetch` শুধু discovery-এর জন্য। এটি জানায় যে OmniRoute কীভাবে provider-এর
+`usage-fetch` শুধু discovery-এর জন্য। এটি জানায় যে 67router কীভাবে provider-এর
 usage পড়তে হয় তা জানে; এটি fetching সক্রিয় করে না, quota semantics পরিবর্তন করে না,
 বা provider-এর জন্য Dashboard quota widget সক্রিয় আছে এমন ইঙ্গিত দেয় না — ওই widget
 আলাদাভাবে `USAGE_SUPPORTED_PROVIDERS` দ্বারা gated। সত্যের উৎস হলো

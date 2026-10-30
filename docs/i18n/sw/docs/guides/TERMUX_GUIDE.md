@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute inaweza kuendeshwa kama seva isiyo na kiolesura cha picha kwenye Android kupitia Termux. Programu ya eneo-kazi ya Electron haitumiki katika Termux, lakini dashibodi ya wavuti na API inayooana na OpenAI hufanya kazi kupitia kivinjari cha ndani au vifaa vingine vilivyo kwenye mtandao huo huo.
+67router inaweza kuendeshwa kama seva isiyo na kiolesura cha picha kwenye Android kupitia Termux. Programu ya eneo-kazi ya Electron haitumiki katika Termux, lakini dashibodi ya wavuti na API inayooana na OpenAI hufanya kazi kupitia kivinjari cha ndani au vifaa vingine vilivyo kwenye mtandao huo huo.
 
 ## Mahitaji ya Awali
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Toleo la Node.js:** OmniRoute inahitaji Node `>=22.22.2 <23 || >=24.0.0 <27` (inalingana na `engines` katika `package.json` / `SUPPORTED_NODE_RANGE`). Kwa kawaida `nodejs-lts` ya Termux huja na Node 20 LTS, ambayo **haitumiki tena** — badala yake sakinisha `pkg install nodejs` (toleo la sasa) na uthibitishe kuwa `node --version` inaonyesha toleo la mstari wa 22.x/24.x+.
+> **Toleo la Node.js:** 67router inahitaji Node `>=22.22.2 <23 || >=24.0.0 <27` (inalingana na `engines` katika `package.json` / `SUPPORTED_NODE_RANGE`). Kwa kawaida `nodejs-lts` ya Termux huja na Node 20 LTS, ambayo **haitumiki tena** — badala yake sakinisha `pkg install nodejs` (toleo la sasa) na uthibitishe kuwa `node --version` inaonyesha toleo la mstari wa 22.x/24.x+.
 
-Ikiwa ukamilishaji wa kifurushi asilia utashindwa, endesha tena amri ya `pkg install` iliyo hapo juu kisha ujaribu tena kusakinisha OmniRoute.
+Ikiwa ukamilishaji wa kifurushi asilia utashindwa, endesha tena amri ya `pkg install` iliyo hapo juu kisha ujaribu tena kusakinisha 67router.
 
 ## Kusakinisha
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Kuendesha
 
-Anzisha OmniRoute katika hali ya seva isiyo na kiolesura cha picha:
+Anzisha 67router katika hali ya seva isiyo na kiolesura cha picha:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Kwa mfano:
 http://192.168.1.50:20128
 ```
 
-Weka simu na kiteja kwenye mtandao mmoja unaoaminika. Ikiwa unaruhusu ufikiaji wa OmniRoute kutoka nje ya simu, washa funguo za API na uthibitishaji wa dashibodi.
+Weka simu na kiteja kwenye mtandao mmoja unaoaminika. Ikiwa unaruhusu ufikiaji wa 67router kutoka nje ya simu, washa funguo za API na uthibitishaji wa dashibodi.
 
 ## Saraka ya Data
 
-Kwa chaguo-msingi, OmniRoute huhifadhi data chini ya saraka ya nyumbani ya Termux, ikifuata utaratibu ule ule wa njia ya data ya upande wa seva unaotumika kwenye Linux. Ili kuweka hifadhidata mahali mahususi:
+Kwa chaguo-msingi, 67router huhifadhi data chini ya saraka ya nyumbani ya Termux, ikifuata utaratibu ule ule wa njia ya data ya upande wa seva unaotumika kwenye Linux. Ili kuweka hifadhidata mahali mahususi:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Mfumo usiotumika: android (kila ombi hurejesha HTTP 500)
 
-**Dalili:** `omniroute` / `omniroute serve` huonyesha `✔ OmniRoute is running!`, lakini kila ombi la dashibodi au API hurejesha `500 Internal Server Error` isiyo na maelezo. `~/.omniroute/logs/application/app.log` hubaki tupu, `APP_LOG_LEVEL=debug` haionyeshi chochote muhimu, na mwili wa jibu ni maandishi ya kawaida (`Internal Server Error`) yasiyo na maelezo ya JSON.
+**Dalili:** `omniroute` / `omniroute serve` huonyesha `✔ 67router is running!`, lakini kila ombi la dashibodi au API hurejesha `500 Internal Server Error` isiyo na maelezo. `~/.omniroute/logs/application/app.log` hubaki tupu, `APP_LOG_LEVEL=debug` haionyeshi chochote muhimu, na mwili wa jibu ni maandishi ya kawaida (`Internal Server Error`) yasiyo na maelezo ya JSON.
 
 **Sababu:** Baadhi ya miundo ya Termux/Node huripoti `process.platform === "android"`. `getCacheDirectory()` ya Next.js haishughulikii mfumo huo: inahitaji `~/.cache` (au saraka ya kawaida ya muda) iwe _tayari_ ipo, vinginevyo hushindwa wakati wa kupakia ndoano ya ufuatiliaji kwa ujumbe huu:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Kwa kuwa ndoano haipakii kamwe, uwekaji kumbukumbu hauanzi kamwe — hitilafu ya 500 huonekana kutowezekana kabisa kutambuliwa. OmniRoute huunda `~/.cache` (na kuweka `XDG_CACHE_HOME` ikiwa haijawekwa) katika sehemu ya kuingilia ya CLI kabla ya Next.js kuanza ili ukaguzi huu ufanikiwe kwenye Android/Termux.
+Kwa kuwa ndoano haipakii kamwe, uwekaji kumbukumbu hauanzi kamwe — hitilafu ya 500 huonekana kutowezekana kabisa kutambuliwa. 67router huunda `~/.cache` (na kuweka `XDG_CACHE_HOME` ikiwa haijawekwa) katika sehemu ya kuingilia ya CLI kabla ya Next.js kuanza ili ukaguzi huu ufanikiwe kwenye Android/Termux.
 
 **Suluhisho linalotumika (bila kurekebisha kifurushi):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Katika miundo ya sasa ya OmniRoute, CLI hufanya hivi kiotomatiki kwenye Android/Termux — usakinishaji mpya wa `npx -y omniroute@latest` / usakinishaji wa kimfumo haupaswi kuhitaji hatua hii ya mikono. Ikiwa bado unaona hitilafu hiyo baada ya kusasisha, unda `~/.cache` mara moja kama ilivyo hapo juu kisha uanzishe upya.
+Katika miundo ya sasa ya 67router, CLI hufanya hivi kiotomatiki kwenye Android/Termux — usakinishaji mpya wa `npx -y omniroute@latest` / usakinishaji wa kimfumo haupaswi kuhitaji hatua hii ya mikono. Ikiwa bado unaona hitilafu hiyo baada ya kusasisha, unda `~/.cache` mara moja kama ilivyo hapo juu kisha uanzishe upya.
 
 **Usirekebishe** `dist/server.js` ili kulazimisha `process.platform = "linux"`. Aina hiyo ya marekebisho ya kifurushi hufutwa kila unapokisakinisha upya/kukisasisha na haihitajiki baada ya saraka ya akiba kuwepo.
 

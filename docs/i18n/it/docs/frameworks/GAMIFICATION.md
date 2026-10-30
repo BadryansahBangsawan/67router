@@ -7,7 +7,7 @@
 > **Fonte autorevole:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Ultimo aggiornamento:** 2026-06-28 — v3.8.40
 
-OmniRoute include un livello di gamification local-first che premia gli utenti per
+67router include un livello di gamification local-first che premia gli utenti per
 l'interazione con la piattaforma — effettuando richieste, cambiando provider, creando
 combo, condividendo token e contribuendo alla community. Tutto lo stato risiede in
 SQLite; la federazione con i server della community è facoltativa e basata su push.
@@ -36,7 +36,7 @@ ricompense per gli inviti).
 | Classifiche        | Ambiti globali, settimanali, mensili, di condivisione token e di contribuzione                 |
 | Condivisione token | Trasferimento di crediti tra utenti tramite registro a partita doppia                          |
 | Inviti e riscatto  | Codici di referral archiviati con hash SHA-256                                                 |
-| Server community   | Federazione con istanze OmniRoute esterne                                                      |
+| Server community   | Federazione con istanze 67router esterne                                                       |
 | Anti-cheat         | Punteggio lato server, limitazione della frequenza, rilevamento delle anomalie tramite z-score |
 
 ### Principi di progettazione
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tabelle del database
 
-Tutte le tabelle risiedono nel database SQLite principale di OmniRoute, creato dalla migrazione
+Tutte le tabelle risiedono nel database SQLite principale di 67router, creato dalla migrazione
 `060_create_gamification.sql`. La modalità di journaling WAL viene ereditata dall'istanza singleton
 `getDbInstance()` in `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Tutte le tabelle risiedono nel database SQLite principale di OmniRoute, creato d
 
 ### Modulo di dominio: `src/lib/db/gamification.ts`
 
-Segue il modello standard di OmniRoute: importa `getDbInstance()` da
+Segue il modello standard di 67router: importa `getDbInstance()` da
 `core.ts` ed esporta funzioni CRUD tipizzate. Nessuna istruzione SQL grezza nei gestori delle route.
 
 Funzioni principali:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Azione            | XP  | Descrizione                                                                         |
 | ----------------- | --- | ----------------------------------------------------------------------------------- |
-| `request`         | 1   | Per ogni richiesta API instradata tramite OmniRoute                                 |
+| `request`         | 1   | Per ogni richiesta API instradata tramite 67router                                  |
 | `provider_switch` | 5   | Passaggio a un provider diverso                                                     |
 | `model_switch`    | 3   | Passaggio a un modello diverso                                                      |
 | `combo_create`    | 10  | Creazione di una nuova combo                                                        |
@@ -579,7 +579,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (univoco, indicizzato) |
 | `token_hash` | SHA-256(raw_token)                |
 
-Il token non elaborato viene restituito all'utente una sola volta al momento della creazione. OmniRoute
+Il token non elaborato viene restituito all'utente una sola volta al momento della creazione. 67router
 non lo memorizza né lo mostra mai più: viene conservato solo l'hash.
 
 ### Prevenzione dell'auto-referral
@@ -702,7 +702,7 @@ Gli amministratori possono consultare l'intero registro di controllo tramite `GE
 
 ## Route API
 
-Tutte le route seguono il modello OmniRoute standard:
+Tutte le route seguono il modello 67router standard:
 
 ```
 Route → Preflight CORS → Validazione del corpo (Zod) → Autenticazione (extractApiKey)

@@ -20,11 +20,11 @@ Variklio vaidmuo aprašomas pagal **dvi nepriklausomas ašis**, kurios registre
 kartu užkoduotos kaip `RouterBackendDefinition`:
 
 1. **Gyvavimo ciklas** (`RouterBackendLifecycle`) — _kaip variklis vykdomas_:
-   - `in-process` — vykdomas OmniRoute Node proceso viduje (savasis TS konvejeris).
-   - `supervised` — vietinis antrinis procesas, kurį OmniRoute įdiegia, paleidžia,
+   - `in-process` — vykdomas 67router Node proceso viduje (savasis TS konvejeris).
+   - `supervised` — vietinis antrinis procesas, kurį 67router įdiegia, paleidžia,
      sustabdo ir tikrina jo būklę per `ServiceSupervisor`, o tada naudoja kaip
      teikėjo ryšį.
-   - `external` — HTTP galinis taškas, į kurį OmniRoute nukreipia užklausas, tačiau
+   - `external` — HTTP galinis taškas, į kurį 67router nukreipia užklausas, tačiau
      kurio **nevaldo** (konfigūruojamas naudojant aplinkos kintamajame nurodytą bazinį URL).
    - `disabled` — užregistruotas, bet jo negalima pasirinkti.
 2. **Pasirinkimo ašis** (perdavimo maršruto parinkimo posistemė) — _ar perdavimo

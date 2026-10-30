@@ -15,7 +15,7 @@
 fèrèsé wákàtí 5, Kimi 1500 req/h) lọ́nà tó dọ́gba láàárín ọ̀pọ̀ kọ́kọ́rọ́ API tí wọ́n ń lo
 àsopọ̀ kan náà.
 
-**Ìṣòro tí ó ń yanjú:** OmniRoute ń ṣe aṣojú ọ̀pọ̀ kọ́kọ́rọ́ API sí àkọọ́lẹ̀ olupèsè
+**Ìṣòro tí ó ń yanjú:** 67router ń ṣe aṣojú ọ̀pọ̀ kọ́kọ́rọ́ API sí àkọọ́lẹ̀ olupèsè
 ókè kan náà. Láìsí ọgbọ́n pípín, ìṣàn ńlá láti ọ̀dọ̀ kọ́kọ́rọ́ A lè lo gbogbo
 ìwọ̀n-àyè olupèsè fún wákàtí náà tán, tí yóò sì mú kí àwọn kọ́kọ́rọ́ B àti C di dídènà títí fèrèsé náà yóò fi tún bẹ̀rẹ̀.
 Ẹ́ńjìnnì náà ń dènà èyí nípa:
@@ -119,7 +119,7 @@ Díràìfà Redis: Lua EVAL script fún ìfikún atomiki — ó ń ṣiṣẹ́ 
 
 - Tábìlì: `quota_consumption` (wo ìṣíkiri `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Ó dára jù fún àwọn ìmúṣiṣẹ́lẹ̀ ẹ̀dà kan ṣoṣo.
-- Gbogbo ìtọ́jú dátà wà nínú DB SQLite OmniRoute tó ti wà tẹ́lẹ̀ (`DATA_DIR/storage.sqlite`).
+- Gbogbo ìtọ́jú dátà wà nínú DB SQLite 67router tó ti wà tẹ́lẹ̀ (`DATA_DIR/storage.sqlite`).
 
 ### Redis (àṣàyàn, ọ̀pọ̀ ẹ̀dà)
 

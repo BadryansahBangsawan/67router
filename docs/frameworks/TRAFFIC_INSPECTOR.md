@@ -6,7 +6,7 @@ lastUpdated: 2026-06-28
 
 # Traffic Inspector
 
-Traffic Inspector is OmniRoute's built-in HTTPS traffic debugger — a Charles Proxy / mitmweb / HTTP Toolkit-like tool that is **LLM-aware** and **agent-aware**. It lives at `/dashboard/tools/traffic-inspector` and receives live traffic from up to 5 simultaneous capture sources.
+Traffic Inspector is 67router's built-in HTTPS traffic debugger — a Charles Proxy / mitmweb / HTTP Toolkit-like tool that is **LLM-aware** and **agent-aware**. It lives at `/dashboard/tools/traffic-inspector` and receives live traffic from up to 5 simultaneous capture sources.
 
 **Dashboard location:** `/dashboard/tools/traffic-inspector`
 **Sidebar group:** Tools (after AgentBridge)
@@ -18,21 +18,21 @@ Traffic Inspector is OmniRoute's built-in HTTPS traffic debugger — a Charles P
 
 ### What makes Traffic Inspector unique
 
-| Feature                                                             | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Web-based                                                           |    ✓    |    ✗    |    ✗    |                ✓                |
-| Open-source                                                         |    ✓    |    ✗    | partial |                ✓                |
-| **Agent-aware** (knows if request is from Antigravity/Copilot/etc.) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-aware** (parses OpenAI/Anthropic/Gemini shape, tokens, model) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Model mapping visible** (gemini-3-flash → claude-sonnet-4.7)      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Proxy/upstream latency split**                                    | partial |    ✗    |    ✗    |                ✓                |
-| **Integrated with OmniRoute** routing, fallback, cost               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **System-wide proxy debug** (any app on the machine)                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Custom host capture** (per-host DNS redirect)                     |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY env mode**                                             |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Conversation view** (multi-turn bubbles, tool_use/tool_result)    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE stream merger** (reconstruct from delta events)               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Session recording** (named, exportable .har/.jsonl)               |    ✗    |    ✓    |    ✓    |                ✓                |
+| Feature                                                             | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Web-based                                                           |    ✓    |    ✗    |    ✗    |               ✓                |
+| Open-source                                                         |    ✓    |    ✗    | partial |               ✓                |
+| **Agent-aware** (knows if request is from Antigravity/Copilot/etc.) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-aware** (parses OpenAI/Anthropic/Gemini shape, tokens, model) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Model mapping visible** (gemini-3-flash → claude-sonnet-4.7)      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Proxy/upstream latency split**                                    | partial |    ✗    |    ✗    |               ✓                |
+| **Integrated with 67router** routing, fallback, cost                |    ✗    |    ✗    |    ✗    |               ✓                |
+| **System-wide proxy debug** (any app on the machine)                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Custom host capture** (per-host DNS redirect)                     |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY env mode**                                             |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Conversation view** (multi-turn bubbles, tool_use/tool_result)    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE stream merger** (reconstruct from delta events)               |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Session recording** (named, exportable .har/.jsonl)               |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Architecture in one paragraph
 
@@ -265,7 +265,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true if SSE response
   mappedTo: string | null; // x-omniroute-mapped header
-  costEstimateUsd: number | null; // estimated cost based on OmniRoute pricing
+  costEstimateUsd: number | null; // estimated cost based on 67router pricing
 }
 ```
 
@@ -396,7 +396,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### System proxy not reverted
 
-If OmniRoute crashes while system-wide proxy mode is active:
+If 67router crashes while system-wide proxy mode is active:
 
 **macOS:**
 
@@ -441,7 +441,7 @@ Base path: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | List requests (filterable: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Single request details                                                             |
 | DELETE | `/requests`                 | Clear the in-memory buffer                                                         |
-| POST   | `/requests/{id}/replay`     | Re-execute the same request through OmniRoute router                               |
+| POST   | `/requests/{id}/replay`     | Re-execute the same request through 67router router                                |
 | PUT    | `/requests/{id}/annotation` | Save or update a note on a request                                                 |
 
 ### WebSocket

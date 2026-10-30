@@ -4,7 +4,7 @@
 
 ---
 
-Il-kompressjoni RTK hija l-magna ta' kompressjoni ta' OmniRoute li tifhem il-kmandi għall-output tat-terminal u tal-għodod. Hija
+Il-kompressjoni RTK hija l-magna ta' kompressjoni ta' 67router li tifhem il-kmandi għall-output tat-terminal u tal-għodod. Hija
 ddisinjata għal sessjonijiet ta' aġenti tal-kodifikazzjoni fejn il-biċċa l-kbira tat-tkabbir tal-kuntest ġej minn reġistri tat-testijiet, output tal-build,
 storbju mill-maniġers tal-pakketti, traskrizzjonijiet tax-shell, output ta' Docker, output ta' git, u stack traces.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Din l-ordni l-ewwel tikkompressa l-output storbjuż tal-magni, imbagħad tħalli lil Caveman jikkondensa l-proża li jifdal.
 
 L-RTK upstream jirrapporta ffrankar ta' `60-90%` fl-output tal-kmandi. Is-sessjoni kampjun fir-README tiegħu tinżel minn
-`~118,000` token standard għal `~23,900` token RTK, jiġifieri ffrankar ta' `79.7%` (`~80%`). OmniRoute juża
+`~118,000` token standard għal `~23,900` token RTK, jiġifieri ffrankar ta' `79.7%` (`~80%`). 67router juża
 dik il-medja upstream għall-kalkolu tal-iffrankar f'saffi bil-kompressjoni tal-input ta' Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK jgħabbi l-filtri f'din l-ordni:
 2. Filtri globali minn `DATA_DIR/rtk/filters.toml` u `DATA_DIR/rtk/filters.json`.
 3. Filtri inkorporati minn `open-sse/services/compression/engines/rtk/filters/`.
 
-Fl-istess ambitu, il-filtri RTK TOML schema v1 jieħdu preċedenza fuq il-filtri JSON ta' OmniRoute. L-espressjonijiet TOML
+Fl-istess ambitu, il-filtri RTK TOML schema v1 jieħdu preċedenza fuq il-filtri JSON ta' 67router. L-espressjonijiet TOML
 `match_command` jiġu ċċekkjati qabel it-tqabbil skont it-tip ta' kmand sabiex filtru importat speċifiku għal kmand
 ikun jista' jieħu preċedenza fuq filtru usa' f'dak l-ambitu. L-ambitu tal-proġett xorta jieħu preċedenza fuq l-ambitu
 globali, irrispettivament mill-format tal-fajl.
@@ -84,7 +84,7 @@ jinqabżu u jiġu rrappurtati mid-dijanjostika ta' `/api/context/rtk/filters`. I
 
 ## Kompatibbiltà mal-iskema RTK TOML v1
 
-OmniRoute jista’ janalizza, jivvalida, jittestja u jinstalla fajls ta’ filtri dikjarattivi li jużaw l-iskema RTK TOML v1.
+67router jista’ janalizza, jivvalida, jittestja u jinstalla fajls ta’ filtri dikjarattivi li jużaw l-iskema RTK TOML v1.
 L-oqsma appoġġjati huma `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, u testijiet integrati `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Oqsma mhux magħrufa, espressjonijiet regolari invalidi jew mhux sikuri, regoli 
 jiġi vvalidat għall-ispezzjoni, iżda ma jistax jiġi installat jew mgħobbi. Il-fallimenti fit-tagħbija ta’ fajls personalizzati jibqgħu
 fail-open: il-fajl invalidu jinqabeż u l-filtri l-oħra jkomplu jaħdmu.
 
-OmniRoute jirċievi l-output tal-għodda wara li l-klijent ikun diġà qabad l-output, għalhekk `filter_stderr = true`
+67router jirċievi l-output tal-għodda wara li l-klijent ikun diġà qabad l-output, għalhekk `filter_stderr = true`
 ma jistax ibiddel il-qbid tal-proċess. Il-qasam jiġi aċċettat bħala no-op u l-validazzjoni tirritorna twissija.
 Dan huwa deskritt intenzjonalment bħala **kompatibbiltà mal-iskema RTK TOML v1**, mhux bħala kompatibbiltà sħiħa
 mal-eżegwibbli RTK, mal-hooks tax-shell, mal-implimentazzjonijiet tal-kmandi Rust, jew mat-tqassim tat-trust store tiegħu.

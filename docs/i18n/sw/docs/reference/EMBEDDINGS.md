@@ -4,9 +4,9 @@
 
 ---
 
-Maelezo ya waendeshaji kuhusu `POST /v1/embeddings` wakati OmniRoute iko mbele ya
+Maelezo ya waendeshaji kuhusu `POST /v1/embeddings` wakati 67router iko mbele ya
 Hindsight 0.9.1 (`encode(list[str])` ya maandishi pekee) na Memorix 1.6.0 (kizuizi cha media cha
-Jina). Imethibitishwa moja kwa moja tarehe 2026-08-17 dhidi ya OmniRoute 3.8.49 kwenye
+Jina). Imethibitishwa moja kwa moja tarehe 2026-08-17 dhidi ya 67router 3.8.49 kwenye
 `https://omniroute.jaguar-fish.ts.net/v1`. Hakuna siri hapa chini.
 
 ## Vitambulisho vya modeli vinavyofanya kazi
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` asilia haiwezi kufanikiwa kupitia GitOps pekee. Ufunguo wa Google AI
 Studio lazima uongezwe kama muunganisho wa mtoa huduma wa `gemini` (dashibodi au
-`GEMINI_API_KEY` iliyoingizwa katika OmniRoute). Siri hiyo haipo katika repo hii.
+`GEMINI_API_KEY` iliyoingizwa katika 67router). Siri hiyo haipo katika repo hii.
 
 ### Njia ya Jina ya hali anuwai
 
@@ -100,7 +100,7 @@ Tumia `POST /v1/embeddings` hadi jina mbadala liwepo.
 
 ### Kipengee cha picha cha Jina / Memorix
 
-Kipengee rasmi cha picha cha OmniRoute (PNG ya 28×28, pikseli 784 — Jina hukataa 1×1):
+Kipengee rasmi cha picha cha 67router (PNG ya 28×28, pikseli 784 — Jina hukataa 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Hali halisi: HTTP **400**
 
 Embedding za Hindsight ni za maandishi pekee (`encode(list[str])`). Haitumi
 vipengee vya picha. Elekeza URL msingi ya embedding zinazooana na OpenAI ya Hindsight kwenye
-OmniRoute `/v1` na utumie kitambulisho kinachofanya kazi kutoka kwenye jedwali lililo hapo juu
+67router `/v1` na utumie kitambulisho kinachofanya kazi kutoka kwenye jedwali lililo hapo juu
 (`jina-ai/jina-embeddings-v5-omni-small` au
 `openrouter/google/gemini-embedding-2`). Usiweke modeli kuwa
 `gemini-embedding-2` isiyo na kiambishi isipokuwa ufunguo wa API wa `gemini` upo kwenye lango.
@@ -157,11 +157,11 @@ OmniRoute `/v1` na utumie kitambulisho kinachofanya kazi kutoka kwenye jedwali l
 ### Memorix 1.6.0
 
 Memorix huchukulia tu `baseUrl` inayolingana na `/jina\.ai/i` kama media asilia. URL ya
-OmniRoute hubaki kwenye njia ya maandishi pekee hata wakati modeli ni Jina omni.
-Kizuizi hicho ni tatizo la mteja wa Memorix. Kwa kujitegemea, OmniRoute bado hukataa
+67router hubaki kwenye njia ya maandishi pekee hata wakati modeli ni Jina omni.
+Kizuizi hicho ni tatizo la mteja wa Memorix. Kwa kujitegemea, 67router bado hukataa
 mwili wa Jina wa `{image: "data:..."}` ambao Memorix ingetuma ikiwa kizuizi
-kingefunguka, kwa hiyo wateja wanaooana na Jina hawawezi kuunda embedding za picha kupitia OmniRoute
+kingefunguka, kwa hiyo wateja wanaooana na Jina hawawezi kuunda embedding za picha kupitia 67router
 bila skimu rasmi ya `{type,source}`.
 
 Tumia `jina-ai/jina-embeddings-v5-omni-small` kwa maandishi. Usielekeze Memorix
-`base_url` kwenye `https://api.jina.ai` — dumisha OmniRoute kama hatua pekee.
+`base_url` kwenye `https://api.jina.ai` — dumisha 67router kama hatua pekee.

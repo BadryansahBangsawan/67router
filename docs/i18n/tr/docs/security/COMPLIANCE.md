@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute; yönetim işlemlerini, kimlik doğrulama olaylarını, sağlayıcı kimlik bilgilerinin yaşam döngüsündeki değişiklikleri ve MCP aracı çağrılarını SQLite destekli denetim tablolarına kaydeder. Bu sayfa; nelerin günlüğe kaydedildiğini, verilerin nerede tutulduğunu, ne kadar süreyle saklandığını, API anahtarlarının günlük kaydından nasıl hariç tutulabileceğini ve verilerin nasıl sorgulanacağını açıklar.
+67router; yönetim işlemlerini, kimlik doğrulama olaylarını, sağlayıcı kimlik bilgilerinin yaşam döngüsündeki değişiklikleri ve MCP aracı çağrılarını SQLite destekli denetim tablolarına kaydeder. Bu sayfa; nelerin günlüğe kaydedildiğini, verilerin nerede tutulduğunu, ne kadar süreyle saklandığını, API anahtarlarının günlük kaydından nasıl hariç tutulabileceğini ve verilerin nasıl sorgulanacağını açıklar.
 
 Uygulama `src/lib/compliance/index.ts` (T-43 — "Uyumluluk Denetimleri") ve `src/lib/compliance/providerAudit.ts` içinde yer alır. Denetim yazma işlemleri hiçbir zaman hata fırlatmaz: herhangi bir hata durumunda çağrı sessizce yutulur; böylece denetim günlüğü, ana istek akışını bozamaz.
 

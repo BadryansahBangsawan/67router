@@ -4,7 +4,7 @@
 
 ---
 
-Questa guida illustra come aggiungere account Kiro (un assistente di programmazione IA ospitato su AWS) a OmniRoute,
+Questa guida illustra come aggiungere account Kiro (un assistente di programmazione IA ospitato su AWS) a 67router,
 con particolare attenzione all'esecuzione simultanea di più account senza conflitti di sessione.
 
 ---
@@ -22,10 +22,10 @@ token del primo account.
 
 ---
 
-## Come OmniRoute risolve il problema (v3.8.0+)
+## Come 67router risolve il problema (v3.8.0+)
 
-A partire dalla v3.8.0, OmniRoute chiama `registerClient()` (AWS SSO OIDC) durante ogni
-importazione di una connessione Kiro. In questo modo, ogni connessione OmniRoute dispone di una registrazione
+A partire dalla v3.8.0, 67router chiama `registerClient()` (AWS SSO OIDC) durante ogni
+importazione di una connessione Kiro. In questo modo, ogni connessione 67router dispone di una registrazione
 client OIDC dedicata. Poiché ogni registrazione client è indipendente, l'aggiornamento o la
 nuova autenticazione di un account non influisce sul token di aggiornamento degli altri account.
 
@@ -59,7 +59,7 @@ riceveranno automaticamente una registrazione client dedicata.
 
 ### Prerequisiti
 
-- OmniRoute v3.8.0 o versioni successive.
+- 67router v3.8.0 o versioni successive.
 - Un account Kiro funzionante (email + password oppure accesso tramite Google o GitHub).
 - Facoltativamente, un secondo account Kiro.
 
@@ -70,7 +70,7 @@ riceveranno automaticamente una registrazione client dedicata.
    - **Importa token** — incolla un token di aggiornamento che inizia con `aorAAAAAG`.
    - **Chiave API** — incolla una chiave API Kiro / CodeWhisperer a lunga durata.
    - **Accesso tramite Google / GitHub** — completa il flusso OAuth nel browser.
-   - **Importazione automatica** — fai clic sul pulsante; OmniRoute legge le credenziali dal
+   - **Importazione automatica** — fai clic sul pulsante; 67router legge le credenziali dal
      database locale di kiro-cli o da `~/.aws/sso/cache`.
 3. La connessione viene salvata. I flussi basati su token di aggiornamento registrano automaticamente un client
    OIDC dedicato. I flussi basati su chiave API convalidano la chiave con AWS e non archiviano un token di aggiornamento.
@@ -126,7 +126,7 @@ L'autenticazione tramite chiave API è destinata alle credenziali bearer a lunga
 2. Scegli **Chiave API**.
 3. Incolla la chiave API e seleziona la regione AWS: **Rilevamento automatico** (impostazione predefinita), **Stati Uniti orientali
    (Virginia settentrionale)** oppure **Europa (Francoforte)**.
-4. OmniRoute convalida la chiave e salva la connessione vincolata alla regione in cui la
+4. 67router convalida la chiave e salva la connessione vincolata alla regione in cui la
    chiave funziona.
 
 ### API
@@ -176,7 +176,7 @@ a `https://q.<region>.amazonaws.com/generateAssistantResponse` — incluso `us-e
 ## Scadenza del client OIDC
 
 I client pubblici AWS SSO OIDC scadono generalmente dopo 90 giorni
-(`clientSecretExpiresAt`). OmniRoute memorizza questo timestamp in `providerSpecificData`
+(`clientSecretExpiresAt`). 67router memorizza questo timestamp in `providerSpecificData`
 a fini di osservabilità. Se una connessione interrompe l'aggiornamento dopo circa 90 giorni, importa nuovamente la
 connessione per ottenere una nuova registrazione del client OIDC. La nuova registrazione automatica alla
 scadenza è prevista come miglioramento futuro.
@@ -197,7 +197,7 @@ tramite AWS SSO OIDC.
 ### L'importazione non riesce con "Token validation failed"
 
 - Assicurati che il token di aggiornamento inizi con `aorAAAAAG`.
-- Assicurati che OmniRoute possa raggiungere `https://oidc.us-east-1.amazonaws.com` (o la regione
+- Assicurati che 67router possa raggiungere `https://oidc.us-east-1.amazonaws.com` (o la regione
   configurata). Se utilizzi un proxy aziendale, configura un proxy a livello di provider in
   **Dashboard → Settings → Proxies**.
 
@@ -205,7 +205,7 @@ tramite AWS SSO OIDC.
 
 - Verifica che la chiave sia una chiave API Kiro / CodeWhisperer e non un token di aggiornamento.
 - Verifica che la regione AWS corrisponda alla chiave/all'account. `us-east-1` è il valore predefinito.
-- La chiave deve poter chiamare `ListAvailableProfiles`; in caso contrario, OmniRoute non può
+- La chiave deve poter chiamare `ListAvailableProfiles`; in caso contrario, 67router non può
   determinare il `profileArn` richiesto.
 
 Per altri problemi, consulta il file principale [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

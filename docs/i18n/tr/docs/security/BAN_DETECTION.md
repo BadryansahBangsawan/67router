@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, bir sağlayıcı **hesabının kalıcı olarak devre dışı** olduğunu (askıya alınmış / devre dışı bırakılmış / hizmet koşulları ihlali nedeniyle yasaklanmış) gösteren sinyalleri tespit etmek için üst sağlayıcılardan gelen hata yanıtlarını tarar ve bir eşleşme bulunduğunda ilgili bağlantıyı **nihai `banned` durumuna** geçirir; böylece bağlantı artık istekler için seçilmez. **Security → Banned Keywords** ayar kartı bunu yapılandırır ("Kalıcı hesap yasağı algılamasını tetikleyen ek anahtar kelimeler. Yerleşik anahtar kelimeler her zaman uygulanır.").
+67router, bir sağlayıcı **hesabının kalıcı olarak devre dışı** olduğunu (askıya alınmış / devre dışı bırakılmış / hizmet koşulları ihlali nedeniyle yasaklanmış) gösteren sinyalleri tespit etmek için üst sağlayıcılardan gelen hata yanıtlarını tarar ve bir eşleşme bulunduğunda ilgili bağlantıyı **nihai `banned` durumuna** geçirir; böylece bağlantı artık istekler için seçilmez. **Security → Banned Keywords** ayar kartı bunu yapılandırır ("Kalıcı hesap yasağı algılamasını tetikleyen ek anahtar kelimeler. Yerleşik anahtar kelimeler her zaman uygulanır.").
 
 Bu sayfa; yerleşik listeyi, algılama akışını, kapsamını, özel anahtar kelimelerin güvenli şekilde nasıl ekleneceğini ve işaretlenmiş bir bağlantının nasıl kurtarılacağını açıklar. Nihai durumun kendisi dayanıklılık modelinin bir parçasıdır — bkz.
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Nihai durumlar").

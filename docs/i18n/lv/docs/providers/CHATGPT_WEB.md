@@ -39,11 +39,11 @@ vienu un to pašu ar mijiedarbības soli saistīto lokālā rīka iespēju, ja t
 1. Atveriet pakalpojuma sniedzēju **ChatGPT Web (Codex)** un pievienojiet savienojumu.
 2. Ielīmējiet pilnu ChatGPT Cookie galveni, tuneļa ID, izpildlaika atslēgu un pielāgotā savienotāja
    nosaukumu. Jaunos iestatījumos ar rīku atbalstu jāizmanto jaunizveidots savienotājs ar precīzu nosaukumu
-   `OmniRoute Codex v2`, opcijai Authentication jābūt iestatītai uz None, bet opcijai Permissions — uz Allow all
+   `67router Codex v2`, opcijai Authentication jābūt iestatītai uz None, bet opcijai Permissions — uz Allow all
    actions.
-3. Palaidiet savienojuma pārbaudi. OmniRoute atver pārlūkprogrammā balstītu pagaidu tērzēšanu (Temporary Chat) un nosaka,
+3. Palaidiet savienojuma pārbaudi. 67router atver pārlūkprogrammā balstītu pagaidu tērzēšanu (Temporary Chat) un nosaka,
    vai kontam ir pieejami Sol un Pro.
-4. Saglabājiet savienojumu. OmniRoute aizstāj ielīmēto sīkfailu ar pārbaudīto
+4. Saglabājiet savienojumu. 67router aizstāj ielīmēto sīkfailu ar pārbaudīto
    Playwright krātuves stāvokli un glabā to kopā ar izpildlaika atslēgu, izmantojot šifrētu
    akreditācijas datu abstrakciju.
 
@@ -77,10 +77,10 @@ High, savukārt kontiem ar Pro iespējām papildus ir pieejami Extra High un Pro
 fiksēts aizmugursistēmas modelis un spriešanas intensitāte; konfliktējoša, tieši norādīta Responses intensitāte tiek
 droši noraidīta, nevis klusējot maina atlasīto pārlūkprogrammas režīmu.
 
-Nepārdēvējiet un atkārtoti neizmantojiet vecāku `Codex Native` vai `OmniRoute Codex` savienotāju. ChatGPT
+Nepārdēvējiet un atkārtoti neizmantojiet vecāku `Codex Native` vai `67router Codex` savienotāju. ChatGPT
 kešo publisko MCP līgumu pēc savienotāja identitātes, savukārt atjauninātais tilts izmanto
 jaunu tiešo mijiedarbības soļa pilnvaras līgumu. Izpildlaiks noraida šīs mantotās identitātes un pieprasa
-jaunu `OmniRoute Codex v2` savienotāju.
+jaunu `67router Codex v2` savienotāju.
 
 ## Drošības modelis
 
@@ -100,19 +100,19 @@ jaunu `OmniRoute Codex v2` savienotāju.
 
 ## VPS bez displeja un Docker
 
-npm, systemd un PM2 instalācijām OmniRoute nosaka izplatītākos Chrome un Chromium ceļus.
+npm, systemd un PM2 instalācijām 67router nosaka izplatītākos Chrome un Chromium ceļus.
 Varat arī iestatīt `CHATGPT_WEB_CODEX_CHROME_PATH`. Izpildlaika kārtās apzināti tiek izmantots Chrome
 ar grafisko saskarni, jo ChatGPT noraida patiesi bezgalvas pārlūkprogrammas konfigurāciju. Tādēļ resursdatoram bez displeja
-OmniRoute ir jāpalaiž ar privātu Xvfb displeju; tikai Chrome ceļa iestatīšana to nenodrošina.
+67router ir jāpalaiž ar privātu Xvfb displeju; tikai Chrome ceļa iestatīšana to nenodrošina.
 
 Docker `web` profils palaiž `chatgpt-web-codex-browser` iekšējā Compose
 tīklā. Blakusprocess palaiž Chrome ar grafisko saskarni Xvfb vidē, tāpēc fizisks displejs nav nepieciešams. Tā CDP
 ports netiek publicēts resursdatorā. Aizsargātā pārlūkprogrammas profila sējums ir nodalīts no
-OmniRoute datu sējuma, un pārlūkprogrammai tiek piešķirts pietiekami daudz koplietojamās atmiņas. Iekšējais CDP starpniekserveris
+67router datu sējuma, un pārlūkprogrammai tiek piešķirts pietiekami daudz koplietojamās atmiņas. Iekšējais CDP starpniekserveris
 klausās tikai portā `9223` Compose tīklā; Chrome blakusprocesā paliek piesaistīts atgriezeniskās cilpas
 saskarnei.
 
-Pārrauga noma direktorijā `DATA_DIR` neļauj vairākiem OmniRoute procesiem pārvaldīt
+Pārrauga noma direktorijā `DATA_DIR` neļauj vairākiem 67router procesiem pārvaldīt
 vienu un to pašu tuneļa un starpnieka stāvokli. Par konfliktu ziņo diagnostikas rīks.
 
 ## Interaktīvā atkopšana

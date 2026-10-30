@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (עברית)
+# 67router Auto-Combo Engine (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # הזול ביותר לכל טוקן
 
 **מה קורה:**
 
-1. OmniRoute מזהה את הקידומת `auto/` בתוך `src/sse/handlers/chat.ts`
+1. 67router מזהה את הקידומת `auto/` בתוך `src/sse/handlers/chat.ts`
 2. מבצע שאילתה על כל **חיבורי הספקים הפעילים** ממסד הנתונים
 3. מסנן ומשאיר את אלה בעלי פרטי גישה תקינים (מפתח API או אסימון OAuth)
 4. קובע את המודל לכל חיבור (`connection.defaultModel` או המודל הראשון של הספק)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # הזול ביותר לכל טוקן
 - נעילת מודל — `isModelLocked(provider, connectionId, model)`
 
 כל מועמד כולל גם את הדגל `excluded` של מפתח API זה. החרגות נשמרות
-לכל מפתח API (הטבלה `auto_candidate_overrides`, מיגרציה `128`) — OmniRoute הוא
+לכל מפתח API (הטבלה `auto_candidate_overrides`, מיגרציה `128`) — 67router הוא
 מערכת לדייר יחיד ללא טבלת `users`, ולכן `apiKeyId` הוא הזהות האמיתית הקרובה ביותר
 לכל גורם קורא — והן נאכפות בנקודת החנק של מאגר המועמדים בתוך
 `open-sse/services/autoCombo/virtualFactory.ts` באמצעות הפונקציה הטהורה שנבדקה בבדיקות יחידה
@@ -179,7 +179,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 שתי מלכודות נפוצות:
 
 - **`auto` אינו משתמש בקומבואים שלכם.** `auto`/`auto/*` בונה מאגר מועמדים משלו ללא צורך בהגדרות, ובודק קומבואים שמורים רק אם קיים קומבו ששמו המילולי הוא `auto` (לא מומלץ). כדי לנתב דרך קומבו, שלחו את שמו המדויק — לא `auto`.
-- **`openrouter/auto` הוא מוצר OpenRouter אמיתי בתשלום** ("הטוב ביותר הזמין באופן אוטומטי"), ולא כינוי של OmniRoute. זוהי רשומת המודל הסטטית היחידה ברישום של OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`), והחיוב עבורה מתבצע בנפרד. השתמשו בהגדרות ← ניתוב ← הסתרת מודלים בתשלום כדי להחריג אותה ממאגרי `auto`.
+- **`openrouter/auto` הוא מוצר OpenRouter אמיתי בתשלום** ("הטוב ביותר הזמין באופן אוטומטי"), ולא כינוי של 67router. זוהי רשומת המודל הסטטית היחידה ברישום של OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`), והחיוב עבורה מתבצע בנפרד. השתמשו בהגדרות ← ניתוב ← הסתרת מודלים בתשלום כדי להחריג אותה ממאגרי `auto`.
 
 ראו [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) ו־[#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) לתיאור הבלבול המקורי שתיעוד זה נועד להבהיר.
 
@@ -279,7 +279,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## כל אסטרטגיות הניתוב
 
-מנוע השילובים של OmniRoute תומך ב-**20 אסטרטגיות ניתוב** (המוצהרות ב-`src/shared/constants/routingStrategies.ts` ← `ROUTING_STRATEGY_VALUES`). מנוע Auto Combo עצמו נחשף תחת האסטרטגיה `auto`; האחרות זמינות עבור שילובים שנשמרו.
+מנוע השילובים של 67router תומך ב-**20 אסטרטגיות ניתוב** (המוצהרות ב-`src/shared/constants/routingStrategies.ts` ← `ROUTING_STRATEGY_VALUES`). מנוע Auto Combo עצמו נחשף תחת האסטרטגיה `auto`; האחרות זמינות עבור שילובים שנשמרו.
 
 | אסטרטגיה            | תיאור                                                                                                                                                                                  |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,7 +330,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 שילוב `pipeline` עם שני מודלים לפחות יכול להצטרף לניתוב מתכנן/מבצע באמצעות
 `config.agenticOrchestration.enabled`. היעד הראשון אחראי על התכנון ועל התשובות הסופיות;
-היעד השני מפיק קריאות לכלים בפורמט המקורי של הלקוח. OmniRoute מזהה המשכים של תוצאות כלים
+היעד השני מפיק קריאות לכלים בפורמט המקורי של הלקוח. 67router מזהה המשכים של תוצאות כלים
 מתוך פרוטוקול הבקשה, שואל את המתכנן אם נדרש סבב כלים נוסף,
 ובוחר באופן דינמי אם המבצע או המתכנן יהיה השלב הסופי הפונה ללקוח.
 
@@ -856,11 +856,11 @@ offline-friendly) מפורטות בטבלה "פרופילי משקל לפי חב
 
 ### בדיקת עשן חיה מותנית (אינה ב-CI — ספקים אמיתיים)
 
-| פקודה                                  | מה היא עושה                                                                                  |
-| :------------------------------------- | :------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | ניתוב אמיתי בתוך התהליך עם `RUN_COMBO_LIVE=1`; יוצרת תמונת מצב של מסד נתונים חי של OmniRoute |
-| `npm run test:combo:live:vps`          | קריאות HTTP מול שרת OmniRoute חי (יש להגדיר `COMBO_LIVE_BASE_URL`)                           |
-| `npm run test:combo:live:vps:failover` | כנ"ל, עם תרחישי מעבר לגיבוי מכוונים                                                          |
+| פקודה                                  | מה היא עושה                                                                                 |
+| :------------------------------------- | :------------------------------------------------------------------------------------------ |
+| `npm run test:combo:live`              | ניתוב אמיתי בתוך התהליך עם `RUN_COMBO_LIVE=1`; יוצרת תמונת מצב של מסד נתונים חי של 67router |
+| `npm run test:combo:live:vps`          | קריאות HTTP מול שרת 67router חי (יש להגדיר `COMBO_LIVE_BASE_URL`)                           |
+| `npm run test:combo:live:vps:failover` | כנ"ל, עם תרחישי מעבר לגיבוי מכוונים                                                         |
 
 בדיקות עשן אלה מפעילות את נתיב התקשורת האמיתי (שילוב → ספק → השלמה). הן מוחרגות
 במכוון מ-CI, משום שהן דורשות פרטי גישה פעילים וגישה ל-VPS.

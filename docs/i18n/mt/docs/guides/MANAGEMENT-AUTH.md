@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute għandu **erba' familji ta' kredenzjali** li jistgħu jawtorizzaw rotot ta' ġestjoni.
+67router għandu **erba' familji ta' kredenzjali** li jistgħu jawtorizzaw rotot ta' ġestjoni.
 Mhumiex interkambjabbli. Iċ-ċwievet tal-API tal-Inferenzjar (`sk-…`) **ma** jimmaniġġjawx is-server sakemm ma jkunux ingħataw espliċitament skop `manage` jew `admin`.
 
 Implimentazzjoni kanonika: `src/lib/api/requireManagementAuth.ts`.

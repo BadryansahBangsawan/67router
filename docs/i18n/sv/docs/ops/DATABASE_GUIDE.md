@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute använder **SQLite med WAL-journalföring** som sitt primära datalager, med **AES-256-GCM**-kryptering av känsliga fält i vila. Den här guiden beskriver schemat, migreringar, säkerhetskopiering/återställning och operativa körinstruktioner.
+> **TL;DR**: 67router använder **SQLite med WAL-journalföring** som sitt primära datalager, med **AES-256-GCM**-kryptering av känsliga fält i vila. Den här guiden beskriver schemat, migreringar, säkerhetskopiering/återställning och operativa körinstruktioner.
 
 **Källor:**
 
@@ -19,7 +19,7 @@
 
 ## Varför SQLite?
 
-OmniRoute valde SQLite framför PostgreSQL/MySQL av flera skäl:
+67router valde SQLite framför PostgreSQL/MySQL av flera skäl:
 
 | Faktor                 | SQLite                                         | PostgreSQL                                      |
 | ---------------------- | ---------------------------------------------- | ----------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute valde SQLite framför PostgreSQL/MySQL av flera skäl:
 | **Säkerhetskopiering** | Kopiering av en enda fil                       | `pg_dump` eller ögonblicksbild av filsystemet   |
 | **Användningsfall**    | Installation per användare, inbäddad           | SaaS med flera klientorganisationer             |
 
-För driftsättningar med **en användare och en instans** (det primära användningsfallet för OmniRoute) är SQLite enklare och snabbare.
+För driftsättningar med **en användare och en instans** (det primära användningsfallet för 67router) är SQLite enklare och snabbare.
 
 ### WAL-journalföring
 
@@ -50,7 +50,7 @@ Standardstorleken för cachen är **65 536 KiB (64 MiB)**. SQLite tolkar ett neg
 `cache_size` som en ungefärlig övre gräns i KiB och allokerar sidor efter behov.
 **Inställningar > System och lagring > Cachestorlek** accepterar heltalsvärden från **1 till
 1 000 000 KiB**. När inställningen sparas tillämpas den på den aktiva databasanslutningen,
-och OmniRoute återställer det sparade värdet vid start.
+och 67router återställer det sparade värdet vid start.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domänmodularkitektur
 
-OmniRoutes databas har **110 TypeScript-moduler på toppnivå** i `src/lib/db/`. Varje domänmodul:
+67routers databas har **110 TypeScript-moduler på toppnivå** i `src/lib/db/`. Varje domänmodul:
 
 - Ansvarar för en eller flera specifika tabeller
 - Exporterar typade CRUD-funktioner
@@ -90,7 +90,7 @@ OmniRoutes databas har **110 TypeScript-moduler på toppnivå** i `src/lib/db/`.
 
 ### De 110 databasmodulerna på toppnivå
 
-OmniRoute har **110 TypeScript-filer på toppnivå** i `src/lib/db/`. Nedan visas ett urval av centrala moduler; se kataloglistningen för den fullständiga listan:
+67router har **110 TypeScript-filer på toppnivå** i `src/lib/db/`. Nedan visas ett urval av centrala moduler; se kataloglistningen för den fullständiga listan:
 
 | Modul                   | Tabeller                                                       | Ansvarsområde                                                                   |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Den fullständiga listan med cirka 30+ tabeller finns i `src/lib/db/migrations/`
 
 ## Migreringar
 
-OmniRoute använder **versionshanterade, idempotenta migreringar** i `src/lib/db/migrations/`. Varje migrering är en enskild SQL-fil med namnet `NNN_description.sql`.
+67router använder **versionshanterade, idempotenta migreringar** i `src/lib/db/migrations/`. Varje migrering är en enskild SQL-fil med namnet `NNN_description.sql`.
 
 ### Namngivning av migreringar
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Bakåtinkompatibla ändringar** (t.ex. att ta bort kolumner) är komplicerade. OmniRoute stöder INTE nedgradering — när en migrering väl har tillämpats är schemaändringen permanent. Planera därefter.
+> **Bakåtinkompatibla ändringar** (t.ex. att ta bort kolumner) är komplicerade. 67router stöder INTE nedgradering — när en migrering väl har tillämpats är schemaändringen permanent. Planera därefter.
 
 ---
 
@@ -310,7 +310,7 @@ Av prestandaskäl lagras följande i klartext:
 
 ## Förbehåll för kryptering (v3.8.16+)
 
-OmniRoute använder **`migrateLegacyEncryptedString()`** för att hantera två krypteringsmetoder transparent:
+67router använder **`migrateLegacyEncryptedString()`** för att hantera två krypteringsmetoder transparent:
 
 - **Äldre** (före v3.5.0): XOR-baserad ”kryptering” (inte riktig kryptografi)
 - **Nuvarande**: AES-256-GCM med korrekt IV och autentiseringstagg
@@ -399,7 +399,7 @@ För säkerhetskopiering av en aktiv databas utan driftstopp:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Detta använder SQLite:s API för säkerhetskopiering online – säkert att köra medan OmniRoute är igång.
+Detta använder SQLite:s API för säkerhetskopiering online – säkert att köra medan 67router är igång.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Komprimering
 
-OmniRoute-instanser som körs under lång tid har nytta av att `VACUUM` körs ibland:
+67router-instanser som körs under lång tid har nytta av att `VACUUM` körs ibland:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Återställ (radera) alla data
 
 ```bash
-# Stoppa OmniRoute först
+# Stoppa 67router först
 omniroute stop
 
 # Ta bort databasfilen
@@ -612,7 +612,7 @@ En annan process håller ett skrivlås. Gör något av följande:
 
 - Vänta tills den andra processen är klar (kontrollera med `lsof | grep storage.sqlite`)
 - Avsluta den andra processen
-- Starta om OmniRoute om problemet kvarstår
+- Starta om 67router om problemet kvarstår
 
 ### "Begränsning för främmande nyckel misslyckades"
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Migreringen kördes i en transaktion och bör därför ha återställts. Om inte:
 
-1. **Stoppa OmniRoute** (förhindra ytterligare försök)
+1. **Stoppa 67router** (förhindra ytterligare försök)
 2. **Kontrollera databasens tillstånd** med `sqlite3`
 3. **Korrigera manuellt** den ofullständiga migreringen
-4. **Kör OmniRoute igen** (migreringen försöks på nytt)
+4. **Kör 67router igen** (migreringen försöks på nytt)
 
 För att förhindra detta bör du alltid testa migreringar på en kopia först.
 

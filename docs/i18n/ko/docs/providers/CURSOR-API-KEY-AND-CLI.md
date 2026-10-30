@@ -4,10 +4,10 @@
 
 ---
 
-IDE 세션 없이 Cursor를 OmniRoute 뒤에 배치하는 두 가지 방법:
+IDE 세션 없이 Cursor를 67router 뒤에 배치하는 두 가지 방법:
 
-1. **`cursor-api` 제공자**(카드 "Cursor API", 별칭 `cua`): Cursor 사용자 API 키(`crsr_…`, `https://cursor.com/dashboard/api`에서 생성)를 보관하는 API 키 제공자입니다. 그러면 모든 OmniRoute 클라이언트가 일반적인 할당량, 폴백 및 로깅 계층을 거쳐 `/v1/chat/completions`를 통해 `cursor-api/<model>` 또는 `cua/<model>`로 Cursor 모델에 접근할 수 있습니다. IDE 제공자(`cursor`, OAuth/IDE 세션)는 변경되지 않습니다.
-2. **Cursor CLI 패스스루**: Cursor CLI(`agent`)가 OmniRoute를 가리키도록 설정하면 CLI가 수행하는 모든 RPC가 OmniRoute API 키로 인증되고, `cursor-api` 연결의 자격 증명을 사용해 Cursor로 전달되며, 로그 페이지에 기록됩니다.
+1. **`cursor-api` 제공자**(카드 "Cursor API", 별칭 `cua`): Cursor 사용자 API 키(`crsr_…`, `https://cursor.com/dashboard/api`에서 생성)를 보관하는 API 키 제공자입니다. 그러면 모든 67router 클라이언트가 일반적인 할당량, 폴백 및 로깅 계층을 거쳐 `/v1/chat/completions`를 통해 `cursor-api/<model>` 또는 `cua/<model>`로 Cursor 모델에 접근할 수 있습니다. IDE 제공자(`cursor`, OAuth/IDE 세션)는 변경되지 않습니다.
+2. **Cursor CLI 패스스루**: Cursor CLI(`agent`)가 67router를 가리키도록 설정하면 CLI가 수행하는 모든 RPC가 67router API 키로 인증되고, `cursor-api` 연결의 자격 증명을 사용해 Cursor로 전달되며, 로그 페이지에 기록됩니다.
 
 ## 키를 교환하는 이유
 
@@ -44,12 +44,12 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 참고:
 
-- `cursor-api`의 모델 목록은 정적 Cursor 레지스트리에서 가져옵니다(IDE 제공자가 폴백으로 사용하는 것과 동일한 목록). OmniRoute 호스트에 `cursor-agent`를 설치할 필요가 없습니다.
+- `cursor-api`의 모델 목록은 정적 Cursor 레지스트리에서 가져옵니다(IDE 제공자가 폴백으로 사용하는 것과 동일한 목록). 67router 호스트에 `cursor-agent`를 설치할 필요가 없습니다.
 - `POST /api/providers/{id}/refresh-cursor`는 `cursor` IDE 제공자 전용입니다. `cursor-api` 연결에는 갱신할 IDE 세션이 없습니다.
 
 ## 네이티브 모델 ID 및 effort
 
-`cursor` / `cu` 및 `cursor-api` / `cua`의 경우, 공유 Claude effort 정규화기는 요청된 모델 ID를 그대로 유지합니다. Cursor는 `-low` 같은 접미사를 OmniRoute effort 별칭이 아니라 실제 모델 ID의 일부로 노출할 수 있습니다.
+`cursor` / `cu` 및 `cursor-api` / `cua`의 경우, 공유 Claude effort 정규화기는 요청된 모델 ID를 그대로 유지합니다. Cursor는 `-low` 같은 접미사를 67router effort 별칭이 아니라 실제 모델 ID의 일부로 노출할 수 있습니다.
 Cursor 실행기는 라이브 카탈로그와 정확히 일치하는 항목을 유지합니다. 일치하는 항목이 없으면 기존 모델 리졸버가 접미사를 매개변수로 변환하는 폴백을 담당합니다.
 
 이는 직접 Claude, Claude 호환 또는 Vertex 경로의 effort 정규화를 변경하지 않습니다. 사용 가능 여부는 여전히 선택한 Cursor 계정의 카탈로그와 권한에 따라 달라집니다.
@@ -61,18 +61,18 @@ Cursor 실행기는 라이브 카탈로그와 정확히 일치하는 항목을 �
 자체 인증을 수행하므로 `src/shared/constants/publicApiRoutes.ts`에
 등록되어 있습니다.
 
-| 경로                                                                                                                        | CLI에서 요구되는 인증        | OmniRoute가 수행하는 작업                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                          | `Bearer <OmniRoute API key>` | 키를 검증하고, `JWT_SECRET`으로 서명된 1시간 유효 HS256 JWT를 발급하여 반환합니다                                                             |
-| 그 외 모든 경로 (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <해당 JWT>`          | 발급자/대상/만료를 검증하고, 활성 `cursor-api` 연결을 선택한 뒤 Authorization 헤더를 교환된 Cursor 토큰으로 바꾸고 응답을 다시 스트리밍합니다 |
+| 경로                                                                                                                        | CLI에서 요구되는 인증       | 67router가 수행하는 작업                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                          | `Bearer <67router API key>` | 키를 검증하고, `JWT_SECRET`으로 서명된 1시간 유효 HS256 JWT를 발급하여 반환합니다                                                             |
+| 그 외 모든 경로 (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <해당 JWT>`         | 발급자/대상/만료를 검증하고, 활성 `cursor-api` 연결을 선택한 뒤 Authorization 헤더를 교환된 Cursor 토큰으로 바꾸고 응답을 다시 스트리밍합니다 |
 
 CLI는 수신한 모든 토큰에서 `exp`를 디코딩하므로, 불투명 토큰을 전달하면
 거의 모든 요청 전에 토큰 교환을 다시 수행합니다. 발급된 JWT는 이를
-방지합니다. OmniRoute에서 401 응답을 받으면 CLI는 토큰을 다시 교환합니다.
+방지합니다. 67router에서 401 응답을 받으면 CLI는 토큰을 다시 교환합니다.
 
 ### 설정
 
-1. OmniRoute API 키(Dashboard → API keys)와 `cursor-api`
+1. 67router API 키(Dashboard → API keys)와 `cursor-api`
    연결을 생성합니다.
 2. CLI가 에이전트 스트림에 HTTP/1.1을 사용하도록 설정합니다.
    `~/.cursor/cli-config.json`에서 다음과 같이 설정합니다.
@@ -84,7 +84,7 @@ CLI는 수신한 모든 토큰에서 `exp`를 디코딩하므로, 불투명 토�
    이 설정이 없으면 CLI는 별도로 구성된 에이전트 호스트에 HTTP/2로
    에이전트 턴을 열며, 제어 플레인 RPC만 해당 엔드포인트를 통과합니다.
 
-3. OmniRoute를 대상으로 CLI를 실행합니다.
+3. 67router를 대상으로 CLI를 실행합니다.
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -93,17 +93,17 @@ CLI는 수신한 모든 토큰에서 `exp`를 디코딩하므로, 불투명 토�
    ```
 
 모든 홉은 제공자 `cursor-api`, 요청 유형 `cursor-cli`, 경로
-`/api/cursor-cli/<rpc>`로 Logs에 기록되며, OmniRoute API 키와 해당 요청을
+`/api/cursor-cli/<rpc>`로 Logs에 기록되며, 67router API 키와 해당 요청을
 처리한 연결에 귀속됩니다.
 
 ### 실패 모드
 
 | 상황                                               | CLI에 대한 응답                         |
 | -------------------------------------------------- | --------------------------------------- |
-| 알 수 없는 OmniRoute 키 및 `REQUIRE_API_KEY=true`  | 교환 시 401 `unauthenticated`           |
+| 알 수 없는 67router 키 및 `REQUIRE_API_KEY=true`   | 교환 시 401 `unauthenticated`           |
 | `REQUIRE_API_KEY=false`                            | 익명 세션(`/v1/*` 동작과 동일)          |
 | 만료되었거나 외부에서 발급되었거나 변조된 세션 JWT | 401, CLI가 다시 교환                    |
-| 교환 후 OmniRoute API 키가 취소됨                  | 다음 RPC에서 401                        |
+| 교환 후 67router API 키가 취소됨                   | 다음 RPC에서 401                        |
 | 활성 `cursor-api` 연결 없음                        | 503 `unavailable`                       |
 | Cursor가 연결의 키를 거부함                        | 401 `unauthenticated`, 캐시된 세션 삭제 |
 | 업스트림에 연결할 수 없음                          | 502 `unavailable`(정제된 메시지)        |

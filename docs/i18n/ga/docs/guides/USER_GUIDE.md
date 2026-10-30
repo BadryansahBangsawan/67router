@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Treoir iomlán maidir le soláthraithe a chumrú, teaglamaí a chruthú, uirlisí CLI a chomhtháthú, agus OmniRoute a imscaradh.
+Treoir iomlán maidir le soláthraithe a chumrú, teaglamaí a chruthú, uirlisí CLI a chomhtháthú, agus 67router a imscaradh.
 
 ---
 
@@ -133,12 +133,12 @@ Samhlacha:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Leid Ghairmiúil:** Úsáid Opus le haghaidh tascanna casta, agus Sonnet le haghaidh luais. Rianaíonn OmniRoute an cuóta de réir samhla!
+**Leid Ghairmiúil:** Úsáid Opus le haghaidh tascanna casta, agus Sonnet le haghaidh luais. Rianaíonn 67router an cuóta de réir samhla!
 
-Nach bhfuil brabhsálaí ar óstach OmniRoute? Rith `claude setup-token` áit ar bith a bhfuil Claude Code logáilte isteach agus greamaigh an comhartha bliana sa chluaisín **Comhartha Socraithe**. Féach [Claude Code le comhartha socraithe](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Nach bhfuil brabhsálaí ar óstach 67router? Rith `claude setup-token` áit ar bith a bhfuil Claude Code logáilte isteach agus greamaigh an comhartha bliana sa chluaisín **Comhartha Socraithe**. Féach [Claude Code le comhartha socraithe](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
 Caomhnaíonn bealaí atá comhoiriúnach le Claude agus Claude Code an iarracht smaointeoireachta `max` do shamhlacha Opus agus Sonnet.
-Ní ghlacann samhlacha Haiku leis an tsraith iarrachta `max`, mar sin íslíonn OmniRoute an t-iarratas sin
+Ní ghlacann samhlacha Haiku leis an tsraith iarrachta `max`, mar sin íslíonn 67router an t-iarratas sin
 go buiséad ard smaointeoireachta sula seoltar ar aghaidh é.
 
 #### OpenAI Codex (Plus/Pro)
@@ -260,7 +260,7 @@ Cost: currently listed as $0; terms and availability may change
 
 ### Cursor IDE
 
-**Ag úsáid Cursor mar chliant OmniRoute** (route Cursor chat trí OmniRoute):
+**Ag úsáid Cursor mar chliant 67router** (route Cursor chat trí 67router):
 
 ```
 Socruithe → Samhlacha → Ardsocruithe:
@@ -269,7 +269,7 @@ Socruithe → Samhlacha → Ardsocruithe:
   Samhail: cc/claude-opus-4-7
 ```
 
-**Ag úsáid OmniRoute mar sholáthraí Cursor** (cuireann OmniRoute glao ar upstream Cursor): roghnaigh **Deais → Soláthraithe → Cursor → Logáil isteach le Cursor**. I Docker, féach [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
+**Ag úsáid 67router mar sholáthraí Cursor** (cuireann 67router glao ar upstream Cursor): roghnaigh **Deais → Soláthraithe → Cursor → Logáil isteach le Cursor**. I Docker, féach [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
 ### Claude Code
 
@@ -354,7 +354,7 @@ Lódann an CLI `.env` go huathoibríoch ó `~/.omniroute/.env` nó `./.env`.
 
 ### Mód trá
 
-Tosaigh OmniRoute sa tray córais:
+Tosaigh 67router sa tray córais:
 
 ```bash
 omniroute serve --tray
@@ -371,7 +371,7 @@ Bain úsáid as an roghchlár tray le haghaidh na ngníomhartha seo:
 - Oscail an deais.
 - Oscail `/dashboard/logs`.
 - Athraigh tosú uathoibríoch.
-- Stop OmniRoute.
+- Stop 67router.
 
 Ná cuir `--tray` leis na roghanna seo:
 
@@ -397,14 +397,14 @@ omniroute autostart disable
 
 ### Díshuiteáil
 
-Nuair nach bhfuil OmniRoute de dhíth ort a thuilleadh, cuirimid dhá script tapa ar fáil le haghaidh baint ghlan:
+Nuair nach bhfuil 67router de dhíth ort a thuilleadh, cuirimid dhá script tapa ar fáil le haghaidh baint ghlan:
 
 | Ordú                     | Gníomh                                                                                              |
 | ------------------------ | --------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Baineann an app córais ach **coinníonn sé do bhunachar sonraí agus cumraíochtaí** i `~/.omniroute`. |
 | `npm run uninstall:full` | Baineann an app AGUS scriostar go buan **gach cumraíocht, eochracha, agus bunachar sonraí**.        |
 
-> Nóta: Le haghaidh na n-orduithe seo, téigh go dtí an fillteán tionscadail OmniRoute (más ghearraigh tú é) agus rith iad. Ar an mbealach eile, má tá sé suiteáilte go domhain, is féidir leat `npm uninstall -g omniroute` a rith go simplí.
+> Nóta: Le haghaidh na n-orduithe seo, téigh go dtí an fillteán tionscadail 67router (más ghearraigh tú é) agus rith iad. Ar an mbealach eile, má tá sé suiteáilte go domhain, is féidir leat `npm uninstall -g omniroute` a rith go simplí.
 
 ### Imscaradh VPS
 
@@ -476,7 +476,7 @@ Le haghaidh mód comhtháthaithe óstach le binréidh CLI, féach an rannán Doc
 
 ### Void Linux (xbps-src)
 
-Is féidir le húsáideoirí Void Linux OmniRoute a phacáistiú agus a shuiteáil go dúchasach ag baint úsáide as an chreat traschomhshóite `xbps-src`. Léiríonn sé seo an t-ábhar stand-alone Node.js in éineacht le ceangail dhúchasacha `better-sqlite3" atá de dhíth.
+Is féidir le húsáideoirí Void Linux 67router a phacáistiú agus a shuiteáil go dúchasach ag baint úsáide as an chreat traschomhshóite `xbps-src`. Léiríonn sé seo an t-ábhar stand-alone Node.js in éineacht le ceangail dhúchasacha `better-sqlite3" atá de dhíth.
 
 <details>
 <summary><b>Féach samhail xbps-src</b></summary>
@@ -656,7 +656,7 @@ Le haghaidh an tagarmharc iomlán athróga timpeallachta, féach an [README](../
 
 **Soláthraithe comhoiriúnacha eile** (roghnaithe): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (tríd an `aws-bedrock`), `azure-ai`, `openrouter` (catalóg pas-tríd), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Coinníonn gach ceann acu a liosta samhlacha féin i `providerRegistry.ts` agus is féidir é a shioncronú go huathoibríoch nuair a nochtlann an soláthraí pointe deiridh `/models`.
 
-**Nóta ar aitheantais samhlacha:** Úsáideann OmniRoute aitheantais nádúrtha soláthraí (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Tá leaganacha ponctuála i roinnt aitheantais toisc go dteastaíonn siad mar sin ón API upstream. Mura bhfuil samhail ar an liosta thuas, rith `omniroute models --search <téarma>` nó glac `GET /api/models/catalog` chun infhaighteacht a dheimhniú.
+**Nóta ar aitheantais samhlacha:** Úsáideann 67router aitheantais nádúrtha soláthraí (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Tá leaganacha ponctuála i roinnt aitheantais toisc go dteastaíonn siad mar sin ón API upstream. Mura bhfuil samhail ar an liosta thuas, rith `omniroute models --search <téarma>` nó glac `GET /api/models/catalog` chun infhaighteacht a dheimhniú.
 
 </details>
 
@@ -722,9 +722,9 @@ hearráid a ainmníonn soláthraí ionsuite nó a dhintiúir, seiceáil an bhfui
 forchoimeádta: tá nóid a sábháladh sula raibh an riail seo ann fós stóráilte, ach ródálann a réimír chuig
 an soláthraí ionsuite. Cuir an nód in eagar agus tabhair réimír nua dó.
 
-### Piaraí OmniRoute a Shlabhrú
+### Piaraí 67router a Shlabhrú
 
-Is féidir geata OmniRoute eile a chur leis mar sholáthraí **Saincheaptha atá comhoiriúnach le OpenAI**. Úsáid
+Is féidir geata 67router eile a chur leis mar sholáthraí **Saincheaptha atá comhoiriúnach le OpenAI**. Úsáid
 bun-URL `/v1` an phiara agus eochair API thiomnaithe leis na pribhléidí is lú, arna heisiúint ag an bpiara sin.
 
 I gcás slabhraí cómhalartacha nó ilchéime, cumasaigh an chosaint roghnach ar lúba ar gach geata:
@@ -750,7 +750,7 @@ le HTTP `508 Loop Detected`; ní fhaigheann gnáthsholáthraithe réamhtheachtac
 Ní macasamhlú bunachair sonraí ná teipaistriú óstaigh é slabhriú piaraí. Coinníonn gach geata a staid
 SQLite, a thaiscí, a áiritheoirí ráta agus a sheisiúin féin. Úsáid seachfhreastalaí droim ar ais le seiceálacha sláinte nó
 teipaistriú cliaint le haghaidh infhaighteachta gníomhaí/éighníomhaí nó gníomhaí/gníomhaí, agus ná gléas aon bhunachar sonraí SQLite amháin
-riamh i roinnt ásc OmniRoute atá ag rith.
+riamh i roinnt ásc 67router atá ag rith.
 
 ### Bealaí Tiomnaithe Soláthraí
 
@@ -801,7 +801,7 @@ Tugann sé samhlacha ar ais atá grúpáilte de réir soláthraí agus cineálac
 - Ar fáil in **Deais → Críochphointí** le haghaidh Docker agus imscaradh féinóstáilte eile
 - Cruthaíonn sé URL sealadach `https://*.trycloudflare.com` a chuireann ar aghaidh chuig do chríochphointe reatha `/v1` atá comhoiriúnach le OpenAI
 - Suiteálann an chéad chumasú `cloudflared` nuair is gá amháin; úsáideann atosuití ina dhiaidh sin an dénártha bainistithe céanna arís
-- Ní athchóirítear Tolláin Thapa go huathoibríoch tar éis atosú OmniRoute nó coimeádáin; cumasaigh arís iad ón deais nuair is gá
+- Ní athchóirítear Tolláin Thapa go huathoibríoch tar éis atosú 67router nó coimeádáin; cumasaigh arís iad ón deais nuair is gá
 - Tá URLanna tolláin gearrshaolach agus athraíonn siad gach uair a stopann nó a thosaíonn tú an tollán
 - Úsáideann Tolláin Thapa bhainistithe iompar HTTP/2 de réir réamhshocraithe chun rabhaidh fhothramacha faoi mhaolán UDP QUIC a sheachaint i gcoimeádáin shrianta
 - Socraigh `CLOUDFLARED_PROTOCOL=quic` nó `auto` más mian leat rogha an iompair bhainistithe a shárú
@@ -818,7 +818,7 @@ Tugann sé samhlacha ar ais atá grúpáilte de réir soláthraí agus cineálac
 
 ### Clós Súgartha an Aistritheora
 
-Faigh rochtain air trí **Deais → Aistritheoir**. Dífhabhtaigh agus léirshamhlaigh an chaoi a n-aistríonn OmniRoute iarratais API idir soláthraithe.
+Faigh rochtain air trí **Deais → Aistritheoir**. Dífhabhtaigh agus léirshamhlaigh an chaoi a n-aistríonn 67router iarratais API idir soláthraithe.
 
 | Mód                 | Cuspóir                                                                                                          |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -871,7 +871,7 @@ Le haghaidh cleamhnas seisiúin seachtrach (mar shampla, gníomhairí Claude Cod
 X-Session-Id: your-session-key
 ```
 
-Glacann OmniRoute le `x_session_id` freisin agus seolann sé eochair éifeachtach an tseisiúin ar ais in `X-OmniRoute-Session-Id`.
+Glacann 67router le `x_session_id` freisin agus seolann sé eochair éifeachtach an tseisiúin ar ais in `X-OmniRoute-Session-Id`.
 
 Má úsáideann tú Nginx agus má sheolann tú ceanntásca ina bhfuil fostríoca, cumasaigh:
 
@@ -905,7 +905,7 @@ Slabhra: production-fallback
 
 ### Teaglamaí Coitianta Soláthraithe & Patrúin Ródaithe
 
-Seo patrúin shamplacha chun iliomad soláthraithe a chomhcheangal agus ródú eatarthu in OmniRoute:
+Seo patrúin shamplacha chun iliomad soláthraithe a chomhcheangal agus ródú eatarthu in 67router:
 
 #### 1. Teaglaim Gníomhaire Códúcháin: Réasúnaíocht Ardleibhéil le Cúltaca Costais/Luais
 
@@ -966,7 +966,7 @@ Samhlacha speisialaithe amhairc a phéireáil le giniúint téacs ardluais le ha
 
 Cumraigh trí **Painéal → Socruithe → Athléimneacht**.
 
-Cuireann OmniRoute athléimneacht ar leibhéal an tsoláthraí i bhfeidhm le cúig chomhpháirt:
+Cuireann 67router athléimneacht ar leibhéal an tsoláthraí i bhfeidhm le cúig chomhpháirt:
 
 1. **Ciú Iarratas & Rialú Luais** — Múnlú iarratas ar leibhéal an chórais:
    - **Iarratais sa Nóiméad (RPM)** — Uasmhéid iarratas sa nóiméad in aghaidh an chuntais
@@ -991,7 +991,7 @@ Cuireann OmniRoute athléimneacht ar leibhéal an tsoláthraí i bhfeidhm le cú
 
    Ní thaispeántar staid reatha scoradán an tsoláthraí ach ar **Painéal → Sláinte**.
 
-4. **Fan leis an Tréimhse Shuaimhnithe** — Má tá gach nasc iarrthach i dtréimhse shuaimhnithe cheana féin, is féidir le OmniRoute fanacht go dtí an tréimhse shuaimhnithe is túisce agus an t-iarratas cliaint céanna a atriail go huathoibríoch.
+4. **Fan leis an Tréimhse Shuaimhnithe** — Má tá gach nasc iarrthach i dtréimhse shuaimhnithe cheana féin, is féidir le 67router fanacht go dtí an tréimhse shuaimhnithe is túisce agus an t-iarratas cliaint céanna a atriail go huathoibríoch.
 
 5. **Uathbhraite Teorann Ráta** — Nuair a sheolann soláthraithe in aghaidh srutha tréimhsí feithimh sainráite ar ais, sáraíonn na leideanna sin tréimhse shuaimhnithe áitiúil an naisc nuair atá an socrú cumasaithe.
 
@@ -1025,7 +1025,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Cásanna Úsáide:**
 
-- OmniRoute a aistriú idir ríomhairí
+- 67router a aistriú idir ríomhairí
 - Cúltacaí seachtracha a chruthú le haghaidh athshlánú ó thubaiste
 - Cumraíochtaí a chomhroinnt idir baill foirne (easpórtáil gach rud → comhroinn an chartlann)
 
@@ -1077,7 +1077,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Tras-scríobh Fuaime
 
-Tacaíonn OmniRoute le tras-scríobh fuaime tríd an gcríochphointe atá comhoiriúnach le OpenAI:
+Tacaíonn 67router le tras-scríobh fuaime tríd an gcríochphointe atá comhoiriúnach le OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1152,7 +1152,7 @@ Díchumasaigh an **maolán comharthaí réasúnaíochta** nuair a éilíonn sol�
 `max_tokens` / `maxOutputTokens`. Nuair a bhíonn sé cumasaithe, ní chuireann ródú teaglama spás breise
 do shamhlacha réasúnaíochta ach le haghaidh samhlacha a bhfuil uasteorainn aschuir aitheanta acu agus fágann sé teorainn chomharthaí an chliaint gan athrú nuair a
 sháródh an luach sábháilte maolánaithe an uasteorainn sin. Má tá teorainn an chliaint os cionn uasteorann aitheanta cheana féin,
-laghdaíonn OmniRoute í go dtí an uasteorainn sin sula seoltar an t-iarratas réamhtheachtach.
+laghdaíonn 67router í go dtí an uasteorainn sin sula seoltar an t-iarratas réamhtheachtach.
 
 ---
 
@@ -1175,7 +1175,7 @@ Faigh rochtain uirthi trí **Deais → Sláinte**. Forbhreathnú fíor-ama ar sh
 
 ## 🤑 Auto-Routing (Zero-config)
 
-Seolann OmniRoute le **routálaí uathoibríoch scóráilte** a roghnaíonn an tsamhail is fearr do gach iarratas ar gach soláthraí ceangailte — gan aon combo a choimeád. Níl le déanamh ach an t-iarratas a sheoladh le ceann de na réamhshocruithe `auto/*` agus cuirfidh OmniRoute combo fíorúil le chéile ar an toirt, ag scóráil iarrthóirí ar moill, costas, ráta ratha, oiriúnacht comhthéacs, oiriúnacht samhail don tasc, teipeanna le déanaí, quota, agus stáid briseadh circuit.
+Seolann 67router le **routálaí uathoibríoch scóráilte** a roghnaíonn an tsamhail is fearr do gach iarratas ar gach soláthraí ceangailte — gan aon combo a choimeád. Níl le déanamh ach an t-iarratas a sheoladh le ceann de na réamhshocruithe `auto/*` agus cuirfidh 67router combo fíorúil le chéile ar an toirt, ag scóráil iarrthóirí ar moill, costas, ráta ratha, oiriúnacht comhthéacs, oiriúnacht samhail don tasc, teipeanna le déanaí, quota, agus stáid briseadh circuit.
 
 | Réamhshocrú    | Optamaíonn do                                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -1206,7 +1206,7 @@ Tá an t-uath-routálaí cur síos iomlán air i [AUTO-COMBO.md](../routing/AUTO
 
 ## 🔌 Comhtháthú MCP & A2A
 
-Is **freastalaí MCP** (Model Context Protocol) agus **freastalaí A2A** (Agent-to-Agent JSON-RPC 2.0) é OmniRoute araon. Is féidir le haon IDE nó óstach gníomhaíochta atá comhoiriúnach le MCP uirlisí OmniRoute a ghairm go díreach — gan aon choró sa bhreis ag teastáil.
+Is **freastalaí MCP** (Model Context Protocol) agus **freastalaí A2A** (Agent-to-Agent JSON-RPC 2.0) é 67router araon. Is féidir le haon IDE nó óstach gníomhaíochta atá comhoiriúnach le MCP uirlisí 67router a ghairm go díreach — gan aon choró sa bhreis ag teastáil.
 
 ### Aistrithe MCP
 
@@ -1241,7 +1241,7 @@ Sainmhíníonn MCP faoi láthair 32 scóip ainmnithe. Is féidir gach eochair Be
 
 ## � Áiseanna Scileanna
 
-Taispeánann OmniRoute **chreat scileanna in-infhiarmaithe** (`src/lib/skills/`) ionas go bhféadfaidh gníomhairí agus an críochfoirm A2A rithinne ábharshuímh (m.sh. `code-review`, `summarize`, `extract-facts`, `web-research`).
+Taispeánann 67router **chreat scileanna in-infhiarmaithe** (`src/lib/skills/`) ionas go bhféadfaidh gníomhairí agus an críochfoirm A2A rithinne ábharshuímh (m.sh. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Comhéadan Margaidh** — Brabhsáil agus suiteáil scileanna ó **Dashboard → Skills**
 - **Scóipeanna in aghaidh an eochracha** — Cuir teorainn le cén eochracha API a fhéadfaidh scileanna áirithe a thionscnamh
@@ -1253,7 +1253,7 @@ Lámhleabhar iomlán: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Córas Cuimhne
 
-Coinníonn OmniRoute **cuimhne comhrá fadtéarmach** le tarrtháil hibrideach:
+Coinníonn 67router **cuimhne comhrá fadtéarmach** le tarrtháil hibrideach:
 
 - **SQLite FTS5** le haghaidh cuardach focailbhoinne thar thréitheanna roimhe seo
 - **Stóras veicteora Qdrant** (roghnach) le haghaidh cuimhneachtáil chiallmhara
@@ -1266,7 +1266,7 @@ Bainistigh cuimhneanna i **Dashboard → Memory** (cuardach, eagar, easpórtáil
 
 ## 🔔 Webhooks
 
-Liostáil le haghaidh teagmhais OmniRoute le haghaidh monatóireachta agus uathoibriú fíor-ama.
+Liostáil le haghaidh teagmhais 67router le haghaidh monatóireachta agus uathoibriú fíor-ama.
 
 - Cruthaigh webhook i **Dashboard → Webhooks** le sprioc URL agus rún sínithe HMAC
 - Teagmhais ar fáil: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1279,11 +1279,11 @@ Scéimre iomlán i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Gníomhairí Scáileáin
 
-Comhtháthaíonn OmniRoute le gníomhairí códála scáileáin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ionas gur féidir leat tascanna fadthéarmacha a sheoladh ón an chéanna dashboard a bhainistíonn do ródú áitiúil.
+Comhtháthaíonn 67router le gníomhairí códála scáileáin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ionas gur féidir leat tascanna fadthéarmacha a sheoladh ón an chéanna dashboard a bhainistíonn do ródú áitiúil.
 
 - Cruthaigh tascanna i **Dashboard → Cloud Agents** nó trí `POST /api/v1/agents/tasks`
 - Rianaigh stádas, logaanna, agus airtealaí in aghaidh an tasc
-- Eochracha API féin-iompairtha in aghaidh an soláthraí — ní fhágann ainmneacha teagmhasa instanciú OmniRoute choíche
+- Eochracha API féin-iompairtha in aghaidh an soláthraí — ní fhágann ainmneacha teagmhasa instanciú 67router choíche
 
 Lámhleabhar iomlán: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1291,7 +1291,7 @@ Lámhleabhar iomlán: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Bainisteoireacht Clárlann
 
-Is féidir leat gach acmhainn OmniRoute (soláthraithe, tiompáin, eochracha, socruithe) a bhainistiú thar HTTP ag baint úsáide as **eochair bearer leis an scóip `manage`**.
+Is féidir leat gach acmhainn 67router (soláthraithe, tiompáin, eochracha, socruithe) a bhainistiú thar HTTP ag baint úsáide as **eochair bearer leis an scóip `manage`**.
 
 Gineadh an eochair i **Dashboard → API Keys → New Key → Scope: manage**, ansin:
 
@@ -1322,7 +1322,7 @@ Féach [API_REFERENCE.md](../reference/API_REFERENCE.md) le haghaidh an catalóg
 
 ## 💧 CLI Inmheánach
 
-Seolann OmniRoute CLI inmheánach (`omniroute …') le haghaidh socraithe, diagnóise agus rialaithe rith. Tá seo **leithleasc ón leathanach "Uirlisí CLI" sa deasc**, a chumraítear le haghaidh CLI tríú páirtí (Claude Code, Cursor, Codex, Cline, …) ionas gur féidir leo labhairt le OmniRoute.
+Seolann 67router CLI inmheánach (`omniroute …') le haghaidh socraithe, diagnóise agus rialaithe rith. Tá seo **leithleasc ón leathanach "Uirlisí CLI" sa deasc**, a chumraítear le haghaidh CLI tríú páirtí (Claude Code, Cursor, Codex, Cline, …) ionas gur féidir leo labhairt le 67router.
 
 ```bash
 omniroute setup                    # Treoraí idirghníomhach (pasfhocal, soláthraithe, combos)
@@ -1353,7 +1353,7 @@ Leid: páirigh `omniroute doctor --json` le d'fheirm monatóireachta chun a chur
 
 ## 💻 Feidhmchlár Deisce (Electron)
 
-Tá OmniRoute ar fáil mar fheidhmchlár deisce dúchasach le haghaidh Windows, macOS, agus Linux.
+Tá 67router ar fáil mar fheidhmchlár deisce dúchasach le haghaidh Windows, macOS, agus Linux.
 
 ### Suiteáil
 

@@ -6,7 +6,7 @@
 
 ## Kuripoti Udhaifu
 
-Ukigundua udhaifu wa kiusalama katika OmniRoute, tafadhali uripoti kwa kuwajibika:
+Ukigundua udhaifu wa kiusalama katika 67router, tafadhali uripoti kwa kuwajibika:
 
 1. **USIFUNGUE** suala la umma la GitHub
 2. Tumia [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Baada ya 3.8.59 toleo linalofuata ni **3.9.0**, ambalo linaanzisha mkondo wa usa
 
 ## Usanifu wa Usalama
 
-OmniRoute hutekeleza modeli ya usalama yenye tabaka nyingi:
+67router hutekeleza modeli ya usalama yenye tabaka nyingi:
 
 ```
 Ombi → CORS → Mchakato wa Authz (ainisha → sera → tekeleza)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Mfumo wa Vizuizi vya Usalama
 
-OmniRoute huja na **rejista ya vizuizi vya usalama** inayoweza kupakiwa upya bila kusimamishwa (`src/lib/guardrails/`), ikiwa na vizuizi 3 vilivyojengewa ndani vilivyopangwa kwa kipaumbele:
+67router huja na **rejista ya vizuizi vya usalama** inayoweza kupakiwa upya bila kusimamishwa (`src/lib/guardrails/`), ikiwa na vizuizi 3 vilivyojengewa ndani vilivyopangwa kwa kipaumbele:
 
 | Kizuizi cha Usalama | Kipaumbele | Kusudi                                                                                              |
 | ------------------- | ---------- | --------------------------------------------------------------------------------------------------- |

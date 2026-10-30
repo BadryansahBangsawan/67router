@@ -6,7 +6,7 @@
 
 ## ទិដ្ឋភាពទូទៅ
 
-Redis គឺជា **dependency ជាជម្រើស និងមិនតឹងរឹង** នៅក្នុង OmniRoute — កម្មវិធីនឹងបន្តដំណើរការដោយបន្ថយសមត្ថភាពយ៉ាងរលូន (ប្រើជម្រើសជំនួសក្នុងអង្គចងចាំ)
+Redis គឺជា **dependency ជាជម្រើស និងមិនតឹងរឹង** នៅក្នុង 67router — កម្មវិធីនឹងបន្តដំណើរការដោយបន្ថយសមត្ថភាពយ៉ាងរលូន (ប្រើជម្រើសជំនួសក្នុងអង្គចងចាំ)
 នៅពេល Redis មិនអាចប្រើបាន។ នៅក្នុងបរិស្ថាន production ការកែតម្រូវ Redis ឱ្យសមស្របជួយកាត់បន្ថយ latency សម្រាប់ workload បួនប្រភេទផ្សេងគ្នា៖
 
 | Workload                              | Driver                        | Client Factory                                      | ទម្រង់ Key                                                          |
@@ -16,7 +16,7 @@ Redis គឺជា **dependency ជាជម្រើស និងមិនត�
 | កន្លែងផ្ទុកកូតា                       | `redisQuotaStore.ts`          | `getRedisClient(url)` singleton ដាច់ដោយឡែក          | `<prefix>quota:*` ដែលអាចកំណត់រចនាសម្ព័ន្ធបានសម្រាប់ instance នីមួយៗ |
 | Circuit breaker សម្រាប់ warmup        | `redisCircuitBreakerStore.ts` | Client ដាច់ដោយឡែកនៅក្នុង `circuitBreakerFactory.ts` | `<prefix>warmup:cb:<connectionId>`                                  |
 
-Workload ទាំងបួនប្រើ prefix របស់ namespace តែមួយ ដើម្បីឱ្យ OmniRoute អាចដំណើរការរួមជាមួយកម្មវិធីផ្សេងទៀតនៅលើ
+Workload ទាំងបួនប្រើ prefix របស់ namespace តែមួយ ដើម្បីឱ្យ 67router អាចដំណើរការរួមជាមួយកម្មវិធីផ្សេងទៀតនៅលើ
 Redis instance តែមួយ (ឧ. `127.0.0.1:6379`)។ សូមមើល [ការបែងចែក Namespace សម្រាប់ Key](#key-namespacing)។
 
 ---
@@ -40,14 +40,14 @@ Redis instance តែមួយ (ឧ. `127.0.0.1:6379`)។ សូមមើល [�
 
 ## ការបែងចែក Namespace សម្រាប់ Key
 
-OmniRoute ប្រើ Redis instance រួមជាមួយអ្វីផ្សេងទៀតដែលដំណើរការលើ host។ បើគ្មាន namespace ទេ
+67router ប្រើ Redis instance រួមជាមួយអ្វីផ្សេងទៀតដែលដំណើរការលើ host។ បើគ្មាន namespace ទេ
 key ដូចជា `auth:api_key:<sha256>` ឬ `rl:*` អាចប៉ះទង្គិចជាមួយ key ពីកម្មវិធីផ្សេងទៀត
 ដែលប្រើ Redis ដូចគ្នា (instance នេះដំណើរការ Redis នៅលើ `127.0.0.1:6379` រួមជាមួយ service ផ្សេងទៀត)។
 
-កំណត់ `REDIS_KEY_PREFIX` ជា string ដែលមិនទទេ ដើម្បីបន្ថែម prefix ទៅខាងមុខ key **ទាំងអស់** របស់ OmniRoute៖
+កំណត់ `REDIS_KEY_PREFIX` ជា string ដែលមិនទទេ ដើម្បីបន្ថែម prefix ទៅខាងមុខ key **ទាំងអស់** របស់ 67router៖
 
 ```bash
-# .env — key ទាំងអស់របស់ OmniRoute ក្លាយជា omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — key ទាំងអស់របស់ 67router ក្លាយជា omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -97,7 +97,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ទុកទំហំសម្រាប់ page cache របស់ OS
 maxmemory-policy allkeys-lru         # បណ្ដេញធាតុ auth cache ចាស់ៗចេញនៅពេលមានសម្ពាធអង្គចងចាំ
 
-# ការរក្សាទុកជាអចិន្ត្រៃយ៍ (ជាជម្រើស — OmniRoute មានសុវត្ថិភាពចំពោះការគាំង ទោះគ្មានវាក៏ដោយ)
+# ការរក្សាទុកជាអចិន្ត្រៃយ៍ (ជាជម្រើស — 67router មានសុវត្ថិភាពចំពោះការគាំង ទោះគ្មានវាក៏ដោយ)
 save 300 1                           # ថត snapshot យ៉ាងហោចណាស់រៀងរាល់ 5 នាទី ប្រសិនបើមាន key ≥1 បានផ្លាស់ប្ដូរ
 appendonly no                        # មិនត្រូវការ AOF ទេ; ទិន្នន័យអាចបង្កើតឡើងវិញបាន
 appendfsync no                       # គ្មានបន្ទុកបន្ថែមពី fsync (RDB គឺគ្រប់គ្រាន់)

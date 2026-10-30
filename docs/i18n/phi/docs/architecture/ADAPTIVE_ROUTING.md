@@ -5,7 +5,7 @@
 ---
 
 Inilalarawan ng dokumentong ito ang pundasyon ng adaptive routing na ginagabayan ng feedback na idinagdag sa
-OmniRoute. Sadyang maliit ang saklaw nito: nagpapakilala ito ng typed routing-outcome
+67router. Sadyang maliit ang saklaw nito: nagpapakilala ito ng typed routing-outcome
 channel, isang online na signal ng kalidad na nagbibigay ng input sa kasalukuyang auto-combo scorer, isang
 opsyonal na OpenTelemetry exporter, at isang endpoint para sa explainability. **Hindi** nito
 pinapalitan ang kasalukuyang resilience stack (circuit breaker, connection cooldown,
@@ -13,7 +13,7 @@ model lockout, health matrix, autopilot) — dinaragdagan nito ang mga iyon.
 
 ## 1. Konteksto ng arkitektura
 
-Ang OmniRoute ay isang data plane na may **request hot path** at isang **control/intelligence
+Ang 67router ay isang data plane na may **request hot path** at isang **control/intelligence
 plane**. Kailangang manatiling mabilis, matipid sa memory, asynchronous, resilient, at
 predictable ang hot path. Nabibilang sa control plane ang evaluation, quality scoring,
 mga eksperimento, at historikal na pagsusuri.
@@ -23,7 +23,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (mabilis, sync, nasa memory)
+│    67router        │   data plane (mabilis, sync, nasa memory)
 │ routing / failover  │
 │ health / guardrail  │
 │ cache / streaming   │
@@ -233,7 +233,7 @@ Mga file: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK).
 - Sinusunod ng mga span ang mga GenAI semantic convention (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) kasama ang mga OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) kasama ang mga 67router routing
   attribute (resulta, status, ttft, mga retry, fallback).
 - Ang `record()` ay naglalagay lamang sa pila sa loob ng bounded buffer (O(1)); isang background timer
   ang asynchronous na nagfa-flush sa pamamagitan ng `POST {endpoint}/v1/traces`. Kapag overloaded,
@@ -255,7 +255,7 @@ Mga file: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrasyon ng evaluation plane (Kahandaan para sa Future AGI)
 
-Itinuturing ng OmniRoute ang Future AGI (o anumang evaluator) bilang isang **potensyal na
+Itinuturing ng 67router ang Future AGI (o anumang evaluator) bilang isang **potensyal na
 intelligence/evaluation backend, hindi isang dependency**. Ang mga seam:
 
 - Maaaring asynchronous na mag-forward ng mga event sa evaluator ang isang `RoutingEventSink`.

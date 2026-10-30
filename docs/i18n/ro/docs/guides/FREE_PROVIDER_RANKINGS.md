@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: OmniRoute clasifică furnizorii săi **gratuiți** în funcție de calitatea modelelor, utilizând **scorurile ELO Arena AI
+> **Pe scurt**: 67router clasifică furnizorii săi **gratuiți** în funcție de calitatea modelelor, utilizând **scorurile ELO Arena AI
 > (în stil LMArena)**. Deschideți pagina **Clasamentul furnizorilor gratuiți** din
 > panoul de control pentru a vedea ce furnizori gratuiți oferă cele mai performante modele pentru sarcina dvs. —
 > per ansamblu sau filtrate după categorie (programare, revizuire, documentație, depanare).
@@ -13,7 +13,7 @@
 
 ## Ce este
 
-OmniRoute înregistrează 375 de furnizori, inclusiv 155 de intrări de catalog marcate **gratuit/fără autentificare**
+67router înregistrează 375 de furnizori, inclusiv 155 de intrări de catalog marcate **gratuit/fără autentificare**
 (fără autentificare,
 OAuth cu nivel gratuit sau cheie API cu nivel gratuit — consultați
 [Ghidul nivelurilor gratuite](../getting-started/FREE-TIERS-GUIDE.md) și
@@ -132,9 +132,9 @@ Motorul de sincronizare Arena ELO (`src/lib/arenaEloSync.ts`) preia două clasam
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Fiecare intrare din clasament
 conține numele modelului, furnizorul, `score` ELO, intervalul de încredere și numărul de voturi.
 
-Categoriile clasamentului corespund categoriilor de sarcini OmniRoute:
+Categoriile clasamentului corespund categoriilor de sarcini 67router:
 
-| Clasament Arena | Categorii de sarcini OmniRoute                    |
+| Clasament Arena | Categorii de sarcini 67router                     |
 | --------------- | ------------------------------------------------- |
 | `text`          | `default`, `review`, `documentation`, `debugging` |
 | `code`          | `coding`                                          |
@@ -171,7 +171,7 @@ Sincronizarea rulează **implicit**:
 
 - Rulează o dată la pornirea serverului și apoi periodic, pe baza unui temporizator
   (`src/lib/arenaEloSync.ts`, conectat din `src/instrumentation-node.ts`).
-- Este **neblocantă și nu cauzează niciodată o eroare fatală** — dacă preluarea din sursa din amonte eșuează, OmniRoute continuă să
+- Este **neblocantă și nu cauzează niciodată o eroare fatală** — dacă preluarea din sursa din amonte eșuează, 67router continuă să
   ruleze, iar clasamentele afișează pur și simplu ultimele date valide (sau o stare fără date).
 
 Două variabile de mediu o controlează (documentate în
@@ -206,7 +206,7 @@ o asociere flexibilă (`findMatchingIntelligence` din `src/lib/freeProviderRanki
 3. Potrivire după prefix (numele unui model din clasament este un prefix al ID-ului din registru).
 
 În etapa de sincronizare, prefixele cunoscute ale furnizorilor (`anthropic/`, `openai/`, `google/`, …) sunt
-eliminate, iar o mică hartă de aliasuri extinde numele canonice în variantele pe care OmniRoute le utilizează
+eliminate, iar o mică hartă de aliasuri extinde numele canonice în variantele pe care 67router le utilizează
 intern, astfel încât modelele să poată fi găsite sub orice nume.
 
 ### Cum este clasificat un furnizor

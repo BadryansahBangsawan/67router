@@ -7,11 +7,11 @@
 Za zajednički manifest izvršnih datoteka, ograničena podređena okruženja i trajnu
 Gemini konfiguraciju pogledajte [ugovore za pokretanje CLI-ja](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute isporučuje skup naredbi `setup-*` koje konfiguriraju CLI za programiranje
-(Codex, Claude Code, OpenCode, Cline, …) tako da koristi OmniRoute kao svoju pozadinu — kako bi
-alat komunicirao s **jednom** krajnjom točkom, a OmniRoute usmjeravao zahtjeve odgovarajućem pružatelju uz
+67router isporučuje skup naredbi `setup-*` koje konfiguriraju CLI za programiranje
+(Codex, Claude Code, OpenCode, Cline, …) tako da koristi 67router kao svoju pozadinu — kako bi
+alat komunicirao s **jednom** krajnjom točkom, a 67router usmjeravao zahtjeve odgovarajućem pružatelju uz
 automatsko prebacivanje u slučaju pogreške. Svaka naredba čita **aktualni** katalog modela iz pokrenutog
-OmniRoutea (lokalnog ili udaljenog) i zapisuje konfiguracijsku datoteku samog alata na **vašem**
+67routera (lokalnog ili udaljenog) i zapisuje konfiguracijsku datoteku samog alata na **vašem**
 računalu. Na API ključ upućuje se putem varijable okruženja gdje god alat
 to podržava. Naredbe koje trajno spremaju lokalnu datoteku okruženja alata navedene su u nastavku.
 
@@ -53,7 +53,7 @@ detaljne vodiče za pojedinačne alate:
 
 - [Konfiguracija alata Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfiguracija Codex CLI-ja](./CODEX-CLI-CONFIGURATION.md)
-- [Udaljeni način rada](./REMOTE-MODE.md) — upravljajte udaljenim OmniRouteom (VPS / Tailnet) sa svojeg prijenosnog računala
+- [Udaljeni način rada](./REMOTE-MODE.md) — upravljajte udaljenim 67routerom (VPS / Tailnet) sa svojeg prijenosnog računala
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — proširenje OmniCopilot; ono također može pokretati ove
   naredbe `setup-*` umjesto vas iz samog uređivača
 
@@ -89,7 +89,7 @@ poslužitelja i lokalno zapisuje konfiguraciju.
 
 Napomene o zastavicama (provjereno u izvornom kodu naredbe):
 
-- `--remote <url>` — dohvaća katalog s udaljenog OmniRoutea (nadjačava `--port`
+- `--remote <url>` — dohvaća katalog s udaljenog 67routera (nadjačava `--port`
   i aktivni kontekst). `--api-key <key>` pruža vjerodajnicu za taj
   poslužitelj (zadana je vrijednost varijable okruženja `OMNIROUTE_API_KEY` ili token aktivnog konteksta).
 - `--only <patterns>` — podnizovi odvojeni zarezima; zadržava samo ID-ove modela koji se podudaraju
@@ -110,7 +110,7 @@ Napomene o zastavicama (provjereno u izvornom kodu naredbe):
   **codex** putem argumenata `-c model_providers.omniroute.*`. **Qwen je jedini cilj naredbe run
   koji izričito zahtijeva `--model`** — `omniroute run qwen` bez njega završava
   kodom `2` uz izričitu pogrešku.
-- `--port <port>` — lokalni priključak za OmniRoute (zadano `20128`, zanemaruje se kada je postavljeno `--remote`).
+- `--port <port>` — lokalni priključak za 67router (zadano `20128`, zanemaruje se kada je postavljeno `--remote`).
   Prisutan je na svim naredbama `setup-*` i oba pokretača.
 - Izlazni kodovi za `omniroute run`: vlastiti izlazni kod podređenog CLI-ja prenosi se
   bez izmjena; `2` = nevaljani argumenti (nepodržani cilj, nedostaje obvezni
@@ -155,7 +155,7 @@ ne prikazuju se kao ciljevi koji se mogu pokrenuti.
 
 ## Lokalna uporaba
 
-S OmniRoute koji radi na `localhost:20128`, jednostavno pokrenite narebu za postavljanje vašeg
+S 67router koji radi na `localhost:20128`, jednostavno pokrenite narebu za postavljanje vašeg
 alata. Katalog se dohvaća s lokalnog poslužitelja.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Pokretanje bez pisanja ikakve konfiguracije (samo ubrizgavanje okruženja):
 
 ```bash
-omniroute launch                 # Claude Code → lokalni OmniRoute
-omniroute launch-codex           # Codex CLI → lokalni OmniRoute
+omniroute launch                 # Claude Code → lokalni 67router
+omniroute launch-codex           # Codex CLI → lokalni 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Udaljenja uporaba
 
-Usmjerite bilo koju naredbu za postavljanje prema udaljenom OmniRouteu s `--remote` + `--api-key`. Katalog
+Usmjerite bilo koju naredbu za postavljanje prema udaljenom 67routeru s `--remote` + `--api-key`. Katalog
 se dohvaća s udaljenog poslužitelja; konfiguracija se zapisuje na vašem lokalnom računalu.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Oba oblika zapisuju jedan 5dive **auth profil**, a svako `claude` sjedalo vezano uz taj
-profil tada komunicira s OmniRouteom. Tri stvari su specifične za ovaj cilj:
+profil tada komunicira s 67routerom. Tri stvari su specifične za ovaj cilj:
 
 - **Pokreće se na poslužitelju flote, kao root.** 5dive-ovi glagoli djeluju na lokalne systemd jedinice
   i direktorij stanja koji je u vlasništvu roota; ne postoji udaljeni način rada. Recept se ponovno izvršava kroz
@@ -262,7 +262,7 @@ profil tada komunicira s OmniRouteom. Tri stvari su specifične za ovaj cilj:
 API ključ se predaje 5diveu putem **stdin-a** (`--api-key=-`), pa se nikada ne pojavljuje u
 ispisu `ps`.
 
-Usmjeravanje profila na OmniRoute **kombinaciju** umjesto na jedan model ono je što
+Usmjeravanje profila na 67router **kombinaciju** umjesto na jedan model ono je što
 osigurava prebacivanje pružatelja usluge za flotu: kada je primarna krajnja točka potpuno pala usred poteza
 u snimljenom izvođenju na
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), agent je završio
@@ -272,7 +272,7 @@ preostale korake na rezervnoj krajnjoj točki i nikada nije izložio prekid rada
 
 ## Konvencije osnovnog URL-a (koji alati zahtijevaju `/v1`)
 
-OmniRoute izlaže OpenAI sučelje na `/v1`, Anthropic sučelje u korijenu,
+67router izlaže OpenAI sučelje na `/v1`, Anthropic sučelje u korijenu,
 a izvorno Gemini sučelje na `/v1beta`. Svaka je integracija konfigurirana u obliku koji njezin
 alat očekuje (provjereno u izvornom kodu naredbe):
 
@@ -294,7 +294,7 @@ alat očekuje (provjereno u izvornom kodu naredbe):
 ## Zadržavanje izvornih ovisnosti pri ažuriranju: `--include=optional`
 
 Kada ažurirate pomoću `omniroute update` (nakon potvrde ili s `--apply`),
-OmniRoute pokreće instalaciju s ugrađenom zastavicom `--include=optional`:
+67router pokreće instalaciju s ugrađenom zastavicom `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -321,14 +321,14 @@ zastarjelo), `--apply` (instalacija bez upita), `--changelog`, `--no-backup`,
 
 Ugovor provjeren za `@google/gemini-cli` 0.50.0: CLI poštuje
 `GOOGLE_GEMINI_BASE_URL` i šalje `POST /v1beta/models/<model>:generateContent`
-(i `:streamGenerateContent?alt=sse`) na njega — točno OmniRouteovo izvorno
+(i `:streamGenerateContent?alt=sse`) na njega — točno 67routerovo izvorno
 Gemini sučelje (`/v1beta`). `omniroute run gemini` to automatski povezuje:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktivni OmniRoute osnovni URL (korijen, bez `/v1`);
-- `GEMINI_API_KEY` → razriješena OmniRoute vjerodajnica (opcija/env/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → aktivni 67router osnovni URL (korijen, bez `/v1`);
+- `GEMINI_API_KEY` → razriješena 67router vjerodajnica (opcija/env/kontekst);
 - **privremeni izolirani `GEMINI_CLI_HOME`** čiji `.gemini/settings.json`
   odabire autentifikaciju `gemini-api-key`, tako da pohranjena Google OAuth sesija (Code Assist)
-  nikada ne nadjača OmniRoute-usmjereno pokretanje — uklanja se nakon izlaska;
+  nikada ne nadjača 67router-usmjereno pokretanje — uklanja se nakon izlaska;
 - **higijene okoline**: dječja okolina pročišćuje se od `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` i `GOOGLE_GENAI_USE_GCA` (koji bi preusmjerili
   autentifikaciju na Vertex/Code Assist), a `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key` postavlja se
@@ -352,7 +352,7 @@ integracija agentskog protokola za `/dashboard/acp-agents`.
 
 Determinističko pokretanje regresijskih testova plana pokretanja u CI-u (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Za validaciju PRAVIH binara protiv PRAVOG
-OmniRoute poslužitelja, opt-in okvir postoji na
+67router poslužitelja, opt-in okvir postoji na
 `tests/integration/upstream-cli-smoke.int.test.ts`. Nikada se ne pokreće automatski
 (svaki podtest se preskače osim ako nije postavljen `RUN_CLI_SMOKE=1`), prosljeđuje vjerodajnicu putem env-var
 NAZIVA (nikada putem vrijednosti), uklanja nizove koji izgledaju kao ključevi iz bilo kojeg snimljenog izlaza, preskače

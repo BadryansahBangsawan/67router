@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (ไทย)
+# 🗜️ Prompt Compression Guide — 67router (ไทย)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## ภาพรวม
 
-OmniRoute ใช้ไปป์ไลน์การบีบอัดพรอมต์แบบโมดูลาร์ที่ทำงาน **เชิงรุก** ก่อนที่คำขอจะไปถึงผู้ให้บริการต้นทาง ซึ่งหมายความว่าคุณจะประหยัดโทเค็นได้อย่างโปร่งใส โดยไม่จำเป็นต้องเปลี่ยนแปลงเวิร์กโฟลว์
+67router ใช้ไปป์ไลน์การบีบอัดพรอมต์แบบโมดูลาร์ที่ทำงาน **เชิงรุก** ก่อนที่คำขอจะไปถึงผู้ให้บริการต้นทาง ซึ่งหมายความว่าคุณจะประหยัดโทเค็นได้อย่างโปร่งใส โดยไม่จำเป็นต้องเปลี่ยนแปลงเวิร์กโฟลว์
 
 ```
 คำขอจากไคลเอนต์
@@ -122,15 +122,15 @@ RTK -> Caveman
 
 ## คณิตศาสตร์การประหยัดจากต้นน้ำ
 
-OmniRoute บันทึกข้อมูลการประหยัดจากการบีบอัดโดยอ้างอิงจากสองแหล่ง ได้แก่ เกณฑ์มาตรฐานของโปรเจกต์ต้นน้ำและ
-การประกอบเอนจินของ OmniRoute เอง
+67router บันทึกข้อมูลการประหยัดจากการบีบอัดโดยอ้างอิงจากสองแหล่ง ได้แก่ เกณฑ์มาตรฐานของโปรเจกต์ต้นน้ำและ
+การประกอบเอนจินของ 67router เอง
 
 | แหล่งที่มา | ตัวเลขจาก README ต้นน้ำที่ใช้ในที่นี้                                                                                 |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- |
 | Caveman    | โทเค็นเอาต์พุตลดลง `~75%`, ประหยัดเอาต์พุตเฉลี่ยจากเกณฑ์มาตรฐาน `65%`, ช่วง `22-87%` และเครื่องมือบีบอัดอินพุต `~46%` |
 | RTK        | ประหยัดเอาต์พุตคำสั่ง `60-90%`; เซสชันตัวอย่าง `~118,000 -> ~23,900` โทเค็น หรือประหยัด `79.7%` (`~80%`)              |
 
-สำหรับเพย์โหลดของเครื่องมือ/บริบทที่ทับซ้อนกัน คอมโบเริ่มต้นของ OmniRoute จะซ้อนเอนจินดังนี้:
+สำหรับเพย์โหลดของเครื่องมือ/บริบทที่ทับซ้อนกัน คอมโบเริ่มต้นของ 67router จะซ้อนเอนจินดังนี้:
 
 ```txt
 RTK -> Caveman
@@ -525,9 +525,9 @@ API การตั้งค่ายอมรับ style id ใดๆ แล�
 #### วิธีการแทรก
 
 `applyOutputStyles()` (`open-sse/services/compression/outputStyles/apply.ts`) จะแก้ไขการเลือกโดยเทียบกับแค็ตตาล็อก (id ที่ไม่รู้จักและสไตล์ที่โลแคลไม่ตรงกันจะถูกตัดทิ้ง และจะไม่ถือเป็นข้อผิดพลาด การเลือกที่หลังจากแก้ไขแล้วไม่เหลือสไตล์ใดจะปล่อย body ไว้โดยไม่เปลี่ยนแปลง และข้ามด้วยเหตุผล `no_styles`) จากนั้นเชื่อมคำสั่งที่เลือกตามลำดับในแค็ตตาล็อก
-เพิ่มข้อกำหนดเกี่ยวกับขอบเขตต่อท้าย **หนึ่งครั้ง** (รวมถึงข้อกำหนดด้านความปลอดภัย `SAFETY_BOUNDARIES` หรือคำแปลของข้อกำหนดดังกล่าว เมื่อเลือก `less-code` หรือ `ponytail`) และเริ่มต้นบล็อกด้วยเครื่องหมายป้องกันการใช้ซ้ำเพียงรายการเดียว (`[OmniRoute Output Styles]`) ดังนั้นการนำไปใช้อีกครั้งจะไม่มีผล เมื่อภาษาที่แก้ไขได้แล้ว (ดูการเลือกภาษาด้านล่าง) มีคำแปล ระบบจะแทรกคำสั่งฉบับภาษาท้องถิ่นแทนภาษาอังกฤษ
+เพิ่มข้อกำหนดเกี่ยวกับขอบเขตต่อท้าย **หนึ่งครั้ง** (รวมถึงข้อกำหนดด้านความปลอดภัย `SAFETY_BOUNDARIES` หรือคำแปลของข้อกำหนดดังกล่าว เมื่อเลือก `less-code` หรือ `ponytail`) และเริ่มต้นบล็อกด้วยเครื่องหมายป้องกันการใช้ซ้ำเพียงรายการเดียว (`[67router Output Styles]`) ดังนั้นการนำไปใช้อีกครั้งจะไม่มีผล เมื่อภาษาที่แก้ไขได้แล้ว (ดูการเลือกภาษาด้านล่าง) มีคำแปล ระบบจะแทรกคำสั่งฉบับภาษาท้องถิ่นแทนภาษาอังกฤษ
 
-สำหรับ body ที่มีอาร์เรย์ `messages` ซึ่งไม่ว่างเปล่า การตรวจสอบการใช้ซ้ำจะทำงานก่อนการข้ามตามเนื้อหา เมื่อมีเครื่องหมาย `[OmniRoute Output Styles]` อยู่แล้วในฟิลด์ `system` ระดับบนสุด (ซึ่งเป็นสตริงหรืออาร์เรย์ของบล็อกเนื้อหา) หรืออยู่ในข้อความ system ที่มีเนื้อหาเป็นสตริง ระบบจะปล่อย body ไว้โดยไม่เปลี่ยนแปลงด้วยเหตุผล `already_applied` และจะไม่ตรวจสอบคีย์เวิร์ด
+สำหรับ body ที่มีอาร์เรย์ `messages` ซึ่งไม่ว่างเปล่า การตรวจสอบการใช้ซ้ำจะทำงานก่อนการข้ามตามเนื้อหา เมื่อมีเครื่องหมาย `[67router Output Styles]` อยู่แล้วในฟิลด์ `system` ระดับบนสุด (ซึ่งเป็นสตริงหรืออาร์เรย์ของบล็อกเนื้อหา) หรืออยู่ในข้อความ system ที่มีเนื้อหาเป็นสตริง ระบบจะปล่อย body ไว้โดยไม่เปลี่ยนแปลงด้วยเหตุผล `already_applied` และจะไม่ตรวจสอบคีย์เวิร์ด
 มิฉะนั้น การข้ามตามเนื้อหา (`shouldBypassCavemanOutputMode()` ใน
 `open-sse/services/compression/outputMode.ts`) จะตรวจสอบข้อความของสามข้อความล่าสุด ไม่ว่าจะมีบทบาทใด และข้ามสไตล์ทั้งหมดสำหรับเทิร์นนั้นเมื่อข้อความตรงกับคีย์เวิร์ดด้านความปลอดภัย การดำเนินการที่ไม่สามารถย้อนกลับได้ หรือการขอคำชี้แจง หรือตรงกับลำดับที่ขึ้นอยู่กับลำดับคำ ได้แก่ `first`, `then`, `after that`, `before`, `rollback` หรือ
 `backup` แล้วตามด้วย `delete`, `drop`, `migrate`, `deploy` หรือ
@@ -543,7 +543,7 @@ API การตั้งค่ายอมรับ style id ใดๆ แล�
 4. หากไม่มีกรณีใดข้างต้น: ใส่บล็อกไว้ในข้อความ system ใหม่ที่ท้าย `messages`
 
 สำหรับ body ที่ไม่มีอาร์เรย์ `messages` (หรือมีอาร์เรย์ว่าง) จะไม่มีการข้ามตามเนื้อหา และจะไม่ตรวจสอบฟิลด์ `system` ระดับบนสุด บล็อกจะถูกเพิ่มต่อท้ายข้อความของฟิลด์ `instructions` ที่เป็นสตริง เว้นแต่ฟิลด์นั้นมีเครื่องหมาย
-`[OmniRoute Output Styles]` อยู่แล้ว ซึ่งในกรณีดังกล่าว ระบบจะปล่อย body ไว้โดยไม่เปลี่ยนแปลงด้วยเหตุผล
+`[67router Output Styles]` อยู่แล้ว ซึ่งในกรณีดังกล่าว ระบบจะปล่อย body ไว้โดยไม่เปลี่ยนแปลงด้วยเหตุผล
 `already_applied` เมื่อ body ไม่มีฟิลด์ `instructions` ที่เป็นสตริง แต่มี `input`
 (เป็นสตริงหรืออาร์เรย์) บล็อกจะกลายเป็น `instructions` โดยแทนที่ค่าที่ไม่ใช่สตริงซึ่งฟิลด์นั้นเคยเก็บไว้ body ที่ไม่มีทั้งฟิลด์ `instructions` ที่เป็นสตริงและ `input` ที่เป็นสตริงหรืออาร์เรย์ จะถูกปล่อยไว้โดยไม่เปลี่ยนแปลงและข้ามด้วยเหตุผล `no_messages`
 
@@ -563,8 +563,8 @@ API การตั้งค่ายอมรับ style id ใดๆ แล�
 ```
 
 ความเข้ากันได้ย้อนหลัง: ขณะที่ `outputStyles` ว่างเปล่า การตั้งค่าเดิม `cavemanOutputMode.enabled`
-จะถูกแมปเป็น `terse-prose` ที่ระดับ `cavemanOutputMode.intensity` จากนั้นบล็อกจะเริ่มต้นด้วยเครื่องหมาย `[OmniRoute Output Styles]` ขณะที่ตัวแทรกเดิม `applyCavemanOutputMode()`
-เคยเขียน `[OmniRoute Caveman Output Mode]` ใต้เครื่องหมายดังกล่าว ข้อความจะตรงกับการแทรกแบบเดิมในภาษา en, pt-BR, es, de, fr, it, ru, id และ vi ส่วนในภาษา ja และ zh จะมีช่องว่างเพิ่มเติมหนึ่งช่องก่อนข้อกำหนดเกี่ยวกับขอบเขต `terse-prose` มีคำแปลเป็นภาษา pt-BR, es, de,
+จะถูกแมปเป็น `terse-prose` ที่ระดับ `cavemanOutputMode.intensity` จากนั้นบล็อกจะเริ่มต้นด้วยเครื่องหมาย `[67router Output Styles]` ขณะที่ตัวแทรกเดิม `applyCavemanOutputMode()`
+เคยเขียน `[67router Caveman Output Mode]` ใต้เครื่องหมายดังกล่าว ข้อความจะตรงกับการแทรกแบบเดิมในภาษา en, pt-BR, es, de, fr, it, ru, id และ vi ส่วนในภาษา ja และ zh จะมีช่องว่างเพิ่มเติมหนึ่งช่องก่อนข้อกำหนดเกี่ยวกับขอบเขต `terse-prose` มีคำแปลเป็นภาษา pt-BR, es, de,
 fr, it, ru, zh, ja, id และ vi ดังนั้นคำขอที่ได้ภาษาหลังการแก้ไขเป็น `hu` จะได้รับข้อความภาษาอังกฤษ ในขณะที่ตัวแทรกเดิมใช้ข้อความภาษาฮังการี
 
 การเลือกภาษาของสไตล์เอาต์พุต (`resolveOutputStyleLanguage()` ใน

@@ -45,7 +45,7 @@ restabilește fluxul complet automat pe care proiectul l-a avut până la v3.8.4
 garanția WS1.3 (un token divulgat nu poate publica singur — nu există niciun token).
 
 **Configurare unică (proprietar):** npmjs.com → pachetul `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: proprietar `diegosouzapw`, depozit `OmniRoute`, flux de lucru `npm-publish.yml`
+Publisher_ → GitHub: proprietar `diegosouzapw`, depozit `67router`, flux de lucru `npm-publish.yml`
 (mediu: niciunul). Până când acesta există, pasul automat eșuează cu `ENEEDAUTH`:
 relansați cu `publish_mode=staged` (mai jos) sau `direct`.
 

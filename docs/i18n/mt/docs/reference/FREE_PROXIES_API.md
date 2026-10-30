@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jipprovdi ġabra magħżula ta’ proxies bla ħlas fit-tabella `free_proxies`,
+67router jipprovdi ġabra magħżula ta’ proxies bla ħlas fit-tabella `free_proxies`,
 sinkronizzata minn fornituri esterni (1proxy, proxifly, iplocate, webshare). Id-dashboard
 juri dawn taħt **Settings → Free Proxies**. Dan id-dokument
 ikopri l-iffiltrar, l-issortjar, l-għadd u r-rappurtar tal-iżbalji tas-sinkronizzazzjoni

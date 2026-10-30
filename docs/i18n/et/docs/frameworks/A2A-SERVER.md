@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Eesti)
+# 67router A2A Server Documentation (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agentidevaheline protokoll v0.3 — OmniRoute intelligentse marsruutimisagendina
+> Agentidevaheline protokoll v0.3 — 67router intelligentse marsruutimisagendina
 
 A2A-liidesel on kaks tahku:
 
@@ -19,7 +19,7 @@ A2A-liidesel on kaks tahku:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Tagastab Agent Card'i, mis kirjeldab OmniRoute'i võimeid, oskusi ja autentimisnõudeid.
+Tagastab Agent Card'i, mis kirjeldab 67router'i võimeid, oskusi ja autentimisnõudeid.
 
 Agent Card'i `version` väärtus pärineb `process.env.npm_package_version` (vt `src/app/.well-known/agent.json/route.ts:13`), nii et see sünkroonitakse automaatselt `package.json`-iga igal väljalaskel.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Saadaolevad oskused
 
-OmniRoute pakub 6 A2A-oskust, mis on seotud kohas `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Iga oskuse moodul asub kataloogis `src/lib/a2a/skills/`.
+67router pakub 6 A2A-oskust, mis on seotud kohas `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Iga oskuse moodul asub kataloogis `src/lib/a2a/skills/`.
 
 | Oskus              | ID                   | Kirjeldus                                                                                                                                                  | Sildid                     | Näited                                     |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :----------------------------------------- |
-| Smart Routing      | `smart-routing`      | Marsruudib prompti optimaalse pakkuya/kombo kaudu, kasutades OmniRoute'i kombo-mootorit ja skoorimist                                                      | routing, providers         | "Marsruudi see prompt parima mudeli kaudu" |
+| Smart Routing      | `smart-routing`      | Marsruudib prompti optimaalse pakkuya/kombo kaudu, kasutades 67router'i kombo-mootorit ja skoorimist                                                       | routing, providers         | "Marsruudi see prompt parima mudeli kaudu" |
 | Quota Management   | `quota-management`   | Annab ülevaate pakkujapõhisest kvoodiseisundist ja aitab kutsujal otsustada, millal piirata või vahetada                                                   | quota, providers           | "Kontrolli anthropic'i kvooti"             |
 | Provider Discovery | `provider-discovery` | Loetleb installitud pakkujad koos võimekuste, tasuta taseme lippude ja OAuth-i olekuga                                                                     | providers, discovery       | "Millised pakkujad on saadaval?"           |
 | Cost Analysis      | `cost-analysis`      | Hindab päringu/vestluse maksumust kataloogi ja hiljutise kasutuse põhjal                                                                                   | cost, usage                | "Hinda selle vestluse maksumust"           |
 | Health Report      | `health-report`      | Koondab pakkujapõhiselt circuit-breakeri, cooldowni ja lockouti oleku                                                                                      | health, resilience         | "Näita kõigi pakkujate terviseolekut"      |
-| List Capabilities  | `list-capabilities`  | Tagastab täieliku 45-kirjelise Agent Skillsi kataloogi (23 API + 21 CLI + 1 config) markdown-tabelina koos toorete SKILL.md URL-idega konteksti lisamiseks | catalog, discovery, skills | "Loetle kõik OmniRoute'i võimekused"       |
+| List Capabilities  | `list-capabilities`  | Tagastab täieliku 45-kirjelise Agent Skillsi kataloogi (23 API + 21 CLI + 1 config) markdown-tabelina koos toorete SKILL.md URL-idega konteksti lisamiseks | catalog, discovery, skills | "Loetle kõik 67router'i võimekused"        |
 
 > Agent Card tuleks hoida kooskõlas reaalajas 375 pakkujaga kataloogiga; pakkujate arv ning tasuta/autentimisvabad metaandmed pärinevad käitusaja registrist.
 
 ### `list-capabilities` oskuse üksikasjad
 
-Oskus `list-capabilities` on eriti kasulik välistele agentidele, kes peavad enne API-kõnede tegemist selgitama, mida OmniRoute pakub. See tagastab struktureeritud markdown-tabeli artefaktina:
+Oskus `list-capabilities` on eriti kasulik välistele agentidele, kes peavad enne API-kõnede tegemist selgitama, mida 67router pakub. See tagastab struktureeritud markdown-tabeli artefaktina:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC-i lõpp-punkt `/a2a` on kanoniline A2A sisenemispunkt. Allpool toodud R
 | `/.well-known/agent.json`    | GET    | Agent Card (A2A avastus)                                             | (avalik, vahemälu 3600s)                     |
 | `/api/a2a/tasks`             | POST   | Sisenev delegeerimine OmniConductor laevastikule (Conductor PRD RF5) | Bearer vs `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Sisenev Conductor delegeerimine (`POST /api/a2a/tasks`):** välised A2A agendid delegeerivad programmeerimistööd OmniConductor laevastikule OmniRoute'i kaudu. Sisu: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ainult Conductor laevastiku oskused (need, mis on teatatud Agent Cardis) on delegeeritavad; `metadata.conductor.repo.url` on kohustuslik (laevastik töötab git-hoidlatest). Marsruut tõlgitakse keskuse `POST /v1/tasks` kasutades serveripoolset `CONDUCTOR_ORCHESTRATOR_TOKEN` (tagasivõte `CONDUCTOR_HUB_TOKEN`) ja tagastab `201 { conductor_task_id, state: "submitted" }`; tegevuste olekud edastatakse tagasi läbi SSE→A2A peegelduse (RF1) ja on nähtavad `GET /api/a2a/tasks?skill=conductor` abil.
+**Sisenev Conductor delegeerimine (`POST /api/a2a/tasks`):** välised A2A agendid delegeerivad programmeerimistööd OmniConductor laevastikule 67router'i kaudu. Sisu: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — ainult Conductor laevastiku oskused (need, mis on teatatud Agent Cardis) on delegeeritavad; `metadata.conductor.repo.url` on kohustuslik (laevastik töötab git-hoidlatest). Marsruut tõlgitakse keskuse `POST /v1/tasks` kasutades serveripoolset `CONDUCTOR_ORCHESTRATOR_TOKEN` (tagasivõte `CONDUCTOR_HUB_TOKEN`) ja tagastab `201 { conductor_task_id, state: "submitted" }`; tegevuste olekud edastatakse tagasi läbi SSE→A2A peegelduse (RF1) ja on nähtavad `GET /api/a2a/tasks?skill=conductor` abil.
 
 ---
 

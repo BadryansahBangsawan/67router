@@ -177,7 +177,7 @@ node --import tsx/esm --test tests/unit/claude-web-auto-refresh.test.ts tests/un
 
 ### Կարգավորում
 
-1. Գործարկեք OmniRoute-ը `npm run dev`-ի կամ հավաքված տեղադրման միջոցով։
+1. Գործարկեք 67router-ը `npm run dev`-ի կամ հավաքված տեղադրման միջոցով։
 2. Բացեք Վահանակ → Մատակարարներ → Ավելացնել մատակարար։
 3. Ընտրեք Web Cookie կատեգորիան և Claude Web-ը։
 4. Տեղադրեք վավերացված `claude.ai` հարցումից պատճենված Cookie ամբողջական վերնագիրը։

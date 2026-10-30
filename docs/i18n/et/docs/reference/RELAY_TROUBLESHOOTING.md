@@ -5,10 +5,10 @@
 ---
 
 Releed (Vercel, Deno, Cloudflare) katkestavad ülesvooluühenduse
-serverivabas taustsüsteemis, et OmniRoute saaks väljuda stabiilsest piirkonnast,
+serverivabas taustsüsteemis, et 67router saaks väljuda stabiilsest piirkonnast,
 hoides samal ajal teenusepakkuja API-võtme serveripoolel. Selles dokumendis
 käsitletakse kaht tõrkerežiimi, millega operaatorid tootmiskeskkonnas kokku
-puutuvad, ja OmniRoute'i pakutavaid taasteteid kummagi jaoks.
+puutuvad, ja 67router'i pakutavaid taasteteid kummagi jaoks.
 
 ## Kuidas relee autentimisandmeid talletatakse
 
@@ -35,7 +35,7 @@ autentimisandmeid.
 1. Avage **Settings → Proxy Pool**.
 2. Puuduvate autentimisandmetega releeridadel kuvatakse kollane märk
    `auth missing` ja nupp **Repair**.
-3. Klõpsake nuppu **Repair**. OmniRoute kutsub välja
+3. Klõpsake nuppu **Repair**. 67router kutsub välja
    `POST /api/settings/proxies/[id]/repair-relay`, mis:
    - dekrüpteerib `relayAuthEnc` **praeguse** võtmega,
    - kirjutab lihttekstina `relayAuth` tagasi väljale `notes`,
@@ -67,7 +67,7 @@ tõendit pole võimalik taastada, mistõttu ei pea te seda kunagi käsitsi otsim
 **Sümptom:** proksi test (nupp `speed`) näitab, et relee töötab, kuid päringud
 nurjuvad endiselt aeg-ajalt.
 
-Kontrollige OmniRoute'i automaattesti sondi tagastatud relee olekuteadlikkuse
+Kontrollige 67router'i automaattesti sondi tagastatud relee olekuteadlikkuse
 päiseid (vt **Settings → Proxy Pool** ning loendureid `relayTested` / `relayAlive`):
 
 - `x-relay-url` — milline relee taustsüsteem vastas.

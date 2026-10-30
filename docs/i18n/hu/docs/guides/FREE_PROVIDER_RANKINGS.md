@@ -4,7 +4,7 @@
 
 ---
 
-> **Röviden**: Az OmniRoute a modellminőség alapján rangsorolja **ingyenes**
+> **Röviden**: Az 67router a modellminőség alapján rangsorolja **ingyenes**
 > szolgáltatóit az **Arena AI (LMArena-stílusú) ELO-pontszámai** segítségével.
 > Nyisd meg az irányítópult **Ingyenes szolgáltatók rangsora** oldalát, hogy lásd,
 > mely ingyenes szolgáltatók kínálják a feladatodhoz a legerősebb modelleket —
@@ -14,7 +14,7 @@
 
 ## Mi ez?
 
-Az OmniRoute 375 providert regisztrál, köztük 155 katalógusbejegyzést, amelyek **ingyenes/hitelesítés nélküli** megjelölést kaptak
+Az 67router 375 providert regisztrál, köztük 155 katalógusbejegyzést, amelyek **ingyenes/hitelesítés nélküli** megjelölést kaptak
 (hitelesítés nélküli,
 ingyenes szintű OAuth vagy ingyenes szintű API-kulcs — lásd az
 [Ingyenes szintek útmutatója](../getting-started/FREE-TIERS-GUIDE.md) című dokumentumot és a teljes
@@ -137,9 +137,9 @@ Az Arena ELO szinkronizációs motor (`src/lib/arenaEloSync.ts`) két ranglistá
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Minden ranglistabejegyzés
 tartalmazza a modell nevét, szolgáltatóját, ELO-`score` értékét, konfidenciaintervallumát és a szavazatok számát.
 
-A ranglistakategóriák az OmniRoute feladatkategóriáihoz a következőképpen kapcsolódnak:
+A ranglistakategóriák az 67router feladatkategóriáihoz a következőképpen kapcsolódnak:
 
-| Arena-ranglista | OmniRoute-feladatkategóriák                       |
+| Arena-ranglista | 67router-feladatkategóriák                        |
 | --------------- | ------------------------------------------------- |
 | `text`          | `default`, `review`, `documentation`, `debugging` |
 | `code`          | `coding`                                          |
@@ -175,7 +175,7 @@ A szinkronizálás **alapértelmezés szerint be van kapcsolva**:
 
 - Egyszer lefut a kiszolgáló indításakor, majd rendszeres időközönként újra
   (`src/lib/arenaEloSync.ts`, bekötve innen: `src/instrumentation-node.ts`).
-- **Nem blokkoló, és soha nem okoz végzetes hibát** — ha a külső lekérés sikertelen, az OmniRoute tovább
+- **Nem blokkoló, és soha nem okoz végzetes hibát** — ha a külső lekérés sikertelen, az 67router tovább
   fut, a rangsorok pedig egyszerűen az utolsó helyes adatokat mutatják (vagy üres állapotot).
 
 Két környezeti változó szabályozza (dokumentáció:
@@ -210,7 +210,7 @@ rugalmas párosítást használ (`findMatchingIntelligence` a `src/lib/freeProvi
 3. Előtag szerinti egyezés (a ranglistán szereplő modellnév a nyilvántartási azonosító előtagja).
 
 A szinkronizálás során az ismert szolgáltatói előtagokat (`anthropic/`, `openai/`, `google/`, …)
-eltávolítja a rendszer, egy kis álnévtérkép pedig kibővíti a kanonikus neveket az OmniRoute által
+eltávolítja a rendszer, egy kis álnévtérkép pedig kibővíti a kanonikus neveket az 67router által
 belsőleg használt változatokra, így a modellek bármely név alatt megtalálhatók maradnak.
 
 ### A szolgáltatók rangsorolása

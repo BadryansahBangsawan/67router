@@ -4,14 +4,14 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` 会将你的整个 OmniRoute 目录（模型、组合和自动组合）添加到 OpenCode v2 的模型选择器中，并提供显示名称、定价和免费额度预算。
+`@omniroute/opencode-plugin-v2` 会将你的整个 67router 目录（模型、组合和自动组合）添加到 OpenCode v2 的模型选择器中，并提供显示名称、定价和免费额度预算。
 
 它是一个独立于 `@omniroute/opencode-plugin` 的包，因为 OpenCode v1 和 v2 使用不同的契约加载插件。请选择与你的 OpenCode 主版本匹配的插件；二者之间不共享任何内容，因此升级其中一个绝不会强制升级另一个。
 
 ## 要求
 
 - OpenCode v2。
-- 可访问的 OmniRoute 网关（默认为 `http://localhost:20128`）。
+- 可访问的 67router 网关（默认为 `http://localhost:20128`）。
 - Node.js 22 或 24。
 
 ## 安装
@@ -65,7 +65,7 @@
 | `baseURL`                        | 必填                                     | 网关根地址，仅支持 `http(s)`；会在需要时添加 `/v1` 后缀                                    |
 | `apiKey`                         | 已连接的凭据，然后是 `OMNIROUTE_API_KEY` | 用于 `/v1/*` 的聊天密钥                                                                    |
 | `managementReadToken`            | 回退到 `apiKey`                          | 用于 `/api/*` 的密钥——通常与前者**不同**                                                   |
-| `displayName`                    | `"OmniRoute"`                            | 选择器中显示的提供者名称                                                                   |
+| `displayName`                    | `"67router"`                             | 选择器中显示的提供者名称                                                                   |
 | `timeoutMs`                      | `10000`                                  | 每个端点的请求超时时间（自动组合使用 5 秒）                                                |
 | `modelCacheTtlMs`                | `300000`                                 | 目录缓存 TTL；磁盘快照用于预热冷启动                                                       |
 | `timeouts`                       | 回退到 `timeoutMs`                       | 各端点的超时预算（毫秒）：`models`、`combos`、`autoCombos`、`enrichment`                   |
@@ -102,12 +102,12 @@
 
 ## 故障排除
 
-| 症状                            | 原因                                                                                |
-| ------------------------------- | ----------------------------------------------------------------------------------- |
-| 选择器未显示任何 OmniRoute 模型 | 未解析到密钥（请检查启动警告），或网关无法访问                                      |
-| 原始模型 ID、无组合、无定价     | 管理端点拒绝了令牌——请设置 `managementReadToken`                                    |
-| `freeOnly` 目录较短或为空       | 没有管理令牌或令牌被拒绝——请查看主机日志中的刷新摘要行（`unmatched-free` 计数）     |
-| 会话固定到 `opencode-<id>/…`    | v1 插件发布了 `opencode-<id>`；v2 直接发布 `<id>`，因此请在 `<id>/…` 下重新选择模型 |
+| 症状                           | 原因                                                                                |
+| ------------------------------ | ----------------------------------------------------------------------------------- |
+| 选择器未显示任何 67router 模型 | 未解析到密钥（请检查启动警告），或网关无法访问                                      |
+| 原始模型 ID、无组合、无定价    | 管理端点拒绝了令牌——请设置 `managementReadToken`                                    |
+| `freeOnly` 目录较短或为空      | 没有管理令牌或令牌被拒绝——请查看主机日志中的刷新摘要行（`unmatched-free` 计数）     |
+| 会话固定到 `opencode-<id>/…`   | v1 插件发布了 `opencode-<id>`；v2 直接发布 `<id>`，因此请在 `<id>/…` 下重新选择模型 |
 
 环境变量必须传递到 opencode 服务器进程：当主机以服务形式运行时，运行 `opencode models` 的 shell 与服务器环境不同，因此请在服务器读取密钥的位置导出该密钥。
 

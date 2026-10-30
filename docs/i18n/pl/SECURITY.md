@@ -6,7 +6,7 @@
 
 ## Zgłaszanie podatności
 
-Jeśli odkryjesz podatność bezpieczeństwa w OmniRoute, zgłoś ją w odpowiedzialny sposób:
+Jeśli odkryjesz podatność bezpieczeństwa w 67router, zgłoś ją w odpowiedzialny sposób:
 
 1. **NIE** otwieraj publicznego zgłoszenia w GitHub
 2. Użyj [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Po wersji 3.8.59 następną wersją jest **3.9.0**, która rozpoczyna linię dł
 
 ## Architektura bezpieczeństwa
 
-OmniRoute implementuje wielowarstwowy model bezpieczeństwa:
+67router implementuje wielowarstwowy model bezpieczeństwa:
 
 ```
 Żądanie → CORS → Potok autoryzacji (klasyfikacja → zasady → egzekwowanie)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework mechanizmów ochronnych
 
-OmniRoute zawiera przeładowywany na gorąco **rejestr mechanizmów ochronnych** (`src/lib/guardrails/`) z 3 wbudowanymi mechanizmami ochronnymi uporządkowanymi według priorytetu:
+67router zawiera przeładowywany na gorąco **rejestr mechanizmów ochronnych** (`src/lib/guardrails/`) z 3 wbudowanymi mechanizmami ochronnymi uporządkowanymi według priorytetu:
 
 | Mechanizm ochronny | Priorytet | Przeznaczenie                                                                                                 |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------- |

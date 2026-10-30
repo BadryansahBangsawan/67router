@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (한국어)
+# 📖 Setup Guide — 67router (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute의 전체 설정 참고 자료입니다. 빠른 버전은 [README의 빠른 시작](../README.md#-quick-start)을 참조하세요.
+> 67router의 전체 설정 참고 자료입니다. 빠른 버전은 [README의 빠른 시작](../README.md#-quick-start)을 참조하세요.
 
 ## 목차
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR 패키지](https://aur.archlinux.org/packages/omniroute-bin)는 OmniRoute를 설치하고 systemd 사용자 서비스를 제공합니다.
+[AUR 패키지](https://aur.archlinux.org/packages/omniroute-bin)는 67router를 설치하고 systemd 사용자 서비스를 제공합니다.
 
 ### 소스에서 설치
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows 참고:** 기본적으로 OmniRoute는 기존 `%USERPROFILE%\.omniroute` 디렉터리가 없을 때 `%APPDATA%\omniroute`를 사용합니다. 다른 데이터 디렉터리 위치를 선택하려면 `DATA_DIR`을 설정하세요.
+> **Windows 참고:** 기본적으로 67router는 기존 `%USERPROFILE%\.omniroute` 디렉터리가 없을 때 `%APPDATA%\omniroute`를 사용합니다. 다른 데이터 디렉터리 위치를 선택하려면 `DATA_DIR`을 설정하세요.
 
 > **참고:** `npm install`은 처음 실행할 때 `.env.example`에서 `.env`를 자동으로 생성합니다. 이후 설치에서는 기존 `.env`를 덮어쓰지 않으므로 사용자 지정 설정이 유지됩니다. 다시 초기화하려면 재실행하기 전에 `.env`를 삭제하세요.
 
@@ -64,7 +64,7 @@ Compose 프로필과 Caddy HTTPS를 포함한 전체 Docker 설정은 [Docker �
 
 ### 데스크톱 앱 (Electron)
 
-OmniRoute는 Electron 41 + electron-builder 26.10을 기반으로 구축된 데스크톱 래퍼를 제공합니다. 사용 가능한 스크립트는 다음과 같습니다(워크스페이스 루트).
+67router는 Electron 41 + electron-builder 26.10을 기반으로 구축된 데스크톱 래퍼를 제공합니다. 사용 가능한 스크립트는 다음과 같습니다(워크스페이스 루트).
 
 ```bash
 npm run electron:dev          # 핫 리로드를 사용하여 데스크톱 실행
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-환경 변수(`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` 등)와 함께 사용하면 OmniRoute 인스턴스를 완전히 스크립트 방식으로 실행할 수 있습니다.
+환경 변수(`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` 등)와 함께 사용하면 67router 인스턴스를 완전히 스크립트 방식으로 실행할 수 있습니다.
 
 ### CLI 옵션
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI 도구 구성 — 구성 목록 조회, 가져오기, 설정 및 검증        |
 | `omniroute status`      | 오프라인 상태 대시보드 — 버전, DB, 도구, 구성                 |
 | `omniroute logs`        | API의 사용 로그 스트리밍(`--follow` 지원)                     |
-| `omniroute update`      | OmniRoute 업데이트 확인 또는 적용                             |
+| `omniroute update`      | 67router 업데이트 확인 또는 적용                              |
 | `omniroute provider`    | 제공자 연결 관리 — 추가, 목록 조회, 제거, 테스트, 기본값 설정 |
 | `omniroute --port 3000` | 표준/API 포트를 3000으로 설정                                 |
 | `omniroute --mcp`       | MCP 서버 시작(stdio 전송 방식)                                |
@@ -165,7 +165,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode 및 OpenAI 호환 SDK�
 
 #### `setup-*`으로 자동 구성
 
-기본 URL과 키를 직접 붙여 넣는 대신, OmniRoute가 실시간 모델 카탈로그를 바탕으로 각 도구의
+기본 URL과 키를 직접 붙여 넣는 대신, 67router가 실시간 모델 카탈로그를 바탕으로 각 도구의
 구성을 작성하도록 할 수 있습니다. 도구마다 하나의 명령을 사용합니다.
 
 ```bash
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-각 명령은 로컬 도구가 **원격** OmniRoute를 사용하도록 구성하는 `--remote <url> --api-key <key>`와 구성을 미리 확인하기 위한 `--dry-run`을 지원합니다. 올바른
+각 명령은 로컬 도구가 **원격** 67router를 사용하도록 구성하는 `--remote <url> --api-key <key>`와 구성을 미리 확인하기 위한 `--dry-run`을 지원합니다. 올바른
 환경 변수를 주입하여 구성 파일을 전혀 작성하지 않고 CLI를 실행하려면 범용 실행 명령인
 `omniroute run <target>`(claude, codex, aider, goose, opencode, qwen, gemini)을 사용하세요.
 기존의 도구별 실행 명령인 `omniroute launch`(Claude Code)와
@@ -276,15 +276,15 @@ curl -X POST http://localhost:20128/a2a \
 | 변수                     | 기본값                        | 용도                                                                                                                         |
 | ------------------------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                      | 업스트림 응답 시작 타임아웃, 숨겨진 Undici 타임아웃, TLS 지문 요청 및 API 브리지 요청/프록시 타임아웃에 사용되는 공통 기준값 |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`에서 상속 | OmniRoute가 SSE 스트림을 중단하기 전까지 허용되는 스트리밍 청크 간 최대 시간 간격                                            |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`에서 상속 | 67router가 SSE 스트림을 중단하기 전까지 허용되는 스트리밍 청크 간 최대 시간 간격                                             |
 
 이전 버전과의 호환성은 유지됩니다. 기존 `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` 및 기타 계층별 타임아웃 변수는 계속 작동하며 공통 기준값보다 우선 적용됩니다.
 
 ### 제공자별 참고 사항
 
-Claude Code 호환 업스트림(`anthropic-compatible-cc-*`)의 경우, OmniRoute는 확인된 가져오기 타임아웃에서 아웃바운드 `X-Stainless-Timeout` 헤더를 도출하여 제공자 측 읽기 타임아웃이 환경 구성과 일치하도록 유지합니다.
+Claude Code 호환 업스트림(`anthropic-compatible-cc-*`)의 경우, 67router는 확인된 가져오기 타임아웃에서 아웃바운드 `X-Stainless-Timeout` 헤더를 도출하여 제공자 측 읽기 타임아웃이 환경 구성과 일치하도록 유지합니다.
 
-서드 파티 Claude Code 호환 리버스 프록시의 경우, OmniRoute는 기본 `anthropic-beta` 집합을 보수적으로 유지하며, `Client Cache Control`이 `Auto`로 설정되어 있으면 클라이언트가 제공한 `cache_control` 마커만 전달합니다. 업스트림에서 편집된 Claude 사고 스트림을 명시적으로 요구하는 경우에만 연결별 "Enable redact-thinking beta" 토글을 활성화하세요.
+서드 파티 Claude Code 호환 리버스 프록시의 경우, 67router는 기본 `anthropic-beta` 집합을 보수적으로 유지하며, `Client Cache Control`이 `Auto`로 설정되어 있으면 클라이언트가 제공한 `cache_control` 마커만 전달합니다. 업스트림에서 편집된 Claude 사고 스트림을 명시적으로 요구하는 경우에만 연결별 "Enable redact-thinking beta" 토글을 활성화하세요.
 
 ### 고급 타임아웃 재정의
 
@@ -302,11 +302,11 @@ Claude Code 호환 업스트림(`anthropic-compatible-cc-*`)의 경우, OmniRout
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | API 브리지 서버의 keep-alive 타임아웃                          |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | API 브리지 서버의 소켓 비활성 타임아웃(`0`은 비활성화)         |
 
-> **참고:** 스트리밍 요청에서 `FETCH_TIMEOUT_MS`는 연결 설정 및 첫 번째 업스트림 응답 대기 시간에만 적용됩니다. 스트림이 활성화된 이후 OmniRoute는 실제 중단(`STREAM_IDLE_TIMEOUT_MS`) 또는 Undici 본문 비활성(`FETCH_BODY_TIMEOUT_MS`)이 발생한 경우에만 스트림을 중단합니다.
+> **참고:** 스트리밍 요청에서 `FETCH_TIMEOUT_MS`는 연결 설정 및 첫 번째 업스트림 응답 대기 시간에만 적용됩니다. 스트림이 활성화된 이후 67router는 실제 중단(`STREAM_IDLE_TIMEOUT_MS`) 또는 Undici 본문 비활성(`FETCH_BODY_TIMEOUT_MS`)이 발생한 경우에만 스트림을 중단합니다.
 
 ### 리버스 프록시 호환성
 
-Nginx, Caddy, Cloudflare 또는 다른 리버스 프록시 뒤에서 OmniRoute를 실행하는 경우 프록시 타임아웃도 OmniRoute의 스트림/가져오기 타임아웃보다 길게 설정해야 합니다.
+Nginx, Caddy, Cloudflare 또는 다른 리버스 프록시 뒤에서 67router를 실행하는 경우 프록시 타임아웃도 67router의 스트림/가져오기 타임아웃보다 길게 설정해야 합니다.
 
 ---
 

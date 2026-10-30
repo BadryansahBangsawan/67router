@@ -7,7 +7,7 @@
 > **Sursa adevărului:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute poate declanșa webhook-uri HTTP la apariția evenimentelor platformei. Folosiți-le pentru integrarea cu
+67router poate declanșa webhook-uri HTTP la apariția evenimentelor platformei. Folosiți-le pentru integrarea cu
 Slack, PagerDuty, Datadog, servicii interne de alertare sau orice receptor HTTP.
 
 Dispecerul semnează fiecare livrare cu HMAC-SHA256, reîncearcă în cazul
@@ -54,7 +54,7 @@ erorile fiecărui webhook, astfel încât un receptor defect să nu le poată bl
 
 ## Semnarea HMAC
 
-Când un webhook are un `secret`, OmniRoute semnează corpul JSON și trimite:
+Când un webhook are un `secret`, 67router semnează corpul JSON și trimite:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Pagina tabloului de bord de la `/dashboard/webhooks` (consultați
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Livrare webhook de test de la OmniRoute",
+    "message": "Livrare webhook de test de la 67router",
     "webhookId": "<uuid>"
   }
 }

@@ -7,7 +7,7 @@
 > **အမှန်တရား၏ရင်းမြစ်:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **နောက်ဆုံးပြင်ဆင်သည့်ရက်စွဲ:** 2026-09-22 — scope namespaces များသည် MCP-SERVER.md ကိုညွှန်ပြသည်။
 
-OmniRoute တွင် API တောင်းဆိုမှုတိုင်းကို ကာကွယ်ပေးသည့် route-aware authorization pipeline တစ်ခုရှိသည်။ အမျိုးအစားခွဲခြားခြင်းသည် **သတ်မှတ်နိုင်သော** နှင့် **ပျက်ကွက်ပါကပိတ်သော** ဖြစ်သည် — အမျိုးအစားခွဲခြား၍မရသော မည်သည့်အရာမဆို `MANAGEMENT` အဖြစ်ဆုံးဖြတ်ပြီး session သို့မဟုတ် management-grade token လိုအပ်သည်။ ဤစာမျက်နှာသည် routes များကို ထိန်းသိမ်းထားသော သို့မဟုတ် endpoing အသစ်များ ဒီဇိုင်းဆွဲသော အင်ဂျင်နီယာများအတွက် မော်ဒယ်ကို ရှင်းပြထားသည်။
+67router တွင် API တောင်းဆိုမှုတိုင်းကို ကာကွယ်ပေးသည့် route-aware authorization pipeline တစ်ခုရှိသည်။ အမျိုးအစားခွဲခြားခြင်းသည် **သတ်မှတ်နိုင်သော** နှင့် **ပျက်ကွက်ပါကပိတ်သော** ဖြစ်သည် — အမျိုးအစားခွဲခြား၍မရသော မည်သည့်အရာမဆို `MANAGEMENT` အဖြစ်ဆုံးဖြတ်ပြီး session သို့မဟုတ် management-grade token လိုအပ်သည်။ ဤစာမျက်နှာသည် routes များကို ထိန်းသိမ်းထားသော သို့မဟုတ် endpoing အသစ်များ ဒီဇိုင်းဆွဲသော အင်ဂျင်နီယာများအတွက် မော်ဒယ်ကို ရှင်းပြထားသည်။
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 

@@ -41,7 +41,7 @@ n'ịntanetị ma ọ bụ njikọta mpụga dị ugbu a.
 | Onyinye ndị nkwado               | Emejuputala ya dịka feed dị iche, e bịanyere aka na ya, nke bụ naanị live, tinyere ibe dashboard. Klayentị ahụ na-enyocha ọzọ schema uru mechiri emechi, na-echekwa cache ikpeazụ dị mma, na-enyochapụ ndenye kubiri ume, ma na-akpọ onyinye ndị mmekọ aha n'ụzọ doro anya. |
 | Intel na nnabata ndị nkwado      | Emejuputala ya dịka feed live-only siri ike e bịanyere aka na ya, nke nwere ELO nke Radar na-achịkwa, eziokwu gbasara ịdị ọhụrụ/usoro mgbanwe katalọgụ, baajị onye nkwado mpaghara e mere nkwenye, ibe dashboard, na iwu status/sync CLI nke bụ naanị mpaghara.             |
 | Ịkwụ ụgwọ na email azụmahịa      | Emejuputabeghị ya na klayentị OSS. Ịzụta, onyinye ego, nyocha receipt, mgbake, na nnyefe ozi bụ ọrụ nke ọrụ nzuzo ahụ; ịdị adị ya n'ọrụ a na-akwado n'ịntanetị ka dabere na deployment ya a na-elekọta na nhazi onye na-eweta ọrụ.                                          |
-| Usoro ọrụ research-agent         | Ọ bụghị akụkụ nke mbipụta klayentị a. Ọdịnaya feed a haziri ahazi ka bụ data dị n'akụkụ sava; ọ dịghị autonomous research agent na-arụ ọrụ n'ime nrụnye OmniRoute.                                                                                                          |
+| Usoro ọrụ research-agent         | Ọ bụghị akụkụ nke mbipụta klayentị a. Ọdịnaya feed a haziri ahazi ka bụ data dị n'akụkụ sava; ọ dịghị autonomous research agent na-arụ ọrụ n'ime nrụnye 67router.                                                                                                           |
 
 ---
 
@@ -119,7 +119,7 @@ Mgbe ha abụọ dị na on, ụzọ sync bụ:
    nke na-agbanwe kwa ụbọchị maka nyocha mmegbu a na-eji aka eme; table ndị ahụ anaghị echekwa key ma ọ bụ IP n'ụdị raw.
    Log nnweta akụrụngwa na outbox nnyefe ezoro ezo bụ ókè ọrụ
    dị iche iche.
-3. OmniRoute anaghị eziga prompt, response, mkparịta ụka, credential provider, traffic model,
+3. 67router anaghị eziga prompt, response, mkparịta ụka, credential provider, traffic model,
    uptime, latency, ma ọ bụ nhazi provider mpaghara gaa na service Radar.
 4. A na-enyocha, validate, ma cache response ahụ na mpaghara (lee
    [Ụdị nchekwa](#security-model)). Radar nwere kpọmkwem ụzọ netwọkụ server-side anọ:
@@ -244,13 +244,13 @@ nwere otu ugbua na-eme ka ọ rụọ ọrụ.
 ### Mmalite site na nsọtụ ruo na nsọtụ na nhazi a na-eduzi
 
 Ọrụ feed nkeonwe na ahịa OSS a nwere ókè e mere ka ọ dị warara: ọrụ ahụ
-na-enye ma na-akwado igodo onye nkwado, ebe nrụnye OmniRoute mpaghara na-ezobe igodo ahụ,
+na-enye ma na-akwado igodo onye nkwado, ebe nrụnye 67router mpaghara na-ezobe igodo ahụ,
 na-emekọrịta artifacts ndị e binyere aka n'akụkụ sava, ma na-eduzi nhazi provider. Usoro nkwado enyere aka bụ:
 
 1. Nweta igodo e nyere ọhụrụ ma ọ bụ nke eweghachiri site na nkwupụta onye nyere aka, plans/checkout, usoro
    mgbake, ma ọ bụ n'aka onye ọrụ sava nkeonwe nwere ikike. Etinyela igodo ahụ n'onwe ya n'ime ndekọ,
    nseta ihuenyo, nkwupụta nsogbu, ma ọ bụ arụmụka ahịrị-iwu.
-2. Gbanyụọ ọkọlọtọ njirimara `RADAR_ENABLED` na nrụnye OmniRoute dị n'ime mpaghara. Nke a na-eme ka UI
+2. Gbanyụọ ọkọlọtọ njirimara `RADAR_ENABLED` na nrụnye 67router dị n'ime mpaghara. Nke a na-eme ka UI
    pụta, mana ọ gaghị arụ ọrụ na netwọkụ ruo mgbe echekwara nkwenye ịbanye dị iche.
 3. Mepee `/dashboard/radar`, mado igodo ahụ, wee mee ka ọ rụọ ọrụ. Ihe nchọgharị ahụ na-eziga otu
    `POST /api/radar/settings` mpaghara nwere `{ optIn: true, supporterKey }`; a na-ezochi igodo ahụ na mpaghara,
@@ -315,7 +315,7 @@ emegharịrị sync.
 ### Ndochi env ndị dị mma maka fork
 
 Env vars abụọ na-enye fork na ndị na-akwado sistemụ n'onwe ha ohere iduzi client gaa na feed nke ha kama
-ọrụ OmniRoute ndabara — lee
+ọrụ 67router ndabara — lee
 [Otu esi akwado feed n'onwe gị](#how-to-self-host-a-feed) n'okpuru:
 
 | Var                 | Ebumnuche                                                                                                       |
@@ -468,7 +468,7 @@ Feed `enabled: false` ka bụ safety exception: ọ na-emeri local
 Mbipụta katalọgụ na-eji `schemaVersion: 2`. `contextWindow` na nke ọ bụla n'ime `tools`, `vision`, na
 `thinking` bụ `number | null` / `boolean | null` n'onwe ha: `null` pụtara na amaghị, ebe
 `false` pụtara na isi mmalite provider gọọmentị nke D16 kwadoro kwuru n'ụzọ doro anya na capability ahụ adịghị.
-A naghị ebuli flag registry/model-spec dị n'ime OmniRoute ozugbo ka ha bụrụ eziokwu feed. Client
+A naghị ebuli flag registry/model-spec dị n'ime 67router ozugbo ka ha bụrụ eziokwu feed. Client
 ka na-anabata snapshot v1; n'ihi na builder ochie ji `false` dịka placeholder maka enweghị ihe, a na-eme ka v1 `false`
 bụrụ nke amaghị ebe v1 `true` na-anọgide bụrụ eziokwu. Schema version ndị a na-amaghị na-ajụ n'ụzọ nchekwa, ebe
 cache ikpeazụ ziri ezi ka na-adị. Model v2 ọ bụla nwere context/capability na-abụghị null ga-enwerịrị
@@ -529,7 +529,7 @@ Ezinaụlọ route Radar ndị dị na mpaghara n'okpuru na-akwado UI dị n'okp
 | `/api/radar/local-model-state` | DELETE | Na-ehichapụ field override ndị enwere ike idezi ma na-echekwa tombstone ọ bụla.                                                                         |
 
 **Iwu siri ike: route ndị a anaghị eme proxy maka ọrụ feed ma ọlị.** Browser na-ekwurịta okwu naanị
-na sava OmniRoute dị na mpaghara. Modul anọ na-emetụ ọrụ Radar aka bụ
+na sava 67router dị na mpaghara. Modul anọ na-emetụ ọrụ Radar aka bụ
 `src/lib/radar/sync.ts` (catalog), `src/lib/radar/referralsSync.ts` (referrals), na
 `src/lib/radar/offersSync.ts` (offers) tinyere `src/lib/radar/intelSync.ts` (Intel); ha niile na-agba
 n'akụkụ sava, ọ bụghị n'akụkụ client ma ọlị. Nke a na-eme ka
@@ -599,7 +599,7 @@ na-ewepụta `radar:<sha256(supporter key)>`, na-echekwa naanị identity otu �
 naanị site na metadata cache local e nyochara.
 
 CLI na-enye `omniroute radar status` na `omniroute radar sync`. Ha abụọ na-ekwurịta naanị na
-API OmniRoute local. `status` na-eme `GET /api/radar/status` nke bụ naanị ọgụgụ; `sync` na-eziga otu
+API 67router local. `status` na-eme `GET /api/radar/status` nke bụ naanị ọgụgụ; `sync` na-eziga otu
 `POST /api/radar/sync-all` ma bipụta nsonaazụ maka feed ọ bụla. Iwu abụọ ahụ anaghị agụ, anabata, ma ọ bụ bipụta
 igodo onye nkwado, ọ dịghịkwa nke na-akpọtụrụ ọrụ Radar ozugbo.
 

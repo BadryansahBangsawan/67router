@@ -6,7 +6,7 @@
 
 ## Zaifliklar haqida xabar berish
 
-Agar OmniRoute’da xavfsizlik zaifligini aniqlasangiz, bu haqda mas’uliyat bilan xabar bering:
+Agar 67router’da xavfsizlik zaifligini aniqlasangiz, bu haqda mas’uliyat bilan xabar bering:
 
 1. Ommaviy GitHub muammosini **OCHMANG**
 2. [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new) xizmatidan foydalaning
@@ -42,7 +42,7 @@ Agar OmniRoute’da xavfsizlik zaifligini aniqlasangiz, bu haqda mas’uliyat bi
 
 ## Xavfsizlik arxitekturasi
 
-OmniRoute koʻp qatlamli xavfsizlik modelini amalga oshiradi:
+67router koʻp qatlamli xavfsizlik modelini amalga oshiradi:
 
 ```
 Soʻrov → CORS → Authz konveyeri (tasniflash → siyosatlar → majburan qoʻllash)
@@ -79,7 +79,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Himoya vositalari freymvorki
 
-OmniRoute ustuvorlik boʻyicha tartiblangan 3 ta oʻrnatilgan himoya vositasiga ega, tezkor qayta yuklanadigan **himoya vositalari reyestri** (`src/lib/guardrails/`) bilan taqdim etiladi:
+67router ustuvorlik boʻyicha tartiblangan 3 ta oʻrnatilgan himoya vositasiga ega, tezkor qayta yuklanadigan **himoya vositalari reyestri** (`src/lib/guardrails/`) bilan taqdim etiladi:
 
 | Himoya vositasi    | Ustuvorlik | Maqsad                                                                                                                          |
 | ------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |

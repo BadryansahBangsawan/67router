@@ -4,7 +4,7 @@
 
 ---
 
-جب OmniRoute، Docker کے اندر چلتا ہے تو معیاری "Zed Keychain سے درآمد کریں" کا طریقہ ناکام ہو جاتا ہے
+جب 67router، Docker کے اندر چلتا ہے تو معیاری "Zed Keychain سے درآمد کریں" کا طریقہ ناکام ہو جاتا ہے
 کیونکہ کنٹینر میزبان OS کے keychain daemon (Linux پر libsecret،
 macOS پر Keychain، Windows پر Credential Manager) تک رسائی حاصل نہیں کر سکتا، اور میزبان
 فائل سسٹم پر موجود Zed کی config ڈائریکٹریاں بطور ڈیفالٹ کنٹینر کے اندر نظر نہیں آتیں۔
@@ -20,7 +20,7 @@ macOS پر Keychain، Windows پر Credential Manager) تک رسائی حاصل 
    module، Unix socket یا D-Bus session کے ذریعے OS keychain سروس سے رابطہ کرتا ہے۔
    بطور ڈیفالٹ ان میں سے کسی کو بھی کنٹینر کے اندر bridge نہیں کیا جاتا، لہٰذا credentials کو پڑھنا ہمیشہ ناکام ہو جاتا ہے۔
 
-OmniRoute دو طریقوں سے Docker ماحول کا پتہ لگاتا ہے:
+67router دو طریقوں سے Docker ماحول کا پتہ لگاتا ہے:
 
 - `/.dockerenv` کی موجودگی (جسے Docker daemon کنٹینر شروع ہوتے وقت لکھتا ہے)۔
 - `/proc/1/cgroup` میں `docker` عبارت کی موجودگی (Linux cgroup v1)۔
@@ -32,7 +32,7 @@ OmniRoute دو طریقوں سے Docker ماحول کا پتہ لگاتا ہے:
 
 1. **Dashboard → Providers → Zed** کھولیں۔
 2. **Manual Token Import** پینل، keychain import کارڈ کے نیچے ظاہر ہوتا ہے۔ جب
-   OmniRoute، Docker کا پتہ لگاتا ہے تو keychain import کی پہلی ناکام
+   67router، Docker کا پتہ لگاتا ہے تو keychain import کی پہلی ناکام
    کوشش کے بعد یہ پینل خودکار طور پر پھیل جاتا ہے۔
 3. dropdown سے provider منتخب کریں (OpenAI، Anthropic، Google، Mistral، xAI،
    OpenRouter، یا DeepSeek)۔

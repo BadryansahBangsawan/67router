@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kiểm soát **các origin của trình duyệt** nào có thể đọc phản hồi cross-origin
+67router kiểm soát **các origin của trình duyệt** nào có thể đọc phản hồi cross-origin
 thông qua một danh sách cho phép tập trung duy nhất. Mô hình này **mặc định từ chối**:
 không origin nào được phép cho đến khi bạn chủ động thêm vào danh sách. Trang này mô tả cách
 phân giải danh sách cho phép, `CORS_ALLOW_ALL=true` thực sự làm lộ những gì (và quan trọng hơn,
@@ -46,13 +46,13 @@ theo thứ tự sau:
 ## Mô hình đe dọa — `CORS_ALLOW_ALL=true` thực sự làm lộ những gì
 
 Cảnh báo chung của OWASP ("wildcard CORS = bất kỳ trang web nào cũng có thể gọi API của bạn")
-cần được xem xét nghiêm túc, nhưng phạm vi lộ diện của OmniRoute **hẹp hơn trường hợp chung**,
+cần được xem xét nghiêm túc, nhưng phạm vi lộ diện của 67router **hẹp hơn trường hợp chung**,
 do một đặc điểm triển khai cụ thể:
 
 > **`applyCorsHeaders()` trung tâm không bao giờ phát ra
 > `Access-Control-Allow-Credentials`.** Trình duyệt sẽ không cho phép truy cập một phản hồi cross-origin
 > _có thông tin xác thực_ (kèm cookie), trừ khi máy chủ gửi
-> `Access-Control-Allow-Credentials: true`. Luồng CORS dùng chung của OmniRoute không bao giờ
+> `Access-Control-Allow-Credentials: true`. Luồng CORS dùng chung của 67router không bao giờ
 > làm điều đó.
 
 Điều này có ý nghĩa như sau đối với từng bề mặt, ngay cả khi dùng `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ riêng biệt với hướng dẫn CORS này.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Nếu OmniRoute chạy phía sau reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Nếu 67router chạy phía sau reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **không** phải là biện pháp kiểm soát duy nhất — cơ chế
   bảo vệ route loopback vẫn bảo vệ các route có khả năng spawn (xem
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Không được giả mạo
@@ -108,7 +108,7 @@ riêng biệt với hướng dẫn CORS này.
 Ngay cả trong môi trường dev, bạn hiếm khi cần ký tự đại diện. Chỉ cho phép các máy chủ dev mà bạn sử dụng:
 
 ```bash
-# Các máy chủ dev Vite (5173) + Next.js (3000) gọi đến OmniRoute cục bộ
+# Các máy chủ dev Vite (5173) + Next.js (3000) gọi đến 67router cục bộ
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ khởi động lại.
   các origin quản trị/dashboard vào bất kỳ cấu hình cho phép nào; chúng phải luôn
   đóng khi có lỗi một cách tuyệt đối.
 
-## Ví dụ: reverse proxy phía trước OmniRoute
+## Ví dụ: reverse proxy phía trước 67router
 
-CORS được chính OmniRoute thực thi, vì vậy proxy thường **không nên** thêm hoặc
+CORS được chính 67router thực thi, vì vậy proxy thường **không nên** thêm hoặc
 ghi đè các header `Access-Control-*` (header trùng lặp sẽ khiến trình duyệt gặp lỗi). Hãy kết thúc TLS
-và chuyển tiếp — để OmniRoute phản hồi yêu cầu preflight:
+và chuyển tiếp — để 67router phản hồi yêu cầu preflight:
 
 ```nginx
-# nginx — chuyển tiếp đến OmniRoute; KHÔNG chèn Access-Control-* tại đây
+# nginx — chuyển tiếp đến 67router; KHÔNG chèn Access-Control-* tại đây
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Giữ lại các header chuyển tiếp: một proxy trên cùng máy chủ sẽ kết nối từ địa chỉ loopback,
-    # và chúng cho OmniRoute biết rằng bên gọi không phải là người vận hành cục bộ. Một proxy không thêm
+    # và chúng cho 67router biết rằng bên gọi không phải là người vận hành cục bộ. Một proxy không thêm
     # bất kỳ header nào trong số đó sẽ khiến mọi bên gọi từ xa trông như đang ở cục bộ. Cũng tuyệt đối không đặt X-Forwarded-For thành 127.0.0.1.
 }
 ```
 
-Hãy đặt các nguồn gốc trình duyệt được phép trong OmniRoute (`CORS_ALLOWED_ORIGINS` hoặc
+Hãy đặt các nguồn gốc trình duyệt được phép trong 67router (`CORS_ALLOWED_ORIGINS` hoặc
 tab Security), không phải trong proxy.
 
 ## Các tệp nguồn

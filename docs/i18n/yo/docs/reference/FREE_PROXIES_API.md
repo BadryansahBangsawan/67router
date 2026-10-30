@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ní àkójọpọ̀ àwọn próksì ọ̀fẹ́ tí a ti fara balẹ̀ yàn nínú tábìlì `free_proxies`,
+67router ní àkójọpọ̀ àwọn próksì ọ̀fẹ́ tí a ti fara balẹ̀ yàn nínú tábìlì `free_proxies`,
 tí a múṣiṣẹpọ̀ láti ọ̀dọ̀ àwọn olupèsè òde (1proxy, proxifly, iplocate, webshare). Pánẹ́ẹ̀lì
 ìṣàkóso ń fi wọ́n hàn lábẹ́ **Settings → Free Proxies**. Ìwé yìí
 ṣàlàyé àsẹ̀, títò-lẹ́sẹẹsẹ, kíkà, àti ìjábọ̀ àṣìṣe ìmúṣiṣẹpọ̀ ní ẹ̀gbẹ́ olupin

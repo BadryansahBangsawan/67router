@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute turi tris skirtingus, bet tarpusavyje susijusius atsparumo mechanizmus. Kiekvienas iš jų turi savo apimtį ir paskirtį. Derindami maršrutizavimo veikimą, nagrinėkite juos atskirai.
+67router turi tris skirtingus, bet tarpusavyje susijusius atsparumo mechanizmus. Kiekvienas iš jų turi savo apimtį ir paskirtį. Derindami maršrutizavimo veikimą, nagrinėkite juos atskirai.
 
 ![3 sluoksnių atsparumo modelis](../diagrams/exported/resilience-3layers.svg)
 
@@ -164,7 +164,7 @@ Trys sesijų pririšimo antraštės niekada neperduodamos išorinei krypčiai �
 
 ### Išskirtinės valdomų sesijų ryšių nuomos
 
-**Apimtis:** vieną tinkamą OmniRoute ryšį valdo vienas aktyvus valdomas HTTP klientas/sesija.
+**Apimtis:** vieną tinkamą 67router ryšį valdo vienas aktyvus valdomas HTTP klientas/sesija.
 
 **Paskirtis:** suteikti ilgalaikę išskirtinę ryšio nuosavybę klientams, kuriems reikalingas
 griežtas maršrutizavimo barjeras per visas užklausas. Tai skiriasi nuo sesijų pririšimo,
@@ -188,7 +188,7 @@ ir aktyviojo ryšio ID. Nuomos valdymo antraštės pašalinamos iš žurnalų, i
 kopijų ir upstream vykdytojo antraščių.
 
 Jei įprastame maršrutizavime yra tinkamų valdomų kandidatų, tačiau visus laisvus kandidatus užima
-svetimos aktyvios nuomos, OmniRoute grąžina HTTP `429`, lease-capacity-unavailable kodą,
+svetimos aktyvios nuomos, 67router grąžina HTTP `429`, lease-capacity-unavailable kodą,
 waiting-for-capacity būseną ir apribotą `Retry-After`, išvestą iš anksčiausio susijusio galiojimo
 pabaigos laiko. Įprastas tuščias tinkamumas nėra nuomos varžymasis ir išlaiko esamą maršrutizavimo
 klaidų semantiką.
@@ -211,7 +211,7 @@ Susiję mechanizmai išlieka atskiri:
   codex atveju — visa `codex` / `spark` apimtis (visi ryšio `gpt-5*` modeliai),
   kitiems teikėjams — `getQuotaScopedModelForProvider()`.
 - `404` blokuoja grynąjį modelį (`getModelLockKey()` susiaurina `not_found`).
-- Bet kokia kita būsena — `5xx` transporto/serverio klaidos ir paties OmniRoute
+- Bet kokia kita būsena — `5xx` transporto/serverio klaidos ir paties 67router
   sugeneruotas `502` iš kokybės validacijos — blokuoja tik **tikslią**
   teikėjo/ryšio/modelio kombinaciją. Sugedęs srautas viename modelyje nėra įrodymas
   apie paskyros kvotą; prieš šią taisyklę vienas tuščias atsakymas iš
@@ -345,7 +345,7 @@ Nustatykite jį prisijungimo modale (**Dažnio ribų perrašymai → Lygiagretum
   `glm-5`). Reikšmės yra teigiami sveikieji skaičiai — lygiagrečių užklausų lubos.
 - **Vietinė laukimo eilė, be automatinio aptikimo:** perteklinės užklausos laukia vietinėje
   eilėje pagal esamą eilės / laiko limito semantiką (tipizuotos `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` priėmimo klaidos). OmniRoute pats neatranda ir
+  `SEMAPHORE_QUEUE_FULL` priėmimo klaidos). 67router pats neatranda ir
   nenusprendžia upstream politikos — jis vykdo tikslias operatoriaus
   sukonfiguruotas lubas. Prisotinęs modelio šliuzas niekada neišjungia teikėjo ir niekada
   nesukuria nuolatinio modelio blokavimo; upstream 429 / atvėsimo / atsarginio (fallback)
@@ -476,7 +476,7 @@ ją galima testuoti vienetais be tikro Bottleneck ribotuvo.
 ### Užklausų dažnio ribojimo automatinio įjungimo apsauginis tinklas ir ryšių apsauga (`rateLimitProtection`)
 
 **Automatinio įjungimo apsauginis tinklas** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, numatytoji reikšmė `true`):
-Pagal numatymą OmniRoute automatiškai įjungia užklausų dažnio ribojimo eilės apsaugą visiems aktyviems API rakto teikėjo ryšiams (`getProviderCategory(provider) === "apikey"`). Tai užtikrina, kad gaunamos užklausos į dažniui jautrius išorinius API raktus yra dedamos į eilę ir ribojamos per Bottleneck, o ne staigiai plūsta ir sukelia išorines 429 klaidas. Apsauginį tinklą galima pakeisti per `RATE_LIMIT_AUTO_ENABLE` aplinkos kintamąjį (`false`/`0`/`off` išjungia, `true`/`1`/`on` priverstinai įjungia), kuris turi pirmenybę prieš išsaugotą valdymo skydo nustatymą (**Nustatymai → Atsparumas** / `PATCH /api/resilience`).
+Pagal numatymą 67router automatiškai įjungia užklausų dažnio ribojimo eilės apsaugą visiems aktyviems API rakto teikėjo ryšiams (`getProviderCategory(provider) === "apikey"`). Tai užtikrina, kad gaunamos užklausos į dažniui jautrius išorinius API raktus yra dedamos į eilę ir ribojamos per Bottleneck, o ne staigiai plūsta ir sukelia išorines 429 klaidas. Apsauginį tinklą galima pakeisti per `RATE_LIMIT_AUTO_ENABLE` aplinkos kintamąjį (`false`/`0`/`off` išjungia, `true`/`1`/`on` priverstinai įjungia), kuris turi pirmenybę prieš išsaugotą valdymo skydo nustatymą (**Nustatymai → Atsparumas** / `PATCH /api/resilience`).
 
 **Atskirų ryšių `rateLimitProtection` semantika:**
 Atskirų ryšių užklausų dažnio ribojimo apsauga stebima per `rateLimitProtection` loginį lauką teikėjo ryšiuose (išsaugomą kaip `rate_limit_protection` SQLite):
@@ -767,7 +767,7 @@ kaip išseikusi kvota. Sąžiningi apribojimai:
 > vadovas neviršytų 40k konteksto biudžeto. Tai sutrumpinta, agentui skirta aukščiau
 > esančių skyrių versija; sunumeruotieji skyriai išlieka pilnuoju šaltiniu.
 
-OmniRoute turi tris susijusius, bet skirtingus laikinų gedimų mechanizmus. Derindami
+67router turi tris susijusius, bet skirtingus laikinų gedimų mechanizmus. Derindami
 maršrutų parinkimo elgseną laikykite jų taikymo sritis atskirai. Greitosios apžvalgos
 žemėlapiui žr.
 [3 sluoksnių atsparumo diagramą](../diagrams/exported/resilience-3layers.svg)

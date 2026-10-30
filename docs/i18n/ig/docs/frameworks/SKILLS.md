@@ -7,29 +7,29 @@
 > **Isi mmalite nke eziokwu:** `src/lib/skills/` na `src/app/api/skills/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute na-enye usoro Skills enwere ike ịgbasa nke na-enye ụdị asụsụ (na ndị na-ahụ maka sistemụ) ohere ijikọta ikike ndị enwere ike iji ugboro ugboro — site n’ịgụ faịlụ na arịrịọ HTTP ruo n’ịrụ koodu n’ebe e kewapụrụ iche na nkà ndị ahọpụtara nke ọma n’ahịa.
+67router na-enye usoro Skills enwere ike ịgbasa nke na-enye ụdị asụsụ (na ndị na-ahụ maka sistemụ) ohere ijikọta ikike ndị enwere ike iji ugboro ugboro — site n’ịgụ faịlụ na arịrịọ HTTP ruo n’ịrụ koodu n’ebe e kewapụrụ iche na nkà ndị ahọpụtara nke ọma n’ahịa.
 
-Skill bụ otu ọrụ nwere ụdị mbipụta ma kọwaa ya site na schema. OmniRoute nwere ike itinye skills dịka nkọwa ngwá ọrụ n’ime arịrịọ ndị a na-ezipụ, jide oku ngwá ọrụ ndị si n’ụdị asụsụ ahụ lọta, mee handler kwekọrọ na ya, ma zighachite nsonaazụ ahụ n’ụdị asụsụ ahụ ka mkparịta ụka wee gaa n’ihu. Ụdị asụsụ ahụ anaghị ahụ implementation ahụ — ọ na-ahụ naanị interface ngwá ọrụ ahụ.
+Skill bụ otu ọrụ nwere ụdị mbipụta ma kọwaa ya site na schema. 67router nwere ike itinye skills dịka nkọwa ngwá ọrụ n’ime arịrịọ ndị a na-ezipụ, jide oku ngwá ọrụ ndị si n’ụdị asụsụ ahụ lọta, mee handler kwekọrọ na ya, ma zighachite nsonaazụ ahụ n’ụdị asụsụ ahụ ka mkparịta ụka wee gaa n’ihu. Ụdị asụsụ ahụ anaghị ahụ implementation ahụ — ọ na-ahụ naanị interface ngwá ọrụ ahụ.
 
 ---
 
 ## Agent Skills na Omni Skills
 
-OmniRoute nwere sistemụ skill abụọ dị iche mana na-arụkọ ọrụ:
+67router nwere sistemụ skill abụọ dị iche mana na-arụkọ ọrụ:
 
 | Akụkụ                   | **Omni Skills** (akwụkwọ a)                                             | **Agent Skills**                                                                               |
 | :---------------------- | :---------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Ebumnuche               | Ntinye ngwá ọrụ LLM + ịrụ ọrụ n’ebe e kewapụrụ iche                     | Katalọgụ SKILL.md nke ndị agent mpụga ga-achọpụta ma jiri                                      |
 | Isi mmalite nke eziokwu | `src/lib/skills/` + ahịa                                                | `src/lib/agentSkills/` + ndekọ `skills/`                                                       |
 | Ụdị runtime             | A na-etinye ya n’arịrịọ ndị a na-ezipụ, a na-arụ ya mgbe tool-call mere | Katalọgụ markdown kwụụrụ onwe ya + endpoint nchọpụta REST/MCP/A2A                              |
-| Ndị na-eji ya           | OmniRoute n’onwe ya (combo routing, oku LLM ndị na-abata)               | Ndị agent mpụga, ndị ahịa MCP, ndị nhazi A2A                                                   |
+| Ndị na-eji ya           | 67router n’onwe ya (combo routing, oku LLM ndị na-abata)                | Ndị agent mpụga, ndị ahịa MCP, ndị nhazi A2A                                                   |
 | Ọnụọgụ                  | Na-agbanwe (ahịa na-achịkwa ya)                                         | Ndenye katalọgụ 45 (23 API + 21 CLI + 1 nhazi)                                                 |
 | Ọdịdị                   | `SkillDefinition` nwere schema ngwá ọrụ + handler                       | frontmatter `SKILL.md` + ahụ markdown                                                          |
 | Nchọpụta                | `/api/skills/*` REST + ngwá ọrụ MCP `omniroute_skills_*`                | `/api/agent-skills/*` REST + ngwá ọrụ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** bụ engine mmejuputa — ha na-akọwa ihe OmniRoute _nwere ike ime_ mgbe LLM kpọrọ ngwá ọrụ.
+**Omni Skills** bụ engine mmejuputa — ha na-akọwa ihe 67router _nwere ike ime_ mgbe LLM kpọrọ ngwá ọrụ.
 
-**Agent Skills** bụ katalọgụ akwụkwọ nkọwa — ha na-akọwara ndị agent mpụga _otu e si eji_ REST API na CLI nke OmniRoute, site na faịlụ SKILL.md ahaziri nke ọma nke enwere ike itinye ozugbo na prompt ndị agent.
+**Agent Skills** bụ katalọgụ akwụkwọ nkọwa — ha na-akọwara ndị agent mpụga _otu e si eji_ REST API na CLI nke 67router, site na faịlụ SKILL.md ahaziri nke ọma nke enwere ike itinye ozugbo na prompt ndị agent.
 
 Maka katalọgụ Agent Skills, generator, ngwá ọrụ MCP, na skill A2A, lee [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Maka katalọgụ Agent Skills, generator, ngwá ọrụ MCP, na skill A2A, lee 
 
 Ebe atọ skills si abịa na-ebikọ n’otu registry ahụ:
 
-1. **Skills arụnyere n’ime sistemụ** (`src/lib/skills/builtins.ts`) — na-eso OmniRoute abịa. Ha na-ekpuchi ọnọdụ ndị a na-ahụkarị:
+1. **Skills arụnyere n’ime sistemụ** (`src/lib/skills/builtins.ts`) — na-eso 67router abịa. Ha na-ekpuchi ọnọdụ ndị a na-ahụkarị:
    - `file_read`, `file_write` — workspace sandbox maka API key ọ bụla n’okpuru `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP a na-ezipụ site na `safeOutboundFetch` nwere `guard: "public-only"`
    - `web_search` — provider ọchụchọ enwere ike ịgbanwe, nwere caching (`executeWebSearch`)
    - `eval_code` — mmejuputa `node` ma ọ bụ `python` n’ime sandbox Docker
    - `execute_command` — iwu shell a na-eme n’ime sandbox Docker
    - `browser` — ntọala scaffolding nke Playwright na-akwado, agbanyụrụ ya na ndabara (`builtin/browser.ts`)
-2. **SkillsMP** (Ahịa OmniRoute) — a na-eweta ya site na `https://skillsmp.com/api/v1/skills/search`. Ọ chọrọ `skillsmpApiKey` na Settings.
+2. **SkillsMP** (Ahịa 67router) — a na-eweta ya site na `https://skillsmp.com/api/v1/skills/search`. Ọ chọrọ `skillsmpApiKey` na Settings.
 3. **SkillsSH** (katalọgụ obodo `skills.sh`) — a na-eweta ya site na `https://skills.sh/api/search`. Ọ dịghị auth achọrọ; a na-adọta ọdịnaya SKILL.md site na GitHub raw.
 
 Otu "active provider" na-achịkwa katalọgụ dashboard na-esi wụnye (`src/lib/skills/providerSettings.ts`). Gbanwee ya n’okpuru **Settings → Memory & Skills**. Ndabara: `skillsmp`.
@@ -442,7 +442,7 @@ akwụkwọ a; enweghị threshold float ụdị `0.6`, ọ dịghịkwa ntụle
 
 ## Katalọgụ Skills E Wuru N'ime Ya
 
-OmniRoute na-abịa na nchịkọta skills e wuru n'ime ya nke a họọrọ nke ọma na `src/lib/skills/builtin/`. Ndị a kacha eji eme ihe:
+67router na-abịa na nchịkọta skills e wuru n'ime ya nke a họọrọ nke ọma na `src/lib/skills/builtin/`. Ndị a kacha eji eme ihe:
 
 ### Skill Akpaaka Browser
 

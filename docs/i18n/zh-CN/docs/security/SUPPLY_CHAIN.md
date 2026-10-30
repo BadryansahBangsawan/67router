@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 发布 npm + Docker 工件。这些门禁提供溯源、清单 (SBOM) 和 CVE 扫描，所有这些都是开源的，并集成到发布工作流中。
+67router 发布 npm + Docker 工件。这些门禁提供溯源、清单 (SBOM) 和 CVE 扫描，所有这些都是开源的，并集成到发布工作流中。
 **咨询优先**的姿态——它们现在报告，在第一次绿色发布后提升为阻塞。
 
 | 门禁                | 工具                                           | 位置                          | 阻塞？         | 输出                                    |
@@ -55,7 +55,7 @@ osv 和 Trivy 将依赖项与**持续增长**的 CVE 数据库进行比较。一
 - **链条中不存在任何已修复的版本。** `extract-zip@2.0.1`（2020 年发布）是该包的最终版本 — 它已不再维护。`@openai/codex-security` 的
   当前 npm-latest (`0.1.29`) 仍然拉取 `extract-zip@2.0.1`。
 - **无法从生产环境访问。** `promptfoo` 仅作为开发依赖（从不列在 `dependencies` 下），并且 `src/`、`open-sse/` 或 `bin/` 下的文件都没有导入
-  `extract-zip` npm 包 — OmniRoute 自己的 `extractZip()` 辅助函数
+  `extract-zip` npm 包 — 67router 自己的 `extractZip()` 辅助函数
   (`src/lib/versionManager/binaryManager.ts:93`) 调用原生 `unzip`/`tar`
   并且与此无关。`@openai/codex-security` 还在 extract-zip 的 onEntry 回调之上提供了自己的符号链接遍历保护。
 - **请勿**通过 `package.json` `overrides` 别名 `extract-zip` — 唯一可行的

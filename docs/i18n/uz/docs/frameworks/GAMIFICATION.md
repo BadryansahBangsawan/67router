@@ -7,7 +7,7 @@
 > **Haqiqat manbasi:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute foydalanuvchilarni platforma bilan faol ishlagani — soʻrovlar yuborgani, provayderlarni almashtirgani, kombinatsiyalar yaratgani, tokenlarni ulashgani va hamjamiyatga hissa qoʻshgani uchun mukofotlaydigan, avvalo mahalliy ishlashga yoʻnaltirilgan geymifikatsiya qatlamini oʻz ichiga oladi. Barcha holat SQLiteʼda saqlanadi; hamjamiyat serverlari bilan federatsiya ixtiyoriy bo‘lib, maʼlumotlarni yuborish asosida ishlaydi.
+67router foydalanuvchilarni platforma bilan faol ishlagani — soʻrovlar yuborgani, provayderlarni almashtirgani, kombinatsiyalar yaratgani, tokenlarni ulashgani va hamjamiyatga hissa qoʻshgani uchun mukofotlaydigan, avvalo mahalliy ishlashga yoʻnaltirilgan geymifikatsiya qatlamini oʻz ichiga oladi. Barcha holat SQLiteʼda saqlanadi; hamjamiyat serverlari bilan federatsiya ixtiyoriy bo‘lib, maʼlumotlarni yuborish asosida ishlaydi.
 
 Tizim **asosiy ishlov berish yoʻlida nol kechikish** tamoyili asosida ishlab chiqilgan — geymifikatsiya hodisalari soʻrovlarni qayta ishlash jarayonidan natijani kutmasdan yuboriladi va LLM javobini hech qachon bloklamaydi.
 
@@ -29,7 +29,7 @@ Koʻrinadigan taraqqiyot (XP, darajalar, nishonlar), ijtimoiy tasdiq (reyting ja
 | Reyting jadvallari          | Global, haftalik, oylik, token ulashish va hissa qoʻshish doiralari                                      |
 | Token ulashish              | Ikki tomonlama yozuvlar reyestri orqali foydalanuvchilar oʻrtasida kreditlarni oʻtkazish                 |
 | Taklif va faollashtirish    | SHA-256 bilan xeshlangan holda saqlanadigan yoʻnaltiruvchi kodlar                                        |
-| Hamjamiyat serverlari       | Tashqi OmniRoute nusxalari bilan federatsiya qilish                                                      |
+| Hamjamiyat serverlari       | Tashqi 67router nusxalari bilan federatsiya qilish                                                       |
 | Firibgarlikka qarshi himoya | Server tomonida ball hisoblash, soʻrovlar chastotasini cheklash, z-score asosida anomaliyalarni aniqlash |
 
 ### Loyihalash tamoyillari
@@ -102,7 +102,7 @@ src/app/api/gamification/
 
 ### Maʼlumotlar bazasi jadvallari
 
-Barcha jadvallar asosiy OmniRoute SQLite maʼlumotlar bazasida joylashgan va
+Barcha jadvallar asosiy 67router SQLite maʼlumotlar bazasida joylashgan va
 `060_create_gamification.sql` migratsiyasi orqali yaratiladi. WAL jurnallash
 `src/lib/db/core.ts` ichidagi yagona `getDbInstance()` nusxasidan meros olinadi.
 
@@ -161,7 +161,7 @@ Barcha jadvallar asosiy OmniRoute SQLite maʼlumotlar bazasida joylashgan va
 
 ### Domen moduli: `src/lib/db/gamification.ts`
 
-Standart OmniRoute andozasiga amal qiladi — `getDbInstance()` funksiyasini
+Standart 67router andozasiga amal qiladi — `getDbInstance()` funksiyasini
 `core.ts` faylidan import qiladi va tiplashtirilgan CRUD funksiyalarini eksport qiladi. Marshrut ishlov beruvchilarida bevosita SQL mavjud emas.
 
 Asosiy funksiyalar:
@@ -224,7 +224,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Amal              | XP  | Tavsif                                                             |
 | ----------------- | --- | ------------------------------------------------------------------ |
-| `request`         | 1   | OmniRoute orqali yoʻnaltirilgan har bir API soʻrovi uchun          |
+| `request`         | 1   | 67router orqali yoʻnaltirilgan har bir API soʻrovi uchun           |
 | `provider_switch` | 5   | Boshqa provayderga oʻtish                                          |
 | `model_switch`    | 3   | Boshqa modelga oʻtish                                              |
 | `combo_create`    | 10  | Yangi kombinatsiya yaratish                                        |
@@ -556,7 +556,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (noyob, indekslangan) |
 | `token_hash` | SHA-256(raw_token)               |
 
-Xom token yaratilish vaqtida foydalanuvchiga faqat bir marta qaytariladi. OmniRoute
+Xom token yaratilish vaqtida foydalanuvchiga faqat bir marta qaytariladi. 67router
 uni boshqa hech qachon saqlamaydi yoki koʻrsatmaydi — faqat xesh saqlanib qoladi.
 
 ### Oʻz-oʻzini tavsiya qilishning oldini olish
@@ -681,7 +681,7 @@ Administratorlar toʻliq audit jurnalini `GET /api/gamification/anomalies` orqal
 
 ## API yoʻnalishlari
 
-Barcha yoʻnalishlar standart OmniRoute qolipiga amal qiladi:
+Barcha yoʻnalishlar standart 67router qolipiga amal qiladi:
 
 ```
 Yoʻnalish → CORS dastlabki soʻrovi → Soʻrov tanasini tekshirish (Zod) → Autentifikatsiya (extractApiKey)

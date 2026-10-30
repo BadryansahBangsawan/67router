@@ -8,17 +8,17 @@
 
 🌐 **Teangacha:** 🇺🇸 [Béarla](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Fadhbanna coitianta agus réitigh do OmniRoute.
+Fadhbanna coitianta agus réitigh do 67router.
 
 ---
 
 ## Tagairt Thapa
 
-**An bhfuil tú nua d'OmniRoute?** Tosaigh anseo — réitíonn siad seo 90% de na fadhbanna:
+**An bhfuil tú nua d'67router?** Tosaigh anseo — réitíonn siad seo 90% de na fadhbanna:
 
 | Feicim é seo                      | Cad is brí leis                                     | Cad ba cheart a dhéanamh                                                                                             |
 | --------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| "Ní féidir ceangal"               | Níl OmniRoute ag rith                               | Rith `omniroute` nó `docker restart omniroute`                                                                       |
+| "Ní féidir ceangal"               | Níl 67router ag rith                                | Rith `omniroute` nó `docker restart omniroute`                                                                       |
 | "Eochair API neamhbhailí"         | Tá d'eochair mícheart nó imithe in éag              | Cóipeáil an eochair arís ó shuíomh gréasáin an tsoláthraí                                                            |
 | "Sáraíodh an teorainn ráta"       | Tá an iomarca iarratas á seoladh agat               | Fan 1 nóiméad, nó úsáid `model: "auto"` le haghaidh cúltaca uathoibríoch                                             |
 | "Sáraíodh an cuóta"               | Tá do chuóta saor in aisce/íoctha ídithe agat       | Ceangail tuilleadh soláthraithe, nó úsáid soláthraithe saor in aisce (Kiro, Pollinations)                            |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # uasteorainn iontrála shainráit
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ardaigh an fanacht teoranta thar réamhshocrú RATE_LIMIT_MAX_WAIT_MS le haghaidh seirbhísí réamhtheachtacha malla
 ```
 
-Socraigh iad seo i dtimpeallacht phróiseas OmniRoute (an deamhan, m.sh. tríd an LaunchAgent plist nó `systemctl edit`), ansin atosaigh OmniRoute. Is é an bhratach rothlaithe an luamhán aonair is éifeachtaí: tiontaíonn sí teip chrua ina hatriail thrédhearcach i gcoinne soláthraí sláintiúil sa chomhthiomsú.
+Socraigh iad seo i dtimpeallacht phróiseas 67router (an deamhan, m.sh. tríd an LaunchAgent plist nó `systemctl edit`), ansin atosaigh 67router. Is é an bhratach rothlaithe an luamhán aonair is éifeachtaí: tiontaíonn sí teip chrua ina hatriail thrédhearcach i gcoinne soláthraí sláintiúil sa chomhthiomsú.
 
 **Nóta**: Cuireann `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` teorainn le líon na n-iarratas trom — iarratais le comhthéacs fada — a ritheann ag an am céanna; is geata iontrála í an teorainn, ní teorantóir ráta soláthraí. **Nuashonrú #503-fanout:** ní shocraítear an athróg seo de réir réamhshocraithe a thuilleadh (ní bhíonn éifeacht aici anois ach amháin nuair a chumraítear go sainráite í, mar atá thuas) — ina ionad sin, rialaítear iontráil iarratas trom le buiséad beart a dhíorthaítear go huathoibríoch (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) agus a scálaíonn é féin ó fhíoruasteorainn chuimhne an óstríomhaire, agus mar sin ba cheart go bhfeicfeadh imscaradh úr i bhfad níos lú diúltuithe `503 chat_admission_busy` gan an athróg seo a shocrú ar chor ar bith; leanann socrú sainráite anseo de bheith ag obair go díreach mar atá doiciméadaithe. Cuirtear teorainn 8 MiB–2 GiB ar sháruithe sainráite ar an mbuiséad beart. Ní teip shealadach é `413 body_exceeds_budget`: méadaigh an buiséad beart sin, laghdaigh `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, nó méadaigh uasteorainn chuimhne an phróisis. Is sáraíocht shealadach é díluchtú `inflight_bytes_budget` agus is féidir é a atriail fós. Rialaítear teorannú ráta in aghaidh an tsoláthraí (`open-sse/services/rateLimitManager.ts`) ar leithligh le `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, agus `RATE_LIMIT_AUTO_ENABLE` — féach `.env.example`.
 
 **Conas a fhíorú gur oibrigh sé**: rith do ghníomhaire/cron faoi dhó go tapa i ndiaidh a chéile agus deimhnigh go n-éiríonn leis an dá rith. Roimh an réiteach, is gnách go gcaitheann an dara rith `429`/`401`. Tar éis an réitigh, atriailtear teipeanna (más ann dóibh) go trédhearcach agus cuirtear an glao i gcrích. Is féidir leat `curl /monitoring/health` a úsáid freisin agus féachaint ar an réimse `rateLimitedUntil` ar naisc an tsoláthraí agus ar `circuitBreakers.providerBreakers[].state` do na soláthraithe lena mbaineann — is é ceann de `CLOSED`, `DEGRADED`, `OPEN`, nó `HALF_OPEN` an staid (féach `src/shared/utils/circuitBreaker.ts`), agus athróidh soláthraí a leanann de bheith ag teip ó `CLOSED → DEGRADED → OPEN` sula gceadóidh an fhuinneog athshocraithe tóireadóir tríd (`HALF_OPEN`).
 
-**Má fheiceann tú 429 fós**: tá a _chuóta_ ídithe i ndáiríre ag an gcuntas gníomhach don soláthraí sin (ní hé an ráta amháin atá i gceist). Cuir dara cuntas leis don soláthraí céanna i ndeais OmniRoute → Providers → Accounts, nó cuir soláthraí saor in aisce eile leis an meascán (m.sh. `routeway`, `auggie`). Ní chuidíonn rothlú ach le ráta/400/401 sealadach; teastaíonn dara dintiúr nó soláthraí eile má tá an cuóta ídithe go hiomlán.
+**Má fheiceann tú 429 fós**: tá a _chuóta_ ídithe i ndáiríre ag an gcuntas gníomhach don soláthraí sin (ní hé an ráta amháin atá i gceist). Cuir dara cuntas leis don soláthraí céanna i ndeais 67router → Providers → Accounts, nó cuir soláthraí saor in aisce eile leis an meascán (m.sh. `routeway`, `auggie`). Ní chuidíonn rothlú ach le ráta/400/401 sealadach; teastaíonn dara dintiúr nó soláthraí eile má tá an cuóta ídithe go hiomlán.
 
 **Má fheiceann tú 403 ar shamhlacha amhairc (`auto/vision`, `bazaarlink/*`)**: níl plean íoctha lena n-áirítear fís ag an gcuntas nasctha, nó níl dóthain ceadanna ag an eochair API. Deimhnigh i ndeais an tsoláthraí go n-áirítear fís/ilmhódúlacht i scóip na heochrach, nó nasc cuntas sraithe íoctha agus coinnigh é mar an sprioc amhairc.
 
@@ -71,7 +71,7 @@ Socraigh iad seo i dtimpeallacht phróiseas OmniRoute (an deamhan, m.sh. tríd a
 
 Nuair a ritheann tú `npm install -g omniroute`, d’fhéadfá carn mór rabhadh a fheiceáil, amhail `npm warn ERESOLVE`, fógraí faoi spleáchais phiara, agus teachtaireachtaí `deprecated`. **Tá coinne leis seo agus tá siad neamhdhíobhálach.** D’éirigh le do shuiteáil má fheiceann tú `added <N> packages` san aschur.
 
-Chun na rabhaidh faoi réiteach spleáchas piara a cheilt, úsáid an fhoirm shuiteála a dtacaíonn OmniRoute léi:
+Chun na rabhaidh faoi réiteach spleáchas piara a cheilt, úsáid an fhoirm shuiteála a dtacaíonn 67router léi:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 Ní cheileann `--legacy-peer-deps` ach `ERESOLVE` agus fógraí faoi spleáchais phiara. Fanann fógraí dímholta infheicthe toisc go dtagann siad ó phacáistí trasdultacha tríú páirtí; ní thugann siad le fios gur theip ar an tsuiteáil.
 
-Tagann na rabhaidh ó raonta spleáchas piara atá as dáta i bpacáistí tríú páirtí nach bhfuil faoi smacht OmniRoute:
+Tagann na rabhaidh ó raonta spleáchas piara atá as dáta i bpacáistí tríú páirtí nach bhfuil faoi smacht 67router:
 
 1. **Teastaíonn `marked >=1 <16` ó `marked-terminal`, ach aimsíodh `marked@18`** — oibríonn sé gan fadhb go praiticiúil; níl ach an raon piara réamhtheachtach as dáta.
 2. **`deprecated prebuild-install@7.1.3`** — cúntóir trasdultach chun dénártha dúchasacha a fháil. Ní úsáidtear é
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### An féidir neamhaird a dhéanamh den rabhadh seo?
 
-**Go pointe áirithe, ach ní mholtar é a rith gan scripteanna.** Tá cúltacaí maithe in OmniRoute: mura féidir na ceangail dhúchasacha `better-sqlite3` a lódáil ón mbeart neamhspleách, téann an feidhmchlár i muinín tiománaithe malartacha amhail `node:sqlite` nó `sql.js` (féach [Taifeach Am-Reatha SQLite](../ops/SQLITE_RUNTIME.md)). Tosóidh an freastalaí fós, ach má ritheann sé ar chúltacaí WASM amhail `sql.js`, díchumasaítear mód WAL (Logáil Roimhscríofa) SQLite agus méadaítear an forchostas cuimhne agus sioncronaithe diosca.
+**Go pointe áirithe, ach ní mholtar é a rith gan scripteanna.** Tá cúltacaí maithe in 67router: mura féidir na ceangail dhúchasacha `better-sqlite3` a lódáil ón mbeart neamhspleách, téann an feidhmchlár i muinín tiománaithe malartacha amhail `node:sqlite` nó `sql.js` (féach [Taifeach Am-Reatha SQLite](../ops/SQLITE_RUNTIME.md)). Tosóidh an freastalaí fós, ach má ritheann sé ar chúltacaí WASM amhail `sql.js`, díchumasaítear mód WAL (Logáil Roimhscríofa) SQLite agus méadaítear an forchostas cuimhne agus sioncronaithe diosca.
 
 ### Cé na scripteanna atá riachtanach i ndáiríre?
 
-Níl gach script blocáilte riachtanach chun OmniRoute a rith:
+Níl gach script blocáilte riachtanach chun 67router a rith:
 
-- **Riachtanach (`omniroute`, `better-sqlite3`):** Ritheann OmniRoute ó bheart feidhmchláir neamhspleách Next.js (`dist/`). Le linn na suiteála, íoslódálann nó tiomsaíonn npm tiománaí dúchasach SQLite atá sainiúil don óstríomhaire sa `node_modules/better-sqlite3/` barrleibhéil. Ansin fíoraíonn agus cóipeálann script `postinstall` OmniRoute (`scripts/build/postinstall.mjs`) na comhaid dhénártha seo atá sainiúil don óstríomhaire isteach in `dist/node_modules/` ionas gur féidir leis an bhfreastalaí neamhspleách rochtain a fháil orthu. Má chuirtear bac ar script postinstall `omniroute`, fágtar an chéim chóipeála seo ar lár.
+- **Riachtanach (`omniroute`, `better-sqlite3`):** Ritheann 67router ó bheart feidhmchláir neamhspleách Next.js (`dist/`). Le linn na suiteála, íoslódálann nó tiomsaíonn npm tiománaí dúchasach SQLite atá sainiúil don óstríomhaire sa `node_modules/better-sqlite3/` barrleibhéil. Ansin fíoraíonn agus cóipeálann script `postinstall` 67router (`scripts/build/postinstall.mjs`) na comhaid dhénártha seo atá sainiúil don óstríomhaire isteach in `dist/node_modules/` ionas gur féidir leis an bhfreastalaí neamhspleách rochtain a fháil orthu. Má chuirtear bac ar script postinstall `omniroute`, fágtar an chéim chóipeála seo ar lár.
 - **Roghnach/indíreach (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Is áiseanna tógála, uirlisí faire, nó fóntais eochairshlabhra córais iad seo. Má cheadaítear iad, seachnaítear rabhaidh tógála, ach níl siad riachtanach don bhunfheidhmiúlacht ródaithe.
-- **Eisiata (`onnxruntime-node`):** Spleáchas roghnach é seo le haghaidh leabuithe AI áitiúla agus **níl** sé riachtanach chun OmniRoute a rith. Íoslódálann a script postinstall thart ar 300MB de shócmhainní CUDA ó NuGet; ná cuir ar an liosta ceadaithe é mura bhfuil sé ar intinn agat go sainráite luasghéarú áitiúil ONNX a úsáid ar chrua-earraí a dtacaítear leo.
+- **Eisiata (`onnxruntime-node`):** Spleáchas roghnach é seo le haghaidh leabuithe AI áitiúla agus **níl** sé riachtanach chun 67router a rith. Íoslódálann a script postinstall thart ar 300MB de shócmhainní CUDA ó NuGet; ná cuir ar an liosta ceadaithe é mura bhfuil sé ar intinn agat go sainráite luasghéarú áitiúil ONNX a úsáid ar chrua-earraí a dtacaítear leo.
 
 ### Réiteach molta
 
-Chun na scripteanna suiteála riachtanacha a cheadú le linn suiteáil dhomhanda agus na rabhaidh a chur faoi chois, tabhair `--allow-scripts` do OmniRoute agus dá spleáchais dhúchasacha:
+Chun na scripteanna suiteála riachtanacha a cheadú le linn suiteáil dhomhanda agus na rabhaidh a chur faoi chois, tabhair `--allow-scripts` do 67router agus dá spleáchais dhúchasacha:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Coinníonn Playwright íoslódálacha brabhsálaithe scartha d'aon ghnó ó shui
 an phacáiste npm, mar sin tá coinne leis an bhfreagra seo go dtí go suiteálfar an brabhsálaí.
 
 I gcás suiteáil dhomhanda npm, suiteáil Chromium ó chomhadlann phacáiste
-OmniRoute ionas go mbaineann taisce an bhrabhsálaí leis an tsuiteáil chéanna Playwright:
+67router ionas go mbaineann taisce an bhrabhsálaí leis an tsuiteáil chéanna Playwright:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Atosaigh OmniRoute tar éis na suiteála, ansin bain triail eile as an iarratas Gemini Web. Má
-ritheann tú OmniRoute ó íomhá Docker, úsáid an íomhá `-web` (nó an sprioc tógála
+Atosaigh 67router tar éis na suiteála, ansin bain triail eile as an iarratas Gemini Web. Má
+ritheann tú 67router ó íomhá Docker, úsáid an íomhá `-web` (nó an sprioc tógála
 `runner-web`), ina bhfuil Chromium agus a spleáchais cuachta; níl siad san íomhá bhunaidh.
 
 ---
@@ -187,7 +187,7 @@ ritheann tú OmniRoute ó íomhá Docker, úsáid an íomhá `-web` (nó an spri
 **Is dearfach bréagach é seo. Níl aon rud ionfhabhtaithe, agus ní gá aon ghníomh a dhéanamh.**
 
 Ritheann Avast agus AVG heorastúil a mharcálann comhaid gnáth-théacs/Markdown ina bhfuil go leor
-nasc a bhfuil cuma iarrataí HTTP orthu. Seoltar `README.md` OmniRoute laistigh den phacáiste npm (tá sé
+nasc a bhfuil cuma iarrataí HTTP orthu. Seoltar `README.md` 67router laistigh den phacáiste npm (tá sé
 liostaithe in `package.json` → `files`), mar sin cuirtear ag `node_modules/omniroute/README.md` é nuair
 a dhéantar suiteáil dhomhanda — agus tá ~15 shampla `http://localhost:20128/...` ann (críochphointí
 HTTP/SSE MCP, URL `.well-known` A2A, agus sleachta `curl`). Is leor dlús na nasc sin
@@ -204,7 +204,7 @@ Is doiciméadacht neamhghníomhach é an comhad gan aon ábhar inrite ann. Is f�
 
 1. **Cuir stop leis na fógraí** — fág an chomhadlann suiteála ar lár i do fhrithvíreas
    (Avast: Socruithe → Eisceachtaí), trí do chonair dhomhanda `node_modules` agus/nó
-   comhadlann sonraí OmniRoute (`~/.omniroute/`) a chur leis.
+   comhadlann sonraí 67router (`~/.omniroute/`) a chur leis.
 2. **Tuairiscigh an dearfach bréagach** — <https://www.avast.com/false-positive-file-form.php>,
    agus ceangail an `README.md` atá ar coraintín. Is é seo an réiteach a chuidíonn le gach duine, ós rud é gurb í
    heorastúil an díoltóra atá ag rófhreagairt do chomhad téacs.
@@ -264,7 +264,7 @@ go dtí go gcuirfear i bhfeidhm é, d'fhéadfadh sé seo tarlú arís le heisiú
 
 ### Tuairteálann an leathanach logála isteach nó taispeánann sé earráid "Module self-registration"
 
-**Cúis:** Tá leagan de Node.js á rith agat atá lasmuigh d’íosleibhéal ceadaithe OmniRoute don timpeallacht rite shlán. Is é an cás is coitianta ná leibhéal paiste níos sine de Node 22 nó 24 a rith atá faoi bhun an íosleibhéil slándála paisteáilte a éilíonn OmniRoute.
+**Cúis:** Tá leagan de Node.js á rith agat atá lasmuigh d’íosleibhéal ceadaithe 67router don timpeallacht rite shlán. Is é an cás is coitianta ná leibhéal paiste níos sine de Node 22 nó 24 a rith atá faoi bhun an íosleibhéil slándála paisteáilte a éilíonn 67router.
 
 **Comharthaí:**
 
@@ -280,7 +280,7 @@ go dtí go gcuirfear i bhfeidhm é, d'fhéadfadh sé seo tarlú arís le heisiú
    nvm use 24
    ```
 2. Deimhnigh do leagan: ba cheart do `node --version` `v24.0.0` nó leagan níos nuaí ar líne LTS 24.x a thaispeáint
-3. Athshuiteáil OmniRoute: `npm install -g omniroute`
+3. Athshuiteáil 67router: `npm install -g omniroute`
 4. Atosaigh: `omniroute`
 
 > **Leaganacha slána tacaithe:** `>=22.22.2 <23` nó `>=24.0.0 <27`. Tá tacaíocht iomlán ann do Node.js 24.x LTS (Krypton) agus Node.js 26.
@@ -363,13 +363,13 @@ omniroute
 
 **Cúis:** Ar Node.js 22, níl seoltóir undici@8 comhoiriúnach le feidhmiú ionsuite `fetch()` Node.
 
-**Réiteach (v3.5.5+):** Úsáideann OmniRoute feidhm `fetch()` undici féin anois nuair atá seoltóir seachfhreastalaí gníomhach, rud a chinntíonn iompar comhsheasmhach. Nuashonraigh go v3.5.5+.
+**Réiteach (v3.5.5+):** Úsáideann 67router feidhm `fetch()` undici féin anois nuair atá seoltóir seachfhreastalaí gníomhach, rud a chinntíonn iompar comhsheasmhach. Nuashonraigh go v3.5.5+.
 
 ### Seachfhreastalaí MITM faoi WSL: ní idircheapann sé aipeanna deisce ar an óstríomhaire Windows
 
-**Cúis:** Suiteáiltear an seachfhreastalaí MITM agus a theastas CA sa timpeallacht ina ritheann OmniRoute. Faoi WSL, is é aoi Linux an timpeallacht sin, agus ritheann na haipeanna deisce AI (Kiro, Trae, Copilot, Zed, …) ar an óstríomhaire Windows. Níl muinín ag aipeanna an óstríomhaire as stór teastas an aoi agus ní ródálann siad trí sheachfhreastalaí córais an aoi, mar sin ní chuirtear idircheapadh deisce i ngníomh ansin.
+**Cúis:** Suiteáiltear an seachfhreastalaí MITM agus a theastas CA sa timpeallacht ina ritheann 67router. Faoi WSL, is é aoi Linux an timpeallacht sin, agus ritheann na haipeanna deisce AI (Kiro, Trae, Copilot, Zed, …) ar an óstríomhaire Windows. Níl muinín ag aipeanna an óstríomhaire as stór teastas an aoi agus ní ródálann siad trí sheachfhreastalaí córais an aoi, mar sin ní chuirtear idircheapadh deisce i ngníomh ansin.
 
-**Moladh:** Rith OmniRoute go dúchasach ar an gcóras oibriúcháin céanna leis na haipeanna deisce is mian leat a idircheapadh (Windows d'aipeanna Windows; mar an gcéanna i gcás macOS/Linux). Má choinnítear OmniRoute laistigh de WSL agus díriú ar aipeanna an óstríomhaire ag an am céanna, ní mór muinín a chur de láimh sa teastas CA ginte ar an óstríomhaire Windows agus socruithe líonra/seachfhreastalaí gach aip óstríomhaire a dhíriú ar chríochphointe seachfhreastalaí WSL — cumraíocht leochaileach nach dtacaítear léi.
+**Moladh:** Rith 67router go dúchasach ar an gcóras oibriúcháin céanna leis na haipeanna deisce is mian leat a idircheapadh (Windows d'aipeanna Windows; mar an gcéanna i gcás macOS/Linux). Má choinnítear 67router laistigh de WSL agus díriú ar aipeanna an óstríomhaire ag an am céanna, ní mór muinín a chur de láimh sa teastas CA ginte ar an óstríomhaire Windows agus socruithe líonra/seachfhreastalaí gach aip óstríomhaire a dhíriú ar chríochphointe seachfhreastalaí WSL — cumraíocht leochaileach nach dtacaítear léi.
 
 ---
 
@@ -396,7 +396,7 @@ omniroute
 
 ### Comhartha OAuth Imithe in Éag
 
-Déanann OmniRoute comharthaí a athnuachan go huathoibríoch. Má mhaireann na fadhbanna:
+Déanann 67router comharthaí a athnuachan go huathoibríoch. Má mhaireann na fadhbanna:
 
 1. Deais → Soláthraí → Athcheangail
 2. Scrios nasc an tsoláthraí agus cuir leis arís é
@@ -609,7 +609,7 @@ Tacaíonn próifílí soláthraithe leis na socruithe seo:
 
 ### Cosaint ar thréad ruathair
 
-Nuair a bhuaileann go leor iarratas comhthráthach soláthraí atá faoi theorainn ráta, úsáideann OmniRoute mutex + teorannú ráta uathoibríoch chun iarratais a shrathú agus teipeanna cascáideacha a chosc. Tarlaíonn sé seo go huathoibríoch i gcás soláthraithe eochracha API.
+Nuair a bhuaileann go leor iarratas comhthráthach soláthraí atá faoi theorainn ráta, úsáideann 67router mutex + teorannú ráta uathoibríoch chun iarratais a shrathú agus teipeanna cascáideacha a chosc. Tarlaíonn sé seo go huathoibríoch i gcás soláthraithe eochracha API.
 
 ### Teipeann ar iarratais comhrá le 503 / chat_admission_busy
 
@@ -645,7 +645,7 @@ Faoi na tairseacha réamhshocraithe, meastar iarratas a bheith trom ó thaobh st
 ar a laghad ann, `64` uirlis ar a laghad, nó `32,000` comhartha measta ar a laghad, nó nuair a
 shroicheann meastachán teoranta an struchtúir a theorainneacha de `10,000` nód ar tugadh cuairt orthu nó doimhneacht `12`.
 
-**Cúis:** Is laghdú ualaigh d'aon ghnó laistigh de OmniRoute é seo, ní teip soláthraí réamhtheachta.
+**Cúis:** Is laghdú ualaigh d'aon ghnó laistigh de 67router é seo, ní teip soláthraí réamhtheachta.
 Úsáideann gach próiseas cosantóir logánta don phróiseas chun acmhainn theoranta d'iarratais throma a chur in áirithe sula gcoinnítear
 agus sula bparsáiltear corp mór iarratais. Coinnítear léas trom ar feadh shaolré freagra SSE.
 
@@ -689,7 +689,7 @@ le haghaidh na socruithe údarásacha iontrála.
 
 ## Tacsanomaíocht roghnach teipeanna RAG / LLM (16 fhadhb)
 
-Cuireann roinnt úsáideoirí OmniRoute an geata os comhair cruacha RAG nó gníomhairí. Sna socruithe sin, is coitianta patrún aisteach a fheiceáil: tá cuma shláintiúil ar OmniRoute (soláthraithe ar fáil, próifílí ródaithe ceart go leor, gan foláirimh teorann ráta) ach bíonn an freagra deiridh mícheart fós.
+Cuireann roinnt úsáideoirí 67router an geata os comhair cruacha RAG nó gníomhairí. Sna socruithe sin, is coitianta patrún aisteach a fheiceáil: tá cuma shláintiúil ar 67router (soláthraithe ar fáil, próifílí ródaithe ceart go leor, gan foláirimh teorann ráta) ach bíonn an freagra deiridh mícheart fós.
 
 Go praiticiúil, is gnách gur ón bpíblíne RAG iartheachtach a thagann na teagmhais seo, seachas ón ngeata féin.
 
@@ -708,17 +708,17 @@ Tá an smaoineamh simplí:
 
 1. Agus drochfhreagra á fhiosrú agat, gabh:
    - tasc agus iarratas an úsáideora
-   - an bealach nó an teaglaim soláthraithe in OmniRoute
+   - an bealach nó an teaglaim soláthraithe in 67router
    - aon chomhthéacs RAG a úsáideadh níos faide síos an sruth (doiciméid aisghafa, glaonna uirlisí, srl.)
 2. Mapáil an teagmhas chuig uimhir nó dhó in WFGY ProblemMap (`No.1` … `No.16`).
-3. Stóráil an uimhir i do dheais, i do lámhleabhar oibríochta, nó i do rianaire teagmhas féin in aice le logaí OmniRoute.
+3. Stóráil an uimhir i do dheais, i do lámhleabhar oibríochta, nó i do rianaire teagmhas féin in aice le logaí 67router.
 4. Úsáid an leathanach comhfhreagrach WFGY chun cinneadh a dhéanamh an gá duit do chruach RAG, d’aisghabhálaí, nó do straitéis ródaithe a athrú.
 
 Tá an téacs iomlán agus oidis nithiúla ar fáil anseo (ceadúnas MIT, téacs amháin):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Is féidir leat neamhaird a dhéanamh den rannán seo mura ritheann tú píblínte RAG ná píblínte gníomhairí taobh thiar de OmniRoute.
+Is féidir leat neamhaird a dhéanamh den rannán seo mura ritheann tú píblínte RAG ná píblínte gníomhairí taobh thiar de 67router.
 
 ---
 
@@ -742,7 +742,7 @@ Fadhbanna a bhaineann go sonrach le heisiúint v3.8.0 agus na réitigh shealadac
 
 1. Suiteáil Devin CLI do d’ardán
 2. Socraigh `CLI_DEVIN_BIN=/usr/local/bin/devin` (nó an chonair cheart) in `.env`
-3. Atosaigh OmniRoute agus déan tástáil arís ó **Deais → Uirlisí CLI**
+3. Atosaigh 67router agus déan tástáil arís ó **Deais → Uirlisí CLI**
 
 ### Tréimhse shuaimhnithe samhla sáinnithe (athshocrú de láimh)
 
@@ -797,7 +797,7 @@ Fadhbanna a bhaineann go sonrach le heisiúint v3.8.0 agus na réitigh shealadac
 
 1. Gin rún randamach: `openssl rand -hex 32`
 2. Socraigh `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` i dtimpeallacht an fhreastalaí táirgthe (agus in aon chliant a dhéanann cumarsáid leis an droichead)
-3. Atosaigh OmniRoute
+3. Atosaigh 67router
 
 ### Responses API: mód cúlra íosghrádaithe go mód sioncrónach
 

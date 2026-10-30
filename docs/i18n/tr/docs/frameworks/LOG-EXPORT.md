@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute çağrı günlüklerinin harici bir analiz deposuna sürekli ve artımlı olarak aktarılması.
+67router çağrı günlüklerinin harici bir analiz deposuna sürekli ve artımlı olarak aktarılması.
 
 Günlükler panosu sekmesi, istek geçmişini rotasyon ve saklama süresiyle sınırlandırılan SQLite'ta (`call_logs`) tutar. Günlük aktarımı, aynı kayıt kümesini belirli bir zamanlamayla dışarı göndererek kayıtların yerel veritabanından daha uzun süre saklanabilmesini ve diğer verilerle birleştirilebilmesini sağlar. İlk hedef BigQuery'dir; işlem hattı bir kayıt sistemi olduğundan daha fazla hedef eklenebilir.
 

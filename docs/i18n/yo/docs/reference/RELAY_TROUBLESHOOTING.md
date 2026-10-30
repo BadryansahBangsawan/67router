@@ -5,10 +5,10 @@
 ---
 
 Àwọn relay (Vercel, Deno, Cloudflare) máa ń fòpin sí ìsopọ̀ upstream lórí backend
-serverless, kí OmniRoute lè jáde láti ẹkùn kan tó dúró ṣinṣin, nígbà tó sì ń pa
+serverless, kí 67router lè jáde láti ẹkùn kan tó dúró ṣinṣin, nígbà tó sì ń pa
 kọ́kọ́rọ́ API olupèsè mọ́ sí ẹ̀gbẹ́ server. Ìwé yìí ṣàlàyé àwọn ọ̀nà ìkùnà méjì
 tí àwọn olùdarí máa ń bá pàdé ní production àti àwọn ọ̀nà ìmúpadàbọ̀sípò tí
-OmniRoute pèsè fún ọ̀kọ̀ọ̀kan.
+67router pèsè fún ọ̀kọ̀ọ̀kan.
 
 ## Bí a ṣe ń tọ́jú ìfàṣẹsí relay
 
@@ -36,7 +36,7 @@ ránṣẹ́.
 1. Ṣí **Settings → Proxy Pool**.
 2. Àwọn row relay tí ìfàṣẹsí wọn kò sí máa ń fi badge `auth missing` aláwọ̀
    ọ̀wọ̀ hàn pẹ̀lú bọ́tìnì **Repair**.
-3. Tẹ **Repair**. OmniRoute máa ń pe
+3. Tẹ **Repair**. 67router máa ń pe
    `POST /api/settings/proxies/[id]/repair-relay`, èyí tí yóò:
    - decrypt `relayAuthEnc` pẹ̀lú kọ́kọ́rọ́ **lọ́wọ́lọ́wọ́**,
    - kọ plaintext `relayAuth` padà sínú `notes`,
@@ -70,7 +70,7 @@ bá ṣeé gba padà, nítorí náà o kò ní láti wá a kiri fúnra rẹ.
 **Àmì:** ìdánwò proxy (bọ́tìnì `speed`) fi hàn pé relay náà ń ṣiṣẹ́, ṣùgbọ́n
 àwọn request ṣì ń kùnà lẹ́ẹ̀kọ̀ọ̀kan.
 
-Ṣàyẹ̀wò àwọn header ìmọ̀ nípa relay tí probe ìdánwò aládàáṣiṣẹ́ ti OmniRoute
+Ṣàyẹ̀wò àwọn header ìmọ̀ nípa relay tí probe ìdánwò aládàáṣiṣẹ́ ti 67router
 dá padà (wo **Settings → Proxy Pool** àti àwọn counter `relayTested` /
 `relayAlive`):
 

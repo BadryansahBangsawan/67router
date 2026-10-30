@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Türkçe)
+# 🐳 Docker Guide — 67router (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Ortam Dosyasıyla](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Kullanılabilir Profiller](#available-profiles)
-- [OmniRoute Docker'da çalışırken ana makinedeki CLI araçlarını yapılandırma](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router Docker'da çalışırken ana makinedeki CLI araçlarını yapılandırma](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Üretim Compose Yapılandırması](#production-compose)
 - [Dockerfile Aşamaları](#dockerfile-stages)
@@ -83,7 +83,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Kullanılabilir Profiller
 
-OmniRoute, başlıca dağıtım biçimleri için Compose profilleriyle birlikte gelir. Ortamınıza uygun olanı seçin.
+67router, başlıca dağıtım biçimleri için Compose profilleriyle birlikte gelir. Ortamınıza uygun olanı seçin.
 
 | Profil              | Hizmet           | Kullanım amacı                                                                                                                                                | Komut                                        |
 | ------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -95,7 +95,7 @@ OmniRoute, başlıca dağıtım biçimleri için Compose profilleriyle birlikte 
 
 > Birden fazla profil birleştirilebilir: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## OmniRoute Docker'da çalışırken ana makine CLI araçlarını yapılandırma
+## 67router Docker'da çalışırken ana makine CLI araçlarını yapılandırma
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` ve kontrol panelindeki
 **Yapılandırmayı kaydet** düğmesi, `~/.codex/*.config.toml` gibi dosyalara yazar. Bu yollar
@@ -104,11 +104,11 @@ yalnızca CLI'ın gerçekten çalıştığı makinede anlamlıdır. Bunları con
 imaj `USER node` ile çalışır) yazılır; ana makinedeki hiçbir CLI bu dosyayı okumaz ve
 container yeniden oluşturulduğu anda dosya silinir.
 
-OmniRoute bunu algılar ve kullanamayacağınız bir başarı bildirmek yerine
+67router bunu algılar ve kullanamayacağınız bir başarı bildirmek yerine
 talimatlarla birlikte yazma işlemini reddeder: CLI `2` koduyla sonlanır ve API,
 `containerEphemeralTarget: true` ile `422` yanıtı verir.
 
-### Önerilen: CLI'ı ana makinede, OmniRoute'u Docker'da çalıştırın
+### Önerilen: CLI'ı ana makinede, 67router'u Docker'da çalıştırın
 
 Container API'ı sunar; CLI ise ana makinenizdeki araçları yapılandırır.
 
@@ -138,7 +138,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Yolun güvenilir olmasını sağlayan şey bind mount'tur: OmniRoute,
+Yolun güvenilir olmasını sağlayan şey bind mount'tur: 67router,
 `/proc/self/mountinfo` dosyasını okur ve bağlı yollara (ayrıca alt öğeleri
 bağlama noktası olan dizinlere; yukarıdaki `/host-home` yapısı tam olarak böyledir)
 yazılmasına izin verirken bağlı olmayan yolları reddetmeye devam eder.
@@ -179,7 +179,7 @@ Yazma işlemi, container'dan sonra kalıcı olmayacağına ilişkin bir uyarıyl
 
 ## Redis Sidecar
 
-OmniRoute, dağıtık hız sınırlayıcıyı ve paylaşılan önbelleği desteklemek için Redis'e dayanır. `redis` hizmeti `docker-compose.yml` içinde **her zaman tanımlıdır** (herhangi bir profil kısıtlaması yoktur) ve diğer tüm profillerle birlikte başlatılır.
+67router, dağıtık hız sınırlayıcıyı ve paylaşılan önbelleği desteklemek için Redis'e dayanır. `redis` hizmeti `docker-compose.yml` içinde **her zaman tanımlıdır** (herhangi bir profil kısıtlaması yoktur) ve diğer tüm profillerle birlikte başlatılır.
 
 | Ayrıntı                                     | Değer                                       |
 | ------------------------------------------- | ------------------------------------------- |
@@ -371,7 +371,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## Alt Yol Üzerinde Ters Proxy (Traefik / nginx)
 
-Next.js `basePath` değeri bağımsız pakete derlenir. OmniRoute, derlemeye gömülen
+Next.js `basePath` değeri bağımsız pakete derlenir. 67router, derlemeye gömülen
 değeri uygulama kökündeki bir işaretçi dosyasına kaydeder (`npm run build` sırasında
 yazılır; `scripts/docker/ensure-docker-base-path.mjs` tarafından okunur) ve konteyner
 başlatıldığında bunu `OMNIROUTE_BASE_PATH` ile karşılaştırır. Değerler farklıysa ve imaj
@@ -447,7 +447,7 @@ yoklamasını tercih edin. Tüm yoklama yönergeleri:
 
 ## Caddy ile Docker Compose (HTTPS Auto-TLS)
 
-OmniRoute, Caddy'nin otomatik SSL sağlama özelliği kullanılarak güvenli biçimde erişime açılabilir. Alan adınızın DNS A kaydının sunucunuzun IP adresine yönlendirildiğinden emin olun.
+67router, Caddy'nin otomatik SSL sağlama özelliği kullanılarak güvenli biçimde erişime açılabilir. Alan adınızın DNS A kaydının sunucunuzun IP adresine yönlendirildiğinden emin olun.
 
 ```yaml
 services:
@@ -478,11 +478,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy, yukarı akış kapsayıcısı için standart yönlendirme üstbilgilerini ayarlar. OmniRoute,
+Caddy, yukarı akış kapsayıcısı için standart yönlendirme üstbilgilerini ayarlar. 67router,
 OAuth geri çağrıları ve oluşturulan herkese açık bağlantılar için `NEXT_PUBLIC_BASE_URL` değerini
 kanonik herkese açık kaynak olarak kullanır; kimliği doğrulanmış pano yazma işlemleri, aynı kaynaklı
 isteklerle birlikte oturuma bağlı CSRF korumasını kullanır. `OMNIROUTE_TRUST_PROXY` seçeneğini yalnızca,
-OmniRoute'un herkese açık kaynağı açık yapılandırma yerine güvenilir yönlendirme üstbilgilerinden
+67router'un herkese açık kaynağı açık yapılandırma yerine güvenilir yönlendirme üstbilgilerinden
 türetmesini bilerek istediğiniz gelişmiş dağıtımlarda etkinleştirin.
 
 ## Cloudflare Quick Tunnel
@@ -494,11 +494,11 @@ Uç nokta tüneli panelleri (Cloudflare, Tailscale, ngrok), etkin tünel durumu 
 ### Tünel Notları
 
 - Quick Tunnel URL'leri geçicidir ve her yeniden başlatmadan sonra değişir.
-- Quick Tunnel'lar, OmniRoute veya kapsayıcı yeniden başlatıldıktan sonra otomatik olarak geri yüklenmez. Gerektiğinde bunları panodan yeniden etkinleştirin.
+- Quick Tunnel'lar, 67router veya kapsayıcı yeniden başlatıldıktan sonra otomatik olarak geri yüklenmez. Gerektiğinde bunları panodan yeniden etkinleştirin.
 - Yönetilen kurulum şu anda `x64` / `arm64` üzerinde Linux, macOS ve Windows'u destekler.
 - Yönetilen Quick Tunnel'lar, kısıtlı kapsayıcı ortamlarında gürültülü QUIC UDP arabellek uyarılarını önlemek için varsayılan olarak HTTP/2 aktarımını kullanır. Farklı bir aktarım istiyorsanız `CLOUDFLARED_PROTOCOL=quic` veya `auto` olarak ayarlayın.
 - Docker imajları, sistem CA köklerini içerir ve bunları yönetilen `cloudflared` işlemine aktarır; böylece tünel kapsayıcı içinde başlatılırken TLS güven hataları önlenir.
-- OmniRoute'un bir dosyayı indirmek yerine mevcut bir ikili dosyayı kullanmasını istiyorsanız `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` olarak ayarlayın.
+- 67router'un bir dosyayı indirmek yerine mevcut bir ikili dosyayı kullanmasını istiyorsanız `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` olarak ayarlayın.
 
 ## İmaj Etiketleri
 
@@ -511,7 +511,7 @@ Uç nokta tüneli panelleri (Cloudflare, Tailscale, ngrok), etkin tünel durumu 
 
 ### Sürüm Kanalları
 
-OmniRoute; kararlı sürümler, etkin sürüm dalı testleri ve geliştirme derlemeleri için ayrı Docker kanalları yayımlar.
+67router; kararlı sürümler, etkin sürüm dalı testleri ve geliştirme derlemeleri için ayrı Docker kanalları yayımlar.
 
 | Kanal                           | Kaynak                                   | Değiştirilebilirlik                    | Önerilen kullanım                                                                                                                |
 | ------------------------------- | ---------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -564,7 +564,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Test etmeden önce OmniRoute veri birimini veya bağlama yoluyla eklenmiş veri dizinini yedekleyin. Geri almak için daha önce kullanılan kararlı sürümü ya da özeti geri yükleyin ve kapsayıcıyı yeniden oluşturun:
+Test etmeden önce 67router veri birimini veya bağlama yoluyla eklenmiş veri dizinini yedekleyin. Geri almak için daha önce kullanılan kararlı sürümü ya da özeti geri yükleyin ve kapsayıcıyı yeniden oluşturun:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -584,7 +584,7 @@ Bir sürüm dalı derlemesi hiçbir zaman `latest` etiketini değiştiremez; kar
 
 ## Docker'da pano güncellemeleri
 
-Yayımlanmış bir imajdan oluşturulan container kendini değiştiremez. OmniRoute, bir container
+Yayımlanmış bir imajdan oluşturulan container kendini değiştiremez. 67router, bir container
 içinde çalıştığını algıladığında (`.git` çalışma kopyası yoksa ve npm kurulumu değilse), ana panodaki güncelleme başlığı
 npm/git talimatları yerine çalıştırılacak host komutunu bir kopyalama düğmesiyle gösterir:
 
@@ -600,7 +600,7 @@ sabitlenmiş bir `:X.Y.Z` etiketi kullanıyorsanız önce etiketi düzenleyin.
 
 Host üzerinde container'a root erişimi veren `/var/run/docker.sock` dosyasını bağlamadan
 (**Update Now** özelliğini çalışır durumda tutmak için yukarıdaki `cli` profili uyarısına bakın),
-OmniRoute servisinde `DOCKER_UPDATE_TRIGGER_FILE` değişkenini ayarlayın ve host üzerinde bir izleyici çalıştırın:
+67router servisinde `DOCKER_UPDATE_TRIGGER_FILE` değişkenini ayarlayın ve host üzerinde bir izleyici çalıştırın:
 
 ```yaml
 services:
@@ -614,7 +614,7 @@ services:
 Yol `DATA_DIR` içinde olmalıdır (göreli değerler buna göre çözümlenir); diğer tüm yollar
 reddedilir. Ardından **Update Now**, söz konusu dosyaya
 `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` yazar, `202` yanıtı verir ve yeni sürüm
-etkinleşip sayfa yeniden yüklenene kadar pano `/api/system/version` uç noktasını yoklar. OmniRoute bu modda
+etkinleşip sayfa yeniden yüklenene kadar pano `/api/system/version` uç noktasını yoklar. 67router bu modda
 hiçbir zaman shell veya Docker komutu çalıştırmaz. Her güncelleme işleminde olduğu gibi istek yalnızca
 loopback/LAN istemcilerinden kabul edilir.
 
@@ -624,7 +624,7 @@ Bind mount ile bağlanmış bir veri dizini, host'a izlenecek kararlı bir yol s
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=OmniRoute pano güncelleme isteklerini izle
+Description=67router pano güncelleme isteklerini izle
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -636,7 +636,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute container'ını çek ve yeniden oluştur
+Description=67router container'ını çek ve yeniden oluştur
 
 [Service]
 Type=oneshot
@@ -656,13 +656,13 @@ Servis, başarısız bir çalıştırmanın döngüye girmemesi için çekme iş
 
 ## Kullanılabilirlik: varsayılan SQLite tek replikalıdır
 
-Standart Docker / Kubernetes OmniRoute, **bir Node işlemi + bir SQLite yazıcısından** oluşur. Bu topolojide yüksek kullanılabilirlik **desteklenmez**.
+Standart Docker / Kubernetes 67router, **bir Node işlemi + bir SQLite yazıcısından** oluşur. Bu topolojide yüksek kullanılabilirlik **desteklenmez**.
 
-| Kısıtlama                                                        | Sonuç                                                                                                                                                                                                                                                                                                                                        |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tek yazıcı                                                       | Aynı SQLite dosyasına karşı birden fazla replika **çalıştırmayın**. Bu, veritabanını bozar.                                                                                                                                                                                                                                                  |
-| Yeniden oluşturma / yeniden başlatma / HEALTHCHECK sonlandırması | Devam eden SSE bağlantıları, pano oturumları ve bellek içi durum için **tam kesinti**. Bağlı tüm istemcilerin bağlantısı kesilir. Uç noktanın boş olduğu zaman aralığındaki yeni istekler OmniRoute JSON'u yerine ters proxy'den **`502 Bad Gateway: Unknown error`** alır; istemciler bunu bir sağlayıcı arızasından ayırt edemez (#11015). |
-| `/healthz` ile aynı olay döngüsü                                 | Yoğun bir katalog veya sıkıştırma turu probe'ları geciktirebilir; kısa bir zaman aşımı bu durumda **tek** replikayı yeniden başlatır.                                                                                                                                                                                                        |
+| Kısıtlama                                                        | Sonuç                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tek yazıcı                                                       | Aynı SQLite dosyasına karşı birden fazla replika **çalıştırmayın**. Bu, veritabanını bozar.                                                                                                                                                                                                                                                 |
+| Yeniden oluşturma / yeniden başlatma / HEALTHCHECK sonlandırması | Devam eden SSE bağlantıları, pano oturumları ve bellek içi durum için **tam kesinti**. Bağlı tüm istemcilerin bağlantısı kesilir. Uç noktanın boş olduğu zaman aralığındaki yeni istekler 67router JSON'u yerine ters proxy'den **`502 Bad Gateway: Unknown error`** alır; istemciler bunu bir sağlayıcı arızasından ayırt edemez (#11015). |
+| `/healthz` ile aynı olay döngüsü                                 | Yoğun bir katalog veya sıkıştırma turu probe'ları geciktirebilir; kısa bir zaman aşımı bu durumda **tek** replikayı yeniden başlatır.                                                                                                                                                                                                       |
 
 **Probe matrisi** (ayrıca bkz. [Kubernetes probe önerileri](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -766,7 +766,7 @@ de kontrol edin.
 
 ### Bağlantıya özel bir proxy'yi tercih edin
 
-Etkilenen Gemini bağlantısı için OmniRoute'un [bağlantı başına proxy yapılandırmasını](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+Etkilenen Gemini bağlantısı için 67router'un [bağlantı başına proxy yapılandırmasını](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 kullanın, ardından aynı modelle **Bağlantıyı Test Et** işlemini ve küçük bir isteği
 tekrarlayın. Bu, yönlendirme değişikliğini söz konusu bağlantıyla sınırlı tutar. Proxy'ye
 konteynerden erişilebildiğini ve bağlantının gerçekten bu proxy'yi seçtiğini doğrulayın.
@@ -840,7 +840,7 @@ uğratabilir; kalıcı veri birimini silmeyin.
 
 ## Önemli Notlar
 
-- **SQLite WAL Modu:** OmniRoute'un en son değişiklikleri `storage.sqlite` dosyasına denetim noktası olarak yazabilmesi için `docker stop` işleminin tamamlanmasına izin verilmelidir. Paketlenmiş Compose dosyalarında 40 saniyelik durdurma ek süresi zaten ayarlanmıştır. İmajı doğrudan çalıştırıyorsanız `--stop-timeout 40` ayarını koruyun.
+- **SQLite WAL Modu:** 67router'un en son değişiklikleri `storage.sqlite` dosyasına denetim noktası olarak yazabilmesi için `docker stop` işleminin tamamlanmasına izin verilmelidir. Paketlenmiş Compose dosyalarında 40 saniyelik durdurma ek süresi zaten ayarlanmıştır. İmajı doğrudan çalıştırıyorsanız `--stop-timeout 40` ayarını koruyun.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Rutin/yazma öncesi yedeklemeler harici olarak yönetiliyorsa `true` olarak ayarlayın. Mevcut veritabanı geçişleri yine de kendilerine ait kalıcı bir güvenlik anlık görüntüsü ve toplu geçiş koruması gerektirir.
 - **Veri Kalıcılığı:** Konteyner yeniden başlatmalarında veritabanınızı, anahtarlarınızı ve yapılandırmalarınızı korumak için her zaman `/app/data` konumuna bir birim bağlayın.
 - **Port Yapılandırması:** Varsayılan `20128` portunu değiştirmek için `PORT` ortam değişkenini geçersiz kılın.

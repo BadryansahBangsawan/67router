@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/cloudAgent/` ja `src/app/api/v1/agents/tasks/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40 (frontmatter'i värskendus; 4 agenti, sh cursor-cloud)
 
-OmniRoute orkestreerib kolmandate osapoolte pilvemajutusega programmeerimisagente (Codex Cloud, Cursor,
+67router orkestreerib kolmandate osapoolte pilvemajutusega programmeerimisagente (Codex Cloud, Cursor,
 Devin, Jules) pikaajaliste ülesannetena. Iga agent on ümbritsetud ühtse liidesega, et
 kliendid saaksid esitada viiba + repositooriumi URL-i ja saada tulemusi ilma
 teenusepakkujapõhiste API-dega tegelemata.

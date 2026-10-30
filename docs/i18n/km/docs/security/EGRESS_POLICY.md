@@ -8,7 +8,7 @@
 
 > **ប្រភពយោងផ្លូវការ:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute អនុញ្ញាតឱ្យប្រូកស៊ីនីមួយៗមាន **សេចក្តីបង្គាប់សម្រាប់គ្រួសារអាសយដ្ឋានចរាចរចេញ**។ តាមលំនាំដើម ប្រព័ន្ធប្រតិបត្តិការជាអ្នកជ្រើសរើស IPv4 ឬ IPv6 (dual-stack, "Happy Eyeballs")។ នៅពេលអ្នកកំណត់សេចក្តីបង្គាប់ទៅជា `ipv4` ឬ `ipv6` OmniRoute នឹងកំណត់រាល់ការតភ្ជាប់តាមប្រូកស៊ីនោះឱ្យប្រើគ្រួសារដែលបានជ្រើសរើស និង **បិទបរាជ័យដោយសុវត្ថិភាព** ជំនួសឱ្យការត្រឡប់ទៅប្រើគ្រួសារមួយទៀត។
+67router អនុញ្ញាតឱ្យប្រូកស៊ីនីមួយៗមាន **សេចក្តីបង្គាប់សម្រាប់គ្រួសារអាសយដ្ឋានចរាចរចេញ**។ តាមលំនាំដើម ប្រព័ន្ធប្រតិបត្តិការជាអ្នកជ្រើសរើស IPv4 ឬ IPv6 (dual-stack, "Happy Eyeballs")។ នៅពេលអ្នកកំណត់សេចក្តីបង្គាប់ទៅជា `ipv4` ឬ `ipv6` 67router នឹងកំណត់រាល់ការតភ្ជាប់តាមប្រូកស៊ីនោះឱ្យប្រើគ្រួសារដែលបានជ្រើសរើស និង **បិទបរាជ័យដោយសុវត្ថិភាព** ជំនួសឱ្យការត្រឡប់ទៅប្រើគ្រួសារមួយទៀត។
 
 ទំព័រនេះពន្យល់អំពីសេចក្តីបង្គាប់នេះថាជាអ្វី ហេតុអ្វីបានជាវាមាន វាត្រូវបានកំណត់រចនាសម្ព័ន្ធនៅទីណា និងរបៀបដែល runtime ដោះស្រាយវា។
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## របៀបដែល `auto` ដោះស្រាយ
 
-នៅពេល `family` ជា `auto` OmniRoute **មិន** បន្ថែម directive ណាមួយទេ — URL ប្រូកស៊ីត្រូវបានប្រើដូចដែលមាន ហើយ family សម្រាប់ការតភ្ជាប់ត្រូវបានកំណត់ដោយលក្ខណៈផ្ទាល់របស់វា។
+នៅពេល `family` ជា `auto` 67router **មិន** បន្ថែម directive ណាមួយទេ — URL ប្រូកស៊ីត្រូវបានប្រើដូចដែលមាន ហើយ family សម្រាប់ការតភ្ជាប់ត្រូវបានកំណត់ដោយលក្ខណៈផ្ទាល់របស់វា។
 
 នៅពេលបង្កើត URL (`proxyConfigToUrl` / `normalizeProxyUrl` ក្នុង `open-sse/utils/proxyDispatcher.ts`) ប្រូកស៊ី `auto` បង្កើត URL ធម្មតាដោយគ្មានសញ្ញាសម្គាល់៖
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 Directive ដែលមិនមែនជា `auto` ត្រូវបានបញ្ជូនជាសញ្ញាសម្គាល់ query សិប្បនិម្មិតតែមួយ — `?family=ipv4` ឬ `?family=ipv6` — ដែលត្រូវបានបន្ថែមម្តងទៅ URL របស់ proxy ដែលបានធ្វើ normalization។ `normalizeProxyUrl` ប្រយ័ត្នក្នុងការដក និងបន្ថែមសញ្ញាសម្គាល់នេះឡើងវិញតែម្តងគត់ ដូច្នេះវាមិនធ្វើឱ្យការញែក port ខូចឡើយ។
 
-នៅពេល dispatcher ត្រូវបានបង្កើត សញ្ញាសម្គាល់នេះត្រូវបានអាន និងបម្លែងទៅជា connect family ជាក់លាក់មួយ។ ប្រសិនបើ host ជា IP literal នៃ family **ផ្ទុយគ្នា** នោះ OmniRoute នឹងបោះ error (ភាពផ្ទុយគ្នាត្រូវបានដោះស្រាយបែប fail-closed)៖
+នៅពេល dispatcher ត្រូវបានបង្កើត សញ្ញាសម្គាល់នេះត្រូវបានអាន និងបម្លែងទៅជា connect family ជាក់លាក់មួយ។ ប្រសិនបើ host ជា IP literal នៃ family **ផ្ទុយគ្នា** នោះ 67router នឹងបោះ error (ភាពផ្ទុយគ្នាត្រូវបានដោះស្រាយបែប fail-closed)៖
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## ភាពឆបគ្នាជាមួយ SOCKS5
 
-ការកំណត់ family ថេរដំណើរការជាមួយ SOCKS5 proxies ប៉ុន្តែ `fetch-socks` ស្តង់ដារមិនបង្ហាញ socket options ដែលចាំបាច់សម្រាប់កំណត់ family របស់ proxy hop ឱ្យនៅថេរទេ។ OmniRoute ផ្តល់ connector ផ្ទាល់ខ្លួនសម្រាប់គោលបំណងនេះ៖
+ការកំណត់ family ថេរដំណើរការជាមួយ SOCKS5 proxies ប៉ុន្តែ `fetch-socks` ស្តង់ដារមិនបង្ហាញ socket options ដែលចាំបាច់សម្រាប់កំណត់ family របស់ proxy hop ឱ្យនៅថេរទេ។ 67router ផ្តល់ connector ផ្ទាល់ខ្លួនសម្រាប់គោលបំណងនេះ៖
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

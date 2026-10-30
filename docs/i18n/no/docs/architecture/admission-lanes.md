@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **to** prosesslokale lane-systemer med ulike virkeområder. De er
+67router har **to** prosesslokale lane-systemer med ulike virkeområder. De er
 komplementære; operatører bør vite hvilket system de ser på.
 
 ## 1. Prosessomfattende tilgangskontroll på bytenivå (`chatBodyAdmission.ts`)

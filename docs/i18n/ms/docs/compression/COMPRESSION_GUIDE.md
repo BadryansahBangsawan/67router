@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Bahasa Melayu)
+# 🗜️ Prompt Compression Guide — 67router (Bahasa Melayu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Gambaran Keseluruhan
 
-OmniRoute melaksanakan saluran paip pemampatan gesaan modular yang berjalan **secara proaktif** sebelum permintaan sampai kepada penyedia huluan. Ini bermakna penjimatan token anda berlaku secara telus — tiada perubahan diperlukan pada aliran kerja anda.
+67router melaksanakan saluran paip pemampatan gesaan modular yang berjalan **secara proaktif** sebelum permintaan sampai kepada penyedia huluan. Ini bermakna penjimatan token anda berlaku secara telus — tiada perubahan diperlukan pada aliran kerja anda.
 
 ```
 Permintaan Klien
@@ -122,15 +122,15 @@ kombo pemampatan yang ditetapkan kepada kombo penghalaan.
 
 ## Matematik Penjimatan Upstream
 
-OmniRoute mendokumenkan penjimatan pemampatan daripada dua sumber: penanda aras projek upstream dan
-komposisi enjin OmniRoute sendiri.
+67router mendokumenkan penjimatan pemampatan daripada dua sumber: penanda aras projek upstream dan
+komposisi enjin 67router sendiri.
 
 | Sumber  | Angka README upstream yang digunakan di sini                                                                                       |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` kurang token output, purata penjimatan output penanda aras sebanyak `65%`, julat `22-87%`, dan alat pemampatan input `~46%` |
 | RTK     | Penjimatan output perintah sebanyak `60-90%`; sesi contoh `~118,000 -> ~23,900` token, atau penjimatan `79.7%` (`~80%`)            |
 
-Untuk muatan alat/konteks yang bertindih, gabungan lalai OmniRoute menyusun enjin seperti berikut:
+Untuk muatan alat/konteks yang bertindih, gabungan lalai 67router menyusun enjin seperti berikut:
 
 ```txt
 RTK -> Caveman
@@ -533,13 +533,13 @@ sebarang gaya membiarkan isi tidak berubah, dilangkau sebagai `no_styles`), meng
 arahan yang dipilih mengikut turutan katalog,
 menambahkan klausa sempadan **sekali sahaja** (berserta klausa keselamatan,
 `SAFETY_BOUNDARIES` atau terjemahannya, apabila `less-code` atau `ponytail` dipilih), dan
-memulakan blok dengan satu penanda keidempotenan (`[OmniRoute Output Styles]`), supaya
+memulakan blok dengan satu penanda keidempotenan (`[67router Output Styles]`), supaya
 penggunaan semula tidak menghasilkan sebarang perubahan. Apabila bahasa yang ditentukan
 (lihat Pemilihan bahasa di bawah) mempunyai terjemahan, arahan setempat disuntik bagi
 menggantikan bahasa Inggeris.
 
 Pada isi dengan tatasusunan `messages` yang tidak kosong, semakan keidempotenan dijalankan
-sebelum pintasan kandungan: apabila penanda `[OmniRoute Output Styles]` sudah wujud dalam
+sebelum pintasan kandungan: apabila penanda `[67router Output Styles]` sudah wujud dalam
 medan `system` peringkat teratas (rentetan atau tatasusunan blok kandungan) atau dalam mesej
 sistem dengan kandungan rentetan, isi dibiarkan tidak berubah sebagai `already_applied` dan
 tiada semakan kata kunci dijalankan. Jika tidak, pintasan kandungan
@@ -568,7 +568,7 @@ ditemuinya antara yang berikut:
 Pada isi tanpa tatasusunan `messages` (atau dengan tatasusunan kosong), tiada pintasan
 kandungan dijalankan dan medan `system` peringkat teratas tidak dirujuk. Blok ditambahkan
 selepas teks dalam medan `instructions` berbentuk rentetan, melainkan medan tersebut sudah
-mengandungi penanda `[OmniRoute Output Styles]`, yang menyebabkan isi dibiarkan tidak
+mengandungi penanda `[67router Output Styles]`, yang menyebabkan isi dibiarkan tidak
 berubah sebagai `already_applied`. Apabila isi tidak mempunyai medan `instructions`
 berbentuk rentetan tetapi mengandungi `input` (rentetan atau tatasusunan), blok menjadi
 `instructions`, menggantikan apa-apa nilai bukan rentetan yang sebelum ini terkandung dalam
@@ -597,8 +597,8 @@ konfigurasi pemampatan menyimpan pemilihan seperti berikut:
 Keserasian ke belakang: selagi `outputStyles` kosong, tetapan legasi
 `cavemanOutputMode.enabled` dipetakan kepada `terse-prose` pada
 `cavemanOutputMode.intensity`. Blok itu kemudiannya bermula dengan penanda
-`[OmniRoute Output Styles]`, manakala penyuntik legasi `applyCavemanOutputMode()` menulis
-`[OmniRoute Caveman Output Mode]`. Di bawah penanda tersebut, teks sepadan dengan suntikan
+`[67router Output Styles]`, manakala penyuntik legasi `applyCavemanOutputMode()` menulis
+`[67router Caveman Output Mode]`. Di bawah penanda tersebut, teks sepadan dengan suntikan
 legasi dalam en, pt-BR, es, de, fr, it, ru, id dan vi; dalam ja dan zh, teks itu mempunyai
 satu ruang tambahan sebelum klausa sempadan. `terse-prose` diterjemahkan ke dalam pt-BR,
 es, de, fr, it, ru, zh, ja, id dan vi, maka permintaan yang bahasa ditentukannya ialah

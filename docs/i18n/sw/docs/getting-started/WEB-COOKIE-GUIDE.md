@@ -4,7 +4,7 @@
 
 ---
 
-Watoa huduma wa Web Cookie huiwezesha OmniRoute kutumia huduma ya AI kupitia kipindi chako kilichopo cha kivinjari badala ya ufunguo wa API. Wanafaa unapokuwa tayari una ufikiaji wa huduma kupitia tovuti yake na unataka OmniRoute itumie kipindi hicho hicho kilichothibitishwa.
+Watoa huduma wa Web Cookie huiwezesha 67router kutumia huduma ya AI kupitia kipindi chako kilichopo cha kivinjari badala ya ufunguo wa API. Wanafaa unapokuwa tayari una ufikiaji wa huduma kupitia tovuti yake na unataka 67router itumie kipindi hicho hicho kilichothibitishwa.
 
 Tofauti na watoa huduma wanaotumia ufunguo wa API, watoa huduma wa Web Cookie huthibitisha utambulisho kwa kutumia vitambulisho ambavyo kivinjari chako hutuma kwenye tovuti.
 
@@ -49,7 +49,7 @@ DevTools
 
 Kichwa cha ombi cha `Cookie` kina taarifa kamili za uthibitishaji ambazo kivinjari chako kilitumia kwa mafanikio.
 
-Kwa watoa huduma wengi wa Web Cookie, hii ndiyo thamani inayopaswa kubandikwa kwenye OmniRoute.
+Kwa watoa huduma wengi wa Web Cookie, hii ndiyo thamani inayopaswa kubandikwa kwenye 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Mchakato wa usanidi ni sawa kwa watoa huduma wengi wa Web Cookie.
 4. Onyesha upya ukurasa.
 5. Fungua ombi la gumzo au mazungumzo lililothibitishwa.
 6. Nakili vitambulisho vinavyohitajika vya uthibitishaji.
-7. Fungua OmniRoute.
+7. Fungua 67router.
 8. Nenda kwenye **Providers → Add Provider**.
 9. Chagua mtoa huduma wako wa Web Cookie.
 10. Bandika vitambulisho.
@@ -92,17 +92,17 @@ Tovuti tofauti huhifadhi taarifa za uthibitishaji kwa njia tofauti. Baadhi zinah
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) ni jukwaa la bure la gumzo kwa watumiaji lisilohitaji kujisajili — kipindi huundwa bila utambulisho katika ziara ya kwanza na hudumu kupitia vidakuzi vitatu: `uid`, `si_usr_id`, na `si_ses_id`. OmniRoute hupitisha endpoint ileile ya `/api/dispatch` kupitia kitambulisho kimoja cha modeli (`notrack-c`, jina mbadala `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) ni jukwaa la bure la gumzo kwa watumiaji lisilohitaji kujisajili — kipindi huundwa bila utambulisho katika ziara ya kwanza na hudumu kupitia vidakuzi vitatu: `uid`, `si_usr_id`, na `si_ses_id`. 67router hupitisha endpoint ileile ya `/api/dispatch` kupitia kitambulisho kimoja cha modeli (`notrack-c`, jina mbadala `ntw`).
 
 ### Hatua za kuunganisha
 
 1. Fungua [notrack.ai](https://notrack.ai) katika kivinjari chako na uruhusu kidakuzi cha kipindi kisicho na utambulisho kiwekwe.
 2. Fungua **DevTools → Network**, onyesha upya ukurasa, kisha ubofye ombi lolote la `/api`.
 3. Katika **Request Headers**, nakili thamani kamili ya kichwa cha `Cookie`.
-4. Katika OmniRoute, nenda kwenye **Providers → Add Provider → NoTrack Web (Free)**.
+4. Katika 67router, nenda kwenye **Providers → Add Provider → NoTrack Web (Free)**.
 5. Bandika mfuatano wa kidakuzi katika sehemu ya `apiKey` kisha **Save**.
 
-OmniRoute huchota `uid`, `si_usr_id`, na `si_ses_id` kutoka kwenye mfuatano uliobandikwa na kuunda upya kichwa safi cha `Cookie` chenye jozi hizo pekee — pamoja na `nt_session` (tokeni ya `ntk_…` iliyowekwa kwa akaunti zilizoingia) inapopatikana. Ikiwa mojawapo ya hizo tatu haipo, mfuatano ghafi uliobandikwa hupitishwa bila kubadilishwa ili waendeshaji waweze kujaribu miundo mbadala.
+67router huchota `uid`, `si_usr_id`, na `si_ses_id` kutoka kwenye mfuatano uliobandikwa na kuunda upya kichwa safi cha `Cookie` chenye jozi hizo pekee — pamoja na `nt_session` (tokeni ya `ntk_…` iliyowekwa kwa akaunti zilizoingia) inapopatikana. Ikiwa mojawapo ya hizo tatu haipo, mfuatano ghafi uliobandikwa hupitishwa bila kubadilishwa ili waendeshaji waweze kujaribu miundo mbadala.
 
 ### Vitambulisho vya modeli
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Kidakuzi Kinafanya Kazi Kwenye Kivinjari lakini si Kwenye OmniRoute
+## Kidakuzi Kinafanya Kazi Kwenye Kivinjari lakini si Kwenye 67router
 
 Baadhi ya watoa huduma hujumuisha vidakuzi vinavyotumwa tu wakati wa maombi yaliyothibitishwa.
 

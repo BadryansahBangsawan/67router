@@ -31,7 +31,7 @@
 `filterPaidOnlyCandidates`-এর ঠিক পরে):
 
 1. **`FREE_MODEL_BUDGETS`-এ একেবারেই নেই** → বাদ দেওয়া হবে। এটি প্রকৃত পেইড মডেল এবং
-   OmniRoute এখনো শ্রেণিবদ্ধ করেনি এমন যেকোনো প্রদানকারী/মডেলকে অন্তর্ভুক্ত করে — নতুন ক্যান্ডিডেট
+   67router এখনো শ্রেণিবদ্ধ করেনি এমন যেকোনো প্রদানকারী/মডেলকে অন্তর্ভুক্ত করে — নতুন ক্যান্ডিডেট
    শুরুতে অন্তর্ভুক্ত নয়, বরং বাদ দেওয়া অবস্থায় থাকে।
 2. **`freeType: "keyless"`** → অবিলম্বে পাস করে, **তবে শুধু এমন ক্যান্ডিডেটের ক্ষেত্রে যা সত্যিই
    নো-অথ পাথ দিয়ে এসেছে** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -89,7 +89,7 @@ STRICT_ZERO_COST ওই অনুমোদন-তালিকার **প্র�
 (keyless-bypass কেস A/B/C, বহু-অ্যাকাউন্ট কেস 1-5)।
 
 `discovered automatically`: আগামীকাল সঠিক metadata-সহ প্রকাশিত কোনো প্রোভাইডার/মডেল (catalog-এ থাকা,
-একটি usage adapter-সহ, `hardStopGuaranteed: true`) OmniRoute সেটি সম্পর্কে জানামাত্রই ব্যবহারযোগ্য হবে —
+একটি usage adapter-সহ, `hardStopGuaranteed: true`) 67router সেটি সম্পর্কে জানামাত্রই ব্যবহারযোগ্য হবে —
 কোনো কোড পরিবর্তন নয়, whitelist-এ কোনো এন্ট্রি নয়, এই মডিউলে সম্পাদনার কিছুই নেই। catalog থেকে সরানো
 কোনোটিও একইভাবে অদৃশ্য হয়ে যায়। রিগ্রেশন প্রমাণের জন্য
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` দেখুন (প্রকৃত catalog পরিবর্তন করে নয়,

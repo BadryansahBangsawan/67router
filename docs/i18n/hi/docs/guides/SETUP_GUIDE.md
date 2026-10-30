@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (हिन्दी)
+# 📖 Setup Guide — 67router (हिन्दी)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute के संपूर्ण सेटअप का संदर्भ। त्वरित संस्करण के लिए, [README में त्वरित शुरुआत](../README.md#-quick-start) देखें।
+> 67router के संपूर्ण सेटअप का संदर्भ। त्वरित संस्करण के लिए, [README में त्वरित शुरुआत](../README.md#-quick-start) देखें।
 
 ## विषय-सूची
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR पैकेज](https://aur.archlinux.org/packages/omniroute-bin) OmniRoute इंस्टॉल करता है और एक systemd उपयोगकर्ता सेवा प्रदान करता है।
+[AUR पैकेज](https://aur.archlinux.org/packages/omniroute-bin) 67router इंस्टॉल करता है और एक systemd उपयोगकर्ता सेवा प्रदान करता है।
 
 ### स्रोत से
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows संबंधी टिप्पणी:** डिफ़ॉल्ट रूप से, जब पुरानी `%USERPROFILE%\.omniroute` डायरेक्टरी मौजूद नहीं होती है, तो OmniRoute `%APPDATA%\omniroute` का उपयोग करता है। किसी अन्य डेटा-डायरेक्टरी स्थान को चुनने के लिए `DATA_DIR` सेट करें।
+> **Windows संबंधी टिप्पणी:** डिफ़ॉल्ट रूप से, जब पुरानी `%USERPROFILE%\.omniroute` डायरेक्टरी मौजूद नहीं होती है, तो 67router `%APPDATA%\omniroute` का उपयोग करता है। किसी अन्य डेटा-डायरेक्टरी स्थान को चुनने के लिए `DATA_DIR` सेट करें।
 
 > **टिप्पणी:** पहली बार चलाने पर `npm install`, `.env.example` से `.env` स्वतः जनरेट करता है। बाद के इंस्टॉलेशन मौजूदा `.env` को ओवरराइट नहीं करेंगे, इसलिए अनुकूलन सुरक्षित रहते हैं। इसे फिर से जनरेट करने के लिए, दोबारा चलाने से पहले `.env` हटाएँ।
 
@@ -64,7 +64,7 @@ Compose प्रोफ़ाइल और Caddy HTTPS सहित संपू
 
 ### डेस्कटॉप ऐप (Electron)
 
-OmniRoute के साथ Electron 41 + electron-builder 26.10 पर निर्मित एक डेस्कटॉप रैपर मिलता है। उपलब्ध स्क्रिप्ट (वर्कस्पेस रूट):
+67router के साथ Electron 41 + electron-builder 26.10 पर निर्मित एक डेस्कटॉप रैपर मिलता है। उपलब्ध स्क्रिप्ट (वर्कस्पेस रूट):
 
 ```bash
 npm run electron:dev          # हॉट-रीलोड के साथ डेस्कटॉप चलाएँ
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, आदि) के साथ संयोजित करके, यह आपको पूरी तरह स्क्रिप्ट-योग्य OmniRoute इंस्टेंस शुरू करने देता है।
+env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, आदि) के साथ संयोजित करके, यह आपको पूरी तरह स्क्रिप्ट-योग्य 67router इंस्टेंस शुरू करने देता है।
 
 ### CLI विकल्प
 
@@ -99,7 +99,7 @@ env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, आदि) के �
 | `omniroute config`      | CLI टूल कॉन्फ़िगरेशन — कॉन्फ़िग सूचीबद्ध करें, प्राप्त करें, सेट करें और सत्यापित करें          |
 | `omniroute status`      | ऑफ़लाइन स्थिति डैशबोर्ड — संस्करण, DB, टूल, कॉन्फ़िग                                            |
 | `omniroute logs`        | API से उपयोग लॉग स्ट्रीम करें (`--follow` समर्थित है)                                           |
-| `omniroute update`      | OmniRoute अपडेट की जाँच करें या उन्हें लागू करें                                                |
+| `omniroute update`      | 67router अपडेट की जाँच करें या उन्हें लागू करें                                                 |
 | `omniroute provider`    | प्रोवाइडर कनेक्शन प्रबंधित करें — जोड़ें, सूचीबद्ध करें, हटाएँ, परीक्षण करें, डिफ़ॉल्ट सेट करें |
 | `omniroute --port 3000` | कैनोनिकल/API पोर्ट को 3000 पर सेट करें                                                          |
 | `omniroute --mcp`       | MCP सर्वर शुरू करें (stdio ट्रांसपोर्ट)                                                         |
@@ -165,7 +165,7 @@ Ollama टैग URL: http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### `setup-*` से स्वचालित रूप से कॉन्फ़िगर करें
 
-बेस URL और कुंजी को मैन्युअल रूप से पेस्ट करने के बजाय, OmniRoute को लाइव मॉडल कैटलॉग से प्रत्येक टूल का
+बेस URL और कुंजी को मैन्युअल रूप से पेस्ट करने के बजाय, 67router को लाइव मॉडल कैटलॉग से प्रत्येक टूल का
 अपना कॉन्फ़िगरेशन लिखने दें। प्रत्येक टूल के लिए एक कमांड:
 
 ```bash
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-स्थानीय टूल को किसी **रिमोट** OmniRoute के लिए कॉन्फ़िगर करने हेतु प्रत्येक कमांड `--remote <url> --api-key <key>` स्वीकार करता है, साथ ही पूर्वावलोकन के लिए `--dry-run` भी स्वीकार करता है। सही
+स्थानीय टूल को किसी **रिमोट** 67router के लिए कॉन्फ़िगर करने हेतु प्रत्येक कमांड `--remote <url> --api-key <key>` स्वीकार करता है, साथ ही पूर्वावलोकन के लिए `--dry-run` भी स्वीकार करता है। सही
 env को इंजेक्ट करके और कोई भी कॉन्फ़िगरेशन लिखे बिना CLI लॉन्च करने के लिए सामान्य लॉन्चर
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) का उपयोग करें;
 पुराने प्रति-टूल लॉन्चर `omniroute launch` (Claude Code) और
@@ -276,15 +276,15 @@ curl -X POST http://localhost:20128/a2a \
 | वेरिएबल                  | डिफ़ॉल्ट                        | उद्देश्य                                                                                                                                           |
 | ------------------------ | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                        | अपस्ट्रीम रिस्पॉन्स शुरू होने के टाइमआउट, छिपे हुए Undici टाइमआउट, TLS फ़िंगरप्रिंट अनुरोधों और API ब्रिज अनुरोध/प्रॉक्सी टाइमआउट के लिए साझा आधार |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` से प्राप्त | OmniRoute द्वारा SSE स्ट्रीम को निरस्त करने से पहले स्ट्रीमिंग चंक्स के बीच अधिकतम अंतराल                                                          |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` से प्राप्त | 67router द्वारा SSE स्ट्रीम को निरस्त करने से पहले स्ट्रीमिंग चंक्स के बीच अधिकतम अंतराल                                                           |
 
 बैकवर्ड कम्पैटिबिलिटी बरकरार रखी गई है: मौजूदा `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` और अन्य प्रति-लेयर टाइमआउट वेरिएबल अब भी काम करते हैं और साझा आधार को ओवरराइड करते हैं।
 
 ### प्रोवाइडर-विशिष्ट टिप्पणियाँ
 
-Claude Code-संगत अपस्ट्रीम (`anthropic-compatible-cc-*`) के लिए, OmniRoute निर्धारित फ़ेच टाइमआउट से आउटबाउंड `X-Stainless-Timeout` हेडर प्राप्त करता है, ताकि प्रोवाइडर-साइड रीड टाइमआउट आपके एनवायरनमेंट कॉन्फ़िगरेशन के अनुरूप रहें।
+Claude Code-संगत अपस्ट्रीम (`anthropic-compatible-cc-*`) के लिए, 67router निर्धारित फ़ेच टाइमआउट से आउटबाउंड `X-Stainless-Timeout` हेडर प्राप्त करता है, ताकि प्रोवाइडर-साइड रीड टाइमआउट आपके एनवायरनमेंट कॉन्फ़िगरेशन के अनुरूप रहें।
 
-तृतीय-पक्ष Claude Code-संगत रिवर्स प्रॉक्सी के लिए, OmniRoute डिफ़ॉल्ट `anthropic-beta` सेट को सीमित रखता है और जब `Client Cache Control` को `Auto` पर छोड़ा जाता है, तो केवल क्लाइंट द्वारा दिए गए `cache_control` मार्कर फ़ॉरवर्ड करता है। प्रति-कनेक्शन "रीडैक्ट-थिंकिंग बीटा सक्षम करें" टॉगल केवल तभी सक्षम करें, जब अपस्ट्रीम को विशेष रूप से रीडैक्ट की गई Claude थिंकिंग स्ट्रीम की आवश्यकता हो।
+तृतीय-पक्ष Claude Code-संगत रिवर्स प्रॉक्सी के लिए, 67router डिफ़ॉल्ट `anthropic-beta` सेट को सीमित रखता है और जब `Client Cache Control` को `Auto` पर छोड़ा जाता है, तो केवल क्लाइंट द्वारा दिए गए `cache_control` मार्कर फ़ॉरवर्ड करता है। प्रति-कनेक्शन "रीडैक्ट-थिंकिंग बीटा सक्षम करें" टॉगल केवल तभी सक्षम करें, जब अपस्ट्रीम को विशेष रूप से रीडैक्ट की गई Claude थिंकिंग स्ट्रीम की आवश्यकता हो।
 
 ### उन्नत टाइमआउट ओवरराइड
 
@@ -302,11 +302,11 @@ Claude Code-संगत अपस्ट्रीम (`anthropic-compatible-cc-*
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | API ब्रिज सर्वर पर कीप-अलाइव टाइमआउट                                           |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | API ब्रिज सर्वर पर सॉकेट निष्क्रियता टाइमआउट (`0` इसे अक्षम करता है)           |
 
-> **नोट:** स्ट्रीमिंग अनुरोधों के लिए, `FETCH_TIMEOUT_MS` केवल कनेक्शन सेटअप / पहले अपस्ट्रीम रिस्पॉन्स की प्रतीक्षा को कवर करता है। स्ट्रीम सक्रिय होने के बाद, OmniRoute केवल वास्तविक रुकावट (`STREAM_IDLE_TIMEOUT_MS`) या Undici बॉडी निष्क्रियता (`FETCH_BODY_TIMEOUT_MS`) की स्थिति में ही इसे निरस्त करेगा।
+> **नोट:** स्ट्रीमिंग अनुरोधों के लिए, `FETCH_TIMEOUT_MS` केवल कनेक्शन सेटअप / पहले अपस्ट्रीम रिस्पॉन्स की प्रतीक्षा को कवर करता है। स्ट्रीम सक्रिय होने के बाद, 67router केवल वास्तविक रुकावट (`STREAM_IDLE_TIMEOUT_MS`) या Undici बॉडी निष्क्रियता (`FETCH_BODY_TIMEOUT_MS`) की स्थिति में ही इसे निरस्त करेगा।
 
 ### रिवर्स प्रॉक्सी संगतता
 
-यदि आप OmniRoute को Nginx, Caddy, Cloudflare या किसी अन्य रिवर्स प्रॉक्सी के पीछे चलाते हैं, तो सुनिश्चित करें कि प्रॉक्सी टाइमआउट भी आपके OmniRoute स्ट्रीम/फ़ेच टाइमआउट से अधिक हों।
+यदि आप 67router को Nginx, Caddy, Cloudflare या किसी अन्य रिवर्स प्रॉक्सी के पीछे चलाते हैं, तो सुनिश्चित करें कि प्रॉक्सी टाइमआउट भी आपके 67router स्ट्रीम/फ़ेच टाइमआउट से अधिक हों।
 
 ---
 

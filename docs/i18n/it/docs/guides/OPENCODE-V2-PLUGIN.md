@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` rende disponibile l'intero catalogo OmniRoute — modelli, combo e
+`@omniroute/opencode-plugin-v2` rende disponibile l'intero catalogo 67router — modelli, combo e
 auto-combo — nel selettore di modelli di OpenCode v2, con nomi visualizzati, prezzi e budget
 del piano gratuito.
 
@@ -15,7 +15,7 @@ nulla di condiviso tra i due, quindi l'aggiornamento dell'uno non impone mai que
 ## Requisiti
 
 - OpenCode v2.
-- Un gateway OmniRoute raggiungibile (`http://localhost:20128` per impostazione predefinita).
+- Un gateway 67router raggiungibile (`http://localhost:20128` per impostazione predefinita).
 - Node.js 22 o 24.
 
 ## Installazione
@@ -78,7 +78,7 @@ indicando il nome dell'endpoint e ciò che è andato perso, affinché un seletto
 | `baseURL`                        | obbligatorio                                     | Radice del gateway, solo `http(s)`; il suffisso `/v1` viene aggiunto dove necessario                                                                                        |
 | `apiKey`                         | credenziale connessa, quindi `OMNIROUTE_API_KEY` | Chiave per la chat per `/v1/*`                                                                                                                                              |
 | `managementReadToken`            | usa `apiKey` come valore di ripiego              | Chiave per `/api/*`: in genere **non** è la stessa                                                                                                                          |
-| `displayName`                    | `"OmniRoute"`                                    | Nome del provider nel selettore                                                                                                                                             |
+| `displayName`                    | `"67router"`                                     | Nome del provider nel selettore                                                                                                                                             |
 | `timeoutMs`                      | `10000`                                          | Timeout di recupero per endpoint (le combinazioni automatiche usano 5 s)                                                                                                    |
 | `modelCacheTtlMs`                | `300000`                                         | TTL della cache del catalogo; uno snapshot su disco velocizza gli avvii a freddo                                                                                            |
 | `timeouts`                       | usa `timeoutMs` come valore di ripiego           | Limiti temporali per endpoint in ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                                         |
@@ -116,7 +116,7 @@ Imposta `"geminiSanitization": false` per disattivare questa funzionalità.
 
 | Sintomo                                                | Causa                                                                                                                                  |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Il selettore non mostra alcun modello OmniRoute        | Nessuna chiave risolta (controllare l'avviso all'avvio) oppure il gateway non è raggiungibile                                          |
+| Il selettore non mostra alcun modello 67router         | Nessuna chiave risolta (controllare l'avviso all'avvio) oppure il gateway non è raggiungibile                                          |
 | ID modello grezzi, nessuna combinazione, nessun prezzo | Gli endpoint di gestione hanno rifiutato il token — impostare `managementReadToken`                                                    |
 | Catalogo `freeOnly` breve o vuoto                      | Token di gestione assente o rifiutato — leggere la riga di riepilogo dell'aggiornamento (conteggio `unmatched-free`) nel log dell'host |
 | Una sessione associata a `opencode-<id>/…`             | Il plugin v1 pubblicava `opencode-<id>`; la v2 pubblica direttamente `<id>`, quindi riselezionare il modello sotto `<id>/…`            |

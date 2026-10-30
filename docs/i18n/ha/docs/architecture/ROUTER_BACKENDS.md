@@ -20,10 +20,10 @@ Ana bayyana rawar injin ta hanyar **ginshiƙai biyu masu zaman kansu**, waɗanda
 `RouterBackendDefinition` na rijistar:
 
 1. **Zagayowar rayuwa** (`RouterBackendLifecycle`) — _yadda injin yake aiki_:
-   - `in-process` — yana gudana a cikin tsarin aiwatarwa na OmniRoute Node (bututun TS na asali).
-   - `supervised` — tsarin aiwatarwa na gida da OmniRoute ke girkawa/farawa/tsayarwa/duba lafiyarsa
+   - `in-process` — yana gudana a cikin tsarin aiwatarwa na 67router Node (bututun TS na asali).
+   - `supervised` — tsarin aiwatarwa na gida da 67router ke girkawa/farawa/tsayarwa/duba lafiyarsa
      ta hanyar `ServiceSupervisor`, sannan ya yi amfani da shi a matsayin haɗin mai bayarwa.
-   - `external` — maƙurar HTTP da OmniRoute ke tura buƙatu zuwa gare ta amma **ba ya** sarrafa ta
+   - `external` — maƙurar HTTP da 67router ke tura buƙatu zuwa gare ta amma **ba ya** sarrafa ta
      (ana saita ta da URL na tushe daga env).
    - `disabled` — an yi masa rajista amma ba za a iya zaɓarsa ba.
 2. **Ginshikin zaɓi** (backend na sarrafa hanya ta relay) — _ko relay yana tura buƙatu zuwa gare shi_:

@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Is féidir le OmniRoute glaonna gréasáin HTTP a sheoladh nuair a tharlaíonn teagmhais ardáin. Úsáid iad chun comhtháthú a dhéanamh le
+Is féidir le 67router glaonna gréasáin HTTP a sheoladh nuair a tharlaíonn teagmhais ardáin. Úsáid iad chun comhtháthú a dhéanamh le
 Slack, PagerDuty, Datadog, seirbhísí foláirimh inmheánacha, nó aon ghlacadóir HTTP.
 
 Síníonn an seoltóir gach seachadadh le HMAC-SHA256, déanann sé iarracht eile tar éis
@@ -54,7 +54,7 @@ earráidí gach glao gréasáin ionas nach féidir le glacadóir lochtach amhái
 
 ## Síniú HMAC
 
-Nuair a bhíonn `secret` ag glao gréasáin, síníonn OmniRoute an corp JSON agus seolann sé:
+Nuair a bhíonn `secret` ag glao gréasáin, síníonn 67router an corp JSON agus seolann sé:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Soláthraíonn leathanach an phainéil ag `/dashboard/webhooks` (féach
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

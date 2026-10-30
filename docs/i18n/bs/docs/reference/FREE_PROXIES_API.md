@@ -6,7 +6,7 @@
 
 # API za besplatne proksije
 
-OmniRoute isporučuje odabranu grupu besplatnih proksija u tabeli `free_proxies`, sinhronizovanih sa eksternih provajdera (1proxy, proxifly, iplocate, webshare). Kontrolna tabla ih prikazuje pod **Settings → Free Proxies**. Ovaj dokument pokriva filtriranje na strani servera, sortiranje, brojanje i izvještavanje o greškama pri sinhronizaciji koje izlaže ruta za listanje.
+67router isporučuje odabranu grupu besplatnih proksija u tabeli `free_proxies`, sinhronizovanih sa eksternih provajdera (1proxy, proxifly, iplocate, webshare). Kontrolna tabla ih prikazuje pod **Settings → Free Proxies**. Ovaj dokument pokriva filtriranje na strani servera, sortiranje, brojanje i izvještavanje o greškama pri sinhronizaciji koje izlaže ruta za listanje.
 
 ## Ruta za listanje — `GET /api/settings/free-proxies`
 

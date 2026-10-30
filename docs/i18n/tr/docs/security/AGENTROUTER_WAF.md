@@ -45,7 +45,7 @@ WAF yalnızca `messages[].content` alanını inceler. Şunları **incelemez**:
 
 Kısa bir zaman aralığında yaklaşık 5 hızlı istekten sonra WAF, normalde geçecek içerikleri engellemeye başlar. Kota, yaklaşık 5–10 saniyelik boşta kalma süresinin ardından gevşer. Bu, Claude Code veya Codex CLI art arda hızlı biçimde birden fazla araç kullanımı / mesaj gönderme çağrısı yaptığında aralıklı `400 content-blocked` hatalarına neden olan, IP ve anahtara bağlı aynı hız sınırlayıcıdır.
 
-## OmniRoute'ta hâlihazırda uygulanan önlemler
+## 67router'ta hâlihazırda uygulanan önlemler
 
 1. **`open-sse/services/wafRateLimit.ts`** — herhangi bir `agentrouter:*` URL'sine yapılan giden istekler arasında en az 500 ms boşluk olmasını zorunlu kılan ani yük koruması. Bu boşluk, insanların gecikmeyi algılama eşiğinin oldukça altındadır ve WAF'nin normal trafikte etkinleşmesini önler.
 

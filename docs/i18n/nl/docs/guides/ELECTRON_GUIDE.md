@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `electron/`-workspace
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute wordt geleverd met een platformonafhankelijke desktop-app (Windows / macOS / Linux), gebouwd met
+67router wordt geleverd met een platformonafhankelijke desktop-app (Windows / macOS / Linux), gebouwd met
 **Electron 41** + **electron-builder 26.10**. De desktop-app start de zelfstandige Next.js-server
 als een onderliggend proces, verwijst ernaar vanuit een `BrowserWindow` en voegt een
 systeemvak, automatische updater, IPC-bridge en configuratievrije initialisatie van geheimen toe.
@@ -47,7 +47,7 @@ Bevestigd op basis van `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (Node-API-prebuilds — geen Electron-rebuild) |
 | App-versie         | `3.8.0`                                                     |
 | App-id             | `online.omniroute.desktop`                                  |
-| Productnaam        | `OmniRoute`                                                 |
+| Productnaam        | `67router`                                                  |
 
 ## Scripts (`package.json` in de root)
 
@@ -198,7 +198,7 @@ bij voorkeur het `.env`-bestand en sluit de app daarna volledig af (systeemvak, 
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, verkeerslichtknoppen op `{ x: 16, y: 16 }`.
 - Windows/Linux: systeemeigen titelbalk.
-- De sluitknop minimaliseert naar het systeemvak; het systeemvakmenu bevat **OmniRoute openen**, **Dashboard openen** (externe browser), het submenu **Serverpoort**, **Controleren op updates** en **Afsluiten**.
+- De sluitknop minimaliseert naar het systeemvak; het systeemvakmenu bevat **67router openen**, **Dashboard openen** (externe browser), het submenu **Serverpoort**, **Controleren op updates** en **Afsluiten**.
 
 ## Content Security Policy
 

@@ -7,7 +7,7 @@
 > **Sumber rujukan utama:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute menangkap `reasoning_content` pembantu yang dihasilkan oleh model mod pemikiran dan memainkannya semula secara telus pada permintaan berbilang giliran apabila penyedia huluan memerlukannya. Ini menghapuskan ralat HTTP 400 yang dicetuskan oleh penyedia ketat apabila sejarah perbualan klien tidak mengandungi penaakulan daripada giliran sebelumnya.
+67router menangkap `reasoning_content` pembantu yang dihasilkan oleh model mod pemikiran dan memainkannya semula secara telus pada permintaan berbilang giliran apabila penyedia huluan memerlukannya. Ini menghapuskan ralat HTTP 400 yang dicetuskan oleh penyedia ketat apabila sejarah perbualan klien tidak mengandungi penaakulan daripada giliran sebelumnya.
 
 ## Mengapa Ini Wujud
 
@@ -17,7 +17,7 @@ Beberapa penyedia mod pemikiran menolak giliran susulan melainkan **mesej pemban
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Namun, klien biasa (Cursor, Cline, Roo Code, OpenAI SDK) membuang `reasoning_content` daripada sejarah yang dimainkan semula. OmniRoute memulihkannya daripada cache sebelah pelayan supaya permintaan yang diterima oleh penyedia huluan adalah konsisten. Isu #1628 memperkenalkan pengekalan hibrid memori/SQLite supaya cache kekal tersedia selepas proses dimulakan semula.
+Namun, klien biasa (Cursor, Cline, Roo Code, OpenAI SDK) membuang `reasoning_content` daripada sejarah yang dimainkan semula. 67router memulihkannya daripada cache sebelah pelayan supaya permintaan yang diterima oleh penyedia huluan adalah konsisten. Isu #1628 memperkenalkan pengekalan hibrid memori/SQLite supaya cache kekal tersedia selepas proses dimulakan semula.
 
 ## Seni Bina
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute skanner feilsvar fra oppstrømsleverandører etter signaler som indikerer at en leverandørkonto
+67router skanner feilsvar fra oppstrømsleverandører etter signaler som indikerer at en leverandørkonto
 **er permanent ubrukelig** (suspendert / deaktivert / utestengt for brudd på vilkårene), og flytter
 den aktuelle tilkoblingen til en **terminal `banned`-tilstand** når et slikt signal
 oppdages, slik at den ikke lenger velges for forespørsler. Dette er hva innstillingskortet

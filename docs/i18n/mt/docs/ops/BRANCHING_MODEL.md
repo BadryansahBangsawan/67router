@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute juża mudell ta’ rilaxx b’**ċikli paralleli**: fergħa ddedikata `release/vX.Y.Z`
+67router juża mudell ta’ rilaxx b’**ċikli paralleli**: fergħa ddedikata `release/vX.Y.Z`
 għaċ-ċiklu attiv, `main` għal-linja ppubblikata, u tag immutabbli
 `vX.Y.Z` meta dak iċ-ċiklu jiġi rilaxxat. Huwa mistenni li tara commits jidħlu fuq `release/*` _u_ fuq
 `main` — din mhijiex konfużjoni.

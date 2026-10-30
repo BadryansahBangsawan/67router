@@ -179,7 +179,7 @@ script, so those skipped cases are not runtime proof.
 
 ### Setup
 
-1. Start OmniRoute with `npm run dev` or a built installation.
+1. Start 67router with `npm run dev` or a built installation.
 2. Open Dashboard → Providers → Add Provider.
 3. Select the Web Cookie category and Claude Web.
 4. Paste the full Cookie header copied from an authenticated `claude.ai` request.

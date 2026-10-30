@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Sağlayıcıları yapılandırma, kombinasyonlar oluşturma, CLI araçlarını entegre etme ve OmniRoute'u dağıtma konusunda eksiksiz kılavuz.
+Sağlayıcıları yapılandırma, kombinasyonlar oluşturma, CLI araçlarını entegre etme ve 67router'u dağıtma konusunda eksiksiz kılavuz.
 
 ---
 
@@ -137,11 +137,11 @@ Modeller:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Uzman İpucu:** Karmaşık görevler için Opus'u, hız için Sonnet'i kullanın. OmniRoute, kotayı model bazında takip eder!
+**Uzman İpucu:** Karmaşık görevler için Opus'u, hız için Sonnet'i kullanın. 67router, kotayı model bazında takip eder!
 
-OmniRoute ana makinesinde tarayıcı yok mu? Claude Code'da oturum açılmış herhangi bir yerde `claude setup-token` komutunu çalıştırın ve bir yıllık token'ı **Kurulum Token'ı** sekmesine yapıştırın. Bkz. [Kurulum token'ıyla Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+67router ana makinesinde tarayıcı yok mu? Claude Code'da oturum açılmış herhangi bir yerde `claude setup-token` komutunu çalıştırın ve bir yıllık token'ı **Kurulum Token'ı** sekmesine yapıştırın. Bkz. [Kurulum token'ıyla Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Claude ve Claude Code uyumlu rotalar, Opus ve Sonnet modelleri için `max` düşünme eforunu korur. Haiku modelleri `max` efor düzeyini kabul etmediğinden OmniRoute, isteği üst sağlayıcıya göndermeden önce yüksek bir düşünme bütçesine düşürür.
+Claude ve Claude Code uyumlu rotalar, Opus ve Sonnet modelleri için `max` düşünme eforunu korur. Haiku modelleri `max` efor düzeyini kabul etmediğinden 67router, isteği üst sağlayıcıya göndermeden önce yüksek bir düşünme bütçesine düşürür.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,16 +261,16 @@ Maliyet: şu anda $0 olarak listelenmektedir; koşullar ve kullanılabilirlik de
 
 ### Cursor IDE
 
-**Cursor'ı bir OmniRoute istemcisi olarak kullanma** (Cursor sohbetini OmniRoute üzerinden yönlendirin):
+**Cursor'ı bir 67router istemcisi olarak kullanma** (Cursor sohbetini 67router üzerinden yönlendirin):
 
 ```
 Ayarlar → Modeller → Gelişmiş:
   OpenAI API Temel URL'si: http://localhost:20128/v1
-  OpenAI API Anahtarı: [OmniRoute kontrol panelinden]
+  OpenAI API Anahtarı: [67router kontrol panelinden]
   Model: cc/claude-opus-4-7
 ```
 
-**OmniRoute'u bir Cursor sağlayıcısı olarak kullanma** (OmniRoute, Cursor üst hizmetini çağırır): tercihen
+**67router'u bir Cursor sağlayıcısı olarak kullanma** (67router, Cursor üst hizmetini çağırır): tercihen
 **Kontrol Paneli → Sağlayıcılar → Cursor → Cursor ile Giriş Yap** yolunu kullanın. Docker'da
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md) belgesine bakın.
 
@@ -357,7 +357,7 @@ CLI, `.env` dosyasını `~/.omniroute/.env` veya `./.env` konumundan otomatik ol
 
 ### Sistem tepsisi modu
 
-OmniRoute'u sistem tepsisinde başlatın:
+67router'u sistem tepsisinde başlatın:
 
 ```bash
 omniroute serve --tray
@@ -374,7 +374,7 @@ Sistem tepsisi modu macOS, Windows ve grafiksel Linux oturumlarını destekler. 
 - Kontrol panelini açma.
 - `/dashboard/logs` sayfasını açma.
 - Otomatik başlatma ayarını değiştirme.
-- OmniRoute'u durdurma.
+- 67router'u durdurma.
 
 `--tray` seçeneğini şu seçeneklerle birlikte kullanmayın:
 
@@ -400,14 +400,14 @@ omniroute autostart disable
 
 ### Kaldırma
 
-OmniRoute'a artık ihtiyacınız kalmadığında, temiz bir kaldırma işlemi için iki hızlı betik sunuyoruz:
+67router'a artık ihtiyacınız kalmadığında, temiz bir kaldırma işlemi için iki hızlı betik sunuyoruz:
 
 | Komut                    | İşlem                                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `npm run uninstall`      | Sistem uygulamasını kaldırır ancak `~/.omniroute` içindeki **veritabanınızı ve yapılandırmalarınızı korur**. |
 | `npm run uninstall:full` | Uygulamayı kaldırır VE **tüm yapılandırmaları, anahtarları ve veritabanlarını kalıcı olarak siler**.         |
 
-> Not: Bu komutları çalıştırmak için OmniRoute proje klasörüne gidin (projeyi klonladıysanız) ve komutları çalıştırın. Alternatif olarak, global olarak kurduysanız yalnızca `npm uninstall -g omniroute` komutunu çalıştırabilirsiniz.
+> Not: Bu komutları çalıştırmak için 67router proje klasörüne gidin (projeyi klonladıysanız) ve komutları çalıştırın. Alternatif olarak, global olarak kurduysanız yalnızca `npm uninstall -g omniroute` komutunu çalıştırabilirsiniz.
 
 ### VPS Dağıtımı
 
@@ -479,7 +479,7 @@ CLI ikili dosyalarıyla ana sistemle entegre mod için ana belgelerdeki Docker b
 
 ### Void Linux (xbps-src)
 
-Void Linux kullanıcıları, `xbps-src` çapraz derleme çerçevesini kullanarak OmniRoute'u yerel olarak paketleyip kurabilir. Bu işlem, gerekli `better-sqlite3` yerel bağlamalarıyla birlikte bağımsız Node.js derlemesini otomatikleştirir.
+Void Linux kullanıcıları, `xbps-src` çapraz derleme çerçevesini kullanarak 67router'u yerel olarak paketleyip kurabilir. Bu işlem, gerekli `better-sqlite3` yerel bağlamalarıyla birlikte bağımsız Node.js derlemesini otomatikleştirir.
 
 <details>
 <summary><b>xbps-src şablonunu görüntüle</b></summary>
@@ -659,7 +659,7 @@ Ortam değişkenlerinin tam listesi için [README](../README.md) dosyasına bak�
 
 **Diğer uyumlu sağlayıcılar** (seçili): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (`aws-bedrock` aracılığıyla), `azure-ai`, `openrouter` (doğrudan aktarılan katalog), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Her biri `providerRegistry.ts` içinde kendi model listesini tutar ve sağlayıcı bir `/models` uç noktası sunduğunda otomatik olarak eşitlenebilir.
 
-**Model kimlikleri hakkında not:** OmniRoute, sağlayıcıya özgü kimlikleri (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) kullanır. Bazı kimlikler noktalı sürümler içerir; çünkü üst kaynak API bunları bu biçimde bekler. Bir model yukarıda listelenmiyorsa kullanılabilirliğini doğrulamak için `omniroute models --search <term>` komutunu çalıştırın veya `GET /api/models/catalog` uç noktasına istek gönderin.
+**Model kimlikleri hakkında not:** 67router, sağlayıcıya özgü kimlikleri (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) kullanır. Bazı kimlikler noktalı sürümler içerir; çünkü üst kaynak API bunları bu biçimde bekler. Bir model yukarıda listelenmiyorsa kullanılabilirliğini doğrulamak için `omniroute models --search <term>` komutunu çalıştırın veya `GET /api/models/catalog` uç noktasına istek gönderin.
 
 </details>
 
@@ -727,9 +727,9 @@ düğümün önekinin ayrılmış olup olmadığını kontrol edin: Bu kural uyg
 düğümler hâlâ saklanır, ancak önekleri yerleşik sağlayıcıya yönlendirilir. Düğümü düzenleyin ve
 ona yeni bir önek verin.
 
-### OmniRoute Eşlerini Zincirleme
+### 67router Eşlerini Zincirleme
 
-Başka bir OmniRoute ağ geçidi, **Özel OpenAI uyumlu** sağlayıcı olarak eklenebilir. Eşin
+Başka bir 67router ağ geçidi, **Özel OpenAI uyumlu** sağlayıcı olarak eklenebilir. Eşin
 `/v1` temel URL'sini ve söz konusu eş tarafından verilmiş, en az ayrıcalıklı özel bir API anahtarını kullanın.
 
 Karşılıklı veya çok atlamalı zincirler için her ağ geçidinde isteğe bağlı döngü korumasını etkinleştirin:
@@ -755,7 +755,7 @@ atlama bütçesini HTTP `508 Loop Detected` ile reddeder; sıradan üst sağlay�
 Eş zincirleme, veritabanı çoğaltması veya ana makine yük devretmesi değildir. Her ağ geçidi bağımsız
 SQLite durumu, önbellekler, hız sayaçları ve oturumlar tutar. Etkin/pasif veya etkin/etkin kullanılabilirlik
 için sağlık kontrolü yapılan bir ters proxy ya da istemci yük devretmesi kullanın ve tek bir SQLite
-veritabanını hiçbir zaman çalışan birden fazla OmniRoute örneğine bağlamayın.
+veritabanını hiçbir zaman çalışan birden fazla 67router örneğine bağlamayın.
 
 ### Özel Sağlayıcı Rotaları
 
@@ -806,7 +806,7 @@ Sağlayıcıya göre gruplandırılmış modelleri türleriyle (`chat`, `embeddi
 - Docker ve diğer self-hosted dağıtımlarda **Dashboard → Endpoints** üzerinden kullanılabilir
 - Mevcut OpenAI uyumlu `/v1` endpoint'inize yönlendirme yapan geçici bir `https://*.trycloudflare.com` URL'si oluşturur
 - İlk etkinleştirme, `cloudflared` aracını yalnızca gerektiğinde yükler; sonraki yeniden başlatmalarda aynı yönetilen binary yeniden kullanılır
-- Quick Tunnel'lar, OmniRoute veya container yeniden başlatıldıktan sonra otomatik olarak geri yüklenmez; gerektiğinde dashboard üzerinden yeniden etkinleştirin
+- Quick Tunnel'lar, 67router veya container yeniden başlatıldıktan sonra otomatik olarak geri yüklenmez; gerektiğinde dashboard üzerinden yeniden etkinleştirin
 - Tunnel URL'leri geçicidir ve tunnel'ı her durdurup başlattığınızda değişir
 - Yönetilen Quick Tunnel'lar, kısıtlı container'larda gürültülü QUIC UDP buffer uyarılarını önlemek için varsayılan olarak HTTP/2 aktarımını kullanır
 - Yönetilen aktarım seçimini geçersiz kılmak istiyorsanız `CLOUDFLARED_PROTOCOL=quic` veya `auto` olarak ayarlayın
@@ -823,7 +823,7 @@ Sağlayıcıya göre gruplandırılmış modelleri türleriyle (`chat`, `embeddi
 
 ### Translator Playground
 
-**Dashboard → Translator** üzerinden erişin. OmniRoute'un sağlayıcılar arasındaki API isteklerini nasıl çevirdiğini hata ayıklayın ve görselleştirin.
+**Dashboard → Translator** üzerinden erişin. 67router'un sağlayıcılar arasındaki API isteklerini nasıl çevirdiğini hata ayıklayın ve görselleştirin.
 
 | Mod              | Amaç                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
@@ -876,7 +876,7 @@ Harici oturum yakınlığı için (örneğin reverse proxy'lerin arkasındaki Cl
 X-Session-Id: your-session-key
 ```
 
-OmniRoute ayrıca `x_session_id` değerini kabul eder ve etkin oturum anahtarını `X-OmniRoute-Session-Id` içinde döndürür.
+67router ayrıca `x_session_id` değerini kabul eder ve etkin oturum anahtarını `X-OmniRoute-Session-Id` içinde döndürür.
 
 Nginx kullanıyorsanız ve alt çizgi biçimli header'lar gönderiyorsanız şunu etkinleştirin:
 
@@ -910,7 +910,7 @@ Chain: production-fallback
 
 ### Yaygın Sağlayıcı Kombinasyonları ve Yönlendirme Pattern'leri
 
-OmniRoute'ta birden fazla sağlayıcıyı birleştirmek ve aralarında yönlendirme yapmak için örnek pattern'ler:
+67router'ta birden fazla sağlayıcıyı birleştirmek ve aralarında yönlendirme yapmak için örnek pattern'ler:
 
 #### 1. Kodlama Agent'ı Combo'su: Maliyet/Hız Fallback'i ile Üst Düzey Akıl Yürütme
 
@@ -971,7 +971,7 @@ Görüntü anlama ve kod oluşturmayı içeren iş akışları için özelleşti
 
 **Dashboard → Settings → Resilience** üzerinden yapılandırın.
 
-OmniRoute, sağlayıcı düzeyinde dayanıklılığı beş bileşenle uygular:
+67router, sağlayıcı düzeyinde dayanıklılığı beş bileşenle uygular:
 
 1. **İstek Kuyruğu ve Hız Ayarlama** — Sistem düzeyinde istek şekillendirme:
    - **Dakika Başına İstek (RPM)** — Hesap başına dakikadaki maksimum istek sayısı
@@ -996,7 +996,7 @@ OmniRoute, sağlayıcı düzeyinde dayanıklılığı beş bileşenle uygular:
 
    Sağlayıcı devre kesicisinin çalışma zamanı durumu yalnızca **Dashboard → Health** bölümünde gösterilir.
 
-4. **Bekleme Süresinin Bitmesini Bekle** — Tüm aday bağlantılar zaten bekleme durumundaysa OmniRoute, en erken bekleme süresinin bitmesini bekleyebilir ve aynı istemci isteğini otomatik olarak yeniden deneyebilir.
+4. **Bekleme Süresinin Bitmesini Bekle** — Tüm aday bağlantılar zaten bekleme durumundaysa 67router, en erken bekleme süresinin bitmesini bekleyebilir ve aynı istemci isteğini otomatik olarak yeniden deneyebilir.
 
 5. **Hız Sınırını Otomatik Algılama** — Üst akış sağlayıcıları açık bekleme aralıkları döndürdüğünde, bu ayar etkinleştirilmişse söz konusu ipuçları yerel bağlantı bekleme süresini geçersiz kılar.
 
@@ -1030,7 +1030,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Kullanım Alanları:**
 
-- OmniRoute'u makineler arasında taşıma
+- 67router'u makineler arasında taşıma
 - Felaket kurtarma için harici yedekler oluşturma
 - Yapılandırmaları ekip üyeleri arasında paylaşma (tümünü dışa aktar → arşivi paylaş)
 
@@ -1082,7 +1082,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Ses Transkripsiyonu
 
-OmniRoute, OpenAI uyumlu endpoint üzerinden ses transkripsiyonunu destekler:
+67router, OpenAI uyumlu endpoint üzerinden ses transkripsiyonunu destekler:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1154,7 +1154,7 @@ yarıştırmasını, TTFT geçmişine göre hedefleri atlamasını veya geri dö
 öngörücü TTFT atlamaları ve proaktif geri dönüş sıkıştırması, daha düşük kuyruk gecikmesi karşılığında yönlendirme/istek
 aslına uygunluğundan ödün verebilir.
 
-Yukarı akış sağlayıcıları katı `max_tokens` / `maxOutputTokens` sınırları gerektirdiğinde **Akıl yürütme token tamponu** özelliğini devre dışı bırakın. Etkinleştirildiğinde birleşik yönlendirme, yalnızca bilinen bir çıktı sınırına sahip modeller için akıl yürütme modeli ek kapasitesi ekler ve güvenli tamponlu değer bu sınırı aşacaksa istemcinin token sınırını değiştirmeden bırakır. İstemci sınırı zaten bilinen bir sınırın üzerindeyse OmniRoute, yukarı akış isteğini göndermeden önce bu değeri söz konusu sınıra düşürür.
+Yukarı akış sağlayıcıları katı `max_tokens` / `maxOutputTokens` sınırları gerektirdiğinde **Akıl yürütme token tamponu** özelliğini devre dışı bırakın. Etkinleştirildiğinde birleşik yönlendirme, yalnızca bilinen bir çıktı sınırına sahip modeller için akıl yürütme modeli ek kapasitesi ekler ve güvenli tamponlu değer bu sınırı aşacaksa istemcinin token sınırını değiştirmeden bırakır. İstemci sınırı zaten bilinen bir sınırın üzerindeyse 67router, yukarı akış isteğini göndermeden önce bu değeri söz konusu sınıra düşürür.
 
 ---
 
@@ -1177,7 +1177,7 @@ Yukarı akış sağlayıcıları katı `max_tokens` / `maxOutputTokens` sınırl
 
 ## 🤖 Otomatik Yönlendirme (Sıfır yapılandırma)
 
-OmniRoute, bağlı tüm sağlayıcılar arasından her istek için en iyi modeli seçen **puan odaklı bir otomatik yönlendiriciyle** birlikte gelir — yönetilmesi gereken bir kombinasyon yoktur. İsteği `auto/*` öneklerinden biriyle göndermeniz yeterlidir; OmniRoute gecikme süresi, maliyet, başarı oranı, bağlam uyumu, modelin göreve uygunluğu, son hatalar, kota ve devre kesici durumuna göre adayları puanlayarak anında sanal bir kombinasyon oluşturur.
+67router, bağlı tüm sağlayıcılar arasından her istek için en iyi modeli seçen **puan odaklı bir otomatik yönlendiriciyle** birlikte gelir — yönetilmesi gereken bir kombinasyon yoktur. İsteği `auto/*` öneklerinden biriyle göndermeniz yeterlidir; 67router gecikme süresi, maliyet, başarı oranı, bağlam uyumu, modelin göreve uygunluğu, son hatalar, kota ve devre kesici durumuna göre adayları puanlayarak anında sanal bir kombinasyon oluşturur.
 
 | Önek           | Optimizasyon hedefi                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------ |
@@ -1208,7 +1208,7 @@ Otomatik yönlendirici; puanlama ağırlıklarının nasıl ayarlanacağı, sağ
 
 ## 🔌 MCP ve A2A Entegrasyonu
 
-OmniRoute hem bir **MCP sunucusudur** (Model Context Protocol) hem de bir **A2A sunucusudur** (Agent-to-Agent JSON-RPC 2.0). MCP uyumlu herhangi bir IDE veya aracı ana makinesi, OmniRoute araçlarını doğrudan çağırabilir — ek bir sarmalayıcı gerekmez.
+67router hem bir **MCP sunucusudur** (Model Context Protocol) hem de bir **A2A sunucusudur** (Agent-to-Agent JSON-RPC 2.0). MCP uyumlu herhangi bir IDE veya aracı ana makinesi, 67router araçlarını doğrudan çağırabilir — ek bir sarmalayıcı gerekmez.
 
 ### MCP aktarımları
 
@@ -1243,7 +1243,7 @@ MCP şu anda 32 adlandırılmış kapsam tanımlar. Her Bearer anahtarı belirli
 
 ## 🧠 Beceri Sistemi
 
-OmniRoute, ajanların ve A2A uç noktasının alana özgü rutinleri (ör. `code-review`, `summarize`, `extract-facts`, `web-research`) çalıştırabilmesi için genişletilebilir bir **beceri çerçevesi** (`src/lib/skills/`) sunar.
+67router, ajanların ve A2A uç noktasının alana özgü rutinleri (ör. `code-review`, `summarize`, `extract-facts`, `web-research`) çalıştırabilmesi için genişletilebilir bir **beceri çerçevesi** (`src/lib/skills/`) sunar.
 
 - **Pazar Yeri Arayüzü** — **Panel → Beceriler** bölümünden becerilere göz atın ve bunları yükleyin
 - **Anahtar başına kapsamlar** — Hangi API anahtarlarının hangi becerileri çağırabileceğini kısıtlayın
@@ -1255,7 +1255,7 @@ Tam referans: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Bellek Sistemi
 
-OmniRoute, hibrit erişimle **uzun süreli konuşma belleğini** kalıcı olarak saklar:
+67router, hibrit erişimle **uzun süreli konuşma belleğini** kalıcı olarak saklar:
 
 - Geçmiş konuşma sıralarında anahtar kelime araması için **SQLite FTS5**
 - Anlamsal hatırlama için **Qdrant vektör deposu** (isteğe bağlı)
@@ -1268,7 +1268,7 @@ Bellekleri **Panel → Bellek** bölümünden yönetin (arama, düzenleme, dış
 
 ## 🔔 Webhook'lar
 
-Gerçek zamanlı izleme ve otomasyon için OmniRoute olaylarına abone olun.
+Gerçek zamanlı izleme ve otomasyon için 67router olaylarına abone olun.
 
 - Hedef URL ve HMAC imzalama gizli anahtarıyla **Panel → Webhook'lar** bölümünde bir webhook oluşturun
 - Kullanılabilir olaylar: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1281,11 +1281,11 @@ Gerçek zamanlı izleme ve otomasyon için OmniRoute olaylarına abone olun.
 
 ## ☁️ Bulut Ajanları
 
-OmniRoute, uzun süreli görevleri yerel yönlendirmenizi yönettiğiniz aynı panelden gönderebilmeniz için bulut kodlama ajanlarıyla (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) entegre olur.
+67router, uzun süreli görevleri yerel yönlendirmenizi yönettiğiniz aynı panelden gönderebilmeniz için bulut kodlama ajanlarıyla (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) entegre olur.
 
 - **Panel → Bulut Ajanları** bölümünden veya `POST /api/v1/agents/tasks` aracılığıyla görevler oluşturun
 - Her görev için durumu, günlükleri ve çıktıları takip edin
-- Her sağlayıcı için kendi API anahtarınızı kullanın — kimlik bilgileri OmniRoute örneğinden asla ayrılmaz
+- Her sağlayıcı için kendi API anahtarınızı kullanın — kimlik bilgileri 67router örneğinden asla ayrılmaz
 
 Tam referans: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1293,7 +1293,7 @@ Tam referans: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Programatik Yönetim
 
-Her OmniRoute kaynağını (sağlayıcılar, kombinasyonlar, anahtarlar, ayarlar) **`manage` kapsamına sahip bir Bearer anahtarı** kullanarak HTTP üzerinden yönetebilirsiniz.
+Her 67router kaynağını (sağlayıcılar, kombinasyonlar, anahtarlar, ayarlar) **`manage` kapsamına sahip bir Bearer anahtarı** kullanarak HTTP üzerinden yönetebilirsiniz.
 
 Anahtarı **Panel → API Anahtarları → Yeni Anahtar → Kapsam: manage** bölümünden oluşturun, ardından:
 
@@ -1326,7 +1326,7 @@ Uç noktaların tam kataloğu ve istek/yanıt şemaları için [API_REFERENCE.md
 
 ## 💻 Dahili CLI
 
-OmniRoute; kurulum, tanılama ve çalışma zamanı denetimi için dahili bir CLI (`omniroute …`) ile birlikte gelir. Bu, üçüncü taraf CLI'ları (Claude Code, Cursor, Codex, Cline, …) OmniRoute ile iletişim kurabilecek şekilde yapılandıran panodaki **"CLI Araçları" sayfasından ayrıdır**.
+67router; kurulum, tanılama ve çalışma zamanı denetimi için dahili bir CLI (`omniroute …`) ile birlikte gelir. Bu, üçüncü taraf CLI'ları (Claude Code, Cursor, Codex, Cline, …) 67router ile iletişim kurabilecek şekilde yapılandıran panodaki **"CLI Araçları" sayfasından ayrıdır**.
 
 ```bash
 omniroute setup                    # Etkileşimli sihirbaz (parola, sağlayıcılar, kombinasyonlar)
@@ -1357,7 +1357,7 @@ omniroute --port 3000              # Sunucuyu özel bir portta başlat
 
 ## 🖥️ Masaüstü Uygulaması (Electron)
 
-OmniRoute; Windows, macOS ve Linux için yerel bir masaüstü uygulaması olarak sunulur.
+67router; Windows, macOS ve Linux için yerel bir masaüstü uygulaması olarak sunulur.
 
 ### Kurulum
 

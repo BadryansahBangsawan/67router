@@ -218,7 +218,7 @@ Saniteringsregler anvendt på `upstreamDetails`:
 3. Dybdegrænse: indlejring ud over 4 niveauer erstattes med strengen `"[truncated]"`.
 4. Arrays begrænses til 32 elementer.
 
-Kun kaldesteder med en parset fejl-body fra udbyderen bør angive `upstreamDetails`. Interne OmniRoute-fejl
+Kun kaldesteder med en parset fejl-body fra udbyderen bør angive `upstreamDetails`. Interne 67router-fejl
 (SSE-parsningsfejl, tomt indhold, guardrail-blokeringer) må ikke inkludere det.
 
 Send IKKE rå `err.stack`, `err.message` eller nogen streng fra en runtime-undtagelse til

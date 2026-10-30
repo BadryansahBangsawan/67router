@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute pakub Cursor plaani **pildigenereerimist** aadressil `POST /v1/images/generations`, kasutades sama teenusepakkuja ID-d nagu vestluse puhul: `cursor` (alias `cu`).
+67router pakub Cursor plaani **pildigenereerimist** aadressil `POST /v1/images/generations`, kasutades sama teenusepakkuja ID-d nagu vestluse puhul: `cursor` (alias `cu`).
 
 | Väli                 | Väärtus                                                                                        |
 | -------------------- | ---------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute pakub Cursor plaani **pildigenereerimist** aadressil `POST /v1/images/
 
 ## Miks Agent CLI?
 
-Cursori vestlus OmniRoutes kasutab teenust `agent.v1.AgentService/Run` (protobuf). See tee **lükkab tagasi** sisseehitatud klienditööriistad (shell, write, …). Pildigenereerimine on Cursori omatööriist, mida **`agent` CLI** käitab kasutajakonto litsentsi alusel. Seetõttu käivitab pilditöötleja `agent`-i lukustatud viiba ja iga päringu jaoks loodud ajutise tööruumiga (sama ülesehitusega nagu kogukonna kasutajakonto sillad) ning tagastab seejärel OpenAI-ga ühilduva `b64_json`-i.
+Cursori vestlus 67routers kasutab teenust `agent.v1.AgentService/Run` (protobuf). See tee **lükkab tagasi** sisseehitatud klienditööriistad (shell, write, …). Pildigenereerimine on Cursori omatööriist, mida **`agent` CLI** käitab kasutajakonto litsentsi alusel. Seetõttu käivitab pilditöötleja `agent`-i lukustatud viiba ja iga päringu jaoks loodud ajutise tööruumiga (sama ülesehitusega nagu kogukonna kasutajakonto sillad) ning tagastab seejärel OpenAI-ga ühilduva `b64_json`-i.
 
 ## Juurdepääsupiirang (ranged reeglid nr 15 ja 17)
 
@@ -37,7 +37,7 @@ mida rakendatakse ülejäänud `LOCAL_ONLY` tasemele, vaadake failist
 `CURSOR_IMG_MAX_CONCURRENT` jõustatakse mälusisese loenduri/järjekorraga, mille ulatus
 piirdub Node'i mooduli eksemplariga
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-See piirab õigesti samaaegseid `agent`-i käivitusi ühe OmniRoute'i protsessi sees, kuid
+See piirab õigesti samaaegseid `agent`-i käivitusi ühe 67router'i protsessi sees, kuid
 **ei** koordineeri mitut protsessi/eksemplari, mis jagavad sama Cursori kasutajakohta
 (nt mitme replikaga juurutus) — iga eksemplar rakendab oma sõltumatut piirangut.
 Ühe eksemplariga juurutuse puhul (vaikeseade) on piirang täpne; horisontaalselt
@@ -47,7 +47,7 @@ kohta konservatiivsena või suunata Cursori pildiliiklus ühte eksemplari.
 ## Nõuded
 
 1. Juhtpaneelil ühendatud Cursori konto (OAuth või `crsr_…` API-võti).
-2. Cursori Agenti binaarfail peab olema OmniRoute'i protsessile kättesaadav:
+2. Cursori Agenti binaarfail peab olema 67router'i protsessile kättesaadav:
    - keskkonnamuutuja `CURSOR_AGENT_BIN=/path/to/agent`, või
    - `~/.local/bin/agent`, või
    - `providerSpecificData.agentBin` Cursori ühenduses.

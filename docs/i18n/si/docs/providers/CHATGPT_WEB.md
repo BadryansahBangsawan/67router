@@ -26,11 +26,11 @@ Tunnel එක අවශ්ය වන්නේ මෙවලම් වාර ස�
 1. **ChatGPT Web (Codex)** සැපයුම්කරු විවෘත කර සම්බන්ධතාවක් එක් කරන්න.
 2. සම්පූර්ණ ChatGPT Cookie ශීර්ෂකය, tunnel ID, runtime key සහ අභිරුචි connector
    නාමය අලවන්න. නව tool-හැකියාව සහිත සැකසුම් සඳහා හරියටම
-   `OmniRoute Codex v2` ලෙස නම් කළ අලුතින් සාදන ලද connector එකක් භාවිත කළ යුතු අතර, Authentication සඳහා None ද Permissions සඳහා Allow all
+   `67router Codex v2` ලෙස නම් කළ අලුතින් සාදන ලද connector එකක් භාවිත කළ යුතු අතර, Authentication සඳහා None ද Permissions සඳහා Allow all
    actions ද සකසා තිබිය යුතුය.
-3. සම්බන්ධතා පරීක්ෂාව ධාවනය කරන්න. OmniRoute විසින් browser-පාදක Temporary Chat එකක් විවෘත කර ගිණුම සඳහා
+3. සම්බන්ධතා පරීක්ෂාව ධාවනය කරන්න. 67router විසින් browser-පාදක Temporary Chat එකක් විවෘත කර ගිණුම සඳහා
    Sol සහ Pro ලබා ගත හැකිදැයි හඳුනා ගනී.
-4. සම්බන්ධතාව සුරකින්න. OmniRoute විසින් අලවන ලද cookie එක සත්යාපිත
+4. සම්බන්ධතාව සුරකින්න. 67router විසින් අලවන ලද cookie එක සත්යාපිත
    Playwright storage state එකෙන් ප්රතිස්ථාපනය කර, සංකේතනය කළ
    credential abstraction එක හරහා runtime key සමඟ එය ගබඩා කරයි.
 
@@ -59,7 +59,7 @@ connector සහ tool round-trip වෙන වෙනම වාර්තා ක�
 
 Free/Go ගිණුම් Luna routes ලබාදෙයි. Sol හැකියාව ඇති ගිණුම් Instant සිට High දක්වා ලබාදෙන අතර, Pro හැකියාව ඇති ගිණුම් ඊට අමතරව Extra High සහ Pro ද ලබාදෙයි. සෑම route එකකටම ස්ථාවර backend model එකක් සහ reasoning effort එකක් ඇත; ගැටෙන පැහැදිලි Responses effort එකක්, තෝරාගත් බ්රවුසර mode එක නිහඬව වෙනස් කිරීම වෙනුවට ආරක්ෂිතව අසාර්ථක වේ.
 
-පැරණි `Codex Native` හෝ `OmniRoute Codex` connector එකක් නැවත නම් කිරීම හෝ යළි භාවිත කිරීම නොකරන්න. ChatGPT connector අනන්යතාව අනුව public MCP contract එක cache කරන අතර, යාවත්කාලීන කළ bridge එක නව සෘජු turn-token contract එකක් භාවිත කරයි. Runtime එක එම legacy අනන්යතා ප්රතික්ෂේප කර නව `OmniRoute Codex v2` connector එකක් අවශ්ය කරයි.
+පැරණි `Codex Native` හෝ `67router Codex` connector එකක් නැවත නම් කිරීම හෝ යළි භාවිත කිරීම නොකරන්න. ChatGPT connector අනන්යතාව අනුව public MCP contract එක cache කරන අතර, යාවත්කාලීන කළ bridge එක නව සෘජු turn-token contract එකක් භාවිත කරයි. Runtime එක එම legacy අනන්යතා ප්රතික්ෂේප කර නව `67router Codex v2` connector එකක් අවශ්ය කරයි.
 
 ## ආරක්ෂක ආකෘතිය
 
@@ -78,19 +78,19 @@ Free/Go ගිණුම් Luna routes ලබාදෙයි. Sol හැකි�
 
 ## දර්ශකයක් රහිත VPS සහ Docker
 
-npm, systemd සහ PM2 ස්ථාපන සඳහා, OmniRoute පොදු Chrome සහ Chromium මාර්ග හඳුනාගනී.
+npm, systemd සහ PM2 ස්ථාපන සඳහා, 67router පොදු Chrome සහ Chromium මාර්ග හඳුනාගනී.
 විකල්පයක් ලෙස, `CHATGPT_WEB_CODEX_CHROME_PATH` සකසන්න. ChatGPT සැබෑ-headless browser ආකාරය ප්රතික්ෂේප කරන බැවින්, runtime වාර හිතාමතාම
-headed Chrome භාවිත කරයි. එබැවින් දර්ශකයක් රහිත සත්කාරකයක් OmniRoute
+headed Chrome භාවිත කරයි. එබැවින් දර්ශකයක් රහිත සත්කාරකයක් 67router
 පුද්ගලික Xvfb දර්ශකයක් සමඟ ධාවනය කළ යුතුය; Chrome මාර්ගය පමණක් සැකසීමෙන් එවැන්නක් නොලැබේ.
 
 Docker `web` profile එක අභ්යන්තර Compose
 ජාලය මත `chatgpt-web-codex-browser` ආරම්භ කරයි. sidecar එක Xvfb තුළ headed Chrome ධාවනය කරන බැවින් භෞතික දර්ශකයක් අවශ්ය නොවේ. එහි CDP
 port එක සත්කාරකයේ ප්රකාශයට පත් නොකෙරේ. ආරක්ෂිත browser profile volume එක
-OmniRoute data volume එකෙන් වෙන්ව පවතින අතර, browser එකට ප්රමාණවත් shared memory ලැබේ. අභ්යන්තර CDP proxy එක
+67router data volume එකෙන් වෙන්ව පවතින අතර, browser එකට ප්රමාණවත් shared memory ලැබේ. අභ්යන්තර CDP proxy එක
 Compose ජාලය තුළ `9223` port එකේ පමණක් සවන් දෙයි; Chrome sidecar එක තුළ loopback වෙතම බැඳී පවතී.
 
 `DATA_DIR` යටතේ ඇති supervisor lease එකක්, එකම tunnel සහ broker state එක
-OmniRoute ක්රියාවලි කිහිපයක් විසින් අයිති කර ගැනීම වළක්වයි. ගැටුමක් doctor මඟින් වාර්තා කෙරේ.
+67router ක්රියාවලි කිහිපයක් විසින් අයිති කර ගැනීම වළක්වයි. ගැටුමක් doctor මඟින් වාර්තා කෙරේ.
 
 ## අන්තර්ක්රියාකාරී ප්රතිසාධනය
 

@@ -111,7 +111,7 @@ testi yoki hujjatlashtirilgan qoʻlda tekshiruv zarur.
 - CLI kataloglari `bin/cli/locales/` ostida alohida joylashgan.
 - ICU placeholderlari va teglarini aynan saqlang. Mahsulot/provayder/model nomlari,
   protokol va header nomlari, buyruqlar, kod/JSON identifikatorlari, URLlar, muhit oʻzgaruvchilari yoki
-  `OmniRoute`, `OAuth`, `MCP` va `A2A` kabi himoyalangan atamalarni tarjima qilmang. Joriy manba roʻyxati:
+  `67router`, `OAuth`, `MCP` va `A2A` kabi himoyalangan atamalarni tarjima qilmang. Joriy manba roʻyxati:
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Yoʻnaltirilgan sikl**
@@ -261,7 +261,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # boshqa joyda (CI’da)
   olmagan nomzod hech qachon ilgari surilmaydi.
 
 Barcha ma’lumotlar git tomonidan e’tiborsiz qoldiriladigan `_artifacts/candidate/` ichiga yoziladi;
-mavjud OmniRoute o‘rnatmasi va uning ma’lumotlar katalogiga hech qachon tegilmaydi. Ilgari surilgan
+mavjud 67router o‘rnatmasi va uning ma’lumotlar katalogiga hech qachon tegilmaydi. Ilgari surilgan
 CLI — `_artifacts/candidate/current/prefix/bin/omniroute`; undan foydalanganda uni o‘zingizning
 `DATA_DIR` qiymatingiz bilan ishga tushiring. Chiqish kodlari: `0` — muvaffaqiyat, `1` — tekshiruv
 yoki ilgari surish muvaffaqiyatsiz, `2` — foydalanish xatosi yoki qurilma mavjud emas.

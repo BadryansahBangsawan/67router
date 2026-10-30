@@ -45,7 +45,7 @@ npm run test:e2e           # ଇଚ୍ଛାଧୀନ, କିନ୍ତୁ ସୁ
 ପୁନଃସ୍ଥାପନ କରେ (ଏକ ଲିକ୍ ହୋଇଥିବା ଟୋକନ୍ ଏକାକୀ ପ୍ରକାଶ କରିପାରିବ ନାହିଁ — କାରଣ କୌଣସି ଟୋକନ୍ ହିଁ ନାହିଁ)।
 
 **ଏକକାଳୀନ ସେଟ୍ଅପ୍ (ମାଲିକ):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none)। ଏହା ଉପଲବ୍ଧ ନହେବା ପର୍ଯ୍ୟନ୍ତ, ସ୍ୱୟଂଚାଳିତ ପଦକ୍ଷେପଟି `ENEEDAUTH` ସହିତ ବିଫଳ ହୁଏ:
 `publish_mode=staged` (ନିମ୍ନରେ) କିମ୍ବା `direct` ସହିତ ପୁନଃ-ଡିସ୍ପାଚ୍ କରନ୍ତୁ।
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **本文档是什么。** 对 OmniRoute 质量门禁系统的批判性评估，
+> **本文档是什么。** 对 67router 质量门禁系统的批判性评估，
 > 将其与行业最佳实践进行比较，**并且**全面汇总所有质量
 > 检查点，同时提供一套**工具无关的复刻方案**，以便将同一套系统应用于
 > 任何项目。基于 2026-06-16 的真实仓库状态生成（并非依赖记忆）。
@@ -99,62 +99,62 @@
 
 ### 1. 风格与格式（确定性、快速）
 
-- **OmniRoute：**通过 lint-staged 在预提交阶段运行 Prettier + ESLint，采用 2 空格缩进/双引号/每行 100 列。
+- **67router：**通过 lint-staged 在预提交阶段运行 Prettier + ESLint，采用 2 空格缩进/双引号/每行 100 列。
 - **通用方案：**一个可自动修复的格式化工具 + 一个代码检查工具，在预提交阶段对暂存文件运行。
 
 ### 2. 类型
 
-- **OmniRoute：**`typecheck:core`（阻断性）+ `typecheck:noimplicit:core`（建议性）+ `type-coverage` 棘轮阈值 92.17% + 每个文件的 any 预算。
+- **67router：**`typecheck:core`（阻断性）+ `typecheck:noimplicit:core`（建议性）+ `type-coverage` 棘轮阈值 92.17% + 每个文件的 any 预算。
 - **通用方案：**在 CI 中执行严格类型检查 + 只升不降的类型覆盖率指标 + 每个文件的 `any`/逃生舱预算。
 
 ### 3. 测试（强度）
 
-- **OmniRoute：**2 个互不重叠的运行器（Node 原生 + vitest）、8 个分片、全局覆盖率 60/60/60/60 + 约 76% 的棘轮阈值 + **关键模块的 8 个逐模块最低阈值** + 每夜属性测试 + 每夜**变异测试**。
+- **67router：**2 个互不重叠的运行器（Node 原生 + vitest）、8 个分片、全局覆盖率 60/60/60/60 + 约 76% 的棘轮阈值 + **关键模块的 8 个逐模块最低阈值** + 每夜属性测试 + 每夜**变异测试**。
 - **通用方案：**测试运行器 + **绝对**覆盖率下限（防止归零）+ 覆盖率**棘轮阈值**（防止回退）+ **高风险代码的逐模块最低阈值**（反古德哈特定律）+ 针对纯逻辑的基于属性的测试 + 每夜运行**变异测试**，将其作为衡量测试质量的真正指标。
 
 ### 4. 测试策略（防钻空子）
 
-- **OmniRoute：**`pr-test-policy`（生产代码必须有测试）、`check-test-masking`（阻止弱化断言）、`pr-evidence`（成功声明必须附带证据块）、`test-discovery`（每个测试都必须被某个运行器收集）。
+- **67router：**`pr-test-policy`（生产代码必须有测试）、`check-test-masking`（阻止弱化断言）、`pr-evidence`（成功声明必须附带证据块）、`test-discovery`（每个测试都必须被某个运行器收集）。
 - **通用方案：**“新代码 ⇒ 新测试”门禁 + 断言删除/恒真表达式检测器 + 证据要求（TDD 或持续有效的测试）+ 保证不存在游离于匹配模式之外的孤立测试。
 
 ### 5. 复杂度与代码健康度（棘轮阈值）
 
-- **OmniRoute：**ESLint 警告数（3769↓）、jscpd 重复率（5.72%↓）、圈复杂度+最大行数复杂度（1800↓）、sonarjs 认知复杂度（753↓）、knip 死代码/未使用导出（339↓）、逐文件大小（冻结，只能缩小）、循环依赖（自定义 Tarjan，阻断性）。
+- **67router：**ESLint 警告数（3769↓）、jscpd 重复率（5.72%↓）、圈复杂度+最大行数复杂度（1800↓）、sonarjs 认知复杂度（753↓）、knip 死代码/未使用导出（339↓）、逐文件大小（冻结，只能缩小）、循环依赖（自定义 Tarjan，阻断性）。
 - **通用方案：**对每项健康度指标设置棘轮阈值（警告、重复、圈复杂度**和**认知复杂度、死代码、文件大小、导入循环）。方向始终是“不得回退”。
 
 ### 6. 静态安全（SAST + 密钥）
 
-- **OmniRoute：**CodeQL（告警棘轮阈值 = 0）、gitleaks（`[extend] useDefault=true`——至关重要！）、SonarQube、自定义安全规则（public-creds、error-helper、route-guard-membership、route-validation）。
+- **67router：**CodeQL（告警棘轮阈值 = 0）、gitleaks（`[extend] useDefault=true`——至关重要！）、SonarQube、自定义安全规则（public-creds、error-helper、route-guard-membership、route-validation）。
 - **通用方案：**采用 SAST（CodeQL/Sonar/semgrep）并设置告警棘轮阈值 + 使用**继承默认规则集**的密钥扫描器（覆盖默认规则的自定义配置 = 产生盲区）+ 项目特定的“硬规则”安全门禁。
 
 ### 7. 供应链（依赖项）
 
-- **OmniRoute：**osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX 允许列表）、lockfile-lint（HTTPS+sha512+注册表）、`check-deps` 防 slopsquatting（允许列表 + 包龄 ≥72 小时）。
+- **67router：**osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX 允许列表）、lockfile-lint（HTTPS+sha512+注册表）、`check-deps` 防 slopsquatting（允许列表 + 包龄 ≥72 小时）。
 - **通用方案：**多源 SCA + 许可证允许列表 + 锁文件完整性检查 + 带包龄/typosquatting 检查的依赖项允许列表 + 分组更新机器人。
 
 ### 8. 供应链（构建与发布）
 
-- **OmniRoute：**SBOM（CycloneDX + syft）、SLSA 来源证明（`--provenance`）、OpenSSF Scorecard（每周）、工作流加固（zizmor：artipacked→`persist-credentials:false`、缓存投毒、令牌权限）。
+- **67router：**SBOM（CycloneDX + syft）、SLSA 来源证明（`--provenance`）、OpenSSF Scorecard（每周）、工作流加固（zizmor：artipacked→`persist-credentials:false`、缓存投毒、令牌权限）。
 - **通用方案：**发布时生成 SBOM + 已签名的来源证明（SLSA L2+）+ 定期运行 Scorecard + 加固所有工作流（最小权限令牌、非推送方检出时不持久化凭据、操作按 SHA 固定）。
 
 ### 9. 契约与 API
 
-- **OmniRoute：**oasdiff（OpenAPI 破坏性变更）、schemathesis（每夜契约模糊测试）、openapi-coverage（已文档化路由的百分比，棘轮阈值 38.3%）、openapi-security-tiers（规范与路由守卫对比）。
+- **67router：**oasdiff（OpenAPI 破坏性变更）、schemathesis（每夜契约模糊测试）、openapi-coverage（已文档化路由的百分比，棘轮阈值 38.3%）、openapi-security-tiers（规范与路由守卫对比）。
 - **通用方案：**破坏性变更契约差异检查（oasdiff/buf）+ 基于规范的属性模糊测试（schemathesis）+ 只升不降的文档覆盖率 + 规范↔代码一致性。
 
 ### 10. 文档与国际化（防腐化）
 
-- **OmniRoute：**docs-sync（镜像版本）、docs-counts-sync（文档与代码中的数字）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + 棘轮阈值 80.1%）。
+- **67router：**docs-sync（镜像版本）、docs-counts-sync（文档与代码中的数字）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + 棘轮阈值 80.1%）。
 - **通用方案：**同步文档与代码之间的版本/数量/环境变量（使用门禁，而非依赖信任）+ 验证内部链接 + 只升不降的国际化覆盖率。
 
 ### 11. 防幻觉/一致性（罕见类别）
 
-- **OmniRoute：**known-symbols（字符串分派 ⇒ 真实存在的符号）、provider-consistency、fetch-targets（客户端 fetch ⇒ 真实存在的路由）、docs-symbols、db-rules（硬规则 #2/#5）、migration-numbering。
+- **67router：**known-symbols（字符串分派 ⇒ 真实存在的符号）、provider-consistency、fetch-targets（客户端 fetch ⇒ 真实存在的路由）、docs-symbols、db-rules（硬规则 #2/#5）、migration-numbering。
 - **通用方案：**针对每一处“重复的事实来源”（注册表、字符串分派、跨层引用），设置门禁来证明两端相互匹配。这能捕获类型检查和测试无法发现的腐化问题。
 
 ### 12. 韧性与领域（产品特定）
 
-- **OmniRoute：**chaos（故障注入）、heap-growth（泄漏）、k6（浸泡测试）、promptfoo+garak（针对 LLM 的 OWASP LLM Top 10 红队测试）、3 条韧性法则（断路器/冷却期/锁定）。
+- **67router：**chaos（故障注入）、heap-growth（泄漏）、k6（浸泡测试）、promptfoo+garak（针对 LLM 的 OWASP LLM Top 10 红队测试）、3 条韧性法则（断路器/冷却期/锁定）。
 - **通用方案：**识别**你的**领域中的故障模式，并为每一种模式设置门禁（即使仅每夜运行）。对于 AI 应用：注入攻击红队测试。对于分布式系统：混沌测试 + 泄漏测试 + 浸泡测试。
 
 ---

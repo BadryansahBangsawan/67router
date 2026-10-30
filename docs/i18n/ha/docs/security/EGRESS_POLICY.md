@@ -8,7 +8,7 @@
 
 > **Tushen gaskiya:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute yana ba kowane proxy damar ɗaukar **umarnin dangin adireshin hanyar fita**. Ta tsohuwa, OS ne ke zaɓar IPv4 ko IPv6 (dual-stack, "Happy Eyeballs"). Lokacin da ka saita umarnin zuwa `ipv4` ko `ipv6`, OmniRoute yana ƙayyade kowace haɗi da ke bi ta wannan proxy zuwa dangin da aka zaɓa kuma **yana hana haɗin gaba ɗaya idan ya gaza** maimakon komawa ɗayan dangin.
+67router yana ba kowane proxy damar ɗaukar **umarnin dangin adireshin hanyar fita**. Ta tsohuwa, OS ne ke zaɓar IPv4 ko IPv6 (dual-stack, "Happy Eyeballs"). Lokacin da ka saita umarnin zuwa `ipv4` ko `ipv6`, 67router yana ƙayyade kowace haɗi da ke bi ta wannan proxy zuwa dangin da aka zaɓa kuma **yana hana haɗin gaba ɗaya idan ya gaza** maimakon komawa ɗayan dangin.
 
 Wannan shafin yana bayyana mene ne umarnin, dalilin samuwarsa, inda ake saita shi, da kuma yadda runtime ke warware shi.
 
@@ -122,7 +122,7 @@ Don sauran API na CRUD/ƙayyade proxy, duba [PROXY_GUIDE.md](../ops/PROXY_GUIDE.
 
 ## Yadda `auto` Ke Tantancewa
 
-Lokacin da `family` yake `auto`, OmniRoute **ba ya** ƙara kowace umarni — ana amfani da URL ɗin proxy yadda yake, kuma ana tantance iyalin haɗin ne bisa halayensa na asali.
+Lokacin da `family` yake `auto`, 67router **ba ya** ƙara kowace umarni — ana amfani da URL ɗin proxy yadda yake, kuma ana tantance iyalin haɗin ne bisa halayensa na asali.
 
 A lokacin gina URL (`proxyConfigToUrl` / `normalizeProxyUrl` a cikin `open-sse/utils/proxyDispatcher.ts`), proxy mai `auto` yana samar da URL na yau da kullum ba tare da wata alama ba:
 
@@ -158,7 +158,7 @@ Saboda haka:
 
 Umarnin da ba `auto` ba yana tafiya a matsayin alamar tambaya ta wucin gadi guda ɗaya — `?family=ipv4` ko `?family=ipv6` — wadda ake liƙawa sau ɗaya kacal zuwa URL na proxy da aka daidaita. `normalizeProxyUrl` yana cirewa tare da sake liƙa wannan alama sau ɗaya tak domin kada ta taɓa lalata fassarar port.
 
-Lokacin da ake gina dispatcher, ana karanta alamar sannan a mayar da ita zuwa takamaiman family na haɗi. Idan host ɗin IP literal ne na family na **akasin** wanda aka zaɓa, OmniRoute zai jefa kuskure (ana ƙin ci gaba idan akwai saɓani):
+Lokacin da ake gina dispatcher, ana karanta alamar sannan a mayar da ita zuwa takamaiman family na haɗi. Idan host ɗin IP literal ne na family na **akasin** wanda aka zaɓa, 67router zai jefa kuskure (ana ƙin ci gaba idan akwai saɓani):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Daga nan sai a ɗaure takamaiman family ɗin a kan connector:
 
 ## Dacewar SOCKS5
 
-Ɗaure family yana aiki da SOCKS5 proxies, amma daidaitaccen `fetch-socks` ba ya samar da socket options da ake buƙata don ɗaure family na matakin proxy. OmniRoute yana zuwa da nasa connector domin wannan:
+Ɗaure family yana aiki da SOCKS5 proxies, amma daidaitaccen `fetch-socks` ba ya samar da socket options da ake buƙata don ɗaure family na matakin proxy. 67router yana zuwa da nasa connector domin wannan:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

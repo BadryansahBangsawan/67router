@@ -8,17 +8,17 @@
 
 🌐 **Bahasa:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Masalah umum dan solusi untuk OmniRoute.
+Masalah umum dan solusi untuk 67router.
 
 ---
 
 ## Referensi Cepat
 
-**Baru menggunakan OmniRoute?** Mulai di sini — solusi berikut mengatasi 90% masalah:
+**Baru menggunakan 67router?** Mulai di sini — solusi berikut mengatasi 90% masalah:
 
 | Saya melihat ini                | Artinya                                       | Yang harus dilakukan                                                                             |
 | ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Tidak dapat terhubung"         | OmniRoute tidak berjalan                      | Jalankan `omniroute` atau `docker restart omniroute`                                             |
+| "Tidak dapat terhubung"         | 67router tidak berjalan                       | Jalankan `omniroute` atau `docker restart omniroute`                                             |
 | "Kunci API tidak valid"         | Kunci Anda salah atau kedaluwarsa             | Salin ulang kunci dari situs web penyedia                                                        |
 | "Batas laju terlampaui"         | Anda mengirim terlalu banyak permintaan       | Tunggu 1 menit, atau gunakan `model: "auto"` untuk fallback otomatis                             |
 | "Kuota terlampaui"              | Anda telah menghabiskan kuota gratis/berbayar | Hubungkan lebih banyak penyedia, atau gunakan penyedia gratis (Kiro, Pollinations)               |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # batas penerimaan eksplisit untuk
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # tingkatkan waktu tunggu terbatas melampaui nilai default RATE_LIMIT_MAX_WAIT_MS untuk upstream yang lambat
 ```
 
-Tetapkan variabel tersebut dalam lingkungan proses OmniRoute (daemon, misalnya melalui plist LaunchAgent atau `systemctl edit`), lalu mulai ulang OmniRoute. Flag rotasi adalah pengungkit tunggal dengan dampak terbesar: flag ini mengubah kegagalan total menjadi percobaan ulang transparan terhadap penyedia yang sehat dalam kumpulan.
+Tetapkan variabel tersebut dalam lingkungan proses 67router (daemon, misalnya melalui plist LaunchAgent atau `systemctl edit`), lalu mulai ulang 67router. Flag rotasi adalah pengungkit tunggal dengan dampak terbesar: flag ini mengubah kegagalan total menjadi percobaan ulang transparan terhadap penyedia yang sehat dalam kumpulan.
 
 **Catatan**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` membatasi jumlah permintaan beban berat — berkonteks panjang — yang berjalan secara bersamaan; batas tersebut merupakan gerbang penerimaan, bukan pembatas laju penyedia. **Pembaruan #503-fanout:** variabel ini tidak lagi ditetapkan secara default (sekarang hanya berlaku ketika dikonfigurasi secara eksplisit, seperti di atas) — penerimaan beban berat kini dibatasi oleh anggaran byte yang diperoleh secara otomatis (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) dan menyesuaikan diri berdasarkan batas memori aktual host, sehingga deployment baru seharusnya mengalami jauh lebih sedikit penolakan `503 chat_admission_busy` tanpa perlu menetapkan variabel ini sama sekali; menetapkannya secara eksplisit di sini tetap berfungsi persis seperti yang didokumentasikan. Penggantian eksplisit anggaran byte dibatasi ke 8 MiB–2 GiB. Respons `413 body_exceeds_budget` bukanlah kondisi sementara: tingkatkan anggaran byte tersebut, turunkan `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`, atau tingkatkan batas memori proses. Pelepasan `inflight_bytes_budget` merupakan persaingan sumber daya sementara dan tetap dapat dicoba ulang. Pembatasan laju per penyedia (`open-sse/services/rateLimitManager.ts`) diatur secara terpisah oleh `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH`, dan `RATE_LIMIT_AUTO_ENABLE` — lihat `.env.example`.
 
 **Cara memverifikasi bahwa perbaikan berhasil**: jalankan agen/cron Anda dua kali secara berurutan dalam waktu singkat dan pastikan keduanya berhasil. Sebelum perbaikan, eksekusi kedua biasanya menghasilkan `429`/`401`. Setelah perbaikan, kegagalan (jika ada) dicoba ulang secara transparan dan panggilan selesai. Anda juga dapat menjalankan `curl /monitoring/health` dan memantau bidang `rateLimitedUntil` pada koneksi penyedia serta `circuitBreakers.providerBreakers[].state` untuk penyedia yang terdampak — statusnya merupakan salah satu dari `CLOSED`, `DEGRADED`, `OPEN`, atau `HALF_OPEN` (lihat `src/shared/utils/circuitBreaker.ts`), dan penyedia yang terus mengalami kegagalan akan berubah dari `CLOSED → DEGRADED → OPEN` sebelum jendela pengaturan ulang mengizinkan probe diteruskan (`HALF_OPEN`).
 
-**Jika Anda masih melihat 429**: akun aktif untuk penyedia tersebut benar-benar telah menghabiskan _kuotanya_ (bukan sekadar batas laju). Tambahkan akun kedua untuk penyedia yang sama di dasbor OmniRoute → Providers → Accounts, atau sertakan penyedia gratis lain (misalnya `routeway`, `auggie`). Rotasi hanya membantu mengatasi pembatasan laju/400/401 sementara; kehabisan kuota sepenuhnya memerlukan kredensial kedua atau penyedia lain.
+**Jika Anda masih melihat 429**: akun aktif untuk penyedia tersebut benar-benar telah menghabiskan _kuotanya_ (bukan sekadar batas laju). Tambahkan akun kedua untuk penyedia yang sama di dasbor 67router → Providers → Accounts, atau sertakan penyedia gratis lain (misalnya `routeway`, `auggie`). Rotasi hanya membantu mengatasi pembatasan laju/400/401 sementara; kehabisan kuota sepenuhnya memerlukan kredensial kedua atau penyedia lain.
 
 **Jika Anda melihat 403 pada model visi (`auto/vision`, `bazaarlink/*`)**: akun yang terhubung tidak memiliki paket berbayar yang mencakup visi, atau kunci API memiliki izin yang tidak memadai. Verifikasikan di dasbor penyedia bahwa cakupan kunci mencakup visi/multimodal, atau hubungkan akun tingkat berbayar dan pertahankan akun tersebut sebagai target visi.
 
@@ -71,7 +71,7 @@ Tetapkan variabel tersebut dalam lingkungan proses OmniRoute (daemon, misalnya m
 
 Saat menjalankan `npm install -g omniroute`, Anda mungkin melihat banyak peringatan seperti `npm warn ERESOLVE`, pemberitahuan dependensi peer, dan pesan `deprecated`. **Hal ini sudah diperkirakan dan tidak berbahaya.** Instalasi Anda berhasil jika melihat `added <N> packages` dalam output.
 
-Untuk menyembunyikan peringatan resolusi dependensi peer, gunakan format instalasi yang didukung OmniRoute:
+Untuk menyembunyikan peringatan resolusi dependensi peer, gunakan format instalasi yang didukung 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` hanya menyembunyikan `ERESOLVE` dan pemberitahuan dependensi peer. Pemberitahuan penghentian dukungan tetap terlihat karena berasal dari paket pihak ketiga transitif; pemberitahuan tersebut tidak menunjukkan bahwa instalasi gagal.
 
-Peringatan tersebut berasal dari rentang dependensi peer usang dalam paket pihak ketiga yang tidak dikendalikan oleh OmniRoute:
+Peringatan tersebut berasal dari rentang dependensi peer usang dalam paket pihak ketiga yang tidak dikendalikan oleh 67router:
 
 1. **`marked-terminal` memerlukan `marked >=1 <16`, tetapi yang ditemukan adalah `marked@18`** — dalam praktiknya tetap berfungsi dengan baik; rentang peer upstream tersebut hanya sudah usang.
 2. **`deprecated prebuild-install@7.1.3`** — helper pengambilan biner native transitif. Paket ini tidak
@@ -104,19 +104,19 @@ npm warn install-scripts 7 paket memiliki skrip instalasi yang diblokir karena t
 
 ### Apakah peringatan ini dapat diabaikan?
 
-**Sebagian, tetapi menjalankan aplikasi tanpa skrip tidak disarankan.** OmniRoute menyertakan mekanisme fallback yang aman: jika binding native `better-sqlite3` tidak dapat dimuat dari bundel mandiri, aplikasi akan beralih melalui driver alternatif seperti `node:sqlite` atau `sql.js` (lihat [Resolusi Runtime SQLite](../ops/SQLITE_RUNTIME.md)). Server akan tetap berjalan, tetapi penggunaan fallback WASM seperti `sql.js` akan menonaktifkan mode WAL (Write-Ahead Logging) SQLite serta meningkatkan overhead memori dan sinkronisasi disk.
+**Sebagian, tetapi menjalankan aplikasi tanpa skrip tidak disarankan.** 67router menyertakan mekanisme fallback yang aman: jika binding native `better-sqlite3` tidak dapat dimuat dari bundel mandiri, aplikasi akan beralih melalui driver alternatif seperti `node:sqlite` atau `sql.js` (lihat [Resolusi Runtime SQLite](../ops/SQLITE_RUNTIME.md)). Server akan tetap berjalan, tetapi penggunaan fallback WASM seperti `sql.js` akan menonaktifkan mode WAL (Write-Ahead Logging) SQLite serta meningkatkan overhead memori dan sinkronisasi disk.
 
 ### Skrip mana yang benar-benar diperlukan?
 
-Tidak semua skrip yang diblokir penting untuk menjalankan OmniRoute:
+Tidak semua skrip yang diblokir penting untuk menjalankan 67router:
 
-- **Esensial (`omniroute`, `better-sqlite3`):** OmniRoute berjalan dari bundel aplikasi mandiri Next.js (`dist/`). Selama instalasi, npm mengunduh atau mengompilasi driver SQLite native khusus host di `node_modules/better-sqlite3/` tingkat teratas. Skrip `postinstall` OmniRoute (`scripts/build/postinstall.mjs`) kemudian memverifikasi dan menyalin biner khusus host tersebut ke `dist/node_modules/` agar server mandiri dapat mengaksesnya. Jika skrip postinstall `omniroute` diblokir, langkah penyalinan ini akan dilewati.
+- **Esensial (`omniroute`, `better-sqlite3`):** 67router berjalan dari bundel aplikasi mandiri Next.js (`dist/`). Selama instalasi, npm mengunduh atau mengompilasi driver SQLite native khusus host di `node_modules/better-sqlite3/` tingkat teratas. Skrip `postinstall` 67router (`scripts/build/postinstall.mjs`) kemudian memverifikasi dan menyalin biner khusus host tersebut ke `dist/node_modules/` agar server mandiri dapat mengaksesnya. Jika skrip postinstall `omniroute` diblokir, langkah penyalinan ini akan dilewati.
 - **Opsional/transitif (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Paket-paket ini merupakan alat bantu build, alat pemantau, atau utilitas keychain sistem. Mengizinkannya akan mencegah peringatan build, tetapi paket-paket tersebut tidak diperlukan untuk fungsionalitas perutean inti.
-- **Dikecualikan (`onnxruntime-node`):** Dependensi opsional untuk embedding AI lokal dan **tidak** diperlukan agar OmniRoute dapat berjalan. Skrip postinstall-nya mengunduh aset CUDA berukuran sekitar 300MB dari NuGet; jangan sertakan paket ini dalam daftar izin kecuali Anda memang bermaksud menggunakan akselerasi ONNX lokal pada perangkat keras yang didukung.
+- **Dikecualikan (`onnxruntime-node`):** Dependensi opsional untuk embedding AI lokal dan **tidak** diperlukan agar 67router dapat berjalan. Skrip postinstall-nya mengunduh aset CUDA berukuran sekitar 300MB dari NuGet; jangan sertakan paket ini dalam daftar izin kecuali Anda memang bermaksud menggunakan akselerasi ONNX lokal pada perangkat keras yang didukung.
 
 ### Perbaikan yang disarankan
 
-Untuk mengizinkan skrip instalasi yang diperlukan selama instalasi global dan menghilangkan peringatan, gunakan `--allow-scripts` untuk OmniRoute dan dependensi native-nya:
+Untuk mengizinkan skrip instalasi yang diperlukan selama instalasi global dan menghilangkan peringatan, gunakan `--allow-scripts` untuk 67router dan dependensi native-nya:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ belum terinstal, paket npm tersedia tetapi biner browser tidak ada.
 Playwright sengaja memisahkan pengunduhan browser dari instalasi paket npm,
 sehingga respons ini memang akan muncul hingga browser diinstal.
 
-Untuk instalasi npm global, instal Chromium dari direktori paket OmniRoute
+Untuk instalasi npm global, instal Chromium dari direktori paket 67router
 agar cache browser menjadi milik instalasi Playwright yang sama:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Mulai ulang OmniRoute setelah instalasi, lalu coba kembali permintaan Gemini Web. Jika Anda
-menjalankan OmniRoute dari image Docker, gunakan image `-web` (atau target build
+Mulai ulang 67router setelah instalasi, lalu coba kembali permintaan Gemini Web. Jika Anda
+menjalankan 67router dari image Docker, gunakan image `-web` (atau target build
 `runner-web`), yang menyertakan Chromium dan dependensinya; image dasar tidak
 menyertakannya.
 
@@ -188,7 +188,7 @@ menyertakannya.
 **Ini adalah positif palsu. Tidak ada yang terinfeksi, dan tidak diperlukan tindakan apa pun.**
 
 Avast dan AVG menjalankan heuristik yang menandai file teks biasa/Markdown yang berisi banyak
-tautan yang tampak seperti permintaan HTTP. `README.md` milik OmniRoute disertakan di dalam paket npm (file ini
+tautan yang tampak seperti permintaan HTTP. `README.md` milik 67router disertakan di dalam paket npm (file ini
 tercantum di `package.json` → `files`), sehingga pada instalasi global file tersebut ditempatkan di
 `node_modules/omniroute/README.md` — dan berisi sekitar 15 contoh `http://localhost:20128/...` (endpoint
 HTTP/SSE MCP, URL `.well-known` A2A, dan cuplikan `curl`). Kepadatan tautan tersebut
@@ -205,7 +205,7 @@ dari karantina dengan aman.
 
 1. **Hentikan notifikasi** — kecualikan direktori instalasi di antivirus Anda
    (Avast: Settings → Exceptions), dengan menambahkan jalur `node_modules` global Anda dan/atau
-   direktori data OmniRoute (`~/.omniroute/`).
+   direktori data 67router (`~/.omniroute/`).
 2. **Laporkan positif palsu tersebut** — <https://www.avast.com/false-positive-file-form.php>,
    dengan melampirkan `README.md` yang dikarantina. Inilah perbaikan yang membantu semua orang, karena
    heuristik vendor bereaksi berlebihan terhadap file teks.
@@ -265,7 +265,7 @@ hingga diterapkan, rilis baru dapat kembali mengalami hal ini.
 
 ### Halaman login mengalami crash atau menampilkan kesalahan "Module self-registration"
 
-**Penyebab:** Anda menjalankan versi Node.js di luar batas minimum runtime aman yang disetujui OmniRoute. Kasus yang paling umum adalah menjalankan versi patch Node 22 atau 24 yang lebih lama dan berada di bawah batas minimum keamanan dengan patch yang diwajibkan OmniRoute.
+**Penyebab:** Anda menjalankan versi Node.js di luar batas minimum runtime aman yang disetujui 67router. Kasus yang paling umum adalah menjalankan versi patch Node 22 atau 24 yang lebih lama dan berada di bawah batas minimum keamanan dengan patch yang diwajibkan 67router.
 
 **Gejala:**
 
@@ -281,7 +281,7 @@ hingga diterapkan, rilis baru dapat kembali mengalami hal ini.
    nvm use 24
    ```
 2. Verifikasi versi Anda: `node --version` harus menampilkan `v24.0.0` atau yang lebih baru pada lini LTS 24.x
-3. Instal ulang OmniRoute: `npm install -g omniroute`
+3. Instal ulang 67router: `npm install -g omniroute`
 4. Mulai ulang: `omniroute`
 
 > **Versi aman yang didukung:** `>=22.22.2 <23` atau `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) dan Node.js 26 didukung sepenuhnya.
@@ -364,13 +364,13 @@ omniroute
 
 **Penyebab:** Pada Node.js 22, dispatcher undici@8 tidak kompatibel dengan implementasi bawaan `fetch()` milik Node.
 
-**Perbaikan (v3.5.5+):** OmniRoute kini menggunakan fungsi `fetch()` milik undici sendiri saat dispatcher proxy aktif, sehingga memastikan perilaku yang konsisten. Perbarui ke v3.5.5+.
+**Perbaikan (v3.5.5+):** 67router kini menggunakan fungsi `fetch()` milik undici sendiri saat dispatcher proxy aktif, sehingga memastikan perilaku yang konsisten. Perbarui ke v3.5.5+.
 
 ### Proxy MITM di WSL: aplikasi desktop pada host Windows tidak dicegat
 
-**Penyebab:** Proxy MITM dan sertifikat CA-nya dipasang di lingkungan tempat OmniRoute berjalan. Di WSL, lingkungan tersebut adalah guest Linux, sedangkan aplikasi desktop AI (Kiro, Trae, Copilot, Zed, …) berjalan pada host Windows. Aplikasi host tidak memercayai penyimpanan sertifikat milik guest dan tidak merutekan koneksi melalui proxy sistem milik guest, sehingga pencegatan desktop tidak berjalan di sana.
+**Penyebab:** Proxy MITM dan sertifikat CA-nya dipasang di lingkungan tempat 67router berjalan. Di WSL, lingkungan tersebut adalah guest Linux, sedangkan aplikasi desktop AI (Kiro, Trae, Copilot, Zed, …) berjalan pada host Windows. Aplikasi host tidak memercayai penyimpanan sertifikat milik guest dan tidak merutekan koneksi melalui proxy sistem milik guest, sehingga pencegatan desktop tidak berjalan di sana.
 
-**Rekomendasi:** Jalankan OmniRoute secara native pada OS yang sama dengan aplikasi desktop yang ingin Anda cegat (Windows untuk aplikasi Windows; demikian pula untuk macOS/Linux). Menjalankan OmniRoute di dalam WSL sambil menargetkan aplikasi host mengharuskan Anda memercayai sertifikat CA yang dihasilkan secara manual pada host Windows dan mengarahkan pengaturan jaringan/proxy setiap aplikasi host ke endpoint proxy WSL — konfigurasi yang tidak didukung dan rentan bermasalah.
+**Rekomendasi:** Jalankan 67router secara native pada OS yang sama dengan aplikasi desktop yang ingin Anda cegat (Windows untuk aplikasi Windows; demikian pula untuk macOS/Linux). Menjalankan 67router di dalam WSL sambil menargetkan aplikasi host mengharuskan Anda memercayai sertifikat CA yang dihasilkan secara manual pada host Windows dan mengarahkan pengaturan jaringan/proxy setiap aplikasi host ke endpoint proxy WSL — konfigurasi yang tidak didukung dan rentan bermasalah.
 
 ---
 
@@ -397,7 +397,7 @@ omniroute
 
 ### Token OAuth Kedaluwarsa
 
-OmniRoute menyegarkan token secara otomatis. Jika masalah berlanjut:
+67router menyegarkan token secara otomatis. Jika masalah berlanjut:
 
 1. Dasbor → Penyedia → Hubungkan Kembali
 2. Hapus lalu tambahkan kembali koneksi penyedia
@@ -610,7 +610,7 @@ Profil penyedia mendukung pengaturan berikut:
 
 ### Pencegahan thundering herd
 
-Saat banyak permintaan bersamaan mengakses penyedia yang dikenai pembatasan laju, OmniRoute menggunakan mutex + pembatasan laju otomatis untuk menserialkan permintaan dan mencegah kegagalan berantai. Ini dilakukan secara otomatis untuk penyedia kunci API.
+Saat banyak permintaan bersamaan mengakses penyedia yang dikenai pembatasan laju, 67router menggunakan mutex + pembatasan laju otomatis untuk menserialkan permintaan dan mencegah kegagalan berantai. Ini dilakukan secara otomatis untuk penyedia kunci API.
 
 ### Permintaan chat gagal dengan 503 / chat_admission_busy
 
@@ -646,7 +646,7 @@ Pada ambang batas default, permintaan dianggap berat secara struktural jika memi
 `200` pesan, setidaknya `64` alat, atau setidaknya `32,000` token perkiraan, atau ketika estimasi
 struktur terbatas mencapai batasnya, yaitu `10,000` node yang dikunjungi atau kedalaman `12`.
 
-**Penyebab:** Ini adalah pengurangan beban yang disengaja di dalam OmniRoute, bukan kegagalan
+**Penyebab:** Ini adalah pengurangan beban yang disengaja di dalam 67router, bukan kegagalan
 penyedia upstream. Setiap proses menggunakan guard lokal proses untuk mencadangkan kapasitas
 heavyweight yang terbatas sebelum mempertahankan dan mengurai isi permintaan yang besar. Lease
 heavyweight tetap dipertahankan selama masa aktif respons SSE.
@@ -696,7 +696,7 @@ untuk pengaturan admission yang bersifat otoritatif.
 
 ## Taksonomi kegagalan RAG / LLM opsional (16 masalah)
 
-Sebagian pengguna OmniRoute menempatkan gateway di depan tumpukan RAG atau agen. Dalam konfigurasi tersebut, pola yang aneh sering terlihat: OmniRoute tampak sehat (penyedia aktif, profil perutean baik, tidak ada peringatan batas laju), tetapi jawaban akhirnya tetap salah.
+Sebagian pengguna 67router menempatkan gateway di depan tumpukan RAG atau agen. Dalam konfigurasi tersebut, pola yang aneh sering terlihat: 67router tampak sehat (penyedia aktif, profil perutean baik, tidak ada peringatan batas laju), tetapi jawaban akhirnya tetap salah.
 
 Dalam praktiknya, insiden ini biasanya berasal dari pipeline RAG hilir, bukan dari gateway itu sendiri.
 
@@ -715,17 +715,17 @@ Gagasannya sederhana:
 
 1. Saat menyelidiki respons yang buruk, catat:
    - tugas dan permintaan pengguna
-   - rute atau kombinasi penyedia di OmniRoute
+   - rute atau kombinasi penyedia di 67router
    - konteks RAG apa pun yang digunakan di hilir (dokumen yang diambil, pemanggilan alat, dan sebagainya)
 2. Petakan insiden ke satu atau dua nomor WFGY ProblemMap (`No.1` … `No.16`).
-3. Simpan nomor tersebut di dashboard, runbook, atau pelacak insiden Anda sendiri di samping log OmniRoute.
+3. Simpan nomor tersebut di dashboard, runbook, atau pelacak insiden Anda sendiri di samping log 67router.
 4. Gunakan halaman WFGY yang sesuai untuk menentukan apakah Anda perlu mengubah tumpukan RAG, retriever, atau strategi perutean Anda.
 
 Teks lengkap dan resep konkret tersedia di sini (lisensi MIT, hanya teks):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Anda dapat mengabaikan bagian ini jika Anda tidak menjalankan pipeline RAG atau agen di belakang OmniRoute.
+Anda dapat mengabaikan bagian ini jika Anda tidak menjalankan pipeline RAG atau agen di belakang 67router.
 
 ---
 
@@ -749,7 +749,7 @@ Masalah yang spesifik untuk rilis v3.8.0 dan solusi sementara yang tersedia saat
 
 1. Instal Devin CLI untuk platform Anda
 2. Atur `CLI_DEVIN_BIN=/usr/local/bin/devin` (atau path yang sebenarnya) di `.env`
-3. Mulai ulang OmniRoute dan uji kembali dari **Dashboard → Alat CLI**
+3. Mulai ulang 67router dan uji kembali dari **Dashboard → Alat CLI**
 
 ### Cooldown model macet (reset manual)
 
@@ -804,7 +804,7 @@ Masalah yang spesifik untuk rilis v3.8.0 dan solusi sementara yang tersedia saat
 
 1. Buat secret acak: `openssl rand -hex 32`
 2. Atur `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` di lingkungan server produksi (dan setiap klien yang berkomunikasi dengan bridge)
-3. Mulai ulang OmniRoute
+3. Mulai ulang 67router
 
 ### Responses API: mode latar belakang diturunkan menjadi sinkron
 

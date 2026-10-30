@@ -49,7 +49,7 @@ prostredníctvom tunela **nemôže** spustiť túto cestu kódu.
 | Linux+Firefox/Chromium | aktualizácia databázy NSS pre každý profil pomocou `certutil -d sql:<profile>`                                    |
 
 Ide o rovnaké príkazy, aké používajú `mitmproxy`, Charles Proxy, Fiddler a
-Caddy. Skutočnosť, že sa nachádzajú v OmniRoute, je zdokumentovaná v
+Caddy. Skutočnosť, že sa nachádzajú v 67router, je zdokumentovaná v
 `docs/security/STEALTH_GUIDE.md`.
 
 **Zmiernenie vo v3.8.6**:
@@ -106,7 +106,7 @@ Vo v3.9 bude odstránený.
 
 **Prečo to zachovávame**: import zo Zed je najjednoduchší spôsob úvodného
 nastavenia pre používateľov, ktorí už používajú Zed a chcú skopírovať kľúče
-svojich poskytovateľov do OmniRoute bez ich opätovného vkladania.
+svojich poskytovateľov do 67router bez ich opätovného vkladania.
 
 ---
 
@@ -117,7 +117,7 @@ svojich poskytovateľov do OmniRoute bez ich opätovného vkladania.
 **Prečo to bolo označené**: balík opätovne exportuje `execFileWithPassword`,
 `runElevatedPowerShell` a zdieľanú pomocnú funkciu `quotePowerShell`. Klasifikátor
 AI služby Socket.dev ich považuje za všeobecnú „sadu nástrojov na vykonávanie
-príkazov na hostiteľovi a zvyšovanie oprávnení“. V rámci OmniRoute sa používajú
+príkazov na hostiteľovi a zvyšovanie oprávnení“. V rámci 67router sa používajú
 iba v procese inštalácie certifikátu MITM (§1) a prostredníctvom
 `execFileWithPassword` na vykonávanie príkazov `sudo`.
 
@@ -171,7 +171,7 @@ výslovného súhlasu.
 
 ---
 
-## §5 — Spätný zápis prihlasovacích údajov OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Spätný zápis prihlasovacích údajov 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Zdrojové súbory**:
 
@@ -207,7 +207,7 @@ rawBody)`) pred spracovaním JSON. Ak je tajný kľúč nastavený, podpis je
    tokenov — musia ju výslovne povoliť.
 
 **Prečo túto funkciu zachovávame**: Cloud Sync je jediný spôsob, ako môže
-nájomník OmniRoute Cloud centralizovať tímové prihlasovacie údaje. Oprava
+nájomník 67router Cloud centralizovať tímové prihlasovacie údaje. Oprava
 otvorene definuje model hrozieb: „server podpisuje, klient overuje,
 prevádzkovateľ výslovne povoľuje“.
 

@@ -10,7 +10,7 @@
 
 ## Konteks
 
-OmniRoute saat ini menyediakan fungsi persistensi berorientasi domain dari `src/lib/db/`, sementara
+67router saat ini menyediakan fungsi persistensi berorientasi domain dari `src/lib/db/`, sementara
 koneksi bersama yang dikembalikan oleh `src/lib/db/core.ts` mengimplementasikan kontrak sinkron
 `SqliteAdapter` dalam `src/lib/db/adapters/types.ts`. Adaptor tersebut mendukung beberapa runtime SQLite, tetapi
 antarmukanya tetap berbentuk SQLite: prepared statement sinkron, `pragma`, transaksi tertunda dan langsung,

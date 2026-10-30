@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **ለመጨረሻ ጊዜ የተዘመነው:** 2026-06-28 — v3.8.40
 
-OmniRoute የWordPress አይነት የፕለጊን ሥርዓትን ያካትታል። ፕለጊኖች ራሳቸውን የቻሉ
+67router የWordPress አይነት የፕለጊን ሥርዓትን ያካትታል። ፕለጊኖች ራሳቸውን የቻሉ
 ማውጫዎች ናቸው — እያንዳንዳቸው `plugin.json` ማኒፌስት እና የመግቢያ ፋይል አላቸው — እና
 ከጥያቄ ሂደቱ (`onRequest` / `onResponse` / `onError`) እንዲሁም ከ
 የሕይወት ዑደት ክስተቶች (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) ጋር ይገናኛሉ።
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### የፕለጊን ማውጫ
 
-ፕለጊኖች በOmniRoute የውሂብ ማውጫ ሥር ይገኛሉ፦
+ፕለጊኖች በ67router የውሂብ ማውጫ ሥር ይገኛሉ፦
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -25,7 +25,7 @@ Column ಹೆಸರುಗಳು ಕೇವಲ ಪ್ರದರ್ಶನಾತ್�
 ಆಮದು modalನಿಂದ ಆರಂಭಿಕ file ಅನ್ನು download ಮಾಡಿ (**CSV template ಅನ್ನು download ಮಾಡಿ**). ಉದಾಹರಣೆ:
 
 ```csv
-# OmniRoute provider ಆಮದು (ಸ್ಥಾನಾಧಾರಿತ columns)
+# 67router provider ಆಮದು (ಸ್ಥಾನಾಧಾರಿತ columns)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

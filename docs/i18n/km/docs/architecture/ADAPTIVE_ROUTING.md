@@ -5,7 +5,7 @@
 ---
 
 ឯកសារនេះពិពណ៌នាអំពីមូលដ្ឋានគ្រឹះនៃការកំណត់ផ្លូវសម្របខ្លួនដែលជំរុញដោយមតិត្រឡប់ ដែលត្រូវបានបន្ថែមទៅក្នុង
-OmniRoute។ វាត្រូវបានរៀបចំឱ្យមានទំហំតូចដោយចេតនា៖ វាណែនាំឆានែលលទ្ធផលនៃការកំណត់ផ្លូវដែលមានប្រភេទច្បាស់លាស់
+67router។ វាត្រូវបានរៀបចំឱ្យមានទំហំតូចដោយចេតនា៖ វាណែនាំឆានែលលទ្ធផលនៃការកំណត់ផ្លូវដែលមានប្រភេទច្បាស់លាស់
 សញ្ញាគុណភាពតាមពេលវេលាជាក់ស្តែងដែលផ្តល់ទិន្នន័យទៅឱ្យកម្មវិធីដាក់ពិន្ទុ auto-combo ដែលមានស្រាប់ កម្មវិធីនាំចេញ
 OpenTelemetry ដែលអាចជ្រើសប្រើបាន និង endpoint សម្រាប់ការពន្យល់អំពីការសម្រេចចិត្ត។ វា **មិន**
 ជំនួសស្រទាប់ភាពធន់ដែលមានស្រាប់ទេ (circuit breaker, connection cooldown,
@@ -13,7 +13,7 @@ model lockout, health matrix, autopilot) — វាបំពេញបន្ថ�
 
 ## 1. បរិបទស្ថាបត្យកម្ម
 
-OmniRoute គឺជា data plane ដែលមាន **ផ្លូវសំខាន់សម្រាប់សំណើ** និង **ផ្នែកគ្រប់គ្រង/បញ្ញា
+67router គឺជា data plane ដែលមាន **ផ្លូវសំខាន់សម្រាប់សំណើ** និង **ផ្នែកគ្រប់គ្រង/បញ្ញា
 **។ ផ្លូវសំខាន់ត្រូវតែរក្សាភាពលឿន ប្រើអង្គចងចាំប្រកបដោយប្រសិទ្ធភាព ដំណើរការអសមកាល មានភាពធន់ និង
 អាចព្យាករបាន។ ការវាយតម្លៃ ការដាក់ពិន្ទុគុណភាព ការពិសោធន៍ និងការវិភាគប្រវត្តិសាស្ត្រ ស្ថិតនៅក្នុង
 ផ្នែកគ្រប់គ្រង។
@@ -23,7 +23,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (លឿន, សមកាល, ក្នុងអង្គចងចាំ)
+│    67router        │   data plane (លឿន, សមកាល, ក្នុងអង្គចងចាំ)
 │  កំណត់ផ្លូវ / ប្ដូរពេលបរាជ័យ │
 │  សុខភាព / របាំងការពារ │
 │  ឃ្លាំងសម្ងាត់ / ស្ទ្រីម  │
@@ -231,7 +231,7 @@ TTFT/ITL/interrupted ត្រូវបានបញ្ចូលទៅក្ន�
   `@opentelemetry/*` SDK)។
 - Spans អនុវត្តតាម GenAI semantic conventions (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) ព្រមទាំង attributes សម្រាប់ routing របស់ OmniRoute
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) ព្រមទាំង attributes សម្រាប់ routing របស់ 67router
   (outcome, status, ttft, retries, fallback)។
 - `record()` គ្រាន់តែបញ្ចូលទៅក្នុង buffer ដែលមានទំហំកំណត់ (O(1)) ប៉ុណ្ណោះ; timer នៅផ្ទៃខាងក្រោយ
   ធ្វើការ flush តាមរយៈ `POST {endpoint}/v1/traces` ដោយអសមកាល។ នៅពេលមានបន្ទុកលើសកម្រិត events
@@ -252,7 +252,7 @@ TTFT/ITL/interrupted ត្រូវបានបញ្ចូលទៅក្ន�
 
 ## 6. ការរួមបញ្ចូល evaluation plane (ការត្រៀមខ្លួនសម្រាប់ Future AGI)
 
-OmniRoute ចាត់ទុក Future AGI (ឬ evaluator ណាមួយ) ជា **backend ផ្នែក intelligence/evaluation ដែលអាចមាន មិនមែនជា dependency ទេ**។ ចំណុចតភ្ជាប់មាន៖
+67router ចាត់ទុក Future AGI (ឬ evaluator ណាមួយ) ជា **backend ផ្នែក intelligence/evaluation ដែលអាចមាន មិនមែនជា dependency ទេ**។ ចំណុចតភ្ជាប់មាន៖
 
 - `RoutingEventSink` អាចបញ្ជូន events បន្តទៅ evaluator ដោយអសមកាល។
 - `MemoryRoutingEventStore` + quality snapshot ផ្តល់ឱ្យ evaluator នូវលំហូរទិន្នន័យសម្រេចចិត្តដើម។

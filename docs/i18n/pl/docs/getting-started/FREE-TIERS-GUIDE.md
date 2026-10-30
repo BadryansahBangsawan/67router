@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Użyj własnych kont u kwalifikujących się dostawców. OmniRoute łączy skonfigurowane przez Ciebie połączenia; nie zapewnia reklamowanego, łącznego budżetu tokenów. Bezpłatny dostęp może wymagać rejestracji, klucza API, zatwierdzenia lub metody płatności. Nadal obowiązują limity, polityki prywatności i warunki dostawców.
+> **TL;DR**: Użyj własnych kont u kwalifikujących się dostawców. 67router łączy skonfigurowane przez Ciebie połączenia; nie zapewnia reklamowanego, łącznego budżetu tokenów. Bezpłatny dostęp może wymagać rejestracji, klucza API, zatwierdzenia lub metody płatności. Nadal obowiązują limity, polityki prywatności i warunki dostawców.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Wielu dostawców AI oferuje pewną formę **bezpłatnego dostępu**. W zależności od dostawcy może to oznaczać punkt końcowy niewymagający uwierzytelniania, odnawialny limit, dostęp bez limitu łącznego, ale z ograniczeniem częstotliwości, bonus za rejestrację, ręczne zatwierdzenie lub tymczasową promocję. Niektóre opcje wymagają konta, klucza API, karty kredytowej, weryfikacji KYC lub zaakceptowania warunków określonych przez dostawcę.
 
-OmniRoute **agreguje** skonfigurowane połączenia w jednym punkcie końcowym. Nadal musisz osobno zarejestrować się u każdego dostawcy, który wymaga konta. Połącz te konta i użyj `model: "auto"`, aby kierować żądania do kwalifikujących się usług docelowych. W nowej instalacji może nie być żadnej kwalifikującej się usługi docelowej niewymagającej klucza; samo zainstalowanie OmniRoute nie gwarantuje pomyślnej odpowiedzi na czacie.
+67router **agreguje** skonfigurowane połączenia w jednym punkcie końcowym. Nadal musisz osobno zarejestrować się u każdego dostawcy, który wymaga konta. Połącz te konta i użyj `model: "auto"`, aby kierować żądania do kwalifikujących się usług docelowych. W nowej instalacji może nie być żadnej kwalifikującej się usługi docelowej niewymagającej klucza; samo zainstalowanie 67router nie gwarantuje pomyślnej odpowiedzi na czacie.
 
 ---
 
@@ -57,7 +57,7 @@ Ci dostawcy mają **bezpłatne poziomy** z określonymi limitami:
 
 ## Jak łączyć bezpłatne limity
 
-Siła OmniRoute tkwi w **łączeniu bezpłatnych limitów**. Zamiast polegać na jednym dostawcy, możesz połączyć wielu bezpłatnych dostawców i pozwolić OmniRoute automatycznie wybierać najlepszego z nich dla każdego żądania.
+Siła 67router tkwi w **łączeniu bezpłatnych limitów**. Zamiast polegać na jednym dostawcy, możesz połączyć wielu bezpłatnych dostawców i pozwolić 67router automatycznie wybierać najlepszego z nich dla każdego żądania.
 
 ### Przykład: szerszy zakres bezpłatnych limitów
 
@@ -68,7 +68,7 @@ Połącz kilku dostawców, aby zmniejszyć zależność od pojedynczego limitu:
 3. **Pollinations** — dostęp bez klucza, z ograniczeniem częstotliwości
 4. **LongCat** — jednorazowy pakiet powitalny (wymaga KYC)
 
-Następnie użyj `model: "auto"`, a OmniRoute:
+Następnie użyj `model: "auto"`, a 67router:
 
 - Najpierw wypróbuje najwyżej sklasyfikowane kwalifikujące się połączenie
 - Jeśli jego limit zostanie wyczerpany lub kontrola stanu zakończy się niepowodzeniem → wypróbuje następnego skonfigurowanego dostawcę
@@ -102,7 +102,7 @@ dostęp bez limitów lub klucza, środki przyznawane po rejestracji, wycofane po
 
 ### Krok 5: Kliknij Połącz
 
-W przypadku dostawcy `NOAUTH` OmniRoute nie wymaga danych uwierzytelniających do usługi nadrzędnej. Nie gwarantuje to, że usługa nadrzędna akceptuje klientów zewnętrznych ani że dysponuje dostępnymi zasobami. Dostawców korzystających z OAuth i klucza API należy połączyć zgodnie z udokumentowaną procedurą konta. Gdy uwierzytelnianie routera jest włączone, klient nadal korzysta z klucza API OmniRoute widocznego w sekcji **Panel → Punkty końcowe**.
+W przypadku dostawcy `NOAUTH` 67router nie wymaga danych uwierzytelniających do usługi nadrzędnej. Nie gwarantuje to, że usługa nadrzędna akceptuje klientów zewnętrznych ani że dysponuje dostępnymi zasobami. Dostawców korzystających z OAuth i klucza API należy połączyć zgodnie z udokumentowaną procedurą konta. Gdy uwierzytelnianie routera jest włączone, klient nadal korzysta z klucza API 67router widocznego w sekcji **Panel → Punkty końcowe**.
 
 ### Krok 6: Powtórz
 
@@ -112,7 +112,7 @@ Połącz kilku dostawców, których warunki i model prywatności odpowiadają Tw
 
 ## Jak prawidłowo odczytywać katalog
 
-- `NOAUTH` oznacza, że OmniRoute nie wymaga od Ciebie danych uwierzytelniających dostawcy; nie
+- `NOAUTH` oznacza, że 67router nie wymaga od Ciebie danych uwierzytelniających dostawcy; nie
   gwarantuje to dostępności, prywatności ani nieograniczonej przepustowości.
 - `hasFree` to metadane ułatwiające wyszukiwanie. Mogą oznaczać odnawialny limit, dostęp bez klucza,
   środki przyznawane przy rejestracji, program wymagający zatwierdzenia lub promocję.
@@ -125,15 +125,15 @@ Połącz kilku dostawców, których warunki i model prywatności odpowiadają Tw
 
 ---
 
-## Jak OmniRoute zwiększa korzyści z bezpłatnych pul
+## Jak 67router zwiększa korzyści z bezpłatnych pul
 
 ### 1. Automatyczne przełączanie awaryjne
 
-Jeśli jeden z bezpłatnych dostawców jest przeciążony lub niedostępny, OmniRoute automatycznie wypróbuje następnego. Nie musisz nic robić.
+Jeśli jeden z bezpłatnych dostawców jest przeciążony lub niedostępny, 67router automatycznie wypróbuje następnego. Nie musisz nic robić.
 
 ### 2. Inteligentne trasowanie
 
-OmniRoute wybiera **najlepszego bezpłatnego dostawcę** dla każdego żądania na podstawie:
+67router wybiera **najlepszego bezpłatnego dostawcę** dla każdego żądania na podstawie:
 
 - Szybkości — który dostawca jest obecnie najszybszy?
 - Jakości — który dostawca najlepiej nadaje się do tego zadania?
@@ -141,13 +141,13 @@ OmniRoute wybiera **najlepszego bezpłatnego dostawcę** dla każdego żądania 
 
 ### 3. Oszczędność tokenów
 
-Mechanizm kompresji OmniRoute może zmniejszyć liczbę tokenów w kwalifikujących się promptach i danych wyjściowych narzędzi. Rzeczywiste
+Mechanizm kompresji 67router może zmniejszyć liczbę tokenów w kwalifikujących się promptach i danych wyjściowych narzędzi. Rzeczywiste
 oszczędności zależą od treści, wybranych mechanizmów, sposobu rozliczania przez dostawcę i ustawień
 wierności; kompresja nie zwiększa każdego limitu dostawcy o stały mnożnik.
 
 ### 4. Obsługa wielu kont
 
-Jeśli warunki dostawcy zezwalają na używanie wielu kont lub danych uwierzytelniających, OmniRoute może traktować każde
+Jeśli warunki dostawcy zezwalają na używanie wielu kont lub danych uwierzytelniających, 67router może traktować każde
 połączenie jako oddzielnego kandydata do trasowania. Nie twórz dodatkowych kont w celu obejścia limitu
 lub zasad dostępu dostawcy.
 
@@ -162,7 +162,7 @@ Aktualny katalog działający na żywo, z deduplikacją pul, obecnie wskazuje:
 | Cykliczny, określony ilościowo przydział    |     **~1.62B tokenów/miesiąc** | Współdzielone pule policzono jednokrotnie; suma nie obejmuje dostawców bez limitu |
 | Pierwszy miesiąc z grantami rejestracyjnymi |             **~2.22B tokenów** | Cykliczna suma wraz z jednorazowymi i cyklicznymi środkami                        |
 
-Są to szacunki obejmujące cały katalog i odrębne kwalifikujące się konta, a nie limit zapewniany przez OmniRoute ani prognoza dla nowej instalacji. Dostępna pojemność zależy od podłączonych dostawców i ich aktualnych warunków. Wartości są obliczane na podstawie `open-sse/config/freeModelCatalog.ts`; informacje o deduplikacji pul, oznaczeniach regulaminu,
+Są to szacunki obejmujące cały katalog i odrębne kwalifikujące się konta, a nie limit zapewniany przez 67router ani prognoza dla nowej instalacji. Dostępna pojemność zależy od podłączonych dostawców i ich aktualnych warunków. Wartości są obliczane na podstawie `open-sse/config/freeModelCatalog.ts`; informacje o deduplikacji pul, oznaczeniach regulaminu,
 wycofanych wpisach i metodologii naliczania środków za rejestrację zawiera
 [Dokumentacja bezpłatnych poziomów](../reference/FREE_TIERS.md).
 
@@ -189,7 +189,7 @@ Tylko jeśli SLA, sposób przetwarzania danych, limity i warunki dostawcy spełn
 
 Kompromisy mogą obejmować rygorystyczne limity, listy oczekujących, KYC, weryfikację kartą kredytową, trenowanie na
 promptach, słabszą ochronę prywatności, brak SLA, częste zmiany modeli, ograniczenia geograficzne, płatne przekroczenia limitów lub
-ryzyko związane z zasadami dotyczącymi konta. OmniRoute udostępnia dostępne metadane; to Ty decydujesz, co włączyć.
+ryzyko związane z zasadami dotyczącymi konta. 67router udostępnia dostępne metadane; to Ty decydujesz, co włączyć.
 
 ### „Jak mogę uzyskać większy darmowy limit?”
 
@@ -208,7 +208,7 @@ rankingu darmowych dostawców jako wskaźnika jakości i zweryfikuj faktycznie u
 
 ## Co dalej?
 
-- **[Przewodnik po Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Pozwól OmniRoute wybrać dla Ciebie najlepszą AI
+- **[Przewodnik po Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Pozwól 67router wybrać dla Ciebie najlepszą AI
 - **[Przewodnik po dostawcach](./PROVIDERS-GUIDE.md)** — Połącz więcej dostawców
 - **[Rozwiązywanie problemów](../guides/TROUBLESHOOTING.md)** — Rozwiąż typowe problemy
 - **[Informacje o darmowych planach](../reference/FREE_TIERS.md)** — Pełna lista darmowych planów

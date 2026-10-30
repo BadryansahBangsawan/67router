@@ -25,7 +25,7 @@ Dashboard → Providers → **ଫାଇଲ୍ରୁ ଆମଦାନୀ କରନ
 ଆମଦାନୀ ମୋଡାଲ୍ରୁ ଏକ ପ୍ରାରମ୍ଭିକ ଫାଇଲ୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ (**CSV template ଡାଉନଲୋଡ୍ କରନ୍ତୁ**)। ଉଦାହରଣ:
 
 ```csv
-# OmniRoute provider ଆମଦାନୀ (ଅବସ୍ଥାନଭିତ୍ତିକ ସ୍ତମ୍ଭଗୁଡ଼ିକ)
+# 67router provider ଆମଦାନୀ (ଅବସ୍ଥାନଭିତ୍ତିକ ସ୍ତମ୍ଭଗୁଡ଼ିକ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

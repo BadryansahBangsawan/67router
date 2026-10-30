@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 通过与聊天相同的提供者 id `cursor`（别名 `cu`），在 `POST /v1/images/generations` 上提供 Cursor 套餐的**图像生成**功能。
+67router 通过与聊天相同的提供者 id `cursor`（别名 `cu`），在 `POST /v1/images/generations` 上提供 Cursor 套餐的**图像生成**功能。
 
 | 字段                 | 值                                                                              |
 | -------------------- | ------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute 通过与聊天相同的提供者 id `cursor`（别名 `cu`），在 `
 
 ## 为什么使用 Agent CLI
 
-OmniRoute 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）。该路径会**拒绝**内置客户端工具（shell、write 等）。图像生成是由 **`agent` CLI** 针对席位执行的 Cursor 原生工具。因此，图像处理程序会使用锁定的提示词和针对每个请求的临时工作区来启动 `agent`（与社区席位桥接器的形式相同），然后返回与 OpenAI 兼容的 `b64_json`。
+67router 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）。该路径会**拒绝**内置客户端工具（shell、write 等）。图像生成是由 **`agent` CLI** 针对席位执行的 Cursor 原生工具。因此，图像处理程序会使用锁定的提示词和针对每个请求的临时工作区来启动 `agent`（与社区席位桥接器的形式相同），然后返回与 OpenAI 兼容的 `b64_json`。
 
 ## 访问限制（硬性规则 #15 + #17）
 
@@ -23,12 +23,12 @@ OmniRoute 中的 Cursor 聊天使用 `agent.v1.AgentService/Run`（protobuf）�
 
 ## 并发门禁为模块级别（单实例限制）
 
-`CURSOR_IMG_MAX_CONCURRENT` 由作用域限定在 Node 模块实例（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）内的内存计数器/队列强制实施。它可以正确限制单个 OmniRoute 进程内并发启动的 `agent` 数量，但**不会**在共享同一 Cursor 席位的多个进程/实例之间进行协调（例如多副本部署）——每个实例都会实施各自独立的限制。对于单实例部署（默认），此限制是精确的；水平扩展部署应为每个实例保守地设置 `CURSOR_IMG_MAX_CONCURRENT`，或将 Cursor 图像流量路由到单个实例。
+`CURSOR_IMG_MAX_CONCURRENT` 由作用域限定在 Node 模块实例（`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`）内的内存计数器/队列强制实施。它可以正确限制单个 67router 进程内并发启动的 `agent` 数量，但**不会**在共享同一 Cursor 席位的多个进程/实例之间进行协调（例如多副本部署）——每个实例都会实施各自独立的限制。对于单实例部署（默认），此限制是精确的；水平扩展部署应为每个实例保守地设置 `CURSOR_IMG_MAX_CONCURRENT`，或将 Cursor 图像流量路由到单个实例。
 
 ## 要求
 
 1. 在控制面板中连接一个 Cursor 账户（OAuth 或 `crsr_…` API 密钥）。
-2. OmniRoute 进程可以访问 Cursor Agent 二进制文件：
+2. 67router 进程可以访问 Cursor Agent 二进制文件：
    - 环境变量 `CURSOR_AGENT_BIN=/path/to/agent`，或
    - `~/.local/bin/agent`，或
    - Cursor 连接上的 `providerSpecificData.agentBin`。

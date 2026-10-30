@@ -7,7 +7,7 @@
 > **منبع حقیقت:** `src/lib/webhookDispatcher.ts`، `src/lib/db/webhooks.ts`، `src/app/api/webhooks/`
 > **آخرین بهروزرسانی:** 2026-06-28 — v3.8.40
 
-OmniRoute میتواند در رخدادهای پلتفرم، وبهوکهای HTTP را فعال کند. از آنها برای یکپارچهسازی با
+67router میتواند در رخدادهای پلتفرم، وبهوکهای HTTP را فعال کند. از آنها برای یکپارچهسازی با
 Slack، PagerDuty، Datadog، سرویسهای هشدار داخلی یا هر دریافتکننده HTTP استفاده کنید.
 
 ارسالکننده هر تحویل را با HMAC-SHA256 امضا میکند، در صورت بروز خطاهای
@@ -54,7 +54,7 @@ Slack، PagerDuty، Datadog، سرویسهای هشدار داخلی یا هر �
 
 ## امضای HMAC
 
-وقتی یک وبهوک دارای `secret` باشد، OmniRoute بدنه JSON را امضا میکند و موارد زیر را میفرستد:
+وقتی یک وبهوک دارای `secret` باشد، 67router بدنه JSON را امضا میکند و موارد زیر را میفرستد:
 
 ```
 Content-Type: application/json
@@ -210,7 +210,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "ارسال آزمایشی وبهوک از OmniRoute",
+    "message": "ارسال آزمایشی وبهوک از 67router",
     "webhookId": "<uuid>"
   }
 }

@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute-এ **Providers → Add Provider**-এ যান, **Microsoft 365 Copilot
+6. 67router-এ **Providers → Add Provider**-এ যান, **Microsoft 365 Copilot
    (BizChat)** নির্বাচন করুন এবং নিচের বিন্যাসে ক্রেডেনশিয়ালটি পেস্ট করুন:
 
 ```
@@ -50,9 +50,9 @@ WebSocket URL থেকে মানগুলো ম্যানুয়াল�
 1. **DevTools → Network** খুলুন।
 2. একটি BizChat কথোপকথন শুরু করুন বা চালিয়ে যান (এটি WebSocket সংযোগটি ট্রিগার করে)।
 3. Network প্যানেলে রাইট-ক্লিক করে **Save all as HAR with content** নির্বাচন করুন।
-4. OmniRoute-এ প্রোভাইডার সংযোগ ডায়ালগের **Import .har file** বোতামটি ব্যবহার করুন।
+4. 67router-এ প্রোভাইডার সংযোগ ডায়ালগের **Import .har file** বোতামটি ব্যবহার করুন।
 
-OmniRoute, Chathub WebSocket URL-এর জন্য HAR স্ক্যান করে, `access_token` এবং `chathubPath` বের করে এবং স্বয়ংক্রিয়ভাবে ক্রেডেনশিয়াল ফিল্ডগুলো পূরণ করে। HAR ইম্পোর্ট JWT-এর মেয়াদ শেষ হওয়ার সময় ডিকোড করে এবং টোকেনের অবশিষ্ট মেয়াদ দেখায়।
+67router, Chathub WebSocket URL-এর জন্য HAR স্ক্যান করে, `access_token` এবং `chathubPath` বের করে এবং স্বয়ংক্রিয়ভাবে ক্রেডেনশিয়াল ফিল্ডগুলো পূরণ করে। HAR ইম্পোর্ট JWT-এর মেয়াদ শেষ হওয়ার সময় ডিকোড করে এবং টোকেনের অবশিষ্ট মেয়াদ দেখায়।
 
 > **কখনোই প্রকৃত HAR এক্সপোর্ট, অ্যাক্সেস টোকেন বা রিফ্রেশ টোকেন কমিট করবেন না।** পরীক্ষা ও ডকুমেন্টেশনের মানগুলো অবশ্যই সবসময় প্লেসহোল্ডার হতে হবে।
 
@@ -69,7 +69,7 @@ OmniRoute, Chathub WebSocket URL-এর জন্য HAR স্ক্যান �
 | `refreshToken` | `substrate.office.com/sydney` স্কোপের জন্য Microsoft OAuth রিফ্রেশ টোকেন |
 | `tier`         | `individual` (ডিফল্ট), `edu`, অথবা `enterprise`                          |
 
-`substrate.office.com/sydney`-এ স্কোপ করা Microsoft device-code বা authorization-code ফ্লো থেকে রিফ্রেশ টোকেনটি সংগ্রহ করুন। `refreshToken` সেট করা থাকলে OmniRoute প্রতিটি অনুরোধের আগে `access_token` প্রি-ফ্লাইট-রিফ্রেশ করে, ফলে প্রতি ~75 মিনিটে মেয়াদ শেষ হওয়ার পর আপনাকে আবার সংগ্রহ করতে হয় না।
+`substrate.office.com/sydney`-এ স্কোপ করা Microsoft device-code বা authorization-code ফ্লো থেকে রিফ্রেশ টোকেনটি সংগ্রহ করুন। `refreshToken` সেট করা থাকলে 67router প্রতিটি অনুরোধের আগে `access_token` প্রি-ফ্লাইট-রিফ্রেশ করে, ফলে প্রতি ~75 মিনিটে মেয়াদ শেষ হওয়ার পর আপনাকে আবার সংগ্রহ করতে হয় না।
 
 `refreshToken` সেট করা না থাকলে প্রতিবার মেয়াদ শেষ হওয়ার পর আপনাকে WebSocket ক্রেডেনশিয়ালটি ম্যানুয়ালি আবার সংগ্রহ করতে হবে।
 

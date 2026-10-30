@@ -6,7 +6,7 @@
 
 ## ማጠቃለያ
 
-OmniRoute አሁን ለ`/api/v1/relay/chat/completions` ሦስት የrelay ሁነታዎችን ይደግፋል፦
+67router አሁን ለ`/api/v1/relay/chat/completions` ሦስት የrelay ሁነታዎችን ይደግፋል፦
 
 - `ts`፦ የTypeScript relayን በሂደቱ ውስጥ ይጠቀሙ።
 - `bifrost`፦ የBifrost gatewayን በግድ ይጠቀሙ።
@@ -45,12 +45,12 @@ OmniRoute አሁን ለ`/api/v1/relay/chat/completions` ሦስት የrelay ሁ�
 
 ## የbackend ድንበር ውል
 
-የተረጋጋው የምርት ድንበር የdashboard አተገባበር ሳይሆን የOmniRoute relay API ነው። የNext.js dashboard አካባቢያዊ አገልግሎቶችን ሊጭን፣ ሊያዋቅር እና ሊቆጣጠር ይችላል፤ ነገር ግን request routing በrelay API በኩል ገብቶ ከዚያ ድንበር በስተጀርባ መተላለፍ አለበት።
+የተረጋጋው የምርት ድንበር የdashboard አተገባበር ሳይሆን የ67router relay API ነው። የNext.js dashboard አካባቢያዊ አገልግሎቶችን ሊጭን፣ ሊያዋቅር እና ሊቆጣጠር ይችላል፤ ነገር ግን request routing በrelay API በኩል ገብቶ ከዚያ ድንበር በስተጀርባ መተላለፍ አለበት።
 
 የረጅም ጊዜ የbackend ምርጫዎች፦
 
 - የTypeScript relayን በሂደቱ ውስጥ እንደ policy እና መመለሻ መንገድ ያቆዩ። Auth፣ allowlists፣ request normalization፣ accounting እና safety checks ማንኛውም የbackend ማስረከብ ከመከናወኑ በፊት እዚህ ይቆያሉ።
-- Deploymentው ያነሰ የrouting ልዩነት፣ ማዕከላዊ የprovider rotation ወይም በብዙ OmniRoute replicas ላይ scale-out ሲፈልግ፣ Bifrostን እንደ ተመራጭ ከፍተኛ-throughput Tier-1 sidecar ይጠቀሙ።
+- Deploymentው ያነሰ የrouting ልዩነት፣ ማዕከላዊ የprovider rotation ወይም በብዙ 67router replicas ላይ scale-out ሲፈልግ፣ Bifrostን እንደ ተመራጭ ከፍተኛ-throughput Tier-1 sidecar ይጠቀሙ።
 - 9router እና CLIPROXYAPIን እንደ የተካተቱ የተኳኋኝነት አገልግሎቶች ያቆዩ። እንደሚቆጣጠሩ አካባቢያዊ processes ሆነው ይሠራሉ፣ እና የእነሱ provider/CLI ባህሪ የሚፈለገው adapter ሲሆን ጠቃሚ ናቸው፤ ሆኖም ነባሪው Tier-1 routing engine መሆን የለባቸውም።
 - Dashboardው የዘፈቀደ service URLsን ወደ ዋናው የሥራ መንገድ እንዲያስተላልፍ አያድርጉ። በUI የሚቀርቡ URLs የconfiguration inputs ናቸው፤ routing code የተመዘገቡና ጤናቸው የተረጋገጠ backendsን ከserver-side settings እና supervisor state መፍታት አለበት።
 - የሚተዳደሩ processes አስቀድመው HTTP-compatible APIsን ስለሚያቀርቡ፣ route guard ድንበሩን audit ማድረግ ስለሚችል፣ እና የfailure/fallback ባህሪ በrequest logs ውስጥ ስለሚታይ፣ በአሁኑ ጊዜ ለሚቆጣጠሩ አገልግሎቶች loopback HTTPን ይምረጡ። ወደፊት SDK ወይም socket transport መጨመር ጠቃሚ የሚሆነው isolation ወይም fallback semanticsን ሳያዳክም p99 routing latencyን በሚለካ መጠን ከቀነሰ ብቻ ነው።

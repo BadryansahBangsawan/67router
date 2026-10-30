@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute یہ کنٹرول کرتا ہے کہ کون سے **براؤزر origins** ایک واحد، مرکزی allowlist سے cross-origin responses پڑھ سکتے ہیں۔ یہ ماڈل **بطور ڈیفالٹ fail-closed** ہے:
+67router یہ کنٹرول کرتا ہے کہ کون سے **براؤزر origins** ایک واحد، مرکزی allowlist سے cross-origin responses پڑھ سکتے ہیں۔ یہ ماڈل **بطور ڈیفالٹ fail-closed** ہے:
 جب تک آپ کسی origin کو واضح طور پر شامل نہ کریں، کسی origin کو اجازت نہیں دی جاتی۔ یہ صفحہ وضاحت کرتا ہے کہ allowlist کس طرح resolve ہوتی ہے، `CORS_ALLOW_ALL=true` حقیقت میں کیا ظاہر کرتا ہے (اور، اہم طور پر، کیا **نہیں** کرتا)، dev اور production کو محفوظ طریقے سے کیسے configure کیا جائے، اور wildcard فعال ہونے پر dashboard کون سی runtime warning دکھاتا ہے۔
 
 **حتمی مستند ماخذ:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
@@ -38,12 +38,12 @@ OmniRoute یہ کنٹرول کرتا ہے کہ کون سے **براؤزر origin
 
 ## Threat model — `CORS_ALLOW_ALL=true` حقیقت میں کیا ظاہر کرتا ہے
 
-OWASP کی عمومی تنبیہ ("wildcard CORS = کوئی بھی site آپ کی API کو call کر سکتی ہے") کو سنجیدگی سے لینا ضروری ہے، لیکن OmniRoute کا exposure **عمومی صورت سے زیادہ محدود** ہے، کیونکہ implementation کی ایک واضح حقیقت یہ ہے:
+OWASP کی عمومی تنبیہ ("wildcard CORS = کوئی بھی site آپ کی API کو call کر سکتی ہے") کو سنجیدگی سے لینا ضروری ہے، لیکن 67router کا exposure **عمومی صورت سے زیادہ محدود** ہے، کیونکہ implementation کی ایک واضح حقیقت یہ ہے:
 
 > **مرکزی `applyCorsHeaders()` کبھی بھی
 > `Access-Control-Allow-Credentials` خارج نہیں کرتا۔** براؤزر کسی _credentialed_
 > (cookie رکھنے والے) cross-origin response کو اس وقت تک ظاہر نہیں کرے گا جب تک server
-> `Access-Control-Allow-Credentials: true` نہ بھیجے۔ OmniRoute کا مشترکہ CORS path ایسا کبھی
+> `Access-Control-Allow-Credentials: true` نہ بھیجے۔ 67router کا مشترکہ CORS path ایسا کبھی
 > نہیں کرتا۔
 
 `CORS_ALLOW_ALL=true` کے باوجود، ہر surface کے لیے اس کا مطلب یہ ہے:
@@ -80,7 +80,7 @@ origin echo اور credentials ایک ساتھ موجود ہوتے ہیں، او
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- اگر OmniRoute کسی reverse proxy / tunnel (nginx، Caddy، Cloudflare
+- اگر 67router کسی reverse proxy / tunnel (nginx، Caddy، Cloudflare
   Tunnel، Tailscale) کے پیچھے چلتا ہے تو CORS آپ کا **واحد** کنٹرول نہیں ہے — loopback route
   guard اب بھی spawn کی صلاحیت رکھنے والے routes کی حفاظت کرتا ہے (دیکھیں
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md))۔ 403 کو "درست" کرنے کے لیے
@@ -95,7 +95,7 @@ origin echo اور credentials ایک ساتھ موجود ہوتے ہیں، او
 ڈیولپمنٹ میں بھی wildcard کی شاذ ہی ضرورت ہوتی ہے۔ صرف ان dev servers کو اجازت دیں جنہیں آپ استعمال کرتے ہیں:
 
 ```bash
-# مقامی OmniRoute کو کال کرنے والے Vite (5173) + Next.js (3000) dev servers
+# مقامی 67router کو کال کرنے والے Vite (5173) + Next.js (3000) dev servers
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -115,14 +115,14 @@ runtime کے دوران **Dashboard → Security → CORS Allowed Origins** می
   کے اوریجنز کو کسی بھی permissive config سے باہر رکھیں؛ انہیں لازماً مکمل طور پر
   fail-closed رہنا چاہیے۔
 
-## مثال: OmniRoute کے سامنے ریورس پراکسی
+## مثال: 67router کے سامنے ریورس پراکسی
 
-CORS کا نفاذ خود OmniRoute کرتا ہے، اس لیے پراکسی کو عموماً `Access-Control-*`
+CORS کا نفاذ خود 67router کرتا ہے، اس لیے پراکسی کو عموماً `Access-Control-*`
 ہیڈرز شامل یا دوبارہ تحریر **نہیں** کرنے چاہئیں (دوہرے ہیڈرز براؤزرز کو خراب کر دیتے ہیں)۔ TLS کو ختم
-کر کے آگے بھیجیں — پری فلائٹ کا جواب OmniRoute کو دینے دیں:
+کر کے آگے بھیجیں — پری فلائٹ کا جواب 67router کو دینے دیں:
 
 ```nginx
-# nginx — OmniRoute کو آگے بھیجیں؛ یہاں Access-Control-* شامل نہ کریں
+# nginx — 67router کو آگے بھیجیں؛ یہاں Access-Control-* شامل نہ کریں
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -130,12 +130,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # فارورڈنگ ہیڈرز برقرار رکھیں: اسی ہوسٹ پر موجود پراکسی لوپ بیک سے منسلک ہوتی ہے، اور یہی
-    # OmniRoute کو بتاتے ہیں کہ کال کرنے والا مقامی آپریٹر نہیں ہے۔ ایسی پراکسی جو ان میں سے کوئی بھی شامل نہ کرے
+    # 67router کو بتاتے ہیں کہ کال کرنے والا مقامی آپریٹر نہیں ہے۔ ایسی پراکسی جو ان میں سے کوئی بھی شامل نہ کرے
     # ہر ریموٹ کالر کو مقامی ظاہر کرتی ہے۔ X-Forwarded-For کو کبھی بھی 127.0.0.1 پر سیٹ نہ کریں۔
 }
 ```
 
-براؤزر کے مجاز origins کو پراکسی میں نہیں، بلکہ OmniRoute (`CORS_ALLOWED_ORIGINS` یا
+براؤزر کے مجاز origins کو پراکسی میں نہیں، بلکہ 67router (`CORS_ALLOWED_ORIGINS` یا
 Security ٹیب) میں سیٹ کریں۔
 
 ## سورس فائلیں

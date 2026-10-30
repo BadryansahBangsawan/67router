@@ -36,9 +36,9 @@ parehong lokal na tool capability na nakatali sa turn kapag naka-configure ang t
 ## Pag-set up ng dashboard
 
 1. Buksan ang provider na **ChatGPT Web (Codex)** at magdagdag ng koneksyon.
-2. I-paste ang buong ChatGPT Cookie header, tunnel ID, runtime key, at pangalan ng custom connector. Ang mga bagong setup na may kakayahang gumamit ng mga tool ay dapat gumamit ng bagong likhang connector na eksaktong pinangalanang `OmniRoute Codex v2`, na nakatakda ang Authentication sa None at ang Permissions sa Allow all actions.
-3. Patakbuhin ang pagsusuri sa koneksyon. Magbubukas ang OmniRoute ng Temporary Chat na sinusuportahan ng browser at tutukuyin kung available ang Sol at Pro para sa account.
-4. I-save ang koneksyon. Papalitan ng OmniRoute ang na-paste na cookie ng napatunayang Playwright storage state at ise-save ito kasama ng runtime key sa pamamagitan ng naka-encrypt na abstraction ng kredensyal.
+2. I-paste ang buong ChatGPT Cookie header, tunnel ID, runtime key, at pangalan ng custom connector. Ang mga bagong setup na may kakayahang gumamit ng mga tool ay dapat gumamit ng bagong likhang connector na eksaktong pinangalanang `67router Codex v2`, na nakatakda ang Authentication sa None at ang Permissions sa Allow all actions.
+3. Patakbuhin ang pagsusuri sa koneksyon. Magbubukas ang 67router ng Temporary Chat na sinusuportahan ng browser at tutukuyin kung available ang Sol at Pro para sa account.
+4. I-save ang koneksyon. Papalitan ng 67router ang na-paste na cookie ng napatunayang Playwright storage state at ise-save ito kasama ng runtime key sa pamamagitan ng naka-encrypt na abstraction ng kredensyal.
 
 Hindi pananatilihin ang raw cookie pagkatapos ng matagumpay na pag-save. Kapag nag-expire ang session, buksan ang koneksyon, mag-paste ng bagong buong Cookie header, at muling patakbuhin ang pagsusuri. Hiwalay na iniuulat ng doctor status sa dialog ng pag-edit ang browser, storage state, pag-sign in, Temporary Chat, tunnel, connector, at tool round-trip. Upang i-automate ang mga update sa cookie kapag nagpapalit ang mga session, tingnan ang kasamang tool sa [Browser Session Sync Extension](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -65,10 +65,10 @@ High, at inilalantad din ng mga account na may kakayahang gumamit ng Pro ang Ext
 nakapirming backend model at reasoning effort; ang sumasalungat na tahasang Responses effort ay ligtas na nabibigo
 sa halip na tahimik na baguhin ang napiling browser mode.
 
-Huwag palitan ang pangalan o muling gamitin ang mas lumang `Codex Native` o `OmniRoute Codex` connector. Kino-cache ng ChatGPT
+Huwag palitan ang pangalan o muling gamitin ang mas lumang `Codex Native` o `67router Codex` connector. Kino-cache ng ChatGPT
 ang pampublikong MCP contract ayon sa pagkakakilanlan ng connector, samantalang gumagamit ang na-refresh na bridge ng isang
 bagong direct turn-token contract. Tinatanggihan ng runtime ang mga legacy identity na iyon at nangangailangan
-ng bagong `OmniRoute Codex v2` connector.
+ng bagong `67router Codex v2` connector.
 
 ## Modelo ng seguridad
 
@@ -88,19 +88,19 @@ ng bagong `OmniRoute Codex v2` connector.
 
 ## VPS na walang display at Docker
 
-Para sa mga pag-install gamit ang npm, systemd, at PM2, tinutukoy ng OmniRoute ang mga karaniwang path ng Chrome at Chromium.
+Para sa mga pag-install gamit ang npm, systemd, at PM2, tinutukoy ng 67router ang mga karaniwang path ng Chrome at Chromium.
 Bilang alternatibo, itakda ang `CHATGPT_WEB_CODEX_CHROME_PATH`. Sadyang gumagamit ang mga runtime turn ng Chrome
 na may interface dahil tinatanggihan ng ChatGPT ang tunay na headless na anyo ng browser. Samakatuwid, dapat
-patakbuhin ng host na walang display ang OmniRoute gamit ang isang pribadong Xvfb display; hindi sapat ang pagtatakda lamang ng Chrome path upang magkaroon nito.
+patakbuhin ng host na walang display ang 67router gamit ang isang pribadong Xvfb display; hindi sapat ang pagtatakda lamang ng Chrome path upang magkaroon nito.
 
 Sinisimulan ng Docker `web` profile ang `chatgpt-web-codex-browser` sa internal na Compose
 network. Pinapatakbo ng sidecar ang Chrome na may interface sa loob ng Xvfb, kaya hindi kinakailangan ang pisikal na display. Ang CDP
 port nito ay hindi inilalathala sa host. Hiwalay ang protektadong browser profile volume mula sa
-OmniRoute data volume, at tumatanggap ang browser ng sapat na shared memory. Ang internal na CDP proxy
+67router data volume, at tumatanggap ang browser ng sapat na shared memory. Ang internal na CDP proxy
 ay nakikinig lamang sa port `9223` sa loob ng Compose network; nananatiling naka-bind ang Chrome sa loopback sa
 sidecar.
 
-Pinipigilan ng isang supervisor lease sa ilalim ng `DATA_DIR` ang maraming proseso ng OmniRoute na magkaroon ng kontrol
+Pinipigilan ng isang supervisor lease sa ilalim ng `DATA_DIR` ang maraming proseso ng 67router na magkaroon ng kontrol
 sa parehong tunnel at broker state. Iniuulat ng doctor ang isang conflict.
 
 ## Interaktibong pagbawi

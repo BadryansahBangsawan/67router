@@ -7,7 +7,7 @@
 > **Əsas mənbə:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute öz lokal serverini (`http://localhost:20128`) üç tunel backend-i vasitəsilə açıq
+67router öz lokal serverini (`http://localhost:20128`) üç tunel backend-i vasitəsilə açıq
 internetə çıxara bilər. Bu, aşağıdakı hallarda faydalıdır:
 
 - İctimai şəkildə əlçatan yönləndirmə URL-si tələb edən bulud provayderlərindən (Antigravity, Gemini, Cursor)
@@ -15,7 +15,7 @@ internetə çıxara bilər. Bu, aşağıdakı hallarda faydalıdır:
 - VM yerləşdirmədən lokal instansiyanızı komanda yoldaşlarınızla paylaşmaq.
 - Mobil, uzaqdan və ya müxtəlif şəbəkələr arasında sınaq.
 
-Hər üç backend proses daxilində idarə olunur — OmniRoute əsas binar faylı və ya SDK-nı
+Hər üç backend proses daxilində idarə olunur — 67router əsas binar faylı və ya SDK-nı
 idarəetmə panelindən və ya REST API-dən başladır/dayandırır. Reverse-proxy və ya systemd
 quraşdırması tələb olunmur.
 
@@ -41,7 +41,7 @@ adlandırılmış tunel konfiqurasiyasının təqdim edilib-edilməməsindən as
 http://localhost:<apiPort>` əmrini işə salır və təyin edilmiş `*.trycloudflare.com` URL-sini
   standart çıxışdan təhlil edir. URL-lər müvəqqətidir və hər yenidən başlatmada dəyişir.
 - **Adlandırılmış tunel (seçimlə aktivləşdirilir).** `CLOUDFLARED_CONFIG` lokal olaraq idarə olunan
-  cloudflared `config.yml` faylını göstərdikdə, OmniRoute `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` faylını göstərdikdə, 67router `cloudflared tunnel --no-autoupdate
 --config <path> run` əmrini işə salır və sizə **sabit, adlandırılmış host adı** verir. Konfiqurasiya
   tunel UUID-sini, `credentials-file` və `ingress` marşrutlaşdırmasını təmin edir, buna görə də
   `--url` ötürülmür və Zero Trust idarəetmə paneli tokeni tələb olunmur. `run`
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` əmrini işə salır və təyin edilmiş `*.trycloud
 
 Əsas davranışlar:
 
-- **Avtomatik quraşdırma.** İlk istifadədə OmniRoute ən son `cloudflared`
+- **Avtomatik quraşdırma.** İlk istifadədə 67router ən son `cloudflared`
   binar faylını rəsmi GitHub buraxılışlarından endirir (idarə olunan quraşdırma
   `DATA_DIR/cloudflared/` altında yerləşir). Endirilmiş faylın SHA256 göstəricisi icradan əvvəl
   buraxılış manifesti ilə yoxlanılır.
@@ -67,7 +67,7 @@ http://localhost:<apiPort>` əmrini işə salır və təyin edilmiş `*.trycloud
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Host adınızı OmniRoute-un lokal API portuna (standart olaraq 20128) yönləndirən
+2. Host adınızı 67router-un lokal API portuna (standart olaraq 20128) yönləndirən
    `~/.cloudflared/config.yml` faylı yaradın:
 
    ```yaml
@@ -79,11 +79,11 @@ http://localhost:<apiPort>` əmrini işə salır və təyin edilmiş `*.trycloud
      - service: http_status:404
    ```
 
-3. OmniRoute-u konfiqurasiyaya yönəldin və tuneli (yenidən) başladın:
+3. 67router-u konfiqurasiyaya yönəldin və tuneli (yenidən) başladın:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # istəyə bağlıdır — OmniRoute-un bildirdiyi host adını əvəz edir; əks halda
+   # istəyə bağlıdır — 67router-un bildirdiyi host adını əvəz edir; əks halda
    # konfiqurasiyanın ilk ingress qaydasından oxunur:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,12 +121,12 @@ Yaxud idarəetmə paneli vasitəsilə: **Settings → Tunnels → Cloudflare**.
 
 ### İstəyə bağlı mühit dəyişənləri
 
-| Dəyişən                                              | Təyinatı                                                                                                                                                                                         |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | İcra olunan faylın yolunu əvəz edir. Təyin edilibsə və etibarlıdırsa, OmniRoute onu endirmək əvəzinə istifadə edir.                                                                              |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Nəqliyyat protokolu (standart olaraq `http2`; həmçinin `quic`, `auto`).                                                                                                                          |
-| `CLOUDFLARED_CONFIG`                                 | Lokal olaraq idarə edilən cloudflared `config.yml` faylına gedən yol. Təyin edildikdə OmniRoute sürətli tunel əvəzinə **adlandırılmış/davamlı** tuneli (`tunnel --config <path> run`) işə salır. |
-| `CLOUDFLARED_HOSTNAME`                               | Adlandırılmış tunelin bildirdiyi ictimai host adını əvəz edir (məsələn, `ai.example.com`). Təyin edilmədikdə konfiqurasiyadakı ilk `ingress` host adından oxunur.                                |
+| Dəyişən                                              | Təyinatı                                                                                                                                                                                        |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | İcra olunan faylın yolunu əvəz edir. Təyin edilibsə və etibarlıdırsa, 67router onu endirmək əvəzinə istifadə edir.                                                                              |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Nəqliyyat protokolu (standart olaraq `http2`; həmçinin `quic`, `auto`).                                                                                                                         |
+| `CLOUDFLARED_CONFIG`                                 | Lokal olaraq idarə edilən cloudflared `config.yml` faylına gedən yol. Təyin edildikdə 67router sürətli tunel əvəzinə **adlandırılmış/davamlı** tuneli (`tunnel --config <path> run`) işə salır. |
+| `CLOUDFLARED_HOSTNAME`                               | Adlandırılmış tunelin bildirdiyi ictimai host adını əvəz edir (məsələn, `ai.example.com`). Təyin edilmədikdə konfiqurasiyadakı ilk `ingress` host adından oxunur.                               |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Cavaba təyin edilmiş `publicUrl` daxildir (məsələn,
 `https://abcd-1234.ngrok-free.app`). Fərdi domenlər, regionlar və siyasət qaydaları
-ngrok idarəetmə panelində konfiqurasiya edilməlidir — OmniRoute özü yalnız lokal
+ngrok idarəetmə panelində konfiqurasiya edilməlidir — 67router özü yalnız lokal
 hədəf URL-ni SDK-ya ötürür.
 
 ## 3. Tailscale Funnel
@@ -186,13 +186,13 @@ giriş, demonun işə salınması, aktivləşdirmə və deaktivləşdirmə.
 
 ### İlkin tələblər
 
-1. Tailscale-i quraşdırın (yaxud bunu OmniRoute-a həvalə edin — aşağıdakı `install` son nöqtəsinə baxın).
-2. Daxil olun (`tailscale login` və ya OmniRoute-un `login` son nöqtəsi vasitəsilə).
+1. Tailscale-i quraşdırın (yaxud bunu 67router-a həvalə edin — aşağıdakı `install` son nöqtəsinə baxın).
+2. Daxil olun (`tailscale login` və ya 67router-un `login` son nöqtəsi vasitəsilə).
 3. Tailscale administrator konsolunda tailnet-iniz üçün Funnel-i aktivləşdirin:
    <https://login.tailscale.com/admin/settings/features>.
 
 Linux və macOS sistemlərində demonu (`tailscaled`) idarə etmək üçün `sudo`
-tələb olunur. POST son nöqtələri, sorğu müddətində OmniRoute-un MITM parol keşinə
+tələb olunur. POST son nöqtələri, sorğu müddətində 67router-un MITM parol keşinə
 (`getCachedPassword` / `setCachedPassword`) ötürülən istəyə bağlı `sudoPassword`
 sahəsini qəbul edir. Windows standart xidmət quraşdırmasından
 `C:\Program Files\Tailscale\tailscale.exe` istifadə edir.
@@ -253,7 +253,7 @@ Mərkəzi `/api/settings/tunnels` endpointi yoxdur — hər bir backend müstəq
 
 ## OAuth geri çağırışı ilə bağlı nəzərə alınmalı məqamlar
 
-OmniRoute-u tunel vasitəsilə əlçatan etdikdə, idarəetmə paneli və OAuth axınları geri çağırış URL-lərini `localhost` deyil, **ictimai** host adı əsasında yaratmalıdır. Əks halda OAuth provayderi istifadəçini serverlərinin çata bilmədiyi URL-ə yönləndirir və əlaqə qurma prosesi uğursuz olur.
+67router-u tunel vasitəsilə əlçatan etdikdə, idarəetmə paneli və OAuth axınları geri çağırış URL-lərini `localhost` deyil, **ictimai** host adı əsasında yaratmalıdır. Əks halda OAuth provayderi istifadəçini serverlərinin çata bilmədiyi URL-ə yönləndirir və əlaqə qurma prosesi uğursuz olur.
 
 İdarəetmə panelindəki dəyişikliklər və parametrlərin yadda saxlanması üçün tunel host adını `NEXT_PUBLIC_BASE_URL` daxilində sabitləmək tələb olunmur. Autentifikasiya edilmiş idarəetmə paneli sessiyaya bağlı CSRF tokeni ilə eyni mənbəli təhlükəli sorğular göndərir, buna görə də efemer Cloudflare Quick Tunnel hostları sistemə daxil olduqdan sonra adi interfeys idarəetməsi üçün istifadə edilə bilər.
 
@@ -263,7 +263,7 @@ Aşağıdakı dəyəri təyin edin:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-və OAuth prosesini başlatmazdan əvvəl OmniRoute-u yenidən başladın. Efemer Cloudflare Quick Tunnels üçün URL hər yenidən başlatmadan sonra dəyişir, buna görə də istehsal mühitində OAuth istifadəsi üçün rezerv edilmiş domenə malik ngrok-a və ya Tailscale Funnel-a üstünlük verin.
+və OAuth prosesini başlatmazdan əvvəl 67router-u yenidən başladın. Efemer Cloudflare Quick Tunnels üçün URL hər yenidən başlatmadan sonra dəyişir, buna görə də istehsal mühitində OAuth istifadəsi üçün rezerv edilmiş domenə malik ngrok-a və ya Tailscale Funnel-a üstünlük verin.
 
 ## Sağlamlıq vəziyyəti və monitorinq
 
@@ -275,13 +275,13 @@ və OAuth prosesini başlatmazdan əvvəl OmniRoute-u yenidən başladın. Efeme
 - Tunelin yönləndirdiyi lokal hədəf URL.
 - Əgər varsa, son xəta mesajı.
 
-Proqram vasitəsilə monitorinq üçün hər backend-ə aid `GET` endpointlərini mütəmadi sorğulayın. Eyni anda birdən çox backend-in işlədilməsinə icazə verilir; OmniRoute onların hər birini müstəqil şəkildə izləyəcək.
+Proqram vasitəsilə monitorinq üçün hər backend-ə aid `GET` endpointlərini mütəmadi sorğulayın. Eyni anda birdən çox backend-in işlədilməsinə icazə verilir; 67router onların hər birini müstəqil şəkildə izləyəcək.
 
 ## Problemlərin aradan qaldırılması
 
 ### "cloudflared binary not found"
 
-OmniRoute ilk istifadə zamanı avtomatik quraşdırmaya cəhd edir. Quraşdırma bloklanarsa (məhdudlaşdırılmış şəbəkə, GitHub-a girişin olmaması), `cloudflared` faylını <https://github.com/cloudflare/cloudflared/releases> ünvanından əl ilə endirin və `CLOUDFLARED_BIN=/path/to/cloudflared` təyin edin.
+67router ilk istifadə zamanı avtomatik quraşdırmaya cəhd edir. Quraşdırma bloklanarsa (məhdudlaşdırılmış şəbəkə, GitHub-a girişin olmaması), `cloudflared` faylını <https://github.com/cloudflare/cloudflared/releases> ünvanından əl ilə endirin və `CLOUDFLARED_BIN=/path/to/cloudflared` təyin edin.
 
 ### "ngrok: authtoken required"
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute include un insieme curato di proxy gratuiti nella tabella `free_proxies`,
+67router include un insieme curato di proxy gratuiti nella tabella `free_proxies`,
 sincronizzati da provider esterni (1proxy, proxifly, iplocate, webshare). La
 dashboard li mostra in **Impostazioni → Proxy gratuiti**. Questo documento
 descrive il filtraggio, l'ordinamento, il conteggio e la segnalazione degli errori

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Останнє оновлення:** 2026-06-28 — v3.8.40
 
-OmniRoute постачається із системою плагінів у стилі WordPress. Плагіни — це самодостатні
+67router постачається із системою плагінів у стилі WordPress. Плагіни — це самодостатні
 каталоги, кожен із маніфестом `plugin.json` і вхідним файлом, які підключаються
 до конвеєра запитів (`onRequest` / `onResponse` / `onError`) і до
 подій життєвого циклу (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Каталог плагінів
 
-Плагіни зберігаються в каталозі даних OmniRoute:
+Плагіни зберігаються в каталозі даних 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

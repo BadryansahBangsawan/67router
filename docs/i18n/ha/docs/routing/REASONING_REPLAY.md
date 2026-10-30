@@ -7,7 +7,7 @@
 > **Madogarar gaskiya:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Sabuntawa na ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute yana adana `reasoning_content` na mataimaki da samfurori masu yanayin tunani suka samar, sannan ya sake saka shi ta atomatik a buƙatun da ke da zagaye da yawa idan mai samar da sabis na upstream yana buƙatarsa. Wannan yana kawar da kurakuran HTTP 400 da masu samar da sabis masu tsauraran ƙa'idoji ke bayarwa idan tarihin tattaunawar abokin ciniki ba ya ɗauke da tunanin zagayen da ya gabata.
+67router yana adana `reasoning_content` na mataimaki da samfurori masu yanayin tunani suka samar, sannan ya sake saka shi ta atomatik a buƙatun da ke da zagaye da yawa idan mai samar da sabis na upstream yana buƙatarsa. Wannan yana kawar da kurakuran HTTP 400 da masu samar da sabis masu tsauraran ƙa'idoji ke bayarwa idan tarihin tattaunawar abokin ciniki ba ya ɗauke da tunanin zagayen da ya gabata.
 
 ## Dalilin Samuwar Wannan
 
@@ -17,7 +17,7 @@ Wasu masu samar da sabis masu yanayin tunani suna ƙin karɓar zagaye na gaba sa
 Siga Ba Daidai Ba: Dole ne a sake aika reasoning_content na yanayin tunani zuwa API.
 ```
 
-Amma abokan ciniki na yau da kullum (Cursor, Cline, Roo Code, OpenAI SDK) suna cire `reasoning_content` daga tarihin da suke sake aikawa. OmniRoute yana dawo da shi daga cache na gefen uwar garke domin buƙatar da upstream ke gani ta kasance daidaitacciya. Issue #1628 ya gabatar da tsarin adanawa haɗaɗɗe na memory/SQLite domin cache ya ci gaba da kasancewa bayan sake kunna process.
+Amma abokan ciniki na yau da kullum (Cursor, Cline, Roo Code, OpenAI SDK) suna cire `reasoning_content` daga tarihin da suke sake aikawa. 67router yana dawo da shi daga cache na gefen uwar garke domin buƙatar da upstream ke gani ta kasance daidaitacciya. Issue #1628 ya gabatar da tsarin adanawa haɗaɗɗe na memory/SQLite domin cache ya ci gaba da kasancewa bayan sake kunna process.
 
 ## Tsarin Gine-gine
 

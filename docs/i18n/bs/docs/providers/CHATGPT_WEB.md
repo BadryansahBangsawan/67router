@@ -26,9 +26,9 @@ Tunel je potreban samo za turnove alata. Svaka navedena ruta, uključujući `pro
 ## Postavljanje kontrolne ploče
 
 1. Otvorite pružaoca usluge **ChatGPT Web (Codex)** i dodajte vezu.
-2. Zalijepite kompletno ChatGPT Cookie zaglavlje, ID tunela, runtime ključ i naziv prilagođenog konektora. Nove postavke koje podržavaju alate moraju koristiti novokreirani konektor nazvan tačno `OmniRoute Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
-3. Pokrenite provjeru veze. OmniRoute otvara Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
-4. Sačuvajte vezu. OmniRoute zamjenjuje zalijepljeni kolačić provjerenim Playwright stanjem pohrane i pohranjuje ga s runtime ključem putem apstrakcije šifriranih vjerodajnica.
+2. Zalijepite kompletno ChatGPT Cookie zaglavlje, ID tunela, runtime ključ i naziv prilagođenog konektora. Nove postavke koje podržavaju alate moraju koristiti novokreirani konektor nazvan tačno `67router Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
+3. Pokrenite provjeru veze. 67router otvara Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
+4. Sačuvajte vezu. 67router zamjenjuje zalijepljeni kolačić provjerenim Playwright stanjem pohrane i pohranjuje ga s runtime ključem putem apstrakcije šifriranih vjerodajnica.
 
 Neobrađeni kolačić se ne zadržava nakon uspješnog spremanja. Kada sesija istekne, otvorite vezu, zalijepite novo kompletno Cookie zaglavlje i ponovo pokrenite provjeru. Status provjere u dijalogu za uređivanje zasebno izvještava o pregledniku, stanju pohrane, prijavi, Temporary Chat-u, tunelu, konektoru i povratnom prolazu alata. Za automatizaciju ažuriranja kolačića prilikom rotacije sesija pogledajte prateći alat u odjeljku [Ekstenzija za sinhronizaciju sesije preglednika](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -50,7 +50,7 @@ Dodajte jedan od njih u kombinaciju kao bilo koji drugi model. Codex aplikacija 
 
 Free/Go nalozi izlažu Luna rute. Nalozi sa Sol mogućnostima izlažu Instant do High, a Pro nalozi dodatno izlažu Extra High i Pro. Svaka ruta ima fiksni backend model i napor zaključivanja; konfliktni eksplicitni Responses napor se odbija umjesto da tiho mijenja odabrani režim pretraživača.
 
-Nemojte preimenovati ili ponovo koristiti stariji `Codex Native` ili `OmniRoute Codex` konektor. ChatGPT kešira javni MCP ugovor prema identitetu konektora, dok osvježeni most koristi novi direktni ugovor o turn-tokenu. Runtime odbacuje te naslijeđene identitete i zahtijeva novi `OmniRoute Codex v2` konektor.
+Nemojte preimenovati ili ponovo koristiti stariji `Codex Native` ili `67router Codex` konektor. ChatGPT kešira javni MCP ugovor prema identitetu konektora, dok osvježeni most koristi novi direktni ugovor o turn-tokenu. Runtime odbacuje te naslijeđene identitete i zahtijeva novi `67router Codex v2` konektor.
 
 ## Sigurnosni model
 
@@ -63,12 +63,12 @@ Nemojte preimenovati ili ponovo koristiti stariji `Codex Native` ili `OmniRoute 
 
 ## VPS bez zaslona i Docker
 
-Za instalacije npm, systemd i PM2, OmniRoute detektira uobičajene putanje za Chrome i Chromium.
-Alternativno, postavite `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime potezi namjerno koriste Chrome s grafičkim sučeljem (headed) jer ChatGPT odbija oblik preglednika bez grafičkog sučelja (true-headless). Host bez zaslona stoga mora pokrenuti OmniRoute s privatnim Xvfb zaslonom; samo postavljanje putanje Chromea to ne osigurava.
+Za instalacije npm, systemd i PM2, 67router detektira uobičajene putanje za Chrome i Chromium.
+Alternativno, postavite `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime potezi namjerno koriste Chrome s grafičkim sučeljem (headed) jer ChatGPT odbija oblik preglednika bez grafičkog sučelja (true-headless). Host bez zaslona stoga mora pokrenuti 67router s privatnim Xvfb zaslonom; samo postavljanje putanje Chromea to ne osigurava.
 
-Docker `web` profil pokreće `chatgpt-web-codex-browser` na internoj Compose mreži. Sidecar pokreće Chrome s grafičkim sučeljem unutar Xvfb-a, tako da fizički zaslon nije potreban. Njegov CDP port nije objavljen na hostu. Volumen zaštićenog profila preglednika odvojen je od volumena podataka OmniRoute-a, a preglednik prima dovoljno dijeljene memorije. Interni CDP proxy sluša samo na portu `9223` unutar Compose mreže; Chrome ostaje vezan za loopback u sidecaru.
+Docker `web` profil pokreće `chatgpt-web-codex-browser` na internoj Compose mreži. Sidecar pokreće Chrome s grafičkim sučeljem unutar Xvfb-a, tako da fizički zaslon nije potreban. Njegov CDP port nije objavljen na hostu. Volumen zaštićenog profila preglednika odvojen je od volumena podataka 67router-a, a preglednik prima dovoljno dijeljene memorije. Interni CDP proxy sluša samo na portu `9223` unutar Compose mreže; Chrome ostaje vezan za loopback u sidecaru.
 
-Zakup nadzornika pod `DATA_DIR` sprječava da više OmniRoute procesa posjeduje isti tunel i stanje posrednika. Sukob prijavljuje doctor.
+Zakup nadzornika pod `DATA_DIR` sprječava da više 67router procesa posjeduje isti tunel i stanje posrednika. Sukob prijavljuje doctor.
 
 ## Interaktivni oporavak
 

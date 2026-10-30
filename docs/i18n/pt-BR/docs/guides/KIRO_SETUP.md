@@ -4,7 +4,7 @@
 
 ---
 
-Este guia aborda como adicionar contas do Kiro (assistente de programação com IA hospedado na AWS) ao OmniRoute,
+Este guia aborda como adicionar contas do Kiro (assistente de programação com IA hospedado na AWS) ao 67router,
 com foco na execução simultânea de várias contas sem conflitos de sessão.
 
 ---
@@ -22,10 +22,10 @@ da primeira conta.
 
 ---
 
-## Como o OmniRoute resolve isso (v3.8.0+)
+## Como o 67router resolve isso (v3.8.0+)
 
-A partir da v3.8.0, o OmniRoute chama `registerClient()` (AWS SSO OIDC) durante cada
-importação de conexão do Kiro. Isso fornece a cada conexão do OmniRoute seu próprio
+A partir da v3.8.0, o 67router chama `registerClient()` (AWS SSO OIDC) durante cada
+importação de conexão do Kiro. Isso fornece a cada conexão do 67router seu próprio
 registro dedicado de cliente OIDC. Como cada registro de cliente é independente, atualizar
 ou autenticar novamente uma conta não afeta o token de atualização de nenhuma outra conta.
 
@@ -59,7 +59,7 @@ conexões recém-criadas receberão automaticamente seu próprio registro de cli
 
 ### Pré-requisitos
 
-- OmniRoute v3.8.0 ou posterior.
+- 67router v3.8.0 ou posterior.
 - Uma conta funcional do Kiro (e-mail + senha ou login com Google ou GitHub).
 - Opcionalmente, uma segunda conta do Kiro.
 
@@ -70,7 +70,7 @@ conexões recém-criadas receberão automaticamente seu próprio registro de cli
    - **Importar token** — cole um token de atualização que comece com `aorAAAAAG`.
    - **Chave de API** — cole uma chave de API de longa duração do Kiro / CodeWhisperer.
    - **Login com Google / GitHub** — conclua o fluxo OAuth no navegador.
-   - **Importação automática** — clique no botão; o OmniRoute lê as credenciais do
+   - **Importação automática** — clique no botão; o 67router lê as credenciais do
      banco de dados local do kiro-cli ou de `~/.aws/sso/cache`.
 3. A conexão é salva. Os fluxos de token de atualização registram automaticamente um
    cliente OIDC dedicado. Os fluxos de chave de API validam a chave com a AWS e não armazenam um token de atualização.
@@ -127,7 +127,7 @@ usa a atualização do OAuth, evitando assim a invalidação de sessões OIDC co
 2. Selecione **API Key**.
 3. Cole a chave de API e escolha a região da AWS: **Auto-detect** (padrão), **US East
    (N. Virginia)** ou **Europe (Frankfurt)**.
-4. O OmniRoute valida a chave e salva a conexão fixada na região em que a
+4. O 67router valida a chave e salva a conexão fixada na região em que a
    chave funciona.
 
 ### API
@@ -177,7 +177,7 @@ para `https://q.<region>.amazonaws.com/generateAssistantResponse` — incluindo 
 ## Expiração do cliente OIDC
 
 Os clientes públicos OIDC do AWS SSO geralmente expiram após 90 dias
-(`clientSecretExpiresAt`). O OmniRoute armazena esse carimbo de data/hora em `providerSpecificData`
+(`clientSecretExpiresAt`). O 67router armazena esse carimbo de data/hora em `providerSpecificData`
 para fins de observabilidade. Se uma conexão parar de ser atualizada após cerca de 90 dias, importe
 a conexão novamente para obter um novo registro de cliente OIDC. O recadastramento automático após
 a expiração está registrado como uma melhoria futura.
@@ -198,7 +198,7 @@ por meio do OIDC do AWS SSO.
 ### A importação falha com "Falha na validação do token"
 
 - Certifique-se de que o token de atualização comece com `aorAAAAAG`.
-- Certifique-se de que o OmniRoute consiga acessar `https://oidc.us-east-1.amazonaws.com` (ou a
+- Certifique-se de que o 67router consiga acessar `https://oidc.us-east-1.amazonaws.com` (ou a
   região configurada). Se você estiver atrás de um proxy corporativo, configure um proxy no nível do provedor em
   **Painel → Configurações → Proxies**.
 
@@ -206,7 +206,7 @@ por meio do OIDC do AWS SSO.
 
 - Confirme se a chave é uma chave de API do Kiro / CodeWhisperer, e não um token de atualização.
 - Confirme se a região da AWS corresponde à chave/conta. `us-east-1` é o padrão.
-- A chave deve ser capaz de chamar `ListAvailableProfiles`; caso contrário, o OmniRoute não poderá
+- A chave deve ser capaz de chamar `ListAvailableProfiles`; caso contrário, o 67router não poderá
   resolver o `profileArn` necessário.
 
 Para outros problemas, consulte o arquivo principal [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

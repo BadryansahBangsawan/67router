@@ -4,7 +4,7 @@
 
 ---
 
-> **Ringkasnya**: Enjin pemampatan OmniRoute boleh **dipasang ganti** — anda boleh mendaftarkan enjin tersuai, menyediakan pek bahasa untuk bahasa baharu dan menggabungkan saluran paip bertindan. Panduan ini menunjukkan caranya.
+> **Ringkasnya**: Enjin pemampatan 67router boleh **dipasang ganti** — anda boleh mendaftarkan enjin tersuai, menyediakan pek bahasa untuk bahasa baharu dan menggabungkan saluran paip bertindan. Panduan ini menunjukkan caranya.
 
 **Panduan berkaitan:**
 
@@ -232,7 +232,7 @@ dalam pemilih strategi melalui `id`-nya. Uji penyepaduan dengan menggabungkannya
 
 ## Mencipta Pek Bahasa
 
-Pemampatan gaya Caveman menggunakan **pek peraturan khusus bahasa** untuk mengendalikan kata pengisi, ungkapan berlapik dan corak berjela-jela dalam setiap bahasa semula jadi. OmniRoute disertakan dengan **6 pek bahasa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Pemampatan gaya Caveman menggunakan **pek peraturan khusus bahasa** untuk mengendalikan kata pengisi, ungkapan berlapik dan corak berjela-jela dalam setiap bahasa semula jadi. 67router disertakan dengan **6 pek bahasa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struktur Pek
 
@@ -391,7 +391,7 @@ Output enjin N menjadi input enjin N+1.
 
 ### Mod Pemampatan
 
-OmniRoute memilih **SATU mod bagi setiap permintaan** berdasarkan konfigurasi, ambang pencetus automatik dan penggantian kombo.
+67router memilih **SATU mod bagi setiap permintaan** berdasarkan konfigurasi, ambang pencetus automatik dan penggantian kombo.
 Mod yang tersedia ditakrifkan dalam `open-sse/services/compression/types.ts` (jenis `CompressionMode`):
 
 | Mod          | Enjin                | Kes penggunaan                                                                                                                                                                                                                    |
@@ -508,10 +508,10 @@ Untuk mengawalnya melalui konfigurasi, tetapkan `mode: "stacked"` dan sediakan t
 
 ## Dasar Penyegerakan Huluan
 
-Enjin pemampatan OmniRoute mengiktiraf beberapa projek huluan dalam README
+Enjin pemampatan 67router mengiktiraf beberapa projek huluan dalam README
 ("diilhamkan oleh RTK, Caveman, LLMLingua-2, Troglodita"). Soalan lazim daripada penyumbang
 ialah: **apabila RTK huluan menambah penapis alat baharu atau Caveman menambah pek
-peraturan, bagaimanakah penambahan itu sampai ke OmniRoute?** Bahagian ini ialah jawapan muktamad.
+peraturan, bagaimanakah penambahan itu sampai ke 67router?** Bahagian ini ialah jawapan muktamad.
 
 ### Salinan vendored berbanding pelaksanaan bebas
 
@@ -532,7 +532,7 @@ salinan huluan untuk menjalankan `git pull` — itulah sebabnya README menyataka
 **Tiada penjejakan keluaran huluan automatik dan tiada label `compression-sync`**
 — ini disengajakan. Oleh sebab enjin tersebut merupakan pelaksanaan semula, penapis RTK
 atau pek peraturan Caveman huluan tidak digabungkan sebagai kod; ia **dinyatakan semula sebagai
-peraturan/penapis baharu dalam format OmniRoute sendiri** (lihat
+peraturan/penapis baharu dalam format 67router sendiri** (lihat
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) dan dimasukkan secara ad hoc melalui
 PR biasa. Titik peluasan di atas (enjin tersuai, pek bahasa, penapis RTK)
 ialah cara yang dibenarkan untuk menyumbangkannya.
@@ -546,14 +546,14 @@ Contoh terkini bagi aliran ini:
 ### Headroom (proksi pemampatan input)
 
 Headroom adalah **sepenuhnya dalaman** — petikan codec `gcf` vendored yang dipinkan serta
-lapisan `smartcrusher` / `toon` / `tabular` milik OmniRoute sendiri. Tiada huluan aktif
+lapisan `smartcrusher` / `toon` / `tabular` milik 67router sendiri. Tiada huluan aktif
 untuk dijejaki selain salinan vendored tersebut; kemas kini kepada `gcf` disegarkan
 secara manual apabila codec berubah dan disahkan semula terhadap get bajet pemampatan
 (`check:compression-budget`).
 
 ### Mencadangkan penambahbaikan yang diilhamkan oleh huluan
 
-1. **Jangan vendor** — nyatakan semula peraturan/penapis huluan dalam format OmniRoute.
+1. **Jangan vendor** — nyatakan semula peraturan/penapis huluan dalam format 67router.
 2. Tambahkannya melalui titik peluasan yang sepadan di bawah (pek bahasa, penapis RTK, atau
    enjin tersuai).
 3. Rujuk projek huluan dalam perihalan PR (atribusi), bukan dengan

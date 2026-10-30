@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Nuashonrú is déanaí:** 2026-06-28 — v3.8.40
 
-Tagann creat cineálach meastóireachta le OmniRoute ar féidir leat é a úsáid chun cumraíochtaí ródaithe, soláthraithe/samhlacha aonair, nó na tacair chuachta "golden set" a thagarmharcáil. Úsáid é chun athruithe ródaithe a fhíorú, soláthraithe nua a bhailíochtú, agus eisiúintí a rialú sula gcuirtear chun cinn iad chuig trácht táirgeachta.
+Tagann creat cineálach meastóireachta le 67router ar féidir leat é a úsáid chun cumraíochtaí ródaithe, soláthraithe/samhlacha aonair, nó na tacair chuachta "golden set" a thagarmharcáil. Úsáid é chun athruithe ródaithe a fhíorú, soláthraithe nua a bhailíochtú, agus eisiúintí a rialú sula gcuirtear chun cinn iad chuig trácht táirgeachta.
 
 Cuirtear an creat i bhfeidhm mar seo a leanas:
 

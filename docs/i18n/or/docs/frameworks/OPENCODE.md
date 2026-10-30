@@ -5,11 +5,11 @@
 ---
 
 > **ସ୍ଥିତି:** ସାଧାରଣ ଭାବେ ଉପଲବ୍ଧ।
-> **ପାଠକବର୍ଗ:** OmniRoute ଡିପ୍ଲୟମେଣ୍ଟ ସହିତ OpenCodeକୁ ସଂଯୋଗ କରୁଥିବା ଅପରେଟରମାନେ।
+> **ପାଠକବର୍ଗ:** 67router ଡିପ୍ଲୟମେଣ୍ଟ ସହିତ OpenCodeକୁ ସଂଯୋଗ କରୁଥିବା ଅପରେଟରମାନେ।
 > **ପ୍ରାମାଣିକ ଉତ୍ସ (କନଫିଗ୍ ସ୍କିମା):** `src/shared/services/opencodeConfig.ts`
 > **ପ୍ରାମାଣିକ ଉତ୍ସ (npm ପ୍ୟାକେଜ୍):** `@omniroute/opencode-provider/` (ପ୍ରକାଶନଯୋଗ୍ୟ ୱର୍କସ୍ପେସ୍)
 
-[OpenCode](https://opencode.ai) ହେଉଛି ଏକ ଏଜେଣ୍ଟିକ୍ CLI/ଡେସ୍କଟପ୍ AI କ୍ଲାଏଣ୍ଟ। ଏହା `~/.config/opencode/opencode.json` (କିମ୍ବା `opencode.jsonc`)ରୁ ଏହାର ପ୍ରଦାତା କ୍ୟାଟାଲଗ୍ ପଢ଼େ ଏବଂ `https://opencode.ai/config.json`ର ସ୍କିମା ଅନୁସରଣ କରେ। OmniRoute ସେହି ପ୍ରଦାତାମାନଙ୍କ ମଧ୍ୟରୁ ଗୋଟିଏ ଭାବେ ନିଜକୁ OpenCode ସମ୍ମୁଖରେ ଉପସ୍ଥାପନ କରେ — ପ୍ରତ୍ୟେକ ଅନୁରୋଧ OmniRouteର ମାନକ OpenAI-ସୁସଙ୍ଗତ `/v1` ପୃଷ୍ଠ ମାଧ୍ୟମରେ ପ୍ରବାହିତ ହୁଏ, ତେଣୁ OpenCode ସ୍ୱୟଂଚାଳିତ ଭାବେ Auto-Combo ରାଉଟିଂ, ସର୍କିଟ୍ ବ୍ରେକର୍, କୀ ନୀତି, ପର୍ଯ୍ୟବେକ୍ଷଣୀୟତା ଇତ୍ୟାଦିର ଲାଭ ପାଏ।
+[OpenCode](https://opencode.ai) ହେଉଛି ଏକ ଏଜେଣ୍ଟିକ୍ CLI/ଡେସ୍କଟପ୍ AI କ୍ଲାଏଣ୍ଟ। ଏହା `~/.config/opencode/opencode.json` (କିମ୍ବା `opencode.jsonc`)ରୁ ଏହାର ପ୍ରଦାତା କ୍ୟାଟାଲଗ୍ ପଢ଼େ ଏବଂ `https://opencode.ai/config.json`ର ସ୍କିମା ଅନୁସରଣ କରେ। 67router ସେହି ପ୍ରଦାତାମାନଙ୍କ ମଧ୍ୟରୁ ଗୋଟିଏ ଭାବେ ନିଜକୁ OpenCode ସମ୍ମୁଖରେ ଉପସ୍ଥାପନ କରେ — ପ୍ରତ୍ୟେକ ଅନୁରୋଧ 67routerର ମାନକ OpenAI-ସୁସଙ୍ଗତ `/v1` ପୃଷ୍ଠ ମାଧ୍ୟମରେ ପ୍ରବାହିତ ହୁଏ, ତେଣୁ OpenCode ସ୍ୱୟଂଚାଳିତ ଭାବେ Auto-Combo ରାଉଟିଂ, ସର୍କିଟ୍ ବ୍ରେକର୍, କୀ ନୀତି, ପର୍ଯ୍ୟବେକ୍ଷଣୀୟତା ଇତ୍ୟାଦିର ଲାଭ ପାଏ।
 
 **ଦୁଇଟି ସମର୍ଥିତ ଇଣ୍ଟିଗ୍ରେସନ୍ ପଥ** ଅଛି। ଗୋଟିଏ ବାଛନ୍ତୁ — ଉଭୟ ସମାନ କନଫିଗ୍ ସୃଷ୍ଟି କରନ୍ତି।
 
@@ -17,16 +17,16 @@
 
 ## ପଥ 1 — CLI ଜେନେରେଟର୍ (npm ଇନଷ୍ଟଲ୍ ଆବଶ୍ୟକ ନାହିଁ)
 
-ଶେଷ ଉପଭୋକ୍ତାମାନଙ୍କ ପାଇଁ ସୁପାରିଶ କରାଯାଏ। OmniRoute ସହିତ ଆସେ। ସେହି ସ୍ଥାନରେ `opencode.json` ଲେଖେ।
+ଶେଷ ଉପଭୋକ୍ତାମାନଙ୍କ ପାଇଁ ସୁପାରିଶ କରାଯାଏ। 67router ସହିତ ଆସେ। ସେହି ସ୍ଥାନରେ `opencode.json` ଲେଖେ।
 
 ```bash
-# OmniRoute ଇନଷ୍ଟଲ୍ କରିବା ପରେ (npm i -g @omniroute/cli କିମ୍ବା ସ୍ଥାନୀୟ କ୍ଲୋନ୍)
+# 67router ଇନଷ୍ଟଲ୍ କରିବା ପରେ (npm i -g @omniroute/cli କିମ୍ବା ସ୍ଥାନୀୟ କ୍ଲୋନ୍)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-ଆଭ୍ୟନ୍ତରୀଣ ଭାବେ CLI, `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`)କୁ କଲ୍ କରେ, ତେଣୁ ବିଦ୍ୟମାନ `opencode.json` ଏହାର ଅନ୍ୟ ପ୍ରଦାତା ଏବଂ ମନ୍ତବ୍ୟଗୁଡ଼ିକୁ ରଖିଥାଏ। OmniRoute ଏଣ୍ଟ୍ରିକୁ ଆଟମିକ୍ ଭାବେ ଯୋଡ଼ାଯାଏ/ବଦଳାଯାଏ।
+ଆଭ୍ୟନ୍ତରୀଣ ଭାବେ CLI, `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`)କୁ କଲ୍ କରେ, ତେଣୁ ବିଦ୍ୟମାନ `opencode.json` ଏହାର ଅନ୍ୟ ପ୍ରଦାତା ଏବଂ ମନ୍ତବ୍ୟଗୁଡ଼ିକୁ ରଖିଥାଏ। 67router ଏଣ୍ଟ୍ରିକୁ ଆଟମିକ୍ ଭାବେ ଯୋଡ଼ାଯାଏ/ବଦଳାଯାଏ।
 
 ଫଳସ୍ୱରୂପ ଫାଇଲ୍ (ଡିଫଲ୍ଟ ମଡେଲ୍ କ୍ୟାଟାଲଗ୍):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 OpenCode UI/ଏଜେଣ୍ଟ
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute OpenAI ପୃଷ୍ଠ)
-         → OmniRoute /v1/chat/completions ହ୍ୟାଣ୍ଡଲର୍     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router OpenAI ପୃଷ୍ଠ)
+         → 67router /v1/chat/completions ହ୍ୟାଣ୍ଡଲର୍     (open-sse/handlers/chatCore.ts)
             → କମ୍ବୋ ରାଉଟିଂ / Auto-Combo / ଏକ୍ସିକ୍ୟୁଟର୍
                → ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରଦାତା
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ଆପଣ `models: [...]` ମାଧ୍ୟମରେ ଏହାକୁ ଓଭରରାଇଡ୍ କରିପାରିବେ। ସୁପାରିସ କରାଯାଇଥିବା ଅତିରିକ୍ତ ବିକଳ୍ପଗୁଡ଼ିକ:
 
-- `"auto"` — OmniRouteର [Auto-Combo](../routing/AUTO-COMBO.md) ଶୂନ୍ୟ-କନଫିଗ୍ ରାଉଟର୍କୁ ଉପଲବ୍ଧ କରାଏ। ଆପଣଙ୍କୁ କ୍ୟାଟାଲଗ୍କୁ ହାର୍ଡ-କୋଡ୍ କରିବାକୁ ନ ପଡ଼ି OpenCodeକୁ “ସର୍ବୋତ୍ତମ ଉପଲବ୍ଧ ମଡେଲ୍” ବାଛିବାକୁ ଦିଏ।
-- `"<combo-name>"` — ଡ୍ୟାସ୍ବୋର୍ଡରେ ଆପଣ ବ୍ୟାଖ୍ୟା କରିଥିବା ଯେକୌଣସି କମ୍ବୋ; OmniRoute ଏହାକୁ ସ୍ୱଚ୍ଛ ଭାବରେ ରିଜଲ୍ଭ କରେ।
+- `"auto"` — 67routerର [Auto-Combo](../routing/AUTO-COMBO.md) ଶୂନ୍ୟ-କନଫିଗ୍ ରାଉଟର୍କୁ ଉପଲବ୍ଧ କରାଏ। ଆପଣଙ୍କୁ କ୍ୟାଟାଲଗ୍କୁ ହାର୍ଡ-କୋଡ୍ କରିବାକୁ ନ ପଡ଼ି OpenCodeକୁ “ସର୍ବୋତ୍ତମ ଉପଲବ୍ଧ ମଡେଲ୍” ବାଛିବାକୁ ଦିଏ।
+- `"<combo-name>"` — ଡ୍ୟାସ୍ବୋର୍ଡରେ ଆପଣ ବ୍ୟାଖ୍ୟା କରିଥିବା ଯେକୌଣସି କମ୍ବୋ; 67router ଏହାକୁ ସ୍ୱଚ୍ଛ ଭାବରେ ରିଜଲ୍ଭ କରେ।
 
 ---
 
@@ -135,29 +135,29 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## ପ୍ରମାଣୀକରଣ ମୋଡ୍ଗୁଡ଼ିକ
 
-| OmniRoute ସେଟିଂ                              | ସୁପାରିସ କରାଯାଇଥିବା `apiKey` ମୂଲ୍ୟ                                 |
+| 67router ସେଟିଂ                               | ସୁପାରିସ କରାଯାଇଥିବା `apiKey` ମୂଲ୍ୟ                                 |
 | -------------------------------------------- | ----------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (ଲୋକାଲ୍ ପାଇଁ ଡିଫଲ୍ଟ) | `sk_omniroute` (ଆକ୍ଷରିକ ପ୍ଲେସ୍ହୋଲ୍ଡର୍)                            |
 | `REQUIRE_API_KEY=true`                       | ଡ୍ୟାସ୍ବୋର୍ଡ → API କୀଗୁଡ଼ିକରୁ ଏକ ପ୍ରକୃତ ପ୍ରତି-ଉପଯୋଗକର୍ତ୍ତା API କୀ। |
 
-`x-api-key` + `anthropic-version` ପଠାଉଥିବା Anthropic-ଶୈଳୀର କ୍ଲାଏଣ୍ଟଗୁଡ଼ିକ ପାଇଁ, OmniRouteର `extractApiKey` ମଧ୍ୟ `x-api-key`ରୁ କୀକୁ ଗ୍ରହଣ କରେ। OpenCode, OpenAI ସର୍ଫେସ୍ ବ୍ୟବହାର କରେ, ତେଣୁ ଏହା ସର୍ବଦା `Authorization: Bearer ${apiKey}` ପଠାଇବ — ଏଠାରେ କୌଣସି Anthropic ବିଶେଷ-କ୍ଷେତ୍ର ପ୍ରଯୁଜ୍ୟ ନୁହେଁ।
+`x-api-key` + `anthropic-version` ପଠାଉଥିବା Anthropic-ଶୈଳୀର କ୍ଲାଏଣ୍ଟଗୁଡ଼ିକ ପାଇଁ, 67routerର `extractApiKey` ମଧ୍ୟ `x-api-key`ରୁ କୀକୁ ଗ୍ରହଣ କରେ। OpenCode, OpenAI ସର୍ଫେସ୍ ବ୍ୟବହାର କରେ, ତେଣୁ ଏହା ସର୍ବଦା `Authorization: Bearer ${apiKey}` ପଠାଇବ — ଏଠାରେ କୌଣସି Anthropic ବିଶେଷ-କ୍ଷେତ୍ର ପ୍ରଯୁଜ୍ୟ ନୁହେଁ।
 
 ---
 
 ## ସମସ୍ୟା ନିବାରଣ
 
-| ଲକ୍ଷଣ                                           | କାରଣ                                                                  | ସମାଧାନ                                                                                                                       |
-| ----------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `/v1/v1/` ଥିବା URL ସହ ପ୍ରତ୍ୟେକ ଅନୁରୋଧରେ `404`   | `/v1`କୁ ଦୁଇଥର ସଫିକ୍ସ କରିଥିବା v3.8 ପୂର୍ବ ପ୍ଲଗ୍ଇନ୍ର ପୁରୁଣା କନଫିଗ୍।      | ପଥ 1 କିମ୍ବା 2 ମାଧ୍ୟମରେ ପୁନଃ ଜେନେରେଟ୍ କରନ୍ତୁ।                                                                                 |
-| `401 Invalid API key`                           | OmniRouteରେ `REQUIRE_API_KEY=true` ଅଛି ଏବଂ କୀଟି ଅଜଣା।                 | ଡ୍ୟାସ୍ବୋର୍ଡରେ କୀଟି ତିଆରି କରନ୍ତୁ, କିମ୍ବା `REQUIRE_API_KEY=false` ସେଟ୍ କରନ୍ତୁ (କେବଳ ଲୋକାଲ୍) ଏବଂ `sk_omniroute` ବ୍ୟବହାର କରନ୍ତୁ। |
-| OpenCode UIରେ ମଡେଲ୍ ତାଲିକା ଖାଲି                 | ସମସ୍ତ 4ଟି ଡିଫଲ୍ଟ ମଡେଲ୍ OmniRouteର ପ୍ରଦାନକାରୀ ଦୃଶ୍ୟମାନତାରେ ଲୁଚି ରହିଛି। | ଆପଣ ସକ୍ଷମ କରିଥିବା ମଡେଲ୍ଗୁଡ଼ିକୁ ଉପଲବ୍ଧ କରାଇବା ପାଇଁ `models: ["auto", ...]` ପାସ୍ କରନ୍ତୁ।                                       |
-| `cannot read property 'models'` ସହ OpenCode 500 | ପୁରୁଣା OpenCode (< 0.1.x) ଇନ୍ଲାଇନ୍ `models`କୁ ଗ୍ରହଣ କରୁନଥିଲା।         | v1 ସ୍କିମା (`opencode.ai/config.json`) ଅନୁସରଣ କରୁଥିବା ଏକ ସଂସ୍କରଣକୁ OpenCode ଅପ୍ଗ୍ରେଡ୍ କରନ୍ତୁ।                                 |
+| ଲକ୍ଷଣ                                           | କାରଣ                                                                 | ସମାଧାନ                                                                                                                       |
+| ----------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `/v1/v1/` ଥିବା URL ସହ ପ୍ରତ୍ୟେକ ଅନୁରୋଧରେ `404`   | `/v1`କୁ ଦୁଇଥର ସଫିକ୍ସ କରିଥିବା v3.8 ପୂର୍ବ ପ୍ଲଗ୍ଇନ୍ର ପୁରୁଣା କନଫିଗ୍।     | ପଥ 1 କିମ୍ବା 2 ମାଧ୍ୟମରେ ପୁନଃ ଜେନେରେଟ୍ କରନ୍ତୁ।                                                                                 |
+| `401 Invalid API key`                           | 67routerରେ `REQUIRE_API_KEY=true` ଅଛି ଏବଂ କୀଟି ଅଜଣା।                 | ଡ୍ୟାସ୍ବୋର୍ଡରେ କୀଟି ତିଆରି କରନ୍ତୁ, କିମ୍ବା `REQUIRE_API_KEY=false` ସେଟ୍ କରନ୍ତୁ (କେବଳ ଲୋକାଲ୍) ଏବଂ `sk_omniroute` ବ୍ୟବହାର କରନ୍ତୁ। |
+| OpenCode UIରେ ମଡେଲ୍ ତାଲିକା ଖାଲି                 | ସମସ୍ତ 4ଟି ଡିଫଲ୍ଟ ମଡେଲ୍ 67routerର ପ୍ରଦାନକାରୀ ଦୃଶ୍ୟମାନତାରେ ଲୁଚି ରହିଛି। | ଆପଣ ସକ୍ଷମ କରିଥିବା ମଡେଲ୍ଗୁଡ଼ିକୁ ଉପଲବ୍ଧ କରାଇବା ପାଇଁ `models: ["auto", ...]` ପାସ୍ କରନ୍ତୁ।                                       |
+| `cannot read property 'models'` ସହ OpenCode 500 | ପୁରୁଣା OpenCode (< 0.1.x) ଇନ୍ଲାଇନ୍ `models`କୁ ଗ୍ରହଣ କରୁନଥିଲା।        | v1 ସ୍କିମା (`opencode.ai/config.json`) ଅନୁସରଣ କରୁଥିବା ଏକ ସଂସ୍କରଣକୁ OpenCode ଅପ୍ଗ୍ରେଡ୍ କରନ୍ତୁ।                                 |
 
 ---
 
 ## ଏହା ମଧ୍ୟ ଦେଖନ୍ତୁ
 
-- [API ସନ୍ଦର୍ଭ](../reference/API_REFERENCE.md) — ସମ୍ପୂର୍ଣ୍ଣ OmniRoute REST ପରିସର
+- [API ସନ୍ଦର୍ଭ](../reference/API_REFERENCE.md) — ସମ୍ପୂର୍ଣ୍ଣ 67router REST ପରିସର
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"`ର ଅର୍ଥ କ’ଣ
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - ଉତ୍ସ: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

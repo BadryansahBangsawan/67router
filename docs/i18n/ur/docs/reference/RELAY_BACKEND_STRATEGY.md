@@ -6,7 +6,7 @@
 
 ## خلاصہ
 
-OmniRoute اب `/api/v1/relay/chat/completions` کے لیے تین ریلے موڈز کو سپورٹ کرتا ہے:
+67router اب `/api/v1/relay/chat/completions` کے لیے تین ریلے موڈز کو سپورٹ کرتا ہے:
 
 - `ts`: TypeScript ریلے کو اسی پراسیس کے اندر استعمال کریں۔
 - `bifrost`: Bifrost گیٹ وے کا استعمال لازمی بنائیں۔
@@ -45,12 +45,12 @@ OmniRoute اب `/api/v1/relay/chat/completions` کے لیے تین ریلے مو
 
 ## بیک اینڈ باؤنڈری کا معاہدہ
 
-مستحکم پروڈکٹ باؤنڈری OmniRoute relay API ہے، dashboard implementation نہیں۔ Next.js dashboard مقامی سروسز کو install، configure، اور supervise کر سکتا ہے، لیکن درخواست کی routing کو relay API کے ذریعے داخل ہونا چاہیے اور اس باؤنڈری کے پیچھے handoff ہونا چاہیے۔
+مستحکم پروڈکٹ باؤنڈری 67router relay API ہے، dashboard implementation نہیں۔ Next.js dashboard مقامی سروسز کو install، configure، اور supervise کر سکتا ہے، لیکن درخواست کی routing کو relay API کے ذریعے داخل ہونا چاہیے اور اس باؤنڈری کے پیچھے handoff ہونا چاہیے۔
 
 طویل مدتی backend انتخاب:
 
 - TypeScript relay کو in-process پالیسی اور fallback راستے کے طور پر برقرار رکھیں۔ کسی بھی backend handoff سے پہلے auth، allowlists، درخواست کی normalization، accounting، اور حفاظتی جانچیں یہیں رہیں گی۔
-- جب deployment کو routing میں کم تغیر، مرکزی provider rotation، یا متعدد OmniRoute replicas میں scale-out کی ضرورت ہو، تو Bifrost کو ترجیحی high-throughput Tier-1 sidecar کے طور پر استعمال کریں۔
+- جب deployment کو routing میں کم تغیر، مرکزی provider rotation، یا متعدد 67router replicas میں scale-out کی ضرورت ہو، تو Bifrost کو ترجیحی high-throughput Tier-1 sidecar کے طور پر استعمال کریں۔
 - 9router اور CLIPROXYAPI کو embedded compatibility services کے طور پر برقرار رکھیں۔ یہ supervised مقامی processes کے طور پر چلتے ہیں اور اس وقت مفید ہوتے ہیں جب ان کا provider/CLI طرزِ عمل مطلوبہ adapter ہو، لیکن انہیں ڈیفالٹ Tier-1 routing engine نہیں بننا چاہیے۔
 - dashboard کو hot path میں صوابدیدی service URLs منتقل نہ کرنے دیں۔ UI سے فراہم کردہ URLs configuration inputs ہیں؛ routing code کو server-side settings اور supervisor state سے رجسٹرڈ اور health-checked backends resolve کرنے چاہییں۔
 - فی الحال supervised services کے لیے loopback HTTP کو ترجیح دیں، کیونکہ managed processes پہلے ہی HTTP-compatible APIs فراہم کرتے ہیں، route guard باؤنڈری کا audit کر سکتا ہے، اور failure/fallback طرزِ عمل request logs میں نظر آتا ہے۔ مستقبل میں SDK یا socket transport صرف اسی وقت شامل کرنا مفید ہے جب وہ isolation یا fallback semantics کو کمزور کیے بغیر p99 routing latency میں قابلِ پیمائش کمی کرے۔

@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute ingyenes proxyk gondosan összeválogatott készletét biztosítja a `free_proxies` táblában,
+Az 67router ingyenes proxyk gondosan összeválogatott készletét biztosítja a `free_proxies` táblában,
 külső szolgáltatóktól (1proxy, proxifly, iplocate, webshare) szinkronizálva. Az
 irányítópult ezeket a **Beállítások → Ingyenes proxyk** alatt jeleníti meg. Ez a dokumentum
 a listázási útvonal által biztosított szerveroldali szűrést, rendezést, számlálást és

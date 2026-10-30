@@ -14,7 +14,7 @@
 
 ## ይህ ለምን ጥንቃቄ የተሞላበት ነው
 
-የOmniRoute ነባር የማሰማራት አወቃቀር ቀድሞውኑ ቀላልና የተረጋገጠ ነው፦
+የ67router ነባር የማሰማራት አወቃቀር ቀድሞውኑ ቀላልና የተረጋገጠ ነው፦
 
 - **`redis:7-alpine`** በምርት ልኬት የrate-limit/cache የሥራ ጫናን ያስተናግዳል።
 - **SQLite + sqlite-vec + FTS5** አካባቢያዊ ማህደረ ትውስታን + vectorን + የጽሑፍ ፍለጋን ይሸፍናሉ ([`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts) ይመልከቱ)።
@@ -49,7 +49,7 @@
 
 - ≥3 `omniroute` replicas የሚያስኬዱ እና provider rotationን በአንድ Go process ውስጥ ማዕከላዊ ማድረግ የሚፈልጉ ከሆነ።
 - በሁሉም replicas ላይ ለupstream-provider ጥያቄዎች አንድ audit/logging surface ከፈለጉ።
-- የTier-1 routing layerን ከOmniRoute replicas ነፃ በሆነ መልኩ በአግድም ማስፋት ከፈለጉ።
+- የTier-1 routing layerን ከ67router replicas ነፃ በሆነ መልኩ በአግድም ማስፋት ከፈለጉ።
 
 **የሚያክለው፦**
 

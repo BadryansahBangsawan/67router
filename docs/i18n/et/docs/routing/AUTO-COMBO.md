@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Eesti)
+# 67router Auto-Combo Engine (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # odavaim tokeni kohta
 
 **Mis toimub:**
 
-1. OmniRoute tuvastab `auto/` prefiksi failis `src/sse/handlers/chat.ts`
+1. 67router tuvastab `auto/` prefiksi failis `src/sse/handlers/chat.ts`
 2. Pärib andmebaasist kõik **aktiivsed pakkujaühendused**
 3. Filtreerib välja need, millel on kehtivad mandaadid (API-võti või OAuthi token)
 4. Määrab mudeli ühenduse kohta (`connection.defaultModel` või pakkuja esimene mudel)
@@ -89,7 +89,7 @@ kasutades uuesti olemasolevaid töökindlusnäite (mitte kunagi kaitselüliti t�
 - mudeli lukustus — `isModelLocked(provider, connectionId, model)`
 
 Igal kandidaadil on ka selle API-võtme `excluded` lipp. Välistused salvestatakse
-API-võtme kohta eraldi (`auto_candidate_overrides` tabel, migratsioon `128`) — OmniRoute
+API-võtme kohta eraldi (`auto_candidate_overrides` tabel, migratsioon `128`) — 67router
 on ühe rentnikuga ning sellel puudub `users` tabel, seega on `apiKeyId` lähim tegelik
 helistajapõhine identiteet — ja need jõustatakse kandidaatide kogumi kontrollpunktis
 failis `open-sse/services/autoCombo/virtualFactory.ts` puhta, ühiktestitud
@@ -163,7 +163,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Kaks tavalist komistuskivi:
 
 - **`auto` ei kasuta teie kombosid.** `auto`/`auto/*` loob oma null-konfiguratsiooniga kandidaatide kogumi ja konsulteerib salvestatud kombodega ainult siis, kui kombo on sõna-sõnalt nimetatud `auto` (pole soovitatav). Kombo kaudu suunamiseks saatke selle täpne nimi – mitte `auto`.
-- **`openrouter/auto` on reaalne tasuline OpenRouter toode** ("Auto Best Available"), mitte OmniRoute alias. See on OpenRouter registri (`open-sse/config/providers/registry/openrouter/index.ts`) ainus staatiline mudeli kanded ja seda arveldatakse eraldi. Kasutage Seaded → Suunamine → Peida tasulised mudelid, et see `auto` kogumitest välja jätta.
+- **`openrouter/auto` on reaalne tasuline OpenRouter toode** ("Auto Best Available"), mitte 67router alias. See on OpenRouter registri (`open-sse/config/providers/registry/openrouter/index.ts`) ainus staatiline mudeli kanded ja seda arveldatakse eraldi. Kasutage Seaded → Suunamine → Peida tasulised mudelid, et see `auto` kogumitest välja jätta.
 
 Vaata [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) ja [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) selle algse segaduse kohta, mida see dokumenteerib.
 
@@ -262,7 +262,7 @@ lahendatud väärtused edastatakse mootori olemasolevatele sisenditele `config.m
 
 ## Kõik marsruutimisstrateegiad
 
-OmniRoute'i kombinatsioonimootor toetab **20 marsruutimisstrateegiat** (deklareeritud failis `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Auto Combo mootor ise on saadaval strateegia `auto` kaudu; teised strateegiad on saadaval salvestatud kombinatsioonide jaoks.
+67router'i kombinatsioonimootor toetab **20 marsruutimisstrateegiat** (deklareeritud failis `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Auto Combo mootor ise on saadaval strateegia `auto` kaudu; teised strateegiad on saadaval salvestatud kombinatsioonide jaoks.
 
 | Strateegia          | Kirjeldus                                                                                                                                                                                                                           |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -313,7 +313,7 @@ range tasakaalu.
 
 Vähemalt kahe mudeliga `pipeline`-kombinatsioon võib kasutada plaanija/täitja marsruutimist valikuga
 `config.agenticOrchestration.enabled`. Esimene sihtmudel vastutab plaanimise ja lõppvastuste eest;
-teine sihtmudel väljastab kliendinatiivseid tööriistakutseid. OmniRoute tuvastab päringu protokolli
+teine sihtmudel väljastab kliendinatiivseid tööriistakutseid. 67router tuvastab päringu protokolli
 põhjal tööriistatulemuste jätkupäringud, küsib plaanijalt, kas vaja on veel üht tööriistavooru,
 ning valib dünaamiliselt kliendile suunatud viimaseks etapiks kas täitja või plaanija.
 
@@ -817,11 +817,11 @@ See komplekt käivitub CI-s (`test:integration` töö) parameetritega `--test-co
 
 ### Piiranguga elav suitsukatse (EI ole CI-s — reaalsed pakkujad)
 
-| Käsk                                   | Mida teeb                                                                                         |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| `npm run test:combo:live`              | Reaalne marsruutimine protsessisiseselt `RUN_COMBO_LIVE=1` abil; teeb elava OmniRoute DB hetktõve |
-| `npm run test:combo:live:vps`          | HTTP-päringud elava OmniRoute serveri vastu (sea `COMBO_LIVE_BASE_URL`)                           |
-| `npm run test:combo:live:vps:failover` | Sama, tahtliku üleandmise stsenaariumidega                                                        |
+| Käsk                                   | Mida teeb                                                                                        |
+| :------------------------------------- | :----------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Reaalne marsruutimine protsessisiseselt `RUN_COMBO_LIVE=1` abil; teeb elava 67router DB hetktõve |
+| `npm run test:combo:live:vps`          | HTTP-päringud elava 67router serveri vastu (sea `COMBO_LIVE_BASE_URL`)                           |
+| `npm run test:combo:live:vps:failover` | Sama, tahtliku üleandmise stsenaariumidega                                                       |
 
 Need suitsukatsed kasutavad reaalset kaabli teekonda (kombo → pakkuja → valmimine). Need on tahtlikult CI-st välja jäetud, kuna need nõuavad elavaid volitusi ja VPS-i juurdepääsu.
 

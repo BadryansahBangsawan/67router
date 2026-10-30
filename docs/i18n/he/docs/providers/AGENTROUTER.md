@@ -8,7 +8,7 @@
 
 ## התחלה מהירה — שימוש בספק `agentrouter` המובנה (מומלץ)
 
-עבור רוב המשתמשים, **לא נדרשת הגדרה מיוחדת**. OmniRoute כולל ספק `agentrouter` מובנה, שבו תבנית התעבורה המלאה של Claude Code כבר מוגדרת מראש (ראו `open-sse/config/providerRegistry.ts` ← `agentrouter`). כדי להשתמש בו:
+עבור רוב המשתמשים, **לא נדרשת הגדרה מיוחדת**. 67router כולל ספק `agentrouter` מובנה, שבו תבנית התעבורה המלאה של Claude Code כבר מוגדרת מראש (ראו `open-sse/config/providerRegistry.ts` ← `agentrouter`). כדי להשתמש בו:
 
 1. פתחו את **לוח הבקרה ← ספקים ← הוספת ספק**.
 2. בחרו **AgentRouter** מהרשימה.
@@ -22,18 +22,18 @@
 
 ## מתקדם: התחברות באמצעות סוג הספק התואם ל-Claude Code
 
-OmniRoute תומך גם ב-AgentRouter (ובשירותי ממסר דומים) באמצעות סוג הספק **התואם ל-Claude Code**‏ (`anthropic-compatible-cc-*`), שמתקשר עם Anthropic Messages API באמצעות תבנית התעבורה הנכונה. ספק `openai-compatible-chat` כללי שמצביע אל `https://agentrouter.org` **לא** יעבוד — ה-WAF של השירות במעלה הזרם דוחה בקשות שאינן נראות כאילו הגיעו מ-Claude Code.
+67router תומך גם ב-AgentRouter (ובשירותי ממסר דומים) באמצעות סוג הספק **התואם ל-Claude Code**‏ (`anthropic-compatible-cc-*`), שמתקשר עם Anthropic Messages API באמצעות תבנית התעבורה הנכונה. ספק `openai-compatible-chat` כללי שמצביע אל `https://agentrouter.org` **לא** יעבוד — ה-WAF של השירות במעלה הזרם דוחה בקשות שאינן נראות כאילו הגיעו מ-Claude Code.
 
 ---
 
 ## דרישות מוקדמות
 
 - חשבון ומפתח API של AgentRouter. נרשמים חדשים מקבלים קרדיטים בחינם דרך קישור השותפים בקובץ [README](../README.md) של הפרויקט.
-- OmniRoute פועל כאשר דגל התכונה `ENABLE_CC_COMPATIBLE_PROVIDER` מופעל (ראו להלן).
+- 67router פועל כאשר דגל התכונה `ENABLE_CC_COMPATIBLE_PROVIDER` מופעל (ראו להלן).
 
 ## 1. הפעלת סוג הספק התואם ל-CC
 
-סוג הספק התואם ל-Claude Code מוגן באמצעות דגל תכונה, משום שהוא שולח תעבורה שמחקה באופן הדוק את לקוח Claude Code הרשמי. הפעילו אותו באמצעות הגדרת משתנה סביבה לפני הפעלת OmniRoute:
+סוג הספק התואם ל-Claude Code מוגן באמצעות דגל תכונה, משום שהוא שולח תעבורה שמחקה באופן הדוק את לקוח Claude Code הרשמי. הפעילו אותו באמצעות הגדרת משתנה סביבה לפני הפעלת 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

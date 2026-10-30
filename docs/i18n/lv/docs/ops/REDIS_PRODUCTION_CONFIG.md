@@ -6,7 +6,7 @@
 
 ## Pārskats
 
-Redis ir **neobligāta, vāja atkarība** OmniRoute sistēmā — ja Redis nav pieejams, lietojumprogramma turpina darboties ar ierobežotu funkcionalitāti (izmantojot rezerves risinājumus operatīvajā atmiņā). Produkcijas vidē Redis optimizēšana samazina latentumu četrām atšķirīgām darba slodzēm:
+Redis ir **neobligāta, vāja atkarība** 67router sistēmā — ja Redis nav pieejams, lietojumprogramma turpina darboties ar ierobežotu funkcionalitāti (izmantojot rezerves risinājumus operatīvajā atmiņā). Produkcijas vidē Redis optimizēšana samazina latentumu četrām atšķirīgām darba slodzēm:
 
 | Darba slodze                      | Realizācija                   | Klienta fabrika                                                | Atslēgu modelis                                                    |
 | --------------------------------- | ----------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ Redis ir **neobligāta, vāja atkarība** OmniRoute sistēmā — ja Redis nav p
 | Kvotu krātuve                     | `redisQuotaStore.ts`          | Atsevišķs `getRedisClient(url)` vienobjekts                    | `<prefix>quota:*`, konfigurējams katrai instancei                  |
 | Iesildīšanas ķēdes pārtraucējs    | `redisCircuitBreakerStore.ts` | Atsevišķs klients failā `circuitBreakerFactory.ts`             | `<prefix>warmup:cb:<connectionId>`                                 |
 
-Visas četras darba slodzes izmanto vienu nosaukumvietas prefiksu, lai OmniRoute varētu pastāvēt līdzās citām lietojumprogrammām vienā Redis instancē (piem., `127.0.0.1:6379`). Skatiet sadaļu [Atslēgu nosaukumvietas](#key-namespacing).
+Visas četras darba slodzes izmanto vienu nosaukumvietas prefiksu, lai 67router varētu pastāvēt līdzās citām lietojumprogrammām vienā Redis instancē (piem., `127.0.0.1:6379`). Skatiet sadaļu [Atslēgu nosaukumvietas](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Visas četras darba slodzes izmanto vienu nosaukumvietas prefiksu, lai OmniRoute
 
 ## Atslēgu nosaukumvietas
 
-OmniRoute koplieto Redis instanci ar visu pārējo, kas darbojas resursdatorā. Bez nosaukumvietas tādas atslēgas kā `auth:api_key:<sha256>` vai `rl:*` varētu konfliktēt ar atslēgām no citām lietojumprogrammām, kas izmanto to pašu Redis (šī instance darbojas adresē `127.0.0.1:6379` kopā ar citiem pakalpojumiem).
+67router koplieto Redis instanci ar visu pārējo, kas darbojas resursdatorā. Bez nosaukumvietas tādas atslēgas kā `auth:api_key:<sha256>` vai `rl:*` varētu konfliktēt ar atslēgām no citām lietojumprogrammām, kas izmanto to pašu Redis (šī instance darbojas adresē `127.0.0.1:6379` kopā ar citiem pakalpojumiem).
 
-Iestatiet `REDIS_KEY_PREFIX` kā netukšu virkni, lai pievienotu prefiksu **katrai** OmniRoute atslēgai:
+Iestatiet `REDIS_KEY_PREFIX` kā netukšu virkni, lai pievienotu prefiksu **katrai** 67router atslēgai:
 
 ```bash
-# .env — visas OmniRoute atslēgas kļūst par omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — visas 67router atslēgas kļūst par omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # atstāj vietu OS lapu kešatmiņai
 maxmemory-policy allkeys-lru         # slodzes apstākļos izstumj novecojušos autentifikācijas kešatmiņas ierakstus
 
-# Persistēšana (neobligāta — OmniRoute ir noturīgs pret avārijām arī bez tās)
+# Persistēšana (neobligāta — 67router ir noturīgs pret avārijām arī bez tās)
 save 300 1                           # momentuzņēmums vismaz ik pēc 5 min, ja mainīta ≥1 atslēga
 appendonly no                        # AOF nav nepieciešams; datus var atjaunot
 appendfsync no                       # nav fsync papildu izmaksu (pietiek ar RDB)

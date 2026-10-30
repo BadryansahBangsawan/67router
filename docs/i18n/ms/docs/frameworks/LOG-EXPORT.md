@@ -4,7 +4,7 @@
 
 ---
 
-Eksport berterusan dan berperingkat bagi log panggilan OmniRoute ke stor analitik luaran.
+Eksport berterusan dan berperingkat bagi log panggilan 67router ke stor analitik luaran.
 
 Tab papan pemuka Logs menyimpan sejarah permintaan dalam SQLite (`call_logs`), yang dihadkan oleh
 putaran dan pengekalan. Eksport log menghantar set rekod yang sama mengikut jadual supaya ia dapat kekal

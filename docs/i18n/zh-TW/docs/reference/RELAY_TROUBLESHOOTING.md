@@ -4,7 +4,7 @@
 
 ---
 
-中繼（Vercel、Deno、Cloudflare）會在無伺服器後端終止上游連線，讓 OmniRoute 能從穩定區域對外連線，同時將提供者 API 金鑰保留在伺服器端。本文說明維運人員在正式環境中會遇到的兩種故障模式，以及 OmniRoute 為每種模式提供的復原方式。
+中繼（Vercel、Deno、Cloudflare）會在無伺服器後端終止上游連線，讓 67router 能從穩定區域對外連線，同時將提供者 API 金鑰保留在伺服器端。本文說明維運人員在正式環境中會遇到的兩種故障模式，以及 67router 為每種模式提供的復原方式。
 
 ## 中繼驗證資訊的儲存方式
 
@@ -23,7 +23,7 @@
 
 1. 開啟 **設定 → Proxy Pool**。
 2. 缺少驗證資訊的中繼資料列會顯示黃色的 `缺少驗證資訊` 徽章和 **修復** 按鈕。
-3. 按一下 **修復**。OmniRoute 會呼叫
+3. 按一下 **修復**。67router 會呼叫
    `POST /api/settings/proxies/[id]/repair-relay`，此操作會：
    - 使用**目前的**金鑰解密 `relayAuthEnc`，
    - 將明文 `relayAuth` 寫回 `notes`，
@@ -48,7 +48,7 @@
 
 **症狀：**代理測試（`speed` 按鈕）顯示中繼已啟動，但請求仍會間歇性失敗。
 
-請檢查 OmniRoute 自動測試探查所傳回的中繼感知標頭（請參閱 **設定 → Proxy Pool** 及 `relayTested` / `relayAlive` 計數器）：
+請檢查 67router 自動測試探查所傳回的中繼感知標頭（請參閱 **設定 → Proxy Pool** 及 `relayTested` / `relayAlive` 計數器）：
 
 - `x-relay-url` — 回應的是哪個中繼後端。
 - `x-relay-mode` — 該請求使用的模式：`ts` | `bifrost` | `auto`。

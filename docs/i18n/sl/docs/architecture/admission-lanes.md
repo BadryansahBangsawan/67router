@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima **dva** procesno lokalna sistema stez z različnima obsegoma. Sistema se
+67router ima **dva** procesno lokalna sistema stez z različnima obsegoma. Sistema se
 dopolnjujeta; skrbniki morajo vedeti, katerega opazujejo.
 
 ## 1. Sprejem na ravni bajtov za celoten proces (`chatBodyAdmission.ts`)

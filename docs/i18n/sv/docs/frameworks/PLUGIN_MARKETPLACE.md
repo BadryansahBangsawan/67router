@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute levereras med ett plugin-system i WordPress-stil. Plugin-programmen är fristående
+67router levereras med ett plugin-system i WordPress-stil. Plugin-programmen är fristående
 kataloger — var och en med ett `plugin.json`-manifest och en startfil — som kopplas
 in i förfrågningsflödet (`onRequest` / `onResponse` / `onError`) och i
 livscykelhändelser (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ tillåts.
 
 ### Plugin-katalog
 
-Plugins finns under OmniRoutes datakatalog:
+Plugins finns under 67routers datakatalog:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

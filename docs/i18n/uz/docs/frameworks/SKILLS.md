@@ -7,29 +7,29 @@
 > **Asosiy manba:** `src/lib/skills/` va `src/app/api/skills/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute til modellariga (va operatorlarga) qayta foydalaniladigan imkoniyatlarni — fayl tizimidan oʻqish va HTTP soʻrovlaridan tortib, izolyatsiyalangan muhitda kod bajarish hamda saralangan marketpleys ko‘nikmalarigacha — birlashtirish imkonini beruvchi kengaytiriladigan Ko‘nikmalar freymvorkini taqdim etadi.
+67router til modellariga (va operatorlarga) qayta foydalaniladigan imkoniyatlarni — fayl tizimidan oʻqish va HTTP soʻrovlaridan tortib, izolyatsiyalangan muhitda kod bajarish hamda saralangan marketpleys ko‘nikmalarigacha — birlashtirish imkonini beruvchi kengaytiriladigan Ko‘nikmalar freymvorkini taqdim etadi.
 
-Ko‘nikma — versiyalangan, sxema orqali belgilangan ish birligi. OmniRoute ko‘nikmalarni chiquvchi so‘rovlarga vosita ta’riflari sifatida kiritishi, modeldan qaytadigan vosita chaqiruvlarini tutib qolishi, tegishli ishlov beruvchini ishga tushirishi va suhbat davom etishi uchun natijani modelga qaytarishi mumkin. Model hech qachon amalga oshirish tafsilotlarini ko‘rmaydi — faqat vosita interfeysini ko‘radi.
+Ko‘nikma — versiyalangan, sxema orqali belgilangan ish birligi. 67router ko‘nikmalarni chiquvchi so‘rovlarga vosita ta’riflari sifatida kiritishi, modeldan qaytadigan vosita chaqiruvlarini tutib qolishi, tegishli ishlov beruvchini ishga tushirishi va suhbat davom etishi uchun natijani modelga qaytarishi mumkin. Model hech qachon amalga oshirish tafsilotlarini ko‘rmaydi — faqat vosita interfeysini ko‘radi.
 
 ---
 
 ## Agent ko‘nikmalari va Omni ko‘nikmalari
 
-OmniRoute bir-biridan farqli, ammo o‘zaro bir-birini to‘ldiradigan ikkita ko‘nikmalar tizimiga ega:
+67router bir-biridan farqli, ammo o‘zaro bir-birini to‘ldiradigan ikkita ko‘nikmalar tizimiga ega:
 
-| O‘lchov         | **Omni ko‘nikmalari** (ushbu hujjat)                                             | **Agent ko‘nikmalari**                                                                           |
-| :-------------- | :------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
-| Maqsad          | LLM vositalarini kiritish + izolyatsiyalangan muhitda bajarish                   | Tashqi agentlar topishi va ishlatishi uchun SKILL.md katalogi                                    |
-| Asosiy manba    | `src/lib/skills/` + marketpleys                                                  | `src/lib/agentSkills/` + `skills/` katalogi                                                      |
-| Ishlash rejimi  | Chiquvchi so‘rovlarga kiritiladi, vosita chaqiruvi hodisalarida bajariladi       | Statik markdown katalogi + REST/MCP/A2A aniqlash endpointlari                                    |
-| Kim foydalanadi | OmniRoute’ning o‘zi (kombinatsiyalangan marshrutlash, kiruvchi LLM chaqiruvlari) | Tashqi agentlar, MCP mijozlari, A2A orkestratorlari                                              |
-| Soni            | O‘zgaruvchan (marketpleysga bog‘liq)                                             | 45 ta katalog yozuvi (23 ta API + 21 ta CLI + 1 ta konfiguratsiya)                               |
-| Format          | Vosita sxemasi + ishlov beruvchiga ega `SkillDefinition`                         | `SKILL.md` frontmatter’i + markdown asosiy qismi                                                 |
-| Aniqlash        | `/api/skills/*` REST + `omniroute_skills_*` MCP vositalari                       | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP vositalari + A2A `list-capabilities` |
+| O‘lchov         | **Omni ko‘nikmalari** (ushbu hujjat)                                            | **Agent ko‘nikmalari**                                                                           |
+| :-------------- | :------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------- |
+| Maqsad          | LLM vositalarini kiritish + izolyatsiyalangan muhitda bajarish                  | Tashqi agentlar topishi va ishlatishi uchun SKILL.md katalogi                                    |
+| Asosiy manba    | `src/lib/skills/` + marketpleys                                                 | `src/lib/agentSkills/` + `skills/` katalogi                                                      |
+| Ishlash rejimi  | Chiquvchi so‘rovlarga kiritiladi, vosita chaqiruvi hodisalarida bajariladi      | Statik markdown katalogi + REST/MCP/A2A aniqlash endpointlari                                    |
+| Kim foydalanadi | 67router’ning o‘zi (kombinatsiyalangan marshrutlash, kiruvchi LLM chaqiruvlari) | Tashqi agentlar, MCP mijozlari, A2A orkestratorlari                                              |
+| Soni            | O‘zgaruvchan (marketpleysga bog‘liq)                                            | 45 ta katalog yozuvi (23 ta API + 21 ta CLI + 1 ta konfiguratsiya)                               |
+| Format          | Vosita sxemasi + ishlov beruvchiga ega `SkillDefinition`                        | `SKILL.md` frontmatter’i + markdown asosiy qismi                                                 |
+| Aniqlash        | `/api/skills/*` REST + `omniroute_skills_*` MCP vositalari                      | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP vositalari + A2A `list-capabilities` |
 
-**Omni ko‘nikmalari** — bajarish mexanizmi bo‘lib, ular LLM biror vositani chaqirganda OmniRoute _nima qila olishini_ belgilaydi.
+**Omni ko‘nikmalari** — bajarish mexanizmi bo‘lib, ular LLM biror vositani chaqirganda 67router _nima qila olishini_ belgilaydi.
 
-**Agent ko‘nikmalari** — hujjatlar katalogi bo‘lib, ular tashqi agentlarga OmniRoute’ning REST API va CLI vositalaridan _qanday foydalanishni_ tushuntiradi hamda agent ko‘rsatmalariga to‘g‘ridan-to‘g‘ri kiritish mumkin bo‘lgan tuzilmali SKILL.md fayllarini taqdim etadi.
+**Agent ko‘nikmalari** — hujjatlar katalogi bo‘lib, ular tashqi agentlarga 67router’ning REST API va CLI vositalaridan _qanday foydalanishni_ tushuntiradi hamda agent ko‘rsatmalariga to‘g‘ridan-to‘g‘ri kiritish mumkin bo‘lgan tuzilmali SKILL.md fayllarini taqdim etadi.
 
 Agent ko‘nikmalari katalogi, generatori, MCP vositalari va A2A ko‘nikmasi haqida ma’lumot olish uchun [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md) sahifasiga qarang.
 
@@ -41,14 +41,14 @@ Agent ko‘nikmalari katalogi, generatori, MCP vositalari va A2A ko‘nikmasi ha
 
 Bitta reyestrda ko‘nikmalarning uchta manbasi birgalikda mavjud:
 
-1. **Ichki ko‘nikmalar** (`src/lib/skills/builtins.ts`) — OmniRoute bilan birga taqdim etiladi. Keng tarqalgan holatlarni qamrab oladi:
+1. **Ichki ko‘nikmalar** (`src/lib/skills/builtins.ts`) — 67router bilan birga taqdim etiladi. Keng tarqalgan holatlarni qamrab oladi:
    - `file_read`, `file_write` — `<DATA_DIR>/skills/workspaces/<hashed-key>/` ostidagi har bir API kaliti uchun alohida izolyatsiyalangan ish maydoni
    - `http_request` — `guard: "public-only"` bilan `safeOutboundFetch` orqali chiquvchi HTTP so‘rovlari
    - `web_search` — keshlash xususiyatiga ega ulanuvchi qidiruv provayderi (`executeWebSearch`)
    - `eval_code` — Docker orqali izolyatsiyalangan `node` yoki `python` bajarilishi
    - `execute_command` — Docker orqali izolyatsiyalangan shell buyrug‘i
    - `browser` — Playwright asosidagi tayanch tuzilma, standart holatda o‘chirilgan (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute marketpleysi) — `https://skillsmp.com/api/v1/skills/search` manzilidan olinadi. Sozlamalarda `skillsmpApiKey` bo‘lishi talab etiladi.
+2. **SkillsMP** (67router marketpleysi) — `https://skillsmp.com/api/v1/skills/search` manzilidan olinadi. Sozlamalarda `skillsmpApiKey` bo‘lishi talab etiladi.
 3. **SkillsSH** (`skills.sh` hamjamiyat katalogi) — `https://skills.sh/api/search` manzilidan olinadi. Autentifikatsiya talab etilmaydi; SKILL.md tarkibi GitHub raw manbasidan olinadi.
 
 Bitta „faol provayder“ boshqaruv paneli ko‘nikmalarni qaysi katalogdan o‘rnatishini boshqaradi (`src/lib/skills/providerSettings.ts`). Uni **Sozlamalar → Xotira va ko‘nikmalar** bo‘limida almashtiring. Standart qiymat: `skillsmp`.
@@ -442,7 +442,7 @@ ko‘ring; `0.6` uslubidagi kasr chegarasi ham, `registry.ts` faylida baholash h
 
 ## Ichki ko‘nikmalar katalogi
 
-OmniRoute `src/lib/skills/builtin/` ichida saralangan ichki ko‘nikmalar to‘plami bilan taqdim etiladi. Eng ko‘p ishlatiladiganlari:
+67router `src/lib/skills/builtin/` ichida saralangan ichki ko‘nikmalar to‘plami bilan taqdim etiladi. Eng ko‘p ishlatiladiganlari:
 
 ### Brauzerni avtomatlashtirish ko‘nikmasi
 

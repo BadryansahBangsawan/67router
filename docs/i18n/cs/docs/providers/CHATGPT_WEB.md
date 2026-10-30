@@ -36,9 +36,9 @@ stejnou místní funkci nástrojů vázanou na tah, pokud jsou tunel a konektor 
 ## Nastavení řídicího panelu
 
 1. Otevřete poskytovatele **ChatGPT Web (Codex)** a přidejte připojení.
-2. Vložte úplnou hlavičku Cookie služby ChatGPT, ID tunelu, klíč běhového prostředí a vlastní název konektoru. Nová nastavení podporující nástroje musí používat nově vytvořený konektor s přesným názvem `OmniRoute Codex v2`, s možností Authentication nastavenou na None a Permissions nastavenou na Allow all actions.
-3. Spusťte kontrolu připojení. OmniRoute otevře Temporary Chat využívající prohlížeč a zjistí, zda jsou pro daný účet dostupné režimy Sol a Pro.
-4. Uložte připojení. OmniRoute nahradí vloženou cookie ověřeným stavem úložiště Playwright a prostřednictvím šifrované abstrakce přihlašovacích údajů jej uloží společně s klíčem běhového prostředí.
+2. Vložte úplnou hlavičku Cookie služby ChatGPT, ID tunelu, klíč běhového prostředí a vlastní název konektoru. Nová nastavení podporující nástroje musí používat nově vytvořený konektor s přesným názvem `67router Codex v2`, s možností Authentication nastavenou na None a Permissions nastavenou na Allow all actions.
+3. Spusťte kontrolu připojení. 67router otevře Temporary Chat využívající prohlížeč a zjistí, zda jsou pro daný účet dostupné režimy Sol a Pro.
+4. Uložte připojení. 67router nahradí vloženou cookie ověřeným stavem úložiště Playwright a prostřednictvím šifrované abstrakce přihlašovacích údajů jej uloží společně s klíčem běhového prostředí.
 
 Po úspěšném uložení se nezpracovaná cookie neuchovává. Jakmile relace vyprší, otevřete
 připojení, vložte novou úplnou hlavičku Cookie a spusťte kontrolu znovu. Stav diagnostiky
@@ -70,10 +70,10 @@ High a účty s podporou Pro navíc zpřístupňují Extra High a Pro. Každá t
 pevně daný backendový model a úroveň úsilí při uvažování; konfliktní explicitní nastavení úsilí Responses je
 bezpečně odmítnuto namísto tiché změny vybraného režimu prohlížeče.
 
-Nepřejmenovávejte ani znovu nepoužívejte starší konektor `Codex Native` nebo `OmniRoute Codex`. ChatGPT
+Nepřejmenovávejte ani znovu nepoužívejte starší konektor `Codex Native` nebo `67router Codex`. ChatGPT
 ukládá veřejný kontrakt MCP do mezipaměti podle identity konektoru, zatímco aktualizovaný bridge používá
 nový přímý kontrakt tokenu tahu. Runtime tyto zastaralé identity odmítá a vyžaduje
-nový konektor `OmniRoute Codex v2`.
+nový konektor `67router Codex v2`.
 
 ## Bezpečnostní model
 
@@ -93,18 +93,18 @@ nový konektor `OmniRoute Codex v2`.
 
 ## VPS bez displeje a Docker
 
-Při instalacích pomocí npm, systemd a PM2 OmniRoute detekuje běžné cesty k Chrome a Chromium.
+Při instalacích pomocí npm, systemd a PM2 67router detekuje běžné cesty k Chrome a Chromium.
 Případně nastavte `CHATGPT_WEB_CODEX_CHROME_PATH`. Běhové tahy záměrně používají Chrome
 s grafickým rozhraním, protože ChatGPT odmítá charakteristiku skutečně bezhlavého prohlížeče. Hostitel bez displeje proto musí
-spouštět OmniRoute se soukromým displejem Xvfb; samotné nastavení cesty k Chrome jej neposkytne.
+spouštět 67router se soukromým displejem Xvfb; samotné nastavení cesty k Chrome jej neposkytne.
 
 Profil Dockeru `web` spustí `chatgpt-web-codex-browser` v interní síti
 Compose. Sidecar spouští Chrome s grafickým rozhraním uvnitř Xvfb, takže není vyžadován žádný fyzický displej. Jeho port CDP
 není publikován na hostiteli. Svazek chráněného profilu prohlížeče je oddělen od
-datového svazku OmniRoute a prohlížeč dostává dostatek sdílené paměti. Interní proxy CDP
+datového svazku 67router a prohlížeč dostává dostatek sdílené paměti. Interní proxy CDP
 naslouchá pouze na portu `9223` uvnitř sítě Compose; Chrome zůstává v sidecaru navázán na loopback.
 
-Pronájem správce pod `DATA_DIR` brání tomu, aby více procesů OmniRoute vlastnilo
+Pronájem správce pod `DATA_DIR` brání tomu, aby více procesů 67router vlastnilo
 stejný stav tunelu a brokeru. Konflikt nahlásí diagnostický nástroj.
 
 ## Interaktivní obnovení

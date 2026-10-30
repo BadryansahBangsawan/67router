@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na iya aiki a matsayin sabar da ba ta da mu’amalar allo a kan Android ta hanyar Termux. Ba a goyon bayan manhajar tebur ta Electron a cikin Termux, amma dashboard na yanar gizo da API mai jituwa da OpenAI suna aiki daga burauzar cikin na’urar ko daga wasu na’urori da ke kan hanyar sadarwa ɗaya.
+67router na iya aiki a matsayin sabar da ba ta da mu’amalar allo a kan Android ta hanyar Termux. Ba a goyon bayan manhajar tebur ta Electron a cikin Termux, amma dashboard na yanar gizo da API mai jituwa da OpenAI suna aiki daga burauzar cikin na’urar ko daga wasu na’urori da ke kan hanyar sadarwa ɗaya.
 
 ## Abubuwan da ake buƙata
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Sigar Node.js:** OmniRoute yana buƙatar Node `>=22.22.2 <23 || >=24.0.0 <27` (ya dace da `engines` a cikin `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` na Termux yawanci yana zuwa da Node 20 LTS, wanda **ba a ƙara goyon bayansa ba** — maimakon haka, shigar da `pkg install nodejs` (na yanzu), sannan tabbatar cewa `node --version` ya nuna layin sigar 22.x/24.x+.
+> **Sigar Node.js:** 67router yana buƙatar Node `>=22.22.2 <23 || >=24.0.0 <27` (ya dace da `engines` a cikin `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` na Termux yawanci yana zuwa da Node 20 LTS, wanda **ba a ƙara goyon bayansa ba** — maimakon haka, shigar da `pkg install nodejs` (na yanzu), sannan tabbatar cewa `node --version` ya nuna layin sigar 22.x/24.x+.
 
-Idan haɗa native package ya gaza, sake gudanar da umarnin `pkg install` da ke sama, sannan a sake ƙoƙarin shigar da OmniRoute.
+Idan haɗa native package ya gaza, sake gudanar da umarnin `pkg install` da ke sama, sannan a sake ƙoƙarin shigar da 67router.
 
 ## Shigarwa
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Gudanarwa
 
-Fara OmniRoute a yanayin sabar da ba ta da mu’amalar allo:
+Fara 67router a yanayin sabar da ba ta da mu’amalar allo:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Misali:
 http://192.168.1.50:20128
 ```
 
-Tabbatar wayar da client suna kan hanyar sadarwa amintacciya ɗaya. Idan ka buɗe damar shiga OmniRoute daga wajen wayar, kunna API keys da tabbatar da sahihancin dashboard.
+Tabbatar wayar da client suna kan hanyar sadarwa amintacciya ɗaya. Idan ka buɗe damar shiga 67router daga wajen wayar, kunna API keys da tabbatar da sahihancin dashboard.
 
 ## Kundin Bayanai
 
-Ta tsohuwa OmniRoute yana adana bayanai a ƙarƙashin kundin gida na Termux, yana bin irin halayen hanyar bayanan gefen sabar da ake amfani da su a Linux. Don sanya database a wani takamaiman wuri:
+Ta tsohuwa 67router yana adana bayanai a ƙarƙashin kundin gida na Termux, yana bin irin halayen hanyar bayanan gefen sabar da ake amfani da su a Linux. Don sanya database a wani takamaiman wuri:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Unsupported platform: android (kowace buƙata tana mayar da HTTP 500)
 
-**Alama:** `omniroute` / `omniroute serve` yana nuna `✔ OmniRoute is running!`, amma kowace buƙatar dashboard ko API tana mayar da `500 Internal Server Error` kawai. `~/.omniroute/logs/application/app.log` yana ci gaba da kasancewa babu komai, `APP_LOG_LEVEL=debug` ba ya nuna wani abu mai amfani, kuma jikin amsar plain text ne (`Internal Server Error`) ba tare da cikakken bayanin JSON ba.
+**Alama:** `omniroute` / `omniroute serve` yana nuna `✔ 67router is running!`, amma kowace buƙatar dashboard ko API tana mayar da `500 Internal Server Error` kawai. `~/.omniroute/logs/application/app.log` yana ci gaba da kasancewa babu komai, `APP_LOG_LEVEL=debug` ba ya nuna wani abu mai amfani, kuma jikin amsar plain text ne (`Internal Server Error`) ba tare da cikakken bayanin JSON ba.
 
 **Dalili:** Wasu builds na Termux/Node suna bayar da rahoton `process.platform === "android"`. `getCacheDirectory()` na Next.js ba ya kula da wannan platform: yana buƙatar `~/.cache` (ko generic tmp dir) ya _riga_ ya kasance, in ba haka ba zai gaza yayin loda instrumentation hook da:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Saboda hook ɗin bai taɓa loduwa ba, logging ba ya farawa — kuskuren 500 ya zama kamar ba zai yiwu a gano matsalarsa ba. OmniRoute yana ƙirƙirar `~/.cache` (kuma yana saita `XDG_CACHE_HOME` idan ba a saita shi ba) a cikin mashigar CLI kafin Next.js ya fara, domin wannan binciken ya yi nasara a Android/Termux.
+Saboda hook ɗin bai taɓa loduwa ba, logging ba ya farawa — kuskuren 500 ya zama kamar ba zai yiwu a gano matsalarsa ba. 67router yana ƙirƙirar `~/.cache` (kuma yana saita `XDG_CACHE_HOME` idan ba a saita shi ba) a cikin mashigar CLI kafin Next.js ya fara, domin wannan binciken ya yi nasara a Android/Termux.
 
 **Magani mai goyon baya (ba tare da gyara fakiti ba):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-A builds na OmniRoute na yanzu, CLI yana yin wannan ta atomatik a Android/Termux — sabon `npx -y omniroute@latest` / global install bai kamata ya buƙaci matakin da hannu ba. Idan har yanzu kana ganin kuskuren bayan sabuntawa, ƙirƙiri `~/.cache` sau ɗaya kamar yadda aka nuna a sama sannan sake farawa.
+A builds na 67router na yanzu, CLI yana yin wannan ta atomatik a Android/Termux — sabon `npx -y omniroute@latest` / global install bai kamata ya buƙaci matakin da hannu ba. Idan har yanzu kana ganin kuskuren bayan sabuntawa, ƙirƙiri `~/.cache` sau ɗaya kamar yadda aka nuna a sama sannan sake farawa.
 
 **Kada ka** gyara `dist/server.js` domin tilasta `process.platform = "linux"`. Irin wannan gyaran fakiti ana shafe shi duk lokacin sake shigarwa/sabuntawa, kuma ba shi da amfani da zarar kundin cache ya kasance.
 

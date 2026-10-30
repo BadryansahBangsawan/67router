@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: OmniRoute o‘zining **bepul** provayderlarini model sifati bo‘yicha **Arena AI
+> **Qisqacha**: 67router o‘zining **bepul** provayderlarini model sifati bo‘yicha **Arena AI
 > (LMArena uslubidagi) ELO ballari** yordamida saralaydi. Vazifangiz uchun eng kuchli
 > modellarni taqdim etuvchi bepul provayderlarni ko‘rish uchun boshqaruv panelidagi
 > **Bepul provayderlar reytingi** sahifasini oching — umumiy yoki toifa bo‘yicha
@@ -14,7 +14,7 @@
 
 ## Bu nima
 
-OmniRoute 375 ta provayderni ro'yxatdan o'tkazadi, shulardan 155 ta katalog yozuvi **free/no-auth** deb belgilangan (no-auth, bepul darajali OAuth yoki bepul darajali API kalit — qarang: [Bepul darajalar qo'llanmasi](../getting-started/FREE-TIERS-GUIDE.md) va to'liq [Bepul darajalar katalogi](../reference/FREE_TIERS.md)). Lekin bitta nozik jihat bor: bepul provayderlar model sifati bo'yicha keskin farq qiladi. Ilg'or (frontier) modelni taqdim etuvchi no-auth provayder kichik eskirgan modelni taqdim etuvchi provayderdan ancha foydaliroq.
+67router 375 ta provayderni ro'yxatdan o'tkazadi, shulardan 155 ta katalog yozuvi **free/no-auth** deb belgilangan (no-auth, bepul darajali OAuth yoki bepul darajali API kalit — qarang: [Bepul darajalar qo'llanmasi](../getting-started/FREE-TIERS-GUIDE.md) va to'liq [Bepul darajalar katalogi](../reference/FREE_TIERS.md)). Lekin bitta nozik jihat bor: bepul provayderlar model sifati bo'yicha keskin farq qiladi. Ilg'or (frontier) modelni taqdim etuvchi no-auth provayder kichik eskirgan modelni taqdim etuvchi provayderdan ancha foydaliroq.
 
 **Bepul provayderlar reytingi** "**qaysi bepul provayder menga eng yaxshi modelni beradi?**" savoliga javob beradi: har bir bepul provayderning katalogini **Arena AI leaderboard**dan olingan **ommaviy (crowd-sourced) sifat ballari** (inson afzalliklariga asoslangan ELO — LMArena chatbot arenasining asosidagi g'oya bilan bir xil) bilan birlashtirish orqali. Keyin provayderlar o'zlarining **eng yaxshi bepul modeli** kuchi bo'yicha tartiblanadi.
 
@@ -125,9 +125,9 @@ Arena ELO sinxronlash mexanizmi (`src/lib/arenaEloSync.ts`) Arena AI reyting jad
 va `code` — oladi. Har bir reyting yozuvi model nomi, taʼminotchi, ELO `score`, ishonch oraligʻi
 va ovozlar sonini oʻz ichiga oladi.
 
-Reyting jadvali toifalari OmniRoute vazifa toifalariga quyidagicha mos keladi:
+Reyting jadvali toifalari 67router vazifa toifalariga quyidagicha mos keladi:
 
-| Arena reyting jadvali | OmniRoute vazifa toifalari                        |
+| Arena reyting jadvali | 67router vazifa toifalari                         |
 | --------------------- | ------------------------------------------------- |
 | `text`                | `default`, `review`, `documentation`, `debugging` |
 | `code`                | `coding`                                          |
@@ -166,7 +166,7 @@ Sinxronlash **standart holatda yoqilgan**:
 - U server ishga tushganda bir marta, keyin esa davriy taymer boʻyicha ishga tushadi
   (`src/lib/arenaEloSync.ts`, `src/instrumentation-node.ts` orqali ulangan).
 - U **bloklamaydi va hech qachon jiddiy xatoga sabab boʻlmaydi** — agar yuqori oqimdan maʼlumot
-  olish muvaffaqiyatsiz tugasa, OmniRoute ishlashda davom etadi va reytinglar shunchaki oxirgi
+  olish muvaffaqiyatsiz tugasa, 67router ishlashda davom etadi va reytinglar shunchaki oxirgi
   muvaffaqiyatli maʼlumotlarni (yoki boʻsh holatni) koʻrsatadi.
 
 Uni ikkita muhit oʻzgaruvchisi boshqaradi
@@ -202,7 +202,7 @@ faylidagi `findMatchingIntelligence`):
 3. Prefiks boʻyicha moslik (reyting jadvalidagi model nomi reyestr IDsi uchun prefiks boʻlsa).
 
 Sinxronlash tomonida maʼlum taʼminotchi prefikslari (`anthropic/`, `openai/`, `google/`, …)
-olib tashlanadi va kichik taxalluslar xaritasi kanonik nomlarni OmniRoute ichkarida
+olib tashlanadi va kichik taxalluslar xaritasi kanonik nomlarni 67router ichkarida
 foydalanadigan variantlarga kengaytiradi, shu sababli modellarni istalgan nom bilan topish
 mumkin boʻlib qoladi.
 

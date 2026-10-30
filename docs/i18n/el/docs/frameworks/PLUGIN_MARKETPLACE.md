@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Τελευταία ενημέρωση:** 2026-06-28 — v3.8.40
 
-Το OmniRoute περιλαμβάνει ένα σύστημα προσθηκών τύπου WordPress. Οι προσθήκες είναι αυτοτελείς
+Το 67router περιλαμβάνει ένα σύστημα προσθηκών τύπου WordPress. Οι προσθήκες είναι αυτοτελείς
 κατάλογοι — καθένας με ένα μανιφέστο `plugin.json` και ένα αρχείο εισόδου — οι οποίοι συνδέονται
 στη διοχέτευση αιτημάτων (`onRequest` / `onResponse` / `onError`) και στα
 συμβάντα κύκλου ζωής (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Κατάλογος plugins
 
-Τα plugins βρίσκονται στον κατάλογο δεδομένων του OmniRoute:
+Τα plugins βρίσκονται στον κατάλογο δεδομένων του 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

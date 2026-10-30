@@ -10,7 +10,7 @@ esitatud nelja teenusepakkujate perekonnana. Piirkond on ühenduse teave, mitte 
 
 ## Otsus
 
-| Teenusepakkuja perekond                    | OmniRoute'i ID          | Globaalne piirkond | Hiina piirkond |
+| Teenusepakkuja perekond                    | 67router'i ID           | Globaalne piirkond | Hiina piirkond |
 | ------------------------------------------ | ----------------------- | ------------------ | -------------- |
 | Alibaba Cloud Model Studio (kasutuspõhine) | `alibaba`               | Singapur           | Peking         |
 | Alibaba Cloud Token Plan                   | `bailian-coding-plan`   | Singapur           | Peking         |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute bepaalt welke **browser-origins** cross-origin-responses mogen lezen
+67router bepaalt welke **browser-origins** cross-origin-responses mogen lezen
 via één centrale allowlist. Het model is **standaard fail-closed**:
 geen enkele origin is toegestaan totdat u deze expliciet toestaat. Deze pagina beschrijft hoe de allowlist
 wordt verwerkt, wat `CORS_ALLOW_ALL=true` daadwerkelijk blootstelt (en, belangrijker,
@@ -46,13 +46,13 @@ in deze volgorde:
 ## Dreigingsmodel — wat `CORS_ALLOW_ALL=true` werkelijk blootstelt
 
 De algemene OWASP-waarschuwing ("wildcard-CORS = elke site kan uw API aanroepen") verdient
-serieuze aandacht, maar de blootstelling van OmniRoute is **beperkter dan in het algemene geval**,
+serieuze aandacht, maar de blootstelling van 67router is **beperkter dan in het algemene geval**,
 vanwege één concreet implementatiedetail:
 
 > **Het centrale `applyCorsHeaders()` verzendt nooit
 > `Access-Control-Allow-Credentials`.** Een browser stelt een _geauthenticeerd_
 > cross-origin-antwoord (met cookies) niet beschikbaar tenzij de server
-> `Access-Control-Allow-Credentials: true` verzendt. Het gedeelde CORS-pad van OmniRoute doet
+> `Access-Control-Allow-Credentials: true` verzendt. Het gedeelde CORS-pad van 67router doet
 > dit nooit.
 
 Dit betekent per oppervlak, zelfs met `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ los van deze CORS-richtlijnen bijgehouden.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Als OmniRoute achter een reverse proxy/tunnel draait (nginx, Caddy, Cloudflare
+- Als 67router achter een reverse proxy/tunnel draait (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), is CORS **niet** uw enige beveiligingsmechanisme — de
   routebeveiliging voor loopback beschermt nog steeds routes die processen kunnen
   starten (zie [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Vervals
@@ -109,7 +109,7 @@ Zelfs tijdens de ontwikkeling hebt u het jokerteken zelden nodig. Sta alleen de
 ontwikkelservers toe die u gebruikt:
 
 ```bash
-# Vite- (5173) en Next.js-ontwikkelservers (3000) die een lokale OmniRoute aanroepen
+# Vite- (5173) en Next.js-ontwikkelservers (3000) die een lokale 67router aanroepen
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -131,14 +131,14 @@ via **Dashboard → Beveiliging → Toegestane CORS-origins**.
   en dashboards niet op in een permissieve configuratie; deze moeten strikt
   gesloten blijven.
 
-## Voorbeeld: reverse proxy vóór OmniRoute
+## Voorbeeld: reverse proxy vóór 67router
 
-CORS wordt door OmniRoute zelf afgedwongen, dus de proxy moet over het algemeen **geen**
+CORS wordt door 67router zelf afgedwongen, dus de proxy moet over het algemeen **geen**
 `Access-Control-*`-headers toevoegen of herschrijven (dubbele headers veroorzaken problemen in browsers). Beëindig TLS
-en stuur het verkeer door — laat OmniRoute preflightverzoeken beantwoorden:
+en stuur het verkeer door — laat 67router preflightverzoeken beantwoorden:
 
 ```nginx
-# nginx — doorsturen naar OmniRoute; voeg hier GEEN Access-Control-* toe
+# nginx — doorsturen naar 67router; voeg hier GEEN Access-Control-* toe
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -146,12 +146,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Behoud de doorstuurheaders: een proxy op dezelfde host maakt verbinding via loopback, en deze
-    # laten OmniRoute weten dat de aanroeper niet de lokale beheerder is. Een proxy die geen van deze headers toevoegt,
+    # laten 67router weten dat de aanroeper niet de lokale beheerder is. Een proxy die geen van deze headers toevoegt,
     # laat elke externe aanroeper lokaal lijken. Stel X-Forwarded-For ook nooit in op 127.0.0.1.
 }
 ```
 
-Stel de toegestane browserorigins in OmniRoute in (`CORS_ALLOWED_ORIGINS` of het
+Stel de toegestane browserorigins in 67router in (`CORS_ALLOWED_ORIGINS` of het
 tabblad Beveiliging), niet in de proxy.
 
 ## Bronbestanden

@@ -15,7 +15,7 @@ Kvoodijagamismootor jaotab teenusepakkuja ajapõhise kvoodi (nt Codexi
 5-tunnine aken, Kimi 1500 päringut tunnis) õiglaselt mitme sama ühendust jagava
 API-võtme vahel.
 
-**Probleem, mille see lahendab:** OmniRoute vahendab paljusid API-võtmeid sama ülesvoolu
+**Probleem, mille see lahendab:** 67router vahendab paljusid API-võtmeid sama ülesvoolu
 teenusepakkuja konto kaudu. Ilma jagamisloogikata võib võtme A päringute puhang ammendada
 teenusepakkuja tunnikvoodi, jättes võtmed B ja C blokeerituks kuni akna lähtestamiseni.
 Mootor hoiab seda ära järgmiselt:
@@ -119,7 +119,7 @@ Redise draiver: Lua EVAL-i skript atomaarseks suurendamiseks — käivitatakse �
 
 - Tabel: `quota_consumption` (vt migratsioone `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Sobib kõige paremini ühe instantsiga juurutustele.
-- Kõik püsivandmed asuvad olemasolevas OmniRoute'i SQLite'i andmebaasis (`DATA_DIR/storage.sqlite`).
+- Kõik püsivandmed asuvad olemasolevas 67router'i SQLite'i andmebaasis (`DATA_DIR/storage.sqlite`).
 
 ### Redis (valikuline, mitme instantsi jaoks)
 

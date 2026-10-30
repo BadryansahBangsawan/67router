@@ -14,7 +14,7 @@ To valgfrie Compose-profiler (`memory`, `bifrost`) for den eksisterende distribu
 
 ## Hvorfor dette er en konservativ løsning
 
-OmniRoutes eksisterende distribusjonsoppsett er allerede effektivt og velprøvd:
+67routers eksisterende distribusjonsoppsett er allerede effektivt og velprøvd:
 
 - **`redis:7-alpine`** håndterer arbeidslasten for hastighetsbegrensning og hurtigbufring i produksjonsskala.
 - **SQLite + sqlite-vec + FTS5** dekker lokalt minne samt vektor- og tekstsøk (se [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ De to profilene her er **alternativer for horisontal skalering for distribusjone
 
 - Du kjører ≥3 `omniroute`-replikaer og ønsker sentralisert leverandørrotasjon i én enkelt Go-prosess.
 - Du ønsker ett samlet revisjons- og loggføringsgrensesnitt for forespørsler til oppstrømsleverandører på tvers av alle replikaer.
-- Du ønsker horisontal skalering av rutingslaget på nivå 1 uavhengig av OmniRoute-replikaene.
+- Du ønsker horisontal skalering av rutingslaget på nivå 1 uavhengig av 67router-replikaene.
 
 **Dette legges til:**
 

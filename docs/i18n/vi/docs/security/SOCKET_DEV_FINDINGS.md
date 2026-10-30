@@ -48,7 +48,7 @@ qua tunnel **không thể** kích hoạt đường dẫn mã này.
 | Linux+Firefox/Chromium | cập nhật cơ sở dữ liệu NSS theo từng hồ sơ thông qua `certutil -d sql:<profile>`                                  |
 
 Đây là các lệnh tương tự được `mitmproxy`, Charles Proxy, Fiddler và
-Caddy sử dụng. Việc chúng tồn tại trong OmniRoute được ghi chép tại
+Caddy sử dụng. Việc chúng tồn tại trong 67router được ghi chép tại
 `docs/security/STEALTH_GUIDE.md`.
 
 **Biện pháp giảm thiểu trong v3.8.6**:
@@ -107,7 +107,7 @@ cho những người vận hành chưa cập nhật quy trình tự động hóa
 loại bỏ trong v3.9.
 
 **Tại sao chúng tôi giữ tính năng này**: nhập từ Zed là quy trình làm quen thân thiện nhất dành cho người dùng
-đã sử dụng Zed và muốn sao chép các khóa nhà cung cấp của họ vào OmniRoute
+đã sử dụng Zed và muốn sao chép các khóa nhà cung cấp của họ vào 67router
 mà không phải dán lại.
 
 ---
@@ -119,7 +119,7 @@ mà không phải dán lại.
 **Lý do bị gắn cờ**: chunk này tái xuất `execFileWithPassword`,
 `runElevatedPowerShell` và helper dùng chung `quotePowerShell`. Bộ phân loại AI của
 Socket.dev coi chúng là một "bộ công cụ thực thi trên máy chủ + nâng quyền"
-chung. Trong OmniRoute, chúng chỉ được sử dụng bởi quy trình cài đặt chứng chỉ MITM
+chung. Trong 67router, chúng chỉ được sử dụng bởi quy trình cài đặt chứng chỉ MITM
 (§1) và bởi `execFileWithPassword` để thực thi lệnh `sudo`.
 
 **Biện pháp giảm thiểu trong v3.8.6**:
@@ -169,7 +169,7 @@ loại bỏ vật lý các đường dẫn đặc quyền khỏi bundle.
 
 ---
 
-## §5 — Ghi ngược thông tin xác thực của OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Ghi ngược thông tin xác thực của 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Các tệp nguồn**:
 
@@ -202,7 +202,7 @@ rawBody)`) trước khi phân tích JSON. Nếu secret được thiết lập, c
    `rateLimitedUntil`, `updatedAt`). Đây là một **thay đổi không tương thích ngược** đối với người dùng
    vốn dựa vào việc đồng bộ token từ xa — họ phải chủ động bật tính năng này.
 
-**Lý do chúng tôi giữ lại tính năng này**: Cloud Sync là cách duy nhất để một tenant OmniRoute Cloud
+**Lý do chúng tôi giữ lại tính năng này**: Cloud Sync là cách duy nhất để một tenant 67router Cloud
 tập trung hóa thông tin xác thực của nhóm. Bản sửa lỗi giúp mô hình đe dọa trở nên minh bạch:
 "máy chủ ký, máy khách xác minh, người vận hành chủ động bật."
 

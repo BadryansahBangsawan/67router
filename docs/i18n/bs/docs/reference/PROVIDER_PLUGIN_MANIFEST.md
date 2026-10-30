@@ -9,7 +9,7 @@
 Isti manifest dostupan je putem HTTP-a na
 `GET /api/v1/provider-plugin-manifest` za pomoćne procese koji se izvršavaju izvan procesa.
 
-OmniRoute oglašava taj URL Bifrostu i CLIProxyAPI-ju putem zaglavlja zahtjeva
+67router oglašava taj URL Bifrostu i CLIProxyAPI-ju putem zaglavlja zahtjeva
 `X-OmniRoute-Provider-Manifest-Url`. Postavite
 `OMNIROUTE_PROVIDER_MANIFEST_URL` kada je pomoćnom procesu potreban javni URL ili URL mreže
 kontejnera umjesto lokalnog izvora zahtjeva.
@@ -25,7 +25,7 @@ predmemoriji, pomoćni proces mora poslati bezuslovni zahtjev umjesto prihvatanj
 ## Cilj
 
 Premjestiti metapodatke pružalaca usluga prema ugovoru za dodatke kako bi kritični put zahtjeva
-na kraju mogao preuzeti pomoćni proces s manjom latencijom, dok OmniRoute zadržava
+na kraju mogao preuzeti pomoćni proces s manjom latencijom, dok 67router zadržava
 TypeScript rutu kao kontrolnu tačku pravila i rezervnu opciju. Manifest je aditivan: sam po
 sebi ne mijenja usmjeravanje zahtjeva.
 
@@ -69,7 +69,7 @@ ponovnog čitanja TypeScript izvora.
 | `usage-fetch`        | Ima povezan dohvaćač upotrebe ili kvote (`getUsageForProvider`).                 |
 | `usage-supported`    | API za upotrebu prihvata ovog pružaoca usluga (`isSupportedUsageConnection`).    |
 
-`usage-fetch` služi samo za otkrivanje. Prikazuje da OmniRoute zna kako očitati upotrebu za
+`usage-fetch` služi samo za otkrivanje. Prikazuje da 67router zna kako očitati upotrebu za
 pružaoca usluga; ne aktivira dohvaćanje, ne mijenja semantiku kvota niti podrazumijeva da je
 widget za kvote na kontrolnoj ploči omogućen za pružaoca usluga — taj widget se zasebno kontroliše putem
 `USAGE_SUPPORTED_PROVIDERS`. Izvor istine je `USAGE_FETCHER_PROVIDERS` u

@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` iqiegħed il-katalgu kollu tiegħek ta’ OmniRoute — mudelli, combos u
+`@omniroute/opencode-plugin-v2` iqiegħed il-katalgu kollu tiegħek ta’ 67router — mudelli, combos u
 auto-combos — fis-selettur tal-mudelli ta’ OpenCode v2, b’ismijiet għall-wiri, prezzijiet u
 baġits tal-livell bla ħlas.
 
@@ -15,7 +15,7 @@ jaqsmu xejn bejniethom, għalhekk l-aġġornament ta’ wieħed qatt ma jobbliga
 ## Rekwiżiti
 
 - OpenCode v2.
-- Gateway ta’ OmniRoute li jista’ jintlaħaq (`http://localhost:20128` b’mod awtomatiku).
+- Gateway ta’ 67router li jista’ jintlaħaq (`http://localhost:20128` b’mod awtomatiku).
 - Node.js 22 jew 24.
 
 ## Installazzjoni
@@ -78,7 +78,7 @@ billi jsemmi l-endpoint u x’intilef — għalhekk selettur degradat qatt ma jk
 | `baseURL`                        | meħtieġ                                            | L-għerq tal-gateway, `http(s)` biss; is-suffiss `/v1` jiżdied fejn ikun meħtieġ                                                                  |
 | `apiKey`                         | kredenzjali konnessa, imbagħad `OMNIROUTE_API_KEY` | Ċavetta taċ-chat għal `/v1/*`                                                                                                                    |
 | `managementReadToken`            | juża `apiKey` jekk ma jkunx issettjat              | Ċavetta għal `/api/*` — normalment **mhijiex** l-istess waħda                                                                                    |
-| `displayName`                    | `"OmniRoute"`                                      | Isem il-fornitur fis-selettur                                                                                                                    |
+| `displayName`                    | `"67router"`                                       | Isem il-fornitur fis-selettur                                                                                                                    |
 | `timeoutMs`                      | `10000`                                            | Limitu ta’ żmien għal kull endpoint waqt fetch (il-kombinazzjonijiet awtomatiċi jużaw 5s)                                                        |
 | `modelCacheTtlMs`                | `300000`                                           | TTL tal-cache tal-katalgu; snapshot fuq id-diska jħaffef il-bidu kiesaħ                                                                          |
 | `timeouts`                       | juża `timeoutMs` jekk ma jkunx issettjat           | Limiti ta’ żmien għal kull endpoint f’ms: `models`, `combos`, `autoCombos`, `enrichment`                                                         |
@@ -116,7 +116,7 @@ Issettja `"geminiSanitization": false` biex titfiha.
 
 | Sintomu                                                               | Kawża                                                                                                                                                    |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Is-selettur ma juri l-ebda mudell OmniRoute                           | Ma ġiet riżolta l-ebda ċavetta (iċċekkja t-twissija waqt l-istartjar), jew il-gateway mhuwiex aċċessibbli                                                |
+| Is-selettur ma juri l-ebda mudell 67router                            | Ma ġiet riżolta l-ebda ċavetta (iċċekkja t-twissija waqt l-istartjar), jew il-gateway mhuwiex aċċessibbli                                                |
 | IDs mhux ipproċessati tal-mudelli, l-ebda kombinazzjoni, l-ebda prezz | L-endpoints tal-ġestjoni rrifjutaw it-token — issettja `managementReadToken`                                                                             |
 | Katalgu `freeOnly` qasir jew vojt                                     | M'hemm l-ebda token tal-ġestjoni jew it-token ġie rrifjutat — aqra l-linja tas-sommarju tal-aġġornament (l-għadd `unmatched-free`) fir-reġistru tal-host |
 | Sessjoni marbuta ma' `opencode-<id>/…`                                | Il-plugin v1 ippubblika `opencode-<id>`; v2 jippubblika `<id>` waħdu, għalhekk erġa' agħżel il-mudell taħt `<id>/…`                                      |

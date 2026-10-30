@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: Bruk dine egne kvalifiserte leverandørkontoer. OmniRoute kombinerer tilkoblingene du konfigurerer; det tildeler ikke det annonserte samlede tokenbudsjettet. Gratis tilgang kan kreve registrering, en API-nøkkel, godkjenning eller en betalingsmåte. Leverandørenes begrensninger, personvernregler og vilkår gjelder fortsatt.
+> **Kort fortalt**: Bruk dine egne kvalifiserte leverandørkontoer. 67router kombinerer tilkoblingene du konfigurerer; det tildeler ikke det annonserte samlede tokenbudsjettet. Gratis tilgang kan kreve registrering, en API-nøkkel, godkjenning eller en betalingsmåte. Leverandørenes begrensninger, personvernregler og vilkår gjelder fortsatt.
 
 ---
 
@@ -15,7 +15,7 @@ innebære et endepunkt uten autentisering, en regelmessig fornyet kvote, ubegren
 manuell godkjenning eller en midlertidig kampanje. Noen alternativer krever en konto, API-nøkkel,
 kredittkort, KYC eller godkjenning av leverandørspesifikke vilkår.
 
-OmniRoute **samler** konfigurerte tilkoblinger i ett endepunkt. Du må fortsatt registrere deg separat hos hver leverandør som krever en konto. Koble til disse kontoene og bruk `model: "auto"` for å rute mellom kvalifiserte mål. En ny installasjon har kanskje ingen kvalifiserte mål uten nøkkel. Det å installere OmniRoute alene garanterer ikke et vellykket chatsvar.
+67router **samler** konfigurerte tilkoblinger i ett endepunkt. Du må fortsatt registrere deg separat hos hver leverandør som krever en konto. Koble til disse kontoene og bruk `model: "auto"` for å rute mellom kvalifiserte mål. En ny installasjon har kanskje ingen kvalifiserte mål uten nøkkel. Det å installere 67router alene garanterer ikke et vellykket chatsvar.
 
 ---
 
@@ -60,7 +60,7 @@ Disse leverandørene har **gratisnivåer** med spesifikke begrensninger:
 
 ## Slik stabler du gratisnivåer
 
-Magien med OmniRoute er å **stable gratisnivåer**. I stedet for å være avhengig av én leverandør kobler du til flere gratisleverandører og lar OmniRoute automatisk velge den beste for hver forespørsel.
+Magien med 67router er å **stable gratisnivåer**. I stedet for å være avhengig av én leverandør kobler du til flere gratisleverandører og lar 67router automatisk velge den beste for hver forespørsel.
 
 ### Eksempel: Bredere dekning med gratisnivåer
 
@@ -71,7 +71,7 @@ Koble til flere leverandører for å redusere avhengigheten av én enkelt kvote:
 3. **Pollinations** — tilgang uten nøkkel, med hastighetsbegrensning
 4. **LongCat** — engangskreditt ved registrering (krever KYC)
 
-Bruk deretter `model: "auto"`, så vil OmniRoute:
+Bruk deretter `model: "auto"`, så vil 67router:
 
 - Først prøve den høyest rangerte kvalifiserte tilkoblingen
 - Hvis kvoten eller tilstandskontrollen mislykkes → prøve den neste konfigurerte leverandøren
@@ -105,7 +105,7 @@ ubegrenset/nøkkelfri tilgang, registreringskreditter, avviklede oppføringer og
 
 ### Trinn 5: Klikk på Koble til
 
-For en `NOAUTH`-leverandør ber ikke OmniRoute om tilgangsinformasjon for den eksterne tjenesten. Dette garanterer ikke at den eksterne tjenesten godtar tredjepartsklienter eller har tilgjengelig kapasitet. Leverandører som bruker OAuth og API-nøkler, må kobles til via den dokumenterte kontoprosessen. Klienten din bruker fortsatt OmniRoute-API-nøkkelen som vises under **Kontrollpanel → Endepunkter**, når ruterautentisering er aktivert.
+For en `NOAUTH`-leverandør ber ikke 67router om tilgangsinformasjon for den eksterne tjenesten. Dette garanterer ikke at den eksterne tjenesten godtar tredjepartsklienter eller har tilgjengelig kapasitet. Leverandører som bruker OAuth og API-nøkler, må kobles til via den dokumenterte kontoprosessen. Klienten din bruker fortsatt 67router-API-nøkkelen som vises under **Kontrollpanel → Endepunkter**, når ruterautentisering er aktivert.
 
 ### Trinn 6: Gjenta
 
@@ -115,7 +115,7 @@ Koble til flere leverandører med vilkår og personvernmodeller som passer til b
 
 ## Slik leser du katalogen riktig
 
-- `NOAUTH` betyr at OmniRoute ikke ber deg om leverandørlegitimasjon; det
+- `NOAUTH` betyr at 67router ikke ber deg om leverandørlegitimasjon; det
   garanterer ikke oppetid, personvern eller ubegrenset kapasitet.
 - `hasFree` er metadata for oppdagelse. Det kan representere en gjentakende kvote, nøkkelfri tilgang,
   registreringskreditt, et godkjenningsprogram eller en kampanje.
@@ -128,15 +128,15 @@ Koble til flere leverandører med vilkår og personvernmodeller som passer til b
 
 ---
 
-## Slik gjør OmniRoute gratiskvoter bedre
+## Slik gjør 67router gratiskvoter bedre
 
 ### 1. Automatisk reservebytte
 
-Hvis én gratisleverandør er opptatt eller nede, prøver OmniRoute automatisk den neste. Du trenger ikke å gjøre noe.
+Hvis én gratisleverandør er opptatt eller nede, prøver 67router automatisk den neste. Du trenger ikke å gjøre noe.
 
 ### 2. Smart ruting
 
-OmniRoute velger den **beste gratisleverandøren** for hver forespørsel basert på:
+67router velger den **beste gratisleverandøren** for hver forespørsel basert på:
 
 - Hastighet — Hvilken leverandør er raskest akkurat nå?
 - Kvalitet — Hvilken leverandør er best egnet for denne oppgaven?
@@ -144,13 +144,13 @@ OmniRoute velger den **beste gratisleverandøren** for hver forespørsel basert 
 
 ### 3. Tokenbesparelser
 
-OmniRoutes komprimeringsprosess kan redusere antall kvalifiserte tokener i ledetekster og verktøyutdata. De
+67routers komprimeringsprosess kan redusere antall kvalifiserte tokener i ledetekster og verktøyutdata. De
 faktiske besparelsene avhenger av innholdet, valgte motorer, leverandørens beregningsmetode og innstillinger
 for nøyaktighet. Komprimering multipliserer ikke hver leverandørkvote med en fast faktor.
 
 ### 4. Støtte for flere kontoer
 
-Hvis leverandørvilkårene tillater flere kontoer eller påloggingsopplysninger, kan OmniRoute behandle hver
+Hvis leverandørvilkårene tillater flere kontoer eller påloggingsopplysninger, kan 67router behandle hver
 tilkobling som en separat rutingskandidat. Ikke opprett ekstra kontoer for å omgå en leverandørs
 kvote- eller tilgangsregler.
 
@@ -165,7 +165,7 @@ Den aktive, pool-dedupliserte katalogen rapporterer for øyeblikket:
 | Gjentakende kvantifisert kvote       |   **~1.62B tokens/måned** | Delte pooler telles én gang; leverandører uten øvre grense er utelatt fra summen |
 | Første måned med registreringskvoter |         **~2.22B tokens** | Gjentakende total pluss engangskreditter og gjentakende kreditter                |
 
-Dette er estimater for hele katalogen på tvers av separate kvalifiserte kontoer, ikke en kvote levert av OmniRoute eller en prognose for en ny installasjon. Kapasiteten du kan bruke, avhenger av leverandørene du kobler til, og deres gjeldende vilkår. Verdiene beregnes fra `open-sse/config/freeModelCatalog.ts`; se
+Dette er estimater for hele katalogen på tvers av separate kvalifiserte kontoer, ikke en kvote levert av 67router eller en prognose for en ny installasjon. Kapasiteten du kan bruke, avhenger av leverandørene du kobler til, og deres gjeldende vilkår. Verdiene beregnes fra `open-sse/config/freeModelCatalog.ts`; se
 [Referanse for gratisnivåer](../reference/FREE_TIERS.md) for deduplisering av pooler, merknader om bruksvilkår,
 avviklede oppføringer og metodikk for registreringskreditter.
 
@@ -192,7 +192,7 @@ produksjonskravene dine. Kritiske arbeidsbelastninger bør ha overvåkede, kontr
 
 Ulempene kan omfatte strenge begrensninger, ventelister, KYC, kredittkortverifisering, trening på
 promptene, svakere personvern, ingen SLA, hyppige modellendringer, geografiske begrensninger, betaling for overforbruk eller
-risiko knyttet til kontoretningslinjer. OmniRoute viser tilgjengelige metadata; du velger hva som skal aktiveres.
+risiko knyttet til kontoretningslinjer. 67router viser tilgjengelige metadata; du velger hva som skal aktiveres.
 
 ### «Hvordan får jeg en større gratiskvote?»
 
@@ -211,7 +211,7 @@ rangeringssiden for gratisleverandører som en kvalitetsindikator, og kontroller
 
 ## Hva nå?
 
-- **[Veiledning for automatisk kombinasjon](./AUTO-COMBO-GUIDE.md)** — La OmniRoute velge den beste KI-en for deg
+- **[Veiledning for automatisk kombinasjon](./AUTO-COMBO-GUIDE.md)** — La 67router velge den beste KI-en for deg
 - **[Leverandørveiledning](./PROVIDERS-GUIDE.md)** — Koble til flere leverandører
 - **[Feilsøking](../guides/TROUBLESHOOTING.md)** — Løs vanlige problemer
 - **[Referanse for gratisnivåer](../reference/FREE_TIERS.md)** — Fullstendig liste over gratisnivåer

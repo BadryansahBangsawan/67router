@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Cursor planının **şəkil generasiyası** imkanını çatla eyni provayder identifikatoru — `cursor` (`cu` aliası) — vasitəsilə `POST /v1/images/generations` ünvanında təqdim edir.
+67router Cursor planının **şəkil generasiyası** imkanını çatla eyni provayder identifikatoru — `cursor` (`cu` aliası) — vasitəsilə `POST /v1/images/generations` ünvanında təqdim edir.
 
 | Sahə                             | Dəyər                                                                                |
 | -------------------------------- | ------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute Cursor planının **şəkil generasiyası** imkanını çatla eyni pro
 
 ## Niyə Agent CLI
 
-OmniRoute-da Cursor çatı `agent.v1.AgentService/Run` (protobuf) istifadə edir. Bu yol daxili müştəri alətlərini (shell, write, …) **rədd edir**. Şəkil generasiyası istifadəçi hesabı ilə **`agent` CLI** tərəfindən icra edilən Cursor-a məxsus alətdir. Buna görə də şəkil emalçısı kilidlənmiş prompt və hər sorğu üçün müvəqqəti iş sahəsi ilə `agent` prosesini işə salır (icma hesab körpüləri ilə eyni quruluşda), sonra isə OpenAI ilə uyğun `b64_json` qaytarır.
+67router-da Cursor çatı `agent.v1.AgentService/Run` (protobuf) istifadə edir. Bu yol daxili müştəri alətlərini (shell, write, …) **rədd edir**. Şəkil generasiyası istifadəçi hesabı ilə **`agent` CLI** tərəfindən icra edilən Cursor-a məxsus alətdir. Buna görə də şəkil emalçısı kilidlənmiş prompt və hər sorğu üçün müvəqqəti iş sahəsi ilə `agent` prosesini işə salır (icma hesab körpüləri ilə eyni quruluşda), sonra isə OpenAI ilə uyğun `b64_json` qaytarır.
 
 ## Giriş məhdudiyyəti (Sərt Qaydalar #15 + #17)
 
@@ -23,12 +23,12 @@ Bu, alt proses (`agent` binar faylı) işə salan yeganə `IMAGE_PROVIDERS` form
 
 ## Paralellik qapısı modul səviyyəsindədir (tək instansiya məhdudiyyəti)
 
-`CURSOR_IMG_MAX_CONCURRENT`, Node modul instansiyasının əhatə dairəsində olan yaddaşdaxili sayğac/növbə tərəfindən tətbiq edilir (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). O, bir OmniRoute prosesi daxilində paralel `agent` proseslərinin işə salınmasını düzgün məhdudlaşdırır, lakin eyni Cursor hesabını paylaşan bir neçə proses/instansiya (məsələn, çoxreplikalı yerləşdirmə) arasında koordinasiya **etmir** — hər instansiya öz müstəqil limitini tətbiq edir. Tək instansiyalı yerləşdirmə (standart variant) üçün bu dəqiq işləyir; üfüqi miqyaslandırılmış yerləşdirmələr hər instansiya üçün `CURSOR_IMG_MAX_CONCURRENT` dəyərini konservativ saxlamalı və ya Cursor şəkil trafikini tək instansiyaya yönləndirməlidir.
+`CURSOR_IMG_MAX_CONCURRENT`, Node modul instansiyasının əhatə dairəsində olan yaddaşdaxili sayğac/növbə tərəfindən tətbiq edilir (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). O, bir 67router prosesi daxilində paralel `agent` proseslərinin işə salınmasını düzgün məhdudlaşdırır, lakin eyni Cursor hesabını paylaşan bir neçə proses/instansiya (məsələn, çoxreplikalı yerləşdirmə) arasında koordinasiya **etmir** — hər instansiya öz müstəqil limitini tətbiq edir. Tək instansiyalı yerləşdirmə (standart variant) üçün bu dəqiq işləyir; üfüqi miqyaslandırılmış yerləşdirmələr hər instansiya üçün `CURSOR_IMG_MAX_CONCURRENT` dəyərini konservativ saxlamalı və ya Cursor şəkil trafikini tək instansiyaya yönləndirməlidir.
 
 ## Tələblər
 
 1. İdarəetmə panelində qoşulmuş Cursor hesabı (OAuth və ya `crsr_…` API açarı).
-2. OmniRoute prosesi üçün əlçatan Cursor Agent binar faylı:
+2. 67router prosesi üçün əlçatan Cursor Agent binar faylı:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, yaxud
    - `~/.local/bin/agent`, yaxud
    - Cursor bağlantısındakı `providerSpecificData.agentBin`.

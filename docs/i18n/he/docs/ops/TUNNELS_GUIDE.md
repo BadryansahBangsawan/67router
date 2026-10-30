@@ -7,7 +7,7 @@
 > **מקור האמת:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **עדכון אחרון:** 2026-06-28 — v3.8.40
 
-OmniRoute יכול לחשוף את השרת המקומי שלו (`http://localhost:20128`) לאינטרנט
+67router יכול לחשוף את השרת המקומי שלו (`http://localhost:20128`) לאינטרנט
 הציבורי באמצעות שלושה מנגנוני מנהור. הדבר שימושי עבור:
 
 - קריאות חוזרות של OAuth מספקי ענן (Antigravity, Gemini, Cursor), שזקוקות
@@ -15,7 +15,7 @@ OmniRoute יכול לחשוף את השרת המקומי שלו (`http://localho
 - שיתוף המופע המקומי שלכם עם חברי הצוות ללא פריסת VM.
 - בדיקות בנייד, מרחוק או בין רשתות.
 
-כל שלושת המנגנונים מנוהלים בתוך התהליך — OmniRoute מפעיל/עוצר את הקובץ הבינארי
+כל שלושת המנגנונים מנוהלים בתוך התהליך — 67router מפעיל/עוצר את הקובץ הבינארי
 או ה-SDK הבסיסי מלוח הבקרה או דרך REST API. אין צורך בהגדרת reverse-proxy או
 systemd.
 
@@ -41,7 +41,7 @@ systemd.
 http://localhost:<apiPort>` ומחלצת מ-stdout את כתובת ה-URL שהוקצתה מסוג
   `*.trycloudflare.com`. כתובות ה-URL זמניות ומשתנות בכל הפעלה מחדש.
 - **מנהרה בעלת שם (לבחירה).** כאשר `CLOUDFLARED_CONFIG` מצביע אל
-  `config.yml` של cloudflared המנוהל מקומית, OmniRoute מריץ `cloudflared tunnel --no-autoupdate
+  `config.yml` של cloudflared המנוהל מקומית, 67router מריץ `cloudflared tunnel --no-autoupdate
 --config <path> run`, וכך מספק לכם **שם מארח יציב ובעל שם**. התצורה
   מספקת את UUID המנהרה, את `credentials-file` ואת ניתוב `ingress`, ולכן לא
   מועבר `--url` ולא נדרש אסימון מלוח הבקרה של Zero Trust. הפקודה `run` קוראת
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ומחלצת מ-stdout את כתובת ה-URL שהו
 
 התנהגויות עיקריות:
 
-- **התקנה אוטומטית.** בשימוש הראשון, OmniRoute מוריד את הקובץ הבינארי העדכני ביותר של
+- **התקנה אוטומטית.** בשימוש הראשון, 67router מוריד את הקובץ הבינארי העדכני ביותר של
   `cloudflared` מהמהדורות הרשמיות ב-GitHub (ההתקנה המנוהלת נמצאת תחת
   `DATA_DIR/cloudflared/`). ערך ה-SHA256 של הנכס שהורד מאומת מול
   מניפסט המהדורה לפני ההרצה.
@@ -68,7 +68,7 @@ http://localhost:<apiPort>` ומחלצת מ-stdout את כתובת ה-URL שהו
    ```
 
 2. כתבו קובץ `~/.cloudflared/config.yml` שמנתב את שם המארח שלכם אל יציאת
-   ה-API המקומית של OmniRoute (ברירת המחדל היא 20128):
+   ה-API המקומית של 67router (ברירת המחדל היא 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ http://localhost:<apiPort>` ומחלצת מ-stdout את כתובת ה-URL שהו
      - service: http_status:404
    ```
 
-3. הפנו את OmniRoute אל התצורה והפעילו (מחדש) את המנהרה:
+3. הפנו את 67router אל התצורה והפעילו (מחדש) את המנהרה:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # אופציונלי — דורס את שם המארח שעליו OmniRoute מדווח; אחרת הוא נקרא מתוך
+   # אופציונלי — דורס את שם המארח שעליו 67router מדווח; אחרת הוא נקרא מתוך
    # כלל ה-ingress הראשון בתצורה:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### משתני סביבה אופציונליים
 
-| משתנה                                                | מטרה                                                                                                                                                         |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | דריסת נתיב הקובץ הבינארי. אם הוגדר והנתיב תקין, OmniRoute משתמש בו במקום להוריד אותו.                                                                        |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | פרוטוקול התעבורה (ברירת המחדל היא `http2`; זמינים גם `quic`, `auto`).                                                                                        |
-| `CLOUDFLARED_CONFIG`                                 | נתיב לקובץ `config.yml` של cloudflared המנוהל מקומית. כאשר מוגדר, OmniRoute מפעיל מנהרה **בעלת שם/מתמידה** (`tunnel --config <path> run`) במקום מנהרה מהירה. |
-| `CLOUDFLARED_HOSTNAME`                               | דורס את שם המארח הציבורי המדווח של המנהרה בעלת השם (למשל `ai.example.com`). כאשר אינו מוגדר, הערך נקרא משם המארח הראשון של `ingress` בתצורה.                 |
+| משתנה                                                | מטרה                                                                                                                                                        |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | דריסת נתיב הקובץ הבינארי. אם הוגדר והנתיב תקין, 67router משתמש בו במקום להוריד אותו.                                                                        |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | פרוטוקול התעבורה (ברירת המחדל היא `http2`; זמינים גם `quic`, `auto`).                                                                                       |
+| `CLOUDFLARED_CONFIG`                                 | נתיב לקובץ `config.yml` של cloudflared המנוהל מקומית. כאשר מוגדר, 67router מפעיל מנהרה **בעלת שם/מתמידה** (`tunnel --config <path> run`) במקום מנהרה מהירה. |
+| `CLOUDFLARED_HOSTNAME`                               | דורס את שם המארח הציבורי המדווח של המנהרה בעלת השם (למשל `ai.example.com`). כאשר אינו מוגדר, הערך נקרא משם המארח הראשון של `ingress` בתצורה.                |
 
 ## 2. ngrok
 
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 התגובה כוללת את ה-`publicUrl` שהוקצה (לדוגמה,
-`https://abcd-1234.ngrok-free.app`). יש להגדיר דומיינים מותאמים אישית, אזורים וכללי מדיניות בלוח הבקרה של ngrok — ‏OmniRoute עצמו רק מעביר ל-SDK את כתובת ה-URL המקומית של היעד.
+`https://abcd-1234.ngrok-free.app`). יש להגדיר דומיינים מותאמים אישית, אזורים וכללי מדיניות בלוח הבקרה של ngrok — ‏67router עצמו רק מעביר ל-SDK את כתובת ה-URL המקומית של היעד.
 
 ## 3. Tailscale Funnel
 
@@ -180,12 +180,12 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### דרישות מוקדמות
 
-1. התקינו את Tailscale (או אפשרו ל-OmniRoute לעשות זאת — ראו את נקודת הקצה `install` להלן).
-2. התחברו (`tailscale login` או באמצעות נקודת הקצה `login` של OmniRoute).
+1. התקינו את Tailscale (או אפשרו ל-67router לעשות זאת — ראו את נקודת הקצה `install` להלן).
+2. התחברו (`tailscale login` או באמצעות נקודת הקצה `login` של 67router).
 3. הפעילו את Funnel עבור ה-tailnet שלכם במסוף הניהול של Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-ב-Linux וב-macOS, ה-daemon (`tailscaled`) דורש `sudo` לצורך שליטה. נקודות הקצה מסוג POST מקבלות שדה `sudoPassword` אופציונלי, שמועבר למטמון הסיסמאות MITM של OmniRoute (`getCachedPassword` / `setCachedPassword`) למשך הקריאה. ב-Windows נעשה שימוש בהתקנת השירות המוגדרת כברירת מחדל בנתיב `C:\Program Files\Tailscale\tailscale.exe`.
+ב-Linux וב-macOS, ה-daemon (`tailscaled`) דורש `sudo` לצורך שליטה. נקודות הקצה מסוג POST מקבלות שדה `sudoPassword` אופציונלי, שמועבר למטמון הסיסמאות MITM של 67router (`getCachedPassword` / `setCachedPassword`) למשך הקריאה. ב-Windows נעשה שימוש בהתקנת השירות המוגדרת כברירת מחדל בנתיב `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### נקודות קצה של REST
 
@@ -241,7 +241,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## שיקולים לגבי קריאות חוזרות של OAuth
 
-כאשר חושפים את OmniRoute דרך מנהרה, לוח הבקרה ותהליכי OAuth חייבים
+כאשר חושפים את 67router דרך מנהרה, לוח הבקרה ותהליכי OAuth חייבים
 לבנות כתובות URL לקריאה חוזרת על בסיס שם המארח **הציבורי**, ולא `localhost`. אחרת,
 ספק ה-OAuth מפנה את המשתמש בחזרה לכתובת URL שהשרתים שלו אינם יכולים להגיע אליה,
 ותהליך לחיצת היד נכשל.
@@ -257,7 +257,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-והפעילו מחדש את OmniRoute לפני התחלת OAuth. במנהרות Cloudflare Quick
+והפעילו מחדש את 67router לפני התחלת OAuth. במנהרות Cloudflare Quick
 זמניות, כתובת ה-URL משתנה לאחר כל הפעלה מחדש, ולכן לשימוש ב-OAuth בסביבת ייצור העדיפו את ngrok עם דומיין
 שמור או את Tailscale Funnel.
 
@@ -272,14 +272,14 @@ NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 - הודעת השגיאה האחרונה, אם קיימת.
 
 לניטור תכנותי, בצעו תשאול מחזורי של נקודות הקצה `GET` עבור כל מנגנון. מותר להפעיל יותר
-ממנגנון אחד בו-זמנית; OmniRoute יעקוב אחר כל אחד מהם
+ממנגנון אחד בו-זמנית; 67router יעקוב אחר כל אחד מהם
 בנפרד.
 
 ## פתרון בעיות
 
 ### "הקובץ הבינארי cloudflared לא נמצא"
 
-OmniRoute מנסה לבצע התקנה אוטומטית בשימוש הראשון. אם ההתקנה חסומה
+67router מנסה לבצע התקנה אוטומטית בשימוש הראשון. אם ההתקנה חסומה
 (רשת מוגבלת, אין גישה ל-GitHub), הורידו את `cloudflared` ידנית מתוך
 <https://github.com/cloudflare/cloudflared/releases> והגדירו
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

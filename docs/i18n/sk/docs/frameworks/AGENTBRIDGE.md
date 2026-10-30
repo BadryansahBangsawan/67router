@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge je MITM (Man-in-the-Middle) proxy server OmniRoute, ktorý zachytáva HTTPS komunikáciu AI agentov v IDE a presmerúva ju cez zjednotený smerovací mechanizmus OmniRoute. Podporuje **10 agentov IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code a Trae (vo fáze skúmania) — vďaka čomu je OmniRoute MITM proxy serverom s najširším pokrytím pre AI asistentov programovania na trhu.
+AgentBridge je MITM (Man-in-the-Middle) proxy server 67router, ktorý zachytáva HTTPS komunikáciu AI agentov v IDE a presmerúva ju cez zjednotený smerovací mechanizmus 67router. Podporuje **10 agentov IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code a Trae (vo fáze skúmania) — vďaka čomu je 67router MITM proxy serverom s najširším pokrytím pre AI asistentov programovania na trhu.
 
 **Umiestnenie na ovládacom paneli:** `/dashboard/tools/agent-bridge`
 **Skupina na bočnom paneli:** Nástroje (za Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge je MITM (Man-in-the-Middle) proxy server OmniRoute, ktorý zachytáv
 
 ### Čo je AgentBridge?
 
-Keď IDE agent (napr. GitHub Copilot, Cursor, Claude Code) vykoná volanie API, pripája sa priamo k upstream poskytovateľovi AI (OpenAI, Anthropic atď.). AgentBridge toto pripojenie transparentne zachytí na úrovni TLS — bez potreby akejkoľvek zmeny konfigurácie agenta — a prepíše požiadavku cez OmniRoute.
+Keď IDE agent (napr. GitHub Copilot, Cursor, Claude Code) vykoná volanie API, pripája sa priamo k upstream poskytovateľovi AI (OpenAI, Anthropic atď.). AgentBridge toto pripojenie transparentne zachytí na úrovni TLS — bez potreby akejkoľvek zmeny konfigurácie agenta — a prepíše požiadavku cez 67router.
 
 To znamená, že môžete:
 
-- **Presmerovať akéhokoľvek agenta na akéhokoľvek poskytovateľa**: Copilot komunikuje s OpenAI? Presmerujte ho na Anthropic Claude, Gemini alebo na ktoréhokoľvek z 375 poskytovateľov OmniRoute.
+- **Presmerovať akéhokoľvek agenta na akéhokoľvek poskytovateľa**: Copilot komunikuje s OpenAI? Presmerujte ho na Anthropic Claude, Gemini alebo na ktoréhokoľvek z 375 poskytovateľov 67router.
 - **Použiť mapovania modelov**: `gemini-3-flash` → `claude-sonnet-4.7` transparentne na úrovni handlera.
 - **Sledovať všetku komunikáciu agentov**: každá zachytená požiadavka je publikovaná do [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Využiť odolnosť OmniRoute**: kombinované smerovanie, circuit breakery, fallbacky a sledovanie nákladov fungujú aj pre komunikáciu IDE agentov.
+- **Využiť odolnosť 67router**: kombinované smerovanie, circuit breakery, fallbacky a sledovanie nákladov fungujú aj pre komunikáciu IDE agentov.
 
 ### Pozicionovanie voči trhu
 
-| Funkcia                | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ---------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity            |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot         |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)             |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex           |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE             |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries         |    —    |    ✓     |        —        |             ✓             |
-| Claude Code            |    —    |    —     |        ✓        |             ✓             |
-| Open Code              |    —    |    —     |        ✓        |             ✓             |
-| Trae                   |    —    |    —     |        —        |       🔍 Zisťuje sa       |
-| UI dashboardu          |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Smerovanie OmniRoute   |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI mapovania modelov   |    ✗    |    ✗     |        ✗        |             ✓             |
-| Zoznam obchádzania     |    ✗    |    ✗     |        ✓        |             ✓             |
-| Certifikát upstream CA |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funkcia                | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ---------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity            |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot         |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)             |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex           |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE             |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries         |    —    |    ✓     |        —        |            ✓             |
+| Claude Code            |    —    |    —     |        ✓        |            ✓             |
+| Open Code              |    —    |    —     |        ✓        |            ✓             |
+| Trae                   |    —    |    —     |        —        |      🔍 Zisťuje sa       |
+| UI dashboardu          |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Smerovanie 67router    |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI mapovania modelov   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Zoznam obchádzania     |    ✗    |    ✗     |        ✓        |            ✓             |
+| Certifikát upstream CA |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, podradený proces CJS)
     │  zisťuje cieľ podľa SNI hlavičky Host
     │  generuje certifikát TLS pre každé SNI podpísaný CA AgentBridge
     ├── Zhoda so zoznamom obídení? → prechod TCP (bez dešifrovania)
-    ├── Zhoda s cieľom? → fetch → smerovač OmniRoute (port 20128)
+    ├── Zhoda s cieľom? → fetch → smerovač 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() v tele/hlavičkách požiadavky
     │               ├── TrafficBuffer.push() — publikuje do Inšpektora prevádzky
@@ -205,7 +205,7 @@ Predtým, ako IDE prijmú pripojenie MITM, musí operačný systém považovať 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Kľúčenka):**
@@ -262,10 +262,10 @@ Príklady záznamov v `/etc/hosts` pre GitHub Copilot:
 
 Pomocou tabuľky mapovania modelov na karte každého agenta definujte mapovania zdroj → cieľ:
 
-| Zdrojový model (natívny pre agenta) | Cieľový model (OmniRoute) |
-| ----------------------------------- | ------------------------- |
-| `gpt-4o`                            | `claude-sonnet-4.7`       |
-| `*` (zástupný znak)                 | `claude-haiku-4.7`        |
+| Zdrojový model (natívny pre agenta) | Cieľový model (67router) |
+| ----------------------------------- | ------------------------ |
+| `gpt-4o`                            | `claude-sonnet-4.7`      |
+| `*` (zástupný znak)                 | `claude-haiku-4.7`       |
 
 Zástupný znak `*` mapuje akýkoľvek nerozpoznaný model na zadaný cieľ. Mapovania sú uložené v tabuľke `agent_bridge_mappings`.
 
@@ -278,7 +278,7 @@ Zástupný znak `*` mapuje akýkoľvek nerozpoznaný model na zadaný cieľ. Map
 
 ### 3.5 Upozornenie na riziká
 
-AgentBridge zachytáva prihlasovacie údaje (tokeny OAuth, kľúče API), ktoré IDE používa na overenie voči nadradeným poskytovateľom. Pred zaznamenaním do protokolu sú **maskované** (pozrite si §2.7), ale sú viditeľné pre vrstvu MITM služby OmniRoute. Pri prvej aktivácii každého agenta sa zobrazí modálne okno s upozornením na riziká, ktoré možno zavrieť.
+AgentBridge zachytáva prihlasovacie údaje (tokeny OAuth, kľúče API), ktoré IDE používa na overenie voči nadradeným poskytovateľom. Pred zaznamenaním do protokolu sú **maskované** (pozrite si §2.7), ale sú viditeľné pre vrstvu MITM služby 67router. Pri prvej aktivácii každého agenta sa zobrazí modálne okno s upozornením na riziká, ktoré možno zavrieť.
 
 ### 3.6 Údržba a diagnostika
 
@@ -398,7 +398,7 @@ Detekcia používa cesty špecifické pre operačný systém a kontroly binárny
 
 ### Zoznam výnimiek pre citlivých hostiteľov
 
-Zoznam výnimiek zabezpečuje, že finančné inštitúcie, poskytovatelia OAuth/SSO a ďalší citliví hostitelia sa **nikdy nedešifrujú**. Ich prenos TLS prechádza cez transparentný tunel TCP — OmniRoute nikdy neuvidí nezašifrovaný obsah.
+Zoznam výnimiek zabezpečuje, že finančné inštitúcie, poskytovatelia OAuth/SSO a ďalší citliví hostitelia sa **nikdy nedešifrujú**. Ich prenos TLS prechádza cez transparentný tunel TCP — 67router nikdy neuvidí nezašifrovaný obsah.
 
 Predvolené vzory výnimiek zahŕňajú:
 
@@ -449,7 +449,7 @@ Prípadne v nastaveniach AgentBridge nakonfigurujte neprivilegovaný port a nast
 
 Ak IDE po spustení AgentBridge zobrazuje chyby TLS:
 
-1. Overte, či bol certifikát nainštalovaný: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) alebo `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Overte, či bol certifikát nainštalovaný: `security find-certificate -c "67router AgentBridge"` (macOS) alebo `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Niektoré aplikácie používajú vlastné úložisko dôveryhodných certifikátov (Firefox, Chrome v systéme Linux). Znova spustite „Trust Cert“ a skontrolujte úložisko certifikátov špecifické pre NSS/Firefox.
 3. Po pridaní certifikátu medzi dôveryhodné reštartujte IDE — prebiehajúce relácie TLS používajú predchádzajúci stav dôveryhodnosti.
 
@@ -500,7 +500,7 @@ Automatická detekcia používa bežné cesty inštalácie. Ak detekcia zlyhá, 
 Ak AgentBridge zachytáva požiadavky, ale všetky zlyhajú:
 
 1. Overte, či je na `/dashboard/providers` pripojený aspoň jeden poskytovateľ
-2. Skontrolujte protokoly servera OmniRoute: `APP_LOG_LEVEL=debug` v `.env`
+2. Skontrolujte protokoly servera 67router: `APP_LOG_LEVEL=debug` v `.env`
 3. Overte, či `OMNIROUTE_BASE_URL` odkazuje na správny koncový bod smerovača (predvolené: `http://127.0.0.1:20128`)
 
 ---

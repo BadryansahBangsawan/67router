@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Türkçe)
+# 67router Auto-Combo Engine (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # token başına en ucuz seçenek
 
 **Gerçekleşen işlemler:**
 
-1. OmniRoute, `src/sse/handlers/chat.ts` içinde `auto/` önekini algılar
+1. 67router, `src/sse/handlers/chat.ts` içinde `auto/` önekini algılar
 2. Veritabanındaki tüm **etkin sağlayıcı bağlantılarını** sorgular
 3. Geçerli kimlik bilgilerine (API anahtarı veya OAuth tokeni) sahip olanları filtreler
 4. Bağlantı başına modeli belirler (`connection.defaultModel` veya sağlayıcının ilk modeli)
@@ -89,7 +89,7 @@ temel kanal için doğrudan `auto`), mevcut dayanıklılık okumalarını
 
 Her aday ayrıca bu API anahtarının `excluded` bayrağını taşır. Hariç tutmalar
 API anahtarı başına (`auto_candidate_overrides` tablosu, `128` geçişi) saklanır —
-OmniRoute, `users` tablosu olmayan tek kiracılı bir sistemdir; dolayısıyla `apiKeyId`,
+67router, `users` tablosu olmayan tek kiracılı bir sistemdir; dolayısıyla `apiKeyId`,
 çağıran başına gerçek kimliğe en yakın seçenektir — ve
 `open-sse/services/autoCombo/virtualFactory.ts` içindeki aday havuzu darboğazında,
 saf ve birim testlerinden geçirilmiş
@@ -194,7 +194,7 @@ Yaygın iki sorun:
   olarak `auto` ise kalıcı combo'lara başvurur (önerilmez). Bir combo üzerinden
   yönlendirme yapmak için `auto` değil, combo'nun tam adını gönderin.
 - **`openrouter/auto`, gerçek ve ücretli bir OpenRouter ürünüdür** ("Auto Best
-  Available"); bir OmniRoute takma adı değildir. OpenRouter kayıt defterinin
+  Available"); bir 67router takma adı değildir. OpenRouter kayıt defterinin
   (`open-sse/config/providers/registry/openrouter/index.ts`) tek statik model
   girdisidir ve ayrıca faturalandırılır. Bunu `auto` havuzlarından hariç tutmak
   için Ayarlar → Yönlendirme → Ücretli modelleri gizle seçeneğini kullanın.
@@ -296,7 +296,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## Tüm Yönlendirme Stratejileri
 
-OmniRoute'un combo motoru **20 yönlendirme stratejisini** destekler (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` içinde bildirilmiştir). Auto Combo motorunun kendisi `auto` stratejisi altında sunulur; diğerleri kalıcı combo'lar için kullanılabilir.
+67router'un combo motoru **20 yönlendirme stratejisini** destekler (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` içinde bildirilmiştir). Auto Combo motorunun kendisi `auto` stratejisi altında sunulur; diğerleri kalıcı combo'lar için kullanılabilir.
 
 | Strateji            | Açıklama                                                                                                                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -344,7 +344,7 @@ Kesin rotasyon için `round-robin` kullanın; `weighted` üzerinde eşit ağırl
 
 ### Aracılı işlem hattı modu
 
-En az iki modele sahip bir `pipeline` kombosu, `config.agenticOrchestration.enabled` ile planlayıcı/yürütücü yönlendirmesini etkinleştirebilir. İlk hedef, planlamayı ve nihai yanıtları üstlenir; ikinci hedef, istemciye özgü araç çağrıları üretir. OmniRoute, istek protokolündeki araç sonucu devamlarını algılar, planlayıcıya başka bir araç turunun gerekli olup olmadığını sorar ve istemciye sunulan son adım olarak yürütücüyü veya planlayıcıyı dinamik biçimde seçer.
+En az iki modele sahip bir `pipeline` kombosu, `config.agenticOrchestration.enabled` ile planlayıcı/yürütücü yönlendirmesini etkinleştirebilir. İlk hedef, planlamayı ve nihai yanıtları üstlenir; ikinci hedef, istemciye özgü araç çağrıları üretir. 67router, istek protokolündeki araç sonucu devamlarını algılar, planlayıcıya başka bir araç turunun gerekli olup olmadığını sorar ve istemciye sunulan son adım olarak yürütücüyü veya planlayıcıyı dinamik biçimde seçer.
 
 İkinci hedeften sonraki ek modeller, sıralı yürütücü yedekleridir. Başarısız bir HTTP yanıtı veya aktarım istisnası, aynı planlayıcı kararı ve yerel araçlar korunarak bir sonraki yürütücüye geçilmesini sağlar; ancak o yürütücünün kendi adım istemi ve çözümlenmiş bağlantısı kullanılır. İlk başarılı yanıt, SSE akışı dâhil olmak üzere değiştirilmeden döndürülür; başarılı bir akış başladıktan sonraki hatalar burada yeniden denenemez. Tüm yürütücüler başarısız olursa son hata döndürülür. İstemci iptalleri dağıtımı durdurur.
 
@@ -847,11 +847,11 @@ Bu paket, deterministik olması ve canlı kimlik bilgileri gerektirmemesi için 
 
 ### Koşullu canlı smoke testi (CI'da DEĞİL — gerçek sağlayıcılar)
 
-| Komut                                  | Ne yapar                                                                                                 |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ile işlem içi gerçek yönlendirme; canlı bir OmniRoute DB'sinin anlık görüntüsünü alır |
-| `npm run test:combo:live:vps`          | Canlı bir OmniRoute sunucusuna HTTP çağrıları yapar (`COMBO_LIVE_BASE_URL` değerini ayarlayın)           |
-| `npm run test:combo:live:vps:failover` | Aynı işlemi kasıtlı yük devretme senaryolarıyla gerçekleştirir                                           |
+| Komut                                  | Ne yapar                                                                                                |
+| :------------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` ile işlem içi gerçek yönlendirme; canlı bir 67router DB'sinin anlık görüntüsünü alır |
+| `npm run test:combo:live:vps`          | Canlı bir 67router sunucusuna HTTP çağrıları yapar (`COMBO_LIVE_BASE_URL` değerini ayarlayın)           |
+| `npm run test:combo:live:vps:failover` | Aynı işlemi kasıtlı yük devretme senaryolarıyla gerçekleştirir                                          |
 
 Bu smoke testleri gerçek bağlantı yolunu (combo → sağlayıcı → tamamlama) çalıştırır. Canlı kimlik
 bilgileri ve VPS erişimi gerektirdikleri için kasıtlı olarak CI kapsamı dışında tutulurlar.

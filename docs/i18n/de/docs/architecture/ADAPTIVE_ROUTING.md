@@ -5,7 +5,7 @@
 ---
 
 Dieses Dokument beschreibt die Grundlage für feedbackgesteuertes adaptives Routing, die
-OmniRoute hinzugefügt wurde. Sie ist bewusst schlank gehalten: Sie führt einen typisierten
+67router hinzugefügt wurde. Sie ist bewusst schlank gehalten: Sie führt einen typisierten
 Kanal für Routing-Ergebnisse, ein Online-Qualitätssignal zur Einspeisung in den bestehenden
 Auto-Combo-Scorer, einen optionalen OpenTelemetry-Exporter und einen Endpunkt zur
 Erklärbarkeit ein. Sie ersetzt **nicht** den bestehenden Resilienz-Stack (Circuit Breaker,
@@ -13,7 +13,7 @@ Connection Cooldown, Model Lockout, Health Matrix, Autopilot), sondern ergänzt 
 
 ## 1. Architekturkontext
 
-OmniRoute ist eine Datenebene mit einem **Request-Hot-Path** und einer
+67router ist eine Datenebene mit einem **Request-Hot-Path** und einer
 **Steuerungs-/Intelligenzebene**. Der Hot Path muss schnell, speichereffizient, asynchron,
 resilient und vorhersehbar bleiben. Evaluierung, Qualitätsbewertung, Experimente und
 historische Analysen gehören zur Steuerungsebene.
@@ -23,7 +23,7 @@ KI-Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   Datenebene (schnell, synchron, In-Memory)
+│    67router        │   Datenebene (schnell, synchron, In-Memory)
 │ Routing / Failover  │
 │ Zustand / Leitplanke│
 │ Cache / Streaming   │
@@ -242,7 +242,7 @@ Dateien: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*`-SDK).
 - Spans folgen den semantischen GenAI-Konventionen (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) sowie den OmniRoute-Routing-
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) sowie den 67router-Routing-
   Attributen (Ergebnis, Status, TTFT, Wiederholungsversuche, Fallback).
 - `record()` reiht Elemente lediglich in einen begrenzten Puffer ein (O(1)); ein Hintergrund-Timer
   überträgt sie asynchron mittels `POST {endpoint}/v1/traces`. Bei Überlast werden die
@@ -265,7 +265,7 @@ Dateien: `open-sse/services/routing/otel.ts`
 
 ## 6. Integration der Evaluierungsebene (Vorbereitung auf Future AGI)
 
-OmniRoute behandelt Future AGI (oder jeden anderen Evaluator) als **potenzielles
+67router behandelt Future AGI (oder jeden anderen Evaluator) als **potenzielles
 Intelligenz-/Evaluierungs-Backend, nicht als Abhängigkeit**. Die Integrationspunkte:
 
 - Eine `RoutingEventSink` kann Ereignisse asynchron an einen Evaluator weiterleiten.

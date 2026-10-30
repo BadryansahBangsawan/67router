@@ -7,11 +7,11 @@
 A megosztott végrehajtható manifesttel, a korlátozott gyermekfolyamat-környezetekkel és a tartós
 Gemini-beállítással kapcsolatban lásd: [CLI-indítási szerződések](./CLI-LAUNCH-CONTRACTS.md).
 
-Az OmniRoute `setup-*` parancsok egész családját kínálja, amelyek úgy konfigurálnak egy kódolási
-CLI-t (Codex, Claude Code, OpenCode, Cline, …), hogy az OmniRoute-ot használja háttérrendszerként — így
-az eszköz **egyetlen** végponttal kommunikál, az OmniRoute pedig automatikus tartalékra váltással
+Az 67router `setup-*` parancsok egész családját kínálja, amelyek úgy konfigurálnak egy kódolási
+CLI-t (Codex, Claude Code, OpenCode, Cline, …), hogy az 67router-ot használja háttérrendszerként — így
+az eszköz **egyetlen** végponttal kommunikál, az 67router pedig automatikus tartalékra váltással
 a megfelelő szolgáltatóhoz irányítja a kéréseket. Minden parancs egy futó
-OmniRoute (helyi vagy távoli) **élő** modellkatalógusát olvassa be, és az eszköz saját konfigurációs fájlját írja ki az
+67router (helyi vagy távoli) **élő** modellkatalógusát olvassa be, és az eszköz saját konfigurációs fájlját írja ki az
 **Ön** gépén. Az API-kulcsra környezeti változón keresztül történik hivatkozás minden olyan esetben, amikor ezt az eszköz
 támogatja. Az alábbiakban külön jelezzük azokat a parancsokat, amelyek tartós, eszközspecifikus környezeti fájlt hoznak létre.
 
@@ -53,7 +53,7 @@ eszközspecifikus részletes útmutatókban olvashat:
 
 - [A Claude Code konfigurálása](./CLAUDE-CODE-CONFIGURATION.md)
 - [A Codex CLI konfigurálása](./CODEX-CLI-CONFIGURATION.md)
-- [Távoli mód](./REMOTE-MODE.md) — távoli OmniRoute (VPS / Tailnet) vezérlése a laptopjáról
+- [Távoli mód](./REMOTE-MODE.md) — távoli 67router (VPS / Tailnet) vezérlése a laptopjáról
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — az OmniCopilot bővítmény; ezeket a
   `setup-*` parancsokat közvetlenül a szerkesztőből is futtathatja Ön helyett
 
@@ -89,7 +89,7 @@ szerverről tölti le, a konfigurációt pedig helyileg írja ki.
 
 Megjegyzések a jelzőkről (a parancs forráskódjában ellenőrizve):
 
-- `--remote <url>` — lekéri a katalógust egy távoli OmniRoute-példányról (felülírja a `--port`
+- `--remote <url>` — lekéri a katalógust egy távoli 67router-példányról (felülírja a `--port`
   beállítást és az aktív kontextust). A `--api-key <key>` adja meg az adott
   kiszolgáló hitelesítő adatát (alapértelmezés szerint az `OMNIROUTE_API_KEY` környezeti változó vagy az aktív kontextus tokenje).
 - `--only <patterns>` — vesszővel elválasztott részkarakterláncok; csak az egyező
@@ -110,7 +110,7 @@ Megjegyzések a jelzőkről (a parancs forráskódjában ellenőrizve):
   a **codex** pedig `-c model_providers.omniroute.*` argumentumokon keresztül kapja meg. **A Qwen az egyetlen futtatási
   cél, amelynél kötelező a `--model` megadása** — az `omniroute run qwen` enélkül
   `2` kilépési kóddal és egyértelmű hibaüzenettel áll le.
-- `--port <port>` — a helyi OmniRoute portja (alapértelmezett: `20128`; a `--remote`
+- `--port <port>` — a helyi 67router portja (alapértelmezett: `20128`; a `--remote`
   megadásakor figyelmen kívül marad). Minden `setup-*` parancson és mindkét indítóparancson elérhető.
 - Az `omniroute run` kilépési kódjai: a gyermek CLI saját kilépési kódját
   változtatás nélkül továbbítja; `2` = érvénytelen argumentumok (nem támogatott cél, hiányzó kötelező
@@ -155,7 +155,7 @@ nem jelennek meg indítható célként.
 
 ## Helyi használat
 
-Ha az OmniRoute a `localhost:20128` címen fut, csak futtasd az eszközödhöz tartozó beállítási parancsot. A katalógus a helyi kiszolgálóról töltődik le.
+Ha az 67router a `localhost:20128` címen fut, csak futtasd az eszközödhöz tartozó beállítási parancsot. A katalógus a helyi kiszolgálóról töltődik le.
 
 ```bash
 # Codex: minden illeszkedő modellhez profilt ír a ~/.codex/ könyvtárba
@@ -182,8 +182,8 @@ omniroute setup-continue --dry-run
 Indítás konfiguráció írása nélkül (csak környezetiinjekcióval):
 
 ```bash
-omniroute launch                 # Claude Code → helyi OmniRoute
-omniroute launch-codex           # Codex CLI → helyi OmniRoute
+omniroute launch                 # Claude Code → helyi 67router
+omniroute launch-codex           # Codex CLI → helyi 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -201,7 +201,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Távoli használat
 
-Bármely beállítási parancsot egy távoli OmniRoute-példányra irányíthatsz a `--remote` és a `--api-key` megadásával. A katalógus a távoli példányról töltődik le, a konfiguráció pedig a helyi gépedre íródik.
+Bármely beállítási parancsot egy távoli 67router-példányra irányíthatsz a `--remote` és a `--api-key` megadásával. A katalógus a távoli példányról töltődik le, a konfiguráció pedig a helyi gépedre íródik.
 
 ```bash
 # OpenCode egy távoli VPS használatával, csak a glm/kimi modellek megtartásával
@@ -239,7 +239,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Mindkét forma egyetlen 5dive **hitelesítési profilt** ír, ezután pedig minden, ehhez a profilhoz kötött `claude`-munkahely az OmniRoute-tal kommunikál. Három dolog jellemző kifejezetten erre a célpontra:
+Mindkét forma egyetlen 5dive **hitelesítési profilt** ír, ezután pedig minden, ehhez a profilhoz kötött `claude`-munkahely az 67router-tal kommunikál. Három dolog jellemző kifejezetten erre a célpontra:
 
 - **A flotta gazdagépén, rootként fut.** A 5dive műveletei helyi systemd-egységeken és egy root tulajdonában lévő állapotkönyvtáron dolgoznak; távoli mód nem érhető el. A recept `sudo` használatával újraindítja önmagát, ha még nem rootként fut (a `--no-sudo` kikapcsolja ezt, és helyette kiírja a parancsot).
 - **A végpontnak `https://` protokollt kell használnia, kivéve, ha loopback címről van szó.** Az ügynök API-kulcsa minden kérésnél ezen az URL-en keresztül halad, a 5dive pedig elutasítja a titkosítatlan, gépen kívüli végpontokat. Ez alól a privát LAN-cím sem kivétel.
@@ -247,14 +247,14 @@ Mindkét forma egyetlen 5dive **hitelesítési profilt** ír, ezután pedig mind
 
 Az API-kulcs a **szabványos bemeneten** (`--api-key=-`) keresztül kerül átadásra a 5dive számára, így soha nem jelenik meg a `ps` kimenetében.
 
-Ha a profilt nem egyetlen modellre, hanem egy OmniRoute-**kombinációra** irányítod, a flotta szolgáltatói feladatátvételt kap: amikor az elsődleges végpont az
+Ha a profilt nem egyetlen modellre, hanem egy 67router-**kombinációra** irányítod, a flotta szolgáltatói feladatátvételt kap: amikor az elsődleges végpont az
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) problémában rögzített futás során egy művelet közepén teljesen elérhetetlenné vált, az ügynök a tartalék végponton fejezte be a hátralévő lépéseket, és a kiesés soha nem vált láthatóvá a felhasználó számára.
 
 ---
 
 ## Alap-URL-konvenciók (mely eszközök igénylik a `/v1` útvonalat)
 
-Az OmniRoute az OpenAI-felületet a `/v1`, az Anthropic-felületet a gyökérútvonalon,
+Az 67router az OpenAI-felületet a `/v1`, az Anthropic-felületet a gyökérútvonalon,
 a natív Gemini-felületet pedig a `/v1beta` útvonalon teszi elérhetővé. Minden integráció
 az eszköz által elvárt formára van konfigurálva (a parancs forráskódjában ellenőrizve):
 
@@ -276,7 +276,7 @@ az eszköz által elvárt formára van konfigurálva (a parancs forráskódjába
 ## Natív függőségek megtartása frissítéskor: `--include=optional`
 
 Amikor az `omniroute update` paranccsal frissít (megerősítés után vagy az `--apply`
-kapcsolóval), az OmniRoute a beépített `--include=optional` kapcsolóval futtatja
+kapcsolóval), az 67router a beépített `--include=optional` kapcsolóval futtatja
 a telepítést:
 
 ```bash
@@ -307,16 +307,16 @@ Az `omniroute update` további kapcsolói (a forráskódban ellenőrizve): `--ch
 A szerződés az `@google/gemini-cli` 0.50.0 verziója alapján ellenőrizve: a CLI
 figyelembe veszi a `GOOGLE_GEMINI_BASE_URL` értékét, és a
 `POST /v1beta/models/<model>:generateContent` (valamint a
-`:streamGenerateContent?alt=sse`) kéréseket erre küldi — pontosan az OmniRoute
+`:streamGenerateContent?alt=sse`) kéréseket erre küldi — pontosan az 67router
 natív Gemini-felületére (`/v1beta`). Az `omniroute run gemini` ezt automatikusan
 beállítja:
 
-- `GOOGLE_GEMINI_BASE_URL` → az aktív OmniRoute alap-URL (gyökér, `/v1` nélkül);
-- `GEMINI_API_KEY` → a feloldott OmniRoute-hitelesítő adat (opció/környezet/kontextus);
+- `GOOGLE_GEMINI_BASE_URL` → az aktív 67router alap-URL (gyökér, `/v1` nélkül);
+- `GEMINI_API_KEY` → a feloldott 67router-hitelesítő adat (opció/környezet/kontextus);
 - egy **ideiglenes, elkülönített `GEMINI_CLI_HOME`**, amelynek
   `.gemini/settings.json` fájlja a `gemini-api-key` hitelesítést választja ki, így
   egy tárolt Google OAuth-munkamenet (Code Assist) soha nem írja felül az
-  OmniRoute-ra irányított indítást — kilépés után eltávolításra kerül;
+  67router-ra irányított indítást — kilépés után eltávolításra kerül;
 - **környezeti higiénia**: a gyermekfolyamat környezetéből eltávolításra kerül a
   `GOOGLE_API_KEY`, a `GOOGLE_GENAI_USE_VERTEXAI` és a `GOOGLE_GENAI_USE_GCA`
   (amelyek a hitelesítést a Vertex/Code Assist felé irányítanák), továbbá
@@ -341,7 +341,7 @@ amely továbbra is a `/dashboard/acp-agents` ügynökprotokoll-integrációja.
 
 A determinisztikus indításiterv-regressziós tesztek a CI-ban futnak (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). A VALÓDI binárisok VALÓDI
-OmniRoute-kiszolgálóval történő ellenőrzéséhez egy opcionálisan aktiválható tesztkeret érhető el a
+67router-kiszolgálóval történő ellenőrzéséhez egy opcionálisan aktiválható tesztkeret érhető el a
 `tests/integration/upstream-cli-smoke.int.test.ts` fájlban. Soha nem fut automatikusan
 (minden részteszt kimarad, hacsak nincs beállítva a `RUN_CLI_SMOKE=1`), a hitelesítő adatot a környezeti változó
 NEVÉVEL adja át (soha nem az értékével), minden rögzített kimenetből kitakarja a kulcsformájú karakterláncokat, kihagyja

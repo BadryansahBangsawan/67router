@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute siqish mexanizmi engine shartnomalari asosida qurilgan. Rejim bitta engine’ni bevosita
+67router siqish mexanizmi engine shartnomalari asosida qurilgan. Rejim bitta engine’ni bevosita
 (`caveman` yoki `rtk`) yoxud bir nechta engine’ni belgilangan tartibda ishga tushiradigan deterministik ketma-ket pipeline’ni bajarishi mumkin.
 
 ## Rejimlar
@@ -35,7 +35,7 @@ Profil **shift, pol emas**: paketdagi `mergeCompressionProfileOptions` chaqiruvc
 
 Ushbu kod bazasida o'lchangan: `coding-safe` va `balanced` `minCompressChars` ni maksimal darajaga ko'taradi va tizim, asbob sxemalari va asbob natijalarini mahalliy saqlaydi, shuning uchun hali tarix to'plamagan sessiya `below_min_chars` da to'xtaydi va dvigatel hech narsani o'zgartirmaydi. Shuning uchun standart profil eng xavfsiz profil emas, balki `aggressive` hisoblanadi.
 
-Paket o'zining model doirasini va profilini o'z muhit konfiguratsiyasidan hal qiladi. OmniRoute hech qachon qarorni delegatsiya qilmaydi: adapter model darvozasini paketning eng cheklovchi doirasiga bog'laydi, shuning uchun xost muhiti sozlamalari faqat ruxsat berilganlar ro'yxatini toraytirishi mumkin, OmniRoute o'lchagan kvitansiyalardan tashqariga kengaytira olmaydi.
+Paket o'zining model doirasini va profilini o'z muhit konfiguratsiyasidan hal qiladi. 67router hech qachon qarorni delegatsiya qilmaydi: adapter model darvozasini paketning eng cheklovchi doirasiga bog'laydi, shuning uchun xost muhiti sozlamalari faqat ruxsat berilganlar ro'yxatini toraytirishi mumkin, 67router o'lchagan kvitansiyalardan tashqariga kengaytira olmaydi.
 
 ## Dvigatellar reyestri
 
@@ -100,7 +100,7 @@ Caveman rejimi odatiy nasriy matnni semantik jihatdan ixchamlashtirishga qaratil
 Boshqaruv panelidagi joylashuvi: `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman upstream hisobotlariga koʻra, chiqish tokenlari `~75%` ga kamayadi, benchmarklarda chiqish hajmi oʻrtacha `65%` ga tejaladi,
-diapazon esa `22-87%` ni tashkil qiladi; kirishni siqish vositasi uchun bu koʻrsatkich `~46%`. OmniRoute ustma-ust qoʻllanilgan prompt/kontekst tejashlarini
+diapazon esa `22-87%` ni tashkil qiladi; kirishni siqish vositasi uchun bu koʻrsatkich `~46%`. 67router ustma-ust qoʻllanilgan prompt/kontekst tejashlarini
 hujjatlashtirishda Cavemanʼning kirish tomonidagi koʻrsatkichidan foydalanadi; Caveman chiqish rejimi esa alohida
 javob xatti-harakati xususiyati boʻlib qoladi.
 

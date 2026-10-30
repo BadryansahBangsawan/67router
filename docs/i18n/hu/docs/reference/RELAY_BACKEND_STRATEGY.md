@@ -6,7 +6,7 @@
 
 ## Összefoglalás
 
-Az OmniRoute mostantól három továbbítási módot támogat az `/api/v1/relay/chat/completions` végponton:
+Az 67router mostantól három továbbítási módot támogat az `/api/v1/relay/chat/completions` végponton:
 
 - `ts`: A TypeScript-továbbító használata folyamaton belül.
 - `bifrost`: A Bifrost-átjáró kényszerített használata.
@@ -45,12 +45,12 @@ Ha jelenleg a 9router és a CLIPROXYAPI megoldásokat hasonlítja össze:
 
 ## A háttérrendszer határfelületének szerződése
 
-A stabil termékhatárt az OmniRoute továbbítási API-ja jelenti, nem az irányítópult megvalósítása. A Next.js irányítópult telepítheti, konfigurálhatja és felügyelheti a helyi szolgáltatásokat, a kérések útválasztásának azonban a továbbítási API-n keresztül kell belépnie, és az átadást e határ mögött kell elvégezni.
+A stabil termékhatárt az 67router továbbítási API-ja jelenti, nem az irányítópult megvalósítása. A Next.js irányítópult telepítheti, konfigurálhatja és felügyelheti a helyi szolgáltatásokat, a kérések útválasztásának azonban a továbbítási API-n keresztül kell belépnie, és az átadást e határ mögött kell elvégezni.
 
 Hosszú távú háttérrendszer-választások:
 
 - Tartsa meg a TypeScript-továbbítót folyamaton belüli házirendi és tartalék útvonalként. A hitelesítés, az engedélyezési listák, a kérések normalizálása, az elszámolás és a biztonsági ellenőrzések minden háttérrendszernek történő átadás előtt itt maradnak.
-- Használja a Bifrostot előnyben részesített, nagy áteresztőképességű Tier-1 sidecarként, amikor a telepítés kisebb útválasztási ingadozást, központosított szolgáltatóváltást vagy több OmniRoute-replikán átívelő horizontális skálázást igényel.
+- Használja a Bifrostot előnyben részesített, nagy áteresztőképességű Tier-1 sidecarként, amikor a telepítés kisebb útválasztási ingadozást, központosított szolgáltatóváltást vagy több 67router-replikán átívelő horizontális skálázást igényel.
 - Tartsa meg a 9router és a CLIPROXYAPI megoldásokat beágyazott kompatibilitási szolgáltatásként. Felügyelt helyi folyamatokként futnak, és akkor hasznosak, ha az általuk biztosított szolgáltatói/CLI-működés a kívánt adapter, de nem válhatnak alapértelmezett Tier-1 útválasztási motorrá.
 - Ne engedje, hogy az irányítópult tetszőleges szolgáltatás-URL-eket adjon át a kiemelt útvonalnak. A felhasználói felületen megadott URL-ek konfigurációs bemenetek; az útválasztási kódnak regisztrált, állapotellenőrzött háttérrendszereket kell feloldania a kiszolgálóoldali beállításokból és a felügyelő állapotából.
 - Jelenleg részesítse előnyben a loopback HTTP-t a felügyelt szolgáltatásokhoz, mivel a kezelt folyamatok már HTTP-kompatibilis API-kat biztosítanak, az útvonalvédő auditálhatja a határfelületet, a hiba- és tartalékútvonal-kezelés pedig látható a kérésnaplókban. Jövőbeli SDK- vagy socketalapú átvitelt csak akkor érdemes hozzáadni, ha az mérhetően csökkenti a p99 útválasztási késleltetést az elkülönítés vagy a tartalékútvonal-szemantika gyengítése nélkül.

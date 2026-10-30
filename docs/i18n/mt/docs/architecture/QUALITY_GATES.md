@@ -4,7 +4,7 @@
 
 ---
 
-Dan id-dokument huwa r-referenza awtorevoli għall-gates kollha tal-kwalità tas-CI f’OmniRoute.
+Dan id-dokument huwa r-referenza awtorevoli għall-gates kollha tal-kwalità tas-CI f’67router.
 Jiddeskrivi kull gate, x’jivvalida, f’liema job tas-CI jitħaddem, jekk jużax
 linja bażi ratchet jew politika ta’ suċċess/falliment, u jekk jimblokkax il-build jew huwiex konsultattiv.
 
@@ -271,14 +271,14 @@ Jaħdem wara `build`. Jimblokka l-merge f'każ ta' falliment.
 
 Dawn jaħdmu fuq skeda ta' cron (u `workflow_dispatch`), qatt fuq PRs. Kollha huma konsultattivi.
 
-| Workflow               | Jivvalida                                                                                                                                                                       | Blokkanti        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `nightly-property`     | Testijiet ta' proprjetajiet ta' fast-check b'seed każwali + għadd għoli ta' runs                                                                                                | **Konsultattiv** |
-| `nightly-resilience`   | Gate tat-tkabbir tal-heap, injezzjoni ta' ħsarat (chaos), tagħbija/soak ta' k6                                                                                                  | **Konsultattiv** |
-| `nightly-llm-security` | Gwardja kontra l-injezzjoni ta' promptfoo (modalità block) + probes ta' garak (jinjżmu mingħajr secret tal-provider)                                                            | **Konsultattiv** |
-| `nightly-schemathesis` | Fuzzing tal-kuntratt OpenAPI (schemathesis) kontra OmniRoute ħaj bl-użu ta' `docs/openapi.yaml` — jiżvela ksur tal-ispeċifikazzjoni / żbalji 500 mhux immaniġġjati (Fase 8 B.4) | **Konsultattiv** |
-| `nightly-mutation`     | Punteġġ ta' mutation-testing ta' Stryker fuq il-lane mgħaġġel tal-unit tests — mutanti li jispruvivu jiżvelaw asserts dgħajfa                                                   | **Konsultattiv** |
-| `nightly-compat`       | Matriċi ta' kompatibilità tal-engine ta' Node madwar il-firxet appoġġjati ta' `engines.node`                                                                                    | **Konsultattiv** |
+| Workflow               | Jivvalida                                                                                                                                                                      | Blokkanti        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| `nightly-property`     | Testijiet ta' proprjetajiet ta' fast-check b'seed każwali + għadd għoli ta' runs                                                                                               | **Konsultattiv** |
+| `nightly-resilience`   | Gate tat-tkabbir tal-heap, injezzjoni ta' ħsarat (chaos), tagħbija/soak ta' k6                                                                                                 | **Konsultattiv** |
+| `nightly-llm-security` | Gwardja kontra l-injezzjoni ta' promptfoo (modalità block) + probes ta' garak (jinjżmu mingħajr secret tal-provider)                                                           | **Konsultattiv** |
+| `nightly-schemathesis` | Fuzzing tal-kuntratt OpenAPI (schemathesis) kontra 67router ħaj bl-użu ta' `docs/openapi.yaml` — jiżvela ksur tal-ispeċifikazzjoni / żbalji 500 mhux immaniġġjati (Fase 8 B.4) | **Konsultattiv** |
+| `nightly-mutation`     | Punteġġ ta' mutation-testing ta' Stryker fuq il-lane mgħaġġel tal-unit tests — mutanti li jispruvivu jiżvelaw asserts dgħajfa                                                  | **Konsultattiv** |
+| `nightly-compat`       | Matriċi ta' kompatibilità tal-engine ta' Node madwar il-firxet appoġġjati ta' `engines.node`                                                                                   | **Konsultattiv** |
 
 Il-baselines tal-prestazzjoni (heap, TTFB, ħin tal-build) jiġu rrekordjati, mhux ikkontrollati minn gate: ara [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -550,7 +550,7 @@ ta' permessi li dejjem tikber jagħti sens falz ta' kwalità.
 
 ## Għodod għall-aġenti: LSP-in-the-loop (opt-in)
 
-Lil hinn mill-gates tas-CI, OmniRoute jipprovdi scaffold **opt-in** `agent-lsp`
+Lil hinn mill-gates tas-CI, 67router jipprovdi scaffold **opt-in** `agent-lsp`
 (`.mcp.json` fil-livell tal-proġett, Fażi 7 Kompitu 15). Oħloq `.mcp.json`
 biex tesponi server tal-lingwa TypeScript lill-aġenti tal-ipprogrammar, sabiex isolvu s-simboli /
 id-dijanjostiċi **qabel** jiktbu l-code — għodda komplementari ta' kompilazzjoni qabel dikjarazzjoni għal

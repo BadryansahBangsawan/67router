@@ -4,7 +4,7 @@
 
 ---
 
-> **Τι είναι αυτό το έγγραφο.** Μια κριτική αξιολόγηση του συστήματος πυλών ποιότητας του OmniRoute,
+> **Τι είναι αυτό το έγγραφο.** Μια κριτική αξιολόγηση του συστήματος πυλών ποιότητας του 67router,
 > σε σύγκριση με τις βέλτιστες πρακτικές του κλάδου, **καθώς και** ένας ολοκληρωμένος κατάλογος όλων των
 > σημείων ελέγχου ποιότητας και ένα **ανεξάρτητο από εργαλεία σχέδιο αναπαραγωγής** για την εφαρμογή του ίδιου συστήματος σε
 > οποιοδήποτε έργο. Δημιουργήθηκε στις 2026-06-16 από την πραγματική κατάσταση του αποθετηρίου (όχι από μνήμη).
@@ -101,62 +101,62 @@
 
 ### 1. Στυλ και μορφοποίηση (ντετερμινιστικά, γρήγορα)
 
-- **OmniRoute:** Prettier + ESLint μέσω lint-staged (pre-commit), 2 κενά/διπλά εισαγωγικά/100 στήλες.
+- **67router:** Prettier + ESLint μέσω lint-staged (pre-commit), 2 κενά/διπλά εισαγωγικά/100 στήλες.
 - **Γενικά:** ένα εργαλείο μορφοποίησης με αυτόματη διόρθωση + ένα linter, που εκτελούνται στο pre-commit για τα staged αρχεία.
 
 ### 2. Τύποι
 
-- **OmniRoute:** `typecheck:core` (δεσμευτικό) + `typecheck:noimplicit:core` (συμβουλευτικό) + κλιμακωτό όριο `type-coverage` 92.17% + προϋπολογισμός `any` ανά αρχείο.
+- **67router:** `typecheck:core` (δεσμευτικό) + `typecheck:noimplicit:core` (συμβουλευτικό) + κλιμακωτό όριο `type-coverage` 92.17% + προϋπολογισμός `any` ανά αρχείο.
 - **Γενικά:** αυστηρός έλεγχος τύπων στο CI + κλιμακωτή μετρική κάλυψης τύπων + προϋπολογισμός `any`/μηχανισμών παράκαμψης ανά αρχείο.
 
 ### 3. Δοκιμές (ένταση)
 
-- **OmniRoute:** 2 μη επικαλυπτόμενοι runners (εγγενής Node + vitest), 8 shards, συνολική κάλυψη 60/60/60/60 + κλιμακωτό όριο ~76% + **8 ελάχιστα όρια ανά module για κρίσιμα modules** + νυχτερινές δοκιμές βάσει ιδιοτήτων + νυχτερινό **mutation testing**.
+- **67router:** 2 μη επικαλυπτόμενοι runners (εγγενής Node + vitest), 8 shards, συνολική κάλυψη 60/60/60/60 + κλιμακωτό όριο ~76% + **8 ελάχιστα όρια ανά module για κρίσιμα modules** + νυχτερινές δοκιμές βάσει ιδιοτήτων + νυχτερινό **mutation testing**.
 - **Γενικά:** runner(s) δοκιμών + **απόλυτο** ελάχιστο όριο κάλυψης (κατά του μηδενισμού) + **κλιμακωτό όριο** κάλυψης (κατά της παλινδρόμησης) + **ελάχιστα όρια ανά module για κώδικα υψηλού κινδύνου** (κατά του φαινομένου Goodhart) + δοκιμές βάσει ιδιοτήτων για αμιγή λογική + νυχτερινό **mutation testing** ως το πραγματικό μέτρο ποιότητας των δοκιμών.
 
 ### 4. Πολιτική δοκιμών (κατά της χειραγώγησης)
 
-- **OmniRoute:** `pr-test-policy` (ο κώδικας παραγωγής απαιτεί δοκιμή), `check-test-masking` (αποκλείει αποδυναμωμένα asserts), `pr-evidence` (ο ισχυρισμός επιτυχίας απαιτεί ενότητα αποδεικτικών στοιχείων), `test-discovery` (κάθε δοκιμή συλλέγεται από κάποιον runner).
+- **67router:** `pr-test-policy` (ο κώδικας παραγωγής απαιτεί δοκιμή), `check-test-masking` (αποκλείει αποδυναμωμένα asserts), `pr-evidence` (ο ισχυρισμός επιτυχίας απαιτεί ενότητα αποδεικτικών στοιχείων), `test-discovery` (κάθε δοκιμή συλλέγεται από κάποιον runner).
 - **Γενικά:** πύλη «νέος κώδικας ⇒ νέα δοκιμή» + ανιχνευτής αφαίρεσης assertions/ταυτολογιών + απαίτηση αποδεικτικών στοιχείων (TDD ή ενεργή δοκιμή) + εγγύηση ότι καμία δοκιμή δεν μένει ορφανή εκτός των globs.
 
 ### 5. Πολυπλοκότητα και υγεία κώδικα (κλιμακωτά όρια)
 
-- **OmniRoute:** προειδοποιήσεις ESLint (3769↓), διπλότυπος κώδικας jscpd (5.72%↓), κυκλωματική πολυπλοκότητα + max-lines (1800↓), γνωστική πολυπλοκότητα sonarjs (753↓), νεκρός κώδικας/μη χρησιμοποιούμενα exports knip (339↓), μέγεθος αρχείου ανά αρχείο (παγωμένο, μόνο μείωση), κυκλικές εξαρτήσεις (προσαρμοσμένος Tarjan, δεσμευτικός).
+- **67router:** προειδοποιήσεις ESLint (3769↓), διπλότυπος κώδικας jscpd (5.72%↓), κυκλωματική πολυπλοκότητα + max-lines (1800↓), γνωστική πολυπλοκότητα sonarjs (753↓), νεκρός κώδικας/μη χρησιμοποιούμενα exports knip (339↓), μέγεθος αρχείου ανά αρχείο (παγωμένο, μόνο μείωση), κυκλικές εξαρτήσεις (προσαρμοσμένος Tarjan, δεσμευτικός).
 - **Γενικά:** κλιμακωτό όριο για κάθε μετρική υγείας (προειδοποιήσεις, διπλότυπος κώδικας, κυκλωματική **και** γνωστική πολυπλοκότητα, νεκρός κώδικας, μέγεθος αρχείων, κύκλοι εισαγωγών). Η κατεύθυνση είναι πάντα «καμία παλινδρόμηση».
 
 ### 6. Στατική ασφάλεια (SAST + μυστικά)
 
-- **OmniRoute:** CodeQL (κλιμακωτό όριο ειδοποιήσεων = 0), gitleaks (`[extend] useDefault=true` — κρίσιμο!), SonarQube, προσαρμοσμένοι κανόνες ασφαλείας (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (κλιμακωτό όριο ειδοποιήσεων = 0), gitleaks (`[extend] useDefault=true` — κρίσιμο!), SonarQube, προσαρμοσμένοι κανόνες ασφαλείας (public-creds, error-helper, route-guard-membership, route-validation).
 - **Γενικά:** SAST (CodeQL/Sonar/semgrep) με κλιμακωτό όριο ειδοποιήσεων + σαρωτής μυστικών με **κληρονομημένο προεπιλεγμένο σύνολο κανόνων** (μια προσαρμοσμένη ρύθμιση που παρακάμπτει την προεπιλεγμένη δημιουργεί τυφλό σημείο) + πύλες ασφαλείας Ειδικών Κανόνων του έργου.
 
 ### 7. Εφοδιαστική αλυσίδα (εξαρτήσεις)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (λίστα επιτρεπόμενων SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` κατά του slopsquatting (λίστα επιτρεπόμενων + ηλικία ≥72 ώρες).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (λίστα επιτρεπόμενων SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` κατά του slopsquatting (λίστα επιτρεπόμενων + ηλικία ≥72 ώρες).
 - **Γενικά:** SCA από πολλαπλές πηγές + λίστα επιτρεπόμενων αδειών + έλεγχος ακεραιότητας lockfile + λίστα επιτρεπόμενων εξαρτήσεων με έλεγχο ηλικίας/typosquatting + bot ομαδοποιημένων ενημερώσεων.
 
 ### 8. Εφοδιαστική αλυσίδα (build και release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), προέλευση SLSA (`--provenance`), OpenSSF Scorecard (εβδομαδιαία), θωράκιση workflows (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), προέλευση SLSA (`--provenance`), OpenSSF Scorecard (εβδομαδιαία), θωράκιση workflows (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Γενικά:** δημιουργία SBOM κατά τη δημοσίευση + υπογεγραμμένη προέλευση (SLSA L2+) + προγραμματισμένο Scorecard + θωράκιση όλων των workflows (tokens ελάχιστων προνομίων, χωρίς διατηρούμενα διαπιστευτήρια σε checkout που δεν εκτελεί push, actions καρφιτσωμένα μέσω SHA).
 
 ### 9. Συμβόλαια και API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (νυχτερινό contract fuzzing), openapi-coverage (% τεκμηριωμένων routes, κλιμακωτό όριο 38.3%), openapi-security-tiers (spec έναντι route-guard).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (νυχτερινό contract fuzzing), openapi-coverage (% τεκμηριωμένων routes, κλιμακωτό όριο 38.3%), openapi-security-tiers (spec έναντι route-guard).
 - **Γενικά:** σύγκριση συμβολαίων για breaking changes (oasdiff/buf) + fuzzing βάσει ιδιοτήτων έναντι της προδιαγραφής (schemathesis) + κλιμακωτή κάλυψη τεκμηρίωσης + συνέπεια spec↔κώδικα.
 
 ### 10. Τεκμηρίωση και i18n (κατά της απαξίωσης)
 
-- **OmniRoute:** docs-sync (κατοπτρισμένες εκδόσεις), docs-counts-sync (αριθμοί στην τεκμηρίωση έναντι του κώδικα), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + κλιμακωτό όριο 80.1%).
+- **67router:** docs-sync (κατοπτρισμένες εκδόσεις), docs-counts-sync (αριθμοί στην τεκμηρίωση έναντι του κώδικα), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + κλιμακωτό όριο 80.1%).
 - **Γενικά:** συγχρονισμός εκδόσεων/πλήθους/env-vars μεταξύ τεκμηρίωσης και κώδικα (πύλη, όχι εμπιστοσύνη) + επικύρωση εσωτερικών συνδέσμων + κλιμακωτή κάλυψη i18n.
 
 ### 11. Κατά των ψευδών επινοήσεων / συνέπεια (η σπάνια κατηγορία)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ υπαρκτό symbol), provider-consistency, fetch-targets (fetch πελάτη ⇒ πραγματικό route), docs-symbols, db-rules (Ειδικοί Κανόνες #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ υπαρκτό symbol), provider-consistency, fetch-targets (fetch πελάτη ⇒ πραγματικό route), docs-symbols, db-rules (Ειδικοί Κανόνες #2/#5), migration-numbering.
 - **Γενικά:** για κάθε «διπλότυπη πηγή αλήθειας» (registry, string dispatch, αναφορές μεταξύ επιπέδων), μια πύλη που αποδεικνύει ότι και οι δύο πλευρές συμφωνούν. Εντοπίζει την απαξίωση που δεν ανιχνεύουν οι έλεγχοι τύπων/οι δοκιμές.
 
 ### 12. Ανθεκτικότητα και πεδίο εφαρμογής (ειδικά για το προϊόν)
 
-- **OmniRoute:** chaos (έγχυση σφαλμάτων), heap-growth (διαρροή), k6 (δοκιμή παρατεταμένου φορτίου), promptfoo+garak (LLM red-team βάσει του OWASP LLM Top 10), οι 3 νόμοι ανθεκτικότητας (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (έγχυση σφαλμάτων), heap-growth (διαρροή), k6 (δοκιμή παρατεταμένου φορτίου), promptfoo+garak (LLM red-team βάσει του OWASP LLM Top 10), οι 3 νόμοι ανθεκτικότητας (circuit-breaker/cooldown/lockout).
 - **Γενικά:** προσδιορίστε τους τρόπους αστοχίας του **δικού σας** πεδίου και δημιουργήστε μια πύλη (έστω και νυχτερινή) για καθέναν. Για εφαρμογές AI: red-team επιθέσεων injection. Για κατανεμημένα συστήματα: chaos + leak + soak.
 
 ---

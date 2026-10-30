@@ -4,7 +4,7 @@
 
 ---
 
-Kompresja OmniRoute opiera się na kontraktach silników. Tryb może uruchamiać bezpośrednio jeden silnik
+Kompresja 67router opiera się na kontraktach silników. Tryb może uruchamiać bezpośrednio jeden silnik
 (`caveman` lub `rtk`) albo deterministyczny potok stosowy, który wykonuje wiele silników w określonej kolejności.
 
 ## Tryby
@@ -37,7 +37,7 @@ Profil jest **sufitem, nie podłogą**: `mergeCompressionProfileOptions` w pakie
 
 Zmierzono w tej bazie kodu: `coding-safe` i `balanced` podnoszą `minCompressChars` do maksimum i utrzymują system, schematy narzędzi oraz wyniki narzędzi jako natywne, więc sesja, która jeszcze nie zgromadziła historii, zatrzymuje się na `below_min_chars`, a silnik niczego nie transformuje. Dlatego domyślnym profilem jest `aggressive`, a nie najbezpieczniejszy.
 
-Pakiet rozwiązuje swój własny zakres modelu i profil z konfiguracji środowiska. OmniRoute nigdy nie deleguje decyzji: adapter przypina bramkę modelu do najbardziej restrykcyjnego zakresu pakietu, więc ustawienia środowiska hosta mogą jedynie zawęzić listę dozwolonych, nigdy jej nie rozszerzyć poza zmierzone dane OmniRoute.
+Pakiet rozwiązuje swój własny zakres modelu i profil z konfiguracji środowiska. 67router nigdy nie deleguje decyzji: adapter przypina bramkę modelu do najbardziej restrykcyjnego zakresu pakietu, więc ustawienia środowiska hosta mogą jedynie zawęzić listę dozwolonych, nigdy jej nie rozszerzyć poza zmierzone dane 67router.
 
 ## Rejestr silników
 
@@ -101,7 +101,7 @@ Tryb Caveman koncentruje się na semantycznej kondensacji zwykłej prozy:
 Odpowiednia sekcja panelu to `Dashboard -> Context & Cache -> Caveman`.
 
 Projekt źródłowy Caveman deklaruje `~75%` mniej tokenów wyjściowych, średnią oszczędność danych wyjściowych na poziomie `65%` w testach porównawczych
-w zakresie `22-87%` oraz narzędzie kompresji danych wejściowych osiągające `~46%`. OmniRoute wykorzystuje wartość
+w zakresie `22-87%` oraz narzędzie kompresji danych wejściowych osiągające `~46%`. 67router wykorzystuje wartość
 Caveman dotyczącą danych wejściowych podczas dokumentowania łącznych oszczędności wynikających z kompresji promptów/kontekstu; tryb wyjściowy Caveman pozostaje oddzielną
 funkcją wpływającą na sposób generowania odpowiedzi.
 

@@ -12,7 +12,7 @@ lastUpdated: 2026-06-28
 # Mapa repozytorium
 
 > **Jednowierszowy opis każdego katalogu i pliku w katalogu głównym.**
-> Ostatnia aktualizacja: 2026-06-28 — OmniRoute v3.8.40
+> Ostatnia aktualizacja: 2026-06-28 — 67router v3.8.40
 >
 > Użyj tej mapy, aby szybko nawigować po bazie kodu. Po głębsze analizy przejdź do dedykowanych dokumentów.
 
@@ -400,7 +400,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Pełny proces wydania (umiejętności, husky, conventional commits, wdrożenie)                        |
 | `COVERAGE_PLAN.md`          | Cele pokrycia testami i bieżący stan                                                               |
 | `FREE_TIERS.md`             | Wyselekcjonowani dostawcy bezpłatnych planów (48+ bezpłatnych + 11 OAuth)                          |
-| `CLI-TOOLS.md`              | Integracje z zewnętrznymi narzędziami CLI + wewnętrzny OmniRoute CLI                               |
+| `CLI-TOOLS.md`              | Integracje z zewnętrznymi narzędziami CLI + wewnętrzny 67router CLI                                |
 | `I18N.md`                   | Architektura i18n, dodawanie języka, 67 ustawień regionalnych                                      |
 | `UNINSTALL.md`              | Kroki pełnego odinstalowania                                                                       |
 | `PROVIDER_REFERENCE.md`     | **Generowany automatycznie** katalog 375 dostawców (regeneracja: `npm run gen:provider-reference`) |

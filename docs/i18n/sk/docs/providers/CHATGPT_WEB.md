@@ -38,9 +38,9 @@ nakonfigurované.
 ## Nastavenie ovládacieho panela
 
 1. Otvorte poskytovateľa **ChatGPT Web (Codex)** a pridajte pripojenie.
-2. Vložte úplnú hlavičku ChatGPT Cookie, ID tunela, runtime kľúč a názov vlastného konektora. Nové nastavenia s podporou nástrojov musia používať novovytvorený konektor s presným názvom `OmniRoute Codex v2`, pričom Authentication musí byť nastavené na None a Permissions na Allow all actions.
-3. Spustite kontrolu pripojenia. OmniRoute otvorí dočasný chat Temporary Chat podporovaný prehliadačom a zistí, či sú pre daný účet dostupné Sol a Pro.
-4. Uložte pripojenie. OmniRoute nahradí vložený súbor cookie overeným stavom úložiska Playwright a uloží ho spolu s runtime kľúčom prostredníctvom abstrakcie šifrovaných prihlasovacích údajov.
+2. Vložte úplnú hlavičku ChatGPT Cookie, ID tunela, runtime kľúč a názov vlastného konektora. Nové nastavenia s podporou nástrojov musia používať novovytvorený konektor s presným názvom `67router Codex v2`, pričom Authentication musí byť nastavené na None a Permissions na Allow all actions.
+3. Spustite kontrolu pripojenia. 67router otvorí dočasný chat Temporary Chat podporovaný prehliadačom a zistí, či sú pre daný účet dostupné Sol a Pro.
+4. Uložte pripojenie. 67router nahradí vložený súbor cookie overeným stavom úložiska Playwright a uloží ho spolu s runtime kľúčom prostredníctvom abstrakcie šifrovaných prihlasovacích údajov.
 
 Nespracovaný súbor cookie sa po úspešnom uložení nezachová. Keď platnosť relácie vyprší, otvorte pripojenie, vložte novú úplnú hlavičku Cookie a znova spustite kontrolu. Stav diagnostiky v dialógovom okne úprav samostatne uvádza stav prehliadača, úložiska, prihlásenia, dočasného chatu Temporary Chat, tunela, konektora a kompletného overenia nástroja. Informácie o automatizácii aktualizácií súborov cookie pri rotácii relácií nájdete v sprievodnom nástroji [Rozšírenie na synchronizáciu relácie prehliadača](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -68,10 +68,10 @@ pevne stanovený backendový model a úroveň úsilia pri uvažovaní; konfliktn
 úroveň úsilia Responses bezpečne zlyhá namiesto toho, aby potichu zmenila vybraný režim
 prehliadača.
 
-Nemeňte názov staršieho konektora `Codex Native` ani `OmniRoute Codex` a opätovne ho
+Nemeňte názov staršieho konektora `Codex Native` ani `67router Codex` a opätovne ho
 nepoužívajte. ChatGPT ukladá verejný kontrakt MCP do vyrovnávacej pamäte podľa identity
 konektora, zatiaľ čo aktualizovaný most používa nový priamy kontrakt tokenu kola.
-Runtime tieto staršie identity odmieta a vyžaduje nový konektor `OmniRoute Codex v2`.
+Runtime tieto staršie identity odmieta a vyžaduje nový konektor `67router Codex v2`.
 
 ## Bezpečnostný model
 
@@ -91,18 +91,18 @@ Runtime tieto staršie identity odmieta a vyžaduje nový konektor `OmniRoute Co
 
 ## VPS bez displeja a Docker
 
-Pri inštaláciách cez npm, systemd a PM2 OmniRoute zisťuje bežné cesty k prehliadačom Chrome a Chromium.
+Pri inštaláciách cez npm, systemd a PM2 67router zisťuje bežné cesty k prehliadačom Chrome a Chromium.
 Prípadne nastavte `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime ťahy zámerne používajú Chrome
 s grafickým rozhraním, pretože ChatGPT odmieta charakteristiky skutočne bezhlavého prehliadača. Hostiteľ bez displeja preto musí
-spúšťať OmniRoute so súkromným displejom Xvfb; samotné nastavenie cesty k prehliadaču Chrome ho neposkytne.
+spúšťať 67router so súkromným displejom Xvfb; samotné nastavenie cesty k prehliadaču Chrome ho neposkytne.
 
 Profil `web` systému Docker spúšťa `chatgpt-web-codex-browser` v internej sieti
 Compose. Sprievodný kontajner spúšťa Chrome s grafickým rozhraním v prostredí Xvfb, takže nie je potrebný žiadny fyzický displej. Jeho port CDP
 nie je publikovaný na hostiteľovi. Chránený zväzok profilu prehliadača je oddelený od
-dátového zväzku OmniRoute a prehliadač dostáva dostatok zdieľanej pamäte. Interný proxy server CDP
+dátového zväzku 67router a prehliadač dostáva dostatok zdieľanej pamäte. Interný proxy server CDP
 počúva iba na porte `9223` v sieti Compose; Chrome zostáva v sprievodnom kontajneri naviazaný na loopback.
 
-Prenájom supervízora v rámci `DATA_DIR` zabraňuje tomu, aby viacero procesov OmniRoute vlastnilo
+Prenájom supervízora v rámci `DATA_DIR` zabraňuje tomu, aby viacero procesov 67router vlastnilo
 rovnaký stav tunela a brokera. Konflikt nahlási diagnostický nástroj.
 
 ## Interaktívne obnovenie

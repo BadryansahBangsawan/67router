@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Rangaíonn OmniRoute a sholáthraithe **saor in aisce** de réir cháilíocht na samhlacha trí úsáid a bhaint as **scóir ELO Arena AI
+> **TL;DR**: Rangaíonn 67router a sholáthraithe **saor in aisce** de réir cháilíocht na samhlacha trí úsáid a bhaint as **scóir ELO Arena AI
 > (ar nós LMArena)**. Oscail an leathanach **Ranguithe Soláthraithe Saor in Aisce** sa
 > deais chun a fheiceáil cé na soláthraithe saor in aisce a chuireann na samhlacha is láidre ar fáil do do thasc —
 > ar an iomlán, nó scagtha de réir catagóire (códú, athbhreithniú, doiciméadú, dífhabhtú).
@@ -13,7 +13,7 @@
 
 ## Cad atá i gceist
 
-Cláraíonn OmniRoute 375 soláthraí, lena n-áirítear 155 iontráil chatalóige atá marcáilte **saor in aisce/gan údarú**
+Cláraíonn 67router 375 soláthraí, lena n-áirítear 155 iontráil chatalóige atá marcáilte **saor in aisce/gan údarú**
 (gan údarú,
 OAuth le sraith saor in aisce, nó eochair API le sraith saor in aisce — féach an
 [Treoir faoi Shraitheanna Saor in Aisce](../getting-started/FREE-TIERS-GUIDE.md) agus an t-eolaire iomlán
@@ -128,9 +128,9 @@ Faigheann inneall sioncronaithe Arena ELO (`src/lib/arenaEloSync.ts`) dhá chlá
 agus `code` — ó API chlár ceannairí Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Tá ainm samhla, díoltóir, `score` ELO, eatramh muiníne agus líon vótaí i ngach iontráil sa chlár ceannairí.
 
-Mapáiltear catagóirí an chláir ceannairí chuig catagóirí tascanna OmniRoute:
+Mapáiltear catagóirí an chláir ceannairí chuig catagóirí tascanna 67router:
 
-| Clár ceannairí Arena | Catagóirí tascanna OmniRoute                      |
+| Clár ceannairí Arena | Catagóirí tascanna 67router                       |
 | -------------------- | ------------------------------------------------- |
 | `text`               | `default`, `review`, `documentation`, `debugging` |
 | `code`               | `coding`                                          |
@@ -166,7 +166,7 @@ Ritheann an sioncronú **de réir réamhshocraithe**:
 
 - Ritheann sé uair amháin nuair a thosaíonn an freastalaí agus ansin ar amadóir tréimhsiúil
   (`src/lib/arenaEloSync.ts`, ceangailte ó `src/instrumentation-node.ts`).
-- Tá sé **neamhbhlocála agus ní bhíonn sé marfach riamh** — má theipeann ar an bhfáil réamhtheachtach, leanann OmniRoute
+- Tá sé **neamhbhlocála agus ní bhíonn sé marfach riamh** — má theipeann ar an bhfáil réamhtheachtach, leanann 67router
   de bheith ag rith agus ní thaispeánann na ranguithe ach na sonraí maithe is déanaí (nó staid fholamh).
 
 Rialaíonn dhá athróg timpeallachta é (doiciméadaithe in
@@ -201,7 +201,7 @@ meaitseáil sholúbtha (`findMatchingIntelligence` in `src/lib/freeProviderRanki
 3. Meaitseáil réimíre (is réimír de ID na clárlainne é ainm samhla sa chlár ceannairí).
 
 Ar thaobh an tsioncronaithe, baintear réimíreanna aitheanta díoltóirí (`anthropic/`, `openai/`, `google/`, …)
-agus leathnaíonn léarscáil bheag ailiasanna ainmneacha canónacha chuig na malairtí a úsáideann OmniRoute
+agus leathnaíonn léarscáil bheag ailiasanna ainmneacha canónacha chuig na malairtí a úsáideann 67router
 go hinmheánach, ionas gur féidir samhlacha a aimsiú faoi ainm ar bith.
 
 ### Conas a rangaítear soláthraí

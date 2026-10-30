@@ -6,7 +6,7 @@
 
 ## Genel Bakış
 
-Tüm OmniRoute yönetim API rotaları, üç koruma katmanından biri altında sınıflandırılır.
+Tüm 67router yönetim API rotaları, üç koruma katmanından biri altında sınıflandırılır.
 Sınıflandırma statiktir, `src/server/authz/routeGuard.ts` içinde tanımlanır
 ve diğer tüm kimlik doğrulama dalları çalıştırılmadan önce değerlendirilir.
 
@@ -19,7 +19,7 @@ ve diğer tüm kimlik doğrulama dalları çalıştırılmadan önce değerlendi
 
 Bu rotalar alt süreçler başlatır veya çalışma zamanı kodu yürütür. Bunların geri döngü dışı trafiğe açılması, geçerli bir JWT elde etmiş bir saldırganın (ör. bir Cloudflared/Ngrok tüneli aracılığıyla) süreç başlatmayı tetiklemesine olanak tanır — bu, bilinen bir CVE sınıfıdır ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 
-**GHSA-fhh6-4qxv-rpqj nedir (saldırı sınıfı):** Bir yönetim/ajan sunucusu, bir alt süreç (`npm install`, `node`, bir tarayıcı, bir proxy, `git`, `tar`, …) başlatan bir uç nokta sunar. Bu uç noktaya ana makine dışından erişilebiliyorsa — operatör OmniRoute'u bir nginx/Cloudflare/Tailscale tünelinin arkasına koyduğu ve bir JWT sızdığı ya da kimlik doğrulama yanlış yapılandırıldığı için — saldırgan "bir API çağırma" işlemini "ana makinede komut çalıştırma" işlemine dönüştürür (uzaktan kod yürütme). OmniRoute, süreç başlatabilen her rotada **herhangi bir kimlik doğrulama denetiminden önce koşulsuz olarak geri döngü ana makinesi denetimi** uygulayarak bunu engeller: Bir tünel üzerinden sızdırılan belirteç yine de süreç başlatma işlevine erişemez.
+**GHSA-fhh6-4qxv-rpqj nedir (saldırı sınıfı):** Bir yönetim/ajan sunucusu, bir alt süreç (`npm install`, `node`, bir tarayıcı, bir proxy, `git`, `tar`, …) başlatan bir uç nokta sunar. Bu uç noktaya ana makine dışından erişilebiliyorsa — operatör 67router'u bir nginx/Cloudflare/Tailscale tünelinin arkasına koyduğu ve bir JWT sızdığı ya da kimlik doğrulama yanlış yapılandırıldığı için — saldırgan "bir API çağırma" işlemini "ana makinede komut çalıştırma" işlemine dönüştürür (uzaktan kod yürütme). 67router, süreç başlatabilen her rotada **herhangi bir kimlik doğrulama denetiminden önce koşulsuz olarak geri döngü ana makinesi denetimi** uygulayarak bunu engeller: Bir tünel üzerinden sızdırılan belirteç yine de süreç başlatma işlevine erişemez.
 
 **LOCAL_ONLY kümesinin tamamı.** Yetkili kaynak, `src/server/authz/routeGuard.ts` içindeki `LOCAL_ONLY_API_PREFIXES` / `LOCAL_ONLY_API_PATTERNS` değerleridir; aşağıdaki tablo mevcut durumu yansıtır. `check-route-guard-membership` geçidi, süreç başlatabilen önekler altındaki her `route.ts` dosyasını listeler ve bunlardan herhangi biri yalnızca yerel olarak sınıflandırılmamışsa CI işlemini başarısız kılar.
 
@@ -105,7 +105,7 @@ ayrıcalıklı bir alternatiftir.
 
 #### Operatör rehberliği ve denetim
 
-OmniRoute'u bir ters proxy veya tünelin (nginx, Caddy, Cloudflare Tunnel,
+67router'u bir ters proxy veya tünelin (nginx, Caddy, Cloudflare Tunnel,
 Tailscale, Ngrok) arkasında çalıştırıyorsanız geri döngü denetimi, yukarıdaki
 süreç başlatabilen rotaları korumaya devam eder — istemci adresi geri döngü
 olmayan bir istek, **kimlik doğrulama çalışmadan önce** `403 LOCAL_ONLY` ile
@@ -148,7 +148,7 @@ Operatörlerin iki sorumluluğu devam eder:
 - Ters proxy / erişim günlüklerinizde yukarıdaki öneklerle birlikte loopback olmayan
   istemci adreslerini arayın. `403 LOCAL_ONLY` yerine `200` döndüren bu tür herhangi
   bir istek, proxy'nin gerçek istemci IP'sini maskelediği anlamına gelir — proxy'yi düzeltin.
-- OmniRoute günlüklerinde bu yollardan biri için görülen `403 LOCAL_ONLY`, engelleme
+- 67router günlüklerinde bu yollardan biri için görülen `403 LOCAL_ONLY`, engelleme
   mekanizmasının amaçlandığı gibi çalıştığını gösterir; bastırılması gereken bir hata değildir.
 
 #### Çağrı noktası probe geçidi bulunan, uzaktan erişilebilir rotalar

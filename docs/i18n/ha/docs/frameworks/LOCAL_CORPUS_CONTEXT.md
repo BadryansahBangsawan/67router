@@ -12,7 +12,7 @@
 
 ## Mene ne wannan
 
-Local Corpus yana bai wa mai gudanarwa damar fallasa kundin fayilolin rubutu guda ɗaya da aka amince da shi a sarari ga sabar MCP ta OmniRoute. Fayiloli suna nan a kundinsu na asali: OmniRoute yana adana ingantacciyar hanyar tushe kawai a cikin SQLite kuma yana kula da fihirisar bincike a ƙwaƙwalwar kwamfuta. Ba ya kwafe abubuwan corpus zuwa ma'ajiyar lambar ko ma'ajiyar bayanai.
+Local Corpus yana bai wa mai gudanarwa damar fallasa kundin fayilolin rubutu guda ɗaya da aka amince da shi a sarari ga sabar MCP ta 67router. Fayiloli suna nan a kundinsu na asali: 67router yana adana ingantacciyar hanyar tushe kawai a cikin SQLite kuma yana kula da fihirisar bincike a ƙwaƙwalwar kwamfuta. Ba ya kwafe abubuwan corpus zuwa ma'ajiyar lambar ko ma'ajiyar bayanai.
 
 Sabunta fihirisar yana gudana ne a hankali bisa sauye-sauye. Ana sake amfani da fayilolin da ba su canza ba bisa girmansu da lokacin da aka gyara su, ana sake karanta fayilolin da suka canza tare da samar musu da hash ta SHA-256, sannan ana cire fayilolin da aka goge. Bincike yana sabunta fihirisar da ta wuce daƙiƙa 30; masu kira kuma za su iya neman sabuntawa nan take.
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute oddeľuje **zisťovanie CLI**, **natívny Agent Client Protocol** a
+67router oddeľuje **zisťovanie CLI**, **natívny Agent Client Protocol** a
 **staršie adaptéry stdio**. Nájdenie nainštalovaného binárneho súboru nepotvrdzuje jeho
 autentifikáciu, kompatibilitu modelu ani pripravenosť spracovať prompt.
 

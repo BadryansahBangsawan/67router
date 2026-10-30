@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (中文 (繁體))
+# 67router Antigravity (Google One AI) Onboarding Guide (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇹 [am](../../../am/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ha](../../../ha/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ig](../../../ig/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇹 [lt](../../../lt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇹 [mt](../../../mt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **您可獲得的內容**：透過您的 Google One AI Pro 訂閱存取 Gemini 3.1 Pro、Gemini 3.7 Flash、Claude Sonnet 4.6 及其他模型，並透過 OmniRoute 路由，作為統一閘道。
+> **您可獲得的內容**：透過您的 Google One AI Pro 訂閱存取 Gemini 3.1 Pro、Gemini 3.7 Flash、Claude Sonnet 4.6 及其他模型，並透過 67router 路由，作為統一閘道。
 
 **官方參考資料**：
 
@@ -27,7 +27,7 @@
 | **Google 產品**     | Antigravity 2.0 / Antigravity IDE     | Antigravity CLI                                 |
 | **後端**            | 相同的 Google Cloud Code API          | 相同的 Google Cloud Code API                    |
 | **OAuth / 權杖**    | 相同用戶端、相同重新整理機制          | 相同用戶端、相同重新整理機制                    |
-| **模型目錄**        | 靜態精選清單（硬編碼於 OmniRoute）    | 透過 `:fetchAvailableModels` 從 Google 即時探測 |
+| **模型目錄**        | 靜態精選清單（硬編碼於 67router）     | 透過 `:fetchAvailableModels` 從 Google 即時探測 |
 | **Claude 模型**     | Sonnet 4.6、Opus 4.6（各有 4 種變體） | Sonnet 4.6、Opus 4.6（各有 4 種變體）           |
 | **Gemini 命名方式** | 清楚的標籤（Low/Medium/High）         | 上游 ID（extra-low/low/agent）                  |
 | **額外模型**        | `gpt-oss-120b-medium`                 | 可能包含 Google 提供的其他模型                  |
@@ -89,11 +89,11 @@ Google Antigravity 採用以「完成的工作量」（運算權重）而非訊�
 
 ### 重要詳細資訊
 
-- 配額是**帳戶層級共用**的——Antigravity IDE、CLI 和 OmniRoute 中的同一個 Google 帳戶會共用一個配額集區
+- 配額是**帳戶層級共用**的——Antigravity IDE、CLI 和 67router 中的同一個 Google 帳戶會共用一個配額集區
 - 每個 Google 帳戶都有各自獨立的配額——多個帳戶 = 多個配額集區
 - AI Pro 使用者曾回報，在達到每週基準上限後遭到**鎖定 7 天**，而非每 5 小時重設（Google 已確認，這是針對高需求而刻意設計的機制）
 
-**當您的帳戶配額用盡時**：OmniRoute 會自動使用組合路由中的下一個可用帳戶重試。無需手動介入。
+**當您的帳戶配額用盡時**：67router 會自動使用組合路由中的下一個可用帳戶重試。無需手動介入。
 
 ---
 
@@ -103,9 +103,9 @@ Google Antigravity 採用以「完成的工作量」（運算權重）而非訊�
 
 ### 方法 A：自動取得（建議）
 
-OmniRoute 會自動處理此程序。當您透過儀表板 OAuth 新增 Google 帳戶時：
+67router 會自動處理此程序。當您透過儀表板 OAuth 新增 Google 帳戶時：
 
-1. OmniRoute 更新權杖
+1. 67router 更新權杖
 2. 呼叫 `loadCodeAssist` 以探索 projectId
 3. 如果專案不存在，則呼叫 `onboardUser` 建立專案
 4. 重試 `loadCodeAssist` 以取得新建立的 projectId
@@ -128,14 +128,14 @@ agy login
 # 這會觸發 Cloud Code 註冊並指派 projectId
 ```
 
-`agy login` 成功後，請在 OmniRoute 儀表板中更新權杖。系統將自動探索 projectId。
+`agy login` 成功後，請在 67router 儀表板中更新權杖。系統將自動探索 projectId。
 
 ### 如何驗證
 
 檢查資料庫：
 
 ```bash
-# 在 OmniRoute 容器內
+# 在 67router 容器內
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### 問題
 
-Google OAuth 需要有效的重新導向 URI。OmniRoute 預設使用 `http://127.0.0.1:20128/callback`（回送位址）。這適用於本機建置，但在**遠端部署時會失敗**（例如，透過區域網路 IP 存取的伺服器）。
+Google OAuth 需要有效的重新導向 URI。67router 預設使用 `http://127.0.0.1:20128/callback`（回送位址）。這適用於本機建置，但在**遠端部署時會失敗**（例如，透過區域網路 IP 存取的伺服器）。
 
 Google 會拒絕以下重新導向 URI：
 
@@ -165,7 +165,7 @@ Google 會拒絕以下重新導向 URI：
 
 **選項 A：使用內建 OAuth 流程（預設）**
 
-- 適用於從 `localhost` 或 `127.0.0.1` 存取 OmniRoute
+- 適用於從 `localhost` 或 `127.0.0.1` 存取 67router
 - 無需設定
 
 **選項 B：自訂 OAuth 憑證**
@@ -180,9 +180,9 @@ Google 會拒絕以下重新導向 URI：
 
 **選項 C：使用 agy CLI 進行初次登入**
 
-- 在將存取 OmniRoute 的機器上執行 `agy login`
+- 在將存取 67router 的機器上執行 `agy login`
 - OAuth 流程會在本機完成，並儲存權杖
-- 透過 Dashboard 將連線匯入 OmniRoute
+- 透過 Dashboard 將連線匯入 67router
 
 ### 限制
 
@@ -193,7 +193,7 @@ Google 會拒絕以下重新導向 URI：
 
 ## 5. 疑難排解：自動設定失敗時
 
-對於大多數帳戶，OmniRoute 會自動處理 projectId 探索及初始設定。若處理失敗，根本原因通常是以下其中之一：
+對於大多數帳戶，67router 會自動處理 projectId 探索及初始設定。若處理失敗，根本原因通常是以下其中之一：
 
 ### 帳戶區域遭封鎖
 
@@ -221,7 +221,7 @@ Google 會拒絕以下重新導向 URI：
 
 **根本原因**：該帳戶從未向 Google Cloud Code 註冊，且自動初始設定失敗。
 
-**修正方法**：手動執行 `agy login` 以觸發 Cloud Code 註冊，然後在 OmniRoute Dashboard 中重新整理權杖。
+**修正方法**：手動執行 `agy login` 以觸發 Cloud Code 註冊，然後在 67router Dashboard 中重新整理權杖。
 
 ### 權杖已過期或遭撤銷
 
@@ -273,4 +273,4 @@ Google 會拒絕以下重新導向 URI：
 
 ---
 
-_最後更新：2026-07-31。以 OmniRoute v3.8.50 為依據。_
+_最後更新：2026-07-31。以 67router v3.8.50 為依據。_

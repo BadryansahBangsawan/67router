@@ -9,9 +9,9 @@
 > **Nazadnje raziskano:** 2026-06-17 — spletna raziskava po posameznih ponudnikih (uradna dokumentacija + novice zadnjih 7 dni, pregled s 50 agenti in kontradiktornim preverjanjem), s katero so bile osvežene vse kvote brezplačnih ravni in pogoji uporabe. **Delna ponovna revizija 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — glejte spodnjo opombo z datumom).
 > **Avtoritativni vir (katalog):** `open-sse/config/freeModelCatalog.ts` (proračuni po posameznih MODELIH, z odpravo podvajanj med skupinami). Spodnje številke proračunov žetonov izvirajo iz sprotnih spletnih raziskav in so **približne** — glejte [Metodologija in opozorila](#methodology--caveats).
 
-## TL;DR — koliko brezplačnega sklepanja OmniRoute dejansko združuje?
+## TL;DR — koliko brezplačnega sklepanja 67router dejansko združuje?
 
-Te številke opisujejo ločene račune tretjih ponudnikov in pogoje upravičenosti v celotnem katalogu. OmniRoute tega proračuna ne dodeljuje: pridobiti morate zahtevane račune ali poverilnice, povezati upravičene ponudnike in upoštevati njihove omejitve. Dejanska uporabna zmogljivost je lahko nižja, vključno z ničelno pri novi namestitvi brez upravičene poti. Ponudniki, označeni z `tos: avoid`, so privzeto izključeni iz samodejnega usmerjanja.
+Te številke opisujejo ločene račune tretjih ponudnikov in pogoje upravičenosti v celotnem katalogu. 67router tega proračuna ne dodeljuje: pridobiti morate zahtevane račune ali poverilnice, povezati upravičene ponudnike in upoštevati njihove omejitve. Dejanska uporabna zmogljivost je lahko nižja, vključno z ničelno pri novi namestitvi brez upravičene poti. Ponudniki, označeni z `tos: avoid`, so privzeto izključeni iz samodejnega usmerjanja.
 
 **Preverjeno 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) ponuja enkratno promocijsko dobroimetje v višini $5, za katero je potrebno plačilno sredstvo in poteče po 30 dneh. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) objavlja omejitve hitrosti glede na projekt/model/raven; še vedno ni vključen v količinsko opredeljeno mesečno glavno številko.
 
@@ -93,7 +93,7 @@ za Nous so podrobno opisane v spodnji opombi o ponudniku.
 
 ## Dva režima — štetje in odločanje
 
-OmniRoute na vprašanje »ali je brezplačno?« odgovarja z dvema režimoma, ki namenoma
+67router na vprašanje »ali je brezplačno?« odgovarja z dvema režimoma, ki namenoma
 uporabljata različne vire:
 
 | Režim                     | Vir resnice                                                                                                                                                                     | Področja uporabe                                                                                                               |
@@ -140,7 +140,7 @@ Večina podatkov o »brezplačnih žetonih na mesec« na tem področju je sešte
 
 ### ⚠️ Previdno — določila o osebni uporabi/posredniških strežnikih, ki jih je vredno preveriti (16)
 
-> Njihov brezplačni dostop je resničen in OmniRoute lahko zahteve usmerja k njim; spodnja določila je le vredno poznati. Pri ponudnikih z OAuth oziroma dostopom brez ključev količine ni mogoče izraziti v žetonih, zato niso vključeni v glavno številko (in ne zato, ker jih ne bi bilo mogoče uporabljati).
+> Njihov brezplačni dostop je resničen in 67router lahko zahteve usmerja k njim; spodnja določila je le vredno poznati. Pri ponudnikih z OAuth oziroma dostopom brez ključev količine ni mogoče izraziti v žetonih, zato niso vključeni v glavno številko (in ne zato, ker jih ne bi bilo mogoče uporabljati).
 
 | Ponudnik         | Opomba                                                                                                                                                                                                                                                      |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Večina podatkov o »brezplačnih žetonih na mesec« na tem področju je sešte
 | `fireworks`      | Pogoji uporabe izrecno prepovedujejo uporabo posredniških/vmesnih storitev, prenos ključev API in podlicenciranje (razdelki 2.1 in 2.2(i)(j)); osebni posredniški strežniki z lastnim gostovanjem niso…                                                     |
 | `friendliai`     | Razdelka 8(e) in 8(f) pogojev uporabe izrecno prepovedujeta uporabo FriendliAI kot posredniškega strežnika ali samostojno omogočanje dostopa tretjim osebam ter prepovedujeta preprodajo/…                                                                  |
 | `iflytek`        | Razdelek 2.4(3) pogodbe iFlytek Spark LLM Service Agreement izrecno prepoveduje »uporabo kakršnih koli avtomatiziranih ali programskih metod za pridobivanje podatkov ali rezultatov…                                                                       |
-| `kiro`           | Pogosta vprašanja Kiro izrecno prepovedujejo uporabo z »OpenClaw in podobnimi orodji, ki uporabljajo ogrodja tretjih oseb« — osebni posredniški strežnik za umetno inteligenco z lastnim gostovanjem (kot je OmniRoute), ki usmerja…                        |
+| `kiro`           | Pogosta vprašanja Kiro izrecno prepovedujejo uporabo z »OpenClaw in podobnimi orodji, ki uporabljajo ogrodja tretjih oseb« — osebni posredniški strežnik za umetno inteligenco z lastnim gostovanjem (kot je 67router), ki usmerja…                         |
 | `modal`          | Razdelek 1.3 pogojev uporabe izrecno prepoveduje »oddajanje v najem, preprodajo ali kakršno koli drugačno omogočanje neposrednega dostopa do storitve ali njene uporabe kateri koli tretji osebi« — izdelava posredniškega strežnika z lastnim gostovanjem… |
 | `muse-spark-web` | Pogoji uporabe Meta izrecno prepovedujejo avtomatiziran dostop brez predhodnega dovoljenja, obratno inženirstvo brez pisnega dovoljenja in izogibanje tehnološkim…                                                                                          |
 | `nlpcloud`       | Pogoji uporabe izrecno prepovedujejo »vzpostavitev posredniškega strežnika ali druge naprave, ki drugim omogoča dostop do storitve prek nje«, ter podeljujejo samo neprenosljivo,…                                                                          |
@@ -316,7 +316,7 @@ Večina podatkov o »brezplačnih žetonih na mesec« na tem področju je sešte
 
 - **`360ai`** — Priložena opomba freeNote »Brezplačni modeli 360 AI Brain« je očitno zastarela. Trenutni dostop je plačljiv in zahteva odobritev prijave. Promocijski žetoni iz obdobja uvedbe leta 2023 (enkratnih 100M–250M) so bili morda podlaga za…
 - **`agentrouter`** — Naša priložena opomba freeNote navaja »$200 brezplačnega dobroimetja ob registraciji«. Trenutno običajne registracije (brez priporočila) prejmejo le $100; registracije prek priporočila lahko prejmejo $200, vendar komentar skupnosti iz aprila 2026…
-- **`agy`** — Naša priložena opomba freeNote navaja »(nič)«, kar nakazuje, da brezplačna raven ne obstaja, vendar ima Antigravity brezplačno raven, za katero je potrebna avtentikacija OAuth. Kljub temu pogoji uporabe izrecno prepovedujejo uporabo te brezplačne ravni prek posredniškega strežnika, kot je OmniRoute …
+- **`agy`** — Naša priložena opomba freeNote navaja »(nič)«, kar nakazuje, da brezplačna raven ne obstaja, vendar ima Antigravity brezplačno raven, za katero je potrebna avtentikacija OAuth. Kljub temu pogoji uporabe izrecno prepovedujejo uporabo te brezplačne ravni prek posredniškega strežnika, kot je 67router …
 - **`ai21`** — Zaostreno: poskusno obdobje se je skrajšalo s »3 mesecev« na 7 dni. Znesek dobroimetja $10 ostaja enak, vendar se je veljavnost močno zmanjšala s približno 90 dni na 7 dni.
 - **`aimlapi`** — Znatno spremenjeno. Priložena opomba freeNote je oglaševala »$0.025/dan brezplačnega dobroimetja — 200+ modelov«, vendar je brezplačna raven zdaj začasno ustavljena oziroma ukinjena. Dodelitev dobroimetja $0.025/dan (50.000 dobroimetij/dan, 10 zahtev/d…
 - **`amazon-q`** — Naša priložena opomba freeNote navaja »(nič)« — dejansko stanje je še slabše: izdelek od 15. maja 2026 ni več na voljo za nove registracije. Pred tem je brezplačna raven ponujala 50 agentskih zahtev/mesec in neomejeno število vrstič…

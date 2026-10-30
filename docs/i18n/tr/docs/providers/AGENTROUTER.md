@@ -8,7 +8,7 @@
 
 ## Hızlı başlangıç — yerel `agentrouter` sağlayıcısını kullanın (önerilen)
 
-Çoğu kullanıcı için **özel bir kurulum gerekmez**. OmniRoute, Claude Code bağlantı biçiminin tamamı önceden yerleşik olarak sunulan bir `agentrouter` sağlayıcısıyla birlikte gelir (bkz. `open-sse/config/providerRegistry.ts` → `agentrouter`). Kullanmak için:
+Çoğu kullanıcı için **özel bir kurulum gerekmez**. 67router, Claude Code bağlantı biçiminin tamamı önceden yerleşik olarak sunulan bir `agentrouter` sağlayıcısıyla birlikte gelir (bkz. `open-sse/config/providerRegistry.ts` → `agentrouter`). Kullanmak için:
 
 1. **Kontrol Paneli → Sağlayıcılar → Sağlayıcı Ekle** bölümünü açın.
 2. Listeden **AgentRouter** seçeneğini belirleyin.
@@ -22,18 +22,18 @@ Bu kılavuzun geri kalanında **gelişmiş yöntem**, yani `anthropic-compatible
 
 ## Gelişmiş: Claude Code uyumlu sağlayıcı türü üzerinden bağlanma
 
-OmniRoute, AgentRouter'ı (ve benzer aktarma hizmetlerini) doğru bağlantı biçimiyle Anthropic Messages API'sini kullanan **Claude Code uyumlu** sağlayıcı türü (`anthropic-compatible-cc-*`) aracılığıyla da destekler. `https://agentrouter.org` adresine yönlendirilen genel bir `openai-compatible-chat` sağlayıcısı **çalışmaz** — üst sistemdeki WAF, Claude Code'dan geliyor gibi görünmeyen istekleri reddeder.
+67router, AgentRouter'ı (ve benzer aktarma hizmetlerini) doğru bağlantı biçimiyle Anthropic Messages API'sini kullanan **Claude Code uyumlu** sağlayıcı türü (`anthropic-compatible-cc-*`) aracılığıyla da destekler. `https://agentrouter.org` adresine yönlendirilen genel bir `openai-compatible-chat` sağlayıcısı **çalışmaz** — üst sistemdeki WAF, Claude Code'dan geliyor gibi görünmeyen istekleri reddeder.
 
 ---
 
 ## Ön koşullar
 
 - Bir AgentRouter hesabı ve API anahtarı. Yeni kayıtlar, projenin [README](../README.md) dosyasındaki satış ortaklığı bağlantısı üzerinden ücretsiz kredi alır.
-- `ENABLE_CC_COMPATIBLE_PROVIDER` özellik bayrağı etkinleştirilmiş olarak çalışan OmniRoute (aşağıya bakın).
+- `ENABLE_CC_COMPATIBLE_PROVIDER` özellik bayrağı etkinleştirilmiş olarak çalışan 67router (aşağıya bakın).
 
 ## 1. CC uyumlu sağlayıcı türünü etkinleştirin
 
-Claude Code uyumlu sağlayıcı türü, resmî Claude Code istemcisini yakından taklit eden trafik gönderdiği için bir özellik bayrağının arkasında tutulur. OmniRoute'u başlatmadan önce bir ortam değişkeni ayarlayarak etkinleştirin:
+Claude Code uyumlu sağlayıcı türü, resmî Claude Code istemcisini yakından taklit eden trafik gönderdiği için bir özellik bayrağının arkasında tutulur. 67router'u başlatmadan önce bir ortam değişkeni ayarlayarak etkinleştirin:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute vadības panelis" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="67router vadības panelis" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — bezmaksas AI vārteja
+# 🚀 67router — bezmaksas AI vārteja
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — nekad nepārtrauciet programmēt. Ikviens AI rīks → 375 pakalpojumu sniedzēji — vairāk nekā 150 bezmaksas — caur vienu galapunktu. Claude Code, Codex, Cursor, Cline, Copilot un Antigravity savienoti ar BEZMAKSAS Claude / GPT / Gemini ar automātisku rezerves pārslēgšanu. RTK + Caveman kombinētā saspiešana ietaupa 15–95% marķieru (vidēji ~89%) — nekad nesasniedziet ierobežojumus. 375 AI pakalpojumu sniedzēji · vairāk nekā 150 bezmaksas līmeņi · ~1,62 miljardi bezmaksas marķieru mēnesī · 20 maršrutēšanas stratēģijas · sākuma izmaksas $0."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — nekad nepārtrauciet programmēt. Ikviens AI rīks → 375 pakalpojumu sniedzēji — vairāk nekā 150 bezmaksas — caur vienu galapunktu. Claude Code, Codex, Cursor, Cline, Copilot un Antigravity savienoti ar BEZMAKSAS Claude / GPT / Gemini ar automātisku rezerves pārslēgšanu. RTK + Caveman kombinētā saspiešana ietaupa 15–95% marķieru (vidēji ~89%) — nekad nesasniedziet ierobežojumus. 375 AI pakalpojumu sniedzēji · vairāk nekā 150 bezmaksas līmeņi · ~1,62 miljardi bezmaksas marķieru mēnesī · 20 maršrutēšanas stratēģijas · sākuma izmaksas $0."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Izmantojiet savus pakalpojumu sniedzēju kontus.** Šī ir aplēstā kopsumma no atsevišķi pieejamiem trešo pušu bezmaksas līmeņiem, nevis OmniRoute piešķirti tokeni. Reģistrējieties, vajadzības gadījumā iegūstiet akreditācijas datus un pievienojiet pakalpojumu sniedzējus, kurus varat izmantot; katrs pakalpojumu sniedzējs nosaka savus ierobežojumus, pieejamību un noteikumus.
+> **Izmantojiet savus pakalpojumu sniedzēju kontus.** Šī ir aplēstā kopsumma no atsevišķi pieejamiem trešo pušu bezmaksas līmeņiem, nevis 67router piešķirti tokeni. Reģistrējieties, vajadzības gadījumā iegūstiet akreditācijas datus un pievienojiet pakalpojumu sniedzējus, kurus varat izmantot; katrs pakalpojumu sniedzējs nosaka savus ierobežojumus, pieejamību un noteikumus.
 >
-> Manuāli apvienot bezmaksas līmeņus ir apgrūtinoši — desmitiem SDK, desmitiem ātruma ierobežojumu un nav skaidrs, cik daudz jums patiesībā ir pieejams. OmniRoute katalogā ir **471 bezmaksas līmeņa ieraksts 34 periodiski atjaunotu kopresursu atslēgās**, un tokenu virsraksta skaitlis tiek aprēķināts no **17 kopresursiem ar publicētu pozitīvu mēneša budžetu un pieciem Groq ierobežojumiem katram modelim**, novēršot koplietotu kopresursu dublēšanos. Kvotas, kas kļūst pieejamas tikai pēc reģionālās identitātes pārbaudes (pašlaik: ModelScope), tiek parādītas atsevišķi — papildu ~6 milj. pēc reģionālās identitātes pārbaudes — un nekad netiek pieskaitītas virsraksta skaitlim. Rezultāts ir redzams informācijas panelī (`/dashboard/free-tiers`).
+> Manuāli apvienot bezmaksas līmeņus ir apgrūtinoši — desmitiem SDK, desmitiem ātruma ierobežojumu un nav skaidrs, cik daudz jums patiesībā ir pieejams. 67router katalogā ir **471 bezmaksas līmeņa ieraksts 34 periodiski atjaunotu kopresursu atslēgās**, un tokenu virsraksta skaitlis tiek aprēķināts no **17 kopresursiem ar publicētu pozitīvu mēneša budžetu un pieciem Groq ierobežojumiem katram modelim**, novēršot koplietotu kopresursu dublēšanos. Kvotas, kas kļūst pieejamas tikai pēc reģionālās identitātes pārbaudes (pašlaik: ModelScope), tiek parādītas atsevišķi — papildu ~6 milj. pēc reģionālās identitātes pārbaudes — un nekad netiek pieskaitītas virsraksta skaitlim. Rezultāts ir redzams informācijas panelī (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute bezmaksas līmeņu budžeta kartīte: pastāvīgi ~1,62 mljrd. bezmaksas tokenu mēnesī un līdz ~2,22 mljrd. pirmajā mēnesī ar reģistrācijas kredītiem no 34 dokumentētām periodiski atjaunotu kopresursu atslēgām, kas aptver 471 katalogā iekļautu bezmaksas līmeņa ierakstu aiz viena galapunkta. Godīgs aprēķins ar kopresursu dublēšanās novēršanu — katrs koplietotais kopresurss tiek ieskaitīts vienreiz, tostarp 17 periodiski atjaunoti kopresursi ar publicētu pozitīvu mēneša tokenu budžetu un pieci Groq ierobežojumi katram modelim; lietošanas noteikumu risku katalogā 12 pakalpojumu sniedzēji ir atzīmēti kā tādi, no kuriem jāizvairās, lai jūs varētu izlemt. Budžeta joslā ietilpst Mistral 1 mljrd., Nara 210 milj., LLM7 150 milj., xKiro 150 milj., Groq 30 milj. (pieci ierobežojumi katram modelim) un mazāki kopresursi, kā arī pirmā mēneša reģistrācijas kredīti un pastāvīgi bezmaksas pakalpojumu sniedzēji bez tokenu ierobežojuma, kas parādīti atsevišķi, lai tie nekad nepalielinātu virsraksta skaitli. Aktuālais izlietotais/atlikušais apjoms vietnē /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="67router bezmaksas līmeņu budžeta kartīte: pastāvīgi ~1,62 mljrd. bezmaksas tokenu mēnesī un līdz ~2,22 mljrd. pirmajā mēnesī ar reģistrācijas kredītiem no 34 dokumentētām periodiski atjaunotu kopresursu atslēgām, kas aptver 471 katalogā iekļautu bezmaksas līmeņa ierakstu aiz viena galapunkta. Godīgs aprēķins ar kopresursu dublēšanās novēršanu — katrs koplietotais kopresurss tiek ieskaitīts vienreiz, tostarp 17 periodiski atjaunoti kopresursi ar publicētu pozitīvu mēneša tokenu budžetu un pieci Groq ierobežojumi katram modelim; lietošanas noteikumu risku katalogā 12 pakalpojumu sniedzēji ir atzīmēti kā tādi, no kuriem jāizvairās, lai jūs varētu izlemt. Budžeta joslā ietilpst Mistral 1 mljrd., Nara 210 milj., LLM7 150 milj., xKiro 150 milj., Groq 30 milj. (pieci ierobežojumi katram modelim) un mazāki kopresursi, kā arī pirmā mēneša reģistrācijas kredīti un pastāvīgi bezmaksas pakalpojumu sniedzēji bez tokenu ierobežojuma, kas parādīti atsevišķi, lai tie nekad nepalielinātu virsraksta skaitli. Aktuālais izlietotais/atlikušais apjoms vietnē /dashboard/free-tiers."/>
 
 > Aktīvās `/dashboard/free-tiers` lapas animēts kopsavilkums. Pilna metodoloģija (kopresursu dublēšanās novēršana, kredītu līmeņi, pakalpojumu sniedzēju noteikumi): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Apgūšana</b></td>
     <td align="center"><a href="#-the-promise">💥 Solījums</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Kāpēc OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Kāpēc 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Ar ko tas izceļas</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Trīs soļi: instalējiet un palaidiet OmniRoute, pievienojiet atbilstīgu pakalpojumu sniedzēju ar savu kontu vai API atslēgu, pēc tam norādiet savā rīkā uz localhost:20128/v1, izmantojot OmniRoute API atslēgu un modeli auto. Maršrutēšana ir atkarīga no pieejamajiem atbilstīgajiem savienojumiem un pakalpojumu sniedzēju ierobežojumiem."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Trīs soļi: instalējiet un palaidiet 67router, pievienojiet atbilstīgu pakalpojumu sniedzēju ar savu kontu vai API atslēgu, pēc tam norādiet savā rīkā uz localhost:20128/v1, izmantojot 67router API atslēgu un modeli auto. Maršrutēšana ir atkarīga no pieejamajiem atbilstīgajiem savienojumiem un pakalpojumu sniedzēju ierobežojumiem."/>
 
 ```bash
-# Pēc pakalpojumu sniedzēja pievienošanas nokopējiet savu OmniRoute atslēgu sadaļā Dashboard → Endpoints:
+# Pēc pakalpojumu sniedzēja pievienošanas nokopējiet savu 67router atslēgu sadaļā Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Kāpēc OmniRoute?
+# 🤔 Kāpēc 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Kāpēc OmniRoute — beidziet žonglēt ar 10 paneļiem, beigtām API atslēgām un negaidītiem rēķiniem. Desmit ikdienas problēmas un to risinājumi: kvota beidzas neizmantota → izmantojiet abonementus maksimāli; pieprasījumu ierobežojumi kodēšanas vidū → 4 līmeņu automātiskā pārslēgšanās (Abonements → API → Lēts → Bezmaksas); rīku izvades sadedzina tokenus → RTK + Caveman kompresija (15–95%); dārgas API → izmaksām optimizēta maršrutēšana; katram rīkam sava iestatīšana → viens galapunkts, viens panelis; AI ir bloķēts → 3 līmeņu starpniekserveris + TLS stealth; beigtas atslēgas → 3 slāņu noturība (circuit breakers, atslēgas atdzesēšana, modeļa bloķēšana); komanda dala vienu abonementu → atslēgu kopas ar taisnīgas dalīšanas kvotām; uzvednes iet caur kāda cita mākoni → vispirms lokāli ar AES-256-GCM šifrētām atslēgām; nav izdevumu pārskatāmības → tiešraides analītika (lietojums, kvota, ietaupījumi, p95 latentums)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Kāpēc 67router — beidziet žonglēt ar 10 paneļiem, beigtām API atslēgām un negaidītiem rēķiniem. Desmit ikdienas problēmas un to risinājumi: kvota beidzas neizmantota → izmantojiet abonementus maksimāli; pieprasījumu ierobežojumi kodēšanas vidū → 4 līmeņu automātiskā pārslēgšanās (Abonements → API → Lēts → Bezmaksas); rīku izvades sadedzina tokenus → RTK + Caveman kompresija (15–95%); dārgas API → izmaksām optimizēta maršrutēšana; katram rīkam sava iestatīšana → viens galapunkts, viens panelis; AI ir bloķēts → 3 līmeņu starpniekserveris + TLS stealth; beigtas atslēgas → 3 slāņu noturība (circuit breakers, atslēgas atdzesēšana, modeļa bloķēšana); komanda dala vienu abonementu → atslēgu kopas ar taisnīgas dalīšanas kvotām; uzvednes iet caur kāda cita mākoni → vispirms lokāli ar AES-256-GCM šifrētām atslēgām; nav izdevumu pārskatāmības → tiešraides analītika (lietojums, kvota, ietaupījumi, p95 latentums)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute pieprasījumu plūsma: jūsu IDE vai CLI (Claude Code, Cursor, Cline…) izsauc vienu lokālo galapunktu (http://localhost:20128/v1); OmniRoute Smart Router (RTK + Caveman kompresija, 20 maršrutēšanas stratēģijas, circuit breakers, TLS stealth, MCP, A2A, guardrails) var pārslēgties starp 4 pakalpojumu sniedzēju līmeņiem, kamēr ir pieejams atbilstīgs veselīgs mērķis — 1. līmenis Abonements, 2. līmenis API atslēga, 3. līmenis Lēts un 4. līmenis Bezmaksas."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router pieprasījumu plūsma: jūsu IDE vai CLI (Claude Code, Cursor, Cline…) izsauc vienu lokālo galapunktu (http://localhost:20128/v1); 67router Smart Router (RTK + Caveman kompresija, 20 maršrutēšanas stratēģijas, circuit breakers, TLS stealth, MCP, A2A, guardrails) var pārslēgties starp 4 pakalpojumu sniedzēju līmeņiem, kamēr ir pieejams atbilstīgs veselīgs mērķis — 1. līmenis Abonements, 2. līmenis API atslēga, 3. līmenis Lēts un 4. līmenis Bezmaksas."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Vēlaties pievienoties kā atvērtā koda draugs?** Šie ir uzņēmumi, kas atbalsta atvērto kodu un palīdz OmniRoute darboties — un mēs publiski paziņojam, kur nonāk katrs viņu mums iedotais žetons. Sazinieties: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Vēlaties pievienoties kā atvērtā koda draugs?** Šie ir uzņēmumi, kas atbalsta atvērto kodu un palīdz 67router darboties — un mēs publiski paziņojam, kur nonāk katrs viņu mums iedotais žetons. Sazinieties: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Dibinātājs atvērtā koda draugs"/>
     </td>
     <td>
-      Pateicoties <b>Kimi (Moonshot AI)</b>, mūsu dibinātājam atvērtā koda draugam, par šī projekta atbalstu! Kimi ir AI laboratorija, kas izstrādājusi atvērtā svara K2 un K3 modeļu saimes — <b>Kimi K3</b> nodrošina 1M žetonu konteksta logu, vietējo redzi un robežlīmeņa kodēšanu par daļu no slēgto modeļu cenām, un darbojas uzreiz ar Claude Code, Codex un katru kodēšanas rīku, ko OmniRoute apkalpo.
+      Pateicoties <b>Kimi (Moonshot AI)</b>, mūsu dibinātājam atvērtā koda draugam, par šī projekta atbalstu! Kimi ir AI laboratorija, kas izstrādājusi atvērtā svara K2 un K3 modeļu saimes — <b>Kimi K3</b> nodrošina 1M žetonu konteksta logu, vietējo redzi un robežlīmeņa kodēšanu par daļu no slēgto modeļu cenām, un darbojas uzreiz ar Claude Code, Codex un katru kodēšanas rīku, ko 67router apkalpo.
       <br/><br/>
-      <b>Ko Kimi atbalsts nodrošina:</b> Kimi API kredīti nodrošina OmniRoute AI validēto izlaišanas cauruļvadu — posmu <i>sapludināšanas validācija, ko nodrošina Kimi K3</i>, kas pārskata katru pieprasījumu pirms tā izlaišanas — kā arī ikdienas funkciju izstrādi. Pirmklasīgs Kimi atbalsts tiek piegādāts abos veidos: tiešais <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) un <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code kodēšanas plāns</a> (OAuth un API atslēga). OmniRoute ir arī pirmais Brazīlijas atvērtā koda projekts Kimi atbalsta programmā. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Iegūstiet Kimi API atslēgu ar 15% papildu kredītiem →</b></a>
+      <b>Ko Kimi atbalsts nodrošina:</b> Kimi API kredīti nodrošina 67router AI validēto izlaišanas cauruļvadu — posmu <i>sapludināšanas validācija, ko nodrošina Kimi K3</i>, kas pārskata katru pieprasījumu pirms tā izlaišanas — kā arī ikdienas funkciju izstrādi. Pirmklasīgs Kimi atbalsts tiek piegādāts abos veidos: tiešais <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) un <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code kodēšanas plāns</a> (OAuth un API atslēga). 67router ir arī pirmais Brazīlijas atvērtā koda projekts Kimi atbalsta programmā. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Iegūstiet Kimi API atslēgu ar 15% papildu kredītiem →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Atvērtā koda draugs"/>
     </td>
     <td>
-      Pateicoties <b>Cheaper Inference</b>, OmniRoute atvērtā koda draugam, par šī projekta atbalstu! Cheaper Inference ir izmaksu ziņā rangēts vārteja, kas pārdod 42 robežmodeļus — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok un MiniMax — aiz viena OpenAI-saderīga galapunkta, novirzot katru pieprasījumu uz lētāko piemēroto pakalpojumu sniedzēju, nekad neiekasējot vairāk par modeļa ražotāja saraksta cenu.
+      Pateicoties <b>Cheaper Inference</b>, 67router atvērtā koda draugam, par šī projekta atbalstu! Cheaper Inference ir izmaksu ziņā rangēts vārteja, kas pārdod 42 robežmodeļus — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok un MiniMax — aiz viena OpenAI-saderīga galapunkta, novirzot katru pieprasījumu uz lētāko piemēroto pakalpojumu sniedzēju, nekad neiekasējot vairāk par modeļa ražotāja saraksta cenu.
       <br/><br/>
-      <b>Pirmklasīgs atbalsts OmniRoute:</b> Tērzēšanas pabeigšana (Chat Completions), vietējais <code>/v1/responses</code> galapunkts, redze, rīku izsaukšana un 3 attēlu modeļi (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, sasniedzami kā <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Iegūstiet API atslēgu →</b></a>
+      <b>Pirmklasīgs atbalsts 67router:</b> Tērzēšanas pabeigšana (Chat Completions), vietējais <code>/v1/responses</code> galapunkts, redze, rīku izsaukšana un 3 attēlu modeļi (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, sasniedzami kā <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Iegūstiet API atslēgu →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Filiāļu akcija</b> — bezmaksas reģistrācijas kuponi no pakalpojumu sniedzējiem, kurus mēs nesponsorējam (noklikšķiniet, lai izvērstu)</sub></summary>
 
-<sub><i>Šī sadaļa ir paredzēta tikai novirzīšanas/kuponu kodiem. Sponsorētas partnerības ir atrodamas sadaļā <b>🤝 Atbalsta mūsu atvērtā koda draugi</b> augstāk. OmniRoute nav sponsorēšanas vai partnerības ar šeit uzskaitītajiem pakalpojumu sniedzējiem — tie ir publiski kuponi, ko var izmantot ikviens.</i></sub>
+<sub><i>Šī sadaļa ir paredzēta tikai novirzīšanas/kuponu kodiem. Sponsorētas partnerības ir atrodamas sadaļā <b>🤝 Atbalsta mūsu atvērtā koda draugi</b> augstāk. 67router nav sponsorēšanas vai partnerības ar šeit uzskaitītajiem pakalpojumu sniedzējiem — tie ir publiski kuponi, ko var izmantot ikviens.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — filiāles reģistrācija · <b>$100 bezmaksas kredīti</b> reģistrējoties (bezmaksas serveris, sagaidāma lielāka latentums — vislabāk testēšanai, nevis ražošanai). Pirmklasīgs atbalsts OmniRoute kopš <b>v3.8.50</b>: Tērzēšanas pabeigšana (Chat Completions), Anthropic-saderīgs vadu formāts un OpenAI-saderīgs ceļš. Pieejamie modeļi ietver <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> un citus. <b><a href="https://agentrouter.org/register?aff=70LM">Paņemiet savus $100 →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — filiāles reģistrācija · <b>$100 bezmaksas kredīti</b> reģistrējoties (bezmaksas serveris, sagaidāma lielāka latentums — vislabāk testēšanai, nevis ražošanai). Pirmklasīgs atbalsts 67router kopš <b>v3.8.50</b>: Tērzēšanas pabeigšana (Chat Completions), Anthropic-saderīgs vadu formāts un OpenAI-saderīgs ceļš. Pieejamie modeļi ietver <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> un citus. <b><a href="https://agentrouter.org/register?aff=70LM">Paņemiet savus $100 →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Filiāles saite — OmniRoute nav sponsorēšanas vai partnerības ar šo pakalpojumu sniedzēju.</i></sub>
+      <sub>⚠️ <i>Filiāles saite — 67router nav sponsorēšanas vai partnerības ar šo pakalpojumu sniedzēju.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Zināt citu pakalpojumu sniedzēju ar dāsnu bezmaksas reģistrācijas kuponu, kas nāk par labu OmniRoute lietotājiem? Atveriet problēmu, un mēs to pievienosim šeit.</sub>
+<sub>Zināt citu pakalpojumu sniedzēju ar dāsnu bezmaksas reģistrācijas kuponu, kas nāk par labu 67router lietotājiem? Atveriet problēmu, un mēs to pievienosim šeit.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Animēti piemēri 18 no 20 kombināciju maršrutēšanas stratēģijām — pa vienam elementam katrai stratēģijai: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized un quota-weighted nav animētas; tālāk esošajā tabulā aprakstītas visas 20 stratēģijas."/>
 
-> **Kombinācija** ir modeļu ķēde, starp kuriem OmniRoute maršrutē **automātiski**. Ja kvota ir izsmelta, pakalpojumu sniedzējs pārstāj darboties vai izmaksas strauji pieaug, kombinācija var pāriet uz nākamo piemēroto un darbspējīgo modeli. 🛡️
+> **Kombinācija** ir modeļu ķēde, starp kuriem 67router maršrutē **automātiski**. Ja kvota ir izsmelta, pakalpojumu sniedzējs pārstāj darboties vai izmaksas strauji pieaug, kombinācija var pāriet uz nākamo piemēroto un darbspējīgo modeli. 🛡️
 
 ### ⚡ Bez konfigurēšanas — vienkārši izmantojiet `auto`
 
-Kombinācija nav jāizveido. Iestatiet modeli uz `auto` (vai kādu tā variantu), un OmniRoute no jūsu pievienotajiem pakalpojumu sniedzējiem izveidos virtuālu kombināciju, kas tiek novērtēta reāllaikā:
+Kombinācija nav jāizveido. Iestatiet modeli uz `auto` (vai kādu tā variantu), un 67router no jūsu pievienotajiem pakalpojumu sniedzējiem izveidos virtuālu kombināciju, kas tiek novērtēta reāllaikā:
 
 <table>
   <tr><th align="left">Modeļa ID</th><th align="left">Kam tas ir optimizēts</th></tr>
@@ -496,7 +498,7 @@ Visas **20** stratēģijas — kombinējiet tās katrā kombinācijas solī:
 
 ### 🧱 Noturība ir iebūvēta (3 neatkarīgi slāņi)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRoute noturība — 3 neatkarīgi pašatjaunošanās slāņi; katrai kļūmei atbilstošais slānis. 1. slānis — pakalpojumu sniedzēja ķēdes pārtraucējs (visam pakalpojumu sniedzējam): nostrādā tikai 408/5xx gadījumā; sliekšņi — OAuth 8× / API atslēgai 12× / lokālajam 2×; pēc 60s/30s/15s tiek atiestatīts uz HALF-OPEN pārbaudi; slinkā atkopšana; kamēr statuss ir OPEN, kombinācija pārvirza pieprasījumus uz nākamo pakalpojumu sniedzēju. 2. slānis — savienojuma nogaidīšanas periods (vienai atslēgai/kontam): pamatvērtība 5s OAuth / 3s API atslēgai; eksponenciāla ×2 atkāpšanās ar aizsardzību pret vienlaicīgu pieprasījumu lavīnu; 429 ievēro Retry-After; veiksmīga izpilde notīra visu kļūdu stāvokli; atslēga nogaidīšanas periodā tiek izlaista, kamēr pārējās atslēgas turpina apkalpošanu. 3. slānis — modeļa bloķēšana (vienam modelim): katram modelim atsevišķs 429, lokāls 404 vai režīma atteikumi bloķē tikai attiecīgo modeli — nekad visu savienojumu. Gala stāvokļi (bloķēts, beidzies derīguma termiņš, kredīti izsmelti) ir paredzēti operatora rīcībai, nevis nogaidīšanas periodiem."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="67router noturība — 3 neatkarīgi pašatjaunošanās slāņi; katrai kļūmei atbilstošais slānis. 1. slānis — pakalpojumu sniedzēja ķēdes pārtraucējs (visam pakalpojumu sniedzējam): nostrādā tikai 408/5xx gadījumā; sliekšņi — OAuth 8× / API atslēgai 12× / lokālajam 2×; pēc 60s/30s/15s tiek atiestatīts uz HALF-OPEN pārbaudi; slinkā atkopšana; kamēr statuss ir OPEN, kombinācija pārvirza pieprasījumus uz nākamo pakalpojumu sniedzēju. 2. slānis — savienojuma nogaidīšanas periods (vienai atslēgai/kontam): pamatvērtība 5s OAuth / 3s API atslēgai; eksponenciāla ×2 atkāpšanās ar aizsardzību pret vienlaicīgu pieprasījumu lavīnu; 429 ievēro Retry-After; veiksmīga izpilde notīra visu kļūdu stāvokli; atslēga nogaidīšanas periodā tiek izlaista, kamēr pārējās atslēgas turpina apkalpošanu. 3. slānis — modeļa bloķēšana (vienam modelim): katram modelim atsevišķs 429, lokāls 404 vai režīma atteikumi bloķē tikai attiecīgo modeli — nekad visu savienojumu. Gala stāvokļi (bloķēts, beidzies derīguma termiņš, kredīti izsmelti) ir paredzēti operatora rīcībai, nevis nogaidīšanas periodiem."/>
 
 <sub>📖 [Auto-Combo dzinis](docs/routing/AUTO-COMBO.md) · [Noturības rokasgrāmata](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Visas **20** stratēģijas — kombinējiet tās katrā kombinācijas solī:
 
 <div align="center">
 
-## 🏆 Ar ko OmniRoute izceļas
+## 🏆 Ar ko 67router izceļas
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ar ko OmniRoute izceļas — konkrētā datumā fiksēts 13 iespēju salīdzinājums ar 9router, OpenRouter, CLIProxyAPI un LiteLLM. OmniRoute: 375 pakalpojumu sniedzēji, vairāk nekā 150 iebūvētu bezmaksas līmeņu, 20 maršrutēšanas stratēģijas, 12 dzinēju tokenu saspiešana, iebūvēts MCP serveris ar 110 rīkiem, A2A aģentu protokols, pastāvīgā atmiņa, aizsargmehānismi, mākoņa aģenti, TLS digitālā nospieduma maskēšana, Desktop/Termux/PWA un 67 lietotāja saskarnes lokalizācijas. OmniRoute ir licencēts saskaņā ar MIT licenci, un to var mitināt savā infrastruktūrā. Konkurentu iespējas un to skaits var mainīties; skatiet saistīto metodoloģiju."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ar ko 67router izceļas — konkrētā datumā fiksēts 13 iespēju salīdzinājums ar 9router, OpenRouter, CLIProxyAPI un LiteLLM. 67router: 375 pakalpojumu sniedzēji, vairāk nekā 150 iebūvētu bezmaksas līmeņu, 20 maršrutēšanas stratēģijas, 12 dzinēju tokenu saspiešana, iebūvēts MCP serveris ar 110 rīkiem, A2A aģentu protokols, pastāvīgā atmiņa, aizsargmehānismi, mākoņa aģenti, TLS digitālā nospieduma maskēšana, Desktop/Termux/PWA un 67 lietotāja saskarnes lokalizācijas. 67router ir licencēts saskaņā ar MIT licenci, un to var mitināt savā infrastruktūrā. Konkurentu iespējas un to skaits var mainīties; skatiet saistīto metodoloģiju."/>
 
 <sub>📊 Pilna metodoloģija un detalizēts katras iespējas salīdzinājums ar 9router, OpenRouter, CLIProxyAPI un LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Atbalstiet OmniRoute
+## 💚 Atbalstiet 67router
 
-OmniRoute ir licencēts ar MIT licenci un tiek atklāti uzturēts. Ja tas ietaupa jūsu laiku vai naudu, lūk, kā varat palīdzēt tam saglabāt neatkarību — izvēlieties sev piemērotāko veidu. Sponsorēšana nekad neietekmē maršrutēšanas prioritāti; tā nodrošina redzamību, nevis augstāku vietu.
+67router ir licencēts ar MIT licenci un tiek atklāti uzturēts. Ja tas ietaupa jūsu laiku vai naudu, lūk, kā varat palīdzēt tam saglabāt neatkarību — izvēlieties sev piemērotāko veidu. Sponsorēšana nekad neietekmē maršrutēšanas prioritāti; tā nodrošina redzamību, nevis augstāku vietu.
 
 <table>
-  <tr><td nowrap>⭐ <b>Piešķiriet repozitorijam zvaigzni</b></td><td>Bezmaksas — patiešām uzlabo redzamību</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Piešķirt OmniRoute zvaigzni</a></td></tr>
+  <tr><td nowrap>⭐ <b>Piešķiriet repozitorijam zvaigzni</b></td><td>Bezmaksas — patiešām uzlabo redzamību</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Piešķirt 67router zvaigzni</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Vienreizēji vai ik mēnesi · bez platformas komisijas</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Ātrs vienreizējs ziedojums; ziedotājam nav jāreģistrējas</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Neliels, neformāls atbalsta žests</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute ir licencēts ar MIT licenci un tiek atklāti uzturēts. Ja tas ietaup
 
 **🇧🇷 PIX** — tūlītēji, bez komisijas maksas (Brazīlija)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="OmniRoute PIX QR kods"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="67router PIX QR kods"/>
 
 Atslēga (nejauši ģenerēta): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Kopējamais un ielīmējamais Pix kods:
 
 <p><strong>Piezīmes izstrādātājiem:</strong> Izstrādātāju ērtībai projekts npm instalēšanas vai pēcinstalēšanas laikā var ģenerēt lokālu <code>.env</code> failu. Šis fails ar nolūku tiek ignorēts, izmantojot <code>.gitignore</code> (skatiet <code>.gitignore</code>), un to nekad nedrīkst iekļaut komitā — ja tas nejauši ir iekļauts komitā, nomainiet visus atklātos noslēpumus un izņemiet failu no vēstures. Norādījumus par lokālo vides failu un noslēpumu pārvaldību skatiet dokumentā <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a>.</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
-Galvenais bezmaksas līmeņa rādītājs joprojām ir **~1.62B marķieru mēnesī** no iepriekš dokumentētā kataloga, kurā koplietojamie resursi ir uzskaitīti tikai vienreiz. Pagaidu pakalpojumu sniedzēju reģistrācijas kredīti pirmajā mēnesī šo apjomu var atsevišķi palielināt līdz **~2.22B**. Radar ir neobligāts, parakstīts kataloga pārklājums lietotājiem, kuri vēlas aktuālāku bezmaksas modeļu pieejamības informāciju starp OmniRoute laidieniem; kopienas katalogs un visas esošās bezmaksas funkcijas joprojām ir bez maksas.
+Galvenais bezmaksas līmeņa rādītājs joprojām ir **~1.62B marķieru mēnesī** no iepriekš dokumentētā kataloga, kurā koplietojamie resursi ir uzskaitīti tikai vienreiz. Pagaidu pakalpojumu sniedzēju reģistrācijas kredīti pirmajā mēnesī šo apjomu var atsevišķi palielināt līdz **~2.22B**. Radar ir neobligāts, parakstīts kataloga pārklājums lietotājiem, kuri vēlas aktuālāku bezmaksas modeļu pieejamības informāciju starp 67router laidieniem; kopienas katalogs un visas esošās bezmaksas funkcijas joprojām ir bez maksas.
 
 Atbalstītāji var saņemt aktuālo katalogu un piekļuvi papildu pakalpojumu sniedzēju iespējām. Tā atsevišķais, mainīgais maksimālais apjoms ir **ne vairāk kā aptuveni 3B marķieru mēnesī** atkarībā no pakalpojumu sniedzēju pieejamības. Šis maksimālais apjoms netiek garantēts: pakalpojumu sniedzēji jebkurā laikā var mainīt kvotas, atbilstības prasības, modeļus vai reģionus.
 
-Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. OmniRoute klients neaugšupielādē uzvednes, datplūsmas datus, pakalpojumu sniedzēju konfigurāciju, lietojuma telemetriju vai lokālo paziņojumu noraidīšanas stāvokli. Uzziniet par atbilstības prasībām un aktuālo katalogu vietnē **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. 67router klients neaugšupielādē uzvednes, datplūsmas datus, pakalpojumu sniedzēju konfigurāciju, lietojuma telemetriju vai lokālo paziņojumu noraidīšanas stāvokli. Uzziniet par atbilstības prasībām un aktuālo katalogu vietnē **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. Om
 - **💸 Godīgas fiksētas likmes izmaksas** — abonementa / kodēšanas plāna nodrošinātāji izmaksu analītikā rāda **$0**; budžets, kvota un maršrutēšana turpina veikt aplēses. → [API atsauce](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share maršrutēšana** — godīgi sadaliet koplietotā konta kvotu starp apvienotajām atslēgām, darbu saglabājoši, tā ka dīkstāves daļas tiek aizdotas citiem. → [Noturības ceļvedis](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 CLI/aģenta iestatīšana ar vienu komandu** — 15 reģistrētas `setup-*` komandas; `omniroute run` palaiž 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` atbalsta 11 mērķus ar interaktīvu nodrošinātāja+modeļa atlasītāju un favorītiem pa kontekstiem. → [CLI integrācijas](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Attālinātais režīms** — vadiet attālinātu OmniRoute ar ierobežotas darbības jomas tokeniem (`connect` / `contexts` / `tokens`) + `antigravity` OAuth palīgu VPS instalācijām. → [Attālinātais režīms](docs/guides/REMOTE-MODE.md)
+- **🛰️ Attālinātais režīms** — vadiet attālinātu 67router ar ierobežotas darbības jomas tokeniem (`connect` / `contexts` / `tokens`) + `antigravity` OAuth palīgu VPS instalācijām. → [Attālinātais režīms](docs/guides/REMOTE-MODE.md)
 - **🧭 Gudrāka automātiskā maršrutēšana** — `auto/<category>:<tier>` kombinācijas, **Fusion** (modeļu panelis + tiesnesis), uzdevumam atbilstoša maršrutēšana, modeļa / režīma / USD budžeta pārrakstīšana pa pieprasījumiem. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Piespraužamā saspiešana** — 12 kombinējami dzinēji + Compression Studios: LLMLingua-2, divlīmeņu Ultra, omniglyph, precizitātes slieksnis pa soļiem, GCF v3.2, vilkšanas pārkārtošanas redaktors. → [Saspiešana](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Caurspīdīga MITM atšifrēšana (TPROXY)** — uztveriet CLI, kas ignorē starpniekservera vides mainīgos, ar CA pa SNI + uzticamības krātuves instalētāju. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. Om
 
 <br/>
 
-**Palaidiet jebkuru atbalstīto CLI, izmantojot OmniRoute, ar vienu komandu** — netiek rakstīti konfigurācijas faili,
+**Palaidiet jebkuru atbalstīto CLI, izmantojot 67router, ar vienu komandu** — netiek rakstīti konfigurācijas faili,
 akreditācijas dati tiek ievadīti katram procesam atsevišķi, bet Qwen/Gemini saņem vienreizlietojamu, izolētu mājas direktoriju:
 
 ```bash
@@ -756,7 +758,7 @@ nonākt čaulas vēsturē. → [CLI integrācijas](docs/guides/CLI-INTEGRATIONS.
 
 <div align="center">
 
-## 🖥️ Kur darbojas OmniRoute — jebkur
+## 🖥️ Kur darbojas 67router — jebkur
 
 </div>
 
@@ -772,7 +774,7 @@ nonākt čaulas vēsturē. → [CLI integrācijas](docs/guides/CLI-INTEGRATIONS.
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Darbojas <b>tavā tālrunī</b> visu diennakti, bez root piekļuves</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>„Pievienot sākuma ekrānam”</td><td align="left">Pilnekrāna režīms, darbība bezsaistē, instalēšana no pārlūkprogrammas</td></tr>
   <tr><td align="left" nowrap>🧩 <b>OpenCode spraudnis</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Vietēja OpenCode integrācija</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>instalē <b>OmniCopilot</b> paplašinājumu</td><td align="left">Visi OmniRoute modeļi vietējā Copilot Chat modeļu izvēlnē — stabilajā un Insiders versijā</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>instalē <b>OmniCopilot</b> paplašinājumu</td><td align="left">Visi 67router modeļi vietējā Copilot Chat modeļu izvēlnē — stabilajā un Insiders versijā</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>No pirmkoda</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Pārveido un papildini to</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ nonākt čaulas vēsturē. → [CLI integrācijas](docs/guides/CLI-INTEGRATIONS.
 
 <div align="center">
 
-### 🧩 Jaunums: OmniRoute tieši VS Code vietējā Copilot Chat saskarnē
+### 🧩 Jaunums: 67router tieši VS Code vietējā Copilot Chat saskarnē
 
 </div>
 
-> Nekādas jaunas sānjoslas vai jaunas tērzēšanas saskarnes — ikviens OmniRoute nodrošinātais modelis tiek parādīts tieši
+> Nekādas jaunas sānjoslas vai jaunas tērzēšanas saskarnes — ikviens 67router nodrošinātais modelis tiek parādīts tieši
 > **jau izmantotajā Copilot Chat modeļu izvēlnē**. Kopš VS Code 1.122 nodrošinātāju modeļi darbojas
 > bez pierakstīšanās GitHub kontā vai Copilot abonementa — aģenta režīms, rīku izsaukšana un attēlu apstrāde
 > bez maksas.
 
 Instalē **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)** paplašinājumu, norādi tam
-savu OmniRoute serveri (pēc noklusējuma `localhost:20128`), pēc tam atver Copilot Chat → modeļu izvēlni
-→ **Pārvaldīt modeļus…** → **OmniRoute**.
+savu 67router serveri (pēc noklusējuma `localhost:20128`), pēc tam atver Copilot Chat → modeļu izvēlni
+→ **Pārvaldīt modeļus…** → **67router**.
 
 <table>
   <tr><th align="left">Veikals</th><th align="left">Saite</th><th align="left">Darbojas ar</th></tr>
@@ -801,7 +803,7 @@ savu OmniRoute serveri (pēc noklusējuma `localhost:20128`), pēc tam atver Cop
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Instalēt →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Redaktorā atver **Paplašinājumu** skatu, meklē **„OmniRoute”** un noklikšķini uz **Instalēt**
+Redaktorā atver **Paplašinājumu** skatu, meklē **„67router”** un noklikšķini uz **Instalēt**
 — abos veikalos tas darbojas vienādi. Pirmkods, problēmu pieteikumi un publicēšanas instrukcija ir pieejama
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Redaktorā atver **Paplašinājumu** skatu, meklē **„OmniRoute”** un noklik
 > jāatstāj atvērts termināļa logs un nav jāuzrauga `npm install -g omniroute`.**
 
 Tā ir veidota ar [Tauri v2](https://v2.tauri.app/) (Rust kodols, kura izmērs ir niecīgs), un komplektācijā ietver
-savu parakstīto Node 24 izpildvidi, kā arī pārvalda lietotnei piederošu OmniRoute instalāciju, tāpēc tā nekad nekonfliktē ar tavu
+savu parakstīto Node 24 izpildvidi, kā arī pārvalda lietotnei piederošu 67router instalāciju, tāpēc tā nekad nekonfliktē ar tavu
 globālo `node`/`bun`. Tā **koplieto tavu esošo `~/.omniroute/` konfigurāciju un datubāzi** — tātad tas ir
-tas pats OmniRoute, kuru jau izmanto, tikai tagad ar cepuri. 🎩
+tas pats 67router, kuru jau izmanto, tikai tagad ar cepuri. 🎩
 
 <table>
   <tr><th align="left">Ko tas dara</th><th align="left">Kā</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Vēlaties lejupielādēt? Iegūstiet jaunāko <code>.dmg</code> no sadaļas
 <a href="https://github.com/zoispag/omniroute-tray/releases">Laidieni</a>. Pirmkods, problēmu ziņojumi un būvēšanas
 dokumentācija ir pieejama vietnē <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Kopienas projekts, ko izveidojis <a href="https://github.com/zoispag">@zoispag</a> — tas nav oficiāls OmniRoute laidiens.</sub>
+<br/>💛 Kopienas projekts, ko izveidojis <a href="https://github.com/zoispag">@zoispag</a> — tas nav oficiāls 67router laidiens.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ dokumentācija ir pieejama vietnē <a href="https://github.com/zoispag/omniroute
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privāts un lokāli orientēts — OmniRoute vārteja un vadības plakne darbojas jūsu datorā. Uzvednes tiek nosūtītas katram pieprasījumam atlasītajam augšupstraumes nodrošinātājam; OmniRoute nepievieno nevienu mitinātu uzvedņu apstrādes starpposmu, un telemetrija pēc noklusējuma ir atspējota. Piekļuves dati glabāšanas laikā tiek šifrēti ar AES-256-GCM; drošības kontroles ietver API atslēgu tvērumus, IP filtrēšanu, ātruma ierobežojumus, aizsardzību pret uzvedņu injekcijām, augšupstraumes galveņu attīrīšanu, pēc izvēles iespējojamu PII rediģēšanu, sanitizētus kļūdu ziņojumus un lokālu SQLite audita žurnālu. OmniRoute ir licencēts saskaņā ar MIT licenci, un to var mitināt patstāvīgi."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privāts un lokāli orientēts — 67router vārteja un vadības plakne darbojas jūsu datorā. Uzvednes tiek nosūtītas katram pieprasījumam atlasītajam augšupstraumes nodrošinātājam; 67router nepievieno nevienu mitinātu uzvedņu apstrādes starpposmu, un telemetrija pēc noklusējuma ir atspējota. Piekļuves dati glabāšanas laikā tiek šifrēti ar AES-256-GCM; drošības kontroles ietver API atslēgu tvērumus, IP filtrēšanu, ātruma ierobežojumus, aizsardzību pret uzvedņu injekcijām, augšupstraumes galveņu attīrīšanu, pēc izvēles iespējojamu PII rediģēšanu, sanitizētus kļūdu ziņojumus un lokālu SQLite audita žurnālu. 67router ir licencēts saskaņā ar MIT licenci, un to var mitināt patstāvīgi."/>
 
 <sub>📖 [Autorizācija](docs/architecture/AUTHZ_GUIDE.md) · [Aizsargmehānismi](docs/security/GUARDRAILS.md) · [Atbilstība](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ dokumentācija ir pieejama vietnē <a href="https://github.com/zoispag/omniroute
 
 </div>
 
-> Papildus serverim OmniRoute ir **pilnvērtīgs komandrindas vadības centrs** ar **vairāk nekā 80 komandām**, kā arī atvērti aģentu protokoli, lai MI aģents varētu to pārvaldīt **patstāvīgi**.
+> Papildus serverim 67router ir **pilnvērtīgs komandrindas vadības centrs** ar **vairāk nekā 80 komandām**, kā arī atvērti aģentu protokoli, lai MI aģents varētu to pārvaldīt **patstāvīgi**.
 
 ### ⌨️ Īsta CLI (ne tikai `start`)
 
@@ -874,9 +876,9 @@ omniroute setup         # vednis pirmajai iestatīšanai
 omniroute doctor        # diagnosticēt pakalpojumu sniedzējus, portus un vietējās atkarības
 ```
 
-### 🛰️ Attālais režīms — palaidiet CLI šeit, bet OmniRoute — VPS serverī
+### 🛰️ Attālais režīms — palaidiet CLI šeit, bet 67router — VPS serverī
 
-Vai OmniRoute darbojas serverī? Pārvaldiet to no sava klēpjdatora ar **to pašu CLI**. Vienreiz piesakieties
+Vai 67router darbojas serverī? Pārvaldiet to no sava klēpjdatora ar **to pašu CLI**. Vienreiz piesakieties
 ar ierobežota tvēruma piekļuves pilnvaru; pēc tam katra komanda tiks izpildīta attālajā serverī.
 
 ```bash
@@ -892,13 +894,13 @@ Pilnvaru tvērumi ir `read` / `write` / `admin`; maršruti, kas palaiž procesus
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animēta termināļa demonstrācija ar OmniRoute CLI komandām — omniroute providers list, omniroute combo list un omniroute health — secīgi parādot augstākā līmeņa saskarni ar 89 komandām: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animēta termināļa demonstrācija ar 67router CLI komandām — omniroute providers list, omniroute combo list un omniroute health — secīgi parādot augstākā līmeņa saskarni ar 89 komandām: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Pievienojiet aģentu — un tas pats pārvaldīs OmniRoute
+### 🤝 Pievienojiet aģentu — un tas pats pārvaldīs 67router
 
-Padariet OmniRoute pieejamu, izmantojot **MCP**, **A2A**, **REST API**, **tīmekļa aizķeres** vai **attālo CLI** — jebkurš spējīgs aģents (vai jūsu pašu kods) iegūs piekļuvi visai vārtejai: maršrutēšanai, pakalpojumu sniedzējiem, kombinācijām, kešatmiņai, saspiešanai un atmiņai — autonomi. Tālāk norādītie HTTP galapunkti ir pieejami adresē `http://localhost:20128`.
+Padariet 67router pieejamu, izmantojot **MCP**, **A2A**, **REST API**, **tīmekļa aizķeres** vai **attālo CLI** — jebkurš spējīgs aģents (vai jūsu pašu kods) iegūs piekļuvi visai vārtejai: maršrutēšanai, pakalpojumu sniedzējiem, kombinācijām, kešatmiņai, saspiešanai un atmiņai — autonomi. Tālāk norādītie HTTP galapunkti ir pieejami adresē `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Saskarne</th><th align="left">Galapunkts / komanda</th><th align="left">Pielietojums</th></tr>
@@ -912,7 +914,7 @@ Padariet OmniRoute pieejamu, izmantojot **MCP**, **A2A**, **REST API**, **tīmek
 </table>
 
 ```bash
-# Nodrošiniet Claude Code pilnu OmniRoute rīku komplektu, izmantojot MCP:
+# Nodrošiniet Claude Code pilnu 67router rīku komplektu, izmantojot MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -928,7 +930,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Kā tas darbojas — konveijers, arhitektūra un ietaupījumu matemātika
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute saspiešanas konveijers: ilustratīvs 10 000 tokenu liels klienta pieprasījums iziet cauri 12 kombinējamiem dzinējiem — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra un OmniGlyph — un dokumentētajā kombinētajā piemērā pie nodrošinātāja var nonākt ar aptuveni 1080 tokeniem. Strukturētu saturu aizsargā saglabāšanas aizsargmehānismi un katra soļa atbilstības kontrole; skaidri norādīti režīmi ar zudumiem vai eksperimentālie režīmi var pārveidot tam atbilstošu saturu."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="67router saspiešanas konveijers: ilustratīvs 10 000 tokenu liels klienta pieprasījums iziet cauri 12 kombinējamiem dzinējiem — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra un OmniGlyph — un dokumentētajā kombinētajā piemērā pie nodrošinātāja var nonākt ar aptuveni 1080 tokeniem. Strukturētu saturu aizsargā saglabāšanas aizsargmehānismi un katra soļa atbilstības kontrole; skaidri norādīti režīmi ar zudumiem vai eksperimentālie režīmi var pārveidot tam atbilstošu saturu."/>
 
 Noklusējuma kombinētā konfigurācija izpilda `RTK → Caveman`. Kad abi darbojas ar vienu un to pašu rīku/konteksta slodzi, ietaupījumi reizinās:
 
@@ -940,7 +942,7 @@ range    = 78.4 – 94.6%
 
 Koda bloki, URL adreses, JSON un strukturēti dati ir **vienmēr aizsargāti** ar saglabāšanas dzinēju.
 
-> **Kāpēc tērēt daudz tokenu, ja pietiek ar maz?** Katrs pieprasījums iziet caur OmniRoute saspiešanas konveijeri **pārredzami** — bez jebkādām izmaiņām klienta pusē. Tas tagad ir **12 kombinējamu dzinēju steks**, kas darbojas secībā un tiek brīvi kombinēts katrā maršrutēšanas kombinācijā — balstoties idejās no [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) un [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Kāpēc tērēt daudz tokenu, ja pietiek ar maz?** Katrs pieprasījums iziet caur 67router saspiešanas konveijeri **pārredzami** — bez jebkādām izmaiņām klienta pusē. Tas tagad ir **12 kombinējamu dzinēju steks**, kas darbojas secībā un tiek brīvi kombinēts katrā maršrutēšanas kombinācijā — balstoties idejās no [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) un [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 12 dzinēju steks
 
@@ -1025,7 +1027,7 @@ omniroute
 ```
 
 > 💡 Redzat `npm warn ERESOLVE` vai peer-dep brīdinājumus? [Tie ir nekaitīgi](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Vai izmantojat npm 11 vai jaunāku versiju?** npm var bloķēt pakotņu dzīves cikla skriptus, ja vien tie nav atļauti. OmniRoute `postinstall` (`node scripts/build/postinstall.mjs`) ir nepieciešams, lai sagatavotu tā natīvos izpildlaika failus. Globāli instalējot, atļaujiet npm brīdinājumā minētās pakotnes. Pakotņu kopai, ko norāda OmniRoute 3.8.53:
+> **Vai izmantojat npm 11 vai jaunāku versiju?** npm var bloķēt pakotņu dzīves cikla skriptus, ja vien tie nav atļauti. 67router `postinstall` (`node scripts/build/postinstall.mjs`) ir nepieciešams, lai sagatavotu tā natīvos izpildlaika failus. Globāli instalējot, atļaujiet npm brīdinājumā minētās pakotnes. Pakotņu kopai, ko norāda 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1064,9 +1066,9 @@ Model:    auto            (maršrutē starp atbilstošajiem savienojumiem — va
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Jums vajadzētu redzēt savienoto modeļu sarakstu. 🎉 Tas arī viss — sāciet programmēt, un OmniRoute automātiski maršrutēs un pārslēgsies uz rezerves variantu jūsu vietā.
+Jums vajadzētu redzēt savienoto modeļu sarakstu. 🎉 Tas arī viss — sāciet programmēt, un 67router automātiski maršrutēs un pārslēgsies uz rezerves variantu jūsu vietā.
 
-Ja jūsu klients nevar nosūtīt pielāgotas galvenes, OmniRoute piedāvā arī saderības aizstājējus ar tokenu:
+Ja jūsu klients nevar nosūtīt pielāgotas galvenes, 67router piedāvā arī saderības aizstājējus ar tokenu:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1116,7 +1118,7 @@ Pilna tabula: [Docker ceļvedis — izpildlaika RAM](docs/guides/DOCKER_GUIDE.md
 
 Standarta `bun install` un globālā instalēšana (`bun install -g omniroute`) tiek atbalstīta, izmantojot Bun izpildvides noteikšanu:
 
-- **Iebūvētais `bun:sqlite`**: darbojoties Bun vidē, OmniRoute izmanto Bun iebūvēto `bun:sqlite` draiveri, bet Node.js vidē atkāpjas uz `better-sqlite3` vai `sql.js`.
+- **Iebūvētais `bun:sqlite`**: darbojoties Bun vidē, 67router izmanto Bun iebūvēto `bun:sqlite` draiveri, bet Node.js vidē atkāpjas uz `better-sqlite3` vai `sql.js`.
 - **Automātiska Webpack komplektētāja atlase izstrādes laikā**: izstrādes režīms (`bun run dev`) automātiski nosaka Bun un atspējo Turbopack par labu Webpack, lai novērstu nesaderību ar vietējiem V8 saistījumiem. Produkcijas būvējumi (`bun run build`) precīzi ievēro `OMNIROUTE_USE_TURBOPACK` tāpat kā Node vidē: pēc noklusējuma Turbopack, bet `OMNIROUTE_USE_TURBOPACK=0`, lai būvētu ar Webpack (`Dockerfile.bun` to nodrošina kā `--build-arg`).
 - **Atsevišķs Bun Dockerfile**: vairākposmu `Dockerfile.bun` vietējiem Bun produkcijas izvietojumiem (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1200,7 +1202,7 @@ process vienā portā, tādēļ pašlaik nav atsevišķas, tikai CLI paredzētas
 
 <div align="center">
 
-# 🎬 OmniRoute darbībā
+# 🎬 67router darbībā
 
 </div>
 
@@ -1264,7 +1266,7 @@ process vienā portā, tādēļ pašlaik nav atsevišķas, tikai CLI paredzētas
 
 Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289 zināmi skatījumi** (`v > 0`) · **1.210 kanāli/profili dažādās platformās**. Neapstrādātajā panelī ir 1.976 rindas (YouTube 1.352 = 740 garie videoklipi + 612 Shorts · TikTok 334 · Instagram 290); pēc normalizācijas pēc kanoniskā URL, saglabājot lielāko katra videoklipa skatījumu skaitu, nepalika neviens dublikāts. YouTube datu vākšana ir iesaldēta kopš 2026-10-13 (API kvota bija izsmelta no 14. līdz 18.10.), bet TikTok/Instagram — kopš 2026-09-02 (nav datu vākšanas kredītu); 76 videoklipiem joprojām nav skatījumu skaita.
 
-> 🎬 **Izveidojāt video par OmniRoute?** Atveriet [problēmas pieteikumu](https://github.com/diegosouzapw/OmniRoute/issues/new) vai [diskusiju](https://github.com/diegosouzapw/OmniRoute/discussions), pievienojot saiti — mēs to parādīsim šeit.
+> 🎬 **Izveidojāt video par 67router?** Atveriet [problēmas pieteikumu](https://github.com/diegosouzapw/OmniRoute/issues/new) vai [diskusiju](https://github.com/diegosouzapw/OmniRoute/discussions), pievienojot saiti — mēs to parādīsim šeit.
 
 <br/>
 
@@ -1283,7 +1285,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
 | 🟢 **WhatsApp — 🌍 globālā grupa**              | [pievienoties grupai](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                        |
 | 🟢 **WhatsApp — 🇧🇷 Brazīlija**                  | [pievienoties grupai](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                        |
 | 🌍 **Tīmekļa vietne**                           | [omniroute.online](https://omniroute.online)                                                                                  |
-| 🌍 **🌍StHub OmniRoute kopiena (bez maksas)**   | [StHub portāls](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                        |
+| 🌍 **🌍StHub 67router kopiena (bez maksas)**    | [StHub portāls](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                        |
 | 📦 **Pirmkods**                                 | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                |
 | 🐛 **Ziņot par kļūdu**                          | [izveidot problēmas ziņojumu](https://github.com/diegosouzapw/OmniRoute/issues) — pievienojiet `npm run system-info` izvadi   |
 | 🤝 **Sniegt ieguldījumu**                       | [CONTRIBUTING.md](CONTRIBUTING.md) · [Zaru un laidienu modelis](docs/ops/BRANCHING_MODEL.md) · izvēlieties `good first issue` |
@@ -1336,8 +1338,8 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Lietotāja rokasgrāmata</a></b></td><td>Pakalpojumu sniedzēji, kombinācijas, CLI integrācija, izvietošana</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Iestatīšanas rokasgrāmata</a></b></td><td>Visas instalēšanas metodes, CLI rīku konfigurācijas, protokolu iestatīšana, taimautu regulēšana</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">CLI rīku rokasgrāmata</a></b></td><td>Atsevišķu rīku iestatīšana: Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Attālais režīms</a></b></td><td>Attālināti pārvaldiet OmniRoute (VPS) no sava klēpjdatora CLI, izmantojot ierobežotas darbības jomas piekļuves pilnvaras</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code konfigurācija</a></b></td><td>Savienojiet Claude Code ar OmniRoute (lokāli/attālināti), izmantojot <code>launch</code> un katram modelim paredzētus profilus</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Attālais režīms</a></b></td><td>Attālināti pārvaldiet 67router (VPS) no sava klēpjdatora CLI, izmantojot ierobežotas darbības jomas piekļuves pilnvaras</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code konfigurācija</a></b></td><td>Savienojiet Claude Code ar 67router (lokāli/attālināti), izmantojot <code>launch</code> un katram modelim paredzētus profilus</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Ātrā sākšana</a></b></td><td>3 darbības: instalēšana → savienošana → konfigurēšana</td></tr>
 </table>
 
@@ -1349,7 +1351,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman rokasgrāmata</a></b></td><td>Quadlet systemd integrācija, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Izvietošana virtuālajā mašīnā</a></b></td><td>Pilnīga rokasgrāmata: VM + nginx + Cloudflare iestatīšana</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Izvietošana platformā Fly.io</a></b></td><td>Izvietošana platformā Fly.io ar pastāvīgu krātuvi</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux rokasgrāmata</a></b></td><td>OmniRoute palaišana Android ierīcē, izmantojot Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux rokasgrāmata</a></b></td><td>67router palaišana Android ierīcē, izmantojot Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA rokasgrāmata</a></b></td><td>Progresīvās tīmekļa lietotnes instalēšana, kešdarbes izmantošana, arhitektūra</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Atinstalēšanas rokasgrāmata</a></b></td><td>Pilnīga noņemšana visām instalēšanas metodēm</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Vides konfigurācija</a></b></td><td>Pilns <code>.env</code> mainīgo un atsauču saraksts</td></tr>
@@ -1404,7 +1406,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
 
 # ⭐ Galvenie ieguldītāji
 
-> OmniRoute veido aizrautīga atvērtā pirmkoda kopiena. Šīs personas ir sniegušas izcilu ieguldījumu, kas tieši ietekmē projekta kvalitāti, stabilitāti un sasniedzamību. **Paldies.**
+> 67router veido aizrautīga atvērtā pirmkoda kopiena. Šīs personas ir sniegušas izcilu ieguldījumu, kas tieši ietekmē projekta kvalitāti, stabilitāti un sasniedzamību. **Paldies.**
 
 ### Ārējie ieguldītāji pēc apvienoto izmaiņu pieprasījumu skaita
 
@@ -1522,7 +1524,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
 
 <sub>Atkārtoti pārbaudīts 2026-10-18 14:44:45 UTC: repozitorija līdzautoru API ziņotie GitHub attiecinātie komiti noklusējuma zaram <code>release/v3.8.52</code>. API atgrieza 849 identitātes (429 lietotājus, 2 robotus, 418 anonīmas identitātes); šajā tabulā nav iekļauts uzturētājs, roboti un anonīmās identitātes, bet ir saglabātas vienādas vietas reitingā. Tā atšķiras gan no iepriekš redzamā apvienoto izmaiņu pieprasījumu reitinga, gan no tālāk redzamās Git metadatu uzskaites.</sub>
 
-> 🙏 Šo līdzautoru funkcijas, kļūdu labojumi un infrastruktūras uzlabojumi ir **būtiska daļa** no tā, kas padara OmniRoute uzticamu un funkcijām bagātu. Ikviens izmaiņu pieprasījums, ikviens testa gadījums un ikviens i18n tulkojuma fails ir svarīgs. Atvērto pirmkodu veido tādi cilvēki kā viņi.
+> 🙏 Šo līdzautoru funkcijas, kļūdu labojumi un infrastruktūras uzlabojumi ir **būtiska daļa** no tā, kas padara 67router uzticamu un funkcijām bagātu. Ikviens izmaiņu pieprasījums, ikviens testa gadījums un ikviens i18n tulkojuma fails ir svarīgs. Atvērto pirmkodu veido tādi cilvēki kā viņi.
 
 </div>
 
@@ -1534,7 +1536,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
 
 <div align="center">
 
-Sirsnīgs paldies cilvēkiem, kuri finansē OmniRoute no saviem līdzekļiem — ikviens ieguldījums palīdz projektam palikt bezmaksas, neatkarīgam un turpināt attīstību.
+Sirsnīgs paldies cilvēkiem, kuri finansē 67router no saviem līdzekļiem — ikviens ieguldījums palīdz projektam palikt bezmaksas, neatkarīgam un turpināt attīstību.
 
 <table>
   <tr>
@@ -1624,7 +1626,7 @@ Sirsnīgs paldies cilvēkiem, kuri finansē OmniRoute no saviem līdzekļiem —
 
 <sub>Publiskie GitHub sponsori atkārtoti pārbaudīti 2026-10-18, izmantojot GitHub Sponsors GraphQL API: 11 publiski sponsorējumi (6 aktīvi, 5 iepriekšēji) no kopumā 14. GitHub statuss <code>isActive</code> nosaka iepriekš norādītos aktīvo sponsoru apzīmējumus; iepriekšējiem publiskajiem vienreizējiem atbalstītājiem joprojām tiek izteikta pateicība, bet privātie sponsori paliek anonīmi. Ko-fi, Buy Me a Coffee, Liberapay, PIX un kriptovalūtu ziedojumi nav norādīti, jo tiem nav publiska sponsora ieraksta.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Kļūstiet par sponsoru →</a></b> — katrs dolārs palīdz OmniRoute palikt bezmaksas un neatkarīgam.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Kļūstiet par sponsoru →</a></b> — katrs dolārs palīdz 67router palikt bezmaksas un neatkarīgam.
 
 </div>
 
@@ -1696,14 +1698,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://github.com/decolua/9router)** atzarojums un Go projekta **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** TypeScript ports — un kopš tā laika katru tālāk minēto apakšsistēmu ir iedvesmojis kāds atvērtā pirmkoda projekts, kas to paveica pirmais. Katrs no tiem ir veidojis kādu konkrētu OmniRoute daļu. Šī ir mūsu pateicība tiem visiem. 🙏
+67router balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://github.com/decolua/9router)** atzarojums un Go projekta **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** TypeScript ports — un kopš tā laika katru tālāk minēto apakšsistēmu ir iedvesmojis kāds atvērtā pirmkoda projekts, kas to paveica pirmais. Katrs no tiem ir veidojis kādu konkrētu 67router daļu. Šī ir mūsu pateicība tiem visiem. 🙏
 
 > ⭐ zvaigžņu skaits pārbaudīts, izmantojot GitHub REST API, 2026. gada 18. oktobrī — piešķiriet šiem projektiem zvaigzni. Norādītais skaits ir precīzs momentuzņēmums konkrētajā datumā un laika gaitā, protams, mainīsies.
 
 ### 🧬 Izcelsme un vārteja
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Sākotnējais projekts, uz kura pamata ir veidots šis atzarojums — šeit tas papildināts ar multimodālām API un pilnībā pārrakstīts TypeScript valodā.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Go implementācija, kas iedvesmoja šo JavaScript / TypeScript portu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>MI vārteja, kuras publiskā cenu datu kopa nodrošina mūsu izmaksu uzskaites sinhronizāciju un kuras nodrošinātāju normalizācijas modelis palīdzēja veidot mūsu maršrutēšanu.</td></tr>
@@ -1711,19 +1713,19 @@ OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://git
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Modeļi, kas pārnesti uz straumes atkopšanu, aizstājvārdiem bez spriešanas, rezerves tīmekļa meklēšanu, slīdošā loga ierobežojumiem, žurnālu rediģēšanu un pastiprinātām palaišanas plūsmām.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Cursor Composer rīku izvēles, izvades ierobežojumu un rīku apstiprināšanas modeļi, kas pielāgoti vietējam Cursor izpildītājam.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Jaunas pieteikšanās un atsvaidzināšanas pilnvaru rotācijas modeļi, kas pārnesti uz Codex OAuth atkārtoto autentifikāciju.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Ar Claude Code saderīgās transformāciju noklusējuma vērtības un norēķinu galveņu darbība, kas vispārināta OmniRoute konfigurācijas vadītajā tiltā.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Tā Grok modeļu kartējumi, viltus TypeError Statsig ģenerators, pieprasījumu un ierīču noklusējuma vērtības, kā arī NDJSON atbilžu procesors tika būtiski pielāgoti OmniRoute Grok Web izpildītājam.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Ar Claude Code saderīgās transformāciju noklusējuma vērtības un norēķinu galveņu darbība, kas vispārināta 67router konfigurācijas vadītajā tiltā.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Tā Grok modeļu kartējumi, viltus TypeError Statsig ģenerators, pieprasījumu un ierīču noklusējuma vērtības, kā arī NDJSON atbilžu procesors tika būtiski pielāgoti 67router Grok Web izpildītājam.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>Galvenais netiešais pirmkoda avots, kas ir grok2api-merged pamatā; tā modeļu, galveņu, lietderīgās slodzes, Statsig un procesora implementācijas ir saglabātas Grok Web izcelsmes ķēdē.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Pamatā esošais MIT pirmkods Grok lietderīgās slodzes un ierīču noklusējuma vērtībām, Statsig ģeneratoram un <code>result.response</code> procesoram, kas pārmantots caur TQZHR un grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Netiešs avots, ko grok2api-merged norādījis sava starpniekserveru pūla slāņa izcelsmei; OmniRoute saglabā šo izcelsmes norādi, taču neapgalvo, ka tā ierobežotajā Grok Web izpildītājā būtu pārnests starpniekserveru pūls.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Tā ar sīkdatnēm autentificētais Grok starpniekserveris un <code>result.response.token</code> straumēšanas modelis palīdzēja veidot OmniRoute Grok Web transportu.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Netiešs avots, ko grok2api-merged norādījis sava starpniekserveru pūla slāņa izcelsmei; 67router saglabā šo izcelsmes norādi, taču neapgalvo, ka tā ierobežotajā Grok Web izpildītājā būtu pārnests starpniekserveru pūls.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Tā ar sīkdatnēm autentificētais Grok starpniekserveris un <code>result.response.token</code> straumēšanas modelis palīdzēja veidot 67router Grok Web transportu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Sākotnējā Grok Web implementācija izmantoja tā HTTP/pārlūka augšupstraumes dizainu; tās tiešais HTTP ceļš ir atvasināts no GrokProxy, tāpēc netiek apgalvots, ka būtu veikts neatkarīgs koda ports.</td></tr>
 </table>
 
 ### 🗜️ Konteksta un pilnvaru saspiešana — dzinēji
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Vīrusu popularitāti ieguvušais projekts „kāpēc lietot daudz žetonu, ja pietiek ar dažiem” — tā alu cilvēka runas filozofija ir mūsu standarta saspiešanas režīma un vairāk nekā 30 liekvārdības novēršanas un kondensēšanas kārtulu pamatā.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Augstas veiktspējas komandu izvades saspiešana — iedvesmoja mūsu RTK dzini, JSON filtru DSL, neapstrādātās izvades atkopšanu un secīgo RTK → Caveman konveijeru.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Atgriezeniska konteksta saspiešana (SmartCrusher) — iedvesmoja mūsu <code>headroom</code> dzini un <code>ccr</code> izgūšanas marķiera modeli.</td></tr>
@@ -1731,15 +1733,15 @@ OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://git
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>JS/ONNX ports (MobileBERT / XLM-RoBERTa), kas tiek izmantots kā mūsu LLMLingua dziņa darbinātājpavediena aizmugursistēma.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>pt-BR žetonu saspiešana — nodrošina mūsu pt-BR valodas pakotni: pleonasmu samazināšanu un liekvārdu noņemšanu, kas pielāgota Brazīlijas portugāļu valodas gramatikai.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Vīrusu popularitāti ieguvusī „slinkā vecākā izstrādātāja” YAGNI kodēšanas prasme — iedvesmoja mūsu <b>less-code</b> izvades stilu: virzību uz mazākajām funkcionējošajām izmaiņām, kas samazina _ģenerētā_ koda apjomu (izvades ass līdzinieks Caveman lakoniskajai prozai).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Tā uz darbībām orientētais un cilvēkiem ar UDHS draudzīgais atbilžu stils tika pielāgots OmniRoute kodolīgajam izvades stilam piecās valodās.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Tā uz darbībām orientētais un cilvēkiem ar UDHS draudzīgais atbilžu stils tika pielāgots 67router kodolīgajam izvades stilam piecās valodās.</td></tr>
 </table>
 
 ### 🧩 Kompakti formāti, žetonu izpēte un kodu izprotoši rīki
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Uz žetoniem orientēta objektu notācija — tās kolonnveida galvenes un rindu modelis noteica mūsu tabulārās kompaktēšanas posma aprises.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Tā kompaktais grafa formāts un vispārīgā profila dizains ietekmēja OmniRoute tabulāro kompaktēšanu un Headroom kodeka formātu.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Tā kompaktais grafa formāts un vispārīgā profila dizains ietekmēja 67router tabulāro kompaktēšanu un Headroom kodeka formātu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>MIT licencētā TypeScript implementācija, kas tieši iekļauta un paplašināta kā Headroom vispārīgā profila kodeks.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite kešatmiņa un katras sesijas konteksta izmaiņas — iedvesmoja mūsu <code>session-dedup</code> dzini.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Bash izvades kompaktēšana un MCP profili — iedvesmoja mūsu disciplinēto atteikšanos no saspiešanas un MCP rīku manifesta samazināšanu.</td></tr>
@@ -1756,7 +1758,7 @@ OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://git
 ### 🧠 Atmiņa un RAG
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Universāls atmiņas slānis — tā starpniekservera kā rakstīšanas/lasīšanas robežas modelis veidoja mūsu atmiņas arhitektūru.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Stāvokli saglabājoši aģenti ar līmeņotu atmiņu — iedvesmoja mūsu līmeņoto konteksta kontroles un atkopšanas (CCR) modeli.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>ProblemMap taksonomija ar 16 atkārtotiem RAG/LLM kļūmju režīmiem — kopīgā terminoloģija mūsu problēmu novēršanas rokasgrāmatā.</td></tr>
@@ -1765,15 +1767,15 @@ OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://git
 ### 🛰️ Datplūsmas pārbaude, MITM un caurspīdīgs starpniekserveris
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Kodēšanas asistenta ↔ LLM datplūsmas MITM pārtveršana/analīze palīdzēja noteikt sākotnējās datplūsmas inspektora prasības. Četri iepriekš atvasināti moduļi — SSE apvienošana, sarunu normalizēšana, noslēpumu maskēšana un galveņu sanitizēšana — ir aizstāti ar neatkarīgām tīrtelpas implementācijām, kuru pamatā ir publiski protokolu standarti. Abas resursdatora tiešās caurlaides saskarnes (<code>passthrough.ts</code> un <code>_internal/bypass.cjs</code>) joprojām ir neatkarīgi klasificētas OmniRoute iekšējās implementācijas; šīs aizstāšanas ietvaros tās netika pārrakstītas.</td></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Kodēšanas asistenta ↔ LLM datplūsmas MITM pārtveršana/analīze palīdzēja noteikt sākotnējās datplūsmas inspektora prasības. Četri iepriekš atvasināti moduļi — SSE apvienošana, sarunu normalizēšana, noslēpumu maskēšana un galveņu sanitizēšana — ir aizstāti ar neatkarīgām tīrtelpas implementācijām, kuru pamatā ir publiski protokolu standarti. Abas resursdatora tiešās caurlaides saskarnes (<code>passthrough.ts</code> un <code>_internal/bypass.cjs</code>) joprojām ir neatkarīgi klasificētas 67router iekšējās implementācijas; šīs aizstāšanas ietvaros tās netika pārrakstītas.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Caurspīdīga starpniekservera maršrutēšana katram procesam — iedvesmoja mūsu pret avārijām drošo MITM darbības pārtraukšanu, ligzdu dīkstāves noildzes, procesu attiecināšanu, izmantojot <code>/proc</code>, un TPROXY tvēršanu.</td></tr>
 </table>
 
 ### 📚 Modeļu dati, novērojamība un lietotāja saskarne
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Atvērta MI modeļu specifikāciju, cenu un iespēju datubāze — iebūvēti sinhronizēta ar mūsu modeļu katalogu.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Uz mezgliem balstīta grafu bibliotēka, kas nodrošina mūsu reāllaika saspiešanas studijas un kombināciju/maršrutēšanas studijas darbību.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>LangGraph Studio darbplūsmas grafika vizualizācija reāllaikā iedvesmoja mūsu studiju reāllaika kaskādes skatu.</td></tr>
@@ -1786,19 +1788,19 @@ OmniRoute balstās uz milžu pleciem. Tas aizsākās kā **[9router](https://git
 ### 🛡️ Drošība
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Atlasīts pēc noklusējuma drošu bibliotēku saraksts, kas nosaka mūsu drošības risinājumu izvēli (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Papildinošie rīki
 
 <table>
-  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja OmniRoute</th></tr>
+  <tr><th align="left">Projekts</th><th align="center">⭐</th><th align="left">Kā tas iedvesmoja 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Iedvesmoja pieprasījumu deduplicēšanu, ārkārtas bezmaksas atkāpšanās risinājumu, iespraužamas Auto-Combo stratēģijas un daudzvalodu nolūka klasifikāciju.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Tā kontu ņemošā modeļu pārkartēšana, izpildāmā faila ceļa validācija un plānu etiķešu darbība palīdzēja veidot OmniRoute Antigravity izpildlaika vidi.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Tā kompaktais kvotas atiestatīšanas atpakaļskaitīšanas formāts iedvesmoja atbilstošo pakalpojumu sniedzēja ierobežojumu attēlojumu OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Tā ACP integrācijas iedvesmoja OmniRoute instalēto CLI aģentu automātisko noteikšanu.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificēja Grok Build kvotas saskarni; pēc tam OmniRoute neatkarīgi pārbaudīja un izlaboja faktisko datu pārraides formātu.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Tā kontu ņemošā modeļu pārkartēšana, izpildāmā faila ceļa validācija un plānu etiķešu darbība palīdzēja veidot 67router Antigravity izpildlaika vidi.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Tā kompaktais kvotas atiestatīšanas atpakaļskaitīšanas formāts iedvesmoja atbilstošo pakalpojumu sniedzēja ierobežojumu attēlojumu 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Tā ACP integrācijas iedvesmoja 67router instalēto CLI aģentu automātisko noteikšanu.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificēja Grok Build kvotas saskarni; pēc tam 67router neatkarīgi pārbaudīja un izlaboja faktisko datu pārraides formātu.</td></tr>
 </table>
 
 ## 📄 Licence
@@ -1811,7 +1813,7 @@ MIT licence — sīkāku informāciju skatiet [LICENSE](LICENSE).
 
 **[⬆ Atpakaļ uz augšu](#-omniroute)** · Izveidots ar ❤️ atvērtā koda AI kopienai.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT licence · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · MIT licence · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions iespējotas kopienas jautājumiem un atbildēm -->

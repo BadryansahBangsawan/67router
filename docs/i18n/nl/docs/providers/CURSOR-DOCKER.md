@@ -4,7 +4,7 @@
 
 ---
 
-Wanneer OmniRoute binnen Docker wordt uitgevoerd, werken de verouderde flows **Importeren uit Cursor IDE** /
+Wanneer 67router binnen Docker wordt uitgevoerd, werken de verouderde flows **Importeren uit Cursor IDE** /
 `cursor-agent` niet, omdat de container de Cursor-installatie op de host niet kan
 zien. Gebruik in plaats daarvan **Inloggen met Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ zien. Gebruik in plaats daarvan **Inloggen met Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _binnen_ de container.
    In Docker Desktop voor macOS wordt de IDE-database van de host standaard niet gekoppeld, en
    het besturingssysteem van de container is Linux, zelfs wanneer de host Darwin gebruikt.
-2. **Geen `cursor-agent`-binair bestand** — Officiële OmniRoute-images bevatten geen
+2. **Geen `cursor-agent`-binair bestand** — Officiële 67router-images bevatten geen
    `cursor-agent`. Beschikbare modellen werden voorheen opgehaald door
    `cursor-agent --list-models` uit te voeren, met een statische catalogus als fallback.
 3. **Verkeerd binair bestand** — Koppel **geen** macOS-versie van `cursor-agent` via een bind mount aan een Linux-
@@ -24,11 +24,11 @@ zien. Gebruik in plaats daarvan **Inloggen met Cursor** (deep-control PKCE).
 
 1. Open **Dashboard → Providers → Cursor**.
 2. Kies het tabblad **Inloggen met Cursor**.
-3. Klik op **Inloggen met Cursor** — OmniRoute opent
+3. Klik op **Inloggen met Cursor** — 67router opent
    `https://cursor.com/loginDeepControl?…` in de browser op uw **host**.
-4. Bevestig de aanmelding in de browser en ga vervolgens terug naar het dashboard. OmniRoute
+4. Bevestig de aanmelding in de browser en ga vervolgens terug naar het dashboard. 67router
    pollt `api2.cursor.sh/auth/poll` totdat de tokens beschikbaar zijn.
-5. OmniRoute slaat **toegangs- en vernieuwingstokens** op en vernieuwt deze via
+5. 67router slaat **toegangs- en vernieuwingstokens** op en vernieuwt deze via
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Voor deze methode zijn Cursor IDE en `cursor-agent` niet vereist in de container.
@@ -37,10 +37,10 @@ Voor deze methode zijn Cursor IDE en `cursor-agent` niet vereist in de container
 
 Met een aangemelde verbinding geven **Beschikbare modellen / Automatische synchronisatie** de voorkeur aan de
 HTTP-catalogus `AiService/AvailableModels` van Cursor, met het bearer-token van de verbinding.
-Als dat mislukt, probeert OmniRoute alsnog `cursor-agent` op de host (indien aanwezig), gevolgd door
+Als dat mislukt, probeert 67router alsnog `cursor-agent` op de host (indien aanwezig), gevolgd door
 de statische registerseed.
 
-OmniRoute toont **`auto`** altijd in de catalogus (weergavenaam “Auto”), plus
+67router toont **`auto`** altijd in de catalogus (weergavenaam “Auto”), plus
 routermodi in OpenCodex-stijl: **`auto-cost`**, **`auto-balance`** en
 **`auto-intelligence`**. In de communicatie met Cursor worden deze gekoppeld aan het model `default`
 (met een `optimization`-`ModelParameter` voor de drie varianten). Geef de voorkeur aan
@@ -87,7 +87,7 @@ is niet langer vereist).
 ## Lege beurten / gebruik uitgeput
 
 Wanneer Cursor een Run accepteert maar geen assistenttekst retourneert (wat vaak voorkomt wanneer het gebruik van
-premiumfuncties is uitgeput), toont OmniRoute een bruikbare **429** (quotumaanwijzingen) of
+premiumfuncties is uitgeput), toont 67router een bruikbare **429** (quotumaanwijzingen) of
 **502** met instructies — niet alleen “Provider returned empty content”. Streamingfouten
 zoals `not_found: AI Model Not Found` (gebruiksvenster uitgeput) worden
 geclassificeerd als **Cursor-snelheidslimiet / gebruik overschreden** en behouden die melding
@@ -97,7 +97,7 @@ de limieten van het Cursor-abonnement.
 
 ## Clientversie (headless)
 
-Zonder een lokale installatie van `cursor-agent` bepaalt OmniRoute
+Zonder een lokale installatie van `cursor-agent` bepaalt 67router
 `x-cursor-client-version` via de omgevingsvariabele `CURSOR_AGENT_CLI_VERSION`, vervolgens via een op schijf gecachte
 scrape van het Cursor-installatiescript en ten slotte via een vastgezette build-id. Overschrijf dit indien nodig met
 `CURSOR_AGENT_CLI_VERSION`.

@@ -31,7 +31,7 @@ Iga kogumis oleva kandidaadi puhul (`open-sse/services/autoCombo/virtualFactory.
 kohe pärast `filterPaidOnlyCandidates`-i):
 
 1. **Puudub täielikult loendist `FREE_MODEL_BUDGETS`** → välistatakse. See hõlmab tegelikult tasulisi mudeleid ja kõiki
-   teenusepakkujaid/mudeleid, mida OmniRoute pole veel liigitanud — uued kandidaadid on alguses välistatud, mitte kaasatud.
+   teenusepakkujaid/mudeleid, mida 67router pole veel liigitanud — uued kandidaadid on alguses välistatud, mitte kaasatud.
 2. **`freeType: "keyless"`** → läbib kontrolli kohe, **kuid ainult siis, kui kandidaat saabus tõepoolest
    autentimiseta tee kaudu** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Selle kandidaadi jaoks pole identimisteavet,
@@ -86,7 +86,7 @@ leiate failist `tests/unit/autoCombo/strict-zero-cost-connection-safety.test.ts`
 (võtmeta möödapääsu juhud A/B/C, mitme konto juhud 1–5).
 
 `automaatselt avastatud`: homme lisatav teenusepakkuja/mudel, millel on õiged metaandmed
-(kataloogis olemas, kasutusadapteriga, `hardStopGuaranteed: true`), on kasutatav kohe, kui OmniRoute
+(kataloogis olemas, kasutusadapteriga, `hardStopGuaranteed: true`), on kasutatav kohe, kui 67router
 sellest teada saab — koodi pole vaja muuta, lubatud loendisse pole vaja kirjet lisada ega selles moodulis
 midagi redigeerida. Kataloogist eemaldatud teenusepakkuja või mudel kaob samal viisil. Regressioonitõendi
 leiate failist `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (sisestatavate

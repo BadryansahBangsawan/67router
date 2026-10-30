@@ -45,7 +45,7 @@ dadurch wird der vollständig automatische Ablauf wiederhergestellt, den das Pro
 WS1.3-Garantie bestehen bleibt (ein geleaktes Token kann nicht allein veröffentlichen — es gibt kein Token).
 
 **Einmalige Einrichtung (Eigentümer):** npmjs.com → Paket `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: Eigentümer `diegosouzapw`, Repository `OmniRoute`, Workflow `npm-publish.yml`
+Publisher_ → GitHub: Eigentümer `diegosouzapw`, Repository `67router`, Workflow `npm-publish.yml`
 (Umgebung: keine). Solange diese Konfiguration nicht vorhanden ist, schlägt der automatische Schritt mit `ENEEDAUTH` fehl:
 erneut mit `publish_mode=staged` (siehe unten) oder `direct` auslösen.
 

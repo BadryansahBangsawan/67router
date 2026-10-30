@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` ले वास्तविक Claude Code runtime लाई OmniRoute को स्थानीय Anthropic
+`devin-cli-agentic` ले वास्तविक Claude Code runtime लाई 67router को स्थानीय Anthropic
 Messages endpoint प्रयोग गर्न दिन्छ, जबकि आधिकारिक Devin CLI ले ACP stdio मार्फत मोडेलका
 प्रतिक्रियाहरू उपलब्ध गराउँछ। यसले विद्यमान Anthropic, Claude OAuth, Claude Web वा
 `devin-cli` प्रदायकहरूलाई परिमार्जन गर्दैन।
@@ -20,7 +20,7 @@ combo routing ले यसलाई बेवास्ता गर्नेछ
 > `swe-1-7-lightning` मार्फत तीनवटा अलग-अलग scenario पूरा गर्यो; उक्त अन्तिम live run ले
 > क्लाइन्ट-स्वामित्वका `Read`, `Edit`, र `Bash` turn, सफल `npm test` परिणाम, project command
 > र skill discovery, Devin-only routing, तथा शून्य Claude egress प्रमाणित गर्यो। त्यसपछि pin
-> लाई `2.1.258` मा बढाइयो (OmniRoute को Claude identity ले प्रतिरूपण गर्ने CLI generation,
+> लाई `2.1.258` मा बढाइयो (67router को Claude identity ले प्रतिरूपण गर्ने CLI generation,
 > र Fable 5.1 tier लाई native रूपमा उपलब्ध गराउने पहिलो संस्करण-शृंखला)। नयाँ pin मा pinned
 > base image माथि install layer र `claude --version` प्रमाणित गरिए, र bridge unit suite,
 > `compose config` तथा static isolation proof पास हुन्छन् — तर offline mock scenario र live
@@ -53,12 +53,12 @@ Parser ले प्रत्येक model turn मा एउटा मात�
 स्वीकार गर्छ। यसले request को tool list सँग name जाँच गर्छ, उक्त tool को JSON Schema
 अनुसार arguments validate गर्छ, narrative र actions को मिश्रण अस्वीकार गर्छ, र एउटा
 सीमित repair प्रयास अनुमति दिन्छ। त्यसपछि Claude Code ले नतिजास्वरूप प्राप्त Anthropic
-`tool_use` लाई स्थानीय रूपमा execute गर्छ र `tool_result` लाई OmniRoute मार्फत फिर्ता
+`tool_use` लाई स्थानीय रूपमा execute गर्छ र `tool_result` लाई 67router मार्फत फिर्ता
 पठाउँछ।
 
 ## स्वचालित routing
 
-यो प्रदायक block नगरिएको अवस्थामा OmniRoute का `auto/*` candidate pools का लागि योग्य
+यो प्रदायक block नगरिएको अवस्थामा 67router का `auto/*` candidate pools का लागि योग्य
 हुन्छ। Candidate eligibility ले चयनको सुनिश्चितता गर्दैन: combo को routing strategy (उदाहरणका
 लागि, last-known-good) ले अर्को प्रदायकलाई प्राथमिकता दिन सक्छ। प्रत्येक request Devin
 मार्फत नै जानुपर्ने भए `dva/<model>` वा Devin-first combo प्रयोग गर्नुहोस्।
@@ -70,16 +70,16 @@ Parser ले प्रत्येक model turn मा एउटा मात�
 
 - UID/GID `10001:10001` का रूपमा, पढ्न-मात्र मिल्ने मूल फाइल प्रणाली, हटाइएका क्षमताहरू र
   `no-new-privileges` सहित सञ्चालन गर्छन्;
-- निजी `/home/bridge`, समर्पित Claude कन्फिगरेसन भोल्युम, पृथक OmniRoute डेटा
+- निजी `/home/bridge`, समर्पित Claude कन्फिगरेसन भोल्युम, पृथक 67router डेटा
   र छुट्टै `devin-auth` भोल्युम प्रयोग गर्छन्;
 - प्रयोगपछि हटाउन मिल्ने `.sandbox` कार्यक्षेत्र/प्रमाण मात्र माउन्ट गर्छन्;
 - होस्टको होम, Keychain, SSH, क्लाउड प्रमाणपत्र वा Docker socket माउन्ट गर्दैनन्;
 - स्पष्ट वातावरणहरू निर्माण गर्छन् र Anthropic API/OAuth/राउटिङ चरहरू हटाउँछन्;
 - Claude Code अनुमानलाई स्थानीय-मात्र कुञ्जीसहित `http://omniroute:20128` मा मात्र निर्देशित गर्छन्।
 
-अफलाइन प्रोफाइलले आन्तरिक नेटवर्क प्रयोग गर्छ। लाइभ प्रोफाइलमा, OmniRoute ले
+अफलाइन प्रोफाइलले आन्तरिक नेटवर्क प्रयोग गर्छ। लाइभ प्रोफाइलमा, 67router ले
 `network-guard` मार्फत मात्र आधिकारिक Devin एन्डपोइन्टहरूमा पहुँच गर्छ; असम्बन्धित गन्तव्यहरू अस्वीकार गरिन्छन्।
-Claude Code सँग छुट्टै सबै बहिर्गमन अस्वीकार गर्ने गार्ड छ र त्यसले `NO_PROXY` मार्फत स्थानीय OmniRoute
+Claude Code सँग छुट्टै सबै बहिर्गमन अस्वीकार गर्ने गार्ड छ र त्यसले `NO_PROXY` मार्फत स्थानीय 67router
 सेवामा मात्र पहुँच गर्न सक्छ। गार्ड अडिट फाइलहरू तिनको गार्ड प्रक्रियाद्वारा मात्र माउन्ट गरिन्छन्।
 स्क्रिप्टहरूले टोकन-रहित प्रमाण निर्यात गर्नुअघि फाइल स्वामित्व, मोड, लिङ्क सङ्ख्या र प्रत्येक निर्णय
 प्रमाणित गर्छन्।

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Utolsó frissítés:** 2026-06-28 — v3.8.40
 
-Az OmniRoute egy WordPress-stílusú bővítményrendszerrel érkezik. A bővítmények önálló
+Az 67router egy WordPress-stílusú bővítményrendszerrel érkezik. A bővítmények önálló
 könyvtárak — mindegyik egy `plugin.json` manifeszttel és egy belépési fájllal —, amelyek
 bekapcsolódnak a kérésfeldolgozási folyamatba (`onRequest` / `onResponse` / `onError`), valamint
 az életciklus-eseményekbe (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -155,7 +155,7 @@ változtatás nélkül átengedhetők.
 
 ### Bővítménykönyvtár
 
-A bővítmények az OmniRoute adatkönyvtárában találhatók:
+A bővítmények az 67router adatkönyvtárában találhatók:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

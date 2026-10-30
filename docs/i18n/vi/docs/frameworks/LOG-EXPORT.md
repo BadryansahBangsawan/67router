@@ -4,7 +4,7 @@
 
 ---
 
-Xuất liên tục, tăng dần nhật ký cuộc gọi OmniRoute sang một kho phân tích bên ngoài.
+Xuất liên tục, tăng dần nhật ký cuộc gọi 67router sang một kho phân tích bên ngoài.
 
 Tab Logs trên bảng điều khiển lưu lịch sử yêu cầu trong SQLite (`call_logs`), với dung lượng bị giới hạn bởi cơ chế
 xoay vòng và chính sách lưu giữ. Tính năng xuất nhật ký chuyển cùng một tập bản ghi ra ngoài theo lịch để dữ liệu có thể tồn tại lâu hơn

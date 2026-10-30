@@ -4,7 +4,7 @@
 
 ---
 
-Jak OmniRoute odhaduje, zaznamenává a vykazuje náklady každého požadavku — a proč je
+Jak 67router odhaduje, zaznamenává a vykazuje náklady každého požadavku — a proč je
 číslo na řídicím panelu **ukazatelem úspor**, nikoli účtem.
 
 Viz také: [Uživatelská příručka](./USER_GUIDE.md) · [Přehled funkcí](./FEATURES.md)
@@ -13,11 +13,11 @@ Viz také: [Uživatelská příručka](./USER_GUIDE.md) · [Přehled funkcí](./
 
 ## Co to je (a co to není)
 
-OmniRoute přiřazuje každému dokončení náklady v USD za jednotlivý požadavek vynásobením počtu
+67router přiřazuje každému dokončení náklady v USD za jednotlivý požadavek vynásobením počtu
 tokenů cenovými sazbami modelu. Tyto údaje slouží jako podklad pro řídicí panel **Náklady**,
 CLI `omniroute cost` / `omniroute usage`, exporty CSV/JSON a rozpočty jednotlivých API klíčů.
 
-> **„Náklady“ na řídicím panelu jsou ukazatelem úspor, nikoli účtem.** OmniRoute vám nikdy nic neúčtuje
+> **„Náklady“ na řídicím panelu jsou ukazatelem úspor, nikoli účtem.** 67router vám nikdy nic neúčtuje
 > — směruje vaše požadavky k poskytovatelům, které jste již připojili (vaše vlastní
 > předplatná, bezplatné tarify a API klíče). „Celkové náklady 290 $“ vzniklé výhradně u bezplatných
 > modelů znamenají, že jste placenému API **přibližně 290 $ _nezaplatili_**. Tento údaj je _odhadem_
@@ -29,7 +29,7 @@ na řídicím panelu jsou ukazatelem úspor, nikoli účtem).
 
 Protože jde o odhad:
 
-- Závisí na cenové tabulce, kterou má OmniRoute pro každý model. Model bez záznamu
+- Závisí na cenové tabulce, kterou má 67router pro každý model. Model bez záznamu
   o ceně přispívá náklady `0` (v průzkumníku se zobrazuje jako řádek „Starší / bezplatné“).
 - Provoz v rámci bezplatných tarifů a předplatných stále akumuluje _odhadované_ náklady — jde
   o částku, kterou šetříte, nikoli o dlužnou částku.
@@ -47,7 +47,7 @@ Náklady vycházejí z cenové tabulky, která se vyhodnocuje podle následujíc
 2. **Synchronizované externí ceny** — načítané z veřejného souboru LiteLLM
    `model_prices_and_context_window.json`, když je synchronizace povolena (ukládají se do samostatného
    jmenného prostoru `pricing_synced`, takže nikdy nepřepíšou vaše vlastní hodnoty).
-3. **Pevně zakódované výchozí hodnoty** — dodávané s OmniRoute.
+3. **Pevně zakódované výchozí hodnoty** — dodávané s 67router.
 
 Synchronizace externích cen je **volitelná** a ve výchozím nastavení zakázaná. Související proměnné prostředí
 (viz [`.env.example`](../../.env.example)):
@@ -198,7 +198,7 @@ Všechny vyžadují autentizaci pro správu (loopback/JWT prostřednictvím
 
 ## CLI
 
-CLI nástroje OmniRoute zpřístupňuje příkazy pro náklady, využití a ceny (registrované v
+CLI nástroje 67router zpřístupňuje příkazy pro náklady, využití a ceny (registrované v
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

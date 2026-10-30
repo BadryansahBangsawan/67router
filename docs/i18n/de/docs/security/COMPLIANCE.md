@@ -7,7 +7,7 @@
 > **Quelle der Wahrheit:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute protokolliert administrative Aktionen, Authentifizierungsereignisse, Änderungen am Lebenszyklus von Anbieterzugangsdaten und Aufrufe von MCP-Tools in SQLite-gestützten Audit-Tabellen. Diese Seite beschreibt, was protokolliert wird, wo die Daten gespeichert werden, wie lange sie aufbewahrt werden, wie API-Schlüssel die Protokollierung deaktivieren können und wie die Daten abgefragt werden können.
+67router protokolliert administrative Aktionen, Authentifizierungsereignisse, Änderungen am Lebenszyklus von Anbieterzugangsdaten und Aufrufe von MCP-Tools in SQLite-gestützten Audit-Tabellen. Diese Seite beschreibt, was protokolliert wird, wo die Daten gespeichert werden, wie lange sie aufbewahrt werden, wie API-Schlüssel die Protokollierung deaktivieren können und wie die Daten abgefragt werden können.
 
 Die Implementierung befindet sich in `src/lib/compliance/index.ts` (T-43 — „Compliance-Kontrollen“) und `src/lib/compliance/providerAudit.ts`. Audit-Schreibvorgänge lösen niemals Ausnahmen aus: Bei einem Fehler wird dieser stillschweigend abgefangen, damit die Audit-Protokollierung den eigentlichen Anfrageablauf nicht unterbrechen kann.
 

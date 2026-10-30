@@ -5,11 +5,11 @@
 ---
 
 > **Statuss:** Vispārēji pieejams.
-> **Mērķauditorija:** Operatori, kuri savieno OpenCode ar OmniRoute izvietojumu.
+> **Mērķauditorija:** Operatori, kuri savieno OpenCode ar 67router izvietojumu.
 > **Patiesais avots (konfigurācijas shēma):** `src/shared/services/opencodeConfig.ts`
 > **Patiesais avots (npm pakotne):** `@omniroute/opencode-provider/` (publicējama darbvieta)
 
-[OpenCode](https://opencode.ai) ir aģentisks CLI/darbvirsmas MI klients. Tas nolasa savu nodrošinātāju katalogu no `~/.config/opencode/opencode.json` (vai `opencode.jsonc`) un izmanto shēmu vietnē `https://opencode.ai/config.json`. OmniRoute sevi pakalpojumā OpenCode piedāvā kā vienu no šiem nodrošinātājiem — katrs pieprasījums plūst caur OmniRoute standarta, ar OpenAI saderīgo `/v1` saskarni, tādēļ OpenCode automātiski izmanto Auto-Combo maršrutēšanas, ķēdes pārtraucēju, atslēgu politiku, novērojamības u.c. priekšrocības.
+[OpenCode](https://opencode.ai) ir aģentisks CLI/darbvirsmas MI klients. Tas nolasa savu nodrošinātāju katalogu no `~/.config/opencode/opencode.json` (vai `opencode.jsonc`) un izmanto shēmu vietnē `https://opencode.ai/config.json`. 67router sevi pakalpojumā OpenCode piedāvā kā vienu no šiem nodrošinātājiem — katrs pieprasījums plūst caur 67router standarta, ar OpenAI saderīgo `/v1` saskarni, tādēļ OpenCode automātiski izmanto Auto-Combo maršrutēšanas, ķēdes pārtraucēju, atslēgu politiku, novērojamības u.c. priekšrocības.
 
 Tiek atbalstīti **divi integrācijas veidi**. Izvēlieties vienu — abi ģenerē vienādu konfigurāciju.
 
@@ -17,16 +17,16 @@ Tiek atbalstīti **divi integrācijas veidi**. Izvēlieties vienu — abi ģener
 
 ## 1. veids — CLI ģenerators (bez npm instalēšanas)
 
-Ieteicams galalietotājiem. Iekļauts OmniRoute komplektācijā. Pārraksta `opencode.json` tā pašreizējā atrašanās vietā.
+Ieteicams galalietotājiem. Iekļauts 67router komplektācijā. Pārraksta `opencode.json` tā pašreizējā atrašanās vietā.
 
 ```bash
-# Pēc OmniRoute instalēšanas (npm i -g @omniroute/cli vai lokāls klons)
+# Pēc 67router instalēšanas (npm i -g @omniroute/cli vai lokāls klons)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Fonā CLI izsauc `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), tādēļ esošajā `opencode.json` tiek saglabāti citi nodrošinātāji un komentāri. OmniRoute ieraksts tiek atomāri pievienots vai aizstāts.
+Fonā CLI izsauc `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), tādēļ esošajā `opencode.json` tiek saglabāti citi nodrošinātāji un komentāri. 67router ieraksts tiek atomāri pievienots vai aizstāts.
 
 Iegūtais fails (noklusējuma modeļu katalogs):
 
@@ -90,8 +90,8 @@ Abi veidi izveido vienādu `provider.omniroute.npm: "@ai-sdk/openai-compatible"`
 ```
 OpenCode lietotāja saskarne/aģents
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute OpenAI saskarne)
-         → OmniRoute /v1/chat/completions apdarinātājs (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router OpenAI saskarne)
+         → 67router /v1/chat/completions apdarinātājs (open-sse/handlers/chatCore.ts)
             → kombinētā maršrutēšana / Auto-Combo / izpildītājs
                → augšupējais nodrošinātājs
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Varat tos pārrakstīt, izmantojot `models: [...]`. Ieteicamie papildinājumi:
 
-- `"auto"` — padara pieejamu OmniRoute [Auto-Combo](../routing/AUTO-COMBO.md) maršrutētāju, kam nav nepieciešama konfigurācija. Ļauj OpenCode izvēlēties „labāko pieejamo modeli”, neveicot kataloga vērtību tiešu iestatīšanu kodā.
-- `"<combo-name>"` — jebkura kombinācija, ko esat definējis informācijas panelī; OmniRoute to atrisina pārskatāmi.
+- `"auto"` — padara pieejamu 67router [Auto-Combo](../routing/AUTO-COMBO.md) maršrutētāju, kam nav nepieciešama konfigurācija. Ļauj OpenCode izvēlēties „labāko pieejamo modeli”, neveicot kataloga vērtību tiešu iestatīšanu kodā.
+- `"<combo-name>"` — jebkura kombinācija, ko esat definējis informācijas panelī; 67router to atrisina pārskatāmi.
 
 ---
 
@@ -135,29 +135,29 @@ Palīgfunkcija pieņem abas formas un izvada tieši vienu `/v1`:
 
 ## Autentifikācijas režīmi
 
-| OmniRoute iestatījums                            | Ieteicamā `apiKey` vērtība                                                          |
+| 67router iestatījums                             | Ieteicamā `apiKey` vērtība                                                          |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (lokāli pēc noklusējuma) | `sk_omniroute` (literāla viettura vērtība)                                          |
 | `REQUIRE_API_KEY=true`                           | Īsta katram lietotājam paredzēta API atslēga no informācijas paneļa → API atslēgas. |
 
-Anthropic stila klientiem, kas nosūta `x-api-key` un `anthropic-version`, OmniRoute funkcija `extractApiKey` pieņem arī atslēgu no `x-api-key`. OpenCode izmanto OpenAI saskarni, tādēļ tas vienmēr nosūtīs `Authorization: Bearer ${apiKey}` — šeit nav piemērojams neviens īpašs Anthropic gadījums.
+Anthropic stila klientiem, kas nosūta `x-api-key` un `anthropic-version`, 67router funkcija `extractApiKey` pieņem arī atslēgu no `x-api-key`. OpenCode izmanto OpenAI saskarni, tādēļ tas vienmēr nosūtīs `Authorization: Bearer ${apiKey}` — šeit nav piemērojams neviens īpašs Anthropic gadījums.
 
 ---
 
 ## Problēmu novēršana
 
-| Pazīme                                               | Cēlonis                                                                                | Risinājums                                                                                                                  |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `404` katram pieprasījumam, kura URL satur `/v1/v1/` | Novecojusi konfigurācija no spraudņa pirms v3.8, kas divreiz pievienoja `/v1`.         | Atkārtoti ģenerējiet, izmantojot 1. vai 2. ceļu.                                                                            |
-| `401 Invalid API key`                                | OmniRoute iestatījums ir `REQUIRE_API_KEY=true`, un atslēga nav zināma.                | Izveidojiet atslēgu informācijas panelī vai iestatiet `REQUIRE_API_KEY=false` (tikai lokāli) un izmantojiet `sk_omniroute`. |
-| Modeļu saraksts OpenCode lietotāja saskarnē ir tukšs | Visi 4 noklusējuma modeļi ir paslēpti OmniRoute nodrošinātāja redzamības iestatījumos. | Norādiet `models: ["auto", ...]`, lai padarītu redzamus iespējotos modeļus.                                                 |
-| OpenCode 500 ar `cannot read property 'models'`      | Vecāka OpenCode versija (< 0.1.x) nepieņēma iekļauto `models`.                         | Jauniniet OpenCode uz versiju, kas atbilst v1 shēmai (`opencode.ai/config.json`).                                           |
+| Pazīme                                               | Cēlonis                                                                               | Risinājums                                                                                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `404` katram pieprasījumam, kura URL satur `/v1/v1/` | Novecojusi konfigurācija no spraudņa pirms v3.8, kas divreiz pievienoja `/v1`.        | Atkārtoti ģenerējiet, izmantojot 1. vai 2. ceļu.                                                                            |
+| `401 Invalid API key`                                | 67router iestatījums ir `REQUIRE_API_KEY=true`, un atslēga nav zināma.                | Izveidojiet atslēgu informācijas panelī vai iestatiet `REQUIRE_API_KEY=false` (tikai lokāli) un izmantojiet `sk_omniroute`. |
+| Modeļu saraksts OpenCode lietotāja saskarnē ir tukšs | Visi 4 noklusējuma modeļi ir paslēpti 67router nodrošinātāja redzamības iestatījumos. | Norādiet `models: ["auto", ...]`, lai padarītu redzamus iespējotos modeļus.                                                 |
+| OpenCode 500 ar `cannot read property 'models'`      | Vecāka OpenCode versija (< 0.1.x) nepieņēma iekļauto `models`.                        | Jauniniet OpenCode uz versiju, kas atbilst v1 shēmai (`opencode.ai/config.json`).                                           |
 
 ---
 
 ## Skatiet arī
 
-- [API atsauce](../reference/API_REFERENCE.md) — pilns OmniRoute REST saskarņu klāsts
+- [API atsauce](../reference/API_REFERENCE.md) — pilns 67router REST saskarņu klāsts
 - [Auto-Combo](../routing/AUTO-COMBO.md) — ko nozīmē `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Avots: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: Lo àwọn àkọọ́lẹ̀ olupèsè tìrẹ tí ó tóótun. OmniRoute ń ṣàkójọpọ̀ àwọn àsopọ̀ tí o ṣètò; kì í ṣe òun ló ń pèsè àpapọ̀ iye token tí a polówó. Ìráyè ọ̀fẹ́ lè nílò ìforúkọsílẹ̀, kọ́kọ́rọ́ API, ìfọwọ́sí, tàbí ọ̀nà ìsanwó. Àwọn ààlà olupèsè, àwọn ìlànà àṣírí, àti àwọn òfin lílò ṣì wúlò.
+> **Ní ṣókí**: Lo àwọn àkọọ́lẹ̀ olupèsè tìrẹ tí ó tóótun. 67router ń ṣàkójọpọ̀ àwọn àsopọ̀ tí o ṣètò; kì í ṣe òun ló ń pèsè àpapọ̀ iye token tí a polówó. Ìráyè ọ̀fẹ́ lè nílò ìforúkọsílẹ̀, kọ́kọ́rọ́ API, ìfọwọ́sí, tàbí ọ̀nà ìsanwó. Àwọn ààlà olupèsè, àwọn ìlànà àṣírí, àti àwọn òfin lílò ṣì wúlò.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Ọ̀pọ̀ àwọn olùpèsè AI ń fúnni ní irú **ìráàyèsí ọ̀fẹ́** kan. Ní ìbámu pẹ̀lú olùpèsè náà, èyí lè túmọ̀ sí endpoint tí kò nílò ìfàṣẹsí, ìpín tí a ń tún fúnni déédéé, ìráàyèsí tí kò ní òpin ṣùgbọ́n tí iye ìbéèrè rẹ̀ ní ààlà, ẹ̀bùn ìforúkọsílẹ̀, ìfọwọ́sí afọwọ́ṣe, tàbí ìpolówó fún ìgbà díẹ̀. Àwọn àṣàyàn kan nílò àkọọ́lẹ̀, API key, káàdì kirẹditi, KYC, tàbí gbígba àwọn òfin pàtó ti olùpèsè.
 
-OmniRoute **ń ṣàkójọpọ̀** àwọn àsopọ̀ tí a ti ṣètò sínú endpoint kan. O ṣì ní láti forúkọsílẹ̀ lọ́tọ̀ọ̀tọ̀ fún olùpèsè kọ̀ọ̀kan tí ó nílò àkọọ́lẹ̀. So àwọn àkọọ́lẹ̀ wọ̀nyẹn pọ̀, kí o sì lo `model: "auto"` láti darí ìbéèrè láàárín àwọn ibi-afẹ́ tí ó yẹ. Fífi tuntun sílẹ̀ lè má ní ibi-afẹ́ kankan tí ó yẹ tí kò nílò kọ́kọ́rọ́; fífi OmniRoute sílẹ̀ nìkan kò ṣe ìdánilójú pé ìdáhùn ìfọ̀rọ̀wérọ̀ yóò ṣàṣeyọrí.
+67router **ń ṣàkójọpọ̀** àwọn àsopọ̀ tí a ti ṣètò sínú endpoint kan. O ṣì ní láti forúkọsílẹ̀ lọ́tọ̀ọ̀tọ̀ fún olùpèsè kọ̀ọ̀kan tí ó nílò àkọọ́lẹ̀. So àwọn àkọọ́lẹ̀ wọ̀nyẹn pọ̀, kí o sì lo `model: "auto"` láti darí ìbéèrè láàárín àwọn ibi-afẹ́ tí ó yẹ. Fífi tuntun sílẹ̀ lè má ní ibi-afẹ́ kankan tí ó yẹ tí kò nílò kọ́kọ́rọ́; fífi 67router sílẹ̀ nìkan kò ṣe ìdánilójú pé ìdáhùn ìfọ̀rọ̀wérọ̀ yóò ṣàṣeyọrí.
 
 ---
 
@@ -57,7 +57,7 @@ OmniRoute **ń ṣàkójọpọ̀** àwọn àsopọ̀ tí a ti ṣètò sínú 
 
 ## Bí a Ṣe Lè Ṣàkójọpọ̀ Àwọn Ìpele Ọ̀fẹ́
 
-Idán OmniRoute ni **ṣíṣàkójọpọ̀ àwọn ìpele ọ̀fẹ́**. Dípò gbígbẹ́kẹ̀ lé olupèsè kan ṣoṣo, o so ọ̀pọ̀ àwọn olupèsè ọ̀fẹ́ pọ̀, kí o sì jẹ́ kí OmniRoute yan èyí tó dára jù lọ fún ìbéèrè kọ̀ọ̀kan láìfọwọ́ṣe.
+Idán 67router ni **ṣíṣàkójọpọ̀ àwọn ìpele ọ̀fẹ́**. Dípò gbígbẹ́kẹ̀ lé olupèsè kan ṣoṣo, o so ọ̀pọ̀ àwọn olupèsè ọ̀fẹ́ pọ̀, kí o sì jẹ́ kí 67router yan èyí tó dára jù lọ fún ìbéèrè kọ̀ọ̀kan láìfọwọ́ṣe.
 
 ### Àpẹẹrẹ: Ìborí Ìpele Ọ̀fẹ́ Tó Gbòòrò Sí I
 
@@ -68,7 +68,7 @@ So ọ̀pọ̀ àwọn olupèsè pọ̀ láti dín gbígbẹ́kẹ̀lé ìwọ̀
 3. **Pollinations** — ààyè lílò láìsí kọ́kọ́rọ́, tí ó ní ààlà ìwọ̀n ìbéèrè
 4. **LongCat** — ẹ̀bùn ìforúkọsílẹ̀ ẹ̀ẹ̀kan ṣoṣo (ó nílò KYC)
 
-Lẹ́yìn náà, lo `model: "auto"`, OmniRoute yóò sì:
+Lẹ́yìn náà, lo `model: "auto"`, 67router yóò sì:
 
 - Kọ́kọ́ gbìyànjú àsopọ̀ tó yẹ tó sì wà ní ipò gíga jù lọ
 - Tí ìwọ̀n lílò rẹ̀ bá tán tàbí àyẹ̀wò ìlera rẹ̀ bá kùnà → gbìyànjú olupèsè tí a ṣètò tẹ̀ lé e
@@ -102,7 +102,7 @@ Tẹ bọ́tìnì **+ Ṣàfikún Olùpèsè**.
 
 ### Ìgbésẹ̀ 5: Tẹ Sopọ̀
 
-Fún olùpèsè `NOAUTH`, OmniRoute kì í béèrè ẹ̀rí ìdánimọ̀ upstream. Èyí kò ṣe ìdánilójú pé upstream náà gba àwọn client ẹni-kẹta tàbí pé ó ní agbára tó wà lárọwọ́tó. Àwọn olùpèsè OAuth àti API-key gbọ́dọ̀ jẹ́ sísopọ̀ nípasẹ̀ ìlànà account tí wọ́n ṣàkọsílẹ̀. Client rẹ ṣì máa ń lo kọ́kọ́rọ́ API OmniRoute tí a fi hàn ní **Dashboard → Endpoints** nígbà tí ìfàṣẹsí router bá ṣiṣẹ́.
+Fún olùpèsè `NOAUTH`, 67router kì í béèrè ẹ̀rí ìdánimọ̀ upstream. Èyí kò ṣe ìdánilójú pé upstream náà gba àwọn client ẹni-kẹta tàbí pé ó ní agbára tó wà lárọwọ́tó. Àwọn olùpèsè OAuth àti API-key gbọ́dọ̀ jẹ́ sísopọ̀ nípasẹ̀ ìlànà account tí wọ́n ṣàkọsílẹ̀. Client rẹ ṣì máa ń lo kọ́kọ́rọ́ API 67router tí a fi hàn ní **Dashboard → Endpoints** nígbà tí ìfàṣẹsí router bá ṣiṣẹ́.
 
 ### Ìgbésẹ̀ 6: Tún Un Ṣe
 
@@ -112,7 +112,7 @@ So ọ̀pọ̀ olùpèsè tí àwọn òfin àti àwòṣe àṣírí wọn bá 
 
 ## Kíka Kátálọ́ọ̀gù Náà Lọ́nà Tó Tọ́
 
-- `NOAUTH` túmọ̀ sí pé OmniRoute kò ní béèrè ẹ̀rí ìdánimọ̀ olùpèsè lọ́wọ́ rẹ; kò sì
+- `NOAUTH` túmọ̀ sí pé 67router kò ní béèrè ẹ̀rí ìdánimọ̀ olùpèsè lọ́wọ́ rẹ; kò sì
   ṣe ìdánilójú pé iṣẹ́ yóò máa wà nígbà gbogbo, pé àṣírí yóò ní ààbò, tàbí pé agbára kò ní ààlà.
 - `hasFree` jẹ́ metadata fún ìṣàwárí. Ó lè dúró fún ìpín iṣẹ́ tó ń tún ara rẹ̀ ṣe, ìwọlé láìsí kọ́kọ́rọ́,
   kirẹ́díìtì ìforúkọsílẹ̀, ètò ìfọwọ́sí, tàbí ìpolówó.
@@ -125,15 +125,15 @@ So ọ̀pọ̀ olùpèsè tí àwọn òfin àti àwòṣe àṣírí wọn bá 
 
 ---
 
-## Bí OmniRoute Ṣe Mú Àwọn Ìpele Ọ̀fẹ́ Dára Sí I
+## Bí 67router Ṣe Mú Àwọn Ìpele Ọ̀fẹ́ Dára Sí I
 
 ### 1. Ìyípadà Sí Àfẹ́yìntì Láìfọwọ́yí
 
-Bí olùpèsè ọ̀fẹ́ kan bá dí tàbí kò ṣiṣẹ́, OmniRoute yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí. O kò nílò láti ṣe ohunkóhun.
+Bí olùpèsè ọ̀fẹ́ kan bá dí tàbí kò ṣiṣẹ́, 67router yóò gbìyànjú èyí tó tẹ̀ lé e láìfọwọ́yí. O kò nílò láti ṣe ohunkóhun.
 
 ### 2. Ìdarí Ọlọ́gbọ́n
 
-OmniRoute máa yan **olùpèsè ọ̀fẹ́ tó dára jù lọ** fún ìbéèrè kọ̀ọ̀kan ní ìbámu pẹ̀lú:
+67router máa yan **olùpèsè ọ̀fẹ́ tó dára jù lọ** fún ìbéèrè kọ̀ọ̀kan ní ìbámu pẹ̀lú:
 
 - Ìyára — Olùpèsè wo ló yára jù lọ ní báyìí?
 - Didára — Olùpèsè wo ló dára jù lọ fún iṣẹ́ yìí?
@@ -141,13 +141,13 @@ OmniRoute máa yan **olùpèsè ọ̀fẹ́ tó dára jù lọ** fún ìbéèrè
 
 ### 3. Ìfipamọ́ Tókìn
 
-Ọ̀nà ìfunpọ̀ OmniRoute lè dín àwọn tókìn ìtọ́ni àti àbájáde irinṣẹ́ tó yẹ kù. Iye
+Ọ̀nà ìfunpọ̀ 67router lè dín àwọn tókìn ìtọ́ni àti àbájáde irinṣẹ́ tó yẹ kù. Iye
 gangan tí a fipamọ́ sinmi lórí àkóónú, àwọn ẹ̀rọ tí a yàn, ìṣirò olùpèsè, àti àwọn ààtò
 ìṣòtítọ́; ìfunpọ̀ kì í sọ gbogbo ìpín olùpèsè di púpọ̀ ní iye kan pàtó.
 
 ### 4. Àtìlẹ́yìn Ọ̀pọ̀ Àkọọ́lẹ̀
 
-Bí àwọn òfin olùpèsè bá gba ọ̀pọ̀ àkọọ́lẹ̀ tàbí ẹ̀rí ìdánimọ̀ láàyè, OmniRoute lè ka
+Bí àwọn òfin olùpèsè bá gba ọ̀pọ̀ àkọọ́lẹ̀ tàbí ẹ̀rí ìdánimọ̀ láàyè, 67router lè ka
 àsopọ̀ kọ̀ọ̀kan sí olùdíje ìdarí ọ̀tọ̀ọ̀tọ̀. Má ṣe dá àwọn àkọọ́lẹ̀ àfikún sílẹ̀ láti yẹra fún
 ìpín tàbí ìlànà ààyè olùpèsè.
 
@@ -162,7 +162,7 @@ Kátálọ́ọ̀gù aláàyè tí a ti yọ àwọn àdáwòkọ adágún kúr�
 | Ìpèsè oníwọ̀n tó ń tún wá         | **~1.62B tokens/osù** | A ka àwọn adágún pínpín lẹ́ẹ̀kan ṣoṣo; kò ka àwọn olupèsè tí kò ní ààlà sínú àpapọ̀ |
 | Oṣù àkọ́kọ́ pẹ̀lú ìpèsè ìforúkọsílẹ̀ |     **~2.22B tokens** | Àpapọ̀ tó ń tún wá pẹ̀lú àwọn kírẹ́díìtì ẹ̀ẹ̀kan ṣoṣo àti àwọn tó ń tún wá            |
 
-Àwọn wọ̀nyí jẹ́ ìṣírò fún gbogbo kátálọ́ọ̀gù káàkiri àwọn àkọọ́lẹ̀ ọ̀tọ̀ọ̀tọ̀ tó yẹ, kì í ṣe ìpín tí OmniRoute pèsè tàbí àsọtẹ́lẹ̀ fún ìfisílẹ̀ tuntun. Agbára tí o lè lò sinmi lórí àwọn olupèsè tí o so pọ̀ àti àwọn ipò wọn lọ́wọ́lọ́wọ́. A ṣírò àwọn iye náà láti inú `open-sse/config/freeModelCatalog.ts`; wo
+Àwọn wọ̀nyí jẹ́ ìṣírò fún gbogbo kátálọ́ọ̀gù káàkiri àwọn àkọọ́lẹ̀ ọ̀tọ̀ọ̀tọ̀ tó yẹ, kì í ṣe ìpín tí 67router pèsè tàbí àsọtẹ́lẹ̀ fún ìfisílẹ̀ tuntun. Agbára tí o lè lò sinmi lórí àwọn olupèsè tí o so pọ̀ àti àwọn ipò wọn lọ́wọ́lọ́wọ́. A ṣírò àwọn iye náà láti inú `open-sse/config/freeModelCatalog.ts`; wo
 [Ìtọ́kasí Àwọn Ìpele Ọ̀fẹ́](../reference/FREE_TIERS.md) fún yíyọ àdáwòkọ adágún, àwọn àmì ToS,
 àwọn àkọsílẹ̀ tí a ti dáwọ́ dúró, àti ọ̀nà ìṣírò kírẹ́díìtì ìforúkọsílẹ̀.
 
@@ -189,7 +189,7 @@ Bẹ́ẹ̀ ni, bí SLA, ìṣàkóso dátà, àwọn òpin, àti àwọn òfin 
 
 Àwọn ìyípadà tí o lè ní láti fara mọ́ lè ní àwọn òpin líle, àwọn àkójọ ìdúró, KYC, ìjẹ́rìísí káàdì kírẹ́díìtì, fífi
 àwọn prompt kọ́ ẹ̀rọ, àṣírí tó rọ̀, àìsí SLA, yíyí módẹ́ẹ̀lì ká, àwọn ìdènà agbègbè, owó àfikún nígbà tí lílo bá kọjá ìpín, tàbí
-ewu ìlànà àkọọ́lẹ̀. OmniRoute ń ṣàfihàn métádátà tó wà; ìwọ ló máa yan ohun tí o fẹ́ mú ṣiṣẹ́.
+ewu ìlànà àkọọ́lẹ̀. 67router ń ṣàfihàn métádátà tó wà; ìwọ ló máa yan ohun tí o fẹ́ mú ṣiṣẹ́.
 
 ### "Báwo ni mo ṣe lè rí ìpín ọ̀fẹ́ púpọ̀ sí i?"
 
@@ -208,7 +208,7 @@ ipa olówó, ṣùgbọ́n àwọn òpin, àkókò ìdádúró, àṣírí, ìgb
 
 ## Kí Ló Kàn?
 
-- **[Ìtọ́sọ́nà Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Jẹ́ kí OmniRoute yan AI tó dára jù lọ fún ọ
+- **[Ìtọ́sọ́nà Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Jẹ́ kí 67router yan AI tó dára jù lọ fún ọ
 - **[Ìtọ́sọ́nà Àwọn Olùpèsè](./PROVIDERS-GUIDE.md)** — So àwọn olùpèsè míì pọ̀
 - **[Àtúnṣe Àwọn Ìṣòro](../guides/TROUBLESHOOTING.md)** — Yanjú àwọn ìṣòro tó wọ́pọ̀
 - **[Àtòjọ Ìtọ́kasí Àwọn Ìpele Ọ̀fẹ́](../reference/FREE_TIERS.md)** — Àtòjọ kíkún ti àwọn ìpele ọ̀fẹ́

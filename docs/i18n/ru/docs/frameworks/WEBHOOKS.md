@@ -7,7 +7,7 @@
 > **Источник истины:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Последнее обновление:** 2026-06-28 — v3.8.40
 
-OmniRoute может отправлять HTTP-вебхуки при возникновении событий платформы. Используйте их для интеграции со
+67router может отправлять HTTP-вебхуки при возникновении событий платформы. Используйте их для интеграции со
 Slack, PagerDuty, Datadog, внутренними службами оповещения или любым HTTP-получателем.
 
 Диспетчер подписывает каждую доставку с помощью HMAC-SHA256, повторяет попытки при временных
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, внутренними службами оповещ�
 
 ## Подписание с помощью HMAC
 
-Если у вебхука есть `secret`, OmniRoute подписывает тело JSON и отправляет:
+Если у вебхука есть `secret`, 67router подписывает тело JSON и отправляет:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Тестовая доставка вебхука из OmniRoute",
+    "message": "Тестовая доставка вебхука из 67router",
     "webhookId": "<uuid>"
   }
 }

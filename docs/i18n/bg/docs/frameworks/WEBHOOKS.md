@@ -7,7 +7,7 @@
 > **Източник на истината:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Последно актуализирано:** 2026-06-28 — v3.8.40
 
-OmniRoute може да изпраща HTTP уеб куки при събития в платформата. Използвайте ги за интеграция със
+67router може да изпраща HTTP уеб куки при събития в платформата. Използвайте ги за интеграция със
 Slack, PagerDuty, Datadog, вътрешни услуги за известяване или произволен HTTP приемник.
 
 Диспечерът подписва всяка доставка с HMAC-SHA256, извършва повторни опити при временни
@@ -54,7 +54,7 @@ Slack, PagerDuty, Datadog, вътрешни услуги за известява
 
 ## Подписване с HMAC
 
-Когато дадена уеб кука има `secret`, OmniRoute подписва JSON съдържанието и изпраща:
+Когато дадена уеб кука има `secret`, 67router подписва JSON съдържанието и изпраща:
 
 ```
 Content-Type: application/json
@@ -209,7 +209,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Тестово изпращане на уебкук от OmniRoute",
+    "message": "Тестово изпращане на уебкук от 67router",
     "webhookId": "<uuid>"
   }
 }

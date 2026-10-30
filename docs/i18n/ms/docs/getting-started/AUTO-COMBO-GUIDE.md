@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Bahasa Melayu)
+# Auto-Combo: Let 67router Pick the Best AI for You (Bahasa Melayu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **TL;DR**: Tetapkan model anda kepada `auto` dan OmniRoute akan memilih penyedia AI terbaik secara automatik untuk setiap permintaan. Tiada konfigurasi diperlukan.
+> **TL;DR**: Tetapkan model anda kepada `auto` dan 67router akan memilih penyedia AI terbaik secara automatik untuk setiap permintaan. Tiada konfigurasi diperlukan.
 
 ---
 
 ## Fungsinya
 
-Daripada memilih model AI tertentu (seperti GPT-4o atau Claude), anda boleh membiarkan OmniRoute **memilih model terbaik secara automatik** untuk setiap permintaan. Ia mempertimbangkan:
+Daripada memilih model AI tertentu (seperti GPT-4o atau Claude), anda boleh membiarkan 67router **memilih model terbaik secara automatik** untuk setiap permintaan. Ia mempertimbangkan:
 
 - **Kesihatan** — Adakah penyedia berfungsi pada masa ini?
 - **Kelajuan** — Seberapa pantas penyedia tersebut?
@@ -18,7 +18,7 @@ Daripada memilih model AI tertentu (seperti GPT-4o atau Claude), anda boleh memb
 - **Kualiti** — Adakah penyedia tersebut bagus untuk jenis tugas ini?
 - **Kapasiti** — Adakah penyedia tersebut masih mempunyai kuota?
 
-OmniRoute memberikan skor kepada semua penyedia yang anda sambungkan dan memilih yang terbaik. Jika penyedia tersebut gagal, OmniRoute akan mencuba penyedia seterusnya secara automatik.
+67router memberikan skor kepada semua penyedia yang anda sambungkan dan memilih yang terbaik. Jika penyedia tersebut gagal, 67router akan mencuba penyedia seterusnya secara automatik.
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute memberikan skor kepada semua penyedia yang anda sambungkan dan memilih
 model: "auto"
 ```
 
-**Langkah 2**: Itu sahaja! OmniRoute akan menguruskan selebihnya.
+**Langkah 2**: Itu sahaja! 67router akan menguruskan selebihnya.
 
 **Langkah 3** (pilihan): Gunakan varian untuk tugas tertentu:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Cara Ia Berfungsi (Versi Ringkas)
 
-Apabila anda menghantar permintaan dengan `model: "auto"`, OmniRoute:
+Apabila anda menghantar permintaan dengan `model: "auto"`, 67router:
 
 1. **Melihat semua penyedia yang anda sambungkan** — Setiap penyedia yang telah anda tambahkan (OpenAI, Anthropic, Google dan sebagainya)
 2. **Memberikan skor kepada setiap penyedia**, dengan mempertimbangkan antara lain:
@@ -86,7 +86,7 @@ Apabila anda menghantar permintaan dengan `model: "auto"`, OmniRoute:
    - Seberapa pantas ia berfungsi? (kelajuan)
    - Adakah ia bagus untuk tugas ini? (kualiti)
 3. **Memilih yang terbaik** — Penyedia dengan skor tertinggi menerima permintaan anda
-4. **Pulih secara automatik** — Jika penyedia tersebut gagal, OmniRoute akan mencuba penyedia seterusnya secara automatik
+4. **Pulih secara automatik** — Jika penyedia tersebut gagal, 67router akan mencuba penyedia seterusnya secara automatik
 
 ### Sistem Penskoran
 
@@ -120,11 +120,11 @@ Setiap varian menggunakan wajaran yang berbeza:
 
 ## Cara Ia Mengendalikan Kegagalan
 
-OmniRoute mempunyai **tiga lapisan perlindungan**:
+67router mempunyai **tiga lapisan perlindungan**:
 
 ### 1. Sandaran Automatik
 
-Jika penyedia terbaik gagal, OmniRoute akan mencuba penyedia seterusnya secara automatik. Anda tidak perlu melakukan apa-apa.
+Jika penyedia terbaik gagal, 67router akan mencuba penyedia seterusnya secara automatik. Anda tidak perlu melakukan apa-apa.
 
 ### 2. Pemulihan Kendiri
 
@@ -136,13 +136,13 @@ Jika penyedia terus mengalami kegagalan:
 
 ### 3. Sandaran Kecemasan
 
-Jika semua penyedia gagal, OmniRoute akan menghalakan permintaan kepada penyedia percuma yang stabil (seperti Kiro atau Qoder) sebagai pilihan terakhir.
+Jika semua penyedia gagal, 67router akan menghalakan permintaan kepada penyedia percuma yang stabil (seperti Kiro atau Qoder) sebagai pilihan terakhir.
 
 ---
 
 ## Sokongan Berbilang Akaun
 
-Jika anda mempunyai berbilang akaun untuk penyedia yang sama (contohnya, dua kunci OpenAI), OmniRoute menganggap setiap satu sebagai **calon berasingan**. Ini bermakna:
+Jika anda mempunyai berbilang akaun untuk penyedia yang sama (contohnya, dua kunci OpenAI), 67router menganggap setiap satu sebagai **calon berasingan**. Ini bermakna:
 
 - Akaun A masih mempunyai kuota → gunakannya
 - Akaun B dikenakan had kadar → langkauinya
@@ -154,13 +154,13 @@ Setiap akaun diberikan skor secara berasingan berdasarkan status kesihatan, kuot
 
 ## Penerokaan Bandit
 
-OmniRoute kadangkala **meneroka** penyedia baharu untuk menemukan pilihan yang lebih baik:
+67router kadangkala **meneroka** penyedia baharu untuk menemukan pilihan yang lebih baik:
 
 - **Lalai**: 5% permintaan dihantar kepada penyedia rawak
 - **Auto/smart**: Kadar penerokaan 10%
 - **Dilumpuhkan** apabila lebih daripada 50% penyedia tidak sihat
 
-Ini membantu OmniRoute mempelajari penyedia yang paling sesuai dengan corak penggunaan anda.
+Ini membantu 67router mempelajari penyedia yang paling sesuai dengan corak penggunaan anda.
 
 ---
 
@@ -172,11 +172,11 @@ Ini membantu OmniRoute mempelajari penyedia yang paling sesuai dengan corak peng
 
 ### "Apakah yang berlaku jika penyedia tidak berfungsi?"
 
-OmniRoute akan melangkaunya secara automatik dan mencuba penyedia seterusnya. Jika penyedia terus mengalami kegagalan, penyedia tersebut akan dikecualikan buat sementara waktu (5-30 minit). Anda tidak perlu melakukan apa-apa.
+67router akan melangkaunya secara automatik dan mencuba penyedia seterusnya. Jika penyedia terus mengalami kegagalan, penyedia tersebut akan dikecualikan buat sementara waktu (5-30 minit). Anda tidak perlu melakukan apa-apa.
 
 ### "Bolehkah saya melihat penyedia yang telah digunakan?"
 
-Semak pengepala respons — OmniRoute menyertakan penyedia dan model yang digunakan dalam setiap respons.
+Semak pengepala respons — 67router menyertakan penyedia dan model yang digunakan dalam setiap respons.
 
 ### "Adakah ia belajar daripada penggunaan saya?"
 

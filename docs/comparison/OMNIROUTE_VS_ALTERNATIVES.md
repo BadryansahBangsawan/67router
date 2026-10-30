@@ -1,17 +1,17 @@
 ---
-title: "OmniRoute vs Alternatives"
+title: "67router vs Alternatives"
 version: 3.8.50
 lastUpdated: 2026-08-02
 ---
 
-# OmniRoute vs Alternatives
+# 67router vs Alternatives
 
 Objective feature comparison vs popular open-source AI routers.
 
 > **Methodology**: Public repos audited 2026-Q2. Versions as listed.
 > Submit corrections via PR — we want this to be accurate.
 
-| Feature                                            |                OmniRoute 3.8                |  LiteLLM 1.x   | OpenRouter (SaaS) |   Portkey   |
+| Feature                                            |                67router 3.8                 |  LiteLLM 1.x   | OpenRouter (SaaS) |   Portkey   |
 | -------------------------------------------------- | :-----------------------------------------: | :------------: | :---------------: | :---------: |
 | **Providers**                                      |                   **329**                   |      ~100      |        ~50        |     ~30     |
 | **Free/no-auth catalog entries**                   |                   **155**                   |      n/a       |    passthrough    |     n/a     |
@@ -39,7 +39,7 @@ Objective feature comparison vs popular open-source AI routers.
 | **Tunnel support (Cloudflared, Tailscale, Ngrok)** |                     ✅                      |       ❌       |        n/a        |     n/a     |
 | **License**                                        |                     MIT                     |      MIT       |    proprietary    | proprietary |
 
-## When to choose OmniRoute
+## When to choose 67router
 
 - You self-host and want **maximum provider coverage** (375 providers, 155 free/no-auth catalog entries)
 - You need a **built-in MCP server** (LLM tools, memory, skills exposed as tools)

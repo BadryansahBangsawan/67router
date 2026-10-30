@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute disponibiliza a **geração de imagens** do plano Cursor em `POST /v1/images/generations` através do mesmo id de fornecedor utilizado pelo chat: `cursor` (alias `cu`).
+67router disponibiliza a **geração de imagens** do plano Cursor em `POST /v1/images/generations` através do mesmo id de fornecedor utilizado pelo chat: `cursor` (alias `cu`).
 
 | Campo                   | Valor                                                                                               |
 | ----------------------- | --------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute disponibiliza a **geração de imagens** do plano Cursor em `POST /v1/
 
 ## Porquê a CLI Agent
 
-O chat do Cursor no OmniRoute utiliza `agent.v1.AgentService/Run` (protobuf). Esse caminho **rejeita** ferramentas de cliente incorporadas (shell, escrita, …). A geração de imagens é uma ferramenta nativa do Cursor executada pela CLI **`agent`** através da licença. Por isso, o processador de imagens inicia o `agent` com uma instrução bloqueada e um espaço de trabalho temporário por pedido (com a mesma estrutura das pontes de licenças da comunidade), devolvendo depois `b64_json` compatível com OpenAI.
+O chat do Cursor no 67router utiliza `agent.v1.AgentService/Run` (protobuf). Esse caminho **rejeita** ferramentas de cliente incorporadas (shell, escrita, …). A geração de imagens é uma ferramenta nativa do Cursor executada pela CLI **`agent`** através da licença. Por isso, o processador de imagens inicia o `agent` com uma instrução bloqueada e um espaço de trabalho temporário por pedido (com a mesma estrutura das pontes de licenças da comunidade), devolvendo depois `b64_json` compatível com OpenAI.
 
 ## Restrição de acesso (Regras Rígidas #15 + #17)
 
@@ -36,7 +36,7 @@ do nível `LOCAL_ONLY`.
 
 `CURSOR_IMG_MAX_CONCURRENT` é aplicado através de um contador/fila em memória, limitado
 à instância do módulo Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Limita corretamente os processos `agent` simultâneos numa única instância do OmniRoute,
+Limita corretamente os processos `agent` simultâneos numa única instância do 67router,
 mas **não** coordena vários processos/instâncias que partilhem a mesma licença Cursor
 (por exemplo, uma implementação com várias réplicas) — cada instância aplica o seu
 próprio limite independente. Numa implementação de instância única (a predefinição),
@@ -47,7 +47,7 @@ de imagens do Cursor para uma única instância.
 ## Requisitos
 
 1. Uma conta Cursor ligada no painel de controlo (OAuth ou chave de API `crsr_…`).
-2. O binário Cursor Agent disponível para o processo do OmniRoute:
+2. O binário Cursor Agent disponível para o processo do 67router:
    - variável de ambiente `CURSOR_AGENT_BIN=/path/to/agent`, ou
    - `~/.local/bin/agent`, ou
    - `providerSpecificData.agentBin` na ligação do Cursor.

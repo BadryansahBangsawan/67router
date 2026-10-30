@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Kiswahili)
+# 📖 Setup Guide — 67router (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Marejeleo kamili ya usanidi wa OmniRoute. Kwa toleo la haraka, angalia [Mwongozo wa Kuanza Haraka katika README](../README.md#-quick-start).
+> Marejeleo kamili ya usanidi wa 67router. Kwa toleo la haraka, angalia [Mwongozo wa Kuanza Haraka katika README](../README.md#-quick-start).
 
 ## Jedwali la Yaliyomo
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Kifurushi cha AUR](https://aur.archlinux.org/packages/omniroute-bin) husakinisha OmniRoute na kutoa huduma ya mtumiaji ya systemd.
+[Kifurushi cha AUR](https://aur.archlinux.org/packages/omniroute-bin) husakinisha 67router na kutoa huduma ya mtumiaji ya systemd.
 
 ### Kutoka kwenye Msimbo Chanzo
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Dokezo la Windows:** Kwa chaguo-msingi, OmniRoute hutumia `%APPDATA%\omniroute` wakati saraka ya zamani ya `%USERPROFILE%\.omniroute` haipo. Weka `DATA_DIR` ili kuchagua eneo tofauti la saraka ya data.
+> **Dokezo la Windows:** Kwa chaguo-msingi, 67router hutumia `%APPDATA%\omniroute` wakati saraka ya zamani ya `%USERPROFILE%\.omniroute` haipo. Weka `DATA_DIR` ili kuchagua eneo tofauti la saraka ya data.
 
 > **Dokezo:** `npm install` huzalisha kiotomatiki `.env` kutoka `.env.example` wakati wa uendeshaji wa kwanza. Usakinishaji unaofuata hautaandika juu ya `.env` iliyopo, kwa hivyo marekebisho yanahifadhiwa. Ili kuizalisha upya, futa `.env` kabla ya kuiendesha tena.
 
@@ -64,7 +64,7 @@ Angalia [Mwongozo wa Docker](./DOCKER_GUIDE.md) kwa usanidi kamili wa Docker, ik
 
 ### Programu ya Kompyuta ya Mezani (Electron)
 
-OmniRoute huja na programu ya kompyuta ya mezani iliyojengwa kwa Electron 41 + electron-builder 26.10. Hati zinazopatikana (mzizi wa workspace):
+67router huja na programu ya kompyuta ya mezani iliyojengwa kwa Electron 41 + electron-builder 26.10. Hati zinazopatikana (mzizi wa workspace):
 
 ```bash
 npm run electron:dev          # Endesha programu ya kompyuta ya mezani kwa upakiaji upya wa moja kwa moja
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Ikiunganishwa na vigeu vya mazingira (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, n.k.), hii hukuwezesha kuanzisha tukio la OmniRoute linaloweza kuendeshwa kikamilifu kwa hati.
+Ikiunganishwa na vigeu vya mazingira (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, n.k.), hii hukuwezesha kuanzisha tukio la 67router linaloweza kuendeshwa kikamilifu kwa hati.
 
 ### Chaguo za CLI
 
@@ -99,7 +99,7 @@ Ikiunganishwa na vigeu vya mazingira (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_S
 | `omniroute config`      | Usanidi wa zana ya CLI — orodhesha, pata, weka na uthibitishe usanidi                      |
 | `omniroute status`      | Dashibodi ya hali nje ya mtandao — toleo, DB, zana na usanidi                              |
 | `omniroute logs`        | Tiririsha kumbukumbu za matumizi kutoka API (inaauni `--follow`)                           |
-| `omniroute update`      | Angalia au tekeleza masasisho ya OmniRoute                                                 |
+| `omniroute update`      | Angalia au tekeleza masasisho ya 67router                                                  |
 | `omniroute provider`    | Dhibiti miunganisho ya watoa huduma — ongeza, orodhesha, ondoa, jaribu, weka chaguo-msingi |
 | `omniroute --port 3000` | Weka bandari kanoni/API kuwa 3000                                                          |
 | `omniroute --mcp`       | Anzisha seva ya MCP (usafirishaji wa stdio)                                                |
@@ -165,7 +165,7 @@ Hufanya kazi na Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode, na SD
 
 #### Sanidi kiotomatiki kwa `setup-*`
 
-Badala ya kubandika anwani msingi na ufunguo mwenyewe, ruhusu OmniRoute iandike usanidi
+Badala ya kubandika anwani msingi na ufunguo mwenyewe, ruhusu 67router iandike usanidi
 wa kila zana kutoka kwenye katalogi hai ya modeli. Amri moja kwa kila zana:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Kila moja hukubali `--remote <url> --api-key <key>` ili kusanidi zana ya ndani dhidi ya
-OmniRoute ya **mbali**, pamoja na `--dry-run` ili kuhakiki. Ili kuzindua CLI huku
+67router ya **mbali**, pamoja na `--dry-run` ili kuhakiki. Ili kuzindua CLI huku
 mazingira sahihi yakiwa yameingizwa na bila kuandika usanidi wowote, tumia kizinduzi cha jumla
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 vizinduzi vya awali vya kila zana `omniroute launch` (Claude Code) na
@@ -277,15 +277,15 @@ Kwa usambazaji mwingi, unahitaji vigeu hivi viwili pekee:
 | Kigeu                    | Chaguo-msingi                | Madhumuni                                                                                                                                                          |
 | ------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `REQUEST_TIMEOUT_MS`     | `600000`                     | Msingi wa pamoja wa muda wa kuisha kwa kuanza kwa jibu la upstream, muda fiche wa Undici, maombi ya alama ya utambulisho ya TLS, na maombi/proksi za daraja la API |
-| `STREAM_IDLE_TIMEOUT_MS` | hurithi `REQUEST_TIMEOUT_MS` | Pengo la juu zaidi kati ya vipande vya mtiririko kabla OmniRoute haijakatisha mtiririko wa SSE                                                                     |
+| `STREAM_IDLE_TIMEOUT_MS` | hurithi `REQUEST_TIMEOUT_MS` | Pengo la juu zaidi kati ya vipande vya mtiririko kabla 67router haijakatisha mtiririko wa SSE                                                                      |
 
 Utangamano wa nyuma umehifadhiwa: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, na vigeu vingine vilivyopo vya muda wa kuisha kwa kila safu bado vinafanya kazi na vinabatilisha msingi wa pamoja.
 
 ### Vidokezo Mahususi kwa Watoa Huduma
 
-Kwa upstream zinazooana na Claude Code (`anthropic-compatible-cc-*`), OmniRoute hutengeneza kichwa cha nje cha `X-Stainless-Timeout` kutokana na muda wa kuisha wa fetch uliotatuliwa ili muda wa kuisha wa usomaji upande wa mtoa huduma uendelee kuambatana na usanidi wako wa mazingira.
+Kwa upstream zinazooana na Claude Code (`anthropic-compatible-cc-*`), 67router hutengeneza kichwa cha nje cha `X-Stainless-Timeout` kutokana na muda wa kuisha wa fetch uliotatuliwa ili muda wa kuisha wa usomaji upande wa mtoa huduma uendelee kuambatana na usanidi wako wa mazingira.
 
-Kwa proksi geuzi za wahusika wengine zinazooana na Claude Code, OmniRoute huweka mkusanyiko chaguo-msingi wa `anthropic-beta` kuwa wa tahadhari na, wakati `Client Cache Control` imeachwa kwenye `Auto`, husambaza tu viashirio vya `cache_control` vilivyotolewa na mteja. Washa kigeuzi cha kila muunganisho cha "Enable redact-thinking beta" tu wakati upstream inahitaji mahususi mitiririko ya fikra iliyofichwa ya Claude.
+Kwa proksi geuzi za wahusika wengine zinazooana na Claude Code, 67router huweka mkusanyiko chaguo-msingi wa `anthropic-beta` kuwa wa tahadhari na, wakati `Client Cache Control` imeachwa kwenye `Auto`, husambaza tu viashirio vya `cache_control` vilivyotolewa na mteja. Washa kigeuzi cha kila muunganisho cha "Enable redact-thinking beta" tu wakati upstream inahitaji mahususi mitiririko ya fikra iliyofichwa ya Claude.
 
 ### Ubatilishaji wa Kina wa Muda wa Kuisha
 
@@ -303,11 +303,11 @@ Kwa proksi geuzi za wahusika wengine zinazooana na Claude Code, OmniRoute huweka
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Muda wa kuisha wa keep-alive kwenye seva ya daraja la API                                   |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Muda wa kuisha kwa kutotumika kwa soketi kwenye seva ya daraja la API (`0` hukizima)        |
 
-> **Kumbuka:** Kwa maombi ya mtiririko, `FETCH_TIMEOUT_MS` hushughulikia tu kuanzisha muunganisho / kusubiri jibu la kwanza la upstream. Mtiririko ukishaanza kufanya kazi, OmniRoute itakatisha tu kunapotokea kusimama halisi (`STREAM_IDLE_TIMEOUT_MS`) au kutotumika kwa mwili wa Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Kumbuka:** Kwa maombi ya mtiririko, `FETCH_TIMEOUT_MS` hushughulikia tu kuanzisha muunganisho / kusubiri jibu la kwanza la upstream. Mtiririko ukishaanza kufanya kazi, 67router itakatisha tu kunapotokea kusimama halisi (`STREAM_IDLE_TIMEOUT_MS`) au kutotumika kwa mwili wa Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Utangamano wa Proksi Geuzi
 
-Ukiendesha OmniRoute nyuma ya Nginx, Caddy, Cloudflare, au proksi nyingine geuzi, hakikisha muda wa kuisha wa proksi pia ni mrefu kuliko muda wa kuisha wa mtiririko/fetch wa OmniRoute.
+Ukiendesha 67router nyuma ya Nginx, Caddy, Cloudflare, au proksi nyingine geuzi, hakikisha muda wa kuisha wa proksi pia ni mrefu kuliko muda wa kuisha wa mtiririko/fetch wa 67router.
 
 ---
 

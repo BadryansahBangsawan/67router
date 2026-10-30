@@ -4,7 +4,7 @@
 
 ---
 
-An haɗa wasu ayyuka cikin OmniRoute, daga baya kuma aka cire su saboda mutanen da ke gudanar da
+An haɗa wasu ayyuka cikin 67router, daga baya kuma aka cire su saboda mutanen da ke gudanar da
 su sun buƙaci hakan. Wannan shafi shi ne daftarin dindindin na waɗannan cire-ciren. Manufarsa kaɗai ita ce
 hana a sake mayar da su bisa kuskure: mai ba da gudummawa da ya gano tsohon fork, tarball na npm da aka adana
 a cache, tsohuwar matsala da aka ajiye, ko buƙatar "mayar da mai samarwa X" yana buƙatar wuri guda da ke cewa **kar
@@ -17,10 +17,10 @@ buƙatar, kuma dole ne a haɗa hanyar zuwa wannan izinin daga shigarwar.
 
 ## Manufa
 
-1. **Ana mutunta buƙatar cirewa daga ma'aikacin sabis, ba a yi ciniki a kanta.** OmniRoute
+1. **Ana mutunta buƙatar cirewa daga ma'aikacin sabis, ba a yi ciniki a kanta.** 67router
    ba shi da alaƙa da kowane sabis na asali. Idan ma'aikacin wani sabis ya nemi a cire
    haɗin, za a cire shi, ko haɗin ya yi amfani da API na hukuma ko bai yi ba.
-2. **"An cire" yana nufin duk wani ɓangaren da OmniRoute ke sarrafawa.** Executor, shigarwar registry, id da alias na
+2. **"An cire" yana nufin duk wani ɓangaren da 67router ke sarrafawa.** Executor, shigarwar registry, id da alias na
    mai samarwa, jerin model, endpoints, environment variables, icon, katunan dashboard,
    bayanin mai samarwa da aka samar, `FREE_TIERS.md`, bayanin environment, ƙididdigar README,
    madubin `llm.txt`, gwaje-gwaje na musamman da golden snapshots, sharhin code, abubuwan CHANGELOG
@@ -31,7 +31,7 @@ buƙatar, kuma dole ne a haɗa hanyar zuwa wannan izinin daga shigarwar.
 3. **Kada a taɓa sake shigar da wani abu da ke wannan shafi ba tare da rubutacciyar izini ba.** Wannan ya haɗa da
    sake ƙara id ko alias zuwa kowane kundin masu samarwa, ƙara domains zuwa executor,
    karɓar PR na mai ba da gudummawa da ke "mayar da" shi, ƙara shi zuwa kundin model na kyauta, ko
-   rubuta hanyar hannu ta isa gare shi ta hanyar OmniRoute. Rufe irin waɗannan PRs da issues tare da
+   rubuta hanyar hannu ta isa gare shi ta hanyar 67router. Rufe irin waɗannan PRs da issues tare da
    hanyar haɗi zuwa wannan shafi.
 4. **A taƙaita shigarwar.** A rubuta kawai abin da mai bita yake buƙata don gane
    sake shigarwa: identifiers, domains, dates da pull request da ya aiwatar da cirewar.
@@ -48,7 +48,7 @@ buƙatar, kuma dole ne a haɗa hanyar zuwa wannan izinin daga shigarwar.
 | 2026-08-12 | `puter`           | `pu`     | `puter.com`                                                                          | Mai Puter (Nariman Jelveh)                                                                                                                           | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Mai samarwa mai amfani da API key. Migration `152_remove_puter_provider.sql` yana share saitunan da aka adana.                                                                                                                                                                                                                                                                                                                                                                         |
 | 2026-09-02 | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                              | Mai gudanar da sabis ɗin (ta imel ɗin tallafi)                                                                                                       | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Mai samarwa marar key. An karɓi rubutacciyar buƙata a 2026-08-30. An share issues da tattaunawar da aka keɓe, sannan aka sake sanya wa PRs take.                                                                                                                                                                                                                                                                                                                                       |
 | 2026-09-21 | `gemini-business` | `gembiz` | `business.gemini.google`                                                             | Shawarar mai aikin (issue [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                          | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Mai samar da sabis na yanar gizo mai amfani da cookie. Google ya dakatar da endpoint na `BardFrontendService/StreamGenerate` wanda executor ɗin ya yi niyya; ba za a iya gina ko tabbatar da madadinsa (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT da ake farawa daga `__Secure-C_SES`/`csesidx`) ba tare da asusun Gemini Enterprise/Workspace mai aiki ba, wanda aikin ba shi da shi. An dakatar da shi maimakon a sake rubuta shi ba tare da tabbaci ba. |
-| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                     | Shawarar mai aikin (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Mai samarwa mai tantancewa ta cookie, ba cirewa da ma’aikacin sabis ya nema ba. An dakatar da `studio-api.suno.ai` (503); host mai aiki yana buƙatar musayar Clerk JWT tare da wani dependency mai biyan kuɗi don warware hCaptcha, wanda OmniRoute ya zaɓi kada ya ƙara saboda mai samar da kiɗa guda ɗaya. `kie/suno-v4.0` da `kie/suno-v3.5` (waɗanda kie.ai ke ɗaukar nauyinsu) ba abin ya shafa ba kuma ana ci gaba da tallafa musu.                                              |
+| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                     | Shawarar mai aikin (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Mai samarwa mai tantancewa ta cookie, ba cirewa da ma’aikacin sabis ya nema ba. An dakatar da `studio-api.suno.ai` (503); host mai aiki yana buƙatar musayar Clerk JWT tare da wani dependency mai biyan kuɗi don warware hCaptcha, wanda 67router ya zaɓi kada ya ƙara saboda mai samar da kiɗa guda ɗaya. `kie/suno-v4.0` da `kie/suno-v3.5` (waɗanda kie.ai ke ɗaukar nauyinsu) ba abin ya shafa ba kuma ana ci gaba da tallafa musu.                                               |
 | 2026-10-10 | `opencode`        | `oc`     | `opencode.ai/zen/v1` (matakin kyauta; ana amfani da host ɗin tare da `opencode-zen`) | Cirewa don kariya (shawarar mai aikin), domin mutunta buƙatar cirewa ta jama’a da ma’aikacin OpenCode ya aika wa aikin 9router na asali (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Mai samarwa marar key na "OpenCode Free" kaɗai aka cire. `opencode-zen` da `opencode-go` masu tantancewa, duk samfuran kundin Zen da kwangilolin request nasu, haɗin gwiwar client na OpenCode da `@omniroute/opencode-plugin*` suna nan. Migration `207_remove_opencode_free_provider.sql` yana matsar da tsoffin connections masu ɗauke da API key zuwa Zen kuma yana share saitunan marasa key.                                                                                     |
 
 ## Ƙara shigarwa
@@ -63,5 +63,5 @@ Idan sabuwar buƙatar cirewa ta zo:
    mai samarwa mai API-key da ke da connections da aka adana (ƙara migration).
 3. Ƙara layi guda zuwa teburin da ke sama da kuma identifiers zuwa
    `tests/unit/removed-providers-blocklist.test.ts`, a cikin PR ɗaya.
-4. Amsa wa ma'aikacin bayan an merge PR ɗin, tare da lissafa abin da aka cire da abin da OmniRoute
+4. Amsa wa ma'aikacin bayan an merge PR ɗin, tare da lissafa abin da aka cire da abin da 67router
    ba zai iya canzawa ba (nau'ikan npm da Docker da aka riga aka wallafa, tarihin git, forks na wasu ɓangarori).

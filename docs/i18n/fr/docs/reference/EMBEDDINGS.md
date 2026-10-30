@@ -4,10 +4,10 @@
 
 ---
 
-Notes d’exploitation pour `POST /v1/embeddings` lorsqu’OmniRoute est placé devant
+Notes d’exploitation pour `POST /v1/embeddings` lorsque 67router est placé devant
 Hindsight 0.9.1 (`encode(list[str])` en texte uniquement) et Memorix 1.6.0
 (passerelle média Jina). Vérifié en conditions réelles le 2026-08-17 avec
-OmniRoute 3.8.49 sur `https://omniroute.jaguar-fish.ts.net/v1`. Aucun secret
+67router 3.8.49 sur `https://omniroute.jaguar-fish.ts.net/v1`. Aucun secret
 ci-dessous.
 
 ## Identifiants de modèle fonctionnels
@@ -84,7 +84,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 Le modèle natif `gemini-embedding-2` ne peut pas fonctionner uniquement à
 partir de GitOps. Une clé Google AI Studio doit être ajoutée en tant que
 connexion au fournisseur `gemini` (tableau de bord ou `GEMINI_API_KEY` importée
-dans OmniRoute). Ce secret ne se trouve pas dans ce dépôt.
+dans 67router). Ce secret ne se trouve pas dans ce dépôt.
 
 ### Chemin multimodal Jina
 
@@ -105,7 +105,7 @@ Utilisez `POST /v1/embeddings` jusqu’à ce qu’un alias existe.
 
 ### Objet image Jina / Memorix
 
-Élément image canonique d’OmniRoute (PNG 28×28, 784 pixels — Jina refuse les
+Élément image canonique de 67router (PNG 28×28, 784 pixels — Jina refuse les
 images 1×1) :
 
 ```json
@@ -156,7 +156,7 @@ même erreur 400.
 
 Les embeddings Hindsight sont exclusivement textuels (`encode(list[str])`).
 Hindsight n’envoie pas d’objets image. Faites pointer l’URL de base des
-embeddings compatibles OpenAI de Hindsight vers `/v1` d’OmniRoute et utilisez
+embeddings compatibles OpenAI de Hindsight vers `/v1` de 67router et utilisez
 un identifiant fonctionnel du tableau ci-dessus
 (`jina-ai/jina-embeddings-v5-omni-small` ou
 `openrouter/google/gemini-embedding-2`). Ne définissez pas le modèle sur
@@ -166,13 +166,13 @@ passerelle.
 ### Memorix 1.6.0
 
 Memorix ne traite comme média natif qu’une `baseUrl` correspondant à
-`/jina\.ai/i`. Une URL OmniRoute reste sur le chemin exclusivement textuel,
+`/jina\.ai/i`. Une URL 67router reste sur le chemin exclusivement textuel,
 même lorsque le modèle est Jina omni. Cette passerelle est un problème du
-client Memorix. Indépendamment de cela, OmniRoute refuse toujours le corps
+client Memorix. Indépendamment de cela, 67router refuse toujours le corps
 Jina `{image: "data:..."}` que Memorix enverrait si la passerelle s’ouvrait ;
 les clients compatibles Jina ne peuvent donc pas générer d’embeddings d’images
-via OmniRoute sans le schéma canonique `{type,source}`.
+via 67router sans le schéma canonique `{type,source}`.
 
 Utilisez `jina-ai/jina-embeddings-v5-omni-small` pour le texte. Ne faites pas
 pointer la `base_url` de Memorix vers `https://api.jina.ai` — conservez
-OmniRoute comme unique intermédiaire.
+67router comme unique intermédiaire.

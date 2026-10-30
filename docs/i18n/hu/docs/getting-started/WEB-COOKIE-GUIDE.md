@@ -4,7 +4,7 @@
 
 ---
 
-A Web Cookie szolgáltatók lehetővé teszik, hogy az OmniRoute egy AI-szolgáltatást a meglévő böngésző-munkamenetén keresztül használjon API-kulcs helyett. Akkor hasznosak, ha egy szolgáltatáshoz már hozzáfér annak webhelyén keresztül, és azt szeretné, hogy az OmniRoute ugyanazt a hitelesített munkamenetet használja.
+A Web Cookie szolgáltatók lehetővé teszik, hogy az 67router egy AI-szolgáltatást a meglévő böngésző-munkamenetén keresztül használjon API-kulcs helyett. Akkor hasznosak, ha egy szolgáltatáshoz már hozzáfér annak webhelyén keresztül, és azt szeretné, hogy az 67router ugyanazt a hitelesített munkamenetet használja.
 
 Az API-kulcsot használó szolgáltatókkal ellentétben a Web Cookie szolgáltatók a böngésző által a webhelynek küldött hitelesítő adatokkal végzik a hitelesítést.
 
@@ -49,7 +49,7 @@ DevTools
 
 A `Cookie` kérésfejléc pontosan azokat a hitelesítési adatokat tartalmazza, amelyeket a böngésző sikeresen használt.
 
-A legtöbb Web Cookie szolgáltató esetében ezt az értéket kell beilleszteni az OmniRoute-ba.
+A legtöbb Web Cookie szolgáltató esetében ezt az értéket kell beilleszteni az 67router-ba.
 
 ---
 
@@ -63,7 +63,7 @@ A beállítási folyamat a legtöbb Web Cookie szolgáltatónál azonos.
 4. Frissítse az oldalt.
 5. Nyisson meg egy hitelesített csevegési vagy beszélgetési kérést.
 6. Másolja ki a szükséges hitelesítő adatokat.
-7. Nyissa meg az OmniRoute-ot.
+7. Nyissa meg az 67router-ot.
 8. Lépjen a **Providers → Add Provider** menüpontra.
 9. Válassza ki a Web Cookie szolgáltatóját.
 10. Illessze be a hitelesítő adatokat.
@@ -92,17 +92,17 @@ A különböző webhelyek eltérő módon tárolják a hitelesítési adatokat. 
 
 ## NoTrack (notrack-web)
 
-A NoTrack ([notrack.ai](https://notrack.ai)) egy ingyenes, regisztráció nélkül használható fogyasztói csevegőplatform — a munkamenet az első látogatáskor névtelenül jön létre, és három cookie segítségével marad fenn: `uid`, `si_usr_id` és `si_ses_id`. Az OmniRoute ugyanazt a `/api/dispatch` végpontot továbbítja egyetlen modellazonosítón (`notrack-c`, aliasa: `ntw`) keresztül.
+A NoTrack ([notrack.ai](https://notrack.ai)) egy ingyenes, regisztráció nélkül használható fogyasztói csevegőplatform — a munkamenet az első látogatáskor névtelenül jön létre, és három cookie segítségével marad fenn: `uid`, `si_usr_id` és `si_ses_id`. Az 67router ugyanazt a `/api/dispatch` végpontot továbbítja egyetlen modellazonosítón (`notrack-c`, aliasa: `ntw`) keresztül.
 
 ### Csatlakozás lépései
 
 1. Nyissa meg böngészőjében a [notrack.ai](https://notrack.ai) webhelyet, és várja meg, amíg a névtelen munkamenet cookie-ja beállításra kerül.
 2. Nyissa meg a **Fejlesztői eszközök → Hálózat** panelt, frissítse az oldalt, majd kattintson bármelyik `/api` kérésre.
 3. A **Kérés fejlécei** részen másolja ki a teljes `Cookie` fejléc értékét.
-4. Az OmniRoute-ban lépjen a **Szolgáltatók → Szolgáltató hozzáadása → NoTrack Web (ingyenes)** menüpontra.
+4. Az 67router-ban lépjen a **Szolgáltatók → Szolgáltató hozzáadása → NoTrack Web (ingyenes)** menüpontra.
 5. Illessze be a cookie-karakterláncot az `apiKey` mezőbe, majd kattintson a **Mentés** gombra.
 
-Az OmniRoute kinyeri az `uid`, `si_usr_id` és `si_ses_id` értékeket a beillesztett karakterláncból, majd egy tiszta `Cookie` fejlécet állít össze, amely csak ezeket a párokat tartalmazza — valamint az `nt_session` értéket (a bejelentkezett fiókokhoz beállított `ntk_…` tokent), ha az jelen van. Ha a három közül bármelyik hiányzik, a rendszer változtatás nélkül továbbítja a beillesztett nyers karakterláncot, így az üzemeltetők alternatív formátumokkal is kísérletezhetnek.
+Az 67router kinyeri az `uid`, `si_usr_id` és `si_ses_id` értékeket a beillesztett karakterláncból, majd egy tiszta `Cookie` fejlécet állít össze, amely csak ezeket a párokat tartalmazza — valamint az `nt_session` értéket (a bejelentkezett fiókokhoz beállított `ntk_…` tokent), ha az jelen van. Ha a három közül bármelyik hiányzik, a rendszer változtatás nélkül továbbítja a beillesztett nyers karakterláncot, így az üzemeltetők alternatív formátumokkal is kísérletezhetnek.
 
 ### Modellazonosítók
 
@@ -198,7 +198,7 @@ Alkalmazás
 
 ---
 
-## A cookie működik a böngészőben, de az OmniRoute-ban nem
+## A cookie működik a böngészőben, de az 67router-ban nem
 
 Egyes szolgáltatók olyan cookie-kat is használnak, amelyeket csak hitelesített kérések során küldenek el.
 

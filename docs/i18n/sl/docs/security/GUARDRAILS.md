@@ -10,7 +10,7 @@
 > vbrizgavanja kot obvezna meja (#16413) in kaj vidi odziv pred post-call)
 
 Guardraili uveljavljajo varnostne, pravilne in vsebinske preoblikovanja na meji
-med OmniRoute in ponudniki navzgor (upstream). Vsak guardrail lahko pregleda
+med 67router in ponudniki navzgor (upstream). Vsak guardrail lahko pregleda
 (in po potrebi zavrne, preoblikuje ali doda opombe k) koristnim vsebinam
 zahtevkov (`preCall`) in odzivom ponudnikov navzgor (`postCall`).
 
@@ -114,7 +114,7 @@ Ko klicateljev API-ključ omejuje `allowedConnections`, sklope kvot
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), most izbira samo
 modele za preusmeritev in describe, ki jih ključ sme uporabljati, na
 povezavah, ki jih ključ sme uporabljati. Klic describe nato vedno poteka skozi
-self-loop zanko OmniRoute z glavo `x-omniroute-self-loop-key-id`, tako da
+self-loop zanko 67router z glavo `x-omniroute-self-loop-key-id`, tako da
 sprejemni klepetalni zahtevek znova uveljavi politiko povezav in modelov tega
 ključa. `enforceApiKeyPolicy()` upošteva to glavo samo skupaj z bearer žetonom
 self-loop, zato lahko dostop le zoži, id, ki ga ni mogoče razrešiti, pa je
@@ -144,7 +144,7 @@ pogojen z nobenim odjemalskim signalom. Vzorčenje z nizko podrobnostjo
 poslabša natančnost OCR prav pri nalogi prepisovanja besedila, ki jo ta poziv
 zahteva, zato klic describe sam vedno zahteva visoko podrobnost, ne glede na
 to, kakšno raven podrobnosti je uporabil izvirni dohodni zahtevek. To vpliva
-samo na telo internega zahtevka describe; ne spreminja, kako OmniRoute
+samo na telo internega zahtevka describe; ne spreminja, kako 67router
 posreduje klicateljev lastni `image_url.detail` na primarnem zahtevku — ta
 privzeta vrednost se uporabi ločeno in samo za zaznane odjemalce OpenCode, v
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). Veja
@@ -208,7 +208,7 @@ Namenska stran nadzorne plošče je `/dashboard/settings/modality-bridge`. Njeni
 
 Nekdanja kartica Vision Bridge v nastavitvah AI je zdaj združljivostna povezava na novo stran; ne upravlja več z drugo kopijo obrazca. Media Providers prav tako povezuje delovna toka Image-to-Text in Speech-to-Text z ustreznimi zavihki Modality Bridge, ne da bi odstranil obstoječe preizkusno igrišče Speech-to-Text.
 
-**Zaobiditev sprejema pri samoklicu:** ko klic describe poteka prek lastnega samoklica `/v1` OmniRoute (nestandardni model ponudnika), podzahteva pošlje `x-omniroute-admission-bypass: internal` in se avtenticira z razrešeno poverilnico samoklica — lokalno stražno vrednostjo `sk_omniroute` v lokalnem načinu ali z operatersko konfiguriranim okoljskim ključem `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` (#1350), tako da lahko namestitve z `REQUIRE_API_KEY=true` še vedno izvedejo klic describe. Zaobiditev se upošteva samo za točno te poverilnice, zato zunanji odjemalci glave ne morejo uporabiti za preskok sprejema.
+**Zaobiditev sprejema pri samoklicu:** ko klic describe poteka prek lastnega samoklica `/v1` 67router (nestandardni model ponudnika), podzahteva pošlje `x-omniroute-admission-bypass: internal` in se avtenticira z razrešeno poverilnico samoklica — lokalno stražno vrednostjo `sk_omniroute` v lokalnem načinu ali z operatersko konfiguriranim okoljskim ključem `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` (#1350), tako da lahko namestitve z `REQUIRE_API_KEY=true` še vedno izvedejo klic describe. Zaobiditev se upošteva samo za točno te poverilnice, zato zunanji odjemalci glave ne morejo uporabiti za preskok sprejema.
 
 Podedovane privzete vrednosti se nahajajo v `src/shared/constants/visionBridgeDefaults.ts`; nove privzete vrednosti za način/upoštevanje naloge/predpomnilnik in razreševalnik nastavitev se nahajajo v `src/shared/constants/modalityBridgeDefaults.ts`. Zaščitni mehanizem (guardrail) razkriva možnost konstruktorja `deps`, tako da lahko testi vbrizgajo lažni implementaciji `getSettings` in `callVisionModel`.
 
@@ -261,7 +261,7 @@ Manjkajoči filtri, napačno oblikovani ali prazni dokazi, napaka detektorja ali
 
 Vsaka sličica je omejena na 4 MiB, vse neobdelane sličice skupaj na 23 MiB,
 serializirani odgovor posrednika pa na 32 MiB. Zasebni začasni imenik se odstrani
-v bloku `finally`. OmniRoute ne vključuje FFmpeg in ne sprejema poti do izvajalne
+v bloku `finally`. 67router ne vključuje FFmpeg in ne sprejema poti do izvajalne
 datoteke po meri. Pred ustvarjanjem opisov premostitvena plast izvede konservativen
 postopek vizualnega odstranjevanja dvojnikov: vsak JPEG se zmanjša na sivinski
 medpomnilnik velikosti 16×16 in primerja samo z zadnjo ohranjeno sličico. Pri
@@ -307,7 +307,7 @@ Klicatelji lahko podprtemu videodelu priložijo izbirno polje
 vsebovati `text`, končen interval `start`/`end` znotraj preverjenega trajanja in
 dovoljeni `source` (`client`, `embedded` ali `audio-bridge`); `confidence` ima
 privzeto vrednost `1` in mora ostati med `0` ter `1`. Povsem enake oznake se
-združijo. OmniRoute na podlagi teh metapodatkov nikoli ne začne prepisovanja:
+združijo. 67router na podlagi teh metapodatkov nikoli ne začne prepisovanja:
 preverjene oznake se skupaj z virom, zaupanjem in intervalom kopirajo v rezultat
 opisa ter upodobijo kot nezaupanja vredna opažanja poleg opisov sličic. Neveljavno
 besedilo, besedilo zunaj obsega ali besedilo brez podatkov o izvoru se zavrne,
@@ -765,7 +765,7 @@ prožilec) ima dve nalogi:
   previous instructions…", DAN-jailbreaki) preverja, da odgovor vsebuje
   `error.code === "SECURITY_001"`, tj. da je guard zahtevo dejansko zavrnil.
 - **`garak` (svetovalna)** — zažene garak `--probes promptinject,dan,leakreplay`
-  proti lokalni instanci OmniRoute (`http://localhost:20128/v1`). Pogojena s
+  proti lokalni instanci 67router (`http://localhost:20128/v1`). Pogojena s
   skrivnostjo ponudnika (`PROMPTFOO_PROVIDER_KEY`); se elegantno preskoči in je zaključena
   z `|| true`, zato poroča brez neuspeha CI.
 

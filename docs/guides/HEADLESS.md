@@ -6,7 +6,7 @@ lastUpdated: 2026-10-09
 
 # Headless Mode
 
-Headless mode boots OmniRoute as a plain LLM proxy: the OpenAI-compatible API under `/v1/*`
+Headless mode boots 67router as a plain LLM proxy: the OpenAI-compatible API under `/v1/*`
 keeps working, but the dashboard is switched off and the optional subsystems that only feed
 the dashboard (or add opt-in features on top of the proxy) are not started at boot.
 
@@ -121,5 +121,5 @@ curl -s -w "\n%{http_code}\n" http://localhost:20128/dashboard
 - [ENVIRONMENT.md](../reference/ENVIRONMENT.md) — `OMNIROUTE_HEADLESS` and
   `OMNIROUTE_DISABLE_BACKGROUND_SERVICES` (a separate switch that stops background schedulers
   but keeps the dashboard).
-- [REMOTE-MODE.md](REMOTE-MODE.md) — drive a remote (for example, headless) OmniRoute from
+- [REMOTE-MODE.md](REMOTE-MODE.md) — drive a remote (for example, headless) 67router from
   your laptop with the `omniroute` CLI.

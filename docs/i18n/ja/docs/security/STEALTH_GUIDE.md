@@ -8,11 +8,11 @@
 > **最終更新:** 2026-09-02 — v3.8.51
 > **対象読者:** プロバイダー固有のステルス統合を保守するエンジニア。
 
-OmniRoute は、非公式クライアントを能動的にフィンガープリントするエッジ（TLS JA3/JA4、ヘッダー順序、JSON ボディ形状、整合性トークン）を持つプロバイダーと統合します。このページでは、OmniRoute が公開するステルス機能の対象領域と、それらの実装場所について説明します。
+67router は、非公式クライアントを能動的にフィンガープリントするエッジ（TLS JA3/JA4、ヘッダー順序、JSON ボディ形状、整合性トークン）を持つプロバイダーと統合します。このページでは、67router が公開するステルス機能の対象領域と、それらの実装場所について説明します。
 
 ## 法的および倫理的な注意事項
 
-ステルス機能は、OmniRoute がユーザー所有の公式アカウント（Claude Code CLI、Codex、Antigravity、Cursor など）と OmniRoute の統合 API の間の互換レイヤーとして機能できるようにするためのものです。これらは、不正検知の回避、認証情報の共有、またはプロバイダーの利用規約への違反を目的としたものでは**ありません**。メンテナーは、アカウント作成時に同意したアップストリームの利用規約を運用者が遵守することを求めています。
+ステルス機能は、67router がユーザー所有の公式アカウント（Claude Code CLI、Codex、Antigravity、Cursor など）と 67router の統合 API の間の互換レイヤーとして機能できるようにするためのものです。これらは、不正検知の回避、認証情報の共有、またはプロバイダーの利用規約への違反を目的としたものでは**ありません**。メンテナーは、アカウント作成時に同意したアップストリームの利用規約を運用者が遵守することを求めています。
 
 ---
 
@@ -55,7 +55,7 @@ OmniRoute は、非公式クライアントを能動的にフィンガープリ�
 
 ## Claude Code ステルスバンドル
 
-`cliCompatMode` が有効な場合、OmniRoute は送信する Claude リクエストを変形し、`claude-cli` のトラフィックと見分けがつかないようにします。以下の 3 つのモジュールが連携します。
+`cliCompatMode` が有効な場合、67router は送信する Claude リクエストを変形し、`claude-cli` のトラフィックと見分けがつかないようにします。以下の 3 つのモジュールが連携します。
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts`（クライアントコンテンツハッシュ）
 
-公式 Claude Code CLI が Bun/Zig を介して計算する、サーバー側の整合性チェックです。OmniRoute はこれを `xxhash-wasm` で再実装しています。
+公式 Claude Code CLI が Bun/Zig を介して計算する、サーバー側の整合性チェックです。67router はこれを `xxhash-wasm` で再実装しています。
 
 1. `cch=00000;` プレースホルダーを使用して本文をシリアライズ
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ aider, continue.dev, copilot, avante, codecompanion
 
 ## Antigravity ステルス
 
-Antigravity リクエストは、呼び出し元のテキストをバイト単位でそのまま保持します。OmniRoute は、IDE クライアントを模倣する目的でプロンプトにゼロ幅文字を挿入したり、ツールの名前変更や注入を行ったりしません。
+Antigravity リクエストは、呼び出し元のテキストをバイト単位でそのまま保持します。67router は、IDE クライアントを模倣する目的でプロンプトにゼロ幅文字を挿入したり、ツールの名前変更や注入を行ったりしません。
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Antigravity リクエストは、呼び出し元のテキストをバイト単�
 
 `ANTIGRAVITY_CREDITS=always`（`open-sse/executors/antigravity.ts` が使用）は、Google の無料枠クォータによる制限を受ける代わりに、**すべての**リクエストを Antigravity AI Credit Overages（有料の Google クレジット）経由でルーティングします。これは機能として文書化されていますが、**私たちが確認している中で最も一般的な ToS 違反報告の原因です**。複数の Google Ultra アカウントが `=always` で数時間実行した後、`403 / "service disabled for ToS violation" / insufficient_quota` により停止されています。
 
-上流での取り締まりは **Google 側**で行われるものであり、OmniRoute が防止できるものではありません。環境変数名と既存のドキュメントからは、安全に切り替えられる設定のように見えますが、実際にはそうではありません。
+上流での取り締まりは **Google 側**で行われるものであり、67router が防止できるものではありません。環境変数名と既存のドキュメントからは、安全に切り替えられる設定のように見えますが、実際にはそうではありません。
 
 **無料枠のみの使用よりも積極的に不正利用検出の対象となる理由:**
 
 - 単一の Google アカウントで自動化された継続的な支出が発生すると、無料枠を使い切って停止する場合とは異なる形でフラグが立ちます。
 - クレジット超過にはレート上限がないため、設定ミスのあるクライアントが数分で数百 USD を消費し、API キーの転売やボットトラフィックのように見える可能性があります。
-- 同じ外部 IP から複数の OmniRoute ユーザーが並行して超過クレジットを使用すると、そのシグナルがさらに強まります。
+- 同じ外部 IP から複数の 67router ユーザーが並行して超過クレジットを使用すると、そのシグナルがさらに強まります。
 
 **推奨される運用方針:**
 
@@ -172,7 +172,7 @@ interface CliFingerprint {
 
 ## MITM プロキシ（Antigravity、Linux/macOS/Windows）
 
-バイナリを `OPENAI_BASE_URL` でリダイレクトできない CLI のために、OmniRoute はローカルで TLS を終端するプロキシを実行します。エンドポイントは `src/app/api/cli-tools/antigravity-mitm/` 配下にあります。
+バイナリを `OPENAI_BASE_URL` でリダイレクトできない CLI のために、67router はローカルで TLS を終端するプロキシを実行します。エンドポイントは `src/app/api/cli-tools/antigravity-mitm/` 配下にあります。
 
 | メソッド | エンドポイント                          | 用途                                                 |
 | -------- | --------------------------------------- | ---------------------------------------------------- |
@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 証明書ファイル名: `omniroute-mitm.crt`。`getCertFingerprint()` を使用してフィンガープリントを照合します（DER の SHA-1）。
 
-さらに、`certutil` が利用可能な場合、`updateNssDatabases()` はユーザーごとの NSS DB に証明書をインストールします: `~/.pki/nssdb`、`~/snap/chromium/.../nssdb`、すべての Firefox プロファイル（snap を含む）。ニックネームは **`OmniRoute MITM Root CA`** です。
+さらに、`certutil` が利用可能な場合、`updateNssDatabases()` はユーザーごとの NSS DB に証明書をインストールします: `~/.pki/nssdb`、`~/snap/chromium/.../nssdb`、すべての Firefox プロファイル（snap を含む）。ニックネームは **`67router MITM Root CA`** です。
 
 ### macOS / Windows
 
@@ -253,7 +253,7 @@ interface CliFingerprint {
 
 ## 受信ヘッダーのサニタイズ
 
-OmniRoute は転送前に受信クライアントヘッダーを除去するため、Cursor から到着したリクエストの `User-Agent: Cursor/X.Y.Z` が Claude のアップストリームに漏れることはありません。拒否リストについては `src/shared/constants/upstreamHeaders.ts` を参照してください。このリストは Zod スキーマおよびユニットテストと常に同期されています。
+67router は転送前に受信クライアントヘッダーを除去するため、Cursor から到着したリクエストの `User-Agent: Cursor/X.Y.Z` が Claude のアップストリームに漏れることはありません。拒否リストについては `src/shared/constants/upstreamHeaders.ts` を参照してください。このリストは Zod スキーマおよびユニットテストと常に同期されています。
 
 ---
 

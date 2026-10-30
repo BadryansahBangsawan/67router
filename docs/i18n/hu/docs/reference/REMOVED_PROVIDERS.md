@@ -4,7 +4,7 @@
 
 ---
 
-Egyes szolgáltatásokat integráltak az OmniRoute-ba, majd később eltávolították őket, mert az
+Egyes szolgáltatásokat integráltak az 67router-ba, majd később eltávolították őket, mert az
 üzemeltetőik ezt kérték. Ez az oldal az eltávolítások tartós nyilvántartása. Egyetlen célja,
 hogy megakadályozza a véletlen visszaállításukat: ha egy közreműködő régi forkot, gyorsítótárazott npm
 tarballt, archivált hibajegyet vagy „X szolgáltató visszaállítása” kérést talál, legyen egy hely, amely kimondja: **ne
@@ -17,10 +17,10 @@ kerülhetnek vissza, és ezt az engedélyt hivatkozni kell a bejegyzésben.
 
 ## Szabályzat
 
-1. **A szolgáltatás üzemeltetőjének eltávolítási kérését teljesítjük, nem vitatjuk meg.** Az OmniRoute
+1. **A szolgáltatás üzemeltetőjének eltávolítási kérését teljesítjük, nem vitatjuk meg.** Az 67router
    nem áll kapcsolatban egyik külső szolgáltatással sem. Ha egy szolgáltatás üzemeltetője az
    integráció eltávolítását kéri, eltávolítjuk, függetlenül attól, hogy az integráció hivatalos API-t használt-e.
-2. **Az „eltávolítva” az OmniRoute által felügyelt összes felületet jelenti.** Végrehajtó, nyilvántartási bejegyzés, szolgáltatói
+2. **Az „eltávolítva” az 67router által felügyelt összes felületet jelenti.** Végrehajtó, nyilvántartási bejegyzés, szolgáltatói
    azonosító és alias, modelllista, végpontok, környezeti változók, ikon, irányítópult-kártyák, a
    generált szolgáltatói referencia, `FREE_TIERS.md`, a környezeti referencia, a README-ben szereplő darabszámok,
    az `llm.txt`-tükrök, a dedikált tesztek és golden snapshotok, a kódmegjegyzések, a CHANGELOG felsorolási pontjai
@@ -31,7 +31,7 @@ kerülhetnek vissza, és ezt az engedélyt hivatkozni kell a bejegyzésben.
 3. **Soha ne vezess vissza ezen az oldalon szereplő bejegyzést írásos engedély nélkül.** Ebbe beletartozik
    az azonosító vagy alias visszaadása bármely szolgáltatói katalógushoz, a domainek hozzáadása egy végrehajtóhoz,
    egy azt „visszaállító” közreműködői PR elfogadása, az ingyenesmodellek-katalógushoz való hozzáadása, illetve
-   annak dokumentálása, hogyan érhető el manuálisan az OmniRoute-on keresztül. Az ilyen PR-eket és hibajegyeket
+   annak dokumentálása, hogyan érhető el manuálisan az 67router-on keresztül. Az ilyen PR-eket és hibajegyeket
    erre az oldalra mutató hivatkozással kell lezárni.
 4. **A bejegyzés legyen minimális.** Csak azt rögzítsd, amire egy felülvizsgálónak szüksége van az
    újbóli bevezetés felismeréséhez: azonosítók, domainek, dátumok és az eltávolítást végrehajtó pull request.
@@ -48,7 +48,7 @@ kerülhetnek vissza, és ezt az engedélyt hivatkozni kell a bejegyzésben.
 | 2026-08-12         | `puter`              | `pu`     | `puter.com`                                                                            | A Puter tulajdonosa (Nariman Jelveh)                                                                                                                                                          | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API-kulcsot használó szolgáltató. A `152_remove_puter_provider.sql` migráció megtisztítja a tárolt konfigurációt.                                                                                                                                                                                                                                                                                                                                              |
 | 2026-09-02         | `theoldllm`          | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                                | A szolgáltatás üzemeltetője (támogatási e-mailben)                                                                                                                                            | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Kulcs nélküli szolgáltató. Az írásos kérelem 2026-08-30-án érkezett. A kapcsolódó hibajegyeket és beszélgetést törölték, a PR-eket átnevezték.                                                                                                                                                                                                                                                                                                                 |
 | 2026-09-21         | `gemini-business`    | `gembiz` | `business.gemini.google`                                                               | A projekt tulajdonosának döntése ([#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217) számú hibajegy)                                                                            | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Cookie-alapú webes szolgáltató. A Google megszüntette a végrehajtó által célzott `BardFrontendService/StreamGenerate` végpontot; a helyettesítő megoldás (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, a `__Secure-C_SES`/`csesidx` használatával inicializált Bearer JWT) nem készíthető el és nem ellenőrizhető élő Gemini Enterprise-/Workspace-fiók nélkül, amellyel a projekt nem rendelkezik. Ellenőrizetlen átírás helyett megszüntették. |
-| 2026-09-21         | `suno`               | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                       | A projekt tulajdonosának döntése (`#14224`)                                                                                                                                                   | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie-hitelesítésű szolgáltató, nem az üzemeltető eltávolítási kérelme. A `studio-api.suno.ai` működését felfüggesztették (503); az aktív gazdagép Clerk JWT-cserét, valamint egy fizetős hCaptcha-megoldó függőséget igényel, amelyet az OmniRoute egyetlen zeneszolgáltató kedvéért nem kívánt hozzáadni. A `kie/suno-v4.0` és a `kie/suno-v3.5` (a kie.ai által üzemeltetve) nem érintett, és továbbra is támogatott.                                      |
+| 2026-09-21         | `suno`               | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                       | A projekt tulajdonosának döntése (`#14224`)                                                                                                                                                   | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie-hitelesítésű szolgáltató, nem az üzemeltető eltávolítási kérelme. A `studio-api.suno.ai` működését felfüggesztették (503); az aktív gazdagép Clerk JWT-cserét, valamint egy fizetős hCaptcha-megoldó függőséget igényel, amelyet az 67router egyetlen zeneszolgáltató kedvéért nem kívánt hozzáadni. A `kie/suno-v4.0` és a `kie/suno-v3.5` (a kie.ai által üzemeltetve) nem érintett, és továbbra is támogatott.                                       |
 | 2026-10-10         | `opencode`           | `oc`     | `opencode.ai/zen/v1` (ingyenes szint; az `opencode-zen` szolgáltatóval közös gazdagép) | Megelőző eltávolítás (a projekt tulajdonosának döntése), eleget téve az OpenCode üzemeltetője által a felsőbb szintű 9router projekthez intézett nyilvános eltávolítási kérésnek (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Csak a kulcs nélküli „OpenCode Free” szolgáltatót távolították el. A hitelesített `opencode-zen` és `opencode-go`, a Zen katalógus összes modellje és azok kérési szerződései, az OpenCode-kliensintegrációk, valamint az `@omniroute/opencode-plugin*` változatlanul megmaradnak. A `207_remove_opencode_free_provider.sql` migráció áthelyezi az API-kulcsot tartalmazó örökölt kapcsolatokat a Zenbe, és megtisztítja a kulcs nélküli konfigurációt.        |
 
 ## Bejegyzés hozzáadása
@@ -63,5 +63,5 @@ Amikor új eltávolítási kérelem érkezik:
    tárolt kapcsolatokkal rendelkező API-kulcsos szolgáltatóhoz (adj hozzá migrációt).
 3. Adj hozzá egy sort a fenti táblázathoz, az azonosítókat pedig a
    `tests/unit/removed-providers-blocklist.test.ts` fájlhoz ugyanabban a PR-ben.
-4. A PR egyesítése után válaszolj az üzemeltetőnek, felsorolva, hogy mit távolítottunk el, és mit nem tud az OmniRoute
+4. A PR egyesítése után válaszolj az üzemeltetőnek, felsorolva, hogy mit távolítottunk el, és mit nem tud az 67router
    megváltoztatni (a már közzétett npm- és Docker-verziókat, a git-előzményeket, a harmadik féltől származó forkokat).

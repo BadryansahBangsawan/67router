@@ -48,7 +48,7 @@ JWT **ei saa** seda kooditeed käivitada.
 | Linux+Firefox/Chromium | profiilipõhine NSS-i andmebaasi uuendamine käsuga `certutil -d sql:<profile>`                                     |
 
 Need on samad käsud, mida kasutavad `mitmproxy`, Charles Proxy, Fiddler ja
-Caddy. Nende olemasolu OmniRoute'is on dokumenteeritud failis
+Caddy. Nende olemasolu 67router'is on dokumenteeritud failis
 `docs/security/STEALTH_GUIDE.md`.
 
 **v3.8.6 leevendusmeede**:
@@ -104,7 +104,7 @@ eemaldatakse versioonis v3.9.
 
 **Miks me selle alles jätame**: Zedist importimine on kõige kasutajasõbralikum
 alustamisviis kasutajatele, kes juba kasutavad Zedi ja soovivad kopeerida oma
-teenusepakkujate võtmed OmniRoute'i ilma neid uuesti kleepimata.
+teenusepakkujate võtmed 67router'i ilma neid uuesti kleepimata.
 
 ---
 
@@ -115,7 +115,7 @@ teenusepakkujate võtmed OmniRoute'i ilma neid uuesti kleepimata.
 **Miks märgistati**: koodijupp reekspordib funktsioonid `execFileWithPassword`,
 `runElevatedPowerShell` ja ühise abifunktsiooni `quotePowerShell`. Socket.devi
 tehisintellektil põhinev klassifikaator käsitleb neid üldotstarbelise
-„hostis käivitamise ja õiguste kõrgendamise tööriistakomplektina“. OmniRoute'is
+„hostis käivitamise ja õiguste kõrgendamise tööriistakomplektina“. 67router'is
 kasutatakse neid ainult MITM-sertifikaadi installimise protsessis (§1) ning
 funktsiooni `execFileWithPassword` puhul `sudo`-käsu käivitamiseks.
 
@@ -170,7 +170,7 @@ kaasteenus (analoogne WordPressi pistikprogrammiga) — rangelt nõusolekupõhin
 
 ---
 
-## §5 — OmniRoute Cloud Synci autentimisteabe tagasikirjutus (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Synci autentimisteabe tagasikirjutus (`api/keys/[id]/route.js`)
 
 **Lähtefailid**:
 
@@ -204,7 +204,7 @@ rawBody)`). Kui saladus on määratud, on allkiri kohustuslik. Kui seda pole
    kasutajatele, kes sõltusid pääsmike kaugsünkroonimisest — nad peavad selle
    selgesõnaliselt lubama.
 
-**Miks me selle alles jätame**: Cloud Sync on OmniRoute Cloudi rentniku jaoks
+**Miks me selle alles jätame**: Cloud Sync on 67router Cloudi rentniku jaoks
 ainus võimalus meeskonna autentimisteavet tsentraalselt hallata. Parandus muudab
 ohumudeli ausaks: „server allkirjastab, klient kontrollib, operaator lubab“.
 

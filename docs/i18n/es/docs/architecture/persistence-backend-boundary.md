@@ -10,7 +10,7 @@
 
 ## Contexto
 
-Actualmente, OmniRoute ofrece funciones de persistencia orientadas al dominio desde `src/lib/db/`, mientras que la conexión compartida devuelta por `src/lib/db/core.ts` implementa el contrato síncrono `SqliteAdapter` de `src/lib/db/adapters/types.ts`. Ese adaptador admite varios entornos de ejecución de SQLite, pero su interfaz sigue estando diseñada en torno a SQLite: sentencias preparadas síncronas, `pragma`, transacciones diferidas e inmediatas, copias de seguridad nativas o mediante copia de archivos, puntos de control y un identificador local de la base de datos.
+Actualmente, 67router ofrece funciones de persistencia orientadas al dominio desde `src/lib/db/`, mientras que la conexión compartida devuelta por `src/lib/db/core.ts` implementa el contrato síncrono `SqliteAdapter` de `src/lib/db/adapters/types.ts`. Ese adaptador admite varios entornos de ejecución de SQLite, pero su interfaz sigue estando diseñada en torno a SQLite: sentencias preparadas síncronas, `pragma`, transacciones diferidas e inmediatas, copias de seguridad nativas o mediante copia de archivos, puntos de control y un identificador local de la base de datos.
 
 La ruta actual de inicio y recuperación también gestiona el ciclo de vida del archivo de SQLite. `src/lib/db/core.ts` resuelve `storage.sqlite`, mantiene un único adaptador global por proceso, crea puntos de control de WAL, conserva determinadas tablas durante la recuperación y elimina los archivos auxiliares de SQLite al reconstruir una base de datos. La selección del controlador en `src/lib/db/adapters/driverFactory.ts` elige entre los entornos de ejecución de SQLite compatibles; no constituye una abstracción de backends externos.
 

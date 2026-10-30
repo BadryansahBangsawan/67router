@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O OmniRoute agora oferece suporte a três modos de relay para `/api/v1/relay/chat/completions`:
+O 67router agora oferece suporte a três modos de relay para `/api/v1/relay/chat/completions`:
 
 - `ts`: usa o relay TypeScript no processo.
 - `bifrost`: força o uso do gateway Bifrost.
@@ -45,12 +45,12 @@ Se você estiver comparando 9router/CLIPROXYAPI atualmente:
 
 ## Contrato de limite do backend
 
-O limite estável do produto é a API de relay do OmniRoute, não a implementação do painel. O painel Next.js pode instalar, configurar e supervisionar serviços locais, mas o roteamento de requisições deve entrar pela API de relay e ser encaminhado após esse limite.
+O limite estável do produto é a API de relay do 67router, não a implementação do painel. O painel Next.js pode instalar, configurar e supervisionar serviços locais, mas o roteamento de requisições deve entrar pela API de relay e ser encaminhado após esse limite.
 
 Opções de backend de longo prazo:
 
 - Mantenha o relay TypeScript como o caminho de política e fallback no processo. Autenticação, listas de permissões, normalização de requisições, contabilização e verificações de segurança permanecem aqui antes de qualquer encaminhamento ao backend.
-- Use o Bifrost como o sidecar Tier-1 preferencial de alto throughput quando a implantação exigir menor variação de roteamento, rotação centralizada de provedores ou expansão horizontal entre várias réplicas do OmniRoute.
+- Use o Bifrost como o sidecar Tier-1 preferencial de alto throughput quando a implantação exigir menor variação de roteamento, rotação centralizada de provedores ou expansão horizontal entre várias réplicas do 67router.
 - Mantenha 9router e CLIPROXYAPI como serviços de compatibilidade integrados. Eles são executados como processos locais supervisionados e são úteis quando o comportamento de provedor/CLI desses serviços é o adaptador desejado, mas não devem se tornar o mecanismo de roteamento Tier-1 padrão.
 - Não permita que o painel envie URLs de serviço arbitrárias para o caminho crítico. As URLs fornecidas pela interface são entradas de configuração; o código de roteamento deve resolver backends registrados e com integridade verificada por meio das configurações do servidor e do estado do supervisor.
 - Atualmente, prefira HTTP de loopback para serviços supervisionados, pois os processos gerenciados já expõem APIs compatíveis com HTTP, a proteção da rota pode auditar o limite e o comportamento de falha/fallback fica visível nos logs de requisição. Só vale a pena adicionar um SDK ou transporte por socket no futuro se isso reduzir de forma mensurável a latência p99 de roteamento sem enfraquecer o isolamento ou a semântica de fallback.

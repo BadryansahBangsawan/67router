@@ -45,7 +45,7 @@ npm run test:e2e           # 選用，但建議執行
 （外洩的權杖無法單獨進行發布——因為根本不存在權杖）。
 
 **一次性設定（擁有者）：** npmjs.com → 套件 `omniroute` → Settings → _Trusted
-Publisher_ → GitHub：擁有者 `diegosouzapw`、儲存庫 `OmniRoute`、工作流程 `npm-publish.yml`
+Publisher_ → GitHub：擁有者 `diegosouzapw`、儲存庫 `67router`、工作流程 `npm-publish.yml`
 （環境：無）。在此設定完成之前，自動步驟會因 `ENEEDAUTH` 而失敗：
 請使用 `publish_mode=staged`（見下文）或 `direct` 重新分派。
 

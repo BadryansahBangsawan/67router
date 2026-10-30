@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute separa a **deteção de CLIs**, o **Agent Client Protocol nativo** e os
+O 67router separa a **deteção de CLIs**, o **Agent Client Protocol nativo** e os
 **adaptadores stdio legados**. Encontrar um binário instalado não comprova a sua
 autenticação, compatibilidade com o modelo ou capacidade para processar um prompt.
 

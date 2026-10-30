@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (ଓଡ଼ିଆ)
+# 🌐 67router Proxy Guide (ଓଡ଼ିଆ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **ଭୌଗୋଳିକ ଅବରୋଧକୁ ଏଡ଼ାନ୍ତୁ, ନିଜ ପରିଚୟକୁ ସୁରକ୍ଷିତ ରଖନ୍ତୁ, ଏବଂ ଯେକୌଣସି proxy ମାଧ୍ୟମରେ AI ଟ୍ରାଫିକ୍କୁ ରୁଟ୍ କରନ୍ତୁ — କୌଣସି configuration ଜଟିଳତା ବିନା।**
 
-OmniRoute ଏକ ସମ୍ପୂର୍ଣ୍ଣ ବୈଶିଷ୍ଟ୍ୟଯୁକ୍ତ proxy ପରିଚାଳନା ସିଷ୍ଟମ୍ ଅନ୍ତର୍ଭୁକ୍ତ କରେ, ଯାହା ଆପଣଙ୍କୁ upstream AI provider ଟ୍ରାଫିକ୍କୁ HTTP, HTTPS, କିମ୍ବା SOCKS5 proxy ମାଧ୍ୟମରେ ରୁଟ୍ କରିବାକୁ ଦିଏ। ଆପଣ ଅବରୋଧିତ ଅଞ୍ଚଳରେ ଥାଆନ୍ତୁ, IP rotation ଆବଶ୍ୟକ କରୁଥାଆନ୍ତୁ, କିମ୍ବା ଗୋପନ fingerprinting ଚାହୁଁଥାଆନ୍ତୁ — ଏହି ମାର୍ଗଦର୍ଶିକା ସମସ୍ତ ବିଷୟକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରେ।
+67router ଏକ ସମ୍ପୂର୍ଣ୍ଣ ବୈଶିଷ୍ଟ୍ୟଯୁକ୍ତ proxy ପରିଚାଳନା ସିଷ୍ଟମ୍ ଅନ୍ତର୍ଭୁକ୍ତ କରେ, ଯାହା ଆପଣଙ୍କୁ upstream AI provider ଟ୍ରାଫିକ୍କୁ HTTP, HTTPS, କିମ୍ବା SOCKS5 proxy ମାଧ୍ୟମରେ ରୁଟ୍ କରିବାକୁ ଦିଏ। ଆପଣ ଅବରୋଧିତ ଅଞ୍ଚଳରେ ଥାଆନ୍ତୁ, IP rotation ଆବଶ୍ୟକ କରୁଥାଆନ୍ତୁ, କିମ୍ବା ଗୋପନ fingerprinting ଚାହୁଁଥାଆନ୍ତୁ — ଏହି ମାର୍ଗଦର୍ଶିକା ସମସ୍ତ ବିଷୟକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରେ।
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute Server                        │
+│                       67router Server                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy       │    │ Proxy        │    │ Proxy            │  │
@@ -82,7 +82,7 @@ unsupported_country_region_territory
 
 ## 4-ସ୍ତରୀୟ ପ୍ରକ୍ସି ସିଷ୍ଟମ୍
 
-OmniRoute ପ୍ରାଥମିକତା କ୍ରମରେ ସମାଧାନ କରାଯାଉଥିବା **ଚାରୋଟି ସ୍ୱାଧୀନ ସ୍କୋପ୍ରେ** ପ୍ରକ୍ସି ବିନ୍ୟାସକୁ ସମର୍ଥନ କରେ:
+67router ପ୍ରାଥମିକତା କ୍ରମରେ ସମାଧାନ କରାଯାଉଥିବା **ଚାରୋଟି ସ୍ୱାଧୀନ ସ୍କୋପ୍ରେ** ପ୍ରକ୍ସି ବିନ୍ୟାସକୁ ସମର୍ଥନ କରେ:
 
 ```
 ପ୍ରାଥମିକତା ସମାଧାନ କ୍ରମ (ସର୍ବୋଚ୍ଚ → ସର୍ବନିମ୍ନ):
@@ -95,7 +95,7 @@ OmniRoute ପ୍ରାଥମିକତା କ୍ରମରେ ସମାଧାନ �
 
 ### ସମାଧାନ କିପରି କାର୍ଯ୍ୟ କରେ
 
-OmniRoute ଯେତେବେଳେ କୌଣସି ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରଦାନକାରୀଙ୍କୁ ଅନୁରୋଧ ପଠାଏ, ଏହା `resolveProxyForConnectionFromRegistry()`କୁ କଲ୍ କରେ, ଯାହା କ୍ରମାନୁସାରେ ପ୍ରତ୍ୟେକ ସ୍ତର ଯାଞ୍ଚ କରେ:
+67router ଯେତେବେଳେ କୌଣସି ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରଦାନକାରୀଙ୍କୁ ଅନୁରୋଧ ପଠାଏ, ଏହା `resolveProxyForConnectionFromRegistry()`କୁ କଲ୍ କରେ, ଯାହା କ୍ରମାନୁସାରେ ପ୍ରତ୍ୟେକ ସ୍ତର ଯାଞ୍ଚ କରେ:
 
 1. **ଆକାଉଣ୍ଟ-ସ୍ତର** — ଏହି ନିର୍ଦ୍ଦିଷ୍ଟ କନେକ୍ସନ୍ ID ପାଇଁ କୌଣସି ପ୍ରକ୍ସି ନ୍ୟସ୍ତ କରାଯାଇଛି କି?
 2. **ପ୍ରଦାନକାରୀ-ସ୍ତର** — ଏହି ପ୍ରଦାନକାରୀଙ୍କ ପାଇଁ (ଯଥା, `openai`) କୌଣସି ପ୍ରକ୍ସି ନ୍ୟସ୍ତ କରାଯାଇଛି କି?
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ଇମ୍ପୋର୍ଟ/ଏକ୍ସପୋର୍ଟ
 
-ପ୍ରକ୍ସିଗୁଡ଼ିକ **ବ୍ୟାକଅପ୍/ରିଷ୍ଟୋର୍** ସିଷ୍ଟମ୍ରେ ସାମିଲ ଥାଏ। ଆପଣଙ୍କ OmniRoute ବିନ୍ୟାସ ଏକ୍ସପୋର୍ଟ କରିବାବେଳେ:
+ପ୍ରକ୍ସିଗୁଡ଼ିକ **ବ୍ୟାକଅପ୍/ରିଷ୍ଟୋର୍** ସିଷ୍ଟମ୍ରେ ସାମିଲ ଥାଏ। ଆପଣଙ୍କ 67router ବିନ୍ୟାସ ଏକ୍ସପୋର୍ଟ କରିବାବେଳେ:
 
 1. **ଡ୍ୟାସ୍ବୋର୍ଡ → ସେଟିଂସ୍ → ବ୍ୟାକଅପ୍**କୁ ଯାଆନ୍ତୁ
 2. **ଏକ୍ସପୋର୍ଟ**ରେ କ୍ଲିକ୍ କରନ୍ତୁ — ପ୍ରକ୍ସି ରେଜିଷ୍ଟ୍ରି ଏବଂ ନ୍ୟସ୍ତକରଣଗୁଡ଼ିକ ସାମିଲ ହୋଇଥାଏ
@@ -247,7 +247,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ପୁରୁଣା ସିଷ୍ଟମ୍ରୁ ମାଇଗ୍ରେସନ୍
 
-ଯଦି ଆପଣ କୌଣସି ପୁରୁଣା ସଂସ୍କରଣରେ (pre-registry) ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ବିନ୍ୟାସ କରିଥିଲେ, OmniRoute ସେଗୁଡ଼ିକୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସ୍ଥାନାନ୍ତର କରେ:
+ଯଦି ଆପଣ କୌଣସି ପୁରୁଣା ସଂସ୍କରଣରେ (pre-registry) ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ବିନ୍ୟାସ କରିଥିଲେ, 67router ସେଗୁଡ଼ିକୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସ୍ଥାନାନ୍ତର କରେ:
 
 ```
 ପୁରୁଣା key_value ଷ୍ଟୋର୍ → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **[@oyi77](https://github.com/oyi77)ଙ୍କ ଦ୍ୱାରା ଅବଦାନ** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (ଇସ୍ୟୁ [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute ସାରା ବିଶ୍ୱରୁ **ଶହ ଶହ ମାଗଣା, ବୈଧୀକୃତ ପ୍ରକ୍ସି**ର ଆକ୍ସେସ୍ ପ୍ରଦାନ କରିବା ପାଇଁ **[1proxy](https://1proxy-api.aitradepulse.com)** କମ୍ୟୁନିଟି ପ୍ଲାଟଫର୍ମ ସହିତ ଏକୀକୃତ ହୁଏ। ଯେଉଁ ଉପଭୋକ୍ତାଙ୍କର ନିଜସ୍ୱ ପ୍ରକ୍ସି ଭିତ୍ତିଭୂମି ନାହିଁ, ସେମାନଙ୍କ ପାଇଁ ଏହା ଉପଯୁକ୍ତ।
+67router ସାରା ବିଶ୍ୱରୁ **ଶହ ଶହ ମାଗଣା, ବୈଧୀକୃତ ପ୍ରକ୍ସି**ର ଆକ୍ସେସ୍ ପ୍ରଦାନ କରିବା ପାଇଁ **[1proxy](https://1proxy-api.aitradepulse.com)** କମ୍ୟୁନିଟି ପ୍ଲାଟଫର୍ମ ସହିତ ଏକୀକୃତ ହୁଏ। ଯେଉଁ ଉପଭୋକ୍ତାଙ୍କର ନିଜସ୍ୱ ପ୍ରକ୍ସି ଭିତ୍ତିଭୂମି ନାହିଁ, ସେମାନଙ୍କ ପାଇଁ ଏହା ଉପଯୁକ୍ତ।
 
 ### ଏହା କିପରି କାମ କରେ
 
@@ -272,7 +272,7 @@ OmniRoute ସାରା ବିଶ୍ୱରୁ **ଶହ ଶହ ମାଗଣା, �
 └─────────────┘    ପ୍ରକ୍ସି     └─────────────────┘               └──────────┘
 ```
 
-1. **ସିଙ୍କ୍** — OmniRoute, 1proxy APIରୁ ବୈଧୀକୃତ ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ଆଣେ
+1. **ସିଙ୍କ୍** — 67router, 1proxy APIରୁ ବୈଧୀକୃତ ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ଆଣେ
 2. **ସଂରକ୍ଷଣ** — ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ସେହି `proxy_registry` ଟେବୁଲ୍ରେ `source = 'oneproxy'` ସହିତ ସଂରକ୍ଷଣ କରାଯାଏ
 3. **ଫିଲ୍ଟର୍** — ପ୍ରୋଟୋକଲ୍, ଦେଶ ଓ ଗୁଣବତ୍ତା ସ୍କୋର୍ ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ କରନ୍ତୁ
 4. **ରୋଟେଟ୍** — ଗୁଣବତ୍ତା, ରାଣ୍ଡମ୍ କିମ୍ବା କ୍ରମିକ କୌଶଳ ବ୍ୟବହାର କରି ସର୍ବୋତ୍ତମ ପ୍ରକ୍ସି ବାଛନ୍ତୁ
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## ଆଣ୍ଟି-ଡିଟେକ୍ସନ୍ ଏବଂ ଷ୍ଟେଲ୍ଥ
 
-OmniRoute କେବଳ ଏକ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଟ୍ରାଫିକ୍ ରାଉଟ୍ କରେ ନାହିଁ — ଏହା ଟ୍ରାଫିକ୍କୁ ବୈଧ ଭଳି ଦେଖାଏ:
+67router କେବଳ ଏକ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଟ୍ରାଫିକ୍ ରାଉଟ୍ କରେ ନାହିଁ — ଏହା ଟ୍ରାଫିକ୍କୁ ବୈଧ ଭଳି ଦେଖାଏ:
 
 ### TLS ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ସ୍ପୁଫିଂ
 
@@ -406,11 +406,11 @@ OmniRoute କେବଳ ଏକ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଟ
 
 ## ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରକ୍ସି ମୋଡ୍ଗୁଡ଼ିକ
 
-CLIProxyAPI ପ୍ୟାଟର୍ନ ବ୍ୟବହାର କରୁଥିବା ପ୍ରଦାନକାରୀଙ୍କ ପାଇଁ OmniRoute ତିନୋଟି ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରକ୍ସି ମୋଡ୍ ସମର୍ଥନ କରେ:
+CLIProxyAPI ପ୍ୟାଟର୍ନ ବ୍ୟବହାର କରୁଥିବା ପ୍ରଦାନକାରୀଙ୍କ ପାଇଁ 67router ତିନୋଟି ଅପ୍ଷ୍ଟ୍ରିମ୍ ପ୍ରକ୍ସି ମୋଡ୍ ସମର୍ଥନ କରେ:
 
 | ମୋଡ୍          | ବିବରଣୀ                                                      |
 | ------------- | ----------------------------------------------------------- |
-| `native`      | OmniRoute ସିଧାସଳଖ ପ୍ରକ୍ସି ରାଉଟିଂ ପରିଚାଳନା କରେ (ଡିଫଲ୍ଟ)      |
+| `native`      | 67router ସିଧାସଳଖ ପ୍ରକ୍ସି ରାଉଟିଂ ପରିଚାଳନା କରେ (ଡିଫଲ୍ଟ)       |
 | `cliproxyapi` | ଏକ ବାହ୍ୟ CLIProxyAPI ଇନ୍ଷ୍ଟାନ୍ସକୁ ଦାୟିତ୍ୱ ଦିଏ               |
 | `fallback`    | ପ୍ରଥମେ ନେଟିଭ୍ ଚେଷ୍ଟା କରେ, ବିଫଳ ହେଲେ CLIProxyAPI ବ୍ୟବହାର କରେ |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### ଟନେଲ୍ API
 
-ଏକ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଆଉଟ୍ବାଉଣ୍ଡ ରାଉଟ୍ କରିବା ପରିବର୍ତ୍ତେ ଆପଣଙ୍କ OmniRoute ଇନ୍ଷ୍ଟାନ୍ସକୁ ସାର୍ବଜନୀନ ଇଣ୍ଟରନେଟ୍ରେ (Cloudflare/ngrok/Tailscale) ଉପଲବ୍ଧ କରାଇବା ପାଇଁ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) ଦେଖନ୍ତୁ। ଟନେଲ୍ REST API `/api/tunnels/{cloudflared,ngrok,tailscale}/*` ଅଧୀନରେ ରହେ ଏବଂ ଉପରେ ଡକ୍ୟୁମେଣ୍ଟ କରାଯାଇଥିବା ଆଉଟ୍ବାଉଣ୍ଡ ପ୍ରକ୍ସି ଶୃଙ୍ଖଳାଠାରୁ ସ୍ୱାଧୀନ ଅଟେ।
+ଏକ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଆଉଟ୍ବାଉଣ୍ଡ ରାଉଟ୍ କରିବା ପରିବର୍ତ୍ତେ ଆପଣଙ୍କ 67router ଇନ୍ଷ୍ଟାନ୍ସକୁ ସାର୍ବଜନୀନ ଇଣ୍ଟରନେଟ୍ରେ (Cloudflare/ngrok/Tailscale) ଉପଲବ୍ଧ କରାଇବା ପାଇଁ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) ଦେଖନ୍ତୁ। ଟନେଲ୍ REST API `/api/tunnels/{cloudflared,ngrok,tailscale}/*` ଅଧୀନରେ ରହେ ଏବଂ ଉପରେ ଡକ୍ୟୁମେଣ୍ଟ କରାଯାଇଥିବା ଆଉଟ୍ବାଉଣ୍ଡ ପ୍ରକ୍ସି ଶୃଙ୍ଖଳାଠାରୁ ସ୍ୱାଧୀନ ଅଟେ।
 
 ### 1proxy API
 
@@ -515,7 +515,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### ପ୍ରକ୍ସି ମାଧ୍ୟମରେ "socket hang up" ତ୍ରୁଟି
 
-ନିଷ୍କ୍ରିୟ ସଂଯୋଗଗୁଡ଼ିକୁ ବିଚ୍ଛିନ୍ନ କରୁଥିବା ଶସ୍ତା ପ୍ରକ୍ସିଗୁଡ଼ିକ ସହିତ ଏହା ସ୍ୱାଭାବିକ। OmniRoute ନିମ୍ନପ୍ରକାରେ ଏହାକୁ ପୂର୍ବରୁ ପରିଚାଳନା କରେ:
+ନିଷ୍କ୍ରିୟ ସଂଯୋଗଗୁଡ଼ିକୁ ବିଚ୍ଛିନ୍ନ କରୁଥିବା ଶସ୍ତା ପ୍ରକ୍ସିଗୁଡ଼ିକ ସହିତ ଏହା ସ୍ୱାଭାବିକ। 67router ନିମ୍ନପ୍ରକାରେ ଏହାକୁ ପୂର୍ବରୁ ପରିଚାଳନା କରେ:
 
 - ପ୍ରକ୍ସି ସଂଯୋଗଗୁଡ଼ିକରେ keep-alive ଅକ୍ଷମ କରି (`keepAliveTimeout: 1`)
 - pipelining ଅକ୍ଷମ କରି (`pipelining: 0`)
@@ -525,7 +525,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### OAuth ସମୟରେ "unsupported_country_region_territory"
 
-OAuth ପ୍ରବାହ ଆରମ୍ଭ କରିବାର **ପୂର୍ବରୁ** ପ୍ରକ୍ସି କନଫିଗର୍ ହୋଇଥିବା ସୁନିଶ୍ଚିତ କରନ୍ତୁ। OmniRoute, OAuth token exchangeକୁ କନଫିଗର୍ ହୋଇଥିବା ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ରୁଟ୍ କରେ। ପ୍ରଥମେ ଏକ global କିମ୍ବା provider-level ପ୍ରକ୍ସି ସେଟ୍ କରନ୍ତୁ, ତା’ପରେ ସଂଯୋଗ କରନ୍ତୁ।
+OAuth ପ୍ରବାହ ଆରମ୍ଭ କରିବାର **ପୂର୍ବରୁ** ପ୍ରକ୍ସି କନଫିଗର୍ ହୋଇଥିବା ସୁନିଶ୍ଚିତ କରନ୍ତୁ। 67router, OAuth token exchangeକୁ କନଫିଗର୍ ହୋଇଥିବା ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ରୁଟ୍ କରେ। ପ୍ରଥମେ ଏକ global କିମ୍ବା provider-level ପ୍ରକ୍ସି ସେଟ୍ କରନ୍ତୁ, ତା’ପରେ ସଂଯୋଗ କରନ୍ତୁ।
 
 ### ପ୍ରକ୍ସି ବ୍ୟବହୃତ ହେଉନାହିଁ
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## ପ୍ରକ୍ସି ସ୍ୱାସ୍ଥ୍ୟ ଯାଞ୍ଚ (v3.8.16+)
 
-OmniRouteର **proxy fast-fail** ପ୍ରଣାଳୀ (`src/lib/proxyHealth.ts`) ଏକ ଦ୍ରୁତ TCP ସଂଯୋଗ ଯାଞ୍ଚ ମାଧ୍ୟମରେ <2s ଭିତରେ ଅଚଳ ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ଚିହ୍ନଟ କରେ, ତା’ପରେ ପ୍ରତ୍ୟେକ ଅନୁରୋଧର ଅତିରିକ୍ତ ବ୍ୟୟ ଏଡ଼ାଇବା ପାଇଁ **ଫଳାଫଳକୁ କ୍ୟାଶ୍ କରେ**।
+67routerର **proxy fast-fail** ପ୍ରଣାଳୀ (`src/lib/proxyHealth.ts`) ଏକ ଦ୍ରୁତ TCP ସଂଯୋଗ ଯାଞ୍ଚ ମାଧ୍ୟମରେ <2s ଭିତରେ ଅଚଳ ପ୍ରକ୍ସିଗୁଡ଼ିକୁ ଚିହ୍ନଟ କରେ, ତା’ପରେ ପ୍ରତ୍ୟେକ ଅନୁରୋଧର ଅତିରିକ୍ତ ବ୍ୟୟ ଏଡ଼ାଇବା ପାଇଁ **ଫଳାଫଳକୁ କ୍ୟାଶ୍ କରେ**।
 
 ### ଏହା କିପରି କାମ କରେ
 
@@ -658,11 +658,11 @@ URLରେ ଥିବା custom ports (`http://host:9999`) ସବୁବେଳେ s
 
 ## ପ୍ରକ୍ସି ବିଶ୍ଳେଷଣ ଓ ପର୍ଯ୍ୟବେକ୍ଷଣୀୟତା
 
-ରାଉଟିଂ ପ୍ୟାଟର୍ନ, ବିଳମ୍ବ ବୃଦ୍ଧି ଏବଂ ବାରମ୍ବାର ଘଟୁଥିବା ବିଫଳତାଗୁଡ଼ିକ ନିର୍ଣ୍ଣୟ କରିବାରେ ଅପରେଟରମାନଙ୍କୁ ସାହାଯ୍ୟ କରିବା ପାଇଁ OmniRoute ପ୍ରତ୍ୟେକ ପ୍ରକ୍ସିର ବ୍ୟବହାର ଟ୍ରାକ୍ କରେ।
+ରାଉଟିଂ ପ୍ୟାଟର୍ନ, ବିଳମ୍ବ ବୃଦ୍ଧି ଏବଂ ବାରମ୍ବାର ଘଟୁଥିବା ବିଫଳତାଗୁଡ଼ିକ ନିର୍ଣ୍ଣୟ କରିବାରେ ଅପରେଟରମାନଙ୍କୁ ସାହାଯ୍ୟ କରିବା ପାଇଁ 67router ପ୍ରତ୍ୟେକ ପ୍ରକ୍ସିର ବ୍ୟବହାର ଟ୍ରାକ୍ କରେ।
 
 ### କ’ଣ ଟ୍ରାକ୍ କରାଯାଏ
 
-ବିନ୍ୟାସିତ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଯାଉଥିବା ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ OmniRoute ନିମ୍ନଲିଖିତ ତଥ୍ୟ ରେକର୍ଡ କରେ:
+ବିନ୍ୟାସିତ ପ୍ରକ୍ସି ମାଧ୍ୟମରେ ଯାଉଥିବା ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ 67router ନିମ୍ନଲିଖିତ ତଥ୍ୟ ରେକର୍ଡ କରେ:
 
 | ମେଟ୍ରିକ୍     | ବିବରଣୀ                                                      |
 | ------------ | ----------------------------------------------------------- |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## ଘୂର୍ଣ୍ଣନ କୌଶଳ ନିଷ୍ପତ୍ତି ବୃକ୍ଷ
 
-ଯେତେବେଳେ ଏକ ସ୍କୋପ୍କୁ ଏକାଧିକ ପ୍ରକ୍ସି ନ୍ୟସ୍ତ କରାଯାଏ, ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ କେଉଁଟି ବ୍ୟବହାର କରାଯିବ ତାହା ବାଛିବାକୁ OmniRoute ଏକ **ଘୂର୍ଣ୍ଣନ କୌଶଳ** ବ୍ୟବହାର କରେ। କୌଶଳଟି ସ୍କୋପ୍ ସ୍ତରରେ ବିନ୍ୟାସ କରାଯାଏ (ବୈଶ୍ୱିକ, ପ୍ରତି-ପ୍ରଦାତା, ପ୍ରତି-ଆକାଉଣ୍ଟ, ପ୍ରତି-ସମ୍ମିଶ୍ରଣ)।
+ଯେତେବେଳେ ଏକ ସ୍କୋପ୍କୁ ଏକାଧିକ ପ୍ରକ୍ସି ନ୍ୟସ୍ତ କରାଯାଏ, ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ପାଇଁ କେଉଁଟି ବ୍ୟବହାର କରାଯିବ ତାହା ବାଛିବାକୁ 67router ଏକ **ଘୂର୍ଣ୍ଣନ କୌଶଳ** ବ୍ୟବହାର କରେ। କୌଶଳଟି ସ୍କୋପ୍ ସ୍ତରରେ ବିନ୍ୟାସ କରାଯାଏ (ବୈଶ୍ୱିକ, ପ୍ରତି-ପ୍ରଦାତା, ପ୍ରତି-ଆକାଉଣ୍ଟ, ପ୍ରତି-ସମ୍ମିଶ୍ରଣ)।
 
 ### ଉପଲବ୍ଧ କୌଶଳଗୁଡ଼ିକ
 

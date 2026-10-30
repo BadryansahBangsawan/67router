@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Gaeilge)
+# 🗜️ Prompt Compression Guide — 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Forléargas
 
-Cuireann OmniRoute píblíne mhodúlach comhbhrúite leideanna i bhfeidhm a ritheann **go réamhghníomhach** sula sroicheann iarratais soláthraithe réamhtheachtacha. Ciallaíonn sé seo go sábhálfar comharthaí go trédhearcach — ní gá aon athrú a dhéanamh ar do shreabhadh oibre.
+Cuireann 67router píblíne mhodúlach comhbhrúite leideanna i bhfeidhm a ritheann **go réamhghníomhach** sula sroicheann iarratais soláthraithe réamhtheachtacha. Ciallaíonn sé seo go sábhálfar comharthaí go trédhearcach — ní gá aon athrú a dhéanamh ar do shreabhadh oibre.
 
 ```
 Iarratas ón gCliant
@@ -122,15 +122,15 @@ theaglamaí comhbhrúite a shanntar do theaglamaí ródúcháin.
 
 ## Matamaitic na gCoigilteas Réamhtheachtach
 
-Déanann OmniRoute coigilteas comhbhrúite ó dhá fhoinse a dhoiciméadú: tagarmharcanna tionscadail réamhtheachtacha agus
-comhdhéanamh innill OmniRoute féin.
+Déanann 67router coigilteas comhbhrúite ó dhá fhoinse a dhoiciméadú: tagarmharcanna tionscadail réamhtheachtacha agus
+comhdhéanamh innill 67router féin.
 
 | Foinse  | Uimhir ón README réamhtheachtach a úsáidtear anseo                                                                                                    |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` níos lú comharthaí aschuir, `65%` de choigilteas aschuir ar an meán sna tagarmharcanna, raon `22-87%`, agus uirlis comhbhrúite ionchuir `~46%` |
 | RTK     | Coigilteas `60-90%` ar aschur orduithe; seisiún samplach `~118,000 -> ~23,900` comhartha, nó `79.7%` sábháilte (`~80%`)                               |
 
-I gcás ualaí uirlise/comhthéacs atá ag forluí, cruachann teaglaim réamhshocraithe OmniRoute na hinnill:
+I gcás ualaí uirlise/comhthéacs atá ag forluí, cruachann teaglaim réamhshocraithe 67router na hinnill:
 
 ```txt
 RTK -> Caveman
@@ -532,12 +532,12 @@ sé na treoracha roghnaithe in ord na catalóige,
 iarcheanglaíonn sé an clásal teorainneacha **uair amháin** (mar aon leis an gclásal
 sábháilteachta, `SAFETY_BOUNDARIES` nó a aistriúchán, nuair a roghnaítear `less-code` nó
 `ponytail`), agus tosaíonn sé an bloc le marcóir idéimitheachta amháin
-(`[OmniRoute Output Styles]`), ionas nach ndéanann athchur i bhfeidhm aon rud. Nuair a
+(`[67router Output Styles]`), ionas nach ndéanann athchur i bhfeidhm aon rud. Nuair a
 bhíonn aistriúchán ar fáil don teanga réitithe (féach Roghnú teanga thíos), instealltar
 an treoir logánaithe in ionad an Bhéarla.
 
 Ar chorp a bhfuil eagar `messages` neamhfholamh aige, ritear an tseiceáil idéimitheachta
-roimh an seachbhóthar inneachair: nuair atá an marcóir `[OmniRoute Output Styles]`
+roimh an seachbhóthar inneachair: nuair atá an marcóir `[67router Output Styles]`
 cheana féin sa réimse barrleibhéil `system` (teaghrán nó eagar bloic inneachair) nó i
 dteachtaireacht chórais a bhfuil inneachar teaghráin aici, fágtar an corp gan athrú mar
 `already_applied` agus ní ritear aon seiceáil eochairfhocal. Seachas sin, seiceálann
@@ -567,7 +567,7 @@ an bloc sa chéad áit díobh seo a aimsíonn sé:
 Ar chorp gan eagar `messages` (nó a bhfuil ceann folamh aige), ní ritear aon seachbhóthar
 inneachair agus ní bhreathnaítear ar réimse barrleibhéil `system`. Iarcheanglaítear an
 bloc i ndiaidh théacs réimse teaghráin `instructions`, ach amháin má tá an marcóir
-`[OmniRoute Output Styles]` sa réimse sin cheana féin, agus sa chás sin fágtar an corp
+`[67router Output Styles]` sa réimse sin cheana féin, agus sa chás sin fágtar an corp
 gan athrú mar `already_applied`. Nuair nach bhfuil réimse teaghráin `instructions` ag
 an gcorp ach go bhfuil `input` aige (teaghrán nó eagar), déantar `instructions` den
 bhloc, agus cuirtear é in ionad aon luacha neamhtheaghráin a bhí sa réimse sin. Fágtar
@@ -596,8 +596,8 @@ coinníonn an chumraíocht chomhbhrúite an roghnúchán mar:
 Comhoiriúnacht siarghabhálach: fad atá `outputStyles` folamh, mapálann an socrú
 oidhreachta `cavemanOutputMode.enabled` go `terse-prose` ag
 `cavemanOutputMode.intensity`. Tosaíonn an bloc ansin leis an marcóir
-`[OmniRoute Output Styles]`, san áit ar insteall an t-insteallaire oidhreachta
-`applyCavemanOutputMode()` `[OmniRoute Caveman Output Mode]`. Faoin marcóir, meaitseálann
+`[67router Output Styles]`, san áit ar insteall an t-insteallaire oidhreachta
+`applyCavemanOutputMode()` `[67router Caveman Output Mode]`. Faoin marcóir, meaitseálann
 an téacs an t-instealladh oidhreachta in en, pt-BR, es, de, fr, it, ru, id agus vi; in
 ja agus zh tá spás breise amháin ann roimh an gclásal teorainneacha. Aistrítear
 `terse-prose` go pt-BR, es, de, fr, it, ru, zh, ja, id agus vi, mar sin faigheann iarratas

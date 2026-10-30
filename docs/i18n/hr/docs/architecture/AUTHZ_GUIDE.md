@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zadnje ažurirano:** 2026-09-22 — prostori naziva opsega upućuju na MCP-SERVER.md
 
-OmniRoute ima autorizacijski cjevovod svjestan ruta koji štiti svaki API zahtjev. Klasifikacija je **deterministička** i **zatvorena u slučaju kvara** — sve što se ne može klasificirati završava kao `MANAGEMENT` i zahtijeva sesiju ili token upravljačke razine. Ova stranica objašnjava model za inženjere koji održavaju rute ili dizajniraju nove krajnje točke.
+67router ima autorizacijski cjevovod svjestan ruta koji štiti svaki API zahtjev. Klasifikacija je **deterministička** i **zatvorena u slučaju kvara** — sve što se ne može klasificirati završava kao `MANAGEMENT` i zahtijeva sesiju ili token upravljačke razine. Ova stranica objašnjava model za inženjere koji održavaju rute ili dizajniraju nove krajnje točke.
 
 ![AuthZ cjevovod (3 klase ruta + evaluacija politike)](../diagrams/exported/authz-pipeline.svg)
 

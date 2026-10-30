@@ -15,7 +15,7 @@
 - [OAuth 2.0 cho ứng dụng gốc (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret dành cho ứng dụng đã cài đặt là công khai; PKCE cung cấp khả năng bảo mật thực sự.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Các mã định danh ứng dụng Web được thiết kế để công khai.
 
-OmniRoute phải nhúng các giá trị này để người dùng không cấu hình `.env` vẫn có được luồng OAuth hoạt động ngay khi sử dụng. Nếu không có giá trị dự phòng được nhúng, các nhà cung cấp Gemini / Antigravity sẽ ngừng hoạt động đối với bất kỳ người dùng nào làm theo quy trình "chỉ cần clone và chạy".
+67router phải nhúng các giá trị này để người dùng không cấu hình `.env` vẫn có được luồng OAuth hoạt động ngay khi sử dụng. Nếu không có giá trị dự phòng được nhúng, các nhà cung cấp Gemini / Antigravity sẽ ngừng hoạt động đối với bất kỳ người dùng nào làm theo quy trình "chỉ cần clone và chạy".
 
 Tuy nhiên, các giá trị dạng chuỗi trực tiếp như `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` bị **GitHub Secret Scanning**, **Semgrep** và các trình quét mẫu tương tự phát hiện. Mỗi bản phát hành tạo ra hàng loạt kết quả dương tính giả gây nhiễu, tính năng bảo vệ khi push chặn các commit hợp lệ và đội ngũ vận hành không còn tin tưởng luồng cảnh báo.
 

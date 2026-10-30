@@ -34,7 +34,7 @@ Za svakog kandidata u skupu (`open-sse/services/autoCombo/virtualFactory.ts::bui
 odmah nakon `filterPaidOnlyCandidates`):
 
 1. **Uopće nije u `FREE_MODEL_BUDGETS`** → isključuje se. To obuhvaća stvarno plaćene modele i
-   sve pružatelje/modele koje OmniRoute još nije klasificirao — novi kandidati počinju kao
+   sve pružatelje/modele koje 67router još nije klasificirao — novi kandidati počinju kao
    isključeni, a ne uključeni.
 2. **`freeType: "keyless"`** → odmah prolazi, **ali samo ako je kandidat doista pristigao putem
    putanje bez autentifikacije** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -91,7 +91,7 @@ se u `tests/unit/autoCombo/strict-zero-cost-connection-safety.test.ts`
 (slučajevi A/B/C zaobilaženja bez ključa, slučajevi 1-5 s više računa).
 
 `otkriveno automatski`: pružatelj/model objavljen sutra s odgovarajućim metapodacima (u
-katalogu, s adapterom za uporabu, `hardStopGuaranteed: true`) može se upotrebljavati čim OmniRoute
+katalogu, s adapterom za uporabu, `hardStopGuaranteed: true`) može se upotrebljavati čim 67router
 sazna za njega — bez izmjene koda, bez unosa na popis dopuštenih i bez ikakvog uređivanja ovog
 modula. Pružatelj/model uklonjen iz kataloga nestaje na isti način. Regresijski dokaz nalazi se u
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (putem umetljivih testnih podataka,

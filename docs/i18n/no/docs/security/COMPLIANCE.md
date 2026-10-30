@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute registrerer administrative handlinger, autentiseringshendelser, endringer i livssyklusen til leverandørlegitimasjon og kall til MCP-verktøy i SQLite-baserte revisjonstabeller. Denne siden beskriver hva som logges, hvor det lagres, hvor lenge det beholdes, hvordan API-nøkler kan reservere seg, og hvordan dataene kan spørres.
+67router registrerer administrative handlinger, autentiseringshendelser, endringer i livssyklusen til leverandørlegitimasjon og kall til MCP-verktøy i SQLite-baserte revisjonstabeller. Denne siden beskriver hva som logges, hvor det lagres, hvor lenge det beholdes, hvordan API-nøkler kan reservere seg, og hvordan dataene kan spørres.
 
 Implementasjonen finnes i `src/lib/compliance/index.ts` (T-43 — «Samsvarskontroller») og `src/lib/compliance/providerAudit.ts`. Revisjonsskriving utløser aldri unntak: Ved enhver feil ignoreres kallet uten melding, slik at revisjonslogging ikke kan avbryte hovedflyten for forespørsler.
 

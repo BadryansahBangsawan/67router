@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute saab Androidis Termuxi kaudu töötada ilma graafilise kasutajaliideseta serverina. Electroni töölauarakendust Termuxis ei toetata, kuid veebipõhine juhtpaneel ja OpenAI-ga ühilduv API töötavad kohalikus brauseris või teistes samas võrgus olevates seadmetes.
+67router saab Androidis Termuxi kaudu töötada ilma graafilise kasutajaliideseta serverina. Electroni töölauarakendust Termuxis ei toetata, kuid veebipõhine juhtpaneel ja OpenAI-ga ühilduv API töötavad kohalikus brauseris või teistes samas võrgus olevates seadmetes.
 
 ## Eeltingimused
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js-i versioon:** OmniRoute nõuab Node'i versiooni `>=22.22.2 <23 || >=24.0.0 <27` (vastab väärtustele `engines` failis `package.json` / `SUPPORTED_NODE_RANGE`). Termuxi `nodejs-lts` sisaldab tavaliselt Node 20 LTS-i, mida **enam ei toetata** — installige selle asemel `pkg install nodejs` (praegune versioon) ja kontrollige käsuga `node --version`, et kuvatakse versioonireast 22.x/24.x+ pärinev versioon.
+> **Node.js-i versioon:** 67router nõuab Node'i versiooni `>=22.22.2 <23 || >=24.0.0 <27` (vastab väärtustele `engines` failis `package.json` / `SUPPORTED_NODE_RANGE`). Termuxi `nodejs-lts` sisaldab tavaliselt Node 20 LTS-i, mida **enam ei toetata** — installige selle asemel `pkg install nodejs` (praegune versioon) ja kontrollige käsuga `node --version`, et kuvatakse versioonireast 22.x/24.x+ pärinev versioon.
 
-Kui natiivse paketi kompileerimine ebaõnnestub, käivitage ülaltoodud käsk `pkg install` uuesti ja proovige seejärel OmniRoute'i installimist veel kord.
+Kui natiivse paketi kompileerimine ebaõnnestub, käivitage ülaltoodud käsk `pkg install` uuesti ja proovige seejärel 67router'i installimist veel kord.
 
 ## Installimine
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Käivitamine
 
-Käivitage OmniRoute ilma graafilise kasutajaliideseta serverirežiimis:
+Käivitage 67router ilma graafilise kasutajaliideseta serverirežiimis:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Näiteks:
 http://192.168.1.50:20128
 ```
 
-Hoidke telefon ja klient samas usaldusväärses võrgus. Kui teete OmniRoute'i juurdepääsetavaks väljastpoolt telefoni, lubage API-võtmed ja juhtpaneeli autentimine.
+Hoidke telefon ja klient samas usaldusväärses võrgus. Kui teete 67router'i juurdepääsetavaks väljastpoolt telefoni, lubage API-võtmed ja juhtpaneeli autentimine.
 
 ## Andmekataloog
 
-Vaikimisi salvestab OmniRoute andmed Termuxi kodukataloogi, järgides sama serveripoolse andmetee käitumist nagu Linuxis. Andmebaasi paigutamiseks kindlasse asukohta tehke järgmist:
+Vaikimisi salvestab 67router andmed Termuxi kodukataloogi, järgides sama serveripoolse andmetee käitumist nagu Linuxis. Andmebaasi paigutamiseks kindlasse asukohta tehke järgmist:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Toetamata platvorm: android (iga päring tagastab HTTP 500)
 
-**Sümptom:** `omniroute` / `omniroute serve` väljastab `✔ OmniRoute is running!`, kuid iga juhtpaneeli- või API-päring tagastab pelga vastuse `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` jääb tühjaks, `APP_LOG_LEVEL=debug` ei väljasta midagi kasulikku ja vastuse keha on lihttekst (`Internal Server Error`) ilma JSON-i üksikasjadeta.
+**Sümptom:** `omniroute` / `omniroute serve` väljastab `✔ 67router is running!`, kuid iga juhtpaneeli- või API-päring tagastab pelga vastuse `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` jääb tühjaks, `APP_LOG_LEVEL=debug` ei väljasta midagi kasulikku ja vastuse keha on lihttekst (`Internal Server Error`) ilma JSON-i üksikasjadeta.
 
 **Põhjus:** Mõned Termuxi/Node'i järgud teatavad `process.platform === "android"`. Next.js-i `getCacheDirectory()` ei käsitle seda platvormi: see nõuab, et `~/.cache` (või üldine ajutine kataloog) oleks _juba_ olemas, vastasel juhul ebaõnnestub instrumentatsioonikonksu laadimine järgmise veaga:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Kuna konksu ei laadita, ei käivitu ka logimine — tõrke 500 põhjust näib täiesti võimatu diagnoosida. OmniRoute loob enne Next.js-i käivitumist CLI sisenemispunktis kataloogi `~/.cache` (ja määrab `XDG_CACHE_HOME`, kui see pole määratud), et see kontroll Androidis/Termuxis õnnestuks.
+Kuna konksu ei laadita, ei käivitu ka logimine — tõrke 500 põhjust näib täiesti võimatu diagnoosida. 67router loob enne Next.js-i käivitumist CLI sisenemispunktis kataloogi `~/.cache` (ja määrab `XDG_CACHE_HOME`, kui see pole määratud), et see kontroll Androidis/Termuxis õnnestuks.
 
 **Toetatud lahendus (ilma paketti muutmata):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-OmniRoute'i praegustes järkudes teeb CLI seda Androidis/Termuxis automaatselt — värske `npx -y omniroute@latest` / globaalne install ei tohiks käsitsi tehtavat sammu vajada. Kui näete viga ka pärast versiooniuuendust, looge `~/.cache` ülaltoodud viisil üks kord ja taaskäivitage.
+67router'i praegustes järkudes teeb CLI seda Androidis/Termuxis automaatselt — värske `npx -y omniroute@latest` / globaalne install ei tohiks käsitsi tehtavat sammu vajada. Kui näete viga ka pärast versiooniuuendust, looge `~/.cache` ülaltoodud viisil üks kord ja taaskäivitage.
 
 **Ärge** muutke faili `dist/server.js`, et sundida väärtuseks `process.platform = "linux"`. Selline paketi muudatus kirjutatakse igal uuesti installimisel või versiooniuuendusel üle ning pole pärast vahemälukataloogi loomist vajalik.
 

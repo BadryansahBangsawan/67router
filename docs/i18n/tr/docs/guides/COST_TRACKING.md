@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'un her isteğin maliyetini nasıl tahmin ettiği, kaydettiği ve raporladığı — ve
+67router'un her isteğin maliyetini nasıl tahmin ettiği, kaydettiği ve raporladığı — ve
 gösterge panelindeki sayının neden bir fatura değil, **tasarruf takipçisi** olduğu.
 
 Ayrıca bkz.: [Kullanıcı Kılavuzu](./USER_GUIDE.md) · [Özellikler Galerisi](./FEATURES.md)
@@ -13,12 +13,12 @@ Ayrıca bkz.: [Kullanıcı Kılavuzu](./USER_GUIDE.md) · [Özellikler Galerisi]
 
 ## Nedir (ve ne değildir)
 
-OmniRoute, token sayılarını modelin fiyatlandırma oranlarıyla çarparak her tamamlama
+67router, token sayılarını modelin fiyatlandırma oranlarıyla çarparak her tamamlama
 isteğine USD cinsinden bir maliyet atar. Bu sayılar **Maliyetler** gösterge panelinde,
 `omniroute cost` / `omniroute usage` CLI komutlarında, CSV/JSON dışa aktarımlarında ve
 API anahtarı başına bütçelerde kullanılır.
 
-> **Gösterge panelindeki "maliyet" bir fatura değil, tasarruf takipçisidir.** OmniRoute
+> **Gösterge panelindeki "maliyet" bir fatura değil, tasarruf takipçisidir.** 67router
 > sizden hiçbir zaman ücret almaz — isteklerinizi daha önce bağladığınız sağlayıcılara
 > (kendi aboneliklerinize, ücretsiz katmanlarınıza ve API anahtarlarınıza) yönlendirir.
 > Tamamı ücretsiz modellerde birikmiş "$290 toplam maliyet", ücretli bir API'ye yaklaşık
@@ -32,7 +32,7 @@ Bu çerçeve, projenin [README](../../README.md) dosyasında doğrudan belirtilm
 
 Bu sayı bir tahmin olduğundan:
 
-- OmniRoute'un her model için sahip olduğu fiyatlandırma tablosuna bağlıdır.
+- 67router'un her model için sahip olduğu fiyatlandırma tablosuna bağlıdır.
   Fiyatlandırma girdisi olmayan bir model `0` maliyet oluşturur (gezginde
   "Eski / Ücretsiz" satırı olarak görünür).
 - Ücretsiz katman ve abonelik trafiği de _tahmini_ maliyet oluşturur — bu, borçlu
@@ -53,7 +53,7 @@ Maliyetler, aşağıdaki öncelik sırasına göre çözümlenen bir fiyatlandı
    LiteLLM'in herkese açık `model_prices_and_context_window.json` dosyasından alınır
    (geçersiz kılmalarınızın üzerine hiçbir zaman yazmaması için ayrı bir
    `pricing_synced` ad alanında saklanır).
-3. **Sabit kodlanmış varsayılanlar** — OmniRoute ile birlikte sunulur.
+3. **Sabit kodlanmış varsayılanlar** — 67router ile birlikte sunulur.
 
 Harici fiyatlandırma senkronizasyonu **isteğe bağlıdır** ve varsayılan olarak devre
 dışıdır. İlgili ortam değişkenleri
@@ -192,7 +192,7 @@ Aksi belirtilmedikçe bunların tümü yönetim kimlik doğrulaması gerektirir 
 
 ## CLI
 
-OmniRoute CLI'ı, maliyet, kullanım ve fiyatlandırma komutlarını sunar ([`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) dosyasında kaydedilmiştir).
+67router CLI'ı, maliyet, kullanım ve fiyatlandırma komutlarını sunar ([`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) dosyasında kaydedilmiştir).
 
 ### `omniroute cost`
 

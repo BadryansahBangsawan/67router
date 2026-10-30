@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector යනු OmniRoute හි අන්තර්ගත HTTPS ගමනාගමන නිදොස්කරණ මෙවලමයි — එය Charles Proxy / mitmweb / HTTP Toolkit වැනි, **LLM-සංවේදී** සහ **agent-සංවේදී** මෙවලමකි. එය `/dashboard/tools/traffic-inspector` හි පිහිටා ඇති අතර එකවර ග්රහණ මූලාශ්ර 5ක් දක්වා සජීවී ගමනාගමනය ලබා ගනී.
+Traffic Inspector යනු 67router හි අන්තර්ගත HTTPS ගමනාගමන නිදොස්කරණ මෙවලමයි — එය Charles Proxy / mitmweb / HTTP Toolkit වැනි, **LLM-සංවේදී** සහ **agent-සංවේදී** මෙවලමකි. එය `/dashboard/tools/traffic-inspector` හි පිහිටා ඇති අතර එකවර ග්රහණ මූලාශ්ර 5ක් දක්වා සජීවී ගමනාගමනය ලබා ගනී.
 
 **Dashboard පිහිටීම:** `/dashboard/tools/traffic-inspector`
 **Sidebar සමූහය:** මෙවලම් (AgentBridge පසු)
@@ -16,21 +16,21 @@ Traffic Inspector යනු OmniRoute හි අන්තර්ගත HTTPS ග�
 
 ### Traffic Inspector සුවිශේෂී වන්නේ කුමක් නිසාද
 
-| විශේෂාංගය                                                                  |   mitmweb   | Charles |   Fiddler   | **OmniRoute Traffic Inspector** |
-| -------------------------------------------------------------------------- | :---------: | :-----: | :---------: | :-----------------------------: |
-| වෙබ්-පාදක                                                                  |      ✓      |    ✗    |      ✗      |                ✓                |
-| විවෘත මූලාශ්ර                                                              |      ✓      |    ✗    | අර්ධ වශයෙන් |                ✓                |
-| **Agent-සංවේදී** (ඉල්ලීම Antigravity/Copilot/ආදියෙන්දැයි දනී)              |      ✗      |    ✗    |      ✗      |                ✓                |
-| **LLM-සංවේදී** (OpenAI/Anthropic/Gemini හැඩතලය, ටෝකන, මාදිලිය විග්රහ කරයි) |      ✗      |    ✗    |      ✗      |                ✓                |
-| **මාදිලි සිතියම්කරණය දෘශ්යමානයි** (gemini-3-flash → claude-sonnet-4.7)     |      ✗      |    ✗    |      ✗      |                ✓                |
-| **Proxy/upstream ප්රමාදය වෙන් කිරීම**                                      | අර්ධ වශයෙන් |    ✗    |      ✗      |                ✓                |
-| **OmniRoute සමඟ ඒකාබද්ධයි** මාර්ගගත කිරීම, fallback, පිරිවැය               |      ✗      |    ✗    |      ✗      |                ✓                |
-| **පද්ධතිය පුරා proxy නිදොස්කරණය** (යන්ත්රයේ ඕනෑම යෙදුමක්)                  |      ✓      |    ✓    |      ✓      |                ✓                |
-| **අභිරුචි host ග්රහණය** (host එකකට DNS යළි-යොමු කිරීම)                     |      ✓      |    ✓    |      ✓      |                ✓                |
-| **HTTP_PROXY env ප්රකාරය**                                                 |      ✓      |    ✓    |      ✓      |                ✓                |
-| **සංවාද දසුන** (බහු-වාර බුබුළු, tool_use/tool_result)                      |      ✗      |    ✗    |      ✗      |                ✓                |
-| **SSE ප්රවාහ ඒකාබද්ධකය** (delta සිදුවීම්වලින් ප්රතිනිර්මාණය කරයි)          |      ✗      |    ✗    |      ✗      |                ✓                |
-| **සැසි පටිගත කිරීම** (නම් කළ හැකි, .har/.jsonl ලෙස නිර්යාත කළ හැකි)        |      ✗      |    ✓    |      ✓      |                ✓                |
+| විශේෂාංගය                                                                  |   mitmweb   | Charles |   Fiddler   | **67router Traffic Inspector** |
+| -------------------------------------------------------------------------- | :---------: | :-----: | :---------: | :----------------------------: |
+| වෙබ්-පාදක                                                                  |      ✓      |    ✗    |      ✗      |               ✓                |
+| විවෘත මූලාශ්ර                                                              |      ✓      |    ✗    | අර්ධ වශයෙන් |               ✓                |
+| **Agent-සංවේදී** (ඉල්ලීම Antigravity/Copilot/ආදියෙන්දැයි දනී)              |      ✗      |    ✗    |      ✗      |               ✓                |
+| **LLM-සංවේදී** (OpenAI/Anthropic/Gemini හැඩතලය, ටෝකන, මාදිලිය විග්රහ කරයි) |      ✗      |    ✗    |      ✗      |               ✓                |
+| **මාදිලි සිතියම්කරණය දෘශ්යමානයි** (gemini-3-flash → claude-sonnet-4.7)     |      ✗      |    ✗    |      ✗      |               ✓                |
+| **Proxy/upstream ප්රමාදය වෙන් කිරීම**                                      | අර්ධ වශයෙන් |    ✗    |      ✗      |               ✓                |
+| **67router සමඟ ඒකාබද්ධයි** මාර්ගගත කිරීම, fallback, පිරිවැය                |      ✗      |    ✗    |      ✗      |               ✓                |
+| **පද්ධතිය පුරා proxy නිදොස්කරණය** (යන්ත්රයේ ඕනෑම යෙදුමක්)                  |      ✓      |    ✓    |      ✓      |               ✓                |
+| **අභිරුචි host ග්රහණය** (host එකකට DNS යළි-යොමු කිරීම)                     |      ✓      |    ✓    |      ✓      |               ✓                |
+| **HTTP_PROXY env ප්රකාරය**                                                 |      ✓      |    ✓    |      ✓      |               ✓                |
+| **සංවාද දසුන** (බහු-වාර බුබුළු, tool_use/tool_result)                      |      ✗      |    ✗    |      ✗      |               ✓                |
+| **SSE ප්රවාහ ඒකාබද්ධකය** (delta සිදුවීම්වලින් ප්රතිනිර්මාණය කරයි)          |      ✗      |    ✗    |      ✗      |               ✓                |
+| **සැසි පටිගත කිරීම** (නම් කළ හැකි, .har/.jsonl ලෙස නිර්යාත කළ හැකි)        |      ✗      |    ✓    |      ✓      |               ✓                |
 
 ### එක් ඡේදයකින් ගෘහනිර්මාණය
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE ප්රතිචාරයක් නම් true
   mappedTo: string | null; // x-omniroute-mapped ශීර්ෂකය
-  costEstimateUsd: number | null; // OmniRoute මිලකරණය මත පදනම් වූ ඇස්තමේන්තුගත පිරිවැය
+  costEstimateUsd: number | null; // 67router මිලකරණය මත පදනම් වූ ඇස්තමේන්තුගත පිරිවැය
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### System proxy එක පෙර තත්ත්වයට පත් නොවීම
 
-පද්ධතිය පුරා proxy මාදිලිය සක්රියව තිබියදී OmniRoute බිඳ වැටෙන්නේ නම්:
+පද්ධතිය පුරා proxy මාදිලිය සක්රියව තිබියදී 67router බිඳ වැටෙන්නේ නම්:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ buffer එක `INSPECTOR_BUFFER_SIZE` වෙත (පෙරනිමිය 1000) 
 | GET    | `/requests`                 | ඉල්ලීම් ලැයිස්තුගත කරයි (පෙරහන් කළ හැකිය: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | තනි ඉල්ලීමක විස්තර                                                                                |
 | DELETE | `/requests`                 | මතකය තුළ ඇති බෆරය හිස් කරයි                                                                       |
-| POST   | `/requests/{id}/replay`     | OmniRoute රවුටරය හරහා එම ඉල්ලීමම නැවත ක්රියාත්මක කරයි                                             |
+| POST   | `/requests/{id}/replay`     | 67router රවුටරය හරහා එම ඉල්ලීමම නැවත ක්රියාත්මක කරයි                                              |
 | PUT    | `/requests/{id}/annotation` | ඉල්ලීමක් පිළිබඳ සටහනක් සුරකියි හෝ යාවත්කාලීන කරයි                                                 |
 
 ### WebSocket

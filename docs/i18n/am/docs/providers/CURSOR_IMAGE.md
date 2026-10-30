@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute በ `POST /v1/images/generations` ላይ የCursor ዕቅድ **ምስል ማመንጨትን** ከውይይት ጋር በተመሳሳይ የአቅራቢ መለያ፣ `cursor` (ተለዋጭ ስም `cu`) በኩል ያቀርባል።
+67router በ `POST /v1/images/generations` ላይ የCursor ዕቅድ **ምስል ማመንጨትን** ከውይይት ጋር በተመሳሳይ የአቅራቢ መለያ፣ `cursor` (ተለዋጭ ስም `cu`) በኩል ያቀርባል።
 
 | መስክ                   | እሴት                                                                                |
 | --------------------- | ---------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute በ `POST /v1/images/generations` ላይ የCursor ዕቅድ **ምስ�
 
 ## Agent CLI ለምን ያስፈልጋል
 
-በOmniRoute ውስጥ የCursor ውይይት `agent.v1.AgentService/Run`ን (protobuf) ይጠቀማል። ያ መንገድ አብሮገነብ የደንበኛ መሳሪያዎችን (shell፣ write፣ …) **አይቀበልም**። ምስል ማመንጨት በመቀመጫው ላይ ባለው **`agent` CLI** የሚከናወን የCursor ቤተኛ መሳሪያ ነው። ስለዚህ የምስል ተቆጣጣሪው `agent`ን በተቆለፈ ጥያቄ እና ለእያንዳንዱ ጥያቄ በሚዘጋጅ ጊዜያዊ የሥራ ቦታ (ከማህበረሰብ መቀመጫ ድልድዮች ጋር ተመሳሳይ ቅርጽ) እንደ ንዑስ ሂደት ያስነሳዋል፤ ከዚያም ከOpenAI ጋር ተኳኋኝ የሆነ `b64_json` ይመልሳል።
+በ67router ውስጥ የCursor ውይይት `agent.v1.AgentService/Run`ን (protobuf) ይጠቀማል። ያ መንገድ አብሮገነብ የደንበኛ መሳሪያዎችን (shell፣ write፣ …) **አይቀበልም**። ምስል ማመንጨት በመቀመጫው ላይ ባለው **`agent` CLI** የሚከናወን የCursor ቤተኛ መሳሪያ ነው። ስለዚህ የምስል ተቆጣጣሪው `agent`ን በተቆለፈ ጥያቄ እና ለእያንዳንዱ ጥያቄ በሚዘጋጅ ጊዜያዊ የሥራ ቦታ (ከማህበረሰብ መቀመጫ ድልድዮች ጋር ተመሳሳይ ቅርጽ) እንደ ንዑስ ሂደት ያስነሳዋል፤ ከዚያም ከOpenAI ጋር ተኳኋኝ የሆነ `b64_json` ይመልሳል።
 
 ## የመዳረሻ ገደብ (ጥብቅ ደንቦች #15 + #17)
 
@@ -31,7 +31,7 @@ binary) የሚያስነሳ ብቸኛው የ`IMAGE_PROVIDERS` ቅርጸት ነው
 
 `CURSOR_IMG_MAX_CONCURRENT` በNode ሞጁል ኢንስታንስ
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) ወሰን ውስጥ ባለ የማህደረ ትውስታ ቆጣሪ/ወረፋ አማካኝነት ይተገበራል።
-በአንድ የOmniRoute ሂደት ውስጥ በተመሳሳይ ጊዜ የሚነሱ የ`agent` ንዑስ ሂደቶችን በትክክል ይገድባል፣ ነገር ግን
+በአንድ የ67router ሂደት ውስጥ በተመሳሳይ ጊዜ የሚነሱ የ`agent` ንዑስ ሂደቶችን በትክክል ይገድባል፣ ነገር ግን
 ተመሳሳዩን የCursor መቀመጫ በሚጋሩ በርካታ ሂደቶች/ኢንስታንሶች
 (ለምሳሌ፣ ባለብዙ-ቅጂ ስርጭት) መካከል **አያስተባብርም** — እያንዳንዱ ኢንስታንስ የራሱን ገለልተኛ ገደብ ያስፈጽማል።
 ለነጠላ-ኢንስታንስ ስርጭት (ነባሪው) ይህ ትክክለኛ ነው፤ በአግድም የተስፋፉ
@@ -41,7 +41,7 @@ binary) የሚያስነሳ ብቸኛው የ`IMAGE_PROVIDERS` ቅርጸት ነው
 ## መስፈርቶች
 
 1. በዳሽቦርዱ ውስጥ የተገናኘ የCursor መለያ (OAuth ወይም `crsr_…` API key)።
-2. ለOmniRoute ሂደት የCursor Agent binary ተደራሽ መሆን አለበት፦
+2. ለ67router ሂደት የCursor Agent binary ተደራሽ መሆን አለበት፦
    - env `CURSOR_AGENT_BIN=/path/to/agent`፣ ወይም
    - `~/.local/bin/agent`፣ ወይም
    - በCursor ግንኙነት ላይ `providerSpecificData.agentBin`።

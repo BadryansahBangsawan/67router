@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute levereras med en utvald uppsättning kostnadsfria proxyservrar i tabellen `free_proxies`,
+67router levereras med en utvald uppsättning kostnadsfria proxyservrar i tabellen `free_proxies`,
 synkroniserade från externa leverantörer (1proxy, proxifly, iplocate, webshare).
 Instrumentpanelen visar dessa under **Inställningar → Kostnadsfria proxyservrar**. Det här dokumentet
 beskriver filtrering, sortering, räkning och rapportering av synkroniseringsfel på serversidan

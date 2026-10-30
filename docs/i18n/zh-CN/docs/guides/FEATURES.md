@@ -1,4 +1,4 @@
-# OmniRoute — Dashboard Features Gallery (中文 (简体))
+# 67router — Dashboard Features Gallery (中文 (简体))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **语言：** 🇺🇸 [English](./FEATURES.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/FEATURES.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/FEATURES.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/FEATURES.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/FEATURES.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/FEATURES.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/FEATURES.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/FEATURES.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/FEATURES.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/FEATURES.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/FEATURES.md) | 🇪🇸 [Español](../i18n/es/docs/guides/FEATURES.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/FEATURES.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/FEATURES.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/FEATURES.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/FEATURES.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/FEATURES.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/FEATURES.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/FEATURES.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/FEATURES.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/FEATURES.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/FEATURES.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/FEATURES.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/FEATURES.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/FEATURES.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/FEATURES.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/FEATURES.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/FEATURES.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/FEATURES.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/FEATURES.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/FEATURES.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/FEATURES.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/FEATURES.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/FEATURES.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/FEATURES.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/FEATURES.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/FEATURES.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/FEATURES.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/FEATURES.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/FEATURES.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/FEATURES.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/FEATURES.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/FEATURES.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/FEATURES.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/FEATURES.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/FEATURES.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/FEATURES.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/FEATURES.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/FEATURES.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/FEATURES.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/FEATURES.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/FEATURES.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/FEATURES.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/FEATURES.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/FEATURES.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/FEATURES.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/FEATURES.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/FEATURES.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/FEATURES.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/FEATURES.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/FEATURES.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/FEATURES.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/FEATURES.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/FEATURES.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/FEATURES.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/FEATURES.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/FEATURES.md)
 
-OmniRoute 控制面板各部分的可视化指南。
+67router 控制面板各部分的可视化指南。
 
 > 📅 **最后更新：** 2026-06-28 — **v3.8.40**
 
@@ -51,7 +51,7 @@ v3.7.x → v3.8.0 版本周期新增了零配置自动路由、新提供者、OA
 
 管理 AI 提供者连接：OAuth 提供者（Claude Code、Codex）、API 密钥提供者（Groq、DeepSeek、OpenRouter）以及免费提供者（Qoder、Kiro）。Kiro 账户支持额度余额跟踪——可在仪表板 → 使用情况中查看剩余额度、总额度和续期日期。
 
-OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。设置后，OmniRoute 会将其作为 OpenRouter 的顶层请求字段发送，例如 `"preset": "email-copywriter"`，除非客户端请求已提供自己的 `preset`。
+OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。设置后，67router 会将其作为 OpenRouter 的顶层请求字段发送，例如 `"preset": "email-copywriter"`，除非客户端请求已提供自己的 `preset`。
 
 ![提供者仪表板](../screenshots/01-providers.png)
 
@@ -156,7 +156,7 @@ OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。
 
 ## 🔗 上下文接力 _(v3.5.5+)_
 
-一种组合策略，可在对话中途发生账户轮换时保持会话连续性。在当前活动账户的额度耗尽之前，OmniRoute 会在后台生成结构化的交接摘要。当后续请求被路由到其他账户后，该摘要会作为系统消息注入，使新账户能够在完整上下文的基础上继续对话。
+一种组合策略，可在对话中途发生账户轮换时保持会话连续性。在当前活动账户的额度耗尽之前，67router 会在后台生成结构化的交接摘要。当后续请求被路由到其他账户后，该摘要会作为系统消息注入，使新账户能够在完整上下文的基础上继续对话。
 
 可通过组合级或全局设置进行配置：
 
@@ -266,7 +266,7 @@ OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。
 
 ## 🖥️ 桌面应用程序
 
-适用于 Windows、macOS 和 Linux 的原生 Electron 桌面应用。可将 OmniRoute 作为独立应用程序运行，支持系统托盘集成、离线使用、自动更新和一键安装。
+适用于 Windows、macOS 和 Linux 的原生 Electron 桌面应用。可将 67router 作为独立应用程序运行，支持系统托盘集成、离线使用、自动更新和一键安装。
 
 主要功能：
 
@@ -285,7 +285,7 @@ OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。
 
 ## 🌐 V1 WebSocket 桥接器 _(v3.6.6+)_
 
-OmniRoute 现在通过 `/v1/ws` 升级端点支持**兼容 OpenAI 的 WebSocket 客户端**。自定义 `scripts/dev/v1-ws-bridge.mjs` 服务器会封装 Next.js，并将 WS 连接升级为完整的双向流式会话。身份验证使用与 HTTP 请求相同的 API 密钥或会话 Cookie。
+67router 现在通过 `/v1/ws` 升级端点支持**兼容 OpenAI 的 WebSocket 客户端**。自定义 `scripts/dev/v1-ws-bridge.mjs` 服务器会封装 Next.js，并将 WS 连接升级为完整的双向流式会话。身份验证使用与 HTTP 请求相同的 API 密钥或会话 Cookie。
 
 主要行为：
 
@@ -311,7 +311,7 @@ OmniRoute 现在通过 `/v1/ws` 升级端点支持**兼容 OpenAI 的 WebSocket 
 
 **GLM Thinking (`glmt`)** 现已注册为一等提供者：最大输出令牌数为 65 536，思考预算为 24 576，默认超时时间为 900 s，采用 Claude 兼容的 API 格式，并与 GLM 系列共享用量同步。
 
-v3.6.6 还引入了**混合令牌计数**：当 Claude 兼容的提供者公开 `/messages/count_tokens` 时，OmniRoute 会在发送大型请求前调用该接口，并在调用失败时平稳回退到估算方式。
+v3.6.6 还引入了**混合令牌计数**：当 Claude 兼容的提供者公开 `/messages/count_tokens` 时，67router 会在发送大型请求前调用该接口，并在调用失败时平稳回退到估算方式。
 
 ---
 

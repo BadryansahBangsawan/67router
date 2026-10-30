@@ -8,17 +8,17 @@
 
 🌐 **Ngôn ngữ:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Các sự cố thường gặp và giải pháp dành cho OmniRoute.
+Các sự cố thường gặp và giải pháp dành cho 67router.
 
 ---
 
 ## Tham khảo nhanh
 
-**Bạn mới làm quen với OmniRoute?** Hãy bắt đầu tại đây — các giải pháp này xử lý 90% vấn đề:
+**Bạn mới làm quen với 67router?** Hãy bắt đầu tại đây — các giải pháp này xử lý 90% vấn đề:
 
 | Tôi thấy                      | Điều đó có nghĩa là gì                      | Cần làm gì                                                                                                           |
 | ----------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| "Không thể kết nối"           | OmniRoute chưa chạy                         | Chạy `omniroute` hoặc `docker restart omniroute`                                                                     |
+| "Không thể kết nối"           | 67router chưa chạy                          | Chạy `omniroute` hoặc `docker restart omniroute`                                                                     |
 | "Khóa API không hợp lệ"       | Khóa của bạn không đúng hoặc đã hết hạn     | Sao chép lại khóa từ trang web của nhà cung cấp                                                                      |
 | "Đã vượt quá giới hạn tốc độ" | Bạn đang gửi quá nhiều yêu cầu              | Chờ 1 phút hoặc dùng `model: "auto"` để tự động chuyển dự phòng                                                      |
 | "Đã vượt quá hạn ngạch"       | Bạn đã dùng hết hạn ngạch miễn phí/trả phí  | Kết nối thêm nhà cung cấp hoặc dùng các nhà cung cấp miễn phí (Kiro, Pollinations)                                   |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # đặt rõ giới hạn tiếp n
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # tăng thời gian chờ có giới hạn vượt quá giá trị mặc định RATE_LIMIT_MAX_WAIT_MS cho các dịch vụ thượng nguồn chậm
 ```
 
-Đặt các biến này trong môi trường của tiến trình OmniRoute (daemon, ví dụ thông qua plist của LaunchAgent hoặc `systemctl edit`), sau đó khởi động lại OmniRoute. Cờ luân chuyển là đòn bẩy có tác động lớn nhất: nó biến một lỗi nghiêm trọng thành một lần thử lại minh bạch với một nhà cung cấp đang hoạt động tốt trong pool.
+Đặt các biến này trong môi trường của tiến trình 67router (daemon, ví dụ thông qua plist của LaunchAgent hoặc `systemctl edit`), sau đó khởi động lại 67router. Cờ luân chuyển là đòn bẩy có tác động lớn nhất: nó biến một lỗi nghiêm trọng thành một lần thử lại minh bạch với một nhà cung cấp đang hoạt động tốt trong pool.
 
 **Lưu ý**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` giới hạn số lượng yêu cầu nặng — có ngữ cảnh dài — chạy cùng lúc; giới hạn này là cổng tiếp nhận, không phải bộ giới hạn tốc độ của nhà cung cấp. **Cập nhật #503-fanout:** biến này không còn được đặt theo mặc định (giờ đây nó chỉ có hiệu lực khi được cấu hình rõ ràng như ở trên) — thay vào đó, việc tiếp nhận tác vụ nặng được kiểm soát bằng ngân sách byte tự động suy ra (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`), tự điều chỉnh theo giới hạn bộ nhớ thực tế của máy chủ, vì vậy một bản triển khai mới sẽ gặp ít lỗi từ chối `503 chat_admission_busy` hơn đáng kể mà không cần đặt biến này; việc đặt rõ biến này như ở đây vẫn hoạt động chính xác như tài liệu mô tả. Giá trị ghi đè ngân sách byte rõ ràng được giới hạn trong khoảng 8 MiB–2 GiB. Lỗi `413 body_exceeds_budget` không phải lỗi tạm thời: hãy tăng ngân sách byte đó, giảm `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` hoặc tăng giới hạn bộ nhớ của tiến trình. Việc loại bỏ tải do `inflight_bytes_budget` là tình trạng tranh chấp tạm thời và vẫn có thể thử lại. Cơ chế giới hạn tốc độ theo từng nhà cung cấp (`open-sse/services/rateLimitManager.ts`) được điều chỉnh riêng bằng `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` và `RATE_LIMIT_AUTO_ENABLE` — xem `.env.example`.
 
 **Cách xác minh cách khắc phục đã có hiệu lực**: chạy agent/cron hai lần liên tiếp trong thời gian ngắn và xác nhận cả hai lần đều thành công. Trước khi áp dụng cách khắc phục, lần chạy thứ hai thường trả về `429`/`401`. Sau khi áp dụng, các lỗi (nếu có) sẽ được thử lại một cách minh bạch và lệnh gọi sẽ hoàn tất. Bạn cũng có thể chạy `curl /monitoring/health` và theo dõi trường `rateLimitedUntil` trên các kết nối nhà cung cấp cùng `circuitBreakers.providerBreakers[].state` của các nhà cung cấp bị ảnh hưởng — trạng thái sẽ là một trong các giá trị `CLOSED`, `DEGRADED`, `OPEN` hoặc `HALF_OPEN` (xem `src/shared/utils/circuitBreaker.ts`), và một nhà cung cấp liên tục gặp lỗi sẽ chuyển từ `CLOSED → DEGRADED → OPEN` trước khi khoảng thời gian đặt lại cho phép một yêu cầu thăm dò đi qua (`HALF_OPEN`).
 
-**Nếu bạn vẫn gặp 429**: tài khoản đang hoạt động của nhà cung cấp đó thực sự đã dùng hết _hạn ngạch_ (không chỉ là giới hạn tốc độ). Thêm tài khoản thứ hai cho cùng nhà cung cấp trong bảng điều khiển OmniRoute → Providers → Accounts, hoặc kết hợp thêm một nhà cung cấp miễn phí khác (ví dụ: `routeway`, `auggie`). Cơ chế luân chuyển chỉ giúp xử lý các lỗi tạm thời về tốc độ/400/401; việc cạn kiệt hoàn toàn hạn ngạch đòi hỏi thông tin xác thực thứ hai hoặc một nhà cung cấp khác.
+**Nếu bạn vẫn gặp 429**: tài khoản đang hoạt động của nhà cung cấp đó thực sự đã dùng hết _hạn ngạch_ (không chỉ là giới hạn tốc độ). Thêm tài khoản thứ hai cho cùng nhà cung cấp trong bảng điều khiển 67router → Providers → Accounts, hoặc kết hợp thêm một nhà cung cấp miễn phí khác (ví dụ: `routeway`, `auggie`). Cơ chế luân chuyển chỉ giúp xử lý các lỗi tạm thời về tốc độ/400/401; việc cạn kiệt hoàn toàn hạn ngạch đòi hỏi thông tin xác thực thứ hai hoặc một nhà cung cấp khác.
 
 **Nếu bạn gặp 403 trên các model thị giác (`auto/vision`, `bazaarlink/*`)**: tài khoản đã kết nối không có gói trả phí bao gồm tính năng thị giác hoặc API key không có đủ quyền. Hãy xác minh trong bảng điều khiển của nhà cung cấp rằng phạm vi của key bao gồm thị giác/đa phương thức, hoặc kết nối tài khoản thuộc gói trả phí và giữ tài khoản đó làm đích xử lý thị giác.
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # tăng thời gian chờ có gi�
 
 Khi chạy `npm install -g omniroute`, bạn có thể thấy hàng loạt cảnh báo như `npm warn ERESOLVE`, thông báo về peer dependency và thông báo `deprecated`. **Đây là những cảnh báo bình thường và vô hại.** Quá trình cài đặt đã thành công nếu bạn thấy `added <N> packages` trong đầu ra.
 
-Để ẩn các cảnh báo phân giải peer dependency, hãy sử dụng dạng lệnh cài đặt được OmniRoute hỗ trợ:
+Để ẩn các cảnh báo phân giải peer dependency, hãy sử dụng dạng lệnh cài đặt được 67router hỗ trợ:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` chỉ ẩn `ERESOLVE` và các thông báo về peer dependency. Thông báo ngừng hỗ trợ vẫn hiển thị vì chúng đến từ các package bên thứ ba có tính bắc cầu; chúng không có nghĩa là quá trình cài đặt đã thất bại.
 
-Các cảnh báo bắt nguồn từ những phạm vi peer dependency đã lỗi thời trong các package bên thứ ba mà OmniRoute không kiểm soát:
+Các cảnh báo bắt nguồn từ những phạm vi peer dependency đã lỗi thời trong các package bên thứ ba mà 67router không kiểm soát:
 
 1. **`marked-terminal` yêu cầu `marked >=1 <16`, nhưng tìm thấy `marked@18`** — trên thực tế vẫn hoạt động bình thường; chỉ có phạm vi peer dependency ở upstream là đã lỗi thời.
 2. **`deprecated prebuild-install@7.1.3`** — một trình trợ giúp có tính bắc cầu dùng để tải tệp nhị phân gốc. Nó không
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Có thể bỏ qua cảnh báo này không?
 
-**Có thể bỏ qua một phần, nhưng không nên chạy khi không có các tập lệnh này.** OmniRoute có các cơ chế dự phòng an toàn: nếu không thể tải các binding `better-sqlite3` gốc từ gói độc lập, ứng dụng sẽ chuyển sang các trình điều khiển thay thế như `node:sqlite` hoặc `sql.js` (xem [Phân giải môi trường chạy SQLite](../ops/SQLITE_RUNTIME.md)). Máy chủ vẫn sẽ khởi động, nhưng việc chạy trên các cơ chế dự phòng WASM như `sql.js` sẽ vô hiệu hóa chế độ WAL (Write-Ahead Logging) của SQLite và làm tăng mức sử dụng bộ nhớ cũng như chi phí đồng bộ hóa ổ đĩa.
+**Có thể bỏ qua một phần, nhưng không nên chạy khi không có các tập lệnh này.** 67router có các cơ chế dự phòng an toàn: nếu không thể tải các binding `better-sqlite3` gốc từ gói độc lập, ứng dụng sẽ chuyển sang các trình điều khiển thay thế như `node:sqlite` hoặc `sql.js` (xem [Phân giải môi trường chạy SQLite](../ops/SQLITE_RUNTIME.md)). Máy chủ vẫn sẽ khởi động, nhưng việc chạy trên các cơ chế dự phòng WASM như `sql.js` sẽ vô hiệu hóa chế độ WAL (Write-Ahead Logging) của SQLite và làm tăng mức sử dụng bộ nhớ cũng như chi phí đồng bộ hóa ổ đĩa.
 
 ### Những tập lệnh nào thực sự bắt buộc?
 
-Không phải tất cả các tập lệnh bị chặn đều thiết yếu để chạy OmniRoute:
+Không phải tất cả các tập lệnh bị chặn đều thiết yếu để chạy 67router:
 
-- **Thiết yếu (`omniroute`, `better-sqlite3`):** OmniRoute chạy từ một gói ứng dụng Next.js độc lập (`dist/`). Trong quá trình cài đặt, npm tải xuống hoặc biên dịch trình điều khiển SQLite gốc dành riêng cho máy chủ trong `node_modules/better-sqlite3/` cấp cao nhất. Sau đó, tập lệnh `postinstall` của OmniRoute (`scripts/build/postinstall.mjs`) xác minh và sao chép các tệp nhị phân dành riêng cho máy chủ này vào `dist/node_modules/` để máy chủ độc lập có thể truy cập chúng. Nếu tập lệnh postinstall của `omniroute` bị chặn, bước sao chép này sẽ bị bỏ qua.
+- **Thiết yếu (`omniroute`, `better-sqlite3`):** 67router chạy từ một gói ứng dụng Next.js độc lập (`dist/`). Trong quá trình cài đặt, npm tải xuống hoặc biên dịch trình điều khiển SQLite gốc dành riêng cho máy chủ trong `node_modules/better-sqlite3/` cấp cao nhất. Sau đó, tập lệnh `postinstall` của 67router (`scripts/build/postinstall.mjs`) xác minh và sao chép các tệp nhị phân dành riêng cho máy chủ này vào `dist/node_modules/` để máy chủ độc lập có thể truy cập chúng. Nếu tập lệnh postinstall của `omniroute` bị chặn, bước sao chép này sẽ bị bỏ qua.
 - **Tùy chọn/bắc cầu (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Đây là các công cụ hỗ trợ xây dựng, công cụ theo dõi hoặc tiện ích quản lý chuỗi khóa hệ thống. Việc cho phép chúng sẽ ngăn các cảnh báo xây dựng, nhưng chúng không bắt buộc đối với chức năng định tuyến cốt lõi.
-- **Bị loại trừ (`onnxruntime-node`):** Đây là một phần phụ thuộc tùy chọn dành cho embedding AI cục bộ và **không** bắt buộc để chạy OmniRoute. Tập lệnh postinstall của nó tải xuống khoảng 300MB tài nguyên CUDA từ NuGet; không đưa nó vào danh sách cho phép trừ khi bạn thực sự có ý định sử dụng tính năng tăng tốc ONNX cục bộ trên phần cứng được hỗ trợ.
+- **Bị loại trừ (`onnxruntime-node`):** Đây là một phần phụ thuộc tùy chọn dành cho embedding AI cục bộ và **không** bắt buộc để chạy 67router. Tập lệnh postinstall của nó tải xuống khoảng 300MB tài nguyên CUDA từ NuGet; không đưa nó vào danh sách cho phép trừ khi bạn thực sự có ý định sử dụng tính năng tăng tốc ONNX cục bộ trên phần cứng được hỗ trợ.
 
 ### Cách khắc phục được đề xuất
 
-Để cho phép các tập lệnh cài đặt bắt buộc trong quá trình cài đặt toàn cục và loại bỏ cảnh báo, hãy truyền `--allow-scripts` cho OmniRoute và các phần phụ thuộc gốc của nó:
+Để cho phép các tập lệnh cài đặt bắt buộc trong quá trình cài đặt toàn cục và loại bỏ cảnh báo, hãy truyền `--allow-scripts` cho 67router và các phần phụ thuộc gốc của nó:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright chủ ý tách riêng việc tải trình duyệt khỏi quá trình 
 vì vậy phản hồi này là bình thường cho đến khi trình duyệt được cài đặt.
 
 Đối với bản cài đặt npm toàn cục, hãy cài đặt Chromium từ thư mục của gói
-OmniRoute để bộ nhớ đệm của trình duyệt thuộc cùng bản cài đặt Playwright:
+67router để bộ nhớ đệm của trình duyệt thuộc cùng bản cài đặt Playwright:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Khởi động lại OmniRoute sau khi cài đặt, rồi thử lại yêu cầu Gemini Web. Nếu bạn
-chạy OmniRoute từ một image Docker, hãy sử dụng image `-web` (hoặc mục tiêu build
+Khởi động lại 67router sau khi cài đặt, rồi thử lại yêu cầu Gemini Web. Nếu bạn
+chạy 67router từ một image Docker, hãy sử dụng image `-web` (hoặc mục tiêu build
 `runner-web`), vốn đóng gói sẵn Chromium và các phần phụ thuộc của nó; image cơ sở
 thì không.
 
@@ -187,7 +187,7 @@ thì không.
 
 **Đây là nhận diện nhầm. Không có gì bị nhiễm và bạn không cần thực hiện hành động nào.**
 
-Avast và AVG sử dụng một cơ chế heuristic để gắn cờ các tệp văn bản thuần túy/Markdown chứa nhiều liên kết trông giống yêu cầu HTTP. `README.md` của OmniRoute được đóng gói trong gói npm (tệp này được liệt kê trong `package.json` → `files`), nên khi cài đặt toàn cục, nó nằm tại `node_modules/omniroute/README.md` — và chứa khoảng 15 ví dụ `http://localhost:20128/...` (các điểm cuối HTTP/SSE của MCP, URL `.well-known` của A2A và các đoạn lệnh `curl`). Mật độ liên kết đó đủ để kích hoạt cơ chế heuristic.
+Avast và AVG sử dụng một cơ chế heuristic để gắn cờ các tệp văn bản thuần túy/Markdown chứa nhiều liên kết trông giống yêu cầu HTTP. `README.md` của 67router được đóng gói trong gói npm (tệp này được liệt kê trong `package.json` → `files`), nên khi cài đặt toàn cục, nó nằm tại `node_modules/omniroute/README.md` — và chứa khoảng 15 ví dụ `http://localhost:20128/...` (các điểm cuối HTTP/SSE của MCP, URL `.well-known` của A2A và các đoạn lệnh `curl`). Mật độ liên kết đó đủ để kích hoạt cơ chế heuristic.
 
 Nếu hiện tượng này chỉ mới bắt đầu gần đây: bản chất của tệp không hề thay đổi. README đã được bổ sung thêm các mục trong bảng điểm cuối (MCP HTTP + SSE + A2A) và nhiều ví dụ `curl` hơn, khiến nó vượt quá ngưỡng.
 
@@ -195,7 +195,7 @@ Tệp này chỉ là tài liệu tĩnh, hoàn toàn không chứa nội dung th�
 
 **Cách xử lý:**
 
-1. **Dừng thông báo** — loại trừ thư mục cài đặt khỏi quá trình quét của phần mềm diệt virus (Avast: Settings → Exceptions), bằng cách thêm đường dẫn `node_modules` toàn cục và/hoặc thư mục dữ liệu OmniRoute (`~/.omniroute/`).
+1. **Dừng thông báo** — loại trừ thư mục cài đặt khỏi quá trình quét của phần mềm diệt virus (Avast: Settings → Exceptions), bằng cách thêm đường dẫn `node_modules` toàn cục và/hoặc thư mục dữ liệu 67router (`~/.omniroute/`).
 2. **Báo cáo trường hợp nhận diện nhầm** — <https://www.avast.com/false-positive-file-form.php>, đính kèm tệp `README.md` đã bị cách ly. Đây là cách khắc phục có lợi cho tất cả mọi người, vì nguyên nhân là cơ chế heuristic của nhà cung cấp phản ứng quá mức với một tệp văn bản.
 
 **Tại sao chúng tôi không “khắc phục” vấn đề này từ phía mình:** tất cả ví dụ đều sử dụng `http://localhost`, và localhost không thể sử dụng `https` mà không gặp rắc rối với chứng chỉ tự ký. Việc chỉnh sửa sai lệch tài liệu để né cơ chế heuristic của một nhà cung cấp sẽ gây bất tiện cho mọi độc giả chỉ để chiều theo một lỗi của trình quét.
@@ -233,7 +233,7 @@ Các tệp bị gắn cờ là những thành phần tiêu chuẩn thuộc các 
 
 ### Trang đăng nhập bị lỗi hoặc hiển thị lỗi "Module self-registration"
 
-**Nguyên nhân:** Bạn đang chạy một phiên bản Node.js nằm ngoài ngưỡng môi trường thực thi an toàn được OmniRoute phê duyệt. Trường hợp phổ biến nhất là chạy một phiên bản bản vá Node 22 hoặc 24 cũ hơn, thấp hơn ngưỡng bảo mật đã được vá mà OmniRoute yêu cầu.
+**Nguyên nhân:** Bạn đang chạy một phiên bản Node.js nằm ngoài ngưỡng môi trường thực thi an toàn được 67router phê duyệt. Trường hợp phổ biến nhất là chạy một phiên bản bản vá Node 22 hoặc 24 cũ hơn, thấp hơn ngưỡng bảo mật đã được vá mà 67router yêu cầu.
 
 **Triệu chứng:**
 
@@ -249,7 +249,7 @@ Các tệp bị gắn cờ là những thành phần tiêu chuẩn thuộc các 
    nvm use 24
    ```
 2. Xác minh phiên bản của bạn: `node --version` phải hiển thị `v24.0.0` hoặc mới hơn trong nhánh LTS 24.x
-3. Cài đặt lại OmniRoute: `npm install -g omniroute`
+3. Cài đặt lại 67router: `npm install -g omniroute`
 4. Khởi động lại: `omniroute`
 
 > **Các phiên bản an toàn được hỗ trợ:** `>=22.22.2 <23` hoặc `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) và Node.js 26 được hỗ trợ đầy đủ.
@@ -330,13 +330,13 @@ omniroute
 
 **Nguyên nhân:** Trên Node.js 22, dispatcher của undici@8 không tương thích với việc triển khai `fetch()` tích hợp sẵn của Node.
 
-**Cách khắc phục (v3.5.5+):** OmniRoute hiện sử dụng hàm `fetch()` riêng của undici khi dispatcher proxy đang hoạt động, đảm bảo hành vi nhất quán. Hãy cập nhật lên v3.5.5+.
+**Cách khắc phục (v3.5.5+):** 67router hiện sử dụng hàm `fetch()` riêng của undici khi dispatcher proxy đang hoạt động, đảm bảo hành vi nhất quán. Hãy cập nhật lên v3.5.5+.
 
 ### Proxy MITM trong WSL: các ứng dụng desktop trên máy chủ Windows không bị chặn bắt
 
-**Nguyên nhân:** Proxy MITM và chứng chỉ CA của nó được cài đặt vào môi trường nơi OmniRoute chạy. Trong WSL, môi trường đó là hệ điều hành khách Linux, trong khi các ứng dụng AI desktop (Kiro, Trae, Copilot, Zed, …) chạy trên máy chủ Windows. Các ứng dụng trên máy chủ không tin cậy kho chứng chỉ của hệ điều hành khách và không định tuyến qua proxy hệ thống của hệ điều hành khách, do đó việc chặn bắt lưu lượng desktop không hoạt động ở đó.
+**Nguyên nhân:** Proxy MITM và chứng chỉ CA của nó được cài đặt vào môi trường nơi 67router chạy. Trong WSL, môi trường đó là hệ điều hành khách Linux, trong khi các ứng dụng AI desktop (Kiro, Trae, Copilot, Zed, …) chạy trên máy chủ Windows. Các ứng dụng trên máy chủ không tin cậy kho chứng chỉ của hệ điều hành khách và không định tuyến qua proxy hệ thống của hệ điều hành khách, do đó việc chặn bắt lưu lượng desktop không hoạt động ở đó.
 
-**Khuyến nghị:** Chạy OmniRoute trực tiếp trên cùng hệ điều hành với các ứng dụng desktop mà bạn muốn chặn bắt (Windows cho các ứng dụng Windows; tương tự với macOS/Linux). Việc giữ OmniRoute bên trong WSL trong khi nhắm đến các ứng dụng trên máy chủ yêu cầu phải tin cậy thủ công chứng chỉ CA đã tạo trên máy chủ Windows và trỏ cài đặt mạng/proxy của từng ứng dụng trên máy chủ đến endpoint proxy WSL — đây là một thiết lập không được hỗ trợ và thiếu ổn định.
+**Khuyến nghị:** Chạy 67router trực tiếp trên cùng hệ điều hành với các ứng dụng desktop mà bạn muốn chặn bắt (Windows cho các ứng dụng Windows; tương tự với macOS/Linux). Việc giữ 67router bên trong WSL trong khi nhắm đến các ứng dụng trên máy chủ yêu cầu phải tin cậy thủ công chứng chỉ CA đã tạo trên máy chủ Windows và trỏ cài đặt mạng/proxy của từng ứng dụng trên máy chủ đến endpoint proxy WSL — đây là một thiết lập không được hỗ trợ và thiếu ổn định.
 
 ---
 
@@ -363,7 +363,7 @@ omniroute
 
 ### Token OAuth đã hết hạn
 
-OmniRoute tự động làm mới token. Nếu sự cố vẫn tiếp diễn:
+67router tự động làm mới token. Nếu sự cố vẫn tiếp diễn:
 
 1. Dashboard → Nhà cung cấp → Kết nối lại
 2. Xóa rồi thêm lại kết nối nhà cung cấp
@@ -576,7 +576,7 @@ Hồ sơ nhà cung cấp hỗ trợ các cài đặt sau:
 
 ### Chống hiệu ứng đàn áp đảo
 
-Khi nhiều yêu cầu đồng thời truy cập một nhà cung cấp đang bị giới hạn tốc độ, OmniRoute sử dụng mutex + tự động giới hạn tốc độ để tuần tự hóa các yêu cầu và ngăn lỗi dây chuyền. Cơ chế này được thực hiện tự động đối với các nhà cung cấp dùng khóa API.
+Khi nhiều yêu cầu đồng thời truy cập một nhà cung cấp đang bị giới hạn tốc độ, 67router sử dụng mutex + tự động giới hạn tốc độ để tuần tự hóa các yêu cầu và ngăn lỗi dây chuyền. Cơ chế này được thực hiện tự động đối với các nhà cung cấp dùng khóa API.
 
 ### Yêu cầu trò chuyện thất bại với 503 / chat_admission_busy
 
@@ -612,7 +612,7 @@ và `reason: "structure_limit"`.
 ít nhất `64` công cụ hoặc ít nhất `32,000` token ước tính, hoặc khi quá trình ước tính cấu trúc có giới hạn
 cạn kiệt các giới hạn gồm `10,000` nút đã truy cập hoặc độ sâu `12`.
 
-**Nguyên nhân:** Đây là cơ chế chủ động giảm tải bên trong OmniRoute, không phải lỗi từ nhà cung cấp thượng nguồn.
+**Nguyên nhân:** Đây là cơ chế chủ động giảm tải bên trong 67router, không phải lỗi từ nhà cung cấp thượng nguồn.
 Mỗi tiến trình sử dụng một bộ bảo vệ cục bộ theo tiến trình để dành trước dung lượng hạng nặng có giới hạn trước khi giữ lại
 và phân tích cú pháp phần thân yêu cầu lớn. Lease hạng nặng được giữ trong suốt vòng đời của một phản hồi SSE.
 
@@ -656,7 +656,7 @@ Xem [tài liệu tham khảo về biến môi trường](../reference/ENVIRONMEN
 
 ## Phân loại lỗi RAG / LLM tùy chọn (16 vấn đề)
 
-Một số người dùng OmniRoute đặt gateway phía trước các stack RAG hoặc agent. Trong những cấu hình đó, một hiện tượng lạ thường xuất hiện: OmniRoute có vẻ hoạt động bình thường (các provider đang hoạt động, cấu hình định tuyến ổn, không có cảnh báo giới hạn tốc độ) nhưng câu trả lời cuối cùng vẫn sai.
+Một số người dùng 67router đặt gateway phía trước các stack RAG hoặc agent. Trong những cấu hình đó, một hiện tượng lạ thường xuất hiện: 67router có vẻ hoạt động bình thường (các provider đang hoạt động, cấu hình định tuyến ổn, không có cảnh báo giới hạn tốc độ) nhưng câu trả lời cuối cùng vẫn sai.
 
 Trên thực tế, những sự cố này thường bắt nguồn từ pipeline RAG phía sau chứ không phải từ chính gateway.
 
@@ -675,17 +675,17 @@ Nếu muốn có một bộ thuật ngữ chung để mô tả những lỗi đ�
 
 1. Khi điều tra một phản hồi không tốt, hãy ghi lại:
    - tác vụ và yêu cầu của người dùng
-   - tuyến hoặc tổ hợp provider trong OmniRoute
+   - tuyến hoặc tổ hợp provider trong 67router
    - mọi ngữ cảnh RAG được sử dụng phía sau (tài liệu đã truy xuất, lệnh gọi công cụ, v.v.)
 2. Ánh xạ sự cố tới một hoặc hai số trong WFGY ProblemMap (`No.1` … `No.16`).
-3. Lưu số đó trong dashboard, runbook hoặc trình theo dõi sự cố của riêng bạn bên cạnh nhật ký OmniRoute.
+3. Lưu số đó trong dashboard, runbook hoặc trình theo dõi sự cố của riêng bạn bên cạnh nhật ký 67router.
 4. Sử dụng trang WFGY tương ứng để xác định xem bạn có cần thay đổi stack RAG, trình truy xuất hay chiến lược định tuyến hay không.
 
 Toàn bộ nội dung và các hướng dẫn cụ thể có tại đây (giấy phép MIT, chỉ có văn bản):
 
 [README WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Bạn có thể bỏ qua phần này nếu không chạy các pipeline RAG hoặc agent phía sau OmniRoute.
+Bạn có thể bỏ qua phần này nếu không chạy các pipeline RAG hoặc agent phía sau 67router.
 
 ---
 
@@ -709,7 +709,7 @@ Các vấn đề riêng của bản phát hành v3.8.0 và giải pháp tạm th
 
 1. Cài đặt Devin CLI cho nền tảng của bạn
 2. Đặt `CLI_DEVIN_BIN=/usr/local/bin/devin` (hoặc đường dẫn thực tế) trong `.env`
-3. Khởi động lại OmniRoute và kiểm tra lại từ **Dashboard → Công cụ CLI**
+3. Khởi động lại 67router và kiểm tra lại từ **Dashboard → Công cụ CLI**
 
 ### Thời gian chờ của mô hình bị kẹt (đặt lại thủ công)
 
@@ -764,7 +764,7 @@ Các vấn đề riêng của bản phát hành v3.8.0 và giải pháp tạm th
 
 1. Tạo một secret ngẫu nhiên: `openssl rand -hex 32`
 2. Đặt `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` trong môi trường của máy chủ production (và trong mọi client giao tiếp với bridge)
-3. Khởi động lại OmniRoute
+3. Khởi động lại 67router
 
 ### Responses API: chế độ chạy nền bị hạ xuống đồng bộ
 

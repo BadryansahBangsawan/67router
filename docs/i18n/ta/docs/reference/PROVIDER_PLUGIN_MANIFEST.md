@@ -9,7 +9,7 @@
 process-க்கு வெளியே இயங்கும் sidecar-களுக்காக இதே manifest,
 `GET /api/v1/provider-plugin-manifest` என்ற HTTP முகவரியிலும் கிடைக்கிறது.
 
-OmniRoute, `X-OmniRoute-Provider-Manifest-Url` request header வழியாக அந்த URL-ஐ Bifrost மற்றும் CLIProxyAPI-க்கு அறிவிக்கிறது. உள்ளூர் request origin-க்குப் பதிலாக sidecar-க்கு public அல்லது container network URL தேவைப்படும்போது `OMNIROUTE_PROVIDER_MANIFEST_URL`-ஐ அமைக்கவும்.
+67router, `X-OmniRoute-Provider-Manifest-Url` request header வழியாக அந்த URL-ஐ Bifrost மற்றும் CLIProxyAPI-க்கு அறிவிக்கிறது. உள்ளூர் request origin-க்குப் பதிலாக sidecar-க்கு public அல்லது container network URL தேவைப்படும்போது `OMNIROUTE_PROVIDER_MANIFEST_URL`-ஐ அமைக்கவும்.
 
 ## Manifest-ஐப் புதுப்பித்தல்
 
@@ -17,7 +17,7 @@ HTTP endpoint, `Cache-Control: public, max-age=60` மற்றும் வல�
 
 ## இலக்கு
 
-Provider metadata-வை plugin ஒப்பந்தத்தை நோக்கி நகர்த்துவது இதன் இலக்காகும்; இதனால், எதிர்காலத்தில் hot request path-ஐ குறைந்த latency கொண்ட sidecar நிர்வகிக்க முடியும், அதே நேரத்தில் OmniRoute TypeScript route-ஐ policy gate மற்றும் fallback ஆக வைத்திருக்க முடியும். Manifest சேர்க்கைத் தன்மையுடையது: அது தானாகவே request routing-ஐ மாற்றாது.
+Provider metadata-வை plugin ஒப்பந்தத்தை நோக்கி நகர்த்துவது இதன் இலக்காகும்; இதனால், எதிர்காலத்தில் hot request path-ஐ குறைந்த latency கொண்ட sidecar நிர்வகிக்க முடியும், அதே நேரத்தில் 67router TypeScript route-ஐ policy gate மற்றும் fallback ஆக வைத்திருக்க முடியும். Manifest சேர்க்கைத் தன்மையுடையது: அது தானாகவே request routing-ஐ மாற்றாது.
 
 ## ஒப்பந்தம்
 
@@ -55,7 +55,7 @@ Manifest திட்டமிட்டே பின்வருவனவற்�
 | `usage-fetch`        | இணைக்கப்பட்ட usage அல்லது quota fetcher (`getUsageForProvider`) உள்ளது.                  |
 | `usage-supported`    | Usage API இந்த provider-ஐ ஏற்கிறது (`isSupportedUsageConnection`).                       |
 
-`usage-fetch` கண்டறிதலுக்காக மட்டுமே உள்ளது. Provider-ன் usage-ஐ எவ்வாறு படிப்பது என்பது OmniRoute-க்குத் தெரியும் என்பதை இது தெரிவிக்கிறது; இது fetching-ஐச் செயல்படுத்தாது, quota semantics-ஐ மாற்றாது அல்லது அந்த provider-க்கு Dashboard quota widget இயக்கப்பட்டுள்ளது என்பதைக் குறிக்காது — அந்த widget தனியாக `USAGE_SUPPORTED_PROVIDERS` மூலம் கட்டுப்படுத்தப்படுகிறது. உண்மையின் மூல ஆதாரம் `open-sse/services/usage/fetcherProviders.ts`-இல் உள்ள `USAGE_FETCHER_PROVIDERS` ஆகும்.
+`usage-fetch` கண்டறிதலுக்காக மட்டுமே உள்ளது. Provider-ன் usage-ஐ எவ்வாறு படிப்பது என்பது 67router-க்குத் தெரியும் என்பதை இது தெரிவிக்கிறது; இது fetching-ஐச் செயல்படுத்தாது, quota semantics-ஐ மாற்றாது அல்லது அந்த provider-க்கு Dashboard quota widget இயக்கப்பட்டுள்ளது என்பதைக் குறிக்காது — அந்த widget தனியாக `USAGE_SUPPORTED_PROVIDERS` மூலம் கட்டுப்படுத்தப்படுகிறது. உண்மையின் மூல ஆதாரம் `open-sse/services/usage/fetcherProviders.ts`-இல் உள்ள `USAGE_FETCHER_PROVIDERS` ஆகும்.
 
 அந்தப் பட்டியல் usage dispatcher ஏற்கும் string-களைக் key-களாகக் கொண்டிருப்பதால், canonical id-கள் மற்றும் alias-கள் இரண்டையும் கலந்து கொண்டுள்ளது; ஆகவே tag செய்யப்பட்ட provider-களின் எண்ணிக்கையைவிட இது சற்றுப் பெரிதாக உள்ளது: manifest registry-இல் chat provider-களாக இல்லாத entry-களுக்கு (எடுத்துக்காட்டாக `firecrawl` search provider மற்றும் `amazon-q` ACP provider) tag செய்வதற்கான manifest entry இல்லை.
 

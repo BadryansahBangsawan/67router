@@ -6,7 +6,7 @@
 
 # Referenca za Quality Gates
 
-Ovaj dokument je mjerodavna referenca za sve CI quality gates u OmniRoute-u.
+Ovaj dokument je mjerodavna referenca za sve CI quality gates u 67router-u.
 Opisuje svaku kapiju, šta ona validira, u kojem CI poslu se izvršava, da li koristi
 ratchet osnovicu ili politiku prolaza/pada (pass/fail), te da li blokira build ili je samo savjetodavna.
 
@@ -268,14 +268,14 @@ Izvršava se nakon `build`. Blokira spajanje u slučaju neuspjeha.
 
 Ovi se izvršavaju po cron rasporedu (i `workflow_dispatch`), nikada na PR-ovima. Svi su savjetodavni.
 
-| Workflow               | Validira                                                                                                                                                         | Blokira          |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `nightly-property`     | fast-check testovi svojstava sa slučajnim seedom + velikim brojem izvršavanja                                                                                    | **Savjetodavno** |
-| `nightly-resilience`   | kapija rasta heap-a, chaos ubrizgavanje grešaka, k6 opterećenje/soak                                                                                             | **Savjetodavno** |
-| `nightly-llm-security` | promptfoo zaštita od injekcije (blokirajući režim) + garak sonde (preskočene bez provider secret-a)                                                              | **Savjetodavno** |
-| `nightly-schemathesis` | OpenAPI fuzzing ugovora (schemathesis) protiv živog OmniRoute koristeći `docs/openapi.yaml` — otkriva kršenja specifikacije / neobrađene 500 greške (Faza 8 B.4) | **Savjetodavno** |
-| `nightly-mutation`     | Stryker rezultat mutacijskog testiranja nad brzom jediničnom trakom — preživjeli mutanti otkrivaju slabe asserte                                                 | **Savjetodavno** |
-| `nightly-compat`       | Matrica kompatibilnosti Node enginea kroz podržane `engines.node` opsege                                                                                         | **Savjetodavno** |
+| Workflow               | Validira                                                                                                                                                        | Blokira          |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `nightly-property`     | fast-check testovi svojstava sa slučajnim seedom + velikim brojem izvršavanja                                                                                   | **Savjetodavno** |
+| `nightly-resilience`   | kapija rasta heap-a, chaos ubrizgavanje grešaka, k6 opterećenje/soak                                                                                            | **Savjetodavno** |
+| `nightly-llm-security` | promptfoo zaštita od injekcije (blokirajući režim) + garak sonde (preskočene bez provider secret-a)                                                             | **Savjetodavno** |
+| `nightly-schemathesis` | OpenAPI fuzzing ugovora (schemathesis) protiv živog 67router koristeći `docs/openapi.yaml` — otkriva kršenja specifikacije / neobrađene 500 greške (Faza 8 B.4) | **Savjetodavno** |
+| `nightly-mutation`     | Stryker rezultat mutacijskog testiranja nad brzom jediničnom trakom — preživjeli mutanti otkrivaju slabe asserte                                                | **Savjetodavno** |
+| `nightly-compat`       | Matrica kompatibilnosti Node enginea kroz podržane `engines.node` opsege                                                                                        | **Savjetodavno** |
 
 Osnovne linije performansi (heap, TTFB, vrijeme izgradnje) se bilježe, a ne blokiraju: vidi [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -509,7 +509,7 @@ listom dozvoljenih je lažni osjećaj kvaliteta.
 
 ## Alati za agente: LSP-u-petlji (opciono)
 
-Pored CI kapija, OmniRoute isporučuje **opcionu** `agent-lsp` skelu
+Pored CI kapija, 67router isporučuje **opcionu** `agent-lsp` skelu
 (projektnu datoteku `.mcp.json`, Faza 7 Zadatak 15). Kreirajte `.mcp.json`
 da izložite TypeScript jezički server agentima za kodiranje, tako da oni razriješe simbole /
 dijagnostiku **prije** pisanja koda — pratilac "kompajliraj-prije-zahtjeva" za

@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: Folosiți propriile conturi eligibile de furnizor. OmniRoute combină conexiunile pe care le configurați; nu oferă bugetul agregat de tokenuri promovat. Accesul gratuit poate necesita înregistrare, o cheie API, aprobare sau o metodă de plată. Limitele furnizorilor, politicile de confidențialitate și termenii rămân aplicabile.
+> **Pe scurt**: Folosiți propriile conturi eligibile de furnizor. 67router combină conexiunile pe care le configurați; nu oferă bugetul agregat de tokenuri promovat. Accesul gratuit poate necesita înregistrare, o cheie API, aprobare sau o metodă de plată. Limitele furnizorilor, politicile de confidențialitate și termenii rămân aplicabile.
 
 ---
 
@@ -15,7 +15,7 @@ Mulți furnizori de servicii AI oferă o formă de **acces gratuit**. În funcț
 aprobare manuală sau o promoție temporară. Unele opțiuni necesită un cont, o cheie API,
 un card de credit, verificarea KYC sau acceptarea condițiilor specifice furnizorului.
 
-OmniRoute **agregă** conexiunile configurate într-un singur endpoint. Trebuie în continuare să vă înregistrați separat la fiecare furnizor care necesită un cont. Conectați conturile respective și utilizați `model: "auto"` pentru a direcționa solicitările între destinațiile eligibile. Este posibil ca o instalare nouă să nu aibă nicio destinație eligibilă fără cheie; simpla instalare a OmniRoute nu garantează un răspuns reușit la conversație.
+67router **agregă** conexiunile configurate într-un singur endpoint. Trebuie în continuare să vă înregistrați separat la fiecare furnizor care necesită un cont. Conectați conturile respective și utilizați `model: "auto"` pentru a direcționa solicitările între destinațiile eligibile. Este posibil ca o instalare nouă să nu aibă nicio destinație eligibilă fără cheie; simpla instalare a 67router nu garantează un răspuns reușit la conversație.
 
 ---
 
@@ -60,7 +60,7 @@ Acești furnizori au **niveluri gratuite** cu limite specifice:
 
 ## Cum să combinați nivelurile gratuite
 
-Secretul OmniRoute este **combinarea nivelurilor gratuite**. În loc să vă bazați pe un singur furnizor, conectați mai mulți furnizori gratuiți și permiteți OmniRoute să îl selecteze automat pe cel mai potrivit pentru fiecare solicitare.
+Secretul 67router este **combinarea nivelurilor gratuite**. În loc să vă bazați pe un singur furnizor, conectați mai mulți furnizori gratuiți și permiteți 67router să îl selecteze automat pe cel mai potrivit pentru fiecare solicitare.
 
 ### Exemplu: acoperire mai largă prin niveluri gratuite
 
@@ -71,7 +71,7 @@ Conectați mai mulți furnizori pentru a reduce dependența de o singură cotă:
 3. **Pollinations** — acces fără cheie, cu limitare a frecvenței
 4. **LongCat** — credit unic acordat la înregistrare (necesită KYC)
 
-Apoi utilizați `model: "auto"`, iar OmniRoute va:
+Apoi utilizați `model: "auto"`, iar 67router va:
 
 - Încerca mai întâi conexiunea eligibilă cu cel mai înalt rang
 - Dacă verificarea cotei sau a stării acesteia eșuează → va încerca următorul furnizor configurat
@@ -104,7 +104,7 @@ accesul nelimitat/fără cheie, creditele de înregistrare, intrările întrerup
 
 ### Pasul 5: Faceți clic pe Conectare
 
-Pentru un furnizor `NOAUTH`, OmniRoute nu solicită o acreditare pentru serviciul din amonte. Acest lucru nu garantează că serviciul din amonte acceptă clienți terți sau că dispune de capacitate. Furnizorii OAuth și cei care utilizează chei API trebuie conectați prin fluxul de cont documentat. Clientul dvs. utilizează în continuare cheia API OmniRoute afișată în **Tablou de bord → Puncte finale** atunci când autentificarea routerului este activată.
+Pentru un furnizor `NOAUTH`, 67router nu solicită o acreditare pentru serviciul din amonte. Acest lucru nu garantează că serviciul din amonte acceptă clienți terți sau că dispune de capacitate. Furnizorii OAuth și cei care utilizează chei API trebuie conectați prin fluxul de cont documentat. Clientul dvs. utilizează în continuare cheia API 67router afișată în **Tablou de bord → Puncte finale** atunci când autentificarea routerului este activată.
 
 ### Pasul 6: Repetați
 
@@ -114,7 +114,7 @@ Conectați mai mulți furnizori ale căror condiții și al căror model de conf
 
 ## Citirea corectă a catalogului
 
-- `NOAUTH` înseamnă că OmniRoute nu vă solicită o credențială de furnizor; aceasta nu
+- `NOAUTH` înseamnă că 67router nu vă solicită o credențială de furnizor; aceasta nu
   garantează disponibilitatea, confidențialitatea sau capacitatea nelimitată.
 - `hasFree` reprezintă metadate pentru descoperire. Poate indica o cotă recurentă, acces fără cheie,
   credit la înregistrare, un program de aprobare sau o promoție.
@@ -127,15 +127,15 @@ Conectați mai mulți furnizori ale căror condiții și al căror model de conf
 
 ---
 
-## Cum îmbunătățește OmniRoute nivelurile gratuite
+## Cum îmbunătățește 67router nivelurile gratuite
 
 ### 1. Revenire automată la o alternativă
 
-Dacă un furnizor gratuit este ocupat sau indisponibil, OmniRoute îl încearcă automat pe următorul. Nu trebuie să faceți nimic.
+Dacă un furnizor gratuit este ocupat sau indisponibil, 67router îl încearcă automat pe următorul. Nu trebuie să faceți nimic.
 
 ### 2. Rutare inteligentă
 
-OmniRoute alege **cel mai bun furnizor gratuit** pentru fiecare solicitare, pe baza următoarelor criterii:
+67router alege **cel mai bun furnizor gratuit** pentru fiecare solicitare, pe baza următoarelor criterii:
 
 - Viteză — Care furnizor este cel mai rapid în acest moment?
 - Calitate — Care furnizor este cel mai potrivit pentru această sarcină?
@@ -143,13 +143,13 @@ OmniRoute alege **cel mai bun furnizor gratuit** pentru fiecare solicitare, pe b
 
 ### 3. Economisirea tokenurilor
 
-Procesul de comprimare OmniRoute poate reduce numărul de tokenuri eligibile din solicitări și din rezultatele instrumentelor. Economiile
+Procesul de comprimare 67router poate reduce numărul de tokenuri eligibile din solicitări și din rezultatele instrumentelor. Economiile
 efective depind de conținut, motoarele selectate, modul de contorizare al furnizorului și setările de
 fidelitate; comprimarea nu multiplică fiecare cotă a furnizorului cu o valoare fixă.
 
 ### 4. Compatibilitate cu mai multe conturi
 
-Dacă termenii furnizorului permit mai multe conturi sau date de autentificare, OmniRoute poate trata fiecare
+Dacă termenii furnizorului permit mai multe conturi sau date de autentificare, 67router poate trata fiecare
 conexiune drept un candidat separat pentru rutare. Nu creați conturi suplimentare pentru a eluda
 cota sau politica de acces a unui furnizor.
 
@@ -164,7 +164,7 @@ Catalogul activ, cu deduplicare la nivel de fonduri comune, raportează în prez
 | Alocare cuantificată recurentă     |  **~1.62B tokenuri/lună** | Fondurile comune sunt numărate o singură dată; furnizorii fără limită sunt excluși din sumă |
 | Prima lună cu alocări la înscriere |       **~2.22B tokenuri** | Totalul recurent plus creditele unice și recurente                                          |
 
-Acestea sunt estimări pentru întregul catalog, calculate pentru conturi eligibile separate, nu o alocare oferită de OmniRoute sau o predicție pentru o instalare nouă. Capacitatea pe care o puteți utiliza depinde de furnizorii pe care îi conectați și de condițiile lor actuale. Valorile sunt calculate din `open-sse/config/freeModelCatalog.ts`; consultați
+Acestea sunt estimări pentru întregul catalog, calculate pentru conturi eligibile separate, nu o alocare oferită de 67router sau o predicție pentru o instalare nouă. Capacitatea pe care o puteți utiliza depinde de furnizorii pe care îi conectați și de condițiile lor actuale. Valorile sunt calculate din `open-sse/config/freeModelCatalog.ts`; consultați
 [Referința nivelurilor gratuite](../reference/FREE_TIERS.md) pentru deduplicarea fondurilor comune, marcajele privind termenii și condițiile,
 intrările întrerupte și metodologia creditelor acordate la înscriere.
 
@@ -191,7 +191,7 @@ de producție. Sarcinile de lucru critice trebuie să dispună de o soluție de 
 
 Compromisurile pot include limite stricte, liste de așteptare, KYC, verificarea cardului de credit, antrenarea pe baza
 prompturilor, confidențialitate redusă, lipsa unui SLA, schimbarea frecventă a modelelor, restricții geografice, costuri pentru depășirea limitei sau
-riscuri legate de politicile contului. OmniRoute afișează metadatele disponibile; dvs. alegeți ce activați.
+riscuri legate de politicile contului. 67router afișează metadatele disponibile; dvs. alegeți ce activați.
 
 ### „Cum pot obține o cotă gratuită mai mare?”
 
@@ -210,7 +210,7 @@ pagina Clasamentul furnizorilor gratuiți ca indicator de calitate și verifica�
 
 ## Ce urmează?
 
-- **[Ghid Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lasă OmniRoute să aleagă cel mai bun AI pentru tine
+- **[Ghid Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Lasă 67router să aleagă cel mai bun AI pentru tine
 - **[Ghidul furnizorilor](./PROVIDERS-GUIDE.md)** — Conectează mai mulți furnizori
 - **[Depanare](../guides/TROUBLESHOOTING.md)** — Remediază problemele frecvente
 - **[Referință privind nivelurile gratuite](../reference/FREE_TIERS.md)** — Lista completă a nivelurilor gratuite

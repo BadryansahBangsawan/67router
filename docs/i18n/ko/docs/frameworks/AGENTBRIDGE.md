@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge는 IDE AI 에이전트의 HTTPS 트래픽을 가로채 OmniRoute의 통합 라우팅 엔진을 통해 다시 라우팅하는 OmniRoute의 MITM(Man-in-the-Middle) 프록시입니다. **10개의 IDE 에이전트** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, Trae(조사 중) — 를 지원하여, OmniRoute는 시장에서 AI 코딩 어시스턴트를 가장 폭넓게 지원하는 MITM 프록시입니다.
+AgentBridge는 IDE AI 에이전트의 HTTPS 트래픽을 가로채 67router의 통합 라우팅 엔진을 통해 다시 라우팅하는 67router의 MITM(Man-in-the-Middle) 프록시입니다. **10개의 IDE 에이전트** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, Trae(조사 중) — 를 지원하여, 67router는 시장에서 AI 코딩 어시스턴트를 가장 폭넓게 지원하는 MITM 프록시입니다.
 
 **대시보드 위치:** `/dashboard/tools/agent-bridge`
 **사이드바 그룹:** 도구(Cloud Agents 다음)
@@ -16,34 +16,34 @@ AgentBridge는 IDE AI 에이전트의 HTTPS 트래픽을 가로채 OmniRoute의 
 
 ### AgentBridge란?
 
-IDE 에이전트(예: GitHub Copilot, Cursor, Claude Code)가 API 호출을 수행할 때, 업스트림 AI 제공자(OpenAI, Anthropic 등)에 직접 연결됩니다. AgentBridge는 에이전트 설정 변경 없이 TLS 수준에서 해당 연결을 투명하게 가로채어, 요청을 OmniRoute를 통해 재작성합니다.
+IDE 에이전트(예: GitHub Copilot, Cursor, Claude Code)가 API 호출을 수행할 때, 업스트림 AI 제공자(OpenAI, Anthropic 등)에 직접 연결됩니다. AgentBridge는 에이전트 설정 변경 없이 TLS 수준에서 해당 연결을 투명하게 가로채어, 요청을 67router를 통해 재작성합니다.
 
 이를 통해 다음이 가능합니다:
 
-- **모든 에이전트를 모든 제공자로 재라우팅**: Copilot이 OpenAI와 통신하고 있나요? Anthropic Claude, Gemini 또는 OmniRoute의 375개 제공자 중 어디로든 리디렉션할 수 있습니다.
+- **모든 에이전트를 모든 제공자로 재라우팅**: Copilot이 OpenAI와 통신하고 있나요? Anthropic Claude, Gemini 또는 67router의 375개 제공자 중 어디로든 리디렉션할 수 있습니다.
 - **모델 매핑 적용**: `gemini-3-flash` → `claude-sonnet-4.7`을 핸들러 수준에서 투명하게 매핑합니다.
 - **모든 에이전트 트래픽 관찰**: 가로챈 모든 요청이 [Traffic Inspector](./TRAFFIC_INSPECTOR.md)에 게시됩니다.
-- **OmniRoute 복원력 적용**: 콤보 라우팅, 서킷 브레이커, 폴백, 비용 추적이 IDE 에이전트 트래픽에도 동일하게 작동합니다.
+- **67router 복원력 적용**: 콤보 라우팅, 서킷 브레이커, 폴백, 비용 추적이 IDE 에이전트 트래픽에도 동일하게 작동합니다.
 
 ### 시장 내 포지셔닝
 
-| 기능               | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------ | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity        |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot     |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)         |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex       |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE         |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries     |    —    |    ✓     |        —        |             ✓             |
-| Claude Code        |    —    |    —     |        ✓        |             ✓             |
-| Open Code          |    —    |    —     |        ✓        |             ✓             |
-| Trae               |    —    |    —     |        —        |        🔍 조사 중         |
-| 대시보드 UI        |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector  |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute 라우팅   |    ✗    |    ✗     |        ✗        |             ✓             |
-| 모델 매핑 UI       |    ✗    |    ✗     |        ✗        |             ✓             |
-| 우회(Bypass) 목록  |    ✗    |    ✗     |        ✓        |             ✓             |
-| 업스트림 CA 인증서 |    ✗    |    ✗     |        ✓        |             ✓             |
+| 기능               | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------ | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity        |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot     |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)         |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex       |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE         |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries     |    —    |    ✓     |        —        |            ✓             |
+| Claude Code        |    —    |    —     |        ✓        |            ✓             |
+| Open Code          |    —    |    —     |        ✓        |            ✓             |
+| Trae               |    —    |    —     |        —        |        🔍 조사 중        |
+| 대시보드 UI        |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector  |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router 라우팅    |    ✗    |    ✗     |        ✗        |            ✓             |
+| 모델 매핑 UI       |    ✗    |    ✗     |        ✗        |            ✓             |
+| 우회(Bypass) 목록  |    ✗    |    ✗     |        ✓        |            ✓             |
+| 업스트림 CA 인증서 |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (포트 443, CJS 자식 프로세스)
     │  Host 헤더 SNI를 기준으로 대상 확인
     │  AgentBridge CA로 서명된 SNI별 TLS 인증서 생성
     ├── 우회 목록과 일치? → TCP 패스스루 (복호화 없음)
-    ├── 대상과 일치? → fetch → OmniRoute 라우터 (포트 20128)
+    ├── 대상과 일치? → fetch → 67router 라우터 (포트 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── 요청 본문/헤더에 maskSecrets() 적용
     │               ├── TrafficBuffer.push() — 트래픽 검사기에 게시
@@ -205,7 +205,7 @@ IDE가 MITM 연결을 수락하려면 먼저 OS에서 AgentBridge CA 인증서�
 **Linux(NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS(Keychain):**
@@ -250,10 +250,10 @@ GitHub Copilot의 `/etc/hosts` 항목 예시:
 
 각 에이전트 카드의 모델 매핑 테이블을 사용하여 소스 → 대상 매핑을 정의하세요.
 
-| 소스 모델(에이전트 네이티브) | 대상 모델(OmniRoute) |
-| ---------------------------- | -------------------- |
-| `gpt-4o`                     | `claude-sonnet-4.7`  |
-| `*`(와일드카드)              | `claude-haiku-4.7`   |
+| 소스 모델(에이전트 네이티브) | 대상 모델(67router) |
+| ---------------------------- | ------------------- |
+| `gpt-4o`                     | `claude-sonnet-4.7` |
+| `*`(와일드카드)              | `claude-haiku-4.7`  |
 
 와일드카드 `*`는 인식되지 않은 모든 모델을 지정된 대상으로 매핑합니다. 매핑은 `agent_bridge_mappings` 테이블에 저장됩니다.
 
@@ -266,7 +266,7 @@ GitHub Copilot의 `/etc/hosts` 항목 예시:
 
 ### 3.5 위험 고지
 
-AgentBridge는 IDE가 업스트림 공급자에게 인증할 때 사용하는 자격 증명(OAuth 토큰, API 키)을 가로챕니다. 이러한 정보는 **로깅 전에 마스킹되지만**(§2.7 참조) OmniRoute의 MITM 계층에서는 볼 수 있습니다. 각 에이전트를 처음 활성화하면 닫을 수 있는 위험 고지 모달이 표시됩니다.
+AgentBridge는 IDE가 업스트림 공급자에게 인증할 때 사용하는 자격 증명(OAuth 토큰, API 키)을 가로챕니다. 이러한 정보는 **로깅 전에 마스킹되지만**(§2.7 참조) 67router의 MITM 계층에서는 볼 수 있습니다. 각 에이전트를 처음 활성화하면 닫을 수 있는 위험 고지 모달이 표시됩니다.
 
 ### 3.6 유지 관리 및 진단
 
@@ -385,7 +385,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### 민감한 호스트용 우회 목록
 
-우회 목록은 금융 기관, OAuth/SSO 제공업체 및 기타 민감한 호스트가 **절대로 복호화되지 않도록** 보장합니다. 해당 TLS 트래픽은 투명한 TCP 터널을 통해 전달되므로 OmniRoute는 평문을 절대 볼 수 없습니다.
+우회 목록은 금융 기관, OAuth/SSO 제공업체 및 기타 민감한 호스트가 **절대로 복호화되지 않도록** 보장합니다. 해당 TLS 트래픽은 투명한 TCP 터널을 통해 전달되므로 67router는 평문을 절대 볼 수 없습니다.
 
 기본 우회 패턴에는 다음이 포함됩니다.
 
@@ -436,7 +436,7 @@ sudo fuser -k 443/tcp  # 강제 종료(주의해서 사용)
 
 AgentBridge를 시작한 후 IDE에 TLS 오류가 표시되는 경우:
 
-1. 인증서가 설치되었는지 확인합니다: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) 또는 `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. 인증서가 설치되었는지 확인합니다: `security find-certificate -c "67router AgentBridge"` (macOS) 또는 `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. 일부 앱은 자체 신뢰 저장소를 유지합니다(Firefox, Linux의 Chrome). "Trust Cert"를 다시 실행하고 NSS/Firefox 전용 인증서 저장소를 확인하세요.
 3. 신뢰 설정 후 IDE를 다시 시작하세요. 진행 중인 TLS 세션은 이전 신뢰 상태를 사용합니다.
 
@@ -479,7 +479,7 @@ ipconfig /flushdns
 AgentBridge가 요청을 가로채지만 모든 요청이 실패하는 경우:
 
 1. `/dashboard/providers`에서 하나 이상의 공급자가 연결되어 있는지 확인합니다.
-2. OmniRoute 서버 로그를 확인합니다: `.env`에서 `APP_LOG_LEVEL=debug`
+2. 67router 서버 로그를 확인합니다: `.env`에서 `APP_LOG_LEVEL=debug`
 3. `OMNIROUTE_BASE_URL`이 올바른 라우터 엔드포인트를 가리키는지 확인합니다(기본값: `http://127.0.0.1:20128`).
 
 ---

@@ -7,29 +7,29 @@
 > **Sumber acuan:** `src/lib/skills/` dan `src/app/api/skills/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan kerangka kerja Skills yang dapat diperluas, yang memungkinkan model bahasa (dan operator) menyusun kapabilitas yang dapat digunakan kembali — mulai dari pembacaan sistem berkas dan permintaan HTTP hingga eksekusi kode dalam sandbox dan skill marketplace yang dikurasi.
+67router menyediakan kerangka kerja Skills yang dapat diperluas, yang memungkinkan model bahasa (dan operator) menyusun kapabilitas yang dapat digunakan kembali — mulai dari pembacaan sistem berkas dan permintaan HTTP hingga eksekusi kode dalam sandbox dan skill marketplace yang dikurasi.
 
-Skill adalah unit kerja berversi yang didefinisikan oleh skema. OmniRoute dapat menyuntikkan skill sebagai definisi alat ke dalam permintaan keluar, mencegat pemanggilan alat yang dikembalikan dari model, menjalankan handler yang sesuai, dan mengirimkan hasilnya kembali ke model agar percakapan dapat berlanjut. Model tidak pernah melihat implementasinya — hanya antarmuka alatnya.
+Skill adalah unit kerja berversi yang didefinisikan oleh skema. 67router dapat menyuntikkan skill sebagai definisi alat ke dalam permintaan keluar, mencegat pemanggilan alat yang dikembalikan dari model, menjalankan handler yang sesuai, dan mengirimkan hasilnya kembali ke model agar percakapan dapat berlanjut. Model tidak pernah melihat implementasinya — hanya antarmuka alatnya.
 
 ---
 
 ## Agent Skills vs Omni Skills
 
-OmniRoute memiliki dua sistem skill yang berbeda tetapi saling melengkapi:
+67router memiliki dua sistem skill yang berbeda tetapi saling melengkapi:
 
 | Dimensi      | **Omni Skills** (dokumen ini)                                                | **Agent Skills**                                                                           |
 | :----------- | :--------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | Tujuan       | Penyuntikan alat LLM + eksekusi dalam sandbox                                | Katalog SKILL.md untuk ditemukan dan digunakan oleh agen eksternal                         |
 | Sumber acuan | `src/lib/skills/` + marketplace                                              | `src/lib/agentSkills/` + direktori `skills/`                                               |
 | Mode runtime | Disuntikkan ke permintaan keluar, dieksekusi pada peristiwa pemanggilan alat | Katalog markdown statis + endpoint penemuan REST/MCP/A2A                                   |
-| Pengguna     | OmniRoute sendiri (perutean kombo, panggilan LLM masuk)                      | Agen eksternal, klien MCP, orkestrator A2A                                                 |
+| Pengguna     | 67router sendiri (perutean kombo, panggilan LLM masuk)                       | Agen eksternal, klien MCP, orkestrator A2A                                                 |
 | Jumlah       | Bervariasi (ditentukan marketplace)                                          | 45 entri katalog (23 API + 21 CLI + 1 konfigurasi)                                         |
 | Format       | `SkillDefinition` dengan skema alat + handler                                | Frontmatter `SKILL.md` + isi markdown                                                      |
 | Penemuan     | REST `/api/skills/*` + alat MCP `omniroute_skills_*`                         | REST `/api/agent-skills/*` + alat MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 
-**Omni Skills** adalah mesin eksekusi — sistem ini menentukan apa yang _dapat dilakukan_ OmniRoute ketika LLM memanggil suatu alat.
+**Omni Skills** adalah mesin eksekusi — sistem ini menentukan apa yang _dapat dilakukan_ 67router ketika LLM memanggil suatu alat.
 
-**Agent Skills** adalah katalog dokumentasi — sistem ini menjelaskan kepada agen eksternal _cara menggunakan_ REST API dan CLI OmniRoute, dengan berkas SKILL.md terstruktur yang dapat dimasukkan langsung ke dalam prompt agen.
+**Agent Skills** adalah katalog dokumentasi — sistem ini menjelaskan kepada agen eksternal _cara menggunakan_ REST API dan CLI 67router, dengan berkas SKILL.md terstruktur yang dapat dimasukkan langsung ke dalam prompt agen.
 
 Untuk katalog Agent Skills, generator, alat MCP, dan skill A2A, lihat [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Untuk katalog Agent Skills, generator, alat MCP, dan skill A2A, lihat [docs/fram
 
 Tiga sumber skill hadir berdampingan dalam registri yang sama:
 
-1. **Skill bawaan** (`src/lib/skills/builtins.ts`) — disertakan bersama OmniRoute. Mencakup kasus penggunaan umum:
+1. **Skill bawaan** (`src/lib/skills/builtins.ts`) — disertakan bersama 67router. Mencakup kasus penggunaan umum:
    - `file_read`, `file_write` — ruang kerja sandbox per kunci API di bawah `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP keluar melalui `safeOutboundFetch` dengan `guard: "public-only"`
    - `web_search` — penyedia pencarian yang dapat diganti dengan caching (`executeWebSearch`)
    - `eval_code` — eksekusi `node` atau `python` dalam sandbox Docker
    - `execute_command` — perintah shell dalam sandbox Docker
    - `browser` — scaffolding berbasis Playwright, dinonaktifkan secara default (`builtin/browser.ts`)
-2. **SkillsMP** (Marketplace OmniRoute) — diambil dari `https://skillsmp.com/api/v1/skills/search`. Memerlukan `skillsmpApiKey` di Pengaturan.
+2. **SkillsMP** (Marketplace 67router) — diambil dari `https://skillsmp.com/api/v1/skills/search`. Memerlukan `skillsmpApiKey` di Pengaturan.
 3. **SkillsSH** (katalog komunitas `skills.sh`) — diambil dari `https://skills.sh/api/search`. Tidak memerlukan autentikasi; konten SKILL.md diambil dari GitHub raw.
 
 Satu "penyedia aktif" mengontrol katalog yang digunakan dashboard untuk melakukan instalasi (`src/lib/skills/providerSettings.ts`). Ganti penyedia tersebut melalui **Pengaturan → Memori & Skill**. Default: `skillsmp`.
@@ -437,7 +437,7 @@ dokumen ini; tidak ada ambang batas bilangan pecahan bergaya `0.6` dan tidak ada
 
 ## Katalog Skill Bawaan
 
-OmniRoute dilengkapi dengan sekumpulan skill bawaan yang telah dikurasi di `src/lib/skills/builtin/`. Skill yang paling umum:
+67router dilengkapi dengan sekumpulan skill bawaan yang telah dikurasi di `src/lib/skills/builtin/`. Skill yang paling umum:
 
 ### Skill Otomatisasi Browser
 

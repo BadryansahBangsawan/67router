@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima **štiri družine poverilnic**, ki lahko odobrijo dostop do upravljavskih poti.
+67router ima **štiri družine poverilnic**, ki lahko odobrijo dostop do upravljavskih poti.
 Med seboj niso zamenljive. Ključi API za sklepanje (`sk-…`) **ne** upravljajo
 strežnika, razen če jim je bil izrecno dodeljen obseg `manage` ali `admin`.
 

@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` memungkinkan runtime Claude Code yang sebenarnya menggunakan endpoint
-Messages Anthropic lokal milik OmniRoute, sementara Devin CLI resmi menyediakan respons model
+Messages Anthropic lokal milik 67router, sementara Devin CLI resmi menyediakan respons model
 melalui ACP stdio. Ini tidak memodifikasi penyedia Anthropic, Claude OAuth, Claude Web, atau
 `devin-cli` yang sudah ada.
 
@@ -21,7 +21,7 @@ kombo yang memerlukan alat menghindarinya.
 > tersebut membuktikan giliran `Read`, `Edit`, dan `Bash` yang dimiliki klien, hasil `npm test`
 > yang berhasil, penemuan perintah dan keterampilan proyek, perutean khusus Devin, serta tidak
 > adanya lalu lintas keluar Claude. Versi terkunci kemudian dinaikkan ke `2.1.258`
-> (generasi CLI yang identitas Claude-nya ditiru oleh OmniRoute, serta rilis pertama yang
+> (generasi CLI yang identitas Claude-nya ditiru oleh 67router, serta rilis pertama yang
 > menyediakan tingkat Fable 5.1 secara native). Pada versi terkunci baru, lapisan instalasi dan
 > `claude --version` telah diverifikasi pada image dasar yang dikunci, dan rangkaian unit bridge,
 > `compose config`, serta bukti isolasi statis berhasil — tetapi skenario mock offline dan
@@ -54,11 +54,11 @@ Parser menerima satu envelope `<tool>{...}</tool>` mandiri per giliran model. Pa
 nama terhadap daftar alat dalam permintaan, memvalidasi argumen berdasarkan JSON Schema alat
 tersebut, menolak campuran narasi/tindakan, dan mengizinkan satu upaya perbaikan terbatas.
 Claude Code kemudian menjalankan `tool_use` Anthropic yang dihasilkan secara lokal dan
-mengirimkan kembali `tool_result` melalui OmniRoute.
+mengirimkan kembali `tool_result` melalui 67router.
 
 ## Perutean otomatis
 
-Penyedia ini memenuhi syarat dalam kumpulan kandidat `auto/*` OmniRoute ketika tidak diblokir.
+Penyedia ini memenuhi syarat dalam kumpulan kandidat `auto/*` 67router ketika tidak diblokir.
 Kelayakan kandidat tidak menjamin pemilihan: strategi perutean kombo (misalnya,
 terakhir-diketahui-baik) mungkin lebih memilih penyedia lain. Gunakan `dva/<model>` atau kombo
 yang memprioritaskan Devin ketika Anda mengharuskan setiap permintaan melewati Devin.
@@ -70,17 +70,17 @@ terlarang. Layanan Compose:
 
 - berjalan sebagai UID/GID `10001:10001`, dengan sistem berkas root hanya-baca, kapabilitas yang
   dihapus, dan `no-new-privileges`;
-- menggunakan `/home/bridge` privat, volume konfigurasi Claude khusus, data OmniRoute yang terisolasi,
+- menggunakan `/home/bridge` privat, volume konfigurasi Claude khusus, data 67router yang terisolasi,
   dan volume `devin-auth` terpisah;
 - hanya memasang ruang kerja/bukti `.sandbox` yang dapat dibuang;
 - tidak memasang direktori home host, Keychain, kredensial SSH, kredensial cloud, atau soket Docker;
 - menyusun lingkungan secara eksplisit dan menghapus variabel API/OAuth/perutean Anthropic;
 - mengarahkan inferensi Claude Code hanya ke `http://omniroute:20128` dengan kunci khusus lokal.
 
-Profil offline menggunakan jaringan internal. Dalam profil live, OmniRoute hanya menjangkau
+Profil offline menggunakan jaringan internal. Dalam profil live, 67router hanya menjangkau
 endpoint resmi Devin melalui `network-guard`; tujuan yang tidak terkait ditolak.
 Claude Code memiliki pengaman keluar tolak-semua yang terpisah dan hanya dapat menjangkau layanan
-OmniRoute lokal melalui `NO_PROXY`. Berkas audit pengaman hanya dipasang oleh proses pengamannya
+67router lokal melalui `NO_PROXY`. Berkas audit pengaman hanya dipasang oleh proses pengamannya
 masing-masing. Skrip memverifikasi kepemilikan berkas, mode, jumlah tautan, dan setiap keputusan
 sebelum mengekspor bukti bebas token.
 

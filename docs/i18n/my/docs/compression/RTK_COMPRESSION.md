@@ -4,7 +4,7 @@
 
 ---
 
-RTK compression သည် terminal နှင့် tool output များအတွက် OmniRoute ၏ command-aware compression engine ဖြစ်သည်။ ၎င်းကို context တိုးပွားမှုအများစုသည် test log များ၊ build output၊ package manager ဆိုင်ရာ မလိုအပ်သော output များ၊ shell transcript များ၊ Docker output၊ git output နှင့် stack trace များမှ ဖြစ်ပေါ်လာသည့် coding-agent session များအတွက် ဒီဇိုင်းပြုလုပ်ထားသည်။
+RTK compression သည် terminal နှင့် tool output များအတွက် 67router ၏ command-aware compression engine ဖြစ်သည်။ ၎င်းကို context တိုးပွားမှုအများစုသည် test log များ၊ build output၊ package manager ဆိုင်ရာ မလိုအပ်သော output များ၊ shell transcript များ၊ Docker output၊ git output နှင့် stack trace များမှ ဖြစ်ပေါ်လာသည့် coding-agent session များအတွက် ဒီဇိုင်းပြုလုပ်ထားသည်။
 
 RTK ကို `defaultMode: "rtk"` ဖြင့် တိုက်ရိုက်အသုံးပြုနိုင်သကဲ့သို့ stacked pipeline တစ်ခု၏ ပထမအဆင့်အဖြစ်လည်း အသုံးပြုနိုင်ပြီး ပုံမှန်အားဖြင့် အောက်ပါအတိုင်းဖြစ်သည်။
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 ဤအစီအစဉ်သည် မလိုအပ်သော machine output များကို ဦးစွာချုံ့ပြီးနောက် ကျန်ရှိသော စာသားများကို Caveman က ထပ်မံကျစ်လျစ်စေသည်။
 
-မူရင်း RTK က command-output အတွက် `60-90%` ချွေတာနိုင်ကြောင်း ဖော်ပြထားသည်။ ၎င်း၏ README နမူနာ session တွင် ပုံမှန် token `~118,000` မှ RTK token `~23,900` သို့ လျော့ကျသွားပြီး `79.7%` (`~80%`) ချွေတာနိုင်သည်။ OmniRoute သည် Caveman input compression နှင့် တွဲဖက်ထားသော savings တွက်ချက်မှုအတွက် မူရင်း RTK ၏ ပျမ်းမျှတန်ဖိုးကို အသုံးပြုသည်။
+မူရင်း RTK က command-output အတွက် `60-90%` ချွေတာနိုင်ကြောင်း ဖော်ပြထားသည်။ ၎င်း၏ README နမူနာ session တွင် ပုံမှန် token `~118,000` မှ RTK token `~23,900` သို့ လျော့ကျသွားပြီး `79.7%` (`~80%`) ချွေတာနိုင်သည်။ 67router သည် Caveman input compression နှင့် တွဲဖက်ထားသော savings တွက်ချက်မှုအတွက် မူရင်း RTK ၏ ပျမ်းမျှတန်ဖိုးကို အသုံးပြုသည်။
 
 ```txt
 RTK ပျမ်းမျှ:       80% ချွေတာမှု
@@ -48,7 +48,7 @@ RTK သည် filter များကို အောက်ပါအစီအစ�
 2. `DATA_DIR/rtk/filters.toml` နှင့် `DATA_DIR/rtk/filters.json` မှ global filter များ။
 3. `open-sse/services/compression/engines/rtk/filters/` မှ built-in filter များ။
 
-Scope တစ်ခုတည်းအတွင်း RTK TOML schema v1 filter များသည် OmniRoute JSON filter များထက် ဦးစားပေးခံရသည်။ တင်သွင်းထားသော command-specific filter တစ်ခုက ထို scope ရှိ ပိုမိုကျယ်ပြန့်သော filter ကို override လုပ်နိုင်စေရန် TOML `match_command` expression များကို command-type ကိုက်ညီမှုမတိုင်မီ စစ်ဆေးသည်။ File format မည်သို့ပင်ဖြစ်စေ project scope သည် global scope ထက် ဦးစားပေးခံရဆဲဖြစ်သည်။
+Scope တစ်ခုတည်းအတွင်း RTK TOML schema v1 filter များသည် 67router JSON filter များထက် ဦးစားပေးခံရသည်။ တင်သွင်းထားသော command-specific filter တစ်ခုက ထို scope ရှိ ပိုမိုကျယ်ပြန့်သော filter ကို override လုပ်နိုင်စေရန် TOML `match_command` expression များကို command-type ကိုက်ညီမှုမတိုင်မီ စစ်ဆေးသည်။ File format မည်သို့ပင်ဖြစ်စေ project scope သည် global scope ထက် ဦးစားပေးခံရဆဲဖြစ်သည်။
 
 Regex filter များသည် tool output ကို agent များထံ ပြသပုံအား ပြောင်းလဲနိုင်သောကြောင့် project filter များကို ရည်ရွယ်ချက်ရှိရှိ trust-gate ဖြင့် ကန့်သတ်ထားသည်။ အောက်ပါအခြေအနေများထဲမှ တစ်ခုမှန်ကန်ပါက project filter file ကို လက်ခံသည်။
 
@@ -71,7 +71,7 @@ Custom filter များသည် filter object တစ်ခု သို့�
 
 ## RTK TOML schema v1 နှင့် ကိုက်ညီမှု
 
-OmniRoute သည် RTK TOML schema v1 ကို အသုံးပြုထားသော ကြေညာသတ်မှတ်ပုံစံ filter ဖိုင်များကို parse လုပ်ခြင်း၊ စစ်ဆေးအတည်ပြုခြင်း၊ စမ်းသပ်ခြင်းနှင့် ထည့်သွင်းခြင်းတို့ ပြုလုပ်နိုင်သည်။
+67router သည် RTK TOML schema v1 ကို အသုံးပြုထားသော ကြေညာသတ်မှတ်ပုံစံ filter ဖိုင်များကို parse လုပ်ခြင်း၊ စစ်ဆေးအတည်ပြုခြင်း၊ စမ်းသပ်ခြင်းနှင့် ထည့်သွင်းခြင်းတို့ ပြုလုပ်နိုင်သည်။
 ပံ့ပိုးထားသော field များမှာ `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` နှင့် `[[tests.<filter>]]` inline test များ ဖြစ်သည်။
@@ -80,7 +80,7 @@ OmniRoute သည် RTK TOML schema v1 ကို အသုံးပြုထာ�
 စစ်ဆေးကြည့်ရှုရန်အတွက် အတည်ပြုနိုင်သော်လည်း ထည့်သွင်းခြင်း သို့မဟုတ် load လုပ်ခြင်း မပြုနိုင်ပါ။ စိတ်ကြိုက်ဖိုင်ကို load လုပ်ရာတွင် မအောင်မြင်ပါက
 fail-open အတိုင်း ဆက်လက်လုပ်ဆောင်သည်၊ ဆိုလိုသည်မှာ မမှန်ကန်သောဖိုင်ကို ကျော်သွားပြီး ကျန် filter များ ဆက်လက်အလုပ်လုပ်သည်။
 
-Client က tool output ကို ဖမ်းယူပြီးနောက်မှသာ OmniRoute က လက်ခံရရှိသောကြောင့် `filter_stderr = true` သည်
+Client က tool output ကို ဖမ်းယူပြီးနောက်မှသာ 67router က လက်ခံရရှိသောကြောင့် `filter_stderr = true` သည်
 process capture ကို ပြောင်းလဲနိုင်ခြင်းမရှိပါ။ ဤ field ကို မည်သည့်လုပ်ဆောင်ချက်မျှမရှိသော no-op အဖြစ် လက်ခံပြီး စစ်ဆေးအတည်ပြုမှုက သတိပေးချက်တစ်ခု ပြန်ပေးသည်။
 ဤအရာကို RTK executable၊ shell hook များ၊ Rust command အကောင်အထည်ဖော်မှုများ သို့မဟုတ် ၎င်း၏ trust-store ဖွဲ့စည်းပုံတို့နှင့် အပြည့်အဝကိုက်ညီမှုဟု မဆိုဘဲ
 ရည်ရွယ်ချက်ရှိရှိ **RTK TOML schema v1 compatibility** ဟု ဖော်ပြထားသည်။

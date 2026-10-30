@@ -7,7 +7,7 @@
 > **Asosiy manba:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute marshrutlash konfiguratsiyalari, alohida provayderlar/modellar yoki toʻplamga kiritilgan “golden set” sinov majmualarini taqqoslab baholash uchun foydalanishingiz mumkin boʻlgan universal baholash freymvorki bilan taqdim etiladi. Undan marshrutlashdagi oʻzgarishlarni tekshirish, yangi provayderlarni sinovdan oʻtkazish va relizlarni ishlab chiqarish trafigiga chiqarishdan oldin nazoratdan oʻtkazish uchun foydalaning.
+67router marshrutlash konfiguratsiyalari, alohida provayderlar/modellar yoki toʻplamga kiritilgan “golden set” sinov majmualarini taqqoslab baholash uchun foydalanishingiz mumkin boʻlgan universal baholash freymvorki bilan taqdim etiladi. Undan marshrutlashdagi oʻzgarishlarni tekshirish, yangi provayderlarni sinovdan oʻtkazish va relizlarni ishlab chiqarish trafigiga chiqarishdan oldin nazoratdan oʻtkazish uchun foydalaning.
 
 Freymvork quyidagicha amalga oshirilgan:
 

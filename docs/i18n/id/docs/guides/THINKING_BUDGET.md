@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Sumber:** `open-sse/services/thinkingBudget.ts`
 
-Anggaran Thinking mengontrol apakah OmniRoute **menulis ulang parameter thinking/reasoning dari klien** saat diteruskan ke penyedia. Fitur ini **tidak** mengaktifkan atau menonaktifkan kompresi, routing, maupun cache prompt.
+Anggaran Thinking mengontrol apakah 67router **menulis ulang parameter thinking/reasoning dari klien** saat diteruskan ke penyedia. Fitur ini **tidak** mengaktifkan atau menonaktifkan kompresi, routing, maupun cache prompt.
 
 ## Mode
 
-| Mode                        | Yang dilakukan OmniRoute                                                                                                      | Waktu penggunaan                                                                                                                                                               |
+| Mode                        | Yang dilakukan 67router                                                                                                       | Waktu penggunaan                                                                                                                                                               |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`passthrough`** (default) | Membiarkan kolom klien tetap apa adanya (`reasoning`, `reasoning_effort`, `thinking` Claude, `thinking_config` Gemini, dll.). | **Codex / Desktop / klien apa pun yang harus mengontrol tingkat upaya + ringkasan reasoning.** Diperlukan agar panel thinking terlihat saat klien meminta `reasoning.summary`. |
 | **`auto`**                  | **Menghapus semua** kolom thinking/reasoning dari isi permintaan sebelum dikirim ke upstream.                                 | Hanya jika Anda memang ingin **penyedia** menentukan default dan Anda **tidak** memerlukan thinking yang dikontrol klien. **Bukan** “menampilkan thinking secara otomatis”.    |
@@ -38,7 +38,7 @@ Jika klien (misalnya Codex Desktop) mengirim `reasoning: { effort: "ultra", summ
 | **Routing kombinasi / fallback**         | Terpisah. Tidak terpengaruh.                                                                                                         |
 | **Batas token API key / anggaran biaya** | Terpisah. Tidak terpengaruh.                                                                                                         |
 | **Cache pemutaran ulang reasoning**      | Injeksi ulang multi-turn untuk penyedia ketat (DeepSeek, Kimi, Qwen-thinking, …). Tidak sama dengan “tampilkan thinking” di Desktop. |
-| **Mendekripsi `encrypted_content`**      | **Tidak mungkin.** Blob reasoning privat OpenAI/Codex bersifat opak. OmniRoute tidak pernah mendekripsinya (#7095 / #7176 / #7304).  |
+| **Mendekripsi `encrypted_content`**      | **Tidak mungkin.** Blob reasoning privat OpenAI/Codex bersifat opak. 67router tidak pernah mendekripsinya (#7095 / #7176 / #7304).   |
 
 ## Thinking yang terlihat (klien Codex / Responses)
 
@@ -51,7 +51,7 @@ Agar klien dapat menampilkan teks thinking, Anda memerlukan **semua** hal beriku
 Jika Anda hanya mendapatkan “penalaran privat terenkripsi”, penyebabnya adalah:
 
 - mode yang digunakan adalah **`auto`** (permintaan klien dihapus), atau
-- upstream mengembalikan `encrypted_content` tanpa teks ringkasan (keterbatasan penyedia; OmniRoute hanya dapat menampilkan placeholder, bukan teks biasa).
+- upstream mengembalikan `encrypted_content` tanpa teks ringkasan (keterbatasan penyedia; 67router hanya dapat menampilkan placeholder, bukan teks biasa).
 
 ## Contoh API
 
@@ -71,7 +71,7 @@ Skema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Persistensi / mulai ulang
 
-Nilai disimpan di bawah kunci pengaturan `thinkingBudget` dan dimuat saat proses dimulai (`hydrateThinkingBudgetConfig`). Setelah mengubahnya melalui DB atau beberapa jalur non-API, **mulai ulang proses OmniRoute** agar singleton dalam memori sesuai dengan data di disk.
+Nilai disimpan di bawah kunci pengaturan `thinkingBudget` dan dimuat saat proses dimulai (`hydrateThinkingBudgetConfig`). Setelah mengubahnya melalui DB atau beberapa jalur non-API, **mulai ulang proses 67router** agar singleton dalam memori sesuai dengan data di disk.
 
 ## Daftar periksa operator
 

@@ -25,7 +25,7 @@
 ከማስመጫው ሞዳል የመነሻ ፋይል ያውርዱ (**የCSV አብነት አውርድ**)። ምሳሌ፦
 
 ```csv
-# የOmniRoute አቅራቢ ማስመጫ (በቦታ ቅደም ተከተል የተደረደሩ ዓምዶች)
+# የ67router አቅራቢ ማስመጫ (በቦታ ቅደም ተከተል የተደረደሩ ዓምዶች)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

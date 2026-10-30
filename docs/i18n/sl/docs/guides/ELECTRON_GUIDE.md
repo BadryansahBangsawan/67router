@@ -7,7 +7,7 @@
 > **Vir resnice:** delovni prostor `electron/`
 > **Zadnja posodobitev:** 2026-06-28 — v3.8.40
 
-OmniRoute vključuje večplatformsko namizno aplikacijo (Windows / macOS / Linux), izdelano z
+67router vključuje večplatformsko namizno aplikacijo (Windows / macOS / Linux), izdelano z
 **Electron 41** + **electron-builder 26.10**. Namizna aplikacija zažene samostojni strežnik Next.js
 kot podrejeni proces, nanj usmeri `BrowserWindow` ter doda
 sistemsko vrstico, samodejno posodabljanje, most IPC in inicializacijo skrivnosti brez konfiguracije.
@@ -45,7 +45,7 @@ Potrjeno iz `electron/package.json`:
 | `better-sqlite3`     | korenska `^13.0.2` (vnaprej prevedene datoteke Node-API — brez ponovne gradnje za Electron) |
 | Različica aplikacije | `3.8.0`                                                                                     |
 | ID aplikacije        | `online.omniroute.desktop`                                                                  |
-| Ime izdelka          | `OmniRoute`                                                                                 |
+| Ime izdelka          | `67router`                                                                                  |
 
 ## Skripti (korenski `package.json`)
 
@@ -196,7 +196,7 @@ raje uporabite datoteko `.env`, nato pa aplikacijo povsem zaprite (sistemska vrs
 - `BrowserWindow`: 1400×900 (najmanj 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, gumbi za upravljanje okna na `{ x: 16, y: 16 }`.
 - Windows/Linux: izvorna naslovna vrstica.
-- Gumb za zapiranje pomanjša aplikacijo v sistemsko vrstico; meni sistemske vrstice vsebuje **Odpri OmniRoute**, **Odpri nadzorno ploščo** (v zunanjem brskalniku), podmeni **Vrata strežnika**, **Preveri, ali so na voljo posodobitve** in **Izhod**.
+- Gumb za zapiranje pomanjša aplikacijo v sistemsko vrstico; meni sistemske vrstice vsebuje **Odpri 67router**, **Odpri nadzorno ploščo** (v zunanjem brskalniku), podmeni **Vrata strežnika**, **Preveri, ali so na voljo posodobitve** in **Izhod**.
 
 ## Pravilnik o varnosti vsebine
 

@@ -36,9 +36,9 @@ turknutna lokala verktygsfunktion när tunneln och connectorn är konfigurerade.
 ## Konfiguration av instrumentpanelen
 
 1. Öppna leverantören **ChatGPT Web (Codex)** och lägg till en anslutning.
-2. Klistra in hela Cookie-headern för ChatGPT, tunnel-ID:t, runtime-nyckeln och det anpassade connector-namnet. Nya konfigurationer med verktygsstöd måste använda en nyskapad connector med det exakta namnet `OmniRoute Codex v2`, där Authentication är inställt på None och Permissions är inställt på Allow all actions.
-3. Kör anslutningskontrollen. OmniRoute öppnar en webbläsarbaserad tillfällig chatt och identifierar om Sol och Pro är tillgängliga för kontot.
-4. Spara anslutningen. OmniRoute ersätter den inklistrade cookie-informationen med det verifierade Playwright-lagringstillståndet och lagrar det tillsammans med runtime-nyckeln via den krypterade abstraktionen för autentiseringsuppgifter.
+2. Klistra in hela Cookie-headern för ChatGPT, tunnel-ID:t, runtime-nyckeln och det anpassade connector-namnet. Nya konfigurationer med verktygsstöd måste använda en nyskapad connector med det exakta namnet `67router Codex v2`, där Authentication är inställt på None och Permissions är inställt på Allow all actions.
+3. Kör anslutningskontrollen. 67router öppnar en webbläsarbaserad tillfällig chatt och identifierar om Sol och Pro är tillgängliga för kontot.
+4. Spara anslutningen. 67router ersätter den inklistrade cookie-informationen med det verifierade Playwright-lagringstillståndet och lagrar det tillsammans med runtime-nyckeln via den krypterade abstraktionen för autentiseringsuppgifter.
 
 Den obearbetade cookie-informationen sparas inte efter en lyckad lagring. När sessionen löper ut öppnar du anslutningen, klistrar in en ny fullständig Cookie-header och kör kontrollen igen. Doctor-statusen i redigeringsdialogrutan rapporterar webbläsare, lagringstillstånd, inloggning, tillfällig chatt, tunnel, connector och verktygets tur och retur separat. Information om hur du automatiserar cookie-uppdateringar när sessioner roteras finns i det kompletterande verktyget i [Tillägg för synkronisering av webbläsarsessioner](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -65,10 +65,10 @@ High, och konton med Pro-stöd exponerar dessutom Extra High och Pro. Varje rutt
 fast backend-modell och resonemangsnivå; en motstridig explicit Responses-nivå nekas
 i stället för att i tysthet ändra det valda webbläsarläget.
 
-Byt inte namn på eller återanvänd en äldre connector med namnet `Codex Native` eller `OmniRoute Codex`. ChatGPT
+Byt inte namn på eller återanvänd en äldre connector med namnet `Codex Native` eller `67router Codex`. ChatGPT
 cachelagrar det offentliga MCP-kontraktet per connectoridentitet, medan den uppdaterade bryggan använder ett
 nytt direkt kontrakt för turtokens. Runtime-miljön avvisar dessa äldre identiteter och kräver
-en ny connector med namnet `OmniRoute Codex v2`.
+en ny connector med namnet `67router Codex v2`.
 
 ## Säkerhetsmodell
 
@@ -88,19 +88,19 @@ en ny connector med namnet `OmniRoute Codex v2`.
 
 ## VPS utan bildskärm och Docker
 
-För installationer med npm, systemd och PM2 identifierar OmniRoute vanliga sökvägar till Chrome och Chromium.
+För installationer med npm, systemd och PM2 identifierar 67router vanliga sökvägar till Chrome och Chromium.
 Alternativt kan du ange `CHATGPT_WEB_CODEX_CHROME_PATH`. Körningsturer använder avsiktligt Chrome
 med grafiskt gränssnitt eftersom ChatGPT avvisar webbläsarkonfigurationer som verkligen är headless. En värd utan bildskärm måste därför
-köra OmniRoute med en privat Xvfb-skärm; att endast ange Chrome-sökvägen tillhandahåller ingen sådan.
+köra 67router med en privat Xvfb-skärm; att endast ange Chrome-sökvägen tillhandahåller ingen sådan.
 
 Docker-profilen `web` startar `chatgpt-web-codex-browser` i det interna Compose-
 nätverket. Sidovagnen kör Chrome med grafiskt gränssnitt inuti Xvfb, så ingen fysisk bildskärm krävs. Dess CDP-
 port publiceras inte på värden. Den skyddade volymen för webbläsarprofilen är separat från
-OmniRoutes datavolym, och webbläsaren får tillräckligt med delat minne. Den interna CDP-proxyn
+67routers datavolym, och webbläsaren får tillräckligt med delat minne. Den interna CDP-proxyn
 lyssnar endast på port `9223` i Compose-nätverket; Chrome förblir bunden till loopback i
 sidovagnen.
 
-Ett övervakarleasingavtal under `DATA_DIR` förhindrar att flera OmniRoute-processer äger
+Ett övervakarleasingavtal under `DATA_DIR` förhindrar att flera 67router-processer äger
 samma tunnel- och mäklartillstånd. En konflikt rapporteras av diagnostikverktyget.
 
 ## Interaktiv återställning

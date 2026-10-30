@@ -6,7 +6,7 @@
 
 🌐 **Lingwi:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Referenza ewlenija għall-API ta’ OmniRoute. Din tkopri l-interfaċċa pubblika `/v1` u l-endpoints ta’ ġestjoni l-aktar użati; il-fajl li jista’ jinqara mill-magni [`docs/openapi.yaml`](../openapi.yaml) u s-siġra tar-rotot taħt `src/app/api/` huma s-sorsi eżawrjenti.
+Referenza ewlenija għall-API ta’ 67router. Din tkopri l-interfaċċa pubblika `/v1` u l-endpoints ta’ ġestjoni l-aktar użati; il-fajl li jista’ jinqara mill-magni [`docs/openapi.yaml`](../openapi.yaml) u s-siġra tar-rotot taħt `src/app/api/` huma s-sorsi eżawrjenti.
 
 Għall-protokoll iffukat kompatibbli ma’ OpenAI u l-matriċi tal-kapaċitajiet tal-fornituri, ara
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Tweġiba    | `HIT` jew `MISS` (mingħajr streaming)                                                                                                                                                                                                                                          |
 | `X-OmniRoute-Idempotent` | Tweġiba    | `true` jekk tkun ġiet deduplikata                                                                                                                                                                                                                                              |
 | `X-OmniRoute-Progress`   | Tweġiba    | `enabled` jekk it-traċċar tal-progress ikun attiv                                                                                                                                                                                                                              |
-| `X-OmniRoute-Session-Id` | Tweġiba    | L-ID effettiv tas-sessjoni użat minn OmniRoute                                                                                                                                                                                                                                 |
+| `X-OmniRoute-Session-Id` | Tweġiba    | L-ID effettiv tas-sessjoni użat minn 67router                                                                                                                                                                                                                                  |
 | `X-OmniRoute-Request-Id` | Tweġiba    | L-id tal-korrelazzjoni tat-talba (meta jkun magħruf)                                                                                                                                                                                                                           |
-| `X-OmniRoute-Version`    | Tweġiba    | Il-verżjoni tal-build ta’ OmniRoute (dejjem preżenti)                                                                                                                                                                                                                          |
+| `X-OmniRoute-Version`    | Tweġiba    | Il-verżjoni tal-build ta’ 67router (dejjem preżenti)                                                                                                                                                                                                                           |
 | `X-OmniRoute-Cost-Saved` | Tweġiba    | L-ammont f’USD li l-cache evita fuq HIT (għal hits tal-cache biss)                                                                                                                                                                                                             |
 | `X-OmniRoute-Decision`   | Tweġiba    | Traċċa tar-routing: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` hija l-istrateġija tal-kombinazzjoni, jew `single` għal talba li mhijiex kombinazzjoni) — dejjem preżenti fit-tweġibiet tat-tlestija                                                         |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Iffissar ta’ kont għal kull talba
 
-Meta fornitur ikollu diversi konnessjonijiet (kontijiet jew ċwievet), OmniRoute normalment jagħżel waħda
+Meta fornitur ikollu diversi konnessjonijiet (kontijiet jew ċwievet), 67router normalment jagħżel waħda
 permezz tal-istrateġija tiegħu għall-għażla tal-kontijiet. Minflok, talba tista’ tintrabat ma’ konnessjoni
 speċifika waħda bl-intestazzjoni `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ għal kull proġett:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -139,7 +139,7 @@ Sors: `src/sse/handlers/chat.ts` (qari tal-intestazzjoni), `src/sse/services/aut
 
 ## Kiri Esklużiv ta’ Sessjonijiet Immaniġġjati
 
-Il-kiri esklużiv ta’ sessjonijiet immaniġġjati huwa kuntratt ta’ rottaġġ fakultattiv u newtrali għall-klijent: sid attiv wieħed iżomm konnessjoni OmniRoute eliġibbli waħda. Dan ma jikrix mudell, ma jeħtieġx OAuth, ma jidentifikax klijent partikolari, u ma jeħtieġx fornitur partikolari.
+Il-kiri esklużiv ta’ sessjonijiet immaniġġjati huwa kuntratt ta’ rottaġġ fakultattiv u newtrali għall-klijent: sid attiv wieħed iżomm konnessjoni 67router eliġibbli waħda. Dan ma jikrix mudell, ma jeħtieġx OAuth, ma jidentifikax klijent partikolari, u ma jeħtieġx fornitur partikolari.
 
 Iċ-ċavetta API li tawtentika jrid ikollha l-ambitu `lease:exclusive` u lista espliċita mhux vojta ta’ `allowedConnections`. Il-konfini tal-mutazzjoni tad-database jinforza ż-żewġ oqsma flimkien waqt il-ħolqien taċ-ċavetta u l-aġġornamenti parzjali.
 
@@ -182,7 +182,7 @@ Sid ta’ kiri attiv jista’ jitlob b’mod espliċitu metadata għall-wiri li 
 }
 ```
 
-Din l-azzjoni tal-istatus fakultattiva hija protetta mis-sid opak, miċ-ċavetta API mmaniġġjata u awtentikata, u mill-ġenerazzjoni attiva eżatta fi tranżazzjoni waħda tad-database. `displayName` huwa biss l-isem ikkonfigurat u mirqum tal-konnessjoni; ikun `null` meta ma jkun jeżisti ebda isem ikkonfigurat sigur. OmniRoute qatt ma jissostitwixxi indirizz tal-email jew identità tal-kont iġġenerata. Il-valur tal-fornitur huwa tikketta tal-wiri mhux sensittiva u qatt ma huwa identifikatur iġġenerat ta’ fornitur kompatibbli. Il-kredenzjali, it-tokens, il-cookies, l-IDs mhux ipproċessati tal-konnessjoni jew taċ-ċavetta API, il-hashes tas-sidien, is-sigrieti tal-ilqugħ u d-data interna tar-rottaġġ huma esklużi.
+Din l-azzjoni tal-istatus fakultattiva hija protetta mis-sid opak, miċ-ċavetta API mmaniġġjata u awtentikata, u mill-ġenerazzjoni attiva eżatta fi tranżazzjoni waħda tad-database. `displayName` huwa biss l-isem ikkonfigurat u mirqum tal-konnessjoni; ikun `null` meta ma jkun jeżisti ebda isem ikkonfigurat sigur. 67router qatt ma jissostitwixxi indirizz tal-email jew identità tal-kont iġġenerata. Il-valur tal-fornitur huwa tikketta tal-wiri mhux sensittiva u qatt ma huwa identifikatur iġġenerat ta’ fornitur kompatibbli. Il-kredenzjali, it-tokens, il-cookies, l-IDs mhux ipproċessati tal-konnessjoni jew taċ-ċavetta API, il-hashes tas-sidien, is-sigrieti tal-ilqugħ u d-data interna tar-rottaġġ huma esklużi.
 
 It-tiftix b’ċavetta żbaljata, sid żbaljat, ġenerazzjoni skaduta, kiri nieqes, skadut, rilaxxat jew invalidat ilkoll jirritornaw l-istess żball `409 LEASE_FENCE_STALE` mingħajr metadata tal-konnessjoni. Klijent li rċieva t-tweġiba ta’ stennija għall-kapaċità ma għandu ebda rbit attiv x’jispezzjona. Meta r-rottaġġ jittrasferixxi kiri attiv, l-istess ġenerazzjoni tibqa’ valida u l-istatus jirritorna atomikament l-irbit il-ġdid, qatt il-qadim. Il-klijenti eżistenti jibqgħu l-istess minħabba li t-tweġibiet tal-akkwist, it-tiġdid, ir-rilaxx u l-istennija jżommu l-forom preċedenti tagħhom.
 
@@ -208,7 +208,7 @@ Kontenzjoni temporanja tirritorna HTTP `429` b’`Retry-After` u:
 }
 ```
 
-Din it-tweġiba tfisser biss li s-sett eliġibbli ordinarju ma kienx vojt u li kull kandidat disponibbli kien miżmum minn kiri attiv barrani. Mudelli/fornituri mhux appoġġjati, nuqqas ta’ qbil mal-politika, perjodu ta’ stennija, kwota, stat tas-servizz u fallimenti ordinarji oħra tal-eliġibbiltà jżommu t-tweġibiet OmniRoute eżistenti tagħhom.
+Din it-tweġiba tfisser biss li s-sett eliġibbli ordinarju ma kienx vojt u li kull kandidat disponibbli kien miżmum minn kiri attiv barrani. Mudelli/fornituri mhux appoġġjati, nuqqas ta’ qbil mal-politika, perjodu ta’ stennija, kwota, stat tas-servizz u fallimenti ordinarji oħra tal-eliġibbiltà jżommu t-tweġibiet 67router eżistenti tagħhom.
 
 ### `x-omniroute-compression`
 
@@ -280,7 +280,7 @@ EmbeddingsV5Request ta’ Jina u **jgħaddihom bla tibdil** lil `https://api.jin
 ```
 
 Il-valuri nattivi `{ image | audio | video | pdf }` jistgħu jkunu URL HTTPS pubbliku, URI `data:`, jew
-base64 mhux ipproċessat. OmniRoute ma jikkonvertix dawk l-oġġetti għal strings u lanqas ma jġib l-URLs nattivi tal-immaġnijiet — Jina
+base64 mhux ipproċessat. 67router ma jikkonvertix dawk l-oġġetti għal strings u lanqas ma jġib l-URLs nattivi tal-immaġnijiet — Jina
 jġib il-midja pubblika waħdu. Il-kampijiet addizzjonali ta’ Jina (`task`, `normalized`, `truncate`, `embedding_type`) jiġu
 mgħoddija. L-SKUs ta’ Jina li jaċċettaw biss test xorta jirrifjutaw dokumenti li mhumiex test.
 
@@ -430,7 +430,7 @@ is-sejħa, għalhekk il-kodiċi tal-klijent ma għandux għalfejn jittratta lill
 
 ### Awtentikazzjoni u riżoluzzjoni tal-endpoint tal-OCR DeepSeek ta’ Vertex AI
 
-`vertex-deepseek-ocr` jerġa’ juża l-istess awtentikazzjoni ta’ Vertex AI li OmniRoute diġà jappoġġja għat-traffiku
+`vertex-deepseek-ocr` jerġa’ juża l-istess awtentikazzjoni ta’ Vertex AI li 67router diġà jappoġġja għat-traffiku
 taċ-chat/immaġnijiet (`open-sse/executors/vertex.ts`): iċ-ċavetta API tal-konnessjoni tkun jew
 kredenzjali JSON ta’ Service Account (skambjati ma’ token ta’ aċċess OAuth għal żmien qasir permezz tal-fluss JWT-bearer)
 jew token ta’ aċċess OAuth diġà maħruġ li jintuża kif inhu. Il-URL tal-endpoint upstream huwa l-endpoint sieħeb ġeneriku
@@ -454,7 +454,7 @@ Authorization: Bearer your-api-key
 
 ### Prezzijiet tal-mudelli (`pricing`)
 
-Entrata tinkludi oġġett `pricing` meta OmniRoute jkun jaf il-prezz tal-mudell. Il-prezz jiġi
+Entrata tinkludi oġġett `pricing` meta 67router jkun jaf il-prezz tal-mudell. Il-prezz jiġi
 mit-tabella tal-prezzijiet li tuża l-kontabbiltà tal-ispejjeż: valuri prestabbiliti integrati, prezzijiet sinkronizzati u
 sostituzzjonijiet stabbiliti permezz ta' `/api/pricing`. Dawn huma prezzijiet tal-lista, għalhekk il-fornituri b'abbonament ukoll
 juru prezz għal kull token.
@@ -610,8 +610,8 @@ Uża dan l-endpoint meta sidecar jitħaddem barra mill-proċess u ma jkunx jista
 
 ## Ġenerazzjoni tal-awdjo b’ElevenLabs
 
-Ikkonfigura konnessjoni tal-fornitur `elevenlabs` f’OmniRoute biċ-ċavetta API tiegħek ta’ ElevenLabs.
-Il-klijenti jawtentikaw biċ-ċavetta **OmniRoute** tagħhom (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Ikkonfigura konnessjoni tal-fornitur `elevenlabs` f’67router biċ-ċavetta API tiegħek ta’ ElevenLabs.
+Il-klijenti jawtentikaw biċ-ċavetta **67router** tagħhom (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 il-gateway jipprovdi ċ-ċavetta maħżuna tal-fornitur bħala `xi-api-key`. Qatt tibgħat ċavetta ta’
 ElevenLabs bħala t-token bearer tal-gateway.
 
@@ -677,7 +677,7 @@ inkluż `402` għal restrizzjoni tal-pjan u `429` għal limitu tal-kwota. L-head
 `song-id`, `request-id` u `retry-after` jinżammu meta jkunu preżenti. Bilanċ ta’ kreditu bla ħlas
 ma jiggarantixxix aċċess għal kull mudell tal-mużika, format tal-output jew funzjonalità tal-API:
 ElevenLabs jiddeċiedi l-intitolament għal kull talba. L-endpoint unifikat iżomm il-kodiċijiet tal-istatus
-tal-iżbalji fl-envelope normalizzat tal-iżbalji ta’ OmniRoute.
+tal-iżbalji fl-envelope normalizzat tal-iżbalji ta’ 67router.
 
 Kuntratti upstream: [effetti tal-ħoss](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [kompożizzjoni tal-mużika](https://elevenlabs.io/docs/api-reference/music/compose) u
@@ -718,7 +718,7 @@ Kuntratti upstream: [effetti tal-ħoss](https://elevenlabs.io/docs/api-reference
 
 Ir-rotot POST kollha jsegwu l-istess struttura: `Bearer your-api-key` + korp JSON ivvalidat minn Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, eċċ., ara `src/shared/validation/schemas.ts`). Jiġi rritornat 4xx meta l-validazzjoni tal-iskema tfalli.
 
-Għall-klijenti li ma jistgħux jehmżu `Authorization: Bearer ...`, OmniRoute jaċċetta wkoll API keys fil-URL permezz jew tal-kompatibbiltà tal-query string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) jew tal-endpoints iddedikati `/api/v1/vscode/{token}/...` dokumentati hawn taħt.
+Għall-klijenti li ma jistgħux jehmżu `Authorization: Bearer ...`, 67router jaċċetta wkoll API keys fil-URL permezz jew tal-kompatibbiltà tal-query string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) jew tal-endpoints iddedikati `/api/v1/vscode/{token}/...` dokumentati hawn taħt.
 
 ```bash
 # Klassifikazzjoni mill-ġdid (fornitur mir-reġistru tal-cloud, jew node ta’ fornitur kompatibbli ma’ OpenAI bħala "<prefix>/<model>")
@@ -880,7 +880,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, l-istess API key bħal Parallel Search) jirritorna Markdown
 biss — kwalunkwe `format` ieħor jagħti `400` — u jillimita l-kontenut għal 100,000 karattru. Meta
 l-paġna fil-mira nnifisha ma tkunx tista’ tiġi estratta, is-servizz upstream jirrapportaha fi HTTP 200;
-OmniRoute jesponi dan bħala `422` b’messaġġ fiss.
+67router jesponi dan bħala `422` b’messaġġ fiss.
 
 | Metodu | Mogħdija        | Deskrizzjoni                                                       |
 | ------ | --------------- | ------------------------------------------------------------------ |
@@ -943,14 +943,14 @@ irid ikun l-entrypoint attiv (u jkun hekk, b’mod default, meta `app/server-ws.
 L-OpenAI **Codex CLI** jivvalida l-isem tal-mudell fuq in-naħa tal-klijent meta
 `supports_websockets = true` u **jirrifjuta IDs bi prefiss tal-fornitur** bħal
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Ibgħat l-ID **bażiku** (eż. `gpt-5.5`). Il-bridge ta’ OmniRoute huwa
+a ChatGPT account`). Ibgħat l-ID **bażiku** (eż. `gpt-5.5`). Il-bridge ta’ 67router huwa
 għal codex biss, għalhekk jerġa’ jirriżolvi ID bażiku bħala mudell codex
 (`resolveCodexWsModelInfo`) qabel ma joħloq tunnel upstream — minkejja li
 `gpt-5.5` bażiku kieku jiġi rrotta lejn fornitur ieħor permezz ta’ HTTP.
 
 #### Konfigurazzjoni tal-OpenAI Codex CLI
 
-Orjenta l-Codex CLI lejn OmniRoute billi żżid fornitur personalizzat b’appoġġ għal WebSocket
+Orjenta l-Codex CLI lejn 67router billi żżid fornitur personalizzat b’appoġġ għal WebSocket
 ma’ `~/.codex/config.toml` (uża `CODEX_HOME` separat biex tevita li tibdel
 konfigurazzjoni eżistenti):
 
@@ -963,15 +963,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # mingħajr slash finali; il-URL WS jiġi dderivat (uża https/wss fil-produzzjoni)
 wire_api = "responses"                    # l-uniku valur appoġġat minn Frar 2026
 supports_websockets = true                # jattiva t-trasport Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # iżomm l-API key ta’ OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # iżomm l-API key ta’ 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # API key ta’ OmniRoute (kwalunkwe key jekk REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # API key ta’ 67router (kwalunkwe key jekk REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-Il-CLI jaġġorna `base_url + /responses` għal WebSocket u OmniRoute joħloq tunnel għalih
+Il-CLI jaġġorna `base_url + /responses` għal WebSocket u 67router joħloq tunnel għalih
 lejn il-konnessjoni OAuth ta’ codex magħżula. Ivvalidat minn tarf sa tarf mas-server
 lokali: ChatGPT jirritorna `codex.rate_limits` + `response.created` u jibgħat il-
 kompletament bħala stream.
@@ -1055,7 +1055,7 @@ perċentwali ppreżentati mill-**output b'test sempliċi** u l-**output JSON** s
 
 #### Il-Formula tal-Aġġustament tal-Limitu ta' Qtugħ
 
-OmniRoute jappoġġa limiti proattivi ta' qtugħ tal-kwota biex jipprevjeni l-eżawriment tas-sors (ikkonfigurati permezz tal-
+67router jappoġġa limiti proattivi ta' qtugħ tal-kwota biex jipprevjeni l-eżawriment tas-sors (ikkonfigurati permezz tal-
 `quotaWindowThresholds` tal-konnessjoni, il-valuri awtomatiċi tal-fornitur, jew is-settings globali tar-reżiljenza). Meta limitu ta' qtugħ
 (eż., `cutoff = 25%`) ikun attiv fuq tieqa tal-kwota, ir-renderer tat-test jikkalkula l-allokazzjoni li fadal hekk:
 
@@ -1603,7 +1603,7 @@ Noti:
 
 - L-aliases b’token jerġgħu jużaw l-istess handlers bħal `/v1/*` u `/api/tags`; l-istrutturi tar-risposti jibqgħu identiċi.
 - Ippreferi `Authorization: Bearer ...` kull meta l-klijent jappoġġja headers personalizzati.
-- Tokens ibbażati fuq URL jistgħu jidhru fir-reġistri tar-reverse proxy, fl-istorja tal-browser, u fit-telemetrija barra minn OmniRoute. Ittrattahom bħala għażla ta’ kompatibbiltà, mhux bħala l-modalità awtomatika tal-awtentikazzjoni.
+- Tokens ibbażati fuq URL jistgħu jidhru fir-reġistri tar-reverse proxy, fl-istorja tal-browser, u fit-telemetrija barra minn 67router. Ittrattahom bħala għażla ta’ kompatibbiltà, mhux bħala l-modalità awtomatika tal-awtentikazzjoni.
 
 ---
 
@@ -1711,7 +1711,7 @@ Combos tar-routing ta’ livell ogħla (diġà miġbura fil-qosor taħt `/api/co
 
 ## Webhooks
 
-Abbonamenti għal webhooks ħerġin għall-avvenimenti ta’ OmniRoute (tlestija tat-talba, eżawriment tal-kwota, rotazzjoni taċ-ċwievet, eċċ.).
+Abbonamenti għal webhooks ħerġin għall-avvenimenti ta’ 67router (tlestija tat-talba, eżawriment tal-kwota, rotazzjoni taċ-ċwievet, eċċ.).
 
 | Metodu | Mogħdija                  | Deskrizzjoni                                                                   |
 | ------ | ------------------------- | ------------------------------------------------------------------------------ |
@@ -1744,7 +1744,7 @@ Użati mis-subsistema tal-ġestjoni awtomatika taċ-ċwievet biex toħroġ u dda
 
 ## Protokoll tal-Aġenti
 
-Kompiti tal-aġenti fil-cloud (Claude Code, Codex Cloud, OpenHands, eċċ.) eżegwiti mill-bogħod f’isem l-utenti ta’ OmniRoute.
+Kompiti tal-aġenti fil-cloud (Claude Code, Codex Cloud, OpenHands, eċċ.) eżegwiti mill-bogħod f’isem l-utenti ta’ 67router.
 
 | Metodu | Mogħdija                      | Deskrizzjoni                                                                                                                                                    |
 | ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1790,7 +1790,7 @@ Proxies HTTP(S)/SOCKS ħerġin li jistgħu jiġu assenjati lil fornituri, kontij
 
 ## Reżiljenza (estiża)
 
-OmniRoute jipprovdi tliet mekkaniżmi indipendenti għal fallimenti temporanji; l-endpoints ta’ ġestjoni hawn taħt jippermettu lill-operaturi jaqrawhom u jissostitwixxu l-konfigurazzjoni tagħhom:
+67router jipprovdi tliet mekkaniżmi indipendenti għal fallimenti temporanji; l-endpoints ta’ ġestjoni hawn taħt jippermettu lill-operaturi jaqrawhom u jissostitwixxu l-konfigurazzjoni tagħhom:
 
 | Ambitu                   | Ħażna tal-istat                                         | Qari                                      | Irrisettjar / tneħħija                                                    |
 | ------------------------ | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------- |
@@ -1825,7 +1825,7 @@ Għar-referenza kunċettwali sħiħa u l-valuri predefiniti tal-interruttur: ara
 
 ## Ħiliet
 
-Qafas tal-ħiliet biex OmniRoute jiġi estiż b’handlers eżekutibbli personalizzati, flimkien ma’ integrazzjonijiet mas-suq.
+Qafas tal-ħiliet biex 67router jiġi estiż b’handlers eżekutibbli personalizzati, flimkien ma’ integrazzjonijiet mas-suq.
 
 | Metodu | Rotta                             | Deskrizzjoni                                                                                                                                      |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1862,7 +1862,7 @@ Qafas tal-ħiliet biex OmniRoute jiġi estiż b’handlers eżekutibbli personal
 
 ## Server MCP
 
-OmniRoute jinkludi server integrat tal-Model Context Protocol bi 3 transports (stdio, SSE, streamable-http) u għodod b’ambitu definit. L-endpoints tad-dashboard hawn taħt jaqraw id-data tal-istatus/tal-awditjar u jagħmlu proxy tat-transports HTTP.
+67router jinkludi server integrat tal-Model Context Protocol bi 3 transports (stdio, SSE, streamable-http) u għodod b’ambitu definit. L-endpoints tad-dashboard hawn taħt jaqraw id-data tal-istatus/tal-awditjar u jagħmlu proxy tat-transports HTTP.
 
 | Metodu | Mogħdija | Deskrizzjoni |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1884,7 +1884,7 @@ OmniRoute jinkludi server integrat tal-Model Context Protocol bi 3 transports (s
 
 ## Server A2A
 
-OmniRoute jesponi punt ta' tmiem A2A (Minn Aġent għal Aġent) JSON-RPC 2.0 flimkien ma' wrapper REST għall-ispezzjoni/użu fid-dashboard.
+67router jesponi punt ta' tmiem A2A (Minn Aġent għal Aġent) JSON-RPC 2.0 flimkien ma' wrapper REST għall-ispezzjoni/użu fid-dashboard.
 
 ### JSON-RPC
 
@@ -2113,7 +2113,7 @@ Endpoints għall-ġestjoni operazzjonali li huma disponibbli biss għall-amminis
 
 ## Ġestjoni tal-Għodod CLI
 
-Immaniġġja l-għodod CLI li jintegraw ma' OmniRoute (antigravity, commandCode,
+Immaniġġja l-għodod CLI li jintegraw ma' 67router (antigravity, commandCode,
 devin-cli, eċċ.). Ara r-[Referenza tal-Fornituri](./PROVIDER_REFERENCE.md) għal-lista sħiħa.
 
 | Metodu | Mogħdija                                | Deskrizzjoni                                                                                                                                                                  |
@@ -2224,7 +2224,7 @@ Ara [Qafas tal-Ħiliet](../frameworks/SKILLS.md) għad-dettalji kollha.
 
 ## Plugins
 
-Immaniġġja l-plugins ta' OmniRoute (estensjonijiet ta' partijiet terzi).
+Immaniġġja l-plugins ta' 67router (estensjonijiet ta' partijiet terzi).
 
 | Metodu | Mogħdija                           | Deskrizzjoni                         |
 | ------ | ---------------------------------- | ------------------------------------ |

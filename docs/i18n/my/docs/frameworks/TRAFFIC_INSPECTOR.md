@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector သည် OmniRoute တွင် အသင့်ပါဝင်သော HTTPS traffic debugger ဖြစ်ပြီး Charles Proxy / mitmweb / HTTP Toolkit ကဲ့သို့သော tool တစ်ခုဖြစ်ကာ **LLM-aware** နှင့် **agent-aware** ဖြစ်သည်။ ၎င်းကို `/dashboard/tools/traffic-inspector` တွင် တွေ့နိုင်ပြီး တစ်ပြိုင်နက်တည်း capture source ၅ ခုအထိမှ live traffic ကို လက်ခံရရှိနိုင်သည်။
+Traffic Inspector သည် 67router တွင် အသင့်ပါဝင်သော HTTPS traffic debugger ဖြစ်ပြီး Charles Proxy / mitmweb / HTTP Toolkit ကဲ့သို့သော tool တစ်ခုဖြစ်ကာ **LLM-aware** နှင့် **agent-aware** ဖြစ်သည်။ ၎င်းကို `/dashboard/tools/traffic-inspector` တွင် တွေ့နိုင်ပြီး တစ်ပြိုင်နက်တည်း capture source ၅ ခုအထိမှ live traffic ကို လက်ခံရရှိနိုင်သည်။
 
 **Dashboard တည်နေရာ:** `/dashboard/tools/traffic-inspector`
 **Sidebar အုပ်စု:** Tools (AgentBridge ၏နောက်တွင်)
@@ -16,21 +16,21 @@ Traffic Inspector သည် OmniRoute တွင် အသင့်ပါဝင�
 
 ### Traffic Inspector ကို ထူးခြားစေသည့်အရာများ
 
-| လုပ်ဆောင်ချက်                                                                                     |     mitmweb      | Charles |     Fiddler      | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------------------- | :--------------: | :-----: | :--------------: | :-----------------------------: |
-| Web အခြေပြု                                                                                       |        ✓         |    ✗    |        ✗         |                ✓                |
-| Open-source                                                                                       |        ✓         |    ✗    | တစ်စိတ်တစ်ပိုင်း |                ✓                |
-| **Agent-aware** (request သည် Antigravity/Copilot/စသည်တို့မှ လာခြင်းရှိမရှိ သိရှိသည်)              |        ✗         |    ✗    |        ✗         |                ✓                |
-| **LLM-aware** (OpenAI/Anthropic/Gemini ဖွဲ့စည်းပုံ၊ token များနှင့် model ကို ခွဲခြမ်းစိတ်ဖြာသည်) |        ✗         |    ✗    |        ✗         |                ✓                |
-| **Model mapping ကို မြင်နိုင်ခြင်း** (gemini-3-flash → claude-sonnet-4.7)                         |        ✗         |    ✗    |        ✗         |                ✓                |
-| **Proxy/upstream latency ကို ခွဲခြားပြသခြင်း**                                                    | တစ်စိတ်တစ်ပိုင်း |    ✗    |        ✗         |                ✓                |
-| **OmniRoute နှင့် ပေါင်းစည်းထားခြင်း** — routing၊ fallback နှင့် ကုန်ကျစရိတ်                      |        ✗         |    ✗    |        ✗         |                ✓                |
-| **System-wide proxy debug** (စက်ပေါ်ရှိ မည်သည့် app မဆို)                                         |        ✓         |    ✓    |        ✓         |                ✓                |
-| **Custom host capture** (host တစ်ခုချင်းစီအလိုက် DNS redirect)                                    |        ✓         |    ✓    |        ✓         |                ✓                |
-| **HTTP_PROXY env mode**                                                                           |        ✓         |    ✓    |        ✓         |                ✓                |
-| **Conversation view** (အလှည့်ပေါင်းများစွာပါ bubble များ၊ tool_use/tool_result)                   |        ✗         |    ✗    |        ✗         |                ✓                |
-| **SSE stream merger** (delta event များမှ ပြန်လည်တည်ဆောက်ခြင်း)                                   |        ✗         |    ✗    |        ✗         |                ✓                |
-| **Session recording** (အမည်ပေးနိုင်ပြီး .har/.jsonl အဖြစ် export လုပ်နိုင်ခြင်း)                  |        ✗         |    ✓    |        ✓         |                ✓                |
+| လုပ်ဆောင်ချက်                                                                                     |     mitmweb      | Charles |     Fiddler      | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------------------- | :--------------: | :-----: | :--------------: | :----------------------------: |
+| Web အခြေပြု                                                                                       |        ✓         |    ✗    |        ✗         |               ✓                |
+| Open-source                                                                                       |        ✓         |    ✗    | တစ်စိတ်တစ်ပိုင်း |               ✓                |
+| **Agent-aware** (request သည် Antigravity/Copilot/စသည်တို့မှ လာခြင်းရှိမရှိ သိရှိသည်)              |        ✗         |    ✗    |        ✗         |               ✓                |
+| **LLM-aware** (OpenAI/Anthropic/Gemini ဖွဲ့စည်းပုံ၊ token များနှင့် model ကို ခွဲခြမ်းစိတ်ဖြာသည်) |        ✗         |    ✗    |        ✗         |               ✓                |
+| **Model mapping ကို မြင်နိုင်ခြင်း** (gemini-3-flash → claude-sonnet-4.7)                         |        ✗         |    ✗    |        ✗         |               ✓                |
+| **Proxy/upstream latency ကို ခွဲခြားပြသခြင်း**                                                    | တစ်စိတ်တစ်ပိုင်း |    ✗    |        ✗         |               ✓                |
+| **67router နှင့် ပေါင်းစည်းထားခြင်း** — routing၊ fallback နှင့် ကုန်ကျစရိတ်                       |        ✗         |    ✗    |        ✗         |               ✓                |
+| **System-wide proxy debug** (စက်ပေါ်ရှိ မည်သည့် app မဆို)                                         |        ✓         |    ✓    |        ✓         |               ✓                |
+| **Custom host capture** (host တစ်ခုချင်းစီအလိုက် DNS redirect)                                    |        ✓         |    ✓    |        ✓         |               ✓                |
+| **HTTP_PROXY env mode**                                                                           |        ✓         |    ✓    |        ✓         |               ✓                |
+| **Conversation view** (အလှည့်ပေါင်းများစွာပါ bubble များ၊ tool_use/tool_result)                   |        ✗         |    ✗    |        ✗         |               ✓                |
+| **SSE stream merger** (delta event များမှ ပြန်လည်တည်ဆောက်ခြင်း)                                   |        ✗         |    ✗    |        ✗         |               ✓                |
+| **Session recording** (အမည်ပေးနိုင်ပြီး .har/.jsonl အဖြစ် export လုပ်နိုင်ခြင်း)                  |        ✗         |    ✓    |        ✓         |               ✓                |
 
 ### Architecture ကို စာပိုဒ်တစ်ပိုဒ်ဖြင့် ရှင်းလင်းချက်
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE response ဖြစ်လျှင် true
   mappedTo: string | null; // x-omniroute-mapped header
-  costEstimateUsd: number | null; // OmniRoute ဈေးနှုန်းပေါ် အခြေခံ၍ ခန့်မှန်းထားသော ကုန်ကျစရိတ်
+  costEstimateUsd: number | null; // 67router ဈေးနှုန်းပေါ် အခြေခံ၍ ခန့်မှန်းထားသော ကုန်ကျစရိတ်
 }
 ```
 
@@ -392,7 +392,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### System proxy ကို မူလအခြေအနေသို့ ပြန်မထားနိုင်ခြင်း
 
-System-wide proxy mode အသုံးပြုနေစဉ် OmniRoute ရပ်တန့်ပျက်စီးသွားပါက-
+System-wide proxy mode အသုံးပြုနေစဉ် 67router ရပ်တန့်ပျက်စီးသွားပါက-
 
 **macOS:**
 
@@ -437,7 +437,7 @@ Route အားလုံးသည် `LOCAL_ONLY` (loopback မှသာ) နှ
 | GET    | `/requests`                 | Request များကို စာရင်းပြုစုခြင်း (စစ်ထုတ်နိုင်သည်- `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Request တစ်ခုချင်းစီ၏ အသေးစိတ်အချက်အလက်များ                                                                |
 | DELETE | `/requests`                 | Memory အတွင်းရှိ buffer ကို ရှင်းလင်းခြင်း                                                                 |
-| POST   | `/requests/{id}/replay`     | တူညီသော request ကို OmniRoute router မှတစ်ဆင့် ပြန်လည်လုပ်ဆောင်ခြင်း                                       |
+| POST   | `/requests/{id}/replay`     | တူညီသော request ကို 67router router မှတစ်ဆင့် ပြန်လည်လုပ်ဆောင်ခြင်း                                        |
 | PUT    | `/requests/{id}/annotation` | Request တစ်ခုရှိ မှတ်စုကို သိမ်းဆည်းခြင်း သို့မဟုတ် အပ်ဒိတ်လုပ်ခြင်း                                       |
 
 ### WebSocket

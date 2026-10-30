@@ -125,7 +125,7 @@ Il-każijiet li jiddependu fuq Playwright f'`tests/unit/claude-web-auto-refresh.
 
 ### Konfigurazzjoni
 
-1. Ibda OmniRoute b'`npm run dev` jew b'installazzjoni mibnija.
+1. Ibda 67router b'`npm run dev` jew b'installazzjoni mibnija.
 2. Iftaħ Dashboard → Providers → Add Provider.
 3. Agħżel il-kategorija Web Cookie u Claude Web.
 4. Waħħal il-header Cookie kollu kkupjat minn talba `claude.ai` awtentikata.

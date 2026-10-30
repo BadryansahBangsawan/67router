@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute सङ्कुचन इन्जिन सम्झौताहरूमा आधारित छ। कुनै मोडले एउटा इन्जिनलाई सीधै
+67router सङ्कुचन इन्जिन सम्झौताहरूमा आधारित छ। कुनै मोडले एउटा इन्जिनलाई सीधै
 (`caveman` वा `rtk`) चलाउन सक्छ वा क्रमअनुसार धेरै इन्जिनहरू कार्यान्वयन गर्ने निर्धारणात्मक स्ट्याक्ड पाइपलाइन चलाउन सक्छ।
 
 ## मोडहरू
@@ -98,7 +98,7 @@ Caveman मोड सामान्य गद्यको अर्थगत �
 ड्यासबोर्डमा यसको स्थान `Dashboard -> Context & Cache -> Caveman` हो।
 
 Caveman upstream ले `~75%` कम output tokens, benchmarks मा औसत `65%` output बचत
-र `22-87%` को दायरा, साथै `~46%` input-compression tool रिपोर्ट गर्छ। OmniRoute ले stacked prompt/context बचत
+र `22-87%` को दायरा, साथै `~46%` input-compression tool रिपोर्ट गर्छ। 67router ले stacked prompt/context बचत
 अभिलेखीकरण गर्दा Caveman को input-side सङ्ख्या प्रयोग गर्छ; Caveman output mode भने छुट्टै
 response-behavior सुविधा रहन्छ।
 

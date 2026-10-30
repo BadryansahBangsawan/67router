@@ -8,17 +8,17 @@
 
 🌐 **Valodas:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Biežāk sastopamās OmniRoute problēmas un to risinājumi.
+Biežāk sastopamās 67router problēmas un to risinājumi.
 
 ---
 
 ## Īsā uzziņa
 
-**Vai OmniRoute lietojat pirmoreiz?** Sāciet šeit — šie risinājumi novērš 90% problēmu:
+**Vai 67router lietojat pirmoreiz?** Sāciet šeit — šie risinājumi novērš 90% problēmu:
 
 | Redzamais paziņojums                        | Ko tas nozīmē                                          | Ko darīt                                                                                                        |
 | ------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| "Nevar izveidot savienojumu"                | OmniRoute nedarbojas                                   | Palaidiet `omniroute` vai `docker restart omniroute`                                                            |
+| "Nevar izveidot savienojumu"                | 67router nedarbojas                                    | Palaidiet `omniroute` vai `docker restart omniroute`                                                            |
 | "Nederīga API atslēga"                      | Jūsu atslēga ir nepareiza vai tās derīgums ir beidzies | Atkārtoti nokopējiet atslēgu no pakalpojuma sniedzēja tīmekļa vietnes                                           |
 | "Pārsniegts pieprasījumu ierobežojums"      | Jūs sūtāt pārāk daudz pieprasījumu                     | Uzgaidiet 1 minūti vai izmantojiet `model: "auto"`, lai automātiski pārslēgtos uz citu pakalpojuma sniedzēju    |
 | "Pārsniegta kvota"                          | Jūs esat iztērējis savu bezmaksas vai maksas kvotu     | Pievienojiet vairāk pakalpojumu sniedzēju vai izmantojiet bezmaksas pakalpojumu sniedzējus (Kiro, Pollinations) |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # precīzi noteikts smagsvara piep
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # palielināt ierobežoto gaidīšanas laiku virs RATE_LIMIT_MAX_WAIT_MS noklusējuma vērtības lēniem augšupējiem pakalpojumiem
 ```
 
-Iestatiet tos OmniRoute procesa vidē (dēmonam, piemēram, izmantojot LaunchAgent plist vai `systemctl edit`) un pēc tam restartējiet OmniRoute. Rotācijas karodziņš ir vienīgais visefektīvākais līdzeklis: tas pārvērš neatgriezenisku kļūmi par nemanāmu atkārtotu mēģinājumu, izmantojot citu, darbspējīgu pakalpojumu sniedzēju kopā.
+Iestatiet tos 67router procesa vidē (dēmonam, piemēram, izmantojot LaunchAgent plist vai `systemctl edit`) un pēc tam restartējiet 67router. Rotācijas karodziņš ir vienīgais visefektīvākais līdzeklis: tas pārvērš neatgriezenisku kļūmi par nemanāmu atkārtotu mēģinājumu, izmantojot citu, darbspējīgu pakalpojumu sniedzēju kopā.
 
 **Piezīme**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` ierobežo to, cik daudz smagsvara — gara konteksta — pieprasījumu var izpildīt vienlaikus; šis ierobežojums ir pieņemšanas vārteja, nevis pakalpojumu sniedzēja ātruma ierobežotājs. **#503-fanout atjauninājums:** šis mainīgais vairs netiek iestatīts pēc noklusējuma (tagad tas stājas spēkā tikai tad, ja ir skaidri konfigurēts, kā norādīts iepriekš) — tā vietā smagsvara pieprasījumu pieņemšanu ierobežo automātiski aprēķināts baitu budžets (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`), kas pielāgojas resursdatora faktiskajam atmiņas ierobežojumam, tāpēc jaunā izvietojumā vajadzētu būt ievērojami mazāk `503 chat_admission_busy` noraidījumu, pat neiestatot šo mainīgo; tā skaidra iestatīšana šeit joprojām darbojas tieši tā, kā dokumentēts. Skaidri norādīti baitu budžeta pārrakstījumi tiek ierobežoti diapazonā no 8 MiB līdz 2 GiB. `413 body_exceeds_budget` nav pārejoša kļūda: palieliniet šo baitu budžetu, samaziniet `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` vai palieliniet procesa atmiņas ierobežojumu. `inflight_bytes_budget` izraisīta slodzes nomešana ir īslaicīga resursu konkurence, un šādu pieprasījumu joprojām var mēģināt atkārtot. Katra pakalpojumu sniedzēja ātruma ierobežošanu (`open-sse/services/rateLimitManager.ts`) atsevišķi pārvalda `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` un `RATE_LIMIT_AUTO_ENABLE` — skatiet `.env.example`.
 
 **Kā pārbaudīt, vai risinājums darbojas**: divreiz īsā laika intervālā palaidiet savu aģentu/cron un pārliecinieties, ka abas izpildes ir veiksmīgas. Pirms labojuma otrā izpilde parasti rada `429`/`401`. Pēc labojuma kļūmju gadījumā tās tiek nemanāmi atkārtoti apstrādātas, un izsaukums tiek pabeigts. Varat arī izpildīt `curl /monitoring/health` un novērot lauku `rateLimitedUntil` pakalpojumu sniedzēju savienojumos, kā arī `circuitBreakers.providerBreakers[].state` attiecīgajiem pakalpojumu sniedzējiem — stāvoklis ir viens no `CLOSED`, `DEGRADED`, `OPEN` vai `HALF_OPEN` (skatiet `src/shared/utils/circuitBreaker.ts`), un pakalpojumu sniedzējs, kura darbība atkārtoti neizdodas, pārslēgsies no `CLOSED → DEGRADED → OPEN`, pirms atiestatīšanas logs atļaus pārbaudes pieprasījumu (`HALF_OPEN`).
 
-**Ja joprojām redzat 429**: šī pakalpojumu sniedzēja aktīvais konts patiešām ir iztērējis savu _kvotu_ (nevis tikai sasniedzis ātruma ierobežojumu). Pievienojiet otru tā paša pakalpojumu sniedzēja kontu OmniRoute informācijas panelī → Providers → Accounts vai pievienojiet citu bezmaksas pakalpojumu sniedzēju (piemēram, `routeway`, `auggie`). Rotācija palīdz tikai pārejošu ātruma ierobežojuma/400/401 kļūmju gadījumā; pilnīgai kvotas izsmelšanai nepieciešami otra konta akreditācijas dati vai cits pakalpojumu sniedzējs.
+**Ja joprojām redzat 429**: šī pakalpojumu sniedzēja aktīvais konts patiešām ir iztērējis savu _kvotu_ (nevis tikai sasniedzis ātruma ierobežojumu). Pievienojiet otru tā paša pakalpojumu sniedzēja kontu 67router informācijas panelī → Providers → Accounts vai pievienojiet citu bezmaksas pakalpojumu sniedzēju (piemēram, `routeway`, `auggie`). Rotācija palīdz tikai pārejošu ātruma ierobežojuma/400/401 kļūmju gadījumā; pilnīgai kvotas izsmelšanai nepieciešami otra konta akreditācijas dati vai cits pakalpojumu sniedzējs.
 
 **Ja redzes modeļiem (`auto/vision`, `bazaarlink/*`) redzat 403**: pievienotajam kontam nav maksas plāna, kas ietver redzes funkcionalitāti, vai arī API atslēgai nav pietiekamu atļauju. Pakalpojumu sniedzēja informācijas panelī pārbaudiet, vai atslēgas tvērums ietver redzi/multimodalitāti, vai pievienojiet maksas līmeņa kontu un saglabājiet to kā redzes pieprasījumu mērķi.
 
@@ -71,7 +71,7 @@ Iestatiet tos OmniRoute procesa vidē (dēmonam, piemēram, izmantojot LaunchAge
 
 Palaižot `npm install -g omniroute`, var tikt parādīts liels skaits brīdinājumu, piemēram, `npm warn ERESOLVE`, paziņojumi par vienādranga atkarībām un `deprecated` ziņojumi. **Tie ir sagaidāmi un nekaitīgi.** Instalēšana ir izdevusies, ja izvadē redzat `added <N> packages`.
 
-Lai nerādītu vienādranga atkarību atrisināšanas brīdinājumus, izmantojiet OmniRoute atbalstīto instalēšanas formu:
+Lai nerādītu vienādranga atkarību atrisināšanas brīdinājumus, izmantojiet 67router atbalstīto instalēšanas formu:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` nerāda tikai `ERESOLVE` un paziņojumus par vienādranga atkarībām. Paziņojumi par novecojušām pakotnēm joprojām ir redzami, jo tos rada tranzitīvas trešo pušu pakotnes; tie nenozīmē, ka instalēšana neizdevās.
 
-Brīdinājumus rada novecojuši vienādranga atkarību diapazoni trešo pušu pakotnēs, kuras OmniRoute nekontrolē:
+Brīdinājumus rada novecojuši vienādranga atkarību diapazoni trešo pušu pakotnēs, kuras 67router nekontrolē:
 
 1. **`marked-terminal` pieprasa `marked >=1 <16`, bet atrasts `marked@18`** — praksē darbojas bez problēmām; augšupstraumes vienādranga atkarības diapazons vienkārši ir novecojis.
 2. **`deprecated prebuild-install@7.1.3`** — tranzitīvs vietējo bināro failu lejupielādes palīgrīks. Tas netiek
@@ -104,19 +104,19 @@ npm warn install-scripts 7 packages had install scripts blocked because they are
 
 ### Vai šo brīdinājumu var ignorēt?
 
-**Daļēji, taču palaišana bez skriptiem nav ieteicama.** OmniRoute ietver drošus rezerves risinājumus: ja savrupajā komplektā nevar ielādēt vietējos `better-sqlite3` saistījumus, lietojumprogramma pārslēdzas uz alternatīviem draiveriem, piemēram, `node:sqlite` vai `sql.js` (skatiet [SQLite izpildlaika noteikšana](../ops/SQLITE_RUNTIME.md)). Serveris joprojām tiks palaists, taču WASM rezerves risinājumu, piemēram, `sql.js`, izmantošana atspējo SQLite WAL (Write-Ahead Logging — priekšrakstīšanas žurnalēšana) režīmu un palielina atmiņas patēriņu un diska sinhronizācijas slodzi.
+**Daļēji, taču palaišana bez skriptiem nav ieteicama.** 67router ietver drošus rezerves risinājumus: ja savrupajā komplektā nevar ielādēt vietējos `better-sqlite3` saistījumus, lietojumprogramma pārslēdzas uz alternatīviem draiveriem, piemēram, `node:sqlite` vai `sql.js` (skatiet [SQLite izpildlaika noteikšana](../ops/SQLITE_RUNTIME.md)). Serveris joprojām tiks palaists, taču WASM rezerves risinājumu, piemēram, `sql.js`, izmantošana atspējo SQLite WAL (Write-Ahead Logging — priekšrakstīšanas žurnalēšana) režīmu un palielina atmiņas patēriņu un diska sinhronizācijas slodzi.
 
 ### Kuri skripti patiešām ir nepieciešami?
 
-Ne visi bloķētie skripti ir būtiski OmniRoute darbībai:
+Ne visi bloķētie skripti ir būtiski 67router darbībai:
 
-- **Būtiski (`omniroute`, `better-sqlite3`):** OmniRoute darbojas no Next.js savrupās lietojumprogrammas komplekta (`dist/`). Instalēšanas laikā npm lejupielādē vai kompilē resursdatora videi paredzēto vietējo SQLite draiveri augstākā līmeņa direktorijā `node_modules/better-sqlite3/`. Pēc tam OmniRoute `postinstall` skripts (`scripts/build/postinstall.mjs`) pārbauda šos resursdatora videi paredzētos bināros failus un kopē tos uz `dist/node_modules/`, lai savrupais serveris varētu tiem piekļūt. Ja `omniroute` postinstall skripts ir bloķēts, šī kopēšanas darbība tiek izlaista.
+- **Būtiski (`omniroute`, `better-sqlite3`):** 67router darbojas no Next.js savrupās lietojumprogrammas komplekta (`dist/`). Instalēšanas laikā npm lejupielādē vai kompilē resursdatora videi paredzēto vietējo SQLite draiveri augstākā līmeņa direktorijā `node_modules/better-sqlite3/`. Pēc tam 67router `postinstall` skripts (`scripts/build/postinstall.mjs`) pārbauda šos resursdatora videi paredzētos bināros failus un kopē tos uz `dist/node_modules/`, lai savrupais serveris varētu tiem piekļūt. Ja `omniroute` postinstall skripts ir bloķēts, šī kopēšanas darbība tiek izlaista.
 - **Neobligāti/tranzitīvi (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Tie ir būvēšanas palīgrīki, izmaiņu uzraudzības rīki vai sistēmas atslēgu saišķa utilītas. To atļaušana novērš būvēšanas brīdinājumus, taču tie nav nepieciešami maršrutēšanas pamatfunkcionalitātei.
-- **Izslēgts (`onnxruntime-node`):** Neobligāta atkarība lokāliem MI iegulumiem, kas **nav** nepieciešama OmniRoute darbībai. Tās postinstall skripts no NuGet lejupielādē aptuveni 300 MB CUDA resursu; neiekļaujiet to atļauto vienumu sarakstā, ja vien skaidri neplānojat izmantot lokālu ONNX paātrinājumu atbalstītā aparatūrā.
+- **Izslēgts (`onnxruntime-node`):** Neobligāta atkarība lokāliem MI iegulumiem, kas **nav** nepieciešama 67router darbībai. Tās postinstall skripts no NuGet lejupielādē aptuveni 300 MB CUDA resursu; neiekļaujiet to atļauto vienumu sarakstā, ja vien skaidri neplānojat izmantot lokālu ONNX paātrinājumu atbalstītā aparatūrā.
 
 ### Ieteicamais risinājums
 
-Lai globālas instalēšanas laikā atļautu nepieciešamos instalēšanas skriptus un novērstu brīdinājumus, norādiet `--allow-scripts` OmniRoute un tā vietējām atkarībām:
+Lai globālas instalēšanas laikā atļautu nepieciešamos instalēšanas skriptus un novērstu brīdinājumus, norādiet `--allow-scripts` 67router un tā vietējām atkarībām:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ nav instalēts, npm pakotne ir pieejama, taču trūkst pārlūkprogrammas binār
 Playwright apzināti nodala pārlūkprogrammu lejupielādi no npm pakotnes
 instalēšanas, tāpēc šāda atbilde ir sagaidāma, kamēr pārlūkprogramma nav instalēta.
 
-Globālas npm instalācijas gadījumā instalējiet Chromium no OmniRoute pakotnes
+Globālas npm instalācijas gadījumā instalējiet Chromium no 67router pakotnes
 direktorija, lai pārlūkprogrammas kešatmiņa piederētu tai pašai Playwright instalācijai:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Pēc instalēšanas restartējiet OmniRoute un pēc tam atkārtojiet Gemini Web pieprasījumu. Ja
-palaižat OmniRoute no Docker attēla, izmantojiet `-web` attēlu (vai `runner-web`
+Pēc instalēšanas restartējiet 67router un pēc tam atkārtojiet Gemini Web pieprasījumu. Ja
+palaižat 67router no Docker attēla, izmantojiet `-web` attēlu (vai `runner-web`
 būvējuma mērķi), kurā ir iekļauts Chromium un tā atkarības; pamata attēlā to
 nav.
 
@@ -188,7 +188,7 @@ nav.
 **Tas ir kļūdaini pozitīvs rezultāts. Nekas nav inficēts, un nekāda rīcība nav nepieciešama.**
 
 Avast un AVG izmanto heiristisku pārbaudi, kas atzīmē vienkārša teksta/Markdown failus, kuros ir daudz
-HTTP pieprasījumiem līdzīgu saišu. OmniRoute `README.md` tiek iekļauts npm pakotnē (tas ir
+HTTP pieprasījumiem līdzīgu saišu. 67router `README.md` tiek iekļauts npm pakotnē (tas ir
 norādīts `package.json` → `files`), tādēļ globālas instalēšanas laikā tas nonāk
 `node_modules/omniroute/README.md` — un tajā ir aptuveni 15 `http://localhost:20128/...`
 piemēri (MCP HTTP/SSE galapunkti, A2A `.well-known` URL un `curl` fragmenti). Šāds saišu
@@ -205,7 +205,7 @@ no karantīnas.
 
 1. **Apturiet paziņojumus** — pievienojiet instalēšanas direktoriju sava antivīrusa
    izņēmumiem (Avast: Settings → Exceptions), norādot globālo `node_modules` ceļu un/vai
-   OmniRoute datu direktoriju (`~/.omniroute/`).
+   67router datu direktoriju (`~/.omniroute/`).
 2. **Ziņojiet par kļūdaini pozitīvo rezultātu** — <https://www.avast.com/false-positive-file-form.php>,
    pievienojot karantīnā ievietoto `README.md`. Šis ir risinājums, kas palīdz ikvienam, jo
    piegādātāja heiristika pārmērīgi reaģē uz teksta failu.
@@ -270,7 +270,7 @@ Koda parakstīšana ir plānota; līdz tās ieviešanai tas var atkārtoties jau
 
 ### Pieteikšanās lapa avarē vai parāda kļūdu "Module self-registration"
 
-**Cēlonis:** Jūs izmantojat Node.js versiju, kas neatbilst OmniRoute apstiprinātajam drošās izpildvides minimumam. Visbiežāk tiek izmantots vecāks Node 22 vai 24 ielāpa līmenis, kas ir zemāks par OmniRoute pieprasīto drošības labojumu minimumu.
+**Cēlonis:** Jūs izmantojat Node.js versiju, kas neatbilst 67router apstiprinātajam drošās izpildvides minimumam. Visbiežāk tiek izmantots vecāks Node 22 vai 24 ielāpa līmenis, kas ir zemāks par 67router pieprasīto drošības labojumu minimumu.
 
 **Simptomi:**
 
@@ -286,7 +286,7 @@ Koda parakstīšana ir plānota; līdz tās ieviešanai tas var atkārtoties jau
    nvm use 24
    ```
 2. Pārbaudiet savu versiju: `node --version` jāparāda `v24.0.0` vai jaunāka 24.x LTS līnijas versija
-3. Pārinstalējiet OmniRoute: `npm install -g omniroute`
+3. Pārinstalējiet 67router: `npm install -g omniroute`
 4. Restartējiet: `omniroute`
 
 > **Atbalstītās drošās versijas:** `>=22.22.2 <23` vai `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) un Node.js 26 tiek pilnībā atbalstītas.
@@ -369,13 +369,13 @@ omniroute
 
 **Cēlonis:** Izmantojot Node.js 22, undici@8 dispečers nav saderīgs ar Node iebūvēto `fetch()` implementāciju.
 
-**Labojums (v3.5.5+):** Kad ir aktīvs starpniekservera dispečers, OmniRoute tagad izmanto paša undici funkciju `fetch()`, nodrošinot konsekventu darbību. Atjauniniet uz v3.5.5+.
+**Labojums (v3.5.5+):** Kad ir aktīvs starpniekservera dispečers, 67router tagad izmanto paša undici funkciju `fetch()`, nodrošinot konsekventu darbību. Atjauniniet uz v3.5.5+.
 
 ### MITM starpniekserveris WSL vidē: Windows resursdatorā esošās darbvirsmas lietotnes netiek pārtvertas
 
-**Cēlonis:** MITM starpniekserveris un tā CA sertifikāts tiek instalēti vidē, kurā darbojas OmniRoute. WSL gadījumā šī vide ir Linux viessistēma, savukārt MI darbvirsmas lietotnes (Kiro, Trae, Copilot, Zed, …) darbojas Windows resursdatorā. Resursdatora lietotnes neuzticas viessistēmas sertifikātu krātuvei un nenovirza datplūsmu caur viessistēmas sistēmas starpniekserveri, tādēļ darbvirsmas datplūsmas pārtveršana tur netiek aktivizēta.
+**Cēlonis:** MITM starpniekserveris un tā CA sertifikāts tiek instalēti vidē, kurā darbojas 67router. WSL gadījumā šī vide ir Linux viessistēma, savukārt MI darbvirsmas lietotnes (Kiro, Trae, Copilot, Zed, …) darbojas Windows resursdatorā. Resursdatora lietotnes neuzticas viessistēmas sertifikātu krātuvei un nenovirza datplūsmu caur viessistēmas sistēmas starpniekserveri, tādēļ darbvirsmas datplūsmas pārtveršana tur netiek aktivizēta.
 
-**Ieteikums:** Darbiniet OmniRoute tieši tajā pašā operētājsistēmā, kurā darbojas pārtveramās darbvirsmas lietotnes (Windows lietotnēm — Windows; macOS/Linux gadījumā — attiecīgi). Ja OmniRoute tiek atstāts WSL vidē, bet mērķēts uz resursdatora lietotnēm, ģenerētajam CA sertifikātam ir manuāli jāpiešķir uzticamība Windows resursdatorā un katras resursdatora lietotnes tīkla/starpniekservera iestatījumi jānovirza uz WSL starpniekservera galapunktu — šāda konfigurācija netiek atbalstīta un ir nestabila.
+**Ieteikums:** Darbiniet 67router tieši tajā pašā operētājsistēmā, kurā darbojas pārtveramās darbvirsmas lietotnes (Windows lietotnēm — Windows; macOS/Linux gadījumā — attiecīgi). Ja 67router tiek atstāts WSL vidē, bet mērķēts uz resursdatora lietotnēm, ģenerētajam CA sertifikātam ir manuāli jāpiešķir uzticamība Windows resursdatorā un katras resursdatora lietotnes tīkla/starpniekservera iestatījumi jānovirza uz WSL starpniekservera galapunktu — šāda konfigurācija netiek atbalstīta un ir nestabila.
 
 ---
 
@@ -402,7 +402,7 @@ omniroute
 
 ### OAuth pilnvarai beidzies derīguma termiņš
 
-OmniRoute automātiski atsvaidzina pilnvaras. Ja problēmas joprojām pastāv:
+67router automātiski atsvaidzina pilnvaras. Ja problēmas joprojām pastāv:
 
 1. Informācijas panelis → Pakalpojuma sniedzējs → Atkārtoti izveidot savienojumu
 2. Dzēsiet pakalpojuma sniedzēja savienojumu un pievienojiet to vēlreiz
@@ -615,7 +615,7 @@ Pakalpojumu sniedzēju profili atbalsta šādus iestatījumus:
 
 ### Vienlaicīgu pieprasījumu lavīnas novēršana
 
-Kad daudzi vienlaicīgi pieprasījumi sasniedz pakalpojumu sniedzēju ar ātruma ierobežojumu, OmniRoute izmanto mutex un automātisku ātruma ierobežošanu, lai pieprasījumus izpildītu secīgi un novērstu kļūmju ķēdes reakciju. API atslēgu pakalpojumu sniedzējiem tas notiek automātiski.
+Kad daudzi vienlaicīgi pieprasījumi sasniedz pakalpojumu sniedzēju ar ātruma ierobežojumu, 67router izmanto mutex un automātisku ātruma ierobežošanu, lai pieprasījumus izpildītu secīgi un novērstu kļūmju ķēdes reakciju. API atslēgu pakalpojumu sniedzējiem tas notiek automātiski.
 
 ### Tērzēšanas pieprasījumi neizdodas ar 503 / chat_admission_busy
 
@@ -651,7 +651,7 @@ Pie noklusējuma sliekšņiem pieprasījums tiek uzskatīts par strukturāli sma
 vismaz `64` rīki vai vismaz `32,000` aplēsto marķieru, vai arī ja ierobežotā struktūras novērtēšana
 sasniedz savas robežas — `10,000` apmeklētu mezglu vai dziļumu `12`.
 
-**Cēlonis:** tā ir apzināta slodzes samazināšana OmniRoute iekšienē, nevis augšupējā pakalpojumu sniedzēja kļūme.
+**Cēlonis:** tā ir apzināta slodzes samazināšana 67router iekšienē, nevis augšupējā pakalpojumu sniedzēja kļūme.
 Katrs process izmanto procesam lokālu aizsargmehānismu, lai rezervētu ierobežotu smagsvara pieprasījumu apstrādes jaudu pirms liela
 pieprasījuma pamatteksta paturēšanas un parsēšanas. Smagsvara noma paliek aktīva visu SSE
 atbildes darbības laiku.
@@ -695,7 +695,7 @@ Autoritatīvos piekļuves iestatījumus skatiet [vides mainīgo atsaucē](../ref
 
 ## Neobligāta RAG / LLM kļūmju taksonomija (16 problēmas)
 
-Daži OmniRoute lietotāji izvieto vārteju pirms RAG vai aģentu stekiem. Šādos uzstādījumos bieži novērojama savāda situācija: OmniRoute izskatās darba kārtībā (pakalpojumu sniedzēji ir pieejami, maršrutēšanas profili ir kārtībā, nav ātruma ierobežojumu brīdinājumu), taču gala atbilde joprojām ir nepareiza.
+Daži 67router lietotāji izvieto vārteju pirms RAG vai aģentu stekiem. Šādos uzstādījumos bieži novērojama savāda situācija: 67router izskatās darba kārtībā (pakalpojumu sniedzēji ir pieejami, maršrutēšanas profili ir kārtībā, nav ātruma ierobežojumu brīdinājumu), taču gala atbilde joprojām ir nepareiza.
 
 Praksē šādus incidentus parasti izraisa lejupējais RAG konveijers, nevis pati vārteja.
 
@@ -714,17 +714,17 @@ Ideja ir vienkārša:
 
 1. Izmeklējot nepareizu atbildi, fiksējiet:
    - lietotāja uzdevumu un pieprasījumu
-   - OmniRoute maršruta vai pakalpojumu sniedzēju kombināciju
+   - 67router maršruta vai pakalpojumu sniedzēju kombināciju
    - jebkādu lejupēji izmantoto RAG kontekstu (izgūtos dokumentus, rīku izsaukumus utt.)
 2. Piesaistiet incidentu vienam vai diviem WFGY ProblemMap numuriem (`No.1` … `No.16`).
-3. Saglabājiet numuru savā informācijas panelī, procedūru rokasgrāmatā vai incidentu uzskaites sistēmā līdzās OmniRoute žurnāliem.
+3. Saglabājiet numuru savā informācijas panelī, procedūru rokasgrāmatā vai incidentu uzskaites sistēmā līdzās 67router žurnāliem.
 4. Izmantojiet atbilstošo WFGY lapu, lai noteiktu, vai jāmaina RAG steks, izgūšanas komponents vai maršrutēšanas stratēģija.
 
 Pilns teksts un konkrētas receptes ir pieejamas šeit (MIT licence, tikai teksts):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Varat ignorēt šo sadaļu, ja aiz OmniRoute neizmantojat RAG vai aģentu konveijerus.
+Varat ignorēt šo sadaļu, ja aiz 67router neizmantojat RAG vai aģentu konveijerus.
 
 ---
 
@@ -748,7 +748,7 @@ Problēmas, kas raksturīgas laidienam v3.8.0, un to pašreizējie risinājumi. 
 
 1. Instalējiet Devin CLI savai platformai
 2. Failā `.env` iestatiet `CLI_DEVIN_BIN=/usr/local/bin/devin` (vai faktisko ceļu)
-3. Restartējiet OmniRoute un atkārtoti pārbaudiet sadaļā **Informācijas panelis → CLI rīki**
+3. Restartējiet 67router un atkārtoti pārbaudiet sadaļā **Informācijas panelis → CLI rīki**
 
 ### Iestrēgusi modeļa nogaide (manuāla atiestatīšana)
 
@@ -803,7 +803,7 @@ Problēmas, kas raksturīgas laidienam v3.8.0, un to pašreizējie risinājumi. 
 
 1. Ģenerējiet nejaušu noslēpumu: `openssl rand -hex 32`
 2. Ražošanas servera vidē (un katrā klientā, kas sazinās ar tiltu) iestatiet `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>`
-3. Restartējiet OmniRoute
+3. Restartējiet 67router
 
 ### Responses API: fona režīms pazemināts līdz sinhronam režīmam
 

@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-OmniRoute hazırda domen yönümlü davamlılıq funksiyalarını `src/lib/db/` vasitəsilə təqdim edir, halbuki
+67router hazırda domen yönümlü davamlılıq funksiyalarını `src/lib/db/` vasitəsilə təqdim edir, halbuki
 `src/lib/db/core.ts` tərəfindən qaytarılan ortaq bağlantı `src/lib/db/adapters/types.ts` daxilindəki sinxron `SqliteAdapter`
 müqaviləsini həyata keçirir. Həmin adapter bir neçə SQLite icra mühitini dəstəkləyir, lakin onun
 interfeysi SQLite-a uyğun olaraq qalır: sinxron hazırlanmış ifadələr, `pragma`, təxirə salınmış və dərhal

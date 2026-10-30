@@ -13,7 +13,7 @@
 
 ## Mi ez?
 
-Az OmniRoute egy **Obsidian**-tárolóhoz kapcsolódik **kontextusforrásként** — ez egy helyi Markdown
+Az 67router egy **Obsidian**-tárolóhoz kapcsolódik **kontextusforrásként** — ez egy helyi Markdown
 tudásbázis, amelyet az ügynökök a beépített MCP-kiszolgálón keresztül olvasnak és írnak. Az
 integráció az asztali alkalmazáson belül futó **Obsidian Local REST API** közösségi bővítménnyel
 kommunikál, így az ügynökök kereshetnek a jegyzetekben, olvashatják/írhatják/módosíthatják a fájlokat,
@@ -79,7 +79,7 @@ meghívásával ellenőrzi a tokent.
 
 A `src/app/api/settings/obsidian/webdav/route.ts` egy opcionális, WebDAV-alapú
 trezorszinkronizálást kezel (amelyet a `src/lib/obsidianSync.ts` vezérel). Engedélyezésekor
-az OmniRoute egy helyi trezorkönyvtárra mutat, és létrehoz egy véletlenszerű
+az 67router egy helyi trezorkönyvtárra mutat, és létrehoz egy véletlenszerű
 WebDAV-felhasználónév/jelszó párost:
 
 ```bash
@@ -119,8 +119,8 @@ szinkronizálásitoken-kezelését.
 ## MCP-eszközök (22)
 
 Az `open-sse/mcp-server/tools/obsidianTools.ts` fájlban vannak definiálva. A token/alap-URL feloldása
-hívásonként történik (először API-kulcsonkénti, majd globális). Az OmniRoute **szinkronizációs szerverét**
-használó eszközökhöz (a négy `obsidian_sync_*` eszközhöz) ezenkívül szükség van az OmniRoute
+hívásonként történik (először API-kulcsonkénti, majd globális). Az 67router **szinkronizációs szerverét**
+használó eszközökhöz (a négy `obsidian_sync_*` eszközhöz) ezenkívül szükség van az 67router
 beállításaiban konfigurált szinkronizációs hitelesítési tokenre.
 
 ### Olvasási eszközök (`read:obsidian`)
@@ -138,7 +138,7 @@ beállításaiban konfigurált szinkronizációs hitelesítési tokenre.
 | `obsidian_get_periodic_note` | Egy dátumhoz tartozó napi/heti/havi periodikus jegyzet lekérése (kihagyás esetén a mai).                       |
 | `obsidian_get_tags`          | A tároló összes címkéjének listázása az előfordulási gyakoriságukkal együtt.                                   |
 | `obsidian_list_commands`     | Az elérhető Obsidian-parancsazonosítók listázása (az `obsidian_execute_command` eszközzel használható).        |
-| `obsidian_sync_status`       | Az OmniRoute szinkronizációs szerverének állapota: futás, tárolónév, port, üzemidő, utolsó szinkronizáció.     |
+| `obsidian_sync_status`       | Az 67router szinkronizációs szerverének állapota: futás, tárolónév, port, üzemidő, utolsó szinkronizáció.      |
 | `obsidian_sync_conflicts`    | A feloldatlan szinkronizációs ütközések listázása (elérési út, ütközési elérési út, észlelés időpontja).       |
 
 ### Írási eszközök (`write:obsidian`)

@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute legt de door modellen in denkmodus geproduceerde `reasoning_content` van de assistent vast en speelt deze transparant opnieuw af bij verzoeken met meerdere beurten wanneer de upstreamprovider dit vereist. Dit voorkomt de HTTP 400-fouten die strikte providers retourneren wanneer in de gespreksgeschiedenis van een client de redenering van de vorige beurt ontbreekt.
+67router legt de door modellen in denkmodus geproduceerde `reasoning_content` van de assistent vast en speelt deze transparant opnieuw af bij verzoeken met meerdere beurten wanneer de upstreamprovider dit vereist. Dit voorkomt de HTTP 400-fouten die strikte providers retourneren wanneer in de gespreksgeschiedenis van een client de redenering van de vorige beurt ontbreekt.
 
 ## Waarom Dit Bestaat
 
@@ -17,7 +17,7 @@ Verschillende providers met een denkmodus weigeren een vervolgbeurt tenzij het *
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Gebruikelijke clients (Cursor, Cline, Roo Code, OpenAI SDK) verwijderen `reasoning_content` echter uit de geschiedenis die ze opnieuw versturen. OmniRoute herstelt deze vanuit een server-side cache, zodat het verzoek dat de upstream ontvangt consistent is. Issue #1628 introduceerde de hybride persistentie in geheugen/SQLite, zodat de cache behouden blijft na het opnieuw starten van het proces.
+Gebruikelijke clients (Cursor, Cline, Roo Code, OpenAI SDK) verwijderen `reasoning_content` echter uit de geschiedenis die ze opnieuw versturen. 67router herstelt deze vanuit een server-side cache, zodat het verzoek dat de upstream ontvangt consistent is. Issue #1628 introduceerde de hybride persistentie in geheugen/SQLite, zodat de cache behouden blijft na het opnieuw starten van het proces.
 
 ## Architectuur
 

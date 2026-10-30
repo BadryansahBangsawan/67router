@@ -113,7 +113,7 @@ arba dokumentuotos, pakeitimui tinkamos rankinės patikros.
 - CLI katalogai saugomi atskirai kataloge `bin/cli/locales/`.
 - Tiksliai išsaugokite ICU vietaženklius ir žymas. Neverskite produktų / teikėjų / modelių pavadinimų,
   protokolų ir antraščių pavadinimų, komandų, kodo / JSON identifikatorių, URL, aplinkos kintamųjų ar
-  saugomų terminų, pvz., `OmniRoute`, `OAuth`, `MCP` ir `A2A`. Dabartinis šaltinio sąrašas yra
+  saugomų terminų, pvz., `67router`, `OAuth`, `MCP` ir `A2A`. Dabartinis šaltinio sąrašas yra
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Tikslinis ciklas**
@@ -266,7 +266,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # pakartotinai naudoti k
   nepavyksta, sukeičia `current` ir `previous`. Kandidatas, kurio pirmasis patikrinimas nepavyksta,
   niekada nepublikuojamas.
 
-Viskas įrašoma į git ignoruojamą `_artifacts/candidate/`; esama OmniRoute instaliacija ir jos
+Viskas įrašoma į git ignoruojamą `_artifacts/candidate/`; esama 67router instaliacija ir jos
 duomenų katalogas niekada nekeičiami. Publikuotas CLI yra
 `_artifacts/candidate/current/prefix/bin/omniroute`; naudodami jį paleiskite su savo `DATA_DIR`.
 Išėjimo kodai: `0` – sėkmė, `1` – nepavykęs patikrinimas arba publikavimas, `2` – naudojimo klaida

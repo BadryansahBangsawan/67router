@@ -4,7 +4,7 @@
 
 ---
 
-Tá **ceithre theaghlach dintiúir** ag OmniRoute a fhéadfaidh bealaí bainistíochta a údarú.
+Tá **ceithre theaghlach dintiúir** ag 67router a fhéadfaidh bealaí bainistíochta a údarú.
 Níl siad inmhalartaithe. Ní bhainistíonn eochracha API Tátail (`sk-…`) an freastalaí **mura** bhfuil scóip `manage` nó `admin` deonaithe go sainráite dóibh.
 
 Cur i bhfeidhm canónach: `src/lib/api/requireManagementAuth.ts`.

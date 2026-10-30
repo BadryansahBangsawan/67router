@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**：OmniRoute 的壓縮引擎是**可插拔的**——你可以註冊自訂引擎、為新語言提供語言套件，並組合堆疊式管線。本指南將說明如何操作。
+> **TL;DR**：67router 的壓縮引擎是**可插拔的**——你可以註冊自訂引擎、為新語言提供語言套件，並組合堆疊式管線。本指南將說明如何操作。
 
 **相關指南：**
 
@@ -231,7 +231,7 @@ export default definePlugin({
 
 ## 建立語言套件
 
-穴居人風格壓縮使用**特定語言的規則套件**，以處理各種自然語言中的填充詞、模糊措辭及冗長表達模式。OmniRoute 隨附 **6 個語言套件**：`en`、`es`、`fr`、`de`、`ja`、`pt-BR`。
+穴居人風格壓縮使用**特定語言的規則套件**，以處理各種自然語言中的填充詞、模糊措辭及冗長表達模式。67router 隨附 **6 個語言套件**：`en`、`es`、`fr`、`de`、`ja`、`pt-BR`。
 
 ### 套件結構
 
@@ -387,7 +387,7 @@ await loadRulePack("./my-custom-rules/hi/filler.json");
 
 ### 壓縮模式
 
-OmniRoute 會根據設定、自動觸發閾值和組合覆寫，為每個請求選取**一種模式**。
+67router 會根據設定、自動觸發閾值和組合覆寫，為每個請求選取**一種模式**。
 可用模式定義於 `open-sse/services/compression/types.ts`（類型 `CompressionMode`）：
 
 | 模式         | 引擎                 | 使用情境                                                                                                                                                 |
@@ -504,8 +504,8 @@ const result = applyStackedCompression(body, [
 
 ## 上游同步政策
 
-OmniRoute 的壓縮引擎在 README 中註明了數個上游專案
-（「靈感來自 RTK、Caveman、LLMLingua-2、Troglodita」）。貢獻者常見的問題是：**當上游 RTK 新增工具篩選器，或 Caveman 新增規則套件時，這些改進如何進入 OmniRoute？** 本節提供權威解答。
+67router 的壓縮引擎在 README 中註明了數個上游專案
+（「靈感來自 RTK、Caveman、LLMLingua-2、Troglodita」）。貢獻者常見的問題是：**當上游 RTK 新增工具篩選器，或 Caveman 新增規則套件時，這些改進如何進入 67router？** 本節提供權威解答。
 
 ### 內建副本與獨立實作的差異
 
@@ -520,7 +520,7 @@ OmniRoute 的壓縮引擎在 README 中註明了數個上游專案
 
 ### 如何合併上游改進
 
-我們**不會自動追蹤上游版本，也沒有 `compression-sync` 標籤**——這是刻意的設計。由於這些引擎是重新實作的，因此上游 RTK 篩選器或 Caveman 規則套件不會以程式碼形式直接合併；而是會**以 OmniRoute 自有格式重新表達為新的規則／篩選器**（請參閱
+我們**不會自動追蹤上游版本，也沒有 `compression-sync` 標籤**——這是刻意的設計。由於這些引擎是重新實作的，因此上游 RTK 篩選器或 Caveman 規則套件不會以程式碼形式直接合併；而是會**以 67router 自有格式重新表達為新的規則／篩選器**（請參閱
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)），並透過一般 PR 依需要加入。上述擴充點（自訂引擎、語言套件、RTK 篩選器）是貢獻此類功能的正式途徑。
 
 近期遵循此流程的實例包括：
@@ -531,11 +531,11 @@ OmniRoute 的壓縮引擎在 README 中註明了數個上游專案
 
 ### Headroom（輸入壓縮代理）
 
-Headroom **完全由內部維護**——由固定版本的內建 `gcf` 編解碼器快照，以及 OmniRoute 自有的 `smartcrusher` / `toon` / `tabular` 層所組成。除了內建副本外，沒有需要持續追蹤的即時上游；當該編解碼器有所變更時，會手動更新 `gcf`，並針對壓縮預算閘門（`check:compression-budget`）重新驗證。
+Headroom **完全由內部維護**——由固定版本的內建 `gcf` 編解碼器快照，以及 67router 自有的 `smartcrusher` / `toon` / `tabular` 層所組成。除了內建副本外，沒有需要持續追蹤的即時上游；當該編解碼器有所變更時，會手動更新 `gcf`，並針對壓縮預算閘門（`check:compression-budget`）重新驗證。
 
 ### 提議受上游啟發的改進
 
-1. **不要內建原始碼**——請使用 OmniRoute 的格式重新表達上游規則／篩選器。
+1. **不要內建原始碼**——請使用 67router 的格式重新表達上游規則／篩選器。
 2. 透過下方相符的擴充點加入該功能（語言套件、RTK 篩選器或自訂引擎）。
 3. 在 PR 說明中引用上游專案（註明出處），而非複製其受授權條款約束的原始碼。
 4. 納入測試，並確認 `check:compression-budget` 閘門仍可通過。

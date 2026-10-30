@@ -6,7 +6,7 @@
 
 ## Kopsavilkums
 
-OmniRoute tagad atbalsta trīs releja režīmus galapunktam `/api/v1/relay/chat/completions`:
+67router tagad atbalsta trīs releja režīmus galapunktam `/api/v1/relay/chat/completions`:
 
 - `ts`: izmantot TypeScript releju tajā pašā procesā.
 - `bifrost`: piespiedu kārtā izmantot Bifrost vārteju.
@@ -45,12 +45,12 @@ Ja pašlaik salīdzināt 9router un CLIPROXYAPI:
 
 ## Aizmugursistēmas robežas līgums
 
-Stabilā produkta robeža ir OmniRoute releja API, nevis informācijas paneļa implementācija. Next.js informācijas panelis var instalēt, konfigurēt un pārraudzīt lokālos pakalpojumus, taču pieprasījumu maršrutēšanai ir jāsākas releja API un vadība jānodod aiz šīs robežas.
+Stabilā produkta robeža ir 67router releja API, nevis informācijas paneļa implementācija. Next.js informācijas panelis var instalēt, konfigurēt un pārraudzīt lokālos pakalpojumus, taču pieprasījumu maršrutēšanai ir jāsākas releja API un vadība jānodod aiz šīs robežas.
 
 Ilgtermiņa aizmugursistēmas izvēles:
 
 - Saglabājiet TypeScript releju kā tajā pašā procesā darbojošos politiku un rezerves ceļu. Autentifikācija, atļauto vērtību saraksti, pieprasījumu normalizācija, uzskaite un drošības pārbaudes pirms vadības nodošanas jebkurai aizmugursistēmai paliek šeit.
-- Izmantojiet Bifrost kā vēlamo augstas caurlaidspējas 1. līmeņa blakusprocesu, ja izvietojumam nepieciešamas mazākas maršrutēšanas novirzes, centralizēta pakalpojumu sniedzēju rotācija vai horizontāla mērogošana vairākās OmniRoute replikās.
+- Izmantojiet Bifrost kā vēlamo augstas caurlaidspējas 1. līmeņa blakusprocesu, ja izvietojumam nepieciešamas mazākas maršrutēšanas novirzes, centralizēta pakalpojumu sniedzēju rotācija vai horizontāla mērogošana vairākās 67router replikās.
 - Saglabājiet 9router un CLIPROXYAPI kā iegultus saderības pakalpojumus. Tie darbojas kā pārraudzīti lokālie procesi un ir noderīgi, ja to pakalpojumu sniedzēja/CLI darbība ir vēlamais adapteris, taču tiem nevajadzētu kļūt par noklusējuma 1. līmeņa maršrutēšanas dzini.
 - Neļaujiet informācijas panelim kritiskajā ceļā nodot patvaļīgus pakalpojumu vietrāžus URL. Lietotāja saskarnē norādītie vietrāži URL ir konfigurācijas ievaddati; maršrutēšanas kodam jāatrod reģistrētas aizmugursistēmas, kuru darbspēja ir pārbaudīta, izmantojot servera puses iestatījumus un pārrauga stāvokli.
 - Pašlaik pārraudzītiem pakalpojumiem dodiet priekšroku HTTP, izmantojot cilpas interfeisu, jo pārvaldītie procesi jau nodrošina ar HTTP saderīgas API, maršruta aizsardzība var auditēt šo robežu, bet kļūmju un pārslēgšanās uz rezerves risinājumu darbība ir redzama pieprasījumu žurnālos. Nākotnē SDK vai ligzdas transportu ir vērts pievienot tikai tad, ja tas izmērāmi samazina p99 maršrutēšanas latentumu, nemazinot izolāciju vai rezerves režīma semantiku.

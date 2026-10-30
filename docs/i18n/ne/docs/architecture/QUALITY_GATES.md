@@ -4,7 +4,7 @@
 
 ---
 
-यो दस्तावेज OmniRoute का सबै CI गुणस्तर गेटहरूको आधिकारिक सन्दर्भ हो।
+यो दस्तावेज 67router का सबै CI गुणस्तर गेटहरूको आधिकारिक सन्दर्भ हो।
 यसले प्रत्येक गेट, त्यसले के प्रमाणीकरण गर्छ, त्यो कुन CI job मा चल्छ, त्यसले
 ratchet baseline वा pass/fail नीति प्रयोग गर्छ कि गर्दैन, र त्यसले build रोक्छ वा केवल सल्लाहकारी हो भन्ने वर्णन गर्छ।
 
@@ -256,14 +256,14 @@ pull request हरूमा मात्र चल्छ।
 
 यी cron तालिकामा (र `workflow_dispatch`) चल्छन्, PR हरूमा कहिल्यै होइन। सबै सल्लाहकारी छन्।
 
-| Workflow               | प्रमाणित गर्छ                                                                                                                                                          | अवरोधक         |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | random seed + उच्च run संख्या सहित fast-check property परीक्षणहरू                                                                                                      | **सल्लाहकारी** |
-| `nightly-resilience`   | heap-वृद्धि gate, chaos fault-injection, k6 load/soak                                                                                                                  | **सल्लाहकारी** |
-| `nightly-llm-security` | promptfoo injection गार्ड (block मोड) + garak probes (provider secret बिना छोडिन्छ)                                                                                    | **सल्लाहकारी** |
-| `nightly-schemathesis` | `docs/openapi.yaml` प्रयोग गरी live OmniRoute विरुद्ध OpenAPI contract fuzzing (schemathesis) — spec उल्लङ्घनहरू / ह्यान्डल नगरिएका 500 हरू सतहमा ल्याउँछ (Fase 8 B.4) | **सल्लाहकारी** |
-| `nightly-mutation`     | छिटो unit lane माथि Stryker mutation-testing स्कोर — बाँचिरहेका mutant हरूले कमजोर assert हरू देखाउँछन्                                                                | **सल्लाहकारी** |
-| `nightly-compat`       | समर्थित `engines.node` दायराहरूभर Node engine अनुकूलता म्याट्रिक्स                                                                                                     | **सल्लाहकारी** |
+| Workflow               | प्रमाणित गर्छ                                                                                                                                                         | अवरोधक         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | random seed + उच्च run संख्या सहित fast-check property परीक्षणहरू                                                                                                     | **सल्लाहकारी** |
+| `nightly-resilience`   | heap-वृद्धि gate, chaos fault-injection, k6 load/soak                                                                                                                 | **सल्लाहकारी** |
+| `nightly-llm-security` | promptfoo injection गार्ड (block मोड) + garak probes (provider secret बिना छोडिन्छ)                                                                                   | **सल्लाहकारी** |
+| `nightly-schemathesis` | `docs/openapi.yaml` प्रयोग गरी live 67router विरुद्ध OpenAPI contract fuzzing (schemathesis) — spec उल्लङ्घनहरू / ह्यान्डल नगरिएका 500 हरू सतहमा ल्याउँछ (Fase 8 B.4) | **सल्लाहकारी** |
+| `nightly-mutation`     | छिटो unit lane माथि Stryker mutation-testing स्कोर — बाँचिरहेका mutant हरूले कमजोर assert हरू देखाउँछन्                                                               | **सल्लाहकारी** |
+| `nightly-compat`       | समर्थित `engines.node` दायराहरूभर Node engine अनुकूलता म्याट्रिक्स                                                                                                    | **सल्लाहकारी** |
 
 प्रदर्शन baseline हरू (heap, TTFB, build समय) रेकर्ड गरिन्छन्, gate गरिँदैनन्: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) हेर्नुहोस् (`npm run perf:lts-baseline`)।
 
@@ -532,7 +532,7 @@ job ले `release/*` मा कहिल्यै push गर्दैन — 
 
 ## एजेन्ट टुलिङ: LSP-in-the-loop (ऐच्छिक)
 
-CI गेटहरूभन्दा बाहिर, OmniRoute ले **ऐच्छिक** `agent-lsp` स्काफोल्ड
+CI गेटहरूभन्दा बाहिर, 67router ले **ऐच्छिक** `agent-lsp` स्काफोल्ड
 (परियोजना-स्तरीय `.mcp.json`, Fase 7 Task 15) उपलब्ध गराउँछ। कोडिङ एजेन्टहरूलाई TypeScript भाषा सर्भर उपलब्ध गराउन `.mcp.json`
 सिर्जना गर्नुहोस्, ताकि तिनले कोड लेख्नुभन्दा **पहिले** प्रतीकहरू /
 डायग्नोस्टिक्स समाधान गरून् — यो `typecheck:core` को compile-before-claim सहायक हो,

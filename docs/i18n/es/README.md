@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Panel de OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Panel de 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — La puerta de enlace de IA gratuita
+# 🚀 67router — La puerta de enlace de IA gratuita
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Nunca dejes de programar. Todas las herramientas de IA → 375 proveedores — más de 150 gratuitos — mediante un único endpoint. Claude Code, Codex, Cursor, Cline, Copilot y Antigravity con Claude / GPT / Gemini GRATIS y conmutación automática por error. La compresión combinada RTK + Caveman ahorra entre un 15 % y un 95 % de tokens (~89 % de media): nunca alcances los límites. 375 proveedores de IA · más de 150 niveles gratuitos · ~1,62 mil millones de tokens gratuitos al mes · 20 estrategias de enrutamiento · $0 para empezar."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Nunca dejes de programar. Todas las herramientas de IA → 375 proveedores — más de 150 gratuitos — mediante un único endpoint. Claude Code, Codex, Cursor, Cline, Copilot y Antigravity con Claude / GPT / Gemini GRATIS y conmutación automática por error. La compresión combinada RTK + Caveman ahorra entre un 15 % y un 95 % de tokens (~89 % de media): nunca alcances los límites. 375 proveedores de IA · más de 150 niveles gratuitos · ~1,62 mil millones de tokens gratuitos al mes · 20 estrategias de enrutamiento · $0 para empezar."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Usa tus propias cuentas de proveedores.** Esta es una estimación agregada de los niveles gratuitos de terceros para los que se puede cumplir los requisitos por separado, no una concesión de tokens por parte de OmniRoute. Regístrate, obtén credenciales cuando sea necesario y conecta los proveedores que puedas utilizar; cada proveedor controla sus límites, disponibilidad y términos.
+> **Usa tus propias cuentas de proveedores.** Esta es una estimación agregada de los niveles gratuitos de terceros para los que se puede cumplir los requisitos por separado, no una concesión de tokens por parte de 67router. Regístrate, obtén credenciales cuando sea necesario y conecta los proveedores que puedas utilizar; cada proveedor controla sus límites, disponibilidad y términos.
 >
-> Combinar manualmente los niveles gratuitos es complicado: decenas de SDK, decenas de límites de velocidad y ninguna idea de cuánto tienes realmente. OmniRoute cataloga **471 entradas de niveles gratuitos distribuidas en 34 claves de pools recurrentes** y calcula la cifra destacada de tokens a partir de **los 17 pools con un presupuesto mensual positivo publicado, más cinco límites de Groq por modelo**, eliminando duplicados por pool compartido. Las cuotas que solo se habilitan después de una verificación de identidad regional (actualmente: ModelScope) se muestran por separado, +~6M tras verificar la identidad regional, y nunca se suman a la cifra destacada. El resultado permanece visible en el panel (`/dashboard/free-tiers`).
+> Combinar manualmente los niveles gratuitos es complicado: decenas de SDK, decenas de límites de velocidad y ninguna idea de cuánto tienes realmente. 67router cataloga **471 entradas de niveles gratuitos distribuidas en 34 claves de pools recurrentes** y calcula la cifra destacada de tokens a partir de **los 17 pools con un presupuesto mensual positivo publicado, más cinco límites de Groq por modelo**, eliminando duplicados por pool compartido. Las cuotas que solo se habilitan después de una verificación de identidad regional (actualmente: ModelScope) se muestran por separado, +~6M tras verificar la identidad regional, y nunca se suman a la cifra destacada. El resultado permanece visible en el panel (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Tarjeta de presupuesto de niveles gratuitos de OmniRoute: ~1,62 mil millones de tokens gratuitos estables al mes, hasta ~2,22 mil millones durante el primer mes con créditos de registro, procedentes de 34 claves documentadas de pools recurrentes que abarcan 471 entradas catalogadas de niveles gratuitos tras un único endpoint. Cálculo transparente con deduplicación por pool: cada pool compartido se cuenta una sola vez, incluidos 17 pools recurrentes con un presupuesto mensual positivo de tokens publicado, más cinco límites de Groq por modelo; 12 proveedores están marcados como no recomendados en el catálogo de riesgos de los términos para que tú decidas. La barra de presupuesto incluye Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cinco límites por modelo) y pools más pequeños, además de créditos de registro para el primer mes y proveedores permanentemente gratuitos sin límite de tokens, mostrados por separado para que nunca inflen la cifra destacada. Uso y saldo restante en tiempo real en /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Tarjeta de presupuesto de niveles gratuitos de 67router: ~1,62 mil millones de tokens gratuitos estables al mes, hasta ~2,22 mil millones durante el primer mes con créditos de registro, procedentes de 34 claves documentadas de pools recurrentes que abarcan 471 entradas catalogadas de niveles gratuitos tras un único endpoint. Cálculo transparente con deduplicación por pool: cada pool compartido se cuenta una sola vez, incluidos 17 pools recurrentes con un presupuesto mensual positivo de tokens publicado, más cinco límites de Groq por modelo; 12 proveedores están marcados como no recomendados en el catálogo de riesgos de los términos para que tú decidas. La barra de presupuesto incluye Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cinco límites por modelo) y pools más pequeños, además de créditos de registro para el primer mes y proveedores permanentemente gratuitos sin límite de tokens, mostrados por separado para que nunca inflen la cifra destacada. Uso y saldo restante en tiempo real en /dashboard/free-tiers."/>
 
 > Resumen animado de la página activa `/dashboard/free-tiers`. Metodología completa (deduplicación de pools, niveles de crédito y términos de los proveedores): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Información</b></td>
     <td align="center"><a href="#-the-promise">💥 La promesa</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Por qué OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Por qué 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Qué lo diferencia</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tres pasos: instala e inicia OmniRoute, conecta un proveedor elegible con tu propia cuenta o clave de API y, después, apunta tu herramienta a localhost:20128/v1 usando una clave de API de OmniRoute y el modelo auto. El enrutamiento depende de las conexiones elegibles disponibles y de los límites del proveedor."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tres pasos: instala e inicia 67router, conecta un proveedor elegible con tu propia cuenta o clave de API y, después, apunta tu herramienta a localhost:20128/v1 usando una clave de API de 67router y el modelo auto. El enrutamiento depende de las conexiones elegibles disponibles y de los límites del proveedor."/>
 
 ```bash
-# Después de conectar un proveedor, copia tu clave de OmniRoute desde Dashboard → Endpoints:
+# Después de conectar un proveedor, copia tu clave de 67router desde Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 ¿Por qué OmniRoute?
+# 🤔 ¿Por qué 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Por qué OmniRoute — deja de hacer malabares con 10 paneles, claves de API muertas y facturas sorpresa. Diez dolores diarios frente a sus soluciones: cuota que caduca sin usar → maximiza las suscripciones; límites de tasa en mitad de la programación → fallback automático de 4 niveles (Suscripción → API → Económico → Gratuito); salidas de herramientas que consumen tokens → compresión RTK + Caveman (15–95 %); APIs caras → enrutamiento optimizado por coste; cada herramienta con su propia configuración → un endpoint, un panel; IA bloqueada → proxy de 3 niveles + TLS stealth; claves muertas → resiliencia de 3 capas (circuit breakers, enfriamiento de claves, bloqueo de modelos); equipo compartiendo una suscripción → pools de claves con cuotas de reparto justo; prompts a través de la nube de otro → local-first con claves cifradas AES-256-GCM; sin visibilidad del gasto → analítica en vivo (uso, cuota, ahorros, latencia p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Por qué 67router — deja de hacer malabares con 10 paneles, claves de API muertas y facturas sorpresa. Diez dolores diarios frente a sus soluciones: cuota que caduca sin usar → maximiza las suscripciones; límites de tasa en mitad de la programación → fallback automático de 4 niveles (Suscripción → API → Económico → Gratuito); salidas de herramientas que consumen tokens → compresión RTK + Caveman (15–95 %); APIs caras → enrutamiento optimizado por coste; cada herramienta con su propia configuración → un endpoint, un panel; IA bloqueada → proxy de 3 niveles + TLS stealth; claves muertas → resiliencia de 3 capas (circuit breakers, enfriamiento de claves, bloqueo de modelos); equipo compartiendo una suscripción → pools de claves con cuotas de reparto justo; prompts a través de la nube de otro → local-first con claves cifradas AES-256-GCM; sin visibilidad del gasto → analítica en vivo (uso, cuota, ahorros, latencia p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Flujo de solicitudes de OmniRoute: tu IDE o CLI (Claude Code, Cursor, Cline…) llama a un único endpoint local (http://localhost:20128/v1); el Smart Router de OmniRoute (compresión RTK + Caveman, 20 estrategias de enrutamiento, circuit breakers, TLS stealth, MCP, A2A, guardrails) puede aplicar fallback entre 4 niveles de proveedores mientras quede un destino elegible y saludable — Nivel 1 Suscripción, Nivel 2 Clave de API, Nivel 3 Económico y Nivel 4 Gratuito."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Flujo de solicitudes de 67router: tu IDE o CLI (Claude Code, Cursor, Cline…) llama a un único endpoint local (http://localhost:20128/v1); el Smart Router de 67router (compresión RTK + Caveman, 20 estrategias de enrutamiento, circuit breakers, TLS stealth, MCP, A2A, guardrails) puede aplicar fallback entre 4 niveles de proveedores mientras quede un destino elegible y saludable — Nivel 1 Suscripción, Nivel 2 Clave de API, Nivel 3 Económico y Nivel 4 Gratuito."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **¿Quieres unirte como amigo del código abierto?** Estas son las empresas que respaldan el código abierto y ayudan a que OmniRoute siga avanzando, y explicamos públicamente a dónde va cada token que nos proporcionan. Contáctanos: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **¿Quieres unirte como amigo del código abierto?** Estas son las empresas que respaldan el código abierto y ayudan a que 67router siga avanzando, y explicamos públicamente a dónde va cada token que nos proporcionan. Contáctanos: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Amigo fundador del código abierto"/>
     </td>
     <td>
-      ¡Gracias a <b>Kimi (Moonshot AI)</b>, nuestro amigo fundador del código abierto, por respaldar este proyecto! Kimi es el laboratorio de IA responsable de las familias de modelos de pesos abiertos K2 y K3. <b>Kimi K3</b> ofrece una ventana de contexto de 1 millón de tokens, visión nativa y programación de nivel de frontera por una fracción del precio de los modelos cerrados, y funciona de inmediato con Claude Code, Codex y todas las herramientas de programación compatibles con OmniRoute.
+      ¡Gracias a <b>Kimi (Moonshot AI)</b>, nuestro amigo fundador del código abierto, por respaldar este proyecto! Kimi es el laboratorio de IA responsable de las familias de modelos de pesos abiertos K2 y K3. <b>Kimi K3</b> ofrece una ventana de contexto de 1 millón de tokens, visión nativa y programación de nivel de frontera por una fracción del precio de los modelos cerrados, y funciona de inmediato con Claude Code, Codex y todas las herramientas de programación compatibles con 67router.
       <br/><br/>
-      <b>Lo que hace posible el apoyo de Kimi:</b> los créditos de la API de Kimi impulsan el proceso de lanzamientos de OmniRoute validado por IA —la etapa de <i>validación de fusiones impulsada por Kimi K3</i>, que revisa cada solicitud de incorporación antes de su publicación—, además del desarrollo diario de funcionalidades. La compatibilidad de primera clase con Kimi se ofrece por ambas vías: la <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API de Kimi</a> directa (<code>kimi-k3</code>) y el <a href="https://www.kimi.ai/code?aff=omniroute">plan de programación Kimi Code</a> (OAuth y clave de API). OmniRoute también es el primer proyecto brasileño de código abierto que forma parte del programa de apoyo de Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Obtén una clave de la API de Kimi con un 15 % de créditos adicionales →</b></a>
+      <b>Lo que hace posible el apoyo de Kimi:</b> los créditos de la API de Kimi impulsan el proceso de lanzamientos de 67router validado por IA —la etapa de <i>validación de fusiones impulsada por Kimi K3</i>, que revisa cada solicitud de incorporación antes de su publicación—, además del desarrollo diario de funcionalidades. La compatibilidad de primera clase con Kimi se ofrece por ambas vías: la <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API de Kimi</a> directa (<code>kimi-k3</code>) y el <a href="https://www.kimi.ai/code?aff=omniroute">plan de programación Kimi Code</a> (OAuth y clave de API). 67router también es el primer proyecto brasileño de código abierto que forma parte del programa de apoyo de Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Obtén una clave de la API de Kimi con un 15 % de créditos adicionales →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Amigo del código abierto"/>
     </td>
     <td>
-      ¡Gracias a <b>Cheaper Inference</b>, un amigo del código abierto de OmniRoute, por respaldar este proyecto! Cheaper Inference es una puerta de enlace clasificada por coste que revende 42 modelos de frontera —Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok y MiniMax— mediante un único endpoint compatible con OpenAI, dirigiendo cada solicitud al proveedor elegible más barato sin cobrar nunca por encima del precio de lista del creador del modelo.
+      ¡Gracias a <b>Cheaper Inference</b>, un amigo del código abierto de 67router, por respaldar este proyecto! Cheaper Inference es una puerta de enlace clasificada por coste que revende 42 modelos de frontera —Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok y MiniMax— mediante un único endpoint compatible con OpenAI, dirigiendo cada solicitud al proveedor elegible más barato sin cobrar nunca por encima del precio de lista del creador del modelo.
       <br/><br/>
-      <b>Compatibilidad de primera clase en OmniRoute:</b> Chat Completions, el endpoint nativo <code>/v1/responses</code>, visión, llamadas a herramientas y 3 modelos de imágenes (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, accesibles como <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Obtén una clave de API →</b></a>
+      <b>Compatibilidad de primera clase en 67router:</b> Chat Completions, el endpoint nativo <code>/v1/responses</code>, visión, llamadas a herramientas y 3 modelos de imágenes (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, accesibles como <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Obtén una clave de API →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Promociones de afiliados</b> — cupones gratuitos de registro de proveedores que no nos patrocinan (haz clic para desplegar)</sub></summary>
 
-<sub><i>Esta sección es únicamente para códigos de recomendación o cupones. Las colaboraciones patrocinadas aparecen arriba, en <b>🤝 Con el apoyo de nuestros amigos del código abierto</b>. OmniRoute no mantiene ningún patrocinio ni colaboración con los proveedores aquí indicados; estos son cupones públicos que cualquiera puede utilizar.</i></sub>
+<sub><i>Esta sección es únicamente para códigos de recomendación o cupones. Las colaboraciones patrocinadas aparecen arriba, en <b>🤝 Con el apoyo de nuestros amigos del código abierto</b>. 67router no mantiene ningún patrocinio ni colaboración con los proveedores aquí indicados; estos son cupones públicos que cualquiera puede utilizar.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — registro de afiliado · <b>$100 en créditos gratuitos</b> al registrarte (servidor gratuito; puede tener una latencia mayor, por lo que es más adecuado para pruebas que para producción). Compatibilidad de primera clase en OmniRoute desde la versión <b>v3.8.50</b>: Chat Completions, el formato de transmisión compatible con Anthropic y la ruta compatible con OpenAI. Los modelos disponibles incluyen <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> y más. <b><a href="https://agentrouter.org/register?aff=70LM">Consigue tus $100 →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — registro de afiliado · <b>$100 en créditos gratuitos</b> al registrarte (servidor gratuito; puede tener una latencia mayor, por lo que es más adecuado para pruebas que para producción). Compatibilidad de primera clase en 67router desde la versión <b>v3.8.50</b>: Chat Completions, el formato de transmisión compatible con Anthropic y la ruta compatible con OpenAI. Los modelos disponibles incluyen <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> y más. <b><a href="https://agentrouter.org/register?aff=70LM">Consigue tus $100 →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Enlace de afiliado: OmniRoute no mantiene ningún patrocinio ni colaboración con este proveedor.</i></sub>
+      <sub>⚠️ <i>Enlace de afiliado: 67router no mantiene ningún patrocinio ni colaboración con este proveedor.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>¿Conoces otro proveedor con un generoso cupón gratuito de registro que beneficie a los usuarios de OmniRoute? Abre una incidencia y lo añadiremos aquí.</sub>
+<sub>¿Conoces otro proveedor con un generoso cupón gratuito de registro que beneficie a los usuarios de 67router? Abre una incidencia y lo añadiremos aquí.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Ejemplos animados de 18 de las 20 estrategias de enrutamiento de combos, una celda por estrategia: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized y quota-weighted no están animadas; la tabla siguiente describe las 20."/>
 
-> Un **combo** es una cadena de modelos entre los que OmniRoute enruta **automáticamente**. Si se agota la cuota, falla un proveedor o se disparan los costes, el combo puede pasar al siguiente modelo apto y en buen estado. 🛡️
+> Un **combo** es una cadena de modelos entre los que 67router enruta **automáticamente**. Si se agota la cuota, falla un proveedor o se disparan los costes, el combo puede pasar al siguiente modelo apto y en buen estado. 🛡️
 
 ### ⚡ Sin configuración: solo usa `auto`
 
-No es necesario crear ningún combo. Establece tu modelo como `auto` (o una variante) y OmniRoute crea un combo virtual a partir de tus proveedores conectados, evaluados en tiempo real:
+No es necesario crear ningún combo. Establece tu modelo como `auto` (o una variante) y 67router crea un combo virtual a partir de tus proveedores conectados, evaluados en tiempo real:
 
 <table>
   <tr><th align="left">ID del modelo</th><th align="left">Qué optimiza</th></tr>
@@ -496,7 +498,7 @@ Las **20** estrategias: combínalas como quieras en cada paso del combo:
 
 ### 🧱 La resiliencia está integrada (3 capas independientes)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Resiliencia de OmniRoute: 3 capas independientes de autorrecuperación, la capa adecuada para cada fallo. Capa 1, disyuntor del proveedor (proveedor completo): se activa solo con 408/5xx, umbrales de OAuth 8× / clave de API 12× / local 2×, se restablece tras 60s/30s/15s con una prueba HALF-OPEN y recuperación diferida; mientras está OPEN, la combinación redirige al siguiente proveedor. Capa 2, tiempo de espera de la conexión (una clave/cuenta): base de 5s para OAuth / 3s para clave de API, retroceso exponencial ×2 con protección contra avalanchas de solicitudes, 429 respeta Retry-After y una respuesta correcta borra todo el estado de error; una clave en espera se omite mientras las claves hermanas siguen prestando servicio. Capa 3, bloqueo del modelo (un modelo): un 429 específico del modelo, un 404 local o las denegaciones de modo bloquean únicamente ese modelo, nunca toda la conexión. Los estados terminales (bloqueado, caducado, créditos agotados) son responsabilidad del operador, no de los tiempos de espera."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Resiliencia de 67router: 3 capas independientes de autorrecuperación, la capa adecuada para cada fallo. Capa 1, disyuntor del proveedor (proveedor completo): se activa solo con 408/5xx, umbrales de OAuth 8× / clave de API 12× / local 2×, se restablece tras 60s/30s/15s con una prueba HALF-OPEN y recuperación diferida; mientras está OPEN, la combinación redirige al siguiente proveedor. Capa 2, tiempo de espera de la conexión (una clave/cuenta): base de 5s para OAuth / 3s para clave de API, retroceso exponencial ×2 con protección contra avalanchas de solicitudes, 429 respeta Retry-After y una respuesta correcta borra todo el estado de error; una clave en espera se omite mientras las claves hermanas siguen prestando servicio. Capa 3, bloqueo del modelo (un modelo): un 429 específico del modelo, un 404 local o las denegaciones de modo bloquean únicamente ese modelo, nunca toda la conexión. Los estados terminales (bloqueado, caducado, créditos agotados) son responsabilidad del operador, no de los tiempos de espera."/>
 
 <sub>📖 [Motor Auto-Combo](docs/routing/AUTO-COMBO.md) · [Guía de resiliencia](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Las **20** estrategias: combínalas como quieras en cada paso del combo:
 
 <div align="center">
 
-## 🏆 Qué diferencia a OmniRoute
+## 🏆 Qué diferencia a 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Qué diferencia a OmniRoute: una comparativa puntual de funcionalidades frente a 9router, OpenRouter, CLIProxyAPI y LiteLLM en 13 capacidades. OmniRoute: 375 proveedores, más de 150 niveles gratuitos integrados, 20 estrategias de enrutamiento, compresión de tokens con 12 motores, servidor MCP integrado con 110 herramientas, protocolo de agentes A2A, memoria persistente, medidas de protección, agentes en la nube, ocultación de huella digital TLS, Desktop/Termux/PWA y una interfaz disponible en 67 idiomas. OmniRoute cuenta con licencia MIT y puede autoalojarse. Las capacidades y cifras de los competidores pueden cambiar; consulta la metodología enlazada."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Qué diferencia a 67router: una comparativa puntual de funcionalidades frente a 9router, OpenRouter, CLIProxyAPI y LiteLLM en 13 capacidades. 67router: 375 proveedores, más de 150 niveles gratuitos integrados, 20 estrategias de enrutamiento, compresión de tokens con 12 motores, servidor MCP integrado con 110 herramientas, protocolo de agentes A2A, memoria persistente, medidas de protección, agentes en la nube, ocultación de huella digital TLS, Desktop/Termux/PWA y una interfaz disponible en 67 idiomas. 67router cuenta con licencia MIT y puede autoalojarse. Las capacidades y cifras de los competidores pueden cambiar; consulta la metodología enlazada."/>
 
 <sub>📊 Metodología completa y detalles de cada funcionalidad frente a 9router, OpenRouter, CLIProxyAPI y LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Apoya a OmniRoute
+## 💚 Apoya a 67router
 
-OmniRoute tiene licencia MIT y se mantiene de forma abierta. Si te ahorra tiempo o dinero, estas son algunas formas de ayudar a que siga siendo independiente; elige la que mejor se adapte a ti. El patrocinio nunca afecta la prioridad de enrutamiento; proporciona visibilidad, no una mejor posición.
+67router tiene licencia MIT y se mantiene de forma abierta. Si te ahorra tiempo o dinero, estas son algunas formas de ayudar a que siga siendo independiente; elige la que mejor se adapte a ti. El patrocinio nunca afecta la prioridad de enrutamiento; proporciona visibilidad, no una mejor posición.
 
 <table>
-  <tr><td nowrap>⭐ <b>Dale una estrella al repositorio</b></td><td>Gratis; ayuda de verdad a mejorar su visibilidad</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Dale una estrella a OmniRoute</a></td></tr>
+  <tr><td nowrap>⭐ <b>Dale una estrella al repositorio</b></td><td>Gratis; ayuda de verdad a mejorar su visibilidad</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Dale una estrella a 67router</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Pago único o mensual · sin comisiones de plataforma</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Propina única y rápida, sin que el donante tenga que registrarse</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Pequeño gesto informal</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute tiene licencia MIT y se mantiene de forma abierta. Si te ahorra tiempo
 
 **🇧🇷 PIX** — instantáneo, sin comisiones (Brasil)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Código QR de PIX de OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Código QR de PIX de 67router"/>
 
 Clave (aleatoria): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Pix para copiar y pegar:
 
 <p><strong>Notas para desarrolladores:</strong> El proyecto puede generar un archivo local <code>.env</code> durante la instalación o posinstalación con npm para facilitar el trabajo de los desarrolladores. Este archivo se ignora intencionadamente mediante <code>.gitignore</code> (consulta <code>.gitignore</code>) y nunca debe incluirse en un commit; si se incluye por accidente, cambia todos los secretos expuestos y elimina el archivo del historial. Consulta <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> para obtener orientación sobre cómo gestionar los archivos de entorno locales y los secretos.</p>
 
-## 📡 Radar de OmniRoute
+## 📡 Radar de 67router
 
-El principal límite destacado del nivel gratuito sigue siendo de **~1,62 mil millones de tokens/mes**, según el catálogo documentado y sin duplicados entre proveedores que aparece arriba. Los créditos temporales por registro de algunos proveedores pueden aumentar por separado el primer mes hasta **~2,22 mil millones**. Radar es una capa de catálogo opcional y firmada para quienes deseen información más actualizada sobre la disponibilidad de modelos gratuitos entre las versiones de OmniRoute; el catálogo de la comunidad y todas las funciones gratuitas existentes seguirán siendo gratuitos.
+El principal límite destacado del nivel gratuito sigue siendo de **~1,62 mil millones de tokens/mes**, según el catálogo documentado y sin duplicados entre proveedores que aparece arriba. Los créditos temporales por registro de algunos proveedores pueden aumentar por separado el primer mes hasta **~2,22 mil millones**. Radar es una capa de catálogo opcional y firmada para quienes deseen información más actualizada sobre la disponibilidad de modelos gratuitos entre las versiones de 67router; el catálogo de la comunidad y todas las funciones gratuitas existentes seguirán siendo gratuitos.
 
 Los colaboradores pueden recibir el catálogo en tiempo real y oportunidades adicionales de proveedores. Su límite independiente y variable es de **aproximadamente 3 mil millones de tokens/mes como máximo**, en función de la disponibilidad de los proveedores. Este límite no está garantizado: los proveedores pueden modificar las cuotas, los requisitos de acceso, los modelos o las regiones en cualquier momento.
 
-Radar es opcional y solo utiliza GET. El cliente de OmniRoute no carga prompts, tráfico, configuraciones de proveedores, telemetría de uso ni el estado local de descarte de avisos. Consulta los requisitos de acceso y el catálogo actual en **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar es opcional y solo utiliza GET. El cliente de 67router no carga prompts, tráfico, configuraciones de proveedores, telemetría de uso ni el estado local de descarte de avisos. Consulta los requisitos de acceso y el catálogo actual en **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -593,7 +595,7 @@ Radar es opcional y solo utiliza GET. El cliente de OmniRoute no carga prompts, 
 - **💸 Coste real de tarifa plana** — los proveedores de suscripción / plan de programación muestran **$0** en los análisis de costes; el presupuesto, la cuota y el enrutamiento siguen estimando. → [Referencia de API](docs/reference/API_REFERENCE.md)
 - **⚖️ Enrutamiento Quota-Share** — reparte de forma justa la cuota de una cuenta compartida entre claves agrupadas, con conservación de trabajo para que las porciones inactivas se presten. → [Guía de resiliencia](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 Configuración de CLI/agentes con un solo comando** — 15 comandos `setup-*` registrados; `omniroute run` inicia 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` admite 11 destinos con un selector interactivo de proveedor+modelo y favoritos por contexto. → [Integraciones de CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Modo remoto** — controla una instancia remota de OmniRoute con tokens con alcance (`connect` / `contexts` / `tokens`) + un asistente OAuth `antigravity` para instalaciones en VPS. → [Modo remoto](docs/guides/REMOTE-MODE.md)
+- **🛰️ Modo remoto** — controla una instancia remota de 67router con tokens con alcance (`connect` / `contexts` / `tokens`) + un asistente OAuth `antigravity` para instalaciones en VPS. → [Modo remoto](docs/guides/REMOTE-MODE.md)
 - **🧭 Enrutamiento automático más inteligente** — combos `auto/<category>:<tier>`, **Fusion** (panel de modelos + juez), enrutamiento consciente de la tarea, anulaciones por solicitud de modelo / modo / presupuesto en USD. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Compresión conectable** — 12 motores composables + Compression Studios: LLMLingua-2, Ultra de dos niveles, omniglyph, puerta de fidelidad por paso, GCF v3.2, editor de reordenación por arrastre. → [Compresión](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Descifrado MITM transparente (TPROXY)** — captura CLI que ignoran las variables de entorno del proxy, con una CA por SNI + instalador en el almacén de confianza. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +665,7 @@ Radar es opcional y solo utiliza GET. El cliente de OmniRoute no carga prompts, 
 
 <br/>
 
-**Ejecuta cualquier CLI compatible mediante OmniRoute con un solo comando** — sin escribir archivos de configuración,
+**Ejecuta cualquier CLI compatible mediante 67router con un solo comando** — sin escribir archivos de configuración,
 con las credenciales inyectadas en cada proceso y un directorio personal aislado y desechable para Qwen/Gemini:
 
 ```bash
@@ -756,7 +758,7 @@ aparezcan en el historial del shell. → [Integraciones de CLI](docs/guides/CLI-
 
 <div align="center">
 
-## 🖥️ Dónde se ejecuta OmniRoute — en cualquier lugar
+## 🖥️ Dónde se ejecuta 67router — en cualquier lugar
 
 </div>
 
@@ -772,7 +774,7 @@ aparezcan en el historial del shell. → [Integraciones de CLI](docs/guides/CLI-
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Se ejecuta <b>en tu teléfono</b>, las 24 horas, sin root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Añadir a la pantalla de inicio"</td><td align="left">Pantalla completa, sin conexión, instalable desde el navegador</td></tr>
   <tr><td align="left" nowrap>🧩 <b>Plugin de OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Integración nativa con OpenCode</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>instala la extensión <b>OmniCopilot</b></td><td align="left">Todos los modelos de OmniRoute en el selector nativo de Copilot Chat — versión estable e Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>instala la extensión <b>OmniCopilot</b></td><td align="left">Todos los modelos de 67router en el selector nativo de Copilot Chat — versión estable e Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Desde el código fuente</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Modifícalo, contribuye</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ aparezcan en el historial del shell. → [Integraciones de CLI](docs/guides/CLI-
 
 <div align="center">
 
-### 🧩 Novedad: OmniRoute dentro del Copilot Chat nativo de VS Code
+### 🧩 Novedad: 67router dentro del Copilot Chat nativo de VS Code
 
 </div>
 
-> Sin una nueva barra lateral ni una nueva interfaz de chat: cada modelo ofrecido por OmniRoute aparece directamente en el
+> Sin una nueva barra lateral ni una nueva interfaz de chat: cada modelo ofrecido por 67router aparece directamente en el
 > **selector de modelos de Copilot Chat que ya utilizas**. Desde VS Code 1.122, los modelos de proveedores funcionan
 > sin iniciar sesión en GitHub ni disponer de una suscripción a Copilot — modo agente, llamadas a herramientas y visión,
 > gratis.
 
 Instala la extensión **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, conéctala
-a tu servidor OmniRoute (de forma predeterminada, `localhost:20128`) y abre Copilot Chat → selector de modelos
-→ **Administrar modelos…** → **OmniRoute**.
+a tu servidor 67router (de forma predeterminada, `localhost:20128`) y abre Copilot Chat → selector de modelos
+→ **Administrar modelos…** → **67router**.
 
 <table>
   <tr><th align="left">Tienda</th><th align="left">Enlace</th><th align="left">Compatible con</th></tr>
@@ -801,7 +803,7 @@ a tu servidor OmniRoute (de forma predeterminada, `localhost:20128`) y abre Copi
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Instalar →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Desde el editor: abre la vista **Extensiones**, busca **"OmniRoute"** y haz clic en **Instalar**
+Desde el editor: abre la vista **Extensiones**, busca **"67router"** y haz clic en **Instalar**
 — funciona de la misma forma en ambas tiendas. El código fuente, los problemas y el manual de publicación se encuentran en
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Desde el editor: abre la vista **Extensiones**, busca **"OmniRoute"** y haz clic
 > dejar abierta una ventana del terminal ni tener que ocuparte de `npm install -g omniroute`.**
 
 Creado con [Tauri v2](https://v2.tauri.app/) (un núcleo de Rust minúsculo), incluye
-su propio entorno de ejecución firmado de Node 24 y gestiona una instalación de OmniRoute propiedad de la aplicación, por lo que nunca entra en conflicto con tus
+su propio entorno de ejecución firmado de Node 24 y gestiona una instalación de 67router propiedad de la aplicación, por lo que nunca entra en conflicto con tus
 instalaciones globales de `node`/`bun`. **Comparte tu configuración y base de datos existentes en `~/.omniroute/`** — así que es el
-mismo OmniRoute que ya utilizas, solo que con sombrero. 🎩
+mismo 67router que ya utilizas, solo que con sombrero. 🎩
 
 <table>
   <tr><th align="left">Qué hace</th><th align="left">Cómo</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>¿Prefieres una descarga? Obtén el archivo <code>.dmg</code> más reciente en
 <a href="https://github.com/zoispag/omniroute-tray/releases">Versiones</a>. El código fuente, las incidencias y la documentación de compilación
 están disponibles en <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Un proyecto comunitario de <a href="https://github.com/zoispag">@zoispag</a>, no una versión oficial de OmniRoute.</sub>
+<br/>💛 Un proyecto comunitario de <a href="https://github.com/zoispag">@zoispag</a>, no una versión oficial de 67router.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ están disponibles en <a href="https://github.com/zoispag/omniroute-tray">zoispa
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privado y con prioridad local: la puerta de enlace y el plano de control de OmniRoute se ejecutan en tu equipo. Los prompts se envían al proveedor ascendente seleccionado para cada solicitud; OmniRoute no añade ningún salto alojado para procesar prompts y la telemetría está deshabilitada de forma predeterminada. Las credenciales se cifran en reposo con AES-256-GCM; los controles incluyen delimitación del alcance de las claves de API, filtrado de IP, límites de frecuencia, protecciones contra inyección de prompts, depuración de encabezados ascendentes, eliminación opcional de PII, errores saneados y un registro de auditoría local en SQLite. OmniRoute tiene licencia MIT y puede autoalojarse."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privado y con prioridad local: la puerta de enlace y el plano de control de 67router se ejecutan en tu equipo. Los prompts se envían al proveedor ascendente seleccionado para cada solicitud; 67router no añade ningún salto alojado para procesar prompts y la telemetría está deshabilitada de forma predeterminada. Las credenciales se cifran en reposo con AES-256-GCM; los controles incluyen delimitación del alcance de las claves de API, filtrado de IP, límites de frecuencia, protecciones contra inyección de prompts, depuración de encabezados ascendentes, eliminación opcional de PII, errores saneados y un registro de auditoría local en SQLite. 67router tiene licencia MIT y puede autoalojarse."/>
 
 <sub>📖 [Autorización](docs/architecture/AUTHZ_GUIDE.md) · [Medidas de protección](docs/security/GUARDRAILS.md) · [Cumplimiento](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ están disponibles en <a href="https://github.com/zoispag/omniroute-tray">zoispa
 
 </div>
 
-> Más allá del servidor, OmniRoute es una **cabina completa de línea de comandos** con **más de 80 comandos**, además de protocolos abiertos para agentes que permiten que un agente de IA lo controle **por sí solo**.
+> Más allá del servidor, 67router es una **cabina completa de línea de comandos** con **más de 80 comandos**, además de protocolos abiertos para agentes que permiten que un agente de IA lo controle **por sí solo**.
 
 ### ⌨️ Una CLI de verdad (no solo `start`)
 
@@ -874,9 +876,9 @@ omniroute setup         # asistente guiado para la primera ejecución
 omniroute doctor        # diagnostica proveedores, puertos y dependencias nativas
 ```
 
-### 🛰️ Modo remoto — ejecuta la CLI aquí y OmniRoute en un VPS
+### 🛰️ Modo remoto — ejecuta la CLI aquí y 67router en un VPS
 
-¿OmniRoute está en un servidor? Contrólalo desde tu portátil con la **misma CLI**. Inicia sesión una vez
+¿67router está en un servidor? Contrólalo desde tu portátil con la **misma CLI**. Inicia sesión una vez
 con un token de acceso con alcance; a partir de entonces, todos los comandos apuntarán al servidor remoto.
 
 ```bash
@@ -892,13 +894,13 @@ Los tokens tienen los alcances `read` / `write` / `admin`; las rutas que inician
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Demostración animada en terminal de la CLI de OmniRoute — omniroute providers list, omniroute combo list y omniroute health — recorriendo los 89 comandos de nivel superior: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Demostración animada en terminal de la CLI de 67router — omniroute providers list, omniroute combo list y omniroute health — recorriendo los 89 comandos de nivel superior: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Conecta un agente — y controlará el propio OmniRoute
+### 🤝 Conecta un agente — y controlará el propio 67router
 
-Expón OmniRoute mediante **MCP**, **A2A**, una **API REST**, **webhooks** o una **CLI remota**: cualquier agente compatible (o tu propio código) obtiene acceso a toda la puerta de enlace: enrutamiento, proveedores, combinaciones, caché, compresión y memoria, de forma autónoma. Los endpoints HTTP que aparecen a continuación están disponibles en `http://localhost:20128`.
+Expón 67router mediante **MCP**, **A2A**, una **API REST**, **webhooks** o una **CLI remota**: cualquier agente compatible (o tu propio código) obtiene acceso a toda la puerta de enlace: enrutamiento, proveedores, combinaciones, caché, compresión y memoria, de forma autónoma. Los endpoints HTTP que aparecen a continuación están disponibles en `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Interfaz</th><th align="left">Endpoint / comando</th><th align="left">Úsalo para</th></tr>
@@ -912,7 +914,7 @@ Expón OmniRoute mediante **MCP**, **A2A**, una **API REST**, **webhooks** o una
 </table>
 
 ```bash
-# Proporciona a Claude Code el conjunto completo de herramientas de OmniRoute mediante MCP:
+# Proporciona a Claude Code el conjunto completo de herramientas de 67router mediante MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
@@ -928,7 +930,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Cómo funciona — pipeline, arquitectura y cálculo de ahorros
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline de compresión de OmniRoute: una solicitud de cliente ilustrativa de 10.000 tokens pasa por 12 motores componibles — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra y OmniGlyph — y puede llegar al proveedor con unos 1.080 tokens en el ejemplo apilado documentado. El contenido estructurado está protegido por guardas de preservación y compuertas de fidelidad por paso; los modos con pérdida o experimentales explícitos pueden transformar el contenido elegible."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline de compresión de 67router: una solicitud de cliente ilustrativa de 10.000 tokens pasa por 12 motores componibles — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra y OmniGlyph — y puede llegar al proveedor con unos 1.080 tokens en el ejemplo apilado documentado. El contenido estructurado está protegido por guardas de preservación y compuertas de fidelidad por paso; los modos con pérdida o experimentales explícitos pueden transformar el contenido elegible."/>
 
 La combinación apilada predeterminada ejecuta `RTK → Caveman`. Cuando ambas actúan sobre el mismo payload de herramienta/contexto, los ahorros se multiplican:
 
@@ -940,7 +942,7 @@ range    = 78.4 – 94.6%
 
 Los bloques de código, las URL, el JSON y los datos estructurados **siempre quedan protegidos** por el motor de preservación.
 
-> **¿Para qué usar muchos tokens cuando unos pocos hacen el trabajo?** Cada solicitud pasa por el pipeline de compresión de OmniRoute **de forma transparente** — sin cambios en el cliente. Ahora es una **pila de 12 motores componibles** que se ejecutan en orden y se combinan según la combinación de enrutamiento — construida sobre ideas de [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) y [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **¿Para qué usar muchos tokens cuando unos pocos hacen el trabajo?** Cada solicitud pasa por el pipeline de compresión de 67router **de forma transparente** — sin cambios en el cliente. Ahora es una **pila de 12 motores componibles** que se ejecutan en orden y se combinan según la combinación de enrutamiento — construida sobre ideas de [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) y [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 La pila de 12 motores
 
@@ -1025,7 +1027,7 @@ omniroute
 ```
 
 > 💡 ¿Ves `npm warn ERESOLVE` o advertencias de peer-dep? [Son inofensivas](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **¿Usas npm 11 o posterior?** npm puede bloquear los scripts de ciclo de vida de los paquetes a menos que estén permitidos. El `postinstall` de OmniRoute (`node scripts/build/postinstall.mjs`) es necesario para preparar sus archivos de runtime nativos. Permite los paquetes nombrados en la advertencia de npm al instalar globalmente. Para el conjunto de paquetes reportado por OmniRoute 3.8.53:
+> **¿Usas npm 11 o posterior?** npm puede bloquear los scripts de ciclo de vida de los paquetes a menos que estén permitidos. El `postinstall` de 67router (`node scripts/build/postinstall.mjs`) es necesario para preparar sus archivos de runtime nativos. Permite los paquetes nombrados en la advertencia de npm al instalar globalmente. Para el conjunto de paquetes reportado por 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1064,9 +1066,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Deberías ver listados tus modelos conectados. 🎉 Eso es todo — empieza a programar, y OmniRoute enruta y hace fallback automáticamente por ti.
+Deberías ver listados tus modelos conectados. 🎉 Eso es todo — empieza a programar, y 67router enruta y hace fallback automáticamente por ti.
 
-Si tu cliente no puede enviar cabeceras personalizadas, OmniRoute también expone alias de compatibilidad con token:
+Si tu cliente no puede enviar cabeceras personalizadas, 67router también expone alias de compatibilidad con token:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1116,7 +1118,7 @@ Tabla completa: [Guía de Docker — RAM en tiempo de ejecución](docs/guides/DO
 
 La instalación estándar mediante `bun install` y la instalación global (`bun install -g omniroute`) son compatibles gracias a la detección del entorno de ejecución Bun:
 
-- **`bun:sqlite` integrado**: OmniRoute utiliza el controlador `bun:sqlite` integrado de Bun cuando se ejecuta en Bun y recurre a `better-sqlite3` en Node.js o a `sql.js`.
+- **`bun:sqlite` integrado**: 67router utiliza el controlador `bun:sqlite` integrado de Bun cuando se ejecuta en Bun y recurre a `better-sqlite3` en Node.js o a `sql.js`.
 - **Selección automática del empaquetador Webpack durante el desarrollo**: El entorno de desarrollo (`bun run dev`) detecta automáticamente Bun y desactiva Turbopack en favor de Webpack para evitar incompatibilidades con los enlaces nativos de V8. Las compilaciones de producción (`bun run build`) respetan `OMNIROUTE_USE_TURBOPACK` exactamente igual que en Node: Turbopack de forma predeterminada o `OMNIROUTE_USE_TURBOPACK=0` para compilar con Webpack (`Dockerfile.bun` lo expone como un `--build-arg`).
 - **Dockerfile específico para Bun**: `Dockerfile.bun` multietapa para despliegues de producción nativos de Bun (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1200,7 +1202,7 @@ mismo proceso y en un único puerto, por lo que actualmente no existe un paquete
 
 <div align="center">
 
-# 🎬 OmniRoute en acción
+# 🎬 67router en acción
 
 </div>
 
@@ -1264,7 +1266,7 @@ mismo proceso y en un único puerto, por lo que actualmente no existe un paquete
 
 Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 visualizaciones conocidas** (`v > 0`) · **1.210 canales/perfiles por red**. El panel bruto contiene 1.976 filas (YouTube 1.352 = 740 vídeos largos + 612 Shorts · TikTok 334 · Instagram 290); no quedó ningún duplicado tras la normalización mediante la URL canónica, que conserva el mayor recuento por vídeo. La recopilación de YouTube está congelada desde el 2026-10-13 (cuota de la API agotada del 14 al 18/10) y la de TikTok/Instagram desde el 2026-09-02 (sin créditos de recopilación); 76 vídeos aún no tienen recuento de visualizaciones.
 
-> 🎬 **¿Has hecho un vídeo sobre OmniRoute?** Abre una [incidencia](https://github.com/diegosouzapw/OmniRoute/issues/new) o un [debate](https://github.com/diegosouzapw/OmniRoute/discussions) con el enlace; lo destacaremos aquí.
+> 🎬 **¿Has hecho un vídeo sobre 67router?** Abre una [incidencia](https://github.com/diegosouzapw/OmniRoute/issues/new) o un [debate](https://github.com/diegosouzapw/OmniRoute/discussions) con el enlace; lo destacaremos aquí.
 
 <br/>
 
@@ -1283,7 +1285,7 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
 | 🟢 **WhatsApp — 🌍 Global**                    | [únete al grupo](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                             |
 | 🟢 **WhatsApp — 🇧🇷 Brasil**                    | [únete al grupo](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                             |
 | 🌍 **Sitio web**                               | [omniroute.online](https://omniroute.online)                                                                                  |
-| 🌍 **🌍Comunidad StHub OmniRoute (gratis)**    | [portal de StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                      |
+| 🌍 **🌍Comunidad StHub 67router (gratis)**     | [portal de StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                      |
 | 📦 **Código fuente**                           | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                |
 | 🐛 **Informar de un error**                    | [abre una incidencia](https://github.com/diegosouzapw/OmniRoute/issues) — adjunta la salida de `npm run system-info`          |
 | 🤝 **Contribuir**                              | [CONTRIBUTING.md](CONTRIBUTING.md) · [Modelo de ramas y versiones](docs/ops/BRANCHING_MODEL.md) · elige un `good first issue` |
@@ -1336,8 +1338,8 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Guía del usuario</a></b></td><td>Proveedores, combinaciones, integración con CLI y despliegue</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Guía de configuración</a></b></td><td>Métodos completos de instalación, configuraciones de herramientas CLI, configuración de protocolos y ajuste de tiempos de espera</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Guía de herramientas CLI</a></b></td><td>Configuración específica para Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo y Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Modo remoto</a></b></td><td>Controla una instancia remota de OmniRoute (VPS) desde la CLI de tu portátil mediante tokens de acceso con alcance limitado</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Configuración de Claude Code</a></b></td><td>Conecta Claude Code con OmniRoute (local/remoto) mediante <code>launch</code> y perfiles específicos para cada modelo</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Modo remoto</a></b></td><td>Controla una instancia remota de 67router (VPS) desde la CLI de tu portátil mediante tokens de acceso con alcance limitado</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Configuración de Claude Code</a></b></td><td>Conecta Claude Code con 67router (local/remoto) mediante <code>launch</code> y perfiles específicos para cada modelo</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Inicio rápido</a></b></td><td>Instalar → conectar → configurar en 3 pasos</td></tr>
 </table>
 
@@ -1349,7 +1351,7 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
   <tr><td nowrap><b><a href="contrib/podman/README.md">Guía de Podman</a></b></td><td>Integración de Quadlet con systemd, podman-compose y SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Despliegue en máquinas virtuales</a></b></td><td>Guía completa: configuración de máquina virtual + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Despliegue en Fly.io</a></b></td><td>Despliega en Fly.io con almacenamiento persistente</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Guía de Termux</a></b></td><td>Ejecuta OmniRoute en Android mediante Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Guía de Termux</a></b></td><td>Ejecuta 67router en Android mediante Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">Guía de PWA</a></b></td><td>Instalación, almacenamiento en caché y arquitectura de la aplicación web progresiva</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Guía de desinstalación</a></b></td><td>Eliminación completa para todos los métodos de instalación</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Configuración del entorno</a></b></td><td>Variables y referencias completas de <code>.env</code></td></tr>
@@ -1404,7 +1406,7 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
 
 # ⭐ Principales colaboradores
 
-> OmniRoute está formado por una apasionada comunidad de código abierto. Estas personas han realizado contribuciones excepcionales que repercuten directamente en la calidad, la estabilidad y el alcance del proyecto. **Gracias.**
+> 67router está formado por una apasionada comunidad de código abierto. Estas personas han realizado contribuciones excepcionales que repercuten directamente en la calidad, la estabilidad y el alcance del proyecto. **Gracias.**
 
 ### Colaboradores externos por solicitudes de incorporación de cambios fusionadas
 
@@ -1522,7 +1524,7 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
 
 <sub>Revisado de nuevo el 2026-10-18 14:44:45 UTC: commits atribuidos por GitHub según la API de colaboradores del repositorio para la rama predeterminada <code>release/v3.8.52</code>. La API devolvió 849 identidades (429 usuarios, 2 bots y 418 anónimas); esta tabla excluye al responsable del mantenimiento, los bots y las identidades anónimas, y conserva los empates en la clasificación. Es distinta tanto de la clasificación anterior de PR fusionadas como del censo de metadatos de Git que aparece a continuación.</sub>
 
-> 🙏 Las funcionalidades, correcciones de errores y mejoras de infraestructura aportadas por estos colaboradores son una **parte fundamental** de lo que hace que OmniRoute sea fiable y cuente con tantas funcionalidades. Cada pull request, cada caso de prueba y cada archivo de traducción i18n importan. El código abierto lo construyen personas como ellas.
+> 🙏 Las funcionalidades, correcciones de errores y mejoras de infraestructura aportadas por estos colaboradores son una **parte fundamental** de lo que hace que 67router sea fiable y cuente con tantas funcionalidades. Cada pull request, cada caso de prueba y cada archivo de traducción i18n importan. El código abierto lo construyen personas como ellas.
 
 </div>
 
@@ -1534,7 +1536,7 @@ Métricas canónicas al 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
 
 <div align="center">
 
-Un sincero agradecimiento a las personas que financian OmniRoute de su propio bolsillo: cada contribución mantiene el proyecto gratuito, independiente y en marcha.
+Un sincero agradecimiento a las personas que financian 67router de su propio bolsillo: cada contribución mantiene el proyecto gratuito, independiente y en marcha.
 
 <table>
   <tr>
@@ -1624,7 +1626,7 @@ Un sincero agradecimiento a las personas que financian OmniRoute de su propio bo
 
 <sub>Patrocinadores públicos de GitHub verificados nuevamente el 2026-10-18 mediante la API GraphQL de GitHub Sponsors: 11 patrocinios públicos (6 activos y 5 anteriores) de un total de 14. El estado <code>isActive</code> de GitHub determina las etiquetas de actividad anteriores; se sigue agradeciendo a los antiguos colaboradores públicos que realizaron una aportación única, mientras que los patrocinadores privados permanecen anónimos. Las donaciones realizadas mediante Ko-fi, Buy Me a Coffee, Liberapay, PIX y criptomonedas no aparecen porque no tienen un registro público de patrocinio.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Conviértete en patrocinador →</a></b> — cada dólar mantiene OmniRoute gratuito e independiente.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Conviértete en patrocinador →</a></b> — cada dólar mantiene 67router gratuito e independiente.
 
 </div>
 
@@ -1696,14 +1698,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de **[9router](https://github.com/decolua/9router)** y una adaptación a TypeScript del proyecto en Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)**; a partir de ahí, cada uno de los subsistemas que aparecen a continuación se inspiró en un proyecto de código abierto que abrió camino. Cada uno dio forma a una parte concreta de OmniRoute. Este es nuestro agradecimiento para todos ellos. 🙏
+67router se apoya en el trabajo de gigantes. Comenzó como una bifurcación de **[9router](https://github.com/decolua/9router)** y una adaptación a TypeScript del proyecto en Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)**; a partir de ahí, cada uno de los subsistemas que aparecen a continuación se inspiró en un proyecto de código abierto que abrió camino. Cada uno dio forma a una parte concreta de 67router. Este es nuestro agradecimiento para todos ellos. 🙏
 
 > ⭐ recuentos de estrellas verificados mediante la API REST de GitHub el 18 de octubre de 2026; den una estrella a estos proyectos. Los recuentos son una instantánea exacta con fecha y, naturalmente, cambiarán.
 
 ### 🧬 Linaje y puerta de enlace
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>El proyecto original sobre el que se construye esta bifurcación, ampliado aquí con API multimodales y una reescritura completa en TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>La implementación en Go que inspiró esta adaptación a JavaScript / TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>La puerta de enlace de IA cuyo conjunto de datos público de precios alimenta nuestra sincronización de seguimiento de costes y cuyo modelo de normalización de proveedores sirvió de base para nuestro enrutamiento.</td></tr>
@@ -1711,19 +1713,19 @@ OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de 
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Patrones adaptados para la recuperación de transmisiones, alias sin razonamiento, búsqueda web de respaldo, límites de ventana deslizante, ocultación de datos en registros y flujos reforzados del iniciador.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Patrones de elección de herramientas, restricciones de salida y confirmación de herramientas de Cursor Composer adaptados al ejecutor nativo de Cursor.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Patrones de inicio de sesión nuevo y rotación de tokens de actualización adaptados para la reautenticación OAuth de Codex.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Valores predeterminados de transformación compatibles con Claude Code y comportamiento de las cabeceras de facturación generalizados en el puente de OmniRoute controlado mediante configuración.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Sus asignaciones de modelos Grok, su generador Statsig de TypeError simulado, sus valores predeterminados de solicitudes y dispositivos y su procesador de respuestas NDJSON se adaptaron de forma sustancial al ejecutor de Grok Web de OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Valores predeterminados de transformación compatibles con Claude Code y comportamiento de las cabeceras de facturación generalizados en el puente de 67router controlado mediante configuración.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Sus asignaciones de modelos Grok, su generador Statsig de TypeError simulado, sus valores predeterminados de solicitudes y dispositivos y su procesador de respuestas NDJSON se adaptaron de forma sustancial al ejecutor de Grok Web de 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>La principal fuente de código transitiva en la que se basa grok2api-merged; sus implementaciones de modelos, cabeceras, cargas útiles, Statsig y procesadores se conservan en el linaje de Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>El código fuente MIT subyacente para los valores predeterminados de cargas útiles y dispositivos de Grok, el generador Statsig y el procesador <code>result.response</code>, incorporado a través de TQZHR y grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Una fuente transitiva acreditada por grok2api-merged por su capa de agrupación de proxys; OmniRoute conserva ese aviso de linaje, pero no afirma haber adaptado una agrupación de proxys en su ejecutor acotado de Grok Web.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Su proxy de Grok autenticado mediante cookies y su patrón de transmisión <code>result.response.token</code> sirvieron de base para el transporte de Grok Web de OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Una fuente transitiva acreditada por grok2api-merged por su capa de agrupación de proxys; 67router conserva ese aviso de linaje, pero no afirma haber adaptado una agrupación de proxys en su ejecutor acotado de Grok Web.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Su proxy de Grok autenticado mediante cookies y su patrón de transmisión <code>result.response.token</code> sirvieron de base para el transporte de Grok Web de 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>La implementación original de Grok Web tomó como referencia su diseño de conexión ascendente HTTP/navegador; su ruta HTTP directa deriva de GrokProxy, por lo que no se afirma haber realizado una adaptación de código independiente.</td></tr>
 </table>
 
 ### 🗜️ Contexto y compresión de tokens — motores
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>El proyecto viral «¿por qué usar muchos tokens cuando pocos tokens bastan?» — su filosofía de habla cavernícola impulsa nuestro modo de compresión estándar y más de 30 reglas de eliminación de relleno y condensación.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Compresión de alto rendimiento para la salida de comandos — inspiró nuestro motor RTK, el DSL de filtrado JSON, la recuperación de la salida sin procesar y la canalización apilada RTK → Caveman.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Compresión reversible de contexto (SmartCrusher) — inspiró nuestro motor <code>headroom</code> y el patrón de marcadores de recuperación <code>ccr</code>.</td></tr>
@@ -1731,15 +1733,15 @@ OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de 
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>El port para JS/ONNX (MobileBERT / XLM-RoBERTa) utilizado como backend en un hilo de trabajo para nuestro motor LLMLingua.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Compresión de tokens en portugués brasileño — impulsa nuestro paquete de idioma pt-BR: reducción de pleonasmos y eliminación de relleno adaptadas a la gramática del portugués brasileño.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>La habilidad viral del «desarrollador sénior perezoso» que aplica YAGNI al código — inspiró nuestro estilo de salida <b>less-code</b>: prioriza el cambio funcional más pequeño para reducir el código _generado_ (el equivalente en el eje de salida a la prosa concisa de Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Su estilo de respuesta orientado primero a la acción y adaptado al TDAH se incorporó al estilo de salida conciso de OmniRoute en cinco idiomas.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Su estilo de respuesta orientado primero a la acción y adaptado al TDAH se incorporó al estilo de salida conciso de 67router en cinco idiomas.</td></tr>
 </table>
 
 ### 🧩 Formatos compactos, investigación sobre tokens y herramientas conscientes del código
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Notación de objetos orientada a tokens — su modelo columnar de encabezado más filas dio forma a nuestra etapa de compactación tabular.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Su formato compacto de grafos y su diseño de perfiles genéricos sirvieron de base para la compactación tabular de OmniRoute y el formato del códec Headroom.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Su formato compacto de grafos y su diseño de perfiles genéricos sirvieron de base para la compactación tabular de 67router y el formato del códec Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>La implementación MIT en TypeScript, incorporada directamente y ampliada como códec de perfiles genéricos de Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Caché Brotli/SQLite más delta de contexto por sesión — inspiró nuestro motor <code>session-dedup</code>.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Compactación de la salida de Bash más perfiles MCP — inspiró nuestra disciplina de abandono de la compresión y la reducción de manifiestos de herramientas MCP.</td></tr>
@@ -1756,7 +1758,7 @@ OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de 
 ### 🧠 Memoria y RAG
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Capa de memoria universal: su modelo de proxy como límite de escritura/lectura dio forma a nuestra arquitectura de memoria.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Agentes con estado y memoria por niveles: inspiraron nuestro modelo por niveles de Control y Recuperación de Contexto (CCR).</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>La taxonomía ProblemMap de 16 modos de fallo recurrentes de RAG/LLM: el vocabulario compartido de nuestra guía de resolución de problemas.</td></tr>
@@ -1765,15 +1767,15 @@ OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de 
 ### 🛰️ Inspección de tráfico, MITM y proxy transparente
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>La interceptación y el análisis MITM del tráfico entre asistentes de programación y LLM sirvieron de base para los requisitos iniciales del Inspector de Tráfico. Cuatro módulos derivados anteriormente —fusión de SSE, normalización de conversaciones, enmascaramiento de secretos y saneamiento de encabezados— se han sustituido por implementaciones independientes de sala limpia basadas en estándares públicos de protocolo. Las dos superficies de paso directo al host (<code>passthrough.ts</code> y <code>_internal/bypass.cjs</code>) siguen siendo implementaciones internas de OmniRoute clasificadas de forma independiente; no se reescribieron como parte de esa sustitución.</td></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>La interceptación y el análisis MITM del tráfico entre asistentes de programación y LLM sirvieron de base para los requisitos iniciales del Inspector de Tráfico. Cuatro módulos derivados anteriormente —fusión de SSE, normalización de conversaciones, enmascaramiento de secretos y saneamiento de encabezados— se han sustituido por implementaciones independientes de sala limpia basadas en estándares públicos de protocolo. Las dos superficies de paso directo al host (<code>passthrough.ts</code> y <code>_internal/bypass.cjs</code>) siguen siendo implementaciones internas de 67router clasificadas de forma independiente; no se reescribieron como parte de esa sustitución.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Enrutamiento de proxy transparente por proceso: inspiró nuestro cierre seguro del MITM ante fallos, los tiempos de espera por inactividad de sockets, la atribución de procesos mediante <code>/proc</code> y la captura TPROXY.</td></tr>
 </table>
 
 ### 📚 Datos de modelos, observabilidad e interfaz de usuario
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Base de datos abierta de especificaciones, precios y capacidades de modelos de IA, sincronizada de forma nativa con nuestro catálogo de modelos.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>La biblioteca de gráficos basada en nodos que impulsa nuestro Estudio de Compresión y nuestro Estudio de Combinación/Enrutamiento en tiempo real.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>La visualización en vivo de gráficos de flujo de trabajo de LangGraph Studio inspiró la vista en cascada en tiempo real de nuestros Estudios.</td></tr>
@@ -1786,19 +1788,19 @@ OmniRoute se apoya en el trabajo de gigantes. Comenzó como una bifurcación de 
 ### 🛡️ Seguridad
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Una lista seleccionada de bibliotecas seguras por defecto que orienta nuestras decisiones de seguridad (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Herramientas complementarias
 
 <table>
-  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a OmniRoute</th></tr>
+  <tr><th align="left">Proyecto</th><th align="center">⭐</th><th align="left">Cómo inspiró a 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Inspiró la desduplicación de solicitudes, el mecanismo alternativo de emergencia sin coste, las estrategias conectables de Auto-Combo y la clasificación multilingüe de intenciones.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Su reasignación de modelos basada en cuentas, la validación de rutas de ejecutables y el comportamiento de las etiquetas de planes sirvieron de base para el entorno de ejecución Antigravity de OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Su formato compacto de cuenta regresiva para el restablecimiento de cuotas inspiró la visualización correspondiente de los límites de proveedores en OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Sus integraciones ACP inspiraron la detección automática de agentes CLI instalados en OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificó la interfaz de cuotas de Grok Build; posteriormente, OmniRoute verificó y corrigió de forma independiente el formato real de transmisión.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Su reasignación de modelos basada en cuentas, la validación de rutas de ejecutables y el comportamiento de las etiquetas de planes sirvieron de base para el entorno de ejecución Antigravity de 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Su formato compacto de cuenta regresiva para el restablecimiento de cuotas inspiró la visualización correspondiente de los límites de proveedores en 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Sus integraciones ACP inspiraron la detección automática de agentes CLI instalados en 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identificó la interfaz de cuotas de Grok Build; posteriormente, 67router verificó y corrigió de forma independiente el formato real de transmisión.</td></tr>
 </table>
 
 ## 📄 Licencia
@@ -1811,7 +1813,7 @@ Licencia MIT: consulta [LICENSE](LICENSE) para más detalles.
 
 **[⬆ Volver arriba](#-omniroute)** · Hecho con ❤️ para la comunidad de IA de código abierto.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Licencia MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · Licencia MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions habilitado para preguntas y respuestas de la comunidad -->

@@ -4,7 +4,7 @@
 
 ---
 
-E2E validace nasazení OmniRoute v reálném prostředí běžícím na homologačním VPS
+E2E validace nasazení 67router v reálném prostředí běžícím na homologačním VPS
 (`HOMOLOG_BASE_URL`, např. `http://192.168.0.15:20128`). Jediný příkaz nahrazuje ruční
 kontrolní seznam STOP #2 pro vydání automatizovaným během, který vytváří důkazy.
 

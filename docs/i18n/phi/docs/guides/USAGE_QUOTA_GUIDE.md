@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Sinusubaybayan ng OmniRoute ang paggamit ng token ng bawat request, kinakalkula ang gastos, ipinapatupad ang quota ng bawat API key, at ipinapakita ang analytics sa dashboard. Ipinapaliwanag ng gabay na ito kung paano gumagana ang lahat ng ito.
+> **TL;DR**: Sinusubaybayan ng 67router ang paggamit ng token ng bawat request, kinakalkula ang gastos, ipinapatupad ang quota ng bawat API key, at ipinapakita ang analytics sa dashboard. Ipinapaliwanag ng gabay na ito kung paano gumagana ang lahat ng ito.
 
 **Mga Source:**
 
@@ -17,7 +17,7 @@
 
 ## Pangkalahatang-ideya
 
-Ang bawat request na dumadaan sa OmniRoute ay lumilikha ng **usage record** na naglalaman ng:
+Ang bawat request na dumadaan sa 67router ay lumilikha ng **usage record** na naglalaman ng:
 
 - **Pagkakakilanlan**: kung aling API key, provider, model, at combo
 - **Mga Token**: mga prompt token, completion token, naka-cache na token, at kabuuan
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Para sa mga provider na hindi nagbabalik ng usage (ilang web-cookie provider), **tinatantya** ng OmniRoute ang mga token gamit ang heuristic na `~4 chars per token` (tingnan ang `open-sse/services/autoCombo/pipelineRouter.ts`).
+Para sa mga provider na hindi nagbabalik ng usage (ilang web-cookie provider), **tinatantya** ng 67router ang mga token gamit ang heuristic na `~4 chars per token` (tingnan ang `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Mga Naka-cache na Token
 
-Hiwalay na sinusubaybayan ng OmniRoute ang `cached_tokens` mula sa `prompt_tokens` dahil:
+Hiwalay na sinusubaybayan ng 67router ang `cached_tokens` mula sa `prompt_tokens` dahil:
 
 - Naniningil ang Anthropic prompt caching ng mas mababang rate para sa mga naka-cache na token (10% ng karaniwang halaga)
 - Nagbabalik ang ilang provider ng `cache_read_input_tokens` na dapat magkaroon ng ibang presyo
@@ -117,7 +117,7 @@ Awtomatikong sini-sync ang datos ng pagpepresyo mula sa LiteLLM sa pamamagitan n
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Para sa mga modelong walang datos ng pagpepresyo, gumagamit ang OmniRoute ng **pagtatantya ng gastos** batay sa mga panloob na average na rate (mula sa datos ng pagpepresyo ng LiteLLM).
+Para sa mga modelong walang datos ng pagpepresyo, gumagamit ang 67router ng **pagtatantya ng gastos** batay sa mga panloob na average na rate (mula sa datos ng pagpepresyo ng LiteLLM).
 
 ---
 

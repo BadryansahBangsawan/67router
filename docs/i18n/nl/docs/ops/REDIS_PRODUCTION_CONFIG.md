@@ -6,7 +6,7 @@
 
 ## Overzicht
 
-Redis is een **optionele, niet-verplichte afhankelijkheid** in OmniRoute — de applicatie schakelt bij onbeschikbaarheid van Redis zonder problemen over op alternatieven in het geheugen. In productie verlaagt het afstemmen van Redis de latentie voor vier afzonderlijke workloads:
+Redis is een **optionele, niet-verplichte afhankelijkheid** in 67router — de applicatie schakelt bij onbeschikbaarheid van Redis zonder problemen over op alternatieven in het geheugen. In productie verlaagt het afstemmen van Redis de latentie voor vier afzonderlijke workloads:
 
 | Workload                      | Aansturing                    | Clientfactory                                      | Sleutelpatroon                                               |
 | ----------------------------- | ----------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
@@ -15,7 +15,7 @@ Redis is een **optionele, niet-verplichte afhankelijkheid** in OmniRoute — de 
 | Quotaopslag                   | `redisQuotaStore.ts`          | Afzonderlijke `getRedisClient(url)`-singleton      | `<prefix>quota:*` configureerbaar per instantie              |
 | Circuitbreaker voor opwarming | `redisCircuitBreakerStore.ts` | Afzonderlijke client in `circuitBreakerFactory.ts` | `<prefix>warmup:cb:<connectionId>`                           |
 
-Alle vier workloads delen één namespacevoorvoegsel, zodat OmniRoute naast andere apps op één Redis-instantie kan bestaan (bijv. `127.0.0.1:6379`). Zie [Sleutelnamespacing](#key-namespacing).
+Alle vier workloads delen één namespacevoorvoegsel, zodat 67router naast andere apps op één Redis-instantie kan bestaan (bijv. `127.0.0.1:6379`). Zie [Sleutelnamespacing](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Alle vier workloads delen één namespacevoorvoegsel, zodat OmniRoute naast ande
 
 ## Sleutelnamespacing
 
-OmniRoute deelt een Redis-instantie met alle andere toepassingen die op de host worden uitgevoerd. Zonder een namespace kunnen sleutels zoals `auth:api_key:<sha256>` of `rl:*` conflicteren met sleutels van andere applicaties die dezelfde Redis gebruiken (op deze instantie draait Redis op `127.0.0.1:6379` naast andere services).
+67router deelt een Redis-instantie met alle andere toepassingen die op de host worden uitgevoerd. Zonder een namespace kunnen sleutels zoals `auth:api_key:<sha256>` of `rl:*` conflicteren met sleutels van andere applicaties die dezelfde Redis gebruiken (op deze instantie draait Redis op `127.0.0.1:6379` naast andere services).
 
-Stel `REDIS_KEY_PREFIX` in op een niet-lege tekenreeks om **elke** OmniRoute-sleutel van een voorvoegsel te voorzien:
+Stel `REDIS_KEY_PREFIX` in op een niet-lege tekenreeks om **elke** 67router-sleutel van een voorvoegsel te voorzien:
 
 ```bash
-# .env — alle OmniRoute-sleutels worden omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — alle 67router-sleutels worden omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -91,7 +91,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # laat ruimte over voor de paginacache van het besturingssysteem
 maxmemory-policy allkeys-lru         # verwijder verouderde auth-cachevermeldingen bij geheugendruk
 
-# Persistentie (optioneel — OmniRoute is ook zonder persistentie crashbestendig)
+# Persistentie (optioneel — 67router is ook zonder persistentie crashbestendig)
 save 300 1                           # maak ten minste elke 5 min. een momentopname als ≥1 sleutel is gewijzigd
 appendonly no                        # AOF is niet nodig; gegevens kunnen opnieuw worden gegenereerd
 appendfsync no                       # geen fsync-overhead (RDB is voldoende)

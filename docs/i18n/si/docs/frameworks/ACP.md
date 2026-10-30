@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute විසින් **CLI සොයාගැනීම**, **ස්වදේශීය Agent Client Protocol**, සහ
+67router විසින් **CLI සොයාගැනීම**, **ස්වදේශීය Agent Client Protocol**, සහ
 **පැරණි stdio adapters** වෙන් කරයි. ස්ථාපිත binary එකක් සොයාගැනීමෙන් එහි
 සත්යාපනය, model අනුකූලතාව, හෝ prompt එකක් හැසිරවීමට ඇති සූදානම තහවුරු නොවේ.
 

@@ -6,7 +6,7 @@
 
 ## Umumiy koʻrinish
 
-Redis OmniRoute’da **ixtiyoriy, qatʼiy boʻlmagan bogʻliqlik** hisoblanadi — Redis mavjud boʻlmaganda ilova imkoniyatlarini muammosiz kamaytiradi (xotiradagi
+Redis 67router’da **ixtiyoriy, qatʼiy boʻlmagan bogʻliqlik** hisoblanadi — Redis mavjud boʻlmaganda ilova imkoniyatlarini muammosiz kamaytiradi (xotiradagi
 zaxira mexanizmlaridan foydalanadi). Ishlab chiqarish muhitida Redis’ni sozlash toʻrtta alohida
 ish yuklamasi uchun kechikishni kamaytiradi:
 
@@ -17,7 +17,7 @@ ish yuklamasi uchun kechikishni kamaytiradi:
 | Kvota ombori                                | `redisQuotaStore.ts`          | Alohida `getRedisClient(url)` yagona nusxasi                            | Har bir nusxa uchun sozlanadigan `<prefix>quota:*`           |
 | Dastlabki ishga tushirish avtomatik uzgichi | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` ichidagi alohida klient                      | `<prefix>warmup:cb:<connectionId>`                           |
 
-Barcha toʻrtta ish yuklamasi bitta nomlar makoni prefiksidan foydalanadi, shu sababli OmniRoute bitta
+Barcha toʻrtta ish yuklamasi bitta nomlar makoni prefiksidan foydalanadi, shu sababli 67router bitta
 Redis nusxasida (masalan, `127.0.0.1:6379`) boshqa ilovalar bilan birga ishlashi mumkin. [Kalitlarning nomlar makoni](#key-namespacing) boʻlimiga qarang.
 
 ---
@@ -41,14 +41,14 @@ Redis nusxasida (masalan, `127.0.0.1:6379`) boshqa ilovalar bilan birga ishlashi
 
 ## Kalitlarning nomlar makoni
 
-OmniRoute Redis nusxasini xostda ishlaydigan boshqa xizmatlar bilan ulashadi. Nomlar makonisiz
+67router Redis nusxasini xostda ishlaydigan boshqa xizmatlar bilan ulashadi. Nomlar makonisiz
 `auth:api_key:<sha256>` yoki `rl:*` kabi kalitlar ayni Redis’dan foydalanadigan boshqa ilovalar
 kalitlari bilan toʻqnashishi mumkin (bu nusxa Redis’ni boshqa xizmatlar bilan birga `127.0.0.1:6379` manzilida ishga tushiradi).
 
-**Har bir** OmniRoute kalitiga prefiks qoʻshish uchun `REDIS_KEY_PREFIX` ni boʻsh boʻlmagan satrga oʻrnating:
+**Har bir** 67router kalitiga prefiks qoʻshish uchun `REDIS_KEY_PREFIX` ni boʻsh boʻlmagan satrga oʻrnating:
 
 ```bash
-# .env — barcha OmniRoute kalitlari omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* koʻrinishiga keladi
+# .env — barcha 67router kalitlari omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* koʻrinishiga keladi
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # OT sahifalar keshi uchun joy qoldirish
 maxmemory-policy allkeys-lru         # bosim ostida eskirgan autentifikatsiya keshi yozuvlarini chiqarib tashlash
 
-# Saqlab qolish (ixtiyoriy — OmniRoute busiz ham nosozliklarga bardoshli)
+# Saqlab qolish (ixtiyoriy — 67router busiz ham nosozliklarga bardoshli)
 save 300 1                           # agar ≥1 ta kalit o‘zgargan bo‘lsa, kamida har 5 daqiqada oniy nusxa olish
 appendonly no                        # AOF kerak emas; ma’lumotlarni qayta yaratish mumkin
 appendfsync no                       # fsync ortiqcha xarajati yo‘q (RDB yetarli)

@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute je dodáván jako plně instalovatelná progresivní webová aplikace. Když otevřete ovládací panel z libovolného mobilního prohlížeče — Android (Chrome) nebo iOS (Safari) — můžete jej „Přidat na plochu“ a získat prostředí podobné nativní aplikaci bez nutnosti použití obchodu s aplikacemi.
+67router je dodáván jako plně instalovatelná progresivní webová aplikace. Když otevřete ovládací panel z libovolného mobilního prohlížeče — Android (Chrome) nebo iOS (Safari) — můžete jej „Přidat na plochu“ a získat prostředí podobné nativní aplikaci bez nutnosti použití obchodu s aplikacemi.
 
 ## Co je PWA?
 
-Progresivní webová aplikace promění webový ovládací panel OmniRoute v aplikaci, která vypadá a funguje jako nativní mobilní aplikace. Po instalaci:
+Progresivní webová aplikace promění webový ovládací panel 67router v aplikaci, která vypadá a funguje jako nativní mobilní aplikace. Po instalaci:
 
 - Spouští se z plochy pomocí vlastní ikony
 - Otevírá se na celou obrazovku — bez adresního řádku prohlížeče nebo uživatelského rozhraní karet
@@ -20,26 +20,26 @@ Progresivní webová aplikace promění webový ovládací panel OmniRoute v apl
 
 ### Android (Chrome)
 
-1. Otevřete ovládací panel OmniRoute v prohlížeči Chrome: `http://YOUR_IP:20128`
-2. Chrome automaticky zobrazí banner **„Přidat OmniRoute na plochu“**, případně:
+1. Otevřete ovládací panel 67router v prohlížeči Chrome: `http://YOUR_IP:20128`
+2. Chrome automaticky zobrazí banner **„Přidat 67router na plochu“**, případně:
    - Klepněte na nabídku **⋮** (tři tečky) → **„Přidat na plochu“** nebo **„Nainstalovat aplikaci“**
 3. Potvrďte výzvu
-4. OmniRoute se zobrazí na ploše jako samostatná aplikace
+4. 67router se zobrazí na ploše jako samostatná aplikace
 
 ### iOS (Safari)
 
-1. Otevřete ovládací panel OmniRoute v prohlížeči Safari: `http://YOUR_IP:20128`
+1. Otevřete ovládací panel 67router v prohlížeči Safari: `http://YOUR_IP:20128`
 2. Klepněte na tlačítko **Sdílet** (čtverec se šipkou)
 3. Přejděte dolů a klepněte na **„Přidat na plochu“**
-4. Zadejte název (výchozí je „OmniRoute“) a klepněte na **Přidat**
-5. OmniRoute se zobrazí na ploše s ikonou aplikace
+4. Zadejte název (výchozí je „67router“) a klepněte na **Přidat**
+5. 67router se zobrazí na ploše s ikonou aplikace
 
 ### Počítač (Chrome / Edge)
 
-1. Otevřete ovládací panel OmniRoute
-2. Klikněte na **ikonu instalace** v adresním řádku (nebo na ⋮ → „Nainstalovat OmniRoute...“)
+1. Otevřete ovládací panel 67router
+2. Klikněte na **ikonu instalace** v adresním řádku (nebo na ⋮ → „Nainstalovat 67router...“)
 3. Potvrďte výzvu
-4. OmniRoute se otevře jako samostatné okno — bez karet a adresního řádku
+4. 67router se otevře jako samostatné okno — bez karet a adresního řádku
 
 ## Funkce
 
@@ -49,7 +49,7 @@ Manifest je nakonfigurován pomocí `display: "fullscreen"`, což znamená, že 
 
 ### Podpora režimu offline
 
-OmniRoute obsahuje service worker (`sw.js`), který zajišťuje inteligentní ukládání do mezipaměti:
+67router obsahuje service worker (`sw.js`), který zajišťuje inteligentní ukládání do mezipaměti:
 
 | Typ prostředku                                                    | Strategie                                   | Chování                                                                                                    |
 | ----------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Když není síť dostupná a uživatel přejde na novou stránku, service worke
 
 ### Ikony aplikace
 
-OmniRoute poskytuje ikony optimalizované pro jednotlivé platformy:
+67router poskytuje ikony optimalizované pro jednotlivé platformy:
 
 | Soubor                 | Velikost         | Používá se pro                                        |
 | ---------------------- | ---------------- | ----------------------------------------------------- |
@@ -94,8 +94,8 @@ Generován frameworkem Next.js prostřednictvím `src/app/manifest.ts`:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Tato klientská komponenta umístěná v `src/shared/components/PwaRegister.tsx`
 
 ## Použití s Termuxem (Android)
 
-Při spuštění OmniRoute v systému Android prostřednictvím Termuxu funguje PWA bez problémů:
+Při spuštění 67router v systému Android prostřednictvím Termuxu funguje PWA bez problémů:
 
-1. Spusťte OmniRoute v Termuxu: `npx omniroute`
+1. Spusťte 67router v Termuxu: `npx omniroute`
 2. Otevřete Chrome na stejném telefonu: `http://localhost:20128`
 3. Nainstalujte PWA pomocí možnosti „Přidat na plochu“
 4. PWA se připojí k místnímu serveru Termux — vše běží přímo v zařízení
@@ -156,7 +156,7 @@ Tato kombinace znamená, že váš telefon se systémem Android je zároveň **s
 
 ## Použití z jiných zařízení
 
-Nainstalujte PWA na libovolné zařízení, které má prostřednictvím prohlížeče přístup k vašemu serveru OmniRoute:
+Nainstalujte PWA na libovolné zařízení, které má prostřednictvím prohlížeče přístup k vašemu serveru 67router:
 
 - **Jiný telefon/tablet**: Přejděte na `http://PHONE_IP:20128` a nainstalujte PWA
 - **Notebook**: Otevřete Chrome/Edge a nainstalujte aplikaci jako desktopovou PWA

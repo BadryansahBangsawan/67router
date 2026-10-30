@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: OmniRoute sử dụng **SQLite với cơ chế ghi nhật ký WAL** làm kho lưu trữ chính, cùng mã hóa **AES-256-GCM** cho dữ liệu nhạy cảm khi lưu trữ. Hướng dẫn này đề cập đến lược đồ, quá trình di chuyển, sao lưu/khôi phục và các quy trình vận hành.
+> **Tóm tắt**: 67router sử dụng **SQLite với cơ chế ghi nhật ký WAL** làm kho lưu trữ chính, cùng mã hóa **AES-256-GCM** cho dữ liệu nhạy cảm khi lưu trữ. Hướng dẫn này đề cập đến lược đồ, quá trình di chuyển, sao lưu/khôi phục và các quy trình vận hành.
 
 **Nguồn:**
 
@@ -19,7 +19,7 @@
 
 ## Tại sao chọn SQLite?
 
-OmniRoute chọn SQLite thay vì PostgreSQL/MySQL vì một số lý do:
+67router chọn SQLite thay vì PostgreSQL/MySQL vì một số lý do:
 
 | Yếu tố                 | SQLite                                     | PostgreSQL                                 |
 | ---------------------- | ------------------------------------------ | ------------------------------------------ |
@@ -30,7 +30,7 @@ OmniRoute chọn SQLite thay vì PostgreSQL/MySQL vì một số lý do:
 | **Sao lưu**            | Sao chép một tệp duy nhất                  | `pg_dump` hoặc ảnh chụp nhanh hệ thống tệp |
 | **Trường hợp sử dụng** | Cài đặt theo từng người dùng, dạng nhúng   | SaaS đa đối tượng thuê                     |
 
-Đối với các triển khai **một người dùng, một phiên bản** (trường hợp sử dụng chính của OmniRoute), SQLite đơn giản và nhanh hơn.
+Đối với các triển khai **một người dùng, một phiên bản** (trường hợp sử dụng chính của 67router), SQLite đơn giản và nhanh hơn.
 
 ### Ghi nhật ký WAL
 
@@ -50,7 +50,7 @@ Kích thước bộ nhớ đệm mặc định là **65.536 KiB (64 MiB)**. SQLi
 `cache_size` là giới hạn trên xấp xỉ tính theo KiB và phân bổ các trang theo nhu cầu.
 **Cài đặt > Hệ thống & Lưu trữ > Kích thước bộ nhớ đệm** chấp nhận các giá trị nguyên từ **1 đến
 1.000.000 KiB**; khi lưu cài đặt, giá trị này được áp dụng cho kết nối cơ sở dữ liệu đang hoạt động,
-và OmniRoute khôi phục giá trị đã lưu khi khởi động.
+và 67router khôi phục giá trị đã lưu khi khởi động.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Kiến trúc mô-đun miền
 
-Cơ sở dữ liệu của OmniRoute có **110 mô-đun TypeScript cấp cao nhất** trong `src/lib/db/`. Mỗi mô-đun miền:
+Cơ sở dữ liệu của 67router có **110 mô-đun TypeScript cấp cao nhất** trong `src/lib/db/`. Mỗi mô-đun miền:
 
 - Sở hữu một hoặc nhiều bảng cụ thể
 - Xuất các hàm CRUD có kiểu dữ liệu
@@ -90,7 +90,7 @@ Cơ sở dữ liệu của OmniRoute có **110 mô-đun TypeScript cấp cao nh�
 
 ### 110 mô-đun DB cấp cao nhất
 
-OmniRoute có **110 tệp TypeScript cấp cao nhất** trong `src/lib/db/`. Dưới đây là một số mô-đun cốt lõi tiêu biểu; hãy xem danh sách thư mục để biết danh sách đầy đủ:
+67router có **110 tệp TypeScript cấp cao nhất** trong `src/lib/db/`. Dưới đây là một số mô-đun cốt lõi tiêu biểu; hãy xem danh sách thư mục để biết danh sách đầy đủ:
 
 | Mô-đun                  | Bảng                                                           | Trách nhiệm                                                                  |
 | ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Danh sách đầy đủ gồm hơn 30 bảng nằm trong `src/lib/db/migrations/
 
 ## Di chuyển cơ sở dữ liệu
 
-OmniRoute sử dụng **các migration có phiên bản và có tính lũy đẳng** trong `src/lib/db/migrations/`. Mỗi migration là một tệp SQL duy nhất có tên theo định dạng `NNN_description.sql`.
+67router sử dụng **các migration có phiên bản và có tính lũy đẳng** trong `src/lib/db/migrations/`. Mỗi migration là một tệp SQL duy nhất có tên theo định dạng `NNN_description.sql`.
 
 ### Quy tắc đặt tên migration
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Các thay đổi không tương thích ngược** (ví dụ: xóa cột) rất phức tạp. OmniRoute KHÔNG hỗ trợ hạ cấp — sau khi một migration được áp dụng, thay đổi schema sẽ tồn tại vĩnh viễn. Hãy lập kế hoạch phù hợp.
+> **Các thay đổi không tương thích ngược** (ví dụ: xóa cột) rất phức tạp. 67router KHÔNG hỗ trợ hạ cấp — sau khi một migration được áp dụng, thay đổi schema sẽ tồn tại vĩnh viễn. Hãy lập kế hoạch phù hợp.
 
 ---
 
@@ -310,7 +310,7 @@ Vì lý do hiệu năng, các dữ liệu sau được lưu dưới dạng văn 
 
 ## Lưu ý về mã hóa (v3.8.16+)
 
-OmniRoute sử dụng **`migrateLegacyEncryptedString()`** để xử lý hai cơ chế mã hóa một cách minh bạch:
+67router sử dụng **`migrateLegacyEncryptedString()`** để xử lý hai cơ chế mã hóa một cách minh bạch:
 
 - **Cũ** (trước v3.5.0): "mã hóa" dựa trên XOR (không phải mật mã thực sự)
 - **Hiện tại**: AES-256-GCM với IV và thẻ xác thực phù hợp
@@ -399,7 +399,7 @@ Lịch biểu được thực thi ở phía máy chủ bởi một tác vụ n�
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Lệnh này sử dụng API sao lưu trực tuyến của SQLite — có thể chạy an toàn trong khi OmniRoute đang hoạt động.
+Lệnh này sử dụng API sao lưu trực tuyến của SQLite — có thể chạy an toàn trong khi 67router đang hoạt động.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Thu gọn
 
-Các phiên bản OmniRoute chạy lâu dài sẽ được hưởng lợi từ việc thỉnh thoảng chạy `VACUUM`:
+Các phiên bản 67router chạy lâu dài sẽ được hưởng lợi từ việc thỉnh thoảng chạy `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Đặt lại (xóa sạch) toàn bộ dữ liệu
 
 ```bash
-# Trước tiên, dừng OmniRoute
+# Trước tiên, dừng 67router
 omniroute stop
 
 # Xóa tệp cơ sở dữ liệu
@@ -613,7 +613,7 @@ Một tiến trình khác đang giữ khóa ghi. Bạn có thể:
 
 - Chờ tiến trình kia hoàn tất (kiểm tra bằng `lsof | grep storage.sqlite`)
 - Chấm dứt tiến trình kia
-- Nếu sự cố vẫn tiếp diễn, hãy khởi động lại OmniRoute
+- Nếu sự cố vẫn tiếp diễn, hãy khởi động lại 67router
 
 ### "Ràng buộc khóa ngoại thất bại"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Bản di chuyển được chạy trong một giao dịch, vì vậy lẽ ra nó đã được hoàn tác. Nếu không:
 
-1. **Dừng OmniRoute** (ngăn các lần thử tiếp theo)
+1. **Dừng 67router** (ngăn các lần thử tiếp theo)
 2. **Kiểm tra trạng thái cơ sở dữ liệu** bằng `sqlite3`
 3. **Sửa thủ công** phần di chuyển chưa hoàn tất
-4. **Chạy lại** OmniRoute (bản di chuyển sẽ được thử lại)
+4. **Chạy lại** 67router (bản di chuyển sẽ được thử lại)
 
 Để ngăn tình trạng này, luôn kiểm thử các bản di chuyển trên một bản sao trước.
 

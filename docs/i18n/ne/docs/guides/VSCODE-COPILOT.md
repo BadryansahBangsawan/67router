@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** ले तपाईंको OmniRoute ले उपलब्ध गराउने प्रत्येक मोडेललाई _नेटिभ_ GitHub Copilot Chat
+**OmniCopilot** ले तपाईंको 67router ले उपलब्ध गराउने प्रत्येक मोडेललाई _नेटिभ_ GitHub Copilot Chat
 मोडेल चयनकर्तामा राख्छ। दोस्रो साइडबार वा छुट्टै च्याट UI छैन — Copilot को एजेन्ट मोड, टुल कलिङ,
 MCP सर्भरहरू र अनुकूलन निर्देशनहरू सबैले काम गरिरहन्छन्, केवल तपाईंले रोजेको मोडेलमा चल्छन्।
 
@@ -23,13 +23,13 @@ MCP सर्भरहरू र अनुकूलन निर्देशन�
 
 ## सेटअप
 
-1. **OmniRoute चलाउनुहोस्** — `npm install -g omniroute && omniroute` (`http://localhost:20128` मा ड्यासबोर्ड)।
-2. **एक्सटेन्सन स्थापना गर्नुहोस्** — Extensions दृश्यमा "OmniRoute" खोज्नुहोस्।
-3. **मोडेल रोज्नुहोस्** — Copilot Chat → मोडेल चयनकर्ता → **Manage Models…** → **OmniRoute**, त्यसपछि
+1. **67router चलाउनुहोस्** — `npm install -g omniroute && omniroute` (`http://localhost:20128` मा ड्यासबोर्ड)।
+2. **एक्सटेन्सन स्थापना गर्नुहोस्** — Extensions दृश्यमा "67router" खोज्नुहोस्।
+3. **मोडेल रोज्नुहोस्** — Copilot Chat → मोडेल चयनकर्ता → **Manage Models…** → **67router**, त्यसपछि
    आफूले चाहेका विकल्पहरूमा चिनो लगाउनुहोस्।
 
-OmniRoute पूर्वनिर्धारित पोर्टमा चल्दा केही पनि कन्फिगर गर्नु पर्दैन। रिमोट इन्स्ट्यान्सका लागि,
-**Activity Bar मा रहेको OmniRoute आइकन** खोल्नुहोस् (वा `OmniRoute: Manage Connection` चलाउनुहोस्) र निम्न सेट गर्नुहोस्:
+67router पूर्वनिर्धारित पोर्टमा चल्दा केही पनि कन्फिगर गर्नु पर्दैन। रिमोट इन्स्ट्यान्सका लागि,
+**Activity Bar मा रहेको 67router आइकन** खोल्नुहोस् (वा `67router: Manage Connection` चलाउनुहोस्) र निम्न सेट गर्नुहोस्:
 
 - **सर्भर URL** — सर्भरको रुट, जस्तै `http://192.168.0.15:20128`। `/v1` प्रत्यय
   एक्सटेन्सनले थप्छ; यसलाई समावेश नगर्नुहोस्।
@@ -74,7 +74,7 @@ HTTP 400 — मोडेल '<id>' छवि-उत्पादन मोडे
 
 त्यसैले चयनकर्तामा पुग्नुअघि तिनीहरूको `type` फिल्डअनुसार तिनलाई फिल्टर गरिन्छ। **Responses-API
 मोडेलहरू राखिन्छन्** — प्रत्येक Codex / GPT-5.x प्रविष्टिले `supported_endpoints: ["responses"]`
-विज्ञापित गर्छ, र OmniRoute ले तिनलाई `/v1/chat/completions` का लागि अनुवाद गर्छ, त्यसैले ती पूर्ण रूपमा प्रयोगयोग्य छन्।
+विज्ञापित गर्छ, र 67router ले तिनलाई `/v1/chat/completions` का लागि अनुवाद गर्छ, त्यसैले ती पूर्ण रूपमा प्रयोगयोग्य छन्।
 
 ### तपाईंले कहिल्यै कन्फिगर नगरेका प्रदायकहरू
 
@@ -86,7 +86,7 @@ HTTP 400 — मोडेल '<id>' छवि-उत्पादन मोडे
 
 ## VS Code ट्याबभित्रको Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` ले OmniRoute dashboard लाई बाह्य ब्राउजरको सट्टा Simple Browser मार्फत editor ट्याबमा रेन्डर गर्छ। Embedding लाई सर्भरमा `DASHBOARD_ALLOW_EMBED=vscode` मार्फत **स्पष्ट रूपमा सक्षम गर्नुपर्छ**, जसले पूर्वनिर्धारित `frame-ancestors 'none'` + `X-Frame-Options: DENY` को सट्टा `frame-ancestors 'self' vscode-webview:` सहित HTML पृष्ठहरू उपलब्ध गराउँछ। API सतह (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ले दुवै अवस्थामा कडा headers कायम राख्छ।
+`omnicopilot.dashboardOpen: "editor"` ले 67router dashboard लाई बाह्य ब्राउजरको सट्टा Simple Browser मार्फत editor ट्याबमा रेन्डर गर्छ। Embedding लाई सर्भरमा `DASHBOARD_ALLOW_EMBED=vscode` मार्फत **स्पष्ट रूपमा सक्षम गर्नुपर्छ**, जसले पूर्वनिर्धारित `frame-ancestors 'none'` + `X-Frame-Options: DENY` को सट्टा `frame-ancestors 'self' vscode-webview:` सहित HTML पृष्ठहरू उपलब्ध गराउँछ। API सतह (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ले दुवै अवस्थामा कडा headers कायम राख्छ।
 
 > ⚠️ **यो build-time flag हो, runtime flag होइन।** Next.js ले `headers()` लाई route manifest मा compile गर्छ, त्यसैले bundle build हुँदा `next.config.mjs` ले variable पढ्छ
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`)।
@@ -112,27 +112,27 @@ Embedding सक्षम गरिएको build बिना पृष्ठ�
 
 ## VS Code भित्रबाट आफ्ना अन्य उपकरणहरू कन्फिगर गर्ने
 
-**`OmniRoute: Configure Coding CLI`** ले Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo र Roo का लागि प्रयोग गर्न तयार profiles लेख्न `omniroute` CLI चलाउँछ — यी
+**`67router: Configure Coding CLI`** ले Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo र Roo का लागि प्रयोग गर्न तयार profiles लेख्न `omniroute` CLI चलाउँछ — यी
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) मा वर्णन गरिएका उही configs हुन्। API key लाई command line मा कहिल्यै नराखी `OMNIROUTE_API_KEY` environment variable मार्फत CLI लाई दिइन्छ।
 
 ---
 
 ## समस्या समाधान
 
-| लक्षण                                          | कारण / समाधान                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| picker मा कुनै OmniRoute models छैनन्          | सर्भर पहुँचयोग्य छैन। status-bar को थोप्लो खैरो हुन्छ; `OmniRoute: Check Connection` चलाउनुहोस्। Discovery डिजाइनअनुसार मौन हुन्छ र prompt देखाउनुको सट्टा कुनै models योगदान गर्दैन।                                                                                                  |
-| प्रत्येक model दुईपटक देखिन्छ                  | तपाईं 1.0.1 भन्दा पुरानो OmniCopilot प्रयोग गर्दै हुनुहुन्छ — update गर्नुहोस्। Extension ले अब `?prefix=alias` अनुरोध गर्छ।                                                                                                                                                           |
-| पहिले सूचीमा रहेको image/audio model अहिले छैन | 1.0.1 देखि जानाजानी हटाइएको हो — यसले कहिल्यै chat request को उत्तर दिन सक्दैनथ्यो।                                                                                                                                                                                                    |
-| Activity Bar बाट panel हराएको छ                | VS Code ले अतिरिक्त view containers लाई Activity Bar को तल रहेको **"…"** overflow मा सार्छ, र right-click मार्फत लुकाइएको container लुकेकै रहन्छ। Activity Bar मा right-click गर्नुहोस् → **OmniRoute** मा चिन्ह लगाउनुहोस्, वा `OmniRoute: Manage Connection` प्रयोग गरेर खोल्नुहोस्। |
-| `editor` mode भए पनि Dashboard ब्राउजरमा खुल्छ | सर्भर `DASHBOARD_ALLOW_EMBED=vscode` सहित **build** गरिएको थिएन (माथि हेर्नुहोस्) — prebuilt install मा startup का बेला यसलाई सेट गर्दा केही हुँदैन। Fallback जानाजानी राखिएको हो।                                                                                                     |
-| providers परिवर्तन गरेपछि Models सूची पुरानो छ | `OmniRoute: Refresh Models`, वा panel मा रहेको ↻ link प्रयोग गर्नुहोस्।                                                                                                                                                                                                                |
+| लक्षण                                          | कारण / समाधान                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| picker मा कुनै 67router models छैनन्           | सर्भर पहुँचयोग्य छैन। status-bar को थोप्लो खैरो हुन्छ; `67router: Check Connection` चलाउनुहोस्। Discovery डिजाइनअनुसार मौन हुन्छ र prompt देखाउनुको सट्टा कुनै models योगदान गर्दैन।                                                                                                 |
+| प्रत्येक model दुईपटक देखिन्छ                  | तपाईं 1.0.1 भन्दा पुरानो OmniCopilot प्रयोग गर्दै हुनुहुन्छ — update गर्नुहोस्। Extension ले अब `?prefix=alias` अनुरोध गर्छ।                                                                                                                                                         |
+| पहिले सूचीमा रहेको image/audio model अहिले छैन | 1.0.1 देखि जानाजानी हटाइएको हो — यसले कहिल्यै chat request को उत्तर दिन सक्दैनथ्यो।                                                                                                                                                                                                  |
+| Activity Bar बाट panel हराएको छ                | VS Code ले अतिरिक्त view containers लाई Activity Bar को तल रहेको **"…"** overflow मा सार्छ, र right-click मार्फत लुकाइएको container लुकेकै रहन्छ। Activity Bar मा right-click गर्नुहोस् → **67router** मा चिन्ह लगाउनुहोस्, वा `67router: Manage Connection` प्रयोग गरेर खोल्नुहोस्। |
+| `editor` mode भए पनि Dashboard ब्राउजरमा खुल्छ | सर्भर `DASHBOARD_ALLOW_EMBED=vscode` सहित **build** गरिएको थिएन (माथि हेर्नुहोस्) — prebuilt install मा startup का बेला यसलाई सेट गर्दा केही हुँदैन। Fallback जानाजानी राखिएको हो।                                                                                                   |
+| providers परिवर्तन गरेपछि Models सूची पुरानो छ | `67router: Refresh Models`, वा panel मा रहेको ↻ link प्रयोग गर्नुहोस्।                                                                                                                                                                                                               |
 
 ---
 
 ## यो पनि हेर्नुहोस्
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — अन्य सबै कोडिङ उपकरणहरू
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — रिमोट OmniRoute सञ्चालन गर्ने
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — रिमोट 67router सञ्चालन गर्ने
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` अनुबन्ध
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — एक्सटेन्सनका आफ्नै क्याटलग टिप्पणीहरू

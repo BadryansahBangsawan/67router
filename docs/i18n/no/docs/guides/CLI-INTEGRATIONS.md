@@ -7,11 +7,11 @@
 For manifestet for delte kjørbare filer, begrensede underordnede miljøer og vedvarende
 Gemini-oppsett, se [CLI-oppstartskontrakter](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute leveres med en familie av `setup-*`-kommandoer som konfigurerer en kode-
-CLI (Codex, Claude Code, OpenCode, Cline, …) til å bruke OmniRoute som bakend — slik at
-verktøyet kommuniserer med **ett** endepunkt, mens OmniRoute ruter til riktig leverandør med
+67router leveres med en familie av `setup-*`-kommandoer som konfigurerer en kode-
+CLI (Codex, Claude Code, OpenCode, Cline, …) til å bruke 67router som bakend — slik at
+verktøyet kommuniserer med **ett** endepunkt, mens 67router ruter til riktig leverandør med
 automatisk reservevalg. Hver kommando leser den **aktive** modellkatalogen fra en kjørende
-OmniRoute-instans (lokal eller ekstern) og skriver verktøyets egen konfigurasjonsfil på **din**
+67router-instans (lokal eller ekstern) og skriver verktøyets egen konfigurasjonsfil på **din**
 maskin. API-nøkkelen refereres til via en miljøvariabel der verktøyet
 støtter det. Kommandoer som lagrer en verktøyspesifikk miljøfil permanent, er angitt nedenfor.
 
@@ -53,7 +53,7 @@ verktøyspesifikke fordypningene:
 
 - [Claude Code-konfigurasjon](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI-konfigurasjon](./CODEX-CLI-CONFIGURATION.md)
-- [Ekstern modus](./REMOTE-MODE.md) — styr en ekstern OmniRoute-instans (VPS / Tailnet) fra den bærbare datamaskinen din
+- [Ekstern modus](./REMOTE-MODE.md) — styr en ekstern 67router-instans (VPS / Tailnet) fra den bærbare datamaskinen din
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot-utvidelsen; den kan også kjøre disse
   `setup-*`-kommandoene for deg fra selve redigeringsprogrammet
 
@@ -89,7 +89,7 @@ serveren, og konfigurasjonen lagres lokalt.
 
 Merknader om flagg (verifisert i kommandokilden):
 
-- `--remote <url>` — henter katalogen fra en ekstern OmniRoute (overstyrer `--port`
+- `--remote <url>` — henter katalogen fra en ekstern 67router (overstyrer `--port`
   og den aktive konteksten). `--api-key <key>` oppgir legitimasjonen for denne
   serveren (bruker som standard miljøvariabelen `OMNIROUTE_API_KEY` eller tokenet til den aktive konteksten).
 - `--only <patterns>` — kommaseparerte delstrenger; behold bare modell-ID-er som samsvarer
@@ -110,7 +110,7 @@ Merknader om flagg (verifisert i kommandokilden):
   **codex** via `-c model_providers.omniroute.*`-argumenter. **Qwen er det eneste kjøremålet
   som alltid krever `--model`** — `omniroute run qwen` uten dette avsluttes
   med `2` og en eksplisitt feil.
-- `--port <port>` — lokal OmniRoute-port (standardverdi `20128`, ignoreres når `--remote`
+- `--port <port>` — lokal 67router-port (standardverdi `20128`, ignoreres når `--remote`
   er angitt). Finnes på alle `setup-*`-kommandoer og begge startkommandoene.
 - Avslutningskoder for `omniroute run`: den underordnede CLI-ens egen avslutningskode videreformidles
   ordrett; `2` = ugyldige argumenter (mål som ikke støttes, manglende påkrevd
@@ -155,7 +155,7 @@ presenteres ikke som kjørbare mål.
 
 ## Lokal bruk
 
-Når OmniRoute kjører på `localhost:20128`, trenger du bare å kjøre konfigurasjonskommandoen for verktøyet ditt. Katalogen hentes fra den lokale serveren.
+Når 67router kjører på `localhost:20128`, trenger du bare å kjøre konfigurasjonskommandoen for verktøyet ditt. Katalogen hentes fra den lokale serveren.
 
 ```bash
 # Codex: skriv én profil per samsvarende modell til ~/.codex/
@@ -182,8 +182,8 @@ omniroute setup-continue --dry-run
 Start uten å skrive noen konfigurasjon i det hele tatt (kun miljøvariabelinjeksjon):
 
 ```bash
-omniroute launch                 # Claude Code → lokal OmniRoute
-omniroute launch-codex           # Codex CLI → lokal OmniRoute
+omniroute launch                 # Claude Code → lokal 67router
+omniroute launch-codex           # Codex CLI → lokal 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -201,7 +201,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Ekstern bruk
 
-Pek en hvilken som helst konfigurasjonskommando mot en ekstern OmniRoute med `--remote` + `--api-key`. Katalogen hentes fra den eksterne serveren, og konfigurasjonen skrives på den lokale maskinen din.
+Pek en hvilken som helst konfigurasjonskommando mot en ekstern 67router med `--remote` + `--api-key`. Katalogen hentes fra den eksterne serveren, og konfigurasjonen skrives på den lokale maskinen din.
 
 ```bash
 # OpenCode mot en ekstern VPS, behold bare glm/kimi-modeller
@@ -239,7 +239,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Begge formene skriver én 5dive-**autentiseringsprofil**, og hvert `claude`-sete som er knyttet til denne profilen, kommuniserer deretter med OmniRoute. Tre ting er spesifikke for dette målet:
+Begge formene skriver én 5dive-**autentiseringsprofil**, og hvert `claude`-sete som er knyttet til denne profilen, kommuniserer deretter med 67router. Tre ting er spesifikke for dette målet:
 
 - **Det kjører på flåteverten som root.** Verbene til 5dive opererer på lokale systemd-enheter og en root-eid tilstandskatalog. Det finnes ingen ekstern modus. Oppskriften kjører seg selv på nytt gjennom `sudo` når den ikke allerede kjører som root (`--no-sudo` deaktiverer dette og skriver ut kommandoen i stedet).
 - **Endepunktet må bruke `https://`, med mindre det er loopback.** Agentens API-nøkkel følger denne URL-en i hver forespørsel, og 5dive avviser et ukryptert endepunkt utenfor verten. En privat LAN-adresse er ikke et unntak.
@@ -247,13 +247,13 @@ Begge formene skriver én 5dive-**autentiseringsprofil**, og hvert `claude`-sete
 
 API-nøkkelen sendes til 5dive via **stdin** (`--api-key=-`), slik at den aldri vises i utdataene fra `ps`.
 
-Ved å peke profilen mot en OmniRoute-**kombinasjon** i stedet for én enkelt modell får flåten failover mellom leverandører: Da det primære endepunktet gikk helt ned midt i en runde under kjøringen som er dokumentert i [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), fullførte agenten de gjenværende trinnene via reserveløsningen uten noen gang å synliggjøre driftsavbruddet.
+Ved å peke profilen mot en 67router-**kombinasjon** i stedet for én enkelt modell får flåten failover mellom leverandører: Da det primære endepunktet gikk helt ned midt i en runde under kjøringen som er dokumentert i [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), fullførte agenten de gjenværende trinnene via reserveløsningen uten noen gang å synliggjøre driftsavbruddet.
 
 ---
 
 ## Konvensjoner for base-URL (hvilke verktøy krever `/v1`)
 
-OmniRoute eksponerer OpenAI-grensesnittet på `/v1`, Anthropic-grensesnittet på roten,
+67router eksponerer OpenAI-grensesnittet på `/v1`, Anthropic-grensesnittet på roten,
 og et innebygd Gemini-grensesnitt på `/v1beta`. Hver integrasjon er konfigurert med formatet
 verktøyet forventer (verifisert i kommandokilden):
 
@@ -275,7 +275,7 @@ verktøyet forventer (verifisert i kommandokilden):
 ## Beholde native avhengigheter ved oppdatering: `--include=optional`
 
 Når du oppdaterer med `omniroute update` (etter bekreftelse eller med `--apply`),
-kjører OmniRoute installasjonen med `--include=optional` innebygd:
+kjører 67router installasjonen med `--include=optional` innebygd:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -302,14 +302,14 @@ utdatert), `--apply` (installer uten å spørre), `--changelog`, `--no-backup`,
 
 Kontrakten er verifisert mot `@google/gemini-cli` 0.50.0: CLI-en respekterer
 `GOOGLE_GEMINI_BASE_URL` og sender `POST /v1beta/models/<model>:generateContent`
-(og `:streamGenerateContent?alt=sse`) til den — nøyaktig OmniRoutes native
+(og `:streamGenerateContent?alt=sse`) til den — nøyaktig 67routers native
 Gemini-grensesnitt (`/v1beta`). `omniroute run gemini` konfigurerer dette automatisk:
 
-- `GOOGLE_GEMINI_BASE_URL` → den aktive basis-URL-en for OmniRoute (rot, uten `/v1`);
-- `GEMINI_API_KEY` → den utledede OmniRoute-legitimasjonen (alternativ/miljø/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → den aktive basis-URL-en for 67router (rot, uten `/v1`);
+- `GEMINI_API_KEY` → den utledede 67router-legitimasjonen (alternativ/miljø/kontekst);
 - en **midlertidig, isolert `GEMINI_CLI_HOME`** der `.gemini/settings.json`
   velger `gemini-api-key`-autentisering, slik at en lagret Google OAuth-økt (Code Assist)
-  aldri overstyrer den OmniRoute-styrte oppstarten — fjernes etter avslutning;
+  aldri overstyrer den 67router-styrte oppstarten — fjernes etter avslutning;
 - **miljøhygiene**: underprosessens miljø tømmes for `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` og `GOOGLE_GENAI_USE_GCA` (som ville omdirigert
   autentiseringen til Vertex/Code Assist), og `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -333,7 +333,7 @@ agentprotokollintegrasjonen for `/dashboard/acp-agents`.
 
 Deterministiske regresjonstester av oppstartsplanen kjøres i CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). For å validere de REELLE kjørbare filene mot en REELL
-OmniRoute-server finnes det et valgfritt testrammeverk i
+67router-server finnes det et valgfritt testrammeverk i
 `tests/integration/upstream-cli-smoke.int.test.ts`. Det kjøres aldri automatisk
 (hver deltest hoppes over med mindre `RUN_CLI_SMOKE=1`), sender akkreditivets miljøvariabel-NAVN
 (aldri verdien), sladder nøkkelformede strenger fra alle registrerte utdata, hopper over

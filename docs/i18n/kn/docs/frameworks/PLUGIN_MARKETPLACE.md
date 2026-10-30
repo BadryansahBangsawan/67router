@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಿದ್ದು:** 2026-06-28 — v3.8.40
 
-OmniRoute, WordPress-ಶೈಲಿಯ ಪ್ಲಗಿನ್ ವ್ಯವಸ್ಥೆಯೊಂದಿಗೆ ಬರುತ್ತದೆ. ಪ್ಲಗಿನ್ಗಳು ಸ್ವಯಂಪೂರ್ಣ
+67router, WordPress-ಶೈಲಿಯ ಪ್ಲಗಿನ್ ವ್ಯವಸ್ಥೆಯೊಂದಿಗೆ ಬರುತ್ತದೆ. ಪ್ಲಗಿನ್ಗಳು ಸ್ವಯಂಪೂರ್ಣ
 ಡೈರೆಕ್ಟರಿಗಳಾಗಿವೆ — ಪ್ರತಿಯೊಂದೂ `plugin.json` ಮ್ಯಾನಿಫೆಸ್ಟ್ ಮತ್ತು ಪ್ರವೇಶ ಕಡತವನ್ನು ಹೊಂದಿರುತ್ತದೆ — ಇವು
 ವಿನಂತಿ ಪೈಪ್ಲೈನ್ಗೆ (`onRequest` / `onResponse` / `onError`) ಮತ್ತು
 ಜೀವನಚಕ್ರದ ಈವೆಂಟ್ಗಳಿಗೆ (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`)
@@ -152,7 +152,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### ಪ್ಲಗಿನ್ ಡೈರೆಕ್ಟರಿ
 
-ಪ್ಲಗಿನ್ಗಳು OmniRoute ಡೇಟಾ ಡೈರೆಕ್ಟರಿಯ ಅಡಿಯಲ್ಲಿ ಇರುತ್ತವೆ:
+ಪ್ಲಗಿನ್ಗಳು 67router ಡೇಟಾ ಡೈರೆಕ್ಟರಿಯ ಅಡಿಯಲ್ಲಿ ಇರುತ್ತವೆ:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

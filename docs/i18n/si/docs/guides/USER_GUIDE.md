@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-සපයන්නන් වින්යාස කිරීම, සංයෝජන නිර්මාණය කිරීම, CLI මෙවලම් ඒකාබද්ධ කිරීම සහ OmniRoute යෙදවීම සඳහා සම්පූර්ණ මාර්ගෝපදේශයකි.
+සපයන්නන් වින්යාස කිරීම, සංයෝජන නිර්මාණය කිරීම, CLI මෙවලම් ඒකාබද්ධ කිරීම සහ 67router යෙදවීම සඳහා සම්පූර්ණ මාර්ගෝපදේශයකි.
 
 ---
 
@@ -137,12 +137,12 @@ Models:
   cc/claude-haiku-4-5-20251001
 ```
 
-**වෘත්තීය ඉඟිය:** සංකීර්ණ කාර්යයන් සඳහා Opus ද, වේගය සඳහා Sonnet ද භාවිත කරන්න. OmniRoute එක් එක් model එක අනුව quota ලුහුබඳියි!
+**වෘත්තීය ඉඟිය:** සංකීර්ණ කාර්යයන් සඳහා Opus ද, වේගය සඳහා Sonnet ද භාවිත කරන්න. 67router එක් එක් model එක අනුව quota ලුහුබඳියි!
 
-OmniRoute host එකෙහි browser එකක් නැද්ද? Claude Code වෙත පිවිසී ඇති ඕනෑම තැනක `claude setup-token` ධාවනය කර, වසරක token එක **Setup Token** tab එකට අලවන්න. [setup token එකක් සමඟ Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md) බලන්න.
+67router host එකෙහි browser එකක් නැද්ද? Claude Code වෙත පිවිසී ඇති ඕනෑම තැනක `claude setup-token` ධාවනය කර, වසරක token එක **Setup Token** tab එකට අලවන්න. [setup token එකක් සමඟ Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md) බලන්න.
 
 Claude සහ Claude Code-අනුකූල routes, Opus සහ Sonnet
-models සඳහා `max` thinking effort එක එලෙසම තබාගනී. Haiku models `max` effort tier එක පිළිනොගන්නා බැවින්, OmniRoute එම
+models සඳහා `max` thinking effort එක එලෙසම තබාගනී. Haiku models `max` effort tier එක පිළිනොගන්නා බැවින්, 67router එම
 ඉල්ලීම upstream වෙත යැවීමට පෙර එය ඉහළ thinking budget එකකට පහත හෙළයි.
 
 #### OpenAI Codex (Plus/Pro)
@@ -264,16 +264,16 @@ CLI තුළ භාවිත කරන්න: premium-coding
 
 ### Cursor IDE
 
-**OmniRoute සේවාලාභියෙකු ලෙස Cursor භාවිත කිරීම** (Cursor සංවාද OmniRoute හරහා මාර්ගගත කරන්න):
+**67router සේවාලාභියෙකු ලෙස Cursor භාවිත කිරීම** (Cursor සංවාද 67router හරහා මාර්ගගත කරන්න):
 
 ```
 Settings → Models → Advanced:
   OpenAI API Base URL: http://localhost:20128/v1
-  OpenAI API Key: [OmniRoute උපකරණ පුවරුවෙන්]
+  OpenAI API Key: [67router උපකරණ පුවරුවෙන්]
   Model: cc/claude-opus-4-7
 ```
 
-**Cursor සැපයුම්කරුවෙකු ලෙස OmniRoute භාවිත කිරීම** (OmniRoute විසින් උඩුගං Cursor සේවාව ඇමතීම): වඩාත් සුදුසු වන්නේ
+**Cursor සැපයුම්කරුවෙකු ලෙස 67router භාවිත කිරීම** (67router විසින් උඩුගං Cursor සේවාව ඇමතීම): වඩාත් සුදුසු වන්නේ
 **Dashboard → Providers → Cursor → Login with Cursor** ය. Docker තුළ,
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md) බලන්න.
 
@@ -360,7 +360,7 @@ CLI විසින් `~/.omniroute/.env` හෝ `./.env` වෙතින් `.
 
 ### පද්ධති තැටි ප්රකාරය
 
-පද්ධති තැටිය තුළ OmniRoute ආරම්භ කරන්න:
+පද්ධති තැටිය තුළ 67router ආරම්භ කරන්න:
 
 ```bash
 omniroute serve --tray
@@ -377,7 +377,7 @@ omniroute serve --tray
 - උපකරණ පුවරුව විවෘත කරන්න.
 - `/dashboard/logs` විවෘත කරන්න.
 - ස්වයංක්රීය ආරම්භය වෙනස් කරන්න.
-- OmniRoute නවත්වන්න.
+- 67router නවත්වන්න.
 
 මෙම විකල්ප සමඟ `--tray` ඒකාබද්ධ නොකරන්න:
 
@@ -403,14 +403,14 @@ omniroute autostart disable
 
 ### අස්ථාපනය කිරීම
 
-ඔබට තවදුරටත් OmniRoute අවශ්ය නොවන විට, පිරිසිදු ඉවත් කිරීමක් සඳහා අපි ඉක්මන් ස්ක්රිප්ට් දෙකක් සපයන්නෙමු:
+ඔබට තවදුරටත් 67router අවශ්ය නොවන විට, පිරිසිදු ඉවත් කිරීමක් සඳහා අපි ඉක්මන් ස්ක්රිප්ට් දෙකක් සපයන්නෙමු:
 
 | විධානය                   | ක්රියාව                                                                           |
 | ------------------------ | --------------------------------------------------------------------------------- |
 | `npm run uninstall`      | පද්ධති යෙදුම ඉවත් කරන නමුත් `~/.omniroute` තුළ ඇති **ඔබේ DB සහ වින්යාස තබා ගනී**. |
 | `npm run uninstall:full` | යෙදුම ඉවත් කර **සියලු වින්යාස, යතුරු සහ දත්ත සමුදා ස්ථිරව මකා දමයි**.             |
 
-> සටහන: මෙම විධාන ක්රියාත්මක කිරීමට, OmniRoute ව්යාපෘති ෆෝල්ඩරය වෙත ගොස් (ඔබ එය ක්ලෝන කර ඇත්නම්) ඒවා ක්රියාත්මක කරන්න. විකල්පයක් ලෙස, එය ගෝලීයව ස්ථාපනය කර ඇත්නම්, ඔබට සරලව `npm uninstall -g omniroute` ක්රියාත්මක කළ හැක.
+> සටහන: මෙම විධාන ක්රියාත්මක කිරීමට, 67router ව්යාපෘති ෆෝල්ඩරය වෙත ගොස් (ඔබ එය ක්ලෝන කර ඇත්නම්) ඒවා ක්රියාත්මක කරන්න. විකල්පයක් ලෙස, එය ගෝලීයව ස්ථාපනය කර ඇත්නම්, ඔබට සරලව `npm uninstall -g omniroute` ක්රියාත්මක කළ හැක.
 
 ### VPS යෙදවීම
 
@@ -482,7 +482,7 @@ CLI ද්විමය ගොනු සහිත ධාරක-ඒකාබද්
 
 ### Void Linux (xbps-src)
 
-Void Linux පරිශීලකයින්ට `xbps-src` හරස්-සම්පාදන රාමුව භාවිතයෙන් OmniRoute ස්වදේශීයව පැකේජ කර ස්ථාපනය කළ හැක. මෙය අවශ්ය `better-sqlite3` ස්වදේශීය බැඳීම් සමඟ Node.js ස්වාධීන ගොඩනැගීම ස්වයංක්රීය කරයි.
+Void Linux පරිශීලකයින්ට `xbps-src` හරස්-සම්පාදන රාමුව භාවිතයෙන් 67router ස්වදේශීයව පැකේජ කර ස්ථාපනය කළ හැක. මෙය අවශ්ය `better-sqlite3` ස්වදේශීය බැඳීම් සමඟ Node.js ස්වාධීන ගොඩනැගීම ස්වයංක්රීය කරයි.
 
 <details>
 <summary><b>xbps-src අච්චුව බලන්න</b></summary>
@@ -662,7 +662,7 @@ post_install() {
 
 **අනෙකුත් අනුකූල සපයන්නන්** (තෝරාගත්): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (`aws-bedrock` හරහා), `azure-ai`, `openrouter` (සෘජු-යැවීම් නාමාවලිය), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. එක් එක් සපයන්නා `providerRegistry.ts` තුළ තමන්ගේම ආකෘති ලැයිස්තුව පවත්වාගෙන යන අතර, සපයන්නා `/models` අන්ත ලක්ෂ්යයක් නිරාවරණය කරන විට එය ස්වයංක්රීයව සමමුහුර්ත කළ හැක.
 
-**ආකෘති ID පිළිබඳ සටහන:** OmniRoute සපයන්නාට ස්වදේශීය ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) භාවිත කරයි. upstream API ඒවා එලෙස අපේක්ෂා කරන බැවින් ඇතැම් ID තුළ තිත් සහිත අනුවාද අඩංගු වේ. යම් ආකෘතියක් ඉහත ලැයිස්තුගත කර නොමැති නම්, එහි ලබාගත හැකි බව තහවුරු කිරීමට `omniroute models --search <term>` ධාවනය කරන්න හෝ `GET /api/models/catalog` වෙත ඉල්ලීමක් යවන්න.
+**ආකෘති ID පිළිබඳ සටහන:** 67router සපයන්නාට ස්වදේශීය ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) භාවිත කරයි. upstream API ඒවා එලෙස අපේක්ෂා කරන බැවින් ඇතැම් ID තුළ තිත් සහිත අනුවාද අඩංගු වේ. යම් ආකෘතියක් ඉහත ලැයිස්තුගත කර නොමැති නම්, එහි ලබාගත හැකි බව තහවුරු කිරීමට `omniroute models --search <term>` ධාවනය කරන්න හෝ `GET /api/models/catalog` වෙත ඉල්ලීමක් යවන්න.
 
 </details>
 
@@ -728,9 +728,9 @@ prefix: "<prefix>" යනු වෙන් කර ඇති සැපයුම්
 වෙන් කර ඇත්දැයි පරීක්ෂා කරන්න: මෙම රීතිය ඇතිවීමට පෙර සුරැකූ නෝඩ තවමත් ගබඩා වී ඇති නමුත්, ඒවායේ උපසර්ගය
 පෙරනිමි සැපයුම්කරු වෙත මාර්ගගත වේ. නෝඩය සංස්කරණය කර එයට නව උපසර්ගයක් දෙන්න.
 
-### OmniRoute සම-ද්වාර දාමගත කිරීම
+### 67router සම-ද්වාර දාමගත කිරීම
 
-වෙනත් OmniRoute ද්වාරයක් **අභිරුචි OpenAI-අනුකූල** සැපයුම්කරුවෙකු ලෙස එක් කළ හැක. එම
+වෙනත් 67router ද්වාරයක් **අභිරුචි OpenAI-අනුකූල** සැපයුම්කරුවෙකු ලෙස එක් කළ හැක. එම
 සම-ද්වාරයේ `/v1` මූලික URL එක සහ එම සම-ද්වාරය විසින් නිකුත් කළ කැපවූ, අවම-වරප්රසාද API යතුරක් භාවිත කරන්න.
 
 අන්යෝන්ය හෝ බහු-පියවර දාම සඳහා, සෑම ද්වාරයකම තේරීමෙන් සක්රිය කරන ලූප ආරක්ෂකය සක්රිය කරන්න:
@@ -756,7 +756,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 සම-ද්වාර දාමගත කිරීම යනු දත්ත සමුදා ප්රතිවලිත කිරීම හෝ සත්කාරක අසාර්ථකත්වයට මාරුවීම නොවේ. සෑම ද්වාරයක්ම ස්වාධීන
 SQLite තත්ත්වය, හැඹිලි, අනුපාත ගණක සහ සැසි පවත්වාගෙන යයි. සක්රිය/නිෂ්ක්රීය හෝ සක්රිය/සක්රිය ලබාගත හැකිභාවය සඳහා
 සෞඛ්ය-පරීක්ෂිත ප්රතිලෝම ප්රොක්සියක් හෝ සේවාලාභී අසාර්ථකත්ව මාරුවක් භාවිත කරන්න, සහ එක් SQLite දත්ත සමුදායක්
-ක්රියාත්මක වන OmniRoute අවස්ථා කිහිපයකට කිසිවිටෙක සවිකරන්න එපා.
+ක්රියාත්මක වන 67router අවස්ථා කිහිපයකට කිසිවිටෙක සවිකරන්න එපා.
 
 ### කැපවූ සැපයුම්කරු මාර්ග
 
@@ -807,7 +807,7 @@ curl http://localhost:20128/api/models/catalog
 - Docker සහ අනෙකුත් ස්වයං-සත්කාරක යෙදවීම් සඳහා **Dashboard → Endpoints** තුළ ලබා ගත හැක
 - ඔබගේ වත්මන් OpenAI-අනුකූල `/v1` අන්ත ලක්ෂ්යය වෙත යොමු කරන තාවකාලික `https://*.trycloudflare.com` URL එකක් සාදයි
 - පළමු වර සක්රිය කිරීමේදී අවශ්ය නම් පමණක් `cloudflared` ස්ථාපනය කරයි; පසුකාලීන නැවත ආරම්භ කිරීම් එම කළමනාකරණය කරන ලද ද්විමය ගොනුවම නැවත භාවිත කරයි
-- OmniRoute හෝ බහාලුමක් නැවත ආරම්භ කිරීමෙන් පසු Quick Tunnels ස්වයංක්රීයව ප්රතිස්ථාපනය නොවේ; අවශ්ය විට උපකරණ පුවරුවෙන් ඒවා නැවත සක්රිය කරන්න
+- 67router හෝ බහාලුමක් නැවත ආරම්භ කිරීමෙන් පසු Quick Tunnels ස්වයංක්රීයව ප්රතිස්ථාපනය නොවේ; අවශ්ය විට උපකරණ පුවරුවෙන් ඒවා නැවත සක්රිය කරන්න
 - උමං URL තාවකාලික වන අතර ඔබ උමඟ නවතා/ආරම්භ කරන සෑම අවස්ථාවකම වෙනස් වේ
 - සීමා සහිත බහාලුම්වල ඇති වන ශබ්දකාරී QUIC UDP බෆර අනතුරු ඇඟවීම් වළක්වා ගැනීම සඳහා, කළමනාකරණය කරන ලද Quick Tunnels පෙරනිමියෙන් HTTP/2 ප්රවාහනය භාවිත කරයි
 - කළමනාකරණය කරන ලද ප්රවාහන තේරීම අතික්රමණය කිරීමට අවශ්ය නම් `CLOUDFLARED_PROTOCOL=quic` හෝ `auto` සකසන්න
@@ -824,7 +824,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### පරිවර්තක අත්හදා බැලීම් අවකාශය
 
-**Dashboard → Translator** හරහා ප්රවේශ වන්න. OmniRoute සැපයුම්කරුවන් අතර API ඉල්ලීම් පරිවර්තනය කරන ආකාරය දෝෂහරණය කර දෘශ්යකරණය කරන්න.
+**Dashboard → Translator** හරහා ප්රවේශ වන්න. 67router සැපයුම්කරුවන් අතර API ඉල්ලීම් පරිවර්තනය කරන ආකාරය දෝෂහරණය කර දෘශ්යකරණය කරන්න.
 
 | ප්රකාරය                  | අරමුණ                                                                                    |
 | ------------------------ | ---------------------------------------------------------------------------------------- |
@@ -877,7 +877,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-OmniRoute `x_session_id` ද පිළිගන්නා අතර ක්රියාත්මක සැසි යතුර `X-OmniRoute-Session-Id` තුළ ආපසු ලබා දෙයි.
+67router `x_session_id` ද පිළිගන්නා අතර ක්රියාත්මක සැසි යතුර `X-OmniRoute-Session-Id` තුළ ආපසු ලබා දෙයි.
 
 ඔබ Nginx භාවිත කර යටි ඉරි සහිත ශීර්ෂ යවන්නේ නම්, පහත දෑ සක්රිය කරන්න:
 
@@ -911,7 +911,7 @@ underscores_in_headers on;
 
 ### පොදු සැපයුම්කරු සංයෝජන සහ මාර්ගගත කිරීමේ රටා
 
-OmniRoute තුළ සැපයුම්කරුවන් කිහිපයක් ඒකාබද්ධ කිරීම සහ ඔවුන් අතර මාර්ගගත කිරීම සඳහා උදාහරණ රටා මෙන්න:
+67router තුළ සැපයුම්කරුවන් කිහිපයක් ඒකාබද්ධ කිරීම සහ ඔවුන් අතර මාර්ගගත කිරීම සඳහා උදාහරණ රටා මෙන්න:
 
 #### 1. කේතකරණ නියෝජිත සංයෝජනය: පිරිවැය/වේගය මත පසුබැසීමක් සහිත ඉහළ මට්ටමේ තර්කනය
 
@@ -972,7 +972,7 @@ omniroute combo create free-stack \
 
 **උපකරණ පුවරුව → සැකසුම් → ප්රත්යස්ථතාව** හරහා වින්යාස කරන්න.
 
-OmniRoute සංරචක පහක් සහිත සපයන්නා-මට්ටමේ ප්රත්යස්ථතාවක් ක්රියාත්මක කරයි:
+67router සංරචක පහක් සහිත සපයන්නා-මට්ටමේ ප්රත්යස්ථතාවක් ක්රියාත්මක කරයි:
 
 1. **ඉල්ලීම් පෝලිම සහ වේග පාලනය** — පද්ධති-මට්ටමේ ඉල්ලීම් හැඩගැස්වීම:
    - **මිනිත්තුවකට ඉල්ලීම් (RPM)** — ගිණුමකට මිනිත්තුවකට උපරිම ඉල්ලීම් ගණන
@@ -997,7 +997,7 @@ OmniRoute සංරචක පහක් සහිත සපයන්නා-මට
 
    සපයන්නාගේ බිඳිනයේ ධාවන කාල තත්ත්වය පෙන්වන්නේ **උපකරණ පුවරුව → සෞඛ්යය** තුළ පමණි.
 
-4. **සිසිලන කාලය සඳහා රැඳී සිටින්න** — සෑම අපේක්ෂක සම්බන්ධතාවක්ම දැනටමත් සිසිල් වෙමින් පවතී නම්, OmniRoute හට මුලින්ම අවසන් වන සිසිලන කාලය තෙක් රැඳී සිට එම සේවාදායක ඉල්ලීමම ස්වයංක්රීයව නැවත උත්සාහ කළ හැක.
+4. **සිසිලන කාලය සඳහා රැඳී සිටින්න** — සෑම අපේක්ෂක සම්බන්ධතාවක්ම දැනටමත් සිසිල් වෙමින් පවතී නම්, 67router හට මුලින්ම අවසන් වන සිසිලන කාලය තෙක් රැඳී සිට එම සේවාදායක ඉල්ලීමම ස්වයංක්රීයව නැවත උත්සාහ කළ හැක.
 
 5. **අනුපාත සීමා ස්වයංක්රීයව හඳුනාගැනීම** — ඉහළ ප්රවාහ සපයන්නන් පැහැදිලි පොරොත්තු කාල පරාස ලබා දෙන විට, සැකසුම සක්රීය කර ඇත්නම් එම ඉඟි දේශීය සම්බන්ධතා සිසිලන කාලය අභිබවා යයි.
 
@@ -1031,7 +1031,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **භාවිත අවස්ථා:**
 
-- යන්ත්ර අතර OmniRoute සංක්රමණය කිරීම
+- යන්ත්ර අතර 67router සංක්රමණය කිරීම
 - ආපදා ප්රතිසාධනය සඳහා බාහිර උපස්ථ සෑදීම
 - කණ්ඩායම් සාමාජිකයන් අතර වින්යාස බෙදාගැනීම (සියල්ල නිර්යාත කරන්න → සංරක්ෂිතය බෙදාගන්න)
 
@@ -1083,7 +1083,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### ශ්රව්ය පිටපත්කරණය
 
-OmniRoute, OpenAI-අනුකූල endpoint එක හරහා ශ්රව්ය පිටපත්කරණයට සහාය දක්වයි:
+67router, OpenAI-අනුකූල endpoint එක හරහා ශ්රව්ය පිටපත්කරණයට සහාය දක්වයි:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1154,7 +1154,7 @@ TTFT ඉතිහාසය මත පදනම්ව ඉලක්ක මඟහ�
 අක්රියව තබන්න; එය සක්රිය කිරීමෙන්, වින්යාස කළ අතිරේක ඉල්ලීම් යැවීම, පුරෝකථන TTFT මඟහැරීම් සහ ක්රියාශීලී
 පසුබැසීමේ සම්පීඩනයට, අඩු tail latency සඳහා මාර්ගගත කිරීමේ/ඉල්ලීම් නිරවද්යතාව හුවමාරු කිරීමට ඉඩ ලැබේ.
 
-ඉහළ ප්රවාහ සැපයුම්කරුවන්ට දැඩි `max_tokens` / `maxOutputTokens` සීමා අවශ්ය වන විට **Reasoning token buffer** අක්රිය කරන්න. එය සක්රිය කර ඇති විට, combo routing මඟින් දන්නා ප්රතිදාන සීමාවක් සහිත මාදිලි සඳහා පමණක් reasoning-model අතිරේක ඉඩක් එක් කරන අතර, ආරක්ෂිත ලෙස buffer කළ අගය එම සීමාව ඉක්මවන්නේ නම් සේවාදායකයාගේ token සීමාව වෙනස් නොකර තබයි. සේවාදායකයාගේ සීමාව දැනටමත් දන්නා සීමාවකට වඩා ඉහළ නම්, ඉහළ ප්රවාහ ඉල්ලීම යැවීමට පෙර OmniRoute එය එම සීමාව දක්වා අඩු කරයි.
+ඉහළ ප්රවාහ සැපයුම්කරුවන්ට දැඩි `max_tokens` / `maxOutputTokens` සීමා අවශ්ය වන විට **Reasoning token buffer** අක්රිය කරන්න. එය සක්රිය කර ඇති විට, combo routing මඟින් දන්නා ප්රතිදාන සීමාවක් සහිත මාදිලි සඳහා පමණක් reasoning-model අතිරේක ඉඩක් එක් කරන අතර, ආරක්ෂිත ලෙස buffer කළ අගය එම සීමාව ඉක්මවන්නේ නම් සේවාදායකයාගේ token සීමාව වෙනස් නොකර තබයි. සේවාදායකයාගේ සීමාව දැනටමත් දන්නා සීමාවකට වඩා ඉහළ නම්, ඉහළ ප්රවාහ ඉල්ලීම යැවීමට පෙර 67router එය එම සීමාව දක්වා අඩු කරයි.
 
 ---
 
@@ -1177,7 +1177,7 @@ TTFT ඉතිහාසය මත පදනම්ව ඉලක්ක මඟහ�
 
 ## 🤖 ස්වයංක්රීය මාර්ගගත කිරීම (වින්යාස රහිත)
 
-OmniRoute සමඟ, සම්බන්ධිත සෑම සැපයුම්කරුවෙකු හරහාම එක් එක් ඉල්ලීම සඳහා හොඳම ආකෘතිය තෝරාගන්නා **ලකුණු මත පදනම් වූ ස්වයංක්රීය මාර්ගගතකයක්** ලැබේ — නඩත්තු කිරීමට සංයෝජනයක් අවශ්ය නොවේ. `auto/*` උපසර්ගවලින් එකක් සමඟ ඉල්ලීම යවන්න; OmniRoute විසින් ප්රමාදය, පිරිවැය, සාර්ථකත්ව අනුපාතය, සන්දර්භයට ගැළපීම, කාර්යය සඳහා ආකෘතියේ යෝග්යතාව, මෑත අසාර්ථකවීම්, කෝටාව සහ පරිපථ-විසන්ධිකාරක තත්ත්වය අනුව අපේක්ෂකයන්ට ලකුණු ලබා දෙමින්, ක්ෂණිකව අතථ්ය සංයෝජනයක් සකසනු ඇත.
+67router සමඟ, සම්බන්ධිත සෑම සැපයුම්කරුවෙකු හරහාම එක් එක් ඉල්ලීම සඳහා හොඳම ආකෘතිය තෝරාගන්නා **ලකුණු මත පදනම් වූ ස්වයංක්රීය මාර්ගගතකයක්** ලැබේ — නඩත්තු කිරීමට සංයෝජනයක් අවශ්ය නොවේ. `auto/*` උපසර්ගවලින් එකක් සමඟ ඉල්ලීම යවන්න; 67router විසින් ප්රමාදය, පිරිවැය, සාර්ථකත්ව අනුපාතය, සන්දර්භයට ගැළපීම, කාර්යය සඳහා ආකෘතියේ යෝග්යතාව, මෑත අසාර්ථකවීම්, කෝටාව සහ පරිපථ-විසන්ධිකාරක තත්ත්වය අනුව අපේක්ෂකයන්ට ලකුණු ලබා දෙමින්, ක්ෂණිකව අතථ්ය සංයෝජනයක් සකසනු ඇත.
 
 | උපසර්ගය        | ප්රශස්ත කරන්නේ                                                                                     |
 | -------------- | -------------------------------------------------------------------------------------------------- |
@@ -1208,7 +1208,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 MCP සහ A2A ඒකාබද්ධ කිරීම
 
-OmniRoute යනු **MCP සේවාදායකයක්** (Model Context Protocol) මෙන්ම **A2A සේවාදායකයක්** (Agent-to-Agent JSON-RPC 2.0) ද වේ. ඕනෑම MCP-අනුකූල IDE එකකට හෝ නියෝජිත ධාරකයකට OmniRoute මෙවලම් සෘජුව ඇමතිය හැක — අමතර ආවරණයක් අවශ්ය නොවේ.
+67router යනු **MCP සේවාදායකයක්** (Model Context Protocol) මෙන්ම **A2A සේවාදායකයක්** (Agent-to-Agent JSON-RPC 2.0) ද වේ. ඕනෑම MCP-අනුකූල IDE එකකට හෝ නියෝජිත ධාරකයකට 67router මෙවලම් සෘජුව ඇමතිය හැක — අමතර ආවරණයක් අවශ්ය නොවේ.
 
 ### MCP ප්රවාහන ක්රම
 
@@ -1243,7 +1243,7 @@ MCP දැනට නම් කරන ලද විෂය පථ 32ක් නි�
 
 ## 🧠 කුසලතා පද්ධතිය
 
-නියෝජිතයන්ට සහ A2A අන්ත ලක්ෂ්යයට වසම්-විශේෂිත ක්රියා පටිපාටි (උදා. `code-review`, `summarize`, `extract-facts`, `web-research`) ධාවනය කළ හැකි වන පරිදි OmniRoute විස්තාරණය කළ හැකි **කුසලතා රාමුවක්** (`src/lib/skills/`) සපයයි.
+නියෝජිතයන්ට සහ A2A අන්ත ලක්ෂ්යයට වසම්-විශේෂිත ක්රියා පටිපාටි (උදා. `code-review`, `summarize`, `extract-facts`, `web-research`) ධාවනය කළ හැකි වන පරිදි 67router විස්තාරණය කළ හැකි **කුසලතා රාමුවක්** (`src/lib/skills/`) සපයයි.
 
 - **වෙළඳපොළ UI** — **උපකරණ පුවරුව → කුසලතා** වෙතින් කුසලතා පිරික්සා ස්ථාපනය කරන්න
 - **යතුරකට අදාළ විෂය පථ** — කුමන API යතුරුවලට කුමන කුසලතා කැඳවිය හැකිද යන්න සීමා කරන්න
@@ -1255,7 +1255,7 @@ MCP දැනට නම් කරන ලද විෂය පථ 32ක් නි�
 
 ## 💾 මතක පද්ධතිය
 
-OmniRoute දෙමුහුන් ලබාගැනීම සමඟ **දිගුකාලීන සංවාද මතකය** ස්ථිරව ගබඩා කරයි:
+67router දෙමුහුන් ලබාගැනීම සමඟ **දිගුකාලීන සංවාද මතකය** ස්ථිරව ගබඩා කරයි:
 
 - පසුගිය සංවාද වාර තුළ මූලපද සෙවීම සඳහා **SQLite FTS5**
 - අර්ථමය මතකයට නැවත කැඳවීම සඳහා **Qdrant vector store** (විකල්ප)
@@ -1268,7 +1268,7 @@ OmniRoute දෙමුහුන් ලබාගැනීම සමඟ **දි�
 
 ## 🔔 Webhooks
 
-තත්ය කාලීන අධීක්ෂණය සහ ස්වයංක්රීයකරණය සඳහා OmniRoute සිදුවීම්වලට දායක වන්න.
+තත්ය කාලීන අධීක්ෂණය සහ ස්වයංක්රීයකරණය සඳහා 67router සිදුවීම්වලට දායක වන්න.
 
 - ඉලක්ක URL එකක් සහ HMAC අත්සන් කිරීමේ රහසක් සමඟ **උපකරණ පුවරුව → Webhooks** තුළ webhook එකක් සාදන්න
 - ලබාගත හැකි සිදුවීම්: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1281,11 +1281,11 @@ OmniRoute දෙමුහුන් ලබාගැනීම සමඟ **දි�
 
 ## ☁️ Cloud නියෝජිතයන්
 
-ඔබේ දේශීය routing කළමනාකරණය කරන එම උපකරණ පුවරුවෙන්ම දිගු වේලාවක් ධාවනය වන කාර්යයන් යැවිය හැකි වන පරිදි OmniRoute cloud coding නියෝජිතයන් (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) සමඟ ඒකාබද්ධ වේ.
+ඔබේ දේශීය routing කළමනාකරණය කරන එම උපකරණ පුවරුවෙන්ම දිගු වේලාවක් ධාවනය වන කාර්යයන් යැවිය හැකි වන පරිදි 67router cloud coding නියෝජිතයන් (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) සමඟ ඒකාබද්ධ වේ.
 
 - **උපකරණ පුවරුව → Cloud නියෝජිතයන්** තුළින් හෝ `POST /api/v1/agents/tasks` හරහා කාර්යයන් සාදන්න
 - එක් එක් කාර්යයේ තත්ත්වය, ලොග් සහ කෘතිකයන් නිරීක්ෂණය කරන්න
-- එක් එක් provider සඳහා ඔබේම API යතුර රැගෙන එන්න — අක්තපත්ර කිසිවිටෙක OmniRoute instance එකෙන් පිටතට නොයයි
+- එක් එක් provider සඳහා ඔබේම API යතුර රැගෙන එන්න — අක්තපත්ර කිසිවිටෙක 67router instance එකෙන් පිටතට නොයයි
 
 සම්පූර්ණ යොමුව: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1293,7 +1293,7 @@ OmniRoute දෙමුහුන් ලබාගැනීම සමඟ **දි�
 
 ## 🛠️ ක්රමලේඛමය කළමනාකරණය
 
-**`manage` විෂය පථය සහිත Bearer යතුරක්** භාවිතයෙන් ඔබට සෑම OmniRoute සම්පතක්ම (providers, combos, keys, settings) HTTP හරහා කළමනාකරණය කළ හැක.
+**`manage` විෂය පථය සහිත Bearer යතුරක්** භාවිතයෙන් ඔබට සෑම 67router සම්පතක්ම (providers, combos, keys, settings) HTTP හරහා කළමනාකරණය කළ හැක.
 
 **උපකරණ පුවරුව → API යතුරු → නව යතුර → විෂය පථය: manage** තුළ යතුර ජනනය කර, ඉන්පසු:
 
@@ -1326,7 +1326,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 අභ්යන්තර CLI
 
-පිහිටුවීම, රෝග නිර්ණය සහ ධාවනකාල පාලනය සඳහා OmniRoute අභ්යන්තර CLI එකක් (`omniroute …`) සමඟ පැමිණේ. මෙය තෙවන පාර්ශ්වීය CLI (Claude Code, Cursor, Codex, Cline, …) වලට OmniRoute සමඟ සන්නිවේදනය කළ හැකි වන පරිදි ඒවා වින්යාස කරන, උපකරණ පුවරුවේ ඇති **"CLI මෙවලම්" පිටුවෙන් වෙනස් වූවකි**.
+පිහිටුවීම, රෝග නිර්ණය සහ ධාවනකාල පාලනය සඳහා 67router අභ්යන්තර CLI එකක් (`omniroute …`) සමඟ පැමිණේ. මෙය තෙවන පාර්ශ්වීය CLI (Claude Code, Cursor, Codex, Cline, …) වලට 67router සමඟ සන්නිවේදනය කළ හැකි වන පරිදි ඒවා වින්යාස කරන, උපකරණ පුවරුවේ ඇති **"CLI මෙවලම්" පිටුවෙන් වෙනස් වූවකි**.
 
 ```bash
 omniroute setup                    # අන්තර්ක්රියාකාරී විශාරදය (මුරපදය, සපයන්නන්, සංයෝජන)
@@ -1357,7 +1357,7 @@ omniroute --port 3000              # අභිරුචි පෝට් එක�
 
 ## 🖥️ ඩෙස්ක්ටොප් යෙදුම (Electron)
 
-OmniRoute, Windows, macOS සහ Linux සඳහා ස්වදේශීය ඩෙස්ක්ටොප් යෙදුමක් ලෙස ලබා ගත හැකිය.
+67router, Windows, macOS සහ Linux සඳහා ස්වදේශීය ඩෙස්ක්ටොප් යෙදුමක් ලෙස ලබා ගත හැකිය.
 
 ### ස්ථාපනය
 

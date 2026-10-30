@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mengimbas respons ralat huluan untuk mencari isyarat yang menunjukkan bahawa
+67router mengimbas respons ralat huluan untuk mencari isyarat yang menunjukkan bahawa
 **akaun penyedia telah mati secara kekal** (digantung / dinyahaktifkan / disekat kerana ToS) dan, apabila
 padanan ditemui, memindahkan sambungan tersebut ke dalam **keadaan terminal `banned`** supaya ia tidak
 lagi dipilih untuk permintaan. Inilah yang dikonfigurasikan oleh kad tetapan

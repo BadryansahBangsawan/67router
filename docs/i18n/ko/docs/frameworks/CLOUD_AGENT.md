@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 원본:** `src/lib/cloudAgent/` 및 `src/app/api/v1/agents/tasks/`
 > **최종 업데이트:** 2026-06-28 — v3.8.40 (frontmatter 갱신, cursor-cloud를 포함한 에이전트 4개)
 
-OmniRoute는 타사 클라우드 호스팅 코딩 에이전트(Codex Cloud, Cursor,
+67router는 타사 클라우드 호스팅 코딩 에이전트(Codex Cloud, Cursor,
 Devin, Jules)를 장기 실행 작업으로 오케스트레이션합니다. 각 에이전트는 통일된 인터페이스로 래핑되므로
 클라이언트는 제공자별 API를 직접 다루지 않고도 프롬프트와 저장소 URL을 제출하고
 결과를 받을 수 있습니다.

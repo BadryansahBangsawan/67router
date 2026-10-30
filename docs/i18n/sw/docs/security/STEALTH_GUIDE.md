@@ -8,11 +8,11 @@
 > **Ilisasishwa mwisho:** 2026-09-02 — v3.8.51
 > **Hadhira:** Wahandisi wanaodumisha miunganisho fiche mahususi kwa watoa huduma.
 
-OmniRoute huunganishwa na watoa huduma ambao mifumo yao ya ukingo hutambua kikamilifu alama za utambulisho za viteja visivyo rasmi (TLS JA3/JA4, mpangilio wa vichwa, muundo wa mwili wa JSON, tokeni za uadilifu). Ukurasa huu unaeleza maeneo ya ufichaji ambayo OmniRoute hutoa na mahali yanapotekelezwa.
+67router huunganishwa na watoa huduma ambao mifumo yao ya ukingo hutambua kikamilifu alama za utambulisho za viteja visivyo rasmi (TLS JA3/JA4, mpangilio wa vichwa, muundo wa mwili wa JSON, tokeni za uadilifu). Ukurasa huu unaeleza maeneo ya ufichaji ambayo 67router hutoa na mahali yanapotekelezwa.
 
 ## Ilani ya Kisheria na Kimaadili
 
-Vipengele vya ufichaji vipo ili OmniRoute iweze kufanya kazi kama safu ya uoanifu kati ya akaunti rasmi zinazomilikiwa na watumiaji (Claude Code CLI, Codex, Antigravity, Cursor, n.k.) na API iliyounganishwa ya OmniRoute. **Havikusudiwi** kukwepa utambuzi wa ulaghai, kushiriki vitambulisho, au kukiuka Masharti ya Huduma ya watoa huduma. Wadumishaji wanatarajia waendeshaji wafuate ToS za huduma asili walizokubali walipofungua akaunti.
+Vipengele vya ufichaji vipo ili 67router iweze kufanya kazi kama safu ya uoanifu kati ya akaunti rasmi zinazomilikiwa na watumiaji (Claude Code CLI, Codex, Antigravity, Cursor, n.k.) na API iliyounganishwa ya 67router. **Havikusudiwi** kukwepa utambuzi wa ulaghai, kushiriki vitambulisho, au kukiuka Masharti ya Huduma ya watoa huduma. Wadumishaji wanatarajia waendeshaji wafuate ToS za huduma asili walizokubali walipofungua akaunti.
 
 ---
 
@@ -55,7 +55,7 @@ Wasifu huu unaungwa mkono na kifurushi kilichofungwa kwenye toleo mahususi, laki
 
 ## Kifurushi cha Usiri cha Claude Code
 
-Wakati `cliCompatMode` imewashwa, OmniRoute hubadilisha muundo wa maombi yanayotoka ya Claude ili yasiweze kutofautishwa na trafiki ya `claude-cli`. Moduli tatu hushirikiana:
+Wakati `cliCompatMode` imewashwa, 67router hubadilisha muundo wa maombi yanayotoka ya Claude ili yasiweze kutofautishwa na trafiki ya `claude-cli`. Moduli tatu hushirikiana:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hashi ya Maudhui ya Kiteja)
 
-Ukaguzi wa uadilifu upande wa seva ambao Claude Code CLI rasmi hukokotoa kupitia Bun/Zig. OmniRoute huutekeleza upya kwa kutumia `xxhash-wasm`:
+Ukaguzi wa uadilifu upande wa seva ambao Claude Code CLI rasmi hukokotoa kupitia Bun/Zig. 67router huutekeleza upya kwa kutumia `xxhash-wasm`:
 
 1. Geuza body kuwa mfuatano kwa kutumia kishikilia nafasi cha `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Moduli husika katika kifurushi hicho hicho:
 
 ## Usiri wa Antigravity
 
-Maombi ya Antigravity huhifadhi maandishi ya mwombaji byte-kwa-byte. OmniRoute haiingizi herufi zisizo na upana kwenye vidokezo wala kubadilisha majina/kuingiza zana ili kuiga kiteja cha IDE.
+Maombi ya Antigravity huhifadhi maandishi ya mwombaji byte-kwa-byte. 67router haiingizi herufi zisizo na upana kwenye vidokezo wala kubadilisha majina/kuingiza zana ili kuiga kiteja cha IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Huondoa viashiria vya Stainless SDK (`x-stainless-lang`, `x-stainless-package-ve
 
 `ANTIGRAVITY_CREDITS=always` (inayotumiwa na `open-sse/executors/antigravity.ts`) huelekeza **kila** ombi kupitia Matumizi ya Ziada ya Salio la Antigravity AI (salio linalolipiwa la Google) badala ya kuruhusu mgao wa kiwango kisicholipishwa wa Google kudhibiti matumizi. Hili limeandikwa kama kipengele, lakini ni **ripoti inayotokea mara nyingi zaidi ya ukiukaji wa ToS tunayoiona** — akaunti nyingi za Google Ultra zimefungiwa kwa `403 / "service disabled for ToS violation" / insufficient_quota` baada ya kuendesha kwa saa chache kwa kutumia `=always`.
 
-Utekelezaji wa masharti wa upstream uko **upande wa Google**, na si jambo ambalo OmniRoute inaweza kuzuia. Jina la kigezo cha mazingira na nyaraka zilizopo hulifanya lionekane kama chaguo salama kuwasha; sivyo.
+Utekelezaji wa masharti wa upstream uko **upande wa Google**, na si jambo ambalo 67router inaweza kuzuia. Jina la kigezo cha mazingira na nyaraka zilizopo hulifanya lionekane kama chaguo salama kuwasha; sivyo.
 
 **Kwa nini hili huchochea utambuzi wa matumizi mabaya kwa ukali zaidi kuliko matumizi ya kiwango kisicholipishwa pekee:**
 
 - Matumizi endelevu ya kiotomatiki kwenye akaunti moja ya Google huwekewa alama tofauti na kiwango kisicholipishwa kinapofikia mgao na kusimama.
 - Matumizi ya ziada ya salio hayana kikomo cha kasi, kwa hivyo kiteja kilichosanidiwa vibaya kinaweza kutumia mamia kadhaa ya USD ndani ya dakika na kuonekana kama uuzaji upya wa API key au trafiki ya bot.
-- Watumiaji wengi wa OmniRoute wanaotumia salio la ziada kwa wakati mmoja kutoka kwenye IP ileile ya nje huongeza uzito wa ishara hiyo.
+- Watumiaji wengi wa 67router wanaotumia salio la ziada kwa wakati mmoja kutoka kwenye IP ileile ya nje huongeza uzito wa ishara hiyo.
 
 **Msimamo unaopendekezwa:**
 
@@ -172,7 +172,7 @@ Washa au zima kwa kila mtoa huduma kupitia env (tazama hapa chini). Inapozimwa, 
 
 ## Proksi ya MITM (Antigravity, Linux/macOS/Windows)
 
-Kwa CLI ambazo faili zake tekelezi haziwezi kuelekezwa upya kupitia `OPENAI_BASE_URL`, OmniRoute huendesha proksi ya ndani inayohitimisha TLS. Vituo vya ufikiaji vinapatikana chini ya `src/app/api/cli-tools/antigravity-mitm/`.
+Kwa CLI ambazo faili zake tekelezi haziwezi kuelekezwa upya kupitia `OPENAI_BASE_URL`, 67router huendesha proksi ya ndani inayohitimisha TLS. Vituo vya ufikiaji vinapatikana chini ya `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Mbinu  | Kituo cha ufikiaji                      | Kusudi                                             |
 | ------ | --------------------------------------- | -------------------------------------------------- |
@@ -205,7 +205,7 @@ Mpangishaji lengwa anayenaswa: **`daily-cloudcode-pa.googleapis.com`** (seva ya 
 
 Jina la faili ya cheti: `omniroute-mitm.crt`. Ulinganishaji wa alama ya kipekee kupitia `getCertFingerprint()` (SHA-1 ya DER).
 
-Zaidi ya hayo, `updateNssDatabases()` husakinisha kwenye hifadhidata za NSS za kila mtumiaji wakati `certutil` inapatikana: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wasifu wote wa Firefox (ikiwemo snap), chini ya jina la utani **`OmniRoute MITM Root CA`**.
+Zaidi ya hayo, `updateNssDatabases()` husakinisha kwenye hifadhidata za NSS za kila mtumiaji wakati `certutil` inapatikana: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wasifu wote wa Firefox (ikiwemo snap), chini ya jina la utani **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -251,7 +251,7 @@ IP ya mtoa huduma **huhifadhiwa kila wakati** — kigeuzi hubadilisha tu muundo 
 
 ## Usafishaji wa Vichwa Vinavyoingia
 
-OmniRoute husafisha vichwa vya viteja vinavyoingia kabla ya kuvisambaza ili ombi linalowasili kutoka Cursor lisivujishe `User-Agent: Cursor/X.Y.Z` kwa huduma ya juu ya Claude. Tazama `src/shared/constants/upstreamHeaders.ts` kwa orodha ya vizuizi, ambayo hudumishwa ili ilandane kikamilifu na schema za Zod na majaribio ya kitengo.
+67router husafisha vichwa vya viteja vinavyoingia kabla ya kuvisambaza ili ombi linalowasili kutoka Cursor lisivujishe `User-Agent: Cursor/X.Y.Z` kwa huduma ya juu ya Claude. Tazama `src/shared/constants/upstreamHeaders.ts` kwa orodha ya vizuizi, ambayo hudumishwa ili ilandane kikamilifu na schema za Zod na majaribio ya kitengo.
 
 ---
 

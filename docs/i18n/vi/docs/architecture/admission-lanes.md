@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute có **hai** hệ thống lane cục bộ theo tiến trình với phạm vi khác nhau. Chúng
+67router có **hai** hệ thống lane cục bộ theo tiến trình với phạm vi khác nhau. Chúng
 bổ trợ cho nhau; người vận hành cần biết mình đang xem hệ thống nào.
 
 ## 1. Cơ chế tiếp nhận theo byte trên toàn tiến trình (`chatBodyAdmission.ts`)

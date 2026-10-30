@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Oʻzbekcha)
+# 67router Architecture (Oʻzbekcha)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Oxirgi yangilanish: 2026-06-28_
 
 ## Qisqacha sharh
 
-OmniRoute — Next.js asosida yaratilgan mahalliy AI marshrutlash shlyuzi va boshqaruv paneli.
+67router — Next.js asosida yaratilgan mahalliy AI marshrutlash shlyuzi va boshqaruv paneli.
 U yagona OpenAI-mos keluvchi soʻnggi nuqtani (`/v1/*`) taqdim etadi hamda tarjima, zaxira variantiga oʻtish, tokenni yangilash va foydalanishni kuzatish imkoniyatlari bilan trafikni bir nechta yuqori oqim provayderlari boʻylab marshrutlaydi.
 
 Asosiy imkoniyatlar:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Brauzer Boshqaruv Paneli]
     end
 
-    subgraph Router[OmniRoute Mahalliy Jarayoni]
+    subgraph Router[67router Mahalliy Jarayoni]
         API[V1 Moslik API’si\n/v1/*]
         DASH[Boshqaruv Paneli + Boshqaruv API’si\n/api/*]
         CORE[SSE + Tarjima Yadrosi\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth provayderi modullari (`src/lib/oauth/providers/` ichidagi 27 ta alohida fa
 
 ## 5) Ichki xizmatlar (v3.8.4)
 
-OmniRoute mahalliy ishlaydigan va **ichki xizmatlar** deb ataladigan AI vositasi jarayonlarini
+67router mahalliy ishlaydigan va **ichki xizmatlar** deb ataladigan AI vositasi jarayonlarini
 oʻrnatishi, nazorat qilishi va ularga yoʻnaltirishi mumkin. Beshta xizmat taqdim etiladi: 9Router, CLIProxyAPI, Bifrost, Mux va Dario.
 
 Arxitektura qatlamlari:
@@ -435,7 +435,7 @@ bloklash/byudjet/zaxira mantiqini mustaqil ravishda yig‘ishi shart emas.
 - Kvota keshi: `src/domain/quotaCache.ts`
 - Degradatsiya holati: `src/domain/degradation.ts`
 - Konfiguratsiya auditi: `src/domain/configAudit.ts`
-- OmniRoute javob metamaʼlumotlari yaratuvchisi: `src/domain/omnirouteResponseMeta.ts`
+- 67router javob metamaʼlumotlari yaratuvchisi: `src/domain/omnirouteResponseMeta.ts`
 - Baholash quyi tizimi: `src/domain/assessment/` — davriy baholash vazifalari
 
 ### E. Avtorizatsiya konveyeri
@@ -802,7 +802,7 @@ flowchart LR
         Browser[Boshqaruv paneli brauzeri]
     end
 
-    subgraph ContainerOrProcess[OmniRoute ish muhiti]
+    subgraph ContainerOrProcess[67router ish muhiti]
         Next[Next.js serveri\nPORT=20128]
         Core[SSE yadrosi + ijrochilar]
         MainDB[(storage.sqlite)]
@@ -920,7 +920,7 @@ Boshqa barcha provayderlar (jumladan, moslashtirilgan maxsus tugunlar) `DefaultE
 
 ## Provayderlar muvofiqligi matritsasi
 
-> **Eslatma:** Quyidagi matritsa OmniRoute v3.8.0 da roʻyxatdan oʻtgan 351 ta provayderning namunaviy toʻplamidir.
+> **Eslatma:** Quyidagi matritsa 67router v3.8.0 da roʻyxatdan oʻtgan 351 ta provayderning namunaviy toʻplamidir.
 > Asosiy va doimiy yangilanib turadigan roʻyxat uchun
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (avtomatik yaratilgan) fayliga yoki
 > yuklash vaqtida Zod yordamida tekshiriladigan `src/shared/constants/providers.ts` faylidagi asosiy manbaga murojaat qiling.
@@ -1103,7 +1103,7 @@ Soʻrovning batafsil foydali yukini qayd etish har bir yoʻnaltirilgan chaqiruv 
 - mijozdan qabul qilingan asl soʻrov
 - amalda yuqori darajadagi provayderga yuborilgan tarjima qilingan soʻrov
 - JSON sifatida qayta tuzilgan provayder javobi; oqimli javoblar yakuniy xulosa va oqim metamaʼlumotlarigacha ixchamlashtiriladi
-- OmniRoute tomonidan qaytarilgan yakuniy mijoz javobi; oqimli javoblar xuddi shu ixcham xulosa shaklida saqlanadi
+- 67router tomonidan qaytarilgan yakuniy mijoz javobi; oqimli javoblar xuddi shu ixcham xulosa shaklida saqlanadi
 
 ## Xavfsizlik nuqtayi nazaridan muhim chegaralar
 

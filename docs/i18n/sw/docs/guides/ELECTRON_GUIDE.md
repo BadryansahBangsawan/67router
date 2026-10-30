@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** nafasi ya kazi ya `electron/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute inakuja na programu ya eneo-kazi ya majukwaa mengi (Windows / macOS / Linux) iliyoundwa kwa kutumia
+67router inakuja na programu ya eneo-kazi ya majukwaa mengi (Windows / macOS / Linux) iliyoundwa kwa kutumia
 **Electron 41** + **electron-builder 26.10**. Programu ya eneo-kazi huanzisha seva huru ya Next.js
 kama mchakato mtoto, huelekeza `BrowserWindow` kwake, na huongeza
 ikoni ya trei ya mfumo, kisasishaji kiotomatiki, daraja la IPC, na usanidi wa awali wa siri usiohitaji usanidi.
@@ -45,7 +45,7 @@ Yamethibitishwa kutoka `electron/package.json`:
 | `better-sqlite3`          | chanzo `^13.0.2` (miundo ya awali ya Node-API — hakuna ujenzi upya wa Electron) |
 | Toleo la programu         | `3.8.0`                                                                         |
 | Kitambulisho cha programu | `online.omniroute.desktop`                                                      |
-| Jina la bidhaa            | `OmniRoute`                                                                     |
+| Jina la bidhaa            | `67router`                                                                      |
 
 ## Hati (mzizi wa `package.json`)
 
@@ -196,7 +196,7 @@ pendelea faili ya `.env`, kisha ufunge programu kabisa (trei, **Toka**) na uizin
 - `BrowserWindow`: 1400×900 (kiwango cha chini 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, vitufe vya udhibiti wa dirisha katika `{ x: 16, y: 16 }`.
 - Windows/Linux: upau asilia wa kichwa.
-- Kitufe cha kufunga hupunguza programu hadi kwenye trei; menyu ya trei ina **Fungua OmniRoute**, **Fungua Dashibodi** (kivinjari cha nje), menyu ndogo ya **Mlango wa Seva**, **Kagua Masasisho**, **Toka**.
+- Kitufe cha kufunga hupunguza programu hadi kwenye trei; menyu ya trei ina **Fungua 67router**, **Fungua Dashibodi** (kivinjari cha nje), menyu ndogo ya **Mlango wa Seva**, **Kagua Masasisho**, **Toka**.
 
 ## Sera ya Usalama wa Maudhui
 

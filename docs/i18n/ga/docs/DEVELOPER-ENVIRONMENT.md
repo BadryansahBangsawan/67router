@@ -4,7 +4,7 @@
 
 ---
 
-Mínítear ar an leathanach seo iompar áitiúil `.env` an tionscadail agus conas comhaid timpeallachta agus rúin a láimhseáil agus OmniRoute á fhorbairt.
+Mínítear ar an leathanach seo iompar áitiúil `.env` an tionscadail agus conas comhaid timpeallachta agus rúin a láimhseáil agus 67router á fhorbairt.
 
 ## Iompar `.env` le linn postinstall
 

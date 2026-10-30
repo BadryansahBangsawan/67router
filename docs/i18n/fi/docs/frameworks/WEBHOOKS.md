@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40
 
-OmniRoute voi lähettää HTTP-webhookeja alustan tapahtumien yhteydessä. Niiden avulla voit integroida
+67router voi lähettää HTTP-webhookeja alustan tapahtumien yhteydessä. Niiden avulla voit integroida
 Slackin, PagerDutyn, Datadogin, sisäisiä hälytyspalveluita tai minkä tahansa HTTP-vastaanottimen.
 
 Välityskomponentti allekirjoittaa jokaisen toimituksen HMAC-SHA256:lla, yrittää toimitusta uudelleen tilapäisten
@@ -54,7 +54,7 @@ webhook-kohtaiset virheet niin, ettei yksi viallinen vastaanotin voi estää mui
 
 ## HMAC-allekirjoitus
 
-Kun webhookilla on `secret`, OmniRoute allekirjoittaa JSON-rungon ja lähettää seuraavat otsakkeet:
+Kun webhookilla on `secret`, 67router allekirjoittaa JSON-rungon ja lähettää seuraavat otsakkeet:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Hallintapaneelin sivu polussa `/dashboard/webhooks` (katso
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

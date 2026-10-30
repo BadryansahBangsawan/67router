@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute සෑම ඉල්ලීමකම පිරිවැය ඇස්තමේන්තු කරන, වාර්තාගත කරන සහ වාර්තා කරන ආකාරය — සහ
+67router සෑම ඉල්ලීමකම පිරිවැය ඇස්තමේන්තු කරන, වාර්තාගත කරන සහ වාර්තා කරන ආකාරය — සහ
 dashboard අගය බිල්පතක් නොව **ඉතිරි කිරීම් නිරීක්ෂකයක්** වන්නේ ඇයි.
 
 මෙයද බලන්න: [පරිශීලක මාර්ගෝපදේශය](./USER_GUIDE.md) · [විශේෂාංග ගැලරිය](./FEATURES.md)
@@ -13,11 +13,11 @@ dashboard අගය බිල්පතක් නොව **ඉතිරි කි�
 
 ## එය කුමක්ද (සහ කුමක් නොවේද)
 
-OmniRoute සෑම සම්පූර්ණ කිරීමකටම ඉල්ලීමකට අදාළ USD පිරිවැයක් ආරෝපණය කරන්නේ token
+67router සෑම සම්පූර්ණ කිරීමකටම ඉල්ලීමකට අදාළ USD පිරිවැයක් ආරෝපණය කරන්නේ token
 ගණන් model එකක මිල අනුපාතවලින් ගුණ කිරීමෙනි. මෙම අගයන් **Costs** dashboard එක,
 `omniroute cost` / `omniroute usage` CLI, CSV/JSON exports සහ එක් එක් API key සඳහා වන budgets බලගන්වයි.
 
-> **Dashboard එකේ "පිරිවැය" යනු ඉතිරි කිරීම් නිරීක්ෂකයක් මිස බිල්පතක් නොවේ.** OmniRoute කිසි විටෙකත් ඔබෙන් අය නොකරයි
+> **Dashboard එකේ "පිරිවැය" යනු ඉතිරි කිරීම් නිරීක්ෂකයක් මිස බිල්පතක් නොවේ.** 67router කිසි විටෙකත් ඔබෙන් අය නොකරයි
 > — එය ඔබ දැනටමත් සම්බන්ධ කර ඇති providers වෙත ඔබේ ඉල්ලීම් route කරයි (ඔබේම
 > subscriptions, free tiers සහ API keys). සම්පූර්ණයෙන්ම නොමිලේ models මත එකතු වූ "$290ක සම්පූර්ණ පිරිවැයක්"
 > යන්නෙන් අදහස් වන්නේ දළ වශයෙන් ඔබ ගෙවීම් සහිත API එකකට **නොගෙවූ $290කි**. මෙම අගය, එම traffic එකට
@@ -29,7 +29,7 @@ OmniRoute සෑම සම්පූර්ණ කිරීමකටම ඉල්�
 
 මෙම අගය ඇස්තමේන්තුවක් වන බැවින්:
 
-- එය එක් එක් model එක සඳහා OmniRoute සතුව ඇති pricing table එක මත රඳා පවතී. pricing
+- එය එක් එක් model එක සඳහා 67router සතුව ඇති pricing table එක මත රඳා පවතී. pricing
   entry එකක් නොමැති model එකක් `0` පිරිවැයක් එකතු කරයි (එය explorer එකේ "Legacy / Free" row එකක් ලෙස පෙන්වයි).
 - Free-tier සහ subscription traffic සඳහාද _ඇස්තමේන්තුගත_ පිරිවැයක් එකතු වේ — එය
   ඔබ ඉතිරි කරන මුදල මිස ගෙවිය යුතු මුදලක් නොවේ.
@@ -47,7 +47,7 @@ OmniRoute සෑම සම්පූර්ණ කිරීමකටම ඉල්�
 2. **සමමුහුර්ත කළ බාහිර මිලකරණය** — sync සක්රීය කර ඇති විට LiteLLM හි පොදු
    `model_prices_and_context_window.json` වෙතින් ලබාගනී (ඔබේ overrides කිසි විටෙකත් උඩින් ලියැවීම වැළැක්වීම සඳහා වෙනම
    `pricing_synced` namespace එකක ගබඩා කරයි).
-3. **Hardcoded defaults** — OmniRoute සමඟ සපයනු ලැබේ.
+3. **Hardcoded defaults** — 67router සමඟ සපයනු ලැබේ.
 
 බාහිර pricing sync කිරීම **opt-in** වන අතර පෙරනිමියෙන් අක්රීයය. අදාළ env vars
 ([`.env.example`](../../.env.example) බලන්න):
@@ -181,7 +181,7 @@ endpoint එක ක්රියාත්මක වන සෑම අවස්ථ�
 
 ## CLI
 
-OmniRoute හි CLI මඟින් පිරිවැය, භාවිතය සහ මිලකරණ විධාන නිරාවරණය කරයි ([`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) හි ලියාපදිංචි කර ඇත).
+67router හි CLI මඟින් පිරිවැය, භාවිතය සහ මිලකරණ විධාන නිරාවරණය කරයි ([`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) හි ලියාපදිංචි කර ඇත).
 
 ### `omniroute cost`
 

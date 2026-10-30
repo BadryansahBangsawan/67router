@@ -42,11 +42,11 @@ l-konnettur ikunu kkonfigurati.
 
 1. Iftaħ il-fornitur **ChatGPT Web (Codex)** u żid konnessjoni.
 2. Waħħal il-header sħiħ tal-Cookie ta’ ChatGPT, l-ID tat-tunnel, ir-runtime key, u l-isem tal-konnettur personalizzat. Konfigurazzjonijiet ġodda li jappoġġjaw l-għodod iridu jużaw konnettur li jkun għadu kif inħoloq bl-isem eżatt
-   `OmniRoute Codex v2`, b’Authentication issettjat għal None u Permissions issettjat għal Allow all
+   `67router Codex v2`, b’Authentication issettjat għal None u Permissions issettjat għal Allow all
    actions.
-3. Ħaddem il-verifika tal-konnessjoni. OmniRoute jiftaħ Temporary Chat appoġġjat minn browser u jidentifika
+3. Ħaddem il-verifika tal-konnessjoni. 67router jiftaħ Temporary Chat appoġġjat minn browser u jidentifika
    jekk Sol u Pro humiex disponibbli għall-kont.
-4. Issejvja l-konnessjoni. OmniRoute jissostitwixxi l-cookie mwaħħal bl-istat tal-ħażna
+4. Issejvja l-konnessjoni. 67router jissostitwixxi l-cookie mwaħħal bl-istat tal-ħażna
    verifikat ta’ Playwright u jaħżnu mar-runtime key permezz tal-astrazzjoni kriptata
    tal-kredenzjali.
 
@@ -81,10 +81,10 @@ u Pro. Kull rotta għandha mudell backend u sforz ta’ raġunament fissi; sforz
 ta’ Responses li jkun f’kunflitt ifalli b’mod magħluq minflok ibiddel fis-skiet
 il-modalità magħżula tal-browser.
 
-Tibdilx l-isem u terġax tuża konnettur eqdem `Codex Native` jew `OmniRoute Codex`.
+Tibdilx l-isem u terġax tuża konnettur eqdem `Codex Native` jew `67router Codex`.
 ChatGPT iżomm fil-cache il-kuntratt pubbliku MCP skont l-identità tal-konnettur,
 filwaqt li l-bridge aġġornat juża kuntratt dirett ġdid tat-turn-token. Ir-runtime
-jirrifjuta dawk l-identitajiet legacy u jeħtieġ konnettur ġdid `OmniRoute Codex v2`.
+jirrifjuta dawk l-identitajiet legacy u jeħtieġ konnettur ġdid `67router Codex v2`.
 
 ## Mudell tas-sigurtà
 
@@ -97,19 +97,19 @@ jirrifjuta dawk l-identitajiet legacy u jeħtieġ konnettur ġdid `OmniRoute Cod
 
 ## VPS mingħajr display u Docker
 
-Għall-installazzjonijiet b'npm, systemd, u PM2, OmniRoute jiskopri l-perkorsi komuni ta' Chrome u Chromium.
+Għall-installazzjonijiet b'npm, systemd, u PM2, 67router jiskopri l-perkorsi komuni ta' Chrome u Chromium.
 Inkella, issettja `CHATGPT_WEB_CODEX_CHROME_PATH`. Ir-runtime turns jużaw apposta
 Chrome b'interfaċċa viżibbli għax ChatGPT jirrifjuta l-konfigurazzjoni ta' browser tassew headless. Għalhekk, host mingħajr display irid
-iħaddem OmniRoute b'display privat ta' Xvfb; l-issettjar tal-perkors ta' Chrome waħdu ma jipprovdix wieħed.
+iħaddem 67router b'display privat ta' Xvfb; l-issettjar tal-perkors ta' Chrome waħdu ma jipprovdix wieħed.
 
 Il-profile `web` ta' Docker jibda `chatgpt-web-codex-browser` fuq in-network intern ta' Compose.
 Is-sidecar iħaddem Chrome b'interfaċċa viżibbli ġewwa Xvfb, għalhekk ma huwa meħtieġ l-ebda display fiżiku. Il-port CDP tiegħu
 mhuwiex ippubblikat fuq il-host. Il-volume protett tal-profile tal-browser huwa separat mill-
-volume tad-data ta' OmniRoute, u l-browser jirċievi biżżejjed shared memory. Il-proxy CDP intern
+volume tad-data ta' 67router, u l-browser jirċievi biżżejjed shared memory. Il-proxy CDP intern
 jisma' biss fuq il-port `9223` ġewwa n-network ta' Compose; Chrome jibqa' marbut mal-loopback fis-
 sidecar.
 
-Lease tas-supervisor taħt `DATA_DIR` jipprevjeni lil diversi proċessi ta' OmniRoute milli jkunu sidien
+Lease tas-supervisor taħt `DATA_DIR` jipprevjeni lil diversi proċessi ta' 67router milli jkunu sidien
 tal-istess stat tat-tunnel u tal-broker. Kunflitt jiġi rrappurtat mid-doctor.
 
 ## Irkupru interattiv

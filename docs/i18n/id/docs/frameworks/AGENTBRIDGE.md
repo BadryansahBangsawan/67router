@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge adalah proxy MITM (Man-in-the-Middle) OmniRoute yang mencegat lalu lintas HTTPS dari agen AI IDE dan mengalihkannya melalui mesin perutean terpadu OmniRoute. AgentBridge mendukung **10 agen IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, dan Trae (sedang diselidiki) — sehingga menjadikan OmniRoute sebagai proxy MITM dengan cakupan terluas untuk asisten pemrograman AI di pasar.
+AgentBridge adalah proxy MITM (Man-in-the-Middle) 67router yang mencegat lalu lintas HTTPS dari agen AI IDE dan mengalihkannya melalui mesin perutean terpadu 67router. AgentBridge mendukung **10 agen IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, dan Trae (sedang diselidiki) — sehingga menjadikan 67router sebagai proxy MITM dengan cakupan terluas untuk asisten pemrograman AI di pasar.
 
 **Lokasi dasbor:** `/dashboard/tools/agent-bridge`
 **Grup bilah sisi:** Alat (setelah Agen Cloud)
@@ -16,34 +16,34 @@ AgentBridge adalah proxy MITM (Man-in-the-Middle) OmniRoute yang mencegat lalu l
 
 ### Apa itu AgentBridge?
 
-Ketika agen IDE (misalnya, GitHub Copilot, Cursor, Claude Code) melakukan panggilan API, agen tersebut terhubung langsung ke penyedia AI hulu (OpenAI, Anthropic, dll.). AgentBridge mencegat koneksi tersebut secara transparan di tingkat TLS — tanpa memerlukan perubahan konfigurasi apa pun pada agen — dan menulis ulang permintaan melalui OmniRoute.
+Ketika agen IDE (misalnya, GitHub Copilot, Cursor, Claude Code) melakukan panggilan API, agen tersebut terhubung langsung ke penyedia AI hulu (OpenAI, Anthropic, dll.). AgentBridge mencegat koneksi tersebut secara transparan di tingkat TLS — tanpa memerlukan perubahan konfigurasi apa pun pada agen — dan menulis ulang permintaan melalui 67router.
 
 Ini berarti Anda dapat:
 
-- **Mengalihkan agen apa pun ke penyedia mana pun**: Copilot berkomunikasi dengan OpenAI? Alihkan ke Anthropic Claude, Gemini, atau salah satu dari 375 penyedia OmniRoute.
+- **Mengalihkan agen apa pun ke penyedia mana pun**: Copilot berkomunikasi dengan OpenAI? Alihkan ke Anthropic Claude, Gemini, atau salah satu dari 375 penyedia 67router.
 - **Menerapkan pemetaan model**: `gemini-3-flash` → `claude-sonnet-4.7` secara transparan di tingkat handler.
 - **Mengamati seluruh lalu lintas agen**: setiap permintaan yang dicegat dipublikasikan ke [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Menerapkan ketahanan OmniRoute**: combo routing, circuit breaker, fallback, dan pelacakan biaya juga berfungsi untuk lalu lintas agen IDE.
+- **Menerapkan ketahanan 67router**: combo routing, circuit breaker, fallback, dan pelacakan biaya juga berfungsi untuk lalu lintas agen IDE.
 
 ### Perbandingan dengan pasar
 
-| Fitur              | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------ | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity        |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot     |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)         |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex       |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE         |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries     |    —    |    ✓     |        —        |             ✓             |
-| Claude Code        |    —    |    —     |        ✓        |             ✓             |
-| Open Code          |    —    |    —     |        ✓        |             ✓             |
-| Trae               |    —    |    —     |        —        |   🔍 Sedang diselidiki    |
-| UI Dasbor          |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector  |    ✗    |    ✗     |        ✓        |             ✓             |
-| Routing OmniRoute  |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI pemetaan model  |    ✗    |    ✗     |        ✗        |             ✓             |
-| Daftar bypass      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Sertifikat CA hulu |    ✗    |    ✗     |        ✓        |             ✓             |
+| Fitur              | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------ | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity        |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot     |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)         |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex       |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE         |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries     |    —    |    ✓     |        —        |            ✓             |
+| Claude Code        |    —    |    —     |        ✓        |            ✓             |
+| Open Code          |    —    |    —     |        ✓        |            ✓             |
+| Trae               |    —    |    —     |        —        |   🔍 Sedang diselidiki   |
+| UI Dasbor          |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector  |    ✗    |    ✗     |        ✓        |            ✓             |
+| Routing 67router   |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI pemetaan model  |    ✗    |    ✗     |        ✗        |            ✓             |
+| Daftar bypass      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Sertifikat CA hulu |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, proses anak CJS)
     │  menyelesaikan target berdasarkan SNI header Host
     │  menghasilkan sertifikat TLS per-SNI yang ditandatangani oleh CA AgentBridge
     ├── Cocok dengan daftar bypass? → passthrough TCP (tanpa dekripsi)
-    ├── Cocok dengan target? → fetch → router OmniRoute (port 20128)
+    ├── Cocok dengan target? → fetch → router 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() pada isi/header permintaan
     │               ├── TrafficBuffer.push() — menerbitkan ke Traffic Inspector
@@ -206,7 +206,7 @@ Sertifikat CA AgentBridge harus dipercaya oleh OS sebelum IDE dapat menerima kon
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -262,10 +262,10 @@ Contoh entri `/etc/hosts` untuk GitHub Copilot:
 
 Gunakan Tabel Pemetaan Model di setiap kartu agen untuk menentukan pemetaan sumber → target:
 
-| Model sumber (native agen) | Model target (OmniRoute) |
-| -------------------------- | ------------------------ |
-| `gpt-4o`                   | `claude-sonnet-4.7`      |
-| `*` (karakter pengganti)   | `claude-haiku-4.7`       |
+| Model sumber (native agen) | Model target (67router) |
+| -------------------------- | ----------------------- |
+| `gpt-4o`                   | `claude-sonnet-4.7`     |
+| `*` (karakter pengganti)   | `claude-haiku-4.7`      |
 
 Karakter pengganti `*` memetakan setiap model yang tidak dikenali ke target yang ditentukan. Disimpan dalam tabel `agent_bridge_mappings`.
 
@@ -278,7 +278,7 @@ Karakter pengganti `*` memetakan setiap model yang tidak dikenali ke target yang
 
 ### 3.5 Pemberitahuan risiko
 
-AgentBridge mencegat kredensial (token OAuth, kunci API) yang digunakan IDE untuk mengautentikasi ke penyedia hulu. Kredensial ini **disamarkan sebelum dicatat** (lihat §2.7), tetapi dapat dilihat oleh lapisan MITM OmniRoute. Aktivasi pertama setiap agen akan menampilkan modal pemberitahuan risiko yang dapat ditutup.
+AgentBridge mencegat kredensial (token OAuth, kunci API) yang digunakan IDE untuk mengautentikasi ke penyedia hulu. Kredensial ini **disamarkan sebelum dicatat** (lihat §2.7), tetapi dapat dilihat oleh lapisan MITM 67router. Aktivasi pertama setiap agen akan menampilkan modal pemberitahuan risiko yang dapat ditutup.
 
 ### 3.6 Pemeliharaan & Diagnostik
 
@@ -399,7 +399,7 @@ Deteksi menggunakan jalur khusus OS dan pemeriksaan biner (misalnya, `code --lis
 
 ### Daftar bypass untuk host sensitif
 
-Daftar bypass memastikan bahwa institusi keuangan, penyedia OAuth/SSO, dan host sensitif lainnya **tidak pernah didekripsi**. Lalu lintas TLS mereka diteruskan sebagai tunnel TCP transparan — OmniRoute tidak pernah melihat teks biasa.
+Daftar bypass memastikan bahwa institusi keuangan, penyedia OAuth/SSO, dan host sensitif lainnya **tidak pernah didekripsi**. Lalu lintas TLS mereka diteruskan sebagai tunnel TCP transparan — 67router tidak pernah melihat teks biasa.
 
 Pola bypass default meliputi:
 
@@ -450,7 +450,7 @@ Sebagai alternatif, konfigurasikan port nonprivileged di pengaturan AgentBridge 
 
 Jika IDE menampilkan kesalahan TLS setelah AgentBridge dimulai:
 
-1. Pastikan sertifikat telah diinstal: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Pastikan sertifikat telah diinstal: `security find-certificate -c "67router AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Beberapa aplikasi memiliki trust store sendiri (Firefox, Chrome di Linux). Jalankan "Trust Cert" lagi dan periksa trust store khusus NSS/Firefox.
 3. Mulai ulang IDE setelah memercayai sertifikat — sesi TLS yang sedang berlangsung menggunakan status kepercayaan lama.
 
@@ -501,7 +501,7 @@ Deteksi otomatis menggunakan lokasi instalasi umum. Jika deteksi gagal tetapi ID
 Jika AgentBridge melakukan intersepsi tetapi semua permintaan gagal:
 
 1. Pastikan setidaknya satu penyedia terhubung di `/dashboard/providers`
-2. Periksa log server OmniRoute: `APP_LOG_LEVEL=debug` di `.env`
+2. Periksa log server 67router: `APP_LOG_LEVEL=debug` di `.env`
 3. Pastikan `OMNIROUTE_BASE_URL` mengarah ke endpoint router yang benar (default: `http://127.0.0.1:20128`)
 
 ---

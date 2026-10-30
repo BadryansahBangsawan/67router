@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute olyan jeleket keres a felsőbb szintű szolgáltatók hibaválaszaiban, amelyek arra utalnak, hogy egy szolgáltatói
+Az 67router olyan jeleket keres a felsőbb szintű szolgáltatók hibaválaszaiban, amelyek arra utalnak, hogy egy szolgáltatói
 **fiók véglegesen használhatatlanná vált** (felfüggesztették / deaktiválták / az ÁSZF megsértése miatt kitiltották), és egyezés
 esetén az adott kapcsolatot egy **végleges `banned` állapotba** helyezi, így az többé nem
 lesz kiválasztva a kérésekhez. Ezt konfigurálja a **Security → Banned Keywords**

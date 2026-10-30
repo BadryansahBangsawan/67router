@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **fire legitimasjonsfamilier** som kan autorisere administrasjonsruter.
+67router har **fire legitimasjonsfamilier** som kan autorisere administrasjonsruter.
 De er ikke utskiftbare. Inference API-nøkler (`sk-…`) administrerer **ikke** serveren med mindre de eksplisitt ble tildelt `manage`- eller `admin`-omfang.
 
 Kanonisk implementasjon: `src/lib/api/requireManagementAuth.ts`.

@@ -13,7 +13,7 @@
 
 ## Ohun tí ó jẹ́
 
-OmniRoute so mọ́ vault **Obsidian** gẹ́gẹ́ bí **orísun àyíká-ọ̀rọ̀** — ibi ìpamọ́ ìmọ̀
+67router so mọ́ vault **Obsidian** gẹ́gẹ́ bí **orísun àyíká-ọ̀rọ̀** — ibi ìpamọ́ ìmọ̀
 Markdown abẹ́lẹ̀ kan tí àwọn agent ń kà, tí wọ́n sì ń kọ sí nípasẹ̀ server MCP tí a kọ́ sínú rẹ̀.
 Ìṣọ̀kan náà ń bá plugin àwùjọ **Obsidian Local REST API** tí ń ṣiṣẹ́ nínú app desktop
 sọ̀rọ̀, kí àwọn agent lè ṣàwárí àwọn àkọsílẹ̀, kà/kọ́/ṣe àtúnṣe patch sí àwọn fáìlì,
@@ -77,7 +77,7 @@ Gbogbo àwọn ọ̀nà nílò ìfàṣẹsí pátákó ìdarí. `POST` kọ gbo
 
 `src/app/api/settings/obsidian/webdav/route.ts` ń ṣàkóso ìmúdọ́gba vault àṣàyàn kan
 tí WebDAV ń ṣe àtìlẹ́yìn fún (tí `src/lib/obsidianSync.ts` ń darí). Ṣíṣiṣẹ́ rẹ̀ ń tọ́ka
-OmniRoute sí àkójọpọ̀ vault agbègbè, ó sì ń ṣẹ̀dá orúkọ aṣàmúlò/ọ̀rọ̀ aṣínà WebDAV láìròtẹ́lẹ̀:
+67router sí àkójọpọ̀ vault agbègbè, ó sì ń ṣẹ̀dá orúkọ aṣàmúlò/ọ̀rọ̀ aṣínà WebDAV láìròtẹ́lẹ̀:
 
 ```bash
 # Ṣí ìmúdọ́gba WebDAV ṣiṣẹ́ fún àkójọpọ̀ vault kan (ó ń ṣẹ̀dá orúkọ aṣàmúlò/ọ̀rọ̀ aṣínà)
@@ -114,26 +114,26 @@ láṣẹ láti wọlé; ìwé ẹ̀rí àyíká tó fẹsẹ̀ múlẹ̀, tí �
 
 A ṣàlàyé wọn nínú `open-sse/mcp-server/tools/obsidianTools.ts`. Token/base-URL ni a máa ń pinnu
 nígbà ìpè kọ̀ọ̀kan (ti kọ́kọ́rọ́ API kọ̀ọ̀kan lákọ̀ọ́kọ́, lẹ́yìn náà ti àgbáyé). Àwọn irinṣẹ́ tó ń lo ẹ̀rọ aṣàmúlò **ìṣiṣẹ́pọ̀**
-OmniRoute (àwọn irinṣẹ́ `obsidian_sync_*` mẹ́rin náà) tún nílò token ìfàṣẹsí ìṣiṣẹ́pọ̀ tí a ṣètò
-nínú àwọn ààtò OmniRoute.
+67router (àwọn irinṣẹ́ `obsidian_sync_*` mẹ́rin náà) tún nílò token ìfàṣẹsí ìṣiṣẹ́pọ̀ tí a ṣètò
+nínú àwọn ààtò 67router.
 
 ### Àwọn irinṣẹ́ kíkà (`read:obsidian`)
 
-| Irinṣẹ́                       | Àpèjúwe                                                                                                      |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Ṣàyẹ̀wò bóyá Local REST API ṣeé dé àti pé a ti fi ìdánimọ̀ múlẹ̀.                                               |
-| `obsidian_search_simple`     | Ṣàwárí ọ̀rọ̀ kíkún nínú àkóónú àkọsílẹ̀; ó ń dá àwọn àjákù ọ̀rọ̀ padà pẹ̀lú àwọn ipa fáìlì.                        |
-| `obsidian_search_structured` | Ṣàwárí nípa lílo gbólóhùn JSON Logic (àwọn àsẹ and/or/regex/path).                                           |
-| `obsidian_read_note`         | Ka àkọsílẹ̀ nípasẹ̀ ipa tó jẹ́ mọ́ vault; ó lè jẹ́ àkọlé/block/frontmatter kan pàtó.                              |
-| `obsidian_list_vault`        | Ṣe àtòjọ àwọn fáìlì àti àwọn àpò inú vault (igi àwọn àkọsílẹ̀).                                               |
-| `obsidian_get_document_map`  | Gba ìṣètò àkọlé àkọsílẹ̀ náà gẹ́gẹ́ bí àwòrán àwọn àkọlé → àwọn nọ́ńbà ìlà.                                      |
-| `obsidian_get_note_metadata` | Gba frontmatter, àwọn tag, àwọn link, àti iye ẹyọ ọ̀rọ̀/ọ̀rọ̀ láìgba gbogbo àkóónú.                              |
-| `obsidian_get_active_file`   | Gba ipa + àkóónú fáìlì tó ń ṣiṣẹ́ lọ́wọ́lọ́wọ́ nínú Obsidian.                                                     |
-| `obsidian_get_periodic_note` | Gba àkọsílẹ̀ àsìkò ojoojúmọ́/ọ̀sọ̀ọ̀sẹ̀/oṣooṣù fún ọjọ́ kan (òní bí a kò bá sọ ọ́).                                  |
-| `obsidian_get_tags`          | Ṣe àtòjọ gbogbo tag inú vault pẹ̀lú iye ìgbà tí ọ̀kọ̀ọ̀kan farahàn.                                              |
-| `obsidian_list_commands`     | Ṣe àtòjọ àwọn ID àṣẹ Obsidian tó wà (lò ó pẹ̀lú `obsidian_execute_command`).                                  |
-| `obsidian_sync_status`       | Ipò ẹ̀rọ aṣàmúlò ìṣiṣẹ́pọ̀ OmniRoute: bóyá ó ń ṣiṣẹ́, orúkọ vault, port, àkókò tó ti ṣiṣẹ́, ìṣiṣẹ́pọ̀ tó ṣẹ̀ṣẹ̀ wáyé. |
-| `obsidian_sync_conflicts`    | Ṣe àtòjọ àwọn ìtakora ìṣiṣẹ́pọ̀ tí a kò tíì yanjú (ipa, ipa ìtakora, ìgbà tí a rí i).                          |
+| Irinṣẹ́                       | Àpèjúwe                                                                                                     |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Ṣàyẹ̀wò bóyá Local REST API ṣeé dé àti pé a ti fi ìdánimọ̀ múlẹ̀.                                              |
+| `obsidian_search_simple`     | Ṣàwárí ọ̀rọ̀ kíkún nínú àkóónú àkọsílẹ̀; ó ń dá àwọn àjákù ọ̀rọ̀ padà pẹ̀lú àwọn ipa fáìlì.                       |
+| `obsidian_search_structured` | Ṣàwárí nípa lílo gbólóhùn JSON Logic (àwọn àsẹ and/or/regex/path).                                          |
+| `obsidian_read_note`         | Ka àkọsílẹ̀ nípasẹ̀ ipa tó jẹ́ mọ́ vault; ó lè jẹ́ àkọlé/block/frontmatter kan pàtó.                             |
+| `obsidian_list_vault`        | Ṣe àtòjọ àwọn fáìlì àti àwọn àpò inú vault (igi àwọn àkọsílẹ̀).                                              |
+| `obsidian_get_document_map`  | Gba ìṣètò àkọlé àkọsílẹ̀ náà gẹ́gẹ́ bí àwòrán àwọn àkọlé → àwọn nọ́ńbà ìlà.                                     |
+| `obsidian_get_note_metadata` | Gba frontmatter, àwọn tag, àwọn link, àti iye ẹyọ ọ̀rọ̀/ọ̀rọ̀ láìgba gbogbo àkóónú.                             |
+| `obsidian_get_active_file`   | Gba ipa + àkóónú fáìlì tó ń ṣiṣẹ́ lọ́wọ́lọ́wọ́ nínú Obsidian.                                                    |
+| `obsidian_get_periodic_note` | Gba àkọsílẹ̀ àsìkò ojoojúmọ́/ọ̀sọ̀ọ̀sẹ̀/oṣooṣù fún ọjọ́ kan (òní bí a kò bá sọ ọ́).                                 |
+| `obsidian_get_tags`          | Ṣe àtòjọ gbogbo tag inú vault pẹ̀lú iye ìgbà tí ọ̀kọ̀ọ̀kan farahàn.                                             |
+| `obsidian_list_commands`     | Ṣe àtòjọ àwọn ID àṣẹ Obsidian tó wà (lò ó pẹ̀lú `obsidian_execute_command`).                                 |
+| `obsidian_sync_status`       | Ipò ẹ̀rọ aṣàmúlò ìṣiṣẹ́pọ̀ 67router: bóyá ó ń ṣiṣẹ́, orúkọ vault, port, àkókò tó ti ṣiṣẹ́, ìṣiṣẹ́pọ̀ tó ṣẹ̀ṣẹ̀ wáyé. |
+| `obsidian_sync_conflicts`    | Ṣe àtòjọ àwọn ìtakora ìṣiṣẹ́pọ̀ tí a kò tíì yanjú (ipa, ipa ìtakora, ìgbà tí a rí i).                         |
 
 ### Àwọn irinṣẹ́ kíkọ (`write:obsidian`)
 

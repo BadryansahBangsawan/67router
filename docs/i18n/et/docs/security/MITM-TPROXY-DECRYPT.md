@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY läbipaistev dekrüptimine on OmniRoute'i **5. liikluse hõiverežiim**
+TPROXY läbipaistev dekrüptimine on 67router'i **5. liikluse hõiverežiim**
 [Traffic Inspectori](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge'i](../frameworks/AGENTBRIDGE.md)
 MITM-pinu jaoks. See püüab Linuxis kinni ja **dekrüptib** kohaliku väljamineva HTTPS-liikluse,
 kasutades kerneli TPROXY-d ning reeglipõhist marsruutimist — **ilma** `/etc/hosts`-i võltsimata ja
@@ -55,7 +55,7 @@ Kasutage seda, kui soovite hõivata ja dekrüptida liiklust protsessilt, mis:
 - mille tööd te ei soovi süsteemse puhverserveri muudatusega häirida.
 
 Kuna kinnipüüdmine toimub kernelis, ei vaja lähteprotsess **ühtegi konfiguratsioonimuudatust**,
-kuid protsess peab usaldama OmniRoute'i installitud dünaamilist CA-d
+kuid protsess peab usaldama 67router'i installitud dünaamilist CA-d
 (vt [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -74,7 +74,7 @@ lisamoodul pole kompileeritud), tagastab lisamooduli laadija (`src/mitm/tproxy/t
 erindi viskamise asemel `null`. Hõiverežiimi olek kuvab seejärel
 `available: false`, juhtpaneeli lüliti on **keelatud** kohtspikriga
 "TPROXY dekrüptimine nõuab Linuxit + juurkasutaja õigusi + natiivset lisamoodulit" ning ülejäänud
-OmniRoute jätkab töötamist.
+67router jätkab töötamist.
 
 ---
 
@@ -263,7 +263,7 @@ lõputu tsükkel. Edastustee kaitseb selle eest möödaviigu soklimärgisega
 | **Vigade puhastamine**                   | Marsruudi veavastused läbivad funktsiooni `sanitizeErrorMessage()` (range reegel #12).                                                                                                                                                                                                                                                                                                           |
 
 **MITM CA on võimas funktsioon.** Operatsioonisüsteemi usaldatud CA, mis saab allkirjastada mis tahes
-hosti sertifikaadi, tähendab, et kogu OmniRoute'i pealtkuulatava liikluse saab dekrüptida. Selle kasutamine on piiratud
+hosti sertifikaadi, tähendab, et kogu 67router'i pealtkuulatava liikluse saab dekrüptida. Selle kasutamine on piiratud
 selgesõnalise, ainult kohaliku TPROXY hõiverežiimiga, mis on vaikimisi välja lülitatud, ning usaldusankru
 kirje eemaldatakse režiimi peatamisel.
 
@@ -374,7 +374,7 @@ puudub, tagastab `GET /api/tools/agent-bridge/tproxy` väärtuse `available: fal
 ### Pärast krahhi alles jäänud tulemüürireeglid
 
 `revertTproxy()` on rakendamise täpne pöördtehe ja idempotentne. Režiimi peatamine
-tühistab reeglid; kui OmniRoute seansi ajal sunniviisiliselt peatati, kasutage AgentBridge'i
+tühistab reeglid; kui 67router seansi ajal sunniviisiliselt peatati, kasutage AgentBridge'i
 toimingut **Repair** (`POST /api/tools/agent-bridge/repair`), et tühistada süsteemi
 orvuks jäänud olek (DNS-i võltsimine, juur-CA, süsteemi puhverserver). TPROXY `mangle`-reeglid
 ja marsruut eemaldatakse automaatselt ka taaskäivitamisel.

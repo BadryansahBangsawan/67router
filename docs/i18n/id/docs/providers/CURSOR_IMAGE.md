@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menyediakan **pembuatan gambar** paket Cursor pada `POST /v1/images/generations` melalui id penyedia yang sama dengan chat: `cursor` (alias `cu`).
+67router menyediakan **pembuatan gambar** paket Cursor pada `POST /v1/images/generations` melalui id penyedia yang sama dengan chat: `cursor` (alias `cu`).
 
 | Bidang               | Nilai                                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute menyediakan **pembuatan gambar** paket Cursor pada `POST /v1/images/ge
 
 ## Mengapa Menggunakan Agent CLI
 
-Chat Cursor di OmniRoute menggunakan `agent.v1.AgentService/Run` (protobuf). Jalur tersebut **menolak** alat bawaan klien (shell, write, …). Pembuatan gambar adalah alat asli Cursor yang dijalankan oleh **CLI `agent`** menggunakan seat tersebut. Karena itu, handler gambar menjalankan `agent` dengan prompt yang dikunci dan ruang kerja sementara per permintaan (dengan struktur yang sama seperti bridge seat komunitas), lalu mengembalikan `b64_json` yang kompatibel dengan OpenAI.
+Chat Cursor di 67router menggunakan `agent.v1.AgentService/Run` (protobuf). Jalur tersebut **menolak** alat bawaan klien (shell, write, …). Pembuatan gambar adalah alat asli Cursor yang dijalankan oleh **CLI `agent`** menggunakan seat tersebut. Karena itu, handler gambar menjalankan `agent` dengan prompt yang dikunci dan ruang kerja sementara per permintaan (dengan struktur yang sama seperti bridge seat komunitas), lalu mengembalikan `b64_json` yang kompatibel dengan OpenAI.
 
 ## Pembatasan akses (Aturan Ketat #15 + #17)
 
@@ -23,12 +23,12 @@ Ini adalah satu-satunya format `IMAGE_PROVIDERS` yang menjalankan proses anak (b
 
 ## Gerbang konkurensi berada pada tingkat modul (batasan instans tunggal)
 
-`CURSOR_IMG_MAX_CONCURRENT` diterapkan oleh penghitung/antrean dalam memori yang cakupannya terbatas pada instans modul Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Mekanisme ini membatasi jumlah proses `agent` secara bersamaan dengan benar dalam satu proses OmniRoute, tetapi **tidak** melakukan koordinasi antara beberapa proses/instans yang menggunakan seat Cursor yang sama (misalnya deployment dengan beberapa replika) — setiap instans menerapkan batas independennya sendiri. Untuk deployment instans tunggal (default), batas ini bersifat presisi; deployment yang diskalakan secara horizontal sebaiknya menetapkan `CURSOR_IMG_MAX_CONCURRENT` secara konservatif per instans atau merutekan lalu lintas gambar Cursor ke satu instans.
+`CURSOR_IMG_MAX_CONCURRENT` diterapkan oleh penghitung/antrean dalam memori yang cakupannya terbatas pada instans modul Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Mekanisme ini membatasi jumlah proses `agent` secara bersamaan dengan benar dalam satu proses 67router, tetapi **tidak** melakukan koordinasi antara beberapa proses/instans yang menggunakan seat Cursor yang sama (misalnya deployment dengan beberapa replika) — setiap instans menerapkan batas independennya sendiri. Untuk deployment instans tunggal (default), batas ini bersifat presisi; deployment yang diskalakan secara horizontal sebaiknya menetapkan `CURSOR_IMG_MAX_CONCURRENT` secara konservatif per instans atau merutekan lalu lintas gambar Cursor ke satu instans.
 
 ## Persyaratan
 
 1. Akun Cursor yang terhubung di dashboard (OAuth atau API key `crsr_…`).
-2. Binary Cursor Agent tersedia bagi proses OmniRoute:
+2. Binary Cursor Agent tersedia bagi proses 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, atau
    - `~/.local/bin/agent`, atau
    - `providerSpecificData.agentBin` pada koneksi Cursor.

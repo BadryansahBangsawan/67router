@@ -1,4 +1,4 @@
-# OmniRoute Architecture (العربية)
+# 67router Architecture (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _آخر تحديث: 2026-06-28_
 
 ## الملخص التنفيذي
 
-OmniRoute هي بوابة توجيه محلية للذكاء الاصطناعي ولوحة معلومات مبنية على Next.js.
+67router هي بوابة توجيه محلية للذكاء الاصطناعي ولوحة معلومات مبنية على Next.js.
 توفر نقطة نهاية واحدة متوافقة مع OpenAI (`/v1/*`) وتوجّه حركة المرور عبر عدة مزودين علويين، مع الترجمة والتراجع وتحديث الرموز وتتبع الاستخدام.
 
 القدرات الأساسية:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[لوحة المعلومات في المتصفح]
     end
 
-    subgraph Router[عملية OmniRoute المحلية]
+    subgraph Router[عملية 67router المحلية]
         API[واجهة API للتوافق مع V1\n/v1/*]
         DASH[لوحة المعلومات + واجهة API للإدارة\n/api/*]
         CORE[النواة الخاصة بـ SSE + الترجمة\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ flowchart LR
 
 ## 5) الخدمات المضمّنة (v3.8.4)
 
-يمكن لـ OmniRoute تثبيت عمليات أدوات الذكاء الاصطناعي التي تعمل محليًا والإشراف عليها والتوجيه إليها،
+يمكن لـ 67router تثبيت عمليات أدوات الذكاء الاصطناعي التي تعمل محليًا والإشراف عليها والتوجيه إليها،
 وتُسمّى **الخدمات المضمّنة**. وتُرفق خمس خدمات: 9Router وCLIProxyAPI وBifrost وMux وDario.
 
 طبقات البنية:
@@ -438,7 +438,7 @@ flowchart LR
 - ذاكرة التخزين المؤقت للحصص: `src/domain/quotaCache.ts`
 - حالة التدهور: `src/domain/degradation.ts`
 - تدقيق الإعدادات: `src/domain/configAudit.ts`
-- منشئ البيانات الوصفية لاستجابة OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- منشئ البيانات الوصفية لاستجابة 67router: `src/domain/omnirouteResponseMeta.ts`
 - النظام الفرعي للتقييم: `src/domain/assessment/` — مهام تقييم دورية
 
 ### E. مسار التفويض
@@ -816,7 +816,7 @@ flowchart LR
         Browser[متصفح لوحة المعلومات]
     end
 
-    subgraph ContainerOrProcess[وقت تشغيل OmniRoute]
+    subgraph ContainerOrProcess[وقت تشغيل 67router]
         Next[خادم Next.js\nPORT=20128]
         Core[نواة SSE + المنفِّذات]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ flowchart LR
 ## مصفوفة توافق موفّري الخدمة
 
 > **ملاحظة:** تمثّل المصفوفة أدناه عيّنة من موفّري الخدمة المسجّلين البالغ عددهم 351 موفّرًا في
-> OmniRoute v3.8.0. للاطّلاع على القائمة المرجعية والمحدَّثة باستمرار، راجع
+> 67router v3.8.0. للاطّلاع على القائمة المرجعية والمحدَّثة باستمرار، راجع
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (مولَّدة تلقائيًا) أو مصدر
 > الحقيقة في `src/shared/constants/providers.ts` (يتم التحقق منه باستخدام Zod عند التحميل).
 
@@ -1117,7 +1117,7 @@ flowchart LR
 - الطلب الخام المستلَم من العميل
 - الطلب المترجم المُرسَل فعليًا إلى المزوّد الرئيسي
 - استجابة المزوّد المعاد تكوينها بصيغة JSON؛ وتُختزل الاستجابات المتدفقة إلى الملخص النهائي بالإضافة إلى البيانات الوصفية للتدفق
-- استجابة العميل النهائية التي يعيدها OmniRoute؛ وتُخزّن الاستجابات المتدفقة بصيغة الملخص المختصر نفسها
+- استجابة العميل النهائية التي يعيدها 67router؛ وتُخزّن الاستجابات المتدفقة بصيغة الملخص المختصر نفسها
 
 ## الحدود الحساسة أمنيًا
 

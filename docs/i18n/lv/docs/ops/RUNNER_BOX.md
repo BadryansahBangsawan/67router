@@ -5,7 +5,7 @@
 ---
 
 Pašu mitinātais pūls darbojas **.113** serverī (`tomni-proxmox-113`). Kopš 2026-10-18 katram
-OmniRoute izpildītājam ir **viena loma**, viena etiķete un atmiņas/CPU budžets, kas pielāgots tā izmērītajai
+67router izpildītājam ir **viena loma**, viena etiķete un atmiņas/CPU budžets, kas pielāgots tā izmērītajai
 darba slodzei. Turbopack slots saņem būvējumam nepieciešamos resursus; pārējie sloti ir pielāgoti to
 izmērītajām maksimālajām slodzēm. Servera resursi tiek pārdalīti virs to faktiskās kapacitātes tikai tad, ja Turbopack būvējums sakrīt ar Release-Green
 webpack būvējumu un lint darbu; servera mijmaiņas apgabals (16 GB) to absorbē, un, tā kā izvilkšanas pieprasījumu būvējumi darbojas
@@ -27,7 +27,7 @@ Mērīts 2026-10-18:
 | mijmaiņa    | 16 GB                             | `omniroute-113-5` darbojas ar izslēgtu mijmaiņu (`MemorySwapMax=0`), tāpēc nekontrolēts būvējums tiek apturēts pie noteiktā ierobežojuma, nevis liek serverim izmantot mijmaiņu                                                                                                                                                                                                                                            |
 | `/tmp`      | **12 GB tmpfs = RAM**             | viss, kas tur tiek novietots, aizņem atmiņu; atlikumi tiek iztīrīti pēc 3 h                                                                                                                                                                                                                                                                                                                                                |
 | CPU         | novērota slodze 60 uz 32 kodoliem | pirms kvotu ieviešanas viens Turbopack būvējums (~1166 % CPU) kopā ar pārklājuma testu komplektu tajā pašā serverī atņēma resursus pārējo klausītāju sirdspukstiem (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                   |
-| izpildītāji | **6 klausītāji**                  | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ir atspējoti (`systemctl enable --now` atkal iespējo vienu no tiem)                                                                                                                                                                                                                                                                                        |
+| izpildītāji | **6 klausītāji**                  | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ir atspējoti (`systemctl enable --now` atkal iespējo vienu no tiem)                                                                                                                                                                                                                                                                                         |
 
 Ierobežojumi atrodas katras vienības failā `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (iepriekšējās vērtības saglabātas kā `override.conf.bak-20261018`) un tika lietoti darbības laikā ar
@@ -75,7 +75,7 @@ tiešsaistē.
 
 Izpildītāja noklusējuma `KillMode=process` pēc vienības apturēšanas vai restartēšanas
 atstāj `Runner.Worker → npm → next-build` darbībā — bezsaimnieka būvējums turpina patērēt
-RAM un CPU, lai gan tam nav piesaistīts neviens darbs. Katrai OmniRoute vienībai ir
+RAM un CPU, lai gan tam nav piesaistīts neviens darbs. Katrai 67router vienībai ir
 papildkonfigurācijas fails
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ar `KillMode=mixed`: vispirms klausītājam tiek nosūtīts SIGTERM, bet `TimeoutStop` brīdī
@@ -120,7 +120,7 @@ restartēšanu izpildot vienā komandā.
   tikai aizmugursistēmai paredzēts `next build` (~5–6 GB; webpack), un `quality.yml` `lint-guard`. `omniroute-113`
   līdz 2026-10-18 bija `MemoryHigh=4G` — promptfoo būvējums tur 54 minūtes centās atbrīvot sev atmiņu;
   8 GB novērš ierobežošanu.
-- **Apzināti mazāk klausītāju.** Četras OmniRoute vienības tika atspējotas 2026-08-29 — katrs papildu
+- **Apzināti mazāk klausītāju.** Četras 67router vienības tika atspējotas 2026-08-29 — katrs papildu
   klausītājs ir vēl viens iepriekš minētā atmiņas budžeta patērētājs. Uzkopšanas procesa maksimālā robeža ir 6 (`MAX_ACTIVE_RUNNERS=6` cron konfigurācijā): tas saskaita
   katru `Runner.Listener` šajā serverī, un OmniHeuris + OmniMind mūsu četriem pievieno vēl divus.
 - **Nekad netīriet `/tmp` vai `_work` manuāli, kamēr kaut viens izpildītājs ir aizņemts.**

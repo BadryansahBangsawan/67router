@@ -4,7 +4,7 @@
 
 ---
 
-Det här dokumentet är den auktoritativa referensen för alla CI-kvalitetsgrindar i OmniRoute.
+Det här dokumentet är den auktoritativa referensen för alla CI-kvalitetsgrindar i 67router.
 Det beskriver varje grind, vad den validerar, vilket CI-jobb den körs i, huruvida den använder
 en ratchet-baslinje eller en godkänd/underkänd-policy samt huruvida den blockerar bygget eller endast är rådgivande.
 
@@ -269,14 +269,14 @@ Körs efter `build`. Blockerar merge vid fel.
 
 Dessa körs enligt ett cron-schema (och `workflow_dispatch`), aldrig på PR:ar. Alla är rådgivande.
 
-| Arbetsflöde            | Validerar                                                                                                                                                   | Blockerande    |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | Property-tester med fast-check, slumpmässigt seed + högt antal körningar                                                                                    | **Rådgivande** |
-| `nightly-resilience`   | Grind för heap-tillväxt, chaos-felinjektion, k6-last-/soaktester                                                                                            | **Rådgivande** |
-| `nightly-llm-security` | promptfoo-injektionsskydd (block-läge) + garak-sonder (hoppas över utan en leverantörshemlighet)                                                            | **Rådgivande** |
-| `nightly-schemathesis` | OpenAPI-kontraktsfuzzing (schemathesis) mot en live-körande OmniRoute med `docs/openapi.yaml` — avslöjar brott mot specen / ohanterade 500-svar (Fas 8 B.4) | **Rådgivande** |
-| `nightly-mutation`     | Stryker-poäng för mutationstestning över den snabba enhetstestbanan — överlevande mutanter avslöjar svaga asserts                                           | **Rådgivande** |
-| `nightly-compat`       | Kompatibilitetsmatris för Node-motorn över de `engines.node`-intervall som stöds                                                                            | **Rådgivande** |
+| Arbetsflöde            | Validerar                                                                                                                                                  | Blockerande    |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | Property-tester med fast-check, slumpmässigt seed + högt antal körningar                                                                                   | **Rådgivande** |
+| `nightly-resilience`   | Grind för heap-tillväxt, chaos-felinjektion, k6-last-/soaktester                                                                                           | **Rådgivande** |
+| `nightly-llm-security` | promptfoo-injektionsskydd (block-läge) + garak-sonder (hoppas över utan en leverantörshemlighet)                                                           | **Rådgivande** |
+| `nightly-schemathesis` | OpenAPI-kontraktsfuzzing (schemathesis) mot en live-körande 67router med `docs/openapi.yaml` — avslöjar brott mot specen / ohanterade 500-svar (Fas 8 B.4) | **Rådgivande** |
+| `nightly-mutation`     | Stryker-poäng för mutationstestning över den snabba enhetstestbanan — överlevande mutanter avslöjar svaga asserts                                          | **Rådgivande** |
+| `nightly-compat`       | Kompatibilitetsmatris för Node-motorn över de `engines.node`-intervall som stöds                                                                           | **Rådgivande** |
 
 Prestandabaslinjer (heap, TTFB, byggtid) registreras men utgör ingen grind: se [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -547,7 +547,7 @@ tillåtelselista ger en falsk känsla av kvalitet.
 
 ## Agentverktyg: LSP-i-loopen (valfritt)
 
-Utöver CI-grindarna levereras OmniRoute med en **valfri** `agent-lsp`-grundstruktur
+Utöver CI-grindarna levereras 67router med en **valfri** `agent-lsp`-grundstruktur
 (en `.mcp.json` på projektnivå, fas 7, uppgift 15). Skapa `.mcp.json`
 för att exponera en TypeScript-språkserver för kodningsagenter, så att de slår upp symboler/
 diagnostik **innan** de skriver kod — ett kompilera-före-påstående-komplement till

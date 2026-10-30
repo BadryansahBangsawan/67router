@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/memory/` àti `src/app/api/memory/`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40 (pípa-nípa-àìyàn + ìmúdójúìwọ̀n quantization int8)
 
-OmniRoute ń pèsè ìrántí ìbánisọ̀rọ̀ tó wà pẹ́ títí, tí a dá lórí kọ́kọ́rọ́ API (àti
+67router ń pèsè ìrántí ìbánisọ̀rọ̀ tó wà pẹ́ títí, tí a dá lórí kọ́kọ́rọ́ API (àti
 id session bí ó bá yẹ). A máa ń yọ àwọn ìrántí jáde láìfọwọ́ṣe láti inú àwọn ìdáhùn LLM
 nípasẹ̀ ìbámu àpẹẹrẹ regex fẹ́ẹ́rẹ́, a sì máa ń fi wọ́n padà sínú àwọn
 ìbéèrè tó tẹ̀ lé gẹ́gẹ́ bí ìfiránṣẹ́ system àkọ́kọ́ (tàbí ìfiránṣẹ́ user àkọ́kọ́ fún àwọn olùpèsè tó
@@ -617,7 +617,7 @@ kọ́kọ́rọ́/iye gbogbogbòò (`src/lib/memory/cache.ts`) tó ní àwọn 
 
 ## Yíyan Olùpèsè Embedding (v3.8.16+)
 
-Ẹ́ńjìnnì ìrántí OmniRoute ṣe àtìlẹ́yìn fún **orísun embedding mẹ́rin** (`src/lib/memory/embedding/`). Ọ̀kọ̀ọ̀kan ní àwọn ìṣòro àti àǹfààní ọ̀tọ̀ọ̀tọ̀ ní **àkókò ìdádúró, iye owó, dídára módẹ́lì, àti ìdíjú ìṣètò**.
+Ẹ́ńjìnnì ìrántí 67router ṣe àtìlẹ́yìn fún **orísun embedding mẹ́rin** (`src/lib/memory/embedding/`). Ọ̀kọ̀ọ̀kan ní àwọn ìṣòro àti àǹfààní ọ̀tọ̀ọ̀tọ̀ ní **àkókò ìdádúró, iye owó, dídára módẹ́lì, àti ìdíjú ìṣètò**.
 
 ### Àwọn Orísun Embedding
 
@@ -1036,13 +1036,13 @@ sí ibi ìpamọ́ kan náà tí àwọn hook claude-mem ń kún.
 Aṣàmúlò yìí kò tú olùṣọ́ náà ká: a ti fi `127.0.0.1` lé host náà lórí taara, àti pé schema ìṣètò
 (`ClaudeMemBackendConfigSchema`, `.strict()`) ń gba àwọn wọ̀nyí nìkan:
 
-| Kọ́kọ́rọ́      | Irú   | Àiyípadà | Àwọn àkíyèsí                                                                                                          |
-| ----------- | ----- | -------- | --------------------------------------------------------------------------------------------------------------------- |
-| `port`      | nọ́ńbà | —        | Ó pọndandan, 1024–65535. port worker claude-mem láti inú fáìlì ètò rẹ̀ (àiyípadà `37700 + uid % 100`).                 |
-| `project`   | ọ̀rọ̀   | —        | Project claude-mem tí a ó lò. Tí a kò bá ṣètò rẹ̀ → kọ́kọ́rọ́ OmniRoute API kọ̀ọ̀kan yóò tọ́ka sí project tirẹ̀ (`apiKeyId`). |
-| `timeoutMs` | nọ́ńbà | `5000`   | Àkókò ìdádúró fún ìbéèrè kọ̀ọ̀kan, 100–30000.                                                                           |
+| Kọ́kọ́rọ́      | Irú   | Àiyípadà | Àwọn àkíyèsí                                                                                                         |
+| ----------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| `port`      | nọ́ńbà | —        | Ó pọndandan, 1024–65535. port worker claude-mem láti inú fáìlì ètò rẹ̀ (àiyípadà `37700 + uid % 100`).                |
+| `project`   | ọ̀rọ̀   | —        | Project claude-mem tí a ó lò. Tí a kò bá ṣètò rẹ̀ → kọ́kọ́rọ́ 67router API kọ̀ọ̀kan yóò tọ́ka sí project tirẹ̀ (`apiKeyId`). |
+| `timeoutMs` | nọ́ńbà | `5000`   | Àkókò ìdádúró fún ìbéèrè kọ̀ọ̀kan, 100–30000.                                                                          |
 
-Mú un ṣiṣẹ́ nípasẹ̀ `PUT /api/settings/memory`, kí o sì tún OmniRoute bẹ̀rẹ̀ (ẹ̀ẹ̀kan ṣoṣo ni a máa ń forúkọsílẹ̀ àwọn backend,
+Mú un ṣiṣẹ́ nípasẹ̀ `PUT /api/settings/memory`, kí o sì tún 67router bẹ̀rẹ̀ (ẹ̀ẹ̀kan ṣoṣo ni a máa ń forúkọsílẹ̀ àwọn backend,
 nínú `initMemoryBackends()`):
 
 ```json
@@ -1059,7 +1059,7 @@ config tí kò tọ́ (`claude-mem.backend.invalid_config`), a sì máa foju k�
 
 - Àwọn ID jẹ́ `claude-mem:<observationId>`; `get`/`delete` máa ń foju kọ àwọn ID ti àwọn backend mìíràn láì ṣe
   ìpè nẹ́tíwọ́ọ̀kì.
-- `create` → `POST /api/memory/save`; àwọn field OmniRoute (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; àwọn field 67router (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) máa ń wà nínú `metadata.omniroute` ti claude-mem, wọ́n sì máa ń padà bọ̀ bí wọ́n ṣe rí nígbà kíkà.
 - `search` → `GET /api/search?format=json&type=observations`, tí a gé kúrú dé `maxTokens`
   (chars / 4). `list` → endpoint observations onípele ti worker (`total` jẹ́ ààlà kékeré — worker
@@ -1071,16 +1071,16 @@ config tí kò tọ́ (`claude-mem.backend.invalid_config`), a sì máa foju k�
 - Ìfisí prompt (`retrieval.ts`) àti àwọn irinṣẹ́ MCP `omniroute_memory_*` ṣì máa ń ka SQLite
   ní tààràtà — wọn kì í gba inú `memoryManager` kọjá, nítorí náà backend yìí kì í pèsè data fún wọn.
 
-**Ṣíṣàkóso àwọn ìpè LLM ti claude-mem fúnra rẹ̀ nípasẹ̀ OmniRoute.** claude-mem máa ń fún àwọn observation pọ̀
+**Ṣíṣàkóso àwọn ìpè LLM ti claude-mem fúnra rẹ̀ nípasẹ̀ 67router.** claude-mem máa ń fún àwọn observation pọ̀
 pẹ̀lú LLM (àiyípadà: Claude Agent SDK). Olùpèsè `openai-compatible` rẹ̀ lè tọ́ka sí
-OmniRoute dípò rẹ̀, láti lo combo fallback àti títọpinpin iye owó. Nínú `~/.claude-mem/settings.json`:
+67router dípò rẹ̀, láti lo combo fallback àti títọpinpin iye owó. Nínú `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

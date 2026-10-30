@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (Hausa)
+# 67router Antigravity (Google One AI) Onboarding Guide (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇹 [am](../../../am/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ig](../../../ig/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇹 [lt](../../../lt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇹 [mt](../../../mt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **Abin da za ka samu**: Samun damar amfani da Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, da sauran samfura ta hanyar rajistarka ta Google One AI Pro — ana bi da su ta OmniRoute a matsayin ƙofa guda ɗaya.
+> **Abin da za ka samu**: Samun damar amfani da Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, da sauran samfura ta hanyar rajistarka ta Google One AI Pro — ana bi da su ta 67router a matsayin ƙofa guda ɗaya.
 
 **Manazarta na hukuma**:
 
@@ -22,17 +22,17 @@ Duka masu samar da sabis ɗin suna amfani da **tsarin bayan-fage na Google iri �
 
 > Duba [sanarwar Antigravity CLI](https://antigravity.google/blog/introducing-google-antigravity-cli) don kwatancen hukuma na Google.
 
-| Bangare               | `antigravity` (IDE)                                         | `agy` (CLI)                                                    |
-| --------------------- | ----------------------------------------------------------- | -------------------------------------------------------------- |
-| **Samfurin Google**   | Antigravity 2.0 / Antigravity IDE                           | Antigravity CLI                                                |
-| **Tsarin bayan-fage** | Google Cloud Code API iri ɗaya                              | Google Cloud Code API iri ɗaya                                 |
-| **OAuth / Token**     | Abokin iri ɗaya, sabuntawa iri ɗaya                         | Abokin iri ɗaya, sabuntawa iri ɗaya                            |
-| **Kundin samfura**    | Tsayayyen jerin da aka zaɓa (an saka kai tsaye a OmniRoute) | Ana gwada shi kai tsaye daga Google ta `:fetchAvailableModels` |
-| **Samfuran Claude**   | Sonnet 4.6, Opus 4.6 (nau'uka 4 kowanne)                    | Sonnet 4.6, Opus 4.6 (nau'uka 4 kowanne)                       |
-| **Sunayen Gemini**    | Sunaye masu sauƙi (Low/Medium/High)                         | IDs na tushen sabis (extra-low/low/agent)                      |
-| **Ƙarin samfura**     | `gpt-oss-120b-medium`                                       | Zai iya ƙunsar ƙarin samfura daga Google                       |
-| **Amfani na asali**   | Haɗawa da IDE (VS Code, JetBrains)                          | Samun dama ta CLI / API                                        |
-| **Ƙa'idar amfani**    | Ana rabawa da agy (asusun Google iri ɗaya)                  | Ana rabawa da antigravity (asusun Google iri ɗaya)             |
+| Bangare               | `antigravity` (IDE)                                        | `agy` (CLI)                                                    |
+| --------------------- | ---------------------------------------------------------- | -------------------------------------------------------------- |
+| **Samfurin Google**   | Antigravity 2.0 / Antigravity IDE                          | Antigravity CLI                                                |
+| **Tsarin bayan-fage** | Google Cloud Code API iri ɗaya                             | Google Cloud Code API iri ɗaya                                 |
+| **OAuth / Token**     | Abokin iri ɗaya, sabuntawa iri ɗaya                        | Abokin iri ɗaya, sabuntawa iri ɗaya                            |
+| **Kundin samfura**    | Tsayayyen jerin da aka zaɓa (an saka kai tsaye a 67router) | Ana gwada shi kai tsaye daga Google ta `:fetchAvailableModels` |
+| **Samfuran Claude**   | Sonnet 4.6, Opus 4.6 (nau'uka 4 kowanne)                   | Sonnet 4.6, Opus 4.6 (nau'uka 4 kowanne)                       |
+| **Sunayen Gemini**    | Sunaye masu sauƙi (Low/Medium/High)                        | IDs na tushen sabis (extra-low/low/agent)                      |
+| **Ƙarin samfura**     | `gpt-oss-120b-medium`                                      | Zai iya ƙunsar ƙarin samfura daga Google                       |
+| **Amfani na asali**   | Haɗawa da IDE (VS Code, JetBrains)                         | Samun dama ta CLI / API                                        |
+| **Ƙa'idar amfani**    | Ana rabawa da agy (asusun Google iri ɗaya)                 | Ana rabawa da antigravity (asusun Google iri ɗaya)             |
 
 **Samfuran da ake da su (an tabbatar ta gwaji, 2026-07-29)**:
 
@@ -89,11 +89,11 @@ Ana sayen kiredit daban kuma ana cire su bisa daidaitaccen farashin API.
 
 ### Muhimman Bayanai
 
-- Ƙayyadadden amfani **na matakin asusu ne kuma ana rabawa** — asusun Google ɗaya a cikin Antigravity IDE, CLI, da OmniRoute yana amfani da ma'ajiyar ƙayyadadden amfani guda ɗaya
+- Ƙayyadadden amfani **na matakin asusu ne kuma ana rabawa** — asusun Google ɗaya a cikin Antigravity IDE, CLI, da 67router yana amfani da ma'ajiyar ƙayyadadden amfani guda ɗaya
 - Kowane asusun Google yana da nasa ƙayyadadden amfani mai zaman kansa — asusu da yawa = ma'ajiyoyin ƙayyadadden amfani da yawa
 - Masu amfani da AI Pro sun bayar da rahoton **kullewa na kwanaki 7** maimakon sake farawa bayan awa 5 idan an kai ma'aunin mako (Google ya tabbatar cewa an tsara hakan ne saboda yawan buƙata)
 
-**Lokacin da ƙayyadadden asusunka ya ƙare**: OmniRoute yana sake gwadawa kai tsaye da asusu na gaba da ake samu a cikin combo route. Ba a buƙatar sa hannun hannu.
+**Lokacin da ƙayyadadden asusunka ya ƙare**: 67router yana sake gwadawa kai tsaye da asusu na gaba da ake samu a cikin combo route. Ba a buƙatar sa hannun hannu.
 
 ---
 
@@ -103,9 +103,9 @@ Kowane haɗin antigravity/agy yana buƙatar `projectId` na Google Cloud Code. Id
 
 ### Hanya A: Ta Atomatik (Ana Ba da Shawara)
 
-OmniRoute yana gudanar da wannan ta atomatik. Lokacin da ka ƙara sabon asusun Google ta Dashboard OAuth:
+67router yana gudanar da wannan ta atomatik. Lokacin da ka ƙara sabon asusun Google ta Dashboard OAuth:
 
-1. OmniRoute yana sabunta token
+1. 67router yana sabunta token
 2. Yana kiran `loadCodeAssist` don gano projectId
 3. Idan babu project, yana kiran `onboardUser` don ƙirƙirar ɗaya
 4. Yana sake gwada `loadCodeAssist` don samun sabon projectId da aka ƙirƙira
@@ -128,14 +128,14 @@ agy login
 # Wannan yana fara rajistar Cloud Code kuma yana sanya projectId
 ```
 
-Bayan `agy login` ya yi nasara, sabunta token a OmniRoute Dashboard. Za a gano projectId ta atomatik.
+Bayan `agy login` ya yi nasara, sabunta token a 67router Dashboard. Za a gano projectId ta atomatik.
 
 ### Yadda za a tabbatar
 
 Duba database:
 
 ```bash
-# A cikin container na OmniRoute
+# A cikin container na 67router
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### Matsalar
 
-Google OAuth yana buƙatar ingantaccen URI na mayarwa. Tsohon saitin OmniRoute yana amfani da `http://127.0.0.1:20128/callback` (loopback). Wannan yana aiki ga ginin gida amma **yana kasa aiki a turawa na nesa** (misali, sabar da ake shiga ta LAN IP).
+Google OAuth yana buƙatar ingantaccen URI na mayarwa. Tsohon saitin 67router yana amfani da `http://127.0.0.1:20128/callback` (loopback). Wannan yana aiki ga ginin gida amma **yana kasa aiki a turawa na nesa** (misali, sabar da ake shiga ta LAN IP).
 
 Google yana ƙin URI na mayarwa waɗanda:
 
@@ -165,7 +165,7 @@ Google yana ƙin URI na mayarwa waɗanda:
 
 **Zaɓi A: Yi amfani da tsarin OAuth da aka tanada (tsohon saiti)**
 
-- Yana aiki lokacin da ka shiga OmniRoute daga `localhost` ko `127.0.0.1`
+- Yana aiki lokacin da ka shiga 67router daga `localhost` ko `127.0.0.1`
 - Ba a buƙatar wani saiti
 
 **Zaɓi B: Keɓaɓɓun bayanan shaidar OAuth**
@@ -180,9 +180,9 @@ Google yana ƙin URI na mayarwa waɗanda:
 
 **Zaɓi C: Yi amfani da agy CLI don shiga na farko**
 
-- Gudanar da `agy login` a kan na'urar da za ta shiga OmniRoute
+- Gudanar da `agy login` a kan na'urar da za ta shiga 67router
 - Ana kammala tsarin OAuth a cikin na'urar, sannan a adana tokens
-- Shigo da haɗin zuwa OmniRoute ta Dashboard
+- Shigo da haɗin zuwa 67router ta Dashboard
 
 ### Iyakoki
 
@@ -193,7 +193,7 @@ Google yana ƙin URI na mayarwa waɗanda:
 
 ## 5. Warware Matsaloli: Lokacin da Saitawa ta Atomatik ta Kasa
 
-OmniRoute yana gudanar da gano projectId da shigar da asusu ta atomatik ga yawancin asusu. Idan ya kasa, tushen matsalar yawanci yana ɗaya daga cikin waɗannan:
+67router yana gudanar da gano projectId da shigar da asusu ta atomatik ga yawancin asusu. Idan ya kasa, tushen matsalar yawanci yana ɗaya daga cikin waɗannan:
 
 ### An katange yankin asusun
 
@@ -221,7 +221,7 @@ OmniRoute yana gudanar da gano projectId da shigar da asusu ta atomatik ga yawan
 
 **Tushen matsala**: Ba a taɓa yin wa asusun rajista da Google Cloud Code ba, kuma shigar da asusun ta atomatik ta kasa.
 
-**Gyara**: Gudanar da `agy login` da hannu don kunna rajistar Cloud Code, sannan sabunta token a OmniRoute Dashboard.
+**Gyara**: Gudanar da `agy login` da hannu don kunna rajistar Cloud Code, sannan sabunta token a 67router Dashboard.
 
 ### Token ya ƙare ko an soke shi
 
@@ -273,4 +273,4 @@ Asusun ba ya aiki?
 
 ---
 
-_An sabunta na ƙarshe: 2026-07-31. An dogara ne akan OmniRoute v3.8.50._
+_An sabunta na ƙarshe: 2026-07-31. An dogara ne akan 67router v3.8.50._

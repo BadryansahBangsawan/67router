@@ -7,29 +7,29 @@
 > **Patiesības avots:** `src/lib/skills/` un `src/app/api/skills/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute nodrošina paplašināmu prasmju ietvaru, kas ļauj valodu modeļiem (un operatoriem) kombinēt atkārtoti izmantojamas iespējas — no failu sistēmas lasīšanas un HTTP pieprasījumiem līdz izolētai koda izpildei un rūpīgi atlasītām prasmēm no tirgus.
+67router nodrošina paplašināmu prasmju ietvaru, kas ļauj valodu modeļiem (un operatoriem) kombinēt atkārtoti izmantojamas iespējas — no failu sistēmas lasīšanas un HTTP pieprasījumiem līdz izolētai koda izpildei un rūpīgi atlasītām prasmēm no tirgus.
 
-Prasme ir versēta, ar shēmu definēta darba vienība. OmniRoute var ievietot prasmes kā rīku definīcijas izejošajos pieprasījumos, pārtvert no modeļa saņemtos rīku izsaukumus, palaist atbilstošo apstrādātāju un nodot rezultātu atpakaļ modelim, lai saruna varētu turpināties. Modelis nekad neredz realizāciju — tikai rīka saskarni.
+Prasme ir versēta, ar shēmu definēta darba vienība. 67router var ievietot prasmes kā rīku definīcijas izejošajos pieprasījumos, pārtvert no modeļa saņemtos rīku izsaukumus, palaist atbilstošo apstrādātāju un nodot rezultātu atpakaļ modelim, lai saruna varētu turpināties. Modelis nekad neredz realizāciju — tikai rīka saskarni.
 
 ---
 
 ## Aģentu prasmes un Omni prasmes
 
-OmniRoute ir divas atšķirīgas, taču savstarpēji papildinošas prasmju sistēmas:
+67router ir divas atšķirīgas, taču savstarpēji papildinošas prasmju sistēmas:
 
 | Aspekts          | **Omni prasmes** (šis dokuments)                                                | **Aģentu prasmes**                                                                         |
 | :--------------- | :------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------- |
 | Mērķis           | LLM rīku ievietošana un izolēta izpilde                                         | SKILL.md katalogs, ko ārējie aģenti var atklāt un izmantot                                 |
 | Patiesības avots | `src/lib/skills/` + tirgus                                                      | `src/lib/agentSkills/` + direktorijs `skills/`                                             |
 | Izpildes režīms  | Tiek ievietotas izejošajos pieprasījumos un izpildītas rīku izsaukumu notikumos | Statisks Markdown katalogs + REST/MCP/A2A atklāšanas galapunkti                            |
-| Kas to izmanto   | Pats OmniRoute (kombinētā maršrutēšana, ienākošie LLM izsaukumi)                | Ārējie aģenti, MCP klienti, A2A orķestratori                                               |
+| Kas to izmanto   | Pats 67router (kombinētā maršrutēšana, ienākošie LLM izsaukumi)                 | Ārējie aģenti, MCP klienti, A2A orķestratori                                               |
 | Skaits           | Mainīgs (atkarīgs no tirgus)                                                    | 45 kataloga ieraksti (23 API + 21 CLI + 1 konfigurācija)                                   |
 | Formāts          | `SkillDefinition` ar rīka shēmu un apstrādātāju                                 | `SKILL.md` priekšdaļa + Markdown pamatteksts                                               |
 | Atklāšana        | `/api/skills/*` REST + `omniroute_skills_*` MCP rīki                            | `/api/agent-skills/*` REST + `omniroute_agent_skills_*` MCP rīki + A2A `list-capabilities` |
 
-**Omni prasmes** ir izpildes dzinējs — tās nosaka, ko OmniRoute _spēj paveikt_, kad LLM izsauc rīku.
+**Omni prasmes** ir izpildes dzinējs — tās nosaka, ko 67router _spēj paveikt_, kad LLM izsauc rīku.
 
-**Aģentu prasmes** ir dokumentācijas katalogs — tās izskaidro ārējiem aģentiem, _kā izmantot_ OmniRoute REST API un CLI, nodrošinot strukturētus SKILL.md failus, kurus var tieši ievietot aģentu uzvednēs.
+**Aģentu prasmes** ir dokumentācijas katalogs — tās izskaidro ārējiem aģentiem, _kā izmantot_ 67router REST API un CLI, nodrošinot strukturētus SKILL.md failus, kurus var tieši ievietot aģentu uzvednēs.
 
 Informāciju par aģentu prasmju katalogu, ģeneratoru, MCP rīkiem un A2A prasmi skatiet [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Informāciju par aģentu prasmju katalogu, ģeneratoru, MCP rīkiem un A2A prasm
 
 Vienā reģistrā līdzās pastāv trīs prasmju avoti:
 
-1. **Iebūvētās prasmes** (`src/lib/skills/builtins.ts`) — tiek piegādātas kopā ar OmniRoute. Aptver izplatītākos lietojuma gadījumus:
+1. **Iebūvētās prasmes** (`src/lib/skills/builtins.ts`) — tiek piegādātas kopā ar 67router. Aptver izplatītākos lietojuma gadījumus:
    - `file_read`, `file_write` — katrai API atslēgai paredzēta izolēta darbvieta ceļā `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — izejošs HTTP, izmantojot `safeOutboundFetch` ar `guard: "public-only"`
    - `web_search` — nomaināms meklēšanas nodrošinātājs ar kešatmiņu (`executeWebSearch`)
    - `eval_code` — Docker izolētā vidē izpildāms `node` vai `python` kods
    - `execute_command` — Docker izolētā vidē izpildāma čaulas komanda
    - `browser` — uz Playwright balstīta sagatave, pēc noklusējuma atspējota (`builtin/browser.ts`)
-2. **SkillsMP** (OmniRoute tirgus) — tiek izgūtas no `https://skillsmp.com/api/v1/skills/search`. Iestatījumos nepieciešama `skillsmpApiKey`.
+2. **SkillsMP** (67router tirgus) — tiek izgūtas no `https://skillsmp.com/api/v1/skills/search`. Iestatījumos nepieciešama `skillsmpApiKey`.
 3. **SkillsSH** (`skills.sh` kopienas katalogs) — tiek izgūtas no `https://skills.sh/api/search`. Autentifikācija nav nepieciešama; SKILL.md saturs tiek iegūts no GitHub neapstrādātā satura.
 
 Viens „aktīvais nodrošinātājs” nosaka, no kura kataloga informācijas panelis instalē prasmes (`src/lib/skills/providerSettings.ts`). Mainiet to sadaļā **Iestatījumi → Atmiņa un prasmes**. Noklusējums: `skillsmp`.
@@ -442,7 +442,7 @@ nav decimālskaitļa `0.6` veida sliekšņa, un failā `registry.ts` netiek veik
 
 ## Iebūvēto prasmju katalogs
 
-OmniRoute tiek piegādāts ar atlasītu iebūvēto prasmju kopu direktorijā `src/lib/skills/builtin/`. Visbiežāk izmantotās:
+67router tiek piegādāts ar atlasītu iebūvēto prasmju kopu direktorijā `src/lib/skills/builtin/`. Visbiežāk izmantotās:
 
 ### Pārlūkprogrammas automatizācijas prasme
 

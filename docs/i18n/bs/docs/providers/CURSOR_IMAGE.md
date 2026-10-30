@@ -6,7 +6,7 @@
 
 # Generisanje slika u Cursoru
 
-OmniRoute izlaže **generisanje slika** Cursor plana na `POST /v1/images/generations` kroz isti ID provajdera kao i za chat: `cursor` (alias `cu`).
+67router izlaže **generisanje slika** Cursor plana na `POST /v1/images/generations` kroz isti ID provajdera kao i za chat: `cursor` (alias `cu`).
 
 | Polje                | Vrijednost                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@ OmniRoute izlaže **generisanje slika** Cursor plana na `POST /v1/images/generat
 
 ## Zašto Agent CLI
 
-Cursor chat u OmniRoute-u koristi `agent.v1.AgentService/Run` (protobuf). Ta putanja **odbija** ugrađene klijentske alate (shell, write, …). Generisanje slika je alat izvorni za Cursor koji izvršava **`agent` CLI** nad licencom (seat). Handler za slike stoga pokreće `agent` sa zaključanim promptom i privremenim radnim prostorom po zahtjevu (istog oblika kao community seat bridges), a zatim vraća `b64_json` kompatibilan sa OpenAI-om.
+Cursor chat u 67router-u koristi `agent.v1.AgentService/Run` (protobuf). Ta putanja **odbija** ugrađene klijentske alate (shell, write, …). Generisanje slika je alat izvorni za Cursor koji izvršava **`agent` CLI** nad licencom (seat). Handler za slike stoga pokreće `agent` sa zaključanim promptom i privremenim radnim prostorom po zahtjevu (istog oblika kao community seat bridges), a zatim vraća `b64_json` kompatibilan sa OpenAI-om.
 
 ## Ograničenje pristupa (Hard Rules #15 + #17)
 
@@ -25,12 +25,12 @@ Ovo je jedini `IMAGE_PROVIDERS` format koji pokreće podproces (binarnu datoteku
 
 ## Kapija za istovremenost je na nivou modula (ograničenje jedne instance)
 
-`CURSOR_IMG_MAX_CONCURRENT` se nameće pomoću in-memory brojača/reda čekanja koji je ograničen na instancu Node modula (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). On ispravno ograničava istovremena pokretanja `agent`-a unutar jednog OmniRoute procesa, ali **ne** koordiniše između više procesa/instanci koje dijele istu Cursor licencu (npr. multi-replica deployment) — svaka instanca nameće sopstveno nezavisno ograničenje. Za deployment sa jednom instancom (podrazumijevano) ovo je tačno; horizontalno skalirani deploymenti treba da drže `CURSOR_IMG_MAX_CONCURRENT` konzervativnim po instanci ili da usmjere Cursor saobraćaj slika na jednu instancu.
+`CURSOR_IMG_MAX_CONCURRENT` se nameće pomoću in-memory brojača/reda čekanja koji je ograničen na instancu Node modula (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). On ispravno ograničava istovremena pokretanja `agent`-a unutar jednog 67router procesa, ali **ne** koordiniše između više procesa/instanci koje dijele istu Cursor licencu (npr. multi-replica deployment) — svaka instanca nameće sopstveno nezavisno ograničenje. Za deployment sa jednom instancom (podrazumijevano) ovo je tačno; horizontalno skalirani deploymenti treba da drže `CURSOR_IMG_MAX_CONCURRENT` konzervativnim po instanci ili da usmjere Cursor saobraćaj slika na jednu instancu.
 
 ## Zahtjevi
 
 1. Povezan Cursor nalog na kontrolnoj tabli (OAuth ili `crsr_…` API ključ).
-2. Cursor Agent binarna datoteka dostupna OmniRoute procesu:
+2. Cursor Agent binarna datoteka dostupna 67router procesu:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, ili
    - `~/.local/bin/agent`, ili
    - `providerSpecificData.agentBin` na Cursor konekciji.

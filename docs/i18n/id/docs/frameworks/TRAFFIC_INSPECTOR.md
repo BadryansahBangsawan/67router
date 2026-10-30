@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector adalah debugger trafik HTTPS bawaan OmniRoute — alat seperti Charles Proxy / mitmweb / HTTP Toolkit yang **memahami LLM** dan **memahami agen**. Alat ini tersedia di `/dashboard/tools/traffic-inspector` dan menerima trafik langsung dari hingga 5 sumber penangkapan secara bersamaan.
+Traffic Inspector adalah debugger trafik HTTPS bawaan 67router — alat seperti Charles Proxy / mitmweb / HTTP Toolkit yang **memahami LLM** dan **memahami agen**. Alat ini tersedia di `/dashboard/tools/traffic-inspector` dan menerima trafik langsung dari hingga 5 sumber penangkapan secara bersamaan.
 
 **Lokasi dasbor:** `/dashboard/tools/traffic-inspector`
 **Grup bilah sisi:** Alat (setelah AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector adalah debugger trafik HTTPS bawaan OmniRoute — alat seperti
 
 ### Hal yang membuat Traffic Inspector unik
 
-| Fitur                                                                                  | mitmweb  | Charles | Fiddler  | **OmniRoute Traffic Inspector** |
-| -------------------------------------------------------------------------------------- | :------: | :-----: | :------: | :-----------------------------: |
-| Berbasis web                                                                           |    ✓     |    ✗    |    ✗     |                ✓                |
-| Sumber terbuka                                                                         |    ✓     |    ✗    | sebagian |                ✓                |
-| **Memahami agen** (mengetahui apakah permintaan berasal dari Antigravity/Copilot/dll.) |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Memahami LLM** (mengurai format OpenAI/Anthropic/Gemini, token, model)               |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Pemetaan model terlihat** (gemini-3-flash → claude-sonnet-4.7)                       |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Pemisahan latensi proksi/upstream**                                                  | sebagian |    ✗    |    ✗     |                ✓                |
-| **Terintegrasi dengan perutean, fallback, dan biaya OmniRoute**                        |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Debug proksi seluruh sistem** (aplikasi apa pun pada mesin)                          |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Penangkapan host khusus** (pengalihan DNS per host)                                  |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Mode env HTTP_PROXY**                                                                |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Tampilan percakapan** (gelembung multi-giliran, tool_use/tool_result)                |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Penggabung aliran SSE** (merekonstruksi dari peristiwa delta)                        |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Perekaman sesi** (bernama, dapat diekspor sebagai .har/.jsonl)                       |    ✗     |    ✓    |    ✓     |                ✓                |
+| Fitur                                                                                  | mitmweb  | Charles | Fiddler  | **67router Traffic Inspector** |
+| -------------------------------------------------------------------------------------- | :------: | :-----: | :------: | :----------------------------: |
+| Berbasis web                                                                           |    ✓     |    ✗    |    ✗     |               ✓                |
+| Sumber terbuka                                                                         |    ✓     |    ✗    | sebagian |               ✓                |
+| **Memahami agen** (mengetahui apakah permintaan berasal dari Antigravity/Copilot/dll.) |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Memahami LLM** (mengurai format OpenAI/Anthropic/Gemini, token, model)               |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Pemetaan model terlihat** (gemini-3-flash → claude-sonnet-4.7)                       |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Pemisahan latensi proksi/upstream**                                                  | sebagian |    ✗    |    ✗     |               ✓                |
+| **Terintegrasi dengan perutean, fallback, dan biaya 67router**                         |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Debug proksi seluruh sistem** (aplikasi apa pun pada mesin)                          |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Penangkapan host khusus** (pengalihan DNS per host)                                  |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Mode env HTTP_PROXY**                                                                |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Tampilan percakapan** (gelembung multi-giliran, tool_use/tool_result)                |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Penggabung aliran SSE** (merekonstruksi dari peristiwa delta)                        |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Perekaman sesi** (bernama, dapat diekspor sebagai .har/.jsonl)                       |    ✗     |    ✓    |    ✓     |               ✓                |
 
 ### Arsitektur dalam satu paragraf
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true jika respons SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // perkiraan biaya berdasarkan harga OmniRoute
+  costEstimateUsd: number | null; // perkiraan biaya berdasarkan harga 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proksi sistem tidak dikembalikan
 
-Jika OmniRoute mengalami crash saat mode proksi seluruh sistem aktif:
+Jika 67router mengalami crash saat mode proksi seluruh sistem aktif:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Path dasar: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Menampilkan daftar permintaan (dapat difilter: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Detail satu permintaan                                                                                 |
 | DELETE | `/requests`                 | Menghapus buffer dalam memori                                                                          |
-| POST   | `/requests/{id}/replay`     | Menjalankan ulang permintaan yang sama melalui router OmniRoute                                        |
+| POST   | `/requests/{id}/replay`     | Menjalankan ulang permintaan yang sama melalui router 67router                                         |
 | PUT    | `/requests/{id}/annotation` | Menyimpan atau memperbarui catatan pada permintaan                                                     |
 
 ### WebSocket

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana da **iyalai huɗu na takardun shaida** waɗanda zasu iya ba da izinin hanyoyin gudanarwa.
+67router yana da **iyalai huɗu na takardun shaida** waɗanda zasu iya ba da izinin hanyoyin gudanarwa.
 Ba za a iya musanya su ba. Maɓallan API na Inference (`sk-…`) ba sa sarrafa
 sabar sai dai idan an ba su izini a fili `manage` ko `admin` scope.
 

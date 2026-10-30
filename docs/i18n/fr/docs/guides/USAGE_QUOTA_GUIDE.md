@@ -4,7 +4,7 @@
 
 ---
 
-> **En bref** : OmniRoute suit l’utilisation des tokens pour chaque requête, calcule les coûts, applique un quota par clé API et affiche les données analytiques dans le tableau de bord. Ce guide explique le fonctionnement de l’ensemble.
+> **En bref** : 67router suit l’utilisation des tokens pour chaque requête, calcule les coûts, applique un quota par clé API et affiche les données analytiques dans le tableau de bord. Ce guide explique le fonctionnement de l’ensemble.
 
 **Sources :**
 
@@ -17,7 +17,7 @@
 
 ## Vue d’ensemble
 
-Chaque requête transitant par OmniRoute génère un **enregistrement d’utilisation** qui contient :
+Chaque requête transitant par 67router génère un **enregistrement d’utilisation** qui contient :
 
 - **Identité** : clé API, fournisseur, modèle et combinaison concernés
 - **Tokens** : tokens de prompt, tokens de complétion, tokens mis en cache, total
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Pour les fournisseurs qui ne renvoient pas de données d’utilisation (certains fournisseurs utilisant des cookies web), OmniRoute **estime** le nombre de tokens à l’aide d’une heuristique de `~4 caractères par token` (voir `open-sse/services/autoCombo/pipelineRouter.ts`).
+Pour les fournisseurs qui ne renvoient pas de données d’utilisation (certains fournisseurs utilisant des cookies web), 67router **estime** le nombre de tokens à l’aide d’une heuristique de `~4 caractères par token` (voir `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokens mis en cache
 
-OmniRoute suit `cached_tokens` séparément de `prompt_tokens`, car :
+67router suit `cached_tokens` séparément de `prompt_tokens`, car :
 
 - La mise en cache des prompts Anthropic facture les tokens mis en cache à un tarif réduit (10 % du tarif normal)
 - Certains fournisseurs renvoient `cache_read_input_tokens`, qui doivent être facturés différemment
@@ -117,7 +117,7 @@ Les données tarifaires sont automatiquement synchronisées depuis LiteLLM via l
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Pour les modèles dépourvus de données tarifaires, OmniRoute se rabat sur une **estimation du coût** à l'aide de tarifs moyens internes (provenant des données tarifaires de LiteLLM).
+Pour les modèles dépourvus de données tarifaires, 67router se rabat sur une **estimation du coût** à l'aide de tarifs moyens internes (provenant des données tarifaires de LiteLLM).
 
 ---
 

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Español)
+# Providers Guide: Connect AI Models to 67router (Español)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **TL;DR**: Un proveedor es una conexión a un servicio de IA (como OpenAI, Anthropic o Google). Necesitas al menos un proveedor para usar OmniRoute.
+> **TL;DR**: Un proveedor es una conexión a un servicio de IA (como OpenAI, Anthropic o Google). Necesitas al menos un proveedor para usar 67router.
 
 ---
 
 ## ¿Qué es un proveedor?
 
-Piensa en un proveedor como una **operadora telefónica**. Al igual que necesitas una operadora telefónica para hacer llamadas, necesitas un proveedor de IA para utilizar modelos de IA. OmniRoute es como un teléfono que funciona con **todas las operadoras**: puedes cambiar entre ellas automáticamente.
+Piensa en un proveedor como una **operadora telefónica**. Al igual que necesitas una operadora telefónica para hacer llamadas, necesitas un proveedor de IA para utilizar modelos de IA. 67router es como un teléfono que funciona con **todas las operadoras**: puedes cambiar entre ellas automáticamente.
 
 ### Tipos de proveedores
 
@@ -31,8 +31,8 @@ Consulta **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** para obtener instrucci
 ### Configuración opcional de proveedores gratuitos durante el primer inicio
 
 El asistente del primer inicio ofrece una tarjeta explícita para **Configurar proveedores gratuitos**. Obtiene la lista actual de proveedores
-aptos del registro de proveedores sin autenticación de OmniRoute y, a continuación, te permite revisar y deseleccionar cada
-proveedor antes de confirmar. OmniRoute muestra el aviso de precaución del proveedor y un enlace a su sitio
+aptos del registro de proveedores sin autenticación de 67router y, a continuación, te permite revisar y deseleccionar cada
+proveedor antes de confirmar. 67router muestra el aviso de precaución del proveedor y un enlace a su sitio
 para que puedas revisar primero los términos, la privacidad, la disponibilidad y los límites de uso de terceros.
 
 Esta acción es opcional: al finalizar el asistente, nunca se crean silenciosamente conexiones con proveedores gratuitos.
@@ -80,7 +80,7 @@ puedes volver a intentar de forma segura solo los que hayan fallado.
 
 ### Opción D: modelos MLX locales (Apple Silicon)
 
-Para equipos Mac con Apple Silicon y memoria unificada, OmniRoute permite conectarse a modelos MLX locales ejecutados mediante `mlx-lm.server` como proveedores locales habituales compatibles con OpenAI.
+Para equipos Mac con Apple Silicon y memoria unificada, 67router permite conectarse a modelos MLX locales ejecutados mediante `mlx-lm.server` como proveedores locales habituales compatibles con OpenAI.
 
 #### Requisitos previos
 
@@ -110,14 +110,14 @@ Para equipos Mac con Apple Silicon y memoria unificada, OmniRoute permite conect
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Conecta desde el panel de control de OmniRoute**:
+3. **Conecta desde el panel de control de 67router**:
    - Ve a **Proveedores** → **Añadir proveedor**
    - Selecciona **MLX Gemma 26B** o **MLX Qwen 3.8 27B**
    - Haz clic en **Conectar** (no se necesita una clave de API)
 
 4. **Úsalo con OpenCode**:
    ```bash
-   # Configura OpenCode para que use OmniRoute
+   # Configura OpenCode para que use 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Debes gestionar esto manualmente:
 - Ejecuta ambos en equipos independientes, o
 - Detén uno antes de iniciar el otro
 
-OmniRoute no gestiona automáticamente los procesos de los servidores MLX; solo dirige las solicitudes a los endpoints compatibles con OpenAI que configures.
+67router no gestiona automáticamente los procesos de los servidores MLX; solo dirige las solicitudes a los endpoints compatibles con OpenAI que configures.
 
 #### Compatibilidad con llamadas a herramientas
 
@@ -158,13 +158,13 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 #### Solución de problemas
 
-| Problema                           | Solución                                                                                                                |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| El servidor no se inicia           | Consulta `uv run mlx_lm.server --help` y verifica los identificadores de los modelos                                    |
-| Memoria insuficiente               | Asegúrate de que solo se ejecute un modelo; cierra otras aplicaciones; consulta el Monitor de Actividad                 |
-| Conexión rechazada                 | Verifica que el servidor se esté ejecutando en el puerto correcto (11435/11436)                                         |
-| Respuestas lentas                  | La primera solicitud carga el modelo en memoria (~30-60 s); las solicitudes posteriores son rápidas                     |
-| Fallan las llamadas a herramientas | Asegúrate de que el modelo admita herramientas; consulta los registros de OmniRoute para detectar errores de traducción |
+| Problema                           | Solución                                                                                                               |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| El servidor no se inicia           | Consulta `uv run mlx_lm.server --help` y verifica los identificadores de los modelos                                   |
+| Memoria insuficiente               | Asegúrate de que solo se ejecute un modelo; cierra otras aplicaciones; consulta el Monitor de Actividad                |
+| Conexión rechazada                 | Verifica que el servidor se esté ejecutando en el puerto correcto (11435/11436)                                        |
+| Respuestas lentas                  | La primera solicitud carga el modelo en memoria (~30-60 s); las solicitudes posteriores son rápidas                    |
+| Fallan las llamadas a herramientas | Asegúrate de que el modelo admita herramientas; consulta los registros de 67router para detectar errores de traducción |
 
 ---
 
@@ -236,12 +236,12 @@ Tu proveedor ya está conectado. Puedes usarlo con `model: "auto"` o especificar
 
 ## Uso de varios proveedores
 
-OmniRoute funciona mejor con **varios proveedores**. Esto ofrece:
+67router funciona mejor con **varios proveedores**. Esto ofrece:
 
-- **Conmutación automática** — Si un proveedor falla, OmniRoute prueba con el siguiente
-- **Optimización de costes** — OmniRoute elige el proveedor más económico para cada solicitud
-- **Optimización de velocidad** — OmniRoute elige el proveedor más rápido para cada solicitud
-- **Optimización de calidad** — OmniRoute elige el mejor proveedor para cada tarea
+- **Conmutación automática** — Si un proveedor falla, 67router prueba con el siguiente
+- **Optimización de costes** — 67router elige el proveedor más económico para cada solicitud
+- **Optimización de velocidad** — 67router elige el proveedor más rápido para cada solicitud
+- **Optimización de calidad** — 67router elige el mejor proveedor para cada tarea
 
 ### Configuración recomendada
 
@@ -251,7 +251,7 @@ Conecta al menos **3 proveedores** para disfrutar de la mejor experiencia:
 2. **Un proveedor rápido** (Groq, Cerebras) — Para respuestas rápidas
 3. **Un proveedor de calidad** (OpenAI, Anthropic, Google) — Para tareas complejas
 
-A continuación, usa `model: "auto"` y OmniRoute elegirá automáticamente el mejor para cada solicitud.
+A continuación, usa `model: "auto"` y 67router elegirá automáticamente el mejor para cada solicitud.
 
 ---
 
@@ -260,25 +260,25 @@ A continuación, usa `model: "auto"` y OmniRoute elegirá automáticamente el me
 ### OpenAI
 
 1. Obtén una clave de API: https://platform.openai.com/api-keys
-2. En OmniRoute: Proveedores → Añadir proveedor → OpenAI
+2. En 67router: Proveedores → Añadir proveedor → OpenAI
 3. Pega la clave de API → Conectar
 
 ### Anthropic
 
 1. Obtén una clave de API: https://console.anthropic.com/
-2. En OmniRoute: Proveedores → Añadir proveedor → Anthropic
+2. En 67router: Proveedores → Añadir proveedor → Anthropic
 3. Pega la clave de API → Conectar
 
 ### Google (Gemini)
 
 1. Obtén una clave de API: https://aistudio.google.com/apikey
-2. En OmniRoute: Proveedores → Añadir proveedor → Gemini
+2. En 67router: Proveedores → Añadir proveedor → Gemini
 3. Pega la clave de API → Conectar
 
 ### DeepSeek
 
 1. Obtén una clave de API: https://platform.deepseek.com/
-2. En OmniRoute: Proveedores → Añadir proveedor → DeepSeek
+2. En 67router: Proveedores → Añadir proveedor → DeepSeek
 3. Pega la clave de API → Conectar
 
 ### Qoder: elige el transporte de credenciales
@@ -286,12 +286,12 @@ A continuación, usa `model: "auto"` y OmniRoute elegirá automáticamente el me
 Qoder requiere credenciales. Sus dos transportes tienen capacidades diferentes; el nombre de un modelo
 por sí solo no indica lo que puede hacer una conexión concreta.
 
-| Credencial                                    | Transporte de OmniRoute                          | Llamadas a herramientas del solicitante            | Streaming                                                                        |
+| Credencial                                    | Transporte de 67router                           | Llamadas a herramientas del solicitante            | Streaming                                                                        |
 | --------------------------------------------- | ------------------------------------------------ | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| PAT que comienza por `pt-`                    | Proceso local `qodercli` en el host de OmniRoute | No compatible                                      | En búfer: SSE se emite solo después de que la CLI devuelve la respuesta completa |
+| PAT que comienza por `pt-`                    | Proceso local `qodercli` en el host de 67router  | No compatible                                      | En búfer: SSE se emite solo después de que la CLI devuelve la respuesta completa |
 | Token de acceso que no sea PAT o clave de API | Endpoint HTTP de DashScope compatible con OpenAI | Se transmite, sujeto al modelo o la clave upstream | Ruta HTTP/SSE upstream                                                           |
 
-Para una PAT, instala la CLI de Qoder en el mismo host o contenedor que OmniRoute. El ejecutable
+Para una PAT, instala la CLI de Qoder en el mismo host o contenedor que 67router. El ejecutable
 debe poder localizarse como `qodercli`; de lo contrario, establece `CLI_QODER_BIN` en la ruta de su ejecutable. Una CLI
 instalada únicamente en el host de Docker no está presente automáticamente en el contenedor. Si faltan
 los binarios, se genera un error explícito que indica que debes realizar la instalación o configurar la ruta.
@@ -324,16 +324,16 @@ y un tiempo de espera configurable son mejoras independientes; este comportamien
 ### Groq
 
 1. Obtén una clave de API: https://console.groq.com/
-2. En OmniRoute: Proveedores → Añadir proveedor → Groq
+2. En 67router: Proveedores → Añadir proveedor → Groq
 3. Pega la clave de API → Conectar
 
 ---
 
 ## Preguntas frecuentes
 
-### "¿Tengo que pagar para usar OmniRoute?"
+### "¿Tengo que pagar para usar 67router?"
 
-**¡No!** OmniRoute es gratuito y de código abierto. Puedes usar proveedores gratuitos (Kiro, Pollinations) sin pagar nada. Solo pagas si eliges usar proveedores de pago.
+**¡No!** 67router es gratuito y de código abierto. Puedes usar proveedores gratuitos (Kiro, Pollinations) sin pagar nada. Solo pagas si eliges usar proveedores de pago.
 
 ### "¿Con qué proveedor debería empezar?"
 
@@ -341,11 +341,11 @@ Empieza con **Kiro AI**: es gratuito, no requiere una clave de API y te da acces
 
 ### "¿Puedo usar varios proveedores a la vez?"
 
-**¡Sí!** Ese es precisamente el objetivo de OmniRoute. Conecta varios proveedores y usa `model: "auto"` para que OmniRoute elija el mejor para cada solicitud.
+**¡Sí!** Ese es precisamente el objetivo de 67router. Conecta varios proveedores y usa `model: "auto"` para que 67router elija el mejor para cada solicitud.
 
 ### "¿Qué ocurre si un proveedor deja de funcionar?"
 
-OmniRoute omite automáticamente los proveedores que fallen y prueba con el siguiente. No tienes que hacer nada.
+67router omite automáticamente los proveedores que fallen y prueba con el siguiente. No tienes que hacer nada.
 
 ### "¿Cómo desconecto un proveedor?"
 
@@ -353,13 +353,13 @@ Ve a Proveedores → haz clic en el proveedor → haz clic en **Desconectar**.
 
 ### "¿Puedo usar mis claves de API existentes?"
 
-**¡Sí!** Si ya tienes claves de API para OpenAI, Anthropic, Google, etc., puedes usarlas en OmniRoute. Solo tienes que pegarlas al conectar el proveedor.
+**¡Sí!** Si ya tienes claves de API para OpenAI, Anthropic, Google, etc., puedes usarlas en 67router. Solo tienes que pegarlas al conectar el proveedor.
 
 ---
 
 ## ¿Qué sigue?
 
-- **[Guía de Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Deja que OmniRoute elija la mejor IA para ti
+- **[Guía de Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Deja que 67router elija la mejor IA para ti
 - **[Guía de niveles gratuitos](./FREE-TIERS-GUIDE.md)** — Obtén IA gratuita sin tarjeta de crédito
 - **[Solución de problemas](../guides/TROUBLESHOOTING.md)** — Soluciona problemas comunes
 - **[Referencia de proveedores](../reference/PROVIDER_REFERENCE.md)** — Lista completa de 226 proveedores

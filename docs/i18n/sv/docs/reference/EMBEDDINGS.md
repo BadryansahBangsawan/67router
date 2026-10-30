@@ -4,9 +4,9 @@
 
 ---
 
-Operatörsanteckningar för `POST /v1/embeddings` när OmniRoute står framför
+Operatörsanteckningar för `POST /v1/embeddings` när 67router står framför
 Hindsight 0.9.1 (endast text, `encode(list[str])`) och Memorix 1.6.0 (Jina-mediegrind).
-Verifierat i drift 2026-08-17 mot OmniRoute 3.8.49 på
+Verifierat i drift 2026-08-17 mot 67router 3.8.49 på
 `https://omniroute.jaguar-fish.ts.net/v1`. Inga hemligheter nedan.
 
 ## Fungerande modell-id:n
@@ -80,7 +80,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Inbyggda `gemini-embedding-2` kan inte fungera enbart via GitOps. En Google AI
 Studio-nyckel måste läggas till som en provideranslutning för `gemini` (via
-instrumentpanelen eller genom att importera `GEMINI_API_KEY` till OmniRoute).
+instrumentpanelen eller genom att importera `GEMINI_API_KEY` till 67router).
 Den hemligheten finns inte i detta repo.
 
 ### Multimodal sökväg för Jina
@@ -102,7 +102,7 @@ Använd `POST /v1/embeddings` tills ett alias finns.
 
 ### Jina-/Memorix-bildobjekt
 
-OmniRoutes kanoniska bildobjekt (28×28 PNG, 784 pixlar – Jina avvisar 1×1):
+67routers kanoniska bildobjekt (28×28 PNG, 784 pixlar – Jina avvisar 1×1):
 
 ```json
 {
@@ -151,7 +151,7 @@ Faktiskt resultat: HTTP **400**
 
 Hindsight-inbäddningar är endast för text (`encode(list[str])`). Det skickar
 inte bildobjekt. Rikta Hindsights OpenAI-kompatibla bas-URL för inbäddningar
-mot OmniRoute `/v1` och använd ett fungerande id från tabellen ovan
+mot 67router `/v1` och använd ett fungerande id från tabellen ovan
 (`jina-ai/jina-embeddings-v5-omni-small` eller
 `openrouter/google/gemini-embedding-2`). Ställ inte in modellen på enbart
 `gemini-embedding-2` om det inte finns en API-nyckel för `gemini` på gatewayen.
@@ -159,12 +159,12 @@ mot OmniRoute `/v1` och använd ett fungerande id från tabellen ovan
 ### Memorix 1.6.0
 
 Memorix behandlar endast en `baseUrl` som matchar `/jina\.ai/i` som inbyggt
-mediestöd. En OmniRoute-URL fortsätter använda sökvägen för enbart text, även
+mediestöd. En 67router-URL fortsätter använda sökvägen för enbart text, även
 när modellen är Jina omni. Den grinden är ett klientproblem i Memorix. Oberoende
-av detta avvisar OmniRoute fortfarande Jina-kroppen `{image: "data:..."}`
+av detta avvisar 67router fortfarande Jina-kroppen `{image: "data:..."}`
 som Memorix skulle skicka om grinden öppnades. Därför kan Jina-kompatibla
-klienter inte bädda in bilder via OmniRoute utan det kanoniska schemat
+klienter inte bädda in bilder via 67router utan det kanoniska schemat
 `{type,source}`.
 
 Använd `jina-ai/jina-embeddings-v5-omni-small` för text. Rikta inte Memorix
-`base_url` mot `https://api.jina.ai` – behåll OmniRoute som enda mellanled.
+`base_url` mot `https://api.jina.ai` – behåll 67router som enda mellanled.

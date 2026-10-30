@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` udostępnia cały katalog OmniRoute — modele, kombinacje i
+`@omniroute/opencode-plugin-v2` udostępnia cały katalog 67router — modele, kombinacje i
 automatyczne kombinacje — w selektorze modeli OpenCode v2 wraz z nazwami wyświetlanymi, cenami
 i limitami bezpłatnych warstw.
 
@@ -15,7 +15,7 @@ nie współdzielą one żadnych elementów, więc aktualizacja jednego nigdy nie
 ## Wymagania
 
 - OpenCode v2.
-- Osiągalna brama OmniRoute (domyślnie `http://localhost:20128`).
+- Osiągalna brama 67router (domyślnie `http://localhost:20128`).
 - Node.js 22 lub 24.
 
 ## Instalacja
@@ -78,7 +78,7 @@ podając jego nazwę i wskazując utracone informacje — dzięki temu przyczyna
 | `baseURL`                        | wymagane                                                        | Główny adres bramy, tylko `http(s)`; sufiks `/v1` jest dodawany w razie potrzeby                                                                             |
 | `apiKey`                         | połączone dane uwierzytelniające, następnie `OMNIROUTE_API_KEY` | Klucz czatu dla `/v1/*`                                                                                                                                      |
 | `managementReadToken`            | domyślnie używa `apiKey`                                        | Klucz dla `/api/*` — zwykle **nie** jest to ten sam klucz                                                                                                    |
-| `displayName`                    | `"OmniRoute"`                                                   | Nazwa dostawcy w selektorze                                                                                                                                  |
+| `displayName`                    | `"67router"`                                                    | Nazwa dostawcy w selektorze                                                                                                                                  |
 | `timeoutMs`                      | `10000`                                                         | Limit czasu pobierania dla każdego punktu końcowego (automatyczne kombinacje używają 5 s)                                                                    |
 | `modelCacheTtlMs`                | `300000`                                                        | Czas TTL pamięci podręcznej katalogu; migawka na dysku przyspiesza zimne uruchomienia                                                                        |
 | `timeouts`                       | domyślnie używa `timeoutMs`                                     | Limity czasu dla poszczególnych punktów końcowych w ms: `models`, `combos`, `autoCombos`, `enrichment`                                                       |
@@ -128,7 +128,7 @@ Ustaw `"geminiSanitization": false`, aby to wyłączyć.
 
 | Objaw                                               | Przyczyna                                                                                                                                  |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Selektor nie wyświetla żadnego modelu OmniRoute     | Nie znaleziono klucza (sprawdź ostrzeżenie podczas uruchamiania) albo brama jest nieosiągalna                                              |
+| Selektor nie wyświetla żadnego modelu 67router      | Nie znaleziono klucza (sprawdź ostrzeżenie podczas uruchamiania) albo brama jest nieosiągalna                                              |
 | Surowe identyfikatory modeli, brak kombinacji i cen | Punkty końcowe zarządzania odrzuciły token — ustaw `managementReadToken`                                                                   |
 | Krótki lub pusty katalog `freeOnly`                 | Brak tokenu zarządzania albo token został odrzucony — sprawdź w dzienniku hosta wiersz podsumowania odświeżania (licznik `unmatched-free`) |
 | Sesja przypięta do `opencode-<id>/…`                | Wtyczka v1 publikowała `opencode-<id>`; v2 publikuje samo `<id>`, więc ponownie wybierz model w sekcji `<id>/…`                            |

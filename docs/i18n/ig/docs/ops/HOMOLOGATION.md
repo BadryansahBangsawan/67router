@@ -4,7 +4,7 @@
 
 ---
 
-Nkwado E2E n'ime ezigbo gburugburu ebe deploy OmniRoute na-agba na VPS nnabata
+Nkwado E2E n'ime ezigbo gburugburu ebe deploy 67router na-agba na VPS nnabata
 (`HOMOLOG_BASE_URL`, dịka `http://192.168.0.15:20128`). Otu iwu na-eji ọsọ akpaghị aka nke na-emepụta ihe akaebe dochie
 ndepụta nyocha STOP #2 nke mwepụta a na-eji aka eme.
 

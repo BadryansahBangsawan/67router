@@ -204,11 +204,11 @@ Regras de sanitização aplicadas a `upstreamDetails`:
 3. Limite de profundidade: níveis de aninhamento além de 4 são substituídos pela string `"[truncated]"`.
 4. Arrays são limitados a 32 elementos.
 
-Somente pontos de chamada com um corpo de erro do provedor já analisado devem passar `upstreamDetails`. Erros internos do OmniRoute (falhas de análise de SSE, conteúdo vazio, bloqueios de proteções) não devem incluí-lo.
+Somente pontos de chamada com um corpo de erro do provedor já analisado devem passar `upstreamDetails`. Erros internos do 67router (falhas de análise de SSE, conteúdo vazio, bloqueios de proteções) não devem incluí-lo.
 
 NÃO passe `err.stack`, `err.message` brutos nem qualquer string proveniente de uma exceção de tempo de execução para `upstreamDetails`. Esses valores ainda devem passar por `errorResponse` / `buildErrorBody(code, msg)` sem um corpo upstream.
 
-O repasse seletivo de respostas upstream 4xx preserva o formato JSON seguro e a redação do provedor exigidos para a recuperação automática do cliente, mas não é um repasse byte a byte: o sanitizador recursivo sempre é executado antes da serialização. Corpos cíclicos, contendo BigInt ou `toJSON()` hostil falham de forma segura e não são elegíveis para repasse. OCR e moderação aplicam a mesma regra; corpos upstream que não sejam JSON, estejam em branco ou estejam rotulados incorretamente são convertidos para o envelope de erro JSON canônico do OmniRoute.
+O repasse seletivo de respostas upstream 4xx preserva o formato JSON seguro e a redação do provedor exigidos para a recuperação automática do cliente, mas não é um repasse byte a byte: o sanitizador recursivo sempre é executado antes da serialização. Corpos cíclicos, contendo BigInt ou `toJSON()` hostil falham de forma segura e não são elegíveis para repasse. OCR e moderação aplicam a mesma regra; corpos upstream que não sejam JSON, estejam em branco ou estejam rotulados incorretamente são convertidos para o envelope de erro JSON canônico do 67router.
 
 ## Limitação conhecida do CodeQL: sanitizadores personalizados não reconhecidos
 

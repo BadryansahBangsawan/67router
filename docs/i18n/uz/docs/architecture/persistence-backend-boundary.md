@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-Hozirda OmniRoute `src/lib/db/` orqali domenga yo‘naltirilgan saqlash funksiyalarini taqdim etadi, ayni paytda
+Hozirda 67router `src/lib/db/` orqali domenga yo‘naltirilgan saqlash funksiyalarini taqdim etadi, ayni paytda
 `src/lib/db/core.ts` qaytaradigan umumiy ulanish `src/lib/db/adapters/types.ts` ichidagi sinxron `SqliteAdapter`
 shartnomasini amalga oshiradi. Ushbu adapter bir nechta SQLite bajarilish muhitini qo‘llab-quvvatlaydi, biroq uning
 interfeysi SQLite shaklida qoladi: sinxron tayyorlangan so‘rovlar, `pragma`, kechiktirilgan va darhol bajariladigan

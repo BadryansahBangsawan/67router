@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute มีกลไกด้านความทนทาน (resilience) สามชั้นที่แตกต่างแต่เกี่ยวข้องกัน แต่ละชั้นมีขอบเขตและวัตถุประสงค์ต่างกัน โปรดแยกกลไกเหล่านี้ออกจากกันเมื่อดีบั๊กพฤติกรรมการเราต์
+67router มีกลไกด้านความทนทาน (resilience) สามชั้นที่แตกต่างแต่เกี่ยวข้องกัน แต่ละชั้นมีขอบเขตและวัตถุประสงค์ต่างกัน โปรดแยกกลไกเหล่านี้ออกจากกันเมื่อดีบั๊กพฤติกรรมการเราต์
 
 ![โมเดลความทนทาน 3 ชั้น](../diagrams/exported/resilience-3layers.svg)
 
@@ -189,7 +189,7 @@ session-affinity header ทั้งสามไม่เคยถูกส่�
 
 ### การเช่า (lease) connection แบบเอกสิทธิ์สำหรับเซสชันที่ถูกจัดการ
 
-**ขอบเขต:** ไคลเอนต์/เซสชัน HTTP แบบ managed ที่ active หนึ่งเดียวเป็นเจ้าของ connection OmniRoute ที่มีสิทธิ์หนึ่งเดียว
+**ขอบเขต:** ไคลเอนต์/เซสชัน HTTP แบบ managed ที่ active หนึ่งเดียวเป็นเจ้าของ connection 67router ที่มีสิทธิ์หนึ่งเดียว
 
 **วัตถุประสงค์:** มอบความเป็นเจ้าของ connection แบบเอกสิทธิ์ที่คงทนให้กับไคลเอนต์ที่ต้องการรั้วกั้นการ route แบบแข็งข้าม request ต่างๆ สิ่งนี้แตกต่างจาก session affinity ซึ่งเป็นเพียงการตั้งค่าความต่อเนื่องแบบอ่อน: lease แบบเอกสิทธิ์จะบันทึกสถานะวงจรชีวิตไว้ใน SQLite, บังคับใช้ความไม่ซ้ำกันของ active-owner และ active-connection ในระดับ global, และปฏิเสธ generation ที่ล้าสมัยก่อนการ dispatch ไปยัง provider
 
@@ -203,7 +203,7 @@ session-affinity header ทั้งสามไม่เคยถูกส่�
 และ headers ที่ส่งไปยัง upstream executor
 
 หากการกำหนดเส้นทาง (routing) ปกติพบ managed candidate ที่มีสิทธิ์ แต่ candidate ที่ว่างทุกตัวถูกครอบครอง
-โดย lease ที่ใช้งานอยู่จากภายนอก OmniRoute จะส่งกลับ HTTP `429` พร้อมรหัส lease-capacity-unavailable,
+โดย lease ที่ใช้งานอยู่จากภายนอก 67router จะส่งกลับ HTTP `429` พร้อมรหัส lease-capacity-unavailable,
 สถานะ waiting-for-capacity และค่า `Retry-After` ที่มีขอบเขตจำกัด ซึ่งคำนวณจากเวลาหมดอายุที่เกี่ยวข้องเร็วที่สุด
 กรณีที่ไม่มี candidate ที่มีสิทธิ์เลยแบบปกติ ไม่ถือเป็น lease contention และยังคงใช้ความหมายของ routing error เดิม
 
@@ -226,7 +226,7 @@ session-affinity header ทั้งสามไม่เคยถูกส่�
   สำหรับ codex คือทั้งขอบเขต `codex` / `spark` (ทุกโมเดล `gpt-5*` ของ
   connection นั้น) สำหรับ provider อื่นใช้ `getQuotaScopedModelForProvider()`
 - `404` ล็อกเฉพาะโมเดลนั้นโดยตรง (`getModelLockKey()` จำกัด `not_found` ให้แคบลง)
-- สถานะอื่นใด — ความล้มเหลว `5xx` ระดับ transport/server และ `502` ที่ OmniRoute
+- สถานะอื่นใด — ความล้มเหลว `5xx` ระดับ transport/server และ `502` ที่ 67router
   สังเคราะห์ขึ้นเองจากการตรวจสอบคุณภาพ — ล็อกเฉพาะชุดค่า
   provider/connection/model ที่แน่ชัด (exact) เท่านั้น stream ที่เสียของโมเดลเดียว
   ไม่ใช่หลักฐานเกี่ยวกับโควตาของบัญชี ก่อนหน้ากฎนี้ response ว่างเพียงครั้งเดียวบน
@@ -355,7 +355,7 @@ concurrency caps** โดยใส่ `model=cap` หนึ่งรายกา
   (`glm-5`) ไม่ใช่ alias ฝั่งไคลเอนต์แบบ `provider/model` (`zai/glm-5` ไม่ตรงกับ
   `glm-5`) ค่าต้องเป็นจำนวนเต็มบวกที่เป็นเพดานจำนวนคำขอพร้อมกัน
 - **คิวในเครื่อง ไม่มีการค้นหานโยบาย:** คำขอส่วนเกินจะเข้าคิวในเครื่องด้วย semantics ของคิว/timeout เดิม (ข้อผิดพลาด admission ที่มีชนิดเป็น `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`) OmniRoute ไม่ค้นหาหรืออนุมานนโยบายของ upstream — มันบังคับใช้เพดานตามที่ผู้ดูแลกำหนดไว้เท่านั้น เกตโมเดลที่อิ่มตัวจะไม่ปิดการใช้งาน provider และไม่สร้างการล็อกโมเดลแบบถาวร พฤติกรรม 429/cooldown/fallback ของ upstream ยังคงเป็นตัวรองรับข้อผิดพลาด
+  `SEMAPHORE_QUEUE_FULL`) 67router ไม่ค้นหาหรืออนุมานนโยบายของ upstream — มันบังคับใช้เพดานตามที่ผู้ดูแลกำหนดไว้เท่านั้น เกตโมเดลที่อิ่มตัวจะไม่ปิดการใช้งาน provider และไม่สร้างการล็อกโมเดลแบบถาวร พฤติกรรม 429/cooldown/fallback ของ upstream ยังคงเป็นตัวรองรับข้อผิดพลาด
 - **ขอบเขตต่อการเชื่อมต่อ ต่อโปรเซส:** เพดานผูกกับการเชื่อมต่อในฐานข้อมูลแต่ละรายการและถูกเก็บไว้ในหน่วยความจำ ดังนั้นการเชื่อมต่อสองรายการที่ใช้ upstream API key เดียวกันจะไม่ประสานงานกัน
 - **ไม่ตั้งค่าหมายถึงไม่เปลี่ยนแปลง:** การไม่ใส่ map (หรือเว้นช่องในแดชบอร์ดว่างไว้) จะไม่เพิ่มเกตโมเดลใด ๆ ตัวอย่างการตั้งค่าโดยไม่ยืนยันขีดจำกัดสากลของ provider ใด ๆ:
 
@@ -496,7 +496,7 @@ override ผ่าน `RATE_LIMIT_MAX_QUEUE_DEPTH` (env) หรือ
 ### ตาข่ายนิรภัยเปิดใช้ Rate-Limit อัตโนมัติ และการป้องกัน Connection (`rateLimitProtection`)
 
 **ตาข่ายนิรภัยเปิดใช้อัตโนมัติ** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders` ค่าเริ่มต้น `true`):
-โดยค่าเริ่มต้น OmniRoute จะเปิดใช้การป้องกันด้วย rate-limit queue ให้กับ provider connection ทุกตัวที่ใช้งานอยู่และเป็นประเภท API key (`getProviderCategory(provider) === "apikey"` โดยอัตโนมัติ สิ่งนี้ช่วยให้มั่นใจว่า request ขาเข้าที่ส่งไปยัง upstream API key ที่ไวต่อ rate limit จะถูกจัดคิวและควบคุมอัตราผ่าน Bottleneck แทนที่จะพุ่งชนจนเกิด 429 error จาก upstream ตาข่ายนิรภัยนี้สามารถเขียนทับได้ผ่าน environment variable `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` เพื่อปิด, `true`/`1`/`on` เพื่อบังคับเปิด) ซึ่งมีความสำคัญเหนือกว่าการตั้งค่าบน dashboard ที่บันทึกไว้ (**Settings → Resilience** / `PATCH /api/resilience`)
+โดยค่าเริ่มต้น 67router จะเปิดใช้การป้องกันด้วย rate-limit queue ให้กับ provider connection ทุกตัวที่ใช้งานอยู่และเป็นประเภท API key (`getProviderCategory(provider) === "apikey"` โดยอัตโนมัติ สิ่งนี้ช่วยให้มั่นใจว่า request ขาเข้าที่ส่งไปยัง upstream API key ที่ไวต่อ rate limit จะถูกจัดคิวและควบคุมอัตราผ่าน Bottleneck แทนที่จะพุ่งชนจนเกิด 429 error จาก upstream ตาข่ายนิรภัยนี้สามารถเขียนทับได้ผ่าน environment variable `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` เพื่อปิด, `true`/`1`/`on` เพื่อบังคับเปิด) ซึ่งมีความสำคัญเหนือกว่าการตั้งค่าบน dashboard ที่บันทึกไว้ (**Settings → Resilience** / `PATCH /api/resilience`)
 
 **ความหมายของ `rateLimitProtection` ระดับ connection:**
 การป้องกัน rate limit ระดับ connection ถูกติดตามผ่านฟิลด์ boolean `rateLimitProtection` บน provider connection (บันทึกเป็น `rate_limit_protection` ใน SQLite):
@@ -780,7 +780,7 @@ rate limit แบบจัดกลุ่มตาม IP คือสัญญ�
 > คู่มือ agent อยู่ภายใต้งบประมาณ context 40k นี่คือมุมมองแบบย่อที่มุ่งเน้น agent ของ
 > ส่วนต่างๆ ข้างต้น; ส่วนที่มีหมายเลขกำกับยังคงเป็นข้อมูลอ้างอิงฉบับเต็ม
 
-OmniRoute มีกลไจความล้มเหลวชั่วคราวสามแบบที่เกี่ยวข้องแต่แตกต่างกัน โปรดแยก
+67router มีกลไจความล้มเหลวชั่วคราวสามแบบที่เกี่ยวข้องแต่แตกต่างกัน โปรดแยก
 ขอบเขตของแต่ละกลไจออกจากกันเมื่อดีบักพฤติกรรมการกำหนดเส้นทาง ดู
 [ไดอะแกรม resilience 3 ชั้น](../diagrams/exported/resilience-3layers.svg)
 (ต้นฉบับ: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

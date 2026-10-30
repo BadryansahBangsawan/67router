@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge là proxy MITM (Man-in-the-Middle — trung gian) của OmniRoute, chặn lưu lượng HTTPS từ các tác nhân AI trong IDE và định tuyến lại lưu lượng đó thông qua công cụ định tuyến hợp nhất của OmniRoute. Công cụ này hỗ trợ **10 tác nhân IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code và Trae (đang được nghiên cứu) — giúp OmniRoute trở thành proxy MITM có phạm vi hỗ trợ rộng nhất dành cho các trợ lý lập trình AI trên thị trường.
+AgentBridge là proxy MITM (Man-in-the-Middle — trung gian) của 67router, chặn lưu lượng HTTPS từ các tác nhân AI trong IDE và định tuyến lại lưu lượng đó thông qua công cụ định tuyến hợp nhất của 67router. Công cụ này hỗ trợ **10 tác nhân IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code và Trae (đang được nghiên cứu) — giúp 67router trở thành proxy MITM có phạm vi hỗ trợ rộng nhất dành cho các trợ lý lập trình AI trên thị trường.
 
 **Vị trí trên bảng điều khiển:** `/dashboard/tools/agent-bridge`
 **Nhóm trên thanh bên:** Công cụ (sau Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge là proxy MITM (Man-in-the-Middle — trung gian) của OmniRoute, c
 
 ### AgentBridge là gì?
 
-Khi một agent của IDE (ví dụ: GitHub Copilot, Cursor, Claude Code) thực hiện một lệnh gọi API, nó sẽ kết nối trực tiếp tới nhà cung cấp AI upstream (OpenAI, Anthropic, v.v.). AgentBridge chặn kết nối đó một cách trong suốt ở tầng TLS — mà không yêu cầu thay đổi cấu hình nào của agent — và viết lại request để đi qua OmniRoute.
+Khi một agent của IDE (ví dụ: GitHub Copilot, Cursor, Claude Code) thực hiện một lệnh gọi API, nó sẽ kết nối trực tiếp tới nhà cung cấp AI upstream (OpenAI, Anthropic, v.v.). AgentBridge chặn kết nối đó một cách trong suốt ở tầng TLS — mà không yêu cầu thay đổi cấu hình nào của agent — và viết lại request để đi qua 67router.
 
 Điều này có nghĩa là bạn có thể:
 
-- **Định tuyến lại bất kỳ agent nào tới bất kỳ provider nào**: Copilot đang giao tiếp với OpenAI? Hãy chuyển hướng nó sang Anthropic Claude, Gemini, hoặc bất kỳ provider nào trong số 375 provider của OmniRoute.
+- **Định tuyến lại bất kỳ agent nào tới bất kỳ provider nào**: Copilot đang giao tiếp với OpenAI? Hãy chuyển hướng nó sang Anthropic Claude, Gemini, hoặc bất kỳ provider nào trong số 375 provider của 67router.
 - **Áp dụng ánh xạ model**: `gemini-3-flash` → `claude-sonnet-4.7` một cách trong suốt ở tầng handler.
 - **Quan sát toàn bộ lưu lượng agent**: mọi request bị chặn đều được đưa lên [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Áp dụng khả năng phục hồi của OmniRoute**: combo routing, circuit breaker, fallback và theo dõi chi phí cũng hoạt động với lưu lượng agent của IDE.
+- **Áp dụng khả năng phục hồi của 67router**: combo routing, circuit breaker, fallback và theo dõi chi phí cũng hoạt động với lưu lượng agent của IDE.
 
 ### Định vị so với thị trường
 
-| Tính năng             | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| --------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity           |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot        |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)            |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex          |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE            |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries        |    —    |    ✓     |        —        |             ✓             |
-| Claude Code           |    —    |    —     |        ✓        |             ✓             |
-| Open Code             |    —    |    —     |        ✓        |             ✓             |
-| Trae                  |    —    |    —     |        —        |     🔍 Đang điều tra      |
-| Giao diện Dashboard   |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector     |    ✗    |    ✗     |        ✓        |             ✓             |
-| Định tuyến OmniRoute  |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI ánh xạ model       |    ✗    |    ✗     |        ✗        |             ✓             |
-| Danh sách bypass      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Chứng chỉ CA upstream |    ✗    |    ✗     |        ✓        |             ✓             |
+| Tính năng             | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity           |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot        |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)            |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex          |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE            |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries        |    —    |    ✓     |        —        |            ✓             |
+| Claude Code           |    —    |    —     |        ✓        |            ✓             |
+| Open Code             |    —    |    —     |        ✓        |            ✓             |
+| Trae                  |    —    |    —     |        —        |     🔍 Đang điều tra     |
+| Giao diện Dashboard   |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector     |    ✗    |    ✗     |        ✓        |            ✓             |
+| Định tuyến 67router   |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI ánh xạ model       |    ✗    |    ✗     |        ✗        |            ✓             |
+| Danh sách bypass      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Chứng chỉ CA upstream |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (cổng 443, tiến trình con CJS)
     │  phân giải đích theo SNI trong tiêu đề Host
     │  tạo chứng chỉ TLS riêng cho từng SNI, được ký bởi CA của AgentBridge
     ├── Khớp danh sách bỏ qua? → chuyển tiếp TCP (không giải mã)
-    ├── Khớp đích? → fetch → bộ định tuyến OmniRoute (cổng 20128)
+    ├── Khớp đích? → fetch → bộ định tuyến 67router (cổng 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() trên nội dung yêu cầu/tiêu đề
     │               ├── TrafficBuffer.push() — xuất bản lên Trình kiểm tra lưu lượng
@@ -205,7 +205,7 @@ Chứng chỉ CA của AgentBridge phải được HĐH tin cậy trước khi c
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Ví dụ về các mục nhập `/etc/hosts` cho GitHub Copilot:
 
 Sử dụng Bảng Ánh xạ Mô hình trong mỗi thẻ tác nhân để xác định các ánh xạ nguồn → đích:
 
-| Mô hình nguồn (gốc của tác nhân) | Mô hình đích (OmniRoute) |
-| -------------------------------- | ------------------------ |
-| `gpt-4o`                         | `claude-sonnet-4.7`      |
-| `*` (ký tự đại diện)             | `claude-haiku-4.7`       |
+| Mô hình nguồn (gốc của tác nhân) | Mô hình đích (67router) |
+| -------------------------------- | ----------------------- |
+| `gpt-4o`                         | `claude-sonnet-4.7`     |
+| `*` (ký tự đại diện)             | `claude-haiku-4.7`      |
 
 Ký tự đại diện `*` ánh xạ mọi mô hình không được nhận dạng đến đích đã chỉ định. Được lưu bền vững trong bảng `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Ký tự đại diện `*` ánh xạ mọi mô hình không được nhận dạ
 
 ### 3.5 Thông báo rủi ro
 
-AgentBridge chặn thông tin xác thực (token OAuth, khóa API) mà IDE sử dụng để xác thực với các nhà cung cấp thượng nguồn. Những thông tin này được **che trước khi ghi nhật ký** (xem §2.7) nhưng vẫn hiển thị với lớp MITM của OmniRoute. Lần kích hoạt đầu tiên của mỗi tác tử sẽ hiển thị một hộp thoại thông báo rủi ro có thể đóng.
+AgentBridge chặn thông tin xác thực (token OAuth, khóa API) mà IDE sử dụng để xác thực với các nhà cung cấp thượng nguồn. Những thông tin này được **che trước khi ghi nhật ký** (xem §2.7) nhưng vẫn hiển thị với lớp MITM của 67router. Lần kích hoạt đầu tiên của mỗi tác tử sẽ hiển thị một hộp thoại thông báo rủi ro có thể đóng.
 
 ### 3.6 Bảo trì & Chẩn đoán
 
@@ -397,7 +397,7 @@ Quá trình phát hiện sử dụng các đường dẫn và phép kiểm tra t
 
 ### Danh sách bỏ qua dành cho các máy chủ nhạy cảm
 
-Danh sách bỏ qua đảm bảo rằng các tổ chức tài chính, nhà cung cấp OAuth/SSO và các máy chủ nhạy cảm khác **không bao giờ bị giải mã**. Lưu lượng TLS của chúng đi qua dưới dạng đường hầm TCP trong suốt — OmniRoute không bao giờ nhìn thấy dữ liệu văn bản thuần.
+Danh sách bỏ qua đảm bảo rằng các tổ chức tài chính, nhà cung cấp OAuth/SSO và các máy chủ nhạy cảm khác **không bao giờ bị giải mã**. Lưu lượng TLS của chúng đi qua dưới dạng đường hầm TCP trong suốt — 67router không bao giờ nhìn thấy dữ liệu văn bản thuần.
 
 Các mẫu bỏ qua mặc định bao gồm:
 
@@ -448,7 +448,7 @@ Ngoài ra, hãy cấu hình một cổng không đặc quyền trong phần cài
 
 Nếu IDE hiển thị lỗi TLS sau khi khởi động AgentBridge:
 
-1. Xác minh chứng chỉ đã được cài đặt: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) hoặc `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Xác minh chứng chỉ đã được cài đặt: `security find-certificate -c "67router AgentBridge"` (macOS) hoặc `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Một số ứng dụng duy trì kho tin cậy riêng (Firefox, Chrome trên Linux). Chạy lại "Trust Cert" và kiểm tra kho chứng chỉ dành riêng cho NSS/Firefox.
 3. Khởi động lại IDE sau khi thiết lập tin cậy — các phiên TLS đang hoạt động sử dụng trạng thái tin cậy cũ.
 
@@ -499,7 +499,7 @@ Tính năng tự động phát hiện sử dụng các đường dẫn cài đ�
 Nếu AgentBridge chặn được lưu lượng nhưng tất cả yêu cầu đều thất bại:
 
 1. Xác minh có ít nhất một nhà cung cấp được kết nối tại `/dashboard/providers`
-2. Kiểm tra nhật ký máy chủ OmniRoute: `APP_LOG_LEVEL=debug` trong `.env`
+2. Kiểm tra nhật ký máy chủ 67router: `APP_LOG_LEVEL=debug` trong `.env`
 3. Xác minh `OMNIROUTE_BASE_URL` trỏ đến đúng endpoint của bộ định tuyến (mặc định: `http://127.0.0.1:20128`)
 
 ---

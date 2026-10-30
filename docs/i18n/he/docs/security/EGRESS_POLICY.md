@@ -8,7 +8,7 @@
 
 > **מקור האמת:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute מאפשר לכל פרוקסי לכלול **הנחיית מוצא לפי משפחת כתובות**. כברירת מחדל, מערכת ההפעלה בוחרת IPv4 או IPv6 (מחסנית כפולה, "Happy Eyeballs"). כאשר מגדירים את ההנחיה כ-`ipv4` או כ-`ipv6`,‏ OmniRoute מקבע כל חיבור דרך אותו פרוקסי למשפחה שנבחרה ו**נכשל באופן סגור** במקום לחזור למשפחה האחרת.
+67router מאפשר לכל פרוקסי לכלול **הנחיית מוצא לפי משפחת כתובות**. כברירת מחדל, מערכת ההפעלה בוחרת IPv4 או IPv6 (מחסנית כפולה, "Happy Eyeballs"). כאשר מגדירים את ההנחיה כ-`ipv4` או כ-`ipv6`,‏ 67router מקבע כל חיבור דרך אותו פרוקסי למשפחה שנבחרה ו**נכשל באופן סגור** במקום לחזור למשפחה האחרת.
 
 דף זה מתעד מהי ההנחיה, מדוע היא קיימת, היכן מגדירים אותה וכיצד סביבת הריצה פותרת אותה.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## כיצד `auto` מוכרע
 
-כאשר `family` הוא `auto`,‏ OmniRoute **אינו** מוסיף הנחיה כלשהי — נעשה שימוש בכתובת ה-URL של ה-proxy כפי שהיא, ומשפחת החיבור נקבעת באופן מובנה.
+כאשר `family` הוא `auto`,‏ 67router **אינו** מוסיף הנחיה כלשהי — נעשה שימוש בכתובת ה-URL של ה-proxy כפי שהיא, ומשפחת החיבור נקבעת באופן מובנה.
 
 בעת בניית כתובת ה-URL (`proxyConfigToUrl` / `normalizeProxyUrl` ב-`open-sse/utils/proxyDispatcher.ts`),‏ proxy מסוג `auto` מפיק כתובת URL רגילה ללא סמן:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 הנחיה שאינה `auto` מועברת כסמן שאילתה סינתטי יחיד — `?family=ipv4` או `?family=ipv6` — שמצורף פעם אחת לכתובת ה-URL המנורמלת של הפרוקסי. `normalizeProxyUrl` מסירה בזהירות את הסמן ומצרפת אותו מחדש פעם אחת בדיוק, כך שהוא לעולם אינו משבש את ניתוח הפורט.
 
-כאשר ה-dispatcher נבנה, הסמן נקרא ומומר למשפחת חיבור קונקרטית. אם המארח הוא כתובת IP מפורשת מהמשפחה **ההפוכה**, OmniRoute זורקת שגיאה (במקרה של סתירה, המערכת נכשלת במצב סגור):
+כאשר ה-dispatcher נבנה, הסמן נקרא ומומר למשפחת חיבור קונקרטית. אם המארח הוא כתובת IP מפורשת מהמשפחה **ההפוכה**, 67router זורקת שגיאה (במקרה של סתירה, המערכת נכשלת במצב סגור):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## תאימות SOCKS5
 
-קיבוע המשפחה פועל עם פרוקסי SOCKS5, אך `fetch-socks` הרגיל אינו חושף את אפשרויות ה-socket הנדרשות לקיבוע המשפחה של דילוג הפרוקסי. OmniRoute מספקת מחבר משלה לצורך זה:
+קיבוע המשפחה פועל עם פרוקסי SOCKS5, אך `fetch-socks` הרגיל אינו חושף את אפשרויות ה-socket הנדרשות לקיבוע המשפחה של דילוג הפרוקסי. 67router מספקת מחבר משלה לצורך זה:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

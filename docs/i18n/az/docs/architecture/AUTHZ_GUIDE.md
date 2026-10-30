@@ -7,7 +7,7 @@
 > **Həqiqət mənbəyi:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Son yenilənmə:** 2026-09-22 — əhatə adları MCP-SERVER.md sənədinə istinad edir
 
-OmniRoute hər bir API sorğusunu yoxlayan, marşrutdan xəbərdar avtorizasiya konveyerinə malikdir. Təsnifat **deterministikdir** və **uğursuzluq zamanı girişi rədd edir** — təsnif edilə bilməyən hər bir sorğu `MANAGEMENT` kateqoriyasına düşür və sessiya və ya idarəetmə səviyyəli token tələb edir. Bu səhifə marşrutları idarə edən və ya yeni son nöqtələr layihələndirən mühəndislər üçün modeli izah edir.
+67router hər bir API sorğusunu yoxlayan, marşrutdan xəbərdar avtorizasiya konveyerinə malikdir. Təsnifat **deterministikdir** və **uğursuzluq zamanı girişi rədd edir** — təsnif edilə bilməyən hər bir sorğu `MANAGEMENT` kateqoriyasına düşür və sessiya və ya idarəetmə səviyyəli token tələb edir. Bu səhifə marşrutları idarə edən və ya yeni son nöqtələr layihələndirən mühəndislər üçün modeli izah edir.
 
 ![AuthZ konveyeri (3 marşrut sinfi + siyasətin qiymətləndirilməsi)](../diagrams/exported/authz-pipeline.svg)
 

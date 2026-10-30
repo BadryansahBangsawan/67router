@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute uključuje sloj gamifikacije s lokalnim pristupom koji nagrađuje korisnike za
+67router uključuje sloj gamifikacije s lokalnim pristupom koji nagrađuje korisnike za
 interakciju s platformom — slanje zahtjeva, promjenu pružatelja usluga, stvaranje
 kombinacija, dijeljenje tokena i doprinos zajednici. Cjelokupno stanje pohranjeno je u
 bazi SQLite; povezivanje s poslužiteljima zajednice opcionalno je i temelji se na prosljeđivanju podataka.
@@ -36,7 +36,7 @@ tokena, nagrade za pozivanje).
 | Ljestvice poretka          | Globalni, tjedni, mjesečni, dijeljenje tokena i doprinosi                                               |
 | Dijeljenje tokena          | Prijenos kredita između korisnika putem dvojnog knjigovodstva                                           |
 | Pozivanje i iskorištavanje | Kodovi preporuke s pohranom sažetaka SHA-256                                                            |
-| Poslužitelji zajednice     | Federiranje s vanjskim instancama OmniRoutea                                                            |
+| Poslužitelji zajednice     | Federiranje s vanjskim instancama 67routera                                                             |
 | Zaštita od varanja         | Bodovanje na strani poslužitelja, ograničavanje učestalosti i otkrivanje anomalija pomoću z-vrijednosti |
 
 ### Načela dizajna
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tablice baze podataka
 
-Sve tablice nalaze se u glavnoj SQLite bazi podataka OmniRoute, stvorenoj migracijom
+Sve tablice nalaze se u glavnoj SQLite bazi podataka 67router, stvorenoj migracijom
 `060_create_gamification.sql`. WAL vođenje dnevnika nasljeđuje se iz singletona
 `getDbInstance()` u datoteci `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Sve tablice nalaze se u glavnoj SQLite bazi podataka OmniRoute, stvorenoj migrac
 
 ### Domenski modul: `src/lib/db/gamification.ts`
 
-Slijedi standardni obrazac OmniRoute — uvozi `getDbInstance()` iz
+Slijedi standardni obrazac 67router — uvozi `getDbInstance()` iz
 `core.ts` i izvozi tipizirane CRUD funkcije. U obrađivačima ruta nema sirovog SQL-a.
 
 Ključne funkcije:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Radnja            | XP  | Opis                                                    |
 | ----------------- | --- | ------------------------------------------------------- |
-| `request`         | 1   | Za svaki API zahtjev usmjeren kroz OmniRoute            |
+| `request`         | 1   | Za svaki API zahtjev usmjeren kroz 67router             |
 | `provider_switch` | 5   | Prebacivanje na drugog pružatelja usluge                |
 | `model_switch`    | 3   | Prebacivanje na drugi model                             |
 | `combo_create`    | 10  | Stvaranje nove kombinacije                              |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (jedinstven, indeksiran) |
 | `token_hash` | SHA-256(raw_token)                  |
 
-Neobrađeni token vraća se korisniku samo jednom, u trenutku stvaranja. OmniRoute
+Neobrađeni token vraća se korisniku samo jednom, u trenutku stvaranja. 67router
 ga više nikada ne pohranjuje niti prikazuje — zadržava se samo sažetak.
 
 ### Sprječavanje samopreporuke
@@ -715,7 +715,7 @@ Administratori mogu dohvatiti cijeli revizijski trag putem
 
 ## API rute
 
-Sve rute slijede standardni OmniRoute obrazac:
+Sve rute slijede standardni 67router obrazac:
 
 ```
 Ruta → CORS preliminarni zahtjev → Provjera tijela zahtjeva (Zod) → Autentikacija (extractApiKey)

@@ -12,8 +12,8 @@
 
 ## Ihe ọ bụ
 
-Local Corpus na-enye onye njikwa ohere ime ka sava MCP nke OmniRoute nweta otu folda
-faịlụ ederede a kwadoro nke ọma. Faịlụ na-anọ n'ime folda mbụ ha: OmniRoute na-echekwa
+Local Corpus na-enye onye njikwa ohere ime ka sava MCP nke 67router nweta otu folda
+faịlụ ederede a kwadoro nke ọma. Faịlụ na-anọ n'ime folda mbụ ha: 67router na-echekwa
 naanị ụzọ mgbọrọgwụ canonical na SQLite ma na-ejikwa ndekọ ọchụchọ dị na ebe nchekwa.
 Ọ naghị edetuo ọdịnaya corpus n'ime repository ma ọ bụ database.
 

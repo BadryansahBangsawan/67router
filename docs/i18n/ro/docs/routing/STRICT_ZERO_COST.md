@@ -32,7 +32,7 @@ Pentru fiecare candidat din grup (`open-sse/services/autoCombo/virtualFactory.ts
 imediat după `filterPaidOnlyCandidates`):
 
 1. **Nu se află deloc în `FREE_MODEL_BUDGETS`** → exclus. Aceasta acoperă modelele cu adevărat contra cost și orice
-   furnizor/model pe care OmniRoute nu l-a clasificat încă — candidații noi sunt inițial excluși, nu incluși.
+   furnizor/model pe care 67router nu l-a clasificat încă — candidații noi sunt inițial excluși, nu incluși.
 2. **`freeType: "keyless"`** → trece imediat, **dar numai în cazul unui candidat care a
    sosit în mod autentic prin calea fără autentificare** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Nu există credențiale pentru acel
@@ -87,7 +87,7 @@ niciodată un alt cont neverificat al aceluiași candidat. Consultați
 (cazurile A/B/C de ocolire fără cheie, cazurile 1-5 cu mai multe conturi).
 
 `descoperit automat`: un furnizor/model lansat mâine cu metadatele corecte (în
-catalog, cu un adaptor de utilizare, `hardStopGuaranteed: true`) poate fi utilizat din momentul în care OmniRoute află
+catalog, cu un adaptor de utilizare, `hardStopGuaranteed: true`) poate fi utilizat din momentul în care 67router află
 despre el — fără modificări ale codului, fără intrări într-o listă de permisiuni și fără nimic de editat în acest modul. Unul eliminat din
 catalog dispare în același mod. Consultați
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` pentru demonstrația de regresie (prin

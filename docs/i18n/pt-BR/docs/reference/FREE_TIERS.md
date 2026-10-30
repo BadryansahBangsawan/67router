@@ -9,9 +9,9 @@
 > **Última pesquisa:** 2026-06-17 — pesquisa na web por provedor (documentação oficial + notícias dos últimos 7 dias, revisão por 50 agentes com verificação adversarial), atualizando cada cota de nível gratuito + ToS. **Reauditoria parcial em 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — consulte a observação datada abaixo).
 > **Fonte da verdade (catálogo):** `open-sse/config/freeModelCatalog.ts` (orçamentos por MODELO, com desduplicação por pool). Os números de orçamento de tokens abaixo vêm de pesquisas ao vivo na web e são uma **aproximação** — consulte [Metodologia e ressalvas](#methodology--caveats).
 
-## Resumo — quanta inferência gratuita o OmniRoute realmente agrega?
+## Resumo — quanta inferência gratuita o 67router realmente agrega?
 
-Esses números descrevem contas de terceiros e condições de elegibilidade distintas em todo o catálogo. O OmniRoute não concede esse orçamento: você precisa obter as contas ou credenciais necessárias, conectar provedores elegíveis e respeitar seus limites. A capacidade realmente utilizável pode ser menor, inclusive zero em uma instalação nova sem nenhuma rota elegível. Provedores marcados como `tos: avoid` são excluídos do roteamento automático por padrão.
+Esses números descrevem contas de terceiros e condições de elegibilidade distintas em todo o catálogo. O 67router não concede esse orçamento: você precisa obter as contas ou credenciais necessárias, conectar provedores elegíveis e respeitar seus limites. A capacidade realmente utilizável pode ser menor, inclusive zero em uma instalação nova sem nenhuma rota elegível. Provedores marcados como `tos: avoid` são excluídos do roteamento automático por padrão.
 
 **Verificado em 2026-10-08:** a [Cerebras](https://www.cerebras.ai/pricing) oferece um crédito promocional único de US$ 5 que exige uma forma de pagamento e expira após 30 dias. O [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publica limites de taxa por projeto/modelo/nível; ele permanece fora do total mensal quantificado em destaque.
 
@@ -24,7 +24,7 @@ Esses números descrevem contas de terceiros e condições de elegibilidade dist
 | **+ mediante verificação regional de identidade**      | **+~6M**            | `modelscope` (vinculação ao Alibaba Cloud + verificação de nome real na China continental). Cota recorrente real, exposta como `gatedRecurringTokens` / `gatedProviders` e no painel. Nunca somada ao destaque: +~6M mediante verificação regional de identidade.                                        |
 | Limite máximo teórico (todos os limites de taxa, 24/7) | ~10B                | Soma de todos os limites de taxa dos provedores extrapolada para uso ininterrupto. **Não é uma garantia** — não use isso como destaque.                                                                                                                                                                  |
 
-**Destaque honesto:** _O OmniRoute agrega **~1,62B de tokens gratuitos documentados por mês** (até ~2,22B no primeiro mês com créditos de cadastro) em 34 pools de nível gratuito — além de uma longa lista de provedores permanentemente gratuitos e sem limite — e a compactação do RTK + Caveman (economia de 15–95% em tokens) amplia ainda mais esse total._
+**Destaque honesto:** _O 67router agrega **~1,62B de tokens gratuitos documentados por mês** (até ~2,22B no primeiro mês com créditos de cadastro) em 34 pools de nível gratuito — além de uma longa lista de provedores permanentemente gratuitos e sem limite — e a compactação do RTK + Caveman (economia de 15–95% em tokens) amplia ainda mais esse total._
 
 > **Por que esse valor caiu em relação aos ~1,94B anteriores.** A atualização de 2026-06-17 é uma correção de transparência, não uma perda: `gemini` agora é desduplicado por pool (antes, o valor era inflado pela contagem separada de cada variante Flash, 462M → 60M), `cloudflare-ai` foi corrigido para o limite real de 10 mil Neurons/dia (122M → 30M), `doubao` foi reclassificado como um crédito único de cadastro (não recorrente) e os níveis descontinuados foram removidos (`chutes`/`phind`/`kluster`). Isso foi parcialmente compensado por `llm7` (valor correto de 5M/dia → 150M) e por novos provedores gratuitos (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -93,7 +93,7 @@ As alterações da Nous estão detalhadas na observação sobre o provedor abaix
 
 ## Dois regimes — contabilização vs. decisão
 
-O OmniRoute responde à pergunta "é gratuito?" por meio de dois regimes que, intencionalmente,
+O 67router responde à pergunta "é gratuito?" por meio de dois regimes que, intencionalmente,
 consultam fontes diferentes:
 
 | Regime                        | Fonte da verdade                                                                                                                                                                 | Superfícies                                                                                                                                       |
@@ -141,25 +141,25 @@ A maioria dos números de "tokens gratuitos por mês" nesse espaço é a soma do
 
 ### ⚠️ Atenção — cláusulas de uso pessoal/proxy que vale a pena verificar (16)
 
-> O acesso gratuito deles é real e o OmniRoute pode rotear solicitações para eles; as cláusulas abaixo são apenas pontos que vale a pena conhecer. As opções OAuth/sem chave não podem ser quantificadas em tokens, portanto não estão incluídas no número em destaque (não porque sejam inutilizáveis).
+> O acesso gratuito deles é real e o 67router pode rotear solicitações para eles; as cláusulas abaixo são apenas pontos que vale a pena conhecer. As opções OAuth/sem chave não podem ser quantificadas em tokens, portanto não estão incluídas no número em destaque (não porque sejam inutilizáveis).
 
-| Provedor         | Observação                                                                                                                                                                                                |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `agy`            | Os ToS do Google Antigravity proíbem explicitamente o uso de software, ferramentas ou serviços de terceiros (incluindo proxies) para acessar o serviço via OAuth; fazer…                                  |
-| `ai21`           | Os ToS §4.2/§8.2 proíbem sublicenciar ou distribuir o acesso à API a terceiros; o §3.3 restringe produtos de teste/avaliação à "avaliação interna em…                                                     |
-| `amazon-q`       | O produto foi descontinuado para novos cadastros; usuários existentes estão sujeitos ao AWS Customer Agreement, que rege o uso de serviços gerenciados — um proxy auto-hospedado…                         |
-| `blackbox`       | Os ToS proíbem explicitamente sublicenciar, revender, disponibilizar o serviço a terceiros e criar serviços derivados — um proxy pessoal auto-hospedado…                                                  |
-| `coze`           | Os ToS da Coze restringem explicitamente o uso a "uso pessoal e não comercial" e proíbem alugar, distribuir, sublicenciar ou revender o serviço; um…                                                      |
-| `duckduckgo-web` | Os ToS do Duck.ai (duckduckgo.com/duckai/privacy-terms) proíbem explicitamente "consultas automatizadas e o desenvolvimento ou oferta de serviços de IA" e contornar…                                     |
-| `featherless-ai` | Os planos individuais são explicitamente restritos a "uso interativo ou prototipagem e experimentação pelo comprador" — a revenda de inferência e o uso de proxy exigem…                                  |
-| `fireworks`      | Os ToS proíbem explicitamente o uso como proxy/intermediário, a transferência de chaves de API e o sublicenciamento (Seções 2.1 e 2.2(i)(j)); proxies pessoais auto-hospedados não são…                   |
-| `friendliai`     | As Seções 8(e) e 8(f) dos ToS proíbem explicitamente usar o FriendliAI como proxy ou permitir acesso independente a terceiros, além de proibirem revender/…                                               |
-| `iflytek`        | A Seção 2.4(3) do iFlytek Spark LLM Service Agreement proíbe explicitamente "usar quaisquer métodos automatizados ou programáticos para extrair dados ou resultados…                                      |
-| `kiro`           | As perguntas frequentes do Kiro proíbem explicitamente o uso com "OpenClaw e ferramentas semelhantes que utilizam estruturas de terceiros" — um proxy de IA auto-hospedado (como o OmniRoute) que roteia… |
-| `modal`          | A Seção 1.3 dos ToS proíbe explicitamente "alugar, revender ou permitir, de qualquer outra forma, que terceiros acessem diretamente ou usem o Serviço" — criar um serviço auto-hospedado…                 |
-| `muse-spark-web` | Os ToS da Meta proíbem explicitamente o acesso automatizado sem permissão prévia, a engenharia reversa sem permissão por escrito e contornar mecanismos tecnológicos…                                     |
-| `nlpcloud`       | Os ToS proíbem explicitamente "configurar um proxy ou outro dispositivo que permita que outras pessoas acessem o Serviço por meio dele" e concedem apenas um direito intransferível,…                     |
-| `t3-web`         | Os ToS restringem explicitamente as contas apenas ao uso pessoal, proíbem o compartilhamento de credenciais com terceiros e vedam o acesso automatizado/por bot/para coleta de dados — um…                |
+| Provedor         | Observação                                                                                                                                                                                               |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `agy`            | Os ToS do Google Antigravity proíbem explicitamente o uso de software, ferramentas ou serviços de terceiros (incluindo proxies) para acessar o serviço via OAuth; fazer…                                 |
+| `ai21`           | Os ToS §4.2/§8.2 proíbem sublicenciar ou distribuir o acesso à API a terceiros; o §3.3 restringe produtos de teste/avaliação à "avaliação interna em…                                                    |
+| `amazon-q`       | O produto foi descontinuado para novos cadastros; usuários existentes estão sujeitos ao AWS Customer Agreement, que rege o uso de serviços gerenciados — um proxy auto-hospedado…                        |
+| `blackbox`       | Os ToS proíbem explicitamente sublicenciar, revender, disponibilizar o serviço a terceiros e criar serviços derivados — um proxy pessoal auto-hospedado…                                                 |
+| `coze`           | Os ToS da Coze restringem explicitamente o uso a "uso pessoal e não comercial" e proíbem alugar, distribuir, sublicenciar ou revender o serviço; um…                                                     |
+| `duckduckgo-web` | Os ToS do Duck.ai (duckduckgo.com/duckai/privacy-terms) proíbem explicitamente "consultas automatizadas e o desenvolvimento ou oferta de serviços de IA" e contornar…                                    |
+| `featherless-ai` | Os planos individuais são explicitamente restritos a "uso interativo ou prototipagem e experimentação pelo comprador" — a revenda de inferência e o uso de proxy exigem…                                 |
+| `fireworks`      | Os ToS proíbem explicitamente o uso como proxy/intermediário, a transferência de chaves de API e o sublicenciamento (Seções 2.1 e 2.2(i)(j)); proxies pessoais auto-hospedados não são…                  |
+| `friendliai`     | As Seções 8(e) e 8(f) dos ToS proíbem explicitamente usar o FriendliAI como proxy ou permitir acesso independente a terceiros, além de proibirem revender/…                                              |
+| `iflytek`        | A Seção 2.4(3) do iFlytek Spark LLM Service Agreement proíbe explicitamente "usar quaisquer métodos automatizados ou programáticos para extrair dados ou resultados…                                     |
+| `kiro`           | As perguntas frequentes do Kiro proíbem explicitamente o uso com "OpenClaw e ferramentas semelhantes que utilizam estruturas de terceiros" — um proxy de IA auto-hospedado (como o 67router) que roteia… |
+| `modal`          | A Seção 1.3 dos ToS proíbe explicitamente "alugar, revender ou permitir, de qualquer outra forma, que terceiros acessem diretamente ou usem o Serviço" — criar um serviço auto-hospedado…                |
+| `muse-spark-web` | Os ToS da Meta proíbem explicitamente o acesso automatizado sem permissão prévia, a engenharia reversa sem permissão por escrito e contornar mecanismos tecnológicos…                                    |
+| `nlpcloud`       | Os ToS proíbem explicitamente "configurar um proxy ou outro dispositivo que permita que outras pessoas acessem o Serviço por meio dele" e concedem apenas um direito intransferível,…                    |
+| `t3-web`         | Os ToS restringem explicitamente as contas apenas ao uso pessoal, proíbem o compartilhamento de credenciais com terceiros e vedam o acesso automatizado/por bot/para coleta de dados — um…               |
 
 ### ✅ Geralmente permissivo — caution / ambiguous / ok (o restante)
 
@@ -317,7 +317,7 @@ A maioria dos números de "tokens gratuitos por mês" nesse espaço é a soma do
 
 - **`360ai`** — A freeNote incluída, "Modelos gratuitos do Free 360 AI Brain", parece desatualizada. O acesso atual depende de aprovação de inscrição e é pago. Os tokens promocionais da época do lançamento em 2023 (100M–250M, concedidos uma única vez) podem ter sido a base para…
 - **`agentrouter`** — Nossa freeNote incluída diz "US$ 200 em créditos gratuitos ao se cadastrar". A realidade atual mostra que cadastros padrão (sem indicação) recebem apenas US$ 100; cadastros por indicação podem receber US$ 200, mas um comentário da comunidade de abril de 2026…
-- **`agy`** — Nossa freeNote incluída diz "(nenhum)", sugerindo que não há plano gratuito, mas o Antigravity tem um plano gratuito com acesso condicionado por OAuth. No entanto, os ToS proíbem explicitamente o uso desse plano gratuito por meio de um proxy como o OmniRoute…
+- **`agy`** — Nossa freeNote incluída diz "(nenhum)", sugerindo que não há plano gratuito, mas o Antigravity tem um plano gratuito com acesso condicionado por OAuth. No entanto, os ToS proíbem explicitamente o uso desse plano gratuito por meio de um proxy como o 67router…
 - **`ai21`** — Ficou mais restrito: o período de avaliação foi reduzido de "3 meses" para 7 dias. O valor do crédito, de US$ 10, permanece o mesmo, mas a validade caiu drasticamente de cerca de 90 dias para 7 dias.
 - **`aimlapi`** — Mudou significativamente. A freeNote incluída anunciava "US$ 0,025/dia em créditos gratuitos — mais de 200 modelos", mas o plano gratuito agora está pausado/descontinuado. A alocação de créditos de US$ 0,025/dia (50.000 créditos/dia, 10 req/d…
 - **`amazon-q`** — Nossa freeNote incluída diz "(nenhum)" — a realidade é pior: o produto agora foi descontinuado para novos cadastros (15 de maio de 2026). Anteriormente, o plano gratuito oferecia 50 solicitações agênticas/mês + sugestões inline ilimitadas…

@@ -3,10 +3,10 @@ title: "System designu i tożsamość wizualna"
 lastUpdated: 2026-07-11
 ---
 
-# OmniRoute — System designu i tożsamość wizualna
+# 67router — System designu i tożsamość wizualna
 
 > **Status:** referencja — opisana tu standaryzacja jest **zaimplementowana** (fazy 1–6: tapeta siatki, prymitywy, centralizacja kolorów statusu, token mono, migracja tokenów DataTable, focus-ring → accent, prymitywy Checkbox/Textarea, `cn()` → tailwind-merge, siatka na każdym samodzielnym ekranie, płynna powłoka treści 4K, nieprzezroczyste powierzchnie tabel danych). Ten dokument to kanoniczny opis tokenów designu dashboardu, komponentów i konwencji; poniższe ujęcie fazowe zachowano jako uzasadnienie każdej decyzji.
-> **Zakres:** dashboard OmniRoute (`src/`) i strona marketingowa (`_mono_repo/omnirouteSite/`) dzielą **jedną tożsamość wizualną** — ta sama tapeta siatki w kratkę (32px), te same tokeny kolorów, ustandaryzowane komponenty.
+> **Zakres:** dashboard 67router (`src/`) i strona marketingowa (`_mono_repo/omnirouteSite/`) dzielą **jedną tożsamość wizualną** — ta sama tapeta siatki w kratkę (32px), te same tokeny kolorów, ustandaryzowane komponenty.
 >
 > Uwagi praktyczne dla maintainerów:
 >
@@ -18,7 +18,7 @@ lastUpdated: 2026-07-11
 
 ## 1. Cel
 
-Strona marketingowa (`viral.omniroute.online`, `why.omniroute.online`, `omniroute.online`) i dashboard produktu powinny wyglądać jak **jeden produkt**. Strona już pożyczyła paletę z dashboardu — jej `css/tokens.css` wręcz mówi _"Palette mirrors the OmniRoute dashboard (src/app/globals.css)"_. Zatem obie są już zsynchronizowane w ~80% na poziomie kolorów. Czego brakuje na dashboardzie:
+Strona marketingowa (`viral.omniroute.online`, `why.omniroute.online`, `omniroute.online`) i dashboard produktu powinny wyglądać jak **jeden produkt**. Strona już pożyczyła paletę z dashboardu — jej `css/tokens.css` wręcz mówi _"Palette mirrors the 67router dashboard (src/app/globals.css)"_. Zatem obie są już zsynchronizowane w ~80% na poziomie kolorów. Czego brakuje na dashboardzie:
 
 1. **Tapeta siatki w kratkę (graph-paper)**, której strona używa na każdej stronie.
 2. Garść **współdzielonych tokenów designu**, które ma strona, a dashboard nie (skala radius, gradient brand, `surface-2`, font mono).

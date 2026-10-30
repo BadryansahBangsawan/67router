@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute analiza las respuestas de error de los proveedores upstream en busca de señales que indiquen que una
+67router analiza las respuestas de error de los proveedores upstream en busca de señales que indiquen que una
 **cuenta está permanentemente inactiva** (suspendida / desactivada / bloqueada por incumplimiento de los Términos de servicio) y, cuando
 hay una coincidencia, mueve esa conexión a un **estado terminal `banned`** para que deje de
 seleccionarse para las solicitudes. Esto es lo que configura la tarjeta de ajustes

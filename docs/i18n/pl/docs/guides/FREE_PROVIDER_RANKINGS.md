@@ -11,7 +11,7 @@ lastUpdated: 2026-06-28
 
 # Rankingi darmowych providerów (Arena ELO)
 
-> **TL;DR**: OmniRoute rankinguje swoje **darmowe** providery według jakości modeli, używając **wyników ELO Arena AI
+> **TL;DR**: 67router rankinguje swoje **darmowe** providery według jakości modeli, używając **wyników ELO Arena AI
 > (w stylu LMArena)**. Otwórz stronę **Free Provider Rankings** w
 > dashboardzie, aby zobaczyć, które darmowe providery oferują najsilniejsze modele do Twojego zadania —
 > ogólnie albo z filtrem kategorii (coding, review, documentation, debugging).
@@ -20,7 +20,7 @@ lastUpdated: 2026-06-28
 
 ## Co to jest
 
-OmniRoute rejestruje 375 dostawców, w tym 155 wpisów katalogowych oznaczonych jako **darmowe/bez uwierzytelniania**
+67router rejestruje 375 dostawców, w tym 155 wpisów katalogowych oznaczonych jako **darmowe/bez uwierzytelniania**
 (bez uwierzytelniania,
 OAuth w darmowym planie lub klucz API w darmowym planie — zobacz
 [Przewodnik po darmowych planach](../getting-started/FREE-TIERS-GUIDE.md) oraz pełny
@@ -138,9 +138,9 @@ oraz `code` — z API rankingu Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Każdy wpis rankingu
 niesie nazwę modelu, vendora, ELO `score`, przedział ufności oraz liczbę głosów.
 
-Kategorie rankingu mapują się na kategorie zadań OmniRoute:
+Kategorie rankingu mapują się na kategorie zadań 67router:
 
-| Ranking Arena | Kategorie zadań OmniRoute                         |
+| Ranking Arena | Kategorie zadań 67router                          |
 | ------------- | ------------------------------------------------- |
 | `text`        | `default`, `review`, `documentation`, `debugging` |
 | `code`        | `coding`                                          |
@@ -177,7 +177,7 @@ Synchronizacja jest **domyślnie włączona**:
 
 - Uruchamia się raz przy starcie serwera, a potem na okresowym timerze
   (`src/lib/arenaEloSync.ts`, podpięte z `src/server-init.ts`).
-- Jest **nieblokująca i nigdy nie jest fatalna** — jeśli fetch upstreamu się nie uda, OmniRoute dalej
+- Jest **nieblokująca i nigdy nie jest fatalna** — jeśli fetch upstreamu się nie uda, 67router dalej
   działa, a rankingi po prostu pokazują ostatnie dobre dane (albo stan pusty).
 
 Sterują nią dwie zmienne środowiskowe (opisane w
@@ -213,7 +213,7 @@ elastycznego dopasowania (`findMatchingIntelligence` w `src/lib/freeProviderRank
 
 Po stronie sync znane prefiksy vendorów (`anthropic/`, `openai/`, `google/`, …) są
 usuwane, a mała mapa aliasów rozwija kanoniczne nazwy do wariantów używanych wewnętrznie
-przez OmniRoute, dzięki czemu modele da się znaleźć pod dowolną nazwą.
+przez 67router, dzięki czemu modele da się znaleźć pod dowolną nazwą.
 
 ### Jak rankingowany jest provider
 

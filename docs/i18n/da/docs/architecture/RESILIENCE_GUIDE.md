@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har tre forskellige, men beslægtede robusthedsmekanismer. Hver har sit eget omfang og formål. Hold dem adskilt, når du fejlsøger routingadfærd.
+67router har tre forskellige, men beslægtede robusthedsmekanismer. Hver har sit eget omfang og formål. Hold dem adskilt, når du fejlsøger routingadfærd.
 
 ![Robusthedsmodel med 3 lag](../diagrams/exported/resilience-3layers.svg)
 
@@ -217,7 +217,7 @@ De tre sessionsaffinitetsheadere videresendes aldrig til upstream — eksekverin
 
 ### Eksklusive forbindelsesleases for administrerede sessioner
 
-**Omfang:** én aktiv, administreret HTTP-klient/-session ejer én egnet OmniRoute-forbindelse.
+**Omfang:** én aktiv, administreret HTTP-klient/-session ejer én egnet 67router-forbindelse.
 
 **Formål:** at give klienter, der har brug for en hård routingbarriere på tværs af anmodninger, et varigt, eksklusivt ejerskab over en forbindelse. Dette adskiller sig fra sessionsaffinitet, som er en blød præference for kontinuitet:
 Den eksklusive lease bevarer livscyklustilstand i SQLite, håndhæver global entydighed for aktive ejere og
@@ -238,7 +238,7 @@ det aktive forbindelses-ID. Lease-kontrolheadere fjernes fra logfiler, bevarede 
 headere til upstream-eksekverere.
 
 Hvis almindelig routing har kvalificerede administrerede kandidater, men enhver ledig kandidat er optaget af en
-fremmed aktiv lease, returnerer OmniRoute HTTP `429`, koden lease-capacity-unavailable, en
+fremmed aktiv lease, returnerer 67router HTTP `429`, koden lease-capacity-unavailable, en
 venter-på-kapacitet-tilstand og en afgrænset `Retry-After` afledt af den tidligste relevante udløbstid.
 Almindelig tom kvalificering er ikke lease-konkurrence og bevarer sine eksisterende routing-fejlsemantikker.
 
@@ -260,7 +260,7 @@ Relaterede mekanismer forbliver adskilte:
   for codex hele `codex` / `spark`-omfanget (hver `gpt-5*`-model på
   forbindelsen), for andre udbydere `getQuotaScopedModelForProvider()`.
 - `404` låser den blotte model (`getModelLockKey()` indsnævrer `not_found`).
-- Enhver anden status — `5xx` transport-/serverfejl og OmniRoutes egen
+- Enhver anden status — `5xx` transport-/serverfejl og 67routers egen
   syntetiserede `502` fra kvalitetsvalidering — låser kun den **eksakte**
   udbyder/forbindelse/model-tuple. En dårlig stream på én model er ikke bevis
   for kontoens kvote; før denne regel fjernede ét tomt svar på
@@ -397,7 +397,7 @@ Samtidighedslofter pr. model**, én `model=cap` pr. linje) eller via
   heltal.
 - **Lokal kø, ingen discovery:** overskydende forespørgsler stilles lokalt i
   kø med den eksisterende kø-/timeout-semantik (typede `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`-adgangsfejl). OmniRoute opdager eller udleder ikke
+  `SEMAPHORE_QUEUE_FULL`-adgangsfejl). 67router opdager eller udleder ikke
   upstream-politik — den håndhæver præcis de lofter, operatøren har
   konfigureret. En mættet modelport deaktiverer aldrig udbyderen og skaber
   aldrig en permanent modellockout; upstream-429/cooldown/fallback-adfærd
@@ -493,7 +493,7 @@ Selve adgangstjekket er en ren funktion (`open-sse/services/rateLimitManager/adm
 ### Sikkerhedsnet for auto-aktivering af rate-limit og forbindelsesbeskyttelse (`rateLimitProtection`)
 
 **Sikkerhedsnet for auto-aktivering** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, standard `true`):
-Som standard aktiverer OmniRoute automatisk rate-limit-købeskyttelse for alle aktive API-nøgle-udbyderforbindelser (`getProviderCategory(provider) === "apikey"`). Dette sikrer, at indgående forespørgsler til hastighedsfølsomme upstream-API-nøgler sættes i kø og begrænses gennem Bottleneck i stedet for at eksplodere i upstream-429-fejl. Sikkerhedsnettet kan tilsidesættes via miljøvariablen `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` deaktiverer, `true`/`1`/`on` tvinger til), som har forrang frem for den gemte dashboard-indstilling (**Indstillinger → Robusthed** / `PATCH /api/resilience`).
+Som standard aktiverer 67router automatisk rate-limit-købeskyttelse for alle aktive API-nøgle-udbyderforbindelser (`getProviderCategory(provider) === "apikey"`). Dette sikrer, at indgående forespørgsler til hastighedsfølsomme upstream-API-nøgler sættes i kø og begrænses gennem Bottleneck i stedet for at eksplodere i upstream-429-fejl. Sikkerhedsnettet kan tilsidesættes via miljøvariablen `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` deaktiverer, `true`/`1`/`on` tvinger til), som har forrang frem for den gemte dashboard-indstilling (**Indstillinger → Robusthed** / `PATCH /api/resilience`).
 
 **Semantik for `rateLimitProtection` pr. forbindelse:**
 Rate-limit-beskyttelse pr. forbindelse spores via det boolske felt `rateLimitProtection` på udbyderforbindelser (gemt som `rate_limit_protection` i SQLite):
@@ -844,7 +844,7 @@ begrænsninger:
 > guiden forbliver under kontekstbudgettet på 40k. Det er den komprimerede, agentvendte
 > visning af afsnittene ovenfor; de nummererede afsnit forbliver den fulde reference.
 
-OmniRoute har tre relaterede, men forskellige mekanismer til midlertidige fejl. Hold
+67router har tre relaterede, men forskellige mekanismer til midlertidige fejl. Hold
 deres anvendelsesområde adskilt, når du fejlsøger routing-adfærd. Se
 [3-lags robusthedsdiagrammet](../diagrams/exported/resilience-3layers.svg)
 (kilde: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

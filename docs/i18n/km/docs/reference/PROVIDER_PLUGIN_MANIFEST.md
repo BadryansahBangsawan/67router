@@ -13,7 +13,7 @@ CLIProxyAPI ឬ router ដែលសរសេរដោយ Go/Rust នាពេល
 Manifest ដូចគ្នានេះក៏អាចប្រើបានតាមរយៈ HTTP នៅ
 `GET /api/v1/provider-plugin-manifest` សម្រាប់ sidecar ដែលដំណើរការនៅក្រៅ process។
 
-OmniRoute ប្រកាស URL នោះទៅកាន់ Bifrost និង CLIProxyAPI តាមរយៈ
+67router ប្រកាស URL នោះទៅកាន់ Bifrost និង CLIProxyAPI តាមរយៈ
 request header `X-OmniRoute-Provider-Manifest-Url`។ កំណត់
 `OMNIROUTE_PROVIDER_MANIFEST_URL` នៅពេល sidecar ត្រូវការ URL សាធារណៈ ឬ URL បណ្តាញ
 container ជំនួសឱ្យ origin របស់ request មូលដ្ឋាន។
@@ -29,7 +29,7 @@ sidecar ត្រូវតែផ្ញើ request ដោយគ្មានលក
 ## គោលដៅ
 
 ផ្លាស់ទី metadata របស់ provider ឆ្ពោះទៅរកកិច្ចសន្យា plugin ដើម្បីឱ្យ hot request path
-នៅទីបំផុតអាចត្រូវបានគ្រប់គ្រងដោយ sidecar ដែលមាន latency ទាបជាង ខណៈដែល OmniRoute រក្សា
+នៅទីបំផុតអាចត្រូវបានគ្រប់គ្រងដោយ sidecar ដែលមាន latency ទាបជាង ខណៈដែល 67router រក្សា
 route របស់ TypeScript ជាច្រកគោលការណ៍ និង fallback។ Manifest មានលក្ខណៈបន្ថែម៖ វា
 មិនផ្លាស់ប្តូរ request routing ដោយខ្លួនឯងទេ។
 
@@ -73,7 +73,7 @@ Manifest មិនរួមបញ្ចូលដោយចេតនានូវ�
 | `usage-fetch`        | មាន usage ឬ quota fetcher ដែលបានភ្ជាប់រួច (`getUsageForProvider`)។                          |
 | `usage-supported`    | Usage API ទទួលយក provider នេះ (`isSupportedUsageConnection`)។                               |
 
-`usage-fetch` គឺសម្រាប់តែការរកឃើញប៉ុណ្ណោះ។ វារាយការណ៍ថា OmniRoute ដឹងពីរបៀបអាន usage សម្រាប់
+`usage-fetch` គឺសម្រាប់តែការរកឃើញប៉ុណ្ណោះ។ វារាយការណ៍ថា 67router ដឹងពីរបៀបអាន usage សម្រាប់
 provider នេះ; វាមិនបើកដំណើរការការទាញយក មិនផ្លាស់ប្តូរ semantics របស់ quota ឬបញ្ជាក់ថា
 widget quota របស់ Dashboard ត្រូវបានបើកសម្រាប់ provider នេះទេ — widget នោះត្រូវបានគ្រប់គ្រងដោយឡែកតាម
 `USAGE_SUPPORTED_PROVIDERS`។ ប្រភពពិតតែមួយគឺ `USAGE_FETCHER_PROVIDERS` ក្នុង

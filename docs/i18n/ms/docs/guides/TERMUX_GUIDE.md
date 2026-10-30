@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute boleh dijalankan sebagai pelayan tanpa antara muka grafik pada Android melalui Termux. Aplikasi desktop Electron tidak disokong dalam Termux, tetapi papan pemuka web dan API yang serasi dengan OpenAI boleh digunakan daripada pelayar setempat atau daripada peranti lain pada rangkaian yang sama.
+67router boleh dijalankan sebagai pelayan tanpa antara muka grafik pada Android melalui Termux. Aplikasi desktop Electron tidak disokong dalam Termux, tetapi papan pemuka web dan API yang serasi dengan OpenAI boleh digunakan daripada pelayar setempat atau daripada peranti lain pada rangkaian yang sama.
 
 ## Prasyarat
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Versi Node.js:** OmniRoute memerlukan Node `>=22.22.2 <23 || >=24.0.0 <27` (sepadan dengan `engines` dalam `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` Termux biasanya menyediakan Node 20 LTS, yang **tidak lagi disokong** — sebaliknya, pasang `pkg install nodejs` (semasa) dan sahkan bahawa `node --version` melaporkan versi dalam siri 22.x/24.x+.
+> **Versi Node.js:** 67router memerlukan Node `>=22.22.2 <23 || >=24.0.0 <27` (sepadan dengan `engines` dalam `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` Termux biasanya menyediakan Node 20 LTS, yang **tidak lagi disokong** — sebaliknya, pasang `pkg install nodejs` (semasa) dan sahkan bahawa `node --version` melaporkan versi dalam siri 22.x/24.x+.
 
-Jika kompilasi pakej natif gagal, jalankan semula perintah `pkg install` di atas dan kemudian cuba semula pemasangan OmniRoute.
+Jika kompilasi pakej natif gagal, jalankan semula perintah `pkg install` di atas dan kemudian cuba semula pemasangan 67router.
 
 ## Pemasangan
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Menjalankan
 
-Mulakan OmniRoute dalam mod pelayan tanpa antara muka grafik:
+Mulakan 67router dalam mod pelayan tanpa antara muka grafik:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Contohnya:
 http://192.168.1.50:20128
 ```
 
-Pastikan telefon dan klien berada pada rangkaian dipercayai yang sama. Jika anda mendedahkan OmniRoute di luar telefon, dayakan kunci API dan pengesahan papan pemuka.
+Pastikan telefon dan klien berada pada rangkaian dipercayai yang sama. Jika anda mendedahkan 67router di luar telefon, dayakan kunci API dan pengesahan papan pemuka.
 
 ## Direktori Data
 
-Secara lalai, OmniRoute menyimpan data di bawah direktori utama Termux, mengikut tingkah laku laluan data sisi pelayan yang sama seperti pada Linux. Untuk meletakkan pangkalan data di lokasi yang ditetapkan secara eksplisit:
+Secara lalai, 67router menyimpan data di bawah direktori utama Termux, mengikut tingkah laku laluan data sisi pelayan yang sama seperti pada Linux. Untuk meletakkan pangkalan data di lokasi yang ditetapkan secara eksplisit:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Platform tidak disokong: android (setiap permintaan mengembalikan HTTP 500)
 
-**Gejala:** `omniroute` / `omniroute serve` memaparkan `✔ OmniRoute is running!`, tetapi setiap permintaan papan pemuka atau API mengembalikan `500 Internal Server Error` tanpa butiran. `~/.omniroute/logs/application/app.log` kekal kosong, `APP_LOG_LEVEL=debug` tidak memaparkan apa-apa yang berguna dan badan respons ialah teks biasa (`Internal Server Error`) tanpa butiran JSON.
+**Gejala:** `omniroute` / `omniroute serve` memaparkan `✔ 67router is running!`, tetapi setiap permintaan papan pemuka atau API mengembalikan `500 Internal Server Error` tanpa butiran. `~/.omniroute/logs/application/app.log` kekal kosong, `APP_LOG_LEVEL=debug` tidak memaparkan apa-apa yang berguna dan badan respons ialah teks biasa (`Internal Server Error`) tanpa butiran JSON.
 
 **Punca:** Sesetengah binaan Termux/Node melaporkan `process.platform === "android"`. `getCacheDirectory()` Next.js tidak mengendalikan platform tersebut: ia memerlukan `~/.cache` (atau direktori tmp generik) untuk _sedia_ wujud; jika tidak, ia akan gagal ketika memuatkan cangkuk instrumentasi dengan:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Oleh sebab cangkuk tersebut tidak pernah dimuatkan, pengelogan tidak pernah bermula — ralat 500 itu kelihatan mustahil untuk didiagnosis. OmniRoute mencipta `~/.cache` (dan menetapkan `XDG_CACHE_HOME` apabila belum ditetapkan) dalam titik masuk CLI sebelum Next.js bermula supaya pemeriksaan ini berjaya pada Android/Termux.
+Oleh sebab cangkuk tersebut tidak pernah dimuatkan, pengelogan tidak pernah bermula — ralat 500 itu kelihatan mustahil untuk didiagnosis. 67router mencipta `~/.cache` (dan menetapkan `XDG_CACHE_HOME` apabila belum ditetapkan) dalam titik masuk CLI sebelum Next.js bermula supaya pemeriksaan ini berjaya pada Android/Termux.
 
 **Penyelesaian yang disokong (tanpa menampal pakej):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Pada binaan OmniRoute semasa, CLI melakukannya secara automatik pada Android/Termux — pemasangan baharu melalui `npx -y omniroute@latest` / pemasangan global sepatutnya tidak memerlukan langkah manual tersebut. Jika anda masih melihat ralat selepas menaik taraf, cipta `~/.cache` sekali seperti di atas dan mulakan semula.
+Pada binaan 67router semasa, CLI melakukannya secara automatik pada Android/Termux — pemasangan baharu melalui `npx -y omniroute@latest` / pemasangan global sepatutnya tidak memerlukan langkah manual tersebut. Jika anda masih melihat ralat selepas menaik taraf, cipta `~/.cache` sekali seperti di atas dan mulakan semula.
 
 **Jangan** tampal `dist/server.js` untuk memaksa `process.platform = "linux"`. Tampalan pakej sedemikian akan ditulis ganti pada setiap pemasangan semula/naik taraf dan tidak diperlukan sebaik sahaja direktori cache wujud.
 

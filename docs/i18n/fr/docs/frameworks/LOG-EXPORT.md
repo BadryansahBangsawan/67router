@@ -4,7 +4,7 @@
 
 ---
 
-Export continu et incrémentiel des journaux d’appels d’OmniRoute vers un magasin d’analytique externe.
+Export continu et incrémentiel des journaux d’appels de 67router vers un magasin d’analytique externe.
 
 L’onglet du tableau de bord Logs conserve l’historique des requêtes dans SQLite (`call_logs`), avec une taille limitée par la rotation et la rétention. L’exportation des journaux envoie périodiquement le même ensemble d’enregistrements afin qu’il puisse survivre à la base de données locale et être rapproché d’autres données. BigQuery est la première destination ; le pipeline repose sur un registre, ce qui permet d’ajouter d’autres destinations.
 

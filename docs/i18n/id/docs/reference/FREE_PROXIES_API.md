@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menyediakan kumpulan proksi gratis terkurasi dalam tabel `free_proxies`,
+67router menyediakan kumpulan proksi gratis terkurasi dalam tabel `free_proxies`,
 yang disinkronkan dari penyedia eksternal (1proxy, proxifly, iplocate, webshare).
 Dasbor menampilkan proksi tersebut di **Pengaturan → Proksi Gratis**. Dokumen ini
 membahas pemfilteran, pengurutan, penghitungan, dan pelaporan kesalahan sinkronisasi

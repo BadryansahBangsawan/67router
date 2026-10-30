@@ -11,7 +11,7 @@ represented as four provider families. Region is connection data, not a separate
 
 ## Decision
 
-| Provider family                            | OmniRoute ID            | Global region | China region |
+| Provider family                            | 67router ID             | Global region | China region |
 | ------------------------------------------ | ----------------------- | ------------- | ------------ |
 | Alibaba Cloud Model Studio (pay as you go) | `alibaba`               | Singapore     | Beijing      |
 | Alibaba Cloud Token Plan                   | `bailian-coding-plan`   | Singapore     | Beijing      |
@@ -32,7 +32,7 @@ different endpoint families, so all four products remain separate provider IDs.
 | Provider family         | `global-sg`                                                              | `china-beijing`                                                      | Wire format |
 | ----------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------- |
 | `alibaba`               | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1`                 | `https://dashscope.aliyuncs.com/compatible-mode/v1`                  | OpenAI      |
-| `bailian-coding-plan`   | `https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic/v1` | `https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic/v1`  | Anthropic   |
+| `bailian-coding-plan`   | `https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic/v1`  | `https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic/v1`  | Anthropic   |
 | `qwen-cloud`            | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1`                 | `https://dashscope.aliyuncs.com/compatible-mode/v1`                  | OpenAI      |
 | `qwen-cloud-token-plan` | `https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1` | `https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1` | OpenAI      |
 

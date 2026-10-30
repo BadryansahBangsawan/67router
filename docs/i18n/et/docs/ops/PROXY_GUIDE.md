@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Eesti)
+# 🌐 67router Proxy Guide (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Mööduge geograafilistest blokeeringutest, kaitske oma identiteeti ja suunake tehisintellekti liiklus mis tahes puhverserveri kaudu — ilma keeruka seadistamiseta.**
 
-OmniRoute sisaldab täisfunktsionaalset puhverserverite haldussüsteemi, mis võimaldab suunata tehisintellekti teenusepakkujate ülesvooluliikluse HTTP-, HTTPS- või SOCKS5-puhverserverite kaudu. Olenemata sellest, kas asute blokeeritud piirkonnas, vajate IP-aadresside roteerimist või soovite varjatud sõrmejäljestamist — see juhend hõlmab kõike.
+67router sisaldab täisfunktsionaalset puhverserverite haldussüsteemi, mis võimaldab suunata tehisintellekti teenusepakkujate ülesvooluliikluse HTTP-, HTTPS- või SOCKS5-puhverserverite kaudu. Olenemata sellest, kas asute blokeeritud piirkonnas, vajate IP-aadresside roteerimist või soovite varjatud sõrmejäljestamist — see juhend hõlmab kõike.
 
 ---
 
@@ -51,7 +51,7 @@ Puhverserverid on kasulikud ka väljaspool blokeeritud piirkondi:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute'i server                      │
+│                       67router'i server                      │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Puhverserverite│  │ Puhverserveri│    │ Puhverserveri   │  │
@@ -83,7 +83,7 @@ Puhverserverid on kasulikud ka väljaspool blokeeritud piirkondi:
 
 ## 4-tasemeline puhverserverisüsteem
 
-OmniRoute toetab puhverserveri seadistamist **neljas sõltumatus ulatuses**, mis lahendatakse prioriteetsuse järjekorras:
+67router toetab puhverserveri seadistamist **neljas sõltumatus ulatuses**, mis lahendatakse prioriteetsuse järjekorras:
 
 ```
 Prioriteetsuse lahendamise järjekord (kõrgeim → madalaim):
@@ -96,7 +96,7 @@ Prioriteetsuse lahendamise järjekord (kõrgeim → madalaim):
 
 ### Kuidas lahendamine toimib
 
-Kui OmniRoute saadab päringu ülesvoolu teenusepakkujale, kutsub see välja funktsiooni `resolveProxyForConnectionFromRegistry()`, mis kontrollib iga taset järjekorras:
+Kui 67router saadab päringu ülesvoolu teenusepakkujale, kutsub see välja funktsiooni `resolveProxyForConnectionFromRegistry()`, mis kontrollib iga taset järjekorras:
 
 1. **Kontotase** — kas sellele konkreetsele ühenduse ID-le on määratud puhverserver?
 2. **Teenusepakkuja tase** — kas sellele teenusepakkujale (nt `openai`) on määratud puhverserver?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Import/eksport
 
-Puhverserverid sisalduvad **varundus-/taastesüsteemis**. OmniRoute'i konfiguratsiooni eksportimiseks:
+Puhverserverid sisalduvad **varundus-/taastesüsteemis**. 67router'i konfiguratsiooni eksportimiseks:
 
 1. Avage **Juhtpaneel → Seaded → Varundamine**
 2. Klõpsake **Ekspordi** — kaasatakse puhverserverite register ja määrangud
@@ -248,7 +248,7 @@ Puhverserverite register toetab ka **hosti+pordi alusel lisamist või värskenda
 
 ### Pärandandmete migreerimine
 
-Kui seadistasite puhverserverid vanemas versioonis (enne registri kasutuselevõttu), migreerib OmniRoute need automaatselt:
+Kui seadistasite puhverserverid vanemas versioonis (enne registri kasutuselevõttu), migreerib 67router need automaatselt:
 
 ```
 Vana key_value hoidla → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ See toimub üks kord esimesel käivitamisel pärast versiooniuuendust. Uuesti k�
 
 > 🆕 **Lisas [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (probleem [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute integreerub **[1proxy](https://1proxy-api.aitradepulse.com)** kogukonnaplatvormiga, et pakkuda juurdepääsu **sadadele tasuta valideeritud puhverserveritele** üle kogu maailma. See sobib ideaalselt kasutajatele, kellel puudub oma puhverserveritaristu.
+67router integreerub **[1proxy](https://1proxy-api.aitradepulse.com)** kogukonnaplatvormiga, et pakkuda juurdepääsu **sadadele tasuta valideeritud puhverserveritele** üle kogu maailma. See sobib ideaalselt kasutajatele, kellel puudub oma puhverserveritaristu.
 
 ### Tööpõhimõte
 
@@ -273,7 +273,7 @@ OmniRoute integreerub **[1proxy](https://1proxy-api.aitradepulse.com)** kogukonn
 └─────────────┘ puhverserverit  └─────────────────┘    järgi     └──────────────────┘
 ```
 
-1. **Sünkroonimine** — OmniRoute hangib 1proxy API-st valideeritud puhverserverid
+1. **Sünkroonimine** — 67router hangib 1proxy API-st valideeritud puhverserverid
 2. **Salvestamine** — Puhverserverid salvestatakse samasse tabelisse `proxy_registry` väärtusega `source = 'oneproxy'`
 3. **Filtreerimine** — Filtreerige protokolli, riigi ja kvaliteediskoori järgi
 4. **Rotatsioon** — Valige parim puhverserver kvaliteedi-, juhusliku või järjestikuse strateegia abil
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Tuvastamisvastased meetmed ja varjamine
 
-OmniRoute ei suuna liiklust lihtsalt puhverserveri kaudu — see muudab liikluse ehtsana näivaks:
+67router ei suuna liiklust lihtsalt puhverserveri kaudu — see muudab liikluse ehtsana näivaks:
 
 ### TLS-sõrmejälje võltsimine
 
@@ -407,13 +407,13 @@ Märk näitab kontrollimiseks ka lahendatud puhverserveri IP-aadressi.
 
 ## Ülesvoolu puhverserveri režiimid
 
-CLIProxyAPI mustrit kasutavate teenusepakkujate jaoks toetab OmniRoute kolme ülesvoolu puhverserveri režiimi:
+CLIProxyAPI mustrit kasutavate teenusepakkujate jaoks toetab 67router kolme ülesvoolu puhverserveri režiimi:
 
-| Režiim        | Kirjeldus                                                       |
-| ------------- | --------------------------------------------------------------- |
-| `native`      | OmniRoute haldab puhverserveri kaudu suunamist otse (vaikimisi) |
-| `cliproxyapi` | Delegeerib välisele CLIProxyAPI eksemplarile                    |
-| `fallback`    | Proovib esmalt natiivrežiimi, seejärel CLIProxyAPI-t            |
+| Režiim        | Kirjeldus                                                      |
+| ------------- | -------------------------------------------------------------- |
+| `native`      | 67router haldab puhverserveri kaudu suunamist otse (vaikimisi) |
+| `cliproxyapi` | Delegeerib välisele CLIProxyAPI eksemplarile                   |
+| `fallback`    | Proovib esmalt natiivrežiimi, seejärel CLIProxyAPI-t           |
 
 Seadistage teenusepakkuja kaupa:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnelite API
 
-Oma OmniRoute'i eksemplari avalikus internetis kättesaadavaks tegemise kohta (Cloudflare/ngrok/Tailscale), selle asemel et suunata väljaminevat liiklust puhverserveri kaudu, vaadake dokumenti [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunneli REST API asub teekonna `/api/tunnels/{cloudflared,ngrok,tailscale}/*` all ja on eespool dokumenteeritud väljamineva puhverserveriahelaga sõltumatu.
+Oma 67router'i eksemplari avalikus internetis kättesaadavaks tegemise kohta (Cloudflare/ngrok/Tailscale), selle asemel et suunata väljaminevat liiklust puhverserveri kaudu, vaadake dokumenti [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunneli REST API asub teekonna `/api/tunnels/{cloudflared,ngrok,tailscale}/*` all ja on eespool dokumenteeritud väljamineva puhverserveriahelaga sõltumatu.
 
 ### 1proxy API
 
@@ -516,7 +516,7 @@ Määrake oma `.env`-failis `ENABLE_SOCKS5_PROXY=true` ja taaskäivitage.
 
 ### „socket hang up” vead puhverserveri kasutamisel
 
-See on tavaline odavate puhverserverite puhul, mis katkestavad jõudeolekus ühendused. OmniRoute juba tegeleb sellega järgmiselt:
+See on tavaline odavate puhverserverite puhul, mis katkestavad jõudeolekus ühendused. 67router juba tegeleb sellega järgmiselt:
 
 - Keelab puhverserveri ühendustes keep-alive'i (`keepAliveTimeout: 1`)
 - Keelab konveierdamise (`pipelining: 0`)
@@ -526,7 +526,7 @@ Kui probleem püsib, proovige teist puhverserverit või kasutage 1proxy roteerim
 
 ### „unsupported_country_region_territory” OAuthi ajal
 
-Veenduge, et puhverserver oleks seadistatud **enne** OAuthi voo käivitamist. OmniRoute suunab OAuthi pääsmikuvahetuse seadistatud puhverserveri kaudu. Esmalt määrake globaalne või teenusepakkuja taseme puhverserver ja seejärel looge ühendus.
+Veenduge, et puhverserver oleks seadistatud **enne** OAuthi voo käivitamist. 67router suunab OAuthi pääsmikuvahetuse seadistatud puhverserveri kaudu. Esmalt määrake globaalne või teenusepakkuja taseme puhverserver ja seejärel looge ühendus.
 
 ### Puhverserverit ei kasutata
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Puhverserveri töökorra kontrollimine (v3.8.16+)
 
-OmniRoute'i **puhverserveri kiire tõrke** mehhanism (`src/lib/proxyHealth.ts`) tuvastab mittetöötavad puhverserverid kiire TCP-ühenduse kontrolli abil vähem kui 2 sekundiga ja **salvestab tulemuse vahemällu**, et vältida iga päringuga kaasnevat lisakulu.
+67router'i **puhverserveri kiire tõrke** mehhanism (`src/lib/proxyHealth.ts`) tuvastab mittetöötavad puhverserverid kiire TCP-ühenduse kontrolli abil vähem kui 2 sekundiga ja **salvestab tulemuse vahemällu**, et vältida iga päringuga kaasnevat lisakulu.
 
 ### Kuidas see töötab
 
@@ -659,11 +659,11 @@ URL-is määratud kohandatud pordid (`http://host:9999`) on alati skeemi vaikev�
 
 ## Puhverserverite analüütika ja vaadeldavus
 
-OmniRoute jälgib iga puhverserveri kasutust, et aidata operaatoritel tuvastada marsruutimismustreid, latentsuse järske tõuse ja korduvaid tõrkeid.
+67router jälgib iga puhverserveri kasutust, et aidata operaatoritel tuvastada marsruutimismustreid, latentsuse järske tõuse ja korduvaid tõrkeid.
 
 ### Mida jälgitakse
 
-OmniRoute salvestab iga konfigureeritud puhverserveri kaudu tehtud päringu kohta järgmised andmed:
+67router salvestab iga konfigureeritud puhverserveri kaudu tehtud päringu kohta järgmised andmed:
 
 | Mõõdik       | Kirjeldus                                                |
 | ------------ | -------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotatsioonistrateegia otsustuspuu
 
-Kui ühe ulatusega on seostatud mitu puhverserverit, kasutab OmniRoute **rotatsioonistrateegiat**, et valida, millist neist iga päringu jaoks kasutada. Strateegia konfigureeritakse ulatuse tasemel (globaalne, pakkuja-, konto- või kombinatsioonipõhine).
+Kui ühe ulatusega on seostatud mitu puhverserverit, kasutab 67router **rotatsioonistrateegiat**, et valida, millist neist iga päringu jaoks kasutada. Strateegia konfigureeritakse ulatuse tasemel (globaalne, pakkuja-, konto- või kombinatsioonipõhine).
 
 ### Saadaolevad strateegiad
 

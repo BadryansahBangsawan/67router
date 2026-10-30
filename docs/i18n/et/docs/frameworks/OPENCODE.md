@@ -5,11 +5,11 @@
 ---
 
 > **Olek:** Üldiselt kättesaadav.
-> **Sihtrühm:** Operaatorid, kes ühendavad OpenCode'i OmniRoute'i juurutusega.
+> **Sihtrühm:** Operaatorid, kes ühendavad OpenCode'i 67router'i juurutusega.
 > **Tõeallikas (konfiguratsiooniskeem):** `src/shared/services/opencodeConfig.ts`
 > **Tõeallikas (npm-pakett):** `@omniroute/opencode-provider/` (avaldatav tööruum)
 
-[OpenCode](https://opencode.ai) on agentne käsurea-/töölaua-AI-klient. See loeb teenusepakkujate kataloogi failist `~/.config/opencode/opencode.json` (või `opencode.jsonc`) ja järgib skeemi aadressil `https://opencode.ai/config.json`. OmniRoute esitleb end OpenCode'ile ühe sellise teenusepakkujana — iga päring liigub läbi OmniRoute'i standardse OpenAI-ga ühilduva `/v1`-liidese, mistõttu saab OpenCode automaatselt kasu Auto-Combo marsruutimisest, kaitselülititest, võtmepoliitikatest, jälgitavusest jne.
+[OpenCode](https://opencode.ai) on agentne käsurea-/töölaua-AI-klient. See loeb teenusepakkujate kataloogi failist `~/.config/opencode/opencode.json` (või `opencode.jsonc`) ja järgib skeemi aadressil `https://opencode.ai/config.json`. 67router esitleb end OpenCode'ile ühe sellise teenusepakkujana — iga päring liigub läbi 67router'i standardse OpenAI-ga ühilduva `/v1`-liidese, mistõttu saab OpenCode automaatselt kasu Auto-Combo marsruutimisest, kaitselülititest, võtmepoliitikatest, jälgitavusest jne.
 
 Toetatud on **kaks integratsiooniviisi**. Valige üks — mõlemad genereerivad sama konfiguratsiooni.
 
@@ -17,16 +17,16 @@ Toetatud on **kaks integratsiooniviisi**. Valige üks — mõlemad genereerivad 
 
 ## Viis 1 — CLI-generaator (npm-i installimine pole vajalik)
 
-Soovitatav lõppkasutajatele. Tarnitakse koos OmniRoute'iga. Kirjutab faili `opencode.json` kohapeal.
+Soovitatav lõppkasutajatele. Tarnitakse koos 67router'iga. Kirjutab faili `opencode.json` kohapeal.
 
 ```bash
-# Pärast OmniRoute'i installimist (npm i -g @omniroute/cli või kohalik kloon)
+# Pärast 67router'i installimist (npm i -g @omniroute/cli või kohalik kloon)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Taustal kutsub CLI välja funktsiooni `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), mistõttu säilivad olemasoleva `opencode.json`-faili teised teenusepakkujad ja kommentaarid. OmniRoute'i kirje lisatakse või asendatakse atomaarselt.
+Taustal kutsub CLI välja funktsiooni `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), mistõttu säilivad olemasoleva `opencode.json`-faili teised teenusepakkujad ja kommentaarid. 67router'i kirje lisatakse või asendatakse atomaarselt.
 
 Tulemuseks olev fail (vaikimisi mudelikataloog):
 
@@ -90,8 +90,8 @@ Mõlemad viisid loovad sama kirje `provider.omniroute.npm: "@ai-sdk/openai-compa
 ```
 OpenCode'i kasutajaliides/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute'i OpenAI-liides)
-         → OmniRoute'i /v1/chat/completions töötleja  (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router'i OpenAI-liides)
+         → 67router'i /v1/chat/completions töötleja  (open-sse/handlers/chatCore.ts)
             → kombineeritud marsruutimine / Auto-Combo / täitur
                → ülesvoolu teenusepakkuja
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Saate need alistada valikuga `models: [...]`. Soovitatavad täiendused:
 
-- `"auto"` — teeb kättesaadavaks OmniRoute'i nullkonfiguratsiooniga marsruuteri [Auto-Combo](../routing/AUTO-COMBO.md). Võimaldab OpenCode'il valida „parima saadaoleva mudeli“, ilma et peaksite kataloogi koodi sisse kirjutama.
-- `"<combo-name>"` — mis tahes kombinatsioon, mille olete juhtpaneelil määratlenud; OmniRoute lahendab selle läbipaistvalt.
+- `"auto"` — teeb kättesaadavaks 67router'i nullkonfiguratsiooniga marsruuteri [Auto-Combo](../routing/AUTO-COMBO.md). Võimaldab OpenCode'il valida „parima saadaoleva mudeli“, ilma et peaksite kataloogi koodi sisse kirjutama.
+- `"<combo-name>"` — mis tahes kombinatsioon, mille olete juhtpaneelil määratlenud; 67router lahendab selle läbipaistvalt.
 
 ---
 
@@ -135,12 +135,12 @@ See duplikaatide eemaldamine lahendab **kõige levinuma tõrke**, mida vanemates
 
 ## Autentimisrežiimid
 
-| OmniRoute'i säte                            | Soovitatav `apiKey` väärtus                               |
+| 67router'i säte                             | Soovitatav `apiKey` väärtus                               |
 | ------------------------------------------- | --------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (kohalik vaikimisi) | `sk_omniroute` (sõnasõnaline kohatäide)                   |
 | `REQUIRE_API_KEY=true`                      | Tegelik kasutajapõhine API-võti: Juhtpaneel → API-võtmed. |
 
-Anthropicu-laadsete klientide puhul, mis saadavad `x-api-key` + `anthropic-version`, arvestab OmniRoute'i `extractApiKey` ka päisest `x-api-key` saadud võtit. OpenCode kasutab OpenAI liidest, mistõttu saadab see alati `Authorization: Bearer ${apiKey}` — Anthropicu erijuhtum siin ei rakendu.
+Anthropicu-laadsete klientide puhul, mis saadavad `x-api-key` + `anthropic-version`, arvestab 67router'i `extractApiKey` ka päisest `x-api-key` saadud võtit. OpenCode kasutab OpenAI liidest, mistõttu saadab see alati `Authorization: Bearer ${apiKey}` — Anthropicu erijuhtum siin ei rakendu.
 
 ---
 
@@ -149,15 +149,15 @@ Anthropicu-laadsete klientide puhul, mis saadavad `x-api-key` + `anthropic-versi
 | Sümptom                                              | Põhjus                                                                      | Lahendus                                                                                                    |
 | ---------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `404` igal päringul, mille URL sisaldab `/v1/v1/`    | Aegunud konfiguratsioon v3.8-eelsest pluginast, mis lisas `/v1` kaks korda. | Looge konfiguratsioon uuesti 1. või 2. viisil.                                                              |
-| `401 Invalid API key`                                | OmniRoute'is on `REQUIRE_API_KEY=true` ja võti pole teada.                  | Looge võti juhtpaneelil või määrake `REQUIRE_API_KEY=false` (ainult kohalikult) ja kasutage `sk_omniroute`. |
-| Mudelite loend on OpenCode'i kasutajaliideses tühi   | Kõik 4 vaikemudelit on OmniRoute'i pakkuja nähtavusseadetes peidetud.       | Lubatud mudelite kuvamiseks edastage `models: ["auto", ...]`.                                               |
+| `401 Invalid API key`                                | 67router'is on `REQUIRE_API_KEY=true` ja võti pole teada.                   | Looge võti juhtpaneelil või määrake `REQUIRE_API_KEY=false` (ainult kohalikult) ja kasutage `sk_omniroute`. |
+| Mudelite loend on OpenCode'i kasutajaliideses tühi   | Kõik 4 vaikemudelit on 67router'i pakkuja nähtavusseadetes peidetud.        | Lubatud mudelite kuvamiseks edastage `models: ["auto", ...]`.                                               |
 | OpenCode'i 500 veaga `cannot read property 'models'` | Vanem OpenCode (< 0.1.x) ei aktsepteerinud tekstisisest `models` väärtust.  | Uuendage OpenCode versioonile, mis järgib v1 skeemi (`opencode.ai/config.json`).                            |
 
 ---
 
 ## Vaata ka
 
-- [API viitedokumentatsioon](../reference/API_REFERENCE.md) — OmniRoute REST-liidese täielik ülevaade
+- [API viitedokumentatsioon](../reference/API_REFERENCE.md) — 67router REST-liidese täielik ülevaade
 - [Auto-Combo](../routing/AUTO-COMBO.md) — mida `model: "auto"` tähendab
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Lähtekood: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

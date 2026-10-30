@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute provayder **hesabının daimi olaraq sıradan çıxdığını** (dayandırıldığını /
+67router provayder **hesabının daimi olaraq sıradan çıxdığını** (dayandırıldığını /
 deaktiv edildiyini / istifadə şərtlərini pozduğuna görə qadağan edildiyini) göstərən
 siqnalları aşkarlamaq üçün yuxarı axın xəta cavablarını skan edir və uyğunluq
 tapıldıqda həmin bağlantını **terminal `banned` vəziyyətinə** keçirir ki, artıq

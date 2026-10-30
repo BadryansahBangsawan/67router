@@ -14,7 +14,7 @@
 
 ## हा दृष्टिकोन सावध का आहे
 
-OmniRoute ची विद्यमान डिप्लॉयमेंट रचना आधीपासूनच सुटसुटीत आणि सिद्ध आहे:
+67router ची विद्यमान डिप्लॉयमेंट रचना आधीपासूनच सुटसुटीत आणि सिद्ध आहे:
 
 - **`redis:7-alpine`** उत्पादन स्तरावरील rate-limit/cache कार्यभार हाताळते.
 - **SQLite + sqlite-vec + FTS5** स्थानिक memory + vector + text-search गरजा पूर्ण करतात ([`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts) पहा).
@@ -49,7 +49,7 @@ OmniRoute ची विद्यमान डिप्लॉयमेंट र�
 
 - तुम्ही ≥3 `omniroute` प्रतिकृती चालवत असाल आणि provider rotation एका Go process मध्ये केंद्रीकृत करू इच्छित असाल.
 - तुम्हाला सर्व प्रतिकृतींमधील upstream-provider विनंत्यांसाठी एकच audit/logging पृष्ठभाग हवा असेल.
-- तुम्हाला OmniRoute प्रतिकृतींपासून स्वतंत्रपणे Tier-1 routing layer चे horizontal scaling हवे असेल.
+- तुम्हाला 67router प्रतिकृतींपासून स्वतंत्रपणे Tier-1 routing layer चे horizontal scaling हवे असेल.
 
 **हे काय जोडते:**
 

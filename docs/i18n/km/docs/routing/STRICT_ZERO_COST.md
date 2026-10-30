@@ -31,7 +31,7 @@
 ភ្លាមៗបន្ទាប់ពី `filterPaidOnlyCandidates`)៖
 
 1. **មិនមាននៅក្នុង `FREE_MODEL_BUDGETS` ទាល់តែសោះ** → ត្រូវដកចេញ។ នេះគ្របដណ្តប់លើម៉ូដែលដែលគិតថ្លៃពិតប្រាកដ និង
-   Provider/ម៉ូដែលណាមួយដែល OmniRoute មិនទាន់បានចាត់ថ្នាក់ — candidate ថ្មីត្រូវបានដកចេញជាមុន មិនមែនដាក់បញ្ចូលទេ។
+   Provider/ម៉ូដែលណាមួយដែល 67router មិនទាន់បានចាត់ថ្នាក់ — candidate ថ្មីត្រូវបានដកចេញជាមុន មិនមែនដាក់បញ្ចូលទេ។
 2. **`freeType: "keyless"`** → ឆ្លងកាត់ភ្លាមៗ **ប៉ុន្តែសម្រាប់តែ candidate ដែលពិតជាបានមកតាម
    no-auth path ប៉ុណ្ណោះ** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`)។ មិនមាន credential សម្រាប់
@@ -86,7 +86,7 @@ STRICT_ZERO_COST ផ្ទៀងផ្ទាត់ស្ថានភាព free-
 (ករណី keyless-bypass A/B/C និងករណី multi-account 1-5)។
 
 `discovered automatically`៖ provider/model ដែលត្រូវបានចេញផ្សាយនៅថ្ងៃស្អែក និងមាន metadata ត្រឹមត្រូវ (នៅក្នុង
-catalog, មាន usage adapter, `hardStopGuaranteed: true`) អាចប្រើបានភ្លាមៗនៅពេល OmniRoute ស្គាល់
+catalog, មាន usage adapter, `hardStopGuaranteed: true`) អាចប្រើបានភ្លាមៗនៅពេល 67router ស្គាល់
 វា — មិនចាំបាច់ផ្លាស់ប្តូរ code មិនចាំបាច់បន្ថែម whitelist entry ហើយក៏មិនមានអ្វីត្រូវកែសម្រួលនៅក្នុង module នេះដែរ។ អ្វីដែលត្រូវបានដកចេញពី
 catalog ក៏នឹងបាត់ទៅតាមរបៀបដូចគ្នា។ សូមមើល
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` សម្រាប់ភស្តុតាង regression (តាមរយៈ

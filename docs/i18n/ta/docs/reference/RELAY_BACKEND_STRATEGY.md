@@ -6,7 +6,7 @@
 
 ## சுருக்கம்
 
-OmniRoute இப்போது `/api/v1/relay/chat/completions`-க்கு மூன்று relay முறைகளை ஆதரிக்கிறது:
+67router இப்போது `/api/v1/relay/chat/completions`-க்கு மூன்று relay முறைகளை ஆதரிக்கிறது:
 
 - `ts`: TypeScript relay-ஐ அதே process-க்குள் பயன்படுத்தும்.
 - `bifrost`: Bifrost gateway-ஐ கட்டாயமாகப் பயன்படுத்தும்.
@@ -45,12 +45,12 @@ OmniRoute இப்போது `/api/v1/relay/chat/completions`-க்கு �
 
 ## Backend எல்லை ஒப்பந்தம்
 
-நிலையான தயாரிப்பு எல்லை என்பது OmniRoute relay API ஆகும்; dashboard செயலாக்கம் அல்ல. Next.js dashboard உள்ளூர் services-ஐ நிறுவலாம், உள்ளமைக்கலாம் மற்றும் மேற்பார்வையிடலாம்; ஆனால் request routing என்பது relay API வழியாக நுழைந்து, அந்த எல்லைக்குப் பின்னால் ஒப்படைக்கப்பட வேண்டும்.
+நிலையான தயாரிப்பு எல்லை என்பது 67router relay API ஆகும்; dashboard செயலாக்கம் அல்ல. Next.js dashboard உள்ளூர் services-ஐ நிறுவலாம், உள்ளமைக்கலாம் மற்றும் மேற்பார்வையிடலாம்; ஆனால் request routing என்பது relay API வழியாக நுழைந்து, அந்த எல்லைக்குப் பின்னால் ஒப்படைக்கப்பட வேண்டும்.
 
 நீண்டகால backend தேர்வுகள்:
 
 - TypeScript relay-ஐ அதே process-க்குள் செயல்படும் policy மற்றும் fallback பாதையாக வைத்திருங்கள். எந்தவொரு backend ஒப்படைப்புக்கும் முன் Auth, allowlists, request normalization, accounting மற்றும் safety checks ஆகியவை இங்கேயே இருக்கும்.
-- deployment-க்கு குறைந்த routing variance, மையப்படுத்தப்பட்ட provider rotation அல்லது பல OmniRoute replicas முழுவதும் scale-out தேவைப்படும்போது, Bifrost-ஐ முன்னுரிமைக்குரிய உயர்-throughput Tier-1 sidecar ஆகப் பயன்படுத்தவும்.
+- deployment-க்கு குறைந்த routing variance, மையப்படுத்தப்பட்ட provider rotation அல்லது பல 67router replicas முழுவதும் scale-out தேவைப்படும்போது, Bifrost-ஐ முன்னுரிமைக்குரிய உயர்-throughput Tier-1 sidecar ஆகப் பயன்படுத்தவும்.
 - 9router மற்றும் CLIPROXYAPI-ஐ உட்பொதிக்கப்பட்ட compatibility services ஆக வைத்திருங்கள். அவை மேற்பார்வையிடப்படும் உள்ளூர் processes ஆக இயங்குகின்றன; அவற்றின் provider/CLI செயல்பாடே விரும்பப்படும் adapter ஆக இருக்கும்போது அவை பயனுள்ளவை. ஆனால் அவை இயல்புநிலை Tier-1 routing engine ஆக மாறக்கூடாது.
 - செயல்பாட்டிலுள்ள முக்கிய பாதைக்குள் dashboard தன்னிச்சையான service URLs-ஐ அனுப்ப அனுமதிக்காதீர்கள். UI வழங்கும் URLs என்பது configuration inputs ஆகும்; routing code ஆனது server-side settings மற்றும் supervisor state ஆகியவற்றிலிருந்து பதிவுசெய்யப்பட்ட, ஆரோக்கியம் சரிபார்க்கப்பட்ட backends-ஐத் தேர்ந்தெடுக்க வேண்டும்.
 - மேற்பார்வையிடப்படும் processes ஏற்கெனவே HTTP-compatible APIs-ஐ வழங்குவதாலும், route guard எல்லையைத் தணிக்கை செய்ய முடிவதாலும், தோல்வி/fallback செயல்பாடு request logs-இல் காணப்படுவதாலும், தற்போது மேற்பார்வையிடப்படும் services-க்கு loopback HTTP-க்கு முன்னுரிமை அளிக்கவும். isolation அல்லது fallback semantics-ஐப் பலவீனப்படுத்தாமல் p99 routing latency-ஐ அளவிடத்தக்க வகையில் குறைத்தால் மட்டுமே எதிர்கால SDK அல்லது socket transport-ஐச் சேர்ப்பது பயனுள்ளதாக இருக்கும்.

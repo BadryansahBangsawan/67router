@@ -8,7 +8,7 @@
 
 > **Vir resnice:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute omogoča, da ima vsak posredniški strežnik svojo **direktivo družine naslovov za izhodni promet**. Privzeto operacijski sistem izbere IPv4 ali IPv6 (dvojni sklad, »Happy Eyeballs«). Ko direktivo nastavite na `ipv4` ali `ipv6`, OmniRoute vsako povezavo prek tega posredniškega strežnika pripne na izbrano družino in **varno zavrne povezavo**, namesto da bi preklopil na drugo družino.
+67router omogoča, da ima vsak posredniški strežnik svojo **direktivo družine naslovov za izhodni promet**. Privzeto operacijski sistem izbere IPv4 ali IPv6 (dvojni sklad, »Happy Eyeballs«). Ko direktivo nastavite na `ipv4` ali `ipv6`, 67router vsako povezavo prek tega posredniškega strežnika pripne na izbrano družino in **varno zavrne povezavo**, namesto da bi preklopil na drugo družino.
 
 Na tej strani je opisano, kaj je ta direktiva, zakaj obstaja, kje jo nastavite in kako jo izvajalno okolje razreši.
 
@@ -122,7 +122,7 @@ Za preostali del API-ja za ustvarjanje, branje, posodabljanje, brisanje in dodel
 
 ## Kako se razreši `auto`
 
-Ko je `family` nastavljen na `auto`, OmniRoute **ne** doda nobene direktive — URL posredniškega strežnika se uporabi takšen, kot je, družina povezave pa se določi samodejno.
+Ko je `family` nastavljen na `auto`, 67router **ne** doda nobene direktive — URL posredniškega strežnika se uporabi takšen, kot je, družina povezave pa se določi samodejno.
 
 Med sestavljanjem URL-ja (`proxyConfigToUrl` / `normalizeProxyUrl` v `open-sse/utils/proxyDispatcher.ts`) posredniški strežnik z nastavitvijo `auto` ustvari navaden URL brez označevalca:
 
@@ -158,7 +158,7 @@ Torej:
 
 Direktiva, ki ni `auto`, se prenese kot en sam sintetični označevalec poizvedbe — `?family=ipv4` ali `?family=ipv6` — ki se enkrat doda normaliziranemu URL-ju posredniškega strežnika. `normalizeProxyUrl` skrbno odstrani in znova doda ta označevalec natanko enkrat, zato nikoli ne pokvari razčlenjevanja vrat.
 
-Ko se ustvari razpošiljevalnik, se označevalec prebere in pretvori v konkretno družino povezave. Če je gostitelj naslov IP iz **nasprotne** družine, OmniRoute sproži izjemo (ob protislovju se povezava varno zavrne):
+Ko se ustvari razpošiljevalnik, se označevalec prebere in pretvori v konkretno družino povezave. Če je gostitelj naslov IP iz **nasprotne** družine, 67router sproži izjemo (ob protislovju se povezava varno zavrne):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Konkretna družina se nato fiksira na povezovalniku:
 
 ## Združljivost s SOCKS5
 
-Fiksiranje družine deluje s posredniškimi strežniki SOCKS5, vendar standardni `fetch-socks` ne izpostavlja možnosti vtičnice, ki so potrebne za fiksiranje družine posredniškega skoka. OmniRoute zato vključuje lasten povezovalnik:
+Fiksiranje družine deluje s posredniškimi strežniki SOCKS5, vendar standardni `fetch-socks` ne izpostavlja možnosti vtičnice, ki so potrebne za fiksiranje družine posredniškega skoka. 67router zato vključuje lasten povezovalnik:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

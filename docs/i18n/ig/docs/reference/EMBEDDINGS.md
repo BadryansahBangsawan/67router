@@ -4,9 +4,9 @@
 
 ---
 
-Ndetu ndị ọrụ maka `POST /v1/embeddings` mgbe OmniRoute nọ n'ihu
+Ndetu ndị ọrụ maka `POST /v1/embeddings` mgbe 67router nọ n'ihu
 Hindsight 0.9.1 (`encode(list[str])` nke bụ naanị ederede) na Memorix 1.6.0 (ọnụ ụzọ mgbasa-ozi
-Jina). E nyochara ya ozugbo na 2026-08-17 megide OmniRoute 3.8.49 na
+Jina). E nyochara ya ozugbo na 2026-08-17 megide 67router 3.8.49 na
 `https://omniroute.jaguar-fish.ts.net/v1`. Enweghị ihe nzuzo n'okpuru.
 
 ## NJ ndị model na-arụ ọrụ
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 `gemini-embedding-2` nke ya enweghị ike ịrụ ọrụ site naanị na GitOps. A ga-etinyerịrị igodo Google AI
 Studio dịka njikọ provider `gemini` (dashboard ma ọ bụ
-`GEMINI_API_KEY` e tinyere n'ime OmniRoute). Ihe nzuzo ahụ adịghị na repo a.
+`GEMINI_API_KEY` e tinyere n'ime 67router). Ihe nzuzo ahụ adịghị na repo a.
 
 ### Ụzọ multimodal Jina
 
@@ -100,7 +100,7 @@ Jiri `POST /v1/embeddings` ruo mgbe e nwere aha ọzọ.
 
 ### Ihe onyonyo Jina / Memorix
 
-Ihe onyonyo iwu kwadoro nke OmniRoute (PNG 28×28, pikselụ 784 — Jina anaghị anabata 1×1):
+Ihe onyonyo iwu kwadoro nke 67router (PNG 28×28, pikselụ 784 — Jina anaghị anabata 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ Ihe e nwetara n'ezie: HTTP **400**
 
 Embedding Hindsight bụ naanị maka ederede (`encode(list[str])`). Ọ naghị eziga
 ihe onyonyo. Tụnye URL ntọala embedding dakọtara na OpenAI nke Hindsight gaa na
-OmniRoute `/v1`, ma jiri NJ na-arụ ọrụ sitere na tebụl dị n'elu
+67router `/v1`, ma jiri NJ na-arụ ọrụ sitere na tebụl dị n'elu
 (`jina-ai/jina-embeddings-v5-omni-small` ma ọ bụ
 `openrouter/google/gemini-embedding-2`). Atọpụla model ka ọ bụrụ naanị
 `gemini-embedding-2` ma ọ bụrụ na igodo API `gemini` adịghị na gateway ahụ.
@@ -157,11 +157,11 @@ OmniRoute `/v1`, ma jiri NJ na-arụ ọrụ sitere na tebụl dị n'elu
 ### Memorix 1.6.0
 
 Memorix na-ewere naanị `baseUrl` dakọtara na `/jina\.ai/i` dịka mgbasa-ozi nke ya. URL
-OmniRoute na-anọgide n'ụzọ naanị ederede ọbụna mgbe model ahụ bụ Jina omni.
-Ọnụ ụzọ ahụ bụ nsogbu dị na onye ahịa Memorix. N'adabereghị na nke ahụ, OmniRoute ka na-ajụ
+67router na-anọgide n'ụzọ naanị ederede ọbụna mgbe model ahụ bụ Jina omni.
+Ọnụ ụzọ ahụ bụ nsogbu dị na onye ahịa Memorix. N'adabereghị na nke ahụ, 67router ka na-ajụ
 body Jina `{image: "data:..."}` nke Memorix ga-eziga ma ọ bụrụ na ọnụ ụzọ ahụ
-meghere; ya mere, ndị ahịa dakọtara na Jina enweghị ike ime embedding onyonyo site na OmniRoute
+meghere; ya mere, ndị ahịa dakọtara na Jina enweghị ike ime embedding onyonyo site na 67router
 ma ọ bụrụ na ha ejighị schema iwu kwadoro `{type,source}`.
 
 Jiri `jina-ai/jina-embeddings-v5-omni-small` maka ederede. Atụnyela Memorix
-`base_url` na `https://api.jina.ai` — debe OmniRoute dịka naanị ụzọ njikọ.
+`base_url` na `https://api.jina.ai` — debe 67router dịka naanị ụzọ njikọ.

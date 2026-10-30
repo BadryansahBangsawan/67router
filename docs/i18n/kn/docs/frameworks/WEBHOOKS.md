@@ -7,7 +7,7 @@
 > **ಸತ್ಯದ ಮೂಲ:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಿದ್ದು:** 2026-06-28 — v3.8.40
 
-ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಈವೆಂಟ್ಗಳು ಸಂಭವಿಸಿದಾಗ OmniRoute HTTP ವೆಬ್ಹುಕ್ಗಳನ್ನು ಪ್ರಚೋದಿಸಬಹುದು. Slack, PagerDuty, Datadog, ಆಂತರಿಕ ಎಚ್ಚರಿಕೆ ಸೇವೆಗಳು ಅಥವಾ ಯಾವುದೇ HTTP ರಿಸೀವರ್ನೊಂದಿಗೆ ಸಂಯೋಜಿಸಲು ಅವುಗಳನ್ನು ಬಳಸಿ.
+ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಈವೆಂಟ್ಗಳು ಸಂಭವಿಸಿದಾಗ 67router HTTP ವೆಬ್ಹುಕ್ಗಳನ್ನು ಪ್ರಚೋದಿಸಬಹುದು. Slack, PagerDuty, Datadog, ಆಂತರಿಕ ಎಚ್ಚರಿಕೆ ಸೇವೆಗಳು ಅಥವಾ ಯಾವುದೇ HTTP ರಿಸೀವರ್ನೊಂದಿಗೆ ಸಂಯೋಜಿಸಲು ಅವುಗಳನ್ನು ಬಳಸಿ.
 
 ಡಿಸ್ಪ್ಯಾಚರ್ ಪ್ರತಿ ಡೆಲಿವರಿಗೆ HMAC-SHA256 ಮೂಲಕ ಸಹಿ ಮಾಡುತ್ತದೆ, ತಾತ್ಕಾಲಿಕ ವೈಫಲ್ಯಗಳಾದಾಗ ಮರುಪ್ರಯತ್ನಿಸುತ್ತದೆ, ಪ್ರತಿ ವೆಬ್ಹುಕ್ನ ಡೆಲಿವರಿ ಸ್ಥಿತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ ಮತ್ತು ನಿರಂತರವಾಗಿ ವಿಫಲಗೊಳ್ಳುವ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ.
 
@@ -49,7 +49,7 @@
 
 ## HMAC ಸಹಿ ಮಾಡುವಿಕೆ
 
-ವೆಬ್ಹುಕ್ `secret` ಹೊಂದಿರುವಾಗ, OmniRoute JSON ಬಾಡಿಗೆ ಸಹಿ ಮಾಡಿ ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಕಳುಹಿಸುತ್ತದೆ:
+ವೆಬ್ಹುಕ್ `secret` ಹೊಂದಿರುವಾಗ, 67router JSON ಬಾಡಿಗೆ ಸಹಿ ಮಾಡಿ ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಕಳುಹಿಸುತ್ತದೆ:
 
 ```
 Content-Type: application/json
@@ -198,7 +198,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

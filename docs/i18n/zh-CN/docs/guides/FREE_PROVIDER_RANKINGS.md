@@ -4,13 +4,13 @@
 
 ---
 
-> **简而言之**：OmniRoute 使用 **Arena AI（LMArena 风格）ELO 分数**，按模型质量对其**免费**提供者进行排名。打开仪表板中的**免费提供者排名**页面，即可查看哪些免费提供者针对你的任务提供了最强的模型——既可查看综合排名，也可按类别（编码、审查、文档、调试）筛选。
+> **简而言之**：67router 使用 **Arena AI（LMArena 风格）ELO 分数**，按模型质量对其**免费**提供者进行排名。打开仪表板中的**免费提供者排名**页面，即可查看哪些免费提供者针对你的任务提供了最强的模型——既可查看综合排名，也可按类别（编码、审查、文档、调试）筛选。
 
 ---
 
 ## 概述
 
-OmniRoute 注册了 375 个提供者，其中 155 个目录条目被标记为 **免费/免认证（free/no-auth）**（包括免认证、免费档 OAuth 或免费档 API 密钥——详见[免费档指南](../getting-started/FREE-TIERS-GUIDE.md)和完整的[免费档目录](../reference/FREE_TIERS.md)）。难点在于：免费提供者的模型质量差异巨大。一个提供前沿模型的免认证提供者，远比一个提供小型旧模型的提供者有用。
+67router 注册了 375 个提供者，其中 155 个目录条目被标记为 **免费/免认证（free/no-auth）**（包括免认证、免费档 OAuth 或免费档 API 密钥——详见[免费档指南](../getting-started/FREE-TIERS-GUIDE.md)和完整的[免费档目录](../reference/FREE_TIERS.md)）。难点在于：免费提供者的模型质量差异巨大。一个提供前沿模型的免认证提供者，远比一个提供小型旧模型的提供者有用。
 
 **免费提供者排名**（Free Provider Rankings）回答的问题是"**哪个免费提供者能给我最好的模型？**"——它将每个免费提供者的目录与来自 **Arena AI 排行榜**的**众包质量评分**（基于人类偏好的 ELO，与 LMArena 聊天机器人竞技场背后的理念相同）进行关联，然后按照各提供者**最佳免费模型**的实力对其进行排名。
 
@@ -111,9 +111,9 @@ Arena ELO 同步引擎（`src/lib/arenaEloSync.ts`）从 Arena AI 排行榜 API
 （`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`）获取两个排行榜——`text`
 和 `code`。每个排行榜条目都包含模型名称、供应商、ELO `score`、置信区间和投票数。
 
-排行榜类别与 OmniRoute 任务类别的映射关系如下：
+排行榜类别与 67router 任务类别的映射关系如下：
 
-| Arena 排行榜 | OmniRoute 任务类别                                |
+| Arena 排行榜 | 67router 任务类别                                 |
 | ------------ | ------------------------------------------------- |
 | `text`       | `default`、`review`、`documentation`、`debugging` |
 | `code`       | `coding`                                          |
@@ -149,7 +149,7 @@ taskFit = 0.4 + 0.58 * ((elo - minElo) / (maxElo - minElo))
 
 - 服务器启动时运行一次，之后按周期定时运行
   （`src/lib/arenaEloSync.ts`，由 `src/instrumentation-node.ts` 接入）。
-- 同步过程**不会阻塞，也绝不会导致致命错误**——如果上游获取失败，OmniRoute 会继续
+- 同步过程**不会阻塞，也绝不会导致致命错误**——如果上游获取失败，67router 会继续
   运行，排行榜只会显示上次成功获取的数据（或空状态）。
 
 可通过两个环境变量控制该功能（相关文档位于
@@ -184,7 +184,7 @@ DELETE /api/intelligence/sync          # 清除所有已同步的 arena_elo 智�
 3. 进行前缀匹配（排行榜中的模型名称是注册表 ID 的前缀）。
 
 在同步端，系统会移除已知的供应商前缀（`anthropic/`、`openai/`、`google/` 等），
-并通过一个小型别名映射将规范名称扩展为 OmniRoute 内部使用的变体，以确保无论使用
+并通过一个小型别名映射将规范名称扩展为 67router 内部使用的变体，以确保无论使用
 哪种名称都能找到模型。
 
 ### 供应商的排名方式

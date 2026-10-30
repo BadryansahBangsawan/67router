@@ -113,7 +113,7 @@ o dokumentadong manual na pagsusuring angkop sa pagbabago.
 - Hiwalay na matatagpuan ang mga CLI catalog sa ilalim ng `bin/cli/locales/`.
 - Panatilihin nang eksakto ang mga ICU placeholder at tag. Huwag isalin ang mga pangalan ng product/provider/model,
   mga pangalan ng protocol at header, command, code/JSON identifier, URL, environment variable, o
-  mga protektadong termino gaya ng `OmniRoute`, `OAuth`, `MCP`, at `A2A`. Ang kasalukuyang source list ay
+  mga protektadong termino gaya ng `67router`, `OAuth`, `MCP`, at `A2A`. Ang kasalukuyang source list ay
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Nakatuong loop**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # muling gamitin ang tar
 - **Mag-rollback.** Muling vina-validate ng `run` ang na-promote na slot at ibinabalik ang pagpapalitan ng `current` at `previous` kapag
   nabigo ang check na iyon. Hindi kailanman pino-promote ang candidate na nabigo sa unang validation.
 
-Isinusulat ang lahat sa ilalim ng gitignored na `_artifacts/candidate/`; hindi kailanman ginagalaw ang umiiral na installation ng OmniRoute
+Isinusulat ang lahat sa ilalim ng gitignored na `_artifacts/candidate/`; hindi kailanman ginagalaw ang umiiral na installation ng 67router
 at ang data directory nito. Ang na-promote na CLI ay
 `_artifacts/candidate/current/prefix/bin/omniroute`; simulan ito gamit ang sarili mong `DATA_DIR` kapag ginagamit mo
 ito. Mga exit code: `0` tagumpay, `1` nabigong validation o promotion, `2` error sa paggamit o nawawalang build.

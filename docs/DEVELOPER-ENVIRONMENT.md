@@ -1,6 +1,6 @@
 # Developer environment notes
 
-This page explains the project's local `.env` behavior and how to handle environment files and secrets when developing OmniRoute.
+This page explains the project's local `.env` behavior and how to handle environment files and secrets when developing 67router.
 
 ## .env postinstall behavior
 

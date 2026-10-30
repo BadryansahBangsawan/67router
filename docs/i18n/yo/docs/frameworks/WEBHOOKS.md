@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute lè fi àwọn webhook HTTP ránṣẹ́ nígbà tí àwọn ìṣẹ̀lẹ̀ bá ṣẹlẹ̀ lórí pèpéle. Lo wọn láti so pọ̀ mọ́
+67router lè fi àwọn webhook HTTP ránṣẹ́ nígbà tí àwọn ìṣẹ̀lẹ̀ bá ṣẹlẹ̀ lórí pèpéle. Lo wọn láti so pọ̀ mọ́
 Slack, PagerDuty, Datadog, àwọn iṣẹ́ ìkìlọ̀ inú ètò, tàbí olùgbà HTTP èyíkéyìí.
 
 Olùpín náà máa ń fi ìfọwọ́sí HMAC-SHA256 sí ìfiránṣẹ́ kọ̀ọ̀kan, ó máa ń tún gbìyànjú nígbà
@@ -54,7 +54,7 @@ Olùpè (handler, service, monitor)
 
 ## Ìfọwọ́sí HMAC
 
-Nígbà tí webhook kan bá ní `secret`, OmniRoute máa ń fọwọ́ sí JSON body, yóò sì fi èyí ránṣẹ́:
+Nígbà tí webhook kan bá ní `secret`, 67router máa ń fọwọ́ sí JSON body, yóò sì fi èyí ránṣẹ́:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Ojú-ìwé pátákó ìṣàkóso ní `/dashboard/webhooks` (wo
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

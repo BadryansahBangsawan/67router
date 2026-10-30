@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Српски)
+# 67router A2A Server Documentation (Српски)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent протокол v0.3 — OmniRoute као интелигентни агент за рутирање
+> Agent-to-Agent протокол v0.3 — 67router као интелигентни агент за рутирање
 
 A2A интерфејс има два облика:
 
@@ -19,7 +19,7 @@ A2A интерфејс има два облика:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Враћа Agent Card који описује могућности, вештине и захтеве за аутентикацију OmniRoute-а.
+Враћа Agent Card који описује могућности, вештине и захтеве за аутентикацију 67router-а.
 
 Поље `version` у Agent Card-у преузима се из `process.env.npm_package_version` (видети `src/app/.well-known/agent.json/route.ts:13`), тако да остаје аутоматски синхронизовано са `package.json` при сваком издању.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Dostupne veštine
 
-OmniRoute izlaže 6 A2A veština povezanih u `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Svaki modul veštine se nalazi u `src/lib/a2a/skills/`.
+67router izlaže 6 A2A veština povezanih u `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Svaki modul veštine se nalazi u `src/lib/a2a/skills/`.
 
 | Veština            | ID                   | Opis                                                                                                                                                 | Oznake                     | Primeri                                      |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------- |
-| Smart Routing      | `smart-routing`      | Usmerava prompt kroz optimalnog provajdera/kombinaciju koristeći OmniRoute-ov mehanizam za kombinovanje i bodovanje                                  | routing, providers         | "Usmeri ovaj prompt kroz najbolji model"     |
+| Smart Routing      | `smart-routing`      | Usmerava prompt kroz optimalnog provajdera/kombinaciju koristeći 67router-ov mehanizam za kombinovanje i bodovanje                                   | routing, providers         | "Usmeri ovaj prompt kroz najbolji model"     |
 | Quota Management   | `quota-management`   | Izveštava o stanju kvota po provajderu i pomaže pozivaocima da odluče kada da uspore ili se prebace                                                  | quota, providers           | "Proveri kvotu za anthropic"                 |
 | Provider Discovery | `provider-discovery` | Navodi instalirane provajdere sa mogućnostima, oznakama besplatnog nivoa i OAuth statusom                                                            | providers, discovery       | "Koji provajderi su dostupni?"               |
 | Cost Analysis      | `cost-analysis`      | Procenjuje trošak zahteva/razgovora na osnovu kataloga i skorašnje upotrebe                                                                          | cost, usage                | "Proceni trošak ovog razgovora"              |
 | Health Report      | `health-report`      | Objedinjuje stanje circuit breaker-a, cooldown-a i lockout-a po provajderu                                                                           | health, resilience         | "Prikaži zdravstveni status svih provajdera" |
-| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 45 stavki (23 API + 21 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubacivanje konteksta | catalog, discovery, skills | "Navedi sve OmniRoute mogućnosti"            |
+| List Capabilities  | `list-capabilities`  | Vraća kompletan katalog Agent Skills sa 45 stavki (23 API + 21 CLI + 1 config) kao markdown tabelu sa raw SKILL.md URL-ovima za ubacivanje konteksta | catalog, discovery, skills | "Navedi sve 67router mogućnosti"             |
 
 > Agent Card treba da bude usklađen sa aktivnim katalogom od 375 provajdera; broj provajdera i metapodaci o besplatnom pristupu/pristupu bez autentifikacije preuzimaju se iz runtime registra.
 
 ### Detalji veštine `list-capabilities`
 
-Veština `list-capabilities` je posebno korisna za spoljne agente kojima je potrebno da otkriju šta OmniRoute izlaže pre slanja API poziva. Vraća artefakt u obliku strukturirane markdown tabele:
+Veština `list-capabilities` je posebno korisna za spoljne agente kojima je potrebno da otkriju šta 67router izlaže pre slanja API poziva. Vraća artefakt u obliku strukturirane markdown tabele:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC krajnja tačka `/a2a` je kanonska A2A ulazna tačka. REST krajnje tačk
 | `/.well-known/agent.json`    | GET   | Agent Card (A2A otkrivanje)                                 | (javno, keširano 3600s)                               |
 | `/api/a2a/tasks`             | POST  | Dolazno delegiranje flotе OmniConductor (Conductor PRD RF5) | Bearer u odnosu na `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Dolazno delegiranje Conductor-u (`POST /api/a2a/tasks`):** eksterni A2A agenti delegiraju posao kodiranja floti OmniConductor kroz OmniRoute. Тело: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — mogu se delegirati samo vештine flote Conductor (one koje su objavljene na Agent Card-u); `metadata.conductor.repo.url` je obavezan (flota radi na git repozitorijumima). Ruta se prevodi u `POST /v1/tasks` hub-a koristeći serversku `CONDUCTOR_ORCHESTRATOR_TOKEN` (rezervna opcija `CONDUCTOR_HUB_TOKEN`) i vraća `201 { conductor_task_id, state: "submitted" }`; stanja zadatka se prosleđuju nazad kroz SSE→A2A mirror (RF1) i vidljiva su preko `GET /api/a2a/tasks?skill=conductor`.
+**Dolazno delegiranje Conductor-u (`POST /api/a2a/tasks`):** eksterni A2A agenti delegiraju posao kodiranja floti OmniConductor kroz 67router. Тело: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — mogu se delegirati samo vештine flote Conductor (one koje su objavljene na Agent Card-u); `metadata.conductor.repo.url` je obavezan (flota radi na git repozitorijumima). Ruta se prevodi u `POST /v1/tasks` hub-a koristeći serversku `CONDUCTOR_ORCHESTRATOR_TOKEN` (rezervna opcija `CONDUCTOR_HUB_TOKEN`) i vraća `201 { conductor_task_id, state: "submitted" }`; stanja zadatka se prosleđuju nazad kroz SSE→A2A mirror (RF1) i vidljiva su preko `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

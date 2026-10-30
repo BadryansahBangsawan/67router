@@ -7,11 +7,11 @@
 Fún àtòjọ ìṣàfihàn executable tí a ń pín, àwọn àyíká ọmọ tí a fi òfin dè àti ìṣètò
 Gemini tí ó wà pẹ́ títí, wo [àwọn àdéhùn ìfilọ́lẹ̀ CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute ní ìdílé àwọn àṣẹ `setup-*` tí ń ṣètò CLI fún kíkọ kóòdù
-(Codex, Claude Code, OpenCode, Cline, …) láti lo OmniRoute gẹ́gẹ́ bí backend rẹ̀ — kí
-irinṣẹ́ náà lè bá endpoint **kan ṣoṣo** sọ̀rọ̀, kí OmniRoute sì darí rẹ̀ sí provider tó
+67router ní ìdílé àwọn àṣẹ `setup-*` tí ń ṣètò CLI fún kíkọ kóòdù
+(Codex, Claude Code, OpenCode, Cline, …) láti lo 67router gẹ́gẹ́ bí backend rẹ̀ — kí
+irinṣẹ́ náà lè bá endpoint **kan ṣoṣo** sọ̀rọ̀, kí 67router sì darí rẹ̀ sí provider tó
 yẹ pẹ̀lú auto-fallback. Àṣẹ kọ̀ọ̀kan máa ń ka àkójọ model **tí ó ń ṣiṣẹ́ lọ́wọ́lọ́wọ́** láti
-OmniRoute tí ó ń ṣiṣẹ́ (local tàbí remote), ó sì máa ń kọ fáìlì config ti irinṣẹ́ náà
+67router tí ó ń ṣiṣẹ́ (local tàbí remote), ó sì máa ń kọ fáìlì config ti irinṣẹ́ náà
 fúnra rẹ̀ sórí ẹ̀rọ **rẹ**. A máa ń tọ́ka sí API key nípasẹ̀ environment variable ní
 ibikíbi tí irinṣẹ́ náà bá ti ṣe àtìlẹ́yìn fún un. Àwọn àṣẹ tí ń tọ́jú fáìlì environment
 ti irinṣẹ́ náà fúnra rẹ̀ ní ìbẹ̀rẹ̀ ni a ti ṣàkíyèsí ní ìsàlẹ̀.
@@ -55,7 +55,7 @@ wo àlàyé jinlẹ̀ fún irinṣẹ́ kọ̀ọ̀kan:
 
 - [Ìṣètò Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Ìṣètò Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — ṣàkóso OmniRoute remote kan (VPS / Tailnet) láti laptop rẹ
+- [Remote Mode](./REMOTE-MODE.md) — ṣàkóso 67router remote kan (VPS / Tailnet) láti laptop rẹ
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — extension OmniCopilot; ó tún lè ṣiṣẹ́ àwọn
   àṣẹ `setup-*` wọ̀nyí fún ọ láti inú editor
 
@@ -91,7 +91,7 @@ server yẹn, yóò sì kọ àtúnṣe náà sí agbègbè.
 
 Àwọn àkíyèsí nípa àwọn àsìá (tí a ti ṣàyẹ̀wò nínú kóòdù orísun àṣẹ náà):
 
-- `--remote <url>` — gba katalogi láti OmniRoute jíjìn kan (ó borí `--port`
+- `--remote <url>` — gba katalogi láti 67router jíjìn kan (ó borí `--port`
   àti context tó ń ṣiṣẹ́). `--api-key <key>` ń pèsè ẹ̀rí ìwọlé fún
   server yẹn (àìpéye rẹ̀ ni env var `OMNIROUTE_API_KEY`, tàbí token context tó ń ṣiṣẹ́).
 - `--only <patterns>` — àwọn substring tí kọ́má yà sọ́tọ̀; fi àwọn ID model tó bá
@@ -112,7 +112,7 @@ server yẹn, yóò sì kọ àtúnṣe náà sí agbègbè.
   **codex** nípasẹ̀ àwọn args `-c model_providers.omniroute.*`. **Qwen nìkan ni target ìṣiṣẹ́
   tó pọn dandan pé kí `--model` wà** — `omniroute run qwen` láìsí i máa jáde
   pẹ̀lú `2` àti àṣìṣe tó ṣe kedere.
-- `--port <port>` — port OmniRoute agbègbè (àìpéye `20128`, a ó kọbi ara sí i nígbà tí a bá ṣètò `--remote`).
+- `--port <port>` — port 67router agbègbè (àìpéye `20128`, a ó kọbi ara sí i nígbà tí a bá ṣètò `--remote`).
   Ó wà lórí gbogbo `setup-*` àti àwọn olùfilọ́lẹ̀ méjèèjì.
 - Àwọn kóòdù ìjáde `omniroute run`: a máa tan kóòdù ìjáde ti CLI ọmọ náà fúnra rẹ̀
   gẹ́gẹ́ bí ó ṣe rí; `2` = àwọn argument tí kò tọ́ (target tí a kò ṣe àtìlẹ́yìn fún, `--model`
@@ -157,7 +157,7 @@ gbé wọn kalẹ̀ gẹ́gẹ́ bí àwọn target tí a lè ṣe ìfilọ́l�
 
 ## Ìlò lórí ẹ̀rọ abẹ́lé
 
-Nígbà tí OmniRoute bá ń ṣiṣẹ́ lórí `localhost:20128`, kan ṣiṣẹ́ àṣẹ ìṣètò fún
+Nígbà tí 67router bá ń ṣiṣẹ́ lórí `localhost:20128`, kan ṣiṣẹ́ àṣẹ ìṣètò fún
 irinṣẹ́ rẹ. A máa ń gba àkójọ náà láti ẹ̀rọ apèsè abẹ́lé.
 
 ```bash
@@ -185,8 +185,8 @@ omniroute setup-continue --dry-run
 Ṣe ìfilọ́lẹ̀ láì kọ àtòpọ̀ èyíkéyìí rárá (ìfi-àyíká-sí-nú nìkan):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute abẹ́lé
-omniroute launch-codex           # Codex CLI → OmniRoute abẹ́lé
+omniroute launch                 # Claude Code → 67router abẹ́lé
+omniroute launch-codex           # Codex CLI → 67router abẹ́lé
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -204,7 +204,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Ìlò láti ọ̀nà jíjìn
 
-Darí àṣẹ ìṣètò èyíkéyìí sí OmniRoute jíjìn kan pẹ̀lú `--remote` + `--api-key`. A máa
+Darí àṣẹ ìṣètò èyíkéyìí sí 67router jíjìn kan pẹ̀lú `--remote` + `--api-key`. A máa
 ń gba àkójọ náà láti ẹ̀rọ jíjìn; a ó sì kọ àtòpọ̀ náà sórí ẹ̀rọ abẹ́lé rẹ.
 
 ```bash
@@ -248,7 +248,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Àwọn ọ̀nà méjèèjì kọ prófáìlì **ìfàṣẹsí** 5dive kan, gbogbo ìjókòó `claude` tí a
-so mọ́ prófáìlì náà yóò sì bá OmniRoute sọ̀rọ̀. Ohun mẹ́ta ló jẹ́ pàtó sí ibi-àfojúsùn yìí:
+so mọ́ prófáìlì náà yóò sì bá 67router sọ̀rọ̀. Ohun mẹ́ta ló jẹ́ pàtó sí ibi-àfojúsùn yìí:
 
 - **Ó ń ṣiṣẹ́ lórí ẹ̀rọ olùgbàlejò ọ̀wọ́ náà, gẹ́gẹ́ bí root.** Àwọn ọ̀rọ̀-àṣẹ 5dive
   ń ṣiṣẹ́ lórí àwọn ẹ̀ka systemd abẹ́lé àti àpò ìpamọ́ ipò tí root ní; kò sí ìpo
@@ -266,7 +266,7 @@ so mọ́ prófáìlì náà yóò sì bá OmniRoute sọ̀rọ̀. Ohun mẹ́ta
 A máa ń fi kọ́kọ́rọ́ API fún 5dive lórí **stdin** (`--api-key=-`), nítorí náà kò
 ní hàn nínú àbájáde `ps` láéláé.
 
-Dídarí prófáìlì náà sí **àkójọpọ̀** OmniRoute dípò awoṣe kan ṣoṣo ni ohun tó ń fún
+Dídarí prófáìlì náà sí **àkójọpọ̀** 67router dípò awoṣe kan ṣoṣo ni ohun tó ń fún
 ọ̀wọ́ náà ní ìyípadà sí olùpèsè mìíràn nígbà ìkùnà: nígbà tí ibi ìbáṣepọ̀ àkọ́kọ́
 dákẹ́ pátápátá láàárín ìgbésẹ̀ kan nínú ìṣiṣẹ́ tí a ṣe àkọsílẹ̀ rẹ̀ lórí
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), aṣojú náà parí
@@ -276,7 +276,7 @@ dákẹ́ pátápátá láàárín ìgbésẹ̀ kan nínú ìṣiṣẹ́ tí a 
 
 ## Àwọn àṣà Base URL (àwọn irinṣẹ́ wo ló fẹ́ `/v1`)
 
-OmniRoute ń pèsè ojú-ọ̀nà OpenAI ní `/v1`, ojú-ọ̀nà Anthropic ní gbòǹgbò,
+67router ń pèsè ojú-ọ̀nà OpenAI ní `/v1`, ojú-ọ̀nà Anthropic ní gbòǹgbò,
 àti ojú-ọ̀nà Gemini àbínibí ní `/v1beta`. A ti so ìṣọ̀kan kọ̀ọ̀kan pọ̀ mọ́ ìrísí tí
 irinṣẹ́ rẹ̀ ń retí (a ti fìdí rẹ̀ múlẹ̀ nínú kóòdù àṣẹ):
 
@@ -298,7 +298,7 @@ irinṣẹ́ rẹ̀ ń retí (a ti fìdí rẹ̀ múlẹ̀ nínú kóòdù àṣ
 ## Mímú àwọn native deps dúró nígbà ìmúdójúìwọ̀n: `--include=optional`
 
 Nígbà tí o bá ṣe ìmúdójúìwọ̀n pẹ̀lú `omniroute update` (lẹ́yìn ìmúdájú, tàbí pẹ̀lú `--apply`),
-OmniRoute máa ń ṣiṣẹ́ ìfiṣọ́pọ̀ náà pẹ̀lú `--include=optional` tí a ti fi sínú rẹ̀:
+67router máa ń ṣiṣẹ́ ìfiṣọ́pọ̀ náà pẹ̀lú `--include=optional` tí a ti fi sínú rẹ̀:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -326,13 +326,13 @@ omniroute update --dry-run
 A ti fìdí àdéhùn múlẹ̀ pẹ̀lú `@google/gemini-cli` 0.50.0: CLI náà ń tẹ̀lé
 `GOOGLE_GEMINI_BASE_URL`, ó sì ń fi `POST /v1beta/models/<model>:generateContent`
 (àti `:streamGenerateContent?alt=sse`) ránṣẹ́ sí i — gẹ́gẹ́ bí ojú-iṣẹ́ Gemini
-àbínibí OmniRoute (`/v1beta`) gan-an. `omniroute run gemini` ń so èyí pọ̀ láìfọwọ́ṣe:
+àbínibí 67router (`/v1beta`) gan-an. `omniroute run gemini` ń so èyí pọ̀ láìfọwọ́ṣe:
 
-- `GOOGLE_GEMINI_BASE_URL` → Base URL OmniRoute tó ń ṣiṣẹ́ (ìpìlẹ̀, láìsí `/v1`);
-- `GEMINI_API_KEY` → ẹ̀rí ìdánimọ̀ OmniRoute tí a ti yanjú (àṣàyàn/env/context);
+- `GOOGLE_GEMINI_BASE_URL` → Base URL 67router tó ń ṣiṣẹ́ (ìpìlẹ̀, láìsí `/v1`);
+- `GEMINI_API_KEY` → ẹ̀rí ìdánimọ̀ 67router tí a ti yanjú (àṣàyàn/env/context);
 - **`GEMINI_CLI_HOME` àkókò díẹ̀ tí a yà sọ́tọ̀** tí `.gemini/settings.json` rẹ̀
   yan ìfàṣẹsí `gemini-api-key`, kí ìjókòó Google OAuth tí a ti fipamọ́ (Code Assist)
-  má bàa borí ìpilẹ̀ṣẹ̀ tí a darí sí OmniRoute — a máa yọ ọ́ kúrò lẹ́yìn ìjáde;
+  má bàa borí ìpilẹ̀ṣẹ̀ tí a darí sí 67router — a máa yọ ọ́ kúrò lẹ́yìn ìjáde;
 - **ìmótótó env**: a máa yọ `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` àti `GOOGLE_GENAI_USE_GCA` kúrò nínú env ọmọ (èyí tí ì bá darí
   ìfàṣẹsí sí Vertex/Code Assist), a sì máa ṣètò `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -355,7 +355,7 @@ prótókólù aṣojú fún `/dashboard/acp-agents`.
 ## Ìdánwò smoke gidi ní ọ̀pọ̀ ibi (yíyan láti ṣiṣẹ́)
 
 Àwọn ìṣiṣẹ́ ìpadàsẹ́yìn ètò ìbẹ̀rẹ̀ tó ṣeé tún ṣe ń ṣiṣẹ́ nínú CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). Láti fìdí àwọn binary GIDI múlẹ̀ pẹ̀lú olupin OmniRoute GIDI,
+`tests/unit/cli/run-execution.test.ts`). Láti fìdí àwọn binary GIDI múlẹ̀ pẹ̀lú olupin 67router GIDI,
 harness tí a lè yàn láti ṣiṣẹ́ wà ní
 `tests/integration/upstream-cli-smoke.int.test.ts`. Kì í ṣiṣẹ́ láìfọwọ́ṣe rárá
 (ìdánwò kékeré kọ̀ọ̀kan ni a máa fò kọjá àyàfi tí `RUN_CLI_SMOKE=1`), ó ń fi ẹ̀rí ìwọlé ránṣẹ́ nípasẹ̀ ORÚKỌ env-var

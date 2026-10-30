@@ -10,7 +10,7 @@
 
 ## Bunun var olma nedeni
 
-OmniRoute hâlihazırda maliyetle ilgili iki soruyu yanıtlıyor ancak bunların hiçbiri çoğu operatörün sorduğu soru değil.
+67router hâlihazırda maliyetle ilgili iki soruyu yanıtlıyor ancak bunların hiçbiri çoğu operatörün sorduğu soru değil.
 
 | Mevcut mekanizma                                         | Yanıtladığı soru                            |
 | -------------------------------------------------------- | ------------------------------------------- |

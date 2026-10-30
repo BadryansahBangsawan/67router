@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Igbo)
+# 🗜️ Prompt Compression Guide — 67router (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Nchịkọta
 
-OmniRoute na-emejuputa pipeline prompt compression nwere modulu nke na-arụ ọrụ **tupu oge eruo** tupu arịrịọ eruo ndị provider dị n'elu. Nke a pụtara na nchekwa token gị na-eme n'ụzọ a na-adịghị ahụ anya — ọ dịghị mgbanwe achọrọ na workflow gị.
+67router na-emejuputa pipeline prompt compression nwere modulu nke na-arụ ọrụ **tupu oge eruo** tupu arịrịọ eruo ndị provider dị n'elu. Nke a pụtara na nchekwa token gị na-eme n'ụzọ a na-adịghị ahụ anya — ọ dịghị mgbanwe achọrọ na workflow gị.
 
 ```
 Arịrịọ Client
@@ -122,15 +122,15 @@ compression combo e kenyere routing combo.
 
 ## Mgbakọ Mbelata Upstream
 
-OmniRoute na-edepụta mbelata sitere na mkpakọ site n’ebe abụọ: benchmark nke ọrụ upstream na
-nhazi injin nke OmniRoute n’onwe ya.
+67router na-edepụta mbelata sitere na mkpakọ site n’ebe abụọ: benchmark nke ọrụ upstream na
+nhazi injin nke 67router n’onwe ya.
 
 | Isi mmalite | Ọnụọgụ dị na README upstream e ji mee ihe ebe a                                                                               |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Caveman     | token mmepụta dị ole na ole site na `~75%`, nkezi mbelata mmepụta benchmark `65%`, oke `22-87%`, na ngwa mkpakọ ntinye `~46%` |
 | RTK         | mbelata mmepụta iwu `60-90%`; nnọkọ atụ `~118,000 -> ~23,900` token, ma ọ bụ `79.7%` echekwara (`~80%`)                       |
 
-Maka payload ngwa/ọnọdụ ndị na-adakọrịta, ngwakọta ndabara OmniRoute na-etinye injin ndị a n’usoro:
+Maka payload ngwa/ọnọdụ ndị na-adakọrịta, ngwakọta ndabara 67router na-etinye injin ndị a n’usoro:
 
 ```txt
 RTK -> Caveman
@@ -513,12 +513,12 @@ ahụ dịka ọ dị, a na-amafe ya dịka `no_styles`), na-ejikọta ntuziaka 
 usoro ha si dị na katalọgụ,
 na-agbakwunye nkebi boundaries ahụ **otu ugboro** (tinyere nkebi nchekwa,
 `SAFETY_BOUNDARIES` ma ọ bụ ntụgharị ya, mgbe ahọpụtara `less-code` ma ọ bụ `ponytail`),
-ma jiri otu akara idempotency (`[OmniRoute Output Styles]`) malite block ahụ, ya mere
+ma jiri otu akara idempotency (`[67router Output Styles]`) malite block ahụ, ya mere
 itinye ya ọzọ anaghị eme ihe ọ bụla. Mgbe asụsụ e kpebiri (lee Nhọrọ asụsụ n'okpuru)
 nwere ntụgharị, a na-etinye ntuziaka e mere ka ọ kwekọọ na locale kama nke Bekee.
 
 N’elu body nwere array `messages` na-adịghị efu, a na-eme nyocha idempotency tupu
-content bypass: mgbe akara `[OmniRoute Output Styles]` adịlarị n’ime field `system`
+content bypass: mgbe akara `[67router Output Styles]` adịlarị n’ime field `system`
 nke top-level (string ma ọ bụ content-block array), ma ọ bụ n’ime system message nwere
 string content, a na-ahapụ body ahụ dịka ọ dị dịka `already_applied`, a naghịkwa eme
 nnyocha keyword. Ma ọ bụghị ya, content bypass (`shouldBypassCavemanOutputMode()` dị na
@@ -547,7 +547,7 @@ hụrụ:
 N’elu body na-enweghị array `messages` (ma ọ bụ nke nwere nke tọgbọ chakoo), content
 bypass anaghị arụ ọrụ, a naghịkwa ele field `system` nke top-level anya. A na-agbakwunye
 block ahụ n’azụ ederede nke string field `instructions`, belụsọ ma field ahụ enweelarị
-akara `[OmniRoute Output Styles]`; n’ọnọdụ ahụ, a na-ahapụ body ahụ dịka ọ dị dịka
+akara `[67router Output Styles]`; n’ọnọdụ ahụ, a na-ahapụ body ahụ dịka ọ dị dịka
 `already_applied`. Mgbe body ahụ na-enweghị string field `instructions` ma nwee `input`
 (string ma ọ bụ array), block ahụ na-aghọ `instructions`, ma dochie uru ọ bụla na-abụghị
 string nke field ahụ nwere. A na-ahapụ body na-enweghị string field `instructions` ma ọ
@@ -574,8 +574,8 @@ program, compression config na-echekwa nhọrọ ahụ dịka:
 Ndakọrịta azụ: mgbe `outputStyles` tọgbọ chakoo, setting ochie
 `cavemanOutputMode.enabled` na-ejikọta na `terse-prose` na
 `cavemanOutputMode.intensity`. Mgbe ahụ, block ahụ na-amalite na akara
-`[OmniRoute Output Styles]`, ebe injector ochie `applyCavemanOutputMode()` dere
-`[OmniRoute Caveman Output Mode]`. N’okpuru akara ahụ, ederede ahụ dabara na injection
+`[67router Output Styles]`, ebe injector ochie `applyCavemanOutputMode()` dere
+`[67router Caveman Output Mode]`. N’okpuru akara ahụ, ederede ahụ dabara na injection
 ochie na en, pt-BR, es, de, fr, it, ru, id na vi; na ja na zh, ọ nwere otu oghere ọzọ
 tupu nkebi boundaries ahụ. A na-atụgharị `terse-prose` gaa na pt-BR, es, de, fr, it, ru,
 zh, ja, id na vi, ya mere request nke asụsụ e kpebiri bụ `hu` na-enweta ederede Bekee

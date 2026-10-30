@@ -11,11 +11,11 @@
 
 ## Ano ito
 
-Maaaring kumonekta ang OmniRoute sa isang **Notion** workspace bilang **pinagmumulan ng konteksto** — isang read/write
+Maaaring kumonekta ang 67router sa isang **Notion** workspace bilang **pinagmumulan ng konteksto** — isang read/write
 na knowledge base na naa-access ng mga agent sa pamamagitan ng built-in na MCP server. Kapag na-configure na ang isang
 Notion integration token, magagamit ng isang LLM ang mga MCP tool upang maghanap ng mga page at database,
 magbasa ng nilalaman ng page at mga block tree, mag-query ng mga database gamit ang mga filter/sort, at magdagdag ng mga
-bagong block — lahat ay ipinapadaan sa OmniRoute (na may retry, timeout, at pag-uuri ng error)
+bagong block — lahat ay ipinapadaan sa 67router (na may retry, timeout, at pag-uuri ng error)
 upang hindi kailanman direktang ma-access ng modelo ang Notion API.
 
 Ang integration ay isang manipis at pinatibay na wrapper sa opisyal na Notion REST API
@@ -40,7 +40,7 @@ dashboard (`NotionSourceCard`, na kapatid ng `ObsidianSourceCard`), o sa pamamag
 > [!NOTE]
 > Ang token ay isang **Notion internal integration token**. Gumawa ng integration sa
 > <https://www.notion.com/my-integrations>, pagkatapos ay ibahagi sa integration na iyon ang mga page/database na nais mong
-> ma-access ng OmniRoute (nakabatay sa pagbabahagi ang modelo ng pahintulot ng Notion,
+> ma-access ng 67router (nakabatay sa pagbabahagi ang modelo ng pahintulot ng Notion,
 > hindi ito para sa buong workspace).
 
 ### I-configure sa pamamagitan ng REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Nangangailangan ang lahat ng tatlong method ng authentication sa dashboard (`isAuthenticated`). Sa `POST`,
-sine-save ng OmniRoute ang token at agad na nagpapatakbo ng test search na may 1 resulta; kung
+sine-save ng 67router ang token at agad na nagpapatakbo ng test search na may 1 resulta; kung
 magbalik ang Notion ng error object, buburahin ang token at mabibigo ang call na may `400`.
 
 ## Mga MCP tool (6)

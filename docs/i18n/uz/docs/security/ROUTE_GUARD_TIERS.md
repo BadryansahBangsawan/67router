@@ -6,7 +6,7 @@
 
 ## Umumiy ko‘rinish
 
-Barcha OmniRoute boshqaruv API marshrutlari uchta himoya darajasidan biriga tasniflanadi. Tasnif statik bo‘lib, `src/server/authz/routeGuard.ts` faylida belgilangan va boshqa autentifikatsiya tarmoqlaridan oldin tekshiriladi.
+Barcha 67router boshqaruv API marshrutlari uchta himoya darajasidan biriga tasniflanadi. Tasnif statik bo‘lib, `src/server/authz/routeGuard.ts` faylida belgilangan va boshqa autentifikatsiya tarmoqlaridan oldin tekshiriladi.
 
 ## Darajalar
 
@@ -17,7 +17,7 @@ Barcha OmniRoute boshqaruv API marshrutlari uchta himoya darajasidan biriga tasn
 
 Bu yoʻnalishlar bola jarayonlarni ishga tushiradi yoki bajarilish muhiti kodini bajaradi. Ularni loopback boʻlmagan trafik uchun ochish haqiqiy JWTni qoʻlga kiritgan hujumchiga (masalan, Cloudflared/Ngrok tunneli orqali) jarayonlarni ishga tushirish imkonini beradi — bu maʼlum CVE sinfidir ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 
-**GHSA-fhh6-4qxv-rpqj nima (hujum sinfi):** boshqaruv/agent serveri quyi jarayonni (`npm install`, `node`, brauzer, proksi, `git`, `tar`, …) ishga tushiradigan endpointni ochadi. Agar bu endpointga host tashqarisidan kirish mumkin boʻlsa — operator OmniRouteʼni nginx/Cloudflare/Tailscale tunneli ortiga joylashtirgani va JWT sizib chiqqani yoki autentifikatsiya notoʻgʻri sozlangani sababli — hujumchi «APIni chaqirish»ni «hostda buyruq bajarish»ga (masofadan kod bajarish) aylantiradi. OmniRoute buni jarayon ishga tushira oladigan har bir yoʻnalishda **har qanday autentifikatsiya tekshiruvidan oldin, hech qanday istisnosiz loopback host tekshiruvini majburiy qoʻllash** orqali bartaraf etadi: tunnel orqali sizib chiqqan token ham jarayonni ishga tushirish nuqtasiga yetib bora olmaydi.
+**GHSA-fhh6-4qxv-rpqj nima (hujum sinfi):** boshqaruv/agent serveri quyi jarayonni (`npm install`, `node`, brauzer, proksi, `git`, `tar`, …) ishga tushiradigan endpointni ochadi. Agar bu endpointga host tashqarisidan kirish mumkin boʻlsa — operator 67routerʼni nginx/Cloudflare/Tailscale tunneli ortiga joylashtirgani va JWT sizib chiqqani yoki autentifikatsiya notoʻgʻri sozlangani sababli — hujumchi «APIni chaqirish»ni «hostda buyruq bajarish»ga (masofadan kod bajarish) aylantiradi. 67router buni jarayon ishga tushira oladigan har bir yoʻnalishda **har qanday autentifikatsiya tekshiruvidan oldin, hech qanday istisnosiz loopback host tekshiruvini majburiy qoʻllash** orqali bartaraf etadi: tunnel orqali sizib chiqqan token ham jarayonni ishga tushirish nuqtasiga yetib bora olmaydi.
 
 **Toʻliq LOCAL_ONLY toʻplami.** Nufuzli manba — `src/server/authz/routeGuard.ts` ichidagi `LOCAL_ONLY_API_PREFIXES` / `LOCAL_ONLY_API_PATTERNS`; quyidagi jadval joriy holatni aks ettiradi. `check-route-guard-membership` tekshiruvi jarayon ishga tushira oladigan prefikslar ostidagi har bir `route.ts` faylini sanab chiqadi va ulardan birortasi faqat lokal sifatida tasniflanmagan boʻlsa, CI muvaffaqiyatsiz yakunlanadi.
 
@@ -102,7 +102,7 @@ uchun kamroq imtiyozli muqobildir.
 
 #### Operatorlar uchun koʻrsatmalar va audit
 
-Agar OmniRoute’ni teskari proksi yoki tunnel (nginx, Caddy, Cloudflare
+Agar 67router’ni teskari proksi yoki tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) ortida ishlatsangiz, loopback tekshiruvi yuqoridagi
 jarayon ishga tushira oladigan yoʻnalishlarni himoya qilishda davom etadi —
 mijoz manzili loopback boʻlmagan soʻrov **autentifikatsiya ishga tushishidan
@@ -153,7 +153,7 @@ kirmayotganini tekshirish uchun:
   yozuvlarni teskari proksi / kirish jurnallaridan grep orqali qidiring. `403 LOCAL_ONLY`
   o‘rniga `200` qaytargan har qanday shunday murojaat proksi haqiqiy mijoz IP
   manzilini yashirayotganini anglatadi — proksini tuzating.
-- Ushbu yo‘llardan biri uchun OmniRoute jurnallaridagi `403 LOCAL_ONLY` bostirilishi
+- Ushbu yo‘llardan biri uchun 67router jurnallaridagi `403 LOCAL_ONLY` bostirilishi
   kerak bo‘lgan xato emas, balki himoya mexanizmi kutilganidek ishlayotganini
   bildiradi.
 

@@ -14,7 +14,7 @@ Dos perfiles opcionales de Compose (`memory`, `bifrost`) para el despliegue exis
 
 ## Por qué este enfoque es conservador
 
-La arquitectura de despliegue existente de OmniRoute ya es ligera y está probada:
+La arquitectura de despliegue existente de 67router ya es ligera y está probada:
 
 - **`redis:7-alpine`** gestiona la carga de trabajo de limitación de solicitudes/caché a escala de producción.
 - **SQLite + sqlite-vec + FTS5** cubren la memoria local, los vectores y la búsqueda de texto (consulta [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Los dos perfiles aquí descritos son **opciones de escalado horizontal para desp
 
 - Ejecutas ≥3 réplicas de `omniroute` y quieres centralizar la rotación de proveedores en un único proceso de Go.
 - Quieres una única superficie de auditoría/registro para las solicitudes a proveedores ascendentes de todas las réplicas.
-- Quieres escalar horizontalmente la capa de enrutamiento de nivel 1 con independencia de las réplicas de OmniRoute.
+- Quieres escalar horizontalmente la capa de enrutamiento de nivel 1 con independencia de las réplicas de 67router.
 
 **Qué añade:**
 

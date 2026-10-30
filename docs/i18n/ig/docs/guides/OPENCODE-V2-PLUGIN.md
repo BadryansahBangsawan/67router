@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` na-etinye katalọgụ OmniRoute gị niile — ụdị, ngwakọta na
+`@omniroute/opencode-plugin-v2` na-etinye katalọgụ 67router gị niile — ụdị, ngwakọta na
 ngwakọta-akpaka — n'ime ihe nhọpụta ụdị nke OpenCode v2, tinyere aha ngosi, ọnụahịa na oke
 ojiji nke ọkwa efu.
 
@@ -15,7 +15,7 @@ ha na-ekekọrịta, ya mere imelite otu anaghị amanye ka e melite nke ọzọ
 ## Ihe achọrọ
 
 - OpenCode v2.
-- Ọnụ ụzọ OmniRoute enwere ike iru (`http://localhost:20128` na ndabara).
+- Ọnụ ụzọ 67router enwere ike iru (`http://localhost:20128` na ndabara).
 - Node.js 22 ma ọ bụ 24.
 
 ## Nwụnye
@@ -78,7 +78,7 @@ na-akpọ endpoint ahụ aha ma kọwaa ihe furu efu — ya mere ihe nhọpụta
 | `baseURL`                        | achọrọ                                    | Mgbọrọgwụ gateway, naanị `http(s)`; a na-agbakwunye suffix `/v1` ebe achọrọ                                                                   |
 | `apiKey`                         | nzere ejikọrọ, emesịa `OMNIROUTE_API_KEY` | Igodo nkata maka `/v1/*`                                                                                                                      |
 | `managementReadToken`            | na-eji `apiKey` ma ọ bụrụ na ọ dịghị      | Igodo maka `/api/*` — ọ naghị abụkarị **otu** igodo ahụ                                                                                       |
-| `displayName`                    | `"OmniRoute"`                             | Aha onye na-eweta n'ime ihe nhọpụta                                                                                                           |
+| `displayName`                    | `"67router"`                              | Aha onye na-eweta n'ime ihe nhọpụta                                                                                                           |
 | `timeoutMs`                      | `10000`                                   | Oge nchere kachasị maka fetch nke endpoint ọ bụla (auto-combos na-eji sekọnd 5)                                                               |
 | `modelCacheTtlMs`                | `300000`                                  | TTL cache katalọgụ; snapshot dị na diski na-eme ka mbido oyi dị ngwa                                                                          |
 | `timeouts`                       | na-eji `timeoutMs` ma ọ bụrụ na ọ dịghị   | Oke oge endpoint ọ bụla na ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                 |
@@ -128,7 +128,7 @@ Tọọ `"geminiSanitization": false` iji gbanyụọ ya.
 
 | Mgbaàmà                                                        | Ihe kpatara ya                                                                                                  |
 | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Onye nhọpụta anaghị egosi model OmniRoute ọ bụla               | Ọ dịghị key a chọtara (lelee ịdọ aka ná ntị mgbe mmalite), ma ọ bụ enweghị ike iru gateway ahụ                  |
+| Onye nhọpụta anaghị egosi model 67router ọ bụla                | Ọ dịghị key a chọtara (lelee ịdọ aka ná ntị mgbe mmalite), ma ọ bụ enweghị ike iru gateway ahụ                  |
 | Model ids nkịtị, enweghị combos, enweghị ọnụahịa               | Management endpoints jụrụ token ahụ — tọọ `managementReadToken`                                                 |
 | Catalog `freeOnly` dị mkpụmkpụ ma ọ bụ tọgbọ chakoo            | Enweghị management token ma ọ bụ token a jụrụ — gụọ ahịrị nchịkọta refresh (`unmatched-free` count) na host log |
 | Session etinyere n’ụzọ na-adịgide adịgide na `opencode-<id>/…` | Plugin v1 bipụtara `opencode-<id>`; v2 na-ebipụta naanị `<id>`, ya mere họrọ model ahụ ọzọ n’okpuru `<id>/…`    |

@@ -4,10 +4,10 @@
 
 ---
 
-Cursor-u IDE sessiyası olmadan OmniRoute arxasında yerləşdirməyin iki yolu:
+Cursor-u IDE sessiyası olmadan 67router arxasında yerləşdirməyin iki yolu:
 
-1. **`cursor-api` provayderi** (`Cursor API` kartı, `cua` aliası): Cursor istifadəçi API açarını (`crsr_…`, `https://cursor.com/dashboard/api` ünvanında yaradılır) saxlayan API açarlı provayder. Bundan sonra istənilən OmniRoute klienti adi kvota, ehtiyat marşrut və loqlaşdırma qatları ilə `/v1/chat/completions` vasitəsilə Cursor modellərinə `cursor-api/<model>` və ya `cua/<model>` kimi müraciət edə bilər. IDE provayderi (`cursor`, OAuth/IDE sessiyası) dəyişməz qalır.
-2. **Cursor CLI birbaşa ötürməsi**: Cursor CLI-ni (`agent`) OmniRoute-a yönəldin ki, CLI tərəfindən edilən hər bir RPC OmniRoute API açarı ilə autentifikasiya olunsun, `cursor-api` bağlantısının giriş məlumatları ilə Cursor-a ötürülsün və Logs səhifəsində qeydə alınsın.
+1. **`cursor-api` provayderi** (`Cursor API` kartı, `cua` aliası): Cursor istifadəçi API açarını (`crsr_…`, `https://cursor.com/dashboard/api` ünvanında yaradılır) saxlayan API açarlı provayder. Bundan sonra istənilən 67router klienti adi kvota, ehtiyat marşrut və loqlaşdırma qatları ilə `/v1/chat/completions` vasitəsilə Cursor modellərinə `cursor-api/<model>` və ya `cua/<model>` kimi müraciət edə bilər. IDE provayderi (`cursor`, OAuth/IDE sessiyası) dəyişməz qalır.
+2. **Cursor CLI birbaşa ötürməsi**: Cursor CLI-ni (`agent`) 67router-a yönəldin ki, CLI tərəfindən edilən hər bir RPC 67router API açarı ilə autentifikasiya olunsun, `cursor-api` bağlantısının giriş məlumatları ilə Cursor-a ötürülsün və Logs səhifəsində qeydə alınsın.
 
 ## Açar niyə mübadilə edilir
 
@@ -44,12 +44,12 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 Qeydlər:
 
-- `cursor-api` üçün model siyahısı statik Cursor reyestrindən gəlir (IDE provayderinin ehtiyat variant kimi istifadə etdiyi eyni siyahı); OmniRoute hostunda `cursor-agent` quraşdırılmasına ehtiyac yoxdur.
+- `cursor-api` üçün model siyahısı statik Cursor reyestrindən gəlir (IDE provayderinin ehtiyat variant kimi istifadə etdiyi eyni siyahı); 67router hostunda `cursor-agent` quraşdırılmasına ehtiyac yoxdur.
 - `POST /api/providers/{id}/refresh-cursor` yalnız `cursor` IDE provayderi üçündür; `cursor-api` bağlantılarında yenilənəcək IDE sessiyası yoxdur.
 
 ## Doğma model ID-ləri və səy səviyyəsi
 
-`cursor` / `cu` və `cursor-api` / `cua` üçün ortaq Claude səy normallaşdırıcısı tələb olunan model ID-sini olduğu kimi saxlayır. Cursor `-low` kimi bir suffiksi OmniRoute səy aliası kimi deyil, real model ID-sinin bir hissəsi kimi təqdim edə bilər.
+`cursor` / `cu` və `cursor-api` / `cua` üçün ortaq Claude səy normallaşdırıcısı tələb olunan model ID-sini olduğu kimi saxlayır. Cursor `-low` kimi bir suffiksi 67router səy aliası kimi deyil, real model ID-sinin bir hissəsi kimi təqdim edə bilər.
 Cursor icraçısı canlı kataloqdakı dəqiq uyğunluğu qoruyur; uyğunluq olmadıqda, onun mövcud model həlledicisi suffiksdən parametrə ehtiyat çevrilməni idarə edir.
 
 Bu, birbaşa Claude, Claude-uyğun və ya Vertex marşrutları üçün səy normallaşdırmasını dəyişmir. Əlçatanlıq yenə də seçilmiş Cursor hesabının kataloqundan və hüquqlarından asılıdır.
@@ -61,18 +61,18 @@ Marşrut: `src/app/api/cursor-cli/[...path]/route.ts` →
 `src/shared/constants/publicApiRoutes.ts` faylında qeydiyyatdan keçirilib, çünki işləyici
 öz autentifikasiyasını həyata keçirir:
 
-| Yol                                                                                                                            | CLI-dan gözlənilən autentifikasiya | OmniRoute-un etdiyi                                                                                                                                                                       |
+| Yol                                                                                                                            | CLI-dan gözlənilən autentifikasiya | 67router-un etdiyi                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <OmniRoute API key>`       | Açarı doğrulayır, 1 saatlıq HS256 JWT (`JWT_SECRET` ilə imzalanmış) yaradır və onu qaytarır                                                                                               |
+| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <67router API key>`        | Açarı doğrulayır, 1 saatlıq HS256 JWT (`JWT_SECRET` ilə imzalanmış) yaradır və onu qaytarır                                                                                               |
 | bütün digər yollar (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                | Emitenti/auditoriyanı/etibarlılıq müddətini yoxlayır, aktiv `cursor-api` bağlantısı seçir, Authorization başlığını mübadilə edilmiş Cursor tokeni ilə əvəzləyir və cavabı geri yayımlayır |
 
 CLI aldığı istənilən tokendən `exp` dəyərini deşifrə edir, buna görə də ona qeyri-şəffaf
 token verilməsi demək olar ki, hər sorğudan əvvəl yenidən mübadilə etməsinə səbəb olur; yaradılmış JWT
-bunun qarşısını alır. OmniRoute-dan gələn 401 cavabı CLI-ın yenidən mübadilə etməsinə səbəb olur.
+bunun qarşısını alır. 67router-dan gələn 401 cavabı CLI-ın yenidən mübadilə etməsinə səbəb olur.
 
 ### Quraşdırma
 
-1. OmniRoute API açarı (İdarəetmə paneli → API açarları) və `cursor-api`
+1. 67router API açarı (İdarəetmə paneli → API açarları) və `cursor-api`
    bağlantısı yaradın.
 2. CLI-a agent axını üçün HTTP/1.1 istifadə etməsini bildirin.
    `~/.cursor/cli-config.json` faylında:
@@ -85,7 +85,7 @@ bunun qarşısını alır. OmniRoute-dan gələn 401 cavabı CLI-ın yenidən m�
    agent hostuna HTTP/2 üzərindən açır və yalnız idarəetmə müstəvisi RPC-ləri
    son nöqtədən keçir.
 
-3. CLI-ı OmniRoute ilə işlədin:
+3. CLI-ı 67router ilə işlədin:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -94,17 +94,17 @@ bunun qarşısını alır. OmniRoute-dan gələn 401 cavabı CLI-ın yenidən m�
    ```
 
 Hər keçid Jurnallarda `cursor-api` provayderi, `cursor-cli` sorğu növü və
-`/api/cursor-cli/<rpc>` yolu ilə qeydə alınır və OmniRoute API açarına, həmçinin
+`/api/cursor-cli/<rpc>` yolu ilə qeydə alınır və 67router API açarına, həmçinin
 sorğunu emal etmiş bağlantıya aid edilir.
 
 ### Xəta halları
 
 | Vəziyyət                                            | CLI-a cavab                                      |
 | --------------------------------------------------- | ------------------------------------------------ |
-| Naməlum OmniRoute açarı və `REQUIRE_API_KEY=true`   | Mübadilə zamanı 401 `unauthenticated`            |
+| Naməlum 67router açarı və `REQUIRE_API_KEY=true`    | Mübadilə zamanı 401 `unauthenticated`            |
 | `REQUIRE_API_KEY=false`                             | anonim sessiya (`/v1/*` davranışını təkrarlayır) |
 | Müddəti bitmiş / yad / dəyişdirilmiş sessiya JWT-si | 401, CLI yenidən mübadilə edir                   |
-| OmniRoute API açarı mübadilədən sonra ləğv edilib   | Növbəti RPC zamanı 401                           |
+| 67router API açarı mübadilədən sonra ləğv edilib    | Növbəti RPC zamanı 401                           |
 | Aktiv `cursor-api` bağlantısı yoxdur                | 503 `unavailable`                                |
 | Cursor bağlantının açarını rədd edir                | 401 `unauthenticated`, keşlənmiş sessiya silinir |
 | Yuxarı axın əlçatan deyil                           | 502 `unavailable` (təmizlənmiş mesaj)            |

@@ -4,7 +4,7 @@
 
 ---
 
-> **Apakah dokumen ini.** Penilaian kritikal terhadap sistem gerbang kualiti OmniRoute,
+> **Apakah dokumen ini.** Penilaian kritikal terhadap sistem gerbang kualiti 67router,
 > berbanding dengan amalan terbaik industri, **serta** katalog menyeluruh bagi semua pusat
 > pemeriksaan kualiti dan **pelan replikasi bebas alat** untuk menerapkan sistem yang sama pada
 > mana-mana projek. Dijana pada 2026-06-16 berdasarkan keadaan sebenar repositori (bukan berdasarkan ingatan).
@@ -112,62 +112,62 @@ untuk dilaksanakan semula pada sebarang tindanan.
 
 ### 1. Gaya & pemformatan (deterministik, pantas)
 
-- **OmniRoute:** Prettier + ESLint melalui lint-staged (pra-komit), 2 ruang/petikan berganda/100 lajur.
+- **67router:** Prettier + ESLint melalui lint-staged (pra-komit), 2 ruang/petikan berganda/100 lajur.
 - **Generik:** satu pemformat yang boleh membaiki secara automatik + satu pelinter, dijalankan semasa pra-komit pada fail yang telah dipentaskan.
 
 ### 2. Jenis
 
-- **OmniRoute:** `typecheck:core` (menyekat) + `typecheck:noimplicit:core` (nasihat) + peningkatan berperingkat `type-coverage` sebanyak 92.17% + bajet any bagi setiap fail.
+- **67router:** `typecheck:core` (menyekat) + `typecheck:noimplicit:core` (nasihat) + peningkatan berperingkat `type-coverage` sebanyak 92.17% + bajet any bagi setiap fail.
 - **Generik:** semakan jenis ketat dalam CI + metrik liputan jenis yang dinaikkan secara berperingkat + bajet `any`/jalan keluar bagi setiap fail.
 
 ### 3. Ujian (keamatan)
 
-- **OmniRoute:** 2 pelaksana yang tidak bertindih (Node natif + vitest), 8 serpihan, liputan global 60/60/60/60 + peningkatan berperingkat ~76% + **8 paras minimum setiap modul untuk modul kritikal** + ujian sifat setiap malam + **ujian mutasi** setiap malam.
+- **67router:** 2 pelaksana yang tidak bertindih (Node natif + vitest), 8 serpihan, liputan global 60/60/60/60 + peningkatan berperingkat ~76% + **8 paras minimum setiap modul untuk modul kritikal** + ujian sifat setiap malam + **ujian mutasi** setiap malam.
 - **Generik:** pelaksana ujian + paras minimum liputan **mutlak** (anti-sifar) + **peningkatan berperingkat** liputan (anti-regresi) + **paras minimum setiap modul untuk kod berisiko tinggi** (anti-Goodhart) + berasaskan sifat untuk logik tulen + **ujian mutasi** setiap malam sebagai ukuran sebenar kualiti ujian.
 
 ### 4. Dasar ujian (anti-manipulasi)
 
-- **OmniRoute:** `pr-test-policy` (kod produksi memerlukan ujian), `check-test-masking` (menyekat penegasan yang dilemahkan), `pr-evidence` (dakwaan kejayaan memerlukan blok bukti), `test-discovery` (setiap ujian dikumpulkan oleh pelaksana).
+- **67router:** `pr-test-policy` (kod produksi memerlukan ujian), `check-test-masking` (menyekat penegasan yang dilemahkan), `pr-evidence` (dakwaan kejayaan memerlukan blok bukti), `test-discovery` (setiap ujian dikumpulkan oleh pelaksana).
 - **Generik:** get "kod baharu ⇒ ujian baharu" + pengesan penegasan yang dialih keluar/tautologi + keperluan bukti (TDD atau ujian aktif) + jaminan bahawa tiada ujian terbiar di luar glob.
 
 ### 5. Kerumitan & kesihatan kod (peningkatan berperingkat)
 
-- **OmniRoute:** amaran ESLint (3769↓), penduaan jscpd (5.72%↓), kerumitan siklomatik+max-lines (1800↓), kerumitan kognitif sonarjs (753↓), kod mati/eksport tidak digunakan knip (339↓), saiz fail bagi setiap fail (dibekukan, hanya boleh dikecilkan), kebergantungan kitaran (Tarjan tersuai, menyekat).
+- **67router:** amaran ESLint (3769↓), penduaan jscpd (5.72%↓), kerumitan siklomatik+max-lines (1800↓), kerumitan kognitif sonarjs (753↓), kod mati/eksport tidak digunakan knip (339↓), saiz fail bagi setiap fail (dibekukan, hanya boleh dikecilkan), kebergantungan kitaran (Tarjan tersuai, menyekat).
 - **Generik:** tingkatkan setiap metrik kesihatan secara berperingkat (amaran, penduaan, kerumitan siklomatik **dan** kognitif, kod mati, saiz fail, kitaran import). Arahnya sentiasa "jangan mundur".
 
 ### 6. Keselamatan statik (SAST + rahsia)
 
-- **OmniRoute:** CodeQL (peningkatan berperingkat amaran = 0), gitleaks (`[extend] useDefault=true` — kritikal!), SonarQube, peraturan keselamatan tersuai (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (peningkatan berperingkat amaran = 0), gitleaks (`[extend] useDefault=true` — kritikal!), SonarQube, peraturan keselamatan tersuai (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generik:** SAST (CodeQL/Sonar/semgrep) dengan peningkatan berperingkat amaran + pengimbas rahsia dengan **set peraturan lalai yang diwarisi** (konfigurasi tersuai yang menindih nilai lalai = titik buta) + get keselamatan Peraturan Tegas khusus projek.
 
 ### 7. Rantaian bekalan (kebergantungan)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (senarai dibenarkan SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (senarai dibenarkan + usia ≥72j).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (senarai dibenarkan SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (senarai dibenarkan + usia ≥72j).
 - **Generik:** SCA berbilang sumber + senarai lesen yang dibenarkan + semakan integriti fail kunci + senarai kebergantungan yang dibenarkan dengan semakan usia/typosquatting + bot kemas kini berkumpulan.
 
 ### 8. Rantaian bekalan (binaan & keluaran)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), asal-usul SLSA (`--provenance`), OpenSSF Scorecard (mingguan), pengukuhan aliran kerja (zizmor: artipacked→`persist-credentials:false`, peracunan cache, keizinan token).
+- **67router:** SBOM (CycloneDX + syft), asal-usul SLSA (`--provenance`), OpenSSF Scorecard (mingguan), pengukuhan aliran kerja (zizmor: artipacked→`persist-credentials:false`, peracunan cache, keizinan token).
 - **Generik:** jana SBOM semasa penerbitan + asal-usul bertandatangan (SLSA L2+) + Scorecard berjadual + kukuhkan semua aliran kerja (token keistimewaan minimum, tiada bukti kelayakan yang dikekalkan pada checkout bukan penolak, tindakan disematkan menggunakan SHA).
 
 ### 9. Kontrak & API
 
-- **OmniRoute:** oasdiff (perubahan pecah OpenAPI), schemathesis (ujian kabur kontrak setiap malam), openapi-coverage (% laluan yang didokumenkan, peningkatan berperingkat 38.3%), openapi-security-tiers (spesifikasi berbanding pengawal laluan).
+- **67router:** oasdiff (perubahan pecah OpenAPI), schemathesis (ujian kabur kontrak setiap malam), openapi-coverage (% laluan yang didokumenkan, peningkatan berperingkat 38.3%), openapi-security-tiers (spesifikasi berbanding pengawal laluan).
 - **Generik:** perbezaan kontrak perubahan pecah (oasdiff/buf) + ujian kabur berasaskan sifat terhadap spesifikasi (schemathesis) + liputan dokumentasi yang ditingkatkan secara berperingkat + ketekalan spesifikasi↔kod.
 
 ### 10. Dokumentasi & i18n (anti-lapuk)
 
-- **OmniRoute:** docs-sync (versi cerminan), docs-counts-sync (nombor dalam dokumentasi berbanding kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + peningkatan berperingkat 80.1%).
+- **67router:** docs-sync (versi cerminan), docs-counts-sync (nombor dalam dokumentasi berbanding kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + peningkatan berperingkat 80.1%).
 - **Generik:** segerakkan versi/kiraan/pemboleh ubah persekitaran antara dokumentasi dengan kod (get, bukan kepercayaan) + sahkan pautan dalaman + liputan i18n yang ditingkatkan secara berperingkat.
 
 ### 11. Anti-halusinasi / ketekalan (kategori yang jarang ditemui)
 
-- **OmniRoute:** known-symbols (penghantaran rentetan ⇒ simbol aktif), provider-consistency, fetch-targets (pengambilan klien ⇒ laluan sebenar), docs-symbols, db-rules (Peraturan Tegas #2/#5), migration-numbering.
+- **67router:** known-symbols (penghantaran rentetan ⇒ simbol aktif), provider-consistency, fetch-targets (pengambilan klien ⇒ laluan sebenar), docs-symbols, db-rules (Peraturan Tegas #2/#5), migration-numbering.
 - **Generik:** untuk setiap "sumber kebenaran pendua" (daftar, penghantaran rentetan, rujukan rentas lapisan), get yang membuktikan kedua-dua belah sepadan. Mengesan kelapukan yang tidak dikesan oleh semakan jenis/ujian.
 
 ### 12. Daya tahan & domain (khusus produk)
 
-- **OmniRoute:** chaos (suntikan kerosakan), heap-growth (kebocoran), k6 (berterusan), promptfoo+garak (pasukan merah LLM OWASP LLM Top 10), 3 hukum daya tahan (pemutus litar/tempoh bertenang/sekatan).
+- **67router:** chaos (suntikan kerosakan), heap-growth (kebocoran), k6 (berterusan), promptfoo+garak (pasukan merah LLM OWASP LLM Top 10), 3 hukum daya tahan (pemutus litar/tempoh bertenang/sekatan).
 - **Generik:** kenal pasti mod kegagalan bagi domain **anda** dan sediakan get (walaupun setiap malam) untuk setiap satunya. Untuk aplikasi AI: pasukan merah suntikan. Untuk sistem teragih: huru-hara + kebocoran + berterusan.
 
 ---

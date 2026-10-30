@@ -4,7 +4,7 @@
 
 ---
 
-Ang AgentBridge ay ang MITM (Man-in-the-Middle) proxy ng OmniRoute na humaharang sa trapikong HTTPS mula sa mga IDE AI agent at muling niruruta ito sa pamamagitan ng pinag-isang routing engine ng OmniRoute. Sinusuportahan nito ang **10 IDE agent** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, at Trae (iniimbestigahan) — kaya ang OmniRoute ang MITM proxy na may pinakamalawak na saklaw para sa mga AI coding assistant sa merkado.
+Ang AgentBridge ay ang MITM (Man-in-the-Middle) proxy ng 67router na humaharang sa trapikong HTTPS mula sa mga IDE AI agent at muling niruruta ito sa pamamagitan ng pinag-isang routing engine ng 67router. Sinusuportahan nito ang **10 IDE agent** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, at Trae (iniimbestigahan) — kaya ang 67router ang MITM proxy na may pinakamalawak na saklaw para sa mga AI coding assistant sa merkado.
 
 **Lokasyon ng dashboard:** `/dashboard/tools/agent-bridge`
 **Grupo sa sidebar:** Mga Tool (pagkatapos ng Mga Cloud Agent)
@@ -16,34 +16,34 @@ Ang AgentBridge ay ang MITM (Man-in-the-Middle) proxy ng OmniRoute na humaharang
 
 ### Ano ang AgentBridge?
 
-Kapag ang isang IDE agent (hal., GitHub Copilot, Cursor, Claude Code) ay gumagawa ng API call, direkta itong kumokonekta sa upstream AI provider (OpenAI, Anthropic, atbp.). Hinaharang ng AgentBridge ang koneksyong iyon nang transparent sa antas ng TLS — nang hindi nangangailangan ng anumang pagbabago sa configuration ng agent — at muling isinulat ang request sa pamamagitan ng OmniRoute.
+Kapag ang isang IDE agent (hal., GitHub Copilot, Cursor, Claude Code) ay gumagawa ng API call, direkta itong kumokonekta sa upstream AI provider (OpenAI, Anthropic, atbp.). Hinaharang ng AgentBridge ang koneksyong iyon nang transparent sa antas ng TLS — nang hindi nangangailangan ng anumang pagbabago sa configuration ng agent — at muling isinulat ang request sa pamamagitan ng 67router.
 
 Ibig sabihin nito, maaari mong:
 
-- **I-reroute ang anumang agent sa anumang provider**: Ang Copilot ay nakikipag-usap sa OpenAI? I-redirect ito sa Anthropic Claude, Gemini, o alinman sa 375 provider ng OmniRoute.
+- **I-reroute ang anumang agent sa anumang provider**: Ang Copilot ay nakikipag-usap sa OpenAI? I-redirect ito sa Anthropic Claude, Gemini, o alinman sa 375 provider ng 67router.
 - **Mag-apply ng model mappings**: `gemini-3-flash` → `claude-sonnet-4.7` nang transparent sa antas ng handler.
 - **Obserbahan ang lahat ng traffic ng agent**: ang bawat naharang na request ay nai-publish sa [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **I-apply ang resilience ng OmniRoute**: gumagana rin ang combo routing, circuit breakers, fallbacks, at cost tracking para sa traffic ng IDE agent.
+- **I-apply ang resilience ng 67router**: gumagana rin ang combo routing, circuit breakers, fallbacks, at cost tracking para sa traffic ng IDE agent.
 
 ### Posisyon kumpara sa merkado
 
-| Tampok               | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity          |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot       |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)           |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex         |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE           |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries       |    —    |    ✓     |        —        |             ✓             |
-| Claude Code          |    —    |    —     |        ✓        |             ✓             |
-| Open Code            |    —    |    —     |        ✓        |             ✓             |
-| Trae                 |    —    |    —     |        —        |    🔍 Iniimbestigahan     |
-| Dashboard UI         |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector    |    ✗    |    ✗     |        ✓        |             ✓             |
-| Routing ng OmniRoute |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI ng model mapping  |    ✗    |    ✗     |        ✗        |             ✓             |
-| Listahan ng bypass   |    ✗    |    ✗     |        ✓        |             ✓             |
-| Upstream CA cert     |    ✗    |    ✗     |        ✓        |             ✓             |
+| Tampok              | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity         |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot      |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)          |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex        |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE          |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries      |    —    |    ✓     |        —        |            ✓             |
+| Claude Code         |    —    |    —     |        ✓        |            ✓             |
+| Open Code           |    —    |    —     |        ✓        |            ✓             |
+| Trae                |    —    |    —     |        —        |    🔍 Iniimbestigahan    |
+| Dashboard UI        |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector   |    ✗    |    ✗     |        ✓        |            ✓             |
+| Routing ng 67router |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI ng model mapping |    ✗    |    ✗     |        ✗        |            ✓             |
+| Listahan ng bypass  |    ✗    |    ✗     |        ✓        |            ✓             |
+| Upstream CA cert    |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, CJS child process)
     │  tinutukoy ang target gamit ang Host header SNI
     │  bumubuo ng TLS cert para sa bawat SNI na nilagdaan ng AgentBridge CA
     ├── Tugma sa bypass list? → TCP passthrough (walang pag-decrypt)
-    ├── Tugma sa target? → fetch → OmniRoute router (port 20128)
+    ├── Tugma sa target? → fetch → 67router router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() sa request body/mga header
     │               ├── TrafficBuffer.push() — inilalathala sa Traffic Inspector
@@ -206,7 +206,7 @@ Kailangang pagkatiwalaan ng OS ang AgentBridge CA certificate bago tanggapin ng 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -263,10 +263,10 @@ Mga halimbawang entry sa `/etc/hosts` para sa GitHub Copilot:
 
 Gamitin ang Model Mapping Table sa bawat agent card upang tukuyin ang mga mapping mula source → target:
 
-| Source model (native sa agent) | Target model (OmniRoute) |
-| ------------------------------ | ------------------------ |
-| `gpt-4o`                       | `claude-sonnet-4.7`      |
-| `*` (wildcard)                 | `claude-haiku-4.7`       |
+| Source model (native sa agent) | Target model (67router) |
+| ------------------------------ | ----------------------- |
+| `gpt-4o`                       | `claude-sonnet-4.7`     |
+| `*` (wildcard)                 | `claude-haiku-4.7`      |
 
 Imapa ng wildcard na `*` ang anumang hindi nakikilalang modelo sa tinukoy na target. Pina-persist sa table na `agent_bridge_mappings`.
 
@@ -279,7 +279,7 @@ Imapa ng wildcard na `*` ang anumang hindi nakikilalang modelo sa tinukoy na tar
 
 ### 3.5 Paunawa sa panganib
 
-Ini-intercept ng AgentBridge ang mga credential (mga OAuth token, API key) na ginagamit ng IDE upang mag-authenticate sa mga upstream provider. Ang mga ito ay **mina-mask bago i-log** (tingnan ang §2.7) ngunit nakikita ng MITM layer ng OmniRoute. Sa unang pag-activate ng bawat agent, nagpapakita ng risk notice modal na maaaring i-dismiss.
+Ini-intercept ng AgentBridge ang mga credential (mga OAuth token, API key) na ginagamit ng IDE upang mag-authenticate sa mga upstream provider. Ang mga ito ay **mina-mask bago i-log** (tingnan ang §2.7) ngunit nakikita ng MITM layer ng 67router. Sa unang pag-activate ng bawat agent, nagpapakita ng risk notice modal na maaaring i-dismiss.
 
 ### 3.6 Pagpapanatili at Mga Diagnostic
 
@@ -399,7 +399,7 @@ Gumagamit ang pagtukoy ng mga path na partikular sa OS at mga pagsusuri sa binar
 
 ### Listahan ng bypass para sa mga sensitibong host
 
-Tinitiyak ng listahan ng bypass na ang mga institusyong pinansyal, OAuth/SSO provider, at iba pang sensitibong host ay **hindi kailanman dine-decrypt**. Dumaraan ang kanilang TLS traffic bilang transparent na TCP tunnel — hindi kailanman nakikita ng OmniRoute ang plaintext.
+Tinitiyak ng listahan ng bypass na ang mga institusyong pinansyal, OAuth/SSO provider, at iba pang sensitibong host ay **hindi kailanman dine-decrypt**. Dumaraan ang kanilang TLS traffic bilang transparent na TCP tunnel — hindi kailanman nakikita ng 67router ang plaintext.
 
 Kabilang sa mga default na pattern ng bypass ang:
 
@@ -450,7 +450,7 @@ Bilang alternatibo, mag-configure ng hindi pribilehiyong port sa mga setting ng 
 
 Kung nagpapakita ang IDE ng mga TLS error pagkatapos simulan ang AgentBridge:
 
-1. Tiyaking na-install ang cert: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) o `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Tiyaking na-install ang cert: `security find-certificate -c "67router AgentBridge"` (macOS) o `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Pinapanatili ng ilang app ang sarili nilang trust store (Firefox, Chrome sa Linux). Patakbuhin muli ang "Trust Cert" at suriin ang cert store na partikular sa NSS/Firefox.
 3. I-restart ang IDE pagkatapos pagkatiwalaan ang certificate — ginagamit ng mga kasalukuyang TLS session ang lumang trust state.
 
@@ -493,7 +493,7 @@ Gumagamit ang awtomatikong pagtukoy ng mga karaniwang path ng pag-install. Kung 
 Kung nakaka-intercept ang AgentBridge ngunit nabibigo ang lahat ng kahilingan:
 
 1. Tiyaking nakakonekta ang kahit isang provider sa `/dashboard/providers`
-2. Suriin ang mga log ng OmniRoute server: `APP_LOG_LEVEL=debug` sa `.env`
+2. Suriin ang mga log ng 67router server: `APP_LOG_LEVEL=debug` sa `.env`
 3. Tiyaking nakaturo ang `OMNIROUTE_BASE_URL` sa tamang router endpoint (default: `http://127.0.0.1:20128`)
 
 ---

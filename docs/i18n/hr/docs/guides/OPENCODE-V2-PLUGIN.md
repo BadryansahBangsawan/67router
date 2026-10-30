@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` dodaje cijeli vaš OmniRoute katalog — modele, kombinacije i
+`@omniroute/opencode-plugin-v2` dodaje cijeli vaš 67router katalog — modele, kombinacije i
 automatske kombinacije — u OpenCode v2 odabirnik modela, zajedno s nazivima za prikaz, cijenama i
 ograničenjima besplatne razine.
 
@@ -15,7 +15,7 @@ ne dijeli između njih, pa nadogradnja jednog nikada ne zahtijeva nadogradnju dr
 ## Preduvjeti
 
 - OpenCode v2.
-- Dostupan OmniRoute pristupnik (`http://localhost:20128` prema zadanim postavkama).
+- Dostupan 67router pristupnik (`http://localhost:20128` prema zadanim postavkama).
 - Node.js 22 ili 24.
 
 ## Instalacija
@@ -78,7 +78,7 @@ navodeći krajnju točku i što je izgubljeno — tako degradirani odabirnik nik
 | `baseURL`                        | obavezno                                         | Korijen pristupnika, samo `http(s)`; sufiks `/v1` dodaje se gdje je potreban                                                                       |
 | `apiKey`                         | povezana vjerodajnica, zatim `OMNIROUTE_API_KEY` | Ključ za razgovor za `/v1/*`                                                                                                                       |
 | `managementReadToken`            | koristi `apiKey` kao rezervnu vrijednost         | Ključ za `/api/*` — obično **nije** isti                                                                                                           |
-| `displayName`                    | `"OmniRoute"`                                    | Naziv pružatelja u izborniku                                                                                                                       |
+| `displayName`                    | `"67router"`                                     | Naziv pružatelja u izborniku                                                                                                                       |
 | `timeoutMs`                      | `10000`                                          | Vremensko ograničenje dohvaćanja po krajnjoj točki (automatske kombinacije koriste 5 s)                                                            |
 | `modelCacheTtlMs`                | `300000`                                         | TTL predmemorije kataloga; snimka na disku ubrzava hladna pokretanja                                                                               |
 | `timeouts`                       | koristi `timeoutMs` kao rezervnu vrijednost      | Ograničenja po krajnjoj točki u ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                 |
@@ -128,7 +128,7 @@ Postavite `"geminiSanitization": false` da biste to isključili.
 
 | Simptom                                            | Uzrok                                                                                                                                           |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Birač ne prikazuje nijedan OmniRoute model         | Nije pronađen nijedan ključ (provjerite upozorenje pri pokretanju) ili pristupnik nije dostupan                                                 |
+| Birač ne prikazuje nijedan 67router model          | Nije pronađen nijedan ključ (provjerite upozorenje pri pokretanju) ili pristupnik nije dostupan                                                 |
 | Neobrađeni ID-ovi modela, bez kombinacija i cijena | Krajnje točke za upravljanje odbile su token — postavite `managementReadToken`                                                                  |
 | Kratak ili prazan katalog `freeOnly`               | Nema tokena za upravljanje ili je token odbijen — pročitajte redak sa sažetkom osvježavanja (broj `unmatched-free`) u zapisniku glavnog procesa |
 | Sesija prikvačena na `opencode-<id>/…`             | Dodatak v1 objavio je `opencode-<id>`; v2 objavljuje samo `<id>`, stoga ponovno odaberite model pod `<id>/…`                                    |

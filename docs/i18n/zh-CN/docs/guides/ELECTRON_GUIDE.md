@@ -7,7 +7,7 @@
 > **事实来源：** `electron/` 工作区
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 提供基于 **Electron 41** + **electron-builder 26.10** 构建的跨平台桌面应用（Windows / macOS / Linux）。该桌面应用将 Next.js 独立服务器作为子进程启动，通过 `BrowserWindow` 访问该服务器，并提供系统托盘、自动更新程序、IPC 桥接和零配置密钥初始化功能。
+67router 提供基于 **Electron 41** + **electron-builder 26.10** 构建的跨平台桌面应用（Windows / macOS / Linux）。该桌面应用将 Next.js 独立服务器作为子进程启动，通过 `BrowserWindow` 访问该服务器，并提供系统托盘、自动更新程序、IPC 桥接和零配置密钥初始化功能。
 
 ## 架构
 
@@ -42,7 +42,7 @@ OmniRoute 提供基于 **Electron 41** + **electron-builder 26.10** 构建的跨
 | `better-sqlite3`   | 根目录 `^13.0.2`（Node-API 预构建版本——无需为 Electron 重新构建） |
 | 应用版本           | `3.8.0`                                                           |
 | 应用 ID            | `online.omniroute.desktop`                                        |
-| 产品名称           | `OmniRoute`                                                       |
+| 产品名称           | `67router`                                                        |
 
 ## 脚本（根目录 `package.json`）
 
@@ -180,7 +180,7 @@ spawn(process.execPath, [serverScript], {
 - `BrowserWindow`：1400×900（最小 1024×700），`backgroundColor: "#0a0a0a"`。
 - macOS：`titleBarStyle: "hiddenInset"`，窗口控制按钮位于 `{ x: 16, y: 16 }`。
 - Windows/Linux：原生标题栏。
-- 关闭按钮会将应用最小化到托盘；托盘菜单包含**打开 OmniRoute**、**打开仪表板**（外部浏览器）、**服务器端口**子菜单、**检查更新**、**退出**。
+- 关闭按钮会将应用最小化到托盘；托盘菜单包含**打开 67router**、**打开仪表板**（外部浏览器）、**服务器端口**子菜单、**检查更新**、**退出**。
 
 ## 内容安全策略
 

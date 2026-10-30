@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
-OmniRoute može slati HTTP webhookove pri događajima na platformi. Upotrijebite ih za integraciju sa
+67router može slati HTTP webhookove pri događajima na platformi. Upotrijebite ih za integraciju sa
 Slackom, PagerDutyjem, Datadogom, internim servisima za upozoravanje ili bilo kojim HTTP primateljem.
 
 Dispečer potpisuje svaku isporuku pomoću HMAC-SHA256, ponavlja pokušaje pri privremenim
@@ -54,7 +54,7 @@ pogreške pojedinačnih webhookova kako jedan neispravan primatelj ne bi mogao b
 
 ## Potpisivanje HMAC-om
 
-Kada webhook ima `secret`, OmniRoute potpisuje JSON tijelo i šalje:
+Kada webhook ima `secret`, 67router potpisuje JSON tijelo i šalje:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Stranica nadzorne ploče na `/dashboard/webhooks` (pogledajte
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Testna isporuka webhooka iz OmniRoutea",
+    "message": "Testna isporuka webhooka iz 67routera",
     "webhookId": "<uuid>"
   }
 }

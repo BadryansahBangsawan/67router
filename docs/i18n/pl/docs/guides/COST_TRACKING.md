@@ -6,7 +6,7 @@ lastUpdated: 2026-06-28
 
 # Śledzenie kosztów i wydatków
 
-Jak OmniRoute szacuje, rejestruje i raportuje koszt każdego żądania — oraz dlaczego
+Jak 67router szacuje, rejestruje i raportuje koszt każdego żądania — oraz dlaczego
 liczba na dashboardzie to **tracker oszczędności**, a nie rachunek.
 
 Zobacz też: [Przewodnik użytkownika](./USER_GUIDE.md) · [Galeria funkcji](./FEATURES.md)
@@ -15,11 +15,11 @@ Zobacz też: [Przewodnik użytkownika](./USER_GUIDE.md) · [Galeria funkcji](./F
 
 ## Czym jest (a czym nie jest)
 
-OmniRoute przypisuje koszt w USD do każdego completion, mnożąc liczbę tokenów przez
+67router przypisuje koszt w USD do każdego completion, mnożąc liczbę tokenów przez
 stawki cenowe modelu. Te liczby zasilają dashboard **Costs**, CLI
 `omniroute cost` / `omniroute usage`, eksporty CSV/JSON oraz budżety per klucz API.
 
-> **„Koszt” na dashboardzie to tracker oszczędności, a nie rachunek.** OmniRoute nigdy
+> **„Koszt” na dashboardzie to tracker oszczędności, a nie rachunek.** 67router nigdy
 > Cię nie obciąża — kieruje żądania do providerów, których już podłączyłeś (własne
 > subskrypcje, darmowe tiery i klucze API). „Łączny koszt $290” narosły wyłącznie na
 > darmowych modelach oznacza mniej więcej **$290, których _nie_ zapłaciłeś** płatnemu
@@ -32,7 +32,7 @@ To ujęcie jest wprost w projekcie [README](../../README.md) („the dashboard
 
 Ponieważ liczba jest szacunkiem:
 
-- Zależy od tabeli cen OmniRoute dla każdego modelu. Model bez wpisu cenowego
+- Zależy od tabeli cen 67router dla każdego modelu. Model bez wpisu cenowego
   wnosi koszt `0` (w explorerze widać go jako wiersz „Legacy / Free”).
 - Ruch z free-tier i subskrypcji nadal narasta jako _szacowany_ koszt — to kwota,
   którą oszczędzasz, a nie kwota do zapłaty.
@@ -50,7 +50,7 @@ Koszty pochodzą z tabeli cen rozwiązywanej w tej kolejności pierwszeństwa
 2. **Zsynchronizowane ceny zewnętrzne** — pobierane z publicznego pliku LiteLLM
    `model_prices_and_context_window.json`, gdy sync jest włączony (przechowywane w osobnej
    przestrzeni nazw `pricing_synced`, więc nigdy nie nadpisują Twoich override’ów).
-3. **Zakodowane na stałe domyślne** — dostarczane z OmniRoute.
+3. **Zakodowane na stałe domyślne** — dostarczane z 67router.
 
 Zewnętrzny sync cen jest **opt-in**, domyślnie wyłączony. Istotne zmienne środowiskowe
 (zob. [`.env.example`](../../.env.example)):
@@ -199,7 +199,7 @@ nie zaznaczono inaczej.
 
 ## CLI
 
-CLI OmniRoute udostępnia komendy cost, usage i pricing (zarejestrowane w
+CLI 67router udostępnia komendy cost, usage i pricing (zarejestrowane w
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

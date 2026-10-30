@@ -15,7 +15,7 @@ OAuth default များ၊ header များ သို့မဟုတ် pr
 အလားတူ manifest ကို process ပြင်ပတွင် လည်ပတ်သော sidecar များအတွက် HTTP မှတစ်ဆင့်
 `GET /api/v1/provider-plugin-manifest` တွင် ရရှိနိုင်သည်။
 
-OmniRoute သည် ထို URL ကို `X-OmniRoute-Provider-Manifest-Url` request header မှတစ်ဆင့်
+67router သည် ထို URL ကို `X-OmniRoute-Provider-Manifest-Url` request header မှတစ်ဆင့်
 Bifrost နှင့် CLIProxyAPI သို့ အသိပေးသည်။ sidecar က local request origin အစား
 public URL သို့မဟုတ် container network URL လိုအပ်သည့်အခါ
 `OMNIROUTE_PROVIDER_MANIFEST_URL` ကို သတ်မှတ်ပါ။
@@ -32,7 +32,7 @@ unconditional request တစ်ခု ပြုလုပ်ရမည်။
 
 ## ရည်ရွယ်ချက်
 
-OmniRoute က TypeScript route ကို policy gate နှင့် fallback အဖြစ် ဆက်လက်ထားရှိစဉ်
+67router က TypeScript route ကို policy gate နှင့် fallback အဖြစ် ဆက်လက်ထားရှိစဉ်
 latency ပိုနည်းသော sidecar က hot request path ကို နောက်ဆုံးတွင် တာဝန်ယူနိုင်ရန်
 provider metadata ကို plugin contract ပုံစံသို့ ရွှေ့ပြောင်းရန် ဖြစ်သည်။
 manifest သည် additive ဖြစ်ပြီး ၎င်းတစ်ခုတည်းဖြင့် request routing ကို
@@ -77,7 +77,7 @@ manifest သည် အောက်ပါတို့ကို ရည်ရွယ
 | `usage-fetch`        | ချိတ်ဆက်ထားသော usage သို့မဟုတ် quota fetcher (`getUsageForProvider`) ရှိသည်။               |
 | `usage-supported`    | usage API က ဤ provider ကို လက်ခံသည် (`isSupportedUsageConnection`)။                        |
 
-`usage-fetch` သည် ရှာဖွေသိရှိရန်အတွက်သာ ဖြစ်သည်။ OmniRoute က provider အတွက် usage ကို
+`usage-fetch` သည် ရှာဖွေသိရှိရန်အတွက်သာ ဖြစ်သည်။ 67router က provider အတွက် usage ကို
 မည်သို့ဖတ်ရမည်ကို သိကြောင်း ဖော်ပြခြင်းသာဖြစ်ပြီး fetching ကို အသက်သွင်းခြင်း၊ quota semantics ကို
 ပြောင်းလဲခြင်း သို့မဟုတ် Dashboard quota widget ကို provider အတွက် ဖွင့်ထားကြောင်း သွယ်ဝိုက်ညွှန်ပြခြင်း
 မဟုတ်ပါ — ထို widget ကို `USAGE_SUPPORTED_PROVIDERS` ဖြင့် သီးခြားထိန်းချုပ်ထားသည်။

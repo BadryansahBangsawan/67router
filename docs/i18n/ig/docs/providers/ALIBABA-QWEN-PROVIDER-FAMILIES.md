@@ -9,7 +9,7 @@ Akwụkwọ a na-edekọ mkpebi mmejuputa maka
 
 ## Mkpebi
 
-| Ezinụlọ onye na-eweta ọrụ                     | OmniRoute ID            | Mpaghara ụwa | Mpaghara China |
+| Ezinụlọ onye na-eweta ọrụ                     | 67router ID             | Mpaghara ụwa | Mpaghara China |
 | --------------------------------------------- | ----------------------- | ------------ | -------------- |
 | Alibaba Cloud Model Studio (kwụọ ka ị na-eji) | `alibaba`               | Singapore    | Beijing        |
 | Alibaba Cloud Token Plan                      | `bailian-coding-plan`   | Singapore    | Beijing        |

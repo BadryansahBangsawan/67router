@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** yana sanya duk wani model da OmniRoute ɗinka ke samarwa cikin mai zaɓar model na _asali_ na GitHub Copilot Chat.
+**OmniCopilot** yana sanya duk wani model da 67router ɗinka ke samarwa cikin mai zaɓar model na _asali_ na GitHub Copilot Chat.
 Babu sidebar na biyu, babu wata UI ta chat dabam — agent mode na Copilot, kiran kayan aiki,
 MCP servers da custom instructions duk suna ci gaba da aiki, sai dai suna gudana ne a kan model ɗin da ka zaɓa.
 
@@ -23,13 +23,13 @@ MCP servers da custom instructions duk suna ci gaba da aiki, sai dai suna gudana
 
 ## Saitawa
 
-1. **Gudanar da OmniRoute** — `npm install -g omniroute && omniroute` (dashboard a `http://localhost:20128`).
-2. **Shigar da extension** — bincika "OmniRoute" a cikin kallon Extensions.
-3. **Zaɓi model** — Copilot Chat → mai zaɓar model → **Manage Models…** → **OmniRoute**, sannan ka yi alama
+1. **Gudanar da 67router** — `npm install -g omniroute && omniroute` (dashboard a `http://localhost:20128`).
+2. **Shigar da extension** — bincika "67router" a cikin kallon Extensions.
+3. **Zaɓi model** — Copilot Chat → mai zaɓar model → **Manage Models…** → **67router**, sannan ka yi alama
    a kan waɗanda kake so.
 
-Ba sai an saita komai ba idan OmniRoute yana gudana a default port. Don instance mai nisa, buɗe
-**alamar OmniRoute a Activity Bar** (ko gudanar da `OmniRoute: Manage Connection`) sannan ka saita:
+Ba sai an saita komai ba idan 67router yana gudana a default port. Don instance mai nisa, buɗe
+**alamar 67router a Activity Bar** (ko gudanar da `67router: Manage Connection`) sannan ka saita:
 
 - **Server URL** — tushen server, misali `http://192.168.0.15:20128`. Extension ɗin ne yake
   ƙara suffix ɗin `/v1`; kada ka haɗa shi.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' model ne na ƙirƙirar hoto kuma ba za a iya amfani da
 
 saboda haka ana tace su ta amfani da field ɗinsu na `type` kafin su isa ga mai zaɓar. **Ana riƙe da Responses-API
 models** — kowane Codex / GPT-5.x entry yana tallata `supported_endpoints: ["responses"]`,
-kuma OmniRoute yana fassara waɗannan don `/v1/chat/completions`, saboda haka ana iya amfani da su sosai.
+kuma 67router yana fassara waɗannan don `/v1/chat/completions`, saboda haka ana iya amfani da su sosai.
 
 ### Providers da ba ka taɓa saita su ba
 
@@ -88,7 +88,7 @@ extension.
 
 ## Dashboard a cikin shafin VS Code
 
-`omnicopilot.dashboardOpen: "editor"` yana nuna dashboard na OmniRoute a cikin shafin edita ta hanyar
+`omnicopilot.dashboardOpen: "editor"` yana nuna dashboard na 67router a cikin shafin edita ta hanyar
 Simple Browser maimakon burauzar waje. Saka shi a ciki **zaɓi ne da ake kunnawa a uwar garke** ta hanyar
 `DASHBOARD_ALLOW_EMBED=vscode`, wanda ke gabatar da shafukan HTML tare da
 `frame-ancestors 'self' vscode-webview:` maimakon tsohon `frame-ancestors 'none'` +
@@ -121,7 +121,7 @@ Duba [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) da issue
 
 ## Daidaita sauran kayan aikinku daga cikin VS Code
 
-**`OmniRoute: Configure Coding CLI`** yana sarrafa `omniroute` CLI domin rubuta profiles da suke shirye don amfani
+**`67router: Configure Coding CLI`** yana sarrafa `omniroute` CLI domin rubuta profiles da suke shirye don amfani
 ga Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo da Roo — config iri ɗaya da aka bayyana a
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Ana miƙa API key ɗin zuwa CLI ta hanyar
@@ -131,20 +131,20 @@ environment variable `OMNIROUTE_API_KEY`, ba a kan command line ba.
 
 ## Warware matsaloli
 
-| Alama                                                   | Dalili / gyara                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Babu models na OmniRoute a cikin picker                 | Ba a iya isa ga uwar garken. Digon status-bar zai koma toka; gudanar da `OmniRoute: Check Connection`. An tsara discovery ya yi shiru kuma ba zai ƙara models ba maimakon ya nuna prompt.                                                                                   |
-| Kowane model yana bayyana sau biyu                      | Kuna amfani da OmniCopilot wanda ya girmi 1.0.1 — sabunta shi. Yanzu extension ɗin yana neman `?prefix=alias`.                                                                                                                                                              |
-| An daina nuna image/audio model da ake nunawa a da      | An yi hakan da gangan tun daga 1.0.1 — ba zai taɓa iya amsa chat request ba.                                                                                                                                                                                                |
-| Panel ya ɓace daga Activity Bar                         | VS Code yana matsar da ƙarin view containers zuwa **"…"** na overflow a ƙasan Activity Bar, kuma container da aka ɓoye ta hanyar danna-dama zai ci gaba da kasancewa a ɓoye. Danna-dama a Activity Bar → zaɓi **OmniRoute**, ko buɗe shi da `OmniRoute: Manage Connection`. |
-| Dashboard yana buɗewa a burauza duk da yanayin `editor` | Ba a yi wa uwar garken **build** da `DASHBOARD_ALLOW_EMBED=vscode` ba (duba sama) — saita shi lokacin startup a kan prebuilt install ba ya canza komai. Komawa ga burauzar waje da gangan ne.                                                                               |
-| Jerin models bai sabunta ba bayan canza providers       | `OmniRoute: Refresh Models`, ko mahaɗin ↻ da ke cikin panel.                                                                                                                                                                                                                |
+| Alama                                                   | Dalili / gyara                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Babu models na 67router a cikin picker                  | Ba a iya isa ga uwar garken. Digon status-bar zai koma toka; gudanar da `67router: Check Connection`. An tsara discovery ya yi shiru kuma ba zai ƙara models ba maimakon ya nuna prompt.                                                                                  |
+| Kowane model yana bayyana sau biyu                      | Kuna amfani da OmniCopilot wanda ya girmi 1.0.1 — sabunta shi. Yanzu extension ɗin yana neman `?prefix=alias`.                                                                                                                                                            |
+| An daina nuna image/audio model da ake nunawa a da      | An yi hakan da gangan tun daga 1.0.1 — ba zai taɓa iya amsa chat request ba.                                                                                                                                                                                              |
+| Panel ya ɓace daga Activity Bar                         | VS Code yana matsar da ƙarin view containers zuwa **"…"** na overflow a ƙasan Activity Bar, kuma container da aka ɓoye ta hanyar danna-dama zai ci gaba da kasancewa a ɓoye. Danna-dama a Activity Bar → zaɓi **67router**, ko buɗe shi da `67router: Manage Connection`. |
+| Dashboard yana buɗewa a burauza duk da yanayin `editor` | Ba a yi wa uwar garken **build** da `DASHBOARD_ALLOW_EMBED=vscode` ba (duba sama) — saita shi lokacin startup a kan prebuilt install ba ya canza komai. Komawa ga burauzar waje da gangan ne.                                                                             |
+| Jerin models bai sabunta ba bayan canza providers       | `67router: Refresh Models`, ko mahaɗin ↻ da ke cikin panel.                                                                                                                                                                                                               |
 
 ---
 
 ## Duba kuma
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — duk sauran kayan aikin rubuta lamba
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — sarrafa OmniRoute daga nesa
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — sarrafa 67router daga nesa
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — ƙa'idar `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — bayanan kundin tsararrun na extension ɗin kansa

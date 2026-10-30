@@ -6,7 +6,7 @@
 
 🌐 **Diller:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API için temel başvuru kaynağı. Herkese açık `/v1` yüzeyini ve en çok kullanılan yönetim uç noktalarını kapsar; makine tarafından okunabilir [`docs/openapi.yaml`](../openapi.yaml) ile `src/app/api/` altındaki rota ağacı kapsamlı kaynaklardır.
+67router API için temel başvuru kaynağı. Herkese açık `/v1` yüzeyini ve en çok kullanılan yönetim uç noktalarını kapsar; makine tarafından okunabilir [`docs/openapi.yaml`](../openapi.yaml) ile `src/app/api/` altındaki rota ağacı kapsamlı kaynaklardır.
 
 OpenAI uyumlu protokole ve sağlayıcı yetenekleri matrisine odaklanan belge için
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) dosyasına bakın.
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Yanıt | `HIT` veya `MISS` (akışsız)                                                                                                                                                                                                      |
 | `X-OmniRoute-Idempotent` | Yanıt | Tekilleştirildiyse `true`                                                                                                                                                                                                        |
 | `X-OmniRoute-Progress`   | Yanıt | İlerleme takibi açıksa `enabled`                                                                                                                                                                                                 |
-| `X-OmniRoute-Session-Id` | Yanıt | OmniRoute tarafından kullanılan etkin oturum kimliği                                                                                                                                                                             |
+| `X-OmniRoute-Session-Id` | Yanıt | 67router tarafından kullanılan etkin oturum kimliği                                                                                                                                                                              |
 | `X-OmniRoute-Request-Id` | Yanıt | İstek korelasyon kimliği (biliniyorsa)                                                                                                                                                                                           |
-| `X-OmniRoute-Version`    | Yanıt | OmniRoute derleme sürümü (her zaman mevcut)                                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | Yanıt | 67router derleme sürümü (her zaman mevcut)                                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | Yanıt | Önbelleğin bir HIT durumunda önlediği USD tutarı (yalnızca önbellek isabetleri)                                                                                                                                                  |
 | `X-OmniRoute-Decision`   | Yanıt | Yönlendirme izi: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` kombinasyon stratejisidir veya kombinasyon dışı bir istek için `single` değeridir) — tamamlanma yanıtlarında her zaman mevcuttur                  |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### İstek başına hesap sabitleme
 
-Bir sağlayıcının birden fazla bağlantısı (hesabı veya anahtarı) olduğunda OmniRoute normalde
+Bir sağlayıcının birden fazla bağlantısı (hesabı veya anahtarı) olduğunda 67router normalde
 hesap seçme stratejisi aracılığıyla bunlardan birini seçer. Bunun yerine bir istek,
 `x-omniroute-connection` üstbilgisiyle belirli bir bağlantıyı sabitleyebilir:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -124,8 +124,8 @@ sabitlemek için proje düzeyindeki `.claude/settings.json` dosyasına ekleyin:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Kaynak: `src/sse/handlers/chat.ts` (üstbilginin okunması), `src/sse/services/a
 
 ## Özel Yönetilen Oturum Kiralamaları
 
-Özel yönetilen oturum kiralama, isteğe bağlı ve istemciden bağımsız bir yönlendirme sözleşmesidir: tek bir etkin sahip, uygun bir OmniRoute bağlantısını elinde tutar. Bir modeli kiralamaz, OAuth gerektirmez, belirli bir istemciyi tanımlamaz veya belirli bir sağlayıcıyı zorunlu kılmaz.
+Özel yönetilen oturum kiralama, isteğe bağlı ve istemciden bağımsız bir yönlendirme sözleşmesidir: tek bir etkin sahip, uygun bir 67router bağlantısını elinde tutar. Bir modeli kiralamaz, OAuth gerektirmez, belirli bir istemciyi tanımlamaz veya belirli bir sağlayıcıyı zorunlu kılmaz.
 
 Kimlik doğrulaması yapan API anahtarının `lease:exclusive` kapsamına ve açıkça belirtilmiş, boş olmayan bir `allowedConnections` listesine sahip olması gerekir. Veritabanı mutasyon sınırı, anahtar oluşturma ve kısmi güncellemeler sırasında her iki alanı birlikte zorunlu kılar.
 
@@ -183,7 +183,7 @@ Etkin bir kiralama sahibi, mevcut bağlaması için gizliliği koruyan görünt�
 }
 ```
 
-Bu isteğe bağlı durum eylemi; opak sahip, kimliği doğrulanmış yönetilen API anahtarı ve etkin neslin tam değeriyle tek bir veritabanı işlemi içinde sınırlandırılır. `displayName` yalnızca baştaki ve sondaki boşlukları kaldırılmış, yapılandırılmış bağlantı adıdır; güvenli bir yapılandırılmış ad mevcut olmadığında `null` olur. OmniRoute hiçbir zaman bunun yerine e-posta veya oluşturulmuş hesap kimliği kullanmaz. Sağlayıcı değeri, hassas olmayan bir görüntüleme etiketidir ve hiçbir zaman oluşturulmuş uyumlu sağlayıcı tanımlayıcısı değildir. Kimlik bilgileri, belirteçler, çerezler, ham bağlantı veya API anahtarı kimlikleri, sahip karmaları, sınırlandırma gizli anahtarları ve dahili yönlendirme verileri hariç tutulur.
+Bu isteğe bağlı durum eylemi; opak sahip, kimliği doğrulanmış yönetilen API anahtarı ve etkin neslin tam değeriyle tek bir veritabanı işlemi içinde sınırlandırılır. `displayName` yalnızca baştaki ve sondaki boşlukları kaldırılmış, yapılandırılmış bağlantı adıdır; güvenli bir yapılandırılmış ad mevcut olmadığında `null` olur. 67router hiçbir zaman bunun yerine e-posta veya oluşturulmuş hesap kimliği kullanmaz. Sağlayıcı değeri, hassas olmayan bir görüntüleme etiketidir ve hiçbir zaman oluşturulmuş uyumlu sağlayıcı tanımlayıcısı değildir. Kimlik bilgileri, belirteçler, çerezler, ham bağlantı veya API anahtarı kimlikleri, sahip karmaları, sınırlandırma gizli anahtarları ve dahili yönlendirme verileri hariç tutulur.
 
 Yanlış anahtar, yanlış sahip, eski nesil, eksik, süresi dolmuş, serbest bırakılmış ve geçersiz kılınmış aramaların tümü, bağlantı meta verileri olmadan aynı `409 LEASE_FENCE_STALE` hatasını döndürür. Kapasite bekleme yanıtını alan bir istemcinin incelenebilecek etkin bir bağlaması yoktur. Yönlendirme etkin bir kiralamayı başka bir bağlantıya geçirdiğinde aynı nesil geçerli kalır ve durum işlemi, eski bağlamayı hiçbir zaman döndürmeden yeni bağlamayı atomik olarak döndürür. Edinme, yenileme, serbest bırakma ve bekleme yanıtları önceki biçimlerini koruduğundan mevcut istemciler değişmeden kalır.
 
@@ -209,7 +209,7 @@ Geçici çekişme, `Retry-After` ile birlikte HTTP `429` ve aşağıdaki yanıt�
 }
 ```
 
-Bu yanıt yalnızca normal uygun kümenin boş olmadığı ve kullanılabilir her adayın yabancı bir etkin kiralama tarafından tutulduğu anlamına gelir. Desteklenmeyen modeller/sağlayıcılar, politika uyuşmazlığı, bekleme süresi, kota, sistem durumu ve diğer normal uygunluk hataları, mevcut OmniRoute yanıtlarını korur.
+Bu yanıt yalnızca normal uygun kümenin boş olmadığı ve kullanılabilir her adayın yabancı bir etkin kiralama tarafından tutulduğu anlamına gelir. Desteklenmeyen modeller/sağlayıcılar, politika uyuşmazlığı, bekleme süresi, kota, sistem durumu ve diğer normal uygunluk hataları, mevcut 67router yanıtlarını korur.
 
 ### `x-omniroute-compression`
 
@@ -281,7 +281,7 @@ EmbeddingsV5Request belgelerini de kabul eder ve bunları **değiştirmeden** `h
 ```
 
 Yerel `{ image | audio | video | pdf }` değerleri herkese açık bir HTTPS URL'si, bir `data:` URI'si veya ham
-base64 olabilir. OmniRoute bu nesneleri dizeye dönüştürmez veya yerel görüntü URL'lerini getirmez — herkese açık
+base64 olabilir. 67router bu nesneleri dizeye dönüştürmez veya yerel görüntü URL'lerini getirmez — herkese açık
 medyayı Jina'nın kendisi alır. Ek Jina alanları (`task`, `normalized`, `truncate`, `embedding_type`)
 iletilir. Yalnızca metin destekleyen Jina SKU'ları metin dışı belgeleri yine reddeder.
 
@@ -430,7 +430,7 @@ kodunun sağlayıcıya özel işlem yapması gerekmez.
 
 ### Vertex AI DeepSeek OCR kimlik doğrulaması ve uç nokta çözümlemesi
 
-`vertex-deepseek-ocr`, OmniRoute'un sohbet/görüntü trafiği için hâlihazırda desteklediği aynı Vertex AI
+`vertex-deepseek-ocr`, 67router'un sohbet/görüntü trafiği için hâlihazırda desteklediği aynı Vertex AI
 kimlik doğrulamasını (`open-sse/executors/vertex.ts`) yeniden kullanır: bağlantının API anahtarı, ya
 JWT taşıyıcı akışı aracılığıyla kısa ömürlü bir OAuth erişim belirteciyle değiştirilen bir Hizmet Hesabı
 JSON kimlik bilgisidir ya da olduğu gibi kullanılan, önceden oluşturulmuş bir OAuth erişim belirtecidir. Üst API
@@ -454,7 +454,7 @@ Authorization: Bearer your-api-key
 
 ### Model fiyatları (`pricing`)
 
-OmniRoute modelin fiyatını bildiğinde, bir giriş `pricing` nesnesi içerir. Fiyat, maliyet muhasebesinin kullandığı fiyatlandırma tablosundan gelir: yerleşik varsayılanlar, senkronize edilmiş fiyatlar ve `/api/pricing` üzerinden ayarlanan geçersiz kılmalar. Bunlar liste fiyatlarıdır; dolayısıyla abonelik sağlayıcıları da token başına fiyat gösterir.
+67router modelin fiyatını bildiğinde, bir giriş `pricing` nesnesi içerir. Fiyat, maliyet muhasebesinin kullandığı fiyatlandırma tablosundan gelir: yerleşik varsayılanlar, senkronize edilmiş fiyatlar ve `/api/pricing` üzerinden ayarlanan geçersiz kılmalar. Bunlar liste fiyatlarıdır; dolayısıyla abonelik sağlayıcıları da token başına fiyat gösterir.
 
 ```json
 "pricing": {
@@ -588,7 +588,7 @@ Bir yardımcı işlem süreç dışında çalıştığında ve `open-sse/config/
 
 ## ElevenLabs ses oluşturma
 
-OmniRoute'ta ElevenLabs API anahtarınızla bir `elevenlabs` sağlayıcı bağlantısı yapılandırın. İstemciler **OmniRoute** anahtarlarıyla (`Authorization: Bearer $OMNIROUTE_API_KEY`) kimlik doğrulaması yapar; ağ geçidi, depolanan sağlayıcı anahtarını `xi-api-key` olarak iletir. ElevenLabs anahtarını hiçbir zaman ağ geçidi bearer belirteci olarak göndermeyin.
+67router'ta ElevenLabs API anahtarınızla bir `elevenlabs` sağlayıcı bağlantısı yapılandırın. İstemciler **67router** anahtarlarıyla (`Authorization: Bearer $OMNIROUTE_API_KEY`) kimlik doğrulaması yapar; ağ geçidi, depolanan sağlayıcı anahtarını `xi-api-key` olarak iletir. ElevenLabs anahtarını hiçbir zaman ağ geçidi bearer belirteci olarak göndermeyin.
 
 | Yöntem | Yol                         | Yanıt                                      | API anahtarı uç nokta kategorisi |
 | ------ | --------------------------- | ------------------------------------------ | -------------------------------- |
@@ -631,7 +631,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
   -d '{"model":"elevenlabs/music_v1","prompt":"Gentle instrumental piano","duration":10,"instrumental":true}'
 ```
 
-Uç nokta, model, bütçe ve bağlantı kısıtlamaları, üst hizmet çağrısından önce uygulanır. Yerel rotalar, bir plan kısıtlaması için `402` ve bir kota sınırı için `429` dahil olmak üzere üst hizmet durum kodlarını ve hata gövdelerini değiştirmeden döndürür. Mevcut olduklarında `character-cost`, `song-id`, `request-id` ve `retry-after` başlıkları korunur. Ücretsiz kredi bakiyesi, her müzik modeline, çıktı biçimine veya API özelliğine erişimi garanti etmez: ElevenLabs, her istek için yetkilendirmeye karar verir. Birleşik uç nokta, OmniRoute'un normalleştirilmiş hata zarfındaki hata durum kodlarını korur.
+Uç nokta, model, bütçe ve bağlantı kısıtlamaları, üst hizmet çağrısından önce uygulanır. Yerel rotalar, bir plan kısıtlaması için `402` ve bir kota sınırı için `429` dahil olmak üzere üst hizmet durum kodlarını ve hata gövdelerini değiştirmeden döndürür. Mevcut olduklarında `character-cost`, `song-id`, `request-id` ve `retry-after` başlıkları korunur. Ücretsiz kredi bakiyesi, her müzik modeline, çıktı biçimine veya API özelliğine erişimi garanti etmez: ElevenLabs, her istek için yetkilendirmeye karar verir. Birleşik uç nokta, 67router'un normalleştirilmiş hata zarfındaki hata durum kodlarını korur.
 
 Üst hizmet sözleşmeleri: [ses efektleri](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert), [müzik kompozisyonu](https://elevenlabs.io/docs/api-reference/music/compose) ve [akışlı müzik ayrıntıları](https://elevenlabs.io/docs/api-reference/music/compose-detailed-stream).
 
@@ -670,7 +670,7 @@ Uç nokta, model, bütçe ve bağlantı kısıtlamaları, üst hizmet çağrıs�
 
 Tüm POST rotaları aynı yapıyı izler: `Bearer your-api-key` + Zod ile doğrulanmış JSON gövdesi (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` vb.; bkz. `src/shared/validation/schemas.ts`). Şema doğrulaması başarısız olduğunda 4xx döndürülür.
 
-`Authorization: Bearer ...` ekleyemeyen istemciler için OmniRoute, API anahtarlarını URL içinde sorgu dizesi uyumluluğu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) veya aşağıda belgelenen özel `/api/v1/vscode/{token}/...` uç noktaları üzerinden de kabul eder.
+`Authorization: Bearer ...` ekleyemeyen istemciler için 67router, API anahtarlarını URL içinde sorgu dizesi uyumluluğu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) veya aşağıda belgelenen özel `/api/v1/vscode/{token}/...` uç noktaları üzerinden de kabul eder.
 
 ```bash
 # Yeniden sıralama (bulut kayıt defteri sağlayıcısı veya "<prefix>/<model>" biçiminde OpenAI uyumlu bir sağlayıcı düğümü)
@@ -829,7 +829,7 @@ Maliyet hesaplaması hâlâ düz `costPerQuery` kayıt defterini kullanır. Tavi
 
 Yapılandırılmış bir web-fetch sağlayıcısı (Firecrawl, Jina Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) aracılığıyla bir URL'den içerik çıkarın.
 
-Parallel Extract (`parallel-search`, Parallel Search ile aynı API anahtarı) yalnızca Markdown döndürür — diğer tüm `format` değerleri `400` sonucunu verir — ve içeriği 100.000 karakterle sınırlar. Hedef sayfanın kendisi çıkarılamadığında üst sağlayıcı bunu HTTP 200 yanıtı içinde bildirir; OmniRoute bunu sabit bir mesajla `422` olarak sunar.
+Parallel Extract (`parallel-search`, Parallel Search ile aynı API anahtarı) yalnızca Markdown döndürür — diğer tüm `format` değerleri `400` sonucunu verir — ve içeriği 100.000 karakterle sınırlar. Hedef sayfanın kendisi çıkarılamadığında üst sağlayıcı bunu HTTP 200 yanıtı içinde bildirir; 67router bunu sabit bir mesajla `422` olarak sunar.
 
 | Yöntem | Yol             | Açıklama                                                        |
 | ------ | --------------- | --------------------------------------------------------------- |
@@ -891,14 +891,14 @@ etkin giriş noktası olmalıdır (`app/server-ws.mjs` mevcut olduğunda varsay�
 OpenAI **Codex CLI**, `supports_websockets = true` olduğunda model adını istemci tarafında
 doğrular ve `codex/gpt-5.5` gibi **sağlayıcı ön ekli kimlikleri reddeder**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with a ChatGPT account`).
-**Yalnızca** kimliği gönderin (ör. `gpt-5.5`). OmniRoute'un köprüsü yalnızca codex içindir;
+**Yalnızca** kimliği gönderin (ör. `gpt-5.5`). 67router'un köprüsü yalnızca codex içindir;
 bu nedenle üst sağlayıcıya tünellemeden önce yalnızca bir kimliği codex modeli olarak
 (`resolveCodexWsModelInfo`) yeniden çözümler — yalnızca `gpt-5.5` normalde HTTP üzerinden
 başka bir sağlayıcıya yönlendirilecek olsa bile.
 
 #### OpenAI Codex CLI'ı yapılandırma
 
-Codex CLI'ı OmniRoute'a yönlendirmek için `~/.codex/config.toml` dosyasına WebSocket
+Codex CLI'ı 67router'a yönlendirmek için `~/.codex/config.toml` dosyasına WebSocket
 destekli özel bir sağlayıcı ekleyin (mevcut bir yapılandırmaya dokunmamak için ayrı bir
 `CODEX_HOME` kullanın):
 
@@ -911,15 +911,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # sonunda eğik çizgi yoktur; WS URL'si türetilir (üretimde https/wss kullanın)
 wire_api = "responses"                    # Şubat 2026'dan beri desteklenen tek değer
 supports_websockets = true                # Responses-over-WS aktarımını etkinleştirir
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API anahtarını içerir (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # 67router API anahtarını içerir (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # bir OmniRoute API anahtarı (REQUIRE_API_KEY=false ise herhangi bir anahtar)
+export OMNIROUTE_API_KEY=sk-...           # bir 67router API anahtarı (REQUIRE_API_KEY=false ise herhangi bir anahtar)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI, `base_url + /responses` adresini bir WebSocket'e yükseltir ve OmniRoute bunu
+CLI, `base_url + /responses` adresini bir WebSocket'e yükseltir ve 67router bunu
 seçilen codex OAuth bağlantısına tüneller. Yerel sunucuda uçtan uca doğrulanmıştır:
 ChatGPT `codex.rate_limits` + `response.created` döndürür ve tamamlamayı akış halinde iletir.
 
@@ -1002,7 +1002,7 @@ yüzeyi (`/api/keys/…`) _değildir_; yönetim yüzeyi `requireManagementAuth` 
 
 #### Kesme Noktası Ayarlama Formülü
 
-OmniRoute, üst sağlayıcı kotasının tükenmesini önlemek için proaktif kota kesme noktalarını destekler (bağlantı
+67router, üst sağlayıcı kotasının tükenmesini önlemek için proaktif kota kesme noktalarını destekler (bağlantı
 `quotaWindowThresholds`, sağlayıcı varsayılanları veya genel dayanıklılık ayarları aracılığıyla yapılandırılır). Bir kota penceresinde
 bir kesme eşiği (ör. `cutoff = 25%`) etkin olduğunda, metin oluşturucu kalan payı şu şekilde hesaplar:
 
@@ -1556,7 +1556,7 @@ Notlar:
 
 - Belirteçli takma adlar, `/v1/*` ve `/api/tags` ile aynı işleyicileri yeniden kullanır; yanıt yapıları aynı kalır.
 - İstemci özel başlıkları desteklediğinde `Authorization: Bearer ...` kullanımını tercih edin.
-- URL tabanlı belirteçler ters proxy günlüklerinde, tarayıcı geçmişinde ve OmniRoute dışındaki telemetride görünebilir. Bunları varsayılan kimlik doğrulama modu olarak değil, bir uyumluluk seçeneği olarak değerlendirin.
+- URL tabanlı belirteçler ters proxy günlüklerinde, tarayıcı geçmişinde ve 67router dışındaki telemetride görünebilir. Bunları varsayılan kimlik doğrulama modu olarak değil, bir uyumluluk seçeneği olarak değerlendirin.
 
 ---
 
@@ -1664,7 +1664,7 @@ Daha üst düzey yönlendirme kombinasyonları (zaten `/api/combos*` altında ö
 
 ## Webhook'lar
 
-OmniRoute olayları (istek tamamlanması, kota tükenmesi, anahtar rotasyonu vb.) için giden webhook abonelikleri.
+67router olayları (istek tamamlanması, kota tükenmesi, anahtar rotasyonu vb.) için giden webhook abonelikleri.
 
 | Yöntem | Yol                       | Açıklama                                                                |
 | ------ | ------------------------- | ----------------------------------------------------------------------- |
@@ -1697,7 +1697,7 @@ Otomatik anahtar yönetimi alt sistemi tarafından, günlük/saatlik kotalarla d
 
 ## Aracılar Protokolü
 
-OmniRoute kullanıcıları adına uzaktan yürütülen bulut aracısı görevleri (Claude Code, Codex Cloud, OpenHands vb.).
+67router kullanıcıları adına uzaktan yürütülen bulut aracısı görevleri (Claude Code, Codex Cloud, OpenHands vb.).
 
 | Yöntem | Yol                           | Açıklama                                                                                                                                                 |
 | ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1743,7 +1743,7 @@ Sağlayıcılara, hesaplara veya genel olarak atanabilen giden HTTP(S)/SOCKS pro
 
 ## Dayanıklılık (genişletilmiş)
 
-OmniRoute, birbirinden bağımsız üç geçici hata mekanizması sunar; aşağıdaki yönetim uç noktaları, operatörlerin bunları görüntülemesine ve geçersiz kılmasına olanak tanır:
+67router, birbirinden bağımsız üç geçici hata mekanizması sunar; aşağıdaki yönetim uç noktaları, operatörlerin bunları görüntülemesine ve geçersiz kılmasına olanak tanır:
 
 | Kapsam                   | Durum depolama                                    | Görüntüleme                               | Sıfırlama / temizleme                                                      |
 | ------------------------ | ------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
@@ -1778,7 +1778,7 @@ Tam kavramsal referans ve devre kesici varsayılanları için: [`CLAUDE.md`](../
 
 ## Beceriler
 
-OmniRoute'u özel yürütülebilir işleyiciler ve pazar yeri entegrasyonlarıyla genişletmeye yönelik beceri çerçevesi.
+67router'u özel yürütülebilir işleyiciler ve pazar yeri entegrasyonlarıyla genişletmeye yönelik beceri çerçevesi.
 
 | Yöntem | Yol                               | Açıklama                                                                                                                          |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -1815,7 +1815,7 @@ API anahtarı / oturum bazında kapsamlandırılmış kalıcı konuşma/olgusal 
 
 ## MCP Sunucusu
 
-OmniRoute; 3 taşıma yöntemi (stdio, SSE, streamable-http) ve kapsamlandırılmış araçlar içeren yerleşik bir Model Context Protocol sunucusuyla birlikte gelir. Aşağıdaki pano uç noktaları durum/denetim verilerini okur ve HTTP taşıma yöntemleri için proxy görevi görür.
+67router; 3 taşıma yöntemi (stdio, SSE, streamable-http) ve kapsamlandırılmış araçlar içeren yerleşik bir Model Context Protocol sunucusuyla birlikte gelir. Aşağıdaki pano uç noktaları durum/denetim verilerini okur ve HTTP taşıma yöntemleri için proxy görevi görür.
 
 | Yöntem | Yol | Açıklama |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1837,7 +1837,7 @@ OmniRoute; 3 taşıma yöntemi (stdio, SSE, streamable-http) ve kapsamlandırıl
 
 ## A2A Sunucusu
 
-OmniRoute, inceleme/pano kullanımı için bir REST sarmalayıcısının yanı sıra bir A2A (Agent-to-Agent) JSON-RPC 2.0 uç noktası sunar.
+67router, inceleme/pano kullanımı için bir REST sarmalayıcısının yanı sıra bir A2A (Agent-to-Agent) JSON-RPC 2.0 uç noktası sunar.
 
 ### JSON-RPC
 
@@ -2066,7 +2066,7 @@ Operasyonel yönetim için yalnızca yöneticilere açık uç noktalar.
 
 ## CLI Araçları Yönetimi
 
-OmniRoute ile entegre olan CLI araçlarını (antigravity, commandCode,
+67router ile entegre olan CLI araçlarını (antigravity, commandCode,
 devin-cli vb.) yönetin. Tam liste için [Sağlayıcı Referansı](./PROVIDER_REFERENCE.md) bölümüne bakın.
 
 | Yöntem | Yol                                     | Açıklama                                                                                                                                                                              |
@@ -2177,7 +2177,7 @@ Tüm ayrıntılar için [Skills Framework](../frameworks/SKILLS.md) belgesine ba
 
 ## Plugins
 
-OmniRoute eklentilerini (üçüncü taraf uzantıları) yönetin.
+67router eklentilerini (üçüncü taraf uzantıları) yönetin.
 
 | Yöntem | Yol                                | Açıklama                             |
 | ------ | ---------------------------------- | ------------------------------------ |

@@ -51,7 +51,7 @@ See on sama IP ja võtmega seotud kiiruspiiraja, mis põhjustab
 katkendlikke `400 content-blocked`-tõrkeid, kui Claude Code või Codex CLI
 teeb kiiresti järjest mitu tööriistakasutuse või sõnumisaatmise päringut.
 
-## OmniRoute'is juba rakendatud leevendusmeetmed
+## 67router'is juba rakendatud leevendusmeetmed
 
 1. **`open-sse/services/wafRateLimit.ts`** — päringupuhangu kaitse, mis jõustab
    vähemalt 500 ms pikkuse vahe mis tahes `agentrouter:*`-URL-ile saadetavate

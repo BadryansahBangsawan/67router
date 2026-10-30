@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute は、外部プロバイダー（1proxy、proxifly、iplocate、webshare）から同期された、厳選済みの無料プロキシプールを `free_proxies` テーブルで提供します。ダッシュボードでは、これらを **Settings → Free Proxies** に表示します。このドキュメントでは、一覧ルートが提供するサーバーサイドのフィルタリング、並べ替え、件数集計、同期エラー報告について説明します。
+67router は、外部プロバイダー（1proxy、proxifly、iplocate、webshare）から同期された、厳選済みの無料プロキシプールを `free_proxies` テーブルで提供します。ダッシュボードでは、これらを **Settings → Free Proxies** に表示します。このドキュメントでは、一覧ルートが提供するサーバーサイドのフィルタリング、並べ替え、件数集計、同期エラー報告について説明します。
 
 ## 一覧ルート — `GET /api/settings/free-proxies`
 

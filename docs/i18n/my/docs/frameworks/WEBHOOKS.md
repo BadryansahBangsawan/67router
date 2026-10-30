@@ -7,7 +7,7 @@
 > **အတည်ပြုရမည့် မူရင်းရင်းမြစ်:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-06-28 — v3.8.40
 
-OmniRoute သည် ပလက်ဖောင်းဖြစ်ရပ်များတွင် HTTP webhook များကို ပေးပို့နိုင်သည်။ ၎င်းတို့ကို
+67router သည် ပလက်ဖောင်းဖြစ်ရပ်များတွင် HTTP webhook များကို ပေးပို့နိုင်သည်။ ၎င်းတို့ကို
 Slack၊ PagerDuty၊ Datadog၊ အတွင်းပိုင်း သတိပေးဝန်ဆောင်မှုများ သို့မဟုတ် မည်သည့် HTTP လက်ခံစနစ်နှင့်မဆို ပေါင်းစပ်ရန် အသုံးပြုပါ။
 
 Dispatcher သည် ပေးပို့မှုတစ်ခုစီကို HMAC-SHA256 ဖြင့် လက်မှတ်ထိုးပြီး၊ ယာယီ
@@ -54,7 +54,7 @@ webhook တစ်ခုချင်းစီ၏ error များကို မ�
 
 ## HMAC လက်မှတ်ထိုးခြင်း
 
-Webhook တစ်ခုတွင် `secret` ရှိသည့်အခါ OmniRoute သည် JSON body ကို လက်မှတ်ထိုးပြီး အောက်ပါတို့ကို ပေးပို့သည်-
+Webhook တစ်ခုတွင် `secret` ရှိသည့်အခါ 67router သည် JSON body ကို လက်မှတ်ထိုးပြီး အောက်ပါတို့ကို ပေးပို့သည်-
 
 ```
 Content-Type: application/json
@@ -206,7 +206,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute မှ စမ်းသပ် webhook ပေးပို့မှု",
+    "message": "67router မှ စမ်းသပ် webhook ပေးပို့မှု",
     "webhookId": "<uuid>"
   }
 }

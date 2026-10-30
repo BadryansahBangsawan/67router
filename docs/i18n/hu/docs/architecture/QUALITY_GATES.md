@@ -4,7 +4,7 @@
 
 ---
 
-Ez a dokumentum az OmniRoute összes CI-minőségi kapujának mérvadó referenciája.
+Ez a dokumentum az 67router összes CI-minőségi kapujának mérvadó referenciája.
 Ismerteti az egyes kapukat, az általuk ellenőrzött szempontokat, azt, hogy melyik CI-feladatban futnak, hogy
 küszöbérték-alapvonalat vagy megfelelt/nem felelt meg szabályt használnak-e, valamint hogy blokkolják-e a buildet, vagy csak tájékoztató jellegűek.
 
@@ -278,14 +278,14 @@ A `build` után fut. Hiba esetén blokkolja a merge-ölést.
 Ezek cron-ütemezésben (és `workflow_dispatch` esetén) futnak, PR-eken soha. Mindegyik
 tájékoztató jellegű.
 
-| Workflow               | Amit ellenőriz                                                                                                                                                                    | Blokkoló        |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `nightly-property`     | fast-check property-tesztek véletlenszerű seed-del + magas futásszámmal                                                                                                           | **Tájékoztató** |
-| `nightly-resilience`   | heap-növekedési kapu, káosz-alapú hibainjektálás, k6 load/soak                                                                                                                    | **Tájékoztató** |
-| `nightly-llm-security` | promptfoo injection-védelem (blokkoló mód) + garak-próbák (provider secret nélkül kihagyva)                                                                                       | **Tájékoztató** |
-| `nightly-schemathesis` | OpenAPI-szerződésfuzzing (schemathesis) egy élő OmniRoute ellen a `docs/openapi.yaml` alapján — felszínre hozza a specifikációsértéseket / kezeletlen 500-as hibákat (Fase 8 B.4) | **Tájékoztató** |
-| `nightly-mutation`     | Stryker mutációsteszt-pontszám a gyors unit-sávon — a túlélő mutánsok gyenge assertekre utalnak                                                                                   | **Tájékoztató** |
-| `nightly-compat`       | Node engine-kompatibilitási mátrix a támogatott `engines.node` tartományokon                                                                                                      | **Tájékoztató** |
+| Workflow               | Amit ellenőriz                                                                                                                                                                   | Blokkoló        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `nightly-property`     | fast-check property-tesztek véletlenszerű seed-del + magas futásszámmal                                                                                                          | **Tájékoztató** |
+| `nightly-resilience`   | heap-növekedési kapu, káosz-alapú hibainjektálás, k6 load/soak                                                                                                                   | **Tájékoztató** |
+| `nightly-llm-security` | promptfoo injection-védelem (blokkoló mód) + garak-próbák (provider secret nélkül kihagyva)                                                                                      | **Tájékoztató** |
+| `nightly-schemathesis` | OpenAPI-szerződésfuzzing (schemathesis) egy élő 67router ellen a `docs/openapi.yaml` alapján — felszínre hozza a specifikációsértéseket / kezeletlen 500-as hibákat (Fase 8 B.4) | **Tájékoztató** |
+| `nightly-mutation`     | Stryker mutációsteszt-pontszám a gyors unit-sávon — a túlélő mutánsok gyenge assertekre utalnak                                                                                  | **Tájékoztató** |
+| `nightly-compat`       | Node engine-kompatibilitási mátrix a támogatott `engines.node` tartományokon                                                                                                     | **Tájékoztató** |
 
 A teljesítmény-baseline-ok (heap, TTFB, build-idő) rögzítésre kerülnek, nem kapuzottak:
 lásd [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
@@ -567,7 +567,7 @@ engedélyezési listával hamis minőségérzetet kelt.
 
 ## Ügynökeszközök: LSP a munkafolyamatban (választható)
 
-A CI-kapuk mellett az OmniRoute egy **választható** `agent-lsp` vázat is biztosít
+A CI-kapuk mellett az 67router egy **választható** `agent-lsp` vázat is biztosít
 (egy projektszintű `.mcp.json`, Fase 7 15. feladat). Hozd létre a `.mcp.json` fájlt,
 hogy TypeScript nyelvi kiszolgálót tegyél elérhetővé a kódoló ügynökök számára, így azok a szimbólumokat /
 diagnosztikát **a kód megírása előtt** feloldhatják — ez a `typecheck:core` „fordítás az állítás előtt” elvű kiegészítője,

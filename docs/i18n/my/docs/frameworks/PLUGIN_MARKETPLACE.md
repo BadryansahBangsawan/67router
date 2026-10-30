@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-06-28 — v3.8.40
 
-OmniRoute တွင် WordPress ပုံစံ plugin စနစ်တစ်ခု ပါဝင်သည်။ Plugin များသည်
+67router တွင် WordPress ပုံစံ plugin စနစ်တစ်ခု ပါဝင်သည်။ Plugin များသည်
 သီးခြားရပ်တည်နိုင်သော directory များဖြစ်ပြီး တစ်ခုစီတွင် `plugin.json` manifest နှင့် entry file တစ်ခုပါရှိကာ request pipeline (`onRequest` / `onResponse` / `onError`) နှင့်
 lifecycle event များ (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) ကို
 ချိတ်ဆက်အသုံးပြုသည်။
@@ -149,7 +149,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### Plugin directory
 
-Plugin များသည် OmniRoute data directory အောက်တွင် ရှိသည်-
+Plugin များသည် 67router data directory အောက်တွင် ရှိသည်-
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

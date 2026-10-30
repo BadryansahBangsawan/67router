@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute tarnitakse täielikult installitava progressiivse veebirakendusena. Kui avate töölaua mis tahes mobiilibrauseris — Androidis (Chrome) või iOS-is (Safari) — saate valida „Lisa avakuvale“ ja kasutada omarakendusega sarnanevat kasutuskogemust ilma rakendustepoeta.
+67router tarnitakse täielikult installitava progressiivse veebirakendusena. Kui avate töölaua mis tahes mobiilibrauseris — Androidis (Chrome) või iOS-is (Safari) — saate valida „Lisa avakuvale“ ja kasutada omarakendusega sarnanevat kasutuskogemust ilma rakendustepoeta.
 
 ## Mis on PWA?
 
-Progressiivne veebirakendus muudab OmniRoute'i veebitöölaua rakenduseks, mis näeb välja ja toimib nagu omarakendus. Pärast installimist:
+Progressiivne veebirakendus muudab 67router'i veebitöölaua rakenduseks, mis näeb välja ja toimib nagu omarakendus. Pärast installimist:
 
 - Käivitub see avakuvalt oma ikooniga
 - Avaneb see täisekraanil — ilma brauseri aadressiriba või vahelehtede kasutajaliideseta
@@ -20,26 +20,26 @@ Progressiivne veebirakendus muudab OmniRoute'i veebitöölaua rakenduseks, mis n
 
 ### Android (Chrome)
 
-1. Avage OmniRoute'i töölaud Chrome'is: `http://YOUR_IP:20128`
-2. Chrome kuvab automaatselt bänneri **„Lisa OmniRoute avakuvale“** või tehke järgmist:
+1. Avage 67router'i töölaud Chrome'is: `http://YOUR_IP:20128`
+2. Chrome kuvab automaatselt bänneri **„Lisa 67router avakuvale“** või tehke järgmist:
    - Puudutage menüüd **⋮** (kolm punkti) → **„Lisa avakuvale“** või **„Installi rakendus“**
 3. Kinnitage viip
-4. OmniRoute ilmub teie avakuvale eraldiseisva rakendusena
+4. 67router ilmub teie avakuvale eraldiseisva rakendusena
 
 ### iOS (Safari)
 
-1. Avage OmniRoute'i töölaud Safaris: `http://YOUR_IP:20128`
+1. Avage 67router'i töölaud Safaris: `http://YOUR_IP:20128`
 2. Puudutage nuppu **Jaga** (noolega kast)
 3. Kerige alla ja puudutage valikut **„Lisa avakuvale“**
-4. Pange sellele nimi (vaikimisi „OmniRoute“) ja puudutage nuppu **Lisa**
-5. OmniRoute ilmub teie avakuvale rakenduse ikooniga
+4. Pange sellele nimi (vaikimisi „67router“) ja puudutage nuppu **Lisa**
+5. 67router ilmub teie avakuvale rakenduse ikooniga
 
 ### Lauaarvuti (Chrome / Edge)
 
-1. Avage OmniRoute'i töölaud
-2. Klõpsake aadressiribal **installimisikooni** (või ⋮ → „Installi OmniRoute...“)
+1. Avage 67router'i töölaud
+2. Klõpsake aadressiribal **installimisikooni** (või ⋮ → „Installi 67router...“)
 3. Kinnitage viip
-4. OmniRoute avaneb eraldiseisvas aknas — ilma vahelehtede ja aadressiribata
+4. 67router avaneb eraldiseisvas aknas — ilma vahelehtede ja aadressiribata
 
 ## Funktsioonid
 
@@ -49,7 +49,7 @@ Manifest on konfigureeritud sättega `display: "fullscreen"`, mis tähendab, et 
 
 ### Võrguühenduseta kasutamise tugi
 
-OmniRoute sisaldab service worker'it (`sw.js`), mis pakub nutikat vahemällu salvestamist:
+67router sisaldab service worker'it (`sw.js`), mis pakub nutikat vahemällu salvestamist:
 
 | Ressursi tüüp                                                | Strateegia                                      | Käitumine                                                                                                          |
 | ------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -70,7 +70,7 @@ Kui võrguühendus pole saadaval ja kasutaja liigub uuele lehele, kuvab service 
 
 ### Rakenduse ikoonid
 
-OmniRoute pakub iga platvormi jaoks optimeeritud ikoone:
+67router pakub iga platvormi jaoks optimeeritud ikoone:
 
 | Fail                   | Suurus           | Kasutuskoht                            |
 | ---------------------- | ---------------- | -------------------------------------- |
@@ -94,8 +94,8 @@ Loodud Next.js-i poolt faili `src/app/manifest.ts` kaudu:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ See failis `src/shared/components/PwaRegister.tsx` asuv kliendikomponent:
 
 ## Kasutamine Termuxiga (Android)
 
-OmniRoute'i käitamisel Androidis Termuxi kaudu töötab PWA sujuvalt:
+67router'i käitamisel Androidis Termuxi kaudu töötab PWA sujuvalt:
 
-1. Käivitage OmniRoute Termuxis: `npx omniroute`
+1. Käivitage 67router Termuxis: `npx omniroute`
 2. Avage samas telefonis Chrome: `http://localhost:20128`
 3. Installige PWA valiku „Lisa avakuvale” kaudu
 4. PWA loob ühenduse kohaliku Termuxi serveriga — kõik töötab seadmes
@@ -156,7 +156,7 @@ See kombinatsioon tähendab, et teie Androidi telefon on korraga nii **server** 
 
 ## Kasutamine teistest seadmetest
 
-Installige PWA mis tahes seadmesse, mille brauseril on juurdepääs teie OmniRoute'i serverile:
+Installige PWA mis tahes seadmesse, mille brauseril on juurdepääs teie 67router'i serverile:
 
 - **Teine telefon/tahvelarvuti**: Minge aadressile `http://PHONE_IP:20128` ja installige PWA
 - **Sülearvuti**: Avage Chrome/Edge ja installige see töölaua-PWA-na

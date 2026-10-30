@@ -7,7 +7,7 @@
 > **Verbindliche Quelle:** `electron/`-Workspace
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute wird mit einer plattformübergreifenden Desktop-App (Windows / macOS / Linux) ausgeliefert, die auf
+67router wird mit einer plattformübergreifenden Desktop-App (Windows / macOS / Linux) ausgeliefert, die auf
 **Electron 41** + **electron-builder 26.10** basiert. Die Desktop-App startet den eigenständigen Next.js-Server
 als untergeordneten Prozess, richtet ein `BrowserWindow` darauf aus und ergänzt eine
 Taskleisten-/Menüleistenintegration, automatische Updates, eine IPC-Bridge sowie eine konfigurationsfreie Initialisierung geheimer Schlüssel.
@@ -47,7 +47,7 @@ Bestätigt anhand von `electron/package.json`:
 | `better-sqlite3`   | Root `^13.0.2` (Node-API-Prebuilds — kein Electron-Neubau erforderlich) |
 | App-Version        | `3.8.0`                                                                 |
 | App-ID             | `online.omniroute.desktop`                                              |
-| Produktname        | `OmniRoute`                                                             |
+| Produktname        | `67router`                                                              |
 
 ## Skripte (`package.json` im Stammverzeichnis)
 
@@ -198,7 +198,7 @@ sollte vorzugsweise die `.env`-Datei verwendet werden. Beenden Sie die App ansch
 - `BrowserWindow`: 1400×900 (mindestens 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, Fenstersteuerung bei `{ x: 16, y: 16 }`.
 - Windows/Linux: native Titelleiste.
-- Die Schaltfläche zum Schließen minimiert die App in den Infobereich; das Infobereichsmenü enthält **OmniRoute öffnen**, **Dashboard öffnen** (externer Browser), das Untermenü **Server-Port**, **Nach Updates suchen** und **Beenden**.
+- Die Schaltfläche zum Schließen minimiert die App in den Infobereich; das Infobereichsmenü enthält **67router öffnen**, **Dashboard öffnen** (externer Browser), das Untermenü **Server-Port**, **Nach Updates suchen** und **Beenden**.
 
 ## Content Security Policy
 

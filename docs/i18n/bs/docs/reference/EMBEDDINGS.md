@@ -6,9 +6,9 @@
 
 # Priručnik za Embeddings klijent
 
-Operativne napomene za `POST /v1/embeddings` kada se OmniRoute nalazi ispred
+Operativne napomene za `POST /v1/embeddings` kada se 67router nalazi ispred
 Hindsight 0.9.1 (samo tekst `encode(list[str])`) i Memorix 1.6.0 (Jina media
-gate). Provjereno uživo 17.08.2026. na OmniRoute 3.8.49 na
+gate). Provjereno uživo 17.08.2026. na 67router 3.8.49 na
 `https://omniroute.jaguar-fish.ts.net/v1`. Ispod nema tajni.
 
 ## ID-ovi radnih modela
@@ -81,7 +81,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Izvorni `gemini-embedding-2` ne može uspjeti samo iz GitOps-a. Google AI
 Studio ključ se mora dodati kao `gemini` konekcija provajdera (kontrolna tabla ili
-`GEMINI_API_KEY` uvezen u OmniRoute). Ta tajna nije u ovom repozitoriju.
+`GEMINI_API_KEY` uvezen u 67router). Ta tajna nije u ovom repozitoriju.
 
 ### Jina multimodalna putanja
 
@@ -102,7 +102,7 @@ Koristite `POST /v1/embeddings` dok ne postoji alias.
 
 ### Jina / Memorix objekat slike
 
-OmniRoute kanonička stavka slike (28×28 PNG, 784 piksela — Jina odbija 1×1):
+67router kanonička stavka slike (28×28 PNG, 784 piksela — Jina odbija 1×1):
 
 ```json
 {
@@ -151,7 +151,7 @@ Stvarno stanje: HTTP **400**
 
 Hindsight embeddings su samo tekstualni (`encode(list[str])`). Ne šalje
 objekte slika. Usmjerite Hindsight-ov OpenAI-kompatibilni embeddings base URL na
-OmniRoute `/v1` i koristite radni ID iz tabele iznad
+67router `/v1` i koristite radni ID iz tabele iznad
 (`jina-ai/jina-embeddings-v5-omni-small` ili
 `openrouter/google/gemini-embedding-2`). Nemojte postavljati model na "goli"
 `gemini-embedding-2` osim ako `gemini` API ključ ne postoji na gateway-u.
@@ -159,11 +159,11 @@ OmniRoute `/v1` i koristite radni ID iz tabele iznad
 ### Memorix 1.6.0
 
 Memorix tretira samo `baseUrl` koji odgovara `/jina\.ai/i` kao izvorni medij.
-OmniRoute URL ostaje na putanji samo za tekst čak i kada je model Jina omni.
-Taj gate je problem Memorix klijenta. Nezavisno od toga, OmniRoute i dalje odbija
+67router URL ostaje na putanji samo za tekst čak i kada je model Jina omni.
+Taj gate je problem Memorix klijenta. Nezavisno od toga, 67router i dalje odbija
 Jina `{image: "data:..."}` tijelo koje bi Memorix poslao da se gate otvorio,
-tako da Jina-kompatibilni klijenti ne mogu ugrađivati slike kroz OmniRoute
+tako da Jina-kompatibilni klijenti ne mogu ugrađivati slike kroz 67router
 bez kanoničke `{type,source}` šeme.
 
 Koristite `jina-ai/jina-embeddings-v5-omni-small` za tekst. Nemojte usmjeravati
-Memorix `base_url` na `https://api.jina.ai` — zadržite OmniRoute kao jedini hop.
+Memorix `base_url` na `https://api.jina.ai` — zadržite 67router kao jedini hop.

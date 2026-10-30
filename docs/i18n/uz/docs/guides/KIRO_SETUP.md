@@ -4,7 +4,7 @@
 
 ---
 
-Ushbu qoʻllanma Kiro (AWS tomonidan joylashtirilgan sunʼiy intellekt yordamidagi dasturlash assistenti) hisoblarini OmniRouteʼga qoʻshish jarayonini tushuntiradi hamda seanslar ziddiyatisiz bir vaqtning oʻzida bir nechta hisobni ishga tushirishga alohida eʼtibor qaratadi.
+Ushbu qoʻllanma Kiro (AWS tomonidan joylashtirilgan sunʼiy intellekt yordamidagi dasturlash assistenti) hisoblarini 67routerʼga qoʻshish jarayonini tushuntiradi hamda seanslar ziddiyatisiz bir vaqtning oʻzida bir nechta hisobni ishga tushirishga alohida eʼtibor qaratadi.
 
 ---
 
@@ -21,10 +21,10 @@ birinchi hisobning tokenini bekor qiladi.
 
 ---
 
-## OmniRoute buni qanday hal qiladi (v3.8.0+)
+## 67router buni qanday hal qiladi (v3.8.0+)
 
-v3.8.0 dan boshlab OmniRoute har bir Kiro ulanishini import qilish vaqtida
-`registerClient()` (AWS SSO OIDC) funksiyasini chaqiradi. Bu har bir OmniRoute ulanishiga alohida ajratilgan OIDC
+v3.8.0 dan boshlab 67router har bir Kiro ulanishini import qilish vaqtida
+`registerClient()` (AWS SSO OIDC) funksiyasini chaqiradi. Bu har bir 67router ulanishiga alohida ajratilgan OIDC
 mijoz roʻyxatdan oʻtkazishini beradi. Har bir mijoz roʻyxatdan oʻtkazishi mustaqil boʻlgani sababli, bitta hisobni
 yangilash yoki qayta autentifikatsiya qilish boshqa hisoblarning yangilash tokenlariga taʼsir qilmaydi.
 
@@ -58,7 +58,7 @@ avtomatik ravishda oʻz mijoz roʻyxatdan oʻtkazishiga ega boʻladi.
 
 ### Talablar
 
-- OmniRoute v3.8.0 yoki undan keyingi versiyasi.
+- 67router v3.8.0 yoki undan keyingi versiyasi.
 - Ishlaydigan Kiro hisobi (elektron pochta + parol, Google yoki GitHub orqali kirish).
 - Ixtiyoriy ravishda ikkinchi Kiro hisobi.
 
@@ -69,7 +69,7 @@ avtomatik ravishda oʻz mijoz roʻyxatdan oʻtkazishiga ega boʻladi.
    - **Tokenni import qilish** — `aorAAAAAG` bilan boshlanadigan yangilash tokenini kiriting.
    - **API kaliti** — uzoq muddatli Kiro / CodeWhisperer API kalitini kiriting.
    - **Google / GitHub orqali kirish** — brauzerda OAuth oqimini yakunlang.
-   - **Avtomatik import** — tugmani bosing; OmniRoute hisob maʼlumotlarini
+   - **Avtomatik import** — tugmani bosing; 67router hisob maʼlumotlarini
      mahalliy kiro-cli maʼlumotlar bazasidan yoki `~/.aws/sso/cache` ichidan oʻqiydi.
 3. Ulanish saqlanadi. Yangilash tokeni oqimlari avtomatik ravishda alohida ajratilgan
    OIDC mijozini roʻyxatdan oʻtkazadi. API kaliti oqimlari kalitni AWS orqali tekshiradi va yangilash tokenini saqlamaydi.
@@ -125,7 +125,7 @@ API kaliti orqali autentifikatsiya uzoq muddat amal qiladigan Kiro / AWS CodeWhi
 2. **API kaliti**ni tanlang.
 3. API kalitini kiriting va AWS mintaqasini tanlang: **Avtomatik aniqlash** (standart), **AQSH Sharqi
    (Shimoliy Virjiniya)** yoki **Yevropa (Frankfurt)**.
-4. OmniRoute kalitni tekshiradi va ulanishni kalit ishlaydigan mintaqaga biriktirib saqlaydi.
+4. 67router kalitni tekshiradi va ulanishni kalit ishlaydigan mintaqaga biriktirib saqlaydi.
 
 ### API
 
@@ -161,7 +161,7 @@ Ishlash vaqtida `KiroExecutor.buildHeaders()` kalitni `Authorization: Bearer <ke
 ## OIDC mijozi amal qilish muddatining tugashi
 
 AWS SSO OIDC ommaviy mijozlarining amal qilish muddati odatda 90 kundan keyin tugaydi
-(`clientSecretExpiresAt`). Kuzatuvchanlik uchun OmniRoute ushbu vaqt belgisini `providerSpecificData`
+(`clientSecretExpiresAt`). Kuzatuvchanlik uchun 67router ushbu vaqt belgisini `providerSpecificData`
 ichida saqlaydi. Agar ulanish taxminan 90 kundan keyin yangilanishni toʻxtatsa, yangi OIDC mijoz
 roʻyxatga olish maʼlumotlarini olish uchun ulanishni qayta import qiling. Amal qilish muddati tugaganda
 avtomatik qayta roʻyxatdan oʻtkazish kelajakdagi takomillashtirish sifatida rejalashtirilgan.
@@ -182,7 +182,7 @@ AWS SSO OIDC orqali yangilanmaydi.
 ### Import qilishda "Tokenni tekshirish amalga oshmadi" xatosi yuz berdi
 
 - Yangilash tokeni `aorAAAAAG` bilan boshlanishiga ishonch hosil qiling.
-- OmniRoute `https://oidc.us-east-1.amazonaws.com` manziliga (yoki sozlangan
+- 67router `https://oidc.us-east-1.amazonaws.com` manziliga (yoki sozlangan
   hududga) ulana olishiga ishonch hosil qiling. Agar korporativ proksi ortida boʻlsangiz,
   **Boshqaruv paneli → Sozlamalar → Proksilar** boʻlimida provayder darajasidagi proksini sozlang.
 
@@ -190,7 +190,7 @@ AWS SSO OIDC orqali yangilanmaydi.
 
 - Kalit yangilash tokeni emas, balki Kiro / CodeWhisperer API kaliti ekanligini tasdiqlang.
 - AWS hududi kalit/hisobga mos kelishini tasdiqlang. Standart qiymat — `us-east-1`.
-- Kalit `ListAvailableProfiles` chaqiruvini bajara olishi kerak; aks holda OmniRoute
+- Kalit `ListAvailableProfiles` chaqiruvini bajara olishi kerak; aks holda 67router
   talab qilinadigan `profileArn` qiymatini aniqlay olmaydi.
 
 Boshqa muammolar uchun asosiy [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) fayliga qarang.

@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute-ում անցեք **Providers → Add Provider**, ընտրեք **Microsoft 365 Copilot (BizChat)** և տեղադրեք հավատարմագիրը հետևյալ ձևաչափով․
+6. 67router-ում անցեք **Providers → Add Provider**, ընտրեք **Microsoft 365 Copilot (BizChat)** և տեղադրեք հավատարմագիրը հետևյալ ձևաչափով․
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -49,9 +49,9 @@ WebSocket URL-ից արժեքները ձեռքով պատճենելու փոխա
 1. Բացեք **DevTools → Network**։
 2. Սկսեք կամ շարունակեք BizChat զրույցը (դա գործարկում է WebSocket կապը)։
 3. Network վահանակում աջ սեղմեք և ընտրեք **Save all as HAR with content**։
-4. OmniRoute-ում մատակարարի կապի երկխոսության պատուհանում օգտագործեք **Import .har file** կոճակը։
+4. 67router-ում մատակարարի կապի երկխոսության պատուհանում օգտագործեք **Import .har file** կոճակը։
 
-OmniRoute-ը HAR-ում որոնում է Chathub WebSocket URL-ը, դուրս է բերում `access_token`-ը և `chathubPath`-ը և ավտոմատ լրացնում հավատարմագրի դաշտերը։ HAR ներմուծումը վերծանում է JWT-ի վավերականության ավարտի ժամանակը և ցույց է տալիս թոքենի մնացած գործողության ժամկետը։
+67router-ը HAR-ում որոնում է Chathub WebSocket URL-ը, դուրս է բերում `access_token`-ը և `chathubPath`-ը և ավտոմատ լրացնում հավատարմագրի դաշտերը։ HAR ներմուծումը վերծանում է JWT-ի վավերականության ավարտի ժամանակը և ցույց է տալիս թոքենի մնացած գործողության ժամկետը։
 
 > **Երբեք մի commit արեք իրական HAR արտահանումը, հասանելիության թոքենը կամ թարմացման թոքենը։** Թեստերում և փաստաթղթերում արժեքները միշտ պետք է լինեն տեղապահներ։
 
@@ -68,7 +68,7 @@ OmniRoute-ը HAR-ում որոնում է Chathub WebSocket URL-ը, դուրս �
 | `refreshToken` | Microsoft OAuth թարմացման թոքեն՝ `substrate.office.com/sydney` scope-ի համար |
 | `tier`         | `individual` (լռելյայն), `edu` կամ `enterprise`                              |
 
-Ստացեք թարմացման թոքենը Microsoft-ի սարքի կոդով կամ լիազորման կոդով հոսքից՝ սահմանված `substrate.office.com/sydney` scope-ով։ Երբ `refreshToken`-ը սահմանված է, OmniRoute-ը յուրաքանչյուր հարցումից առաջ նախապես թարմացնում է `access_token`-ը, ուստի յուրաքանչյուր ~75 րոպեանոց ժամկետի ավարտից հետո այն կրկին ստանալու կարիք չկա։
+Ստացեք թարմացման թոքենը Microsoft-ի սարքի կոդով կամ լիազորման կոդով հոսքից՝ սահմանված `substrate.office.com/sydney` scope-ով։ Երբ `refreshToken`-ը սահմանված է, 67router-ը յուրաքանչյուր հարցումից առաջ նախապես թարմացնում է `access_token`-ը, ուստի յուրաքանչյուր ~75 րոպեանոց ժամկետի ավարտից հետո այն կրկին ստանալու կարիք չկա։
 
 Եթե `refreshToken`-ը սահմանված չէ, յուրաքանչյուր ժամկետի ավարտից հետո պետք է ձեռքով կրկին ստանաք WebSocket հավատարմագիրը։
 

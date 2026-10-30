@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute na zuwa a matsayin cikakkiyar Progressive Web App da za a iya girkawa. Lokacin da ka shiga dashboard daga kowace manhajar binciken yanar gizo ta wayar hannu — Android (Chrome) ko iOS (Safari) — za ka iya yin "Ƙara zuwa Fuskar Farko" domin samun ƙwarewa irin ta manhajar asali ba tare da buƙatar kantin manhajoji ba.
+67router na zuwa a matsayin cikakkiyar Progressive Web App da za a iya girkawa. Lokacin da ka shiga dashboard daga kowace manhajar binciken yanar gizo ta wayar hannu — Android (Chrome) ko iOS (Safari) — za ka iya yin "Ƙara zuwa Fuskar Farko" domin samun ƙwarewa irin ta manhajar asali ba tare da buƙatar kantin manhajoji ba.
 
 ## Mene Ne PWA?
 
-Progressive Web App tana mayar da dashboard na yanar gizon OmniRoute zuwa wani abu mai kama da aiki irin na manhajar wayar hannu ta asali. Bayan an girka ta, tana:
+Progressive Web App tana mayar da dashboard na yanar gizon 67router zuwa wani abu mai kama da aiki irin na manhajar wayar hannu ta asali. Bayan an girka ta, tana:
 
 - Buɗewa daga fuskar farko da tambarinta na musamman
 - Buɗewa a cikakken allo — babu mashigin adireshin burauza ko mahaɗin shafuka
@@ -20,26 +20,26 @@ Progressive Web App tana mayar da dashboard na yanar gizon OmniRoute zuwa wani a
 
 ### Android (Chrome)
 
-1. Buɗe dashboard na OmniRoute a Chrome: `http://YOUR_IP:20128`
-2. Chrome zai nuna tutar **"Ƙara OmniRoute zuwa Fuskar farko"** ta atomatik, ko kuma:
+1. Buɗe dashboard na 67router a Chrome: `http://YOUR_IP:20128`
+2. Chrome zai nuna tutar **"Ƙara 67router zuwa Fuskar farko"** ta atomatik, ko kuma:
    - Taɓa menu na **⋮** (dige uku) → **"Ƙara zuwa Fuskar farko"** ko **"Girka manhaja"**
 3. Tabbatar da saƙon neman izini
-4. OmniRoute zai bayyana a fuskar farko a matsayin manhaja mai zaman kanta
+4. 67router zai bayyana a fuskar farko a matsayin manhaja mai zaman kanta
 
 ### iOS (Safari)
 
-1. Buɗe dashboard na OmniRoute a Safari: `http://YOUR_IP:20128`
+1. Buɗe dashboard na 67router a Safari: `http://YOUR_IP:20128`
 2. Taɓa maɓallin **Rabawa** (akwati mai kibiya)
 3. Gungura ƙasa sannan ka taɓa **"Ƙara zuwa Fuskar Farko"**
-4. Sanya mata suna (tsohon zaɓi shi ne "OmniRoute") sannan ka taɓa **Ƙara**
-5. OmniRoute zai bayyana a fuskar farko tare da tambarin manhajar
+4. Sanya mata suna (tsohon zaɓi shi ne "67router") sannan ka taɓa **Ƙara**
+5. 67router zai bayyana a fuskar farko tare da tambarin manhajar
 
 ### Kwamfutar Tebur (Chrome / Edge)
 
-1. Buɗe dashboard na OmniRoute
-2. Danna **tambarin girkawa** a mashigin adireshi (ko ⋮ → "Girka OmniRoute...")
+1. Buɗe dashboard na 67router
+2. Danna **tambarin girkawa** a mashigin adireshi (ko ⋮ → "Girka 67router...")
 3. Tabbatar da saƙon neman izini
-4. OmniRoute zai buɗe a matsayin taga mai zaman kanta — babu shafuka, babu mashigin adireshi
+4. 67router zai buɗe a matsayin taga mai zaman kanta — babu shafuka, babu mashigin adireshi
 
 ## Fasali
 
@@ -49,7 +49,7 @@ An saita manifest da `display: "fullscreen"`, wanda ke nufin manhajar da aka gir
 
 ### Goyon Bayan Aiki Ba Tare da Intanet Ba
 
-OmniRoute ya ƙunshi service worker (`sw.js`) wanda ke samar da adanawa a cache cikin basira:
+67router ya ƙunshi service worker (`sw.js`) wanda ke samar da adanawa a cache cikin basira:
 
 | Nau'in Kadara                                                | Dabara                                        | Halayya                                                                                                      |
 | ------------------------------------------------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -70,7 +70,7 @@ Lokacin da hanyar sadarwa ba ta samuwa kuma mai amfani ya kewaya zuwa sabon shaf
 
 ### Tambarin Manhaja
 
-OmniRoute yana samar da tamburan da aka inganta domin kowane dandali:
+67router yana samar da tamburan da aka inganta domin kowane dandali:
 
 | Fayil                  | Girma            | Inda Ake Amfani Da Shi                 |
 | ---------------------- | ---------------- | -------------------------------------- |
@@ -94,8 +94,8 @@ Next.js ne ke samar da shi ta hanyar `src/app/manifest.ts`:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Yana a `src/shared/components/PwaRegister.tsx`, wannan bangaren client:
 
 ## Amfani Tare da Termux (Android)
 
-Lokacin gudanar da OmniRoute a Android ta hanyar Termux, PWA yana aiki ba tare da matsala ba:
+Lokacin gudanar da 67router a Android ta hanyar Termux, PWA yana aiki ba tare da matsala ba:
 
-1. Fara OmniRoute a Termux: `npx omniroute`
+1. Fara 67router a Termux: `npx omniroute`
 2. Buɗe Chrome a wayar guda: `http://localhost:20128`
 3. Girka PWA ta hanyar "Ƙara zuwa Fuskar Farko"
 4. PWA yana haɗuwa da uwar garken Termux na cikin gida — komai yana gudana a kan na'urar
@@ -156,7 +156,7 @@ Wannan haɗin yana nufin wayarka ta Android ita ce **uwar garken** (Termux), kum
 
 ## Amfani Daga Wasu Na'urori
 
-Girka PWA a kowace na'ura da browser ɗinta zai iya shiga uwar garken OmniRoute ɗinka:
+Girka PWA a kowace na'ura da browser ɗinta zai iya shiga uwar garken 67router ɗinka:
 
 - **Wata waya/tablet**: Je zuwa `http://PHONE_IP:20128` sannan ka girka PWA
 - **Laptop**: Buɗe Chrome/Edge sannan ka girka shi a matsayin PWA na desktop

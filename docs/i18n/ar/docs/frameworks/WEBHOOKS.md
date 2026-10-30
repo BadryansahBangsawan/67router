@@ -7,7 +7,7 @@
 > **المصدر الموثوق:** `src/lib/webhookDispatcher.ts`، `src/lib/db/webhooks.ts`، `src/app/api/webhooks/`
 > **آخر تحديث:** 2026-06-28 — v3.8.40
 
-يمكن لـ OmniRoute إرسال خطافات ويب HTTP عند وقوع أحداث على المنصة. استخدمها للتكامل مع
+يمكن لـ 67router إرسال خطافات ويب HTTP عند وقوع أحداث على المنصة. استخدمها للتكامل مع
 Slack أو PagerDuty أو Datadog أو خدمات التنبيه الداخلية أو أي مستقبِل HTTP.
 
 يوقّع المرسِل كل عملية تسليم باستخدام HMAC-SHA256، ويعيد المحاولة عند حدوث
@@ -54,7 +54,7 @@ Slack أو PagerDuty أو Datadog أو خدمات التنبيه الداخلي�
 
 ## توقيع HMAC
 
-عندما يكون لخطاف الويب `secret`، يوقّع OmniRoute نص JSON ويرسل:
+عندما يكون لخطاف الويب `secret`، يوقّع 67router نص JSON ويرسل:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "اختبار تسليم خطاف الويب من OmniRoute",
+    "message": "اختبار تسليم خطاف الويب من 67router",
     "webhookId": "<uuid>"
   }
 }

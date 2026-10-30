@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute obsahuje obecný vyhodnocovací framework, který můžete použít k porovnávání konfigurací směrování, jednotlivých poskytovatelů/modelů nebo přibalených sad „golden set“. Pomocí něj můžete ověřovat změny směrování, validovat nové poskytovatele a nastavovat podmínky pro vydání před jejich nasazením do produkčního provozu.
+67router obsahuje obecný vyhodnocovací framework, který můžete použít k porovnávání konfigurací směrování, jednotlivých poskytovatelů/modelů nebo přibalených sad „golden set“. Pomocí něj můžete ověřovat změny směrování, validovat nové poskytovatele a nastavovat podmínky pro vydání před jejich nasazením do produkčního provozu.
 
 Framework se skládá z:
 

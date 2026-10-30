@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memublikasikan artefak npm + Docker. Gerbang-gerbang ini menyediakan provena, inventaris (SBOM), dan pemindaian CVE, semuanya OSS, terintegrasi ke dalam alur kerja rilis. Postur **mengutamakan saran** — mereka melaporkan sekarang, dan akan menjadi pemblokir setelah rilis hijau pertama.
+67router memublikasikan artefak npm + Docker. Gerbang-gerbang ini menyediakan provena, inventaris (SBOM), dan pemindaian CVE, semuanya OSS, terintegrasi ke dalam alur kerja rilis. Postur **mengutamakan saran** — mereka melaporkan sekarang, dan akan menjadi pemblokir setelah rilis hijau pertama.
 
 | Gerbang               | Alat                                           | Di Mana                       | Memblokir?                 | Keluaran                                             |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------- | :--------------------------------------------------- |
@@ -46,7 +46,7 @@ Sesuai cabang "no upstream fix" dari perbaikan CVE Variance di atas, ini adalah
 - **Tidak ada rilis perbaikan yang ada di mana pun dalam rantai.** `extract-zip@2.0.1` (diterbitkan 2020) adalah rilis terakhir paket tersebut — tidak lagi dipelihara. `@openai/codex-security` versi npm-latest saat ini (`0.1.29`) masih menarik `extract-zip@2.0.1`.
 - **Tidak dapat dijangkau dari produksi.** `promptfoo` hanya merupakan devDependency (tidak pernah terdaftar
   di bawah `dependencies`), dan tidak ada file di bawah `src/`, `open-sse/`, atau `bin/` yang mengimpor
-  paket npm `extract-zip` — helper `extractZip()` milik OmniRoute sendiri
+  paket npm `extract-zip` — helper `extractZip()` milik 67router sendiri
   (`src/lib/versionManager/binaryManager.ts:93`) menggunakan `unzip`/`tar` asli
   dan tidak terkait. `@openai/codex-security` juga menyertakan pelindung traversal symlink-nya sendiri
   di atas callback onEntry `extract-zip`.

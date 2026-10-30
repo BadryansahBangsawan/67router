@@ -7,7 +7,7 @@
 > **සත්යයේ මූලාශ්රය:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **අවසන් වරට යාවත්කාලීන කළේ:** 2026-06-28 — v3.8.40
 
-OmniRoute හට වේදිකා සිදුවීම් මත HTTP webhooks ක්රියාත්මක කළ හැක. Slack, PagerDuty, Datadog, අභ්යන්තර අනතුරු ඇඟවීමේ සේවා, හෝ ඕනෑම HTTP ප්රතිග්රාහකයක් සමඟ ඒකාබද්ධ වීමට ඒවා භාවිත කරන්න.
+67router හට වේදිකා සිදුවීම් මත HTTP webhooks ක්රියාත්මක කළ හැක. Slack, PagerDuty, Datadog, අභ්යන්තර අනතුරු ඇඟවීමේ සේවා, හෝ ඕනෑම HTTP ප්රතිග්රාහකයක් සමඟ ඒකාබද්ධ වීමට ඒවා භාවිත කරන්න.
 
 dispatcher එක සෑම බෙදාහැරීමක්ම HMAC-SHA256 සමඟ අත්සන් කරයි, තාවකාලික අසාර්ථකවීම්වලදී නැවත උත්සාහ කරයි, එක් එක් webhook එක අනුව බෙදාහැරීමේ සෞඛ්ය තත්ත්වය නිරීක්ෂණය කරයි, සහ දිගින් දිගටම අසාර්ථක වන endpoints ස්වයංක්රීයව අක්රිය කරයි.
 
@@ -49,7 +49,7 @@ Dispatch කිරීම කැඳවුම්කරු සඳහා ප්ර�
 
 ## HMAC අත්සන් කිරීම
 
-webhook එකකට `secret` එකක් ඇති විට, OmniRoute විසින් JSON body එක අත්සන් කර පහත දෑ යවයි:
+webhook එකකට `secret` එකක් ඇති විට, 67router විසින් JSON body එක අත්සන් කර පහත දෑ යවයි:
 
 ```
 Content-Type: application/json
@@ -195,7 +195,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute වෙතින් පරීක්ෂණ webhook බෙදාහැරීම",
+    "message": "67router වෙතින් පරීක්ෂණ webhook බෙදාහැරීම",
     "webhookId": "<uuid>"
   }
 }

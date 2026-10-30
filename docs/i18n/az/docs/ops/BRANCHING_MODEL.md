@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **paralel dövr** buraxılış modelindən istifadə edir: aktiv dövr üçün xüsusi `release/vX.Y.Z`
+67router **paralel dövr** buraxılış modelindən istifadə edir: aktiv dövr üçün xüsusi `release/vX.Y.Z`
 budağı, dərc edilmiş xətt üçün `main` və həmin dövr buraxıldıqda dəyişdirilməz
 `vX.Y.Z` teqi. Kommitlərin həm `release/*`, həm də `main` üzərinə daxil olduğunu
 görmək gözləniləndir — bu, qarışıqlıq deyil.

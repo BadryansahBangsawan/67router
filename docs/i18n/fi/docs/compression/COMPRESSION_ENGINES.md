@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-pakkaus perustuu moottorisopimuksiin. Tila voi suorittaa yhden moottorin suoraan
+67router-pakkaus perustuu moottorisopimuksiin. Tila voi suorittaa yhden moottorin suoraan
 (`caveman` tai `rtk`) tai deterministisen pinotun putken, joka suorittaa useita moottoreita järjestyksessä.
 
 ## Tilat
@@ -35,7 +35,7 @@ Profiili on **katto, ei lattia**: paketin `mergeCompressionProfileOptions` kielt
 
 Tässä koodikannassa mitattuna: `coding-safe` ja `balanced` nostavat `minCompressChars`-arvon maksimiinsa ja pitävät järjestelmän, työkaluskeemat ja työkalutulokset natiivina, joten istunto, joka ei ole vielä kerännyt historiaa, pysähtyy `below_min_chars`-kohtaan eikä moottori muunna mitään. Siksi oletus on `aggressive` turvallisimman profiilin sijaan.
 
-Paketti ratkaisee oman mallin laajuutensa ja profiilinsa ympäristökonfiguraatiostaan. OmniRoute ei koskaan delegoi päätöstä: sovitin kiinnittää malliportin paketin rajoittavimpaan laajuuteen, joten isäntäympäristön asetukset voivat vain kaventaa sallittujen luetteloa, eivät koskaan laajentaa sitä OmniRouten mitattujen kuittien ohi.
+Paketti ratkaisee oman mallin laajuutensa ja profiilinsa ympäristökonfiguraatiostaan. 67router ei koskaan delegoi päätöstä: sovitin kiinnittää malliportin paketin rajoittavimpaan laajuuteen, joten isäntäympäristön asetukset voivat vain kaventaa sallittujen luetteloa, eivät koskaan laajentaa sitä 67routerin mitattujen kuittien ohi.
 
 ## Moottorirekisteri
 
@@ -98,7 +98,7 @@ Caveman-tila keskittyy tavallisen proosan semanttiseen tiivistämiseen:
 
 Hallintapaneelin sijainti on `Dashboard -> Context & Cache -> Caveman`.
 
-Cavemanin upstream-versio ilmoittaa tuottavansa `~75%` vähemmän tulostetokeneita ja saavuttavansa vertailutesteissä keskimäärin `65%`:n tulossäästön vaihteluvälillä `22-87%` sekä tarjoavansa `~46%`:n syötteenpakkaustyökalun. OmniRoute käyttää Cavemanin syötepuolen lukua dokumentoidessaan ketjutettuja kehote- ja kontekstisäästöjä; Cavemanin tulostila on edelleen erillinen vastauksen toimintaa ohjaava ominaisuus.
+Cavemanin upstream-versio ilmoittaa tuottavansa `~75%` vähemmän tulostetokeneita ja saavuttavansa vertailutesteissä keskimäärin `65%`:n tulossäästön vaihteluvälillä `22-87%` sekä tarjoavansa `~46%`:n syötteenpakkaustyökalun. 67router käyttää Cavemanin syötepuolen lukua dokumentoidessaan ketjutettuja kehote- ja kontekstisäästöjä; Cavemanin tulostila on edelleen erillinen vastauksen toimintaa ohjaava ominaisuus.
 
 ## RTK
 

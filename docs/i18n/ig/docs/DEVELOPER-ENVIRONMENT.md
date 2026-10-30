@@ -4,7 +4,7 @@
 
 ---
 
-Ibe a na-akọwa omume `.env` mpaghara nke ọrụ a na otu esi ejikwa faịlụ gburugburu ebe ọrụ na ihe nzuzo mgbe a na-emepụta OmniRoute.
+Ibe a na-akọwa omume `.env` mpaghara nke ọrụ a na otu esi ejikwa faịlụ gburugburu ebe ọrụ na ihe nzuzo mgbe a na-emepụta 67router.
 
 ## Omume .env n'oge postinstall
 

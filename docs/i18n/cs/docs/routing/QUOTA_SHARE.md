@@ -15,7 +15,7 @@ Modul pro sdílení kvót spravedlivě rozděluje časově omezenou kvótu posky
 (např. 5hodinové okno Codex, Kimi 1500 požadavků/h) mezi více API klíčů, které
 sdílejí stejné připojení.
 
-**Řešený problém:** OmniRoute předává požadavky z mnoha API klíčů stejnému účtu
+**Řešený problém:** 67router předává požadavky z mnoha API klíčů stejnému účtu
 u nadřazeného poskytovatele. Bez logiky sdílení může nárazový provoz z klíče A
 vyčerpat kvótu poskytovatele pro danou hodinu, takže klíče B a C zůstanou
 zablokované až do obnovení okna. Modul tomu zabraňuje tím, že:
@@ -121,7 +121,7 @@ Ovladač Redis: skript Lua EVAL pro atomické navýšení — spouští se jako 
 
 - Tabulka: `quota_consumption` (viz migrace `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Nejvhodnější pro nasazení s jednou instancí.
-- Veškerá perzistence je uložena ve stávající databázi SQLite OmniRoute (`DATA_DIR/storage.sqlite`).
+- Veškerá perzistence je uložena ve stávající databázi SQLite 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (volitelný, pro více instancí)
 

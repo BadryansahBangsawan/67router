@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute は、一元管理された単一の許可リストを使用して、どの **ブラウザオリジン** がクロスオリジンレスポンスを読み取れるかを制御します。このモデルは **デフォルトでフェイルクローズ** です。明示的に許可するまで、どのオリジンも許可されません。このページでは、許可リストの解決方法、`CORS_ALLOW_ALL=true` が実際に何を公開するのか（そして重要な点として、何を公開 **しない** のか）、開発環境と本番環境を安全に設定する方法、およびワイルドカードが有効な場合にダッシュボードに表示されるランタイム警告について説明します。
+67router は、一元管理された単一の許可リストを使用して、どの **ブラウザオリジン** がクロスオリジンレスポンスを読み取れるかを制御します。このモデルは **デフォルトでフェイルクローズ** です。明示的に許可するまで、どのオリジンも許可されません。このページでは、許可リストの解決方法、`CORS_ALLOW_ALL=true` が実際に何を公開するのか（そして重要な点として、何を公開 **しない** のか）、開発環境と本番環境を安全に設定する方法、およびワイルドカードが有効な場合にダッシュボードに表示されるランタイム警告について説明します。
 
 **信頼できる情報源:** `src/server/cors/origins.ts`（`resolveAllowedOrigin`、`applyCorsHeaders`、`getCorsStatus`）。許可リストはミドルウェア（`src/server/authz/pipeline.ts`）で一度だけ適用されます。ルートごとのハンドラーが独自に `Access-Control-Allow-Origin` を設定することはありません。
 
@@ -26,13 +26,13 @@ OmniRoute は、一元管理された単一の許可リストを使用して、�
 
 ## 脅威モデル — `CORS_ALLOW_ALL=true` が実際に公開するもの
 
-一般的な OWASP の警告（「ワイルドカード CORS = どのサイトからでも API を呼び出せる」）は真剣に受け止めるべきですが、OmniRoute での公開範囲は、次の具体的な実装上の事実により、**一般的なケースよりも限定的** です。
+一般的な OWASP の警告（「ワイルドカード CORS = どのサイトからでも API を呼び出せる」）は真剣に受け止めるべきですが、67router での公開範囲は、次の具体的な実装上の事実により、**一般的なケースよりも限定的** です。
 
 > **中央の `applyCorsHeaders()` は
 > `Access-Control-Allow-Credentials` を決して送信しません。** サーバーが
 > `Access-Control-Allow-Credentials: true` を送信しない限り、ブラウザは
 > _認証情報付き_（Cookie を含む）のクロスオリジンレスポンスを公開しません。
-> OmniRoute の共有 CORS パスがこれを送信することはありません。
+> 67router の共有 CORS パスがこれを送信することはありません。
 
 これは、`CORS_ALLOW_ALL=true` の場合でも、各サーフェスで次のことを意味します。
 
@@ -57,7 +57,7 @@ Cloud-Agent ルート（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute がリバースプロキシ／トンネル（nginx、Caddy、Cloudflare
+- 67router がリバースプロキシ／トンネル（nginx、Caddy、Cloudflare
   Tunnel、Tailscale）の背後で動作する場合、CORS は**唯一の**制御手段ではありません。ループバックルート
   ガードは引き続き、プロセス起動が可能なルートを保護します（
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md) を参照）。403 を「修正」するために
@@ -73,7 +73,7 @@ Cloud-Agent ルート（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`�
 開発環境でも、ワイルドカードが必要になることはほとんどありません。使用する開発サーバーだけを許可してください。
 
 ```bash
-# ローカルの OmniRoute を呼び出す Vite (5173) + Next.js (3000) 開発サーバー
+# ローカルの 67router を呼び出す Vite (5173) + Next.js (3000) 開発サーバー
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -93,14 +93,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   管理／ダッシュボードのオリジンを寛容な設定に含めないでください。これらは厳密に
   フェイルクローズのままにする必要があります。
 
-## 例：OmniRoute の前段に配置するリバースプロキシ
+## 例：67router の前段に配置するリバースプロキシ
 
-CORS は OmniRoute 自体によって適用されるため、通常、プロキシ側で
+CORS は 67router 自体によって適用されるため、通常、プロキシ側で
 `Access-Control-*` ヘッダーを追加または書き換えるべきでは**ありません**（ヘッダーが重複するとブラウザーで問題が発生します）。TLS を終端して
-転送し、プリフライトへの応答は OmniRoute に任せてください。
+転送し、プリフライトへの応答は 67router に任せてください。
 
 ```nginx
-# nginx — OmniRoute に転送します。ここでは Access-Control-* を挿入しないでください
+# nginx — 67router に転送します。ここでは Access-Control-* を挿入しないでください
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -108,13 +108,13 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # 転送ヘッダーは維持してください。同じホスト上のプロキシはループバックから接続するため、
-    # 呼び出し元がローカルのオペレーターではないことを OmniRoute に伝えるのは、これらのヘッダーです。
+    # 呼び出し元がローカルのオペレーターではないことを 67router に伝えるのは、これらのヘッダーです。
     # これらを一切追加しないプロキシでは、すべてのリモート呼び出し元がローカルに見えてしまいます。
     # また、X-Forwarded-For を 127.0.0.1 に設定しないでください。
 }
 ```
 
-ブラウザーに許可するオリジンは、プロキシではなく OmniRoute（`CORS_ALLOWED_ORIGINS` または
+ブラウザーに許可するオリジンは、プロキシではなく 67router（`CORS_ALLOWED_ORIGINS` または
 Security タブ）で設定してください。
 
 ## ソースファイル

@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute huja na mfumo wa programu-jalizi unaofanana na wa WordPress. Programu-jalizi ni saraka
+67router huja na mfumo wa programu-jalizi unaofanana na wa WordPress. Programu-jalizi ni saraka
 zinazojitegemea — kila moja ikiwa na faili ya maelezo ya `plugin.json` na faili ya kuingilia — ambazo huunganishwa
 kwenye mfululizo wa kushughulikia maombi (`onRequest` / `onResponse` / `onError`) na kwenye
 matukio ya mzunguko wa maisha (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ zinaruhusiwa kupita.
 
 ### Saraka ya programu-jalizi
 
-Programu-jalizi huhifadhiwa chini ya saraka ya data ya OmniRoute:
+Programu-jalizi huhifadhiwa chini ya saraka ya data ya 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

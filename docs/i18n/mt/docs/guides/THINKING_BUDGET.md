@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Sors:** `open-sse/services/thinkingBudget.ts`
 
-Il-Baġit tal-Ħsieb jikkontrolla jekk OmniRoute **jikteb mill-ġdid il-parametri tal-ħsieb/raġunament tal-klijent** fit-triq lejn il-fornituri. Dan **ma** jixgħelx jew jitfi l-kompressjoni, ir-routing, jew il-cache tal-prompt.
+Il-Baġit tal-Ħsieb jikkontrolla jekk 67router **jikteb mill-ġdid il-parametri tal-ħsieb/raġunament tal-klijent** fit-triq lejn il-fornituri. Dan **ma** jixgħelx jew jitfi l-kompressjoni, ir-routing, jew il-cache tal-prompt.
 
 ## Modi
 
-| Mod                         | X'jagħmel OmniRoute                                                                                                                  | Meta għandek tużah                                                                                                                                                                     |
+| Mod                         | X'jagħmel 67router                                                                                                                   | Meta għandek tużah                                                                                                                                                                     |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (default) | Iħalli l-fields tal-klijent kif inhuma (`reasoning`, `reasoning_effort`, `thinking` ta' Claude, `thinking_config` ta' Gemini, eċċ.). | **Codex / Desktop / kwalunkwe klijent li għandu jikkontrolla l-isforz u s-sommarji tar-raġunament.** Meħtieġ għal panels tal-ħsieb viżibbli meta l-klijent jitlob `reasoning.summary`. |
 | **`auto`**                  | **Ineħħi l-fields kollha** tal-ħsieb/raġunament mill-body tat-talba qabel ma tintbagħat upstream.                                    | Biss meta deliberatament trid li l-**fornitur** joħloq valuri default u **ma** teħtieġx ħsieb ikkontrollat mill-klijent. **Mhux** “uri l-ħsieb awtomatikament”.                        |
@@ -38,7 +38,7 @@ Jekk klijent (eż. Codex Desktop) bagħat `reasoning: { effort: "ultra", summary
 | **Routing ikkombinat / fallbacks**                      | Separat. Mhux affettwat.                                                                                                                        |
 | **Limiti tat-tokens tal-API key / baġits tal-ispejjeż** | Separati. Mhux affettwati.                                                                                                                      |
 | **Cache għar-replay tar-raġunament**                    | Injezzjoni mill-ġdid fuq diversi turns għal fornituri stretti (DeepSeek, Kimi, Qwen-thinking, …). Mhux l-istess bħal “uri l-ħsieb” ta' Desktop. |
-| **Dekriptaġġ ta' `encrypted_content`**                  | **Impossibbli.** Il-blobs privati tar-raġunament ta' OpenAI/Codex huma opaki. OmniRoute qatt ma jiddekriptahom (#7095 / #7176 / #7304).         |
+| **Dekriptaġġ ta' `encrypted_content`**                  | **Impossibbli.** Il-blobs privati tar-raġunament ta' OpenAI/Codex huma opaki. 67router qatt ma jiddekriptahom (#7095 / #7176 / #7304).          |
 
 ## Ħsieb viżibbli (klijenti Codex / Responses)
 
@@ -51,7 +51,7 @@ Biex klijent juri t-test tal-ħsieb, għandek bżonn **dawn kollha**:
 Jekk tirċievi biss “raġunament privat ikkriptat”, allura jew:
 
 - il-modalità kienet **`auto`** (it-talba tal-klijent tneħħiet), jew
-- is-servizz upstream irritorna `encrypted_content` mingħajr test ta’ sommarju (limitazzjoni tal-fornitur; OmniRoute jista’ juri biss placeholder, mhux test sempliċi).
+- is-servizz upstream irritorna `encrypted_content` mingħajr test ta’ sommarju (limitazzjoni tal-fornitur; 67router jista’ juri biss placeholder, mhux test sempliċi).
 
 ## Eżempji tal-API
 
@@ -71,7 +71,7 @@ Skema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Persistenza / ristartjar
 
-Il-valur jinħażen taħt iċ-ċavetta tas-settings `thinkingBudget` u jitgħabba fil-bidu tal-proċess (`hydrateThinkingBudgetConfig`). Wara li tibdlu permezz tad-DB jew ta’ xi mogħdijiet mhux tal-API, **erġa’ ibda l-proċess OmniRoute** sabiex is-singleton fil-memorja jaqbel ma’ dak fuq id-diska.
+Il-valur jinħażen taħt iċ-ċavetta tas-settings `thinkingBudget` u jitgħabba fil-bidu tal-proċess (`hydrateThinkingBudgetConfig`). Wara li tibdlu permezz tad-DB jew ta’ xi mogħdijiet mhux tal-API, **erġa’ ibda l-proċess 67router** sabiex is-singleton fil-memorja jaqbel ma’ dak fuq id-diska.
 
 ## Lista ta’ kontroll għall-operatur
 

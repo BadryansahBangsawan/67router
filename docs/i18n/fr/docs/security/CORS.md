@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute contrôle quelles **origines de navigateur** peuvent lire les réponses interorigines
+67router contrôle quelles **origines de navigateur** peuvent lire les réponses interorigines
 à partir d’une liste d’autorisation unique et centralisée. Le modèle est **fermé par défaut** :
 aucune origine n’est autorisée tant que vous ne l’avez pas explicitement ajoutée. Cette page explique comment la liste d’autorisation
 est résolue, ce que `CORS_ALLOW_ALL=true` expose réellement (et, surtout, ce qu’il
@@ -45,13 +45,13 @@ dans l’ordre suivant :
 ## Modèle de menace — ce que `CORS_ALLOW_ALL=true` expose réellement
 
 L’avertissement générique de l’OWASP (« CORS avec caractère générique = n’importe quel site peut appeler votre API ») mérite
-d’être pris au sérieux, mais l’exposition d’OmniRoute est **plus limitée que dans le cas générique**,
+d’être pris au sérieux, mais l’exposition de 67router est **plus limitée que dans le cas générique**,
 en raison d’un fait concret lié à l’implémentation :
 
 > **Le mécanisme central `applyCorsHeaders()` n’émet jamais
 > `Access-Control-Allow-Credentials`.** Un navigateur n’exposera pas une réponse interorigine
 > _avec informations d’identification_ (contenant un cookie), sauf si le serveur envoie
-> `Access-Control-Allow-Credentials: true`. Le chemin CORS partagé d’OmniRoute ne le fait
+> `Access-Control-Allow-Credentials: true`. Le chemin CORS partagé de 67router ne le fait
 > jamais.
 
 Voici ce que cela signifie pour chaque surface, même avec `CORS_ALLOW_ALL=true` :
@@ -91,7 +91,7 @@ distinct de ces recommandations CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Si OmniRoute s’exécute derrière un proxy inverse ou un tunnel (nginx, Caddy, Cloudflare
+- Si 67router s’exécute derrière un proxy inverse ou un tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS n’est **pas** votre seul mécanisme de contrôle : la protection
   des routes limitée à l’interface de bouclage protège toujours les routes capables de
   lancer des processus (voir [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ne falsifiez
@@ -109,7 +109,7 @@ Même en développement, vous avez rarement besoin du caractère générique. Au
 uniquement les serveurs de développement que vous utilisez :
 
 ```bash
-# Serveurs de développement Vite (5173) et Next.js (3000) appelant un OmniRoute local
+# Serveurs de développement Vite (5173) et Next.js (3000) appelant un 67router local
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -130,14 +130,14 @@ Origines CORS autorisées**, sans redémarrage.
   chemin partagé. N’incluez pas les origines de gestion ou du tableau de bord dans une
   configuration permissive ; elles doivent rester strictement fermées par défaut.
 
-## Exemple : proxy inverse devant OmniRoute
+## Exemple : proxy inverse devant 67router
 
-CORS est appliqué par OmniRoute lui-même ; le proxy ne doit donc généralement **pas** ajouter ni
+CORS est appliqué par 67router lui-même ; le proxy ne doit donc généralement **pas** ajouter ni
 réécrire les en-têtes `Access-Control-*` (les en-têtes en double perturbent les navigateurs). Terminez TLS
-et transférez les requêtes — laissez OmniRoute répondre aux requêtes préliminaires :
+et transférez les requêtes — laissez 67router répondre aux requêtes préliminaires :
 
 ```nginx
-# nginx — transfert vers OmniRoute ; n’injectez PAS d’en-têtes Access-Control-* ici
+# nginx — transfert vers 67router ; n’injectez PAS d’en-têtes Access-Control-* ici
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -145,12 +145,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Conservez les en-têtes de transfert : un proxy sur le même hôte se connecte depuis l’adresse de bouclage,
-    # et ce sont eux qui indiquent à OmniRoute que l’appelant n’est pas l’opérateur local. Un proxy qui n’en ajoute aucun
+    # et ce sont eux qui indiquent à 67router que l’appelant n’est pas l’opérateur local. Un proxy qui n’en ajoute aucun
     # fait apparaître chaque appelant distant comme local. Ne définissez jamais non plus X-Forwarded-For sur 127.0.0.1.
 }
 ```
 
-Définissez les origines autorisées pour les navigateurs dans OmniRoute (`CORS_ALLOWED_ORIGINS` ou
+Définissez les origines autorisées pour les navigateurs dans 67router (`CORS_ALLOWED_ORIGINS` ou
 l’onglet Sécurité), et non dans le proxy.
 
 ## Fichiers sources

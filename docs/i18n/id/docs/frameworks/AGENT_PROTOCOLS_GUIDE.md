@@ -7,15 +7,15 @@
 > **Sumber:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyediakan tiga antarmuka terkait agen yang berbeda. Sekilas ketiganya tampak serupa, tetapi menyelesaikan masalah yang berbeda. Gunakan halaman ini untuk memilih yang tepat.
+67router menyediakan tiga antarmuka terkait agen yang berbeda. Sekilas ketiganya tampak serupa, tetapi menyelesaikan masalah yang berbeda. Gunakan halaman ini untuk memilih yang tepat.
 
 ## Ringkasan
 
 | Antarmuka                   | Paling cocok untuk                                                                                                                                   | Transportasi                  | Standar                        |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------------------------------ |
 | **A2A — Agen-ke-Agen**      | Kolaborasi lintas agen dengan agen sejawat yang menggunakan protokol A2A                                                                             | JSON-RPC 2.0 melalui HTTP     | A2A v0.3 (spesifikasi terbuka) |
-| **ACP — Registri Agen CLI** | Mendeteksi / mendaftarkan / menjalankan agen pemrograman CLI yang terinstal pada mesin pengguna (Cursor, Cline, Codex CLI, Claude Code, Aider, dll.) | HTTP REST                     | Khusus OmniRoute               |
-| **Agen Cloud**              | Mengirimkan tugas pemrograman jangka panjang ke layanan cloud eksternal (Codex Cloud, Devin, Jules, Cursor Cloud)                                    | HTTP REST + tugas berbasis DB | Khusus OmniRoute               |
+| **ACP — Registri Agen CLI** | Mendeteksi / mendaftarkan / menjalankan agen pemrograman CLI yang terinstal pada mesin pengguna (Cursor, Cline, Codex CLI, Claude Code, Aider, dll.) | HTTP REST                     | Khusus 67router                |
+| **Agen Cloud**              | Mengirimkan tugas pemrograman jangka panjang ke layanan cloud eksternal (Codex Cloud, Devin, Jules, Cursor Cloud)                                    | HTTP REST + tugas berbasis DB | Khusus 67router                |
 
 Ketiganya bersifat independen — pilih kombinasi mana pun.
 
@@ -38,14 +38,14 @@ Apakah Anda memerlukan layanan cloud untuk melakukan pekerjaan di luar mesin ini
 ## 1. A2A — Agen-ke-Agen
 
 **Spesifikasi:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Endpoint 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Kartu Agen:** `GET /.well-known/agent.json`
 
 ### Kapan digunakan
 
-- Membangun sistem multiagen dengan OmniRoute sebagai salah satu agen sejawat
-- Mengekspos kecerdasan perutean OmniRoute (perutean cerdas, pengelolaan kuota, dll.) kepada agen dalam framework seperti Google ADK atau mesh agen generik
-- Membungkus OmniRoute di balik antarmuka penemuan + pemanggilan standar
+- Membangun sistem multiagen dengan 67router sebagai salah satu agen sejawat
+- Mengekspos kecerdasan perutean 67router (perutean cerdas, pengelolaan kuota, dll.) kepada agen dalam framework seperti Google ADK atau mesh agen generik
+- Membungkus 67router di balik antarmuka penemuan + pemanggilan standar
 
 ### Metode
 
@@ -69,12 +69,12 @@ Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk detail transportasi, struktur kartu
 
 ## 2. ACP — Registri Agen CLI
 
-**Endpoint OmniRoute:** `GET /api/acp/agents`
+**Endpoint 67router:** `GET /api/acp/agents`
 **Sumber:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Apa itu
 
-ACP adalah **inventaris agen CLI lokal** milik OmniRoute. ACP mendeteksi CLI pemrograman yang terinstal pada host (Cursor, Cline, Claude Code, Codex CLI, Continue, dll.), mengidentifikasi versinya, dan menampilkannya di dasbor sehingga pengguna dapat mengatur setiap CLI agar mengarah ke OmniRoute.
+ACP adalah **inventaris agen CLI lokal** milik 67router. ACP mendeteksi CLI pemrograman yang terinstal pada host (Cursor, Cline, Claude Code, Codex CLI, Continue, dll.), mengidentifikasi versinya, dan menampilkannya di dasbor sehingga pengguna dapat mengatur setiap CLI agar mengarah ke 67router.
 
 Antarmuka HTTP ini merupakan inventaris internal yang mendukung UI "CLI Tools" dan
 pelacakan sidik jari CLI (lihat [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Secara terpisah,
@@ -114,8 +114,8 @@ Struktur body untuk POST (`customAgentBodySchema` di `src/app/api/acp/agents/rou
 
 ### Kasus penggunaan
 
-- Halaman "CLI Tools" di dasbor mencantumkan apa saja yang terinstal dan membantu Anda mengarahkan setiap alat ke OmniRoute
-- Agen khusus memungkinkan pengguna tingkat lanjut mendaftarkan CLI internal/proprietari yang secara default tidak dikenali OmniRoute
+- Halaman "CLI Tools" di dasbor mencantumkan apa saja yang terinstal dan membantu Anda mengarahkan setiap alat ke 67router
+- Agen khusus memungkinkan pengguna tingkat lanjut mendaftarkan CLI internal/proprietari yang secara default tidak dikenali 67router
 - Hasil deteksi menjadi masukan bagi matriks sidik jari `cli-tools`
 
 ### Kapan TIDAK menggunakan ACP
@@ -127,12 +127,12 @@ Struktur body untuk POST (`customAgentBodySchema` di `src/app/api/acp/agents/rou
 
 ## 3. Agen Cloud
 
-**Endpoint OmniRoute:** `/api/v1/agents/tasks/*` (siklus hidup) + `/api/cloud/*` (infrastruktur penghubung)
+**Endpoint 67router:** `/api/v1/agents/tasks/*` (siklus hidup) + `/api/cloud/*` (infrastruktur penghubung)
 **Sumber:** `src/lib/cloudAgent/`
 
 ### Apa itu Agen Cloud
 
-Antarmuka terpadu untuk agen pemrograman cloud pihak ketiga. Anda mengirimkan prompt + URL repositori, lalu OmniRoute meneruskannya ke agen cloud yang sesuai, memeriksa status secara berkala, dan mengembalikan hasil.
+Antarmuka terpadu untuk agen pemrograman cloud pihak ketiga. Anda mengirimkan prompt + URL repositori, lalu 67router meneruskannya ke agen cloud yang sesuai, memeriksa status secara berkala, dan mengembalikan hasil.
 
 ### Agen yang didukung (4, semuanya dikonfirmasi di `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Keduanya memiliki "tugas berdurasi panjang", tetapi pada lapisan yang berbeda:
 
 | Aspek                     | A2A                                                                                             | Cloud Agents                                             |
 | ------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Standar                   | Open A2A v0.3                                                                                   | Khusus OmniRoute                                         |
-| Tempat komputasi berjalan | Di dalam OmniRoute (menggunakan kombinasi yang dikonfigurasi)                                   | Eksternal (server Codex / Devin / Jules)                 |
+| Standar                   | Open A2A v0.3                                                                                   | Khusus 67router                                          |
+| Tempat komputasi berjalan | Di dalam 67router (menggunakan kombinasi yang dikonfigurasi)                                    | Eksternal (server Codex / Devin / Jules)                 |
 | Durasi tugas              | TTL default 5 menit (dapat dikonfigurasi di `TaskManager`)                                      | Beberapa menit hingga beberapa jam                       |
 | Memahami repositori       | Tidak (hanya meneruskan prompt)                                                                 | Ya (URL repositori + branch)                             |
 | Kasus penggunaan          | Kolaborasi lintas agen, perutean cerdas sebagai layanan                                         | Mendelegasikan "implementasikan fitur X di repositori Y" |
@@ -182,7 +182,7 @@ Keduanya memiliki "tugas berdurasi panjang", tetapi pada lapisan yang berbeda:
 
 ## Contoh Integrasi
 
-### Menemukan kapabilitas A2A OmniRoute
+### Menemukan kapabilitas A2A 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Mengembalikan Agent Card yang berisi seluruh 6 skill, transport, dan versi.
 
-### Memanggil OmniRoute sebagai agen A2A
+### Memanggil 67router sebagai agen A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Inti OmniRoute    │
+                │   Inti 67router    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

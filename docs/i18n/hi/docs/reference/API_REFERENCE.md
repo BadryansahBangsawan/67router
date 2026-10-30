@@ -6,7 +6,7 @@
 
 🌐 **भाषाएँ:** 🇺🇸 [अंग्रेज़ी](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API के लिए मुख्य संदर्भ। इसमें सार्वजनिक `/v1` सतह और सबसे अधिक उपयोग किए जाने वाले प्रबंधन एंडपॉइंट शामिल हैं; मशीन-पठनीय [`docs/openapi.yaml`](../openapi.yaml) और `src/app/api/` के अंतर्गत रूट ट्री संपूर्ण स्रोत हैं।
+67router API के लिए मुख्य संदर्भ। इसमें सार्वजनिक `/v1` सतह और सबसे अधिक उपयोग किए जाने वाले प्रबंधन एंडपॉइंट शामिल हैं; मशीन-पठनीय [`docs/openapi.yaml`](../openapi.yaml) और `src/app/api/` के अंतर्गत रूट ट्री संपूर्ण स्रोत हैं।
 
 OpenAI-संगत प्रोटोकॉल और प्रदाता क्षमता मैट्रिक्स पर केंद्रित जानकारी के लिए,
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) देखें।
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | प्रतिक्रिया | `HIT` या `MISS` (गैर-स्ट्रीमिंग)                                                                                                                                                                                                       |
 | `X-OmniRoute-Idempotent` | प्रतिक्रिया | डुप्लिकेट हटाए जाने पर `true`                                                                                                                                                                                                          |
 | `X-OmniRoute-Progress`   | प्रतिक्रिया | प्रगति ट्रैकिंग चालू होने पर `enabled`                                                                                                                                                                                                 |
-| `X-OmniRoute-Session-Id` | प्रतिक्रिया | OmniRoute द्वारा उपयोग किया गया प्रभावी सत्र ID                                                                                                                                                                                        |
+| `X-OmniRoute-Session-Id` | प्रतिक्रिया | 67router द्वारा उपयोग किया गया प्रभावी सत्र ID                                                                                                                                                                                         |
 | `X-OmniRoute-Request-Id` | प्रतिक्रिया | अनुरोध सहसंबंध id (ज्ञात होने पर)                                                                                                                                                                                                      |
-| `X-OmniRoute-Version`    | प्रतिक्रिया | OmniRoute बिल्ड संस्करण (हमेशा मौजूद)                                                                                                                                                                                                  |
+| `X-OmniRoute-Version`    | प्रतिक्रिया | 67router बिल्ड संस्करण (हमेशा मौजूद)                                                                                                                                                                                                   |
 | `X-OmniRoute-Cost-Saved` | प्रतिक्रिया | किसी HIT पर कैश द्वारा बचाई गई USD राशि (केवल कैश हिट)                                                                                                                                                                                 |
 | `X-OmniRoute-Decision`   | प्रतिक्रिया | रूटिंग ट्रेस: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` कॉम्बो रणनीति है, या गैर-कॉम्बो अनुरोध के लिए `single`) — पूर्णता प्रतिक्रियाओं में हमेशा मौजूद                                                            |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### प्रति अनुरोध खाता पिन करना
 
-जब किसी प्रदाता के पास कई कनेक्शन (खाते या कुंजियाँ) होते हैं, तो OmniRoute सामान्यतः अपनी
+जब किसी प्रदाता के पास कई कनेक्शन (खाते या कुंजियाँ) होते हैं, तो 67router सामान्यतः अपनी
 खाता-चयन रणनीति के माध्यम से उनमें से एक को चुनता है। इसके बजाय, कोई अनुरोध
 `x-omniroute-connection` हेडर के साथ किसी विशिष्ट कनेक्शन को पिन कर सकता है:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ Claude Code, `ANTHROPIC_CUSTOM_HEADERS` के माध्यम से कस�
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Claude Code, `ANTHROPIC_CUSTOM_HEADERS` के माध्यम से कस�
 ## विशिष्ट प्रबंधित सत्र लीज़
 
 विशिष्ट प्रबंधित सत्र लीज़िंग एक ऑप्ट-इन, क्लाइंट-निरपेक्ष रूटिंग अनुबंध है: एक सक्रिय स्वामी
-एक पात्र OmniRoute कनेक्शन को अपने पास रखता है। यह किसी मॉडल को लीज़ पर नहीं देता, OAuth की आवश्यकता नहीं रखता, किसी
+एक पात्र 67router कनेक्शन को अपने पास रखता है। यह किसी मॉडल को लीज़ पर नहीं देता, OAuth की आवश्यकता नहीं रखता, किसी
 विशिष्ट क्लाइंट की पहचान नहीं करता और न ही किसी विशिष्ट प्रदाता की आवश्यकता रखता है।
 
 प्रमाणीकरण करने वाली API कुंजी के पास `lease:exclusive` स्कोप और एक स्पष्ट गैर-रिक्त
@@ -190,7 +190,7 @@ JSON बॉडी में generation प्रदान करते हैं
 
 यह ऑप्ट-इन status क्रिया एक ही डेटाबेस ट्रांज़ैक्शन में अपारदर्शी स्वामी, प्रमाणीकृत प्रबंधित API कुंजी और सटीक
 सक्रिय generation द्वारा सुरक्षित की जाती है। `displayName` केवल ट्रिम किया गया कॉन्फ़िगर किया हुआ
-कनेक्शन नाम है; कोई सुरक्षित कॉन्फ़िगर किया हुआ नाम मौजूद न होने पर यह `null` होता है। OmniRoute कभी भी इसके स्थान पर
+कनेक्शन नाम है; कोई सुरक्षित कॉन्फ़िगर किया हुआ नाम मौजूद न होने पर यह `null` होता है। 67router कभी भी इसके स्थान पर
 ईमेल या जनरेट की गई खाता पहचान का उपयोग नहीं करता। provider मान एक गैर-संवेदनशील प्रदर्शन लेबल है और कभी भी
 जनरेट किया गया संगत-प्रदाता पहचानकर्ता नहीं होता। क्रेडेंशियल, टोकन, कुकी, अपरिष्कृत कनेक्शन या API
 कुंजी ids, स्वामी हैश, फ़ेंसिंग सीक्रेट और आंतरिक रूटिंग डेटा शामिल नहीं किए जाते।
@@ -231,7 +231,7 @@ X-OmniRoute-Lease-Generation: 1
 
 इस प्रतिक्रिया का अर्थ केवल यह है कि सामान्य पात्र सेट गैर-रिक्त था और प्रत्येक उपलब्ध उम्मीदवार
 किसी अन्य स्वामी की सक्रिय लीज़ के अधीन था। असमर्थित मॉडल/प्रदाता, नीति असंगति, कूलडाउन, कोटा,
-स्वास्थ्य और अन्य सामान्य पात्रता विफलताओं के लिए उनकी मौजूदा OmniRoute प्रतिक्रियाएँ बनी रहती हैं।
+स्वास्थ्य और अन्य सामान्य पात्रता विफलताओं के लिए उनकी मौजूदा 67router प्रतिक्रियाएँ बनी रहती हैं।
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request दस्तावेज़ भी स्वीकार क
 ```
 
 नेटिव `{ image | audio | video | pdf }` मान कोई सार्वजनिक HTTPS URL, `data:` URI, या रॉ
-base64 हो सकते हैं। OmniRoute उन ऑब्जेक्ट्स को स्ट्रिंग में नहीं बदलता या नेटिव इमेज URL फ़ेच नहीं करता — Jina
+base64 हो सकते हैं। 67router उन ऑब्जेक्ट्स को स्ट्रिंग में नहीं बदलता या नेटिव इमेज URL फ़ेच नहीं करता — Jina
 सार्वजनिक मीडिया को स्वयं प्राप्त करता है। अतिरिक्त Jina फ़ील्ड (`task`, `normalized`, `truncate`, `embedding_type`)
 फ़ॉरवर्ड किए जाते हैं। केवल-टेक्स्ट वाले Jina SKU अब भी गैर-टेक्स्ट दस्तावेज़ों को अस्वीकार करते हैं।
 
@@ -454,7 +454,7 @@ Mistral द्वारा उपयोग किए जाने वाले �
 
 ### Vertex AI DeepSeek OCR प्रमाणीकरण और एंडपॉइंट रिज़ॉल्यूशन
 
-`vertex-deepseek-ocr` उसी Vertex AI प्रमाणीकरण का पुनः उपयोग करता है जिसका OmniRoute पहले से ही
+`vertex-deepseek-ocr` उसी Vertex AI प्रमाणीकरण का पुनः उपयोग करता है जिसका 67router पहले से ही
 चैट/इमेज ट्रैफ़िक के लिए समर्थन करता है (`open-sse/executors/vertex.ts`): कनेक्शन की API की या तो
 Service Account JSON क्रेडेंशियल होती है (जिसे JWT-bearer फ़्लो के माध्यम से अल्पकालिक OAuth ऐक्सेस टोकन के लिए
 एक्सचेंज किया जाता है) या पहले से जारी किया गया OAuth ऐक्सेस टोकन होता है, जिसे ज्यों का त्यों उपयोग किया जाता है। अपस्ट्रीम एंडपॉइंट URL, Vertex का
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### मॉडल की कीमतें (`pricing`)
 
-जब OmniRoute को मॉडल की कीमत ज्ञात होती है, तो प्रविष्टि में एक `pricing` ऑब्जेक्ट होता है। कीमत उस मूल्य निर्धारण तालिका से आती है जिसका उपयोग लागत लेखांकन करता है: अंतर्निहित डिफ़ॉल्ट, सिंक की गई कीमतें और `/api/pricing` के माध्यम से सेट किए गए ओवरराइड। ये सूची कीमतें हैं, इसलिए सदस्यता प्रदाता भी प्रति-टोकन कीमत दिखाते हैं।
+जब 67router को मॉडल की कीमत ज्ञात होती है, तो प्रविष्टि में एक `pricing` ऑब्जेक्ट होता है। कीमत उस मूल्य निर्धारण तालिका से आती है जिसका उपयोग लागत लेखांकन करता है: अंतर्निहित डिफ़ॉल्ट, सिंक की गई कीमतें और `/api/pricing` के माध्यम से सेट किए गए ओवरराइड। ये सूची कीमतें हैं, इसलिए सदस्यता प्रदाता भी प्रति-टोकन कीमत दिखाते हैं।
 
 ```json
 "pricing": {
@@ -626,8 +626,8 @@ Bifrost, CLIProxyAPI और भविष्य के साइडकार र�
 
 ## ElevenLabs ऑडियो जनरेशन
 
-अपनी ElevenLabs API कुंजी के साथ OmniRoute में एक `elevenlabs` प्रोवाइडर कनेक्शन कॉन्फ़िगर करें।
-क्लाइंट अपनी **OmniRoute** कुंजी (`Authorization: Bearer $OMNIROUTE_API_KEY`) से प्रमाणित होते हैं;
+अपनी ElevenLabs API कुंजी के साथ 67router में एक `elevenlabs` प्रोवाइडर कनेक्शन कॉन्फ़िगर करें।
+क्लाइंट अपनी **67router** कुंजी (`Authorization: Bearer $OMNIROUTE_API_KEY`) से प्रमाणित होते हैं;
 गेटवे संग्रहीत प्रोवाइडर कुंजी को `xi-api-key` के रूप में प्रदान करता है। गेटवे बेयरर टोकन के रूप में कभी भी ElevenLabs कुंजी न भेजें।
 
 | विधि | पाथ                         | प्रतिक्रिया                               | API कुंजी एंडपॉइंट श्रेणी |
@@ -688,7 +688,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 रूट अपस्ट्रीम स्थिति कोड और त्रुटि बॉडी को बिना बदलाव के लौटाते हैं, जिसमें प्लान
 प्रतिबंध के लिए `402` और कोटा सीमा के लिए `429` शामिल हैं। उपलब्ध होने पर `character-cost`, `song-id`, `request-id` और `retry-after`
 हेडर संरक्षित रहते हैं। निःशुल्क क्रेडिट बैलेंस प्रत्येक संगीत मॉडल, आउटपुट फ़ॉर्मेट या API सुविधा तक पहुँच की गारंटी नहीं देता: ElevenLabs प्रत्येक अनुरोध के लिए पात्रता तय करता है।
-एकीकृत एंडपॉइंट OmniRoute के सामान्यीकृत त्रुटि एनवलप में त्रुटि स्थिति कोड संरक्षित रखता है।
+एकीकृत एंडपॉइंट 67router के सामान्यीकृत त्रुटि एनवलप में त्रुटि स्थिति कोड संरक्षित रखता है।
 
 अपस्ट्रीम अनुबंध: [ध्वनि प्रभाव](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [संगीत कंपोज़िशन](https://elevenlabs.io/docs/api-reference/music/compose) और
@@ -729,7 +729,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 
 सभी POST रूट समान संरचना का पालन करते हैं: `Bearer your-api-key` + Zod-सत्यापित JSON बॉडी (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, आदि, `src/shared/validation/schemas.ts` देखें)। स्कीमा विफलता पर 4xx लौटाया जाता है।
 
-जो क्लाइंट `Authorization: Bearer ...` संलग्न नहीं कर सकते, उनके लिए OmniRoute क्वेरी-स्ट्रिंग संगतता (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) या नीचे दस्तावेज़ीकृत समर्पित `/api/v1/vscode/{token}/...` एंडपॉइंट्स के माध्यम से URL में API कुंजियाँ भी स्वीकार करता है।
+जो क्लाइंट `Authorization: Bearer ...` संलग्न नहीं कर सकते, उनके लिए 67router क्वेरी-स्ट्रिंग संगतता (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) या नीचे दस्तावेज़ीकृत समर्पित `/api/v1/vscode/{token}/...` एंडपॉइंट्स के माध्यम से URL में API कुंजियाँ भी स्वीकार करता है।
 
 ```bash
 # रीरैंक (क्लाउड रजिस्ट्री प्रदाता, या "<prefix>/<model>" के रूप में OpenAI-संगत प्रदाता नोड)
@@ -887,7 +887,7 @@ Exa परिणाम `provider_raw` में `id`, `highlight_scores`, `summa
 
 कॉन्फ़िगर किए गए web-fetch प्रदाता (Firecrawl, Jina Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) के माध्यम से किसी URL से सामग्री निकालें।
 
-Parallel Extract (`parallel-search`, वही API कुंजी जो Parallel Search की है) केवल Markdown लौटाता है — कोई भी अन्य `format` होने पर `400` मिलता है — और सामग्री को 100,000 वर्णों तक सीमित करता है। जब लक्षित पृष्ठ को ही एक्सट्रैक्ट नहीं किया जा सकता, तो अपस्ट्रीम इसे HTTP 200 के भीतर रिपोर्ट करता है; OmniRoute इसे एक निश्चित संदेश के साथ `422` के रूप में प्रस्तुत करता है।
+Parallel Extract (`parallel-search`, वही API कुंजी जो Parallel Search की है) केवल Markdown लौटाता है — कोई भी अन्य `format` होने पर `400` मिलता है — और सामग्री को 100,000 वर्णों तक सीमित करता है। जब लक्षित पृष्ठ को ही एक्सट्रैक्ट नहीं किया जा सकता, तो अपस्ट्रीम इसे HTTP 200 के भीतर रिपोर्ट करता है; 67router इसे एक निश्चित संदेश के साथ `422` के रूप में प्रस्तुत करता है।
 
 | विधि | पथ              | विवरण                                                                           |
 | ---- | --------------- | ------------------------------------------------------------------------------- |
@@ -945,14 +945,14 @@ codex OAuth कनेक्शन चुनती है, और `wreq-js` ट�
 जब `supports_websockets = true` होता है, तो OpenAI **Codex CLI** क्लाइंट-साइड पर मॉडल नाम को सत्यापित करता है और
 `codex/gpt-5.5` जैसे **प्रदाता-प्रीफ़िक्स वाले ids को अस्वीकार करता है**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`)। **मूल** id (उदाहरण के लिए `gpt-5.5`) भेजें। OmniRoute का ब्रिज
+a ChatGPT account`)। **मूल** id (उदाहरण के लिए `gpt-5.5`) भेजें। 67router का ब्रिज
 केवल codex के लिए है, इसलिए यह अपस्ट्रीम तक टनल बनाने से पहले मूल id को codex मॉडल के रूप में पुनः हल करता है
 (`resolveCodexWsModelInfo`) — भले ही मूल
 `gpt-5.5` अन्यथा HTTP पर किसी दूसरे प्रदाता को रूट हो जाता।
 
 #### OpenAI Codex CLI को कॉन्फ़िगर करना
 
-`~/.codex/config.toml` में WebSocket समर्थन वाला कस्टम प्रदाता जोड़कर Codex CLI को OmniRoute की ओर इंगित करें (मौजूदा कॉन्फ़िगरेशन को प्रभावित करने से बचने के लिए अलग `CODEX_HOME` का उपयोग करें):
+`~/.codex/config.toml` में WebSocket समर्थन वाला कस्टम प्रदाता जोड़कर Codex CLI को 67router की ओर इंगित करें (मौजूदा कॉन्फ़िगरेशन को प्रभावित करने से बचने के लिए अलग `CODEX_HOME` का उपयोग करें):
 
 ```toml
 model = "gpt-5.5"                 # मूल id — "codex/gpt-5.5" नहीं
@@ -963,15 +963,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # अंत में स्लैश नहीं; WS URL इससे प्राप्त होता है (प्रोडक्शन में https/wss का उपयोग करें)
 wire_api = "responses"                    # फ़रवरी 2026 से एकमात्र समर्थित मान
 supports_websockets = true                # Responses-over-WS ट्रांसपोर्ट सक्षम करता है
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API कुंजी (Bearer) रखता है
+env_key = "OMNIROUTE_API_KEY"             # 67router API कुंजी (Bearer) रखता है
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # एक OmniRoute API कुंजी (यदि REQUIRE_API_KEY=false हो तो कोई भी कुंजी)
+export OMNIROUTE_API_KEY=sk-...           # एक 67router API कुंजी (यदि REQUIRE_API_KEY=false हो तो कोई भी कुंजी)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI, `base_url + /responses` को WebSocket में अपग्रेड करता है और OmniRoute इसे
+CLI, `base_url + /responses` को WebSocket में अपग्रेड करता है और 67router इसे
 चुने गए codex OAuth कनेक्शन तक टनल करता है। स्थानीय
 सर्वर के विरुद्ध शुरू से अंत तक सत्यापित: ChatGPT `codex.rate_limits` + `response.created` लौटाता है और
 पूर्णता को स्ट्रीम करता है।
@@ -1055,7 +1055,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### कटऑफ समायोजन सूत्र
 
-OmniRoute अपस्ट्रीम समाप्ति को रोकने के लिए सक्रिय कोटा कटऑफ का समर्थन करता है (इसे कनेक्शन
+67router अपस्ट्रीम समाप्ति को रोकने के लिए सक्रिय कोटा कटऑफ का समर्थन करता है (इसे कनेक्शन
 `quotaWindowThresholds`, प्रदाता डिफ़ॉल्ट या वैश्विक रेज़िलिएंस सेटिंग्स के माध्यम से कॉन्फ़िगर किया जाता है)। जब किसी कोटा विंडो पर कटऑफ सीमा
 (उदा., `cutoff = 25%`) सक्रिय होती है, तो टेक्स्ट रेंडरर शेष भत्ते की गणना इस प्रकार करता है:
 
@@ -1600,7 +1600,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - टोकनयुक्त उपनाम `/v1/*` और `/api/tags` वाले समान हैंडलर का पुनः उपयोग करते हैं; प्रतिक्रिया संरचनाएँ समान रहती हैं।
 - जब भी क्लाइंट कस्टम हेडर का समर्थन करे, `Authorization: Bearer ...` को प्राथमिकता दें।
-- URL-आधारित टोकन रिवर्स-प्रॉक्सी लॉग, ब्राउज़र इतिहास और OmniRoute से बाहर की टेलीमेट्री में दिखाई दे सकते हैं। इन्हें संगतता विकल्प के रूप में उपयोग करें, डिफ़ॉल्ट प्रमाणीकरण मोड के रूप में नहीं।
+- URL-आधारित टोकन रिवर्स-प्रॉक्सी लॉग, ब्राउज़र इतिहास और 67router से बाहर की टेलीमेट्री में दिखाई दे सकते हैं। इन्हें संगतता विकल्प के रूप में उपयोग करें, डिफ़ॉल्ट प्रमाणीकरण मोड के रूप में नहीं।
 
 ---
 
@@ -1708,7 +1708,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## वेबहुक
 
-OmniRoute इवेंट (अनुरोध पूर्ण होना, कोटा समाप्त होना, कुंजी रोटेशन आदि) के लिए आउटबाउंड वेबहुक सदस्यताएँ।
+67router इवेंट (अनुरोध पूर्ण होना, कोटा समाप्त होना, कुंजी रोटेशन आदि) के लिए आउटबाउंड वेबहुक सदस्यताएँ।
 
 | विधि   | पथ                        | विवरण                                                                     |
 | ------ | ------------------------- | ------------------------------------------------------------------------- |
@@ -1741,7 +1741,7 @@ OmniRoute इवेंट (अनुरोध पूर्ण होना, क�
 
 ## एजेंट्स प्रोटोकॉल
 
-OmniRoute उपयोगकर्ताओं की ओर से दूरस्थ रूप से निष्पादित क्लाउड एजेंट कार्य (Claude Code, Codex Cloud, OpenHands आदि)।
+67router उपयोगकर्ताओं की ओर से दूरस्थ रूप से निष्पादित क्लाउड एजेंट कार्य (Claude Code, Codex Cloud, OpenHands आदि)।
 
 | विधि   | पथ                            | विवरण                                                                                                                                               |
 | ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1787,7 +1787,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## लचीलापन (विस्तृत)
 
-OmniRoute अस्थायी विफलता के लिए तीन स्वतंत्र तंत्र उपलब्ध कराता है; नीचे दिए गए प्रबंधन एंडपॉइंट ऑपरेटरों को उन्हें पढ़ने और ओवरराइड करने की सुविधा देते हैं:
+67router अस्थायी विफलता के लिए तीन स्वतंत्र तंत्र उपलब्ध कराता है; नीचे दिए गए प्रबंधन एंडपॉइंट ऑपरेटरों को उन्हें पढ़ने और ओवरराइड करने की सुविधा देते हैं:
 
 | दायरा           | स्थिति संग्रहण                          | पढ़ें                                     | रीसेट / साफ़ करें                                                                  |
 | --------------- | --------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -1822,7 +1822,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## कौशल
 
-कस्टम निष्पादन योग्य हैंडलरों के साथ OmniRoute का विस्तार करने हेतु कौशल फ़्रेमवर्क, साथ ही मार्केटप्लेस एकीकरण।
+कस्टम निष्पादन योग्य हैंडलरों के साथ 67router का विस्तार करने हेतु कौशल फ़्रेमवर्क, साथ ही मार्केटप्लेस एकीकरण।
 
 | विधि   | पथ                                | विवरण                                                                                                                                   |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1859,7 +1859,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## MCP सर्वर
 
-OmniRoute में 3 ट्रांसपोर्ट (stdio, SSE, streamable-http) और स्कोप किए गए टूल वाला एक अंतर्निहित Model Context Protocol सर्वर शामिल है। नीचे दिए गए डैशबोर्ड एंडपॉइंट स्थिति/ऑडिट डेटा पढ़ते हैं और HTTP ट्रांसपोर्ट को प्रॉक्सी करते हैं।
+67router में 3 ट्रांसपोर्ट (stdio, SSE, streamable-http) और स्कोप किए गए टूल वाला एक अंतर्निहित Model Context Protocol सर्वर शामिल है। नीचे दिए गए डैशबोर्ड एंडपॉइंट स्थिति/ऑडिट डेटा पढ़ते हैं और HTTP ट्रांसपोर्ट को प्रॉक्सी करते हैं।
 
 | विधि | पथ | विवरण |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1881,7 +1881,7 @@ OmniRoute में 3 ट्रांसपोर्ट (stdio, SSE, streamable-
 
 ## A2A सर्वर
 
-OmniRoute निरीक्षण/डैशबोर्ड उपयोग के लिए एक REST रैपर के साथ A2A (Agent-to-Agent) JSON-RPC 2.0 एंडपॉइंट उपलब्ध कराता है।
+67router निरीक्षण/डैशबोर्ड उपयोग के लिए एक REST रैपर के साथ A2A (Agent-to-Agent) JSON-RPC 2.0 एंडपॉइंट उपलब्ध कराता है।
 
 ### JSON-RPC
 
@@ -2110,7 +2110,7 @@ GET /.well-known/agent.json
 
 ## CLI टूल प्रबंधन
 
-OmniRoute के साथ एकीकृत होने वाले CLI टूल (antigravity, commandCode,
+67router के साथ एकीकृत होने वाले CLI टूल (antigravity, commandCode,
 devin-cli आदि) प्रबंधित करें। पूरी सूची के लिए [प्रदाता संदर्भ](./PROVIDER_REFERENCE.md) देखें।
 
 | विधि | पथ                                      | विवरण                                                                                                                                                                             |
@@ -2221,7 +2221,7 @@ AI एजेंट कौशल प्रबंधित करें (OpenAI �
 
 ## प्लगइन
 
-OmniRoute प्लगइन (तृतीय-पक्ष एक्सटेंशन) प्रबंधित करें।
+67router प्लगइन (तृतीय-पक्ष एक्सटेंशन) प्रबंधित करें।
 
 | विधि   | पथ                                 | विवरण                                   |
 | ------ | ---------------------------------- | --------------------------------------- |

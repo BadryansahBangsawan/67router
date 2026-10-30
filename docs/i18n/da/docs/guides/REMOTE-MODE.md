@@ -4,7 +4,7 @@
 
 ---
 
-Kør `omniroute`-CLI'en på din bærbare computer, mens OmniRoute selv kører et andet sted
+Kør `omniroute`-CLI'en på din bærbare computer, mens 67router selv kører et andet sted
 (en VPS, en hjemmeserver eller en anden maskine på dit Tailnet). Du logger ind én gang med
 `omniroute connect`, og derefter er **alle** CLI-kommandoer rettet mod den eksterne
 server — samme kommandoer, samme output, blot udført mod den eksterne server.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← skriver en lokal Codex-profil fra
 ## Sådan fungerer det
 
 ```
-din bærbare computer                     ekstern OmniRoute (VPS)
+din bærbare computer                     ekstern 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute-CLI      │  POST /api/cli/connect  (adgangskode → token)      │
 │  kontekst: vps     │ ───────────────►  │ udsteder et afgrænset adgangstoken │
@@ -106,7 +106,7 @@ serveren, ikke på din maskine, så samtykkeskærmen **hænger for evigt og udse
 aldrig en kode** — den normale reserveløsning med at "indsætte callback-URL'en" har
 intet at indsætte. (Dette er en begrænsning hos Google: Det samme problem opstår i
 enhver proxy, der bruger den medfølgende Antigravity-desktopklient, ikke kun
-OmniRoute.)
+67router.)
 
 Dashboardet registrerer dette, før du sidder fast: Hvis du åbner **Providers → Antigravity →
 Connect** fra en adresse, der ikke er localhost, erstattes den generelle meddelelse
@@ -114,7 +114,7 @@ om at "kopiere callback-URL'en" med de to løsninger nedenfor, hvor din vært og
 allerede er udfyldt. (En LAN-adresse tæller med — `192.168.x.x` er ikke localhost,
 hvad denne callback angår.)
 
-Der er to understøttede måder at forbinde Antigravity med en ekstern OmniRoute på.
+Der er to understøttede måder at forbinde Antigravity med en ekstern 67router på.
 
 ### Mulighed A — lokal loginhjælper (anbefales)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Gå derefter til det **eksterne** dashboard: **Providers → Antigravity → Connect**,
 og indsæt `omniroute-cred-v1.…`-blobben i feltet **Step 2** (det accepterer enten
-en callback-URL eller en legitimationsblob). OmniRoute afkoder den, kører Cloud
+en callback-URL eller en legitimationsblob). 67router afkoder den, kører Cloud
 Code-klargøringen på serversiden og gemmer forbindelsen.
 
 > Blobben indeholder et refresh-token — behandl det som en adgangskode. Ved
@@ -197,7 +197,7 @@ udbyderspecifik port, der skal tunneleres.
 ## Tilslutning af Codex / Grok på en fjerninstallation (udbydere med fast loopback)
 
 Codex, xAI (`xai-oauth`) og Grok CLI (`grok-cli`) registrerer en **fast**
-loopback-`redirect_uri` hos deres upstream-OAuth-app. OmniRoute kan ikke ændre den —
+loopback-`redirect_uri` hos deres upstream-OAuth-app. 67router kan ikke ændre den —
 udbyderen sender altid browseren tilbage til den samme hardkodede adresse:
 
 | Udbyder     | Fast callback, som udbyderen omdirigerer til |
@@ -206,7 +206,7 @@ udbyderen sender altid browseren tilbage til den samme hardkodede adresse:
 | `xai-oauth` | `http://127.0.0.1:56121/callback`            |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`            |
 
-`localhost` betyder her **maskinen, der kører browseren**, mens OmniRoutes
+`localhost` betyder her **maskinen, der kører browseren**, mens 67routers
 PKCE-callbackserver lytter på **serverens** loopback. Åbn dashboardet på en
 LAN-adresse som `http://192.168.0.15:20128`, og de to mødes aldrig:
 Godkendelseskoden leveres til din egen laptops `localhost:1455`, hvor intet
@@ -226,7 +226,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Der kræves to videresendelser, og hvis kun én videresendes, mislykkes det stadig:
 
 - **`20128`** (dashboardporten) gør origin til ægte localhost, hvilket er det,
-  der får OmniRoute til overhovedet at starte PKCE-callbackserveren — en LAN-origin
+  der får 67router til overhovedet at starte PKCE-callbackserveren — en LAN-origin
   når aldrig denne gren.
 - **`1455`** (udbyderens faste callbackport) er den port, browseren sendes tilbage
   til; den skal tunneleres videre til serverens loopback.
@@ -348,7 +348,7 @@ omniroute contexts current         # den aktive server, godkendelsesstatus, scop
 
 ```text
   | Navn    | Base URL                  | Auth  | Scope | Beskrivelse
-● | vps     | http://100.67.86.91:20128 | token | admin | Fjern OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Fjern 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

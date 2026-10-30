@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ir **četras akreditācijas datu saimes**, kas var autorizēt pārvaldības maršrutus.
+67router ir **četras akreditācijas datu saimes**, kas var autorizēt pārvaldības maršrutus.
 Tās nav savstarpēji aizstājamas. Secinājumu API atslēgas (`sk-…`) **nepārvalda**
 serveri, ja vien tām nav skaidri piešķirta `manage` vai `admin` darbības joma.
 

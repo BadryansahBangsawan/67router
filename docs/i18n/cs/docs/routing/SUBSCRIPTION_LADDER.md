@@ -10,7 +10,7 @@
 
 ## Proč to existuje
 
-OmniRoute již zodpovídá dvě otázky týkající se nákladů, ale ani jedna není tou, kterou si klade většina provozovatelů.
+67router již zodpovídá dvě otázky týkající se nákladů, ale ani jedna není tou, kterou si klade většina provozovatelů.
 
 | Existující mechanismus                                   | Odpovídá na otázku                                |
 | -------------------------------------------------------- | ------------------------------------------------- |

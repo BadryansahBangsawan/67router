@@ -6,7 +6,7 @@
 
 ## Ringkasan
 
-OmniRoute kini menyokong tiga mod geganti untuk `/api/v1/relay/chat/completions`:
+67router kini menyokong tiga mod geganti untuk `/api/v1/relay/chat/completions`:
 
 - `ts`: Gunakan geganti TypeScript dalam proses.
 - `bifrost`: Paksa penggunaan get laluan Bifrost.
@@ -45,12 +45,12 @@ Jika anda sedang membandingkan 9router/CLIPROXYAPI:
 
 ## Kontrak sempadan bahagian belakang
 
-Sempadan produk yang stabil ialah API geganti OmniRoute, bukannya pelaksanaan papan pemuka. Papan pemuka Next.js boleh memasang, mengkonfigurasi dan menyelia perkhidmatan setempat, tetapi penghalaan permintaan hendaklah masuk melalui API geganti dan diserahkan di belakang sempadan tersebut.
+Sempadan produk yang stabil ialah API geganti 67router, bukannya pelaksanaan papan pemuka. Papan pemuka Next.js boleh memasang, mengkonfigurasi dan menyelia perkhidmatan setempat, tetapi penghalaan permintaan hendaklah masuk melalui API geganti dan diserahkan di belakang sempadan tersebut.
 
 Pilihan bahagian belakang jangka panjang:
 
 - Kekalkan geganti TypeScript sebagai dasar dalam proses dan laluan sandaran. Pengesahan, senarai dibenarkan, penormalan permintaan, perakaunan dan semakan keselamatan kekal di sini sebelum sebarang penyerahan kepada bahagian belakang.
-- Gunakan Bifrost sebagai sidecar Tahap 1 berdaya pemprosesan tinggi yang diutamakan apabila pelaksanaan memerlukan variasi penghalaan yang lebih rendah, penggiliran penyedia berpusat atau peluasan skala merentas berbilang replika OmniRoute.
+- Gunakan Bifrost sebagai sidecar Tahap 1 berdaya pemprosesan tinggi yang diutamakan apabila pelaksanaan memerlukan variasi penghalaan yang lebih rendah, penggiliran penyedia berpusat atau peluasan skala merentas berbilang replika 67router.
 - Kekalkan 9router dan CLIPROXYAPI sebagai perkhidmatan keserasian terbenam. Kedua-duanya berjalan sebagai proses setempat yang diselia dan berguna apabila tingkah laku penyedia/CLI masing-masing ialah penyesuai yang dikehendaki, tetapi kedua-duanya tidak seharusnya menjadi enjin penghalaan Tahap 1 lalai.
 - Jangan benarkan papan pemuka menghantar URL perkhidmatan sembarangan ke dalam laluan utama. URL yang dibekalkan UI ialah input konfigurasi; kod penghalaan hendaklah mendapatkan bahagian belakang yang berdaftar dan telah diperiksa kesihatannya daripada tetapan bahagian pelayan dan keadaan penyelia.
 - Buat masa ini, utamakan HTTP gelung balik untuk perkhidmatan yang diselia kerana proses terurus sedia ada menyediakan API yang serasi dengan HTTP, pengawal laluan boleh mengaudit sempadan tersebut dan tingkah laku kegagalan/sandaran dapat dilihat dalam log permintaan. Pengangkutan SDK atau soket pada masa hadapan hanya wajar ditambahkan jika ia mengurangkan kependaman penghalaan p99 secara nyata tanpa melemahkan pengasingan atau semantik sandaran.

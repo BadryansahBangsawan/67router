@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ishga tushish vaqtida SQLite drayverini 5 bosqichli zaxira variantlar zanjiri orqali aniqlaydi:
+67router ishga tushish vaqtida SQLite drayverini 5 bosqichli zaxira variantlar zanjiri orqali aniqlaydi:
 
 1. **Birga yetkazib beriladigan `better-sqlite3`** (`package.json` ichidagi `dependencies` orqali)
    — eng tezkor variant, mahalliy ikkilik fayl; yaratish vositalari mavjud bo‘lsa, `npm install` orqali o‘rnatiladi.
@@ -28,13 +28,13 @@ OmniRoute ishga tushish vaqtida SQLite drayverini 5 bosqichli zaxira variantlar 
 - **Yaratish vositalari yo‘q**: ayrim muhitlar (VS Build Tools mavjud bo‘lmagan korporativ Windows,
   minimal Docker tasvirlari) `better-sqlite3` paketini kompilyatsiya qila olmaydi. Ish vaqti
   o‘rnatuvchisi npm reyestridan oldindan yaratilgan ikkilik faylni oladi; bu ham ishlamasa,
-  zaxira drayverlar OmniRoute baribir ishga tushishini ta’minlaydi.
+  zaxira drayverlar 67router baribir ishga tushishini ta’minlaydi.
 - **Tarmoqdan uzilgan tizimlar**: npm reyestriga ulanib bo‘lmasa, `node:sqlite`
   yoki `sql.js` asosiy funksionallikni kafolatlaydi.
 
 ## Signatura baytlarini tekshirish
 
-Ishlash vaqtida o‘rnatilgan `.node` faylini yuklashdan oldin OmniRoute dastlabki 8
+Ishlash vaqtida o‘rnatilgan `.node` faylini yuklashdan oldin 67router dastlabki 8
 baytni o‘qiydi va ularni ma’lum platforma signaturalari bilan solishtiradi:
 
 | Platforma             | Baytlar (hex) | Yorliq      |
@@ -107,9 +107,9 @@ Amalga oshirish:
 ## Yagona yozuvchi topologiyasi (HA qo‘llab-quvvatlanmaydi)
 
 Yuqoridagi drayver zaxira zanjiri baribir **bitta jarayonda** ishlaydi. Standart SQLite
-bilan OmniRoute **yagona yozuvchi** hisoblanadi:
+bilan 67router **yagona yozuvchi** hisoblanadi:
 
-- Bitta `storage.sqlite` fayliga ikkita OmniRoute replikasini ulamang.
+- Bitta `storage.sqlite` fayliga ikkita 67router replikasini ulamang.
 - Konteynerning qayta ishga tushishi, Recreate joylashtirishi, OOM tufayli to‘xtatilishi yoki HEALTHCHECK
   qayta ishga tushirishi bajarilayotgan barcha SSE seanslarini uzadi. Standart yo‘lda seanslarni
   bosqichma-bosqich yakunlash mavjud emas.

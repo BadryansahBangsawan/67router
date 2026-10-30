@@ -6,7 +6,7 @@
 
 ## Samenvatting
 
-OmniRoute ondersteunt nu drie relaymodi voor `/api/v1/relay/chat/completions`:
+67router ondersteunt nu drie relaymodi voor `/api/v1/relay/chat/completions`:
 
 - `ts`: Gebruik de TypeScript-relay in hetzelfde proces.
 - `bifrost`: Dwing het gebruik van de Bifrost-gateway af.
@@ -45,12 +45,12 @@ Als je momenteel 9router en CLIPROXYAPI vergelijkt:
 
 ## Contract voor de backendgrens
 
-De stabiele productgrens is de OmniRoute-relay-API, niet de dashboardimplementatie. Het Next.js-dashboard mag lokale services installeren, configureren en beheren, maar aanvragen moeten via de relay-API binnenkomen en achter die grens worden overgedragen.
+De stabiele productgrens is de 67router-relay-API, niet de dashboardimplementatie. Het Next.js-dashboard mag lokale services installeren, configureren en beheren, maar aanvragen moeten via de relay-API binnenkomen en achter die grens worden overgedragen.
 
 Backendkeuzes voor de lange termijn:
 
 - Behoud de TypeScript-relay als het beleidspad en fallbackpad binnen het proces. Authenticatie, toelatingslijsten, normalisatie van aanvragen, registratie van verbruik en veiligheidscontroles blijven hier plaatsvinden vóór elke overdracht aan een backend.
-- Gebruik Bifrost als de voorkeurs-sidecar van Tier 1 voor hoge doorvoer wanneer de implementatie minder routeringsvariatie, gecentraliseerde providerrotatie of horizontale schaalvergroting over meerdere OmniRoute-replica's vereist.
+- Gebruik Bifrost als de voorkeurs-sidecar van Tier 1 voor hoge doorvoer wanneer de implementatie minder routeringsvariatie, gecentraliseerde providerrotatie of horizontale schaalvergroting over meerdere 67router-replica's vereist.
 - Behoud 9router en CLIPROXYAPI als ingebedde compatibiliteitsservices. Ze worden uitgevoerd als beheerde lokale processen en zijn nuttig wanneer hun provider-/CLI-gedrag de gewenste adapter is, maar ze mogen niet de standaardrouteringsengine van Tier 1 worden.
 - Laat het dashboard geen willekeurige service-URL's aan het kritieke pad doorgeven. Door de gebruikersinterface verstrekte URL's zijn configuratie-invoer; routeringscode moet geregistreerde, op status gecontroleerde backends vinden via serverinstellingen en de status van de procesbeheerder.
 - Geef tegenwoordig de voorkeur aan HTTP via de loopbackinterface voor beheerde services, omdat de beheerde processen al HTTP-compatibele API's aanbieden, de routebeveiliging de grens kan controleren en fout-/fallbackgedrag zichtbaar is in aanvraaglogboeken. Een toekomstig SDK- of sockettransport is alleen de moeite waard als het de p99-routeringslatentie aantoonbaar verlaagt zonder de isolatie of fallbacksemantiek te verzwakken.

@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector ist der integrierte HTTPS-Traffic-Debugger von OmniRoute — ein mit Charles Proxy / mitmweb / HTTP Toolkit vergleichbares Tool, das **LLM-fähig** und **Agenten-fähig** ist. Es befindet sich unter `/dashboard/tools/traffic-inspector` und empfängt Live-Traffic von bis zu 5 gleichzeitigen Erfassungsquellen.
+Traffic Inspector ist der integrierte HTTPS-Traffic-Debugger von 67router — ein mit Charles Proxy / mitmweb / HTTP Toolkit vergleichbares Tool, das **LLM-fähig** und **Agenten-fähig** ist. Es befindet sich unter `/dashboard/tools/traffic-inspector` und empfängt Live-Traffic von bis zu 5 gleichzeitigen Erfassungsquellen.
 
 **Dashboard-Speicherort:** `/dashboard/tools/traffic-inspector`
 **Seitenleistengruppe:** Tools (nach AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector ist der integrierte HTTPS-Traffic-Debugger von OmniRoute — e
 
 ### Was Traffic Inspector einzigartig macht
 
-| Funktion                                                                         |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| -------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :-----------------------------: |
-| Webbasiert                                                                       |     ✓     |    ✗    |     ✗     |                ✓                |
-| Open Source                                                                      |     ✓     |    ✗    | teilweise |                ✓                |
-| **Agenten-fähig** (erkennt, ob die Anfrage von Antigravity/Copilot/etc. stammt)  |     ✗     |    ✗    |     ✗     |                ✓                |
-| **LLM-fähig** (analysiert OpenAI-/Anthropic-/Gemini-Struktur, Tokens und Modell) |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Modellzuordnung sichtbar** (gemini-3-flash → claude-sonnet-4.7)                |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Getrennte Proxy-/Upstream-Latenz**                                             | teilweise |    ✗    |     ✗     |                ✓                |
-| **In OmniRoute integriert:** Routing, Fallback und Kosten                        |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Systemweites Proxy-Debugging** (jede App auf dem Rechner)                      |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Benutzerdefinierte Host-Erfassung** (DNS-Umleitung pro Host)                   |     ✓     |    ✓    |     ✓     |                ✓                |
-| **HTTP_PROXY-Umgebungsmodus**                                                    |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Konversationsansicht** (mehrere Dialogrunden, tool_use/tool_result)            |     ✗     |    ✗    |     ✗     |                ✓                |
-| **SSE-Stream-Zusammenführung** (Rekonstruktion aus Delta-Ereignissen)            |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Sitzungsaufzeichnung** (benannt, als .har/.jsonl exportierbar)                 |     ✗     |    ✓    |     ✓     |                ✓                |
+| Funktion                                                                         |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| -------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :----------------------------: |
+| Webbasiert                                                                       |     ✓     |    ✗    |     ✗     |               ✓                |
+| Open Source                                                                      |     ✓     |    ✗    | teilweise |               ✓                |
+| **Agenten-fähig** (erkennt, ob die Anfrage von Antigravity/Copilot/etc. stammt)  |     ✗     |    ✗    |     ✗     |               ✓                |
+| **LLM-fähig** (analysiert OpenAI-/Anthropic-/Gemini-Struktur, Tokens und Modell) |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Modellzuordnung sichtbar** (gemini-3-flash → claude-sonnet-4.7)                |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Getrennte Proxy-/Upstream-Latenz**                                             | teilweise |    ✗    |     ✗     |               ✓                |
+| **In 67router integriert:** Routing, Fallback und Kosten                         |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Systemweites Proxy-Debugging** (jede App auf dem Rechner)                      |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Benutzerdefinierte Host-Erfassung** (DNS-Umleitung pro Host)                   |     ✓     |    ✓    |     ✓     |               ✓                |
+| **HTTP_PROXY-Umgebungsmodus**                                                    |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Konversationsansicht** (mehrere Dialogrunden, tool_use/tool_result)            |     ✗     |    ✗    |     ✗     |               ✓                |
+| **SSE-Stream-Zusammenführung** (Rekonstruktion aus Delta-Ereignissen)            |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Sitzungsaufzeichnung** (benannt, als .har/.jsonl exportierbar)                 |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### Architektur in einem Absatz
 
@@ -264,7 +264,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true bei einer SSE-Antwort
   mappedTo: string | null; // x-omniroute-mapped-Header
-  costEstimateUsd: number | null; // geschätzte Kosten auf Grundlage der OmniRoute-Preise
+  costEstimateUsd: number | null; // geschätzte Kosten auf Grundlage der 67router-Preise
 }
 ```
 
@@ -395,7 +395,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### System-Proxy wurde nicht zurückgesetzt
 
-Wenn OmniRoute abstürzt, während der systemweite Proxy-Modus aktiv ist:
+Wenn 67router abstürzt, während der systemweite Proxy-Modus aktiv ist:
 
 **macOS:**
 
@@ -440,7 +440,7 @@ Basispfad: `/api/tools/traffic-inspector/`
 | GET     | `/requests`                 | Anfragen auflisten (filterbar: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET     | `/requests/{id}`            | Details einer einzelnen Anfrage                                                        |
 | DELETE  | `/requests`                 | In-Memory-Puffer leeren                                                                |
-| POST    | `/requests/{id}/replay`     | Dieselbe Anfrage erneut über den OmniRoute-Router ausführen                            |
+| POST    | `/requests/{id}/replay`     | Dieselbe Anfrage erneut über den 67router-Router ausführen                             |
 | PUT     | `/requests/{id}/annotation` | Notiz zu einer Anfrage speichern oder aktualisieren                                    |
 
 ### WebSocket

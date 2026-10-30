@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute n tẹjade àwọn ohun èlò npm + Docker. Àwọn ẹnu-ọ̀nà wọ̀nyí n pèsè ìtọ́kasí ìpilẹ̀ṣẹ̀ (provenance), àkójọ (inventory) (SBOM) àti ìṣàyẹ̀wò CVE, gbogbo rẹ̀ jẹ́ OSS, tí a so mọ́ àwọn ìlànà ìtúsílẹ̀.
+67router n tẹjade àwọn ohun èlò npm + Docker. Àwọn ẹnu-ọ̀nà wọ̀nyí n pèsè ìtọ́kasí ìpilẹ̀ṣẹ̀ (provenance), àkójọ (inventory) (SBOM) àti ìṣàyẹ̀wò CVE, gbogbo rẹ̀ jẹ́ OSS, tí a so mọ́ àwọn ìlànà ìtúsílẹ̀.
 **Ìwà-ìfọ̀rọ̀wérọ̀-ní-ìṣáájú** — wọ́n n ròyìn nísinsìnyí, wọ́n sì n gbé e sí ìdènà lẹ́hìn ìtúsílẹ̀ àkọ́kọ́ tí ó kọjá.
 
 | Ẹnu-ọ̀nà               | Ohun èlò                                       | Níbo                          | N dènà?                 | Àbájáde                                              |
@@ -42,7 +42,7 @@ Nígbà tí osv tàbí Trivy bá di pupa nítorí CVE tuntun tí a ṣí sílẹ
 
 - **Ẹ̀wọ̀n:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Ìmúdájú nípasẹ̀ `package-lock.json` — gẹ́lẹ́gẹ́ àpò kan ṣoṣo nínú gbogbo igi ìgbẹ́kẹ̀lé (`@openai/codex-security`) ló kéde `extract-zip`, àti gẹ́lẹ́gẹ́ àpò kan ṣoṣo (`promptfoo`) ló kéde `@openai/codex-security`.
 - **Kò sí ìtúsílẹ̀ tí a ti túnṣe níbikíbi nínú ẹ̀wọ̀n náà.** `extract-zip@2.0.1` (tí a tẹ̀ jáde ní 2020) ni ìtúsílẹ̀ ìkẹyìn ti àpò náà — kò sí ẹni tó ń tọ́jú rẹ̀ mọ́. npm-latest lọ́wọ́lọ́wọ́ ti `@openai/codex-security` (`0.1.29`) ṣì ń fa `extract-zip@2.0.1` wọlé.
-- **Kò ṣeé dé ọ̀dọ̀ láti ìṣelọ́pọ̀.** `promptfoo` jẹ́ devDependency-nìkan (kò sí ní àtòjọ lábẹ́ `dependencies` rárá), kò sì sí faili kankan lábẹ́ `src/`, `open-sse/`, tàbí `bin/` tí ó kó àpò npm `extract-zip` wọlé — olùrànlọ́wọ́ `extractZip()` ti OmniRoute fúnra rẹ̀ (`src/lib/versionManager/binaryManager.ts:93`) ń lo `unzip`/`tar` abínibí, kò sì ní í ṣe pẹ̀lú rẹ̀. `@openai/codex-security` tún ní olùṣọ́ symlink-traversal tirẹ̀ lórí ìpèpadà onEntry ti extract-zip.
+- **Kò ṣeé dé ọ̀dọ̀ láti ìṣelọ́pọ̀.** `promptfoo` jẹ́ devDependency-nìkan (kò sí ní àtòjọ lábẹ́ `dependencies` rárá), kò sì sí faili kankan lábẹ́ `src/`, `open-sse/`, tàbí `bin/` tí ó kó àpò npm `extract-zip` wọlé — olùrànlọ́wọ́ `extractZip()` ti 67router fúnra rẹ̀ (`src/lib/versionManager/binaryManager.ts:93`) ń lo `unzip`/`tar` abínibí, kò sì ní í ṣe pẹ̀lú rẹ̀. `@openai/codex-security` tún ní olùṣọ́ symlink-traversal tirẹ̀ lórí ìpèpadà onEntry ti extract-zip.
 - **Má ṣe** fi orúkọ mìíràn fún `extract-zip` nípasẹ̀ `overrides` ti `package.json` — àdánidúró kan ṣoṣo tí ó ṣeé lò ni Electron-org-internal, kò sì bá API mu pẹ̀lú àwọn àyẹ̀wò onEntry/defaultDirMode/defaultFileMode ti `@openai/codex-security` fúnra rẹ̀; fífi orúkọ mìíràn fún un yóò fọ́ àwọn àyẹ̀wò ààbò àpò náà láìsọ fún ẹnikẹ́ni.
 - **Ìpìlẹ̀:** `vulnCount` osv tí a wọ̀n (3) ti wà ní ìsàlẹ̀ ìpìlẹ̀ `config/quality/quality-baseline.json` tí a ti dì (27) — kò sí àtúnṣe ratchet tí ó pọn dandan.
 - **Olùṣọ́ ìpadàsẹ́yìn:** `tests/unit/extract-zip-14482-exposure.test.ts` ń fìdí ẹ̀wọ̀n àti àìyípadà kò-sí-ìkó-wọlé-ìṣelọ́pọ̀ lókè múlẹ̀; yóò kùnà CI bí ó bá yẹ́ nígbàkúùgbà (fún àpẹẹrẹ, PR ọjọ́ iwájú mú `extract-zip` ṣeé dé ọ̀dọ̀ láti ìṣelọ́pọ̀).

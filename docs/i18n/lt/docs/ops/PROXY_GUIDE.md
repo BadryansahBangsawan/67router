@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Lietuvių)
+# 🌐 67router Proxy Guide (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Apeikite geografinius apribojimus, apsaugokite savo tapatybę ir nukreipkite DI srautą per bet kurį tarpinį serverį — be jokio sudėtingo konfigūravimo.**
 
-OmniRoute turi visavertę tarpinių serverių valdymo sistemą, leidžiančią nukreipti srautą į išorinius DI paslaugų teikėjus per HTTP, HTTPS arba SOCKS5 tarpinius serverius. Nesvarbu, ar esate regione, kuriame prieiga užblokuota, ar jums reikia IP adresų rotacijos, ar norite paslėpti skaitmeninį pėdsaką — šiame vadove aprašyta viskas.
+67router turi visavertę tarpinių serverių valdymo sistemą, leidžiančią nukreipti srautą į išorinius DI paslaugų teikėjus per HTTP, HTTPS arba SOCKS5 tarpinius serverius. Nesvarbu, ar esate regione, kuriame prieiga užblokuota, ar jums reikia IP adresų rotacijos, ar norite paslėpti skaitmeninį pėdsaką — šiame vadove aprašyta viskas.
 
 ---
 
@@ -51,7 +51,7 @@ Net ir užblokuotiems regionams nepriklausančiose vietovėse tarpiniai serveria
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute serveris                      │
+│                       67router serveris                      │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Tarpinių    │    │ Tarpinių     │    │ Tarpinio serverio│  │
@@ -84,7 +84,7 @@ Net ir užblokuotiems regionams nepriklausančiose vietovėse tarpiniai serveria
 
 ## 4 lygių tarpinių serverių sistema
 
-OmniRoute palaiko tarpinių serverių konfigūraciją **keturiose nepriklausomose srityse**, kurios tikrinamos prioriteto tvarka:
+67router palaiko tarpinių serverių konfigūraciją **keturiose nepriklausomose srityse**, kurios tikrinamos prioriteto tvarka:
 
 ```
 Prioritetų nustatymo tvarka (nuo aukščiausio → iki žemiausio):
@@ -97,7 +97,7 @@ Prioritetų nustatymo tvarka (nuo aukščiausio → iki žemiausio):
 
 ### Kaip nustatomas tarpinis serveris
 
-Kai OmniRoute siunčia užklausą išoriniam teikėjui, iškviečiama `resolveProxyForConnectionFromRegistry()` funkcija, kuri paeiliui patikrina kiekvieną lygį:
+Kai 67router siunčia užklausą išoriniam teikėjui, iškviečiama `resolveProxyForConnectionFromRegistry()` funkcija, kuri paeiliui patikrina kiekvieną lygį:
 
 1. **Paskyros lygis** — ar šiam konkrečiam ryšio ID priskirtas tarpinis serveris?
 2. **Teikėjo lygis** — ar šiam teikėjui (pvz., `openai`) priskirtas tarpinis serveris?
@@ -239,7 +239,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Importavimas / eksportavimas
 
-Tarpiniai serveriai įtraukiami į **atsarginių kopijų kūrimo / atkūrimo** sistemą. Eksportuojant OmniRoute konfigūraciją:
+Tarpiniai serveriai įtraukiami į **atsarginių kopijų kūrimo / atkūrimo** sistemą. Eksportuojant 67router konfigūraciją:
 
 1. Eikite į **Valdymo skydelis → Nustatymai → Atsarginė kopija**
 2. Spustelėkite **Eksportuoti** — bus įtrauktas tarpinių serverių registras ir priskyrimai
@@ -249,7 +249,7 @@ Tarpinių serverių registras taip pat palaiko **įterpimą arba atnaujinimą pa
 
 ### Senesnės konfigūracijos perkėlimas
 
-Jei tarpinius serverius sukonfigūravote senesnėje versijoje (iki registro), „OmniRoute“ juos automatiškai perkelia:
+Jei tarpinius serverius sukonfigūravote senesnėje versijoje (iki registro), „67router“ juos automatiškai perkelia:
 
 ```
 Senoji key_value saugykla → proxy_registry + proxy_assignments
@@ -263,7 +263,7 @@ Tai atliekama vieną kartą, pirmą kartą paleidus po atnaujinimo. Norėdami pa
 
 > 🆕 **Pridėjo [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (problema [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute integruojama su **[1proxy](https://1proxy-api.aitradepulse.com)** bendruomenės platforma ir suteikia prieigą prie **šimtų nemokamų, patikrintų tarpinių serverių** iš viso pasaulio. Tai puikiai tinka naudotojams, neturintiems nuosavos tarpinių serverių infrastruktūros.
+67router integruojama su **[1proxy](https://1proxy-api.aitradepulse.com)** bendruomenės platforma ir suteikia prieigą prie **šimtų nemokamų, patikrintų tarpinių serverių** iš viso pasaulio. Tai puikiai tinka naudotojams, neturintiems nuosavos tarpinių serverių infrastruktūros.
 
 ### Kaip tai veikia
 
@@ -274,7 +274,7 @@ OmniRoute integruojama su **[1proxy](https://1proxy-api.aitradepulse.com)** bend
 └─────────────┘ tarpinių serverių└─────────────────┘               └────────────┘
 ```
 
-1. **Sinchronizavimas** — OmniRoute gauna patikrintus tarpinius serverius iš 1proxy API
+1. **Sinchronizavimas** — 67router gauna patikrintus tarpinius serverius iš 1proxy API
 2. **Saugojimas** — tarpiniai serveriai išsaugomi toje pačioje `proxy_registry` lentelėje su `source = 'oneproxy'`
 3. **Filtravimas** — filtruokite pagal protokolą, šalį ir kokybės balą
 4. **Keitimas** — pasirinkite geriausią tarpinį serverį naudodami kokybe pagrįstą, atsitiktinę arba nuoseklią strategiją
@@ -374,7 +374,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Apsauga nuo aptikimo ir maskavimas
 
-OmniRoute ne tik nukreipia srautą per tarpinį serverį — jis užtikrina, kad srautas atrodytų teisėtas:
+67router ne tik nukreipia srautą per tarpinį serverį — jis užtikrina, kad srautas atrodytų teisėtas:
 
 ### TLS kontrolinio atspaudo klastojimas
 
@@ -408,13 +408,13 @@ Spalvomis pažymėti ženkleliai valdymo skydelyje rodo, kuris tarpinio serverio
 
 ## Išorinio tarpinio serverio režimai
 
-Teikėjams, naudojantiems CLIProxyAPI modelį, OmniRoute palaiko tris išorinio tarpinio serverio režimus:
+Teikėjams, naudojantiems CLIProxyAPI modelį, 67router palaiko tris išorinio tarpinio serverio režimus:
 
-| Režimas       | Aprašymas                                                                    |
-| ------------- | ---------------------------------------------------------------------------- |
-| `native`      | OmniRoute tiesiogiai tvarko maršrutizavimą per tarpinį serverį (numatytasis) |
-| `cliproxyapi` | Perduoda užduotį išoriniam CLIProxyAPI egzemplioriui                         |
-| `fallback`    | Pirmiausia bando savąjį režimą, tada pereina prie CLIProxyAPI                |
+| Režimas       | Aprašymas                                                                   |
+| ------------- | --------------------------------------------------------------------------- |
+| `native`      | 67router tiesiogiai tvarko maršrutizavimą per tarpinį serverį (numatytasis) |
+| `cliproxyapi` | Perduoda užduotį išoriniam CLIProxyAPI egzemplioriui                        |
+| `fallback`    | Pirmiausia bando savąjį režimą, tada pereina prie CLIProxyAPI               |
 
 Konfigūruokite kiekvienam teikėjui atskirai:
 
@@ -477,7 +477,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunelių API
 
-Informacijos apie OmniRoute egzemplioriaus paskelbimą viešajame internete (naudojant Cloudflare/ngrok/Tailscale), užuot nukreipus išeinantį srautą per tarpinį serverį, rasite [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunelių REST API yra pasiekiama adresu `/api/tunnels/{cloudflared,ngrok,tailscale}/*` ir nepriklauso nuo pirmiau aprašytos išeinančių tarpinių serverių grandinės.
+Informacijos apie 67router egzemplioriaus paskelbimą viešajame internete (naudojant Cloudflare/ngrok/Tailscale), užuot nukreipus išeinantį srautą per tarpinį serverį, rasite [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunelių REST API yra pasiekiama adresu `/api/tunnels/{cloudflared,ngrok,tailscale}/*` ir nepriklauso nuo pirmiau aprašytos išeinančių tarpinių serverių grandinės.
 
 ### 1proxy API
 
@@ -517,7 +517,7 @@ Informacijos apie OmniRoute egzemplioriaus paskelbimą viešajame internete (nau
 
 ### „socket hang up“ klaidos naudojant tarpinį serverį
 
-Tai įprasta naudojant pigius tarpinius serverius, kurie nutraukia neaktyvius ryšius. OmniRoute tai jau apdoroja:
+Tai įprasta naudojant pigius tarpinius serverius, kurie nutraukia neaktyvius ryšius. 67router tai jau apdoroja:
 
 - Išjungia nuolatinį ryšį su tarpiniais serveriais (`keepAliveTimeout: 1`)
 - Išjungia konvejerinį užklausų siuntimą (`pipelining: 0`)
@@ -527,7 +527,7 @@ Jei problema išlieka, išbandykite kitą tarpinį serverį arba naudokite 1prox
 
 ### „unsupported_country_region_territory“ OAuth metu
 
-Įsitikinkite, kad tarpinis serveris sukonfigūruotas **prieš** pradedant OAuth eigą. OmniRoute nukreipia OAuth prieigos raktų apsikeitimą per sukonfigūruotą tarpinį serverį. Pirmiausia nustatykite visuotinį arba teikėjo lygmens tarpinį serverį, tada prisijunkite.
+Įsitikinkite, kad tarpinis serveris sukonfigūruotas **prieš** pradedant OAuth eigą. 67router nukreipia OAuth prieigos raktų apsikeitimą per sukonfigūruotą tarpinį serverį. Pirmiausia nustatykite visuotinį arba teikėjo lygmens tarpinį serverį, tada prisijunkite.
 
 ### Tarpinis serveris nenaudojamas
 
@@ -595,7 +595,7 @@ CREATE TABLE proxy_assignments (
 
 ## Tarpinių serverių būklės tikrinimas (v3.8.16+)
 
-OmniRoute **greito tarpinio serverio gedimo aptikimo** mechanizmas (`src/lib/proxyHealth.ts`) greitai patikrindamas TCP ryšį aptinka neveikiančius tarpinius serverius per <2 s, tada **išsaugo rezultatą podėlyje**, kad būtų išvengta kiekvienos užklausos papildomų sąnaudų.
+67router **greito tarpinio serverio gedimo aptikimo** mechanizmas (`src/lib/proxyHealth.ts`) greitai patikrindamas TCP ryšį aptinka neveikiančius tarpinius serverius per <2 s, tada **išsaugo rezultatą podėlyje**, kad būtų išvengta kiekvienos užklausos papildomų sąnaudų.
 
 ### Kaip tai veikia
 
@@ -660,11 +660,11 @@ URL nurodyti pasirinktiniai prievadai (`http://host:9999`) visada turi pirmenyb�
 
 ## Tarpinių serverių analizė ir stebimumas
 
-OmniRoute seka kiekvieno tarpinio serverio naudojimą, kad operatoriai galėtų diagnozuoti maršruto parinkimo dėsningumus, delsos šuolius ir pasikartojančias triktis.
+67router seka kiekvieno tarpinio serverio naudojimą, kad operatoriai galėtų diagnozuoti maršruto parinkimo dėsningumus, delsos šuolius ir pasikartojančias triktis.
 
 ### Kas stebima
 
-Kiekvienai užklausai, siunčiamai per sukonfigūruotą tarpinį serverį, OmniRoute registruoja:
+Kiekvienai užklausai, siunčiamai per sukonfigūruotą tarpinį serverį, 67router registruoja:
 
 | Metrika      | Aprašymas                                                                     |
 | ------------ | ----------------------------------------------------------------------------- |
@@ -726,7 +726,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotacijos strategijos sprendimų medis
 
-Kai vienai taikymo sričiai priskirti keli tarpiniai serveriai, OmniRoute naudoja **rotacijos strategiją**, kad parinktų, kurį iš jų naudoti kiekvienai užklausai. Strategija konfigūruojama taikymo srities lygmeniu (visuotiniu, kiekvieno paslaugų teikėjo, kiekvienos paskyros arba kiekvieno derinio).
+Kai vienai taikymo sričiai priskirti keli tarpiniai serveriai, 67router naudoja **rotacijos strategiją**, kad parinktų, kurį iš jų naudoti kiekvienai užklausai. Strategija konfigūruojama taikymo srities lygmeniu (visuotiniu, kiekvieno paslaugų teikėjo, kiekvienos paskyros arba kiekvieno derinio).
 
 ### Galimos strategijos
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: `open-sse/` hija l-magna ewlenija tal-istreaming li tħaddem kull talba LLM f’OmniRoute. Fiha madwar 1,400 fajl li jimplimentaw il-pipeline tat-talbiet, l-eżekuturi, is-servizzi, is-server MCP, u s-saff tat-traduzzjoni. Din il-gwida tispjega kif il-komponenti jaħdmu flimkien.
+> **Fil-qosor**: `open-sse/` hija l-magna ewlenija tal-istreaming li tħaddem kull talba LLM f’67router. Fiha madwar 1,400 fajl li jimplimentaw il-pipeline tat-talbiet, l-eżekuturi, is-servizzi, is-server MCP, u s-saff tat-traduzzjoni. Din il-gwida tispjega kif il-komponenti jaħdmu flimkien.
 
 **Sors:** `open-sse/` (pakkett tal-workspace, madwar 1,440 fajl `.ts` mhux tat-testijiet)
 
@@ -12,10 +12,10 @@
 
 ## Għaliex Pakkett Separat tal-Workspace?
 
-`open-sse/` huwa **workspace awtonomu** fil-monorepo ta’ OmniRoute għal diversi raġunijiet:
+`open-sse/` huwa **workspace awtonomu** fil-monorepo ta’ 67router għal diversi raġunijiet:
 
 1. **Użu mill-ġdid** — `open-sse` jiġi ppubblikat bħala `@omniroute/open-sse` fuq npm, għalhekk proġetti oħra jistgħu jużawh b’mod indipendenti
-2. **Konfini ċari** — il-magna tal-istreaming hija diżakkoppjata mis-saff tal-UI/DB speċifiku għal OmniRoute
+2. **Konfini ċari** — il-magna tal-istreaming hija diżakkoppjata mis-saff tal-UI/DB speċifiku għal 67router
 3. **Prestazzjoni** — il-magna m’għandha l-ebda dipendenza fuq Next.js, u b’hekk tippermetti bidu kiesaħ aktar rapidu f’kuntesti CLI/serverless
 4. **Verżjonar** — `open-sse` jista’ joħroġ rilaxxi bir-ritmu tiegħu stess
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Għaliex Transformer Separat?
 
-Ir-Responses API hija l-format il-ġdid ta' OpenAI b'**konverżazzjonijiet bi stat** (`previous_response_id`). Meta klijent jibgħat talba Responses, OmniRoute:
+Ir-Responses API hija l-format il-ġdid ta' OpenAI b'**konverżazzjonijiet bi stat** (`previous_response_id`). Meta klijent jibgħat talba Responses, 67router:
 
 1. Jikkonverti Responses → Chat Completions internament
 2. Jibgħat lill-fornitur (kwalunkwe fornitur li jappoġġja Chat Completions)

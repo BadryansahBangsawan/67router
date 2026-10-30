@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** umieszcza każdy model udostępniany przez OmniRoute w _natywnym_ selektorze modeli GitHub Copilot Chat.
+**OmniCopilot** umieszcza każdy model udostępniany przez 67router w _natywnym_ selektorze modeli GitHub Copilot Chat.
 Bez drugiego panelu bocznego i bez osobnego interfejsu czatu — tryb agenta Copilota, wywoływanie narzędzi,
 serwery MCP i niestandardowe instrukcje nadal działają, po prostu korzystając z wybranego modelu.
 
@@ -23,13 +23,13 @@ serwery MCP i niestandardowe instrukcje nadal działają, po prostu korzystając
 
 ## Konfiguracja
 
-1. **Uruchom OmniRoute** — `npm install -g omniroute && omniroute` (panel pod adresem `http://localhost:20128`).
-2. **Zainstaluj rozszerzenie** — wyszukaj „OmniRoute” w widoku rozszerzeń.
-3. **Wybierz model** — Copilot Chat → selektor modeli → **Zarządzaj modelami…** → **OmniRoute**, a następnie zaznacz
+1. **Uruchom 67router** — `npm install -g omniroute && omniroute` (panel pod adresem `http://localhost:20128`).
+2. **Zainstaluj rozszerzenie** — wyszukaj „67router” w widoku rozszerzeń.
+3. **Wybierz model** — Copilot Chat → selektor modeli → **Zarządzaj modelami…** → **67router**, a następnie zaznacz
    wybrane modele.
 
-Gdy OmniRoute działa na domyślnym porcie, nie trzeba niczego konfigurować. W przypadku instancji zdalnej otwórz
-**ikonę OmniRoute na pasku aktywności** (lub uruchom `OmniRoute: Manage Connection`) i ustaw:
+Gdy 67router działa na domyślnym porcie, nie trzeba niczego konfigurować. W przypadku instancji zdalnej otwórz
+**ikonę 67router na pasku aktywności** (lub uruchom `67router: Manage Connection`) i ustaw:
 
 - **Adres URL serwera** — główny adres serwera, np. `http://192.168.0.15:20128`. Sufiks `/v1` jest
   dodawany przez rozszerzenie; nie należy go uwzględniać.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' jest modelem generowania obrazów i nie może być uż
 
 dlatego są odfiltrowywane na podstawie pola `type`, zanim trafią do selektora. **Modele Responses API
 są zachowywane** — każdy wpis Codex / GPT-5.x deklaruje `supported_endpoints: ["responses"]`,
-a OmniRoute tłumaczy je dla `/v1/chat/completions`, dzięki czemu można z nich bez problemu korzystać.
+a 67router tłumaczy je dla `/v1/chat/completions`, dzięki czemu można z nich bez problemu korzystać.
 
 ### Dostawcy, których nigdy nie skonfigurowano
 
@@ -88,7 +88,7 @@ niczego zmieniać.
 
 ## Panel sterowania w karcie VS Code
 
-`omnicopilot.dashboardOpen: "editor"` wyświetla panel sterowania OmniRoute w karcie edytora za pośrednictwem
+`omnicopilot.dashboardOpen: "editor"` wyświetla panel sterowania 67router w karcie edytora za pośrednictwem
 Simple Browser zamiast w zewnętrznej przeglądarce. Osadzanie jest **opcjonalne po stronie serwera** i włącza się je za pomocą
 `DASHBOARD_ALLOW_EMBED=vscode`, co powoduje udostępnianie stron HTML z nagłówkiem
 `frame-ancestors 'self' vscode-webview:` zamiast domyślnego `frame-ancestors 'none'` +
@@ -121,7 +121,7 @@ Zobacz [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) oraz zgłoszenie
 
 ## Konfigurowanie innych narzędzi z poziomu VS Code
 
-**`OmniRoute: Configure Coding CLI`** steruje interfejsem CLI `omniroute`, aby zapisać gotowe do użycia profile
+**`67router: Configure Coding CLI`** steruje interfejsem CLI `omniroute`, aby zapisać gotowe do użycia profile
 dla Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo i Roo — są to te same konfiguracje, które opisano w
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Klucz API jest przekazywany do interfejsu CLI za pośrednictwem
@@ -131,20 +131,20 @@ zmiennej środowiskowej `OMNIROUTE_API_KEY`, nigdy w wierszu poleceń.
 
 ## Rozwiązywanie problemów
 
-| Objaw                                                           | Przyczyna / rozwiązanie                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Brak modeli OmniRoute w selektorze                              | Serwer jest nieosiągalny. Kropka na pasku stanu zmienia kolor na szary; uruchom `OmniRoute: Check Connection`. Wykrywanie z założenia odbywa się bez komunikatów i nie dodaje żadnych modeli zamiast wyświetlać monit.                                                                                  |
-| Każdy model pojawia się dwukrotnie                              | Używasz wersji OmniCopilot starszej niż 1.0.1 — zaktualizuj ją. Rozszerzenie wysyła teraz żądanie `?prefix=alias`.                                                                                                                                                                                      |
-| Model obrazu/dźwięku był wcześniej widoczny, ale zniknął        | Jest to zamierzone od wersji 1.0.1 — taki model nigdy nie mógł odpowiedzieć na żądanie czatu.                                                                                                                                                                                                           |
-| Brak panelu na pasku aktywności                                 | VS Code przenosi dodatkowe kontenery widoków do menu przepełnienia **"…"** u dołu paska aktywności, a kontener ukryty przez kliknięcie prawym przyciskiem pozostaje ukryty. Kliknij pasek aktywności prawym przyciskiem → zaznacz **OmniRoute** lub otwórz go za pomocą `OmniRoute: Manage Connection`. |
-| Panel sterowania otwiera się w przeglądarce mimo trybu `editor` | Serwer nie został **skompilowany** z ustawieniem `DASHBOARD_ALLOW_EMBED=vscode` (patrz wyżej) — ustawienie go podczas uruchamiania wstępnie skompilowanej instalacji niczego nie zmienia. Przełączenie awaryjne jest zamierzone.                                                                        |
-| Lista modeli jest nieaktualna po zmianie dostawców              | Uruchom `OmniRoute: Refresh Models` lub użyj odnośnika ↻ w panelu.                                                                                                                                                                                                                                      |
+| Objaw                                                           | Przyczyna / rozwiązanie                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brak modeli 67router w selektorze                               | Serwer jest nieosiągalny. Kropka na pasku stanu zmienia kolor na szary; uruchom `67router: Check Connection`. Wykrywanie z założenia odbywa się bez komunikatów i nie dodaje żadnych modeli zamiast wyświetlać monit.                                                                                 |
+| Każdy model pojawia się dwukrotnie                              | Używasz wersji OmniCopilot starszej niż 1.0.1 — zaktualizuj ją. Rozszerzenie wysyła teraz żądanie `?prefix=alias`.                                                                                                                                                                                    |
+| Model obrazu/dźwięku był wcześniej widoczny, ale zniknął        | Jest to zamierzone od wersji 1.0.1 — taki model nigdy nie mógł odpowiedzieć na żądanie czatu.                                                                                                                                                                                                         |
+| Brak panelu na pasku aktywności                                 | VS Code przenosi dodatkowe kontenery widoków do menu przepełnienia **"…"** u dołu paska aktywności, a kontener ukryty przez kliknięcie prawym przyciskiem pozostaje ukryty. Kliknij pasek aktywności prawym przyciskiem → zaznacz **67router** lub otwórz go za pomocą `67router: Manage Connection`. |
+| Panel sterowania otwiera się w przeglądarce mimo trybu `editor` | Serwer nie został **skompilowany** z ustawieniem `DASHBOARD_ALLOW_EMBED=vscode` (patrz wyżej) — ustawienie go podczas uruchamiania wstępnie skompilowanej instalacji niczego nie zmienia. Przełączenie awaryjne jest zamierzone.                                                                      |
+| Lista modeli jest nieaktualna po zmianie dostawców              | Uruchom `67router: Refresh Models` lub użyj odnośnika ↻ w panelu.                                                                                                                                                                                                                                     |
 
 ---
 
 ## Zobacz także
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — wszystkie pozostałe narzędzia do programowania
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — sterowanie zdalnym OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — sterowanie zdalnym 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — kontrakt `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — uwagi dotyczące katalogu rozszerzenia

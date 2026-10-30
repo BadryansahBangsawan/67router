@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**：OmniRoute 使用啟用 **WAL 日誌記錄**的 **SQLite** 作為主要儲存區，並以 **AES-256-GCM** 對靜態儲存的敏感欄位進行加密。本指南涵蓋結構描述、遷移、備份／復原及維運操作手冊。
+> **TL;DR**：67router 使用啟用 **WAL 日誌記錄**的 **SQLite** 作為主要儲存區，並以 **AES-256-GCM** 對靜態儲存的敏感欄位進行加密。本指南涵蓋結構描述、遷移、備份／復原及維運操作手冊。
 
 **來源：**
 
@@ -19,7 +19,7 @@
 
 ## 為什麼選擇 SQLite？
 
-OmniRoute 選擇 SQLite 而非 PostgreSQL/MySQL，原因如下：
+67router 選擇 SQLite 而非 PostgreSQL/MySQL，原因如下：
 
 | 因素         | SQLite                      | PostgreSQL               |
 | ------------ | --------------------------- | ------------------------ |
@@ -30,7 +30,7 @@ OmniRoute 選擇 SQLite 而非 PostgreSQL/MySQL，原因如下：
 | **備份**     | 複製單一檔案                | `pg_dump` 或檔案系統快照 |
 | **使用案例** | 每位使用者個別安裝、內嵌式  | 多租戶 SaaS              |
 
-對於**單一使用者、單一執行個體**的部署（OmniRoute 的主要使用案例），SQLite 更簡單也更快速。
+對於**單一使用者、單一執行個體**的部署（67router 的主要使用案例），SQLite 更簡單也更快速。
 
 ### WAL 日誌記錄
 
@@ -50,7 +50,7 @@ WAL 允許在寫入期間進行**並行讀取**，這對儀表板非常重要，
 `cache_size` 解讀為以 KiB 為單位的近似上限，並依需求配置頁面。
 **設定 > 系統與儲存空間 > 快取大小**接受 **1 至
 1,000,000 KiB** 的整數值；儲存設定後會將其套用至即時資料庫連線，
-而 OmniRoute 會在啟動時還原已保存的值。
+而 67router 會在啟動時還原已保存的值。
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## 網域模組架構
 
-OmniRoute 的資料庫在 `src/lib/db/` 中有 **110 個頂層 TypeScript 模組**。每個網域模組：
+67router 的資料庫在 `src/lib/db/` 中有 **110 個頂層 TypeScript 模組**。每個網域模組：
 
 - 擁有一個或多個特定資料表
 - 匯出具類型的 CRUD 函式
@@ -90,7 +90,7 @@ OmniRoute 的資料庫在 `src/lib/db/` 中有 **110 個頂層 TypeScript 模組
 
 ### 110 個頂層資料庫模組
 
-OmniRoute 在 `src/lib/db/` 中有 **110 個頂層 TypeScript 檔案**。以下列出部分核心模組；完整清單請參閱目錄內容：
+67router 在 `src/lib/db/` 中有 **110 個頂層 TypeScript 檔案**。以下列出部分核心模組；完整清單請參閱目錄內容：
 
 | 模組                    | 資料表                                                         | 職責                                     |
 | ----------------------- | -------------------------------------------------------------- | ---------------------------------------- |
@@ -186,7 +186,7 @@ const providers = await listProviders();
 
 ## 遷移
 
-OmniRoute 在 `src/lib/db/migrations/` 中使用**具版本且具冪等性的遷移**。每個遷移都是單一 SQL 檔案，命名格式為 `NNN_description.sql`。
+67router 在 `src/lib/db/migrations/` 中使用**具版本且具冪等性的遷移**。每個遷移都是單一 SQL 檔案，命名格式為 `NNN_description.sql`。
 
 ### 遷移命名
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **不向後相容的變更**（例如刪除欄位）較難處理。OmniRoute 不支援降級——遷移一經套用，結構描述變更即為永久性。請據此妥善規劃。
+> **不向後相容的變更**（例如刪除欄位）較難處理。67router 不支援降級——遷移一經套用，結構描述變更即為永久性。請據此妥善規劃。
 
 ---
 
@@ -310,7 +310,7 @@ STORAGE_ENCRYPTION_KEY=<your-key>
 
 ## 加密注意事項 (v3.8.16+)
 
-OmniRoute 使用 **`migrateLegacyEncryptedString()`** 透明地處理兩種加密方案：
+67router 使用 **`migrateLegacyEncryptedString()`** 透明地處理兩種加密方案：
 
 - **舊版**（v3.5.0 之前）：基於 XOR 的「加密」（並非真正的密碼學加密）
 - **目前版本**：使用正確 IV 與驗證標籤的 AES-256-GCM
@@ -398,7 +398,7 @@ omniroute backup auto enable --cron "0 2 * * *" --retention 7
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-這會使用 SQLite 的線上備份 API——可在 OmniRoute 執行期間安全運行。
+這會使用 SQLite 的線上備份 API——可在 67router 執行期間安全運行。
 
 ---
 
@@ -441,7 +441,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### 壓縮
 
-長時間執行的 OmniRoute 執行個體可受益於偶爾執行 `VACUUM`：
+長時間執行的 67router 執行個體可受益於偶爾執行 `VACUUM`：
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -573,7 +573,7 @@ EOF
 ### 重設（清除）所有資料
 
 ```bash
-# 請先停止 OmniRoute
+# 請先停止 67router
 omniroute stop
 
 # 刪除資料庫檔案
@@ -611,7 +611,7 @@ EOF
 
 - 等待其他程序完成（使用 `lsof | grep storage.sqlite` 檢查）
 - 終止其他程序
-- 如果問題持續發生，請重新啟動 OmniRoute
+- 如果問題持續發生，請重新啟動 67router
 
 ### 「外部索引鍵條件約束失敗」
 
@@ -641,10 +641,10 @@ PRAGMA mmap_size = 0;
 
 遷移是在交易中執行，因此應已回復。如果沒有：
 
-1. **停止 OmniRoute**（防止進一步嘗試）
+1. **停止 67router**（防止進一步嘗試）
 2. **使用 `sqlite3` 檢查資料庫狀態**
 3. **手動修正**未完成的遷移
-4. **重新執行** OmniRoute（將重試遷移）
+4. **重新執行** 67router（將重試遷移）
 
 為避免此問題，請一律先在副本上測試遷移。
 

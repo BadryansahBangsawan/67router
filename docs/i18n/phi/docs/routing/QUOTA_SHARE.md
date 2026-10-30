@@ -13,7 +13,7 @@
 
 Ipinamamahagi ng Quota Sharing Engine nang patas ang quota na nakabatay sa oras ng isang provider (hal. 5-oras na window ng Codex, 1500 req/h ng Kimi) sa maraming API key na gumagamit ng iisang koneksyon.
 
-**Problemang nilulutas nito:** Maraming API key ang ipinapasa ng OmniRoute sa iisang upstream provider account. Kung walang lohika sa pagbabahagi, maaaring ubusin ng biglaang pagdami ng paggamit mula sa key A ang quota ng provider para sa oras na iyon, kaya maba-block ang mga key B at C hanggang sa mag-reset ang window. Pinipigilan ito ng engine sa pamamagitan ng:
+**Problemang nilulutas nito:** Maraming API key ang ipinapasa ng 67router sa iisang upstream provider account. Kung walang lohika sa pagbabahagi, maaaring ubusin ng biglaang pagdami ng paggamit mula sa key A ang quota ng provider para sa oras na iyon, kaya maba-block ang mga key B at C hanggang sa mag-reset ang window. Pinipigilan ito ng engine sa pamamagitan ng:
 
 1. Pagsubaybay sa rolling consumption ng bawat key ayon sa dimensyon (%, mga request, mga token, $).
 2. Paglalapat ng work-conserving fair-share algorithm: maaaring humiram ang isang key mula sa mga hindi ginagamit na share habang hindi pa saturated ang global pool.
@@ -106,7 +106,7 @@ Redis driver: Lua EVAL script para sa atomic increment — tumatakbo bilang iisa
 
 - Talahanayan: `quota_consumption` (tingnan ang migration na `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Pinakamainam para sa mga deployment na may iisang instance.
-- Ang lahat ng persistence ay nasa umiiral na OmniRoute SQLite DB (`DATA_DIR/storage.sqlite`).
+- Ang lahat ng persistence ay nasa umiiral na 67router SQLite DB (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opsyonal, multi-instance)
 

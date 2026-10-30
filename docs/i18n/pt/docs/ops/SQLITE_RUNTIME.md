@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute resolve o respetivo controlador SQLite no arranque através de uma cadeia de recurso com 5 passos:
+O 67router resolve o respetivo controlador SQLite no arranque através de uma cadeia de recurso com 5 passos:
 
 1. **`better-sqlite3` incluído** (através de `dependencies` em `package.json`)
    — mais rápido, binário nativo, instalado por `npm install` quando estão presentes ferramentas de compilação.
@@ -28,13 +28,13 @@ O OmniRoute resolve o respetivo controlador SQLite no arranque através de uma c
 - **Ausência de ferramentas de compilação**: Alguns ambientes (Windows empresarial sem VS Build
   Tools, imagens Docker mínimas) não conseguem compilar o `better-sqlite3`. O instalador em tempo
   de execução obtém um binário pré-compilado do registo npm; os controladores
-  alternativos garantem que o OmniRoute continua a arrancar mesmo que esse processo falhe.
+  alternativos garantem que o 67router continua a arrancar mesmo que esse processo falhe.
 - **Sistemas isolados da rede**: Se o registo npm estiver inacessível, o `node:sqlite`
   ou o `sql.js` garantem a funcionalidade básica.
 
 ## Validação de bytes mágicos
 
-Antes de carregar um ficheiro `.node` instalado em tempo de execução, o OmniRoute lê os primeiros 8
+Antes de carregar um ficheiro `.node` instalado em tempo de execução, o 67router lê os primeiros 8
 bytes e compara-os com os bytes mágicos conhecidos das plataformas:
 
 | Plataforma            | Bytes (hex)   | Etiqueta    |
@@ -104,9 +104,9 @@ Implementação:
 ## Topologia de escritor único (HA não suportada)
 
 A cadeia de controladores alternativos acima continua a ser executada num **único processo**. Por predefinição, o SQLite
-do OmniRoute tem **um único escritor**:
+do 67router tem **um único escritor**:
 
-- Não ligue duas réplicas do OmniRoute ao mesmo ficheiro `storage.sqlite`.
+- Não ligue duas réplicas do 67router ao mesmo ficheiro `storage.sqlite`.
 - Um reinício do contentor, uma implementação Recreate, uma interrupção por OOM ou um reinício por HEALTHCHECK termina
   todas as sessões SSE em curso. Não existe qualquer drenagem de sessões no percurso padrão.
 - Uma verificação de atividade do orquestrador que interprete um `/healthz` lento como indisponível encerrará a única

@@ -5,7 +5,7 @@
 ---
 
 > **Àpèjúwe onílà kan fún gbogbo àkójọpọ̀ fáìlì àti fáìlì gbòǹgbò.**
-> Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn: 2026-06-28 — OmniRoute v3.8.40
+> Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn: 2026-06-28 — 67router v3.8.40
 >
 > Lo àwòrán atọ́ka yìí láti yí ká inú ibi ìpamọ́ kóòdù náà ní kíákíá. Fún àlàyé jíjinlẹ̀, tẹ̀lé àwọn ìjápọ̀ sí àwọn ìwé àkọsílẹ̀ tí a yà sọ́tọ̀.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Ìṣàn ìtújáde kíkún (skills, husky, conventional commits, deploy)                             |
 | `COVERAGE_PLAN.md`          | Àwọn àfojúsùn coverage àti ipò lọ́wọ́lọ́wọ́                                                      |
 | `FREE_TIERS.md`             | Àwọn olùpèsè ipele-ọ̀fẹ́ tí a ti fara balẹ̀ yàn (48+ ọ̀fẹ́ + 11 OAuth)                            |
-| `CLI-TOOLS.md`              | Àwọn ìsopọ̀ CLI ti ita + CLI OmniRoute inú                                                    |
+| `CLI-TOOLS.md`              | Àwọn ìsopọ̀ CLI ti ita + CLI 67router inú                                                     |
 | `I18N.md`                   | Faaji i18n, fífi èdè kan kún un, àwọn locale 67                                              |
 | `UNINSTALL.md`              | Àwọn ìgbésẹ̀ ìyọkúrò pátápátá                                                                 |
 | `PROVIDER_REFERENCE.md`     | Kátálọ́ọ̀gù àwọn olùpèsè 375 tí a **ṣẹ̀dá láìfọwọ́ṣe** (regen: `npm run gen:provider-reference`) |

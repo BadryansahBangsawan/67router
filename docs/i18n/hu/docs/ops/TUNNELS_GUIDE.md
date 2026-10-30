@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az OmniRoute három alagút-háttérrendszeren keresztül teheti elérhetővé a helyi
+Az 67router három alagút-háttérrendszeren keresztül teheti elérhetővé a helyi
 kiszolgálóját (`http://localhost:20128`) a nyilvános interneten. Ez a következőkhöz
 hasznos:
 
@@ -16,7 +16,7 @@ hasznos:
 - A helyi példány megosztásához a csapattársakkal virtuális gép üzembe helyezése nélkül.
 - Mobilos, távoli vagy hálózatok közötti teszteléshez.
 
-Mindhárom háttérrendszer folyamaton belül kezelhető — az OmniRoute az irányítópultról
+Mindhárom háttérrendszer folyamaton belül kezelhető — az 67router az irányítópultról
 vagy a REST API-n keresztül indítja el és állítja le az alapul szolgáló bináris
 állományt vagy SDK-t. Nincs szükség fordított proxy vagy systemd beállítására.
 
@@ -45,7 +45,7 @@ http://localhost:<apiPort>` parancsot, és a szabványos kimenetből kinyeri a
   hozzárendelt `*.trycloudflare.com` URL-t. Az URL-ek ideiglenesek, és minden
   újraindításkor megváltoznak.
 - **Elnevezett alagút (külön engedélyezhető).** Amikor a `CLOUDFLARED_CONFIG` egy
-  helyileg kezelt cloudflared `config.yml` fájlra mutat, az OmniRoute a
+  helyileg kezelt cloudflared `config.yml` fájlra mutat, az 67router a
   `cloudflared tunnel --no-autoupdate --config <path> run` parancsot futtatja,
   így **stabil, elnevezett állomásnevet** biztosít. A konfiguráció adja meg az
   alagút UUID-jét, a `credentials-file` értékét és az `ingress` útválasztását,
@@ -56,7 +56,7 @@ http://localhost:<apiPort>` parancsot, és a szabványos kimenetből kinyeri a
 
 Főbb működési jellemzők:
 
-- **Automatikus telepítés.** Az első használatkor az OmniRoute letölti a legújabb
+- **Automatikus telepítés.** Az első használatkor az 67router letölti a legújabb
   `cloudflared` bináris állományt a hivatalos GitHub-kiadásokból (a kezelt
   telepítés a `DATA_DIR/cloudflared/` alatt található). A letöltött csomag SHA256
   ellenőrzőösszegét a rendszer végrehajtás előtt összeveti a kiadási jegyzékkel.
@@ -76,7 +76,7 @@ Főbb működési jellemzők:
    ```
 
 2. Hozzon létre egy `~/.cloudflared/config.yml` fájlt, amely az állomásnevet az
-   OmniRoute helyi API-portjára irányítja (alapértelmezés szerint 20128):
+   67router helyi API-portjára irányítja (alapértelmezés szerint 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -87,12 +87,12 @@ Főbb működési jellemzők:
      - service: http_status:404
    ```
 
-3. Állítsa be, hogy az OmniRoute a konfigurációt használja, majd indítsa el vagy
+3. Állítsa be, hogy az 67router a konfigurációt használja, majd indítsa el vagy
    indítsa újra az alagutat:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opcionális — felülírja az OmniRoute által jelentett állomásnevet; ellenkező esetben
+   # opcionális — felülírja az 67router által jelentett állomásnevet; ellenkező esetben
    # a konfiguráció első ingress szabályából olvassa be:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -132,12 +132,12 @@ Vagy az irányítópulton keresztül: **Beállítások → Alagutak → Cloudfla
 
 ### Opcionális környezeti változók
 
-| Változó                                              | Cél                                                                                                                                                                                     |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Felülírja a bináris fájl elérési útját. Ha be van állítva és érvényes, az OmniRoute ezt használja a letöltés helyett.                                                                   |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Átviteli protokoll (alapértelmezett: `http2`; további lehetőségek: `quic`, `auto`).                                                                                                     |
-| `CLOUDFLARED_CONFIG`                                 | A helyileg kezelt cloudflared `config.yml` elérési útja. Ha be van állítva, az OmniRoute egy **elnevezett/állandó** alagutat (`tunnel --config <path> run`) futtat gyorsalagút helyett. |
-| `CLOUDFLARED_HOSTNAME`                               | Felülírja az elnevezett alagút által jelentett nyilvános állomásnevet (pl. `ai.example.com`). Ha nincs beállítva, a konfiguráció első `ingress` állomásnevéből olvassa ki.              |
+| Változó                                              | Cél                                                                                                                                                                                    |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Felülírja a bináris fájl elérési útját. Ha be van állítva és érvényes, az 67router ezt használja a letöltés helyett.                                                                   |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Átviteli protokoll (alapértelmezett: `http2`; további lehetőségek: `quic`, `auto`).                                                                                                    |
+| `CLOUDFLARED_CONFIG`                                 | A helyileg kezelt cloudflared `config.yml` elérési útja. Ha be van állítva, az 67router egy **elnevezett/állandó** alagutat (`tunnel --config <path> run`) futtat gyorsalagút helyett. |
+| `CLOUDFLARED_HOSTNAME`                               | Felülírja az elnevezett alagút által jelentett nyilvános állomásnevet (pl. `ai.example.com`). Ha nincs beállítva, a konfiguráció első `ingress` állomásnevéből olvassa ki.             |
 
 ## 2. ngrok
 
@@ -181,7 +181,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 A válasz tartalmazza a hozzárendelt `publicUrl` értéket (például:
-`https://abcd-1234.ngrok-free.app`). Az egyéni tartományokat, régiókat és házirendszabályokat az ngrok vezérlőpultján kell konfigurálni — maga az OmniRoute csak a helyi cél-URL-t továbbítja az SDK-nak.
+`https://abcd-1234.ngrok-free.app`). Az egyéni tartományokat, régiókat és házirendszabályokat az ngrok vezérlőpultján kell konfigurálni — maga az 67router csak a helyi cél-URL-t továbbítja az SDK-nak.
 
 ## 3. Tailscale Funnel
 
@@ -191,12 +191,12 @@ A megvalósítás a `tailscale funnel --bg <port>` parancsot hívja meg (hátté
 
 ### Előfeltételek
 
-1. Telepítse a Tailscale-t (vagy bízza ezt az OmniRoute-ra — lásd alább az `install` végpontot).
-2. Jelentkezzen be (`tailscale login`, vagy az OmniRoute `login` végpontján keresztül).
+1. Telepítse a Tailscale-t (vagy bízza ezt az 67router-ra — lásd alább az `install` végpontot).
+2. Jelentkezzen be (`tailscale login`, vagy az 67router `login` végpontján keresztül).
 3. Engedélyezze a Funnelt a tailnethez a Tailscale adminisztrációs konzolján:
    <https://login.tailscale.com/admin/settings/features>.
 
-Linuxon és macOS-en a démon (`tailscaled`) vezérléséhez `sudo` szükséges. A POST-végpontok elfogadnak egy opcionális `sudoPassword` mezőt, amelyet a hívás időtartamára továbbítanak az OmniRoute MITM-jelszógyorsítótárának (`getCachedPassword` / `setCachedPassword`). A Windows az alapértelmezett szolgáltatástelepítést használja a `C:\Program Files\Tailscale\tailscale.exe` útvonalon.
+Linuxon és macOS-en a démon (`tailscaled`) vezérléséhez `sudo` szükséges. A POST-végpontok elfogadnak egy opcionális `sudoPassword` mezőt, amelyet a hívás időtartamára továbbítanak az 67router MITM-jelszógyorsítótárának (`getCachedPassword` / `setCachedPassword`). A Windows az alapértelmezett szolgáltatástelepítést használja a `C:\Program Files\Tailscale\tailscale.exe` útvonalon.
 
 ### REST-végpontok
 
@@ -253,7 +253,7 @@ független.
 
 ## Az OAuth-visszahívás szempontjai
 
-Amikor alagúton keresztül teszi elérhetővé az OmniRoute-ot, az irányítópultnak és az OAuth-folyamatoknak
+Amikor alagúton keresztül teszi elérhetővé az 67router-ot, az irányítópultnak és az OAuth-folyamatoknak
 a **nyilvános** állomásnév alapján kell összeállítaniuk a visszahívási URL-eket, nem a `localhost` alapján. Ellenkező esetben
 az OAuth-szolgáltató egy olyan URL-re irányítja vissza a felhasználót, amelyet a kiszolgálói nem tudnak elérni,
 és a kézfogás meghiúsul.
@@ -269,7 +269,7 @@ kéréseket küld egy munkamenethez kötött CSRF-tokennel, így az ideiglenes C
 NEXT_PUBLIC_BASE_URL=https://<az-alagút-állomásneve>
 ```
 
-majd az OAuth elindítása előtt indítsa újra az OmniRoute-ot. Az ideiglenes Cloudflare Quick
+majd az OAuth elindítása előtt indítsa újra az 67router-ot. Az ideiglenes Cloudflare Quick
 Tunnelek URL-je minden újraindítás után megváltozik, ezért éles OAuth-használathoz részesítse előnyben a fenntartott
 domainnel rendelkező ngrokot vagy a Tailscale Funnelt.
 
@@ -284,14 +284,14 @@ Az irányítópult az alagutak állapotát a **Beállítások → Alagutak** ala
 - Az utolsó hibaüzenet, ha van.
 
 Programozott monitorozáshoz rendszeresen kérdezze le a háttérrendszerenkénti `GET` végpontokat. Egynél
-több háttérrendszer egyidejű futtatása engedélyezett; az OmniRoute mindegyiket
+több háttérrendszer egyidejű futtatása engedélyezett; az 67router mindegyiket
 függetlenül követi nyomon.
 
 ## Hibaelhárítás
 
 ### „A cloudflared bináris nem található”
 
-Az OmniRoute az első használatkor megpróbálja automatikusan telepíteni. Ha a telepítés blokkolva van
+Az 67router az első használatkor megpróbálja automatikusan telepíteni. Ha a telepítés blokkolva van
 (korlátozott hálózat, nincs GitHub-hozzáférés), töltse le manuálisan a `cloudflared` fájlt innen:
 <https://github.com/cloudflare/cloudflared/releases>, majd állítsa be a
 `CLOUDFLARED_BIN=/path/to/cloudflared` értéket.

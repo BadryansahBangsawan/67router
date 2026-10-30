@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute resuelve su controlador de SQLite al iniciarse mediante una cadena de respaldo de 5 pasos:
+67router resuelve su controlador de SQLite al iniciarse mediante una cadena de respaldo de 5 pasos:
 
 1. **`better-sqlite3` incluido** (mediante `dependencies` en `package.json`)
    — la opción más rápida, con binario nativo, instalada por `npm install` cuando las herramientas de compilación están disponibles.
@@ -28,13 +28,13 @@ OmniRoute resuelve su controlador de SQLite al iniciarse mediante una cadena de 
 - **Sin herramientas de compilación**: Algunos entornos (Windows corporativo sin VS Build
   Tools, imágenes mínimas de Docker) no pueden compilar `better-sqlite3`. El instalador
   en tiempo de ejecución obtiene un binario precompilado del registro de npm; los controladores
-  de respaldo garantizan que OmniRoute pueda iniciarse aunque esto falle.
+  de respaldo garantizan que 67router pueda iniciarse aunque esto falle.
 - **Sistemas aislados de la red**: Si no se puede acceder al registro de npm, `node:sqlite`
   o `sql.js` garantizan una funcionalidad básica.
 
 ## Validación de bytes mágicos
 
-Antes de cargar un archivo `.node` instalado en tiempo de ejecución, OmniRoute lee los primeros 8
+Antes de cargar un archivo `.node` instalado en tiempo de ejecución, 67router lee los primeros 8
 bytes y los compara con los valores mágicos conocidos de las plataformas:
 
 | Plataforma            | Bytes (hex)   | Etiqueta    |
@@ -104,9 +104,9 @@ Implementación:
 ## Topología de un solo escritor (HA no compatible)
 
 La cadena de controladores de respaldo anterior sigue ejecutándose en **un solo proceso**. De forma predeterminada, SQLite
-en OmniRoute funciona con **un solo escritor**:
+en 67router funciona con **un solo escritor**:
 
-- No conecte dos réplicas de OmniRoute al mismo archivo `storage.sqlite`.
+- No conecte dos réplicas de 67router al mismo archivo `storage.sqlite`.
 - Un reinicio del contenedor, un despliegue Recreate, una finalización por OOM o un reinicio por HEALTHCHECK interrumpe
   todas las sesiones SSE en curso. No se drenan las sesiones en la ruta estándar.
 - Una comprobación de actividad del orquestador que considere que un `/healthz` lento está inactivo eliminará la única

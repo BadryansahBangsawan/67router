@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge ialah proksi MITM (Man-in-the-Middle) OmniRoute yang memintas trafik HTTPS daripada ejen AI IDE dan menghalakannya semula melalui enjin penghalaan bersepadu OmniRoute. Ia menyokong **10 ejen IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code dan Trae (sedang disiasat) — menjadikan OmniRoute proksi MITM dengan liputan paling luas untuk pembantu pengekodan AI di pasaran.
+AgentBridge ialah proksi MITM (Man-in-the-Middle) 67router yang memintas trafik HTTPS daripada ejen AI IDE dan menghalakannya semula melalui enjin penghalaan bersepadu 67router. Ia menyokong **10 ejen IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code dan Trae (sedang disiasat) — menjadikan 67router proksi MITM dengan liputan paling luas untuk pembantu pengekodan AI di pasaran.
 
 **Lokasi papan pemuka:** `/dashboard/tools/agent-bridge`
 **Kumpulan bar sisi:** Alat (selepas Ejen Awan)
@@ -16,34 +16,34 @@ AgentBridge ialah proksi MITM (Man-in-the-Middle) OmniRoute yang memintas trafik
 
 ### Apakah AgentBridge?
 
-Apabila ejen IDE (cth., GitHub Copilot, Cursor, Claude Code) membuat panggilan API, ia bersambung terus ke penyedia AI hulu (OpenAI, Anthropic, dsb.). AgentBridge memintas sambungan tersebut secara telus pada tahap TLS — tanpa memerlukan sebarang perubahan konfigurasi ejen — dan menulis semula permintaan itu melalui OmniRoute.
+Apabila ejen IDE (cth., GitHub Copilot, Cursor, Claude Code) membuat panggilan API, ia bersambung terus ke penyedia AI hulu (OpenAI, Anthropic, dsb.). AgentBridge memintas sambungan tersebut secara telus pada tahap TLS — tanpa memerlukan sebarang perubahan konfigurasi ejen — dan menulis semula permintaan itu melalui 67router.
 
 Ini bermakna anda boleh:
 
-- **Menghala semula sebarang ejen ke sebarang penyedia**: Copilot berhubung dengan OpenAI? Alihkannya ke Anthropic Claude, Gemini, atau mana-mana daripada 375 penyedia OmniRoute.
+- **Menghala semula sebarang ejen ke sebarang penyedia**: Copilot berhubung dengan OpenAI? Alihkannya ke Anthropic Claude, Gemini, atau mana-mana daripada 375 penyedia 67router.
 - **Menggunakan pemetaan model**: `gemini-3-flash` → `claude-sonnet-4.7` secara telus pada tahap pengendali.
 - **Memerhati semua trafik ejen**: setiap permintaan yang dipintas diterbitkan ke [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Menggunakan daya tahan OmniRoute**: penghalaan kombo, pemutus litar, fallback, dan penjejakan kos turut berfungsi untuk trafik ejen IDE.
+- **Menggunakan daya tahan 67router**: penghalaan kombo, pemutus litar, fallback, dan penjejakan kos turut berfungsi untuk trafik ejen IDE.
 
 ### Kedudukan berbanding pasaran
 
-| Ciri                 | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity          |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot       |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)           |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex         |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE           |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries       |    —    |    ✓     |        —        |             ✓             |
-| Claude Code          |    —    |    —     |        ✓        |             ✓             |
-| Open Code            |    —    |    —     |        ✓        |             ✓             |
-| Trae                 |    —    |    —     |        —        |   🔍 Dalam Penyiasatan    |
-| UI Papan Pemuka      |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector    |    ✗    |    ✗     |        ✓        |             ✓             |
-| Penghalaan OmniRoute |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI Pemetaan Model    |    ✗    |    ✗     |        ✗        |             ✓             |
-| Senarai pintasan     |    ✗    |    ✗     |        ✓        |             ✓             |
-| Sijil CA hulu        |    ✗    |    ✗     |        ✓        |             ✓             |
+| Ciri                | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity         |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot      |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)          |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex        |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE          |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries      |    —    |    ✓     |        —        |            ✓             |
+| Claude Code         |    —    |    —     |        ✓        |            ✓             |
+| Open Code           |    —    |    —     |        ✓        |            ✓             |
+| Trae                |    —    |    —     |        —        |   🔍 Dalam Penyiasatan   |
+| UI Papan Pemuka     |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector   |    ✗    |    ✗     |        ✓        |            ✓             |
+| Penghalaan 67router |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI Pemetaan Model   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Senarai pintasan    |    ✗    |    ✗     |        ✓        |            ✓             |
+| Sijil CA hulu       |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, proses anak CJS)
     │  menentukan sasaran melalui SNI pengepala Host
     │  menjana sijil TLS bagi setiap SNI yang ditandatangani oleh CA AgentBridge
     ├── Sepadan dengan senarai pintasan? → laluan terus TCP (tiada penyahsulitan)
-    ├── Sepadan dengan sasaran? → fetch → penghala OmniRoute (port 20128)
+    ├── Sepadan dengan sasaran? → fetch → penghala 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() pada isi/pengepala permintaan
     │               ├── TrafficBuffer.push() — menerbitkan kepada Pemeriksa Trafik
@@ -205,7 +205,7 @@ Sijil CA AgentBridge mesti dipercayai oleh OS sebelum IDE menerima sambungan MIT
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Contoh entri `/etc/hosts` untuk GitHub Copilot:
 
 Gunakan Jadual Pemetaan Model dalam setiap kad ejen untuk menentukan pemetaan sumber → sasaran:
 
-| Model sumber (asli ejen) | Model sasaran (OmniRoute) |
-| ------------------------ | ------------------------- |
-| `gpt-4o`                 | `claude-sonnet-4.7`       |
-| `*` (kad bebas)          | `claude-haiku-4.7`        |
+| Model sumber (asli ejen) | Model sasaran (67router) |
+| ------------------------ | ------------------------ |
+| `gpt-4o`                 | `claude-sonnet-4.7`      |
+| `*` (kad bebas)          | `claude-haiku-4.7`       |
 
 Kad bebas `*` memetakan sebarang model yang tidak dikenali kepada sasaran yang ditentukan. Disimpan secara berterusan dalam jadual `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Kad bebas `*` memetakan sebarang model yang tidak dikenali kepada sasaran yang d
 
 ### 3.5 Notis risiko
 
-AgentBridge memintas bukti kelayakan (token OAuth, kunci API) yang digunakan oleh IDE untuk mengesahkan identiti dengan penyedia huluan. Bukti kelayakan ini **ditopeng sebelum direkodkan** (lihat §2.7), tetapi dapat dilihat oleh lapisan MITM OmniRoute. Pengaktifan pertama setiap ejen memaparkan modal notis risiko yang boleh ditutup.
+AgentBridge memintas bukti kelayakan (token OAuth, kunci API) yang digunakan oleh IDE untuk mengesahkan identiti dengan penyedia huluan. Bukti kelayakan ini **ditopeng sebelum direkodkan** (lihat §2.7), tetapi dapat dilihat oleh lapisan MITM 67router. Pengaktifan pertama setiap ejen memaparkan modal notis risiko yang boleh ditutup.
 
 ### 3.6 Penyelenggaraan & Diagnostik
 
@@ -397,7 +397,7 @@ Pengesanan menggunakan laluan khusus OS dan semakan binari (contohnya, `code --l
 
 ### Senarai pintasan untuk hos sensitif
 
-Senarai pintasan memastikan institusi kewangan, penyedia OAuth/SSO dan hos sensitif lain **tidak pernah dinyahsulitkan**. Trafik TLS mereka melalui terowong TCP telus — OmniRoute tidak pernah melihat teks biasa.
+Senarai pintasan memastikan institusi kewangan, penyedia OAuth/SSO dan hos sensitif lain **tidak pernah dinyahsulitkan**. Trafik TLS mereka melalui terowong TCP telus — 67router tidak pernah melihat teks biasa.
 
 Corak pintasan lalai termasuk:
 
@@ -448,7 +448,7 @@ Sebagai alternatif, konfigurasikan port tanpa keistimewaan dalam tetapan AgentBr
 
 Jika IDE memaparkan ralat TLS selepas memulakan AgentBridge:
 
-1. Sahkan sijil telah dipasang: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sahkan sijil telah dipasang: `security find-certificate -c "67router AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Sesetengah aplikasi mengekalkan stor kepercayaan mereka sendiri (Firefox, Chrome pada Linux). Jalankan "Trust Cert" sekali lagi dan semak stor sijil khusus NSS/Firefox.
 3. Mulakan semula IDE selepas mempercayai sijil — sesi TLS yang sedang berlangsung menggunakan keadaan kepercayaan lama.
 
@@ -499,7 +499,7 @@ Pengesanan automatik menggunakan laluan pemasangan lazim. Jika pengesanan gagal 
 Jika AgentBridge berjaya memintas tetapi semua permintaan gagal:
 
 1. Sahkan sekurang-kurangnya satu penyedia disambungkan di `/dashboard/providers`
-2. Semak log pelayan OmniRoute: `APP_LOG_LEVEL=debug` dalam `.env`
+2. Semak log pelayan 67router: `APP_LOG_LEVEL=debug` dalam `.env`
 3. Sahkan `OMNIROUTE_BASE_URL` menghala ke titik akhir penghala yang betul (lalai: `http://127.0.0.1:20128`)
 
 ---

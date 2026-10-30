@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Kilde:** `open-sse/services/thinkingBudget.ts`
 
-Tænkebudgettet styrer, om OmniRoute **omskriver klientens parametre for tænkning/ræsonnement**, før anmodningen sendes til udbydere. Det slår **ikke** komprimering, routing eller promptcache til eller fra.
+Tænkebudgettet styrer, om 67router **omskriver klientens parametre for tænkning/ræsonnement**, før anmodningen sendes til udbydere. Det slår **ikke** komprimering, routing eller promptcache til eller fra.
 
 ## Tilstande
 
-| Tilstand                     | Hvad OmniRoute gør                                                                                                      | Hvornår den bør bruges                                                                                                                                                     |
+| Tilstand                     | Hvad 67router gør                                                                                                       | Hvornår den bør bruges                                                                                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (standard) | Lader klientfelterne være uændrede (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` osv.). | **Codex / Desktop / enhver klient, der selv skal styre indsats + ræsonnementsresumeer.** Påkrævet for synlige tænkepaneler, når klienten anmoder om `reasoning.summary`.   |
 | **`auto`**                   | **Fjerner alle** tænknings-/ræsonnementsfelter fra anmodningens body, før den sendes upstream.                          | Kun når du bevidst ønsker, at **udbyderen** skal fastsætte standardværdier, og du **ikke** har brug for klientstyret tænkning. Betyder **ikke** “vis automatisk tænkning”. |
@@ -38,7 +38,7 @@ Hvis en klient (f.eks. Codex Desktop) sendte `reasoning: { effort: "ultra", summ
 | **Kombinationsrouting / fallbacks**                 | Separat. Påvirkes ikke.                                                                                                                          |
 | **API-nøglers tokengrænser / omkostningsbudgetter** | Separat. Påvirkes ikke.                                                                                                                          |
 | **Cache til genafspilning af ræsonnement**          | Genindsættelse over flere samtalerunder for strikse udbydere (DeepSeek, Kimi, Qwen-thinking, …). Er ikke det samme som “vis tænkning” i Desktop. |
-| **Dekryptering af `encrypted_content`**             | **Umuligt.** Private ræsonnementsblobs fra OpenAI/Codex er uigennemsigtige. OmniRoute dekrypterer dem aldrig (#7095 / #7176 / #7304).            |
+| **Dekryptering af `encrypted_content`**             | **Umuligt.** Private ræsonnementsblobs fra OpenAI/Codex er uigennemsigtige. 67router dekrypterer dem aldrig (#7095 / #7176 / #7304).             |
 
 ## Synlig tænkning (Codex-/Responses-klienter)
 
@@ -51,7 +51,7 @@ For at en klient kan vise tænkningstekst, skal **alle** følgende betingelser v
 Hvis du kun får “krypteret privat ræsonnement”, skyldes det enten:
 
 - at tilstanden var **`auto`** (klientanmodningen blev fjernet), eller
-- at upstream returnerede `encrypted_content` uden opsummeringstekst (en udbyderbegrænsning; OmniRoute kan kun vise en pladsholder, ikke klartekst).
+- at upstream returnerede `encrypted_content` uden opsummeringstekst (en udbyderbegrænsning; 67router kan kun vise en pladsholder, ikke klartekst).
 
 ## API-eksempler
 
@@ -71,7 +71,7 @@ Skema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Lagring / genstart
 
-Værdien gemmes under indstillingsnøglen `thinkingBudget` og indlæses ved processtart (`hydrateThinkingBudgetConfig`). Efter ændring via databasen eller visse stier uden om API'et skal du **genstarte OmniRoute-processen**, så singletonen i hukommelsen stemmer overens med disken.
+Værdien gemmes under indstillingsnøglen `thinkingBudget` og indlæses ved processtart (`hydrateThinkingBudgetConfig`). Efter ændring via databasen eller visse stier uden om API'et skal du **genstarte 67router-processen**, så singletonen i hukommelsen stemmer overens med disken.
 
 ## Tjekliste for operatører
 

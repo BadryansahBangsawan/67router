@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 在 `free_proxies` 表中提供了一组精选的免费代理，
+67router 在 `free_proxies` 表中提供了一组精选的免费代理，
 这些代理会从外部提供者（1proxy、proxifly、iplocate、webshare）同步。仪表板会在
 **设置 → 免费代理** 下显示这些代理。本文档介绍列表路由所提供的
 服务端筛选、排序、计数和同步错误报告功能。

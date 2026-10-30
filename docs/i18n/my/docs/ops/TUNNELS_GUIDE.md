@@ -7,14 +7,14 @@
 > **အမှန်တရား၏ မူလရင်းမြစ်:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-06-28 — v3.8.40
 
-OmniRoute သည် tunnel backend သုံးမျိုးမှတစ်ဆင့် ၎င်း၏ local server (`http://localhost:20128`) ကို အများသုံး
+67router သည် tunnel backend သုံးမျိုးမှတစ်ဆင့် ၎င်း၏ local server (`http://localhost:20128`) ကို အများသုံး
 အင်တာနက်သို့ ဖွင့်ပေးနိုင်သည်။ ၎င်းသည် အောက်ပါကိစ္စများအတွက် အသုံးဝင်သည်-
 
 - အများပြည်သူ ဝင်ရောက်နိုင်သည့် redirect URL လိုအပ်သော cloud provider များ (Antigravity, Gemini, Cursor) ထံမှ OAuth callback များ။
 - VM တစ်ခု deploy လုပ်စရာမလိုဘဲ သင့် local instance ကို အသင်းဖော်များနှင့် မျှဝေခြင်း။
 - Mobile၊ remote သို့မဟုတ် network မတူညီသည့် စမ်းသပ်မှုများ။
 
-Backend သုံးမျိုးလုံးကို process အတွင်းမှ စီမံသည် — OmniRoute သည် dashboard သို့မဟုတ် REST API မှတစ်ဆင့်
+Backend သုံးမျိုးလုံးကို process အတွင်းမှ စီမံသည် — 67router သည် dashboard သို့မဟုတ် REST API မှတစ်ဆင့်
 နောက်ခံ binary သို့မဟုတ် SDK ကို စတင်/ရပ်တန့်ပေးသည်။ Reverse proxy သို့မဟုတ် systemd setup
 မလိုအပ်ပါ။
 
@@ -40,7 +40,7 @@ mode နှစ်မျိုးကို ပံ့ပိုးသည်-
 http://localhost:<apiPort>` ကို လုပ်ဆောင်ပြီး သတ်မှတ်ပေးထားသည့် `*.trycloudflare.com` URL ကို
   stdout မှ ခွဲထုတ်ရယူသည်။ URL များသည် ယာယီဖြစ်ပြီး ပြန်လည်စတင်တိုင်း ပြောင်းလဲသည်။
 - **Named tunnel (ရွေးချယ်ဖွင့်နိုင်သည်)။** `CLOUDFLARED_CONFIG` က local တွင် စီမံထားသော
-  cloudflared `config.yml` ကို ညွှန်ပြသည့်အခါ OmniRoute သည် `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` ကို ညွှန်ပြသည့်အခါ 67router သည် `cloudflared tunnel --no-autoupdate
 --config <path> run` ကို လုပ်ဆောင်ပေးပြီး **တည်ငြိမ်သော အမည်ပေးထားသည့် hostname** တစ်ခု ရရှိစေသည်။ Config က
   tunnel UUID၊ `credentials-file` နှင့် `ingress` routing တို့ကို ပေးသောကြောင့်
   `--url` ကို ထည့်သွင်းမပေးဘဲ Zero Trust dashboard token လည်း မလိုအပ်ပါ။ `run` သည်
@@ -49,7 +49,7 @@ http://localhost:<apiPort>` ကို လုပ်ဆောင်ပြီး �
 
 အဓိက လုပ်ဆောင်ပုံများ-
 
-- **အလိုအလျောက် ထည့်သွင်းခြင်း။** ပထမဆုံး အသုံးပြုချိန်တွင် OmniRoute သည် နောက်ဆုံးထွက် `cloudflared`
+- **အလိုအလျောက် ထည့်သွင်းခြင်း။** ပထမဆုံး အသုံးပြုချိန်တွင် 67router သည် နောက်ဆုံးထွက် `cloudflared`
   binary ကို တရားဝင် GitHub release များမှ download လုပ်သည် (စီမံထားသော install ကို
   `DATA_DIR/cloudflared/` အောက်တွင် ထားရှိသည်)။ Download လုပ်ထားသော asset ၏ SHA256 ကို မလုပ်ဆောင်မီ
   release manifest နှင့် တိုက်စစ်အတည်ပြုသည်။
@@ -66,7 +66,7 @@ http://localhost:<apiPort>` ကို လုပ်ဆောင်ပြီး �
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. သင့် hostname ကို OmniRoute ၏ local
+2. သင့် hostname ကို 67router ၏ local
    API port (ပုံသေ 20128) သို့ route လုပ်ပေးသည့် `~/.cloudflared/config.yml` ကို ရေးပါ-
 
    ```yaml
@@ -78,11 +78,11 @@ http://localhost:<apiPort>` ကို လုပ်ဆောင်ပြီး �
      - service: http_status:404
    ```
 
-3. OmniRoute ကို config သို့ ညွှန်ပြပြီး tunnel ကို (ပြန်လည်)စတင်ပါ-
+3. 67router ကို config သို့ ညွှန်ပြပြီး tunnel ကို (ပြန်လည်)စတင်ပါ-
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # ရွေးချယ်နိုင်သည် — OmniRoute က ဖော်ပြသည့် hostname ကို အစားထိုးသတ်မှတ်သည်၊ မဟုတ်ပါက
+   # ရွေးချယ်နိုင်သည် — 67router က ဖော်ပြသည့် hostname ကို အစားထိုးသတ်မှတ်သည်၊ မဟုတ်ပါက
    # config ၏ ပထမဆုံး ingress rule မှ ဖတ်ယူသည်-
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### ရွေးချယ်သတ်မှတ်နိုင်သော env var များ
 
-| Variable                                             | ရည်ရွယ်ချက်                                                                                                                                                                                           |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | binary path ကို အစားထိုးသတ်မှတ်သည်။ သတ်မှတ်ထားပြီး မှန်ကန်ပါက OmniRoute သည် download လုပ်မည့်အစား ၎င်းကို အသုံးပြုသည်။                                                                                |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ပို့ဆောင်ရေး protocol (မူလသတ်မှတ်ချက်မှာ `http2`; `quic` နှင့် `auto` ကိုလည်း အသုံးပြုနိုင်သည်)။                                                                                                      |
-| `CLOUDFLARED_CONFIG`                                 | စက်တွင်းတွင် စီမံထားသော cloudflared `config.yml` သို့ path။ သတ်မှတ်ထားပါက OmniRoute သည် quick tunnel အစား **အမည်ပေးထားသော/အမြဲတမ်းတည်ရှိသော** tunnel (`tunnel --config <path> run`) ကို လုပ်ဆောင်သည်။ |
-| `CLOUDFLARED_HOSTNAME`                               | အမည်ပေးထားသော tunnel မှ ဖော်ပြသည့် အများသုံး hostname ကို အစားထိုးသတ်မှတ်သည် (ဥပမာ `ai.example.com`)။ မသတ်မှတ်ထားပါက config ၏ ပထမဆုံး `ingress` hostname မှ ဖတ်ယူသည်။                                 |
+| Variable                                             | ရည်ရွယ်ချက်                                                                                                                                                                                          |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | binary path ကို အစားထိုးသတ်မှတ်သည်။ သတ်မှတ်ထားပြီး မှန်ကန်ပါက 67router သည် download လုပ်မည့်အစား ၎င်းကို အသုံးပြုသည်။                                                                                |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ပို့ဆောင်ရေး protocol (မူလသတ်မှတ်ချက်မှာ `http2`; `quic` နှင့် `auto` ကိုလည်း အသုံးပြုနိုင်သည်)။                                                                                                     |
+| `CLOUDFLARED_CONFIG`                                 | စက်တွင်းတွင် စီမံထားသော cloudflared `config.yml` သို့ path။ သတ်မှတ်ထားပါက 67router သည် quick tunnel အစား **အမည်ပေးထားသော/အမြဲတမ်းတည်ရှိသော** tunnel (`tunnel --config <path> run`) ကို လုပ်ဆောင်သည်။ |
+| `CLOUDFLARED_HOSTNAME`                               | အမည်ပေးထားသော tunnel မှ ဖော်ပြသည့် အများသုံး hostname ကို အစားထိုးသတ်မှတ်သည် (ဥပမာ `ai.example.com`)။ မသတ်မှတ်ထားပါက config ၏ ပထမဆုံး `ingress` hostname မှ ဖတ်ယူသည်။                                |
 
 ## 2. ngrok
 
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 တုံ့ပြန်ချက်တွင် သတ်မှတ်ပေးထားသော `publicUrl` (ဥပမာ
-`https://abcd-1234.ngrok-free.app`) ပါဝင်သည်။ စိတ်ကြိုက် domain များ၊ region များနှင့် policy rule များကို ngrok dashboard တွင် ပြင်ဆင်သတ်မှတ်ရမည် — OmniRoute ကိုယ်တိုင်က local target URL ကို SDK သို့သာ လွှဲပို့သည်။
+`https://abcd-1234.ngrok-free.app`) ပါဝင်သည်။ စိတ်ကြိုက် domain များ၊ region များနှင့် policy rule များကို ngrok dashboard တွင် ပြင်ဆင်သတ်မှတ်ရမည် — 67router ကိုယ်တိုင်က local target URL ကို SDK သို့သာ လွှဲပို့သည်။
 
 ## 3. Tailscale Funnel
 
@@ -179,12 +179,12 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ### ကြိုတင်လိုအပ်ချက်များ
 
-1. Tailscale ကို ထည့်သွင်းပါ (သို့မဟုတ် OmniRoute အား ထည့်သွင်းစေပါ — အောက်ပါ `install` endpoint ကို ကြည့်ပါ)။
-2. ဝင်ရောက်ပါ (`tailscale login` သို့မဟုတ် OmniRoute ၏ `login` endpoint မှတစ်ဆင့်)။
+1. Tailscale ကို ထည့်သွင်းပါ (သို့မဟုတ် 67router အား ထည့်သွင်းစေပါ — အောက်ပါ `install` endpoint ကို ကြည့်ပါ)။
+2. ဝင်ရောက်ပါ (`tailscale login` သို့မဟုတ် 67router ၏ `login` endpoint မှတစ်ဆင့်)။
 3. Tailscale admin console တွင် သင်၏ tailnet အတွက် Funnel ကို ဖွင့်ပါ-
    <https://login.tailscale.com/admin/settings/features>။
 
-Linux နှင့် macOS တွင် daemon (`tailscaled`) ကို ထိန်းချုပ်ရန် `sudo` လိုအပ်သည်။ POST endpoint များသည် ခေါ်ယူမှုကြာချိန်အတွင်း OmniRoute ၏ MITM စကားဝှက် cache (`getCachedPassword` / `setCachedPassword`) သို့ လွှဲပို့ပေးမည့် ရွေးချယ်နိုင်သော `sudoPassword` field ကို လက်ခံသည်။ Windows သည် `C:\Program Files\Tailscale\tailscale.exe` ရှိ မူလ service ထည့်သွင်းမှုကို အသုံးပြုသည်။
+Linux နှင့် macOS တွင် daemon (`tailscaled`) ကို ထိန်းချုပ်ရန် `sudo` လိုအပ်သည်။ POST endpoint များသည် ခေါ်ယူမှုကြာချိန်အတွင်း 67router ၏ MITM စကားဝှက် cache (`getCachedPassword` / `setCachedPassword`) သို့ လွှဲပို့ပေးမည့် ရွေးချယ်နိုင်သော `sudoPassword` field ကို လက်ခံသည်။ Windows သည် `C:\Program Files\Tailscale\tailscale.exe` ရှိ မူလ service ထည့်သွင်းမှုကို အသုံးပြုသည်။
 
 ### REST endpoint များ
 
@@ -241,7 +241,7 @@ admin console တွင် Funnel ကို မဖွင့်ထားပါက
 
 ## OAuth callback အတွက် ထည့်သွင်းစဉ်းစားရမည့်အချက်များ
 
-OmniRoute ကို tunnel မှတစ်ဆင့် ပြင်ပသို့ ဖွင့်ပေးသည့်အခါ dashboard နှင့် OAuth flow များသည်
+67router ကို tunnel မှတစ်ဆင့် ပြင်ပသို့ ဖွင့်ပေးသည့်အခါ dashboard နှင့် OAuth flow များသည်
 callback URL များကို `localhost` မဟုတ်ဘဲ **အများသုံး** hostname ကိုအခြေခံ၍
 တည်ဆောက်ရပါမည်။ မဟုတ်ပါက OAuth provider သည် အသုံးပြုသူကို ၎င်း၏ server များမှ
 ရောက်ရှိ၍မရနိုင်သော URL သို့ ပြန်လည်လွှဲပြောင်းမည်ဖြစ်ပြီး handshake မအောင်မြင်ပါ။
@@ -258,7 +258,7 @@ host များကို ပုံမှန် UI စီမံခန့်ခ�
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-ထို့နောက် OAuth မစတင်မီ OmniRoute ကို restart လုပ်ပါ။ ယာယီ Cloudflare Quick
+ထို့နောက် OAuth မစတင်မီ 67router ကို restart လုပ်ပါ။ ယာယီ Cloudflare Quick
 Tunnel များအတွက် restart လုပ်တိုင်း URL ပြောင်းလဲသွားသောကြောင့် production OAuth
 အသုံးပြုမှုအတွက် reserved domain ပါသည့် ngrok သို့မဟုတ် Tailscale Funnel ကို
 ဦးစားပေးအသုံးပြုပါ။
@@ -274,14 +274,14 @@ Dashboard သည် tunnel အခြေအနေကို **Settings → Tunnels
 - ရှိပါက နောက်ဆုံး error message။
 
 ပရိုဂရမ်ဖြင့် စောင့်ကြည့်ရန် backend တစ်ခုချင်းစီ၏ `GET` endpoint များကို အချိန်မှန်
-poll လုပ်ပါ။ Backend တစ်ခုထက်ပို၍ တစ်ပြိုင်နက် run ခြင်းကို ခွင့်ပြုထားပြီး OmniRoute သည်
+poll လုပ်ပါ။ Backend တစ်ခုထက်ပို၍ တစ်ပြိုင်နက် run ခြင်းကို ခွင့်ပြုထားပြီး 67router သည်
 တစ်ခုချင်းစီကို သီးခြားခြေရာခံပါမည်။
 
 ## ပြဿနာဖြေရှင်းခြင်း
 
 ### "cloudflared binary ကို ရှာမတွေ့ပါ"
 
-OmniRoute သည် ပထမဆုံးအသုံးပြုချိန်တွင် အလိုအလျောက် install လုပ်ရန် ကြိုးစားပါသည်။
+67router သည် ပထမဆုံးအသုံးပြုချိန်တွင် အလိုအလျောက် install လုပ်ရန် ကြိုးစားပါသည်။
 Install လုပ်ခြင်းကို ပိတ်ဆို့ထားပါက (ကန့်သတ်ထားသော network၊ GitHub ကို ဝင်ရောက်ခွင့်မရှိခြင်း)
 <https://github.com/cloudflare/cloudflared/releases> မှ `cloudflared` ကို ကိုယ်တိုင်
 download လုပ်ပြီး `CLOUDFLARED_BIN=/path/to/cloudflared` ဟု သတ်မှတ်ပါ။

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publica artefatos npm + Docker. Esses portões fornecem proveniência, inventário (SBOM) e varredura de CVE, todos OSS, integrados aos fluxos de trabalho de lançamento. Postura **Advisory-first** — eles reportam agora, promovendo para bloqueio após o 1º lançamento verde.
+67router publica artefatos npm + Docker. Esses portões fornecem proveniência, inventário (SBOM) e varredura de CVE, todos OSS, integrados aos fluxos de trabalho de lançamento. Postura **Advisory-first** — eles reportam agora, promovendo para bloqueio após o 1º lançamento verde.
 
 | Portão                | Ferramenta                                     | Onde                          | Bloqueia?                      | Saída                                           |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :----------------------------- | :---------------------------------------------- |
@@ -46,7 +46,7 @@ este é um **risco aceito**, não um aumento de versão:
 - **Nenhuma versão corrigida existe em qualquer parte da cadeia.** `extract-zip@2.0.1` (publicado em 2020) é a versão final do pacote — ele não é mantido. O `npm-latest` atual de `@openai/codex-security` (`0.1.29`) ainda puxa `extract-zip@2.0.1`.
 - **Inalcançável da produção.** `promptfoo` é apenas uma devDependency (nunca listado
   em `dependencies`), e nenhum arquivo em `src/`, `open-sse/`, ou `bin/` importa o
-  pacote npm `extract-zip` — o próprio auxiliar `extractZip()` do OmniRoute
+  pacote npm `extract-zip` — o próprio auxiliar `extractZip()` do 67router
   (`src/lib/versionManager/binaryManager.ts:93`) executa `unzip`/`tar` nativos
   e não está relacionado. `@openai/codex-security` também inclui sua própria proteção
   contra travessia de symlink além do callback onEntry do extract-zip.

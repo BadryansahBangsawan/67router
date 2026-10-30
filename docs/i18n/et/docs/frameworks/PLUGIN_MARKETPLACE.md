@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute sisaldab WordPressi-laadset pistikprogrammisüsteemi. Pistikprogrammid on iseseisvad
+67router sisaldab WordPressi-laadset pistikprogrammisüsteemi. Pistikprogrammid on iseseisvad
 kataloogid — igaühes on `plugin.json` manifest ja sisendfail —, mis haakuvad
 päringutöötlusahelasse (`onRequest` / `onResponse` / `onError`) ning
 elutsüklisündmustesse (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ on lubatud.
 
 ### Pluginate kataloog
 
-Pluginad asuvad OmniRoute'i andmekataloogis:
+Pluginad asuvad 67router'i andmekataloogis:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

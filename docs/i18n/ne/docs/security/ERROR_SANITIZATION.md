@@ -213,7 +213,7 @@ builder पछिको mutation ले public projection लाई bypass ग�
 3. Depth cap: 4 levels भन्दा गहिरो nesting लाई string `"[truncated]"` ले प्रतिस्थापन गरिन्छ।
 4. Arrays लाई अधिकतम 32 elements मा सीमित गरिन्छ।
 
-Parsed provider error body भएका call sites ले मात्र `upstreamDetails` pass गर्नुपर्छ। आन्तरिक OmniRoute
+Parsed provider error body भएका call sites ले मात्र `upstreamDetails` pass गर्नुपर्छ। आन्तरिक 67router
 errors (SSE parse failures, खाली content, guardrail blocks) ले यसलाई समावेश गर्नु हुँदैन।
 
 Raw `err.stack`, `err.message`, वा runtime exception बाट आएको कुनै पनि string लाई
@@ -224,7 +224,7 @@ Raw `err.stack`, `err.message`, वा runtime exception बाट आएको 
 तर यो byte-for-byte passthrough होइन: serialization अघि recursive sanitizer सधैँ चल्छ।
 Cyclic, BigInt-bearing, वा hostile `toJSON()` bodies बन्द भएर विफल हुन्छन् र passthrough का लागि
 योग्य हुँदैनन्। OCR र moderation मा पनि यही rule लागू हुन्छ; non-JSON, खाली, वा गलत label गरिएका
-upstream bodies लाई canonical OmniRoute JSON error envelope मा रूपान्तरण गरिन्छ।
+upstream bodies लाई canonical 67router JSON error envelope मा रूपान्तरण गरिन्छ।
 
 ## ज्ञात CodeQL सीमा: अनुकूलित स्यानिटाइजरहरू पहिचान हुँदैनन्
 

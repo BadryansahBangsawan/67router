@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute paleidimo metu nustato savo SQLite tvarkyklę naudodama 5 žingsnių atsarginio pasirinkimo grandinę:
+67router paleidimo metu nustato savo SQLite tvarkyklę naudodama 5 žingsnių atsarginio pasirinkimo grandinę:
 
 1. **Komplektuojama `better-sqlite3`** (per `package.json` lauką `dependencies`)
    — greičiausia, naudoja savąjį dvejetainį failą, įdiegiama vykdant `npm install`, kai yra kompiliavimo įrankių.
@@ -28,13 +28,13 @@ OmniRoute paleidimo metu nustato savo SQLite tvarkyklę naudodama 5 žingsnių a
 - **Nėra kompiliavimo įrankių**: kai kuriose aplinkose (įmonių Windows sistemose be VS Build
   Tools, minimaliose Docker atvaizdžių sistemose) negalima sukompiliuoti `better-sqlite3`. Vykdymo metu
   veikianti diegimo programa iš npm registro gauna iš anksto sukompiliuotą dvejetainį failą; atsarginės
-  tvarkyklės užtikrina, kad OmniRoute vis tiek bus paleista, net jei tai nepavyks.
+  tvarkyklės užtikrina, kad 67router vis tiek bus paleista, net jei tai nepavyks.
 - **Nuo tinklo izoliuotos sistemos**: jei npm registras nepasiekiamas, `node:sqlite`
   arba `sql.js` užtikrina bazinį funkcionalumą.
 
 ## Signatūros baitų tikrinimas
 
-Prieš įkeldama vykdymo metu įdiegtą `.node` failą, OmniRoute nuskaito pirmuosius 8
+Prieš įkeldama vykdymo metu įdiegtą `.node` failą, 67router nuskaito pirmuosius 8
 baitus ir palygina juos su žinomomis platformų signatūromis:
 
 | Platforma              | Baitai (šešioliktainiai) | Žyma        |
@@ -104,9 +104,9 @@ Realizacija:
 ## Vieno rašytojo topologija (HA nepalaikomas)
 
 Anksčiau aprašyta atsarginio tvarkyklių pasirinkimo grandinė vis tiek veikia **viename procese**. Numatytoji SQLite
-naudojanti OmniRoute yra **vieno rašytojo** sistema:
+naudojanti 67router yra **vieno rašytojo** sistema:
 
-- Nejunkite dviejų OmniRoute replikų prie to paties `storage.sqlite` failo.
+- Nejunkite dviejų 67router replikų prie to paties `storage.sqlite` failo.
 - Konteinerio paleidimas iš naujo, Recreate diegimas, nutraukimas dėl OOM arba HEALTHCHECK inicijuotas paleidimas iš naujo nutraukia
   kiekvieną tuo metu aktyvią SSE sesiją. Standartiniame veikimo režime nėra sesijų užbaigimo mechanizmo.
 - Orkestratoriaus gyvybingumo patikra, kuri lėtą `/healthz` atsaką vertina kaip neveikiančią paslaugą, nutrauks vienintelę

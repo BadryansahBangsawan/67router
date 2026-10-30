@@ -6,7 +6,7 @@
 
 ## Kokkuvõte
 
-OmniRoute toetab nüüd `/api/v1/relay/chat/completions` jaoks kolme vahendusrežiimi:
+67router toetab nüüd `/api/v1/relay/chat/completions` jaoks kolme vahendusrežiimi:
 
 - `ts`: kasutab protsessisisest TypeScripti vahendust.
 - `bifrost`: sunnib kasutama Bifrosti lüüsi.
@@ -45,12 +45,12 @@ Kui võrdlete praegu 9routerit ja CLIPROXYAPI-t:
 
 ## Taustsüsteemi piiri leping
 
-Stabiilne tootepiir on OmniRoute'i vahendus-API, mitte juhtpaneeli teostus. Next.js-i juhtpaneel võib kohalikke teenuseid installida, seadistada ja jälgida, kuid päringute marsruutimine peaks sisenema vahendus-API kaudu ning andma töötluse edasi selle piiri taga.
+Stabiilne tootepiir on 67router'i vahendus-API, mitte juhtpaneeli teostus. Next.js-i juhtpaneel võib kohalikke teenuseid installida, seadistada ja jälgida, kuid päringute marsruutimine peaks sisenema vahendus-API kaudu ning andma töötluse edasi selle piiri taga.
 
 Pikaajalised taustsüsteemi valikud:
 
 - Säilitage TypeScripti vahendus protsessisisese poliitika- ja varuteena. Autentimine, lubatud loendid, päringute normaliseerimine, arvestus ja turvakontrollid jäävad siia enne mis tahes taustsüsteemile üleandmist.
-- Kasutage Bifrosti eelistatud suure läbilaskevõimega 1. taseme kõrvalprotsessina, kui juurutus vajab marsruutimise väiksemat varieeruvust, teenusepakkujate tsentraliseeritud roteerimist või horisontaalset skaleerimist üle mitme OmniRoute'i replika.
+- Kasutage Bifrosti eelistatud suure läbilaskevõimega 1. taseme kõrvalprotsessina, kui juurutus vajab marsruutimise väiksemat varieeruvust, teenusepakkujate tsentraliseeritud roteerimist või horisontaalset skaleerimist üle mitme 67router'i replika.
 - Säilitage 9router ja CLIPROXYAPI manustatud ühilduvusteenustena. Need töötavad järelevalve all olevate kohalike protsessidena ja on kasulikud, kui soovitud adapteriks on nende teenusepakkuja-/CLI-käitumine, kuid neist ei tohiks saada vaikimisi 1. taseme marsruutimismootorit.
 - Ärge laske juhtpaneelil edastada põhilisse töötlusteesse suvalisi teenuse-URL-e. Kasutajaliidesest saadud URL-id on konfiguratsioonisisendid; marsruutimiskood peaks leidma registreeritud ja tervisekontrolli läbinud taustsüsteemid serveripoolsetest sätetest ning järelevalvuri olekust.
 - Eelistage praegu järelevalve all olevate teenuste jaoks tagasisideahela HTTP-d, sest hallatavad protsessid pakuvad juba HTTP-ga ühilduvaid API-sid, marsruudivalvur saab piiri auditeerida ning tõrgete ja varuteele lülitumise käitumine on päringulogides nähtav. Tulevase SDK või soklitranspordi lisamine tasub end ära ainult juhul, kui see vähendab mõõdetavalt marsruutimise p99 latentsust, nõrgendamata isolatsiooni ega varuteele lülitumise semantikat.

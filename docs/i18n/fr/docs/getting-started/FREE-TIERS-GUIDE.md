@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR** : Utilisez vos propres comptes auprès de fournisseurs éligibles. OmniRoute combine les connexions que vous configurez ; il ne fournit pas le budget total de jetons annoncé. L’accès gratuit peut nécessiter une inscription, une clé API, une approbation ou un moyen de paiement. Les limites, les politiques de confidentialité et les conditions des fournisseurs continuent de s’appliquer.
+> **TL;DR** : Utilisez vos propres comptes auprès de fournisseurs éligibles. 67router combine les connexions que vous configurez ; il ne fournit pas le budget total de jetons annoncé. L’accès gratuit peut nécessiter une inscription, une clé API, une approbation ou un moyen de paiement. Les limites, les politiques de confidentialité et les conditions des fournisseurs continuent de s’appliquer.
 
 ---
 
@@ -15,7 +15,7 @@ s’agir d’un point de terminaison sans authentification, d’un quota récurr
 d’une approbation manuelle ou d’une promotion temporaire. Certaines options nécessitent un compte, une clé API,
 une carte de crédit, une procédure KYC ou l’acceptation de conditions propres au fournisseur.
 
-OmniRoute **regroupe** les connexions configurées au sein d’un point de terminaison unique. Vous devez tout de même vous inscrire séparément auprès de chaque fournisseur nécessitant un compte. Connectez ces comptes et utilisez `model: "auto"` pour acheminer les requêtes vers les cibles admissibles. Une nouvelle installation peut ne disposer d’aucune cible sans clé admissible ; l’installation d’OmniRoute à elle seule ne garantit pas l’obtention d’une réponse de chat.
+67router **regroupe** les connexions configurées au sein d’un point de terminaison unique. Vous devez tout de même vous inscrire séparément auprès de chaque fournisseur nécessitant un compte. Connectez ces comptes et utilisez `model: "auto"` pour acheminer les requêtes vers les cibles admissibles. Une nouvelle installation peut ne disposer d’aucune cible sans clé admissible ; l’installation de 67router à elle seule ne garantit pas l’obtention d’une réponse de chat.
 
 ---
 
@@ -60,7 +60,7 @@ Ces fournisseurs proposent des **offres gratuites** assorties de limites spécif
 
 ## Comment cumuler les offres gratuites
 
-La magie d’OmniRoute réside dans le **cumul des offres gratuites**. Au lieu de dépendre d’un seul fournisseur, vous connectez plusieurs fournisseurs gratuits et laissez OmniRoute sélectionner automatiquement le meilleur pour chaque requête.
+La magie de 67router réside dans le **cumul des offres gratuites**. Au lieu de dépendre d’un seul fournisseur, vous connectez plusieurs fournisseurs gratuits et laissez 67router sélectionner automatiquement le meilleur pour chaque requête.
 
 ### Exemple : une couverture gratuite plus étendue
 
@@ -71,7 +71,7 @@ Connectez plusieurs fournisseurs afin de réduire votre dépendance à un quota 
 3. **Pollinations** — accès sans clé, soumis à des limites de débit
 4. **LongCat** — crédit unique accordé lors de l’inscription (vérification KYC requise)
 
-Utilisez ensuite `model: "auto"` et OmniRoute effectuera les opérations suivantes :
+Utilisez ensuite `model: "auto"` et 67router effectuera les opérations suivantes :
 
 - Essayer d’abord la connexion éligible la mieux classée
 - Si son quota est épuisé ou si sa vérification d’état échoue → essayer le fournisseur configuré suivant
@@ -105,7 +105,7 @@ récurrents, les accès sans limite ou sans clé, les crédits d’inscription, 
 
 ### Étape 5 : Cliquer sur Connecter
 
-Pour un fournisseur `NOAUTH`, OmniRoute ne demande aucun identifiant auprès du service en amont. Cela ne garantit pas que celui-ci accepte les clients tiers ni qu’il dispose d’une capacité suffisante. Les fournisseurs utilisant OAuth ou une clé API doivent être connectés en suivant la procédure documentée pour leur compte. Votre client utilise toujours la clé API OmniRoute affichée dans **Tableau de bord → Points de terminaison** lorsque l’authentification du routeur est activée.
+Pour un fournisseur `NOAUTH`, 67router ne demande aucun identifiant auprès du service en amont. Cela ne garantit pas que celui-ci accepte les clients tiers ni qu’il dispose d’une capacité suffisante. Les fournisseurs utilisant OAuth ou une clé API doivent être connectés en suivant la procédure documentée pour leur compte. Votre client utilise toujours la clé API 67router affichée dans **Tableau de bord → Points de terminaison** lorsque l’authentification du routeur est activée.
 
 ### Étape 6 : Répéter
 
@@ -115,7 +115,7 @@ Connectez plusieurs fournisseurs dont les conditions d’utilisation et le modè
 
 ## Lire correctement le catalogue
 
-- `NOAUTH` signifie qu’OmniRoute ne vous demande pas d’identifiants de fournisseur ; cela ne
+- `NOAUTH` signifie que 67router ne vous demande pas d’identifiants de fournisseur ; cela ne
   garantit ni la disponibilité, ni la confidentialité, ni une capacité illimitée.
 - `hasFree` est une métadonnée de découverte. Elle peut représenter un quota récurrent, un accès sans clé,
   un crédit d’inscription, un programme d’approbation ou une promotion.
@@ -128,15 +128,15 @@ Connectez plusieurs fournisseurs dont les conditions d’utilisation et le modè
 
 ---
 
-## Comment OmniRoute améliore les offres gratuites
+## Comment 67router améliore les offres gratuites
 
 ### 1. Basculement automatique
 
-Si un fournisseur gratuit est saturé ou indisponible, OmniRoute essaie automatiquement le suivant. Vous n’avez rien à faire.
+Si un fournisseur gratuit est saturé ou indisponible, 67router essaie automatiquement le suivant. Vous n’avez rien à faire.
 
 ### 2. Routage intelligent
 
-OmniRoute sélectionne le **meilleur fournisseur gratuit** pour chaque requête en fonction des critères suivants :
+67router sélectionne le **meilleur fournisseur gratuit** pour chaque requête en fonction des critères suivants :
 
 - Vitesse — Quel fournisseur est actuellement le plus rapide ?
 - Qualité — Quel fournisseur est le mieux adapté à cette tâche ?
@@ -144,13 +144,13 @@ OmniRoute sélectionne le **meilleur fournisseur gratuit** pour chaque requête 
 
 ### 3. Économies de jetons
 
-Le pipeline de compression d’OmniRoute peut réduire le nombre de jetons admissibles dans les invites et les sorties d’outils. Les
+Le pipeline de compression de 67router peut réduire le nombre de jetons admissibles dans les invites et les sorties d’outils. Les
 économies réelles dépendent du contenu, des moteurs sélectionnés, du mode de comptabilisation du fournisseur et des paramètres de
 fidélité ; la compression ne multiplie pas chaque quota fournisseur par un facteur fixe.
 
 ### 4. Prise en charge de plusieurs comptes
 
-Si les conditions du fournisseur autorisent plusieurs comptes ou identifiants, OmniRoute peut traiter chaque
+Si les conditions du fournisseur autorisent plusieurs comptes ou identifiants, 67router peut traiter chaque
 connexion comme un candidat de routage distinct. Ne créez pas de comptes supplémentaires pour contourner
 le quota ou la politique d’accès d’un fournisseur.
 
@@ -165,7 +165,7 @@ Le catalogue en production, après déduplication des pools, indique actuellemen
 | Allocation récurrente quantifiée            |  **~1.62B tokens/mois** | Les pools partagés ne sont comptés qu’une fois ; les fournisseurs sans plafond sont exclus de la somme |
 | Premier mois avec les crédits d’inscription |       **~2.22B tokens** | Total récurrent auquel s’ajoutent les crédits ponctuels et récurrents                                  |
 
-Il s’agit d’estimations portant sur l’ensemble du catalogue et réparties entre différents comptes éligibles, et non d’une allocation fournie par OmniRoute ni d’une prévision pour une nouvelle installation. Votre capacité utilisable dépend des fournisseurs que vous connectez et de leurs conditions actuelles. Les valeurs sont calculées à partir de `open-sse/config/freeModelCatalog.ts` ; consultez la
+Il s’agit d’estimations portant sur l’ensemble du catalogue et réparties entre différents comptes éligibles, et non d’une allocation fournie par 67router ni d’une prévision pour une nouvelle installation. Votre capacité utilisable dépend des fournisseurs que vous connectez et de leurs conditions actuelles. Les valeurs sont calculées à partir de `open-sse/config/freeModelCatalog.ts` ; consultez la
 [Référence des offres gratuites](../reference/FREE_TIERS.md) pour en savoir plus sur la déduplication des pools, les indicateurs relatifs aux conditions d’utilisation,
 les entrées abandonnées et la méthodologie appliquée aux crédits d’inscription.
 
@@ -192,7 +192,7 @@ de production. Les charges de travail critiques doivent disposer d’une solutio
 
 Les compromis peuvent inclure des limites strictes, des listes d’attente, une procédure KYC, la vérification d’une carte bancaire, l’entraînement sur
 les prompts, une confidentialité moindre, l’absence de SLA, des changements fréquents de modèles, des restrictions géographiques, une facturation des dépassements ou
-des risques liés aux règles du compte. OmniRoute affiche les métadonnées disponibles ; vous choisissez les éléments à activer.
+des risques liés aux règles du compte. 67router affiche les métadonnées disponibles ; vous choisissez les éléments à activer.
 
 ### « Comment obtenir davantage de quota gratuit ? »
 
@@ -211,7 +211,7 @@ page de classement des fournisseurs gratuits comme indicateur de qualité et vé
 
 ## Et maintenant ?
 
-- **[Guide Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Laissez OmniRoute choisir la meilleure IA pour vous
+- **[Guide Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Laissez 67router choisir la meilleure IA pour vous
 - **[Guide des fournisseurs](./PROVIDERS-GUIDE.md)** — Connectez davantage de fournisseurs
 - **[Dépannage](../guides/TROUBLESHOOTING.md)** — Résolvez les problèmes courants
 - **[Référence des offres gratuites](../reference/FREE_TIERS.md)** — Liste complète des offres gratuites

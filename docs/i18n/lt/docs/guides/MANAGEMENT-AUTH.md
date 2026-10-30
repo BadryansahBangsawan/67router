@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute turi **keturias kredencialų šeimas**, kurios gali autorizuoti valdymo maršrutus.
+67router turi **keturias kredencialų šeimas**, kurios gali autorizuoti valdymo maršrutus.
 Jos nėra tarpusavyje keičiamos. Inference API raktai (`sk-…`) **nevaldo**
 serverio, nebent jiems buvo aiškiai suteikta `manage` arba `admin` apimtis.
 

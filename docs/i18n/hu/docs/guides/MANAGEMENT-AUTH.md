@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute **négy hitelesítő adatcsaláddal** rendelkezik, amelyek felhatalmazhatják a felügyeleti útvonalakat.
+Az 67router **négy hitelesítő adatcsaláddal** rendelkezik, amelyek felhatalmazhatják a felügyeleti útvonalakat.
 Ezek nem felcserélhetők. Az Inference API kulcsok (`sk-…`) **nem** kezelik a
 szervert, hacsak nem kaptak kifejezetten `manage` vagy `admin` hatókört.
 

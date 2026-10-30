@@ -52,7 +52,7 @@ aktibidad. Ito rin ang rate limiter na nakatali sa parehong IP at key na nagdudu
 paminsan-minsang `400 content-blocked` error kapag gumagawa ang Claude Code o Codex CLI
 ng maraming tool-use / message-send call nang mabilis at sunod-sunod.
 
-## Mga mitigation na nailapat na sa OmniRoute
+## Mga mitigation na nailapat na sa 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — burst guard na nagpapatupad ng
    minimum na 500 ms na pagitan sa mga outbound request patungo sa anumang `agentrouter:*`

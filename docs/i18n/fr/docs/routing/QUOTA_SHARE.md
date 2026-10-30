@@ -13,7 +13,7 @@
 
 Le moteur de partage des quotas répartit équitablement le quota temporel d’un fournisseur (par exemple, une fenêtre Codex de 5 heures ou 1 500 requêtes/h pour Kimi) entre plusieurs clés API partageant la même connexion.
 
-**Problème résolu :** OmniRoute utilise de nombreuses clés API avec un même compte fournisseur en amont. Sans logique de partage, un pic de requêtes provenant de la clé A peut épuiser le quota du fournisseur pour l’heure, laissant les clés B et C bloquées jusqu’à la réinitialisation de la fenêtre. Le moteur empêche cela en :
+**Problème résolu :** 67router utilise de nombreuses clés API avec un même compte fournisseur en amont. Sans logique de partage, un pic de requêtes provenant de la clé A peut épuiser le quota du fournisseur pour l’heure, laissant les clés B et C bloquées jusqu’à la réinitialisation de la fenêtre. Le moteur empêche cela en :
 
 1. Suivant la consommation glissante de chaque clé pour chaque dimension (%, requêtes, jetons, $).
 2. Appliquant un algorithme de partage équitable conservant la capacité : une clé peut emprunter sur les parts inutilisées tant que le pool global n’est pas saturé.
@@ -106,7 +106,7 @@ Pilote Redis : un script Lua EVAL assure l’incrémentation atomique — il s�
 
 - Table : `quota_consumption` (voir les migrations `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Idéal pour les déploiements à instance unique.
-- Toutes les données persistantes se trouvent dans la base SQLite existante d’OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toutes les données persistantes se trouvent dans la base SQLite existante de 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (facultatif, multi-instance)
 

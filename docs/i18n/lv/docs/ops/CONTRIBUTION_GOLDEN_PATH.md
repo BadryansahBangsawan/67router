@@ -113,7 +113,7 @@ vai dokumentēta manuāla pārbaude.
 - CLI katalogi atrodas atsevišķi direktorijā `bin/cli/locales/`.
 - Precīzi saglabājiet ICU vietturus un tagus. Netulkojiet produktu/pakalpojumu sniedzēju/modeļu nosaukumus,
   protokolu un galveņu nosaukumus, komandas, koda/JSON identifikatorus, URL, vides mainīgos vai
-  aizsargātus terminus, piemēram, `OmniRoute`, `OAuth`, `MCP` un `A2A`. Pašreizējais avota saraksts ir
+  aizsargātus terminus, piemēram, `67router`, `OAuth`, `MCP` un `A2A`. Pašreizējais avota saraksts ir
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Mērķētais cikls**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # atkārtoti izmantot ci
 - **Atritiniet.** `run` vēlreiz validē paaugstināto slotu un samaina `current` un `previous` atpakaļ, ja
   šī pārbaude neizdodas. Kandidāts, kam neizdodas pirmā validācija, nekad netiek paaugstināts.
 
-Viss tiek ierakstīts git ignorētajā `_artifacts/candidate/`; esoša OmniRoute
+Viss tiek ierakstīts git ignorētajā `_artifacts/candidate/`; esoša 67router
 instalācija un tās datu direktorijs nekad netiek mainīts. Paaugstinātais CLI atrodas
 `_artifacts/candidate/current/prefix/bin/omniroute`; lietojot to, palaidiet to ar savu `DATA_DIR`.
 Izejas kodi: `0` — sekmīgi, `1` — validācija vai paaugstināšana neizdevās, `2` — lietojuma kļūda vai trūkst būvējuma.

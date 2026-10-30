@@ -4,7 +4,7 @@
 
 ---
 
-Bailíochtú E2E i bhfíorthimpeallacht ar imscaradh OmniRoute atá ag rith ar an VPS homalógaithe
+Bailíochtú E2E i bhfíorthimpeallacht ar imscaradh 67router atá ag rith ar an VPS homalógaithe
 (`HOMOLOG_BASE_URL`, e.g. `http://192.168.0.15:20128`). Tagann ordú amháin in ionad sheicliosta láimhe
 STOP #2 don eisiúint le rith uathoibrithe a tháirgeann fianaise.
 

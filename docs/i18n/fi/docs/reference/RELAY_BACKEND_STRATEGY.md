@@ -6,7 +6,7 @@
 
 ## Yhteenveto
 
-OmniRoute tukee nyt kolmea välitystilaa päätepisteelle `/api/v1/relay/chat/completions`:
+67router tukee nyt kolmea välitystilaa päätepisteelle `/api/v1/relay/chat/completions`:
 
 - `ts`: Käytä prosessin sisäistä TypeScript-välitystä.
 - `bifrost`: Pakota käyttöön Bifrost-yhdyskäytävä.
@@ -45,12 +45,12 @@ Jos vertailet tällä hetkellä 9routeria ja CLIPROXYAPIa:
 
 ## Taustajärjestelmän rajapintasopimus
 
-Vakaa tuoterajapinta on OmniRoute-välitysrajapinta, ei hallintapaneelin toteutus. Next.js-hallintapaneeli voi asentaa ja määrittää paikallisia palveluita sekä valvoa niitä, mutta pyyntöjen reitityksen tulee kulkea välitysrajapinnan kautta ja siirtyä taustajärjestelmälle tämän rajan takana.
+Vakaa tuoterajapinta on 67router-välitysrajapinta, ei hallintapaneelin toteutus. Next.js-hallintapaneeli voi asentaa ja määrittää paikallisia palveluita sekä valvoa niitä, mutta pyyntöjen reitityksen tulee kulkea välitysrajapinnan kautta ja siirtyä taustajärjestelmälle tämän rajan takana.
 
 Pitkän aikavälin taustajärjestelmävalinnat:
 
 - Säilytä TypeScript-välitys prosessin sisäisenä käytäntö- ja varapolkuna. Todennus, sallitut luettelot, pyyntöjen normalisointi, käytön seuranta ja turvallisuustarkistukset säilyvät täällä ennen luovutusta millekään taustajärjestelmälle.
-- Käytä Bifrostia ensisijaisena suuren läpimenon Tier-1-sivuprosessina, kun käyttöönotto edellyttää pienempää reitityksen vaihtelua, keskitettyä palveluntarjoajien kierrätystä tai skaalausta useisiin OmniRoute-replikoihin.
+- Käytä Bifrostia ensisijaisena suuren läpimenon Tier-1-sivuprosessina, kun käyttöönotto edellyttää pienempää reitityksen vaihtelua, keskitettyä palveluntarjoajien kierrätystä tai skaalausta useisiin 67router-replikoihin.
 - Säilytä 9router ja CLIPROXYAPI sulautettuina yhteensopivuuspalveluina. Ne suoritetaan valvottuina paikallisina prosesseina ja ovat hyödyllisiä, kun niiden palveluntarjoaja-/CLI-toiminta on haluttu sovitin, mutta niistä ei pidä tehdä oletusarvoista Tier-1-reititysmoottoria.
 - Älä anna hallintapaneelin välittää mielivaltaisia palvelu-URL-osoitteita kuumalle polulle. Käyttöliittymässä annetut URL-osoitteet ovat määrityssyötteitä; reitityskoodin tulee selvittää rekisteröidyt ja kuntotarkistetut taustajärjestelmät palvelinpuolen asetuksista ja valvontaprosessin tilasta.
 - Suosi nykyisin valvotuissa palveluissa loopback-HTTP:tä, koska hallitut prosessit tarjoavat jo HTTP-yhteensopivia rajapintoja, reittisuoja voi auditoida rajapinnan ja virhe-/varapolkutoiminta näkyy pyyntölokeissa. Tuleva SDK- tai socket-siirtotapa kannattaa lisätä vain, jos se pienentää mitattavasti reitityksen p99-viivettä heikentämättä eristystä tai varapolun semantiikkaa.

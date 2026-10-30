@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ločuje **odkrivanje CLI-jev**, **izvorni Agent Client Protocol** in
+67router ločuje **odkrivanje CLI-jev**, **izvorni Agent Client Protocol** in
 **starejše adapterje stdio**. Najdba nameščene izvršljive datoteke ne dokazuje
 njene avtentikacije, združljivosti modela ali pripravljenosti za obdelavo poziva.
 

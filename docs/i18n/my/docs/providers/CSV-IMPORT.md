@@ -25,7 +25,7 @@ Dashboard → Providers → **ဖိုင်မှ တင်သွင်းရ�
 တင်သွင်းမှု modal မှ စတင်အသုံးပြုနိုင်သောဖိုင်ကို ဒေါင်းလုဒ်လုပ်ပါ (**CSV နမူနာပုံစံကို ဒေါင်းလုဒ်လုပ်ရန်**)။ ဥပမာ-
 
 ```csv
-# OmniRoute provider တင်သွင်းမှု (နေရာစဉ်အလိုက် ကော်လံများ)
+# 67router provider တင်သွင်းမှု (နေရာစဉ်အလိုက် ကော်လံများ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

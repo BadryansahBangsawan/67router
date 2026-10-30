@@ -5,12 +5,12 @@
 ---
 
 L’**édition du contexte** déléguée est une fonctionnalité de gestion du contexte propre à Claude. Contrairement aux moteurs de
-compression locaux d’OmniRoute (Caveman, RTK, LLMLingua, pipelines empilés) — qui réécrivent le corps de la requête
+compression locaux de 67router (Caveman, RTK, LLMLingua, pipelines empilés) — qui réécrivent le corps de la requête
 _avant_ qu’il ne quitte le proxy — l’édition du contexte demande au **fournisseur** de supprimer les blocs obsolètes
-d’utilisation d’outils / de résultats d’outils de sa propre fenêtre de contexte active. OmniRoute se contente d’ajouter un
+d’utilisation d’outils / de résultats d’outils de sa propre fenêtre de contexte active. 67router se contente d’ajouter un
 paramètre au corps (`context_management.edits[]`) ; Claude effectue la suppression proprement dite en fonction de son propre tokenizer.
 
-Il s’agit par nature d’une capacité déléguée : les autres fournisseurs rejettent ce paramètre. OmniRoute la limite donc
+Il s’agit par nature d’une capacité déléguée : les autres fournisseurs rejettent ce paramètre. 67router la limite donc
 strictement à Claude et aux relais compatibles avec Claude Code.
 
 Sources de référence : `open-sse/config/contextEditing.ts` (identifiants de stratégie, injection dans le corps, extraction
@@ -19,7 +19,7 @@ de la télémétrie), `open-sse/executors/base.ts` (contrôle de l’injection +
 
 ## Fonctionnement de `clear_tool_uses`
 
-OmniRoute injecte une seule modification dans le corps sortant des messages Anthropic :
+67router injecte une seule modification dans le corps sortant des messages Anthropic :
 
 ```json
 {
@@ -41,12 +41,12 @@ OmniRoute injecte une seule modification dans le corps sortant des messages Anth
 - `keep.value: 3` — les N paires utilisation/résultat d’outil les plus récentes sont conservées intactes
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-La version bêta est signalée au moyen de l’en-tête `anthropic-beta: context-management-2025-06-27`, qu’OmniRoute
+La version bêta est signalée au moyen de l’en-tête `anthropic-beta: context-management-2025-06-27`, que 67router
 émet déjà pour les requêtes Claude.
 
 L’injection est effectuée par `applyContextEditingToBody()` et est **idempotente** : si une modification `clear_tool_uses`
 existe déjà dans le corps (ajoutée lors d’un appel précédent ou fournie par le client), le corps reste
-inchangé. Si une modification `clear_thinking_20251015` est également présente, OmniRoute effectue un tri stable afin de placer la
+inchangé. Si une modification `clear_thinking_20251015` est également présente, 67router effectue un tri stable afin de placer la
 modification `clear_thinking` en premier, car Anthropic exige que `clear_thinking` précède
 `clear_tool_uses` dans le tableau `edits[]`.
 
@@ -145,7 +145,7 @@ Claude authentique inclut la fonctionnalité bêta dans `ANTHROPIC_BETA_BASE` et
 
 ## Télémétrie `applied_edits`
 
-Après une réponse de Claude, OmniRoute enregistre la quantité de contexte que le fournisseur a réellement supprimée. Cette information n’est
+Après une réponse de Claude, 67router enregistre la quantité de contexte que le fournisseur a réellement supprimée. Cette information n’est
 **pas** transmise en flux continu — elle est extraite au mieux du corps de la réponse non diffusée en continu et
 n’affecte jamais la réponse (les échecs de télémétrie sont ignorés).
 
@@ -173,16 +173,16 @@ l’étiquette de moteur `context-editing`, et peut être distinguée des écono
 
 ## Relation avec les moteurs de compression locaux
 
-| Aspect                   | Moteurs locaux (Caveman / RTK / LLMLingua / empilés)    | Édition de contexte déléguée                                                      |
-| ------------------------ | ------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Où cela s’exécute        | Dans OmniRoute, avant que la requête ne quitte le proxy | Chez le fournisseur (Claude), côté serveur                                        |
-| Ce qui est modifié       | Texte du prompt / contexte / résultat d’outil           | Anciens blocs d’utilisation/résultat d’outil                                      |
-| Fournisseurs concernés   | Tous les fournisseurs                                   | `claude` + `anthropic-compatible-cc-*` uniquement                                 |
-| Activation               | Paramètres du mode de compression                       | `contextEditing.enabled`                                                          |
-| Mode de défaillance      | Poursuite sans compression (texte d’origine)            | Repli en cas d’erreur 400 : suppression du paramètre, puis une nouvelle tentative |
-| Télémétrie des économies | `engine: <engine id>`                                   | `engine: "context-editing"`                                                       |
+| Aspect                   | Moteurs locaux (Caveman / RTK / LLMLingua / empilés)   | Édition de contexte déléguée                                                      |
+| ------------------------ | ------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| Où cela s’exécute        | Dans 67router, avant que la requête ne quitte le proxy | Chez le fournisseur (Claude), côté serveur                                        |
+| Ce qui est modifié       | Texte du prompt / contexte / résultat d’outil          | Anciens blocs d’utilisation/résultat d’outil                                      |
+| Fournisseurs concernés   | Tous les fournisseurs                                  | `claude` + `anthropic-compatible-cc-*` uniquement                                 |
+| Activation               | Paramètres du mode de compression                      | `contextEditing.enabled`                                                          |
+| Mode de défaillance      | Poursuite sans compression (texte d’origine)           | Repli en cas d’erreur 400 : suppression du paramètre, puis une nouvelle tentative |
+| Télémétrie des économies | `engine: <engine id>`                                  | `engine: "context-editing"`                                                       |
 
-Les deux approches sont complémentaires : les moteurs locaux compressent les octets envoyés par OmniRoute ; l’édition de contexte permet à
+Les deux approches sont complémentaires : les moteurs locaux compressent les octets envoyés par 67router ; l’édition de contexte permet à
 Claude d’élaguer le contexte actif au fil des échanges. Elles peuvent être activées simultanément.
 
 ## Voir aussi

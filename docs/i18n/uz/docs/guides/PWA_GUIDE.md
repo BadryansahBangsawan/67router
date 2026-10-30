@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute toʻliq oʻrnatiladigan progressiv veb-ilova sifatida taqdim etiladi. Boshqaruv paneliga istalgan mobil brauzer — Android (Chrome) yoki iOS (Safari) — orqali kirganingizda, uni "Bosh ekranga qoʻshish" va ilovalar doʻkonisiz mahalliy ilovaga oʻxshash tajribaga ega boʻlishingiz mumkin.
+67router toʻliq oʻrnatiladigan progressiv veb-ilova sifatida taqdim etiladi. Boshqaruv paneliga istalgan mobil brauzer — Android (Chrome) yoki iOS (Safari) — orqali kirganingizda, uni "Bosh ekranga qoʻshish" va ilovalar doʻkonisiz mahalliy ilovaga oʻxshash tajribaga ega boʻlishingiz mumkin.
 
 ## PWA nima?
 
-Progressiv veb-ilova OmniRoute veb-boshqaruv panelini mahalliy mobil ilova kabi koʻrinadigan va ishlaydigan ilovaga aylantiradi. Oʻrnatilgandan soʻng u:
+Progressiv veb-ilova 67router veb-boshqaruv panelini mahalliy mobil ilova kabi koʻrinadigan va ishlaydigan ilovaga aylantiradi. Oʻrnatilgandan soʻng u:
 
 - Bosh ekrandan oʻz belgisi orqali ishga tushadi
 - Toʻliq ekran rejimida ochiladi — brauzerning manzil satri yoki varaqlar interfeysi boʻlmaydi
@@ -20,26 +20,26 @@ Progressiv veb-ilova OmniRoute veb-boshqaruv panelini mahalliy mobil ilova kabi 
 
 ### Android (Chrome)
 
-1. OmniRoute boshqaruv panelini Chrome brauzerida oching: `http://YOUR_IP:20128`
-2. Chrome avtomatik ravishda **"OmniRouteʼni bosh ekranga qoʻshish"** bannerini koʻrsatadi yoki:
+1. 67router boshqaruv panelini Chrome brauzerida oching: `http://YOUR_IP:20128`
+2. Chrome avtomatik ravishda **"67routerʼni bosh ekranga qoʻshish"** bannerini koʻrsatadi yoki:
    - **⋮** menyusini (uchta nuqta) bosing → **"Bosh ekranga qoʻshish"** yoki **"Ilovani oʻrnatish"**
 3. Soʻrovni tasdiqlang
-4. OmniRoute bosh ekraningizda mustaqil ilova sifatida paydo boʻladi
+4. 67router bosh ekraningizda mustaqil ilova sifatida paydo boʻladi
 
 ### iOS (Safari)
 
-1. OmniRoute boshqaruv panelini Safari brauzerida oching: `http://YOUR_IP:20128`
+1. 67router boshqaruv panelini Safari brauzerida oching: `http://YOUR_IP:20128`
 2. **Ulashish** tugmasini (oʻqli quti) bosing
 3. Pastga aylantiring va **"Bosh ekranga qoʻshish"** tugmasini bosing
-4. Unga nom bering (standart nomi "OmniRoute") va **Qoʻshish** tugmasini bosing
-5. OmniRoute ilova belgisi bilan bosh ekraningizda paydo boʻladi
+4. Unga nom bering (standart nomi "67router") va **Qoʻshish** tugmasini bosing
+5. 67router ilova belgisi bilan bosh ekraningizda paydo boʻladi
 
 ### Ish stoli (Chrome / Edge)
 
-1. OmniRoute boshqaruv panelini oching
-2. Manzil satridagi **oʻrnatish belgisini** bosing (yoki ⋮ → "OmniRouteʼni oʻrnatish...")
+1. 67router boshqaruv panelini oching
+2. Manzil satridagi **oʻrnatish belgisini** bosing (yoki ⋮ → "67routerʼni oʻrnatish...")
 3. Soʻrovni tasdiqlang
-4. OmniRoute mustaqil oynada ochiladi — varaqlar ham, manzil satri ham boʻlmaydi
+4. 67router mustaqil oynada ochiladi — varaqlar ham, manzil satri ham boʻlmaydi
 
 ## Imkoniyatlar
 
@@ -49,7 +49,7 @@ Manifest `display: "fullscreen"` parametri bilan sozlangan, yaʼni oʻrnatilgan 
 
 ### Oflayn rejimni qoʻllab-quvvatlash
 
-OmniRoute aqlli keshlashni taʼminlaydigan xizmat ishchisini (`sw.js`) oʻz ichiga oladi:
+67router aqlli keshlashni taʼminlaydigan xizmat ishchisini (`sw.js`) oʻz ichiga oladi:
 
 | Resurs turi                                                             | Strategiya                                | Xatti-harakat                                                                                                                     |
 | ----------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Tarmoq mavjud boʻlmaganda va foydalanuvchi yangi sahifaga oʻtganda, xizmat ish
 
 ### Ilova belgilari
 
-OmniRoute har bir platforma uchun optimallashtirilgan belgilarni taqdim etadi:
+67router har bir platforma uchun optimallashtirilgan belgilarni taqdim etadi:
 
 | Fayl                   | Oʻlcham            | Qayerda ishlatiladi                           |
 | ---------------------- | ------------------ | --------------------------------------------- |
@@ -94,8 +94,8 @@ Next.js tomonidan `src/app/manifest.ts` orqali yaratiladi:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Ildiz maket PWA talablariga muvofiqlik uchun zarur boʻlgan barcha meta teglarni
 
 ## Termux (Android) bilan foydalanish
 
-OmniRoute Android qurilmasida Termux orqali ishga tushirilganda, PWA muammosiz ishlaydi:
+67router Android qurilmasida Termux orqali ishga tushirilganda, PWA muammosiz ishlaydi:
 
-1. OmniRouteʼni Termuxʼda ishga tushiring: `npx omniroute`
+1. 67routerʼni Termuxʼda ishga tushiring: `npx omniroute`
 2. Shu telefonning oʻzida Chromeʼni oching: `http://localhost:20128`
 3. PWAʼni "Bosh ekranga qoʻshish" orqali oʻrnating
 4. PWA mahalliy Termux serveriga ulanadi — barcha jarayonlar qurilmaning oʻzida bajariladi
@@ -156,7 +156,7 @@ Bu kombinatsiya Android telefoningiz bir vaqtning oʻzida ham **server** (Termux
 
 ## Boshqa qurilmalardan foydalanish
 
-PWAʼni OmniRoute serveringizga brauzer orqali kira oladigan istalgan qurilmaga oʻrnating:
+PWAʼni 67router serveringizga brauzer orqali kira oladigan istalgan qurilmaga oʻrnating:
 
 - **Boshqa telefon/planshet**: `http://PHONE_IP:20128` manziliga oʻting va PWAʼni oʻrnating
 - **Noutbuk**: Chrome/Edgeʼni oching va uni ish stoli PWAʼsi sifatida oʻrnating

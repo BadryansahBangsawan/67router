@@ -6,7 +6,7 @@
 
 ## Muhtasari
 
-Amri za OmniRoute CLI huthibitisha utambulisho dhidi ya API ya usimamizi ya ndani kwa kutumia
+Amri za 67router CLI huthibitisha utambulisho dhidi ya API ya usimamizi ya ndani kwa kutumia
 tokeni ya `HMAC-SHA256(machine-id, salt)` inayotumwa kupitia kichwa cha ombi cha
 `x-omniroute-cli-token`.
 

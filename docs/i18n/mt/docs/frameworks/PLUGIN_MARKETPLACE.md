@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jiġi b'sistema ta' plugins fuq l-istil ta' WordPress. Il-plugins huma
+67router jiġi b'sistema ta' plugins fuq l-istil ta' WordPress. Il-plugins huma
 direttorji awtonomi — kull wieħed b'manifest `plugin.json` u fajl tad-dħul — li
 jintegraw mal-pipeline tat-talbiet (`onRequest` / `onResponse` / `onError`) u
 mal-avvenimenti taċ-ċiklu tal-ħajja (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -157,7 +157,7 @@ fl-iskema huma permessi.
 
 ### Direttorju tal-plugins
 
-Il-plugins jinsabu taħt id-direttorju tad-data ta’ OmniRoute:
+Il-plugins jinsabu taħt id-direttorju tad-data ta’ 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

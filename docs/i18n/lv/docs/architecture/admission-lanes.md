@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ir **divas** procesa lokālas plūsmu sistēmas ar atšķirīgu tvērumu. Tās ir
+67router ir **divas** procesa lokālas plūsmu sistēmas ar atšķirīgu tvērumu. Tās ir
 savstarpēji papildinošas; operatoriem jāzina, kuru no tām viņi aplūko.
 
 ## 1. Procesa mēroga pielaide baitu līmenī (`chatBodyAdmission.ts`)

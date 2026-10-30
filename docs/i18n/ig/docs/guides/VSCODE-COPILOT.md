@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** na-etinye model ọ bụla OmniRoute gị na-enye n’ime ihe nhọpụta model nke GitHub Copilot Chat nke bụ _native_. Enweghị sidebar nke abụọ, enweghị UI nkata dị iche — ọnọdụ agent nke Copilot, ịkpọ ngwaọrụ,
+**OmniCopilot** na-etinye model ọ bụla 67router gị na-enye n’ime ihe nhọpụta model nke GitHub Copilot Chat nke bụ _native_. Enweghị sidebar nke abụọ, enweghị UI nkata dị iche — ọnọdụ agent nke Copilot, ịkpọ ngwaọrụ,
 sava MCP na ntuziaka ahaziri iche niile ka na-arụ ọrụ, naanị na ha na-agba ọsọ na model ị họọrọ.
 
 |                            |                                                                                                                                                 |
@@ -22,13 +22,13 @@ sava MCP na ntuziaka ahaziri iche niile ka na-arụ ọrụ, naanị na ha na-ag
 
 ## Nhazi
 
-1. **Gbaa OmniRoute** — `npm install -g omniroute && omniroute` (dashboard dị na `http://localhost:20128`).
-2. **Wụnye extension ahụ** — chọọ "OmniRoute" na nlele Extensions.
-3. **Họrọ model** — Copilot Chat → ihe nhọpụta model → **Manage Models…** → **OmniRoute**, wee kaa
+1. **Gbaa 67router** — `npm install -g omniroute && omniroute` (dashboard dị na `http://localhost:20128`).
+2. **Wụnye extension ahụ** — chọọ "67router" na nlele Extensions.
+3. **Họrọ model** — Copilot Chat → ihe nhọpụta model → **Manage Models…** → **67router**, wee kaa
    ihe ndị ị chọrọ.
 
-Ọ dịghị ihe a ga-ahazi mgbe OmniRoute na-agba ọsọ na port ndabara. Maka instance dị anya, mepee
-**akara ngosi OmniRoute na Activity Bar** (ma ọ bụ gbaa `OmniRoute: Manage Connection`) ma tọọ:
+Ọ dịghị ihe a ga-ahazi mgbe 67router na-agba ọsọ na port ndabara. Maka instance dị anya, mepee
+**akara ngosi 67router na Activity Bar** (ma ọ bụ gbaa `67router: Manage Connection`) ma tọọ:
 
 - **URL sava** — mgbọrọgwụ sava ahụ, dịka `http://192.168.0.15:20128`. Extension ahụ na-agbakwunye
   suffix `/v1`; etinyela ya.
@@ -74,7 +74,7 @@ HTTP 400 — Model '<id>' bụ model na-emepụta image, enweghịkwa ike iji ya
 
 ya mere, a na-eji field `type` ha wepụ ha tupu ha erute n’ihe nhọpụta ahụ. **A na-edobe model
 Responses-API** — ndekọ Codex / GPT-5.x ọ bụla na-akpọsa `supported_endpoints: ["responses"]`,
-OmniRoute na-atụgharịkwa ndị ahụ maka `/v1/chat/completions`, ya mere enwere ike iji ha nke ọma.
+67router na-atụgharịkwa ndị ahụ maka `/v1/chat/completions`, ya mere enwere ike iji ha nke ọma.
 
 ### Provider ndị ị na-ahazibeghị
 
@@ -87,7 +87,7 @@ extension ahụ.
 
 ## Dashboard dị n'ime taabụ VS Code
 
-`omnicopilot.dashboardOpen: "editor"` na-egosipụta dashboard OmniRoute n'ime taabụ edita site na
+`omnicopilot.dashboardOpen: "editor"` na-egosipụta dashboard 67router n'ime taabụ edita site na
 Simple Browser kama iji ihe nchọgharị mpụga. Ịtinye ya n'ime edita bụ **nhọrọ a ga-agbanye na sava** site na
 `DASHBOARD_ALLOW_EMBED=vscode`, nke na-ewepụta ibe HTML nwere
 `frame-ancestors 'self' vscode-webview:` kama ndabara `frame-ancestors 'none'` +
@@ -120,7 +120,7 @@ Lee [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) na issue
 
 ## Ịhazigharị ngwaọrụ ndị ọzọ gị site n'ime VS Code
 
-**`OmniRoute: Configure Coding CLI`** na-eji `omniroute` CLI dee profaịlụ ndị dị njikere iji
+**`67router: Configure Coding CLI`** na-eji `omniroute` CLI dee profaịlụ ndị dị njikere iji
 maka Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo na Roo — otu configs ndị ahụ akọwara na
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). A na-enyefe API key ahụ n'aka CLI site na
@@ -130,20 +130,20 @@ mgbanwe gburugburu `OMNIROUTE_API_KEY`, ọ bụghị mgbe ọ bụla site n'ah�
 
 ## Nchọpụta na ndozi nsogbu
 
-| Ihe mgbaàmà                                              | Ihe kpatara ya / ndozi                                                                                                                                                                                                                               |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enweghị model OmniRoute n'ime picker                     | Enweghị ike ijikọ na sava. Ntụpọ dị na status bar ga-acha ntụ ntụ; mee `OmniRoute: Check Connection`. E mere discovery ka ọ ghara ikwu okwu, ọ naghịkwa etinye model ọ bụla kama ịjụ onye ọrụ.                                                       |
-| Model ọ bụla pụtara ugboro abụọ                          | Ị na-eji OmniCopilot nke tọrọ 1.0.1 — melite ya. Ugbu a extension ahụ na-arịọ `?prefix=alias`.                                                                                                                                                       |
-| E depụtaburu model image/audio ma ugbu a ọ pụọ           | E mere nke a n'ebumnuche kemgbe 1.0.1 — ọ nweghị mgbe ọ ga-enwe ike ịza arịrịọ chat.                                                                                                                                                                 |
-| Panel adịghị na Activity Bar                             | VS Code na-ebuga view container ndị ọzọ n'ime **"…"** overflow dị na ala Activity Bar, container ezokwara site na ịpị aka nri ga-anọgide na-ezo. Pịa Activity Bar aka nri → kaa **OmniRoute**, ma ọ bụ jiri `OmniRoute: Manage Connection` mepee ya. |
-| Dashboard na-emepe na browser n'agbanyeghị mode `editor` | E jighị `DASHBOARD_ALLOW_EMBED=vscode` **wuo** sava ahụ (lee n'elu) — ịtọ ya mgbe prebuilt install na-amalite agaghị agbanwe ihe ọ bụla. E kpachapụrụ anya mee fallback ahụ.                                                                         |
-| Ndepụta model agwụla oge mgbe agbanwechara providers     | `OmniRoute: Refresh Models`, ma ọ bụ link ↻ dị na panel ahụ.                                                                                                                                                                                         |
+| Ihe mgbaàmà                                              | Ihe kpatara ya / ndozi                                                                                                                                                                                                                             |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enweghị model 67router n'ime picker                      | Enweghị ike ijikọ na sava. Ntụpọ dị na status bar ga-acha ntụ ntụ; mee `67router: Check Connection`. E mere discovery ka ọ ghara ikwu okwu, ọ naghịkwa etinye model ọ bụla kama ịjụ onye ọrụ.                                                      |
+| Model ọ bụla pụtara ugboro abụọ                          | Ị na-eji OmniCopilot nke tọrọ 1.0.1 — melite ya. Ugbu a extension ahụ na-arịọ `?prefix=alias`.                                                                                                                                                     |
+| E depụtaburu model image/audio ma ugbu a ọ pụọ           | E mere nke a n'ebumnuche kemgbe 1.0.1 — ọ nweghị mgbe ọ ga-enwe ike ịza arịrịọ chat.                                                                                                                                                               |
+| Panel adịghị na Activity Bar                             | VS Code na-ebuga view container ndị ọzọ n'ime **"…"** overflow dị na ala Activity Bar, container ezokwara site na ịpị aka nri ga-anọgide na-ezo. Pịa Activity Bar aka nri → kaa **67router**, ma ọ bụ jiri `67router: Manage Connection` mepee ya. |
+| Dashboard na-emepe na browser n'agbanyeghị mode `editor` | E jighị `DASHBOARD_ALLOW_EMBED=vscode` **wuo** sava ahụ (lee n'elu) — ịtọ ya mgbe prebuilt install na-amalite agaghị agbanwe ihe ọ bụla. E kpachapụrụ anya mee fallback ahụ.                                                                       |
+| Ndepụta model agwụla oge mgbe agbanwechara providers     | `67router: Refresh Models`, ma ọ bụ link ↻ dị na panel ahụ.                                                                                                                                                                                        |
 
 ---
 
 ## Hụkwa
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — ngwa ide koodu ndị ọzọ niile
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ijikwa OmniRoute dị n'ebe dị anya
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ijikwa 67router dị n'ebe dị anya
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — nkwekọrịta `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — ndetu katalọgụ nke ndọtị ahụ n'onwe ya

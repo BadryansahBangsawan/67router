@@ -7,7 +7,7 @@
 > **Sanningskälla:** arbetsytan `electron/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute levereras med en plattformsoberoende skrivbordsapp (Windows / macOS / Linux) byggd med
+67router levereras med en plattformsoberoende skrivbordsapp (Windows / macOS / Linux) byggd med
 **Electron 41** + **electron-builder 26.10**. Skrivbordsappen startar den fristående Next.js-servern
 som en underordnad process, riktar ett `BrowserWindow`-fönster mot den och lägger till ett
 systemfält, automatiska uppdateringar, en IPC-brygga och konfigurationsfri initiering av hemligheter.
@@ -45,7 +45,7 @@ Bekräftat från `electron/package.json`:
 | `better-sqlite3`   | rot `^13.0.2` (förbyggda Node-API-paket — ingen Electron-ombyggnad) |
 | Appversion         | `3.8.0`                                                             |
 | App-id             | `online.omniroute.desktop`                                          |
-| Produktnamn        | `OmniRoute`                                                         |
+| Produktnamn        | `67router`                                                          |
 
 ## Skript (`package.json` i roten)
 
@@ -196,7 +196,7 @@ bör du använda `.env`-filen och sedan avsluta appen helt (meddelandefältet, *
 - `BrowserWindow`: 1400×900 (minst 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, fönsterknappar vid `{ x: 16, y: 16 }`.
 - Windows/Linux: inbyggd namnlist.
-- Stängningsknappen minimerar till meddelandefältet; dess meny innehåller **Öppna OmniRoute**, **Öppna instrumentpanelen** (extern webbläsare), undermenyn **Serverport**, **Sök efter uppdateringar**, **Avsluta**.
+- Stängningsknappen minimerar till meddelandefältet; dess meny innehåller **Öppna 67router**, **Öppna instrumentpanelen** (extern webbläsare), undermenyn **Serverport**, **Sök efter uppdateringar**, **Avsluta**.
 
 ## Säkerhetspolicy för innehåll
 

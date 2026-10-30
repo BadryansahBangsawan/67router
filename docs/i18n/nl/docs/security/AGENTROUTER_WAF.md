@@ -52,7 +52,7 @@ inactiviteit weer minder streng. Dit is dezelfde aan IP en sleutel gekoppelde ra
 incidentele `400 content-blocked`-fouten veroorzaakt wanneer Claude Code of Codex CLI
 meerdere tool-use-/message-send-aanroepen snel achter elkaar uitvoert.
 
-## Reeds toegepaste oplossingen in OmniRoute
+## Reeds toegepaste oplossingen in 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — een piekbeveiliging die een
    minimale tussenpauze van 500 ms afdwingt tussen uitgaande verzoeken naar elke `agentrouter:*`-

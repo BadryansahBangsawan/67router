@@ -6,7 +6,7 @@
 
 ## Sammendrag
 
-OmniRoute støtter nå tre relémoduser for `/api/v1/relay/chat/completions`:
+67router støtter nå tre relémoduser for `/api/v1/relay/chat/completions`:
 
 - `ts`: Bruk TypeScript-releet i samme prosess.
 - `bifrost`: Tving bruk av Bifrost-gatewayen.
@@ -45,12 +45,12 @@ Hvis du for øyeblikket sammenligner 9router/CLIPROXYAPI:
 
 ## Grensesnittkontrakt for backend
 
-Den stabile produktgrensen er OmniRoute-relé-API-et, ikke implementasjonen av kontrollpanelet. Next.js-kontrollpanelet kan installere, konfigurere og overvåke lokale tjenester, men forespørselsrutingen bør gå inn gjennom relé-API-et og overleveres bak denne grensen.
+Den stabile produktgrensen er 67router-relé-API-et, ikke implementasjonen av kontrollpanelet. Next.js-kontrollpanelet kan installere, konfigurere og overvåke lokale tjenester, men forespørselsrutingen bør gå inn gjennom relé-API-et og overleveres bak denne grensen.
 
 Langsiktige backend-valg:
 
 - Behold TypeScript-releet som policy- og reservebane i samme prosess. Autentisering, tillatelseslister, normalisering av forespørsler, regnskapsføring og sikkerhetskontroller forblir her før eventuell overlevering til en backend.
-- Bruk Bifrost som den foretrukne Tier-1-sidecaren for høy gjennomstrømning når distribusjonen trenger mindre variasjon i rutingen, sentralisert leverandørrotasjon eller horisontal skalering på tvers av flere OmniRoute-replikaer.
+- Bruk Bifrost som den foretrukne Tier-1-sidecaren for høy gjennomstrømning når distribusjonen trenger mindre variasjon i rutingen, sentralisert leverandørrotasjon eller horisontal skalering på tvers av flere 67router-replikaer.
 - Behold 9router og CLIPROXYAPI som innebygde kompatibilitetstjenester. De kjører som overvåkede lokale prosesser og er nyttige når deres leverandør-/CLI-atferd er den ønskede adapteren, men de bør ikke bli standard rutingsmotor for Tier-1.
 - Ikke la kontrollpanelet sende vilkårlige tjeneste-URL-er inn i den aktive banen. URL-er som oppgis via brukergrensesnittet, er konfigurasjonsverdier. Rutingskoden bør slå opp registrerte og helsekontrollerte backender fra innstillinger på serversiden og tilstanden til prosessovervåkingen.
 - Foretrekk loopback-HTTP for overvåkede tjenester i dag, fordi de administrerte prosessene allerede eksponerer HTTP-kompatible API-er, rutevakten kan revidere grensen, og feil-/tilbakefallsatferd er synlig i forespørselsloggene. En fremtidig SDK- eller socket-transport er bare verdt å legge til hvis den gir en målbar reduksjon i p99-latensen for ruting uten å svekke isolasjon eller tilbakefallssemantikk.

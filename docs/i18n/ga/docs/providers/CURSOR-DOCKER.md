@@ -4,7 +4,7 @@
 
 ---
 
-Nuair a ritheann OmniRoute taobh istigh de Docker, teipeann ar na sreafaí oidhreachta **Iompórtáil ó Cursor IDE** /
+Nuair a ritheann 67router taobh istigh de Docker, teipeann ar na sreafaí oidhreachta **Iompórtáil ó Cursor IDE** /
 `cursor-agent` toisc nach féidir leis an gcoimeádán suiteáil Cursor ar an óstach a fheiceáil.
 Úsáid **Logáil isteach le Cursor** (PKCE deep-control) ina ionad sin.
 
@@ -14,7 +14,7 @@ Nuair a ritheann OmniRoute taobh istigh de Docker, teipeann ar na sreafaí oidhr
    `~/.config/Cursor/User/globalStorage/state.vscdb` _taobh istigh_ den choimeádán.
    Ar Docker Desktop do macOS, ní ghléasáiltear bunachar sonraí an IDE óstaigh de réir réamhshocraithe, agus
    is Linux é córas oibriúcháin an choimeádáin fiú nuair is Darwin é an t-óstach.
-2. **Gan dénártha `cursor-agent`** — Ní chuimsíonn íomhánna oifigiúla OmniRoute
+2. **Gan dénártha `cursor-agent`** — Ní chuimsíonn íomhánna oifigiúla 67router
    `cursor-agent`. Roimhe seo, sheol Múnlaí ar Fáil
    `cursor-agent --list-models` trí bhlaosc agus d’úsáid sé catalóg statach mar chúltaca.
 3. **Dénártha mícheart** — Ná gléasáil `cursor-agent` macOS de cheangal isteach i gcoimeádán
@@ -24,11 +24,11 @@ Nuair a ritheann OmniRoute taobh istigh de Docker, teipeann ar na sreafaí oidhr
 
 1. Oscail **Deais → Soláthraithe → Cursor**.
 2. Roghnaigh an cluaisín **Logáil isteach le Cursor**.
-3. Cliceáil **Logáil isteach le Cursor** — osclaíonn OmniRoute
+3. Cliceáil **Logáil isteach le Cursor** — osclaíonn 67router
    `https://cursor.com/loginDeepControl?…` i mbrabhsálaí d’**óstach**.
-4. Ceadaigh an logáil isteach sa bhrabhsálaí, ansin fill ar an deais. Déanann OmniRoute
+4. Ceadaigh an logáil isteach sa bhrabhsálaí, ansin fill ar an deais. Déanann 67router
    vótaíocht ar `api2.cursor.sh/auth/poll` go dtí go dtagann na comharthaí.
-5. Stórálann OmniRoute comharthaí **rochtana + athnuachana** agus déanann sé iad a athnuachan trí
+5. Stórálann 67router comharthaí **rochtana + athnuachana** agus déanann sé iad a athnuachan trí
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Ní éilíonn an chonair seo Cursor IDE ná `cursor-agent` taobh istigh den choimeádán.
@@ -37,10 +37,10 @@ Ní éilíonn an chonair seo Cursor IDE ná `cursor-agent` taobh istigh den choi
 
 Le nasc atá logáilte isteach, tugann **Múnlaí ar Fáil / Uath-Shioncronú** tús áite do
 chatalóg HTTP `AiService/AvailableModels` Cursor agus comhartha iompróra an naisc á úsáid.
-Má theipeann air sin, baineann OmniRoute triail fós as `cursor-agent` an óstaigh (nuair atá sé ann), agus
+Má theipeann air sin, baineann 67router triail fós as `cursor-agent` an óstaigh (nuair atá sé ann), agus
 ansin as síol na clárlainne stataí.
 
-Nochtann OmniRoute **`auto`** sa chatalóg i gcónaí (taispeáint “Uathoibríoch”), chomh maith le
+Nochtann 67router **`auto`** sa chatalóg i gcónaí (taispeáint “Uathoibríoch”), chomh maith le
 modhanna ródaire ar stíl OpenCodex **`auto-cost`**, **`auto-balance`**, agus
 **`auto-intelligence`**. Ar an tsreang, mapáiltear iad seo go múnla `default` Cursor
 (le `optimization` ModelParameter do na trí leagan). Tabhair tús áite do
@@ -87,7 +87,7 @@ theastaíonn iompórtáil IDE amháin a thuilleadh).
 ## Sealanna folmha / úsáid ídithe
 
 Nuair a ghlacann Cursor le Rith ach nach bhfilleann sé téacs cúntóra ar bith (rud a tharlaíonn go minic nuair atá úsáid
-phréimhe ídithe), taispeánann OmniRoute **429** inghníomhaithe (leideanna cuóta) nó
+phréimhe ídithe), taispeánann 67router **429** inghníomhaithe (leideanna cuóta) nó
 **502** le treoir — ní hamháin “D’fhill an soláthraí inneachar folamh”. Aicmítear teipeanna
 sruthaithe amhail `not_found: AI Model Not Found` (fuinneog úsáide ídithe) mar
 **teorainn ráta Cursor / úsáid sáraithe** agus coinnítear an teachtaireacht sin tríd an
@@ -97,7 +97,7 @@ teorainneacha phlean Cursor.
 
 ## Leagan cliaint (gan chomhéadan grafach)
 
-Gan suiteáil áitiúil `cursor-agent`, réitíonn OmniRoute
+Gan suiteáil áitiúil `cursor-agent`, réitíonn 67router
 `x-cursor-client-version` trí env `CURSOR_AGENT_CLI_VERSION`, ansin trí scríobadh
 taisceáilte ar diosca de script suiteála Cursor, agus ansin trí aitheantas tógála seasta. Sáraigh é le
 `CURSOR_AGENT_CLI_VERSION` nuair is gá.

@@ -37,11 +37,11 @@ tunel və konnektor konfiqurasiya edildikdə sorğu dövrünə bağlı eyni yerl
 1. **ChatGPT Web (Codex)** provayderini açın və bağlantı əlavə edin.
 2. Tam ChatGPT Cookie başlığını, tunel ID-sini, icra mühiti açarını və fərdi konnektor
    adını daxil edin. Alətlərdən istifadə edə bilən yeni quraşdırmalarda adı dəqiq şəkildə
-   `OmniRoute Codex v2` olan yeni yaradılmış konnektordan istifadə edilməli, Authentication
+   `67router Codex v2` olan yeni yaradılmış konnektordan istifadə edilməli, Authentication
    None, Permissions isə Allow all actions olaraq təyin edilməlidir.
-3. Bağlantı yoxlamasını işə salın. OmniRoute brauzer əsaslı Temporary Chat açır və hesab
+3. Bağlantı yoxlamasını işə salın. 67router brauzer əsaslı Temporary Chat açır və hesab
    üçün Sol və Pro-nun əlçatan olub-olmadığını müəyyən edir.
-4. Bağlantını yadda saxlayın. OmniRoute daxil edilmiş kukini təsdiqlənmiş Playwright
+4. Bağlantını yadda saxlayın. 67router daxil edilmiş kukini təsdiqlənmiş Playwright
    saxlama vəziyyəti ilə əvəz edir və onu şifrələnmiş etimadnamə abstraksiyası vasitəsilə
    icra mühiti açarı ilə birlikdə saxlayır.
 
@@ -76,10 +76,10 @@ High-a qədər marşrutları, Pro imkanlı hesablar isə əlavə olaraq Extra Hi
 sabit arxa sistem modeli və əsaslandırma səy səviyyəsi var; ziddiyyətli açıq Responses səy səviyyəsi
 seçilmiş brauzer rejimini səssizcə dəyişdirmək əvəzinə qapalı şəkildə rədd edilir.
 
-Köhnə `Codex Native` və ya `OmniRoute Codex` konnektorunun adını dəyişməyin və onu təkrar istifadə etməyin. ChatGPT
+Köhnə `Codex Native` və ya `67router Codex` konnektorunun adını dəyişməyin və onu təkrar istifadə etməyin. ChatGPT
 açıq MCP müqaviləsini konnektorun identikliyinə əsasən keşləyir, yenilənmiş körpü isə
 yeni birbaşa sorğu dövrü tokeni müqaviləsindən istifadə edir. İcra mühiti bu köhnə identiklikləri rədd edir və
-yeni `OmniRoute Codex v2` konnektorunu tələb edir.
+yeni `67router Codex v2` konnektorunu tələb edir.
 
 ## Təhlükəsizlik modeli
 
@@ -92,12 +92,12 @@ yeni `OmniRoute Codex v2` konnektorunu tələb edir.
 
 ## Displeysiz VPS və Docker
 
-npm, systemd və PM2 quraşdırmalarında OmniRoute geniş yayılmış Chrome və Chromium yollarını aşkarlayır.
-Alternativ olaraq, `CHATGPT_WEB_CODEX_CHROME_PATH` təyin edin. İcra zamanı gedişlər məqsədli şəkildə qrafik interfeysli Chrome istifadə edir, çünki ChatGPT həqiqi başsız brauzer formasını rədd edir. Buna görə də displeysiz host OmniRoute-u özəl Xvfb displeyi ilə işlətməlidir; yalnız Chrome yolunu təyin etmək displey təmin etmir.
+npm, systemd və PM2 quraşdırmalarında 67router geniş yayılmış Chrome və Chromium yollarını aşkarlayır.
+Alternativ olaraq, `CHATGPT_WEB_CODEX_CHROME_PATH` təyin edin. İcra zamanı gedişlər məqsədli şəkildə qrafik interfeysli Chrome istifadə edir, çünki ChatGPT həqiqi başsız brauzer formasını rədd edir. Buna görə də displeysiz host 67router-u özəl Xvfb displeyi ilə işlətməlidir; yalnız Chrome yolunu təyin etmək displey təmin etmir.
 
-Docker `web` profili daxili Compose şəbəkəsində `chatgpt-web-codex-browser` xidmətini işə salır. Yardımçı konteyner Xvfb daxilində qrafik interfeysli Chrome-u işlədir, buna görə fiziki displey tələb olunmur. Onun CDP portu hostda yayımlanmır. Qorunan brauzer profili cildi OmniRoute məlumat cildindən ayrıdır və brauzer kifayət qədər paylaşılan yaddaş alır. Daxili CDP proksisi yalnız Compose şəbəkəsi daxilində `9223` portunu dinləyir; Chrome isə yardımçı konteynerdə geridönüş interfeysinə bağlı qalır.
+Docker `web` profili daxili Compose şəbəkəsində `chatgpt-web-codex-browser` xidmətini işə salır. Yardımçı konteyner Xvfb daxilində qrafik interfeysli Chrome-u işlədir, buna görə fiziki displey tələb olunmur. Onun CDP portu hostda yayımlanmır. Qorunan brauzer profili cildi 67router məlumat cildindən ayrıdır və brauzer kifayət qədər paylaşılan yaddaş alır. Daxili CDP proksisi yalnız Compose şəbəkəsi daxilində `9223` portunu dinləyir; Chrome isə yardımçı konteynerdə geridönüş interfeysinə bağlı qalır.
 
-`DATA_DIR` daxilindəki nəzarətçi icarəsi birdən çox OmniRoute prosesinin eyni tunel və broker vəziyyətinə sahib olmasının qarşısını alır. Ziddiyyət diaqnostika vasitəsi tərəfindən bildirilir.
+`DATA_DIR` daxilindəki nəzarətçi icarəsi birdən çox 67router prosesinin eyni tunel və broker vəziyyətinə sahib olmasının qarşısını alır. Ziddiyyət diaqnostika vasitəsi tərəfindən bildirilir.
 
 ## İnteraktiv bərpa
 

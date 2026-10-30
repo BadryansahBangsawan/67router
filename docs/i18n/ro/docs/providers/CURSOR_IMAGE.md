@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute expune **generarea de imagini** din planul Cursor la `POST /v1/images/generations` prin același ID de furnizor ca pentru chat: `cursor` (alias `cu`).
+67router expune **generarea de imagini** din planul Cursor la `POST /v1/images/generations` prin același ID de furnizor ca pentru chat: `cursor` (alias `cu`).
 
 | Câmp                 | Valoare                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute expune **generarea de imagini** din planul Cursor la `POST /v1/images/
 
 ## De ce Agent CLI
 
-Chatul Cursor din OmniRoute utilizează `agent.v1.AgentService/Run` (protobuf). Această cale **respinge** instrumentele client integrate (shell, write, …). Generarea de imagini este un instrument nativ Cursor executat de **CLI-ul `agent`** pentru licența respectivă. Prin urmare, handlerul de imagini pornește `agent` cu un prompt blocat și un spațiu de lucru temporar per solicitare (cu aceeași structură precum punțile comunitare pentru licențe), apoi returnează `b64_json` compatibil cu OpenAI.
+Chatul Cursor din 67router utilizează `agent.v1.AgentService/Run` (protobuf). Această cale **respinge** instrumentele client integrate (shell, write, …). Generarea de imagini este un instrument nativ Cursor executat de **CLI-ul `agent`** pentru licența respectivă. Prin urmare, handlerul de imagini pornește `agent` cu un prompt blocat și un spațiu de lucru temporar per solicitare (cu aceeași structură precum punțile comunitare pentru licențe), apoi returnează `b64_json` compatibil cu OpenAI.
 
 ## Restricție de acces (Regulile stricte #15 + #17)
 
@@ -35,7 +35,7 @@ pentru aceeași politică aplicată restului nivelului `LOCAL_ONLY`.
 
 `CURSOR_IMG_MAX_CONCURRENT` este aplicată printr-un contor/o coadă în memorie, limitată la
 instanța modulului Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Aceasta limitează corect pornirile concurente ale `agent` într-un singur proces OmniRoute, dar
+Aceasta limitează corect pornirile concurente ale `agent` într-un singur proces 67router, dar
 **nu** coordonează mai multe procese/instanțe care partajează aceeași licență Cursor
 (de exemplu, o implementare cu mai multe replici) — fiecare instanță își aplică propria limită
 independentă. Pentru o implementare cu o singură instanță (varianta implicită), această limită
@@ -46,7 +46,7 @@ direcționeze traficul de imagini Cursor către o singură instanță.
 ## Cerințe
 
 1. Un cont Cursor conectat în panoul de control (OAuth sau cheia API `crsr_…`).
-2. Binarul Cursor Agent disponibil procesului OmniRoute:
+2. Binarul Cursor Agent disponibil procesului 67router:
    - variabila de mediu `CURSOR_AGENT_BIN=/path/to/agent` sau
    - `~/.local/bin/agent` sau
    - `providerSpecificData.agentBin` în conexiunea Cursor.

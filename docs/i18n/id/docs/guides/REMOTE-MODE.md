@@ -4,7 +4,7 @@
 
 ---
 
-Jalankan CLI `omniroute` di laptop Anda sementara OmniRoute berjalan di tempat lain
+Jalankan CLI `omniroute` di laptop Anda sementara 67router berjalan di tempat lain
 (VPS, server rumahan, atau mesin lain di Tailnet Anda). Anda cukup masuk sekali dengan
 `omniroute connect`, dan sejak saat itu **setiap** perintah CLI akan menargetkan server
 jarak jauh tersebut — perintah yang sama, keluaran yang sama, hanya saja dijalankan terhadap server jarak jauh.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← menulis profil Codex lokal dari k
 ## Cara kerjanya
 
 ```
-laptop Anda                              OmniRoute jarak jauh (VPS)
+laptop Anda                              67router jarak jauh (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (kata sandi → token)      │
 │  konteks: vps      │ ───────────────►  │ membuat token akses dengan    │
@@ -107,14 +107,14 @@ menyetujui proses masuk**. Pada instalasi VPS jarak jauh, loopback tersebut bera
 server, bukan di komputer Anda, sehingga layar persetujuan **macet selamanya dan tidak pernah
 menghasilkan kode** — mekanisme cadangan standar "tempel URL callback" tidak memiliki apa pun
 untuk ditempelkan. (Ini merupakan batasan dari sisi Google: kondisi macet yang sama terjadi pada setiap proxy
-yang menggunakan klien desktop Antigravity bawaan, bukan hanya OmniRoute.)
+yang menggunakan klien desktop Antigravity bawaan, bukan hanya 67router.)
 
 Dasbor mendeteksi hal ini sebelum Anda terjebak: membuka **Providers → Antigravity →
 Connect** dari alamat non-localhost akan mengganti pemberitahuan umum "salin URL callback"
 dengan dua solusi di bawah ini, masing-masing dengan host dan port Anda yang sudah diisikan.
 (Alamat LAN juga termasuk — `192.168.x.x` bukan localhost dalam konteks callback ini.)
 
-Ada dua cara yang didukung untuk menghubungkan Antigravity ke OmniRoute jarak jauh.
+Ada dua cara yang didukung untuk menghubungkan Antigravity ke 67router jarak jauh.
 
 ### Opsi A — pembantu login lokal (direkomendasikan)
 
@@ -152,7 +152,7 @@ npx omniroute login antigravity --no-push
 
 Kemudian, di dasbor **jarak jauh**: **Providers → Antigravity → Connect**, lalu tempelkan
 blob `omniroute-cred-v1.…` ke kolom **Step 2** (kolom tersebut menerima URL
-callback maupun blob kredensial). OmniRoute akan mendekodenya, menjalankan proses onboarding Cloud Code
+callback maupun blob kredensial). 67router akan mendekodenya, menjalankan proses onboarding Cloud Code
 di sisi server, dan menyimpan koneksi.
 
 > Blob tersebut berisi refresh token — perlakukan seperti kata sandi. Pada jalur pengiriman, blob
@@ -194,7 +194,7 @@ khusus penyedia yang perlu diteruskan.
 ## Menghubungkan Codex / Grok pada instalasi jarak jauh (penyedia dengan loopback tetap)
 
 Codex, xAI (`xai-oauth`), dan Grok CLI (`grok-cli`) mendaftarkan `redirect_uri`
-loopback yang **tetap** pada aplikasi OAuth upstream mereka. OmniRoute tidak dapat
+loopback yang **tetap** pada aplikasi OAuth upstream mereka. 67router tidak dapat
 mengubahnya — penyedia selalu mengarahkan browser kembali ke alamat hardcode yang sama:
 
 | Penyedia    | Callback tetap yang menjadi tujuan pengalihan penyedia |
@@ -204,7 +204,7 @@ mengubahnya — penyedia selalu mengarahkan browser kembali ke alamat hardcode y
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                      |
 
 `localhost` di sana berarti **mesin yang menjalankan browser**, sedangkan server
-callback PKCE OmniRoute mendengarkan pada loopback **server**. Jika dasbor dibuka
+callback PKCE 67router mendengarkan pada loopback **server**. Jika dasbor dibuka
 melalui alamat LAN seperti `http://192.168.0.15:20128`, keduanya tidak akan pernah
 terhubung: kode otorisasi dikirimkan ke `localhost:1455` milik laptop Anda sendiri,
 tempat tidak ada layanan yang mendengarkan, dan penyedia menggagalkan proses masuk
@@ -224,7 +224,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Diperlukan dua penerusan, dan meneruskan hanya satu port tetap akan gagal:
 
 - **`20128`** (port dasbor) menjadikan origin sebagai localhost sebenarnya, yang
-  membuat OmniRoute memulai server callback PKCE — origin LAN tidak pernah
+  membuat 67router memulai server callback PKCE — origin LAN tidak pernah
   mencapai cabang tersebut.
 - **`1455`** (port callback tetap milik penyedia) adalah tujuan pengalihan browser;
   port tersebut harus ditunnelkan ke loopback server.
@@ -341,7 +341,7 @@ omniroute contexts current         # server aktif, status otentikasi, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

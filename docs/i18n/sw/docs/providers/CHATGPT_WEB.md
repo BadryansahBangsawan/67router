@@ -37,11 +37,11 @@ uwezo uleule wa zana ya ndani unaofungamanishwa na zamu wakati tunnel na kiungan
 
 1. Fungua mtoa huduma wa **ChatGPT Web (Codex)** na uongeze muunganisho.
 2. Bandika kichwa kamili cha ChatGPT Cookie, kitambulisho cha handaki, ufunguo wa wakati wa utekelezaji na jina maalum la kiunganishi. Misanidi mipya yenye uwezo wa kutumia zana lazima itumie kiunganishi kipya kilichoundwa chenye jina kamili
-   `OmniRoute Codex v2`, huku Authentication ikiwekwa kuwa None na Permissions ikiwekwa kuwa Allow all
+   `67router Codex v2`, huku Authentication ikiwekwa kuwa None na Permissions ikiwekwa kuwa Allow all
    actions.
-3. Tekeleza ukaguzi wa muunganisho. OmniRoute hufungua Temporary Chat inayotumia kivinjari na kubaini
+3. Tekeleza ukaguzi wa muunganisho. 67router hufungua Temporary Chat inayotumia kivinjari na kubaini
    ikiwa Sol na Pro zinapatikana kwa akaunti hiyo.
-4. Hifadhi muunganisho. OmniRoute hubadilisha kidakuzi kilichobandikwa na hali ya hifadhi ya
+4. Hifadhi muunganisho. 67router hubadilisha kidakuzi kilichobandikwa na hali ya hifadhi ya
    Playwright iliyothibitishwa na kuihifadhi pamoja na ufunguo wa wakati wa utekelezaji kupitia
    safu iliyosimbwa ya uondoaji wa maelezo ya utambulisho.
 
@@ -75,10 +75,10 @@ High, na akaunti zenye uwezo wa Pro pia hutoa Extra High na Pro. Kila route ina
 modeli ya backend na kiwango cha juhudi za reasoning zisizobadilika; juhudi ya Responses iliyobainishwa wazi inayokinzana
 hukataliwa badala ya kubadilisha kimyakimya modi iliyochaguliwa ya kivinjari.
 
-Usibadilishe jina wala kutumia tena kiunganishi cha zamani cha `Codex Native` au `OmniRoute Codex`. ChatGPT
+Usibadilishe jina wala kutumia tena kiunganishi cha zamani cha `Codex Native` au `67router Codex`. ChatGPT
 huhifadhi kwenye cache mkataba wa umma wa MCP kulingana na utambulisho wa kiunganishi, ilhali daraja lililosasishwa hutumia
 mkataba mpya wa moja kwa moja wa turn-token. Runtime hukataa vitambulisho hivyo vya zamani na huhitaji
-kiunganishi kipya cha `OmniRoute Codex v2`.
+kiunganishi kipya cha `67router Codex v2`.
 
 ## Muundo wa usalama
 
@@ -91,19 +91,19 @@ kiunganishi kipya cha `OmniRoute Codex v2`.
 
 ## VPS isiyo na skrini na Docker
 
-Kwa usakinishaji wa npm, systemd, na PM2, OmniRoute hutambua paths za kawaida za Chrome na Chromium.
+Kwa usakinishaji wa npm, systemd, na PM2, 67router hutambua paths za kawaida za Chrome na Chromium.
 Vinginevyo, weka `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime turns hutumia Chrome yenye kiolesura kimakusudi
 kwa sababu ChatGPT hukataa muundo halisi wa browser isiyo na kiolesura. Kwa hivyo, host isiyo na skrini lazima
-iendeshe OmniRoute kwa kutumia display ya faragha ya Xvfb; kuweka Chrome path pekee hakutoi display.
+iendeshe 67router kwa kutumia display ya faragha ya Xvfb; kuweka Chrome path pekee hakutoi display.
 
 Profile ya Docker ya `web` huanzisha `chatgpt-web-codex-browser` kwenye network ya ndani ya Compose.
 Sidecar huendesha Chrome yenye kiolesura ndani ya Xvfb, kwa hivyo display halisi haihitajiki. Port yake ya CDP
 haichapishwi kwenye host. Volume ya browser profile iliyolindwa ni tofauti na volume ya data ya
-OmniRoute, na browser hupewa shared memory ya kutosha. Proxy ya ndani ya CDP
+67router, na browser hupewa shared memory ya kutosha. Proxy ya ndani ya CDP
 husikiliza tu kwenye port `9223` ndani ya network ya Compose; Chrome hubaki imefungwa kwenye loopback katika
 sidecar.
 
-Supervisor lease chini ya `DATA_DIR` huzuia michakato mingi ya OmniRoute kumiliki
+Supervisor lease chini ya `DATA_DIR` huzuia michakato mingi ya 67router kumiliki
 tunnel na hali ileile ya broker. Mgongano huripotiwa na doctor.
 
 ## Urejeshaji shirikishi

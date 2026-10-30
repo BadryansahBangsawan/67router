@@ -7,7 +7,7 @@
 > **Nguồn chuẩn:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute bao gồm một lớp trò chơi hóa ưu tiên cục bộ, thưởng cho người dùng khi
+67router bao gồm một lớp trò chơi hóa ưu tiên cục bộ, thưởng cho người dùng khi
 tương tác với nền tảng — thực hiện yêu cầu, chuyển đổi nhà cung cấp, tạo
 combo, chia sẻ token và đóng góp cho cộng đồng. Toàn bộ trạng thái được lưu trong
 SQLite; việc liên kết với các máy chủ cộng đồng là tùy chọn tham gia và dựa trên cơ chế đẩy.
@@ -36,7 +36,7 @@ token, phần thưởng mời).
 | Bảng xếp hạng     | Phạm vi toàn cầu, hằng tuần, hằng tháng, chia sẻ token và đóng góp        |
 | Chia sẻ token     | Chuyển tín dụng giữa người dùng thông qua sổ cái bút toán kép             |
 | Mời & Đổi mã      | Mã giới thiệu được lưu trữ dưới dạng băm SHA-256                          |
-| Máy chủ cộng đồng | Liên kết với các phiên bản OmniRoute bên ngoài                            |
+| Máy chủ cộng đồng | Liên kết với các phiên bản 67router bên ngoài                             |
 | Chống gian lận    | Tính điểm phía máy chủ, giới hạn tốc độ, phát hiện bất thường bằng điểm z |
 
 ### Nguyên tắc thiết kế
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Các bảng cơ sở dữ liệu
 
-Tất cả các bảng nằm trong cơ sở dữ liệu SQLite chính của OmniRoute, được tạo bởi migration
+Tất cả các bảng nằm trong cơ sở dữ liệu SQLite chính của 67router, được tạo bởi migration
 `060_create_gamification.sql`. Chế độ ghi nhật ký WAL được kế thừa từ singleton
 `getDbInstance()` trong `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Tất cả các bảng nằm trong cơ sở dữ liệu SQLite chính của Omni
 
 ### Mô-đun miền: `src/lib/db/gamification.ts`
 
-Tuân theo mẫu OmniRoute tiêu chuẩn — nhập `getDbInstance()` từ
+Tuân theo mẫu 67router tiêu chuẩn — nhập `getDbInstance()` từ
 `core.ts`, xuất các hàm CRUD có kiểu. Không có SQL thô trong các trình xử lý tuyến.
 
 Các hàm chính:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Hành động         | XP  | Mô tả                                                      |
 | ----------------- | --- | ---------------------------------------------------------- |
-| `request`         | 1   | Cho mỗi yêu cầu API được định tuyến qua OmniRoute          |
+| `request`         | 1   | Cho mỗi yêu cầu API được định tuyến qua 67router           |
 | `provider_switch` | 5   | Chuyển sang một nhà cung cấp khác                          |
 | `model_switch`    | 3   | Chuyển sang một mô hình khác                               |
 | `combo_create`    | 10  | Tạo một combo mới                                          |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (duy nhất, được lập chỉ mục) |
 | `token_hash` | SHA-256(raw_token)                      |
 
-Token thô được trả về cho người dùng đúng một lần tại thời điểm tạo. OmniRoute
+Token thô được trả về cho người dùng đúng một lần tại thời điểm tạo. 67router
 không bao giờ lưu trữ hoặc hiển thị lại token đó — chỉ hàm băm được lưu giữ.
 
 ### Ngăn chặn tự giới thiệu
@@ -703,7 +703,7 @@ Quản trị viên có thể truy vấn toàn bộ dấu vết kiểm toán thô
 
 ## Các tuyến API
 
-Tất cả các tuyến đều tuân theo mẫu OmniRoute tiêu chuẩn:
+Tất cả các tuyến đều tuân theo mẫu 67router tiêu chuẩn:
 
 ```
 Tuyến → Kiểm tra sơ bộ CORS → Xác thực nội dung (Zod) → Xác thực (extractApiKey)

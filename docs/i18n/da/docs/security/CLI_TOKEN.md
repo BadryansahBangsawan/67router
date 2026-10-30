@@ -6,7 +6,7 @@
 
 ## Oversigt
 
-OmniRoute CLI-kommandoer godkendes mod den lokale administrations-API ved hjælp af et
+67router CLI-kommandoer godkendes mod den lokale administrations-API ved hjælp af et
 `HMAC-SHA256(machine-id, salt)`-token, der sendes via request-headeren
 `x-omniroute-cli-token`.
 

@@ -7,7 +7,7 @@
 > **Patiesības avots:** `electron/` darbvieta
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute ietver vairākplatformu darbvirsmas lietotni (Windows / macOS / Linux), kas veidota,
+67router ietver vairākplatformu darbvirsmas lietotni (Windows / macOS / Linux), kas veidota,
 izmantojot **Electron 41** un **electron-builder 26.10**. Darbvirsmas lietotne palaiž Next.js
 savrupserveri kā bērnprocesu, novirza uz to `BrowserWindow` un pievieno
 sistēmas tekni, automātisko atjauninātāju, IPC tiltu un bezkonfigurācijas noslēpumu inicializāciju.
@@ -45,7 +45,7 @@ Apstiprināts, izmantojot `electron/package.json`:
 | `better-sqlite3`   | saknes `^13.0.2` (Node-API priekšbūvējumi — Electron nav jāpārbūvē) |
 | Lietotnes versija  | `3.8.0`                                                             |
 | Lietotnes ID       | `online.omniroute.desktop`                                          |
-| Produkta nosaukums | `OmniRoute`                                                         |
+| Produkta nosaukums | `67router`                                                          |
 
 ## Skripti (saknes `package.json`)
 
@@ -196,7 +196,7 @@ ieteicams izmantot `.env` failu, pēc tam pilnībā aizvērt lietotni (sistēmas
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, loga vadības pogas atrodas `{ x: 16, y: 16 }`.
 - Windows/Linux: sistēmas virsrakstjosla.
-- Aizvēršanas poga minimizē lietotni sistēmas teknē; teknes izvēlnē ir **Atvērt OmniRoute**, **Atvērt informācijas paneli** (ārējā pārlūkprogrammā), apakšizvēlne **Servera ports**, **Pārbaudīt atjauninājumus**, **Iziet**.
+- Aizvēršanas poga minimizē lietotni sistēmas teknē; teknes izvēlnē ir **Atvērt 67router**, **Atvērt informācijas paneli** (ārējā pārlūkprogrammā), apakšizvēlne **Servera ports**, **Pārbaudīt atjauninājumus**, **Iziet**.
 
 ## Satura drošības politika
 

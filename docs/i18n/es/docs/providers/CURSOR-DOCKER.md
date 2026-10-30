@@ -4,7 +4,7 @@
 
 ---
 
-Cuando OmniRoute se ejecuta dentro de Docker, los flujos heredados **Importar desde Cursor IDE** /
+Cuando 67router se ejecuta dentro de Docker, los flujos heredados **Importar desde Cursor IDE** /
 `cursor-agent` fallan porque el contenedor no puede acceder a la instalación de Cursor
 del host. Utilice en su lugar **Iniciar sesión con Cursor** (PKCE de deep-control).
 
@@ -14,7 +14,7 @@ del host. Utilice en su lugar **Iniciar sesión con Cursor** (PKCE de deep-contr
    `~/.config/Cursor/User/globalStorage/state.vscdb` _dentro_ del contenedor.
    En Docker Desktop para macOS, la base de datos del IDE del host no se monta de forma predeterminada y
    el sistema operativo del contenedor es Linux incluso cuando el host es Darwin.
-2. **No existe el binario `cursor-agent`** — Las imágenes oficiales de OmniRoute no incluyen
+2. **No existe el binario `cursor-agent`** — Las imágenes oficiales de 67router no incluyen
    `cursor-agent`. Anteriormente, Modelos disponibles ejecutaba
    `cursor-agent --list-models` y, si fallaba, recurría a un catálogo estático.
 3. **Binario incorrecto** — **No** monte mediante bind mount un `cursor-agent` de macOS en un contenedor
@@ -24,11 +24,11 @@ del host. Utilice en su lugar **Iniciar sesión con Cursor** (PKCE de deep-contr
 
 1. Abra **Panel → Proveedores → Cursor**.
 2. Elija la pestaña **Iniciar sesión con Cursor**.
-3. Haga clic en **Iniciar sesión con Cursor** — OmniRoute abre
+3. Haga clic en **Iniciar sesión con Cursor** — 67router abre
    `https://cursor.com/loginDeepControl?…` en el navegador de su **host**.
-4. Apruebe el inicio de sesión en el navegador y vuelva al panel. OmniRoute
+4. Apruebe el inicio de sesión en el navegador y vuelva al panel. 67router
    consulta periódicamente `api2.cursor.sh/auth/poll` hasta que llegan los tokens.
-5. OmniRoute almacena los tokens de **acceso + actualización** y los actualiza mediante
+5. 67router almacena los tokens de **acceso + actualización** y los actualiza mediante
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Esta vía no requiere Cursor IDE ni `cursor-agent` dentro del contenedor.
@@ -37,10 +37,10 @@ Esta vía no requiere Cursor IDE ni `cursor-agent` dentro del contenedor.
 
 Con una conexión autenticada, **Modelos disponibles / Sincronización automática** da prioridad al
 catálogo HTTP `AiService/AvailableModels` de Cursor mediante el token bearer de la conexión.
-Si eso falla, OmniRoute sigue intentando usar el `cursor-agent` del host (cuando está presente) y, después,
+Si eso falla, 67router sigue intentando usar el `cursor-agent` del host (cuando está presente) y, después,
 el catálogo estático inicial.
 
-OmniRoute siempre expone **`auto`** en el catálogo (con el nombre visible “Auto”), además de
+67router siempre expone **`auto`** en el catálogo (con el nombre visible “Auto”), además de
 los modos de enrutamiento al estilo OpenCodex **`auto-cost`**, **`auto-balance`** y
 **`auto-intelligence`**. En la comunicación, estos se asignan al modelo `default` de Cursor
 (con un `optimization` ModelParameter para las tres variantes). Es preferible usar
@@ -87,7 +87,7 @@ por sí sola ya no es necesaria).
 ## Turnos vacíos / uso agotado
 
 Cuando Cursor acepta una ejecución, pero no devuelve texto del asistente (algo habitual cuando se ha agotado
-el uso premium), OmniRoute muestra un error **429** procesable (indicios de cuota) o
+el uso premium), 67router muestra un error **429** procesable (indicios de cuota) o
 un **502** con indicaciones, no simplemente “El proveedor devolvió contenido vacío”. Los fallos
 de streaming como `not_found: AI Model Not Found` (ventana de uso agotada) se
 clasifican como **límite de velocidad / uso excedido de Cursor** y conservan ese mensaje
@@ -97,7 +97,7 @@ los límites del plan de Cursor.
 
 ## Versión del cliente (sin interfaz)
 
-Sin una instalación local de `cursor-agent`, OmniRoute determina
+Sin una instalación local de `cursor-agent`, 67router determina
 `x-cursor-client-version` mediante la variable de entorno `CURSOR_AGENT_CLI_VERSION`, después mediante una extracción
 almacenada en caché en disco del script de instalación de Cursor y, por último, mediante un identificador de compilación fijado. Sobrescríbala con
 `CURSOR_AGENT_CLI_VERSION` cuando sea necesario.

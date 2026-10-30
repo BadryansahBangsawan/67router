@@ -7,7 +7,7 @@
 > **Fonte da verdade:** `src/lib/cloudAgent/` e `src/app/api/v1/agents/tasks/`
 > **Última atualização:** 2026-06-28 — v3.8.40 (atualização do frontmatter; 4 agentes, incluindo cursor-cloud)
 
-O OmniRoute orquestra agentes de programação de terceiros hospedados na nuvem (Codex Cloud, Cursor,
+O 67router orquestra agentes de programação de terceiros hospedados na nuvem (Codex Cloud, Cursor,
 Devin, Jules) como tarefas de longa duração. Cada agente é encapsulado por uma interface uniforme para que
 os clientes possam enviar um prompt + URL do repositório e receber resultados sem precisar lidar com
 APIs específicas de cada provedor.

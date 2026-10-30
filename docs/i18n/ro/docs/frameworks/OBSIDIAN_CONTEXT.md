@@ -13,7 +13,7 @@
 
 ## Ce este
 
-OmniRoute se conectează la un seif **Obsidian** ca **sursă de context** — o bază locală
+67router se conectează la un seif **Obsidian** ca **sursă de context** — o bază locală
 de cunoștințe Markdown pe care agenții o citesc și o modifică prin serverul MCP încorporat.
 Integrarea comunică cu pluginul comunitar **Obsidian Local REST API** care rulează în
 aplicația desktop, astfel încât agenții pot căuta notițe, citi/scrie/aplica modificări
@@ -76,7 +76,7 @@ Toate metodele necesită autentificare în panoul de control. `POST` respinge or
 ### Sincronizarea seifului prin WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` gestionează o sincronizare opțională a
-seifului bazată pe WebDAV (controlată de `src/lib/obsidianSync.ts`). Activarea acesteia direcționează OmniRoute către un
+seifului bazată pe WebDAV (controlată de `src/lib/obsidianSync.ts`). Activarea acesteia direcționează 67router către un
 director local al seifului și generează o pereche aleatorie de nume de utilizator/parolă WebDAV:
 
 ```bash
@@ -112,26 +112,26 @@ Cele patru instrumente `obsidian_sync_*` își păstrează comportamentul separa
 
 Definite în `open-sse/mcp-server/tools/obsidianTools.ts`. Tokenul/adresa URL de bază sunt determinate
 pentru fiecare apel (mai întâi cheia API, apoi configurația globală). Instrumentele care accesează **serverul de sincronizare**
-OmniRoute (cele patru instrumente `obsidian_sync_*`) necesită în plus tokenul de autentificare pentru sincronizare configurat
-în setările OmniRoute.
+67router (cele patru instrumente `obsidian_sync_*`) necesită în plus tokenul de autentificare pentru sincronizare configurat
+în setările 67router.
 
 ### Instrumente de citire (`read:obsidian`)
 
-| Instrument                   | Descriere                                                                                                                  |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Verifică dacă API-ul REST local este accesibil și autentificat.                                                            |
-| `obsidian_search_simple`     | Căutare în textul integral al conținutului notițelor; returnează fragmente cu căile fișierelor.                            |
-| `obsidian_search_structured` | Căutare folosind o expresie JSON Logic (filtre and/or/regex/path).                                                         |
-| `obsidian_read_note`         | Citește o notiță după calea relativă la seif; opțional, un anumit titlu/bloc/frontmatter.                                  |
-| `obsidian_list_vault`        | Listează fișierele și directoarele din seif (arbore de intrări).                                                           |
-| `obsidian_get_document_map`  | Obține structura titlurilor notiței sub forma unei mapări titluri → numere de linie.                                       |
-| `obsidian_get_note_metadata` | Obține frontmatter-ul, etichetele, linkurile și numărul de caractere/cuvinte fără conținutul integral.                     |
-| `obsidian_get_active_file`   | Obține calea și conținutul fișierului activ în prezent în Obsidian.                                                        |
-| `obsidian_get_periodic_note` | Obține notița periodică zilnică/săptămânală/lunară pentru o dată (astăzi, dacă este omisă).                                |
-| `obsidian_get_tags`          | Listează toate etichetele din seif împreună cu frecvențele lor.                                                            |
-| `obsidian_list_commands`     | Listează ID-urile comenzilor Obsidian disponibile (de utilizat cu `obsidian_execute_command`).                             |
-| `obsidian_sync_status`       | Starea serverului de sincronizare OmniRoute: rulează, numele seifului, portul, durata de funcționare, ultima sincronizare. |
-| `obsidian_sync_conflicts`    | Listează conflictele de sincronizare nerezolvate (cale, calea conflictului, momentul detectării).                          |
+| Instrument                   | Descriere                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Verifică dacă API-ul REST local este accesibil și autentificat.                                                           |
+| `obsidian_search_simple`     | Căutare în textul integral al conținutului notițelor; returnează fragmente cu căile fișierelor.                           |
+| `obsidian_search_structured` | Căutare folosind o expresie JSON Logic (filtre and/or/regex/path).                                                        |
+| `obsidian_read_note`         | Citește o notiță după calea relativă la seif; opțional, un anumit titlu/bloc/frontmatter.                                 |
+| `obsidian_list_vault`        | Listează fișierele și directoarele din seif (arbore de intrări).                                                          |
+| `obsidian_get_document_map`  | Obține structura titlurilor notiței sub forma unei mapări titluri → numere de linie.                                      |
+| `obsidian_get_note_metadata` | Obține frontmatter-ul, etichetele, linkurile și numărul de caractere/cuvinte fără conținutul integral.                    |
+| `obsidian_get_active_file`   | Obține calea și conținutul fișierului activ în prezent în Obsidian.                                                       |
+| `obsidian_get_periodic_note` | Obține notița periodică zilnică/săptămânală/lunară pentru o dată (astăzi, dacă este omisă).                               |
+| `obsidian_get_tags`          | Listează toate etichetele din seif împreună cu frecvențele lor.                                                           |
+| `obsidian_list_commands`     | Listează ID-urile comenzilor Obsidian disponibile (de utilizat cu `obsidian_execute_command`).                            |
+| `obsidian_sync_status`       | Starea serverului de sincronizare 67router: rulează, numele seifului, portul, durata de funcționare, ultima sincronizare. |
+| `obsidian_sync_conflicts`    | Listează conflictele de sincronizare nerezolvate (cale, calea conflictului, momentul detectării).                         |
 
 ### Instrumente de scriere (`write:obsidian`)
 

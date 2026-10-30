@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (සිංහල)
+# 📖 Setup Guide — 67router (සිංහල)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute සඳහා සම්පූර්ණ පිහිටුවීම් යොමුව. ඉක්මන් අනුවාදය සඳහා, [README හි ඉක්මන් ආරම්භය](../README.md#-quick-start) බලන්න.
+> 67router සඳහා සම්පූර්ණ පිහිටුවීම් යොමුව. ඉක්මන් අනුවාදය සඳහා, [README හි ඉක්මන් ආරම්භය](../README.md#-quick-start) බලන්න.
 
 ## පටුන
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR පැකේජය](https://aur.archlinux.org/packages/omniroute-bin) OmniRoute ස්ථාපනය කර systemd පරිශීලක සේවාවක් සපයයි.
+[AUR පැකේජය](https://aur.archlinux.org/packages/omniroute-bin) 67router ස්ථාපනය කර systemd පරිශීලක සේවාවක් සපයයි.
 
 ### මූලාශ්රයෙන්
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows සටහන:** පැරණි `%USERPROFILE%\.omniroute` නාමාවලිය නොමැති විට, පෙරනිමියෙන් OmniRoute `%APPDATA%\omniroute` භාවිත කරයි. වෙනත් දත්ත-නාමාවලි ස්ථානයක් තෝරා ගැනීමට `DATA_DIR` සකසන්න.
+> **Windows සටහන:** පැරණි `%USERPROFILE%\.omniroute` නාමාවලිය නොමැති විට, පෙරනිමියෙන් 67router `%APPDATA%\omniroute` භාවිත කරයි. වෙනත් දත්ත-නාමාවලි ස්ථානයක් තෝරා ගැනීමට `DATA_DIR` සකසන්න.
 
 > **සටහන:** පළමු ධාවනයේදී `npm install` විසින් `.env.example` වෙතින් `.env` ස්වයංක්රීයව ජනනය කරයි. පසුව සිදුකරන ස්ථාපන පවතින `.env` ගොනුවක් උඩින් නොලියන බැවින් අභිරුචිකරණ සුරැකේ. නැවත ආරම්භක අගයන් යෙදීමට, නැවත ධාවනය කිරීමට පෙර `.env` මකන්න.
 
@@ -64,7 +64,7 @@ Compose පැතිකඩ සහ Caddy HTTPS ඇතුළු සම්පූර
 
 ### ඩෙස්ක්ටොප් යෙදුම (Electron)
 
-OmniRoute සමඟ Electron 41 + electron-builder 26.10 මත ගොඩනඟන ලද ඩෙස්ක්ටොප් ආවරණයක් නිකුත් කෙරේ. ලබාගත හැකි ස්ක්රිප්ට් (වැඩබිමේ මූලය):
+67router සමඟ Electron 41 + electron-builder 26.10 මත ගොඩනඟන ලද ඩෙස්ක්ටොප් ආවරණයක් නිකුත් කෙරේ. ලබාගත හැකි ස්ක්රිප්ට් (වැඩබිමේ මූලය):
 
 ```bash
 npm run electron:dev          # උණුසුම්-නැවත පූරණය සමඟ ඩෙස්ක්ටොප් එක ධාවනය කරන්න
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-පරිසර විචල්ය (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, ආදිය) සමඟ ඒකාබද්ධ කළ විට, මෙය සම්පූර්ණයෙන්ම ස්ක්රිප්ට් කළ හැකි OmniRoute අවස්ථාවක් ක්රියාත්මක කිරීමට ඔබට ඉඩ දෙයි.
+පරිසර විචල්ය (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, ආදිය) සමඟ ඒකාබද්ධ කළ විට, මෙය සම්පූර්ණයෙන්ම ස්ක්රිප්ට් කළ හැකි 67router අවස්ථාවක් ක්රියාත්මක කිරීමට ඔබට ඉඩ දෙයි.
 
 ### CLI විකල්ප
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI මෙවලම් වින්යාසය — වින්යාස ලැයිස්තුගත කරන්න, ලබාගන්න, සකසන්න සහ වලංගු කරන්න                                 |
 | `omniroute status`      | නොබැඳි තත්ත්ව උපකරණ පුවරුව — අනුවාදය, DB, මෙවලම්, වින්යාසය                                                     |
 | `omniroute logs`        | API වෙතින් භාවිත ලොග් ප්රවාහ කරන්න (`--follow` සඳහා සහාය දක්වයි)                                               |
-| `omniroute update`      | OmniRoute යාවත්කාලීන පරීක්ෂා කරන්න හෝ යොදන්න                                                                   |
+| `omniroute update`      | 67router යාවත්කාලීන පරීක්ෂා කරන්න හෝ යොදන්න                                                                    |
 | `omniroute provider`    | සැපයුම්කරු සම්බන්ධතා කළමනාකරණය කරන්න — එක් කරන්න, ලැයිස්තුගත කරන්න, ඉවත් කරන්න, පරීක්ෂා කරන්න, පෙරනිමිය සකසන්න |
 | `omniroute --port 3000` | ප්රධාන/API පෝට් එක 3000 ලෙස සකසන්න                                                                             |
 | `omniroute --mcp`       | MCP සේවාදායකය ආරම්භ කරන්න (stdio ප්රවාහනය)                                                                     |
@@ -166,7 +166,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode සහ OpenAI-අන�
 #### `setup-*` සමඟ ස්වයංක්රීයව වින්යාස කරන්න
 
 මූලික URL එක සහ යතුර අතින් ඇලවීම වෙනුවට, සජීවී මාදිලි නාමාවලියෙන් එක් එක් මෙවලමෙහි
-ස්වකීය වින්යාසය ලිවීමට OmniRoute හට ඉඩ දෙන්න. එක් මෙවලමකට එක් විධානයක්:
+ස්වකීය වින්යාසය ලිවීමට 67router හට ඉඩ දෙන්න. එක් මෙවලමකට එක් විධානයක්:
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml පැතිකඩ
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-දේශීය මෙවලමක් **දුරස්ථ** OmniRoute එකකට එරෙහිව වින්යාස කිරීම සඳහා සෑම විධානයක්ම `--remote <url> --api-key <key>` පිළිගන්නා අතර, පෙරදසුනක් සඳහා `--dry-run` ද පිළිගනී. නිවැරදි
+දේශීය මෙවලමක් **දුරස්ථ** 67router එකකට එරෙහිව වින්යාස කිරීම සඳහා සෑම විධානයක්ම `--remote <url> --api-key <key>` පිළිගන්නා අතර, පෙරදසුනක් සඳහා `--dry-run` ද පිළිගනී. නිවැරදි
 පරිසර විචල්ය ඇතුළත් කර, කිසිදු වින්යාසයක් නොලියා CLI එකක් දියත් කිරීමට, සාමාන්ය දියත්කය වන
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) භාවිත කරන්න;
 පැරණි, එක් එක් මෙවලමට වෙන්වූ `omniroute launch` (Claude Code) සහ
@@ -276,15 +276,15 @@ curl -X POST http://localhost:20128/a2a \
 | විචල්යය                  | පෙරනිමිය                            | අරමුණ                                                                                                                                                            |
 | ------------------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                            | upstream ප්රතිචාරය ආරම්භ වීමේ කල් ඉකුත්වීම, සැඟවුණු Undici කල් ඉකුත්වීම්, TLS fingerprint ඉල්ලීම් සහ API bridge ඉල්ලීම්/proxy කල් ඉකුත්වීම් සඳහා හවුල් මූලික අගය |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` වෙතින් උරුම වේ | OmniRoute විසින් SSE stream එක නවතා දැමීමට පෙර streaming chunk අතර උපරිම කාල පරතරය                                                                               |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` වෙතින් උරුම වේ | 67router විසින් SSE stream එක නවතා දැමීමට පෙර streaming chunk අතර උපරිම කාල පරතරය                                                                                |
 
 පසුගාමී අනුකූලතාව සුරැකේ: පවතින `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` සහ අනෙකුත් එක් එක් ස්තරයට අදාළ කල් ඉකුත්වීමේ විචල්ය තවමත් ක්රියා කරන අතර හවුල් මූලික අගය අභිබවා යයි.
 
 ### සැපයුම්කරුට විශේෂිත සටහන්
 
-Claude Code-අනුකූල upstream (`anthropic-compatible-cc-*`) සඳහා, සැපයුම්කරුගේ පැත්තේ කියවීම් කල් ඉකුත්වීම් ඔබගේ env වින්යාසය සමඟ සමපාතව තබා ගැනීමට OmniRoute විසින් නිරාකරණය කළ fetch කල් ඉකුත්වීමෙන් පිටතට යවන `X-Stainless-Timeout` header එක ව්යුත්පන්න කරයි.
+Claude Code-අනුකූල upstream (`anthropic-compatible-cc-*`) සඳහා, සැපයුම්කරුගේ පැත්තේ කියවීම් කල් ඉකුත්වීම් ඔබගේ env වින්යාසය සමඟ සමපාතව තබා ගැනීමට 67router විසින් නිරාකරණය කළ fetch කල් ඉකුත්වීමෙන් පිටතට යවන `X-Stainless-Timeout` header එක ව්යුත්පන්න කරයි.
 
-තෙවන පාර්ශ්වීය Claude Code-අනුකූල reverse proxy සඳහා, OmniRoute පෙරනිමි `anthropic-beta` කට්ටලය සීමාකාරීව තබා ගන්නා අතර, `Client Cache Control` සැකසුම `Auto` ලෙස තබා ඇති විට, client විසින් සපයන ලද `cache_control` සලකුණු පමණක් ඉදිරියට යවයි. upstream එකට සංස්කරණය කළ Claude thinking stream විශේෂයෙන් අවශ්ය වන විට පමණක් එක් එක් සම්බන්ධතාවට අදාළ "Enable redact-thinking beta" ටොගලය සක්රීය කරන්න.
+තෙවන පාර්ශ්වීය Claude Code-අනුකූල reverse proxy සඳහා, 67router පෙරනිමි `anthropic-beta` කට්ටලය සීමාකාරීව තබා ගන්නා අතර, `Client Cache Control` සැකසුම `Auto` ලෙස තබා ඇති විට, client විසින් සපයන ලද `cache_control` සලකුණු පමණක් ඉදිරියට යවයි. upstream එකට සංස්කරණය කළ Claude thinking stream විශේෂයෙන් අවශ්ය වන විට පමණක් එක් එක් සම්බන්ධතාවට අදාළ "Enable redact-thinking beta" ටොගලය සක්රීය කරන්න.
 
 ### උසස් කල් ඉකුත්වීම් අතික්රමණ
 
@@ -302,11 +302,11 @@ Claude Code-අනුකූල upstream (`anthropic-compatible-cc-*`) සඳහ�
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                          | API bridge server එකේ keep-alive කල් ඉකුත්වීම                                   |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                             | API bridge server එකේ socket අක්රීයතා කල් ඉකුත්වීම (`0` එය අක්රීය කරයි)         |
 
-> **සටහන:** streaming ඉල්ලීම් සඳහා, `FETCH_TIMEOUT_MS` ආවරණය කරන්නේ සම්බන්ධතාව පිහිටුවීම / පළමු upstream ප්රතිචාරය සඳහා රැඳී සිටීම පමණි. stream එක සක්රීය වූ පසු, OmniRoute එය නවතා දමන්නේ සැබෑ අවහිරතාවක් (`STREAM_IDLE_TIMEOUT_MS`) හෝ Undici body අක්රීයතාවක් (`FETCH_BODY_TIMEOUT_MS`) ඇති වූ විට පමණි.
+> **සටහන:** streaming ඉල්ලීම් සඳහා, `FETCH_TIMEOUT_MS` ආවරණය කරන්නේ සම්බන්ධතාව පිහිටුවීම / පළමු upstream ප්රතිචාරය සඳහා රැඳී සිටීම පමණි. stream එක සක්රීය වූ පසු, 67router එය නවතා දමන්නේ සැබෑ අවහිරතාවක් (`STREAM_IDLE_TIMEOUT_MS`) හෝ Undici body අක්රීයතාවක් (`FETCH_BODY_TIMEOUT_MS`) ඇති වූ විට පමණි.
 
 ### Reverse Proxy අනුකූලතාව
 
-ඔබ OmniRoute, Nginx, Caddy, Cloudflare හෝ වෙනත් reverse proxy එකක් පිටුපස ධාවනය කරන්නේ නම්, proxy කල් ඉකුත්වීම්ද ඔබගේ OmniRoute stream/fetch කල් ඉකුත්වීම්වලට වඩා වැඩි බව තහවුරු කර ගන්න.
+ඔබ 67router, Nginx, Caddy, Cloudflare හෝ වෙනත් reverse proxy එකක් පිටුපස ධාවනය කරන්නේ නම්, proxy කල් ඉකුත්වීම්ද ඔබගේ 67router stream/fetch කල් ඉකුත්වීම්වලට වඩා වැඩි බව තහවුරු කර ගන්න.
 
 ---
 

@@ -31,7 +31,7 @@
 `filterPaidOnlyCandidates` の直後）：
 
 1. **`FREE_MODEL_BUDGETS` にまったく含まれていない** → 除外されます。これには、実際に有料のモデルと、
-   OmniRoute がまだ分類していないプロバイダー／モデルが含まれます。新しい候補は、包含ではなく除外された状態から始まります。
+   67router がまだ分類していないプロバイダー／モデルが含まれます。新しい候補は、包含ではなく除外された状態から始まります。
 2. **`freeType: "keyless"`** → 即座に通過しますが、**実際に認証なしの経路を通じて追加された候補に限ります**
    （`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`、
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`）。その候補には認証情報が存在しないため、
@@ -79,7 +79,7 @@ STRICT_ZERO_COST は、その許可リスト内にある**各接続の無料ア�
 `tests/unit/autoCombo/strict-zero-cost-connection-safety.test.ts` を参照してください
 （キーレスバイパスのケース A/B/C、複数アカウントのケース 1～5）。
 
-`discovered automatically`：適切なメタデータを備えたプロバイダー／モデル（カタログに登録され、usage adapter があり、`hardStopGuaranteed: true` であるもの）が明日追加された場合、OmniRoute がそれを認識した時点で利用可能になります。コード変更も、許可リストへの追加も、このモジュール内の編集も必要ありません。カタログから削除されたものも、同様に利用対象から消えます。回帰テストによる証明については、
+`discovered automatically`：適切なメタデータを備えたプロバイダー／モデル（カタログに登録され、usage adapter があり、`hardStopGuaranteed: true` であるもの）が明日追加された場合、67router がそれを認識した時点で利用可能になります。コード変更も、許可リストへの追加も、このモジュール内の編集も必要ありません。カタログから削除されたものも、同様に利用対象から消えます。回帰テストによる証明については、
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` を参照してください（実際のカタログを変更するのではなく、注入可能なフィクスチャを使用）。
 
 ## クォータのキャッシュ（`open-sse/services/autoCombo/freeAccessQuota.ts`）

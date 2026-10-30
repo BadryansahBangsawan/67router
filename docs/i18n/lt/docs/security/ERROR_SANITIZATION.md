@@ -211,7 +211,7 @@ modifikavimas po kūrimo funkcijos apeina viešąją projekciją.
 3. Gylio riba: gilesnis nei 4 lygių įdėjimas pakeičiamas eilute `"[truncated]"`.
 4. Masyvai apribojami iki 32 elementų.
 
-`upstreamDetails` turėtų perduoti tik tos iškvietimo vietos, kurios turi išanalizuotą teikėjo klaidos kūną. Vidinėse OmniRoute
+`upstreamDetails` turėtų perduoti tik tos iškvietimo vietos, kurios turi išanalizuotą teikėjo klaidos kūną. Vidinėse 67router
 klaidose (SSE analizės triktyse, tuščiame turinyje, apsauginių ribojimų blokuose) jo neturi būti.
 
 NEPERDUOKITE neapdorotų `err.stack`, `err.message` ar bet kokių eilučių iš vykdymo aplinkos išimties į
@@ -222,7 +222,7 @@ Atrankinis aukštesniojo serverio 4xx atsakymų perdavimas išsaugo saugią teik
 automatiniam kliento atkūrimui, tačiau tai nėra baitas į baitą identiškas perdavimas: rekursinis valymas visada atliekamas
 prieš serializavimą. Ciklinių, BigInt turinčių arba priešiškų `toJSON()` kūnų apdorojimas saugiai nutraukiamas, todėl jie
 negali būti perduodami. OCR ir moderavimui taikoma ta pati taisyklė; ne JSON, tušti arba neteisingai pažymėti
-aukštesniojo serverio kūnai konvertuojami į kanoninį OmniRoute JSON klaidos apvalkalą.
+aukštesniojo serverio kūnai konvertuojami į kanoninį 67router JSON klaidos apvalkalą.
 
 ## Žinomas CodeQL apribojimas: pasirinktiniai sanitarizatoriai neatpažįstami
 

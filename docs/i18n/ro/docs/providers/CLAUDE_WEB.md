@@ -111,7 +111,7 @@ Cazurile care depind de Playwright din `tests/unit/claude-web-auto-refresh.test.
 
 ### Configurare
 
-1. Porniți OmniRoute cu `npm run dev` sau dintr-o instalare compilată.
+1. Porniți 67router cu `npm run dev` sau dintr-o instalare compilată.
 2. Deschideți Dashboard → Providers → Add Provider.
 3. Selectați categoria Web Cookie și Claude Web.
 4. Lipiți antetul Cookie complet, copiat dintr-o cerere `claude.ai` autentificată.

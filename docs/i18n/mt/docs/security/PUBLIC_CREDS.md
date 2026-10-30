@@ -15,7 +15,7 @@
 - [OAuth 2.0 għal apps nattivi (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret għal apps installati huma pubbliċi; PKCE jipprovdi s-sigurtà effettiva.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — L-identifikaturi tal-klijent Web huma pubbliċi skont id-disinn.
 
-OmniRoute għandu jinkorpora dawn il-valuri sabiex l-utenti li ma jikkonfigurawx `.env` xorta jkollhom fluss OAuth li jaħdem minnufih. Mingħajr fallback inkorporat, il-fornituri Gemini / Antigravity jieqfu jaħdmu għal kull utent li jsegwi l-metodu "sempliċement ikklona u ħaddem".
+67router għandu jinkorpora dawn il-valuri sabiex l-utenti li ma jikkonfigurawx `.env` xorta jkollhom fluss OAuth li jaħdem minnufih. Mingħajr fallback inkorporat, il-fornituri Gemini / Antigravity jieqfu jaħdmu għal kull utent li jsegwi l-metodu "sempliċement ikklona u ħaddem".
 
 Madankollu, valuri litterali bħal `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` jiġu identifikati minn **GitHub Secret Scanning**, **Semgrep**, u skeners simili bbażati fuq mudelli. Kull rilaxx isir sensiela storbjuża ta’ pożittivi foloz, il-protezzjoni tal-push timblokka commits leġittimi, u l-operaturi jieqfu jafdaw il-fluss tat-twissijiet.
 

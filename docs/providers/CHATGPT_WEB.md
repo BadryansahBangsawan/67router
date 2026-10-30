@@ -41,11 +41,11 @@ same turn-bound local tool capability when the tunnel and connector are configur
 1. Open the **ChatGPT Web (Codex)** provider and add a connection.
 2. Paste the full ChatGPT Cookie header, tunnel ID, runtime key, and custom connector
    name. New tool-capable setups must use a newly created connector named exactly
-   `OmniRoute Codex v2`, with Authentication set to None and Permissions set to Allow all
+   `67router Codex v2`, with Authentication set to None and Permissions set to Allow all
    actions.
-3. Run the connection check. OmniRoute opens a browser-backed Temporary Chat and detects
+3. Run the connection check. 67router opens a browser-backed Temporary Chat and detects
    whether Sol and Pro are available for the account.
-4. Save the connection. OmniRoute replaces the pasted cookie with the verified
+4. Save the connection. 67router replaces the pasted cookie with the verified
    Playwright storage state and stores it with the runtime key through the encrypted
    credential abstraction.
 
@@ -79,10 +79,10 @@ High, and Pro-capable accounts additionally expose Extra High and Pro. Each rout
 fixed backend model and reasoning effort; a conflicting explicit Responses effort fails
 closed instead of silently changing the selected browser mode.
 
-Do not rename or reuse an older `Codex Native` or `OmniRoute Codex` connector. ChatGPT
+Do not rename or reuse an older `Codex Native` or `67router Codex` connector. ChatGPT
 caches the public MCP contract by connector identity, while the refreshed bridge uses a
 new direct turn-token contract. The runtime rejects those legacy identities and requires
-a new `OmniRoute Codex v2` connector.
+a new `67router Codex v2` connector.
 
 ## Security model
 
@@ -102,19 +102,19 @@ a new `OmniRoute Codex v2` connector.
 
 ## Displayless VPS and Docker
 
-For npm, systemd, and PM2 installs, OmniRoute detects common Chrome and Chromium paths.
+For npm, systemd, and PM2 installs, 67router detects common Chrome and Chromium paths.
 Alternatively, set `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime turns deliberately use headed
 Chrome because ChatGPT rejects the true-headless browser shape. A displayless host must therefore
-run OmniRoute with a private Xvfb display; setting the Chrome path alone does not provide one.
+run 67router with a private Xvfb display; setting the Chrome path alone does not provide one.
 
 The Docker `web` profile starts `chatgpt-web-codex-browser` on the internal Compose
 network. The sidecar runs headed Chrome inside Xvfb, so no physical display is required. Its CDP
 port is not published on the host. The protected browser profile volume is separate from the
-OmniRoute data volume, and the browser receives enough shared memory. The internal CDP proxy
+67router data volume, and the browser receives enough shared memory. The internal CDP proxy
 listens only on port `9223` inside the Compose network; Chrome remains bound to loopback in the
 sidecar.
 
-A supervisor lease under `DATA_DIR` prevents multiple OmniRoute processes from owning
+A supervisor lease under `DATA_DIR` prevents multiple 67router processes from owning
 the same tunnel and broker state. A conflict is reported by the doctor.
 
 ## Interactive recovery

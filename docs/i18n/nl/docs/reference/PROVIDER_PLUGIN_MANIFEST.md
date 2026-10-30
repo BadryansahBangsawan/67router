@@ -9,7 +9,7 @@
 Hetzelfde manifest is via HTTP beschikbaar op
 `GET /api/v1/provider-plugin-manifest` voor sidecars die buiten het proces worden uitgevoerd.
 
-OmniRoute maakt die URL bekend aan Bifrost en CLIProxyAPI via de
+67router maakt die URL bekend aan Bifrost en CLIProxyAPI via de
 `X-OmniRoute-Provider-Manifest-Url`-requestheader. Stel
 `OMNIROUTE_PROVIDER_MANIFEST_URL` in wanneer de sidecar een openbare URL of een URL binnen het containernetwerk nodig heeft in plaats van de lokale oorsprong van het verzoek.
 
@@ -23,7 +23,7 @@ moet de sidecar een onvoorwaardelijk verzoek uitvoeren in plaats van een `304` t
 ## Doel
 
 Verplaats providermetadata naar een plugincontract, zodat het hot path voor verzoeken
-uiteindelijk kan worden afgehandeld door een sidecar met lagere latentie, terwijl OmniRoute de
+uiteindelijk kan worden afgehandeld door een sidecar met lagere latentie, terwijl 67router de
 TypeScript-route behoudt als beleidscontrole en fallback. Het manifest is additief: het
 wijzigt op zichzelf de routering van verzoeken niet.
 
@@ -67,7 +67,7 @@ de TypeScript-bronnen opnieuw te lezen.
 | `usage-fetch`        | Heeft een gekoppelde fetcher voor gebruik of quota (`getUsageForProvider`).               |
 | `usage-supported`    | De gebruiks-API accepteert deze provider (`isSupportedUsageConnection`).                  |
 
-`usage-fetch` is uitsluitend bedoeld voor detectie. Het geeft aan dat OmniRoute weet hoe het gebruik voor de
+`usage-fetch` is uitsluitend bedoeld voor detectie. Het geeft aan dat 67router weet hoe het gebruik voor de
 provider moet worden uitgelezen; het activeert het ophalen niet, wijzigt de quotumbetekenis niet en impliceert
 niet dat de Dashboard-quotumwidget voor de provider is ingeschakeld — die widget wordt afzonderlijk
 afgeschermd door `USAGE_SUPPORTED_PROVIDERS`. De bron van waarheid is `USAGE_FETCHER_PROVIDERS` in

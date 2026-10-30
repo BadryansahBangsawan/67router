@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute pretražuje odgovore s pogreškama nadređenih pružatelja usluga radi signala koji upućuju na to da je **račun trajno neaktivan** (obustavljen / deaktiviran / blokiran zbog kršenja Uvjeta pružanja usluge) i, kada pronađe podudaranje, premješta tu vezu u **terminalno stanje `banned`** kako se više ne bi odabirala za zahtjeve. To se konfigurira na kartici postavki **Sigurnost → Zabranjene ključne riječi** („Dodatne ključne riječi koje pokreću otkrivanje trajne zabrane računa. Ugrađene ključne riječi uvijek se primjenjuju.”).
+67router pretražuje odgovore s pogreškama nadređenih pružatelja usluga radi signala koji upućuju na to da je **račun trajno neaktivan** (obustavljen / deaktiviran / blokiran zbog kršenja Uvjeta pružanja usluge) i, kada pronađe podudaranje, premješta tu vezu u **terminalno stanje `banned`** kako se više ne bi odabirala za zahtjeve. To se konfigurira na kartici postavki **Sigurnost → Zabranjene ključne riječi** („Dodatne ključne riječi koje pokreću otkrivanje trajne zabrane računa. Ugrađene ključne riječi uvijek se primjenjuju.”).
 
 Ova stranica dokumentira ugrađeni popis, tijek otkrivanja, njegov opseg, siguran način dodavanja prilagođenih ključnih riječi te način oporavka označene veze. Samo terminalno stanje dio je modela otpornosti — pogledajte
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) („Terminalna stanja”).

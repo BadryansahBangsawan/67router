@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Mwongozo kamili wa kusanidi watoa huduma, kuunda michanganyiko, kuunganisha zana za CLI, na kupeleka OmniRoute.
+Mwongozo kamili wa kusanidi watoa huduma, kuunda michanganyiko, kuunganisha zana za CLI, na kupeleka 67router.
 
 ---
 
@@ -137,11 +137,11 @@ Miundo:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Kidokezo cha Kitaalamu:** Tumia Opus kwa kazi changamano, na Sonnet kwa kasi. OmniRoute hufuatilia mgao kwa kila muundo!
+**Kidokezo cha Kitaalamu:** Tumia Opus kwa kazi changamano, na Sonnet kwa kasi. 67router hufuatilia mgao kwa kila muundo!
 
-Hakuna kivinjari kwenye seva pangishi ya OmniRoute? Endesha `claude setup-token` mahali popote ambapo Claude Code imeingia, kisha ubandike tokeni ya mwaka mmoja kwenye kichupo cha **Setup Token**. Tazama [Claude Code kwa kutumia tokeni ya usanidi](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Hakuna kivinjari kwenye seva pangishi ya 67router? Endesha `claude setup-token` mahali popote ambapo Claude Code imeingia, kisha ubandike tokeni ya mwaka mmoja kwenye kichupo cha **Setup Token**. Tazama [Claude Code kwa kutumia tokeni ya usanidi](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Njia zinazooana na Claude na Claude Code huhifadhi kiwango cha juhudi ya kufikiri cha `max` kwa miundo ya Opus na Sonnet. Miundo ya Haiku haikubali kiwango cha juhudi cha `max`, kwa hivyo OmniRoute hushusha ombi hilo hadi kwenye bajeti ya juu ya kufikiri kabla ya kulituma kwa mtoa huduma wa juu.
+Njia zinazooana na Claude na Claude Code huhifadhi kiwango cha juhudi ya kufikiri cha `max` kwa miundo ya Opus na Sonnet. Miundo ya Haiku haikubali kiwango cha juhudi cha `max`, kwa hivyo 67router hushusha ombi hilo hadi kwenye bajeti ya juu ya kufikiri kabla ya kulituma kwa mtoa huduma wa juu.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,7 +262,7 @@ Gharama: kwa sasa imeorodheshwa kama $0; masharti na upatikanaji vinaweza kubadi
 
 ### Cursor IDE
 
-**Kutumia Cursor kama kiteja cha OmniRoute** (pitisha gumzo la Cursor kupitia OmniRoute):
+**Kutumia Cursor kama kiteja cha 67router** (pitisha gumzo la Cursor kupitia 67router):
 
 ```
 Mipangilio → Miundo → Kina:
@@ -271,7 +271,7 @@ Mipangilio → Miundo → Kina:
   Muundo: cc/claude-opus-4-7
 ```
 
-**Kutumia OmniRoute kama mtoa huduma wa Cursor** (OmniRoute huita huduma ya juu ya Cursor): pendelea
+**Kutumia 67router kama mtoa huduma wa Cursor** (67router huita huduma ya juu ya Cursor): pendelea
 **Dashibodi → Watoa Huduma → Cursor → Ingia kwa Cursor**. Katika Docker, angalia
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -358,7 +358,7 @@ CLI hupakia `.env` kiotomatiki kutoka `~/.omniroute/.env` au `./.env`.
 
 ### Hali ya trei
 
-Anzisha OmniRoute katika trei ya mfumo:
+Anzisha 67router katika trei ya mfumo:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +375,7 @@ Tumia menyu ya trei kutekeleza vitendo hivi:
 - Fungua dashibodi.
 - Fungua `/dashboard/logs`.
 - Badilisha uanzishaji otomatiki.
-- Simamisha OmniRoute.
+- Simamisha 67router.
 
 Usichanganye `--tray` na chaguo hizi:
 
@@ -401,14 +401,14 @@ omniroute autostart disable
 
 ### Kuondoa Usakinishaji
 
-Usipohitaji tena OmniRoute, tunatoa hati mbili za haraka za kuiondoa kabisa:
+Usipohitaji tena 67router, tunatoa hati mbili za haraka za kuiondoa kabisa:
 
 | Amri                     | Kitendo                                                                                  |
 | ------------------------ | ---------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Huondoa programu ya mfumo lakini **huhifadhi DB na usanidi wako** katika `~/.omniroute`. |
 | `npm run uninstall:full` | Huondoa programu NA **hufuta kabisa usanidi, funguo na hifadhidata zote**.               |
 
-> Kumbuka: Ili kutekeleza amri hizi, nenda kwenye folda ya mradi wa OmniRoute (ikiwa uliinakili kwa clone) na uzitekeleze. Vinginevyo, ikiwa ilisakinishwa kimataifa, unaweza kutekeleza tu `npm uninstall -g omniroute`.
+> Kumbuka: Ili kutekeleza amri hizi, nenda kwenye folda ya mradi wa 67router (ikiwa uliinakili kwa clone) na uzitekeleze. Vinginevyo, ikiwa ilisakinishwa kimataifa, unaweza kutekeleza tu `npm uninstall -g omniroute`.
 
 ### Usambazaji wa VPS
 
@@ -480,7 +480,7 @@ Kwa hali iliyounganishwa na mfumo mwenyeji pamoja na faili tekelezi za CLI, anga
 
 ### Void Linux (xbps-src)
 
-Watumiaji wa Void Linux wanaweza kufungasha na kusakinisha OmniRoute kwa njia asilia kwa kutumia mfumo wa ukalimani mtambuka wa `xbps-src`. Hii huendesha kiotomatiki uundaji wa pekee wa Node.js pamoja na viunganishi asilia vinavyohitajika vya `better-sqlite3`.
+Watumiaji wa Void Linux wanaweza kufungasha na kusakinisha 67router kwa njia asilia kwa kutumia mfumo wa ukalimani mtambuka wa `xbps-src`. Hii huendesha kiotomatiki uundaji wa pekee wa Node.js pamoja na viunganishi asilia vinavyohitajika vya `better-sqlite3`.
 
 <details>
 <summary><b>Tazama kiolezo cha xbps-src</b></summary>
@@ -660,7 +660,7 @@ Kwa marejeleo kamili ya vigezo vya mazingira, angalia [README](../README.md).
 
 **Watoa huduma wengine wanaooana** (walioteuliwa): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (kupitia `aws-bedrock`), `azure-ai`, `openrouter` (katalogi inayopitishwa moja kwa moja), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Kila mmoja hudumisha orodha yake ya miundo katika `providerRegistry.ts` na anaweza kusawazishwa kiotomatiki mtoa huduma anapotoa endpoint ya `/models`.
 
-**Dokezo kuhusu vitambulisho vya miundo:** OmniRoute hutumia vitambulisho asilia vya watoa huduma (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Baadhi ya vitambulisho vinajumuisha matoleo yenye nukta kwa sababu hivyo ndivyo API ya chanzo cha juu inavyovitarajia. Ikiwa muundo haujaorodheshwa hapo juu, endesha `omniroute models --search <term>` au piga `GET /api/models/catalog` ili kuthibitisha upatikanaji.
+**Dokezo kuhusu vitambulisho vya miundo:** 67router hutumia vitambulisho asilia vya watoa huduma (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Baadhi ya vitambulisho vinajumuisha matoleo yenye nukta kwa sababu hivyo ndivyo API ya chanzo cha juu inavyovitarajia. Ikiwa muundo haujaorodheshwa hapo juu, endesha `omniroute models --search <term>` au piga `GET /api/models/catalog` ili kuthibitisha upatikanaji.
 
 </details>
 
@@ -726,9 +726,9 @@ hitilafu inayotaja mtoa huduma aliyejengewa ndani au vitambulisho vyake, angalia
 kimehifadhiwa: nodi zilizohifadhiwa kabla ya kuwepo kwa kanuni hii bado zimehifadhiwa, lakini kiambishi awali chake huelekeza kwa
 mtoa huduma aliyejengewa ndani. Hariri nodi na uipe kiambishi awali kipya.
 
-### Kuunganisha Rika za OmniRoute kwa Msururu
+### Kuunganisha Rika za 67router kwa Msururu
 
-Lango jingine la OmniRoute linaweza kuongezwa kama mtoa huduma **Maalum anayeoana na OpenAI**. Tumia
+Lango jingine la 67router linaweza kuongezwa kama mtoa huduma **Maalum anayeoana na OpenAI**. Tumia
 URL ya msingi ya `/v1` ya rika na ufunguo maalum wa API wenye ruhusa chache zaidi uliotolewa na rika hilo.
 
 Kwa misururu ya pande mbili au yenye hatua nyingi, washa kinga ya hiari dhidi ya vitanzi kwenye kila lango:
@@ -754,7 +754,7 @@ kilichokwisha kwa HTTP `508 Loop Detected`; watoa huduma wa kawaida wa upstream 
 Kuunganisha rika kwa msururu si urudufu wa hifadhidata wala uhamishaji wa huduma baada ya hitilafu ya hosti. Kila lango huhifadhi hali,
 cache, vihesabu vya viwango, na vipindi vya SQLite kwa kujitegemea. Tumia proksi ya kinyume yenye ukaguzi wa afya au uhamishaji
 wa huduma wa mteja kwa upatikanaji wa active/passive au active/active, na usiwahi kupachika hifadhidata moja ya SQLite
-kwenye instance nyingi za OmniRoute zinazoendeshwa.
+kwenye instance nyingi za 67router zinazoendeshwa.
 
 ### Njia Maalum za Watoa Huduma
 
@@ -805,7 +805,7 @@ Hurejesha miundo iliyopangwa kwa makundi kulingana na mtoa huduma pamoja na aina
 - Inapatikana katika **Dashibodi → Vituo vya Mwisho** kwa Docker na uwekaji mwingine unaosimamiwa kwenye seva yako mwenyewe
 - Huunda URL ya muda ya `https://*.trycloudflare.com` ambayo huelekeza kwenye kituo chako cha sasa kinachooana na OpenAI cha `/v1`
 - Uwezeshaji wa kwanza husakinisha `cloudflared` inapohitajika tu; kuwasha upya baadaye hutumia tena faili-tekelezi ileile inayosimamiwa
-- Quick Tunnels hazirejeshwi kiotomatiki baada ya OmniRoute au kontena kuwashwa upya; ziwashe tena kutoka kwenye dashibodi inapohitajika
+- Quick Tunnels hazirejeshwi kiotomatiki baada ya 67router au kontena kuwashwa upya; ziwashe tena kutoka kwenye dashibodi inapohitajika
 - URL za tunnel ni za muda mfupi na hubadilika kila unaposimamisha/kuanzisha tunnel
 - Quick Tunnels zinazosimamiwa hutumia usafirishaji wa HTTP/2 kwa chaguo-msingi ili kuepuka maonyo mengi ya bafa ya QUIC UDP katika makontena yenye rasilimali chache
 - Weka `CLOUDFLARED_PROTOCOL=quic` au `auto` ikiwa unataka kubatilisha chaguo la usafirishaji linalosimamiwa
@@ -822,7 +822,7 @@ Hurejesha miundo iliyopangwa kwa makundi kulingana na mtoa huduma pamoja na aina
 
 ### Eneo la Majaribio la Kitafsiri
 
-Lifikie kupitia **Dashibodi → Kitafsiri**. Tatua hitilafu na uonyeshe jinsi OmniRoute inavyotafsiri maombi ya API kati ya watoa huduma.
+Lifikie kupitia **Dashibodi → Kitafsiri**. Tatua hitilafu na uonyeshe jinsi 67router inavyotafsiri maombi ya API kati ya watoa huduma.
 
 | Hali                               | Madhumuni                                                                                           |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -875,7 +875,7 @@ Kwa mshikamano wa kikao cha nje (kwa mfano, mawakala wa Claude Code/Codex walio 
 X-Session-Id: your-session-key
 ```
 
-OmniRoute pia hukubali `x_session_id` na kurudisha ufunguo halisi wa kikao katika `X-OmniRoute-Session-Id`.
+67router pia hukubali `x_session_id` na kurudisha ufunguo halisi wa kikao katika `X-OmniRoute-Session-Id`.
 
 Ikiwa unatumia Nginx na kutuma vichwa vyenye mistari ya chini, wezesha:
 
@@ -909,7 +909,7 @@ Mnyororo: production-fallback
 
 ### Michanganyiko ya Kawaida ya Watoa Huduma na Ruwaza za Uelekezaji
 
-Hizi ni ruwaza za mfano za kuchanganya watoa huduma wengi na kuelekeza kati yao katika OmniRoute:
+Hizi ni ruwaza za mfano za kuchanganya watoa huduma wengi na kuelekeza kati yao katika 67router:
 
 #### 1. Mchanganyiko wa Wakala wa Uandishi wa Msimbo: Utoaji Hoja wa Kiwango cha Juu wenye Njia Mbadala ya Gharama/Kasi
 
@@ -970,7 +970,7 @@ Kuunganisha modeli maalumu za maono na uzalishaji wa maandishi wa kasi ya juu kw
 
 Sanidi kupitia **Dashibodi → Mipangilio → Ustahimilivu**.
 
-OmniRoute hutekeleza ustahimilivu katika kiwango cha mtoa huduma kwa kutumia vipengele vitano:
+67router hutekeleza ustahimilivu katika kiwango cha mtoa huduma kwa kutumia vipengele vitano:
 
 1. **Foleni na Udhibiti wa Kasi ya Maombi** — Uundaji wa mtiririko wa maombi katika kiwango cha mfumo:
    - **Maombi kwa Dakika (RPM)** — Idadi ya juu zaidi ya maombi kwa dakika kwa kila akaunti
@@ -995,7 +995,7 @@ OmniRoute hutekeleza ustahimilivu katika kiwango cha mtoa huduma kwa kutumia vip
 
    Hali ya utekelezaji ya kivunja saketi cha mtoa huduma huonyeshwa kwenye **Dashibodi → Afya** pekee.
 
-4. **Subiri Kipindi cha Kusubiri** — Ikiwa miunganisho yote inayoweza kuchaguliwa tayari iko katika kipindi cha kusubiri, OmniRoute inaweza kusubiri kipindi kinachomalizika mapema zaidi na kujaribu tena ombi lilelile la mteja kiotomatiki.
+4. **Subiri Kipindi cha Kusubiri** — Ikiwa miunganisho yote inayoweza kuchaguliwa tayari iko katika kipindi cha kusubiri, 67router inaweza kusubiri kipindi kinachomalizika mapema zaidi na kujaribu tena ombi lilelile la mteja kiotomatiki.
 
 5. **Utambuzi Kiotomatiki wa Kikomo cha Kiwango** — Watoa huduma wa juu wanaporejesha vipindi mahususi vya kusubiri, vidokezo hivyo huchukua nafasi ya kipindi cha kusubiri cha muunganisho wa ndani wakati mpangilio huu umewashwa.
 
@@ -1029,7 +1029,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Matumizi:**
 
-- Hamisha OmniRoute kati ya mashine
+- Hamisha 67router kati ya mashine
 - Unda nakala rudufu za nje kwa ajili ya urejeshaji baada ya janga
 - Shiriki usanidi kati ya wanatimu (hamisha zote → shiriki kumbukumbu)
 
@@ -1081,7 +1081,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Unukuzi wa Sauti
 
-OmniRoute inasaidia unukuzi wa sauti kupitia endpoint inayooana na OpenAI:
+67router inasaidia unukuzi wa sauti kupitia endpoint inayooana na OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1156,7 @@ Zima **Akiba ya tokeni za Utoaji Sababu** wakati watoa huduma wa upstream wanahi
 `max_tokens` / `maxOutputTokens`. Inapowashwa, uelekezaji wa combo huongeza tu nafasi ya ziada ya modeli za utoaji sababu
 kwa modeli zenye kikomo cha matokeo kinachojulikana na huacha kikomo cha tokeni cha mteja bila kubadilishwa wakati
 thamani salama yenye akiba ingezidi kikomo hicho. Ikiwa kikomo cha mteja tayari kiko juu ya kikomo kinachojulikana,
-OmniRoute hukipunguza hadi kikomo hicho kabla ya kutuma ombi la upstream.
+67router hukipunguza hadi kikomo hicho kabla ya kutuma ombi la upstream.
 
 ---
 
@@ -1179,7 +1179,7 @@ Fikia kupitia **Dashibodi → Afya**. Muhtasari wa wakati halisi wa afya ya mfum
 
 ## 🤖 Uelekezaji Otomatiki (Usanidi-sifuri)
 
-OmniRoute huja na **kielekezaji otomatiki kinachoendeshwa na alama** ambacho huchagua modeli bora kwa kila ombi katika kila mtoa huduma aliyeunganishwa — hakuna mchanganyiko wa kudumisha. Tuma tu ombi ukitumia mojawapo ya viambishi awali vya `auto/*`, na OmniRoute itaunda mchanganyiko pepe papo hapo, huku ikiwapa watahiniwa alama kulingana na muda wa kusubiri, gharama, kiwango cha mafanikio, kufaa kwa muktadha, ufaafu wa modeli kwa kazi, kushindwa kwa hivi karibuni, mgao, na hali ya kivunja mzunguko.
+67router huja na **kielekezaji otomatiki kinachoendeshwa na alama** ambacho huchagua modeli bora kwa kila ombi katika kila mtoa huduma aliyeunganishwa — hakuna mchanganyiko wa kudumisha. Tuma tu ombi ukitumia mojawapo ya viambishi awali vya `auto/*`, na 67router itaunda mchanganyiko pepe papo hapo, huku ikiwapa watahiniwa alama kulingana na muda wa kusubiri, gharama, kiwango cha mafanikio, kufaa kwa muktadha, ufaafu wa modeli kwa kazi, kushindwa kwa hivi karibuni, mgao, na hali ya kivunja mzunguko.
 
 | Kiambishi awali | Huboresha kwa ajili ya                                                                                               |
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -1210,7 +1210,7 @@ Kielekezaji otomatiki kimefafanuliwa kikamilifu katika [AUTO-COMBO.md](../routin
 
 ## 🔌 Muunganisho wa MCP na A2A
 
-OmniRoute ni **seva ya MCP** (Itifaki ya Muktadha wa Modeli) na pia **seva ya A2A** (JSON-RPC 2.0 ya Wakala-kwa-Wakala). IDE yoyote inayooana na MCP au kipangishi cha wakala kinaweza kuita zana za OmniRoute moja kwa moja — hakuna kifungashio cha ziada kinachohitajika.
+67router ni **seva ya MCP** (Itifaki ya Muktadha wa Modeli) na pia **seva ya A2A** (JSON-RPC 2.0 ya Wakala-kwa-Wakala). IDE yoyote inayooana na MCP au kipangishi cha wakala kinaweza kuita zana za 67router moja kwa moja — hakuna kifungashio cha ziada kinachohitajika.
 
 ### Njia za usafirishaji za MCP
 
@@ -1245,7 +1245,7 @@ Kwa sasa MCP inafafanua mawanda 32 yenye majina. Kila ufunguo wa Bearer unaweza 
 
 ## 🧠 Mfumo wa Ujuzi
 
-OmniRoute hutoa **mfumo wa ujuzi** unaoweza kupanuliwa (`src/lib/skills/`) ili mawakala na endpoint ya A2A ziweze kuendesha taratibu maalum za nyanja mbalimbali (k.m. `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router hutoa **mfumo wa ujuzi** unaoweza kupanuliwa (`src/lib/skills/`) ili mawakala na endpoint ya A2A ziweze kuendesha taratibu maalum za nyanja mbalimbali (k.m. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Kiolesura cha Marketplace** — Vinjari na usakinishe ujuzi kupitia **Dashboard → Skills**
 - **Mawanda kwa kila ufunguo** — Dhibiti ni funguo zipi za API zinazoweza kuitisha ujuzi upi
@@ -1257,7 +1257,7 @@ Rejeleo kamili: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Mfumo wa Kumbukumbu
 
-OmniRoute huhifadhi **kumbukumbu ya muda mrefu ya mazungumzo** kwa kutumia urejeshaji mseto:
+67router huhifadhi **kumbukumbu ya muda mrefu ya mazungumzo** kwa kutumia urejeshaji mseto:
 
 - **SQLite FTS5** kwa utafutaji wa maneno muhimu katika zamu zilizopita
 - **Hifadhi ya vekta ya Qdrant** (ya hiari) kwa ukumbukaji wa kisemantiki
@@ -1270,7 +1270,7 @@ Dhibiti kumbukumbu katika **Dashboard → Memory** (tafuta, hariri, hamisha, fut
 
 ## 🔔 Webhooks
 
-Jisajili kupokea matukio ya OmniRoute kwa ufuatiliaji na uendeshaji otomatiki wa wakati halisi.
+Jisajili kupokea matukio ya 67router kwa ufuatiliaji na uendeshaji otomatiki wa wakati halisi.
 
 - Unda webhook katika **Dashboard → Webhooks** ukiwa na URL lengwa na siri ya kutia sahihi ya HMAC
 - Matukio yanayopatikana: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1283,11 +1283,11 @@ Schema kamili katika [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ## ☁️ Mawakala wa Wingu
 
-OmniRoute huunganishwa na mawakala wa uandishi wa msimbo wa wingu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ili uweze kutuma kazi za muda mrefu kutoka kwenye dashboard ileile inayoshughulikia uratibu wako wa ndani.
+67router huunganishwa na mawakala wa uandishi wa msimbo wa wingu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ili uweze kutuma kazi za muda mrefu kutoka kwenye dashboard ileile inayoshughulikia uratibu wako wa ndani.
 
 - Unda kazi katika **Dashboard → Cloud Agents** au kupitia `POST /api/v1/agents/tasks`
 - Fuatilia hali, kumbukumbu za matukio na vizalishwa kwa kila kazi
-- Tumia ufunguo wako mwenyewe wa API kwa kila mtoa huduma — vitambulisho haviondoki kamwe kwenye instance ya OmniRoute
+- Tumia ufunguo wako mwenyewe wa API kwa kila mtoa huduma — vitambulisho haviondoki kamwe kwenye instance ya 67router
 
 Rejeleo kamili: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1295,7 +1295,7 @@ Rejeleo kamili: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Usimamizi wa Kiprogramu
 
-Unaweza kudhibiti kila rasilimali ya OmniRoute (watoa huduma, combos, funguo, mipangilio) kupitia HTTP ukitumia **ufunguo wa Bearer wenye wigo wa `manage`**.
+Unaweza kudhibiti kila rasilimali ya 67router (watoa huduma, combos, funguo, mipangilio) kupitia HTTP ukitumia **ufunguo wa Bearer wenye wigo wa `manage`**.
 
 Tengeneza ufunguo katika **Dashboard → API Keys → New Key → Scope: manage**, kisha:
 
@@ -1328,7 +1328,7 @@ Tazama [API_REFERENCE.md](../reference/API_REFERENCE.md) kwa orodha kamili ya en
 
 ## 💻 CLI ya Ndani
 
-OmniRoute huja na CLI ya ndani (`omniroute …`) kwa ajili ya usanidi, uchunguzi na udhibiti wakati wa utekelezaji. Hii ni **tofauti na ukurasa wa "Zana za CLI" kwenye dashibodi**, ambao husanidi CLI za wahusika wengine (Claude Code, Cursor, Codex, Cline, …) ili ziweze kuwasiliana na OmniRoute.
+67router huja na CLI ya ndani (`omniroute …`) kwa ajili ya usanidi, uchunguzi na udhibiti wakati wa utekelezaji. Hii ni **tofauti na ukurasa wa "Zana za CLI" kwenye dashibodi**, ambao husanidi CLI za wahusika wengine (Claude Code, Cursor, Codex, Cline, …) ili ziweze kuwasiliana na 67router.
 
 ```bash
 omniroute setup                    # Mchawi shirikishi (nenosiri, watoa huduma, michanganyiko)
@@ -1359,7 +1359,7 @@ Kidokezo: unganisha `omniroute doctor --json` na zana yako ya ufuatiliaji ili ku
 
 ## 🖥️ Programu ya Eneo-kazi (Electron)
 
-OmniRoute inapatikana kama programu asilia ya eneo-kazi kwa Windows, macOS na Linux.
+67router inapatikana kama programu asilia ya eneo-kazi kwa Windows, macOS na Linux.
 
 ### Usakinishaji
 

@@ -12,7 +12,7 @@ User-Agent, příznaky `anthropic-beta`, hlavičky SDK Stainless atd.).
 
 ## Rychlý start — použijte nativního poskytovatele `agentrouter` (doporučeno)
 
-Pro většinu uživatelů **není potřeba žádné speciální nastavení**. OmniRoute obsahuje vestavěného
+Pro většinu uživatelů **není potřeba žádné speciální nastavení**. 67router obsahuje vestavěného
 poskytovatele `agentrouter`, který již zahrnuje úplný komunikační formát Claude Code (viz
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Chcete-li jej použít:
 
@@ -34,7 +34,7 @@ základní adresy URL, cesty pro chat či sady hlaviček.
 
 ## Pokročilé: připojení prostřednictvím typu poskytovatele kompatibilního s Claude Code
 
-OmniRoute podporuje AgentRouter (a podobné přenosové služby) také prostřednictvím typu poskytovatele
+67router podporuje AgentRouter (a podobné přenosové služby) také prostřednictvím typu poskytovatele
 **kompatibilního s Claude Code** (`anthropic-compatible-cc-*`), který komunikuje pomocí
 Anthropic Messages API se správným komunikačním formátem. Obecný poskytovatel
 `openai-compatible-chat` odkazující na `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Účet AgentRouter a API klíč. Noví uživatelé získají bezplatné kredity prostřednictvím partnerského
   odkazu v souboru [README](../README.md) projektu.
-- Spuštěný OmniRoute s povoleným příznakem funkce `ENABLE_CC_COMPATIBLE_PROVIDER`
+- Spuštěný 67router s povoleným příznakem funkce `ENABLE_CC_COMPATIBLE_PROVIDER`
   (viz níže).
 
 ## 1. Povolte typ poskytovatele kompatibilní s CC
 
 Typ poskytovatele kompatibilní s Claude Code je chráněn příznakem funkce, protože
 odesílá provoz, který přesně napodobuje oficiálního klienta Claude Code. Povolte jej
-nastavením proměnné prostředí před spuštěním OmniRoute:
+nastavením proměnné prostředí před spuštěním 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

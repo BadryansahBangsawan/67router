@@ -8,7 +8,7 @@
 
 > **신뢰할 수 있는 원본:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute에서는 각 프록시에 **주소 패밀리 이그레스 지시문**을 지정할 수 있습니다. 기본적으로는 OS가 IPv4 또는 IPv6를 선택합니다(듀얼 스택, "Happy Eyeballs"). 지시문을 `ipv4` 또는 `ipv6`로 설정하면 OmniRoute는 해당 프록시를 통과하는 모든 연결을 선택한 패밀리에 고정하며, 다른 패밀리로 폴백하지 않고 **실패 시 차단**합니다.
+67router에서는 각 프록시에 **주소 패밀리 이그레스 지시문**을 지정할 수 있습니다. 기본적으로는 OS가 IPv4 또는 IPv6를 선택합니다(듀얼 스택, "Happy Eyeballs"). 지시문을 `ipv4` 또는 `ipv6`로 설정하면 67router는 해당 프록시를 통과하는 모든 연결을 선택한 패밀리에 고정하며, 다른 패밀리로 폴백하지 않고 **실패 시 차단**합니다.
 
 이 페이지에서는 지시문이 무엇인지, 왜 필요한지, 어디에서 구성하는지, 런타임에서 이를 어떻게 해석하는지 설명합니다.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` 해석 방식
 
-`family`가 `auto`이면 OmniRoute는 어떤 지시자도 추가하지 **않습니다**. 프록시 URL은 그대로 사용되며, 연결 패밀리는 URL 자체의 특성에 따라 결정됩니다.
+`family`가 `auto`이면 67router는 어떤 지시자도 추가하지 **않습니다**. 프록시 URL은 그대로 사용되며, 연결 패밀리는 URL 자체의 특성에 따라 결정됩니다.
 
 URL 빌드 시점(`open-sse/utils/proxyDispatcher.ts`의 `proxyConfigToUrl` / `normalizeProxyUrl`)에 `auto` 프록시는 마커가 없는 일반 URL을 생성합니다.
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 `auto`가 아닌 지시자는 정규화된 프록시 URL에 한 번만 추가되는 단일 합성 쿼리 마커인 `?family=ipv4` 또는 `?family=ipv6`로 전달됩니다. `normalizeProxyUrl`은 포트 구문 분석을 손상시키지 않도록 이 마커를 정확히 한 번 제거한 후 다시 추가합니다.
 
-디스패처를 빌드할 때 마커를 읽어 구체적인 연결 패밀리로 변환합니다. 호스트가 **반대** 패밀리의 IP 리터럴이면 OmniRoute는 오류를 발생시킵니다(모순이 있으면 실패로 종료):
+디스패처를 빌드할 때 마커를 읽어 구체적인 연결 패밀리로 변환합니다. 호스트가 **반대** 패밀리의 IP 리터럴이면 67router는 오류를 발생시킵니다(모순이 있으면 실패로 종료):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 호환성
 
-패밀리 고정은 SOCKS5 프록시에서도 작동하지만, 기본 `fetch-socks`는 프록시 홉의 패밀리를 고정하는 데 필요한 소켓 옵션을 노출하지 않습니다. 이를 위해 OmniRoute는 자체 커넥터를 제공합니다.
+패밀리 고정은 SOCKS5 프록시에서도 작동하지만, 기본 `fetch-socks`는 프록시 홉의 패밀리를 고정하는 데 필요한 소켓 옵션을 노출하지 않습니다. 이를 위해 67router는 자체 커넥터를 제공합니다.
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

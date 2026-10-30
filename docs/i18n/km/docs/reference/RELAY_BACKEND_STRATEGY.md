@@ -6,7 +6,7 @@
 
 ## សេចក្តីសង្ខេប
 
-ឥឡូវនេះ OmniRoute គាំទ្ររបៀប relay ចំនួនបីសម្រាប់ `/api/v1/relay/chat/completions`៖
+ឥឡូវនេះ 67router គាំទ្ររបៀប relay ចំនួនបីសម្រាប់ `/api/v1/relay/chat/completions`៖
 
 - `ts`៖ ប្រើ TypeScript relay នៅក្នុង process តែមួយ។
 - `bifrost`៖ បង្ខំឱ្យប្រើ Bifrost gateway។
@@ -45,12 +45,12 @@
 
 ## កិច្ចសន្យាព្រំដែន backend
 
-ព្រំដែនផលិតផលដែលមានស្ថិរភាពគឺ OmniRoute relay API មិនមែនការអនុវត្ត dashboard ទេ។ Next.js dashboard អាចដំឡើង កំណត់រចនាសម្ព័ន្ធ និងត្រួតពិនិត្យសេវាកម្មមូលដ្ឋាន ប៉ុន្តែការកំណត់ផ្លូវសំណើគួរតែចូលតាម relay API ហើយធ្វើ handoff នៅខាងក្រោយព្រំដែននោះ។
+ព្រំដែនផលិតផលដែលមានស្ថិរភាពគឺ 67router relay API មិនមែនការអនុវត្ត dashboard ទេ។ Next.js dashboard អាចដំឡើង កំណត់រចនាសម្ព័ន្ធ និងត្រួតពិនិត្យសេវាកម្មមូលដ្ឋាន ប៉ុន្តែការកំណត់ផ្លូវសំណើគួរតែចូលតាម relay API ហើយធ្វើ handoff នៅខាងក្រោយព្រំដែននោះ។
 
 ជម្រើស backend រយៈពេលវែង៖
 
 - រក្សា TypeScript relay ជា policy ក្នុង process និងជាផ្លូវ fallback។ Auth, allowlists, ការធ្វើឱ្យសំណើមានទម្រង់ស្តង់ដារ, accounting និងការត្រួតពិនិត្យសុវត្ថិភាព ត្រូវស្ថិតនៅទីនេះមុនពេល handoff ទៅ backend ណាមួយ។
-- ប្រើ Bifrost ជា Tier-1 sidecar ដែលមាន throughput ខ្ពស់ និងត្រូវបានផ្តល់អាទិភាព នៅពេល deployment ត្រូវការភាពប្រែប្រួលនៃការកំណត់ផ្លូវទាបជាង ការប្តូរ provider ដែលគ្រប់គ្រងពីកណ្តាល ឬការពង្រីកទៅកាន់ OmniRoute replicas ច្រើន។
+- ប្រើ Bifrost ជា Tier-1 sidecar ដែលមាន throughput ខ្ពស់ និងត្រូវបានផ្តល់អាទិភាព នៅពេល deployment ត្រូវការភាពប្រែប្រួលនៃការកំណត់ផ្លូវទាបជាង ការប្តូរ provider ដែលគ្រប់គ្រងពីកណ្តាល ឬការពង្រីកទៅកាន់ 67router replicas ច្រើន។
 - រក្សា 9router និង CLIPROXYAPI ជាសេវាកម្ម compatibility ដែលបានបង្កប់។ ពួកវាដំណើរការជា local processes ដែលត្រូវបានត្រួតពិនិត្យ និងមានប្រយោជន៍នៅពេលឥរិយាបថ provider/CLI របស់ពួកវាគឺជា adapter ដែលចង់បាន ប៉ុន្តែពួកវាមិនគួរក្លាយជា Tier-1 routing engine លំនាំដើមទេ។
 - កុំឱ្យ dashboard បញ្ជូន service URLs តាមអំពើចិត្តចូលក្នុង hot path។ URLs ដែលផ្តល់ដោយ UI គឺជា configuration inputs; routing code គួរតែដោះស្រាយ backends ដែលបានចុះបញ្ជី និងពិនិត្យសុខភាពរួច ពី server-side settings និង supervisor state។
 - បច្ចុប្បន្ន គួរផ្តល់អាទិភាពដល់ loopback HTTP សម្រាប់សេវាកម្មដែលត្រូវបានត្រួតពិនិត្យ ពីព្រោះ managed processes បានផ្តល់ APIs ដែលឆបគ្នាជាមួយ HTTP រួចហើយ route guard អាចធ្វើសវនកម្មលើព្រំដែន ហើយឥរិយាបថ failure/fallback អាចមើលឃើញនៅក្នុង request logs។ SDK ឬ socket transport នាពេលអនាគត គួរបន្ថែមតែក្នុងករណីដែលវាកាត់បន្ថយ p99 routing latency បានជាក់ស្តែង ដោយមិនធ្វើឱ្យ isolation ឬ fallback semantics ចុះខ្សោយ។

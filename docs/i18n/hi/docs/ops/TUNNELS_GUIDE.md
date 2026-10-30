@@ -7,7 +7,7 @@
 > **प्रामाणिक स्रोत:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **अंतिम अपडेट:** 2026-06-28 — v3.8.40
 
-OmniRoute अपने स्थानीय सर्वर (`http://localhost:20128`) को तीन टनल बैकएंड के
+67router अपने स्थानीय सर्वर (`http://localhost:20128`) को तीन टनल बैकएंड के
 माध्यम से सार्वजनिक इंटरनेट पर उपलब्ध करा सकता है। यह निम्नलिखित के लिए उपयोगी है:
 
 - क्लाउड प्रदाताओं (Antigravity, Gemini, Cursor) से आने वाले OAuth कॉलबैक, जिन्हें
@@ -15,7 +15,7 @@ OmniRoute अपने स्थानीय सर्वर (`http://localhost:
 - VM डिप्लॉय किए बिना अपने स्थानीय इंस्टेंस को टीम के सदस्यों के साथ साझा करना।
 - मोबाइल, रिमोट या क्रॉस-नेटवर्क परीक्षण।
 
-तीनों बैकएंड इन-प्रोसेस प्रबंधित किए जाते हैं — OmniRoute डैशबोर्ड या REST API से
+तीनों बैकएंड इन-प्रोसेस प्रबंधित किए जाते हैं — 67router डैशबोर्ड या REST API से
 अंतर्निहित बाइनरी या SDK को शुरू/बंद करता है। किसी रिवर्स-प्रॉक्सी या systemd सेटअप
 की आवश्यकता नहीं है।
 
@@ -43,7 +43,7 @@ OmniRoute अपने स्थानीय सर्वर (`http://localhost:
 http://localhost:<apiPort>` चलाता है और stdout से आवंटित `*.trycloudflare.com` URL
   को पार्स करता है। URL अस्थायी होते हैं और प्रत्येक रीस्टार्ट पर बदल जाते हैं।
 - **नेम्ड टनल (वैकल्पिक)।** जब `CLOUDFLARED_CONFIG` स्थानीय रूप से प्रबंधित
-  cloudflared `config.yml` की ओर संकेत करता है, तब OmniRoute `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` की ओर संकेत करता है, तब 67router `cloudflared tunnel --no-autoupdate
 --config <path> run` चलाता है, जिससे आपको एक **स्थिर, नामित होस्टनेम** मिलता है। कॉन्फ़िग
   टनल UUID, `credentials-file`, और `ingress` रूटिंग प्रदान करता है, इसलिए कोई
   `--url` पास नहीं किया जाता और किसी Zero Trust डैशबोर्ड टोकन की आवश्यकता नहीं होती। `run`,
@@ -52,7 +52,7 @@ http://localhost:<apiPort>` चलाता है और stdout से आव�
 
 मुख्य व्यवहार:
 
-- **स्वतः इंस्टॉल।** पहली बार उपयोग करने पर, OmniRoute आधिकारिक GitHub रिलीज़ से नवीनतम
+- **स्वतः इंस्टॉल।** पहली बार उपयोग करने पर, 67router आधिकारिक GitHub रिलीज़ से नवीनतम
   `cloudflared` बाइनरी डाउनलोड करता है (प्रबंधित इंस्टॉलेशन
   `DATA_DIR/cloudflared/` के अंतर्गत रहता है)। निष्पादन से पहले डाउनलोड की गई एसेट के SHA256 को
   रिलीज़ मैनिफ़ेस्ट से सत्यापित किया जाता है।
@@ -69,7 +69,7 @@ http://localhost:<apiPort>` चलाता है और stdout से आव�
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. एक `~/.cloudflared/config.yml` लिखें, जो आपके होस्टनेम को OmniRoute के स्थानीय
+2. एक `~/.cloudflared/config.yml` लिखें, जो आपके होस्टनेम को 67router के स्थानीय
    API पोर्ट (डिफ़ॉल्ट 20128) पर रूट करे:
 
    ```yaml
@@ -81,11 +81,11 @@ http://localhost:<apiPort>` चलाता है और stdout से आव�
      - service: http_status:404
    ```
 
-3. OmniRoute को कॉन्फ़िग की ओर इंगित करें और टनल को (पुनः) शुरू करें:
+3. 67router को कॉन्फ़िग की ओर इंगित करें और टनल को (पुनः) शुरू करें:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # वैकल्पिक — OmniRoute द्वारा रिपोर्ट किए जाने वाले होस्टनेम को ओवरराइड करता है; अन्यथा इसे
+   # वैकल्पिक — 67router द्वारा रिपोर्ट किए जाने वाले होस्टनेम को ओवरराइड करता है; अन्यथा इसे
    # कॉन्फ़िग के पहले ingress नियम से पढ़ा जाता है:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -125,9 +125,9 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 | वेरिएबल                                              | उद्देश्य                                                                                                                                                                   |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | बाइनरी पाथ को ओवरराइड करता है। यदि यह सेट और मान्य है, तो OmniRoute इसे डाउनलोड करने के बजाय उपयोग करता है।                                                                |
+| `CLOUDFLARED_BIN`                                    | बाइनरी पाथ को ओवरराइड करता है। यदि यह सेट और मान्य है, तो 67router इसे डाउनलोड करने के बजाय उपयोग करता है।                                                                 |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ट्रांसपोर्ट प्रोटोकॉल (डिफ़ॉल्ट `http2`; `quic`, `auto` भी)।                                                                                                               |
-| `CLOUDFLARED_CONFIG`                                 | स्थानीय रूप से प्रबंधित cloudflared `config.yml` का पाथ। सेट होने पर, OmniRoute त्वरित टनल के बजाय एक **नामित/स्थायी** टनल (`tunnel --config <path> run`) चलाता है।        |
+| `CLOUDFLARED_CONFIG`                                 | स्थानीय रूप से प्रबंधित cloudflared `config.yml` का पाथ। सेट होने पर, 67router त्वरित टनल के बजाय एक **नामित/स्थायी** टनल (`tunnel --config <path> run`) चलाता है।         |
 | `CLOUDFLARED_HOSTNAME`                               | नामित टनल द्वारा रिपोर्ट किए गए सार्वजनिक होस्टनेम को ओवरराइड करता है (उदा. `ai.example.com`)। सेट न होने पर, इसे कॉन्फ़िगरेशन के पहले `ingress` होस्टनेम से पढ़ा जाता है। |
 
 ## 2. ngrok
@@ -175,7 +175,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 प्रतिक्रिया में असाइन किया गया `publicUrl` शामिल होता है (उदाहरण के लिए,
 `https://abcd-1234.ngrok-free.app`)। कस्टम डोमेन, क्षेत्र और नीति नियम
-ngrok डैशबोर्ड में कॉन्फ़िगर किए जाने चाहिए — OmniRoute स्वयं केवल स्थानीय
+ngrok डैशबोर्ड में कॉन्फ़िगर किए जाने चाहिए — 67router स्वयं केवल स्थानीय
 लक्ष्य URL को SDK पर अग्रेषित करता है।
 
 ## 3. Tailscale Funnel
@@ -190,14 +190,14 @@ Tailscale का सार्वजनिक-इंटरनेट निका�
 
 ### पूर्वापेक्षाएँ
 
-1. Tailscale इंस्टॉल करें (या OmniRoute को ऐसा करने दें — नीचे दिया गया `install` एंडपॉइंट देखें)।
-2. साइन इन करें (`tailscale login` या OmniRoute के `login` एंडपॉइंट के माध्यम से)।
+1. Tailscale इंस्टॉल करें (या 67router को ऐसा करने दें — नीचे दिया गया `install` एंडपॉइंट देखें)।
+2. साइन इन करें (`tailscale login` या 67router के `login` एंडपॉइंट के माध्यम से)।
 3. Tailscale एडमिन कंसोल में अपने tailnet के लिए Funnel सक्षम करें:
    <https://login.tailscale.com/admin/settings/features>।
 
 Linux और macOS पर डेमन (`tailscaled`) को नियंत्रित करने के लिए `sudo` आवश्यक है।
 POST एंडपॉइंट एक वैकल्पिक `sudoPassword` फ़ील्ड स्वीकार करते हैं, जिसे कॉल की अवधि
-के लिए OmniRoute के MITM पासवर्ड कैश (`getCachedPassword` / `setCachedPassword`) पर
+के लिए 67router के MITM पासवर्ड कैश (`getCachedPassword` / `setCachedPassword`) पर
 अग्रेषित किया जाता है। Windows,
 `C:\Program Files\Tailscale\tailscale.exe` पर मौजूद डिफ़ॉल्ट सर्विस इंस्टॉलेशन का उपयोग करता है।
 
@@ -258,7 +258,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth कॉलबैक संबंधी विचार
 
-जब आप OmniRoute को किसी टनल के माध्यम से उपलब्ध कराते हैं, तो डैशबोर्ड और OAuth प्रवाहों को
+जब आप 67router को किसी टनल के माध्यम से उपलब्ध कराते हैं, तो डैशबोर्ड और OAuth प्रवाहों को
 कॉलबैक URL को `localhost` के बजाय **सार्वजनिक** होस्टनेम के आधार पर बनाना चाहिए। अन्यथा
 OAuth प्रदाता उपयोगकर्ता को ऐसे URL पर वापस रीडायरेक्ट करता है जिस तक उसके सर्वर नहीं पहुँच सकते,
 और हैंडशेक विफल हो जाता है।
@@ -274,7 +274,7 @@ OAuth प्रदाता उपयोगकर्ता को ऐसे URL 
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-और OAuth आरंभ करने से पहले OmniRoute को पुनः चालू करें। अस्थायी Cloudflare Quick
+और OAuth आरंभ करने से पहले 67router को पुनः चालू करें। अस्थायी Cloudflare Quick
 Tunnels के लिए प्रत्येक पुनः आरंभ के बाद URL बदल जाता है, इसलिए उत्पादन में OAuth के उपयोग हेतु आरक्षित
 डोमेन वाले ngrok या Tailscale Funnel को प्राथमिकता दें।
 
@@ -289,14 +289,14 @@ Tunnels के लिए प्रत्येक पुनः आरंभ क�
 - अंतिम त्रुटि संदेश, यदि कोई हो।
 
 प्रोग्रामेटिक निगरानी के लिए प्रत्येक बैकएंड के `GET` एंडपॉइंट को पोल करें। एक से अधिक
-बैकएंड को एक साथ चलाने की अनुमति है; OmniRoute प्रत्येक को
+बैकएंड को एक साथ चलाने की अनुमति है; 67router प्रत्येक को
 स्वतंत्र रूप से ट्रैक करेगा।
 
 ## समस्या निवारण
 
 ### "cloudflared बाइनरी नहीं मिली"
 
-OmniRoute पहली बार उपयोग किए जाने पर स्वतः इंस्टॉल करने का प्रयास करता है। यदि इंस्टॉलेशन अवरुद्ध है
+67router पहली बार उपयोग किए जाने पर स्वतः इंस्टॉल करने का प्रयास करता है। यदि इंस्टॉलेशन अवरुद्ध है
 (प्रतिबंधित नेटवर्क, GitHub तक पहुँच नहीं), तो `cloudflared` को
 <https://github.com/cloudflare/cloudflared/releases> से मैन्युअल रूप से डाउनलोड करें और
 `CLOUDFLARED_BIN=/path/to/cloudflared` सेट करें।

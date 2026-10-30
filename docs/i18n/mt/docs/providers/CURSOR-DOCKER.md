@@ -4,7 +4,7 @@
 
 ---
 
-Meta OmniRoute jitħaddem ġewwa Docker, il-flussi tradizzjonali **Importa minn Cursor IDE** /
+Meta 67router jitħaddem ġewwa Docker, il-flussi tradizzjonali **Importa minn Cursor IDE** /
 `cursor-agent` ifallu għax il-container ma jistax jara l-installazzjoni ta’ Cursor
 fuq il-host. Minflok, uża **Idħol b’Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ fuq il-host. Minflok, uża **Idħol b’Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _ġewwa_ l-container.
    Fuq Docker Desktop għal macOS, id-database tal-IDE tal-host ma tkunx immuntata awtomatikament, u
    s-sistema operattiva tal-container tkun Linux anki meta l-host ikun Darwin.
-2. **M’hemmx il-binarju `cursor-agent`** — L-immaġnijiet uffiċjali ta’ OmniRoute ma jinkludux
+2. **M’hemmx il-binarju `cursor-agent`** — L-immaġnijiet uffiċjali ta’ 67router ma jinkludux
    `cursor-agent`. Qabel, Mudelli Disponibbli kien iħaddem
    `cursor-agent --list-models` permezz tax-shell u, jekk dan ifalli, juża katalgu statiku.
 3. **Binarju ħażin** — **Timmuntax** b’bind mount `cursor-agent` ta’ macOS f’container
@@ -24,11 +24,11 @@ fuq il-host. Minflok, uża **Idħol b’Cursor** (deep-control PKCE).
 
 1. Iftaħ **Dashboard → Fornituri → Cursor**.
 2. Agħżel it-tab **Idħol b’Cursor**.
-3. Ikklikkja **Idħol b’Cursor** — OmniRoute jiftaħ
+3. Ikklikkja **Idħol b’Cursor** — 67router jiftaħ
    `https://cursor.com/loginDeepControl?…` fil-browser tal-**host** tiegħek.
-4. Approva l-login fil-browser, imbagħad erġa’ lura għad-dashboard. OmniRoute
+4. Approva l-login fil-browser, imbagħad erġa’ lura għad-dashboard. 67router
    jivverifika perjodikament `api2.cursor.sh/auth/poll` sakemm jaslu t-tokens.
-5. OmniRoute jaħżen it-tokens ta’ **aċċess + tiġdid** u jġeddidhom permezz ta’
+5. 67router jaħżen it-tokens ta’ **aċċess + tiġdid** u jġeddidhom permezz ta’
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Din il-mogħdija ma teħtieġx Cursor IDE jew `cursor-agent` ġewwa l-container.
@@ -37,10 +37,10 @@ Din il-mogħdija ma teħtieġx Cursor IDE jew `cursor-agent` ġewwa l-container.
 
 B’konnessjoni li tkun illoggjata, **Mudelli Disponibbli / Sinkronizzazzjoni Awtomatika** tippreferi l-katalgu
 HTTP `AiService/AvailableModels` ta’ Cursor billi tuża t-token bearer tal-konnessjoni.
-Jekk dan ifalli, OmniRoute xorta jipprova `cursor-agent` tal-host (meta jkun preżenti), u mbagħad
+Jekk dan ifalli, 67router xorta jipprova `cursor-agent` tal-host (meta jkun preżenti), u mbagħad
 is-seed tar-reġistru statiku.
 
-OmniRoute dejjem jesponi **`auto`** fil-katalgu (muri bħala “Auto”), flimkien
+67router dejjem jesponi **`auto`** fil-katalgu (muri bħala “Auto”), flimkien
 mal-modi tar-router bi stil OpenCodex **`auto-cost`**, **`auto-balance`**, u
 **`auto-intelligence`**. Fit-trażmissjoni dawn jiġu mmappjati għall-mudell `default` ta’ Cursor
 (b’`optimization` ModelParameter għat-tliet varjanti). Ippreferi
@@ -87,7 +87,7 @@ waħedha m’għadhiex meħtieġa).
 ## Turns vojta / użu eżawrit
 
 Meta Cursor jaċċetta Run iżda ma jirritorna l-ebda test tal-assistent (ħaġa komuni meta l-użu
-premium ikun eżawrit), OmniRoute juri żball **429** azzjonabbli (indikazzjonijiet dwar il-kwota) jew
+premium ikun eżawrit), 67router juri żball **429** azzjonabbli (indikazzjonijiet dwar il-kwota) jew
 **502** bi gwida — mhux sempliċement “Il-fornitur irritorna kontenut vojt”. Fallimenti tal-istreaming
 bħal `not_found: AI Model Not Found` (tieqa tal-użu eżawrita) jiġu
 kklassifikati bħala **limitu tar-rata ta’ Cursor / użu maqbuż** u jżommu dak il-messaġġ
@@ -97,7 +97,7 @@ l-limiti tal-pjan ta’ Cursor.
 
 ## Verżjoni tal-klijent (headless)
 
-Mingħajr installazzjoni lokali ta’ `cursor-agent`, OmniRoute jirriżolvi
+Mingħajr installazzjoni lokali ta’ `cursor-agent`, 67router jirriżolvi
 `x-cursor-client-version` permezz tal-env `CURSOR_AGENT_CLI_VERSION`, imbagħad permezz ta’ scrape
 maħżun fuq id-disk tal-iskript tal-installazzjoni ta’ Cursor, u fl-aħħar permezz ta’ build id fiss. Issostitwixxi dan b’
 `CURSOR_AGENT_CLI_VERSION` meta jkun meħtieġ.

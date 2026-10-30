@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute objavljuje npm + Docker artefakte. Ove kapije pružaju provenijenciju, inventar (SBOM) i skeniranje CVE-a, sve OSS, integrisane u tokove rada izdavanja. **Prvo savjetodavni** pristup — oni izvještavaju odmah, a promovišu u blokiranje nakon prvog uspješnog izdavanja.
+67router objavljuje npm + Docker artefakte. Ove kapije pružaju provenijenciju, inventar (SBOM) i skeniranje CVE-a, sve OSS, integrisane u tokove rada izdavanja. **Prvo savjetodavni** pristup — oni izvještavaju odmah, a promovišu u blokiranje nakon prvog uspješnog izdavanja.
 
 | Kapija                | Alat                                           | Gdje                          | Blokira?                         | Izlaz                                      |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------------- | :----------------------------------------- |
@@ -39,7 +39,7 @@ Obje kapije **graciozno PRESKAČU** (izlaz 0) kada alat nedostaje ili mjerenje n
 
 - **Lanac:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Potvrđeno putem `package-lock.json` — tačno jedan paket u cijelom stablu zavisnosti (`@openai/codex-security`) deklariše `extract-zip`, i tačno jedan paket (`promptfoo`) deklariše `@openai/codex-security`.
 - **Ne postoji popravljeno izdanje nigdje u lancu.** `extract-zip@2.0.1` (objavljen 2020.) je konačno izdanje paketa — ne održava se. Trenutni npm-latest (`0.1.29`) paketa `@openai/codex-security` i dalje povlači `extract-zip@2.0.1`.
-- **Nedostupno iz produkcije.** `promptfoo` je samo devDependency (nikada nije naveden pod `dependencies`), i nijedna datoteka pod `src/`, `open-sse/`, ili `bin/` ne uvozi `extract-zip` npm paket — OmniRoute-ov vlastiti `extractZip()` pomoćnik (`src/lib/versionManager/binaryManager.ts:93`) koristi izvorne `unzip`/`tar` komande i nije povezan. `@openai/codex-security` takođe isporučuje vlastitu zaštitu od symlink-traversal-a povrh extract-zip-ovog onEntry callback-a.
+- **Nedostupno iz produkcije.** `promptfoo` je samo devDependency (nikada nije naveden pod `dependencies`), i nijedna datoteka pod `src/`, `open-sse/`, ili `bin/` ne uvozi `extract-zip` npm paket — 67router-ov vlastiti `extractZip()` pomoćnik (`src/lib/versionManager/binaryManager.ts:93`) koristi izvorne `unzip`/`tar` komande i nije povezan. `@openai/codex-security` takođe isporučuje vlastitu zaštitu od symlink-traversal-a povrh extract-zip-ovog onEntry callback-a.
 - **Nemojte** aliasirati `extract-zip` putem `package.json` `overrides` — jedina održiva zamjena je Electron-org-internal i API-nekompatibilna je sa `@openai/codex-security` vlastitim onEntry/defaultDirMode/defaultFileMode provjerama; premošćivanje bi tiho prekinulo sigurnosne provjere tog paketa.
 - **Osnovna linija:** izmjereni osv `vulnCount` (3) je već znatno ispod zamrznute `config/quality/quality-baseline.json` osnovne linije (27) — nije potrebna promjena ratcheta.
 - **Zaštita od regresije:** `tests/unit/extract-zip-14482-exposure.test.ts` potvrđuje lanac i gore navedenu invarijantu bez uvoza u produkciju; CI ne uspijeva ako se bilo šta od toga ikada pokvari (npr. budući PR učini `extract-zip` dostupnim iz produkcije).

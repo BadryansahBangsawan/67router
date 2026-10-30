@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute verfügt über **vier Anmeldedatenfamilien**, die Verwaltungsrouten autorisieren können.
+67router verfügt über **vier Anmeldedatenfamilien**, die Verwaltungsrouten autorisieren können.
 Sie sind nicht austauschbar. Inferenz-API-Schlüssel (`sk-…`) verwalten den
 Server **nicht**, sofern ihnen nicht ausdrücklich der Geltungsbereich `manage` oder `admin` gewährt wurde.
 

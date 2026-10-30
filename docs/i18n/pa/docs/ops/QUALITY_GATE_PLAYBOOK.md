@@ -4,7 +4,7 @@
 
 ---
 
-> **ਇਹ ਦਸਤਾਵੇਜ਼ ਕੀ ਹੈ।** OmniRoute ਦੇ quality-gate ਸਿਸਟਮ ਦਾ ਇੱਕ ਆਲੋਚਨਾਤਮਕ ਮੁਲਾਂਕਣ,
+> **ਇਹ ਦਸਤਾਵੇਜ਼ ਕੀ ਹੈ।** 67router ਦੇ quality-gate ਸਿਸਟਮ ਦਾ ਇੱਕ ਆਲੋਚਨਾਤਮਕ ਮੁਲਾਂਕਣ,
 > ਜਿਸਦੀ ਤੁਲਨਾ ਉਦਯੋਗ ਦੀਆਂ ਸਰਵੋਤਮ ਪ੍ਰਥਾਵਾਂ ਨਾਲ ਕੀਤੀ ਗਈ ਹੈ, **ਨਾਲ ਹੀ** ਸਾਰੇ quality
 > checkpoints ਦੀ ਇੱਕ ਵਿਆਪਕ ਸੂਚੀ ਅਤੇ ਉਸੇ ਸਿਸਟਮ ਨੂੰ
 > ਕਿਸੇ ਵੀ ਪ੍ਰੋਜੈਕਟ 'ਤੇ ਲਾਗੂ ਕਰਨ ਲਈ ਇੱਕ **ਟੂਲ-ਨਿਰਪੱਖ ਨਕਲ ਯੋਜਨਾ**। ਅਸਲ repository ਸਥਿਤੀ ਤੋਂ 2026-06-16 ਨੂੰ ਤਿਆਰ ਕੀਤਾ ਗਿਆ (ਯਾਦਦਾਸ਼ਤ ਤੋਂ ਨਹੀਂ)।
@@ -101,62 +101,62 @@
 
 ### 1. ਸ਼ੈਲੀ ਅਤੇ ਫਾਰਮੈਟਿੰਗ (ਨਿਰਧਾਰਿਤ, ਤੇਜ਼)
 
-- **OmniRoute:** lint-staged ਰਾਹੀਂ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
+- **67router:** lint-staged ਰਾਹੀਂ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
 - **ਆਮ:** ਇੱਕ ਆਪਣੇ-ਆਪ ਠੀਕ ਕੀਤਾ ਜਾ ਸਕਣ ਵਾਲਾ ਫਾਰਮੈਟਰ + ਇੱਕ ਲਿੰਟਰ, ਜੋ staged ਫਾਈਲਾਂ ਉੱਤੇ pre-commit ਵਿੱਚ ਚੱਲੇ।
 
 ### 2. ਟਾਈਪ
 
-- **OmniRoute:** `typecheck:core` (ਰੋਕਣ ਵਾਲਾ) + `typecheck:noimplicit:core` (ਸਲਾਹਕਾਰ) + `type-coverage` ਰੈਚਟ 92.17% + ਪ੍ਰਤੀ-ਫਾਈਲ any-ਬਜਟ।
+- **67router:** `typecheck:core` (ਰੋਕਣ ਵਾਲਾ) + `typecheck:noimplicit:core` (ਸਲਾਹਕਾਰ) + `type-coverage` ਰੈਚਟ 92.17% + ਪ੍ਰਤੀ-ਫਾਈਲ any-ਬਜਟ।
 - **ਆਮ:** CI ਵਿੱਚ ਸਖ਼ਤ ਟਾਈਪ-ਜਾਂਚ + ਰੈਚਟ ਕੀਤਾ type-coverage ਮੈਟ੍ਰਿਕ + ਪ੍ਰਤੀ-ਫਾਈਲ `any`/escape-hatch ਬਜਟ।
 
 ### 3. ਟੈਸਟ (ਤੀਬਰਤਾ)
 
-- **OmniRoute:** 2 ਗੈਰ-ਓਵਰਲੈਪਿੰਗ ਰਨਰ (Node native + vitest), 8 shards, ਗਲੋਬਲ ਕਵਰੇਜ 60/60/60/60 + ਰੈਚਟ ~76% + **ਨਾਜ਼ੁਕ ਮੋਡੀਊਲਾਂ ਲਈ 8 ਪ੍ਰਤੀ-ਮੋਡੀਊਲ ਘੱਟੋ-ਘੱਟ ਹੱਦਾਂ** + ਰਾਤਰੀ property ਟੈਸਟ + ਰਾਤਰੀ **mutation testing**।
+- **67router:** 2 ਗੈਰ-ਓਵਰਲੈਪਿੰਗ ਰਨਰ (Node native + vitest), 8 shards, ਗਲੋਬਲ ਕਵਰੇਜ 60/60/60/60 + ਰੈਚਟ ~76% + **ਨਾਜ਼ੁਕ ਮੋਡੀਊਲਾਂ ਲਈ 8 ਪ੍ਰਤੀ-ਮੋਡੀਊਲ ਘੱਟੋ-ਘੱਟ ਹੱਦਾਂ** + ਰਾਤਰੀ property ਟੈਸਟ + ਰਾਤਰੀ **mutation testing**।
 - **ਆਮ:** ਟੈਸਟ ਰਨਰ + **ਪੂਰਨ** ਕਵਰੇਜ ਦੀ ਘੱਟੋ-ਘੱਟ ਹੱਦ (ਜ਼ੀਰੋ-ਵਿਰੋਧੀ) + ਕਵਰੇਜ **ਰੈਚਟ** (ਰਿਗ੍ਰੈਸ਼ਨ-ਵਿਰੋਧੀ) + **ਉੱਚ-ਜੋਖਮ ਕੋਡ ਲਈ ਪ੍ਰਤੀ-ਮੋਡੀਊਲ ਘੱਟੋ-ਘੱਟ ਹੱਦਾਂ** (Goodhart-ਵਿਰੋਧੀ) + ਸ਼ੁੱਧ ਲੌਜਿਕ ਲਈ property-based ਟੈਸਟਿੰਗ + ਟੈਸਟ ਗੁਣਵੱਤਾ ਦੇ ਅਸਲ ਮਾਪ ਵਜੋਂ ਰਾਤਰੀ **mutation testing**।
 
 ### 4. ਟੈਸਟ ਨੀਤੀ (ਹੇਰਾਫੇਰੀ-ਵਿਰੋਧੀ)
 
-- **OmniRoute:** `pr-test-policy` (ਪ੍ਰੋਡਕਸ਼ਨ ਕੋਡ ਲਈ ਟੈਸਟ ਲਾਜ਼ਮੀ), `check-test-masking` (ਕਮਜ਼ੋਰ ਕੀਤੀਆਂ assertions ਨੂੰ ਰੋਕਦਾ ਹੈ), `pr-evidence` (ਸਫਲਤਾ ਦੇ ਦਾਅਵੇ ਲਈ evidence block ਲਾਜ਼ਮੀ), `test-discovery` (ਹਰ ਟੈਸਟ ਕਿਸੇ ਰਨਰ ਵੱਲੋਂ ਇਕੱਠਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ)।
+- **67router:** `pr-test-policy` (ਪ੍ਰੋਡਕਸ਼ਨ ਕੋਡ ਲਈ ਟੈਸਟ ਲਾਜ਼ਮੀ), `check-test-masking` (ਕਮਜ਼ੋਰ ਕੀਤੀਆਂ assertions ਨੂੰ ਰੋਕਦਾ ਹੈ), `pr-evidence` (ਸਫਲਤਾ ਦੇ ਦਾਅਵੇ ਲਈ evidence block ਲਾਜ਼ਮੀ), `test-discovery` (ਹਰ ਟੈਸਟ ਕਿਸੇ ਰਨਰ ਵੱਲੋਂ ਇਕੱਠਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ)।
 - **ਆਮ:** "ਨਵਾਂ ਕੋਡ ⇒ ਨਵਾਂ ਟੈਸਟ" ਗੇਟ + ਹਟਾਈ ਗਈ assertion/tautology ਡਿਟੈਕਟਰ + ਸਬੂਤ ਦੀ ਲੋੜ (TDD ਜਾਂ living test) + ਇਹ ਗਾਰੰਟੀ ਕਿ ਕੋਈ ਟੈਸਟ globs ਤੋਂ ਬਾਹਰ orphan ਨਾ ਹੋਵੇ।
 
 ### 5. ਜਟਿਲਤਾ ਅਤੇ ਕੋਡ ਸਿਹਤ (ਰੈਚਟ)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ਪ੍ਰਤੀ-ਫਾਈਲ file-size (ਸਥਿਰ, ਸਿਰਫ਼ ਘਟਾਉਣਯੋਗ), circular-deps (ਕਸਟਮ Tarjan, ਰੋਕਣ ਵਾਲਾ)।
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ਪ੍ਰਤੀ-ਫਾਈਲ file-size (ਸਥਿਰ, ਸਿਰਫ਼ ਘਟਾਉਣਯੋਗ), circular-deps (ਕਸਟਮ Tarjan, ਰੋਕਣ ਵਾਲਾ)।
 - **ਆਮ:** ਹਰ ਸਿਹਤ ਮੈਟ੍ਰਿਕ ਨੂੰ ਰੈਚਟ ਕਰੋ (ਚੇਤਾਵਨੀਆਂ, ਦੁਹਰਾਅ, cyclomatic **ਅਤੇ** cognitive ਜਟਿਲਤਾ, dead code, ਫਾਈਲ ਆਕਾਰ, import cycles)। ਦਿਸ਼ਾ ਹਮੇਸ਼ਾ "ਪਿੱਛੇ ਨਾ ਹਟੋ" ਹੋਵੇ।
 
 ### 6. ਸਥਿਰ ਸੁਰੱਖਿਆ (SAST + ਗੁਪਤ ਜਾਣਕਾਰੀ)
 
-- **OmniRoute:** CodeQL (ਰੈਚਟ alerts = 0), gitleaks (`[extend] useDefault=true` — ਬਹੁਤ ਮਹੱਤਵਪੂਰਨ!), SonarQube, ਕਸਟਮ ਸੁਰੱਖਿਆ ਨਿਯਮ (public-creds, error-helper, route-guard-membership, route-validation)।
+- **67router:** CodeQL (ਰੈਚਟ alerts = 0), gitleaks (`[extend] useDefault=true` — ਬਹੁਤ ਮਹੱਤਵਪੂਰਨ!), SonarQube, ਕਸਟਮ ਸੁਰੱਖਿਆ ਨਿਯਮ (public-creds, error-helper, route-guard-membership, route-validation)।
 - **ਆਮ:** alert ਰੈਚਟ ਸਮੇਤ SAST (CodeQL/Sonar/semgrep) + **ਵਿਰਾਸਤ ਵਿੱਚ ਮਿਲੇ ਡਿਫਾਲਟ ruleset** ਵਾਲਾ secrets scanner (ਡਿਫਾਲਟ ਨੂੰ override ਕਰਨ ਵਾਲੀ ਕਸਟਮ config = ਅੰਨ੍ਹਾਪਣ) + ਪ੍ਰੋਜੈਕਟ-ਵਿਸ਼ੇਸ਼ Hard Rule ਸੁਰੱਖਿਆ ਗੇਟ।
 
 ### 7. ਸਪਲਾਈ-ਚੇਨ (ਨਿਰਭਰਤਾਵਾਂ)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ਉਮਰ ≥72h)।
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ਉਮਰ ≥72h)।
 - **ਆਮ:** ਬਹੁ-ਸਰੋਤ SCA + ਲਾਇਸੈਂਸ allowlist + lockfile ਅਖੰਡਤਾ ਜਾਂਚ + ਉਮਰ/typosquatting ਜਾਂਚ ਵਾਲੀ dependency allowlist + ਸਮੂਹਬੱਧ update bot।
 
 ### 8. ਸਪਲਾਈ-ਚੇਨ (ਬਿਲਡ ਅਤੇ ਰਿਲੀਜ਼)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ਹਫ਼ਤਾਵਾਰੀ), workflow ਮਜ਼ਬੂਤੀ (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ਹਫ਼ਤਾਵਾਰੀ), workflow ਮਜ਼ਬੂਤੀ (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
 - **ਆਮ:** publish ਕਰਨ ਵੇਲੇ SBOM ਬਣਾਓ + ਦਸਤਖ਼ਤਸ਼ੁਦਾ provenance (SLSA L2+) + ਨਿਰਧਾਰਤ ਸਮੇਂ ਅਨੁਸਾਰ Scorecard + ਸਾਰੇ workflows ਨੂੰ ਮਜ਼ਬੂਤ ਕਰੋ (ਘੱਟੋ-ਘੱਟ ਵਿਸ਼ੇਸ਼-ਅਧਿਕਾਰ ਵਾਲੇ tokens, non-pusher checkout ਉੱਤੇ ਕੋਈ persisted credentials ਨਹੀਂ, actions ਨੂੰ SHA ਰਾਹੀਂ pin ਕੀਤਾ ਹੋਇਆ)।
 
 ### 9. ਕੰਟਰੈਕਟ ਅਤੇ API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (ਰਾਤਰੀ contract fuzz), openapi-coverage (% ਦਸਤਾਵੇਜ਼ਬੱਧ routes, ਰੈਚਟ 38.3%), openapi-security-tiers (spec ਬਨਾਮ route-guard)।
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (ਰਾਤਰੀ contract fuzz), openapi-coverage (% ਦਸਤਾਵੇਜ਼ਬੱਧ routes, ਰੈਚਟ 38.3%), openapi-security-tiers (spec ਬਨਾਮ route-guard)।
 - **ਆਮ:** breaking-change contract diff (oasdiff/buf) + spec ਦੇ ਵਿਰੁੱਧ property-based fuzz (schemathesis) + ਰੈਚਟ ਕੀਤੀ documentation coverage + spec↔code ਇਕਸਾਰਤਾ।
 
 ### 10. ਦਸਤਾਵੇਜ਼ ਅਤੇ i18n (ਪੁਰਾਣੇ ਪੈਣ ਤੋਂ ਰੋਕਥਾਮ)
 
-- **OmniRoute:** docs-sync (ਪ੍ਰਤੀਬਿੰਬਤ versions), docs-counts-sync (ਦਸਤਾਵੇਜ਼ਾਂ ਬਨਾਮ ਕੋਡ ਵਿੱਚ ਗਿਣਤੀਆਂ), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ਰੈਚਟ 80.1%)।
+- **67router:** docs-sync (ਪ੍ਰਤੀਬਿੰਬਤ versions), docs-counts-sync (ਦਸਤਾਵੇਜ਼ਾਂ ਬਨਾਮ ਕੋਡ ਵਿੱਚ ਗਿਣਤੀਆਂ), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ਰੈਚਟ 80.1%)।
 - **ਆਮ:** ਦਸਤਾਵੇਜ਼ਾਂ ਅਤੇ ਕੋਡ ਵਿਚਕਾਰ versions/counts/env-vars ਨੂੰ ਸਿੰਕ ਕਰੋ (ਗੇਟ, ਭਰੋਸਾ ਨਹੀਂ) + ਅੰਦਰੂਨੀ links ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ + ਰੈਚਟ ਕੀਤੀ i18n coverage।
 
 ### 11. ਮਨਘੜਤ ਜਾਣਕਾਰੀ-ਵਿਰੋਧੀ / ਇਕਸਾਰਤਾ (ਦੁਰਲੱਭ ਸ਼੍ਰੇਣੀ)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ ਜੀਵੰਤ symbol), provider-consistency, fetch-targets (client fetch ⇒ ਅਸਲ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
+- **67router:** known-symbols (string dispatch ⇒ ਜੀਵੰਤ symbol), provider-consistency, fetch-targets (client fetch ⇒ ਅਸਲ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
 - **ਆਮ:** ਹਰ "duplicated source of truth" (registry, string dispatch, cross-layer references) ਲਈ ਇੱਕ ਅਜਿਹਾ ਗੇਟ ਜੋ ਸਾਬਤ ਕਰੇ ਕਿ ਦੋਵੇਂ ਪਾਸੇ ਮੇਲ ਖਾਂਦੇ ਹਨ। ਇਹ ਉਸ ਖਰਾਬੀ ਨੂੰ ਫੜਦਾ ਹੈ ਜੋ typecheck/test ਨਹੀਂ ਫੜਦੇ।
 
 ### 12. ਲਚੀਲਾਪਣ ਅਤੇ ਡੋਮੇਨ (ਉਤਪਾਦ-ਵਿਸ਼ੇਸ਼)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ਲਚੀਲਾਪਣ ਦੇ 3 ਨਿਯਮ (circuit-breaker/cooldown/lockout)।
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ਲਚੀਲਾਪਣ ਦੇ 3 ਨਿਯਮ (circuit-breaker/cooldown/lockout)।
 - **ਆਮ:** **ਆਪਣੇ** ਡੋਮੇਨ ਦੇ failure modes ਦੀ ਪਛਾਣ ਕਰੋ ਅਤੇ ਹਰੇਕ ਲਈ ਇੱਕ ਗੇਟ ਰੱਖੋ (ਭਾਵੇਂ ਉਹ ਰਾਤ ਨੂੰ ਹੀ ਚੱਲੇ)। AI apps ਲਈ: injection red-team। ਵੰਡੀਆਂ ਹੋਈਆਂ ਪ੍ਰਣਾਲੀਆਂ ਲਈ: chaos + leak + soak।
 
 ---

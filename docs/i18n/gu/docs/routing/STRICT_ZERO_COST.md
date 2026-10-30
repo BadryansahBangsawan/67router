@@ -32,7 +32,7 @@
 `filterPaidOnlyCandidates` પછી તરત):
 
 1. **`FREE_MODEL_BUDGETS`માં બિલકુલ નથી** → બાકાત. આ ખરેખર પેઇડ મૉડલો અને એવા કોઈપણ
-   પ્રદાતા/મૉડલને આવરી લે છે જેને OmniRouteએ હજી વર્ગીકૃત કર્યું નથી — નવા ઉમેદવારો શરૂઆતથી સમાવિષ્ટ
+   પ્રદાતા/મૉડલને આવરી લે છે જેને 67routerએ હજી વર્ગીકૃત કર્યું નથી — નવા ઉમેદવારો શરૂઆતથી સમાવિષ્ટ
    નહીં, પરંતુ બાકાત હોય છે.
 2. **`freeType: "keyless"`** → તરત પાસ થાય છે, **પરંતુ માત્ર એવા ઉમેદવાર માટે જે ખરેખર
    નો-ઑથ પાથ દ્વારા આવ્યો હોય** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -91,7 +91,7 @@ dispatch સમયે ખરેખર વપરાયેલું કનેક�
 (keyless-bypass કેસ A/B/C, multi-account કેસ 1-5).
 
 `discovered automatically`: યોગ્ય metadata સાથે આવતીકાલે મોકલાયેલું provider/model (catalogમાં,
-usage adapter સાથે, `hardStopGuaranteed: true`) OmniRouteને તેની જાણ થતાં જ વાપરી શકાય છે
+usage adapter સાથે, `hardStopGuaranteed: true`) 67routerને તેની જાણ થતાં જ વાપરી શકાય છે
 — કોઈ code change નહીં, કોઈ whitelist entry નહીં, આ moduleમાં સંપાદિત કરવા જેવું કશું નહીં. catalogમાંથી દૂર કરાયેલું
 પણ એ જ રીતે અદૃશ્ય થઈ જાય છે. regression proof માટે
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` જુઓ (વાસ્તવિક catalogને

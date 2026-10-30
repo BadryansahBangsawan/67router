@@ -4,18 +4,18 @@
 
 ---
 
-Dos formas de usar Cursor detrás de OmniRoute sin una sesión del IDE:
+Dos formas de usar Cursor detrás de 67router sin una sesión del IDE:
 
 1. **Proveedor `cursor-api`** (tarjeta "Cursor API", alias `cua`): un proveedor
    de clave de API que almacena una clave de API de usuario de Cursor (`crsr_…`,
    generada en `https://cursor.com/dashboard/api`). Cualquier cliente de
-   OmniRoute puede acceder a los modelos de Cursor mediante
+   67router puede acceder a los modelos de Cursor mediante
    `/v1/chat/completions` como `cursor-api/<model>` o `cua/<model>`, con las
    capas habituales de cuota, respaldo y registro. El proveedor del IDE
    (`cursor`, sesión de OAuth/IDE) no cambia.
 2. **Acceso directo de Cursor CLI**: configura Cursor CLI (`agent`) para que
-   apunte a OmniRoute, de modo que cada RPC que realice la CLI se autentique con
-   una clave de API de OmniRoute, se reenvíe a Cursor con las credenciales de
+   apunte a 67router, de modo que cada RPC que realice la CLI se autentique con
+   una clave de API de 67router, se reenvíe a Cursor con las credenciales de
    una conexión `cursor-api` y quede registrado en la página Registros.
 
 ## Por qué se intercambia la clave
@@ -63,7 +63,7 @@ Notas:
 
 - La lista de modelos de `cursor-api` procede del registro estático de Cursor
   (la misma lista que utiliza el proveedor del IDE como alternativa); no es
-  necesario instalar `cursor-agent` en el host de OmniRoute.
+  necesario instalar `cursor-agent` en el host de 67router.
 - `POST /api/providers/{id}/refresh-cursor` es únicamente para el proveedor
   `cursor` del IDE; las conexiones `cursor-api` no tienen ninguna sesión del
   IDE que renovar.
@@ -73,7 +73,7 @@ Notas:
 Para `cursor` / `cu` y `cursor-api` / `cua`, el normalizador compartido del
 nivel de esfuerzo de Claude deja intacto el identificador del modelo solicitado.
 Cursor puede anunciar un sufijo como `-low` como parte de un identificador real
-de modelo, en lugar de como un alias de nivel de esfuerzo de OmniRoute.
+de modelo, en lugar de como un alias de nivel de esfuerzo de 67router.
 El ejecutor de Cursor conserva una coincidencia exacta con el catálogo activo;
 cuando no hay coincidencia, su mecanismo actual de resolución de modelos se
 encarga de convertir el sufijo en un parámetro como alternativa.
@@ -89,19 +89,19 @@ Ruta: `src/app/api/cursor-cli/[...path]/route.ts` →
 registrado en `src/shared/constants/publicApiRoutes.ts` porque el controlador
 aplica su propia autenticación:
 
-| Ruta                                                                                                                            | Autenticación esperada del CLI       | Qué hace OmniRoute                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <clave de API de OmniRoute>` | Valida la clave, genera un JWT HS256 de 1 h (firmado con `JWT_SECRET`) y lo devuelve                                                                                                                           |
-| cualquier otra ruta (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <ese JWT>`                   | Verifica el emisor, la audiencia y la caducidad, selecciona una conexión `cursor-api` activa, sustituye el encabezado Authorization por el token de Cursor intercambiado y retransmite la respuesta al cliente |
+| Ruta                                                                                                                            | Autenticación esperada del CLI      | Qué hace 67router                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <clave de API de 67router>` | Valida la clave, genera un JWT HS256 de 1 h (firmado con `JWT_SECRET`) y lo devuelve                                                                                                                           |
+| cualquier otra ruta (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <ese JWT>`                  | Verifica el emisor, la audiencia y la caducidad, selecciona una conexión `cursor-api` activa, sustituye el encabezado Authorization por el token de Cursor intercambiado y retransmite la respuesta al cliente |
 
 El CLI decodifica `exp` de cualquier token que reciba, por lo que proporcionarle
 un token opaco hace que vuelva a realizar el intercambio antes de casi cada
-solicitud; el JWT generado evita esto. Una respuesta 401 de OmniRoute hace que
+solicitud; el JWT generado evita esto. Una respuesta 401 de 67router hace que
 el CLI vuelva a realizar el intercambio.
 
 ### Configuración
 
-1. Crea una clave de API de OmniRoute (Panel de control → Claves de API) y una
+1. Crea una clave de API de 67router (Panel de control → Claves de API) y una
    conexión `cursor-api`.
 2. Indica al CLI que use HTTP/1.1 para el flujo del agente. En
    `~/.cursor/cli-config.json`:
@@ -114,7 +114,7 @@ el CLI vuelva a realizar el intercambio.
    agente configurado por separado y solo las RPC del plano de control pasan
    por el endpoint.
 
-3. Ejecuta el CLI contra OmniRoute:
+3. Ejecuta el CLI contra 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -124,17 +124,17 @@ el CLI vuelva a realizar el intercambio.
 
 Cada salto aparece en Registros con el proveedor `cursor-api`, el tipo de
 solicitud `cursor-cli` y la ruta `/api/cursor-cli/<rpc>`, atribuido a la clave
-de API de OmniRoute y a la conexión que lo atendió.
+de API de 67router y a la conexión que lo atendió.
 
 ### Modos de fallo
 
-| Situación                                               | Respuesta al CLI                                                |
-| ------------------------------------------------------- | --------------------------------------------------------------- |
-| Clave de OmniRoute desconocida y `REQUIRE_API_KEY=true` | 401 `unauthenticated` durante el intercambio                    |
-| `REQUIRE_API_KEY=false`                                 | sesión anónima (refleja el comportamiento de `/v1/*`)           |
-| JWT de sesión caducado, externo o manipulado            | 401, el CLI vuelve a realizar el intercambio                    |
-| Clave de API de OmniRoute revocada tras el intercambio  | 401 en la siguiente RPC                                         |
-| No hay ninguna conexión `cursor-api` activa             | 503 `unavailable`                                               |
-| Cursor rechaza la clave de la conexión                  | 401 `unauthenticated`, se elimina la sesión almacenada en caché |
-| No se puede acceder al servicio ascendente              | 502 `unavailable` (mensaje saneado)                             |
-| `JWT_SECRET` no está definido                           | 503 durante el intercambio                                      |
+| Situación                                              | Respuesta al CLI                                                |
+| ------------------------------------------------------ | --------------------------------------------------------------- |
+| Clave de 67router desconocida y `REQUIRE_API_KEY=true` | 401 `unauthenticated` durante el intercambio                    |
+| `REQUIRE_API_KEY=false`                                | sesión anónima (refleja el comportamiento de `/v1/*`)           |
+| JWT de sesión caducado, externo o manipulado           | 401, el CLI vuelve a realizar el intercambio                    |
+| Clave de API de 67router revocada tras el intercambio  | 401 en la siguiente RPC                                         |
+| No hay ninguna conexión `cursor-api` activa            | 503 `unavailable`                                               |
+| Cursor rechaza la clave de la conexión                 | 401 `unauthenticated`, se elimina la sesión almacenada en caché |
+| No se puede acceder al servicio ascendente             | 502 `unavailable` (mensaje saneado)                             |
+| `JWT_SECRET` no está definido                          | 503 durante el intercambio                                      |

@@ -4,7 +4,7 @@
 
 ---
 
-Unele servicii au fost integrate în OmniRoute și eliminate ulterior deoarece persoanele care le
+Unele servicii au fost integrate în 67router și eliminate ulterior deoarece persoanele care le
 operează au solicitat acest lucru. Această pagină reprezintă evidența permanentă a acelor eliminări. Unicul său scop este
 să prevină revenirea lor accidentală: un contribuitor care găsește un fork vechi, un tarball npm
 din cache, o problemă arhivată sau o solicitare de tipul „restaurați furnizorul X” are nevoie de un loc care să precizeze **nu
@@ -17,10 +17,10 @@ solicitare, iar acea permisiune trebuie să fie indicată printr-un link din int
 
 ## Politică
 
-1. **O solicitare de eliminare din partea operatorului unui serviciu este respectată, nu negociată.** OmniRoute
+1. **O solicitare de eliminare din partea operatorului unui serviciu este respectată, nu negociată.** 67router
    nu este afiliat cu niciun serviciu din amonte. Când operatorul unui serviciu solicită
    eliminarea integrării, aceasta este eliminată, indiferent dacă integrarea folosea sau nu un API oficial.
-2. **„Eliminat” înseamnă toate suprafețele controlate de OmniRoute.** Executorul, intrarea din registru, id-ul și aliasul
+2. **„Eliminat” înseamnă toate suprafețele controlate de 67router.** Executorul, intrarea din registru, id-ul și aliasul
    furnizorului, lista de modele, endpoint-urile, variabilele de mediu, pictograma, cardurile din tabloul de bord,
    referința generată a furnizorului, `FREE_TIERS.md`, referința variabilelor de mediu, numărătorile din README,
    copiile `llm.txt`, testele dedicate și instantaneele de referință, comentariile din cod, punctele din CHANGELOG
@@ -31,7 +31,7 @@ solicitare, iar acea permisiune trebuie să fie indicată printr-un link din int
 3. **Nu reintroduceți niciodată o intrare de pe această pagină fără permisiune scrisă.** Aceasta include
    readăugarea id-ului sau a aliasului în orice catalog de furnizori, adăugarea domeniilor într-un executor,
    acceptarea unui PR al unui contribuitor care o „restaurează”, adăugarea sa în catalogul de modele gratuite sau
-   documentarea unei modalități manuale de a o accesa prin OmniRoute. Închideți astfel de PR-uri și probleme cu un
+   documentarea unei modalități manuale de a o accesa prin 67router. Închideți astfel de PR-uri și probleme cu un
    link către această pagină.
 4. **Păstrați intrarea minimală.** Înregistrați numai ceea ce îi este necesar unui evaluator pentru a recunoaște o
    reintroducere: identificatori, domenii, date și solicitarea de integrare care a efectuat eliminarea.
@@ -48,7 +48,7 @@ solicitare, iar acea permisiune trebuie să fie indicată printr-un link din int
 | 2026-08-12  | `puter`           | `pu`     | `puter.com`                                                             | Proprietarul Puter (Nariman Jelveh)                                                                                                                                              | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Furnizor bazat pe cheie API. Migrarea `152_remove_puter_provider.sql` curăță configurația stocată.                                                                                                                                                                                                                                                                                                                           |
 | 2026-09-02  | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                 | Operatorul serviciului (e-mail de asistență)                                                                                                                                     | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Furnizor fără cheie. Solicitare scrisă primită la 2026-08-30. Problemele și discuțiile dedicate au fost șterse, iar PR-urile au fost redenumite.                                                                                                                                                                                                                                                                             |
 | 2026-09-21  | `gemini-business` | `gembiz` | `business.gemini.google`                                                | Decizia proprietarului proiectului (problema [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                   | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Furnizor web bazat pe cookie-uri. Google a retras punctul final `BardFrontendService/StreamGenerate` vizat de executor; înlocuitorul (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, JWT Bearer inițializat din `__Secure-C_SES`/`csesidx`) nu poate fi construit sau validat fără un cont Gemini Enterprise/Workspace activ, de care proiectul nu dispune. A fost retras în loc să fie rescris fără verificare. |
-| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                        | Decizia proprietarului proiectului (`#14224`)                                                                                                                                    | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Furnizor autentificat prin cookie-uri, nu o retragere solicitată de operator. `studio-api.suno.ai` a fost suspendat (503); gazda activă necesită un schimb de tokenuri Clerk JWT, plus o dependență contra cost pentru rezolvarea hCaptcha, pe care OmniRoute a ales să nu o adauge pentru un singur furnizor de muzică. `kie/suno-v4.0` și `kie/suno-v3.5` (găzduite de kie.ai) nu sunt afectate și rămân acceptate.        |
+| 2026-09-21  | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                        | Decizia proprietarului proiectului (`#14224`)                                                                                                                                    | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Furnizor autentificat prin cookie-uri, nu o retragere solicitată de operator. `studio-api.suno.ai` a fost suspendat (503); gazda activă necesită un schimb de tokenuri Clerk JWT, plus o dependență contra cost pentru rezolvarea hCaptcha, pe care 67router a ales să nu o adauge pentru un singur furnizor de muzică. `kie/suno-v4.0` și `kie/suno-v3.5` (găzduite de kie.ai) nu sunt afectate și rămân acceptate.         |
 | 2026-10-10  | `opencode`        | `oc`     | `opencode.ai/zen/v1` (nivel gratuit; gazdă partajată cu `opencode-zen`) | Eliminare preventivă (decizia proprietarului proiectului), respectând solicitarea publică de eliminare adresată de operatorul OpenCode proiectului upstream 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Este eliminat doar furnizorul fără cheie „OpenCode Free”. Furnizorii autentificați `opencode-zen` și `opencode-go`, toate modelele din catalogul Zen și contractele lor de solicitare, integrările clientului OpenCode și `@omniroute/opencode-plugin*` rămân. Migrarea `207_remove_opencode_free_provider.sql` mută în Zen conexiunile vechi care conțin o cheie API și curăță configurația fără cheie.                     |
 
 ## Adăugarea unei intrări
@@ -63,5 +63,5 @@ Când sosește o nouă solicitare de eliminare:
    furnizor cu cheie API și conexiuni stocate (adăugați o migrare).
 3. Adăugați un rând în tabelul de mai sus și identificatorii în
    `tests/unit/removed-providers-blocklist.test.ts`, în același PR.
-4. Răspundeți operatorului după ce PR-ul este îmbinat, enumerând ce a fost eliminat și ce nu poate modifica OmniRoute
+4. Răspundeți operatorului după ce PR-ul este îmbinat, enumerând ce a fost eliminat și ce nu poate modifica 67router
    (versiunile npm și Docker deja publicate, istoricul git, fork-urile terțe).

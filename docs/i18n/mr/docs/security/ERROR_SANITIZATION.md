@@ -209,14 +209,14 @@ builder नंतरचे mutation सार्वजनिक projection ल�
 3. Depth cap: 4 levels पेक्षा अधिक nesting झाल्यास ते `"[truncated]"` string ने बदलले जाते.
 4. Arrays कमाल 32 elements पर्यंत मर्यादित केल्या जातात.
 
-फक्त parsed provider error body असलेल्या call sites नीच `upstreamDetails` द्यावे. अंतर्गत OmniRoute
+फक्त parsed provider error body असलेल्या call sites नीच `upstreamDetails` द्यावे. अंतर्गत 67router
 errors (SSE parse failures, रिकामा content, guardrail blocks) मध्ये ते समाविष्ट करू नये.
 
 Raw `err.stack`, `err.message`, किंवा runtime exception मधील कोणतीही string
 `upstreamDetails` ला देऊ **नका**. त्यांची प्रक्रिया upstream body शिवाय
 `errorResponse` / `buildErrorBody(code, msg)` मधूनच केली पाहिजे.
 
-निवडक upstream 4xx passthrough, client auto-recovery साठी आवश्यक असलेला provider चा सुरक्षित JSON shape आणि wording जतन करतो, परंतु तो byte-for-byte passthrough नाही: serialization पूर्वी recursive sanitizer नेहमी चालतो. Cyclic, BigInt असलेले किंवा प्रतिकूल `toJSON()` bodies बंद-सुरक्षित पद्धतीने अयशस्वी होतात आणि passthrough साठी पात्र नसतात. OCR आणि moderation साठीही हाच नियम लागू होतो; non-JSON, रिकामे किंवा चुकीचे label लावलेले upstream bodies canonical OmniRoute JSON error envelope मध्ये रूपांतरित केले जातात.
+निवडक upstream 4xx passthrough, client auto-recovery साठी आवश्यक असलेला provider चा सुरक्षित JSON shape आणि wording जतन करतो, परंतु तो byte-for-byte passthrough नाही: serialization पूर्वी recursive sanitizer नेहमी चालतो. Cyclic, BigInt असलेले किंवा प्रतिकूल `toJSON()` bodies बंद-सुरक्षित पद्धतीने अयशस्वी होतात आणि passthrough साठी पात्र नसतात. OCR आणि moderation साठीही हाच नियम लागू होतो; non-JSON, रिकामे किंवा चुकीचे label लावलेले upstream bodies canonical 67router JSON error envelope मध्ये रूपांतरित केले जातात.
 
 ## ज्ञात CodeQL मर्यादा: सानुकूल सॅनिटायझर्स ओळखले जात नाहीत
 

@@ -48,7 +48,7 @@ através de um túnel **não pode** acionar este caminho de código.
 | Linux+Firefox/Chromium | atualização da base de dados NSS de cada perfil através de `certutil -d sql:<profile>`                            |
 
 Estes são os mesmos comandos utilizados pelo `mitmproxy`, Charles Proxy, Fiddler e
-Caddy. A sua existência no OmniRoute está documentada em
+Caddy. A sua existência no 67router está documentada em
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigação na v3.8.6**:
@@ -111,7 +111,7 @@ automatização. Será removida na v3.9.
 
 **Porque o mantemos**: a importação do Zed é o método de integração inicial mais
 simples para os utilizadores que já utilizam o Zed e pretendem replicar as suas
-chaves de fornecedor no OmniRoute sem terem de as colar novamente.
+chaves de fornecedor no 67router sem terem de as colar novamente.
 
 ---
 
@@ -123,7 +123,7 @@ chaves de fornecedor no OmniRoute sem terem de as colar novamente.
 `runElevatedPowerShell` e o auxiliar partilhado `quotePowerShell`. O
 classificador de IA do Socket.dev interpreta-os como um "conjunto de
 ferramentas genérico para execução no anfitrião + elevação de privilégios".
-No OmniRoute, são utilizados apenas pelo fluxo de instalação do certificado
+No 67router, são utilizados apenas pelo fluxo de instalação do certificado
 MITM (§1) e por `execFileWithPassword` para a execução de comandos `sudo`.
 
 **Mitigação da v3.8.6**:
@@ -177,7 +177,7 @@ voluntária.
 
 ---
 
-## §5 — Reescrita de credenciais do OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Reescrita de credenciais do 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Ficheiros de origem**:
 
@@ -212,7 +212,7 @@ rawBody)`) antes de analisar o JSON. Se o segredo estiver definido, a
    explicitamente.
 
 **Por que motivo o mantemos**: o Cloud Sync é a única forma de um inquilino do
-OmniRoute Cloud centralizar as credenciais da equipa. A correção torna o modelo
+67router Cloud centralizar as credenciais da equipa. A correção torna o modelo
 de ameaças explícito: "o servidor assina, o cliente verifica e o operador adere."
 
 ---

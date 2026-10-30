@@ -4,7 +4,7 @@
 
 ---
 
-Exportação contínua e incremental dos registos de chamadas do OmniRoute para um repositório de análise externo.
+Exportação contínua e incremental dos registos de chamadas do 67router para um repositório de análise externo.
 
 O separador Logs do painel mantém o histórico de pedidos em SQLite (`call_logs`), que é limitado pela
 rotação e retenção. A exportação de registos envia periodicamente o mesmo conjunto de registos para que possa sobreviver

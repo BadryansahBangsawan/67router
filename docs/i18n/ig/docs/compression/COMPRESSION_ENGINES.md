@@ -4,7 +4,7 @@
 
 ---
 
-Mkpachịkọta OmniRoute e wuru ya gburugburu nkwekọrịta injin. Ụdị nwere ike ịgba otu injin ozugbo (`caveman` ma ọ bụ `rtk`) ma ọ bụ usoro pipeline a chịkọtara ọnụ nke na-eme ọtụtụ injin n'usoro.
+Mkpachịkọta 67router e wuru ya gburugburu nkwekọrịta injin. Ụdị nwere ike ịgba otu injin ozugbo (`caveman` ma ọ bụ `rtk`) ma ọ bụ usoro pipeline a chịkọtara ọnụ nke na-eme ọtụtụ injin n'usoro.
 
 ## Ụdị
 
@@ -34,7 +34,7 @@ Profaịlụ ahụ bụ **elu ụlọ, ọ bụghị ala**: `mergeCompressionPro
 
 Atụnyere na codebase a: `coding-safe` na `balanced` na-ebuli `minCompressChars` ruo n'oke ya ma na-edebe sistemụ, schemas ngwaọrụ na nsonaazụ ngwaọrụ dị ka ọ dị, ya mere nnọkọ nke na-anakọtabeghị akụkọ ihe mere eme na-akwụsị na `below_min_chars` ma injin ahụ anaghị agbanwe ihe ọ bụla. Nke ahụ bụ ihe mere ndabara ji bụrụ `aggressive` kama ịbụ profaịlụ kachasị mma.
 
-Ngwugwu ahụ na-edozi oke ihe nlereanya ya na profaịlụ ya site na nhazi gburugburu ya. OmniRoute anaghị enyefe mkpebi ahụ: ihe nkwụnye ahụ na-ejikọta ọnụ ụzọ ihe nlereanya na oke kachasị njedebe nke ngwugwu ahụ, ya mere ntọala gburugburu ebe obibi nwere ike naanị ime ka ndepụta ikike dị warara, ọ dịghị mgbe ọ ga-eme ka ọ gbasaa gafere akwụkwọ nnata OmniRoute tụrụ.
+Ngwugwu ahụ na-edozi oke ihe nlereanya ya na profaịlụ ya site na nhazi gburugburu ya. 67router anaghị enyefe mkpebi ahụ: ihe nkwụnye ahụ na-ejikọta ọnụ ụzọ ihe nlereanya na oke kachasị njedebe nke ngwugwu ahụ, ya mere ntọala gburugburu ebe obibi nwere ike naanị ime ka ndepụta ikike dị warara, ọ dịghị mgbe ọ ga-eme ka ọ gbasaa gafere akwụkwọ nnata 67router tụrụ.
 
 ## Ndebanye aha injin
 
@@ -97,7 +97,7 @@ anaghị agbakọta ndetu ahụ otu ugboro kwa ntụgharị.
 Elu dashboard bụ `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman na-akọ na `~75%` obere akara ngosi mmepụta, `65%` nkezi nchekwa mmepụta na benchmarks
-nwere oke `22-87%`, yana ngwaọrụ mkpakọ ntinye `~46%`. OmniRoute na-eji nọmba ntinye Caveman
+nwere oke `22-87%`, yana ngwaọrụ mkpakọ ntinye `~46%`. 67router na-eji nọmba ntinye Caveman
 mgbe ọ na-edekọ nchekwa ngwa ngwa/ihe gbasara; ụdị mmepụta Caveman ka bụ njirimara omume nzaghachi dị iche.
 
 ## RTK

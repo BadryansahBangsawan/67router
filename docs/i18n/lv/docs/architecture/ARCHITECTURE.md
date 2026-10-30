@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Latviešu)
+# 67router Architecture (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Pēdējoreiz atjaunināts: 2026-06-28_
 
 ## Kopsavilkums
 
-OmniRoute ir lokāla AI maršrutēšanas vārteja un informācijas panelis, kas izveidots, izmantojot Next.js.
+67router ir lokāla AI maršrutēšanas vārteja un informācijas panelis, kas izveidots, izmantojot Next.js.
 Tas nodrošina vienotu ar OpenAI saderīgu galapunktu (`/v1/*`) un maršrutē datplūsmu starp vairākiem augšupējiem pakalpojumu sniedzējiem, nodrošinot formātu pārveidošanu, rezerves pārslēgšanos, pilnvaru atsvaidzināšanu un lietojuma uzskaiti.
 
 Galvenās iespējas:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Pārlūkprogrammas informācijas panelis]
     end
 
-    subgraph Router[OmniRoute lokālais process]
+    subgraph Router[67router lokālais process]
         API[V1 saderības API\n/v1/*]
         DASH[Informācijas panelis + pārvaldības API\n/api/*]
         CORE[SSE + tulkošanas kodols\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth pakalpojumu sniedzēju moduļi (27 atsevišķi faili direktorijā `src/lib
 
 ## 5) Iegultie pakalpojumi (v3.8.4)
 
-OmniRoute var instalēt, uzraudzīt un maršrutēt pie lokāli darbojošiem MI rīku procesiem,
+67router var instalēt, uzraudzīt un maršrutēt pie lokāli darbojošiem MI rīku procesiem,
 ko sauc par **iegultajiem pakalpojumiem**. Tiek piegādāti pieci: 9Router, CLIProxyAPI, Bifrost, Mux un Dario.
 
 Arhitektūras slāņi:
@@ -438,7 +438,7 @@ nebūtu pašiem jāsaliek bloķēšanas, budžeta un atkāpšanās loģika.
 - Kvotu kešatmiņa: `src/domain/quotaCache.ts`
 - Degradācijas stāvoklis: `src/domain/degradation.ts`
 - Konfigurācijas audits: `src/domain/configAudit.ts`
-- OmniRoute atbilžu metadatu veidotājs: `src/domain/omnirouteResponseMeta.ts`
+- 67router atbilžu metadatu veidotājs: `src/domain/omnirouteResponseMeta.ts`
 - Novērtēšanas apakšsistēma: `src/domain/assessment/` — periodiski novērtēšanas darbi
 
 ### E. Autorizācijas konveijers
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Informācijas paneļa pārlūkprogramma]
     end
 
-    subgraph ContainerOrProcess[OmniRoute izpildlaiks]
+    subgraph ContainerOrProcess[67router izpildlaiks]
         Next[Next.js serveris\nPORT=20128]
         Core[SSE kodols + izpildītāji]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Visi pārējie pakalpojumu sniedzēji (tostarp pielāgoti saderīgi mezgli) izma
 ## Sniedzēja saderības matrica
 
 > **Piezīme:** Tālāk redzamā matrica ir reprezentatīvs paraugs no 351 reģistrētajiem sniedzējiem
-> OmniRoute v3.8.0. Lai iegūtu kanonisko un nepārtraukti atjaunināto sarakstu, skatiet
+> 67router v3.8.0. Lai iegūtu kanonisko un nepārtraukti atjaunināto sarakstu, skatiet
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automātiski ģenerēts) vai patiesības avotu
 > `src/shared/constants/providers.ts` (Zod-validēts ielādēšanas laikā).
 
@@ -1116,7 +1116,7 @@ Detalizēts pieprasījuma datu nosūtījuma reģistrēšanas mehānisms saglabā
 - Neapstrādāts no klienta saņemtais pieprasījums
 - Faktiski augšupejai nosūtītais tulkinātais pieprasījums
 - Nodrošinātāja atbilde, kas pārveidota JSON formātā; strāmas atbildes tiek apkopotas gala kopsavilkumā kopā ar strāmas meta datiem
-- Galīgā klienta atbilde, ko atgriež OmniRoute; strāmas atbildes tiek saglabātas tajā pašā apkopotā kopsavilkuma formātā
+- Galīgā klienta atbilde, ko atgriež 67router; strāmas atbildes tiek saglabātas tajā pašā apkopotā kopsavilkuma formātā
 
 ## Drošības-jūtīgi robežas
 

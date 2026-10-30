@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute bepaalt bij het opstarten het SQLite-stuurprogramma via een fallbackketen van 5 stappen:
+67router bepaalt bij het opstarten het SQLite-stuurprogramma via een fallbackketen van 5 stappen:
 
 1. **Meegeleverde `better-sqlite3`** (via `dependencies` in `package.json`)
    — het snelst, native binary, geïnstalleerd door `npm install` wanneer buildtools aanwezig zijn.
@@ -28,13 +28,13 @@ OmniRoute bepaalt bij het opstarten het SQLite-stuurprogramma via een fallbackke
 - **Geen buildtools**: Sommige omgevingen (zakelijke Windows-systemen zonder VS Build
   Tools, minimale Docker-images) kunnen `better-sqlite3` niet compileren. Het runtime-installatieprogramma
   haalt een vooraf gebouwde binary op uit het npm-register; de fallbackstuurprogramma's
-  zorgen ervoor dat OmniRoute zelfs opstart als dat mislukt.
+  zorgen ervoor dat 67router zelfs opstart als dat mislukt.
 - **Systemen zonder netwerktoegang**: Als het npm-register niet bereikbaar is, garanderen `node:sqlite`
   of `sql.js` basisfunctionaliteit.
 
 ## Validatie van magische bytes
 
-Voordat een tijdens runtime geïnstalleerd `.node`-bestand wordt geladen, leest OmniRoute de eerste 8
+Voordat een tijdens runtime geïnstalleerd `.node`-bestand wordt geladen, leest 67router de eerste 8
 bytes en vergelijkt deze met bekende platformmagics:
 
 | Platform               | Bytes (hex)   | Label       |
@@ -104,9 +104,9 @@ Implementatie:
 ## Topologie met één schrijver (HA niet ondersteund)
 
 De bovenstaande fallbackketen voor stuurprogramma's wordt nog steeds in **één proces** uitgevoerd. Standaard is SQLite
-in OmniRoute een systeem met **één schrijver**:
+in 67router een systeem met **één schrijver**:
 
-- Koppel niet twee OmniRoute-replica's aan hetzelfde `storage.sqlite`-bestand.
+- Koppel niet twee 67router-replica's aan hetzelfde `storage.sqlite`-bestand.
 - Een herstart van een container, een Recreate-deployment, een OOM-kill of een HEALTHCHECK-herstart beëindigt
   elke actieve SSE-sessie. Het standaardpad voert geen sessiedrain uit.
 - Livenesscontrole door een orchestrator die een trage `/healthz` als dood beschouwt, beëindigt de enige

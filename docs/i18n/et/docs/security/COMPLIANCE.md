@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute salvestab haldustoimingud, autentimissündmused, teenusepakkuja
+67router salvestab haldustoimingud, autentimissündmused, teenusepakkuja
 mandaatide elutsükli muudatused ja MCP-tööriistade väljakutsed SQLite'il
 põhinevatesse audititabelitesse. Sellel lehel kirjeldatakse, mida logitakse,
 kus andmeid hoitakse, kui kaua neid säilitatakse, kuidas API-võtmed saavad

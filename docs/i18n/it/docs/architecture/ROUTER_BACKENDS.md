@@ -15,9 +15,9 @@ Questo ADR definisce in modo preciso come i motori `ts` (nativo), `bifrost`, `cl
 Il ruolo di un motore è descritto da **due assi indipendenti**, codificati insieme nel `RouterBackendDefinition` del registro:
 
 1. **Ciclo di vita** (`RouterBackendLifecycle`) — _come viene eseguito il motore_:
-   - `in-process` — viene eseguito all'interno del processo Node di OmniRoute (la pipeline TS nativa).
-   - `supervised` — un processo figlio locale che OmniRoute installa/avvia/arresta/controlla tramite `ServiceSupervisor`, per poi utilizzarlo come connessione a un provider.
-   - `external` — un endpoint HTTP al quale OmniRoute inoltra le richieste, ma che **non** gestisce (configurato tramite un URL di base definito in una variabile di ambiente).
+   - `in-process` — viene eseguito all'interno del processo Node di 67router (la pipeline TS nativa).
+   - `supervised` — un processo figlio locale che 67router installa/avvia/arresta/controlla tramite `ServiceSupervisor`, per poi utilizzarlo come connessione a un provider.
+   - `external` — un endpoint HTTP al quale 67router inoltra le richieste, ma che **non** gestisce (configurato tramite un URL di base definito in una variabile di ambiente).
    - `disabled` — registrato ma non selezionabile.
 2. **Asse di selezione** (backend di routing del relay) — _se il relay inoltra le richieste al motore_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` in

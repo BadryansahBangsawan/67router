@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute jitwassal bħala Progressive Web App li jista’ jiġi installat kompletament. Meta taċċessa d-dashboard minn kwalunkwe browser fuq apparat mobbli — Android (Chrome) jew iOS (Safari) — tista’ tagħżel "Żid mal-Iskrin Ewlenin" u tikseb esperjenza simili għal app nattiva mingħajr il-ħtieġa ta’ app store.
+67router jitwassal bħala Progressive Web App li jista’ jiġi installat kompletament. Meta taċċessa d-dashboard minn kwalunkwe browser fuq apparat mobbli — Android (Chrome) jew iOS (Safari) — tista’ tagħżel "Żid mal-Iskrin Ewlenin" u tikseb esperjenza simili għal app nattiva mingħajr il-ħtieġa ta’ app store.
 
 ## X’Inhi PWA?
 
-Progressive Web App tittrasforma d-dashboard tal-web ta’ OmniRoute f’xi ħaġa li tidher u tinħass bħal app mobbli nattiva. Ladarba tiġi installata:
+Progressive Web App tittrasforma d-dashboard tal-web ta’ 67router f’xi ħaġa li tidher u tinħass bħal app mobbli nattiva. Ladarba tiġi installata:
 
 - Tinfetaħ mill-iskrin ewlieni tiegħek bl-ikona tagħha stess
 - Tinfetaħ fuq skrin sħiħ — mingħajr il-bar tal-indirizzi tal-browser jew l-interfaċċa tat-tabs
@@ -20,26 +20,26 @@ Progressive Web App tittrasforma d-dashboard tal-web ta’ OmniRoute f’xi ħa�
 
 ### Android (Chrome)
 
-1. Iftaħ id-dashboard ta’ OmniRoute fi Chrome: `http://YOUR_IP:20128`
-2. Chrome awtomatikament juri banner **"Żid OmniRoute mal-Iskrin Ewlenin"**, jew:
+1. Iftaħ id-dashboard ta’ 67router fi Chrome: `http://YOUR_IP:20128`
+2. Chrome awtomatikament juri banner **"Żid 67router mal-Iskrin Ewlenin"**, jew:
    - Tektek il-menu **⋮** (tliet tikek) → **"Żid mal-Iskrin Ewlenin"** jew **"Installa l-app"**
 3. Ikkonferma t-talba
-4. OmniRoute jidher fuq l-iskrin ewlieni tiegħek bħala app awtonoma
+4. 67router jidher fuq l-iskrin ewlieni tiegħek bħala app awtonoma
 
 ### iOS (Safari)
 
-1. Iftaħ id-dashboard ta’ OmniRoute f’Safari: `http://YOUR_IP:20128`
+1. Iftaħ id-dashboard ta’ 67router f’Safari: `http://YOUR_IP:20128`
 2. Tektek il-buttuna **Aqsam** (kaxxa bi vleġġa)
 3. Skrollja ’l isfel u tektek **"Żid mal-Iskrin Ewlenin"**
-4. Agħtih isem (l-isem predefinit huwa "OmniRoute") u tektek **Żid**
-5. OmniRoute jidher fuq l-iskrin ewlieni tiegħek bl-ikona tal-app
+4. Agħtih isem (l-isem predefinit huwa "67router") u tektek **Żid**
+5. 67router jidher fuq l-iskrin ewlieni tiegħek bl-ikona tal-app
 
 ### Desktop (Chrome / Edge)
 
-1. Iftaħ id-dashboard ta’ OmniRoute
-2. Ikklikkja l-**ikona tal-installazzjoni** fil-bar tal-indirizzi (jew ⋮ → "Installa OmniRoute...")
+1. Iftaħ id-dashboard ta’ 67router
+2. Ikklikkja l-**ikona tal-installazzjoni** fil-bar tal-indirizzi (jew ⋮ → "Installa 67router...")
 3. Ikkonferma t-talba
-4. OmniRoute jinfetaħ bħala tieqa awtonoma — mingħajr tabs u mingħajr bar tal-indirizzi
+4. 67router jinfetaħ bħala tieqa awtonoma — mingħajr tabs u mingħajr bar tal-indirizzi
 
 ## Karatteristiċi
 
@@ -49,7 +49,7 @@ Il-manifest huwa kkonfigurat b’`display: "fullscreen"`, li jfisser li l-app in
 
 ### Appoġġ Offline
 
-OmniRoute jinkludi service worker (`sw.js`) li jipprovdi caching intelliġenti:
+67router jinkludi service worker (`sw.js`) li jipprovdi caching intelliġenti:
 
 | Tip ta’ Assi                                                  | Strateġija                                 | Imġiba                                                                                                                |
 | ------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Meta n-network ma jkunx disponibbli u utent jinnaviga lejn paġna ġdida, is-ser
 
 ### Ikoni tal-App
 
-OmniRoute jipprovdi ikoni ottimizzati għal kull pjattaforma:
+67router jipprovdi ikoni ottimizzati għal kull pjattaforma:
 
 | Fajl                   | Daqs              | Użat Minn                                             |
 | ---------------------- | ----------------- | ----------------------------------------------------- |
@@ -94,8 +94,8 @@ Iġġenerat minn Next.js permezz ta’ `src/app/manifest.ts`:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute huwa gateway tal-AI għal LLMs minn diversi fornituri. Endpoint wieħed għall-fornituri kollha tal-AI tiegħek.",
+  "short_name": "67router",
+  "description": "67router huwa gateway tal-AI għal LLMs minn diversi fornituri. Endpoint wieħed għall-fornituri kollha tal-AI tiegħek.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Jinsab f’`src/shared/components/PwaRegister.tsx`, u dan il-komponent tal-klije
 
 ## Użu Ma’ Termux (Android)
 
-Meta tħaddem OmniRoute fuq Android permezz ta’ Termux, il-PWA taħdem bla xkiel:
+Meta tħaddem 67router fuq Android permezz ta’ Termux, il-PWA taħdem bla xkiel:
 
-1. Ibda OmniRoute f’Termux: `npx omniroute`
+1. Ibda 67router f’Termux: `npx omniroute`
 2. Iftaħ Chrome fuq l-istess telefon: `http://localhost:20128`
 3. Installa l-PWA permezz ta’ “Żid mal-Iskrin Prinċipali”
 4. Il-PWA tikkonnettja mas-server lokali ta’ Termux — kollox jitħaddem fuq l-apparat
@@ -156,7 +156,7 @@ Din il-kombinazzjoni tfisser li t-telefon Android tiegħek huwa kemm is-**server
 
 ## Użu Minn Apparati Oħra
 
-Installa l-PWA fuq kwalunkwe apparat li għandu aċċess permezz ta’ browser għas-server OmniRoute tiegħek:
+Installa l-PWA fuq kwalunkwe apparat li għandu aċċess permezz ta’ browser għas-server 67router tiegħek:
 
 - **Telefon/tablet ieħor**: Mur fuq `http://PHONE_IP:20128` u installa l-PWA
 - **Laptop**: Iftaħ Chrome/Edge u installaha bħala PWA tad-desktop

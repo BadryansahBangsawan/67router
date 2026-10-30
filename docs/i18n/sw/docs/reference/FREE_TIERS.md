@@ -9,9 +9,9 @@
 > **Utafiti wa mwisho:** 2026-06-17 — utafiti wa wavuti kwa kila mtoa huduma (nyaraka rasmi + habari za siku 7 zilizopita, ukaguzi wa mawakala 50 wenye uthibitishaji pinzani) uliosasisha kila kiwango cha matumizi bila malipo + ToS. **Ukaguzi wa sehemu uliofanywa upya 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — tazama dokezo lenye tarehe hapa chini).
 > **Chanzo cha ukweli (katalogi):** `open-sse/config/freeModelCatalog.ts` (bajeti kwa kila MODEL, zilizondolewa urudufu kulingana na hifadhi ya pamoja). Idadi za bajeti ya tokeni hapa chini zinatokana na utafiti wa moja kwa moja wa wavuti na ni **makadirio** — tazama [Mbinu na tahadhari](#methodology--caveats).
 
-## TL;DR — OmniRoute kwa kweli hujumuisha kiasi gani cha inferensi ya bure?
+## TL;DR — 67router kwa kweli hujumuisha kiasi gani cha inferensi ya bure?
 
-Takwimu hizi zinaelezea akaunti tofauti za wahusika wengine na masharti ya ustahiki katika katalogi nzima. OmniRoute haitoi bajeti hii: ni lazima upate akaunti au vitambulisho vinavyohitajika, uunganishe watoa huduma wanaostahiki, na uzingatie vikomo vyao. Uwezo halisi unaoweza kutumika unaweza kuwa mdogo zaidi, ikiwemo sifuri kwenye usakinishaji mpya usio na njia yoyote inayostahiki. Watoa huduma waliowekewa alama `tos: avoid` huondolewa kwenye uelekezaji wa kiotomatiki kwa chaguo-msingi.
+Takwimu hizi zinaelezea akaunti tofauti za wahusika wengine na masharti ya ustahiki katika katalogi nzima. 67router haitoi bajeti hii: ni lazima upate akaunti au vitambulisho vinavyohitajika, uunganishe watoa huduma wanaostahiki, na uzingatie vikomo vyao. Uwezo halisi unaoweza kutumika unaweza kuwa mdogo zaidi, ikiwemo sifuri kwenye usakinishaji mpya usio na njia yoyote inayostahiki. Watoa huduma waliowekewa alama `tos: avoid` huondolewa kwenye uelekezaji wa kiotomatiki kwa chaguo-msingi.
 
 **Ilikaguliwa 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) hutoa salio la promosheni la mara moja la $5 linalohitaji njia ya malipo na kuisha baada ya siku 30. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) huchapisha vikomo vya kasi vya mradi/modeli/kiwango; bado haijajumuishwa katika takwimu kuu ya kila mwezi.
 
@@ -92,7 +92,7 @@ salio sifuri la bila malipo. Mabadiliko ya Nous yamefafanuliwa katika dokezo la 
 
 ## Mifumo miwili — kuhesabu dhidi ya kuamua
 
-OmniRoute hujibu "je, ni bila malipo?" kupitia mifumo miwili ambayo kwa makusudi husoma
+67router hujibu "je, ni bila malipo?" kupitia mifumo miwili ambayo kwa makusudi husoma
 vyanzo tofauti:
 
 | Mfumo                    | Chanzo cha ukweli                                                                                                                                                                     | Sehemu zinazoathiriwa                                                                                                                                |
@@ -140,7 +140,7 @@ Idadi nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya v
 
 ### ⚠️ Tahadhari — vipengele vya matumizi binafsi / proksi vinavyostahili kukaguliwa (16)
 
-> Ufikiaji wao usiolipishwa ni halisi na OmniRoute inaweza kuelekeza maombi kwao; vipengele vilivyo hapa chini ni vya kufahamu tu. Vile vya OAuth/visivyohitaji ufunguo haviwezi kupimwa kwa tokeni, kwa hivyo havijajumuishwa katika idadi ya kichwa kikuu (si kwa sababu haviwezi kutumika).
+> Ufikiaji wao usiolipishwa ni halisi na 67router inaweza kuelekeza maombi kwao; vipengele vilivyo hapa chini ni vya kufahamu tu. Vile vya OAuth/visivyohitaji ufunguo haviwezi kupimwa kwa tokeni, kwa hivyo havijajumuishwa katika idadi ya kichwa kikuu (si kwa sababu haviwezi kutumika).
 
 | Mtoa huduma      | Dokezo                                                                                                                                                                                                                      |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Idadi nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya v
 | `fireworks`      | ToS inapiga marufuku waziwazi matumizi ya proksi/mpatanishi, uhamishaji wa funguo za API na utoaji wa leseni ndogo (Sehemu za 2.1 na 2.2(i)(j)); proksi binafsi zinazopangishwa na mtumiaji mwenyewe haz…                   |
 | `friendliai`     | Sehemu ya 8(e) na 8(f) ya ToS inapiga marufuku waziwazi kutumia FriendliAI kama proksi au kuruhusu ufikiaji wa wahusika wengine kama huduma inayojitegemea, na inapiga marufuku kuuza tena/…                                |
 | `iflytek`        | Sehemu ya 2.4(3) ya iFlytek Spark LLM Service Agreement inapiga marufuku waziwazi "kutumia mbinu zozote za kiotomatiki au za kiprogramu kutoa data au matokeo…                                                              |
-| `kiro`           | FAQ ya Kiro inapiga marufuku waziwazi matumizi pamoja na "OpenClaw na zana zinazofanana zinazotumia mifumo ya wahusika wengine" — proksi ya AI inayopangishwa na mtumiaji mwenyewe (kama OmniRoute) inayoel…                |
+| `kiro`           | FAQ ya Kiro inapiga marufuku waziwazi matumizi pamoja na "OpenClaw na zana zinazofanana zinazotumia mifumo ya wahusika wengine" — proksi ya AI inayopangishwa na mtumiaji mwenyewe (kama 67router) inayoel…                 |
 | `modal`          | Sehemu ya 1.3 ya ToS inapiga marufuku waziwazi "kukodisha, kuuza tena au kuruhusu kwa namna nyingine mhusika yeyote mwingine kufikia moja kwa moja au kutumia Huduma" — kujenga huduma inayopangishwa na mtumiaji mwenyewe… |
 | `muse-spark-web` | ToS ya Meta inapiga marufuku waziwazi ufikiaji wa kiotomatiki bila ruhusa ya awali, uhandisi kinyume bila ruhusa iliyoandikwa na kukwepa teknolojia…                                                                        |
 | `nlpcloud`       | ToS inapiga marufuku waziwazi "kuanzisha proksi au kifaa kingine kinachowaruhusu wengine kufikia Huduma kupitia kifaa hicho" na inatoa tu haki isiyoweza kuhamishwa,…                                                       |
@@ -316,7 +316,7 @@ Idadi nyingi za "tokeni zisizolipishwa kwa mwezi" katika eneo hili ni jumla ya v
 
 - **`360ai`** — freeNote iliyotolewa "Miundo ya Free 360 AI Brain" inaonekana imepitwa na wakati. Ufikiaji wa sasa unahitaji maombi na ni wa kulipia. Tokeni za matangazo za kipindi cha uzinduzi wa 2023 (100M–250M mara moja) huenda ndizo zilizokuwa msingi wa…
 - **`agentrouter`** — freeNote yetu iliyotolewa inasema "$200 za salio la bila malipo unapojisajili." Hali ya sasa inaonyesha kuwa wanaojisajili kwa njia ya kawaida (bila rufaa) hupokea $100 pekee; wanaojisajili kupitia rufaa wanaweza kupata $200 lakini maoni ya jumuiya kutoka Aprili 2026…
-- **`agy`** — freeNote yetu iliyotolewa inasema "(hakuna)" ikimaanisha hakuna kiwango cha bila malipo, lakini Antigravity ina kiwango cha bila malipo kinachohitaji OAuth. Hata hivyo, ToS inakataza waziwazi kutumia kiwango hiki cha bila malipo kupitia proksi kama OmniRoute …
+- **`agy`** — freeNote yetu iliyotolewa inasema "(hakuna)" ikimaanisha hakuna kiwango cha bila malipo, lakini Antigravity ina kiwango cha bila malipo kinachohitaji OAuth. Hata hivyo, ToS inakataza waziwazi kutumia kiwango hiki cha bila malipo kupitia proksi kama 67router …
 - **`ai21`** — Imebanwa zaidi: muda wa majaribio umepunguzwa kutoka "miezi 3" hadi siku 7. Kiasi cha salio cha $10 hakijabadilika, lakini muda wake wa uhalali umeshuka sana kutoka takribani siku 90 hadi siku 7.
 - **`aimlapi`** — Imebadilika kwa kiasi kikubwa. freeNote iliyotolewa ilitangaza "$0.025/siku katika salio la bila malipo — miundo 200+" lakini kiwango cha bila malipo sasa kimesitishwa/kimekomeshwa. Mgao wa salio wa $0.025/siku (salio 50,000/siku, maombi 10/s…
 - **`amazon-q`** — freeNote yetu iliyotolewa inasema "(hakuna)" — hali halisi ni mbaya zaidi: bidhaa sasa imekomeshwa kwa usajili mpya (Mei 15, 2026). Hapo awali kiwango cha bila malipo kilitoa maombi 50 ya kiwakala/mwezi + maombi ya ndani yasiyo na kik…

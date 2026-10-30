@@ -4,7 +4,7 @@
 
 ---
 
-Futtassa az `omniroute` CLI-t a laptopján, miközben maga az OmniRoute valahol máshol fut
+Futtassa az `omniroute` CLI-t a laptopján, miközben maga az 67router valahol máshol fut
 (egy VPS-en, otthoni szerveren vagy egy másik gépen a Tailnet hálózatán). Egyszer jelentkezik be az
 `omniroute connect` paranccsal, ezután pedig **minden** CLI-parancs azt a távoli
 szervert célozza — ugyanazok a parancsok, ugyanaz a kimenet, csak a végrehajtás történik a távoli gépen.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← helyi Codex-profilt ír a távoli
 ## Működés
 
 ```
-az Ön laptopja                           távoli OmniRoute (VPS)
+az Ön laptopja                           távoli 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (jelszó → token)           │
 │  környezet: vps    │ ───────────────►  │ hatókörös hozzáférési tokent  │
@@ -101,13 +101,13 @@ Az elégtelen hatókörű token `403` választ kap egy egyértelmű üzenettel.
 ## Az Antigravity csatlakoztatása távoli telepítés esetén
 
 Az Antigravity a Google firstparty/nativeapp hozzájárulási képernyőjét használja. A Google csak akkor adja ki az engedélyezési kódot, ha a **loopback átirányítás**
-(`http://127.0.0.1:<port>/callback`) **elérhető abból a böngészőből, amelyben jóváhagyják a bejelentkezést**. Távoli VPS-telepítés esetén ez a loopback a kiszolgálón található, nem az Ön gépén, ezért a hozzájárulási képernyő **örökre függőben marad, és soha nem ad ki kódot** — így a szokásos „illessze be a visszahívási URL-t” tartalékmegoldásnál nincs mit beilleszteni. (Ez a Google oldalán fennálló korlátozás: ugyanez történik minden olyan proxyban, amely a mellékelt Antigravity asztali klienst használja, nem csak az OmniRoute-ban.)
+(`http://127.0.0.1:<port>/callback`) **elérhető abból a böngészőből, amelyben jóváhagyják a bejelentkezést**. Távoli VPS-telepítés esetén ez a loopback a kiszolgálón található, nem az Ön gépén, ezért a hozzájárulási képernyő **örökre függőben marad, és soha nem ad ki kódot** — így a szokásos „illessze be a visszahívási URL-t” tartalékmegoldásnál nincs mit beilleszteni. (Ez a Google oldalán fennálló korlátozás: ugyanez történik minden olyan proxyban, amely a mellékelt Antigravity asztali klienst használja, nem csak az 67router-ban.)
 
 Az irányítópult ezt még az elakadás előtt észleli: ha nem localhost-címről nyitja meg a **Providers → Antigravity →
 Connect** lehetőséget, az általános „másolja ki a visszahívási URL-t” értesítés helyett az alábbi két megoldás jelenik meg, már kitöltve az Ön gépnevével és portjával.
 (A LAN-cím is ide tartozik — ennél a visszahívásnál a `192.168.x.x` nem számít localhostnak.)
 
-Az Antigravity két támogatott módon csatlakoztatható egy távoli OmniRoute-hoz.
+Az Antigravity két támogatott módon csatlakoztatható egy távoli 67router-hoz.
 
 ### A lehetőség — helyi bejelentkezési segédprogram (ajánlott)
 
@@ -135,7 +135,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-Ezután a **távoli** irányítópulton nyissa meg a **Providers → Antigravity → Connect** lehetőséget, majd illessze be az `omniroute-cred-v1.…` blobot a **Step 2** mezőbe (a mező visszahívási URL-t és hitelesítőadat-blobot egyaránt elfogad). Az OmniRoute dekódolja, kiszolgálóoldalon lefuttatja a Cloud Code bevezetési folyamatát, majd tartósan menti a kapcsolatot.
+Ezután a **távoli** irányítópulton nyissa meg a **Providers → Antigravity → Connect** lehetőséget, majd illessze be az `omniroute-cred-v1.…` blobot a **Step 2** mezőbe (a mező visszahívási URL-t és hitelesítőadat-blobot egyaránt elfogad). Az 67router dekódolja, kiszolgálóoldalon lefuttatja a Cloud Code bevezetési folyamatát, majd tartósan menti a kapcsolatot.
 
 > A blob frissítési tokent tartalmaz — kezelje úgy, mint egy jelszót. Továbbítás esetén egyszer küldi el a rendszer a környezet hitelesített kapcsolatán keresztül; beillesztés esetén pedig az irányítópult kapcsolatán keresztül. Mindkét esetben titkosítva tárolódik, és sikeres továbbításkor soha nem jelenik meg a terminálban.
 
@@ -165,7 +165,7 @@ Az alábbi, rögzített loopbacket használó szolgáltatóktól eltérően itt 
 ## A Codex / Grok csatlakoztatása távoli telepítéshez (rögzített visszacsatolási címet használó szolgáltatók)
 
 A Codex, az xAI (`xai-oauth`) és a Grok CLI (`grok-cli`) egy **rögzített** loopback
-`redirect_uri` címet regisztrál a külső OAuth-alkalmazásában. Az OmniRoute ezt nem tudja módosítani — a
+`redirect_uri` címet regisztrál a külső OAuth-alkalmazásában. Az 67router ezt nem tudja módosítani — a
 szolgáltató mindig ugyanarra a beégetett címre irányítja vissza a böngészőt:
 
 | Szolgáltató | Rögzített visszahívási cím, amelyre a szolgáltató átirányít |
@@ -174,7 +174,7 @@ szolgáltató mindig ugyanarra a beégetett címre irányítja vissza a böngés
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                           |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                           |
 
-A `localhost` itt **a böngészőt futtató gépet** jelenti, miközben az OmniRoute PKCE
+A `localhost` itt **a böngészőt futtató gépet** jelenti, miközben az 67router PKCE
 visszahívási szervere a **szerver** loopback interfészén figyel. Ha az irányítópultot egy LAN-címen,
 például a `http://192.168.0.15:20128` címen nyitja meg, a kettő soha nem találkozik: az engedélyezési
 kód a saját laptopja `localhost:1455` címére érkezik, ahol semmi sem figyel,
@@ -194,7 +194,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Két továbbítás szükséges; ha csak az egyiket továbbítja, a folyamat továbbra is sikertelen lesz:
 
 - A **`20128`** (az irányítópult portja) valódi helyi localhost eredetet biztosít, ami
-  szükséges ahhoz, hogy az OmniRoute egyáltalán elindítsa a PKCE visszahívási szervert — LAN-eredet esetén
+  szükséges ahhoz, hogy az 67router egyáltalán elindítsa a PKCE visszahívási szervert — LAN-eredet esetén
   ez az ág soha nem érhető el.
 - A **`1455`** (a szolgáltató rögzített visszahívási portja) az a cím, ahová a böngészőt visszairányítják;
   ezt alagúton keresztül továbbítani kell a szerver loopback interfészére.
@@ -313,7 +313,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

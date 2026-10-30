@@ -6,7 +6,7 @@
 
 ## Sommarju
 
-OmniRoute issa jappoġġja tliet modi ta’ relay għal `/api/v1/relay/chat/completions`:
+67router issa jappoġġja tliet modi ta’ relay għal `/api/v1/relay/chat/completions`:
 
 - `ts`: Uża r-relay TypeScript fl-istess proċess.
 - `bifrost`: Ġiegħel l-użu tal-gateway Bifrost.
@@ -45,12 +45,12 @@ Jekk bħalissa qed tqabbel 9router/CLIPROXYAPI:
 
 ## Kuntratt tal-konfini tal-backend
 
-Il-konfini stabbli tal-prodott huma l-API tar-relay ta’ OmniRoute, mhux l-implimentazzjoni tad-dashboard. Id-dashboard ta’ Next.js jista’ jinstalla, jikkonfigura, u jissorvelja servizzi lokali, iżda r-routing tat-talbiet għandu jidħol permezz tal-API tar-relay u jgħaddi lil backend wara dawk il-konfini.
+Il-konfini stabbli tal-prodott huma l-API tar-relay ta’ 67router, mhux l-implimentazzjoni tad-dashboard. Id-dashboard ta’ Next.js jista’ jinstalla, jikkonfigura, u jissorvelja servizzi lokali, iżda r-routing tat-talbiet għandu jidħol permezz tal-API tar-relay u jgħaddi lil backend wara dawk il-konfini.
 
 Għażliet tal-backend fit-tul:
 
 - Żomm ir-relay TypeScript bħala l-mogħdija fl-istess proċess għall-politiki u għall-fallback. L-awtentikazzjoni, l-allowlists, in-normalizzazzjoni tat-talbiet, il-kontabbiltà, u l-kontrolli tas-sikurezza jibqgħu hawn qabel kwalunkwe trasferiment lil backend.
-- Uża Bifrost bħala s-sidecar Tier-1 preferut għal throughput għoli meta d-deployment ikun jeħtieġ varjanza aktar baxxa fir-routing, rotazzjoni ċentralizzata tal-fornituri, jew scale-out fost diversi repliki ta’ OmniRoute.
+- Uża Bifrost bħala s-sidecar Tier-1 preferut għal throughput għoli meta d-deployment ikun jeħtieġ varjanza aktar baxxa fir-routing, rotazzjoni ċentralizzata tal-fornituri, jew scale-out fost diversi repliki ta’ 67router.
 - Żomm 9router u CLIPROXYAPI bħala servizzi integrati ta’ kompatibbiltà. Dawn jitħaddmu bħala proċessi lokali sorveljati u jkunu utli meta l-imġiba tagħhom għall-fornitur/CLI tkun l-adapter mixtieq, iżda ma għandhomx isiru l-magna awtomatika tar-routing Tier-1.
 - Tħallix lid-dashboard jgħaddi URLs arbitrarji ta’ servizzi lill-mogħdija kritika. L-URLs ipprovduti mill-UI huma inputs ta’ konfigurazzjoni; il-kodiċi tar-routing għandu jsib backends irreġistrati u kkontrollati għas-saħħa permezz tas-settings tan-naħa tas-server u tal-istat tas-superviżur.
 - Illum ippreferi HTTP fuq loopback għal servizzi sorveljati, għaliex il-proċessi ġestiti diġà jesponu APIs kompatibbli ma’ HTTP, il-gwardja tar-rotta tista’ tawditja l-konfini, u l-imġiba ta’ falliment/fallback tkun viżibbli fir-reġistri tat-talbiet. Trasport futur permezz ta’ SDK jew socket ikun siewi biss jekk inaqqas b’mod li jista’ jitkejjel il-latenza p99 tar-routing mingħajr ma jdgħajjef l-iżolament jew is-semantika tal-fallback.

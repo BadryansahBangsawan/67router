@@ -4,7 +4,7 @@
 
 ---
 
-Ce guide explique comment ajouter des comptes Kiro (assistant de programmation IA hébergé par AWS) à OmniRoute, en mettant l’accent sur l’utilisation simultanée de plusieurs comptes sans conflits de session.
+Ce guide explique comment ajouter des comptes Kiro (assistant de programmation IA hébergé par AWS) à 67router, en mettant l’accent sur l’utilisation simultanée de plusieurs comptes sans conflits de session.
 
 ---
 
@@ -17,9 +17,9 @@ Il s’agit du même mécanisme qui provoque des problèmes lors de l’exécuti
 
 ---
 
-## Comment OmniRoute résout ce problème (v3.8.0+)
+## Comment 67router résout ce problème (v3.8.0+)
 
-À partir de la v3.8.0, OmniRoute appelle `registerClient()` (AWS SSO OIDC) lors de chaque importation de connexion Kiro. Chaque connexion OmniRoute dispose ainsi de sa propre inscription de client OIDC dédiée. Comme chaque inscription de client est indépendante, l’actualisation ou la réauthentification d’un compte n’affecte le jeton d’actualisation d’aucun autre compte.
+À partir de la v3.8.0, 67router appelle `registerClient()` (AWS SSO OIDC) lors de chaque importation de connexion Kiro. Chaque connexion 67router dispose ainsi de sa propre inscription de client OIDC dédiée. Comme chaque inscription de client est indépendante, l’actualisation ou la réauthentification d’un compte n’affecte le jeton d’actualisation d’aucun autre compte.
 
 L’isolation s’applique aux méthodes d’importation de jetons d’actualisation, tandis que l’authentification par clé API évite entièrement les sessions d’actualisation OIDC :
 
@@ -45,7 +45,7 @@ Les connexions importées avant la v3.8.0 ne disposent pas d’une inscription d
 
 ### Prérequis
 
-- OmniRoute v3.8.0 ou version ultérieure.
+- 67router v3.8.0 ou version ultérieure.
 - Un compte Kiro fonctionnel (connexion par adresse e-mail et mot de passe, Google ou GitHub).
 - Éventuellement, un deuxième compte Kiro.
 
@@ -56,7 +56,7 @@ Les connexions importées avant la v3.8.0 ne disposent pas d’une inscription d
    - **Importer un jeton** — collez un jeton d’actualisation commençant par `aorAAAAAG`.
    - **Clé API** — collez une clé API Kiro / CodeWhisperer de longue durée.
    - **Connexion Google / GitHub** — terminez le flux OAuth dans le navigateur.
-   - **Importation automatique** — cliquez sur le bouton ; OmniRoute lit les identifiants depuis la base de données kiro-cli locale ou `~/.aws/sso/cache`.
+   - **Importation automatique** — cliquez sur le bouton ; 67router lit les identifiants depuis la base de données kiro-cli locale ou `~/.aws/sso/cache`.
 3. La connexion est enregistrée. Les flux utilisant un jeton d’actualisation inscrivent automatiquement un client OIDC dédié. Les flux utilisant une clé API valident la clé auprès d’AWS et ne stockent aucun jeton d’actualisation.
 
 ### Étape 2 : importer le deuxième compte
@@ -107,7 +107,7 @@ n’utilise pas l’actualisation OAuth, ce qui évite l’invalidation des sess
 2. Choisissez **Clé API**.
 3. Collez la clé API et sélectionnez la région AWS : **Détection automatique** (par défaut), **USA Est
    (Virginie du Nord)** ou **Europe (Francfort)**.
-4. OmniRoute valide la clé et enregistre la connexion en l’associant à la région dans laquelle la
+4. 67router valide la clé et enregistre la connexion en l’associant à la région dans laquelle la
    clé fonctionne.
 
 ### API
@@ -156,7 +156,7 @@ comme un jeton d’accès OIDC ou social. `KiroExecutor.execute()` envoie les re
 
 ## Expiration du client OIDC
 
-Les clients publics AWS SSO OIDC expirent généralement après 90 jours (`clientSecretExpiresAt`). OmniRoute stocke cet horodatage dans `providerSpecificData` à des fins d’observabilité. Si l’actualisation d’une connexion cesse de fonctionner après environ 90 jours, réimportez la connexion afin d’obtenir un nouvel enregistrement de client OIDC. La réinscription automatique à l’expiration est prévue comme amélioration future.
+Les clients publics AWS SSO OIDC expirent généralement après 90 jours (`clientSecretExpiresAt`). 67router stocke cet horodatage dans `providerSpecificData` à des fins d’observabilité. Si l’actualisation d’une connexion cesse de fonctionner après environ 90 jours, réimportez la connexion afin d’obtenir un nouvel enregistrement de client OIDC. La réinscription automatique à l’expiration est prévue comme amélioration future.
 
 Les connexions par clé API ne sont pas soumises à l’expiration du client OIDC, car elles ne sont pas actualisées via AWS SSO OIDC.
 
@@ -171,12 +171,12 @@ Les connexions par clé API ne sont pas soumises à l’expiration du client OID
 ### Échec de l’importation avec « Token validation failed »
 
 - Vérifiez que le jeton d’actualisation commence par `aorAAAAAG`.
-- Vérifiez qu’OmniRoute peut accéder à `https://oidc.us-east-1.amazonaws.com` (ou à la région configurée). Si vous utilisez un proxy d’entreprise, définissez un proxy au niveau du fournisseur dans **Tableau de bord → Paramètres → Proxys**.
+- Vérifiez que 67router peut accéder à `https://oidc.us-east-1.amazonaws.com` (ou à la région configurée). Si vous utilisez un proxy d’entreprise, définissez un proxy au niveau du fournisseur dans **Tableau de bord → Paramètres → Proxys**.
 
 ### Échec de l’importation par clé API
 
 - Vérifiez que la clé est une clé API Kiro / CodeWhisperer, et non un jeton d’actualisation.
 - Vérifiez que la région AWS correspond à la clé ou au compte. `us-east-1` est la valeur par défaut.
-- La clé doit permettre d’appeler `ListAvailableProfiles` ; sinon, OmniRoute ne peut pas déterminer le `profileArn` requis.
+- La clé doit permettre d’appeler `ListAvailableProfiles` ; sinon, 67router ne peut pas déterminer le `profileArn` requis.
 
 Pour les autres problèmes, consultez le fichier principal [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

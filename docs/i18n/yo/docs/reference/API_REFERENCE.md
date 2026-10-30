@@ -6,7 +6,7 @@
 
 🌐 **Àwọn Èdè:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Ìtọ́kasí pàtàkì fún OmniRoute API. Ó ṣàlàyé ojú ìṣàmúlò gbogbogbò `/v1` àti àwọn endpoint ìṣàkóso tí a ń lò jù lọ; [`docs/openapi.yaml`](../openapi.yaml) tí ẹ̀rọ lè kà àti igi route tó wà lábẹ́ `src/app/api/` ni àwọn orísun tó péye.
+Ìtọ́kasí pàtàkì fún 67router API. Ó ṣàlàyé ojú ìṣàmúlò gbogbogbò `/v1` àti àwọn endpoint ìṣàkóso tí a ń lò jù lọ; [`docs/openapi.yaml`](../openapi.yaml) tí ẹ̀rọ lè kà àti igi route tó wà lábẹ́ `src/app/api/` ni àwọn orísun tó péye.
 
 Fún protocol tó bá OpenAI mu àti àtẹ matrix agbára provider tó dojú kọ ọ̀rọ̀ náà ní pàtó, wo
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Ìdáhùn  | `HIT` tàbí `MISS` (tí kì í ṣe ìṣànwọ́lé)                                                                                                                                                                                          |
 | `X-OmniRoute-Idempotent` | Ìdáhùn  | `true` bí a bá ti yọ àdáwòkọ kúrò                                                                                                                                                                                                |
 | `X-OmniRoute-Progress`   | Ìdáhùn  | `enabled` bí títọpa ìlọsíwájú bá wà ní títàn                                                                                                                                                                                     |
-| `X-OmniRoute-Session-Id` | Ìdáhùn  | ID ìgbà ìjíròrò tó ṣiṣẹ́ tí OmniRoute lò                                                                                                                                                                                          |
+| `X-OmniRoute-Session-Id` | Ìdáhùn  | ID ìgbà ìjíròrò tó ṣiṣẹ́ tí 67router lò                                                                                                                                                                                           |
 | `X-OmniRoute-Request-Id` | Ìdáhùn  | Id ìbámu ìbéèrè (nígbà tí a bá mọ̀ ọ́)                                                                                                                                                                                             |
-| `X-OmniRoute-Version`    | Ìdáhùn  | Ẹ̀yà ìkọ́lé OmniRoute (ó máa ń wà ní gbogbo ìgbà)                                                                                                                                                                                  |
+| `X-OmniRoute-Version`    | Ìdáhùn  | Ẹ̀yà ìkọ́lé 67router (ó máa ń wà ní gbogbo ìgbà)                                                                                                                                                                                   |
 | `X-OmniRoute-Cost-Saved` | Ìdáhùn  | USD tí kaṣe jẹ́ kí a yàgò fún lórí `HIT` (fún àwọn ìkànnì kaṣe nìkan)                                                                                                                                                             |
 | `X-OmniRoute-Decision`   | Ìdáhùn  | Àtẹ̀lé ìdarí ọ̀nà: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` ni ọgbọ́n combo, tàbí `single` fún ìbéèrè tí kì í ṣe combo) — ó máa ń wà ní gbogbo ìdáhùn ìparí                                                    |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Dídì àkọọlẹ̀ mọ́ ìbéèrè kọ̀ọ̀kan
 
-Nígbà tí olùpèsè kan bá ní ọ̀pọ̀ ìsopọ̀ (àwọn àkọọlẹ̀ tàbí kọ́kọ́rọ́), OmniRoute sábà máa ń yan ọ̀kan
+Nígbà tí olùpèsè kan bá ní ọ̀pọ̀ ìsopọ̀ (àwọn àkọọlẹ̀ tàbí kọ́kọ́rọ́), 67router sábà máa ń yan ọ̀kan
 nípasẹ̀ ìlànà yíyan-àkọọlẹ̀ rẹ̀. Dípò bẹ́ẹ̀, ìbéèrè kan lè di ìsopọ̀ pàtó kan mú
 pẹ̀lú àkọlé `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ tó yàtọ̀ mú fún project kọ̀ọ̀kan:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -139,7 +139,7 @@ Orísun: `src/sse/handlers/chat.ts` (kíka àkọlé), `src/sse/services/auth.ts
 
 ## Àwọn Ìyálò Sáẹ́ṣọ̀n Àkóso Aládàáni
 
-Ìyálò sáẹ́ṣọ̀n àkóso aládàáni jẹ́ àdéhùn ìdarí ọ̀nà tí ẹni bá fẹ́ ló ń lò, tí kò sì dá lórí kíláyẹ́ǹtì kan pàtó: olùní kan ṣoṣo tó ń ṣiṣẹ́ ló di ìsopọ̀ OmniRoute kan tó yẹ mú. Kì í yá mọ́́dẹ́lì kan, kò béèrè OAuth, kò dá kíláyẹ́ǹtì kan pàtó mọ̀, bẹ́ẹ̀ ni kò béèrè olùpèsè kan pàtó.
+Ìyálò sáẹ́ṣọ̀n àkóso aládàáni jẹ́ àdéhùn ìdarí ọ̀nà tí ẹni bá fẹ́ ló ń lò, tí kò sì dá lórí kíláyẹ́ǹtì kan pàtó: olùní kan ṣoṣo tó ń ṣiṣẹ́ ló di ìsopọ̀ 67router kan tó yẹ mú. Kì í yá mọ́́dẹ́lì kan, kò béèrè OAuth, kò dá kíláyẹ́ǹtì kan pàtó mọ̀, bẹ́ẹ̀ ni kò béèrè olùpèsè kan pàtó.
 
 Kọ́kọ́rọ́ API tí ń ṣe ìfàṣẹsí gbọ́dọ̀ ní àyè `lease:exclusive` àti àtòjọ `allowedConnections` tí a sọ ní kedere tí kò sì ṣófo. Ààlà ìyípadà ibi ìpamọ́ dátà ń fipá mú kí àwọn ààyè méjèèjì wà papọ̀ nígbà ṣíṣẹ̀dá kọ́kọ́rọ́ àti nígbà àwọn ìmúdójúìwọ̀n apá kan.
 
@@ -182,7 +182,7 @@ Olùní ìyálò tó ń ṣiṣẹ́ lè béèrè ní kedere fún metadata àfih
 }
 ```
 
-Ìṣe status yìí, tí ẹni bá fẹ́ ló ń lò, ni a dáàbò bo pẹ̀lú olùní aláìṣípayá, kọ́kọ́rọ́ API àkóso tí a ti fìdí rẹ̀ múlẹ̀, àti generation tó ń ṣiṣẹ́ gan-an nínú ìdúnàádúrà ibi ìpamọ́ dátà kan ṣoṣo. `displayName` jẹ́ orúkọ ìsopọ̀ tí a ṣètò, tí a kàn gé àwọn àyè òfo ní etí rẹ̀ kúrò; ó jẹ́ `null` nígbà tí kò bá sí orúkọ ààbò tí a ṣètò. OmniRoute kì í fi ímeèlì tàbí ìdánimọ̀ àkọọ́lẹ̀ tí a ṣẹ̀dá rópò rẹ̀ láé. Iye provider jẹ́ àmì àfihàn tí kò ní ìsọfúnni ìkọ̀kọ̀, kì í sì í ṣe ìdánimọ̀ olùpèsè tó bára mu tí a ṣẹ̀dá. A yọ àwọn ẹ̀rí ìfàṣẹsí, àwọn token, àwọn cookie, àwọn id ìsopọ̀ tàbí kọ́kọ́rọ́ API gidi, àwọn hash olùní, àwọn àṣírí ìdáàbòbò, àti dátà ìdarí ọ̀nà inú kúrò.
+Ìṣe status yìí, tí ẹni bá fẹ́ ló ń lò, ni a dáàbò bo pẹ̀lú olùní aláìṣípayá, kọ́kọ́rọ́ API àkóso tí a ti fìdí rẹ̀ múlẹ̀, àti generation tó ń ṣiṣẹ́ gan-an nínú ìdúnàádúrà ibi ìpamọ́ dátà kan ṣoṣo. `displayName` jẹ́ orúkọ ìsopọ̀ tí a ṣètò, tí a kàn gé àwọn àyè òfo ní etí rẹ̀ kúrò; ó jẹ́ `null` nígbà tí kò bá sí orúkọ ààbò tí a ṣètò. 67router kì í fi ímeèlì tàbí ìdánimọ̀ àkọọ́lẹ̀ tí a ṣẹ̀dá rópò rẹ̀ láé. Iye provider jẹ́ àmì àfihàn tí kò ní ìsọfúnni ìkọ̀kọ̀, kì í sì í ṣe ìdánimọ̀ olùpèsè tó bára mu tí a ṣẹ̀dá. A yọ àwọn ẹ̀rí ìfàṣẹsí, àwọn token, àwọn cookie, àwọn id ìsopọ̀ tàbí kọ́kọ́rọ́ API gidi, àwọn hash olùní, àwọn àṣírí ìdáàbòbò, àti dátà ìdarí ọ̀nà inú kúrò.
 
 Àwọn ìṣàwárí pẹ̀lú kọ́kọ́rọ́ tí kò tọ́, olùní tí kò tọ́, generation tí ó ti pẹ́, ohun tí kò sí, ohun tó ti parí, ohun tí a ti tú sílẹ̀, àti ohun tí a ti sọ di asán, gbogbo wọn máa ń dá àṣìṣe `409 LEASE_FENCE_STALE` kan náà padà láìsí metadata ìsopọ̀. Kíláyẹ́ǹtì kan tó gba ìdáhùn ìdúró de ààyè kò ní ìsopọ̀ tó ń ṣiṣẹ́ láti yẹ̀ wò. Nígbà tí ìdarí ọ̀nà bá yí ìyálò tó ń ṣiṣẹ́ padà, generation kan náà ṣì wúlò, status yóò sì dá ìsopọ̀ tuntun padà lẹ́sẹ̀kẹsẹ̀ gẹ́gẹ́ bí ìṣe atómíkì, kì í ṣe ti àtijọ́ láé. Àwọn kíláyẹ́ǹtì tó ti wà kò ní yípadà nítorí àwọn ìdáhùn gbígbà, ìsọdọ̀tun, ìtúsílẹ̀, àti ìdúró ṣì pa ìrísí wọn tẹ́lẹ̀ mọ́.
 
@@ -208,7 +208,7 @@ A máa ń dáàbò bo olùní gangan, generation, ìsopọ̀ tó ń ṣiṣẹ́
 }
 ```
 
-Ìdáhùn yìí túmọ̀ sí pé àkójọpọ̀ ìsopọ̀ tó yẹ lásán kò ṣófo, gbogbo olùdíje tó sì ṣááyè ni ìyálò aláṣẹ tó ń ṣiṣẹ́ ti ẹlòmíràn mú. Àwọn mọ́́dẹ́lì/olùpèsè tí a kò ṣe àtìlẹ́yìn fún, àìbáramu ìlànà, cooldown, quota, health, àti àwọn ìkùnà yíyẹ lásán mìíràn ṣì máa ń lo àwọn ìdáhùn OmniRoute tó ti wà.
+Ìdáhùn yìí túmọ̀ sí pé àkójọpọ̀ ìsopọ̀ tó yẹ lásán kò ṣófo, gbogbo olùdíje tó sì ṣááyè ni ìyálò aláṣẹ tó ń ṣiṣẹ́ ti ẹlòmíràn mú. Àwọn mọ́́dẹ́lì/olùpèsè tí a kò ṣe àtìlẹ́yìn fún, àìbáramu ìlànà, cooldown, quota, health, àti àwọn ìkùnà yíyẹ lásán mìíràn ṣì máa ń lo àwọn ìdáhùn 67router tó ti wà.
 
 ### `x-omniroute-compression`
 
@@ -280,7 +280,7 @@ Jina v5 Omni (`jina-ai/jina-embeddings-v5-omni-small`, `jina-ai/jina-embeddings-
 ```
 
 Àwọn iye àbínibí `{ image | audio | video | pdf }` lè jẹ́ URL HTTPS gbogbogbò, URI `data:`, tàbí
-base64 gidi. OmniRoute kì í sọ àwọn object wọ̀nyẹn di string tàbí gba àwọn URL àwòrán àbínibí wá — Jina fúnra rẹ̀ ni yóò gba
+base64 gidi. 67router kì í sọ àwọn object wọ̀nyẹn di string tàbí gba àwọn URL àwòrán àbínibí wá — Jina fúnra rẹ̀ ni yóò gba
 media gbogbogbò náà. Àwọn field Jina àfikún (`task`, `normalized`, `truncate`, `embedding_type`) ni a
 ń fi ránṣẹ́ síwájú. Àwọn SKU Jina tí ó jẹ́ text-nìkan ṣì máa kọ àwọn docs tí kì í ṣe text.
 
@@ -430,7 +430,7 @@ olùpè, nítorí náà kóòdù oníbàárà kò nílò láti ṣe ìtọ́jú 
 
 ### Ìfàṣẹsí àti ìyanjú endpoint OCR Vertex AI DeepSeek
 
-`vertex-deepseek-ocr` tún ń lo ìfàṣẹsí Vertex AI kan náà tí OmniRoute ti ṣe àtìlẹ́yìn fún
+`vertex-deepseek-ocr` tún ń lo ìfàṣẹsí Vertex AI kan náà tí 67router ti ṣe àtìlẹ́yìn fún
 ìṣàn chat/àwòrán (`open-sse/executors/vertex.ts`): API key ìsopọ̀ náà jẹ́ yálà
 ìwé ẹ̀rí JSON Service Account (tí a máa pààrọ̀ fún token ìráyè OAuth alákókò-kúkúrú nípasẹ̀ ìṣàn JWT-bearer)
 tàbí token ìráyè OAuth tí a ti ṣẹ̀dá tẹ́lẹ̀, tí a máa lò bí ó ṣe rí. URL endpoint upstream náà ni
@@ -454,7 +454,7 @@ Authorization: Bearer your-api-key
 
 ### Àwọn iye owó àwòṣe (`pricing`)
 
-Àkọsílẹ̀ kan ní ohun `pricing` nígbà tí OmniRoute mọ iye owó àwòṣe náà. Iye owó náà wá
+Àkọsílẹ̀ kan ní ohun `pricing` nígbà tí 67router mọ iye owó àwòṣe náà. Iye owó náà wá
 láti inú tábìlì ìdíyelé tí ìṣirò iye owó ń lò: àwọn iye àìyípadà tí a kọ́ sínú rẹ̀, àwọn iye owó tí a múṣiṣẹ́pọ̀, àti
 àwọn ìyípadà tí a ṣètò nípasẹ̀ `/api/pricing`. Ìwọ̀nyí jẹ́ iye owó àtòjọ, nítorí náà àwọn olùpèsè ìforúkọsílẹ̀ náà tún
 ń fi iye owó fún token kọ̀ọ̀kan hàn.
@@ -609,8 +609,8 @@ Lo endpoint yìí nígbà tí sidecar bá ń ṣiṣẹ́ ní òde process tí k
 
 ## Ṣíṣẹ̀dá ohun ElevenLabs
 
-Ṣètò ìsopọ̀ olùpèsè `elevenlabs` kan nínú OmniRoute pẹ̀lú kọ́kọ́rọ́ API ElevenLabs rẹ.
-Àwọn oníbàárà ń jẹ́rìí ìdánimọ̀ pẹ̀lú kọ́kọ́rọ́ **OmniRoute** wọn (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Ṣètò ìsopọ̀ olùpèsè `elevenlabs` kan nínú 67router pẹ̀lú kọ́kọ́rọ́ API ElevenLabs rẹ.
+Àwọn oníbàárà ń jẹ́rìí ìdánimọ̀ pẹ̀lú kọ́kọ́rọ́ **67router** wọn (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway náà ń fi kọ́kọ́rọ́ olùpèsè tí a ti tọ́jú ránṣẹ́ gẹ́gẹ́ bí `xi-api-key`. Má ṣe fi kọ́kọ́rọ́ ElevenLabs
 ránṣẹ́ gẹ́gẹ́ bí bearer token gateway láé.
 
@@ -675,7 +675,7 @@ route abinibi ń dá àwọn status code àti body àṣìṣe upstream padà l�
 ètò àti `429` fún òpin quota. Àwọn header `character-cost`, `song-id`, `request-id` àti `retry-after`
 ni a pa mọ́ nígbà tí wọ́n bá wà. Ìwọ̀ntúnwọ̀nsì kirẹditi ọ̀fẹ́ kò ṣe ìdánilójú ààyè sí gbogbo
 model orin, format àbájáde tàbí ẹ̀ya API: ElevenLabs ló ń pinnu ẹ̀tọ́ fún ìbéèrè kọ̀ọ̀kan.
-Endpoint àpapọ̀ náà ń pa àwọn status code àṣìṣe mọ́ nínú àpò àṣìṣe OmniRoute tí a ti ṣe déédéé.
+Endpoint àpapọ̀ náà ń pa àwọn status code àṣìṣe mọ́ nínú àpò àṣìṣe 67router tí a ti ṣe déédéé.
 
 Àwọn àdéhùn upstream: [àwọn èfèéṣì ohun](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [àkójọpọ̀ orin](https://elevenlabs.io/docs/api-reference/music/compose) àti
@@ -716,7 +716,7 @@ Endpoint àpapọ̀ náà ń pa àwọn status code àṣìṣe mọ́ nínú à
 
 Gbogbo àwọn ipa-ọ̀nà POST ń tẹ̀lé ìrísí kan náà: `Bearer your-api-key` + ara JSON tí Zod ti fọwọ́sí (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, abbl., wo `src/shared/validation/schemas.ts`). A máa dá 4xx padà nígbà tí ìfọwọ́sí schema bá kùnà.
 
-Fún àwọn client tí kò lè so `Authorization: Bearer ...` mọ́ ìbéèrè, OmniRoute tún gba àwọn kọ́kọ́rọ́ API nínú URL nípasẹ̀ ìbámu query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) tàbí àwọn ibi ìwọlé `/api/v1/vscode/{token}/...` pàtó tí a ṣàkọsílẹ̀ rẹ̀ nísàlẹ̀.
+Fún àwọn client tí kò lè so `Authorization: Bearer ...` mọ́ ìbéèrè, 67router tún gba àwọn kọ́kọ́rọ́ API nínú URL nípasẹ̀ ìbámu query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) tàbí àwọn ibi ìwọlé `/api/v1/vscode/{token}/...` pàtó tí a ṣàkọsílẹ̀ rẹ̀ nísàlẹ̀.
 
 ```bash
 # Àtúntò ipò (olùpèsè cloud registry, tàbí node olùpèsè tó bá OpenAI mu gẹ́gẹ́ bí "<prefix>/<model>")
@@ -878,7 +878,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, kọ́kọ́rọ́ API kan náà bíi Parallel Search) ń dá Markdown
 nìkan padà — `format` èyíkéyìí mìíràn yóò jẹ́ `400` — ó sì fi ààlà 100,000 ohun-kikọ sí àkóónú. Nígbà tí
 ojú-ewé àfojúsùn fúnra rẹ̀ kò bá ṣeé yọ jáde, iṣẹ́ òkè ń ròyìn rẹ̀ nínú HTTP 200;
-OmniRoute ń fi èyí hàn gẹ́gẹ́ bí `422` pẹ̀lú ìfiránṣẹ́ tí kò yí padà.
+67router ń fi èyí hàn gẹ́gẹ́ bí `422` pẹ̀lú ìfiránṣẹ́ tí kò yí padà.
 
 | Ọ̀nà  | Ipa-ọ̀nà         | Àpèjúwe                                               |
 | ---- | --------------- | ----------------------------------------------------- |
@@ -941,14 +941,14 @@ gbọ́dọ̀ jẹ́ entrypoint tó ń ṣiṣẹ́ (ó rí bẹ́ẹ̀ ní àk�
 **Codex CLI** ti OpenAI ń ṣàyẹ̀wò orúkọ model ní ẹ̀gbẹ́ client nígbà tí
 `supports_websockets = true`, ó sì **ń kọ àwọn ID tó ní prefix olùpèsè** bíi
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Fi ID **lásán** ránṣẹ́ (fún àpẹẹrẹ `gpt-5.5`). Afárá OmniRoute jẹ́
+a ChatGPT account`). Fi ID **lásán** ránṣẹ́ (fún àpẹẹrẹ `gpt-5.5`). Afárá 67router jẹ́
 ti codex nìkan, nítorí náà ó tún ń pinnu ID lásán gẹ́gẹ́ bí model codex
 (`resolveCodexWsModelInfo`) kí ó tó ṣẹ̀dá tunnel sí iṣẹ́ òkè — bó tilẹ̀ jẹ́ pé
 `gpt-5.5` lásán ìbá lọ sí olùpèsè mìíràn lórí HTTP ní ipò míì.
 
 #### Ṣíṣètò OpenAI Codex CLI
 
-Darí Codex CLI sí OmniRoute nípa fífi olùpèsè àkànṣe kan tó ní àtìlẹ́yìn WebSocket
+Darí Codex CLI sí 67router nípa fífi olùpèsè àkànṣe kan tó ní àtìlẹ́yìn WebSocket
 kún `~/.codex/config.toml` (lo `CODEX_HOME` ọ̀tọ̀ láti yẹra fún fífi ọwọ́ kan
 àtòjọ-ẹ̀rọ tó ti wà):
 
@@ -961,15 +961,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # kò sí slash ní ìparí; URL WS ni a ń ṣẹ̀dá láti inú rẹ̀ (lo https/wss ní production)
 wire_api = "responses"                    # iye kan ṣoṣo tí a ń ṣe àtìlẹ́yìn fún láti Feb 2026
 supports_websockets = true                # ń mú transport Responses-over-WS ṣiṣẹ́
-env_key = "OMNIROUTE_API_KEY"             # ó ní kọ́kọ́rọ́ API OmniRoute nínú (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # ó ní kọ́kọ́rọ́ API 67router nínú (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # kọ́kọ́rọ́ API OmniRoute kan (kọ́kọ́rọ́ èyíkéyìí bí REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # kọ́kọ́rọ́ API 67router kan (kọ́kọ́rọ́ èyíkéyìí bí REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI náà ń gbé `base_url + /responses` sókè sí WebSocket, OmniRoute sì ń ṣẹ̀dá tunnel rẹ̀
+CLI náà ń gbé `base_url + /responses` sókè sí WebSocket, 67router sì ń ṣẹ̀dá tunnel rẹ̀
 sí àsopọ̀ codex OAuth tí a yàn. A ti fìdí rẹ̀ múlẹ̀ láti ìbẹ̀rẹ̀ dé òpin lórí server
 agbègbè: ChatGPT ń dá `codex.rate_limits` + `response.created` padà, ó sì ń ṣàn
 ìparí-ìdáhùn náà.
@@ -1053,7 +1053,7 @@ Nígbà lílo `/api/usage/om-usage`, àwọn olùpè gbọ́dọ̀ kíyè sí ì
 
 #### Fọ́ọ̀mù Ìṣírò Àtúnṣe Ààlà Ìdádúró
 
-OmniRoute ń ṣe àtìlẹ́yìn fún àwọn ààlà ìdádúró ìpín lílò ṣáájú kí ìpín upstream má bàa tán (tí a ṣètò nípasẹ̀ connection
+67router ń ṣe àtìlẹ́yìn fún àwọn ààlà ìdádúró ìpín lílò ṣáájú kí ìpín upstream má bàa tán (tí a ṣètò nípasẹ̀ connection
 `quotaWindowThresholds`, àwọn àtìlẹ́yìn provider, tàbí àwọn ètò ìfaradà àgbáyé). Nígbà tí ààlà ìdádúró kan
 (fún àpẹẹrẹ, `cutoff = 25%`) bá ń ṣiṣẹ́ lórí fèrèsé ìpín lílò kan, olùṣe-àfihàn ọ̀rọ̀ máa ń ṣe ìṣírò ìyọ̀ǹda tó kù báyìí:
 
@@ -1602,7 +1602,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - Àwọn alias tó ní token tún ń lo àwọn handler kan náà bí `/v1/*` àti `/api/tags`; ìrísí àwọn ìdáhùn kò yí padà.
 - Yan `Authorization: Bearer ...` láàyò nígbàkigbà tí client bá ṣe àtìlẹ́yìn fún àwọn header àdáni.
-- Àwọn token tó dá lórí URL lè hàn nínú àwọn log reverse-proxy, ìtàn browser, àti telemetry lẹ́yìn OmniRoute. Ka wọ́n sí àṣàyàn ìbámu, kì í ṣe ọ̀nà ìfàṣẹsí àkànṣe.
+- Àwọn token tó dá lórí URL lè hàn nínú àwọn log reverse-proxy, ìtàn browser, àti telemetry lẹ́yìn 67router. Ka wọ́n sí àṣàyàn ìbámu, kì í ṣe ọ̀nà ìfàṣẹsí àkànṣe.
 
 ---
 
@@ -1710,7 +1710,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Àwọn Webhook
 
-Àwọn ìforúkọsílẹ̀ webhook àgbéjáde fún àwọn ìṣẹ̀lẹ̀ OmniRoute (ìparí ìbéèrè, ìtánná ìpín, yíyí kọ́kọ́rọ́ padà, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ).
+Àwọn ìforúkọsílẹ̀ webhook àgbéjáde fún àwọn ìṣẹ̀lẹ̀ 67router (ìparí ìbéèrè, ìtánná ìpín, yíyí kọ́kọ́rọ́ padà, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ).
 
 | Ọ̀nà    | Ipa-ọ̀nà                   | Àpèjúwe                                                                |
 | ------ | ------------------------- | ---------------------------------------------------------------------- |
@@ -1743,7 +1743,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Àdéhùn Àwọn Aṣojú
 
-Àwọn iṣẹ́ aṣojú àwọsánmà (Claude Code, Codex Cloud, OpenHands, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) tí a ń ṣiṣẹ́ láti ọ̀nà jíjìn dípò àwọn olumulo OmniRoute.
+Àwọn iṣẹ́ aṣojú àwọsánmà (Claude Code, Codex Cloud, OpenHands, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) tí a ń ṣiṣẹ́ láti ọ̀nà jíjìn dípò àwọn olumulo 67router.
 
 | Ọ̀nà    | Ipa-ọ̀nà                       | Àpèjúwe                                                                                                                                    |
 | ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1789,7 +1789,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## Ìfaradà (ní àlàyé síwájú)
 
-OmniRoute ń pèsè ọ̀nà mẹ́ta olómìnira láti kojú ìkùnà ìgbà díẹ̀; àwọn endpoint ìṣàkóso tó wà nísàlẹ̀ yìí ń jẹ́ kí àwọn olùṣiṣẹ́ lè ka wọn kí wọ́n sì ṣàtúnṣe wọn:
+67router ń pèsè ọ̀nà mẹ́ta olómìnira láti kojú ìkùnà ìgbà díẹ̀; àwọn endpoint ìṣàkóso tó wà nísàlẹ̀ yìí ń jẹ́ kí àwọn olùṣiṣẹ́ lè ka wọn kí wọ́n sì ṣàtúnṣe wọn:
 
 | Ìwọ̀n          | Ibi ìpamọ́ ipò                              | Kíkà                                      | Àtúntò / píparẹ́                                                |
 | ------------- | ------------------------------------------ | ----------------------------------------- | -------------------------------------------------------------- |
@@ -1824,7 +1824,7 @@ Fún ìtọ́kasí àròjinlẹ̀ ní kíkún àti àwọn iye àiyipada olùjá
 
 ## Àwọn Ọgbọ́n
 
-Framework ọgbọ́n fún fífi àwọn handler àkànṣe tó ṣeé mú ṣiṣẹ́ kún OmniRoute, pẹ̀lú àwọn ìsopọ̀ ọjà.
+Framework ọgbọ́n fún fífi àwọn handler àkànṣe tó ṣeé mú ṣiṣẹ́ kún 67router, pẹ̀lú àwọn ìsopọ̀ ọjà.
 
 | Ọ̀nà    | Path                              | Àpèjúwe                                                                                                                                               |
 | ------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1861,7 +1861,7 @@ Ibi ìpamọ́ ìrántí ìjíròrò/òtítọ́ tí ó wà títí, tí a fi òp
 
 ## Sẹ́fà MCP
 
-OmniRoute ní sẹ́fà Model Context Protocol tí a fi sínú rẹ̀ pẹ̀lú àwọn ọ̀nà ìgbéwọlé 3 (stdio, SSE, streamable-http) àti àwọn irinṣẹ́ tí a fi òpin ààyè sí. Àwọn endpoint dasibodu tó wà nísàlẹ̀ ń ka dátà ipò/àyẹ̀wò, wọ́n sì ń ṣe proxy fún àwọn ọ̀nà ìgbéwọlé HTTP.
+67router ní sẹ́fà Model Context Protocol tí a fi sínú rẹ̀ pẹ̀lú àwọn ọ̀nà ìgbéwọlé 3 (stdio, SSE, streamable-http) àti àwọn irinṣẹ́ tí a fi òpin ààyè sí. Àwọn endpoint dasibodu tó wà nísàlẹ̀ ń ka dátà ipò/àyẹ̀wò, wọ́n sì ń ṣe proxy fún àwọn ọ̀nà ìgbéwọlé HTTP.
 
 | Ọ̀nà | Ipa-ọ̀nà | Àpèjúwe |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1883,7 +1883,7 @@ OmniRoute ní sẹ́fà Model Context Protocol tí a fi sínú rẹ̀ pẹ̀lú 
 
 ## Apèsè A2A
 
-OmniRoute ń pèsè ibi ìparí A2A (Agent-to-Agent) JSON-RPC 2.0 pẹ̀lú àpò REST fún àyẹ̀wò àti lílò pátákó ìdarí.
+67router ń pèsè ibi ìparí A2A (Agent-to-Agent) JSON-RPC 2.0 pẹ̀lú àpò REST fún àyẹ̀wò àti lílò pátákó ìdarí.
 
 ### JSON-RPC
 
@@ -2111,7 +2111,7 @@ onírúurú olupèsè. Àwọn wọ̀nyí ni ó ń pèsè agbára fún àwọn o
 
 ## Ìṣàkóso Àwọn Irinṣẹ́ CLI
 
-Ṣàkóso àwọn irinṣẹ́ CLI tí ó ṣepọ̀ mọ́ OmniRoute (antigravity, commandCode,
+Ṣàkóso àwọn irinṣẹ́ CLI tí ó ṣepọ̀ mọ́ 67router (antigravity, commandCode,
 devin-cli, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ). Wo [Ìtọ́kasí Olùpèsè](./PROVIDER_REFERENCE.md) fún àkójọ kíkún.
 
 | Ọ̀nà  | Path                                    | Àpèjúwe                                                                                                                                                        |
@@ -2222,7 +2222,7 @@ Wo [Ètò Àwọn Ọgbọ́n](../frameworks/SKILLS.md) fún gbogbo àlàyé.
 
 ## Àwọn Plugin
 
-Ṣàkóso àwọn plugin OmniRoute (àwọn àfikún láti ọ̀dọ̀ ẹnikẹ́ta).
+Ṣàkóso àwọn plugin 67router (àwọn àfikún láti ọ̀dọ̀ ẹnikẹ́ta).
 
 | Ọ̀nà    | Ipa-ọ̀nà                            | Àpèjúwe                              |
 | ------ | ---------------------------------- | ------------------------------------ |

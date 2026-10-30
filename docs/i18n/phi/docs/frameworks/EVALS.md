@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Kasama sa OmniRoute ang isang generic na framework sa pagsusuri na magagamit mo upang mag-benchmark ng mga configuration sa pag-route, mga indibidwal na provider/model, o mga kasamang suite na "golden set".
+Kasama sa 67router ang isang generic na framework sa pagsusuri na magagamit mo upang mag-benchmark ng mga configuration sa pag-route, mga indibidwal na provider/model, o mga kasamang suite na "golden set".
 Gamitin ito upang beripikahin ang mga pagbabago sa pag-route, patunayan ang mga bagong provider, at salain ang mga release bago ilipat ang mga ito sa production traffic.
 
 Ipinatupad ang framework bilang:

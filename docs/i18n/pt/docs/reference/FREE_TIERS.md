@@ -9,9 +9,9 @@
 > **Última pesquisa:** 2026-06-17 — pesquisa na Web por fornecedor (documentação oficial + notícias dos últimos 7 dias, passagem com 50 agentes e validação adversarial), atualizando todas as quotas dos níveis gratuitos e os Termos de Serviço. **Reauditoria parcial em 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — consulte a nota datada abaixo).
 > **Fonte de referência (catálogo):** `open-sse/config/freeModelCatalog.ts` (orçamentos por MODELO, com eliminação de duplicados por reserva). Os números relativos aos orçamentos de tokens abaixo provêm de pesquisa em tempo real na Web e são uma **aproximação** — consulte [Metodologia e ressalvas](#methodology--caveats).
 
-## TL;DR — quanta inferência gratuita agrega realmente o OmniRoute?
+## TL;DR — quanta inferência gratuita agrega realmente o 67router?
 
-Estes valores descrevem contas distintas de terceiros e condições de elegibilidade em todo o catálogo. O OmniRoute não concede este orçamento: tem de obter as contas ou credenciais necessárias, ligar fornecedores elegíveis e respeitar os respetivos limites. A capacidade efetivamente utilizável pode ser inferior, incluindo zero numa instalação nova sem qualquer rota elegível. Os fornecedores marcados com `tos: avoid` são, por predefinição, excluídos do encaminhamento automático.
+Estes valores descrevem contas distintas de terceiros e condições de elegibilidade em todo o catálogo. O 67router não concede este orçamento: tem de obter as contas ou credenciais necessárias, ligar fornecedores elegíveis e respeitar os respetivos limites. A capacidade efetivamente utilizável pode ser inferior, incluindo zero numa instalação nova sem qualquer rota elegível. Os fornecedores marcados com `tos: avoid` são, por predefinição, excluídos do encaminhamento automático.
 
 **Verificado em 2026-10-08:** a [Cerebras](https://www.cerebras.ai/pricing) oferece um crédito promocional único de 5 $, que exige um método de pagamento e expira após 30 dias. O [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publica limites de taxa por projeto/modelo/nível; continua fora do valor mensal quantificado em destaque.
 
@@ -24,7 +24,7 @@ Estes valores descrevem contas distintas de terceiros e condições de elegibili
 | **+ sujeito a verificação de identidade regional**     | **+~6 M**           | `modelscope` (associação ao Alibaba Cloud + verificação de identidade com nome real na China continental). Quota recorrente real, disponibilizada como `gatedRecurringTokens` / `gatedProviders` e no painel. Nunca é incluída no valor em destaque: +~6 M sujeitos a verificação de identidade regional. |
 | Limite máximo teórico (todos os limites de taxa, 24/7) | ~10 mil M           | Soma de todos os limites de taxa dos fornecedores, extrapolados para uma utilização ininterrupta. **Não é uma garantia** — não apresente este valor em destaque.                                                                                                                                          |
 
-**Destaque honesto:** _O OmniRoute agrega **~1,62 mil milhões de tokens gratuitos documentados por mês** (até ~2,22 mil milhões no primeiro mês com créditos de adesão) em 34 reservas de níveis gratuitos — além de uma longa lista de fornecedores permanentemente gratuitos e sem limite — e a compressão RTK + Caveman (15–95% de poupança de tokens) aumenta ainda mais esse valor._
+**Destaque honesto:** _O 67router agrega **~1,62 mil milhões de tokens gratuitos documentados por mês** (até ~2,22 mil milhões no primeiro mês com créditos de adesão) em 34 reservas de níveis gratuitos — além de uma longa lista de fornecedores permanentemente gratuitos e sem limite — e a compressão RTK + Caveman (15–95% de poupança de tokens) aumenta ainda mais esse valor._
 
 > **Por que motivo este valor desceu dos anteriores ~1.94B.** A atualização de 2026-06-17 é uma correção de transparência, não uma perda: `gemini` é agora deduplicado por pool (estava inflacionado por contabilizar separadamente cada variante Flash, 462M → 60M), `cloudflare-ai` foi corrigido para os seus reais 10k Neurons/dia (122M → 30M), `doubao` foi reclassificado como um crédito único de registo (não recorrente) e foram removidos os níveis descontinuados (`chutes`/`phind`/`kluster`). Parcialmente compensado por `llm7` (valor correto de 5M/dia → 150M) e por novos fornecedores gratuitos (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -94,7 +94,7 @@ sobre o fornecedor abaixo.
 
 ## Dois regimes — contabilização vs. decisão
 
-O OmniRoute responde à pergunta "é gratuito?" através de dois regimes que,
+O 67router responde à pergunta "é gratuito?" através de dois regimes que,
 intencionalmente, consultam fontes diferentes:
 
 | Regime                            | Fonte de verdade                                                                                                                                                                             | Contextos                                                                                                                                                    |
@@ -143,7 +143,7 @@ A maioria dos valores de «tokens gratuitos por mês» neste espaço resulta da 
 
 ### ⚠️ Cuidado — cláusulas de utilização pessoal/proxy que convém verificar (16)
 
-> O acesso gratuito destes fornecedores é real e o OmniRoute pode encaminhar pedidos para os mesmos; vale apenas a pena conhecer as cláusulas abaixo. Os que utilizam OAuth/dispensam chaves não são quantificáveis em tokens, pelo que não estão incluídos no valor em destaque (não por serem inutilizáveis).
+> O acesso gratuito destes fornecedores é real e o 67router pode encaminhar pedidos para os mesmos; vale apenas a pena conhecer as cláusulas abaixo. Os que utilizam OAuth/dispensam chaves não são quantificáveis em tokens, pelo que não estão incluídos no valor em destaque (não por serem inutilizáveis).
 
 | Fornecedor       | Nota                                                                                                                                                                                                  |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -157,7 +157,7 @@ A maioria dos valores de «tokens gratuitos por mês» neste espaço resulta da 
 | `fireworks`      | Os ToS proíbem explicitamente a utilização como proxy/intermediário, a transferência de chaves de API e o sublicenciamento (Secções 2.1 e 2.2(i)(j)); os proxies pessoais autoalojados não estão…     |
 | `friendliai`     | As Secções 8(e) e 8(f) dos ToS proíbem explicitamente a utilização do FriendliAI como proxy ou a concessão de acesso autónomo a terceiros, bem como a revenda/o…                                      |
 | `iflytek`        | A Secção 2.4(3) do Contrato de Serviço iFlytek Spark LLM proíbe explicitamente «a utilização de quaisquer métodos automatizados ou programáticos para extrair dados ou resultados…                    |
-| `kiro`           | As FAQ do Kiro proíbem explicitamente a utilização com «OpenClaw e ferramentas semelhantes que utilizem infraestruturas de terceiros» — um proxy de IA autoalojado (como o OmniRoute) que encaminhe…  |
+| `kiro`           | As FAQ do Kiro proíbem explicitamente a utilização com «OpenClaw e ferramentas semelhantes que utilizem infraestruturas de terceiros» — um proxy de IA autoalojado (como o 67router) que encaminhe…   |
 | `modal`          | A Secção 1.3 dos ToS proíbe explicitamente «alugar, revender ou permitir, de qualquer outra forma, que terceiros acedam diretamente ao Serviço ou o utilizem» — criar um serviço autoalojado…         |
 | `muse-spark-web` | Os ToS da Meta proíbem explicitamente o acesso automatizado sem autorização prévia, a engenharia inversa sem autorização por escrito e a neutralização de mecanismos tecnológicos…                    |
 | `nlpcloud`       | Os ToS proíbem explicitamente «configurar um proxy ou outro dispositivo que permita a terceiros aceder ao Serviço através do mesmo» e concedem apenas um direito intransmissível,…                    |
@@ -319,7 +319,7 @@ A maioria dos valores de «tokens gratuitos por mês» neste espaço resulta da 
 
 - **`360ai`** — O freeNote disponibilizado, "Modelos gratuitos Free 360 AI Brain", parece estar desatualizado. Atualmente, o acesso depende de candidatura e é pago. Os tokens promocionais da época do lançamento em 2023 (100M–250M, atribuídos uma única vez) poderão ter servido de base para…
 - **`agentrouter`** — O nosso freeNote disponibilizado indica "$200 em créditos gratuitos no registo". Atualmente, os registos normais (sem referência) recebem apenas $100; os registos através de referência podem receber $200, mas um comentário da comunidade de abril de 2026…
-- **`agy`** — O nosso freeNote disponibilizado indica "(nenhum)", sugerindo que não existe um nível gratuito, mas o Antigravity tem efetivamente um nível gratuito sujeito a OAuth. No entanto, os ToS proíbem explicitamente a utilização deste nível gratuito através de um proxy como o OmniRoute …
+- **`agy`** — O nosso freeNote disponibilizado indica "(nenhum)", sugerindo que não existe um nível gratuito, mas o Antigravity tem efetivamente um nível gratuito sujeito a OAuth. No entanto, os ToS proíbem explicitamente a utilização deste nível gratuito através de um proxy como o 67router …
 - **`ai21`** — Tornou-se mais restrito: o período de avaliação foi reduzido de "3 meses" para 7 dias. O montante de $10 em créditos permanece igual, mas a validade diminuiu drasticamente de cerca de 90 dias para 7 dias.
 - **`aimlapi`** — Alterou-se significativamente. O freeNote disponibilizado anunciava "$0.025/dia em créditos gratuitos — mais de 200 modelos", mas o nível gratuito está agora suspenso/descontinuado. A atribuição de $0.025/dia em créditos (50 000 créditos/dia, 10 pedidos/d…
 - **`amazon-q`** — O nosso freeNote disponibilizado indica "(nenhum)" — a realidade é pior: o produto está agora descontinuado para novos registos (15 de maio de 2026). Anteriormente, o nível gratuito oferecia 50 pedidos com agentes/mês + sugestões em linha ilimitadas…

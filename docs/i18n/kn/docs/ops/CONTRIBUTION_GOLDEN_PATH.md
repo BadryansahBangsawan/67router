@@ -112,7 +112,7 @@ npm run lint
 - CLI ಕ್ಯಾಟಲಾಗ್ಗಳು `bin/cli/locales/` ಅಡಿಯಲ್ಲಿ ಪ್ರತ್ಯೇಕವಾಗಿ ಇರುತ್ತವೆ.
 - ICU ಪ್ಲೇಸ್ಹೋಲ್ಡರ್ಗಳು ಮತ್ತು ಟ್ಯಾಗ್ಗಳನ್ನು ನಿಖರವಾಗಿ ಸಂರಕ್ಷಿಸಿ. ಉತ್ಪನ್ನ/ಪ್ರೊವೈಡರ್/ಮಾಡೆಲ್ ಹೆಸರುಗಳು,
   ಪ್ರೋಟೋಕಾಲ್ ಮತ್ತು ಹೆಡರ್ ಹೆಸರುಗಳು, ಕಮಾಂಡ್ಗಳು, ಕೋಡ್/JSON ಐಡೆಂಟಿಫೈಯರ್ಗಳು, URLಗಳು, ಎನ್ವಿರಾನ್ಮೆಂಟ್ ವೇರಿಯಬಲ್ಗಳು, ಅಥವಾ
-  `OmniRoute`, `OAuth`, `MCP`, ಮತ್ತು `A2A`ಯಂತಹ ಸಂರಕ್ಷಿತ ಪದಗಳನ್ನು ಅನುವಾದಿಸಬೇಡಿ. ಪ್ರಸ್ತುತ ಮೂಲ ಪಟ್ಟಿ
+  `67router`, `OAuth`, `MCP`, ಮತ್ತು `A2A`ಯಂತಹ ಸಂರಕ್ಷಿತ ಪದಗಳನ್ನು ಅನುವಾದಿಸಬೇಡಿ. ಪ್ರಸ್ತುತ ಮೂಲ ಪಟ್ಟಿ
   `scripts/i18n/glossary/protected-terms.json` ಆಗಿದೆ.
 
 **ಕೇಂದ್ರೀಕೃತ ಲೂಪ್**
@@ -251,7 +251,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ಬೇರೆಡೆ bui
 - **Rollback ಮಾಡಿ.** `run` promote ಮಾಡಿದ slot ಅನ್ನು ಮತ್ತೊಮ್ಮೆ validate ಮಾಡುತ್ತದೆ ಮತ್ತು ಆ ಪರಿಶೀಲನೆ ವಿಫಲವಾದಾಗ
   `current` ಹಾಗೂ `previous` ಅನ್ನು ಮತ್ತೆ ಅದಲುಬದಲು ಮಾಡುತ್ತದೆ. ಮೊದಲ validation ನಲ್ಲಿ ವಿಫಲವಾದ candidate ಅನ್ನು ಎಂದಿಗೂ promote ಮಾಡಲಾಗುವುದಿಲ್ಲ.
 
-ಎಲ್ಲವನ್ನೂ gitignore ಮಾಡಲಾದ `_artifacts/candidate/` ಅಡಿಯಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ; ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ OmniRoute
+ಎಲ್ಲವನ್ನೂ gitignore ಮಾಡಲಾದ `_artifacts/candidate/` ಅಡಿಯಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ; ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ 67router
 installation ಮತ್ತು ಅದರ data directory ಅನ್ನು ಎಂದಿಗೂ ಸ್ಪರ್ಶಿಸಲಾಗುವುದಿಲ್ಲ. promote ಮಾಡಿದ CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` ಆಗಿದೆ; ಅದನ್ನು ಬಳಸುವಾಗ ನಿಮ್ಮದೇ `DATA_DIR` ಜೊತೆಗೆ start ಮಾಡಿ.
 Exit codes: `0` ಯಶಸ್ಸು, `1` validation ಅಥವಾ promotion ವಿಫಲವಾಗಿದೆ, `2` ಬಳಕೆಯ ದೋಷ ಅಥವಾ build ಕಾಣೆಯಾಗಿದೆ.

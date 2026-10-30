@@ -4,7 +4,7 @@
 
 ---
 
-Acest ghid descrie adăugarea conturilor Kiro (asistent de programare AI găzduit de AWS) în OmniRoute,
+Acest ghid descrie adăugarea conturilor Kiro (asistent de programare AI găzduit de AWS) în 67router,
 cu accent pe rularea simultană a mai multor conturi fără conflicte de sesiune.
 
 ---
@@ -22,10 +22,10 @@ primului cont.
 
 ---
 
-## Cum rezolvă OmniRoute această problemă (v3.8.0+)
+## Cum rezolvă 67router această problemă (v3.8.0+)
 
-Începând cu v3.8.0, OmniRoute apelează `registerClient()` (AWS SSO OIDC) la fiecare
-import al unei conexiuni Kiro. Astfel, fiecare conexiune OmniRoute primește propria înregistrare
+Începând cu v3.8.0, 67router apelează `registerClient()` (AWS SSO OIDC) la fiecare
+import al unei conexiuni Kiro. Astfel, fiecare conexiune 67router primește propria înregistrare
 dedicată de client OIDC. Deoarece fiecare înregistrare de client este independentă, reîmprospătarea sau
 reautentificarea unui cont nu afectează tokenul de reîmprospătare al niciunui alt cont.
 
@@ -59,7 +59,7 @@ primi automat propria înregistrare de client.
 
 ### Cerințe preliminare
 
-- OmniRoute v3.8.0 sau o versiune ulterioară.
+- 67router v3.8.0 sau o versiune ulterioară.
 - Un cont Kiro funcțional (autentificare prin e-mail + parolă, Google sau GitHub).
 - Opțional, un al doilea cont Kiro.
 
@@ -70,7 +70,7 @@ primi automat propria înregistrare de client.
    - **Import Token** — introduceți un token de reîmprospătare care începe cu `aorAAAAAG`.
    - **API Key** — introduceți o cheie API Kiro / CodeWhisperer cu durată lungă de viață.
    - **Autentificare Google / GitHub** — finalizați fluxul OAuth în browser.
-   - **Auto-Import** — faceți clic pe buton; OmniRoute citește acreditările din baza de date
+   - **Auto-Import** — faceți clic pe buton; 67router citește acreditările din baza de date
      locală kiro-cli sau din `~/.aws/sso/cache`.
 3. Conexiunea este salvată. Fluxurile bazate pe tokenuri de reîmprospătare înregistrează automat un client
    OIDC dedicat. Fluxurile bazate pe chei API validează cheia prin AWS și nu stochează un token de reîmprospătare.
@@ -127,7 +127,7 @@ utilizează reîmprospătarea OAuth, evitând astfel invalidarea sesiunilor OIDC
 2. Alegeți **Cheie API**.
 3. Lipiți cheia API și selectați regiunea AWS: **Detectare automată** (implicit), **SUA Est
    (N. Virginia)** sau **Europa (Frankfurt)**.
-4. OmniRoute validează cheia și salvează conexiunea fixată la regiunea în care
+4. 67router validează cheia și salvează conexiunea fixată la regiunea în care
    funcționează cheia.
 
 ### API
@@ -177,7 +177,7 @@ către `https://q.<region>.amazonaws.com/generateAssistantResponse` — inclusiv
 ## Expirarea clientului OIDC
 
 Clienții publici AWS SSO OIDC expiră de obicei după 90 de zile
-(`clientSecretExpiresAt`). OmniRoute stochează acest marcaj temporal în `providerSpecificData`
+(`clientSecretExpiresAt`). 67router stochează acest marcaj temporal în `providerSpecificData`
 pentru observabilitate. Dacă reîmprospătarea unei conexiuni încetează după aproximativ 90 de zile, reimportați
 conexiunea pentru a obține o înregistrare nouă a clientului OIDC. Reînregistrarea automată la
 expirare este urmărită ca o îmbunătățire viitoare.
@@ -198,7 +198,7 @@ prin AWS SSO OIDC.
 ### Importarea eșuează cu „Token validation failed”
 
 - Asigurați-vă că tokenul de reîmprospătare începe cu `aorAAAAAG`.
-- Asigurați-vă că OmniRoute poate accesa `https://oidc.us-east-1.amazonaws.com` (sau regiunea
+- Asigurați-vă că 67router poate accesa `https://oidc.us-east-1.amazonaws.com` (sau regiunea
   configurată). Dacă vă aflați în spatele unui proxy corporativ, setați un proxy la nivel de furnizor în
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ prin AWS SSO OIDC.
 
 - Confirmați că cheia este o cheie API Kiro / CodeWhisperer, nu un token de reîmprospătare.
 - Confirmați că regiunea AWS corespunde cheii/contului. `us-east-1` este valoarea implicită.
-- Cheia trebuie să poată apela `ListAvailableProfiles`; în caz contrar, OmniRoute nu poate
+- Cheia trebuie să poată apela `ListAvailableProfiles`; în caz contrar, 67router nu poate
   identifica valoarea `profileArn` necesară.
 
 Pentru alte probleme, consultați documentul principal [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

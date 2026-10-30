@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** ibi-iṣẹ́ `electron/`
 > **Ìmúdójúìwọ̀n tó ṣẹ̀ṣẹ̀:** 2026-06-28 — v3.8.40
 
-OmniRoute ní ètò ìṣàfilọ́lẹ̀ orí kọ̀ǹpútà tó ń ṣiṣẹ́ lórí ọ̀pọ̀ pẹpẹ (Windows / macOS / Linux), tí a kọ́ sórí
+67router ní ètò ìṣàfilọ́lẹ̀ orí kọ̀ǹpútà tó ń ṣiṣẹ́ lórí ọ̀pọ̀ pẹpẹ (Windows / macOS / Linux), tí a kọ́ sórí
 **Electron 41** + **electron-builder 26.10**. Ètò ìṣàfilọ́lẹ̀ orí kọ̀ǹpútà náà máa ń dá olupin Next.js
 standalone sílẹ̀ gẹ́gẹ́ bí ìlànà ọmọ, ó máa ń darí `BrowserWindow` sí i, ó sì ń ṣàfikún
 àpótí ètò, olùmúdójúìwọ̀n aládàáṣiṣẹ́, afárá IPC, àti ìpilẹ̀ṣẹ̀ àṣírí tí kò nílò àtòpọ̀.
@@ -45,7 +45,7 @@ A fìdí rẹ̀ múlẹ̀ láti `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (Àwọn ìkọ́lé-tẹ́lẹ̀ Node-API — kò nílò àtúnkọ́ Electron) |
 | Ẹ̀dà ètò ìṣàfilọ́lẹ̀  | `3.8.0`                                                             |
 | ID ètò ìṣàfilọ́lẹ̀   | `online.omniroute.desktop`                                          |
-| Orúkọ ọjà          | `OmniRoute`                                                         |
+| Orúkọ ọjà          | `67router`                                                          |
 
 ## Àwọn ìwé-àṣẹ (root `package.json`)
 
@@ -196,7 +196,7 @@ yan fáìlì `.env` lákọ̀ọ́kọ́, lẹ́yìn náà pa á pátápátá (�
 - `BrowserWindow`: 1400×900 (ó kéré jù 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, àmì ìṣàkóso fèrèsé ní `{ x: 16, y: 16 }`.
 - Windows/Linux: ọ̀pá àkọlé àbínibí.
-- Bọ́tìnì títì máa ńdín fèrèsé kù sínú àpótí iṣẹ́; àkójọ aṣàyàn àpótí iṣẹ́ ní **Ṣí OmniRoute**, **Ṣí Pánẹ́ẹ̀lì Ìdarí** (ní ẹ̀rọ aṣàwákiri ìta), àkójọ-ẹ̀ka **Pọ́ọ̀tì Olùpín**, **Ṣàyẹ̀wò fún Àwọn Ìmúdójúìwọ̀n**, **Jáde**.
+- Bọ́tìnì títì máa ńdín fèrèsé kù sínú àpótí iṣẹ́; àkójọ aṣàyàn àpótí iṣẹ́ ní **Ṣí 67router**, **Ṣí Pánẹ́ẹ̀lì Ìdarí** (ní ẹ̀rọ aṣàwákiri ìta), àkójọ-ẹ̀ka **Pọ́ọ̀tì Olùpín**, **Ṣàyẹ̀wò fún Àwọn Ìmúdójúìwọ̀n**, **Jáde**.
 
 ## Ìlànà Ààbò Àkóónú
 

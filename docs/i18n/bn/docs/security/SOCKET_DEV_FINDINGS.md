@@ -49,7 +49,7 @@
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>`-এর মাধ্যমে প্রতি-প্রোফাইল NSS DB আপডেট                                                |
 
 এগুলো `mitmproxy`, Charles Proxy, Fiddler এবং Caddy-তে ব্যবহৃত একই কমান্ড।
-OmniRoute-এ এগুলোর উপস্থিতি `docs/security/STEALTH_GUIDE.md`-এ নথিভুক্ত আছে।
+67router-এ এগুলোর উপস্থিতি `docs/security/STEALTH_GUIDE.md`-এ নথিভুক্ত আছে।
 
 **v3.8.6 প্রশমন**:
 
@@ -103,7 +103,7 @@ OmniRoute-এ এগুলোর উপস্থিতি `docs/security/STEALTH
 v3.9-এ অপসারণ করা হবে।
 
 **আমরা এটি কেন রাখি**: যেসব ব্যবহারকারী ইতিমধ্যেই Zed ব্যবহার করেন এবং পুনরায় paste না করে
-তাদের provider key OmniRoute-এ প্রতিলিপি করতে চান, তাদের জন্য Zed import হলো সবচেয়ে সহজ onboarding পদ্ধতি।
+তাদের provider key 67router-এ প্রতিলিপি করতে চান, তাদের জন্য Zed import হলো সবচেয়ে সহজ onboarding পদ্ধতি।
 
 ---
 
@@ -114,7 +114,7 @@ v3.9-এ অপসারণ করা হবে।
 **ফ্ল্যাগ করার কারণ**: chunk-টি `execFileWithPassword`,
 `runElevatedPowerShell` এবং শেয়ার করা `quotePowerShell` helper পুনরায় export করে। Socket.dev-এর
 AI classifier এগুলোকে একটি সাধারণ "host execution + privilege elevation
-toolkit" হিসেবে দেখে। OmniRoute-এর মধ্যে এগুলো কেবল MITM cert install path
+toolkit" হিসেবে দেখে। 67router-এর মধ্যে এগুলো কেবল MITM cert install path
 (§1) এবং `sudo` command execution-এর জন্য `execFileWithPassword` দ্বারা ব্যবহৃত হয়।
 
 **v3.8.6 প্রশমন**:
@@ -162,7 +162,7 @@ service (ভাবুন: WordPress-ধাঁচের plugin) — কঠোর�
 
 ---
 
-## §5 — OmniRoute Cloud Sync ক্রেডেনশিয়াল রাইট-ব্যাক (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync ক্রেডেনশিয়াল রাইট-ব্যাক (`api/keys/[id]/route.js`)
 
 **সোর্স ফাইলসমূহ**:
 
@@ -194,7 +194,7 @@ rawBody)`) যাচাই করে। সিক্রেট সেট কর�
    রিমোট টোকেন সিঙ্কের ওপর নির্ভর করতেন, তাঁদের জন্য এটি একটি **ব্রেকিং পরিবর্তন** —
    তাঁদের স্পষ্টভাবে অপ্ট-ইন করতে হবে।
 
-**কেন আমরা এটি রাখছি**: OmniRoute Cloud টেন্যান্টের জন্য টিমের ক্রেডেনশিয়াল
+**কেন আমরা এটি রাখছি**: 67router Cloud টেন্যান্টের জন্য টিমের ক্রেডেনশিয়াল
 কেন্দ্রীভূত করার একমাত্র উপায় হলো Cloud Sync। এই সংশোধনটি থ্রেট মডেলকে স্বচ্ছ করে:
 "সার্ভার স্বাক্ষর করে, ক্লায়েন্ট যাচাই করে, অপারেটর অপ্ট-ইন করে।"
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute eristab **CLI tuvastamist**, **natiivset Agent Client Protocoli** ja
+67router eristab **CLI tuvastamist**, **natiivset Agent Client Protocoli** ja
 **pärand-stdio-adaptereid**. Installitud binaarfaili leidmine ei tõenda selle
 autentimist, mudeliga ühilduvust ega valmisolekut viipa töötlemiseks.
 

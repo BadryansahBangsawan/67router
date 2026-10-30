@@ -5,7 +5,7 @@
 ---
 
 자체 호스팅 풀은 **.113** 박스(`tomni-proxmox-113`)에서 실행됩니다. 2026-10-18부터 각
-OmniRoute 러너에는 **하나의 역할**과 하나의 레이블이 할당되며, 워크로드 측정값에 맞춘 메모리/CPU 예산이
+67router 러너에는 **하나의 역할**과 하나의 레이블이 할당되며, 워크로드 측정값에 맞춘 메모리/CPU 예산이
 적용됩니다. Turbopack 슬롯에는 빌드에 필요한 만큼의 리소스가 제공되고, 다른 슬롯들은
 측정된 최대 사용량에 맞게 할당됩니다. Turbopack 빌드가 Release-Green
 webpack 빌드 및 lint 작업과 동시에 실행될 때만 박스가 리소스를 초과 할당합니다. 이때 호스트 스왑(16 GB)이 이를 흡수하며, 풀 리퀘스트 Build는
@@ -27,7 +27,7 @@ webpack 빌드 및 lint 작업과 동시에 실행될 때만 박스가 리소스
 | 스왑      | 16 GB                   | `omniroute-113-5`는 스왑을 비활성화한 상태(`MemorySwapMax=0`)로 실행되므로, 제어 불능 상태의 빌드는 박스 전체를 스왑시키는 대신 설정된 한도에서 중단됩니다                                                                                                                                                                                                                                                         |
 | `/tmp`    | **12 GB tmpfs = RAM**   | 여기에 저장되는 모든 것은 메모리를 사용하며, 남은 파일은 3시간 후 정리됩니다                                                                                                                                                                                                                                                                                                                                       |
 | CPU       | 32코어에서 부하 60 관측 | 할당량을 적용하기 전에는 Turbopack 빌드 하나(약 1166 % CPU)와 커버리지 스위트가 동일한 박스에서 함께 실행되면서 다른 리스너의 하트비트가 리소스를 받지 못했습니다(`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                             |
-| 러너      | **리스너 6개**          | OmniRoute 4개 + OmniHeuris + OmniMind이며, `omniroute-113-3/-4/-7/-8`은 비활성화되어 있습니다(`systemctl enable --now`로 하나를 다시 활성화할 수 있음)                                                                                                                                                                                                                                                             |
+| 러너      | **리스너 6개**          | 67router 4개 + OmniHeuris + OmniMind이며, `omniroute-113-3/-4/-7/-8`은 비활성화되어 있습니다(`systemctl enable --now`로 하나를 다시 활성화할 수 있음)                                                                                                                                                                                                                                                              |
 
 제한 설정은 각 유닛의 `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`에
 있으며(이전 값은 `override.conf.bak-20261018`로 보관), `systemctl set-property --runtime … MemoryHigh=… MemoryMax=… CPUQuota=…`를 통해 실시간으로 적용되었습니다. 재시작하지 않았으므로
@@ -74,7 +74,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
 
 runner의 기본 `KillMode=process`는 유닛이 중지되거나 재시작될 때
 `Runner.Worker → npm → next-build`를 계속 실행된 상태로 남깁니다. 이 고아 빌드는
-연결된 작업 없이 RAM과 CPU를 계속 소모합니다. 모든 OmniRoute 유닛에는
+연결된 작업 없이 RAM과 CPU를 계속 소모합니다. 모든 67router 유닛에는
 `KillMode=mixed`가 설정된 drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)이
 있습니다. 먼저 listener에 SIGTERM을 보내고, `TimeoutStop` 시점에 전체 cgroup에
@@ -122,7 +122,7 @@ runner 하나만, 유휴 상태일 때에만** 재시작하고, 유휴 상태 �
   `next build`(약 5–6 GB, webpack)가 필요한 야간 작업과 `quality.yml`의 `lint-guard`를
   실행한다. `omniroute-113`은 2026-10-18까지 `MemoryHigh=4G`였다. 그곳에서 promptfoo 빌드는
   54분 동안 메모리를 회수하며 간신히 진행되었고, 8 GB로 설정하면 스로틀링이 사라진다.
-- **리스너 수를 의도적으로 줄임.** 2026-08-29에 OmniRoute 유닛 네 개를 비활성화했다. 리스너가
+- **리스너 수를 의도적으로 줄임.** 2026-08-29에 67router 유닛 네 개를 비활성화했다. 리스너가
   추가될 때마다 위 메모리 예산을 사용하는 테넌트가 하나씩 늘어나기 때문이다. janitor의 상한은
   6이다(cron의 `MAX_ACTIVE_RUNNERS=6`). 이 값은 서버의 모든 `Runner.Listener`를 세며,
   OmniHeuris와 OmniMind가 네 개의 리스너에 두 개를 추가한다.

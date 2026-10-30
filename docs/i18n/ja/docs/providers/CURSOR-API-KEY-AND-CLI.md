@@ -4,15 +4,15 @@
 
 ---
 
-IDE セッションなしで Cursor を OmniRoute の背後に配置するには、次の 2 つの方法があります。
+IDE セッションなしで Cursor を 67router の背後に配置するには、次の 2 つの方法があります。
 
 1. **`cursor-api` プロバイダー**（カード「Cursor API」、エイリアス `cua`）：Cursor ユーザー API キー（`crsr_…`、`https://cursor.com/dashboard/api` で生成）を保持する API キー方式の
-   プロバイダーです。任意の OmniRoute クライアントから、
+   プロバイダーです。任意の 67router クライアントから、
    通常のクォータ、フォールバック、ロギングの各レイヤーを介して、`/v1/chat/completions` 経由で
    `cursor-api/<model>` または `cua/<model>` として Cursor モデルにアクセスできます。IDE
    プロバイダー（`cursor`、OAuth/IDE セッション）に変更はありません。
-2. **Cursor CLI パススルー**：Cursor CLI（`agent`）を OmniRoute に向けることで、
-   CLI が実行するすべての RPC が OmniRoute API キーで認証され、
+2. **Cursor CLI パススルー**：Cursor CLI（`agent`）を 67router に向けることで、
+   CLI が実行するすべての RPC が 67router API キーで認証され、
    `cursor-api` 接続の認証情報を使用して Cursor に転送され、Logs
    ページに記録されます。
 
@@ -58,7 +58,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 注：
 
 - `cursor-api` のモデル一覧は静的な Cursor レジストリ（IDE
-  プロバイダーがフォールバックに使用するものと同じ一覧）から取得されます。OmniRoute ホストに
+  プロバイダーがフォールバックに使用するものと同じ一覧）から取得されます。67router ホストに
   `cursor-agent` をインストールする必要はありません。
 - `POST /api/providers/{id}/refresh-cursor` は `cursor` IDE プロバイダー
   専用です。`cursor-api` 接続には更新対象となる IDE セッションがありません。
@@ -67,7 +67,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 `cursor` / `cu` および `cursor-api` / `cua` では、共有 Claude-effort ノーマライザーは
 リクエストされたモデル ID をそのまま維持します。Cursor では、`-low` のようなサフィックスを
-OmniRoute の effort エイリアスとしてではなく、実際のモデル ID の一部として公開する場合があります。
+67router の effort エイリアスとしてではなく、実際のモデル ID の一部として公開する場合があります。
 Cursor executor はライブカタログとの完全一致を維持します。一致しない場合は、
 既存のモデルリゾルバーがサフィックスからパラメーターへのフォールバックを処理します。
 
@@ -82,18 +82,18 @@ Cursor executor はライブカタログとの完全一致を維持します。�
 ハンドラーが独自に認証を実施するため、`src/shared/constants/publicApiRoutes.ts` に
 登録されています。
 
-| パス                                                                                                                            | CLI から想定される認証       | OmniRoute の処理                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <OmniRoute APIキー>` | キーを検証し、1時間有効な HS256 JWT（`JWT_SECRET` で署名）を発行して返します                                                                                                     |
-| その他すべてのパス（`/aiserver.v1.*`、`/agent.v1.AgentService/RunSSE`、`/aiserver.v1.BidiService/BidiAppend`、`/v1/traces`、…） | `Bearer <そのJWT>`           | 発行者、オーディエンス、有効期限を検証し、アクティブな `cursor-api` 接続を選択して、Authorization ヘッダーを交換済みの Cursor トークンに置き換え、応答をストリーミングで返します |
+| パス                                                                                                                            | CLI から想定される認証      | 67router の処理                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <67router APIキー>` | キーを検証し、1時間有効な HS256 JWT（`JWT_SECRET` で署名）を発行して返します                                                                                                     |
+| その他すべてのパス（`/aiserver.v1.*`、`/agent.v1.AgentService/RunSSE`、`/aiserver.v1.BidiService/BidiAppend`、`/v1/traces`、…） | `Bearer <そのJWT>`          | 発行者、オーディエンス、有効期限を検証し、アクティブな `cursor-api` 接続を選択して、Authorization ヘッダーを交換済みの Cursor トークンに置き換え、応答をストリーミングで返します |
 
 CLI は受け取ったトークンから `exp` をデコードするため、不透明な
 トークンを渡すと、ほぼすべてのリクエストの前に再交換が行われます。発行された JWT により、
-これを回避できます。OmniRoute から 401 が返されると、CLI は再度交換します。
+これを回避できます。67router から 401 が返されると、CLI は再度交換します。
 
 ### セットアップ
 
-1. OmniRoute API キー（ダッシュボード → API キー）と `cursor-api`
+1. 67router API キー（ダッシュボード → API キー）と `cursor-api`
    接続を作成します。
 2. エージェントストリームで HTTP/1.1 を使用するよう CLI を設定します。
    `~/.cursor/cli-config.json` で次のように設定します。
@@ -105,7 +105,7 @@ CLI は受け取ったトークンから `exp` をデコードするため、不
    この設定がない場合、CLI は個別に設定されたエージェントホストへのエージェントターンを
    HTTP/2 で開始し、コントロールプレーン RPC のみがこのエンドポイントを経由します。
 
-3. OmniRoute に対して CLI を実行します。
+3. 67router に対して CLI を実行します。
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -114,17 +114,17 @@ CLI は受け取ったトークンから `exp` をデコードするため、不
    ```
 
 各ホップは、プロバイダー `cursor-api`、リクエストタイプ `cursor-cli`、
-パス `/api/cursor-cli/<rpc>` としてログに記録され、OmniRoute API キーと、
+パス `/api/cursor-cli/<rpc>` としてログに記録され、67router API キーと、
 リクエストを処理した接続に紐付けられます。
 
 ### 失敗モード
 
 | 状況                                             | CLI への応答                                          |
 | ------------------------------------------------ | ----------------------------------------------------- |
-| 不明な OmniRoute キーかつ `REQUIRE_API_KEY=true` | 交換時に 401 `unauthenticated`                        |
+| 不明な 67router キーかつ `REQUIRE_API_KEY=true`  | 交換時に 401 `unauthenticated`                        |
 | `REQUIRE_API_KEY=false`                          | 匿名セッション（`/v1/*` の動作と同様）                |
 | 期限切れ / 外部発行 / 改ざんされたセッション JWT | 401、CLI が再交換                                     |
-| 交換後に OmniRoute API キーが失効                | 次の RPC で 401                                       |
+| 交換後に 67router API キーが失効                 | 次の RPC で 401                                       |
 | アクティブな `cursor-api` 接続がない             | 503 `unavailable`                                     |
 | Cursor が接続のキーを拒否                        | 401 `unauthenticated`、キャッシュ済みセッションを破棄 |
 | アップストリームに到達不能                       | 502 `unavailable`（サニタイズされたメッセージ）       |

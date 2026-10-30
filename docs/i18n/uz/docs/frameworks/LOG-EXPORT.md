@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute chaqiruv jurnallarini tashqi tahlil omboriga uzluksiz, bosqichma-bosqich eksport qilish.
+67router chaqiruv jurnallarini tashqi tahlil omboriga uzluksiz, bosqichma-bosqich eksport qilish.
 
 Logs boshqaruv paneli ichki oynasi soʻrovlar tarixini SQLite (`call_logs`) bazasida saqlaydi; uning hajmi
 rotatsiya va saqlash muddati bilan cheklangan. Jurnallarni eksport qilish ayni yozuvlar toʻplamini jadval

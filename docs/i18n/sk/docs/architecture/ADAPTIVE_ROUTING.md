@@ -5,7 +5,7 @@
 ---
 
 Tento dokument opisuje základ adaptívneho smerovania riadeného spätnou väzbou, ktorý bol pridaný do
-OmniRoute. Zámerne má malý rozsah: zavádza typovaný kanál výsledkov smerovania,
+67router. Zámerne má malý rozsah: zavádza typovaný kanál výsledkov smerovania,
 online signál kvality, ktorý vstupuje do existujúceho vyhodnocovania auto-combo,
 voliteľný exportér OpenTelemetry a koncový bod na vysvetliteľnosť. **Nenahrádza**
 existujúcu vrstvu odolnosti (istič, časový odstup pripojenia,
@@ -13,7 +13,7 @@ uzamknutie modelu, matica stavu, autopilot) — dopĺňa ju.
 
 ## 1. Architektonický kontext
 
-OmniRoute je dátová rovina s **kritickou cestou požiadavky** a **riadiacou/inteligenčnou
+67router je dátová rovina s **kritickou cestou požiadavky** a **riadiacou/inteligenčnou
 rovinou**. Kritická cesta musí zostať rýchla, pamäťovo efektívna, asynchrónna, odolná a
 predvídateľná. Vyhodnocovanie, bodovanie kvality, experimenty a historická analýza patria
 do riadiacej roviny.
@@ -23,7 +23,7 @@ AI agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   dátová rovina (rýchla, synchrónna, v pamäti)
+│    67router        │   dátová rovina (rýchla, synchrónna, v pamäti)
 │ smerovanie/záloha   │
 │ stav / ochrany      │
 │ cache / streamovanie│
@@ -238,7 +238,7 @@ Súbory: `open-sse/services/routing/otel.ts`
 - Spany dodržiavajú sémantické konvencie GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) spolu so smerovacími
-  atribútmi OmniRoute (výsledok, stav, ttft, opakované pokusy, fallback).
+  atribútmi 67router (výsledok, stav, ttft, opakované pokusy, fallback).
 - `record()` iba pridáva položky do ohraničeného buffera (O(1)); časovač na pozadí
   ich asynchrónne odosiela prostredníctvom `POST {endpoint}/v1/traces`. Pri preťažení sa
   najstaršie udalosti zahadzujú (počítadlo `dropped`) — dátová rovina nikdy nie je
@@ -260,7 +260,7 @@ Súbory: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrácia evaluačnej roviny (pripravenosť na Future AGI)
 
-OmniRoute považuje Future AGI (alebo ľubovoľný evaluátor) za **potenciálny
+67router považuje Future AGI (alebo ľubovoľný evaluátor) za **potenciálny
 backend pre inteligenciu/evaluáciu, nie za závislosť**. Integračné body:
 
 - `RoutingEventSink` môže asynchrónne odosielať udalosti evaluátoru.

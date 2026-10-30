@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute በHindsight 0.9.1 (ጽሑፍ-ብቻ `encode(list[str])`) እና Memorix 1.6.0 (Jina ሚዲያ ጌት) ፊት ሲቀመጥ ለ`POST /v1/embeddings` የኦፕሬተር ማስታወሻዎች። በ2026-08-17 በቀጥታ ከOmniRoute 3.8.49 ጋር በ
+67router በHindsight 0.9.1 (ጽሑፍ-ብቻ `encode(list[str])`) እና Memorix 1.6.0 (Jina ሚዲያ ጌት) ፊት ሲቀመጥ ለ`POST /v1/embeddings` የኦፕሬተር ማስታወሻዎች። በ2026-08-17 በቀጥታ ከ67router 3.8.49 ጋር በ
 `https://omniroute.jaguar-fish.ts.net/v1` ተረጋግጧል። ከታች ምንም ሚስጥር የለም።
 
 ## የሚሰሩ የሞዴል መለያዎች
@@ -75,7 +75,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 ቤተኛው `gemini-embedding-2` በGitOps ብቻ ሊሳካ አይችልም። የGoogle AI
 Studio ቁልፍ እንደ `gemini` የአቅራቢ ግንኙነት መጨመር አለበት (ዳሽቦርድ ወይም
-ወደ OmniRoute የገባ `GEMINI_API_KEY`)። ያ ሚስጥር በዚህ repo ውስጥ የለም።
+ወደ 67router የገባ `GEMINI_API_KEY`)። ያ ሚስጥር በዚህ repo ውስጥ የለም።
 
 ### የJina መልቲሞዳል መንገድ
 
@@ -96,7 +96,7 @@ Studio ቁልፍ እንደ `gemini` የአቅራቢ ግንኙነት መጨመር
 
 ### የJina / Memorix ምስል ኦብጀክት
 
-የOmniRoute መደበኛ የምስል ንጥል (28×28 PNG፣ 784 ፒክሰሎች — Jina 1×1ን ውድቅ ያደርጋል)፦
+የ67router መደበኛ የምስል ንጥል (28×28 PNG፣ 784 ፒክሰሎች — Jina 1×1ን ውድቅ ያደርጋል)፦
 
 ```json
 {
@@ -145,7 +145,7 @@ Studio ቁልፍ እንደ `gemini` የአቅራቢ ግንኙነት መጨመር
 
 የHindsight embeddings ጽሑፍ-ብቻ ናቸው (`encode(list[str])`)። የምስል ኦብጀክቶችን
 አይልክም። የHindsightን ከOpenAI ጋር ተኳሃኝ የሆነ embeddings መሠረታዊ URL ወደ
-OmniRoute `/v1` ያመልክቱ እና ከላይ ባለው ሰንጠረዥ ውስጥ የሚሰራ መለያ
+67router `/v1` ያመልክቱ እና ከላይ ባለው ሰንጠረዥ ውስጥ የሚሰራ መለያ
 (`jina-ai/jina-embeddings-v5-omni-small` ወይም
 `openrouter/google/gemini-embedding-2`) ይጠቀሙ። በጌትዌዩ ላይ የ`gemini` API ቁልፍ ከሌለ በስተቀር ሞዴሉን ወደ ባዶው
 `gemini-embedding-2` አያዘጋጁ።
@@ -153,9 +153,9 @@ OmniRoute `/v1` ያመልክቱ እና ከላይ ባለው ሰንጠረዥ ው�
 ### Memorix 1.6.0
 
 Memorix ከ`/jina\.ai/i` ጋር የሚዛመድ `baseUrl`ን ብቻ እንደ ቤተኛ ሚዲያ ይቆጥራል።
-ሞዴሉ Jina omni ቢሆንም የOmniRoute URL በጽሑፍ-ብቻ መንገድ ላይ ይቆያል።
+ሞዴሉ Jina omni ቢሆንም የ67router URL በጽሑፍ-ብቻ መንገድ ላይ ይቆያል።
 ያ ጌት የMemorix ደንበኛ ችግር ነው። ከዚህ በተናጠል፣ ጌቱ
-ቢከፈት Memorix የሚልከውን የJina `{image: "data:..."}` አካል OmniRoute አሁንም ውድቅ ያደርጋል፤ ስለዚህ ከJina ጋር ተኳሃኝ የሆኑ ደንበኞች መደበኛውን `{type,source}` ስኪማ ሳይጠቀሙ ምስሎችን በOmniRoute በኩል embed ማድረግ አይችሉም።
+ቢከፈት Memorix የሚልከውን የJina `{image: "data:..."}` አካል 67router አሁንም ውድቅ ያደርጋል፤ ስለዚህ ከJina ጋር ተኳሃኝ የሆኑ ደንበኞች መደበኛውን `{type,source}` ስኪማ ሳይጠቀሙ ምስሎችን በ67router በኩል embed ማድረግ አይችሉም።
 
 ለጽሑፍ `jina-ai/jina-embeddings-v5-omni-small`ን ይጠቀሙ። የMemorix
-`base_url`ን ወደ `https://api.jina.ai` አያመልክቱ — OmniRouteን ብቸኛው መካከለኛ መዳረሻ አድርገው ያቆዩ።
+`base_url`ን ወደ `https://api.jina.ai` አያመልክቱ — 67routerን ብቸኛው መካከለኛ መዳረሻ አድርገው ያቆዩ።

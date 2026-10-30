@@ -4,7 +4,7 @@
 
 ---
 
-Úsáideann OmniRoute samhail eisiúna **timthrialla chomhthreomhair**: brainse tiomnaithe `release/vX.Y.Z`
+Úsáideann 67router samhail eisiúna **timthrialla chomhthreomhair**: brainse tiomnaithe `release/vX.Y.Z`
 don timthriall gníomhach, `main` don líne fhoilsithe, agus clib dho-athraithe
 `vX.Y.Z` nuair a eisítear an timthriall sin. Is gnách gealltanais a fheiceáil ag teacht i dtír ar `release/*` _agus_ ar
 `main` — ní mearbhall é sin.

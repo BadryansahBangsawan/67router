@@ -8,9 +8,9 @@
 > **آخری بار اپ ڈیٹ کیا گیا:** 2026-09-16
 > **مخاطبین:** ایمبیڈڈ سروسز (9Router، CLIProxyAPI، Mux، Bifrost، open-wa، LLMLingua) شامل کرنے، برقرار رکھنے، یا ڈیبگ کرنے والے انجینئرز۔
 
-ایمبیڈڈ سروسز مقامی طور پر انسٹال شدہ پروسیس سائڈکار ٹولز ہیں جنہیں OmniRoute انسٹال کرتا ہے، ان کی نگرانی کرتا ہے، اور
+ایمبیڈڈ سروسز مقامی طور پر انسٹال شدہ پروسیس سائڈکار ٹولز ہیں جنہیں 67router انسٹال کرتا ہے، ان کی نگرانی کرتا ہے، اور
 انہیں فرسٹ کلاس روٹنگ اہداف کے طور پر دستیاب بناتا ہے۔ بیرونی فراہم کنندگان کے برعکس (جن تک انٹرنیٹ کے ذریعے
-API کیز استعمال کرتے ہوئے رسائی حاصل کی جاتی ہے)، ایمبیڈڈ سروسز OmniRoute والی مشین پر ہی چلتی ہیں اور لوپ بیک کے ذریعے مواصلت کرتی ہیں۔
+API کیز استعمال کرتے ہوئے رسائی حاصل کی جاتی ہے)، ایمبیڈڈ سروسز 67router والی مشین پر ہی چلتی ہیں اور لوپ بیک کے ذریعے مواصلت کرتی ہیں۔
 
 ---
 
@@ -35,7 +35,7 @@ API کیز استعمال کرتے ہوئے رسائی حاصل کی جاتی ہ
 
 | سروس            | npm پیکیج                        | ڈیفالٹ پورٹ | مقصد                                                                                                                                                                                                                                                                                                                                    |
 | --------------- | -------------------------------- | :---------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                        |    20130    | AI راؤٹر جسے OmniRoute ذیلی فراہم کنندہ کے طور پر استعمال کر سکتا ہے۔ ماڈلز `9router/{sub}/{model}` کے طور پر دستیاب ہوتے ہیں                                                                                                                                                                                                           |
+| **9Router**     | `9router`                        |    20130    | AI راؤٹر جسے 67router ذیلی فراہم کنندہ کے طور پر استعمال کر سکتا ہے۔ ماڈلز `9router/{sub}/{model}` کے طور پر دستیاب ہوتے ہیں                                                                                                                                                                                                            |
 | **CLIProxyAPI** | GitHub ریلیز بائنری (`cliproxy`) |    8317     | Anthropic CLI توثیقی فلوز کے لیے مقامی پراکسی اڈاپٹر۔ OAuth ٹوکنز کی میعاد ختم ہونے پر متبادل راؤٹنگ فراہم کرتا ہے                                                                                                                                                                                                                      |
 | **Mux**         | `mux` (ہیڈلیس `mux server`)      |    8322     | مقامی ایجنٹ آرکیسٹریشن ڈیمون (coder/mux)۔ صرف لائف سائیکل مینیج کیا جاتا ہے — راؤٹنگ ہدف نہیں ہے (کوئی LLM پراکسینگ نہیں)۔                                                                                                                                                                                                              |
 | **Bifrost**     | `@maximhq/bifrost`               |    8080     | Go AI گیٹ وے ریلے بیک اینڈ۔ چلنے کی صورت میں، ریلے روٹ (`/v1/relay/`) کے ذریعے خودکار طور پر منتخب کیا جاتا ہے                                                                                                                                                                                                                          |
@@ -45,21 +45,21 @@ API کیز استعمال کرتے ہوئے رسائی حاصل کی جاتی ہ
 
 تمام سات ایک ہی نگرانی کے ماڈل کی پیروی کرتی ہیں:
 
-- OmniRoute انہیں `DATA_DIR/services/{name}/` کے تحت انسٹال کرتا ہے (OmniRoute کی اپنی `package.json` سے علیحدہ)
-- OmniRoute انہیں چائلڈ پروسیسز کے طور پر چلاتا اور مانیٹر کرتا ہے
-- OmniRoute چائلڈ کے ماحول میں ایک عارضی API کلید انجیکٹ کرتا ہے اور اسے بغیر ڈاؤن ٹائم کے تبدیل کرتا ہے (جہاں قابل اطلاق ہو)
+- 67router انہیں `DATA_DIR/services/{name}/` کے تحت انسٹال کرتا ہے (67router کی اپنی `package.json` سے علیحدہ)
+- 67router انہیں چائلڈ پروسیسز کے طور پر چلاتا اور مانیٹر کرتا ہے
+- 67router چائلڈ کے ماحول میں ایک عارضی API کلید انجیکٹ کرتا ہے اور اسے بغیر ڈاؤن ٹائم کے تبدیل کرتا ہے (جہاں قابل اطلاق ہو)
 - تمام انتظامی روٹس (`/api/services/*`) **LOCAL_ONLY** ہیں — صرف لوپ بیک سے قابل رسائی (سخت اصول #17)
 
 ### کلیدی فیصلے (ڈیزائن پلان سے)
 
-| فیصلہ                                    | قدر                                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 9Router کے مقامی UI تک ڈیش بورڈ کی رسائی | `/dashboard/providers/services/9router/embed/*` پر ریورس پراکسی                             |
-| انسٹالیشن کا طریقۂ کار                   | `execFile` کے ذریعے `npm install {package}` (کوئی شیل انٹرپولیشن نہیں)                      |
-| استعمال کا موڈ                           | راؤٹنگ انجن میں فراہم کنندہ کو `9router/{sub}/{model}` کے طور پر رجسٹر کیا گیا              |
-| API کلید کا انتظام                       | OmniRoute اسے بناتا، ایٹ ریسٹ انکرپٹ کرتا ہے (AES-256-GCM)، اور env کے ذریعے انجیکٹ کرتا ہے |
-| ڈیش بورڈ کا مقام                         | `/dashboard/providers/services` (تین ٹیبز)                                                  |
-| خودکار آغاز                              | ہر سروس کے لیے ٹوگل، ڈیفالٹ OFF                                                             |
+| فیصلہ                                    | قدر                                                                                        |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 9Router کے مقامی UI تک ڈیش بورڈ کی رسائی | `/dashboard/providers/services/9router/embed/*` پر ریورس پراکسی                            |
+| انسٹالیشن کا طریقۂ کار                   | `execFile` کے ذریعے `npm install {package}` (کوئی شیل انٹرپولیشن نہیں)                     |
+| استعمال کا موڈ                           | راؤٹنگ انجن میں فراہم کنندہ کو `9router/{sub}/{model}` کے طور پر رجسٹر کیا گیا             |
+| API کلید کا انتظام                       | 67router اسے بناتا، ایٹ ریسٹ انکرپٹ کرتا ہے (AES-256-GCM)، اور env کے ذریعے انجیکٹ کرتا ہے |
+| ڈیش بورڈ کا مقام                         | `/dashboard/providers/services` (تین ٹیبز)                                                 |
+| خودکار آغاز                              | ہر سروس کے لیے ٹوگل، ڈیفالٹ OFF                                                            |
 
 ---
 
@@ -221,7 +221,7 @@ API کیز استعمال کرتے ہوئے رسائی حاصل کی جاتی ہ
 #### `POST /api/services/9router/install`
 
 npm سے 9Router انسٹال کرتا ہے۔ یہ اپنے `package.json` اور `node_modules/` کے ساتھ
-`DATA_DIR/services/9router/` بناتا ہے۔ یہ OmniRoute کی اپنی deps سے متصادم نہیں ہوتا۔
+`DATA_DIR/services/9router/` بناتا ہے۔ یہ 67router کی اپنی deps سے متصادم نہیں ہوتا۔
 
 **درخواست کی body** (تمام اختیاری):
 
@@ -381,7 +381,7 @@ version metadata اور API key preview سمیت مشترکہ live + DB status �
 
 #### `POST /api/services/9router/auto-start`
 
-auto-start flag کو تبدیل کرتا ہے۔ جب `enabled: true` ہو، تو اگلی بار OmniRoute کے boot ہونے پر
+auto-start flag کو تبدیل کرتا ہے۔ جب `enabled: true` ہو، تو اگلی بار 67router کے boot ہونے پر
 service خودکار طور پر شروع ہو جاتی ہے (بشرطیکہ service انسٹال ہو)۔
 
 **درخواست کی body:**
@@ -590,7 +590,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 یہ پراکسی:
 
 - درخواست کو `http://127.0.0.1:{port}/{path}` کی طرف فارورڈ کرتی ہے (صرف loopback)
-- آنے والے `cookie` اور `authorization` ہیڈرز ہٹا دیتی ہے (OmniRoute سیشن کا کوئی اخراج نہیں)
+- آنے والے `cookie` اور `authorization` ہیڈرز ہٹا دیتی ہے (67router سیشن کا کوئی اخراج نہیں)
 - 9Router توثیق کے لیے `Authorization: Bearer {apiKey}` داخل کرتی ہے
 - جواب سے `set-cookie`، `content-security-policy`، `x-frame-options`، `cross-origin-*` ہٹا دیتی ہے
 - `<base href>` داخل کرنے اور مطلق راستوں کو معمول پر لانے کے لیے HTML جوابات دوبارہ لکھتی ہے (`/foo` → `/dashboard/.../embed/foo`)
@@ -626,7 +626,7 @@ JWT حاصل کرنے والا حملہ آور ایمبیڈ کردہ سروسز 
 ### API کلید کا اندراج
 
 9Router اور Mux کو اپنے HTTP اینڈ پوائنٹس کے لیے API کلید/بیئرر ٹوکن درکار ہوتا ہے۔
-OmniRoute:
+67router:
 
 1. `crypto.randomBytes(32).toString("base64url")` کے ذریعے سروس کے لیے مخصوص
    سابقے (`nr_` برائے 9Router، `mx_` برائے Mux) کے ساتھ کلید بناتا ہے۔
@@ -807,7 +807,7 @@ tab کو `ServicesPageShell.tsx` میں register کریں۔
 **چیک لسٹ:**
 
 1. `GET /api/services/{name}/logs` چیک کریں (یا dashboard میں Logs پینل)۔ ایسی سطور تلاش کریں جیسے `Error: ENOENT`، `address already in use`، یا `Cannot find module`۔
-2. تصدیق کریں کہ `npm`، PATH میں موجود ہے: اسی صارف اکاؤنٹ سے `which npm` چلائیں جو OmniRoute چلاتا ہے۔
+2. تصدیق کریں کہ `npm`، PATH میں موجود ہے: اسی صارف اکاؤنٹ سے `which npm` چلائیں جو 67router چلاتا ہے۔
 3. تصدیق کریں کہ سروس انسٹال ہے: `installedVersion` کے لیے `GET /api/services/{name}/status` چیک کریں۔ اگر یہ `null` ہو، تو پہلے انسٹالیشن چلائیں۔
 4. چیک کریں کہ `DATA_DIR/services/{name}/node_modules/` موجود ہے اور خالی نہیں ہے۔
 5. صاف شدہ اختتامی وجہ کے لیے status response میں `lastError` فیلڈ چیک کریں۔
@@ -840,7 +840,7 @@ tab کو `ServicesPageShell.tsx` میں register کریں۔
 2. متصادم process تلاش کرکے ختم کریں: `lsof -ti :20130 | xargs kill -9`۔
 3. `bootstrap.ts` میں `port` فیلڈ کے ذریعے ہر سروس کے لیے port الگ سے ترتیب دیا جا سکتا ہے۔
 
-**نوٹ:** 9Router بطور ڈیفالٹ port 20130 استعمال کرتا ہے تاکہ خاص طور پر OmniRoute کے پہلے سے طے شدہ port 20128 سے ٹکراؤ سے بچا جا سکے۔
+**نوٹ:** 9Router بطور ڈیفالٹ port 20130 استعمال کرتا ہے تاکہ خاص طور پر 67router کے پہلے سے طے شدہ port 20128 سے ٹکراؤ سے بچا جا سکے۔
 
 ---
 
@@ -850,13 +850,13 @@ tab کو `ServicesPageShell.tsx` میں register کریں۔
 
 **وجوہات:**
 
-- OmniRoute process کو `DATA_DIR` یا اس کی parent directory میں لکھنے کی اجازت نہیں ہے۔
+- 67router process کو `DATA_DIR` یا اس کی parent directory میں لکھنے کی اجازت نہیں ہے۔
 - mapped volume تک تحریری رسائی کے بغیر rootless Docker کے اندر چلایا جا رہا ہے۔
 
 **حل:**
 
 1. `DATA_DIR` چیک کریں (ڈیفالٹ: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. یقینی بنائیں کہ OmniRoute process کا صارف directory کا مالک ہے: `chown -R $USER ~/.omniroute/`
+2. یقینی بنائیں کہ 67router process کا صارف directory کا مالک ہے: `chown -R $USER ~/.omniroute/`
 3. Docker میں یقینی بنائیں کہ volume mount پر container user کے لیے درست permissions موجود ہیں۔
 
 ---
@@ -903,16 +903,16 @@ traffic سے قابلِ رسائی نہیں ہونے چاہییں، کیونکہ
 
 **سوال: کیا 9Router اور CLIProxyAPI production/cloud deployments میں دستیاب ہوں گے؟**
 
-ہاں۔ دونوں سروسز OmniRoute کی طرح اسی local-first ماڈل کی پیروی کرتی ہیں۔ وہ اسی
+ہاں۔ دونوں سروسز 67router کی طرح اسی local-first ماڈل کی پیروی کرتی ہیں۔ وہ اسی
 مشین پر چلتی ہیں اور loopback کے ذریعے رابطہ کرتی ہیں۔ یہاں "Production" سے مراد وہ VPS
-یا local server ہے جہاں OmniRoute deploy کیا گیا ہے، نہ کہ کوئی remote cloud provider۔
+یا local server ہے جہاں 67router deploy کیا گیا ہے، نہ کہ کوئی remote cloud provider۔
 
 ---
 
 **سوال: میں supervisor کو debug کیسے کروں؟**
 
 1. SSE log stream کو tail کریں: `curl -N http://localhost:20128/api/services/9router/logs`۔
-2. OmniRoute کے pino output میں structured logs کو
+2. 67router کے pino output میں structured logs کو
    `service:supervisor` namespace کے مطابق filter کر کے دیکھیں۔
 3. DB row کا معائنہ کریں: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`۔
 4. موجودہ live state، PID، health،

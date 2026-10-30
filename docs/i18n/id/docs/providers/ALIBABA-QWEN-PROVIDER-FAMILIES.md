@@ -10,7 +10,7 @@ sebagai empat keluarga penyedia. Wilayah merupakan data koneksi, bukan produk te
 
 ## Keputusan
 
-| Keluarga penyedia                                   | ID OmniRoute            | Wilayah global | Wilayah Tiongkok |
+| Keluarga penyedia                                   | ID 67router             | Wilayah global | Wilayah Tiongkok |
 | --------------------------------------------------- | ----------------------- | -------------- | ---------------- |
 | Alibaba Cloud Model Studio (bayar sesuai pemakaian) | `alibaba`               | Singapura      | Beijing          |
 | Alibaba Cloud Token Plan                            | `bailian-coding-plan`   | Singapura      | Beijing          |

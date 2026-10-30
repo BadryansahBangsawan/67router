@@ -4,9 +4,9 @@
 
 ---
 
-Notas operativas para `POST /v1/embeddings` cuando OmniRoute se sitúa delante de
+Notas operativas para `POST /v1/embeddings` cuando 67router se sitúa delante de
 Hindsight 0.9.1 (`encode(list[str])` solo para texto) y Memorix 1.6.0 (puerta
-de medios de Jina). Verificado en producción el 2026-08-17 con OmniRoute 3.8.49 en
+de medios de Jina). Verificado en producción el 2026-08-17 con 67router 3.8.49 en
 `https://omniroute.jaguar-fish.ts.net/v1`. No hay secretos a continuación.
 
 ## Id. de modelos que funcionan
@@ -79,7 +79,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 El `gemini-embedding-2` nativo no puede funcionar únicamente mediante GitOps. Debe añadirse
 una clave de Google AI Studio como conexión del proveedor `gemini` (mediante el panel o
-importando `GEMINI_API_KEY` en OmniRoute). Ese secreto no está en este repositorio.
+importando `GEMINI_API_KEY` en 67router). Ese secreto no está en este repositorio.
 
 ### Ruta multimodal de Jina
 
@@ -100,7 +100,7 @@ Use `POST /v1/embeddings` hasta que exista un alias.
 
 ### Objeto de imagen de Jina/Memorix
 
-Elemento de imagen canónico de OmniRoute (PNG de 28×28, 784 píxeles; Jina rechaza imágenes de 1×1):
+Elemento de imagen canónico de 67router (PNG de 28×28, 784 píxeles; Jina rechaza imágenes de 1×1):
 
 ```json
 {
@@ -149,7 +149,7 @@ La mezcla de `{ "text": "..." }` con `{ "image": "data:..." }` produce el mismo 
 
 Las incrustaciones de Hindsight son solo para texto (`encode(list[str])`). No envía
 objetos de imagen. Configure la URL base de incrustaciones compatible con OpenAI de Hindsight para que apunte a
-`/v1` de OmniRoute y use un id. funcional de la tabla anterior
+`/v1` de 67router y use un id. funcional de la tabla anterior
 (`jina-ai/jina-embeddings-v5-omni-small` u
 `openrouter/google/gemini-embedding-2`). No establezca como modelo el
 `gemini-embedding-2` sin prefijo, salvo que exista una clave de API de `gemini` en la puerta de enlace.
@@ -157,11 +157,11 @@ objetos de imagen. Configure la URL base de incrustaciones compatible con OpenAI
 ### Memorix 1.6.0
 
 Memorix solo trata como medios nativos los `baseUrl` que coinciden con `/jina\.ai/i`. Una
-URL de OmniRoute permanece en la ruta exclusiva para texto incluso cuando el modelo es Jina omni.
-Esa puerta es un problema del cliente Memorix. De forma independiente, OmniRoute sigue rechazando
+URL de 67router permanece en la ruta exclusiva para texto incluso cuando el modelo es Jina omni.
+Esa puerta es un problema del cliente Memorix. De forma independiente, 67router sigue rechazando
 el cuerpo de Jina `{image: "data:..."}` que Memorix enviaría si la puerta
-se abriera, por lo que los clientes compatibles con Jina no pueden incrustar imágenes mediante OmniRoute
+se abriera, por lo que los clientes compatibles con Jina no pueden incrustar imágenes mediante 67router
 sin el esquema canónico `{type,source}`.
 
 Use `jina-ai/jina-embeddings-v5-omni-small` para texto. No configure Memorix
-`base_url` para que apunte a `https://api.jina.ai`; mantenga OmniRoute como el único salto.
+`base_url` para que apunte a `https://api.jina.ai`; mantenga 67router como el único salto.

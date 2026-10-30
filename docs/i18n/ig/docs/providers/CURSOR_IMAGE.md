@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-eme ka **mmepụta onyonyo** nke atụmatụ Cursor dị na `POST /v1/images/generations` site n'otu id onye na-eweta ọrụ ahụ dị ka nkata: `cursor` (aha ọzọ `cu`).
+67router na-eme ka **mmepụta onyonyo** nke atụmatụ Cursor dị na `POST /v1/images/generations` site n'otu id onye na-eweta ọrụ ahụ dị ka nkata: `cursor` (aha ọzọ `cu`).
 
 | Oghere               | Uru                                                                                            |
 | -------------------- | ---------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute na-eme ka **mmepụta onyonyo** nke atụmatụ Cursor dị na `POST /
 
 ## Ihe kpatara Agent CLI
 
-Nkata Cursor dị na OmniRoute na-eji `agent.v1.AgentService/Run` (protobuf). Ụzọ ahụ **na-ajụ** ngwaọrụ ndị e wuru n'ime klayenti (shell, write, …). Mmepụta onyonyo bụ ngwaọrụ nke Cursor n'onwe ya nke **`agent` CLI** na-arụ megide seat ahụ. Ya mere, ihe njikwa onyonyo na-ebido `agent` site na prompt akpọchiri akpọchi na ebe ọrụ nwa oge maka arịrịọ ọ bụla (n'otu usoro ahụ dị ka njikọ seat ndị obodo mepụtara), wee weghachite `b64_json` dakọtara na OpenAI.
+Nkata Cursor dị na 67router na-eji `agent.v1.AgentService/Run` (protobuf). Ụzọ ahụ **na-ajụ** ngwaọrụ ndị e wuru n'ime klayenti (shell, write, …). Mmepụta onyonyo bụ ngwaọrụ nke Cursor n'onwe ya nke **`agent` CLI** na-arụ megide seat ahụ. Ya mere, ihe njikwa onyonyo na-ebido `agent` site na prompt akpọchiri akpọchi na ebe ọrụ nwa oge maka arịrịọ ọ bụla (n'otu usoro ahụ dị ka njikọ seat ndị obodo mepụtara), wee weghachite `b64_json` dakọtara na OpenAI.
 
 ## Mmachi nnweta (Iwu Siri Ike #15 + #17)
 
@@ -35,7 +35,7 @@ ndị ọzọ.
 
 A na-amanye `CURSOR_IMG_MAX_CONCURRENT` site na counter/queue dị na ebe nchekwa nke
 instance modulu Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Ọ na-amachi mmalite `agent` ndị na-eme n'otu oge nke ọma n'ime otu process OmniRoute, mana
+Ọ na-amachi mmalite `agent` ndị na-eme n'otu oge nke ọma n'ime otu process 67router, mana
 ọ **naghị** ahazi n'etiti ọtụtụ process/instance na-ekekọrịta otu seat Cursor ahụ
 (dịka ọmụmaatụ, deployment nwere ọtụtụ replica) — instance ọ bụla na-amanye mmachi nke ya
 n'adabereghị na ndị ọzọ. Maka deployment nwere otu instance (nke bụ ndabara), nke a ziri ezi;
@@ -45,7 +45,7 @@ ala nke ọma maka instance ọ bụla, ma ọ bụ ziga okporoụzọ onyonyo C
 ## Ihe ndị achọrọ
 
 1. Akaụntụ Cursor ejikọrọ na dashboard (OAuth ma ọ bụ API key `crsr_…`).
-2. Binary Cursor Agent ga-adị maka process OmniRoute:
+2. Binary Cursor Agent ga-adị maka process 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, ma ọ bụ
    - `~/.local/bin/agent`, ma ọ bụ
    - `providerSpecificData.agentBin` na njikọ Cursor.

@@ -12,7 +12,7 @@ speċifiku, flags `anthropic-beta`, headers tal-Stainless SDK, eċċ.).
 
 ## Bidu rapidu — uża l-fornitur nattiv `agentrouter` (rakkomandat)
 
-Għall-biċċa l-kbira tal-utenti, **ma hija meħtieġa l-ebda konfigurazzjoni speċjali**. OmniRoute jiġi b’fornitur
+Għall-biċċa l-kbira tal-utenti, **ma hija meħtieġa l-ebda konfigurazzjoni speċjali**. 67router jiġi b’fornitur
 `agentrouter` integrat bl-immaġni sħiħa tal-protokoll ta’ Claude Code diġà inkluża (ara
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Biex tużah:
 
@@ -34,7 +34,7 @@ l-URL bażi, il-path taċ-chat, jew is-sett ta’ headers.
 
 ## Avvanzat: konnessjoni permezz tat-tip ta’ fornitur kompatibbli ma’ Claude Code
 
-OmniRoute jappoġġa wkoll AgentRouter (u relays simili) permezz tat-tip ta’ fornitur
+67router jappoġġa wkoll AgentRouter (u relays simili) permezz tat-tip ta’ fornitur
 **kompatibbli ma’ Claude Code** (`anthropic-compatible-cc-*`), li juża l-
 Anthropic Messages API bl-immaġni korretta tal-protokoll. Fornitur ġeneriku
 `openai-compatible-chat` li jipponta lejn `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Kont ta’ AgentRouter u kjavi API. Reġistrazzjonijiet ġodda jiksbu krediti b’xejn permezz tal-link
   tal-affiljat fil-[README](../README.md) tal-proġett.
-- OmniRoute jaħdem bil-feature flag `ENABLE_CC_COMPATIBLE_PROVIDER` attivat
+- 67router jaħdem bil-feature flag `ENABLE_CC_COMPATIBLE_PROVIDER` attivat
   (ara hawn taħt).
 
 ## 1. Attiva t-tip ta’ fornitur kompatibbli ma’ CC
 
 It-tip ta’ fornitur kompatibbli ma’ Claude Code huwa kkontrollat minn feature flag minħabba li
 jibgħat traffiku li jixbah ħafna lil dak tal-klijent uffiċjali Claude Code. Attivah billi
-tissettja varjabbli tal-ambjent qabel tibda OmniRoute:
+tissettja varjabbli tal-ambjent qabel tibda 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

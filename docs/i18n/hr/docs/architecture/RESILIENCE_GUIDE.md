@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima tri različita, ali međusobno povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja pogrešaka u ponašanju usmjeravanja.
+67router ima tri različita, ali međusobno povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja pogrešaka u ponašanju usmjeravanja.
 
 ![Model otpornosti u 3 razine](../diagrams/exported/resilience-3layers.svg)
 
@@ -220,7 +220,7 @@ Ta tri zaglavlja afiniteta sesije nikada se ne prosljeđuju prema upstreamu — 
 
 ### Ekskluzivni najam veza za upravljane sesije
 
-**Opseg:** jedan aktivni upravljani HTTP klijent/sesija posjeduje jednu prihvatljivu OmniRoute vezu.
+**Opseg:** jedan aktivni upravljani HTTP klijent/sesija posjeduje jednu prihvatljivu 67router vezu.
 
 **Svrha:** pružiti trajno ekskluzivno vlasništvo nad vezom klijentima kojima je potrebna čvrsta ograda usmjeravanja kroz zahtjeve. To se razlikuje od afiniteta sesije, koji je meka preferencija kontinuiteta: ekskluzivni najam trajno čuva stanje životnog ciklusa u SQLiteu, provodi globalnu jedinstvenost aktivnog vlasnika i aktivne veze te odbija zastarjelu generaciju prije otpremanja pružatelju.
 
@@ -234,7 +234,7 @@ autentificirani ID API ključa i ID aktivne veze. Zaglavlja za upravljanje zakup
 logova, zadržanih snimaka zahtjeva i zaglavlja upstream izvršitelja.
 
 Ako obično usmjeravanje ima prihvatljive upravljane kandidate, ali je svaki slobodni kandidat zauzet
-tuđim aktivnim zakupom, OmniRoute vraća HTTP `429`, kod nedostupnosti kapaciteta zakupa, stanje
+tuđim aktivnim zakupom, 67router vraća HTTP `429`, kod nedostupnosti kapaciteta zakupa, stanje
 čekanja na kapacitet i ograničenu vrijednost `Retry-After` izvedenu iz najranijeg relevantnog isteka.
 Obična prazna prihvatljivost nije sukob oko zakupa i zadržava postojeću semantiku pogrešaka
 usmjeravanja.
@@ -255,7 +255,7 @@ Povezani mehanizmi ostaju odvojeni:
 
 - `429` / `403` / `402` — signal kvote ili ovlaštenja — zaključava **obitelj kvote**: za codex cijeli opseg `codex` / `spark` (svaki `gpt-5*` model te veze), za ostale dobavljače `getQuotaScopedModelForProvider()`.
 - `404` zaključava čisti model (`getModelLockKey()` suzuje `not_found`).
-- Bilo koji drugi status — `5xx` transportne/poslužiteljske greške i OmniRouteov vlastiti sintetizirani `502` iz validacije kvalitete — zaključava samo **točnu** trojku dobavljač/veza/model. Loš stream na jednom modelu nije dokaz o kvoti računa; prije ovog pravila jedan prazan odgovor na `codex/gpt-5.6-luna` uklanjao je svaki `gpt-5*` model te veze iz usmjeravanja na 2–30 min (uz eskalaciju), dok je kvota ostajala netaknuta.
+- Bilo koji drugi status — `5xx` transportne/poslužiteljske greške i 67routerov vlastiti sintetizirani `502` iz validacije kvalitete — zaključava samo **točnu** trojku dobavljač/veza/model. Loš stream na jednom modelu nije dokaz o kvoti računa; prije ovog pravila jedan prazan odgovor na `codex/gpt-5.6-luna` uklanjao je svaki `gpt-5*` model te veze iz usmjeravanja na 2–30 min (uz eskalaciju), dok je kvota ostajala netaknuta.
 - Eksplicitna opcija `scope` pozivatelja uvijek ima prednost (Antigravity prosljeđuje `"exact"`).
 
 **Svrha:** izbjeći onemogućavanje cijele veze kada je samo jedan model nedostupan ili ograničen kvotom.
@@ -367,7 +367,7 @@ Ograničenja istodobnosti po modelu**, jedan `model=cap` po retku) ili putem
   cijelih brojeva.
 - **Lokalno čekanje u redu, bez otkrivanja:** višak zahtjeva lokalno čeka u redu
   s postojećom semantikom reda/isteka vremena (tipizirane pogreške prijema
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ne otkriva niti
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ne otkriva niti
   zaključuje izvornu politiku — provodi točno one granice koje je operator
   konfigurirao. Zasićeni prolaz modela nikada ne onemogućuje pružatelja usluge
   i nikada ne stvara trajnu blokadu modela; izvorno ponašanje
@@ -471,7 +471,7 @@ Sama provjera prijema čista je funkcija (`open-sse/services/rateLimitManager/ad
 ### Sigurnosna mreža automatskog omogućavanja ograničenja brzine i zaštita veze (`rateLimitProtection`)
 
 **Sigurnosna mreža automatskog omogućavanja** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, zadano `true`):
-Prema zadanim postavkama, OmniRoute automatski omogućuje zaštitu reda ograničenja brzine za sve aktivne veze pružatelja s API ključem (`getProviderCategory(provider) === "apikey"`). To osigurava da dolazni zahtjevi prema upstream API ključevima osjetljivima na ograničenje brzine budu stavljeni u red i prigušeni kroz Bottleneck, umjesto da nalete na upstream pogreške 429. Sigurnosna mreža može se nadjačati putem varijable okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogućuje, `true`/`1`/`on` prisilno uključuje), koja ima prednost nad trajno pohranjenom postavkom nadzorne ploče (**Postavke → Otpornost** / `PATCH /api/resilience`).
+Prema zadanim postavkama, 67router automatski omogućuje zaštitu reda ograničenja brzine za sve aktivne veze pružatelja s API ključem (`getProviderCategory(provider) === "apikey"`). To osigurava da dolazni zahtjevi prema upstream API ključevima osjetljivima na ograničenje brzine budu stavljeni u red i prigušeni kroz Bottleneck, umjesto da nalete na upstream pogreške 429. Sigurnosna mreža može se nadjačati putem varijable okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogućuje, `true`/`1`/`on` prisilno uključuje), koja ima prednost nad trajno pohranjenom postavkom nadzorne ploče (**Postavke → Otpornost** / `PATCH /api/resilience`).
 
 **Semantika `rateLimitProtection` po vezi:**
 Zaštita ograničenja brzine po vezi prati se putem booleovskog polja `rateLimitProtection` na vezama pružatelja (trajno pohranjenog kao `rate_limit_protection` u SQLite):
@@ -786,7 +786,7 @@ ograničenjima:
 > vodič za agente ostao unutar proračuna konteksta od 40k. Riječ je o sažetom prikazu gornjih
 > odjeljaka namijenjenom agentima; numerirani odjeljci ostaju potpuna referenca.
 
-OmniRoute ima tri povezana, ali različita mehanizma za privremene kvarove. Držite njihov
+67router ima tri povezana, ali različita mehanizma za privremene kvarove. Držite njihov
 opseg odvojenim pri otklanjanju pogrešaka u ponašanju usmjeravanja. Pogledajte
 [dijagram otpornosti u 3 razine](../diagrams/exported/resilience-3layers.svg)
 (izvor: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

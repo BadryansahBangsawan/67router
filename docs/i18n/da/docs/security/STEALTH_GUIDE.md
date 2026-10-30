@@ -8,11 +8,11 @@
 > **Senest opdateret:** 2026-09-02 — v3.8.51
 > **Målgruppe:** Ingeniører, der vedligeholder udbyderspecifikke stealth-integrationer.
 
-OmniRoute integrerer med udbydere, hvis edge-systemer aktivt identificerer uofficielle klienter via fingerprinting (TLS JA3/JA4, headerrækkefølge, JSON-bodystruktur og integritetstokens). Denne side dokumenterer de stealth-grænseflader, OmniRoute stiller til rådighed, og hvor de er implementeret.
+67router integrerer med udbydere, hvis edge-systemer aktivt identificerer uofficielle klienter via fingerprinting (TLS JA3/JA4, headerrækkefølge, JSON-bodystruktur og integritetstokens). Denne side dokumenterer de stealth-grænseflader, 67router stiller til rådighed, og hvor de er implementeret.
 
 ## Juridisk og etisk meddelelse
 
-Stealth-funktioner findes, så OmniRoute kan fungere som et kompatibilitetslag mellem brugerejede officielle konti (Claude Code CLI, Codex, Antigravity, Cursor osv.) og OmniRoutes samlede API. De er **ikke** beregnet til at omgå svindeldetektion, dele legitimationsoplysninger eller overtræde udbydernes servicevilkår. Vedligeholderne forventer, at operatører overholder de upstream-servicevilkår, de accepterede, da de oprettede deres konti.
+Stealth-funktioner findes, så 67router kan fungere som et kompatibilitetslag mellem brugerejede officielle konti (Claude Code CLI, Codex, Antigravity, Cursor osv.) og 67routers samlede API. De er **ikke** beregnet til at omgå svindeldetektion, dele legitimationsoplysninger eller overtræde udbydernes servicevilkår. Vedligeholderne forventer, at operatører overholder de upstream-servicevilkår, de accepterede, da de oprettede deres konti.
 
 ---
 
@@ -76,7 +76,7 @@ Profilerne understøttes af den fastlåste pakkeversion, men reel WAF-accept kan
 
 ## Claude Code Stealth-pakke
 
-Når `cliCompatMode` er slået til, omformer OmniRoute udgående Claude-anmodninger, så de ikke kan skelnes fra `claude-cli`-trafik. Tre moduler samarbejder:
+Når `cliCompatMode` er slået til, omformer 67router udgående Claude-anmodninger, så de ikke kan skelnes fra `claude-cli`-trafik. Tre moduler samarbejder:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -92,7 +92,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (hash af klientindhold)
 
-Integritetskontrol på serversiden, som den officielle Claude Code CLI beregner via Bun/Zig. OmniRoute genimplementerer den med `xxhash-wasm`:
+Integritetskontrol på serversiden, som den officielle Claude Code CLI beregner via Bun/Zig. 67router genimplementerer den med `xxhash-wasm`:
 
 1. Serialiser body med pladsholderen `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -138,7 +138,7 @@ Relaterede moduler i samme pakke:
 
 ## Antigravity Stealth
 
-Antigravity-anmodninger bevarer kalderens tekst byte for byte. OmniRoute indsætter ikke tegn med nul bredde i prompts og omdøber eller injicerer ikke værktøjer for at efterligne en IDE-klient.
+Antigravity-anmodninger bevarer kalderens tekst byte for byte. 67router indsætter ikke tegn med nul bredde i prompts og omdøber eller injicerer ikke værktøjer for at efterligne en IDE-klient.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -148,13 +148,13 @@ Fjerner Stainless SDK-markører (`x-stainless-lang`, `x-stainless-package-versio
 
 `ANTIGRAVITY_CREDITS=always` (anvendes af `open-sse/executors/antigravity.ts`) dirigerer **alle** anmodninger gennem Antigravity AI Credit Overages (betalte Google-kreditter) i stedet for at lade Googles gratis kvote begrænse forbruget. Dette er dokumenteret som en funktion, men det er **den absolut mest almindelige rapport om overtrædelse af servicevilkår, vi ser** — flere Google Ultra-konti er blevet blokeret med `403 / "service disabled for ToS violation" / insufficient_quota` efter at have kørt i nogle få timer med `=always`.
 
-Upstream-håndhævelsen sker på **Googles side** og er ikke noget, OmniRoute kan forhindre. Miljøvariablens navn og den eksisterende dokumentation får det til at lyde som en sikker indstilling at aktivere; det er den ikke.
+Upstream-håndhævelsen sker på **Googles side** og er ikke noget, 67router kan forhindre. Miljøvariablens navn og den eksisterende dokumentation får det til at lyde som en sikker indstilling at aktivere; det er den ikke.
 
 **Derfor udløser dette mere aggressiv registrering af misbrug end brug, der udelukkende benytter gratisniveauet:**
 
 - Vedvarende automatiseret forbrug på en enkelt Google-konto markeres anderledes end brug af gratisniveauet, der rammer kvoten og stopper.
 - Kreditoverskridelser har intet loft over anmodningsfrekvensen, så en forkert konfigureret klient kan bruge flere hundrede USD på få minutter og ligne videresalg af API-nøgler eller bottrafik.
-- Flere OmniRoute-brugere, der parallelt anvender ekstra kreditter fra den samme eksterne IP-adresse, forstærker signalet.
+- Flere 67router-brugere, der parallelt anvender ekstra kreditter fra den samme eksterne IP-adresse, forstærker signalet.
 
 **Anbefalet fremgangsmåde:**
 
@@ -193,7 +193,7 @@ Slå til eller fra pr. udbyder via miljøvariabler (se nedenfor). Når funktione
 
 ## MITM-proxy (Antigravity, Linux/macOS/Windows)
 
-For CLI'er, hvis binære filer ikke kan omdirigeres via `OPENAI_BASE_URL`, kører OmniRoute en lokal TLS-terminerende proxy. Endepunkterne findes under `src/app/api/cli-tools/antigravity-mitm/`.
+For CLI'er, hvis binære filer ikke kan omdirigeres via `OPENAI_BASE_URL`, kører 67router en lokal TLS-terminerende proxy. Endepunkterne findes under `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metode | Endepunkt                               | Formål                                         |
 | ------ | --------------------------------------- | ---------------------------------------------- |
@@ -226,7 +226,7 @@ Målvært, der opsnappes: **`daily-cloudcode-pa.googleapis.com`** (Antigravitys 
 
 Certifikatets filnavn: `omniroute-mitm.crt`. Fingeraftrykket matches via `getCertFingerprint()` (SHA-1 af DER).
 
-Derudover installerer `updateNssDatabases()` i NSS-databaser for hver bruger, når `certutil` er tilgængelig: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-profiler (inklusive snap) under kaldenavnet **`OmniRoute MITM Root CA`**.
+Derudover installerer `updateNssDatabases()` i NSS-databaser for hver bruger, når `certutil` er tilgængelig: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-profiler (inklusive snap) under kaldenavnet **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -274,7 +274,7 @@ Udbyderens IP-adresse bevares **altid** — omskifteren ændrer kun anmodningens
 
 ## Rensning af indgående headers
 
-OmniRoute fjerner indgående klientheaders før videresendelse, så en anmodning, der kommer fra Cursor, ikke lækker `User-Agent: Cursor/X.Y.Z` til en Claude-upstream. Se `src/shared/constants/upstreamHeaders.ts` for afvisningslisten, som holdes synkroniseret med Zod-skemaerne og enhedstestene.
+67router fjerner indgående klientheaders før videresendelse, så en anmodning, der kommer fra Cursor, ikke lækker `User-Agent: Cursor/X.Y.Z` til en Claude-upstream. Se `src/shared/constants/upstreamHeaders.ts` for afvisningslisten, som holdes synkroniseret med Zod-skemaerne og enhedstestene.
 
 ---
 

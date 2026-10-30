@@ -39,9 +39,9 @@ poveznik konfigurirani.
 ## Postavljanje nadzorne ploče
 
 1. Otvorite pružatelja usluge **ChatGPT Web (Codex)** i dodajte vezu.
-2. Zalijepite cijelo zaglavlje kolačića ChatGPT Cookie, ID tunela, ključ izvođenja i naziv prilagođenog poveznika. Nove postavke koje podržavaju alate moraju upotrebljavati novostvoreni poveznik nazvan točno `OmniRoute Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
-3. Pokrenite provjeru veze. OmniRoute otvara privremeni razgovor Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
-4. Spremite vezu. OmniRoute zamjenjuje zalijepljeni kolačić provjerenim stanjem pohrane Playwright i pohranjuje ga zajedno s ključem izvođenja putem apstrakcije šifriranih vjerodajnica.
+2. Zalijepite cijelo zaglavlje kolačića ChatGPT Cookie, ID tunela, ključ izvođenja i naziv prilagođenog poveznika. Nove postavke koje podržavaju alate moraju upotrebljavati novostvoreni poveznik nazvan točno `67router Codex v2`, pri čemu je Authentication postavljen na None, a Permissions na Allow all actions.
+3. Pokrenite provjeru veze. 67router otvara privremeni razgovor Temporary Chat podržan preglednikom i otkriva jesu li Sol i Pro dostupni za račun.
+4. Spremite vezu. 67router zamjenjuje zalijepljeni kolačić provjerenim stanjem pohrane Playwright i pohranjuje ga zajedno s ključem izvođenja putem apstrakcije šifriranih vjerodajnica.
 
 Izvorni kolačić ne zadržava se nakon uspješnog spremanja. Kada sesija istekne, otvorite vezu, zalijepite novo cijelo zaglavlje Cookie i ponovno pokrenite provjeru. Status dijagnostike u dijaloškom okviru za uređivanje zasebno izvješćuje o pregledniku, stanju pohrane, prijavi, privremenom razgovoru Temporary Chat, tunelu, povezniku i povratnom prolazu alata. Za automatizaciju ažuriranja kolačića pri rotaciji sesija pogledajte popratni alat u odjeljku [Proširenje za sinkronizaciju sesije preglednika](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -70,9 +70,9 @@ Responsesa zatvoreno se odbija umjesto da se odabrani način preglednika neprimj
 promijeni.
 
 Nemojte preimenovati ni ponovno koristiti stariji poveznik `Codex Native` ili
-`OmniRoute Codex`. ChatGPT predmemorira javni MCP ugovor prema identitetu poveznika, dok
+`67router Codex`. ChatGPT predmemorira javni MCP ugovor prema identitetu poveznika, dok
 osvježeni most koristi novi izravni ugovor tokena interakcije. Okruženje za izvođenje
-odbija te naslijeđene identitete i zahtijeva novi poveznik `OmniRoute Codex v2`.
+odbija te naslijeđene identitete i zahtijeva novi poveznik `67router Codex v2`.
 
 ## Sigurnosni model
 
@@ -92,19 +92,19 @@ odbija te naslijeđene identitete i zahtijeva novi poveznik `OmniRoute Codex v2`
 
 ## VPS bez zaslona i Docker
 
-Za instalacije putem npm-a, systemd-a i PM2-a OmniRoute otkriva uobičajene putanje za Chrome i Chromium.
+Za instalacije putem npm-a, systemd-a i PM2-a 67router otkriva uobičajene putanje za Chrome i Chromium.
 Alternativno postavite `CHATGPT_WEB_CODEX_CHROME_PATH`. Potezi tijekom izvođenja namjerno upotrebljavaju Chrome
 s grafičkim sučeljem jer ChatGPT odbija oblik stvarnog preglednika bez grafičkog sučelja. Poslužitelj bez zaslona stoga mora
-pokretati OmniRoute s privatnim Xvfb zaslonom; samo postavljanje putanje za Chrome ne osigurava takav zaslon.
+pokretati 67router s privatnim Xvfb zaslonom; samo postavljanje putanje za Chrome ne osigurava takav zaslon.
 
 Docker profil `web` pokreće `chatgpt-web-codex-browser` na internoj Compose
 mreži. Popratni spremnik pokreće Chrome s grafičkim sučeljem unutar Xvfb-a, pa fizički zaslon nije potreban. Njegov CDP
 priključak nije objavljen na glavnom računalu. Zaštićeni volumen profila preglednika odvojen je od
-OmniRoute podatkovnog volumena, a preglednik dobiva dovoljno dijeljene memorije. Interni CDP proxy
+67router podatkovnog volumena, a preglednik dobiva dovoljno dijeljene memorije. Interni CDP proxy
 osluškuje samo na priključku `9223` unutar Compose mreže; Chrome ostaje vezan uz lokalnu povratnu adresu u
 popratnom spremniku.
 
-Nadzorni najam u `DATA_DIR` sprječava da više OmniRoute procesa upravlja
+Nadzorni najam u `DATA_DIR` sprječava da više 67router procesa upravlja
 istim stanjem tunela i posrednika. Doctor prijavljuje sukob.
 
 ## Interaktivni oporavak

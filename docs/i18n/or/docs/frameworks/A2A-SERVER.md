@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (ଓଡ଼ିଆ)
+# 67router A2A Server Documentation (ଓଡ଼ିଆ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — ଏକ ବୁଦ୍ଧିମାନ ରାଉଟିଂ ଏଜେଣ୍ଟ ଭାବରେ OmniRoute
+> Agent-to-Agent Protocol v0.3 — ଏକ ବୁଦ୍ଧିମାନ ରାଉଟିଂ ଏଜେଣ୍ଟ ଭାବରେ 67router
 
 A2A ପୃଷ୍ଠର ଦୁଇଟି ରୂପ ଅଛି:
 
@@ -19,7 +19,7 @@ A2A ପୃଷ୍ଠର ଦୁଇଟି ରୂପ ଅଛି:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-ଏହା OmniRouteର କ୍ଷମତା, ଦକ୍ଷତା ଏବଂ ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକତା ବର୍ଣ୍ଣନା କରୁଥିବା ଏଜେଣ୍ଟ କାର୍ଡ ଫେରାଏ।
+ଏହା 67routerର କ୍ଷମତା, ଦକ୍ଷତା ଏବଂ ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକତା ବର୍ଣ୍ଣନା କରୁଥିବା ଏଜେଣ୍ଟ କାର୍ଡ ଫେରାଏ।
 
 ଏଜେଣ୍ଟ କାର୍ଡର `version` ଫିଲ୍ଡ `process.env.npm_package_version` ରୁ ନିଆଯାଏ (`src/app/.well-known/agent.json/route.ts:13` ଦେଖନ୍ତୁ), ତେଣୁ ପ୍ରତ୍ୟେକ ରିଲିଜ୍ରେ ଏହା `package.json` ସହିତ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସିଙ୍କ୍ ହୋଇ ରହେ।
 
@@ -151,22 +151,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## ଉପଲବ୍ଧ ସ୍କିଲ୍ଗୁଡ଼ିକ
 
-OmniRoute `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`ରେ ସଂଯୋଗ ହୋଇଥିବା 6ଟି A2A ସ୍କିଲ୍ ପ୍ରଦାନ କରେ। ପ୍ରତ୍ୟେକ ସ୍କିଲ୍ ମଡ୍ୟୁଲ୍ `src/lib/a2a/skills/`ରେ ରହିଥାଏ।
+67router `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`ରେ ସଂଯୋଗ ହୋଇଥିବା 6ଟି A2A ସ୍କିଲ୍ ପ୍ରଦାନ କରେ। ପ୍ରତ୍ୟେକ ସ୍କିଲ୍ ମଡ୍ୟୁଲ୍ `src/lib/a2a/skills/`ରେ ରହିଥାଏ।
 
 | ସ୍କିଲ୍             | ID                   | ବର୍ଣ୍ଣନା                                                                                                                                                    | ଟ୍ୟାଗ୍ଗୁଡ଼ିକ                    | ଉଦାହରଣଗୁଡ଼ିକ                           |
 | :----------------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------ | :------------------------------------- |
-| ସ୍ମାର୍ଟ ରାଉଟିଂ     | `smart-routing`      | OmniRouteର କମ୍ବୋ ଇଞ୍ଜିନ୍ + ସ୍କୋରିଂ ବ୍ୟବହାର କରି ଏକ ପ୍ରମ୍ପ୍ଟକୁ ସର୍ବୋତ୍ତମ ପ୍ରୋଭାଇଡର/କମ୍ବୋ ମାଧ୍ୟମରେ ରାଉଟ୍ କରେ                                                   | ରାଉଟିଂ, ପ୍ରୋଭାଇଡରଗୁଡ଼ିକ         | "Route this prompt via the best model" |
+| ସ୍ମାର୍ଟ ରାଉଟିଂ     | `smart-routing`      | 67routerର କମ୍ବୋ ଇଞ୍ଜିନ୍ + ସ୍କୋରିଂ ବ୍ୟବହାର କରି ଏକ ପ୍ରମ୍ପ୍ଟକୁ ସର୍ବୋତ୍ତମ ପ୍ରୋଭାଇଡର/କମ୍ବୋ ମାଧ୍ୟମରେ ରାଉଟ୍ କରେ                                                    | ରାଉଟିଂ, ପ୍ରୋଭାଇଡରଗୁଡ଼ିକ         | "Route this prompt via the best model" |
 | କୋଟା ପରିଚାଳନା      | `quota-management`   | ପ୍ରତି-ପ୍ରୋଭାଇଡର କୋଟା ସ୍ଥିତି ରିପୋର୍ଟ କରେ, କେବେ ଥ୍ରଟଲ୍/ସୁଇଚ୍ କରିବେ ତାହା ନିଷ୍ପତ୍ତି ନେବାରେ କଲରମାନଙ୍କୁ ସାହାଯ୍ୟ କରେ                                               | କୋଟା, ପ୍ରୋଭାଇଡରଗୁଡ଼ିକ           | "Check quota for anthropic"            |
 | ପ୍ରୋଭାଇଡର ଆବିଷ୍କାର | `provider-discovery` | କ୍ଷମତା, ଫ୍ରି-ଟିଅର୍ ଫ୍ଲାଗ୍, OAuth ସ୍ଥିତି ସହିତ ଇନ୍ଷ୍ଟଲ୍ ହୋଇଥିବା ପ୍ରୋଭାଇଡରମାନଙ୍କୁ ତାଲିକାଭୁକ୍ତ କରେ                                                              | ପ୍ରୋଭାଇଡରଗୁଡ଼ିକ, ଆବିଷ୍କାର       | "What providers are available?"        |
 | ଖର୍ଚ୍ଚ ବିଶ୍ଳେଷଣ    | `cost-analysis`      | କାଟାଲଗ୍ + ସାମ୍ପ୍ରତିକ ବ୍ୟବହାର ଆଧାରରେ ଏକ ଅନୁରୋଧ/ବାର୍ତ୍ତାଳାପର ଖର୍ଚ୍ଚ ଆକଳନ କରେ                                                                                  | ଖର୍ଚ୍ଚ, ବ୍ୟବହାର                 | "Estimate cost for this conversation"  |
 | ସ୍ୱାସ୍ଥ୍ୟ ରିପୋର୍ଟ  | `health-report`      | ପ୍ରତି ପ୍ରୋଭାଇଡର ପାଇଁ ସର୍କିଟ୍ ବ୍ରେକର୍, କୁଲ୍ଡାଉନ୍, ଲକ୍ଆଉଟ୍ ସ୍ଥିତିକୁ ଏକାଠି କରେ                                                                                 | ସ୍ୱାସ୍ଥ୍ୟ, ସ୍ଥିତିସ୍ଥାପକତା       | "Show health status of all providers"  |
-| କ୍ଷମତା ତାଲିକା      | `list-capabilities`  | କଣ୍ଟେକ୍ସଟ ଇନଜେକ୍ସନ ପାଇଁ raw SKILL.md URLଗୁଡ଼ିକ ସହିତ ସମ୍ପୂର୍ଣ୍ଣ 45-ଏଣ୍ଟ୍ରି Agent Skills କାଟାଲଗ୍ (23 API + 21 CLI + 1 config)କୁ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଭାବରେ ଫେରାଏ | କାଟାଲଗ୍, ଆବିଷ୍କାର, ସ୍କିଲ୍ଗୁଡ଼ିକ | "List all OmniRoute capabilities"      |
+| କ୍ଷମତା ତାଲିକା      | `list-capabilities`  | କଣ୍ଟେକ୍ସଟ ଇନଜେକ୍ସନ ପାଇଁ raw SKILL.md URLଗୁଡ଼ିକ ସହିତ ସମ୍ପୂର୍ଣ୍ଣ 45-ଏଣ୍ଟ୍ରି Agent Skills କାଟାଲଗ୍ (23 API + 21 CLI + 1 config)କୁ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଭାବରେ ଫେରାଏ | କାଟାଲଗ୍, ଆବିଷ୍କାର, ସ୍କିଲ୍ଗୁଡ଼ିକ | "List all 67router capabilities"       |
 
 > Agent Cardକୁ ଲାଇଭ୍ 375-ପ୍ରୋଭାଇଡର କାଟାଲଗ୍ ସହିତ ସଂଲଗ୍ନ ରଖାଯିବା ଉଚିତ୍; ପ୍ରୋଭାଇଡର ସଂଖ୍ୟା ଏବଂ ଫ୍ରି/ନୋ-ଅଥ୍ ମେଟାଡେଟା ରନ୍ଟାଇମ୍ ରେଜିଷ୍ଟ୍ରିରୁ ନିଆଯାଇଥାଏ।
 
 ### `list-capabilities` ସ୍କିଲ୍ ବିବରଣୀ
 
-`list-capabilities` ସ୍କିଲ୍ ବାହ୍ୟ ଏଜେଣ୍ଟମାନଙ୍କ ପାଇଁ ବିଶେଷ ଉପଯୋଗୀ, ଯେଉଁମାନେ API କଲ୍ ପଠାଇବା ପୂର୍ବରୁ OmniRoute କ'ଣ ପ୍ରଦାନ କରେ ତାହା ଆବିଷ୍କାର କରିବାକୁ ଚାହାଁନ୍ତି। ଏହା ଏକ ସଂରଚିତ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଆର୍ଟିଫ୍ୟାକ୍ଟ ଫେରାଇଥାଏ:
+`list-capabilities` ସ୍କିଲ୍ ବାହ୍ୟ ଏଜେଣ୍ଟମାନଙ୍କ ପାଇଁ ବିଶେଷ ଉପଯୋଗୀ, ଯେଉଁମାନେ API କଲ୍ ପଠାଇବା ପୂର୍ବରୁ 67router କ'ଣ ପ୍ରଦାନ କରେ ତାହା ଆବିଷ୍କାର କରିବାକୁ ଚାହାଁନ୍ତି। ଏହା ଏକ ସଂରଚିତ ମାର୍କଡାଉନ୍ ଟେବୁଲ୍ ଆର୍ଟିଫ୍ୟାକ୍ଟ ଫେରାଇଥାଏ:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -192,7 +192,7 @@ JSON-RPC ଏଣ୍ଡପଏଣ୍ଟ `/a2a` ହେଉଛି ମାନକ A2A ପ
 | `/.well-known/agent.json`    | GET    | Agent Card (A2A ଆବିଷ୍କାର)                                         | (ସାର୍ବଜନୀନ, 3600s ପାଇଁ କ୍ୟାଶ୍କୃତ)                  |
 | `/api/a2a/tasks`             | POST   | OmniConductor ଫ୍ଲିଟ୍କୁ ଇନ୍ବାଉଣ୍ଡ ପ୍ରତିନିଧିତ୍ୱ (Conductor PRD RF5) | `OMNIROUTE_API_KEY` + `a2aEnabled` ବିପକ୍ଷରେ Bearer |
 
-**ଇନ୍ବାଉଣ୍ଡ Conductor ପ୍ରତିନିଧିତ୍ୱ (`POST /api/a2a/tasks`):** ବାହ୍ୟ A2A ଏଜେଣ୍ଟଗୁଡ଼ିକ OmniRoute ମାଧ୍ୟମରେ OmniConductor ଫ୍ଲିଟ୍କୁ କୋଡିଂ କାର୍ଯ୍ୟ ପ୍ରତିନିଧିତ୍ୱ କରନ୍ତି। ବଡି: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — କେବଳ Conductor ଫ୍ଲିଟ୍ ସ୍କିଲ୍ଗୁଡ଼ିକ (Agent Cardରେ ଘୋଷିତ ସ୍କିଲ୍ଗୁଡ଼ିକ) ପ୍ରତିନିଧିତ୍ୱଯୋଗ୍ୟ; `metadata.conductor.repo.url` ଆବଶ୍ୟକ (ଫ୍ଲିଟ୍ଟି git ରିପୋଗୁଡ଼ିକରେ କାମ କରେ)। ଏହି ରୁଟ୍ ସର୍ଭର-ସାଇଡ୍ `CONDUCTOR_ORCHESTRATOR_TOKEN` (ଫଲ୍ବ୍ୟାକ୍ `CONDUCTOR_HUB_TOKEN`) ବ୍ୟବହାର କରି ହବ୍ର `POST /v1/tasks`କୁ ରୂପାନ୍ତର କରେ ଏବଂ `201 { conductor_task_id, state: "submitted" }` ଫେରାଏ; ଟାସ୍କ ସ୍ଥିତିଗୁଡ଼ିକ SSE→A2A ମିରର୍ (RF1) ମାଧ୍ୟମରେ ପୁନଃ ପ୍ରବାହିତ ହୁଏ ଏବଂ `GET /api/a2a/tasks?skill=conductor` ମାଧ୍ୟମରେ ଦୃଶ୍ୟମାନ ହୁଏ।
+**ଇନ୍ବାଉଣ୍ଡ Conductor ପ୍ରତିନିଧିତ୍ୱ (`POST /api/a2a/tasks`):** ବାହ୍ୟ A2A ଏଜେଣ୍ଟଗୁଡ଼ିକ 67router ମାଧ୍ୟମରେ OmniConductor ଫ୍ଲିଟ୍କୁ କୋଡିଂ କାର୍ଯ୍ୟ ପ୍ରତିନିଧିତ୍ୱ କରନ୍ତି। ବଡି: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — କେବଳ Conductor ଫ୍ଲିଟ୍ ସ୍କିଲ୍ଗୁଡ଼ିକ (Agent Cardରେ ଘୋଷିତ ସ୍କିଲ୍ଗୁଡ଼ିକ) ପ୍ରତିନିଧିତ୍ୱଯୋଗ୍ୟ; `metadata.conductor.repo.url` ଆବଶ୍ୟକ (ଫ୍ଲିଟ୍ଟି git ରିପୋଗୁଡ଼ିକରେ କାମ କରେ)। ଏହି ରୁଟ୍ ସର୍ଭର-ସାଇଡ୍ `CONDUCTOR_ORCHESTRATOR_TOKEN` (ଫଲ୍ବ୍ୟାକ୍ `CONDUCTOR_HUB_TOKEN`) ବ୍ୟବହାର କରି ହବ୍ର `POST /v1/tasks`କୁ ରୂପାନ୍ତର କରେ ଏବଂ `201 { conductor_task_id, state: "submitted" }` ଫେରାଏ; ଟାସ୍କ ସ୍ଥିତିଗୁଡ଼ିକ SSE→A2A ମିରର୍ (RF1) ମାଧ୍ୟମରେ ପୁନଃ ପ୍ରବାହିତ ହୁଏ ଏବଂ `GET /api/a2a/tasks?skill=conductor` ମାଧ୍ୟମରେ ଦୃଶ୍ୟମାନ ହୁଏ।
 
 ---
 

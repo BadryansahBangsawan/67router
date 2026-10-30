@@ -204,7 +204,7 @@ qurucudan sonrakı dəyişiklik açıq proyeksiyadan yan keçir.
 3. Dərinlik həddi: 4 səviyyədən sonrakı iç-içəlik `"[truncated]"` sətri ilə əvəz olunur.
 4. Massivlər maksimum 32 elementlə məhdudlaşdırılır.
 
-Yalnız təhlil edilmiş provayder xəta gövdəsi olan çağırış nöqtələri `upstreamDetails` ötürməlidir. Daxili OmniRoute
+Yalnız təhlil edilmiş provayder xəta gövdəsi olan çağırış nöqtələri `upstreamDetails` ötürməlidir. Daxili 67router
 xətaları (SSE təhlili uğursuzluqları, boş məzmun, qoruyucu məhdudiyyət blokları) bunu ehtiva etməməlidir.
 
 Xam `err.stack`, `err.message` və ya icra zamanı yaranan istisnadan gələn hər hansı sətri
@@ -215,7 +215,7 @@ Yuxarı axın 4xx xətalarının seçmə ötürülməsi müştərinin avtomatik 
 lakin bu, bayt-bayt ötürülmə deyil: rekursiv sanitizator serializasiyadan əvvəl həmişə işə salınır.
 Dövri, BigInt ehtiva edən və ya zərərli `toJSON()` gövdələri təhlükəsiz şəkildə rədd edilir və
 ötürülməyə uyğun sayılmır. OCR və moderasiya eyni qaydanı tətbiq edir; JSON olmayan, boş və ya yanlış etiketlənmiş
-yuxarı axın gövdələri kanonik OmniRoute JSON xəta zərfinə çevrilir.
+yuxarı axın gövdələri kanonik 67router JSON xəta zərfinə çevrilir.
 
 ## Məlum CodeQL məhdudiyyəti: xüsusi sanitarizatorlar tanınmır
 

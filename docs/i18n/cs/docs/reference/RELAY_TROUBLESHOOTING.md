@@ -5,9 +5,9 @@
 ---
 
 Relaye (Vercel, Deno, Cloudflare) ukončují upstreamové připojení na
-serverless backendu, takže OmniRoute může směrovat odchozí provoz ze stabilní oblasti a zároveň
+serverless backendu, takže 67router může směrovat odchozí provoz ze stabilní oblasti a zároveň
 uchovávat API klíč poskytovatele na straně serveru. Tento dokument popisuje dva režimy selhání,
-se kterými se provozovatelé setkávají v produkci, a postupy obnovení, které OmniRoute
+se kterými se provozovatelé setkávají v produkci, a postupy obnovení, které 67router
 pro každý z nich nabízí.
 
 ## Jak se ukládá ověřování relayů
@@ -35,7 +35,7 @@ tajných údajů. Uložený blob `relayAuthEnc` již nelze dešifrovat, takže
 1. Otevřete **Nastavení → Fond proxy serverů**.
 2. Řádky relayů, kterým chybí ověřovací údaje, zobrazují žlutý štítek
    `chybí ověření` a tlačítko **Opravit**.
-3. Klikněte na **Opravit**. OmniRoute zavolá
+3. Klikněte na **Opravit**. 67router zavolá
    `POST /api/settings/proxies/[id]/repair-relay`, který:
    - dešifruje `relayAuthEnc` pomocí **aktuálního** klíče,
    - zapíše `relayAuth` v prostém textu zpět do `notes`,
@@ -68,7 +68,7 @@ otevře dialogové okno opětovného nasazení, takže jej nemusíte ručně hle
 ale požadavky přesto občas selhávají.
 
 Zkontrolujte hlavičky informující o relayi, které vrací automatický testovací
-požadavek OmniRoute (viz **Nastavení → Fond proxy serverů** a počítadla
+požadavek 67router (viz **Nastavení → Fond proxy serverů** a počítadla
 `relayTested` / `relayAlive`):
 
 - `x-relay-url` — který backend relaye odpověděl.

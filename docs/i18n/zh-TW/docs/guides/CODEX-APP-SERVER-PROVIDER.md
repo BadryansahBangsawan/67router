@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute 提供使用 OpenAI Codex 的**兩種**方式：
+67router 提供使用 OpenAI Codex 的**兩種**方式：
 
 | 提供者                 | 與 OpenAI 通訊的方式                                                                                                                                                  | 使用注意事項                                        |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | **`codex`**            | 將您的 ChatGPT/OpenAI OAuth 權杖直接重送至 Responses API                                                                                                              | **有** — 官方工作階段未獲授權用於代理伺服器／路由器 |
-| **`codex-app-server`** | 透過 JSON-RPC/WebSocket 驅動 **Codex CLI 自己的 `codex app-server`**；CLI 會自行管理並重新整理其 OAuth（`~/.codex/auth.json`），行為與互動式 `codex` 工作階段完全相同 | **無** — OmniRoute 絕不會將權杖重送至 API           |
+| **`codex-app-server`** | 透過 JSON-RPC/WebSocket 驅動 **Codex CLI 自己的 `codex app-server`**；CLI 會自行管理並重新整理其 OAuth（`~/.codex/auth.json`），行為與互動式 `codex` 工作階段完全相同 | **無** — 67router 絕不會將權杖重送至 API            |
 
 由於 `codex-app-server` 絕不會重送權杖，因此不受工作階段重送的使用限制影響。不過，它需要在設定的 app-server URL 上能夠連線至 **Codex CLI**，且該 CLI 必須**已登入**。
 
@@ -18,7 +18,7 @@ OmniRoute 提供使用 OpenAI Codex 的**兩種**方式：
 ## 1. 架構
 
 ```
-┌─ OmniRoute 應用程式 ─────────────┐        ┌─ codex-app-server sidecar ─────────┐
+┌─ 67router 應用程式 ─────────────┐        ┌─ codex-app-server sidecar ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  （+ 能力權杖）                   │  JSON  │  --ws-auth capability-token         │
@@ -70,7 +70,7 @@ sidecar 會在首次啟動時建立其 WS 能力權杖（存入共用的
   `~/.codex` 掛載至 sidecar（`codex-appserver-home`），並略過登入步驟。
 - **未在本機安裝 codex 的一般使用者** — 不受影響：sidecar 已包含
   CLI。使用者只需透過儀表板進行驗證。
-- **裸機 OmniRoute（無 sidecar，使用主機上的 codex）** — 將
+- **裸機 67router（無 sidecar，使用主機上的 codex）** — 將
   `OMNIROUTE_CODEX_APPSERVER_WS` 指向您自己的 `codex app-server`，並確保
   主機上的 codex 已登入；若缺少該執行檔，則會顯示「尚未安裝 codex」提示。
 

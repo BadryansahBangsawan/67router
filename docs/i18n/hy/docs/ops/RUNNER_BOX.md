@@ -5,7 +5,7 @@
 ---
 
 Ինքնուրույն հոսթավորվող pool-ն աշխատում է **.113** մեքենայի վրա (`tomni-proxmox-113`)։ 2026-10-18-ից սկսած՝
-OmniRoute-ի յուրաքանչյուր runner ունի **մեկ դեր**, մեկ պիտակ և հիշողության/CPU-ի բյուջե՝ իր workload-ի
+67router-ի յուրաքանչյուր runner ունի **մեկ դեր**, մեկ պիտակ և հիշողության/CPU-ի բյուջե՝ իր workload-ի
 չափված պահանջներին համապատասխան։ Turbopack-ի slot-ը ստանում է build-ի համար անհրաժեշտ ռեսուրսները, իսկ մյուս slot-երը չափաբաժնված են ըստ իրենց
 չափված առավելագույն արժեքների։ Մեքենան գերբաշխում է ռեսուրսները միայն այն դեպքում, երբ Turbopack build-ը համընկնում է Release-Green-ի
 webpack build-ի և lint job-ի հետ․ host-ի swap-ը (16 GB) կլանում է այդ ծանրաբեռնվածությունը, իսկ քանի որ pull request-ների Build-երն աշխատում են
@@ -27,7 +27,7 @@ webpack build-ի և lint job-ի հետ․ host-ի swap-ը (16 GB) կլանում
 | swap       | 16 GB                           | `omniroute-113-5`-ն աշխատում է անջատված swap-ով (`MemorySwapMax=0`), որպեսզի վերահսկողությունից դուրս եկած build-ը դադարեցվի իր սահմանաչափին հասնելիս՝ մեքենան swap օգտագործելու ստիպելու փոխարեն                                                                                                                                                                                                                      |
 | `/tmp`     | **12 GB tmpfs = RAM**           | այնտեղ տեղադրված ցանկացած բան զբաղեցնում է հիշողություն․ մնացորդները մաքրվում են 3 ժ հետո                                                                                                                                                                                                                                                                                                                              |
 | CPU        | 32 միջուկի վրա դիտվել է 60 load | մինչև quota-ների կիրառումը մեկ Turbopack build-ը (մոտ 1166 % CPU), նույն մեքենայի վրա աշխատող coverage suite-ի հետ միասին, ռեսուրսներից զրկում էր մյուս listener-ների heartbeat ազդանշանները (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                     |
-| runner-ներ | **6 listener**                  | 4 OmniRoute + OmniHeuris + OmniMind․ `omniroute-113-3/-4/-7/-8`-ն անջատված են (`systemctl enable --now`-ը դրանցից մեկը կրկին գործարկում է)                                                                                                                                                                                                                                                                             |
+| runner-ներ | **6 listener**                  | 4 67router + OmniHeuris + OmniMind․ `omniroute-113-3/-4/-7/-8`-ն անջատված են (`systemctl enable --now`-ը դրանցից մեկը կրկին գործարկում է)                                                                                                                                                                                                                                                                              |
 
 Սահմանաչափերը գտնվում են յուրաքանչյուր unit-ի `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`-ում
 (նախորդ արժեքները պահպանվել են որպես `override.conf.bak-20261018`) և կիրառվել են անմիջապես՝
@@ -53,7 +53,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
 
 ## Runner unit-ներ. KillMode
 
-Runner-ի լռելյայն `KillMode=process`-ը unit-ի կանգնեցման կամ վերագործարկման ժամանակ աշխատող է թողնում `Runner.Worker → npm → next-build`-ը. որբացած build-ը շարունակում է սպառել RAM և CPU՝ առանց կցված առաջադրանքի։ OmniRoute-ի յուրաքանչյուր unit ունի drop-in կազմաձևում (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)՝ `KillMode=mixed`-ով. նախ SIGTERM է ուղարկվում listener-ին, ապա `TimeoutStop`-ի պահին SIGKILL է ուղարկվում ամբողջ cgroup-ին։ Այն ուժի մեջ է մտնում unit-ի հաջորդ վերագործարկման ժամանակ. վերագործարկեք **միաժամանակ միայն մեկ runner՝ միայն երբ այն պարապ է**, ընդ որում պարապ լինելու ստուգումն ու վերագործարկումը պետք է լինեն նույն հրամանում։
+Runner-ի լռելյայն `KillMode=process`-ը unit-ի կանգնեցման կամ վերագործարկման ժամանակ աշխատող է թողնում `Runner.Worker → npm → next-build`-ը. որբացած build-ը շարունակում է սպառել RAM և CPU՝ առանց կցված առաջադրանքի։ 67router-ի յուրաքանչյուր unit ունի drop-in կազմաձևում (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)՝ `KillMode=mixed`-ով. նախ SIGTERM է ուղարկվում listener-ին, ապա `TimeoutStop`-ի պահին SIGKILL է ուղարկվում ամբողջ cgroup-ին։ Այն ուժի մեջ է մտնում unit-ի հաջորդ վերագործարկման ժամանակ. վերագործարկեք **միաժամանակ միայն մեկ runner՝ միայն երբ այն պարապ է**, ընդ որում պարապ լինելու ստուգումն ու վերագործարկումը պետք է լինեն նույն հրամանում։
 
 ## Շահագործման կանոններ
 
@@ -93,7 +93,7 @@ Runner-ի լռելյայն `KillMode=process`-ը unit-ի կանգնեցման կ
   անհրաժեշտ է միայն backend-ի `next build` (~5–6 GB․ webpack), ինչպես նաև `quality.yml`-ի `lint-guard`-ը։ `omniroute-113`-ը
   մինչև 2026-10-18-ն ուներ `MemoryHigh=4G`․ promptfoo-ի կառուցումը 54 րոպե շարունակ այնտեղ հիշողություն էր ազատում իր
   աշխատանքի համար․ 8 GB-ը վերացնում է սահմանափակումը։
-- **Դիտավորյալ ավելի քիչ listener-ներ։** OmniRoute-ի չորս unit անջատվել է 2026-08-29-ին․ յուրաքանչյուր լրացուցիչ
+- **Դիտավորյալ ավելի քիչ listener-ներ։** 67router-ի չորս unit անջատվել է 2026-08-29-ին․ յուրաքանչյուր լրացուցիչ
   listener վերոնշյալ հիշողության բյուջեի ևս մեկ սպառող է։ Janitor-ի վերին սահմանը 6 է (`MAX_ACTIVE_RUNNERS=6`՝ cron-ում)․ այն հաշվում է
   սերվերի յուրաքանչյուր `Runner.Listener`, իսկ OmniHeuris-ը և OmniMind-ը մեր չորսին ավելացնում են ևս երկուսը։
 - **Երբ որևէ runner զբաղված է, երբեք ձեռքով մի մաքրեք `/tmp`-ը կամ `_work`-ը։**

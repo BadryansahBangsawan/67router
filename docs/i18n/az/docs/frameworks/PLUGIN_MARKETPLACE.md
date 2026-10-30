@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute WordPress üslublu plagin sistemi ilə təchiz olunur. Plaginlər sorğu emalı ardıcıllığına (`onRequest` / `onResponse` / `onError`) və həyat dövrü hadisələrinə (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) qoşulan, hər birində `plugin.json` manifesti və giriş faylı olan müstəqil qovluqlardır.
+67router WordPress üslublu plagin sistemi ilə təchiz olunur. Plaginlər sorğu emalı ardıcıllığına (`onRequest` / `onResponse` / `onError`) və həyat dövrü hadisələrinə (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`) qoşulan, hər birində `plugin.json` manifesti və giriş faylı olan müstəqil qovluqlardır.
 
 **Plagin Marketpleysi** həmin sistemin üzərindəki aşkarlama qatıdır. O, quraşdırıla bilən plaginlərin nəzərdən keçirilə bilən kataloqunu təqdim edir. Standart olaraq kataloq kiçik, daxili ilkin reyestrdən ibarətdir; operator onu fərdi uzaq reyestr URL-inə yönəldə bilər. Bu halda sorğu DNS həllindən istifadə edən SSRF qoruyucusu ilə mühafizə olunur (bax: [Təhlükəsizlik](#security)).
 
@@ -125,7 +125,7 @@ məhdudiyyətlərinə əməl edir, `select` sahələri isə elan edilmiş `enum`
 
 ### Plagin kataloqu
 
-Plaginlər OmniRoute məlumat kataloqunda yerləşir:
+Plaginlər 67router məlumat kataloqunda yerləşir:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

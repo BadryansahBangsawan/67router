@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute saspiešanas pamatā ir dziņu līgumi. Režīms var tieši darbināt vienu dzini
+67router saspiešanas pamatā ir dziņu līgumi. Režīms var tieši darbināt vienu dzini
 (`caveman` vai `rtk`) vai deterministisku saliktu konveijeru, kas secīgi izpilda vairākus dziņus.
 
 ## Režīmi
@@ -43,9 +43,9 @@ uzkrājusi vēsturi, apstājas pie `below_min_chars`, un dzinējs neko netransfo
 noklusējums ir `aggressive`, nevis drošākais profils.
 
 Pakotne atrisina savu modeļa tvērumu un profilu no savas vides konfigurācijas.
-OmniRoute nekad nedeleģē lēmumu: adapteris piesaista modeļa vārtus pakotnes
+67router nekad nedeleģē lēmumu: adapteris piesaista modeļa vārtus pakotnes
 visierobežojošākajam tvērumam, tāpēc resursdatora vides iestatījumi var tikai sašaurināt atļauto sarakstu, nekad
-to nepaplašinot aiz OmniRoute mērītajām kvītīm.
+to nepaplašinot aiz 67router mērītajām kvītīm.
 
 ## Dzinēju reģistrs
 
@@ -109,7 +109,7 @@ Caveman režīms koncentrējas uz parasta teksta semantisku kondensēšanu:
 Informācijas paneļa sadaļa ir `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman pirmavots ziņo par `~75%` mazāku izvades tokenu skaitu un vidēji `65%` izvades ietaupījumu etalonpārbaudēs
-ar `22-87%` diapazonu, kā arī par `~46%` ievades saspiešanas rīku. OmniRoute izmanto Caveman ievades puses
+ar `22-87%` diapazonu, kā arī par `~46%` ievades saspiešanas rīku. 67router izmanto Caveman ievades puses
 rādītāju, dokumentējot kombinētos uzvednes/konteksta ietaupījumus; Caveman izvades režīms joprojām ir atsevišķs
 atbildes darbības līdzeklis.
 

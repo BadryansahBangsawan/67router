@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jista’ jattiva webhooks HTTP meta jseħħu avvenimenti tal-pjattaforma. Użahom biex tintegra ma’
+67router jista’ jattiva webhooks HTTP meta jseħħu avvenimenti tal-pjattaforma. Użahom biex tintegra ma’
 Slack, PagerDuty, Datadog, servizzi interni ta’ twissijiet, jew kwalunkwe riċevitur HTTP.
 
 Id-dispatcher jiffirma kull konsenja b’HMAC-SHA256, jerġa’ jipprova f’każ ta’
@@ -54,7 +54,7 @@ l-iżbalji ta’ kull webhook sabiex riċevitur wieħed difettuż ma jkunx jista
 
 ## Iffirmar HMAC
 
-Meta webhook ikollu `secret`, OmniRoute jiffirma l-body JSON u jibgħat:
+Meta webhook ikollu `secret`, 67router jiffirma l-body JSON u jibgħat:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Il-paġna tad-dashboard f’`/dashboard/webhooks` (ara
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Twassil ta’ webhook tat-test minn OmniRoute",
+    "message": "Twassil ta’ webhook tat-test minn 67router",
     "webhookId": "<uuid>"
   }
 }

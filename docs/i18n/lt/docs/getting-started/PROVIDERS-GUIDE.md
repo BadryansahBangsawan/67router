@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Lietuvių)
+# Providers Guide: Connect AI Models to 67router (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Trumpai**: teikėjas yra ryšys su DI paslauga (pvz., OpenAI, Anthropic ar Google). Norint naudoti OmniRoute, reikia bent vieno teikėjo.
+> **Trumpai**: teikėjas yra ryšys su DI paslauga (pvz., OpenAI, Anthropic ar Google). Norint naudoti 67router, reikia bent vieno teikėjo.
 
 ---
 
 ## Kas yra teikėjas?
 
-Įsivaizduokite teikėją kaip **mobiliojo ryšio operatorių**. Kaip skambinti reikia mobiliojo ryšio operatoriaus, taip DI modeliams naudoti reikia DI teikėjo. OmniRoute yra tarsi telefonas, veikiantis su **visais operatoriais** — galite automatiškai juos perjungti.
+Įsivaizduokite teikėją kaip **mobiliojo ryšio operatorių**. Kaip skambinti reikia mobiliojo ryšio operatoriaus, taip DI modeliams naudoti reikia DI teikėjo. 67router yra tarsi telefonas, veikiantis su **visais operatoriais** — galite automatiškai juos perjungti.
 
 ### Teikėjų tipai
 
@@ -30,9 +30,9 @@ Bendrąsias sąrankos instrukcijas, apribojimus, trikčių šalinimo informacij�
 
 ### Pasirenkama nemokamo teikėjo sąranka pirmojo paleidimo metu
 
-Pirmojo paleidimo vediklyje pateikiama atskira kortelė **Nustatyti nemokamus teikėjus**. Pagal OmniRoute teikėjų, kuriems nereikia tapatybės nustatymo, registrą sudaromas aktualus
+Pirmojo paleidimo vediklyje pateikiama atskira kortelė **Nustatyti nemokamus teikėjus**. Pagal 67router teikėjų, kuriems nereikia tapatybės nustatymo, registrą sudaromas aktualus
 tinkamų teikėjų sąrašas, kurį prieš patvirtindami galite peržiūrėti ir panaikinti atskirų
-teikėjų pasirinkimą. OmniRoute pateikia teikėjo įspėjimą ir nuorodą į jo svetainę,
+teikėjų pasirinkimą. 67router pateikia teikėjo įspėjimą ir nuorodą į jo svetainę,
 kad pirmiausia galėtumėte peržiūrėti trečiosios šalies sąlygas, privatumo nuostatas, pasiekiamumą ir užklausų dažnio apribojimus.
 
 Šis veiksmas yra pasirenkamas: užbaigus vediklį nemokamų teikėjų ryšiai niekada nesukuriami nepastebimai.
@@ -80,7 +80,7 @@ dalinį rezultatą galite saugiai pakartoti bandymą tik su nesėkmingai pridėt
 
 ### D variantas: vietiniai MLX modeliai (Apple Silicon)
 
-Apple Silicon Mac kompiuteriuose su bendrąja atmintimi OmniRoute leidžia prisijungti prie vietinių MLX modelių, veikiančių per `mlx-lm.server`, kaip prie įprastų vietinių teikėjų, suderinamų su OpenAI.
+Apple Silicon Mac kompiuteriuose su bendrąja atmintimi 67router leidžia prisijungti prie vietinių MLX modelių, veikiančių per `mlx-lm.server`, kaip prie įprastų vietinių teikėjų, suderinamų su OpenAI.
 
 #### Būtinosios sąlygos
 
@@ -110,14 +110,14 @@ Apple Silicon Mac kompiuteriuose su bendrąja atmintimi OmniRoute leidžia prisi
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Prisijunkite OmniRoute valdymo skydelyje**:
+3. **Prisijunkite 67router valdymo skydelyje**:
    - Eikite į **Teikėjai** → **Pridėti teikėją**
    - Pasirinkite **MLX Gemma 26B** arba **MLX Qwen 3.8 27B**
    - Spustelėkite **Prisijungti** (API rakto nereikia)
 
 4. **Naudokite su OpenCode**:
    ```bash
-   # Sukonfigūruokite OpenCode naudoti OmniRoute
+   # Sukonfigūruokite OpenCode naudoti 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Tai turite valdyti rankiniu būdu:
 - Abu paleiskite atskiruose kompiuteriuose, arba
 - Prieš paleisdami kitą, sustabdykite vieną serverį
 
-OmniRoute automatiškai nevaldo MLX serverio procesų — jis tik nukreipia užklausas į jūsų sukonfigūruotus su OpenAI suderinamus galinius taškus.
+67router automatiškai nevaldo MLX serverio procesų — jis tik nukreipia užklausas į jūsų sukonfigūruotus su OpenAI suderinamus galinius taškus.
 
 #### Įrankių iškvietimo palaikymas
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Nepakanka atminties          | Įsitikinkite, kad veikia tik vienas modelis; uždarykite kitas programas; patikrinkite Activity Monitor |
 | Atsisakoma užmegzti ryšį     | Patikrinkite, ar serveris veikia tinkamame prievade (11435/11436)                                      |
 | Atsakymai lėti               | Per pirmąją užklausą modelis įkeliamas į atmintį (~30-60s); tolesnės užklausos vykdomos greitai        |
-| Nepavyksta iškviesti įrankio | Įsitikinkite, kad modelis palaiko įrankius; OmniRoute žurnaluose patikrinkite vertimo klaidas          |
+| Nepavyksta iškviesti įrankio | Įsitikinkite, kad modelis palaiko įrankius; 67router žurnaluose patikrinkite vertimo klaidas           |
 
 ---
 
@@ -236,12 +236,12 @@ Jūsų paslaugų teikėjas prijungtas. Galite jį naudoti su `model: "auto"` arb
 
 ## Kelių teikėjų naudojimas
 
-OmniRoute geriausiai veikia su **keliais teikėjais**. Tai suteikia:
+67router geriausiai veikia su **keliais teikėjais**. Tai suteikia:
 
-- **Automatinį perjungimą** — Jei vienas teikėjas neveikia, OmniRoute bando kitą
-- **Kaštų optimizavimą** — OmniRoute kiekvienai užklausai parenka pigiausią teikėją
-- **Spartos optimizavimą** — OmniRoute kiekvienai užklausai parenka greičiausią teikėją
-- **Kokybės optimizavimą** — OmniRoute kiekvienai užduočiai parenka geriausią teikėją
+- **Automatinį perjungimą** — Jei vienas teikėjas neveikia, 67router bando kitą
+- **Kaštų optimizavimą** — 67router kiekvienai užklausai parenka pigiausią teikėją
+- **Spartos optimizavimą** — 67router kiekvienai užklausai parenka greičiausią teikėją
+- **Kokybės optimizavimą** — 67router kiekvienai užduočiai parenka geriausią teikėją
 
 ### Rekomenduojama sąranka
 
@@ -251,7 +251,7 @@ Kad naudotis būtų patogiausia, prijunkite bent **3 teikėjus**:
 2. **Vieną spartų teikėją** (Groq, Cerebras) — Greitiems atsakymams
 3. **Vieną aukštos kokybės teikėją** (OpenAI, Anthropic, Google) — Sudėtingoms užduotims
 
-Tada naudokite `model: "auto"`, o OmniRoute automatiškai parinks geriausią teikėją kiekvienai užklausai.
+Tada naudokite `model: "auto"`, o 67router automatiškai parinks geriausią teikėją kiekvienai užklausai.
 
 ---
 
@@ -260,25 +260,25 @@ Tada naudokite `model: "auto"`, o OmniRoute automatiškai parinks geriausią tei
 ### OpenAI
 
 1. Gaukite API raktą: https://platform.openai.com/api-keys
-2. OmniRoute: Teikėjai → Pridėti teikėją → OpenAI
+2. 67router: Teikėjai → Pridėti teikėją → OpenAI
 3. Įklijuokite API raktą → Prisijungti
 
 ### Anthropic
 
 1. Gaukite API raktą: https://console.anthropic.com/
-2. OmniRoute: Teikėjai → Pridėti teikėją → Anthropic
+2. 67router: Teikėjai → Pridėti teikėją → Anthropic
 3. Įklijuokite API raktą → Prisijungti
 
 ### Google (Gemini)
 
 1. Gaukite API raktą: https://aistudio.google.com/apikey
-2. OmniRoute: Teikėjai → Pridėti teikėją → Gemini
+2. 67router: Teikėjai → Pridėti teikėją → Gemini
 3. Įklijuokite API raktą → Prisijungti
 
 ### DeepSeek
 
 1. Gaukite API raktą: https://platform.deepseek.com/
-2. OmniRoute: Teikėjai → Pridėti teikėją → DeepSeek
+2. 67router: Teikėjai → Pridėti teikėją → DeepSeek
 3. Įklijuokite API raktą → Prisijungti
 
 ### Qoder: pasirinkite kredencialų perdavimo būdą
@@ -286,12 +286,12 @@ Tada naudokite `model: "auto"`, o OmniRoute automatiškai parinks geriausią tei
 Qoder reikalingi kredencialai. Du jų perdavimo būdai pasižymi skirtingomis galimybėmis; vien modelio pavadinimas
 nenurodo, ką gali atlikti konkretus ryšys.
 
-| Kredencialas                                    | OmniRoute perdavimo būdas                           | Iškviečiančiojo įrankių iškvietimas                                   | Srautinis perdavimas                                        |
+| Kredencialas                                    | 67router perdavimo būdas                            | Iškviečiančiojo įrankių iškvietimas                                   | Srautinis perdavimas                                        |
 | ----------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------- |
-| PAT, prasidedantis `pt-`                        | Vietinis `qodercli` procesas OmniRoute serveryje    | Nepalaikomas                                                          | Buferizuotas: SSE siunčiamas tik CLI grąžinus visą atsakymą |
+| PAT, prasidedantis `pt-`                        | Vietinis `qodercli` procesas 67router serveryje     | Nepalaikomas                                                          | Buferizuotas: SSE siunčiamas tik CLI grąžinus visą atsakymą |
 | Ne PAT prieigos prieigos raktas arba API raktas | Su OpenAI suderinamas DashScope HTTP galinis taškas | Perduodamas toliau, atsižvelgiant į aukštesniojo lygio modelį / raktą | Aukštesniojo lygio HTTP/SSE kelias                          |
 
-Jei naudojate PAT, įdiekite Qoder CLI tame pačiame serveryje arba konteineryje kaip OmniRoute. Vykdomasis failas
+Jei naudojate PAT, įdiekite Qoder CLI tame pačiame serveryje arba konteineryje kaip 67router. Vykdomasis failas
 turi būti aptinkamas kaip `qodercli`, kitu atveju nustatykite `CLI_QODER_BIN` į jo vykdomojo failo kelią. Tik
 Docker pagrindiniame kompiuteryje įdiegtas CLI nėra automatiškai pasiekiamas konteineryje. Jei dvejetainio
 failo nėra, pateikiama aiški klaida, nurodanti įdiegti programą arba nustatyti kelią.
@@ -324,16 +324,16 @@ ir konfigūruojamas skirtasis laikas yra atskiri patobulinimai; šis veikimas j�
 ### Groq
 
 1. Gaukite API raktą: https://console.groq.com/
-2. OmniRoute: Teikėjai → Pridėti teikėją → Groq
+2. 67router: Teikėjai → Pridėti teikėją → Groq
 3. Įklijuokite API raktą → Prisijungti
 
 ---
 
 ## Dažniausiai užduodami klausimai
 
-### „Ar reikia mokėti už naudojimąsi OmniRoute?“
+### „Ar reikia mokėti už naudojimąsi 67router?“
 
-**Ne!** OmniRoute yra nemokamas ir atvirojo kodo. Nemokamais paslaugų teikėjais (Kiro, Pollinations) galite naudotis visiškai nemokamai. Mokėti reikės tik tuo atveju, jei nuspręsite naudotis mokamais paslaugų teikėjais.
+**Ne!** 67router yra nemokamas ir atvirojo kodo. Nemokamais paslaugų teikėjais (Kiro, Pollinations) galite naudotis visiškai nemokamai. Mokėti reikės tik tuo atveju, jei nuspręsite naudotis mokamais paslaugų teikėjais.
 
 ### „Nuo kurio paslaugų teikėjo turėčiau pradėti?“
 
@@ -341,11 +341,11 @@ Pradėkite nuo **Kiro AI** — jis nemokamas, jam nereikia API rakto ir jis sute
 
 ### „Ar galiu vienu metu naudotis keliais paslaugų teikėjais?“
 
-**Taip!** Būtent tam ir skirtas OmniRoute. Prijunkite kelis paslaugų teikėjus ir naudokite `model: "auto"`, kad OmniRoute kiekvienai užklausai parinktų tinkamiausią.
+**Taip!** Būtent tam ir skirtas 67router. Prijunkite kelis paslaugų teikėjus ir naudokite `model: "auto"`, kad 67router kiekvienai užklausai parinktų tinkamiausią.
 
 ### „Kas nutiks, jei paslaugų teikėjas nustos veikti?“
 
-OmniRoute automatiškai praleidžia neveikiančius paslaugų teikėjus ir išbando kitą. Jums nieko nereikia daryti.
+67router automatiškai praleidžia neveikiančius paslaugų teikėjus ir išbando kitą. Jums nieko nereikia daryti.
 
 ### „Kaip atjungti paslaugų teikėją?“
 
@@ -353,13 +353,13 @@ Eikite į „Providers“ → spustelėkite paslaugų teikėją → spustelėkit
 
 ### „Ar galiu naudoti jau turimus API raktus?“
 
-**Taip!** Jei jau turite OpenAI, Anthropic, Google ar kitų paslaugų teikėjų API raktus, galite juos naudoti OmniRoute. Prijungdami paslaugų teikėją tiesiog juos įklijuokite.
+**Taip!** Jei jau turite OpenAI, Anthropic, Google ar kitų paslaugų teikėjų API raktus, galite juos naudoti 67router. Prijungdami paslaugų teikėją tiesiog juos įklijuokite.
 
 ---
 
 ## Kas toliau?
 
-- **[Automatinio derinio vadovas](./AUTO-COMBO-GUIDE.md)** — Leiskite OmniRoute parinkti jums geriausią DI
+- **[Automatinio derinio vadovas](./AUTO-COMBO-GUIDE.md)** — Leiskite 67router parinkti jums geriausią DI
 - **[Nemokamų planų vadovas](./FREE-TIERS-GUIDE.md)** — Naudokitės DI nemokamai, be kredito kortelės
 - **[Trikčių šalinimas](../guides/TROUBLESHOOTING.md)** — Išspręskite dažniausiai pasitaikančias problemas
 - **[Paslaugų teikėjų žinynas](../reference/PROVIDER_REFERENCE.md)** — Visas 226 paslaugų teikėjų sąrašas

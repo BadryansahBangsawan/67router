@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` gør det muligt for den rigtige Claude Code-runtime at bruge OmniRoutes lokale Anthropic
+`devin-cli-agentic` gør det muligt for den rigtige Claude Code-runtime at bruge 67routers lokale Anthropic
 Messages-slutpunkt, mens den officielle Devin CLI leverer modelsvar via ACP stdio. Den
 ændrer ikke de eksisterende Anthropic-, Claude OAuth-, Claude Web- eller `devin-cli`-udbydere.
 
@@ -18,7 +18,7 @@ modelmetadata er markeret tilsvarende, så combo-routing, der kræver værktøje
 > `3000.2.17` og modellen `swe-1-7-lightning`; den afsluttende livekørsel dokumenterede klientejede `Read`-,
 > `Edit`- og `Bash`-ture, vellykkede `npm test`-resultater, registrering af projektkommandoer og
 > færdigheder, routing udelukkende gennem Devin samt ingen udgående trafik til Claude. Fastlåsningen blev derefter hævet til `2.1.258`
-> (den CLI-generation, som OmniRoutes Claude-identitet udgiver sig for at være, og den første linje, der leveres
+> (den CLI-generation, som 67routers Claude-identitet udgiver sig for at være, og den første linje, der leveres
 > med Fable 5.1-niveauet indbygget). Med den nye fastlåsning blev installationslaget og `claude --version`
 > verificeret på det fastlåste baseimage, og broens enhedstests, `compose config` samt det
 > statiske isolationsbevis består — men offline-mockscenariet og livepakken med tre scenarier
@@ -51,11 +51,11 @@ Parseren accepterer én selvstændig `<tool>{...}</tool>`-konvolut pr. modeltur.
 navnet mod anmodningens værktøjsliste, validerer argumenterne mod det pågældende værktøjs JSON
 Schema, afviser blandet fortælling og handlinger og tillader ét begrænset reparationsforsøg. Claude Code
 udfører derefter det resulterende Anthropic-`tool_use` lokalt og sender `tool_result` tilbage gennem
-OmniRoute.
+67router.
 
 ## Automatisk routing
 
-Udbyderen kan indgå i OmniRoutes `auto/*`-kandidatpuljer, når den ikke er blokeret.
+Udbyderen kan indgå i 67routers `auto/*`-kandidatpuljer, når den ikke er blokeret.
 Kandidatberettigelse garanterer ikke valg: Comboens routingstrategi (for eksempel
 sidst kendte fungerende) kan foretrække en anden udbyder. Brug `dva/<model>` eller en Devin-prioriteret combo, når
 du kræver, at hver anmodning går gennem Devin.
@@ -67,16 +67,16 @@ betragtes som forbudte. Compose-tjenesterne:
 
 - kører som UID/GID `10001:10001` med et skrivebeskyttet rodfilsystem, fjernede kapabiliteter og
   `no-new-privileges`;
-- bruger en privat `/home/bridge`, en dedikeret Claude-konfigurationsdiskenhed, isolerede OmniRoute-data
+- bruger en privat `/home/bridge`, en dedikeret Claude-konfigurationsdiskenhed, isolerede 67router-data
   og en separat `devin-auth`-diskenhed;
 - monterer kun midlertidige `.sandbox`-arbejdsområder/-beviser;
 - monterer ikke værtens hjemmemappe, Keychain, SSH, cloud-legitimationsoplysninger eller Docker-socket;
 - opbygger eksplicitte miljøer og fjerner Anthropic API-/OAuth-/routingvariabler;
 - sender kun Claude Code-inferens til `http://omniroute:20128` med en nøgle, der kun er lokal.
 
-Offlineprofilen bruger et internt netværk. I liveprofilen kan OmniRoute kun nå de
+Offlineprofilen bruger et internt netværk. I liveprofilen kan 67router kun nå de
 officielle Devin-slutpunkter via `network-guard`; ikke-relaterede destinationer afvises.
-Claude Code har en separat udgående trafikbeskyttelse, der afviser alt, og kan kun nå den lokale OmniRoute-
+Claude Code har en separat udgående trafikbeskyttelse, der afviser alt, og kan kun nå den lokale 67router-
 tjeneste via `NO_PROXY`. Beskyttelsesprocessernes revisionsfiler monteres kun af deres respektive beskyttelsesproces.
 Scripts kontrollerer filejerskab, tilstand, antal links og hver beslutning, før der eksporteres
 tokenfrie beviser.

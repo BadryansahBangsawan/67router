@@ -8,9 +8,9 @@
 > **Paskutinį kartą atnaujinta:** 2026-09-16
 > **Auditorija:** Inžinieriai, pridedantys, prižiūrintys arba derinantys įtaisytąsias paslaugas (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Įtaisytosios paslaugos yra vietoje įdiegiami pagalbinių procesų įrankiai, kuriuos OmniRoute įdiegia, prižiūri ir
+Įtaisytosios paslaugos yra vietoje įdiegiami pagalbinių procesų įrankiai, kuriuos 67router įdiegia, prižiūri ir
 pateikia kaip visaverčius maršruto parinkimo tikslus. Kitaip nei išoriniai teikėjai (kurie internetu pasiekiami
-naudojant API raktus), įtaisytosios paslaugos veikia tame pačiame kompiuteryje kaip OmniRoute ir komunikuoja per vietinę atgalinio ryšio sąsają.
+naudojant API raktus), įtaisytosios paslaugos veikia tame pačiame kompiuteryje kaip 67router ir komunikuoja per vietinę atgalinio ryšio sąsają.
 
 ---
 
@@ -35,7 +35,7 @@ Integruotos septynios paslaugos:
 
 | Paslauga        | npm paketas                                    | Numatytasis prievadas | Paskirtis                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------- | ---------------------------------------------- | :-------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                      |         20130         | DI maršruto parinktuvas, kurį „OmniRoute“ gali naudoti kaip antrinį teikėją. Modeliai pateikiami kaip `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                                |
+| **9Router**     | `9router`                                      |         20130         | DI maršruto parinktuvas, kurį „67router“ gali naudoti kaip antrinį teikėją. Modeliai pateikiami kaip `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                                 |
 | **CLIProxyAPI** | GitHub leidimo dvejetainis failas (`cliproxy`) |         8317          | Vietinis tarpinio serverio adapteris, skirtas „Anthropic CLI“ autentifikavimo eigoms. Suteikia atsarginį maršruto parinkimą, kai baigiasi OAuth prieigos raktų galiojimas                                                                                                                                                                                                                                                    |
 | **Mux**         | `mux` (begalvis `mux server`)                  |         8322          | Vietinis agentų koordinavimo demonas (coder/mux). Valdomas tik gyvavimo ciklas — tai nėra maršruto parinkimo paskirties vieta (LLM tarpinis serveris nenaudojamas).                                                                                                                                                                                                                                                          |
 | **Bifrost**     | `@maximhq/bifrost`                             |         8080          | Go DI šliuzo perdavimo vidinė sistema. Kai veikia, ją automatiškai pasirenka perdavimo maršrutas (`/v1/relay/`)                                                                                                                                                                                                                                                                                                              |
@@ -45,21 +45,21 @@ Integruotos septynios paslaugos:
 
 Visoms septynioms taikomas tas pats priežiūros modelis:
 
-- „OmniRoute“ įdiegia jas kataloge `DATA_DIR/services/{name}/` (atskirai nuo pačios „OmniRoute“ `package.json`)
-- „OmniRoute“ paleidžia ir stebi jas kaip antrinius procesus
-- „OmniRoute“ į antrinio proceso aplinką įterpia laikiną API raktą ir jį pakeičia be prastovų (kai taikoma)
+- „67router“ įdiegia jas kataloge `DATA_DIR/services/{name}/` (atskirai nuo pačios „67router“ `package.json`)
+- „67router“ paleidžia ir stebi jas kaip antrinius procesus
+- „67router“ į antrinio proceso aplinką įterpia laikiną API raktą ir jį pakeičia be prastovų (kai taikoma)
 - Visi valdymo maršrutai (`/api/services/*`) yra **LOCAL_ONLY** — pasiekiami tik iš grįžtamojo ryšio sąsajos (griežta taisyklė Nr. 17)
 
 ### Pagrindiniai sprendimai (iš projektavimo plano)
 
-| Sprendimas                                            | Reikšmė                                                                                              |
-| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Prietaisų skydelio prieiga prie savosios „9Router“ NS | Atvirkštinis tarpinis serveris adresu `/dashboard/providers/services/9router/embed/*`                |
-| Diegimo mechanizmas                                   | `npm install {package}` per `execFile` (be apvalkalo interpoliacijos)                                |
-| Naudojimo režimas                                     | Teikėjas maršruto parinkimo modulyje registruojamas kaip `9router/{sub}/{model}`                     |
-| API raktų valdymas                                    | „OmniRoute“ generuoja, šifruoja saugomus duomenis (AES-256-GCM) ir įterpia per aplinkos kintamuosius |
-| Prietaisų skydelio vieta                              | `/dashboard/providers/services` (trys kortelės)                                                      |
-| Automatinis paleidimas                                | Kiekvienai paslaugai skirtas jungiklis, pagal numatytuosius nustatymus IŠJUNGTAS                     |
+| Sprendimas                                            | Reikšmė                                                                                             |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Prietaisų skydelio prieiga prie savosios „9Router“ NS | Atvirkštinis tarpinis serveris adresu `/dashboard/providers/services/9router/embed/*`               |
+| Diegimo mechanizmas                                   | `npm install {package}` per `execFile` (be apvalkalo interpoliacijos)                               |
+| Naudojimo režimas                                     | Teikėjas maršruto parinkimo modulyje registruojamas kaip `9router/{sub}/{model}`                    |
+| API raktų valdymas                                    | „67router“ generuoja, šifruoja saugomus duomenis (AES-256-GCM) ir įterpia per aplinkos kintamuosius |
+| Prietaisų skydelio vieta                              | `/dashboard/providers/services` (trys kortelės)                                                     |
+| Automatinis paleidimas                                | Kiekvienai paslaugai skirtas jungiklis, pagal numatytuosius nustatymus IŠJUNGTAS                    |
 
 ---
 
@@ -221,7 +221,7 @@ Užklausos ne per grįžtamąją sąsają gauna `403 LOCAL_ONLY`, neatsižvelgia
 #### `POST /api/services/9router/install`
 
 Įdiegia 9Router iš npm. Sukuria `DATA_DIR/services/9router/` su atskirais
-`package.json` ir `node_modules/`. Nesukelia konfliktų su OmniRoute priklausomybėmis.
+`package.json` ir `node_modules/`. Nesukelia konfliktų su 67router priklausomybėmis.
 
 **Užklausos turinys** (visi laukai neprivalomi):
 
@@ -382,7 +382,7 @@ Grąžina bendrą tiesioginę ir DB būseną, įskaitant versijos metaduomenis b
 #### `POST /api/services/9router/auto-start`
 
 Perjungia automatinio paleidimo žymą. Kai `enabled: true`, paslauga automatiškai paleidžiama
-kitą kartą paleidus OmniRoute (jei paslauga įdiegta).
+kitą kartą paleidus 67router (jei paslauga įdiegta).
 
 **Užklausos turinys:**
 
@@ -593,7 +593,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Šis įgaliotasis serveris:
 
 - Persiunčia užklausą į `http://127.0.0.1:{port}/{path}` (tik vietinio ciklo sąsaja)
-- Pašalina gaunamas `cookie` ir `authorization` antraštes (OmniRoute seansas nenutekinamas)
+- Pašalina gaunamas `cookie` ir `authorization` antraštes (67router seansas nenutekinamas)
 - Įterpia `Authorization: Bearer {apiKey}` 9Router autentifikavimui
 - Iš atsakymo pašalina `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*`
 - Perrašo HTML atsakymus, įterpdamas `<base href>` ir normalizuodamas absoliučiuosius kelius (`/foo` → `/dashboard/.../embed/foo`)
@@ -628,7 +628,7 @@ procesų paleidimo. Visą lygių matricą žr. `docs/security/ROUTE_GUARD_TIERS.
 ### API rakto įterpimas
 
 9Router ir Mux savo HTTP galiniams taškams reikalauja API rakto / nešėjo prieigos rakto.
-OmniRoute:
+67router:
 
 1. Sugeneruoja raktą naudodama `crypto.randomBytes(32).toString("base64url")` su
    konkrečiai paslaugai skirtu prefiksu (`nr_` – 9Router, `mx_` – Mux).
@@ -808,7 +808,7 @@ Jei įterptoji paslauga pateikia su OpenAI suderinamą `/v1/chat/completions` ga
 
 1. Patikrinkite `GET /api/services/{name}/logs` (arba žurnalo skydelį valdymo skydelyje). Ieškokite
    tokių eilučių kaip `Error: ENOENT`, `address already in use` arba `Cannot find module`.
-2. Patikrinkite, ar `npm` yra PATH: vykdykite `which npm` naudodami tą pačią naudotojo paskyrą, su kuria veikia OmniRoute.
+2. Patikrinkite, ar `npm` yra PATH: vykdykite `which npm` naudodami tą pačią naudotojo paskyrą, su kuria veikia 67router.
 3. Patikrinkite, ar paslauga įdiegta: `GET /api/services/{name}/status` atsakyme patikrinkite
    `installedVersion`. Jei reikšmė yra `null`, pirmiausia įdiekite paslaugą.
 4. Patikrinkite, ar `DATA_DIR/services/{name}/node_modules/` egzistuoja ir nėra tuščias.
@@ -846,7 +846,7 @@ paleidimas trunka ilgiau, padidinkite `healthIntervalMs` iki 5000, o `stopTimeou
 3. Kiekvienos paslaugos prievadą galima konfigūruoti faile `bootstrap.ts`, naudojant lauką `port`.
 
 **Pastaba:** 9Router pagal numatytuosius nustatymus naudoja 20130 prievadą būtent tam, kad išvengtų konflikto su
-numatytuoju OmniRoute 20128 prievadu.
+numatytuoju 67router 20128 prievadu.
 
 ---
 
@@ -856,13 +856,13 @@ numatytuoju OmniRoute 20128 prievadu.
 
 **Priežastys:**
 
-- OmniRoute procesas neturi rašymo teisių į `DATA_DIR` arba jo pirminį katalogą.
+- 67router procesas neturi rašymo teisių į `DATA_DIR` arba jo pirminį katalogą.
 - Programa vykdoma Docker aplinkoje be root teisių ir neturi rašymo prieigos prie prijungto tomo.
 
 **Sprendimas:**
 
 1. Patikrinkite `DATA_DIR` (numatytoji reikšmė: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Įsitikinkite, kad katalogas priklauso OmniRoute procesą vykdančiam naudotojui: `chown -R $USER ~/.omniroute/`
+2. Įsitikinkite, kad katalogas priklauso 67router procesą vykdančiam naudotojui: `chown -R $USER ~/.omniroute/`
 3. Docker aplinkoje įsitikinkite, kad prijungtas tomas turi tinkamas teises konteinerio naudotojui.
 
 ---
@@ -910,16 +910,16 @@ sąrašą. Žr. `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **K.: Ar 9Router ir CLIProxyAPI bus pasiekiamos produkcinėje / debesijos aplinkoje?**
 
-Taip. Abi paslaugos veikia pagal tą patį pirmiausia vietinio naudojimo modelį kaip ir pati „OmniRoute“. Jos veikia
+Taip. Abi paslaugos veikia pagal tą patį pirmiausia vietinio naudojimo modelį kaip ir pati „67router“. Jos veikia
 tame pačiame kompiuteryje ir bendrauja per vietinę sąsają. „Produkcinė“ aplinka čia reiškia VPS
-arba vietinį serverį, kuriame įdiegta „OmniRoute“, o ne nuotolinį debesijos paslaugų teikėją.
+arba vietinį serverį, kuriame įdiegta „67router“, o ne nuotolinį debesijos paslaugų teikėją.
 
 ---
 
 **K.: Kaip derinti prižiūrėtoją?**
 
 1. Stebėkite SSE žurnalų srautą: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Patikrinkite „OmniRoute“ „pino“ išvesties struktūrinius žurnalus, filtruodami pagal
+2. Patikrinkite „67router“ „pino“ išvesties struktūrinius žurnalus, filtruodami pagal
    `service:supervisor` vardų sritį.
 3. Patikrinkite DB eilutę: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Naudokite `GET /api/services/9router/status`, kad vienu iškvietimu pamatytumėte dabartinę vykdymo būseną, PID, veikimo būklę

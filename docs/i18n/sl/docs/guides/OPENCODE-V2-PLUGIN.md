@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` doda vaš celoten katalog OmniRoute — modele, kombinacije in
+`@omniroute/opencode-plugin-v2` doda vaš celoten katalog 67router — modele, kombinacije in
 samodejne kombinacije — v izbirnik modelov OpenCode v2, skupaj s prikaznimi imeni, cenami in
 omejitvami brezplačne ravni.
 
@@ -15,7 +15,7 @@ njima ni nič skupnega, zato nadgradnja enega nikoli ne zahteva nadgradnje druge
 ## Zahteve
 
 - OpenCode v2.
-- Dosegljiv prehod OmniRoute (privzeto `http://localhost:20128`).
+- Dosegljiv prehod 67router (privzeto `http://localhost:20128`).
 - Node.js 22 ali 24.
 
 ## Namestitev
@@ -80,7 +80,7 @@ zato okrnjen izbirnik nikoli ni skrivnost.
 | `baseURL`                        | obvezno                                        | Korenski URL prehoda, samo `http(s)`; pripona `/v1` se doda, kjer je potrebna                                                                             |
 | `apiKey`                         | povezana poverilnica, nato `OMNIROUTE_API_KEY` | Ključ za klepet za `/v1/*`                                                                                                                                |
 | `managementReadToken`            | uporabi `apiKey`, če ni nastavljen             | Ključ za `/api/*` — običajno **ni** enak                                                                                                                  |
-| `displayName`                    | `"OmniRoute"`                                  | Ime ponudnika v izbirniku                                                                                                                                 |
+| `displayName`                    | `"67router"`                                   | Ime ponudnika v izbirniku                                                                                                                                 |
 | `timeoutMs`                      | `10000`                                        | Časovna omejitev pridobivanja za posamezno končno točko (samodejne kombinacije uporabljajo 5 s)                                                           |
 | `modelCacheTtlMs`                | `300000`                                       | TTL predpomnilnika kataloga; posnetek na disku pospeši hladne zagone                                                                                      |
 | `timeouts`                       | uporabi `timeoutMs`, če ni nastavljeno         | Časovne omejitve posameznih končnih točk v ms: `models`, `combos`, `autoCombos`, `enrichment`                                                             |
@@ -130,7 +130,7 @@ sklica razširila shemo tako, da bi »sprejela karkoli«.
 
 | Simptom                                          | Vzrok                                                                                                                                        |
 | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Izbirnik ne prikazuje nobenega modela OmniRoute  | Ključ ni bil razrešen (preverite opozorilo ob zagonu) ali pa prehod ni dosegljiv                                                             |
+| Izbirnik ne prikazuje nobenega modela 67router   | Ključ ni bil razrešen (preverite opozorilo ob zagonu) ali pa prehod ni dosegljiv                                                             |
 | Neobdelani ID-ji modelov, brez kombinacij in cen | Končne točke za upravljanje so zavrnile žeton — nastavite `managementReadToken`                                                              |
 | Kratek ali prazen katalog `freeOnly`             | Ni žetona za upravljanje ali pa je bil zavrnjen — v dnevniku gostitelja preberite vrstico s povzetkom osveževanja (število `unmatched-free`) |
 | Seja, pripeta na `opencode-<id>/…`               | Vtičnik v1 je objavil `opencode-<id>`; v2 objavlja zgolj `<id>`, zato znova izberite model pod `<id>/…`                                      |

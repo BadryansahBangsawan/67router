@@ -6,7 +6,7 @@
 
 ## Apžvalga
 
-Visi „OmniRoute“ valdymo API maršrutai priskiriami vienam iš trijų apsaugos
+Visi „67router“ valdymo API maršrutai priskiriami vienam iš trijų apsaugos
 lygių. Klasifikacija yra statinė, apibrėžta faile `src/server/authz/routeGuard.ts`
 ir įvertinama prieš vykdant bet kurią kitą autentifikavimo šaką.
 
@@ -27,10 +27,10 @@ klasė ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)
 **Kas yra GHSA-fhh6-4qxv-rpqj (atakos klasė):** valdymo / agento serveris
 pateikia galinį tašką, kuris paleidžia antrinį procesą (`npm install`, `node`, naršyklę,
 tarpinį serverį, `git`, `tar`, …). Jei šis galinis taškas pasiekiamas ne tik iš pagrindinio
-kompiuterio — nes operatorius patalpino OmniRoute už nginx/Cloudflare/Tailscale tunelio
+kompiuterio — nes operatorius patalpino 67router už nginx/Cloudflare/Tailscale tunelio
 ir nutekėjo JWT arba autentifikavimas buvo netinkamai sukonfigūruotas — užpuolikas
 „API iškvietimą“ paverčia „komandos vykdymu pagrindiniame kompiuteryje“ (nuotoliniu
-kodo vykdymu). OmniRoute užkerta tam kelią **besąlygiškai, prieš bet kokią autentifikavimo
+kodo vykdymu). 67router užkerta tam kelią **besąlygiškai, prieš bet kokią autentifikavimo
 patikrą, atlikdama grįžtamojo ryšio pagrindinio kompiuterio patikrą** kiekviename
 maršrute, galinčiame paleisti procesus: per tunelį panaudotas nutekėjęs prieigos raktas
 vis tiek negali pasiekti procesų paleidimo funkcijos.
@@ -123,7 +123,7 @@ naudojantiems klientams, kuriems neturėtų reikėti plačios valdymo prieigos.
 
 #### Rekomendacijos operatoriams ir auditas
 
-Jei OmniRoute naudojate už atvirkštinio tarpinio serverio ar tunelio (nginx,
+Jei 67router naudojate už atvirkštinio tarpinio serverio ar tunelio (nginx,
 Caddy, Cloudflare Tunnel, Tailscale, Ngrok), grįžtamojo ryšio sąsajos patikra
 vis tiek apsaugo pirmiau nurodytus maršrutus, galinčius paleisti procesus —
 užklausa, kurios kliento adresas nepriklauso grįžtamojo ryšio sąsajai, atmetama
@@ -162,7 +162,7 @@ pasiekti procesų paleidimo funkcijos. Lieka dvi operatoriaus pareigos:
 - Atvirkštinio tarpinio serverio / prieigos žurnaluose ieškokite pirmiau nurodytų prefiksų, susietų su
   ne grįžtamojo ryšio kliento adresu. Bet koks toks kreipinys, grąžinęs `200`, o ne
   `403 LOCAL_ONLY`, reiškia, kad tarpinis serveris užmaskuoja tikrąjį kliento IP — pataisykite tarpinio serverio konfigūraciją.
-- `403 LOCAL_ONLY` OmniRoute žurnaluose vienam iš šių kelių reiškia, kad apsauga
+- `403 LOCAL_ONLY` 67router žurnaluose vienam iš šių kelių reiškia, kad apsauga
   veikia kaip numatyta, o ne klaidą, kurią reikia nuslopinti.
 
 #### Nuotoliniu būdu pasiekiami maršrutai su iškvietimo vietos tikrinimo užkarda

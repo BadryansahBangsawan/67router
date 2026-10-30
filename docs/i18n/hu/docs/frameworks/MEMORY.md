@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/memory/` és `src/app/api/memory/`
 > **Legutóbbi frissítés:** 2026-06-28 — v3.8.40 (alapértelmezetten kikapcsolva + int8 kvantálási felzárkóztatás)
 
-Az OmniRoute API-kulcs alapján (és opcionálisan munkamenet-azonosító alapján) társított, tartós társalgási memóriát biztosít. Az emlékek automatikusan, egyszerű reguláriskifejezés-alapú mintaillesztéssel kerülnek kinyerésre az LLM-válaszokból, majd a későbbi kérésekbe egy bevezető rendszerüzenetként lesznek visszainjektálva (vagy első felhasználói üzenetként azoknál a szolgáltatóknál, amelyek elutasítják a rendszerszerepet).
+Az 67router API-kulcs alapján (és opcionálisan munkamenet-azonosító alapján) társított, tartós társalgási memóriát biztosít. Az emlékek automatikusan, egyszerű reguláriskifejezés-alapú mintaillesztéssel kerülnek kinyerésre az LLM-válaszokból, majd a későbbi kérésekbe egy bevezető rendszerüzenetként lesznek visszainjektálva (vagy első felhasználói üzenetként azoknál a szolgáltatóknál, amelyek elutasítják a rendszerszerepet).
 
 > **A memória alapértelmezetten KI van kapcsolva (v3.8.30+).** A `DEFAULT_MEMORY_SETTINGS.enabled`
 > értéke mostantól `false` (`src/lib/memory/settings.ts`). A memória engedélyezése
@@ -629,7 +629,7 @@ metódusokkal azon hívók számára, amelyek saját hatókörű gyorsítótára
 
 ## Beágyazási szolgáltató kiválasztása (v3.8.16+)
 
-Az OmniRoute memóriamotorja **négy beágyazási forrást** támogat (`src/lib/memory/embedding/`). Mindegyik eltérő kompromisszumokat kínál a **késleltetés, a költség, a modellminőség és a beállítás összetettsége** terén.
+Az 67router memóriamotorja **négy beágyazási forrást** támogat (`src/lib/memory/embedding/`). Mindegyik eltérő kompromisszumokat kínál a **késleltetés, a költség, a modellminőség és a beállítás összetettsége** terén.
 
 ### A beágyazási források
 
@@ -1053,13 +1053,13 @@ A feldolgozó kizárólag a loopback interfészhez kötődik, amit a `GenericMem
 Ez az adapter nem lazít ezen a védelmen: a gazdagép rögzített értéke `127.0.0.1`, a konfigurációs
 séma (`ClaudeMemBackendConfigSchema`, `.strict()`) pedig csak a következőket fogadja el:
 
-| Kulcs       | Típus  | Alapértelmezett | Megjegyzések                                                                                                                                   |
-| ----------- | ------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —               | Kötelező, 1024–65535. A claude-mem feldolgozó portja a beállításfájljából (alapértelmezett: `37700 + uid % 100`).                              |
-| `project`   | string | —               | A használandó claude-mem-projekt. Ha nincs beállítva → minden OmniRoute API-kulcs a saját projektjéhez (az `apiKeyId` értékhez) lesz társítva. |
-| `timeoutMs` | number | `5000`          | Kérésenkénti időkorlát, 100–30000.                                                                                                             |
+| Kulcs       | Típus  | Alapértelmezett | Megjegyzések                                                                                                                                  |
+| ----------- | ------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —               | Kötelező, 1024–65535. A claude-mem feldolgozó portja a beállításfájljából (alapértelmezett: `37700 + uid % 100`).                             |
+| `project`   | string | —               | A használandó claude-mem-projekt. Ha nincs beállítva → minden 67router API-kulcs a saját projektjéhez (az `apiKeyId` értékhez) lesz társítva. |
+| `timeoutMs` | number | `5000`          | Kérésenkénti időkorlát, 100–30000.                                                                                                            |
 
-Engedélyezze a `PUT /api/settings/memory` végponton keresztül, majd indítsa újra az OmniRoute-ot (a háttérrendszerek
+Engedélyezze a `PUT /api/settings/memory` végponton keresztül, majd indítsa újra az 67router-ot (a háttérrendszerek
 csak egyszer, az `initMemoryBackends()` függvényben lesznek regisztrálva):
 
 ```json
@@ -1076,7 +1076,7 @@ Leképezés és korlátozások:
 
 - Az azonosítók formátuma `claude-mem:<observationId>`; a `get`/`delete` hálózati hívás nélkül figyelmen kívül hagyja
   a többi háttérrendszer azonosítóit.
-- `create` → `POST /api/memory/save`; az OmniRoute mezői (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; az 67router mezői (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) a claude-mem `metadata.omniroute` mezőjében utaznak, és beolvasáskor visszaállnak.
 - `search` → `GET /api/search?format=json&type=observations`, a `maxTokens` értékre csonkítva
   (karakterek / 4). `list` → a feldolgozó lapozott megfigyelési végpontja (a `total` egy alsó korlát — a feldolgozó
@@ -1088,16 +1088,16 @@ Leképezés és korlátozások:
 - A promptinjektálás (`retrieval.ts`) és az `omniroute_memory_*` MCP-eszközök továbbra is közvetlenül az SQLite-ból
   olvasnak — nem a `memoryManager` közvetítésével, ezért ez a háttérrendszer nem szolgáltat nekik adatokat.
 
-**A claude-mem saját LLM-hívásainak átirányítása az OmniRoute-on keresztül.** A claude-mem egy LLM segítségével tömöríti
+**A claude-mem saját LLM-hívásainak átirányítása az 67router-on keresztül.** A claude-mem egy LLM segítségével tömöríti
 a megfigyeléseket (alapértelmezés szerint a Claude Agent SDK-val). Az `openai-compatible` szolgáltatója ehelyett
-az OmniRoute-ra mutathat, így kihasználhatja a kombinált tartalék útválasztást és a költségkövetést. A `~/.claude-mem/settings.json` fájlban:
+az 67router-ra mutathat, így kihasználhatja a kombinált tartalék útválasztást és a költségkövetést. A `~/.claude-mem/settings.json` fájlban:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API-kulcs>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute-modell vagy kombináció>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API-kulcs>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router-modell vagy kombináció>"
 }
 ```
 

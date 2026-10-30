@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Kiswahili)
+# Providers Guide: Connect AI Models to 67router (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Kwa ufupi**: Mtoa huduma ni muunganisho kwa huduma ya AI (kama OpenAI, Anthropic, Google). Unahitaji angalau mtoa huduma mmoja ili kutumia OmniRoute.
+> **Kwa ufupi**: Mtoa huduma ni muunganisho kwa huduma ya AI (kama OpenAI, Anthropic, Google). Unahitaji angalau mtoa huduma mmoja ili kutumia 67router.
 
 ---
 
 ## Mtoa Huduma ni Nini?
 
-Fikiria mtoa huduma kama **kampuni ya simu**. Kama vile unavyohitaji kampuni ya simu ili kupiga simu, unahitaji mtoa huduma wa AI ili kutumia modeli za AI. OmniRoute ni kama simu inayofanya kazi na **kampuni zote za simu** — unaweza kubadili kutoka moja hadi nyingine kiotomatiki.
+Fikiria mtoa huduma kama **kampuni ya simu**. Kama vile unavyohitaji kampuni ya simu ili kupiga simu, unahitaji mtoa huduma wa AI ili kutumia modeli za AI. 67router ni kama simu inayofanya kazi na **kampuni zote za simu** — unaweza kubadili kutoka moja hadi nyingine kiotomatiki.
 
 ### Aina za Watoa Huduma
 
@@ -30,7 +30,7 @@ Tazama **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** kwa maagizo ya jumla ya 
 
 ### Usanidi wa hiari wa watoa huduma bila malipo wakati wa uendeshaji wa kwanza
 
-Msaidizi wa usanidi wa uendeshaji wa kwanza hutoa kadi ya wazi ya **Sanidi watoa huduma bila malipo**. Hupata orodha ya sasa ya wanaostahiki kutoka kwenye sajili ya watoa huduma ya OmniRoute isiyohitaji uthibitishaji, kisha hukuruhusu kukagua na kuondoa uteuzi wa kila mtoa huduma kabla ya kuthibitisha. OmniRoute huonyesha ilani ya tahadhari ya mtoa huduma na kiungo cha tovuti yake ili uweze kwanza kukagua masharti ya wahusika wengine, faragha, upatikanaji na vikomo vya matumizi.
+Msaidizi wa usanidi wa uendeshaji wa kwanza hutoa kadi ya wazi ya **Sanidi watoa huduma bila malipo**. Hupata orodha ya sasa ya wanaostahiki kutoka kwenye sajili ya watoa huduma ya 67router isiyohitaji uthibitishaji, kisha hukuruhusu kukagua na kuondoa uteuzi wa kila mtoa huduma kabla ya kuthibitisha. 67router huonyesha ilani ya tahadhari ya mtoa huduma na kiungo cha tovuti yake ili uweze kwanza kukagua masharti ya wahusika wengine, faragha, upatikanaji na vikomo vya matumizi.
 
 Kitendo hiki ni cha hiari: kukamilisha msaidizi wa usanidi hakuundi kamwe miunganisho ya watoa huduma bila malipo kwa siri. Huunda tu watoa huduma ambao bado hawapo, huacha miunganisho iliyopo iliyobinafsishwa bila kubadilishwa, na huripoti mmoja mmoja watoa huduma walioundwa, ambao tayari wamesanidiwa na walioshindwa. Unaweza kujaribu tena kwa usalama wale walioshindwa pekee baada ya kupata matokeo ya sehemu.
 
@@ -74,7 +74,7 @@ Kitendo hiki ni cha hiari: kukamilisha msaidizi wa usanidi hakuundi kamwe miunga
 
 ### Chaguo D: Miundo ya Ndani ya MLX (Apple Silicon)
 
-Kwa Mac za Apple Silicon zilizo na kumbukumbu iliyounganishwa, OmniRoute inasaidia kuunganisha miundo ya ndani ya MLX inayoendeshwa kupitia `mlx-lm.server` kama watoa huduma wa ndani wa kawaida wanaooana na OpenAI.
+Kwa Mac za Apple Silicon zilizo na kumbukumbu iliyounganishwa, 67router inasaidia kuunganisha miundo ya ndani ya MLX inayoendeshwa kupitia `mlx-lm.server` kama watoa huduma wa ndani wa kawaida wanaooana na OpenAI.
 
 #### Mahitaji ya Awali
 
@@ -104,14 +104,14 @@ Kwa Mac za Apple Silicon zilizo na kumbukumbu iliyounganishwa, OmniRoute inasaid
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Unganisha katika Dashibodi ya OmniRoute**:
+3. **Unganisha katika Dashibodi ya 67router**:
    - Nenda kwenye **Watoa Huduma** → **Ongeza Mtoa Huduma**
    - Chagua **MLX Gemma 26B** au **MLX Qwen 3.8 27B**
    - Bofya **Unganisha** (hakuna ufunguo wa API unaohitajika)
 
 4. **Tumia na OpenCode**:
    ```bash
-   # Sanidi OpenCode ili itumie OmniRoute
+   # Sanidi OpenCode ili itumie 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@ Lazima usimamie hili mwenyewe:
 - Endesha zote mbili kwenye mashine tofauti, au
 - Simamisha moja kabla ya kuanzisha nyingine
 
-OmniRoute haisimamii michakato ya seva za MLX kiotomatiki — inaelekeza tu maombi kwenye endpoints zinazooana na OpenAI unazosanidi.
+67router haisimamii michakato ya seva za MLX kiotomatiki — inaelekeza tu maombi kwenye endpoints zinazooana na OpenAI unazosanidi.
 
 #### Usaidizi wa Kuitisha Zana
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Kumbukumbu haitoshi       | Hakikisha muundo mmoja tu unaendeshwa; funga programu nyingine; angalia Activity Monitor   |
 | Muunganisho umekataliwa   | Thibitisha kuwa seva inaendeshwa kwenye porti sahihi (11435/11436)                         |
 | Majibu ya polepole        | Ombi la kwanza hupakia muundo kwenye kumbukumbu (~30-60s); maombi yanayofuata huwa ya kasi |
-| Kuitisha zana kunashindwa | Hakikisha muundo unaauni zana; angalia kumbukumbu za OmniRoute kwa hitilafu za tafsiri     |
+| Kuitisha zana kunashindwa | Hakikisha muundo unaauni zana; angalia kumbukumbu za 67router kwa hitilafu za tafsiri      |
 
 ---
 
@@ -230,12 +230,12 @@ Mtoa huduma wako sasa ameunganishwa. Unaweza kumtumia kwa `model: "auto"` au umt
 
 ## Kutumia Watoa Huduma Wengi
 
-OmniRoute hufanya kazi vizuri zaidi ikiwa na **watoa huduma wengi**. Hii hukupa:
+67router hufanya kazi vizuri zaidi ikiwa na **watoa huduma wengi**. Hii hukupa:
 
-- **Kubadili kiotomatiki** — Mtoa huduma mmoja akishindwa, OmniRoute hujaribu anayefuata
-- **Uboreshaji wa gharama** — OmniRoute huchagua mtoa huduma wa bei nafuu zaidi kwa kila ombi
-- **Uboreshaji wa kasi** — OmniRoute huchagua mtoa huduma mwenye kasi zaidi kwa kila ombi
-- **Uboreshaji wa ubora** — OmniRoute huchagua mtoa huduma bora zaidi kwa kila kazi
+- **Kubadili kiotomatiki** — Mtoa huduma mmoja akishindwa, 67router hujaribu anayefuata
+- **Uboreshaji wa gharama** — 67router huchagua mtoa huduma wa bei nafuu zaidi kwa kila ombi
+- **Uboreshaji wa kasi** — 67router huchagua mtoa huduma mwenye kasi zaidi kwa kila ombi
+- **Uboreshaji wa ubora** — 67router huchagua mtoa huduma bora zaidi kwa kila kazi
 
 ### Usanidi Unaopendekezwa
 
@@ -245,7 +245,7 @@ Unganisha angalau **watoa huduma 3** ili kupata matumizi bora zaidi:
 2. **Mtoa huduma mmoja mwenye kasi** (Groq, Cerebras) — Kwa majibu ya haraka
 3. **Mtoa huduma mmoja mwenye ubora wa juu** (OpenAI, Anthropic, Google) — Kwa kazi changamano
 
-Kisha tumia `model: "auto"` na OmniRoute itamchagua kiotomatiki mtoa huduma bora zaidi kwa kila ombi.
+Kisha tumia `model: "auto"` na 67router itamchagua kiotomatiki mtoa huduma bora zaidi kwa kila ombi.
 
 ---
 
@@ -254,25 +254,25 @@ Kisha tumia `model: "auto"` na OmniRoute itamchagua kiotomatiki mtoa huduma bora
 ### OpenAI
 
 1. Pata ufunguo wa API: https://platform.openai.com/api-keys
-2. Katika OmniRoute: Watoa Huduma → Ongeza Mtoa Huduma → OpenAI
+2. Katika 67router: Watoa Huduma → Ongeza Mtoa Huduma → OpenAI
 3. Bandika ufunguo wa API → Unganisha
 
 ### Anthropic
 
 1. Pata ufunguo wa API: https://console.anthropic.com/
-2. Katika OmniRoute: Watoa Huduma → Ongeza Mtoa Huduma → Anthropic
+2. Katika 67router: Watoa Huduma → Ongeza Mtoa Huduma → Anthropic
 3. Bandika ufunguo wa API → Unganisha
 
 ### Google (Gemini)
 
 1. Pata ufunguo wa API: https://aistudio.google.com/apikey
-2. Katika OmniRoute: Watoa Huduma → Ongeza Mtoa Huduma → Gemini
+2. Katika 67router: Watoa Huduma → Ongeza Mtoa Huduma → Gemini
 3. Bandika ufunguo wa API → Unganisha
 
 ### DeepSeek
 
 1. Pata ufunguo wa API: https://platform.deepseek.com/
-2. Katika OmniRoute: Watoa Huduma → Ongeza Mtoa Huduma → DeepSeek
+2. Katika 67router: Watoa Huduma → Ongeza Mtoa Huduma → DeepSeek
 3. Bandika ufunguo wa API → Unganisha
 
 ### Qoder: chagua njia ya kuhamisha kitambulisho
@@ -280,12 +280,12 @@ Kisha tumia `model: "auto"` na OmniRoute itamchagua kiotomatiki mtoa huduma bora
 Qoder inahitaji vitambulisho. Njia zake mbili za kuhamisha vitambulisho zina uwezo tofauti; jina la modeli
 pekee halibainishi kile ambacho muunganisho fulani unaweza kufanya.
 
-| Kitambulisho                                      | Njia ya kuhamisha ya OmniRoute                           | Uitaji wa zana wa mpigaji                                         | Utiririshaji                                                     |
-| ------------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
-| PAT inayoanza na `pt-`                            | Mchakato wa ndani wa `qodercli` kwenye seva ya OmniRoute | Hautumiki                                                         | Umeakibishwa: SSE hutolewa tu baada ya CLI kurejesha jibu kamili |
-| Tokeni ya ufikiaji isiyo ya PAT au ufunguo wa API | Kiendelezi cha HTTP kinachooana na OpenAI cha DashScope  | Hupitishwa moja kwa moja, kulingana na modeli/ufunguo wa upstream | Njia ya upstream ya HTTP/SSE                                     |
+| Kitambulisho                                      | Njia ya kuhamisha ya 67router                           | Uitaji wa zana wa mpigaji                                         | Utiririshaji                                                     |
+| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
+| PAT inayoanza na `pt-`                            | Mchakato wa ndani wa `qodercli` kwenye seva ya 67router | Hautumiki                                                         | Umeakibishwa: SSE hutolewa tu baada ya CLI kurejesha jibu kamili |
+| Tokeni ya ufikiaji isiyo ya PAT au ufunguo wa API | Kiendelezi cha HTTP kinachooana na OpenAI cha DashScope | Hupitishwa moja kwa moja, kulingana na modeli/ufunguo wa upstream | Njia ya upstream ya HTTP/SSE                                     |
 
-Kwa PAT, sakinisha Qoder CLI kwenye seva au kontena lilelile kama OmniRoute. Faili tekelezi
+Kwa PAT, sakinisha Qoder CLI kwenye seva au kontena lilelile kama 67router. Faili tekelezi
 lazima iweze kupatikana kama `qodercli`, au weka `CLI_QODER_BIN` kuwa njia ya faili yake tekelezi. CLI
 iliyosakinishwa kwenye seva ya Docker pekee haipatikani kiotomatiki ndani ya kontena. Kukosekana kwa
 faili tekelezi husababisha hitilafu bayana inayokuelekeza kwenye usakinishaji au mpangilio wa njia.
@@ -318,16 +318,16 @@ na muda wa mwisho unaoweza kusanidiwa ni maboresho tofauti; tabia hii haiwahakik
 ### Groq
 
 1. Pata ufunguo wa API: https://console.groq.com/
-2. Katika OmniRoute: Watoa Huduma → Ongeza Mtoa Huduma → Groq
+2. Katika 67router: Watoa Huduma → Ongeza Mtoa Huduma → Groq
 3. Bandika ufunguo wa API → Unganisha
 
 ---
 
 ## Maswali ya Kawaida
 
-### "Je, ninahitaji kulipa ili kutumia OmniRoute?"
+### "Je, ninahitaji kulipa ili kutumia 67router?"
 
-**Hapana!** OmniRoute ni ya bure na yenye msimbo wazi. Unaweza kutumia watoa huduma wa bure (Kiro, Pollinations) bila kulipa chochote. Utalipa tu ukichagua kutumia watoa huduma wanaolipiwa.
+**Hapana!** 67router ni ya bure na yenye msimbo wazi. Unaweza kutumia watoa huduma wa bure (Kiro, Pollinations) bila kulipa chochote. Utalipa tu ukichagua kutumia watoa huduma wanaolipiwa.
 
 ### "Nianze na mtoa huduma gani?"
 
@@ -335,11 +335,11 @@ Anza na **Kiro AI** — ni ya bure, haihitaji API key, na inakupa ufikiaji wa mo
 
 ### "Je, ninaweza kutumia watoa huduma wengi kwa wakati mmoja?"
 
-**Ndiyo!** Hilo ndilo lengo kuu la OmniRoute. Unganisha watoa huduma wengi na utumie `model: "auto"` ili OmniRoute ichague aliye bora zaidi kwa kila ombi.
+**Ndiyo!** Hilo ndilo lengo kuu la 67router. Unganisha watoa huduma wengi na utumie `model: "auto"` ili 67router ichague aliye bora zaidi kwa kila ombi.
 
 ### "Itakuwaje ikiwa mtoa huduma hatapatikana?"
 
-OmniRoute huwaruka kiotomatiki watoa huduma walioshindwa na kujaribu anayefuata. Huhitaji kufanya chochote.
+67router huwaruka kiotomatiki watoa huduma walioshindwa na kujaribu anayefuata. Huhitaji kufanya chochote.
 
 ### "Ninawezaje kutenganisha mtoa huduma?"
 
@@ -347,13 +347,13 @@ Nenda kwenye Providers → bofya mtoa huduma → bofya **Disconnect**.
 
 ### "Je, ninaweza kutumia API keys zangu zilizopo?"
 
-**Ndiyo!** Ikiwa tayari una API keys za OpenAI, Anthropic, Google, n.k., unaweza kuzitumia katika OmniRoute. Zibandike tu unapounganisha mtoa huduma.
+**Ndiyo!** Ikiwa tayari una API keys za OpenAI, Anthropic, Google, n.k., unaweza kuzitumia katika 67router. Zibandike tu unapounganisha mtoa huduma.
 
 ---
 
 ## Nini Kinachofuata?
 
-- **[Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ruhusu OmniRoute ikuchagulie AI bora zaidi
+- **[Mwongozo wa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Ruhusu 67router ikuchagulie AI bora zaidi
 - **[Mwongozo wa Viwango vya Bure](./FREE-TIERS-GUIDE.md)** — Pata AI ya bure bila kadi ya mkopo
 - **[Utatuzi wa Matatizo](../guides/TROUBLESHOOTING.md)** — Tatua matatizo ya kawaida
 - **[Rejeleo la Watoa Huduma](../reference/PROVIDER_REFERENCE.md)** — Orodha kamili ya watoa huduma 226

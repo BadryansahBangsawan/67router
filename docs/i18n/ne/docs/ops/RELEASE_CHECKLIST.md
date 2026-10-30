@@ -45,7 +45,7 @@ credential सँग साट्छ — repository secrets मा लामो 
 (चुहिएको token ले एक्लै publish गर्न सक्दैन — किनकि token नै छैन)।
 
 **एकपटकको setup (owner):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none)। यो नबनेसम्म स्वचालित चरण `ENEEDAUTH` सहित असफल हुन्छ:
 `publish_mode=staged` (तल) वा `direct` प्रयोग गरी पुनः dispatch गर्नुहोस्।
 

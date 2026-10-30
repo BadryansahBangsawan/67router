@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge jẹ́ proxy MITM (Man-in-the-Middle) ti OmniRoute, èyí tí ń dá ìrìnàjò HTTPS láti ọ̀dọ̀ àwọn aṣojú AI inú IDE dúró, tí ó sì ń darí rẹ̀ padà gba ẹ̀rọ ìdarí ìrìnàjò ìṣọ̀kan ti OmniRoute. Ó ṣe àtìlẹ́yìn fún **àwọn aṣojú IDE 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, àti Trae (tí a ń ṣèwádìí rẹ̀) — èyí tó mú kí OmniRoute jẹ́ proxy MITM tó ní ààlà ìṣàmúlò tó gbòòrò jù lọ fún àwọn olùrànlọ́wọ́ ìkọ kóòdù AI lórí ọjà.
+AgentBridge jẹ́ proxy MITM (Man-in-the-Middle) ti 67router, èyí tí ń dá ìrìnàjò HTTPS láti ọ̀dọ̀ àwọn aṣojú AI inú IDE dúró, tí ó sì ń darí rẹ̀ padà gba ẹ̀rọ ìdarí ìrìnàjò ìṣọ̀kan ti 67router. Ó ṣe àtìlẹ́yìn fún **àwọn aṣojú IDE 10** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, àti Trae (tí a ń ṣèwádìí rẹ̀) — èyí tó mú kí 67router jẹ́ proxy MITM tó ní ààlà ìṣàmúlò tó gbòòrò jù lọ fún àwọn olùrànlọ́wọ́ ìkọ kóòdù AI lórí ọjà.
 
 **Ibi tí dasibodu wà:** `/dashboard/tools/agent-bridge`
 **Ẹgbẹ́ pẹpẹ ẹ̀gbẹ́:** Tools (lẹ́yìn Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge jẹ́ proxy MITM (Man-in-the-Middle) ti OmniRoute, èyí tí ń dá
 
 ### Kí ni AgentBridge?
 
-Nígbà tí aṣojú IDE kan (bí àpẹẹrẹ GitHub Copilot, Cursor, Claude Code) bá ṣe ìpè API, ó ń sopọ̀ tààrà mọ́ olùpèsè AI tí ó wà ní òkè (OpenAI, Anthropic, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ). AgentBridge ń dí ìsopọ̀ yẹn lọ́wọ́ láìfarahàn ní ìpele TLS — láìnílò kí a yí ètò aṣojú kankan padà — ó sì tún ìbéèrè náà kọ kí ó lọ nípasẹ OmniRoute.
+Nígbà tí aṣojú IDE kan (bí àpẹẹrẹ GitHub Copilot, Cursor, Claude Code) bá ṣe ìpè API, ó ń sopọ̀ tààrà mọ́ olùpèsè AI tí ó wà ní òkè (OpenAI, Anthropic, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ). AgentBridge ń dí ìsopọ̀ yẹn lọ́wọ́ láìfarahàn ní ìpele TLS — láìnílò kí a yí ètò aṣojú kankan padà — ó sì tún ìbéèrè náà kọ kí ó lọ nípasẹ 67router.
 
 Èyí túmọ̀ sí pé o lè:
 
-- **Darúkọ aṣojú kankan padà sí olùpèsè kankan**: Copilot ń bá OpenAI sọ̀rọ̀? Darúkọ ọ́ padà sí Anthropic Claude, Gemini, tàbí ọ̀kan lára àwọn olùpèsè 375 ti OmniRoute.
+- **Darúkọ aṣojú kankan padà sí olùpèsè kankan**: Copilot ń bá OpenAI sọ̀rọ̀? Darúkọ ọ́ padà sí Anthropic Claude, Gemini, tàbí ọ̀kan lára àwọn olùpèsè 375 ti 67router.
 - **Lo ìmúbáṣepọ̀ àwọn awoṣe**: `gemini-3-flash` → `claude-sonnet-4.7` láìfarahàn ní ìpele handler.
 - **Ṣàkíyèsí gbogbo ìrìnnàjò aṣojú**: gbogbo ìbéèrè tí wọ́n dí lọ́wọ́ ni wọ́n ń kéjáde lọ sí [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Lo agbára ìfaradà OmniRoute**: combo routing, circuit breakers, fallbacks, àti ìtọ́pa ìnáwó (cost tracking) tún ń ṣiṣẹ́ fún ìrìnnàjò aṣojú IDE pẹ̀lú.
+- **Lo agbára ìfaradà 67router**: combo routing, circuit breakers, fallbacks, àti ìtọ́pa ìnáwó (cost tracking) tún ń ṣiṣẹ́ fún ìrìnnàjò aṣojú IDE pẹ̀lú.
 
 ### Ìpò rẹ̀ ní ojú ọjà
 
-| Ẹ̀yà                   | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| --------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity           |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot        |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)            |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex          |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE            |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries        |    —    |    ✓     |        —        |             ✓             |
-| Claude Code           |    —    |    —     |        ✓        |             ✓             |
-| Open Code             |    —    |    —     |        ✓        |             ✓             |
-| Trae                  |    —    |    —     |        —        |      🔍 Ń ṣe ìwádìí       |
-| Ìwíwo Dasibodu        |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector     |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ìṣọ́ṣọ́ OmniRoute       |    ✗    |    ✗     |        ✗        |             ✓             |
-| Ìwíwo ìmúbáṣepọ̀ awoṣe |    ✗    |    ✗     |        ✗        |             ✓             |
-| Àkójọ àyíká           |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ìwé ẹ̀rí CA òkè        |    ✗    |    ✗     |        ✓        |             ✓             |
+| Ẹ̀yà                   | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity           |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot        |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)            |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex          |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE            |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries        |    —    |    ✓     |        —        |            ✓             |
+| Claude Code           |    —    |    —     |        ✓        |            ✓             |
+| Open Code             |    —    |    —     |        ✓        |            ✓             |
+| Trae                  |    —    |    —     |        —        |      🔍 Ń ṣe ìwádìí      |
+| Ìwíwo Dasibodu        |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector     |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ìṣọ́ṣọ́ 67router        |    ✗    |    ✗     |        ✗        |            ✓             |
+| Ìwíwo ìmúbáṣepọ̀ awoṣe |    ✗    |    ✗     |        ✗        |            ✓             |
+| Àkójọ àyíká           |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ìwé ẹ̀rí CA òkè        |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, ìlànà-ọmọ CJS)
     │  ń wá ibi-àfojúsùn nípasẹ̀ SNI àkọsílẹ̀ Host
     │  ń ṣe ìwé-ẹ̀rí TLS fún SNI kọ̀ọ̀kan tí AgentBridge CA fọwọ́ sí
     ├── Bá àkójọ ìforíkọjá mu? → Ìkọjá TCP tààrà (kò sí ìtúpalẹ̀ ìpamọ́)
-    ├── Bá ibi-àfojúsùn mu? → fetch → olulana OmniRoute (port 20128)
+    ├── Bá ibi-àfojúsùn mu? → fetch → olulana 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() lórí ara/àwọn àkọsílẹ̀-ókè ìbéèrè
     │               ├── TrafficBuffer.push() — ń tẹ̀ jáde sí Olùṣàyẹ̀wò Ìṣàn-ọ̀nà
@@ -205,7 +205,7 @@ OS gbọ́dọ̀ fọkàn tán ìwé-ẹ̀rí CA AgentBridge kí àwọn IDE tó
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Fún agent kọ̀ọ̀kan tí o fẹ́ dáwọ́lé, host API rẹ̀ gbọ́dọ
 
 Lo Tábìlì Ìbáramu Àwòṣe nínú káàdì agent kọ̀ọ̀kan láti ṣàlàyé àwọn ìbáramu orísun → ibi-àfojúsùn:
 
-| Àwòṣe orísun (abinibi agent) | Àwòṣe ibi-àfojúsùn (OmniRoute) |
-| ---------------------------- | ------------------------------ |
-| `gpt-4o`                     | `claude-sonnet-4.7`            |
-| `*` (wildcard)               | `claude-haiku-4.7`             |
+| Àwòṣe orísun (abinibi agent) | Àwòṣe ibi-àfojúsùn (67router) |
+| ---------------------------- | ----------------------------- |
+| `gpt-4o`                     | `claude-sonnet-4.7`           |
+| `*` (wildcard)               | `claude-haiku-4.7`            |
 
 Wildcard `*` máa ń so àwòṣe èyíkéyìí tí a kò mọ̀ pọ̀ mọ́ ibi-àfojúsùn tí a sọ. A tọ́jú rẹ̀ sínú tábìlì `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Wildcard `*` máa ń so àwòṣe èyíkéyìí tí a kò mọ̀ pọ̀ mọ́ i
 
 ### 3.5 Àkíyèsí ewu
 
-AgentBridge ń dá àwọn ẹ̀rí ìfàṣẹsí dúró (àwọn àmì OAuth, àwọn kọ́kọ́rọ́ API) tí IDE ń lò láti fi ìdánimọ̀ rẹ̀ múlẹ̀ lọ́dọ̀ àwọn olùpèsè òkè. A máa **bo wọ́n kí a tó kọ wọ́n sínú àkọsílẹ̀** (wo §2.7), ṣùgbọ́n wọ́n hàn sí ipele MITM ti OmniRoute. Ìgbà àkọ́kọ́ tí a bá mu aṣojú kọ̀ọ̀kan ṣiṣẹ́ máa ń fi fèrèsé àkíyèsí ewu tí a lè pa hàn.
+AgentBridge ń dá àwọn ẹ̀rí ìfàṣẹsí dúró (àwọn àmì OAuth, àwọn kọ́kọ́rọ́ API) tí IDE ń lò láti fi ìdánimọ̀ rẹ̀ múlẹ̀ lọ́dọ̀ àwọn olùpèsè òkè. A máa **bo wọ́n kí a tó kọ wọ́n sínú àkọsílẹ̀** (wo §2.7), ṣùgbọ́n wọ́n hàn sí ipele MITM ti 67router. Ìgbà àkọ́kọ́ tí a bá mu aṣojú kọ̀ọ̀kan ṣiṣẹ́ máa ń fi fèrèsé àkíyèsí ewu tí a lè pa hàn.
 
 ### 3.6 Ìtọju & Ìwádìí Ìṣòro
 
@@ -397,7 +397,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### Àtòjọ ìforíjìn fún àwọn host tó ṣe kókó
 
-Àtòjọ ìforíjìn náà ń rí i dájú pé àwọn ilé-iṣẹ́ ìṣúná, àwọn olupèsè OAuth/SSO, àti àwọn host mìíràn tó ṣe kókó ni a **kò tú ìpamọ́ wọn láé**. Ìrìnàjò TLS wọn máa ń kọjá gẹ́gẹ́ bí oju eefin TCP tó hàn kedere — OmniRoute kì í rí plaintext náà láé.
+Àtòjọ ìforíjìn náà ń rí i dájú pé àwọn ilé-iṣẹ́ ìṣúná, àwọn olupèsè OAuth/SSO, àti àwọn host mìíràn tó ṣe kókó ni a **kò tú ìpamọ́ wọn láé**. Ìrìnàjò TLS wọn máa ń kọjá gẹ́gẹ́ bí oju eefin TCP tó hàn kedere — 67router kì í rí plaintext náà láé.
 
 Àwọn àpẹẹrẹ ìforíjìn àiyipada ní:
 
@@ -448,7 +448,7 @@ Gẹ́gẹ́ bí ọ̀nà mìíràn, ṣètò port tí kò nílò àṣẹ gíga
 
 Tí IDE bá fi àwọn àṣìṣe TLS hàn lẹ́yìn tí o bá bẹ̀rẹ̀ AgentBridge:
 
-1. Ṣàyẹ̀wò pé a ti fi cert náà sí ẹrọ: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) tàbí `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ṣàyẹ̀wò pé a ti fi cert náà sí ẹrọ: `security find-certificate -c "67router AgentBridge"` (macOS) tàbí `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Àwọn app kan máa ń ṣàkóso ibi ìfọkàntán tiwọn (Firefox, Chrome lórí Linux). Ṣiṣe "Fọkàn Tán Cert" lẹ́ẹ̀kan sí i, kí o sì ṣàyẹ̀wò ibi ìpamọ́ cert pàtó fún NSS/Firefox.
 3. Tun IDE bẹ̀rẹ̀ lẹ́yìn fífọkàn tán án — àwọn session TLS tó ń lọ lọ́wọ́ ń lo ipò ìfọkàntán àtijọ́.
 
@@ -499,7 +499,7 @@ ipconfig /flushdns
 Tí AgentBridge bá ń dá àwọn ìbéèrè dúró ṣùgbọ́n tí gbogbo wọn bá kùnà:
 
 1. Ṣàyẹ̀wò pé ó kéré tán provider kan ti sopọ̀ ní `/dashboard/providers`
-2. Ṣàyẹ̀wò àwọn log server OmniRoute: `APP_LOG_LEVEL=debug` nínú `.env`
+2. Ṣàyẹ̀wò àwọn log server 67router: `APP_LOG_LEVEL=debug` nínú `.env`
 3. Ṣàyẹ̀wò pé `OMNIROUTE_BASE_URL` tọ́ka sí router endpoint tó tọ́ (àìyípadà: `http://127.0.0.1:20128`)
 
 ---

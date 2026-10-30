@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Suomi)
+# 🌐 67router Proxy Guide (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Ohita maantieteelliset estot, suojaa henkilöllisyytesi ja reititä tekoälyliikenne minkä tahansa välityspalvelimen kautta — ilman monimutkaista määritystä.**
 
-OmniRoute sisältää kattavan välityspalvelinten hallintajärjestelmän, jonka avulla voit reitittää tekoälypalveluntarjoajille lähtevän liikenteen HTTP-, HTTPS- tai SOCKS5-välityspalvelinten kautta. Olitpa estetyllä alueella, tarvitset IP-osoitteiden kierrätystä tai haluat estää sormenjälkitunnistuksen — tämä opas kattaa kaiken.
+67router sisältää kattavan välityspalvelinten hallintajärjestelmän, jonka avulla voit reitittää tekoälypalveluntarjoajille lähtevän liikenteen HTTP-, HTTPS- tai SOCKS5-välityspalvelinten kautta. Olitpa estetyllä alueella, tarvitset IP-osoitteiden kierrätystä tai haluat estää sormenjälkitunnistuksen — tämä opas kattaa kaiken.
 
 ---
 
@@ -51,7 +51,7 @@ Välityspalvelimista on hyötyä myös estettyjen alueiden ulkopuolella:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute-palvelin                      │
+│                       67router-palvelin                      │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Välityspal- │    │ Välityspal-  │    │ Välityspalvelin-│  │
@@ -83,7 +83,7 @@ Välityspalvelimista on hyötyä myös estettyjen alueiden ulkopuolella:
 
 ## 4-tasoinen välityspalvelinjärjestelmä
 
-OmniRoute tukee välityspalvelinten määritystä **neljällä toisistaan riippumattomalla tasolla**, jotka ratkaistaan tärkeysjärjestyksessä:
+67router tukee välityspalvelinten määritystä **neljällä toisistaan riippumattomalla tasolla**, jotka ratkaistaan tärkeysjärjestyksessä:
 
 ```
 Tärkeysjärjestys (korkein → matalin):
@@ -96,7 +96,7 @@ Tärkeysjärjestys (korkein → matalin):
 
 ### Ratkaisujärjestyksen toiminta
 
-Kun OmniRoute lähettää pyynnön ulkoiselle palveluntarjoajalle, se kutsuu `resolveProxyForConnectionFromRegistry()`-funktiota, joka tarkistaa jokaisen tason järjestyksessä:
+Kun 67router lähettää pyynnön ulkoiselle palveluntarjoajalle, se kutsuu `resolveProxyForConnectionFromRegistry()`-funktiota, joka tarkistaa jokaisen tason järjestyksessä:
 
 1. **Tilitason määritys** — Onko tälle tietylle yhteystunnukselle määritetty välityspalvelin?
 2. **Palveluntarjoajatason määritys** — Onko tälle palveluntarjoajalle (esim. `openai`) määritetty välityspalvelin?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Tuonti/vienti
 
-Välityspalvelimet sisältyvät **varmuuskopiointi-/palautusjärjestelmään**. Kun viet OmniRoute-määrityksesi:
+Välityspalvelimet sisältyvät **varmuuskopiointi-/palautusjärjestelmään**. Kun viet 67router-määrityksesi:
 
 1. Siirry kohtaan **Dashboard → Settings → Backup**
 2. Napsauta **Export** — välityspalvelinrekisteri ja määritykset sisällytetään vientiin
@@ -248,7 +248,7 @@ Välityspalvelinrekisteri tukee myös **upsert-toimintoa isäntänimen ja portin
 
 ### Vanhojen määritysten siirto
 
-Jos määritit välityspalvelimia vanhemmassa versiossa (ennen rekisteriä), OmniRoute siirtää ne automaattisesti:
+Jos määritit välityspalvelimia vanhemmassa versiossa (ennen rekisteriä), 67router siirtää ne automaattisesti:
 
 ```
 Vanha key_value-tietovarasto → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Tämä tapahtuu kerran ensimmäisen päivityksen jälkeisen käynnistyksen yhtey
 
 > 🆕 **Tekijä: [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (ongelma [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute integroituu **[1proxy](https://1proxy-api.aitradepulse.com)**-yhteisöalustaan ja tarjoaa pääsyn **satoihin ilmaisiin, validoituihin välityspalvelimiin** eri puolilta maailmaa. Tämä sopii täydellisesti käyttäjille, joilla ei ole omaa välityspalvelininfrastruktuuria.
+67router integroituu **[1proxy](https://1proxy-api.aitradepulse.com)**-yhteisöalustaan ja tarjoaa pääsyn **satoihin ilmaisiin, validoituihin välityspalvelimiin** eri puolilta maailmaa. Tämä sopii täydellisesti käyttäjille, joilla ei ole omaa välityspalvelininfrastruktuuria.
 
 ### Toimintaperiaate
 
@@ -273,7 +273,7 @@ OmniRoute integroituu **[1proxy](https://1proxy-api.aitradepulse.com)**-yhteisö
 └─────────────┘ välityspalvelinta└─────────────────┘  perusteella └─────────────────┘
 ```
 
-1. **Synkronointi** — OmniRoute hakee validoidut välityspalvelimet 1proxy-rajapinnasta
+1. **Synkronointi** — 67router hakee validoidut välityspalvelimet 1proxy-rajapinnasta
 2. **Tallennus** — Välityspalvelimet tallennetaan samaan `proxy_registry`-tauluun arvolla `source = 'oneproxy'`
 3. **Suodatus** — Suodata protokollan, maan ja laatupisteiden perusteella
 4. **Kierto** — Valitse paras välityspalvelin käyttämällä laatuun perustuvaa, satunnaista tai peräkkäistä strategiaa
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Havaitsemisen esto ja huomaamattomuus
 
-OmniRoute ei ainoastaan reititä liikennettä välityspalvelimen kautta — se saa liikenteen näyttämään aidolta:
+67router ei ainoastaan reititä liikennettä välityspalvelimen kautta — se saa liikenteen näyttämään aidolta:
 
 ### TLS-sormenjäljen väärentäminen
 
@@ -407,11 +407,11 @@ Tunnus näyttää tarkistusta varten myös selvitetyn välityspalvelimen IP-osoi
 
 ## Ylävirran välityspalvelintilat
 
-CLIProxyAPI-mallia käyttäville palveluntarjoajille OmniRoute tukee kolmea ylävirran välityspalvelintilaa:
+CLIProxyAPI-mallia käyttäville palveluntarjoajille 67router tukee kolmea ylävirran välityspalvelintilaa:
 
 | Tila          | Kuvaus                                                               |
 | ------------- | -------------------------------------------------------------------- |
-| `native`      | OmniRoute käsittelee välityspalvelinreitityksen suoraan (oletus)     |
+| `native`      | 67router käsittelee välityspalvelinreitityksen suoraan (oletus)      |
 | `cliproxyapi` | Delegoi ulkoiselle CLIProxyAPI-instanssille                          |
 | `fallback`    | Kokeilee ensin natiivia tilaa ja siirtyy tarvittaessa CLIProxyAPI:in |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnelien API
 
-Lisätietoja OmniRoute-instanssin julkaisemisesta internetiin (Cloudflare/ngrok/Tailscale) lähtevän liikenteen välityspalvelimen kautta reitittämisen sijaan on oppaassa [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunnelien REST API sijaitsee polun `/api/tunnels/{cloudflared,ngrok,tailscale}/*` alla ja on riippumaton edellä dokumentoidusta lähtevän liikenteen välityspalvelinketjusta.
+Lisätietoja 67router-instanssin julkaisemisesta internetiin (Cloudflare/ngrok/Tailscale) lähtevän liikenteen välityspalvelimen kautta reitittämisen sijaan on oppaassa [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tunnelien REST API sijaitsee polun `/api/tunnels/{cloudflared,ngrok,tailscale}/*` alla ja on riippumaton edellä dokumentoidusta lähtevän liikenteen välityspalvelinketjusta.
 
 ### 1proxy API
 
@@ -516,7 +516,7 @@ Aseta `.env`-tiedostossa `ENABLE_SOCKS5_PROXY=true` ja käynnistä uudelleen.
 
 ### "socket hang up" -virheet välityspalvelinta käytettäessä
 
-Tämä on normaalia halvoilla välityspalvelimilla, jotka katkaisevat käyttämättömät yhteydet. OmniRoute käsittelee tämän jo seuraavasti:
+Tämä on normaalia halvoilla välityspalvelimilla, jotka katkaisevat käyttämättömät yhteydet. 67router käsittelee tämän jo seuraavasti:
 
 - Keep-alive poistetaan käytöstä välityspalvelinyhteyksissä (`keepAliveTimeout: 1`)
 - Liukuhihnakäsittely poistetaan käytöstä (`pipelining: 0`)
@@ -526,7 +526,7 @@ Jos ongelma jatkuu, kokeile toista välityspalvelinta tai käytä 1proxy-kiertot
 
 ### "unsupported_country_region_territory" OAuthin aikana
 
-Varmista, että välityspalvelin on määritetty **ennen** OAuth-prosessin aloittamista. OmniRoute reitittää OAuth-tunnuksen vaihdon määritetyn välityspalvelimen kautta. Määritä ensin yleinen tai palveluntarjoajakohtainen välityspalvelin ja muodosta sitten yhteys.
+Varmista, että välityspalvelin on määritetty **ennen** OAuth-prosessin aloittamista. 67router reitittää OAuth-tunnuksen vaihdon määritetyn välityspalvelimen kautta. Määritä ensin yleinen tai palveluntarjoajakohtainen välityspalvelin ja muodosta sitten yhteys.
 
 ### Välityspalvelinta ei käytetä
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Välityspalvelimen kunnon tarkistus (v3.8.16+)
 
-OmniRouten **välityspalvelimen nopean epäonnistumisen** mekanismi (`src/lib/proxyHealth.ts`) tunnistaa toimimattomat välityspalvelimet alle 2 sekunnissa nopealla TCP-yhteystarkistuksella ja **tallentaa tuloksen välimuistiin** pyyntökohtaisen kuormituksen välttämiseksi.
+67routerin **välityspalvelimen nopean epäonnistumisen** mekanismi (`src/lib/proxyHealth.ts`) tunnistaa toimimattomat välityspalvelimet alle 2 sekunnissa nopealla TCP-yhteystarkistuksella ja **tallentaa tuloksen välimuistiin** pyyntökohtaisen kuormituksen välttämiseksi.
 
 ### Toimintaperiaate
 
@@ -659,11 +659,11 @@ URL-osoitteessa määritetyt mukautetut portit (`http://host:9999`) ohittavat ai
 
 ## Välityspalvelinten analytiikka ja havainnoitavuus
 
-OmniRoute seuraa välityspalvelinkohtaista käyttöä auttaakseen ylläpitäjiä diagnosoimaan reititysmalleja, viivepiikkejä ja toistuvia virheitä.
+67router seuraa välityspalvelinkohtaista käyttöä auttaakseen ylläpitäjiä diagnosoimaan reititysmalleja, viivepiikkejä ja toistuvia virheitä.
 
 ### Seurattavat tiedot
 
-OmniRoute tallentaa seuraavat tiedot jokaisesta määritetyn välityspalvelimen kautta kulkevasta pyynnöstä:
+67router tallentaa seuraavat tiedot jokaisesta määritetyn välityspalvelimen kautta kulkevasta pyynnöstä:
 
 | Mittari      | Kuvaus                                                      |
 | ------------ | ----------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Kiertostrategian päätöspuu
 
-Kun yhdelle käyttöalueelle on määritetty useita välityspalvelimia, OmniRoute valitsee kuhunkin pyyntöön käytettävän palvelimen **kiertostrategian** perusteella. Strategia määritetään käyttöaluetasolla (yleinen, palveluntarjoajakohtainen, tilikohtainen tai yhdistelmäkohtainen).
+Kun yhdelle käyttöalueelle on määritetty useita välityspalvelimia, 67router valitsee kuhunkin pyyntöön käytettävän palvelimen **kiertostrategian** perusteella. Strategia määritetään käyttöaluetasolla (yleinen, palveluntarjoajakohtainen, tilikohtainen tai yhdistelmäkohtainen).
 
 ### Käytettävissä olevat strategiat
 

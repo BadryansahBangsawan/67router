@@ -10,7 +10,7 @@ weergegeven als vier providerfamilies. De regio bestaat uit verbindingsgegevens 
 
 ## Beslissing
 
-| Providerfamilie                                   | OmniRoute-ID            | Wereldwijde regio | Chinese regio |
+| Providerfamilie                                   | 67router-ID             | Wereldwijde regio | Chinese regio |
 | ------------------------------------------------- | ----------------------- | ----------------- | ------------- |
 | Alibaba Cloud Model Studio (betalen naar gebruik) | `alibaba`               | Singapore         | Beijing       |
 | Alibaba Cloud Token Plan                          | `bailian-coding-plan`   | Singapore         | Beijing       |

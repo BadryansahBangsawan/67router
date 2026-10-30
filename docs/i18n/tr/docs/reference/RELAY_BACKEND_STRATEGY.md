@@ -6,7 +6,7 @@
 
 ## Özet
 
-OmniRoute artık `/api/v1/relay/chat/completions` için üç aktarım modunu destekliyor:
+67router artık `/api/v1/relay/chat/completions` için üç aktarım modunu destekliyor:
 
 - `ts`: TypeScript aktarıcısını işlem içinde kullanır.
 - `bifrost`: Bifrost ağ geçidini zorunlu kılar.
@@ -45,12 +45,12 @@ Yüksek istek hızında çalışırken (günde çok sayıda token, neredeyse sab
 
 ## Arka uç sınır sözleşmesi
 
-Kararlı ürün sınırı, pano uygulaması değil OmniRoute aktarım API'sidir. Next.js panosu yerel hizmetleri kurabilir, yapılandırabilir ve denetleyebilir; ancak istek yönlendirmesi aktarım API'sinden girmeli ve bu sınırın arkasında devredilmelidir.
+Kararlı ürün sınırı, pano uygulaması değil 67router aktarım API'sidir. Next.js panosu yerel hizmetleri kurabilir, yapılandırabilir ve denetleyebilir; ancak istek yönlendirmesi aktarım API'sinden girmeli ve bu sınırın arkasında devredilmelidir.
 
 Uzun vadeli arka uç seçenekleri:
 
 - TypeScript aktarıcısını işlem içi politika ve geri dönüş yolu olarak koruyun. Kimlik doğrulama, izin listeleri, istek normalleştirme, hesaplama ve güvenlik kontrolleri herhangi bir arka uca devir işlemi yapılmadan önce burada kalır.
-- Dağıtımın daha düşük yönlendirme değişkenliğine, merkezî sağlayıcı rotasyonuna veya birden fazla OmniRoute replikasına yatay ölçeklendirmeye ihtiyaç duyduğu durumlarda Bifrost'u tercih edilen yüksek iş hacimli Tier-1 sidecar olarak kullanın.
+- Dağıtımın daha düşük yönlendirme değişkenliğine, merkezî sağlayıcı rotasyonuna veya birden fazla 67router replikasına yatay ölçeklendirmeye ihtiyaç duyduğu durumlarda Bifrost'u tercih edilen yüksek iş hacimli Tier-1 sidecar olarak kullanın.
 - 9router ve CLIPROXYAPI'yi gömülü uyumluluk hizmetleri olarak tutun. Denetlenen yerel işlemler olarak çalışırlar ve sağlayıcı/CLI davranışlarının istenen adaptör olduğu durumlarda kullanışlıdırlar; ancak varsayılan Tier-1 yönlendirme motoru hâline gelmemelidirler.
 - Panonun yoğun kullanılan yola rastgele hizmet URL'leri aktarmasına izin vermeyin. Kullanıcı arayüzü tarafından sağlanan URL'ler yapılandırma girdileridir; yönlendirme kodu, sunucu tarafı ayarlarından ve denetleyici durumundan kayıtlı ve sağlık kontrolünden geçmiş arka uçları çözümlemelidir.
 - Günümüzde denetlenen hizmetler için loopback HTTP'yi tercih edin; çünkü yönetilen işlemler hâlihazırda HTTP uyumlu API'ler sunar, rota koruması sınırı denetleyebilir ve hata/geri dönüş davranışı istek günlüklerinde görülebilir. Gelecekte bir SDK veya soket aktarımı eklemek, yalnızca izolasyonu ya da geri dönüş semantiğini zayıflatmadan p99 yönlendirme gecikmesini ölçülebilir şekilde azaltıyorsa anlamlıdır.

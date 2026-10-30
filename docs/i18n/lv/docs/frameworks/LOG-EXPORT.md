@@ -4,7 +4,7 @@
 
 ---
 
-Nepārtraukta, inkrementāla OmniRoute zvanu žurnālu eksportēšana uz ārēju analītikas datu krātuvi.
+Nepārtraukta, inkrementāla 67router zvanu žurnālu eksportēšana uz ārēju analītikas datu krātuvi.
 
 Žurnālu informācijas paneļa cilne saglabā pieprasījumu vēsturi SQLite (`call_logs`), un tās apjomu
 ierobežo rotācija un saglabāšanas termiņš. Žurnālu eksportēšana pēc grafika nosūta to pašu ierakstu

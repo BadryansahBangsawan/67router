@@ -4,7 +4,7 @@
 
 ---
 
-Esportazzjoni kontinwa u inkrementali tar-reġistri tas-sejħiet ta’ OmniRoute lejn maħżen estern tal-analitika.
+Esportazzjoni kontinwa u inkrementali tar-reġistri tas-sejħiet ta’ 67router lejn maħżen estern tal-analitika.
 
 It-tab tad-dashboard Logs iżomm l-istorja tat-talbiet f’SQLite (`call_logs`), li hija limitata mir-
 rotazzjoni u ż-żamma. L-esportazzjoni tar-reġistri tibgħat l-istess sett ta’ rekords skont skeda sabiex ikun jista’ jibqa’ jeżisti lil hinn

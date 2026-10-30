@@ -15,7 +15,7 @@ fejléceket vagy a folyamat környezeti állapotát importálnák.
 Ugyanez a manifeszt HTTP-n keresztül is elérhető a
 `GET /api/v1/provider-plugin-manifest` végponton a külön folyamatban futó sidecarok számára.
 
-Az OmniRoute az `X-OmniRoute-Provider-Manifest-Url` kérésfejlécen keresztül hirdeti ezt
+Az 67router az `X-OmniRoute-Provider-Manifest-Url` kérésfejlécen keresztül hirdeti ezt
 az URL-t a Bifrost és a CLIProxyAPI számára. Állítsa be az
 `OMNIROUTE_PROVIDER_MANIFEST_URL` változót, ha a sidecarnak a helyi kérés eredete helyett
 nyilvános vagy konténerhálózati URL-re van szüksége.
@@ -33,7 +33,7 @@ feltétel nélküli kérést kell küldenie ahelyett, hogy elfogadna egy `304` v
 
 A szolgáltatói metaadatok bővítményszerződés irányába történő elmozdítása, hogy az
 alacsony késleltetést igénylő kérések útvonalát végül egy kisebb késleltetésű sidecar
-kezelhesse, miközben az OmniRoute megtartja a TypeScript-útvonalat szabályzati kapuként
+kezelhesse, miközben az 67router megtartja a TypeScript-útvonalat szabályzati kapuként
 és tartalék megoldásként. A manifeszt additív: önmagában nem módosítja a kérések
 útválasztását.
 
@@ -77,7 +77,7 @@ hogy újra átolvasnák a TypeScript-forrásokat.
 | `usage-fetch`        | Bekötött használati- vagy kvótalekérővel rendelkezik (`getUsageForProvider`).    |
 | `usage-supported`    | A használati API elfogadja ezt a szolgáltatót (`isSupportedUsageConnection`).    |
 
-A `usage-fetch` csak felderítési célú. Azt jelzi, hogy az OmniRoute képes kiolvasni a
+A `usage-fetch` csak felderítési célú. Azt jelzi, hogy az 67router képes kiolvasni a
 szolgáltató használati adatait; nem aktiválja a lekérést, nem módosítja a kvótaszemantikát,
 és nem jelenti azt, hogy a Vezérlőpult kvótamodulja engedélyezve van a szolgáltatóhoz — ezt
 a modult külön az `USAGE_SUPPORTED_PROVIDERS` szabályozza. Az elsődleges hiteles forrás az

@@ -10,7 +10,7 @@
 
 ## Mengapa ini ada
 
-OmniRoute sudah menjawab dua pertanyaan tentang biaya, tetapi tidak satu pun merupakan pertanyaan yang paling sering diajukan operator.
+67router sudah menjawab dua pertanyaan tentang biaya, tetapi tidak satu pun merupakan pertanyaan yang paling sering diajukan operator.
 
 | Mekanisme yang ada                                       | Menjawab                                        |
 | -------------------------------------------------------- | ----------------------------------------------- |

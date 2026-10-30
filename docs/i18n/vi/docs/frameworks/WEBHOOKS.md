@@ -7,7 +7,7 @@
 > **Nguồn chính xác:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute có thể kích hoạt webhook HTTP khi xảy ra các sự kiện trên nền tảng. Hãy sử dụng chúng để tích hợp với
+67router có thể kích hoạt webhook HTTP khi xảy ra các sự kiện trên nền tảng. Hãy sử dụng chúng để tích hợp với
 Slack, PagerDuty, Datadog, các dịch vụ cảnh báo nội bộ hoặc bất kỳ trình nhận HTTP nào.
 
 Trình điều phối ký mỗi lần gửi bằng HMAC-SHA256, thử lại khi xảy ra
@@ -54,7 +54,7 @@ lỗi của từng webhook để một trình nhận bị lỗi không thể ch�
 
 ## Ký bằng HMAC
 
-Khi một webhook có `secret`, OmniRoute ký nội dung JSON và gửi:
+Khi một webhook có `secret`, 67router ký nội dung JSON và gửi:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Trang bảng điều khiển tại `/dashboard/webhooks` (xem
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

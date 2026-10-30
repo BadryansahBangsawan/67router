@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI aniqlash**, **mahalliy Agent Client Protocol** va
+67router **CLI aniqlash**, **mahalliy Agent Client Protocol** va
 **eskirgan stdio adapterlari**ni bir-biridan ajratadi. Oʻrnatilgan bajariladigan faylning topilishi uning
 autentifikatsiyasi, model bilan mosligi yoki soʻrovni qayta ishlashga tayyorligini isbotlamaydi.
 

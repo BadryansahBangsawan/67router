@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sıkıştırması, motor sözleşmeleri üzerine kuruludur. Bir mod, doğrudan tek bir motoru
+67router sıkıştırması, motor sözleşmeleri üzerine kuruludur. Bir mod, doğrudan tek bir motoru
 (`caveman` veya `rtk`) ya da birden fazla motoru sırayla çalıştıran deterministik, yığınlanmış bir işlem hattını çalıştırabilir.
 
 ## Modlar
@@ -35,7 +35,7 @@ Profil bir **tavan, taban değil**: Paketteki `mergeCompressionProfileOptions`, 
 
 Bu kod tabanında ölçüldüğünde: `coding-safe` ve `balanced`, `minCompressChars` değerini maksimuma çıkarır ve sistemi, araç şemalarını ve araç sonuçlarını yerel tutar, bu nedenle henüz geçmiş biriktirmemiş bir oturum `below_min_chars` değerinde durur ve motor hiçbir şeyi dönüştürmez. Bu nedenle varsayılan, en güvenli profil yerine `aggressive`'dir.
 
-Paket, kendi model kapsamını ve profilini ortam yapılandırmasından çözer. OmniRoute kararı asla devretmez: adaptör, model geçidini paketin en kısıtlayıcı kapsamına sabitler, böylece ana bilgisayar ortamı ayarları izin verilenler listesini yalnızca daraltabilir, OmniRoute'un ölçülen makbuzlarının ötesine asla genişletemez.
+Paket, kendi model kapsamını ve profilini ortam yapılandırmasından çözer. 67router kararı asla devretmez: adaptör, model geçidini paketin en kısıtlayıcı kapsamına sabitler, böylece ana bilgisayar ortamı ayarları izin verilenler listesini yalnızca daraltabilir, 67router'un ölçülen makbuzlarının ötesine asla genişletemez.
 
 ## Motor Kayıt Defteri
 
@@ -98,7 +98,7 @@ Caveman modu, normal düzyazının anlamsal olarak yoğunlaştırılmasına odak
 
 Gösterge panelindeki konumu `Dashboard -> Context & Cache -> Caveman` şeklindedir.
 
-Caveman upstream'i, kıyaslamalarda `~75%` daha az çıktı tokenı ve `22-87%` aralığında ortalama `65%` çıktı tasarrufunun yanı sıra `~46%` oranında bir girdi sıkıştırma aracı bildirir. OmniRoute, yığılmış istem/bağlam tasarruflarını belgelendirirken Caveman'ın girdi tarafındaki oranını kullanır; Caveman çıktı modu ise ayrı bir yanıt davranışı özelliği olmaya devam eder.
+Caveman upstream'i, kıyaslamalarda `~75%` daha az çıktı tokenı ve `22-87%` aralığında ortalama `65%` çıktı tasarrufunun yanı sıra `~46%` oranında bir girdi sıkıştırma aracı bildirir. 67router, yığılmış istem/bağlam tasarruflarını belgelendirirken Caveman'ın girdi tarafındaki oranını kullanır; Caveman çıktı modu ise ayrı bir yanıt davranışı özelliği olmaya devam eder.
 
 ## RTK
 

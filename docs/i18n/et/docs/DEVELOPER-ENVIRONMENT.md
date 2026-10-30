@@ -4,7 +4,7 @@
 
 ---
 
-See leht selgitab projekti kohaliku `.env`-faili käitumist ning keskkonnafailide ja saladuste käsitlemist OmniRoute'i arendamisel.
+See leht selgitab projekti kohaliku `.env`-faili käitumist ning keskkonnafailide ja saladuste käsitlemist 67router'i arendamisel.
 
 ## .env-i käitumine pärast installimist
 

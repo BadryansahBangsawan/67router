@@ -6,7 +6,7 @@
 
 ## Pranešimas apie pažeidžiamumus
 
-Jei aptikote „OmniRoute“ saugumo pažeidžiamumą, praneškite apie jį atsakingai:
+Jei aptikote „67router“ saugumo pažeidžiamumą, praneškite apie jį atsakingai:
 
 1. **NEKURKITE** viešos „GitHub“ problemos
 2. Naudokite [„GitHub“ saugumo įspėjimus](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ palaikymo linija (žr. [`ROADMAP.md`](ROADMAP.md) → „3 etapas — v3.9.0 LTS
 
 ## Saugumo architektūra
 
-„OmniRoute“ įgyvendina daugiasluoksnį saugumo modelį:
+„67router“ įgyvendina daugiasluoksnį saugumo modelį:
 
 ```
 Užklausa → CORS → Autorizavimo konvejeris (klasifikuoti → strategijos → vykdyti)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Apsaugos priemonių sistema
 
-„OmniRoute“ pateikiamas dinamiškai perkraunamas **apsaugos priemonių registras** (`src/lib/guardrails/`) su 3 integruotomis apsaugos priemonėmis, išrikiuotomis pagal prioritetą:
+„67router“ pateikiamas dinamiškai perkraunamas **apsaugos priemonių registras** (`src/lib/guardrails/`) su 3 integruotomis apsaugos priemonėmis, išrikiuotomis pagal prioritetą:
 
 | Apsaugos priemonė  | Prioritetas | Paskirtis                                                                                                       |
 | ------------------ | ----------- | --------------------------------------------------------------------------------------------------------------- |

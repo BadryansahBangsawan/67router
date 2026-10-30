@@ -7,7 +7,7 @@
 > **প্রামাণিক উৎস:** `src/lib/memory/` এবং `src/app/api/memory/`
 > **সর্বশেষ হালনাগাদ:** 2026-06-28 — v3.8.40 (ডিফল্টভাবে বন্ধ + int8 কোয়ান্টাইজেশন সমন্বয়)
 
-OmniRoute API key (এবং ঐচ্ছিকভাবে session id) দ্বারা চিহ্নিত স্থায়ী কথোপকথনমূলক
+67router API key (এবং ঐচ্ছিকভাবে session id) দ্বারা চিহ্নিত স্থায়ী কথোপকথনমূলক
 মেমোরি প্রদান করে। হালকা regex প্যাটার্ন ম্যাচিংয়ের মাধ্যমে LLM প্রতিক্রিয়া থেকে
 মেমোরিগুলো স্বয়ংক্রিয়ভাবে নিষ্কাশন করা হয় এবং পরবর্তী অনুরোধগুলোতে একটি অগ্রবর্তী
 system message হিসেবে (অথবা system ভূমিকা প্রত্যাখ্যানকারী provider-গুলোর ক্ষেত্রে
@@ -595,7 +595,7 @@ metadata?}` → `createMemory()`-কে র্যাপ করে। কেব�
 
 ## একটি এমবেডিং প্রোভাইডার নির্বাচন করা (v3.8.16+)
 
-OmniRoute-এর মেমরি ইঞ্জিন **চারটি এমবেডিং উৎস** (`src/lib/memory/embedding/`) সমর্থন করে। **ল্যাটেন্সি, খরচ, মডেলের গুণমান এবং সেটআপের জটিলতার** ক্ষেত্রে প্রতিটির ভিন্ন সুবিধা ও সীমাবদ্ধতা রয়েছে।
+67router-এর মেমরি ইঞ্জিন **চারটি এমবেডিং উৎস** (`src/lib/memory/embedding/`) সমর্থন করে। **ল্যাটেন্সি, খরচ, মডেলের গুণমান এবং সেটআপের জটিলতার** ক্ষেত্রে প্রতিটির ভিন্ন সুবিধা ও সীমাবদ্ধতা রয়েছে।
 
 ### এমবেডিং উৎসসমূহ
 
@@ -1009,13 +1009,13 @@ memoryManager.register(sqliteBackend);
 
 ওয়ার্কারটি শুধু লুপব্যাকে বাইন্ড করে, যা `GenericMemoryBackend`-এর SSRF গার্ড উদ্দেশ্যপ্রণোদিতভাবে প্রত্যাখ্যান করে। এই অ্যাডাপ্টার সেই গার্ডকে শিথিল করে না: হোস্টটি `127.0.0.1` হিসেবে হার্ড-কোড করা এবং কনফিগ স্কিমা (`ClaudeMemBackendConfigSchema`, `.strict()`) শুধুমাত্র এগুলো গ্রহণ করে:
 
-| কী          | ধরন    | ডিফল্ট | নোট                                                                                                                    |
-| ----------- | ------ | ------ | ---------------------------------------------------------------------------------------------------------------------- |
-| `port`      | number | —      | আবশ্যক, 1024–65535। এর সেটিংস ফাইল থেকে claude-mem worker পোর্ট (ডিফল্ট `37700 + uid % 100`)।                          |
-| `project`   | string | —      | ব্যবহারযোগ্য claude-mem প্রজেক্ট। সেট না থাকলে → প্রতিটি OmniRoute API কী তার নিজস্ব প্রজেক্টে (`apiKeyId`) ম্যাপ হয়। |
-| `timeoutMs` | number | `5000` | প্রতিটি অনুরোধের সময়সীমা, 100–30000।                                                                                  |
+| কী          | ধরন    | ডিফল্ট | নোট                                                                                                                   |
+| ----------- | ------ | ------ | --------------------------------------------------------------------------------------------------------------------- |
+| `port`      | number | —      | আবশ্যক, 1024–65535। এর সেটিংস ফাইল থেকে claude-mem worker পোর্ট (ডিফল্ট `37700 + uid % 100`)।                         |
+| `project`   | string | —      | ব্যবহারযোগ্য claude-mem প্রজেক্ট। সেট না থাকলে → প্রতিটি 67router API কী তার নিজস্ব প্রজেক্টে (`apiKeyId`) ম্যাপ হয়। |
+| `timeoutMs` | number | `5000` | প্রতিটি অনুরোধের সময়সীমা, 100–30000।                                                                                 |
 
-`PUT /api/settings/memory`-এর মাধ্যমে এটি সক্রিয় করুন এবং OmniRoute পুনরায় চালু করুন (ব্যাকএন্ডগুলো
+`PUT /api/settings/memory`-এর মাধ্যমে এটি সক্রিয় করুন এবং 67router পুনরায় চালু করুন (ব্যাকএন্ডগুলো
 `initMemoryBackends()`-এ কেবল একবার নিবন্ধিত হয়):
 
 ```json
@@ -1032,7 +1032,7 @@ REST API-এর স্টোর হিসেবে এটি ব্যবহা�
 
 - ID-গুলো হলো `claude-mem:<observationId>`; `get`/`delete` কোনো
   নেটওয়ার্ক কল ছাড়াই অন্য ব্যাকএন্ডের ID উপেক্ষা করে।
-- `create` → `POST /api/memory/save`; OmniRoute-এর ফিল্ডগুলো (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router-এর ফিল্ডগুলো (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) claude-mem-এর `metadata.omniroute`-এ থাকে এবং পড়ার সময় রাউন্ড-ট্রিপ করে।
 - `search` → `GET /api/search?format=json&type=observations`, `maxTokens`
   (chars / 4) অনুযায়ী ছাঁটাই করা হয়। `list` → worker-এর পেজিনেটেড observations এন্ডপয়েন্ট (`total` একটি নিম্নসীমা — worker
@@ -1044,16 +1044,16 @@ REST API-এর স্টোর হিসেবে এটি ব্যবহা�
 - প্রম্পট ইনজেকশন (`retrieval.ts`) এবং `omniroute_memory_*` MCP টুলগুলো এখনও সরাসরি SQLite
   থেকে পড়ে — এগুলো `memoryManager`-এর মধ্য দিয়ে যায় না, তাই এই ব্যাকএন্ড এগুলোতে ডেটা সরবরাহ করে না।
 
-**OmniRoute-এর মাধ্যমে claude-mem-এর নিজস্ব LLM কল রাউট করা।** claude-mem একটি LLM ব্যবহার করে observations
+**67router-এর মাধ্যমে claude-mem-এর নিজস্ব LLM কল রাউট করা।** claude-mem একটি LLM ব্যবহার করে observations
 সংকুচিত করে (ডিফল্ট: Claude Agent SDK)। এর `openai-compatible` প্রোভাইডারকে এর পরিবর্তে
-OmniRoute-এর দিকে নির্দেশ করা যায়, যাতে কম্বো ফলব্যাক ও খরচ ট্র্যাকিং ব্যবহৃত হয়। `~/.claude-mem/settings.json`-এ:
+67router-এর দিকে নির্দেশ করা যায়, যাতে কম্বো ফলব্যাক ও খরচ ট্র্যাকিং ব্যবহৃত হয়। `~/.claude-mem/settings.json`-এ:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API কী>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute মডেল বা কম্বো>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API কী>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router মডেল বা কম্বো>"
 }
 ```
 

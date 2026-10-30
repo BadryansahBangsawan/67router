@@ -1,4 +1,4 @@
-# OmniRoute Architecture (বাংলা)
+# 67router Architecture (বাংলা)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _সর্বশেষ হালনাগাদ: 2026-06-28_
 
 ## নির্বাহী সারসংক্ষেপ
 
-OmniRoute হলো Next.js-এর ওপর নির্মিত একটি স্থানীয় AI রাউটিং গেটওয়ে ও ড্যাশবোর্ড।
+67router হলো Next.js-এর ওপর নির্মিত একটি স্থানীয় AI রাউটিং গেটওয়ে ও ড্যাশবোর্ড।
 এটি একটি একক OpenAI-সামঞ্জস্যপূর্ণ এন্ডপয়েন্ট (`/v1/*`) প্রদান করে এবং অনুবাদ, ফলব্যাক, টোকেন রিফ্রেশ ও ব্যবহার ট্র্যাকিংসহ একাধিক আপস্ট্রিম প্রোভাইডারের মধ্যে ট্রাফিক রাউট করে।
 
 মূল সক্ষমতাসমূহ:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[ব্রাউজার ড্যাশবোর্ড]
     end
 
-    subgraph Router[OmniRoute লোকাল প্রসেস]
+    subgraph Router[67router লোকাল প্রসেস]
         API[V1 সামঞ্জস্য API\n/v1/*]
         DASH[ড্যাশবোর্ড + ব্যবস্থাপনা API\n/api/*]
         CORE[SSE + অনুবাদ কোর\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ OAuth প্রোভাইডার মডিউলসমূহ (`src/lib/oauth
 
 ## 5) এমবেডেড সার্ভিসসমূহ (v3.8.4)
 
-OmniRoute স্থানীয়ভাবে চলমান AI টুল প্রসেস ইনস্টল, তত্ত্বাবধান এবং সেগুলোতে রাউট করতে পারে,
+67router স্থানীয়ভাবে চলমান AI টুল প্রসেস ইনস্টল, তত্ত্বাবধান এবং সেগুলোতে রাউট করতে পারে,
 যেগুলোকে **এমবেডেড সার্ভিস** বলা হয়। পাঁচটি অন্তর্ভুক্ত রয়েছে: 9Router, CLIProxyAPI, Bifrost, Mux এবং Dario।
 
 আর্কিটেকচার স্তরসমূহ:
@@ -435,7 +435,7 @@ handler-গুলোকে নিজেরা lockout/budget/fallback logic এ�
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — পর্যায়ক্রমিক evaluation job
 
 ### E. Authorization Pipeline
@@ -802,7 +802,7 @@ flowchart LR
         Browser[ড্যাশবোর্ড ব্রাউজার]
     end
 
-    subgraph ContainerOrProcess[OmniRoute রানটাইম]
+    subgraph ContainerOrProcess[67router রানটাইম]
         Next[Next.js সার্ভার\nPORT=20128]
         Core[SSE কোর + এক্সিকিউটর]
         MainDB[(storage.sqlite)]
@@ -920,7 +920,7 @@ flowchart LR
 
 ## প্রোভাইডার সামঞ্জস্যতা ম্যাট্রিক্স
 
-> **দ্রষ্টব্য:** নিচের ম্যাট্রিক্সটি OmniRoute v3.8.0-এ নিবন্ধিত 351টি প্রোভাইডারের একটি প্রতিনিধিত্বমূলক নমুনা।
+> **দ্রষ্টব্য:** নিচের ম্যাট্রিক্সটি 67router v3.8.0-এ নিবন্ধিত 351টি প্রোভাইডারের একটি প্রতিনিধিত্বমূলক নমুনা।
 > প্রামাণ্য ও নিয়মিতভাবে হালনাগাদকৃত তালিকার জন্য
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (স্বয়ংক্রিয়ভাবে তৈরি) দেখুন, অথবা মূল
 > তথ্যসূত্র `src/shared/constants/providers.ts` দেখুন (লোডের সময় Zod দ্বারা যাচাইকৃত)।
@@ -1103,7 +1103,7 @@ flowchart LR
 - ক্লায়েন্ট থেকে পাওয়া অপরিবর্তিত অনুরোধ
 - অনুবাদ করা অনুরোধ, যা প্রকৃতপক্ষে আপস্ট্রিমে পাঠানো হয়েছে
 - JSON হিসেবে পুনর্গঠিত প্রোভাইডার প্রতিক্রিয়া; স্ট্রিম করা প্রতিক্রিয়াগুলোকে চূড়ান্ত সারাংশ ও স্ট্রিম মেটাডেটায় সংকুচিত করা হয়
-- OmniRoute কর্তৃক ফেরত দেওয়া চূড়ান্ত ক্লায়েন্ট প্রতিক্রিয়া; স্ট্রিম করা প্রতিক্রিয়াগুলো একই সংকুচিত সারাংশ আকারে সংরক্ষণ করা হয়
+- 67router কর্তৃক ফেরত দেওয়া চূড়ান্ত ক্লায়েন্ট প্রতিক্রিয়া; স্ট্রিম করা প্রতিক্রিয়াগুলো একই সংকুচিত সারাংশ আকারে সংরক্ষণ করা হয়
 
 ## নিরাপত্তা-সংবেদনশীল সীমানা
 

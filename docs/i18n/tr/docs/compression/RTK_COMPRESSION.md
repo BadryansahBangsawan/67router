@@ -4,7 +4,7 @@
 
 ---
 
-RTK sıkıştırması, terminal ve araç çıktıları için OmniRoute'un komut farkındalığına sahip sıkıştırma motorudur. Bağlam büyümesinin büyük bölümünün test günlüklerinden, derleme çıktılarından, paket yöneticisi gürültüsünden, kabuk dökümlerinden, Docker çıktılarından, git çıktılarından ve yığın izlerinden kaynaklandığı kodlama aracısı oturumları için tasarlanmıştır.
+RTK sıkıştırması, terminal ve araç çıktıları için 67router'un komut farkındalığına sahip sıkıştırma motorudur. Bağlam büyümesinin büyük bölümünün test günlüklerinden, derleme çıktılarından, paket yöneticisi gürültüsünden, kabuk dökümlerinden, Docker çıktılarından, git çıktılarından ve yığın izlerinden kaynaklandığı kodlama aracısı oturumları için tasarlanmıştır.
 
 RTK, doğrudan `defaultMode: "rtk"` ile veya genellikle aşağıdaki gibi yığınlanmış bir işlem hattının ilk adımı olarak çalışabilir:
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Bu sıralama önce gürültülü makine çıktısını sıkıştırır, ardından Caveman'in kalan düz yazıyı yoğunlaştırmasını sağlar.
 
-Üst kaynak RTK, komut çıktısında `%60-90` tasarruf bildirmektedir. README dosyasındaki örnek oturum, `~118,000` standart tokendan `~23,900` RTK tokenına düşerek `%79.7` (`~%80`) tasarruf sağlamaktadır. OmniRoute, Caveman girdi sıkıştırmasıyla birlikte yığınlanmış tasarruf hesaplaması için bu üst kaynak ortalamasını kullanır:
+Üst kaynak RTK, komut çıktısında `%60-90` tasarruf bildirmektedir. README dosyasındaki örnek oturum, `~118,000` standart tokendan `~23,900` RTK tokenına düşerek `%79.7` (`~%80`) tasarruf sağlamaktadır. 67router, Caveman girdi sıkıştırmasıyla birlikte yığınlanmış tasarruf hesaplaması için bu üst kaynak ortalamasını kullanır:
 
 ```txt
 RTK ortalaması:  %80 tasarruf
@@ -48,7 +48,7 @@ RTK filtreleri şu sırayla yükler:
 2. `DATA_DIR/rtk/filters.toml` ve `DATA_DIR/rtk/filters.json` içindeki global filtreler.
 3. `open-sse/services/compression/engines/rtk/filters/` içindeki yerleşik filtreler.
 
-Aynı kapsam içinde RTK TOML şema v1 filtreleri, OmniRoute JSON filtrelerine göre önceliklidir. İçe aktarılmış komuta özgü bir filtrenin o kapsamdaki daha geniş bir filtreyi geçersiz kılabilmesi için TOML `match_command` ifadeleri, komut türü eşleştirmesinden önce kontrol edilir. Dosya biçiminden bağımsız olarak proje kapsamı, global kapsama göre her zaman önceliklidir.
+Aynı kapsam içinde RTK TOML şema v1 filtreleri, 67router JSON filtrelerine göre önceliklidir. İçe aktarılmış komuta özgü bir filtrenin o kapsamdaki daha geniş bir filtreyi geçersiz kılabilmesi için TOML `match_command` ifadeleri, komut türü eşleştirmesinden önce kontrol edilir. Dosya biçiminden bağımsız olarak proje kapsamı, global kapsama göre her zaman önceliklidir.
 
 Düzenli ifade filtreleri, araç çıktısının aracılara nasıl gösterildiğini değiştirebildiğinden proje filtreleri kasıtlı olarak güven denetimine tabidir. Aşağıdakilerden biri doğru olduğunda proje filtre dosyası kabul edilir:
 
@@ -71,7 +71,7 @@ Karmalar ayrıdır: `filtersSha256`, `.rtk/filters.json` dosyasına güvenirken 
 
 ## RTK TOML şeması v1 uyumluluğu
 
-OmniRoute, RTK TOML şeması v1'i kullanarak bildirimsel filtre dosyalarını ayrıştırabilir, doğrulayabilir, test edebilir ve yükleyebilir.
+67router, RTK TOML şeması v1'i kullanarak bildirimsel filtre dosyalarını ayrıştırabilir, doğrulayabilir, test edebilir ve yükleyebilir.
 Desteklenen alanlar şunlardır: `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` ve `[[tests.<filter>]]` satır içi testleri.
@@ -80,7 +80,7 @@ büyük dosyalar ve bilinmeyen filtrelere yapılan başvurular reddedilir. Satı
 incelenmek üzere doğrulanabilir ancak yüklenemez veya kullanıma alınamaz. Özel dosya yükleme hatalarında
 açık kalma davranışı korunur: geçersiz dosya atlanır ve kalan filtreler çalışmaya devam eder.
 
-OmniRoute, araç çıktısını istemci zaten yakaladıktan sonra alır; bu nedenle `filter_stderr = true`
+67router, araç çıktısını istemci zaten yakaladıktan sonra alır; bu nedenle `filter_stderr = true`
 işlem çıktısının yakalanma biçimini değiştiremez. Alan, işlem yapmayan bir ayar olarak kabul edilir ve doğrulama bir uyarı döndürür.
 Bu özellik kasıtlı olarak RTK yürütülebilir dosyası, kabuk kancaları, Rust komut uygulamaları veya güven deposu düzeniyle
 tam uyumluluk şeklinde değil, **RTK TOML şeması v1 uyumluluğu** şeklinde tanımlanır.

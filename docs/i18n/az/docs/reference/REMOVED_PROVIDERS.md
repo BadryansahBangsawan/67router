@@ -4,7 +4,7 @@
 
 ---
 
-Bəzi xidmətlər OmniRoute-a inteqrasiya edilmiş, lakin sonradan onları idarə edən şəxslərin
+Bəzi xidmətlər 67router-a inteqrasiya edilmiş, lakin sonradan onları idarə edən şəxslərin
 tələbi ilə silinmişdir. Bu səhifə həmin silinmələrin daimi qeydidir. Onun yeganə məqsədi
 onların təsadüfən geri qaytarılmasının qarşısını almaqdır: köhnə bir fork, keşlənmiş npm
 tarball-u, arxivləşdirilmiş məsələ və ya “X provayderini bərpa edin” sorğusu tapan iştirakçının
@@ -17,11 +17,11 @@ operatorun yazılı icazəsi ilə geri qaytarıla bilər və həmin icazəyə ke
 
 ## Siyasət
 
-1. **Xidmət operatorunun silinmə tələbi müzakirə edilmir, yerinə yetirilir.** OmniRoute
+1. **Xidmət operatorunun silinmə tələbi müzakirə edilmir, yerinə yetirilir.** 67router
    heç bir yuxarı səviyyəli xidmətlə əlaqəli deyil. Xidmət operatoru inteqrasiyanın
    silinməsini tələb etdikdə, inteqrasiyanın rəsmi API-dən istifadə edib-etməməsindən asılı
    olmayaraq o silinir.
-2. **“Silinib” OmniRoute-un nəzarət etdiyi bütün səthlər deməkdir.** İcra modulu, reyestr qeydi, provayder
+2. **“Silinib” 67router-un nəzarət etdiyi bütün səthlər deməkdir.** İcra modulu, reyestr qeydi, provayder
    id-si və aliası, model siyahısı, endpoint-lər, mühit dəyişənləri, ikon, idarə paneli kartları,
    yaradılmış provayder arayışı, `FREE_TIERS.md`, mühit arayışı, README say göstəriciləri,
    `llm.txt` güzgüləri, xüsusi testlər və etalon snapshot-lar, kod şərhləri, CHANGELOG bəndləri
@@ -32,7 +32,7 @@ operatorun yazılı icazəsi ilə geri qaytarıla bilər və həmin icazəyə ke
 3. **Yazılı icazə olmadan bu səhifədəki heç bir qeydi yenidən əlavə etməyin.** Buraya
    id və ya aliasın hər hansı provayder kataloquna geri əlavə edilməsi, domenlərin icra moduluna
    əlavə edilməsi, onu “bərpa edən” iştirakçı PR-nin qəbul edilməsi, pulsuz modellər kataloquna
-   əlavə edilməsi və ya OmniRoute vasitəsilə ona əl ilə qoşulma üsulunun sənədləşdirilməsi
+   əlavə edilməsi və ya 67router vasitəsilə ona əl ilə qoşulma üsulunun sənədləşdirilməsi
    daxildir. Belə PR-ləri və məsələləri bu səhifəyə keçid verərək bağlayın.
 4. **Qeydi minimal saxlayın.** Yalnız rəyçinin yenidən əlavəetməni tanıması üçün lazım olanları
    qeyd edin: identifikatorlar, domenlər, tarixlər və silinməni həyata keçirən pull request.
@@ -49,7 +49,7 @@ operatorun yazılı icazəsi ilə geri qaytarıla bilər və həmin icazəyə ke
 | 2026-08-12     | `puter`           | `pu`     | `puter.com`                                                             | Puter-in sahibi (Nariman Jelveh)                                                                                                                          | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API açarı tələb edən provayder. `152_remove_puter_provider.sql` miqrasiyası saxlanılmış konfiqurasiyanı təmizləyir.                                                                                                                                                                                                                                                                                                                                                      |
 | 2026-09-02     | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                 | Xidmət operatoru (dəstək e-poçtu vasitəsilə)                                                                                                              | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Açarsız provayder. Yazılı sorğu 2026-08-30 tarixində alınıb. Xüsusi məsələlər və müzakirə silinib, PR-ların başlıqları dəyişdirilib.                                                                                                                                                                                                                                                                                                                                     |
 | 2026-09-21     | `gemini-business` | `gembiz` | `business.gemini.google`                                                | Layihə sahibinin qərarı (məsələ [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                         | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Kukiyə əsaslanan veb provayder. Google icra modulunun hədəflədiyi `BardFrontendService/StreamGenerate` son nöqtəsini istifadədən çıxardı; əvəzedicini (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, `__Secure-C_SES`/`csesidx` əsasında ilkin olaraq yaradılan Bearer JWT) layihədə olmayan aktiv Gemini Enterprise/Workspace hesabı olmadan hazırlamaq və ya yoxlamaq mümkün deyil. Yoxlanılmamış şəkildə yenidən yazılmaq əvəzinə istifadədən çıxarıldı. |
-| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                        | Layihə sahibinin qərarı (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Kuki autentifikasiyalı provayderdir, operatorun tələbi ilə silinməyib. `studio-api.suno.ai` dayandırılmışdı (503); aktiv host Clerk JWT mübadiləsi və ödənişli hCaptcha həlli asılılığı tələb edir, OmniRoute isə bunu yalnız bir musiqi provayderi üçün əlavə etməməyi seçdi. `kie/suno-v4.0` və `kie/suno-v3.5` (kie.ai-də yerləşdirilir) təsirlənməyib və dəstəklənməyə davam edir.                                                                                   |
+| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                        | Layihə sahibinin qərarı (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Kuki autentifikasiyalı provayderdir, operatorun tələbi ilə silinməyib. `studio-api.suno.ai` dayandırılmışdı (503); aktiv host Clerk JWT mübadiləsi və ödənişli hCaptcha həlli asılılığı tələb edir, 67router isə bunu yalnız bir musiqi provayderi üçün əlavə etməməyi seçdi. `kie/suno-v4.0` və `kie/suno-v3.5` (kie.ai-də yerləşdirilir) təsirlənməyib və dəstəklənməyə davam edir.                                                                                    |
 | 2026-10-10     | `opencode`        | `oc`     | `opencode.ai/zen/v1` (pulsuz səviyyə; host `opencode-zen` ilə ortaqdır) | OpenCode operatorunun əsas 9router layihəsinə ünvanladığı açıq silinmə sorğusu (2026-09-19) nəzərə alınaraq qabaqlayıcı silinmə (layihə sahibinin qərarı) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Yalnız açarsız "OpenCode Free" provayderi silinir. Autentifikasiyalı `opencode-zen` və `opencode-go`, bütün Zen kataloq modelləri və onların sorğu müqavilələri, OpenCode klient inteqrasiyaları və `@omniroute/opencode-plugin*` qalır. `207_remove_opencode_free_provider.sql` miqrasiyası API açarı daşıyan köhnə bağlantıları Zen-ə köçürür və açarsız konfiqurasiyanı təmizləyir.                                                                                   |
 
 ## Qeyd əlavə etmək
@@ -64,6 +64,6 @@ Yeni silinmə tələbi daxil olduqda:
    nümunəsindən istifadə edin (miqrasiya əlavə edin).
 3. Eyni PR-də yuxarıdakı cədvələ bir sətir, identifikatorları isə
    `tests/unit/removed-providers-blocklist.test.ts` faylına əlavə edin.
-4. PR birləşdirildikdən sonra operatora cavab verərək nələrin silindiyini və OmniRoute-un
+4. PR birləşdirildikdən sonra operatora cavab verərək nələrin silindiyini və 67router-un
    nələri dəyişə bilmədiyini sadalayın (artıq yayımlanmış npm və Docker versiyaları, git tarixçəsi,
    üçüncü tərəf fork-ları).

@@ -20,10 +20,10 @@ Rolul unui motor este descris prin **două axe independente**, codificate împre
 `RouterBackendDefinition` din registru:
 
 1. **Ciclul de viață** (`RouterBackendLifecycle`) — _modul în care rulează motorul_:
-   - `in-process` — rulează în cadrul procesului Node al OmniRoute (fluxul nativ TS).
-   - `supervised` — un proces-copil local pe care OmniRoute îl instalează/pornește/oprește/îi verifică starea
+   - `in-process` — rulează în cadrul procesului Node al 67router (fluxul nativ TS).
+   - `supervised` — un proces-copil local pe care 67router îl instalează/pornește/oprește/îi verifică starea
      prin `ServiceSupervisor`, apoi îl utilizează drept conexiune la furnizor.
-   - `external` — un endpoint HTTP către care OmniRoute trimite cereri, dar pe care **nu** îl gestionează
+   - `external` — un endpoint HTTP către care 67router trimite cereri, dar pe care **nu** îl gestionează
      (configurat printr-un URL de bază din variabilele de mediu).
    - `disabled` — înregistrat, dar nu poate fi selectat.
 2. **Axa de selecție** (backendul de rutare al releului) — _dacă releul trimite cereri către acesta_:

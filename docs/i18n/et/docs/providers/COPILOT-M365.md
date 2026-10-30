@@ -34,7 +34,7 @@ Täielik URL on järgmisel kujul:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Avage OmniRoute'is **Providers → Add Provider**, valige **Microsoft 365 Copilot (BizChat)** ja kleepige mandaat järgmises vormingus:
+6. Avage 67router'is **Providers → Add Provider**, valige **Microsoft 365 Copilot (BizChat)** ja kleepige mandaat järgmises vormingus:
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -49,9 +49,9 @@ WebSocketi URL-ist väärtuste käsitsi kopeerimise asemel saate eksportida DevT
 1. Avage **DevTools → Network**.
 2. Alustage või jätkake BizChati vestlust (see käivitab WebSocketi ühenduse).
 3. Paremklõpsake Networki paneelil ja valige **Save all as HAR with content**.
-4. Kasutage OmniRoute'i teenusepakkuja ühenduse dialoogis nuppu **Import .har file**.
+4. Kasutage 67router'i teenusepakkuja ühenduse dialoogis nuppu **Import .har file**.
 
-OmniRoute otsib HAR-ist Chathubi WebSocketi URL-i, eraldab väärtused `access_token` ja `chathubPath` ning täidab mandaadiväljad automaatselt. HAR-i importimisel dekodeeritakse JWT aegumisaeg ja kuvatakse pääsuloa järelejäänud kehtivusaeg.
+67router otsib HAR-ist Chathubi WebSocketi URL-i, eraldab väärtused `access_token` ja `chathubPath` ning täidab mandaadiväljad automaatselt. HAR-i importimisel dekodeeritakse JWT aegumisaeg ja kuvatakse pääsuloa järelejäänud kehtivusaeg.
 
 > **Ärge kunagi lisage tegelikku HAR-eksporti, pääsuluba ega värskendusluba koodihoidlasse.** Testides ja dokumentatsioonis kasutatavad väärtused peavad alati olema kohatäitjad.
 
@@ -68,7 +68,7 @@ Käsitsi uuesti hankimise vältimiseks saate salvestada Microsofti värskenduslo
 | `refreshToken` | Microsoft OAuthi värskendusluba ulatuse `substrate.office.com/sydney` jaoks |
 | `tier`         | `individual` (vaikimisi), `edu` või `enterprise`                            |
 
-Hankige värskendusluba Microsofti seadmekoodi- või autoriseerimiskoodivoo kaudu, mille ulatus on `substrate.office.com/sydney`. Kui `refreshToken` on määratud, värskendab OmniRoute enne iga päringut ennetavalt väärtust `access_token`, mistõttu ei pea te mandaati pärast iga ~75-minutilist aegumist uuesti hankima.
+Hankige värskendusluba Microsofti seadmekoodi- või autoriseerimiskoodivoo kaudu, mille ulatus on `substrate.office.com/sydney`. Kui `refreshToken` on määratud, värskendab 67router enne iga päringut ennetavalt väärtust `access_token`, mistõttu ei pea te mandaati pärast iga ~75-minutilist aegumist uuesti hankima.
 
 Kui `refreshToken` pole määratud, peate WebSocketi mandaadi pärast iga aegumist käsitsi uuesti hankima.
 

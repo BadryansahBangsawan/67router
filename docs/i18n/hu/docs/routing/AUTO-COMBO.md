@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Magyar)
+# 67router Auto-Combo Engine (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # tokenenként a legolcsóbb
 
 **Mi történik:**
 
-1. Az OmniRoute észleli az `auto/` előtagot az `src/sse/handlers/chat.ts` fájlban
+1. Az 67router észleli az `auto/` előtagot az `src/sse/handlers/chat.ts` fájlban
 2. Lekérdezi az összes **aktív szolgáltatói kapcsolatot** az adatbázisból
 3. Az érvényes hitelesítő adatokkal (API-kulccsal vagy OAuth-tokennel) rendelkezőkre szűr
 4. Meghatározza a kapcsolatonkénti modellt (`connection.defaultModel` vagy a szolgáltató első modellje)
@@ -88,7 +88,7 @@ a meglévő reziliencia-lekérdezések újrafelhasználásával (soha nem a megs
 - modellzárolás — `isModelLocked(provider, connectionId, model)`
 
 Minden jelölt tartalmazza továbbá az adott API-kulcshoz tartozó `excluded` jelzőt. A kizárások
-API-kulcsonként vannak tárolva (`auto_candidate_overrides` tábla, `128` migráció) — az OmniRoute
+API-kulcsonként vannak tárolva (`auto_candidate_overrides` tábla, `128` migráció) — az 67router
 egybérlős rendszer, `users` tábla nélkül, így az `apiKeyId` a hívónkénti identitás legközelebbi
 valós megfelelője —, és érvényesítésük a jelöltkészlet szűk keresztmetszeténél történik az
 `open-sse/services/autoCombo/virtualFactory.ts` fájlban, a tiszta, egységtesztekkel ellenőrzött
@@ -183,7 +183,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Két gyakori buktató:
 
 - **Az `auto` nem használja a kombóit.** Az `auto`/`auto/*` saját, konfigurációt nem igénylő jelöltkészletet épít fel, és csak akkor veszi figyelembe a tartósan mentett kombókat, ha egy kombó neve szó szerint `auto` (nem ajánlott). Kombón keresztüli útválasztáshoz annak pontos nevét küldje el — ne az `auto` értéket.
-- **Az `openrouter/auto` egy valódi, fizetős OpenRouter-termék** („Auto Best Available”), nem OmniRoute-alias. Ez az OpenRouter-nyilvántartás (`open-sse/config/providers/registry/openrouter/index.ts`) egyetlen statikus modellbejegyzése, és külön számlázzák. Az `auto` készletekből való kizárásához használja a Beállítások → Útválasztás → Fizetős modellek elrejtése lehetőséget.
+- **Az `openrouter/auto` egy valódi, fizetős OpenRouter-termék** („Auto Best Available”), nem 67router-alias. Ez az OpenRouter-nyilvántartás (`open-sse/config/providers/registry/openrouter/index.ts`) egyetlen statikus modellbejegyzése, és külön számlázzák. Az `auto` készletekből való kizárásához használja a Beállítások → Útválasztás → Fizetős modellek elrejtése lehetőséget.
 
 A dokumentált eredeti félreértéseket lásd itt: [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) és [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111).
 
@@ -283,7 +283,7 @@ feloldott értékek a motor meglévő `config.modePack` / `config.budgetCap` /
 
 ## Az összes útválasztási stratégia
 
-Az OmniRoute kombinációs motorja **20 útválasztási stratégiát** támogat (deklaráció: `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Maga az Auto Combo motor az `auto` stratégián keresztül érhető el; a többi stratégia a mentett kombinációkhoz használható.
+Az 67router kombinációs motorja **20 útválasztási stratégiát** támogat (deklaráció: `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Maga az Auto Combo motor az `auto` stratégián keresztül érhető el; a többi stratégia a mentett kombinációkhoz használható.
 
 | Stratégia           | Leírás                                                                                                                                                                                                                                                      |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -331,7 +331,7 @@ Szigorú rotációhoz használja a `round-robin` stratégiát; a `weighted` stra
 
 ### Ügynökalapú pipeline mód
 
-Egy legalább két modellt tartalmazó `pipeline` kombináció a `config.agenticOrchestration.enabled` beállítással használhat tervező/végrehajtó alapú útválasztást. Az első cél felel a tervezésért és a végső válaszokért; a második cél a kliens natív eszközhívásait bocsátja ki. Az OmniRoute a kérés protokollja alapján észleli az eszközeredményeket folytató kéréseket, megkérdezi a tervezőt, hogy szükség van-e újabb eszközkörre, majd dinamikusan vagy a végrehajtót, vagy a tervezőt teszi meg a kliens számára látható utolsó lépésnek.
+Egy legalább két modellt tartalmazó `pipeline` kombináció a `config.agenticOrchestration.enabled` beállítással használhat tervező/végrehajtó alapú útválasztást. Az első cél felel a tervezésért és a végső válaszokért; a második cél a kliens natív eszközhívásait bocsátja ki. Az 67router a kérés protokollja alapján észleli az eszközeredményeket folytató kéréseket, megkérdezi a tervezőt, hogy szükség van-e újabb eszközkörre, majd dinamikusan vagy a végrehajtót, vagy a tervezőt teszi meg a kliens számára látható utolsó lépésnek.
 
 A második cél utáni további modellek sorrendbe állított tartalék végrehajtóként szolgálnak. Sikertelen HTTP-válasz vagy átviteli kivétel esetén a rendszer a következő végrehajtóra lép, megtartva ugyanazt a tervezői döntést és ugyanazokat a natív eszközöket, de az adott végrehajtó saját lépéspromptját és feloldott kapcsolatát használva. Az első sikeres választ változtatás nélkül adja vissza, beleértve az SSE-streamelést is; a sikeres stream elindulása után bekövetkező hibák itt nem próbálhatók újra. Ha minden végrehajtó sikertelen, az utolsó hiba kerül visszaadásra. A kliens általi megszakítás leállítja a továbbítást.
 
@@ -839,11 +839,11 @@ Ez a tesztcsomag a CI-ben fut (`test:integration` feladat) a `--test-concurrency
 
 ### Feltételes élő próbatesztek (NEM részei a CI-nek — valós szolgáltatók)
 
-| Parancs                                | Mit csinál                                                                                                               |
-| :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Folyamaton belüli valós útválasztás `RUN_COMBO_LIVE=1` beállítással; pillanatképet készít egy élő OmniRoute-adatbázisról |
-| `npm run test:combo:live:vps`          | HTTP-hívások egy élő OmniRoute-kiszolgálóhoz (állítsd be a `COMBO_LIVE_BASE_URL` értékét)                                |
-| `npm run test:combo:live:vps:failover` | Ugyanez, szándékosan előidézett feladatátvételi forgatókönyvekkel                                                        |
+| Parancs                                | Mit csinál                                                                                                              |
+| :------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Folyamaton belüli valós útválasztás `RUN_COMBO_LIVE=1` beállítással; pillanatképet készít egy élő 67router-adatbázisról |
+| `npm run test:combo:live:vps`          | HTTP-hívások egy élő 67router-kiszolgálóhoz (állítsd be a `COMBO_LIVE_BASE_URL` értékét)                                |
+| `npm run test:combo:live:vps:failover` | Ugyanez, szándékosan előidézett feladatátvételi forgatókönyvekkel                                                       |
 
 Ezek a próbatesztek a valós adatátviteli útvonalat használják (kombináció → szolgáltató → befejezés). Szándékosan ki vannak zárva a CI-ből, mert valós hitelesítő adatokat és VPS-hozzáférést igényelnek.
 

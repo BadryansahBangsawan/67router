@@ -6,7 +6,7 @@
 
 🌐 **Kalbos:** 🇺🇸 [Anglų](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Pagrindinis „OmniRoute“ API žinynas. Jame aprašoma viešoji `/v1` sąsaja ir dažniausiai naudojami valdymo galiniai taškai; išsamūs šaltiniai yra kompiuterio skaitomas failas [`docs/openapi.yaml`](../openapi.yaml) ir maršrutų medis, esantis `src/app/api/`.
+Pagrindinis „67router“ API žinynas. Jame aprašoma viešoji `/v1` sąsaja ir dažniausiai naudojami valdymo galiniai taškai; išsamūs šaltiniai yra kompiuterio skaitomas failas [`docs/openapi.yaml`](../openapi.yaml) ir maršrutų medis, esantis `src/app/api/`.
 
 Išsamiau apie konkretų su „OpenAI“ suderinamą protokolą ir teikėjų galimybių matricą žr.
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Atsakas  | `HIT` arba `MISS` (kai srautinis perdavimas nenaudojamas)                                                                                                                                                                                     |
 | `X-OmniRoute-Idempotent` | Atsakas  | `true`, jei dublikatas pašalintas                                                                                                                                                                                                             |
 | `X-OmniRoute-Progress`   | Atsakas  | `enabled`, jei įjungtas eigos stebėjimas                                                                                                                                                                                                      |
-| `X-OmniRoute-Session-Id` | Atsakas  | Faktinis OmniRoute naudotas seanso ID                                                                                                                                                                                                         |
+| `X-OmniRoute-Session-Id` | Atsakas  | Faktinis 67router naudotas seanso ID                                                                                                                                                                                                          |
 | `X-OmniRoute-Request-Id` | Atsakas  | Užklausos koreliacijos ID (kai žinomas)                                                                                                                                                                                                       |
-| `X-OmniRoute-Version`    | Atsakas  | OmniRoute komponavimo versija (pateikiama visada)                                                                                                                                                                                             |
+| `X-OmniRoute-Version`    | Atsakas  | 67router komponavimo versija (pateikiama visada)                                                                                                                                                                                              |
 | `X-OmniRoute-Cost-Saved` | Atsakas  | JAV dolerių suma, sutaupyta dėl podėlio atitikties (tik podėlio atitiktims)                                                                                                                                                                   |
 | `X-OmniRoute-Decision`   | Atsakas  | Maršruto parinkimo pėdsakas: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` yra derinio strategija arba `single`, jei užklausa nėra derinio užklausa) — visada pateikiamas užbaigimo atsakuose                                 |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Paskyros fiksavimas kiekvienai užklausai
 
-Kai teikėjas turi kelis ryšius (paskyras arba raktus), OmniRoute paprastai pasirenka vieną
+Kai teikėjas turi kelis ryšius (paskyras arba raktus), 67router paprastai pasirenka vieną
 pagal savo paskyrų pasirinkimo strategiją. Vietoj to užklausa gali fiksuoti konkretų ryšį
 naudodama antraštę `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ kiekvienam projektui būtų fiksuojama skirtinga paskyra:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ kiekvienam projektui būtų fiksuojama skirtinga paskyra:
 ## Išskirtinės valdomų seansų nuomos
 
 Išskirtinė valdomo seanso nuoma yra pasirenkama, nuo kliento nepriklausoma maršruto parinkimo sutartis: vienas aktyvus savininkas
-valdo vieną tinkamą „OmniRoute“ jungtį. Ji nenuomoja modelio, nereikalauja OAuth, neidentifikuoja
+valdo vieną tinkamą „67router“ jungtį. Ji nenuomoja modelio, nereikalauja OAuth, neidentifikuoja
 konkretaus kliento ir nereikalauja konkretaus teikėjo.
 
 Autentifikavimui naudojamas API raktas turi turėti sritį `lease:exclusive` ir aiškiai nurodytą netuščią
@@ -190,7 +190,7 @@ Aktyvios nuomos savininkas gali aiškiai paprašyti privatumą išsaugančių sa
 
 Šis pasirenkamas būsenos veiksmas vienoje duomenų bazės operacijoje atribojamas neskaidriu savininko identifikatoriumi, autentifikuotu valdomu API raktu ir tikslia
 aktyvia karta. `displayName` yra tik sutrumpintas sukonfigūruotas
-jungties pavadinimas; kai nėra saugaus sukonfigūruoto pavadinimo, jo reikšmė yra `null`. „OmniRoute“ niekada nepakeičia jo
+jungties pavadinimas; kai nėra saugaus sukonfigūruoto pavadinimo, jo reikšmė yra `null`. „67router“ niekada nepakeičia jo
 el. pašto adresu ar sugeneruota paskyros tapatybe. Teikėjo reikšmė yra neskelbtinų duomenų neturinti rodymo etiketė, o ne
 sugeneruotas suderinamo teikėjo identifikatorius. Kredencialai, prieigos raktai, slapukai, neapdoroti jungties ar API
 rakto ID, savininko maišos, atribojimo paslaptys ir vidiniai maršruto parinkimo duomenys neįtraukiami.
@@ -231,7 +231,7 @@ Laikinos konkurencijos dėl išteklių atveju grąžinamas HTTP `429` su `Retry-
 
 Šis atsakymas reiškia tik tai, kad įprastas tinkamų jungčių rinkinys nebuvo tuščias, o kiekviena laisva kandidatė
 buvo užimta kitos aktyvios nuomos. Nepalaikomi modeliai ar teikėjai, strategijos neatitiktis, laukimo laikotarpis, kvota,
-sveikatos būsena ir kitos įprastos tinkamumo patikros klaidos išlaiko esamus „OmniRoute“ atsakymus.
+sveikatos būsena ir kitos įprastos tinkamumo patikros klaidos išlaiko esamus „67router“ atsakymus.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request dokumentus ir **persiunčia juos nepakeistus** į `https://a
 ```
 
 Savųjų `{ image | audio | video | pdf }` reikšmių formatas gali būti viešasis HTTPS URL, `data:` URI arba neapdorotas
-base64. OmniRoute neverčia šių objektų į eilutes ir neatsisiunčia savųjų vaizdų URL — Jina
+base64. 67router neverčia šių objektų į eilutes ir neatsisiunčia savųjų vaizdų URL — Jina
 pati gauna viešąją mediją. Papildomi Jina laukai (`task`, `normalized`, `truncate`, `embedding_type`) yra
 persiunčiami. Tik tekstui skirti Jina SKU vis tiek atmeta netekstinius dokumentus.
 
@@ -454,7 +454,7 @@ todėl kliento kode nereikia atskirai apdoroti kiekvieno teikėjo.
 
 ### Vertex AI DeepSeek OCR autentifikavimas ir galinio taško nustatymas
 
-`vertex-deepseek-ocr` pakartotinai naudoja tą patį Vertex AI autentifikavimą, kurį OmniRoute jau palaiko
+`vertex-deepseek-ocr` pakartotinai naudoja tą patį Vertex AI autentifikavimą, kurį 67router jau palaiko
 pokalbių ir vaizdų srautui (`open-sse/executors/vertex.ts`): ryšio API raktas yra arba
 Service Account JSON prisijungimo duomenys (per JWT nešėjo
 srautą pakeičiami į trumpalaikį OAuth prieigos prieigos raktą), arba jau išduotas OAuth prieigos raktas, naudojamas toks, koks yra. Pirminės API galinio taško URL yra bendrasis Vertex
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Modelių kainos (`pricing`)
 
-Įraše pateikiamas objektas `pricing`, kai „OmniRoute“ žino modelio kainą. Kaina gaunama
+Įraše pateikiamas objektas `pricing`, kai „67router“ žino modelio kainą. Kaina gaunama
 iš kainodaros lentelės, naudojamos sąnaudoms apskaityti: integruotųjų numatytųjų reikšmių, sinchronizuotų kainų ir
 per `/api/pricing` nustatytų perrašymų. Tai yra sąrašo kainos, todėl prenumeratos paslaugų teikėjai taip pat
 rodo vieno prieigos rakto kainą.
@@ -633,8 +633,8 @@ importuoti `open-sse/config/providerPluginManifestRegistry.ts`.
 
 ## ElevenLabs garso generavimas
 
-OmniRoute sukonfigūruokite `elevenlabs` teikėjo ryšį, naudodami savo ElevenLabs API raktą.
-Klientai autentifikuojami savo **OmniRoute** raktu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+67router sukonfigūruokite `elevenlabs` teikėjo ryšį, naudodami savo ElevenLabs API raktą.
+Klientai autentifikuojami savo **67router** raktu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 tinklo sąsaja pateikia išsaugotą teikėjo raktą kaip `xi-api-key`. Niekada nesiųskite ElevenLabs
 rakto kaip tinklo sąsajos atpažinimo ženklo.
 
@@ -699,7 +699,7 @@ maršrutai grąžina nepakeistus išorinės sistemos būsenos kodus ir klaidų t
 apribojimo atveju ir `429` kvotos limito atveju. `character-cost`, `song-id`, `request-id` ir `retry-after`
 antraštės išsaugomos, kai jos pateiktos. Nemokamų kreditų likutis negarantuoja prieigos prie kiekvieno
 muzikos modelio, išvesties formato ar API funkcijos: ElevenLabs nustato kiekvienos užklausos teises.
-Bendrasis galinis taškas išsaugo klaidų būsenos kodus normalizuotame OmniRoute klaidos apvalkale.
+Bendrasis galinis taškas išsaugo klaidų būsenos kodus normalizuotame 67router klaidos apvalkale.
 
 Išorinės sistemos sąsajos: [garso efektai](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [muzikos kompozicija](https://elevenlabs.io/docs/api-reference/music/compose) ir
@@ -740,7 +740,7 @@ Išorinės sistemos sąsajos: [garso efektai](https://elevenlabs.io/docs/api-ref
 
 Visi POST maršrutai yra tokios pačios struktūros: `Bearer your-api-key` + Zod patvirtintas JSON turinys (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` ir kt.; žr. `src/shared/validation/schemas.ts`). Jei schemos patikra nepavyksta, grąžinamas 4xx.
 
-Klientams, kurie negali pridėti `Authorization: Bearer ...`, OmniRoute taip pat leidžia API raktus pateikti URL naudojant užklausos eilutės suderinamumą (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) arba toliau aprašytus specialiuosius `/api/v1/vscode/{token}/...` galinius taškus.
+Klientams, kurie negali pridėti `Authorization: Bearer ...`, 67router taip pat leidžia API raktus pateikti URL naudojant užklausos eilutės suderinamumą (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) arba toliau aprašytus specialiuosius `/api/v1/vscode/{token}/...` galinius taškus.
 
 ```bash
 # Pakartotinis reitingavimas (debesijos registro teikėjas arba su OpenAI suderinamas teikėjo mazgas kaip "<prefix>/<model>")
@@ -902,7 +902,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, naudojamas tas pats API raktas kaip ir Parallel Search) grąžina tik
 Markdown — bet koks kitas `format` sukelia `400` atsaką — ir riboja turinį iki 100 000 simbolių. Kai
 nepavyksta išgauti paties tikslinio puslapio, aukštesnio lygmens paslauga apie tai praneša HTTP 200 atsake;
-OmniRoute pateikia tai kaip `422` su fiksuotu pranešimu.
+67router pateikia tai kaip `422` su fiksuotu pranešimu.
 
 | Metodas | Kelias          | Aprašas                                                              |
 | ------- | --------------- | -------------------------------------------------------------------- |
@@ -965,14 +965,14 @@ turi būti aktyvus pradžios taškas (pagal numatytuosius nustatymus taip ir yra
 OpenAI **Codex CLI** patikrina modelio pavadinimą kliento pusėje, kai
 `supports_websockets = true`, ir **atmeta teikėjo prefiksą turinčius ID**, pvz.,
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Siųskite **bazinį** ID (pvz., `gpt-5.5`). OmniRoute tiltas skirtas
+a ChatGPT account`). Siųskite **bazinį** ID (pvz., `gpt-5.5`). 67router tiltas skirtas
 tik codex, todėl prieš tuneliavimą į aukštesnio lygmens paslaugą jis iš naujo nustato bazinį ID kaip codex modelį
 (`resolveCodexWsModelInfo`) — nors bazinis
 `gpt-5.5` naudojant HTTP kitu atveju būtų nukreiptas kitam teikėjui.
 
 #### OpenAI Codex CLI konfigūravimas
 
-Nukreipkite Codex CLI į OmniRoute, į `~/.codex/config.toml` įtraukdami pasirinktinį teikėją su WebSocket
+Nukreipkite Codex CLI į 67router, į `~/.codex/config.toml` įtraukdami pasirinktinį teikėją su WebSocket
 palaikymu (naudokite atskirą `CODEX_HOME`, kad nepakeistumėte
 esamos konfigūracijos):
 
@@ -985,15 +985,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # be baigiamojo pasvirojo brūkšnio; WS URL išvedamas automatiškai (gamybinėje aplinkoje naudokite https/wss)
 wire_api = "responses"                    # vienintelė palaikoma reikšmė nuo 2026 m. vasario
 supports_websockets = true                # įjungia Responses-per-WS transportą
-env_key = "OMNIROUTE_API_KEY"             # saugomas OmniRoute API raktas (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # saugomas 67router API raktas (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API raktas (bet koks raktas, jei REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router API raktas (bet koks raktas, jei REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI naujovina `base_url + /responses` į WebSocket, o OmniRoute tuneliuoja jį
+CLI naujovina `base_url + /responses` į WebSocket, o 67router tuneliuoja jį
 į pasirinktą codex OAuth ryšį. Visas procesas patikrintas naudojant vietinį
 serverį: ChatGPT grąžina `codex.rate_limits` + `response.created` ir srautiniu būdu perduoda
 užbaigimą.
@@ -1076,7 +1076,7 @@ procentų, pateikiamų **grynojo teksto išvestyje**, ir struktūrizuotos **JSON
 
 #### Koregavimo pagal ribinę vertę formulė
 
-„OmniRoute“ palaiko išankstines kvotų ribines vertes, skirtas neleisti išeikvoti tiekėjo išteklių (konfigūruojama naudojant ryšio
+„67router“ palaiko išankstines kvotų ribines vertes, skirtas neleisti išeikvoti tiekėjo išteklių (konfigūruojama naudojant ryšio
 `quotaWindowThresholds`, tiekėjo numatytąsias nuostatas arba visuotines atsparumo nuostatas). Kai kvotos lange aktyvi ribinė vertė
 (pvz., `cutoff = 25%`), teksto atvaizdavimo priemonė likusią dalį apskaičiuoja taip:
 
@@ -1620,7 +1620,7 @@ Pastabos:
 
 - Tokenizuoti pseudonimai pakartotinai naudoja tas pačias apdorojimo funkcijas kaip `/v1/*` ir `/api/tags`; atsakymų struktūros išlieka identiškos.
 - Kai klientas palaiko pasirinktines antraštes, pirmenybę teikite `Authorization: Bearer ...`.
-- URL esantys prieigos raktai gali būti rodomi atvirkštinio tarpinio serverio žurnaluose, naršyklės istorijoje ir telemetrijoje už OmniRoute ribų. Laikykite juos suderinamumo parinktimi, o ne numatytuoju tapatybės nustatymo būdu.
+- URL esantys prieigos raktai gali būti rodomi atvirkštinio tarpinio serverio žurnaluose, naršyklės istorijoje ir telemetrijoje už 67router ribų. Laikykite juos suderinamumo parinktimi, o ne numatytuoju tapatybės nustatymo būdu.
 
 ---
 
@@ -1728,7 +1728,7 @@ Aukštesnio lygio maršruto parinkimo deriniai (jau apibendrinti skiltyje `/api/
 
 ## Žiniatinklio kabliukai
 
-Išeinančiųjų žiniatinklio kabliukų prenumeratos, skirtos „OmniRoute“ įvykiams (užklausos užbaigimui, kvotos išnaudojimui, rakto rotacijai ir kt.).
+Išeinančiųjų žiniatinklio kabliukų prenumeratos, skirtos „67router“ įvykiams (užklausos užbaigimui, kvotos išnaudojimui, rakto rotacijai ir kt.).
 
 | Metodas | Kelias                    | Aprašymas                                                                                 |
 | ------- | ------------------------- | ----------------------------------------------------------------------------------------- |
@@ -1761,7 +1761,7 @@ Naudojama automatinio raktų valdymo posistemio API raktams išduoti ir keisti n
 
 ## Agentų protokolas
 
-Debesijos agentų užduotys („Claude Code“, „Codex Cloud“, „OpenHands“ ir kt.), nuotoliniu būdu vykdomos „OmniRoute“ naudotojų vardu.
+Debesijos agentų užduotys („Claude Code“, „Codex Cloud“, „OpenHands“ ir kt.), nuotoliniu būdu vykdomos „67router“ naudotojų vardu.
 
 | Metodas | Kelias                        | Aprašymas                                                                                                                                            |
 | ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1807,7 +1807,7 @@ Išeinamojo HTTP(S)/SOCKS srauto tarpiniai serveriai, kuriuos galima priskirti t
 
 ## Atsparumas (išplėstinis)
 
-OmniRoute turi tris nepriklausomus laikinųjų gedimų valdymo mechanizmus; toliau pateikti valdymo galiniai taškai leidžia operatoriams peržiūrėti ir perrašyti jų būseną:
+67router turi tris nepriklausomus laikinųjų gedimų valdymo mechanizmus; toliau pateikti valdymo galiniai taškai leidžia operatoriams peržiūrėti ir perrašyti jų būseną:
 
 | Taikymo sritis                  | Būsenos saugykla                                 | Peržiūra                                  | Nustatymas iš naujo / išvalymas                                    |
 | ------------------------------- | ------------------------------------------------ | ----------------------------------------- | ------------------------------------------------------------------ |
@@ -1842,7 +1842,7 @@ Išsamų koncepcinį aprašą ir numatytąsias grandinės pertraukiklio reikšme
 
 ## Įgūdžiai
 
-Įgūdžių sistema, skirta išplėsti OmniRoute pasirinktinėmis vykdomosiomis apdorojimo funkcijomis ir prekyvietės integracijomis.
+Įgūdžių sistema, skirta išplėsti 67router pasirinktinėmis vykdomosiomis apdorojimo funkcijomis ir prekyvietės integracijomis.
 
 | Metodas | Kelias                            | Aprašymas                                                                                                                                            |
 | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1879,7 +1879,7 @@ Nuolatinė pokalbių / faktinės atminties saugykla, susieta su konkrečiu API r
 
 ## MCP serveris
 
-OmniRoute pateikiamas su integruotu Model Context Protocol serveriu, turinčiu 3 transportus (stdio, SSE, streamable-http) ir aprėptimis apribotus įrankius. Toliau nurodyti valdymo skydelio galiniai taškai nuskaito būsenos / audito duomenis ir tarpiniu būdu perduoda HTTP transportų užklausas.
+67router pateikiamas su integruotu Model Context Protocol serveriu, turinčiu 3 transportus (stdio, SSE, streamable-http) ir aprėptimis apribotus įrankius. Toliau nurodyti valdymo skydelio galiniai taškai nuskaito būsenos / audito duomenis ir tarpiniu būdu perduoda HTTP transportų užklausas.
 
 | Metodas | Kelias | Aprašymas |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1901,7 +1901,7 @@ OmniRoute pateikiamas su integruotu Model Context Protocol serveriu, turinčiu 3
 
 ## A2A serveris
 
-„OmniRoute“ teikia A2A („Agent-to-Agent“) JSON-RPC 2.0 galinį tašką ir REST apvalkalą, skirtą tikrinimui bei ataskaitų skydeliui.
+„67router“ teikia A2A („Agent-to-Agent“) JSON-RPC 2.0 galinį tašką ir REST apvalkalą, skirtą tikrinimui bei ataskaitų skydeliui.
 
 ### JSON-RPC
 
@@ -2130,7 +2130,7 @@ Tik administratoriams skirti operacinio valdymo galiniai taškai.
 
 ## CLI įrankių valdymas
 
-Valdykite su OmniRoute integruojamus CLI įrankius (antigravity, commandCode,
+Valdykite su 67router integruojamus CLI įrankius (antigravity, commandCode,
 devin-cli ir kt.). Visą sąrašą rasite [Teikėjų žinyne](./PROVIDER_REFERENCE.md).
 
 | Metodas | Kelias                                  | Aprašymas                                                                                                                                                                                      |
@@ -2241,7 +2241,7 @@ Išsamią informaciją žr. [Įgūdžių sistema](../frameworks/SKILLS.md).
 
 ## Papildiniai
 
-Valdykite „OmniRoute“ papildinius (trečiųjų šalių plėtinius).
+Valdykite „67router“ papildinius (trečiųjų šalių plėtinius).
 
 | Metodas | Kelias                             | Aprašymas                           |
 | ------- | ---------------------------------- | ----------------------------------- |

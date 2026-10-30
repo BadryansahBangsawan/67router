@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima **četiri obitelji vjerodajnica** koje mogu autorizirati rute upravljanja.
+67router ima **četiri obitelji vjerodajnica** koje mogu autorizirati rute upravljanja.
 Nisu međusobno zamjenjive. API ključevi za inferenciju (`sk-…`) **ne** upravljaju
 poslužiteljem osim ako im nije eksplicitno dodijeljen `manage` ili `admin` opseg.
 

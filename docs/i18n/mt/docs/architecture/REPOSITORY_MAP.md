@@ -5,7 +5,7 @@
 ---
 
 > **Deskrizzjoni f’linja waħda għal kull direttorju u fajl fl-għerq.**
-> Aġġornat l-aħħar: 2026-06-28 — OmniRoute v3.8.40
+> Aġġornat l-aħħar: 2026-06-28 — 67router v3.8.40
 >
 > Uża din il-mappa biex tinnaviga malajr fil-bażi tal-kodiċi. Għal analiżi aktar fil-fond, segwi l-links għad-dokumentazzjoni ddedikata.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Fluss sħiħ tar-rilaxx (ħiliet, husky, commits konvenzjonali, skjerament)                                     |
 | `COVERAGE_PLAN.md`          | Għanijiet tal-kopertura u l-istat attwali                                                                    |
 | `FREE_TIERS.md`             | Fornituri magħżula b’livell bla ħlas (48+ bla ħlas + 11 OAuth)                                               |
-| `CLI-TOOLS.md`              | Integrazzjonijiet esterni tas-CLI + CLI intern ta’ OmniRoute                                                 |
+| `CLI-TOOLS.md`              | Integrazzjonijiet esterni tas-CLI + CLI intern ta’ 67router                                                  |
 | `I18N.md`                   | Arkitettura tal-i18n, żieda ta’ lingwa, 67 lokalizzazzjoni                                                   |
 | `UNINSTALL.md`              | Passi għal diżinstallazzjoni nadifa                                                                          |
 | `PROVIDER_REFERENCE.md`     | Katalgu ta’ 375 fornitur **iġġenerat awtomatikament** (iġġenera mill-ġdid: `npm run gen:provider-reference`) |

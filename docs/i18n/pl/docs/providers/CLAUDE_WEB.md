@@ -179,7 +179,7 @@ więc te pominięte przypadki nie stanowią dowodu runtime.
 
 ### Konfiguracja
 
-1. Uruchom OmniRoute przez `npm run dev` lub zbudowaną instalację.
+1. Uruchom 67router przez `npm run dev` lub zbudowaną instalację.
 2. Otwórz Dashboard → Providers → Add Provider.
 3. Wybierz kategorię Web Cookie oraz Claude Web.
 4. Wklej pełny nagłówek Cookie skopiowany z uwierzytelnionego żądania `claude.ai`.

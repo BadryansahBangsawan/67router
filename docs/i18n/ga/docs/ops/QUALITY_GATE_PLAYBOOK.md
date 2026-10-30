@@ -4,7 +4,7 @@
 
 ---
 
-> **Cad é an doiciméad seo.** Measúnú criticiúil ar chóras geataí cáilíochta OmniRoute,
+> **Cad é an doiciméad seo.** Measúnú criticiúil ar chóras geataí cáilíochta 67router,
 > i gcomparáid le dea-chleachtais an tionscail, **mar aon le** catalóg chuimsitheach de na
 > seicphointí cáilíochta uile agus **plean macasamhlaithe atá neamhspleách ar uirlisí** chun an córas céanna a chur i bhfeidhm ar
 > aon tionscadal. Gineadh é ar 2026-06-16 ó fhíorstaid na stórtha (ní ón gcuimhne).
@@ -101,62 +101,62 @@ chun é a mhacasamhlú ar aon chruach.
 
 ### 1. Stíl & formáidiú (cinntitheach, tapa)
 
-- **OmniRoute:** Prettier + ESLint trí lint-staged (roimh commit), 2 spás/comharthaí athfhriotail dúbailte/100 colún.
+- **67router:** Prettier + ESLint trí lint-staged (roimh commit), 2 spás/comharthaí athfhriotail dúbailte/100 colún.
 - **Ginearálta:** formáiditheoir amháin is féidir a uathcheartú + línteoir amháin, á rith roimh commit ar chomhaid chéimnithe.
 
 ### 2. Cineálacha
 
-- **OmniRoute:** `typecheck:core` (blocála) + `typecheck:noimplicit:core` (comhairleach) + raicín `type-coverage` 92.17% + buiséad any in aghaidh an chomhaid.
+- **67router:** `typecheck:core` (blocála) + `typecheck:noimplicit:core` (comhairleach) + raicín `type-coverage` 92.17% + buiséad any in aghaidh an chomhaid.
 - **Ginearálta:** seiceáil dhian cineálacha in CI + méadracht raicínithe cumhdaigh cineálacha + buiséad `any`/éalaithe in aghaidh an chomhaid.
 
 ### 3. Tástálacha (déine)
 
-- **OmniRoute:** 2 reathaí nach bhfuil forluí eatarthu (Node dúchasach + vitest), 8 mblúire, cumhdach domhanda 60/60/60/60 + raicín ~76% + **8 n-íosleibhéal in aghaidh an mhodúil do mhodúil chriticiúla** + tástálacha airíonna gach oíche + **tástáil sócháin** gach oíche.
+- **67router:** 2 reathaí nach bhfuil forluí eatarthu (Node dúchasach + vitest), 8 mblúire, cumhdach domhanda 60/60/60/60 + raicín ~76% + **8 n-íosleibhéal in aghaidh an mhodúil do mhodúil chriticiúla** + tástálacha airíonna gach oíche + **tástáil sócháin** gach oíche.
 - **Ginearálta:** reathaí/reathaithe tástála + íosleibhéal cumhdaigh **absalóideach** (in aghaidh nialais) + **raicín** cumhdaigh (in aghaidh aischéimnithe) + **íosleibhéil in aghaidh an mhodúil do chód ardriosca** (in aghaidh Goodhart) + tástáil airíonna-bhunaithe le haghaidh loighic íon + **tástáil sócháin** gach oíche mar fhíorthomhas ar cháilíocht na dtástálacha.
 
 ### 4. Beartas tástála (in aghaidh cúblála)
 
-- **OmniRoute:** `pr-test-policy` (teastaíonn tástáil ó chód táirgthe), `check-test-masking` (cuireann sé bac ar dhearbhuithe lagaithe), `pr-evidence` (teastaíonn bloc fianaise le haghaidh maíomh ratha), `test-discovery` (bailíonn reathaí gach tástáil).
+- **67router:** `pr-test-policy` (teastaíonn tástáil ó chód táirgthe), `check-test-masking` (cuireann sé bac ar dhearbhuithe lagaithe), `pr-evidence` (teastaíonn bloc fianaise le haghaidh maíomh ratha), `test-discovery` (bailíonn reathaí gach tástáil).
 - **Ginearálta:** geata "cód nua ⇒ tástáil nua" + brathadóir dearbhuithe bainte/táiteolaíochta + riachtanas fianaise (TDD nó tástáil bheo) + ráthaíocht nach bhfuil aon tástáil dílleachta lasmuigh de na globs.
 
 ### 5. Castacht & sláinte an chóid (raicíní)
 
-- **OmniRoute:** rabhaidh ESLint (3769↓), dúbláil jscpd (5.72%↓), castacht chioglamatach+uaslíon línte (1800↓), castacht chognaíoch sonarjs (753↓), cód marbh/easpórtálacha neamhúsáidte knip (339↓), méid comhaid in aghaidh an chomhaid (reoite, laghdú amháin), spleáchais chiorclacha (Tarjan saincheaptha, blocála).
+- **67router:** rabhaidh ESLint (3769↓), dúbláil jscpd (5.72%↓), castacht chioglamatach+uaslíon línte (1800↓), castacht chognaíoch sonarjs (753↓), cód marbh/easpórtálacha neamhúsáidte knip (339↓), méid comhaid in aghaidh an chomhaid (reoite, laghdú amháin), spleáchais chiorclacha (Tarjan saincheaptha, blocála).
 - **Ginearálta:** cuir raicín i bhfeidhm ar gach méadracht sláinte (rabhaidh, dúbláil, castacht chioglamatach **agus** chognaíoch, cód marbh, méid comhaid, timthriallta iompórtála). Is é an treo i gcónaí "ná téigh in olcas".
 
 ### 6. Slándáil statach (SAST + rúin)
 
-- **OmniRoute:** CodeQL (raicín foláireamh = 0), gitleaks (`[extend] useDefault=true` — ríthábhachtach!), SonarQube, rialacha slándála saincheaptha (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (raicín foláireamh = 0), gitleaks (`[extend] useDefault=true` — ríthábhachtach!), SonarQube, rialacha slándála saincheaptha (public-creds, error-helper, route-guard-membership, route-validation).
 - **Ginearálta:** SAST (CodeQL/Sonar/semgrep) le raicín foláireamh + scanóir rún le **tacar rialacha réamhshocraithe oidhreachta** (cumraíocht shaincheaptha a sháraíonn an réamhshocrú = dall) + geataí slándála Rialacha Dochta a bhaineann go sonrach leis an tionscadal.
 
 ### 7. Slabhra soláthair (spleáchais)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (liosta ceadaithe SPDX), lockfile-lint (HTTPS+sha512+clárlann), `check-deps` in aghaidh slopsquatting (liosta ceadaithe + aois ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (liosta ceadaithe SPDX), lockfile-lint (HTTPS+sha512+clárlann), `check-deps` in aghaidh slopsquatting (liosta ceadaithe + aois ≥72h).
 - **Ginearálta:** SCA ó fhoinsí iomadúla + liosta ceadúnas ceadaithe + seiceáil sláine lockfile + liosta spleáchas ceadaithe le seiceáil aoise/typosquatting + bota nuashonruithe grúpáilte.
 
 ### 8. Slabhra soláthair (tógáil & eisiúint)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), bunáitíocht SLSA (`--provenance`), OpenSSF Scorecard (go seachtainiúil), sreafaí oibre a chruachan (zizmor: artipacked→`persist-credentials:false`, nimhiú taisce, ceadanna comharthaí).
+- **67router:** SBOM (CycloneDX + syft), bunáitíocht SLSA (`--provenance`), OpenSSF Scorecard (go seachtainiúil), sreafaí oibre a chruachan (zizmor: artipacked→`persist-credentials:false`, nimhiú taisce, ceadanna comharthaí).
 - **Ginearálta:** gin SBOM tráth foilsithe + bunáitíocht shínithe (SLSA L2+) + Scorecard sceidealaithe + cruaigh gach sreabhadh oibre (comharthaí le híosphribhléid, gan aon dintiúir mharthanacha ar checkout nach ndéanann push, actions pionnáilte de réir SHA).
 
 ### 9. Conarthaí & API
 
-- **OmniRoute:** oasdiff (athrú bristeach OpenAPI), schemathesis (doiléiriú conartha gach oíche), openapi-coverage (% de bhealaí doiciméadaithe, raicín 38.3%), openapi-security-tiers (sonraíocht vs route-guard).
+- **67router:** oasdiff (athrú bristeach OpenAPI), schemathesis (doiléiriú conartha gach oíche), openapi-coverage (% de bhealaí doiciméadaithe, raicín 38.3%), openapi-security-tiers (sonraíocht vs route-guard).
 - **Ginearálta:** diff conartha le haghaidh athruithe bristeacha (oasdiff/buf) + doiléiriú airíonna-bhunaithe i gcoinne na sonraíochta (schemathesis) + cumhdach doiciméadúcháin raicínithe + comhsheasmhacht idir an tsonraíocht↔an cód.
 
 ### 10. Doiciméid & i18n (in aghaidh meatha)
 
-- **OmniRoute:** docs-sync (leaganacha scáthánaithe), docs-counts-sync (uimhreacha sna doiciméid vs sa chód), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + raicín 80.1%).
+- **67router:** docs-sync (leaganacha scáthánaithe), docs-counts-sync (uimhreacha sna doiciméid vs sa chód), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + raicín 80.1%).
 - **Ginearálta:** sioncronaigh leaganacha/comhairimh/athróga timpeallachta idir na doiciméid agus an cód (geata, ní muinín) + bailíochtaigh naisc inmheánacha + cumhdach i18n raicínithe.
 
 ### 11. In aghaidh siabhránachta / comhsheasmhacht (an chatagóir neamhchoitianta)
 
-- **OmniRoute:** known-symbols (seoladh de réir teaghráin ⇒ siombail bheo), provider-consistency, fetch-targets (fetch ón gcliant ⇒ bealach fíor), docs-symbols, db-rules (Rialacha Dochta #2/#5), uimhriú ascnaimh.
+- **67router:** known-symbols (seoladh de réir teaghráin ⇒ siombail bheo), provider-consistency, fetch-targets (fetch ón gcliant ⇒ bealach fíor), docs-symbols, db-rules (Rialacha Dochta #2/#5), uimhriú ascnaimh.
 - **Ginearálta:** i gcás gach "foinse fírinne dhúbláilte" (clárlann, seoladh de réir teaghráin, tagairtí trastuisce), geata a chruthaíonn go bhfuil an dá thaobh ag teacht le chéile. Aimsíonn sé an meath nach n-aimsíonn seiceáil cineálacha ná tástálacha.
 
 ### 12. Athléimneacht & fearann (sonrach don táirge)
 
-- **OmniRoute:** anord (instealladh lochtanna), fás carn (sceitheadh), k6 (tástáil seasmhachta), promptfoo+garak (foireann dhearg LLM, OWASP LLM Top 10), na 3 dhlí athléimneachta (scoradán ciorcaid/tréimhse shuaimhnithe/frithdhúnadh).
+- **67router:** anord (instealladh lochtanna), fás carn (sceitheadh), k6 (tástáil seasmhachta), promptfoo+garak (foireann dhearg LLM, OWASP LLM Top 10), na 3 dhlí athléimneachta (scoradán ciorcaid/tréimhse shuaimhnithe/frithdhúnadh).
 - **Ginearálta:** sainaithin modhanna teipe **d’fhearainn féin** agus bíodh geata agat do gach ceann acu (fiú más gach oíche é). Le haghaidh aipeanna AI: foireann dhearg in aghaidh insteallta. Le haghaidh córais dáilte: anord + sceitheadh + tástáil seasmhachta.
 
 ---

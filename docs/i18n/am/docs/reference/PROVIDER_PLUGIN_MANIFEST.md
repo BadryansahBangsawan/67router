@@ -9,7 +9,7 @@
 ተመሳሳዩ manifest ከprocess ውጭ ለሚሰሩ sidecar-ዎች በHTTP
 `GET /api/v1/provider-plugin-manifest` ላይም ይገኛል።
 
-OmniRoute ያንን URL በ`X-OmniRoute-Provider-Manifest-Url` የጥያቄ header በኩል ለBifrost እና CLIProxyAPI ያሳውቃል። sidecar-ው ከአካባቢያዊው የጥያቄ origin ይልቅ public ወይም container network URL ሲያስፈልገው `OMNIROUTE_PROVIDER_MANIFEST_URL`ን ያዘጋጁ።
+67router ያንን URL በ`X-OmniRoute-Provider-Manifest-Url` የጥያቄ header በኩል ለBifrost እና CLIProxyAPI ያሳውቃል። sidecar-ው ከአካባቢያዊው የጥያቄ origin ይልቅ public ወይም container network URL ሲያስፈልገው `OMNIROUTE_PROVIDER_MANIFEST_URL`ን ያዘጋጁ።
 
 ## Manifest-ን ማደስ
 
@@ -18,7 +18,7 @@ OmniRoute ያንን URL በ`X-OmniRoute-Provider-Manifest-Url` የጥያቄ head
 
 ## ግብ
 
-የአቅራቢ metadata-ን ወደ plugin ውል ማሸጋገር፣ ይህም ወደፊት hot request path-ው ዝቅተኛ latency ባለው sidecar እንዲያዝ ሲያስችል OmniRoute የTypeScript route-ን እንደ policy gate እና fallback እንዲያቆይ ነው። manifest-ው ተጨማሪ ነው፤ በራሱ የጥያቄ routing-ን አይለውጥም።
+የአቅራቢ metadata-ን ወደ plugin ውል ማሸጋገር፣ ይህም ወደፊት hot request path-ው ዝቅተኛ latency ባለው sidecar እንዲያዝ ሲያስችል 67router የTypeScript route-ን እንደ policy gate እና fallback እንዲያቆይ ነው። manifest-ው ተጨማሪ ነው፤ በራሱ የጥያቄ routing-ን አይለውጥም።
 
 ## ውል
 
@@ -57,7 +57,7 @@ manifest-ው ሆን ብሎ የሚከተሉትን አያካትትም፦
 | `usage-fetch`        | የተገናኘ usage ወይም quota fetcher (`getUsageForProvider`) አለው።          |
 | `usage-supported`    | usage API-ው ይህን አቅራቢ ይቀበላል (`isSupportedUsageConnection`)።          |
 
-`usage-fetch` ለማግኘት ብቻ ነው። OmniRoute ለአቅራቢው usage-ን እንዴት ማንበብ እንደሚችል እንደሚያውቅ ይገልጻል፤ fetching-ን አያነቃም፣ የquota semantics-ን አይለውጥም፣ ወይም የDashboard quota widget ለአቅራቢው እንደነቃ አያመለክትም — ያ widget በተናጠል በ`USAGE_SUPPORTED_PROVIDERS` ይገደባል። የእውነት ምንጩ በ`open-sse/services/usage/fetcherProviders.ts` ውስጥ ያለው `USAGE_FETCHER_PROVIDERS` ነው።
+`usage-fetch` ለማግኘት ብቻ ነው። 67router ለአቅራቢው usage-ን እንዴት ማንበብ እንደሚችል እንደሚያውቅ ይገልጻል፤ fetching-ን አያነቃም፣ የquota semantics-ን አይለውጥም፣ ወይም የDashboard quota widget ለአቅራቢው እንደነቃ አያመለክትም — ያ widget በተናጠል በ`USAGE_SUPPORTED_PROVIDERS` ይገደባል። የእውነት ምንጩ በ`open-sse/services/usage/fetcherProviders.ts` ውስጥ ያለው `USAGE_FETCHER_PROVIDERS` ነው።
 
 ያ ዝርዝር usage dispatcher-ው በሚቀበላቸው string-ዎች የተመደበ ስለሆነ canonical idsን ከaliases ጋር ያቀላቅላል፣ እና ከtag ከተደረጉ አቅራቢዎች ቁጥር በጥቂቱ ይረዝማል፦ በmanifest registry ውስጥ chat provider ያልሆኑ entries (ለምሳሌ `firecrawl` search provider እና `amazon-q` ACP provider) tag የሚደረግበት manifest entry የላቸውም።
 

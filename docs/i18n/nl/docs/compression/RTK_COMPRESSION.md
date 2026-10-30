@@ -4,7 +4,7 @@
 
 ---
 
-RTK-compressie is OmniRoute's opdrachtbewuste compressie-engine voor terminal- en tooluitvoer. Deze is ontworpen voor sessies met programmeeragents, waarin de meeste contextgroei afkomstig is van testlogboeken, build-uitvoer, ruis van pakketbeheerders, shelltranscripten, Docker-uitvoer, git-uitvoer en stacktraces.
+RTK-compressie is 67router's opdrachtbewuste compressie-engine voor terminal- en tooluitvoer. Deze is ontworpen voor sessies met programmeeragents, waarin de meeste contextgroei afkomstig is van testlogboeken, build-uitvoer, ruis van pakketbeheerders, shelltranscripten, Docker-uitvoer, git-uitvoer en stacktraces.
 
 RTK kan rechtstreeks worden uitgevoerd met `defaultMode: "rtk"` of als eerste stap in een gestapelde pipeline, doorgaans:
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 Deze volgorde comprimeert eerst ruisrijke machine-uitvoer en laat Caveman vervolgens de resterende tekst comprimeren.
 
-Upstream RTK rapporteert een besparing van `60-90%` op opdrachtuitvoer. De voorbeeldsessie in de README gaat van `~118,000` standaardtokens naar `~23,900` RTK-tokens, wat een besparing van `79.7%` (`~80%`) oplevert. OmniRoute gebruikt dat upstreamgemiddelde voor de berekening van de gestapelde besparing met Caveman-invoercompressie:
+Upstream RTK rapporteert een besparing van `60-90%` op opdrachtuitvoer. De voorbeeldsessie in de README gaat van `~118,000` standaardtokens naar `~23,900` RTK-tokens, wat een besparing van `79.7%` (`~80%`) oplevert. 67router gebruikt dat upstreamgemiddelde voor de berekening van de gestapelde besparing met Caveman-invoercompressie:
 
 ```txt
 RTK-gemiddelde: 80% bespaard
@@ -48,7 +48,7 @@ RTK laadt filters in deze volgorde:
 2. Globale filters uit `DATA_DIR/rtk/filters.toml` en `DATA_DIR/rtk/filters.json`.
 3. Ingebouwde filters uit `open-sse/services/compression/engines/rtk/filters/`.
 
-Binnen hetzelfde bereik hebben RTK TOML-schema-v1-filters voorrang op OmniRoute JSON-filters. TOML-`match_command`-expressies worden vóór overeenkomsten op opdrachttype gecontroleerd, zodat een geïmporteerd opdrachtspecifiek filter een breder filter binnen dat bereik kan overschrijven. Het projectbereik heeft nog steeds voorrang op het globale bereik, ongeacht de bestandsindeling.
+Binnen hetzelfde bereik hebben RTK TOML-schema-v1-filters voorrang op 67router JSON-filters. TOML-`match_command`-expressies worden vóór overeenkomsten op opdrachttype gecontroleerd, zodat een geïmporteerd opdrachtspecifiek filter een breder filter binnen dat bereik kan overschrijven. Het projectbereik heeft nog steeds voorrang op het globale bereik, ongeacht de bestandsindeling.
 
 Projectfilters zijn bewust onderworpen aan een vertrouwenscontrole, omdat regex-filters kunnen wijzigen hoe tooluitvoer aan agents wordt getoond. Een projectfilterbestand wordt geaccepteerd wanneer aan een van deze voorwaarden wordt voldaan:
 
@@ -71,7 +71,7 @@ Aangepaste filters kunnen bestaan uit één filterobject of een array met filter
 
 ## Compatibiliteit met RTK TOML-schema v1
 
-OmniRoute kan declaratieve filterbestanden die gebruikmaken van RTK TOML-schema v1 parseren, valideren, testen en installeren.
+67router kan declaratieve filterbestanden die gebruikmaken van RTK TOML-schema v1 parseren, valideren, testen en installeren.
 De ondersteunde velden zijn `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` en `[[tests.<filter>]]`-inlinetests.
@@ -80,7 +80,7 @@ Onbekende velden, ongeldige of onveilige reguliere expressies, gelijktijdige reg
 gevalideerd, maar kan niet worden geïnstalleerd of geladen. Fouten bij het laden van aangepaste bestanden blijven
 fail-open: het ongeldige bestand wordt overgeslagen en de overige filters blijven werken.
 
-OmniRoute ontvangt tooluitvoer nadat de client deze al heeft vastgelegd. Daarom kan `filter_stderr = true`
+67router ontvangt tooluitvoer nadat de client deze al heeft vastgelegd. Daarom kan `filter_stderr = true`
 de procesvastlegging niet wijzigen. Het veld wordt geaccepteerd als een no-op en de validatie retourneert een waarschuwing.
 Dit wordt bewust omschreven als **compatibiliteit met RTK TOML-schema v1**, niet als volledige compatibiliteit
 met het uitvoerbare RTK-bestand, shell-hooks, Rust-opdrachtimplementaties of de indeling van de trust-store.

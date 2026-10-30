@@ -9,7 +9,7 @@ lastUpdated: 2026-06-28
 > **Source of truth:** `src/lib/memory/` and `src/app/api/memory/`
 > **Last updated:** 2026-06-28 — v3.8.40 (off-by-default + int8 quantization catch-up)
 
-OmniRoute provides persistent conversational memory keyed by API key (and
+67router provides persistent conversational memory keyed by API key (and
 optionally session id). Memories are extracted automatically from LLM responses
 via lightweight regex pattern matching and injected back into subsequent
 requests as a leading system message (or first user message for providers that
@@ -631,7 +631,7 @@ default TTL 5 min).
 
 ## Choosing an Embedding Provider (v3.8.16+)
 
-OmniRoute's memory engine supports **four embedding sources** (`src/lib/memory/embedding/`). Each has different trade-offs in **latency, cost, model quality, and setup complexity**.
+67router's memory engine supports **four embedding sources** (`src/lib/memory/embedding/`). Each has different trade-offs in **latency, cost, model quality, and setup complexity**.
 
 ### The Embedding Sources
 
@@ -1054,10 +1054,10 @@ schema (`ClaudeMemBackendConfigSchema`, `.strict()`) accepts only:
 | Key         | Type   | Default | Notes                                                                                                  |
 | ----------- | ------ | ------- | ------------------------------------------------------------------------------------------------------ |
 | `port`      | number | —       | Required, 1024–65535. the claude-mem worker port from its settings file (default `37700 + uid % 100`). |
-| `project`   | string | —       | claude-mem project to use. Unset → each OmniRoute API key maps to its own project (the `apiKeyId`).    |
+| `project`   | string | —       | claude-mem project to use. Unset → each 67router API key maps to its own project (the `apiKeyId`).     |
 | `timeoutMs` | number | `5000`  | Per-request timeout, 100–30000.                                                                        |
 
-Enable it through `PUT /api/settings/memory` and restart OmniRoute (backends are registered
+Enable it through `PUT /api/settings/memory` and restart 67router (backends are registered
 once, in `initMemoryBackends()`):
 
 ```json
@@ -1074,7 +1074,7 @@ Mapping and limits:
 
 - IDs are `claude-mem:<observationId>`; `get`/`delete` ignore other backends' IDs without a
   network call.
-- `create` → `POST /api/memory/save`; the OmniRoute fields (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; the 67router fields (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) ride in claude-mem's `metadata.omniroute` and round-trip on read.
 - `search` → `GET /api/search?format=json&type=observations`, trimmed to `maxTokens`
   (chars / 4). `list` → the worker's paginated observations endpoint (`total` is a lower bound — the worker
@@ -1086,16 +1086,16 @@ Mapping and limits:
 - Prompt injection (`retrieval.ts`) and the `omniroute_memory_*` MCP tools still read SQLite
   directly — they do not go through `memoryManager`, so this backend does not feed them.
 
-**Routing claude-mem's own LLM calls through OmniRoute.** claude-mem compresses observations
+**Routing claude-mem's own LLM calls through 67router.** claude-mem compresses observations
 with an LLM (default: the Claude Agent SDK). Its `openai-compatible` provider can point at
-OmniRoute instead, picking up combo fallback and cost tracking. In `~/.claude-mem/settings.json`:
+67router instead, picking up combo fallback and cost tracking. In `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API key>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute model or combo>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API key>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router model or combo>"
 }
 ```
 

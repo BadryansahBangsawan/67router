@@ -4,9 +4,9 @@
 
 ---
 
-Poznámky pre operátorov k `POST /v1/embeddings`, keď OmniRoute stojí pred
+Poznámky pre operátorov k `POST /v1/embeddings`, keď 67router stojí pred
 Hindsight 0.9.1 (iba textové `encode(list[str])`) a Memorix 1.6.0 (brána médií
-Jina). Overené v produkcii 2026-08-17 voči OmniRoute 3.8.49 na adrese
+Jina). Overené v produkcii 2026-08-17 voči 67router 3.8.49 na adrese
 `https://omniroute.jaguar-fish.ts.net/v1`. Nižšie nie sú žiadne tajné údaje.
 
 ## Funkčné ID modelov
@@ -80,7 +80,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 Natívny `gemini-embedding-2` nemôže fungovať iba prostredníctvom GitOps. Kľúč
 Google AI Studio musí byť pridaný ako pripojenie poskytovateľa `gemini`
-(cez riadiaci panel alebo importovaním `GEMINI_API_KEY` do OmniRoute). Tento
+(cez riadiaci panel alebo importovaním `GEMINI_API_KEY` do 67router). Tento
 tajný údaj sa v tomto repozitári nenachádza.
 
 ### Multimodálna cesta Jina
@@ -102,7 +102,7 @@ Používajte `POST /v1/embeddings`, kým nebude existovať alias.
 
 ### Obrázkový objekt Jina / Memorix
 
-Kanonická obrázková položka OmniRoute (PNG 28×28, 784 pixelov — Jina odmieta 1×1):
+Kanonická obrázková položka 67router (PNG 28×28, 784 pixelov — Jina odmieta 1×1):
 
 ```json
 {
@@ -152,7 +152,7 @@ chybe 400.
 
 Vkladania Hindsight sú iba textové (`encode(list[str])`). Neposiela obrázkové
 objekty. Nastavte základnú adresu URL pre vkladania kompatibilné s OpenAI
-v Hindsight na OmniRoute `/v1` a použite funkčné ID z tabuľky vyššie
+v Hindsight na 67router `/v1` a použite funkčné ID z tabuľky vyššie
 (`jina-ai/jina-embeddings-v5-omni-small` alebo
 `openrouter/google/gemini-embedding-2`). Nenastavujte ako model samotné
 `gemini-embedding-2`, pokiaľ sa na bráne nenachádza API kľúč `gemini`.
@@ -160,12 +160,12 @@ v Hindsight na OmniRoute `/v1` a použite funkčné ID z tabuľky vyššie
 ### Memorix 1.6.0
 
 Memorix považuje za natívne médiá iba `baseUrl`, ktoré zodpovedá
-`/jina\.ai/i`. Adresa URL OmniRoute zostáva na iba textovej ceste, aj keď je
+`/jina\.ai/i`. Adresa URL 67router zostáva na iba textovej ceste, aj keď je
 model Jina omni. Táto brána je problémom klienta Memorix. Nezávisle od toho
-OmniRoute naďalej odmieta telo Jina `{image: "data:..."}`, ktoré by Memorix
+67router naďalej odmieta telo Jina `{image: "data:..."}`, ktoré by Memorix
 odoslal, keby sa brána otvorila, takže klienti kompatibilní s Jina nemôžu cez
-OmniRoute vkladať obrázky bez kanonickej schémy `{type,source}`.
+67router vkladať obrázky bez kanonickej schémy `{type,source}`.
 
 Pre text použite `jina-ai/jina-embeddings-v5-omni-small`. Nenastavujte
-`base_url` v Memorix na `https://api.jina.ai` — zachovajte OmniRoute ako jediný
+`base_url` v Memorix na `https://api.jina.ai` — zachovajte 67router ako jediný
 medzičlánok.

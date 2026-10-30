@@ -6,7 +6,7 @@
 
 🌐 **Kielet:** 🇺🇸 [Englanti](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute-API:n keskeinen viitedokumentaatio. Se kattaa julkisen `/v1`-rajapinnan ja useimmin käytetyt hallintapäätepisteet; koneellisesti luettava [`docs/openapi.yaml`](../openapi.yaml) sekä hakemiston `src/app/api/` alla oleva reittipuu ovat kattavat lähteet.
+67router-API:n keskeinen viitedokumentaatio. Se kattaa julkisen `/v1`-rajapinnan ja useimmin käytetyt hallintapäätepisteet; koneellisesti luettava [`docs/openapi.yaml`](../openapi.yaml) sekä hakemiston `src/app/api/` alla oleva reittipuu ovat kattavat lähteet.
 
 Katso OpenAI-yhteensopivaa protokollaa ja palveluntarjoajien ominaisuusmatriisia käsittelevä kohdennettu dokumentaatio:
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Vastaus | `HIT` tai `MISS` (ei-suoratoistettava)                                                                                                                                                                                                                                |
 | `X-OmniRoute-Idempotent` | Vastaus | `true`, jos deduplikoitu                                                                                                                                                                                                                                              |
 | `X-OmniRoute-Progress`   | Vastaus | `enabled`, jos edistymisen seuranta on käytössä                                                                                                                                                                                                                       |
-| `X-OmniRoute-Session-Id` | Vastaus | OmniRouten käyttämä tosiasiallinen istuntotunnus                                                                                                                                                                                                                      |
+| `X-OmniRoute-Session-Id` | Vastaus | 67routerin käyttämä tosiasiallinen istuntotunnus                                                                                                                                                                                                                      |
 | `X-OmniRoute-Request-Id` | Vastaus | Pyynnön korrelaatiotunnus (kun tiedossa)                                                                                                                                                                                                                              |
-| `X-OmniRoute-Version`    | Vastaus | OmniRoute-koontiversio (aina mukana)                                                                                                                                                                                                                                  |
+| `X-OmniRoute-Version`    | Vastaus | 67router-koontiversio (aina mukana)                                                                                                                                                                                                                                   |
 | `X-OmniRoute-Cost-Saved` | Vastaus | Välimuistin osuman ansiosta säästetty USD-määrä (vain välimuistiosumat)                                                                                                                                                                                               |
 | `X-OmniRoute-Decision`   | Vastaus | Reititysjälki: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` on yhdistelmästrategia tai `single`, jos pyyntö ei ole yhdistelmäpyyntö) — aina mukana valmistumisvastauksissa                                                                           |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Tilin kiinnittäminen pyyntökohtaisesti
 
-Kun palveluntarjoajalla on useita yhteyksiä (tilejä tai avaimia), OmniRoute valitsee tavallisesti yhden niistä
+Kun palveluntarjoajalla on useita yhteyksiä (tilejä tai avaimia), 67router valitsee tavallisesti yhden niistä
 tilinvalintastrategiansa avulla. Pyyntö voidaan sen sijaan kiinnittää tiettyyn yhteyteen
 `x-omniroute-connection`-otsakkeella:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ tilin kullekin projektille:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Lähde: `src/sse/handlers/chat.ts` (otsakkeen lukeminen), `src/sse/services/auth
 ## Yksinomaiset hallittujen istuntojen vuokraukset
 
 Yksinomainen hallitun istunnon vuokraus on valinnainen ja asiakasohjelmasta riippumaton reitityssopimus: yksi aktiivinen omistaja
-hallitsee yhtä ehdot täyttävää OmniRoute-yhteyttä. Se ei vuokraa mallia, edellytä OAuth-todennusta, yksilöi
+hallitsee yhtä ehdot täyttävää 67router-yhteyttä. Se ei vuokraa mallia, edellytä OAuth-todennusta, yksilöi
 tiettyä asiakasohjelmaa eikä vaadi tiettyä palveluntarjoajaa.
 
 Todennukseen käytettävällä API-avaimella on oltava käyttöoikeus `lease:exclusive` ja eksplisiittinen, ei-tyhjä
@@ -190,7 +190,7 @@ Aktiivisen vuokrauksen omistaja voi eksplisiittisesti pyytää tietosuojan kanna
 
 Tämä valinnainen tilatoiminto suojataan läpinäkymättömällä omistajatunnisteella, todennetulla hallitulla API-avaimella ja täsmällisellä
 aktiivisella sukupolvella yhdessä tietokantatapahtumassa. `displayName` on vain määritetyn yhteyden siistitty
-nimi; sen arvo on `null`, kun turvallista määritettyä nimeä ei ole. OmniRoute ei koskaan korvaa sitä
+nimi; sen arvo on `null`, kun turvallista määritettyä nimeä ei ole. 67router ei koskaan korvaa sitä
 sähköpostiosoitteella tai generoidulla tilin tunnisteella. Palveluntarjoajan arvo on ei-arkaluonteinen näyttötunniste eikä koskaan
 generoitu yhteensopivan palveluntarjoajan tunniste. Tunnistetiedot, tunnukset, evästeet, yhteyksien tai API-
 avainten käsittelemättömät tunnisteet, omistajatiivisteet, rajauksen salaisuudet ja sisäiset reititystiedot jätetään pois.
@@ -231,7 +231,7 @@ Tilapäinen kilpailutilanne palauttaa HTTP-tilan `429`, `Retry-After`-otsakkeen 
 
 Tämä vastaus tarkoittaa vain, että tavallinen ehdot täyttävien yhteyksien joukko ei ollut tyhjä ja kaikki vapaat ehdokkaat olivat
 vieraan aktiivisen vuokrauksen hallussa. Mallit tai palveluntarjoajat, joita ei tueta, käytäntöristiriidat, jäähdytysajat, kiintiöt,
-kuntotila ja muut tavalliset kelpoisuusvirheet säilyttävät nykyiset OmniRoute-vastauksensa.
+kuntotila ja muut tavalliset kelpoisuusvirheet säilyttävät nykyiset 67router-vastauksensa.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request-asiakirjat ja **välittää ne muuttamattomina** osoitteesee
 ```
 
 Natiivien `{ image | audio | video | pdf }`-arvot voivat olla julkinen HTTPS-URL-osoite, `data:`-URI tai raakaa
-base64-dataa. OmniRoute ei muunna näitä objekteja merkkijonoiksi eikä nouda natiivien kuvien URL-osoitteita — Jina noutaa
+base64-dataa. 67router ei muunna näitä objekteja merkkijonoiksi eikä nouda natiivien kuvien URL-osoitteita — Jina noutaa
 julkisen median itse. Jinan lisäkentät (`task`, `normalized`, `truncate`, `embedding_type`) välitetään edelleen.
 Vain tekstiä tukevat Jina-tuoteversiot hylkäävät edelleen muut kuin tekstiasiakirjat.
 
@@ -454,7 +454,7 @@ joten asiakaskoodissa ei tarvitse käsitellä palveluntarjoajaa erikoistapauksen
 
 ### Vertex AI DeepSeek OCR:n todennus ja päätepisteen ratkaiseminen
 
-`vertex-deepseek-ocr` käyttää uudelleen samaa Vertex AI -todennusta, jota OmniRoute jo tukee
+`vertex-deepseek-ocr` käyttää uudelleen samaa Vertex AI -todennusta, jota 67router jo tukee
 keskustelu- ja kuvaliikenteelle (`open-sse/executors/vertex.ts`): yhteyden API-avain on joko
 Service Account JSON -tunnistetieto (joka vaihdetaan lyhytikäiseen OAuth-käyttöoikeustunnukseen JWT bearer
 -prosessin kautta) tai valmiiksi luotu OAuth-käyttöoikeustunnus, jota käytetään sellaisenaan. Upstream-päätepisteen URL on Vertexin
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Mallien hinnat (`pricing`)
 
-Tietue sisältää `pricing`-objektin, kun OmniRoute tietää mallin hinnan. Hinta tulee
+Tietue sisältää `pricing`-objektin, kun 67router tietää mallin hinnan. Hinta tulee
 hinnoittelutaulukosta, jota kustannuslaskenta käyttää: sisäänrakennetuista oletusarvoista, synkronoiduista hinnoista ja
 `/api/pricing`-rajapinnan kautta määritetyistä ohituksista. Nämä ovat listahintoja, joten myös tilauspalveluntarjoajat
 näyttävät tokenikohtaisen hinnan.
@@ -632,8 +632,8 @@ tiedostoa `open-sse/config/providerPluginManifestRegistry.ts` suoraan.
 
 ## ElevenLabs-äänen luonti
 
-Määritä OmniRouteen `elevenlabs`-palveluntarjoajayhteys ElevenLabs-API-avaimellasi.
-Asiakkaat todentautuvat omalla **OmniRoute**-avaimellaan (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Määritä 67routeriin `elevenlabs`-palveluntarjoajayhteys ElevenLabs-API-avaimellasi.
+Asiakkaat todentautuvat omalla **67router**-avaimellaan (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 yhdyskäytävä toimittaa tallennetun palveluntarjoaja-avaimen `xi-api-key`-otsakkeessa. Älä koskaan lähetä ElevenLabs-avainta
 yhdyskäytävän bearer-tunnisteena.
 
@@ -698,7 +698,7 @@ reitit palauttavat ulkoisen palvelun tilakoodit ja virherungot muuttamattomina, 
 rajoituksesta ja `429` kiintiörajoituksesta. Otsakkeet `character-cost`, `song-id`, `request-id` ja `retry-after`
 säilytetään, kun ne ovat mukana. Maksuton krediittisaldo ei takaa pääsyä kaikkiin
 musiikkimalleihin, tulostusmuotoihin tai API-ominaisuuksiin: ElevenLabs ratkaisee kunkin pyynnön käyttöoikeuden.
-Yhdistetty päätepiste säilyttää virheiden tilakoodit OmniRouten normalisoidussa virherakenteessa.
+Yhdistetty päätepiste säilyttää virheiden tilakoodit 67routerin normalisoidussa virherakenteessa.
 
 Ulkoisen palvelun sopimukset: [äänitehosteet](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [musiikin säveltäminen](https://elevenlabs.io/docs/api-reference/music/compose) ja
@@ -739,7 +739,7 @@ Ulkoisen palvelun sopimukset: [äänitehosteet](https://elevenlabs.io/docs/api-r
 
 Kaikki POST-reitit noudattavat samaa rakennetta: `Bearer your-api-key` + Zod-validoitu JSON-runko (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` jne.; katso `src/shared/validation/schemas.ts`). Rakenteen validoinnin epäonnistuessa palautetaan 4xx.
 
-Asiakkaille, jotka eivät voi liittää `Authorization: Bearer ...` -otsaketta, OmniRoute hyväksyy API-avaimet myös URL-osoitteessa joko kyselymerkkijonoyhteensopivuuden kautta (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) tai käyttämällä alla dokumentoituja erillisiä `/api/v1/vscode/{token}/...`-päätepisteitä.
+Asiakkaille, jotka eivät voi liittää `Authorization: Bearer ...` -otsaketta, 67router hyväksyy API-avaimet myös URL-osoitteessa joko kyselymerkkijonoyhteensopivuuden kautta (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) tai käyttämällä alla dokumentoituja erillisiä `/api/v1/vscode/{token}/...`-päätepisteitä.
 
 ```bash
 # Uudelleenjärjestely (pilvirekisterin tarjoaja tai OpenAI-yhteensopiva tarjoajasolmu muodossa "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, sama API-avain kuin Parallel Searchissa) palauttaa vain
 Markdownia — mikä tahansa muu `format` aiheuttaa vastauksen `400` — ja rajoittaa sisällön 100 000 merkkiin. Kun
 kohdesivua itsessään ei voida poimia, vastapalvelu ilmoittaa siitä HTTP 200 -vastauksen sisällä;
-OmniRoute välittää sen vastauksena `422`, jossa on kiinteä viesti.
+67router välittää sen vastauksena `422`, jossa on kiinteä viesti.
 
 | Menetelmä | Polku           | Kuvaus                                                                     |
 | --------- | --------------- | -------------------------------------------------------------------------- |
@@ -965,14 +965,14 @@ on oltava aktiivinen käynnistyspiste (näin on oletuksena, kun `app/server-ws.m
 OpenAI **Codex CLI** validoi mallin nimen asiakaspuolella, kun
 `supports_websockets = true`, ja **hylkää palveluntarjoajan etuliitteen sisältävät tunnukset**, kuten
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Lähetä **pelkkä** tunnus (esim. `gpt-5.5`). OmniRouten silta on
+a ChatGPT account`). Lähetä **pelkkä** tunnus (esim. `gpt-5.5`). 67routerin silta on
 vain codexia varten, joten se ratkaisee pelkän tunnuksen uudelleen codex-malliksi
 (`resolveCodexWsModelInfo`) ennen tunnelointia vastapalveluun — vaikka pelkkä
 `gpt-5.5` reititettäisiin muutoin HTTP:n kautta toiselle palveluntarjoajalle.
 
 #### OpenAI Codex CLI:n määrittäminen
 
-Ohjaa Codex CLI OmniRouteen lisäämällä WebSocket-tuellinen mukautettu palveluntarjoaja
+Ohjaa Codex CLI 67routeriin lisäämällä WebSocket-tuellinen mukautettu palveluntarjoaja
 tiedostoon `~/.codex/config.toml` (käytä erillistä `CODEX_HOME`-hakemistoa, jotta
 olemassa olevaan määritykseen ei tehdä muutoksia):
 
@@ -985,15 +985,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # ei lopun vinoviivaa; WS-URL johdetaan tästä (käytä tuotannossa https/wss)
 wire_api = "responses"                    # ainoa tuettu arvo helmikuusta 2026 lähtien
 supports_websockets = true                # ottaa käyttöön Responses-over-WS-siirtotavan
-env_key = "OMNIROUTE_API_KEY"             # sisältää OmniRoute-API-avaimen (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # sisältää 67router-API-avaimen (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute-API-avain (mikä tahansa avain, jos REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router-API-avain (mikä tahansa avain, jos REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI päivittää yhteyden `base_url + /responses` WebSocketiksi, ja OmniRoute tunneloi sen
+CLI päivittää yhteyden `base_url + /responses` WebSocketiksi, ja 67router tunneloi sen
 valittuun codex OAuth -yhteyteen. Tämä on validoitu päästä päähän paikallista
 palvelinta vasten: ChatGPT palauttaa tapahtumat `codex.rate_limits` + `response.created` ja suoratoistaa
 valmistuneen vastauksen.
@@ -1077,7 +1077,7 @@ ja rakenteisessa **JSON-tulosteessa** esitettyjen prosenttiosuuksien ero:
 
 #### Katkaisurajan oikaisukaava
 
-OmniRoute tukee ennakoivia kiintiön katkaisurajoja palveluntarjoajan resurssien ehtymisen estämiseksi (määritetään yhteyden
+67router tukee ennakoivia kiintiön katkaisurajoja palveluntarjoajan resurssien ehtymisen estämiseksi (määritetään yhteyden
 `quotaWindowThresholds`-asetuksilla, palveluntarjoajan oletuksilla tai yleisillä häiriönsietoasetuksilla). Kun katkaisuraja
 (esim. `cutoff = 25%`) on käytössä kiintiöikkunassa, tekstimuotoinen esityskomponentti laskee jäljellä olevan määrän seuraavasti:
 
@@ -1626,7 +1626,7 @@ Huomautuksia:
 
 - Tokenoidut aliakset käyttävät samoja käsittelijöitä kuin `/v1/*` ja `/api/tags`; vastausten rakenteet säilyvät samoina.
 - Käytä ensisijaisesti `Authorization: Bearer ...`-otsaketta aina, kun asiakasohjelma tukee mukautettuja otsakkeita.
-- URL-pohjaiset tunnukset voivat näkyä käänteisen välityspalvelimen lokeissa, selainhistoriassa ja OmniRouten ulkopuolisessa telemetriassa. Käsittele niitä yhteensopivuusvaihtoehtona, älä oletusarvoisena todennustapana.
+- URL-pohjaiset tunnukset voivat näkyä käänteisen välityspalvelimen lokeissa, selainhistoriassa ja 67routerin ulkopuolisessa telemetriassa. Käsittele niitä yhteensopivuusvaihtoehtona, älä oletusarvoisena todennustapana.
 
 ---
 
@@ -1734,7 +1734,7 @@ Korkeamman tason reititysyhdistelmät (jotka on jo koottu yhteen kohdassa `/api/
 
 ## Webhookit
 
-Lähtevät webhook-tilaukset OmniRoute-tapahtumille (pyynnön valmistuminen, kiintiön loppuminen, avaimen kierrätys jne.).
+Lähtevät webhook-tilaukset 67router-tapahtumille (pyynnön valmistuminen, kiintiön loppuminen, avaimen kierrätys jne.).
 
 | Menetelmä | Polku                     | Kuvaus                                                                         |
 | --------- | ------------------------- | ------------------------------------------------------------------------------ |
@@ -1767,7 +1767,7 @@ Automaattinen avainten hallinnan alijärjestelmä käyttää näitä API-avainte
 
 ## Agenttien protokolla
 
-OmniRoute-käyttäjien puolesta etänä suoritettavat pilviagenttitehtävät (Claude Code, Codex Cloud, OpenHands jne.).
+67router-käyttäjien puolesta etänä suoritettavat pilviagenttitehtävät (Claude Code, Codex Cloud, OpenHands jne.).
 
 | Menetelmä | Polku                         | Kuvaus                                                                                                                                                   |
 | --------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1813,7 +1813,7 @@ Lähtevän liikenteen HTTP(S)-/SOCKS-välityspalvelimet, jotka voidaan määritt
 
 ## Vikasietoisuus (laajennettu)
 
-OmniRoute tarjoaa kolme toisistaan riippumatonta tilapäisten virheiden hallintamekanismia. Alla olevien hallintapäätepisteiden avulla operaattorit voivat tarkastella ja ohittaa niitä:
+67router tarjoaa kolme toisistaan riippumatonta tilapäisten virheiden hallintamekanismia. Alla olevien hallintapäätepisteiden avulla operaattorit voivat tarkastella ja ohittaa niitä:
 
 | Laajuus                      | Tilan tallennus                                  | Tarkastelu                                | Nollaus / tyhjennys                                          |
 | ---------------------------- | ------------------------------------------------ | ----------------------------------------- | ------------------------------------------------------------ |
@@ -1848,7 +1848,7 @@ Täydellinen käsitteellinen viite ja katkaisijoiden oletusasetukset: katso [`CL
 
 ## Taidot
 
-Taitokehys OmniRouten laajentamiseen mukautetuilla suoritettavilla käsittelijöillä sekä markkinapaikkaintegraatioilla.
+Taitokehys 67routerin laajentamiseen mukautetuilla suoritettavilla käsittelijöillä sekä markkinapaikkaintegraatioilla.
 
 | Menetelmä | Polku                             | Kuvaus                                                                                                                                |
 | --------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1885,7 +1885,7 @@ Pysyvä keskustelu- ja faktamuistivarasto, jonka näkyvyysalue määritetään A
 
 ## MCP-palvelin
 
-OmniRoute sisältää sisäänrakennetun Model Context Protocol -palvelimen, jossa on 3 siirtotapaa (stdio, SSE, streamable-http) ja käyttöalueilla rajatut työkalut. Alla olevat hallintapaneelin päätepisteet lukevat tila- ja auditointitietoja sekä välittävät HTTP-siirtotapojen liikenteen.
+67router sisältää sisäänrakennetun Model Context Protocol -palvelimen, jossa on 3 siirtotapaa (stdio, SSE, streamable-http) ja käyttöalueilla rajatut työkalut. Alla olevat hallintapaneelin päätepisteet lukevat tila- ja auditointitietoja sekä välittävät HTTP-siirtotapojen liikenteen.
 
 | Menetelmä | Polku | Kuvaus |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1907,7 +1907,7 @@ OmniRoute sisältää sisäänrakennetun Model Context Protocol -palvelimen, jos
 
 ## A2A-palvelin
 
-OmniRoute tarjoaa A2A (Agent-to-Agent) JSON-RPC 2.0 -päätepisteen sekä REST-kääreen tarkastelua ja hallintapaneelien käyttöä varten.
+67router tarjoaa A2A (Agent-to-Agent) JSON-RPC 2.0 -päätepisteen sekä REST-kääreen tarkastelua ja hallintapaneelien käyttöä varten.
 
 ### JSON-RPC
 
@@ -2136,7 +2136,7 @@ Vain ylläpitäjille tarkoitetut operatiivisen hallinnan päätepisteet.
 
 ## CLI-työkalujen hallinta
 
-Hallitse OmniRouteen integroituvia CLI-työkaluja (antigravity, commandCode,
+Hallitse 67routeriin integroituvia CLI-työkaluja (antigravity, commandCode,
 devin-cli jne.). Katso täydellinen luettelo kohdasta [Palveluntarjoajien viite](./PROVIDER_REFERENCE.md).
 
 | Menetelmä | Polku                                   | Kuvaus                                                                                                                                                                          |
@@ -2247,7 +2247,7 @@ Katso täydelliset tiedot kohdasta [Taitokehys](../frameworks/SKILLS.md).
 
 ## Liitännäiset
 
-Hallinnoi OmniRoute-liitännäisiä (kolmannen osapuolen laajennuksia).
+Hallinnoi 67router-liitännäisiä (kolmannen osapuolen laajennuksia).
 
 | Menetelmä | Polku                              | Kuvaus                               |
 | --------- | ---------------------------------- | ------------------------------------ |

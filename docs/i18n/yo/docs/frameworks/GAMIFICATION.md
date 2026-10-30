@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ní ìpele ìmúṣeré tó kọ́kọ́ dá lórí ẹ̀rọ agbègbè, èyí tó ń san àwọn aṣàmúlò lẹ́san fún
+67router ní ìpele ìmúṣeré tó kọ́kọ́ dá lórí ẹ̀rọ agbègbè, èyí tó ń san àwọn aṣàmúlò lẹ́san fún
 lílo pẹpẹ náà — ṣíṣe àwọn ìbéèrè, yíyan olùpèsè mìíràn, ṣíṣẹ̀dá
 àwọn àkójọpọ̀, pínpín àwọn token, àti ṣíṣe àfikún sí àwùjọ. Gbogbo ipò wà nínú
 SQLite; ìṣọ̀kan pẹ̀lú àwọn server àwùjọ jẹ́ ohun tí a lè yàn láti kópa nínú rẹ̀, ó sì dá lórí ìfìránṣẹ́.
@@ -36,7 +36,7 @@ token, àwọn ẹ̀san ìpè).
 | Àwọn Tábìlì Ipò   | Àgbáyé, ọ̀sọ̀ọ̀sẹ̀, oṣooṣù, pínpín token, àti àwọn ibi àfikún                 |
 | Pínpín Token      | Gbé kirẹditi láàárín àwọn aṣàmúlò nípasẹ̀ ìwé ìṣírò aláwọlé méjì           |
 | Ìpè & Ìràpadà     | Àwọn kóòdù ìtọ́kasí pẹ̀lú ìpamọ́ hash SHA-256                                |
-| Àwọn Server Àwùjọ | Ṣe ìṣọ̀kan pẹ̀lú àwọn instance OmniRoute ti òde                             |
+| Àwọn Server Àwùjọ | Ṣe ìṣọ̀kan pẹ̀lú àwọn instance 67router ti òde                              |
 | Ìdènà Ẹ̀tàn        | Ìṣírò àmì ní ẹ̀gbẹ́ server, dídín ìwọ̀n ìbéèrè kù, ìṣàwárí àìṣedéédé z-score |
 
 ### Àwọn Ìlànà Ìṣètò
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Àwọn Tábìlì Àkójọpọ̀ Dátà
 
-Gbogbo àwọn tábìlì wà nínú àkójọpọ̀ dátà SQLite àkọ́kọ́ ti OmniRoute, tí migration
+Gbogbo àwọn tábìlì wà nínú àkójọpọ̀ dátà SQLite àkọ́kọ́ ti 67router, tí migration
 `060_create_gamification.sql` ṣẹ̀dá. WAL journaling jẹ́ ogún láti ọ̀dọ̀ singleton
 `getDbInstance()` nínú `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Gbogbo àwọn tábìlì wà nínú àkójọpọ̀ dátà SQLite àkọ́kọ́
 
 ### Módùlù Àgbègbè: `src/lib/db/gamification.ts`
 
-Ó tẹ̀lé àpẹẹrẹ boṣewa OmniRoute — ó ń ṣàgbéwọlé `getDbInstance()` láti
+Ó tẹ̀lé àpẹẹrẹ boṣewa 67router — ó ń ṣàgbéwọlé `getDbInstance()` láti
 `core.ts`, ó sì ń kó àwọn iṣẹ́ CRUD onírúurú jáde. Kò sí SQL aláìlábòsí nínú àwọn route handler.
 
 Àwọn iṣẹ́ pàtàkì:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Ìṣe               | XP  | Àpèjúwe                                                           |
 | ----------------- | --- | ----------------------------------------------------------------- |
-| `request`         | 1   | Fún ìbéèrè API kọ̀ọ̀kan tí a darí gba inú OmniRoute                 |
+| `request`         | 1   | Fún ìbéèrè API kọ̀ọ̀kan tí a darí gba inú 67router                  |
 | `provider_switch` | 5   | Yíyípadà sí olupèsè mìíràn                                        |
 | `model_switch`    | 3   | Yíyípadà sí àwòṣe mìíràn                                          |
 | `combo_create`    | 10  | Ṣíṣe combo tuntun                                                 |
@@ -579,7 +579,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (aláìlẹ́gbẹ́, indexed) |
 | `token_hash` | SHA-256(raw_token)              |
 
-A máa dá token àìṣẹ̀dá padà sí olumulo lẹ́ẹ̀kan ṣoṣo ní àkókò ìṣẹ̀dá. OmniRoute
+A máa dá token àìṣẹ̀dá padà sí olumulo lẹ́ẹ̀kan ṣoṣo ní àkókò ìṣẹ̀dá. 67router
 kì í tọ́jú tàbí fi hàn mọ́ láé — hash nìkan ló máa ń wà títí.
 
 ### Ìdènà Ìtọ́kasí Ara-Ẹni
@@ -702,7 +702,7 @@ Gbogbo fífúnni ní XP, ìfiránṣẹ́, rírí báàjì, àti ìṣàwárí �
 
 ## Àwọn Ọ̀nà API
 
-Gbogbo ọ̀nà ń tẹ̀lé àpẹẹrẹ boṣewa OmniRoute:
+Gbogbo ọ̀nà ń tẹ̀lé àpẹẹrẹ boṣewa 67router:
 
 ```
 Ọ̀nà → Àyẹ̀wò ìbẹ̀rẹ̀ CORS → Ìfọwọ́sí body (Zod) → Ìfàṣẹsí (extractApiKey)

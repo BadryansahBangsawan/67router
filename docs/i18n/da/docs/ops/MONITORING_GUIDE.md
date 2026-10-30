@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: OmniRoute leveres med indbygget helbredsovervågning, autopilot til udbydere, kvotesporing og hooks til observerbarhed. Denne vejledning dækker dashboardet, advarsler og fejlfinding.
+> **Kort fortalt**: 67router leveres med indbygget helbredsovervågning, autopilot til udbydere, kvotesporing og hooks til observerbarhed. Denne vejledning dækker dashboardet, advarsler og fejlfinding.
 
 **Kilder:**
 
@@ -20,7 +20,7 @@
 
 ## Overblik
 
-OmniRoute har **3 lag af overvågning**:
+67router har **3 lag af overvågning**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Pr. kombination:
 
 ## API til sundhedstjek
 
-OmniRoute eksponerer **to** HTTP-sundhedsflader. De kan ikke bruges i flæng af orkestratorer.
+67router eksponerer **to** HTTP-sundhedsflader. De kan ikke bruges i flæng af orkestratorer.
 
 | Sti                          | Formål                                                              | Belastning                              | Brug til                                                                 |
 | ---------------------------- | ------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------ |
@@ -180,7 +180,7 @@ slutpunkt scrapes. Brug `failed` + `failedConnections` til aktuelle probefejl og
 
 ### Anbefalinger til Kubernetes-probes
 
-OmniRoute er en **enkelt Node-proces** (én event-loop). Dockers standard-`HEALTHCHECK` er rettet mod den lette `/healthz`. `/api/monitoring/health` er **for tung** til kubelets intervaller for live-status.
+67router er en **enkelt Node-proces** (én event-loop). Dockers standard-`HEALTHCHECK` er rettet mod den lette `/healthz`. `/api/monitoring/health` er **for tung** til kubelets intervaller for live-status.
 
 | Probe                   | Anbefalet mål                                                                       | Bemærkninger                                                                                                                                                                                                                                                                                                                                                                |
 | ----------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Relateret: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (pro
 
 ### systemd-watchdog (fastfrosset hændelsesløkke)
 
-På en systemd-vært fortæller OmniRoute tjenestehåndteringen, når den er klar, og fortsætter med at sende ping til den, så en server, hvis hændelsesløkke sidder fast, bliver stoppet og genstartet i stedet for at forblive oppe og tavs. Pingene kommer fra serverens egen hændelsesløkke: Når den blokeres, stopper de, og systemd genstarter tjenesten, når `WatchdogSec` er forløbet uden et ping.
+På en systemd-vært fortæller 67router tjenestehåndteringen, når den er klar, og fortsætter med at sende ping til den, så en server, hvis hændelsesløkke sidder fast, bliver stoppet og genstartet i stedet for at forblive oppe og tavs. Pingene kommer fra serverens egen hændelsesløkke: Når den blokeres, stopper de, og systemd genstarter tjenesten, når `WatchdogSec` er forløbet uden et ping.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) opretter allerede en brugerenhed med dette. En enhed, du selv opretter (med standardindstillingen `Type=simple`), har ingen watchdog, så tilføj disse linjer i dens `[Service]`-sektion:
 
@@ -443,7 +443,7 @@ Konfigurationen af kontrol af tokenstatus håndteres internt af `tokenHealthChec
 
 ### Indbyggede kanaler
 
-OmniRoute understøtter **3 alarmkanaler**:
+67router understøtter **3 alarmkanaler**:
 
 | Kanal           | Opsætning       | Anvendelse                     |
 | --------------- | --------------- | ------------------------------ |
@@ -559,7 +559,7 @@ Opret en `~/.omniroute/dashboard.json`:
 ### "Kvoten angives som sund, men jeg ser 429-fejl"
 
 - 429 betyder, at udbyderen angiver, at du har opbrugt din kvote
-- OmniRoutes kvotesporing kan være **forældet** — udbyderens oplysninger hos upstream-udbyderen er autoritative
+- 67routers kvotesporing kan være **forældet** — udbyderens oplysninger hos upstream-udbyderen er autoritative
 - Kvotedata opdateres automatisk via den interne kvoteovervågning
 
 ### "Kombinationen fejler, men alle mål ser sunde ud"
@@ -572,7 +572,7 @@ Opret en `~/.omniroute/dashboard.json`:
 
 - Kør `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Hvis resultatet er "ok" — falsk alarm; sundhedskontrollen er for streng
-- Hvis resultatet er noget andet — **stop OmniRoute**, og følg [vejledningen til katastrofeberedskab](./DATABASE_GUIDE.md#disaster-recovery)
+- Hvis resultatet er noget andet — **stop 67router**, og følg [vejledningen til katastrofeberedskab](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Presset på memory heap er kritisk"
 

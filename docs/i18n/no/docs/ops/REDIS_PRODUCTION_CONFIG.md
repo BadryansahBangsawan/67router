@@ -6,7 +6,7 @@
 
 ## Oversikt
 
-Redis er en **valgfri, løs avhengighet** i OmniRoute — applikasjonen reduserer funksjonaliteten på en kontrollert måte (tilbakefall
+Redis er en **valgfri, løs avhengighet** i 67router — applikasjonen reduserer funksjonaliteten på en kontrollert måte (tilbakefall
 til minnebaserte løsninger) når Redis er utilgjengelig. I produksjon reduserer optimalisering av Redis ventetiden for fire forskjellige
 arbeidsbelastninger:
 
@@ -17,7 +17,7 @@ arbeidsbelastninger:
 | Kvotelager                 | `redisQuotaStore.ts`          | Separat `getRedisClient(url)`-singleton                   | `<prefix>quota:*` konfigurerbart per instans                  |
 | Kretsbryter for oppvarming | `redisCircuitBreakerStore.ts` | Separat klient i `circuitBreakerFactory.ts`               | `<prefix>warmup:cb:<connectionId>`                            |
 
-Alle fire arbeidsbelastningene deler ett navneromprefiks, slik at OmniRoute kan eksistere side om side med andre apper på en
+Alle fire arbeidsbelastningene deler ett navneromprefiks, slik at 67router kan eksistere side om side med andre apper på en
 enkelt Redis-instans (f.eks. `127.0.0.1:6379`). Se [Navnerom for nøkler](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ enkelt Redis-instans (f.eks. `127.0.0.1:6379`). Se [Navnerom for nøkler](#key-n
 
 ## Navnerom for nøkler
 
-OmniRoute deler en Redis-instans med alt annet som kjører på verten. Uten et navnerom
+67router deler en Redis-instans med alt annet som kjører på verten. Uten et navnerom
 kan nøkler som `auth:api_key:<sha256>` eller `rl:*` kollidere med nøkler fra andre applikasjoner
 som bruker samme Redis (denne instansen kjører Redis på `127.0.0.1:6379` sammen med andre tjenester).
 
-Sett `REDIS_KEY_PREFIX` til en ikke-tom streng for å gi **alle** OmniRoute-nøkler et prefiks:
+Sett `REDIS_KEY_PREFIX` til en ikke-tom streng for å gi **alle** 67router-nøkler et prefiks:
 
 ```bash
-# .env — alle OmniRoute-nøkler blir omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — alle 67router-nøkler blir omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # la det være plass til operativsystemets sidebuffer
 maxmemory-policy allkeys-lru         # fjern gamle oppføringer fra autentiseringsbufferen under belastning
 
-# Persistens (valgfritt — OmniRoute er krasjsikker uten dette)
+# Persistens (valgfritt — 67router er krasjsikker uten dette)
 save 300 1                           # opprett øyeblikksbilde minst hvert 5. minutt hvis ≥1 nøkkel er endret
 appendonly no                        # AOF er ikke nødvendig; dataene kan genereres på nytt
 appendfsync no                       # ingen fsync-belastning (RDB er tilstrekkelig)

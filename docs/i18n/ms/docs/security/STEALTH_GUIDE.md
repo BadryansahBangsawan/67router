@@ -8,11 +8,11 @@
 > **Kemas kini terakhir:** 2026-09-02 — v3.8.51
 > **Khalayak:** Jurutera yang menyelenggara integrasi penyamaran khusus penyedia.
 
-OmniRoute berintegrasi dengan penyedia yang bahagian pinggirannya secara aktif mengecap jari klien tidak rasmi (TLS JA3/JA4, susunan pengepala, bentuk badan JSON, token integriti). Halaman ini mendokumentasikan permukaan penyamaran yang disediakan oleh OmniRoute dan lokasi pelaksanaannya.
+67router berintegrasi dengan penyedia yang bahagian pinggirannya secara aktif mengecap jari klien tidak rasmi (TLS JA3/JA4, susunan pengepala, bentuk badan JSON, token integriti). Halaman ini mendokumentasikan permukaan penyamaran yang disediakan oleh 67router dan lokasi pelaksanaannya.
 
 ## Notis Undang-undang dan Etika
 
-Ciri penyamaran diwujudkan supaya OmniRoute boleh bertindak sebagai lapisan keserasian antara akaun rasmi milik pengguna (Claude Code CLI, Codex, Antigravity, Cursor, dan sebagainya) dengan API bersepadu OmniRoute. Ciri-ciri ini **bukan** untuk mengelakkan pengesanan penipuan, berkongsi bukti kelayakan, atau melanggar Terma Perkhidmatan penyedia. Penyelenggara mengharapkan pengendali mematuhi ToS pihak huluan yang dipersetujui semasa membuat akaun.
+Ciri penyamaran diwujudkan supaya 67router boleh bertindak sebagai lapisan keserasian antara akaun rasmi milik pengguna (Claude Code CLI, Codex, Antigravity, Cursor, dan sebagainya) dengan API bersepadu 67router. Ciri-ciri ini **bukan** untuk mengelakkan pengesanan penipuan, berkongsi bukti kelayakan, atau melanggar Terma Perkhidmatan penyedia. Penyelenggara mengharapkan pengendali mematuhi ToS pihak huluan yang dipersetujui semasa membuat akaun.
 
 ---
 
@@ -76,7 +76,7 @@ sebelum mendakwa kesetaraan dengan pelayar pihak huluan.
 
 ## Himpunan Mod Senyap Claude Code
 
-Apabila `cliCompatMode` dihidupkan, OmniRoute membentuk semula permintaan Claude keluar supaya tidak dapat dibezakan daripada trafik `claude-cli`. Tiga modul bekerjasama:
+Apabila `cliCompatMode` dihidupkan, 67router membentuk semula permintaan Claude keluar supaya tidak dapat dibezakan daripada trafik `claude-cli`. Tiga modul bekerjasama:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -92,7 +92,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Cincangan Kandungan Klien)
 
-Semakan integriti pada pelayan yang dikira oleh Claude Code CLI rasmi melalui Bun/Zig. OmniRoute melaksanakannya semula dengan `xxhash-wasm`:
+Semakan integriti pada pelayan yang dikira oleh Claude Code CLI rasmi melalui Bun/Zig. 67router melaksanakannya semula dengan `xxhash-wasm`:
 
 1. Sirikan isi dengan ruang letak `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -138,7 +138,7 @@ Modul berkaitan dalam himpunan yang sama:
 
 ## Mod Senyap Antigravity
 
-Permintaan Antigravity mengekalkan teks pemanggil bait demi bait. OmniRoute tidak menyisipkan aksara lebar sifar ke dalam gesaan atau menamakan semula/menyuntik alat untuk meniru klien IDE.
+Permintaan Antigravity mengekalkan teks pemanggil bait demi bait. 67router tidak menyisipkan aksara lebar sifar ke dalam gesaan atau menamakan semula/menyuntik alat untuk meniru klien IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -148,13 +148,13 @@ Membuang penanda SDK Stainless (`x-stainless-lang`, `x-stainless-package-version
 
 `ANTIGRAVITY_CREDITS=always` (digunakan oleh `open-sse/executors/antigravity.ts`) menghalakan **setiap** permintaan melalui Lebihan Kredit AI Antigravity (kredit Google berbayar), dan bukannya membenarkan kuota peringkat percuma Google mengehadkan penggunaan. Ini didokumenkan sebagai ciri, tetapi ia merupakan **laporan pelanggaran Syarat Perkhidmatan paling lazim yang kami terima** — beberapa akaun Google Ultra telah diharamkan dengan `403 / "service disabled for ToS violation" / insufficient_quota` selepas berjalan selama beberapa jam dengan `=always`.
 
-Penguatkuasaan huluan berlaku di **pihak Google**, dan bukan sesuatu yang boleh dicegah oleh OmniRoute. Nama pemboleh ubah persekitaran dan dokumentasi sedia ada membuatkannya kelihatan seperti tetapan yang selamat untuk diaktifkan; hakikatnya tidak.
+Penguatkuasaan huluan berlaku di **pihak Google**, dan bukan sesuatu yang boleh dicegah oleh 67router. Nama pemboleh ubah persekitaran dan dokumentasi sedia ada membuatkannya kelihatan seperti tetapan yang selamat untuk diaktifkan; hakikatnya tidak.
 
 **Mengapa ini mencetuskan pengesanan penyalahgunaan dengan lebih agresif berbanding penggunaan peringkat percuma sahaja:**
 
 - Perbelanjaan automatik berterusan pada satu akaun Google ditandai secara berbeza berbanding penggunaan peringkat percuma yang mencapai kuota lalu berhenti.
 - Lebihan kredit tidak mempunyai had kadar, maka klien yang tersalah konfigurasi boleh menghabiskan beberapa ratus USD dalam beberapa minit dan kelihatan seperti penjualan semula kunci API atau trafik bot.
-- Beberapa pengguna OmniRoute yang menggunakan kredit lebihan secara selari daripada alamat IP luaran yang sama menguatkan lagi isyarat tersebut.
+- Beberapa pengguna 67router yang menggunakan kredit lebihan secara selari daripada alamat IP luaran yang sama menguatkan lagi isyarat tersebut.
 
 **Pendekatan yang disyorkan:**
 
@@ -193,7 +193,7 @@ Togol bagi setiap penyedia melalui env (lihat di bawah). Apabila dinyahdayakan, 
 
 ## Proksi MITM (Antigravity, Linux/macOS/Windows)
 
-Bagi CLI yang binarinya tidak boleh diubah hala melalui `OPENAI_BASE_URL`, OmniRoute menjalankan proksi penamat TLS setempat. Titik akhir terletak di bawah `src/app/api/cli-tools/antigravity-mitm/`.
+Bagi CLI yang binarinya tidak boleh diubah hala melalui `OPENAI_BASE_URL`, 67router menjalankan proksi penamat TLS setempat. Titik akhir terletak di bawah `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Kaedah | Titik akhir                             | Tujuan                                                   |
 | ------ | --------------------------------------- | -------------------------------------------------------- |
@@ -226,7 +226,7 @@ Hos sasaran yang dipintas: **`daily-cloudcode-pa.googleapis.com`** (pelayan hulu
 
 Nama fail sijil: `omniroute-mitm.crt`. Pemadanan cap jari melalui `getCertFingerprint()` (SHA-1 bagi DER).
 
-Selain itu, `updateNssDatabases()` memasang sijil ke dalam DB NSS setiap pengguna apabila `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), menggunakan nama panggilan **`OmniRoute MITM Root CA`**.
+Selain itu, `updateNssDatabases()` memasang sijil ke dalam DB NSS setiap pengguna apabila `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), menggunakan nama panggilan **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -272,7 +272,7 @@ IP penyedia **sentiasa dikekalkan** — togol ini hanya membentuk semula imej wa
 
 ## Pembersihan Pengepala Masuk
 
-OmniRoute membersihkan pengepala klien masuk sebelum memajukannya supaya permintaan yang tiba daripada Cursor tidak membocorkan `User-Agent: Cursor/X.Y.Z` kepada huluan Claude. Lihat `src/shared/constants/upstreamHeaders.ts` untuk senarai sekatan, yang diselaraskan rapat dengan skema Zod dan ujian unit.
+67router membersihkan pengepala klien masuk sebelum memajukannya supaya permintaan yang tiba daripada Cursor tidak membocorkan `User-Agent: Cursor/X.Y.Z` kepada huluan Claude. Lihat `src/shared/constants/upstreamHeaders.ts` untuk senarai sekatan, yang diselaraskan rapat dengan skema Zod dan ujian unit.
 
 ---
 

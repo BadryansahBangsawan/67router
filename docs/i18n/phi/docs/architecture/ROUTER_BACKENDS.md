@@ -15,9 +15,9 @@ Itinatakda ng ADR na ito kung paano nauugnay sa isa't isa ang `ts` (native), `bi
 Inilalarawan ang tungkulin ng isang engine gamit ang **dalawang hiwalay na axis**, na magkasamang naka-encode sa `RouterBackendDefinition` ng registry:
 
 1. **Lifecycle** (`RouterBackendLifecycle`) — _kung paano tumatakbo ang engine_:
-   - `in-process` — tumatakbo sa loob ng proseso ng OmniRoute Node (ang native na TS pipeline).
-   - `supervised` — isang lokal na child process na ini-install/sinisimulan/ihihinto/sinusuri ang kalagayan ng OmniRoute sa pamamagitan ng `ServiceSupervisor`, at pagkatapos ay ginagamit bilang isang provider connection.
-   - `external` — isang HTTP endpoint na pinapadalhan ng OmniRoute ngunit **hindi** nito pinamamahalaan
+   - `in-process` — tumatakbo sa loob ng proseso ng 67router Node (ang native na TS pipeline).
+   - `supervised` — isang lokal na child process na ini-install/sinisimulan/ihihinto/sinusuri ang kalagayan ng 67router sa pamamagitan ng `ServiceSupervisor`, at pagkatapos ay ginagamit bilang isang provider connection.
+   - `external` — isang HTTP endpoint na pinapadalhan ng 67router ngunit **hindi** nito pinamamahalaan
      (kino-configure gamit ang env base URL).
    - `disabled` — nakarehistro ngunit hindi mapipili.
 2. **Selection axis** (relay routing backend) — _kung ipinapadala rito ng relay ang kahilingan_:

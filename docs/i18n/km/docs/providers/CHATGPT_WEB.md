@@ -36,9 +36,9 @@ tunnel ត្រូវការសម្រាប់តែវេនឧបករ�
 ## ការដំឡើងផ្ទាំងគ្រប់គ្រង
 
 1. បើកអ្នកផ្តល់សេវា **ChatGPT Web (Codex)** ហើយបន្ថែមការតភ្ជាប់មួយ។
-2. បិទភ្ជាប់បឋមកថា ChatGPT Cookie ពេញលេញ, tunnel ID, runtime key និងឈ្មោះ custom connector។ ការដំឡើងថ្មីដែលអាចប្រើឧបករណ៍បាន ត្រូវតែប្រើ connector ដែលទើបបង្កើតថ្មី និងមានឈ្មោះត្រឹមត្រូវថា `OmniRoute Codex v2` ដោយកំណត់ Authentication ទៅជា None និង Permissions ទៅជា Allow all actions។
-3. ដំណើរការការត្រួតពិនិត្យការតភ្ជាប់។ OmniRoute បើក Temporary Chat ដែលដំណើរការតាមរយៈកម្មវិធីរុករក និងរកឃើញថាតើ Sol និង Pro អាចប្រើបានសម្រាប់គណនីនេះឬអត់។
-4. រក្សាទុកការតភ្ជាប់។ OmniRoute ជំនួស cookie ដែលបានបិទភ្ជាប់ដោយ Playwright storage state ដែលបានផ្ទៀងផ្ទាត់ ហើយរក្សាទុកវាជាមួយ runtime key តាមរយៈស្រទាប់អរូបីសម្រាប់ព័ត៌មានសម្ងាត់ដែលបានអ៊ិនគ្រីប។
+2. បិទភ្ជាប់បឋមកថា ChatGPT Cookie ពេញលេញ, tunnel ID, runtime key និងឈ្មោះ custom connector។ ការដំឡើងថ្មីដែលអាចប្រើឧបករណ៍បាន ត្រូវតែប្រើ connector ដែលទើបបង្កើតថ្មី និងមានឈ្មោះត្រឹមត្រូវថា `67router Codex v2` ដោយកំណត់ Authentication ទៅជា None និង Permissions ទៅជា Allow all actions។
+3. ដំណើរការការត្រួតពិនិត្យការតភ្ជាប់។ 67router បើក Temporary Chat ដែលដំណើរការតាមរយៈកម្មវិធីរុករក និងរកឃើញថាតើ Sol និង Pro អាចប្រើបានសម្រាប់គណនីនេះឬអត់។
+4. រក្សាទុកការតភ្ជាប់។ 67router ជំនួស cookie ដែលបានបិទភ្ជាប់ដោយ Playwright storage state ដែលបានផ្ទៀងផ្ទាត់ ហើយរក្សាទុកវាជាមួយ runtime key តាមរយៈស្រទាប់អរូបីសម្រាប់ព័ត៌មានសម្ងាត់ដែលបានអ៊ិនគ្រីប។
 
 cookie ដើមមិនត្រូវបានរក្សាទុកទេ បន្ទាប់ពីការរក្សាទុកបានជោគជ័យ។ នៅពេលសម័យផុតកំណត់ សូមបើកការតភ្ជាប់ បិទភ្ជាប់បឋមកថា Cookie ពេញលេញថ្មីមួយ ហើយដំណើរការការត្រួតពិនិត្យម្តងទៀត។ ស្ថានភាព doctor ក្នុងប្រអប់កែសម្រួល រាយការណ៍ដាច់ដោយឡែកអំពីកម្មវិធីរុករក, storage state, ការចូលគណនី, Temporary Chat, tunnel, connector និងការធ្វើដំណើរទៅមករបស់ឧបករណ៍។ ដើម្បីធ្វើស្វ័យប្រវត្តិកម្មការធ្វើបច្ចុប្បន្នភាព cookie នៅពេលសម័យប្តូរ សូមមើលឧបករណ៍ដៃគូនៅក្នុង [ផ្នែកបន្ថែមសមកាលកម្មសម័យកម្មវិធីរុករក](../guides/SESSION-SYNC-EXTENSION.md)។
 
@@ -65,10 +65,10 @@ High ហើយគណនីដែលអាចប្រើ Pro បាន ក៏ប
 ម៉ូដែល backend និងកម្រិតខិតខំ reasoning ថេរ; កម្រិតខិតខំ Responses ដែលបានកំណត់ជាក់លាក់ហើយផ្ទុយគ្នា នឹងបរាជ័យ
 ដោយបិទ ជំនួសឱ្យការផ្លាស់ប្តូររបៀបកម្មវិធីរុករកដែលបានជ្រើសរើសដោយស្ងាត់ៗ។
 
-កុំប្តូរឈ្មោះ ឬប្រើឧបករណ៍ភ្ជាប់ចាស់ `Codex Native` ឬ `OmniRoute Codex` ឡើងវិញ។ ChatGPT
+កុំប្តូរឈ្មោះ ឬប្រើឧបករណ៍ភ្ជាប់ចាស់ `Codex Native` ឬ `67router Codex` ឡើងវិញ។ ChatGPT
 រក្សាទុកកិច្ចសន្យា MCP សាធារណៈក្នុង cache តាមអត្តសញ្ញាណឧបករណ៍ភ្ជាប់ ខណៈដែល bridge ដែលបានធ្វើបច្ចុប្បន្នភាពប្រើ
 កិច្ចសន្យា turn-token ផ្ទាល់ថ្មី។ runtime បដិសេធអត្តសញ្ញាណចាស់ទាំងនោះ ហើយតម្រូវឱ្យមាន
-ឧបករណ៍ភ្ជាប់ថ្មី `OmniRoute Codex v2`។
+ឧបករណ៍ភ្ជាប់ថ្មី `67router Codex v2`។
 
 ## ម៉ូដែលសុវត្ថិភាព
 
@@ -81,11 +81,11 @@ High ហើយគណនីដែលអាចប្រើ Pro បាន ក៏ប
 
 ## VPS ដែលគ្មានអេក្រង់ និង Docker
 
-សម្រាប់ការដំឡើងតាម npm, systemd និង PM2, OmniRoute រកឃើញផ្លូវ Chrome និង Chromium ដែលប្រើជាទូទៅ។ ជាជម្រើស អ្នកអាចកំណត់ `CHATGPT_WEB_CODEX_CHROME_PATH`។ Runtime turns ប្រើ Chrome ដែលមានចំណុចប្រទាក់ដោយចេតនា ពីព្រោះ ChatGPT បដិសេធទម្រង់ browser បែប headless ពិតប្រាកដ។ ដូច្នេះ host ដែលគ្មានអេក្រង់ត្រូវតែដំណើរការ OmniRoute ជាមួយអេក្រង់ Xvfb ឯកជន។ ការកំណត់ផ្លូវ Chrome តែមួយមុខមិនបង្កើតអេក្រង់ឱ្យទេ។
+សម្រាប់ការដំឡើងតាម npm, systemd និង PM2, 67router រកឃើញផ្លូវ Chrome និង Chromium ដែលប្រើជាទូទៅ។ ជាជម្រើស អ្នកអាចកំណត់ `CHATGPT_WEB_CODEX_CHROME_PATH`។ Runtime turns ប្រើ Chrome ដែលមានចំណុចប្រទាក់ដោយចេតនា ពីព្រោះ ChatGPT បដិសេធទម្រង់ browser បែប headless ពិតប្រាកដ។ ដូច្នេះ host ដែលគ្មានអេក្រង់ត្រូវតែដំណើរការ 67router ជាមួយអេក្រង់ Xvfb ឯកជន។ ការកំណត់ផ្លូវ Chrome តែមួយមុខមិនបង្កើតអេក្រង់ឱ្យទេ។
 
-Profile `web` របស់ Docker ចាប់ផ្តើម `chatgpt-web-codex-browser` នៅលើបណ្តាញ Compose ខាងក្នុង។ Sidecar ដំណើរការ Chrome ដែលមានចំណុចប្រទាក់នៅក្នុង Xvfb ដូច្នេះមិនត្រូវការអេក្រង់ជាក់ស្តែងទេ។ Port CDP របស់វាមិនត្រូវបានផ្សព្វផ្សាយនៅលើ host ទេ។ Volume របស់ browser profile ដែលបានការពារត្រូវបានបំបែកពី volume ទិន្នន័យរបស់ OmniRoute ហើយ browser ទទួលបាន shared memory គ្រប់គ្រាន់។ CDP proxy ខាងក្នុងស្តាប់តែនៅលើ port `9223` ក្នុងបណ្តាញ Compose ប៉ុណ្ណោះ។ Chrome នៅតែត្រូវបាន bind ទៅ loopback ក្នុង sidecar។
+Profile `web` របស់ Docker ចាប់ផ្តើម `chatgpt-web-codex-browser` នៅលើបណ្តាញ Compose ខាងក្នុង។ Sidecar ដំណើរការ Chrome ដែលមានចំណុចប្រទាក់នៅក្នុង Xvfb ដូច្នេះមិនត្រូវការអេក្រង់ជាក់ស្តែងទេ។ Port CDP របស់វាមិនត្រូវបានផ្សព្វផ្សាយនៅលើ host ទេ។ Volume របស់ browser profile ដែលបានការពារត្រូវបានបំបែកពី volume ទិន្នន័យរបស់ 67router ហើយ browser ទទួលបាន shared memory គ្រប់គ្រាន់។ CDP proxy ខាងក្នុងស្តាប់តែនៅលើ port `9223` ក្នុងបណ្តាញ Compose ប៉ុណ្ណោះ។ Chrome នៅតែត្រូវបាន bind ទៅ loopback ក្នុង sidecar។
 
-Supervisor lease មួយនៅក្រោម `DATA_DIR` រារាំងដំណើរការ OmniRoute ច្រើនពីការកាន់កាប់ tunnel និង broker state ដូចគ្នា។ ភាពប៉ះទង្គិចត្រូវបានរាយការណ៍ដោយ doctor។
+Supervisor lease មួយនៅក្រោម `DATA_DIR` រារាំងដំណើរការ 67router ច្រើនពីការកាន់កាប់ tunnel និង broker state ដូចគ្នា។ ភាពប៉ះទង្គិចត្រូវបានរាយការណ៍ដោយ doctor។
 
 ## ការស្ដារឡើងវិញបែបអន្តរកម្ម
 

@@ -37,9 +37,9 @@ samme interaktionsbundne lokale værktøjsfunktionalitet, når tunnelen og conne
 ## Opsætning af dashboard
 
 1. Åbn udbyderen **ChatGPT Web (Codex)**, og tilføj en forbindelse.
-2. Indsæt den fulde ChatGPT Cookie-header, tunnel-id'et, runtime-nøglen og navnet på den brugerdefinerede connector. Nye opsætninger med værktøjsfunktionalitet skal bruge en nyoprettet connector med det præcise navn `OmniRoute Codex v2`, hvor Authentication er indstillet til None, og Permissions er indstillet til Allow all actions.
-3. Kør forbindelseskontrollen. OmniRoute åbner en browserbaseret Temporary Chat og registrerer, om Sol og Pro er tilgængelige for kontoen.
-4. Gem forbindelsen. OmniRoute erstatter den indsatte cookie med den verificerede Playwright-lagertilstand og gemmer den sammen med runtime-nøglen via den krypterede abstraktion til legitimationsoplysninger.
+2. Indsæt den fulde ChatGPT Cookie-header, tunnel-id'et, runtime-nøglen og navnet på den brugerdefinerede connector. Nye opsætninger med værktøjsfunktionalitet skal bruge en nyoprettet connector med det præcise navn `67router Codex v2`, hvor Authentication er indstillet til None, og Permissions er indstillet til Allow all actions.
+3. Kør forbindelseskontrollen. 67router åbner en browserbaseret Temporary Chat og registrerer, om Sol og Pro er tilgængelige for kontoen.
+4. Gem forbindelsen. 67router erstatter den indsatte cookie med den verificerede Playwright-lagertilstand og gemmer den sammen med runtime-nøglen via den krypterede abstraktion til legitimationsoplysninger.
 
 Den rå cookie bevares ikke efter en vellykket lagring. Når sessionen udløber, skal du åbne forbindelsen, indsætte en ny fuld Cookie-header og køre kontrollen igen. Doctor-statussen i redigeringsdialogen rapporterer browser, lagertilstand, login, Temporary Chat, tunnel, connector og værktøjets round-trip separat. Se det tilhørende værktøj i [Browser Session Sync-udvidelsen](../guides/SESSION-SYNC-EXTENSION.md) for at automatisere cookie-opdateringer, når sessioner roteres.
 
@@ -66,10 +66,10 @@ High, og konti med Pro-understøttelse giver desuden adgang til Extra High og Pr
 fast backend-model og ræsonneringsindsats; en eksplicit Responses-indsats, der er i konflikt, afvises
 som standard i stedet for stiltiende at ændre den valgte browsertilstand.
 
-Omdøb eller genbrug ikke en ældre `Codex Native`- eller `OmniRoute Codex`-connector. ChatGPT
+Omdøb eller genbrug ikke en ældre `Codex Native`- eller `67router Codex`-connector. ChatGPT
 cachelagrer den offentlige MCP-kontrakt efter connectoridentitet, mens den opdaterede bro bruger en
 ny direkte turn-token-kontrakt. Runtime-miljøet afviser disse ældre identiteter og kræver
-en ny `OmniRoute Codex v2`-connector.
+en ny `67router Codex v2`-connector.
 
 ## Sikkerhedsmodel
 
@@ -89,19 +89,19 @@ en ny `OmniRoute Codex v2`-connector.
 
 ## VPS uden skærm og Docker
 
-Ved installationer med npm, systemd og PM2 registrerer OmniRoute almindelige stier til Chrome og Chromium.
+Ved installationer med npm, systemd og PM2 registrerer 67router almindelige stier til Chrome og Chromium.
 Alternativt kan `CHATGPT_WEB_CODEX_CHROME_PATH` angives. Runtime-ture bruger bevidst Chrome
 med grafisk brugerflade, fordi ChatGPT afviser en ægte headless browserkonfiguration. En vært uden skærm skal derfor
-køre OmniRoute med en privat Xvfb-skærm; det er ikke nok blot at angive stien til Chrome.
+køre 67router med en privat Xvfb-skærm; det er ikke nok blot at angive stien til Chrome.
 
 Docker-profilen `web` starter `chatgpt-web-codex-browser` på det interne Compose-netværk.
 Sidecar-containeren kører Chrome med grafisk brugerflade i Xvfb, så der kræves ingen fysisk skærm. Dens CDP-port
 publiceres ikke på værten. Det beskyttede browserprofildiskenhed er adskilt fra
-OmniRoutes datadiskenhed, og browseren får tilstrækkelig delt hukommelse. Den interne CDP-proxy
+67routers datadiskenhed, og browseren får tilstrækkelig delt hukommelse. Den interne CDP-proxy
 lytter kun på port `9223` i Compose-netværket; Chrome forbliver bundet til loopback i
 sidecar-containeren.
 
-En supervisor-lease under `DATA_DIR` forhindrer flere OmniRoute-processer i at eje
+En supervisor-lease under `DATA_DIR` forhindrer flere 67router-processer i at eje
 den samme tunnel- og brokertilstand. En konflikt rapporteres af doctor.
 
 ## Interaktiv gendannelse

@@ -6,7 +6,7 @@
 
 ## Xulosa
 
-OmniRoute endi `/api/v1/relay/chat/completions` uchun uchta relay rejimini qoʻllab-quvvatlaydi:
+67router endi `/api/v1/relay/chat/completions` uchun uchta relay rejimini qoʻllab-quvvatlaydi:
 
 - `ts`: TypeScript relay’dan jarayon ichida foydalanadi.
 - `bifrost`: Bifrost shlyuzidan majburiy foydalanadi.
@@ -45,12 +45,12 @@ Agar hozirda 9router/CLIPROXYAPI’ni taqqoslayotgan boʻlsangiz:
 
 ## Backend chegarasi shartnomasi
 
-Barqaror mahsulot chegarasi boshqaruv paneli implementatsiyasi emas, balki OmniRoute relay API hisoblanadi. Next.js boshqaruv paneli lokal xizmatlarni oʻrnatishi, sozlashi va nazorat qilishi mumkin, biroq soʻrovlarni marshrutlash relay API orqali kirib, shu chegara ortida uzatilishi kerak.
+Barqaror mahsulot chegarasi boshqaruv paneli implementatsiyasi emas, balki 67router relay API hisoblanadi. Next.js boshqaruv paneli lokal xizmatlarni oʻrnatishi, sozlashi va nazorat qilishi mumkin, biroq soʻrovlarni marshrutlash relay API orqali kirib, shu chegara ortida uzatilishi kerak.
 
 Uzoq muddatli backend tanlovlari:
 
 - TypeScript relay’ni jarayon ichidagi siyosat va zaxira yoʻli sifatida saqlang. Autentifikatsiya, ruxsat etilganlar roʻyxati, soʻrovlarni normallashtirish, hisobga olish va xavfsizlik tekshiruvlari har qanday backend’ga uzatishdan oldin shu yerda qoladi.
-- Joylashtirish kamroq marshrutlash tafovuti, provayderlarni markazlashtirilgan almashtirish yoki bir nechta OmniRoute nusxalari boʻylab masshtablashni talab qilganda, Bifrost’dan afzal koʻriladigan yuqori oʻtkazuvchanlikka ega Tier-1 sidecar sifatida foydalaning.
+- Joylashtirish kamroq marshrutlash tafovuti, provayderlarni markazlashtirilgan almashtirish yoki bir nechta 67router nusxalari boʻylab masshtablashni talab qilganda, Bifrost’dan afzal koʻriladigan yuqori oʻtkazuvchanlikka ega Tier-1 sidecar sifatida foydalaning.
 - 9router va CLIPROXYAPI’ni ichki moslik xizmatlari sifatida saqlang. Ular nazorat qilinadigan lokal jarayonlar sifatida ishlaydi va ularning provayder/CLI xatti-harakati kerakli adapter boʻlganda foydalidir, biroq ular standart Tier-1 marshrutlash mexanizmiga aylanmasligi kerak.
 - Boshqaruv paneliga ixtiyoriy xizmat URL’larini asosiy ishlov berish yoʻliga uzatish imkonini bermang. UI tomonidan taqdim etilgan URL’lar konfiguratsiya kirish maʼlumotlaridir; marshrutlash kodi server tomoni sozlamalari va nazoratchi holatidan roʻyxatdan oʻtgan, holati tekshirilgan backend’larni aniqlashi kerak.
 - Bugungi kunda nazorat qilinadigan xizmatlar uchun loopback HTTP’ni afzal koʻring, chunki boshqariladigan jarayonlar allaqachon HTTP bilan mos API’larni taqdim etadi, marshrut himoyachisi chegarani audit qila oladi va xatolik/zaxira yoʻliga oʻtish xatti-harakati soʻrov jurnallarida koʻrinadi. Kelajakdagi SDK yoki soket transportini faqat u izolyatsiya yoki zaxira yoʻliga oʻtish semantikasini zaiflashtirmasdan p99 marshrutlash kechikishini sezilarli darajada kamaytirsagina qoʻshishga arziydi.

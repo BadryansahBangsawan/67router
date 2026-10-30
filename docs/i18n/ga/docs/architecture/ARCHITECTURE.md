@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Gaeilge)
+# 67router Architecture (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Nuashonraithe an uair dheireanach: 2026-06-28_
 
 ## Achoimre Feidhmiúcháin
 
-Is geata ródaithe AI áitiúil agus painéal rialaithe é OmniRoute atá tógtha ar Next.js.
+Is geata ródaithe AI áitiúil agus painéal rialaithe é 67router atá tógtha ar Next.js.
 Soláthraíonn sé críochphointe aonair atá comhoiriúnach le OpenAI (`/v1/*`) agus ródálann sé trácht thar iliomad soláthraithe réamhtheachtacha, le haistriúchán, cúltaca, athnuachan comharthaí agus rianú úsáide.
 
 Príomhchumais:
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[Deais Brabhsálaí]
     end
 
-    subgraph Router[Próiseas Logánta OmniRoute]
+    subgraph Router[Próiseas Logánta 67router]
         API[API Comhoiriúnachta V1\n/v1/*]
         DASH[Deais + API Bainistíochta\n/api/*]
         CORE[Croílár SSE + Aistriúcháin\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ Modúil soláthraithe OAuth (27 comhad aonair faoi `src/lib/oauth/providers/`):
 
 ## 5) Seirbhísí Leabaithe (v3.8.4)
 
-Is féidir le OmniRoute próisis uirlisí AI atá ag rith go háitiúil, ar a dtugtar
+Is féidir le 67router próisis uirlisí AI atá ag rith go háitiúil, ar a dtugtar
 **seirbhísí leabaithe**, a shuiteáil, a mhaoirsiú agus iarratais a ródú chucu. Cuirtear cúig cinn ar fáil: 9Router, CLIProxyAPI, Bifrost, Mux agus Dario.
 
 Sraitheanna ailtireachta:
@@ -438,7 +438,7 @@ loighic frithdhúnadh amach/buiséid/chúltaca a chur le chéile iad féin.
 - Taisce cuóta: `src/domain/quotaCache.ts`
 - Staid díghrádaithe: `src/domain/degradation.ts`
 - Iniúchadh cumraíochta: `src/domain/configAudit.ts`
-- Tógálaí meiteashonraí freagra OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Tógálaí meiteashonraí freagra 67router: `src/domain/omnirouteResponseMeta.ts`
 - Fochóras measúnaithe: `src/domain/assessment/` — jabanna meastóireachta tréimhsiúla
 
 ### E. Píblíne Údaraithe
@@ -816,7 +816,7 @@ flowchart LR
         Browser[Brabhsálaí an Deais]
     end
 
-    subgraph ContainerOrProcess[Timpeallacht Rite OmniRoute]
+    subgraph ContainerOrProcess[Timpeallacht Rite 67router]
         Next[Freastalaí Next.js\nPORT=20128]
         Core[Croílár SSE + Forghníomhaithe]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Tá feidhmitheoir speisialaithe ag gach soláthraí a shíneann `BaseExecutor` (
 ## Maitrís Comhoiriúnachta Soláthraithe
 
 > **Nóta:** Is sampla ionadaíoch í an mhaitrís thíos de na 351 soláthraí cláraithe in
-> OmniRoute v3.8.0. Chun an liosta údarásach a nuashonraítear go leanúnach a fháil, féach ar
+> 67router v3.8.0. Chun an liosta údarásach a nuashonraítear go leanúnach a fháil, féach ar
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (uathghinte) nó ar fhoinse na
 > fírinne ag `src/shared/constants/providers.ts` (bailíochtaithe ag Zod tráth luchtaithe).
 
@@ -1117,7 +1117,7 @@ Stórálann gabháil mhionsonraithe pálasta iarratais suas le ceithre chéim p�
 - an t-iarratas amh a fuarthas ón gcliant
 - an t-iarratas aistrithe a seoladh réamhtheachtach i ndáiríre
 - freagairt an tsoláthraí athchruthaithe mar JSON; déantar freagairtí sruthaithe a dhlúthú go dtí an achoimre deiridh móide meiteashonraí srutha
-- an fhreagairt deiridh cliaint a sheol OmniRoute ar ais; stóráiltear freagairtí sruthaithe san fhoirm achoimre dhlúth chéanna
+- an fhreagairt deiridh cliaint a sheol 67router ar ais; stóráiltear freagairtí sruthaithe san fhoirm achoimre dhlúth chéanna
 
 ## Teorainneacha atá Íogair ó thaobh Slándála de
 

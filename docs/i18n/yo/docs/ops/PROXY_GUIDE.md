@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Yorùbá)
+# 🌐 67router Proxy Guide (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Forí àwọn ìdènà àgbègbè kọjá, dáàbò bo ìdánimọ̀ rẹ, kí o sì darí ìṣàn AI gba proxy èyíkéyìí — láìsí ìṣòro ìṣètò kankan.**
 
-OmniRoute ní ètò ìṣàkóso proxy tó péye, èyí tó ń jẹ́ kí o darí ìṣàn sí àwọn olupèsè AI òkè gba àwọn proxy HTTP, HTTPS, tàbí SOCKS5. Yálà o wà ní agbègbè tí a ti dí mọ́, o nílò yíyí IP padà, tàbí o fẹ́ ìfipamọ́ fingerprint — ìtọ́sọ́nà yìí ṣàlàyé gbogbo rẹ̀.
+67router ní ètò ìṣàkóso proxy tó péye, èyí tó ń jẹ́ kí o darí ìṣàn sí àwọn olupèsè AI òkè gba àwọn proxy HTTP, HTTPS, tàbí SOCKS5. Yálà o wà ní agbègbè tí a ti dí mọ́, o nílò yíyí IP padà, tàbí o fẹ́ ìfipamọ́ fingerprint — ìtọ́sọ́nà yìí ṣàlàyé gbogbo rẹ̀.
 
 ---
 
@@ -51,7 +51,7 @@ Kódà níta àwọn agbègbè tí a ti dí mọ́, àwọn proxy wúlò fún:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Sẹ́fà OmniRoute                          │
+│                       Sẹ́fà 67router                          │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Ìforúkọsílẹ̀ │    │ Olùpín       │    │ Proxy            │  │
@@ -82,7 +82,7 @@ Kódà níta àwọn agbègbè tí a ti dí mọ́, àwọn proxy wúlò fún:
 
 ## Ètò Proxy Onípele Mẹ́rin
 
-OmniRoute ṣe àtìlẹ́yìn fún ìṣètò proxy ní **àwọn ìpele òmìnira mẹ́rin**, tí a ń yanjú ní ìbámu pẹ̀lú bí ààyò wọn ṣe tẹ̀ lé ara wọn:
+67router ṣe àtìlẹ́yìn fún ìṣètò proxy ní **àwọn ìpele òmìnira mẹ́rin**, tí a ń yanjú ní ìbámu pẹ̀lú bí ààyò wọn ṣe tẹ̀ lé ara wọn:
 
 ```
 Ìtòlẹ́sẹẹsẹ Ìyanjú Ààyò (tí ó ga jù → tí ó kéré jù):
@@ -95,7 +95,7 @@ OmniRoute ṣe àtìlẹ́yìn fún ìṣètò proxy ní **àwọn ìpele òmìn
 
 ### Bí Ìyanjú Ṣe Ń Ṣiṣẹ́
 
-Nígbà tí OmniRoute bá fi ìbéèrè ránṣẹ́ sí olùpèsè upstream kan, ó máa ń pe `resolveProxyForConnectionFromRegistry()`, èyí tí yóò yẹ ipele kọ̀ọ̀kan wò ní ìtòlẹ́sẹẹsẹ:
+Nígbà tí 67router bá fi ìbéèrè ránṣẹ́ sí olùpèsè upstream kan, ó máa ń pe `resolveProxyForConnectionFromRegistry()`, èyí tí yóò yẹ ipele kọ̀ọ̀kan wò ní ìtòlẹ́sẹẹsẹ:
 
 1. **Ipele àkọọ́lẹ̀** — Ṣé proxy kan wà tí a yàn sí ID àsopọ̀ pàtó yìí?
 2. **Ipele olùpèsè** — Ṣé proxy kan wà tí a yàn sí olùpèsè yìí (fún àpẹẹrẹ, `openai`)?
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Gbígbé Wọlé/Gbígbé Jáde
 
-Àwọn proxy wà nínú ètò **Backup/Restore**. Nígbà tí o bá gbé ìṣètò OmniRoute rẹ jáde:
+Àwọn proxy wà nínú ètò **Backup/Restore**. Nígbà tí o bá gbé ìṣètò 67router rẹ jáde:
 
 1. Lọ sí **Dashboard → Settings → Backup**
 2. Tẹ **Export** — ìforúkọsílẹ̀ proxy àti àwọn ìyàn rẹ̀ wà nínú rẹ̀
@@ -247,7 +247,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Ìṣíkiri Láti Ètò Àtijọ́
 
-Tí o bá ti ṣètò àwọn aṣojú nínú ẹ̀yà àtijọ́ kan (ṣáájú registry), OmniRoute yóò ṣí wọn lọ láìfọwọ́sí:
+Tí o bá ti ṣètò àwọn aṣojú nínú ẹ̀yà àtijọ́ kan (ṣáájú registry), 67router yóò ṣí wọn lọ láìfọwọ́sí:
 
 ```
 Ibi ìpamọ́ key_value àtijọ́ → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ Ibi ìpamọ́ key_value àtijọ́ → proxy_registry + proxy_assignments
 
 > 🆕 **Ìfikún láti ọwọ́ [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Ọ̀ràn [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute ṣepọ̀ mọ́ pèpéle àwùjọ **[1proxy](https://1proxy-api.aitradepulse.com)** láti pèsè ààyè sí **ọ̀pọ̀ ọgọ́rùn-ún àwọn aṣojú ọ̀fẹ́ tí a ti fọwọ́sí** láti gbogbo àgbáyé. Èyí dára gan-an fún àwọn aṣàmúlò tí kò ní ohun amáyédẹrùn aṣojú tiwọn.
+67router ṣepọ̀ mọ́ pèpéle àwùjọ **[1proxy](https://1proxy-api.aitradepulse.com)** láti pèsè ààyè sí **ọ̀pọ̀ ọgọ́rùn-ún àwọn aṣojú ọ̀fẹ́ tí a ti fọwọ́sí** láti gbogbo àgbáyé. Èyí dára gan-an fún àwọn aṣàmúlò tí kò ní ohun amáyédẹrùn aṣojú tiwọn.
 
 ### Bí Ó Ṣe Ń Ṣiṣẹ́
 
@@ -272,7 +272,7 @@ OmniRoute ṣepọ̀ mọ́ pèpéle àwùjọ **[1proxy](https://1proxy-api.ait
 └─────────────┘    aṣojú      └─────────────────┘               └──────────┘
 ```
 
-1. **Múdọ́gba** — OmniRoute máa ń gba àwọn aṣojú tí a ti fọwọ́sí láti 1proxy API
+1. **Múdọ́gba** — 67router máa ń gba àwọn aṣojú tí a ti fọwọ́sí láti 1proxy API
 2. **Tọ́jú** — A máa ń fi àwọn aṣojú pamọ́ sínú tábìlì `proxy_registry` kan náà pẹ̀lú `source = 'oneproxy'`
 3. **Ṣàsẹ̀** — Ṣàsẹ̀ nípa ìlànà ìbánisọ̀rọ̀, orílẹ̀-èdè, àti àmì dídára
 4. **Yípadà** — Yan aṣojú tó dára jù lọ nípa lílo dídára, àṣàyàn láìlétòlétò, tàbí àwọn ọgbọ́n títẹ̀lé ara wọn
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Ìdènà Ìṣàwárí & Ìfarapamọ́
 
-OmniRoute kì í kàn darí ìrìnàjò nẹ́tíwọ́ọ̀kì gba aṣojú kọjá — ó tún ń mú kí ìrìnàjò náà dà bí èyí tó bófin mu:
+67router kì í kàn darí ìrìnàjò nẹ́tíwọ́ọ̀kì gba aṣojú kọjá — ó tún ń mú kí ìrìnàjò náà dà bí èyí tó bófin mu:
 
 ### Ṣíṣe Àfarawé Ìtẹ̀wọ́-ọwọ́ TLS
 
@@ -406,11 +406,11 @@ Báàjì náà tún máa ń fi IP aṣojú tí a ti yanjú hàn fún ìjẹ́rì
 
 ## Àwọn Ìpo Aṣojú Òkè
 
-Fún àwọn olùpèsè tó ń lo àpẹẹrẹ CLIProxyAPI, OmniRoute ń ṣe àtìlẹ́yìn fún àwọn ìpo aṣojú òkè mẹ́ta:
+Fún àwọn olùpèsè tó ń lo àpẹẹrẹ CLIProxyAPI, 67router ń ṣe àtìlẹ́yìn fún àwọn ìpo aṣojú òkè mẹ́ta:
 
 | Ìpo           | Àpèjúwe                                                       |
 | ------------- | ------------------------------------------------------------- |
-| `native`      | OmniRoute ń bójú tó ìdarí aṣojú tààrà (àìyípadà)              |
+| `native`      | 67router ń bójú tó ìdarí aṣojú tààrà (àìyípadà)               |
 | `cliproxyapi` | Ó ń fi iṣẹ́ lé ẹ̀dà CLIProxyAPI ìta lọ́wọ́                        |
 | `fallback`    | Ó kọ́kọ́ gbìyànjú native, ó sì padà sí CLIProxyAPI bí ó bá kùnà |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API Tunnels
 
-Fún ṣíṣí ẹ̀dà OmniRoute rẹ sí íńtánẹ́ẹ̀tì gbogbogbò (Cloudflare/ngrok/Tailscale) dípò dídarí ìrìnàjò jáde nípasẹ̀ aṣojú, wo [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST tunnel wà lábẹ́ `/api/tunnels/{cloudflared,ngrok,tailscale}/*`, ó sì dúró lọ́tọ̀ sí ẹ̀wọ̀n aṣojú ìrìnàjò jáde tí a ṣàkọsílẹ̀ lókè.
+Fún ṣíṣí ẹ̀dà 67router rẹ sí íńtánẹ́ẹ̀tì gbogbogbò (Cloudflare/ngrok/Tailscale) dípò dídarí ìrìnàjò jáde nípasẹ̀ aṣojú, wo [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST tunnel wà lábẹ́ `/api/tunnels/{cloudflared,ngrok,tailscale}/*`, ó sì dúró lọ́tọ̀ sí ẹ̀wọ̀n aṣojú ìrìnàjò jáde tí a ṣàkọsílẹ̀ lókè.
 
 ### API 1proxy
 
@@ -515,7 +515,7 @@ Fún ṣíṣí ẹ̀dà OmniRoute rẹ sí íńtánẹ́ẹ̀tì gbogbogbò (Cl
 
 ### Àwọn àṣìṣe "socket hang up" nípasẹ̀ aṣojú
 
-Èyí jẹ́ ohun tó wọ́pọ̀ pẹ̀lú àwọn aṣojú olówó poku tí ń já àwọn ìsopọ̀ tí kò ṣiṣẹ́ mọ́. OmniRoute ti ń bójú tó èyí tẹ́lẹ̀ nípa:
+Èyí jẹ́ ohun tó wọ́pọ̀ pẹ̀lú àwọn aṣojú olówó poku tí ń já àwọn ìsopọ̀ tí kò ṣiṣẹ́ mọ́. 67router ti ń bójú tó èyí tẹ́lẹ̀ nípa:
 
 - Mímú keep-alive ṣiṣẹ́ kúrò lórí àwọn ìsopọ̀ aṣojú (`keepAliveTimeout: 1`)
 - Mímú pipelining ṣiṣẹ́ kúrò (`pipelining: 0`)
@@ -525,7 +525,7 @@ Tí ó bá ń bá a lọ, gbìyànjú aṣojú mìíràn tàbí lo ẹ̀ya ìyí
 
 ### "unsupported_country_region_territory" nígbà OAuth
 
-Rí i dájú pé a ti ṣètò aṣojú náà **ṣáájú** kí o tó bẹ̀rẹ̀ ìṣàn OAuth. OmniRoute ń darí pàṣípààrọ̀ token OAuth nípasẹ̀ aṣojú tí a ṣètò. Kọ́kọ́ ṣètò aṣojú àgbáyé tàbí ti ìpele provider, lẹ́yìn náà ni kí o sopọ̀.
+Rí i dájú pé a ti ṣètò aṣojú náà **ṣáájú** kí o tó bẹ̀rẹ̀ ìṣàn OAuth. 67router ń darí pàṣípààrọ̀ token OAuth nípasẹ̀ aṣojú tí a ṣètò. Kọ́kọ́ ṣètò aṣojú àgbáyé tàbí ti ìpele provider, lẹ́yìn náà ni kí o sopọ̀.
 
 ### A kò lo aṣojú náà
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## Ṣíṣàyẹ̀wò Ìlera Aṣojú (v3.8.16+)
 
-Ẹ̀rọ **proxy fast-fail** ti OmniRoute (`src/lib/proxyHealth.ts`) ń ṣàwárí àwọn aṣojú tí kò ṣiṣẹ́ lábẹ́ 2s nípasẹ̀ àyẹ̀wò ìsopọ̀ TCP kánkán, lẹ́yìn náà ó **ń fi àbájáde náà pamọ́ sínú cache** láti yẹra fún àfikún iṣẹ́ lórí ìbéèrè kọ̀ọ̀kan.
+Ẹ̀rọ **proxy fast-fail** ti 67router (`src/lib/proxyHealth.ts`) ń ṣàwárí àwọn aṣojú tí kò ṣiṣẹ́ lábẹ́ 2s nípasẹ̀ àyẹ̀wò ìsopọ̀ TCP kánkán, lẹ́yìn náà ó **ń fi àbájáde náà pamọ́ sínú cache** láti yẹra fún àfikún iṣẹ́ lórí ìbéèrè kọ̀ọ̀kan.
 
 ### Bí Ó Ṣe Ń Ṣiṣẹ́
 
@@ -658,11 +658,11 @@ invalidateProxyHealth("http://user:pass@203.0.113.7:8080");
 
 ## Ìtúpalẹ̀ & Àkíyèsí Proxy
 
-OmniRoute ń tọpinpin lílò proxy kọ̀ọ̀kan láti ran àwọn olùṣàkóso lọ́wọ́ láti ṣàyẹ̀wò àwọn àṣà ìdarí ọ̀nà, ìlọ́ra tó ga lójijì, àti àwọn ìkùnà tó ń ṣẹlẹ̀ léraléra.
+67router ń tọpinpin lílò proxy kọ̀ọ̀kan láti ran àwọn olùṣàkóso lọ́wọ́ láti ṣàyẹ̀wò àwọn àṣà ìdarí ọ̀nà, ìlọ́ra tó ga lójijì, àti àwọn ìkùnà tó ń ṣẹlẹ̀ léraléra.
 
 ### Ohun Tí A Ń Tọpinpin
 
-Fún gbogbo ìbéèrè tó gba inú proxy tí a ti ṣètò kọjá, OmniRoute ń ṣe àkọsílẹ̀:
+Fún gbogbo ìbéèrè tó gba inú proxy tí a ti ṣètò kọjá, 67router ń ṣe àkọsílẹ̀:
 
 | Ìwọ̀n         | Àpèjúwe                                                 |
 | ------------ | ------------------------------------------------------- |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## Igi Ìpinnu Ọgbọ́n Ìyípo
 
-Nígbà tí a bá yan ọ̀pọ̀ proxy sí scope kan, OmniRoute máa ń lo **ọgbọ́n ìyípo** láti yan èyí tí yóò lò fún ìbéèrè kọ̀ọ̀kan. A máa ń ṣètò ọgbọ́n náà ní ìpele scope (àgbáyé, fún olùpèsè kọ̀ọ̀kan, fún àkọọ́lẹ̀ kọ̀ọ̀kan, fún àkópọ̀ kọ̀ọ̀kan).
+Nígbà tí a bá yan ọ̀pọ̀ proxy sí scope kan, 67router máa ń lo **ọgbọ́n ìyípo** láti yan èyí tí yóò lò fún ìbéèrè kọ̀ọ̀kan. A máa ń ṣètò ọgbọ́n náà ní ìpele scope (àgbáyé, fún olùpèsè kọ̀ọ̀kan, fún àkọọ́lẹ̀ kọ̀ọ̀kan, fún àkópọ̀ kọ̀ọ̀kan).
 
 ### Àwọn Ọgbọ́n Tó Wà
 

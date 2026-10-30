@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Utolsó frissítés:** 2026-06-28 — v3.8.40
 
-Az OmniRoute HTTP-webhookokat indíthat a platform eseményeire. Ezekkel integrálható a
+Az 67router HTTP-webhookokat indíthat a platform eseményeire. Ezekkel integrálható a
 Slack, a PagerDuty, a Datadog, a belső riasztási szolgáltatások vagy bármely HTTP-fogadó.
 
 A diszpécser minden kézbesítést HMAC-SHA256 használatával ír alá, átmeneti
@@ -54,7 +54,7 @@ elnyeli az egyes webhookok hibáit, így egy hibás fogadó nem blokkolhatja a t
 
 ## HMAC-aláírás
 
-Ha egy webhook rendelkezik `secret` értékkel, az OmniRoute aláírja a JSON-törzset, és a következőket küldi:
+Ha egy webhook rendelkezik `secret` értékkel, az 67router aláírja a JSON-törzset, és a következőket küldi:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ A `/dashboard/webhooks` címen elérhető irányítópultoldal (lásd:
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Teszt webhook-kézbesítés az OmniRoute-tól",
+    "message": "Teszt webhook-kézbesítés az 67router-tól",
     "webhookId": "<uuid>"
   }
 }

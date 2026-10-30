@@ -7,7 +7,7 @@
 > **Sors ewlieni tal-verità:** `src/lib/cloudAgent/` u `src/app/api/v1/agents/tasks/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40 (aġġornament tal-frontmatter; 4 aġenti inkluż cursor-cloud)
 
-OmniRoute jorkestra aġenti ta’ kodifikazzjoni ospitati fil-cloud minn partijiet terzi (Codex Cloud, Cursor,
+67router jorkestra aġenti ta’ kodifikazzjoni ospitati fil-cloud minn partijiet terzi (Codex Cloud, Cursor,
 Devin, Jules) bħala kompiti li jdumu għaddejjin fit-tul. Kull aġent jitgeżwer wara interfaċċa uniformi sabiex
 il-klijenti jkunu jistgħu jissottomettu prompt + URL tar-repożitorju u jirċievu r-riżultati mingħajr ma jkollhom
 jittrattaw APIs speċifiċi għall-fornitur.

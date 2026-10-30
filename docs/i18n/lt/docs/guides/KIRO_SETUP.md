@@ -4,7 +4,7 @@
 
 ---
 
-Šiame vadove aprašoma, kaip pridėti Kiro (AWS talpinamo DI programavimo asistento) paskyras prie OmniRoute, daugiausia dėmesio skiriant kelių paskyrų naudojimui vienu metu be seansų konfliktų.
+Šiame vadove aprašoma, kaip pridėti Kiro (AWS talpinamo DI programavimo asistento) paskyras prie 67router, daugiausia dėmesio skiriant kelių paskyrų naudojimui vienu metu be seansų konfliktų.
 
 ---
 
@@ -17,9 +17,9 @@ Tas pats mechanizmas sukelia problemų vykdant `kiro-cli login` kompiuteryje, ku
 
 ---
 
-## Kaip OmniRoute tai išsprendžia (v3.8.0+)
+## Kaip 67router tai išsprendžia (v3.8.0+)
 
-Nuo v3.8.0 OmniRoute kiekvieną kartą importuodama Kiro ryšį iškviečia `registerClient()` (AWS SSO OIDC). Taip kiekvienam OmniRoute ryšiui suteikiama atskira OIDC kliento registracija. Kadangi kiekviena kliento registracija yra nepriklausoma, vienos paskyros atnaujinimas ar pakartotinis autentifikavimas neturi įtakos kitų paskyrų atnaujinimo prieigos raktams.
+Nuo v3.8.0 67router kiekvieną kartą importuodama Kiro ryšį iškviečia `registerClient()` (AWS SSO OIDC). Taip kiekvienam 67router ryšiui suteikiama atskira OIDC kliento registracija. Kadangi kiekviena kliento registracija yra nepriklausoma, vienos paskyros atnaujinimas ar pakartotinis autentifikavimas neturi įtakos kitų paskyrų atnaujinimo prieigos raktams.
 
 Izoliavimas taikomas importavimo naudojant atnaujinimo prieigos raktą metodams, o autentifikavimas naudojant API raktą visiškai išvengia OIDC atnaujinimo seansų:
 
@@ -45,7 +45,7 @@ Iki v3.8.0 importuotiems ryšiams nėra skirta atskira OIDC kliento registracija
 
 ### Būtinosios sąlygos
 
-- OmniRoute v3.8.0 arba naujesnė versija.
+- 67router v3.8.0 arba naujesnė versija.
 - Veikianti Kiro paskyra (el. paštas ir slaptažodis, Google arba GitHub prisijungimas).
 - Pasirinktinai — antra Kiro paskyra.
 
@@ -56,7 +56,7 @@ Iki v3.8.0 importuotiems ryšiams nėra skirta atskira OIDC kliento registracija
    - **Importuoti prieigos raktą** — įklijuokite atnaujinimo prieigos raktą, prasidedantį `aorAAAAAG`.
    - **API raktas** — įklijuokite ilgalaikį Kiro / CodeWhisperer API raktą.
    - **Google / GitHub prisijungimas** — užbaikite OAuth srautą naršyklėje.
-   - **Automatinis importavimas** — spustelėkite mygtuką; OmniRoute nuskaito kredencialus iš vietinės kiro-cli duomenų bazės arba `~/.aws/sso/cache`.
+   - **Automatinis importavimas** — spustelėkite mygtuką; 67router nuskaito kredencialus iš vietinės kiro-cli duomenų bazės arba `~/.aws/sso/cache`.
 3. Ryšys išsaugomas. Srautai, naudojantys atnaujinimo prieigos raktą, automatiškai užregistruoja atskirą OIDC klientą. Srautai, naudojantys API raktą, patikrina raktą per AWS ir nesaugo atnaujinimo prieigos rakto.
 
 ### 2 veiksmas: importuokite antrąją paskyrą
@@ -110,7 +110,7 @@ nenaudoja OAuth atnaujinimo, todėl išvengiama bendrinamos OIDC sesijos panaiki
 2. Pasirinkite **API raktas**.
 3. Įklijuokite API raktą ir pasirinkite AWS regioną: **Aptikti automatiškai** (numatytasis), **JAV rytai
    (Šiaurės Virdžinija)** arba **Europa (Frankfurtas)**.
-4. OmniRoute patikrina raktą ir išsaugo ryšį, susietą su regionu, kuriame
+4. 67router patikrina raktą ir išsaugo ryšį, susietą su regionu, kuriame
    raktas veikia.
 
 ### API
@@ -160,7 +160,7 @@ OIDC ar socialinės prieigos žetoną. `KiroExecutor.execute()` siunčia API rak
 ## OIDC kliento galiojimo pabaiga
 
 AWS SSO OIDC viešieji klientai paprastai nustoja galioti po 90 dienų
-(`clientSecretExpiresAt`). OmniRoute saugo šią laiko žymą `providerSpecificData`,
+(`clientSecretExpiresAt`). 67router saugo šią laiko žymą `providerSpecificData`,
 kad būtų galima stebėti. Jei po maždaug 90 dienų ryšys nustoja būti atnaujinamas, pakartotinai importuokite
 ryšį, kad gautumėte naują OIDC kliento registraciją. Automatinis perregistravimas
 pasibaigus galiojimui numatytas kaip būsimas patobulinimas.
@@ -181,7 +181,7 @@ per AWS SSO OIDC.
 ### Importuoti nepavyksta dėl klaidos „Token validation failed“
 
 - Įsitikinkite, kad atnaujinimo atpažinimo ženklas prasideda `aorAAAAAG`.
-- Įsitikinkite, kad OmniRoute gali pasiekti `https://oidc.us-east-1.amazonaws.com` (arba sukonfigūruotą
+- Įsitikinkite, kad 67router gali pasiekti `https://oidc.us-east-1.amazonaws.com` (arba sukonfigūruotą
   regioną). Jei naudojate įmonės tarpinį serverį, nustatykite teikėjo lygmens tarpinį serverį
   skiltyje **Valdymo skydas → Nustatymai → Tarpiniai serveriai**.
 
@@ -189,7 +189,7 @@ per AWS SSO OIDC.
 
 - Patikrinkite, ar raktas yra Kiro / CodeWhisperer API raktas, o ne atnaujinimo atpažinimo ženklas.
 - Patikrinkite, ar AWS regionas atitinka raktą / paskyrą. Numatytasis regionas yra `us-east-1`.
-- Raktas turi suteikti galimybę iškviesti `ListAvailableProfiles`; priešingu atveju OmniRoute negalės
+- Raktas turi suteikti galimybę iškviesti `ListAvailableProfiles`; priešingu atveju 67router negalės
   nustatyti reikiamo `profileArn`.
 
 Kitų problemų sprendimus žr. pagrindiniame faile [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

@@ -208,13 +208,13 @@ Reglas de saneamiento aplicadas a `upstreamDetails`:
 3. Límite de profundidad: el anidamiento superior a 4 niveles se reemplaza por la cadena `"[truncated]"`.
 4. Los arrays se limitan a 32 elementos.
 
-Solo los lugares de llamada que dispongan de un cuerpo de error analizado del proveedor deben pasar `upstreamDetails`. Los errores internos de OmniRoute (fallos de análisis de SSE, contenido vacío, bloqueos de barreras de protección) no deben incluirlo.
+Solo los lugares de llamada que dispongan de un cuerpo de error analizado del proveedor deben pasar `upstreamDetails`. Los errores internos de 67router (fallos de análisis de SSE, contenido vacío, bloqueos de barreras de protección) no deben incluirlo.
 
 NO pase `err.stack`, `err.message` sin procesar ni ninguna cadena procedente de una excepción en tiempo de ejecución a
 `upstreamDetails`. Estos deben seguir pasando por `errorResponse` / `buildErrorBody(code, msg)`
 sin un cuerpo ascendente.
 
-La transferencia selectiva de respuestas 4xx ascendentes conserva la estructura JSON segura y la redacción del proveedor necesarias para la recuperación automática del cliente, pero no es una transferencia byte por byte: el saneador recursivo siempre se ejecuta antes de la serialización. Los cuerpos cíclicos, que contienen BigInt o con `toJSON()` hostil se rechazan de forma segura y no son aptos para la transferencia. OCR y moderación aplican la misma regla; los cuerpos ascendentes que no sean JSON, estén vacíos o estén etiquetados incorrectamente se convierten en el contenedor de error JSON canónico de OmniRoute.
+La transferencia selectiva de respuestas 4xx ascendentes conserva la estructura JSON segura y la redacción del proveedor necesarias para la recuperación automática del cliente, pero no es una transferencia byte por byte: el saneador recursivo siempre se ejecuta antes de la serialización. Los cuerpos cíclicos, que contienen BigInt o con `toJSON()` hostil se rechazan de forma segura y no son aptos para la transferencia. OCR y moderación aplican la misma regla; los cuerpos ascendentes que no sean JSON, estén vacíos o estén etiquetados incorrectamente se convierten en el contenedor de error JSON canónico de 67router.
 
 ## Limitación conocida de CodeQL: no se reconocen los sanitizadores personalizados
 

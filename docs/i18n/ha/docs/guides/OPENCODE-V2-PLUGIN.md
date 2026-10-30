@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` yana sanya dukkan kundin OmniRoute ɗinka — models, combos da
+`@omniroute/opencode-plugin-v2` yana sanya dukkan kundin 67router ɗinka — models, combos da
 auto-combos — cikin mai zaɓar model na OpenCode v2, tare da sunayen nuni, farashi da
 kasafin free-tier.
 
@@ -15,7 +15,7 @@ suke rabawa a tsakaninsu, don haka haɓaka ɗaya ba zai taɓa tilasta haɓaka ɗ
 ## Abubuwan da ake buƙata
 
 - OpenCode v2.
-- Ƙofar OmniRoute da za a iya isa (`http://localhost:20128` ta tsohuwa).
+- Ƙofar 67router da za a iya isa (`http://localhost:20128` ta tsohuwa).
 - Node.js 22 ko 24.
 
 ## Shigarwa
@@ -78,7 +78,7 @@ yana bayyana endpoint ɗin da abin da aka rasa — don kada mai zaɓe da ya ragu
 | `baseURL`                        | wajibi                                                  | Tushen gateway, `http(s)` kawai; ana ƙara ƙarshen `/v1` inda ake buƙata                                                                     |
 | `apiKey`                         | bayanan shaidar da aka haɗa, sannan `OMNIROUTE_API_KEY` | Maɓallin taɗi don `/v1/*`                                                                                                                   |
 | `managementReadToken`            | yana komawa ga `apiKey`                                 | Maɓalli don `/api/*` — yawanci **ba** ɗaya yake da wancan ba                                                                                |
-| `displayName`                    | `"OmniRoute"`                                           | Sunan mai samarwa a cikin mai zaɓi                                                                                                          |
+| `displayName`                    | `"67router"`                                            | Sunan mai samarwa a cikin mai zaɓi                                                                                                          |
 | `timeoutMs`                      | `10000`                                                 | Iyakar lokacin fetch ga kowane endpoint (auto-combos suna amfani da 5s)                                                                     |
 | `modelCacheTtlMs`                | `300000`                                                | TTL na cache ɗin kundin; hoton da aka adana a diski yana hanzarta farawa daga sanyi                                                         |
 | `timeouts`                       | yana komawa ga `timeoutMs`                              | Kasafin lokaci ga kowane endpoint a ms: `models`, `combos`, `autoCombos`, `enrichment`                                                      |
@@ -116,7 +116,7 @@ Saita `"geminiSanitization": false` don kashe shi.
 
 | Alama                                                           | Dalili                                                                                                                             |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Mai zaɓi bai nuna kowane samfurin OmniRoute ba                  | Ba a samo maɓalli ba (duba gargaɗin farawa), ko kuma ba a iya isa ga gateway ɗin ba                                                |
+| Mai zaɓi bai nuna kowane samfurin 67router ba                   | Ba a samo maɓalli ba (duba gargaɗin farawa), ko kuma ba a iya isa ga gateway ɗin ba                                                |
 | ID ɗin samfura kai tsaye, babu haɗaɗɗun zaɓuɓɓuka, babu farashi | Management endpoints sun ƙi token ɗin — saita `managementReadToken`                                                                |
 | Kundin `freeOnly` gajere ne ko babu komai                       | Babu management token ko kuma an ƙi token ɗin — karanta layin taƙaitaccen sabuntawa (adadin `unmatched-free`) a cikin log ɗin host |
 | An ɗaure zaman zuwa `opencode-<id>/…`                           | Plugin na v1 ya wallafa `opencode-<id>`; v2 yana wallafa `<id>` kai tsaye, don haka sake zaɓar samfurin a ƙarƙashin `<id>/…`       |

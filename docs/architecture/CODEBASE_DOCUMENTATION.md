@@ -1,14 +1,14 @@
 ---
-title: "OmniRoute Codebase Documentation"
+title: "67router Codebase Documentation"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute Codebase Documentation
+# 67router Codebase Documentation
 
 > **Version:** v3.8.51
 > **Last updated:** 2026-06-28
-> **Audience:** Engineers contributing to OmniRoute or building integrations on top of it.
+> **Audience:** Engineers contributing to 67router or building integrations on top of it.
 >
 > For high-level architecture diagrams and the reasoning behind each subsystem, read
 > [ARCHITECTURE.md](./ARCHITECTURE.md). For deep dives on individual subsystems

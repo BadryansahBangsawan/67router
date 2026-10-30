@@ -4,7 +4,7 @@ title: Account-Ban / Banned-Keyword Detection
 
 # Account-Ban / Banned-Keyword Detection
 
-OmniRoute scans upstream error responses for signals that indicate a provider
+67router scans upstream error responses for signals that indicate a provider
 **account is permanently dead** (suspended / deactivated / ToS-banned) and, when
 matched, moves that connection into a **terminal `banned` state** so it is no
 longer selected for requests. This is what the **Security → Banned Keywords**

@@ -4,7 +4,7 @@
 
 ---
 
-A Traffic Inspector az OmniRoute beépített HTTPS-forgalom-hibakeresője — egy Charles Proxy / mitmweb / HTTP Toolkit jellegű eszköz, amely **LLM-tudatos** és **ügynöktudatos**. A `/dashboard/tools/traffic-inspector` útvonalon érhető el, és legfeljebb 5 egyidejű rögzítési forrás élő forgalmát fogadja.
+A Traffic Inspector az 67router beépített HTTPS-forgalom-hibakeresője — egy Charles Proxy / mitmweb / HTTP Toolkit jellegű eszköz, amely **LLM-tudatos** és **ügynöktudatos**. A `/dashboard/tools/traffic-inspector` útvonalon érhető el, és legfeljebb 5 egyidejű rögzítési forrás élő forgalmát fogadja.
 
 **Irányítópult helye:** `/dashboard/tools/traffic-inspector`
 **Oldalsáv csoportja:** Eszközök (az AgentBridge után)
@@ -16,21 +16,21 @@ A Traffic Inspector az OmniRoute beépített HTTPS-forgalom-hibakeresője — eg
 
 ### Mitől egyedi a Traffic Inspector?
 
-| Funkció                                                                                     | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Webalapú                                                                                    |    ✓    |    ✗    |    ✗    |                ✓                |
-| Nyílt forráskódú                                                                            |    ✓    |    ✗    | részben |                ✓                |
-| **Ügynöktudatos** (tudja, ha a kérés az Antigravity/Copilot/stb. alkalmazástól érkezik)     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-tudatos** (értelmezi az OpenAI/Anthropic/Gemini-formátumot, a tokeneket és a modellt) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Látható modellleképezés** (gemini-3-flash → claude-sonnet-4.7)                            |    ✗    |    ✗    |    ✗    |                ✓                |
-| **A proxy és az upstream késleltetésének elkülönítése**                                     | részben |    ✗    |    ✗    |                ✓                |
-| **Integrálva az OmniRoute-tal**: útválasztás, tartalék útvonal, költség                     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Rendszerszintű proxyhibakeresés** (a gép bármely alkalmazásához)                          |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Egyéni gazdagépek forgalmának rögzítése** (gazdagépenkénti DNS-átirányítás)               |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY környezeti változós mód**                                                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Beszélgetésnézet** (többfordulós buborékok, tool_use/tool_result)                         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE-adatfolyam-egyesítő** (rekonstrukció deltaeseményekből)                               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Munkamenet-rögzítés** (elnevezhető, exportálható .har/.jsonl formátumban)                 |    ✗    |    ✓    |    ✓    |                ✓                |
+| Funkció                                                                                     | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Webalapú                                                                                    |    ✓    |    ✗    |    ✗    |               ✓                |
+| Nyílt forráskódú                                                                            |    ✓    |    ✗    | részben |               ✓                |
+| **Ügynöktudatos** (tudja, ha a kérés az Antigravity/Copilot/stb. alkalmazástól érkezik)     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-tudatos** (értelmezi az OpenAI/Anthropic/Gemini-formátumot, a tokeneket és a modellt) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Látható modellleképezés** (gemini-3-flash → claude-sonnet-4.7)                            |    ✗    |    ✗    |    ✗    |               ✓                |
+| **A proxy és az upstream késleltetésének elkülönítése**                                     | részben |    ✗    |    ✗    |               ✓                |
+| **Integrálva az 67router-tal**: útválasztás, tartalék útvonal, költség                      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Rendszerszintű proxyhibakeresés** (a gép bármely alkalmazásához)                          |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Egyéni gazdagépek forgalmának rögzítése** (gazdagépenkénti DNS-átirányítás)               |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY környezeti változós mód**                                                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Beszélgetésnézet** (többfordulós buborékok, tool_use/tool_result)                         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE-adatfolyam-egyesítő** (rekonstrukció deltaeseményekből)                               |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Munkamenet-rögzítés** (elnevezhető, exportálható .har/.jsonl formátumban)                 |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Az architektúra egy bekezdésben
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, ha SSE-válasz
   mappedTo: string | null; // x-omniroute-mapped fejléc
-  costEstimateUsd: number | null; // az OmniRoute díjszabásán alapuló becsült költség
+  costEstimateUsd: number | null; // az 67router díjszabásán alapuló becsült költség
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### A rendszerproxy nem lett visszaállítva
 
-Ha az OmniRoute összeomlik, miközben a rendszerszintű proxy mód aktív:
+Ha az 67router összeomlik, miközben a rendszerszintű proxy mód aktív:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Alapútvonal: `/api/tools/traffic-inspector/`
 | GET     | `/requests`                 | Kérések listázása (szűrhető: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET     | `/requests/{id}`            | Egyetlen kérés részletei                                                             |
 | DELETE  | `/requests`                 | A memóriában tárolt puffer törlése                                                   |
-| POST    | `/requests/{id}/replay`     | Ugyanazon kérés újbóli végrehajtása az OmniRoute útválasztón keresztül               |
+| POST    | `/requests/{id}/replay`     | Ugyanazon kérés újbóli végrehajtása az 67router útválasztón keresztül                |
 | PUT     | `/requests/{id}/annotation` | Kéréshez tartozó megjegyzés mentése vagy frissítése                                  |
 
 ### WebSocket

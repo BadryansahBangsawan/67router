@@ -6,7 +6,7 @@
 
 ## Podsumowanie
 
-OmniRoute obsługuje teraz trzy tryby przekazywania dla `/api/v1/relay/chat/completions`:
+67router obsługuje teraz trzy tryby przekazywania dla `/api/v1/relay/chat/completions`:
 
 - `ts`: używa przekaźnika TypeScript w ramach procesu.
 - `bifrost`: wymusza użycie bramy Bifrost.
@@ -45,12 +45,12 @@ Jeśli obecnie porównujesz 9router/CLIPROXYAPI:
 
 ## Kontrakt granicy backendu
 
-Stabilną granicą produktu jest API przekaźnika OmniRoute, a nie implementacja panelu. Panel Next.js może instalować, konfigurować i nadzorować usługi lokalne, ale trasowanie żądań powinno rozpoczynać się w API przekaźnika, a przekazanie powinno następować za tą granicą.
+Stabilną granicą produktu jest API przekaźnika 67router, a nie implementacja panelu. Panel Next.js może instalować, konfigurować i nadzorować usługi lokalne, ale trasowanie żądań powinno rozpoczynać się w API przekaźnika, a przekazanie powinno następować za tą granicą.
 
 Długoterminowe opcje backendu:
 
 - Zachowaj przekaźnik TypeScript jako działającą w ramach procesu ścieżkę zasad i przełączania awaryjnego. Uwierzytelnianie, listy dozwolonych elementów, normalizacja żądań, rozliczanie i kontrole bezpieczeństwa pozostają tutaj przed przekazaniem do dowolnego backendu.
-- Używaj Bifrost jako preferowanego procesu pomocniczego Tier-1 o wysokiej przepustowości, gdy wdrożenie wymaga mniejszej zmienności trasowania, scentralizowanej rotacji dostawców lub skalowania między wieloma replikami OmniRoute.
+- Używaj Bifrost jako preferowanego procesu pomocniczego Tier-1 o wysokiej przepustowości, gdy wdrożenie wymaga mniejszej zmienności trasowania, scentralizowanej rotacji dostawców lub skalowania między wieloma replikami 67router.
 - Zachowaj 9router i CLIPROXYAPI jako wbudowane usługi zgodności. Działają one jako nadzorowane procesy lokalne i są przydatne, gdy ich sposób obsługi dostawców/CLI jest pożądanym adapterem, ale nie powinny stawać się domyślnym mechanizmem trasowania Tier-1.
 - Nie pozwalaj panelowi przekazywać dowolnych adresów URL usług do ścieżki krytycznej. Adresy URL podawane przez interfejs użytkownika są danymi konfiguracyjnymi; kod trasujący powinien rozpoznawać zarejestrowane backendy ze sprawdzonym stanem na podstawie ustawień serwerowych i stanu nadzorcy.
 - Obecnie preferuj HTTP przez interfejs pętli zwrotnej dla nadzorowanych usług, ponieważ zarządzane procesy już udostępniają interfejsy API zgodne z HTTP, strażnik trasy może kontrolować tę granicę, a zachowanie w przypadku awarii i przełączania awaryjnego jest widoczne w dziennikach żądań. Dodanie w przyszłości transportu opartego na SDK lub gniazdach będzie uzasadnione tylko wtedy, gdy w mierzalny sposób zmniejszy opóźnienie trasowania p99 bez osłabiania izolacji ani semantyki przełączania awaryjnego.

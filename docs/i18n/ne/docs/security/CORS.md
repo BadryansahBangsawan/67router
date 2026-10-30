@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ले एउटै केन्द्रीकृत अनुमति-सूचीबाट कुन-कुन **ब्राउजर origin** ले cross-origin प्रतिक्रियाहरू पढ्न सक्छन् भन्ने नियन्त्रण गर्छ। यो मोडेल पूर्वनिर्धारित रूपमा **fail-closed** हुन्छ:
+67router ले एउटै केन्द्रीकृत अनुमति-सूचीबाट कुन-कुन **ब्राउजर origin** ले cross-origin प्रतिक्रियाहरू पढ्न सक्छन् भन्ने नियन्त्रण गर्छ। यो मोडेल पूर्वनिर्धारित रूपमा **fail-closed** हुन्छ:
 तपाईंले स्पष्ट रूपमा अनुमति नदिएसम्म कुनै पनि origin लाई अनुमति दिइँदैन। यस पृष्ठले अनुमति-सूची कसरी निर्धारण हुन्छ, `CORS_ALLOW_ALL=true` ले वास्तवमा के उजागर गर्छ (र, महत्त्वपूर्ण रूपमा, के **गर्दैन**), विकास र उत्पादन वातावरणलाई कसरी सुरक्षित रूपमा कन्फिगर गर्ने, र wildcard सक्रिय हुँदा ड्यासबोर्डले देखाउने runtime चेतावनीबारे व्याख्या गर्छ।
 
 **आधिकारिक स्रोत:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
@@ -41,13 +41,13 @@ OmniRoute ले एउटै केन्द्रीकृत अनुमत�
 ## जोखिम मोडेल — `CORS_ALLOW_ALL=true` ले वास्तवमा के उजागर गर्छ
 
 OWASP को सामान्य चेतावनी ("wildcard CORS = कुनै पनि site ले तपाईंको API call गर्न सक्छ") लाई
-गम्भीरतापूर्वक लिनु उचित हुन्छ, तर OmniRoute को जोखिम **सामान्य अवस्थाभन्दा साँघुरो** छ,
+गम्भीरतापूर्वक लिनु उचित हुन्छ, तर 67router को जोखिम **सामान्य अवस्थाभन्दा साँघुरो** छ,
 किनभने कार्यान्वयनसम्बन्धी एउटा ठोस तथ्य यस्तो छ:
 
 > **केन्द्रीय `applyCorsHeaders()` ले कहिल्यै
 > `Access-Control-Allow-Credentials` पठाउँदैन।** Server ले
 > `Access-Control-Allow-Credentials: true` नपठाएसम्म ब्राउजरले _credentialed_
-> (cookie सहितको) cross-origin प्रतिक्रिया उपलब्ध गराउँदैन। OmniRoute को साझा CORS path ले
+> (cookie सहितको) cross-origin प्रतिक्रिया उपलब्ध गराउँदैन। 67router को साझा CORS path ले
 > यो कहिल्यै गर्दैन।
 
 `CORS_ALLOW_ALL=true` हुँदा समेत प्रत्येक सतहका लागि यसको अर्थ:
@@ -86,7 +86,7 @@ cross-origin credentialed read लाई response header हरूले अन�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- यदि OmniRoute reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- यदि 67router reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) पछाडि चल्छ भने, CORS तपाईंको **एक मात्र** नियन्त्रण होइन — loopback route
   guard ले अझै पनि spawn-सक्षम routes लाई सुरक्षित गर्छ (
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md) हेर्नुहोस्)। 403 लाई "ठीक गर्न"
@@ -102,7 +102,7 @@ cross-origin credentialed read लाई response header हरूले अन�
 dev मा पनि तपाईंलाई wildcard विरलै आवश्यक पर्छ। तपाईंले प्रयोग गर्ने dev servers लाई मात्र अनुमति दिनुहोस्:
 
 ```bash
-# local OmniRoute लाई call गर्ने Vite (5173) + Next.js (3000) dev servers
+# local 67router लाई call गर्ने Vite (5173) + Next.js (3000) dev servers
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -122,14 +122,14 @@ restart नगरी runtime मा **Dashboard → Security → CORS Allowed Or
   management/dashboard origins लाई कुनै पनि permissive config बाट बाहिर राख्नुहोस्; तिनीहरू
   ठ्याक्कै fail-closed नै रहनुपर्छ।
 
-## उदाहरण: OmniRoute को अगाडि रिभर्स प्रोक्सी
+## उदाहरण: 67router को अगाडि रिभर्स प्रोक्सी
 
-CORS लाई OmniRoute आफैँले लागू गर्छ, त्यसैले प्रोक्सीले सामान्यतया `Access-Control-*`
+CORS लाई 67router आफैँले लागू गर्छ, त्यसैले प्रोक्सीले सामान्यतया `Access-Control-*`
 हेडरहरू थप्नु वा पुनर्लेखन गर्नु **हुँदैन** (दोहोरो हेडरहरूले ब्राउजरहरूमा समस्या निम्त्याउँछन्)। TLS अन्त्य गर्नुहोस्
-र फर्वार्ड गर्नुहोस् — प्रिफ्लाइटको जवाफ OmniRoute लाई दिन दिनुहोस्:
+र फर्वार्ड गर्नुहोस् — प्रिफ्लाइटको जवाफ 67router लाई दिन दिनुहोस्:
 
 ```nginx
-# nginx — OmniRoute मा फर्वार्ड गर्नुहोस्; यहाँ Access-Control-* इन्जेक्ट नगर्नुहोस्
+# nginx — 67router मा फर्वार्ड गर्नुहोस्; यहाँ Access-Control-* इन्जेक्ट नगर्नुहोस्
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -137,12 +137,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # फर्वार्डिङ हेडरहरू कायम राख्नुहोस्: उही होस्टमा रहेको प्रोक्सी लुपब्याकबाट जडान हुन्छ, र यिनैले
-    # OmniRoute लाई कल गर्ने व्यक्ति स्थानीय अपरेटर होइन भनेर बताउँछन्। यीमध्ये कुनै पनि हेडर नथप्ने प्रोक्सीले
+    # 67router लाई कल गर्ने व्यक्ति स्थानीय अपरेटर होइन भनेर बताउँछन्। यीमध्ये कुनै पनि हेडर नथप्ने प्रोक्सीले
     # हरेक रिमोट कलरलाई स्थानीयजस्तो देखाउँछ। X-Forwarded-For लाई 127.0.0.1 मा पनि कहिल्यै सेट नगर्नुहोस्।
 }
 ```
 
-अनुमति दिइएका ब्राउजर ओरिजिनहरू प्रोक्सीमा होइन, OmniRoute (`CORS_ALLOWED_ORIGINS` वा
+अनुमति दिइएका ब्राउजर ओरिजिनहरू प्रोक्सीमा होइन, 67router (`CORS_ALLOWED_ORIGINS` वा
 Security ट्याब) मा सेट गर्नुहोस्।
 
 ## स्रोत फाइलहरू

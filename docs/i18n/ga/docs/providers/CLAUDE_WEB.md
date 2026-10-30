@@ -124,7 +124,7 @@ Déantar na cásanna atá spleách ar Playwright in `tests/unit/claude-web-auto-
 
 ### Socrú
 
-1. Tosaigh OmniRoute le `npm run dev` nó le suiteáil tiomsaithe.
+1. Tosaigh 67router le `npm run dev` nó le suiteáil tiomsaithe.
 2. Oscail Deais → Soláthraithe → Cuir Soláthraí Leis.
 3. Roghnaigh catagóir Web Cookie agus Claude Web.
 4. Greamaigh an ceanntásc iomlán Cookie a cóipeáladh ó iarratas fíordheimhnithe `claude.ai`.

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute suteikia prieigą prie Cursor plano **vaizdų generavimo** per `POST /v1/images/generations`, naudojant tą patį teikėjo ID kaip ir pokalbiams: `cursor` (alternatyvus pavadinimas `cu`).
+67router suteikia prieigą prie Cursor plano **vaizdų generavimo** per `POST /v1/images/generations`, naudojant tą patį teikėjo ID kaip ir pokalbiams: `cursor` (alternatyvus pavadinimas `cu`).
 
 | Laukas               | Reikšmė                                                                                          |
 | -------------------- | ------------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ OmniRoute suteikia prieigą prie Cursor plano **vaizdų generavimo** per `POST /
 
 ## Kodėl naudojama Agent CLI
 
-Cursor pokalbiams OmniRoute naudoja `agent.v1.AgentService/Run` (protobuf). Šis kelias **atmeta** integruotus kliento įrankius (shell, write, …). Vaizdų generavimas yra vietinis Cursor įrankis, kurį **`agent` CLI** vykdo naudodama licencijos vietą. Todėl vaizdų apdorojimo programa paleidžia `agent` su užrakinta užklausa ir kiekvienai užklausai skirta laikina darbo sritimi (pagal tokią pačią struktūrą kaip bendruomenės licencijos vietų sąsajos), o tada grąžina su OpenAI suderinamą `b64_json`.
+Cursor pokalbiams 67router naudoja `agent.v1.AgentService/Run` (protobuf). Šis kelias **atmeta** integruotus kliento įrankius (shell, write, …). Vaizdų generavimas yra vietinis Cursor įrankis, kurį **`agent` CLI** vykdo naudodama licencijos vietą. Todėl vaizdų apdorojimo programa paleidžia `agent` su užrakinta užklausa ir kiekvienai užklausai skirta laikina darbo sritimi (pagal tokią pačią struktūrą kaip bendruomenės licencijos vietų sąsajos), o tada grąžina su OpenAI suderinamą `b64_json`.
 
 ## Prieigos apribojimas (griežtosios taisyklės Nr. 15 ir Nr. 17)
 
@@ -37,7 +37,7 @@ procesą. Tą pačią likusiai `LOCAL_ONLY` pakopai taikomą politiką žr.
 `CURSOR_IMG_MAX_CONCURRENT` įgyvendinamas naudojant atmintyje laikomą skaitiklį / eilę,
 apribotą Node modulio egzemplioriumi
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`).
-Tai tinkamai riboja vienu metu paleidžiamų `agent` procesų skaičių viename OmniRoute
+Tai tinkamai riboja vienu metu paleidžiamų `agent` procesų skaičių viename 67router
 procese, tačiau **nekoordinuoja** kelių procesų / egzempliorių, naudojančių tą pačią
 Cursor licencijos vietą (pvz., kelių replikų dieginyje) — kiekvienas egzempliorius taiko
 savo nepriklausomą apribojimą. Vieno egzemplioriaus dieginyje (numatytasis variantas)
@@ -48,7 +48,7 @@ nukreipti Cursor vaizdų srautą į vieną egzempliorių.
 ## Reikalavimai
 
 1. Valdymo skydelyje prijungta Cursor paskyra (OAuth arba `crsr_…` API raktas).
-2. OmniRoute procesui pasiekiamas Cursor Agent dvejetainis failas:
+2. 67router procesui pasiekiamas Cursor Agent dvejetainis failas:
    - aplinkos kintamasis `CURSOR_AGENT_BIN=/path/to/agent`, arba
    - `~/.local/bin/agent`, arba
    - `providerSpecificData.agentBin` Cursor ryšyje.

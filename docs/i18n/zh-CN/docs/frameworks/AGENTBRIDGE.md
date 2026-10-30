@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge 是 OmniRoute 的 MITM（中间人）代理，可拦截来自 IDE AI 智能体的 HTTPS 流量，并通过 OmniRoute 的统一路由引擎重新路由。它支持 **10 个 IDE 智能体** — Antigravity、Kiro、GitHub Copilot、GHE Copilot、OpenAI Codex、Cursor、Zed、Claude Code、Open Code 和 Trae（正在调研）— 使 OmniRoute 成为市场上覆盖范围最广的 AI 编程助手 MITM 代理。
+AgentBridge 是 67router 的 MITM（中间人）代理，可拦截来自 IDE AI 智能体的 HTTPS 流量，并通过 67router 的统一路由引擎重新路由。它支持 **10 个 IDE 智能体** — Antigravity、Kiro、GitHub Copilot、GHE Copilot、OpenAI Codex、Cursor、Zed、Claude Code、Open Code 和 Trae（正在调研）— 使 67router 成为市场上覆盖范围最广的 AI 编程助手 MITM 代理。
 
 **仪表板位置：** `/dashboard/tools/agent-bridge`
 **侧边栏分组：** 工具（位于 Cloud Agents 之后）
@@ -16,34 +16,34 @@ AgentBridge 是 OmniRoute 的 MITM（中间人）代理，可拦截来自 IDE AI
 
 ### 什么是 AgentBridge？
 
-当 IDE 代理（例如 GitHub Copilot、Cursor、Claude Code）发起 API 调用时，它会直接连接到上游 AI 提供者（OpenAI、Anthropic 等）。AgentBridge 在 TLS 层面透明地拦截该连接——无需对代理进行任何配置更改——并通过 OmniRoute 重写请求。
+当 IDE 代理（例如 GitHub Copilot、Cursor、Claude Code）发起 API 调用时，它会直接连接到上游 AI 提供者（OpenAI、Anthropic 等）。AgentBridge 在 TLS 层面透明地拦截该连接——无需对代理进行任何配置更改——并通过 67router 重写请求。
 
 这意味着你可以：
 
-- **将任何代理重新路由到任何提供者**：Copilot 正在与 OpenAI 通信？将其重定向到 Anthropic Claude、Gemini，或 OmniRoute 375 家提供者中的任意一家。
+- **将任何代理重新路由到任何提供者**：Copilot 正在与 OpenAI 通信？将其重定向到 Anthropic Claude、Gemini，或 67router 375 家提供者中的任意一家。
 - **应用模型映射**：在处理器（handler）层面透明地将 `gemini-3-flash` → `claude-sonnet-4.7`。
 - **观测所有代理流量**：每个被拦截的请求都会发布到 [流量检查器](./TRAFFIC_INSPECTOR.md)。
-- **应用 OmniRoute 的弹性能力**：组合路由、熔断器、回退和成本追踪同样适用于 IDE 代理流量。
+- **应用 67router 的弹性能力**：组合路由、熔断器、回退和成本追踪同样适用于 IDE 代理流量。
 
 ### 与市场同类产品的定位对比
 
-| 功能           | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity    |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)     |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex   |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE     |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries |    —    |    ✓     |        —        |             ✓             |
-| Claude Code    |    —    |    —     |        ✓        |             ✓             |
-| Open Code      |    —    |    —     |        ✓        |             ✓             |
-| Trae           |    —    |    —     |        —        |         🔍 调研中         |
-| 仪表板界面     |    ✓    |    ✗     |        ✗        |             ✓             |
-| 流量检查器     |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute 路由 |    ✗    |    ✗     |        ✗        |             ✓             |
-| 模型映射界面   |    ✗    |    ✗     |        ✗        |             ✓             |
-| 绕过列表       |    ✗    |    ✗     |        ✓        |             ✓             |
-| 上游 CA 证书   |    ✗    |    ✗     |        ✓        |             ✓             |
+| 功能           | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity    |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)     |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex   |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE     |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries |    —    |    ✓     |        —        |            ✓             |
+| Claude Code    |    —    |    —     |        ✓        |            ✓             |
+| Open Code      |    —    |    —     |        ✓        |            ✓             |
+| Trae           |    —    |    —     |        —        |        🔍 调研中         |
+| 仪表板界面     |    ✓    |    ✗     |        ✗        |            ✓             |
+| 流量检查器     |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router 路由  |    ✗    |    ✗     |        ✗        |            ✓             |
+| 模型映射界面   |    ✗    |    ✗     |        ✗        |            ✓             |
+| 绕过列表       |    ✗    |    ✗     |        ✓        |            ✓             |
+| 上游 CA 证书   |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  （端口 443，CJS 子进程）
     │  根据 Host 标头的 SNI 解析目标
     │  生成由 AgentBridge CA 签名的逐 SNI TLS 证书
     ├── 匹配绕过列表？→ TCP 直通（不解密）
-    ├── 匹配目标？→ fetch → OmniRoute 路由器（端口 20128）
+    ├── 匹配目标？→ fetch → 67router 路由器（端口 20128）
     │       └── handler.intercept() — TypeScript
     │               ├── 对请求正文/标头调用 maskSecrets()
     │               ├── TrafficBuffer.push() — 发布到流量检查器
@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux（NSS — Chrome/Firefox）：**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS（钥匙串）：**
@@ -250,10 +250,10 @@ GitHub Copilot 的 `/etc/hosts` 条目示例：
 
 使用每个代理卡片中的模型映射表定义源模型 → 目标模型的映射：
 
-| 源模型（代理原生） | 目标模型（OmniRoute） |
-| ------------------ | --------------------- |
-| `gpt-4o`           | `claude-sonnet-4.7`   |
-| `*`（通配符）      | `claude-haiku-4.7`    |
+| 源模型（代理原生） | 目标模型（67router） |
+| ------------------ | -------------------- |
+| `gpt-4o`           | `claude-sonnet-4.7`  |
+| `*`（通配符）      | `claude-haiku-4.7`   |
 
 通配符 `*` 会将所有无法识别的模型映射到指定目标。映射持久化存储在 `agent_bridge_mappings` 表中。
 
@@ -266,7 +266,7 @@ GitHub Copilot 的 `/etc/hosts` 条目示例：
 
 ### 3.5 风险提示
 
-AgentBridge 会拦截 IDE 用于向上游提供者进行身份验证的凭据（OAuth 令牌、API 密钥）。这些凭据在记录日志前会被**掩码处理**（参见 §2.7），但对 OmniRoute 的 MITM 层仍然可见。首次激活每个代理时，都会显示一个可关闭的风险提示模态框。
+AgentBridge 会拦截 IDE 用于向上游提供者进行身份验证的凭据（OAuth 令牌、API 密钥）。这些凭据在记录日志前会被**掩码处理**（参见 §2.7），但对 67router 的 MITM 层仍然可见。首次激活每个代理时，都会显示一个可关闭的风险提示模态框。
 
 ### 3.6 维护与诊断
 
@@ -385,7 +385,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### 敏感主机绕过列表
 
-绕过列表确保金融机构、OAuth/SSO 提供者以及其他敏感主机的流量**永远不会被解密**。它们的 TLS 流量会通过透明 TCP 隧道传输 — OmniRoute 永远无法看到明文。
+绕过列表确保金融机构、OAuth/SSO 提供者以及其他敏感主机的流量**永远不会被解密**。它们的 TLS 流量会通过透明 TCP 隧道传输 — 67router 永远无法看到明文。
 
 默认绕过模式包括：
 
@@ -436,7 +436,7 @@ sudo fuser -k 443/tcp  # 强制终止（请谨慎使用）
 
 如果启动 AgentBridge 后 IDE 显示 TLS 错误：
 
-1. 验证证书是否已安装：`security find-certificate -c "OmniRoute AgentBridge"`（macOS）或 `certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
+1. 验证证书是否已安装：`security find-certificate -c "67router AgentBridge"`（macOS）或 `certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
 2. 某些应用会维护自己的信任存储区（如 Firefox、Linux 上的 Chrome）。再次运行“Trust Cert”，并检查 NSS/Firefox 专用证书存储区。
 3. 信任证书后重启 IDE——进行中的 TLS 会话仍使用旧的信任状态。
 
@@ -487,7 +487,7 @@ ipconfig /flushdns
 如果 AgentBridge 已拦截请求，但所有请求均失败：
 
 1. 验证 `/dashboard/providers` 中至少已连接一个提供者
-2. 检查 OmniRoute 服务器日志：在 `.env` 中设置 `APP_LOG_LEVEL=debug`
+2. 检查 67router 服务器日志：在 `.env` 中设置 `APP_LOG_LEVEL=debug`
 3. 验证 `OMNIROUTE_BASE_URL` 是否指向正确的路由器端点（默认值：`http://127.0.0.1:20128`）
 
 ---

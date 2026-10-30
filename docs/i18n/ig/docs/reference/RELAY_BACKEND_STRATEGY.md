@@ -6,7 +6,7 @@
 
 ## Nchịkọta
 
-OmniRoute na-akwadozi ụdị relay atọ maka `/api/v1/relay/chat/completions`:
+67router na-akwadozi ụdị relay atọ maka `/api/v1/relay/chat/completions`:
 
 - `ts`: Jiri relay TypeScript n'ime usoro ahụ.
 - `bifrost`: Manye gateway Bifrost.
@@ -45,12 +45,12 @@ Mgbe ị na-arụ ọrụ n'ọ̀tụ̀ request dị elu (ọtụtụ token kwa 
 
 ## Nkwekọrịta ókè backend
 
-Ókè ngwaahịa kwụsiri ike bụ OmniRoute relay API, ọ bụghị mmejuputa dashboard. Dashboard Next.js nwere ike iwunye, hazie, ma lekọta service mpaghara, mana request routing kwesịrị ịbanye site na relay API wee nyefee ọrụ n'azụ ókè ahụ.
+Ókè ngwaahịa kwụsiri ike bụ 67router relay API, ọ bụghị mmejuputa dashboard. Dashboard Next.js nwere ike iwunye, hazie, ma lekọta service mpaghara, mana request routing kwesịrị ịbanye site na relay API wee nyefee ọrụ n'azụ ókè ahụ.
 
 Nhọrọ backend ogologo oge:
 
 - Debe relay TypeScript dịka ụzọ policy na fallback nke dị n'ime usoro ahụ. Auth, allowlist, request normalization, accounting, na safety check ga-anọ ebe a tupu handoff backend ọ bụla.
-- Jiri Bifrost dịka sidecar Tier-1 kachasị amasị maka throughput dị elu mgbe deployment chọrọ mgbanwe routing dị ala, provider rotation etinyere n'otu ebe, ma ọ bụ scale-out gafee ọtụtụ replica OmniRoute.
+- Jiri Bifrost dịka sidecar Tier-1 kachasị amasị maka throughput dị elu mgbe deployment chọrọ mgbanwe routing dị ala, provider rotation etinyere n'otu ebe, ma ọ bụ scale-out gafee ọtụtụ replica 67router.
 - Debe 9router na CLIPROXYAPI dịka service compatibility etinyere n'ime sistemụ. Ha na-arụ dịka process mpaghara a na-elekọta ma baa uru mgbe omume provider/CLI ha bụ adapter achọrọ, mana ha ekwesịghị ịghọ engine routing Tier-1 ndabara.
 - Ekwela ka dashboard nyefee URL service ọ bụla n'ụzọ a na-ejikarị eme ihe. URL nke UI nyere bụ input nhazi; code routing kwesịrị ịchọta backend edebanyere aha ma gafee health check site na setting dị n'akụkụ server na state supervisor.
 - Họrọ loopback HTTP maka service a na-elekọta taa n'ihi na process ndị a na-achịkwa enyelarị API dakọtara na HTTP, route guard nwere ike inyocha ókè ahụ, a na-ahụkwa omume failure/fallback na request log. Ọ bara uru ịgbakwunye SDK ma ọ bụ socket transport n'ọdịnihu naanị ma ọ bụrụ na ọ na-ebelata latency routing p99 n'ụzọ a pụrụ ịtụ ma ghara imebi isolation ma ọ bụ semantics fallback.

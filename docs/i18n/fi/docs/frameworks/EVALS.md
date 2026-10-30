@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40
 
-OmniRoute sisältää yleiskäyttöisen arviointikehyksen, jonka avulla voit vertailla reititysmäärityksiä, yksittäisiä palveluntarjoajia/malleja tai mukana toimitettuja "golden set" -testikokonaisuuksia. Sen avulla voit varmistaa reititysmuutosten toimivuuden, validoida uusia palveluntarjoajia ja asettaa julkaisuille hyväksymisrajat ennen niiden siirtämistä tuotantoliikenteeseen.
+67router sisältää yleiskäyttöisen arviointikehyksen, jonka avulla voit vertailla reititysmäärityksiä, yksittäisiä palveluntarjoajia/malleja tai mukana toimitettuja "golden set" -testikokonaisuuksia. Sen avulla voit varmistaa reititysmuutosten toimivuuden, validoida uusia palveluntarjoajia ja asettaa julkaisuille hyväksymisrajat ennen niiden siirtämistä tuotantoliikenteeseen.
 
 Kehys koostuu seuraavista osista:
 

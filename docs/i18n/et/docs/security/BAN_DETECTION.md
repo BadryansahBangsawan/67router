@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute skannib ülesvoolu teenusepakkujate veavastuseid signaalide suhtes, mis näitavad, et teenusepakkuja
+67router skannib ülesvoolu teenusepakkujate veavastuseid signaalide suhtes, mis näitavad, et teenusepakkuja
 **konto on jäädavalt kasutuskõlbmatu** (peatatud / inaktiveeritud / kasutustingimuste rikkumise tõttu keelatud), ning vaste
 leidmisel viib selle ühenduse **lõplikku `banned` olekusse**, et seda enam
 päringute jaoks ei valitaks. Seda seadistab **Turvalisus → Keelatud märksõnad**

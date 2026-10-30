@@ -7,7 +7,7 @@
 > **Sursă de adevăr:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ultima actualizare:** 2026-09-22 — spațiile de nume ale scopurilor indică spre MCP-SERVER.md
 
-OmniRoute are un pipeline de autorizare conștient de rute, care filtrează fiecare cerere API. Clasificarea este **determinată** și **fail-closed** — orice nu poate fi clasificat ajunge ca `MANAGEMENT` și necesită o sesiune sau un token de nivel management. Această pagină explică modelul pentru inginerii care întrețin rute sau proiectează noi endpoint-uri.
+67router are un pipeline de autorizare conștient de rute, care filtrează fiecare cerere API. Clasificarea este **determinată** și **fail-closed** — orice nu poate fi clasificat ajunge ca `MANAGEMENT` și necesită o sesiune sau un token de nivel management. Această pagină explică modelul pentru inginerii care întrețin rute sau proiectează noi endpoint-uri.
 
 ![Pipeline AuthZ (3 clase de rute + evaluare politici)](../diagrams/exported/authz-pipeline.svg)
 

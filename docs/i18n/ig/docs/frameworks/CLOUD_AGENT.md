@@ -7,7 +7,7 @@
 > **Isi iyi nke eziokwu:** `src/lib/cloudAgent/` na `src/app/api/v1/agents/tasks/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40 (mmelite frontmatter; ndị nnọchi anya 4 gụnyere cursor-cloud)
 
-OmniRoute na-ahazi ndị nnọchi anya ide koodu nke ndị ọzọ na-akwado n'igwe ojii (Codex Cloud, Cursor,
+67router na-ahazi ndị nnọchi anya ide koodu nke ndị ọzọ na-akwado n'igwe ojii (Codex Cloud, Cursor,
 Devin, Jules) dị ka ọrụ na-adịte aka. A na-etinye onye nnọchi anya ọ bụla n'azụ otu interface ka
 ndị ahịa nwee ike izipu prompt + URL repo ma nata nsonaazụ n'enweghị mkpa ijikwa
 API ndị pụrụ iche nke onye na-eweta ọrụ.

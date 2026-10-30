@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute skiller mellom **CLI-oppdagelse**, **opprinnelig Agent Client Protocol** og
+67router skiller mellom **CLI-oppdagelse**, **opprinnelig Agent Client Protocol** og
 **eldre stdio-adaptere**. Det å finne en installert binærfil beviser ikke at den
 er autentisert, kompatibel med modellen eller klar til å håndtere en ledetekst.
 

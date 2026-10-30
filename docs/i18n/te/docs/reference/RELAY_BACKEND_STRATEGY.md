@@ -6,7 +6,7 @@
 
 ## సారాంశం
 
-OmniRoute ఇప్పుడు `/api/v1/relay/chat/completions` కోసం మూడు relay మోడ్లకు మద్దతు ఇస్తుంది:
+67router ఇప్పుడు `/api/v1/relay/chat/completions` కోసం మూడు relay మోడ్లకు మద్దతు ఇస్తుంది:
 
 - `ts`: అదే processలో TypeScript relayని ఉపయోగిస్తుంది.
 - `bifrost`: Bifrost gatewayని తప్పనిసరిగా ఉపయోగిస్తుంది.
@@ -45,12 +45,12 @@ OmniRoute ఇప్పుడు `/api/v1/relay/chat/completions` కోసం �
 
 ## Backend boundary contract
 
-స్థిరమైన product boundary అనేది OmniRoute relay API, dashboard implementation కాదు. Next.js dashboard local servicesను install చేయవచ్చు, configure చేయవచ్చు మరియు supervise చేయవచ్చు; అయితే request routing relay API ద్వారా ప్రవేశించి, ఆ boundary వెనుక handoff కావాలి.
+స్థిరమైన product boundary అనేది 67router relay API, dashboard implementation కాదు. Next.js dashboard local servicesను install చేయవచ్చు, configure చేయవచ్చు మరియు supervise చేయవచ్చు; అయితే request routing relay API ద్వారా ప్రవేశించి, ఆ boundary వెనుక handoff కావాలి.
 
 దీర్ఘకాలిక backend ఎంపికలు:
 
 - TypeScript relayని in-process policy మరియు fallback pathగా ఉంచండి. ఏ backend handoffకైనా ముందు auth, allowlists, request normalization, accounting మరియు safety checks ఇక్కడే ఉండాలి.
-- deploymentకు తక్కువ routing variance, centralized provider rotation లేదా అనేక OmniRoute replicasలో scale-out అవసరమైనప్పుడు, Bifrostను ప్రాధాన్య high-throughput Tier-1 sidecarగా ఉపయోగించండి.
+- deploymentకు తక్కువ routing variance, centralized provider rotation లేదా అనేక 67router replicasలో scale-out అవసరమైనప్పుడు, Bifrostను ప్రాధాన్య high-throughput Tier-1 sidecarగా ఉపయోగించండి.
 - 9router మరియు CLIPROXYAPIని embedded compatibility servicesగా ఉంచండి. అవి supervised local processesగా అమలవుతాయి; వాటి provider/CLI behavior కావలసిన adapterగా ఉన్నప్పుడు ఉపయోగకరంగా ఉంటాయి. అయితే అవి default Tier-1 routing engineగా మారకూడదు.
 - dashboard నుంచి hot pathలోకి arbitrary service URLsను పంపించవద్దు. UI అందించిన URLs configuration inputs మాత్రమే; routing code అనేది server-side settings మరియు supervisor state నుంచి registered, health-checked backendsను resolve చేయాలి.
 - ప్రస్తుతం supervised services ఇప్పటికే HTTP-compatible APIsను అందిస్తున్నందున, route guard boundaryని audit చేయగలుగుతున్నందున మరియు failure/fallback behavior request logsలో కనిపిస్తున్నందున, supervised services కోసం loopback HTTPకు ప్రాధాన్యం ఇవ్వండి. isolation లేదా fallback semanticsను బలహీనపరచకుండా p99 routing latencyని కొలవదగిన స్థాయిలో తగ్గిస్తే మాత్రమే భవిష్యత్ SDK లేదా socket transportను జోడించడం విలువైనది.

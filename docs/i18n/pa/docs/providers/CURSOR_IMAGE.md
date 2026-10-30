@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ਉਸੇ provider id ਰਾਹੀਂ, ਜਿਸਦੀ ਵਰਤੋਂ chat ਲਈ ਹੁੰਦੀ ਹੈ, `POST /v1/images/generations` ਉੱਤੇ Cursor plan **ਚਿੱਤਰ ਜਨਰੇਸ਼ਨ** ਉਪਲਬਧ ਕਰਦਾ ਹੈ: `cursor` (alias `cu`)।
+67router ਉਸੇ provider id ਰਾਹੀਂ, ਜਿਸਦੀ ਵਰਤੋਂ chat ਲਈ ਹੁੰਦੀ ਹੈ, `POST /v1/images/generations` ਉੱਤੇ Cursor plan **ਚਿੱਤਰ ਜਨਰੇਸ਼ਨ** ਉਪਲਬਧ ਕਰਦਾ ਹੈ: `cursor` (alias `cu`)।
 
 | ਫ਼ੀਲਡ                | ਮੁੱਲ                                                                              |
 | -------------------- | --------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute ਉਸੇ provider id ਰਾਹੀਂ, ਜਿਸਦੀ ਵਰਤੋਂ
 
 ## Agent CLI ਕਿਉਂ
 
-OmniRoute ਵਿੱਚ Cursor chat `agent.v1.AgentService/Run` (protobuf) ਦੀ ਵਰਤੋਂ ਕਰਦੀ ਹੈ। ਉਹ ਪਾਥ ਬਿਲਟ-ਇਨ ਕਲਾਇੰਟ ਟੂਲਾਂ (shell, write, …) ਨੂੰ **ਅਸਵੀਕਾਰ ਕਰਦਾ ਹੈ**। ਚਿੱਤਰ ਜਨਰੇਸ਼ਨ ਇੱਕ Cursor-ਨੇਟਿਵ ਟੂਲ ਹੈ, ਜਿਸਨੂੰ ਸੀਟ ਦੇ ਵਿਰੁੱਧ **`agent` CLI** ਵੱਲੋਂ ਚਲਾਇਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਲਈ image handler ਇੱਕ ਲੌਕ ਕੀਤੇ prompt ਅਤੇ ਹਰ ਬੇਨਤੀ ਲਈ ਅਸਥਾਈ workspace (community seat bridges ਵਰਗੀ ਹੀ ਬਣਤਰ) ਨਾਲ `agent` ਨੂੰ ਸਪੌਨ ਕਰਦਾ ਹੈ, ਫਿਰ OpenAI-ਅਨੁਕੂਲ `b64_json` ਵਾਪਸ ਕਰਦਾ ਹੈ।
+67router ਵਿੱਚ Cursor chat `agent.v1.AgentService/Run` (protobuf) ਦੀ ਵਰਤੋਂ ਕਰਦੀ ਹੈ। ਉਹ ਪਾਥ ਬਿਲਟ-ਇਨ ਕਲਾਇੰਟ ਟੂਲਾਂ (shell, write, …) ਨੂੰ **ਅਸਵੀਕਾਰ ਕਰਦਾ ਹੈ**। ਚਿੱਤਰ ਜਨਰੇਸ਼ਨ ਇੱਕ Cursor-ਨੇਟਿਵ ਟੂਲ ਹੈ, ਜਿਸਨੂੰ ਸੀਟ ਦੇ ਵਿਰੁੱਧ **`agent` CLI** ਵੱਲੋਂ ਚਲਾਇਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਲਈ image handler ਇੱਕ ਲੌਕ ਕੀਤੇ prompt ਅਤੇ ਹਰ ਬੇਨਤੀ ਲਈ ਅਸਥਾਈ workspace (community seat bridges ਵਰਗੀ ਹੀ ਬਣਤਰ) ਨਾਲ `agent` ਨੂੰ ਸਪੌਨ ਕਰਦਾ ਹੈ, ਫਿਰ OpenAI-ਅਨੁਕੂਲ `b64_json` ਵਾਪਸ ਕਰਦਾ ਹੈ।
 
 ## ਪਹੁੰਚ ਪਾਬੰਦੀ (Hard Rules #15 + #17)
 
@@ -35,7 +35,7 @@ policy ਲਈ `src/server/authz/policies/management.ts` ਵੇਖੋ।
 `CURSOR_IMG_MAX_CONCURRENT` ਨੂੰ
 Node module instance (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) ਦੇ ਦਾਇਰੇ ਵਾਲੇ
 ਇੱਕ in-memory counter/queue ਰਾਹੀਂ ਲਾਗੂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।
-ਇਹ ਇੱਕ OmniRoute process ਦੇ ਅੰਦਰ ਸਮਕਾਲੀ `agent` spawns ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਸੀਮਿਤ ਕਰਦਾ ਹੈ, ਪਰ
+ਇਹ ਇੱਕ 67router process ਦੇ ਅੰਦਰ ਸਮਕਾਲੀ `agent` spawns ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਸੀਮਿਤ ਕਰਦਾ ਹੈ, ਪਰ
 ਇੱਕੋ Cursor seat ਸਾਂਝੀ ਕਰਨ ਵਾਲੀਆਂ ਕਈ processes/instances ਵਿਚਕਾਰ ਤਾਲਮੇਲ
 **ਨਹੀਂ** ਕਰਦਾ (ਉਦਾਹਰਨ ਲਈ, multi-replica deployment) — ਹਰ instance ਆਪਣੀ ਸੁਤੰਤਰ ਸੀਮਾ ਲਾਗੂ ਕਰਦਾ ਹੈ।
 ਇੱਕ single-instance deployment (ਡਿਫਾਲਟ) ਲਈ ਇਹ ਸਟੀਕ ਹੈ; horizontally scaled
@@ -45,7 +45,7 @@ Cursor image traffic ਨੂੰ ਇੱਕੋ instance ਵੱਲ route ਕਰਨ�
 ## ਲੋੜਾਂ
 
 1. dashboard ਵਿੱਚ ਕਨੈਕਟ ਕੀਤਾ ਹੋਇਆ Cursor ਖਾਤਾ (OAuth ਜਾਂ `crsr_…` API key)।
-2. OmniRoute process ਲਈ ਉਪਲਬਧ Cursor Agent binary:
+2. 67router process ਲਈ ਉਪਲਬਧ Cursor Agent binary:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, ਜਾਂ
    - `~/.local/bin/agent`, ਜਾਂ
    - Cursor connection ਉੱਤੇ `providerSpecificData.agentBin`।

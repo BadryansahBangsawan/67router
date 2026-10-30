@@ -4,7 +4,7 @@
 
 ---
 
-> **ಈ ಡಾಕ್ಯುಮೆಂಟ್ ಏನು.** OmniRoute ನ ಗುಣಮಟ್ಟ-ಗೇಟ್ ವ್ಯವಸ್ಥೆಯ ವಿಮರ್ಶಾತ್ಮಕ ಮೌಲ್ಯಮಾಪನ,
+> **ಈ ಡಾಕ್ಯುಮೆಂಟ್ ಏನು.** 67router ನ ಗುಣಮಟ್ಟ-ಗೇಟ್ ವ್ಯವಸ್ಥೆಯ ವಿಮರ್ಶಾತ್ಮಕ ಮೌಲ್ಯಮಾಪನ,
 > ಉದ್ಯಮದ ಅತ್ಯುತ್ತಮ ಅಭ್ಯಾಸಗಳೊಂದಿಗೆ ಹೋಲಿಕೆ, **ಜೊತೆಗೆ** ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ
 > ಪರಿಶೀಲನಾ ಬಿಂದುಗಳ ಸಮಗ್ರ ಪಟ್ಟಿಮಾಡಿಕೆ ಮತ್ತು ಇದೇ ವ್ಯವಸ್ಥೆಯನ್ನು ಯಾವುದೇ ಪ್ರಾಜೆಕ್ಟ್ಗೆ
 > ಅನ್ವಯಿಸಲು **ಟೂಲ್-ಅಗ್ನಾಸ್ಟಿಕ್ ಪುನರಾವರ್ತನಾ ಯೋಜನೆ**. ನೈಜ ರೆಪೊಸಿಟರಿ ಸ್ಥಿತಿಯಿಂದ
@@ -102,62 +102,62 @@
 
 ### 1. ಶೈಲಿ ಮತ್ತು ಫಾರ್ಮ್ಯಾಟಿಂಗ್ (ನಿರ್ಣಾಯಕ, ವೇಗವಾದ)
 
-- **OmniRoute:** lint-staged ಮೂಲಕ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col.
+- **67router:** lint-staged ಮೂಲಕ Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col.
 - **ಸಾಮಾನ್ಯ:** ಸ್ವಯಂ-ಸರಿಪಡಿಸಬಹುದಾದ ಒಂದು ಫಾರ್ಮ್ಯಾಟರ್ + ಒಂದು ಲಿಂಟರ್, staged ಫೈಲ್ಗಳ ಮೇಲೆ pre-commitನಲ್ಲಿ ಚಾಲನೆಯಾಗಬೇಕು.
 
 ### 2. ಪ್ರಕಾರಗಳು
 
-- **OmniRoute:** `typecheck:core` (ನಿರ್ಬಂಧಕ) + `typecheck:noimplicit:core` (ಸಲಹಾತ್ಮಕ) + `type-coverage` ರ್ಯಾಚೆಟ್ 92.17% + ಪ್ರತಿ-ಫೈಲ್ any-ಬಜೆಟ್.
+- **67router:** `typecheck:core` (ನಿರ್ಬಂಧಕ) + `typecheck:noimplicit:core` (ಸಲಹಾತ್ಮಕ) + `type-coverage` ರ್ಯಾಚೆಟ್ 92.17% + ಪ್ರತಿ-ಫೈಲ್ any-ಬಜೆಟ್.
 - **ಸಾಮಾನ್ಯ:** CIಯಲ್ಲಿ ಕಟ್ಟುನಿಟ್ಟಾದ typecheck + ರ್ಯಾಚೆಟ್ ಮಾಡಿದ type-coverage ಮೆಟ್ರಿಕ್ + ಪ್ರತಿ-ಫೈಲ್ `any`/ತಪ್ಪಿಸಿಕೊಳ್ಳುವ ಮಾರ್ಗದ ಬಜೆಟ್.
 
 ### 3. ಪರೀಕ್ಷೆಗಳು (ತೀವ್ರತೆ)
 
-- **OmniRoute:** ಪರಸ್ಪರ ಅತಿಕ್ರಮಿಸದ 2 ರನ್ನರ್ಗಳು (Node native + vitest), 8 shards, ಜಾಗತಿಕ coverage 60/60/60/60 + ರ್ಯಾಚೆಟ್ ~76% + **ನಿರ್ಣಾಯಕ ಮಾಡ್ಯೂಲ್ಗಳಿಗೆ 8 ಪ್ರತಿ-ಮಾಡ್ಯೂಲ್ ಕನಿಷ್ಠ ಮಿತಿಗಳು** + ರಾತ್ರಿಯ property tests + ರಾತ್ರಿಯ **mutation testing**.
+- **67router:** ಪರಸ್ಪರ ಅತಿಕ್ರಮಿಸದ 2 ರನ್ನರ್ಗಳು (Node native + vitest), 8 shards, ಜಾಗತಿಕ coverage 60/60/60/60 + ರ್ಯಾಚೆಟ್ ~76% + **ನಿರ್ಣಾಯಕ ಮಾಡ್ಯೂಲ್ಗಳಿಗೆ 8 ಪ್ರತಿ-ಮಾಡ್ಯೂಲ್ ಕನಿಷ್ಠ ಮಿತಿಗಳು** + ರಾತ್ರಿಯ property tests + ರಾತ್ರಿಯ **mutation testing**.
 - **ಸಾಮಾನ್ಯ:** test runner(s) + **ನಿರಪೇಕ್ಷ** coverage ಕನಿಷ್ಠ ಮಿತಿ (ಶೂನ್ಯ-ವಿರೋಧಿ) + coverage **ರ್ಯಾಚೆಟ್** (ಹಿಂಜರಿಕೆ-ವಿರೋಧಿ) + **ಹೆಚ್ಚಿನ ಅಪಾಯದ ಕೋಡ್ಗೆ ಪ್ರತಿ-ಮಾಡ್ಯೂಲ್ ಕನಿಷ್ಠ ಮಿತಿಗಳು** (Goodhart-ವಿರೋಧಿ) + ಶುದ್ಧ ಲಾಜಿಕ್ಗೆ property-based ಪರೀಕ್ಷೆ + ಪರೀಕ್ಷಾ ಗುಣಮಟ್ಟದ ನೈಜ ಮಾಪನವಾಗಿ ರಾತ್ರಿಯ **mutation testing**.
 
 ### 4. ಪರೀಕ್ಷಾ ನೀತಿ (ವಂಚನೆ-ವಿರೋಧಿ)
 
-- **OmniRoute:** `pr-test-policy` (production ಕೋಡ್ಗೆ ಪರೀಕ್ಷೆ ಅಗತ್ಯ), `check-test-masking` (ದುರ್ಬಲಗೊಳಿಸಿದ asserts ಅನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ), `pr-evidence` (ಯಶಸ್ಸಿನ ಹೇಳಿಕೆಗೆ evidence block ಅಗತ್ಯ), `test-discovery` (ಪ್ರತಿ ಪರೀಕ್ಷೆಯನ್ನೂ runner ಸಂಗ್ರಹಿಸುತ್ತದೆ).
+- **67router:** `pr-test-policy` (production ಕೋಡ್ಗೆ ಪರೀಕ್ಷೆ ಅಗತ್ಯ), `check-test-masking` (ದುರ್ಬಲಗೊಳಿಸಿದ asserts ಅನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ), `pr-evidence` (ಯಶಸ್ಸಿನ ಹೇಳಿಕೆಗೆ evidence block ಅಗತ್ಯ), `test-discovery` (ಪ್ರತಿ ಪರೀಕ್ಷೆಯನ್ನೂ runner ಸಂಗ್ರಹಿಸುತ್ತದೆ).
 - **ಸಾಮಾನ್ಯ:** "ಹೊಸ ಕೋಡ್ ⇒ ಹೊಸ ಪರೀಕ್ಷೆ" ಗೇಟ್ + assert ತೆಗೆದುಹಾಕಿರುವುದನ್ನು/tautologyಯನ್ನು ಪತ್ತೆಮಾಡುವ ಸಾಧನ + ಸಾಕ್ಷ್ಯದ ಅಗತ್ಯ (TDD ಅಥವಾ living test) + ಯಾವುದೇ ಪರೀಕ್ಷೆಯು globsನ ಹೊರಗೆ ಅನಾಥವಾಗಿಲ್ಲ ಎಂಬ ಖಾತರಿ.
 
 ### 5. ಸಂಕೀರ್ಣತೆ ಮತ್ತು ಕೋಡ್ ಆರೋಗ್ಯ (ರ್ಯಾಚೆಟ್ಗಳು)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ಪ್ರತಿ-ಫೈಲ್ file-size (ಸ್ಥಿರಗೊಳಿಸಿದ, ಕುಗ್ಗಿಸಲು ಮಾತ್ರ), circular-deps (ಕಸ್ಟಮ್ Tarjan, ನಿರ್ಬಂಧಕ).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ಪ್ರತಿ-ಫೈಲ್ file-size (ಸ್ಥಿರಗೊಳಿಸಿದ, ಕುಗ್ಗಿಸಲು ಮಾತ್ರ), circular-deps (ಕಸ್ಟಮ್ Tarjan, ನಿರ್ಬಂಧಕ).
 - **ಸಾಮಾನ್ಯ:** ಪ್ರತಿಯೊಂದು ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ನ್ನೂ ರ್ಯಾಚೆಟ್ ಮಾಡಿ (ಎಚ್ಚರಿಕೆಗಳು, ನಕಲು, cyclomatic **ಮತ್ತು** cognitive complexity, dead code, file size, import cycles). ದಿಕ್ಕು ಯಾವಾಗಲೂ "ಹಿಂಜರಿಯಬೇಡಿ" ಆಗಿರಬೇಕು.
 
 ### 6. ಸ್ಥಿರ ಭದ್ರತೆ (SAST + ರಹಸ್ಯಗಳು)
 
-- **OmniRoute:** CodeQL (alerts ರ್ಯಾಚೆಟ್ = 0), gitleaks (`[extend] useDefault=true` — ಅತ್ಯಂತ ನಿರ್ಣಾಯಕ!), SonarQube, ಕಸ್ಟಮ್ ಭದ್ರತಾ ನಿಯಮಗಳು (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (alerts ರ್ಯಾಚೆಟ್ = 0), gitleaks (`[extend] useDefault=true` — ಅತ್ಯಂತ ನಿರ್ಣಾಯಕ!), SonarQube, ಕಸ್ಟಮ್ ಭದ್ರತಾ ನಿಯಮಗಳು (public-creds, error-helper, route-guard-membership, route-validation).
 - **ಸಾಮಾನ್ಯ:** alert ರ್ಯಾಚೆಟ್ ಹೊಂದಿರುವ SAST (CodeQL/Sonar/semgrep) + **ಪಾರಂಪರ್ಯವಾಗಿ ಪಡೆದ ಡೀಫಾಲ್ಟ್ ruleset** ಹೊಂದಿರುವ secrets scanner (ಡೀಫಾಲ್ಟ್ ಅನ್ನು override ಮಾಡುವ ಕಸ್ಟಮ್ config = ಕುರುಡುತನ) + ಪ್ರಾಜೆಕ್ಟ್ಗೆ ನಿರ್ದಿಷ್ಟವಾದ Hard Rule ಭದ್ರತಾ ಗೇಟ್ಗಳು.
 
 ### 7. ಪೂರೈಕೆ ಸರಪಳಿ (ಅವಲಂಬನೆಗಳು)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ವಯಸ್ಸು ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ವಯಸ್ಸು ≥72h).
 - **ಸಾಮಾನ್ಯ:** ಬಹು-ಮೂಲ SCA + ಪರವಾನಗಿ allowlist + lockfile ಸಮಗ್ರತೆ ಪರಿಶೀಲನೆ + ವಯಸ್ಸು/typosquatting ಪರಿಶೀಲನೆಯೊಂದಿಗಿನ dependency allowlist + ಗುಂಪುಮಾಡಿದ update bot.
 
 ### 8. ಪೂರೈಕೆ ಸರಪಳಿ (ಬಿಲ್ಡ್ ಮತ್ತು ಬಿಡುಗಡೆ)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ವಾರಕ್ಕೊಮ್ಮೆ), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ವಾರಕ್ಕೊಮ್ಮೆ), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **ಸಾಮಾನ್ಯ:** ಪ್ರಕಟಿಸುವಾಗ SBOM ರಚಿಸಿ + ಸಹಿ ಮಾಡಿದ provenance (SLSA L2+) + ನಿಗದಿತ ವೇಳಾಪಟ್ಟಿಯ Scorecard + ಎಲ್ಲಾ workflows ಅನ್ನು ಬಲಪಡಿಸಿ (ಕನಿಷ್ಠ-ಸವಲತ್ತಿನ tokens, non-pusher checkoutನಲ್ಲಿ ಉಳಿಸಿಟ್ಟ credentials ಇರಬಾರದು, actions ಅನ್ನು SHA ಮೂಲಕ pin ಮಾಡಬೇಕು).
 
 ### 9. ಒಪ್ಪಂದಗಳು ಮತ್ತು API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (ರಾತ್ರಿಯ contract fuzz), openapi-coverage (% ದಾಖಲಿಸಲಾದ routes, ರ್ಯಾಚೆಟ್ 38.3%), openapi-security-tiers (spec ಮತ್ತು route-guard ನಡುವಿನ ಹೋಲಿಕೆ).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (ರಾತ್ರಿಯ contract fuzz), openapi-coverage (% ದಾಖಲಿಸಲಾದ routes, ರ್ಯಾಚೆಟ್ 38.3%), openapi-security-tiers (spec ಮತ್ತು route-guard ನಡುವಿನ ಹೋಲಿಕೆ).
 - **ಸಾಮಾನ್ಯ:** breaking-change contract diff (oasdiff/buf) + spec ವಿರುದ್ಧ property-based fuzz (schemathesis) + ರ್ಯಾಚೆಟ್ ಮಾಡಿದ documentation coverage + spec↔code ಸ್ಥಿರತೆ.
 
 ### 10. ಡಾಕ್ಸ್ ಮತ್ತು i18n (ಕ್ಷಯ-ವಿರೋಧಿ)
 
-- **OmniRoute:** docs-sync (ಪ್ರತಿಬಿಂಬಿತ versions), docs-counts-sync (docs ಮತ್ತು codeನಲ್ಲಿರುವ ಸಂಖ್ಯೆಗಳು), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ರ್ಯಾಚೆಟ್ 80.1%).
+- **67router:** docs-sync (ಪ್ರತಿಬಿಂಬಿತ versions), docs-counts-sync (docs ಮತ್ತು codeನಲ್ಲಿರುವ ಸಂಖ್ಯೆಗಳು), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ರ್ಯಾಚೆಟ್ 80.1%).
 - **ಸಾಮಾನ್ಯ:** docs ಮತ್ತು code ನಡುವೆ versions/counts/env-vars ಅನ್ನು ಸಿಂಕ್ ಮಾಡಿ (ಗೇಟ್, ನಂಬಿಕೆ ಅಲ್ಲ) + ಆಂತರಿಕ links ಅನ್ನು ಮೌಲ್ಯೀಕರಿಸಿ + ರ್ಯಾಚೆಟ್ ಮಾಡಿದ i18n coverage.
 
 ### 11. ಭ್ರಮೆ-ವಿರೋಧಿ / ಸ್ಥಿರತೆ (ಅಪರೂಪದ ವರ್ಗ)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ ಜೀವಂತ symbol), provider-consistency, fetch-targets (client fetch ⇒ ನೈಜ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ ಜೀವಂತ symbol), provider-consistency, fetch-targets (client fetch ⇒ ನೈಜ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **ಸಾಮಾನ್ಯ:** ಪ್ರತಿಯೊಂದು "ನಕಲುಗೊಂಡ ಏಕೈಕ ಸತ್ಯದ ಮೂಲ"ಕ್ಕೆ (registry, string dispatch, cross-layer references), ಎರಡೂ ಬದಿಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತವೆ ಎಂದು ಸಾಬೀತುಪಡಿಸುವ ಗೇಟ್ ಇರಬೇಕು. typecheck/test ಪತ್ತೆಮಾಡದ ಕ್ಷಯವನ್ನು ಇದು ಪತ್ತೆಮಾಡುತ್ತದೆ.
 
 ### 12. ಸ್ಥಿತಿಸ್ಥಾಪಕತೆ ಮತ್ತು ಡೊಮೇನ್ (ಉತ್ಪನ್ನ-ನಿರ್ದಿಷ್ಟ)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ಸ್ಥಿತಿಸ್ಥಾಪಕತೆಯ 3 ನಿಯಮಗಳು (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ಸ್ಥಿತಿಸ್ಥಾಪಕತೆಯ 3 ನಿಯಮಗಳು (circuit-breaker/cooldown/lockout).
 - **ಸಾಮಾನ್ಯ:** **ನಿಮ್ಮ** ಡೊಮೇನ್ನ ವೈಫಲ್ಯ ವಿಧಾನಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಪ್ರತಿಯೊಂದಕ್ಕೂ ಒಂದು ಗೇಟ್ ಇರಿಸಿ (ಅದು ರಾತ್ರಿಯಲ್ಲಿ ಮಾತ್ರ ಚಾಲನೆಯಾದರೂ ಸಹ). AI appsಗೆ: injection red-team. distributed systemsಗೆ: chaos + leak + soak.
 
 ---

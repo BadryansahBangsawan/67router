@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute wordt geleverd met een pluginsysteem in WordPress-stijl. Plugins zijn zelfstandige
+67router wordt geleverd met een pluginsysteem in WordPress-stijl. Plugins zijn zelfstandige
 mappen — elk met een `plugin.json`-manifest en een invoerbestand — die inhaken
 op de aanvraagpijplijn (`onRequest` / `onResponse` / `onError`) en op
 levenscyclusgebeurtenissen (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -152,7 +152,7 @@ voorkomen, worden toegestaan.
 
 ### Pluginmap
 
-Plugins bevinden zich onder de OmniRoute-gegevensmap:
+Plugins bevinden zich onder de 67router-gegevensmap:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

@@ -42,7 +42,7 @@ ar išorinė integracija šiuo metu yra prieinami.
 | Pasiūlymai rėmėjams                  | Įgyvendinti kaip atskiras pasirašytas, tik tiesiogiai teikiamas kanalas ir valdymo skydelio puslapis. Klientas iš naujo patikrina uždarą privilegijų schemą, išsaugo paskutinį tinkamą podėlį, atfiltruoja nebegaliojančius įrašus ir aiškiai pažymi partnerių pasiūlymus.      |
 | Analitika ir rėmėjų pripažinimas     | Įgyvendinti kaip griežtas pasirašytas, tik tiesiogiai teikiamas kanalas su Radar valdoma ELO, faktine katalogo naujumo ir tendencijų informacija, patikrintu vietiniu rėmėjo ženkleliu, valdymo skydelio puslapiu ir tik vietinėmis CLI būsenos bei sinchronizavimo komandomis. |
 | Mokėjimai ir operaciniai el. laiškai | OSS kliente neįgyvendinti. Pirkimas, aukojimas, kvitų tikrinimas, atkūrimas ir laiškų pristatymas priklauso privačiai paslaugai; prieinamumas priglobtoje aplinkoje vis dar priklauso nuo jos prižiūrimo diegimo ir paslaugų teikėjų konfigūracijos.                            |
-| Tyrimų agento darbų kryptis          | Nėra šio kliento leidimo dalis. Kuruojamų kanalų turinys išlieka serverio pusės duomenimis; OmniRoute dieginyje neveikia joks autonominis tyrimų agentas.                                                                                                                       |
+| Tyrimų agento darbų kryptis          | Nėra šio kliento leidimo dalis. Kuruojamų kanalų turinys išlieka serverio pusės duomenimis; 67router dieginyje neveikia joks autonominis tyrimų agentas.                                                                                                                        |
 
 ---
 
@@ -120,7 +120,7 @@ Kai abu įjungti, sinchronizavimas vyksta taip:
    skirtas rankinei piktnaudžiavimo peržiūrai; šiose lentelėse nei raktas, nei IP adresas neįrašomi neapdorotu pavidalu.
    Infrastruktūros prieigos žurnalai ir šifruota pristatymo siunčiamųjų pranešimų eilė yra atskiros veiklos
    ribos.
-3. OmniRoute niekada nesiunčia Radar paslaugai užklausų, atsakymų, pokalbių, teikėjų prisijungimo duomenų, modelio srauto,
+3. 67router niekada nesiunčia Radar paslaugai užklausų, atsakymų, pokalbių, teikėjų prisijungimo duomenų, modelio srauto,
    veikimo trukmės, delsos ar vietinės teikėjo konfigūracijos.
 4. Atsakymas patikrinamas, validuojamas ir išsaugomas vietiniame podėlyje (žr.
    [Saugumo modelį](#security-model)). Radar turi lygiai keturis serverio pusės tinklo kelius:
@@ -244,13 +244,13 @@ kuris raktą jau turi.
 ### Visapusis aktyvinimas ir vedamasis nustatymas
 
 Privati informacijos santraukos paslauga ir šis OSS klientas turi sąmoningai siaurą sąveikos ribą: paslauga
-išduoda ir tikrina rėmėjo raktą, o vietinis OmniRoute diegimas užšifruoja raktą,
+išduoda ir tikrina rėmėjo raktą, o vietinis 67router diegimas užšifruoja raktą,
 serverio pusėje sinchronizuoja pasirašytus artefaktus ir padeda sukonfigūruoti teikėją. Pagalbinio tikrinimo tvarka yra:
 
 1. Gaukite naujai išduotą arba atkurtą raktą per pagalbininko paraišką, planų / atsiskaitymo procesą, atkūrimo
    eigą arba iš įgalioto privataus serverio operatoriaus. Neįklijuokite neapdoroto rakto į žurnalus,
    ekrano kopijas, problemų komentarus ar komandinės eilutės argumentus.
-2. Vietiniame OmniRoute diegime įjunkite `RADAR_ENABLED` funkcijos vėliavėlę. Taip atveriama naudotojo sąsaja,
+2. Vietiniame 67router diegime įjunkite `RADAR_ENABLED` funkcijos vėliavėlę. Taip atveriama naudotojo sąsaja,
    tačiau tinklo ryšiai lieka neaktyvūs, kol neįrašomas atskiras sutikimas.
 3. Atidarykite `/dashboard/radar`, įklijuokite raktą ir suaktyvinkite. Naršyklė išsiunčia vieną vietinę
    `POST /api/radar/settings` užklausą su `{ optIn: true, supporterKey }`; raktas užšifruojamas vietoje, o
@@ -315,7 +315,7 @@ ankstesniu raktu, liktų galiojančios iki pakartotinio sinchronizavimo.
 ### Aplinkos kintamųjų perrašymai, patogūs atšakoms
 
 Du aplinkos kintamieji leidžia atšakoms ir savarankiškai prieglobą valdantiems
-naudotojams nukreipti klientą į savo kanalą vietoj numatytosios OmniRoute paslaugos —
+naudotojams nukreipti klientą į savo kanalą vietoj numatytosios 67router paslaugos —
 žr. toliau pateiktą skyrių
 [Kaip savarankiškai teikti kanalo prieglobą](#how-to-self-host-a-feed):
 
@@ -473,7 +473,7 @@ Srauto `enabled: false` išlieka saugos išimtimi: jam teikiama pirmenybė prie�
 Katalogo publikacijose naudojama `schemaVersion: 2`. `contextWindow` ir kiekvienas iš `tools`, `vision` bei
 `thinking` atskirai yra `number | null` / `boolean | null`: `null` reiškia, kad reikšmė nežinoma, o
 `false` reiškia, kad D16 patvirtintas oficialus teikėjo šaltinis aiškiai nurodo, jog galimybės nėra.
-Vidiniai OmniRoute registro ar modelio specifikacijos požymiai niekada tiesiogiai nepaverčiami srauto faktais. Klientas
+Vidiniai 67router registro ar modelio specifikacijos požymiai niekada tiesiogiai nepaverčiami srauto faktais. Klientas
 vis dar priima v1 momentines kopijas; kadangi senoji kūrimo priemonė naudojo `false` kaip nebuvimo vietaženklį, v1 `false`
 normalizuojama į nežinomą reikšmę, o v1 `true` išlieka faktine reikšme. Nežinomos schemos versijos saugiai atmetamos, o
 paskutinis galiojantis podėlis lieka pasiekiamas. Kiekvienas v2 modelis, turintis ne `null` kontekstą ar galimybę, privalo turėti
@@ -534,7 +534,7 @@ Toliau nurodytos vietinės Radar maršrutų grupės palaiko naudotojo sąsają, 
 | `/api/radar/local-model-state` | DELETE  | Išvalo redaguojamus perrašymo laukus, išsaugodamas bet kokį antkapį.                                                                     |
 
 **Griežta taisyklė: šie maršrutai niekada neveikia kaip srauto paslaugos tarpinis serveris.** Naršyklė visada komunikuoja
-tik su vietiniu OmniRoute serveriu. Keturi su Radar paslauga sąveikaujantys moduliai yra
+tik su vietiniu 67router serveriu. Keturi su Radar paslauga sąveikaujantys moduliai yra
 `src/lib/radar/sync.ts` (katalogas), `src/lib/radar/referralsSync.ts` (rekomendacijos) ir
 `src/lib/radar/offersSync.ts` (pasiūlymai), taip pat `src/lib/radar/intelSync.ts` (Intel); visi jie vykdomi
 serverio pusėje, niekada kliento pusėje. Taip srauto URL ir bet koks rėmėjo raktas visiškai
@@ -611,7 +611,7 @@ nesuteikia XP; jis niekada neatnaujina lyderių lentelių ir pakartotinai nenaud
 `/dashboard/radar/intel` pateikia ženklelį tik pagal patikrintus vietinio podėlio metaduomenis.
 
 CLI pateikia komandas `omniroute radar status` ir `omniroute radar sync`. Abi jos palaiko ryšį tik su
-vietine OmniRoute API. `status` atlieka tik skaitomąją `GET /api/radar/status` užklausą; `sync`
+vietine 67router API. `status` atlieka tik skaitomąją `GET /api/radar/status` užklausą; `sync`
 išsiunčia vieną `POST /api/radar/sync-all` užklausą ir išveda kiekvieno kanalo rezultatą. Nė viena
 komanda neskaito, nepriima ir neišveda rėmėjo rakto, taip pat nė viena tiesiogiai nesikreipia į Radar
 paslaugą.

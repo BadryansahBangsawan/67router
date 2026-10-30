@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Türkçe)
+# 🗜️ Prompt Compression Guide — 67router (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Genel Bakış
 
-OmniRoute, istekler üst sağlayıcılara ulaşmadan önce **proaktif olarak** çalışan modüler bir istem sıkıştırma işlem hattı uygular. Bu, token tasarrufunun şeffaf biçimde gerçekleştiği anlamına gelir — iş akışınızda herhangi bir değişiklik yapmanız gerekmez.
+67router, istekler üst sağlayıcılara ulaşmadan önce **proaktif olarak** çalışan modüler bir istem sıkıştırma işlem hattı uygular. Bu, token tasarrufunun şeffaf biçimde gerçekleştiği anlamına gelir — iş akışınızda herhangi bir değişiklik yapmanız gerekmez.
 
 ```
 İstemci İsteği
@@ -122,15 +122,15 @@ sıkıştırma kombinasyonları aracılığıyla yapılandırılabilir.
 
 ## Upstream Tasarruf Hesaplaması
 
-OmniRoute, sıkıştırma tasarruflarını iki kaynağa dayanarak belgeler: upstream proje kıyaslamaları ve
-OmniRoute'un kendi motor bileşimi.
+67router, sıkıştırma tasarruflarını iki kaynağa dayanarak belgeler: upstream proje kıyaslamaları ve
+67router'un kendi motor bileşimi.
 
 | Kaynak  | Burada kullanılan upstream README değeri                                                                                       |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Caveman | `~75%` daha az çıktı token'ı, kıyaslamalarda ortalama `65%` çıktı tasarrufu, `22-87%` aralığı ve `~46%` girdi sıkıştırma aracı |
 | RTK     | Komut çıktısında `60-90%` tasarruf; örnek oturumda `~118,000 -> ~23,900` token veya `79.7%` tasarruf (`~80%`)                  |
 
-Çakışan araç/bağlam yükleri için varsayılan OmniRoute kombinasyonu motorları üst üste uygular:
+Çakışan araç/bağlam yükleri için varsayılan 67router kombinasyonu motorları üst üste uygular:
 
 ```txt
 RTK -> Caveman
@@ -540,12 +540,12 @@ değiştirmeden bırakır ve `no_styles` olarak atlanır), seçilen talimatları
 sırasına göre birleştirir,
 sınırlar maddesini **bir kez** ekler (ayrıca `less-code` veya `ponytail` seçildiğinde
 güvenlik maddesini, `SAFETY_BOUNDARIES` ya da çevirisini ekler) ve bloğu tek bir
-idempotans işaretiyle (`[OmniRoute Output Styles]`) başlatır; dolayısıyla yeniden uygulama
+idempotans işaretiyle (`[67router Output Styles]`) başlatır; dolayısıyla yeniden uygulama
 işlem yapmaz. Çözümlenen dilin (aşağıdaki Dil seçimi bölümüne bakın) çevirisi varsa
 İngilizce yerine yerelleştirilmiş talimat eklenir.
 
 Boş olmayan bir `messages` dizisine sahip gövdede, idempotans denetimi içerik baypasından
-önce çalışır: `[OmniRoute Output Styles]` işareti üst düzey `system` alanında (bir dize
+önce çalışır: `[67router Output Styles]` işareti üst düzey `system` alanında (bir dize
 veya içerik bloğu dizisi) ya da dize içeriğine sahip bir sistem mesajında zaten
 bulunuyorsa gövde `already_applied` olarak değiştirilmeden bırakılır ve anahtar sözcük
 denetimi çalışmaz. Aksi takdirde bir içerik baypası
@@ -571,7 +571,7 @@ Baypas turun geçmesine izin verdiğinde, hiçbir zaman yeni bir `messages[0]` o
 
 `messages` dizisi olmayan (veya boş bir diziye sahip) gövdede içerik baypası çalışmaz ve
 üst düzey `system` alanına bakılmaz. Blok, dize türündeki bir `instructions` alanının
-metninden sonra eklenir; ancak bu alan zaten `[OmniRoute Output Styles]` işaretini
+metninden sonra eklenir; ancak bu alan zaten `[67router Output Styles]` işaretini
 içeriyorsa gövde `already_applied` olarak değiştirilmeden bırakılır. Gövdede dize
 türünde bir `instructions` alanı bulunmayıp `input` (bir dize veya dizi) bulunuyorsa
 blok, bu alanın taşıdığı dize olmayan değerin yerine geçerek `instructions` olur. Dize
@@ -598,8 +598,8 @@ Program aracılığıyla sıkıştırma yapılandırması seçimi şu şekilde k
 
 Geriye dönük uyumluluk: `outputStyles` boşken eski `cavemanOutputMode.enabled` ayarı,
 `cavemanOutputMode.intensity` düzeyinde `terse-prose` stiline eşlenir. Bu durumda blok,
-eski `applyCavemanOutputMode()` ekleyicisinin yazdığı `[OmniRoute Caveman Output Mode]`
-yerine `[OmniRoute Output Styles]` işaretiyle başlar. İşaretin altında metin; en, pt-BR,
+eski `applyCavemanOutputMode()` ekleyicisinin yazdığı `[67router Caveman Output Mode]`
+yerine `[67router Output Styles]` işaretiyle başlar. İşaretin altında metin; en, pt-BR,
 es, de, fr, it, ru, id ve vi dillerindeki eski eklemeyle eşleşir; ja ve zh dillerinde
 sınırlar maddesinden önce fazladan bir boşluk içerir. `terse-prose`; pt-BR, es, de, fr,
 it, ru, zh, ja, id ve vi dillerine çevrilir; dolayısıyla çözümlenen dili `hu` olan bir

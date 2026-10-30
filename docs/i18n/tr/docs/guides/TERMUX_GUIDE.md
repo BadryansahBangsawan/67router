@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Termux aracılığıyla Android üzerinde başsız bir sunucu olarak çalışabilir. Electron masaüstü uygulaması Termux'ta desteklenmez, ancak web panosu ve OpenAI uyumlu API'ye yerel tarayıcıdan veya aynı ağdaki diğer cihazlardan erişilebilir.
+67router, Termux aracılığıyla Android üzerinde başsız bir sunucu olarak çalışabilir. Electron masaüstü uygulaması Termux'ta desteklenmez, ancak web panosu ve OpenAI uyumlu API'ye yerel tarayıcıdan veya aynı ağdaki diğer cihazlardan erişilebilir.
 
 ## Ön Koşullar
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js sürümü:** OmniRoute, Node `>=22.22.2 <23 || >=24.0.0 <27` gerektirir (`package.json` içindeki `engines` / `SUPPORTED_NODE_RANGE` ile eşleşir). Termux'un `nodejs-lts` paketi genellikle artık **desteklenmeyen** Node 20 LTS sürümünü içerir — bunun yerine `pkg install nodejs` (güncel) komutuyla yükleyin ve `node --version` çıktısının 22.x/24.x+ serisini gösterdiğini doğrulayın.
+> **Node.js sürümü:** 67router, Node `>=22.22.2 <23 || >=24.0.0 <27` gerektirir (`package.json` içindeki `engines` / `SUPPORTED_NODE_RANGE` ile eşleşir). Termux'un `nodejs-lts` paketi genellikle artık **desteklenmeyen** Node 20 LTS sürümünü içerir — bunun yerine `pkg install nodejs` (güncel) komutuyla yükleyin ve `node --version` çıktısının 22.x/24.x+ serisini gösterdiğini doğrulayın.
 
-Yerel paket derlemesi başarısız olursa yukarıdaki `pkg install` komutunu yeniden çalıştırın ve ardından OmniRoute kurulumunu tekrar deneyin.
+Yerel paket derlemesi başarısız olursa yukarıdaki `pkg install` komutunu yeniden çalıştırın ve ardından 67router kurulumunu tekrar deneyin.
 
 ## Kurulum
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Çalıştırma
 
-OmniRoute'u başsız sunucu modunda başlatın:
+67router'u başsız sunucu modunda başlatın:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ http://PHONE_IP:20128
 http://192.168.1.50:20128
 ```
 
-Telefonu ve istemciyi aynı güvenilir ağda tutun. OmniRoute'u telefonun dışına açarsanız API anahtarlarını ve pano kimlik doğrulamasını etkinleştirin.
+Telefonu ve istemciyi aynı güvenilir ağda tutun. 67router'u telefonun dışına açarsanız API anahtarlarını ve pano kimlik doğrulamasını etkinleştirin.
 
 ## Veri Dizini
 
-OmniRoute varsayılan olarak verileri, Linux'ta kullanılan sunucu tarafı veri yolu davranışını izleyerek Termux ana dizini altında depolar. Veritabanını açıkça belirtilen bir konuma yerleştirmek için:
+67router varsayılan olarak verileri, Linux'ta kullanılan sunucu tarafı veri yolu davranışını izleyerek Termux ana dizini altında depolar. Veritabanını açıkça belirtilen bir konuma yerleştirmek için:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Desteklenmeyen platform: android (her istek HTTP 500 döndürüyor)
 
-**Belirti:** `omniroute` / `omniroute serve`, `✔ OmniRoute is running!` çıktısını verir, ancak her pano veya API isteği yalnızca `500 Internal Server Error` döndürür. `~/.omniroute/logs/application/app.log` boş kalır, `APP_LOG_LEVEL=debug` yararlı bir çıktı vermez ve yanıt gövdesi JSON ayrıntısı olmadan düz metindir (`Internal Server Error`).
+**Belirti:** `omniroute` / `omniroute serve`, `✔ 67router is running!` çıktısını verir, ancak her pano veya API isteği yalnızca `500 Internal Server Error` döndürür. `~/.omniroute/logs/application/app.log` boş kalır, `APP_LOG_LEVEL=debug` yararlı bir çıktı vermez ve yanıt gövdesi JSON ayrıntısı olmadan düz metindir (`Internal Server Error`).
 
 **Neden:** Bazı Termux/Node derlemeleri `process.platform === "android"` olarak bildirir. Next.js `getCacheDirectory()` bu platformu işlemez: `~/.cache` dizininin (veya genel bir geçici dizinin) _önceden_ var olmasını gerektirir; aksi takdirde enstrümantasyon kancasını yüklerken şu hatayla başarısız olur:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Kanca hiçbir zaman yüklenmediği için günlük kaydı başlamaz — bu da 500 hatasının nedenini belirlemeyi tamamen imkânsızmış gibi gösterir. OmniRoute, bu denetimin Android/Termux üzerinde başarılı olması için Next.js başlamadan önce CLI giriş noktasında `~/.cache` dizinini oluşturur (ve ayarlanmamışsa `XDG_CACHE_HOME` değişkenini ayarlar).
+Kanca hiçbir zaman yüklenmediği için günlük kaydı başlamaz — bu da 500 hatasının nedenini belirlemeyi tamamen imkânsızmış gibi gösterir. 67router, bu denetimin Android/Termux üzerinde başarılı olması için Next.js başlamadan önce CLI giriş noktasında `~/.cache` dizinini oluşturur (ve ayarlanmamışsa `XDG_CACHE_HOME` değişkenini ayarlar).
 
 **Desteklenen çözüm (pakete yama uygulamadan):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Güncel OmniRoute derlemelerinde CLI bunu Android/Termux üzerinde otomatik olarak yapar — yeni bir `npx -y omniroute@latest` / global kurulum, manuel adımı gerektirmemelidir. Yükseltmeden sonra hatayı hâlâ görüyorsanız yukarıdaki gibi `~/.cache` dizinini bir kez oluşturun ve yeniden başlatın.
+Güncel 67router derlemelerinde CLI bunu Android/Termux üzerinde otomatik olarak yapar — yeni bir `npx -y omniroute@latest` / global kurulum, manuel adımı gerektirmemelidir. Yükseltmeden sonra hatayı hâlâ görüyorsanız yukarıdaki gibi `~/.cache` dizinini bir kez oluşturun ve yeniden başlatın.
 
 `process.platform = "linux"` kullanımını zorlamak için `dist/server.js` dosyasına **yama uygulamayın**. Bu tür bir paket yaması her yeniden kurulumda/yükseltmede üzerine yazılır ve önbellek dizini mevcut olduğunda gereksizdir.
 

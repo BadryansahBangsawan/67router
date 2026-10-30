@@ -32,7 +32,7 @@ pool-இல் உள்ள ஒவ்வொரு candidate-க்கும் (
 `filterPaidOnlyCandidates`-க்கு உடனடியாக அடுத்து):
 
 1. **`FREE_MODEL_BUDGETS`-இல் முற்றிலும் இல்லாதது** → விலக்கப்படும். இது உண்மையிலேயே கட்டணம் செலுத்த வேண்டிய models மற்றும்
-   OmniRoute இதுவரை வகைப்படுத்தாத எந்த provider/model-ஐயும் உள்ளடக்கும் — புதிய candidates சேர்க்கப்பட்ட நிலையில் அல்ல,
+   67router இதுவரை வகைப்படுத்தாத எந்த provider/model-ஐயும் உள்ளடக்கும் — புதிய candidates சேர்க்கப்பட்ட நிலையில் அல்ல,
    விலக்கப்பட்ட நிலையிலேயே தொடங்குகின்றன.
 2. **`freeType: "keyless"`** → உடனடியாக அனுமதிக்கப்படும், **ஆனால் உண்மையாகவே
    no-auth பாதை வழியாக வந்த candidate-க்கு மட்டும்** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -88,7 +88,7 @@ STRICT_ZERO_COST அந்த அனுமதிப்பட்டியலி�
 (keyless-bypass நிலைகள் A/B/C, பல-கணக்கு நிலைகள் 1-5).
 
 `தானாகக் கண்டறியப்பட்டது`: சரியான metadata-வுடன் நாளை வெளியிடப்படும் ஒரு வழங்குநர்/model (catalog-இல்,
-ஒரு usage adapter உடன், `hardStopGuaranteed: true`) பற்றி OmniRoute அறிந்த உடனேயே அதைப் பயன்படுத்தலாம்
+ஒரு usage adapter உடன், `hardStopGuaranteed: true`) பற்றி 67router அறிந்த உடனேயே அதைப் பயன்படுத்தலாம்
 — code மாற்றமோ, whitelist பதிவோ, இந்த module-இல் திருத்த வேண்டிய எதுவுமோ இல்லை. catalog-இலிருந்து நீக்கப்பட்ட ஒன்று
 அதே முறையில் மறைந்துவிடும். பின்னடைவு சோதனை ஆதாரத்திற்கு
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts`-ஐப் பார்க்கவும் (உண்மையான catalog-ஐ மாற்றாமல்,

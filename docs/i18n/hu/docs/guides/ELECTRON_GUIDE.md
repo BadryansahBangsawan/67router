@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `electron/` munkaterület
 > **Utolsó frissítés:** 2026-06-28 — v3.8.40
 
-Az OmniRoute egy több platformon (Windows / macOS / Linux) használható asztali alkalmazást biztosít, amely az
+Az 67router egy több platformon (Windows / macOS / Linux) használható asztali alkalmazást biztosít, amely az
 **Electron 41** + **electron-builder 26.10** technológiákra épül. Az asztali alkalmazás gyermekfolyamatként
 elindítja a Next.js önálló kiszolgálóját, egy `BrowserWindow` ablakot irányít rá, továbbá
 rendszertálcát, automatikus frissítőt, IPC-hidat és konfiguráció nélküli titok-inicializálást biztosít.
@@ -46,7 +46,7 @@ Az `electron/package.json` alapján megerősítve:
 | `better-sqlite3`    | gyökérszintű `^13.0.2` (Node-API előre lefordított binárisok — nincs szükség Electronhoz való újrafordításra) |
 | Alkalmazásverzió    | `3.8.0`                                                                                                       |
 | Alkalmazásazonosító | `online.omniroute.desktop`                                                                                    |
-| Terméknév           | `OmniRoute`                                                                                                   |
+| Terméknév           | `67router`                                                                                                    |
 
 ## Szkriptek (gyökérszintű `package.json`)
 
@@ -198,7 +198,7 @@ részesítse előnyben a `.env` fájlt, majd teljesen lépjen ki (tálca, **Kil�
 - `BrowserWindow`: 1400×900 (minimum 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, ablakvezérlő gombok helye: `{ x: 16, y: 16 }`.
 - Windows/Linux: natív címsor.
-- A bezárás gomb a tálcára minimalizál; a tálcamenü elemei: **OmniRoute megnyitása**, **Irányítópult megnyitása** (külső böngészőben), **Kiszolgáló portja** almenü, **Frissítések keresése**, **Kilépés**.
+- A bezárás gomb a tálcára minimalizál; a tálcamenü elemei: **67router megnyitása**, **Irányítópult megnyitása** (külső böngészőben), **Kiszolgáló portja** almenü, **Frissítések keresése**, **Kilépés**.
 
 ## Tartalombiztonsági házirend
 

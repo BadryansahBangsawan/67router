@@ -8,17 +8,17 @@
 
 🌐 **Kalbos:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Dažnos „OmniRoute“ problemos ir jų sprendimai.
+Dažnos „67router“ problemos ir jų sprendimai.
 
 ---
 
 ## Greitoji atmintinė
 
-**Pirmą kartą naudojate OmniRoute?** Pradėkite čia — tai išsprendžia 90 % problemų:
+**Pirmą kartą naudojate 67router?** Pradėkite čia — tai išsprendžia 90 % problemų:
 
 | Matau šį pranešimą                 | Ką tai reiškia                            | Ką daryti                                                                                               |
 | ---------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| „Nepavyksta prisijungti“           | OmniRoute neveikia                        | Paleiskite `omniroute` arba `docker restart omniroute`                                                  |
+| „Nepavyksta prisijungti“           | 67router neveikia                         | Paleiskite `omniroute` arba `docker restart omniroute`                                                  |
 | „Netinkamas API raktas“            | Jūsų raktas neteisingas arba nebegalioja  | Dar kartą nukopijuokite raktą iš teikėjo svetainės                                                      |
 | „Viršytas užklausų dažnio limitas“ | Siunčiate per daug užklausų               | Palaukite 1 minutę arba naudokite `model: "auto"` automatiniam atsarginiam perjungimui                  |
 | „Viršyta kvota“                    | Išnaudojote nemokamą arba mokamą kvotą    | Prijunkite daugiau teikėjų arba naudokite nemokamus teikėjus (Kiro, Pollinations)                       |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # aiškiai nustatyta daug ištekli
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # padidinti ribotą laukimo laiką virš lėtų išorinių paslaugų numatytosios RATE_LIMIT_MAX_WAIT_MS reikšmės
 ```
 
-Nustatykite juos OmniRoute proceso aplinkoje (demone, pvz., per LaunchAgent plist arba `systemctl edit`), tada paleiskite OmniRoute iš naujo. Rotacijos žyma yra vienintelis didžiausią poveikį turintis svertas: ji kritinę triktį paverčia skaidria pakartotine užklausa sveikam telkinio teikėjui.
+Nustatykite juos 67router proceso aplinkoje (demone, pvz., per LaunchAgent plist arba `systemctl edit`), tada paleiskite 67router iš naujo. Rotacijos žyma yra vienintelis didžiausią poveikį turintis svertas: ji kritinę triktį paverčia skaidria pakartotine užklausa sveikam telkinio teikėjui.
 
 **Pastaba**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` riboja, kiek daug išteklių naudojančių — ilgo konteksto — užklausų vykdoma vienu metu; ši riba yra priėmimo užkarda, o ne teikėjo užklausų dažnio ribotuvas. **#503-fanout atnaujinimas:** šis kintamasis pagal numatytuosius nustatymus nebėra nustatomas (dabar jis taikomas tik aiškiai sukonfigūravus, kaip parodyta pirmiau) — daug išteklių naudojančių užklausų priėmimas vietoje to valdomas automatiškai išvedamu baitų biudžetu (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`), kuris prisitaiko pagal tikrąją pagrindinio kompiuterio atminties ribą, todėl naujai įdiegtoje sistemoje turėtų būti gerokai mažiau `503 chat_admission_busy` atmetimų net ir visai nenustačius šio kintamojo; aiškus jo nustatymas čia vis tiek veikia būtent taip, kaip aprašyta. Aiškiai nurodytos baitų biudžeto reikšmės apribojamos iki 8 MiB–2 GiB intervalo. `413 body_exceeds_budget` nėra laikina klaida: padidinkite tą baitų biudžetą, sumažinkite `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` arba padidinkite proceso atminties ribą. `inflight_bytes_budget` atmetimas reiškia laikiną konkurenciją dėl išteklių, todėl užklausą galima kartoti. Kiekvieno teikėjo užklausų dažnio ribojimas (`open-sse/services/rateLimitManager.ts`) atskirai valdomas naudojant `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` ir `RATE_LIMIT_AUTO_ENABLE` — žr. `.env.example`.
 
 **Kaip patikrinti, ar sprendimas suveikė**: du kartus greitai vieną po kito paleiskite agentą / cron užduotį ir patvirtinkite, kad abu bandymai sėkmingi. Prieš pritaikant pataisą antrasis paleidimas paprastai pateikia `429`/`401`. Pritaikius pataisą, triktys (jei jų pasitaiko) skaidriai pakartojamos ir iškvieta užbaigiama. Taip pat galite vykdyti `curl /monitoring/health` ir stebėti lauką `rateLimitedUntil` teikėjų ryšiuose bei `circuitBreakers.providerBreakers[].state` paveiktiems teikėjams — būsena yra viena iš `CLOSED`, `DEGRADED`, `OPEN` arba `HALF_OPEN` (žr. `src/shared/utils/circuitBreaker.ts`), o nuolat trikčių patiriantis teikėjas pereis per būsenas `CLOSED → DEGRADED → OPEN`, kol pasibaigus nustatymo iš naujo intervalui bus praleista bandomoji užklausa (`HALF_OPEN`).
 
-**Jei vis tiek matote 429**: aktyvi to teikėjo paskyra iš tikrųjų išnaudojo savo _kvotą_ (ne tik užklausų dažnio limitą). OmniRoute valdymo skydelyje → Providers → Accounts pridėkite antrą to paties teikėjo paskyrą arba įtraukite kitą nemokamą teikėją (pvz., `routeway`, `auggie`). Rotacija padeda tik esant laikinam dažnio ribojimui / 400 / 401; visiškai išnaudojus kvotą reikia antrų prisijungimo duomenų arba kito teikėjo.
+**Jei vis tiek matote 429**: aktyvi to teikėjo paskyra iš tikrųjų išnaudojo savo _kvotą_ (ne tik užklausų dažnio limitą). 67router valdymo skydelyje → Providers → Accounts pridėkite antrą to paties teikėjo paskyrą arba įtraukite kitą nemokamą teikėją (pvz., `routeway`, `auggie`). Rotacija padeda tik esant laikinam dažnio ribojimui / 400 / 401; visiškai išnaudojus kvotą reikia antrų prisijungimo duomenų arba kito teikėjo.
 
 **Jei naudodami vaizdo modelius (`auto/vision`, `bazaarlink/*`) matote 403**: prijungta paskyra neturi mokamo plano, į kurį įtrauktas vaizdų apdorojimas, arba API raktas neturi pakankamų leidimų. Teikėjo valdymo skydelyje patikrinkite, ar rakto apimtis apima vaizdų apdorojimą / daugiarūšį režimą, arba prijunkite mokamo plano paskyrą ir palikite ją kaip vaizdų apdorojimo tikslą.
 
@@ -71,7 +71,7 @@ Nustatykite juos OmniRoute proceso aplinkoje (demone, pvz., per LaunchAgent plis
 
 Vykdydami `npm install -g omniroute`, galite pamatyti daugybę įspėjimų, pvz., `npm warn ERESOLVE`, pranešimų apie lygiavertes priklausomybes ir `deprecated` žinučių. **Tai yra tikėtina ir nekenksminga.** Diegimas pavyko, jei išvestyje matote `added <N> packages`.
 
-Norėdami paslėpti įspėjimus apie lygiaverčių priklausomybių sprendimą, naudokite palaikomą „OmniRoute“ diegimo formą:
+Norėdami paslėpti įspėjimus apie lygiaverčių priklausomybių sprendimą, naudokite palaikomą „67router“ diegimo formą:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` paslepia tik `ERESOLVE` ir pranešimus apie lygiavertes priklausomybes. Pranešimai apie pasenusius paketus lieka matomi, nes juos pateikia tranzityviniai trečiųjų šalių paketai; jie nereiškia, kad diegimas nepavyko.
 
-Įspėjimai kyla dėl pasenusių lygiaverčių priklausomybių versijų intervalų trečiųjų šalių paketuose, kurių „OmniRoute“ nevaldo:
+Įspėjimai kyla dėl pasenusių lygiaverčių priklausomybių versijų intervalų trečiųjų šalių paketuose, kurių „67router“ nevaldo:
 
 1. **`marked-terminal` reikalauja `marked >=1 <16`, tačiau rasta `marked@18`** — praktiškai veikia tinkamai; pirminio projekto lygiavertės priklausomybės versijų intervalas tiesiog pasenęs.
 2. **`deprecated prebuild-install@7.1.3`** — tranzityvinis pagalbinis įrankis, skirtas saviesiems dvejetainiams failams gauti. Jis nėra
@@ -104,19 +104,19 @@ npm warn install-scripts 7 paketų diegimo scenarijai buvo užblokuoti, nes jie 
 
 ### Ar galima nepaisyti šio įspėjimo?
 
-**Iš dalies, tačiau nerekomenduojama vykdyti be scenarijų.** OmniRoute turi atsarginius sprendimus, leidžiančius tęsti darbą: jei savųjų `better-sqlite3` susiejimų nepavyksta įkelti iš autonominio rinkinio, programa naudoja alternatyvias tvarkykles, pvz., `node:sqlite` arba `sql.js` (žr. [SQLite vykdymo aplinkos parinkimas](../ops/SQLITE_RUNTIME.md)). Serveris vis tiek bus paleistas, tačiau naudojant WASM pagrįstus atsarginius sprendimus, pvz., `sql.js`, išjungiamas SQLite WAL (išankstinio įrašymo žurnalo) režimas ir padidėja atminties bei disko sinchronizavimo sąnaudos.
+**Iš dalies, tačiau nerekomenduojama vykdyti be scenarijų.** 67router turi atsarginius sprendimus, leidžiančius tęsti darbą: jei savųjų `better-sqlite3` susiejimų nepavyksta įkelti iš autonominio rinkinio, programa naudoja alternatyvias tvarkykles, pvz., `node:sqlite` arba `sql.js` (žr. [SQLite vykdymo aplinkos parinkimas](../ops/SQLITE_RUNTIME.md)). Serveris vis tiek bus paleistas, tačiau naudojant WASM pagrįstus atsarginius sprendimus, pvz., `sql.js`, išjungiamas SQLite WAL (išankstinio įrašymo žurnalo) režimas ir padidėja atminties bei disko sinchronizavimo sąnaudos.
 
 ### Kurie scenarijai iš tikrųjų būtini?
 
-Ne visi užblokuoti scenarijai yra būtini OmniRoute veikimui:
+Ne visi užblokuoti scenarijai yra būtini 67router veikimui:
 
-- **Būtini (`omniroute`, `better-sqlite3`):** OmniRoute vykdoma iš autonominio Next.js programos rinkinio (`dist/`). Diegimo metu npm atsisiunčia arba sukompiliuoja pagrindinei sistemai pritaikytą savąją SQLite tvarkyklę aukščiausio lygio kataloge `node_modules/better-sqlite3/`. Tada OmniRoute scenarijus `postinstall` (`scripts/build/postinstall.mjs`) patikrina ir nukopijuoja šiuos konkrečiai sistemai pritaikytus dvejetainius failus į `dist/node_modules/`, kad autonominis serveris galėtų juos pasiekti. Jei `omniroute` scenarijus `postinstall` užblokuotas, šis kopijavimo veiksmas praleidžiamas.
+- **Būtini (`omniroute`, `better-sqlite3`):** 67router vykdoma iš autonominio Next.js programos rinkinio (`dist/`). Diegimo metu npm atsisiunčia arba sukompiliuoja pagrindinei sistemai pritaikytą savąją SQLite tvarkyklę aukščiausio lygio kataloge `node_modules/better-sqlite3/`. Tada 67router scenarijus `postinstall` (`scripts/build/postinstall.mjs`) patikrina ir nukopijuoja šiuos konkrečiai sistemai pritaikytus dvejetainius failus į `dist/node_modules/`, kad autonominis serveris galėtų juos pasiekti. Jei `omniroute` scenarijus `postinstall` užblokuotas, šis kopijavimo veiksmas praleidžiamas.
 - **Pasirenkami / tranzityviniai (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Tai kompiliavimo pagalbinės priemonės, pakeitimų stebėjimo įrankiai arba sistemos raktinės priemonės. Leidus juos vykdyti, kompiliavimo įspėjimų nebelieka, tačiau jie nėra būtini pagrindinėms maršruto parinkimo funkcijoms.
-- **Neįtraukiamas (`onnxruntime-node`):** Tai pasirenkamoji vietinių DI įterpinių priklausomybė, kuri **nėra** būtina OmniRoute veikimui. Jos scenarijus `postinstall` iš NuGet atsisiunčia apie 300 MB CUDA išteklių; neįtraukite jos į leidžiamų elementų sąrašą, nebent aiškiai ketinate naudoti vietinį ONNX spartinimą palaikomoje aparatinėje įrangoje.
+- **Neįtraukiamas (`onnxruntime-node`):** Tai pasirenkamoji vietinių DI įterpinių priklausomybė, kuri **nėra** būtina 67router veikimui. Jos scenarijus `postinstall` iš NuGet atsisiunčia apie 300 MB CUDA išteklių; neįtraukite jos į leidžiamų elementų sąrašą, nebent aiškiai ketinate naudoti vietinį ONNX spartinimą palaikomoje aparatinėje įrangoje.
 
 ### Rekomenduojamas sprendimas
 
-Kad visuotinio diegimo metu būtų leidžiami reikalingi diegimo scenarijai ir nebūtų rodomi įspėjimai, nurodykite `--allow-scripts`, skirtą OmniRoute ir jos savosioms priklausomybėms:
+Kad visuotinio diegimo metu būtų leidžiami reikalingi diegimo scenarijai ir nebūtų rodomi įspėjimai, nurodykite `--allow-scripts`, skirtą 67router ir jos savosioms priklausomybėms:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -146,7 +146,7 @@ neįdiegtas, npm paketas yra, tačiau trūksta naršyklės vykdomojo failo.
 Playwright sąmoningai atskiria naršyklių atsisiuntimą nuo npm paketo
 diegimo, todėl toks atsakymas yra tikėtinas, kol naršyklė neįdiegta.
 
-Jei npm įdiegtas visuotinai, įdiekite Chromium iš OmniRoute paketo
+Jei npm įdiegtas visuotinai, įdiekite Chromium iš 67router paketo
 katalogo, kad naršyklės podėlis priklausytų tam pačiam Playwright diegimui:
 
 ```bash
@@ -154,8 +154,8 @@ cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Įdiegę iš naujo paleiskite OmniRoute, tada pakartokite Gemini Web užklausą. Jei
-paleidžiate OmniRoute iš Docker atvaizdo, naudokite `-web` atvaizdą (arba
+Įdiegę iš naujo paleiskite 67router, tada pakartokite Gemini Web užklausą. Jei
+paleidžiate 67router iš Docker atvaizdo, naudokite `-web` atvaizdą (arba
 `runner-web` kūrimo paskirties objektą), kuriame yra Chromium ir jo priklausomybės;
 baziniame atvaizde jų nėra.
 
@@ -188,7 +188,7 @@ baziniame atvaizde jų nėra.
 **Tai klaidingas aptikimas. Niekas neužkrėsta ir nereikia imtis jokių veiksmų.**
 
 Avast ir AVG naudoja euristinį tikrinimą, kuris pažymi paprastojo teksto / Markdown failus,
-turinčius daug į HTTP užklausas panašių nuorodų. OmniRoute `README.md` pateikiamas npm pakete
+turinčius daug į HTTP užklausas panašių nuorodų. 67router `README.md` pateikiamas npm pakete
 (jis nurodytas `package.json` → `files`), todėl visuotinai diegiant patenka į
 `node_modules/omniroute/README.md` — jame yra apie 15 `http://localhost:20128/...` pavyzdžių
 (MCP HTTP/SSE galiniai taškai, A2A `.well-known` URL ir `curl` fragmentai). Tokio nuorodų
@@ -205,7 +205,7 @@ atkurti jį iš karantino.
 
 1. **Sustabdykite pranešimus** — antivirusinėje programoje išimčių sąraše nurodykite diegimo
    katalogą (Avast: Settings → Exceptions), pridėdami visuotinį `node_modules` kelią ir (arba)
-   OmniRoute duomenų katalogą (`~/.omniroute/`).
+   67router duomenų katalogą (`~/.omniroute/`).
 2. **Praneškite apie klaidingą aptikimą** — <https://www.avast.com/false-positive-file-form.php>,
    pridėdami į karantiną perkeltą `README.md`. Tai visiems padedantis sprendimas, nes šiuo
    atveju gamintojo euristinis tikrinimas pernelyg jautriai reaguoja į tekstinį failą.
@@ -269,7 +269,7 @@ planuojama pasirašyti; kol tai neįgyvendinta, naujose laidose problema gali pa
 
 ### Prisijungimo puslapis užstringa arba rodoma klaida „Module self-registration“
 
-**Priežastis:** naudojate Node.js versiją, kuri neatitinka OmniRoute patvirtinto minimalaus saugaus vykdymo aplinkos lygio. Dažniausiai naudojama senesnė Node 22 arba 24 pataisos versija, kuri yra senesnė už OmniRoute reikalaujamą saugos pataisų lygį.
+**Priežastis:** naudojate Node.js versiją, kuri neatitinka 67router patvirtinto minimalaus saugaus vykdymo aplinkos lygio. Dažniausiai naudojama senesnė Node 22 arba 24 pataisos versija, kuri yra senesnė už 67router reikalaujamą saugos pataisų lygį.
 
 **Požymiai:**
 
@@ -285,7 +285,7 @@ planuojama pasirašyti; kol tai neįgyvendinta, naujose laidose problema gali pa
    nvm use 24
    ```
 2. Patikrinkite savo versiją: `node --version` turėtų rodyti `v24.0.0` arba naujesnę 24.x LTS šakos versiją
-3. Iš naujo įdiekite OmniRoute: `npm install -g omniroute`
+3. Iš naujo įdiekite 67router: `npm install -g omniroute`
 4. Paleiskite iš naujo: `omniroute`
 
 > **Palaikomos saugios versijos:** `>=22.22.2 <23` arba `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) ir Node.js 26 yra visiškai palaikomos.
@@ -368,13 +368,13 @@ omniroute
 
 **Priežastis:** Naudojant Node.js 22, undici@8 užklausų vykdyklė nesuderinama su Node integruotu `fetch()` įgyvendinimu.
 
-**Pataisymas (v3.5.5+):** Kai aktyvi tarpinio serverio užklausų vykdyklė, OmniRoute dabar naudoja pačios undici bibliotekos `fetch()` funkciją, taip užtikrindama nuoseklų veikimą. Atnaujinkite į v3.5.5+.
+**Pataisymas (v3.5.5+):** Kai aktyvi tarpinio serverio užklausų vykdyklė, 67router dabar naudoja pačios undici bibliotekos `fetch()` funkciją, taip užtikrindama nuoseklų veikimą. Atnaujinkite į v3.5.5+.
 
 ### MITM tarpinis serveris WSL aplinkoje: Windows pagrindinėje sistemoje veikiančios darbalaukio programos neperimamos
 
-**Priežastis:** MITM tarpinis serveris ir jo CA sertifikatas įdiegiami aplinkoje, kurioje veikia OmniRoute. WSL atveju ši aplinka yra Linux svečio sistema, o DI darbalaukio programos (Kiro, Trae, Copilot, Zed, …) veikia Windows pagrindinėje sistemoje. Pagrindinės sistemos programos nepasitiki svečio sistemos sertifikatų saugykla ir nenaudoja svečio sistemos tarpinio serverio, todėl darbalaukio programų srautas ten neperimamas.
+**Priežastis:** MITM tarpinis serveris ir jo CA sertifikatas įdiegiami aplinkoje, kurioje veikia 67router. WSL atveju ši aplinka yra Linux svečio sistema, o DI darbalaukio programos (Kiro, Trae, Copilot, Zed, …) veikia Windows pagrindinėje sistemoje. Pagrindinės sistemos programos nepasitiki svečio sistemos sertifikatų saugykla ir nenaudoja svečio sistemos tarpinio serverio, todėl darbalaukio programų srautas ten neperimamas.
 
-**Rekomendacija:** Paleiskite OmniRoute tiesiogiai toje pačioje operacinėje sistemoje, kurioje veikia norimos perimti darbalaukio programos (Windows programoms naudokite Windows; analogiškai elkitės su macOS/Linux). Jei OmniRoute paliekate WSL aplinkoje, bet norite perimti pagrindinės sistemos programų srautą, Windows pagrindinėje sistemoje turite rankiniu būdu patikėti sugeneruotu CA sertifikatu ir kiekvienos pagrindinės sistemos programos tinklo ar tarpinio serverio nustatymuose nurodyti WSL tarpinio serverio galinį tašką — ši konfigūracija nepalaikoma ir yra nepatikima.
+**Rekomendacija:** Paleiskite 67router tiesiogiai toje pačioje operacinėje sistemoje, kurioje veikia norimos perimti darbalaukio programos (Windows programoms naudokite Windows; analogiškai elkitės su macOS/Linux). Jei 67router paliekate WSL aplinkoje, bet norite perimti pagrindinės sistemos programų srautą, Windows pagrindinėje sistemoje turite rankiniu būdu patikėti sugeneruotu CA sertifikatu ir kiekvienos pagrindinės sistemos programos tinklo ar tarpinio serverio nustatymuose nurodyti WSL tarpinio serverio galinį tašką — ši konfigūracija nepalaikoma ir yra nepatikima.
 
 ---
 
@@ -401,7 +401,7 @@ omniroute
 
 ### Baigėsi OAuth prieigos rakto galiojimas
 
-OmniRoute automatiškai atnaujina prieigos raktus. Jei problemos išlieka:
+67router automatiškai atnaujina prieigos raktus. Jei problemos išlieka:
 
 1. Valdymo skydelis → Teikėjas → Prisijungti iš naujo
 2. Pašalinkite teikėjo ryšį ir pridėkite jį iš naujo
@@ -612,7 +612,7 @@ Teikėjų profiliai palaiko šiuos nustatymus:
 
 ### Sinchronizuotų užklausų antplūdžio prevencija
 
-Kai daug lygiagrečių užklausų pasiekia teikėją, kuriam taikomas užklausų dažnio ribojimas, OmniRoute naudoja mutex ir automatinį užklausų dažnio ribojimą, kad užklausos būtų vykdomos nuosekliai ir būtų išvengta kaskadinių trikčių. API rakto teikėjams tai atliekama automatiškai.
+Kai daug lygiagrečių užklausų pasiekia teikėją, kuriam taikomas užklausų dažnio ribojimas, 67router naudoja mutex ir automatinį užklausų dažnio ribojimą, kad užklausos būtų vykdomos nuosekliai ir būtų išvengta kaskadinių trikčių. API rakto teikėjams tai atliekama automatiškai.
 
 ### Pokalbių užklausos nepavyksta dėl 503 / chat_admission_busy
 
@@ -647,7 +647,7 @@ Esant numatytosioms ribinėms reikšmėms, užklausa laikoma struktūriškai did
 bent `64` įrankiai arba bent `32,000` apskaičiuotų atpažinimo ženklų, arba kai apribotas struktūros vertinimas
 pasiekia savo ribas — `10,000` aplankytų mazgų arba `12` gylį.
 
-**Priežastis:** Tai yra sąmoningas apkrovos mažinimas OmniRoute viduje, o ne išorinio teikėjo triktis.
+**Priežastis:** Tai yra sąmoningas apkrovos mažinimas 67router viduje, o ne išorinio teikėjo triktis.
 Kiekvienas procesas naudoja vietinį proceso saugiklį, kad rezervuotų ribotą didelės apkrovos pajėgumą prieš išlaikydamas
 ir analizuodamas didelį užklausos turinį. Didelės apkrovos nuoma lieka aktyvi visą SSE
 atsakymo gyvavimo laiką.
@@ -691,7 +691,7 @@ Autoritetingus priėmimo nustatymus žr. [aplinkos kintamųjų žinyne](../refer
 
 ## Pasirenkama RAG / LLM trikčių taksonomija (16 problemų)
 
-Kai kurie „OmniRoute“ naudotojai šliuzą naudoja prieš RAG ar agentų sistemas. Tokiose konfigūracijose dažnai pasitaiko keistas scenarijus: „OmniRoute“ atrodo veikiantis tinkamai (teikėjai veikia, maršruto parinkimo profiliai tvarkingi, nėra įspėjimų apie užklausų dažnio ribojimą), tačiau galutinis atsakymas vis tiek yra neteisingas.
+Kai kurie „67router“ naudotojai šliuzą naudoja prieš RAG ar agentų sistemas. Tokiose konfigūracijose dažnai pasitaiko keistas scenarijus: „67router“ atrodo veikiantis tinkamai (teikėjai veikia, maršruto parinkimo profiliai tvarkingi, nėra įspėjimų apie užklausų dažnio ribojimą), tačiau galutinis atsakymas vis tiek yra neteisingas.
 
 Praktikoje šie incidentai dažniausiai kyla paskesniame RAG duomenų apdorojimo sraute, o ne pačiame šliuze.
 
@@ -710,17 +710,17 @@ Principas paprastas:
 
 1. Tirdami netinkamą atsakymą, užfiksuokite:
    - naudotojo užduotį ir užklausą
-   - „OmniRoute“ maršruto arba teikėjų derinį
+   - „67router“ maršruto arba teikėjų derinį
    - bet kokį paskesniame etape naudotą RAG kontekstą (gautus dokumentus, įrankių iškvietimus ir pan.)
 2. Priskirkite incidentą vienam ar dviem „WFGY ProblemMap“ numeriams (`No.1` … `No.16`).
-3. Įrašykite numerį savo valdymo skydelyje, veiksmų apraše arba incidentų sekimo sistemoje šalia „OmniRoute“ žurnalų.
+3. Įrašykite numerį savo valdymo skydelyje, veiksmų apraše arba incidentų sekimo sistemoje šalia „67router“ žurnalų.
 4. Remdamiesi atitinkamu WFGY puslapiu nuspręskite, ar reikia keisti RAG sistemą, informacijos gavimo komponentą arba maršruto parinkimo strategiją.
 
 Visą tekstą ir konkrečius sprendimo būdus rasite čia (MIT licencija, tik tekstas):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Jei už „OmniRoute“ nenaudojate RAG ar agentų duomenų apdorojimo srautų, šį skyrių galite praleisti.
+Jei už „67router“ nenaudojate RAG ar agentų duomenų apdorojimo srautų, šį skyrių galite praleisti.
 
 ---
 
@@ -744,7 +744,7 @@ v3.8.0 leidimui būdingos problemos ir dabartiniai jų sprendimo būdai. Jei pat
 
 1. Įdiekite jūsų platformai skirtą „Devin CLI“
 2. Faile `.env` nustatykite `CLI_DEVIN_BIN=/usr/local/bin/devin` (arba tikrąjį kelią)
-3. Paleiskite „OmniRoute“ iš naujo ir dar kartą patikrinkite per **Valdymo skydelis → CLI įrankiai**
+3. Paleiskite „67router“ iš naujo ir dar kartą patikrinkite per **Valdymo skydelis → CLI įrankiai**
 
 ### Modelio atvėsimo būsena užstrigo (rankinis nustatymas iš naujo)
 
@@ -799,7 +799,7 @@ v3.8.0 leidimui būdingos problemos ir dabartiniai jų sprendimo būdai. Jei pat
 
 1. Sugeneruokite atsitiktinę paslaptį: `openssl rand -hex 32`
 2. Gamybinio serverio aplinkoje (ir kiekviename su tiltu bendraujančiame kliente) nustatykite `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>`
-3. Paleiskite „OmniRoute“ iš naujo
+3. Paleiskite „67router“ iš naujo
 
 ### „Responses API“: foninis režimas pakeistas sinchroniniu
 

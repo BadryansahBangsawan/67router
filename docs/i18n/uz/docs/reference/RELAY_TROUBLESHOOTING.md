@@ -5,10 +5,10 @@
 ---
 
 Releylar (Vercel, Deno, Cloudflare) yuqori oqim ulanishini serversiz
-backendda yakunlaydi, bu OmniRouteʼga provayder API kalitini server tomonida
+backendda yakunlaydi, bu 67routerʼga provayder API kalitini server tomonida
 saqlagan holda barqaror hududdan tashqi ulanishni amalga oshirish imkonini
 beradi. Ushbu hujjatda operatorlar amaliy muhitda duch keladigan ikkita nosozlik
-holati va OmniRoute ularning har biri uchun taqdim etadigan tiklash usullari
+holati va 67router ularning har biri uchun taqdim etadigan tiklash usullari
 bayon etilgan.
 
 ## Reley autentifikatsiyasi qanday saqlanadi
@@ -37,7 +37,7 @@ qanday autentifikatsiya maʼlumotini yubormaydi.
 1. **Sozlamalar → Proksi puli** bo‘limini oching.
 2. Autentifikatsiya maʼlumotlari mavjud bo‘lmagan reley qatorlarida sariq
    `auth missing` belgisi va **Taʼmirlash** tugmasi ko‘rsatiladi.
-3. **Taʼmirlash** tugmasini bosing. OmniRoute
+3. **Taʼmirlash** tugmasini bosing. 67router
    `POST /api/settings/proxies/[id]/repair-relay` so‘rovini yuboradi, u:
    - `relayAuthEnc` qiymatini **joriy** kalit bilan deshifrlaydi;
    - ochiq matndagi `relayAuth` qiymatini qayta `notes` ichiga yozadi;
@@ -71,7 +71,7 @@ shart emas.
 **Alomat:** proksi testi (`speed` tugmasi) reley ishlayotganini ko‘rsatadi, ammo
 so‘rovlar baribir vaqti-vaqti bilan muvaffaqiyatsiz tugaydi.
 
-OmniRouteʼning avtomatik sinov probasi qaytaradigan reley holatidan xabardorlik
+67routerʼning avtomatik sinov probasi qaytaradigan reley holatidan xabardorlik
 sarlavhalarini tekshiring (**Sozlamalar → Proksi puli** hamda `relayTested` /
 `relayAlive` hisoblagichlariga qarang):
 

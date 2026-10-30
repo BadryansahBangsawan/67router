@@ -192,11 +192,11 @@ Pravila sanacije primijenjena na `upstreamDetails`:
 3. Ograničenje dubine: ugniježđivanje preko 4 nivoa se zamjenjuje stringom `"[truncated]"`.
 4. Nizovi su ograničeni na 32 elementa.
 
-Samo pozivne lokacije sa parsiranim tijelom greške provajdera trebaju proslijediti `upstreamDetails`. Interne OmniRoute greške (SSE greške parsiranja, prazan sadržaj, blokade zaštitne ograde) ga ne smiju uključivati.
+Samo pozivne lokacije sa parsiranim tijelom greške provajdera trebaju proslijediti `upstreamDetails`. Interne 67router greške (SSE greške parsiranja, prazan sadržaj, blokade zaštitne ograde) ga ne smiju uključivati.
 
 NEMOJTE prosljeđivati sirovi `err.stack`, `err.message` ili bilo koji string iz runtime izuzetka u `upstreamDetails`. Oni i dalje moraju proći kroz `errorResponse` / `buildErrorBody(code, msg)` bez upstream tijela.
 
-Selektivno prosljeđivanje upstream 4xx čuva siguran JSON oblik i formulaciju provajdera potrebnu za automatski oporavak klijenta, ali to nije prosljeđivanje bajt-po-bajt: rekurzivni sanitator se uvijek pokreće prije serijalizacije. Ciklična, BigInt-nosiva ili neprijateljska `toJSON()` tijela ne uspijevaju (fail closed) i ne ispunjavaju uslove za prosljeđivanje. OCR i moderacija primjenjuju isto pravilo; ne-JSON, prazna ili pogrešno označena upstream tijela se pretvaraju u kanonsku OmniRoute JSON kovertu greške.
+Selektivno prosljeđivanje upstream 4xx čuva siguran JSON oblik i formulaciju provajdera potrebnu za automatski oporavak klijenta, ali to nije prosljeđivanje bajt-po-bajt: rekurzivni sanitator se uvijek pokreće prije serijalizacije. Ciklična, BigInt-nosiva ili neprijateljska `toJSON()` tijela ne uspijevaju (fail closed) i ne ispunjavaju uslove za prosljeđivanje. OCR i moderacija primjenjuju isto pravilo; ne-JSON, prazna ili pogrešno označena upstream tijela se pretvaraju u kanonsku 67router JSON kovertu greške.
 
 ## Poznato ograničenje CodeQL-a: prilagođeni sanitizatori nisu prepoznati
 

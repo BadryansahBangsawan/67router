@@ -4,7 +4,7 @@
 
 ---
 
-Quando o OmniRoute é executado dentro do Docker, os fluxos legados de **Importar do Cursor IDE** /
+Quando o 67router é executado dentro do Docker, os fluxos legados de **Importar do Cursor IDE** /
 `cursor-agent` falham porque o contêiner não consegue acessar a instalação do Cursor
 no host. Em vez disso, use **Entrar com o Cursor** (PKCE deep-control).
 
@@ -14,7 +14,7 @@ no host. Em vez disso, use **Entrar com o Cursor** (PKCE deep-control).
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _dentro_ do contêiner.
    No Docker Desktop para macOS, o banco de dados do IDE no host não é montado por padrão, e
    o sistema operacional do contêiner é Linux, mesmo quando o host é Darwin.
-2. **Ausência do binário `cursor-agent`** — As imagens oficiais do OmniRoute não incluem
+2. **Ausência do binário `cursor-agent`** — As imagens oficiais do 67router não incluem
    `cursor-agent`. Anteriormente, a opção Modelos disponíveis executava
    `cursor-agent --list-models` e recorria a um catálogo estático em caso de falha.
 3. **Binário incorreto** — **Não** monte via bind um `cursor-agent` do macOS em um contêiner
@@ -24,11 +24,11 @@ no host. Em vez disso, use **Entrar com o Cursor** (PKCE deep-control).
 
 1. Abra **Painel → Provedores → Cursor**.
 2. Escolha a aba **Entrar com o Cursor**.
-3. Clique em **Entrar com o Cursor** — o OmniRoute abre
+3. Clique em **Entrar com o Cursor** — o 67router abre
    `https://cursor.com/loginDeepControl?…` no navegador do seu **host**.
-4. Aprove o login no navegador e retorne ao painel. O OmniRoute
+4. Aprove o login no navegador e retorne ao painel. O 67router
    consulta `api2.cursor.sh/auth/poll` até que os tokens sejam recebidos.
-5. O OmniRoute armazena os tokens de **acesso + atualização** e os atualiza por meio de
+5. O 67router armazena os tokens de **acesso + atualização** e os atualiza por meio de
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Esse método não exige o Cursor IDE nem o `cursor-agent` dentro do contêiner.
@@ -37,10 +37,10 @@ Esse método não exige o Cursor IDE nem o `cursor-agent` dentro do contêiner.
 
 Com uma conexão autenticada, **Modelos disponíveis / Sincronização automática** prioriza o
 catálogo HTTP `AiService/AvailableModels` do Cursor usando o token bearer da conexão.
-Se isso falhar, o OmniRoute ainda tenta usar o `cursor-agent` do host (quando presente) e,
+Se isso falhar, o 67router ainda tenta usar o `cursor-agent` do host (quando presente) e,
 depois, os dados iniciais do registro estático.
 
-O OmniRoute sempre disponibiliza **`auto`** no catálogo (exibido como “Auto”), além
+O 67router sempre disponibiliza **`auto`** no catálogo (exibido como “Auto”), além
 dos modos de roteador no estilo OpenCodex **`auto-cost`**, **`auto-balance`** e
 **`auto-intelligence`**. Na comunicação, eles são mapeados para o modelo `default` do Cursor
 (com um `ModelParameter` de `optimization` para as três variantes). Prefira
@@ -87,7 +87,7 @@ apenas do IDE não é mais necessária).
 ## Turnos vazios / uso esgotado
 
 Quando o Cursor aceita uma execução, mas não retorna texto do assistente (algo comum quando o
-uso premium está esgotado), o OmniRoute apresenta um erro **429** acionável (indicando a cota) ou
+uso premium está esgotado), o 67router apresenta um erro **429** acionável (indicando a cota) ou
 **502** com orientações — não apenas “O provedor retornou conteúdo vazio”. Falhas de streaming,
 como `not_found: AI Model Not Found` (janela de uso esgotada), são
 classificadas como **limite de taxa / uso do Cursor excedido** e mantêm essa mensagem
@@ -97,7 +97,7 @@ os limites do plano do Cursor.
 
 ## Versão do cliente (headless)
 
-Sem uma instalação local do `cursor-agent`, o OmniRoute resolve
+Sem uma instalação local do `cursor-agent`, o 67router resolve
 `x-cursor-client-version` por meio da variável de ambiente `CURSOR_AGENT_CLI_VERSION`, depois por uma extração
 armazenada em cache em disco do script de instalação do Cursor e, por fim, por um ID de build fixado. Substitua com
 `CURSOR_AGENT_CLI_VERSION` quando necessário.

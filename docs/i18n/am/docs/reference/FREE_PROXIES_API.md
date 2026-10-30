@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ከውጫዊ አቅራቢዎች (1proxy, proxifly, iplocate, webshare) የሚመሳሰል፣
+67router ከውጫዊ አቅራቢዎች (1proxy, proxifly, iplocate, webshare) የሚመሳሰል፣
 በጥንቃቄ የተመረጠ የነፃ ፕሮክሲዎች ስብስብ በ`free_proxies` ሰንጠረዥ ውስጥ ይዞ ይመጣል።
 ዳሽቦርዱ እነዚህን በ**Settings → Free Proxies** ስር ያሳያል። ይህ ሰነድ
 የዝርዝሩ መንገድ የሚያቀርባቸውን የሰርቨር-ጎን ማጣሪያ፣ መደርደር፣ መቁጠር እና የማመሳሰል-ስህተት ሪፖርት አቀራረብ

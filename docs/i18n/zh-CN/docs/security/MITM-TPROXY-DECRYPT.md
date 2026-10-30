@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY 透明解密是 OmniRoute 面向
+TPROXY 透明解密是 67router 面向
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM 栈的**第 5 种捕获模式**。它在 Linux 上使用内核 TPROXY + 策略路由拦截并**解密**本地出站 HTTPS 流量——**无需**伪造 `/etc/hosts`，也**无需**修改操作系统全局的系统代理设置。它适合无头环境
 （无需清理 DNS 修改），且防火墙规则会在重启时自动清除。
@@ -50,7 +50,7 @@ TPROXY 透明解密改为在**内核**层引导流量。它在
 - 你不希望通过更改系统级代理来干扰该进程。
 
 由于拦截发生在内核中，发起连接的进程**无需进行任何配置更改**
-——但该进程必须信任 OmniRoute 安装的动态 CA
+——但该进程必须信任 67router 安装的动态 CA
 （请参阅[§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)）。
 
 ---
@@ -68,7 +68,7 @@ TPROXY 透明解密改为在**内核**层引导流量。它在
 插件加载器 (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`)
 会返回 `null`，而不是抛出异常。随后，捕获模式状态会报告
 `available: false`，仪表板开关将被**禁用**，并显示工具提示
-“TPROXY 解密需要 Linux + root + 原生插件”，OmniRoute 的其余功能则会
+“TPROXY 解密需要 Linux + root + 原生插件”，67router 的其余功能则会
 继续正常运行。
 
 ---
@@ -233,7 +233,7 @@ CA 私钥**绝不会离开本机**。
 | **错误信息净化**        | 该路由的错误响应会经过 `sanitizeErrorMessage()` 处理（硬性规则 #12）。                                                                                                                                                                                                                                  |
 
 **MITM CA 是一项强大的能力。** 受操作系统信任且能够为任意
-主机签名的 CA，意味着 OmniRoute 拦截的任何内容都可以被解密。它被限制在
+主机签名的 CA，意味着 67router 拦截的任何内容都可以被解密。它被限制在
 显式启用且仅限本地的 TPROXY 捕获模式之后，默认关闭，并且在停止该模式时会从信任存储区中
 移除相应条目。
 
@@ -342,7 +342,7 @@ TPROXY **没有环境变量**——所有配置均通过 POST 请求体或上述
 ### 崩溃后残留防火墙规则
 
 `revertTproxy()` 与应用操作完全相反，并且具有幂等性。停止该模式会还原
-规则；如果 OmniRoute 在会话期间被终止，请使用 AgentBridge
+规则；如果 67router 在会话期间被终止，请使用 AgentBridge
 **修复**操作（`POST /api/tools/agent-bridge/repair`）撤销残留的系统
 状态（DNS 欺骗、根 CA、系统代理）。TPROXY `mangle` 规则和路由也会
 在重启时自动清除。

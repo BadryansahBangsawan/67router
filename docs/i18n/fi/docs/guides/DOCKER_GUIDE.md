@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Suomi)
+# 🐳 Docker Guide — 67router (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Ympäristötiedoston käyttäminen](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Käytettävissä olevat profiilit](#available-profiles)
-- [Isäntäjärjestelmän CLI-työkalujen määrittäminen, kun OmniRoute toimii Dockerissa](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Isäntäjärjestelmän CLI-työkalujen määrittäminen, kun 67router toimii Dockerissa](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis-sivukontti](#redis-sidecar)
 - [Tuotantokäytön Compose](#production-compose)
 - [Dockerfile-vaiheet](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Käytettävissä olevat profiilit
 
-OmniRoute sisältää Compose-profiilit yleisimpiä käyttöönottotapoja varten. Valitse ympäristöösi sopiva profiili.
+67router sisältää Compose-profiilit yleisimpiä käyttöönottotapoja varten. Valitse ympäristöösi sopiva profiili.
 
 | Profiili        | Palvelu          | Käyttötilanne                                                                                                                                                                  | Komento                                      |
 | --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute sisältää Compose-profiilit yleisimpiä käyttöönottotapoja varten
 
 > Useita profiileja voi yhdistää: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Isäntäkoneen CLI-työkalujen määrittäminen, kun OmniRoute toimii Dockerissa
+## Isäntäkoneen CLI-työkalujen määrittäminen, kun 67router toimii Dockerissa
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` ja hallintapaneelin
 **Tallenna määritykset** -painike kirjoittavat tiedostoja, kuten `~/.codex/*.config.toml`. Näillä poluilla
@@ -103,11 +103,11 @@ säilön sisällä, tiedostot kirjoitetaan säilön omaan kotihakemistoon (`/hom
 levykuva käyttää määritystä `USER node`), josta yksikään isäntäkoneen CLI ei lue niitä ja jonka sisältö
 hävitetään heti, kun säilö luodaan uudelleen.
 
-OmniRoute tunnistaa tämän ja kieltäytyy kirjoittamasta antaen sen sijaan ohjeet,
+67router tunnistaa tämän ja kieltäytyy kirjoittamasta antaen sen sijaan ohjeet,
 eikä ilmoita onnistumisesta, jota et voisi hyödyntää: CLI palauttaa lopetuskoodin `2`, ja API vastaa koodilla `422`
 sekä arvolla `containerEphemeralTarget: true`.
 
-### Suositus: suorita CLI isäntäkoneessa ja OmniRoute Dockerissa
+### Suositus: suorita CLI isäntäkoneessa ja 67router Dockerissa
 
 Säilö tarjoaa API:n; CLI määrittää isäntäkoneesi työkalut.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind-liitos tekee polusta luotettavan: OmniRoute lukee tiedoston
+Bind-liitos tekee polusta luotettavan: 67router lukee tiedoston
 `/proc/self/mountinfo` ja sallii kirjoittamisen liitettyihin polkuihin (sekä hakemistoihin,
 joiden alihakemistot ovat liitoksia, kuten yllä oleva `/host-home`-rakenne), mutta
 kieltäytyy edelleen kirjoittamasta liittämättömiin polkuihin.
@@ -178,7 +178,7 @@ varoittaen, ettei se säily säilön uudelleenluonnin jälkeen.
 
 ## Redis-sivuvaunu
 
-OmniRoute käyttää Redisiä hajautetun nopeusrajoittimen ja jaetun välimuistin taustajärjestelmänä. `redis`-palvelu on **aina määritetty** tiedostossa `docker-compose.yml` (sillä ei ole profiilirajoitusta), ja se käynnistyy minkä tahansa muun profiilin rinnalla.
+67router käyttää Redisiä hajautetun nopeusrajoittimen ja jaetun välimuistin taustajärjestelmänä. `redis`-palvelu on **aina määritetty** tiedostossa `docker-compose.yml` (sillä ei ole profiilirajoitusta), ja se käynnistyy minkä tahansa muun profiilin rinnalla.
 
 | Tieto                  | Arvo                                       |
 | ---------------------- | ------------------------------------------ |
@@ -366,7 +366,7 @@ Tiedostossa [ENVIRONMENT.md](../reference/ENVIRONMENT.md) dokumentoitujen oletus
 
 ## Käänteinen välityspalvelin alipolussa (Traefik / nginx)
 
-Next.jsin `basePath` käännetään osaksi standalone-pakettia. OmniRoute tallentaa
+Next.jsin `basePath` käännetään osaksi standalone-pakettia. 67router tallentaa
 sisällytetyn arvon sovelluksen juuressa olevaan valvontatiedostoon (kirjoitetaan komennon
 `npm run build` aikana; luetaan tiedostolla `scripts/docker/ensure-docker-base-path.mjs`)
 ja vertaa sitä arvoon `OMNIROUTE_BASE_PATH`, kun säilö käynnistyy. Kun arvot eroavat
@@ -445,7 +445,7 @@ tarkistusohjeet:
 
 ## Docker Compose ja Caddy (automaattinen HTTPS/TLS)
 
-OmniRoute voidaan julkaista turvallisesti Caddyn automaattisen SSL-varmenteiden käyttöönoton avulla. Varmista, että verkkotunnuksesi DNS:n A-tietue osoittaa palvelimesi IP-osoitteeseen.
+67router voidaan julkaista turvallisesti Caddyn automaattisen SSL-varmenteiden käyttöönoton avulla. Varmista, että verkkotunnuksesi DNS:n A-tietue osoittaa palvelimesi IP-osoitteeseen.
 
 ```yaml
 services:
@@ -476,11 +476,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy asettaa vakiomuotoiset edelleenlähetysotsakkeet taustalla olevalle säilölle. OmniRoute käyttää
+Caddy asettaa vakiomuotoiset edelleenlähetysotsakkeet taustalla olevalle säilölle. 67router käyttää
 `NEXT_PUBLIC_BASE_URL`-arvoa ensisijaisena julkisena alkuperänä OAuth-paluuosoitteille ja luoduille julkisille
 linkeille. Todennetut hallintapaneelin kirjoituspyynnöt käyttävät saman alkuperän pyyntöjä sekä istuntoon sidottua CSRF-
 suojausta. Ota `OMNIROUTE_TRUST_PROXY` käyttöön vain edistyneissä käyttöönotoissa, joissa haluat tarkoituksella
-OmniRouten päättelevän julkisen alkuperän luotetuista edelleenlähetysotsakkeista eksplisiittisen
+67routerin päättelevän julkisen alkuperän luotetuista edelleenlähetysotsakkeista eksplisiittisen
 määrityksen sijaan.
 
 ## Cloudflare Quick Tunnel
@@ -492,11 +492,11 @@ Päätepisteiden tunnelipaneelit (Cloudflare, Tailscale, ngrok) voidaan näyttä
 ### Tunnelia koskevat huomautukset
 
 - Quick Tunnel -URL-osoitteet ovat väliaikaisia ja vaihtuvat jokaisen uudelleenkäynnistyksen jälkeen.
-- Quick Tunnel -tunneleita ei palauteta automaattisesti OmniRouten tai säilön uudelleenkäynnistyksen jälkeen. Ota ne tarvittaessa uudelleen käyttöön hallintapaneelista.
+- Quick Tunnel -tunneleita ei palauteta automaattisesti 67routerin tai säilön uudelleenkäynnistyksen jälkeen. Ota ne tarvittaessa uudelleen käyttöön hallintapaneelista.
 - Hallittu asennus tukee tällä hetkellä Linuxia, macOS:ää ja Windowsia `x64`- ja `arm64`-arkkitehtuureilla.
 - Hallitut Quick Tunnel -tunnelit käyttävät oletusarvoisesti HTTP/2-siirtotapaa, jotta rajoitetuissa säilöympäristöissä vältetään meluisat QUICin UDP-puskurivaroitukset. Aseta `CLOUDFLARED_PROTOCOL=quic` tai `auto`, jos haluat käyttää muuta siirtotapaa.
 - Docker-levykuvat sisältävät järjestelmän CA-juurivarmenteet ja välittävät ne hallitulle `cloudflared`-ohjelmalle, mikä estää TLS-luottamusvirheet tunnelin alustuksen aikana säilön sisällä.
-- Aseta `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, jos haluat OmniRouten käyttävän olemassa olevaa binääritiedostoa uuden lataamisen sijaan.
+- Aseta `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, jos haluat 67routerin käyttävän olemassa olevaa binääritiedostoa uuden lataamisen sijaan.
 
 ## Levykuvatunnisteet
 
@@ -509,7 +509,7 @@ Monialustainen manifesti: natiivit `linux/amd64` + `linux/arm64` (Apple Silicon,
 
 ### Julkaisukanavat
 
-OmniRoute julkaisee erilliset Docker-kanavat vakaille julkaisuille, aktiivisen julkaisuhaaran testaukselle ja kehitysversioille.
+67router julkaisee erilliset Docker-kanavat vakaille julkaisuille, aktiivisen julkaisuhaaran testaukselle ja kehitysversioille.
 
 | Kanava                          | Lähde                                      | Muuttuvuus                  | Suositeltu käyttö                                                                                                                |
 | ------------------------------- | ------------------------------------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -562,7 +562,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Varmuuskopioi OmniRouten datataltion tai bind-mountatun datakansion sisältö ennen testaamista. Voit palauttaa aiemman version ottamalla aiemmin käytetyn vakaan version tai tiivisteen takaisin käyttöön ja luomalla säilön uudelleen:
+Varmuuskopioi 67routerin datataltion tai bind-mountatun datakansion sisältö ennen testaamista. Voit palauttaa aiemman version ottamalla aiemmin käytetyn vakaan version tai tiivisteen takaisin käyttöön ja luomalla säilön uudelleen:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -582,7 +582,7 @@ Julkaisuhaaran koontiversio ei voi koskaan siirtää `latest`-osoitinta; vain ke
 
 ## Hallintapaneelin päivitykset Dockerissa
 
-Julkaistusta näköistiedostosta luotu kontti ei voi korvata itseään. Kun OmniRoute havaitsee toimivansa
+Julkaistusta näköistiedostosta luotu kontti ei voi korvata itseään. Kun 67router havaitsee toimivansa
 kontissa (ei `.git`-työkopiota eikä npm-asennusta), etusivun hallintapaneelin päivitysbanneri näyttää
 npm/git-ohjeiden sijaan isännässä suoritettavan komennon sekä kopiointipainikkeen:
 
@@ -598,7 +598,7 @@ Palvelun nimi tulee `AUTO_UPDATE_SERVICE`-muuttujasta (oletus on `omniroute`, jo
 
 Jotta **Päivitä nyt** toimii ilman `/var/run/docker.sock`-liitosta (joka antaa kontille
 root-oikeudet isäntään — katso yllä oleva `cli`-profiilin varoitus), aseta `DOCKER_UPDATE_TRIGGER_FILE`
-OmniRoute-palvelulle ja suorita isännässä tarkkailija:
+67router-palvelulle ja suorita isännässä tarkkailija:
 
 ```yaml
 services:
@@ -612,7 +612,7 @@ services:
 Polun on sijaittava `DATA_DIR`-hakemiston sisällä (suhteelliset arvot ratkaistaan sen suhteen); kaikki muu
 hylätään. **Päivitä nyt** kirjoittaa tämän jälkeen tiedostoon `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`,
 vastaa tilakoodilla `202`, ja hallintapaneeli kysyy `/api/system/version`-päätepistettä toistuvasti, kunnes uusi versio on käytössä,
-ja lataa sitten sivun uudelleen. OmniRoute ei koskaan suorita tässä tilassa komentotulkkia tai Docker-komentoa. Kuten kaikki päivitystoiminnot,
+ja lataa sitten sivun uudelleen. 67router ei koskaan suorita tässä tilassa komentotulkkia tai Docker-komentoa. Kuten kaikki päivitystoiminnot,
 pyyntö hyväksytään vain loopback-/LAN-asiakkailta.
 
 Bind-liitetty datahakemisto tarjoaa isännälle vakaan tarkkailtavan polun. Esimerkkejä `systemd`-yksiköistä
@@ -621,7 +621,7 @@ Bind-liitetty datahakemisto tarjoaa isännälle vakaan tarkkailtavan polun. Esim
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Tarkkaile OmniRoute-hallintapaneelin päivityspyyntöjä
+Description=Tarkkaile 67router-hallintapaneelin päivityspyyntöjä
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -633,7 +633,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Lataa OmniRoute-kontin näköistiedosto ja luo kontti uudelleen
+Description=Lataa 67router-kontin näköistiedosto ja luo kontti uudelleen
 
 [Service]
 Type=oneshot
@@ -653,13 +653,13 @@ Palvelu poistaa pyynnön ennen näköistiedoston lataamista, jotta epäonnistunu
 
 ## Saatavuus: oletusarvoinen SQLite tukee yhtä replikointia
 
-Dockerin tai Kubernetesin OmniRoute-vakiokokoonpano on **yksi Node-prosessi + yksi SQLite-kirjoittaja**. Korkeaa käytettävyyttä **ei tueta** tässä topologiassa.
+Dockerin tai Kubernetesin 67router-vakiokokoonpano on **yksi Node-prosessi + yksi SQLite-kirjoittaja**. Korkeaa käytettävyyttä **ei tueta** tässä topologiassa.
 
-| Rajoite                                                     | Seuraus                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Yksi kirjoittaja                                            | **Älä** suorita useita replikoita samaa SQLite-tiedostoa vasten. Se vioittaa tietokannan.                                                                                                                                                                                                                                                                                                                                |
-| Uudelleenluonti / uudelleenkäynnistys / HEALTHCHECK-lopetus | Käynnissä oleville SSE-yhteyksille, hallintapaneeli-istunnoille ja muistissa olevalle tilalle aiheutuu **täydellinen käyttökatko**. Jokaisen yhdistetyn asiakkaan yhteys katkeaa. Uudet pyynnöt saavat tyhjän päätepisteen aikana käänteiseltä välityspalvelimelta vastauksen **`502 Bad Gateway: Unknown error`**, eivät OmniRoute-JSON-vastausta — asiakkaat eivät voi erottaa tätä palveluntarjoajan viasta (#11015). |
-| Sama tapahtumasilmukka kuin `/healthz`                      | Kiireinen luettelo- tai pakkausjakso voi viivästyttää tarkistuksia; lyhyt aikakatkaisu käynnistää tällöin **ainoan** replikan uudelleen.                                                                                                                                                                                                                                                                                 |
+| Rajoite                                                     | Seuraus                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Yksi kirjoittaja                                            | **Älä** suorita useita replikoita samaa SQLite-tiedostoa vasten. Se vioittaa tietokannan.                                                                                                                                                                                                                                                                                                                               |
+| Uudelleenluonti / uudelleenkäynnistys / HEALTHCHECK-lopetus | Käynnissä oleville SSE-yhteyksille, hallintapaneeli-istunnoille ja muistissa olevalle tilalle aiheutuu **täydellinen käyttökatko**. Jokaisen yhdistetyn asiakkaan yhteys katkeaa. Uudet pyynnöt saavat tyhjän päätepisteen aikana käänteiseltä välityspalvelimelta vastauksen **`502 Bad Gateway: Unknown error`**, eivät 67router-JSON-vastausta — asiakkaat eivät voi erottaa tätä palveluntarjoajan viasta (#11015). |
+| Sama tapahtumasilmukka kuin `/healthz`                      | Kiireinen luettelo- tai pakkausjakso voi viivästyttää tarkistuksia; lyhyt aikakatkaisu käynnistää tällöin **ainoan** replikan uudelleen.                                                                                                                                                                                                                                                                                |
 
 **Tarkistusmatriisi** (katso myös [Kubernetes-tarkistusten suositukset](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -762,7 +762,7 @@ sekä todellinen yhteysreitti; tämä virhe ei yksinään tarkoita virheellistä
 
 ### Suosi yhteyskohtaista välityspalvelinta
 
-Käytä OmniRouten [yhteyskohtaista välityspalvelinmääritystä](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+Käytä 67routerin [yhteyskohtaista välityspalvelinmääritystä](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 kyseiselle Gemini-yhteydelle ja suorita sitten uudelleen **Test Connection** sekä pieni pyyntö
 samalla mallilla. Näin reititysmuutos rajataan kyseiseen yhteyteen. Varmista,
 että välityspalvelin on tavoitettavissa säilöstä ja että yhteys todella käyttää
@@ -832,7 +832,7 @@ voi keskeyttää muiden siihen liitettyjen säilöjen toiminnan; älä poista py
 
 ## Tärkeitä huomioita
 
-- **SQLite WAL -tila:** Komennon `docker stop` suorittamisen on annettava päättyä, jotta OmniRoute voi tehdä tarkistuspisteen ja kirjoittaa uusimmat muutokset takaisin `storage.sqlite`-tiedostoon. Mukana toimitetuissa Compose-tiedostoissa pysäytyksen lisäajaksi on jo asetettu 40 s. Jos suoritat levykuvan suoraan, säilytä asetus `--stop-timeout 40`.
+- **SQLite WAL -tila:** Komennon `docker stop` suorittamisen on annettava päättyä, jotta 67router voi tehdä tarkistuspisteen ja kirjoittaa uusimmat muutokset takaisin `storage.sqlite`-tiedostoon. Mukana toimitetuissa Compose-tiedostoissa pysäytyksen lisäajaksi on jo asetettu 40 s. Jos suoritat levykuvan suoraan, säilytä asetus `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Aseta arvoksi `true`, jos säännöllisiä tai kirjoitusta edeltäviä varmuuskopioita hallitaan ulkoisesti. Olemassa olevien tietokantojen migraatiot edellyttävät silti omaa pysyvää turvakopiota ja massamigraation suojausta.
 - **Tietojen säilyvyys:** Liitä aina taltio polkuun `/app/data`, jotta tietokanta, avaimet ja määritykset säilyvät säiliön uudelleenkäynnistysten yhteydessä.
 - **Portin määritys:** Muuta oletusporttia `20128` ohittamalla ympäristömuuttujan `PORT` arvo.

@@ -4,15 +4,15 @@
 
 ---
 
-Delegasiya edilmiş **Kontekst Redaktəsi** yalnız Claude üçün nəzərdə tutulmuş kontekst idarəetmə xüsusiyyətidir. OmniRoute-un lokal sıxışdırma mexanizmlərindən (Caveman, RTK, LLMLingua, yığılmış konveyerlər) fərqli olaraq — bunlar sorğu gövdəsini proksidən çıxmazdan _əvvəl_ yenidən yazır — Kontekst Redaktəsi **provayderdən** öz aktiv kontekst pəncərəsindən köhnəlmiş alət istifadəsi / alət nəticəsi bloklarını təmizləməyi xahiş edir. OmniRoute yalnız gövdə parametri (`context_management.edits[]`) əlavə edir; faktiki təmizləməni Claude öz tokenizatoruna əsasən həyata keçirir.
+Delegasiya edilmiş **Kontekst Redaktəsi** yalnız Claude üçün nəzərdə tutulmuş kontekst idarəetmə xüsusiyyətidir. 67router-un lokal sıxışdırma mexanizmlərindən (Caveman, RTK, LLMLingua, yığılmış konveyerlər) fərqli olaraq — bunlar sorğu gövdəsini proksidən çıxmazdan _əvvəl_ yenidən yazır — Kontekst Redaktəsi **provayderdən** öz aktiv kontekst pəncərəsindən köhnəlmiş alət istifadəsi / alət nəticəsi bloklarını təmizləməyi xahiş edir. 67router yalnız gövdə parametri (`context_management.edits[]`) əlavə edir; faktiki təmizləməni Claude öz tokenizatoruna əsasən həyata keçirir.
 
-Bu, mahiyyət etibarilə delegasiya edilmiş imkandır: digər provayderlər bu parametri rədd edir, buna görə OmniRoute onu ciddi şəkildə Claude və Claude-Code ilə uyğun relelərlə məhdudlaşdırır.
+Bu, mahiyyət etibarilə delegasiya edilmiş imkandır: digər provayderlər bu parametri rədd edir, buna görə 67router onu ciddi şəkildə Claude və Claude-Code ilə uyğun relelərlə məhdudlaşdırır.
 
 Həqiqət mənbəyi: `open-sse/config/contextEditing.ts` (strategiya identifikatorları, gövdəyə əlavəetmə, telemetriyanın çıxarılması), `open-sse/executors/base.ts` (əlavəetmə şərti + 400 ehtiyat mexanizmi) və `open-sse/services/compression/types.ts` (konfiqurasiya strukturu + standart dəyər).
 
 ## `clear_tool_uses` nə edir
 
-OmniRoute çıxış Anthropic Messages gövdəsinə tək bir redaktə əlavə edir:
+67router çıxış Anthropic Messages gövdəsinə tək bir redaktə əlavə edir:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute çıxış Anthropic Messages gövdəsinə tək bir redaktə əlavə ed
 - `trigger.value: 100000` — sorğunun giriş tokenlərinin sayı bu həddi keçdikdə Claude köhnə alət istifadəsi/nəticəsi cütlərini təmizləməyə başlayır (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, Anthropic-in standart dəyəri).
 - `keep.value: 3` — ən son N alət istifadəsi/nəticəsi cütü toxunulmaz saxlanılır (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beta versiyası `anthropic-beta: context-management-2025-06-27` başlığı vasitəsilə elan edilir; OmniRoute artıq Claude sorğularında bu başlığı göndərir.
+Beta versiyası `anthropic-beta: context-management-2025-06-27` başlığı vasitəsilə elan edilir; 67router artıq Claude sorğularında bu başlığı göndərir.
 
-Əlavəetmə `applyContextEditingToBody()` tərəfindən həyata keçirilir və **idempotentdir**: gövdədə artıq `clear_tool_uses` redaktəsi varsa (əvvəlki çağırış tərəfindən əlavə edilibsə və ya müştəri tərəfindən təqdim olunubsa), gövdə olduğu kimi saxlanılır. `clear_thinking_20251015` redaktəsi də mövcuddursa, OmniRoute `clear_thinking` redaktəsini sabit çeşidləmə ilə önə keçirir, çünki Anthropic `edits[]` massivində `clear_thinking` redaktəsinin `clear_tool_uses` redaktəsindən əvvəl gəlməsini tələb edir.
+Əlavəetmə `applyContextEditingToBody()` tərəfindən həyata keçirilir və **idempotentdir**: gövdədə artıq `clear_tool_uses` redaktəsi varsa (əvvəlki çağırış tərəfindən əlavə edilibsə və ya müştəri tərəfindən təqdim olunubsa), gövdə olduğu kimi saxlanılır. `clear_thinking_20251015` redaktəsi də mövcuddursa, 67router `clear_thinking` redaktəsini sabit çeşidləmə ilə önə keçirir, çünki Anthropic `edits[]` massivində `clear_thinking` redaktəsinin `clear_tool_uses` redaktəsindən əvvəl gəlməsini tələb edir.
 
 ## Hər kombinasiya üçün aktivləşdirmə keçidi
 
@@ -119,7 +119,7 @@ Həqiqi Claude beta parametrini `ANTHROPIC_BETA_BASE` daxilində daşıyır və 
 
 ## `applied_edits` telemetriyası
 
-Claude cavabından sonra OmniRoute provayderin faktiki olaraq nə qədər konteksti təmizlədiyini qeydə alır. Bu,
+Claude cavabından sonra 67router provayderin faktiki olaraq nə qədər konteksti təmizlədiyini qeydə alır. Bu,
 **axınla ötürülmür** — axınsız cavab gövdəsindən mümkün qədər çıxarılır və heç vaxt
 cavaba təsir etmir (telemetriya xətaları nəzərə alınmır).
 
@@ -149,14 +149,14 @@ Beləliklə, həvalə edilmiş təmizləmə yerli mühərriklərlə yanaşı sı
 
 | Aspekt               | Yerli mühərriklər (Caveman / RTK / LLMLingua / stacked) | Həvalə edilmiş kontekst redaktəsi                          |
 | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------- |
-| Harada işləyir       | Sorğu proksidən çıxmazdan əvvəl OmniRoute daxilində     | Provayderdə (Claude), server tərəfində                     |
+| Harada işləyir       | Sorğu proksidən çıxmazdan əvvəl 67router daxilində      | Provayderdə (Claude), server tərəfində                     |
 | Nəyi redaktə edir    | Prompt / kontekst / alət nəticəsinin mətni              | Köhnə alət istifadəsi / alət nəticəsi blokları             |
 | Provayder əhatəsi    | Bütün provayderlər                                      | Yalnız `claude` + `anthropic-compatible-cc-*`              |
 | Aktivləşdirmə        | Sıxışdırma rejimi parametrləri                          | `contextEditing.enabled`                                   |
 | Xəta rejimi          | Xəta zamanı davametmə (orijinal mətn)                   | 400 ehtiyat mexanizmi: parametri sil, bir dəfə təkrar sına |
 | Qənaət telemetriyası | `engine: <engine id>`                                   | `engine: "context-editing"`                                |
 
-Bu iki yanaşma bir-birini tamamlayır: yerli mühərriklər OmniRoute-un göndərdiyi baytları sıxışdırır; Kontekst Redaktəsi isə
+Bu iki yanaşma bir-birini tamamlayır: yerli mühərriklər 67router-un göndərdiyi baytları sıxışdırır; Kontekst Redaktəsi isə
 Claude-a ardıcıl sorğular boyunca cari konteksti budamağa imkan verir. Onlar birlikdə aktivləşdirilə bilər.
 
 ## Həmçinin baxın

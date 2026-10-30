@@ -4,7 +4,7 @@
 
 ---
 
-Scanann OmniRoute freagraí earráide ó sholáthraithe réamhtheachtacha le haghaidh comharthaí a léiríonn go bhfuil
+Scanann 67router freagraí earráide ó sholáthraithe réamhtheachtacha le haghaidh comharthaí a léiríonn go bhfuil
 **cuntas marbh go buan** (curtha ar fionraí / díghníomhachtaithe / toirmiscthe de bharr shárú na dTéarmaí Seirbhíse) agus, nuair a
 aimsítear meaitseáil, bogann sé an nasc sin isteach i **staid chríochfoirt `banned`** ionas nach
 roghnaítear é a thuilleadh le haghaidh iarratas. Seo é a chumraíonn an cárta socruithe

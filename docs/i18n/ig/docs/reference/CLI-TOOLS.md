@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Igbo)
+# CLI Tools — 67router (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Emelitere ikpeazụ: 2026-08-23
 
-OmniRoute na-ejikọta ya na ụdị ngwa CLI atọ e kesara n’ofe ibe dashboard atọ pụrụ iche:
+67router na-ejikọta ya na ụdị ngwa CLI atọ e kesara n’ofe ibe dashboard atọ pụrụ iche:
 
-| Ibe                     | Ụzọ                     | Echiche                                                                                         | Ọnụọgụ       |
-| ----------------------- | ----------------------- | ----------------------------------------------------------------------------------------------- | ------------ |
-| **Koodu CLI**           | `/dashboard/cli-code`   | Ngwa ide koodu ị na-atụnye na OmniRoute (Client → CLI → OmniRoute → Provider)                   | 26           |
-| **Ndị nnọchi anya CLI** | `/dashboard/cli-agents` | Ndị nnọchi anya kwụụrụ onwe ha ị na-atụnye na OmniRoute (otu usoro ahụ, mana oke ya sara mbara) | 10           |
-| **Ndị nnọchi anya ACP** | `/dashboard/acp-agents` | CLI ndị OmniRoute na-ebido dị ka backend site na stdio/ACP (usoro ntụgharị azụ)                 | lee registry |
+| Ibe                     | Ụzọ                     | Echiche                                                                                        | Ọnụọgụ       |
+| ----------------------- | ----------------------- | ---------------------------------------------------------------------------------------------- | ------------ |
+| **Koodu CLI**           | `/dashboard/cli-code`   | Ngwa ide koodu ị na-atụnye na 67router (Client → CLI → 67router → Provider)                    | 26           |
+| **Ndị nnọchi anya CLI** | `/dashboard/cli-agents` | Ndị nnọchi anya kwụụrụ onwe ha ị na-atụnye na 67router (otu usoro ahụ, mana oke ya sara mbara) | 10           |
+| **Ndị nnọchi anya ACP** | `/dashboard/acp-agents` | CLI ndị 67router na-ebido dị ka backend site na stdio/ACP (usoro ntụgharị azụ)                 | lee registry |
 
 Ụzọ ochie na-eji 308 atụgharị: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ OmniRoute na-ejikọta ya na ụdị ngwa CLI atọ e kesara n’ofe ibe dashboa
 Koodu CLI / Ndị nnọchi anya CLI (usoro ojiji):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (ha niile na-atụ aka na OmniRoute)
+           ▼  (ha niile na-atụ aka na 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute na-eziga arịrịọ ahụ na provider kwesịrị ekwesị)
+           ▼  (67router na-eziga arịrịọ ahụ na provider kwesịrị ekwesị)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 Ndị nnọchi anya ACP (usoro mbido ntụgharị azụ):
-    Arịrịọ client → OmniRoute → na-ebido CLI site na stdio/ACP → nzaghachi
+    Arịrịọ client → 67router → na-ebido CLI site na stdio/ACP → nzaghachi
 ```
 
 **Uru:**
@@ -45,9 +45,9 @@ Ndị nnọchi anya ACP (usoro mbido ntụgharị azụ):
 
 ## Jiri `setup-*` hazie ya na-akpaghị aka
 
-Ị gaghị eji aka dee nhazi nke ngwaọrụ ọ bụla. OmniRoute na-eweta iwu `setup-*`
+Ị gaghị eji aka dee nhazi nke ngwaọrụ ọ bụla. 67router na-eweta iwu `setup-*`
 maka CLI ọ bụla ọ na-akwado, nke na-agụ katalọgụ model **dị ugbu a** site na
-OmniRoute na-agba ọsọ (nke mpaghara ma ọ bụ nke dị anya), wee dee nhazi nke
+67router na-agba ọsọ (nke mpaghara ma ọ bụ nke dị anya), wee dee nhazi nke
 ngwaọrụ ahụ n'onwe ya na kọmputa gị:
 
 ```bash
@@ -59,7 +59,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Nke ọ bụla na-anabata `--remote <url> --api-key <key>` (iji hazie ngwaọrụ mpaghara
-ka ọ rụọ ọrụ megide OmniRoute dị anya), `--dry-run` (iji hụ ihe ga-eme n'ebughị ụzọ
+ka ọ rụọ ọrụ megide 67router dị anya), `--dry-run` (iji hụ ihe ga-eme n'ebughị ụzọ
 dee ya), na `--port`. Ngwaọrụ ndị na-enweghị nchọpụta model na-akpaghị aka (Cline,
 Kilo, Roo, Goose, Aider, Qwen, 5dive) na-anabata `--model <id>` (yana `--yes` maka
 ọrụ ndị anaghị achọ mmekọrịta onye ọrụ). `setup-5dive` bụ naanị usoro nhazi nke
@@ -79,9 +79,9 @@ target nke `omniroute run` mana o nweghị usoro `setup-*`/`configure`.
 
 ### Ịgba ndị a n'ime container
 
-Iwu `setup-*` e mere n'ime container OmniRoute na-ede n'ime home nke container
+Iwu `setup-*` e mere n'ime container 67router na-ede n'ime home nke container
 ahụ n'onwe ya, nke CLI ọ bụla dị na host anaghị agụ, nke ga-apụkwa mgbe container
-ahụ kwụsịrị ịdị. OmniRoute na-achọpụta nke ahụ ma jiri koodu `2` kwụsị, na-enye
+ahụ kwụsịrị ịdị. 67router na-achọpụta nke ahụ ma jiri koodu `2` kwụsị, na-enye
 ntuziaka kama ide ihe. E nwere ụzọ abụọ akwadoro iji gaa n'ihu — wụnye CLI na
 host ma jiri `omniroute connect` jikọọ na container ahụ, ma ọ bụ jiri bind-mount
 tinye ndekọ nhazi ma tọọ `CLI_CONFIG_HOME` (profaịlụ compose `host`). Iwu
@@ -206,7 +206,7 @@ Ndị ọrụ nọọrọ onwe ha na-apụta na `/dashboard/cli-agents`:
 
 ## 3. Ndị Agent ACP (/dashboard/acp-agents)
 
-Ihu a (nke a gbanwere aha ya site na `/dashboard/agents`) na-egosi CLI ndị OmniRoute nwere ike **ịmalite** dị ka injin mmebe backend site na protocol stdio/ACP. A na-elekọta katalọgụ ahụ iche na `src/lib/acp/registry.ts`, ọ **bụghịkwa** otu ihe ahụ dị ka `CLI_TOOLS`.
+Ihu a (nke a gbanwere aha ya site na `/dashboard/agents`) na-egosi CLI ndị 67router nwere ike **ịmalite** dị ka injin mmebe backend site na protocol stdio/ACP. A na-elekọta katalọgụ ahụ iche na `src/lib/acp/registry.ts`, ọ **bụghịkwa** otu ihe ahụ dị ka `CLI_TOOLS`.
 
 ---
 
@@ -331,7 +331,7 @@ E nyere ntụgharị PT-BR na EN zuru ezu. Locale 39 ndị ọzọ na-alaghachi 
 
 ## 9. Mmalite Ngwa Ngwa
 
-### Nzọụkwụ 1 — Nweta Igodo API OmniRoute
+### Nzọụkwụ 1 — Nweta Igodo API 67router
 
 1. Mepee `/dashboard/api-manager` → **Mepụta Igodo API**
 2. Nye ya aha (dịka ọmụmaatụ `cli-tools`) ma họrọ ikike niile
@@ -395,7 +395,7 @@ cargo install smelt  # Dabere na Rust
 ### Nzọụkwụ 4 — Tọọ Mgbanwe Gburugburuwuru nke G gburugburu Ebe Ọrụ
 
 ```bash
-# Ebe njedebe zuru ụwa ọnụ nke OmniRoute
+# Ebe njedebe zuru ụwa ọnụ nke 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -507,7 +507,7 @@ EOF
 **Ụdị VS Code:**
 Ntọala mgbakwunye Cline → Onye na-enye API: `OpenAI Compatible` → URL ntọala: `http://localhost:20128/v1`
 
-Ma ọ bụ jiri dashboard OmniRoute → **Ngwaọrụ CLI → Cline → Tinye Nhazi**.
+Ma ọ bụ jiri dashboard 67router → **Ngwaọrụ CLI → Cline → Tinye Nhazi**.
 
 ---
 
@@ -528,7 +528,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Ma ọ bụ jiri dashboard OmniRoute → **Ngwaọrụ CLI → KiloCode → Tinye Nhazi**.
+Ma ọ bụ jiri dashboard 67router → **Ngwaọrụ CLI → KiloCode → Tinye Nhazi**.
 
 ---
 
@@ -552,14 +552,14 @@ Malitegharịa VS Code mgbe idezichara ya.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Jiri nke a mgbe ahaziri VS Code Insiders maka model ebe njedebe ahaziri iche, ma ịchọrọ ka OmniRoute rụọ ọrụ na-enweghị oghere header ahaziri iche.
+Jiri nke a mgbe ahaziri VS Code Insiders maka model ebe njedebe ahaziri iche, ma ịchọrọ ka 67router rụọ ọrụ na-enweghị oghere header ahaziri iche.
 
 **Ebe akwadoro:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Ọmụmaatụ iji utuaha OmniRoute e tinyere token:**
+**Ọmụmaatụ iji utuaha 67router e tinyere token:**
 
 ```json
 [
@@ -583,7 +583,7 @@ Jiri nke a mgbe ahaziri VS Code Insiders maka model ebe njedebe ahaziri iche, ma
 
 **Ihe ndetu:**
 
-- Jiri igodo API e mepụtara na OmniRoute dochie `sk-your-omniroute-key`.
+- Jiri igodo API e mepụtara na 67router dochie `sk-your-omniroute-key`.
 - Oghere `url` kwesịrị ịtụ aka na `/api/v1/vscode/{token}/chat/completions`.
 - Oghere `modelsUrl` kwesịrị ịtụ aka na `/api/v1/vscode/{token}/models`.
 - Họrọ usoro nkịtị `/v1` + nkụnyeisi Bearer mgbe ngwa ahịa ahụ na-akwado nkụnyeisi ahaziri iche.
@@ -597,17 +597,17 @@ Jiri nke a mgbe ahaziri VS Code Insiders maka model ebe njedebe ahaziri iche, ma
 # Banye na akaụntụ AWS/Kiro gị:
 kiro-cli login
 
-# CLI na-eji usoro njirimara nke ya — OmniRoute adịghị mkpa dịka backend maka Kiro CLI n'onwe ya.
-# Jiri kiro-cli yana OmniRoute maka ngwaọrụ ndị ọzọ.
+# CLI na-eji usoro njirimara nke ya — 67router adịghị mkpa dịka backend maka Kiro CLI n'onwe ya.
+# Jiri kiro-cli yana 67router maka ngwaọrụ ndị ọzọ.
 kiro-cli status
 ```
 
-Maka ngwa desktọọpụ **Kiro IDE**, jiri endpoint MITM nke OmniRoute na-ewepụta
+Maka ngwa desktọọpụ **Kiro IDE**, jiri endpoint MITM nke 67router na-ewepụta
 n'okpuru `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. OmniRoute CLI nke Ime
+## 10. 67router CLI nke Ime
 
 Faịlụ binary `omniroute` na-enye iwu maka usoro ndụ sava, nhazi, nyocha nsogbu, na njikwa ndị na-eweta ọrụ. Ebe mbido: `bin/omniroute.mjs`.
 
@@ -641,7 +641,7 @@ Mgbanwe gburugburu ndị a ka a na-amata maka nhazi na-enweghị mmekọrịta:
 | Var                 | Ebumnuche                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------ |
 | `OMNIROUTE_API_KEY` | Igodo API onye na-eweta ọrụ (ejikọtara ya na `--api-key` site na Commander `.env()`) |
-| `DATA_DIR`          | Dochie ndekọ data OmniRoute                                                          |
+| `DATA_DIR`          | Dochie ndekọ data 67router                                                           |
 
 A na-enyefe ntinye ndị ọzọ niile na-enweghị mmekọrịta dịka flags, ọ bụghị mgbanwe gburugburu:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -664,7 +664,7 @@ Doctor na-eme nyocha ndị a: `Config`, `Database`, `Storage/encryption`,
 ### Njikwa Ndị Na-eweta Ọrụ
 
 ```bash
-omniroute providers available                       # Katalọgụ ndị na-eweta ọrụ OmniRoute
+omniroute providers available                       # Katalọgụ ndị na-eweta ọrụ 67router
 omniroute providers available --search openai       # Nyocha katalọgụ site na id/aha/aha ọzọ/ụdị
 omniroute providers available --category api-key    # Nyocha site na ụdị (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON igwe nwere ike ịgụ
@@ -685,7 +685,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` na-ebute API ụzọ, ya mere ha na-arụ ọrụ megide
 ọnọdụ mpaghara ma ọ bụ nke dị anya na-arụ ọrụ ugbu a. Ntinye nzere kwesịrị iji
 `--credential-stdin` ma ọ bụ `--credential-env`; `--dry-run --json` na-akọ naanị
-ọnụnọ/usoro e zoro ụfọdụ akụkụ ya. `providers available` na-agụ katalọgụ OmniRoute;
+ọnụnọ/usoro e zoro ụfọdụ akụkụ ya. `providers available` na-agụ katalọgụ 67router;
 `providers list/test/test-all/validate` na-ejigide omume SQLite mpaghara ha ma
 ha achọghị ka sava na-arụ ọrụ.
 
@@ -728,7 +728,7 @@ A na-akọ ubi nke e nweghị ike iwepụ izo ya ezo (igodo ochie, ciphertext me
 
 ### Iwu nta ndị ọzọ
 
-Ndị a na-ewere na sava OmniRoute na-arụ ọrụ, belụsọ ebe e kwuru ihe ọzọ:
+Ndị a na-ewere na sava 67router na-arụ ọrụ, belụsọ ebe e kwuru ihe ọzọ:
 
 ```bash
 omniroute status                       # Ọnọdụ oge-ngagharị zuru ezu
@@ -736,7 +736,7 @@ omniroute logs                         # Zipụta ndekọ arịrịọ n'aga n'i
 omniroute config list                  # Gosipụta ngwa CLI ahaziri
 
 omniroute provider list                # Depụta ndị na-eweta ọrụ dị (aha ọzọ nke providers list)
-omniroute provider add                 # Debanye OmniRoute dị ka onye na-eweta ọrụ na ngwa
+omniroute provider add                 # Debanye 67router dị ka onye na-eweta ọrụ na ngwa
 omniroute keys add | list | remove     # Jikwaa igodo API
 omniroute models [provider]            # Depụta ụdịdị (--json, --search)
 omniroute combo list | switch | create | delete
@@ -786,7 +786,7 @@ omniroute completion                   # Mepụta mmeju shell
 | `/v1/audio/speech`         | Ederede gaa n'okwu                        | ElevenLabs, OpenAI TTS            |
 | `/v1/audio/transcriptions` | Okwu gaa na ederede                       | Deepgram, AssemblyAI              |
 
-Ọmụmaatụ dị njikere mado nke nwere URL OmniRoute e tinyere token:
+Ọmụmaatụ dị njikere mado nke nwere URL 67router e tinyere token:
 
 ```txt
 Ọmụmaatụ token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -805,7 +805,7 @@ Mkparịta ụka Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3
 
 | Njehie                                                 | Ihe kpatara ya                           | Ndozi                                                         |
 | ------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------- |
-| `Connection refused`                                   | OmniRoute anaghị arụ ọrụ                 | `omniroute serve`                                             |
+| `Connection refused`                                   | 67router anaghị arụ ọrụ                  | `omniroute serve`                                             |
 | `401 Unauthorized`                                     | Igodo API ezighi ezi                     | Lelee na `/dashboard/api-manager`                             |
 | `No combo configured`                                  | Enweghị ngwakọta ntụgharị ụzọ na-arụ ọrụ | Hazie ya na `/dashboard/combos`                               |
 | CLI na-egosi "awụnyeghị ya"                            | Faịlụ binary adịghị na PATH              | Lelee `which <command>`                                       |
@@ -813,7 +813,7 @@ Mkparịta ụka Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3
 | Njikọ ochie `/dashboard/cli-tools`                     | Bookmark tupu v3.8.6                     | A na-ebuga ya na-akpaghị aka na `/dashboard/cli-code` (308)   |
 | Njikọ ochie `/dashboard/agents`                        | Bookmark tupu v3.8.6                     | A na-ebuga ya na-akpaghị aka na `/dashboard/acp-agents` (308) |
 
-## Jiri OmniRoute CLI jikwaa amụma inference-key
+## Jiri 67router CLI jikwaa amụma inference-key
 
 Jiri ọnọdụ njikwa ekwenyere njirimara (lee [Ọnọdụ Ime Ebe Dị Anya](../guides/REMOTE-MODE.md))
 iji ID ya nyochaa ma ọ bụ melite igodo inference dị adị:

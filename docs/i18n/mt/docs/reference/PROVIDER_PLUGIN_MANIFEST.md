@@ -14,7 +14,7 @@ kodiċi tal-eżekutur, valuri predefiniti ta' OAuth, headers, jew l-istat tal-am
 L-istess manifest huwa disponibbli fuq HTTP f'
 `GET /api/v1/provider-plugin-manifest` għal sidecars li jaħdmu barra mill-proċess.
 
-OmniRoute jirreklama dak il-URL lil Bifrost u CLIProxyAPI permezz tal-header tat-talba
+67router jirreklama dak il-URL lil Bifrost u CLIProxyAPI permezz tal-header tat-talba
 `X-OmniRoute-Provider-Manifest-Url`. Issettja
 `OMNIROUTE_PROVIDER_MANIFEST_URL` meta s-sidecar ikollu bżonn URL pubbliku jew URL tan-network
 tal-container minflok l-oriġini lokali tat-talba.
@@ -30,7 +30,7 @@ is-sidecar għandu jagħmel talba mingħajr kundizzjonijiet minflok jaċċetta `
 ## Għan
 
 Il-metadata tal-fornituri għandha timxi lejn kuntratt ta' plugin sabiex il-passaġġ attiv tat-talbiet
-ikun jista' eventwalment jiġi ġestit minn sidecar b'latency aktar baxxa filwaqt li OmniRoute jżomm
+ikun jista' eventwalment jiġi ġestit minn sidecar b'latency aktar baxxa filwaqt li 67router jżomm
 ir-rotta TypeScript bħala l-punt ta' kontroll tal-politiki u bħala fallback. Il-manifest huwa addittiv:
 waħdu ma jbiddilx ir-routing tat-talbiet.
 
@@ -74,7 +74,7 @@ jerġgħu jaqraw is-sorsi TypeScript.
 | `usage-fetch`        | Għandu fetcher tal-użu jew tal-kwota mqabbad (`getUsageForProvider`).                        |
 | `usage-supported`    | L-API tal-użu taċċetta lil dan il-fornitur (`isSupportedUsageConnection`).                   |
 
-`usage-fetch` huwa biss għall-iskoperta. Jindika li OmniRoute jaf kif jaqra l-użu għall-
+`usage-fetch` huwa biss għall-iskoperta. Jindika li 67router jaf kif jaqra l-użu għall-
 fornitur; ma jattivax il-fetching, ma jbiddilx is-semantika tal-kwoti, u lanqas ma jimplika li
 l-widget tal-kwoti fid-Dashboard huwa attivat għall-fornitur — dak il-widget huwa kkontrollat separatament minn
 `USAGE_SUPPORTED_PROVIDERS`. Is-sors awtorevoli huwa `USAGE_FETCHER_PROVIDERS` f'

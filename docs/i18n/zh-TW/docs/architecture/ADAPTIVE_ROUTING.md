@@ -4,7 +4,7 @@
 
 ---
 
-本文說明新增至 OmniRoute、由回饋驅動的自適應路由基礎架構。
+本文說明新增至 67router、由回饋驅動的自適應路由基礎架構。
 其設計刻意保持精簡：引入類型化的路由結果通道、將線上品質訊號饋入既有的
 auto-combo 評分器、可選用的 OpenTelemetry 匯出器，以及可解釋性端點。它**不會**
 取代既有的韌性堆疊（斷路器、連線冷卻、模型鎖定、健康狀態矩陣、自動駕駛）——
@@ -12,7 +12,7 @@ auto-combo 評分器、可選用的 OpenTelemetry 匯出器，以及可解釋性
 
 ## 1. 架構背景
 
-OmniRoute 是一個資料平面，包含**請求熱路徑**與**控制／智慧
+67router 是一個資料平面，包含**請求熱路徑**與**控制／智慧
 平面**。熱路徑必須維持快速、記憶體高效、非同步、具韌性且
 可預測。評估、品質評分、實驗及歷史分析則屬於控制平面。
 
@@ -21,7 +21,7 @@ AI 代理程式／IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   資料平面（快速、同步、記憶體內）
+│    67router        │   資料平面（快速、同步、記憶體內）
 │  路由／容錯移轉     │
 │  健康狀態／防護機制 │
 │  快取／串流         │
@@ -228,7 +228,7 @@ TTFT/ITL/中斷狀態會流入 `RoutingEvent`（`ttftMs`、`itlMs`），並由 O
   `@opentelemetry/*` SDK）。
 - Span 遵循 GenAI 語意慣例（`gen_ai.provider.name`、
   `gen_ai.request.model`、`gen_ai.usage.input_tokens/output_tokens`、
-  `gen_ai.completion.finish_reason`、`gen_ai.system`），並加入 OmniRoute
+  `gen_ai.completion.finish_reason`、`gen_ai.system`），並加入 67router
   路由屬性（結果、狀態、TTFT、重試、備援）。
 - `record()` 僅將資料加入有界緩衝區（O(1)）；背景計時器會透過
   `POST {endpoint}/v1/traces` 非同步排空。過載時會捨棄最舊的事件
@@ -249,7 +249,7 @@ TTFT/ITL/中斷狀態會流入 `RoutingEvent`（`ttftMs`、`itlMs`），並由 O
 
 ## 6. 評估平面整合（為 Future AGI 做好準備）
 
-OmniRoute 將 Future AGI（或任何評估器）視為**潛在的智慧／評估後端，而非相依項目**。
+67router 將 Future AGI（或任何評估器）視為**潛在的智慧／評估後端，而非相依項目**。
 整合接點如下：
 
 - `RoutingEventSink` 可將事件非同步轉送至評估器。

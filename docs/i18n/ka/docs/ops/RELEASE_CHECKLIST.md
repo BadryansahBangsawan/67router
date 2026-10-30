@@ -46,7 +46,7 @@ npm run test:e2e           # არასავალდებულო, თუ�
 ჰქონდა, ამავდროულად კი ინარჩუნებს WS1.3 გარანტიას (გაჟონილი ტოკენი დამოუკიდებლად ვერ გამოაქვეყნებს — ტოკენი საერთოდ არ არსებობს).
 
 **ერთჯერადი დაყენება (მფლობელი):** npmjs.com → პაკეტი `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: მფლობელი `diegosouzapw`, რეპოზიტორია `OmniRoute`, სამუშაო პროცესი `npm-publish.yml`
+Publisher_ → GitHub: მფლობელი `diegosouzapw`, რეპოზიტორია `67router`, სამუშაო პროცესი `npm-publish.yml`
 (გარემო: არცერთი). მის შექმნამდე ავტომატური ნაბიჯი დასრულდება `ENEEDAUTH` შეცდომით:
 ხელახლა გაუშვით `publish_mode=staged`-ით (ქვემოთ) ან `direct`-ით.
 

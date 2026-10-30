@@ -4,7 +4,7 @@
 
 ---
 
-Cara OmniRoute menganggarkan, merekodkan dan melaporkan kos setiap permintaan — serta sebab
+Cara 67router menganggarkan, merekodkan dan melaporkan kos setiap permintaan — serta sebab
 angka pada papan pemuka ialah **penjejak penjimatan**, bukannya bil.
 
 Lihat juga: [Panduan Pengguna](./USER_GUIDE.md) · [Galeri Ciri](./FEATURES.md)
@@ -13,11 +13,11 @@ Lihat juga: [Panduan Pengguna](./USER_GUIDE.md) · [Galeri Ciri](./FEATURES.md)
 
 ## Apakah ia (dan apakah yang bukan)
 
-OmniRoute menetapkan kos USD bagi setiap permintaan untuk setiap pelengkapan dengan mendarabkan
+67router menetapkan kos USD bagi setiap permintaan untuk setiap pelengkapan dengan mendarabkan
 bilangan token dengan kadar harga sesebuah model. Angka-angka ini digunakan oleh papan pemuka
 **Kos**, CLI `omniroute cost` / `omniroute usage`, eksport CSV/JSON dan belanjawan bagi setiap kunci API.
 
-> **"Kos" pada papan pemuka ialah penjejak penjimatan, bukannya bil.** OmniRoute tidak pernah mengenakan caj kepada anda
+> **"Kos" pada papan pemuka ialah penjejak penjimatan, bukannya bil.** 67router tidak pernah mengenakan caj kepada anda
 > — ia menghalakan permintaan anda kepada penyedia yang telah anda sambungkan (langganan anda sendiri,
 > peringkat percuma dan kunci API). "$290 jumlah kos" yang terakru sepenuhnya pada model percuma
 > bermakna kira-kira **$290 yang anda _tidak_ bayar** kepada API berbayar. Angka tersebut ialah _anggaran_
@@ -29,7 +29,7 @@ ialah penjejak penjimatan, bukannya bil").
 
 Oleh sebab angka tersebut ialah anggaran:
 
-- Ia bergantung pada jadual harga yang dimiliki OmniRoute untuk setiap model. Model tanpa entri
+- Ia bergantung pada jadual harga yang dimiliki 67router untuk setiap model. Model tanpa entri
   harga menyumbang kos `0` (ia dipaparkan sebagai baris "Legasi / Percuma" dalam penjelajah).
 - Trafik peringkat percuma dan langganan masih mengakru kos _anggaran_ — itulah
   jumlah yang anda jimatkan, bukannya jumlah yang perlu dibayar.
@@ -47,7 +47,7 @@ Kos diperoleh daripada jadual harga yang ditentukan mengikut tertib keutamaan in
 2. **Harga luaran yang disegerakkan** — diambil daripada
    `model_prices_and_context_window.json` awam LiteLLM apabila penyegerakan didayakan (disimpan dalam ruang nama
    `pricing_synced` yang berasingan supaya ia tidak menimpa penggantian anda).
-3. **Nilai lalai berkod keras** — disertakan bersama OmniRoute.
+3. **Nilai lalai berkod keras** — disertakan bersama 67router.
 
 Penyegerakan harga luaran adalah **ikut serta**, dan dilumpuhkan secara lalai. Pemboleh ubah persekitaran yang berkaitan
 (lihat [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ dinyatakan sebaliknya.
 
 ## CLI
 
-CLI OmniRoute menyediakan perintah kos, penggunaan dan harga (didaftarkan dalam
+CLI 67router menyediakan perintah kos, penggunaan dan harga (didaftarkan dalam
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

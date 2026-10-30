@@ -4,7 +4,7 @@
 
 ---
 
-Ez az oldal ismerteti a projekt helyi `.env`-viselkedését, valamint azt, hogyan kell kezelni a környezeti fájlokat és a titkos adatokat az OmniRoute fejlesztése során.
+Ez az oldal ismerteti a projekt helyi `.env`-viselkedését, valamint azt, hogyan kell kezelni a környezeti fájlokat és a titkos adatokat az 67router fejlesztése során.
 
 ## Az .env postinstall viselkedése
 

@@ -37,7 +37,7 @@ Radar 是一項**選用附加功能**，會在發布基準（`open-sse/config/fr
 | 支持者優惠         | 已實作為獨立簽署、僅限即時取得的動態資料與儀表板頁面。用戶端會重新驗證封閉式權益結構描述、保留最後一次有效的快取、篩除已到期項目，並明確標示合作夥伴優惠。                   |
 | 情報與支持者識別   | 已實作為嚴格簽署、僅限即時取得的動態資料，包含 Radar 自有的 ELO、以事實為基礎的目錄新鮮度／趨勢、經驗證的本機支持者徽章、儀表板頁面，以及僅限本機使用的 CLI 狀態／同步命令。 |
 | 付款與交易電子郵件 | OSS 用戶端中尚未實作。購買、捐款、收據審查、復原與郵件傳送均屬於私有服務的範疇；託管服務的可用性仍取決於其受監管的部署與提供者設定。                                         |
-| 研究代理工作項目   | 不屬於此用戶端版本。編選的動態資料內容仍屬於伺服器端資料；OmniRoute 安裝環境中不會執行任何自主研究代理。                                                                     |
+| 研究代理工作項目   | 不屬於此用戶端版本。編選的動態資料內容仍屬於伺服器端資料；67router 安裝環境中不會執行任何自主研究代理。                                                                      |
 
 ---
 
@@ -115,7 +115,7 @@ Radar 由 `RADAR_ENABLED` 功能旗標進行端對端管控
    供人工濫用審查使用；這些資料表不會以原始形式持久保存金鑰或 IP。
    基礎設施存取記錄與加密的傳遞寄件匣屬於彼此獨立的營運
    邊界。
-3. OmniRoute 絕不會將提示詞、回應、對話、提供者認證資訊、模型流量、
+3. 67router 絕不會將提示詞、回應、對話、提供者認證資訊、模型流量、
    運作時間、延遲或本機提供者組態傳送至 Radar 服務。
 4. 回應會在本機進行驗證、確認有效性並快取（請參閱
    [安全性模型](#security-model)）。Radar 恰好有四條伺服器端網路路徑：
@@ -202,10 +202,10 @@ Radar 由 `RADAR_ENABLED` 功能旗標進行端對端管控
 
 ### 端對端啟用與引導式設定
 
-私人動態消息服務與此 OSS 用戶端之間刻意維持明確且狹窄的邊界：服務負責核發並驗證支持者金鑰，而本機 OmniRoute 安裝環境則會加密金鑰、在伺服器端同步已簽署的成品，並引導提供者設定。輔助驗證順序如下：
+私人動態消息服務與此 OSS 用戶端之間刻意維持明確且狹窄的邊界：服務負責核發並驗證支持者金鑰，而本機 67router 安裝環境則會加密金鑰、在伺服器端同步已簽署的成品，並引導提供者設定。輔助驗證順序如下：
 
 1. 從貢獻者申領、方案/結帳、復原流程，或經授權的私人伺服器營運者取得新核發或復原的金鑰。請勿將原始金鑰貼到記錄、螢幕擷取畫面、議題留言或命令列引數中。
-2. 在本機 OmniRoute 安裝環境中啟用 `RADAR_ENABLED` 功能旗標。這會顯示 UI，但在另行儲存選擇加入設定之前，仍不會進行任何網路活動。
+2. 在本機 67router 安裝環境中啟用 `RADAR_ENABLED` 功能旗標。這會顯示 UI，但在另行儲存選擇加入設定之前，仍不會進行任何網路活動。
 3. 開啟 `/dashboard/radar`、貼上金鑰並啟用。瀏覽器會在本機傳送一次 `POST /api/radar/settings`，內容為 `{ optIn: true, supporterKey }`；金鑰會在本機加密，而回應僅包含 `omr_****<last4>`。
 4. 讓啟用畫面執行目錄同步，或選取 **立即同步**。確認頁面回報 `live`、摘要版本與擷取時間。若要執行經驗證的本機診斷，`GET /api/radar/status` 會回報選擇加入/金鑰是否存在，以及四種快取狀態，但不會傳回金鑰。`POST /api/radar/sync-all` 可明確重新整理目錄、推薦、優惠及 Intel。
 5. 開啟 `/dashboard/radar/setup?provider=<provider>`。前往提供者提供的憑證 URL、選取 **新增 API 金鑰**、透過實際的提供者表單儲存、返回指南，然後執行 **測試連線**。指南會使用一般的 `/api/providers` 與 `/api/providers/<connection-id>/test` 路由；它不會建立另一組獨立的 Radar 憑證。
@@ -243,7 +243,7 @@ Radar 由 `RADAR_ENABLED` 功能旗標進行端對端管控
 ### 方便分支版本使用的環境變數覆寫
 
 兩個環境變數可讓分支版本與自行託管者將用戶端指向自己的動態消息，而非
-預設的 OmniRoute 服務——請參閱下方的
+預設的 67router 服務——請參閱下方的
 [如何自行託管動態消息](#how-to-self-host-a-feed)：
 
 | 變數                | 用途                                                                   |
@@ -355,7 +355,7 @@ version, tier }` 傳回——儀表板顯示的是此值，絕不是未處理的
 目錄發布使用 `schemaVersion: 2`。`contextWindow` 以及 `tools`、`vision` 和
 `thinking` 各自獨立為 `number | null`／`boolean | null`：`null` 表示未知，而
 `false` 表示經 D16 確認的提供者官方來源明確指出不具備該功能。
-OmniRoute 內部登錄檔／模型規格旗標絕不會直接提升為摘要事實。用戶端
+67router 內部登錄檔／模型規格旗標絕不會直接提升為摘要事實。用戶端
 仍接受 v1 快照；由於舊版建置器使用 `false` 作為缺失值的預留值，因此 v1 的 `false` 會
 正規化為未知，而 v1 的 `true` 仍視為事實。未知的結構版本會以封閉方式失敗，而
 最後一份有效快取仍可使用。每個具有非 null 上下文／功能的 v2 模型都必須攜帶
@@ -409,7 +409,7 @@ MCP 用戶端可透過 `omniroute_radar_catalog`（`read:radar`）讀取相同�
 | `/api/radar/local-model-state` | PUT    | 使用 `{ provider, modelId, tombstoned }` 建立或移除墓碑。                                            |
 | `/api/radar/local-model-state` | DELETE | 清除可編輯的覆寫欄位，同時保留任何墓碑。                                                             |
 
-**硬性規則：這些路由絕不代理資訊來源服務。** 瀏覽器只會與本機 OmniRoute 伺服器通訊。會連線至 Radar 服務的四個模組是
+**硬性規則：這些路由絕不代理資訊來源服務。** 瀏覽器只會與本機 67router 伺服器通訊。會連線至 Radar 服務的四個模組是
 `src/lib/radar/sync.ts`（目錄）、`src/lib/radar/referralsSync.ts`（推薦）、
 `src/lib/radar/offersSync.ts`（優惠），以及 `src/lib/radar/intelSync.ts`（Intel）；
 這些模組全都在伺服器端執行，絕不在用戶端執行。如此可讓資訊來源 URL
@@ -451,7 +451,7 @@ API 金鑰；這與保護其餘 `/api/settings/*` 的閘門相同。旗標關閉
 
 `syncRadarIntel()` 會套用與優惠相同的伺服器端 Bearer、30 秒逾時、10 MiB 串流上限、精確位元組 Ed25519 驗證、嚴格結構描述、本文／標頭的 `live` 要求、版本下限，以及保留最後一份有效快取的機制。通過驗證的即時快照持久化後，用戶端會推導 `radar:<sha256(supporter key)>`、僅儲存該單向識別碼，並發出專用的 `radar_supporter` 認可事件。其 `radar-supporter` 徽章具備冪等性，且獎勵零 XP；它絕不會更新排行榜或重複使用 `token_share`。`/dashboard/radar/intel` 僅根據已驗證的本機快取中繼資料呈現該徽章。
 
-CLI 提供 `omniroute radar status` 與 `omniroute radar sync`。兩者都只與本機 OmniRoute API 通訊。`status` 會執行唯讀的 `GET /api/radar/status`；`sync` 會傳送一次 `POST /api/radar/sync-all`，並列印每個資訊源的結果。這兩個命令都不會讀取、接受或列印支持者金鑰，也不會直接聯絡 Radar 服務。
+CLI 提供 `omniroute radar status` 與 `omniroute radar sync`。兩者都只與本機 67router API 通訊。`status` 會執行唯讀的 `GET /api/radar/status`；`sync` 會傳送一次 `POST /api/radar/sync-all`，並列印每個資訊源的結果。這兩個命令都不會讀取、接受或列印支持者金鑰，也不會直接聯絡 Radar 服務。
 
 ---
 

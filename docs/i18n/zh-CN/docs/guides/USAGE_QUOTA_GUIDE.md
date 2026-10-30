@@ -4,7 +4,7 @@
 
 ---
 
-> **简而言之**：OmniRoute 会跟踪每个请求的令牌用量、计算成本、强制执行每个 API 密钥的配额，并在仪表板中展示分析数据。本指南将说明其完整工作原理。
+> **简而言之**：67router 会跟踪每个请求的令牌用量、计算成本、强制执行每个 API 密钥的配额，并在仪表板中展示分析数据。本指南将说明其完整工作原理。
 
 **来源：**
 
@@ -17,7 +17,7 @@
 
 ## 概述
 
-每个流经 OmniRoute 的请求都会生成一条**用量记录**，其中包含：
+每个流经 67router 的请求都会生成一条**用量记录**，其中包含：
 
 - **身份信息**：使用了哪个 API 密钥、提供者、模型和组合
 - **令牌**：提示词令牌、补全令牌、缓存令牌和总令牌数
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-对于不返回用量数据的提供者（例如某些 Web Cookie 提供者），OmniRoute 会使用 `~4 chars per token` 启发式规则**估算**令牌数（请参阅 `open-sse/services/autoCombo/pipelineRouter.ts`）。
+对于不返回用量数据的提供者（例如某些 Web Cookie 提供者），67router 会使用 `~4 chars per token` 启发式规则**估算**令牌数（请参阅 `open-sse/services/autoCombo/pipelineRouter.ts`）。
 
 ### 缓存令牌
 
-OmniRoute 会将 `cached_tokens` 与 `prompt_tokens` 分开跟踪，原因如下：
+67router 会将 `cached_tokens` 与 `prompt_tokens` 分开跟踪，原因如下：
 
 - Anthropic 提示词缓存对缓存令牌收取较低的费率（正常费率的 10%）
 - 某些提供者会返回 `cache_read_input_tokens`，这类令牌应采用不同的定价方式
@@ -117,7 +117,7 @@ cost =
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-对于没有定价数据的模型，OmniRoute 会回退为使用内部平均费率（来源于 LiteLLM 的定价数据）来**估算成本**。
+对于没有定价数据的模型，67router 会回退为使用内部平均费率（来源于 LiteLLM 的定价数据）来**估算成本**。
 
 ---
 

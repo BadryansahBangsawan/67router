@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY shaffof deshifrlash — OmniRoute’ning
+TPROXY shaffof deshifrlash — 67router’ning
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM steki uchun **5-qamrab olish rejimi**. U Linux’da yadro TPROXY’i + siyosatga asoslangan marshrutlashdan foydalanib, mahalliy chiquvchi HTTPS trafikni tutib oladi va **deshifrlaydi** — bunda `/etc/hosts` soxtalashtirilmaydi va operatsion tizim miqyosidagi tizim proksi sozlamalari **oʻzgartirilmaydi**. U grafik interfeyssiz muhitlar uchun qulay
 (tozalash kerak boʻladigan DNS oʻzgarishlari yoʻq) va xavfsizlik devori qoidalari qayta yuklashda avtomatik ravishda tozalanadi.
@@ -42,7 +42,7 @@ Quyidagi jarayondan keladigan trafikni tutib olish va deshifrlashni istaganingiz
 - tizim miqyosidagi proksi oʻzgarishi bilan uning ishiga xalaqit berishni istamasangiz.
 
 Tutib olish yadroda amalga oshirilgani sababli, trafikni boshlovchi jarayon uchun **hech qanday
-konfiguratsiya oʻzgarishi** talab qilinmaydi — biroq jarayon OmniRoute oʻrnatadigan dinamik CA’ga ishonishi kerak ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) bo‘limiga qarang).
+konfiguratsiya oʻzgarishi** talab qilinmaydi — biroq jarayon 67router oʻrnatadigan dinamik CA’ga ishonishi kerak ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) bo‘limiga qarang).
 
 ---
 
@@ -60,7 +60,7 @@ addon yigʻilmagan boʻlsa), addon yuklagichi (`src/mitm/tproxy/transparentSocke
 istisno chiqarish oʻrniga `null` qaytaradi. Shundan soʻng yozib olish rejimi holati
 `available: false` deb xabar beradi, boshqaruv panelidagi almashtirgich
 „TPROXY orqali shifrni ochish uchun Linux + root + mahalliy addon talab qilinadi“ yordamchi matni bilan **oʻchirib qoʻyiladi** va
-OmniRouteʼning qolgan qismi ishlashda davom etadi.
+67routerʼning qolgan qismi ishlashda davom etadi.
 
 ---
 
@@ -265,7 +265,7 @@ yordamida himoyalanadi:
 
 **MITM CA — katta vakolat beruvchi imkoniyatdir.** Har qanday host uchun sertifikat
 imzolay oladigan, operatsion tizim tomonidan ishonchli deb topilgan CA mavjud boʻlsa,
-OmniRoute tutib oladigan barcha maʼlumotlarning shifrini yechish mumkin. U faqat lokal
+67router tutib oladigan barcha maʼlumotlarning shifrini yechish mumkin. U faqat lokal
 tarzda ishlaydigan, aniq yoqiladigan TPROXY trafikni tutib olish rejimi bilan himoyalangan,
 standart holatda oʻchirilgan va rejim toʻxtatilganda ishonchli sertifikatlar omboridagi
 yozuv olib tashlanadi.
@@ -379,7 +379,7 @@ nazorat qiladi; addon mavjud bo‘lmasa, `GET /api/tools/agent-bridge/tproxy`
 ### Nosozlikdan keyin qolib ketgan fayervol qoidalari
 
 `revertTproxy()` qo‘llash amalining aynan teskarisi bo‘lib, idempotent hisoblanadi.
-Rejimni to‘xtatish qoidalarni bekor qiladi; agar OmniRoute seans o‘rtasida majburan
+Rejimni to‘xtatish qoidalarni bekor qiladi; agar 67router seans o‘rtasida majburan
 to‘xtatilgan bo‘lsa, yetim qolgan tizim holatini (DNS spoof, ildiz CA, tizim proksisi)
 bekor qilish uchun AgentBridge’ning **Tuzatish** amalidan
 (`POST /api/tools/agent-bridge/repair`) foydalaning. TPROXY `mangle` qoidalari va marshrut

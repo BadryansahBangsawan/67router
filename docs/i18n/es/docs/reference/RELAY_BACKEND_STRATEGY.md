@@ -6,7 +6,7 @@
 
 ## Resumen
 
-OmniRoute ahora admite tres modos de retransmisión para `/api/v1/relay/chat/completions`:
+67router ahora admite tres modos de retransmisión para `/api/v1/relay/chat/completions`:
 
 - `ts`: usa la retransmisión de TypeScript dentro del proceso.
 - `bifrost`: fuerza el uso de la puerta de enlace Bifrost.
@@ -45,12 +45,12 @@ Si actualmente está comparando 9router/CLIPROXYAPI:
 
 ## Contrato del límite del backend
 
-El límite estable del producto es la API de retransmisión de OmniRoute, no la implementación del panel de control. El panel de control de Next.js puede instalar, configurar y supervisar servicios locales, pero el enrutamiento de solicitudes debe entrar a través de la API de retransmisión y transferirse detrás de ese límite.
+El límite estable del producto es la API de retransmisión de 67router, no la implementación del panel de control. El panel de control de Next.js puede instalar, configurar y supervisar servicios locales, pero el enrutamiento de solicitudes debe entrar a través de la API de retransmisión y transferirse detrás de ese límite.
 
 Opciones de backend a largo plazo:
 
 - Mantenga la retransmisión de TypeScript como la ruta de políticas y respaldo dentro del proceso. La autenticación, las listas de permitidos, la normalización de solicitudes, la contabilidad y las comprobaciones de seguridad permanecen aquí antes de cualquier transferencia al backend.
-- Use Bifrost como el sidecar Tier-1 preferido para un alto rendimiento cuando el despliegue necesite una menor variación del enrutamiento, una rotación centralizada de proveedores o escalado horizontal entre varias réplicas de OmniRoute.
+- Use Bifrost como el sidecar Tier-1 preferido para un alto rendimiento cuando el despliegue necesite una menor variación del enrutamiento, una rotación centralizada de proveedores o escalado horizontal entre varias réplicas de 67router.
 - Mantenga 9router y CLIPROXYAPI como servicios de compatibilidad integrados. Se ejecutan como procesos locales supervisados y resultan útiles cuando su comportamiento de proveedor/CLI es el adaptador deseado, pero no deben convertirse en el motor de enrutamiento Tier-1 predeterminado.
 - No permita que el panel de control introduzca URLs de servicios arbitrarias en la ruta crítica. Las URLs proporcionadas por la interfaz de usuario son entradas de configuración; el código de enrutamiento debe resolver backends registrados y sometidos a comprobaciones de estado a partir de la configuración del servidor y del estado del supervisor.
 - Actualmente, dé preferencia a HTTP mediante loopback para los servicios supervisados, ya que los procesos administrados ya exponen APIs compatibles con HTTP, la protección de rutas puede auditar el límite y el comportamiento de fallo/conmutación por error es visible en los registros de solicitudes. Solo merece la pena añadir en el futuro un transporte mediante SDK o sockets si reduce de forma medible la latencia de enrutamiento p99 sin debilitar el aislamiento ni la semántica de conmutación por error.

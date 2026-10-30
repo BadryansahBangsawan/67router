@@ -4,7 +4,7 @@
 
 ---
 
-Komprese OmniRoute je postavena na kontraktech enginů. Režim může přímo spouštět jeden engine
+Komprese 67router je postavena na kontraktech enginů. Režim může přímo spouštět jeden engine
 (`caveman` nebo `rtk`) nebo deterministický zřetězený pipeline, který spouští více enginů v daném pořadí.
 
 ## Režimy
@@ -43,9 +43,9 @@ dosud nenahromadila historie, skončí na `below_min_chars` a engine nic netrans
 výchozím profilem `aggressive`, nikoli nejbezpečnější profil.
 
 Balíček určuje svůj vlastní rozsah modelů a profil z konfigurace prostředí.
-OmniRoute toto rozhodnutí nikdy nedeleguje: adaptér nastavuje bránu modelu na nejrestriktivnější rozsah
+67router toto rozhodnutí nikdy nedeleguje: adaptér nastavuje bránu modelu na nejrestriktivnější rozsah
 balíčku, takže nastavení hostitelského prostředí mohou seznam povolených položek pouze zúžit, nikdy jej
-nemohou rozšířit nad rámec naměřených výsledků OmniRoute.
+nemohou rozšířit nad rámec naměřených výsledků 67router.
 
 ## Registr enginů
 
@@ -109,7 +109,7 @@ Režim Caveman se zaměřuje na sémantickou kondenzaci běžné prózy:
 V řídicím panelu jej najdete v `Dashboard -> Context & Cache -> Caveman`.
 
 Upstream projektu Caveman uvádí přibližně o `~75%` méně výstupních tokenů a průměrnou úsporu výstupu `65%` v benchmarcích
-s rozsahem `22-87%`; nástroj pro kompresi vstupu dosahuje přibližně `~46%`. OmniRoute při dokumentování kombinovaných úspor
+s rozsahem `22-87%`; nástroj pro kompresi vstupu dosahuje přibližně `~46%`. 67router při dokumentování kombinovaných úspor
 promptu a kontextu používá hodnotu komprese vstupu Caveman; výstupní režim Caveman zůstává samostatnou funkcí
 ovlivňující chování odpovědí.
 

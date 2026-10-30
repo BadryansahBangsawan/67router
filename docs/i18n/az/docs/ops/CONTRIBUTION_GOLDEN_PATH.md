@@ -125,7 +125,7 @@ sahələrini yoxlayın. CI istehsal yığımını və daha geniş test dəstlər
 - CLI kataloqları ayrıca `bin/cli/locales/` altında yerləşir.
 - ICU doldurucularını və teqlərini dəqiq qoruyun. Məhsul/provayder/model adlarını, protokol və
   başlıq adlarını, əmrləri, kod/JSON identifikatorlarını, URL-ləri, mühit dəyişənlərini və
-  `OmniRoute`, `OAuth`, `MCP` və `A2A` kimi qorunan terminləri tərcümə etməyin. Cari mənbə siyahısı
+  `67router`, `OAuth`, `MCP` və `A2A` kimi qorunan terminləri tərcümə etməyin. Cari mənbə siyahısı
   `scripts/i18n/glossary/protected-terms.json` faylındadır.
 
 **Fokuslanmış dövr**
@@ -279,7 +279,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # başqa yerdə (CI) yar
   `current` və `previous` slotlarını yenidən dəyişdirir. İlk yoxlamadan keçməyən namizəd heç vaxt
   irəli çəkilmir.
 
-Hər şey git tərəfindən nəzərə alınmayan `_artifacts/candidate/` altında yazılır; mövcud OmniRoute
+Hər şey git tərəfindən nəzərə alınmayan `_artifacts/candidate/` altında yazılır; mövcud 67router
 quraşdırmasına və onun data qovluğuna heç vaxt toxunulmur. İrəli çəkilmiş CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` yolundadır; onu istifadə edərkən öz `DATA_DIR`
 dəyərinizlə başladın. Çıxış kodları: `0` uğur, `1` uğursuz yoxlama və ya irəli çəkmə, `2` istifadə

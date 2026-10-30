@@ -15,7 +15,7 @@ Kvotu koplietošanas dzinis taisnīgi sadala pakalpojumu sniedzēja laika kvotu 
 5 stundu logu, Kimi 1500 pieprasījumu stundā) starp vairākām API atslēgām, kurām ir viens un tas
 pats savienojums.
 
-**Atrisinātā problēma:** OmniRoute novirza daudzu API atslēgu pieprasījumus uz vienu un to pašu augšupstraumes
+**Atrisinātā problēma:** 67router novirza daudzu API atslēgu pieprasījumus uz vienu un to pašu augšupstraumes
 pakalpojumu sniedzēja kontu. Bez koplietošanas loģikas A atslēgas pieprasījumu uzplūds var izsmelt
 pakalpojumu sniedzēja stundas kvotu, atstājot B un C atslēgas bloķētas līdz loga atiestatīšanai.
 Dzinis to novērš šādi:
@@ -119,7 +119,7 @@ Redis draiveris: Lua EVAL skripts atomārai palielināšanai — tiek izpildīts
 
 - Tabula: `quota_consumption` (skatiet migrāciju `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Vislabāk piemērots izvietojumiem ar vienu instanci.
-- Visi pastāvīgie dati tiek glabāti esošajā OmniRoute SQLite DB (`DATA_DIR/storage.sqlite`).
+- Visi pastāvīgie dati tiek glabāti esošajā 67router SQLite DB (`DATA_DIR/storage.sqlite`).
 
 ### Redis (neobligāts, vairākām instancēm)
 

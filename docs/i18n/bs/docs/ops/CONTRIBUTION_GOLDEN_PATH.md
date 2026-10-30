@@ -113,7 +113,7 @@ ili dokumentovanu ručnu provjeru primjerenu izmjeni.
 - CLI katalozi se nalaze zasebno u `bin/cli/locales/`.
 - Očuvajte ICU rezervisana mjesta i oznake u potpuno istom obliku. Nemojte prevoditi nazive proizvoda/pružalaca usluga/modela,
   nazive protokola i zaglavlja, naredbe, identifikatore koda/JSON-a, URL-ove, varijable okruženja ili
-  zaštićene pojmove kao što su `OmniRoute`, `OAuth`, `MCP` i `A2A`. Trenutna izvorna lista je
+  zaštićene pojmove kao što su `67router`, `OAuth`, `MCP` i `A2A`. Trenutna izvorna lista je
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Ciljana petlja**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # ponovo koristi tarball
 - **Vratite prethodnu verziju.** `run` ponovo validira promovirani slot i zamjenjuje `current` i `previous` nazad kada
   ta provjera ne uspije. Kandidat koji ne prođe prvu validaciju nikada se ne promovira.
 
-Sve se zapisuje pod git-ignorirani `_artifacts/candidate/`; postojeća instalacija OmniRoutea
+Sve se zapisuje pod git-ignorirani `_artifacts/candidate/`; postojeća instalacija 67routera
 i njen direktorij podataka nikada se ne mijenjaju. Promovirani CLI je
 `_artifacts/candidate/current/prefix/bin/omniroute`; pokrenite ga s vlastitim `DATA_DIR` kada ga
 koristite. Izlazni kodovi: `0` uspjeh, `1` neuspješna validacija ili promocija, `2` greška pri korištenju ili nedostajuća izgradnja.

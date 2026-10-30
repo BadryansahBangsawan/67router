@@ -4,7 +4,7 @@
 
 ---
 
-Šajā lapā ir izskaidrota projekta lokālā `.env` darbība un tas, kā rīkoties ar vides failiem un noslēpumiem, izstrādājot OmniRoute.
+Šajā lapā ir izskaidrota projekta lokālā `.env` darbība un tas, kā rīkoties ar vides failiem un noslēpumiem, izstrādājot 67router.
 
 ## .env darbība pēc instalēšanas
 

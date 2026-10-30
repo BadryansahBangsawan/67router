@@ -20,10 +20,10 @@ A função de um motor é descrita por **dois eixos independentes**, codificados
 definição `RouterBackendDefinition` do registo:
 
 1. **Ciclo de vida** (`RouterBackendLifecycle`) — _como o motor é executado_:
-   - `in-process` — é executado dentro do processo Node do OmniRoute (o pipeline TS nativo).
-   - `supervised` — um processo-filho local que o OmniRoute instala/inicia/para/verifica
+   - `in-process` — é executado dentro do processo Node do 67router (o pipeline TS nativo).
+   - `supervised` — um processo-filho local que o 67router instala/inicia/para/verifica
      através de `ServiceSupervisor` e que depois utiliza como uma ligação de fornecedor.
-   - `external` — um endpoint HTTP para o qual o OmniRoute encaminha pedidos, mas que **não** gere
+   - `external` — um endpoint HTTP para o qual o 67router encaminha pedidos, mas que **não** gere
      (configurado através de um URL base numa variável de ambiente).
    - `disabled` — registado, mas não selecionável.
 2. **Eixo de seleção** (backend de encaminhamento do relay) — _se o relay encaminha pedidos para o motor_:

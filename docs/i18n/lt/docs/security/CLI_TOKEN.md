@@ -6,7 +6,7 @@
 
 ## Apžvalga
 
-„OmniRoute“ CLI komandos autentifikuojamos vietinėje valdymo API naudojant
+„67router“ CLI komandos autentifikuojamos vietinėje valdymo API naudojant
 `HMAC-SHA256(machine-id, salt)` prieigos raktą, siunčiamą per
 `x-omniroute-cli-token` užklausos antraštę.
 

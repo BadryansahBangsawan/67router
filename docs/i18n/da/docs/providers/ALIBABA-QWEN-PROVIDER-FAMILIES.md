@@ -10,7 +10,7 @@ repræsenteret som fire udbyderfamilier. Regionen er forbindelsesdata, ikke et s
 
 ## Beslutning
 
-| Udbyderfamilie                               | OmniRoute-ID            | Global region | Kina-region |
+| Udbyderfamilie                               | 67router-ID             | Global region | Kina-region |
 | -------------------------------------------- | ----------------------- | ------------- | ----------- |
 | Alibaba Cloud Model Studio (forbrugsbaseret) | `alibaba`               | Singapore     | Beijing     |
 | Alibaba Cloud Token Plan                     | `bailian-coding-plan`   | Singapore     | Beijing     |

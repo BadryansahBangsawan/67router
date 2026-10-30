@@ -148,7 +148,7 @@ Playwrightista riippuvat testit tiedostossa `tests/unit/claude-web-auto-refresh.
 
 ### Määritys
 
-1. Käynnistä OmniRoute komennolla `npm run dev` tai valmiiksi käännetystä asennuksesta.
+1. Käynnistä 67router komennolla `npm run dev` tai valmiiksi käännetystä asennuksesta.
 2. Avaa Hallintapaneeli → Palveluntarjoajat → Lisää palveluntarjoaja.
 3. Valitse Web Cookie -luokka ja Claude Web.
 4. Liitä todennetusta `claude.ai`-pyynnöstä kopioitu Cookie-otsake kokonaisuudessaan.

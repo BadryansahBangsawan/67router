@@ -7,7 +7,7 @@
 > **Źródło prawdy:** przestrzeń robocza `electron/`
 > **Ostatnia aktualizacja:** 2026-06-28 — v3.8.40
 
-OmniRoute jest dostarczany z wieloplatformową aplikacją desktopową (Windows / macOS / Linux) zbudowaną przy użyciu
+67router jest dostarczany z wieloplatformową aplikacją desktopową (Windows / macOS / Linux) zbudowaną przy użyciu
 **Electron 41** + **electron-builder 26.10**. Aplikacja desktopowa uruchamia autonomiczny serwer Next.js
 jako proces potomny, kieruje do niego `BrowserWindow` oraz dodaje zasobnik
 systemowy, mechanizm automatycznych aktualizacji, most IPC i bezkonfiguracyjną inicjalizację sekretów.
@@ -45,7 +45,7 @@ Potwierdzone na podstawie `electron/package.json`:
 | `better-sqlite3`        | główny `^13.0.2` (gotowe kompilacje Node-API — bez przebudowy dla Electron) |
 | Wersja aplikacji        | `3.8.0`                                                                     |
 | Identyfikator aplikacji | `online.omniroute.desktop`                                                  |
-| Nazwa produktu          | `OmniRoute`                                                                 |
+| Nazwa produktu          | `67router`                                                                  |
 
 ## Skrypty (główny `package.json`)
 
@@ -196,7 +196,7 @@ preferuj plik `.env`, a następnie całkowicie zamknij aplikację (zasobnik, **Z
 - `BrowserWindow`: 1400×900 (minimum 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, przyciski sterowania oknem w pozycji `{ x: 16, y: 16 }`.
 - Windows/Linux: natywny pasek tytułu.
-- Przycisk zamknięcia minimalizuje aplikację do zasobnika; menu zasobnika zawiera opcje **Otwórz OmniRoute**, **Otwórz panel** (w zewnętrznej przeglądarce), podmenu **Port serwera**, **Sprawdź dostępność aktualizacji**, **Zakończ**.
+- Przycisk zamknięcia minimalizuje aplikację do zasobnika; menu zasobnika zawiera opcje **Otwórz 67router**, **Otwórz panel** (w zewnętrznej przeglądarce), podmenu **Port serwera**, **Sprawdź dostępność aktualizacji**, **Zakończ**.
 
 ## Polityka bezpieczeństwa treści
 

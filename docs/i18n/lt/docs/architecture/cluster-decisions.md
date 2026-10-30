@@ -14,7 +14,7 @@ Du pasirenkami „Compose“ profiliai (`memory`, `bifrost`), skirti esamam 8 pa
 
 ## Kodėl šis sprendimas yra konservatyvus
 
-Esama „OmniRoute“ diegimo struktūra jau yra taupi ir pasiteisinusi:
+Esama „67router“ diegimo struktūra jau yra taupi ir pasiteisinusi:
 
 - **`redis:7-alpine`** produkcinėje aplinkoje apdoroja užklausų dažnio ribojimo ir podėlio darbo krūvį.
 - **SQLite + sqlite-vec + FTS5** užtikrina vietinę atmintį, vektorių saugojimą ir tekstinę paiešką (žr. [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Abu šie profiliai yra **mastelio didinimo parinktys diegimams, pasiekusiems SQL
 
 - Naudojate ≥3 `omniroute` replikas ir norite centralizuoti paslaugų teikėjų rotaciją viename Go procese.
 - Norite vienos audito ir žurnalų sąsajos aukštesnio lygmens paslaugų teikėjų užklausoms iš visų replikų.
-- Norite horizontaliai plėsti 1 lygio maršruto parinkimo sluoksnį nepriklausomai nuo „OmniRoute“ replikų.
+- Norite horizontaliai plėsti 1 lygio maršruto parinkimo sluoksnį nepriklausomai nuo „67router“ replikų.
 
 **Kas pridedama:**
 

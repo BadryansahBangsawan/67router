@@ -5,7 +5,7 @@
 ---
 
 Acest document descrie fundația de rutare adaptivă bazată pe feedback adăugată în
-OmniRoute. Este intenționat restrânsă: introduce un canal tipizat pentru rezultatele
+67router. Este intenționat restrânsă: introduce un canal tipizat pentru rezultatele
 rutării, un semnal online de calitate care alimentează mecanismul existent de evaluare
 auto-combo, un exportator OpenTelemetry opțional și un endpoint de explicabilitate.
 Acesta **nu** înlocuiește stiva existentă de reziliență (circuit breaker, perioada de
@@ -14,7 +14,7 @@ ci o completează.
 
 ## 1. Context arhitectural
 
-OmniRoute este un plan de date cu o **cale critică a cererilor** și un **plan de
+67router este un plan de date cu o **cale critică a cererilor** și un **plan de
 control/inteligență**. Calea critică trebuie să rămână rapidă, eficientă din punctul
 de vedere al memoriei, asincronă, rezilientă și predictibilă. Evaluarea, calcularea
 scorului de calitate, experimentele și analiza istorică aparțin planului de control.
@@ -24,7 +24,7 @@ Agent AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   plan de date (rapid, sincron, în memorie)
+│    67router        │   plan de date (rapid, sincron, în memorie)
 │  rutare / failover  │
 │  sănătate / protecție│
 │  cache / streaming  │
@@ -240,7 +240,7 @@ Fișiere: `open-sse/services/routing/otel.ts`
 - Spanurile respectă convențiile semantice GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`), plus atributele de rutare
-  OmniRoute (rezultat, stare, ttft, reîncercări, rezervă).
+  67router (rezultat, stare, ttft, reîncercări, rezervă).
 - `record()` doar adaugă într-un buffer cu dimensiune limitată (O(1)); un temporizator din fundal
   golește bufferul asincron prin `POST {endpoint}/v1/traces`. În caz de supraîncărcare,
   cele mai vechi evenimente sunt eliminate (contorul `dropped`) — fără a aplica vreodată contrapresiune
@@ -261,7 +261,7 @@ Fișiere: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrarea planului de evaluare (pregătire pentru Future AGI)
 
-OmniRoute tratează Future AGI (sau orice evaluator) drept un **potențial
+67router tratează Future AGI (sau orice evaluator) drept un **potențial
 backend de inteligență/evaluare, nu o dependență**. Punctele de integrare:
 
 - Un `RoutingEventSink` poate redirecționa asincron evenimentele către un evaluator.

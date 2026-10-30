@@ -5,7 +5,7 @@
 ---
 
 > **Descriere într-un singur rând pentru fiecare director și fișier rădăcină.**
-> Ultima actualizare: 2026-06-28 — OmniRoute v3.8.40
+> Ultima actualizare: 2026-06-28 — 67router v3.8.40
 >
 > Folosiți această hartă pentru a naviga rapid prin baza de cod. Pentru informații detaliate, urmați linkurile către documentația dedicată.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Flux complet de lansare (abilități, husky, commituri convenționale, implementare)              |
 | `COVERAGE_PLAN.md`          | Obiectivele de acoperire și starea actuală                                                     |
 | `FREE_TIERS.md`             | Furnizori selectați cu nivel gratuit (peste 48 gratuiți + 11 OAuth)                            |
-| `CLI-TOOLS.md`              | Integrări CLI externe + CLI-ul intern OmniRoute                                                |
+| `CLI-TOOLS.md`              | Integrări CLI externe + CLI-ul intern 67router                                                 |
 | `I18N.md`                   | Arhitectură i18n, adăugarea unei limbi, 67 de localizări                                       |
 | `UNINSTALL.md`              | Pași pentru dezinstalarea completă                                                             |
 | `PROVIDER_REFERENCE.md`     | Catalog **generat automat** cu 375 de furnizori (regenerare: `npm run gen:provider-reference`) |

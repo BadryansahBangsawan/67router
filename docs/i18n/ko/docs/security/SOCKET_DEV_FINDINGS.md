@@ -49,7 +49,7 @@ v3.8.6 완화 조치가 배포된 후 아래 호출 지점 중 하나라도 스�
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>`을 통한 프로필별 NSS DB 업데이트                                                       |
 
 이 명령들은 `mitmproxy`, Charles Proxy, Fiddler 및 Caddy에서 사용하는 것과
-동일한 명령입니다. OmniRoute에 이러한 명령이 존재한다는 사실은
+동일한 명령입니다. 67router에 이러한 명령이 존재한다는 사실은
 `docs/security/STEALTH_GUIDE.md`에 문서화되어 있습니다.
 
 **v3.8.6 완화 조치**:
@@ -100,7 +100,7 @@ v3.8.6 완화 조치가 배포된 후 아래 호출 지점 중 하나라도 스�
 
 `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` 환경 변수 플래그는 아직 자동화를 업데이트하지 않은 운영자를 위해 v3.8.5 동작을 유지합니다. 이 플래그는 v3.9에서 제거될 예정입니다.
 
-**유지하는 이유**: Zed 가져오기는 이미 Zed를 사용 중이며 공급자 키를 다시 붙여 넣지 않고 OmniRoute에 복제하려는 사용자를 위한 가장 편리한 온보딩 경로입니다.
+**유지하는 이유**: Zed 가져오기는 이미 Zed를 사용 중이며 공급자 키를 다시 붙여 넣지 않고 67router에 복제하려는 사용자를 위한 가장 편리한 온보딩 경로입니다.
 
 ---
 
@@ -108,7 +108,7 @@ v3.8.6 완화 조치가 배포된 후 아래 호출 지점 중 하나라도 스�
 
 **소스 파일**: `src/mitm/systemCommands.ts`.
 
-**플래그된 이유**: 이 청크는 `execFileWithPassword`, `runElevatedPowerShell` 및 공유 `quotePowerShell` 헬퍼를 다시 내보냅니다. Socket.dev의 AI 분류기는 이를 범용 "호스트 실행 + 권한 상승 툴킷"으로 인식합니다. OmniRoute 내에서는 MITM 인증서 설치 경로(§1)와 `sudo` 명령 실행을 위한 `execFileWithPassword`에서만 사용됩니다.
+**플래그된 이유**: 이 청크는 `execFileWithPassword`, `runElevatedPowerShell` 및 공유 `quotePowerShell` 헬퍼를 다시 내보냅니다. Socket.dev의 AI 분류기는 이를 범용 "호스트 실행 + 권한 상승 툴킷"으로 인식합니다. 67router 내에서는 MITM 인증서 설치 경로(§1)와 `sudo` 명령 실행을 위한 `execFileWithPassword`에서만 사용됩니다.
 
 **v3.8.6 완화 조치**:
 
@@ -143,7 +143,7 @@ v3.8.6 완화 조치가 배포된 후 아래 호출 지점 중 하나라도 스�
 
 ---
 
-## §5 — OmniRoute Cloud Sync 자격 증명 다시 쓰기 (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync 자격 증명 다시 쓰기 (`api/keys/[id]/route.js`)
 
 **소스 파일**:
 
@@ -176,7 +176,7 @@ rawBody)`)를 확인합니다. 비밀 값이 설정되어 있으면 서명이
    이는 원격 토큰 동기화에 의존하던 사용자에게 **호환성을 깨뜨리는
    변경 사항**이며, 해당 사용자는 명시적으로 옵트인해야 합니다.
 
-**이 기능을 유지하는 이유**: Cloud Sync는 OmniRoute Cloud 테넌트가 팀
+**이 기능을 유지하는 이유**: Cloud Sync는 67router Cloud 테넌트가 팀
 자격 증명을 중앙에서 관리할 수 있는 유일한 방법입니다. 이 수정으로
 위협 모델이 다음과 같이 명확해집니다. "서버는 서명하고, 클라이언트는
 검증하며, 운영자는 옵트인한다."

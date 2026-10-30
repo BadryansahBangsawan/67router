@@ -11,7 +11,7 @@ lastUpdated: 2026-06-28
 
 # Inspektor ruchu
 
-Traffic Inspector to wbudowany debugger ruchu HTTPS w OmniRoute — narzędzie w stylu Charles Proxy / mitmweb / HTTP Toolkit, które jest **świadome LLM** (**LLM-aware**) i **świadome agentów** (**agent-aware**). Znajduje się pod `/dashboard/tools/traffic-inspector` i odbiera ruch na żywo z maksymalnie 5 jednoczesnych źródeł przechwytywania.
+Traffic Inspector to wbudowany debugger ruchu HTTPS w 67router — narzędzie w stylu Charles Proxy / mitmweb / HTTP Toolkit, które jest **świadome LLM** (**LLM-aware**) i **świadome agentów** (**agent-aware**). Znajduje się pod `/dashboard/tools/traffic-inspector` i odbiera ruch na żywo z maksymalnie 5 jednoczesnych źródeł przechwytywania.
 
 **Lokalizacja w dashboardzie:** `/dashboard/tools/traffic-inspector`
 **Grupa w sidebarze:** Tools (po AgentBridge)
@@ -23,21 +23,21 @@ Traffic Inspector to wbudowany debugger ruchu HTTPS w OmniRoute — narzędzie w
 
 ### Co wyróżnia Traffic Inspector
 
-| Feature                                                                | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Interfejs webowy                                                       |    ✓    |    ✗    |    ✗    |                ✓                |
-| Open-source                                                            |    ✓    |    ✗    | partial |                ✓                |
-| **Agent-aware** (wie, czy żądanie pochodzi z Antigravity/Copilot/itd.) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-aware** (parsuje kształt OpenAI/Anthropic/Gemini, tokeny, model) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Widoczne mapowanie modeli** (gemini-3-flash → claude-sonnet-4.7)     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Podział latencji proxy/upstream**                                    | partial |    ✗    |    ✗    |                ✓                |
-| **Zintegrowany z OmniRoute** routing, fallback, cost                   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Debug proxy systemowego** (dowolna aplikacja na maszynie)            |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Przechwytywanie custom host** (per-host DNS redirect)                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Tryb HTTP_PROXY env**                                                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Widok Conversation** (multi-turn bubbles, tool_use/tool_result)      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE stream merger** (rekonstrukcja z eventów delta)                  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Nagrywanie sesji** (nazwane, eksport .har/.jsonl)                    |    ✗    |    ✓    |    ✓    |                ✓                |
+| Feature                                                                | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Interfejs webowy                                                       |    ✓    |    ✗    |    ✗    |               ✓                |
+| Open-source                                                            |    ✓    |    ✗    | partial |               ✓                |
+| **Agent-aware** (wie, czy żądanie pochodzi z Antigravity/Copilot/itd.) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-aware** (parsuje kształt OpenAI/Anthropic/Gemini, tokeny, model) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Widoczne mapowanie modeli** (gemini-3-flash → claude-sonnet-4.7)     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Podział latencji proxy/upstream**                                    | partial |    ✗    |    ✗    |               ✓                |
+| **Zintegrowany z 67router** routing, fallback, cost                    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Debug proxy systemowego** (dowolna aplikacja na maszynie)            |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Przechwytywanie custom host** (per-host DNS redirect)                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Tryb HTTP_PROXY env**                                                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Widok Conversation** (multi-turn bubbles, tool_use/tool_result)      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE stream merger** (rekonstrukcja z eventów delta)                  |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Nagrywanie sesji** (nazwane, eksport .har/.jsonl)                    |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Architektura w jednym akapicie
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proxy systemowe nie zostało cofnięte
 
-Jeśli OmniRoute crashnie przy aktywnym trybie proxy systemowego:
+Jeśli 67router crashnie przy aktywnym trybie proxy systemowego:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Wszystkie trasy są oznaczone jako `LOCAL_ONLY` (dostępne wyłącznie przez int
 | GET    | `/requests`                 | Wyświetla żądania (z możliwością filtrowania: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Szczegóły pojedynczego żądania                                                                        |
 | DELETE | `/requests`                 | Czyści bufor w pamięci                                                                                |
-| POST   | `/requests/{id}/replay`     | Ponownie wykonuje to samo żądanie za pośrednictwem routera OmniRoute                                  |
+| POST   | `/requests/{id}/replay`     | Ponownie wykonuje to samo żądanie za pośrednictwem routera 67router                                   |
 | PUT    | `/requests/{id}/annotation` | Zapisuje lub aktualizuje notatkę dotyczącą żądania                                                    |
 
 ### WebSocket

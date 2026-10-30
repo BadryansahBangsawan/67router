@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute wordt geleverd met een zorgvuldig samengestelde verzameling gratis proxy's in de tabel `free_proxies`,
+67router wordt geleverd met een zorgvuldig samengestelde verzameling gratis proxy's in de tabel `free_proxies`,
 die wordt gesynchroniseerd vanuit externe providers (1proxy, proxifly, iplocate, webshare). Het
 dashboard toont deze onder **Instellingen → Gratis proxy's**. Dit document
 beschrijft de server-side filtering, sortering, telling en rapportage van

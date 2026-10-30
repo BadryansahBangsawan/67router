@@ -5,7 +5,7 @@
 ---
 
 > **Jednořádkový popis každého adresáře a souboru v kořenovém adresáři.**
-> Poslední aktualizace: 2026-06-28 — OmniRoute v3.8.40
+> Poslední aktualizace: 2026-06-28 — 67router v3.8.40
 >
 > Pomocí této mapy se můžete rychle orientovat v kódové základně. Podrobnější informace naleznete v odkazech na příslušnou dokumentaci.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Kompletní proces vydání (dovednosti, husky, konvenční commity, nasazení)                                       |
 | `COVERAGE_PLAN.md`          | Cíle pokrytí a aktuální stav                                                                                   |
 | `FREE_TIERS.md`             | Kurátorovaný seznam poskytovatelů bezplatných úrovní (48+ bezplatných + 11 OAuth)                              |
-| `CLI-TOOLS.md`              | Integrace externích nástrojů CLI + interní OmniRoute CLI                                                       |
+| `CLI-TOOLS.md`              | Integrace externích nástrojů CLI + interní 67router CLI                                                        |
 | `I18N.md`                   | Architektura i18n, přidání jazyka, 67 lokalizací                                                               |
 | `UNINSTALL.md`              | Postup čisté odinstalace                                                                                       |
 | `PROVIDER_REFERENCE.md`     | **Automaticky generovaný** katalog 375 poskytovatelů (opětovné vygenerování: `npm run gen:provider-reference`) |

@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Tiếng Việt)
+# 🗜️ Prompt Compression Guide — 67router (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Tổng quan
 
-OmniRoute triển khai một quy trình nén prompt theo mô-đun, chạy **chủ động** trước khi các yêu cầu được gửi đến nhà cung cấp thượng nguồn. Điều này có nghĩa là việc tiết kiệm token diễn ra một cách minh bạch — bạn không cần thay đổi quy trình làm việc.
+67router triển khai một quy trình nén prompt theo mô-đun, chạy **chủ động** trước khi các yêu cầu được gửi đến nhà cung cấp thượng nguồn. Điều này có nghĩa là việc tiết kiệm token diễn ra một cách minh bạch — bạn không cần thay đổi quy trình làm việc.
 
 ```
 Yêu cầu từ máy khách
@@ -122,15 +122,15 @@ các combo nén được gán cho combo định tuyến.
 
 ## Phép tính mức tiết kiệm từ nguồn thượng nguồn
 
-OmniRoute ghi nhận mức tiết kiệm nhờ nén từ hai nguồn: các phép đo hiệu năng của dự án thượng nguồn và
-cách kết hợp công cụ riêng của OmniRoute.
+67router ghi nhận mức tiết kiệm nhờ nén từ hai nguồn: các phép đo hiệu năng của dự án thượng nguồn và
+cách kết hợp công cụ riêng của 67router.
 
 | Nguồn   | Số liệu từ README thượng nguồn được sử dụng tại đây                                                                               |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Caveman | Ít hơn `~75%` token đầu ra, mức tiết kiệm đầu ra trung bình theo phép đo là `65%`, phạm vi `22-87%` và công cụ nén đầu vào `~46%` |
 | RTK     | Tiết kiệm `60-90%` đầu ra lệnh; phiên mẫu từ `~118,000 -> ~23,900` token, tương đương tiết kiệm `79.7%` (`~80%`)                  |
 
-Đối với các tải trọng công cụ/ngữ cảnh chồng lấn, tổ hợp OmniRoute mặc định xếp chồng các công cụ:
+Đối với các tải trọng công cụ/ngữ cảnh chồng lấn, tổ hợp 67router mặc định xếp chồng các công cụ:
 
 ```txt
 RTK -> Caveman
@@ -516,12 +516,12 @@ nguyên phần body và được bỏ qua với lý do `no_styles`), nối các 
 tự trong danh mục,
 chỉ thêm mệnh đề ranh giới **một lần** (cùng với mệnh đề an toàn,
 `SAFETY_BOUNDARIES` hoặc bản dịch của nó, khi `less-code` hoặc `ponytail` được chọn),
-và bắt đầu khối bằng một dấu idempotency duy nhất (`[OmniRoute Output Styles]`), vì vậy
+và bắt đầu khối bằng một dấu idempotency duy nhất (`[67router Output Styles]`), vì vậy
 việc áp dụng lại không tạo ra thay đổi. Khi ngôn ngữ đã phân giải (xem phần Lựa chọn
 ngôn ngữ bên dưới) có bản dịch, chỉ dẫn đã bản địa hóa sẽ được chèn thay cho tiếng Anh.
 
 Đối với body có mảng `messages` không rỗng, việc kiểm tra idempotency chạy trước cơ chế
-bỏ qua theo nội dung: khi dấu `[OmniRoute Output Styles]` đã có trong trường `system`
+bỏ qua theo nội dung: khi dấu `[67router Output Styles]` đã có trong trường `system`
 cấp cao nhất (dạng chuỗi hoặc mảng khối nội dung), hoặc trong một system message có nội
 dung dạng chuỗi, body được giữ nguyên với lý do `already_applied` và không thực hiện
 kiểm tra từ khóa. Nếu không, cơ chế bỏ qua theo nội dung
@@ -551,7 +551,7 @@ các vị trí sau:
 Đối với body không có mảng `messages` (hoặc có mảng rỗng), cơ chế bỏ qua theo nội dung
 không chạy và trường `system` cấp cao nhất không được xét đến. Khối được nối vào sau văn
 bản của trường `instructions` dạng chuỗi, trừ khi trường đó đã chứa dấu
-`[OmniRoute Output Styles]`; trong trường hợp này, body được giữ nguyên với lý do
+`[67router Output Styles]`; trong trường hợp này, body được giữ nguyên với lý do
 `already_applied`. Khi body không có trường `instructions` dạng chuỗi nhưng có `input`
 (một chuỗi hoặc một mảng), khối sẽ trở thành `instructions`, thay thế mọi giá trị không
 phải chuỗi mà trường đó từng chứa. Body không có cả trường `instructions` dạng chuỗi lẫn
@@ -578,8 +578,8 @@ hình nén lưu lựa chọn dưới dạng:
 Khả năng tương thích ngược: khi `outputStyles` trống, thiết lập cũ
 `cavemanOutputMode.enabled` ánh xạ tới `terse-prose` ở mức
 `cavemanOutputMode.intensity`. Khi đó, khối bắt đầu bằng dấu
-`[OmniRoute Output Styles]`, trong khi bộ chèn `applyCavemanOutputMode()` cũ sử dụng
-`[OmniRoute Caveman Output Mode]`. Bên dưới dấu này, văn bản khớp với nội dung chèn cũ
+`[67router Output Styles]`, trong khi bộ chèn `applyCavemanOutputMode()` cũ sử dụng
+`[67router Caveman Output Mode]`. Bên dưới dấu này, văn bản khớp với nội dung chèn cũ
 trong en, pt-BR, es, de, fr, it, ru, id và vi; trong ja và zh, văn bản có thêm một
 khoảng trắng trước mệnh đề ranh giới. `terse-prose` được dịch sang pt-BR, es, de, fr,
 it, ru, zh, ja, id và vi, vì vậy một yêu cầu có ngôn ngữ đã phân giải là `hu` sẽ nhận

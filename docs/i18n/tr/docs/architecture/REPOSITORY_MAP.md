@@ -5,7 +5,7 @@
 ---
 
 > **Her dizin ve kök dosya için tek satırlık açıklama.**
-> Son güncelleme: 2026-06-28 — OmniRoute v3.8.40
+> Son güncelleme: 2026-06-28 — 67router v3.8.40
 >
 > Kod tabanında hızlıca gezinmek için bu haritayı kullanın. Ayrıntılı incelemeler için özel dokümanların bağlantılarını takip edin.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Tam sürüm yayımlama akışı (beceriler, husky, conventional commits, dağıtım)                                     |
 | `COVERAGE_PLAN.md`          | Kapsama hedefleri ve mevcut durum                                                                               |
 | `FREE_TIERS.md`             | Özenle seçilmiş ücretsiz katman sağlayıcıları (48+ ücretsiz + 11 OAuth)                                         |
-| `CLI-TOOLS.md`              | Harici CLI entegrasyonları + dahili OmniRoute CLI                                                               |
+| `CLI-TOOLS.md`              | Harici CLI entegrasyonları + dahili 67router CLI                                                                |
 | `I18N.md`                   | i18n mimarisi, dil ekleme, 67 yerel ayar                                                                        |
 | `UNINSTALL.md`              | Temiz kaldırma adımları                                                                                         |
 | `PROVIDER_REFERENCE.md`     | 375 sağlayıcıdan oluşan **otomatik oluşturulmuş** katalog (yeniden oluşturma: `npm run gen:provider-reference`) |

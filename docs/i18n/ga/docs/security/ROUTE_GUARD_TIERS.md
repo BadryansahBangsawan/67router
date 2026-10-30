@@ -6,7 +6,7 @@
 
 ## Forléargas
 
-Aicmítear gach bealach API bainistíochta OmniRoute i gceann amháin de thrí shraith
+Aicmítear gach bealach API bainistíochta 67router i gceann amháin de thrí shraith
 chosanta. Tá an t-aicmiú statach, sainmhínithe in `src/server/authz/routeGuard.ts`,
 agus déantar é a mheas sula ritear aon bhrainse fíordheimhnithe eile.
 
@@ -27,9 +27,9 @@ trí thollán Cloudflared/Ngrok) tús a chur le próisis — aicme CVE aitheanta
 **Cad é GHSA-fhh6-4qxv-rpqj (aicme an ionsaithe):** nochtann freastalaí bainistíochta/gníomhaire
 críochphointe a sheolann fophróiseas (`npm install`, `node`, brabhsálaí,
 seachfhreastalaí, `git`, `tar`, …). Má tá an críochphointe sin inrochtana ó lasmuigh den óstach — toisc
-gur chuir an t-oibreoir OmniRoute taobh thiar de thollán nginx/Cloudflare/Tailscale agus gur sceitheadh JWT,
+gur chuir an t-oibreoir 67router taobh thiar de thollán nginx/Cloudflare/Tailscale agus gur sceitheadh JWT,
 nó gur míchumraíodh an fíordheimhniú — déanann an t-ionsaitheoir “ordú a rith
-ar an óstach” (forghníomhú cóid cianda) de “API a ghlaoch”. Dúnann OmniRoute an bhearna seo trí
+ar an óstach” (forghníomhú cóid cianda) de “API a ghlaoch”. Dúnann 67router an bhearna seo trí
 **sheiceáil óstach ais-lúibe a fhorfheidhmiú gan choinníoll, roimh aon seiceáil fíordheimhnithe**, ar gach
 bealach atá in ann próiseas a thosú: ní féidir le comhartha sceite thar thollán an próiseas a thosú fós.
 
@@ -100,7 +100,7 @@ Faoi láthair, is é `/api/mcp/` an t-aon réimír ar féidir an rialú a sheach
 
 #### Treoir d'oibreoirí & iniúchóireacht
 
-Má ritheann tú OmniRoute taobh thiar de sheachfhreastalaí droim ar ais nó de thollán (nginx, Caddy, Cloudflare Tunnel, Tailscale, Ngrok), cosnaíonn an tseiceáil lúb-ais na bealaí thuas atá in ann próisis a thionscnamh fós — diúltaítear d'iarratas nach seoladh lúb-ais é seoladh a chliaint le `403 LOCAL_ONLY` **sula ritear fíordheimhniú**, mar sin ní féidir le JWT sceite tionscnamh a bhaint amach. Tá dhá fhreagracht fós ar an oibreoir:
+Má ritheann tú 67router taobh thiar de sheachfhreastalaí droim ar ais nó de thollán (nginx, Caddy, Cloudflare Tunnel, Tailscale, Ngrok), cosnaíonn an tseiceáil lúb-ais na bealaí thuas atá in ann próisis a thionscnamh fós — diúltaítear d'iarratas nach seoladh lúb-ais é seoladh a chliaint le `403 LOCAL_ONLY` **sula ritear fíordheimhniú**, mar sin ní féidir le JWT sceite tionscnamh a bhaint amach. Tá dhá fhreagracht fós ar an oibreoir:
 
 - **Ná déan iarracht 403 a “dheisiú” trí IP an chliaint a bhrionnú mar sheoladh lúb-ais.** Má shocraítear
   `X-Forwarded-For: 127.0.0.1`, nó má úsáidtear seachfhreastalaí a athscríobhann an seoladh foinseach mar
@@ -134,7 +134,7 @@ Má ritheann tú OmniRoute taobh thiar de sheachfhreastalaí droim ar ais nó de
 - Cuardaigh i logaí do sheachfhreastalaí droim ar ais / rochtana na réimíreanna thuas agus seoladh
   cliaint nach seoladh lúb-ais é. Má thug aon amas den sórt sin `200` ar ais in ionad
   `403 LOCAL_ONLY`, ciallaíonn sé sin go bhfuil an seachfhreastalaí ag ceilt fhíor-IP an chliaint — deisigh an seachfhreastalaí.
-- Má bhíonn `403 LOCAL_ONLY` i logaí OmniRoute do cheann de na conairí seo, is é sin an chosaint
+- Má bhíonn `403 LOCAL_ONLY` i logaí 67router do cheann de na conairí seo, is é sin an chosaint
   ag obair mar a ceapadh, ní earráid atá le ceilt.
 
 #### Bealaí atá insroichte go cianda agus a bhfuil geata tóireála ag an suíomh glaoite acu

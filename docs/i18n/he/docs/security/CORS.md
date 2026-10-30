@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute שולט באילו **מקורות דפדפן** רשאים לקרוא תגובות חוצות-מקור
+67router שולט באילו **מקורות דפדפן** רשאים לקרוא תגובות חוצות-מקור
 באמצעות רשימת היתרים מרכזית אחת. המודל **סגור כברירת מחדל**:
 אף מקור אינו מורשה עד שתוסיפו אותו במפורש. דף זה מתעד כיצד רשימת ההיתרים
 נפתרת, מה `CORS_ALLOW_ALL=true` חושף בפועל (וחשוב לא פחות, מה הוא
@@ -46,13 +46,13 @@ OmniRoute שולט באילו **מקורות דפדפן** רשאים לקרוא 
 ## מודל האיומים — מה `CORS_ALLOW_ALL=true` באמת חושף
 
 ראוי להתייחס ברצינות לאזהרה הכללית של OWASP ("CORS עם תו כללי = כל אתר יכול
-לפנות ל-API שלך"), אך החשיפה של OmniRoute **מצומצמת יותר מהמקרה הכללי**,
+לפנות ל-API שלך"), אך החשיפה של 67router **מצומצמת יותר מהמקרה הכללי**,
 בשל עובדת מימוש קונקרטית אחת:
 
 > **הפונקציה המרכזית `applyCorsHeaders()` לעולם אינה פולטת
 > `Access-Control-Allow-Credentials`.** דפדפן לא יחשוף תגובה חוצת-מקור
 > _עם פרטי הזדהות_ (הכוללת קובצי cookie), אלא אם השרת שולח
-> `Access-Control-Allow-Credentials: true`. נתיב ה-CORS המשותף של OmniRoute לעולם
+> `Access-Control-Allow-Credentials: true`. נתיב ה-CORS המשותף של 67router לעולם
 > אינו עושה זאת.
 
 המשמעות עבור כל ממשק, אפילו עם `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ OmniRoute שולט באילו **מקורות דפדפן** רשאים לקרוא 
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- אם OmniRoute פועל מאחורי reverse proxy / מנהרה (nginx, Caddy, Cloudflare
+- אם 67router פועל מאחורי reverse proxy / מנהרה (nginx, Caddy, Cloudflare
   Tunnel, Tailscale),‏ CORS **אינו** אמצעי הבקרה היחיד שלכם — מגן נתיבי ה-loopback
   עדיין מגן על נתיבים שמסוגלים להפעיל תהליכים (ראו
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). אל תזייפו
@@ -108,7 +108,7 @@ OmniRoute שולט באילו **מקורות דפדפן** רשאים לקרוא 
 לעיתים רחוקות יש צורך בתו הכללי אפילו בפיתוח. התירו רק את שרתי הפיתוח שבהם אתם משתמשים:
 
 ```bash
-# שרתי הפיתוח של Vite (5173) ו-Next.js (3000) שניגשים ל-OmniRoute מקומי
+# שרתי הפיתוח של Vite (5173) ו-Next.js (3000) שניגשים ל-67router מקומי
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   מקורות ניהול/לוח בקרה בתצורה מתירנית כלשהי; הם חייבים להישאר סגורים
   לחלוטין כברירת מחדל.
 
-## דוגמה: reverse proxy לפני OmniRoute
+## דוגמה: reverse proxy לפני 67router
 
-מדיניות CORS נאכפת על ידי OmniRoute עצמו, ולכן בדרך כלל ה-proxy **לא** אמור להוסיף או
+מדיניות CORS נאכפת על ידי 67router עצמו, ולכן בדרך כלל ה-proxy **לא** אמור להוסיף או
 לשכתב כותרות `Access-Control-*` (כותרות כפולות גורמות לתקלות בדפדפנים). סיימו את חיבור ה-TLS
-והעבירו את הבקשה — תנו ל-OmniRoute להשיב לבקשת ה-preflight:
+והעבירו את הבקשה — תנו ל-67router להשיב לבקשת ה-preflight:
 
 ```nginx
-# nginx — העברה אל OmniRoute; אין להזריק כאן כותרות Access-Control-*
+# nginx — העברה אל 67router; אין להזריק כאן כותרות Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # שמרו על כותרות ההעברה: proxy באותו מארח מתחבר דרך loopback, והן אלו
-    # שמיידעות את OmniRoute שהפונה אינו המפעיל המקומי. proxy שאינו מוסיף אף אחת מהן
+    # שמיידעות את 67router שהפונה אינו המפעיל המקומי. proxy שאינו מוסיף אף אחת מהן
     # גורם לכל פונה מרוחק להיראות מקומי. כמו כן, לעולם אין להגדיר את X-Forwarded-For כ-127.0.0.1.
 }
 ```
 
-הגדירו את מקורות הדפדפן המורשים ב-OmniRoute (`CORS_ALLOWED_ORIGINS` או
+הגדירו את מקורות הדפדפן המורשים ב-67router (`CORS_ALLOWED_ORIGINS` או
 לשונית האבטחה), ולא ב-proxy.
 
 ## קובצי מקור

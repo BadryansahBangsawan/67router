@@ -12,7 +12,7 @@ específico, sinalizadores `anthropic-beta`, cabeçalhos do SDK Stainless etc.).
 
 ## Início rápido — use o provedor nativo `agentrouter` (recomendado)
 
-Para a maioria dos usuários, **nenhuma configuração especial é necessária**. O OmniRoute inclui um provedor
+Para a maioria dos usuários, **nenhuma configuração especial é necessária**. O 67router inclui um provedor
 `agentrouter` integrado, com o perfil completo de requisição do Claude Code já incorporado (consulte
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Para usá-lo:
 
@@ -34,7 +34,7 @@ URL base, o caminho de chat ou o conjunto de cabeçalhos.
 
 ## Avançado: conexão por meio do tipo de provedor compatível com o Claude Code
 
-O OmniRoute também oferece suporte ao AgentRouter (e a relays semelhantes) por meio do tipo de provedor
+O 67router também oferece suporte ao AgentRouter (e a relays semelhantes) por meio do tipo de provedor
 **compatível com o Claude Code** (`anthropic-compatible-cc-*`), que utiliza a
 API Anthropic Messages com o perfil de requisição correto. Um provedor genérico
 `openai-compatible-chat` apontando para `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Uma conta e uma chave de API do AgentRouter. Novos cadastros recebem créditos gratuitos por meio do link de afiliado
   no [README](../README.md) do projeto.
-- O OmniRoute em execução com o sinalizador de recurso `ENABLE_CC_COMPATIBLE_PROVIDER` habilitado
+- O 67router em execução com o sinalizador de recurso `ENABLE_CC_COMPATIBLE_PROVIDER` habilitado
   (veja abaixo).
 
 ## 1. Habilite o tipo de provedor compatível com o CC
 
 O tipo de provedor compatível com o Claude Code é controlado por um sinalizador de recurso, pois
 envia tráfego que reproduz fielmente o cliente oficial do Claude Code. Habilite-o
-definindo uma variável de ambiente antes de iniciar o OmniRoute:
+definindo uma variável de ambiente antes de iniciar o 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

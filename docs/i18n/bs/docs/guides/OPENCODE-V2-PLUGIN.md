@@ -6,14 +6,14 @@
 
 # OpenCode v2 dodatak — instalacija i konfiguracija
 
-`@omniroute/opencode-plugin-v2` postavlja vaš cijeli OmniRoute katalog — modele, kombinacije (combos) i automatske kombinacije (auto-combos) — u OpenCode v2 birač modela, sa prikazanim imenima, cijenama i budžetima za besplatni nivo.
+`@omniroute/opencode-plugin-v2` postavlja vaš cijeli 67router katalog — modele, kombinacije (combos) i automatske kombinacije (auto-combos) — u OpenCode v2 birač modela, sa prikazanim imenima, cijenama i budžetima za besplatni nivo.
 
 Ovo je zaseban paket od `@omniroute/opencode-plugin` jer OpenCode v1 i v2 učitavaju dodatke kroz različite ugovore. Odaberite onaj koji odgovara vašoj OpenCode glavnoj verziji; ništa se ne dijeli između njih, tako da nadogradnja jednog nikada ne prisiljava nadogradnju drugog.
 
 ## Zahtjevi
 
 - OpenCode v2.
-- Dostupan OmniRoute gateway (`http://localhost:20128` po zadanim postavkama).
+- Dostupan 67router gateway (`http://localhost:20128` po zadanim postavkama).
 - Node.js 22 ili 24.
 
 ## Instalacija
@@ -67,7 +67,7 @@ Ako nije postavljen, `managementReadToken` se vraća na `apiKey`. Kada gateway o
 | `baseURL`                        | obavezno                                         | Korijen pristupnika, samo `http(s)`; sufiks `/v1` dodaje se gdje je potrebno                                                                            |
 | `apiKey`                         | povezana vjerodajnica, zatim `OMNIROUTE_API_KEY` | Ključ za razgovor za `/v1/*`                                                                                                                            |
 | `managementReadToken`            | koristi `apiKey` kao rezervnu vrijednost         | Ključ za `/api/*` — obično **nije** isti                                                                                                                |
-| `displayName`                    | `"OmniRoute"`                                    | Naziv pružatelja u izborniku                                                                                                                            |
+| `displayName`                    | `"67router"`                                     | Naziv pružatelja u izborniku                                                                                                                            |
 | `timeoutMs`                      | `10000`                                          | Vremensko ograničenje dohvata po krajnjoj tački (automatske kombinacije koriste 5 s)                                                                    |
 | `modelCacheTtlMs`                | `300000`                                         | TTL predmemorije kataloga; snimka na disku ubrzava hladna pokretanja                                                                                    |
 | `timeouts`                       | koristi `timeoutMs` kao rezervnu vrijednost      | Budžeti po krajnjoj tački u ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                          |
@@ -105,7 +105,7 @@ Postavite `"geminiSanitization": false` da biste to isključili.
 
 | Simptom                                            | Uzrok                                                                                                                             |
 | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Birač ne prikazuje nijedan OmniRoute model         | Ključ nije pronađen (provjerite upozorenje pri pokretanju) ili pristupnik nije dostupan                                           |
+| Birač ne prikazuje nijedan 67router model          | Ključ nije pronađen (provjerite upozorenje pri pokretanju) ili pristupnik nije dostupan                                           |
 | Neobrađeni ID-ovi modela, bez kombinacija i cijena | Upravljačke krajnje tačke odbile su token — postavite `managementReadToken`                                                       |
 | Kratak ili prazan `freeOnly` katalog               | Nema upravljačkog tokena ili je token odbijen — pročitajte red sa sažetkom osvježavanja (broj `unmatched-free`) u zapisniku hosta |
 | Sesija prikvačena za `opencode-<id>/…`             | Dodatak v1 objavio je `opencode-<id>`; v2 objavljuje samo `<id>`, pa ponovo odaberite model pod `<id>/…`                          |

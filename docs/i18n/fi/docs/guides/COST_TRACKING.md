@@ -4,7 +4,7 @@
 
 ---
 
-Miten OmniRoute arvioi, tallentaa ja raportoi jokaisen pyynnön kustannukset — ja miksi
+Miten 67router arvioi, tallentaa ja raportoi jokaisen pyynnön kustannukset — ja miksi
 hallintapaneelin luku on **säästöseuranta**, ei lasku.
 
 Katso myös: [Käyttöopas](./USER_GUIDE.md) · [Ominaisuuksien esittely](./FEATURES.md)
@@ -13,11 +13,11 @@ Katso myös: [Käyttöopas](./USER_GUIDE.md) · [Ominaisuuksien esittely](./FEAT
 
 ## Mitä se on (ja mitä se ei ole)
 
-OmniRoute määrittää jokaiselle täydennykselle pyyntökohtaisen USD-kustannuksen kertomalla
+67router määrittää jokaiselle täydennykselle pyyntökohtaisen USD-kustannuksen kertomalla
 tokenien määrät mallin hinnoittelulla. Näitä lukuja käytetään **Costs**-hallintapaneelissa,
 `omniroute cost`- / `omniroute usage`-CLI:ssä, CSV-/JSON-vienneissä ja API-avainkohtaisissa budjeteissa.
 
-> **Hallintapaneelin ”kustannus” on säästöseuranta, ei lasku.** OmniRoute ei koskaan veloita sinua
+> **Hallintapaneelin ”kustannus” on säästöseuranta, ei lasku.** 67router ei koskaan veloita sinua
 > — se reitittää pyyntösi palveluntarjoajille, jotka olet jo yhdistänyt (omat
 > tilauksesi, ilmaiskiintiösi ja API-avaimesi). Kokonaan ilmaisilla malleilla kertynyt
 > ”290 $:n kokonaiskustannus” tarkoittaa, että jätit maksamatta maksulliselle API:lle noin
@@ -30,7 +30,7 @@ Tämä näkökulma ilmaistaan suoraan projektin [README](../../README.md)-tiedos
 
 Koska luku on arvio:
 
-- Se riippuu OmniRouten kullekin mallille määrittämästä hinnoittelutaulukosta. Malli, jolla
+- Se riippuu 67routerin kullekin mallille määrittämästä hinnoittelutaulukosta. Malli, jolla
   ei ole hintatietoa, tuottaa kustannukseksi `0` (se näkyy selaimessa ”Legacy / Free” -rivinä).
 - Ilmaiskiintiöihin ja tilauksiin kuuluvalle liikenteelle kertyy silti _arvioitu_ kustannus
   — se on säästämäsi summa, ei maksettava summa.
@@ -48,7 +48,7 @@ etusijajärjestyksessä ([`src/lib/pricingSync.ts`](../../src/lib/pricingSync.ts
 2. **Synkronoitu ulkoinen hinnoittelu** — noudetaan LiteLLM:n julkisesta
    `model_prices_and_context_window.json`-tiedostosta, kun synkronointi on käytössä (tallennetaan erilliseen
    `pricing_synced`-nimiavaruuteen, joten se ei koskaan korvaa omia ohituksiasi).
-3. **Kiinteästi määritetyt oletusarvot** — toimitetaan OmniRouten mukana.
+3. **Kiinteästi määritetyt oletusarvot** — toimitetaan 67routerin mukana.
 
 Ulkoisen hinnoittelun synkronointi on **valinnainen** ja oletusarvoisesti pois käytöstä. Olennaiset ympäristömuuttujat
 (katso [`.env.example`](../../.env.example)):
@@ -196,7 +196,7 @@ kautta), ellei toisin mainita.
 
 ## CLI
 
-OmniRouten CLI tarjoaa kustannus-, käyttö- ja hinnoittelukomennot (rekisteröity tiedostossa
+67routerin CLI tarjoaa kustannus-, käyttö- ja hinnoittelukomennot (rekisteröity tiedostossa
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

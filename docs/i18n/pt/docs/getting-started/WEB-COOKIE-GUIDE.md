@@ -4,7 +4,7 @@
 
 ---
 
-Os fornecedores de Cookies Web permitem que o OmniRoute utilize um serviço de IA através da sua sessão existente no navegador, em vez de uma chave de API. São úteis quando já tem acesso a um serviço através do respetivo site e pretende que o OmniRoute utilize a mesma sessão autenticada.
+Os fornecedores de Cookies Web permitem que o 67router utilize um serviço de IA através da sua sessão existente no navegador, em vez de uma chave de API. São úteis quando já tem acesso a um serviço através do respetivo site e pretende que o 67router utilize a mesma sessão autenticada.
 
 Ao contrário dos fornecedores com chave de API, os fornecedores de Cookies Web autenticam-se utilizando as credenciais que o seu navegador envia para o site.
 
@@ -49,7 +49,7 @@ DevTools
 
 O cabeçalho de pedido `Cookie` contém as informações de autenticação exatas que o seu navegador utilizou com êxito.
 
-Para a maioria dos fornecedores de Cookies Web, este é o valor que deve ser colado no OmniRoute.
+Para a maioria dos fornecedores de Cookies Web, este é o valor que deve ser colado no 67router.
 
 ---
 
@@ -63,7 +63,7 @@ O processo de configuração é o mesmo para a maioria dos fornecedores de Cooki
 4. Atualize a página.
 5. Abra um pedido autenticado de chat ou conversa.
 6. Copie as credenciais de autenticação necessárias.
-7. Abra o OmniRoute.
+7. Abra o 67router.
 8. Aceda a **Providers → Add Provider**.
 9. Selecione o seu fornecedor de Cookies Web.
 10. Cole as credenciais.
@@ -92,17 +92,17 @@ Diferentes sites armazenam a autenticação de formas diferentes. Alguns requere
 
 ## NoTrack (notrack-web)
 
-O NoTrack ([notrack.ai](https://notrack.ai)) é uma plataforma gratuita de chat para consumidores, sem necessidade de registo — a sessão é criada anonimamente na primeira visita e persiste através de três cookies: `uid`, `si_usr_id` e `si_ses_id`. O OmniRoute encaminha o mesmo endpoint `/api/dispatch` através de um único ID de modelo (`notrack-c`, alias `ntw`).
+O NoTrack ([notrack.ai](https://notrack.ai)) é uma plataforma gratuita de chat para consumidores, sem necessidade de registo — a sessão é criada anonimamente na primeira visita e persiste através de três cookies: `uid`, `si_usr_id` e `si_ses_id`. O 67router encaminha o mesmo endpoint `/api/dispatch` através de um único ID de modelo (`notrack-c`, alias `ntw`).
 
 ### Passos para estabelecer ligação
 
 1. Abra [notrack.ai](https://notrack.ai) no seu navegador e aguarde que o cookie de sessão anónima seja definido.
 2. Abra **Ferramentas de Programador → Rede**, atualize a página e clique em qualquer pedido `/api`.
 3. Em **Cabeçalhos do Pedido**, copie o valor completo do cabeçalho `Cookie`.
-4. No OmniRoute, aceda a **Fornecedores → Adicionar Fornecedor → NoTrack Web (Gratuito)**.
+4. No 67router, aceda a **Fornecedores → Adicionar Fornecedor → NoTrack Web (Gratuito)**.
 5. Cole a cadeia de cookies no campo `apiKey` e clique em **Guardar**.
 
-O OmniRoute extrai `uid`, `si_usr_id` e `si_ses_id` da cadeia colada e recria um cabeçalho `Cookie` limpo apenas com esses pares — além de `nt_session` (o token `ntk_…` definido para contas com sessão iniciada), quando presente. Se algum dos três estiver em falta, a cadeia original colada é reencaminhada sem alterações, para que os operadores possam experimentar formatos alternativos.
+O 67router extrai `uid`, `si_usr_id` e `si_ses_id` da cadeia colada e recria um cabeçalho `Cookie` limpo apenas com esses pares — além de `nt_session` (o token `ntk_…` definido para contas com sessão iniciada), quando presente. Se algum dos três estiver em falta, a cadeia original colada é reencaminhada sem alterações, para que os operadores possam experimentar formatos alternativos.
 
 ### IDs de modelo
 
@@ -198,7 +198,7 @@ Aplicação
 
 ---
 
-## O cookie funciona no navegador, mas não no OmniRoute
+## O cookie funciona no navegador, mas não no 67router
 
 Alguns fornecedores incluem cookies que apenas são enviados durante pedidos autenticados.
 

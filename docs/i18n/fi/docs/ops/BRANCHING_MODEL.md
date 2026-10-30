@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute käyttää **rinnakkaisten julkaisusyklien** mallia: aktiiviselle syklille on oma `release/vX.Y.Z`-haara, `main` sisältää julkaistun linjan, ja syklin julkaisuhetkellä luodaan muuttumaton `vX.Y.Z`-tunniste. On odotettua, että committeja päätyy sekä `release/*`-haaroihin _että_ `main`-haaraan — kyse ei ole sekaannuksesta.
+67router käyttää **rinnakkaisten julkaisusyklien** mallia: aktiiviselle syklille on oma `release/vX.Y.Z`-haara, `main` sisältää julkaistun linjan, ja syklin julkaisuhetkellä luodaan muuttumaton `vX.Y.Z`-tunniste. On odotettua, että committeja päätyy sekä `release/*`-haaroihin _että_ `main`-haaraan — kyse ei ole sekaannuksesta.
 
 Ylläpitäjille tarkoitetut yksityiskohdat ovat tiedostoissa `CLAUDE.md` (ehdoton sääntö #21) ja
 [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md). Tämä sivu on julkinen,

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute objavlja artefakte npm + Docker. Ti prehodi zagotavljajo izvor (provenance), inventar (SBOM) in skeniranje CVE, vse odprtokodno (OSS), vključeno v poteke dela izdaje. **Pristop najprej svetovanje** — poročajo zdaj, v blokiranje pa preidejo po prvi uspešni izdaji.
+67router objavlja artefakte npm + Docker. Ti prehodi zagotavljajo izvor (provenance), inventar (SBOM) in skeniranje CVE, vse odprtokodno (OSS), vključeno v poteke dela izdaje. **Pristop najprej svetovanje** — poročajo zdaj, v blokiranje pa preidejo po prvi uspešni izdaji.
 
 | Prehod                  | Orodje                                         | Kje                           | Blokira?                    | Izhod                                        |
 | :---------------------- | :--------------------------------------------- | :---------------------------- | :-------------------------- | :------------------------------------------- |
@@ -45,7 +45,7 @@ V skladu z vejo "brez popravka navzgor" zgoraj omenjenega popravka CVE Variance 
 - **V verigi ne obstaja nobena popravljena izdaja.** `extract-zip@2.0.1` (objavljeno 2020) je končna izdaja paketa — ni vzdrževan. Trenutna npm-najsodobnejša različica (`0.1.29`) `@openai/codex-security` še vedno uporablja `extract-zip@2.0.1`.
 - **Nedosegljivo iz produkcije.** `promptfoo` je samo devDependency (nikoli ni naveden
   pod `dependencies`), in nobena datoteka pod `src/`, `open-sse/` ali `bin/` ne uvaža
-  paketa npm `extract-zip` — lastna pomočna funkcija `extractZip()` OmniRoute
+  paketa npm `extract-zip` — lastna pomočna funkcija `extractZip()` 67router
   (`src/lib/versionManager/binaryManager.ts:93`) uporablja izvorne `unzip`/`tar`
   in ni povezana. `@openai/codex-security` prav tako vključuje lastno zaščito pred prečkanjem simbolnih povezav, poleg povratnega klica `onEntry` paketa `extract-zip`.
 - **Ne** uporabljajte vzdevka `extract-zip` preko `package.json` `overrides` — edina izvedljiva

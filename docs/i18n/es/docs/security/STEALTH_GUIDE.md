@@ -8,11 +8,11 @@
 > **Última actualización:** 2026-09-02 — v3.8.51
 > **Audiencia:** Ingenieros que mantienen integraciones furtivas específicas de proveedores.
 
-OmniRoute se integra con proveedores cuyos extremos identifican activamente a clientes no oficiales mediante huellas digitales (TLS JA3/JA4, orden de encabezados, estructura del cuerpo JSON y tokens de integridad). Esta página documenta las superficies de ocultación que expone OmniRoute y dónde están implementadas.
+67router se integra con proveedores cuyos extremos identifican activamente a clientes no oficiales mediante huellas digitales (TLS JA3/JA4, orden de encabezados, estructura del cuerpo JSON y tokens de integridad). Esta página documenta las superficies de ocultación que expone 67router y dónde están implementadas.
 
 ## Aviso legal y ético
 
-Las funciones de ocultación existen para que OmniRoute pueda actuar como una capa de compatibilidad entre cuentas oficiales propiedad de los usuarios (Claude Code CLI, Codex, Antigravity, Cursor, etc.) y la API unificada de OmniRoute. **No** están destinadas a eludir la detección de fraude, compartir credenciales ni infringir los Términos de servicio de los proveedores. Los responsables del mantenimiento esperan que los operadores cumplan los ToS del proveedor de origen que aceptaron al crear sus cuentas.
+Las funciones de ocultación existen para que 67router pueda actuar como una capa de compatibilidad entre cuentas oficiales propiedad de los usuarios (Claude Code CLI, Codex, Antigravity, Cursor, etc.) y la API unificada de 67router. **No** están destinadas a eludir la detección de fraude, compartir credenciales ni infringir los Términos de servicio de los proveedores. Los responsables del mantenimiento esperan que los operadores cumplan los ToS del proveedor de origen que aceptaron al crear sus cuentas.
 
 ---
 
@@ -80,7 +80,7 @@ antes de afirmar que existe paridad con un navegador del proveedor de origen.
 
 ## Paquete de sigilo de Claude Code
 
-Cuando `cliCompatMode` está activado, OmniRoute transforma las solicitudes salientes de Claude para que sean indistinguibles del tráfico de `claude-cli`. Tres módulos colaboran:
+Cuando `cliCompatMode` está activado, 67router transforma las solicitudes salientes de Claude para que sean indistinguibles del tráfico de `claude-cli`. Tres módulos colaboran:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -96,7 +96,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (hash del contenido del cliente)
 
-Comprobación de integridad del lado del servidor que la CLI oficial de Claude Code calcula mediante Bun/Zig. OmniRoute la vuelve a implementar con `xxhash-wasm`:
+Comprobación de integridad del lado del servidor que la CLI oficial de Claude Code calcula mediante Bun/Zig. 67router la vuelve a implementar con `xxhash-wasm`:
 
 1. Serializar el cuerpo con el marcador de posición `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -142,7 +142,7 @@ Módulos relacionados del mismo paquete:
 
 ## Sigilo de Antigravity
 
-Las solicitudes de Antigravity conservan el texto del solicitante byte por byte. OmniRoute no inserta caracteres de ancho cero en los prompts ni cambia el nombre de las herramientas o las inyecta para imitar a un cliente IDE.
+Las solicitudes de Antigravity conservan el texto del solicitante byte por byte. 67router no inserta caracteres de ancho cero en los prompts ni cambia el nombre de las herramientas o las inyecta para imitar a un cliente IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -152,13 +152,13 @@ Elimina los marcadores del SDK de Stainless (`x-stainless-lang`, `x-stainless-pa
 
 `ANTIGRAVITY_CREDITS=always` (utilizado por `open-sse/executors/antigravity.ts`) dirige **todas** las solicitudes a través de los excesos de créditos de Antigravity AI (créditos de pago de Google), en lugar de permitir que la cuota del nivel gratuito de Google limite el uso. Esto está documentado como una funcionalidad, pero es **el motivo más común de infracción de las condiciones del servicio que observamos**: varias cuentas de Google Ultra han sido bloqueadas con `403 / "service disabled for ToS violation" / insufficient_quota` después de ejecutarse durante unas horas con `=always`.
 
-La aplicación de estas restricciones se realiza **del lado de Google** y OmniRoute no puede impedirla. El nombre de la variable de entorno y la documentación existente hacen que parezca una opción segura de activar; no lo es.
+La aplicación de estas restricciones se realiza **del lado de Google** y 67router no puede impedirla. El nombre de la variable de entorno y la documentación existente hacen que parezca una opción segura de activar; no lo es.
 
 **Por qué esto activa la detección de abuso de forma más agresiva que el uso exclusivo del nivel gratuito:**
 
 - El gasto automatizado y sostenido en una sola cuenta de Google genera señales diferentes a las del nivel gratuito, que alcanza la cuota y se detiene.
 - Los excesos de créditos no tienen un límite de velocidad, por lo que un cliente mal configurado puede consumir varios cientos de USD en minutos y parecer una operación de reventa de claves de API o tráfico de bots.
-- Que varios usuarios de OmniRoute consuman créditos excedentes en paralelo desde la misma IP externa agrava la señal.
+- Que varios usuarios de 67router consuman créditos excedentes en paralelo desde la misma IP externa agrava la señal.
 
 **Configuración recomendada:**
 
@@ -197,7 +197,7 @@ Se activa o desactiva por proveedor mediante variables de entorno (véase más a
 
 ## Proxy MITM (Antigravity, Linux/macOS/Windows)
 
-Para las CLI cuyos binarios no pueden redirigirse mediante `OPENAI_BASE_URL`, OmniRoute ejecuta un proxy local con terminación TLS. Los endpoints se encuentran en `src/app/api/cli-tools/antigravity-mitm/`.
+Para las CLI cuyos binarios no pueden redirigirse mediante `OPENAI_BASE_URL`, 67router ejecuta un proxy local con terminación TLS. Los endpoints se encuentran en `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Método | Endpoint                                | Propósito                                            |
 | ------ | --------------------------------------- | ---------------------------------------------------- |
@@ -230,7 +230,7 @@ Host objetivo interceptado: **`daily-cloudcode-pa.googleapis.com`** (servidor up
 
 Nombre de archivo del certificado: `omniroute-mitm.crt`. Coincidencia de huellas digitales mediante `getCertFingerprint()` (SHA-1 del DER).
 
-Además, `updateNssDatabases()` instala el certificado en las bases de datos NSS de cada usuario cuando `certutil` está disponible: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` y todos los perfiles de Firefox (incluidos los de snap), con el nombre descriptivo **`OmniRoute MITM Root CA`**.
+Además, `updateNssDatabases()` instala el certificado en las bases de datos NSS de cada usuario cuando `certutil` está disponible: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` y todos los perfiles de Firefox (incluidos los de snap), con el nombre descriptivo **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -278,7 +278,7 @@ La IP del proveedor se **conserva siempre**: el interruptor solo modifica la rep
 
 ## Saneamiento de encabezados entrantes
 
-OmniRoute depura los encabezados entrantes del cliente antes de reenviarlos, de modo que una solicitud procedente de Cursor no revele `User-Agent: Cursor/X.Y.Z` a un servidor ascendente de Claude. Consulte `src/shared/constants/upstreamHeaders.ts` para ver la lista de bloqueo, que se mantiene sincronizada con los esquemas de Zod y las pruebas unitarias.
+67router depura los encabezados entrantes del cliente antes de reenviarlos, de modo que una solicitud procedente de Cursor no revele `User-Agent: Cursor/X.Y.Z` a un servidor ascendente de Claude. Consulte `src/shared/constants/upstreamHeaders.ts` para ver la lista de bloqueo, que se mantiene sincronizada con los esquemas de Zod y las pruebas unitarias.
 
 ---
 

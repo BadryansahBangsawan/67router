@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Orísun:** `open-sse/services/thinkingBudget.ts`
 
-Ìwọ̀n Ìnáwó Ìrònú ń ṣàkóso bóyá OmniRoute yóò **tún àwọn pàrámítà ìrònú/ìdáláre oníbàárà kọ** nígbà tí wọ́n ń lọ sí ọ̀dọ̀ àwọn olùpèsè. Kò **tan tàbí pa** ìfúnpọ̀, ìtọ́sọ́nà, tàbí kaṣe ìbéèrè.
+Ìwọ̀n Ìnáwó Ìrònú ń ṣàkóso bóyá 67router yóò **tún àwọn pàrámítà ìrònú/ìdáláre oníbàárà kọ** nígbà tí wọ́n ń lọ sí ọ̀dọ̀ àwọn olùpèsè. Kò **tan tàbí pa** ìfúnpọ̀, ìtọ́sọ́nà, tàbí kaṣe ìbéèrè.
 
 ## Àwọn ipò
 
-| Ipò                          | Ohun tí OmniRoute ń ṣe                                                                                                              | Ìgbà tí ó yẹ kí o lò ó                                                                                                                                                                 |
+| Ipò                          | Ohun tí 67router ń ṣe                                                                                                               | Ìgbà tí ó yẹ kí o lò ó                                                                                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (àìyípadà) | Kò yí àwọn ààyè oníbàárà padà (`reasoning`, `reasoning_effort`, `thinking` ti Claude, `thinking_config` ti Gemini, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ). | **Codex / Desktop / oníbàárà èyíkéyìí tí ó yẹ kí ó ṣàkóso ìsapá + àwọn àkótán ìdáláre.** Ó pọndandan fún àwọn pánẹ́ẹ̀lì ìrònú tí a lè rí nígbà tí oníbàárà bá béèrè `reasoning.summary`. |
 | **`auto`**                   | **Yọ gbogbo** àwọn ààyè ìrònú/ìdáláre kúrò nínú request body kí ó tó lọ sí upstream.                                                | Nígbà tí o mọ̀ọ́mọ̀ fẹ́ kí **olùpèsè** dá àwọn àìyípadà tirẹ̀ sílẹ̀, tí o sì **kò** nílò ìrònú tí oníbàárà ń ṣàkóso. **Kì í ṣe** “fi ìrònú hàn láìfọwọ́yí”.                                   |
@@ -38,7 +38,7 @@ Tí oníbàárà kan (fún àpẹẹrẹ, Codex Desktop) bá fi `reasoning: { ef
 | **Ìtọ́sọ́nà àkójọpọ̀ / àwọn ìpadàsẹ́yìn**         | Ó jẹ́ ohun ọ̀tọ̀. Kò ní ipa lórí rẹ̀.                                                                                                        |
 | **Àwọn ààlà token API-key / àwọn ìwọ̀n ìnáwó** | Ó jẹ́ ohun ọ̀tọ̀. Kò ní ipa lórí rẹ̀.                                                                                                        |
 | **Kaṣe àtúnsì ìdáláre**                       | Àtúnfi-sí-lẹ̀ alápọ̀-ìpele fún àwọn olùpèsè tó muna (DeepSeek, Kimi, Qwen-thinking, …). Kò jẹ́ ohun kan náà pẹ̀lú “fi ìrònú hàn” ti Desktop. |
-| **Ṣíṣí ìpàrokò `encrypted_content`**          | **Kò ṣeé ṣe.** Àwọn blob ìdáláre àdáni ti OpenAI/Codex kò ṣeé ṣí. OmniRoute kì í ṣí ìpàrokò wọn láéláé (#7095 / #7176 / #7304).          |
+| **Ṣíṣí ìpàrokò `encrypted_content`**          | **Kò ṣeé ṣe.** Àwọn blob ìdáláre àdáni ti OpenAI/Codex kò ṣeé ṣí. 67router kì í ṣí ìpàrokò wọn láéláé (#7095 / #7176 / #7304).           |
 
 ## Ìrònú tí ó hàn (àwọn oníbàárà Codex / Responses)
 
@@ -51,7 +51,7 @@ Kí oníbàárà kan lè fi ọ̀rọ̀ ìrònú hàn, o nílò **gbogbo** àw�
 Tí ohun tí o bá rí bá jẹ́ “ìrònú àdáni tí a ti parọ́ mọ́” nìkan, bóyá:
 
 - ìpo náà jẹ́ **`auto`** (a yọ ìbéèrè oníbàárà náà kúrò), tàbí
-- upstream dá `encrypted_content` padà láìsí ọ̀rọ̀ àkópọ̀ (ìdíwọ̀n olùpèsè; OmniRoute lè fi ọ̀rọ̀ amúsípò hàn nìkan, kì í ṣe ọ̀rọ̀ tí kò parọ́ mọ́).
+- upstream dá `encrypted_content` padà láìsí ọ̀rọ̀ àkópọ̀ (ìdíwọ̀n olùpèsè; 67router lè fi ọ̀rọ̀ amúsípò hàn nìkan, kì í ṣe ọ̀rọ̀ tí kò parọ́ mọ́).
 
 ## Àwọn àpẹẹrẹ API
 
@@ -71,7 +71,7 @@ curl -sS -X PUT https://localhost:20128/api/settings/thinking-budget \
 
 ### Ìtọ́jú iye / ìtunbẹ̀rẹ̀
 
-A tọ́jú iye náà sábẹ́ kọ́kọ́rọ́ ààtò `thinkingBudget`, a sì ń gbé e wọlé nígbà ìbẹ̀rẹ̀ iṣẹ́ (`hydrateThinkingBudgetConfig`). Lẹ́yìn yíyí i padà nípasẹ̀ DB tàbí àwọn ọ̀nà mìíràn tí kì í ṣe API, **tun iṣẹ́ OmniRoute bẹ̀rẹ̀** kí singleton inú ìrántí lè bá disiki mu.
+A tọ́jú iye náà sábẹ́ kọ́kọ́rọ́ ààtò `thinkingBudget`, a sì ń gbé e wọlé nígbà ìbẹ̀rẹ̀ iṣẹ́ (`hydrateThinkingBudgetConfig`). Lẹ́yìn yíyí i padà nípasẹ̀ DB tàbí àwọn ọ̀nà mìíràn tí kì í ṣe API, **tun iṣẹ́ 67router bẹ̀rẹ̀** kí singleton inú ìrántí lè bá disiki mu.
 
 ## Àkójọ ìṣàyẹ̀wò olùdarí
 

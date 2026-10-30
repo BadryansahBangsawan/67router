@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge הוא פרוקסי ה-MITM (אדם בתווך) של OmniRoute, שמיירט תעבורת HTTPS מסוכני AI בסביבות פיתוח משולבות ומנתב אותה מחדש דרך מנוע הניתוב המאוחד של OmniRoute. הוא תומך ב-**10 סוכני IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ו-Trae (בבדיקה) — ובכך הופך את OmniRoute לפרוקסי ה-MITM בעל הכיסוי הרחב ביותר בשוק עבור עוזרי תכנות מבוססי AI.
+AgentBridge הוא פרוקסי ה-MITM (אדם בתווך) של 67router, שמיירט תעבורת HTTPS מסוכני AI בסביבות פיתוח משולבות ומנתב אותה מחדש דרך מנוע הניתוב המאוחד של 67router. הוא תומך ב-**10 סוכני IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ו-Trae (בבדיקה) — ובכך הופך את 67router לפרוקסי ה-MITM בעל הכיסוי הרחב ביותר בשוק עבור עוזרי תכנות מבוססי AI.
 
 **מיקום בלוח הבקרה:** `/dashboard/tools/agent-bridge`
 **קבוצה בסרגל הצד:** כלים (אחרי סוכני ענן)
@@ -16,34 +16,34 @@ AgentBridge הוא פרוקסי ה-MITM (אדם בתווך) של OmniRoute, שמ
 
 ### מהו AgentBridge?
 
-כאשר סוכן IDE (למשל GitHub Copilot, Cursor, Claude Code) מבצע קריאת API, הוא מתחבר ישירות לספק ה-AI שב-upstream (OpenAI, Anthropic וכדומה). AgentBridge מיירט את החיבור הזה באופן שקוף ברמת ה-TLS — מבלי לדרוש שום שינוי בתצורת הסוכן — ומשכתב את הבקשה דרך OmniRoute.
+כאשר סוכן IDE (למשל GitHub Copilot, Cursor, Claude Code) מבצע קריאת API, הוא מתחבר ישירות לספק ה-AI שב-upstream (OpenAI, Anthropic וכדומה). AgentBridge מיירט את החיבור הזה באופן שקוף ברמת ה-TLS — מבלי לדרוש שום שינוי בתצורת הסוכן — ומשכתב את הבקשה דרך 67router.
 
 משמעות הדבר היא שאתם יכולים:
 
-- **לנתב מחדש כל סוכן לכל ספק**: Copilot מדבר מול OpenAI? הפנו אותו ל-Anthropic Claude, ל-Gemini, או לכל אחד מ-375 הספקים של OmniRoute.
+- **לנתב מחדש כל סוכן לכל ספק**: Copilot מדבר מול OpenAI? הפנו אותו ל-Anthropic Claude, ל-Gemini, או לכל אחד מ-375 הספקים של 67router.
 - **להחיל מיפויי מודלים**: `gemini-3-flash` → `claude-sonnet-4.7` באופן שקוף ברמת ה-handler.
 - **לצפות בכל תעבורת הסוכנים**: כל בקשה מיורטת מתפרסמת אל [סוקר התעבורה (Traffic Inspector)](./TRAFFIC_INSPECTOR.md).
-- **להחיל את השרידות של OmniRoute**: ניתוב combo, מנגנוני circuit breaker, נתיבי fallback ומעקב עלויות פועלים גם עבור תעבורת סוכני IDE.
+- **להחיל את השרידות של 67router**: ניתוב combo, מנגנוני circuit breaker, נתיבי fallback ומעקב עלויות פועלים גם עבור תעבורת סוכני IDE.
 
 ### מיצוב מול השוק
 
-| תכונה                | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity          |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot       |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)           |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex         |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE           |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries       |    —    |    ✓     |        —        |             ✓             |
-| Claude Code          |    —    |    —     |        ✓        |             ✓             |
-| Open Code            |    —    |    —     |        ✓        |             ✓             |
-| Trae                 |    —    |    —     |        —        |         🔍 בבדיקה         |
-| ממשק ניהול           |    ✓    |    ✗     |        ✗        |             ✓             |
-| סוקר תעבורה          |    ✗    |    ✗     |        ✓        |             ✓             |
-| ניתוב OmniRoute      |    ✗    |    ✗     |        ✗        |             ✓             |
-| ממשק מיפוי מודלים    |    ✗    |    ✗     |        ✗        |             ✓             |
-| רשימת עקיפה          |    ✗    |    ✗     |        ✓        |             ✓             |
-| אישור CA של upstream |    ✗    |    ✗     |        ✓        |             ✓             |
+| תכונה                | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity          |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot       |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)           |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex         |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE           |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries       |    —    |    ✓     |        —        |            ✓             |
+| Claude Code          |    —    |    —     |        ✓        |            ✓             |
+| Open Code            |    —    |    —     |        ✓        |            ✓             |
+| Trae                 |    —    |    —     |        —        |        🔍 בבדיקה         |
+| ממשק ניהול           |    ✓    |    ✗     |        ✗        |            ✓             |
+| סוקר תעבורה          |    ✗    |    ✗     |        ✓        |            ✓             |
+| ניתוב 67router       |    ✗    |    ✗     |        ✗        |            ✓             |
+| ממשק מיפוי מודלים    |    ✗    |    ✗     |        ✗        |            ✓             |
+| רשימת עקיפה          |    ✗    |    ✗     |        ✓        |            ✓             |
+| אישור CA של upstream |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (יציאה 443, תהליך צאצא מסוג CJS)
     │  פותר את יעד הבקשה לפי SNI של כותרת Host
     │  יוצר אישור TLS ייעודי לכל SNI, חתום בידי רשות האישורים של AgentBridge
     ├── התאמה לרשימת העקיפה? → העברת TCP ישירה (ללא פענוח)
-    ├── התאמה ליעד? → fetch → נתב OmniRoute (יציאה 20128)
+    ├── התאמה ליעד? → fetch → נתב 67router (יציאה 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() על גוף הבקשה/הכותרות
     │               ├── TrafficBuffer.push() — מפרסם אל Traffic Inspector
@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (צרור המפתחות):**
@@ -261,10 +261,10 @@ certutil -addstore -f Root $env:USERPROFILE\.omniroute\mitm\ca.crt
 
 השתמשו בטבלת מיפוי המודלים שבכל כרטיס סוכן כדי להגדיר מיפויים ממקור ← ליעד:
 
-| מודל מקור (מקורי לסוכן) | מודל יעד (OmniRoute) |
-| ----------------------- | -------------------- |
-| `gpt-4o`                | `claude-sonnet-4.7`  |
-| `*` (תו כללי)           | `claude-haiku-4.7`   |
+| מודל מקור (מקורי לסוכן) | מודל יעד (67router) |
+| ----------------------- | ------------------- |
+| `gpt-4o`                | `claude-sonnet-4.7` |
+| `*` (תו כללי)           | `claude-haiku-4.7`  |
 
 התו הכללי `*` ממפה כל מודל שאינו מזוהה ליעד שצוין. המיפויים נשמרים בטבלה `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ certutil -addstore -f Root $env:USERPROFILE\.omniroute\mitm\ca.crt
 
 ### 3.5 הודעת סיכון
 
-AgentBridge מיירט פרטי הזדהות (אסימוני OAuth, מפתחות API) שבהם סביבת הפיתוח המשולבת משתמשת כדי לבצע אימות מול ספקי המקור. פרטים אלה **ממוסכים לפני הרישום ביומן** (ראו §2.7), אך גלויים לשכבת ה-MITM של OmniRoute. בהפעלה הראשונה של כל סוכן מוצג חלון הודעת סיכון שניתן לסגור.
+AgentBridge מיירט פרטי הזדהות (אסימוני OAuth, מפתחות API) שבהם סביבת הפיתוח המשולבת משתמשת כדי לבצע אימות מול ספקי המקור. פרטים אלה **ממוסכים לפני הרישום ביומן** (ראו §2.7), אך גלויים לשכבת ה-MITM של 67router. בהפעלה הראשונה של כל סוכן מוצג חלון הודעת סיכון שניתן לסגור.
 
 ### 3.6 תחזוקה ואבחון
 
@@ -397,7 +397,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### רשימת עקיפה עבור מארחים רגישים
 
-רשימת העקיפה מבטיחה שמוסדות פיננסיים, ספקי OAuth/SSO ומארחים רגישים אחרים **לעולם לא יפוענחו**. תעבורת ה-TLS שלהם עוברת כמנהרת TCP שקופה — OmniRoute לעולם אינו רואה את הטקסט הגלוי.
+רשימת העקיפה מבטיחה שמוסדות פיננסיים, ספקי OAuth/SSO ומארחים רגישים אחרים **לעולם לא יפוענחו**. תעבורת ה-TLS שלהם עוברת כמנהרת TCP שקופה — 67router לעולם אינו רואה את הטקסט הגלוי.
 
 דפוסי העקיפה המוגדרים כברירת מחדל כוללים:
 
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # סיום כפוי (יש להשתמש בזהירות)
 
 אם ה-IDE מציג שגיאות TLS לאחר הפעלת AgentBridge:
 
-1. ודאו שהאישור הותקן: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) או `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ודאו שהאישור הותקן: `security find-certificate -c "67router AgentBridge"` (macOS) או `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. יישומים מסוימים מנהלים מאגר אמון משלהם (Firefox, Chrome ב-Linux). הפעילו שוב את "Trust Cert" ובדקו את מאגר האישורים הייעודי ל-NSS/Firefox.
 3. הפעילו מחדש את ה-IDE לאחר מתן האמון — חיבורי TLS פעילים משתמשים במצב האמון הישן.
 
@@ -499,7 +499,7 @@ ipconfig /flushdns
 אם AgentBridge מיירט אך כל הבקשות נכשלות:
 
 1. ודאו שלפחות ספק אחד מחובר ב-`/dashboard/providers`
-2. בדקו את יומני שרת OmniRoute:‏ `APP_LOG_LEVEL=debug` ב-`.env`
+2. בדקו את יומני שרת 67router:‏ `APP_LOG_LEVEL=debug` ב-`.env`
 3. ודאו ש-`OMNIROUTE_BASE_URL` מצביע על נקודת הקצה הנכונה של הנתב (ברירת מחדל: `http://127.0.0.1:20128`)
 
 ---

@@ -7,7 +7,7 @@
 > **Nguồn chính xác:** `src/lib/cloudAgent/` và `src/app/api/v1/agents/tasks/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40 (làm mới frontmatter; 4 agent, bao gồm cursor-cloud)
 
-OmniRoute điều phối các agent lập trình được lưu trữ trên đám mây của bên thứ ba (Codex Cloud, Cursor,
+67router điều phối các agent lập trình được lưu trữ trên đám mây của bên thứ ba (Codex Cloud, Cursor,
 Devin, Jules) dưới dạng các tác vụ chạy dài hạn. Mỗi agent được đóng gói phía sau một giao diện thống nhất để
 client có thể gửi prompt + URL kho mã nguồn và nhận kết quả mà không cần xử lý
 các API riêng của từng nhà cung cấp.

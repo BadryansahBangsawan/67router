@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Täielik juhend teenusepakkujate konfigureerimiseks, kombinatsioonide loomiseks, CLI-tööriistade integreerimiseks ja OmniRoute'i juurutamiseks.
+Täielik juhend teenusepakkujate konfigureerimiseks, kombinatsioonide loomiseks, CLI-tööriistade integreerimiseks ja 67router'i juurutamiseks.
 
 ---
 
@@ -137,12 +137,12 @@ Mudelid:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Profinõuanne:** Kasutage keerukate ülesannete jaoks Opust ja kiiruse jaoks Sonnetit. OmniRoute jälgib iga mudeli kvooti!
+**Profinõuanne:** Kasutage keerukate ülesannete jaoks Opust ja kiiruse jaoks Sonnetit. 67router jälgib iga mudeli kvooti!
 
-Kas OmniRoute'i hostis pole brauserit? Käivitage `claude setup-token` mis tahes kohas, kus Claude Code'i on sisse logitud, ja kleepige üheaastane token vahekaardile **Setup Token**. Vaadake jaotist [Claude Code seadistustokeniga](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Kas 67router'i hostis pole brauserit? Käivitage `claude setup-token` mis tahes kohas, kus Claude Code'i on sisse logitud, ja kleepige üheaastane token vahekaardile **Setup Token**. Vaadake jaotist [Claude Code seadistustokeniga](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
 Claude'i ja Claude Code'iga ühilduvad marsruudid säilitavad Opuse ja Sonneti mudelite puhul mõtlemispingutuse taseme `max`.
-Haiku mudelid ei aktsepteeri pingutustaset `max`, seega alandab OmniRoute selle
+Haiku mudelid ei aktsepteeri pingutustaset `max`, seega alandab 67router selle
 päringu enne ülesvoolu saatmist kõrgele mõtlemiseelarve tasemele.
 
 #### OpenAI Codex (Plus/Pro)
@@ -264,7 +264,7 @@ Cost: praegu näidatud kui $0; tingimused ja saadavus võivad muutuda
 
 ### Cursor IDE
 
-**Cursori kasutamine OmniRoute kliendina** (suunake Cursori vestlus läbi OmniRoute):
+**Cursori kasutamine 67router kliendina** (suunake Cursori vestlus läbi 67router):
 
 ```
 Settings → Models → Advanced:
@@ -273,7 +273,7 @@ Settings → Models → Advanced:
   Model: cc/claude-opus-4-7
 ```
 
-**OmniRoute kasutamine Cursori teenusepakkujana** (OmniRoute kutsub Cursorit ülesvoolu): soovitatav on
+**67router kasutamine Cursori teenusepakkujana** (67router kutsub Cursorit ülesvoolu): soovitatav on
 **Dashboard → Providers → Cursor → Login with Cursor**. Dockeri puhul vaata
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -360,7 +360,7 @@ CLI laadib automaatselt faili `.env` asukohast `~/.omniroute/.env` või `./.env`
 
 ### Salveraadi (tray) režiim
 
-Käivita OmniRoute süsteemi salveraadis:
+Käivita 67router süsteemi salveraadis:
 
 ```bash
 omniroute serve --tray
@@ -377,7 +377,7 @@ Kasuta salveraadi menüüd järgmiste toimingute jaoks:
 - Ava juhtpaneel.
 - Ava `/dashboard/logs`.
 - Muuda automaatkäivitust.
-- Peata OmniRoute.
+- Peata 67router.
 
 Ei tohi kombineerida `--tray` võtit järgmistega:
 
@@ -403,14 +403,14 @@ omniroute autostart disable
 
 ### Eemaldamine
 
-Kui OmniRoute't ei ole enam vaja, pakume kahte kiiret skripti puhtaks eemaldamiseks:
+Kui 67router't ei ole enam vaja, pakume kahte kiiret skripti puhtaks eemaldamiseks:
 
 | Käsk                     | Tegevus                                                                                         |
 | ------------------------ | ----------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Eemaldab süsteemirakenduse, kuid **säilitab teie andmebaasi ja seaded** kaustas `~/.omniroute`. |
 | `npm run uninstall:full` | Eemaldab rakenduse JA **kustutab jäädavalt kõik seaded, võtmed ja andmebaasid**.                |
 
-> Märkus: nende käskude käivitamiseks liikuge OmniRoute projekti kausta (kui kloonisite selle) ja käivitage need seal. Kui rakendus on paigaldatud globaalselt, võite lihtsalt käivitada `npm uninstall -g omniroute`.
+> Märkus: nende käskude käivitamiseks liikuge 67router projekti kausta (kui kloonisite selle) ja käivitage need seal. Kui rakendus on paigaldatud globaalselt, võite lihtsalt käivitada `npm uninstall -g omniroute`.
 
 ### VPS-i juurutamine
 
@@ -482,7 +482,7 @@ Hostiga integreeritud režiimi kohta CLI binaaridega vaata Dockeri jaotist peami
 
 ### Void Linux (xbps-src)
 
-Void Linuxi kasutajad saavad paketeerida ja paigaldada OmniRoute'i loomulikul viisil, kasutades `xbps-src` risttõlkimise raamistikku. See automatiseerib Node.js iseseisva (standalone) ehituse koos vajalike `better-sqlite3` natiivsete seostustega (bindings).
+Void Linuxi kasutajad saavad paketeerida ja paigaldada 67router'i loomulikul viisil, kasutades `xbps-src` risttõlkimise raamistikku. See automatiseerib Node.js iseseisva (standalone) ehituse koos vajalike `better-sqlite3` natiivsete seostustega (bindings).
 
 <details>
 <summary><b>Vaata xbps-src malli</b></summary>
@@ -662,7 +662,7 @@ Täieliku keskkonnamuutujate loendi leiate [README](../README.md) failist.
 
 **Muud ühilduvad teenusepakkujad** (valik): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (kaudu `aws-bedrock`), `azure-ai`, `openrouter` (edastuskataloog / passthrough), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Igaüks neist haldab oma mudelite loendit failis `providerRegistry.ts` ja see saab olla automaatselt sünkroonitud, kui teenusepakkuja pakub `/models` lõpp-punkti.
 
-**Märkus mudeli ID-de kohta:** OmniRoute kasutab teenusepakkuja pärismudelite ID-sid (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Mõned ID-d sisaldavad punktidega versiooninumbreid, kuna just sellisel kujul ootab neid allika API. Kui mõnda mudelit ülal loetletud ei ole, käivitage käsk `omniroute models --search <term>` või pöörduge `GET /api/models/catalog` poole, et saadavust kontrollida.
+**Märkus mudeli ID-de kohta:** 67router kasutab teenusepakkuja pärismudelite ID-sid (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Mõned ID-d sisaldavad punktidega versiooninumbreid, kuna just sellisel kujul ootab neid allika API. Kui mõnda mudelit ülal loetletud ei ole, käivitage käsk `omniroute models --search <term>` või pöörduge `GET /api/models/catalog` poole, et saadavust kontrollida.
 
 </details>
 
@@ -728,9 +728,9 @@ veaga, mis nimetab sisseehitatud pakkujat või selle identimisteavet, kontrollig
 reserveeritud: enne selle reegli kehtestamist salvestatud sõlmed on endiselt talletatud, kuid nende prefiks suunab
 sisseehitatud pakkujale. Muutke sõlme ja määrake sellele uus prefiks.
 
-### OmniRoute'i partnersõlmede aheldamine
+### 67router'i partnersõlmede aheldamine
 
-Teise OmniRoute'i lüüsi saab lisada **kohandatud OpenAI-ga ühilduva** pakkujana. Kasutage
+Teise 67router'i lüüsi saab lisada **kohandatud OpenAI-ga ühilduva** pakkujana. Kasutage
 partnersõlme `/v1` baas-URL-i ja spetsiaalset, minimaalsete õigustega API-võtit, mille see partnersõlm on väljastanud.
 
 Vastastikuste või mitme hüppega ahelate puhul lubage igas lüüsis valikuline tsüklikaitse:
@@ -756,7 +756,7 @@ eelarve tagasi vastusega HTTP `508 Loop Detected`; tavalised ülesvoolu pakkujad
 Partnersõlmede aheldamine ei ole andmebaasi replikatsioon ega hosti tõrkesiire. Iga lüüs säilitab sõltumatud
 SQLite'i olekud, vahemälud, kiirusepiirangute loendurid ja seansid. Kasutage aktiivse/passiivse või aktiivse/aktiivse
 käideldavuse jaoks tervisekontrolliga pöördpuhverserverit või kliendipoolset tõrkesiiret ning ärge kunagi haakige üht SQLite'i andmebaasi
-mitmesse töötavasse OmniRoute'i eksemplari.
+mitmesse töötavasse 67router'i eksemplari.
 
 ### Spetsiaalsed pakkujamarsruudid
 
@@ -807,7 +807,7 @@ Tagastab pakkujate järgi rühmitatud mudelid koos tüüpidega (`chat`, `embeddi
 - Saadaval **Töölaud → Lõpp-punktid** all Dockeri ja muude isemajutatud juurutuste jaoks
 - Loob ajutise `https://*.trycloudflare.com` URL-i, mis edastab päringud teie praegusele OpenAI-ga ühilduvale `/v1` lõpp-punktile
 - Esmakordsel lubamisel installitakse `cloudflared` ainult vajaduse korral; hilisematel taaskäivitustel kasutatakse sama hallatud binaarfaili
-- Kiirtunneleid ei taastata pärast OmniRoute’i või konteineri taaskäivitamist automaatselt; vajaduse korral lubage need töölaudalt uuesti
+- Kiirtunneleid ei taastata pärast 67router’i või konteineri taaskäivitamist automaatselt; vajaduse korral lubage need töölaudalt uuesti
 - Tunneli URL-id on ajutised ja muutuvad iga kord, kui tunneli peatate või käivitate
 - Hallatud kiirtunnelid kasutavad vaikimisi HTTP/2 transporti, et vältida piiratud ressurssidega konteinerites mürarikkaid QUIC-i UDP-puhvri hoiatusi
 - Hallatud transpordivaliku alistamiseks määrake `CLOUDFLARED_PROTOCOL=quic` või `auto`
@@ -824,7 +824,7 @@ Tagastab pakkujate järgi rühmitatud mudelid koos tüüpidega (`chat`, `embeddi
 
 ### Tõlkija katsekeskkond
 
-Juurdepääs: **Töölaud → Tõlkija**. Siluge ja visualiseerige, kuidas OmniRoute tõlgib API-päringuid teenusepakkujate vahel.
+Juurdepääs: **Töölaud → Tõlkija**. Siluge ja visualiseerige, kuidas 67router tõlgib API-päringuid teenusepakkujate vahel.
 
 | Režiim               | Eesmärk                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------- |
@@ -877,7 +877,7 @@ Välise seansi sidususe jaoks (näiteks Claude Code’i/Codexi agendid pöördpu
 X-Session-Id: your-session-key
 ```
 
-OmniRoute aktsepteerib ka `x_session_id` ja tagastab tegeliku seansivõtme päises `X-OmniRoute-Session-Id`.
+67router aktsepteerib ka `x_session_id` ja tagastab tegeliku seansivõtme päises `X-OmniRoute-Session-Id`.
 
 Kui kasutate Nginxi ja saadate alakriipsuga päiseid, lubage:
 
@@ -911,7 +911,7 @@ Ahel: production-fallback
 
 ### Levinud teenusepakkujate kombinatsioonid ja marsruutimismustrid
 
-Allpool on näidismustrid mitme teenusepakkuja kombineerimiseks ja nende vahel marsruutimiseks OmniRoute’is:
+Allpool on näidismustrid mitme teenusepakkuja kombineerimiseks ja nende vahel marsruutimiseks 67router’is:
 
 #### 1. Programmeerimisagendi kombinatsioon: tipptasemel arutlusvõime koos kulu-/kiiruspõhise varuvariandiga
 
@@ -972,7 +972,7 @@ Spetsiaalsete nägemismudelite ühendamine kiire tekstiloomega töövoogude jaok
 
 Seadistage jaotises **Dashboard → Settings → Resilience**.
 
-OmniRoute rakendab teenusepakkuja tasemel tõrkekindlust viie komponendi abil:
+67router rakendab teenusepakkuja tasemel tõrkekindlust viie komponendi abil:
 
 1. **Päringujärjekord ja tempokontroll** — süsteemitasemel päringukujundus:
    - **Päringuid minutis (RPM)** — maksimaalne päringute arv minutis konto kohta
@@ -997,7 +997,7 @@ OmniRoute rakendab teenusepakkuja tasemel tõrkekindlust viie komponendi abil:
 
    Teenusepakkuja kaitselüliti käitusaegset olekut kuvatakse ainult jaotises **Dashboard → Health**.
 
-4. **Ooteaja lõppemise ootamine** — kui iga võimalik ühendus on juba ooteolekus, saab OmniRoute oodata kõige varem lõppeva ooteaja lõpuni ja korrata automaatselt sama kliendipäringut.
+4. **Ooteaja lõppemise ootamine** — kui iga võimalik ühendus on juba ooteolekus, saab 67router oodata kõige varem lõppeva ooteaja lõpuni ja korrata automaatselt sama kliendipäringut.
 
 5. **Kiiruspiirangu automaatne tuvastamine** — kui ülesvoolu teenusepakkujad tagastavad selgesõnalised ooteaknad, alistavad need vihjed sätte lubamise korral kohaliku ühenduse ooteaja.
 
@@ -1031,7 +1031,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Kasutusjuhud:**
 
-- OmniRoute'i migreerimine masinate vahel
+- 67router'i migreerimine masinate vahel
 - Väliste varukoopiate loomine avariitaasteks
 - Seadistuste jagamine meeskonnaliikmete vahel (eksportige kõik → jagage arhiivi)
 
@@ -1083,7 +1083,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Heli transkribeerimine
 
-OmniRoute toetab heli transkribeerimist OpenAI-ga ühilduva lõpp-punkti kaudu:
+67router toetab heli transkribeerimist OpenAI-ga ühilduva lõpp-punkti kaudu:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1159,7 +1159,7 @@ Keelake **arutlustokenite puhver** välja, kui ülesvoolu teenusepakkujad nõuav
 `max_tokens` / `maxOutputTokens` piirangute järgimist. Kui see on lubatud, lisab kombineeritud marsruutimine arutlusmudelitele
 varu ainult teadaoleva väljundipiiranguga mudelite puhul ning jätab kliendi tokenipiirangu muutmata, kui
 turvaline puhverdatud väärtus ületaks selle piirangu. Kui kliendi piirang juba ületab teadaolevat piiri,
-vähendab OmniRoute selle enne ülesvoolupäringu saatmist vastava piirini.
+vähendab 67router selle enne ülesvoolupäringu saatmist vastava piirini.
 
 ---
 
@@ -1182,7 +1182,7 @@ Avage see menüüst **Juhtpaneel → Seisund**. Reaalajas süsteemi seisundi ül
 
 ## 🤖 Automaatne suunamine (Zero-config)
 
-OmniRoute tuleb kaasa **skooripõhise automaatse ruuteriga**, mis valib igale päringule sobivaima mudeli kõigi ühendatud pakkujate seast — ühtegi kombinatsiooni ei tule käsitsi hallata. Lihtsalt saada päring ühega `auto/*` eesliitedest ja OmniRoute koostab virtuaalse kombo käigupealt, hinnates kandidaate latentsuse, hinna, õnnestumismäära, konteksti sobivuse, mudeli sobivuse ülesandega, hiljutiste tõrgete, kvoodi ja lühisekaitse (circuit-breaker) oleku alusel.
+67router tuleb kaasa **skooripõhise automaatse ruuteriga**, mis valib igale päringule sobivaima mudeli kõigi ühendatud pakkujate seast — ühtegi kombinatsiooni ei tule käsitsi hallata. Lihtsalt saada päring ühega `auto/*` eesliitedest ja 67router koostab virtuaalse kombo käigupealt, hinnates kandidaate latentsuse, hinna, õnnestumismäära, konteksti sobivuse, mudeli sobivuse ülesandega, hiljutiste tõrgete, kvoodi ja lühisekaitse (circuit-breaker) oleku alusel.
 
 | Eesliide       | Optimeerib                                                                                                |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
@@ -1213,7 +1213,7 @@ Automaatne ruuter on täielikult kirjeldatud dokumendis [AUTO-COMBO.md](../routi
 
 ## 🔌 MCP ja A2A integratsioon
 
-OmniRoute on nii **MCP server** (Model Context Protocol) kui ka **A2A server** (Agent-to-Agent JSON-RPC 2.0). Iga MCP-ühilduv IDE või agendipõhine host saab kutsuda OmniRoute'i tööriistu otse — täiendavat ümbrist (wrapper) ei ole vaja.
+67router on nii **MCP server** (Model Context Protocol) kui ka **A2A server** (Agent-to-Agent JSON-RPC 2.0). Iga MCP-ühilduv IDE või agendipõhine host saab kutsuda 67router'i tööriistu otse — täiendavat ümbrist (wrapper) ei ole vaja.
 
 ### MCP transpordid
 
@@ -1248,7 +1248,7 @@ MCP defineerib praegu 32 nimelist ulatust (scope). Igat Bearer-võtit saab piira
 
 ## 🧠 Oskuste süsteem
 
-OmniRoute pakub laiendatavat **oskuste raamistikku** (`src/lib/skills/`), mis võimaldab agentidel ja A2A lõpp-punktil käivitada valdkonnaspetsiifilisi rutiine (nt `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router pakub laiendatavat **oskuste raamistikku** (`src/lib/skills/`), mis võimaldab agentidel ja A2A lõpp-punktil käivitada valdkonnaspetsiifilisi rutiine (nt `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Turuplatsi kasutajaliides** — Sirvi ja installi oskusi jaotisest **Dashboard → Skills**
 - **Võtmepõhised õigusulatused** — Piira, millised API-võtmed saavad milliseid oskusi käivitada
@@ -1260,7 +1260,7 @@ Täielik viide: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Mälusüsteem
 
-OmniRoute säilitab **pikaajalist vestlusmälu** hübriidotsingu abil:
+67router säilitab **pikaajalist vestlusmälu** hübriidotsingu abil:
 
 - **SQLite FTS5** märksõnaotsingu jaoks varasemate vestlusvoorude seas
 - **Qdrant vektorihoidla** (valikuline) semantilise meenutuse jaoks
@@ -1273,7 +1273,7 @@ Halda mälukirjeid jaotises **Dashboard → Memory** (otsi, muuda, ekspordi, kus
 
 ## 🔔 Veebihaagid
 
-Telli OmniRoute'i sündmused reaalajas jälgimiseks ja automatiseerimiseks.
+Telli 67router'i sündmused reaalajas jälgimiseks ja automatiseerimiseks.
 
 - Loo veebihaak jaotises **Dashboard → Webhooks**, määrates sihtaadressi URL-i ja HMAC allkirjastamise saladuse
 - Saadaolevad sündmused: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1286,11 +1286,11 @@ Täielik skeem [WEBHOOKS.md](../frameworks/WEBHOOKS.md)-s.
 
 ## ☁️ Pilveagendid
 
-OmniRoute integreerub pilvekoodimisagentidega (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), mis võimaldab lähetada kaugtoimivaid ülesandeid samast juhtpaneelist, mis haldab teie kohalikku suunamist.
+67router integreerub pilvekoodimisagentidega (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), mis võimaldab lähetada kaugtoimivaid ülesandeid samast juhtpaneelist, mis haldab teie kohalikku suunamist.
 
 - Loo ülesandeid jaotises **Dashboard → Cloud Agents** või kasutades `POST /api/v1/agents/tasks`
 - Jälgi olekut, logisid ja tulemfaile igal ülesandel
-- Igal teenusepakkujal on oma API-võti — mandaadid ei lahku kunagi OmniRoute'i eksemplarist
+- Igal teenusepakkujal on oma API-võti — mandaadid ei lahku kunagi 67router'i eksemplarist
 
 Täielik viide: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
@@ -1298,7 +1298,7 @@ Täielik viide: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ## 🛠️ Programmiline haldus
 
-Sa saad hallata kõiki OmniRoute'i ressursse (teenusepakkujad, kombod, võtmed, seaded) HTTP kaudu, kasutades **Bearer-võtit õigusulatusega `manage`**.
+Sa saad hallata kõiki 67router'i ressursse (teenusepakkujad, kombod, võtmed, seaded) HTTP kaudu, kasutades **Bearer-võtit õigusulatusega `manage`**.
 
 Genereeri võti jaotises **Dashboard → API Keys → New Key → Scope: manage**, ja seejärel:
 
@@ -1331,7 +1331,7 @@ Vaata [API_REFERENCE.md](../reference/API_REFERENCE.md), kus on toodud täielik 
 
 ## 💻 Sisemine CLI
 
-OmniRoute pakub sisemist CLI-d (`omniroute …`) seadistamiseks, diagnostikaks ja käitusaegseks juhtimiseks. See on **eraldiseisev töölaual olevast "CLI Tools" lehest**, mis konfigureerib kolmandate osapoolte CLI-sid (Claude Code, Cursor, Codex, Cline, …), et need saaksid OmniRoute'iga suhelda.
+67router pakub sisemist CLI-d (`omniroute …`) seadistamiseks, diagnostikaks ja käitusaegseks juhtimiseks. See on **eraldiseisev töölaual olevast "CLI Tools" lehest**, mis konfigureerib kolmandate osapoolte CLI-sid (Claude Code, Cursor, Codex, Cline, …), et need saaksid 67router'iga suhelda.
 
 ```bash
 omniroute setup                    # Interaktiivne juhendaja (parool, teenusepakkujad, kombinatsioonid)
@@ -1362,7 +1362,7 @@ Näpunäide: kombineeri `omniroute doctor --json` oma seireriistaga, et saada te
 
 ## 🖥️ Töölauarakendus (Electron)
 
-OmniRoute on saadaval natiivse töölauarakendusena Windowsi, macOS-i ja Linuxi jaoks.
+67router on saadaval natiivse töölauarakendusena Windowsi, macOS-i ja Linuxi jaoks.
 
 ### Paigaldamine
 

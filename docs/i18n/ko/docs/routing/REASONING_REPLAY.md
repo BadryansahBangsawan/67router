@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 원본:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute는 사고 모드 모델이 생성한 어시스턴트의 `reasoning_content`를 캡처하고, 업스트림 제공자가 이를 요구하는 경우 다중 턴 요청에서 투명하게 재생합니다. 이를 통해 클라이언트의 대화 기록에 이전 턴의 추론이 누락되었을 때 엄격한 제공자가 반환하는 HTTP 400 오류를 방지합니다.
+67router는 사고 모드 모델이 생성한 어시스턴트의 `reasoning_content`를 캡처하고, 업스트림 제공자가 이를 요구하는 경우 다중 턴 요청에서 투명하게 재생합니다. 이를 통해 클라이언트의 대화 기록에 이전 턴의 추론이 누락되었을 때 엄격한 제공자가 반환하는 HTTP 400 오류를 방지합니다.
 
 ## 이 기능이 필요한 이유
 
@@ -17,7 +17,7 @@ OmniRoute는 사고 모드 모델이 생성한 어시스턴트의 `reasoning_con
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-그러나 일반적인 클라이언트(Cursor, Cline, Roo Code, OpenAI SDK)는 다시 전송하는 기록에서 `reasoning_content`를 제거합니다. OmniRoute는 서버 측 캐시에서 이를 복원하여 업스트림이 받는 요청의 일관성을 유지합니다. 이슈 #1628에서 하이브리드 메모리/SQLite 영속성이 도입되어 프로세스가 다시 시작된 후에도 캐시가 유지됩니다.
+그러나 일반적인 클라이언트(Cursor, Cline, Roo Code, OpenAI SDK)는 다시 전송하는 기록에서 `reasoning_content`를 제거합니다. 67router는 서버 측 캐시에서 이를 복원하여 업스트림이 받는 요청의 일관성을 유지합니다. 이슈 #1628에서 하이브리드 메모리/SQLite 영속성이 도입되어 프로세스가 다시 시작된 후에도 캐시가 유지됩니다.
 
 ## 아키텍처
 

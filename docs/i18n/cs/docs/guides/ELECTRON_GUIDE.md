@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** pracovní prostor `electron/`
 > **Naposledy aktualizováno:** 2026-06-28 — v3.8.40
 
-OmniRoute obsahuje multiplatformní desktopovou aplikaci (Windows / macOS / Linux) postavenou na
+67router obsahuje multiplatformní desktopovou aplikaci (Windows / macOS / Linux) postavenou na
 **Electron 41** + **electron-builder 26.10**. Desktopová aplikace spouští samostatný server Next.js
 jako podřízený proces, směruje na něj `BrowserWindow` a přidává ikonu v systémové oblasti,
 automatické aktualizace, most IPC a inicializaci tajných klíčů bez nutnosti konfigurace.
@@ -45,7 +45,7 @@ Potvrzeno z `electron/package.json`:
 | `better-sqlite3`   | kořenový `^13.0.2` (předkompilované sestavení Node-API — bez opětovného sestavení pro Electron) |
 | Verze aplikace     | `3.8.0`                                                                                         |
 | ID aplikace        | `online.omniroute.desktop`                                                                      |
-| Název produktu     | `OmniRoute`                                                                                     |
+| Název produktu     | `67router`                                                                                      |
 
 ## Skripty (kořenový `package.json`)
 
@@ -196,7 +196,7 @@ upřednostněte soubor `.env`, poté aplikaci zcela ukončete (oznamovací oblas
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, ovládací prvky okna na `{ x: 16, y: 16 }`.
 - Windows/Linux: nativní záhlaví okna.
-- Tlačítko zavření minimalizuje aplikaci do oznamovací oblasti; její nabídka obsahuje **Otevřít OmniRoute**, **Otevřít řídicí panel** (v externím prohlížeči), podnabídku **Port serveru**, **Zkontrolovat aktualizace** a **Ukončit**.
+- Tlačítko zavření minimalizuje aplikaci do oznamovací oblasti; její nabídka obsahuje **Otevřít 67router**, **Otevřít řídicí panel** (v externím prohlížeči), podnabídku **Port serveru**, **Zkontrolovat aktualizace** a **Ukončit**.
 
 ## Zásady zabezpečení obsahu
 

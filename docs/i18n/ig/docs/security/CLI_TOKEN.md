@@ -6,7 +6,7 @@
 
 ## Nchịkọta
 
-Iwu OmniRoute CLI na-eme nkwenye njirimara megide API njikwa mpaghara site na iji
+Iwu 67router CLI na-eme nkwenye njirimara megide API njikwa mpaghara site na iji
 token `HMAC-SHA256(machine-id, salt)` nke a na-eziga site na nkụnye isi arịrịọ
 `x-omniroute-cli-token`.
 

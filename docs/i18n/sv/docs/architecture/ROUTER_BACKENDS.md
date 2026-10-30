@@ -20,10 +20,10 @@ En motors roll beskrivs av **två oberoende axlar**, som tillsammans kodas i
 registrets `RouterBackendDefinition`:
 
 1. **Livscykel** (`RouterBackendLifecycle`) — _hur motorn körs_:
-   - `in-process` — körs inuti OmniRoutes Node-process (den inbyggda TS-pipelinen).
-   - `supervised` — en lokal underprocess som OmniRoute installerar/startar/stoppar/hälsokontrollerar
+   - `in-process` — körs inuti 67routers Node-process (den inbyggda TS-pipelinen).
+   - `supervised` — en lokal underprocess som 67router installerar/startar/stoppar/hälsokontrollerar
      via `ServiceSupervisor` och sedan använder som en leverantörsanslutning.
-   - `external` — en HTTP-slutpunkt som OmniRoute skickar anrop till men **inte** hanterar
+   - `external` — en HTTP-slutpunkt som 67router skickar anrop till men **inte** hanterar
      (konfigureras genom en bas-URL i en miljövariabel).
    - `disabled` — registrerad men inte valbar.
 2. **Urvalsaxel** (reläets routningsbackend) — _om reläet skickar anrop till den_:

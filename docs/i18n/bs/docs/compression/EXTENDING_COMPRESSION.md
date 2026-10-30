@@ -6,7 +6,7 @@
 
 # Proširivanje kompresijskog cjevovoda
 
-> **TL;DR**: OmniRoute-ov kompresijski mehanizam je **modularan** — možete registrirati prilagođene mehanizme, isporučivati jezične pakete za nove jezike i sastavljati složene cjevovode. Ovaj vodič pokazuje kako.
+> **TL;DR**: 67router-ov kompresijski mehanizam je **modularan** — možete registrirati prilagođene mehanizme, isporučivati jezične pakete za nove jezike i sastavljati složene cjevovode. Ovaj vodič pokazuje kako.
 
 **Povezani vodiči:**
 
@@ -234,7 +234,7 @@ u selektoru strategija putem svog `id`. Testirajte integraciju tako što ćete g
 
 ## Kreiranje jezičkih paketa
 
-Kompresija u stilu "pećinskog čovjeka" (Caveman-style) koristi **jezički specifične pakete pravila** za rukovanje poštapalicama, ograđivanjem (hedging) i opširnim obrascima u svakom prirodnom jeziku. OmniRoute dolazi sa **6 jezičkih paketa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Kompresija u stilu "pećinskog čovjeka" (Caveman-style) koristi **jezički specifične pakete pravila** za rukovanje poštapalicama, ograđivanjem (hedging) i opširnim obrascima u svakom prirodnom jeziku. 67router dolazi sa **6 jezičkih paketa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struktura paketa
 
@@ -388,7 +388,7 @@ Izlaz mehanizma N postaje ulaz mehanizma N+1.
 
 ### Načini kompresije
 
-OmniRoute odabire **JEDAN način po zahtjevu** na temelju konfiguracije, pragova automatskog pokretanja i nadjačavanja kombinacija (combo overrides).
+67router odabire **JEDAN način po zahtjevu** na temelju konfiguracije, pragova automatskog pokretanja i nadjačavanja kombinacija (combo overrides).
 Dostupni načini definirani su u `open-sse/services/compression/types.ts` (tip `CompressionMode`):
 
 | Način        | Mehanizmi            | Slučaj upotrebe                                                                                                                                                                                                        |
@@ -505,7 +505,7 @@ Da biste ga pokrenuli iz konfiguracije, postavite `mode: "stacked"` i navedite n
 
 ## Politika sinhronizacije sa uzvodnim projektima
 
-OmniRoute-ovi mehanizmi za kompresiju navode nekoliko uzvodnih projekata u README datoteci („inspirisano RTK, Caveman, LLMLingua-2, Troglodita“). Često pitanje saradnika je: **kada uzvodni RTK doda novi filter alata ili Caveman doda paket pravila, kako to dospijeva u OmniRoute?** Ovaj odjeljak je mjerodavan odgovor.
+67router-ovi mehanizmi za kompresiju navode nekoliko uzvodnih projekata u README datoteci („inspirisano RTK, Caveman, LLMLingua-2, Troglodita“). Često pitanje saradnika je: **kada uzvodni RTK doda novi filter alata ili Caveman doda paket pravila, kako to dospijeva u 67router?** Ovaj odjeljak je mjerodavan odgovor.
 
 ### Vendirane kopije naspram nezavisnih implementacija
 
@@ -520,7 +520,7 @@ Ključna tačka: **RTK i Caveman su TypeScript implementacije _ideja_ (pravila f
 
 ### Kako se spajaju poboljšanja iz uzvodnih projekata
 
-Ne postoji **automatizovano praćenje uzvodnih izdanja i nema `compression-sync` oznake** — po dizajnu. Budući da su mehanizmi reimplementacije, uzvodni RTK filter ili Caveman paket pravila se ne spajaju kao kod; oni se **ponovo izražavaju kao novo pravilo/filter u OmniRoute-ovom sopstvenom formatu** (pogledajte [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) i stižu ad-hoc putem normalnog PR-a. Tačke proširenja iznad (prilagođeni mehanizam, jezički paket, RTK filter) su odobreni način za doprinos.
+Ne postoji **automatizovano praćenje uzvodnih izdanja i nema `compression-sync` oznake** — po dizajnu. Budući da su mehanizmi reimplementacije, uzvodni RTK filter ili Caveman paket pravila se ne spajaju kao kod; oni se **ponovo izražavaju kao novo pravilo/filter u 67router-ovom sopstvenom formatu** (pogledajte [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) i stižu ad-hoc putem normalnog PR-a. Tačke proširenja iznad (prilagođeni mehanizam, jezički paket, RTK filter) su odobreni način za doprinos.
 
 Nedavni primjeri upravo ovog toka:
 
@@ -530,11 +530,11 @@ Nedavni primjeri upravo ovog toka:
 
 ### Headroom (proxy za kompresiju ulaza)
 
-Headroom je **potpuno interni** — fiksirani vendirani `gcf` snimak kodeka plus OmniRoute-ovi sopstveni `smartcrusher` / `toon` / `tabular` slojevi. Ne postoji aktivni uzvodni projekat za praćenje osim vendirane kopije; ažuriranja za `gcf` se osvježavaju ručno kada se kodek promijeni i ponovo validiraju u odnosu na kapiju budžeta kompresije (`check:compression-budget`).
+Headroom je **potpuno interni** — fiksirani vendirani `gcf` snimak kodeka plus 67router-ovi sopstveni `smartcrusher` / `toon` / `tabular` slojevi. Ne postoji aktivni uzvodni projekat za praćenje osim vendirane kopije; ažuriranja za `gcf` se osvježavaju ručno kada se kodek promijeni i ponovo validiraju u odnosu na kapiju budžeta kompresije (`check:compression-budget`).
 
 ### Predlaganje poboljšanja inspirisanog uzvodnim projektom
 
-1. **Nemojte vendirati** — ponovo izrazite uzvodno pravilo/filter u OmniRoute formatu.
+1. **Nemojte vendirati** — ponovo izrazite uzvodno pravilo/filter u 67router formatu.
 2. Dodajte ga putem odgovarajuće tačke proširenja ispod (jezički paket, RTK filter ili prilagođeni mehanizam).
 3. Referencirajte uzvodni projekat u opisu PR-a (atribucija), a ne kopiranjem njegovog izvornog koda koji podliježe licenci.
 4. Uključite testove i potvrdite da kapija `check:compression-budget` i dalje prolazi.

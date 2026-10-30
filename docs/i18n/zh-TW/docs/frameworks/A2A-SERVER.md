@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (中文 (繁體))
+# 67router A2A Server Documentation (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — OmniRoute 作為智慧路由代理程式
+> Agent-to-Agent Protocol v0.3 — 67router 作為智慧路由代理程式
 
 A2A 介面有兩種形式：
 
@@ -19,7 +19,7 @@ A2A 介面有兩種形式：
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-傳回描述 OmniRoute 功能、技能及驗證需求的代理程式資訊卡。
+傳回描述 67router 功能、技能及驗證需求的代理程式資訊卡。
 
 代理程式資訊卡的 `version` 欄位來源為 `process.env.npm_package_version`（請參閱 `src/app/.well-known/agent.json/route.ts:13`），因此每次發行時都會與 `package.json` 自動同步。
 
@@ -151,22 +151,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## 可用技能
 
-OmniRoute 提供 6 個 A2A 技能,連接於 `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`。每個技能模組皆位於 `src/lib/a2a/skills/`。
+67router 提供 6 個 A2A 技能,連接於 `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`。每個技能模組皆位於 `src/lib/a2a/skills/`。
 
 | 技能          | ID                   | 說明                                                                                                                           | 標籤                       | 範例                            |
 | :------------ | :------------------- | :----------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------ |
-| 智慧路由      | `smart-routing`      | 使用 OmniRoute 的 combo 引擎與評分機制,將提示詞路由至最佳的 provider/combo                                                     | routing, providers         | "使用最佳模型路由此提示詞"      |
+| 智慧路由      | `smart-routing`      | 使用 67router 的 combo 引擎與評分機制,將提示詞路由至最佳的 provider/combo                                                      | routing, providers         | "使用最佳模型路由此提示詞"      |
 | 配額管理      | `quota-management`   | 回報各 provider 的配額狀態,協助呼叫端決定何時節流/切換                                                                         | quota, providers           | "檢查 anthropic 的配額"         |
 | Provider 探索 | `provider-discovery` | 列出已安裝的 providers,包含其功能能力、免費方案標記與 OAuth 狀態                                                               | providers, discovery       | "有哪些可用的 providers?"       |
 | 成本分析      | `cost-analysis`      | 根據目錄與近期用量,估算請求/對話的成本                                                                                         | cost, usage                | "估算此對話的成本"              |
 | 健康報告      | `health-report`      | 彙總各 provider 的熔斷器(circuit breaker)、冷卻與鎖定狀態                                                                      | health, resilience         | "顯示所有 providers 的健康狀態" |
-| 列出功能      | `list-capabilities`  | 以 markdown 表格回傳完整的 45 項 Agent Skills 目錄(23 個 API + 21 個 CLI + 1 個 config),並附上原始 SKILL.md URL 以供注入上下文 | catalog, discovery, skills | "列出所有 OmniRoute 功能"       |
+| 列出功能      | `list-capabilities`  | 以 markdown 表格回傳完整的 45 項 Agent Skills 目錄(23 個 API + 21 個 CLI + 1 個 config),並附上原始 SKILL.md URL 以供注入上下文 | catalog, discovery, skills | "列出所有 67router 功能"        |
 
 > Agent Card 應與即時的 375 個 provider 目錄保持一致;provider 數量與免費/免驗證的中繼資料皆取自執行時期註冊表(runtime registry)。
 
 ### `list-capabilities` 技能詳細說明
 
-`list-capabilities` 技能對於需要在發送 API 呼叫之前,先探索 OmniRoute 所提供內容的外部代理程式特別有用。它會回傳一個結構化的 markdown 表格產出物(artifact):
+`list-capabilities` 技能對於需要在發送 API 呼叫之前,先探索 67router 所提供內容的外部代理程式特別有用。它會回傳一個結構化的 markdown 表格產出物(artifact):
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -192,7 +192,7 @@ JSON-RPC 端點 `/a2a` 是標準的 A2A 進入點。以下 REST 端點為儀表�
 | `/.well-known/agent.json`    | GET  | Agent Card（A2A 探索）                                   | （公開，快取 3600s）                           |
 | `/api/a2a/tasks`             | POST | 將入站委派傳送至 OmniConductor 機群（Conductor PRD RF5） | Bearer 對照 `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**入站 Conductor 委派（`POST /api/a2a/tasks`）：**外部 A2A 代理程式透過 OmniRoute 將程式開發工作委派給 OmniConductor 機群。主體：`{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — 只有 Conductor 機群技能（即 Agent Card 上公告的技能）可供委派；`metadata.conductor.repo.url` 為必填（機群在 git 儲存庫上作業）。此路由會使用伺服器端的 `CONDUCTOR_ORCHESTRATOR_TOKEN`（備援為 `CONDUCTOR_HUB_TOKEN`）轉換為中樞的 `POST /v1/tasks`，並傳回 `201 { conductor_task_id, state: "submitted" }`；任務狀態會透過 SSE→A2A 鏡像（RF1）回傳，並可透過 `GET /api/a2a/tasks?skill=conductor` 查看。
+**入站 Conductor 委派（`POST /api/a2a/tasks`）：**外部 A2A 代理程式透過 67router 將程式開發工作委派給 OmniConductor 機群。主體：`{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — 只有 Conductor 機群技能（即 Agent Card 上公告的技能）可供委派；`metadata.conductor.repo.url` 為必填（機群在 git 儲存庫上作業）。此路由會使用伺服器端的 `CONDUCTOR_ORCHESTRATOR_TOKEN`（備援為 `CONDUCTOR_HUB_TOKEN`）轉換為中樞的 `POST /v1/tasks`，並傳回 `201 { conductor_task_id, state: "submitted" }`；任務狀態會透過 SSE→A2A 鏡像（RF1）回傳，並可透過 `GET /api/a2a/tasks?skill=conductor` 查看。
 
 ---
 

@@ -5,7 +5,7 @@
 ---
 
 > **Beschrijving van één regel voor elke map en elk bestand in de hoofdmap.**
-> Laatst bijgewerkt: 2026-06-28 — OmniRoute v3.8.40
+> Laatst bijgewerkt: 2026-06-28 — 67router v3.8.40
 >
 > Gebruik dit overzicht om snel door de codebase te navigeren. Volg voor diepgaande informatie de links naar de bijbehorende documentatie.
 
@@ -393,7 +393,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Volledige releaseprocedure (skills, husky, conventionele commits, implementatie)                               |
 | `COVERAGE_PLAN.md`          | Dekkingsdoelen en huidige status                                                                               |
 | `FREE_TIERS.md`             | Samengestelde lijst met providers met een gratis niveau (48+ gratis + 11 OAuth)                                |
-| `CLI-TOOLS.md`              | Externe CLI-integraties + interne OmniRoute-CLI                                                                |
+| `CLI-TOOLS.md`              | Externe CLI-integraties + interne 67router-CLI                                                                 |
 | `I18N.md`                   | i18n-architectuur, een taal toevoegen, 67 landinstellingen                                                     |
 | `UNINSTALL.md`              | Stappen voor een volledige verwijdering                                                                        |
 | `PROVIDER_REFERENCE.md`     | **Automatisch gegenereerde** catalogus van 375 providers (opnieuw genereren: `npm run gen:provider-reference`) |

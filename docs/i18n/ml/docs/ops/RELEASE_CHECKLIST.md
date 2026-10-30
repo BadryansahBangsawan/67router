@@ -45,7 +45,7 @@ WS1.3 ഉറപ്പ് നിലനിർത്തിക്കൊണ്ട്,
 പ്രവാഹം ഇത് പുനഃസ്ഥാപിക്കുന്നു (ചോർന്ന token-ന് ഒറ്റയ്ക്ക് പ്രസിദ്ധീകരിക്കാൻ കഴിയില്ല — token തന്നെയില്ല).
 
 **ഒറ്റത്തവണ സജ്ജീകരണം (ഉടമ):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). ഇത് നിലവിൽ വരുന്നതുവരെ, സ്വയമേവയുള്ള ഘട്ടം `ENEEDAUTH` സഹിതം പരാജയപ്പെടും:
 `publish_mode=staged` (താഴെ) അല്ലെങ്കിൽ `direct` ഉപയോഗിച്ച് വീണ്ടും dispatch ചെയ്യുക.
 

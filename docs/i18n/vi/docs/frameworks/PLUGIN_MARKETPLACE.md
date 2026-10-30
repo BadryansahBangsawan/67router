@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute cung cấp một hệ thống plugin theo phong cách WordPress. Các plugin là
+67router cung cấp một hệ thống plugin theo phong cách WordPress. Các plugin là
 những thư mục độc lập — mỗi thư mục có một tệp kê khai `plugin.json` và một tệp
 điểm vào — được móc nối vào quy trình xử lý yêu cầu (`onRequest` / `onResponse` /
 `onError`) và các sự kiện vòng đời (`onInstall` / `onActivate` / `onDeactivate` /
@@ -154,7 +154,7 @@ schema vẫn được cho phép.
 
 ### Thư mục plugin
 
-Các plugin nằm trong thư mục dữ liệu OmniRoute:
+Các plugin nằm trong thư mục dữ liệu 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

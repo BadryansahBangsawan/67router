@@ -1,5 +1,5 @@
 ---
-title: "CLI Integrations — point any coding CLI at OmniRoute"
+title: "CLI Integrations — point any coding CLI at 67router"
 version: 3.8.50
 lastUpdated: 2026-08-18
 ---
@@ -9,11 +9,11 @@ lastUpdated: 2026-08-18
 For the shared executable manifest, restricted child environments and persistent
 Gemini setup, see [CLI launch contracts](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute ships a family of `setup-*` commands that configure a coding
-CLI (Codex, Claude Code, OpenCode, Cline, …) to use OmniRoute as its backend — so
-the tool talks to **one** endpoint and OmniRoute routes to the right provider with
+67router ships a family of `setup-*` commands that configure a coding
+CLI (Codex, Claude Code, OpenCode, Cline, …) to use 67router as its backend — so
+the tool talks to **one** endpoint and 67router routes to the right provider with
 auto-fallback. Each command reads the **live** model catalog from a running
-OmniRoute (local or remote) and writes the tool's own config file on **your**
+67router (local or remote) and writes the tool's own config file on **your**
 machine. The API key is referenced by an environment variable wherever the tool
 supports it. Commands that persist a tool-local environment file are noted below.
 
@@ -55,7 +55,7 @@ per-tool deep dives:
 
 - [Claude Code configuration](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI configuration](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — drive a remote OmniRoute (VPS / Tailnet) from your laptop
+- [Remote Mode](./REMOTE-MODE.md) — drive a remote 67router (VPS / Tailnet) from your laptop
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — the OmniCopilot extension; it can also run these
   `setup-*` commands for you from inside the editor
 
@@ -91,7 +91,7 @@ server and writes the config locally.
 
 Notes on flags (verified in the command source):
 
-- `--remote <url>` — fetch the catalog from a remote OmniRoute (overrides `--port`
+- `--remote <url>` — fetch the catalog from a remote 67router (overrides `--port`
   and the active context). `--api-key <key>` supplies the credential for that
   server (defaults to the `OMNIROUTE_API_KEY` env var, or the active context's token).
 - `--only <patterns>` — comma-separated substrings; keep only model IDs that match
@@ -112,7 +112,7 @@ Notes on flags (verified in the command source):
   **codex** via `-c model_providers.omniroute.*` args. **Qwen is the only run
   target that hard-requires `--model`** — `omniroute run qwen` without it exits
   `2` with an explicit error.
-- `--port <port>` — local OmniRoute port (default `20128`, ignored when `--remote`
+- `--port <port>` — local 67router port (default `20128`, ignored when `--remote`
   is set). Present on all `setup-*` and both launchers.
 - `omniroute run` exit codes: the child CLI's own exit code is propagated
   verbatim; `2` = invalid arguments (unsupported target, missing required
@@ -157,7 +157,7 @@ are not presented as launchable targets.
 
 ## Local usage
 
-With OmniRoute running on `localhost:20128`, just run the setup command for your
+With 67router running on `localhost:20128`, just run the setup command for your
 tool. The catalog is fetched from the local server.
 
 ```bash
@@ -185,8 +185,8 @@ omniroute setup-continue --dry-run
 Launch without writing any config at all (env-injection only):
 
 ```bash
-omniroute launch                 # Claude Code → local OmniRoute
-omniroute launch-codex           # Codex CLI → local OmniRoute
+omniroute launch                 # Claude Code → local 67router
+omniroute launch-codex           # Codex CLI → local 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -204,7 +204,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Remote usage
 
-Point any setup command at a remote OmniRoute with `--remote` + `--api-key`. The
+Point any setup command at a remote 67router with `--remote` + `--api-key`. The
 catalog is fetched from the remote; the config is written on your local machine.
 
 ```bash
@@ -247,7 +247,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Both forms write one 5dive **auth profile**, and every `claude` seat bound to that
-profile then talks to OmniRoute. Three things are specific to this target:
+profile then talks to 67router. Three things are specific to this target:
 
 - **It runs on the fleet host, as root.** 5dive's verbs act on local systemd units
   and a root-owned state dir; there is no remote mode. The recipe re-execs through
@@ -265,7 +265,7 @@ profile then talks to OmniRoute. Three things are specific to this target:
 The API key is handed to 5dive on **stdin** (`--api-key=-`), so it never appears in
 `ps` output.
 
-Pointing the profile at an OmniRoute **combo** rather than a single model is what
+Pointing the profile at an 67router **combo** rather than a single model is what
 gets the fleet provider failover: when the primary endpoint went hard-down mid-turn
 in the run recorded on
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), the agent finished
@@ -275,7 +275,7 @@ its remaining steps on the fallback and never surfaced the outage.
 
 ## Base URL conventions (which tools want `/v1`)
 
-OmniRoute exposes the OpenAI surface at `/v1`, the Anthropic surface at the root,
+67router exposes the OpenAI surface at `/v1`, the Anthropic surface at the root,
 and a native Gemini surface at `/v1beta`. Each integration is wired to the form its
 tool expects (verified in the command source):
 
@@ -297,7 +297,7 @@ tool expects (verified in the command source):
 ## Keeping native deps on update: `--include=optional`
 
 When you update with `omniroute update` (after confirming, or with `--apply`),
-OmniRoute runs the install with `--include=optional` baked in:
+67router runs the install with `--include=optional` baked in:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -324,14 +324,14 @@ outdated), `--apply` (install without prompting), `--changelog`, `--no-backup`,
 
 Contract verified against `@google/gemini-cli` 0.50.0: the CLI honors
 `GOOGLE_GEMINI_BASE_URL` and issues `POST /v1beta/models/<model>:generateContent`
-(and `:streamGenerateContent?alt=sse`) against it — exactly OmniRoute's native
+(and `:streamGenerateContent?alt=sse`) against it — exactly 67router's native
 Gemini surface (`/v1beta`). `omniroute run gemini` wires that automatically:
 
-- `GOOGLE_GEMINI_BASE_URL` → the active OmniRoute base URL (root, no `/v1`);
-- `GEMINI_API_KEY` → the resolved OmniRoute credential (option/env/context);
+- `GOOGLE_GEMINI_BASE_URL` → the active 67router base URL (root, no `/v1`);
+- `GEMINI_API_KEY` → the resolved 67router credential (option/env/context);
 - a **temporary isolated `GEMINI_CLI_HOME`** whose `.gemini/settings.json`
   selects `gemini-api-key` auth, so a stored Google OAuth session (Code Assist)
-  never overrides the OmniRoute-directed launch — removed after exit;
+  never overrides the 67router-directed launch — removed after exit;
 - **env hygiene**: the child env is scrubbed of `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` and `GOOGLE_GENAI_USE_GCA` (which would redirect
   auth to Vertex/Code Assist), and `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key` is
@@ -355,7 +355,7 @@ agent-protocol integration for `/dashboard/acp-agents`.
 
 Deterministic launch-plan regression runs in CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). To validate the REAL binaries against a REAL
-OmniRoute server, an opt-in harness exists at
+67router server, an opt-in harness exists at
 `tests/integration/upstream-cli-smoke.int.test.ts`. It never runs automatically
 (every sub-test skips unless `RUN_CLI_SMOKE=1`), passes the credential by env-var
 NAME (never by value), redacts key-shaped strings from any recorded output, skips

@@ -4,7 +4,7 @@
 
 ---
 
-Wanneer OmniRoute binnen Docker wordt uitgevoerd, mislukt de standaardprocedure 'Importeren vanuit Zed-sleutelhanger'
+Wanneer 67router binnen Docker wordt uitgevoerd, mislukt de standaardprocedure 'Importeren vanuit Zed-sleutelhanger'
 omdat de container geen toegang heeft tot de sleutelhangerservice van het hostbesturingssysteem (libsecret op Linux,
 Sleutelhanger op macOS, Referentiebeheer op Windows) en de Zed-configuratiemappen op het
 bestandssysteem van de host standaard niet zichtbaar zijn in de container.
@@ -20,7 +20,7 @@ Binnen een container doen zich twee blokkerende problemen voor:
    module `keytar` met de sleutelhangerservice van het besturingssysteem via een Unix-socket of D-Bus-sessie.
    Geen van beide wordt standaard naar de container doorgestuurd, waardoor het lezen van referenties altijd mislukt.
 
-OmniRoute detecteert de Docker-omgeving via twee heuristieken:
+67router detecteert de Docker-omgeving via twee heuristieken:
 
 - Aanwezigheid van `/.dockerenv` (geschreven door de Docker-daemon wanneer de container wordt gestart).
 - De tekenreeks `docker` in `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Wanneer een van beide heuristieken wordt geactiveerd, retourneert de importroute
 
 1. Open **Dashboard → Providers → Zed**.
 2. Het paneel **Handmatige tokenimport** verschijnt onder de kaart voor het importeren vanuit de sleutelhanger. Wanneer
-   OmniRoute Docker detecteert, wordt dit paneel automatisch uitgevouwen na de eerste mislukte
+   67router Docker detecteert, wordt dit paneel automatisch uitgevouwen na de eerste mislukte
    importpoging vanuit de sleutelhanger.
 3. Selecteer de provider in de vervolgkeuzelijst (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter of DeepSeek).

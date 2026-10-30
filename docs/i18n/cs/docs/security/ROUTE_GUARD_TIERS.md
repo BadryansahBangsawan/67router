@@ -6,7 +6,7 @@
 
 ## Přehled
 
-Všechny trasy API pro správu OmniRoute jsou zařazeny do jedné ze tří úrovní
+Všechny trasy API pro správu 67router jsou zařazeny do jedné ze tří úrovní
 ochrany. Klasifikace je statická, je definována v `src/server/authz/routeGuard.ts`
 a vyhodnocuje se před spuštěním jakékoli jiné větve ověřování.
 
@@ -28,9 +28,9 @@ třídu zranitelností CVE
 **Co je GHSA-fhh6-4qxv-rpqj (třída útoku):** server pro správu/agenta
 zpřístupňuje koncový bod, který spouští podproces (`npm install`, `node`, prohlížeč,
 proxy, `git`, `tar`, …). Pokud je tento koncový bod dostupný mimo hostitele — protože
-provozovatel umístil OmniRoute za tunel nginx/Cloudflare/Tailscale a došlo k úniku
+provozovatel umístil 67router za tunel nginx/Cloudflare/Tailscale a došlo k úniku
 JWT nebo bylo nesprávně nakonfigurováno ověřování — útočník změní „volání API“ na
-„spuštění příkazu na hostiteli“ (vzdálené spuštění kódu). OmniRoute tomu zabraňuje
+„spuštění příkazu na hostiteli“ (vzdálené spuštění kódu). 67router tomu zabraňuje
 tím, že na každé trase schopné spouštět procesy **bezpodmínečně vynucuje kontrolu
 hostitele loopbacku ještě před jakoukoli kontrolou ověřování**: uniklý token se
 ani přes tunel ke spuštění procesu nedostane.
@@ -121,7 +121,7 @@ pro vzdálené volající používající pouze MCP, kteří by neměli potřebo
 
 #### Pokyny pro provozovatele a auditování
 
-Pokud provozujete OmniRoute za reverzním proxy serverem nebo tunelem (nginx, Caddy, Cloudflare
+Pokud provozujete 67router za reverzním proxy serverem nebo tunelem (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), kontrola loopback nadále chrání výše uvedené trasy,
 které mohou spouštět procesy — požadavek, jehož adresa klienta není loopback, je odmítnut odpovědí
 `403 LOCAL_ONLY` **před spuštěním ověřování**, takže uniklý JWT nemůže spustit proces. Provozovateli
@@ -160,7 +160,7 @@ nadále zůstávají dvě povinnosti:
 - Prohledejte logy reverzní proxy / přístupové logy a vyhledejte výše uvedené prefixy
   spárované s klientskou adresou, která není loopback. Jakýkoli takový požadavek, který vrátil `200`
   namísto `403 LOCAL_ONLY`, znamená, že proxy maskuje skutečnou IP adresu klienta — opravte proxy.
-- Záznam `403 LOCAL_ONLY` v logách OmniRoute pro jednu z těchto cest znamená, že ochrana
+- Záznam `403 LOCAL_ONLY` v logách 67router pro jednu z těchto cest znamená, že ochrana
   funguje správně, nikoli chybu, kterou je třeba potlačit.
 
 #### Vzdáleně dostupné trasy s kontrolní bránou v místě volání

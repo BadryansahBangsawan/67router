@@ -7,7 +7,7 @@
 > **事實來源：** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`、`src/app/api/tunnels/`
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 可透過三種隧道後端，將其本機伺服器 (`http://localhost:20128`) 公開至
+67router 可透過三種隧道後端，將其本機伺服器 (`http://localhost:20128`) 公開至
 網際網路。這適用於：
 
 - 需要可公開存取之重新導向 URL 的雲端提供者（Antigravity、Gemini、Cursor）
@@ -15,7 +15,7 @@ OmniRoute 可透過三種隧道後端，將其本機伺服器 (`http://localhost
 - 無須部署 VM，即可與團隊成員分享您的本機執行個體。
 - 行動裝置、遠端或跨網路測試。
 
-這三種後端全都在程序內管理 — OmniRoute 可從儀表板或 REST API 啟動／停止底層
+這三種後端全都在程序內管理 — 67router 可從儀表板或 REST API 啟動／停止底層
 二進位檔或 SDK。不需要設定反向代理或 systemd。
 
 ## 後端概覽
@@ -40,7 +40,7 @@ OmniRoute 可透過三種隧道後端，將其本機伺服器 (`http://localhost
 http://localhost:<apiPort>`，並從 stdout 剖析獲指派的 `*.trycloudflare.com` URL。
   URL 為暫時性，每次重新啟動時都會變更。
 - **具名隧道（選用）。** 當 `CLOUDFLARED_CONFIG` 指向本機管理的
-  cloudflared `config.yml` 時，OmniRoute 會執行 `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` 時，67router 會執行 `cloudflared tunnel --no-autoupdate
 --config <path> run`，為您提供**穩定的具名主機名稱**。該設定會提供
   隧道 UUID、`credentials-file` 和 `ingress` 路由，因此不會傳遞
   `--url`，也不需要 Zero Trust 儀表板權杖。`run` 會從設定中的絕對
@@ -49,7 +49,7 @@ http://localhost:<apiPort>`，並從 stdout 剖析獲指派的 `*.trycloudflare.
 
 主要行為：
 
-- **自動安裝。** 首次使用時，OmniRoute 會從官方 GitHub releases 下載最新的
+- **自動安裝。** 首次使用時，67router 會從官方 GitHub releases 下載最新的
   `cloudflared` 二進位檔（受管理的安裝位於
   `DATA_DIR/cloudflared/`）。執行前，會根據 release manifest 驗證所下載資產的
   SHA256。
@@ -66,7 +66,7 @@ http://localhost:<apiPort>`，並從 stdout 剖析獲指派的 `*.trycloudflare.
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. 撰寫 `~/.cloudflared/config.yml`，將您的主機名稱路由至 OmniRoute 的本機
+2. 撰寫 `~/.cloudflared/config.yml`，將您的主機名稱路由至 67router 的本機
    API 連接埠（預設為 20128）：
 
    ```yaml
@@ -78,11 +78,11 @@ http://localhost:<apiPort>`，並從 stdout 剖析獲指派的 `*.trycloudflare.
      - service: http_status:404
    ```
 
-3. 將 OmniRoute 指向該設定，然後（重新）啟動隧道：
+3. 將 67router 指向該設定，然後（重新）啟動隧道：
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # 選用 — 覆寫 OmniRoute 回報的主機名稱；否則會從設定中的
+   # 選用 — 覆寫 67router 回報的主機名稱；否則會從設定中的
    # 第一條 ingress 規則讀取：
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -119,12 +119,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### 選用環境變數
 
-| 變數                                                 | 用途                                                                                                                                         |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | 覆寫二進位檔路徑。若已設定且有效，OmniRoute 會使用該路徑，而不會下載。                                                                       |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | 傳輸協定（預設為 `http2`；亦支援 `quic`、`auto`）。                                                                                          |
-| `CLOUDFLARED_CONFIG`                                 | 指向本機管理的 cloudflared `config.yml` 之路徑。設定後，OmniRoute 會執行**具名／持久性**隧道（`tunnel --config <path> run`），而非快速隧道。 |
-| `CLOUDFLARED_HOSTNAME`                               | 覆寫具名隧道回報的公開主機名稱（例如 `ai.example.com`）。若未設定，則從設定檔中第一個 `ingress` 的主機名稱讀取。                             |
+| 變數                                                 | 用途                                                                                                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | 覆寫二進位檔路徑。若已設定且有效，67router 會使用該路徑，而不會下載。                                                                       |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | 傳輸協定（預設為 `http2`；亦支援 `quic`、`auto`）。                                                                                         |
+| `CLOUDFLARED_CONFIG`                                 | 指向本機管理的 cloudflared `config.yml` 之路徑。設定後，67router 會執行**具名／持久性**隧道（`tunnel --config <path> run`），而非快速隧道。 |
+| `CLOUDFLARED_HOSTNAME`                               | 覆寫具名隧道回報的公開主機名稱（例如 `ai.example.com`）。若未設定，則從設定檔中第一個 `ingress` 的主機名稱讀取。                            |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 回應會包含指派的 `publicUrl`（例如
 `https://abcd-1234.ngrok-free.app`）。自訂網域、區域與原則規則
-必須在 ngrok 儀表板中設定——OmniRoute 本身只會將本機目標 URL 轉送至
+必須在 ngrok 儀表板中設定——67router 本身只會將本機目標 URL 轉送至
 SDK。
 
 ## 3. Tailscale Funnel
@@ -185,14 +185,14 @@ SDK。
 
 ### 先決條件
 
-1. 安裝 Tailscale（或讓 OmniRoute 執行安裝——請參閱下方的 `install` 端點）。
-2. 登入（使用 `tailscale login` 或 OmniRoute 的 `login` 端點）。
+1. 安裝 Tailscale（或讓 67router 執行安裝——請參閱下方的 `install` 端點）。
+2. 登入（使用 `tailscale login` 或 67router 的 `login` 端點）。
 3. 在 Tailscale 管理控制台中為您的 tailnet 啟用 Funnel：
    <https://login.tailscale.com/admin/settings/features>。
 
 在 Linux 與 macOS 上，控制常駐程式（`tailscaled`）需要 `sudo`。
 POST 端點接受選用的 `sudoPassword` 欄位，該欄位會在呼叫期間轉送至
-OmniRoute 的 MITM 密碼快取（`getCachedPassword` / `setCachedPassword`）。
+67router 的 MITM 密碼快取（`getCachedPassword` / `setCachedPassword`）。
 Windows 會使用位於
 `C:\Program Files\Tailscale\tailscale.exe` 的預設服務安裝。
 
@@ -252,7 +252,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth 回呼注意事項
 
-透過通道公開 OmniRoute 時，儀表板與 OAuth 流程必須依據**公開**主機名稱建立回呼 URL，而非 `localhost`。否則，OAuth 提供者會將使用者重新導向至其伺服器無法連線的 URL，導致交握失敗。
+透過通道公開 67router 時，儀表板與 OAuth 流程必須依據**公開**主機名稱建立回呼 URL，而非 `localhost`。否則，OAuth 提供者會將使用者重新導向至其伺服器無法連線的 URL，導致交握失敗。
 
 編輯儀表板及儲存設定時，不需要在 `NEXT_PUBLIC_BASE_URL` 中固定通道主機名稱。已驗證身分的儀表板會使用與工作階段繫結的 CSRF 權杖，傳送同源的不安全請求，因此登入後仍可使用暫時性的 Cloudflare Quick Tunnel 主機進行一般 UI 管理。
 
@@ -262,7 +262,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-並在啟動 OAuth 前重新啟動 OmniRoute。對於暫時性的 Cloudflare Quick Tunnels，URL 會在每次重新啟動後變更，因此若要在正式環境中使用 OAuth，建議使用具備保留網域的 ngrok 或 Tailscale Funnel。
+並在啟動 OAuth 前重新啟動 67router。對於暫時性的 Cloudflare Quick Tunnels，URL 會在每次重新啟動後變更，因此若要在正式環境中使用 OAuth，建議使用具備保留網域的 ngrok 或 Tailscale Funnel。
 
 ## 健康狀態與監控
 
@@ -273,13 +273,13 @@ NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 - 通道正在轉送至的本機目標 URL。
 - 最近一次的錯誤訊息（若有）。
 
-若要進行程式化監控，請輪詢各後端的 `GET` 端點。允許同時執行多個後端；OmniRoute 會分別追蹤每個後端。
+若要進行程式化監控，請輪詢各後端的 `GET` 端點。允許同時執行多個後端；67router 會分別追蹤每個後端。
 
 ## 疑難排解
 
 ### 「找不到 cloudflared 二進位檔」
 
-OmniRoute 會在首次使用時嘗試自動安裝。如果安裝遭到封鎖（網路受限、無法存取 GitHub），請從 <https://github.com/cloudflare/cloudflared/releases> 手動下載 `cloudflared`，並設定 `CLOUDFLARED_BIN=/path/to/cloudflared`。
+67router 會在首次使用時嘗試自動安裝。如果安裝遭到封鎖（網路受限、無法存取 GitHub），請從 <https://github.com/cloudflare/cloudflared/releases> 手動下載 `cloudflared`，並設定 `CLOUDFLARED_BIN=/path/to/cloudflared`。
 
 ### 「ngrok：需要 authtoken」
 

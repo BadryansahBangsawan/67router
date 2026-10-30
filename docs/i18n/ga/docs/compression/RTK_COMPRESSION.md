@@ -4,7 +4,7 @@
 
 ---
 
-Is é comhbhrú RTK inneall comhbhrúcháin OmniRoute atá feasach ar orduithe le haghaidh aschur teirminéil agus uirlisí. Tá sé
+Is é comhbhrú RTK inneall comhbhrúcháin 67router atá feasach ar orduithe le haghaidh aschur teirminéil agus uirlisí. Tá sé
 deartha do sheisiúin oibreán códaithe ina dtagann formhór an fháis comhthéacs ó logaí tástála, aschur tiomsaithe,
 torann ó bhainisteoirí pacáistí, tras-scríbhinní blaosc, aschur Docker, aschur git, agus rianta cruaiche.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Comhbhrúnn an t-ord sin aschur torannach meaisín ar dtús, agus ansin ligeann sé do Caveman an prós atá fágtha a chomhdhlúthú.
 
 Tuairiscíonn RTK réamhtheachtach coigilteas `60-90%` ar aschur orduithe. Téann an seisiún samplach ina README ó
-`~118,000` comhartha caighdeánach go `~23,900` comhartha RTK, is é sin coigilteas `79.7%` (`~80%`). Úsáideann OmniRoute
+`~118,000` comhartha caighdeánach go `~23,900` comhartha RTK, is é sin coigilteas `79.7%` (`~80%`). Úsáideann 67router
 an meán réamhtheachtach sin chun an coigilteas cruachta a ríomh le comhbhrú ionchuir Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ Lódálann RTK scagairí san ord seo:
 2. Scagairí domhanda ó `DATA_DIR/rtk/filters.toml` agus `DATA_DIR/rtk/filters.json`.
 3. Scagairí ionsuite ó `open-sse/services/compression/engines/rtk/filters/`.
 
-Laistigh den scóip chéanna, tugtar tús áite do scagairí TOML scéimre v1 RTK thar scagairí JSON OmniRoute. Seiceáiltear
+Laistigh den scóip chéanna, tugtar tús áite do scagairí TOML scéimre v1 RTK thar scagairí JSON 67router. Seiceáiltear
 sloinn TOML `match_command` roimh mheaitseáil de réir cineál ordaithe ionas gur féidir le scagaire iompórtáilte a bhaineann
 go sonrach le hordú dul in ionad scagaire níos leithne sa scóip sin. Tugtar tús áite fós do scóip an tionscadail thar an scóip
 dhomhanda, beag beann ar fhormáid an chomhaid.
@@ -84,7 +84,7 @@ neamhbhailí a scipeáil agus a thuairisciú i ndiagnóisic `/api/context/rtk/fi
 
 ## Comhoiriúnacht le scéimre TOML RTK v1
 
-Is féidir le OmniRoute comhaid scagaire dhearbhaitheacha a pharsáil, a bhailíochtú, a thástáil agus a shuiteáil trí scéimre TOML RTK v1 a úsáid.
+Is féidir le 67router comhaid scagaire dhearbhaitheacha a pharsáil, a bhailíochtú, a thástáil agus a shuiteáil trí scéimre TOML RTK v1 a úsáid.
 Is iad na réimsí a dtacaítear leo ná `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, agus tástálacha inlíne `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Diúltaítear do réimsí anaithnide, do shloinn ionadaíochta neamhbhailí nó 
 a bhailíochtú lena iniúchadh, ach ní féidir é a shuiteáil ná a luchtú. Fanann teipeanna luchtaithe comhad saincheaptha
 oscailte ar theip: déantar an comhad neamhbhailí a scipeáil agus leanann na scagairí eile de bheith ag obair.
 
-Faigheann OmniRoute aschur na huirlise tar éis don chliant é a ghabháil cheana féin, mar sin ní féidir le `filter_stderr = true`
+Faigheann 67router aschur na huirlise tar éis don chliant é a ghabháil cheana féin, mar sin ní féidir le `filter_stderr = true`
 gabháil an phróisis a athrú. Glactar leis an réimse mar neamh-oibríocht agus tugann an bhailíochtú rabhadh ar ais.
 Déantar cur síos air seo d’aon ghnó mar **chomhoiriúnacht le scéimre TOML RTK v1**, seachas mar chomhoiriúnacht iomlán
 le comhad inrite RTK, crúcaí blaoisce, feidhmiúcháin orduithe Rust, nó leagan amach a stór iontaoibhe.

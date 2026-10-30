@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute disertakan dengan sistem pemalam ala WordPress. Pemalam ialah direktori
+67router disertakan dengan sistem pemalam ala WordPress. Pemalam ialah direktori
 serba lengkap — setiap satunya mempunyai manifes `plugin.json` dan fail titik masuk — yang mencangkuk
 ke dalam talian paip permintaan (`onRequest` / `onResponse` / `onError`) dan ke dalam
 peristiwa kitaran hayat (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -151,7 +151,7 @@ diisytiharkan. Kunci yang tidak terdapat dalam skema dibenarkan melaluinya.
 
 ### Direktori pemalam
 
-Pemalam terletak di bawah direktori data OmniRoute:
+Pemalam terletak di bawah direktori data 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

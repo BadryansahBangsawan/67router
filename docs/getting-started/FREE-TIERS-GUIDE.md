@@ -6,7 +6,7 @@ lastUpdated: 2026-10-11
 
 # Free Tiers Guide: Understand and Combine Free AI Access
 
-> **TL;DR**: Bring your own eligible provider accounts. OmniRoute combines the connections you configure; it does not issue the advertised aggregate token budget. Free access can require signup, an API key, approval, or a payment method. Provider limits, privacy policies, and terms still apply.
+> **TL;DR**: Bring your own eligible provider accounts. 67router combines the connections you configure; it does not issue the advertised aggregate token budget. Free access can require signup, an API key, approval, or a payment method. Provider limits, privacy policies, and terms still apply.
 
 ---
 
@@ -17,7 +17,7 @@ mean a no-auth endpoint, recurring quota, rate-limited uncapped access, a signup
 manual approval, or a temporary promotion. Some options require an account, API key,
 credit card, KYC, or acceptance of provider-specific terms.
 
-OmniRoute **aggregates** configured connections into one endpoint. You still sign up separately for each provider that requires an account. Connect those accounts and use `model: "auto"` to route among eligible targets. A fresh installation can have no eligible keyless target; installing OmniRoute alone does not guarantee a successful chat response.
+67router **aggregates** configured connections into one endpoint. You still sign up separately for each provider that requires an account. Connect those accounts and use `model: "auto"` to route among eligible targets. A fresh installation can have no eligible keyless target; installing 67router alone does not guarantee a successful chat response.
 
 ---
 
@@ -62,7 +62,7 @@ These providers have **free tiers** with specific limits:
 
 ## How to Stack Free Tiers
 
-The magic of OmniRoute is **stacking free tiers**. Instead of relying on one provider, you connect multiple free providers and let OmniRoute automatically pick the best one for each request.
+The magic of 67router is **stacking free tiers**. Instead of relying on one provider, you connect multiple free providers and let 67router automatically pick the best one for each request.
 
 ### Example: Broader Free-Tier Coverage
 
@@ -73,7 +73,7 @@ Connect several providers to reduce dependence on any single quota:
 3. **Pollinations** — keyless, rate-limited access
 4. **LongCat** — one-time signup grant (requires KYC)
 
-Then use `model: "auto"` and OmniRoute will:
+Then use `model: "auto"` and 67router will:
 
 - Try the highest-ranked eligible connection first
 - If its quota or health check fails → try the next configured provider
@@ -107,7 +107,7 @@ uncapped/keyless access, signup credits, discontinued entries, and higher-risk s
 
 ### Step 5: Click Connect
 
-For a `NOAUTH` provider, OmniRoute does not request an upstream credential. This does not guarantee that the upstream accepts third-party clients or has available capacity. OAuth and API-key providers must be connected through their documented account flow. Your client still uses the OmniRoute API key shown in **Dashboard → Endpoints** when router authentication is enabled.
+For a `NOAUTH` provider, 67router does not request an upstream credential. This does not guarantee that the upstream accepts third-party clients or has available capacity. OAuth and API-key providers must be connected through their documented account flow. Your client still uses the 67router API key shown in **Dashboard → Endpoints** when router authentication is enabled.
 
 ### Step 6: Repeat
 
@@ -117,7 +117,7 @@ Connect several providers whose terms and privacy model fit your use case.
 
 ## Reading the Catalog Correctly
 
-- `NOAUTH` means OmniRoute does not ask you for a provider credential; it does not
+- `NOAUTH` means 67router does not ask you for a provider credential; it does not
   guarantee uptime, privacy, or unlimited capacity.
 - `hasFree` is discovery metadata. It can represent a recurring quota, keyless access,
   signup credit, approval program, or promotion.
@@ -130,15 +130,15 @@ Connect several providers whose terms and privacy model fit your use case.
 
 ---
 
-## How OmniRoute Makes Free Tiers Better
+## How 67router Makes Free Tiers Better
 
 ### 1. Automatic Fallback
 
-If one free provider is busy or down, OmniRoute automatically tries the next one. You don't need to do anything.
+If one free provider is busy or down, 67router automatically tries the next one. You don't need to do anything.
 
 ### 2. Smart Routing
 
-OmniRoute picks the **best free provider** for each request based on:
+67router picks the **best free provider** for each request based on:
 
 - Speed — Which provider is fastest right now?
 - Quality — Which provider is best for this task?
@@ -146,13 +146,13 @@ OmniRoute picks the **best free provider** for each request based on:
 
 ### 3. Token Savings
 
-OmniRoute's compression pipeline can reduce eligible prompt and tool-output tokens. The
+67router's compression pipeline can reduce eligible prompt and tool-output tokens. The
 actual savings depend on content, selected engines, provider accounting, and fidelity
 settings; compression does not multiply every provider quota by a fixed amount.
 
 ### 4. Multi-Account Support
 
-If provider terms permit multiple accounts or credentials, OmniRoute can treat each
+If provider terms permit multiple accounts or credentials, 67router can treat each
 connection as a separate routing candidate. Do not create extra accounts to evade a
 provider's quota or access policy.
 
@@ -167,7 +167,7 @@ The live, pool-deduplicated catalog currently reports:
 | Recurring quantified grant     | **~1.62B tokens/month** | Shared pools counted once; excludes uncapped providers from the sum |
 | First month with signup grants |       **~2.22B tokens** | Recurring total plus one-time and recurring credits                 |
 
-These are catalog-wide estimates across separate eligible accounts, not an allowance supplied by OmniRoute or a prediction for a fresh installation. Your usable capacity depends on the providers you connect and their current conditions. The values are computed from `open-sse/config/freeModelCatalog.ts`; see the
+These are catalog-wide estimates across separate eligible accounts, not an allowance supplied by 67router or a prediction for a fresh installation. Your usable capacity depends on the providers you connect and their current conditions. The values are computed from `open-sse/config/freeModelCatalog.ts`; see the
 [Free Tiers Reference](../reference/FREE_TIERS.md) for pool deduplication, ToS flags,
 discontinued entries, and signup-credit methodology.
 
@@ -194,7 +194,7 @@ requirements. Critical workloads should have monitored, contractually suitable f
 
 Tradeoffs may include strict limits, waitlists, KYC, credit-card verification, training on
 prompts, weaker privacy, no SLA, model churn, geographic restrictions, paid overage, or
-account-policy risk. OmniRoute surfaces the available metadata; you choose what to enable.
+account-policy risk. 67router surfaces the available metadata; you choose what to enable.
 
 ### "How do I get more free quota?"
 
@@ -213,7 +213,7 @@ Free Provider Rankings page as a quality signal and verify the actual model serv
 
 ## What's Next?
 
-- **[Auto-Combo Guide](./AUTO-COMBO-GUIDE.md)** — Let OmniRoute pick the best AI for you
+- **[Auto-Combo Guide](./AUTO-COMBO-GUIDE.md)** — Let 67router pick the best AI for you
 - **[Providers Guide](./PROVIDERS-GUIDE.md)** — Connect more providers
 - **[Troubleshooting](../guides/TROUBLESHOOTING.md)** — Fix common issues
 - **[Free Tiers Reference](../reference/FREE_TIERS.md)** — Full list of free tiers

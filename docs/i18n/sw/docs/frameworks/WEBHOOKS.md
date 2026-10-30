@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute inaweza kutuma webhooks za HTTP wakati matukio ya jukwaa yanapotokea. Zitumie kuunganisha na
+67router inaweza kutuma webhooks za HTTP wakati matukio ya jukwaa yanapotokea. Zitumie kuunganisha na
 Slack, PagerDuty, Datadog, huduma za ndani za arifa, au kipokeaji chochote cha HTTP.
 
 Kisambazaji hutia saini kila uwasilishaji kwa HMAC-SHA256, hujaribu tena baada ya
@@ -54,7 +54,7 @@ hitilafu za kila webhook ili kipokeaji kimoja kibaya kisiweze kuzuia vingine.
 
 ## Utiaji Saini wa HMAC
 
-Webhook inapokuwa na `secret`, OmniRoute hutia saini body ya JSON na kutuma:
+Webhook inapokuwa na `secret`, 67router hutia saini body ya JSON na kutuma:
 
 ```
 Content-Type: application/json
@@ -208,7 +208,7 @@ Ukurasa wa dashibodi katika `/dashboard/webhooks` (angalia
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Test webhook delivery from OmniRoute",
+    "message": "Test webhook delivery from 67router",
     "webhookId": "<uuid>"
   }
 }

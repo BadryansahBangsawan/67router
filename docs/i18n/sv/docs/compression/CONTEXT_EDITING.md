@@ -4,13 +4,13 @@
 
 ---
 
-Delegerad **Context Editing** är en funktion för kontexthantering som endast finns för Claude. Till skillnad från OmniRoutes lokala
+Delegerad **Context Editing** är en funktion för kontexthantering som endast finns för Claude. Till skillnad från 67routers lokala
 komprimeringsmotorer (Caveman, RTK, LLMLingua, staplade pipelines) – som skriver om begärans innehåll
 _innan_ det lämnar proxyn – ber Context Editing **leverantören** att rensa inaktuella
-verktygsanvändnings-/verktygsresultatblock från sitt eget aktiva kontextfönster. OmniRoute lägger endast till en
+verktygsanvändnings-/verktygsresultatblock från sitt eget aktiva kontextfönster. 67router lägger endast till en
 parameter i innehållet (`context_management.edits[]`); Claude utför den faktiska rensningen utifrån sin egen tokeniserare.
 
-Detta är till sin natur en delegerad funktion: andra leverantörer avvisar parametern, så OmniRoute begränsar
+Detta är till sin natur en delegerad funktion: andra leverantörer avvisar parametern, så 67router begränsar
 den strikt till Claude och Claude-Code-kompatibla reläer.
 
 Primär källa: `open-sse/config/contextEditing.ts` (strategi-id:n, injicering i innehåll, extrahering av
@@ -19,7 +19,7 @@ telemetri), `open-sse/executors/base.ts` (injenseringsgrind + reservhantering vi
 
 ## Vad `clear_tool_uses` gör
 
-OmniRoute injicerar en enda redigering i det utgående Anthropic Messages-innehållet:
+67router injicerar en enda redigering i det utgående Anthropic Messages-innehållet:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute injicerar en enda redigering i det utgående Anthropic Messages-inneh�
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Betaversionen annonseras via rubriken `anthropic-beta: context-management-2025-06-27`, som
-OmniRoute redan skickar med Claude-begäranden.
+67router redan skickar med Claude-begäranden.
 
 Injiceringen utförs av `applyContextEditingToBody()` och är **idempotent**: om en `clear_tool_uses`-redigering
 redan finns i innehållet (tillagd av ett tidigare anrop eller angiven av klienten) lämnas innehållet
-oförändrat. Om en `clear_thinking_20251015`-redigering också finns stabilsorterar OmniRoute
+oförändrat. Om en `clear_thinking_20251015`-redigering också finns stabilsorterar 67router
 `clear_thinking`-redigeringen först, eftersom Anthropic kräver att `clear_thinking` föregår
 `clear_tool_uses` i matrisen `edits[]`.
 
@@ -146,7 +146,7 @@ Beteende:
 
 ## Telemetri för `applied_edits`
 
-Efter ett Claude-svar registrerar OmniRoute hur mycket kontext leverantören faktiskt rensade. Detta
+Efter ett Claude-svar registrerar 67router hur mycket kontext leverantören faktiskt rensade. Detta
 strömmas **inte** — det extraheras efter bästa förmåga från den icke-strömmande svarskroppen och
 påverkar aldrig svaret (telemetrifel ignoreras).
 
@@ -178,14 +178,14 @@ motoretiketten `context-editing`, och kan särskiljas från besparingar med RTK/
 
 | Aspekt              | Lokala motorer (Caveman / RTK / LLMLingua / stacked) | Delegerad kontextredigering                                   |
 | ------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
-| Var den körs        | I OmniRoute, innan begäran lämnar proxyn             | Hos leverantören (Claude), på serversidan                     |
+| Var den körs        | I 67router, innan begäran lämnar proxyn              | Hos leverantören (Claude), på serversidan                     |
 | Vad den redigerar   | Prompt-/kontext-/verktygsresultattext                | Äldre verktygsanvändnings-/verktygsresultatblock              |
 | Leverantörsstöd     | Alla leverantörer                                    | Endast `claude` + `anthropic-compatible-cc-*`                 |
 | Växling             | Inställningar för komprimeringsläge                  | `contextEditing.enabled`                                      |
 | Felläge             | Fortsätt vid fel (originaltext)                      | 400-reservlösning: ta bort parametern och försök igen en gång |
 | Besparingstelemetri | `engine: <engine id>`                                | `engine: "context-editing"`                                   |
 
-De två kompletterar varandra: lokala motorer komprimerar de byte som OmniRoute skickar; kontextredigering låter
+De två kompletterar varandra: lokala motorer komprimerar de byte som 67router skickar; kontextredigering låter
 Claude rensa den löpande kontexten mellan turer. De kan aktiveras tillsammans.
 
 ## Se även

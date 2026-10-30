@@ -40,11 +40,11 @@ samaa vuorokohtaista paikallista työkaluominaisuutta, kun tunneli ja yhdistin o
 1. Avaa **ChatGPT Web (Codex)** -palveluntarjoaja ja lisää yhteys.
 2. Liitä koko ChatGPT Cookie -otsake, tunnelin tunnus, suoritusympäristön avain ja mukautetun yhdistimen
    nimi. Uusissa työkaluja tukevissa määrityksissä on käytettävä juuri luotua yhdistintä, jonka nimi on täsmälleen
-   `OmniRoute Codex v2`, jonka Authentication-asetuksena on None ja Permissions-asetuksena Allow all
+   `67router Codex v2`, jonka Authentication-asetuksena on None ja Permissions-asetuksena Allow all
    actions.
-3. Suorita yhteyden tarkistus. OmniRoute avaa selainpohjaisen Temporary Chat -keskustelun ja tunnistaa,
+3. Suorita yhteyden tarkistus. 67router avaa selainpohjaisen Temporary Chat -keskustelun ja tunnistaa,
    ovatko Sol ja Pro käytettävissä tilillä.
-4. Tallenna yhteys. OmniRoute korvaa liitetyn evästeen vahvistetulla
+4. Tallenna yhteys. 67router korvaa liitetyn evästeen vahvistetulla
    Playwright-tallennustilalla ja tallentaa sen yhdessä suoritusympäristön avaimen kanssa salatun
    tunnistetietoabstraktion kautta.
 
@@ -78,10 +78,10 @@ High-reittiin, ja Prota tukevat tilit tarjoavat lisäksi Extra High- ja Pro-reit
 kiinteä taustajärjestelmän malli ja päättelypanostus; ristiriitainen eksplisiittinen Responses-päättelypanostus
 hylätään turvallisesti sen sijaan, että valittua selaintilaa muutettaisiin hiljaisesti.
 
-Älä nimeä uudelleen äläkä käytä uudelleen vanhempaa `Codex Native`- tai `OmniRoute Codex` -yhdistintä. ChatGPT
+Älä nimeä uudelleen äläkä käytä uudelleen vanhempaa `Codex Native`- tai `67router Codex` -yhdistintä. ChatGPT
 tallentaa julkisen MCP-sopimuksen välimuistiin yhdistimen identiteetin perusteella, kun taas päivitetty silta käyttää
 uutta suoraa vuorotunnistesopimusta. Suoritusympäristö hylkää nämä vanhat identiteetit ja edellyttää
-uutta `OmniRoute Codex v2` -yhdistintä.
+uutta `67router Codex v2` -yhdistintä.
 
 ## Suojausmalli
 
@@ -94,12 +94,12 @@ uutta `OmniRoute Codex v2` -yhdistintä.
 
 ## Näytötön VPS ja Docker
 
-npm-, systemd- ja PM2-asennuksissa OmniRoute tunnistaa yleiset Chromen ja Chromiumin polut.
-Vaihtoehtoisesti voit asettaa muuttujan `CHATGPT_WEB_CODEX_CHROME_PATH`. Ajonaikaisissa vuoroissa käytetään tarkoituksella käyttöliittymällistä Chromea, koska ChatGPT hylkää aidosti päättömän selaimen rakenteen. Näytöttömän isännän on siksi suoritettava OmniRoutea yksityisellä Xvfb-näytöllä; pelkkä Chromen polun asettaminen ei tarjoa sellaista.
+npm-, systemd- ja PM2-asennuksissa 67router tunnistaa yleiset Chromen ja Chromiumin polut.
+Vaihtoehtoisesti voit asettaa muuttujan `CHATGPT_WEB_CODEX_CHROME_PATH`. Ajonaikaisissa vuoroissa käytetään tarkoituksella käyttöliittymällistä Chromea, koska ChatGPT hylkää aidosti päättömän selaimen rakenteen. Näytöttömän isännän on siksi suoritettava 67routeria yksityisellä Xvfb-näytöllä; pelkkä Chromen polun asettaminen ei tarjoa sellaista.
 
-Dockerin `web`-profiili käynnistää `chatgpt-web-codex-browser`-palvelun sisäisessä Compose-verkossa. Sivuvaunupalvelu suorittaa käyttöliittymällistä Chromea Xvfb:n sisällä, joten fyysistä näyttöä ei tarvita. Sen CDP-porttia ei julkaista isännässä. Suojattu selainprofiilitaltio on erillään OmniRoute-datataltiosta, ja selaimelle annetaan riittävästi jaettua muistia. Sisäinen CDP-välityspalvelin kuuntelee vain porttia `9223` Compose-verkon sisällä; Chrome pysyy sidottuna sivuvaunupalvelun loopback-osoitteeseen.
+Dockerin `web`-profiili käynnistää `chatgpt-web-codex-browser`-palvelun sisäisessä Compose-verkossa. Sivuvaunupalvelu suorittaa käyttöliittymällistä Chromea Xvfb:n sisällä, joten fyysistä näyttöä ei tarvita. Sen CDP-porttia ei julkaista isännässä. Suojattu selainprofiilitaltio on erillään 67router-datataltiosta, ja selaimelle annetaan riittävästi jaettua muistia. Sisäinen CDP-välityspalvelin kuuntelee vain porttia `9223` Compose-verkon sisällä; Chrome pysyy sidottuna sivuvaunupalvelun loopback-osoitteeseen.
 
-Hakemistossa `DATA_DIR` oleva valvojan vuokralukitus estää useita OmniRoute-prosesseja hallitsemasta samaa tunnelia ja välittäjän tilaa. Doctor ilmoittaa ristiriidasta.
+Hakemistossa `DATA_DIR` oleva valvojan vuokralukitus estää useita 67router-prosesseja hallitsemasta samaa tunnelia ja välittäjän tilaa. Doctor ilmoittaa ristiriidasta.
 
 ## Vuorovaikutteinen palautus
 

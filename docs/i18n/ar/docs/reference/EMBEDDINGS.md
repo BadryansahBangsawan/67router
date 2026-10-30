@@ -4,9 +4,9 @@
 
 ---
 
-ملاحظات للمشغّلين حول `POST /v1/embeddings` عندما يكون OmniRoute أمام
+ملاحظات للمشغّلين حول `POST /v1/embeddings` عندما يكون 67router أمام
 Hindsight 0.9.1 (واجهة `encode(list[str])` النصية فقط) وMemorix 1.6.0 (بوابة وسائط Jina).
-تم التحقق مباشرةً بتاريخ 2026-08-17 مقابل OmniRoute 3.8.49 على
+تم التحقق مباشرةً بتاريخ 2026-08-17 مقابل 67router 3.8.49 على
 `https://omniroute.jaguar-fish.ts.net/v1`. لا توجد أسرار أدناه.
 
 ## معرّفات النماذج العاملة
@@ -80,7 +80,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 لا يمكن أن ينجح `gemini-embedding-2` الأصلي عبر GitOps وحده. يجب إضافة مفتاح
 Google AI Studio بصفته اتصالًا لموفّر `gemini` (عبر لوحة المعلومات أو باستيراد
-`GEMINI_API_KEY` إلى OmniRoute). هذا السر غير موجود في هذا المستودع.
+`GEMINI_API_KEY` إلى 67router). هذا السر غير موجود في هذا المستودع.
 
 ### مسار Jina متعدد الوسائط
 
@@ -101,7 +101,7 @@ Google AI Studio بصفته اتصالًا لموفّر `gemini` (عبر لوح�
 
 ### كائن صورة Jina / Memorix
 
-عنصر الصورة القياسي في OmniRoute (صورة PNG بمقاس 28×28، أي 784 بكسل — يرفض Jina الصور بمقاس 1×1):
+عنصر الصورة القياسي في 67router (صورة PNG بمقاس 28×28، أي 784 بكسل — يرفض Jina الصور بمقاس 1×1):
 
 ```json
 {
@@ -150,7 +150,7 @@ Google AI Studio بصفته اتصالًا لموفّر `gemini` (عبر لوح�
 
 تضمينات Hindsight نصية فقط (`encode(list[str])`). وهو لا يرسل كائنات
 صور. وجّه عنوان URL الأساسي للتضمينات المتوافقة مع OpenAI في Hindsight إلى
-مسار OmniRoute ‏`/v1`، واستخدم معرّفًا عاملًا من الجدول أعلاه
+مسار 67router ‏`/v1`، واستخدم معرّفًا عاملًا من الجدول أعلاه
 (`jina-ai/jina-embeddings-v5-omni-small` أو
 `openrouter/google/gemini-embedding-2`). لا تضبط النموذج على المعرّف المجرّد
 `gemini-embedding-2` ما لم يكن مفتاح API لموفّر `gemini` موجودًا على البوابة.
@@ -158,12 +158,12 @@ Google AI Studio بصفته اتصالًا لموفّر `gemini` (عبر لوح�
 ### Memorix 1.6.0
 
 لا يتعامل Memorix مع `baseUrl` كمسار وسائط أصلي إلا إذا طابق
-`/jina\.ai/i`. يبقى عنوان URL الخاص بـOmniRoute على المسار النصي فقط حتى عندما
+`/jina\.ai/i`. يبقى عنوان URL الخاص بـ67router على المسار النصي فقط حتى عندما
 يكون النموذج Jina omni. هذه البوابة مشكلة في عميل Memorix. وبصرف النظر عن ذلك،
-لا يزال OmniRoute يرفض بنية Jina ‏`{image: "data:..."}` التي سيرسلها Memorix
+لا يزال 67router يرفض بنية Jina ‏`{image: "data:..."}` التي سيرسلها Memorix
 إذا فُتحت البوابة، ولذلك لا تستطيع العملاء المتوافقة مع Jina تضمين الصور عبر
-OmniRoute من دون مخطط `{type,source}` القياسي.
+67router من دون مخطط `{type,source}` القياسي.
 
 استخدم `jina-ai/jina-embeddings-v5-omni-small` للنصوص. لا توجّه
-`base_url` في Memorix إلى `https://api.jina.ai` — أبقِ OmniRoute المرحلة
+`base_url` في Memorix إلى `https://api.jina.ai` — أبقِ 67router المرحلة
 الوسيطة الوحيدة.

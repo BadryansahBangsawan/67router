@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na zuwa da zaɓaɓɓun proxies na kyauta a cikin teburin `free_proxies`,
+67router na zuwa da zaɓaɓɓun proxies na kyauta a cikin teburin `free_proxies`,
 waɗanda ake daidaita su daga masu samarwa na waje (1proxy, proxifly, iplocate, webshare).
 Dashboard yana nuna su a ƙarƙashin **Settings → Free Proxies**. Wannan takarda
 tana bayani kan tacewa, jerewa, ƙirgawa, da bayar da rahoton kurakuran daidaitawa

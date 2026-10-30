@@ -4,7 +4,7 @@
 
 ---
 
-Meta OmniRoute jaħdem ġewwa Docker, il-proċess standard ta’ "Import from Zed Keychain" ifalli
+Meta 67router jaħdem ġewwa Docker, il-proċess standard ta’ "Import from Zed Keychain" ifalli
 għax il-container ma jistax jaċċessa d-daemon tal-keychain tas-sistema operattiva ospitanti (libsecret fuq Linux,
 Keychain fuq macOS, Credential Manager fuq Windows) u d-direttorji tal-konfigurazzjoni ta’ Zed fis-sistema
 tal-fajls ospitanti ma jkunux viżibbli ġewwa l-container b’mod awtomatiku.
@@ -20,7 +20,7 @@ tal-fajls ospitanti ma jkunux viżibbli ġewwa l-container b’mod awtomatiku.
    jikkomunika mas-servizz tal-keychain tas-sistema operattiva permezz ta’ socket Unix jew sessjoni D-Bus.
    L-ebda wieħed minnhom ma jkun konness mal-container b’mod awtomatiku, għalhekk il-qari tal-kredenzjali dejjem ifalli.
 
-OmniRoute jidentifika l-ambjent Docker permezz ta’ żewġ euristiċi:
+67router jidentifika l-ambjent Docker permezz ta’ żewġ euristiċi:
 
 - Il-preżenza ta’ `/.dockerenv` (miktub mid-daemon ta’ Docker meta jibda l-container).
 - Is-sekwenza `docker` tidher f’`/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Meta tiġi attivata waħda minn dawn l-euristiċi, ir-rotta tal-importazzjoni ti
 
 1. Iftaħ **Dashboard → Providers → Zed**.
 2. Il-pannell **Manual Token Import** jidher taħt il-kard tal-importazzjoni mill-keychain. Meta
-   OmniRoute jidentifika Docker, dan il-pannell jespandi awtomatikament wara l-ewwel tentattiv fallut
+   67router jidentifika Docker, dan il-pannell jespandi awtomatikament wara l-ewwel tentattiv fallut
    ta’ importazzjoni mill-keychain.
 3. Agħżel il-provider mil-lista dropdown (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, jew DeepSeek).

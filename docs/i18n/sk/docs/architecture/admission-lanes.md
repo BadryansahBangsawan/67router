@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute má **dva** lokálne systémy pruhov na úrovni procesu s rôznym rozsahom. Sú
+67router má **dva** lokálne systémy pruhov na úrovni procesu s rôznym rozsahom. Sú
 komplementárne; operátori by mali vedieť, na ktorý z nich sa pozerajú.
 
 ## 1. Prijímanie na úrovni bajtov v rámci celého procesu (`chatBodyAdmission.ts`)

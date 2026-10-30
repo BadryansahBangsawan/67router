@@ -4,7 +4,7 @@
 
 ---
 
-Ushbu hujjat OmniRouteʼdagi barcha CI sifat darvozalari uchun nufuzli maʼlumotnoma hisoblanadi.
+Ushbu hujjat 67routerʼdagi barcha CI sifat darvozalari uchun nufuzli maʼlumotnoma hisoblanadi.
 Unda har bir darvoza, u nimalarni tekshirishi, qaysi CI topshirigʻida ishlashi, ratchet bazaviy
 darajasidan yoki oʻtdi/oʻtmadi siyosatidan foydalanishi hamda tuzilishni bloklashi yoki tavsiyaviy
 ekanligi bayon qilingan.
@@ -262,14 +262,14 @@ Faqat pull request'larda ishlaydi.
 
 Bular cron jadvalida (va `workflow_dispatch` orqali) ishlaydi, hech qachon PR'larda emas. Barchasi tavsiyaviy.
 
-| Workflow               | Tekshiradi                                                                                                                                                                                    | Bloklovchi     |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | Tasodifiy seed va yuqori ishga tushirish soni bilan fast-check property testlari                                                                                                              | **Tavsiyaviy** |
-| `nightly-resilience`   | Heap oʻsishi darvozasi, chaos fault-injection, k6 yuk/soak                                                                                                                                    | **Tavsiyaviy** |
-| `nightly-llm-security` | promptfoo injection himoyasi (bloklash rejimi) + garak tekshiruvlari (provayder secret'i boʻlmasa oʻtkazib yuboriladi)                                                                        | **Tavsiyaviy** |
-| `nightly-schemathesis` | `docs/openapi.yaml` yordamida jonli OmniRoute'ga qarshi OpenAPI kontrakt fuzzing'i (schemathesis) — spetsifikatsiya buzilishlari / qayta ishlanmagan 500 xatolarini ochib beradi (Fase 8 B.4) | **Tavsiyaviy** |
-| `nightly-mutation`     | Tezkor unit yoʻlagi boʻyicha Stryker mutatsiya-testlash ballari — omon qolgan mutantlar zaif assertlarni ochib beradi                                                                         | **Tavsiyaviy** |
-| `nightly-compat`       | Qo'llab-quvvatlanadigan `engines.node` diapazonlari boʻyicha Node dvigatelining moslik matritsasi                                                                                             | **Tavsiyaviy** |
+| Workflow               | Tekshiradi                                                                                                                                                                                   | Bloklovchi     |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | Tasodifiy seed va yuqori ishga tushirish soni bilan fast-check property testlari                                                                                                             | **Tavsiyaviy** |
+| `nightly-resilience`   | Heap oʻsishi darvozasi, chaos fault-injection, k6 yuk/soak                                                                                                                                   | **Tavsiyaviy** |
+| `nightly-llm-security` | promptfoo injection himoyasi (bloklash rejimi) + garak tekshiruvlari (provayder secret'i boʻlmasa oʻtkazib yuboriladi)                                                                       | **Tavsiyaviy** |
+| `nightly-schemathesis` | `docs/openapi.yaml` yordamida jonli 67router'ga qarshi OpenAPI kontrakt fuzzing'i (schemathesis) — spetsifikatsiya buzilishlari / qayta ishlanmagan 500 xatolarini ochib beradi (Fase 8 B.4) | **Tavsiyaviy** |
+| `nightly-mutation`     | Tezkor unit yoʻlagi boʻyicha Stryker mutatsiya-testlash ballari — omon qolgan mutantlar zaif assertlarni ochib beradi                                                                        | **Tavsiyaviy** |
+| `nightly-compat`       | Qo'llab-quvvatlanadigan `engines.node` diapazonlari boʻyicha Node dvigatelining moslik matritsasi                                                                                            | **Tavsiyaviy** |
 
 Ishlash samarasi baseline'lari (heap, TTFB, build vaqti) qayd etiladi, lekin tekshiruv sifatida bloklanmaydi: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) ga qarang (`npm run perf:lts-baseline`).
 
@@ -552,7 +552,7 @@ ruxsat etilganlar roʻyxati bilan yashil tekshiruv sifat haqida soxta tasavvur b
 
 ## Agent vositalari: sikl ichidagi LSP (ixtiyoriy)
 
-CI tekshiruvlaridan tashqari, OmniRoute **ixtiyoriy** `agent-lsp` asosini ham taqdim etadi
+CI tekshiruvlaridan tashqari, 67router **ixtiyoriy** `agent-lsp` asosini ham taqdim etadi
 (loyiha darajasidagi `.mcp.json`, 7-bosqich, 15-vazifa). Kod yozuvchi agentlarga TypeScript til serverini taqdim etish uchun `.mcp.json`
 yarating, shunda ular kod yozishdan **oldin** belgilarni aniqlaydi /
 diagnostikani bajaradi — bu `typecheck:core` uchun daʼvo qilishdan oldin kompilyatsiya qiluvchi hamroh boʻlib,

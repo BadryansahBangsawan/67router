@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute julkaisee npm- ja Docker-artefakteja. Nämä portit tarjoavat alkuperän (provenance), inventaarion (SBOM) ja CVE-skannauksen, kaikki OSS-pohjaisia ja integroituina julkaisuprosesseihin. **Neuvova ensin** -lähestymistapa – ne raportoivat nyt, ja siirtyvät estävään tilaan ensimmäisen onnistuneen julkaisun jälkeen.
+67router julkaisee npm- ja Docker-artefakteja. Nämä portit tarjoavat alkuperän (provenance), inventaarion (SBOM) ja CVE-skannauksen, kaikki OSS-pohjaisia ja integroituina julkaisuprosesseihin. **Neuvova ensin** -lähestymistapa – ne raportoivat nyt, ja siirtyvät estävään tilaan ensimmäisen onnistuneen julkaisun jälkeen.
 
 | Portti                | Työkalu                                        | Missä                         | Estääkö?                        | Tuloste                                           |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------------ | :------------------------------------------------ |
@@ -47,7 +47,7 @@ Yllä mainitun CVE Variance -korjauksen "ei ylävirran korjausta" -haaran mukais
   nykyinen npm-latest (`0.1.29`) vetää edelleen `extract-zip@2.0.1`-paketin.
 - **Saavuttamaton tuotannosta.** `promptfoo` on vain kehitysriippuvuus (ei koskaan lueteltu
   `dependencies`-kohdassa), eikä mikään tiedosto `src/`, `open-sse/` tai `bin/` -kansioissa tuo
-  `extract-zip` npm-pakettia — OmniRouten oma `extractZip()`-apufunktio
+  `extract-zip` npm-pakettia — 67routerin oma `extractZip()`-apufunktio
   (`src/lib/versionManager/binaryManager.ts:93`) kutsuu natiiveja `unzip`/`tar`-komentoja
   ja on asiaan liittymätön. `@openai/codex-security` sisältää myös oman symlink-traversal-suojauksensa `extract-zip`:n onEntry-takaisinkutsun lisäksi.
 - **Älä** aliasoi `extract-zip`-pakettia `package.json`-tiedoston `overrides`-kohdan kautta — ainoa käyttökelpoinen

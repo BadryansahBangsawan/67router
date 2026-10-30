@@ -8,7 +8,7 @@
 
 > **Patiesības avots:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute ļauj katram starpniekserverim piešķirt **adrešu saimes izejas direktīvu**. Pēc noklusējuma operētājsistēma izvēlas IPv4 vai IPv6 (duālais steks, „Happy Eyeballs”). Iestatot direktīvu uz `ipv4` vai `ipv6`, OmniRoute piesaista katru savienojumu caur šo starpniekserveri izvēlētajai saimei un **droši pārtrauc savienojumu**, nevis atkāpjas uz otru saimi.
+67router ļauj katram starpniekserverim piešķirt **adrešu saimes izejas direktīvu**. Pēc noklusējuma operētājsistēma izvēlas IPv4 vai IPv6 (duālais steks, „Happy Eyeballs”). Iestatot direktīvu uz `ipv4` vai `ipv6`, 67router piesaista katru savienojumu caur šo starpniekserveri izvēlētajai saimei un **droši pārtrauc savienojumu**, nevis atkāpjas uz otru saimi.
 
 Šajā lapā ir aprakstīts, kas ir šī direktīva, kāpēc tā pastāv, kur to konfigurēt un kā izpildlaikā tā tiek atrisināta.
 
@@ -122,7 +122,7 @@ Informāciju par pārējo starpniekserveru CRUD/piešķiršanas API skatiet fail
 
 ## Kā tiek atrisināta vērtība `auto`
 
-Ja `family` vērtība ir `auto`, OmniRoute **nepievieno** nevienu direktīvu — starpniekservera URL tiek izmantots bez izmaiņām, un savienojuma saime tiek noteikta iekšēji.
+Ja `family` vērtība ir `auto`, 67router **nepievieno** nevienu direktīvu — starpniekservera URL tiek izmantots bez izmaiņām, un savienojuma saime tiek noteikta iekšēji.
 
 URL izveides laikā (`proxyConfigToUrl` / `normalizeProxyUrl` failā `open-sse/utils/proxyDispatcher.ts`) starpniekserverim ar vērtību `auto` tiek izveidots vienkāršs URL bez marķiera:
 
@@ -158,7 +158,7 @@ Tātad:
 
 Direktīva, kas nav `auto`, tiek nodota kā viens sintētisks vaicājuma marķieris — `?family=ipv4` vai `?family=ipv6` —, kas vienu reizi tiek pievienots normalizētajam starpniekservera URL. `normalizeProxyUrl` rūpīgi noņem un atkārtoti pievieno šo marķieri tieši vienu reizi, lai tas nekad nesabojātu porta parsēšanu.
 
-Kad tiek izveidots dispečers, marķieris tiek nolasīts un pārveidots par konkrētu savienojuma adrešu saimi. Ja resursdators ir **pretējās** saimes IP literālis, OmniRoute izmet kļūdu (pretrunas gadījumā darbība tiek droši pārtraukta):
+Kad tiek izveidots dispečers, marķieris tiek nolasīts un pārveidots par konkrētu savienojuma adrešu saimi. Ja resursdators ir **pretējās** saimes IP literālis, 67router izmet kļūdu (pretrunas gadījumā darbība tiek droši pārtraukta):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Pēc tam konkrētā saime tiek fiksēta savienotājā:
 
 ## SOCKS5 saderība
 
-Saimes fiksēšana darbojas ar SOCKS5 starpniekserveriem, taču standarta `fetch-socks` neatklāj ligzdas opcijas, kas nepieciešamas starpniekservera posma saimes fiksēšanai. Šim nolūkam OmniRoute ietver savu savienotāju:
+Saimes fiksēšana darbojas ar SOCKS5 starpniekserveriem, taču standarta `fetch-socks` neatklāj ligzdas opcijas, kas nepieciešamas starpniekservera posma saimes fiksēšanai. Šim nolūkam 67router ietver savu savienotāju:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

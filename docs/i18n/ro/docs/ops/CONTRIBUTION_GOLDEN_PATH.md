@@ -113,7 +113,7 @@ sau una manuală documentată, adecvată modificării.
 - Cataloagele CLI se află separat în `bin/cli/locales/`.
 - Păstrați exact substituenții și etichetele ICU. Nu traduceți numele produselor/furnizorilor/modelelor,
   numele protocoalelor și anteturilor, comenzile, identificatorii de cod/JSON, URL-urile, variabilele de mediu sau
-  termenii protejați precum `OmniRoute`, `OAuth`, `MCP` și `A2A`. Lista-sursă actuală este
+  termenii protejați precum `67router`, `OAuth`, `MCP` și `A2A`. Lista-sursă actuală este
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Buclă focalizată**
@@ -268,7 +268,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # reutilizează o arhiv�
   `current` și `previous` atunci când verificarea respectivă eșuează. Un candidat care nu trece
   prima validare nu este promovat niciodată.
 
-Totul este scris în `_artifacts/candidate/`, care este ignorat de git; o instalare OmniRoute
+Totul este scris în `_artifacts/candidate/`, care este ignorat de git; o instalare 67router
 existentă și directorul său de date nu sunt atinse niciodată. CLI-ul promovat este
 `_artifacts/candidate/current/prefix/bin/omniroute`; porniți-l cu propriul `DATA_DIR` atunci când îl
 utilizați. Coduri de ieșire: `0` succes, `1` validare sau promovare eșuată, `2` eroare de utilizare

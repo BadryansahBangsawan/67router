@@ -4,7 +4,7 @@
 
 ---
 
-Soláthraíonn OmniRoute linn choimeádta de sheachfhreastalaithe saor in aisce sa tábla `free_proxies`,
+Soláthraíonn 67router linn choimeádta de sheachfhreastalaithe saor in aisce sa tábla `free_proxies`,
 atá sioncronaithe ó sholáthraithe seachtracha (1proxy, proxifly, iplocate, webshare). Taispeánann an
 deais iad seo faoi **Socruithe → Seachfhreastalaithe Saor in Aisce**. Clúdaíonn an cháipéis seo
 an scagadh, an sórtáil, an comhaireamh agus an tuairisciú ar earráidí sioncronaithe ar thaobh an

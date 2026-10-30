@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Yorùbá)
+# 67router Auto-Combo Engine (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # èyí tó rọrùn jù fún token kọ̀ọ̀kan
 
 **Ohun tó máa ṣẹlẹ̀:**
 
-1. OmniRoute máa ṣàwárí `auto/` prefix nínú `src/sse/handlers/chat.ts`
+1. 67router máa ṣàwárí `auto/` prefix nínú `src/sse/handlers/chat.ts`
 2. Ó máa béèrè gbogbo **àsopọ̀ provider tó ń ṣiṣẹ́** láti inú database
 3. Ó máa ṣe àlẹ́mọ́ sí àwọn tó ní credentials tó wúlò (kọ́kọ́rọ́ API tàbí token OAuth)
 4. Ó máa pinnu model fún àsopọ̀ kọ̀ọ̀kan (`connection.defaultModel` tàbí model àkọ́kọ́ ti provider)
@@ -88,7 +88,7 @@ candidate pool lọ́wọ́lọ́wọ́ ti channel `auto/*`, tí a ṣe lọ́�
 - ìdènà model — `isModelLocked(provider, connectionId, model)`
 
 Candidate kọ̀ọ̀kan tún ní flag `excluded` ti kọ́kọ́rọ́ API yìí. Àwọn ohun tí a yọkúrò ni a ń tọ́jú
-fún kọ́kọ́rọ́ API kọ̀ọ̀kan (table `auto_candidate_overrides`, migration `128`) — OmniRoute jẹ́
+fún kọ́kọ́rọ́ API kọ̀ọ̀kan (table `auto_candidate_overrides`, migration `128`) — 67router jẹ́
 single-tenant tí kò ní table `users`, nítorí náà `apiKeyId` ni identity gidi fún olùpè kọ̀ọ̀kan
 tó sún mọ́ ọn jù — a sì ń fi ipa mú un ní candidate-pool chokepoint nínú
 `open-sse/services/autoCombo/virtualFactory.ts` nípasẹ̀ `filterExcludedCandidates()` tó jẹ́ pure, tí a sì ti ṣe
@@ -182,7 +182,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Àwọn ìṣòro méjì tí ó wọ́pọ̀:
 
 - **`auto` kì í lo àwọn combo rẹ.** `auto`/`auto/*` máa ń kọ àkójọpọ̀ àwọn olùdíje tirẹ̀ tí kò nílò ìṣètò, ó sì máa ń ṣàyẹ̀wò àwọn combo tí a ti fi pamọ́ nìkan bí combo kan bá jẹ́ orúkọ `auto` ní ti gidi (a kò dámọ̀ràn rẹ̀). Láti darí ìbéèrè gba combo kan, fi orúkọ rẹ̀ gangan ránṣẹ́ — kì í ṣe `auto`.
-- **`openrouter/auto` jẹ́ ọjà OpenRouter gidi tí a ń sanwó fún** ("Auto Best Available"), kì í ṣe orúkọ-àpèjúwe OmniRoute. Ó jẹ́ ìforúkọsílẹ̀ àwòṣe adúróṣinṣin kan ṣoṣo nínú ìforúkọsílẹ̀ OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`), a sì máa ń gba owó rẹ̀ lọ́tọ̀. Lo Ètò → Ìdarí → Fi àwọn àwòṣe tí a ń sanwó fún pamọ́ láti yọ ọ́ kúrò nínú àwọn àkójọpọ̀ `auto`.
+- **`openrouter/auto` jẹ́ ọjà OpenRouter gidi tí a ń sanwó fún** ("Auto Best Available"), kì í ṣe orúkọ-àpèjúwe 67router. Ó jẹ́ ìforúkọsílẹ̀ àwòṣe adúróṣinṣin kan ṣoṣo nínú ìforúkọsílẹ̀ OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`), a sì máa ń gba owó rẹ̀ lọ́tọ̀. Lo Ètò → Ìdarí → Fi àwọn àwòṣe tí a ń sanwó fún pamọ́ láti yọ ọ́ kúrò nínú àwọn àkójọpọ̀ `auto`.
 
 Wo [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) àti [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) fún ìdàrúdàpọ̀ àkọ́kọ́ tí àkọsílẹ̀ yìí ń ṣàlàyé.
 
@@ -281,7 +281,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## Gbogbo Àwọn Ọ̀nà Ìdarí
 
-Ẹ́ńjìnnì combo OmniRoute ṣe àtìlẹ́yìn fún **ọ̀nà ìdarí 20** (tí a kéde nínú `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Ẹ́ńjìnnì Auto Combo fúnra rẹ̀ wà lábẹ́ ọ̀nà `auto`; àwọn yòókù sì wà fún àwọn combo tí a ti fi pamọ́.
+Ẹ́ńjìnnì combo 67router ṣe àtìlẹ́yìn fún **ọ̀nà ìdarí 20** (tí a kéde nínú `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Ẹ́ńjìnnì Auto Combo fúnra rẹ̀ wà lábẹ́ ọ̀nà `auto`; àwọn yòókù sì wà fún àwọn combo tí a ti fi pamọ́.
 
 | Ọ̀nà                 | Àpèjúwe                                                                                                                                                                                             |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -332,7 +332,7 @@ Fún yíyí tó muna, lo `round-robin`; fífún `weighted` ní àwọn ìwọ̀n
 
 Àkójọpọ̀ `pipeline` kan tó ní ó kéré tán àwọn model méjì lè yan ìdarí planner/executor pẹ̀lú
 `config.agenticOrchestration.enabled`. Target àkọ́kọ́ ló ń ṣètò ètò àti àwọn ìdáhùn ìkẹyìn;
-target kejì ló ń mú àwọn tool call abinibi client jáde. OmniRoute máa ń ṣàwárí àwọn ìtẹ̀síwájú
+target kejì ló ń mú àwọn tool call abinibi client jáde. 67router máa ń ṣàwárí àwọn ìtẹ̀síwájú
 tool-result láti inú protocol request, ó máa ń béèrè lọ́wọ́ planner bóyá tool round míì
 ṣì ṣe pàtàkì, ó sì máa ń yan executor tàbí planner ní ìmúdàgba gẹ́gẹ́ bí ìgbésẹ̀ ìkẹyìn
 tí client máa rí.
@@ -856,11 +856,11 @@ Suite yìí ń ṣiṣẹ́ nínú CI (iṣẹ́ `test:integration`) pẹ̀lú `
 
 ### Smoke live tó ní ìdènà (KÒ SÍ nínú CI — àwọn provider gidi)
 
-| Àṣẹ                                    | Ohun tó ń ṣe                                                                      |
-| :------------------------------------- | :-------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Routing gidi inú process pẹ̀lú `RUN_COMBO_LIVE=1`; ó ya snapshot DB OmniRoute live |
-| `npm run test:combo:live:vps`          | Àwọn ìpè HTTP sí server OmniRoute live (ṣètò `COMBO_LIVE_BASE_URL`)               |
-| `npm run test:combo:live:vps:failover` | Bákan náà, pẹ̀lú àwọn ìṣẹ̀lẹ̀ failover tí a mọ̀ọ́mọ̀ dá sílẹ̀                            |
+| Àṣẹ                                    | Ohun tó ń ṣe                                                                     |
+| :------------------------------------- | :------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Routing gidi inú process pẹ̀lú `RUN_COMBO_LIVE=1`; ó ya snapshot DB 67router live |
+| `npm run test:combo:live:vps`          | Àwọn ìpè HTTP sí server 67router live (ṣètò `COMBO_LIVE_BASE_URL`)               |
+| `npm run test:combo:live:vps:failover` | Bákan náà, pẹ̀lú àwọn ìṣẹ̀lẹ̀ failover tí a mọ̀ọ́mọ̀ dá sílẹ̀                           |
 
 Àwọn smoke test wọ̀nyí ń dán ipa ọ̀nà asopọ̀ gidi wò (combo → provider → completion). A mọ̀ọ́mọ̀ yọ wọ́n kúrò nínú CI nítorí pé wọ́n nílò credentials tó ń ṣiṣẹ́ àti ààyè ìwọlé VPS.
 

@@ -5,9 +5,9 @@
 ---
 
 Tinatapos ng mga relay (Vercel, Deno, Cloudflare) ang upstream na koneksyon sa isang
-serverless na backend upang makapag-egress ang OmniRoute mula sa isang matatag na rehiyon habang
+serverless na backend upang makapag-egress ang 67router mula sa isang matatag na rehiyon habang
 pinananatiling server-side ang API key ng provider. Tinatalakay ng dokumentong ito ang dalawang failure mode
-na nararanasan ng mga operator sa production at ang mga recovery path na ibinibigay ng OmniRoute para sa
+na nararanasan ng mga operator sa production at ang mga recovery path na ibinibigay ng 67router para sa
 bawat isa.
 
 ## Paano iniimbak ang relay auth
@@ -34,7 +34,7 @@ Hindi na maaaring i-decrypt ang nakaimbak na `relayAuthEnc` blob, kaya nagbabali
 1. Buksan ang **Settings → Proxy Pool**.
 2. Ang mga relay row na walang auth ay nagpapakita ng dilaw na `auth missing` badge at
    **Repair** button.
-3. I-click ang **Repair**. Tatawagin ng OmniRoute ang
+3. I-click ang **Repair**. Tatawagin ng 67router ang
    `POST /api/settings/proxies/[id]/repair-relay`, na:
    - nagde-decrypt ng `relayAuthEnc` gamit ang **kasalukuyang** key,
    - muling nagsusulat ng plaintext na `relayAuth` sa `notes`,
@@ -65,7 +65,7 @@ mare-recover ang token, kaya hindi mo na ito kailangang manual na hanapin.
 **Sintomas:** ipinapakita ng proxy test (`speed` button) na gumagana ang relay ngunit
 paminsan-minsan ay pumapalya pa rin ang mga request.
 
-Suriin ang mga relay awareness header na ibinabalik ng auto-test probe ng OmniRoute
+Suriin ang mga relay awareness header na ibinabalik ng auto-test probe ng 67router
 (tingnan ang **Settings → Proxy Pool** at ang mga counter na `relayTested` / `relayAlive`):
 
 - `x-relay-url` — kung aling relay backend ang tumugon.

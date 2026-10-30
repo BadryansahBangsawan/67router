@@ -7,7 +7,7 @@
 > **真實來源：** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **上次更新：** 2026-09-22 — 範圍命名空間指向 MCP-SERVER.md
 
-OmniRoute 具有一個路由感知授權管道，用於把關每個 API 請求。分類是**確定性**且**故障關閉**的 — 任何無法分類的內容最終都會歸類為 `MANAGEMENT`，並要求會話或管理級別的令牌。本頁解釋了供維護路由或設計新端點的工程師使用的模型。
+67router 具有一個路由感知授權管道，用於把關每個 API 請求。分類是**確定性**且**故障關閉**的 — 任何無法分類的內容最終都會歸類為 `MANAGEMENT`，並要求會話或管理級別的令牌。本頁解釋了供維護路由或設計新端點的工程師使用的模型。
 
 ![授權管道（3 種路由類別 + 策略評估）](../diagrams/exported/authz-pipeline.svg)
 

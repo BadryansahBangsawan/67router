@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, Hindsight 0.9.1 (ಪಠ್ಯ-ಮಾತ್ರ `encode(list[str])`) ಮತ್ತು Memorix 1.6.0 (Jina ಮೀಡಿಯಾ ಗೇಟ್) ಮುಂಭಾಗದಲ್ಲಿರುವಾಗ `POST /v1/embeddings` ಗಾಗಿ ಆಪರೇಟರ್ ಟಿಪ್ಪಣಿಗಳು. OmniRoute 3.8.49 ವಿರುದ್ಧ `https://omniroute.jaguar-fish.ts.net/v1` ನಲ್ಲಿ 2026-08-17 ರಂದು ಲೈವ್ ಆಗಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ. ಕೆಳಗೆ ಯಾವುದೇ ರಹಸ್ಯಗಳಿಲ್ಲ.
+67router, Hindsight 0.9.1 (ಪಠ್ಯ-ಮಾತ್ರ `encode(list[str])`) ಮತ್ತು Memorix 1.6.0 (Jina ಮೀಡಿಯಾ ಗೇಟ್) ಮುಂಭಾಗದಲ್ಲಿರುವಾಗ `POST /v1/embeddings` ಗಾಗಿ ಆಪರೇಟರ್ ಟಿಪ್ಪಣಿಗಳು. 67router 3.8.49 ವಿರುದ್ಧ `https://omniroute.jaguar-fish.ts.net/v1` ನಲ್ಲಿ 2026-08-17 ರಂದು ಲೈವ್ ಆಗಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ. ಕೆಳಗೆ ಯಾವುದೇ ರಹಸ್ಯಗಳಿಲ್ಲ.
 
 ## ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಮಾಡೆಲ್ id-ಗಳು
 
@@ -74,7 +74,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 ```
 
 ಸ್ಥಳೀಯ `gemini-embedding-2` GitOps ಮಾತ್ರದಿಂದ ಯಶಸ್ವಿಯಾಗಲು ಸಾಧ್ಯವಿಲ್ಲ. Google AI
-Studio ಕೀಯನ್ನು `gemini` ಪ್ರೊವೈಡರ್ ಸಂಪರ್ಕವಾಗಿ ಸೇರಿಸಬೇಕು (ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅಥವಾ OmniRoute ಒಳಗೆ ಆಮದು ಮಾಡಿದ
+Studio ಕೀಯನ್ನು `gemini` ಪ್ರೊವೈಡರ್ ಸಂಪರ್ಕವಾಗಿ ಸೇರಿಸಬೇಕು (ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅಥವಾ 67router ಒಳಗೆ ಆಮದು ಮಾಡಿದ
 `GEMINI_API_KEY`). ಆ ರಹಸ್ಯವು ಈ repo ಯಲ್ಲಿಲ್ಲ.
 
 ### Jina ಮಲ್ಟಿಮೋಡಲ್ ಪಥ
@@ -96,7 +96,7 @@ Studio ಕೀಯನ್ನು `gemini` ಪ್ರೊವೈಡರ್ ಸಂಪರ�
 
 ### Jina / Memorix ಚಿತ್ರ ಆಬ್ಜೆಕ್ಟ್
 
-OmniRoute ಕ್ಯಾನಾನಿಕಲ್ ಚಿತ್ರ ಐಟಂ (28×28 PNG, 784 ಪಿಕ್ಸೆಲ್ಗಳು — Jina 1×1 ಅನ್ನು ತಿರಸ್ಕರಿಸುತ್ತದೆ):
+67router ಕ್ಯಾನಾನಿಕಲ್ ಚಿತ್ರ ಐಟಂ (28×28 PNG, 784 ಪಿಕ್ಸೆಲ್ಗಳು — Jina 1×1 ಅನ್ನು ತಿರಸ್ಕರಿಸುತ್ತದೆ):
 
 ```json
 {
@@ -145,7 +145,7 @@ Memorix 1.6.0 / Jina ಸ್ಥಳೀಯ ಆಕಾರ:
 
 Hindsight ಎಂಬೆಡಿಂಗ್ಗಳು ಪಠ್ಯ-ಮಾತ್ರ (`encode(list[str])`). ಇದು
 ಚಿತ್ರ ಆಬ್ಜೆಕ್ಟ್ಗಳನ್ನು ಕಳುಹಿಸುವುದಿಲ್ಲ. Hindsight ನ OpenAI-ಹೊಂದಾಣಿಕೆಯ ಎಂಬೆಡಿಂಗ್ಗಳ ಬೇಸ್ URL ಅನ್ನು
-OmniRoute `/v1` ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ ಮತ್ತು ಮೇಲಿನ ಪಟ್ಟಿಯಿಂದ ಕಾರ್ಯನಿರ್ವಹಿಸುವ id ಅನ್ನು ಬಳಸಿ
+67router `/v1` ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ ಮತ್ತು ಮೇಲಿನ ಪಟ್ಟಿಯಿಂದ ಕಾರ್ಯನಿರ್ವಹಿಸುವ id ಅನ್ನು ಬಳಸಿ
 (`jina-ai/jina-embeddings-v5-omni-small` ಅಥವಾ
 `openrouter/google/gemini-embedding-2`). ಗೇಟ್ವೇಯಲ್ಲಿ `gemini` API ಕೀ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲದಿದ್ದರೆ, ಮಾಡೆಲ್ ಅನ್ನು ಬೇರ್
 `gemini-embedding-2` ಗೆ ಹೊಂದಿಸಬೇಡಿ.
@@ -153,10 +153,10 @@ OmniRoute `/v1` ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ ಮತ್ತು �
 ### Memorix 1.6.0
 
 `baseUrl` `/jina\.ai/i` ಗೆ ಹೊಂದಿಕೆಯಾದಾಗ ಮಾತ್ರ Memorix ಅದನ್ನು ಸ್ಥಳೀಯ ಮೀಡಿಯಾ ಎಂದು ಪರಿಗಣಿಸುತ್ತದೆ. ಮಾಡೆಲ್ Jina omni ಆಗಿದ್ದರೂ
-OmniRoute URL ಪಠ್ಯ-ಮಾತ್ರ ಪಥದಲ್ಲಿಯೇ ಉಳಿಯುತ್ತದೆ.
+67router URL ಪಠ್ಯ-ಮಾತ್ರ ಪಥದಲ್ಲಿಯೇ ಉಳಿಯುತ್ತದೆ.
 ಆ ಗೇಟ್ Memorix ಕ್ಲೈಂಟ್ನ ಸಮಸ್ಯೆಯಾಗಿದೆ. ಸ್ವತಂತ್ರವಾಗಿ, ಗೇಟ್
-ತೆರೆದರೆ Memorix ಕಳುಹಿಸುವ Jina `{image: "data:..."}` ಬಾಡಿಯನ್ನು OmniRoute ಇನ್ನೂ ತಿರಸ್ಕರಿಸುತ್ತದೆ; ಆದ್ದರಿಂದ ಕ್ಯಾನಾನಿಕಲ್ `{type,source}` ಸ್ಕೀಮಾ ಇಲ್ಲದೆ Jina-ಹೊಂದಾಣಿಕೆಯ ಕ್ಲೈಂಟ್ಗಳು OmniRoute ಮೂಲಕ
+ತೆರೆದರೆ Memorix ಕಳುಹಿಸುವ Jina `{image: "data:..."}` ಬಾಡಿಯನ್ನು 67router ಇನ್ನೂ ತಿರಸ್ಕರಿಸುತ್ತದೆ; ಆದ್ದರಿಂದ ಕ್ಯಾನಾನಿಕಲ್ `{type,source}` ಸ್ಕೀಮಾ ಇಲ್ಲದೆ Jina-ಹೊಂದಾಣಿಕೆಯ ಕ್ಲೈಂಟ್ಗಳು 67router ಮೂಲಕ
 ಚಿತ್ರಗಳನ್ನು ಎಂಬೆಡ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.
 
 ಪಠ್ಯಕ್ಕಾಗಿ `jina-ai/jina-embeddings-v5-omni-small` ಬಳಸಿ. Memorix
-`base_url` ಅನ್ನು `https://api.jina.ai` ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಬೇಡಿ — OmniRoute ಅನ್ನು ಏಕೈಕ ಹಾಪ್ ಆಗಿ ಇರಿಸಿ.
+`base_url` ಅನ್ನು `https://api.jina.ai` ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಬೇಡಿ — 67router ಅನ್ನು ಏಕೈಕ ಹಾಪ್ ಆಗಿ ಇರಿಸಿ.

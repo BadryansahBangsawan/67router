@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/cloudAgent/` agus `src/app/api/v1/agents/tasks/`
 > **Nuashonrú is déanaí:** 2026-06-28 — v3.8.40 (athnuachan frontmatter; 4 ghníomhaire, cursor-cloud san áireamh)
 
-Déanann OmniRoute gníomhairí códúcháin tríú páirtí arna n-óstáil sa néal (Codex Cloud, Cursor,
+Déanann 67router gníomhairí códúcháin tríú páirtí arna n-óstáil sa néal (Codex Cloud, Cursor,
 Devin, Jules) a chomhordú mar thascanna fadtéarmacha. Cuirtear gach gníomhaire taobh thiar de chomhéadan aonfhoirmeach ionas
 gur féidir le cliaint leid + URL stórtha a chur isteach agus torthaí a fháil gan a bheith ag plé le
 APIanna a bhaineann go sonrach leis an soláthraí.

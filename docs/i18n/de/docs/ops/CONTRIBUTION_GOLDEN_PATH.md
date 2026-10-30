@@ -113,7 +113,7 @@ einen Playwright-Test oder eine dokumentierte manuelle Prüfung.
 - CLI-Kataloge befinden sich separat unter `bin/cli/locales/`.
 - Bewahren Sie ICU-Platzhalter und Tags exakt. Übersetzen Sie keine Produkt-/Provider-/Modellnamen,
   Protokoll- und Header-Namen, Befehle, Code-/JSON-Bezeichner, URLs, Umgebungsvariablen oder
-  geschützte Begriffe wie `OmniRoute`, `OAuth`, `MCP` und `A2A`. Die aktuelle Quellliste befindet sich unter
+  geschützte Begriffe wie `67router`, `OAuth`, `MCP` und `A2A`. Die aktuelle Quellliste befindet sich unter
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Gezielte Schleife**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # einen andernorts erste
 - **Zurücksetzen.** `run` validiert den hochgestuften Slot erneut und vertauscht `current` und `previous` wieder, wenn
   diese Prüfung fehlschlägt. Ein Kandidat, der die erste Validierung nicht besteht, wird niemals hochgestuft.
 
-Alles wird unter dem von Git ignorierten Verzeichnis `_artifacts/candidate/` gespeichert; eine vorhandene OmniRoute-
+Alles wird unter dem von Git ignorierten Verzeichnis `_artifacts/candidate/` gespeichert; eine vorhandene 67router-
 Installation und ihr Datenverzeichnis werden niemals verändert. Die hochgestufte CLI befindet sich unter
 `_artifacts/candidate/current/prefix/bin/omniroute`; starten Sie sie mit Ihrem eigenen `DATA_DIR`, wenn Sie sie verwenden.
 Exit-Codes: `0` Erfolg, `1` fehlgeschlagene Validierung oder Hochstufung, `2` Anwendungsfehler oder fehlender Build.

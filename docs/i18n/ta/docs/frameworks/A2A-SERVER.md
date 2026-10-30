@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (தமிழ்)
+# 67router A2A Server Documentation (தமிழ்)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — ஒரு நுண்ணறிவுமிக்க வழிப்படுத்தல் முகவராக OmniRoute
+> Agent-to-Agent Protocol v0.3 — ஒரு நுண்ணறிவுமிக்க வழிப்படுத்தல் முகவராக 67router
 
 A2A இடைமுகம் இரண்டு வடிவங்களைக் கொண்டுள்ளது:
 
@@ -19,7 +19,7 @@ A2A இடைமுகம் இரண்டு வடிவங்களைக�
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-OmniRoute-இன் திறன்கள், செயல்திறன்கள் மற்றும் அங்கீகாரத் தேவைகளை விவரிக்கும் முகவர் அட்டையை வழங்குகிறது.
+67router-இன் திறன்கள், செயல்திறன்கள் மற்றும் அங்கீகாரத் தேவைகளை விவரிக்கும் முகவர் அட்டையை வழங்குகிறது.
 
 முகவர் அட்டையின் `version` புலம் `process.env.npm_package_version` இலிருந்து பெறப்படுகிறது (`src/app/.well-known/agent.json/route.ts:13` ஐப் பார்க்கவும்); எனவே ஒவ்வொரு வெளியீட்டிலும் அது `package.json` உடன் தானாகவே ஒத்திசைக்கப்படுகிறது.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## கிடைக்கும் திறன்கள்
 
-OmniRoute, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`-இல் இணைக்கப்பட்டுள்ள 6 A2A திறன்களை வெளிப்படுத்துகிறது. ஒவ்வொரு திறன் தொகுதியும் `src/lib/a2a/skills/`-இல் உள்ளது.
+67router, `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`-இல் இணைக்கப்பட்டுள்ள 6 A2A திறன்களை வெளிப்படுத்துகிறது. ஒவ்வொரு திறன் தொகுதியும் `src/lib/a2a/skills/`-இல் உள்ளது.
 
 | திறன்                 | ID                   | விளக்கம்                                                                                                                                           | குறிச்சொற்கள்              | எடுத்துக்காட்டுகள்                                  |
 | :-------------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :-------------------------------------------------- |
-| ஸ்மார்ட் ரூட்டிங்     | `smart-routing`      | OmniRoute-ன் காம்போ இன்ஜின் + மதிப்பீட்டைப் பயன்படுத்தி, ஒரு ப்ராம்ட்டை உகந்த வழங்குநர்/காம்போ வழியாக வழிநடத்துகிறது                               | routing, providers         | "இந்த ப்ராம்ட்டை சிறந்த மாதிரி வழியாக வழிநடத்தவும்" |
+| ஸ்மார்ட் ரூட்டிங்     | `smart-routing`      | 67router-ன் காம்போ இன்ஜின் + மதிப்பீட்டைப் பயன்படுத்தி, ஒரு ப்ராம்ட்டை உகந்த வழங்குநர்/காம்போ வழியாக வழிநடத்துகிறது                                | routing, providers         | "இந்த ப்ராம்ட்டை சிறந்த மாதிரி வழியாக வழிநடத்தவும்" |
 | கோட்டா மேலாண்மை       | `quota-management`   | வழங்குநர் வாரியான கோட்டா நிலையை அறிவிக்கிறது; எப்போது த்ராட்டில் செய்ய வேண்டும்/மாற்ற வேண்டும் என்பதை அழைப்பாளர்கள் தீர்மானிக்க உதவுகிறது          | quota, providers           | "anthropic-க்கான கோட்டாவைச் சரிபார்க்கவும்"         |
 | வழங்குநர் கண்டறிதல்   | `provider-discovery` | நிறுவப்பட்ட வழங்குநர்களை திறன்கள், இலவச-அடுக்கு கொடிகள், OAuth நிலை ஆகியவற்றுடன் பட்டியலிடுகிறது                                                   | providers, discovery       | "எந்த வழங்குநர்கள் கிடைக்கின்றன?"                   |
 | செலவு பகுப்பாய்வு     | `cost-analysis`      | பட்டியல் + சமீபத்திய பயன்பாட்டைக் கொண்டு ஒரு கோரிக்கை/உரையாடலின் செலவை மதிப்பிடுகிறது                                                              | cost, usage                | "இந்த உரையாடலின் செலவை மதிப்பிடவும்"                |
 | நல அறிக்கை            | `health-report`      | வழங்குநர் வாரியாக சர்க்யூட் பிரேக்கர், கூல்டவுன், லாக்அவுட் நிலையை ஒருங்கிணைக்கிறது                                                                | health, resilience         | "அனைத்து வழங்குநர்களின் நல நிலையையும் காட்டவும்"    |
-| திறன்களைப் பட்டியலிடு | `list-capabilities`  | முழு 45-உள்ளீட்டு Agent Skills பட்டியலை (23 API + 21 CLI + 1 config) சூழல் செலுத்துவதற்கான மூல SKILL.md URL-களுடன் markdown அட்டவணையாக வழங்குகிறது | catalog, discovery, skills | "அனைத்து OmniRoute திறன்களையும் பட்டியலிடவும்"      |
+| திறன்களைப் பட்டியலிடு | `list-capabilities`  | முழு 45-உள்ளீட்டு Agent Skills பட்டியலை (23 API + 21 CLI + 1 config) சூழல் செலுத்துவதற்கான மூல SKILL.md URL-களுடன் markdown அட்டவணையாக வழங்குகிறது | catalog, discovery, skills | "அனைத்து 67router திறன்களையும் பட்டியலிடவும்"       |
 
 > Agent Card, நேரடி 375-வழங்குநர் பட்டியலுடன் ஒத்திசைவாக வைக்கப்பட வேண்டும்; வழங்குநர் எண்ணிக்கைகள் மற்றும் இலவச/அங்கீகாரமற்ற மெட்டாடேட்டா ஆகியவை இயங்கும் நேர ரெஜிஸ்ட்ரியிலிருந்து பெறப்படுகின்றன.
 
 ### `list-capabilities` திறன் விவரம்
 
-`list-capabilities` திறன், API அழைப்புகளை அனுப்புவதற்கு முன் OmniRoute என்னவெல்லாம் வெளிப்படுத்துகிறது என்பதைக் கண்டறிய வேண்டிய வெளிப்புற ஏஜெண்டுகளுக்குக் குறிப்பாகப் பயனுள்ளதாகும். இது கட்டமைக்கப்பட்ட markdown அட்டவணை ஆர்ட்டிஃபேக்ட்டை வழங்குகிறது:
+`list-capabilities` திறன், API அழைப்புகளை அனுப்புவதற்கு முன் 67router என்னவெல்லாம் வெளிப்படுத்துகிறது என்பதைக் கண்டறிய வேண்டிய வெளிப்புற ஏஜெண்டுகளுக்குக் குறிப்பாகப் பயனுள்ளதாகும். இது கட்டமைக்கப்பட்ட markdown அட்டவணை ஆர்ட்டிஃபேக்ட்டை வழங்குகிறது:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC முனைப்புள்ளி `/a2a` என்பது பி�
 | `/.well-known/agent.json`    | GET  | முகவர் அட்டை (A2A கண்டறிதல்)                                      | (பொது, 3600s தற்காலிகச் சேமிப்பு)                |
 | `/api/a2a/tasks`             | POST | OmniConductor குழுவிற்கான உள்வரும் ஒப்படைப்பு (Conductor PRD RF5) | Bearer எதிராக `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**உள்வரும் Conductor ஒப்படைப்பு (`POST /api/a2a/tasks`):** வெளிப்புற A2A முகவர்கள், OmniRoute வழியாகக் குறியீட்டுப் பணிகளை OmniConductor குழுவிடம் ஒப்படைக்கின்றனர். உடல்: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor குழுத் திறன்கள் (முகவர் அட்டையில் அறிவிக்கப்பட்டவை) மட்டுமே ஒப்படைக்கப்படலாம்; `metadata.conductor.repo.url` அவசியம் (குழு git களஞ்சியங்களில் பணிபுரிகிறது). இந்த வழித்தடம், சேவையகப் பக்க `CONDUCTOR_ORCHESTRATOR_TOKEN`-ஐப் பயன்படுத்தி (மாற்றாக `CONDUCTOR_HUB_TOKEN`) மையத்தின் `POST /v1/tasks` ஆக மாற்றி, `201 { conductor_task_id, state: "submitted" }` என்பதைத் திருப்பியளிக்கிறது; பணி நிலைகள் SSE→A2A பிரதிபலிப்பு (RF1) வழியாக மீண்டும் பாய்ந்து, `GET /api/a2a/tasks?skill=conductor` மூலம் காணக்கூடியவையாக இருக்கும்.
+**உள்வரும் Conductor ஒப்படைப்பு (`POST /api/a2a/tasks`):** வெளிப்புற A2A முகவர்கள், 67router வழியாகக் குறியீட்டுப் பணிகளை OmniConductor குழுவிடம் ஒப்படைக்கின்றனர். உடல்: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — Conductor குழுத் திறன்கள் (முகவர் அட்டையில் அறிவிக்கப்பட்டவை) மட்டுமே ஒப்படைக்கப்படலாம்; `metadata.conductor.repo.url` அவசியம் (குழு git களஞ்சியங்களில் பணிபுரிகிறது). இந்த வழித்தடம், சேவையகப் பக்க `CONDUCTOR_ORCHESTRATOR_TOKEN`-ஐப் பயன்படுத்தி (மாற்றாக `CONDUCTOR_HUB_TOKEN`) மையத்தின் `POST /v1/tasks` ஆக மாற்றி, `201 { conductor_task_id, state: "submitted" }` என்பதைத் திருப்பியளிக்கிறது; பணி நிலைகள் SSE→A2A பிரதிபலிப்பு (RF1) வழியாக மீண்டும் பாய்ந்து, `GET /api/a2a/tasks?skill=conductor` மூலம் காணக்கூடியவையாக இருக்கும்.
 
 ---
 

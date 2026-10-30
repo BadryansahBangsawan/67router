@@ -9,7 +9,7 @@
 > milliste marsruutide ja vastuseteedeni hook'id ulatuvad, liidetud keelamise päised (#16412),
 > injektsiooni blokeerimisrežiim kohustusliku piirina (#16413) ja mis näeb vastust enne post-call'i)
 
-Guardrail'id jõustavad turva-, poliitika- ja sisuteisendusi OmniRoute'i ja
+Guardrail'id jõustavad turva-, poliitika- ja sisuteisendusi 67router'i ja
 ülesvoo pakkujate vahelisel piiril. Iga guardrail saab kontrollida (ja soovi
 korral tagasi lükata, teisendada või annoteerida) päringute sisu (`preCall`)
 ja ülesvoo vastuseid (`postCall`).
@@ -116,7 +116,7 @@ Kui helistaja API-võti piirab `allowedConnections`, kvoodikogumeid
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), valib sild ainult
 sellised ümbersuunamis- ja kirjeldusmudeleid, mida võti tohib kasutada, ja
 ühendustel, mida võti tohib kasutada. Kirjeldusepäring läbib seejärel alati
-OmniRoute'i enesetsükli päisega `x-omniroute-self-loop-key-id`, nii et
+67router'i enesetsükli päisega `x-omniroute-self-loop-key-id`, nii et
 vastuvõttev vestluspäring jõustab selle võtme ühenduse- ja mudelipoliitika
 uuesti. `enforceApiKeyPolicy()` arvestab seda päist ainult koos enesetsükli
 kanduriga (bearer), seega saab see juurdepääsu ainult kitsendada, ja id, mis ei
@@ -146,7 +146,7 @@ kliendisignaalist. Madala detailsusega töötlemine halvendab OCR-i täpsust jus
 selle teksti-transkribeerimisülesande puhul, mida see prompt nõuab, seega
 nõuab kirjelduspäring ise alati kõrget detailsust, olenemata sellest, millist
 detailsustaset algne sissetulev päring kasutas. See mõjutab ainult sisemise
-kirjelduspäringu keha; see ei muuda, kuidas OmniRoute edastab helistaja enda
+kirjelduspäringu keha; see ei muuda, kuidas 67router edastab helistaja enda
 `image_url.detail` väärtust esmasel päringul — seda vaikimisi rakendatakse
 eraldi ja ainult tuvastatud OpenCode'i klientide puhul, funktsioonis
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -270,7 +270,7 @@ ja Speech-to-Text töövood vastavate Modality Bridge'i vahekaartidega,
 eemaldamata olemasolevat Speech-to-Text mänguväljakut.
 
 **Self-loop'i sissepääsu möödapääs:** kui describe-kõne suunatakse läbi
-OmniRoute'i enda `/v1` self-loop'i (mitte-standardne pakkujamudel), saadab
+67router'i enda `/v1` self-loop'i (mitte-standardne pakkujamudel), saadab
 alampäring `x-omniroute-admission-bypass: internal` ja autenditakse
 lahendatud self-loop'i mandaadiga — kohalik `sk_omniroute` sentinel
 kohalikus režiimis või operaatori konfigureeritud `OMNIROUTE_API_KEY` /
@@ -336,13 +336,13 @@ Puuduvad filtrid, vigane või tühi tõendusmaterjal, detektori viga või piirat
 
 `scripts/perf/video-bridge-fu07-eval.ts` genereerib deterministlikud tegelikud FFmpeg-testandmestikud deduplikatsioonijärgse kirjelduskutsete kokkuhoiu, tiheda liikumise eelarvejaotuse, udususe/särituse/SI-TI tõendite, pika sabaga kiirete lõigete ning järkjärgulise hajumise valepositiivsete jaoks. See salvestab eelanalüüsi reaalaja ning kui `/usr/bin/time` on saadaval, ka alamprotsessi CPU aja ja tipp-RSS-i. Selle kvaliteedikontrollid on ainult struktuursed oraaklid. Tegeliku kirjeldusmudeli kvaliteet jääb olekusse `HOLD`, kuna sellel testiraamistikul pole volitatud lõpp-punkti ega fikseeritud hindajat. Rahaline kokkuhoid jääb samuti olekusse `HOLD`, kui `--caption-cost-per-call-usd` ei anna selgesõnalist positiivset hinnangut kõne kohta; skript ei fabritseeri kunagi kumbagi tulemust.
 
-Iga kaader on piiratud 4 MiB-ga, kõik töötlemata kaadrid kokku 23 MiB-ga ja serialiseeritud vahendaja vastus 32 MiB-ga. Privaatne ajutine kataloog eemaldatakse `finally`-plokis. OmniRoute ei sisalda komplektis FFmpeg'i ega võta vastu kohandatud käivitusfaili teed. Enne kirjelduste loomist rakendab sild konservatiivse visuaalse deduplikatsiooni etapi: iga JPEG vähendatakse 16×16 halltoonipuhvriks ja seda võrreldakse ainult viimati säilitatud kaadriga. Kui soovitud kirjelduste eelarve on suurem kui üks kaader, annab ekstraheerimine piiratud kandidaatide kogumi, mis on kuni kaks korda suurem sellest eelarvest ega ületa kunagi 16 kaadrit. Soovitud ülempiir rakendatakse alles pärast deduplikatsiooni, kusjuures lõpliku harvendamise ajal säilitatakse esimene ja viimane valitud kandidaat, kui eelarve on vähemalt kaks. Versiooniga `grayscale-16x16-mean-cells-v2` poliitika kasutab suuremat kahest väärtusest: keskmise heleduse delta või nende pisipildirakkude osakaalu, mille normaliseeritud delta on vähemalt 0,05. Duplikaadi lävi on konstant 0,04, mis on valitud ennustatavuse nimel, mitte käitusaegse seadistusena. See sekundaarne kõrgkontrastiline signaal säilitab väikesed liikumised ja nähtava teksti muutused, mida pelgalt keskmisel põhinev võrdlus võib varjata. Võrdleja- või dekoodrivead jätavad tee avatuks (fail open) ja katvus säilib. Väljundi metaandmed eraldavad ekstraheeritud kandidaadid, edukalt kasutatud kaadrid ja välja jäetud visuaalsed duplikaadid.
+Iga kaader on piiratud 4 MiB-ga, kõik töötlemata kaadrid kokku 23 MiB-ga ja serialiseeritud vahendaja vastus 32 MiB-ga. Privaatne ajutine kataloog eemaldatakse `finally`-plokis. 67router ei sisalda komplektis FFmpeg'i ega võta vastu kohandatud käivitusfaili teed. Enne kirjelduste loomist rakendab sild konservatiivse visuaalse deduplikatsiooni etapi: iga JPEG vähendatakse 16×16 halltoonipuhvriks ja seda võrreldakse ainult viimati säilitatud kaadriga. Kui soovitud kirjelduste eelarve on suurem kui üks kaader, annab ekstraheerimine piiratud kandidaatide kogumi, mis on kuni kaks korda suurem sellest eelarvest ega ületa kunagi 16 kaadrit. Soovitud ülempiir rakendatakse alles pärast deduplikatsiooni, kusjuures lõpliku harvendamise ajal säilitatakse esimene ja viimane valitud kandidaat, kui eelarve on vähemalt kaks. Versiooniga `grayscale-16x16-mean-cells-v2` poliitika kasutab suuremat kahest väärtusest: keskmise heleduse delta või nende pisipildirakkude osakaalu, mille normaliseeritud delta on vähemalt 0,05. Duplikaadi lävi on konstant 0,04, mis on valitud ennustatavuse nimel, mitte käitusaegse seadistusena. See sekundaarne kõrgkontrastiline signaal säilitab väikesed liikumised ja nähtava teksti muutused, mida pelgalt keskmisel põhinev võrdlus võib varjata. Võrdleja- või dekoodrivead jätavad tee avatuks (fail open) ja katvus säilib. Väljundi metaandmed eraldavad ekstraheeritud kandidaadid, edukalt kasutatud kaadrid ja välja jäetud visuaalsed duplikaadid.
 
 Selgesõnaliselt märgistatud videoosa võib taotleda ajatempliga kontaktlehte. Sild koostab kuni 4-veerulise ja 16-kaadrilise JPEG-võrgustiku. Iga 512-piksline ruut põletab oma lähteajatempli kõrgkontrastilisse alumisse ribasse, samal ajal kui samad ajatemplid jäävad tekstimetaandmetesse allavoolu seostamiseks ja auditeerimiseks. Valmis JPEG jääb 32 MiB piiri alla. Kui `sharp` ei suuda võrgustikku dekodeerida ega koostada, naaseb sild üksikute JPEG-kaadrite juurde; kliendi katkestus levib siiski läbi leheoperatsiooni.
 
 Edendamise tõendid on tahtlikult eraldatud sünteetilisest koostamise mikrobenchmarkist. `scripts/perf/video-bridge-contact-sheet-eval.ts` määratleb skeemiversiooniga A/B-testiraamistiku tegelike OpenAI-ühilduvate visioonimudelite jaoks. See mõõdab pakkuja teatatud tokeneid, otsast lõpuni mõõdetud seinakella latentsust (sealhulgas lehe koostamist), mudelikõnede arvu ja manifestis määratletud faktide säilimist. Mudelite töötlemata vastuseid aruandesse ei kirjutata; säilitatakse ainult SHA-256 räsid ja sobitatud faktide ID-d. Testiraamistik ei tee võrgu- ega tasulisi mudelikõnesid, kui pole antud `--execute-real` lippu ning seadistatud `--model`, `OMNIROUTE_BASE_URL` ja `OMNIROUTE_API_KEY`. Ilma selle selgesõnalise tegeliku käivituseta jääb selle masinloetavaks otsuseks `HOLD`; sünteetilised koormuse ja kõnedearvu mõõtmised üksi ei ole edendamise tõendid.
 
-Kutsuja võib toetatud videoosale lisada valikulise `transcript.cues` massiivi, kui tal on juba olemas joondatud tekst. Iga vihje peab sisaldama välja `text`, lõplikku `start`/`end`-intervalli sonditud kestuse piires ning lubatud loendis olevat välja `source` (`client`, `embedded` või `audio-bridge`); `confidence` vaikeväärtus on `1` ja see peab jääma `0` ja `1` vahele. Täpsed duplikaatvihjed liidetakse kokku. OmniRoute ei käivita kunagi transkribeerimist nende metaandmete põhjal: valideeritud vihjed kopeeritakse kirjeldatud tulemusse koos allika, usaldusväärsuse ja intervalliga ning need renderdatakse ebausaldusväärsete vaatlustena koos kaadrite kirjeldustega. Kehtetu, vahemikust väljas olev või päritoluta tekst lükatakse tagasi, seda ei segata kirjeldusvoogu. Mõlemad päringukeha transkriptsioonikanalid normaliseerivad esitatud päritolu väärtusele `client`, sealhulgas isedeklareeritud `embedded`- või `audio-bridge`-siltide puhul. Neid usaldusväärseid silte saab määrata ainult serverile kuuluv adapter ainult koodis kasutatava `trustedSource`-argumendi kaudu; päringu JSON-väli ei jõua selle argumendini. Transkriptsioonitekst jääb olenemata oma päritolust ebausaldusväärseks meediast tuletatud sisuks ega tohi kunagi olla autoriseerimise aluseks.
+Kutsuja võib toetatud videoosale lisada valikulise `transcript.cues` massiivi, kui tal on juba olemas joondatud tekst. Iga vihje peab sisaldama välja `text`, lõplikku `start`/`end`-intervalli sonditud kestuse piires ning lubatud loendis olevat välja `source` (`client`, `embedded` või `audio-bridge`); `confidence` vaikeväärtus on `1` ja see peab jääma `0` ja `1` vahele. Täpsed duplikaatvihjed liidetakse kokku. 67router ei käivita kunagi transkribeerimist nende metaandmete põhjal: valideeritud vihjed kopeeritakse kirjeldatud tulemusse koos allika, usaldusväärsuse ja intervalliga ning need renderdatakse ebausaldusväärsete vaatlustena koos kaadrite kirjeldustega. Kehtetu, vahemikust väljas olev või päritoluta tekst lükatakse tagasi, seda ei segata kirjeldusvoogu. Mõlemad päringukeha transkriptsioonikanalid normaliseerivad esitatud päritolu väärtusele `client`, sealhulgas isedeklareeritud `embedded`- või `audio-bridge`-siltide puhul. Neid usaldusväärseid silte saab määrata ainult serverile kuuluv adapter ainult koodis kasutatava `trustedSource`-argumendi kaudu; päringu JSON-väli ei jõua selle argumendini. Transkriptsioonitekst jääb olenemata oma päritolust ebausaldusväärseks meediast tuletatud sisuks ega tohi kunagi olla autoriseerimise aluseks.
 
 Edasijõudnud kutsuja võib sama video jaoks esitada `audioTranscript`-raja; seda käsitletakse kliendi esitatud tekstina, mitte serveripoolse transkribeerimise tõendina. Fusiooniliides käitab visuaalseid ja helivaatlusi ühe tähtaja ja katkestussignaali all, järjestab need ühisel ajajoonel, liidab täpsed duplikaadid kokku ja teatab osalise tulemuse, kui õnnestub vaid üks pool. Kehtetu `audioTranscript` degradeerub samaks osaliseks tulemuseks — visuaalne kirjeldus säilib ja heliharu salvestab puhastatud tõrkekoodi — selle asemel et kogu video nurjata. Harudepõhine kättesaadavus, osalise tulemuse lipp ja puhastatud tõrkekoodid säilitatakse kirjeldatud tulemuses, turvapiirete metaandmetes (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), tulemusvahemälu metaandmetes ja silla fusiooniloendurites. Vaikimisi Video Bridge'i tee ei kasuta kõne tekstiks teisendamist ega lae alla teist meediakoopiat; ilma selle selgesõnalise rajata jääb see ainult videotöötluseks.
 
@@ -885,7 +885,7 @@ käivitus) on kaks tööd:
   previous instructions…", DAN-stiilis jailbreak'id) kinnitab, et vastus sisaldab
   `error.code === "SECURITY_001"`, st et kaitse tõepoolest lükkas päringu tagasi.
 - **`garak` (soovituslik)** — käivitab garak `--probes promptinject,dan,leakreplay`
-  kohaliku OmniRoute'i instantsi vastu (`http://localhost:20128/v1`). Käivitub ainult
+  kohaliku 67router'i instantsi vastu (`http://localhost:20128/v1`). Käivitub ainult
   pakkuja salajase võtme (`PROMPTFOO_PROVIDER_KEY`) olemasolul; jätab sujuvalt vahele
   ja lõpeb sufiksiga `|| true`, seega raporteerib tulemused ilma CI-d nurjamata.
 

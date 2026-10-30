@@ -6,7 +6,7 @@
 
 ## Visão geral
 
-O Redis é uma **dependência opcional e não obrigatória** no OmniRoute — a aplicação reduz graciosamente as suas funcionalidades (recorrendo a alternativas
+O Redis é uma **dependência opcional e não obrigatória** no 67router — a aplicação reduz graciosamente as suas funcionalidades (recorrendo a alternativas
 em memória) quando o Redis não está disponível. Em produção, o ajuste do Redis reduz a latência de quatro cargas de trabalho
 distintas:
 
@@ -17,7 +17,7 @@ distintas:
 | Armazenamento de quotas  | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` separado                            | `<prefix>quota:*` configurável por instância             |
 | Disjuntor de aquecimento | `redisCircuitBreakerStore.ts` | Cliente separado em `circuitBreakerFactory.ts`                      | `<prefix>warmup:cb:<connectionId>`                       |
 
-As quatro cargas de trabalho partilham um único prefixo de espaço de nomes, para que o OmniRoute possa coexistir com outras aplicações numa
+As quatro cargas de trabalho partilham um único prefixo de espaço de nomes, para que o 67router possa coexistir com outras aplicações numa
 única instância do Redis (por exemplo, `127.0.0.1:6379`). Consulte [Espaços de nomes das chaves](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ As quatro cargas de trabalho partilham um único prefixo de espaço de nomes, pa
 
 ## Espaços de nomes das chaves
 
-O OmniRoute partilha uma instância do Redis com quaisquer outros serviços executados no anfitrião. Sem um espaço de nomes,
+O 67router partilha uma instância do Redis com quaisquer outros serviços executados no anfitrião. Sem um espaço de nomes,
 chaves como `auth:api_key:<sha256>` ou `rl:*` podem entrar em conflito com chaves de outras aplicações
 que utilizem o mesmo Redis (esta instância executa o Redis em `127.0.0.1:6379` juntamente com outros serviços).
 
-Defina `REDIS_KEY_PREFIX` como uma cadeia não vazia para adicionar um prefixo a **todas** as chaves do OmniRoute:
+Defina `REDIS_KEY_PREFIX` como uma cadeia não vazia para adicionar um prefixo a **todas** as chaves do 67router:
 
 ```bash
-# .env — todas as chaves do OmniRoute passam a ser omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — todas as chaves do 67router passam a ser omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -98,7 +98,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # deixar espaço para a cache de páginas do SO
 maxmemory-policy allkeys-lru         # remover entradas antigas da cache de autenticação sob pressão
 
-# Persistência (opcional — o OmniRoute é resistente a falhas sem esta opção)
+# Persistência (opcional — o 67router é resistente a falhas sem esta opção)
 save 300 1                           # criar um instantâneo pelo menos a cada 5 min se ≥1 chave tiver sido alterada
 appendonly no                        # AOF desnecessário; os dados podem ser regenerados
 appendfsync no                       # sem sobrecarga de fsync (RDB é suficiente)

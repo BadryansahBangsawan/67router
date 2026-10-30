@@ -4,7 +4,7 @@
 
 ---
 
-Stiskanje v OmniRoute temelji na pogodbah pogonov. Način lahko neposredno izvaja en pogon
+Stiskanje v 67router temelji na pogodbah pogonov. Način lahko neposredno izvaja en pogon
 (`caveman` ali `rtk`) ali determinističen skladovni cevovod, ki zaporedoma izvaja več pogonov.
 
 ## Načini
@@ -43,9 +43,9 @@ nabrala zgodovine, ustavi pri `below_min_chars` in motor ne transformira ničesa
 je privzeto `aggressive` namesto najvarnejšega profila.
 
 Paket razreši svoj lastni obseg modela in profil iz svoje okoljske konfiguracije.
-OmniRoute nikoli ne delegira odločitve: adapter pripne modelna vrata na najbolj restriktiven obseg paketa,
+67router nikoli ne delegira odločitve: adapter pripne modelna vrata na najbolj restriktiven obseg paketa,
 tako da lahko nastavitve gostiteljskega okolja le zožijo seznam dovoljenih, nikoli
-ga ne razširijo preko merjenih računov OmniRoute.
+ga ne razširijo preko merjenih računov 67router.
 
 ## Register mehanizmov
 
@@ -109,7 +109,7 @@ Način Caveman se osredotoča na semantično zgoščevanje običajnega besedila:
 V nadzorni plošči je na voljo pod `Dashboard -> Context & Cache -> Caveman`.
 
 Izvorni projekt Caveman poroča o `~75%` manj izhodnih žetonih, povprečnem `65%` prihranku izhoda v primerjalnih preizkusih
-z razponom `22-87%` in orodju za stiskanje vhoda z `~46%` prihrankom. OmniRoute pri dokumentiranju sestavljenih prihrankov poziva/konteksta
+z razponom `22-87%` in orodju za stiskanje vhoda z `~46%` prihrankom. 67router pri dokumentiranju sestavljenih prihrankov poziva/konteksta
 uporablja podatek za vhodno stran sistema Caveman; izhodni način Caveman ostaja ločena
 funkcija vedenja odzivov.
 

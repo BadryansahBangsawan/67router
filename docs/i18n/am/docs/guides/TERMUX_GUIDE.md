@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute በTermux በኩል Android ላይ headless አገልጋይ ሆኖ መስራት ይችላል። የElectron ዴስክቶፕ መተግበሪያ በTermux ውስጥ አይደገፍም፤ ነገር ግን የድር ዳሽቦርዱና ከOpenAI ጋር ተኳሃኝ የሆነው API ከአካባቢያዊ አሳሹ ወይም በተመሳሳይ አውታረ መረብ ላይ ካሉ ሌሎች መሣሪያዎች ይሰራሉ።
+67router በTermux በኩል Android ላይ headless አገልጋይ ሆኖ መስራት ይችላል። የElectron ዴስክቶፕ መተግበሪያ በTermux ውስጥ አይደገፍም፤ ነገር ግን የድር ዳሽቦርዱና ከOpenAI ጋር ተኳሃኝ የሆነው API ከአካባቢያዊ አሳሹ ወይም በተመሳሳይ አውታረ መረብ ላይ ካሉ ሌሎች መሣሪያዎች ይሰራሉ።
 
 ## ቅድመ ሁኔታዎች
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **የNode.js ስሪት፦** OmniRoute Node `>=22.22.2 <23 || >=24.0.0 <27` ይፈልጋል (በ`package.json` / `SUPPORTED_NODE_RANGE` ውስጥ ካለው `engines` ጋር ይዛመዳል)። የTermux `nodejs-lts` በተለምዶ Node 20 LTSን ይዞ ይመጣል፤ ይህም **ከእንግዲህ አይደገፍም** — በምትኩ `pkg install nodejs` (የአሁኑን) ይጫኑና `node --version` የ22.x/24.x+ መስመር እንደሚያሳይ ያረጋግጡ።
+> **የNode.js ስሪት፦** 67router Node `>=22.22.2 <23 || >=24.0.0 <27` ይፈልጋል (በ`package.json` / `SUPPORTED_NODE_RANGE` ውስጥ ካለው `engines` ጋር ይዛመዳል)። የTermux `nodejs-lts` በተለምዶ Node 20 LTSን ይዞ ይመጣል፤ ይህም **ከእንግዲህ አይደገፍም** — በምትኩ `pkg install nodejs` (የአሁኑን) ይጫኑና `node --version` የ22.x/24.x+ መስመር እንደሚያሳይ ያረጋግጡ።
 
-የቤተኛ ፓኬጅ ማጠናቀር ካልተሳካ፣ ከላይ ያለውን የ`pkg install` ትዕዛዝ እንደገና ያስኪዱና የOmniRoute ጭነቱን እንደገና ይሞክሩ።
+የቤተኛ ፓኬጅ ማጠናቀር ካልተሳካ፣ ከላይ ያለውን የ`pkg install` ትዕዛዝ እንደገና ያስኪዱና የ67router ጭነቱን እንደገና ይሞክሩ።
 
 ## መጫን
 
@@ -37,7 +37,7 @@ omniroute
 
 ## ማስኬድ
 
-OmniRouteን በheadless አገልጋይ ሁነታ ያስጀምሩ፦
+67routerን በheadless አገልጋይ ሁነታ ያስጀምሩ፦
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ http://PHONE_IP:20128
 http://192.168.1.50:20128
 ```
 
-ስልኩንና ደንበኛውን በተመሳሳይ የታመነ አውታረ መረብ ላይ ያቆዩ። OmniRouteን ከስልኩ ውጭ ተደራሽ ካደረጉ፣ API keysንና የዳሽቦርድ ማረጋገጫን ያንቁ።
+ስልኩንና ደንበኛውን በተመሳሳይ የታመነ አውታረ መረብ ላይ ያቆዩ። 67routerን ከስልኩ ውጭ ተደራሽ ካደረጉ፣ API keysንና የዳሽቦርድ ማረጋገጫን ያንቁ።
 
 ## የውሂብ ማውጫ
 
-በነባሪነት OmniRoute በLinux ላይ ጥቅም ላይ የሚውለውን ተመሳሳይ የአገልጋይ-ወገን የውሂብ ዱካ ባህሪ በመከተል ውሂብን በTermux መነሻ ማውጫ ስር ያከማቻል። የውሂብ ጎታውን በግልጽ በተወሰነ ቦታ ለማስቀመጥ፦
+በነባሪነት 67router በLinux ላይ ጥቅም ላይ የሚውለውን ተመሳሳይ የአገልጋይ-ወገን የውሂብ ዱካ ባህሪ በመከተል ውሂብን በTermux መነሻ ማውጫ ስር ያከማቻል። የውሂብ ጎታውን በግልጽ በተወሰነ ቦታ ለማስቀመጥ፦
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### የማይደገፍ መድረክ፦ android (እያንዳንዱ ጥያቄ HTTP 500 ይመልሳል)
 
-**ምልክት፦** `omniroute` / `omniroute serve` `✔ OmniRoute is running!` ብሎ ያትማል፤ ነገር ግን እያንዳንዱ የዳሽቦርድ ወይም API ጥያቄ ዝርዝር የሌለውን `500 Internal Server Error` ይመልሳል። `~/.omniroute/logs/application/app.log` ባዶ ሆኖ ይቆያል፣ `APP_LOG_LEVEL=debug` ጠቃሚ ነገር አያትምም፣ እና የምላሹ ይዘት የJSON ዝርዝር የሌለው ተራ ጽሑፍ (`Internal Server Error`) ነው።
+**ምልክት፦** `omniroute` / `omniroute serve` `✔ 67router is running!` ብሎ ያትማል፤ ነገር ግን እያንዳንዱ የዳሽቦርድ ወይም API ጥያቄ ዝርዝር የሌለውን `500 Internal Server Error` ይመልሳል። `~/.omniroute/logs/application/app.log` ባዶ ሆኖ ይቆያል፣ `APP_LOG_LEVEL=debug` ጠቃሚ ነገር አያትምም፣ እና የምላሹ ይዘት የJSON ዝርዝር የሌለው ተራ ጽሑፍ (`Internal Server Error`) ነው።
 
 **ምክንያት፦** አንዳንድ የTermux/Node ግንባታዎች `process.platform === "android"` ብለው ሪፖርት ያደርጋሉ። የNext.js `getCacheDirectory()` ያንን መድረክ አያስተናግድም፦ `~/.cache` (ወይም አጠቃላይ tmp ማውጫ) _ቀድሞውኑ_ እንዲኖር ይፈልጋል፤ አለበለዚያ instrumentation hookን በሚጭንበት ጊዜ በሚከተለው ስህተት ይወድቃል፦
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-hookው ጨርሶ ስለማይጫን፣ logging ጨርሶ አይጀምርም — 500ው ምንም መንስኤ ማወቅ የማይቻል ይመስላል። OmniRoute በAndroid/Termux ላይ ይህ probe እንዲሳካ፣ Next.js ከመጀመሩ በፊት በCLI entrypoint ውስጥ `~/.cache`ን ይፈጥራል (እንዲሁም `XDG_CACHE_HOME` ካልተዋቀረ ያዋቅረዋል)።
+hookው ጨርሶ ስለማይጫን፣ logging ጨርሶ አይጀምርም — 500ው ምንም መንስኤ ማወቅ የማይቻል ይመስላል። 67router በAndroid/Termux ላይ ይህ probe እንዲሳካ፣ Next.js ከመጀመሩ በፊት በCLI entrypoint ውስጥ `~/.cache`ን ይፈጥራል (እንዲሁም `XDG_CACHE_HOME` ካልተዋቀረ ያዋቅረዋል)።
 
 **የሚደገፍ መፍትሔ (ፓኬጁን ሳይቀይሩ)፦**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-በአሁኖቹ የOmniRoute ግንባታዎች CLIው ይህን በAndroid/Termux ላይ በራስ-ሰር ያደርጋል — አዲስ `npx -y omniroute@latest` / ዓለም አቀፍ ጭነት ይህን በእጅ የሚደረግ እርምጃ መፈለግ የለበትም። ካሻሻሉ በኋላም ስህተቱን ካዩ፣ ከላይ እንዳለው `~/.cache`ን አንድ ጊዜ ይፍጠሩና እንደገና ያስጀምሩ።
+በአሁኖቹ የ67router ግንባታዎች CLIው ይህን በAndroid/Termux ላይ በራስ-ሰር ያደርጋል — አዲስ `npx -y omniroute@latest` / ዓለም አቀፍ ጭነት ይህን በእጅ የሚደረግ እርምጃ መፈለግ የለበትም። ካሻሻሉ በኋላም ስህተቱን ካዩ፣ ከላይ እንዳለው `~/.cache`ን አንድ ጊዜ ይፍጠሩና እንደገና ያስጀምሩ።
 
 `process.platform = "linux"` እንዲሆን ለማስገደድ `dist/server.js`ን **አይቀይሩ**። ይህ ዓይነቱ የፓኬጅ ለውጥ በእያንዳንዱ ዳግም ጭነት/ማሻሻያ ጊዜ ይተካል፤ የcache ማውጫው አንዴ ከተፈጠረም አያስፈልግም።
 

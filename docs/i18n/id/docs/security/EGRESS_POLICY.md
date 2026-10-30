@@ -8,7 +8,7 @@
 
 > **Sumber acuan:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute memungkinkan setiap proxy memiliki **direktif egress keluarga alamat**. Secara default, OS memilih IPv4 atau IPv6 (dual-stack, "Happy Eyeballs"). Saat Anda menetapkan direktif ke `ipv4` atau `ipv6`, OmniRoute menyematkan setiap koneksi melalui proxy tersebut ke keluarga yang dipilih dan **gagal secara tertutup** alih-alih beralih kembali ke keluarga lainnya.
+67router memungkinkan setiap proxy memiliki **direktif egress keluarga alamat**. Secara default, OS memilih IPv4 atau IPv6 (dual-stack, "Happy Eyeballs"). Saat Anda menetapkan direktif ke `ipv4` atau `ipv6`, 67router menyematkan setiap koneksi melalui proxy tersebut ke keluarga yang dipilih dan **gagal secara tertutup** alih-alih beralih kembali ke keluarga lainnya.
 
 Halaman ini mendokumentasikan apa itu direktif tersebut, alasan keberadaannya, tempat Anda mengonfigurasinya, dan cara runtime menyelesaikannya.
 
@@ -122,7 +122,7 @@ Untuk API CRUD/penetapan proxy lainnya, lihat [PROXY_GUIDE.md](../ops/PROXY_GUID
 
 ## Cara `auto` Diselesaikan
 
-Ketika `family` bernilai `auto`, OmniRoute **tidak** menambahkan direktif apa pun — URL proxy digunakan sebagaimana adanya dan famili koneksi ditentukan secara intrinsik.
+Ketika `family` bernilai `auto`, 67router **tidak** menambahkan direktif apa pun — URL proxy digunakan sebagaimana adanya dan famili koneksi ditentukan secara intrinsik.
 
 Saat URL dibuat (`proxyConfigToUrl` / `normalizeProxyUrl` di `open-sse/utils/proxyDispatcher.ts`), proxy `auto` menghasilkan URL biasa tanpa penanda:
 
@@ -158,7 +158,7 @@ Jadi:
 
 Direktif selain `auto` diteruskan sebagai satu penanda kueri sintetis — `?family=ipv4` atau `?family=ipv6` — yang ditambahkan satu kali ke URL proksi yang telah dinormalisasi. `normalizeProxyUrl` secara hati-hati menghapus dan menambahkan kembali penanda ini tepat satu kali agar tidak pernah merusak penguraian port.
 
-Saat dispatcher dibuat, penanda tersebut dibaca dan dikonversi menjadi keluarga koneksi konkret. Jika host merupakan literal IP dari keluarga yang **berlawanan**, OmniRoute melemparkan kesalahan (kontradiksi ditangani secara fail-closed):
+Saat dispatcher dibuat, penanda tersebut dibaca dan dikonversi menjadi keluarga koneksi konkret. Jika host merupakan literal IP dari keluarga yang **berlawanan**, 67router melemparkan kesalahan (kontradiksi ditangani secara fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Keluarga konkret tersebut kemudian ditetapkan pada konektor:
 
 ## Kompatibilitas SOCKS5
 
-Penetapan keluarga berfungsi dengan proksi SOCKS5, tetapi `fetch-socks` standar tidak mengekspos opsi soket yang diperlukan untuk menetapkan keluarga pada hop proksi. OmniRoute menyediakan konektornya sendiri untuk keperluan tersebut:
+Penetapan keluarga berfungsi dengan proksi SOCKS5, tetapi `fetch-socks` standar tidak mengekspos opsi soket yang diperlukan untuk menetapkan keluarga pada hop proksi. 67router menyediakan konektornya sendiri untuk keperluan tersebut:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

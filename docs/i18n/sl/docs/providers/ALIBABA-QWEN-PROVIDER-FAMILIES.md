@@ -10,7 +10,7 @@ predstavljeni kot štiri družine ponudnikov. Regija je podatek o povezavi in ne
 
 ## Odločitev
 
-| Družina ponudnika                              | ID OmniRoute            | Globalna regija | Regija Kitajska |
+| Družina ponudnika                              | ID 67router             | Globalna regija | Regija Kitajska |
 | ---------------------------------------------- | ----------------------- | --------------- | --------------- |
 | Alibaba Cloud Model Studio (plačilo po porabi) | `alibaba`               | Singapur        | Peking          |
 | Alibaba Cloud Token Plan                       | `bailian-coding-plan`   | Singapur        | Peking          |

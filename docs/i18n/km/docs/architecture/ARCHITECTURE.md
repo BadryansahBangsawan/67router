@@ -1,4 +1,4 @@
-# OmniRoute Architecture (ខ្មែរ)
+# 67router Architecture (ខ្មែរ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _បានធ្វើបច្ចុប្បន្នភាពចុងក្�
 
 ## សេចក្តីសង្ខេបសម្រាប់ថ្នាក់ដឹកនាំ
 
-OmniRoute គឺជា gateway សម្រាប់បញ្ជូនសំណើ AI ក្នុងមូលដ្ឋាន និង dashboard ដែលបង្កើតឡើងលើ Next.js។
+67router គឺជា gateway សម្រាប់បញ្ជូនសំណើ AI ក្នុងមូលដ្ឋាន និង dashboard ដែលបង្កើតឡើងលើ Next.js។
 វាផ្តល់ endpoint តែមួយដែលឆបគ្នាជាមួយ OpenAI (`/v1/*`) និងបញ្ជូន traffic ឆ្លងកាត់ upstream providers ជាច្រើន ដោយមានការបម្លែងទម្រង់ fallback ការធ្វើឱ្យ token ស្រស់ឡើងវិញ និងការតាមដានការប្រើប្រាស់។
 
 សមត្ថភាពស្នូល៖
@@ -164,7 +164,7 @@ flowchart LR
         BROWSER[ផ្ទាំងគ្រប់គ្រងលើកម្មវិធីរុករក]
     end
 
-    subgraph Router[ដំណើរការមូលដ្ឋាន OmniRoute]
+    subgraph Router[ដំណើរការមូលដ្ឋាន 67router]
         API[API ភាពត្រូវគ្នា V1\n/v1/*]
         DASH[ផ្ទាំងគ្រប់គ្រង + API គ្រប់គ្រង\n/api/*]
         CORE[ស្នូល SSE + ការបម្លែង\nopen-sse + src/sse]
@@ -328,7 +328,7 @@ flowchart LR
 
 ## 5) សេវាដែលបានបង្កប់ (v3.8.4)
 
-OmniRoute អាចដំឡើង ត្រួតពិនិត្យ និងបញ្ជូនផ្លូវទៅកាន់ដំណើរការឧបករណ៍ AI ដែលកំពុងដំណើរការក្នុងម៉ាស៊ីន
+67router អាចដំឡើង ត្រួតពិនិត្យ និងបញ្ជូនផ្លូវទៅកាន់ដំណើរការឧបករណ៍ AI ដែលកំពុងដំណើរការក្នុងម៉ាស៊ីន
 ដែលហៅថា **សេវាដែលបានបង្កប់**។ មានសេវាចំនួនប្រាំត្រូវបានផ្ដល់មកជាមួយ៖ 9Router, CLIProxyAPI, Bifrost, Mux និង Dario។
 
 ស្រទាប់ស្ថាបត្យកម្ម៖
@@ -438,7 +438,7 @@ namespace `src/domain/` ប្រមូលផ្តុំការសម្រ�
 - ឃ្លាំងសម្ងាត់កូតា៖ `src/domain/quotaCache.ts`
 - ស្ថានភាពការធ្លាក់ចុះគុណភាព៖ `src/domain/degradation.ts`
 - សវនកម្មការកំណត់រចនាសម្ព័ន្ធ៖ `src/domain/configAudit.ts`
-- កម្មវិធីបង្កើតមេតាទិន្នន័យការឆ្លើយតប OmniRoute៖ `src/domain/omnirouteResponseMeta.ts`
+- កម្មវិធីបង្កើតមេតាទិន្នន័យការឆ្លើយតប 67router៖ `src/domain/omnirouteResponseMeta.ts`
 - ប្រព័ន្ធរងវាយតម្លៃ៖ `src/domain/assessment/` — កិច្ចការវាយតម្លៃតាមកាលកំណត់
 
 ### E. បំពង់ដំណើរការអនុញ្ញាតសិទ្ធិ
@@ -816,7 +816,7 @@ flowchart LR
         Browser[កម្មវិធីរុករកផ្ទាំងគ្រប់គ្រង]
     end
 
-    subgraph ContainerOrProcess[បរិស្ថានប្រតិបត្តិការ OmniRoute]
+    subgraph ContainerOrProcess[បរិស្ថានប្រតិបត្តិការ 67router]
         Next[ម៉ាស៊ីនបម្រើ Next.js\nPORT=20128]
         Core[ស្នូល SSE + កម្មវិធីប្រតិបត្តិ]
         MainDB[(storage.sqlite)]
@@ -935,7 +935,7 @@ Provider នីមួយៗមាន executor ឯកទេសមួយដែល�
 ## ម៉ាទ្រីសភាពឆបគ្នារបស់អ្នកផ្តល់សេវា
 
 > **ចំណាំ៖** ម៉ាទ្រីសខាងក្រោមនេះគឺជាគំរូតំណាងនៃអ្នកផ្តល់សេវាដែលបានចុះឈ្មោះចំនួន 351 នៅក្នុង
-> OmniRoute v3.8.0។ សម្រាប់បញ្ជីផ្លូវការដែលត្រូវបានធ្វើបច្ចុប្បន្នភាពជាបន្តបន្ទាប់ សូមមើល
+> 67router v3.8.0។ សម្រាប់បញ្ជីផ្លូវការដែលត្រូវបានធ្វើបច្ចុប្បន្នភាពជាបន្តបន្ទាប់ សូមមើល
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (បានបង្កើតដោយស្វ័យប្រវត្តិ) ឬប្រភព
 > ផ្លូវការនៅ `src/shared/constants/providers.ts` (បានផ្ទៀងផ្ទាត់ដោយ Zod នៅពេលផ្ទុក)។
 
@@ -1117,7 +1117,7 @@ Provider នីមួយៗមាន executor ឯកទេសមួយដែល�
 - សំណើដើមដែលបានទទួលពី client
 - សំណើដែលបានបកប្រែ និងផ្ញើទៅខាងលើពិតប្រាកដ
 - ការឆ្លើយតបរបស់អ្នកផ្តល់សេវាដែលបានបង្កើតឡើងវិញជា JSON; ការឆ្លើយតបជា stream ត្រូវបានបង្រួមជាសេចក្តីសង្ខេបចុងក្រោយ បូកនឹង metadata របស់ stream
-- ការឆ្លើយតបចុងក្រោយទៅ client ដែលត្រូវបានត្រឡប់ដោយ OmniRoute; ការឆ្លើយតបជា stream ត្រូវបានរក្សាទុកក្នុងទម្រង់សេចក្តីសង្ខេបបង្រួមដូចគ្នា
+- ការឆ្លើយតបចុងក្រោយទៅ client ដែលត្រូវបានត្រឡប់ដោយ 67router; ការឆ្លើយតបជា stream ត្រូវបានរក្សាទុកក្នុងទម្រង់សេចក្តីសង្ខេបបង្រួមដូចគ្នា
 
 ## ព្រំដែនដែលពាក់ព័ន្ធខ្លាំងនឹងសុវត្ថិភាព
 

@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/lib/webhookDispatcher.ts`, `src/lib/db/webhooks.ts`, `src/app/api/webhooks/`
 > **Zadnja posodobitev:** 2026-06-28 — v3.8.40
 
-OmniRoute lahko ob dogodkih platforme sproži spletne kavlje HTTP. Uporabite jih za integracijo s storitvami Slack, PagerDuty, Datadog, internimi storitvami za opozarjanje ali katerim koli prejemnikom HTTP.
+67router lahko ob dogodkih platforme sproži spletne kavlje HTTP. Uporabite jih za integracijo s storitvami Slack, PagerDuty, Datadog, internimi storitvami za opozarjanje ali katerim koli prejemnikom HTTP.
 
 Razpošiljevalnik vsakokratno dostavo podpiše s HMAC-SHA256, jo ob prehodnih napakah poskusi znova, spremlja uspešnost dostave za vsak spletni kavelj in samodejno onemogoči končne točke, pri katerih se napake ponavljajo.
 
@@ -47,7 +47,7 @@ Razpošiljanje je za klicatelja izvedeno po načelu »sproži in pozabi«: `Prom
 
 ## Podpisovanje HMAC
 
-Ko ima spletni kavelj vrednost `secret`, OmniRoute podpiše telo JSON in pošlje:
+Ko ima spletni kavelj vrednost `secret`, 67router podpiše telo JSON in pošlje:
 
 ```
 Content-Type: application/json
@@ -200,7 +200,7 @@ Stran nadzorne plošče na naslovu `/dashboard/webhooks` (glejte
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "Preskusna dostava webhooka iz OmniRoute",
+    "message": "Preskusna dostava webhooka iz 67router",
     "webhookId": "<uuid>"
   }
 }

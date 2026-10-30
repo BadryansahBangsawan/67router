@@ -13,7 +13,7 @@
 
 El motor de reparto de cuotas distribuye equitativamente la cuota temporal de un proveedor (p. ej., la ventana de 5 horas de Codex, 1500 solicitudes/h de Kimi) entre varias claves de API que comparten la misma conexión.
 
-**Problema que resuelve:** OmniRoute canaliza muchas claves de API a través de la misma cuenta del proveedor ascendente. Sin una lógica de reparto, una ráfaga de la clave A puede agotar la cuota del proveedor para esa hora, dejando bloqueadas las claves B y C hasta que se reinicie la ventana. El motor lo evita mediante:
+**Problema que resuelve:** 67router canaliza muchas claves de API a través de la misma cuenta del proveedor ascendente. Sin una lógica de reparto, una ráfaga de la clave A puede agotar la cuota del proveedor para esa hora, dejando bloqueadas las claves B y C hasta que se reinicie la ventana. El motor lo evita mediante:
 
 1. El seguimiento del consumo acumulado de cada clave por dimensión (%, solicitudes, tokens, $).
 2. La aplicación de un algoritmo equitativo con conservación del trabajo: una clave puede tomar prestadas las cuotas inactivas mientras el conjunto global no esté saturado.
@@ -106,7 +106,7 @@ Controlador de Redis: script Lua EVAL para realizar incrementos atómicos; se ej
 
 - Tabla: `quota_consumption` (consulte la migración `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - Ideal para despliegues de una sola instancia.
-- Toda la persistencia se encuentra en la base de datos SQLite existente de OmniRoute (`DATA_DIR/storage.sqlite`).
+- Toda la persistencia se encuentra en la base de datos SQLite existente de 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (opcional, múltiples instancias)
 

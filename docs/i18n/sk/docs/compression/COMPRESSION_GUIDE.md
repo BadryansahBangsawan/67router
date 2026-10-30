@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Slovenčina)
+# 🗜️ Prompt Compression Guide — 67router (Slovenčina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Prehľad
 
-OmniRoute implementuje modulárny pipeline kompresie promptov, ktorý sa spúšťa **proaktívne** predtým, než požiadavky dorazia k nadradeným poskytovateľom. Úspora tokenov tak prebieha transparentne — nie sú potrebné žiadne zmeny vo vašom pracovnom postupe.
+67router implementuje modulárny pipeline kompresie promptov, ktorý sa spúšťa **proaktívne** predtým, než požiadavky dorazia k nadradeným poskytovateľom. Úspora tokenov tak prebieha transparentne — nie sú potrebné žiadne zmeny vo vašom pracovnom postupe.
 
 ```
 Požiadavka klienta
@@ -122,15 +122,15 @@ kombinácií kompresie priradených ku kombináciám smerovania.
 
 ## Výpočet úspor z upstream projektov
 
-OmniRoute dokumentuje úspory vďaka kompresii z dvoch zdrojov: benchmarkov upstream projektov a
-vlastnej kombinácie enginov OmniRoute.
+67router dokumentuje úspory vďaka kompresii z dvoch zdrojov: benchmarkov upstream projektov a
+vlastnej kombinácie enginov 67router.
 
 | Zdroj   | Číslo z upstream README použité v tomto dokumente                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Caveman | `~75%` menej výstupných tokenov, priemerná úspora výstupu v benchmarkoch `65%`, rozsah `22-87%` a nástroj na kompresiu vstupu `~46%` |
 | RTK     | Úspora výstupu príkazov `60-90%`; ukážková relácia `~118,000 -> ~23,900` tokenov, teda úspora `79.7%` (`~80%`)                       |
 
-Pri prekrývajúcich sa dátach nástrojov/kontextu predvolená kombinácia OmniRoute vrství enginy:
+Pri prekrývajúcich sa dátach nástrojov/kontextu predvolená kombinácia 67router vrství enginy:
 
 ```txt
 RTK -> Caveman
@@ -533,12 +533,12 @@ katalógu,
 jedenkrát pridá klauzulu o hraniciach **once** (spolu s bezpečnostnou klauzulou,
 `SAFETY_BOUNDARIES` alebo jej prekladom, keď je vybratý štýl `less-code` alebo
 `ponytail`) a blok začne jedinou značkou idempotencie
-(`[OmniRoute Output Styles]`), takže opätovné použitie nevykoná žiadnu zmenu. Keď má
+(`[67router Output Styles]`), takže opätovné použitie nevykoná žiadnu zmenu. Keď má
 rozpoznaný jazyk (pozrite časť Výber jazyka nižšie) preklad, namiesto angličtiny sa
 vloží lokalizovaný pokyn.
 
 V tele s neprázdnym poľom `messages` sa kontrola idempotencie vykoná pred obídením na
-základe obsahu: keď sa značka `[OmniRoute Output Styles]` už nachádza v poli `system`
+základe obsahu: keď sa značka `[67router Output Styles]` už nachádza v poli `system`
 najvyššej úrovne (ako reťazec alebo pole blokov obsahu) alebo v systémovej správe s
 reťazcovým obsahom, telo zostane nezmenené ako `already_applied` a kontrola kľúčových
 slov sa nevykoná. V opačnom prípade obídenie na základe obsahu
@@ -568,7 +568,7 @@ z nasledujúcich:
 V tele bez poľa `messages` (alebo s prázdnym poľom) sa nevykoná obídenie na základe
 obsahu a pole `system` najvyššej úrovne sa nekontroluje. Blok sa pripojí za text
 reťazcového poľa `instructions`, pokiaľ toto pole už neobsahuje značku
-`[OmniRoute Output Styles]`; v takom prípade telo zostane nezmenené ako
+`[67router Output Styles]`; v takom prípade telo zostane nezmenené ako
 `already_applied`. Keď telo nemá reťazcové pole `instructions`, ale obsahuje `input`
 (reťazec alebo pole), blok sa stane hodnotou `instructions` a nahradí akúkoľvek
 nereťazcovú hodnotu, ktorú toto pole obsahovalo. Telo bez reťazcového poľa `instructions`
@@ -596,8 +596,8 @@ nachádza na stránke **Caveman** (`/dashboard/context/caveman`) na jej karte
 Spätná kompatibilita: kým je `outputStyles` prázdne, staršie nastavenie
 `cavemanOutputMode.enabled` sa mapuje na `terse-prose` s hodnotou
 `cavemanOutputMode.intensity`. Blok sa potom začína značkou
-`[OmniRoute Output Styles]`, zatiaľ čo starší vkladač `applyCavemanOutputMode()`
-vkladal `[OmniRoute Caveman Output Mode]`. Pod značkou sa text zhoduje so starším
+`[67router Output Styles]`, zatiaľ čo starší vkladač `applyCavemanOutputMode()`
+vkladal `[67router Caveman Output Mode]`. Pod značkou sa text zhoduje so starším
 vloženým textom v jazykoch en, pt-BR, es, de, fr, it, ru, id a vi; v ja a zh obsahuje
 pred klauzulou o hraniciach jednu medzeru navyše. `terse-prose` má preklady do pt-BR,
 es, de, fr, it, ru, zh, ja, id a vi, takže požiadavka, ktorej rozpoznaný jazyk je `hu`,

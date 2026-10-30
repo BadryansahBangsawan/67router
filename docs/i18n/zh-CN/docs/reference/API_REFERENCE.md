@@ -6,7 +6,7 @@
 
 🌐 **语言：** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API 的核心参考文档。本文档涵盖公共 `/v1` 接口以及最常用的管理端点；机器可读的 [`docs/openapi.yaml`](../openapi.yaml) 和 `src/app/api/` 下的路由树是详尽的参考来源。
+67router API 的核心参考文档。本文档涵盖公共 `/v1` 接口以及最常用的管理端点；机器可读的 [`docs/openapi.yaml`](../openapi.yaml) 和 `src/app/api/` 下的路由树是详尽的参考来源。
 
 有关 OpenAI 兼容协议和提供者能力矩阵的专题说明，请参阅
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md)。
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | 响应 | `HIT` 或 `MISS`（非流式）                                                                                                                        |
 | `X-OmniRoute-Idempotent` | 响应 | 如果已去重，则为 `true`                                                                                                                          |
 | `X-OmniRoute-Progress`   | 响应 | 如果已启用进度跟踪，则为 `enabled`                                                                                                               |
-| `X-OmniRoute-Session-Id` | 响应 | OmniRoute 使用的有效会话 ID                                                                                                                      |
+| `X-OmniRoute-Session-Id` | 响应 | 67router 使用的有效会话 ID                                                                                                                       |
 | `X-OmniRoute-Request-Id` | 响应 | 请求关联 ID（如果已知）                                                                                                                          |
-| `X-OmniRoute-Version`    | 响应 | OmniRoute 构建版本（始终存在）                                                                                                                   |
+| `X-OmniRoute-Version`    | 响应 | 67router 构建版本（始终存在）                                                                                                                    |
 | `X-OmniRoute-Cost-Saved` | 响应 | 缓存命中时节省的美元金额（仅限缓存命中）                                                                                                         |
 | `X-OmniRoute-Decision`   | 响应 | 路由跟踪信息：`strategy=<name>; provider=<alias>; latency_ms=<n>`（`<name>` 是组合策略；对于非组合请求则为 `single`）— 在完成响应中始终存在      |
 
@@ -88,12 +88,12 @@ Content-Type: application/json
 
 #### 按请求固定账户
 
-当一个提供者有多个连接（账户或密钥）时，OmniRoute 通常会通过其账户选择策略选择一个连接。
+当一个提供者有多个连接（账户或密钥）时，67router 通常会通过其账户选择策略选择一个连接。
 请求也可以使用 `x-omniroute-connection` 请求头固定到某个特定连接：
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -121,8 +121,8 @@ Claude Code 通过 `ANTHROPIC_CUSTOM_HEADERS` 发送自定义请求头。请将�
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -138,7 +138,7 @@ Claude Code 通过 `ANTHROPIC_CUSTOM_HEADERS` 发送自定义请求头。请将�
 ## 独占托管会话租约
 
 独占托管会话租约是一种可选启用、与客户端无关的路由约定：一个活跃所有者
-持有一个符合条件的 OmniRoute 连接。它不租用模型、不要求 OAuth、不标识
+持有一个符合条件的 67router 连接。它不租用模型、不要求 OAuth、不标识
 特定客户端，也不要求特定提供者。
 
 用于身份验证的 API 密钥必须具有 `lease:exclusive` 作用域以及显式且非空的
@@ -187,7 +187,7 @@ generation：
 
 这一可选启用的状态操作会在单个数据库事务中，依据不透明的所有者标识、经过身份验证的托管 API 密钥以及确切的
 活跃 generation 进行隔离保护。`displayName` 仅为去除首尾空白后的已配置
-连接名称；如果不存在安全的已配置名称，则为 `null`。OmniRoute 绝不会改用
+连接名称；如果不存在安全的已配置名称，则为 `null`。67router 绝不会改用
 电子邮件或生成的账户身份。provider 值是不敏感的显示标签，绝不会是
 生成的兼容提供者标识符。凭据、令牌、Cookie、原始连接或 API
 密钥 ID、所有者哈希、隔离密钥和内部路由数据均不会包含在内。
@@ -228,7 +228,7 @@ X-OmniRoute-Lease-Generation: 1
 
 此响应仅表示常规的符合条件集合非空，且每个空闲候选连接都被
 其他所有者的活跃租约持有。不受支持的模型/提供者、策略不匹配、冷却、配额、
-健康状况和其他常规资格检查失败仍保留其现有的 OmniRoute 响应。
+健康状况和其他常规资格检查失败仍保留其现有的 67router 响应。
 
 ### `x-omniroute-compression`
 
@@ -301,7 +301,7 @@ EmbeddingsV5Request 文档，并将其**原样转发**至 `https://api.jina.ai/v
 ```
 
 原生 `{ image | audio | video | pdf }` 值可以是公共 HTTPS URL、`data:` URI 或原始
-base64。OmniRoute 不会将这些对象字符串化，也不会获取原生图像 URL——Jina 会自行获取
+base64。67router 不会将这些对象字符串化，也不会获取原生图像 URL——Jina 会自行获取
 公共媒体。额外的 Jina 字段（`task`、`normalized`、`truncate`、`embedding_type`）会被
 转发。仅文本 Jina SKU 仍会拒绝非文本文档。
 
@@ -448,7 +448,7 @@ Azure Document Intelligence 的 `analyze` API 是异步的：初始请求会返�
 
 ### Vertex AI DeepSeek OCR 身份验证和端点解析
 
-`vertex-deepseek-ocr` 会复用 OmniRoute 已支持用于聊天/图像流量的同一套 Vertex AI
+`vertex-deepseek-ocr` 会复用 67router 已支持用于聊天/图像流量的同一套 Vertex AI
 身份验证机制（`open-sse/executors/vertex.ts`）：连接的 API 密钥可以是 Service Account
 JSON 凭据（通过 JWT-bearer 流程交换为短期 OAuth 访问令牌），也可以是按原样使用的已签发
 OAuth 访问令牌。上游端点 URL 是 Vertex 的通用 `openapi/chat/completions` 合作伙伴端点，
@@ -471,7 +471,7 @@ Authorization: Bearer your-api-key
 
 ### 模型价格 (`pricing`)
 
-当 OmniRoute 知道模型的价格时，相应条目会包含一个 `pricing` 对象。价格来自成本核算所使用的定价表：内置默认价格、同步的价格，以及通过 `/api/pricing` 设置的覆盖价格。这些是标价，因此订阅制提供者也会显示每 token 价格。
+当 67router 知道模型的价格时，相应条目会包含一个 `pricing` 对象。价格来自成本核算所使用的定价表：内置默认价格、同步的价格，以及通过 `/api/pricing` 设置的覆盖价格。这些是标价，因此订阅制提供者也会显示每 token 价格。
 
 ```json
 "pricing": {
@@ -592,8 +592,8 @@ GET /api/v1/provider-plugin-manifest
 
 ## ElevenLabs 音频生成
 
-使用您的 ElevenLabs API 密钥，在 OmniRoute 中配置一个 `elevenlabs` 提供者连接。
-客户端使用其 **OmniRoute** 密钥（`Authorization: Bearer $OMNIROUTE_API_KEY`）进行身份验证；
+使用您的 ElevenLabs API 密钥，在 67router 中配置一个 `elevenlabs` 提供者连接。
+客户端使用其 **67router** 密钥（`Authorization: Bearer $OMNIROUTE_API_KEY`）进行身份验证；
 网关会将已存储的提供者密钥作为 `xi-api-key` 提供。切勿将 ElevenLabs 密钥作为网关的 Bearer 令牌发送。
 
 | 方法 | 路径                        | 响应                          | API 密钥端点类别 |
@@ -655,7 +655,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 在调用上游之前，会应用端点、模型、预算和连接限制。原生路由会原样返回上游状态码和错误响应体，
 包括表示方案限制的 `402` 和表示配额限制的 `429`。如果存在 `character-cost`、`song-id`、`request-id` 和 `retry-after`
 标头，则会予以保留。免费信用余额并不保证能够访问所有音乐模型、输出格式或 API 功能：
-ElevenLabs 会决定每个请求的权限。统一端点会在 OmniRoute 的标准化错误封装中保留错误状态码。
+ElevenLabs 会决定每个请求的权限。统一端点会在 67router 的标准化错误封装中保留错误状态码。
 
 上游契约：[音效](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert)、
 [音乐创作](https://elevenlabs.io/docs/api-reference/music/compose)和
@@ -696,7 +696,7 @@ ElevenLabs 会决定每个请求的权限。统一端点会在 OmniRoute 的标�
 
 所有 POST 路由都遵循相同的形式：`Bearer your-api-key` + 经 Zod 验证的 JSON 正文（`v1RerankSchema`、`v1ModerationSchema`、`v1AudioSpeechSchema` 等，参见 `src/shared/validation/schemas.ts`）。架构验证失败时返回 4xx。
 
-对于无法附加 `Authorization: Bearer ...` 的客户端，OmniRoute 也支持通过 URL 提供 API 密钥，既可以使用查询字符串兼容方式（`?token=...`、`?apiKey=...`、`?api_key=...`、`?key=...`），也可以使用下面记录的专用 `/api/v1/vscode/{token}/...` 端点。
+对于无法附加 `Authorization: Bearer ...` 的客户端，67router 也支持通过 URL 提供 API 密钥，既可以使用查询字符串兼容方式（`?token=...`、`?apiKey=...`、`?api_key=...`、`?key=...`），也可以使用下面记录的专用 `/api/v1/vscode/{token}/...` 端点。
 
 ```bash
 # 重排序（云注册表提供者，或作为 "<prefix>/<model>" 的 OpenAI 兼容提供者节点）
@@ -854,7 +854,7 @@ Tavily 结果会保留 `images` 和 `favicon`。
 
 通过已配置的网页抓取提供者（Firecrawl、Jina Reader、Tavily Extract、TinyFish Fetch、Nimble Extract、Parallel Extract）从 URL 提取内容。
 
-Parallel Extract（`parallel-search`，与 Parallel Search 使用相同的 API 密钥）仅返回 Markdown——任何其他 `format` 都会导致 `400`——并将内容限制为 100,000 个字符。当目标页面本身无法被提取时，上游会在 HTTP 200 响应中报告该情况；OmniRoute 会将其呈现为带有固定消息的 `422`。
+Parallel Extract（`parallel-search`，与 Parallel Search 使用相同的 API 密钥）仅返回 Markdown——任何其他 `format` 都会导致 `400`——并将内容限制为 100,000 个字符。当目标页面本身无法被提取时，上游会在 HTTP 200 响应中报告该情况；67router 会将其呈现为带有固定消息的 `422`。
 
 | 方法 | 路径            | 描述                                              |
 | ---- | --------------- | ------------------------------------------------- |
@@ -893,11 +893,11 @@ WebSocket 上的 Responses API 代理**仅连接到 `codex`**（ChatGPT 后端�
 
 #### 模型 ID：使用不带前缀的 ChatGPT ID（不要使用 `codex/` 前缀）
 
-当 `supports_websockets = true` 时，OpenAI **Codex CLI** 会在客户端验证模型名称，并且会**拒绝带提供者前缀的 ID**，例如 `codex/gpt-5.5`（`The 'codex/gpt-5.5' model is not supported when using Codex with a ChatGPT account`）。请发送**不带前缀的** ID（例如 `gpt-5.5`）。OmniRoute 的桥接仅支持 codex，因此在建立上游隧道之前，它会将不带前缀的 ID 重新解析为 codex 模型（`resolveCodexWsModelInfo`）——即使不带前缀的 `gpt-5.5` 在通过 HTTP 使用时原本会被路由到另一个提供者。
+当 `supports_websockets = true` 时，OpenAI **Codex CLI** 会在客户端验证模型名称，并且会**拒绝带提供者前缀的 ID**，例如 `codex/gpt-5.5`（`The 'codex/gpt-5.5' model is not supported when using Codex with a ChatGPT account`）。请发送**不带前缀的** ID（例如 `gpt-5.5`）。67router 的桥接仅支持 codex，因此在建立上游隧道之前，它会将不带前缀的 ID 重新解析为 codex 模型（`resolveCodexWsModelInfo`）——即使不带前缀的 `gpt-5.5` 在通过 HTTP 使用时原本会被路由到另一个提供者。
 
 #### 配置 OpenAI Codex CLI
 
-要将 Codex CLI 指向 OmniRoute，请在 `~/.codex/config.toml` 中添加一个支持 WebSocket 的自定义提供者（使用单独的 `CODEX_HOME`，以免修改现有配置）：
+要将 Codex CLI 指向 67router，请在 `~/.codex/config.toml` 中添加一个支持 WebSocket 的自定义提供者（使用单独的 `CODEX_HOME`，以免修改现有配置）：
 
 ```toml
 model = "gpt-5.5"                 # 不带前缀的 ID——不要使用 "codex/gpt-5.5"
@@ -908,15 +908,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # 不要添加尾部斜杠；WS URL 会据此派生（生产环境请使用 https/wss）
 wire_api = "responses"                    # 自 2026 年 2 月起唯一支持的值
 supports_websockets = true                # 启用 Responses-over-WS 传输
-env_key = "OMNIROUTE_API_KEY"             # 保存 OmniRoute API 密钥（Bearer）
+env_key = "OMNIROUTE_API_KEY"             # 保存 67router API 密钥（Bearer）
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API 密钥（若 REQUIRE_API_KEY=false，则任意密钥均可）
+export OMNIROUTE_API_KEY=sk-...           # 67router API 密钥（若 REQUIRE_API_KEY=false，则任意密钥均可）
 codex exec "Responda apenas: PONG"
 ```
 
-CLI 会将 `base_url + /responses` 升级为 WebSocket，OmniRoute 则会将其通过隧道连接到所选的 codex OAuth 连接。已针对本地服务器完成端到端验证：ChatGPT 会返回 `codex.rate_limits` + `response.created`，并以流式方式传输补全结果。
+CLI 会将 `base_url + /responses` 升级为 WebSocket，67router 则会将其通过隧道连接到所选的 codex OAuth 连接。已针对本地服务器完成端到端验证：ChatGPT 会返回 `codex.rate_limits` + `response.created`，并以流式方式传输补全结果。
 
 ---
 
@@ -997,7 +997,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### 截止阈值调整公式
 
-OmniRoute 支持主动设置配额截止阈值，以防止上游配额耗尽（通过连接的
+67router 支持主动设置配额截止阈值，以防止上游配额耗尽（通过连接的
 `quotaWindowThresholds`、提供者默认值或全局弹性设置进行配置）。当某个配额窗口启用截止阈值
 （例如 `cutoff = 25%`）时，文本渲染器按以下方式计算剩余额度：
 
@@ -1539,7 +1539,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - 带令牌的别名复用与 `/v1/*` 和 `/api/tags` 相同的处理程序；响应结构保持一致。
 - 只要客户端支持自定义请求头，就应优先使用 `Authorization: Bearer ...`。
-- 基于 URL 的令牌可能会出现在 OmniRoute 外部的反向代理日志、浏览器历史记录和遥测数据中。应将其视为一种兼容性选项，而不是默认身份验证方式。
+- 基于 URL 的令牌可能会出现在 67router 外部的反向代理日志、浏览器历史记录和遥测数据中。应将其视为一种兼容性选项，而不是默认身份验证方式。
 
 ---
 
@@ -1647,7 +1647,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Webhook
 
-用于订阅 OmniRoute 事件（请求完成、配额耗尽、密钥轮换等）的出站 Webhook。
+用于订阅 67router 事件（请求完成、配额耗尽、密钥轮换等）的出站 Webhook。
 
 | 方法   | 路径                      | 描述                                                                  |
 | ------ | ------------------------- | --------------------------------------------------------------------- |
@@ -1680,7 +1680,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## 智能体协议
 
-代表 OmniRoute 用户远程执行的云智能体任务（Claude Code、Codex Cloud、OpenHands 等）。
+代表 67router 用户远程执行的云智能体任务（Claude Code、Codex Cloud、OpenHands 等）。
 
 | 方法   | 路径                          | 描述                                                                                                                             |
 | ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -1726,7 +1726,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## 弹性机制（扩展）
 
-OmniRoute 提供三种相互独立的临时故障处理机制；以下管理端点可供运维人员读取和覆盖其状态：
+67router 提供三种相互独立的临时故障处理机制；以下管理端点可供运维人员读取和覆盖其状态：
 
 | 作用域       | 状态存储                          | 读取                                      | 重置 / 清除                              |
 | ------------ | --------------------------------- | ----------------------------------------- | ---------------------------------------- |
@@ -1761,7 +1761,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## 技能
 
-用于通过自定义可执行处理程序扩展 OmniRoute 的技能框架，以及市场集成。
+用于通过自定义可执行处理程序扩展 67router 的技能框架，以及市场集成。
 
 | 方法   | 路径                              | 描述                                                                                                        |
 | ------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -1798,7 +1798,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## MCP 服务器
 
-OmniRoute 内置了一个模型上下文协议服务器，支持 3 种传输方式（stdio、SSE、streamable-http）及带作用域的工具。以下仪表盘端点用于读取状态/审计数据，并代理 HTTP 传输。
+67router 内置了一个模型上下文协议服务器，支持 3 种传输方式（stdio、SSE、streamable-http）及带作用域的工具。以下仪表盘端点用于读取状态/审计数据，并代理 HTTP 传输。
 
 | 方法 | 路径 | 描述 |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1820,7 +1820,7 @@ OmniRoute 内置了一个模型上下文协议服务器，支持 3 种传输方�
 
 ## A2A 服务器
 
-OmniRoute 提供了一个 A2A（Agent-to-Agent，智能体到智能体）JSON-RPC 2.0 端点，以及一个用于检查和仪表板的 REST 封装。
+67router 提供了一个 A2A（Agent-to-Agent，智能体到智能体）JSON-RPC 2.0 端点，以及一个用于检查和仪表板的 REST 封装。
 
 ### JSON-RPC
 
@@ -2046,7 +2046,7 @@ GET /.well-known/agent.json
 
 ## CLI 工具管理
 
-管理与 OmniRoute 集成的 CLI 工具（antigravity、commandCode、
+管理与 67router 集成的 CLI 工具（antigravity、commandCode、
 devin-cli 等）。完整列表请参阅[提供者参考](./PROVIDER_REFERENCE.md)。
 
 | 方法 | 路径                                    | 描述                                                                                                                      |
@@ -2157,7 +2157,7 @@ devin-cli 等）。完整列表请参阅[提供者参考](./PROVIDER_REFERENCE.m
 
 ## 插件
 
-管理 OmniRoute 插件（第三方扩展）。
+管理 67router 插件（第三方扩展）。
 
 | 方法   | 路径                               | 描述             |
 | ------ | ---------------------------------- | ---------------- |

@@ -6,7 +6,7 @@
 
 ## 概觀
 
-Redis 是 OmniRoute 中的**選用軟相依項目**——當 Redis 無法使用時，應用程式會平順降級（使用記憶體內備援機制）。在生產環境中，調校 Redis 可降低四種不同工作負載的延遲：
+Redis 是 67router 中的**選用軟相依項目**——當 Redis 無法使用時，應用程式會平順降級（使用記憶體內備援機制）。在生產環境中，調校 Redis 可降低四種不同工作負載的延遲：
 
 | 工作負載   | 驅動來源                      | 用戶端工廠                                    | 鍵模式                                           |
 | ---------- | ----------------------------- | --------------------------------------------- | ------------------------------------------------ |
@@ -15,7 +15,7 @@ Redis 是 OmniRoute 中的**選用軟相依項目**——當 Redis 無法使用�
 | 配額儲存區 | `redisQuotaStore.ts`          | 獨立的 `getRedisClient(url)` 單例             | `<prefix>quota:*`，可依執行個體設定              |
 | 預熱斷路器 | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` 中的獨立用戶端     | `<prefix>warmup:cb:<connectionId>`               |
 
-這四種工作負載共用同一個命名空間前綴，因此 OmniRoute 能與其他應用程式共存於單一 Redis 執行個體中（例如 `127.0.0.1:6379`）。請參閱[鍵命名空間](#key-namespacing)。
+這四種工作負載共用同一個命名空間前綴，因此 67router 能與其他應用程式共存於單一 Redis 執行個體中（例如 `127.0.0.1:6379`）。請參閱[鍵命名空間](#key-namespacing)。
 
 ---
 
@@ -38,12 +38,12 @@ Redis 是 OmniRoute 中的**選用軟相依項目**——當 Redis 無法使用�
 
 ## 鍵命名空間
 
-OmniRoute 會與主機上執行的其他服務共用 Redis 執行個體。若沒有命名空間，`auth:api_key:<sha256>` 或 `rl:*` 等鍵可能會與使用同一 Redis 的其他應用程式所建立的鍵發生衝突（此執行個體在 `127.0.0.1:6379` 上執行 Redis，並與其他服務並存）。
+67router 會與主機上執行的其他服務共用 Redis 執行個體。若沒有命名空間，`auth:api_key:<sha256>` 或 `rl:*` 等鍵可能會與使用同一 Redis 的其他應用程式所建立的鍵發生衝突（此執行個體在 `127.0.0.1:6379` 上執行 Redis，並與其他服務並存）。
 
-將 `REDIS_KEY_PREFIX` 設為非空字串，為 OmniRoute 的**每一個**鍵加上前綴：
+將 `REDIS_KEY_PREFIX` 設為非空字串，為 67router 的**每一個**鍵加上前綴：
 
 ```bash
-# .env——所有 OmniRoute 鍵都會變成 omniroute:rl:*、omniroute:auth:*、omniroute:quota:*、omniroute:warmup:cb:*
+# .env——所有 67router 鍵都會變成 omniroute:rl:*、omniroute:auth:*、omniroute:quota:*、omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -87,7 +87,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # 為作業系統頁面快取保留空間
 maxmemory-policy allkeys-lru         # 在記憶體壓力下淘汰過期未用的驗證快取項目
 
-# 持久化（選用 — OmniRoute 即使不使用持久化也可安全應對當機）
+# 持久化（選用 — 67router 即使不使用持久化也可安全應對當機）
 save 300 1                           # 若至少有 1 個鍵變更，則至少每 5 分鐘建立一次快照
 appendonly no                        # 不需要 AOF；資料可重新產生
 appendfsync no                       # 無 fsync 額外負擔（RDB 已足夠）

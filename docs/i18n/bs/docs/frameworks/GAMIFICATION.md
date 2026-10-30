@@ -9,7 +9,7 @@
 > **Izvor istine:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute uključuje lokalni sloj gamifikacije koji nagrađuje korisnike za angažman na platformi — slanje zahtjeva, prebacivanje provajdera, kreiranje kombinacija, dijeljenje tokena i doprinos zajednici. Svo stanje se nalazi u SQLite-u; federacija sa serverima zajednice je opciona i zasnovana na push modelu.
+67router uključuje lokalni sloj gamifikacije koji nagrađuje korisnike za angažman na platformi — slanje zahtjeva, prebacivanje provajdera, kreiranje kombinacija, dijeljenje tokena i doprinos zajednici. Svo stanje se nalazi u SQLite-u; federacija sa serverima zajednice je opciona i zasnovana na push modelu.
 
 Sistem je dizajniran da ima **nultu latenciju na kritičnoj putanji** — događaji gamifikacije se šalju po principu 'fire-and-forget' iz cjevovoda zahtjeva i nikada ne blokiraju LLM odgovor.
 
@@ -31,7 +31,7 @@ Povećanje angažmana i zadržavanja korisnika pružanjem vidljivog napretka (XP
 | Rang-liste                 | Globalni, sedmični, mjesečni, dijeljenje tokena i opsezi doprinosa                   |
 | Dijeljenje tokena          | Prenos kredita između korisnika putem knjige sa dvostrukim unosom                    |
 | Pozivnice i iskorištavanje | Kodovi za preporuku sa SHA-256 heširanim skladištenjem                               |
-| Serveri zajednice          | Federacija sa eksternim OmniRoute instancama                                         |
+| Serveri zajednice          | Federacija sa eksternim 67router instancama                                          |
 | Anti-cheat                 | Bodovanje na strani servera, ograničavanje brzine, detekcija anomalija putem z-skora |
 
 ### Principi dizajna
@@ -103,7 +103,7 @@ src/app/api/gamification/
 
 ### Tabele baze podataka
 
-Sve tabele se nalaze u glavnoj OmniRoute SQLite bazi podataka, kreiranoj migracijom `060_create_gamification.sql`. WAL žurnalizacija je naslijeđena od singletona `getDbInstance()` u `src/lib/db/core.ts`.
+Sve tabele se nalaze u glavnoj 67router SQLite bazi podataka, kreiranoj migracijom `060_create_gamification.sql`. WAL žurnalizacija je naslijeđena od singletona `getDbInstance()` u `src/lib/db/core.ts`.
 
 ```
 ┌─────────────────────────┐     ┌──────────────────────────┐
@@ -160,7 +160,7 @@ Sve tabele se nalaze u glavnoj OmniRoute SQLite bazi podataka, kreiranoj migraci
 
 ### Domenski modul: `src/lib/db/gamification.ts`
 
-Prati standardni OmniRoute obrazac — uvozi `getDbInstance()` iz `core.ts`, izvozi tipizirane CRUD funkcije. Nema sirovog SQL-a u rukovaocima ruta (route handlers).
+Prati standardni 67router obrazac — uvozi `getDbInstance()` iz `core.ts`, izvozi tipizirane CRUD funkcije. Nema sirovog SQL-a u rukovaocima ruta (route handlers).
 
 Ključne funkcije:
 
@@ -222,7 +222,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Akcija            | XP  | Opis                                                     |
 | ----------------- | --- | -------------------------------------------------------- |
-| `request`         | 1   | Po API zahtjevu usmjerenom kroz OmniRoute                |
+| `request`         | 1   | Po API zahtjevu usmjerenom kroz 67router                 |
 | `provider_switch` | 5   | Prebacivanje na drugog provajdera                        |
 | `model_switch`    | 3   | Prebacivanje na drugi model                              |
 | `combo_create`    | 10  | Kreiranje nove kombinacije                               |
@@ -552,7 +552,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (jedinstven, indeksiran) |
 | `token_hash` | SHA-256(raw_token)                  |
 
-Sirovi token se vraća korisniku točno jednom prilikom kreiranja. OmniRoute
+Sirovi token se vraća korisniku točno jednom prilikom kreiranja. 67router
 ga nikada više ne pohranjuje niti prikazuje — samo hash ostaje.
 
 ### Sprječavanje samopozivanja
@@ -673,7 +673,7 @@ Administratori mogu pretraživati cijeli revizijski trag putem `GET /api/gamific
 
 ## API rute
 
-Sve rute prate standardni OmniRoute obrazac:
+Sve rute prate standardni 67router obrazac:
 
 ```
 Route → CORS preflight → Body validation (Zod) → Auth (extractApiKey)

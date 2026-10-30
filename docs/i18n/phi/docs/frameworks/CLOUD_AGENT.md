@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/cloudAgent/` at `src/app/api/v1/agents/tasks/`
 > **Huling na-update:** 2026-06-28 — v3.8.40 (pag-refresh ng frontmatter; 4 na agent kasama ang cursor-cloud)
 
-Isinasaayos ng OmniRoute ang mga coding agent na hino-host sa cloud ng mga third party (Codex Cloud, Cursor,
+Isinasaayos ng 67router ang mga coding agent na hino-host sa cloud ng mga third party (Codex Cloud, Cursor,
 Devin, Jules) bilang mga pangmatagalang task. Ang bawat agent ay nakabalot sa likod ng isang pare-parehong interface upang
 makapagsumite ang mga client ng prompt + repo URL at makatanggap ng mga resulta nang hindi kailangang direktang pangasiwaan ang
 mga API na partikular sa provider.

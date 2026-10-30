@@ -1,10 +1,10 @@
 ---
-title: "OmniRoute Architecture"
+title: "67router Architecture"
 version: 3.8.52
 lastUpdated: 2026-10-05
 ---
 
-# OmniRoute Architecture
+# 67router Architecture
 
 🌐 **Languages:** 🇺🇸 [English](./ARCHITECTURE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/architecture/ARCHITECTURE.md) | 🇸🇦 [العربية](../i18n/ar/docs/architecture/ARCHITECTURE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/architecture/ARCHITECTURE.md) | 🇧🇬 [Български](../i18n/bg/docs/architecture/ARCHITECTURE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/architecture/ARCHITECTURE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/architecture/ARCHITECTURE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/architecture/ARCHITECTURE.md) | 🇩🇰 [Dansk](../i18n/da/docs/architecture/ARCHITECTURE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/architecture/ARCHITECTURE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/architecture/ARCHITECTURE.md) | 🇪🇸 [Español](../i18n/es/docs/architecture/ARCHITECTURE.md) | 🇪🇪 [Eesti](../i18n/et/docs/architecture/ARCHITECTURE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/architecture/ARCHITECTURE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/architecture/ARCHITECTURE.md) | 🇫🇷 [Français](../i18n/fr/docs/architecture/ARCHITECTURE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/architecture/ARCHITECTURE.md) | 🇮🇱 [עברית](../i18n/he/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/architecture/ARCHITECTURE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/architecture/ARCHITECTURE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/architecture/ARCHITECTURE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/architecture/ARCHITECTURE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/architecture/ARCHITECTURE.md) | 🇮🇹 [Italiano](../i18n/it/docs/architecture/ARCHITECTURE.md) | 🇯🇵 [日本語](../i18n/ja/docs/architecture/ARCHITECTURE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/architecture/ARCHITECTURE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/architecture/ARCHITECTURE.md) | 🇰🇷 [한국어](../i18n/ko/docs/architecture/ARCHITECTURE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/architecture/ARCHITECTURE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/architecture/ARCHITECTURE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/architecture/ARCHITECTURE.md) | 🇲🇹 [Malti](../i18n/mt/docs/architecture/ARCHITECTURE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/architecture/ARCHITECTURE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/architecture/ARCHITECTURE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/architecture/ARCHITECTURE.md) | 🇳🇴 [Norsk](../i18n/no/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/architecture/ARCHITECTURE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/architecture/ARCHITECTURE.md) | 🇵🇱 [Polski](../i18n/pl/docs/architecture/ARCHITECTURE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/architecture/ARCHITECTURE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/architecture/ARCHITECTURE.md) | 🇷🇴 [Română](../i18n/ro/docs/architecture/ARCHITECTURE.md) | 🇷🇺 [Русский](../i18n/ru/docs/architecture/ARCHITECTURE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/architecture/ARCHITECTURE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/architecture/ARCHITECTURE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/architecture/ARCHITECTURE.md) | 🇷🇸 [Српски](../i18n/sr/docs/architecture/ARCHITECTURE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/architecture/ARCHITECTURE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/architecture/ARCHITECTURE.md) | 🇹🇭 [ไทย](../i18n/th/docs/architecture/ARCHITECTURE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/architecture/ARCHITECTURE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/architecture/ARCHITECTURE.md) | 🇵🇰 [اردو](../i18n/ur/docs/architecture/ARCHITECTURE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/architecture/ARCHITECTURE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/architecture/ARCHITECTURE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/architecture/ARCHITECTURE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -12,7 +12,7 @@ _Last updated: 2026-06-28_
 
 ## Executive Summary
 
-OmniRoute is a local AI routing gateway and dashboard built on Next.js.
+67router is a local AI routing gateway and dashboard built on Next.js.
 It provides a single OpenAI-compatible endpoint (`/v1/*`) and routes traffic across multiple upstream providers with translation, fallback, token refresh, and usage tracking.
 
 Core capabilities:
@@ -156,7 +156,7 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 
 UI layer: every page renders inside one shell — `src/app/(dashboard)/layout.tsx` →
 `src/shared/components/layouts/DashboardLayout.tsx` → `DashboardShell.tsx` (the kit's
-`SidebarProvider`/`SidebarInset`, OmniRoute's `Sidebar.tsx` and `Header.tsx`). Pages import their
+`SidebarProvider`/`SidebarInset`, 67router's `Sidebar.tsx` and `Header.tsx`). Pages import their
 building blocks from `@/shared/components` (adapters over the vendored Keak CI UI Kit in
 `packages/ui-kit`) or from kit component subpaths (`@omniroute/ui-kit/table`, `…/page-header`), and
 icons through `<Icon>` (`ICON_MAP` → Lucide). Theme (`system` by default, light/dark) and tokens come
@@ -174,7 +174,7 @@ flowchart LR
         BROWSER[Browser Dashboard]
     end
 
-    subgraph Router[OmniRoute Local Process]
+    subgraph Router[67router Local Process]
         API[V1 Compatibility API\n/v1/*]
         DASH[Dashboard + Management API\n/api/*]
         CORE[SSE + Translation Core\nopen-sse + src/sse]
@@ -338,7 +338,7 @@ OAuth provider modules (27 individual files under `src/lib/oauth/providers/`):
 
 ## 5) Embedded Services (v3.8.4)
 
-OmniRoute can install, supervise, and route to locally-running AI tool processes
+67router can install, supervise, and route to locally-running AI tool processes
 called **embedded services**. Five are shipped: 9Router, CLIProxyAPI, Bifrost, Mux and Dario.
 
 Architecture layers:
@@ -448,7 +448,7 @@ have to assemble lockout/budget/fallback logic themselves.
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — periodic evaluation jobs
 
 ### E. Authorization Pipeline
@@ -826,7 +826,7 @@ flowchart LR
         Browser[Dashboard Browser]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Executors]
         MainDB[(storage.sqlite)]
@@ -945,7 +945,7 @@ All other providers (including custom compatible nodes) use the `DefaultExecutor
 ## Provider Compatibility Matrix
 
 > **Note:** The matrix below is a representative sample of the 351 registered providers in
-> OmniRoute v3.8.0. For the canonical and continuously-updated list, refer to
+> 67router v3.8.0. For the canonical and continuously-updated list, refer to
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (auto-generated) or the source of
 > truth at `src/shared/constants/providers.ts` (Zod-validated at load).
 
@@ -1127,7 +1127,7 @@ Detailed request payload capture stores up to four JSON payload stages per route
 - raw request received from the client
 - translated request actually sent upstream
 - provider response reconstructed as JSON; streamed responses are compacted to the final summary plus stream metadata
-- final client response returned by OmniRoute; streamed responses are stored in the same compact summary form
+- final client response returned by 67router; streamed responses are stored in the same compact summary form
 
 ## Security-Sensitive Boundaries
 

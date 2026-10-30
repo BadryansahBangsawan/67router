@@ -4,7 +4,7 @@
 
 ---
 
-Khả năng nén của OmniRoute được xây dựng dựa trên các hợp đồng engine. Một chế độ có thể chạy trực tiếp một engine
+Khả năng nén của 67router được xây dựng dựa trên các hợp đồng engine. Một chế độ có thể chạy trực tiếp một engine
 (`caveman` hoặc `rtk`) hoặc một pipeline xếp chồng có tính xác định, thực thi nhiều engine theo thứ tự.
 
 ## Chế độ
@@ -35,7 +35,7 @@ Hồ sơ là một **ngưỡng trên, không phải ngưỡng dưới**: `mergeC
 
 Được đo lường trên cơ sở mã này: `coding-safe` và `balanced` nâng `minCompressChars` lên mức tối đa và giữ nguyên hệ thống, lược đồ công cụ và kết quả công cụ, vì vậy một phiên chưa tích lũy lịch sử sẽ dừng lại ở `below_min_chars` và công cụ không biến đổi gì. Đó là lý do tại sao mặc định là `aggressive` thay vì hồ sơ an toàn nhất.
 
-Gói giải quyết phạm vi mô hình và hồ sơ của riêng nó từ cấu hình môi trường. OmniRoute không bao giờ ủy quyền quyết định: bộ điều hợp ghim cổng mô hình vào phạm vi hạn chế nhất của gói, vì vậy cài đặt môi trường máy chủ chỉ có thể thu hẹp danh sách cho phép, không bao giờ mở rộng nó vượt quá các biên lai được đo lường của OmniRoute.
+Gói giải quyết phạm vi mô hình và hồ sơ của riêng nó từ cấu hình môi trường. 67router không bao giờ ủy quyền quyết định: bộ điều hợp ghim cổng mô hình vào phạm vi hạn chế nhất của gói, vì vậy cài đặt môi trường máy chủ chỉ có thể thu hẹp danh sách cho phép, không bao giờ mở rộng nó vượt quá các biên lai được đo lường của 67router.
 
 ## Registry Engine
 
@@ -81,7 +81,7 @@ Chế độ Caveman tập trung vào việc cô đọng ngữ nghĩa của văn 
 Giao diện trên bảng điều khiển nằm tại `Dashboard -> Context & Cache -> Caveman`.
 
 Dự án Caveman thượng nguồn báo cáo số token đầu ra giảm `~75%`, mức tiết kiệm đầu ra trung bình `65%` trong các bài benchmark
-với phạm vi `22-87%`, cùng một công cụ nén đầu vào `~46%`. OmniRoute sử dụng số liệu phía đầu vào của Caveman
+với phạm vi `22-87%`, cùng một công cụ nén đầu vào `~46%`. 67router sử dụng số liệu phía đầu vào của Caveman
 khi mô tả mức tiết kiệm prompt/ngữ cảnh xếp chồng; chế độ đầu ra của Caveman vẫn là một
 tính năng hành vi phản hồi riêng biệt.
 

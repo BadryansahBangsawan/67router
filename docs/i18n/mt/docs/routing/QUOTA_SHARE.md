@@ -15,7 +15,7 @@ Il-Magna tal-Kondiviżjoni tal-Kwota tqassam b'mod ġust il-kwota bbażata fuq i
 5 sigħat ta' Codex, 1500 talba/siegħa ta' Kimi) bejn diversi ċwievet tal-API li jikkondividu
 l-istess konnessjoni.
 
-**Il-problema li ssolvi:** OmniRoute jgħaddi ħafna ċwievet tal-API permezz tal-istess kont
+**Il-problema li ssolvi:** 67router jgħaddi ħafna ċwievet tal-API permezz tal-istess kont
 tal-fornitur upstream. Mingħajr loġika ta' kondiviżjoni, żieda f'daqqa mit-ċavetta A tista' teżawrixxi
 l-kwota tal-fornitur għal dik is-siegħa, u tħalli ċ-ċwievet B u C imblukkati sakemm it-tieqa tiġi ssettjata mill-ġdid.
 Il-magna tipprevjeni dan billi:
@@ -119,7 +119,7 @@ Driver ta' Redis: skript Lua EVAL għal inkrement atomiku — jitħaddem bħala 
 
 - Tabella: `quota_consumption` (ara l-migrazzjoni `073_quota_pools.sql` / `074_quota_consumption.sql`).
 - L-aħjar għal skjeramenti b’istanza waħda.
-- Il-persistenza kollha tinsab fid-DB SQLite eżistenti ta’ OmniRoute (`DATA_DIR/storage.sqlite`).
+- Il-persistenza kollha tinsab fid-DB SQLite eżistenti ta’ 67router (`DATA_DIR/storage.sqlite`).
 
 ### Redis (fakultattiv, b’diversi istanzi)
 

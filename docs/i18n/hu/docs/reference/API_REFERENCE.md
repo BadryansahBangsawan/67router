@@ -6,7 +6,7 @@
 
 🌐 **Nyelvek:** 🇺🇸 [Angol](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Az OmniRoute API alapvető referenciadokumentációja. Ismerteti a nyilvános `/v1` felületet és a leggyakrabban használt felügyeleti végpontokat; a géppel olvasható [`docs/openapi.yaml`](../openapi.yaml), valamint a `src/app/api/` alatti útvonalfa szolgál teljes körű forrásként.
+Az 67router API alapvető referenciadokumentációja. Ismerteti a nyilvános `/v1` felületet és a leggyakrabban használt felügyeleti végpontokat; a géppel olvasható [`docs/openapi.yaml`](../openapi.yaml), valamint a `src/app/api/` alatti útvonalfa szolgál teljes körű forrásként.
 
 A célzott OpenAI-kompatibilis protokollt és a szolgáltatói képességmátrixot lásd az
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) dokumentumban.
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Válasz | `HIT` vagy `MISS` (nem adatfolyamos)                                                                                                                                                                                                                   |
 | `X-OmniRoute-Idempotent` | Válasz | `true`, ha deduplikálva lett                                                                                                                                                                                                                           |
 | `X-OmniRoute-Progress`   | Válasz | `enabled`, ha az előrehaladás követése be van kapcsolva                                                                                                                                                                                                |
-| `X-OmniRoute-Session-Id` | Válasz | Az OmniRoute által használt tényleges munkamenet-azonosító                                                                                                                                                                                             |
+| `X-OmniRoute-Session-Id` | Válasz | Az 67router által használt tényleges munkamenet-azonosító                                                                                                                                                                                              |
 | `X-OmniRoute-Request-Id` | Válasz | A kérés korrelációs azonosítója (ha ismert)                                                                                                                                                                                                            |
-| `X-OmniRoute-Version`    | Válasz | Az OmniRoute buildverziója (mindig jelen van)                                                                                                                                                                                                          |
+| `X-OmniRoute-Version`    | Válasz | Az 67router buildverziója (mindig jelen van)                                                                                                                                                                                                           |
 | `X-OmniRoute-Cost-Saved` | Válasz | A gyorsítótár által megtakarított összeg USD-ben `HIT` esetén (csak gyorsítótártalálatoknál)                                                                                                                                                           |
 | `X-OmniRoute-Decision`   | Válasz | Útválasztási nyomkövetés: `strategy=<name>; provider=<alias>; latency_ms=<n>` (a `<name>` a kombinált stratégia, nem kombinált kérés esetén pedig `single`) — a befejezési válaszokban mindig jelen van                                                |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Fiók rögzítése kérésenként
 
-Ha egy szolgáltatóhoz több kapcsolat (fiók vagy kulcs) tartozik, az OmniRoute normál esetben
+Ha egy szolgáltatóhoz több kapcsolat (fiók vagy kulcs) tartozik, az 67router normál esetben
 a fiókkiválasztási stratégiájával választ közülük. Ehelyett egy kérés egy adott kapcsolathoz
 rögzíthető az `x-omniroute-connection` fejléccel:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -125,8 +125,8 @@ ezt a `~/.claude/settings.json` fájl `env` blokkjába, vagy egy projektszintű
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -141,7 +141,7 @@ Forrás: `src/sse/handlers/chat.ts` (a fejléc beolvasása), `src/sse/services/a
 
 ## Exkluzív menedzselt munkamenet-bérletek
 
-Az exkluzív menedzselt munkamenet-bérlet egy opcionális, klienssemleges útválasztási szerződés: egy aktív tulajdonos egy jogosult OmniRoute kapcsolatot birtokol. Nem bérel modellt, nem igényel OAuth-ot, nem azonosít konkrét klienst, és nem igényel konkrét szolgáltatót.
+Az exkluzív menedzselt munkamenet-bérlet egy opcionális, klienssemleges útválasztási szerződés: egy aktív tulajdonos egy jogosult 67router kapcsolatot birtokol. Nem bérel modellt, nem igényel OAuth-ot, nem azonosít konkrét klienst, és nem igényel konkrét szolgáltatót.
 
 Az autentikáló API kulcsnak rendelkeznie kell `lease:exclusive` hatókörrel és egy explicit, nem üres `allowedConnections` listával. Az adatbázis-módosítási határ mindkét mezőt érvényesíti a kulcs létrehozásakor és a részleges frissítéseknél.
 
@@ -184,7 +184,7 @@ Egy aktív bérlet tulajdonos explicit módon kérhet adatvédelmi szempontból 
 }
 ```
 
-Ez az opcionális állapotművelet az átlátszatlan tulajdonos, az autentikált menedzselt API kulcs és az pontos aktív generáció által van védve egy adatbázis tranzakcióban. A `displayName` csak a levágott konfigurált kapcsolatnév; `null`, ha nincs biztonságos konfigurált név. Az OmniRoute soha nem helyettesít e-mailt vagy generált fiókazonosítót. A szolgáltató értéke egy nem érzékeny megjelenítési címke, és soha nem egy generált kompatibilis szolgáltató azonosító. A hitelesítő adatok, tokenek, sütik, nyers kapcsolat- vagy API kulcs azonosítók, tulajdonos hash-ek, védelmi titkok és belső útválasztási adatok kizárásra kerülnek.
+Ez az opcionális állapotművelet az átlátszatlan tulajdonos, az autentikált menedzselt API kulcs és az pontos aktív generáció által van védve egy adatbázis tranzakcióban. A `displayName` csak a levágott konfigurált kapcsolatnév; `null`, ha nincs biztonságos konfigurált név. Az 67router soha nem helyettesít e-mailt vagy generált fiókazonosítót. A szolgáltató értéke egy nem érzékeny megjelenítési címke, és soha nem egy generált kompatibilis szolgáltató azonosító. A hitelesítő adatok, tokenek, sütik, nyers kapcsolat- vagy API kulcs azonosítók, tulajdonos hash-ek, védelmi titkok és belső útválasztási adatok kizárásra kerülnek.
 
 Helytelen kulcs, helytelen tulajdonos, elavult generáció, hiányzó, lejárt, felszabadított és érvénytelenített keresések mind ugyanazt a `409 LEASE_FENCE_STALE` hibát adják vissza kapcsolat metaadatok nélkül. Egy kliens, amely kapacitás-várakozási választ kapott, nem rendelkezik aktív kötéssel, amelyet ellenőrizhetne. Amikor az útválasztás átvisz egy aktív bérletet, ugyanaz a generáció érvényes marad, és az állapot atomi módon adja vissza az új kötést, soha nem a régit. A meglévő kliensek változatlanok maradnak, mert a megszerzési, megújítási, felszabadítási és várakozási válaszok megőrzik korábbi formájukat.
 
@@ -210,7 +210,7 @@ Az ideiglenes versengés HTTP `429` választ ad vissza `Retry-After` fejléccel 
 }
 ```
 
-Ez a válasz csak azt jelenti, hogy a szokásos jogosult halmaz nem volt üres, és minden szabad jelöltet egy idegen aktív bérlet tartott. A nem támogatott modellek/szolgáltatók, a házirend-eltérés, a lehűlési idő, a kvóta, az állapot és más szokásos jogosultsági hibák megőrzik meglévő OmniRoute válaszaikat.
+Ez a válasz csak azt jelenti, hogy a szokásos jogosult halmaz nem volt üres, és minden szabad jelöltet egy idegen aktív bérlet tartott. A nem támogatott modellek/szolgáltatók, a házirend-eltérés, a lehűlési idő, a kvóta, az állapot és más szokásos jogosultsági hibák megőrzik meglévő 67router válaszaikat.
 
 ### `x-omniroute-compression`
 
@@ -284,7 +284,7 @@ EmbeddingsV5Request dokumentumait is elfogadja, és **változtatás nélkül tov
 ```
 
 A natív `{ image | audio | video | pdf }` értékek lehetnek nyilvános HTTPS URL-ek, `data:` URI-k vagy nyers
-base64-adatok. Az OmniRoute ezeket az objektumokat nem alakítja karakterlánccá, és nem tölti le a natív kép-URL-eket — a nyilvános
+base64-adatok. Az 67router ezeket az objektumokat nem alakítja karakterlánccá, és nem tölti le a natív kép-URL-eket — a nyilvános
 médiát maga a Jina kéri le. A további Jina-mezők (`task`, `normalized`, `truncate`, `embedding_type`)
 továbbításra kerülnek. A csak szöveget támogató Jina SKU-k továbbra is elutasítják a nem szöveges dokumentumokat.
 
@@ -432,7 +432,7 @@ folyamatban van. A végső Azure-választ a visszaküldés előtt ugyanarra a Mi
 
 ### A Vertex AI DeepSeek OCR hitelesítése és végpontfeloldása
 
-A `vertex-deepseek-ocr` ugyanazt a Vertex AI-hitelesítést használja újra, amelyet az OmniRoute már támogat
+A `vertex-deepseek-ocr` ugyanazt a Vertex AI-hitelesítést használja újra, amelyet az 67router már támogat
 a csevegési/képforgalomhoz (`open-sse/executors/vertex.ts`): a kapcsolat API-kulcsa vagy egy
 Service Account JSON hitelesítő adat (amelyet a JWT bearer folyamat rövid élettartamú OAuth hozzáférési tokenre
 cserél), vagy egy már kiállított, változtatás nélkül használt OAuth hozzáférési token. A felsőbb szintű végpont URL-je a Vertex
@@ -456,7 +456,7 @@ Authorization: Bearer your-api-key
 
 ### Modellárak (`pricing`)
 
-Egy bejegyzés akkor tartalmaz `pricing` objektumot, ha az OmniRoute ismeri a modell árát. Az ár
+Egy bejegyzés akkor tartalmaz `pricing` objektumot, ha az 67router ismeri a modell árát. Az ár
 a költségelszámoláshoz használt ártáblából származik: a beépített alapértékekből, a szinkronizált árakból és
 az `/api/pricing` használatával beállított felülírásokból. Ezek listaárak, ezért az előfizetéses szolgáltatók is
 megjelenítenek tokenenkénti árat.
@@ -617,8 +617,8 @@ Ezt a végpontot akkor használja, ha egy sidecar folyamaton kívül fut, és ne
 
 ## ElevenLabs hanggenerálás
 
-Hozzon létre egy `elevenlabs` szolgáltatói kapcsolatot az OmniRoute-ban az ElevenLabs API-kulcsával.
-Az ügyfelek az **OmniRoute**-kulcsukkal hitelesítenek (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Hozzon létre egy `elevenlabs` szolgáltatói kapcsolatot az 67router-ban az ElevenLabs API-kulcsával.
+Az ügyfelek az **67router**-kulcsukkal hitelesítenek (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 a gateway a tárolt szolgáltatói kulcsot `xi-api-key` fejlécként adja át. Soha ne küldjön ElevenLabs-kulcsot
 gateway bearer tokenként.
 
@@ -683,7 +683,7 @@ A végpont-, modell-, költségkeret- és kapcsolati korlátozások még az upst
 csomagkorlátozásnál és a `429` kódot a kvótakorlátnál. A `character-cost`, `song-id`, `request-id` és `retry-after`
 fejlécek megmaradnak, ha jelen vannak. Az ingyenes kreditegyenleg nem garantál hozzáférést minden
 zenei modellhez, kimeneti formátumhoz vagy API-funkcióhoz: az ElevenLabs kérésenként dönt a jogosultságról.
-Az egységes végpont megőrzi a hibaállapot-kódokat az OmniRoute normalizált hibaburkolatában.
+Az egységes végpont megőrzi a hibaállapot-kódokat az 67router normalizált hibaburkolatában.
 
 Upstream szerződések: [hangeffektusok](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [zenei kompozíció](https://elevenlabs.io/docs/api-reference/music/compose) és
@@ -724,7 +724,7 @@ Upstream szerződések: [hangeffektusok](https://elevenlabs.io/docs/api-referenc
 
 Minden POST-útvonal azonos felépítést követ: `Bearer your-api-key` + Zod által validált JSON-törzs (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` stb.; lásd: `src/shared/validation/schemas.ts`). Sikertelen sémavalidáció esetén 4xx válasz érkezik.
 
-Azon kliensek számára, amelyek nem tudják csatolni az `Authorization: Bearer ...` fejlécet, az OmniRoute az URL-ben is elfogad API-kulcsokat, akár lekérdezési karakterláncos kompatibilitással (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), akár az alább dokumentált, dedikált `/api/v1/vscode/{token}/...` végpontokon keresztül.
+Azon kliensek számára, amelyek nem tudják csatolni az `Authorization: Bearer ...` fejlécet, az 67router az URL-ben is elfogad API-kulcsokat, akár lekérdezési karakterláncos kompatibilitással (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), akár az alább dokumentált, dedikált `/api/v1/vscode/{token}/...` végpontokon keresztül.
 
 ```bash
 # Újrarangsorolás (felhőalapú regisztrációs szolgáltató vagy OpenAI-kompatibilis szolgáltatói csomópont „<prefix>/<model>” formában)
@@ -886,7 +886,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 A Parallel Extract (`parallel-search`, ugyanaz az API-kulcs, mint a Parallel Search esetében) kizárólag Markdown
 formátumot ad vissza — minden más `format` esetén `400` választ ad —, a tartalom méretét pedig 100 000 karakterben korlátozza. Ha
 maga a céloldal nem nyerhető ki, a külső szolgáltató ezt egy HTTP 200 válaszon belül jelzi;
-az OmniRoute ezt `422` állapotkóddal és rögzített üzenettel továbbítja.
+az 67router ezt `422` állapotkóddal és rögzített üzenettel továbbítja.
 
 | Metódus | Útvonal         | Leírás                                                                      |
 | ------- | --------------- | --------------------------------------------------------------------------- |
@@ -948,14 +948,14 @@ kell lennie az aktív belépési pontnak (ez az alapértelmezés, ha az `app/ser
 Az OpenAI **Codex CLI** kliensoldalon validálja a modell nevét, amikor a
 `supports_websockets = true`, és **elutasítja a szolgáltató-előtaggal ellátott azonosítókat**, például a
 `codex/gpt-5.5` értéket (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Küldje a **nyers** azonosítót (például `gpt-5.5`). Az OmniRoute hídja
+a ChatGPT account`). Küldje a **nyers** azonosítót (például `gpt-5.5`). Az 67router hídja
 kizárólag codex modelleket kezel, ezért egy nyers azonosítót újra codex modellként old fel
 (`resolveCodexWsModelInfo`), mielőtt továbbítaná a felsőbb szintű szolgáltatónak — még akkor is, ha egy nyers
 `gpt-5.5` HTTP-n keresztül egyébként másik szolgáltatóhoz lenne irányítva.
 
 #### Az OpenAI Codex CLI konfigurálása
 
-Irányítsa a Codex CLI-t az OmniRoute-hoz úgy, hogy WebSocket-támogatással rendelkező egyéni szolgáltatót
+Irányítsa a Codex CLI-t az 67router-hoz úgy, hogy WebSocket-támogatással rendelkező egyéni szolgáltatót
 ad hozzá a `~/.codex/config.toml` fájlhoz (használjon külön `CODEX_HOME` értéket, hogy ne módosítson
 egy meglévő konfigurációt):
 
@@ -968,15 +968,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # nincs záró perjel; a WS URL ebből származik (éles környezetben használjon https/wss protokollt)
 wire_api = "responses"                    # 2026 februárja óta az egyetlen támogatott érték
 supports_websockets = true                # engedélyezi a Responses-over-WS átvitelt
-env_key = "OMNIROUTE_API_KEY"             # az OmniRoute API-kulcsot tartalmazza (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # az 67router API-kulcsot tartalmazza (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # egy OmniRoute API-kulcs (bármely kulcs, ha REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # egy 67router API-kulcs (bármely kulcs, ha REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-A CLI a `base_url + /responses` címet WebSocket-kapcsolatra frissíti, az OmniRoute pedig
+A CLI a `base_url + /responses` címet WebSocket-kapcsolatra frissíti, az 67router pedig
 a kiválasztott codex OAuth-kapcsolathoz továbbítja. Végponttól végpontig validálva a helyi
 kiszolgálóval: a ChatGPT `codex.rate_limits` + `response.created` eseményeket ad vissza, és streameli a
 befejezést.
@@ -1059,7 +1059,7 @@ Az `/api/usage/om-usage` használatakor a hívóknak figyelembe kell venniük a 
 
 #### A küszöbértékhez igazítás képlete
 
-Az OmniRoute támogatja a proaktív kvótaküszöböket a szolgáltatói kvóta kimerülésének megelőzésére (a kapcsolat `quotaWindowThresholds` beállításával, a szolgáltató alapértelmezéseivel vagy a globális rezilienciabeállításokkal konfigurálva). Ha egy kvótaidőablakban aktív egy küszöbérték (például `cutoff = 25%`), a szöveges megjelenítő a következőképpen számítja ki a fennmaradó keretet:
+Az 67router támogatja a proaktív kvótaküszöböket a szolgáltatói kvóta kimerülésének megelőzésére (a kapcsolat `quotaWindowThresholds` beállításával, a szolgáltató alapértelmezéseivel vagy a globális rezilienciabeállításokkal konfigurálva). Ha egy kvótaidőablakban aktív egy küszöbérték (például `cutoff = 25%`), a szöveges megjelenítő a következőképpen számítja ki a fennmaradó keretet:
 
 - Ha `remaining <= cutoff`: `0%` értéket ad vissza.
 - Ha `remaining > cutoff`: `((remaining - cutoff) / (100 - cutoff)) * 100` értéket ad vissza.
@@ -1583,7 +1583,7 @@ Megjegyzések:
 
 - A tokenizált aliasok ugyanazokat a kezelőket használják újra, mint a `/v1/*` és az `/api/tags`; a válaszok szerkezete változatlan marad.
 - Amikor a kliens támogatja az egyéni fejléceket, részesítse előnyben az `Authorization: Bearer ...` használatát.
-- Az URL-alapú tokenek megjelenhetnek a fordított proxy naplóiban, a böngészési előzményekben és az OmniRoute-on kívüli telemetriában. Kompatibilitási lehetőségként kezelje őket, ne alapértelmezett hitelesítési módként.
+- Az URL-alapú tokenek megjelenhetnek a fordított proxy naplóiban, a böngészési előzményekben és az 67router-on kívüli telemetriában. Kompatibilitási lehetőségként kezelje őket, ne alapértelmezett hitelesítési módként.
 
 ---
 
@@ -1691,7 +1691,7 @@ A magasabb szintű útválasztási kombinációk (amelyeket a `/api/combos*` sza
 
 ## Webhookok
 
-Kimenő webhook-előfizetések az OmniRoute eseményeihez (kérések teljesítése, kvóta kimerülése, kulcsrotáció stb.).
+Kimenő webhook-előfizetések az 67router eseményeihez (kérések teljesítése, kvóta kimerülése, kulcsrotáció stb.).
 
 | Metódus | Útvonal                   | Leírás                                                                               |
 | ------- | ------------------------- | ------------------------------------------------------------------------------------ |
@@ -1724,7 +1724,7 @@ Az automatikus kulcskezelési alrendszer használja API-kulcsok kiadására és 
 
 ## Ügynökprotokoll
 
-Az OmniRoute felhasználói nevében távolról végrehajtott felhőügynök-feladatok (Claude Code, Codex Cloud, OpenHands stb.).
+Az 67router felhasználói nevében távolról végrehajtott felhőügynök-feladatok (Claude Code, Codex Cloud, OpenHands stb.).
 
 | Metódus | Útvonal                       | Leírás                                                                                                                                                             |
 | ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1770,7 +1770,7 @@ Kimenő HTTP(S)/SOCKS-proxyk, amelyek szolgáltatókhoz, fiókokhoz vagy globál
 
 ## Ellenállóképesség (kibővített)
 
-Az OmniRoute három független, átmeneti hibákat kezelő mechanizmust biztosít; az alábbi felügyeleti végpontok lehetővé teszik az operátorok számára ezek lekérdezését és felülbírálását:
+Az 67router három független, átmeneti hibákat kezelő mechanizmust biztosít; az alábbi felügyeleti végpontok lehetővé teszik az operátorok számára ezek lekérdezését és felülbírálását:
 
 | Hatókör                 | Állapottárolás                                  | Lekérdezés                                | Visszaállítás / törlés                                  |
 | ----------------------- | ----------------------------------------------- | ----------------------------------------- | ------------------------------------------------------- |
@@ -1805,7 +1805,7 @@ A teljes koncepcionális leírás és a megszakítók alapértékei: lásd [`CLA
 
 ## Képességek
 
-Képesség-keretrendszer az OmniRoute egyéni végrehajtható kezelőkkel való kibővítéséhez, valamint piactéri integrációkhoz.
+Képesség-keretrendszer az 67router egyéni végrehajtható kezelőkkel való kibővítéséhez, valamint piactéri integrációkhoz.
 
 | Metódus | Útvonal                           | Leírás                                                                                                                                     |
 | ------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1842,7 +1842,7 @@ Képesség-keretrendszer az OmniRoute egyéni végrehajtható kezelőkkel való 
 
 ## MCP-kiszolgáló
 
-Az OmniRoute egy beágyazott Model Context Protocol-kiszolgálót biztosít 3 átviteli móddal (stdio, SSE, streamable-http) és hatókörökhöz kötött eszközökkel. Az alábbi irányítópult-végpontok állapot- és auditadatokat olvasnak, valamint proxyzzák a HTTP-s átviteli módokat.
+Az 67router egy beágyazott Model Context Protocol-kiszolgálót biztosít 3 átviteli móddal (stdio, SSE, streamable-http) és hatókörökhöz kötött eszközökkel. Az alábbi irányítópult-végpontok állapot- és auditadatokat olvasnak, valamint proxyzzák a HTTP-s átviteli módokat.
 
 | Metódus | Útvonal | Leírás |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1864,7 +1864,7 @@ Az OmniRoute egy beágyazott Model Context Protocol-kiszolgálót biztosít 3 á
 
 ## A2A-kiszolgáló
 
-Az OmniRoute egy A2A (ügynökök közötti) JSON-RPC 2.0-végpontot, valamint egy REST-burkolót biztosít ellenőrzési és vezérlőpultbeli használatra.
+Az 67router egy A2A (ügynökök közötti) JSON-RPC 2.0-végpontot, valamint egy REST-burkolót biztosít ellenőrzési és vezérlőpultbeli használatra.
 
 ### JSON-RPC
 
@@ -2090,7 +2090,7 @@ Kizárólag adminisztrátorok számára elérhető végpontok az üzemeltetési 
 
 ## CLI-eszközök kezelése
 
-Az OmniRoute-tal integrálható CLI-eszközök (antigravity, commandCode,
+Az 67router-tal integrálható CLI-eszközök (antigravity, commandCode,
 devin-cli stb.) kezelése. A teljes listát lásd a [szolgáltatói referenciában](./PROVIDER_REFERENCE.md).
 
 | Metódus | Elérési út                              | Leírás                                                                                                                                                                          |
@@ -2201,7 +2201,7 @@ A teljes részletekért lásd: [Készségkeretrendszer](../frameworks/SKILLS.md)
 
 ## Bővítmények
 
-OmniRoute-bővítmények (külső fejlesztésű kiegészítők) kezelése.
+67router-bővítmények (külső fejlesztésű kiegészítők) kezelése.
 
 | Metódus | Útvonal                            | Leírás                                 |
 | ------- | ---------------------------------- | -------------------------------------- |

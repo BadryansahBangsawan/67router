@@ -8,7 +8,7 @@
 > **ለመጨረሻ ጊዜ የዘመነው:** 2026-09-16
 > **ታዳሚዎች:** የተካተቱ አገልግሎቶችን (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua) የሚያክሉ፣ የሚጠግኑ ወይም ስህተት የሚያርሙ መሐንዲሶች።
 
-የተካተቱ አገልግሎቶች OmniRoute የሚጭናቸው፣ የሚቆጣጠራቸው እና እንደ ቀዳሚ የማዘዋወሪያ ዒላማዎች የሚያቀርባቸው በአካባቢው የተጫኑ የሂደት sidecar መሣሪያዎች ናቸው። እንደ ውጫዊ አቅራቢዎች (በAPI ቁልፎች በኩል በበይነመረብ የሚደረስባቸው) ሳይሆን፣ የተካተቱ አገልግሎቶች ከOmniRoute ጋር በአንድ ማሽን ላይ ይሰራሉ እና በloopback በኩል ይገናኛሉ።
+የተካተቱ አገልግሎቶች 67router የሚጭናቸው፣ የሚቆጣጠራቸው እና እንደ ቀዳሚ የማዘዋወሪያ ዒላማዎች የሚያቀርባቸው በአካባቢው የተጫኑ የሂደት sidecar መሣሪያዎች ናቸው። እንደ ውጫዊ አቅራቢዎች (በAPI ቁልፎች በኩል በበይነመረብ የሚደረስባቸው) ሳይሆን፣ የተካተቱ አገልግሎቶች ከ67router ጋር በአንድ ማሽን ላይ ይሰራሉ እና በloopback በኩል ይገናኛሉ።
 
 ---
 
@@ -33,7 +33,7 @@
 
 | አገልግሎት          | npm ጥቅል                            | ነባሪ ወደብ | ዓላማ                                                                                                                                                                                                                                                                      |
 | --------------- | ---------------------------------- | :-----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **9Router**     | `9router`                          |  20130  | OmniRoute እንደ ንዑስ አቅራቢ ሊጠቀምበት የሚችል AI ራውተር። ሞዴሎች እንደ `9router/{sub}/{model}` ይቀርባሉ                                                                                                                                                                                       |
+| **9Router**     | `9router`                          |  20130  | 67router እንደ ንዑስ አቅራቢ ሊጠቀምበት የሚችል AI ራውተር። ሞዴሎች እንደ `9router/{sub}/{model}` ይቀርባሉ                                                                                                                                                                                        |
 | **CLIProxyAPI** | የGitHub ልቀት ባይነሪ (`cliproxy`)      |  8317   | ለAnthropic CLI ማረጋገጫ ፍሰቶች የአካባቢ ፕሮክሲ አስማሚ። የOAuth ቶከኖች ጊዜያቸው ሲያበቃ ተተኪ ማዘዋወርን ያቀርባል                                                                                                                                                                                       |
 | **Mux**         | `mux` (ያለ ግራፊክ በይነገጽ `mux server`) |  8322   | የአካባቢ ወኪል-ማስተባበሪያ ዴሞን (coder/mux)። የሕይወት ዑደቱ ብቻ ይተዳደራል — የማዘዋወሪያ ዒላማ አይደለም (የLLM ፕሮክሲ አያደርግም)።                                                                                                                                                                           |
 | **Bifrost**     | `@maximhq/bifrost`                 |  8080   | በGo የተገነባ AI-ጌትዌይ ማስተላለፊያ ባክኤንድ። በሚሰራበት ጊዜ በማስተላለፊያ መስመሩ (`/v1/relay/`) በራስ-ሰር ይመረጣል                                                                                                                                                                                     |
@@ -43,21 +43,21 @@
 
 ሰባቱም ተመሳሳይ የቁጥጥር ሞዴልን ይከተላሉ፦
 
-- OmniRoute በ`DATA_DIR/services/{name}/` ስር ይጭናቸዋል (ከOmniRoute የራሱ `package.json` የተነጠሉ)
-- OmniRoute እንደ ልጅ ሂደቶች ያስነሳቸዋል እና ይከታተላቸዋል
-- OmniRoute ጊዜያዊ API ቁልፍን ወደ ልጅ ሂደቱ አካባቢ ያስገባል፣ እንዲሁም ያለ አገልግሎት መቋረጥ ያድሰዋል (በሚተገበርበት ቦታ)
+- 67router በ`DATA_DIR/services/{name}/` ስር ይጭናቸዋል (ከ67router የራሱ `package.json` የተነጠሉ)
+- 67router እንደ ልጅ ሂደቶች ያስነሳቸዋል እና ይከታተላቸዋል
+- 67router ጊዜያዊ API ቁልፍን ወደ ልጅ ሂደቱ አካባቢ ያስገባል፣ እንዲሁም ያለ አገልግሎት መቋረጥ ያድሰዋል (በሚተገበርበት ቦታ)
 - ሁሉም የአስተዳደር መስመሮች (`/api/services/*`) **LOCAL_ONLY** ናቸው — ከloopback ብቻ ሊደረስባቸው ይችላል (ጥብቅ ደንብ #17)
 
 ### ቁልፍ ውሳኔዎች (ከንድፍ ዕቅዱ)
 
-| ውሳኔ                                | እሴት                                                                  |
-| ---------------------------------- | -------------------------------------------------------------------- |
-| ዳሽቦርዱ ወደ 9Router ቤተኛ UI የሚኖረው መዳረሻ | በ`/dashboard/providers/services/9router/embed/*` ላይ ያለ ተቃራኒ ፕሮክሲ     |
-| የመጫኛ ዘዴ                            | `npm install {package}` በ`execFile` በኩል (የshell ማካተት የለም)            |
-| የአጠቃቀም ሁነታ                         | አቅራቢው በማዘዋወሪያ ሞተሩ ውስጥ እንደ `9router/{sub}/{model}` ይመዘገባል             |
-| የAPI ቁልፍ አስተዳደር                    | OmniRoute ያመነጫል፣ በማከማቻ ላይ ያመሰጥራል (AES-256-GCM)፣ እንዲሁም በenv በኩል ያስገባል |
-| የዳሽቦርድ መገኛ                         | `/dashboard/providers/services` (ሦስት ትሮች)                            |
-| ራስ-ሰር ማስጀመር                        | ለእያንዳንዱ አገልግሎት መቀያየሪያ፣ በነባሪ ጠፍቷል                                     |
+| ውሳኔ                                | እሴት                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------- |
+| ዳሽቦርዱ ወደ 9Router ቤተኛ UI የሚኖረው መዳረሻ | በ`/dashboard/providers/services/9router/embed/*` ላይ ያለ ተቃራኒ ፕሮክሲ    |
+| የመጫኛ ዘዴ                            | `npm install {package}` በ`execFile` በኩል (የshell ማካተት የለም)           |
+| የአጠቃቀም ሁነታ                         | አቅራቢው በማዘዋወሪያ ሞተሩ ውስጥ እንደ `9router/{sub}/{model}` ይመዘገባል            |
+| የAPI ቁልፍ አስተዳደር                    | 67router ያመነጫል፣ በማከማቻ ላይ ያመሰጥራል (AES-256-GCM)፣ እንዲሁም በenv በኩል ያስገባል |
+| የዳሽቦርድ መገኛ                         | `/dashboard/providers/services` (ሦስት ትሮች)                           |
+| ራስ-ሰር ማስጀመር                        | ለእያንዳንዱ አገልግሎት መቀያየሪያ፣ በነባሪ ጠፍቷል                                    |
 
 ---
 
@@ -219,7 +219,7 @@
 #### `POST /api/services/9router/install`
 
 9Routerን ከnpm ይጫናል። የራሱ `package.json` እና `node_modules/` ያሉትን
-`DATA_DIR/services/9router/` ይፈጥራል። ከOmniRoute የራሱ ጥገኞች ጋር አይጋጭም።
+`DATA_DIR/services/9router/` ይፈጥራል። ከ67router የራሱ ጥገኞች ጋር አይጋጭም።
 
 **የጥያቄ አካል** (ሁሉም አማራጭ ናቸው):
 
@@ -379,7 +379,7 @@
 
 #### `POST /api/services/9router/auto-start`
 
-የራስ-ሰር ማስጀመሪያ ጠቋሚውን ያበራል ወይም ያጠፋል። `enabled: true` ሲሆን፣ OmniRoute በሚቀጥለው ጊዜ ሲነሳ
+የራስ-ሰር ማስጀመሪያ ጠቋሚውን ያበራል ወይም ያጠፋል። `enabled: true` ሲሆን፣ 67router በሚቀጥለው ጊዜ ሲነሳ
 አገልግሎቱ የተጫነ ከሆነ በራስ-ሰር ይጀምራል።
 
 **የጥያቄ አካል:**
@@ -589,7 +589,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 ይህ proxy፦
 
 - ጥያቄውን ወደ `http://127.0.0.1:{port}/{path}` ያስተላልፋል (loopback ብቻ)
-- የሚገቡትን `cookie` እና `authorization` ራስጌዎች ያስወግዳል (የOmniRoute session መረጃ አያፈስም)
+- የሚገቡትን `cookie` እና `authorization` ራስጌዎች ያስወግዳል (የ67router session መረጃ አያፈስም)
 - ለ9Router ማረጋገጫ `Authorization: Bearer {apiKey}`ን ያስገባል
 - ከምላሹ `set-cookie`፣ `content-security-policy`፣ `x-frame-options`፣ `cross-origin-*`ን ያስወግዳል
 - `<base href>`ን ለማስገባት እና ፍጹም መንገዶችን መደበኛ ለማድረግ HTML ምላሾችን እንደገና ይጽፋል (`/foo` → `/dashboard/.../embed/foo`)
@@ -625,7 +625,7 @@ process እንዳይፈጥር ይከላከላል። ሙሉውን የደረጃ �
 ### የAPI ቁልፍ ማስገባት
 
 9Router እና Mux ለራሳቸው HTTP endpoints የAPI ቁልፍ/bearer token ያስፈልጋቸዋል።
-OmniRoute፦
+67router፦
 
 1. ለአገልግሎቱ የተለየ ቅድመ ቅጥያ (`nr_` ለ9Router፣ `mx_` ለMux) በመጠቀም
    በ `crypto.randomBytes(32).toString("base64url")` ቁልፍ ያመነጫል።
@@ -808,7 +808,7 @@ auto-start/route.ts POST — auto_start flagን ይቀያይራል
 
 1. `GET /api/services/{name}/logs`ን (ወይም በዳሽቦርዱ ውስጥ ያለውን Logs ፓነል) ይፈትሹ።
    እንደ `Error: ENOENT`፣ `address already in use` ወይም `Cannot find module` ያሉ መስመሮችን ይፈልጉ።
-2. `npm` በPATH ውስጥ መኖሩን ያረጋግጡ፦ OmniRouteን ከሚያስኬደው ተመሳሳይ የተጠቃሚ መለያ `which npm`ን ያስኪዱ።
+2. `npm` በPATH ውስጥ መኖሩን ያረጋግጡ፦ 67routerን ከሚያስኬደው ተመሳሳይ የተጠቃሚ መለያ `which npm`ን ያስኪዱ።
 3. አገልግሎቱ መጫኑን ያረጋግጡ፦ `installedVersion`ን ለማየት
    `GET /api/services/{name}/status`ን ይፈትሹ። `null` ከሆነ፣ መጀመሪያ ጭነቱን ያስኪዱ።
 4. `DATA_DIR/services/{name}/node_modules/` መኖሩንና ባዶ አለመሆኑን ያረጋግጡ።
@@ -845,7 +845,7 @@ tunnel፣ MITM ሞጁሎች) ማስገባትን ያካትታል። ነባሪው 
 2. ግጭቱን የሚፈጥረውን ሂደት ፈልገው ያቁሙ፦ `lsof -ti :20130 | xargs kill -9`።
 3. ፖርቱ በ`bootstrap.ts` ውስጥ ባለው `port` መስክ አማካኝነት ለእያንዳንዱ አገልግሎት ሊዋቀር ይችላል።
 
-**ማስታወሻ፦** 9Router ከOmniRoute ነባሪ ፖርት 20128 ጋር እንዳይጋጭ
+**ማስታወሻ፦** 9Router ከ67router ነባሪ ፖርት 20128 ጋር እንዳይጋጭ
 በተለይ ፖርት 20130ን እንደ ነባሪ ይጠቀማል።
 
 ---
@@ -856,13 +856,13 @@ tunnel፣ MITM ሞጁሎች) ማስገባትን ያካትታል። ነባሪው 
 
 **ምክንያቶች፦**
 
-- `DATA_DIR` ወይም ወላጅ ማውጫው በOmniRoute ሂደት ሊጻፍበት አይችልም።
+- `DATA_DIR` ወይም ወላጅ ማውጫው በ67router ሂደት ሊጻፍበት አይችልም።
 - ከተያያዘው ቮልዩም ላይ የመጻፍ ፍቃድ ሳይኖር Dockerን rootless በሆነ ሁኔታ ማስኬድ።
 
 **መፍትሔ፦**
 
 1. `DATA_DIR`ን (ነባሪ፦ `~/.omniroute/`) ይፈትሹ፦ `ls -la ~/.omniroute/`
-2. የOmniRoute ሂደቱ ተጠቃሚ የማውጫው ባለቤት መሆኑን ያረጋግጡ፦ `chown -R $USER ~/.omniroute/`
+2. የ67router ሂደቱ ተጠቃሚ የማውጫው ባለቤት መሆኑን ያረጋግጡ፦ `chown -R $USER ~/.omniroute/`
 3. በDocker ውስጥ፣ የቮልዩም ማያያዣው ለኮንቴይነሩ ተጠቃሚ ትክክለኛ ፍቃዶች እንዳሉት ያረጋግጡ።
 
 ---
@@ -910,9 +910,9 @@ tunnel፣ MITM ሞጁሎች) ማስገባትን ያካትታል። ነባሪው 
 
 **ጥያቄ፦ 9Router እና CLIProxyAPI በproduction/cloud ማሰማራቶች ውስጥ ይገኛሉ?**
 
-አዎ። ሁለቱም አገልግሎቶች እንደ OmniRoute ራሱ በአካባቢያዊ አጠቃቀም ቅድሚያ
+አዎ። ሁለቱም አገልግሎቶች እንደ 67router ራሱ በአካባቢያዊ አጠቃቀም ቅድሚያ
 የሚሰጥ ሞዴልን ይከተላሉ። በተመሳሳዩ ማሽን ላይ ይሰራሉ እና በloopback
-በኩል ይገናኛሉ። እዚህ ላይ "Production" ማለት OmniRoute የተሰማራበትን
+በኩል ይገናኛሉ። እዚህ ላይ "Production" ማለት 67router የተሰማራበትን
 VPS ወይም አካባቢያዊ ሰርቨር እንጂ የርቀት cloud አቅራቢን አይደለም።
 
 ---
@@ -920,7 +920,7 @@ VPS ወይም አካባቢያዊ ሰርቨር እንጂ የርቀት cloud አ�
 **ጥያቄ፦ supervisorን እንዴት ነው ስህተት የምፈልግበት?**
 
 1. የSSE ምዝግብ ዥረቱን ይከታተሉ፦ `curl -N http://localhost:20128/api/services/9router/logs`።
-2. በ`service:supervisor` namespace የተጣሩትን በOmniRoute pino ውጤት ውስጥ
+2. በ`service:supervisor` namespace የተጣሩትን በ67router pino ውጤት ውስጥ
    ያሉ የተዋቀሩ ምዝግቦች ያረጋግጡ።
 3. የDB ረድፉን ይመርምሩ፦ `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`።
 4. የአሁኑን ቀጥታ ሁኔታ፣ PID፣ ጤና እና `lastError`ን በአንድ ጥሪ

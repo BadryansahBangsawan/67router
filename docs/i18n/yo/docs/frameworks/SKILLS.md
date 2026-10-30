@@ -7,29 +7,29 @@
 > **Orísun òtítọ́:** `src/lib/skills/` àti `src/app/api/skills/`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ń pèsè ìlànà Skills tí a lè fẹ̀ sí i, èyí tó ń jẹ́ kí àwọn àwòṣe èdè (àti àwọn olùdarí) lè ṣàkójọpọ̀ àwọn agbára tí a lè tún lò — láti kíkà ètò-fáìlì àti àwọn ìbéèrè HTTP títí dé ṣíṣe kóòdù nínú àyíká ààbò àti àwọn skills ibi-ọjà tí a ti fara balẹ̀ yàn.
+67router ń pèsè ìlànà Skills tí a lè fẹ̀ sí i, èyí tó ń jẹ́ kí àwọn àwòṣe èdè (àti àwọn olùdarí) lè ṣàkójọpọ̀ àwọn agbára tí a lè tún lò — láti kíkà ètò-fáìlì àti àwọn ìbéèrè HTTP títí dé ṣíṣe kóòdù nínú àyíká ààbò àti àwọn skills ibi-ọjà tí a ti fara balẹ̀ yàn.
 
-Skill jẹ́ ẹyọ iṣẹ́ tó ní ẹ̀yà, tí schema sì ṣàlàyé rẹ̀. OmniRoute lè fi àwọn skills sínú àwọn ìbéèrè tó ń jáde gẹ́gẹ́ bí àwọn ìtumọ̀ irinṣẹ́, dá àwọn ìpè irinṣẹ́ tó ń padà láti ọ̀dọ̀ àwòṣe dúró, ṣiṣẹ́ handler tó bá mu, kí ó sì fi àbájáde náà padà fún àwòṣe kí ìjíròrò lè tẹ̀síwájú. Àwòṣe náà kì í rí ìmúlò rẹ̀ — ojú-ọ̀nà irinṣẹ́ nìkan ló ń rí.
+Skill jẹ́ ẹyọ iṣẹ́ tó ní ẹ̀yà, tí schema sì ṣàlàyé rẹ̀. 67router lè fi àwọn skills sínú àwọn ìbéèrè tó ń jáde gẹ́gẹ́ bí àwọn ìtumọ̀ irinṣẹ́, dá àwọn ìpè irinṣẹ́ tó ń padà láti ọ̀dọ̀ àwòṣe dúró, ṣiṣẹ́ handler tó bá mu, kí ó sì fi àbájáde náà padà fún àwòṣe kí ìjíròrò lè tẹ̀síwájú. Àwòṣe náà kì í rí ìmúlò rẹ̀ — ojú-ọ̀nà irinṣẹ́ nìkan ló ń rí.
 
 ---
 
 ## Agent Skills àti Omni Skills
 
-OmniRoute ní àwọn ètò skill méjì tó yàtọ̀ síra ṣùgbọ́n tí wọ́n ń ṣiṣẹ́ pọ̀:
+67router ní àwọn ètò skill méjì tó yàtọ̀ síra ṣùgbọ́n tí wọ́n ń ṣiṣẹ́ pọ̀:
 
 | Ìwọ̀n           | **Omni Skills** (ìwé yìí)                                                 | **Agent Skills**                                                                                  |
 | :------------- | :------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------ |
 | Ète            | Fífi irinṣẹ́ LLM sínú ìbéèrè + ṣíṣe rẹ̀ nínú àyíká ààbò                     | Àkójọ SKILL.md fún àwọn agent òde láti ṣàwárí àti lò                                              |
 | Orísun òtítọ́   | `src/lib/skills/` + ibi-ọjà                                               | `src/lib/agentSkills/` + àpò-ọ̀nà `skills/`                                                        |
 | Ìpo àsìkò-ṣiṣe | A máa fi sínú àwọn ìbéèrè tó ń jáde, a sì máa ṣiṣẹ́ nígbà ìṣẹ̀lẹ̀ ìpè-irinṣẹ́ | Àkójọ markdown àìyípadà + àwọn endpoint ìṣàwárí REST/MCP/A2A                                      |
-| Ẹni tó ń lò ó  | OmniRoute fúnra rẹ̀ (combo routing, àwọn ìpè LLM tó ń wọlé)                | Àwọn agent òde, àwọn client MCP, àwọn orchestrator A2A                                            |
+| Ẹni tó ń lò ó  | 67router fúnra rẹ̀ (combo routing, àwọn ìpè LLM tó ń wọlé)                 | Àwọn agent òde, àwọn client MCP, àwọn orchestrator A2A                                            |
 | Iye            | Ó lè yípadà (ibi-ọjà ló ń darí rẹ̀)                                        | Àwọn àkọsílẹ̀ àkójọ 45 (23 API + 21 CLI + 1 config)                                                |
 | Fọ́ọ̀mù          | `SkillDefinition` pẹ̀lú schema irinṣẹ́ + handler                            | frontmatter `SKILL.md` + ara markdown                                                             |
 | Ìṣàwárí        | `/api/skills/*` REST + àwọn irinṣẹ́ MCP `omniroute_skills_*`               | `/api/agent-skills/*` REST + àwọn irinṣẹ́ MCP `omniroute_agent_skills_*` + A2A `list-capabilities` |
 
-**Omni Skills** ni ẹ̀rọ ìṣiṣẹ́ — wọ́n ń ṣàlàyé ohun tí OmniRoute _lè ṣe_ nígbà tí LLM bá pe irinṣẹ́ kan.
+**Omni Skills** ni ẹ̀rọ ìṣiṣẹ́ — wọ́n ń ṣàlàyé ohun tí 67router _lè ṣe_ nígbà tí LLM bá pe irinṣẹ́ kan.
 
-**Agent Skills** ni àkójọ ìwé ìtọ́sọ́nà — wọ́n ń ṣàlàyé fún àwọn agent òde _bí a ṣe ń lo_ REST API àti CLI OmniRoute, pẹ̀lú àwọn fáìlì SKILL.md tó ní ìṣètò tí a lè fi sínú àwọn prompt agent ní tààrà.
+**Agent Skills** ni àkójọ ìwé ìtọ́sọ́nà — wọ́n ń ṣàlàyé fún àwọn agent òde _bí a ṣe ń lo_ REST API àti CLI 67router, pẹ̀lú àwọn fáìlì SKILL.md tó ní ìṣètò tí a lè fi sínú àwọn prompt agent ní tààrà.
 
 Fún àkójọ Agent Skills, generator, àwọn irinṣẹ́ MCP, àti skill A2A, wo [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Fún àkójọ Agent Skills, generator, àwọn irinṣẹ́ MCP, àti skill A2A
 
 Orísun skill mẹ́ta ló wà papọ̀ nínú registry kan náà:
 
-1. **Àwọn skill tí a kọ́ sínú rẹ̀** (`src/lib/skills/builtins.ts`) — wọ́n wá pẹ̀lú OmniRoute. Wọ́n bo àwọn ọ̀ràn tó wọ́pọ̀:
+1. **Àwọn skill tí a kọ́ sínú rẹ̀** (`src/lib/skills/builtins.ts`) — wọ́n wá pẹ̀lú 67router. Wọ́n bo àwọn ọ̀ràn tó wọ́pọ̀:
    - `file_read`, `file_write` — workspace àyíká ààbò fún kọ́kọ́rọ́ API kọ̀ọ̀kan lábẹ́ `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP tó ń jáde nípasẹ̀ `safeOutboundFetch` pẹ̀lú `guard: "public-only"`
    - `web_search` — olùpèsè ìṣàwárí tí a lè yí padà pẹ̀lú caching (`executeWebSearch`)
    - `eval_code` — ṣíṣe `node` tàbí `python` tí Docker dá sí àyíká ààbò
    - `execute_command` — àṣẹ shell tí Docker dá sí àyíká ààbò
    - `browser` — ìpìlẹ̀ iṣẹ́ tí Playwright ń ṣe àtìlẹ́yìn fún, tí a pa nípa àìyípadà (`builtin/browser.ts`)
-2. **SkillsMP** (Ibi-ọjà OmniRoute) — a máa ń mú un wá láti `https://skillsmp.com/api/v1/skills/search`. Ó nílò `skillsmpApiKey` nínú Settings.
+2. **SkillsMP** (Ibi-ọjà 67router) — a máa ń mú un wá láti `https://skillsmp.com/api/v1/skills/search`. Ó nílò `skillsmpApiKey` nínú Settings.
 3. **SkillsSH** (àkójọ àwùjọ `skills.sh`) — a máa ń mú un wá láti `https://skills.sh/api/search`. Kò nílò ìfàṣẹsí; a máa ń fa àkóónú SKILL.md láti GitHub raw.
 
 “Olùpèsè tó ń ṣiṣẹ́” kan ṣoṣo ló ń ṣàkóso àkójọ tí dashboard máa fi ohun sílẹ̀ láti inú rẹ̀ (`src/lib/skills/providerSettings.ts`). Yí i padà lábẹ́ **Settings → Memory & Skills**. Àìyípadà: `skillsmp`.
@@ -442,7 +442,7 @@ yìí; kò sí ààlà float irú `0.6`, bẹ́ẹ̀ ni kò sí ìṣírò `regi
 
 ## Àkójọ Àwọn Ọgbọ́n Tí a Kọ́ Sínú Rẹ̀
 
-OmniRoute ní àkójọpọ̀ àwọn ọgbọ́n tí a ti fara balẹ̀ yàn, tí a kọ́ sínú `src/lib/skills/builtin/`. Àwọn tí a sábà máa ń lò jù lọ ni:
+67router ní àkójọpọ̀ àwọn ọgbọ́n tí a ti fara balẹ̀ yàn, tí a kọ́ sínú `src/lib/skills/builtin/`. Àwọn tí a sábà máa ń lò jù lọ ni:
 
 ### Ọgbọ́n Ṣíṣe Browser Láìfọwọ́ṣe
 

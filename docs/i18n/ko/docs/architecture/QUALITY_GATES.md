@@ -4,7 +4,7 @@
 
 ---
 
-이 문서는 OmniRoute의 모든 CI 품질 게이트에 대한 공식 참조 문서입니다.
+이 문서는 67router의 모든 CI 품질 게이트에 대한 공식 참조 문서입니다.
 각 게이트의 설명, 검증 대상, 실행되는 CI 작업, 래칫 기준선 또는 통과/실패 정책의 사용 여부,
 빌드 차단 여부 또는 권고 사항인지 여부를 설명합니다.
 
@@ -259,14 +259,14 @@ BASE_REF=origin/release/vX.Y.Z npm run i18n:check-value-drift
 
 이 워크플로들은 cron 일정(및 `workflow_dispatch`)으로 실행되며 PR에서는 절대 실행되지 않습니다. 모두 권고 사항입니다.
 
-| 워크플로               | 검증 내용                                                                                                                                                          | 차단 여부 |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| `nightly-property`     | 랜덤 시드 + 높은 실행 횟수를 사용하는 fast-check 속성 테스트                                                                                                       | **권고**  |
-| `nightly-resilience`   | 힙 증가 게이트, 카오스 장애 주입, k6 부하/소크 테스트                                                                                                              | **권고**  |
-| `nightly-llm-security` | promptfoo 인젝션 가드(차단 모드) + garak 프로브(프로바이더 시크릿이 없으면 건너뜀)                                                                                 | **권고**  |
-| `nightly-schemathesis` | `docs/openapi.yaml`을 사용해 실제 실행 중인 OmniRoute를 대상으로 수행하는 OpenAPI 계약 퍼징(schemathesis) — 스펙 위반 / 처리되지 않은 500 오류 표면화 (Fase 8 B.4) | **권고**  |
-| `nightly-mutation`     | 빠른 유닛 레인에 대한 Stryker 뮤테이션 테스트 점수 — 생존한 뮤턴트가 약한 assertion을 표면화                                                                       | **권고**  |
-| `nightly-compat`       | 지원되는 `engines.node` 범위 전반에 걸친 Node 엔진 호환성 매트릭스                                                                                                 | **권고**  |
+| 워크플로               | 검증 내용                                                                                                                                                         | 차단 여부 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `nightly-property`     | 랜덤 시드 + 높은 실행 횟수를 사용하는 fast-check 속성 테스트                                                                                                      | **권고**  |
+| `nightly-resilience`   | 힙 증가 게이트, 카오스 장애 주입, k6 부하/소크 테스트                                                                                                             | **권고**  |
+| `nightly-llm-security` | promptfoo 인젝션 가드(차단 모드) + garak 프로브(프로바이더 시크릿이 없으면 건너뜀)                                                                                | **권고**  |
+| `nightly-schemathesis` | `docs/openapi.yaml`을 사용해 실제 실행 중인 67router를 대상으로 수행하는 OpenAPI 계약 퍼징(schemathesis) — 스펙 위반 / 처리되지 않은 500 오류 표면화 (Fase 8 B.4) | **권고**  |
+| `nightly-mutation`     | 빠른 유닛 레인에 대한 Stryker 뮤테이션 테스트 점수 — 생존한 뮤턴트가 약한 assertion을 표면화                                                                      | **권고**  |
+| `nightly-compat`       | 지원되는 `engines.node` 범위 전반에 걸친 Node 엔진 호환성 매트릭스                                                                                                | **권고**  |
 
 성능 베이스라인(힙, TTFB, 빌드 시간)은 게이팅되지 않고 기록됩니다: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) 참조(`npm run perf:lts-baseline`).
 
@@ -532,7 +532,7 @@ PR도 열지 않습니다.
 
 ## 에이전트 도구: LSP-in-the-loop(선택 사항)
 
-CI 게이트 외에도 OmniRoute는 **선택 사항**인 `agent-lsp` 스캐폴드
+CI 게이트 외에도 67router는 **선택 사항**인 `agent-lsp` 스캐폴드
 (프로젝트 수준의 `.mcp.json`, 7단계 작업 15)를 제공합니다. `.mcp.json`을 생성하여
 코딩 에이전트에 TypeScript 언어 서버를 노출하면, 에이전트가 코드를 작성하기 **전에** 심볼과
 진단을 확인할 수 있습니다. 이는 `typecheck:core`를 보완하는 사전 컴파일 방식으로,

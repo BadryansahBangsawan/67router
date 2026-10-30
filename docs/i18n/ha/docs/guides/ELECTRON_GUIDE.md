@@ -7,7 +7,7 @@
 > **Madogarar gaskiya:** filin aiki na `electron/`
 > **Sabuntawa ta ƙarshe:** 2026-06-28 — v3.8.40
 
-OmniRoute yana zuwa da manhajar tebur mai aiki a dandamali daban-daban (Windows / macOS / Linux), wadda aka gina a kan
+67router yana zuwa da manhajar tebur mai aiki a dandamali daban-daban (Windows / macOS / Linux), wadda aka gina a kan
 **Electron 41** + **electron-builder 26.10**. Manhajar tebur tana ƙaddamar da sabar Next.js
 mai zaman kanta a matsayin ƙaramin tsari, tana nuna `BrowserWindow` zuwa gare ta, sannan tana ƙara
 tirensa na tsarin kwamfuta, mai sabuntawa ta atomatik, gadar IPC, da fara amfani da sirri ba tare da saiti ba.
@@ -45,7 +45,7 @@ An tabbatar daga `electron/package.json`:
 | `better-sqlite3`   | tushen `^13.0.2` (ginannun Node-API — babu sake ginin Electron) |
 | Sigar manhaja      | `3.8.0`                                                         |
 | ID na manhaja      | `online.omniroute.desktop`                                      |
-| Sunan samfur       | `OmniRoute`                                                     |
+| Sunan samfur       | `67router`                                                      |
 
 ## Rubutun umarni (`package.json` na tushe)
 
@@ -196,7 +196,7 @@ fi so a yi amfani da fayil ɗin `.env`, sannan a fita gaba ɗaya (tire, **Fita**
 - `BrowserWindow`: 1400×900 (mafi ƙaranci 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, maɓallan sarrafa taga a `{ x: 16, y: 16 }`.
 - Windows/Linux: sandar take ta asali.
-- Maɓallin rufewa yana rage manhajar zuwa tire; menu na tiren yana da **Buɗe OmniRoute**, **Buɗe Dashboard** (burauzar waje), ƙaramin menu na **Tashar Uwar Garke**, **Duba Sabuntawa**, **Fita**.
+- Maɓallin rufewa yana rage manhajar zuwa tire; menu na tiren yana da **Buɗe 67router**, **Buɗe Dashboard** (burauzar waje), ƙaramin menu na **Tashar Uwar Garke**, **Duba Sabuntawa**, **Fita**.
 
 ## Manufar Tsaron Abun Ciki
 

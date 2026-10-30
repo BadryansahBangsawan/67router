@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: OmniRoute utilizează **SQLite cu jurnalizare WAL** ca stocare principală, cu criptare **AES-256-GCM** pentru datele sensibile stocate. Acest ghid prezintă schema, migrările, copierea de siguranță/recuperarea și procedurile operaționale.
+> **Pe scurt**: 67router utilizează **SQLite cu jurnalizare WAL** ca stocare principală, cu criptare **AES-256-GCM** pentru datele sensibile stocate. Acest ghid prezintă schema, migrările, copierea de siguranță/recuperarea și procedurile operaționale.
 
 **Surse:**
 
@@ -19,7 +19,7 @@
 
 ## De ce SQLite?
 
-OmniRoute a ales SQLite în locul PostgreSQL/MySQL din mai multe motive:
+67router a ales SQLite în locul PostgreSQL/MySQL din mai multe motive:
 
 | Factor                 | SQLite                                | PostgreSQL                                         |
 | ---------------------- | ------------------------------------- | -------------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute a ales SQLite în locul PostgreSQL/MySQL din mai multe motive:
 | **Copie de siguranță** | Copierea unui singur fișier           | `pg_dump` sau instantaneu al sistemului de fișiere |
 | **Caz de utilizare**   | Instalare per utilizator, încorporată | SaaS multi-chiriaș                                 |
 
-Pentru implementările cu **un singur utilizator și o singură instanță** (principalul caz de utilizare OmniRoute), SQLite este mai simplu și mai rapid.
+Pentru implementările cu **un singur utilizator și o singură instanță** (principalul caz de utilizare 67router), SQLite este mai simplu și mai rapid.
 
 ### Jurnalizare WAL
 
@@ -50,7 +50,7 @@ Dimensiunea implicită a memoriei cache este de **65.536 KiB (64 MiB)**. SQLite 
 `cache_size` drept o limită superioară aproximativă în KiB și alocă pagini la cerere.
 **Setări > Sistem și stocare > Dimensiunea memoriei cache** acceptă valori întregi de la **1 la
 1.000.000 KiB**; salvarea setării o aplică conexiunii active la baza de date,
-iar OmniRoute restabilește valoarea persistentă la pornire.
+iar 67router restabilește valoarea persistentă la pornire.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Arhitectura modulelor de domeniu
 
-Baza de date OmniRoute are **110 module TypeScript de nivel superior** în `src/lib/db/`. Fiecare modul de domeniu:
+Baza de date 67router are **110 module TypeScript de nivel superior** în `src/lib/db/`. Fiecare modul de domeniu:
 
 - Deține unul sau mai multe tabele specifice
 - Exportă funcții CRUD tipizate
@@ -90,7 +90,7 @@ Baza de date OmniRoute are **110 module TypeScript de nivel superior** în `src/
 
 ### Cele 110 module DB de nivel superior
 
-OmniRoute are **110 fișiere TypeScript de nivel superior** în `src/lib/db/`. Mai jos este o selecție de module de bază; consultați listarea directorului pentru lista completă:
+67router are **110 fișiere TypeScript de nivel superior** în `src/lib/db/`. Mai jos este o selecție de module de bază; consultați listarea directorului pentru lista completă:
 
 | Modul                   | Tabele                                                         | Responsabilitate                                                                                  |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Lista completă de peste 30 de tabele se află în `src/lib/db/migrations/`.
 
 ## Migrări
 
-OmniRoute utilizează **migrări versionate și idempotente** în `src/lib/db/migrations/`. Fiecare migrare este un singur fișier SQL denumit `NNN_description.sql`.
+67router utilizează **migrări versionate și idempotente** în `src/lib/db/migrations/`. Fiecare migrare este un singur fișier SQL denumit `NNN_description.sql`.
 
 ### Denumirea migrărilor
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Modificările incompatibile cu versiunile anterioare** (de exemplu, eliminarea coloanelor) sunt dificil de gestionat. OmniRoute NU acceptă revenirea la o versiune anterioară — odată ce o migrare este aplicată, modificarea schemei este permanentă. Planificați în consecință.
+> **Modificările incompatibile cu versiunile anterioare** (de exemplu, eliminarea coloanelor) sunt dificil de gestionat. 67router NU acceptă revenirea la o versiune anterioară — odată ce o migrare este aplicată, modificarea schemei este permanentă. Planificați în consecință.
 
 ---
 
@@ -310,7 +310,7 @@ Din motive de performanță, următoarele sunt stocate în text clar:
 
 ## Aspecte importante privind criptarea (v3.8.16+)
 
-OmniRoute utilizează **`migrateLegacyEncryptedString()`** pentru a gestiona în mod transparent două scheme de criptare:
+67router utilizează **`migrateLegacyEncryptedString()`** pentru a gestiona în mod transparent două scheme de criptare:
 
 - **Moștenită** (anterioară versiunii v3.5.0): „criptare” bazată pe XOR (nu este criptografie reală)
 - **Actuală**: AES-256-GCM cu IV și etichetă de autentificare corespunzătoare
@@ -399,7 +399,7 @@ Pentru copierea de siguranță fără întreruperi a unei baze de date active:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Aceasta utilizează API-ul SQLite pentru copii de siguranță online — poate fi executată în siguranță în timp ce OmniRoute rulează.
+Aceasta utilizează API-ul SQLite pentru copii de siguranță online — poate fi executată în siguranță în timp ce 67router rulează.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Compactare
 
-Instanțele OmniRoute care rulează perioade îndelungate beneficiază de executarea ocazională a comenzii `VACUUM`:
+Instanțele 67router care rulează perioade îndelungate beneficiază de executarea ocazională a comenzii `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Resetarea (ștergerea) tuturor datelor
 
 ```bash
-# Opriți mai întâi OmniRoute
+# Opriți mai întâi 67router
 omniroute stop
 
 # Ștergeți fișierul bazei de date
@@ -612,7 +612,7 @@ Un alt proces deține un blocaj de scriere. Puteți:
 
 - Aștepta finalizarea celuilalt proces (verificați cu `lsof | grep storage.sqlite`)
 - Opri forțat celălalt proces
-- Dacă problema persistă, reporniți OmniRoute
+- Dacă problema persistă, reporniți 67router
 
 ### „Constrângerea de cheie externă a eșuat”
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Migrarea a fost executată într-o tranzacție, deci modificările ar fi trebuit anulate. Dacă nu au fost:
 
-1. **Opriți OmniRoute** (pentru a preveni alte încercări)
+1. **Opriți 67router** (pentru a preveni alte încercări)
 2. **Verificați starea bazei de date** cu `sqlite3`
 3. **Remediați manual** migrarea parțială
-4. **Rulați din nou** OmniRoute (migrarea va fi reîncercată)
+4. **Rulați din nou** 67router (migrarea va fi reîncercată)
 
 Pentru a preveni această situație, testați întotdeauna mai întâi migrările pe o copie.
 

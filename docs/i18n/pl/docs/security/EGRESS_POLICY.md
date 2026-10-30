@@ -15,7 +15,7 @@ lastUpdated: 2026-06-28
 
 > **Source of truth:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute pozwala każdemu proxy nieść **dyrektywę egress rodziny adresów**. Domyślnie system operacyjny wybiera IPv4 lub IPv6 (dual-stack, „Happy Eyeballs”). Gdy ustawisz dyrektywę na `ipv4` lub `ipv6`, OmniRoute przypina każde połączenie przez to proxy do wybranej rodziny i **fails closed** (odmawia), zamiast robić fallback na drugą rodzinę.
+67router pozwala każdemu proxy nieść **dyrektywę egress rodziny adresów**. Domyślnie system operacyjny wybiera IPv4 lub IPv6 (dual-stack, „Happy Eyeballs”). Gdy ustawisz dyrektywę na `ipv4` lub `ipv6`, 67router przypina każde połączenie przez to proxy do wybranej rodziny i **fails closed** (odmawia), zamiast robić fallback na drugą rodzinę.
 
 Ta strona dokumentuje, czym jest dyrektywa, po co istnieje, gdzie się ją konfiguruje i jak runtime ją rozwiązuje.
 
@@ -129,7 +129,7 @@ Reszta API CRUD/assignment proxy: [PROXY_GUIDE.md](../ops/PROXY_GUIDE.md).
 
 ## Jak rozwiązuje się `auto`
 
-Gdy `family` to `auto`, OmniRoute **nie** dokleja żadnej dyrektywy — URL proxy jest używany as-is, a rodzina połączenia wynika wewnętrznie.
+Gdy `family` to `auto`, 67router **nie** dokleja żadnej dyrektywy — URL proxy jest używany as-is, a rodzina połączenia wynika wewnętrznie.
 
 W czasie budowy URL (`proxyConfigToUrl` / `normalizeProxyUrl` w `open-sse/utils/proxyDispatcher.ts`) proxy `auto` daje zwykły URL bez markera:
 
@@ -165,7 +165,7 @@ Zatem:
 
 Dyrektywa inna niż `auto` podróżuje jako jeden syntetyczny marker query — `?family=ipv4` lub `?family=ipv6` — doklejany raz do znormalizowanego URL proxy. `normalizeProxyUrl` ostrożnie usuwa i ponownie dokleja ten marker dokładnie raz, żeby nigdy nie psuć parsowania portu.
 
-Gdy budowany jest dispatcher, marker jest odczytywany i zamieniany na konkretną rodzinę połączenia. Jeśli host to literał IP **przeciwnej** rodziny, OmniRoute rzuca wyjątek (sprzeczność = fail-closed):
+Gdy budowany jest dispatcher, marker jest odczytywany i zamieniany na konkretną rodzinę połączenia. Jeśli host to literał IP **przeciwnej** rodziny, 67router rzuca wyjątek (sprzeczność = fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -186,7 +186,7 @@ Konkretna rodzina jest potem przypinana na connectorze:
 
 ## Kompatybilność SOCKS5
 
-Pin rodziny działa z proxy SOCKS5, ale stockowe `fetch-socks` nie udostępnia opcji socket potrzebnych do przypięcia rodziny hopu proxy. OmniRoute dostarcza własny connector do tego:
+Pin rodziny działa z proxy SOCKS5, ale stockowe `fetch-socks` nie udostępnia opcji socket potrzebnych do przypięcia rodziny hopu proxy. 67router dostarcza własny connector do tego:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

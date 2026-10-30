@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute est fourni sous la forme d’une Progressive Web App entièrement installable. Lorsque vous accédez au tableau de bord depuis n’importe quel navigateur mobile — Android (Chrome) ou iOS (Safari) — vous pouvez sélectionner « Ajouter à l’écran d’accueil » et profiter d’une expérience similaire à celle d’une application native, sans passer par une boutique d’applications.
+67router est fourni sous la forme d’une Progressive Web App entièrement installable. Lorsque vous accédez au tableau de bord depuis n’importe quel navigateur mobile — Android (Chrome) ou iOS (Safari) — vous pouvez sélectionner « Ajouter à l’écran d’accueil » et profiter d’une expérience similaire à celle d’une application native, sans passer par une boutique d’applications.
 
 ## Qu’est-ce qu’une PWA ?
 
-Une Progressive Web App transforme le tableau de bord web d’OmniRoute en une application qui ressemble et se comporte comme une application mobile native. Une fois installée, elle :
+Une Progressive Web App transforme le tableau de bord web de 67router en une application qui ressemble et se comporte comme une application mobile native. Une fois installée, elle :
 
 - Se lance depuis votre écran d’accueil avec sa propre icône
 - S’ouvre en plein écran — sans barre d’adresse ni interface d’onglets du navigateur
@@ -20,26 +20,26 @@ Une Progressive Web App transforme le tableau de bord web d’OmniRoute en une a
 
 ### Android (Chrome)
 
-1. Ouvrez le tableau de bord OmniRoute dans Chrome : `http://YOUR_IP:20128`
-2. Chrome affiche automatiquement une bannière **« Ajouter OmniRoute à l’écran d’accueil »**, sinon :
+1. Ouvrez le tableau de bord 67router dans Chrome : `http://YOUR_IP:20128`
+2. Chrome affiche automatiquement une bannière **« Ajouter 67router à l’écran d’accueil »**, sinon :
    - Appuyez sur le menu **⋮** (trois points) → **« Ajouter à l’écran d’accueil »** ou **« Installer l’application »**
 3. Confirmez l’invite
-4. OmniRoute apparaît sur votre écran d’accueil en tant qu’application autonome
+4. 67router apparaît sur votre écran d’accueil en tant qu’application autonome
 
 ### iOS (Safari)
 
-1. Ouvrez le tableau de bord OmniRoute dans Safari : `http://YOUR_IP:20128`
+1. Ouvrez le tableau de bord 67router dans Safari : `http://YOUR_IP:20128`
 2. Appuyez sur le bouton **Partager** (carré avec une flèche)
 3. Faites défiler vers le bas et appuyez sur **« Sur l’écran d’accueil »**
-4. Nommez l’application (« OmniRoute » par défaut), puis appuyez sur **Ajouter**
-5. OmniRoute apparaît sur votre écran d’accueil avec l’icône de l’application
+4. Nommez l’application (« 67router » par défaut), puis appuyez sur **Ajouter**
+5. 67router apparaît sur votre écran d’accueil avec l’icône de l’application
 
 ### Ordinateur (Chrome / Edge)
 
-1. Ouvrez le tableau de bord OmniRoute
-2. Cliquez sur l’**icône d’installation** dans la barre d’adresse (ou sur ⋮ → « Installer OmniRoute... »)
+1. Ouvrez le tableau de bord 67router
+2. Cliquez sur l’**icône d’installation** dans la barre d’adresse (ou sur ⋮ → « Installer 67router... »)
 3. Confirmez l’invite
-4. OmniRoute s’ouvre dans une fenêtre autonome — sans onglets ni barre d’adresse
+4. 67router s’ouvre dans une fenêtre autonome — sans onglets ni barre d’adresse
 
 ## Fonctionnalités
 
@@ -49,7 +49,7 @@ Le manifeste est configuré avec `display: "fullscreen"`, ce qui signifie que l�
 
 ### Prise en charge hors ligne
 
-OmniRoute inclut un service worker (`sw.js`) qui assure une mise en cache intelligente :
+67router inclut un service worker (`sw.js`) qui assure une mise en cache intelligente :
 
 | Type de ressource                                                        | Stratégie                                    | Comportement                                                                                                        |
 | ------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Lorsque le réseau est indisponible et qu’un utilisateur accède à une nouvel
 
 ### Icônes de l’application
 
-OmniRoute fournit des icônes optimisées pour chaque plateforme :
+67router fournit des icônes optimisées pour chaque plateforme :
 
 | Fichier                | Taille              | Utilisé par                                       |
 | ---------------------- | ------------------- | ------------------------------------------------- |
@@ -94,8 +94,8 @@ Généré par Next.js via `src/app/manifest.ts` :
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Situé dans `src/shared/components/PwaRegister.tsx`, ce composant client :
 
 ## Utilisation avec Termux (Android)
 
-Lorsque vous exécutez OmniRoute sur Android via Termux, la PWA fonctionne de manière transparente :
+Lorsque vous exécutez 67router sur Android via Termux, la PWA fonctionne de manière transparente :
 
-1. Démarrez OmniRoute dans Termux : `npx omniroute`
+1. Démarrez 67router dans Termux : `npx omniroute`
 2. Ouvrez Chrome sur le même téléphone : `http://localhost:20128`
 3. Installez la PWA via « Ajouter à l’écran d’accueil »
 4. La PWA se connecte au serveur Termux local — tout s’exécute sur l’appareil
@@ -156,7 +156,7 @@ Cette combinaison signifie que votre téléphone Android est à la fois le **ser
 
 ## Utilisation depuis d’autres appareils
 
-Installez la PWA sur tout appareil disposant d’un accès par navigateur à votre serveur OmniRoute :
+Installez la PWA sur tout appareil disposant d’un accès par navigateur à votre serveur 67router :
 
 - **Autre téléphone/tablette** : accédez à `http://PHONE_IP:20128` et installez la PWA
 - **Ordinateur portable** : ouvrez Chrome/Edge et installez-la en tant que PWA de bureau

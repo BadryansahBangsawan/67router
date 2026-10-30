@@ -4,7 +4,7 @@
 
 ---
 
-A `devin-cli-agentic` lehetővé teszi, hogy a valódi Claude Code futtatókörnyezet az OmniRoute helyi Anthropic
+A `devin-cli-agentic` lehetővé teszi, hogy a valódi Claude Code futtatókörnyezet az 67router helyi Anthropic
 Messages végpontját használja, miközben a hivatalos Devin CLI ACP stdio kapcsolaton keresztül biztosítja a modellválaszokat. Ez
 nem módosítja a meglévő Anthropic-, Claude OAuth-, Claude Web- vagy `devin-cli`-szolgáltatókat.
 
@@ -18,7 +18,7 @@ metaadatai ennek megfelelően vannak megjelölve, így az eszközöket igénylő
 > hajtott végre a Devin CLI `3000.2.17` és az `swe-1-7-lightning` modell használatával; ez az utolsó élő futtatás igazolta a kliens által kezelt `Read`,
 > `Edit` és `Bash` köröket, a sikeres `npm test` eredményeket, a projektparancsok és készségek
 > felderítését, a kizárólag Devinre történő útválasztást, valamint azt, hogy nem történt kimenő Claude-forgalom. A rögzített verziót ezután `2.1.258`-ra
-> emelték (ez az a CLI-generáció, amelynek a Claude-identitását az OmniRoute megszemélyesíti, és az első olyan kiadási vonal, amely
+> emelték (ez az a CLI-generáció, amelynek a Claude-identitását az 67router megszemélyesíti, és az első olyan kiadási vonal, amely
 > natívan tartalmazza a Fable 5.1 szintet). Az új rögzített verzión a telepítési réteget és a `claude --version` parancsot
 > ellenőrizték a rögzített alaplemezképen, továbbá a híd egységtesztcsomagja, a `compose config` és a
 > statikus elkülönítési bizonyítás is sikeres — az offline szimulált forgatókönyvet és az élő, három forgatókönyvből álló
@@ -50,12 +50,12 @@ látható csonkolási jelölőt használnak.
 Az elemző modellkörönként egyetlen önálló `<tool>{...}</tool>` borítékot fogad el. Ellenőrzi
 a nevet a kérés eszközlistája alapján, validálja az argumentumokat az adott eszköz JSON
 Schema sémája szerint, elutasítja az elbeszélő szöveg és a műveletek keverését, és egy korlátozott javítási kísérletet engedélyez. A Claude Code ezután
-helyben végrehajtja az eredményül kapott Anthropic `tool_use` műveletet, és a `tool_result` eredményt az OmniRoute-on keresztül
+helyben végrehajtja az eredményül kapott Anthropic `tool_use` műveletet, és a `tool_result` eredményt az 67router-on keresztül
 visszaküldi.
 
 ## Automatikus útválasztás
 
-Ha nincs letiltva, a szolgáltató jogosult bekerülni az OmniRoute `auto/*` jelöltkészleteibe.
+Ha nincs letiltva, a szolgáltató jogosult bekerülni az 67router `auto/*` jelöltkészleteibe.
 A jelölti jogosultság nem garantálja a kiválasztást: a kombináció útválasztási stratégiája (például a
 last-known-good) előnyben részesíthet egy másik szolgáltatót. Használja a `dva/<model>` formátumot vagy egy Devint előnyben részesítő kombinációt, ha
 azt szeretné, hogy minden kérés a Devinen keresztül haladjon.
@@ -67,16 +67,16 @@ tiltottnak minősül. A Compose-szolgáltatások:
 
 - `10001:10001` UID/GID azonosítóval, csak olvasható gyökérfájlrendszerrel, eldobott képességekkel és
   `no-new-privileges` beállítással futnak;
-- privát `/home/bridge` könyvtárat, dedikált Claude-konfigurációs kötetet, elkülönített OmniRoute-adatokat
+- privát `/home/bridge` könyvtárat, dedikált Claude-konfigurációs kötetet, elkülönített 67router-adatokat
   és külön `devin-auth` kötetet használnak;
 - csak eldobható `.sandbox` munkaterületeket/bizonyítékokat csatolnak;
 - nem csatolják a gazdagép saját könyvtárát, Keychainjét, SSH- vagy felhőalapú hitelesítő adatait, illetve Docker-socketjét;
 - explicit környezeteket állítanak össze, és eltávolítják az Anthropic API/OAuth/útválasztási változókat;
 - a Claude Code következtetési kéréseit kizárólag a `http://omniroute:20128` címre irányítják, egy csak helyben használható kulccsal.
 
-Az offline profil belső hálózatot használ. Az élő profilban az OmniRoute kizárólag a
+Az offline profil belső hálózatot használ. Az élő profilban az 67router kizárólag a
 `network-guard` közvetítésével éri el a hivatalos Devin-végpontokat; az ettől eltérő célhelyek elérése tiltott.
-A Claude Code külön, minden kimenő forgalmat tiltó védelemmel rendelkezik, és csak a helyi OmniRoute
+A Claude Code külön, minden kimenő forgalmat tiltó védelemmel rendelkezik, és csak a helyi 67router
 szolgáltatást érheti el a `NO_PROXY` használatával. A védelmi naplófájlokat kizárólag az adott védelmi folyamat
 csatolja. A szkriptek ellenőrzik a fájlok tulajdonosát, módját, hivatkozásszámát és minden döntést, mielőtt
 tokenmentes bizonyítékot exportálnának.

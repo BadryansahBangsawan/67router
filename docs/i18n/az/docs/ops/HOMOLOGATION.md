@@ -4,7 +4,7 @@
 
 ---
 
-Homoloqasiya VPS-ində işləyən OmniRoute deploy-unun real mühitdə E2E yoxlanması
+Homoloqasiya VPS-ində işləyən 67router deploy-unun real mühitdə E2E yoxlanması
 (`HOMOLOG_BASE_URL`, məsələn, `http://192.168.0.15:20128`). Bir əmr buraxılış üçün əl ilə icra edilən
 STOP #2 yoxlama siyahısını avtomatlaşdırılmış və sübut yaradan icra ilə əvəz edir.
 

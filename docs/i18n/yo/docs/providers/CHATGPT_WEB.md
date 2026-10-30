@@ -37,11 +37,11 @@ agbára irinṣẹ́ agbègbè kan náà tí a dè mọ́ ìyípadà nígbà tí
 1. Ṣí olùpèsè **ChatGPT Web (Codex)** kí o sì ṣàfikún asopọ̀ kan.
 2. Lẹ akọsórí ChatGPT Cookie kíkún, ID tunnel, kọ́kọ́rọ́ runtime, àti orúkọ connector
    àkànṣe náà mọ́lẹ̀. Àwọn ìṣètò tuntun tí ó lè lo irinṣẹ́ gbọ́dọ̀ lo connector tuntun tí a ṣẹ̀dá
-   tí orúkọ rẹ̀ jẹ́ `OmniRoute Codex v2` gan-an, pẹ̀lú Authentication tí a ṣètò sí None àti
+   tí orúkọ rẹ̀ jẹ́ `67router Codex v2` gan-an, pẹ̀lú Authentication tí a ṣètò sí None àti
    Permissions tí a ṣètò sí Allow all actions.
-3. Ṣe àyẹ̀wò asopọ̀ náà. OmniRoute máa ṣí Temporary Chat tí aṣàwákiri ń ṣe àtìlẹ́yìn fún,
+3. Ṣe àyẹ̀wò asopọ̀ náà. 67router máa ṣí Temporary Chat tí aṣàwákiri ń ṣe àtìlẹ́yìn fún,
    yóò sì ṣàwárí bóyá Sol àti Pro wà fún àkọọ́lẹ̀ náà.
-4. Fi asopọ̀ náà pamọ́. OmniRoute máa rọ́pò cookie tí a lẹ mọ́lẹ̀ pẹ̀lú ipò ibi ìpamọ́
+4. Fi asopọ̀ náà pamọ́. 67router máa rọ́pò cookie tí a lẹ mọ́lẹ̀ pẹ̀lú ipò ibi ìpamọ́
    Playwright tí a ti ṣàyẹ̀wò, yóò sì fi í pamọ́ pẹ̀lú kọ́kọ́rọ́ runtime nípasẹ̀
    àkópọ̀ ìtọ́jú ẹ̀rí ìdánimọ̀ tí a paroko.
 
@@ -76,10 +76,10 @@ High hàn, àwọn àkọọ́lẹ̀ tó lè lo Pro sì tún ń fi Extra High à
 awoṣe backend àti ìsapá ìrònú tí a ti dì mú; ìsapá Responses tí a sọ ní gbangba tó tako èyí yóò
 kùnà láìfi àyè sílẹ̀ dípò kí ó yí mode aṣàwákiri tí a yàn padà láìjẹ́kí ẹnikẹ́ni mọ̀.
 
-Má ṣe tún orúkọ asopọ̀ `Codex Native` tàbí `OmniRoute Codex` àtijọ́ ṣe, má sì tún lò ó. ChatGPT
+Má ṣe tún orúkọ asopọ̀ `Codex Native` tàbí `67router Codex` àtijọ́ ṣe, má sì tún lò ó. ChatGPT
 ń cache àdéhùn MCP gbogbogbò nípasẹ̀ ìdánimọ̀ asopọ̀, nígbà tí bridge tí a sọ di tuntun ń lo
 àdéhùn turn-token tààrà tuntun. Runtime kọ àwọn ìdánimọ̀ àtijọ́ wọ̀nyẹn, ó sì ń béèrè
-asopọ̀ `OmniRoute Codex v2` tuntun.
+asopọ̀ `67router Codex v2` tuntun.
 
 ## Àwòṣe ààbò
 
@@ -92,19 +92,19 @@ asopọ̀ `OmniRoute Codex v2` tuntun.
 
 ## VPS aláìní àpapọ̀ ìfihàn àti Docker
 
-Fún àwọn ìfisórí ẹrọ npm, systemd, àti PM2, OmniRoute máa ń ṣàwárí àwọn ọ̀nà Chrome àti Chromium tí ó wọ́pọ̀.
+Fún àwọn ìfisórí ẹrọ npm, systemd, àti PM2, 67router máa ń ṣàwárí àwọn ọ̀nà Chrome àti Chromium tí ó wọ́pọ̀.
 Gẹ́gẹ́ bí ọ̀nà mìíràn, ṣètò `CHATGPT_WEB_CODEX_CHROME_PATH`. Àwọn runtime turn mọ̀ọ́mọ̀ ń lo Chrome
 tí ó ní àpapọ̀ ìfihàn nítorí pé ChatGPT kọ̀ irú browser headless gidi. Nítorí náà, host aláìní àpapọ̀ ìfihàn gbọ́dọ̀
-ṣiṣẹ́ OmniRoute pẹ̀lú àpapọ̀ Xvfb àdáni; ṣíṣètò ọ̀nà Chrome nìkan kò pèsè ọ̀kan.
+ṣiṣẹ́ 67router pẹ̀lú àpapọ̀ Xvfb àdáni; ṣíṣètò ọ̀nà Chrome nìkan kò pèsè ọ̀kan.
 
 Profile `web` Docker ń bẹ̀rẹ̀ `chatgpt-web-codex-browser` lórí network Compose inú.
 Sidecar náà ń ṣiṣẹ́ Chrome tí ó ní àpapọ̀ ìfihàn nínú Xvfb, nítorí náà kò nílò àpapọ̀ ìfihàn ti ara. A kò tẹ port CDP
 rẹ̀ jáde lórí host. Volume profile browser tí a dáàbò bò yàtọ̀ sí volume data
-OmniRoute, browser náà sì ń gba shared memory tó. Proxy CDP inú
+67router, browser náà sì ń gba shared memory tó. Proxy CDP inú
 ń tẹ́tí sí port `9223` nìkan nínú network Compose; Chrome ṣì so mọ́ loopback nínú
 sidecar.
 
-Lease alábòójútó kan lábẹ́ `DATA_DIR` ń dí ọ̀pọ̀ process OmniRoute lọ́wọ́ láti ní
+Lease alábòójútó kan lábẹ́ `DATA_DIR` ń dí ọ̀pọ̀ process 67router lọ́wọ́ láti ní
 tunnel àti state broker kan náà. Doctor máa ń jẹ́dòó ìforígbárí.
 
 ## Ìmúpadàbọ̀ṣípò aláṣepọ̀

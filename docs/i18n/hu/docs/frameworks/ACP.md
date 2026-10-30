@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute elkülöníti a **CLI-felderítést**, a **natív Agent Client Protocolt** és a
+Az 67router elkülöníti a **CLI-felderítést**, a **natív Agent Client Protocolt** és a
 **régi stdio-adaptereket**. Egy telepített bináris megtalálása nem igazolja annak
 hitelesítését, modellkompatibilitását vagy arra való készenlétét, hogy feldolgozzon egy promptot.
 

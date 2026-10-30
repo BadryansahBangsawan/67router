@@ -38,7 +38,7 @@ URL đầy đủ có dạng:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Trong OmniRoute, đi tới **Providers → Add Provider**, chọn **Microsoft 365 Copilot
+6. Trong 67router, đi tới **Providers → Add Provider**, chọn **Microsoft 365 Copilot
    (BizChat)** và dán thông tin xác thực theo định dạng:
 
 ```
@@ -54,9 +54,9 @@ Thay vì sao chép thủ công các giá trị từ URL WebSocket, bạn có th�
 1. Mở **DevTools → Network**.
 2. Bắt đầu hoặc tiếp tục một cuộc trò chuyện BizChat (thao tác này sẽ kích hoạt kết nối WebSocket).
 3. Nhấp chuột phải trong bảng Network và chọn **Save all as HAR with content**.
-4. Trong OmniRoute, sử dụng nút **Import .har file** trên hộp thoại kết nối nhà cung cấp.
+4. Trong 67router, sử dụng nút **Import .har file** trên hộp thoại kết nối nhà cung cấp.
 
-OmniRoute quét HAR để tìm URL WebSocket Chathub, trích xuất
+67router quét HAR để tìm URL WebSocket Chathub, trích xuất
 `access_token` và `chathubPath`, rồi tự động điền vào các trường thông tin xác thực. Tính năng
 nhập HAR giải mã thời điểm hết hạn của JWT và hiển thị thời gian còn lại của token.
 
@@ -79,7 +79,7 @@ sẽ báo lỗi kết nối và bạn phải thu thập lại thông tin xác th
 | `tier`         | `individual` (mặc định), `edu` hoặc `enterprise`                        |
 
 Lấy refresh token từ luồng mã thiết bị hoặc mã ủy quyền của Microsoft
-với phạm vi `substrate.office.com/sydney`. Khi `refreshToken` được thiết lập, OmniRoute
+với phạm vi `substrate.office.com/sydney`. Khi `refreshToken` được thiết lập, 67router
 sẽ làm mới trước `access_token` trước mỗi yêu cầu, vì vậy bạn không cần
 thu thập lại sau mỗi lần hết hạn khoảng 75 phút.
 

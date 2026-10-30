@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jinkludi qafas ġeneriku ta’ evalwazzjoni li tista’ tuża biex tkejjel il-prestazzjoni ta’
+67router jinkludi qafas ġeneriku ta’ evalwazzjoni li tista’ tuża biex tkejjel il-prestazzjoni ta’
 konfigurazzjonijiet tar-routing, fornituri/mudelli individwali, jew is-settijiet ta’ testijiet “golden set”
 inklużi. Użah biex tivverifika bidliet fir-routing, tivvalida fornituri ġodda, u tikkontrolla r-rilaxxi
 qabel ma tippromwovihom għat-traffiku tal-produzzjoni.

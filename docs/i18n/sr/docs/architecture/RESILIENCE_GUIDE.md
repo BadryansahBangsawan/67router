@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima tri različita, ali povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja grešaka u ponašanju usmeravanja.
+67router ima tri različita, ali povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja grešaka u ponašanju usmeravanja.
 
 ![Model otpornosti sa 3 sloja](../diagrams/exported/resilience-3layers.svg)
 
@@ -221,7 +221,7 @@ Kiro-јеви бинарни `reasoningContentEvent` оквири са непр�
 
 ### Ексклузивни закупи веза за управљане сесије
 
-**Обухват:** један активан управљани HTTP клијент/сесија поседује једну подобну OmniRoute везу.
+**Обухват:** један активан управљани HTTP клијент/сесија поседује једну подобну 67router везу.
 
 **Сврха:** обезбедити трајно ексклузивно власништво над везом за клијенте којима је потребна чврста ограда рутирања кроз захтеве. Ово се разликује од афинитета сесије, који је мекана преференца континуитета: ексклузивни закуп перзистира стање животног циклуса у SQLite, намеће глобалну јединственост активног власника и активне везе, и одбија застарелу генерацију пре прослеђивања провајдеру.
 
@@ -235,7 +235,7 @@ ID активне конекције. Заглавља за контролу л�
 заглавља upstream извршиоца.
 
 Ако обично рутирање има подобне управљане кандидате, али је сваки слободан кандидат заузет
-туђим активним лизом, OmniRoute враћа HTTP `429`, кôд недоступности капацитета лиза,
+туђим активним лизом, 67router враћа HTTP `429`, кôд недоступности капацитета лиза,
 стање чекања на капацитет и ограничени `Retry-After` изведен из најранијег релевантног истека.
 Обична празна подобност није спор око лиза и задржава своју постојећу семантику грешака рутирања.
 
@@ -255,7 +255,7 @@ ID активне конекције. Заглавља за контролу л�
 
 - `429` / `403` / `402` — signal kvote ili prava korišćenja — zaključava **porodicu kvota**: za codex ceo opseg `codex` / `spark` (svaki `gpt-5*` model te konekcije), za ostale provajdere `getQuotaScopedModelForProvider()`.
 - `404` zaključava sam konkretan model (`getModelLockKey()` sužava `not_found`).
-- Svaki drugi status — `5xx` transportne/serverske greške i OmniRoute-ov sopstveni sintetisani `502` iz validacije kvaliteta — zaključava samo **tačnu** torku provajder/konekcija/model. Loš stream na jednom modelu nije dokaz o kvoti naloga; pre ovog pravila jedan prazan odgovor na `codex/gpt-5.6-luna` uklanjao je svaki `gpt-5*` model te konekcije iz rutiranja na 2–30 min (eskalirajuće), dok je njegova kvota ostajala netaknuta.
+- Svaki drugi status — `5xx` transportne/serverske greške i 67router-ov sopstveni sintetisani `502` iz validacije kvaliteta — zaključava samo **tačnu** torku provajder/konekcija/model. Loš stream na jednom modelu nije dokaz o kvoti naloga; pre ovog pravila jedan prazan odgovor na `codex/gpt-5.6-luna` uklanjao je svaki `gpt-5*` model te konekcije iz rutiranja na 2–30 min (eskalirajuće), dok je njegova kvota ostajala netaknuta.
 - Eksplicitna opcija `scope` pozivaoca uvek ima prednost (Antigravity prosleđuje `"exact"`).
 
 **Svrha:** izbeći onemogućavanje cele konekcije kada je samo jedan model nedostupan ili ograničen kvotom.
@@ -363,7 +363,7 @@ concurrency caps**, jedan `model=cap` po redu) ili putem
   gornje granice broja istovremenih zahteva.
 - **Lokalno čekanje u redu, bez otkrivanja:** višak zahteva čeka lokalno u redu uz
   postojeću semantiku reda i vremenskih ograničenja (tipizirane greške prijema `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`). OmniRoute ne otkriva niti
+  `SEMAPHORE_QUEUE_FULL`). 67router ne otkriva niti
   pretpostavlja uzvodnu politiku — on sprovodi tačno one granice koje je operator
   konfigurisao. Zasićen prolaz modela nikada ne onemogućava provajdera i nikada
   ne stvara trajnu blokadu modela; uzvodno ponašanje 429/hlađenja/fallback-a
@@ -473,7 +473,7 @@ Sama provera prijema je čista funkcija
 ### Sigurnosna mreža za automatsko omogućavanje ograničenja brzine i zaštita konekcija (`rateLimitProtection`)
 
 **Sigurnosna mreža automatskog omogućavanja** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, podrazumevano `true`):
-OmniRoute podrazumevano automatski omogućava zaštitu redom čekanja od ograničenja brzine za sve aktivne konekcije provajdera sa API ključem (`getProviderCategory(provider) === "apikey"`). Ovo obezbeđuje da dolazni zahtevi ka uzvodnim API ključevima osetljivim na brzinu budu stavljeni u red čekanja i prigušeni kroz Bottleneck, umesto da u naletu izazovu uzvodne 429 greške. Sigurnosna mreža se može prepisati putem promenljive okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogućava, `true`/`1`/`on` prisilno uključuje), koja ima prednost nad sačuvanom postavkom na kontrolnoj tabli (**Podešavanja → Otpornost** / `PATCH /api/resilience`).
+67router podrazumevano automatski omogućava zaštitu redom čekanja od ograničenja brzine za sve aktivne konekcije provajdera sa API ključem (`getProviderCategory(provider) === "apikey"`). Ovo obezbeđuje da dolazni zahtevi ka uzvodnim API ključevima osetljivim na brzinu budu stavljeni u red čekanja i prigušeni kroz Bottleneck, umesto da u naletu izazovu uzvodne 429 greške. Sigurnosna mreža se može prepisati putem promenljive okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogućava, `true`/`1`/`on` prisilno uključuje), koja ima prednost nad sačuvanom postavkom na kontrolnoj tabli (**Podešavanja → Otpornost** / `PATCH /api/resilience`).
 
 **Semantika `rateLimitProtection` po konekciji:**
 Zaštita od ograničenja brzine po konekciji prati se putem bulovskog polja `rateLimitProtection` na konekcijama provajdera (trajno se čuva kao `rate_limit_protection` u SQLite-u):
@@ -787,7 +787,7 @@ reached") класификује као `quota_exhausted` помоћу резе�
 > vodič za agenta ostao ispod budžeta konteksta od 40k. Ovo je zgusnuti prikaz gornjih
 > odeljaka okrenut agentu; numerisani odeljci ostaju puna referenca.
 
-OmniRoute ima tri povezana, ali različita mehanizma za privremene otkaze. Držite njihove
+67router ima tri povezana, ali različita mehanizma za privremene otkaze. Držite njihove
 opsege odvojenima prilikom otklanjanja grešaka u ponašanju rutiranja. Pogledajte
 [dijagram otpornosti u 3 sloja](../diagrams/exported/resilience-3layers.svg)
 (izvor: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

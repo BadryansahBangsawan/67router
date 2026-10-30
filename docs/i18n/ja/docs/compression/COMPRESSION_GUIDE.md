@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (日本語)
+# 🗜️ Prompt Compression Guide — 67router (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## 概要
 
-OmniRoute は、リクエストが上流プロバイダーに到達する**前に**プロアクティブに実行される、モジュール式のプロンプト圧縮パイプラインを実装しています。つまり、ワークフローを変更することなく、透過的にトークンを節約できます。
+67router は、リクエストが上流プロバイダーに到達する**前に**プロアクティブに実行される、モジュール式のプロンプト圧縮パイプラインを実装しています。つまり、ワークフローを変更することなく、透過的にトークンを節約できます。
 
 ```
 クライアントリクエスト
@@ -122,15 +122,15 @@ Caveman の意味的圧縮を適用します。Stacked パイプラインはグ�
 
 ## アップストリームの削減率計算
 
-OmniRoute は、圧縮による削減効果を、アップストリームプロジェクトのベンチマークと
-OmniRoute 独自のエンジン構成という2つの情報源に基づいて文書化しています。
+67router は、圧縮による削減効果を、アップストリームプロジェクトのベンチマークと
+67router 独自のエンジン構成という2つの情報源に基づいて文書化しています。
 
 | 情報源  | ここで使用するアップストリーム README の数値                                                                       |
 | ------- | ------------------------------------------------------------------------------------------------------------------ |
 | Caveman | 出力トークンを `~75%` 削減、ベンチマークでの平均出力削減率 `65%`、範囲 `22-87%`、入力圧縮ツールでは `~46%`         |
 | RTK     | コマンド出力を `60-90%` 削減。サンプルセッションでは `~118,000 -> ~23,900` トークン、つまり `79.7%` 削減（`~80%`） |
 
-ツール／コンテキストのペイロードが重複する場合、デフォルトの OmniRoute コンボではエンジンを次の順序で重ねます。
+ツール／コンテキストのペイロードが重複する場合、デフォルトの 67router コンボではエンジンを次の順序で重ねます。
 
 ```txt
 RTK -> Caveman
@@ -529,9 +529,9 @@ Stylesを参照）。
 
 #### 注入の仕組み
 
-`applyOutputStyles()`（`open-sse/services/compression/outputStyles/apply.ts`）は、選択内容をカタログと照合して解決します（不明な ID やロケールが一致しないスタイルは除外され、エラーにはなりません。解決後にスタイルが 1 つも残らない選択では本文は変更されず、`no_styles` としてスキップされます）。選択された指示をカタログ順に連結し、境界条項を **1 回だけ** 追加します（`less-code` または `ponytail` が選択されている場合は、安全条項である `SAFETY_BOUNDARIES` またはその翻訳も追加されます）。また、ブロックの先頭には単一の冪等性マーカー（`[OmniRoute Output Styles]`）が付くため、再適用しても何も起こりません。解決された言語（下記の「言語選択」を参照）に翻訳がある場合は、英語ではなくローカライズされた指示が挿入されます。
+`applyOutputStyles()`（`open-sse/services/compression/outputStyles/apply.ts`）は、選択内容をカタログと照合して解決します（不明な ID やロケールが一致しないスタイルは除外され、エラーにはなりません。解決後にスタイルが 1 つも残らない選択では本文は変更されず、`no_styles` としてスキップされます）。選択された指示をカタログ順に連結し、境界条項を **1 回だけ** 追加します（`less-code` または `ponytail` が選択されている場合は、安全条項である `SAFETY_BOUNDARIES` またはその翻訳も追加されます）。また、ブロックの先頭には単一の冪等性マーカー（`[67router Output Styles]`）が付くため、再適用しても何も起こりません。解決された言語（下記の「言語選択」を参照）に翻訳がある場合は、英語ではなくローカライズされた指示が挿入されます。
 
-空でない `messages` 配列を持つ本文では、冪等性チェックがコンテンツバイパスより先に実行されます。`[OmniRoute Output Styles]` マーカーが、トップレベルの `system` フィールド（文字列またはコンテンツブロック配列）、あるいは文字列コンテンツを持つ system メッセージにすでに含まれている場合、本文は `already_applied` として変更されず、キーワードチェックも実行されません。それ以外の場合、コンテンツバイパス（`open-sse/services/compression/outputMode.ts` の `shouldBypassCavemanOutputMode()`）が、ロールを問わず直近 3 件のメッセージのテキストを確認し、そのテキストがセキュリティ、不可逆操作、明確化に関するキーワード、または順序依存のシーケンスに一致すると、ターン全体でスタイルをスキップします。順序依存のシーケンスとは、`first`、`then`、`after that`、`before`、`rollback`、`backup` のいずれかに続き、240 文字以内に `delete`、`drop`、`migrate`、`deploy`、`release` のいずれかが現れるものです。バイパスは **Auto-Clarity Bypass** トグル（`cavemanOutputMode.autoClarity`、デフォルトでオン）がオンの間に実行されます。このトグルをオフにすると、キーワードチェックはスキップされます。
+空でない `messages` 配列を持つ本文では、冪等性チェックがコンテンツバイパスより先に実行されます。`[67router Output Styles]` マーカーが、トップレベルの `system` フィールド（文字列またはコンテンツブロック配列）、あるいは文字列コンテンツを持つ system メッセージにすでに含まれている場合、本文は `already_applied` として変更されず、キーワードチェックも実行されません。それ以外の場合、コンテンツバイパス（`open-sse/services/compression/outputMode.ts` の `shouldBypassCavemanOutputMode()`）が、ロールを問わず直近 3 件のメッセージのテキストを確認し、そのテキストがセキュリティ、不可逆操作、明確化に関するキーワード、または順序依存のシーケンスに一致すると、ターン全体でスタイルをスキップします。順序依存のシーケンスとは、`first`、`then`、`after that`、`before`、`rollback`、`backup` のいずれかに続き、240 文字以内に `delete`、`drop`、`migrate`、`deploy`、`release` のいずれかが現れるものです。バイパスは **Auto-Clarity Bypass** トグル（`cavemanOutputMode.autoClarity`、デフォルトでオン）がオンの間に実行されます。このトグルをオフにすると、キーワードチェックはスキップされます。
 
 バイパスによってターンの処理が許可されると、`placeSystemInstruction()`（同じファイル）が、以下のうち最初に見つかった場所へブロックを配置します。この関数が新しい `messages[0]` を作成することはありません。
 
@@ -540,7 +540,7 @@ Stylesを参照）。
 3. それより後ろで最初に見つかった、文字列コンテンツを持つ system メッセージ：そのテキストの後ろにブロックを追加します。
 4. 上記のいずれにも該当しない場合：`messages` の末尾に新しい system メッセージとしてブロックを追加します。
 
-`messages` 配列がない（または空の）本文では、コンテンツバイパスは実行されず、トップレベルの `system` フィールドも参照されません。文字列の `instructions` フィールドがある場合、そのテキストの後ろにブロックが追加されます。ただし、そのフィールドに `[OmniRoute Output Styles]` マーカーがすでに含まれている場合、本文は `already_applied` として変更されません。文字列の `instructions` フィールドがなく、`input`（文字列または配列）がある場合、ブロックが `instructions` となり、そのフィールドに保持されていた文字列以外の値を置き換えます。文字列の `instructions` フィールドも、文字列または配列の `input` もない本文は変更されず、`no_messages` としてスキップされます。
+`messages` 配列がない（または空の）本文では、コンテンツバイパスは実行されず、トップレベルの `system` フィールドも参照されません。文字列の `instructions` フィールドがある場合、そのテキストの後ろにブロックが追加されます。ただし、そのフィールドに `[67router Output Styles]` マーカーがすでに含まれている場合、本文は `already_applied` として変更されません。文字列の `instructions` フィールドがなく、`input`（文字列または配列）がある場合、ブロックが `instructions` となり、そのフィールドに保持されていた文字列以外の値を置き換えます。文字列の `instructions` フィールドも、文字列または配列の `input` もない本文は変更されず、`no_messages` としてスキップされます。
 
 #### 有効化方法
 
@@ -555,7 +555,7 @@ Stylesを参照）。
 }
 ```
 
-後方互換性：`outputStyles` が空の間は、従来の `cavemanOutputMode.enabled` 設定が、`cavemanOutputMode.intensity` の強度で `terse-prose` にマッピングされます。この場合、従来の `applyCavemanOutputMode()` インジェクターが `[OmniRoute Caveman Output Mode]` を挿入していた箇所で、ブロックは `[OmniRoute Output Styles]` マーカーから始まります。マーカーより下のテキストは、en、pt-BR、es、de、fr、it、ru、id、vi では従来の挿入内容と一致します。ja と zh では、境界条項の前にスペースが 1 つ余分に入ります。`terse-prose` には pt-BR、es、de、fr、it、ru、zh、ja、id、vi の翻訳があるため、解決された言語が `hu` のリクエストでは、従来のインジェクターがハンガリー語のテキストを使用していたのに対し、英語のテキストが使用されます。
+後方互換性：`outputStyles` が空の間は、従来の `cavemanOutputMode.enabled` 設定が、`cavemanOutputMode.intensity` の強度で `terse-prose` にマッピングされます。この場合、従来の `applyCavemanOutputMode()` インジェクターが `[67router Caveman Output Mode]` を挿入していた箇所で、ブロックは `[67router Output Styles]` マーカーから始まります。マーカーより下のテキストは、en、pt-BR、es、de、fr、it、ru、id、vi では従来の挿入内容と一致します。ja と zh では、境界条項の前にスペースが 1 つ余分に入ります。`terse-prose` には pt-BR、es、de、fr、it、ru、zh、ja、id、vi の翻訳があるため、解決された言語が `hu` のリクエストでは、従来のインジェクターがハンガリー語のテキストを使用していたのに対し、英語のテキストが使用されます。
 
 出力スタイルの言語選択（`outputStyles/apply.ts` の `resolveOutputStyleLanguage()`）：`languageConfig.enabled` がオンの場合、`autoDetect` はリクエストの `messages` 配列から、テキストを持つ最新の user メッセージ（文字列コンテンツ、またはコンテンツパーツの `text`）をサンプリングし、Caveman エンジンの検出器（`detectCompressionLanguage()`）をそのテキストに対して実行します。検出器は、漢字を含み、かなを含まないテキストに対して `zh` を返します。それ以外の場合は、`it`、`pt-BR`、`es`、`de`、`fr`、`ru`、`ja`、`hu`、`id` のうちヒントの一致数が最も多いものを返し、一致がない場合は `en` を返します。分類できないテキストには `defaultLanguage` ではなく常に英語が使用されます。また、スタイルに `vi` のテキストが含まれていても、`vi` が検出されることはありません。Responses API の本文ではターンが `input` に保持されますが、これはサンプリングされないため、`defaultLanguage`、次いで英語が使用されます。`messages` 内にテキストを持つ user メッセージがない場合、または `autoDetect` がオフの場合は、`defaultLanguage`、次いで英語が適用されます。`languageConfig.enabled` がオフの場合、言語は英語になります。ただし、圧縮コンボがリクエストに適用される場合（リクエストのルーティングコンボに割り当てられたコンボ、または組み込みのスタックパイプラインで chatCore がフォールバックするデフォルトの圧縮コンボ）は例外です。コンボを適用すると、そのリクエストでは `languageConfig.enabled` がオンになり、コンボの言語パックから `defaultLanguage` が設定されます（保存済みの値がコンボのパックのいずれかであればその値、それ以外の場合はコンボの最初のパック。デフォルトは `en`）。一方、保存済みの `autoDetect`（デフォルトでオン）は引き続き適用されます。Caveman 入力エンジンは、これとは異なる方法でルールパックの言語を選択します。選択はテキストパーツごとに行われ、自動検出がオフの場合は `enabledPacks` によって制限されます。
 

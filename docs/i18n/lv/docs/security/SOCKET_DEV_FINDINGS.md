@@ -48,7 +48,7 @@ JWT, kas pieejams caur tuneli, **nevar** aktivizēt šo koda ceļu.
 | Linux+Firefox/Chromium | katra profila NSS DB atjaunināšana ar `certutil -d sql:<profile>`                                                 |
 
 Tās ir tās pašas komandas, ko izmanto `mitmproxy`, Charles Proxy, Fiddler un
-Caddy. Fakts, ka tās ir pieejamas OmniRoute, ir dokumentēts failā
+Caddy. Fakts, ka tās ir pieejamas 67router, ir dokumentēts failā
 `docs/security/STEALTH_GUIDE.md`.
 
 **v3.8.6 mazināšanas pasākumi**:
@@ -109,7 +109,7 @@ noņemts versijā v3.9.
 
 **Kāpēc mēs to saglabājam**: importēšana no Zed ir lietotājiem ērtākais darba
 sākšanas veids, ja viņi jau izmanto Zed un vēlas dublēt savu pakalpojumu
-sniedzēju atslēgas OmniRoute, tās atkārtoti neielīmējot.
+sniedzēju atslēgas 67router, tās atkārtoti neielīmējot.
 
 ---
 
@@ -120,7 +120,7 @@ sniedzēju atslēgas OmniRoute, tās atkārtoti neielīmējot.
 **Kāpēc atzīmēts**: fragments atkārtoti eksportē `execFileWithPassword`,
 `runElevatedPowerShell` un koplietojamo palīgfunkciju `quotePowerShell`.
 Socket.dev MI klasifikators tos uzskata par vispārīgu „resursdatora komandu
-izpildes un privilēģiju paaugstināšanas rīkkopu”. OmniRoute ietvaros tie tiek
+izpildes un privilēģiju paaugstināšanas rīkkopu”. 67router ietvaros tie tiek
 izmantoti tikai MITM sertifikāta instalēšanas ceļā (§1), savukārt
 `execFileWithPassword` tiek izmantots `sudo` komandu izpildei.
 
@@ -174,7 +174,7 @@ piekrišanu.
 
 ---
 
-## §5 — OmniRoute Cloud Sync akreditācijas datu atpakaļierakstīšana (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync akreditācijas datu atpakaļierakstīšana (`api/keys/[id]/route.js`)
 
 **Avota faili**:
 
@@ -207,7 +207,7 @@ rawBody)`). Ja noslēpums ir iestatīts, paraksts ir obligāts. Ja tas nav
    `rateLimitedUntil`, `updatedAt`). Šīs ir **nesaderīgas izmaiņas** lietotājiem,
    kuri paļāvās uz attālinātu marķieru sinhronizāciju — viņiem tā ir skaidri jāiespējo.
 
-**Kāpēc mēs to saglabājam**: Cloud Sync ir vienīgais veids, kā OmniRoute Cloud nomnieks
+**Kāpēc mēs to saglabājam**: Cloud Sync ir vienīgais veids, kā 67router Cloud nomnieks
 var centralizēti pārvaldīt komandas akreditācijas datus. Labojums padara apdraudējumu modeli godīgu:
 "serveris paraksta, klients pārbauda, operators izvēlas iespējot."
 

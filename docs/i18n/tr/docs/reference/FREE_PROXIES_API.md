@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, harici sağlayıcılardan (1proxy, proxifly, iplocate, webshare) senkronize edilen, özenle seçilmiş ücretsiz proxy havuzunu `free_proxies` tablosunda sunar. Kontrol paneli bunları **Ayarlar → Ücretsiz Proxy'ler** altında gösterir. Bu belge, liste rotasının sunduğu sunucu taraflı filtreleme, sıralama, sayma ve senkronizasyon hatası raporlamasını kapsar.
+67router, harici sağlayıcılardan (1proxy, proxifly, iplocate, webshare) senkronize edilen, özenle seçilmiş ücretsiz proxy havuzunu `free_proxies` tablosunda sunar. Kontrol paneli bunları **Ayarlar → Ücretsiz Proxy'ler** altında gösterir. Bu belge, liste rotasının sunduğu sunucu taraflı filtreleme, sıralama, sayma ve senkronizasyon hatası raporlamasını kapsar.
 
 ## Liste rotası — `GET /api/settings/free-proxies`
 

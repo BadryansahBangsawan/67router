@@ -8,11 +8,11 @@
 > **Aġġornat l-aħħar:** 2026-09-02 — v3.8.51
 > **Udjenza:** Inġiniera li jżommu integrazzjonijiet diskreti speċifiċi għall-fornituri.
 
-OmniRoute jintegra ma’ fornituri li l-punti periferiċi tagħhom jagħmlu fingerprinting attiv ta’ klijenti mhux uffiċjali (TLS JA3/JA4, l-ordni tal-headers, l-istruttura tal-body JSON, tokens tal-integrità). Din il-paġna tiddokumenta s-superfiċji ta’ diskrezzjoni li jesponi OmniRoute u fejn huma implimentati.
+67router jintegra ma’ fornituri li l-punti periferiċi tagħhom jagħmlu fingerprinting attiv ta’ klijenti mhux uffiċjali (TLS JA3/JA4, l-ordni tal-headers, l-istruttura tal-body JSON, tokens tal-integrità). Din il-paġna tiddokumenta s-superfiċji ta’ diskrezzjoni li jesponi 67router u fejn huma implimentati.
 
 ## Avviż Legali u Etiku
 
-Il-karatteristiċi ta’ diskrezzjoni jeżistu sabiex OmniRoute jkun jista’ jaġixxi bħala saff ta’ kompatibbiltà bejn kontijiet uffiċjali tal-utenti (Claude Code CLI, Codex, Antigravity, Cursor, eċċ.) u l-API unifikata ta’ OmniRoute. Dawn **mhumiex** maħsuba biex tiġi evitata d-detezzjoni tal-frodi, biex jinqasmu l-kredenzjali, jew biex jinkisru t-Termini tas-Servizz tal-fornitur. Il-mantenituri jistennew li l-operaturi jikkonformaw mat-ToS tas-servizz upstream li aċċettaw meta ħolqu l-kontijiet.
+Il-karatteristiċi ta’ diskrezzjoni jeżistu sabiex 67router jkun jista’ jaġixxi bħala saff ta’ kompatibbiltà bejn kontijiet uffiċjali tal-utenti (Claude Code CLI, Codex, Antigravity, Cursor, eċċ.) u l-API unifikata ta’ 67router. Dawn **mhumiex** maħsuba biex tiġi evitata d-detezzjoni tal-frodi, biex jinqasmu l-kredenzjali, jew biex jinkisru t-Termini tas-Servizz tal-fornitur. Il-mantenituri jistennew li l-operaturi jikkonformaw mat-ToS tas-servizz upstream li aċċettaw meta ħolqu l-kontijiet.
 
 ---
 
@@ -83,7 +83,7 @@ awtorizzat b’mod espliċitu qabel ma tiddikjara parità ma’ browser upstream
 
 ## Pakkett Stealth ta’ Claude Code
 
-Meta `cliCompatMode` ikun attivat, OmniRoute jerġa’ jifforma t-talbiet Claude ħerġin sabiex ma jkunux jistgħu jintgħarfu mit-traffiku ta’ `claude-cli`. Tliet moduli jikkollaboraw:
+Meta `cliCompatMode` ikun attivat, 67router jerġa’ jifforma t-talbiet Claude ħerġin sabiex ma jkunux jistgħu jintgħarfu mit-traffiku ta’ `claude-cli`. Tliet moduli jikkollaboraw:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -99,7 +99,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hash tal-Kontenut tal-Klijent)
 
-Kontroll tal-integrità fuq in-naħa tas-server li s-CLI uffiċjali ta’ Claude Code tikkalkula permezz ta’ Bun/Zig. OmniRoute jerġa’ jimplimentah b’`xxhash-wasm`:
+Kontroll tal-integrità fuq in-naħa tas-server li s-CLI uffiċjali ta’ Claude Code tikkalkula permezz ta’ Bun/Zig. 67router jerġa’ jimplimentah b’`xxhash-wasm`:
 
 1. Issarjalizza l-body bil-placeholder `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -145,7 +145,7 @@ Moduli relatati fl-istess pakkett:
 
 ## Stealth ta’ Antigravity
 
-It-talbiet Antigravity jippreservaw it-test tas-sejjieħ byte b’byte. OmniRoute ma jdaħħalx karattri b’wisa’ żero fil-prompts u ma jibdilx l-ismijiet tal-għodod jew jinjetta għodod biex jimita klijent IDE.
+It-talbiet Antigravity jippreservaw it-test tas-sejjieħ byte b’byte. 67router ma jdaħħalx karattri b’wisa’ żero fil-prompts u ma jibdilx l-ismijiet tal-għodod jew jinjetta għodod biex jimita klijent IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -155,13 +155,13 @@ Ineħħi l-markaturi tal-SDK Stainless (`x-stainless-lang`, `x-stainless-package
 
 `ANTIGRAVITY_CREDITS=always` (ikkonsmat minn `open-sse/executors/antigravity.ts`) jgħaddi **kull** talba minn Antigravity AI Credit Overages (krediti Google bi ħlas) minflok iħalli l-kwota tal-livell bla ħlas ta’ Google tikkontrolla l-użu. Dan huwa ddokumentat bħala karatteristika, iżda huwa **l-aktar rapport komuni ta’ ksur tat-ToS li naraw** — diversi kontijiet Google Ultra ġew ipprojbiti bi `403 / "service disabled for ToS violation" / insufficient_quota` wara li damu jaħdmu għal ftit sigħat b’`=always`.
 
-L-infurzar upstream isir **min-naħa ta’ Google**, u mhuwiex xi ħaġa li OmniRoute jista’ jipprevjeni. L-isem tal-varjabbli tal-ambjent u d-dokumentazzjoni eżistenti jagħtuh l-impressjoni li huwa kontroll sikur biex tattivah; mhuwiex.
+L-infurzar upstream isir **min-naħa ta’ Google**, u mhuwiex xi ħaġa li 67router jista’ jipprevjeni. L-isem tal-varjabbli tal-ambjent u d-dokumentazzjoni eżistenti jagħtuh l-impressjoni li huwa kontroll sikur biex tattivah; mhuwiex.
 
 **Għaliex dan jattira d-detezzjoni tal-abbuż b’mod aktar aggressiv mill-użu tal-livell bla ħlas biss:**
 
 - Infiq awtomatizzat u sostnut fuq kont Google wieħed jiġi mmarkat b’mod differenti minn meta l-livell bla ħlas jilħaq il-kwota u jieqaf.
 - L-infiq żejjed tal-krediti m’għandux limitu massimu tar-rata, għalhekk klijent ikkonfigurat ħażin jista’ jaħraq diversi mijiet ta’ USD f’minuti u jidher bħallikieku qed jerġa’ jbigħ API keys jew jiġġenera traffiku ta’ bots.
-- Diversi utenti ta’ OmniRoute li jużaw krediti żejda b’mod parallel mill-istess IP estern isaħħu s-sinjal.
+- Diversi utenti ta’ 67router li jużaw krediti żejda b’mod parallel mill-istess IP estern isaħħu s-sinjal.
 
 **Pożizzjoni rakkomandata:**
 
@@ -200,7 +200,7 @@ Ixgħel jew itfi għal kull fornitur permezz tal-env (ara hawn taħt). Meta jkun
 
 ## Proxy MITM (Antigravity, Linux/macOS/Windows)
 
-Għal CLIs li l-binaries tagħhom ma jistgħux jiġu ridiretti permezz ta’ `OPENAI_BASE_URL`, OmniRoute iħaddem proxy lokali li jittermina t-TLS. L-endpoints jinsabu taħt `src/app/api/cli-tools/antigravity-mitm/`.
+Għal CLIs li l-binaries tagħhom ma jistgħux jiġu ridiretti permezz ta’ `OPENAI_BASE_URL`, 67router iħaddem proxy lokali li jittermina t-TLS. L-endpoints jinsabu taħt `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metodu | Endpoint                                | Għan                                                |
 | ------ | --------------------------------------- | --------------------------------------------------- |
@@ -233,7 +233,7 @@ Host fil-mira li jiġi interċettat: **`daily-cloudcode-pa.googleapis.com`** (is
 
 Isem il-fajl taċ-ċertifikat: `omniroute-mitm.crt`. It-tqabbil tal-marki diġitali jsir permezz ta’ `getCertFingerprint()` (SHA-1 tad-DER).
 
-Barra minn hekk, `updateNssDatabases()` jinstalla fid-databases NSS għal kull utent meta `certutil` ikun disponibbli: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, u l-profili kollha ta’ Firefox (inklużi dawk tas-snap), taħt il-laqam **`OmniRoute MITM Root CA`**.
+Barra minn hekk, `updateNssDatabases()` jinstalla fid-databases NSS għal kull utent meta `certutil` ikun disponibbli: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, u l-profili kollha ta’ Firefox (inklużi dawk tas-snap), taħt il-laqam **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -279,7 +279,7 @@ L-IP tal-fornitur **dejjem jiġi ppreservat** — is-swiċċ ibiddel biss l-għa
 
 ## Sanitizzazzjoni tal-Headers Deħlin
 
-OmniRoute jnaddaf il-headers tal-klijent deħlin qabel jgħaddihom, sabiex talba li tasal minn Cursor ma tiżvelax `User-Agent: Cursor/X.Y.Z` lil upstream ta’ Claude. Ara `src/shared/constants/upstreamHeaders.ts` għal-lista ta’ ċaħda, li tinżamm sinkronizzata mal-iskemi Zod u mat-testijiet tal-unità.
+67router jnaddaf il-headers tal-klijent deħlin qabel jgħaddihom, sabiex talba li tasal minn Cursor ma tiżvelax `User-Agent: Cursor/X.Y.Z` lil upstream ta’ Claude. Ara `src/shared/constants/upstreamHeaders.ts` għal-lista ta’ ċaħda, li tinżamm sinkronizzata mal-iskemi Zod u mat-testijiet tal-unità.
 
 ---
 

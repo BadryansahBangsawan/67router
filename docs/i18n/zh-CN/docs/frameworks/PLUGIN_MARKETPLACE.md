@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **最后更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 提供了一个类似 WordPress 的插件系统。插件是自包含的目录——每个目录都包含一个 `plugin.json` 清单文件和一个入口文件——可挂接到请求处理管道（`onRequest` / `onResponse` / `onError`）以及生命周期事件（`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`）中。
+67router 提供了一个类似 WordPress 的插件系统。插件是自包含的目录——每个目录都包含一个 `plugin.json` 清单文件和一个入口文件——可挂接到请求处理管道（`onRequest` / `onResponse` / `onError`）以及生命周期事件（`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`）中。
 
 **插件市场**是构建在该系统之上的发现层。它提供一个可浏览的可安装插件目录。默认情况下，该目录使用一个小型内置种子注册表；运维人员也可以将其指向自定义远程注册表 URL。在这种情况下，请求会受到具备 DNS 解析能力的 SSRF 防护机制保护（参见[安全性](#security)）。
 
@@ -119,7 +119,7 @@ curl -X PUT http://localhost:20128/api/plugins/my-plugin/config \
 
 ### 插件目录
 
-插件位于 OmniRoute 数据目录下：
+插件位于 67router 数据目录下：
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

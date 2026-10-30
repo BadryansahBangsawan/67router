@@ -7,7 +7,7 @@
 > **Sors ta' verità:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Aġġornat l-aħħar:** 2026-09-22 — in-namespaces tal-iskop jindikaw MCP-SERVER.md
 
-OmniRoute għandu pipeline ta' awtorizzazzjoni konxju mir-rotta li jikkontrolla kull talba tal-API. Il-klassifikazzjoni hija **deterministika** u **fail-closed** — kull ħaġa li ma tistax tiġi kklassifikata tispiċċa bħala `MANAGEMENT` u teħtieġ sessjoni jew token ta' grad ta' ġestjoni. Din il-paġna tispjega l-mudell għall-inġiniera li jżommu rotot jew jiddisinjaw endpoints ġodda.
+67router għandu pipeline ta' awtorizzazzjoni konxju mir-rotta li jikkontrolla kull talba tal-API. Il-klassifikazzjoni hija **deterministika** u **fail-closed** — kull ħaġa li ma tistax tiġi kklassifikata tispiċċa bħala `MANAGEMENT` u teħtieġ sessjoni jew token ta' grad ta' ġestjoni. Din il-paġna tispjega l-mudell għall-inġiniera li jżommu rotot jew jiddisinjaw endpoints ġodda.
 
 ![Pipeline ta' AuthZ (3 klassijiet ta' rotta + evalwazzjoni tal-politika)](../diagrams/exported/authz-pipeline.svg)
 

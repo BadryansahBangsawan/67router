@@ -6,7 +6,7 @@
 
 ## Melaporkan Kerentanan
 
-Jika anda menemui kerentanan keselamatan dalam OmniRoute, sila laporkannya secara bertanggungjawab:
+Jika anda menemui kerentanan keselamatan dalam 67router, sila laporkannya secara bertanggungjawab:
 
 1. **JANGAN** buka isu GitHub awam
 2. Gunakan [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Selepas 3.8.59, versi seterusnya ialah **3.9.0**, yang memulakan siri sokongan j
 
 ## Seni Bina Keselamatan
 
-OmniRoute melaksanakan model keselamatan berbilang lapisan:
+67router melaksanakan model keselamatan berbilang lapisan:
 
 ```
 Permintaan → CORS → Saluran Authz (klasifikasi → dasar → penguatkuasaan)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Rangka Kerja Pagar Keselamatan
 
-OmniRoute menyediakan **daftar pagar keselamatan** yang boleh dimuat semula secara langsung (`src/lib/guardrails/`) dengan 3 pagar keselamatan terbina dalam yang disusun mengikut keutamaan:
+67router menyediakan **daftar pagar keselamatan** yang boleh dimuat semula secara langsung (`src/lib/guardrails/`) dengan 3 pagar keselamatan terbina dalam yang disusun mengikut keutamaan:
 
 | Pagar Keselamatan  | Keutamaan | Tujuan                                                                                                       |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |

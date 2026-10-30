@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute cung cấp một tập hợp proxy miễn phí đã được tuyển chọn trong bảng `free_proxies`,
+67router cung cấp một tập hợp proxy miễn phí đã được tuyển chọn trong bảng `free_proxies`,
 được đồng bộ từ các nhà cung cấp bên ngoài (1proxy, proxifly, iplocate, webshare).
 Trang tổng quan hiển thị các proxy này trong **Settings → Free Proxies**. Tài liệu này
 trình bày cơ chế lọc, sắp xếp, đếm và báo cáo lỗi đồng bộ ở phía máy chủ

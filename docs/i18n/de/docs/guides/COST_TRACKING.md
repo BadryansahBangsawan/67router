@@ -4,7 +4,7 @@
 
 ---
 
-Wie OmniRoute die Kosten jeder Anfrage schätzt, erfasst und ausgibt — und warum die
+Wie 67router die Kosten jeder Anfrage schätzt, erfasst und ausgibt — und warum die
 Zahl im Dashboard ein **Einsparungstracker** und keine Rechnung ist.
 
 Siehe auch: [Benutzerhandbuch](./USER_GUIDE.md) · [Funktionsübersicht](./FEATURES.md)
@@ -13,12 +13,12 @@ Siehe auch: [Benutzerhandbuch](./USER_GUIDE.md) · [Funktionsübersicht](./FEATU
 
 ## Was es ist (und was nicht)
 
-OmniRoute ordnet jeder Vervollständigung Kosten in USD pro Anfrage zu, indem die Anzahl
+67router ordnet jeder Vervollständigung Kosten in USD pro Anfrage zu, indem die Anzahl
 der Token mit den Preissätzen eines Modells multipliziert wird. Diese Zahlen bilden die
 Grundlage für das **Kosten**-Dashboard, die CLI-Befehle `omniroute cost` /
 `omniroute usage`, CSV-/JSON-Exporte und Budgets pro API-Schlüssel.
 
-> **Die „Kosten“ im Dashboard sind ein Einsparungstracker und keine Rechnung.** OmniRoute
+> **Die „Kosten“ im Dashboard sind ein Einsparungstracker und keine Rechnung.** 67router
 > stellt Ihnen niemals etwas in Rechnung — es leitet Ihre Anfragen an Anbieter weiter,
 > die Sie bereits verbunden haben (Ihre eigenen Abonnements, kostenlosen Kontingente und
 > API-Schlüssel). Wenn „Gesamtkosten von $290“ ausschließlich durch kostenlose Modelle
@@ -33,7 +33,7 @@ Diese Einordnung wird direkt in der [README](../../README.md) des Projekts erlä
 
 Da es sich bei der Zahl um eine Schätzung handelt:
 
-- Sie hängt von der Preistabelle ab, die OmniRoute für jedes Modell verwendet. Ein Modell
+- Sie hängt von der Preistabelle ab, die 67router für jedes Modell verwendet. Ein Modell
   ohne Preiseintrag verursacht Kosten von `0` (im Explorer wird es als Zeile
   „Legacy / Kostenlos“ angezeigt).
 - Auch Datenverkehr über kostenlose Kontingente und Abonnements verursacht _geschätzte_
@@ -54,7 +54,7 @@ ermittelt wird ([`src/lib/pricingSync.ts`](../../src/lib/pricingSync.ts)):
    öffentlichen Datei `model_prices_and_context_window.json` von LiteLLM abgerufen
    (und in einem separaten `pricing_synced`-Namensraum gespeichert, sodass Ihre
    Überschreibungen niemals ersetzt werden).
-3. **Fest codierte Standardwerte** — werden mit OmniRoute ausgeliefert.
+3. **Fest codierte Standardwerte** — werden mit 67router ausgeliefert.
 
 Die externe Preissynchronisierung ist **optional** und standardmäßig deaktiviert.
 Relevante Umgebungsvariablen (siehe [`.env.example`](../../.env.example)):
@@ -205,7 +205,7 @@ nicht anders angegeben.
 
 ## CLI
 
-Die CLI von OmniRoute stellt Befehle für Kosten, Nutzung und Preise bereit (registriert in
+Die CLI von 67router stellt Befehle für Kosten, Nutzung und Preise bereit (registriert in
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

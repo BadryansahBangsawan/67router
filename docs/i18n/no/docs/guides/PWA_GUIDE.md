@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute leveres som en fullt installerbar progressiv webapp. Når du åpner kontrollpanelet fra en mobilnettleser – Android (Chrome) eller iOS (Safari) – kan du velge «Legg til på startskjermen» og få en opplevelse som minner om en innebygd app, uten behov for en appbutikk.
+67router leveres som en fullt installerbar progressiv webapp. Når du åpner kontrollpanelet fra en mobilnettleser – Android (Chrome) eller iOS (Safari) – kan du velge «Legg til på startskjermen» og få en opplevelse som minner om en innebygd app, uten behov for en appbutikk.
 
 ## Hva er en PWA?
 
-En progressiv webapp gjør OmniRoute-nettkontrollpanelet om til noe som ser ut og oppleves som en innebygd mobilapp. Når den er installert:
+En progressiv webapp gjør 67router-nettkontrollpanelet om til noe som ser ut og oppleves som en innebygd mobilapp. Når den er installert:
 
 - Startes den fra startskjermen med sitt eget ikon
 - Åpnes den i fullskjerm – uten nettleserens adressefelt eller fanebaserte grensesnitt
@@ -20,26 +20,26 @@ En progressiv webapp gjør OmniRoute-nettkontrollpanelet om til noe som ser ut o
 
 ### Android (Chrome)
 
-1. Åpne OmniRoute-kontrollpanelet i Chrome: `http://YOUR_IP:20128`
-2. Chrome viser automatisk et banner med **«Legg til OmniRoute på startskjermen»**, eller:
+1. Åpne 67router-kontrollpanelet i Chrome: `http://YOUR_IP:20128`
+2. Chrome viser automatisk et banner med **«Legg til 67router på startskjermen»**, eller:
    - Trykk på **⋮**-menyen (tre prikker) → **«Legg til på startskjermen»** eller **«Installer appen»**
 3. Bekreft forespørselen
-4. OmniRoute vises på startskjermen som en frittstående app
+4. 67router vises på startskjermen som en frittstående app
 
 ### iOS (Safari)
 
-1. Åpne OmniRoute-kontrollpanelet i Safari: `http://YOUR_IP:20128`
+1. Åpne 67router-kontrollpanelet i Safari: `http://YOUR_IP:20128`
 2. Trykk på **Del**-knappen (boks med pil)
 3. Rull ned og trykk på **«Legg til på Hjem-skjermen»**
-4. Gi den et navn (standarden er «OmniRoute»), og trykk på **Legg til**
-5. OmniRoute vises på startskjermen med appikonet
+4. Gi den et navn (standarden er «67router»), og trykk på **Legg til**
+5. 67router vises på startskjermen med appikonet
 
 ### Datamaskin (Chrome / Edge)
 
-1. Åpne OmniRoute-kontrollpanelet
-2. Klikk på **installeringsikonet** i adressefeltet (eller ⋮ → «Installer OmniRoute ...»)
+1. Åpne 67router-kontrollpanelet
+2. Klikk på **installeringsikonet** i adressefeltet (eller ⋮ → «Installer 67router ...»)
 3. Bekreft forespørselen
-4. OmniRoute åpnes som et frittstående vindu – uten faner og adressefelt
+4. 67router åpnes som et frittstående vindu – uten faner og adressefelt
 
 ## Funksjoner
 
@@ -49,7 +49,7 @@ Manifestet er konfigurert med `display: "fullscreen"`, noe som betyr at den inst
 
 ### Frakoblet støtte
 
-OmniRoute inkluderer en service worker (`sw.js`) som tilbyr intelligent mellomlagring:
+67router inkluderer en service worker (`sw.js`) som tilbyr intelligent mellomlagring:
 
 | Ressurstype                                                 | Strategi                                       | Virkemåte                                                                                                  |
 | ----------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Når nettverket er utilgjengelig og en bruker navigerer til en ny side, viser se
 
 ### Appikoner
 
-OmniRoute tilbyr ikoner som er optimalisert for hver plattform:
+67router tilbyr ikoner som er optimalisert for hver plattform:
 
 | Fil                    | Størrelse        | Brukes av                                         |
 | ---------------------- | ---------------- | ------------------------------------------------- |
@@ -94,8 +94,8 @@ Generert av Next.js via `src/app/manifest.ts`:
 ```json
 {
   "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Denne klientkomponenten ligger i `src/shared/components/PwaRegister.tsx` og:
 
 ## Bruk med Termux (Android)
 
-Når OmniRoute kjøres på Android via Termux, fungerer PWA-en sømløst:
+Når 67router kjøres på Android via Termux, fungerer PWA-en sømløst:
 
-1. Start OmniRoute i Termux: `npx omniroute`
+1. Start 67router i Termux: `npx omniroute`
 2. Åpne Chrome på samme telefon: `http://localhost:20128`
 3. Installer PWA-en via «Legg til på startskjermen»
 4. PWA-en kobler seg til den lokale Termux-serveren — alt kjører på enheten
@@ -156,7 +156,7 @@ Denne kombinasjonen betyr at Android-telefonen din er både **serveren** (Termux
 
 ## Bruk fra andre enheter
 
-Installer PWA-en på enhver enhet som har nettlesertilgang til OmniRoute-serveren din:
+Installer PWA-en på enhver enhet som har nettlesertilgang til 67router-serveren din:
 
 - **En annen telefon/nettbrett**: Gå til `http://PHONE_IP:20128` og installer PWA-en
 - **Bærbar datamaskin**: Åpne Chrome/Edge og installer den som en PWA for skrivebordet

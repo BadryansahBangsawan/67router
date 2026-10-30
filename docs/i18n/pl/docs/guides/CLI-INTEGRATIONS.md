@@ -6,7 +6,7 @@
 
 Informacje o współdzielonym manifeście plików wykonywalnych, ograniczonych środowiskach procesów potomnych i trwałej konfiguracji Gemini można znaleźć w dokumencie [Kontrakty uruchamiania CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute udostępnia rodzinę poleceń `setup-*`, które konfigurują narzędzie CLI do programowania (Codex, Claude Code, OpenCode, Cline, …) tak, aby korzystało z OmniRoute jako zaplecza — dzięki temu narzędzie komunikuje się z **jednym** punktem końcowym, a OmniRoute kieruje żądania do właściwego dostawcy z automatycznym przełączaniem awaryjnym. Każde polecenie odczytuje **aktualny** katalog modeli z działającej instancji OmniRoute (lokalnej lub zdalnej) i zapisuje plik konfiguracyjny danego narzędzia na **Twoim** komputerze. Tam, gdzie narzędzie na to pozwala, klucz API jest wskazywany za pomocą zmiennej środowiskowej. Polecenia, które zapisują lokalny dla narzędzia plik środowiskowy, opisano poniżej.
+67router udostępnia rodzinę poleceń `setup-*`, które konfigurują narzędzie CLI do programowania (Codex, Claude Code, OpenCode, Cline, …) tak, aby korzystało z 67router jako zaplecza — dzięki temu narzędzie komunikuje się z **jednym** punktem końcowym, a 67router kieruje żądania do właściwego dostawcy z automatycznym przełączaniem awaryjnym. Każde polecenie odczytuje **aktualny** katalog modeli z działającej instancji 67router (lokalnej lub zdalnej) i zapisuje plik konfiguracyjny danego narzędzia na **Twoim** komputerze. Tam, gdzie narzędzie na to pozwala, klucz API jest wskazywany za pomocą zmiennej środowiskowej. Polecenia, które zapisują lokalny dla narzędzia plik środowiskowy, opisano poniżej.
 
 Dostępny jest również ogólny program uruchamiający — `omniroute run <target>` — który uruchamia `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` lub `gemini` z odpowiednio wstrzykniętymi zmiennymi środowiskowymi, bez zapisywania jakiejkolwiek konfiguracji. Cele i ich aliasy pochodzą z kanonicznego manifestu `bin/cli/cli-manifest.mjs` (`claude-code|cc|anthropic`, `codex-cli|openai-codex|openai`, `goose-cli`, `open-code`, `qwen-code`, `gemini-cli`), a `omniroute completion` udostępnia te same nazwy celów pochodzące z manifestu. Starsze programy uruchamiające przeznaczone dla poszczególnych narzędzi — `omniroute launch` (Claude Code) i `omniroute launch-codex` (Codex) — pozostają dostępne.
 
@@ -28,7 +28,7 @@ Informacje o jednorazowej, ręcznej konfiguracji bazowej dwóch najbardziej rozb
 
 - [Konfiguracja Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfiguracja Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Tryb zdalny](./REMOTE-MODE.md) — sterowanie zdalną instancją OmniRoute (VPS / Tailnet) z laptopa
+- [Tryb zdalny](./REMOTE-MODE.md) — sterowanie zdalną instancją 67router (VPS / Tailnet) z laptopa
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — rozszerzenie OmniCopilot; może również uruchamiać te polecenia
   `setup-*` z poziomu edytora
 
@@ -64,7 +64,7 @@ serwera i zapisuje konfigurację lokalnie.
 
 Uwagi dotyczące flag (zweryfikowane w kodzie źródłowym poleceń):
 
-- `--remote <url>` — pobiera katalog ze zdalnego OmniRoute (zastępuje `--port`
+- `--remote <url>` — pobiera katalog ze zdalnego 67router (zastępuje `--port`
   i aktywny kontekst). `--api-key <key>` przekazuje dane uwierzytelniające dla tego
   serwera (domyślnie zmienna środowiskowa `OMNIROUTE_API_KEY` lub token aktywnego kontekstu).
 - `--only <patterns>` — podciągi rozdzielone przecinkami; zachowuje tylko identyfikatory modeli, które pasują
@@ -85,7 +85,7 @@ Uwagi dotyczące flag (zweryfikowane w kodzie źródłowym poleceń):
   **codex** przez argumenty `-c model_providers.omniroute.*`. **Qwen jest jedynym celem polecenia run,
   który bezwzględnie wymaga `--model`** — `omniroute run qwen` bez tej flagi kończy działanie
   z kodem `2` i jednoznacznym komunikatem o błędzie.
-- `--port <port>` — lokalny port OmniRoute (domyślnie `20128`, ignorowany, gdy ustawiono `--remote`).
+- `--port <port>` — lokalny port 67router (domyślnie `20128`, ignorowany, gdy ustawiono `--remote`).
   Dostępne we wszystkich poleceniach `setup-*` i obu programach uruchamiających.
 - Kody wyjścia `omniroute run`: kod wyjścia podrzędnego CLI jest przekazywany
   bez zmian; `2` = nieprawidłowe argumenty (nieobsługiwany cel, brak wymaganego
@@ -130,7 +130,7 @@ nie są przedstawiane jako cele możliwe do uruchomienia.
 
 ## Użycie lokalne
 
-Gdy OmniRoute działa na `localhost:20128`, wystarczy uruchomić polecenie konfiguracji dla swojego
+Gdy 67router działa na `localhost:20128`, wystarczy uruchomić polecenie konfiguracji dla swojego
 narzędzia. Katalog jest pobierany z lokalnego serwera.
 
 ```bash
@@ -158,8 +158,8 @@ omniroute setup-continue --dry-run
 Uruchomienie bez zapisywania jakiejkolwiek konfiguracji (wyłącznie przez wstrzykiwanie zmiennych środowiskowych):
 
 ```bash
-omniroute launch                 # Claude Code → lokalny OmniRoute
-omniroute launch-codex           # Codex CLI → lokalny OmniRoute
+omniroute launch                 # Claude Code → lokalny 67router
+omniroute launch-codex           # Codex CLI → lokalny 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -177,7 +177,7 @@ omniroute run claude -- --print-system-prompt "przejrzyj te różnice"
 
 ## Użycie zdalne
 
-Skieruj dowolne polecenie konfiguracji do zdalnego OmniRoute za pomocą `--remote` i `--api-key`. Katalog
+Skieruj dowolne polecenie konfiguracji do zdalnego 67router za pomocą `--remote` i `--api-key`. Katalog
 zostanie pobrany ze zdalnego serwera, a konfiguracja zapisana na komputerze lokalnym.
 
 ```bash
@@ -220,7 +220,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Obie formy zapisują jeden **profil uwierzytelniania** 5dive, a każde stanowisko `claude` powiązane z tym
-profilem komunikuje się następnie z OmniRoute. Dla tego celu charakterystyczne są trzy kwestie:
+profilem komunikuje się następnie z 67router. Dla tego celu charakterystyczne są trzy kwestie:
 
 - **Polecenie działa na hoście floty jako użytkownik root.** Polecenia 5dive operują na lokalnych jednostkach systemd
   oraz katalogu stanu należącym do użytkownika root; tryb zdalny nie jest dostępny. Procedura uruchamia się ponownie przez
@@ -238,7 +238,7 @@ profilem komunikuje się następnie z OmniRoute. Dla tego celu charakterystyczne
 Klucz API jest przekazywany do 5dive przez **stdin** (`--api-key=-`), dzięki czemu nigdy nie pojawia się
 w wynikach polecenia `ps`.
 
-Skierowanie profilu do **kombinacji** OmniRoute zamiast do pojedynczego modelu zapewnia
+Skierowanie profilu do **kombinacji** 67router zamiast do pojedynczego modelu zapewnia
 flocie przełączanie awaryjne między dostawcami: gdy główny punkt końcowy przestał całkowicie działać w trakcie tury
 podczas przebiegu zarejestrowanego w
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), agent ukończył
@@ -248,7 +248,7 @@ pozostałe kroki przy użyciu dostawcy zapasowego, nie ujawniając awarii.
 
 ## Konwencje bazowego adresu URL (które narzędzia wymagają `/v1`)
 
-OmniRoute udostępnia interfejs OpenAI pod `/v1`, interfejs Anthropic w katalogu głównym,
+67router udostępnia interfejs OpenAI pod `/v1`, interfejs Anthropic w katalogu głównym,
 a natywny interfejs Gemini pod `/v1beta`. Każda integracja jest skonfigurowana zgodnie z formatem
 oczekiwanym przez dane narzędzie (zweryfikowano w kodzie źródłowym polecenia):
 
@@ -270,7 +270,7 @@ oczekiwanym przez dane narzędzie (zweryfikowano w kodzie źródłowym polecenia
 ## Zachowywanie natywnych zależności podczas aktualizacji: `--include=optional`
 
 Podczas aktualizacji za pomocą `omniroute update` (po potwierdzeniu lub z opcją `--apply`)
-OmniRoute uruchamia instalację z wbudowaną opcją `--include=optional`:
+67router uruchamia instalację z wbudowaną opcją `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -298,13 +298,13 @@ wersja jest nieaktualna), `--apply` (instalacja bez pytania o potwierdzenie), `-
 Kontrakt zweryfikowano względem `@google/gemini-cli` 0.50.0: CLI respektuje
 `GOOGLE_GEMINI_BASE_URL` i wysyła żądania `POST /v1beta/models/<model>:generateContent`
 (oraz `:streamGenerateContent?alt=sse`) pod ten adres — dokładnie tak działa natywny
-interfejs Gemini w OmniRoute (`/v1beta`). `omniroute run gemini` konfiguruje to automatycznie:
+interfejs Gemini w 67router (`/v1beta`). `omniroute run gemini` konfiguruje to automatycznie:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktywny bazowy adres URL OmniRoute (katalog główny, bez `/v1`);
-- `GEMINI_API_KEY` → ustalone dane uwierzytelniające OmniRoute (opcja/środowisko/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → aktywny bazowy adres URL 67router (katalog główny, bez `/v1`);
+- `GEMINI_API_KEY` → ustalone dane uwierzytelniające 67router (opcja/środowisko/kontekst);
 - **tymczasowy, izolowany `GEMINI_CLI_HOME`**, którego plik `.gemini/settings.json`
   wybiera uwierzytelnianie `gemini-api-key`, dzięki czemu zapisana sesja Google OAuth (Code Assist)
-  nigdy nie zastąpi uruchomienia skierowanego do OmniRoute — katalog jest usuwany po zakończeniu;
+  nigdy nie zastąpi uruchomienia skierowanego do 67router — katalog jest usuwany po zakończeniu;
 - **higiena środowiska**: ze środowiska procesu potomnego usuwane są zmienne `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` oraz `GOOGLE_GENAI_USE_GCA` (które przekierowałyby
   uwierzytelnianie do Vertex/Code Assist), a `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key` jest
@@ -328,7 +328,7 @@ celowo go nie omija. Ten mechanizm uruchamiania jest niezależny od **rejestracj
 
 Deterministyczne testy regresyjne planu uruchamiania są wykonywane w CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Aby zweryfikować RZECZYWISTE pliki binarne względem RZECZYWISTEGO
-serwera OmniRoute, dostępny jest opcjonalny mechanizm testowy w
+serwera 67router, dostępny jest opcjonalny mechanizm testowy w
 `tests/integration/upstream-cli-smoke.int.test.ts`. Nigdy nie uruchamia się on automatycznie
 (każdy podtest jest pomijany, chyba że ustawiono `RUN_CLI_SMOKE=1`), przekazuje dane uwierzytelniające przez NAZWĘ
 zmiennej środowiskowej (nigdy przez jej wartość), usuwa ciągi przypominające klucze z wszelkich zapisanych danych wyjściowych, pomija

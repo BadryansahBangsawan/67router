@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute stellt die **Bildgenerierung** des Cursor-Tarifs unter `POST /v1/images/generations` über dieselbe Anbieter-ID wie für den Chat bereit: `cursor` (Alias `cu`).
+67router stellt die **Bildgenerierung** des Cursor-Tarifs unter `POST /v1/images/generations` über dieselbe Anbieter-ID wie für den Chat bereit: `cursor` (Alias `cu`).
 
 | Feld                 | Wert                                                                                                |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute stellt die **Bildgenerierung** des Cursor-Tarifs unter `POST /v1/image
 
 ## Warum die Agent CLI verwendet wird
 
-Der Cursor-Chat in OmniRoute verwendet `agent.v1.AgentService/Run` (protobuf). Dieser Pfad **lehnt** integrierte Client-Tools (Shell, Schreiben, …) ab. Die Bildgenerierung ist ein natives Cursor-Tool, das von der **`agent` CLI** unter Nutzung des Benutzerplatzes ausgeführt wird. Der Bild-Handler startet daher `agent` mit einem fest vorgegebenen Prompt und einem temporären Arbeitsbereich pro Anfrage (analog zu Community-Bridges für Benutzerplätze) und gibt anschließend OpenAI-kompatibles `b64_json` zurück.
+Der Cursor-Chat in 67router verwendet `agent.v1.AgentService/Run` (protobuf). Dieser Pfad **lehnt** integrierte Client-Tools (Shell, Schreiben, …) ab. Die Bildgenerierung ist ein natives Cursor-Tool, das von der **`agent` CLI** unter Nutzung des Benutzerplatzes ausgeführt wird. Der Bild-Handler startet daher `agent` mit einem fest vorgegebenen Prompt und einem temporären Arbeitsbereich pro Anfrage (analog zu Community-Bridges für Benutzerplätze) und gibt anschließend OpenAI-kompatibles `b64_json` zurück.
 
 ## Zugriffsbeschränkung (Feste Regeln #15 + #17)
 
@@ -39,7 +39,7 @@ bevor eine Suche nach Zugangsdaten oder ein Prozessstart erfolgt. Siehe
 durchgesetzt, dessen bzw. deren Gültigkeitsbereich auf die Node-Modulinstanz
 (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`) beschränkt ist.
 Dadurch wird die Anzahl gleichzeitiger `agent`-Prozessstarts innerhalb eines einzelnen
-OmniRoute-Prozesses korrekt begrenzt, aber es findet **keine** Koordination zwischen
+67router-Prozesses korrekt begrenzt, aber es findet **keine** Koordination zwischen
 mehreren Prozessen/Instanzen statt, die denselben Cursor-Benutzerplatz gemeinsam nutzen
 (z. B. bei einer Bereitstellung mit mehreren Replikaten) — jede Instanz setzt ihr
 eigenes unabhängiges Limit durch. Für eine Bereitstellung mit einer einzelnen Instanz
@@ -50,7 +50,7 @@ an eine einzelne Instanz weiterleiten.
 ## Voraussetzungen
 
 1. Ein im Dashboard verbundenes Cursor-Konto (OAuth oder `crsr_…`-API-Schlüssel).
-2. Das Cursor-Agent-Binary muss für den OmniRoute-Prozess verfügbar sein:
+2. Das Cursor-Agent-Binary muss für den 67router-Prozess verfügbar sein:
    - Umgebungsvariable `CURSOR_AGENT_BIN=/path/to/agent`, oder
    - `~/.local/bin/agent`, oder
    - `providerSpecificData.agentBin` in der Cursor-Verbindung.

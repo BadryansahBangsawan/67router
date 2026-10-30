@@ -7,7 +7,7 @@
 > **Fonte autorevole:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Ultimo aggiornamento:** 2026-06-28 — v3.8.40
 
-OmniRoute registra le azioni amministrative, gli eventi di autenticazione, le modifiche al ciclo di vita delle credenziali dei provider e le invocazioni degli strumenti MCP in tabelle di audit basate su SQLite. Questa pagina descrive cosa viene registrato, dove risiedono i dati, per quanto tempo vengono conservati, come le chiavi API possono disattivare la registrazione e come interrogare i dati.
+67router registra le azioni amministrative, gli eventi di autenticazione, le modifiche al ciclo di vita delle credenziali dei provider e le invocazioni degli strumenti MCP in tabelle di audit basate su SQLite. Questa pagina descrive cosa viene registrato, dove risiedono i dati, per quanto tempo vengono conservati, come le chiavi API possono disattivare la registrazione e come interrogare i dati.
 
 L'implementazione si trova in `src/lib/compliance/index.ts` (T-43 — "Controlli di conformità") e `src/lib/compliance/providerAudit.ts`. Le scritture di audit non generano mai eccezioni: in caso di errore, la chiamata viene ignorata silenziosamente, in modo che la registrazione di audit non possa interrompere il flusso della richiesta principale.
 

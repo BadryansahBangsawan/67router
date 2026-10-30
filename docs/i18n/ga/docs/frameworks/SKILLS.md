@@ -7,29 +7,29 @@
 > **Foinse na fírinne:** `src/lib/skills/` agus `src/app/api/skills/`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Cuireann OmniRoute creat insínte Scileanna ar fáil a ligeann do shamhlacha teanga (agus d’oibreoirí) cumais in-athúsáidte a chur le chéile — ó léamh córas comhad agus iarratais HTTP go forghníomhú cód i mbosca gainimh agus scileanna coimeádta ón margadh.
+Cuireann 67router creat insínte Scileanna ar fáil a ligeann do shamhlacha teanga (agus d’oibreoirí) cumais in-athúsáidte a chur le chéile — ó léamh córas comhad agus iarratais HTTP go forghníomhú cód i mbosca gainimh agus scileanna coimeádta ón margadh.
 
-Is aonad oibre leaganaithe, sainithe le scéimre í scil. Is féidir le OmniRoute scileanna a instealladh mar shainmhínithe uirlisí isteach in iarratais amach, glaonna uirlise a thagann ar ais ón tsamhail a idircheapadh, an láimhseálaí meaitseála a rith, agus an toradh a thabhairt ar ais don tsamhail ionas gur féidir leis an gcomhrá leanúint ar aghaidh. Ní fheiceann an tsamhail an cur chun feidhme riamh — ní fheiceann sí ach comhéadan na huirlise.
+Is aonad oibre leaganaithe, sainithe le scéimre í scil. Is féidir le 67router scileanna a instealladh mar shainmhínithe uirlisí isteach in iarratais amach, glaonna uirlise a thagann ar ais ón tsamhail a idircheapadh, an láimhseálaí meaitseála a rith, agus an toradh a thabhairt ar ais don tsamhail ionas gur féidir leis an gcomhrá leanúint ar aghaidh. Ní fheiceann an tsamhail an cur chun feidhme riamh — ní fheiceann sí ach comhéadan na huirlise.
 
 ---
 
 ## Scileanna Gníomhaire vs Scileanna Omni
 
-Tá dhá chóras scileanna ar leith ach comhlántach ag OmniRoute:
+Tá dhá chóras scileanna ar leith ach comhlántach ag 67router:
 
 | Gné               | **Scileanna Omni** (an cháipéis seo)                                      | **Scileanna Gníomhaire**                                                                      |
 | :---------------- | :------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------- |
 | Cuspóir           | Instealladh uirlisí LLM + forghníomhú i mbosca gainimh                    | Catalóg SKILL.md le gur féidir le gníomhairí seachtracha í a aimsiú agus a úsáid              |
 | Foinse na fírinne | `src/lib/skills/` + an margadh                                            | `src/lib/agentSkills/` + comhadlann `skills/`                                                 |
 | Mód ama rite      | Insteallta in iarratais amach, forghníomhaithe ar theagmhais glao uirlise | Catalóg statach markdown + críochphointí aimsithe REST/MCP/A2A                                |
-| Cé a úsáideann é  | OmniRoute féin (routáil teaglama, glaonna LLM isteach)                    | Gníomhairí seachtracha, cliaint MCP, ceolfhoirneoirí A2A                                      |
+| Cé a úsáideann é  | 67router féin (routáil teaglama, glaonna LLM isteach)                     | Gníomhairí seachtracha, cliaint MCP, ceolfhoirneoirí A2A                                      |
 | Líon              | Athraitheach (faoi stiúir an mhargaidh)                                   | 45 iontráil chatalóige (23 API + 21 CLI + 1 chumraíocht)                                      |
 | Formáid           | `SkillDefinition` le scéimre uirlise + láimhseálaí                        | Ábhar tosaigh `SKILL.md` + corp markdown                                                      |
 | Aimsiú            | REST `/api/skills/*` + uirlisí MCP `omniroute_skills_*`                   | REST `/api/agent-skills/*` + uirlisí MCP `omniroute_agent_skills_*` + `list-capabilities` A2A |
 
-Is iad **Scileanna Omni** an t-inneall forghníomhaithe — sainíonn siad an méid is _féidir le OmniRoute a dhéanamh_ nuair a agraíonn LLM uirlis.
+Is iad **Scileanna Omni** an t-inneall forghníomhaithe — sainíonn siad an méid is _féidir le 67router a dhéanamh_ nuair a agraíonn LLM uirlis.
 
-Is í **Scileanna Gníomhaire** an chatalóg doiciméadúcháin — míníonn siad do ghníomhairí seachtracha _conas_ REST API agus CLI OmniRoute a úsáid, le comhaid struchtúrtha SKILL.md ar féidir iad a chur go díreach i leideanna gníomhairí.
+Is í **Scileanna Gníomhaire** an chatalóg doiciméadúcháin — míníonn siad do ghníomhairí seachtracha _conas_ REST API agus CLI 67router a úsáid, le comhaid struchtúrtha SKILL.md ar féidir iad a chur go díreach i leideanna gníomhairí.
 
 Maidir le catalóg, gineadóir, uirlisí MCP agus scil A2A na Scileanna Gníomhaire, féach [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Maidir le catalóg, gineadóir, uirlisí MCP agus scil A2A na Scileanna Gníomha
 
 Tá trí fhoinse scileanna taobh le taobh sa chlárlann chéanna:
 
-1. **Scileanna ionsuite** (`src/lib/skills/builtins.ts`) — soláthraítear iad le OmniRoute. Clúdaíonn siad na cásanna coitianta:
+1. **Scileanna ionsuite** (`src/lib/skills/builtins.ts`) — soláthraítear iad le 67router. Clúdaíonn siad na cásanna coitianta:
    - `file_read`, `file_write` — spás oibre bosca gainimh ar leith do gach eochair API faoi `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP amach trí `safeOutboundFetch` le `guard: "public-only"`
    - `web_search` — soláthraí cuardaigh inphlugáilte le taisceadh (`executeWebSearch`)
    - `eval_code` — forghníomhú `node` nó `python` i mbosca gainimh Docker
    - `execute_command` — ordú blaoisce a fhorghníomhú i mbosca gainimh Docker
    - `browser` — creatlach bunaithe ar Playwright, díchumasaithe de réir réamhshocraithe (`builtin/browser.ts`)
-2. **SkillsMP** (Margadh OmniRoute) — faightear iad ó `https://skillsmp.com/api/v1/skills/search`. Teastaíonn `skillsmpApiKey` sna Socruithe.
+2. **SkillsMP** (Margadh 67router) — faightear iad ó `https://skillsmp.com/api/v1/skills/search`. Teastaíonn `skillsmpApiKey` sna Socruithe.
 3. **SkillsSH** (catalóg phobail `skills.sh`) — faightear iad ó `https://skills.sh/api/search`. Ní theastaíonn fíordheimhniú; tarraingítear ábhar SKILL.md ó ábhar amh GitHub.
 
 Rialaíonn "soláthraí gníomhach" amháin cén chatalóg óna ndéanann an deais suiteáil (`src/lib/skills/providerSettings.ts`). Athraigh é faoi **Socruithe → Cuimhne & Scileanna**. Réamhshocrú: `skillsmp`.
@@ -442,7 +442,7 @@ cháipéis seo; níl aon tairseach snámhphointe ar nós `0.6` ann agus ní dhé
 
 ## Catalóg na Scileanna Insuite
 
-Tagann OmniRoute le tacar coimeádta scileanna ionsuite in `src/lib/skills/builtin/`. Seo iad na cinn is coitianta:
+Tagann 67router le tacar coimeádta scileanna ionsuite in `src/lib/skills/builtin/`. Seo iad na cinn is coitianta:
 
 ### Scil Uathoibrithe Brabhsálaí
 

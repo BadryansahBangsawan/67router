@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 원본:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **마지막 업데이트:** 2026-06-28 — v3.8.40
 
-OmniRoute에는 사용자가 플랫폼에서 요청을 보내고, 제공자를 전환하고, 콤보를 생성하고, 토큰을 공유하고, 커뮤니티에 기여하는 활동에 대해 보상하는 로컬 우선 게임화 계층이 포함되어 있습니다. 모든 상태는 SQLite에 저장되며, 커뮤니티 서버와의 연합은 선택적으로 활성화할 수 있는 푸시 기반 방식입니다.
+67router에는 사용자가 플랫폼에서 요청을 보내고, 제공자를 전환하고, 콤보를 생성하고, 토큰을 공유하고, 커뮤니티에 기여하는 활동에 대해 보상하는 로컬 우선 게임화 계층이 포함되어 있습니다. 모든 상태는 SQLite에 저장되며, 커뮤니티 서버와의 연합은 선택적으로 활성화할 수 있는 푸시 기반 방식입니다.
 
 이 시스템은 **핵심 경로에서 지연 시간이 발생하지 않도록** 설계되었습니다. 게임화 이벤트는 요청 파이프라인에서 응답을 기다리지 않는 방식으로 전달되며, LLM 응답을 절대 차단하지 않습니다.
 
@@ -29,7 +29,7 @@ OmniRoute에는 사용자가 플랫폼에서 요청을 보내고, 제공자를 �
 | 리더보드          | 전체, 주간, 월간, 토큰 공유 및 기여도 범위                 |
 | 토큰 공유         | 복식부기 원장을 통해 사용자 간 크레딧 전송                 |
 | 초대 및 코드 사용 | SHA-256 해시 스토리지를 사용하는 추천 코드                 |
-| 커뮤니티 서버     | 외부 OmniRoute 인스턴스와 연합                             |
+| 커뮤니티 서버     | 외부 67router 인스턴스와 연합                              |
 | 부정행위 방지     | 서버 측 점수 산정, 속도 제한, z-점수 이상 탐지             |
 
 ### 설계 원칙
@@ -101,7 +101,7 @@ src/app/api/gamification/
 
 ### 데이터베이스 테이블
 
-모든 테이블은 마이그레이션 `060_create_gamification.sql`로 생성된 기본 OmniRoute SQLite 데이터베이스에 있습니다. WAL 저널링은 `src/lib/db/core.ts`의 싱글턴 `getDbInstance()`로부터 상속됩니다.
+모든 테이블은 마이그레이션 `060_create_gamification.sql`로 생성된 기본 67router SQLite 데이터베이스에 있습니다. WAL 저널링은 `src/lib/db/core.ts`의 싱글턴 `getDbInstance()`로부터 상속됩니다.
 
 ```
 ┌─────────────────────────┐     ┌──────────────────────────┐
@@ -158,7 +158,7 @@ src/app/api/gamification/
 
 ### 도메인 모듈: `src/lib/db/gamification.ts`
 
-표준 OmniRoute 패턴을 따릅니다. `core.ts`에서 `getDbInstance()`를 가져오고 타입이 지정된 CRUD 함수를 내보냅니다. 라우트 핸들러에는 원시 SQL을 사용하지 않습니다.
+표준 67router 패턴을 따릅니다. `core.ts`에서 `getDbInstance()`를 가져오고 타입이 지정된 CRUD 함수를 내보냅니다. 라우트 핸들러에는 원시 SQL을 사용하지 않습니다.
 
 주요 함수:
 
@@ -220,7 +220,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | 작업              | XP  | 설명                                    |
 | ----------------- | --- | --------------------------------------- |
-| `request`         | 1   | OmniRoute를 통해 라우팅된 API 요청당    |
+| `request`         | 1   | 67router를 통해 라우팅된 API 요청당     |
 | `provider_switch` | 5   | 다른 제공자로 전환                      |
 | `model_switch`    | 3   | 다른 모델로 전환                        |
 | `combo_create`    | 10  | 새 콤보 생성                            |
@@ -561,7 +561,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (고유, 인덱스됨) |
 | `token_hash` | SHA-256(raw_token)          |
 
-원시 토큰은 생성 시 사용자에게 정확히 한 번만 반환됩니다. OmniRoute는
+원시 토큰은 생성 시 사용자에게 정확히 한 번만 반환됩니다. 67router는
 이후 이를 저장하거나 다시 표시하지 않으며, 해시만 유지됩니다.
 
 ### 자기 추천 방지
@@ -684,7 +684,7 @@ X-Federation-Version: 1
 
 ## API 라우트
 
-모든 라우트는 표준 OmniRoute 패턴을 따릅니다.
+모든 라우트는 표준 67router 패턴을 따릅니다.
 
 ```
 라우트 → CORS 사전 요청 → 본문 검증(Zod) → 인증(extractApiKey)

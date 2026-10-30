@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute joffri **żewġ** modi kif tuża OpenAI Codex:
+67router joffri **żewġ** modi kif tuża OpenAI Codex:
 
 | Fornitur               | Kif jikkomunika ma’ OpenAI                                                                                                                                                                                                     | Riżerva dwar l-użu                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | **`codex`**            | Jibgħat mill-ġdid it-token OAuth tiegħek ta’ ChatGPT/OpenAI direttament lill-Responses API                                                                                                                                     | **Iva** — is-sessjoni uffiċjali mhijiex awtorizzata għall-użu ma’ proxy/router |
-| **`codex-app-server`** | Jikkontrolla l-**`codex app-server` proprju tal-Codex CLI** permezz ta’ JSON-RPC/WebSocket; is-CLI jieħu ħsieb l-OAuth tiegħu stess u jġeddu awtomatikament (`~/.codex/auth.json`) eżatt bħal sessjoni interattiva ta’ `codex` | **Le** — OmniRoute qatt ma jerġa’ jibgħat token lill-API                       |
+| **`codex-app-server`** | Jikkontrolla l-**`codex app-server` proprju tal-Codex CLI** permezz ta’ JSON-RPC/WebSocket; is-CLI jieħu ħsieb l-OAuth tiegħu stess u jġeddu awtomatikament (`~/.codex/auth.json`) eżatt bħal sessjoni interattiva ta’ `codex` | **Le** — 67router qatt ma jerġa’ jibgħat token lill-API                        |
 
 Minħabba li `codex-app-server` qatt ma jerġa’ jibgħat token, ma għandux ir-riżerva
 dwar l-użu marbuta mar-riproduzzjoni tas-sessjoni. Madankollu, jeħtieġ **Codex CLI
@@ -20,7 +20,7 @@ aċċessibbli fil-URL tal-app-server ikkonfigurat**, u dak is-CLI jrid ikun **il
 ## 1. Arkitettura
 
 ```
-┌─ App OmniRoute ──────────────────┐        ┌─ Sidecar codex-app-server ──────────┐
+┌─ App 67router ──────────────────┐        ┌─ Sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token tal-kapaċità)           │  JSON  │  --ws-auth capability-token         │
@@ -79,7 +79,7 @@ tittieħed kopja ta’ riżerva).
   fis-sidecar (`codex-appserver-home`) u aqbeż il-pass tal-login.
 - **Utent pubbliku, mingħajr codex installat lokalment** — dan ma jimpurtax:
   is-sidecar għandu s-CLI. L-utent jawtentika ruħu biss permezz tad-dashboard.
-- **OmniRoute fuq bare metal (mingħajr sidecar, codex fuq il-host)** — issettja
+- **67router fuq bare metal (mingħajr sidecar, codex fuq il-host)** — issettja
   `OMNIROUTE_CODEX_APPSERVER_WS` biex jipponta lejn il-`codex app-server` tiegħek
   u żgura li codex fuq il-host ikun illoggjat; il-ħjiel "codex mhux installat"
   jidher jekk il-binary ikun nieqes.

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Gamitin ang sarili mong mga kwalipikadong provider account. Pinagsasama ng OmniRoute ang mga koneksiyong kino-configure mo; hindi nito ibinibigay ang inanunsyong pinagsama-samang badyet ng token. Maaaring mangailangan ang libreng pag-access ng pag-sign up, API key, pag-apruba, o paraan ng pagbabayad. Nalalapat pa rin ang mga limitasyon, patakaran sa privacy, at tuntunin ng provider.
+> **TL;DR**: Gamitin ang sarili mong mga kwalipikadong provider account. Pinagsasama ng 67router ang mga koneksiyong kino-configure mo; hindi nito ibinibigay ang inanunsyong pinagsama-samang badyet ng token. Maaaring mangailangan ang libreng pag-access ng pag-sign up, API key, pag-apruba, o paraan ng pagbabayad. Nalalapat pa rin ang mga limitasyon, patakaran sa privacy, at tuntunin ng provider.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Maraming provider ng AI ang nag-aalok ng ilang uri ng **libreng access**. Depende sa provider, maaaring mangahulugan iyon ng endpoint na hindi nangangailangan ng authentication, umuulit na quota, walang takdang limitasyon sa access ngunit may rate limit, grant sa pag-sign up, manu-manong pag-apruba, o pansamantalang promosyon. Nangangailangan ang ilang opsyon ng account, API key, credit card, KYC, o pagtanggap sa mga tuntuning partikular sa provider.
 
-**Pinagsasama-sama** ng OmniRoute ang mga naka-configure na koneksyon sa iisang endpoint. Kailangan mo pa ring hiwalay na mag-sign up para sa bawat provider na nangangailangan ng account. Ikonekta ang mga account na iyon at gamitin ang `model: "auto"` upang mag-route sa mga kwalipikadong target. Maaaring walang kwalipikadong target na hindi nangangailangan ng key ang isang bagong installation; hindi ginagarantiya ng pag-install lamang ng OmniRoute ang matagumpay na tugon sa chat.
+**Pinagsasama-sama** ng 67router ang mga naka-configure na koneksyon sa iisang endpoint. Kailangan mo pa ring hiwalay na mag-sign up para sa bawat provider na nangangailangan ng account. Ikonekta ang mga account na iyon at gamitin ang `model: "auto"` upang mag-route sa mga kwalipikadong target. Maaaring walang kwalipikadong target na hindi nangangailangan ng key ang isang bagong installation; hindi ginagarantiya ng pag-install lamang ng 67router ang matagumpay na tugon sa chat.
 
 ---
 
@@ -57,7 +57,7 @@ Ang mga provider na ito ay may **mga libreng tier** na may mga partikular na lim
 
 ## Paano Pagsama-samahin ang mga Libreng Tier
 
-Ang mahika ng OmniRoute ay ang **pagsama-sama ng mga libreng tier**. Sa halip na umasa sa iisang provider, kumokonekta ka sa maraming libreng provider at hinahayaan ang OmniRoute na awtomatikong piliin ang pinakamainam para sa bawat request.
+Ang mahika ng 67router ay ang **pagsama-sama ng mga libreng tier**. Sa halip na umasa sa iisang provider, kumokonekta ka sa maraming libreng provider at hinahayaan ang 67router na awtomatikong piliin ang pinakamainam para sa bawat request.
 
 ### Halimbawa: Mas Malawak na Saklaw ng Libreng Tier
 
@@ -68,7 +68,7 @@ Kumonekta sa ilang provider upang mabawasan ang pagdepende sa iisang quota:
 3. **Pollinations** — access na hindi nangangailangan ng key at may limitasyon sa rate
 4. **LongCat** — minsanang grant sa pag-sign up (nangangailangan ng KYC)
 
-Pagkatapos, gamitin ang `model: "auto"` at gagawin ng OmniRoute ang sumusunod:
+Pagkatapos, gamitin ang `model: "auto"` at gagawin ng 67router ang sumusunod:
 
 - Susubukan muna ang kwalipikadong koneksyong may pinakamataas na ranggo
 - Kung mabigo ang quota o pagsusuri sa kalagayan nito → susubukan ang susunod na naka-configure na provider
@@ -102,7 +102,7 @@ walang limitasyon/walang key na access, mga credit sa pag-sign up, mga itinigil 
 
 ### Hakbang 5: I-click ang Connect
 
-Para sa isang `NOAUTH` provider, hindi humihingi ang OmniRoute ng upstream credential. Hindi nito ginagarantiyahan na tumatanggap ang upstream ng mga third-party client o mayroon itong available na kapasidad. Dapat ikonekta ang mga OAuth at API-key provider sa pamamagitan ng nakadokumentong daloy ng kanilang account. Ginagamit pa rin ng iyong client ang OmniRoute API key na ipinapakita sa **Dashboard → Endpoints** kapag naka-enable ang router authentication.
+Para sa isang `NOAUTH` provider, hindi humihingi ang 67router ng upstream credential. Hindi nito ginagarantiyahan na tumatanggap ang upstream ng mga third-party client o mayroon itong available na kapasidad. Dapat ikonekta ang mga OAuth at API-key provider sa pamamagitan ng nakadokumentong daloy ng kanilang account. Ginagamit pa rin ng iyong client ang 67router API key na ipinapakita sa **Dashboard → Endpoints** kapag naka-enable ang router authentication.
 
 ### Hakbang 6: Ulitin
 
@@ -112,7 +112,7 @@ Ikonekta ang ilang provider na ang mga tuntunin at modelo ng privacy ay angkop s
 
 ## Tamang Pagbasa sa Catalog
 
-- Ang `NOAUTH` ay nangangahulugang hindi ka hihingan ng OmniRoute ng kredensyal ng provider; hindi nito
+- Ang `NOAUTH` ay nangangahulugang hindi ka hihingan ng 67router ng kredensyal ng provider; hindi nito
   ginagarantiya ang uptime, privacy, o walang limitasyong kapasidad.
 - Ang `hasFree` ay metadata para sa pagtuklas. Maaari itong kumatawan sa umuulit na quota, access na walang key,
   credit sa pag-sign up, programa ng pag-apruba, o promosyon.
@@ -125,15 +125,15 @@ Ikonekta ang ilang provider na ang mga tuntunin at modelo ng privacy ay angkop s
 
 ---
 
-## Paano Pinahuhusay ng OmniRoute ang mga Libreng Tier
+## Paano Pinahuhusay ng 67router ang mga Libreng Tier
 
 ### 1. Awtomatikong Fallback
 
-Kung abala o hindi gumagana ang isang libreng provider, awtomatikong susubukan ng OmniRoute ang susunod. Wala kang kailangang gawin.
+Kung abala o hindi gumagana ang isang libreng provider, awtomatikong susubukan ng 67router ang susunod. Wala kang kailangang gawin.
 
 ### 2. Matalinong Routing
 
-Pinipili ng OmniRoute ang **pinakamahusay na libreng provider** para sa bawat request batay sa:
+Pinipili ng 67router ang **pinakamahusay na libreng provider** para sa bawat request batay sa:
 
 - Bilis — Aling provider ang pinakamabilis ngayon?
 - Kalidad — Aling provider ang pinakamahusay para sa gawaing ito?
@@ -141,13 +141,13 @@ Pinipili ng OmniRoute ang **pinakamahusay na libreng provider** para sa bawat re
 
 ### 3. Pagtitipid sa Token
 
-Maaaring bawasan ng compression pipeline ng OmniRoute ang mga kwalipikadong token sa prompt at output ng tool. Ang
+Maaaring bawasan ng compression pipeline ng 67router ang mga kwalipikadong token sa prompt at output ng tool. Ang
 aktuwal na matitipid ay nakadepende sa content, mga napiling engine, accounting ng provider, at mga setting ng
 fidelity; hindi pinararami ng compression ang quota ng bawat provider nang nakapirming dami.
 
 ### 4. Suporta sa Maraming Account
 
-Kung pinahihintulutan ng mga tuntunin ng provider ang maraming account o credential, maaaring ituring ng OmniRoute ang bawat
+Kung pinahihintulutan ng mga tuntunin ng provider ang maraming account o credential, maaaring ituring ng 67router ang bawat
 koneksyon bilang hiwalay na kandidato sa routing. Huwag gumawa ng mga karagdagang account upang iwasan ang
 quota o patakaran sa access ng provider.
 
@@ -162,7 +162,7 @@ Kasalukuyang iniulat ng live na catalog na nag-aalis ng mga duplikado sa pool an
 | Paulit-ulit na nasusukat na grant   |          **~1.62B token/buwan** | Isang beses lang binilang ang mga nakabahaging pool; hindi kasama sa kabuuan ang mga provider na walang limitasyon |
 | Unang buwan na may mga signup grant |                **~2.22B token** | Kabuuang paulit-ulit na grant kasama ang minsanan at paulit-ulit na mga credit                                     |
 
-Ang mga ito ay mga pagtatantya para sa buong catalog sa magkakahiwalay na kwalipikadong account, hindi allowance na ibinibigay ng OmniRoute o hula para sa bagong installation. Nakadepende ang magagamit mong kapasidad sa mga provider na ikokonekta mo at sa kanilang kasalukuyang mga kondisyon. Kinukuwenta ang mga halaga mula sa `open-sse/config/freeModelCatalog.ts`; tingnan ang
+Ang mga ito ay mga pagtatantya para sa buong catalog sa magkakahiwalay na kwalipikadong account, hindi allowance na ibinibigay ng 67router o hula para sa bagong installation. Nakadepende ang magagamit mong kapasidad sa mga provider na ikokonekta mo at sa kanilang kasalukuyang mga kondisyon. Kinukuwenta ang mga halaga mula sa `open-sse/config/freeModelCatalog.ts`; tingnan ang
 [Sanggunian sa Mga Libreng Tier](../reference/FREE_TIERS.md) para sa pag-aalis ng mga duplikado sa pool, mga flag ng ToS,
 mga itinigil na entry, at metodolohiya para sa signup credit.
 
@@ -189,7 +189,7 @@ Ang mga kritikal na workload ay dapat may sinusubaybayan at naaangkop ayon sa ko
 
 Maaaring kabilang sa mga kompromiso ang mahihigpit na limitasyon, waitlist, KYC, beripikasyon ng credit card, paggamit ng mga
 prompt para sa training, mas mahinang privacy, kawalan ng SLA, madalas na pagpapalit ng modelo, mga heograpikong paghihigpit, bayad sa labis na paggamit, o
-panganib kaugnay ng patakaran ng account. Ipinapakita ng OmniRoute ang available na metadata; ikaw ang pipili kung ano ang ie-enable.
+panganib kaugnay ng patakaran ng account. Ipinapakita ng 67router ang available na metadata; ikaw ang pipili kung ano ang ie-enable.
 
 ### "Paano ako makakakuha ng mas malaking libreng quota?"
 
@@ -208,7 +208,7 @@ pahina ng Free Provider Rankings bilang palatandaan ng kalidad at beripikahin an
 
 ## Ano ang Susunod?
 
-- **[Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Hayaan ang OmniRoute na pumili ng pinakamahusay na AI para sa iyo
+- **[Gabay sa Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Hayaan ang 67router na pumili ng pinakamahusay na AI para sa iyo
 - **[Gabay sa mga Provider](./PROVIDERS-GUIDE.md)** — Kumonekta sa mas marami pang provider
 - **[Pag-troubleshoot](../guides/TROUBLESHOOTING.md)** — Ayusin ang mga karaniwang problema
 - **[Sanggunian sa mga Libreng Tier](../reference/FREE_TIERS.md)** — Kumpletong listahan ng mga libreng tier

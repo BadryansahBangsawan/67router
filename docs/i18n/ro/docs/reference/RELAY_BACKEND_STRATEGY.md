@@ -6,7 +6,7 @@
 
 ## Rezumat
 
-OmniRoute acceptă acum trei moduri de retransmitere pentru `/api/v1/relay/chat/completions`:
+67router acceptă acum trei moduri de retransmitere pentru `/api/v1/relay/chat/completions`:
 
 - `ts`: Utilizează retransmiterea TypeScript în cadrul procesului.
 - `bifrost`: Forțează utilizarea gateway-ului Bifrost.
@@ -45,12 +45,12 @@ Dacă în prezent compari 9router/CLIPROXYAPI:
 
 ## Contractul limitei backend-ului
 
-Limita stabilă a produsului este API-ul de retransmitere OmniRoute, nu implementarea panoului de control. Panoul de control Next.js poate instala, configura și supraveghea servicii locale, dar rutarea solicitărilor trebuie să intre prin API-ul de retransmitere și să fie predată în spatele acestei limite.
+Limita stabilă a produsului este API-ul de retransmitere 67router, nu implementarea panoului de control. Panoul de control Next.js poate instala, configura și supraveghea servicii locale, dar rutarea solicitărilor trebuie să intre prin API-ul de retransmitere și să fie predată în spatele acestei limite.
 
 Opțiuni backend pe termen lung:
 
 - Păstrează retransmiterea TypeScript drept cale în cadrul procesului pentru politici și revenire. Autentificarea, listele de permisiuni, normalizarea solicitărilor, contorizarea și verificările de siguranță rămân aici înaintea oricărei predări către backend.
-- Utilizează Bifrost drept sidecar Tier-1 preferat, cu debit ridicat, atunci când implementarea necesită o variație mai redusă a rutării, rotația centralizată a furnizorilor sau scalarea pe mai multe replici OmniRoute.
+- Utilizează Bifrost drept sidecar Tier-1 preferat, cu debit ridicat, atunci când implementarea necesită o variație mai redusă a rutării, rotația centralizată a furnizorilor sau scalarea pe mai multe replici 67router.
 - Păstrează 9router și CLIPROXYAPI drept servicii de compatibilitate încorporate. Acestea rulează ca procese locale supravegheate și sunt utile atunci când comportamentul lor specific furnizorului/CLI-ului este adaptorul dorit, dar nu ar trebui să devină motorul implicit de rutare Tier-1.
 - Nu permite panoului de control să transmită URL-uri arbitrare ale serviciilor în calea critică. URL-urile furnizate de UI sunt intrări de configurare; codul de rutare trebuie să identifice backend-uri înregistrate și verificate din punctul de vedere al stării de funcționare, folosind setările de pe server și starea supervizorului.
 - Preferă HTTP pe interfața loopback pentru serviciile supravegheate în prezent, deoarece procesele gestionate expun deja API-uri compatibile cu HTTP, protecția rutei poate audita limita, iar comportamentul de eșec/revenire este vizibil în jurnalele solicitărilor. Adăugarea în viitor a unui transport prin SDK sau socket merită luată în calcul numai dacă reduce în mod măsurabil latența p99 a rutării fără a slăbi izolarea sau semantica revenirii.

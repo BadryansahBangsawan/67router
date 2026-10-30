@@ -25,7 +25,7 @@
 インポートモーダルからスターターファイルをダウンロードできます（**CSV テンプレートをダウンロード**）。例：
 
 ```csv
-# OmniRoute プロバイダーインポート（位置ベースの列）
+# 67router プロバイダーインポート（位置ベースの列）
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

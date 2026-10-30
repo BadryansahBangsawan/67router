@@ -10,7 +10,7 @@
 
 ## Hvorfor dette finnes
 
-OmniRoute besvarer allerede to kostnadsspørsmål, men ingen av dem er det de fleste operatører spør om.
+67router besvarer allerede to kostnadsspørsmål, men ingen av dem er det de fleste operatører spør om.
 
 | Eksisterende mekanisme                                   | Besvarer                                          |
 | -------------------------------------------------------- | ------------------------------------------------- |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ကို Docker အတွင်း လည်ပတ်သည့်အခါ container က host ပေါ်ရှိ Cursor
+67router ကို Docker အတွင်း လည်ပတ်သည့်အခါ container က host ပေါ်ရှိ Cursor
 တပ်ဆင်မှုကို မမြင်နိုင်သောကြောင့် ယခင် **Cursor IDE မှ Import လုပ်ရန်** /
 `cursor-agent` လုပ်ငန်းစဉ်များ မအောင်မြင်ပါ။ ယင်းအစား **Cursor ဖြင့် Login ဝင်ရန်**
 (deep-control PKCE) ကို အသုံးပြုပါ။
@@ -16,7 +16,7 @@ OmniRoute ကို Docker အတွင်း လည်ပတ်သည့်အ�
    path များကို ရှာဖွေပါသည်။ macOS အတွက် Docker Desktop တွင် host IDE DB ကို
    ပုံမှန်အားဖြင့် mount မလုပ်ထားသည့်အပြင် host က Darwin ဖြစ်နေလျှင်ပင် container
    OS သည် Linux ဖြစ်ပါသည်။
-2. **`cursor-agent` binary မရှိခြင်း** — တရားဝင် OmniRoute image များတွင်
+2. **`cursor-agent` binary မရှိခြင်း** — တရားဝင် 67router image များတွင်
    `cursor-agent` မပါဝင်ပါ။ ယခင်က ရရှိနိုင်သော မော်ဒယ်များကို ရှာဖွေရန်
    `cursor-agent --list-models` ကို shell မှတစ်ဆင့် လုပ်ဆောင်ခဲ့ပြီး မအောင်မြင်ပါက
    static catalog ကို ပြန်လည်အသုံးပြုခဲ့သည်။
@@ -27,12 +27,12 @@ OmniRoute ကို Docker အတွင်း လည်ပတ်သည့်အ�
 
 1. **Dashboard → Providers → Cursor** ကို ဖွင့်ပါ။
 2. **Cursor ဖြင့် Login ဝင်ရန်** tab ကို ရွေးပါ။
-3. **Cursor ဖြင့် Login ဝင်ရန်** ကို နှိပ်ပါ — OmniRoute သည် သင့် **host**
+3. **Cursor ဖြင့် Login ဝင်ရန်** ကို နှိပ်ပါ — 67router သည် သင့် **host**
    browser တွင် `https://cursor.com/loginDeepControl?…` ကို ဖွင့်ပေးပါမည်။
 4. Browser ထဲတွင် login ကို အတည်ပြုပြီးနောက် dashboard သို့ ပြန်သွားပါ။ Token
-   များ ရောက်လာသည်အထိ OmniRoute က `api2.cursor.sh/auth/poll` ကို အကြိမ်ကြိမ်
+   များ ရောက်လာသည်အထိ 67router က `api2.cursor.sh/auth/poll` ကို အကြိမ်ကြိမ်
    စစ်ဆေးပါသည်။
-5. OmniRoute သည် **access + refresh** token များကို သိမ်းဆည်းပြီး
+5. 67router သည် **access + refresh** token များကို သိမ်းဆည်းပြီး
    `https://api2.cursor.sh/auth/exchange_user_api_key` မှတစ်ဆင့် refresh
    လုပ်ပါသည်။
 
@@ -44,10 +44,10 @@ OmniRoute ကို Docker အတွင်း လည်ပတ်သည့်အ�
 Login ဝင်ထားသော connection ရှိပါက **ရရှိနိုင်သော မော်ဒယ်များ / အလိုအလျောက်
 Sync** သည် connection bearer token ကို အသုံးပြုသည့် Cursor ၏ HTTP
 `AiService/AvailableModels` catalog ကို ဦးစားပေးပါသည်။ ထိုနည်းလမ်း မအောင်မြင်ပါက
-OmniRoute သည် host ပေါ်ရှိ `cursor-agent` ကို ဆက်လက်စမ်းသပ်ပြီး (ရှိသည့်အခါ)
+67router သည် host ပေါ်ရှိ `cursor-agent` ကို ဆက်လက်စမ်းသပ်ပြီး (ရှိသည့်အခါ)
 နောက်ဆုံးတွင် static registry seed ကို အသုံးပြုပါသည်။
 
-OmniRoute သည် catalog ထဲတွင် **`auto`** (ပြသမည့်အမည် “Auto”) အပြင်
+67router သည် catalog ထဲတွင် **`auto`** (ပြသမည့်အမည် “Auto”) အပြင်
 OpenCodex ပုံစံ router mode များဖြစ်သည့် **`auto-cost`**, **`auto-balance`** နှင့်
 **`auto-intelligence`** တို့ကို အမြဲဖော်ပြပေးပါသည်။ Wire ပေါ်တွင် ၎င်းတို့သည်
 Cursor ၏ `default` မော်ဒယ်နှင့် ချိတ်ဆက်ထားပြီး variant သုံးခုအတွက်
@@ -101,7 +101,7 @@ Window များတွင် ပုံမှန်အားဖြင့် **
 ## ဗလာ turn များ / အသုံးပြုခွင့်ကုန်ဆုံးခြင်း
 
 Cursor က Run ကို လက်ခံသော်လည်း assistant စာသားကို ပြန်မပေးသည့်အခါ (premium
-အသုံးပြုခွင့် ကုန်ဆုံးချိန်တွင် အဖြစ်များသည်) OmniRoute သည် လုပ်ဆောင်ဖြေရှင်းနိုင်သော
+အသုံးပြုခွင့် ကုန်ဆုံးချိန်တွင် အဖြစ်များသည်) 67router သည် လုပ်ဆောင်ဖြေရှင်းနိုင်သော
 **429** (quota အချက်ပြမှုများ) သို့မဟုတ် လမ်းညွှန်ချက်ပါသော **502** ကို
 ဖော်ပြပေးသည် — “Provider returned empty content” တစ်ခုတည်းကို မပြပါ။
 `not_found: AI Model Not Found` (အသုံးပြုမှု window ကုန်ဆုံးခြင်း) ကဲ့သို့သော
@@ -113,7 +113,7 @@ Provider Limits ကို စစ်ဆေးပါ၊ **`auto`** မော်ဒ
 
 ## Client version (headless)
 
-Local `cursor-agent` တပ်ဆင်မှု မရှိပါက OmniRoute သည်
+Local `cursor-agent` တပ်ဆင်မှု မရှိပါက 67router သည်
 `x-cursor-client-version` ကို env `CURSOR_AGENT_CLI_VERSION` မှ ပထမဦးစွာ
 သတ်မှတ်ပြီးနောက် Cursor installer script ကို disk-cached scrape လုပ်ထားသည့်
 ရလဒ်မှ သတ်မှတ်ကာ နောက်ဆုံးတွင် pinned build id ကို အသုံးပြုပါသည်။ လိုအပ်သည့်အခါ

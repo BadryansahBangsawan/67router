@@ -6,7 +6,7 @@
 
 ## Santrauka
 
-Dabar „OmniRoute“ palaiko tris `/api/v1/relay/chat/completions` perdavimo režimus:
+Dabar „67router“ palaiko tris `/api/v1/relay/chat/completions` perdavimo režimus:
 
 - `ts`: naudoti „TypeScript“ perdavimo mechanizmą tame pačiame procese.
 - `bifrost`: priverstinai naudoti „Bifrost“ šliuzą.
@@ -45,12 +45,12 @@ Jei šiuo metu lyginate „9router“ ir „CLIPROXYAPI“:
 
 ## Vidinės sistemos ribos sutartis
 
-Stabili produkto riba yra „OmniRoute“ perdavimo API, o ne valdymo skydelio realizacija. „Next.js“ valdymo skydelis gali diegti, konfigūruoti ir prižiūrėti vietines paslaugas, tačiau užklausų maršrutas turėtų prasidėti perdavimo API ir už šios ribos būti perduodamas toliau.
+Stabili produkto riba yra „67router“ perdavimo API, o ne valdymo skydelio realizacija. „Next.js“ valdymo skydelis gali diegti, konfigūruoti ir prižiūrėti vietines paslaugas, tačiau užklausų maršrutas turėtų prasidėti perdavimo API ir už šios ribos būti perduodamas toliau.
 
 Ilgalaikiai vidinės sistemos pasirinkimai:
 
 - Išlaikykite „TypeScript“ perdavimo mechanizmą kaip tame pačiame procese veikiantį strategijos ir atsarginį kelią. Tapatybės nustatymas, leidžiamieji sąrašai, užklausų normalizavimas, apskaita ir saugos patikros lieka čia ir vykdomi prieš perduodant bet kuriai vidinei sistemai.
-- Naudokite „Bifrost“ kaip pageidaujamą didelio pralaidumo 1 lygio gretutinį procesą, kai diegimo aplinkai reikia mažesnio maršruto parinkimo svyravimo, centralizuoto teikėjų keitimo arba mastelio didinimo naudojant kelias „OmniRoute“ kopijas.
+- Naudokite „Bifrost“ kaip pageidaujamą didelio pralaidumo 1 lygio gretutinį procesą, kai diegimo aplinkai reikia mažesnio maršruto parinkimo svyravimo, centralizuoto teikėjų keitimo arba mastelio didinimo naudojant kelias „67router“ kopijas.
 - Išlaikykite „9router“ ir „CLIPROXYAPI“ kaip įtaisytąsias suderinamumo paslaugas. Jos veikia kaip prižiūrimi vietiniai procesai ir yra naudingos, kai pageidaujamas jų teikėjo / CLI veikimas, tačiau jos neturėtų tapti numatytuoju 1 lygio maršruto parinkimo varikliu.
 - Neleiskite valdymo skydeliui perduoti savavališkų paslaugų URL į pagrindinį kelią. Naudotojo sąsajoje pateikti URL yra konfigūracijos įvestys; maršruto parinkimo kodas turėtų rasti registruotas ir patikrintos būsenos vidines sistemas pagal serverio nuostatas bei prižiūrinčiojo proceso būseną.
 - Šiuo metu prižiūrimoms paslaugoms teikite pirmenybę atgalinės kilpos HTTP, nes valdomi procesai jau teikia su HTTP suderinamas API, maršruto apsauga gali audituoti šią ribą, o trikčių ir perjungimo į atsarginį kelią elgsena matoma užklausų žurnaluose. Ateityje SDK ar lizdų transportą verta pridėti tik tuo atveju, jei jis išmatuojamai sumažina p99 maršruto parinkimo delsą nesusilpnindamas izoliavimo ar perjungimo į atsarginį kelią semantikos.

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute rozdziela **wykrywanie CLI**, **natywny Agent Client Protocol** oraz
+67router rozdziela **wykrywanie CLI**, **natywny Agent Client Protocol** oraz
 **starsze adaptery stdio**. Znalezienie zainstalowanego pliku wykonywalnego nie potwierdza jego
 uwierzytelnienia, zgodności z modelem ani gotowości do obsługi promptu.
 

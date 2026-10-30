@@ -7,7 +7,7 @@
 > **Temel referans:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute; yönlendirme yapılandırmalarını, tekil sağlayıcıları/modelleri veya paketle birlikte sunulan "golden set" paketlerini karşılaştırmalı olarak değerlendirmenizi sağlayan genel amaçlı bir değerlendirme çatısıyla birlikte gelir. Bu çatıyı; yönlendirme değişikliklerini doğrulamak, yeni sağlayıcıları geçerli kılmak ve sürümleri üretim trafiğine almadan önce denetlemek için kullanın.
+67router; yönlendirme yapılandırmalarını, tekil sağlayıcıları/modelleri veya paketle birlikte sunulan "golden set" paketlerini karşılaştırmalı olarak değerlendirmenizi sağlayan genel amaçlı bir değerlendirme çatısıyla birlikte gelir. Bu çatıyı; yönlendirme değişikliklerini doğrulamak, yeni sağlayıcıları geçerli kılmak ve sürümleri üretim trafiğine almadan önce denetlemek için kullanın.
 
 Çerçeve şu şekilde uygulanmıştır:
 

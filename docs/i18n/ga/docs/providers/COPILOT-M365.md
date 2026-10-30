@@ -38,7 +38,7 @@ Tá an fhoirm seo a leanas ar an URL iomlán:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. In OmniRoute, téigh chuig **Soláthraithe → Cuir Soláthraí Leis**, roghnaigh **Microsoft 365 Copilot
+6. In 67router, téigh chuig **Soláthraithe → Cuir Soláthraí Leis**, roghnaigh **Microsoft 365 Copilot
    (BizChat)**, agus greamaigh an dintiúr san fhormáid seo:
 
 ```
@@ -55,9 +55,9 @@ a easpórtáil:
 1. Oscail **DevTools → Líonra**.
 2. Cuir tús le comhrá BizChat nó lean ar aghaidh leis (spreagann sé seo an nasc WebSocket).
 3. Deaschliceáil sa phainéal Líonra agus roghnaigh **Sábháil gach rud mar HAR le hábhar**.
-4. In OmniRoute, úsáid an cnaipe **Iompórtáil comhad .har** sa dialóg naisc soláthraí.
+4. In 67router, úsáid an cnaipe **Iompórtáil comhad .har** sa dialóg naisc soláthraí.
 
-Scanann OmniRoute an HAR chun URL WebSocket Chathub a aimsiú, asbhaineann sé
+Scanann 67router an HAR chun URL WebSocket Chathub a aimsiú, asbhaineann sé
 `access_token` agus `chathubPath`, agus líonann sé réimsí an dintiúir go huathoibríoch. Díchódaíonn
 an t-iompórtáil HAR dul in éag an JWT agus taispeánann sí an tréimhse saoil atá fágtha ag an chomhartha.
 
@@ -80,7 +80,7 @@ Chun nach mbeidh ort é a ghabháil arís de láimh, is féidir leat comhartha a
 | `tier`         | `individual` (réamhshocrú), `edu`, nó `enterprise`                           |
 
 Faigh an comhartha athnuachana ó shreabhadh cód gléis nó cód údaraithe Microsoft
-atá scóipeáilte chuig `substrate.office.com/sydney`. Agus `refreshToken` socraithe, déanann OmniRoute
+atá scóipeáilte chuig `substrate.office.com/sydney`. Agus `refreshToken` socraithe, déanann 67router
 `access_token` a réamh-athnuachan roimh gach iarratas, mar sin ní gá duit é a
 ghabháil arís tar éis gach dul in éag thart ar 75 nóiméad.
 

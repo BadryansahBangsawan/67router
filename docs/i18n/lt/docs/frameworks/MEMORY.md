@@ -7,7 +7,7 @@
 > **Pagrindinis tiesos šaltinis:** `src/lib/memory/` ir `src/app/api/memory/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40 (pagal numatytuosius nustatymus išjungta + int8 kvantizavimo suvienodinimas)
 
-OmniRoute suteikia išliekamąją pokalbių atmintį, susietą su API raktu (ir
+67router suteikia išliekamąją pokalbių atmintį, susietą su API raktu (ir
 pasirinktinai seanso ID). Prisiminimai automatiškai išgaunami iš LLM atsakymų
 naudojant lengvą reguliariųjų išraiškų šablonų atitikties paiešką ir vėl įterpiami į paskesnes
 užklausas kaip pradinis sistemos pranešimas (arba pirmasis naudotojo pranešimas teikėjams,
@@ -636,7 +636,7 @@ numatytasis TTL – 5 min).
 
 ## Vektorizavimo teikėjo pasirinkimas (v3.8.16+)
 
-OmniRoute atminties variklis palaiko **keturis vektorizavimo šaltinius** (`src/lib/memory/embedding/`). Kiekvienas iš jų pasižymi skirtingais **delsos, kainos, modelio kokybės ir konfigūravimo sudėtingumo** kompromisais.
+67router atminties variklis palaiko **keturis vektorizavimo šaltinius** (`src/lib/memory/embedding/`). Kiekvienas iš jų pasižymi skirtingais **delsos, kainos, modelio kokybės ir konfigūravimo sudėtingumo** kompromisais.
 
 ### Vektorizavimo šaltiniai
 
@@ -1061,13 +1061,13 @@ Procesas susiejamas tik su grįžtamojo ryšio sąsaja, kurią `GenericMemoryBac
 Šis adapteris tos apsaugos nesušvelnina: pagrindinio kompiuterio adresas yra tiesiogiai nustatytas kaip `127.0.0.1`, o konfigūracijos
 schema (`ClaudeMemBackendConfigSchema`, `.strict()`) priima tik:
 
-| Raktas      | Tipas    | Numatytoji reikšmė | Pastabos                                                                                                                        |
-| ----------- | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| `port`      | skaičius | —                  | Privalomas, 1024–65535. claude-mem proceso prievadas iš jo nustatymų failo (numatytoji reikšmė `37700 + uid % 100`).            |
-| `project`   | eilutė   | —                  | Naudotinas claude-mem projektas. Jei nenustatyta → kiekvienas OmniRoute API raktas susiejamas su atskiru projektu (`apiKeyId`). |
-| `timeoutMs` | skaičius | `5000`             | Kiekvienos užklausos skirtasis laikas, 100–30000.                                                                               |
+| Raktas      | Tipas    | Numatytoji reikšmė | Pastabos                                                                                                                       |
+| ----------- | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `port`      | skaičius | —                  | Privalomas, 1024–65535. claude-mem proceso prievadas iš jo nustatymų failo (numatytoji reikšmė `37700 + uid % 100`).           |
+| `project`   | eilutė   | —                  | Naudotinas claude-mem projektas. Jei nenustatyta → kiekvienas 67router API raktas susiejamas su atskiru projektu (`apiKeyId`). |
+| `timeoutMs` | skaičius | `5000`             | Kiekvienos užklausos skirtasis laikas, 100–30000.                                                                              |
 
-Įjunkite jį naudodami `PUT /api/settings/memory` ir paleiskite OmniRoute iš naujo (posistemės registruojamos
+Įjunkite jį naudodami `PUT /api/settings/memory` ir paleiskite 67router iš naujo (posistemės registruojamos
 vieną kartą, funkcijoje `initMemoryBackends()`):
 
 ```json
@@ -1084,7 +1084,7 @@ Susiejimas ir apribojimai:
 
 - ID yra `claude-mem:<observationId>`; `get`/`delete` ignoruoja kitų posistemių ID neatlikdami
   tinklo užklausos.
-- `create` → `POST /api/memory/save`; OmniRoute laukai (`apiKeyId`, `sessionId`, `type`,
+- `create` → `POST /api/memory/save`; 67router laukai (`apiKeyId`, `sessionId`, `type`,
   `key`, `metadata`) perduodami claude-mem lauke `metadata.omniroute` ir nuskaitant atkuriami.
 - `search` → `GET /api/search?format=json&type=observations`, apkarpoma iki `maxTokens`
   (simbolių skaičius / 4). `list` → proceso puslapiuojama stebėjimų galutinė sąsaja (`total` yra apatinė riba — procesas
@@ -1096,16 +1096,16 @@ Susiejimas ir apribojimai:
 - Raginimų įterpimas (`retrieval.ts`) ir `omniroute_memory_*` MCP įrankiai vis dar skaito SQLite
   tiesiogiai — jie nenaudoja `memoryManager`, todėl ši posistemė jiems duomenų neteikia.
 
-**claude-mem LLM iškvietimų nukreipimas per OmniRoute.** claude-mem glaudina stebėjimus
+**claude-mem LLM iškvietimų nukreipimas per 67router.** claude-mem glaudina stebėjimus
 naudodama LLM (numatytoji reikšmė: Claude Agent SDK). Jos `openai-compatible` teikėją galima nukreipti
-į OmniRoute ir taip pasinaudoti kombinacijų atsarginiu perjungimu bei išlaidų stebėjimu. Faile `~/.claude-mem/settings.json`:
+į 67router ir taip pasinaudoti kombinacijų atsarginiu perjungimu bei išlaidų stebėjimu. Faile `~/.claude-mem/settings.json`:
 
 ```json
 {
   "CLAUDE_MEM_PROVIDER": "openai-compatible",
   "CLAUDE_MEM_OPENAI_COMPAT_BASE_URL": "http://localhost:20128/v1",
-  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<OmniRoute API raktas>",
-  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<OmniRoute modelis arba kombinacija>"
+  "CLAUDE_MEM_OPENAI_COMPAT_API_KEY": "<67router API raktas>",
+  "CLAUDE_MEM_OPENAI_COMPAT_MODEL": "<67router modelis arba kombinacija>"
 }
 ```
 

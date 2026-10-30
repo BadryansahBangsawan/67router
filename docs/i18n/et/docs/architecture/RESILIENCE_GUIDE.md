@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'il on kolm eristatavat, kuid omavahel seotud vastupidavuse mehhanismi. Igal neist on erinev ulatus ja eesmärk. Hoidke need marsruuti käitumise silumisel eraldi.
+67router'il on kolm eristatavat, kuid omavahel seotud vastupidavuse mehhanismi. Igal neist on erinev ulatus ja eesmärk. Hoidke need marsruuti käitumise silumisel eraldi.
 
 ![3-kihiline vastupidavuse mudel](../diagrams/exported/resilience-3layers.svg)
 
@@ -214,7 +214,7 @@ Kolme seansisidususe päist ei edastata kunagi ülesvoolu — täitjad koostavad
 
 ### Hallatud seansiühenduste eksklusiivsed rendid
 
-**Ulatus:** üks aktiivne hallatud HTTP-klient/seanss omab üht sobivat OmniRoute’i ühendust.
+**Ulatus:** üks aktiivne hallatud HTTP-klient/seanss omab üht sobivat 67router’i ühendust.
 
 **Eesmärk:** pakkuda püsivat eksklusiivset ühenduse omandiõigust klientidele, kes vajavad päringute vahel ranget marsruutimispiiri. See erineb seansisidususest, mis on nõrk järjepidevuseelistus:
 eksklusiivne rent talletab elutsükli oleku SQLite’is, jõustab aktiivse omaniku ja
@@ -235,7 +235,7 @@ aktiivse ühenduse ID. Rendi juhtpäised eemaldatakse logidest, säilitatud pär
 ülesvoo täituri päistest.
 
 Kui tavalisel marsruutimisel on sobivaid hallatud kandidaate, kuid kõik vabad kandidaadid on hõivatud
-võõra aktiivse rendi poolt, tagastab OmniRoute HTTP `429`, koodi lease-capacity-unavailable,
+võõra aktiivse rendi poolt, tagastab 67router HTTP `429`, koodi lease-capacity-unavailable,
 oleku waiting-for-capacity ja piiratud `Retry-After` väärtuse, mis on tuletatud varaseimast asjakohasest aegumisajast.
 Tavaline tühi sobivus ei ole rendikonflikt ning säilitab oma senise marsruutimisvea semantika.
 
@@ -257,7 +257,7 @@ Seotud mehhanismid püsivad eraldi:
   codexi puhul kogu `codex` / `spark` ulatus (kõik ühenduse `gpt-5*` mudelid),
   teiste teenusepakkujate puhul `getQuotaScopedModelForProvider()`.
 - `404` lukustab üksiku mudeli ennast (`getModelLockKey()` kitsendab `not_found` staatuse).
-- Iga muu staatus — `5xx` transpordi-/serverivead ja OmniRoute'i enda
+- Iga muu staatus — `5xx` transpordi-/serverivead ja 67router'i enda
   kvaliteedivalideerimisest sünteesitud `502` — lukustab ainult **täpse**
   teenusepakkuja/ühenduse/mudeli kolmiku. Katkine voog ühel mudelil ei ole tõend
   konto kvoodi kohta; enne seda reeglit eemaldas üks tühi vastus mudelil
@@ -377,7 +377,7 @@ Määrake see ühenduse modaalis (**Rate limit overrides → Per-model concurren
 
 - **Ühenduseülene vs mudelispetsiifiline:** `maxConcurrent` jääb jagatud ühenduseüleseks ülempiiriks. Kui mõlemad kehtivad, omandatakse mõlemad väravad aatomiliselt samas liitväravas (`global → provider → account → model`); tegelik käitumine on rangem kohaldatav piirang.
 - **Täpne mudelivõtme vaste:** võti on mudeli string, mis edastatakse täitjale pärast marsruutimise lahendamist – tavaliselt paljas ülesvoolu mudeli ID (`glm-5`), mitte kliendipoolne `provider/model` alias (`zai/glm-5` ei vasta `glm-5`). Väärtused on positiivsed täisarvulised samaaegsete päringute ülempiirid.
-- **Kohalik järjekord, puudub avastamine:** liigsed päringud järjekorda kohapeal olemasoleva järjekorra/ajalõpu semantikaga (tüübitud `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` vastuvõtuvead). OmniRoute ei avasta ega järelda ülesvoolu poliitikat – see jõustab täpsed piirangud, mille operaator on konfigureerinud. Küllastunud mudelivärav ei lülita kunagi pakkujat välja ega loo püsivat mudeli lukustust; ülesvoolu 429/jahtumis-/tagavaramehhanismi käitumine jääb veapiiriks.
+- **Kohalik järjekord, puudub avastamine:** liigsed päringud järjekorda kohapeal olemasoleva järjekorra/ajalõpu semantikaga (tüübitud `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` vastuvõtuvead). 67router ei avasta ega järelda ülesvoolu poliitikat – see jõustab täpsed piirangud, mille operaator on konfigureerinud. Küllastunud mudelivärav ei lülita kunagi pakkujat välja ega loo püsivat mudeli lukustust; ülesvoolu 429/jahtumis-/tagavaramehhanismi käitumine jääb veapiiriks.
 - **Ühendusepõhine, protsessipõhine ulatus:** piirangud on andmebaasi ühendusepõhised ja hoitakse mälus, nii et kaks ühendust, mis kasutavad sama ülesvoolu API-võtit, ei koordineeri omavahel.
 - **Konfigureerimata tähendab muutumatut:** kaardi väljajätmine (või armatuurlaua välja tühjaks jätmine) ei lisa mudeliväravat. Näide konfiguratsioonist ilma universaalset pakkuja piirangut kehtestamata:
 
@@ -464,7 +464,7 @@ et seda saab ühiktestida ilma tõelise Bottleneck'i piirajata.
 ### Kiirusepiirangu automaatse lubamise turvavõrk ja ühenduse kaitse (`rateLimitProtection`)
 
 **Automaatse lubamise turvavõrk** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, vaikeväärtus `true`):
-Vaikimisi lubab OmniRoute automaatselt kiirusepiirangu järjekorrakaitse kõigil aktiivsetel API-võtme pakkujaühendustel (`getProviderCategory(provider) === "apikey"`). See tagab, et sissetulevad päringud kiirustundlikele ülesvoo API-võtmetele pannakse järjekorda ja neid piiratakse Bottleneck'i kaudu, selle asemel et need purskkuksid ülesvoo 429-vigadena. Turvavõrku saab alistada keskkonnamuutujaga `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` keelab, `true`/`1`/`on` sunnib sisse), mis läheb ette salvestatud armatuurlaua seadele (**Seaded → Vastupidavus** / `PATCH /api/resilience`).
+Vaikimisi lubab 67router automaatselt kiirusepiirangu järjekorrakaitse kõigil aktiivsetel API-võtme pakkujaühendustel (`getProviderCategory(provider) === "apikey"`). See tagab, et sissetulevad päringud kiirustundlikele ülesvoo API-võtmetele pannakse järjekorda ja neid piiratakse Bottleneck'i kaudu, selle asemel et need purskkuksid ülesvoo 429-vigadena. Turvavõrku saab alistada keskkonnamuutujaga `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` keelab, `true`/`1`/`on` sunnib sisse), mis läheb ette salvestatud armatuurlaua seadele (**Seaded → Vastupidavus** / `PATCH /api/resilience`).
 
 **Ühendusepõhise `rateLimitProtection` semantika:**
 Ühendusepõhist kiirusepiirangu kaitset jälgitakse pakkujaühenduste tõeväärtusväljaga `rateLimitProtection` (SQLite'is salvestatud kui `rate_limit_protection`):
@@ -785,7 +785,7 @@ kvoot. Tegelikud piirangud:
 > juhend jääks alla 40k kontekstieelarve. Tegemist on ülaltoodud jaotiste tihendatud, agendile
 > suunatud vaatega; nummerdatud jaotised jäävad täielikuks viiteks.
 
-OmniRoute'il on kolm omavahel seotud, kuid eristatavat ajutiste tõrgete mehhanismi. Hoia nende
+67router'il on kolm omavahel seotud, kuid eristatavat ajutiste tõrgete mehhanismi. Hoia nende
 ulatused marsruutimiskäitumise silumisel selgelt eraldi. Kiirülevaate saamiseks vaata
 [3-kihilist tõrkekindluse diagrammi](../diagrams/exported/resilience-3layers.svg)
 (lähtefail: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)).

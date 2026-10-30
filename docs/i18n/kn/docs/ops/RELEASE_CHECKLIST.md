@@ -45,7 +45,7 @@ credential ಗೆ ವಿನಿಮಯ ಮಾಡುತ್ತದೆ — repository 
 (ಸೋರಿಕೆಯಾದ token ಒಂದರಿಂದ ಮಾತ್ರ ಪ್ರಕಟಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ — ಏಕೆಂದರೆ token ಇರುವುದೇ ಇಲ್ಲ).
 
 **ಒಂದು-ಬಾರಿಯ ಸೆಟಪ್ (ಮಾಲೀಕರು):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). ಇದು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವವರೆಗೆ, ಸ್ವಯಂಚಾಲಿತ ಹಂತವು `ENEEDAUTH` ದೋಷದೊಂದಿಗೆ ವಿಫಲವಾಗುತ್ತದೆ:
 `publish_mode=staged` (ಕೆಳಗೆ) ಅಥವಾ `direct` ಬಳಸಿ ಮರು-dispatch ಮಾಡಿ.
 

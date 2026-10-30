@@ -7,7 +7,7 @@
 > **အမှန်တရား၏ မူရင်းရင်းမြစ်:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **နောက်ဆုံးအပ်ဒိတ်:** 2026-06-28 — v3.8.40
 
-OmniRoute သည် thinking-mode မော်ဒယ်များက ထုတ်ပေးသော assistant `reasoning_content` ကို ဖမ်းယူပြီး၊ upstream provider က လိုအပ်သည့်အခါ အကြိမ်များစွာ အပြန်အလှန်ပြောဆိုသော request များတွင် ပွင့်လင်းမြင်သာစွာ ပြန်လည်ထည့်သွင်းပေးသည်။ ဤနည်းဖြင့် client ၏ conversation history တွင် ယခင်အကြိမ်၏ reasoning မပါဝင်သည့်အခါ တင်းကျပ်သော provider များက ပြန်ပေးသည့် HTTP 400 error များကို ဖယ်ရှားပေးသည်။
+67router သည် thinking-mode မော်ဒယ်များက ထုတ်ပေးသော assistant `reasoning_content` ကို ဖမ်းယူပြီး၊ upstream provider က လိုအပ်သည့်အခါ အကြိမ်များစွာ အပြန်အလှန်ပြောဆိုသော request များတွင် ပွင့်လင်းမြင်သာစွာ ပြန်လည်ထည့်သွင်းပေးသည်။ ဤနည်းဖြင့် client ၏ conversation history တွင် ယခင်အကြိမ်၏ reasoning မပါဝင်သည့်အခါ တင်းကျပ်သော provider များက ပြန်ပေးသည့် HTTP 400 error များကို ဖယ်ရှားပေးသည်။
 
 ## ဤစနစ် ရှိရသည့်အကြောင်းရင်း
 
@@ -17,7 +17,7 @@ thinking-mode provider အချို့သည် **ယခင် assistant mess
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-သို့သော် ပုံမှန် client များ (Cursor, Cline, Roo Code, OpenAI SDK) သည် ၎င်းတို့ ပြန်လည်ပေးပို့သော history မှ `reasoning_content` ကို ဖယ်ရှားကြသည်။ OmniRoute သည် upstream မြင်ရသည့် request တစ်သမတ်တည်းဖြစ်စေရန် server-side cache မှ ၎င်းကို ပြန်လည်ထည့်သွင်းပေးသည်။ Issue #1628 တွင် process ပြန်လည်စတင်ပြီးနောက် cache ဆက်လက်တည်ရှိစေရန် ပေါင်းစပ် memory/SQLite persistence ကို စတင်ထည့်သွင်းခဲ့သည်။
+သို့သော် ပုံမှန် client များ (Cursor, Cline, Roo Code, OpenAI SDK) သည် ၎င်းတို့ ပြန်လည်ပေးပို့သော history မှ `reasoning_content` ကို ဖယ်ရှားကြသည်။ 67router သည် upstream မြင်ရသည့် request တစ်သမတ်တည်းဖြစ်စေရန် server-side cache မှ ၎င်းကို ပြန်လည်ထည့်သွင်းပေးသည်။ Issue #1628 တွင် process ပြန်လည်စတင်ပြီးနောက် cache ဆက်လက်တည်ရှိစေရန် ပေါင်းစပ် memory/SQLite persistence ကို စတင်ထည့်သွင်းခဲ့သည်။
 
 ## ဗိသုကာဖွဲ့စည်းပုံ
 

@@ -6,7 +6,7 @@
 
 # MITM TPROXY Transparentno dešifrovanje
 
-TPROXY transparentno dešifrovanje je OmniRoute-ov **5. režim snimanja** za
+TPROXY transparentno dešifrovanje je 67router-ov **5. režim snimanja** za
 MITM stek [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 On presreće i **dešifruje** lokalni odlazni HTTPS saobraćaj na Linuxu koristeći kernel TPROXY + usmjeravanje po pravilima (policy routing) — **bez** lažiranja `/etc/hosts` i **bez** mijenjanja sistemskih proxy postavki na nivou OS-a. Pogodan je za headless sisteme (nema DNS izmjena koje treba čistiti), a firewall pravila se automatski brišu pri ponovnom pokretanju.
 
@@ -41,7 +41,7 @@ Koristite ga kada želite da snimite i dešifrujete saobraćaj iz procesa koji:
 - ne poštuje `HTTP_PROXY`, i
 - ne želite da ometate promjenom proxy-ja na nivou sistema.
 
-Pošto se presretanje dešava u kernelu, izvornom procesu **nije potrebna promjena konfiguracije** — ali proces mora vjerovati dinamičkom CA kojeg OmniRoute instalira (pogledajte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+Pošto se presretanje dešava u kernelu, izvornom procesu **nije potrebna promjena konfiguracije** — ali proces mora vjerovati dinamičkom CA kojeg 67router instalira (pogledajte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -54,7 +54,7 @@ Pošto se presretanje dešava u kernelu, izvornom procesu **nije potrebna promje
 | **Izvorni dodatak** | Mali N-API dodatak (`src/mitm/tproxy/native/transparent.c`) mora biti izgrađen ili isporučen kao prebuild. Pogledajte [§3](#3-the-native-ip_transparent-addon). |
 | **Kernel moduli**   | `iptables` sa podrškom za `TPROXY`, `mangle` i `mark` match (validirano na kernelu 6.8.0).                                                                      |
 
-**Graciozna degradacija:** ako nedostaje bilo koji zahtjev (nije Linux, nema toolchain-a, dodatak nije izgrađen), loader dodatka (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`) vraća `null` umjesto bacanja izuzetka. Status režima snimanja tada prijavljuje `available: false`, prekidač na kontrolnoj tabli je **onemogućen** sa opisom "TPROXY decrypt requires Linux + root + the native addon", a ostatak OmniRoute-a nastavlja raditi.
+**Graciozna degradacija:** ako nedostaje bilo koji zahtjev (nije Linux, nema toolchain-a, dodatak nije izgrađen), loader dodatka (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`) vraća `null` umjesto bacanja izuzetka. Status režima snimanja tada prijavljuje `available: false`, prekidač na kontrolnoj tabli je **onemogućen** sa opisom "TPROXY decrypt requires Linux + root + the native addon", a ostatak 67router-a nastavlja raditi.
 
 ---
 
@@ -174,7 +174,7 @@ Budući da pravila označavaju nove lokalne odlazne konekcije, **vlastito** re-e
 | **Verifikacija upstream certifikata** | Ponovno šifrirano prosljeđivanje (forward) verificira upstream certifikat po defaultu (`rejectUnauthorized: true`).                                                                                                                                                                                                                                                                   |
 | **Sanitizacija grešaka**              | Odgovori o greškama rute prolaze kroz `sanitizeErrorMessage()` (Hard Rule #12).                                                                                                                                                                                                                                                                                                       |
 
-**MITM CA je moćna mogućnost.** CA kojem OS vjeruje i koji može potpisati bilo koji host znači da se sve što OmniRoute presretne može dešifrirati. Ona je zaštićena eksplicitnim, lokalnim TPROXY režimom snimanja, koji je po defaultu isključen, a unos u trust-store se uklanja kada zaustavite taj režim.
+**MITM CA je moćna mogućnost.** CA kojem OS vjeruje i koji može potpisati bilo koji host znači da se sve što 67router presretne može dešifrirati. Ona je zaštićena eksplicitnim, lokalnim TPROXY režimom snimanja, koji je po defaultu isključen, a unos u trust-store se uklanja kada zaustavite taj režim.
 
 ---
 
@@ -269,7 +269,7 @@ vraća `available: false` kada dodatak nedostaje.
 ### Zastarjela pravila zaštitnog zida nakon pada
 
 `revertTproxy()` je tačna inverzija primjene i idempotentna je. Zaustavljanje
-režima vraća pravila; ako je OmniRoute prekinut usred sesije, koristite AgentBridge
+režima vraća pravila; ako je 67router prekinut usred sesije, koristite AgentBridge
 **Repair** akciju (`POST /api/tools/agent-bridge/repair`) da poništite napušteno sistemsko stanje
 (DNS spoof, root CA, sistemski proxy). TPROXY `mangle` pravila i ruta se takođe
 automatski brišu pri ponovnom pokretanju.

@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute ਵਿੱਚ **Providers → Add Provider** ਉੱਤੇ ਜਾਓ, **Microsoft 365 Copilot
+6. 67router ਵਿੱਚ **Providers → Add Provider** ਉੱਤੇ ਜਾਓ, **Microsoft 365 Copilot
    (BizChat)** ਚੁਣੋ ਅਤੇ ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਨੂੰ ਇਸ ਫਾਰਮੈਟ ਵਿੱਚ ਪੇਸਟ ਕਰੋ:
 
 ```
@@ -50,9 +50,9 @@ WebSocket URL ਤੋਂ ਮੁੱਲ ਹੱਥੀਂ ਕਾਪੀ ਕਰਨ ਦ�
 1. **DevTools → Network** ਖੋਲ੍ਹੋ।
 2. ਇੱਕ BizChat ਗੱਲਬਾਤ ਸ਼ੁਰੂ ਕਰੋ ਜਾਂ ਜਾਰੀ ਰੱਖੋ (ਇਸ ਨਾਲ WebSocket ਕਨੈਕਸ਼ਨ ਚਾਲੂ ਹੁੰਦਾ ਹੈ)।
 3. Network ਪੈਨਲ ਵਿੱਚ ਸੱਜਾ-ਕਲਿੱਕ ਕਰੋ ਅਤੇ **Save all as HAR with content** ਚੁਣੋ।
-4. OmniRoute ਵਿੱਚ, ਪ੍ਰਦਾਤਾ ਕਨੈਕਸ਼ਨ ਡਾਇਲਾਗ ਉੱਤੇ **Import .har file** ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰੋ।
+4. 67router ਵਿੱਚ, ਪ੍ਰਦਾਤਾ ਕਨੈਕਸ਼ਨ ਡਾਇਲਾਗ ਉੱਤੇ **Import .har file** ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰੋ।
 
-OmniRoute Chathub WebSocket URL ਲਈ HAR ਨੂੰ ਸਕੈਨ ਕਰਦਾ ਹੈ, `access_token` ਅਤੇ `chathubPath` ਕੱਢਦਾ ਹੈ ਅਤੇ ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਫੀਲਡਾਂ ਨੂੰ ਆਪਣੇ ਆਪ ਭਰ ਦਿੰਦਾ ਹੈ। HAR ਇੰਪੋਰਟ JWT ਦੀ ਮਿਆਦ-ਸਮਾਪਤੀ ਨੂੰ ਡੀਕੋਡ ਕਰਦਾ ਹੈ ਅਤੇ ਟੋਕਨ ਦੀ ਬਾਕੀ ਮਿਆਦ ਦਿਖਾਉਂਦਾ ਹੈ।
+67router Chathub WebSocket URL ਲਈ HAR ਨੂੰ ਸਕੈਨ ਕਰਦਾ ਹੈ, `access_token` ਅਤੇ `chathubPath` ਕੱਢਦਾ ਹੈ ਅਤੇ ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਫੀਲਡਾਂ ਨੂੰ ਆਪਣੇ ਆਪ ਭਰ ਦਿੰਦਾ ਹੈ। HAR ਇੰਪੋਰਟ JWT ਦੀ ਮਿਆਦ-ਸਮਾਪਤੀ ਨੂੰ ਡੀਕੋਡ ਕਰਦਾ ਹੈ ਅਤੇ ਟੋਕਨ ਦੀ ਬਾਕੀ ਮਿਆਦ ਦਿਖਾਉਂਦਾ ਹੈ।
 
 > **ਕਿਸੇ ਅਸਲੀ HAR ਐਕਸਪੋਰਟ, ਐਕਸੈੱਸ ਟੋਕਨ ਜਾਂ ਰਿਫ੍ਰੈਸ਼ ਟੋਕਨ ਨੂੰ ਕਦੇ ਵੀ ਕਮਿਟ ਨਾ ਕਰੋ।** ਟੈਸਟ ਅਤੇ ਦਸਤਾਵੇਜ਼ੀ ਮੁੱਲ ਹਮੇਸ਼ਾ ਪਲੇਸਹੋਲਡਰ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ।
 
@@ -69,7 +69,7 @@ OmniRoute Chathub WebSocket URL ਲਈ HAR ਨੂੰ ਸਕੈਨ ਕਰਦਾ �
 | `refreshToken` | `substrate.office.com/sydney` ਸਕੋਪ ਲਈ Microsoft OAuth ਰਿਫ੍ਰੈਸ਼ ਟੋਕਨ |
 | `tier`         | `individual` (ਡਿਫਾਲਟ), `edu`, ਜਾਂ `enterprise`                      |
 
-`substrate.office.com/sydney` ਲਈ ਸਕੋਪ ਕੀਤੇ Microsoft device-code ਜਾਂ authorization-code ਫਲੋ ਤੋਂ ਰਿਫ੍ਰੈਸ਼ ਟੋਕਨ ਪ੍ਰਾਪਤ ਕਰੋ। `refreshToken` ਸੈੱਟ ਹੋਣ ਉੱਤੇ, OmniRoute ਹਰ ਬੇਨਤੀ ਤੋਂ ਪਹਿਲਾਂ `access_token` ਨੂੰ ਪ੍ਰੀ-ਫਲਾਈਟ ਰਿਫ੍ਰੈਸ਼ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਤੁਹਾਨੂੰ ਹਰ ~75-ਮਿੰਟ ਦੀ ਮਿਆਦ-ਸਮਾਪਤੀ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਮੁੜ ਕੈਪਚਰ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੁੰਦੀ।
+`substrate.office.com/sydney` ਲਈ ਸਕੋਪ ਕੀਤੇ Microsoft device-code ਜਾਂ authorization-code ਫਲੋ ਤੋਂ ਰਿਫ੍ਰੈਸ਼ ਟੋਕਨ ਪ੍ਰਾਪਤ ਕਰੋ। `refreshToken` ਸੈੱਟ ਹੋਣ ਉੱਤੇ, 67router ਹਰ ਬੇਨਤੀ ਤੋਂ ਪਹਿਲਾਂ `access_token` ਨੂੰ ਪ੍ਰੀ-ਫਲਾਈਟ ਰਿਫ੍ਰੈਸ਼ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਤੁਹਾਨੂੰ ਹਰ ~75-ਮਿੰਟ ਦੀ ਮਿਆਦ-ਸਮਾਪਤੀ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਮੁੜ ਕੈਪਚਰ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੁੰਦੀ।
 
 ਜੇ `refreshToken` ਸੈੱਟ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਹਰ ਮਿਆਦ-ਸਮਾਪਤੀ ਤੋਂ ਬਾਅਦ WebSocket ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਹੱਥੀਂ ਮੁੜ ਕੈਪਚਰ ਕਰਨਾ ਪਵੇਗਾ।
 

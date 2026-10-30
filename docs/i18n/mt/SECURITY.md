@@ -6,7 +6,7 @@
 
 ## Rappurtar ta’ Vulnerabbiltajiet
 
-Jekk tiskopri vulnerabbiltà tas-sigurtà f’OmniRoute, jekk jogħġbok irrapportaha b’mod responsabbli:
+Jekk tiskopri vulnerabbiltà tas-sigurtà f’67router, jekk jogħġbok irrapportaha b’mod responsabbli:
 
 1. **TIFTAĦX** kwistjoni pubblika fuq GitHub
 2. Uża [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Wara 3.8.59, il-verżjoni li jmiss hija **3.9.0**, li tiftaħ il-linja ta’ app
 
 ## Arkitettura tas-Sigurtà
 
-OmniRoute jimplimenta mudell tas-sigurtà b’diversi saffi:
+67router jimplimenta mudell tas-sigurtà b’diversi saffi:
 
 ```
 Talba → CORS → Pipeline tal-Authz (ikklassifika → politiki → infurza)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Qafas tas-Salvagwardji
 
-OmniRoute jinkludi **reġistru tas-salvagwardji** li jista’ jerġa’ jitgħabba waqt it-tħaddim (`src/lib/guardrails/`) bi 3 salvagwardji integrati ordnati skont il-prijorità:
+67router jinkludi **reġistru tas-salvagwardji** li jista’ jerġa’ jitgħabba waqt it-tħaddim (`src/lib/guardrails/`) bi 3 salvagwardji integrati ordnati skont il-prijorità:
 
 | Salvagwardja       | Prijorità | Għan                                                                                                                       |
 | ------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------- |

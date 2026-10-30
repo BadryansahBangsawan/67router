@@ -4,7 +4,7 @@
 
 ---
 
-Din il-paġna tispjega l-imġiba lokali tal-`.env` tal-proġett u kif għandek timmaniġġja l-fajls tal-ambjent u s-sigrieti meta tkun qed tiżviluppa OmniRoute.
+Din il-paġna tispjega l-imġiba lokali tal-`.env` tal-proġett u kif għandek timmaniġġja l-fajls tal-ambjent u s-sigrieti meta tkun qed tiżviluppa 67router.
 
 ## Imġiba ta’ `.env` waqt postinstall
 

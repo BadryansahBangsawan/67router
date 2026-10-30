@@ -4,7 +4,7 @@
 
 ---
 
-මෙම ලේඛනය OmniRoute හි සියලුම CI තත්ත්ව ද්වාර සඳහා බලයලත් යොමුව වේ.
+මෙම ලේඛනය 67router හි සියලුම CI තත්ත්ව ද්වාර සඳහා බලයලත් යොමුව වේ.
 එය එක් එක් ද්වාරය, එය වලංගු කරන්නේ කුමක්ද, එය ක්රියාත්මක වන්නේ කුමන CI කාර්යයේද, එය
 ratchet මූලික රේඛාවක් හෝ සමත්/අසමත් ප්රතිපත්තියක් භාවිත කරන්නේද, සහ එය build එක අවහිර කරන්නේද නැතහොත් උපදේශාත්මකද යන්න විස්තර කරයි.
 
@@ -251,14 +251,14 @@ base catalog එක කියවිය නොහැකි විට (base ref �
 
 මේවා cron schedule එකක (සහ `workflow_dispatch`) ධාවනය වන අතර, PRs මත කිසිවිටෙක ධාවනය නොවේ. සියල්ල advisory වේ.
 
-| Workflow               | වලංගු කරයි                                                                                                                                              | Blocking     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | අහඹු seed එකක් සමඟ fast-check property tests + ඉහළ run ගණන                                                                                              | **Advisory** |
-| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                   | **Advisory** |
-| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (provider secret එකක් නොමැතිව skip වේ)                                                            | **Advisory** |
-| `nightly-schemathesis` | `docs/openapi.yaml` භාවිතයෙන් live OmniRoute එකක් සමඟ OpenAPI contract fuzzing (schemathesis) — spec violations / unhandled 500s හෙළි කරයි (Fase 8 B.4) | **Advisory** |
-| `nightly-mutation`     | fast unit lane හරහා Stryker mutation-testing ලකුණු — ඉතිරි වන mutants දුර්වල asserts හෙළි කරයි                                                          | **Advisory** |
-| `nightly-compat`       | සහාය දක්වන `engines.node` පරාස හරහා Node engine compatibility matrix                                                                                    | **Advisory** |
+| Workflow               | වලංගු කරයි                                                                                                                                             | Blocking     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| `nightly-property`     | අහඹු seed එකක් සමඟ fast-check property tests + ඉහළ run ගණන                                                                                             | **Advisory** |
+| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                  | **Advisory** |
+| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (provider secret එකක් නොමැතිව skip වේ)                                                           | **Advisory** |
+| `nightly-schemathesis` | `docs/openapi.yaml` භාවිතයෙන් live 67router එකක් සමඟ OpenAPI contract fuzzing (schemathesis) — spec violations / unhandled 500s හෙළි කරයි (Fase 8 B.4) | **Advisory** |
+| `nightly-mutation`     | fast unit lane හරහා Stryker mutation-testing ලකුණු — ඉතිරි වන mutants දුර්වල asserts හෙළි කරයි                                                         | **Advisory** |
+| `nightly-compat`       | සහාය දක්වන `engines.node` පරාස හරහා Node engine compatibility matrix                                                                                   | **Advisory** |
 
 කාර්ය සාධන baselines (heap, TTFB, build time) වාර්තා කරනු ලැබේ, gate නොකෙරේ: [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) බලන්න (`npm run perf:lts-baseline`).
 
@@ -531,7 +531,7 @@ job එක කිසිවිටෙකත් `release/*` වෙත push නො�
 
 ## Agent මෙවලම්කරණය: LSP-in-the-loop (තෝරාගත හැකි)
 
-CI gate වලට අමතරව, OmniRoute විසින් **තෝරාගත හැකි** `agent-lsp` මූලික සැකිල්ලක්
+CI gate වලට අමතරව, 67router විසින් **තෝරාගත හැකි** `agent-lsp` මූලික සැකිල්ලක්
 (ව්යාපෘති මට්ටමේ `.mcp.json`, Fase 7 Task 15) සපයයි. coding agent වෙත TypeScript language server එකක්
 නිරාවරණය කිරීමට `.mcp.json` සාදන්න, එවිට ඔවුන් code ලිවීමට **පෙර** symbol /
 diagnostic විසඳයි — එය "invented symbol" දෝෂ මූලාශ්රයේදීම අඩු කරන

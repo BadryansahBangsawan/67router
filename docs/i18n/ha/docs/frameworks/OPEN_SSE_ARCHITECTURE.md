@@ -4,7 +4,7 @@
 
 ---
 
-> **A taƙaice**: `open-sse/` shi ne babban injin watsa bayanai da ke sarrafa kowace buƙatar LLM a OmniRoute. Yana ɗauke da fayiloli kusan 1,400 waɗanda ke aiwatar da bututun buƙata, masu aiwatarwa, ayyuka, sabar MCP, da matakin fassara. Wannan jagorar tana bayyana yadda sassan suke aiki tare.
+> **A taƙaice**: `open-sse/` shi ne babban injin watsa bayanai da ke sarrafa kowace buƙatar LLM a 67router. Yana ɗauke da fayiloli kusan 1,400 waɗanda ke aiwatar da bututun buƙata, masu aiwatarwa, ayyuka, sabar MCP, da matakin fassara. Wannan jagorar tana bayyana yadda sassan suke aiki tare.
 
 **Tushe:** `open-sse/` (kunshin workspace, kusan fayilolin `.ts` 1,440 waɗanda ba na gwaji ba)
 
@@ -12,10 +12,10 @@
 
 ## Me Ya Sa Ake da Kunshin Workspace Na Daban?
 
-`open-sse/` **workspace mai zaman kansa** ne a cikin monorepo na OmniRoute saboda dalilai da dama:
+`open-sse/` **workspace mai zaman kansa** ne a cikin monorepo na 67router saboda dalilai da dama:
 
 1. **Sake amfani** — ana wallafa `open-sse` a matsayin `@omniroute/open-sse` a npm, don haka sauran ayyuka za su iya amfani da shi da kansu
-2. **Iyakoki masu tsabta** — an ware injin watsa bayanai daga matakin UI/DB na musamman ga OmniRoute
+2. **Iyakoki masu tsabta** — an ware injin watsa bayanai daga matakin UI/DB na musamman ga 67router
 3. **Aiki mai sauri** — injin ba shi da dogaro da Next.js, wanda ke ba da damar farawa cikin sauri a mahallin CLI/serverless
 4. **Sarrafa sigogi** — `open-sse` zai iya fitar da sabbin sigogi bisa jadawalinsa
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Me Ya Sa Ake Buƙatar Wani Mai Sauya Tsari Na Daban?
 
-Responses API shi ne sabon tsarin OpenAI mai **tattaunawa da ake riƙe yanayinta** (`previous_response_id`). Lokacin da abokin hulɗa ya aika buƙatar Responses, OmniRoute:
+Responses API shi ne sabon tsarin OpenAI mai **tattaunawa da ake riƙe yanayinta** (`previous_response_id`). Lokacin da abokin hulɗa ya aika buƙatar Responses, 67router:
 
 1. Yana sauya Responses → Chat Completions a ciki
 2. Yana aikawa ga mai samarwa (duk wani mai samarwa da ke goyon bayan Chat Completions)

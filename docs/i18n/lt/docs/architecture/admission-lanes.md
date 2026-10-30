@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute turi **dvi** proceso vietiniu mastu veikiančias kanalų sistemas, kurių taikymo sritys skiriasi. Jos yra
+67router turi **dvi** proceso vietiniu mastu veikiančias kanalų sistemas, kurių taikymo sritys skiriasi. Jos yra
 viena kitą papildančios; operatoriai turėtų žinoti, kurią iš jų stebi.
 
 ## 1. Baitų lygmens viso proceso priėmimas (`chatBodyAdmission.ts`)

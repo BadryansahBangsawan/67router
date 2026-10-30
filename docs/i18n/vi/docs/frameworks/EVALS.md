@@ -7,7 +7,7 @@
 > **Nguồn tham chiếu chính xác:** `src/lib/evals/`, `src/lib/db/evals.ts`, `src/app/api/evals/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute cung cấp một framework đánh giá tổng quát mà bạn có thể sử dụng để đo kiểm các cấu hình định tuyến, từng nhà cung cấp/mô hình riêng lẻ hoặc các bộ kiểm thử "golden set" đi kèm. Hãy sử dụng framework này để xác minh các thay đổi về định tuyến, kiểm định nhà cung cấp mới và thiết lập cổng kiểm soát cho các bản phát hành trước khi đưa chúng vào lưu lượng production.
+67router cung cấp một framework đánh giá tổng quát mà bạn có thể sử dụng để đo kiểm các cấu hình định tuyến, từng nhà cung cấp/mô hình riêng lẻ hoặc các bộ kiểm thử "golden set" đi kèm. Hãy sử dụng framework này để xác minh các thay đổi về định tuyến, kiểm định nhà cung cấp mới và thiết lập cổng kiểm soát cho các bản phát hành trước khi đưa chúng vào lưu lượng production.
 
 Framework này được triển khai dưới dạng:
 

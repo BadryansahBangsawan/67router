@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute OpenAI Codexን ለመጠቀም **ሁለት** መንገዶችን ያቀርባል፦
+67router OpenAI Codexን ለመጠቀም **ሁለት** መንገዶችን ያቀርባል፦
 
 | አቅራቢ                   | ከOpenAI ጋር የሚገናኝበት መንገድ                                                                                                                              | የአጠቃቀም ገደብ                                     |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | **`codex`**            | የChatGPT/OpenAI OAuth ቶከንዎን በቀጥታ ወደ Responses API ደግሞ ይልካል                                                                                           | **አዎ** — ይፋዊው ክፍለ-ጊዜ ለፕሮክሲ/ራውተር አጠቃቀም ፈቃድ የለውም |
-| **`codex-app-server`** | የ**Codex CLI የራሱን `codex app-server`** በJSON-RPC/WebSocket ያንቀሳቅሳል፤ CLIው ልክ እንደ በይነተገናኝ `codex` ክፍለ-ጊዜ የራሱን OAuth (`~/.codex/auth.json`) ይዞ በራሱ ያድሳል | **አይ** — OmniRoute ቶከንን ወደ API በፍጹም ደግሞ አይልክም  |
+| **`codex-app-server`** | የ**Codex CLI የራሱን `codex app-server`** በJSON-RPC/WebSocket ያንቀሳቅሳል፤ CLIው ልክ እንደ በይነተገናኝ `codex` ክፍለ-ጊዜ የራሱን OAuth (`~/.codex/auth.json`) ይዞ በራሱ ያድሳል | **አይ** — 67router ቶከንን ወደ API በፍጹም ደግሞ አይልክም   |
 
 `codex-app-server` ቶከንን ደግሞ ስለማይልክ፣ የክፍለ-ጊዜ ድጋሚ-መላክ
 የአጠቃቀም ገደቡ አይመለከተውም። ነገር ግን፣ **በተዋቀረው app-server
@@ -20,7 +20,7 @@ URL ላይ ሊደረስበት የሚችል Codex CLI** ያስፈልገዋል፣ 
 ## 1. አርክቴክቸር
 
 ```
-┌─ OmniRoute መተግበሪያ ──────────────┐        ┌─ codex-app-server የጎን ኮንቴይነር ─────┐
+┌─ 67router መተግበሪያ ──────────────┐        ┌─ codex-app-server የጎን ኮንቴይነር ─────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ የችሎታ ቶከን)                  │  JSON  │  --ws-auth capability-token         │
@@ -73,7 +73,7 @@ docker compose --profile base --profile codex-app-server up -d
   `~/.codex` በጎን ኮንቴይነሩ (`codex-appserver-home`) ውስጥ ይስቀሉ እና የመግቢያ ደረጃውን ይዝለሉ።
 - **ይፋዊ ተጠቃሚ፣ codex በአካባቢው ያልተጫነ** — ችግር የለውም፦ የጎን ኮንቴይነሩ
   CLIውን ይዟል። ተጠቃሚው በዳሽቦርዱ በኩል ብቻ ማረጋገጫ ያደርጋል።
-- **Bare-metal OmniRoute (የጎን ኮንቴይነር የሌለው፣ የአስተናጋጅ codex)** —
+- **Bare-metal 67router (የጎን ኮንቴይነር የሌለው፣ የአስተናጋጅ codex)** —
   `OMNIROUTE_CODEX_APPSERVER_WS`ን ወደ ራስዎ `codex app-server` ያመልክቱ እና የአስተናጋጁ
   codex በመለያ መግባቱን ያረጋግጡ፤ binaryው ከሌለ "codex አልተጫነም" የሚለው ፍንጭ
   ይታያል።

@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Igbo)
+# Auto-Combo: Let 67router Pick the Best AI for You (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **Na nkenke**: Tọọ model gị ka ọ bụrụ `auto`, OmniRoute ga-ahọrọ onye na-enye AI kacha mma maka arịrịọ ọ bụla na-akpaghị aka. Nhazi ọ bụla adịghị mkpa.
+> **Na nkenke**: Tọọ model gị ka ọ bụrụ `auto`, 67router ga-ahọrọ onye na-enye AI kacha mma maka arịrịọ ọ bụla na-akpaghị aka. Nhazi ọ bụla adịghị mkpa.
 
 ---
 
 ## Ihe Ọ Na-eme
 
-Kama ịhọrọ otu model AI kpọmkwem (dịka GPT-4o ma ọ bụ Claude), ị nwere ike ikwe ka OmniRoute **họrọ nke kacha mma na-akpaghị aka** maka arịrịọ ọ bụla. Ọ na-atụle:
+Kama ịhọrọ otu model AI kpọmkwem (dịka GPT-4o ma ọ bụ Claude), ị nwere ike ikwe ka 67router **họrọ nke kacha mma na-akpaghị aka** maka arịrịọ ọ bụla. Ọ na-atụle:
 
 - **Ọnọdụ ọrụ** — Onye na-enye ọrụ ahụ ọ na-arụ ọrụ ugbu a?
 - **Ọsọ** — Olee otú ọ si eme ngwa ngwa?
@@ -18,7 +18,7 @@ Kama ịhọrọ otu model AI kpọmkwem (dịka GPT-4o ma ọ bụ Claude), ị
 - **Ogo** — Ọ dị mma n'ụdị ọrụ a?
 - **Ike ịrụ ọrụ** — Ọ ka nwere oke ojiji fọdụrụ?
 
-OmniRoute na-enye ndị niile na-enye ọrụ ị jikọtara akara ma họrọ nke kacha mma. Ọ bụrụ na nke ahụ ada, ọ na-anwale nke na-esote na-akpaghị aka.
+67router na-enye ndị niile na-enye ọrụ ị jikọtara akara ma họrọ nke kacha mma. Ọ bụrụ na nke ahụ ada, ọ na-anwale nke na-esote na-akpaghị aka.
 
 ---
 
@@ -30,7 +30,7 @@ OmniRoute na-enye ndị niile na-enye ọrụ ị jikọtara akara ma họrọ n
 model: "auto"
 ```
 
-**Nzọụkwụ 2**: Ọ bụ naanị ya! OmniRoute ga-ahụ maka ihe ndị ọzọ.
+**Nzọụkwụ 2**: Ọ bụ naanị ya! 67router ga-ahụ maka ihe ndị ọzọ.
 
 **Nzọụkwụ 3** (ọ bụghị iwu): Jiri variant maka ọrụ ụfọdụ:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Otu O Si Arụ Ọrụ (Ụdị Dị Mfe)
 
-Mgbe izitere arịrịọ nwere `model: "auto"`, OmniRoute:
+Mgbe izitere arịrịọ nwere `model: "auto"`, 67router:
 
 1. **Na-ele ndị niile na-enye ọrụ ị jikọtara anya** — Onye ọ bụla na-enye ọrụ ị gbakwunyere (OpenAI, Anthropic, Google, wdg.)
 2. **Na-enye onye ọ bụla akara**, na-atụle, n'etiti ihe ndị ọzọ:
@@ -86,7 +86,7 @@ Mgbe izitere arịrịọ nwere `model: "auto"`, OmniRoute:
    - Olee otú o si eme ngwa ngwa? (ọsọ)
    - Ọ dị mma n'ọrụ a? (ogo)
 3. **Na-ahọrọ nke kacha mma** — Onye na-enye ọrụ nwere akara kacha elu ga-enweta arịrịọ gị
-4. **Na-agbake na-akpaghị aka** — Ọ bụrụ na nke ahụ ada, OmniRoute ga-anwale nke na-esote na-akpaghị aka
+4. **Na-agbake na-akpaghị aka** — Ọ bụrụ na nke ahụ ada, 67router ga-anwale nke na-esote na-akpaghị aka
 
 ### Usoro Inye Akara
 
@@ -120,11 +120,11 @@ Variant ọ bụla na-eji ibu dị iche iche:
 
 ## Otu O Si Edozi Ọdịda
 
-OmniRoute nwere **ụzọ nchebe atọ**:
+67router nwere **ụzọ nchebe atọ**:
 
 ### 1. Nlaghachi-Akaraaka
 
-Ọ bụrụ na onye na-eweta ọrụ kachasị mma ada, OmniRoute na-anwale onye na-esote ya ozugbo. Ọ dịghị ihe ị ga-eme.
+Ọ bụrụ na onye na-eweta ọrụ kachasị mma ada, 67router na-anwale onye na-esote ya ozugbo. Ọ dịghị ihe ị ga-eme.
 
 ### 2. Ndozi-Onwe
 
@@ -136,13 +136,13 @@ OmniRoute nwere **ụzọ nchebe atọ**:
 
 ### 3. Nlaghachi Mberede
 
-Ọ bụrụ na ndị na-eweta ọrụ niile adaa, OmniRoute ga-eziga arịrịọ ahụ na ndị na-eweta ọrụ efu kwụsiri ike (dị ka Kiro ma ọ bụ Qoder) dị ka nhọrọ ikpeazụ.
+Ọ bụrụ na ndị na-eweta ọrụ niile adaa, 67router ga-eziga arịrịọ ahụ na ndị na-eweta ọrụ efu kwụsiri ike (dị ka Kiro ma ọ bụ Qoder) dị ka nhọrọ ikpeazụ.
 
 ---
 
 ## Nkwado Maka Ọtụtụ Akaụntụ
 
-Ọ bụrụ na ị nwere ọtụtụ akaụntụ maka otu onye na-eweta ọrụ (dịka ọmụmaatụ, igodo OpenAI abụọ), OmniRoute na-ewere nke ọ bụla dị ka **onye ndoro-ndoro dị iche**. Nke a pụtara:
+Ọ bụrụ na ị nwere ọtụtụ akaụntụ maka otu onye na-eweta ọrụ (dịka ọmụmaatụ, igodo OpenAI abụọ), 67router na-ewere nke ọ bụla dị ka **onye ndoro-ndoro dị iche**. Nke a pụtara:
 
 - Akaụntụ A ka nwere oke ojiji fọdụrụ → jiri ya
 - E tinyela oke ọsọ na Akaụntụ B → mafere ya
@@ -154,13 +154,13 @@ A na-enye akaụntụ ọ bụla akara n'adabereghị na ndị ọzọ, dabere n
 
 ## Nnyocha Bandit
 
-Mgbe ụfọdụ, OmniRoute na-eme **nnyocha** nke ndị na-eweta ọrụ ọhụrụ iji chọpụta nhọrọ ndị ka mma:
+Mgbe ụfọdụ, 67router na-eme **nnyocha** nke ndị na-eweta ọrụ ọhụrụ iji chọpụta nhọrọ ndị ka mma:
 
 - **Ndabara**: 5% nke arịrịọ na-aga na ndị na-eweta ọrụ ahọpụtara na-enweghị usoro
 - **Auto/smart**: Ọnụego nyocha 10%
 - **A na-agbanyụ ya** mgbe ihe karịrị 50% nke ndị na-eweta ọrụ anaghị arụ ọrụ nke ọma
 
-Nke a na-enyere OmniRoute aka ịmụta ndị na-eweta ọrụ kacha arụ ọrụ nke ọma maka usoro ojiji gị.
+Nke a na-enyere 67router aka ịmụta ndị na-eweta ọrụ kacha arụ ọrụ nke ọma maka usoro ojiji gị.
 
 ---
 
@@ -172,11 +172,11 @@ Nke a na-enyere OmniRoute aka ịmụta ndị na-eweta ọrụ kacha arụ ọr�
 
 ### "Gịnị ga-eme ma ọ bụrụ na onye na-eweta ọrụ akwụsị ịrụ ọrụ?"
 
-OmniRoute ga-amafe ya ozugbo ma nwalee onye na-esote ya. Ọ bụrụ na onye na-eweta ọrụ na-adaghachi ugboro ugboro, a ga-ewepụ ya nwa oge (nkeji 5-30). Ọ dịghị ihe ị ga-eme.
+67router ga-amafe ya ozugbo ma nwalee onye na-esote ya. Ọ bụrụ na onye na-eweta ọrụ na-adaghachi ugboro ugboro, a ga-ewepụ ya nwa oge (nkeji 5-30). Ọ dịghị ihe ị ga-eme.
 
 ### "Enwere m ike ịhụ onye na-eweta ọrụ e ji mee ihe?"
 
-Lelee nkụnyeisi nzaghachi — OmniRoute na-etinye onye na-eweta ọrụ na ụdị e ji mee ihe na nzaghachi ọ bụla.
+Lelee nkụnyeisi nzaghachi — 67router na-etinye onye na-eweta ọrụ na ụdị e ji mee ihe na nzaghachi ọ bụla.
 
 ### "Ọ na-amụta site n'ojiji m?"
 

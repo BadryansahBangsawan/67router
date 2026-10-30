@@ -4,7 +4,7 @@
 
 ---
 
-Fitar da rajistan kiran OmniRoute zuwa ma'ajiyar nazari ta waje secara ci gaba kuma a matakai.
+Fitar da rajistan kiran 67router zuwa ma'ajiyar nazari ta waje secara ci gaba kuma a matakai.
 
 Shafin dashboard na Logs yana adana tarihin buƙatu a SQLite (`call_logs`), wanda ake iyakancewa ta hanyar
 juyawa da tsare bayanai. Fitar da rajista tana aika wannan tarin bayanan a kan jadawali domin ya daɗe fiye da

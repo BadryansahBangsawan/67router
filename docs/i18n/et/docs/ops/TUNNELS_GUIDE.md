@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute saab teha oma kohaliku serveri (`http://localhost:20128`) avalikus
+67router saab teha oma kohaliku serveri (`http://localhost:20128`) avalikus
 internetis kättesaadavaks kolme tunnelitaustsüsteemi kaudu. See on kasulik järgmistel juhtudel:
 
 - Pilveteenuse pakkujate (Antigravity, Gemini, Cursor) OAuthi tagasikutsed, mis vajavad
@@ -15,7 +15,7 @@ internetis kättesaadavaks kolme tunnelitaustsüsteemi kaudu. See on kasulik jä
 - Kohaliku eksemplari jagamine meeskonnakaaslastega ilma virtuaalmasinat juurutamata.
 - Mobiilne, kaug- või võrguülene testimine.
 
-Kõiki kolme taustsüsteemi hallatakse protsessi sees — OmniRoute käivitab ja peatab aluseks
+Kõiki kolme taustsüsteemi hallatakse protsessi sees — 67router käivitab ja peatab aluseks
 oleva binaarfaili või SDK juhtpaneeli või REST API kaudu. Pöördpuhverserveri ega systemd
 seadistamine pole vajalik.
 
@@ -41,7 +41,7 @@ kahte režiimi, mille valik sõltub sellest, kas nimega tunneli konfiguratsioon 
 http://localhost:<apiPort>` ja parsib standardsest väljundist määratud `*.trycloudflare.com` URL-i.
   URL-id on ajutised ja muutuvad iga taaskäivituse korral.
 - **Nimega tunnel (valikuline).** Kui `CLOUDFLARED_CONFIG` osutab kohalikult hallatavale
-  cloudflaredi failile `config.yml`, käitab OmniRoute käsku `cloudflared tunnel --no-autoupdate
+  cloudflaredi failile `config.yml`, käitab 67router käsku `cloudflared tunnel --no-autoupdate
 --config <path> run`, mis annab teile **püsiva nimega hostinime**. Konfiguratsioon
   sisaldab tunneli UUID-d, `credentials-file`-i ja `ingress`-marsruutimist, mistõttu
   parameetrit `--url` ei edastata ning Zero Trusti juhtpaneeli luba pole vaja. `run` loeb
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ja parsib standardsest väljundist määratud `*.try
 
 Põhikäitumised:
 
-- **Automaatne installimine.** Esmakordsel kasutamisel laadib OmniRoute alla uusima `cloudflared`-i
+- **Automaatne installimine.** Esmakordsel kasutamisel laadib 67router alla uusima `cloudflared`-i
   binaarfaili ametlikest GitHubi väljalasetest (hallatud install asub kataloogis
   `DATA_DIR/cloudflared/`). Allalaaditud artefakti SHA256 kontrollitakse enne käivitamist
   väljalaske manifesti alusel.
@@ -67,7 +67,7 @@ Põhikäitumised:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Looge fail `~/.cloudflared/config.yml`, mis marsruudib teie hostinime OmniRoute'i kohalikku
+2. Looge fail `~/.cloudflared/config.yml`, mis marsruudib teie hostinime 67router'i kohalikku
    API porti (vaikimisi 20128):
 
    ```yaml
@@ -79,11 +79,11 @@ Põhikäitumised:
      - service: http_status:404
    ```
 
-3. Suunake OmniRoute konfiguratsioonile ja (taas)käivitage tunnel:
+3. Suunake 67router konfiguratsioonile ja (taas)käivitage tunnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # valikuline — alistab hostinime, mille OmniRoute esitab; vastasel juhul loetakse see
+   # valikuline — alistab hostinime, mille 67router esitab; vastasel juhul loetakse see
    # konfiguratsiooni esimesest ingress-reeglist:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Või juhtpaneeli kaudu: **Settings → Tunnels → Cloudflare**.
 
 ### Valikulised keskkonnamuutujad
 
-| Muutuja                                              | Otstarve                                                                                                                                                                         |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Kahendfaili tee alistamine. Kui see on määratud ja kehtiv, kasutab OmniRoute seda allalaadimise asemel.                                                                          |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transpordiprotokoll (vaikimisi `http2`; toetatud on ka `quic` ja `auto`).                                                                                                        |
-| `CLOUDFLARED_CONFIG`                                 | Kohalikult hallatava cloudflaredi faili `config.yml` tee. Kui see on määratud, käivitab OmniRoute kiirtunneli asemel **nimelise/püsiva** tunneli (`tunnel --config <path> run`). |
-| `CLOUDFLARED_HOSTNAME`                               | Alistab nimelise tunneli avaliku hostinime (nt `ai.example.com`). Kui see pole määratud, loetakse hostinimi konfiguratsiooni esimesest `ingress`-kirjest.                        |
+| Muutuja                                              | Otstarve                                                                                                                                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Kahendfaili tee alistamine. Kui see on määratud ja kehtiv, kasutab 67router seda allalaadimise asemel.                                                                          |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transpordiprotokoll (vaikimisi `http2`; toetatud on ka `quic` ja `auto`).                                                                                                       |
+| `CLOUDFLARED_CONFIG`                                 | Kohalikult hallatava cloudflaredi faili `config.yml` tee. Kui see on määratud, käivitab 67router kiirtunneli asemel **nimelise/püsiva** tunneli (`tunnel --config <path> run`). |
+| `CLOUDFLARED_HOSTNAME`                               | Alistab nimelise tunneli avaliku hostinime (nt `ai.example.com`). Kui see pole määratud, loetakse hostinimi konfiguratsiooni esimesest `ingress`-kirjest.                       |
 
 ## 2. ngrok
 
@@ -172,7 +172,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Vastus sisaldab määratud `publicUrl`-i (nt
 `https://abcd-1234.ngrok-free.app`). Kohandatud domeenid, piirkonnad ja reeglid
-tuleb seadistada ngroki juhtpaneelil — OmniRoute edastab SDK-le ainult kohaliku
+tuleb seadistada ngroki juhtpaneelil — 67router edastab SDK-le ainult kohaliku
 siht-URL-i.
 
 ## 3. Tailscale Funnel
@@ -186,14 +186,14 @@ URL-i kuju on `https://<machine>.<tailnet>.ts.net/`.
 
 ### Eeltingimused
 
-1. Installige Tailscale (või laske OmniRoute'il seda teha — vt allpool olevat `install` lõpp-punkti).
-2. Logige sisse (`tailscale login` või OmniRoute'i `login` lõpp-punkti kaudu).
+1. Installige Tailscale (või laske 67router'il seda teha — vt allpool olevat `install` lõpp-punkti).
+2. Logige sisse (`tailscale login` või 67router'i `login` lõpp-punkti kaudu).
 3. Lubage Funnel oma tailneti jaoks Tailscale'i halduskonsoolis:
    <https://login.tailscale.com/admin/settings/features>.
 
 Linuxis ja macOS-is vajab deemon (`tailscaled`) juhtimiseks käsku `sudo`.
 POST-lõpp-punktid aktsepteerivad valikulist välja `sudoPassword`, mis edastatakse
-väljakutse ajaks OmniRoute'i MITM-paroolivahemällu (`getCachedPassword` / `setCachedPassword`).
+väljakutse ajaks 67router'i MITM-paroolivahemällu (`getCachedPassword` / `setCachedPassword`).
 Windows kasutab vaikimisi teenuse installatsiooni asukohas
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -254,7 +254,7 @@ sõltumatu.
 
 ## OAuthi tagasikutsega seotud kaalutlused
 
-Kui avaldate OmniRoute’i tunneli kaudu, peavad juhtpaneel ja OAuthi vood
+Kui avaldate 67router’i tunneli kaudu, peavad juhtpaneel ja OAuthi vood
 koostama tagasikutse URL-id **avaliku** hostinime, mitte `localhost`-i alusel. Vastasel juhul
 suunab OAuthi pakkuja kasutaja tagasi URL-ile, millele tema serverid ligi ei pääse,
 ja käepigistus nurjub.
@@ -270,7 +270,7 @@ Määrake:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-ja taaskäivitage OmniRoute enne OAuthi käivitamist. Ajutiste Cloudflare Quick
+ja taaskäivitage 67router enne OAuthi käivitamist. Ajutiste Cloudflare Quick
 Tunnelite URL muutub pärast iga taaskäivitust, seega eelistage tootmiskeskkonna OAuthi jaoks
 reserveeritud domeeniga ngrokki või Tailscale Funnelit.
 
@@ -285,14 +285,14 @@ Juhtpaneel kuvab tunneli oleku jaotises **Seaded → Tunnelid**:
 - Viimane veateade, kui see on olemas.
 
 Programmiliseks seireks küsitlege iga taustsüsteemi `GET`-lõpp-punkte. Rohkem kui ühe
-taustsüsteemi samaaegne käitamine on lubatud; OmniRoute jälgib igaüht
+taustsüsteemi samaaegne käitamine on lubatud; 67router jälgib igaüht
 eraldi.
 
 ## Tõrkeotsing
 
 ### „cloudflared binaarfaili ei leitud”
 
-OmniRoute proovib esmakordsel kasutamisel automaatselt installida. Kui installimine on blokeeritud
+67router proovib esmakordsel kasutamisel automaatselt installida. Kui installimine on blokeeritud
 (piiratud võrk, puudub juurdepääs GitHubile), laadige `cloudflared` käsitsi alla aadressilt
 <https://github.com/cloudflare/cloudflared/releases> ja määrake
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

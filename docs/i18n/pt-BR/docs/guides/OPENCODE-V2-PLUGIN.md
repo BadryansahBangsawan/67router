@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` disponibiliza todo o seu catálogo do OmniRoute — modelos, combos e
+`@omniroute/opencode-plugin-v2` disponibiliza todo o seu catálogo do 67router — modelos, combos e
 auto-combos — no seletor de modelos do OpenCode v2, com nomes de exibição, preços e limites
 do nível gratuito.
 
@@ -15,7 +15,7 @@ compartilhado entre eles, portanto atualizar um nunca força a atualização do 
 ## Requisitos
 
 - OpenCode v2.
-- Um gateway OmniRoute acessível (`http://localhost:20128` por padrão).
+- Um gateway 67router acessível (`http://localhost:20128` por padrão).
 - Node.js 22 ou 24.
 
 ## Instalação
@@ -78,7 +78,7 @@ indicando o endpoint e o que foi perdido — assim, um seletor degradado nunca �
 | `baseURL`                        | obrigatório                                      | Raiz do gateway, somente `http(s)`; o sufixo `/v1` é adicionado quando necessário                                                                   |
 | `apiKey`                         | credencial conectada, depois `OMNIROUTE_API_KEY` | Chave de chat para `/v1/*`                                                                                                                          |
 | `managementReadToken`            | usa `apiKey` como alternativa                    | Chave para `/api/*` — geralmente **não** é a mesma                                                                                                  |
-| `displayName`                    | `"OmniRoute"`                                    | Nome do provedor no seletor                                                                                                                         |
+| `displayName`                    | `"67router"`                                     | Nome do provedor no seletor                                                                                                                         |
 | `timeoutMs`                      | `10000`                                          | Tempo limite de busca por endpoint (combinações automáticas usam 5s)                                                                                |
 | `modelCacheTtlMs`                | `300000`                                         | TTL do cache do catálogo; um snapshot em disco acelera inicializações a frio                                                                        |
 | `timeouts`                       | usa `timeoutMs` como alternativa                 | Limites por endpoint em ms: `models`, `combos`, `autoCombos`, `enrichment`                                                                          |
@@ -128,7 +128,7 @@ Defina `"geminiSanitization": false` para desativar esse comportamento.
 
 | Sintoma                                          | Causa                                                                                                                                     |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| O seletor não mostra nenhum modelo do OmniRoute  | Nenhuma chave foi resolvida (verifique o aviso de inicialização) ou o gateway está inacessível                                            |
+| O seletor não mostra nenhum modelo do 67router   | Nenhuma chave foi resolvida (verifique o aviso de inicialização) ou o gateway está inacessível                                            |
 | IDs de modelo brutos, sem combinações nem preços | Os endpoints de gerenciamento recusaram o token — defina `managementReadToken`                                                            |
 | Catálogo `freeOnly` curto ou vazio               | Nenhum token de gerenciamento ou token recusado — consulte a linha de resumo da atualização (contagem de `unmatched-free`) no log do host |
 | Uma sessão fixada em `opencode-<id>/…`           | O plugin v1 publicou `opencode-<id>`; a v2 publica apenas `<id>`, então selecione novamente o modelo em `<id>/…`                          |

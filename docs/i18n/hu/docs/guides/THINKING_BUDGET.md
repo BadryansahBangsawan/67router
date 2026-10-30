@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Forrás:** `open-sse/services/thinkingBudget.ts`
 
-A Gondolkodási keret szabályozza, hogy az OmniRoute **átírja-e a kliens gondolkodási/következtetési paramétereit** a szolgáltatók felé továbbítás során. A tömörítést, az útválasztást vagy a prompt-gyorsítótárat **nem** kapcsolja be vagy ki.
+A Gondolkodási keret szabályozza, hogy az 67router **átírja-e a kliens gondolkodási/következtetési paramétereit** a szolgáltatók felé továbbítás során. A tömörítést, az útválasztást vagy a prompt-gyorsítótárat **nem** kapcsolja be vagy ki.
 
 ## Módok
 
-| Mód                                 | Az OmniRoute működése                                                                                                     | Mikor használandó                                                                                                                                                                                                         |
+| Mód                                 | Az 67router működése                                                                                                      | Mikor használandó                                                                                                                                                                                                         |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (alapértelmezett) | Változatlanul hagyja a kliens mezőit (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` stb.). | **Codex / Desktop / bármely kliens, amelynek vezérelnie kell az erőfeszítési szintet és a következtetési összefoglalókat.** A látható gondolkodási panelekhez szükséges, amikor a kliens `reasoning.summary` értéket kér. |
 | **`auto`**                          | A szolgáltatónak való továbbítás előtt **eltávolít minden** gondolkodási/következtetési mezőt a kérés törzséből.          | Csak akkor, ha szándékosan azt szeretné, hogy a **szolgáltató** határozza meg az alapértelmezéseket, és **nincs** szüksége kliens által vezérelt gondolkodásra. **Nem** „gondolkodás automatikus megjelenítése”.          |
@@ -38,7 +38,7 @@ Ha egy kliens (például a Codex Desktop) a `reasoning: { effort: "ultra", summa
 | **Kombinált útválasztás / tartalék útvonalak** | Különálló funkció. Nem befolyásolja.                                                                                                                       |
 | **API-kulcsok tokenkorlátai / költségkeretek** | Különálló funkció. Nem befolyásolja.                                                                                                                       |
 | **Következtetés-visszajátszási gyorsítótár**   | Többfordulós újbóli beillesztés szigorú szolgáltatókhoz (DeepSeek, Kimi, Qwen-thinking, …). Nem azonos a Desktop „gondolkodás megjelenítése” funkciójával. |
-| **Az `encrypted_content` visszafejtése**       | **Lehetetlen.** Az OpenAI/Codex privát következtetési objektumai átláthatatlanok. Az OmniRoute soha nem fejti vissza őket (#7095 / #7176 / #7304).         |
+| **Az `encrypted_content` visszafejtése**       | **Lehetetlen.** Az OpenAI/Codex privát következtetési objektumai átláthatatlanok. Az 67router soha nem fejti vissza őket (#7095 / #7176 / #7304).          |
 
 ## Látható gondolkodás (Codex / Responses kliensek)
 
@@ -51,7 +51,7 @@ Ahhoz, hogy egy kliens megjelenítse a gondolkodási szöveget, az **alábbi fel
 Ha csak „titkosított privát gondolkodást” kap, akkor:
 
 - a mód **`auto`** volt (a kliens kérését eltávolították), vagy
-- a felsőbb réteg összefoglaló szöveg nélkül adott vissza `encrypted_content` tartalmat (szolgáltatói korlátozás; az OmniRoute csak helyőrzőt tud megjeleníteni, egyszerű szöveget nem).
+- a felsőbb réteg összefoglaló szöveg nélkül adott vissza `encrypted_content` tartalmat (szolgáltatói korlátozás; az 67router csak helyőrzőt tud megjeleníteni, egyszerű szöveget nem).
 
 ## API-példák
 
@@ -71,7 +71,7 @@ Séma (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Megőrzés / újraindítás
 
-Az érték a `thinkingBudget` beállításkulcs alatt tárolódik, és a folyamat indulásakor töltődik be (`hydrateThinkingBudgetConfig`). Adatbázison vagy bizonyos, nem API-alapú útvonalakon keresztül végzett módosítás után **indítsa újra az OmniRoute folyamatot**, hogy a memóriában lévő singleton megfeleljen a lemezen tárolt értéknek.
+Az érték a `thinkingBudget` beállításkulcs alatt tárolódik, és a folyamat indulásakor töltődik be (`hydrateThinkingBudgetConfig`). Adatbázison vagy bizonyos, nem API-alapú útvonalakon keresztül végzett módosítás után **indítsa újra az 67router folyamatot**, hogy a memóriában lévő singleton megfeleljen a lemezen tárolt értéknek.
 
 ## Üzemeltetői ellenőrzőlista
 

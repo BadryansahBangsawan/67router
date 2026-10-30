@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: OmniRoute asosiy maʼlumotlar ombori sifatida **WAL jurnallash bilan SQLite** dan, maxfiy maydonlarni saqlashda esa **AES-256-GCM** shifrlashidan foydalanadi. Ushbu qoʻllanmada sxema, migratsiyalar, zaxiralash/tiklash va operatsion yoʻriqnomalar yoritiladi.
+> **Qisqacha**: 67router asosiy maʼlumotlar ombori sifatida **WAL jurnallash bilan SQLite** dan, maxfiy maydonlarni saqlashda esa **AES-256-GCM** shifrlashidan foydalanadi. Ushbu qoʻllanmada sxema, migratsiyalar, zaxiralash/tiklash va operatsion yoʻriqnomalar yoritiladi.
 
 **Manbalar:**
 
@@ -19,7 +19,7 @@
 
 ## Nega SQLite?
 
-OmniRoute bir nechta sababga koʻra PostgreSQL/MySQL oʻrniga SQLiteʼni tanladi:
+67router bir nechta sababga koʻra PostgreSQL/MySQL oʻrniga SQLiteʼni tanladi:
 
 | Omil                   | SQLite                                       | PostgreSQL                                   |
 | ---------------------- | -------------------------------------------- | -------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute bir nechta sababga koʻra PostgreSQL/MySQL oʻrniga SQLiteʼni tanladi
 | **Zaxiralash**         | Bitta faylni nusxalash                       | `pg_dump` yoki fayl tizimi oniy nusxasi      |
 | **Foydalanish holati** | Har bir foydalanuvchi uchun oʻrnatish, ichki | Koʻp ijarachili SaaS                         |
 
-**Bitta foydalanuvchili, bitta nusxali** joylashtirishlar (OmniRouteʼning asosiy foydalanish holati) uchun SQLite sodda va tezroq.
+**Bitta foydalanuvchili, bitta nusxali** joylashtirishlar (67routerʼning asosiy foydalanish holati) uchun SQLite sodda va tezroq.
 
 ### WAL jurnallash
 
@@ -50,7 +50,7 @@ Standart kesh hajmi **65,536 KiB (64 MiB)**. SQLite manfiy
 `cache_size` qiymatini KiBʼdagi taxminiy yuqori chegara sifatida talqin qiladi va sahifalarni talabga qarab ajratadi.
 **Sozlamalar > Tizim va xotira > Kesh hajmi** boʻlimi **1 dan
 1,000,000 KiB** gacha boʻlgan butun sonlarni qabul qiladi; sozlamani saqlash uni ishlayotgan maʼlumotlar bazasi ulanishiga qoʻllaydi,
-OmniRoute esa saqlangan qiymatni ishga tushirish vaqtida tiklaydi.
+67router esa saqlangan qiymatni ishga tushirish vaqtida tiklaydi.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domen moduli arxitekturasi
 
-OmniRoute ma’lumotlar bazasida `src/lib/db/` ichida **110 ta yuqori darajadagi TypeScript moduli** mavjud. Har bir domen moduli:
+67router ma’lumotlar bazasida `src/lib/db/` ichida **110 ta yuqori darajadagi TypeScript moduli** mavjud. Har bir domen moduli:
 
 - Bir yoki bir nechta muayyan jadvalga egalik qiladi
 - Tiplashtirilgan CRUD funksiyalarini eksport qiladi
@@ -90,7 +90,7 @@ OmniRoute ma’lumotlar bazasida `src/lib/db/` ichida **110 ta yuqori darajadagi
 
 ### Yuqori darajadagi 110 ta ma’lumotlar bazasi moduli
 
-OmniRoute’da `src/lib/db/` ichida **110 ta yuqori darajadagi TypeScript fayli** mavjud. Quyida asosiy modullardan ayrimlari keltirilgan; to‘liq ro‘yxat uchun katalog tarkibiga qarang:
+67router’da `src/lib/db/` ichida **110 ta yuqori darajadagi TypeScript fayli** mavjud. Quyida asosiy modullardan ayrimlari keltirilgan; to‘liq ro‘yxat uchun katalog tarkibiga qarang:
 
 | Modul                   | Jadvallar                                                      | Vazifasi                                                                                   |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Taxminan 30 dan ortiq jadvallarning toʻliq roʻyxati `src/lib/db/migrations/` i
 
 ## Migratsiyalar
 
-OmniRoute `src/lib/db/migrations/` ichida **versiyalangan, idempotent migratsiyalar**dan foydalanadi. Har bir migratsiya `NNN_description.sql` shaklida nomlangan alohida SQL faylidir.
+67router `src/lib/db/migrations/` ichida **versiyalangan, idempotent migratsiyalar**dan foydalanadi. Har bir migratsiya `NNN_description.sql` shaklida nomlangan alohida SQL faylidir.
 
 ### Migratsiyalarni nomlash
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Orqaga mos kelmaydigan oʻzgarishlar** (masalan, ustunlarni oʻchirish) murakkab hisoblanadi. OmniRoute oldingi versiyaga qaytarishni qoʻllab-quvvatlamaydi — migratsiya qoʻllangach, sxemadagi oʻzgarish doimiy boʻlib qoladi. Shunga muvofiq rejalashtiring.
+> **Orqaga mos kelmaydigan oʻzgarishlar** (masalan, ustunlarni oʻchirish) murakkab hisoblanadi. 67router oldingi versiyaga qaytarishni qoʻllab-quvvatlamaydi — migratsiya qoʻllangach, sxemadagi oʻzgarish doimiy boʻlib qoladi. Shunga muvofiq rejalashtiring.
 
 ---
 
@@ -310,7 +310,7 @@ Unumdorlik nuqtayi nazaridan quyidagilar oddiy matn koʻrinishida saqlanadi:
 
 ## Shifrlashga oid ogohlantirishlar (v3.8.16+)
 
-OmniRoute ikkita shifrlash sxemasini shaffof tarzda boshqarish uchun **`migrateLegacyEncryptedString()`** funksiyasidan foydalanadi:
+67router ikkita shifrlash sxemasini shaffof tarzda boshqarish uchun **`migrateLegacyEncryptedString()`** funksiyasidan foydalanadi:
 
 - **Eski** (v3.5.0 dan oldingi): XOR asosidagi „shifrlash“ (haqiqiy kriptografiya emas)
 - **Joriy**: tegishli IV va autentifikatsiya tegiga ega AES-256-GCM
@@ -398,7 +398,7 @@ Ishlayotgan ma’lumotlar bazasini to‘xtalishsiz zaxiralash uchun:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Bu SQLite’ning onlayn zaxiralash API’sidan foydalanadi — OmniRoute ishlab turgan paytda bajarish xavfsiz.
+Bu SQLite’ning onlayn zaxiralash API’sidan foydalanadi — 67router ishlab turgan paytda bajarish xavfsiz.
 
 ---
 
@@ -441,7 +441,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Ixchamlash
 
-Uzoq vaqt ishlaydigan OmniRoute nusxalari vaqti-vaqti bilan `VACUUM` bajarilishidan foyda koʻradi:
+Uzoq vaqt ishlaydigan 67router nusxalari vaqti-vaqti bilan `VACUUM` bajarilishidan foyda koʻradi:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Barcha maʼlumotlarni tiklash (tozalash)
 
 ```bash
-# Avval OmniRouteʼni toʻxtating
+# Avval 67routerʼni toʻxtating
 omniroute stop
 
 # Maʼlumotlar bazasi faylini oʻchiring
@@ -612,7 +612,7 @@ Boshqa jarayon yozish qulfini ushlab turibdi. Quyidagilardan birini bajaring:
 
 - Boshqa jarayon tugashini kuting (`lsof | grep storage.sqlite` orqali tekshiring)
 - Boshqa jarayonni majburan toʻxtating
-- Muammo davom etsa, OmniRouteʼni qayta ishga tushiring
+- Muammo davom etsa, 67routerʼni qayta ishga tushiring
 
 ### "Tashqi kalit cheklovi bajarilmadi"
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Migratsiya tranzaksiya ichida bajarilgan, shuning uchun oʻzgarishlar ortga qaytarilgan boʻlishi kerak. Aks holda:
 
-1. **OmniRouteʼni toʻxtating** (keyingi urinishlarning oldini oling)
+1. **67routerʼni toʻxtating** (keyingi urinishlarning oldini oling)
 2. `sqlite3` yordamida **maʼlumotlar bazasi holatini tekshiring**
 3. Qisman bajarilgan migratsiyani **qoʻlda tuzating**
-4. OmniRouteʼni **qayta ishga tushiring** (migratsiya qayta bajariladi)
+4. 67routerʼni **qayta ishga tushiring** (migratsiya qayta bajariladi)
 
 Buning oldini olish uchun migratsiyalarni har doim avval nusxada sinab koʻring.
 

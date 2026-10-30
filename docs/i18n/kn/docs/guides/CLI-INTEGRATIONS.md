@@ -7,10 +7,10 @@
 ಹಂಚಿಕೆಯ ಎಕ್ಸಿಕ್ಯೂಟಬಲ್ ಮ್ಯಾನಿಫೆಸ್ಟ್, ನಿರ್ಬಂಧಿತ ಚೈಲ್ಡ್ ಪರಿಸರಗಳು ಮತ್ತು ಶಾಶ್ವತ
 Gemini ಸೆಟಪ್ಗಾಗಿ, [CLI ಲಾಂಚ್ ಒಪ್ಪಂದಗಳು](./CLI-LAUNCH-CONTRACTS.md) ನೋಡಿ.
 
-OmniRoute, ಕೋಡಿಂಗ್ CLI (Codex, Claude Code, OpenCode, Cline, …) ಅನ್ನು OmniRoute ಅನ್ನು
+67router, ಕೋಡಿಂಗ್ CLI (Codex, Claude Code, OpenCode, Cline, …) ಅನ್ನು 67router ಅನ್ನು
 ತನ್ನ ಬ್ಯಾಕೆಂಡ್ ಆಗಿ ಬಳಸುವಂತೆ ಕಾನ್ಫಿಗರ್ ಮಾಡುವ `setup-*` ಕಮಾಂಡ್ಗಳ ಸಮೂಹವನ್ನು ಒದಗಿಸುತ್ತದೆ — ಹೀಗಾಗಿ
-ಉಪಕರಣವು **ಒಂದೇ** ಎಂಡ್ಪಾಯಿಂಟ್ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುತ್ತದೆ ಮತ್ತು OmniRoute ಸ್ವಯಂ-ಫಾಲ್ಬ್ಯಾಕ್ನೊಂದಿಗೆ
-ಸರಿಯಾದ ಪ್ರೊವೈಡರ್ಗೆ ರೂಟ್ ಮಾಡುತ್ತದೆ. ಪ್ರತಿಯೊಂದು ಕಮಾಂಡ್ ಚಾಲನೆಯಲ್ಲಿರುವ OmniRouteನಿಂದ
+ಉಪಕರಣವು **ಒಂದೇ** ಎಂಡ್ಪಾಯಿಂಟ್ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುತ್ತದೆ ಮತ್ತು 67router ಸ್ವಯಂ-ಫಾಲ್ಬ್ಯಾಕ್ನೊಂದಿಗೆ
+ಸರಿಯಾದ ಪ್ರೊವೈಡರ್ಗೆ ರೂಟ್ ಮಾಡುತ್ತದೆ. ಪ್ರತಿಯೊಂದು ಕಮಾಂಡ್ ಚಾಲನೆಯಲ್ಲಿರುವ 67routerನಿಂದ
 (ಲೋಕಲ್ ಅಥವಾ ರಿಮೋಟ್) **ಲೈವ್** ಮಾಡೆಲ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಓದುತ್ತದೆ ಮತ್ತು **ನಿಮ್ಮ**
 ಯಂತ್ರದಲ್ಲಿ ಉಪಕರಣದ ಸ್ವಂತ ಕಾನ್ಫಿಗ್ ಫೈಲ್ ಅನ್ನು ಬರೆಯುತ್ತದೆ. ಉಪಕರಣವು ಬೆಂಬಲಿಸುವ ಎಲ್ಲೆಡೆ
 API ಕೀಯನ್ನು ಎನ್ವಿರಾನ್ಮೆಂಟ್ ವೇರಿಯಬಲ್ ಮೂಲಕ ಉಲ್ಲೇಖಿಸಲಾಗುತ್ತದೆ. ಉಪಕರಣಕ್ಕೆ ಸ್ಥಳೀಯವಾದ
@@ -55,7 +55,7 @@ omniroute providers remove <connection-id> --yes
 
 - [Claude Code ಕಾನ್ಫಿಗರೇಶನ್](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI ಕಾನ್ಫಿಗರೇಶನ್](./CODEX-CLI-CONFIGURATION.md)
-- [ರಿಮೋಟ್ ಮೋಡ್](./REMOTE-MODE.md) — ನಿಮ್ಮ ಲ್ಯಾಪ್ಟಾಪ್ನಿಂದ ರಿಮೋಟ್ OmniRoute (VPS / Tailnet) ಅನ್ನು ನಿಯಂತ್ರಿಸಿ
+- [ರಿಮೋಟ್ ಮೋಡ್](./REMOTE-MODE.md) — ನಿಮ್ಮ ಲ್ಯಾಪ್ಟಾಪ್ನಿಂದ ರಿಮೋಟ್ 67router (VPS / Tailnet) ಅನ್ನು ನಿಯಂತ್ರಿಸಿ
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot ಎಕ್ಸ್ಟೆನ್ಶನ್; ಇದು ಎಡಿಟರ್ನ ಒಳಗಿನಿಂದಲೇ
   ನಿಮಗಾಗಿ ಈ `setup-*` ಕಮಾಂಡ್ಗಳನ್ನು ಸಹ ಚಲಾಯಿಸಬಹುದು
 
@@ -89,7 +89,7 @@ omniroute providers remove <connection-id> --yes
 
 ಫ್ಲ್ಯಾಗ್ಗಳ ಕುರಿತ ಟಿಪ್ಪಣಿಗಳು (ಕಮಾಂಡ್ ಮೂಲದಲ್ಲಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ):
 
-- `--remote <url>` — ದೂರಸ್ಥ OmniRouteನಿಂದ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪಡೆಯುತ್ತದೆ (`--port`
+- `--remote <url>` — ದೂರಸ್ಥ 67routerನಿಂದ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪಡೆಯುತ್ತದೆ (`--port`
   ಮತ್ತು ಸಕ್ರಿಯ ಸಂದರ್ಭವನ್ನು ಅತಿಕ್ರಮಿಸುತ್ತದೆ). `--api-key <key>` ಆ ಸರ್ವರ್ಗಾಗಿ
   ರುಜುವಾತನ್ನು ಒದಗಿಸುತ್ತದೆ (`OMNIROUTE_API_KEY` env var ಅಥವಾ ಸಕ್ರಿಯ ಸಂದರ್ಭದ ಟೋಕನ್ಗೆ ಡೀಫಾಲ್ಟ್ ಆಗುತ್ತದೆ).
 - `--only <patterns>` — ಅಲ್ಪವಿರಾಮದಿಂದ ಬೇರ್ಪಡಿಸಿದ ಉಪಸ್ಟ್ರಿಂಗ್ಗಳು; ಹೊಂದಿಕೆಯಾಗುವ
@@ -110,7 +110,7 @@ omniroute providers remove <connection-id> --yes
   **codex** `-c model_providers.omniroute.*` args ಮೂಲಕ ಪಡೆಯುತ್ತವೆ. **Qwen ಮಾತ್ರ
   `--model` ಅನ್ನು ಕಡ್ಡಾಯವಾಗಿ ಅಗತ್ಯಪಡಿಸುವ run ಗುರಿಯಾಗಿದೆ** — ಅದಿಲ್ಲದೆ `omniroute run qwen`
   ಸ್ಪಷ್ಟ ದೋಷದೊಂದಿಗೆ `2` ಸ್ಥಿತಿಯಲ್ಲಿ ನಿರ್ಗಮಿಸುತ್ತದೆ.
-- `--port <port>` — ಸ್ಥಳೀಯ OmniRoute ಪೋರ್ಟ್ (ಡೀಫಾಲ್ಟ್ `20128`; `--remote`
+- `--port <port>` — ಸ್ಥಳೀಯ 67router ಪೋರ್ಟ್ (ಡೀಫಾಲ್ಟ್ `20128`; `--remote`
   ಹೊಂದಿಸಿದಾಗ ನಿರ್ಲಕ್ಷಿಸಲಾಗುತ್ತದೆ). ಎಲ್ಲಾ `setup-*` ಕಮಾಂಡ್ಗಳಲ್ಲಿ ಮತ್ತು ಎರಡೂ ಲಾಂಚರ್ಗಳಲ್ಲಿ ಇರುತ್ತದೆ.
 - `omniroute run` ನಿರ್ಗಮನ ಕೋಡ್ಗಳು: ಉಪ CLIಯ ಸ್ವಂತ ನಿರ್ಗಮನ ಕೋಡ್ ಅನ್ನು
   ಯಥಾವತ್ತಾಗಿ ರವಾನಿಸಲಾಗುತ್ತದೆ; `2` = ಅಮಾನ್ಯ ಆರ್ಗ್ಯುಮೆಂಟ್ಗಳು (ಬೆಂಬಲಿಸದ ಗುರಿ, ಅಗತ್ಯವಿರುವ
@@ -155,7 +155,7 @@ MITM, ಮತ್ತು ಮಾರ್ಗದರ್ಶಿ-ಮಾತ್ರದ ಕ್�
 
 ## ಸ್ಥಳೀಯ ಬಳಕೆ
 
-OmniRoute ಅನ್ನು `localhost:20128` ನಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿಟ್ಟುಕೊಂಡು, ನಿಮ್ಮ ಉಪಕರಣಕ್ಕಾಗಿ ಸೆಟಪ್ ಕಮಾಂಡ್ ಅನ್ನು
+67router ಅನ್ನು `localhost:20128` ನಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿಟ್ಟುಕೊಂಡು, ನಿಮ್ಮ ಉಪಕರಣಕ್ಕಾಗಿ ಸೆಟಪ್ ಕಮಾಂಡ್ ಅನ್ನು
 ಚಲಾಯಿಸಿ. ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಸ್ಥಳೀಯ ಸರ್ವರ್ನಿಂದ ಪಡೆಯಲಾಗುತ್ತದೆ.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 ಯಾವುದೇ ಕಾನ್ಫಿಗ್ ಬರೆಯದೆಯೇ ಪ್ರಾರಂಭಿಸಿ (env-ಇಂಜೆಕ್ಷನ್ ಮಾತ್ರ):
 
 ```bash
-omniroute launch                 # Claude Code → ಸ್ಥಳೀಯ OmniRoute
-omniroute launch-codex           # Codex CLI → ಸ್ಥಳೀಯ OmniRoute
+omniroute launch                 # Claude Code → ಸ್ಥಳೀಯ 67router
+omniroute launch-codex           # Codex CLI → ಸ್ಥಳೀಯ 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## ದೂರಸ್ಥ ಬಳಕೆ
 
-ಯಾವುದೇ ಸೆಟಪ್ ಕಮಾಂಡ್ ಅನ್ನು `--remote` + `--api-key` ಬಳಸಿ ದೂರಸ್ಥ OmniRoute ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ.
+ಯಾವುದೇ ಸೆಟಪ್ ಕಮಾಂಡ್ ಅನ್ನು `--remote` + `--api-key` ಬಳಸಿ ದೂರಸ್ಥ 67router ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ.
 ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ದೂರಸ್ಥ ಸರ್ವರ್ನಿಂದ ಪಡೆಯಲಾಗುತ್ತದೆ; ಕಾನ್ಫಿಗ್ ಅನ್ನು ನಿಮ್ಮ ಸ್ಥಳೀಯ ಯಂತ್ರದಲ್ಲಿ ಬರೆಯಲಾಗುತ್ತದೆ.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 ಎರಡೂ ರೂಪಗಳು ಒಂದು 5dive **ದೃಢೀಕರಣ ಪ್ರೊಫೈಲ್** ಅನ್ನು ಬರೆಯುತ್ತವೆ ಮತ್ತು ಆ ಪ್ರೊಫೈಲ್ಗೆ ಬದ್ಧವಾಗಿರುವ ಪ್ರತಿಯೊಂದು
-`claude` ಸೀಟ್ ನಂತರ OmniRoute ಜೊತೆಗೆ ಸಂವಹನ ನಡೆಸುತ್ತದೆ. ಈ ಗುರಿಗೆ ಮೂರು ವಿಷಯಗಳು ನಿರ್ದಿಷ್ಟವಾಗಿವೆ:
+`claude` ಸೀಟ್ ನಂತರ 67router ಜೊತೆಗೆ ಸಂವಹನ ನಡೆಸುತ್ತದೆ. ಈ ಗುರಿಗೆ ಮೂರು ವಿಷಯಗಳು ನಿರ್ದಿಷ್ಟವಾಗಿವೆ:
 
 - **ಇದು ಸಮೂಹದ ಹೋಸ್ಟ್ನಲ್ಲಿ root ಆಗಿ ಚಾಲನೆಯಾಗುತ್ತದೆ.** 5dive ನ ಕ್ರಿಯಾಪದಗಳು ಸ್ಥಳೀಯ systemd ಯೂನಿಟ್ಗಳು
   ಮತ್ತು root ಮಾಲೀಕತ್ವದ ಸ್ಥಿತಿ ಡೈರೆಕ್ಟರಿಯ ಮೇಲೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ; ದೂರಸ್ಥ ಮೋಡ್ ಇಲ್ಲ. ಈಗಾಗಲೇ root ಆಗಿರದಿದ್ದಾಗ
@@ -263,7 +263,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 API ಕೀಯನ್ನು **stdin** (`--api-key=-`) ಮೂಲಕ 5dive ಗೆ ನೀಡಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ ಅದು
 `ps` ಔಟ್ಪುಟ್ನಲ್ಲಿ ಎಂದಿಗೂ ಕಾಣಿಸುವುದಿಲ್ಲ.
 
-ಪ್ರೊಫೈಲ್ ಅನ್ನು ಒಂದೇ ಮಾಡೆಲ್ ಬದಲಿಗೆ OmniRoute **ಕಾಂಬೊ** ಕಡೆಗೆ ನಿರ್ದೇಶಿಸುವುದರಿಂದಲೇ
+ಪ್ರೊಫೈಲ್ ಅನ್ನು ಒಂದೇ ಮಾಡೆಲ್ ಬದಲಿಗೆ 67router **ಕಾಂಬೊ** ಕಡೆಗೆ ನಿರ್ದೇಶಿಸುವುದರಿಂದಲೇ
 ಸಮೂಹಕ್ಕೆ ಪ್ರೊವೈಡರ್ ಫೇಲ್ಓವರ್ ದೊರೆಯುತ್ತದೆ: ದಾಖಲಿಸಲಾದ ಚಾಲನೆಯಲ್ಲಿ ಪ್ರಾಥಮಿಕ ಅಂತ್ಯಬಿಂದು ಟರ್ನ್ನ ಮಧ್ಯದಲ್ಲಿ
 ಸಂಪೂರ್ಣವಾಗಿ ಸ್ಥಗಿತಗೊಂಡಾಗ
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), ಏಜೆಂಟ್ ತನ್ನ
@@ -273,7 +273,7 @@ API ಕೀಯನ್ನು **stdin** (`--api-key=-`) ಮೂಲಕ 5dive ಗೆ �
 
 ## ಮೂಲ URL ಸಂಪ್ರದಾಯಗಳು (ಯಾವ ಪರಿಕರಗಳಿಗೆ `/v1` ಬೇಕು)
 
-OmniRoute, OpenAI ಇಂಟರ್ಫೇಸ್ ಅನ್ನು `/v1` ನಲ್ಲಿ, Anthropic ಇಂಟರ್ಫೇಸ್ ಅನ್ನು ಮೂಲದಲ್ಲಿ,
+67router, OpenAI ಇಂಟರ್ಫೇಸ್ ಅನ್ನು `/v1` ನಲ್ಲಿ, Anthropic ಇಂಟರ್ಫೇಸ್ ಅನ್ನು ಮೂಲದಲ್ಲಿ,
 ಮತ್ತು ಸ್ಥಳೀಯ Gemini ಇಂಟರ್ಫೇಸ್ ಅನ್ನು `/v1beta` ನಲ್ಲಿ ಒದಗಿಸುತ್ತದೆ. ಪ್ರತಿಯೊಂದು ಏಕೀಕರಣವನ್ನೂ ಅದರ
 ಪರಿಕರವು ನಿರೀಕ್ಷಿಸುವ ಸ್ವರೂಪಕ್ಕೆ ಹೊಂದಿಸಲಾಗಿದೆ (ಕಮಾಂಡ್ ಮೂಲದಲ್ಲಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ):
 
@@ -295,7 +295,7 @@ OmniRoute, OpenAI ಇಂಟರ್ಫೇಸ್ ಅನ್ನು `/v1` ನಲ್ಲ
 ## ನವೀಕರಣದ ವೇಳೆ ಸ್ಥಳೀಯ ಅವಲಂಬನೆಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುವುದು: `--include=optional`
 
 ನೀವು `omniroute update` ಮೂಲಕ ನವೀಕರಿಸಿದಾಗ (ದೃಢೀಕರಿಸಿದ ನಂತರ ಅಥವಾ `--apply` ಜೊತೆಗೆ),
-OmniRoute ಅನುಸ್ಥಾಪನೆಯನ್ನು ಅಂತರ್ನಿರ್ಮಿತ `--include=optional` ಜೊತೆಗೆ ಚಾಲನೆ ಮಾಡುತ್ತದೆ:
+67router ಅನುಸ್ಥಾಪನೆಯನ್ನು ಅಂತರ್ನಿರ್ಮಿತ `--include=optional` ಜೊತೆಗೆ ಚಾಲನೆ ಮಾಡುತ್ತದೆ:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -325,14 +325,14 @@ omniroute update --dry-run
 `GOOGLE_GEMINI_BASE_URL` ಅನ್ನು ಗೌರವಿಸುತ್ತದೆ ಮತ್ತು ಅದರ ವಿರುದ್ಧ
 `POST /v1beta/models/<model>:generateContent` (ಹಾಗೂ
 `:streamGenerateContent?alt=sse`) ವಿನಂತಿಗಳನ್ನು ಕಳುಹಿಸುತ್ತದೆ — ಇದು ನಿಖರವಾಗಿ
-OmniRoute ನ ಸ್ಥಳೀಯ Gemini ಮೇಲ್ಮೈ (`/v1beta`) ಆಗಿದೆ. `omniroute run gemini` ಅದನ್ನು
+67router ನ ಸ್ಥಳೀಯ Gemini ಮೇಲ್ಮೈ (`/v1beta`) ಆಗಿದೆ. `omniroute run gemini` ಅದನ್ನು
 ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಜೋಡಿಸುತ್ತದೆ:
 
-- `GOOGLE_GEMINI_BASE_URL` → ಸಕ್ರಿಯ OmniRoute ಮೂಲ URL (ಮೂಲ, `/v1` ಇಲ್ಲ);
-- `GEMINI_API_KEY` → ಪರಿಹರಿಸಲಾದ OmniRoute ರುಜುವಾತು (ಆಯ್ಕೆ/env/ಸಂದರ್ಭ);
+- `GOOGLE_GEMINI_BASE_URL` → ಸಕ್ರಿಯ 67router ಮೂಲ URL (ಮೂಲ, `/v1` ಇಲ್ಲ);
+- `GEMINI_API_KEY` → ಪರಿಹರಿಸಲಾದ 67router ರುಜುವಾತು (ಆಯ್ಕೆ/env/ಸಂದರ್ಭ);
 - `gemini-api-key` ದೃಢೀಕರಣವನ್ನು ಆಯ್ಕೆಮಾಡುವ `.gemini/settings.json` ಹೊಂದಿರುವ
   **ತಾತ್ಕಾಲಿಕ ಪ್ರತ್ಯೇಕಿತ `GEMINI_CLI_HOME`**, ಇದರಿಂದ ಸಂಗ್ರಹಿತ Google OAuth ಅಧಿವೇಶನವು
-  (Code Assist) OmniRoute-ನಿರ್ದೇಶಿತ ಪ್ರಾರಂಭವನ್ನು ಎಂದಿಗೂ ಅತಿಕ್ರಮಿಸುವುದಿಲ್ಲ —
+  (Code Assist) 67router-ನಿರ್ದೇಶಿತ ಪ್ರಾರಂಭವನ್ನು ಎಂದಿಗೂ ಅತಿಕ್ರಮಿಸುವುದಿಲ್ಲ —
   ನಿರ್ಗಮನದ ನಂತರ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ;
 - **env ಸ್ವಚ್ಛತೆ**: ಉಪಪ್ರಕ್ರಿಯೆಯ env ನಿಂದ `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ಮತ್ತು `GOOGLE_GENAI_USE_GCA` ಅನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ
@@ -356,7 +356,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 ## ನೈಜ ಸ್ಮೋಕ್ ಸ್ವೀಪ್ (ಆಪ್ಟ್-ಇನ್)
 
 ನಿರ್ಣಾಯಕ ಲಾಂಚ್-ಪ್ಲಾನ್ ರಿಗ್ರೆಷನ್ ಪರೀಕ್ಷೆಗಳು CIಯಲ್ಲಿ ನಡೆಯುತ್ತವೆ (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). ನೈಜ OmniRoute ಸರ್ವರ್ನೊಂದಿಗೆ ನೈಜ
+`tests/unit/cli/run-execution.test.ts`). ನೈಜ 67router ಸರ್ವರ್ನೊಂದಿಗೆ ನೈಜ
 ಬೈನರಿಗಳನ್ನು ಪರಿಶೀಲಿಸಲು, ಆಪ್ಟ್-ಇನ್ ಹಾರ್ನೆಸ್
 `tests/integration/upstream-cli-smoke.int.test.ts`ನಲ್ಲಿ ಲಭ್ಯವಿದೆ. ಇದು ಎಂದಿಗೂ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರನ್ ಆಗುವುದಿಲ್ಲ
 (`RUN_CLI_SMOKE=1` ಇಲ್ಲದಿದ್ದರೆ ಪ್ರತಿಯೊಂದು ಉಪ-ಪರೀಕ್ಷೆಯನ್ನೂ ಬಿಟ್ಟುಬಿಡುತ್ತದೆ), ರುಜುವಾತಿನ ಮೌಲ್ಯವನ್ನು ಅಲ್ಲದೆ ಅದರ ಪರಿಸರ-ಚರದ

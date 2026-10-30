@@ -12,7 +12,7 @@ User-Agent, `anthropic-beta`-flag, Stainless SDK-headere osv.).
 
 ## Hurtig start — brug den indbyggede `agentrouter`-udbyder (anbefales)
 
-For de fleste brugere kræves der **ingen særlig opsætning**. OmniRoute leveres med en indbygget
+For de fleste brugere kræves der **ingen særlig opsætning**. 67router leveres med en indbygget
 `agentrouter`-udbyder, hvor det fulde Claude Code-wire-format allerede er indbygget (se
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Sådan bruger du den:
 
@@ -34,7 +34,7 @@ basis-URL'en, chatstien eller headersættet.
 
 ## Avanceret: Opret forbindelse via den Claude Code-kompatible udbydertype
 
-OmniRoute understøtter også AgentRouter (og lignende relæer) via den **Claude Code-
+67router understøtter også AgentRouter (og lignende relæer) via den **Claude Code-
 kompatible** udbydertype (`anthropic-compatible-cc-*`), som kommunikerer med
 Anthropic Messages API'et ved hjælp af det korrekte wire-format. En generisk
 `openai-compatible-chat`-udbyder, der peger på `https://agentrouter.org`, vil
@@ -47,14 +47,14 @@ Code.
 
 - En AgentRouter-konto og API-nøgle. Nye tilmeldinger får gratis kreditter via affiliate-
   linket i projektets [README](../README.md).
-- OmniRoute, der kører med funktionsflaget `ENABLE_CC_COMPATIBLE_PROVIDER` aktiveret
+- 67router, der kører med funktionsflaget `ENABLE_CC_COMPATIBLE_PROVIDER` aktiveret
   (se nedenfor).
 
 ## 1. Aktivér den CC-kompatible udbydertype
 
 Den Claude Code-kompatible udbydertype er beskyttet af et funktionsflag, fordi den
 sender trafik, som nøje efterligner den officielle Claude Code-klient. Aktivér den ved at
-indstille en miljøvariabel, før OmniRoute startes:
+indstille en miljøvariabel, før 67router startes:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

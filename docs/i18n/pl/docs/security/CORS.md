@@ -9,7 +9,7 @@ title: Konfiguracja CORS i bezpieczeństwo
 
 # Konfiguracja CORS i bezpieczeństwo
 
-OmniRoute kontroluje, które **origin przeglądarki** mogą odczytywać odpowiedzi cross-origin
+67router kontroluje, które **origin przeglądarki** mogą odczytywać odpowiedzi cross-origin
 z jednej, scentralizowanej listy dozwolonych (allowlist). Model jest **fail-closed domyślnie**:
 żaden origin nie jest dozwolony, dopóki go nie dodasz. Ta strona opisuje, jak resolve'owana jest
 allowlist, co faktycznie udostępnia `CORS_ALLOW_ALL=true` (i — co ważne — czego **nie**
@@ -50,13 +50,13 @@ w tej kolejności:
 ## Model zagrożeń — co naprawdę udostępnia `CORS_ALLOW_ALL=true`
 
 Ogólne ostrzeżenie OWASP („wildcard CORS = dowolna strona może wywołać Twoje API”) warto
-traktować poważnie, ale ekspozycja OmniRoute jest **węższa niż w przypadku ogólnym**,
+traktować poważnie, ale ekspozycja 67router jest **węższa niż w przypadku ogólnym**,
 z powodu jednego konkretnego faktu implementacyjnego:
 
 > **Centralne `applyCorsHeaders()` nigdy nie emituje
 > `Access-Control-Allow-Credentials`.** Przeglądarka nie udostępni _credentialed_
 > (z cookie) odpowiedzi cross-origin, dopóki serwer nie wyśle
-> `Access-Control-Allow-Credentials: true`. Wspólna ścieżka CORS OmniRoute nigdy
+> `Access-Control-Allow-Credentials: true`. Wspólna ścieżka CORS 67router nigdy
 > tego nie robi.
 
 Co to oznacza per powierzchnia, nawet przy `CORS_ALLOW_ALL=true`:
@@ -96,7 +96,7 @@ osobno względem tego przewodnika CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jeśli OmniRoute działa za reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Jeśli 67router działa za reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS to **nie** jedyna kontrola — loopback route
   guard nadal chroni route'y spawn-capable (zob.
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nie fałszuj
@@ -112,7 +112,7 @@ osobno względem tego przewodnika CORS.
 Nawet w dev rzadko potrzebujesz wildcarta. Zezwól tylko na dev serwery, których używasz:
 
 ```bash
-# Vite (5173) + Next.js (3000) dev servers calling a local OmniRoute
+# Vite (5173) + Next.js (3000) dev servers calling a local 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -132,14 +132,14 @@ restartu.
   originy management/dashboard poza jakąkolwiek permisywną konfiguracją; muszą pozostać ściśle
   fail-closed.
 
-## Przykład: odwrotne proxy przed OmniRoute
+## Przykład: odwrotne proxy przed 67router
 
-CORS jest egzekwowany przez samo OmniRoute, dlatego proxy zasadniczo **nie powinno** dodawać ani
+CORS jest egzekwowany przez samo 67router, dlatego proxy zasadniczo **nie powinno** dodawać ani
 modyfikować nagłówków `Access-Control-*` (podwójne nagłówki powodują problemy w przeglądarkach). Zakończ TLS
-i przekazuj ruch dalej — pozwól OmniRoute odpowiadać na żądania preflight:
+i przekazuj ruch dalej — pozwól 67router odpowiadać na żądania preflight:
 
 ```nginx
-# nginx — przekazuj ruch do OmniRoute; NIE wstrzykuj tutaj nagłówków Access-Control-*
+# nginx — przekazuj ruch do 67router; NIE wstrzykuj tutaj nagłówków Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -147,12 +147,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Zachowaj nagłówki przekazywania: proxy na tym samym hoście łączy się z adresu pętli zwrotnej i to one
-    # informują OmniRoute, że wywołujący nie jest lokalnym operatorem. Proxy, które nie dodaje żadnego z nich,
+    # informują 67router, że wywołujący nie jest lokalnym operatorem. Proxy, które nie dodaje żadnego z nich,
     # sprawia, że każdy zdalny wywołujący wygląda jak lokalny. Nigdy też nie ustawiaj X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Dozwolone źródła przeglądarkowe ustaw w OmniRoute (`CORS_ALLOWED_ORIGINS` lub na karcie
+Dozwolone źródła przeglądarkowe ustaw w 67router (`CORS_ALLOWED_ORIGINS` lub na karcie
 Security), a nie w proxy.
 
 ## Pliki źródłowe

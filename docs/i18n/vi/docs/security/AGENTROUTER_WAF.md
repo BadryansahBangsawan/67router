@@ -52,7 +52,7 @@ hoạt động. Đây là cùng một bộ giới hạn tốc độ ràng buộc
 các lỗi `400 content-blocked` gián đoạn khi Claude Code hoặc Codex CLI
 thực hiện nhiều lệnh gọi sử dụng công cụ / gửi tin nhắn liên tiếp trong thời gian ngắn.
 
-## Các biện pháp giảm thiểu đã được áp dụng trong OmniRoute
+## Các biện pháp giảm thiểu đã được áp dụng trong 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — cơ chế bảo vệ trước lưu lượng đột biến, áp dụng
    khoảng cách tối thiểu 500 ms giữa các yêu cầu gửi đi đến bất kỳ URL

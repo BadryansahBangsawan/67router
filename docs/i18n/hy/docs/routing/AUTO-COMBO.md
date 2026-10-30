@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Հայերեն)
+# 67router Auto-Combo Engine (Հայերեն)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # յուրաքանչյուր թոքենի համա
 
 **Ինչ է տեղի ունենում․**
 
-1. OmniRoute-ը հայտնաբերում է `auto/` նախածանցը `src/sse/handlers/chat.ts`-ում
+1. 67router-ը հայտնաբերում է `auto/` նախածանցը `src/sse/handlers/chat.ts`-ում
 2. Տվյալների բազայից հարցում է կատարում բոլոր **ակտիվ մատակարարների կապերի** համար
 3. Զտում և պահպանում է վավեր հավատարմագրեր ունեցողները (API բանալի կամ OAuth թոքեն)
 4. Որոշում է յուրաքանչյուր կապի մոդելը (`connection.defaultModel` կամ մատակարարի առաջին մոդելը)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # յուրաքանչյուր թոքենի համա
 - մոդելի արգելափակում՝ `isModelLocked(provider, connectionId, model)`
 
 Յուրաքանչյուր թեկնածու նաև պարունակում է այս API բանալու `excluded` դրոշը։ Բացառումները պահվում են
-ըստ API բանալու (`auto_candidate_overrides` աղյուսակ, միգրացիա `128`)․ OmniRoute-ը
+ըստ API բանալու (`auto_candidate_overrides` աղյուսակ, միգրացիա `128`)․ 67router-ը
 մեկ վարձակալով է և չունի `users` աղյուսակ, ուստի `apiKeyId`-ն իրական՝ ըստ կանչողի
 ինքնությանը ամենամոտ տարբերակն է։ Բացառումները պարտադրվում են թեկնածուների բազմության նեղ անցակետում՝
 `open-sse/services/autoCombo/virtualFactory.ts`-ում, մաքուր և միավորային թեստերով ստուգված
@@ -182,7 +182,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Երկու տարածված սխալ․
 
 - **`auto`-ն չի օգտագործում ձեր համակցությունները։** `auto`/`auto/*`-ն ստեղծում է իր սեփական՝ զրոյական կազմաձևմամբ թեկնածուների հավաքածուն և պահպանված համակցություններին դիմում է միայն այն դեպքում, երբ որևէ համակցություն բառացիորեն անվանված է `auto` (խորհուրդ չի տրվում)։ Համակցության միջոցով ուղղորդելու համար ուղարկեք դրա ճշգրիտ անունը, ոչ թե `auto`։
-- **`openrouter/auto`-ն OpenRouter-ի իրական վճարովի արտադրանք է** («Ավտոմատ կերպով լավագույն հասանելին»), ոչ թե OmniRoute-ի կեղծանուն։ Այն OpenRouter-ի գրանցամատյանի միակ ստատիկ մոդելային գրառումն է (`open-sse/config/providers/registry/openrouter/index.ts`) և առանձին է վճարագրվում։ Օգտագործեք Կարգավորումներ → Ուղղորդում → Թաքցնել վճարովի մոդելները՝ այն `auto` հավաքածուներից բացառելու համար։
+- **`openrouter/auto`-ն OpenRouter-ի իրական վճարովի արտադրանք է** («Ավտոմատ կերպով լավագույն հասանելին»), ոչ թե 67router-ի կեղծանուն։ Այն OpenRouter-ի գրանցամատյանի միակ ստատիկ մոդելային գրառումն է (`open-sse/config/providers/registry/openrouter/index.ts`) և առանձին է վճարագրվում։ Օգտագործեք Կարգավորումներ → Ուղղորդում → Թաքցնել վճարովի մոդելները՝ այն `auto` հավաքածուներից բացառելու համար։
 
 Այս փաստաթղթում նկարագրված սկզբնական շփոթության վերաբերյալ տե՛ս [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) և [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111)։
 
@@ -281,7 +281,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## Ուղղորդման բոլոր ռազմավարությունները
 
-OmniRoute-ի համակցման շարժիչն աջակցում է **ուղղորդման 20 ռազմավարության** (հայտարարված են `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`-ում)։ Auto Combo շարժիչն ինքնին հասանելի է `auto` ռազմավարության ներքո, իսկ մյուսները հասանելի են պահպանված համակցումների համար։
+67router-ի համակցման շարժիչն աջակցում է **ուղղորդման 20 ռազմավարության** (հայտարարված են `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`-ում)։ Auto Combo շարժիչն ինքնին հասանելի է `auto` ռազմավարության ներքո, իսկ մյուսները հասանելի են պահպանված համակցումների համար։
 
 | Ռազմավարություն     | Նկարագրություն                                                                                                                                                                                                                             |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -332,7 +332,7 @@ OmniRoute-ի համակցման շարժիչն աջակցում է **ուղղո�
 
 Առնվազն երկու մոդելով `pipeline` կոմբինացիան կարող է միացնել պլանավորող/կատարող երթուղավորումը՝
 `config.agenticOrchestration.enabled`-ի միջոցով։ Առաջին թիրախը պատասխանատու է պլանավորման և վերջնական պատասխանների համար,
-իսկ երկրորդ թիրախը ստեղծում է հաճախորդին բնորոշ գործիքների կանչեր։ OmniRoute-ը հարցման արձանագրությունից հայտնաբերում է
+իսկ երկրորդ թիրախը ստեղծում է հաճախորդին բնորոշ գործիքների կանչեր։ 67router-ը հարցման արձանագրությունից հայտնաբերում է
 գործիքի արդյունք պարունակող շարունակությունները, պլանավորողին հարցնում՝ արդյոք անհրաժեշտ է գործիքի ևս մեկ փուլ,
 և դինամիկ կերպով հաճախորդին ուղղված վերջնական քայլ է դարձնում կա՛մ կատարողին, կա՛մ պլանավորողին։
 
@@ -858,11 +858,11 @@ Tier 1-ին (բաժանորդագրություն) ընդգծված նախապա
 
 ### Պայմանական իրական smoke թեստեր (CI-ում ՉԵՆ գործարկվում՝ իրական մատակարարներ)
 
-| Հրաման                                 | Ինչ է այն անում                                                                                              |
-| :------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Իրական ուղղորդում նույն գործընթացի ներսում՝ `RUN_COMBO_LIVE=1`-ով․ ստեղծում է գործող OmniRoute DB-ի snapshot |
-| `npm run test:combo:live:vps`          | HTTP կանչեր գործող OmniRoute սերվերին (սահմանեք `COMBO_LIVE_BASE_URL`)                                       |
-| `npm run test:combo:live:vps:failover` | Նույնը՝ նախապես նախատեսված failover սցենարներով                                                              |
+| Հրաման                                 | Ինչ է այն անում                                                                                             |
+| :------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Իրական ուղղորդում նույն գործընթացի ներսում՝ `RUN_COMBO_LIVE=1`-ով․ ստեղծում է գործող 67router DB-ի snapshot |
+| `npm run test:combo:live:vps`          | HTTP կանչեր գործող 67router սերվերին (սահմանեք `COMBO_LIVE_BASE_URL`)                                       |
+| `npm run test:combo:live:vps:failover` | Նույնը՝ նախապես նախատեսված failover սցենարներով                                                             |
 
 Այս smoke թեստերը ստուգում են իրական հաղորդակցման ուղին (կոմբո → մատակարար → ավարտ)։ Դրանք
 միտումնավոր բացառված են CI-ից, քանի որ պահանջում են իրական հավատարմագրեր և VPS հասանելիություն։

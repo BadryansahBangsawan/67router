@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **fyra uppsättningar autentiseringsuppgifter** som kan auktorisera hanteringsrutter.
+67router har **fyra uppsättningar autentiseringsuppgifter** som kan auktorisera hanteringsrutter.
 De är inte utbytbara. Inference API-nycklar (`sk-…`) hanterar **inte** servern om de inte uttryckligen har beviljats `manage`- eller `admin`-omfattning.
 
 Kanonisk implementering: `src/lib/api/requireManagementAuth.ts`.

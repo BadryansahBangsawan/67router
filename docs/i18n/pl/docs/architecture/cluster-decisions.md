@@ -16,7 +16,7 @@ Dwa opt-in profile compose (`memory`, `bifrost`) dla istniejącego wdrożenia 8-
 
 ## Dlaczego to jest konserwatywne
 
-Istniejący kształt wdrożenia OmniRoute jest już szczupły i sprawdzony:
+Istniejący kształt wdrożenia 67router jest już szczupły i sprawdzony:
 
 - **`redis:7-alpine`** obsługuje obciążenie rate-limit/cache w skali produkcyjnej.
 - **SQLite + sqlite-vec + FTS5** pokrywają lokalną pamięć + wektory + wyszukiwanie tekstowe (zob. [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -51,7 +51,7 @@ Te dwa profile to **opcje scale-out dla wdrożeń, które uderzają w sufit SQLi
 
 - Uruchamiasz ≥3 repliki `omniroute` i chcesz scentralizowaną rotację providerów w jednym procesie Go.
 - Chcesz jedną powierzchnię audit/logging dla żądań upstream-provider we wszystkich replikach.
-- Chcesz skalowania horyzontalnego warstwy routingu Tier-1 niezależnie od replik OmniRoute.
+- Chcesz skalowania horyzontalnego warstwy routingu Tier-1 niezależnie od replik 67router.
 
 **Co dodaje:**
 

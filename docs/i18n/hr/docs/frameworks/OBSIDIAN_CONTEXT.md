@@ -13,7 +13,7 @@
 
 ## Što je to
 
-OmniRoute povezuje se s **Obsidian** trezorom kao **izvorom konteksta** — lokalnom bazom
+67router povezuje se s **Obsidian** trezorom kao **izvorom konteksta** — lokalnom bazom
 znanja u Markdownu koju agenti čitaju i zapisuju putem ugrađenog MCP poslužitelja.
 Integracija komunicira s dodatkom zajednice **Obsidian Local REST API** koji se izvodi
 unutar aplikacije za stolna računala, pa agenti mogu pretraživati bilješke, čitati,
@@ -80,7 +80,7 @@ prije pohrane.
 
 `src/app/api/settings/obsidian/webdav/route.ts` upravlja neobaveznom sinkronizacijom
 trezora putem WebDAV-a (koju pokreće `src/lib/obsidianSync.ts`). Omogućavanjem se
-OmniRoute usmjerava na lokalni direktorij trezora te se generira nasumični par
+67router usmjerava na lokalni direktorij trezora te se generira nasumični par
 WebDAV korisničkog imena i lozinke:
 
 ```bash
@@ -118,27 +118,27 @@ alata `obsidian_sync_*` zadržavaju svoje zasebno ponašanje tokena za sinkroniz
 ## MCP alati (22)
 
 Definirani su u `open-sse/mcp-server/tools/obsidianTools.ts`. Token/osnovni URL određuju se
-pri svakom pozivu (prvo prema API ključu, a zatim globalno). Alati koji pristupaju OmniRoute **poslužitelju za sinkronizaciju**
+pri svakom pozivu (prvo prema API ključu, a zatim globalno). Alati koji pristupaju 67router **poslužitelju za sinkronizaciju**
 (četiri alata `obsidian_sync_*`) dodatno zahtijevaju autentifikacijski token za sinkronizaciju konfiguriran
-u postavkama OmniRoutea.
+u postavkama 67routera.
 
 ### Alati za čitanje (`read:obsidian`)
 
-| Alat                         | Opis                                                                                                                          |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Provjerava je li lokalni REST API dostupan i autentificiran.                                                                  |
-| `obsidian_search_simple`     | Pretražuje puni tekst sadržaja bilješki; vraća isječke s putanjama datoteka.                                                  |
-| `obsidian_search_structured` | Pretražuje pomoću JSON Logic izraza (filtri and/or/regex/path).                                                               |
-| `obsidian_read_note`         | Čita bilješku prema putanji relativnoj u odnosu na trezor; po želji određeni naslov/blok/frontmatter.                         |
-| `obsidian_list_vault`        | Navodi datoteke i direktorije u trezoru (stablo stavki).                                                                      |
-| `obsidian_get_document_map`  | Dohvaća strukturu naslova bilješke kao mapu naslova → brojevi redaka.                                                         |
-| `obsidian_get_note_metadata` | Dohvaća frontmatter, oznake, poveznice te broj znakova/riječi bez punog sadržaja.                                             |
-| `obsidian_get_active_file`   | Dohvaća putanju i sadržaj trenutačno aktivne datoteke u Obsidianu.                                                            |
-| `obsidian_get_periodic_note` | Dohvaća dnevnu/tjednu/mjesečnu periodičnu bilješku za datum (danas ako je izostavljen).                                       |
-| `obsidian_get_tags`          | Navodi sve oznake trezora s njihovim učestalostima.                                                                           |
-| `obsidian_list_commands`     | Navodi dostupne ID-ove naredbi Obsidiana (upotrebljava se s `obsidian_execute_command`).                                      |
-| `obsidian_sync_status`       | Status OmniRoute poslužitelja za sinkronizaciju: radi li, naziv trezora, priključak, vrijeme rada, posljednja sinkronizacija. |
-| `obsidian_sync_conflicts`    | Navodi neriješene sukobe sinkronizacije (putanja, putanja sukoba, vrijeme otkrivanja).                                        |
+| Alat                         | Opis                                                                                                                         |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Provjerava je li lokalni REST API dostupan i autentificiran.                                                                 |
+| `obsidian_search_simple`     | Pretražuje puni tekst sadržaja bilješki; vraća isječke s putanjama datoteka.                                                 |
+| `obsidian_search_structured` | Pretražuje pomoću JSON Logic izraza (filtri and/or/regex/path).                                                              |
+| `obsidian_read_note`         | Čita bilješku prema putanji relativnoj u odnosu na trezor; po želji određeni naslov/blok/frontmatter.                        |
+| `obsidian_list_vault`        | Navodi datoteke i direktorije u trezoru (stablo stavki).                                                                     |
+| `obsidian_get_document_map`  | Dohvaća strukturu naslova bilješke kao mapu naslova → brojevi redaka.                                                        |
+| `obsidian_get_note_metadata` | Dohvaća frontmatter, oznake, poveznice te broj znakova/riječi bez punog sadržaja.                                            |
+| `obsidian_get_active_file`   | Dohvaća putanju i sadržaj trenutačno aktivne datoteke u Obsidianu.                                                           |
+| `obsidian_get_periodic_note` | Dohvaća dnevnu/tjednu/mjesečnu periodičnu bilješku za datum (danas ako je izostavljen).                                      |
+| `obsidian_get_tags`          | Navodi sve oznake trezora s njihovim učestalostima.                                                                          |
+| `obsidian_list_commands`     | Navodi dostupne ID-ove naredbi Obsidiana (upotrebljava se s `obsidian_execute_command`).                                     |
+| `obsidian_sync_status`       | Status 67router poslužitelja za sinkronizaciju: radi li, naziv trezora, priključak, vrijeme rada, posljednja sinkronizacija. |
+| `obsidian_sync_conflicts`    | Navodi neriješene sukobe sinkronizacije (putanja, putanja sukoba, vrijeme otkrivanja).                                       |
 
 ### Alati za pisanje (`write:obsidian`)
 

@@ -31,7 +31,7 @@ Ga kowane ɗan takara a cikin rukunin (`open-sse/services/autoCombo/virtualFacto
 nan da nan bayan `filterPaidOnlyCandidates`):
 
 1. **Babu shi kwata-kwata a cikin `FREE_MODEL_BUDGETS`** → a cire shi. Wannan ya haɗa da samfuran da ake biya da gaske da duk
-   wani mai samarwa/samfuri da OmniRoute bai riga ya rarraba ba — sabbin ’yan takara suna farawa a matsayin waɗanda aka cire, ba waɗanda aka haɗa ba.
+   wani mai samarwa/samfuri da 67router bai riga ya rarraba ba — sabbin ’yan takara suna farawa a matsayin waɗanda aka cire, ba waɗanda aka haɗa ba.
 2. **`freeType: "keyless"`** → zai wuce nan take, **amma sai ga ɗan takarar da ya zo da gaske
    ta hanyar da ba ta buƙatar tantancewa ba** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Babu bayanan shiga ga wannan
@@ -87,7 +87,7 @@ matatar da kanta ta tabbatar — ba wani asusu daban da ba a tabbatar da shi ba 
 (lamuran ketarewa ba tare da maɓalli ba A/B/C, lamuran asusu da yawa 1-5).
 
 `discovered automatically`: mai samarwa/samfuri da aka fitar gobe tare da metadata da ya dace (a cikin
-kundin, tare da adaftar amfani, `hardStopGuaranteed: true`) zai kasance mai amfani da zarar OmniRoute ya
+kundin, tare da adaftar amfani, `hardStopGuaranteed: true`) zai kasance mai amfani da zarar 67router ya
 san da shi — babu canjin lamba, babu shigarwar jerin izini, babu abin da za a gyara a wannan module. Wanda
 aka cire daga kundin shima zai ɓace ta hanya ɗaya. Duba
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` don hujjar hana komawar matsalar (ta hanyar

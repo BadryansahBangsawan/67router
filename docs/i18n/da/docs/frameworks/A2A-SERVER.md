@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Dansk)
+# 67router A2A Server Documentation (Dansk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Agent-til-agent-protokol v0.3 — OmniRoute som en intelligent routingagent
+> Agent-til-agent-protokol v0.3 — 67router som en intelligent routingagent
 
 A2A-grænsefladen har to sider:
 
@@ -19,7 +19,7 @@ Opgaver spores af `A2ATaskManager` (`src/lib/a2a/taskManager.ts`, som standard 5
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Returnerer agentkortet, der beskriver OmniRoutes funktioner, færdigheder og godkendelseskrav.
+Returnerer agentkortet, der beskriver 67routers funktioner, færdigheder og godkendelseskrav.
 
 Agentkortets `version`-felt hentes fra `process.env.npm_package_version` (se `src/app/.well-known/agent.json/route.ts:13`), så det automatisk holdes synkroniseret med `package.json` ved hver udgivelse.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Tilgængelige færdigheder
 
-OmniRoute eksponerer 6 A2A-færdigheder, der er konfigureret i `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Hvert færdighedsmodul ligger i `src/lib/a2a/skills/`.
+67router eksponerer 6 A2A-færdigheder, der er konfigureret i `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Hvert færdighedsmodul ligger i `src/lib/a2a/skills/`.
 
 | Færdighed          | ID                   | Beskrivelse                                                                                                                                          | Tags                       | Eksempler                                   |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------ |
-| Smart Routing      | `smart-routing`      | Dirigerer en prompt gennem den optimale udbyder/kombination ved hjælp af OmniRoutes combo-motor + scoring                                            | routing, providers         | "Dirigér denne prompt via den bedste model" |
+| Smart Routing      | `smart-routing`      | Dirigerer en prompt gennem den optimale udbyder/kombination ved hjælp af 67routers combo-motor + scoring                                             | routing, providers         | "Dirigér denne prompt via den bedste model" |
 | Quota Management   | `quota-management`   | Rapporterer kvotetilstand pr. udbyder og hjælper kaldere med at beslutte, hvornår der skal begrænses/skiftes                                         | quota, providers           | "Tjek kvoten for anthropic"                 |
 | Provider Discovery | `provider-discovery` | Viser installerede udbydere med funktioner, free-tier-flag og OAuth-status                                                                           | providers, discovery       | "Hvilke udbydere er tilgængelige?"          |
 | Cost Analysis      | `cost-analysis`      | Estimerer omkostningerne ved en forespørgsel/samtale ud fra kataloget + det seneste forbrug                                                          | cost, usage                | "Estimér omkostningerne for denne samtale"  |
 | Health Report      | `health-report`      | Samler circuit breaker-, cooldown- og lockout-tilstand pr. udbyder                                                                                   | health, resilience         | "Vis sundhedsstatus for alle udbydere"      |
-| List Capabilities  | `list-capabilities`  | Returnerer hele Agent Skills-kataloget med 45 poster (23 API + 21 CLI + 1 config) som en markdown-tabel med rå SKILL.md-URL'er til kontekstinjektion | catalog, discovery, skills | "List alle OmniRoute-funktioner"            |
+| List Capabilities  | `list-capabilities`  | Returnerer hele Agent Skills-kataloget med 45 poster (23 API + 21 CLI + 1 config) som en markdown-tabel med rå SKILL.md-URL'er til kontekstinjektion | catalog, discovery, skills | "List alle 67router-funktioner"             |
 
 > Agent Card bør holdes ajour med det aktuelle katalog over 375 udbydere; udbyderantal og free/no-auth-metadata hentes fra runtime-registret.
 
 ### Detaljer om `list-capabilities`-færdigheden
 
-`list-capabilities`-færdigheden er særligt nyttig for eksterne agenter, der har brug for at opdage, hvad OmniRoute eksponerer, før de sender API-kald. Den returnerer en struktureret markdown-tabel som artefakt:
+`list-capabilities`-færdigheden er særligt nyttig for eksterne agenter, der har brug for at opdage, hvad 67router eksponerer, før de sender API-kald. Den returnerer en struktureret markdown-tabel som artefakt:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ JSON-RPC-slutpunktet `/a2a` er det kanoniske A2A-indgangspunkt. REST-slutpunkter
 | `/.well-known/agent.json`    | GET    | Agentkort (A2A-registrering)                                      | (offentlig, cachelagret i 3600s)              |
 | `/api/a2a/tasks`             | POST   | Indgående delegering til OmniConductor-flåden (Conductor PRD RF5) | Bearer mod `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Indgående Conductor-delegering (`POST /api/a2a/tasks`):** Eksterne A2A-agenter delegerer programmeringsarbejde til OmniConductor-flåden gennem OmniRoute. Brødtekst: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — kun Conductor-flådens færdigheder (dem, der annonceres på agentkortet) kan delegeres; `metadata.conductor.repo.url` er påkrævet (flåden arbejder på git-repositorier). Ruten oversættes til hubbens `POST /v1/tasks` ved hjælp af `CONDUCTOR_ORCHESTRATOR_TOKEN` på serversiden (med `CONDUCTOR_HUB_TOKEN` som reserve) og returnerer `201 { conductor_task_id, state: "submitted" }`; opgavetilstande sendes tilbage gennem SSE→A2A-spejlingen (RF1) og kan ses via `GET /api/a2a/tasks?skill=conductor`.
+**Indgående Conductor-delegering (`POST /api/a2a/tasks`):** Eksterne A2A-agenter delegerer programmeringsarbejde til OmniConductor-flåden gennem 67router. Brødtekst: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — kun Conductor-flådens færdigheder (dem, der annonceres på agentkortet) kan delegeres; `metadata.conductor.repo.url` er påkrævet (flåden arbejder på git-repositorier). Ruten oversættes til hubbens `POST /v1/tasks` ved hjælp af `CONDUCTOR_ORCHESTRATOR_TOKEN` på serversiden (med `CONDUCTOR_HUB_TOKEN` som reserve) og returnerer `201 { conductor_task_id, state: "submitted" }`; opgavetilstande sendes tilbage gennem SSE→A2A-spejlingen (RF1) og kan ses via `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-Az `@omniroute/opencode-plugin-v2` a teljes OmniRoute-katalógust — modelleket, kombókat és
+Az `@omniroute/opencode-plugin-v2` a teljes 67router-katalógust — modelleket, kombókat és
 automatikus kombókat — elérhetővé teszi az OpenCode v2 modellválasztójában, megjelenítési nevekkel,
 árakkal és ingyenes keretekkel együtt.
 
@@ -15,7 +15,7 @@ osztanak meg egymással, így az egyik frissítése soha nem kényszeríti ki a 
 ## Követelmények
 
 - OpenCode v2.
-- Egy elérhető OmniRoute-átjáró (alapértelmezés szerint `http://localhost:20128`).
+- Egy elérhető 67router-átjáró (alapértelmezés szerint `http://localhost:20128`).
 - Node.js 22 vagy 24.
 
 ## Telepítés
@@ -80,7 +80,7 @@ adatok vesztek el — így a korlátozott modellválasztó oka sosem marad rejt�
 | `baseURL`                        | kötelező                                                  | Az átjáró gyökér-URL-je, csak `http(s)`; a `/v1` utótag szükség szerint automatikusan hozzáadódik                                                   |
 | `apiKey`                         | csatlakoztatott hitelesítő adat, majd `OMNIROUTE_API_KEY` | Csevegési kulcs a `/v1/*` végpontokhoz                                                                                                              |
 | `managementReadToken`            | visszaáll az `apiKey` értékére                            | Kulcs az `/api/*` végpontokhoz — általában **nem** ugyanaz                                                                                          |
-| `displayName`                    | `"OmniRoute"`                                             | A szolgáltató neve a választóban                                                                                                                    |
+| `displayName`                    | `"67router"`                                              | A szolgáltató neve a választóban                                                                                                                    |
 | `timeoutMs`                      | `10000`                                                   | Végpontonkénti lekérési időkorlát (az automatikus kombinációknál 5 másodperc)                                                                       |
 | `modelCacheTtlMs`                | `300000`                                                  | A katalógus-gyorsítótár TTL-je; egy lemezen tárolt pillanatkép felgyorsítja a hidegindításokat                                                      |
 | `timeouts`                       | visszaáll a `timeoutMs` értékére                          | Végpontonkénti időkeretek ezredmásodpercben: `models`, `combos`, `autoCombos`, `enrichment`                                                         |
@@ -118,7 +118,7 @@ A kikapcsolásához állítsa be a `"geminiSanitization": false` értéket.
 
 | Tünet                                                         | Ok                                                                                                                                                                |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A választó nem jelenít meg OmniRoute-modellt                  | Nem sikerült kulcsot feloldani (ellenőrizze az indítási figyelmeztetést), vagy az átjáró nem érhető el                                                            |
+| A választó nem jelenít meg 67router-modellt                   | Nem sikerült kulcsot feloldani (ellenőrizze az indítási figyelmeztetést), vagy az átjáró nem érhető el                                                            |
 | Nyers modellazonosítók, nincsenek kombinációk, nincsenek árak | A felügyeleti végpontok elutasították a tokent — állítsa be a `managementReadToken` értékét                                                                       |
 | Rövid vagy üres `freeOnly` katalógus                          | Nincs felügyeleti token, vagy a tokent elutasították — olvassa el a frissítési összegző sort (`unmatched-free` darabszám) a gazdagép naplójában                   |
 | Egy munkamenet az `opencode-<id>/…` elemhez van rögzítve      | A v1 beépülő modul az `opencode-<id>` azonosítót tette közzé; a v2 csak a nyers `<id>` azonosítót teszi közzé, ezért válassza ki újra a modellt az `<id>/…` alatt |

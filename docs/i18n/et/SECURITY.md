@@ -6,7 +6,7 @@
 
 ## Turvanõrkustest teatamine
 
-Kui avastate OmniRoute'is turvanõrkuse, teatage sellest vastutustundlikult:
+Kui avastate 67router'is turvanõrkuse, teatage sellest vastutustundlikult:
 
 1. **ÄRGE** avage avalikku GitHubi probleemi
 2. Kasutage [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Pärast versiooni 3.8.59 on järgmine versioon **3.9.0**, mis avab pikaajalise t
 
 ## Turbearhitektuur
 
-OmniRoute rakendab mitmekihilist turbemudelit:
+67router rakendab mitmekihilist turbemudelit:
 
 ```
 Päring → CORS → Autoriseerimiskonveier (liigitamine → poliitikad → jõustamine)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Kaitsemeetmete raamistik
 
-OmniRoute sisaldab käigult uuesti laaditavat **kaitsemeetmete registrit** (`src/lib/guardrails/`), milles on kolm prioriteedi järgi järjestatud sisseehitatud kaitsemeedet:
+67router sisaldab käigult uuesti laaditavat **kaitsemeetmete registrit** (`src/lib/guardrails/`), milles on kolm prioriteedi järgi järjestatud sisseehitatud kaitsemeedet:
 
 | Kaitsemeede        | Prioriteet | Eesmärk                                                                                                    |
 | ------------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |

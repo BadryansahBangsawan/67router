@@ -4,7 +4,7 @@
 
 ---
 
-> **Resumindo**: o mecanismo de compactação do OmniRoute é **conectável** — você pode registrar mecanismos personalizados, distribuir pacotes de idiomas para novos idiomas e compor pipelines empilhados. Este guia mostra como.
+> **Resumindo**: o mecanismo de compactação do 67router é **conectável** — você pode registrar mecanismos personalizados, distribuir pacotes de idiomas para novos idiomas e compor pipelines empilhados. Este guia mostra como.
 
 **Guias relacionados:**
 
@@ -232,7 +232,7 @@ no seletor de estratégias por meio de seu `id`. Teste a integração compondo-o
 
 ## Criando pacotes de idioma
 
-A compactação no estilo Caveman usa **pacotes de regras específicos para cada idioma** para lidar com expressões de preenchimento, linguagem evasiva e padrões prolixos em cada idioma natural. O OmniRoute inclui **6 pacotes de idioma**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+A compactação no estilo Caveman usa **pacotes de regras específicos para cada idioma** para lidar com expressões de preenchimento, linguagem evasiva e padrões prolixos em cada idioma natural. O 67router inclui **6 pacotes de idioma**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Estrutura do pacote
 
@@ -391,7 +391,7 @@ A saída do mecanismo N torna-se a entrada do mecanismo N+1.
 
 ### Modos de Compressão
 
-O OmniRoute seleciona **UM modo por solicitação** com base na configuração, nos limites de acionamento automático e nas substituições de combos.
+O 67router seleciona **UM modo por solicitação** com base na configuração, nos limites de acionamento automático e nas substituições de combos.
 Os modos disponíveis são definidos em `open-sse/services/compression/types.ts` (tipo `CompressionMode`):
 
 | Modo         | Mecanismos             | Caso de uso                                                                                                                                                                                                                                          |
@@ -511,10 +511,10 @@ Para defini-lo por meio da configuração, defina `mode: "stacked"` e forneça o
 
 ## Política de sincronização com projetos upstream
 
-Os mecanismos de compressão do OmniRoute dão crédito a vários projetos upstream no README
+Os mecanismos de compressão do 67router dão crédito a vários projetos upstream no README
 ("inspirado por RTK, Caveman, LLMLingua-2, Troglodita"). Uma dúvida comum entre
 colaboradores é: **quando o RTK upstream adiciona um novo filtro de ferramenta ou o Caveman adiciona um pacote de
-regras, como isso chega ao OmniRoute?** Esta seção contém a resposta oficial.
+regras, como isso chega ao 67router?** Esta seção contém a resposta oficial.
 
 ### Cópias incorporadas vs. implementações independentes
 
@@ -535,7 +535,7 @@ uma cópia upstream da qual executar `git pull` — e é exatamente por isso que
 **Não há rastreamento automatizado de versões upstream nem um rótulo
 `compression-sync`** — por decisão de projeto. Como os mecanismos são reimplementações, um filtro
 upstream do RTK ou um pacote de regras do Caveman não é integrado como código; ele é **reexpresso como uma nova
-regra/filtro no próprio formato do OmniRoute** (consulte
+regra/filtro no próprio formato do 67router** (consulte
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) e é incorporado de maneira pontual por meio
 de um PR normal. Os pontos de extensão acima (mecanismo personalizado, pacote de idioma, filtro RTK)
 são a forma oficialmente aceita de contribuir com um deles.
@@ -549,14 +549,14 @@ Exemplos recentes exatamente desse fluxo:
 ### Headroom (proxy de compressão de entrada)
 
 O Headroom é **totalmente interno** — um snapshot fixado e incorporado do codec `gcf`, além das
-camadas `smartcrusher` / `toon` / `tabular` próprias do OmniRoute. Não há um
+camadas `smartcrusher` / `toon` / `tabular` próprias do 67router. Não há um
 upstream ativo para acompanhar além da cópia incorporada; as atualizações do `gcf` são feitas
 manualmente quando o codec muda e são validadas novamente em relação à verificação do orçamento de compressão
 (`check:compression-budget`).
 
 ### Como propor uma melhoria inspirada em um projeto upstream
 
-1. **Não incorpore o código** — reexpresse a regra/filtro upstream no formato do OmniRoute.
+1. **Não incorpore o código** — reexpresse a regra/filtro upstream no formato do 67router.
 2. Adicione-a por meio do ponto de extensão correspondente abaixo (pacote de idioma, filtro RTK ou
    mecanismo personalizado).
 3. Mencione o projeto upstream na descrição do PR (atribuição), em vez de

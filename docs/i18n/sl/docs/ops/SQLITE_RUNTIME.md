@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ob zagonu razreši svoj gonilnik SQLite prek 5-stopenjske verige nadomestnih možnosti:
+67router ob zagonu razreši svoj gonilnik SQLite prek 5-stopenjske verige nadomestnih možnosti:
 
 1. **Priloženi `better-sqlite3`** (prek `dependencies` v `package.json`)
    — najhitrejši, izvorna binarna datoteka, ki jo namesti `npm install`, kadar so na voljo orodja za gradnjo.
@@ -28,13 +28,13 @@ OmniRoute ob zagonu razreši svoj gonilnik SQLite prek 5-stopenjske verige nadom
 - **Brez orodij za gradnjo**: Nekatera okolja (poslovni sistemi Windows brez VS Build
   Tools, minimalne slike Docker) ne morejo prevesti paketa `better-sqlite3`. Namestitveni
   program med izvajanjem pridobi vnaprej prevedeno binarno datoteko iz registra npm;
-  nadomestni gonilniki zagotovijo, da se OmniRoute zažene tudi, če to spodleti.
+  nadomestni gonilniki zagotovijo, da se 67router zažene tudi, če to spodleti.
 - **Sistemi brez omrežnega dostopa**: Če register npm ni dosegljiv, `node:sqlite`
   ali `sql.js` zagotavljata osnovno delovanje.
 
 ## Preverjanje magičnih bajtov
 
-Pred nalaganjem med izvajanjem nameščene datoteke `.node` OmniRoute prebere prvih 8
+Pred nalaganjem med izvajanjem nameščene datoteke `.node` 67router prebere prvih 8
 bajtov in jih primerja z znanimi magičnimi bajti platform:
 
 | Platforma               | Bajti (šestnajstiško) | Oznaka      |
@@ -106,9 +106,9 @@ Implementacija:
 ## Topologija z enim zapisovalcem (HA ni podprt)
 
 Zgornja veriga nadomestnih gonilnikov se še vedno izvaja v **enem procesu**. Privzeta
-konfiguracija SQLite za OmniRoute uporablja **enega zapisovalca**:
+konfiguracija SQLite za 67router uporablja **enega zapisovalca**:
 
-- Ne povezujte dveh replik OmniRoute z isto datoteko `storage.sqlite`.
+- Ne povezujte dveh replik 67router z isto datoteko `storage.sqlite`.
 - Ponovni zagon vsebnika, uvedba Recreate, prekinitev zaradi OOM ali ponovni zagon
   HEALTHCHECK prekine vse tekoče seje SSE. Privzeta pot ne vključuje postopnega zaključevanja sej.
 - Preverjanje živosti orkestratorja, ki počasen `/healthz` obravnava kot nedelujočega,

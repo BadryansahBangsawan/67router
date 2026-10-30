@@ -10,11 +10,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Izvor:** `open-sse/services/thinkingBudget.ts`
 
-Budžet za razmišljanje (Thinking Budget) kontroliše da li OmniRoute **prepisuje parametre razmišljanja/rezonovanja klijenta** na putu do provajdera. On **ne** uključuje niti isključuje kompresiju, rutiranje ili keširanje upita (prompt cache).
+Budžet za razmišljanje (Thinking Budget) kontroliše da li 67router **prepisuje parametre razmišljanja/rezonovanja klijenta** na putu do provajdera. On **ne** uključuje niti isključuje kompresiju, rutiranje ili keširanje upita (prompt cache).
 
 ## Režimi
 
-| Režim                               | Šta OmniRoute radi                                                                                                            | Kada koristiti                                                                                                                                                                                       |
+| Režim                               | Šta 67router radi                                                                                                             | Kada koristiti                                                                                                                                                                                       |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (podrazumijevano) | Ostavlja polja klijenta nepromijenjenim (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config`, itd.). | **Codex / Desktop / bilo koji klijent koji treba da kontroliše napor + sažetke razmišljanja.** Neophodno za vidljive panele razmišljanja kada klijent zahtijeva `reasoning.summary`.                 |
 | **`auto`**                          | **Uklanja sva** polja za razmišljanje/rezonovanje iz tijela zahtjeva prije slanja uzvodno.                                    | Samo kada namjerno želite da **provajder** izmisli podrazumijevane vrijednosti i kada vam **nije** potrebno razmišljanje kontrolisano od strane klijenta. **Nije** „automatski prikaz razmišljanja“. |
@@ -40,7 +40,7 @@ Ako klijent (npr. Codex Desktop) pošalje `reasoning: { effort: "ultra", summary
 | **Kombinovano rutiranje / rezervne opcije**          | Zasebno. Nije pod uticajem.                                                                                                                              |
 | **Ograničenja tokena API ključa / budžeti troškova** | Zasebno. Nije pod uticajem.                                                                                                                              |
 | **Keš ponavljanja razmišljanja**                     | Ponovno ubacivanje za više krugova (multi-turn) za stroge provajdere (DeepSeek, Kimi, Qwen-thinking, …). Nije isto što i Desktop „prikaži razmišljanje“. |
-| **Dekriptovanje `encrypted_content`**                | **Nemoguće.** Privatni blokovi razmišljanja OpenAI/Codex su neprozirni. OmniRoute ih nikada ne dekriptuje (#7095 / #7176 / #7304).                       |
+| **Dekriptovanje `encrypted_content`**                | **Nemoguće.** Privatni blokovi razmišljanja OpenAI/Codex su neprozirni. 67router ih nikada ne dekriptuje (#7095 / #7176 / #7304).                        |
 
 ## Vidljivo razmišljanje (Codex / Klijenti za odgovore)
 
@@ -53,7 +53,7 @@ Da bi klijent prikazao tekst razmišljanja, potrebno je **sve** od sljedećeg:
 Ako dobijate samo „šifrovano privatno razmišljanje“ (encrypted private reasoning), ili:
 
 - način rada je bio **`auto`** (zahtjev klijenta je uklonjen), ili
-- upstream je vratio `encrypted_content` bez teksta sažetka (ograničenje provajdera; OmniRoute može prikazati samo čuvar mjesta, a ne običan tekst).
+- upstream je vratio `encrypted_content` bez teksta sažetka (ograničenje provajdera; 67router može prikazati samo čuvar mjesta, a ne običan tekst).
 
 ## API primjeri
 
@@ -73,7 +73,7 @@ curl -sS -X PUT https://localhost:20128/api/settings/thinking-budget \
 
 ### Trajnost / ponovno pokretanje
 
-Vrijednost se pohranjuje pod ključem postavki `thinkingBudget` i hidrira pri pokretanju procesa (`hydrateThinkingBudgetConfig`). Nakon promjene putem baze podataka ili nekih ne-API putanja, **ponovo pokrenite OmniRoute proces** kako bi se singleton u memoriji podudarao sa diskom.
+Vrijednost se pohranjuje pod ključem postavki `thinkingBudget` i hidrira pri pokretanju procesa (`hydrateThinkingBudgetConfig`). Nakon promjene putem baze podataka ili nekih ne-API putanja, **ponovo pokrenite 67router proces** kako bi se singleton u memoriji podudarao sa diskom.
 
 ## Kontrolna lista za operatera
 

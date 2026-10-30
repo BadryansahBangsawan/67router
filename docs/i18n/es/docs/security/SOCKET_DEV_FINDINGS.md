@@ -48,7 +48,7 @@ y expuesto mediante un túnel **no puede** activar esta ruta de código.
 | Linux+Firefox/Chromium | actualización de la base de datos NSS de cada perfil mediante `certutil -d sql:<profile>`                         |
 
 Estos son los mismos comandos utilizados por `mitmproxy`, Charles Proxy, Fiddler y
-Caddy. El hecho de que existan en OmniRoute está documentado en
+Caddy. El hecho de que existan en 67router está documentado en
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigación de v3.8.6**:
@@ -95,7 +95,7 @@ rompería el conjunto de funcionalidades del puente de agentes.
 
 Una variable de entorno `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` conserva el comportamiento de v3.8.5 para los operadores que aún no hayan actualizado su automatización. Se eliminará en v3.9.
 
-**Por qué lo mantenemos**: la importación desde Zed es la opción de incorporación más sencilla para los usuarios que ya utilizan Zed y desean replicar sus claves de proveedores en OmniRoute sin tener que volver a pegarlas.
+**Por qué lo mantenemos**: la importación desde Zed es la opción de incorporación más sencilla para los usuarios que ya utilizan Zed y desean replicar sus claves de proveedores en 67router sin tener que volver a pegarlas.
 
 ---
 
@@ -104,7 +104,7 @@ Una variable de entorno `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` conserva el 
 **Archivos fuente**: `src/mitm/systemCommands.ts`.
 
 **Por qué se señaló**: el fragmento vuelve a exportar `execFileWithPassword`,
-`runElevatedPowerShell` y la utilidad compartida `quotePowerShell`. El clasificador de IA de Socket.dev los identifica como un conjunto genérico de herramientas de "ejecución en el host + elevación de privilegios". Dentro de OmniRoute, solo los utiliza la ruta de instalación del certificado MITM (§1), así como `execFileWithPassword` para ejecutar comandos `sudo`.
+`runElevatedPowerShell` y la utilidad compartida `quotePowerShell`. El clasificador de IA de Socket.dev los identifica como un conjunto genérico de herramientas de "ejecución en el host + elevación de privilegios". Dentro de 67router, solo los utiliza la ruta de instalación del certificado MITM (§1), así como `execFileWithPassword` para ejecutar comandos `sudo`.
 
 **Mitigación de v3.8.6**:
 
@@ -144,7 +144,7 @@ Una variable de entorno `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` conserva el 
 
 ---
 
-## §5 — Escritura de credenciales mediante OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Escritura de credenciales mediante 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Archivos fuente**:
 
@@ -176,7 +176,7 @@ rawBody)`) antes de analizar el JSON. Si el secreto está configurado, la firma 
    `rateLimitedUntil`, `updatedAt`). Este es un **cambio incompatible** para los usuarios
    que dependían de la sincronización remota de tokens: deben activarla explícitamente.
 
-**Por qué lo mantenemos**: Cloud Sync es la única forma de que un tenant de OmniRoute Cloud
+**Por qué lo mantenemos**: Cloud Sync es la única forma de que un tenant de 67router Cloud
 centralice las credenciales del equipo. La corrección deja claro el modelo de amenazas:
 "el servidor firma, el cliente verifica y el operador activa la función."
 

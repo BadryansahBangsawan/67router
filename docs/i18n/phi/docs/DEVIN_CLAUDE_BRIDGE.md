@@ -5,7 +5,7 @@
 ---
 
 Hinahayaan ng `devin-cli-agentic` ang tunay na Claude Code runtime na gamitin ang lokal na Anthropic
-Messages endpoint ng OmniRoute habang ibinibigay ng opisyal na Devin CLI ang mga tugon ng modelo sa
+Messages endpoint ng 67router habang ibinibigay ng opisyal na Devin CLI ang mga tugon ng modelo sa
 pamamagitan ng ACP stdio. Hindi nito binabago ang mga kasalukuyang Anthropic, Claude OAuth, Claude Web,
 o `devin-cli` provider.
 
@@ -19,7 +19,7 @@ Minarkahan nang naaayon ang metadata ng modelo nito upang iwasan ito ng combo ro
 > ng Devin CLI `3000.2.17` at modelong `swe-1-7-lightning`; pinatunayan ng huling live run na iyon ang mga
 > client-owned na `Read`, `Edit`, at `Bash` turn, matagumpay na mga resulta ng `npm test`, pagtuklas ng
 > project command at skill, Devin-only routing, at zero Claude egress. Pagkatapos ay itinaas ang pin sa
-> `2.1.258` (ang henerasyon ng CLI na ginagaya ng Claude identity ng OmniRoute, at ang unang linya na
+> `2.1.258` (ang henerasyon ng CLI na ginagaya ng Claude identity ng 67router, at ang unang linya na
 > native na naglalaman ng Fable 5.1 tier). Sa bagong pin, na-verify ang installation layer at
 > `claude --version` sa naka-pin na base image, at pumapasa ang bridge unit suite, `compose config`, at
 > static isolation proof — ngunit hindi pa muling pinapatakbo ang offline mock scenario at ang live na
@@ -52,11 +52,11 @@ Tumatanggap ang parser ng isang hiwalay na `<tool>{...}</tool>` envelope sa bawa
 nito ang pangalan laban sa listahan ng mga tool ng request, vina-validate ang mga argument laban sa JSON
 Schema ng tool na iyon, tinatanggihan ang pinaghalong narrative/action, at nagpapahintulot ng isang bounded
 repair. Pagkatapos, lokal na pinapatakbo ng Claude Code ang resultang Anthropic `tool_use` at ipinadadala
-pabalik ang `tool_result` sa pamamagitan ng OmniRoute.
+pabalik ang `tool_result` sa pamamagitan ng 67router.
 
 ## Awtomatikong pag-route
 
-Kwalipikado ang provider sa mga `auto/*` candidate pool ng OmniRoute kapag hindi ito naka-block.
+Kwalipikado ang provider sa mga `auto/*` candidate pool ng 67router kapag hindi ito naka-block.
 Hindi ginagarantiya ng pagiging kwalipikado bilang candidate ang pagpili: maaaring piliin ng routing strategy
 ng combo (halimbawa, last-known-good) ang ibang provider. Gamitin ang `dva/<model>` o isang Devin-first combo
 kapag kailangan mong dumaan sa Devin ang bawat request.
@@ -67,16 +67,16 @@ Hindi saklaw at itinuturing na ipinagbabawal ang installation, account, at confi
 
 - tumatakbo bilang UID/GID `10001:10001`, na may read-only na root filesystem, mga inalis na capability, at
   `no-new-privileges`;
-- gumagamit ng pribadong `/home/bridge`, nakalaang Claude config volume, nakahiwalay na data ng OmniRoute,
+- gumagamit ng pribadong `/home/bridge`, nakalaang Claude config volume, nakahiwalay na data ng 67router,
   at hiwalay na `devin-auth` volume;
 - nagma-mount lamang ng mga disposable na `.sandbox` workspace/ebidensya;
 - hindi nagma-mount ng host home, Keychain, mga credential ng SSH at cloud, o Docker socket;
 - bumubuo ng mga tahasang environment at nag-aalis ng mga variable ng Anthropic API/OAuth/routing;
 - nagdidirekta ng inference ng Claude Code sa `http://omniroute:20128` lamang gamit ang local-only na key.
 
-Gumagamit ang offline profile ng internal na network. Sa live profile, naaabot lamang ng OmniRoute ang mga
+Gumagamit ang offline profile ng internal na network. Sa live profile, naaabot lamang ng 67router ang mga
 opisyal na endpoint ng Devin sa pamamagitan ng `network-guard`; tinatanggihan ang mga hindi kaugnay na destinasyon.
-May hiwalay na deny-all egress guard ang Claude Code at maaabot lamang nito ang lokal na serbisyo ng OmniRoute
+May hiwalay na deny-all egress guard ang Claude Code at maaabot lamang nito ang lokal na serbisyo ng 67router
 sa pamamagitan ng `NO_PROXY`. Ang mga audit file ng guard ay mino-mount lamang ng kani-kanilang proseso ng guard. Bine-verify ng
 mga script ang pagmamay-ari ng file, mode, bilang ng link, at bawat desisyon bago mag-export ng
 ebidensyang walang token.

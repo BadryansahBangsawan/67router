@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Malti)
+# 🗜️ Prompt Compression Guide — 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Ħarsa Ġenerali
 
-OmniRoute jimplimenta pipeline modulari għall-kompressjoni tal-prompt li jitħaddem **b'mod proattiv** qabel ma t-talbiet jaslu għand il-fornituri upstream. Dan ifisser li l-iffrankar tat-tokens iseħħ b'mod trasparenti — m'hemm bżonn l-ebda bidla fil-fluss tax-xogħol tiegħek.
+67router jimplimenta pipeline modulari għall-kompressjoni tal-prompt li jitħaddem **b'mod proattiv** qabel ma t-talbiet jaslu għand il-fornituri upstream. Dan ifisser li l-iffrankar tat-tokens iseħħ b'mod trasparenti — m'hemm bżonn l-ebda bidla fil-fluss tax-xogħol tiegħek.
 
 ```
 Talba tal-Klijent
@@ -122,15 +122,15 @@ combos tal-kompressjoni assenjati lil combos tar-routing.
 
 ## Il-Matematika tal-Iffrankar Upstream
 
-OmniRoute jiddokumenta l-iffrankar mill-kompressjoni minn żewġ sorsi: benchmarks ta’ proġetti upstream u
-l-kompożizzjoni tal-magni ta’ OmniRoute stess.
+67router jiddokumenta l-iffrankar mill-kompressjoni minn żewġ sorsi: benchmarks ta’ proġetti upstream u
+l-kompożizzjoni tal-magni ta’ 67router stess.
 
 | Sors    | Numru mir-README upstream użat hawnhekk                                                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Caveman | `~75%` inqas tokens tal-output, iffrankar medju tal-output ta’ `65%` fil-benchmarks, medda ta’ `22-87%`, u għodda ta’ kompressjoni tal-input ta’ `~46%` |
 | RTK     | Iffrankar ta’ `60-90%` fuq l-output tal-kmandi; sessjoni ta’ eżempju ta’ `~118,000 -> ~23,900` tokens, jew iffrankar ta’ `79.7%` (`~80%`)               |
 
-Għal payloads ta’ għodod/kuntest li jikkoinċidu, il-kombinazzjoni default ta’ OmniRoute tpoġġi l-magni f’sekwenza:
+Għal payloads ta’ għodod/kuntest li jikkoinċidu, il-kombinazzjoni default ta’ 67router tpoġġi l-magni f’sekwenza:
 
 ```txt
 RTK -> Caveman
@@ -532,12 +532,12 @@ mhux mibdul, maqbuż bħala `no_styles`), jgħaqqad l-istruzzjonijiet magħżula
 tal-katalgu,
 iżid il-klawżola tal-limiti **darba** (flimkien mal-klawżola tas-sikurezza, `SAFETY_BOUNDARIES` jew
 it-traduzzjoni tagħha, meta jintgħażel `less-code` jew `ponytail`), u jibda l-blokka
-b'markatur wieħed ta' idempotenza (`[OmniRoute Output Styles]`), sabiex applikazzjoni
+b'markatur wieħed ta' idempotenza (`[67router Output Styles]`), sabiex applikazzjoni
 mill-ġdid ma tagħmel xejn. Meta l-lingwa riżolta (ara l-Għażla tal-lingwa hawn taħt) ikollha
 traduzzjoni, tiddaħħal l-istruzzjoni lokalizzata minflok dik bl-Ingliż.
 
 Fuq body b'array `messages` mhux vojt, il-verifika tal-idempotenza taħdem qabel
-il-bypass tal-kontenut: meta l-markatur `[OmniRoute Output Styles]` ikun diġà fil-field
+il-bypass tal-kontenut: meta l-markatur `[67router Output Styles]` ikun diġà fil-field
 `system` tal-ogħla livell (string jew array ta' blokok tal-kontenut) jew f'messaġġ tas-system
 b'kontenut string, il-body jitħalla mhux mibdul bħala `already_applied` u ma ssir l-ebda
 verifika tal-kliem ewlieni.
@@ -564,7 +564,7 @@ qatt ma joħloq `messages[0]` ġdid, iqiegħed il-blokka fl-ewwel wieħed minn d
 Fuq body mingħajr array `messages` (jew b'wieħed vojt), ma jsir l-ebda bypass tal-kontenut u
 l-field `system` tal-ogħla livell ma jiġix ikkonsultat. Il-blokka tiżdied wara t-test ta'
 field `instructions` string, sakemm dak il-field ma jkunx diġà fih il-markatur
-`[OmniRoute Output Styles]`, f'liema każ il-body jitħalla mhux mibdul bħala
+`[67router Output Styles]`, f'liema każ il-body jitħalla mhux mibdul bħala
 `already_applied`. Meta l-body ma jkollux field `instructions` string iżda jkollu `input`
 (string jew array), il-blokka ssir `instructions`, u tissostitwixxi kwalunkwe valur mhux string
 li dak il-field kellu. Body li la għandu field `instructions` string u lanqas `input` string jew
@@ -591,8 +591,8 @@ il-config tal-kompressjoni jippersisti l-għażla bħala:
 Kompatibbiltà b'lura: waqt li `outputStyles` ikun vojt, is-setting legat
 `cavemanOutputMode.enabled` jiġi mmappjat għal `terse-prose` f'
 `cavemanOutputMode.intensity`. Imbagħad il-blokka tibda bil-markatur
-`[OmniRoute Output Styles]`, fejn l-injettur legat `applyCavemanOutputMode()`
-kien idaħħal `[OmniRoute Caveman Output Mode]`. Taħt il-markatur, it-test jaqbel mal-injezzjoni
+`[67router Output Styles]`, fejn l-injettur legat `applyCavemanOutputMode()`
+kien idaħħal `[67router Caveman Output Mode]`. Taħt il-markatur, it-test jaqbel mal-injezzjoni
 legata f'en, pt-BR, es, de, fr, it, ru, id u vi; f'ja u zh ikollu spazju żejjed wieħed
 qabel il-klawżola tal-limiti. `terse-prose` jiġi tradott għal pt-BR, es, de,
 fr, it, ru, zh, ja, id u vi, għalhekk request li l-lingwa riżolta tiegħu tkun `hu` jirċievi

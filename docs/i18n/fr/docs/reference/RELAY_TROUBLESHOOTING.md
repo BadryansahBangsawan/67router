@@ -5,9 +5,9 @@
 ---
 
 Les relais (Vercel, Deno, Cloudflare) mettent fin à la connexion en amont sur un
-backend sans serveur afin qu’OmniRoute puisse faire sortir le trafic depuis une région stable tout en conservant
+backend sans serveur afin que 67router puisse faire sortir le trafic depuis une région stable tout en conservant
 la clé d’API du fournisseur côté serveur. Ce document décrit les deux modes de défaillance
-rencontrés par les opérateurs en production, ainsi que les procédures de récupération fournies par OmniRoute pour
+rencontrés par les opérateurs en production, ainsi que les procédures de récupération fournies par 67router pour
 chacun d’eux.
 
 ## Stockage de l’authentification des relais
@@ -35,7 +35,7 @@ aucune authentification.
 1. Ouvrez **Paramètres → Pool de proxys**.
 2. Les lignes de relais dont l’authentification est absente affichent un badge jaune `authentification manquante` et un
    bouton **Réparer**.
-3. Cliquez sur **Réparer**. OmniRoute appelle
+3. Cliquez sur **Réparer**. 67router appelle
    `POST /api/settings/proxies/[id]/repair-relay`, qui :
    - déchiffre `relayAuthEnc` avec la clé **actuelle**,
    - réécrit la valeur `relayAuth` en texte brut dans `notes`,
@@ -67,7 +67,7 @@ jeton est irrécupérable, de sorte que vous n’avez jamais à la rechercher ma
 **Symptôme :** le test du proxy (bouton `speed`) indique que le relais est opérationnel, mais les requêtes
 échouent toujours par intermittence.
 
-Vérifiez les en-têtes d’identification du relais renvoyés par la sonde de test automatique d’OmniRoute
+Vérifiez les en-têtes d’identification du relais renvoyés par la sonde de test automatique de 67router
 (voir **Paramètres → Pool de proxys** et les compteurs `relayTested` / `relayAlive`) :
 
 - `x-relay-url` — indique quel backend de relais a répondu.

@@ -7,7 +7,7 @@
 > **Sursa adevărului:** `src/lib/cloudAgent/` și `src/app/api/v1/agents/tasks/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40 (actualizare frontmatter; 4 agenți, inclusiv cursor-cloud)
 
-OmniRoute orchestrează agenți de programare găzduiți în cloud de terțe părți (Codex Cloud, Cursor,
+67router orchestrează agenți de programare găzduiți în cloud de terțe părți (Codex Cloud, Cursor,
 Devin, Jules) sub forma unor sarcini de lungă durată. Fiecare agent este încapsulat în spatele unei interfețe uniforme, astfel încât
 clienții să poată trimite un prompt + URL-ul unui depozit și să primească rezultate fără a interacționa cu
 API-urile specifice furnizorului.

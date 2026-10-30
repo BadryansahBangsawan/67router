@@ -4,7 +4,7 @@
 
 ---
 
-RTK kompresija ir OmniRoute komandu izprotošs kompresijas dzinis termināļa un rīku izvadei. Tas ir
+RTK kompresija ir 67router komandu izprotošs kompresijas dzinis termināļa un rīku izvadei. Tas ir
 paredzēts programmēšanas aģentu sesijām, kurās lielāko daļu konteksta pieauguma rada testu žurnāli, būvējumu izvade,
 pakotņu pārvaldnieku radītais troksnis, čaulas sesiju pieraksti, Docker izvade, git izvade un steka izsekojumi.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Šāda secība vispirms saspiež trokšņaino mašīnu izvadi un pēc tam ļauj Caveman saīsināt atlikušo prozu.
 
 Sākotnējais RTK ziņo par `60-90%` komandu izvades ietaupījumu. Tā README parauga sesijā
-`~118,000` standarta marķieru tiek samazināti līdz `~23,900` RTK marķieriem, ietaupot `79.7%` (`~80%`). OmniRoute izmanto
+`~118,000` standarta marķieru tiek samazināti līdz `~23,900` RTK marķieriem, ietaupot `79.7%` (`~80%`). 67router izmanto
 šo sākotnējā projekta vidējo vērtību secīgās kompresijas ietaupījuma aprēķinā kopā ar Caveman ievades kompresiju:
 
 ```txt
@@ -54,7 +54,7 @@ RTK ielādē filtrus šādā secībā:
 2. Globālos filtrus no `DATA_DIR/rtk/filters.toml` un `DATA_DIR/rtk/filters.json`.
 3. Iebūvētos filtrus no `open-sse/services/compression/engines/rtk/filters/`.
 
-Vienā un tajā pašā tvērumā RTK TOML shēmas v1 filtriem ir priekšroka pār OmniRoute JSON filtriem. TOML
+Vienā un tajā pašā tvērumā RTK TOML shēmas v1 filtriem ir priekšroka pār 67router JSON filtriem. TOML
 `match_command` izteiksmes tiek pārbaudītas pirms atbilstības komandas tipam, lai importēts konkrētai komandai paredzēts
 filtrs varētu pārrakstīt plašāku filtru šajā tvērumā. Projekta tvērumam joprojām ir priekšroka pār globālo
 tvērumu neatkarīgi no faila formāta.
@@ -84,7 +84,7 @@ izlaisti un norādīti `/api/context/rtk/filters` diagnostikā. Nederīgu iebūv
 
 ## Saderība ar RTK TOML shēmu v1
 
-OmniRoute var parsēt, validēt, testēt un instalēt deklaratīvus filtru failus, izmantojot RTK TOML shēmu v1.
+67router var parsēt, validēt, testēt un instalēt deklaratīvus filtru failus, izmantojot RTK TOML shēmu v1.
 Atbalstītie lauki ir `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` un `[[tests.<filter>]]` iekļautie testi.
@@ -93,7 +93,7 @@ Nezināmi lauki, nederīgas vai nedrošas regulārās izteiksmes, vienlaicīgi n
 validēt pārbaudes nolūkā, taču to nevar instalēt vai ielādēt. Pielāgotu failu ielādes kļūmju gadījumā
 tiek saglabāts kļūmju ignorēšanas režīms: nederīgais fails tiek izlaists, bet pārējie filtri turpina darboties.
 
-OmniRoute saņem rīka izvadi pēc tam, kad klients to jau ir tvēris, tāpēc `filter_stderr = true`
+67router saņem rīka izvadi pēc tam, kad klients to jau ir tvēris, tāpēc `filter_stderr = true`
 nevar mainīt procesa izvades tveršanu. Lauks tiek pieņemts, bet neveic nekādas darbības, un validācija atgriež brīdinājumu.
 Tas ir apzināti aprakstīts kā **saderība ar RTK TOML shēmu v1**, nevis pilnīga saderība
 ar RTK izpildāmo failu, čaulas āķiem, Rust komandu implementācijām vai tā uzticamo vienumu krātuves struktūru.

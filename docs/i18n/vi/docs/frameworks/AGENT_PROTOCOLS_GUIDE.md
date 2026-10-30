@@ -7,15 +7,15 @@
 > **Nguồn:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute cung cấp ba giao diện khác nhau liên quan đến agent. Thoạt nhìn, chúng có vẻ giống nhau nhưng giải quyết các vấn đề khác nhau. Hãy sử dụng trang này để chọn giao diện phù hợp.
+67router cung cấp ba giao diện khác nhau liên quan đến agent. Thoạt nhìn, chúng có vẻ giống nhau nhưng giải quyết các vấn đề khác nhau. Hãy sử dụng trang này để chọn giao diện phù hợp.
 
 ## Tóm tắt nhanh
 
-| Giao diện                     | Phù hợp nhất cho                                                                                                                                  | Phương thức truyền tải         | Tiêu chuẩn               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------------ |
-| **A2A — Agent-to-Agent**      | Cộng tác liên agent với các agent ngang hàng hỗ trợ giao thức A2A                                                                                 | JSON-RPC 2.0 qua HTTP          | A2A v0.3 (đặc tả mở)     |
-| **ACP — CLI Agents Registry** | Phát hiện / đăng ký / khởi chạy các agent lập trình CLI được cài đặt trên máy của người dùng (Cursor, Cline, Codex CLI, Claude Code, Aider, v.v.) | HTTP REST                      | Dành riêng cho OmniRoute |
-| **Cloud Agents**              | Gửi các tác vụ lập trình kéo dài đến các dịch vụ đám mây bên ngoài (Codex Cloud, Devin, Jules, Cursor Cloud)                                      | HTTP REST + tác vụ lưu trên DB | Dành riêng cho OmniRoute |
+| Giao diện                     | Phù hợp nhất cho                                                                                                                                  | Phương thức truyền tải         | Tiêu chuẩn              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ----------------------- |
+| **A2A — Agent-to-Agent**      | Cộng tác liên agent với các agent ngang hàng hỗ trợ giao thức A2A                                                                                 | JSON-RPC 2.0 qua HTTP          | A2A v0.3 (đặc tả mở)    |
+| **ACP — CLI Agents Registry** | Phát hiện / đăng ký / khởi chạy các agent lập trình CLI được cài đặt trên máy của người dùng (Cursor, Cline, Codex CLI, Claude Code, Aider, v.v.) | HTTP REST                      | Dành riêng cho 67router |
+| **Cloud Agents**              | Gửi các tác vụ lập trình kéo dài đến các dịch vụ đám mây bên ngoài (Codex Cloud, Devin, Jules, Cursor Cloud)                                      | HTTP REST + tác vụ lưu trên DB | Dành riêng cho 67router |
 
 Cả ba đều độc lập — có thể chọn bất kỳ tập hợp con nào.
 
@@ -38,14 +38,14 @@ Bạn có cần một dịch vụ đám mây thực hiện công việc bên ngo
 ## 1. A2A — Agent-to-Agent
 
 **Đặc tả:** [A2A v0.3](https://a2a-protocol.org)
-**Điểm cuối OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Điểm cuối 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Thẻ Agent:** `GET /.well-known/agent.json`
 
 ### Khi nào nên sử dụng
 
-- Xây dựng hệ thống đa agent, trong đó OmniRoute là một trong các agent ngang hàng
-- Cung cấp khả năng định tuyến thông minh của OmniRoute (`smart-routing`, `quota-management`, v.v.) cho các agent trong những framework như Google ADK hoặc các mạng lưới agent tổng quát
-- Bao bọc OmniRoute phía sau một giao diện khám phá + gọi thực thi tiêu chuẩn
+- Xây dựng hệ thống đa agent, trong đó 67router là một trong các agent ngang hàng
+- Cung cấp khả năng định tuyến thông minh của 67router (`smart-routing`, `quota-management`, v.v.) cho các agent trong những framework như Google ADK hoặc các mạng lưới agent tổng quát
+- Bao bọc 67router phía sau một giao diện khám phá + gọi thực thi tiêu chuẩn
 
 ### Phương thức
 
@@ -69,12 +69,12 @@ Xem [A2A-SERVER.md](./A2A-SERVER.md) để biết chi tiết về phương thứ
 
 ## 2. ACP — Sổ đăng ký tác nhân CLI
 
-**Điểm cuối OmniRoute:** `GET /api/acp/agents`
+**Điểm cuối 67router:** `GET /api/acp/agents`
 **Nguồn:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Đây là gì
 
-ACP là **kho tác nhân CLI cục bộ** của OmniRoute. Nó phát hiện các CLI lập trình được cài đặt trên máy chủ (Cursor, Cline, Claude Code, Codex CLI, Continue, v.v.), xác định phiên bản của chúng và hiển thị chúng trên bảng điều khiển để người dùng có thể cấu hình từng CLI trỏ đến OmniRoute.
+ACP là **kho tác nhân CLI cục bộ** của 67router. Nó phát hiện các CLI lập trình được cài đặt trên máy chủ (Cursor, Cline, Claude Code, Codex CLI, Continue, v.v.), xác định phiên bản của chúng và hiển thị chúng trên bảng điều khiển để người dùng có thể cấu hình từng CLI trỏ đến 67router.
 
 Giao diện HTTP là một kho nội bộ hỗ trợ giao diện người dùng "CLI Tools" và
 việc theo dõi dấu vân tay CLI (xem [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Ngoài ra,
@@ -114,8 +114,8 @@ Cấu trúc phần thân cho POST (`customAgentBodySchema` trong `src/app/api/ac
 
 ### Trường hợp sử dụng
 
-- Trang "CLI Tools" trên bảng điều khiển liệt kê những công cụ đã được cài đặt và giúp bạn cấu hình từng công cụ trỏ đến OmniRoute
-- Tác nhân tùy chỉnh cho phép người dùng nâng cao đăng ký các CLI nội bộ/độc quyền mà OmniRoute không nhận biết theo mặc định
+- Trang "CLI Tools" trên bảng điều khiển liệt kê những công cụ đã được cài đặt và giúp bạn cấu hình từng công cụ trỏ đến 67router
+- Tác nhân tùy chỉnh cho phép người dùng nâng cao đăng ký các CLI nội bộ/độc quyền mà 67router không nhận biết theo mặc định
 - Kết quả phát hiện cung cấp dữ liệu cho ma trận dấu vân tay `cli-tools`
 
 ### Khi KHÔNG nên sử dụng ACP
@@ -127,12 +127,12 @@ Cấu trúc phần thân cho POST (`customAgentBodySchema` trong `src/app/api/ac
 
 ## 3. Cloud Agent
 
-**Các endpoint OmniRoute:** `/api/v1/agents/tasks/*` (vòng đời) + `/api/cloud/*` (hạ tầng kết nối)
+**Các endpoint 67router:** `/api/v1/agents/tasks/*` (vòng đời) + `/api/cloud/*` (hạ tầng kết nối)
 **Mã nguồn:** `src/lib/cloudAgent/`
 
 ### Đây là gì
 
-Một giao diện thống nhất dành cho các agent lập trình đám mây của bên thứ ba. Bạn gửi một lời nhắc + URL kho mã nguồn, OmniRoute sẽ chuyển tiếp đến đúng cloud agent, thăm dò trạng thái và trả về kết quả.
+Một giao diện thống nhất dành cho các agent lập trình đám mây của bên thứ ba. Bạn gửi một lời nhắc + URL kho mã nguồn, 67router sẽ chuyển tiếp đến đúng cloud agent, thăm dò trạng thái và trả về kết quả.
 
 ### Các agent được hỗ trợ (4, tất cả đều được xác nhận trong `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Cả hai đều có "tác vụ chạy trong thời gian dài" nhưng ở các t�
 
 | Khía cạnh               | A2A                                                                                              | Cloud Agents                                  |
 | ----------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| Tiêu chuẩn              | Open A2A v0.3                                                                                    | Đặc thù của OmniRoute                         |
-| Nơi thực hiện tính toán | Bên trong OmniRoute (sử dụng các tổ hợp đã cấu hình)                                             | Bên ngoài (máy chủ Codex / Devin / Jules)     |
+| Tiêu chuẩn              | Open A2A v0.3                                                                                    | Đặc thù của 67router                          |
+| Nơi thực hiện tính toán | Bên trong 67router (sử dụng các tổ hợp đã cấu hình)                                              | Bên ngoài (máy chủ Codex / Devin / Jules)     |
 | Thời lượng tác vụ       | TTL mặc định là 5 phút (có thể cấu hình trong `TaskManager`)                                     | Từ vài phút đến vài giờ                       |
 | Nhận biết kho mã nguồn  | Không (chỉ chuyển tiếp prompt)                                                                   | Có (URL kho mã nguồn + nhánh)                 |
 | Trường hợp sử dụng      | Cộng tác giữa các tác nhân, định tuyến thông minh dưới dạng dịch vụ                              | Ủy quyền "triển khai tính năng X trong kho Y" |
@@ -182,7 +182,7 @@ Cả hai đều có "tác vụ chạy trong thời gian dài" nhưng ở các t�
 
 ## Ví dụ tích hợp
 
-### Khám phá các khả năng A2A của OmniRoute
+### Khám phá các khả năng A2A của 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Trả về Agent Card chứa đầy đủ cả 6 kỹ năng, phương thức vận chuyển và phiên bản.
 
-### Gọi OmniRoute dưới dạng một tác nhân A2A
+### Gọi 67router dưới dạng một tác nhân A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Lõi OmniRoute     │
+                │   Lõi 67router     │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

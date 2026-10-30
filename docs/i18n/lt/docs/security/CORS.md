@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute valdo, kuriems **naršyklės šaltiniams** leidžiama skaityti atsakymus iš kitų šaltinių,
+67router valdo, kuriems **naršyklės šaltiniams** leidžiama skaityti atsakymus iš kitų šaltinių,
 naudodama vieną centralizuotą leidžiamų šaltinių sąrašą. Pagal numatytąją nuostatą modelis
 **neleidžia prieigos**: joks šaltinis nėra leidžiamas, kol jo aiškiai neįtraukiate. Šiame puslapyje aprašoma, kaip
 nustatomas leidžiamas šaltinis, ką iš tikrųjų atveria `CORS_ALLOW_ALL=true` (ir, svarbiausia, ko
@@ -46,13 +46,13 @@ tokia tvarka:
 ## Grėsmių modelis — ką iš tikrųjų atveria `CORS_ALLOW_ALL=true`
 
 Į bendrąjį OWASP įspėjimą („CORS pakaitos simbolis = bet kuri svetainė gali iškviesti jūsų API“) verta
-žiūrėti rimtai, tačiau OmniRoute pažeidžiamumo sritis yra **siauresnė nei bendruoju atveju**
+žiūrėti rimtai, tačiau 67router pažeidžiamumo sritis yra **siauresnė nei bendruoju atveju**
 dėl vieno konkretaus įgyvendinimo ypatumo:
 
 > **Centrinė `applyCorsHeaders()` funkcija niekada neišsiunčia
 > `Access-Control-Allow-Credentials`.** Naršyklė nepateiks _su kredencialais_
 > (su slapuku) gauto atsakymo iš kito šaltinio, nebent serveris išsiųstų
-> `Access-Control-Allow-Credentials: true`. Bendrasis OmniRoute CORS kelias to niekada
+> `Access-Control-Allow-Credentials: true`. Bendrasis 67router CORS kelias to niekada
 > nedaro.
 
 Ką tai reiškia kiekvienai sąsajai, net kai nustatyta `CORS_ALLOW_ALL=true`:
@@ -92,7 +92,7 @@ atskirai nuo šių CORS gairių.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jei „OmniRoute“ veikia už atvirkštinio tarpinio serverio / tunelio („nginx“, „Caddy“, „Cloudflare“
+- Jei „67router“ veikia už atvirkštinio tarpinio serverio / tunelio („nginx“, „Caddy“, „Cloudflare“
   Tunnel, „Tailscale“), CORS **nėra** vienintelė jūsų apsaugos priemonė — vietinio grįžtamojo ryšio maršrutų
   apsauga vis tiek saugo maršrutus, galinčius paleisti procesus (žr.
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Neklastokite
@@ -108,7 +108,7 @@ atskirai nuo šių CORS gairių.
 Net kūrimo aplinkoje pakaitos simbolio prireikia retai. Leiskite tik naudojamus kūrimo serverius:
 
 ```bash
-# „Vite“ (5173) ir „Next.js“ (3000) kūrimo serveriai, besikreipiantys į vietinį „OmniRoute“
+# „Vite“ (5173) ir „Next.js“ (3000) kūrimo serveriai, besikreipiantys į vietinį „67router“
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +128,14 @@ nepaleidžiant sistemos iš naujo.
   administravimo / valdymo skydelio šaltinių į jokią mažiau ribojančią konfigūraciją; jiems turi būti taikoma
   būtent uždara numatytoji nuostata.
 
-## Pavyzdys: atvirkštinis tarpinis serveris prieš OmniRoute
+## Pavyzdys: atvirkštinis tarpinis serveris prieš 67router
 
-CORS užtikrina pati OmniRoute, todėl tarpinis serveris paprastai **neturėtų** pridėti ar
+CORS užtikrina pati 67router, todėl tarpinis serveris paprastai **neturėtų** pridėti ar
 perrašyti `Access-Control-*` antraščių (dvigubos antraštės sutrikdo naršyklių veikimą). Užbaikite TLS
-ryšį ir persiųskite užklausą — leiskite OmniRoute atsakyti į išankstinę užklausą:
+ryšį ir persiųskite užklausą — leiskite 67router atsakyti į išankstinę užklausą:
 
 ```nginx
-# nginx — persiųsti į OmniRoute; čia NEĮTERPKITE Access-Control-*
+# nginx — persiųsti į 67router; čia NEĮTERPKITE Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +143,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Išsaugokite persiuntimo antraštes: tame pačiame pagrindiniame kompiuteryje veikiantis tarpinis serveris jungiasi iš grįžtamojo ryšio adreso, o jos
-    # nurodo OmniRoute, kad užklausą pateikė ne vietinis operatorius. Jei tarpinis serveris neprideda nė vienos iš jų,
+    # nurodo 67router, kad užklausą pateikė ne vietinis operatorius. Jei tarpinis serveris neprideda nė vienos iš jų,
     # visi nuotoliniai užklausų teikėjai atrodo kaip vietiniai. Taip pat niekada nenustatykite X-Forwarded-For reikšmės į 127.0.0.1.
 }
 ```
 
-Leidžiamas naršyklių kilmės vietas nustatykite OmniRoute (`CORS_ALLOWED_ORIGINS` arba
+Leidžiamas naršyklių kilmės vietas nustatykite 67router (`CORS_ALLOWED_ORIGINS` arba
 skirtuke „Sauga“), o ne tarpiniame serveryje.
 
 ## Šaltinio failai

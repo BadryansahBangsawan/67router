@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ina **familia nne za vitambulisho** zinazoweza kuidhinisha njia za usimamizi.
+67router ina **familia nne za vitambulisho** zinazoweza kuidhinisha njia za usimamizi.
 Hazibadiliki. Funguo za API za Inference (`sk-…`) **hazisimamii**
 seva isipokuwa kama zilipewa waziwazi upeo wa `manage` au `admin`.
 

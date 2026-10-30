@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: OmniRoute theo dõi mức sử dụng token của mọi yêu cầu, tính toán chi phí, thực thi hạn ngạch theo từng khóa API và hiển thị dữ liệu phân tích trong bảng điều khiển. Hướng dẫn này giải thích cách tất cả các thành phần đó hoạt động.
+> **Tóm tắt**: 67router theo dõi mức sử dụng token của mọi yêu cầu, tính toán chi phí, thực thi hạn ngạch theo từng khóa API và hiển thị dữ liệu phân tích trong bảng điều khiển. Hướng dẫn này giải thích cách tất cả các thành phần đó hoạt động.
 
 **Nguồn:**
 
@@ -17,7 +17,7 @@
 
 ## Tổng quan
 
-Mỗi yêu cầu đi qua OmniRoute đều tạo ra một **bản ghi mức sử dụng**, bao gồm:
+Mỗi yêu cầu đi qua 67router đều tạo ra một **bản ghi mức sử dụng**, bao gồm:
 
 - **Danh tính**: khóa API, nhà cung cấp, mô hình và tổ hợp nào
 - **Token**: token lời nhắc, token hoàn thành, token được lưu vào bộ nhớ đệm, tổng số
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Đối với các nhà cung cấp không trả về dữ liệu sử dụng (một số nhà cung cấp web-cookie), OmniRoute **ước tính** số token bằng phương pháp kinh nghiệm `~4 ký tự trên mỗi token` (xem `open-sse/services/autoCombo/pipelineRouter.ts`).
+Đối với các nhà cung cấp không trả về dữ liệu sử dụng (một số nhà cung cấp web-cookie), 67router **ước tính** số token bằng phương pháp kinh nghiệm `~4 ký tự trên mỗi token` (xem `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Token được lưu vào bộ nhớ đệm
 
-OmniRoute theo dõi `cached_tokens` riêng biệt với `prompt_tokens` vì:
+67router theo dõi `cached_tokens` riêng biệt với `prompt_tokens` vì:
 
 - Cơ chế lưu lời nhắc vào bộ nhớ đệm của Anthropic tính mức phí thấp hơn cho token được lưu vào bộ nhớ đệm (10% mức phí thông thường)
 - Một số nhà cung cấp trả về `cache_read_input_tokens`, cần được tính giá khác
@@ -117,7 +117,7 @@ Dữ liệu giá được tự động đồng bộ từ LiteLLM qua endpoint `/
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Đối với các mô hình không có dữ liệu giá, OmniRoute sẽ **ước tính chi phí** bằng cách sử dụng mức giá trung bình nội bộ (lấy từ dữ liệu giá của LiteLLM).
+Đối với các mô hình không có dữ liệu giá, 67router sẽ **ước tính chi phí** bằng cách sử dụng mức giá trung bình nội bộ (lấy từ dữ liệu giá của LiteLLM).
 
 ---
 

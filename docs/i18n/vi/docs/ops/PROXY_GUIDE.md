@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Tiếng Việt)
+# 🌐 67router Proxy Guide (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Vượt qua các hạn chế địa lý, bảo vệ danh tính và định tuyến lưu lượng AI qua bất kỳ proxy nào — mà không gặp sự phức tạp trong cấu hình.**
 
-OmniRoute bao gồm một hệ thống quản lý proxy đầy đủ tính năng, cho phép bạn định tuyến lưu lượng đến các nhà cung cấp AI thượng nguồn qua proxy HTTP, HTTPS hoặc SOCKS5. Dù bạn đang ở khu vực bị chặn, cần xoay vòng IP hay muốn che giấu dấu vân tay — hướng dẫn này sẽ trình bày mọi nội dung cần thiết.
+67router bao gồm một hệ thống quản lý proxy đầy đủ tính năng, cho phép bạn định tuyến lưu lượng đến các nhà cung cấp AI thượng nguồn qua proxy HTTP, HTTPS hoặc SOCKS5. Dù bạn đang ở khu vực bị chặn, cần xoay vòng IP hay muốn che giấu dấu vân tay — hướng dẫn này sẽ trình bày mọi nội dung cần thiết.
 
 ---
 
@@ -51,7 +51,7 @@ Ngay cả khi ở ngoài các khu vực bị chặn, proxy vẫn hữu ích cho 
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Máy chủ OmniRoute                       │
+│                       Máy chủ 67router                       │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Sổ đăng ký  │    │ Bộ điều phối │    │ Fetch (undici)   │  │
@@ -83,7 +83,7 @@ Ngay cả khi ở ngoài các khu vực bị chặn, proxy vẫn hữu ích cho 
 
 ## Hệ thống Proxy 4 cấp
 
-OmniRoute hỗ trợ cấu hình proxy ở **bốn phạm vi độc lập**, được phân giải theo thứ tự ưu tiên:
+67router hỗ trợ cấu hình proxy ở **bốn phạm vi độc lập**, được phân giải theo thứ tự ưu tiên:
 
 ```
 Thứ tự ưu tiên phân giải (cao nhất → thấp nhất):
@@ -96,7 +96,7 @@ Thứ tự ưu tiên phân giải (cao nhất → thấp nhất):
 
 ### Cách thức phân giải hoạt động
 
-Khi OmniRoute gửi yêu cầu đến một nhà cung cấp thượng nguồn, hệ thống sẽ gọi `resolveProxyForConnectionFromRegistry()` để kiểm tra lần lượt từng cấp:
+Khi 67router gửi yêu cầu đến một nhà cung cấp thượng nguồn, hệ thống sẽ gọi `resolveProxyForConnectionFromRegistry()` để kiểm tra lần lượt từng cấp:
 
 1. **Cấp tài khoản** — Có proxy nào được gán cho ID kết nối cụ thể này không?
 2. **Cấp nhà cung cấp** — Có proxy nào được gán cho nhà cung cấp này (ví dụ: `openai`) không?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Nhập/Xuất
 
-Các proxy được bao gồm trong hệ thống **Sao lưu/Khôi phục**. Khi bạn xuất cấu hình OmniRoute:
+Các proxy được bao gồm trong hệ thống **Sao lưu/Khôi phục**. Khi bạn xuất cấu hình 67router:
 
 1. Đi tới **Dashboard → Cài đặt → Sao lưu**
 2. Nhấp vào **Xuất** — sổ đăng ký proxy và các phép gán đều được bao gồm
@@ -248,7 +248,7 @@ Sổ đăng ký proxy cũng hỗ trợ **upsert theo host+port** — nếu bạn
 
 ### Di chuyển dữ liệu cũ
 
-Nếu bạn đã cấu hình proxy trong phiên bản cũ hơn (trước khi có registry), OmniRoute sẽ tự động di chuyển chúng:
+Nếu bạn đã cấu hình proxy trong phiên bản cũ hơn (trước khi có registry), 67router sẽ tự động di chuyển chúng:
 
 ```
 Kho key_value cũ → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Quá trình này diễn ra một lần trong lần khởi động đầu tiên s
 
 > 🆕 **Được đóng góp bởi [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Vấn đề [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute tích hợp với nền tảng cộng đồng **[1proxy](https://1proxy-api.aitradepulse.com)** để cung cấp quyền truy cập vào **hàng trăm proxy miễn phí đã được xác thực** từ khắp nơi trên thế giới. Đây là lựa chọn hoàn hảo cho những người dùng không có hạ tầng proxy riêng.
+67router tích hợp với nền tảng cộng đồng **[1proxy](https://1proxy-api.aitradepulse.com)** để cung cấp quyền truy cập vào **hàng trăm proxy miễn phí đã được xác thực** từ khắp nơi trên thế giới. Đây là lựa chọn hoàn hảo cho những người dùng không có hạ tầng proxy riêng.
 
 ### Cách Hoạt động
 
@@ -273,7 +273,7 @@ OmniRoute tích hợp với nền tảng cộng đồng **[1proxy](https://1prox
 └─────────────┘     proxy     └─────────────────┘     lượng       └──────────────┘
 ```
 
-1. **Đồng bộ** — OmniRoute lấy các proxy đã được xác thực từ API 1proxy
+1. **Đồng bộ** — 67router lấy các proxy đã được xác thực từ API 1proxy
 2. **Lưu trữ** — Proxy được lưu vào cùng bảng `proxy_registry` với `source = 'oneproxy'`
 3. **Lọc** — Lọc theo giao thức, quốc gia và điểm chất lượng
 4. **Luân phiên** — Chọn proxy tốt nhất bằng chiến lược dựa trên chất lượng, ngẫu nhiên hoặc tuần tự
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Chống Phát Hiện & Ẩn Danh
 
-OmniRoute không chỉ định tuyến lưu lượng qua proxy — nó còn khiến lưu lượng trông hợp lệ:
+67router không chỉ định tuyến lưu lượng qua proxy — nó còn khiến lưu lượng trông hợp lệ:
 
 ### Giả Mạo Dấu Vân Tay TLS
 
@@ -407,11 +407,11 @@ Huy hiệu cũng hiển thị IP proxy đã được phân giải để xác min
 
 ## Chế Độ Proxy Thượng Nguồn
 
-Đối với các nhà cung cấp sử dụng mẫu CLIProxyAPI, OmniRoute hỗ trợ ba chế độ proxy thượng nguồn:
+Đối với các nhà cung cấp sử dụng mẫu CLIProxyAPI, 67router hỗ trợ ba chế độ proxy thượng nguồn:
 
 | Chế độ        | Mô tả                                                         |
 | ------------- | ------------------------------------------------------------- |
-| `native`      | OmniRoute trực tiếp xử lý việc định tuyến proxy (mặc định)    |
+| `native`      | 67router trực tiếp xử lý việc định tuyến proxy (mặc định)     |
 | `cliproxyapi` | Ủy quyền cho một phiên bản CLIProxyAPI bên ngoài              |
 | `fallback`    | Thử chế độ gốc trước, sau đó chuyển sang CLIProxyAPI dự phòng |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API Tunnel
 
-Để công khai phiên bản OmniRoute của bạn trên internet (Cloudflare/ngrok/Tailscale) thay vì định tuyến lưu lượng đi qua proxy, hãy xem [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST của tunnel nằm dưới `/api/tunnels/{cloudflared,ngrok,tailscale}/*` và độc lập với chuỗi proxy chiều ra được mô tả ở trên.
+Để công khai phiên bản 67router của bạn trên internet (Cloudflare/ngrok/Tailscale) thay vì định tuyến lưu lượng đi qua proxy, hãy xem [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST của tunnel nằm dưới `/api/tunnels/{cloudflared,ngrok,tailscale}/*` và độc lập với chuỗi proxy chiều ra được mô tả ở trên.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Lỗi "socket hang up" khi sử dụng proxy
 
-Điều này là bình thường với các proxy giá rẻ thường ngắt những kết nối không hoạt động. OmniRoute đã xử lý vấn đề này bằng cách:
+Điều này là bình thường với các proxy giá rẻ thường ngắt những kết nối không hoạt động. 67router đã xử lý vấn đề này bằng cách:
 
 - Vô hiệu hóa keep-alive trên các kết nối proxy (`keepAliveTimeout: 1`)
 - Vô hiệu hóa pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Nếu sự cố vẫn tiếp diễn, hãy thử một proxy khác hoặc sử d�
 
 ### "unsupported_country_region_territory" trong quá trình OAuth
 
-Đảm bảo proxy được cấu hình **trước khi** bắt đầu quy trình OAuth. OmniRoute định tuyến việc trao đổi token OAuth qua proxy đã cấu hình. Trước tiên, hãy thiết lập proxy ở cấp độ toàn cục hoặc nhà cung cấp, sau đó kết nối.
+Đảm bảo proxy được cấu hình **trước khi** bắt đầu quy trình OAuth. 67router định tuyến việc trao đổi token OAuth qua proxy đã cấu hình. Trước tiên, hãy thiết lập proxy ở cấp độ toàn cục hoặc nhà cung cấp, sau đó kết nối.
 
 ### Proxy không được sử dụng
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Kiểm tra tình trạng proxy (v3.8.16+)
 
-Cơ chế **proxy fast-fail** của OmniRoute (`src/lib/proxyHealth.ts`) phát hiện các proxy không hoạt động trong <2 giây thông qua kiểm tra kết nối TCP nhanh, sau đó **lưu kết quả vào bộ nhớ đệm** để tránh phát sinh chi phí cho mỗi yêu cầu.
+Cơ chế **proxy fast-fail** của 67router (`src/lib/proxyHealth.ts`) phát hiện các proxy không hoạt động trong <2 giây thông qua kiểm tra kết nối TCP nhanh, sau đó **lưu kết quả vào bộ nhớ đệm** để tránh phát sinh chi phí cho mỗi yêu cầu.
 
 ### Cách hoạt động
 
@@ -659,11 +659,11 @@ Các cổng tùy chỉnh trong URL (`http://host:9999`) luôn được ưu tiên
 
 ## Phân tích & Khả năng quan sát Proxy
 
-OmniRoute theo dõi mức sử dụng của từng proxy để giúp người vận hành chẩn đoán các mẫu định tuyến, tình trạng độ trễ tăng đột biến và lỗi tái diễn.
+67router theo dõi mức sử dụng của từng proxy để giúp người vận hành chẩn đoán các mẫu định tuyến, tình trạng độ trễ tăng đột biến và lỗi tái diễn.
 
 ### Các dữ liệu được theo dõi
 
-Đối với mọi yêu cầu đi qua một proxy đã cấu hình, OmniRoute ghi lại:
+Đối với mọi yêu cầu đi qua một proxy đã cấu hình, 67router ghi lại:
 
 | Chỉ số       | Mô tả                                                       |
 | ------------ | ----------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Cây quyết định chiến lược xoay vòng
 
-Khi nhiều proxy được gán cho một phạm vi, OmniRoute sử dụng một **chiến lược xoay vòng** để chọn proxy sẽ dùng cho từng yêu cầu. Chiến lược được cấu hình ở cấp phạm vi (toàn cục, theo từng nhà cung cấp, theo từng tài khoản, theo từng tổ hợp).
+Khi nhiều proxy được gán cho một phạm vi, 67router sử dụng một **chiến lược xoay vòng** để chọn proxy sẽ dùng cho từng yêu cầu. Chiến lược được cấu hình ở cấp phạm vi (toàn cục, theo từng nhà cung cấp, theo từng tài khoản, theo từng tổ hợp).
 
 ### Các chiến lược khả dụng
 

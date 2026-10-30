@@ -7,7 +7,7 @@
 > **信頼できる唯一の情報源:** `src/lib/webhookDispatcher.ts`、`src/lib/db/webhooks.ts`、`src/app/api/webhooks/`
 > **最終更新:** 2026-06-28 — v3.8.40
 
-OmniRoute は、プラットフォームイベントの発生時に HTTP Webhook を送信できます。Slack、PagerDuty、Datadog、社内アラートサービス、その他の HTTP レシーバーとの統合に使用できます。
+67router は、プラットフォームイベントの発生時に HTTP Webhook を送信できます。Slack、PagerDuty、Datadog、社内アラートサービス、その他の HTTP レシーバーとの統合に使用できます。
 
 ディスパッチャーは各配信を HMAC-SHA256 で署名し、一時的な障害が発生した場合に再試行し、Webhook ごとに配信状態を追跡します。また、失敗が続くエンドポイントを自動的に無効化します。
 
@@ -47,7 +47,7 @@ OmniRoute は、プラットフォームイベントの発生時に HTTP Webhook
 
 ## HMAC 署名
 
-Webhook に `secret` が設定されている場合、OmniRoute は JSON 本文に署名し、次のヘッダーを送信します。
+Webhook に `secret` が設定されている場合、67router は JSON 本文に署名し、次のヘッダーを送信します。
 
 ```
 Content-Type: application/json
@@ -188,7 +188,7 @@ curl -X POST http://localhost:20128/api/webhooks/<id>/test \
   "event": "test.ping",
   "timestamp": "2026-05-13T20:32:00.000Z",
   "data": {
-    "message": "OmniRoute からのテスト Webhook 配信",
+    "message": "67router からのテスト Webhook 配信",
     "webhookId": "<uuid>"
   }
 }

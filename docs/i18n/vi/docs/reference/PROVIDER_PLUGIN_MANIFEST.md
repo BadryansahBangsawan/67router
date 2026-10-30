@@ -9,7 +9,7 @@
 Manifest tương tự cũng được cung cấp qua HTTP tại
 `GET /api/v1/provider-plugin-manifest` cho các sidecar chạy ngoài tiến trình.
 
-OmniRoute thông báo URL đó cho Bifrost và CLIProxyAPI thông qua header yêu cầu
+67router thông báo URL đó cho Bifrost và CLIProxyAPI thông qua header yêu cầu
 `X-OmniRoute-Provider-Manifest-Url`. Hãy đặt
 `OMNIROUTE_PROVIDER_MANIFEST_URL` khi sidecar cần URL công khai hoặc URL mạng container thay vì origin của yêu cầu cục bộ.
 
@@ -24,7 +24,7 @@ sidecar phải gửi một yêu cầu vô điều kiện thay vì chấp nhận 
 ## Mục tiêu
 
 Chuyển metadata nhà cung cấp sang mô hình hợp đồng plugin để luồng xử lý yêu cầu nóng cuối cùng có thể
-được một sidecar có độ trễ thấp hơn đảm nhiệm, trong khi OmniRoute vẫn giữ route
+được một sidecar có độ trễ thấp hơn đảm nhiệm, trong khi 67router vẫn giữ route
 TypeScript làm cổng chính sách và phương án dự phòng. Manifest mang tính bổ sung:
 bản thân nó không thay đổi cơ chế định tuyến yêu cầu.
 
@@ -68,7 +68,7 @@ nên coi đây là câu trả lời mà máy có thể đọc được cho câu 
 | `usage-fetch`        | Có trình lấy dữ liệu mức sử dụng hoặc hạn ngạch đã được kết nối (`getUsageForProvider`). |
 | `usage-supported`    | API mức sử dụng chấp nhận nhà cung cấp này (`isSupportedUsageConnection`).               |
 
-`usage-fetch` chỉ dùng cho mục đích khám phá. Thẻ này cho biết OmniRoute biết cách đọc dữ liệu mức sử dụng của
+`usage-fetch` chỉ dùng cho mục đích khám phá. Thẻ này cho biết 67router biết cách đọc dữ liệu mức sử dụng của
 nhà cung cấp; nó không kích hoạt việc lấy dữ liệu, thay đổi ngữ nghĩa hạn ngạch hoặc ngụ ý rằng
 widget hạn ngạch trên Dashboard được bật cho nhà cung cấp đó — widget này được kiểm soát riêng bởi
 `USAGE_SUPPORTED_PROVIDERS`. Nguồn dữ liệu chuẩn là `USAGE_FETCHER_PROVIDERS` trong

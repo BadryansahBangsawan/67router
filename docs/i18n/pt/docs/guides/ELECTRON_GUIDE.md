@@ -7,7 +7,7 @@
 > **Fonte fidedigna:** espaço de trabalho `electron/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute disponibiliza uma aplicação multiplataforma para ambiente de trabalho (Windows / macOS / Linux), criada com
+O 67router disponibiliza uma aplicação multiplataforma para ambiente de trabalho (Windows / macOS / Linux), criada com
 **Electron 41** + **electron-builder 26.10**. A aplicação para ambiente de trabalho inicia o servidor autónomo Next.js
 como um processo subordinado, direciona uma `BrowserWindow` para o mesmo e adiciona um
 ícone na área de notificação, atualizações automáticas, uma ponte IPC e inicialização de segredos sem configuração.
@@ -47,7 +47,7 @@ Confirmadas em `electron/package.json`:
 | `better-sqlite3`    | raiz `^13.0.2` (pré-compilações Node-API — sem recompilação Electron) |
 | Versão da aplicação | `3.8.0`                                                               |
 | ID da aplicação     | `online.omniroute.desktop`                                            |
-| Nome do produto     | `OmniRoute`                                                           |
+| Nome do produto     | `67router`                                                            |
 
 ## Scripts (`package.json` da raiz)
 
@@ -198,7 +198,7 @@ dê preferência ao ficheiro `.env` e, em seguida, encerre completamente a aplic
 - `BrowserWindow`: 1400×900 (mín. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, botões de semáforo em `{ x: 16, y: 16 }`.
 - Windows/Linux: barra de título nativa.
-- O botão Fechar minimiza para a área de notificação; o respetivo menu inclui **Abrir o OmniRoute**, **Abrir o painel de controlo** (navegador externo), o submenu **Porta do servidor**, **Procurar atualizações** e **Sair**.
+- O botão Fechar minimiza para a área de notificação; o respetivo menu inclui **Abrir o 67router**, **Abrir o painel de controlo** (navegador externo), o submenu **Porta do servidor**, **Procurar atualizações** e **Sair**.
 
 ## Política de Segurança de Conteúdos
 

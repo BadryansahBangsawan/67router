@@ -5,10 +5,10 @@
 ---
 
 Los relés (Vercel, Deno, Cloudflare) finalizan la conexión ascendente en un
-backend sin servidor para que OmniRoute pueda enrutar el tráfico saliente desde
+backend sin servidor para que 67router pueda enrutar el tráfico saliente desde
 una región estable mientras mantiene la clave de API del proveedor en el
 servidor. Este documento describe los dos modos de fallo que los operadores
-encuentran en producción y las vías de recuperación que OmniRoute proporciona
+encuentran en producción y las vías de recuperación que 67router proporciona
 para cada uno.
 
 ## Cómo se almacena la autenticación del relé
@@ -38,7 +38,7 @@ autenticación.
 1. Abra **Configuración → Grupo de proxies**.
 2. Las filas de relés cuya autenticación no está disponible muestran una
    insignia amarilla `autenticación ausente` y un botón **Reparar**.
-3. Haga clic en **Reparar**. OmniRoute llama a
+3. Haga clic en **Reparar**. 67router llama a
    `POST /api/settings/proxies/[id]/repair-relay`, que:
    - descifra `relayAuthEnc` con la clave **actual**,
    - vuelve a escribir el valor de texto sin formato `relayAuth` en `notes`,
@@ -74,7 +74,7 @@ buscarlo manualmente.
 activo, pero las solicitudes siguen fallando de forma intermitente.
 
 Compruebe los encabezados de información del relé devueltos por el sondeo de
-prueba automática de OmniRoute (consulte **Configuración → Grupo de proxies**
+prueba automática de 67router (consulte **Configuración → Grupo de proxies**
 y los contadores `relayTested` / `relayAlive`):
 
 - `x-relay-url` — qué backend de relé respondió.

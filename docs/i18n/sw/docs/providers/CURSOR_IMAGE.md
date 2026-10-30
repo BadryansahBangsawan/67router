@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute huwezesha **utengenezaji wa picha** wa mpango wa Cursor kwenye `POST /v1/images/generations` kupitia kitambulisho kilekile cha mtoa huduma kama gumzo: `cursor` (lakabu `cu`).
+67router huwezesha **utengenezaji wa picha** wa mpango wa Cursor kwenye `POST /v1/images/generations` kupitia kitambulisho kilekile cha mtoa huduma kama gumzo: `cursor` (lakabu `cu`).
 
 | Sehemu                             | Thamani                                                                                              |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ OmniRoute huwezesha **utengenezaji wa picha** wa mpango wa Cursor kwenye `POST /
 
 ## Kwa nini Agent CLI
 
-Gumzo la Cursor katika OmniRoute hutumia `agent.v1.AgentService/Run` (protobuf). Njia hiyo **hukataa** zana zilizojengewa ndani za mteja (shell, write, …). Utengenezaji wa picha ni zana asili ya Cursor inayotekelezwa na **CLI ya `agent`** dhidi ya nafasi ya leseni. Kwa hivyo, kishughulikiaji cha picha huanzisha `agent` kwa kidokezo kilichofungwa na nafasi ya kazi ya muda kwa kila ombi (kwa muundo sawa na madaraja ya nafasi za leseni ya jumuiya), kisha hurejesha `b64_json` inayooana na OpenAI.
+Gumzo la Cursor katika 67router hutumia `agent.v1.AgentService/Run` (protobuf). Njia hiyo **hukataa** zana zilizojengewa ndani za mteja (shell, write, …). Utengenezaji wa picha ni zana asili ya Cursor inayotekelezwa na **CLI ya `agent`** dhidi ya nafasi ya leseni. Kwa hivyo, kishughulikiaji cha picha huanzisha `agent` kwa kidokezo kilichofungwa na nafasi ya kazi ya muda kwa kila ombi (kwa muundo sawa na madaraja ya nafasi za leseni ya jumuiya), kisha hurejesha `b64_json` inayooana na OpenAI.
 
 ## Kizuizi cha ufikiaji (Kanuni Ngumu #15 + #17)
 
@@ -23,12 +23,12 @@ Hili ndilo umbizo pekee la `IMAGE_PROVIDERS` linaloanzisha mchakato mtoto (faili
 
 ## Kizuizi cha urudufishaji kiko katika kiwango cha moduli (kikomo cha instansi moja)
 
-`CURSOR_IMG_MAX_CONCURRENT` hutekelezwa na kihesabu/foleni ya ndani ya kumbukumbu iliyowekewa upeo wa instansi ya moduli ya Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Huweka kikomo kwa usahihi kwa uanzishaji wa michakato ya `agent` unaofanyika kwa wakati mmoja ndani ya mchakato mmoja wa OmniRoute, lakini **hairatibu** kati ya michakato/instansi nyingi zinazotumia nafasi ileile ya leseni ya Cursor (kwa mfano, usambazaji wenye nakala nyingi) — kila instansi hutekeleza kikomo chake huru. Kwa usambazaji wa instansi moja (chaguo-msingi), hiki ni sahihi kabisa; usambazaji uliopanuliwa mlalo unapaswa kuweka `CURSOR_IMG_MAX_CONCURRENT` katika kiwango cha tahadhari kwa kila instansi au kuelekeza trafiki ya picha za Cursor kwenye instansi moja.
+`CURSOR_IMG_MAX_CONCURRENT` hutekelezwa na kihesabu/foleni ya ndani ya kumbukumbu iliyowekewa upeo wa instansi ya moduli ya Node (`open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts`). Huweka kikomo kwa usahihi kwa uanzishaji wa michakato ya `agent` unaofanyika kwa wakati mmoja ndani ya mchakato mmoja wa 67router, lakini **hairatibu** kati ya michakato/instansi nyingi zinazotumia nafasi ileile ya leseni ya Cursor (kwa mfano, usambazaji wenye nakala nyingi) — kila instansi hutekeleza kikomo chake huru. Kwa usambazaji wa instansi moja (chaguo-msingi), hiki ni sahihi kabisa; usambazaji uliopanuliwa mlalo unapaswa kuweka `CURSOR_IMG_MAX_CONCURRENT` katika kiwango cha tahadhari kwa kila instansi au kuelekeza trafiki ya picha za Cursor kwenye instansi moja.
 
 ## Mahitaji
 
 1. Akaunti ya Cursor iliyounganishwa katika dashibodi (OAuth au ufunguo wa API wa `crsr_…`).
-2. Faili tekelezi ya Cursor Agent ipatikane kwa mchakato wa OmniRoute:
+2. Faili tekelezi ya Cursor Agent ipatikane kwa mchakato wa 67router:
    - env `CURSOR_AGENT_BIN=/path/to/agent`, au
    - `~/.local/bin/agent`, au
    - `providerSpecificData.agentBin` kwenye muunganisho wa Cursor.

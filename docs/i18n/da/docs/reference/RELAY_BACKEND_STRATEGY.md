@@ -6,7 +6,7 @@
 
 ## Oversigt
 
-OmniRoute understøtter nu tre relaytilstande for `/api/v1/relay/chat/completions`:
+67router understøtter nu tre relaytilstande for `/api/v1/relay/chat/completions`:
 
 - `ts`: Brug TypeScript-relayet i samme proces.
 - `bifrost`: Gennemtving brugen af Bifrost-gatewayen.
@@ -45,12 +45,12 @@ Hvis du i øjeblikket sammenligner 9router/CLIPROXYAPI:
 
 ## Kontrakt for backend-grænsen
 
-Den stabile produktgrænse er OmniRoute-relay-API'en, ikke dashboardimplementeringen. Next.js-dashboardet kan installere, konfigurere og overvåge lokale tjenester, men routing af forespørgsler bør gå gennem relay-API'en og overdrages bag denne grænse.
+Den stabile produktgrænse er 67router-relay-API'en, ikke dashboardimplementeringen. Next.js-dashboardet kan installere, konfigurere og overvåge lokale tjenester, men routing af forespørgsler bør gå gennem relay-API'en og overdrages bag denne grænse.
 
 Langsigtede backendvalg:
 
 - Behold TypeScript-relayet som policy- og fallback-sti i samme proces. Godkendelse, allowlists, normalisering af forespørgsler, bogføring og sikkerhedskontroller forbliver her før enhver overdragelse til en backend.
-- Brug Bifrost som den foretrukne Tier-1-sidecar med højt gennemløb, når implementeringen kræver lavere routingvariation, centraliseret rotation mellem udbydere eller horisontal skalering på tværs af flere OmniRoute-replikaer.
+- Brug Bifrost som den foretrukne Tier-1-sidecar med højt gennemløb, når implementeringen kræver lavere routingvariation, centraliseret rotation mellem udbydere eller horisontal skalering på tværs af flere 67router-replikaer.
 - Behold 9router og CLIPROXYAPI som integrerede kompatibilitetstjenester. De kører som overvågede lokale processer og er nyttige, når deres udbyder-/CLI-funktionalitet er den ønskede adapter, men de bør ikke blive standardmotoren til Tier-1-routing.
 - Lad ikke dashboardet sende vilkårlige tjeneste-URL'er ind i den primære sti. URL'er leveret af brugergrænsefladen er konfigurationsinput; routingkoden bør finde registrerede, tilstandskontrollerede backends ud fra serversideindstillinger og supervisorstatus.
 - Foretræk i dag HTTP over loopback til overvågede tjenester, fordi de administrerede processer allerede eksponerer HTTP-kompatible API'er, route guard kan auditere grænsen, og fejl-/fallback-funktionaliteten er synlig i forespørgselslogfiler. En fremtidig SDK- eller socket-transport er kun værd at tilføje, hvis den målbart reducerer p99-routinglatensen uden at svække isolations- eller fallback-semantikken.

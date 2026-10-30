@@ -45,7 +45,7 @@ WS1.3 təminatını qoruyaraq layihənin v3.8.48-ə qədər malik olduğu tam av
 (sızdırılmış token təkbaşına dərc edə bilməz — çünki token yoxdur).
 
 **Birdəfəlik quraşdırma (sahib):** npmjs.com → `omniroute` paketi → Settings → _Trusted
-Publisher_ → GitHub: sahib `diegosouzapw`, repo `OmniRoute`, iş axını `npm-publish.yml`
+Publisher_ → GitHub: sahib `diegosouzapw`, repo `67router`, iş axını `npm-publish.yml`
 (mühit: yoxdur). Bu mövcud olana qədər avtomatik addım `ENEEDAUTH` xətası ilə uğursuz olacaq:
 `publish_mode=staged` (aşağıda) və ya `direct` ilə yenidən başladın.
 

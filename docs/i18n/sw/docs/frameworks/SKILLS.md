@@ -7,29 +7,29 @@
 > **Chanzo rasmi:** `src/lib/skills/` na `src/app/api/skills/`
 > **Ilisasishwa mara ya mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute hutoa mfumo wa Skills unaoweza kupanuliwa ambao huruhusu modeli za lugha (na waendeshaji) kuunganisha uwezo unaoweza kutumika tena — kuanzia kusoma mfumo wa faili na kutuma maombi ya HTTP hadi utekelezaji wa msimbo uliotengwa na ujuzi ulioratibiwa kutoka sokoni.
+67router hutoa mfumo wa Skills unaoweza kupanuliwa ambao huruhusu modeli za lugha (na waendeshaji) kuunganisha uwezo unaoweza kutumika tena — kuanzia kusoma mfumo wa faili na kutuma maombi ya HTTP hadi utekelezaji wa msimbo uliotengwa na ujuzi ulioratibiwa kutoka sokoni.
 
-Skill ni kitengo cha kazi chenye toleo na kilichofafanuliwa kwa schema. OmniRoute inaweza kuingiza skills kama ufafanuzi wa zana katika maombi yanayotumwa, kunasa miito ya zana inayorudi kutoka kwa modeli, kuendesha handler inayolingana, na kurudisha matokeo kwa modeli ili mazungumzo yaweze kuendelea. Modeli haioni kamwe utekelezaji — inaona kiolesura cha zana pekee.
+Skill ni kitengo cha kazi chenye toleo na kilichofafanuliwa kwa schema. 67router inaweza kuingiza skills kama ufafanuzi wa zana katika maombi yanayotumwa, kunasa miito ya zana inayorudi kutoka kwa modeli, kuendesha handler inayolingana, na kurudisha matokeo kwa modeli ili mazungumzo yaweze kuendelea. Modeli haioni kamwe utekelezaji — inaona kiolesura cha zana pekee.
 
 ---
 
 ## Agent Skills dhidi ya Omni Skills
 
-OmniRoute ina mifumo miwili tofauti lakini inayokamilishana ya skill:
+67router ina mifumo miwili tofauti lakini inayokamilishana ya skill:
 
 | Kipengele                     | **Omni Skills** (hati hii)                                                   | **Agent Skills**                                                                                       |
 | :---------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- |
 | Madhumuni                     | Uingizaji wa zana za LLM + utekelezaji uliotengwa                            | Katalogi ya SKILL.md kwa maajenti wa nje kugundua na kutumia                                           |
 | Chanzo rasmi                  | `src/lib/skills/` + soko                                                     | `src/lib/agentSkills/` + saraka ya `skills/`                                                           |
 | Hali ya wakati wa utekelezaji | Huingizwa katika maombi yanayotumwa, hutekelezwa kwenye matukio ya tool-call | Katalogi tuli ya markdown + endpoints za ugunduzi za REST/MCP/A2A                                      |
-| Anayeitumia                   | OmniRoute yenyewe (uelekezaji wa combo, miito ya LLM inayoingia)             | Maajenti wa nje, clients za MCP, orchestrators za A2A                                                  |
+| Anayeitumia                   | 67router yenyewe (uelekezaji wa combo, miito ya LLM inayoingia)              | Maajenti wa nje, clients za MCP, orchestrators za A2A                                                  |
 | Idadi                         | Hubadilika (hutegemea soko)                                                  | Vipengee 45 vya katalogi (23 vya API + 21 vya CLI + 1 cha usanidi)                                     |
 | Muundo                        | `SkillDefinition` yenye schema ya zana + handler                             | Frontmatter ya `SKILL.md` + mwili wa markdown                                                          |
 | Ugunduzi                      | REST ya `/api/skills/*` + zana za MCP za `omniroute_skills_*`                | REST ya `/api/agent-skills/*` + zana za MCP za `omniroute_agent_skills_*` + `list-capabilities` ya A2A |
 
-**Omni Skills** ni injini ya utekelezaji — zinafafanua kile ambacho OmniRoute _inaweza kufanya_ wakati LLM inapoitisha zana.
+**Omni Skills** ni injini ya utekelezaji — zinafafanua kile ambacho 67router _inaweza kufanya_ wakati LLM inapoitisha zana.
 
-**Agent Skills** ni katalogi ya nyaraka — zinafafanua kwa maajenti wa nje _jinsi ya kutumia_ REST API na CLI ya OmniRoute, kupitia faili za SKILL.md zenye muundo ambazo zinaweza kuingizwa moja kwa moja katika prompts za ajenti.
+**Agent Skills** ni katalogi ya nyaraka — zinafafanua kwa maajenti wa nje _jinsi ya kutumia_ REST API na CLI ya 67router, kupitia faili za SKILL.md zenye muundo ambazo zinaweza kuingizwa moja kwa moja katika prompts za ajenti.
 
 Kwa katalogi ya Agent Skills, generator, zana za MCP, na skill ya A2A, angalia [docs/frameworks/AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -41,14 +41,14 @@ Kwa katalogi ya Agent Skills, generator, zana za MCP, na skill ya A2A, angalia [
 
 Vyanzo vitatu vya skills vinaishi pamoja katika registry moja:
 
-1. **Skills zilizojengewa ndani** (`src/lib/skills/builtins.ts`) — husambazwa pamoja na OmniRoute. Hushughulikia matumizi ya kawaida:
+1. **Skills zilizojengewa ndani** (`src/lib/skills/builtins.ts`) — husambazwa pamoja na 67router. Hushughulikia matumizi ya kawaida:
    - `file_read`, `file_write` — workspace iliyotengwa kwa kila API key chini ya `<DATA_DIR>/skills/workspaces/<hashed-key>/`
    - `http_request` — HTTP inayotumwa kupitia `safeOutboundFetch` yenye `guard: "public-only"`
    - `web_search` — mtoa huduma wa utafutaji anayeweza kubadilishwa mwenye caching (`executeWebSearch`)
    - `eval_code` — utekelezaji wa `node` au `python` uliotengwa kwa Docker
    - `execute_command` — amri ya shell iliyotengwa kwa Docker
    - `browser` — scaffolding inayotumia Playwright, imezimwa kwa chaguo-msingi (`builtin/browser.ts`)
-2. **SkillsMP** (Soko la OmniRoute) — hupakuliwa kutoka `https://skillsmp.com/api/v1/skills/search`. Inahitaji `skillsmpApiKey` katika Settings.
+2. **SkillsMP** (Soko la 67router) — hupakuliwa kutoka `https://skillsmp.com/api/v1/skills/search`. Inahitaji `skillsmpApiKey` katika Settings.
 3. **SkillsSH** (katalogi ya jamii ya `skills.sh`) — hupakuliwa kutoka `https://skills.sh/api/search`. Haihitaji uthibitishaji; maudhui ya SKILL.md huvutwa kutoka GitHub raw.
 
 "Active provider" mmoja hudhibiti katalogi ambayo dashboard husakinisha kutoka kwayo (`src/lib/skills/providerSettings.ts`). Ibadilishe chini ya **Settings → Memory & Skills**. Chaguo-msingi: `skillsmp`.
@@ -442,7 +442,7 @@ hakuna kiwango cha chini cha desimali kama `0.6` wala uwekaji alama wa `registry
 
 ## Katalogi ya Ujuzi Uliojengewa Ndani
 
-OmniRoute huja na seti iliyoteuliwa ya ujuzi uliojengewa ndani katika `src/lib/skills/builtin/`. Ujuzi unaotumika zaidi ni:
+67router huja na seti iliyoteuliwa ya ujuzi uliojengewa ndani katika `src/lib/skills/builtin/`. Ujuzi unaotumika zaidi ni:
 
 ### Ujuzi wa Uendeshaji Kiotomatiki wa Kivinjari
 

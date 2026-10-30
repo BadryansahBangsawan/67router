@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute għandu tliet mekkaniżmi ta' reżiljenza distinti iżda relatati. Kull wieħed għandu ambitu u għan differenti. Żomhom separati meta tkun qed tiddibagga l-imġieba tar-rottar.
+67router għandu tliet mekkaniżmi ta' reżiljenza distinti iżda relatati. Kull wieħed għandu ambitu u għan differenti. Żomhom separati meta tkun qed tiddibagga l-imġieba tar-rottar.
 
 ![Mudell ta' reżiljenza bi 3 saffi](../diagrams/exported/resilience-3layers.svg)
 
@@ -182,7 +182,7 @@ It-tliet headers tal-affinità tas-sessjoni qatt ma jintbagħtu lejn l-upstream 
 
 ### Leases esklussivi ta' konnessjoni għal sessjonijiet mmaniġġjati
 
-**Ambitu:** klijent/sessjoni HTTP mmaniġġjat attiv wieħed jippossjedi konnessjoni OmniRoute eliġibbli waħda.
+**Ambitu:** klijent/sessjoni HTTP mmaniġġjat attiv wieħed jippossjedi konnessjoni 67router eliġibbli waħda.
 
 **Skop:** jipprovdi pussess esklussiv u durabbli ta' konnessjoni għal klijenti li jeħtieġu
 barriera iebsa ta' routing matul it-talbiet. Dan jiddifferi mill-affinità tas-sessjoni, li hija
@@ -201,7 +201,7 @@ l-istess ġenerazzjoni lejn konnessjoni eliġibbli ħielsa oħra.
 Iċ-ċiklu tal-ħajja huwa `POST /api/v1/session-leases` b'azzjonijiet JSON `acquire`, `renew`, u `release`.
 It-talbiet ta' inferenza mmaniġġjata jippreżentaw il-valur opaku `X-OmniRoute-Lease-Owner` u l-`X-OmniRoute-Lease-Generation` eżatt. Is-sid juża `vlo_` segwit minn 43 karattru base64url; biss il-hash SHA-256 tiegħu jinħażen. Kull barriera finali ta' dispatch torbot ukoll l-ID tal-ċavetta API awtentikata u l-ID tal-konnessjoni attiva. Il-headers tal-kontroll tal-lease jitneħħew mill-logs, mis-snapshots miżmuma tat-talbiet, u mill-headers tal-eżekutor upstream.
 
-Jekk ir-rottar ordinarju jkollu kandidati mmaniġġjati eliġibbli iżda kull kandidat ħieles ikun okkupat minn lease attiv barrani, OmniRoute tirritorna HTTP `429`, kodiċi ta' kapaċità-tal-lease-mhux-disponibbli, stat ta' stennija-għall-kapaċità, u `Retry-After` limitat derivat mill-eqdem skadenza rilevanti. L-eliġibilità vojta ordinarja mhijiex kontenzjoni tal-lease u żżomm is-semantika eżistenti tal-iżbalji tar-rottar tagħha.
+Jekk ir-rottar ordinarju jkollu kandidati mmaniġġjati eliġibbli iżda kull kandidat ħieles ikun okkupat minn lease attiv barrani, 67router tirritorna HTTP `429`, kodiċi ta' kapaċità-tal-lease-mhux-disponibbli, stat ta' stennija-għall-kapaċità, u `Retry-After` limitat derivat mill-eqdem skadenza rilevanti. L-eliġibilità vojta ordinarja mhijiex kontenzjoni tal-lease u żżomm is-semantika eżistenti tal-iżbalji tar-rottar tagħha.
 
 Mekkaniżmi relatati jibqgħu separati:
 
@@ -219,7 +219,7 @@ Mekkaniżmi relatati jibqgħu separati:
 
 - `429` / `403` / `402` — sinjal ta' kwota jew ta' dritt — issakkar il-**familja tal-kwota**: għal codex l-ambitu kollu `codex` / `spark` (kull mudell `gpt-5*` tal-konnessjoni), għal fornituri oħra `getQuotaScopedModelForProvider()`.
 - `404` jissakkar il-mudell biss (`getModelLockKey()` jispeċifika `not_found`).
-- Kwalunkwe status ieħor — fallimenti ta' trasport/server `5xx` u l-`502` sintetizzat minn OmniRoute nnifsu mill-validazzjoni tal-kwalità — jissakkar biss it-tuple **eżatta** fornitur/konnessjoni/mudell. Stream ħażina fuq mudell wieħed mhijiex prova dwar il-kwota tal-kont; qabel din ir-regola, risposta waħda vojta fuq `codex/gpt-5.6-luna` kienet tneħħi kull mudell `gpt-5*` ta' dik il-konnessjoni mill-rottar għal 2–30 min (b'eskalazzjoni) filwaqt li l-kwota tagħha ma kinitx immissa.
+- Kwalunkwe status ieħor — fallimenti ta' trasport/server `5xx` u l-`502` sintetizzat minn 67router nnifsu mill-validazzjoni tal-kwalità — jissakkar biss it-tuple **eżatta** fornitur/konnessjoni/mudell. Stream ħażina fuq mudell wieħed mhijiex prova dwar il-kwota tal-kont; qabel din ir-regola, risposta waħda vojta fuq `codex/gpt-5.6-luna` kienet tneħħi kull mudell `gpt-5*` ta' dik il-konnessjoni mill-rottar għal 2–30 min (b'eskalazzjoni) filwaqt li l-kwota tagħha ma kinitx immissa.
 - L-għażla `scope` espliċita ta' min jagħmel is-sejħa dejjem tirbaħ (Antigravity jgħaddi `"exact"`).
 
 **Skop:** tevita li tiġi diżattivata konnessjoni sħiħa meta mudell wieħed biss ma jkunx disponibbli jew ikun limitat mill-kwota.
@@ -322,7 +322,7 @@ għal kull mudell**, `model=cap` wieħed f'kull linja) jew permezz ta'
   talbiet konkurrenti espressi b'numri sħaħ pożittivi.
 - **Kjuwi lokali, ebda discovery:** it-talbiet żejjed jidħlu fil-kju lokalment
   bis-semantika eżistenti tal-kju/timeout (żbalji ta' ammissjoni tat-tip
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ma jiskopri u lanqas
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ma jiskopri u lanqas
   jiddeżduċi l-politika upstream — jinfurza l-limiti eżatti li l-operatur ikun
   ikkonfigura. Gate ta' mudell saturat qatt ma jiddiżattiva l-provider u qatt ma
   joħloq lockout permanenti tal-mudell; l-imġieba upstream ta'
@@ -418,7 +418,7 @@ Il-kontroll tal-ammissjoni innifsu huwa funzjoni pura (`open-sse/services/rateLi
 ### Xibka ta' Sigurtà għall-Attivazzjoni Awtomatika tar-Rate-Limit u Protezzjoni tal-Konnessjoni (`rateLimitProtection`)
 
 **Xibka ta' sigurtà għall-attivazzjoni awtomatika** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, default `true`):
-B'mod default, OmniRoute jattiva awtomatikament il-protezzjoni tal-kju tar-rate-limit għall-konnessjonijiet kollha attivi tal-fornituri b'ċavetta API (`getProviderCategory(provider) === "apikey"`). Dan jiżgura li t-talbiet li jaslu lejn ċwievet API upstream sensittivi għar-rata jitqiegħdu f'kju u jiġu mrażżna permezz ta' Bottleneck minflok ma jisplodu fi żbalji 429 upstream. Ix-xibka ta' sigurtà tista' tiġi mbażżla permezz tal-varjabbli tal-ambjent `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` jiddiżattiva, `true`/`1`/`on` jisfurzaha mixgħula), li għandu preċedenza fuq l-issettjar persistenti fid-dashboard (**Settings → Resilienza** / `PATCH /api/resilience`).
+B'mod default, 67router jattiva awtomatikament il-protezzjoni tal-kju tar-rate-limit għall-konnessjonijiet kollha attivi tal-fornituri b'ċavetta API (`getProviderCategory(provider) === "apikey"`). Dan jiżgura li t-talbiet li jaslu lejn ċwievet API upstream sensittivi għar-rata jitqiegħdu f'kju u jiġu mrażżna permezz ta' Bottleneck minflok ma jisplodu fi żbalji 429 upstream. Ix-xibka ta' sigurtà tista' tiġi mbażżla permezz tal-varjabbli tal-ambjent `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` jiddiżattiva, `true`/`1`/`on` jisfurzaha mixgħula), li għandu preċedenza fuq l-issettjar persistenti fid-dashboard (**Settings → Resilienza** / `PATCH /api/resilience`).
 
 **Semantika ta' `rateLimitProtection` għal kull konnessjoni:**
 Il-protezzjoni tar-rate-limit għal kull konnessjoni tiġi rrakkjata permezz tal-kamp boolean `rateLimitProtection` fuq il-konnessjonijiet tal-fornituri (persistenti bħala `rate_limit_protection` f'SQLite):
@@ -788,7 +788,7 @@ skont l-IP huwa l-istess sinjal bħal kwota eżawrita. Limiti onesti:
 > tal-aġent tibqa' taħt il-budget tal-kontest ta' 40k. Hija l-veduta kondensata, rivolta lejn
 > l-aġent, tas-sezzjonijiet ta' hawn fuq; is-sezzjonijiet numerrati jibqgħu r-referenza sħiħa.
 
-OmniRoute għandu tliet mekkaniżmi relatati iżda distinti ta' falliment temporanju. Żomm
+67router għandu tliet mekkaniżmi relatati iżda distinti ta' falliment temporanju. Żomm
 l-ambitu tagħhom separat meta tkun qed tagħmel debugging tal-imġiba tar-routing. Ara d-
 [diagramma tar-reżiljenza b'3 saffi](../diagrams/exported/resilience-3layers.svg)
 (sors: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

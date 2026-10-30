@@ -26,11 +26,11 @@
 1. **ChatGPT Web (Codex)** प्रदाता उघडा आणि कनेक्शन जोडा.
 2. संपूर्ण ChatGPT Cookie हेडर, tunnel ID, runtime key आणि सानुकूल connector
    नाव पेस्ट करा. नवीन tool-सक्षम सेटअपसाठी नेमके
-   `OmniRoute Codex v2` नाव असलेला नव्याने तयार केलेला connector वापरणे आवश्यक आहे; त्यामध्ये Authentication हे None आणि Permissions हे Allow all
+   `67router Codex v2` नाव असलेला नव्याने तयार केलेला connector वापरणे आवश्यक आहे; त्यामध्ये Authentication हे None आणि Permissions हे Allow all
    actions असे सेट केलेले असावे.
-3. कनेक्शन तपासणी चालवा. OmniRoute ब्राउझर-आधारित Temporary Chat उघडते आणि
+3. कनेक्शन तपासणी चालवा. 67router ब्राउझर-आधारित Temporary Chat उघडते आणि
    खात्यासाठी Sol आणि Pro उपलब्ध आहेत की नाही हे शोधते.
-4. कनेक्शन जतन करा. OmniRoute पेस्ट केलेली cookie सत्यापित
+4. कनेक्शन जतन करा. 67router पेस्ट केलेली cookie सत्यापित
    Playwright storage state ने बदलते आणि encrypted credential abstraction द्वारे runtime key सोबत ती संग्रहित करते.
 
 यशस्वीरीत्या जतन केल्यानंतर कच्ची cookie राखून ठेवली जात नाही. सत्राची मुदत संपल्यावर,
@@ -58,7 +58,7 @@ connector आणि tool round-trip यांचा स्वतंत्रप�
 
 Free/Go खाती Luna रूट्स उपलब्ध करून देतात. Sol-क्षम खाती Instant ते High उपलब्ध करून देतात आणि Pro-क्षम खाती याव्यतिरिक्त Extra High व Pro उपलब्ध करून देतात. प्रत्येक रूटमध्ये निश्चित बॅकएंड मॉडेल आणि रीझनिंग प्रयत्न असतो; त्याच्याशी विसंगत असलेला स्पष्ट Responses प्रयत्न निवडलेला ब्राउझर मोड गुपचूप बदलण्याऐवजी बंद पद्धतीने अयशस्वी होतो.
 
-जुन्या `Codex Native` किंवा `OmniRoute Codex` कनेक्टरचे नाव बदलू नका किंवा तो पुन्हा वापरू नका. ChatGPT कनेक्टरच्या ओळखीनुसार सार्वजनिक MCP करार कॅश करते, तर अद्ययावत ब्रिज नवीन थेट टर्न-टोकन करार वापरतो. रनटाइम त्या लेगसी ओळखी नाकारतो आणि नवीन `OmniRoute Codex v2` कनेक्टर आवश्यक ठरवतो.
+जुन्या `Codex Native` किंवा `67router Codex` कनेक्टरचे नाव बदलू नका किंवा तो पुन्हा वापरू नका. ChatGPT कनेक्टरच्या ओळखीनुसार सार्वजनिक MCP करार कॅश करते, तर अद्ययावत ब्रिज नवीन थेट टर्न-टोकन करार वापरतो. रनटाइम त्या लेगसी ओळखी नाकारतो आणि नवीन `67router Codex v2` कनेक्टर आवश्यक ठरवतो.
 
 ## सुरक्षा मॉडेल
 
@@ -77,19 +77,19 @@ Free/Go खाती Luna रूट्स उपलब्ध करून दे
 
 ## डिस्प्लेविरहित VPS आणि Docker
 
-npm, systemd आणि PM2 इंस्टॉलेशन्ससाठी, OmniRoute सामान्य Chrome आणि Chromium पथ शोधतो.
+npm, systemd आणि PM2 इंस्टॉलेशन्ससाठी, 67router सामान्य Chrome आणि Chromium पथ शोधतो.
 पर्याय म्हणून, `CHATGPT_WEB_CODEX_CHROME_PATH` सेट करा. Runtime टर्न्समध्ये जाणीवपूर्वक दृश्यमान
 Chrome वापरले जाते, कारण ChatGPT खऱ्या headless browser ची रचना नाकारतो. त्यामुळे डिस्प्लेविरहित होस्टने
-OmniRoute खाजगी Xvfb डिस्प्लेसह चालवणे आवश्यक आहे; केवळ Chrome पथ सेट केल्याने डिस्प्ले उपलब्ध होत नाही.
+67router खाजगी Xvfb डिस्प्लेसह चालवणे आवश्यक आहे; केवळ Chrome पथ सेट केल्याने डिस्प्ले उपलब्ध होत नाही.
 
 Docker चे `web` प्रोफाइल अंतर्गत Compose
 नेटवर्कवर `chatgpt-web-codex-browser` सुरू करते. Sidecar, Xvfb मध्ये दृश्यमान Chrome चालवतो, त्यामुळे कोणत्याही भौतिक डिस्प्लेची आवश्यकता नसते. त्याचा CDP
 पोर्ट होस्टवर प्रकाशित केला जात नाही. संरक्षित browser profile volume हा
-OmniRoute data volume पासून वेगळा असतो आणि browser ला पुरेशी shared memory मिळते. अंतर्गत CDP proxy
+67router data volume पासून वेगळा असतो आणि browser ला पुरेशी shared memory मिळते. अंतर्गत CDP proxy
 Compose नेटवर्कमध्ये फक्त `9223` पोर्टवर ऐकतो; sidecar मध्ये Chrome loopback शीच बांधलेला राहतो.
 
 `DATA_DIR` अंतर्गत असलेला supervisor lease एकाच tunnel आणि broker state ची मालकी
-अनेक OmniRoute प्रक्रियांकडे जाण्यापासून प्रतिबंधित करतो. doctor द्वारे संघर्ष नोंदवला जातो.
+अनेक 67router प्रक्रियांकडे जाण्यापासून प्रतिबंधित करतो. doctor द्वारे संघर्ष नोंदवला जातो.
 
 ## परस्परसंवादी पुनर्प्राप्ती
 

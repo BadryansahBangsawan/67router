@@ -38,11 +38,11 @@ cumas céanna uirlise áitiúla atá ceangailte leis an seal a úsáid nuair at�
 1. Oscail an soláthraí **ChatGPT Web (Codex)** agus cuir nasc leis.
 2. Greamaigh ceanntásc iomlán ChatGPT Cookie, aitheantas an tolláin, an eochair ama rite agus ainm an nascóra shaincheaptha.
    Ní mór do shocruithe nua atá in ann uirlisí a úsáid nascóir nuachruthaithe darb ainm díreach
-   `OmniRoute Codex v2` a úsáid, agus Authentication socraithe mar None agus Permissions socraithe mar Allow all
+   `67router Codex v2` a úsáid, agus Authentication socraithe mar None agus Permissions socraithe mar Allow all
    actions.
-3. Rith seiceáil an naisc. Osclaíonn OmniRoute Temporary Chat atá bunaithe ar bhrabhsálaí agus braitheann sé
+3. Rith seiceáil an naisc. Osclaíonn 67router Temporary Chat atá bunaithe ar bhrabhsálaí agus braitheann sé
    an bhfuil Sol agus Pro ar fáil don chuntas.
-4. Sábháil an nasc. Cuireann OmniRoute staid stórála fhíoraithe
+4. Sábháil an nasc. Cuireann 67router staid stórála fhíoraithe
    Playwright in ionad an fhianáin a greamaíodh agus stórálann sé í leis an eochair ama rite tríd an
    astarraingt criptithe dintiúr.
 
@@ -76,10 +76,10 @@ High ar fáil, agus cuireann cuntais atá in ann Pro a úsáid Extra High agus P
 iarracht réasúnaíochta sheasta ag gach bealach; teipeann iarracht shainráite chontrártha Responses
 go dúnta seachas an mód roghnaithe brabhsálaí a athrú go ciúin.
 
-Ná hathainmnigh ná athúsáid nascóir `Codex Native` nó `OmniRoute Codex` níos sine. Déanann ChatGPT
+Ná hathainmnigh ná athúsáid nascóir `Codex Native` nó `67router Codex` níos sine. Déanann ChatGPT
 conradh poiblí MCP a thaisceadh de réir aitheantas an nascóra, agus úsáideann an droichead athnuaite
 conradh nua díreach comhartha sealanna. Diúltaíonn an t-am rite do na haitheantais oidhreachta sin agus éilíonn sé
-nascóir nua `OmniRoute Codex v2`.
+nascóir nua `67router Codex v2`.
 
 ## Samhail slándála
 
@@ -99,19 +99,19 @@ nascóir nua `OmniRoute Codex v2`.
 
 ## VPS gan taispeáint agus Docker
 
-I gcás suiteálacha npm, systemd, agus PM2, braitheann OmniRoute gnáthchonairí Chrome agus Chromium.
+I gcás suiteálacha npm, systemd, agus PM2, braitheann 67router gnáthchonairí Chrome agus Chromium.
 Mar rogha eile, socraigh `CHATGPT_WEB_CODEX_CHROME_PATH`. Úsáideann seala am rite Chrome le comhéadan
 d'aon ghnó toisc go ndiúltaíonn ChatGPT do chruth brabhsálaí atá fíorcheann‑gan‑chomhéadan. Dá bhrí sin, ní mór d'óstach gan taispeáint
-OmniRoute a rith le taispeáint phríobháideach Xvfb; ní sholáthraíonn socrú chonair Chrome amháin taispeáint.
+67router a rith le taispeáint phríobháideach Xvfb; ní sholáthraíonn socrú chonair Chrome amháin taispeáint.
 
 Tosaíonn próifíl Docker `web` `chatgpt-web-codex-browser` ar líonra inmheánach Compose.
 Ritheann an taobhcharr Chrome le comhéadan laistigh de Xvfb, mar sin ní theastaíonn taispeáint fhisiciúil. Ní fhoilsítear a phort CDP
 ar an óstach. Tá toirt phróifíle chosanta an bhrabhsálaí ar leithligh ó
-thoirt sonraí OmniRoute, agus faigheann an brabhsálaí dóthain cuimhne chomhroinnte. Ní éisteann an seachfhreastalaí inmheánach CDP
+thoirt sonraí 67router, agus faigheann an brabhsálaí dóthain cuimhne chomhroinnte. Ní éisteann an seachfhreastalaí inmheánach CDP
 ach ar phort `9223` laistigh de líonra Compose; fanann Chrome ceangailte leis an gcomhéadan lúb-ais sa
 taobhcharr.
 
-Cuireann léas maoirseora faoi `DATA_DIR` cosc ar iliomad próiseas OmniRoute úinéireacht a bheith acu ar
+Cuireann léas maoirseora faoi `DATA_DIR` cosc ar iliomad próiseas 67router úinéireacht a bheith acu ar
 an tollán agus ar staid an bhróicéara chéanna. Tuairiscíonn an diagnóiseoir coinbhleacht.
 
 ## Athshlánú idirghníomhach

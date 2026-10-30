@@ -6,7 +6,7 @@
 
 ## Sažetak
 
-OmniRoute sada podržava tri načina prosljeđivanja za `/api/v1/relay/chat/completions`:
+67router sada podržava tri načina prosljeđivanja za `/api/v1/relay/chat/completions`:
 
 - `ts`: Upotrebljava TypeScript prosljeđivanje unutar procesa.
 - `bifrost`: Prisilno upotrebljava pristupnik Bifrost.
@@ -45,12 +45,12 @@ Ako trenutačno uspoređujete 9router/CLIPROXYAPI:
 
 ## Ugovor granice pozadinskog sustava
 
-Stabilna granica proizvoda jest OmniRoute relay API, a ne implementacija nadzorne ploče. Nadzorna ploča Next.js može instalirati, konfigurirati i nadzirati lokalne usluge, ali usmjeravanje zahtjeva treba započeti putem API-ja za prosljeđivanje i predati zahtjev iza te granice.
+Stabilna granica proizvoda jest 67router relay API, a ne implementacija nadzorne ploče. Nadzorna ploča Next.js može instalirati, konfigurirati i nadzirati lokalne usluge, ali usmjeravanje zahtjeva treba započeti putem API-ja za prosljeđivanje i predati zahtjev iza te granice.
 
 Dugoročni izbori pozadinskog sustava:
 
 - Zadržite TypeScript prosljeđivanje kao put unutar procesa za pravila i povratak na rezervni put. Autentifikacija, popisi dopuštenih stavki, normalizacija zahtjeva, obračun i sigurnosne provjere ostaju ovdje prije bilo kakve predaje pozadinskom sustavu.
-- Upotrebljavajte Bifrost kao preferirani popratni proces razine Tier-1 za visoku propusnost kada implementacija zahtijeva manju varijaciju usmjeravanja, centraliziranu rotaciju pružatelja usluga ili horizontalno skaliranje na više replika sustava OmniRoute.
+- Upotrebljavajte Bifrost kao preferirani popratni proces razine Tier-1 za visoku propusnost kada implementacija zahtijeva manju varijaciju usmjeravanja, centraliziranu rotaciju pružatelja usluga ili horizontalno skaliranje na više replika sustava 67router.
 - Zadržite 9router i CLIPROXYAPI kao ugrađene usluge kompatibilnosti. Izvršavaju se kao nadzirani lokalni procesi i korisni su kada je njihovo ponašanje pružatelja usluga/CLI-ja željeni prilagodnik, ali ne bi trebali postati zadani mehanizam za usmjeravanje razine Tier-1.
 - Nemojte dopustiti da nadzorna ploča prosljeđuje proizvoljne URL-ove usluga u aktivni put. URL-ovi uneseni putem korisničkog sučelja konfiguracijski su ulazi; kôd za usmjeravanje trebao bi razriješiti registrirane pozadinske sustave čije je zdravlje provjereno iz postavki na poslužiteljskoj strani i stanja nadzornika.
 - Danas dajte prednost HTTP-u povratne petlje za nadzirane usluge jer upravljani procesi već pružaju API-je kompatibilne s HTTP-om, zaštita rute može revidirati granicu, a ponašanje u slučaju kvara/povratka na rezervni put vidljivo je u zapisnicima zahtjeva. Budući SDK ili prijenos putem utičnice vrijedi dodati samo ako mjerljivo smanjuje p99 latenciju usmjeravanja bez slabljenja izolacije ili semantike povratka na rezervni put.

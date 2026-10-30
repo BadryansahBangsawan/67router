@@ -8,11 +8,11 @@
 > **Sabuntawa na ƙarshe:** 2026-09-02 — v3.8.51
 > **Masu karantawa:** Injiniyoyin da ke kula da haɗin ɓoye-sawu na musamman ga masu samarwa.
 
-OmniRoute yana haɗuwa da masu samarwa waɗanda gefunansu ke gano sawun abokan hulɗa marasa hukuma kai tsaye (TLS JA3/JA4, jerin kanun bayanai, tsarin jikin JSON, token ɗin tabbatar da sahihanci). Wannan shafin yana bayyana wuraren ɓoye-sawu da OmniRoute ke samarwa da kuma inda aka aiwatar da su.
+67router yana haɗuwa da masu samarwa waɗanda gefunansu ke gano sawun abokan hulɗa marasa hukuma kai tsaye (TLS JA3/JA4, jerin kanun bayanai, tsarin jikin JSON, token ɗin tabbatar da sahihanci). Wannan shafin yana bayyana wuraren ɓoye-sawu da 67router ke samarwa da kuma inda aka aiwatar da su.
 
 ## Sanarwar Doka da Ɗa'a
 
-An samar da fasalolin ɓoye-sawu ne domin OmniRoute ya iya aiki a matsayin shimfiɗar daidaitawa tsakanin asusun hukuma mallakar masu amfani (Claude Code CLI, Codex, Antigravity, Cursor, da sauransu) da haɗaɗɗiyar API ta OmniRoute. **Ba** a yi su domin kauce wa gano zamba, raba bayanan shiga, ko karya Sharuɗɗan Sabis na masu samarwa ba. Masu kula da tsarin suna sa ran masu gudanarwa su bi ToS na tushe da suka amince da su lokacin ƙirƙirar asusu.
+An samar da fasalolin ɓoye-sawu ne domin 67router ya iya aiki a matsayin shimfiɗar daidaitawa tsakanin asusun hukuma mallakar masu amfani (Claude Code CLI, Codex, Antigravity, Cursor, da sauransu) da haɗaɗɗiyar API ta 67router. **Ba** a yi su domin kauce wa gano zamba, raba bayanan shiga, ko karya Sharuɗɗan Sabis na masu samarwa ba. Masu kula da tsarin suna sa ran masu gudanarwa su bi ToS na tushe da suka amince da su lokacin ƙirƙirar asusu.
 
 ---
 
@@ -78,7 +78,7 @@ kafin a yi ikirarin daidaito da upstream browser.
 
 ## Kunshin Ɓoye-Ɓoye na Claude Code
 
-Lokacin da aka kunna `cliCompatMode`, OmniRoute yana sake fasalta buƙatun Claude masu fita ta yadda ba za a iya bambanta su da zirga-zirgar `claude-cli` ba. Module uku ne suke haɗin gwiwa:
+Lokacin da aka kunna `cliCompatMode`, 67router yana sake fasalta buƙatun Claude masu fita ta yadda ba za a iya bambanta su da zirga-zirgar `claude-cli` ba. Module uku ne suke haɗin gwiwa:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -94,7 +94,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hash ɗin Abun Cikin Client)
 
-Binciken inganci a ɓangaren server wanda Claude Code CLI na hukuma ke ƙididdigewa ta Bun/Zig. OmniRoute ya sake aiwatar da shi da `xxhash-wasm`:
+Binciken inganci a ɓangaren server wanda Claude Code CLI na hukuma ke ƙididdigewa ta Bun/Zig. 67router ya sake aiwatar da shi da `xxhash-wasm`:
 
 1. Mayar da body zuwa tsari tare da madadin `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -140,7 +140,7 @@ Module masu alaƙa a cikin wannan kunshi:
 
 ## Ɓoye-Ɓoyen Antigravity
 
-Buƙatun Antigravity suna kiyaye rubutun mai kira byte-zuwa-byte. OmniRoute ba ya saka haruffan zero-width a cikin prompt ko sake suna/saka tool domin kwaikwayon client na IDE.
+Buƙatun Antigravity suna kiyaye rubutun mai kira byte-zuwa-byte. 67router ba ya saka haruffan zero-width a cikin prompt ko sake suna/saka tool domin kwaikwayon client na IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -150,13 +150,13 @@ Yana cire alamomin Stainless SDK (`x-stainless-lang`, `x-stainless-package-versi
 
 `ANTIGRAVITY_CREDITS=always` (wanda `open-sse/executors/antigravity.ts` ke amfani da shi) yana tura **kowace** buƙata ta Antigravity AI Credit Overages (credits na Google da ake biya) maimakon barin quota na matakin kyauta na Google ya takaita abubuwa. An rubuta wannan a matsayin wata fasali, amma shi ne **rahoton keta ToS mafi yawan faruwa da muke gani** — an dakatar da account na Google Ultra da dama tare da `403 / "service disabled for ToS violation" / insufficient_quota` bayan gudanarwa na wasu awanni da `=always`.
 
-Tilasta dokokin upstream yana faruwa ne a **ɓangaren Google**, ba wani abu da OmniRoute zai iya hana ba. Sunan env var da takardun da ake da su suna sa ya yi kama da maɓalli mai aminci da za a kunna; amma ba haka ba ne.
+Tilasta dokokin upstream yana faruwa ne a **ɓangaren Google**, ba wani abu da 67router zai iya hana ba. Sunan env var da takardun da ake da su suna sa ya yi kama da maɓalli mai aminci da za a kunna; amma ba haka ba ne.
 
 **Dalilin da ya sa wannan ke jawo gano amfani ba daidai ba fiye da amfani da matakin kyauta kawai:**
 
 - Ci gaba da kashe kuɗi ta atomatik a kan account ɗin Google guda ɗaya yana haifar da alama ta daban da matakin kyauta wanda zai kai quota sannan ya tsaya.
 - Credit overages ba su da iyakar rate, don haka client da aka saita ba daidai ba zai iya cinye ɗaruruwan USD cikin mintuna kuma ya yi kama da sake sayar da API key ko zirga-zirgar bot.
-- Masu amfani da OmniRoute da dama da suke amfani da overage credits lokaci guda daga external IP ɗaya suna ƙara ƙarfin wannan alama.
+- Masu amfani da 67router da dama da suke amfani da overage credits lokaci guda daga external IP ɗaya suna ƙara ƙarfin wannan alama.
 
 **Matsayin da ake ba da shawara:**
 
@@ -195,7 +195,7 @@ Kunna ko kashe ga kowane mai samarwa ta env (duba ƙasa). Lokacin da aka kashe, 
 
 ## MITM Proxy (Antigravity, Linux/macOS/Windows)
 
-Ga CLI waɗanda ba za a iya karkatar da binaries ɗinsu ta `OPENAI_BASE_URL` ba, OmniRoute yana gudanar da proxy na cikin gida mai ƙare TLS. Endpoints suna ƙarƙashin `src/app/api/cli-tools/antigravity-mitm/`.
+Ga CLI waɗanda ba za a iya karkatar da binaries ɗinsu ta `OPENAI_BASE_URL` ba, 67router yana gudanar da proxy na cikin gida mai ƙare TLS. Endpoints suna ƙarƙashin `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Hanya  | Endpoint                                | Manufa                                              |
 | ------ | --------------------------------------- | --------------------------------------------------- |
@@ -228,7 +228,7 @@ Host ɗin da ake kutsewa: **`daily-cloudcode-pa.googleapis.com`** (upstream na A
 
 Sunan fayil ɗin cert: `omniroute-mitm.crt`. Daidaita fingerprint ta `getCertFingerprint()` (SHA-1 na DER).
 
-Bugu da ƙari, `updateNssDatabases()` yana shigarwa cikin NSS DBs na kowane mai amfani idan `certutil` yana akwai: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, duk Firefox profiles (har da snap), ƙarƙashin laƙabin **`OmniRoute MITM Root CA`**.
+Bugu da ƙari, `updateNssDatabases()` yana shigarwa cikin NSS DBs na kowane mai amfani idan `certutil` yana akwai: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, duk Firefox profiles (har da snap), ƙarƙashin laƙabin **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -274,7 +274,7 @@ Ana amfani da su ta `open-sse/executors/base.ts::buildHeaders()` ta hanyar nema 
 
 ## Tsaftace Kanun Bayanan Masu Shigowa
 
-OmniRoute yana cire kanun bayanan abokan hulɗa masu shigowa kafin turawa, don kada buƙatar da ta zo daga Cursor ta fallasa `User-Agent: Cursor/X.Y.Z` ga uwar-garken Claude na sama. Duba `src/shared/constants/upstreamHeaders.ts` don jerin abubuwan da aka hana, wanda ake sabunta shi daidai da tsarin Zod da gwaje-gwajen raka'a.
+67router yana cire kanun bayanan abokan hulɗa masu shigowa kafin turawa, don kada buƙatar da ta zo daga Cursor ta fallasa `User-Agent: Cursor/X.Y.Z` ga uwar-garken Claude na sama. Duba `src/shared/constants/upstreamHeaders.ts` don jerin abubuwan da aka hana, wanda ake sabunta shi daidai da tsarin Zod da gwaje-gwajen raka'a.
 
 ---
 

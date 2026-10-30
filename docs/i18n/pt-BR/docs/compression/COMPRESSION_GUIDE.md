@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (Português (Brasil))
+# 🗜️ Prompt Compression Guide — 67router (Português (Brasil))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## Visão geral
 
-O OmniRoute implementa um pipeline modular de compactação de prompts que é executado **proativamente** antes que as solicitações cheguem aos provedores upstream. Isso significa que sua economia de tokens ocorre de forma transparente — sem necessidade de alterar seu fluxo de trabalho.
+O 67router implementa um pipeline modular de compactação de prompts que é executado **proativamente** antes que as solicitações cheguem aos provedores upstream. Isso significa que sua economia de tokens ocorre de forma transparente — sem necessidade de alterar seu fluxo de trabalho.
 
 ```
 Solicitação do cliente
@@ -123,14 +123,14 @@ configurados globalmente ou por meio de combinações de compactação atribuíd
 
 ## Cálculo da economia upstream
 
-O OmniRoute documenta a economia com compressão a partir de duas fontes: benchmarks dos projetos upstream e a própria composição de mecanismos do OmniRoute.
+O 67router documenta a economia com compressão a partir de duas fontes: benchmarks dos projetos upstream e a própria composição de mecanismos do 67router.
 
 | Fonte   | Número do README upstream usado aqui                                                                                                             |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Caveman | `~75%` menos tokens de saída, economia média de `65%` na saída em benchmarks, faixa de `22-87%` e ferramenta com compressão de entrada de `~46%` |
 | RTK     | Economia de `60-90%` na saída de comandos; sessão de exemplo com `~118,000 -> ~23,900` tokens, ou `79.7%` de economia (`~80%`)                   |
 
-Para payloads de ferramentas/contexto sobrepostos, a combinação padrão do OmniRoute encadeia os mecanismos:
+Para payloads de ferramentas/contexto sobrepostos, a combinação padrão do 67router encadeia os mecanismos:
 
 ```txt
 RTK -> Caveman
@@ -520,12 +520,12 @@ inalterado, ignorado como `no_styles`), concatena as instruções selecionadas n
 catálogo,
 acrescenta a cláusula de limites **uma vez** (além da cláusula de segurança, `SAFETY_BOUNDARIES` ou sua
 tradução, quando `less-code` ou `ponytail` está selecionado) e inicia o bloco com um
-único marcador de idempotência (`[OmniRoute Output Styles]`), de modo que uma nova
+único marcador de idempotência (`[67router Output Styles]`), de modo que uma nova
 aplicação não tenha efeito. Quando o idioma resolvido (consulte Seleção de idioma abaixo) tem uma tradução, a
 instrução localizada é injetada em vez da instrução em inglês.
 
 Em um corpo com um array `messages` não vazio, a verificação de idempotência é executada antes do
-bypass de conteúdo: quando o marcador `[OmniRoute Output Styles]` já está no campo
+bypass de conteúdo: quando o marcador `[67router Output Styles]` já está no campo
 `system` de nível superior (uma string ou um array de blocos de conteúdo) ou em uma mensagem de sistema com conteúdo
 em string, o corpo permanece inalterado como `already_applied` e nenhuma verificação de palavra-chave é executada.
 Caso contrário, um bypass de conteúdo (`shouldBypassCavemanOutputMode()` em
@@ -551,7 +551,7 @@ nunca cria um novo `messages[0]`, coloca o bloco no primeiro destes locais que e
 Em um corpo sem um array `messages` (ou com um array vazio), nenhum bypass de conteúdo é executado e
 um campo `system` de nível superior não é consultado. O bloco é acrescentado após o texto de um
 campo `instructions` do tipo string, a menos que esse campo já contenha o marcador
-`[OmniRoute Output Styles]`; nesse caso, o corpo permanece inalterado como
+`[67router Output Styles]`; nesse caso, o corpo permanece inalterado como
 `already_applied`. Quando o corpo não tem um campo `instructions` do tipo string, mas contém `input`
 (uma string ou um array), o bloco se torna `instructions`, substituindo qualquer valor que não seja string
 que esse campo continha. Um corpo sem um campo `instructions` do tipo string nem um `input` do tipo string ou array
@@ -577,8 +577,8 @@ configuração de compressão persiste a seleção como:
 
 Compatibilidade retroativa: enquanto `outputStyles` estiver vazio, a configuração legada
 `cavemanOutputMode.enabled` será mapeada para `terse-prose` em `cavemanOutputMode.intensity`. O bloco então começa
-com o marcador `[OmniRoute Output Styles]`, enquanto o injetor legado `applyCavemanOutputMode()`
-escrevia `[OmniRoute Caveman Output Mode]`. Abaixo do marcador, o texto corresponde à
+com o marcador `[67router Output Styles]`, enquanto o injetor legado `applyCavemanOutputMode()`
+escrevia `[67router Caveman Output Mode]`. Abaixo do marcador, o texto corresponde à
 injeção legada em en, pt-BR, es, de, fr, it, ru, id e vi; em ja e zh, há um
 espaço adicional antes da cláusula de limites. `terse-prose` é traduzido para pt-BR, es, de,
 fr, it, ru, zh, ja, id e vi, portanto uma solicitação cujo idioma resolvido seja `hu` recebe o

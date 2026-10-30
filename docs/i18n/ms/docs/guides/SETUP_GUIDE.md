@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Bahasa Melayu)
+# 📖 Setup Guide — 67router (Bahasa Melayu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Rujukan persediaan lengkap untuk OmniRoute. Untuk versi ringkas, lihat [Mula Pantas dalam README](../README.md#-quick-start).
+> Rujukan persediaan lengkap untuk 67router. Untuk versi ringkas, lihat [Mula Pantas dalam README](../README.md#-quick-start).
 
 ## Kandungan
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Pakej AUR](https://aur.archlinux.org/packages/omniroute-bin) memasang OmniRoute dan menyediakan perkhidmatan pengguna systemd.
+[Pakej AUR](https://aur.archlinux.org/packages/omniroute-bin) memasang 67router dan menyediakan perkhidmatan pengguna systemd.
 
 ### Daripada Sumber
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Nota Windows:** Secara lalai, OmniRoute menggunakan `%APPDATA%\omniroute` apabila direktori legasi `%USERPROFILE%\.omniroute` tidak wujud. Tetapkan `DATA_DIR` untuk memilih lokasi direktori data yang berbeza.
+> **Nota Windows:** Secara lalai, 67router menggunakan `%APPDATA%\omniroute` apabila direktori legasi `%USERPROFILE%\.omniroute` tidak wujud. Tetapkan `DATA_DIR` untuk memilih lokasi direktori data yang berbeza.
 
 > **Nota:** `npm install` menjana `.env` secara automatik daripada `.env.example` pada pelaksanaan pertama. Pemasangan berikutnya tidak akan menulis ganti `.env` yang sedia ada, maka penyesuaian akan dikekalkan. Untuk menjana semula, padamkan `.env` sebelum menjalankannya semula.
 
@@ -64,7 +64,7 @@ Lihat [Panduan Docker](./DOCKER_GUIDE.md) untuk persediaan Docker lengkap, terma
 
 ### Aplikasi Desktop (Electron)
 
-OmniRoute disertakan dengan pembalut desktop yang dibina menggunakan Electron 41 + electron-builder 26.10. Skrip yang tersedia (akar ruang kerja):
+67router disertakan dengan pembalut desktop yang dibina menggunakan Electron 41 + electron-builder 26.10. Skrip yang tersedia (akar ruang kerja):
 
 ```bash
 npm run electron:dev          # Jalankan desktop dengan muat semula pantas
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Apabila digabungkan dengan pemboleh ubah persekitaran (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, dan sebagainya), ini membolehkan anda menyediakan tika OmniRoute yang boleh diskripkan sepenuhnya.
+Apabila digabungkan dengan pemboleh ubah persekitaran (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, dan sebagainya), ini membolehkan anda menyediakan tika 67router yang boleh diskripkan sepenuhnya.
 
 ### Pilihan CLI
 
@@ -99,7 +99,7 @@ Apabila digabungkan dengan pemboleh ubah persekitaran (`INITIAL_PASSWORD`, `OMNI
 | `omniroute config`      | Konfigurasi alat CLI — senaraikan, dapatkan, tetapkan, sahkan konfigurasi |
 | `omniroute status`      | Papan pemuka status luar talian — versi, DB, alat, konfigurasi            |
 | `omniroute logs`        | Strim log penggunaan daripada API (menyokong `--follow`)                  |
-| `omniroute update`      | Semak atau gunakan kemas kini OmniRoute                                   |
+| `omniroute update`      | Semak atau gunakan kemas kini 67router                                    |
 | `omniroute provider`    | Urus sambungan penyedia — tambah, senaraikan, alih keluar, uji, lalai     |
 | `omniroute --port 3000` | Tetapkan port kanonik/API kepada 3000                                     |
 | `omniroute --mcp`       | Mulakan pelayan MCP (pengangkutan stdio)                                  |
@@ -165,7 +165,7 @@ Berfungsi dengan Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode dan S
 
 #### Konfigurasi secara automatik dengan `setup-*`
 
-Daripada menampal URL asas dan kunci secara manual, biarkan OmniRoute menulis konfigurasi
+Daripada menampal URL asas dan kunci secara manual, biarkan 67router menulis konfigurasi
 tersendiri bagi setiap alat daripada katalog model langsung. Satu perintah bagi setiap alat:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Setiap perintah menerima `--remote <url> --api-key <key>` untuk mengkonfigurasi alat setempat supaya menggunakan
-OmniRoute **jauh**, serta `--dry-run` untuk pratonton. Untuk melancarkan CLI dengan persekitaran yang betul
+67router **jauh**, serta `--dry-run` untuk pratonton. Untuk melancarkan CLI dengan persekitaran yang betul
 disuntik dan tanpa menulis sebarang konfigurasi, gunakan pelancar generik
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 pelancar legasi khusus bagi setiap alat, `omniroute launch` (Claude Code) dan
@@ -277,15 +277,15 @@ Untuk kebanyakan penggunaan, anda hanya memerlukan dua pemboleh ubah ini:
 | Pemboleh ubah            | Lalai                         | Tujuan                                                                                                                                                              |
 | ------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                      | Garis dasar bersama untuk tamat masa permulaan respons huluan, tamat masa Undici tersembunyi, permintaan cap jari TLS dan tamat masa permintaan/proksi jambatan API |
-| `STREAM_IDLE_TIMEOUT_MS` | mewarisi `REQUEST_TIMEOUT_MS` | Jurang maksimum antara ketulan penstriman sebelum OmniRoute menghentikan strim SSE                                                                                  |
+| `STREAM_IDLE_TIMEOUT_MS` | mewarisi `REQUEST_TIMEOUT_MS` | Jurang maksimum antara ketulan penstriman sebelum 67router menghentikan strim SSE                                                                                   |
 
 Keserasian ke belakang dikekalkan: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` dan pemboleh ubah tamat masa setiap lapisan lain yang sedia ada masih berfungsi dan mengatasi garis dasar bersama.
 
 ### Nota Khusus Penyedia
 
-Untuk huluan yang serasi dengan Claude Code (`anthropic-compatible-cc-*`), OmniRoute memperoleh pengepala `X-Stainless-Timeout` keluar daripada tamat masa pengambilan yang telah ditetapkan supaya tamat masa baca di pihak penyedia kekal sejajar dengan konfigurasi persekitaran anda.
+Untuk huluan yang serasi dengan Claude Code (`anthropic-compatible-cc-*`), 67router memperoleh pengepala `X-Stainless-Timeout` keluar daripada tamat masa pengambilan yang telah ditetapkan supaya tamat masa baca di pihak penyedia kekal sejajar dengan konfigurasi persekitaran anda.
 
-Untuk proksi songsang pihak ketiga yang serasi dengan Claude Code, OmniRoute memastikan set lalai `anthropic-beta` kekal konservatif dan, apabila `Client Cache Control` dibiarkan pada `Auto`, hanya meneruskan penanda `cache_control` yang diberikan oleh klien. Dayakan togol "Enable redact-thinking beta" bagi setiap sambungan hanya apabila huluan secara khusus memerlukan strim pemikiran Claude yang telah disunting.
+Untuk proksi songsang pihak ketiga yang serasi dengan Claude Code, 67router memastikan set lalai `anthropic-beta` kekal konservatif dan, apabila `Client Cache Control` dibiarkan pada `Auto`, hanya meneruskan penanda `cache_control` yang diberikan oleh klien. Dayakan togol "Enable redact-thinking beta" bagi setiap sambungan hanya apabila huluan secara khusus memerlukan strim pemikiran Claude yang telah disunting.
 
 ### Penggantian Tamat Masa Lanjutan
 
@@ -303,11 +303,11 @@ Untuk proksi songsang pihak ketiga yang serasi dengan Claude Code, OmniRoute mem
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | Tamat masa kekal hidup pada pelayan jambatan API                                       |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | Tamat masa ketidakaktifan soket pada pelayan jambatan API (`0` menyahdayakannya)       |
 
-> **Nota:** Untuk permintaan penstriman, `FETCH_TIMEOUT_MS` hanya meliputi persediaan sambungan / tempoh menunggu respons huluan pertama. Setelah strim aktif, OmniRoute hanya akan menghentikannya apabila benar-benar berlaku gangguan (`STREAM_IDLE_TIMEOUT_MS`) atau ketidakaktifan isi Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Nota:** Untuk permintaan penstriman, `FETCH_TIMEOUT_MS` hanya meliputi persediaan sambungan / tempoh menunggu respons huluan pertama. Setelah strim aktif, 67router hanya akan menghentikannya apabila benar-benar berlaku gangguan (`STREAM_IDLE_TIMEOUT_MS`) atau ketidakaktifan isi Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Keserasian Proksi Songsang
 
-Jika anda menjalankan OmniRoute di belakang Nginx, Caddy, Cloudflare atau proksi songsang lain, pastikan tamat masa proksi juga lebih tinggi daripada tamat masa strim/pengambilan OmniRoute anda.
+Jika anda menjalankan 67router di belakang Nginx, Caddy, Cloudflare atau proksi songsang lain, pastikan tamat masa proksi juga lebih tinggi daripada tamat masa strim/pengambilan 67router anda.
 
 ---
 

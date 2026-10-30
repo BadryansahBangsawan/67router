@@ -6,7 +6,7 @@
 
 ## Shrnutí
 
-OmniRoute nyní podporuje tři režimy předávání pro `/api/v1/relay/chat/completions`:
+67router nyní podporuje tři režimy předávání pro `/api/v1/relay/chat/completions`:
 
 - `ts`: Použije zpracování v TypeScriptu v rámci procesu.
 - `bifrost`: Vynutí použití brány Bifrost.
@@ -45,12 +45,12 @@ Pokud aktuálně porovnáváte 9router/CLIPROXYAPI:
 
 ## Kontrakt hranice backendu
 
-Stabilní hranicí produktu je předávací API OmniRoute, nikoli implementace řídicího panelu. Řídicí panel Next.js může instalovat, konfigurovat a monitorovat lokální služby, ale směrování požadavků by mělo vstupovat přes předávací API a za touto hranicí se předat dál.
+Stabilní hranicí produktu je předávací API 67router, nikoli implementace řídicího panelu. Řídicí panel Next.js může instalovat, konfigurovat a monitorovat lokální služby, ale směrování požadavků by mělo vstupovat přes předávací API a za touto hranicí se předat dál.
 
 Dlouhodobé možnosti backendu:
 
 - Zachovejte zpracování v TypeScriptu jako cestu pro zásady a záložní řešení v rámci procesu. Ověřování identity, seznamy povolených položek, normalizace požadavků, účtování a bezpečnostní kontroly zůstávají před jakýmkoli předáním backendu zde.
-- Používejte Bifrost jako preferovaný sidecar úrovně Tier-1 s vysokou propustností, pokud nasazení vyžaduje nižší variabilitu směrování, centralizované střídání poskytovatelů nebo škálování napříč více replikami OmniRoute.
+- Používejte Bifrost jako preferovaný sidecar úrovně Tier-1 s vysokou propustností, pokud nasazení vyžaduje nižší variabilitu směrování, centralizované střídání poskytovatelů nebo škálování napříč více replikami 67router.
 - Zachovejte 9router a CLIPROXYAPI jako vestavěné služby kompatibility. Běží jako monitorované lokální procesy a jsou užitečné, pokud je jejich chování poskytovatele/CLI požadovaným adaptérem, neměly by se však stát výchozím směrovacím modulem úrovně Tier-1.
 - Nedovolte řídicímu panelu předávat do kritické cesty libovolné adresy URL služeb. Adresy URL poskytnuté uživatelským rozhraním jsou konfigurační vstupy; směrovací kód by měl z nastavení na straně serveru a ze stavu správce procesů načítat registrované backendy s ověřeným stavem.
 - Pro monitorované služby v současnosti upřednostňujte HTTP přes loopback, protože spravované procesy již poskytují API kompatibilní s HTTP, ochrana trasy může tuto hranici auditovat a chování při selhání nebo přechodu na záložní řešení je viditelné v protokolech požadavků. Přidání budoucího přenosu přes SDK nebo socket má smysl pouze tehdy, pokud měřitelně sníží latenci směrování p99, aniž by oslabilo izolaci nebo sémantiku přechodu na záložní řešení.

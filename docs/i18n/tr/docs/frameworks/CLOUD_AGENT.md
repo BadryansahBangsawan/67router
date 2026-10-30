@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `src/lib/cloudAgent/` ve `src/app/api/v1/agents/tasks/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40 (frontmatter yenilemesi; cursor-cloud dahil 4 ajan)
 
-OmniRoute, üçüncü taraf bulut tabanlı kodlama ajanlarını (Codex Cloud, Cursor,
+67router, üçüncü taraf bulut tabanlı kodlama ajanlarını (Codex Cloud, Cursor,
 Devin, Jules) uzun süre çalışan görevler olarak yönetir. Her ajan, istemcilerin
 sağlayıcıya özgü API'lerle uğraşmadan bir istem + depo URL'si gönderebilmesi ve
 sonuçları alabilmesi için ortak bir arayüz arkasında kapsüllenir.

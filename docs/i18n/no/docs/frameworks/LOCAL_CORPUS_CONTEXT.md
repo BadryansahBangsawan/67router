@@ -13,7 +13,7 @@
 ## Hva det er
 
 Local Corpus lar en operatør gjøre én eksplisitt godkjent katalog med tekstfiler tilgjengelig for
-OmniRoutes MCP-server. Filene forblir i den opprinnelige katalogen: OmniRoute lagrer bare
+67routers MCP-server. Filene forblir i den opprinnelige katalogen: 67router lagrer bare
 den kanoniske rotbanen i SQLite og vedlikeholder en søkeindeks i minnet. Korpusinnhold
 kopieres ikke til repositoriet eller databasen.
 

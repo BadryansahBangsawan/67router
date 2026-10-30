@@ -1,10 +1,10 @@
-# OmniRoute A2A Server Documentation (Yorùbá)
+# 67router A2A Server Documentation (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/A2A-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/A2A-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/A2A-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/A2A-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/A2A-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/A2A-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/A2A-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/A2A-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/A2A-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/A2A-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/A2A-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/A2A-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/A2A-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/A2A-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/A2A-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/A2A-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/A2A-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/A2A-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/A2A-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/A2A-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/A2A-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/A2A-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/A2A-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/A2A-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/A2A-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/A2A-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/A2A-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/A2A-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/A2A-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/A2A-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/A2A-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/A2A-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/A2A-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/A2A-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/A2A-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/A2A-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/A2A-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/A2A-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/A2A-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/A2A-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/A2A-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/A2A-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/A2A-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/A2A-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/A2A-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/A2A-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/A2A-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/A2A-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/A2A-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/A2A-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/A2A-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/A2A-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/A2A-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/A2A-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/A2A-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/A2A-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/A2A-SERVER.md)
 
 ---
 
-> Protocol Agent-to-Agent v0.3 — OmniRoute gẹ́gẹ́ bí aṣojú ìdarí-ọ̀nà ọlọ́gbọ́n
+> Protocol Agent-to-Agent v0.3 — 67router gẹ́gẹ́ bí aṣojú ìdarí-ọ̀nà ọlọ́gbọ́n
 
 Ojú ìfarahàn A2A ní apá méjì:
 
@@ -19,7 +19,7 @@ Ojú ìfarahàn A2A ní apá méjì:
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Ó máa ń dá Káàdì Aṣojú padà, èyí tí ó ṣàpèjúwe àwọn agbára OmniRoute, àwọn ọgbọ́n iṣẹ́, àti àwọn ìbéèrè ìfàṣẹsí rẹ̀.
+Ó máa ń dá Káàdì Aṣojú padà, èyí tí ó ṣàpèjúwe àwọn agbára 67router, àwọn ọgbọ́n iṣẹ́, àti àwọn ìbéèrè ìfàṣẹsí rẹ̀.
 
 A ń gba ààyè `version` Káàdì Aṣojú láti inú `process.env.npm_package_version` (wo `src/app/.well-known/agent.json/route.ts:13`), nítorí náà ó máa ń ṣe àfikún-ṣiṣẹpọ̀ láìfọwọ́ṣe pẹ̀lú `package.json` ní gbogbo ìtújáde.
 
@@ -152,22 +152,22 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Àwọn Ìmọ̀-Ìṣẹ́ Tó Wà
 
-OmniRoute ń ṣàfihàn àwọn ìmọ̀-ìṣẹ́ A2A mẹ́fà tí a sopọ̀ nínú `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Modúlì ìmọ̀-ìṣẹ́ kọ̀ọ̀kan wà nínú `src/lib/a2a/skills/`.
+67router ń ṣàfihàn àwọn ìmọ̀-ìṣẹ́ A2A mẹ́fà tí a sopọ̀ nínú `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`. Modúlì ìmọ̀-ìṣẹ́ kọ̀ọ̀kan wà nínú `src/lib/a2a/skills/`.
 
 | Ìmọ̀-Ìṣẹ́            | ID                   | Àpèjúwe                                                                                                                                                    | Àwọn Àmì                   | Àwọn Àpẹẹrẹ                                |
 | :----------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :----------------------------------------- |
-| Smart Routing      | `smart-routing`      | Ń darí ìbéèrè kan kọjá olùpèsè/combo tó yẹ jùlọ nílò ẹ̀rọ combo ti OmniRoute + ìdímejì (scoring)                                                            | routing, providers         | "Darí ìbéèrè yìí kọjá àpẹẹrẹ tó dára jùlọ" |
+| Smart Routing      | `smart-routing`      | Ń darí ìbéèrè kan kọjá olùpèsè/combo tó yẹ jùlọ nílò ẹ̀rọ combo ti 67router + ìdímejì (scoring)                                                             | routing, providers         | "Darí ìbéèrè yìí kọjá àpẹẹrẹ tó dára jùlọ" |
 | Quota Management   | `quota-management`   | Ń ṣe ìròyìn ipò quota fún olùpèsè kọ̀ọ̀kan, ó sì ń ràn àwọn olùpè lọ́wọ́ láti pinnu ìgbà tí wọ́n yóò dínkù/ṣàyípadà                                             | quota, providers           | "Ṣàyẹ̀wò quota fún anthropic"               |
 | Provider Discovery | `provider-discovery` | Ń ṣàkójọ àwọn olùpèsè tí a fi sọ́rọ̀ pẹ̀lú àwọn agbára wọn, àwọn àmì free-tier, àti ipò OAuth                                                                 | providers, discovery       | "Àwọn olùpèsè wo ni wọ́n wà?"               |
 | Cost Analysis      | `cost-analysis`      | Ń ṣe ìṣirò iye owó ìbéèrè/ìjíròrò kan ní gbígbá kàtálógì + lílò láìpẹ́ yìí sínú rò                                                                          | cost, usage                | "Ṣe ìṣirò iye owó ìjíròrò yìí"             |
 | Health Report      | `health-report`      | Ń ṣàkópọ̀ ipò circuit breaker, cooldown, àti lockout fún olùpèsè kọ̀ọ̀kan                                                                                     | health, resilience         | "Fi ipò èròjà gbogbo àwọn olùpèsè hàn"     |
-| List Capabilities  | `list-capabilities`  | Ń dá kàtálógì Agent Skills kíkún pẹ̀lú ẹ̀yà 45 (23 API + 21 CLI + 1 config) padà gẹ́gẹ́ bí tábìlì markdown pẹ̀lú àwọn URL SKILL.md gangan fún context injection | catalog, discovery, skills | "Ṣàkójọ gbogbo àwọn agbára OmniRoute"      |
+| List Capabilities  | `list-capabilities`  | Ń dá kàtálógì Agent Skills kíkún pẹ̀lú ẹ̀yà 45 (23 API + 21 CLI + 1 config) padà gẹ́gẹ́ bí tábìlì markdown pẹ̀lú àwọn URL SKILL.md gangan fún context injection | catalog, discovery, skills | "Ṣàkójọ gbogbo àwọn agbára 67router"       |
 
 > Ó yẹ kí wọ́n máa mú kí Agent Card bá kàtálógì olùpèsè 375 tó ń ṣiṣẹ́ lọ́wọ́ mu; àwọn iye olùpèsè àti metadata free/no-auth ń wá láti inú runtime registry.
 
 ### Ẹ̀kúnrẹ́rẹ́ Ìmọ̀-Ìṣẹ́ `list-capabilities`
 
-Ìmọ̀-ìṣẹ́ `list-capabilities` wúlò pàtó fún àwọn agent òde tí wọ́n nílò láti ṣàwárí ohun tí OmniRoute ń ṣàfihàn kí wọ́n tó fi àwọn ìpè API ránṣẹ́. Ó ń dá ohun-èlò tábìlì markdown tó ní ìlànà padà:
+Ìmọ̀-ìṣẹ́ `list-capabilities` wúlò pàtó fún àwọn agent òde tí wọ́n nílò láti ṣàwárí ohun tí 67router ń ṣàfihàn kí wọ́n tó fi àwọn ìpè API ránṣẹ́. Ó ń dá ohun-èlò tábìlì markdown tó ní ìlànà padà:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -193,7 +193,7 @@ Ojú-ọ̀nà JSON-RPC `/a2a` ni ibi ìwọlé A2A àkọ́kọ́. Àwọn ojú-
 | `/.well-known/agent.json`    | GET  | Káàdì Aṣojú (àwárí A2A)                                     | (gbangba, a pa á mọ́ fún 3600s)                 |
 | `/api/a2a/tasks`             | POST | Ìfúnniṣẹ́ tó ń wọlé sí ikọ̀ OmniConductor (Conductor PRD RF5) | Bearer pẹ̀lú `OMNIROUTE_API_KEY` + `a2aEnabled` |
 
-**Ìfúnniṣẹ́ Conductor tó ń wọlé (`POST /api/a2a/tasks`):** àwọn aṣojú A2A ìta ń fi iṣẹ́ kíkọ kóòdù lé ikọ̀ OmniConductor lọ́wọ́ nípasẹ̀ OmniRoute. Ara: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — àwọn ọgbọ́n ikọ̀ Conductor nìkan (àwọn tí a kéde lórí Káàdì Aṣojú) ni a lè fi iṣẹ́ lé lọ́wọ́; `metadata.conductor.repo.url` jẹ́ dandan (ikọ̀ náà ń ṣiṣẹ́ lórí àwọn ibi ìpamọ́ git). Ojú-ọ̀nà náà ń yí ìbéèrè padà sí `POST /v1/tasks` ti hub nípa lílo `CONDUCTOR_ORCHESTRATOR_TOKEN` ní ẹ̀gbẹ́ olupin (àṣàyàn ìgbàkugbà `CONDUCTOR_HUB_TOKEN`) ó sì ń dá `201 { conductor_task_id, state: "submitted" }` padà; àwọn ipò iṣẹ́ ń padà wá nípasẹ̀ àwòrán SSE→A2A (RF1), a sì lè rí wọn nípasẹ̀ `GET /api/a2a/tasks?skill=conductor`.
+**Ìfúnniṣẹ́ Conductor tó ń wọlé (`POST /api/a2a/tasks`):** àwọn aṣojú A2A ìta ń fi iṣẹ́ kíkọ kóòdù lé ikọ̀ OmniConductor lọ́wọ́ nípasẹ̀ 67router. Ara: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — àwọn ọgbọ́n ikọ̀ Conductor nìkan (àwọn tí a kéde lórí Káàdì Aṣojú) ni a lè fi iṣẹ́ lé lọ́wọ́; `metadata.conductor.repo.url` jẹ́ dandan (ikọ̀ náà ń ṣiṣẹ́ lórí àwọn ibi ìpamọ́ git). Ojú-ọ̀nà náà ń yí ìbéèrè padà sí `POST /v1/tasks` ti hub nípa lílo `CONDUCTOR_ORCHESTRATOR_TOKEN` ní ẹ̀gbẹ́ olupin (àṣàyàn ìgbàkugbà `CONDUCTOR_HUB_TOKEN`) ó sì ń dá `201 { conductor_task_id, state: "submitted" }` padà; àwọn ipò iṣẹ́ ń padà wá nípasẹ̀ àwòrán SSE→A2A (RF1), a sì lè rí wọn nípasẹ̀ `GET /api/a2a/tasks?skill=conductor`.
 
 ---
 

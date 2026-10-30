@@ -7,15 +7,15 @@
 > **Sors:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jesponi tliet interfaċċi differenti relatati mal-aġenti. Għall-ewwel jidhru simili, iżda jsolvu problemi differenti. Uża din il-paġna biex tagħżel dik it-tajba.
+67router jesponi tliet interfaċċi differenti relatati mal-aġenti. Għall-ewwel jidhru simili, iżda jsolvu problemi differenti. Uża din il-paġna biex tagħżel dik it-tajba.
 
 ## Fil-Qosor
 
 | Interfaċċa                        | L-aħjar għal                                                                                                                                                | Trasport                             | Standard                           |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------- |
 | **A2A — Minn Aġent għal Aġent**   | Kollaborazzjoni bejn aġenti ma' aġenti pari li jużaw il-protokoll A2A                                                                                       | JSON-RPC 2.0 fuq HTTP                | A2A v0.3 (speċifikazzjoni miftuħa) |
-| **ACP — Reġistru tal-Aġenti CLI** | Sejbien / reġistrazzjoni / tħaddim ta' aġenti CLI għall-ipprogrammar installati fuq il-magna tal-utent (Cursor, Cline, Codex CLI, Claude Code, Aider, eċċ.) | HTTP REST                            | Speċifiku għal OmniRoute           |
-| **Aġenti tal-Cloud**              | Sottomissjoni ta' kompiti tal-ipprogrammar fit-tul lil servizzi cloud esterni (Codex Cloud, Devin, Jules, Cursor Cloud)                                     | HTTP REST + kompiti sostnuti minn DB | Speċifiku għal OmniRoute           |
+| **ACP — Reġistru tal-Aġenti CLI** | Sejbien / reġistrazzjoni / tħaddim ta' aġenti CLI għall-ipprogrammar installati fuq il-magna tal-utent (Cursor, Cline, Codex CLI, Claude Code, Aider, eċċ.) | HTTP REST                            | Speċifiku għal 67router            |
+| **Aġenti tal-Cloud**              | Sottomissjoni ta' kompiti tal-ipprogrammar fit-tul lil servizzi cloud esterni (Codex Cloud, Devin, Jules, Cursor Cloud)                                     | HTTP REST + kompiti sostnuti minn DB | Speċifiku għal 67router            |
 
 It-tlieta huma indipendenti — agħżel kwalunkwe subsett.
 
@@ -38,14 +38,14 @@ Għandek bżonn servizz cloud biex jagħmel xogħol barra minn din il-magna (Cod
 ## 1. A2A — Minn Aġent għal Aġent
 
 **Speċifikazzjoni:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint ta' OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
+**Endpoint ta' 67router:** `POST /a2a` (JSON-RPC 2.0)
 **Kard tal-Aġent:** `GET /.well-known/agent.json`
 
 ### Meta għandek tużah
 
-- Meta tkun qed tibni sistema b'diversi aġenti fejn OmniRoute ikun wieħed mill-pari
-- Meta tkun qed tesponi l-intelliġenza tar-routing ta' OmniRoute (routing intelliġenti, ġestjoni tal-kwoti, eċċ.) lil aġenti f'oqfsa bħal Google ADK jew f'networks ġeneriċi ta' aġenti
-- Meta tkun qed tqiegħed OmniRoute wara interfaċċa standard ta' skoperta + invokazzjoni
+- Meta tkun qed tibni sistema b'diversi aġenti fejn 67router ikun wieħed mill-pari
+- Meta tkun qed tesponi l-intelliġenza tar-routing ta' 67router (routing intelliġenti, ġestjoni tal-kwoti, eċċ.) lil aġenti f'oqfsa bħal Google ADK jew f'networks ġeneriċi ta' aġenti
+- Meta tkun qed tqiegħed 67router wara interfaċċa standard ta' skoperta + invokazzjoni
 
 ### Metodi
 
@@ -69,12 +69,12 @@ Ara [A2A-SERVER.md](./A2A-SERVER.md) għad-dettalji tat-trasport, l-istruttura t
 
 ## 2. ACP — Reġistru tal-Aġenti CLI
 
-**Endpoint ta’ OmniRoute:** `GET /api/acp/agents`
+**Endpoint ta’ 67router:** `GET /api/acp/agents`
 **Sors:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### X’inhu
 
-ACP huwa l-**inventarju lokali tal-aġenti CLI** ta’ OmniRoute. Jiskopri liema CLIs għall-ipprogrammar huma installati fuq il-host (Cursor, Cline, Claude Code, Codex CLI, Continue, eċċ.), jiddetermina l-verżjonijiet tagħhom, u jurihom fid-dashboard sabiex l-utent ikun jista’ jikkonfigura kull CLI biex tipponta lejn OmniRoute.
+ACP huwa l-**inventarju lokali tal-aġenti CLI** ta’ 67router. Jiskopri liema CLIs għall-ipprogrammar huma installati fuq il-host (Cursor, Cline, Claude Code, Codex CLI, Continue, eċċ.), jiddetermina l-verżjonijiet tagħhom, u jurihom fid-dashboard sabiex l-utent ikun jista’ jikkonfigura kull CLI biex tipponta lejn 67router.
 
 L-interfaċċa HTTP hija inventarju intern li jħaddem l-UI “CLI Tools” u
 t-traċċar tal-marki tas-swaba’ tas-CLI (ara [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). B’mod separat,
@@ -114,8 +114,8 @@ Struttura tal-body għal POST (`customAgentBodySchema` f’`src/app/api/acp/agen
 
 ### Każijiet ta’ użu
 
-- Il-paġna “CLI Tools” tad-dashboard telenka dak li hu installat u tgħinek tikkonfigura kull wieħed biex jipponta lejn OmniRoute
-- L-aġenti personalizzati jippermettu lill-utenti esperti jirreġistraw CLIs interni/proprjetarji li OmniRoute ma jagħrafx awtomatikament
+- Il-paġna “CLI Tools” tad-dashboard telenka dak li hu installat u tgħinek tikkonfigura kull wieħed biex jipponta lejn 67router
+- L-aġenti personalizzati jippermettu lill-utenti esperti jirreġistraw CLIs interni/proprjetarji li 67router ma jagħrafx awtomatikament
 - Ir-riżultat tal-iskoperta jalimenta l-matriċi tal-marki tas-swaba’ `cli-tools`
 
 ### Meta MA għandekx tuża ACP
@@ -127,12 +127,12 @@ Struttura tal-body għal POST (`customAgentBodySchema` f’`src/app/api/acp/agen
 
 ## 3. Aġenti tal-Cloud
 
-**Endpoints ta’ OmniRoute:** `/api/v1/agents/tasks/*` (ċiklu tal-ħajja) + `/api/cloud/*` (infrastruttura ta’ konnessjoni)
+**Endpoints ta’ 67router:** `/api/v1/agents/tasks/*` (ċiklu tal-ħajja) + `/api/cloud/*` (infrastruttura ta’ konnessjoni)
 **Sors:** `src/lib/cloudAgent/`
 
 ### X’inhu
 
-Interfaċċa uniformi għall-aġenti tal-ipprogrammar tal-cloud ta’ partijiet terzi. Int tibgħat prompt + URL tar-repożitorju, OmniRoute jgħaddih lill-aġent tal-cloud it-tajjeb, jiċċekkja perjodikament l-istatus, u jirritorna r-riżultati.
+Interfaċċa uniformi għall-aġenti tal-ipprogrammar tal-cloud ta’ partijiet terzi. Int tibgħat prompt + URL tar-repożitorju, 67router jgħaddih lill-aġent tal-cloud it-tajjeb, jiċċekkja perjodikament l-istatus, u jirritorna r-riżultati.
 
 ### Aġenti appoġġjati (4, kollha kkonfermati f’`src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ It-tnejn għandhom "kompiti fit-tul", iżda f'livelli differenti:
 
 | Aspett                     | A2A                                                                                                                  | Aġenti tal-Cloud                                           |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Standard                   | Open A2A v0.3                                                                                                        | Speċifiku għal OmniRoute                                   |
-| Fejn isir il-komputazzjoni | Ġewwa OmniRoute (juża l-kombinazzjonijiet ikkonfigurati)                                                             | Esternament (servers ta' Codex / Devin / Jules)            |
+| Standard                   | Open A2A v0.3                                                                                                        | Speċifiku għal 67router                                    |
+| Fejn isir il-komputazzjoni | Ġewwa 67router (juża l-kombinazzjonijiet ikkonfigurati)                                                              | Esternament (servers ta' Codex / Devin / Jules)            |
 | Tul tal-kompitu            | TTL predefinit ta' 5 minuti (konfigurabbli f'`TaskManager`)                                                          | Minn minuti sa sigħat                                      |
 | Konxju tar-repożitorju     | Le (jgħaddi biss il-prompts)                                                                                         | Iva (URL tar-repożitorju + fergħa)                         |
 | Każ ta' użu                | Kollaborazzjoni bejn l-aġenti, routing intelliġenti bħala servizz                                                    | Iddelega "implimenta l-karatteristika X fir-repożitorju Y" |
@@ -182,7 +182,7 @@ It-tnejn għandhom "kompiti fit-tul", iżda f'livelli differenti:
 
 ## Eżempji ta' Integrazzjoni
 
-### Skopri l-kapaċitajiet A2A ta' OmniRoute
+### Skopri l-kapaċitajiet A2A ta' 67router
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Jirritorna l-Kard tal-Aġent bis-6 ħiliet kollha, it-trasporti u l-verżjoni.
 
-### Sejjaħ lil OmniRoute bħala aġent A2A
+### Sejjaħ lil 67router bħala aġent A2A
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Qalba OmniRoute   │
+                │   Qalba 67router   │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

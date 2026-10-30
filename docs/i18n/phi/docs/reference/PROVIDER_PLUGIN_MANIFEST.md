@@ -14,7 +14,7 @@ ng executor code, mga default ng OAuth, mga header, o estado ng process environm
 Available rin sa pamamagitan ng HTTP ang parehong manifest sa
 `GET /api/v1/provider-plugin-manifest` para sa mga sidecar na tumatakbo sa labas ng proseso.
 
-Ina-advertise ng OmniRoute ang URL na iyon sa Bifrost at CLIProxyAPI sa pamamagitan ng
+Ina-advertise ng 67router ang URL na iyon sa Bifrost at CLIProxyAPI sa pamamagitan ng
 request header na `X-OmniRoute-Provider-Manifest-Url`. Itakda ang
 `OMNIROUTE_PROVIDER_MANIFEST_URL` kapag kailangan ng sidecar ng pampubliko o container
 network URL sa halip na ang lokal na origin ng request.
@@ -30,7 +30,7 @@ dapat gumawa ang sidecar ng unconditional request sa halip na tumanggap ng `304`
 ## Layunin
 
 Ilipat ang provider metadata tungo sa isang plugin contract upang ang hot request path ay
-maaari kalaunang pangasiwaan ng isang sidecar na may mas mababang latency habang pinananatili ng OmniRoute ang
+maaari kalaunang pangasiwaan ng isang sidecar na may mas mababang latency habang pinananatili ng 67router ang
 TypeScript route bilang policy gate at fallback. Additive ang manifest: hindi nito
 binabago nang mag-isa ang request routing.
 
@@ -74,7 +74,7 @@ muling basahin ang mga TypeScript source.
 | `usage-fetch`        | May nakakonektang usage o quota fetcher (`getUsageForProvider`).                          |
 | `usage-supported`    | Tinatanggap ng usage API ang provider na ito (`isSupportedUsageConnection`).              |
 
-Para lamang sa discovery ang `usage-fetch`. Ipinapahiwatig nito na alam ng OmniRoute kung paano basahin ang usage para sa
+Para lamang sa discovery ang `usage-fetch`. Ipinapahiwatig nito na alam ng 67router kung paano basahin ang usage para sa
 provider; hindi nito ina-activate ang fetching, binabago ang quota semantics, o ipinahihiwatig na
 naka-enable ang Dashboard quota widget para sa provider — hiwalay na ginagabayan ang widget na iyon ng
 `USAGE_SUPPORTED_PROVIDERS`. Ang source of truth ay `USAGE_FETCHER_PROVIDERS` sa

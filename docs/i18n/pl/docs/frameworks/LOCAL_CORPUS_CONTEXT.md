@@ -15,7 +15,7 @@ lastUpdated: 2026-07-20
 ## Czym to jest
 
 Local Corpus pozwala operatorowi udostępnić jeden jawnie zatwierdzony katalog plików
-tekstowych serwerowi MCP OmniRoute. Pliki pozostają w oryginalnym katalogu: OmniRoute
+tekstowych serwerowi MCP 67router. Pliki pozostają w oryginalnym katalogu: 67router
 zapisuje w SQLite wyłącznie kanoniczną ścieżkę root i utrzymuje indeks wyszukiwania
 w pamięci. Nie kopiuje zawartości korpusu do repozytorium ani bazy danych.
 

@@ -8,9 +8,9 @@
 > **နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည့်ရက်:** 2026-09-16
 > **ရည်ရွယ်ထားသော ပရိသတ်:** ထည့်သွင်းထားသည့် ဝန်ဆောင်မှုများ (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua) ကို ပေါင်းထည့်ခြင်း၊ ထိန်းသိမ်းခြင်း သို့မဟုတ် အမှားရှာဖွေခြင်း ပြုလုပ်သည့် အင်ဂျင်နီယာများ။
 
-ထည့်သွင်းထားသည့် ဝန်ဆောင်မှုများသည် OmniRoute က စက်တွင်းတွင် ထည့်သွင်းပေးခြင်း၊ ကြီးကြပ်ပေးခြင်းနှင့်
+ထည့်သွင်းထားသည့် ဝန်ဆောင်မှုများသည် 67router က စက်တွင်းတွင် ထည့်သွင်းပေးခြင်း၊ ကြီးကြပ်ပေးခြင်းနှင့်
 ပထမတန်းစား လမ်းကြောင်းပို့မှတ်များအဖြစ် အသုံးပြုနိုင်စေခြင်းတို့ ပြုလုပ်သည့် process sidecar ကိရိယာများ ဖြစ်သည်။ ပြင်ပဝန်ဆောင်မှုပေးသူများ (အင်တာနက်မှတစ်ဆင့်
-API key များကို အသုံးပြု၍ ဆက်သွယ်ရသူများ) နှင့်မတူဘဲ ထည့်သွင်းထားသည့် ဝန်ဆောင်မှုများသည် OmniRoute နှင့် စက်တစ်လုံးတည်းပေါ်တွင် လည်ပတ်ပြီး loopback မှတစ်ဆင့် ဆက်သွယ်ကြသည်။
+API key များကို အသုံးပြု၍ ဆက်သွယ်ရသူများ) နှင့်မတူဘဲ ထည့်သွင်းထားသည့် ဝန်ဆောင်မှုများသည် 67router နှင့် စက်တစ်လုံးတည်းပေါ်တွင် လည်ပတ်ပြီး loopback မှတစ်ဆင့် ဆက်သွယ်ကြသည်။
 
 ---
 
@@ -35,7 +35,7 @@ API key များကို အသုံးပြု၍ ဆက်သွယ်�
 
 | ဝန်ဆောင်မှု     | npm ပက်ကေ့ချ်                      | မူလ port | ရည်ရွယ်ချက်                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------- | ---------------------------------- | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **9Router**     | `9router`                          |  20130   | OmniRoute က လက်အောက်ခံ provider တစ်ခုအဖြစ် အသုံးပြုနိုင်သည့် AI router ဖြစ်သည်။ Model များကို `9router/{sub}/{model}` အဖြစ် ဖော်ထုတ်ပေးသည်                                                                                                                                                                                                                                                                   |
+| **9Router**     | `9router`                          |  20130   | 67router က လက်အောက်ခံ provider တစ်ခုအဖြစ် အသုံးပြုနိုင်သည့် AI router ဖြစ်သည်။ Model များကို `9router/{sub}/{model}` အဖြစ် ဖော်ထုတ်ပေးသည်                                                                                                                                                                                                                                                                    |
 | **CLIProxyAPI** | GitHub release binary (`cliproxy`) |   8317   | Anthropic CLI auth flow များအတွက် local proxy adapter ဖြစ်သည်။ OAuth token များ သက်တမ်းကုန်ဆုံးသည့်အခါ အရန် routing ကို ပံ့ပိုးပေးသည်                                                                                                                                                                                                                                                                        |
 | **Mux**         | `mux` (headless `mux server`)      |   8322   | Local agent orchestration daemon (coder/mux) ဖြစ်သည်။ Lifecycle ကိုသာ စီမံခန့်ခွဲပြီး routing target မဟုတ်ပါ (LLM proxying မပြုလုပ်ပါ)။                                                                                                                                                                                                                                                                      |
 | **Bifrost**     | `@maximhq/bifrost`                 |   8080   | Go AI-gateway relay backend ဖြစ်သည်။ လည်ပတ်နေချိန်တွင် relay route (`/v1/relay/`) က အလိုအလျောက် ရွေးချယ်အသုံးပြုသည်                                                                                                                                                                                                                                                                                          |
@@ -45,21 +45,21 @@ API key များကို အသုံးပြု၍ ဆက်သွယ်�
 
 ဝန်ဆောင်မှု ခုနစ်ခုစလုံးသည် တူညီသော ကြီးကြပ်စီမံမှုပုံစံကို လိုက်နာသည်-
 
-- OmniRoute သည် ၎င်းတို့ကို `DATA_DIR/services/{name}/` အောက်တွင် ထည့်သွင်းသည် (OmniRoute ၏ ကိုယ်ပိုင် `package.json` နှင့် သီးခြားခွဲထားသည်)
-- OmniRoute သည် ၎င်းတို့ကို child process များအဖြစ် စတင်ပြီး စောင့်ကြည့်သည်
-- OmniRoute သည် ယာယီ API key တစ်ခုကို child process ၏ environment ထဲသို့ ထည့်သွင်းပြီး ဝန်ဆောင်မှုရပ်တန့်ချိန်မရှိဘဲ ၎င်းကို လှည့်လည်ပြောင်းလဲပေးသည် (သက်ဆိုင်သည့်နေရာများတွင်)
+- 67router သည် ၎င်းတို့ကို `DATA_DIR/services/{name}/` အောက်တွင် ထည့်သွင်းသည် (67router ၏ ကိုယ်ပိုင် `package.json` နှင့် သီးခြားခွဲထားသည်)
+- 67router သည် ၎င်းတို့ကို child process များအဖြစ် စတင်ပြီး စောင့်ကြည့်သည်
+- 67router သည် ယာယီ API key တစ်ခုကို child process ၏ environment ထဲသို့ ထည့်သွင်းပြီး ဝန်ဆောင်မှုရပ်တန့်ချိန်မရှိဘဲ ၎င်းကို လှည့်လည်ပြောင်းလဲပေးသည် (သက်ဆိုင်သည့်နေရာများတွင်)
 - စီမံခန့်ခွဲမှု route များအားလုံး (`/api/services/*`) သည် **LOCAL_ONLY** ဖြစ်ပြီး loopback မှသာ ဝင်ရောက်အသုံးပြုနိုင်သည် (မဖြစ်မနေလိုက်နာရမည့် စည်းမျဉ်း #17)
 
 ### အဓိက ဆုံးဖြတ်ချက်များ (ဒီဇိုင်းအစီအစဉ်မှ)
 
-| ဆုံးဖြတ်ချက်                                      | တန်ဖိုး                                                                                           |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Dashboard မှ 9Router ၏ မူရင်း UI သို့ ဝင်ရောက်မှု | `/dashboard/providers/services/9router/embed/*` ရှိ reverse proxy                                 |
-| ထည့်သွင်းမှု ယန္တရား                              | `execFile` မှတစ်ဆင့် `npm install {package}` (shell interpolation မရှိ)                           |
-| အသုံးပြုမှုပုံစံ                                  | Routing engine တွင် `9router/{sub}/{model}` အဖြစ် မှတ်ပုံတင်ထားသော provider                       |
-| API key စီမံခန့်ခွဲမှု                            | OmniRoute က ဖန်တီးပြီး သိမ်းဆည်းထားစဉ် encrypt လုပ်ကာ (AES-256-GCM) env မှတစ်ဆင့် ထည့်သွင်းပေးသည် |
-| Dashboard တည်နေရာ                                 | `/dashboard/providers/services` (tab သုံးခု)                                                      |
-| အလိုအလျောက် စတင်ခြင်း                             | ဝန်ဆောင်မှုတစ်ခုချင်းစီအလိုက် toggle လုပ်နိုင်ပြီး မူလအားဖြင့် OFF ဖြစ်သည်                        |
+| ဆုံးဖြတ်ချက်                                      | တန်ဖိုး                                                                                          |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Dashboard မှ 9Router ၏ မူရင်း UI သို့ ဝင်ရောက်မှု | `/dashboard/providers/services/9router/embed/*` ရှိ reverse proxy                                |
+| ထည့်သွင်းမှု ယန္တရား                              | `execFile` မှတစ်ဆင့် `npm install {package}` (shell interpolation မရှိ)                          |
+| အသုံးပြုမှုပုံစံ                                  | Routing engine တွင် `9router/{sub}/{model}` အဖြစ် မှတ်ပုံတင်ထားသော provider                      |
+| API key စီမံခန့်ခွဲမှု                            | 67router က ဖန်တီးပြီး သိမ်းဆည်းထားစဉ် encrypt လုပ်ကာ (AES-256-GCM) env မှတစ်ဆင့် ထည့်သွင်းပေးသည် |
+| Dashboard တည်နေရာ                                 | `/dashboard/providers/services` (tab သုံးခု)                                                     |
+| အလိုအလျောက် စတင်ခြင်း                             | ဝန်ဆောင်မှုတစ်ခုချင်းစီအလိုက် toggle လုပ်နိုင်ပြီး မူလအားဖြင့် OFF ဖြစ်သည်                       |
 
 ---
 
@@ -223,7 +223,7 @@ Loopback မဟုတ်သော request များသည် auth token ရ�
 #### `POST /api/services/9router/install`
 
 npm မှ 9Router ကို ထည့်သွင်းသည်။ ၎င်း၏ ကိုယ်ပိုင် `package.json` နှင့်
-`node_modules/` ပါဝင်သော `DATA_DIR/services/9router/` ကို ဖန်တီးသည်။ OmniRoute ၏ ကိုယ်ပိုင် dependency များနှင့် ပဋိပက္ခမဖြစ်ပါ။
+`node_modules/` ပါဝင်သော `DATA_DIR/services/9router/` ကို ဖန်တီးသည်။ 67router ၏ ကိုယ်ပိုင် dependency များနှင့် ပဋိပက္ခမဖြစ်ပါ။
 
 **Request body** (အားလုံး မဖြစ်မနေမဟုတ်ပါ):
 
@@ -383,7 +383,7 @@ Version metadata နှင့် API key အစမ်းမြင်ကွင်
 
 #### `POST /api/services/9router/auto-start`
 
-အလိုအလျောက်စတင်ခြင်း flag ကို အဖွင့်အပိတ် ပြောင်းသည်။ `enabled: true` ဖြစ်ပါက OmniRoute ကို နောက်တစ်ကြိမ် စတင်ချိန်တွင်
+အလိုအလျောက်စတင်ခြင်း flag ကို အဖွင့်အပိတ် ပြောင်းသည်။ `enabled: true` ဖြစ်ပါက 67router ကို နောက်တစ်ကြိမ် စတင်ချိန်တွင်
 service ကို ထည့်သွင်းထားလျှင် ၎င်းသည် အလိုအလျောက် စတင်မည်ဖြစ်သည်။
 
 **Request body:**
@@ -597,7 +597,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 ဤ proxy သည်-
 
 - request ကို `http://127.0.0.1:{port}/{path}` သို့ လွှဲပို့သည် (loopback သာ)
-- ဝင်လာသော `cookie` နှင့် `authorization` header များကို ဖယ်ရှားသည် (OmniRoute session ပေါက်ကြားမှုမရှိစေရန်)
+- ဝင်လာသော `cookie` နှင့် `authorization` header များကို ဖယ်ရှားသည် (67router session ပေါက်ကြားမှုမရှိစေရန်)
 - 9Router authentication အတွက် `Authorization: Bearer {apiKey}` ကို ထည့်သွင်းသည်
 - response မှ `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` တို့ကို ဖယ်ရှားသည်
 - `<base href>` ထည့်သွင်းရန်နှင့် absolute path များကို စံညှိရန် HTML response များကို ပြန်လည်ရေးသားသည် (`/foo` → `/dashboard/.../embed/foo`)
@@ -633,7 +633,7 @@ process စတင်ခြင်းတို့ ဖြစ်ပေါ်လာ�
 ### API key ထည့်သွင်းခြင်း
 
 9Router နှင့် Mux တို့၏ ကိုယ်ပိုင် HTTP endpoint များအတွက် API key/bearer token တစ်ခု
-လိုအပ်သည်။ OmniRoute သည်-
+လိုအပ်သည်။ 67router သည်-
 
 1. Service တစ်ခုချင်းစီအလိုက် prefix (`nr_` သည် 9Router အတွက်၊ `mx_` သည် Mux အတွက်)
    ဖြင့် `crypto.randomBytes(32).toString("base64url")` ကို အသုံးပြု၍ key တစ်ခု ဖန်တီးသည်။
@@ -820,7 +820,7 @@ Embedded service က OpenAI-compatible `/v1/chat/completions` endpoint ကို
 **စစ်ဆေးရန်စာရင်း:**
 
 1. `GET /api/services/{name}/logs` (သို့မဟုတ် dashboard ရှိ Logs panel) ကို စစ်ဆေးပါ။ `Error: ENOENT`၊ `address already in use` သို့မဟုတ် `Cannot find module` ကဲ့သို့သော စာကြောင်းများကို ရှာပါ။
-2. `npm` သည် PATH ထဲတွင် ရှိကြောင်း အတည်ပြုပါ။ OmniRoute ကို အသုံးပြုလုပ်ဆောင်နေသည့် user account တစ်ခုတည်းမှ `which npm` ကို လုပ်ဆောင်ပါ။
+2. `npm` သည် PATH ထဲတွင် ရှိကြောင်း အတည်ပြုပါ။ 67router ကို အသုံးပြုလုပ်ဆောင်နေသည့် user account တစ်ခုတည်းမှ `which npm` ကို လုပ်ဆောင်ပါ။
 3. ဝန်ဆောင်မှုကို ထည့်သွင်းထားကြောင်း အတည်ပြုပါ။ `installedVersion` ကို သိရှိရန် `GET /api/services/{name}/status` ကို စစ်ဆေးပါ။ `null` ဖြစ်နေပါက install ကို ဦးစွာ လုပ်ဆောင်ပါ။
 4. `DATA_DIR/services/{name}/node_modules/` ရှိပြီး အလွတ်မဖြစ်ကြောင်း စစ်ဆေးပါ။
 5. သန့်စင်ထားသော ထွက်ခွာရသည့်အကြောင်းရင်းကို သိရှိရန် status response ရှိ `lastError` field ကို စစ်ဆေးပါ။
@@ -852,7 +852,7 @@ Embedded service က OpenAI-compatible `/v1/chat/completions` endpoint ကို
 2. တိုက်ဆိုင်နေသော process ကို ရှာဖွေပြီး ရပ်တန့်ပါ: `lsof -ti :20130 | xargs kill -9`။
 3. `bootstrap.ts` ရှိ `port` field မှတစ်ဆင့် ဝန်ဆောင်မှုတစ်ခုချင်းစီအလိုက် port ကို ပြင်ဆင်သတ်မှတ်နိုင်သည်။
 
-**မှတ်ချက်:** OmniRoute ၏ ပုံသေ port 20128 နှင့် တိုက်ဆိုင်မှုကို ရှောင်ရှားရန် 9Router သည် port 20130 ကို အထူးသဖြင့် ပုံသေအဖြစ် အသုံးပြုသည်။
+**မှတ်ချက်:** 67router ၏ ပုံသေ port 20128 နှင့် တိုက်ဆိုင်မှုကို ရှောင်ရှားရန် 9Router သည် port 20130 ကို အထူးသဖြင့် ပုံသေအဖြစ် အသုံးပြုသည်။
 
 ---
 
@@ -862,13 +862,13 @@ Embedded service က OpenAI-compatible `/v1/chat/completions` endpoint ကို
 
 **အကြောင်းရင်းများ:**
 
-- `DATA_DIR` သို့မဟုတ် ၎င်း၏ parent တွင် OmniRoute process က ရေးသားခွင့် မရှိပါ။
+- `DATA_DIR` သို့မဟုတ် ၎င်း၏ parent တွင် 67router process က ရေးသားခွင့် မရှိပါ။
 - ချိတ်ဆက်ထားသော volume သို့ ရေးသားခွင့်မရှိဘဲ Docker rootless အတွင်း လုပ်ဆောင်နေခြင်း။
 
 **ဖြေရှင်းနည်း:**
 
 1. `DATA_DIR` (ပုံသေ: `~/.omniroute/`) ကို စစ်ဆေးပါ: `ls -la ~/.omniroute/`
-2. OmniRoute process user သည် directory ကို ပိုင်ဆိုင်ကြောင်း သေချာပါစေ: `chown -R $USER ~/.omniroute/`
+2. 67router process user သည် directory ကို ပိုင်ဆိုင်ကြောင်း သေချာပါစေ: `chown -R $USER ~/.omniroute/`
 3. Docker တွင် volume mount သည် container user အတွက် မှန်ကန်သော ခွင့်ပြုချက်များ ရှိကြောင်း သေချာပါစေ။
 
 ---
@@ -908,14 +908,14 @@ Embedded service က OpenAI-compatible `/v1/chat/completions` endpoint ကို
 
 **မေး: 9Router နှင့် CLIProxyAPI ကို production/cloud deployment များတွင် အသုံးပြုနိုင်မည်လား။**
 
-အသုံးပြုနိုင်ပါသည်။ ဝန်ဆောင်မှုနှစ်ခုစလုံးသည် OmniRoute ကိုယ်တိုင်ကဲ့သို့ပင် local-first မော်ဒယ်ကို လိုက်နာပါသည်။ ၎င်းတို့သည် စက်တစ်ခုတည်းပေါ်တွင် လည်ပတ်ပြီး loopback မှတစ်ဆင့် ဆက်သွယ်ကြသည်။ ဤနေရာရှိ "Production" ဆိုသည်မှာ အဝေးရှိ cloud provider ကို ဆိုလိုခြင်းမဟုတ်ဘဲ OmniRoute ကို ဖြန့်ချထားသော VPS သို့မဟုတ် local server ကို ဆိုလိုခြင်းဖြစ်သည်။
+အသုံးပြုနိုင်ပါသည်။ ဝန်ဆောင်မှုနှစ်ခုစလုံးသည် 67router ကိုယ်တိုင်ကဲ့သို့ပင် local-first မော်ဒယ်ကို လိုက်နာပါသည်။ ၎င်းတို့သည် စက်တစ်ခုတည်းပေါ်တွင် လည်ပတ်ပြီး loopback မှတစ်ဆင့် ဆက်သွယ်ကြသည်။ ဤနေရာရှိ "Production" ဆိုသည်မှာ အဝေးရှိ cloud provider ကို ဆိုလိုခြင်းမဟုတ်ဘဲ 67router ကို ဖြန့်ချထားသော VPS သို့မဟုတ် local server ကို ဆိုလိုခြင်းဖြစ်သည်။
 
 ---
 
 **မေး: supervisor ကို မည်သို့ debug လုပ်ရမည်နည်း။**
 
 1. SSE log stream ကို tail လုပ်ပါ: `curl -N http://localhost:20128/api/services/9router/logs`။
-2. OmniRoute ၏ pino output ရှိ structured log များကို `service:supervisor` namespace ဖြင့် စစ်ထုတ်၍ စစ်ဆေးပါ။
+2. 67router ၏ pino output ရှိ structured log များကို `service:supervisor` namespace ဖြင့် စစ်ထုတ်၍ စစ်ဆေးပါ။
 3. DB row ကို စစ်ဆေးပါ: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`။
 4. လက်ရှိ live state၊ PID၊ health နှင့် `lastError` တို့ကို call တစ်ကြိမ်တည်းဖြင့် ကြည့်ရန် `GET /api/services/9router/status` ကို အသုံးပြုပါ။
 

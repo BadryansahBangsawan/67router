@@ -8,11 +8,11 @@
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-09-02 — v3.8.51
 > **Àwọn olùkà:** Àwọn onímọ̀ ẹ̀rọ tí ń bójú tó àwọn ìṣọ̀kan àìfarahàn tó jẹ́ ti olùpèsè kan pàtó.
 
-OmniRoute ń ṣọ̀kan pẹ̀lú àwọn olùpèsè tí àwọn ẹ̀rọ etí-nẹ́tíwọ́ọ̀kì wọn ń ṣe ìdánimọ̀ ìtẹ̀sí-ọwọ́ àwọn client tí kì í ṣe tiṣẹ́ (TLS JA3/JA4, ètò àwọn header, ìrísí body JSON, àwọn token ìjẹ́rìísí ìpéye). Ojú-ìwé yìí ṣàkọsílẹ̀ àwọn ojú-ọ̀nà àìfarahàn tí OmniRoute pèsè àti ibi tí a ti ṣe ìmúṣẹ wọn.
+67router ń ṣọ̀kan pẹ̀lú àwọn olùpèsè tí àwọn ẹ̀rọ etí-nẹ́tíwọ́ọ̀kì wọn ń ṣe ìdánimọ̀ ìtẹ̀sí-ọwọ́ àwọn client tí kì í ṣe tiṣẹ́ (TLS JA3/JA4, ètò àwọn header, ìrísí body JSON, àwọn token ìjẹ́rìísí ìpéye). Ojú-ìwé yìí ṣàkọsílẹ̀ àwọn ojú-ọ̀nà àìfarahàn tí 67router pèsè àti ibi tí a ti ṣe ìmúṣẹ wọn.
 
 ## Àkíyèsí Òfin àti Ìwà-Ọmọlúwàbí
 
-Àwọn ẹ̀yà àìfarahàn wà kí OmniRoute lè ṣiṣẹ́ gẹ́gẹ́ bí ipele ìbámu láàárín àwọn account tiṣẹ́ tí olumulo ní (Claude Code CLI, Codex, Antigravity, Cursor, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) àti API àpapọ̀ OmniRoute. Wọn **kì í ṣe** fún yíyẹra fún ìṣàwárí jìbìtì, pínpín àwọn credential, tàbí rú àwọn Ìlànà Iṣẹ́ olùpèsè. Àwọn olùtọ́jú retí pé àwọn olùṣiṣẹ́ yóò tẹ̀lé ToS ti upstream tí wọ́n fọwọ́ sí nígbà tí wọ́n ṣẹ̀dá àwọn account.
+Àwọn ẹ̀yà àìfarahàn wà kí 67router lè ṣiṣẹ́ gẹ́gẹ́ bí ipele ìbámu láàárín àwọn account tiṣẹ́ tí olumulo ní (Claude Code CLI, Codex, Antigravity, Cursor, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) àti API àpapọ̀ 67router. Wọn **kì í ṣe** fún yíyẹra fún ìṣàwárí jìbìtì, pínpín àwọn credential, tàbí rú àwọn Ìlànà Iṣẹ́ olùpèsè. Àwọn olùtọ́jú retí pé àwọn olùṣiṣẹ́ yóò tẹ̀lé ToS ti upstream tí wọ́n fọwọ́ sí nígbà tí wọ́n ṣẹ̀dá àwọn account.
 
 ---
 
@@ -75,7 +75,7 @@ kí o tó sọ pé ó bá browser upstream dọ́gba.
 
 ## Àkójọpọ̀ Ìfarapamọ́ Claude Code
 
-Nígbà tí `cliCompatMode` bá wà ní títàn, OmniRoute máa ń tún àwọn ìbéèrè Claude tó ń jáde ṣe kí wọn má ṣe yàtọ̀ sí ìrìn-àjò `claude-cli`. Àwọn módù mẹ́ta ni wọ́n ń ṣiṣẹ́ pọ̀:
+Nígbà tí `cliCompatMode` bá wà ní títàn, 67router máa ń tún àwọn ìbéèrè Claude tó ń jáde ṣe kí wọn má ṣe yàtọ̀ sí ìrìn-àjò `claude-cli`. Àwọn módù mẹ́ta ni wọ́n ń ṣiṣẹ́ pọ̀:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -91,7 +91,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hash Àkóónú Oníbàárà)
 
-Àyẹ̀wò ìpéye ní ẹ̀gbẹ́ olupin tí Claude Code CLI ìbílẹ̀ ń ṣírò nípasẹ̀ Bun/Zig. OmniRoute tún un ṣe pẹ̀lú `xxhash-wasm`:
+Àyẹ̀wò ìpéye ní ẹ̀gbẹ́ olupin tí Claude Code CLI ìbílẹ̀ ń ṣírò nípasẹ̀ Bun/Zig. 67router tún un ṣe pẹ̀lú `xxhash-wasm`:
 
 1. Ṣe serialization ara pẹ̀lú àfipamọ́-àyè `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -137,7 +137,7 @@ Fún àwọn relay Anthropic ti ẹni-kẹta tí wọ́n gba ìrìn-àjò “Cla
 
 ## Ìfarapamọ́ Antigravity
 
-Àwọn ìbéèrè Antigravity máa ń pa ọ̀rọ̀ olùpè mọ́ báìtì-fún-báìtì. OmniRoute kì í fi àwọn àkíyèsí aláìní ìbú sínú àwọn prompt tàbí tún orúkọ àwọn irinṣẹ́ ṣe/fi irinṣẹ́ kún wọn láti fara wé oníbàárà IDE kan.
+Àwọn ìbéèrè Antigravity máa ń pa ọ̀rọ̀ olùpè mọ́ báìtì-fún-báìtì. 67router kì í fi àwọn àkíyèsí aláìní ìbú sínú àwọn prompt tàbí tún orúkọ àwọn irinṣẹ́ ṣe/fi irinṣẹ́ kún wọn láti fara wé oníbàárà IDE kan.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -147,13 +147,13 @@ Fún àwọn relay Anthropic ti ẹni-kẹta tí wọ́n gba ìrìn-àjò “Cla
 
 `ANTIGRAVITY_CREDITS=always` (tí `open-sse/executors/antigravity.ts` ń lò) máa ń darí **gbogbo** ìbéèrè gba Antigravity AI Credit Overages (kírẹ́díìtì Google tí a sanwó fún) dípò jíjẹ́ kí quota ipele-ọ̀fẹ́ Google dí àwọn nǹkan dúró. A ṣàkọsílẹ̀ èyí gẹ́gẹ́ bí ẹ̀ya kan, ṣùgbọ́n ó jẹ́ **ìròyìn ìrúfin ToS kan ṣoṣo tó wọ́pọ̀ jù lọ tí a ń rí** — a ti fòfin de ọ̀pọ̀ àkọọ́lẹ̀ Google Ultra pẹ̀lú `403 / "service disabled for ToS violation" / insufficient_quota` lẹ́yìn tí wọ́n ṣiṣẹ́ fún wákàtí díẹ̀ pẹ̀lú `=always`.
 
-Ìmúṣẹ upstream wà ní **ẹ̀gbẹ́ Google**, kì í ṣe ohun tí OmniRoute lè dènà. Orúkọ env var àti àwọn àkọsílẹ̀ tó wà tẹ́lẹ̀ mú kí ó dà bí ìṣàkóso tí kò léwu láti tàn; ṣùgbọ́n kò rí bẹ́ẹ̀.
+Ìmúṣẹ upstream wà ní **ẹ̀gbẹ́ Google**, kì í ṣe ohun tí 67router lè dènà. Orúkọ env var àti àwọn àkọsílẹ̀ tó wà tẹ́lẹ̀ mú kí ó dà bí ìṣàkóso tí kò léwu láti tàn; ṣùgbọ́n kò rí bẹ́ẹ̀.
 
 **Ìdí tí èyí fi ń fa ìṣàwárí ìlòkulò lọ́nà tó le ju lílo ipele-ọ̀fẹ́-nìkan lọ:**
 
 - Ìnáwó aládàáṣiṣẹ́ tó ń bá a lọ lórí àkọọ́lẹ̀ Google kan ṣoṣo máa ń fa àmì tó yàtọ̀ sí lílu-quota-ìpele-ọ̀fẹ́-tí-ó-sì-dúró.
 - Àwọn overage kírẹ́díìtì kò ní òpin oṣuwọn, nítorí náà oníbàárà tí a ṣètò ní àìtọ́ lè ná ọ̀pọ̀ ọgọ́rùn-ún USD láàárín ìṣẹ́jú díẹ̀, kí ó sì dà bí àtúntà kọ́kọ́rọ́ API tàbí ìrìn-àjò bot.
-- Ọ̀pọ̀ aṣàmúlò OmniRoute tí wọ́n ń lo àwọn kírẹ́díìtì overage ní àkókò kan náà láti IP ìta kan náà máa ń mú àmì náà le sí i.
+- Ọ̀pọ̀ aṣàmúlò 67router tí wọ́n ń lo àwọn kírẹ́díìtì overage ní àkókò kan náà láti IP ìta kan náà máa ń mú àmì náà le sí i.
 
 **Ìlànà tí a ṣeduro:**
 
@@ -192,7 +192,7 @@ Tan-an tàbí pa á fún olùpèsè kọ̀ọ̀kan nípasẹ̀ env (wo ìsàlẹ
 
 ## MITM Proxy (Antigravity, Linux/macOS/Windows)
 
-Fún àwọn CLI tí a kò lè darí fáìlì aláṣẹ wọn padà nípasẹ̀ `OPENAI_BASE_URL`, OmniRoute ń ṣiṣẹ́ aṣojú agbègbè kan tí ń fòpin sí TLS. Àwọn endpoint wà lábẹ́ `src/app/api/cli-tools/antigravity-mitm/`.
+Fún àwọn CLI tí a kò lè darí fáìlì aláṣẹ wọn padà nípasẹ̀ `OPENAI_BASE_URL`, 67router ń ṣiṣẹ́ aṣojú agbègbè kan tí ń fòpin sí TLS. Àwọn endpoint wà lábẹ́ `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Ọ̀nà    | Endpoint                                | Ìdí                                             |
 | ------ | --------------------------------------- | ----------------------------------------------- |
@@ -225,7 +225,7 @@ Olùgbàlejò àfojúsùn tí a dá ọ̀nà rẹ̀ dúró: **`daily-cloudcode-p
 
 Orúkọ fáìlì cert: `omniroute-mitm.crt`. Ìbáramu àmì-ìdánimọ̀ nípasẹ̀ `getCertFingerprint()` (SHA-1 ti DER).
 
-Ní àfikún, `updateNssDatabases()` ń fi sí àwọn NSS DB ti aṣàmúlò kọ̀ọ̀kan nígbà tí `certutil` bá wà: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gbogbo àwọn prófáìlì Firefox (títí kan snap), lábẹ́ orúkọ ìnagijẹ **`OmniRoute MITM Root CA`**.
+Ní àfikún, `updateNssDatabases()` ń fi sí àwọn NSS DB ti aṣàmúlò kọ̀ọ̀kan nígbà tí `certutil` bá wà: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gbogbo àwọn prófáìlì Firefox (títí kan snap), lábẹ́ orúkọ ìnagijẹ **`67router MITM Root CA`**.
 
 ### macOS / Windows
 
@@ -273,7 +273,7 @@ A máa ń **tọ́jú IP olùpèsè ní gbogbo ìgbà** — yíyí náà kàn ń
 
 ## Ìmọ́tótó Àkọlé Tí ń Wọlé
 
-OmniRoute máa ń yọ àwọn àkọlé oníbàárà tí ń wọlé kúrò kí ó tó fi ìbéèrè ránṣẹ́ síwájú, kí ìbéèrè tí ó wá láti Cursor má bàa tú `User-Agent: Cursor/X.Y.Z` sí ìsàlẹ̀-ọ̀nà Claude kan. Wo `src/shared/constants/upstreamHeaders.ts` fún àkójọ àwọn ohun tí a kò gbà láàyè, tí a ń pa mọ́ ní ìbámu pẹ̀lú àwọn àwòrán Zod àti àwọn ìdánwò ẹyọ̀.
+67router máa ń yọ àwọn àkọlé oníbàárà tí ń wọlé kúrò kí ó tó fi ìbéèrè ránṣẹ́ síwájú, kí ìbéèrè tí ó wá láti Cursor má bàa tú `User-Agent: Cursor/X.Y.Z` sí ìsàlẹ̀-ọ̀nà Claude kan. Wo `src/shared/constants/upstreamHeaders.ts` fún àkójọ àwọn ohun tí a kò gbà láàyè, tí a ń pa mọ́ ní ìbámu pẹ̀lú àwọn àwòrán Zod àti àwọn ìdánwò ẹyọ̀.
 
 ---
 

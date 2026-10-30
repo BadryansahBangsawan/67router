@@ -7,15 +7,15 @@
 > **Šaltinis:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute suteikia tris skirtingas su agentais susijusias sąsajas. Iš pirmo žvilgsnio jos atrodo panašios, tačiau sprendžia skirtingas problemas. Šiame puslapyje rasite pagalbos pasirenkant tinkamą sąsają.
+67router suteikia tris skirtingas su agentais susijusias sąsajas. Iš pirmo žvilgsnio jos atrodo panašios, tačiau sprendžia skirtingas problemas. Šiame puslapyje rasite pagalbos pasirenkant tinkamą sąsają.
 
 ## Trumpai
 
 | Sąsaja                         | Kam tinkamiausia                                                                                                                                   | Perdavimas                       | Standartas                      |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
 | **A2A — agentas agentui**      | Bendradarbiavimui tarp agentų su kitais agentais, palaikančiais A2A protokolą                                                                      | JSON-RPC 2.0 per HTTP            | A2A v0.3 (atvira specifikacija) |
-| **ACP — CLI agentų registras** | Naudotojo kompiuteryje įdiegtiems CLI programavimo agentams (Cursor, Cline, Codex CLI, Claude Code, Aider ir kt.) aptikti, registruoti ir paleisti | HTTP REST                        | Specifinis OmniRoute            |
-| **Debesijos agentai**          | Ilgai trunkančioms programavimo užduotims pateikti išorinėms debesijos paslaugoms (Codex Cloud, Devin, Jules, Cursor Cloud)                        | HTTP REST + DB saugomos užduotys | Specifinis OmniRoute            |
+| **ACP — CLI agentų registras** | Naudotojo kompiuteryje įdiegtiems CLI programavimo agentams (Cursor, Cline, Codex CLI, Claude Code, Aider ir kt.) aptikti, registruoti ir paleisti | HTTP REST                        | Specifinis 67router             |
+| **Debesijos agentai**          | Ilgai trunkančioms programavimo užduotims pateikti išorinėms debesijos paslaugoms (Codex Cloud, Devin, Jules, Cursor Cloud)                        | HTTP REST + DB saugomos užduotys | Specifinis 67router             |
 
 Šios trys sąsajos yra nepriklausomos — galite pasirinkti bet kurį jų poaibį.
 
@@ -38,14 +38,14 @@ Ar jums reikia debesijos paslaugos, kuri atliktų darbą už šio kompiuterio ri
 ## 1. A2A — agentas agentui
 
 **Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute galinis taškas:** `POST /a2a` (JSON-RPC 2.0)
+**67router galinis taškas:** `POST /a2a` (JSON-RPC 2.0)
 **Agento kortelė:** `GET /.well-known/agent.json`
 
 ### Kada naudoti
 
-- Kuriant kelių agentų sistemą, kurioje OmniRoute yra vienas iš lygiaverčių dalyvių
-- Suteikiant agentams tokiose sistemose kaip Google ADK ar bendruosiuose agentų tinkluose prieigą prie OmniRoute maršruto parinkimo galimybių (išmaniojo maršruto parinkimo, kvotų valdymo ir kt.)
-- Pateikiant OmniRoute per standartinę aptikimo ir iškvietimo sąsają
+- Kuriant kelių agentų sistemą, kurioje 67router yra vienas iš lygiaverčių dalyvių
+- Suteikiant agentams tokiose sistemose kaip Google ADK ar bendruosiuose agentų tinkluose prieigą prie 67router maršruto parinkimo galimybių (išmaniojo maršruto parinkimo, kvotų valdymo ir kt.)
+- Pateikiant 67router per standartinę aptikimo ir iškvietimo sąsają
 
 ### Metodai
 
@@ -69,12 +69,12 @@ Perdavimo informacija, agento kortelės struktūra, užduočių TTL konfigūraci
 
 ## 2. ACP — CLI agentų registras
 
-**OmniRoute galinis taškas:** `GET /api/acp/agents`
+**67router galinis taškas:** `GET /api/acp/agents`
 **Šaltinis:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Kas tai yra
 
-ACP yra **vietinis OmniRoute CLI agentų sąrašas**. Jis aptinka, kurios programavimo CLI priemonės yra įdiegtos pagrindiniame kompiuteryje (Cursor, Cline, Claude Code, Codex CLI, Continue ir kt.), nustato jų versijas ir pateikia jas valdymo skydelyje, kad naudotojas galėtų sukonfigūruoti kiekvieną CLI naudoti OmniRoute.
+ACP yra **vietinis 67router CLI agentų sąrašas**. Jis aptinka, kurios programavimo CLI priemonės yra įdiegtos pagrindiniame kompiuteryje (Cursor, Cline, Claude Code, Codex CLI, Continue ir kt.), nustato jų versijas ir pateikia jas valdymo skydelyje, kad naudotojas galėtų sukonfigūruoti kiekvieną CLI naudoti 67router.
 
 HTTP sąsaja yra vidinis registras, kuriuo grindžiama „CLI Tools“ naudotojo sąsaja ir
 CLI kontrolinių atspaudų sekimas (žr. [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Atskirai
@@ -114,8 +114,8 @@ POST užklausos turinio struktūra (`customAgentBodySchema` faile `src/app/api/a
 
 ### Naudojimo atvejai
 
-- Valdymo skydelio puslapyje „CLI Tools“ pateikiamas įdiegtų priemonių sąrašas ir padedama kiekvieną iš jų nukreipti į OmniRoute
-- Pasirinktiniai agentai leidžia patyrusiems naudotojams užregistruoti vidines ar nuosavybines CLI priemones, kurių OmniRoute pagal numatytuosius nustatymus neatpažįsta
+- Valdymo skydelio puslapyje „CLI Tools“ pateikiamas įdiegtų priemonių sąrašas ir padedama kiekvieną iš jų nukreipti į 67router
+- Pasirinktiniai agentai leidžia patyrusiems naudotojams užregistruoti vidines ar nuosavybines CLI priemones, kurių 67router pagal numatytuosius nustatymus neatpažįsta
 - Aptikimo rezultatas naudojamas `cli-tools` kontrolinių atspaudų matricai sudaryti
 
 ### Kada ACP NENAUDOTI
@@ -127,12 +127,12 @@ POST užklausos turinio struktūra (`customAgentBodySchema` faile `src/app/api/a
 
 ## 3. Debesijos agentai
 
-**OmniRoute galiniai taškai:** `/api/v1/agents/tasks/*` (gyvavimo ciklas) + `/api/cloud/*` (vidinė infrastruktūra)
+**67router galiniai taškai:** `/api/v1/agents/tasks/*` (gyvavimo ciklas) + `/api/cloud/*` (vidinė infrastruktūra)
 **Šaltinis:** `src/lib/cloudAgent/`
 
 ### Kas tai yra
 
-Vienoda sąsaja trečiųjų šalių debesijos programavimo agentams. Pateikiate užklausą ir saugyklos URL, OmniRoute perduoda juos tinkamam debesijos agentui, periodiškai tikrina būseną ir grąžina rezultatus.
+Vienoda sąsaja trečiųjų šalių debesijos programavimo agentams. Pateikiate užklausą ir saugyklos URL, 67router perduoda juos tinkamam debesijos agentui, periodiškai tikrina būseną ir grąžina rezultatus.
 
 ### Palaikomi agentai (3, visi patvirtinti `src/lib/cloudAgent/agents/`)
 
@@ -173,8 +173,8 @@ Abu palaiko „ilgai vykdomas užduotis“, tačiau skirtinguose sluoksniuose:
 
 | Aspektas                      | A2A                                                                                                                   | Cloud Agents                                    |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| Standartas                    | Atvirasis A2A v0.3                                                                                                    | Specifinis „OmniRoute“                          |
-| Kur vykdomi skaičiavimai      | „OmniRoute“ viduje (naudojami sukonfigūruoti deriniai)                                                                | Išorėje („Codex“ / „Devin“ / „Jules“ serveriai) |
+| Standartas                    | Atvirasis A2A v0.3                                                                                                    | Specifinis „67router“                           |
+| Kur vykdomi skaičiavimai      | „67router“ viduje (naudojami sukonfigūruoti deriniai)                                                                 | Išorėje („Codex“ / „Devin“ / „Jules“ serveriai) |
 | Užduoties trukmė              | Numatytoji TTL – 5 min. (konfigūruojama `TaskManager`)                                                                | Nuo kelių minučių iki kelių valandų             |
 | Saugyklos konteksto žinojimas | Ne (perduodamos tik užklausos)                                                                                        | Taip (saugyklos URL ir šaka)                    |
 | Naudojimo atvejis             | Kelių agentų bendradarbiavimas, išmanusis maršruto parinkimas kaip paslauga                                           | „Įdiegti funkciją X saugykloje Y“ delegavimas   |
@@ -182,7 +182,7 @@ Abu palaiko „ilgai vykdomas užduotis“, tačiau skirtinguose sluoksniuose:
 
 ## Integravimo pavyzdžiai
 
-### „OmniRoute“ A2A galimybių aptikimas
+### „67router“ A2A galimybių aptikimas
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Grąžinama agento kortelė su visais 6 įgūdžiais, transportais ir versija.
 
-### „OmniRoute“ iškvietimas kaip A2A agento
+### „67router“ iškvietimas kaip A2A agento
 
 ```bash
 curl -X POST http://localhost:20128/a2a \
@@ -264,7 +264,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐

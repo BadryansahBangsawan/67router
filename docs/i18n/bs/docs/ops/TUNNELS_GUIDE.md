@@ -9,13 +9,13 @@
 > **Izvor istine:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Posljednje ažurirano:** 2026-06-28 — v3.8.40
 
-OmniRoute može izložiti svoj lokalni server (`http://localhost:20128`) javnom internetu putem tri pozadinska sistema za tuneliranje (tunnel backends). Ovo je korisno za:
+67router može izložiti svoj lokalni server (`http://localhost:20128`) javnom internetu putem tri pozadinska sistema za tuneliranje (tunnel backends). Ovo je korisno za:
 
 - OAuth povratne pozive od cloud provajdera (Antigravity, Gemini, Cursor) kojima je potreban javno dostupan URL za preusmjeravanje.
 - Dijeljenje vaše lokalne instance sa kolegama bez potrebe za raspoređivanjem (deploying) VM-a.
 - Mobilno, udaljeno ili testiranje preko više mreža.
 
-Sva tri pozadinska sistema se upravljaju unutar procesa — OmniRoute pokreće/zaustavlja osnovnu binarnu datoteku ili SDK sa kontrolne ploče ili putem REST API-ja. Nije potrebno podešavanje reverse-proxyja ili systemd-a.
+Sva tri pozadinska sistema se upravljaju unutar procesa — 67router pokreće/zaustavlja osnovnu binarnu datoteku ili SDK sa kontrolne ploče ili putem REST API-ja. Nije potrebno podešavanje reverse-proxyja ili systemd-a.
 
 ## Pregled pozadinskih sistema
 
@@ -32,11 +32,11 @@ Implementacije se nalaze u `src/lib/cloudflaredTunnel.ts`, `src/lib/ngrokTunnel.
 `src/lib/cloudflaredTunnel.ts` pokreće `cloudflared` kao podproces. Podržava dva režima, koji se biraju na osnovu toga da li je obezbijeđena konfiguracija za imenovani tunel (named-tunnel):
 
 - **Quick tunnel (podrazumijevano).** Pokreće `cloudflared tunnel --url http://localhost:<apiPort>` i parsira dodijeljeni `*.trycloudflare.com` URL iz stdout-a. URL-ovi su prolazni i mijenjaju se pri svakom ponovnom pokretanju.
-- **Named tunnel (opciono).** Kada `CLOUDFLARED_CONFIG` pokazuje na lokalno upravljanu cloudflared `config.yml` datoteku, OmniRoute pokreće `cloudflared tunnel --no-autoupdate --config <path> run`, dajući vam **stabilan, imenovan hostname**. Konfiguracija obezbjeđuje UUID tunela, `credentials-file` i `ingress` rutiranje, tako da se `--url` ne prosljeđuje i nije potreban token sa Zero Trust kontrolne ploče. `run` čita akreditive sa apsolutne putanje `credentials-file` u konfiguraciji — `cert.pem` nije potreban (on se koristi samo za upravljanje životnim ciklusom tunela).
+- **Named tunnel (opciono).** Kada `CLOUDFLARED_CONFIG` pokazuje na lokalno upravljanu cloudflared `config.yml` datoteku, 67router pokreće `cloudflared tunnel --no-autoupdate --config <path> run`, dajući vam **stabilan, imenovan hostname**. Konfiguracija obezbjeđuje UUID tunela, `credentials-file` i `ingress` rutiranje, tako da se `--url` ne prosljeđuje i nije potreban token sa Zero Trust kontrolne ploče. `run` čita akreditive sa apsolutne putanje `credentials-file` u konfiguraciji — `cert.pem` nije potreban (on se koristi samo za upravljanje životnim ciklusom tunela).
 
 Ključna ponašanja:
 
-- **Automatska instalacija.** Pri prvoj upotrebi, OmniRoute preuzima najnoviju `cloudflared` binarnu datoteku sa zvaničnih GitHub izdanja (upravljana instalacija se nalazi pod `DATA_DIR/cloudflared/`). SHA256 preuzetog resursa se provjerava u odnosu na manifest izdanja prije izvršenja.
+- **Automatska instalacija.** Pri prvoj upotrebi, 67router preuzima najnoviju `cloudflared` binarnu datoteku sa zvaničnih GitHub izdanja (upravljana instalacija se nalazi pod `DATA_DIR/cloudflared/`). SHA256 preuzetog resursa se provjerava u odnosu na manifest izdanja prije izvršenja.
 - **Nadzor procesa.** PID cloudflared-a i razriješeni URL se čuvaju u `quick-tunnel-state.json` tako da kontrolna ploča može nastaviti status nakon ponovnog učitavanja.
 
 ### Podešavanje imenovanog tunela (stabilan hostname)
@@ -49,7 +49,7 @@ Ključna ponašanja:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Napišite `~/.cloudflared/config.yml` koji rutira vaš hostname na lokalni API port OmniRoute-a (podrazumijevano 20128):
+2. Napišite `~/.cloudflared/config.yml` koji rutira vaš hostname na lokalni API port 67router-a (podrazumijevano 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -60,11 +60,11 @@ Ključna ponašanja:
      - service: http_status:404
    ```
 
-3. Usmjerite OmniRoute na konfiguraciju i (ponovo) pokrenite tunel:
+3. Usmjerite 67router na konfiguraciju i (ponovo) pokrenite tunel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opciono — nadjačava hostname koji OmniRoute prijavljuje; u suprotnom se čita iz prvog ingress pravila konfiguracije:
+   # opciono — nadjačava hostname koji 67router prijavljuje; u suprotnom se čita iz prvog ingress pravila konfiguracije:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
 
@@ -96,12 +96,12 @@ Ili putem kontrolne ploče: **Settings → Tunnels → Cloudflare**.
 
 ### Opcione varijable okruženja
 
-| Varijabla                                            | Svrha                                                                                                                                                                                      |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | Nadjačava putanju do binarne datoteke. Ako je postavljena i ispravna, OmniRoute je koristi umjesto preuzimanja.                                                                            |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportni protokol (podrazumijevano `http2`; također `quic`, `auto`).                                                                                                                    |
-| `CLOUDFLARED_CONFIG`                                 | Putanja do lokalno upravljane `config.yml` datoteke za cloudflared. Kada je postavljena, OmniRoute pokreće **imenovani/trajni** tunel (`tunnel --config <path> run`) umjesto brzog tunela. |
-| `CLOUDFLARED_HOSTNAME`                               | Nadjačava prijavljeno javno ime hosta imenovanog tunela (npr. `ai.example.com`). Kada nije postavljeno, čita se iz prvog `ingress` imena hosta u konfiguraciji.                            |
+| Varijabla                                            | Svrha                                                                                                                                                                                     |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Nadjačava putanju do binarne datoteke. Ako je postavljena i ispravna, 67router je koristi umjesto preuzimanja.                                                                            |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transportni protokol (podrazumijevano `http2`; također `quic`, `auto`).                                                                                                                   |
+| `CLOUDFLARED_CONFIG`                                 | Putanja do lokalno upravljane `config.yml` datoteke za cloudflared. Kada je postavljena, 67router pokreće **imenovani/trajni** tunel (`tunnel --config <path> run`) umjesto brzog tunela. |
+| `CLOUDFLARED_HOSTNAME`                               | Nadjačava prijavljeno javno ime hosta imenovanog tunela (npr. `ai.example.com`). Kada nije postavljeno, čita se iz prvog `ingress` imena hosta u konfiguraciji.                           |
 
 ## 2. ngrok
 
@@ -144,7 +144,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
   -d '{"action":"disable"}'
 ```
 
-Odgovor uključuje dodijeljeni `publicUrl` (npr. `https://abcd-1234.ngrok-free.app`). Prilagođeni domeni, regije i pravila politike moraju biti konfigurisani na ngrok kontrolnoj tabli — sam OmniRoute samo prosljeđuje lokalni ciljni URL do SDK-a.
+Odgovor uključuje dodijeljeni `publicUrl` (npr. `https://abcd-1234.ngrok-free.app`). Prilagođeni domeni, regije i pravila politike moraju biti konfigurisani na ngrok kontrolnoj tabli — sam 67router samo prosljeđuje lokalni ciljni URL do SDK-a.
 
 ## 3. Tailscale Funnel
 
@@ -154,12 +154,12 @@ Implementacija poziva `tailscale funnel --bg <port>` (pozadinski režim). Javni 
 
 ### Preduslovi
 
-1. Instalirajte Tailscale (ili dozvolite OmniRoute-u da to uradi — pogledajte `install` krajnju tačku ispod).
-2. Prijavite se (`tailscale login` ili putem OmniRoute-ove `login` krajnje tačke).
+1. Instalirajte Tailscale (ili dozvolite 67router-u da to uradi — pogledajte `install` krajnju tačku ispod).
+2. Prijavite se (`tailscale login` ili putem 67router-ove `login` krajnje tačke).
 3. Omogućite Funnel za svoj tailnet u Tailscale administratorskoj konzoli:
    <https://login.tailscale.com/admin/settings/features>.
 
-Na Linux-u i macOS-u, demon (`tailscaled`) zahtijeva `sudo` za kontrolu. POST krajnje tačke prihvataju opcionalno polje `sudoPassword` koje se prosljeđuje OmniRoute-ovom MITM kešu lozinki (`getCachedPassword` / `setCachedPassword`) tokom trajanja poziva. Windows koristi podrazumevanu instalaciju servisa na `C:\Program Files\Tailscale\tailscale.exe`.
+Na Linux-u i macOS-u, demon (`tailscaled`) zahtijeva `sudo` za kontrolu. POST krajnje tačke prihvataju opcionalno polje `sudoPassword` koje se prosljeđuje 67router-ovom MITM kešu lozinki (`getCachedPassword` / `setCachedPassword`) tokom trajanja poziva. Windows koristi podrazumevanu instalaciju servisa na `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### REST krajnje tačke
 
@@ -214,7 +214,7 @@ Ne postoji centralna krajnja tačka `/api/settings/tunnels` — svaka pozadinska
 
 ## Razmatranja o OAuth povratnom pozivu (callback)
 
-Kada izlažete OmniRoute kroz tunel, kontrolna tabla i OAuth tokovi moraju kreirati URL-ove povratnih poziva (callback URLs) prema **javnom** nazivu hosta, a ne prema `localhost`. U suprotnom, OAuth provajder preusmjerava korisnika nazad na URL kojem njegovi serveri ne mogu pristupiti, i rukovanje (handshake) ne uspijeva.
+Kada izlažete 67router kroz tunel, kontrolna tabla i OAuth tokovi moraju kreirati URL-ove povratnih poziva (callback URLs) prema **javnom** nazivu hosta, a ne prema `localhost`. U suprotnom, OAuth provajder preusmjerava korisnika nazad na URL kojem njegovi serveri ne mogu pristupiti, i rukovanje (handshake) ne uspijeva.
 
 Izmjene na kontrolnoj tabli i čuvanje postavki ne zahtijevaju fiksiranje naziva hosta tunela u `NEXT_PUBLIC_BASE_URL`. Autentifikovana kontrolna tabla šalje nesigurne zahtjeve istog porijekla (same-origin) sa CSRF tokenom vezanim za sesiju, tako da se efemerni Cloudflare Quick Tunnel hostovi i dalje mogu koristiti za normalno upravljanje korisničkim interfejsom nakon prijave.
 
@@ -224,7 +224,7 @@ Postavite:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-i ponovo pokrenite OmniRoute prije pokretanja OAuth-a. Za efemerne Cloudflare Quick Tunnele URL se mijenja nakon svakog ponovnog pokretanja, stoga za produkcijsku upotrebu OAuth-a preferirajte ngrok sa rezervisanom domenom ili Tailscale Funnel.
+i ponovo pokrenite 67router prije pokretanja OAuth-a. Za efemerne Cloudflare Quick Tunnele URL se mijenja nakon svakog ponovnog pokretanja, stoga za produkcijsku upotrebu OAuth-a preferirajte ngrok sa rezervisanom domenom ili Tailscale Funnel.
 
 ## Zdravlje i nadzor
 
@@ -235,13 +235,13 @@ Kontrolna tabla prikazuje stanje tunela pod **Settings → Tunnels**:
 - Lokalni ciljni URL na koji tunel prosljeđuje saobraćaj.
 - Posljednja poruka o grešci, ako postoji.
 
-Za programski nadzor, vršite upite (poll) na `GET` krajnje tačke za svaku pozadinsku uslugu. Dozvoljeno je pokretanje više od jedne pozadinske usluge istovremeno; OmniRoute će pratiti svaku nezavisno.
+Za programski nadzor, vršite upite (poll) na `GET` krajnje tačke za svaku pozadinsku uslugu. Dozvoljeno je pokretanje više od jedne pozadinske usluge istovremeno; 67router će pratiti svaku nezavisno.
 
 ## Rješavanje problema
 
 ### "cloudflared binary not found"
 
-OmniRoute pokušava automatski instalirati pri prvoj upotrebi. Ako je instalacija blokirana (ograničena mreža, nema pristupa GitHub-u), preuzmite `cloudflared` ručno sa <https://github.com/cloudflare/cloudflared/releases> i postavite `CLOUDFLARED_BIN=/path/to/cloudflared`.
+67router pokušava automatski instalirati pri prvoj upotrebi. Ako je instalacija blokirana (ograničena mreža, nema pristupa GitHub-u), preuzmite `cloudflared` ručno sa <https://github.com/cloudflare/cloudflared/releases> i postavite `CLOUDFLARED_BIN=/path/to/cloudflared`.
 
 ### "ngrok: authtoken required"
 

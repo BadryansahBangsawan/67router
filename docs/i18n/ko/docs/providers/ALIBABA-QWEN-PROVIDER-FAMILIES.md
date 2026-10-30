@@ -8,7 +8,7 @@
 
 ## 결정
 
-| 공급자 제품군                      | OmniRoute ID            | 글로벌 리전 | 중국 리전 |
+| 공급자 제품군                      | 67router ID             | 글로벌 리전 | 중국 리전 |
 | ---------------------------------- | ----------------------- | ----------- | --------- |
 | Alibaba Cloud Model Studio(종량제) | `alibaba`               | 싱가포르    | 베이징    |
 | Alibaba Cloud Token Plan           | `bailian-coding-plan`   | 싱가포르    | 베이징    |

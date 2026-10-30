@@ -6,7 +6,7 @@
 
 ## Tổng quan
 
-Redis là một **phần phụ thuộc tùy chọn, không bắt buộc** trong OmniRoute — ứng dụng vẫn tiếp tục hoạt động với chức năng suy giảm hợp lý (dùng bộ nhớ trong
+Redis là một **phần phụ thuộc tùy chọn, không bắt buộc** trong 67router — ứng dụng vẫn tiếp tục hoạt động với chức năng suy giảm hợp lý (dùng bộ nhớ trong
 làm phương án dự phòng) khi Redis không khả dụng. Trong môi trường production, việc tinh chỉnh Redis giúp giảm độ trễ cho bốn
 khối lượng công việc riêng biệt:
 
@@ -17,7 +17,7 @@ khối lượng công việc riêng biệt:
 | Kho hạn ngạch             | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` riêng biệt               | `<prefix>quota:*` có thể cấu hình theo từng instance         |
 | Circuit breaker khởi động | `redisCircuitBreakerStore.ts` | Client riêng biệt trong `circuitBreakerFactory.ts`       | `<prefix>warmup:cb:<connectionId>`                           |
 
-Cả bốn khối lượng công việc đều dùng chung một tiền tố namespace để OmniRoute có thể cùng tồn tại với các ứng dụng khác trên
+Cả bốn khối lượng công việc đều dùng chung một tiền tố namespace để 67router có thể cùng tồn tại với các ứng dụng khác trên
 một instance Redis duy nhất (ví dụ: `127.0.0.1:6379`). Xem [Phân vùng tên khóa](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ một instance Redis duy nhất (ví dụ: `127.0.0.1:6379`). Xem [Phân vùng t
 
 ## Phân vùng tên khóa
 
-OmniRoute dùng chung một instance Redis với mọi dịch vụ khác đang chạy trên máy chủ. Nếu không có namespace,
+67router dùng chung một instance Redis với mọi dịch vụ khác đang chạy trên máy chủ. Nếu không có namespace,
 các khóa như `auth:api_key:<sha256>` hoặc `rl:*` có thể xung đột với khóa của các ứng dụng khác
 đang sử dụng cùng Redis (instance này chạy Redis tại `127.0.0.1:6379` cùng với các dịch vụ khác).
 
-Đặt `REDIS_KEY_PREFIX` thành một chuỗi không rỗng để thêm tiền tố vào **mọi** khóa OmniRoute:
+Đặt `REDIS_KEY_PREFIX` thành một chuỗi không rỗng để thêm tiền tố vào **mọi** khóa 67router:
 
 ```bash
-# .env — tất cả khóa OmniRoute trở thành omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — tất cả khóa 67router trở thành omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # chừa không gian cho bộ nhớ đệm trang của hệ điều hành
 maxmemory-policy allkeys-lru         # loại bỏ các mục bộ nhớ đệm xác thực cũ khi thiếu bộ nhớ
 
-# Tính bền vững dữ liệu (tùy chọn — OmniRoute an toàn khi gặp sự cố mà không cần tính năng này)
+# Tính bền vững dữ liệu (tùy chọn — 67router an toàn khi gặp sự cố mà không cần tính năng này)
 save 300 1                           # tạo snapshot ít nhất mỗi 5 phút nếu có ≥1 khóa thay đổi
 appendonly no                        # không cần AOF; dữ liệu có thể được tái tạo
 appendfsync no                       # không có chi phí fsync (RDB là đủ)

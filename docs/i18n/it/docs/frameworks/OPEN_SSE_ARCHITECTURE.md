@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: `open-sse/` è il motore di streaming principale che gestisce ogni richiesta LLM in OmniRoute. Contiene circa 1.400 file che implementano la pipeline delle richieste, gli executor, i servizi, il server MCP e il livello di traduzione. Questa guida spiega come i vari componenti si integrano tra loro.
+> **TL;DR**: `open-sse/` è il motore di streaming principale che gestisce ogni richiesta LLM in 67router. Contiene circa 1.400 file che implementano la pipeline delle richieste, gli executor, i servizi, il server MCP e il livello di traduzione. Questa guida spiega come i vari componenti si integrano tra loro.
 
 **Origine:** `open-sse/` (pacchetto del workspace, circa 1.440 file `.ts` non di test)
 
@@ -12,10 +12,10 @@
 
 ## Perché un pacchetto workspace separato?
 
-`open-sse/` è un **workspace autonomo** nel monorepo di OmniRoute per diversi motivi:
+`open-sse/` è un **workspace autonomo** nel monorepo di 67router per diversi motivi:
 
 1. **Riutilizzabilità** — `open-sse` viene pubblicato come `@omniroute/open-sse` su npm, quindi può essere utilizzato in modo indipendente da altri progetti
-2. **Confini ben definiti** — il motore di streaming è disaccoppiato dal livello UI/DB specifico di OmniRoute
+2. **Confini ben definiti** — il motore di streaming è disaccoppiato dal livello UI/DB specifico di 67router
 3. **Prestazioni** — il motore non ha dipendenze da Next.js, consentendo avvii a freddo più rapidi nei contesti CLI/serverless
 4. **Controllo delle versioni** — `open-sse` può pubblicare nuove versioni secondo una propria cadenza
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Perché un trasformatore separato?
 
-La Responses API è il nuovo formato di OpenAI con **conversazioni con stato** (`previous_response_id`). Quando un client invia una richiesta Responses, OmniRoute:
+La Responses API è il nuovo formato di OpenAI con **conversazioni con stato** (`previous_response_id`). Quando un client invia una richiesta Responses, 67router:
 
 1. Converte internamente Responses → Chat Completions
 2. Invia la richiesta al provider (qualsiasi provider che supporti Chat Completions)

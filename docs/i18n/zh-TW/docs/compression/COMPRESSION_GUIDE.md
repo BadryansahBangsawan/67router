@@ -1,4 +1,4 @@
-# 🗜️ Prompt Compression Guide — OmniRoute (中文 (繁體))
+# 🗜️ Prompt Compression Guide — 67router (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../compression/COMPRESSION_GUIDE.md) · 🇪🇹 [am](../../../am/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇿 [az](../../../az/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇰 [da](../../../da/docs/compression/COMPRESSION_GUIDE.md) · 🇩🇪 [de](../../../de/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇷 [el](../../../el/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇸 [es](../../../es/docs/compression/COMPRESSION_GUIDE.md) · 🇪🇪 [et](../../../et/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/compression/COMPRESSION_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇱 [he](../../../he/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/compression/COMPRESSION_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/compression/COMPRESSION_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇩 [id](../../../id/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇹 [it](../../../it/docs/compression/COMPRESSION_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/compression/COMPRESSION_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇭 [km](../../../km/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/compression/COMPRESSION_GUIDE.md) · 🇲🇲 [my](../../../my/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇴 [no](../../../no/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [or](../../../or/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/compression/COMPRESSION_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/compression/COMPRESSION_GUIDE.md) · 🇱🇰 [si](../../../si/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/compression/COMPRESSION_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/compression/COMPRESSION_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/compression/COMPRESSION_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/compression/COMPRESSION_GUIDE.md) · 🇮🇳 [te](../../../te/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇭 [th](../../../th/docs/compression/COMPRESSION_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/compression/COMPRESSION_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/compression/COMPRESSION_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/compression/COMPRESSION_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/compression/COMPRESSION_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/compression/COMPRESSION_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/compression/COMPRESSION_GUIDE.md)
 
@@ -8,7 +8,7 @@
 
 ## 概覽
 
-OmniRoute 實作了一套模組化提示詞壓縮管線，會在請求送達上游提供者之前**主動**執行。這表示系統會以透明方式節省權杖，無須變更您的工作流程。
+67router 實作了一套模組化提示詞壓縮管線，會在請求送達上游提供者之前**主動**執行。這表示系統會以透明方式節省權杖，無須變更您的工作流程。
 
 ```
 用戶端請求
@@ -120,15 +120,15 @@ RTK -> Caveman
 
 ## 上游節省量計算
 
-OmniRoute 記錄了來自兩個來源的壓縮節省量：上游專案的基準測試，以及
-OmniRoute 自身的引擎組合。
+67router 記錄了來自兩個來源的壓縮節省量：上游專案的基準測試，以及
+67router 自身的引擎組合。
 
 | 來源    | 此處使用的上游 README 數據                                                                         |
 | ------- | -------------------------------------------------------------------------------------------------- |
 | Caveman | 輸出 token 減少 `~75%`、基準測試平均輸出節省 `65%`、範圍為 `22-87%`，以及輸入壓縮工具可節省 `~46%` |
 | RTK     | 命令輸出節省 `60-90%`；範例工作階段從 `~118,000 -> ~23,900` 個 token，亦即節省 `79.7%`（`~80%`）   |
 
-對於重疊的工具／上下文承載資料，預設的 OmniRoute 組合會依序串接引擎：
+對於重疊的工具／上下文承載資料，預設的 67router 組合會依序串接引擎：
 
 ```txt
 RTK -> Caveman
@@ -504,9 +504,9 @@ const { messages: aged, saved } = applyAging(messages, {
 
 #### 注入方式
 
-`applyOutputStyles()` (`open-sse/services/compression/outputStyles/apply.ts`) 會根據目錄解析選取項目（未知 id 與語系不符的樣式會被捨棄，且絕不視為錯誤；若選取項目解析後沒有任何樣式，則保持本文不變，並以 `no_styles` 略過），依目錄順序串接所選指示，附加邊界條款**一次**（選取 `less-code` 或 `ponytail` 時，還會加上安全條款 `SAFETY_BOUNDARIES` 或其翻譯），並以單一冪等性標記 (`[OmniRoute Output Styles]`) 作為區塊開頭，因此重複套用不會產生任何效果。當解析出的語言（請參閱下方的「語言選擇」）有翻譯時，會注入本地化指示，而不是英文指示。
+`applyOutputStyles()` (`open-sse/services/compression/outputStyles/apply.ts`) 會根據目錄解析選取項目（未知 id 與語系不符的樣式會被捨棄，且絕不視為錯誤；若選取項目解析後沒有任何樣式，則保持本文不變，並以 `no_styles` 略過），依目錄順序串接所選指示，附加邊界條款**一次**（選取 `less-code` 或 `ponytail` 時，還會加上安全條款 `SAFETY_BOUNDARIES` 或其翻譯），並以單一冪等性標記 (`[67router Output Styles]`) 作為區塊開頭，因此重複套用不會產生任何效果。當解析出的語言（請參閱下方的「語言選擇」）有翻譯時，會注入本地化指示，而不是英文指示。
 
-對於具有非空 `messages` 陣列的本文，冪等性檢查會在內容略過檢查之前執行：如果 `[OmniRoute Output Styles]` 標記已存在於頂層 `system` 欄位（字串或內容區塊陣列）中，或存在於內容為字串的 system 訊息中，則本文會保持不變並標記為 `already_applied`，且不會執行關鍵字檢查。否則，內容略過機制（位於 `open-sse/services/compression/outputMode.ts` 的 `shouldBypassCavemanOutputMode()`）會檢查最後三則訊息的文字，不論其角色為何；當該文字符合安全性、不可逆操作或釐清關鍵字，或符合以下有順序要求的序列時，會略過整個回合的樣式：`first`、`then`、`after that`、`before`、`rollback` 或 `backup`，後方 240 個字元內接著出現 `delete`、`drop`、`migrate`、`deploy` 或 `release`。當 **Auto-Clarity Bypass** 切換開關（`cavemanOutputMode.autoClarity`，預設為開啟）開啟時，會執行略過檢查；關閉此切換開關則會略過關鍵字檢查。
+對於具有非空 `messages` 陣列的本文，冪等性檢查會在內容略過檢查之前執行：如果 `[67router Output Styles]` 標記已存在於頂層 `system` 欄位（字串或內容區塊陣列）中，或存在於內容為字串的 system 訊息中，則本文會保持不變並標記為 `already_applied`，且不會執行關鍵字檢查。否則，內容略過機制（位於 `open-sse/services/compression/outputMode.ts` 的 `shouldBypassCavemanOutputMode()`）會檢查最後三則訊息的文字，不論其角色為何；當該文字符合安全性、不可逆操作或釐清關鍵字，或符合以下有順序要求的序列時，會略過整個回合的樣式：`first`、`then`、`after that`、`before`、`rollback` 或 `backup`，後方 240 個字元內接著出現 `delete`、`drop`、`migrate`、`deploy` 或 `release`。當 **Auto-Clarity Bypass** 切換開關（`cavemanOutputMode.autoClarity`，預設為開啟）開啟時，會執行略過檢查；關閉此切換開關則會略過關鍵字檢查。
 
 當略過機制允許該回合繼續時，`placeSystemInstruction()`（同一檔案）絕不會建立新的 `messages[0]`，而是將區塊放置於依下列順序找到的第一個位置：
 
@@ -515,7 +515,7 @@ const { messages: aged, saved } = applyAging(messages, {
 3. 後續第一則內容為字串的 system 訊息：將區塊附加於其文字之後。
 4. 以上皆無：將區塊置於新增的 system 訊息中，並附加至 `messages` 結尾。
 
-對於沒有 `messages` 陣列（或陣列為空）的本文，不會執行內容略過檢查，也不會查閱頂層 `system` 欄位。區塊會附加於字串 `instructions` 欄位的文字之後；但若該欄位已包含 `[OmniRoute Output Styles]` 標記，本文會保持不變並標記為 `already_applied`。當本文沒有字串 `instructions` 欄位，但帶有 `input`（字串或陣列）時，區塊會成為 `instructions`，並取代該欄位原有的任何非字串值。若本文既沒有字串 `instructions` 欄位，也沒有字串或陣列 `input`，則保持不變，並以 `no_messages` 略過。
+對於沒有 `messages` 陣列（或陣列為空）的本文，不會執行內容略過檢查，也不會查閱頂層 `system` 欄位。區塊會附加於字串 `instructions` 欄位的文字之後；但若該欄位已包含 `[67router Output Styles]` 標記，本文會保持不變並標記為 `already_applied`。當本文沒有字串 `instructions` 欄位，但帶有 `input`（字串或陣列）時，區塊會成為 `instructions`，並取代該欄位原有的任何非字串值。若本文既沒有字串 `instructions` 欄位，也沒有字串或陣列 `input`，則保持不變，並以 `no_messages` 略過。
 
 #### 如何啟用
 
@@ -531,7 +531,7 @@ const { messages: aged, saved } = applyAging(messages, {
 }
 ```
 
-向下相容性：當 `outputStyles` 為空時，舊版 `cavemanOutputMode.enabled` 設定會對應至 `terse-prose`，其層級為 `cavemanOutputMode.intensity`。此時區塊會以 `[OmniRoute Output Styles]` 標記開頭，而舊版 `applyCavemanOutputMode()` 注入器所寫入的標記則是 `[OmniRoute Caveman Output Mode]`。在標記下方，en、pt-BR、es、de、fr、it、ru、id 與 vi 的文字與舊版注入內容相符；ja 與 zh 則會在邊界條款之前多一個空格。`terse-prose` 提供 pt-BR、es、de、fr、it、ru、zh、ja、id 與 vi 的翻譯，因此解析語言為 `hu` 的請求會取得英文文字，而舊版注入器在此情況下會使用匈牙利文文字。
+向下相容性：當 `outputStyles` 為空時，舊版 `cavemanOutputMode.enabled` 設定會對應至 `terse-prose`，其層級為 `cavemanOutputMode.intensity`。此時區塊會以 `[67router Output Styles]` 標記開頭，而舊版 `applyCavemanOutputMode()` 注入器所寫入的標記則是 `[67router Caveman Output Mode]`。在標記下方，en、pt-BR、es、de、fr、it、ru、id 與 vi 的文字與舊版注入內容相符；ja 與 zh 則會在邊界條款之前多一個空格。`terse-prose` 提供 pt-BR、es、de、fr、it、ru、zh、ja、id 與 vi 的翻譯，因此解析語言為 `hu` 的請求會取得英文文字，而舊版注入器在此情況下會使用匈牙利文文字。
 
 輸出樣式語言選擇（位於 `outputStyles/apply.ts` 的 `resolveOutputStyleLanguage()`）：開啟 `languageConfig.enabled` 後，`autoDetect` 會從請求的 `messages` 陣列取樣最新一則具有文字的 user 訊息（字串內容，或其內容部分的 `text`），並對其執行 Caveman 引擎的偵測器 (`detectCompressionLanguage()`)。若文字含有漢字但不含假名，偵測器會傳回 `zh`；否則會傳回 `it`、`pt-BR`、`es`、`de`、`fr`、`ru`、`ja`、`hu` 與 `id` 中提示符合數量最多者，若皆不符合則傳回 `en`——無法分類的文字會使用英文，絕不使用 `defaultLanguage`；此外，即使樣式隨附 `vi` 文字，也永遠不會偵測為 `vi`。Responses API 本文將其回合保存在 `input` 中，而該欄位不會被取樣，因此會先使用 `defaultLanguage`，再退回英文。當 `messages` 中沒有任何 user 訊息含有文字，或 `autoDetect` 關閉時，會先套用 `defaultLanguage`，再退回英文。當 `languageConfig.enabled` 關閉時，語言為英文——除非該請求套用了壓縮組合（指派給請求之路由組合的組合，或 chatCore 對內建堆疊式管線所退回使用的預設壓縮組合）：套用組合會針對該請求開啟 `languageConfig.enabled`，並依組合的語言套件設定 `defaultLanguage`（若儲存的值屬於該組合的套件之一，便使用該值；否則使用組合的第一個套件，而其預設為 `en`），同時仍會套用已儲存的 `autoDetect` 設定（預設為開啟）。Caveman 輸入引擎會以不同方式選擇其規則套件語言——依各個文字部分選擇；而在自動偵測關閉時，則受 `enabledPacks` 限制。
 

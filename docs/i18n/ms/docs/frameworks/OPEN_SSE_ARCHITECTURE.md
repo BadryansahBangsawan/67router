@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: `open-sse/` ialah enjin penstriman teras yang mengendalikan setiap permintaan LLM dalam OmniRoute. Ia mengandungi ~1,400 fail yang melaksanakan saluran permintaan, pelaksana, perkhidmatan, pelayan MCP dan lapisan penterjemahan. Panduan ini menerangkan cara semua komponen tersebut saling berfungsi.
+> **TL;DR**: `open-sse/` ialah enjin penstriman teras yang mengendalikan setiap permintaan LLM dalam 67router. Ia mengandungi ~1,400 fail yang melaksanakan saluran permintaan, pelaksana, perkhidmatan, pelayan MCP dan lapisan penterjemahan. Panduan ini menerangkan cara semua komponen tersebut saling berfungsi.
 
 **Sumber:** `open-sse/` (pakej ruang kerja, ~1,440 fail `.ts` bukan ujian)
 
@@ -12,10 +12,10 @@
 
 ## Mengapa Pakej Ruang Kerja Berasingan?
 
-`open-sse/` ialah **ruang kerja kendiri** dalam monorepo OmniRoute atas beberapa sebab:
+`open-sse/` ialah **ruang kerja kendiri** dalam monorepo 67router atas beberapa sebab:
 
 1. **Kebolehgunaan semula** — `open-sse` diterbitkan sebagai `@omniroute/open-sse` di npm, jadi projek lain boleh menggunakannya secara bebas
-2. **Sempadan yang jelas** — enjin penstriman dipisahkan daripada lapisan UI/DB khusus OmniRoute
+2. **Sempadan yang jelas** — enjin penstriman dipisahkan daripada lapisan UI/DB khusus 67router
 3. **Prestasi** — enjin ini tidak mempunyai kebergantungan Next.js, membolehkan permulaan sejuk yang lebih pantas dalam konteks CLI/tanpa pelayan
 4. **Pengurusan versi** — `open-sse` boleh membuat keluaran mengikut jadualnya sendiri
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Mengapa Pengubah Berasingan?
 
-Responses API ialah format baharu OpenAI dengan **perbualan berkeadaan** (`previous_response_id`). Apabila klien menghantar permintaan Responses, OmniRoute:
+Responses API ialah format baharu OpenAI dengan **perbualan berkeadaan** (`previous_response_id`). Apabila klien menghantar permintaan Responses, 67router:
 
 1. Menukar Responses → Chat Completions secara dalaman
 2. Menghantar kepada penyedia (mana-mana penyedia yang menyokong Chat Completions)

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Azərbaycan dili)
+# 🌐 67router Proxy Guide (Azərbaycan dili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Coğrafi bloklamaları keçin, kimliyinizi qoruyun və süni intellekt trafikini istənilən proksi üzərindən yönləndirin — heç bir mürəkkəb konfiqurasiya olmadan.**
 
-OmniRoute yuxarı səviyyəli süni intellekt provayderi trafikini HTTP, HTTPS və ya SOCKS5 proksiləri üzərindən yönləndirməyə imkan verən tam funksiyalı proksi idarəetmə sistemini ehtiva edir. Bloklanmış regionda olmağınızdan, IP rotasiyasına ehtiyac duymanızdan və ya gizli barmaq izi maskalanması istəməyinizdən asılı olmayaraq — bu təlimat hər şeyi əhatə edir.
+67router yuxarı səviyyəli süni intellekt provayderi trafikini HTTP, HTTPS və ya SOCKS5 proksiləri üzərindən yönləndirməyə imkan verən tam funksiyalı proksi idarəetmə sistemini ehtiva edir. Bloklanmış regionda olmağınızdan, IP rotasiyasına ehtiyac duymanızdan və ya gizli barmaq izi maskalanması istəməyinizdən asılı olmayaraq — bu təlimat hər şeyi əhatə edir.
 
 ---
 
@@ -51,7 +51,7 @@ Proksilər hətta bloklanmış regionlardan kənarda da faydalıdır:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute serveri                       │
+│                       67router serveri                       │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proksi      │    │ Proksi       │    │ Proksi           │  │
@@ -83,7 +83,7 @@ Proksilər hətta bloklanmış regionlardan kənarda da faydalıdır:
 
 ## 4 Səviyyəli Proksi Sistemi
 
-OmniRoute proksi konfiqurasiyasını prioritet sırasına görə müəyyən edilən **dörd müstəqil əhatə dairəsində** dəstəkləyir:
+67router proksi konfiqurasiyasını prioritet sırasına görə müəyyən edilən **dörd müstəqil əhatə dairəsində** dəstəkləyir:
 
 ```
 Prioritetin müəyyən edilməsi sırası (ən yüksək → ən aşağı):
@@ -96,7 +96,7 @@ Prioritetin müəyyən edilməsi sırası (ən yüksək → ən aşağı):
 
 ### Müəyyən Etmə Prosesi Necə İşləyir
 
-OmniRoute yuxarı səviyyəli provayderə sorğu göndərərkən hər səviyyəni ardıcıllıqla yoxlayan `resolveProxyForConnectionFromRegistry()` funksiyasını çağırır:
+67router yuxarı səviyyəli provayderə sorğu göndərərkən hər səviyyəni ardıcıllıqla yoxlayan `resolveProxyForConnectionFromRegistry()` funksiyasını çağırır:
 
 1. **Hesab səviyyəsi** — Bu konkret bağlantı ID-si üçün proksi təyin edilibmi?
 2. **Provayder səviyyəsi** — Bu provayder üçün (məsələn, `openai`) proksi təyin edilibmi?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### İdxal/İxrac
 
-Proksilər **Ehtiyat Nüsxələmə/Bərpa** sisteminə daxildir. OmniRoute konfiqurasiyanızı ixrac etdikdə:
+Proksilər **Ehtiyat Nüsxələmə/Bərpa** sisteminə daxildir. 67router konfiqurasiyanızı ixrac etdikdə:
 
 1. **İdarəetmə paneli → Parametrlər → Ehtiyat nüsxə** bölməsinə keçin
 2. **İxrac et** düyməsinə klikləyin — proksi reyestri və təyinatlar daxil edilir
@@ -248,7 +248,7 @@ Proksi reyestri həmçinin **host+port üzrə upsert** əməliyyatını dəstək
 
 ### Köhnə Versiyadan Miqrasiya
 
-Əgər proksiləri köhnə versiyada (reyestrdən əvvəlki) konfiqurasiya etmisinizsə, OmniRoute onları avtomatik miqrasiya edir:
+Əgər proksiləri köhnə versiyada (reyestrdən əvvəlki) konfiqurasiya etmisinizsə, 67router onları avtomatik miqrasiya edir:
 
 ```
 Köhnə key_value yaddaşı → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Bu, təkmilləşdirmədən sonra ilk işə salınma zamanı bir dəfə baş veri
 
 > 🆕 **Töhfə verən: [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Məsələ [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute dünyanın hər yerindən **yüzlərlə pulsuz, yoxlanılmış proksiyə** giriş təmin etmək üçün **[1proxy](https://1proxy-api.aitradepulse.com)** icma platforması ilə inteqrasiya olunur. Bu, öz proksi infrastrukturu olmayan istifadəçilər üçün idealdır.
+67router dünyanın hər yerindən **yüzlərlə pulsuz, yoxlanılmış proksiyə** giriş təmin etmək üçün **[1proxy](https://1proxy-api.aitradepulse.com)** icma platforması ilə inteqrasiya olunur. Bu, öz proksi infrastrukturu olmayan istifadəçilər üçün idealdır.
 
 ### İş Prinsipi
 
@@ -273,7 +273,7 @@ OmniRoute dünyanın hər yerindən **yüzlərlə pulsuz, yoxlanılmış proksiy
 └─────────────┘      qədər       └─────────────────┘    görə      └──────────┘
 ```
 
-1. **Sinxronizasiya** — OmniRoute yoxlanılmış proksiləri 1proxy API-dən əldə edir
+1. **Sinxronizasiya** — 67router yoxlanılmış proksiləri 1proxy API-dən əldə edir
 2. **Saxlama** — Proksilər eyni `proxy_registry` cədvəlində `source = 'oneproxy'` ilə saxlanılır
 3. **Filtrləmə** — Protokola, ölkəyə və keyfiyyət balına görə filtrləyin
 4. **Rotasiya** — Keyfiyyət, təsadüfi və ya ardıcıl strategiyalardan istifadə edərək ən yaxşı proksini seçin
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Aşkarlanmadan Yayınma və Gizlilik
 
-OmniRoute trafiki sadəcə proksi üzərindən yönləndirmir — həm də trafikin legitim görünməsini təmin edir:
+67router trafiki sadəcə proksi üzərindən yönləndirmir — həm də trafikin legitim görünməsini təmin edir:
 
 ### TLS Barmaq İzinin Saxtalaşdırılması
 
@@ -407,13 +407,13 @@ Nişan həmçinin yoxlama üçün müəyyən edilmiş proksi IP-sini göstərir.
 
 ## Yuxarı Axın Proksi Rejimləri
 
-CLIProxyAPI modelindən istifadə edən provayderlər üçün OmniRoute üç yuxarı axın proksi rejimini dəstəkləyir:
+CLIProxyAPI modelindən istifadə edən provayderlər üçün 67router üç yuxarı axın proksi rejimini dəstəkləyir:
 
-| Rejim         | Təsvir                                                         |
-| ------------- | -------------------------------------------------------------- |
-| `native`      | OmniRoute proksi yönləndirməsini birbaşa idarə edir (standart) |
-| `cliproxyapi` | İdarəetməni xarici CLIProxyAPI instansiyasına ötürür           |
-| `fallback`    | Əvvəlcə yerli rejimi sınayır, sonra CLIProxyAPI-yə keçir       |
+| Rejim         | Təsvir                                                        |
+| ------------- | ------------------------------------------------------------- |
+| `native`      | 67router proksi yönləndirməsini birbaşa idarə edir (standart) |
+| `cliproxyapi` | İdarəetməni xarici CLIProxyAPI instansiyasına ötürür          |
+| `fallback`    | Əvvəlcə yerli rejimi sınayır, sonra CLIProxyAPI-yə keçir      |
 
 Hər provayder üçün ayrıca konfiqurasiya edin:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunellər API-si
 
-OmniRoute instansiyanızı proksi üzərindən çıxış trafikini yönləndirmək əvəzinə ictimai internetdə (Cloudflare/ngrok/Tailscale) əlçatan etmək üçün [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) sənədinə baxın. Tunelin REST API-si `/api/tunnels/{cloudflared,ngrok,tailscale}/*` altında yerləşir və yuxarıda sənədləşdirilmiş çıxış proksi zəncirindən müstəqildir.
+67router instansiyanızı proksi üzərindən çıxış trafikini yönləndirmək əvəzinə ictimai internetdə (Cloudflare/ngrok/Tailscale) əlçatan etmək üçün [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) sənədinə baxın. Tunelin REST API-si `/api/tunnels/{cloudflared,ngrok,tailscale}/*` altında yerləşir və yuxarıda sənədləşdirilmiş çıxış proksi zəncirindən müstəqildir.
 
 ### 1proxy API-si
 
@@ -516,7 +516,7 @@ OmniRoute instansiyanızı proksi üzərindən çıxış trafikini yönləndirm�
 
 ### Proksi vasitəsilə "socket hang up" xətaları
 
-Boşdayanma bağlantılarını kəsən ucuz proksilərdə bu normaldır. OmniRoute bunu artıq aşağıdakı üsullarla idarə edir:
+Boşdayanma bağlantılarını kəsən ucuz proksilərdə bu normaldır. 67router bunu artıq aşağıdakı üsullarla idarə edir:
 
 - Proksi bağlantılarında keep-alive funksiyasını deaktiv edir (`keepAliveTimeout: 1`)
 - Pipelining funksiyasını deaktiv edir (`pipelining: 0`)
@@ -526,7 +526,7 @@ Problem davam edərsə, başqa proksini sınayın və ya 1proxy rotasiya funksiy
 
 ### OAuth zamanı "unsupported_country_region_territory"
 
-OAuth axınını başlatmazdan **əvvəl** proksinin konfiqurasiya edildiyinə əmin olun. OmniRoute OAuth token mübadiləsini konfiqurasiya edilmiş proksi vasitəsilə yönləndirir. Əvvəlcə qlobal və ya provayder səviyyəli proksi təyin edin, sonra qoşulun.
+OAuth axınını başlatmazdan **əvvəl** proksinin konfiqurasiya edildiyinə əmin olun. 67router OAuth token mübadiləsini konfiqurasiya edilmiş proksi vasitəsilə yönləndirir. Əvvəlcə qlobal və ya provayder səviyyəli proksi təyin edin, sonra qoşulun.
 
 ### Proksi istifadə edilmir
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Proksi Sağlamlığının Yoxlanılması (v3.8.16+)
 
-OmniRoute-un **proksi sürətli uğursuzluq** mexanizmi (`src/lib/proxyHealth.ts`) sürətli TCP bağlantı yoxlaması vasitəsilə işləməyən proksiləri <2s ərzində aşkarlayır, sonra hər sorğu üzrə əlavə yükün qarşısını almaq üçün **nəticəni keşləyir**.
+67router-un **proksi sürətli uğursuzluq** mexanizmi (`src/lib/proxyHealth.ts`) sürətli TCP bağlantı yoxlaması vasitəsilə işləməyən proksiləri <2s ərzində aşkarlayır, sonra hər sorğu üzrə əlavə yükün qarşısını almaq üçün **nəticəni keşləyir**.
 
 ### İş Prinsipi
 
@@ -659,11 +659,11 @@ URL-dəki fərdi portlar (`http://host:9999`) həmişə sxemin standart dəyəri
 
 ## Proksi Analitikası və Müşahidəolunma
 
-OmniRoute operatorlara marşrutlaşdırma nümunələrini, gecikmə sıçrayışlarını və təkrarlanan nasazlıqları müəyyənləşdirməyə kömək etmək üçün hər proksi üzrə istifadəni izləyir.
+67router operatorlara marşrutlaşdırma nümunələrini, gecikmə sıçrayışlarını və təkrarlanan nasazlıqları müəyyənləşdirməyə kömək etmək üçün hər proksi üzrə istifadəni izləyir.
 
 ### Nələr İzlənilir
 
-Konfiqurasiya edilmiş proksi vasitəsilə göndərilən hər sorğu üçün OmniRoute aşağıdakıları qeydə alır:
+Konfiqurasiya edilmiş proksi vasitəsilə göndərilən hər sorğu üçün 67router aşağıdakıları qeydə alır:
 
 | Metrika      | Təsvir                                                              |
 | ------------ | ------------------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotasiya Strategiyası üçün Qərar Ağacı
 
-Bir əhatə dairəsinə bir neçə proksi təyin edildikdə, OmniRoute hər sorğu üçün hansının istifadə ediləcəyini seçmək məqsədilə **rotasiya strategiyasından** istifadə edir. Strategiya əhatə dairəsi səviyyəsində konfiqurasiya edilir (qlobal, hər provayder, hər hesab və hər kombinasiya üzrə).
+Bir əhatə dairəsinə bir neçə proksi təyin edildikdə, 67router hər sorğu üçün hansının istifadə ediləcəyini seçmək məqsədilə **rotasiya strategiyasından** istifadə edir. Strategiya əhatə dairəsi səviyyəsində konfiqurasiya edilir (qlobal, hər provayder, hər hesab və hər kombinasiya üzrə).
 
 ### Mövcud Strategiyalar
 

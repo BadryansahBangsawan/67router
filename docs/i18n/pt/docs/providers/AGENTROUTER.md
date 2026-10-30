@@ -12,7 +12,7 @@ específico, sinalizadores `anthropic-beta`, cabeçalhos do SDK Stainless, etc.)
 
 ## Início rápido — utilizar o fornecedor nativo `agentrouter` (recomendado)
 
-Para a maioria dos utilizadores, **não é necessária qualquer configuração especial**. O OmniRoute inclui um
+Para a maioria dos utilizadores, **não é necessária qualquer configuração especial**. O 67router inclui um
 fornecedor `agentrouter` integrado, com a assinatura de comunicação completa do Claude Code já incorporada (consulte
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Para o utilizar:
 
@@ -34,7 +34,7 @@ URL base, o caminho de chat ou o conjunto de cabeçalhos.
 
 ## Avançado: estabelecer ligação através do tipo de fornecedor compatível com o Claude Code
 
-O OmniRoute também suporta o AgentRouter (e relays semelhantes) através do tipo de fornecedor **compatível
+O 67router também suporta o AgentRouter (e relays semelhantes) através do tipo de fornecedor **compatível
 com o Claude Code** (`anthropic-compatible-cc-*`), que comunica com a
 API Messages da Anthropic utilizando a assinatura de comunicação correta. Um fornecedor
 `openai-compatible-chat` genérico que aponte para `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Uma conta e uma chave de API do AgentRouter. Os novos registos recebem créditos gratuitos através da hiperligação
   de afiliado no [README](../README.md) do projeto.
-- O OmniRoute em execução com o sinalizador de funcionalidade `ENABLE_CC_COMPATIBLE_PROVIDER` ativado
+- O 67router em execução com o sinalizador de funcionalidade `ENABLE_CC_COMPATIBLE_PROVIDER` ativado
   (consulte abaixo).
 
 ## 1. Ativar o tipo de fornecedor compatível com CC
 
 O tipo de fornecedor compatível com o Claude Code está protegido por um sinalizador de funcionalidade, porque
 envia tráfego que replica de perto o cliente oficial Claude Code. Ative-o
-definindo uma variável de ambiente antes de iniciar o OmniRoute:
+definindo uma variável de ambiente antes de iniciar o 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/lib/cloudAgent/` en `src/app/api/v1/agents/tasks/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40 (frontmatter vernieuwd; 4 agents, incl. cursor-cloud)
 
-OmniRoute orkestreert door derden in de cloud gehoste programmeeragents (Codex Cloud, Cursor,
+67router orkestreert door derden in de cloud gehoste programmeeragents (Codex Cloud, Cursor,
 Devin, Jules) als langlopende taken. Elke agent wordt achter een uniforme interface geplaatst, zodat
 clients een prompt + repository-URL kunnen indienen en resultaten kunnen ontvangen zonder
 providerspecifieke API's te hoeven gebruiken.

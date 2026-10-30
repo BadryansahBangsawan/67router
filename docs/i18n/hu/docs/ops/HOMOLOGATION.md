@@ -4,7 +4,7 @@
 
 ---
 
-Az homologációs VPS-en futó OmniRoute deploy valós környezetű E2E-validációja
+Az homologációs VPS-en futó 67router deploy valós környezetű E2E-validációja
 (`HOMOLOG_BASE_URL`, pl. `http://192.168.0.15:20128`). Egyetlen parancs váltja fel a kiadás
 manuális STOP #2 ellenőrzőlistáját egy automatizált, bizonyítékokat előállító futtatással.
 

@@ -4,7 +4,7 @@ title: "SQLite Runtime Resolution"
 
 # SQLite Runtime Resolution
 
-OmniRoute resolves its SQLite driver at startup through a 5-step fallback chain:
+67router resolves its SQLite driver at startup through a 5-step fallback chain:
 
 1. **Bundled `better-sqlite3`** (via `dependencies` in `package.json`)
    — fastest, native binary, installed by `npm install` when build tools are present.
@@ -28,13 +28,13 @@ OmniRoute resolves its SQLite driver at startup through a 5-step fallback chain:
 - **No build tools**: Some environments (corporate Windows without VS Build
   Tools, minimal Docker images) cannot compile `better-sqlite3`. The runtime
   installer resolves a pre-built binary from the npm registry; the fallback
-  drivers ensure OmniRoute still boots even if that fails.
+  drivers ensure 67router still boots even if that fails.
 - **Air-gapped systems**: If the npm registry is unreachable, `node:sqlite`
   or `sql.js` guarantee baseline functionality.
 
 ## Magic-byte validation
 
-Before loading a runtime-installed `.node` file, OmniRoute reads the first 8
+Before loading a runtime-installed `.node` file, 67router reads the first 8
 bytes and matches against known platform magics:
 
 | Platform              | Bytes (hex)   | Label       |
@@ -104,9 +104,9 @@ Implementation:
 ## Single-writer topology (HA unsupported)
 
 The driver fallback chain above still runs in **one process**. Default SQLite
-OmniRoute is a **single writer**:
+67router is a **single writer**:
 
-- Do not attach two OmniRoute replicas to the same `storage.sqlite` file.
+- Do not attach two 67router replicas to the same `storage.sqlite` file.
 - A container restart, Recreate deploy, OOM kill, or HEALTHCHECK restart drops
   every in-flight SSE session. There is no session drain on the stock path.
 - Orchestrator liveness that treats a slow `/healthz` as dead will kill the only

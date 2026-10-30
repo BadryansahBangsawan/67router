@@ -9,7 +9,7 @@
 > `src/app/(dashboard)/dashboard/plugins/`
 > **Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ní ètò plugin tó dà bí ti WordPress. Àwọn plugin jẹ́ àwọn àkójọpọ̀ fáìlì
+67router ní ètò plugin tó dà bí ti WordPress. Àwọn plugin jẹ́ àwọn àkójọpọ̀ fáìlì
 olóminira — ọ̀kọ̀ọ̀kan ní manifest `plugin.json` àti fáìlì ìbẹ̀rẹ̀ — tí wọ́n ń so
 ara wọn mọ́ ìṣàn ìbéèrè (`onRequest` / `onResponse` / `onError`) àti àwọn
 ìṣẹ̀lẹ̀ ìgbésí-ayé (`onInstall` / `onActivate` / `onDeactivate` / `onUninstall`).
@@ -153,7 +153,7 @@ ni a gba láàyè láti kọjá.
 
 ### Àpò-ọ̀nà plugin
 
-Àwọn plugin wà lábẹ́ àpò-ọ̀nà dátà OmniRoute:
+Àwọn plugin wà lábẹ́ àpò-ọ̀nà dátà 67router:
 
 ```
 ~/.omniroute/plugins/<plugin-name>/

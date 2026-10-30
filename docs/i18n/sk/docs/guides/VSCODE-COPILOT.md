@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** pridáva každý model poskytovaný službou OmniRoute do _natívneho_ výberu modelov
+**OmniCopilot** pridáva každý model poskytovaný službou 67router do _natívneho_ výberu modelov
 v GitHub Copilot Chat. Žiadny druhý bočný panel, žiadne samostatné používateľské rozhranie chatu — režim agenta Copilotu, volanie nástrojov,
 servery MCP aj vlastné pokyny naďalej fungujú, iba sa spúšťajú na modeli, ktorý si vyberiete.
 
@@ -23,13 +23,13 @@ servery MCP aj vlastné pokyny naďalej fungujú, iba sa spúšťajú na modeli,
 
 ## Nastavenie
 
-1. **Spustite OmniRoute** — `npm install -g omniroute && omniroute` (ovládací panel na `http://localhost:20128`).
-2. **Nainštalujte rozšírenie** — vo zobrazení Rozšírenia vyhľadajte „OmniRoute“.
-3. **Vyberte model** — Copilot Chat → výber modelu → **Spravovať modely…** → **OmniRoute**, potom začiarknite
+1. **Spustite 67router** — `npm install -g omniroute && omniroute` (ovládací panel na `http://localhost:20128`).
+2. **Nainštalujte rozšírenie** — vo zobrazení Rozšírenia vyhľadajte „67router“.
+3. **Vyberte model** — Copilot Chat → výber modelu → **Spravovať modely…** → **67router**, potom začiarknite
    požadované modely.
 
-Keď OmniRoute beží na predvolenom porte, nie je potrebné nič konfigurovať. Pre vzdialenú inštanciu otvorte
-**ikonu OmniRoute na paneli aktivít** (alebo spustite `OmniRoute: Manage Connection`) a nastavte:
+Keď 67router beží na predvolenom porte, nie je potrebné nič konfigurovať. Pre vzdialenú inštanciu otvorte
+**ikonu 67router na paneli aktivít** (alebo spustite `67router: Manage Connection`) a nastavte:
 
 - **URL servera** — koreňová adresa servera, napr. `http://192.168.0.15:20128`. Príponu `/v1`
   pridáva rozšírenie; nezahŕňajte ju.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' je model na generovanie obrázkov a nemožno ho použi
 
 preto sú ešte pred zobrazením vo výbere odfiltrované podľa poľa `type`. **Modely Responses-API
 zostávajú zachované** — každá položka Codex / GPT-5.x uvádza `supported_endpoints: ["responses"]`
-a OmniRoute ich prekladá pre `/v1/chat/completions`, takže sú plne použiteľné.
+a 67router ich prekladá pre `/v1/chat/completions`, takže sú plne použiteľné.
 
 ### Poskytovatelia, ktorých ste nikdy nenakonfigurovali
 
@@ -87,7 +87,7 @@ pridajte ich do `blockedProviders` v nastaveniach ovládacieho panela; v rozší
 
 ## Ovládací panel na karte VS Code
 
-`omnicopilot.dashboardOpen: "editor"` vykreslí ovládací panel OmniRoute na karte editora prostredníctvom
+`omnicopilot.dashboardOpen: "editor"` vykreslí ovládací panel 67router na karte editora prostredníctvom
 Simple Browser namiesto externého prehliadača. Vkladanie je **na serveri voliteľné** prostredníctvom
 `DASHBOARD_ALLOW_EMBED=vscode`, čo zabezpečí poskytovanie stránok HTML s
 `frame-ancestors 'self' vscode-webview:` namiesto predvoleného `frame-ancestors 'none'` +
@@ -120,7 +120,7 @@ Pozrite si [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) a problém
 
 ## Konfigurácia ďalších nástrojov priamo vo VS Code
 
-**`OmniRoute: Configure Coding CLI`** používa rozhranie CLI `omniroute` na zapisovanie profilov pripravených
+**`67router: Configure Coding CLI`** používa rozhranie CLI `omniroute` na zapisovanie profilov pripravených
 na použitie pre Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo a Roo — rovnakých konfigurácií, aké sú opísané v
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Kľúč API sa rozhraniu CLI odovzdáva prostredníctvom
@@ -130,20 +130,20 @@ premennej prostredia `OMNIROUTE_API_KEY`, nikdy nie cez príkazový riadok.
 
 ## Riešenie problémov
 
-| Príznak                                                        | Príčina / riešenie                                                                                                                                                                                                                                                                           |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vo výbere nie sú žiadne modely OmniRoute                       | Server je nedostupný. Bodka v stavovom riadku sa zmení na sivú; spustite `OmniRoute: Check Connection`. Zisťovanie je zámerne tiché a namiesto zobrazovania výzvy nepridá žiadne modely.                                                                                                     |
-| Každý model sa zobrazuje dvakrát                               | Používate OmniCopilot starší než 1.0.1 — aktualizujte ho. Rozšírenie teraz požaduje `?prefix=alias`.                                                                                                                                                                                         |
-| Model obrázkov/zvuku sa predtým zobrazoval a zmizol            | Od verzie 1.0.1 je to zámerné — nikdy nedokázal odpovedať na chatovú požiadavku.                                                                                                                                                                                                             |
-| Na paneli aktivity chýba panel                                 | VS Code presúva ďalšie kontajnery zobrazení do ponuky **„…“** v spodnej časti panela aktivity a kontajner skrytý kliknutím pravým tlačidlom zostane skrytý. Kliknite pravým tlačidlom na panel aktivity → začiarknite **OmniRoute** alebo ho otvorte pomocou `OmniRoute: Manage Connection`. |
-| Ovládací panel sa napriek režimu `editor` otvorí v prehliadači | Server nebol **zostavený** s `DASHBOARD_ALLOW_EMBED=vscode` (pozrite vyššie) — jeho nastavenie pri spustení vopred zostavenej inštalácie nič nezmení. Použitie náhradného riešenia je zámerné.                                                                                               |
-| Zoznam modelov je po zmene poskytovateľov neaktuálny           | Použite `OmniRoute: Refresh Models` alebo odkaz ↻ na paneli.                                                                                                                                                                                                                                 |
+| Príznak                                                        | Príčina / riešenie                                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Vo výbere nie sú žiadne modely 67router                        | Server je nedostupný. Bodka v stavovom riadku sa zmení na sivú; spustite `67router: Check Connection`. Zisťovanie je zámerne tiché a namiesto zobrazovania výzvy nepridá žiadne modely.                                                                                                    |
+| Každý model sa zobrazuje dvakrát                               | Používate OmniCopilot starší než 1.0.1 — aktualizujte ho. Rozšírenie teraz požaduje `?prefix=alias`.                                                                                                                                                                                       |
+| Model obrázkov/zvuku sa predtým zobrazoval a zmizol            | Od verzie 1.0.1 je to zámerné — nikdy nedokázal odpovedať na chatovú požiadavku.                                                                                                                                                                                                           |
+| Na paneli aktivity chýba panel                                 | VS Code presúva ďalšie kontajnery zobrazení do ponuky **„…“** v spodnej časti panela aktivity a kontajner skrytý kliknutím pravým tlačidlom zostane skrytý. Kliknite pravým tlačidlom na panel aktivity → začiarknite **67router** alebo ho otvorte pomocou `67router: Manage Connection`. |
+| Ovládací panel sa napriek režimu `editor` otvorí v prehliadači | Server nebol **zostavený** s `DASHBOARD_ALLOW_EMBED=vscode` (pozrite vyššie) — jeho nastavenie pri spustení vopred zostavenej inštalácie nič nezmení. Použitie náhradného riešenia je zámerné.                                                                                             |
+| Zoznam modelov je po zmene poskytovateľov neaktuálny           | Použite `67router: Refresh Models` alebo odkaz ↻ na paneli.                                                                                                                                                                                                                                |
 
 ---
 
 ## Pozri tiež
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — všetky ostatné nástroje na programovanie
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ovládanie vzdialeného OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ovládanie vzdialeného 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — kontrakt `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — vlastné poznámky rozšírenia ku katalógu

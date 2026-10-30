@@ -15,7 +15,7 @@
 - [OAuth 2.0 para sa mga native app (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — Pampubliko ang OAuth client_id / client_secret para sa mga naka-install na app; ang PKCE ang nagbibigay ng aktuwal na seguridad.
 - [Mga Firebase API key](https://firebase.google.com/docs/projects/api-keys) — Dinisenyong maging pampubliko ang mga Web client identifier.
 
-Kailangang i-embed ng OmniRoute ang mga halagang ito upang magkaroon pa rin ng gumaganang OAuth flow kaagad ang mga user na hindi nagko-configure ng `.env`. Kapag walang naka-embed na fallback, hihinto sa paggana ang mga Gemini / Antigravity provider para sa sinumang user na sumusunod sa paraang "i-clone lang at patakbuhin."
+Kailangang i-embed ng 67router ang mga halagang ito upang magkaroon pa rin ng gumaganang OAuth flow kaagad ang mga user na hindi nagko-configure ng `.env`. Kapag walang naka-embed na fallback, hihinto sa paggana ang mga Gemini / Antigravity provider para sa sinumang user na sumusunod sa paraang "i-clone lang at patakbuhin."
 
 Gayunpaman, ang mga literal na value gaya ng `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` ay natutukoy ng **GitHub Secret Scanning**, **Semgrep**, at mga katulad na pattern scanner. Nagiging maingay na daloy ng mga false positive ang bawat release, hinaharangan ng push protection ang mga lehitimong commit, at nawawalan ng tiwala ang mga operator sa alert feed.
 

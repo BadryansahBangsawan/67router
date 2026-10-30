@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** pievieno visus OmniRoute apkalpotos modeļus _iebūvētajai_ GitHub Copilot Chat
+**OmniCopilot** pievieno visus 67router apkalpotos modeļus _iebūvētajai_ GitHub Copilot Chat
 modeļu izvēlnei. Nekādas otras sānjoslas vai atsevišķas tērzēšanas saskarnes — Copilot aģenta režīms, rīku izsaukšana,
 MCP serveri un pielāgotās instrukcijas turpina darboties, tikai izmantojot jūsu izvēlēto modeli.
 
@@ -23,13 +23,13 @@ MCP serveri un pielāgotās instrukcijas turpina darboties, tikai izmantojot jū
 
 ## Iestatīšana
 
-1. **Palaidiet OmniRoute** — `npm install -g omniroute && omniroute` (vadības panelis pieejams adresē `http://localhost:20128`).
-2. **Instalējiet paplašinājumu** — paplašinājumu skatā meklējiet „OmniRoute”.
-3. **Izvēlieties modeli** — Copilot Chat → modeļu izvēlne → **Manage Models…** → **OmniRoute**, pēc tam atzīmējiet
+1. **Palaidiet 67router** — `npm install -g omniroute && omniroute` (vadības panelis pieejams adresē `http://localhost:20128`).
+2. **Instalējiet paplašinājumu** — paplašinājumu skatā meklējiet „67router”.
+3. **Izvēlieties modeli** — Copilot Chat → modeļu izvēlne → **Manage Models…** → **67router**, pēc tam atzīmējiet
    vajadzīgos modeļus.
 
-Ja OmniRoute darbojas noklusējuma portā, nekas nav jākonfigurē. Attālai instancei atveriet
-**OmniRoute ikonu darbību joslā** (vai palaidiet `OmniRoute: Manage Connection`) un iestatiet:
+Ja 67router darbojas noklusējuma portā, nekas nav jākonfigurē. Attālai instancei atveriet
+**67router ikonu darbību joslā** (vai palaidiet `67router: Manage Connection`) un iestatiet:
 
 - **Servera URL** — servera saknes adrese, piemēram, `http://192.168.0.15:20128`. Sufiksu `/v1`
   pievieno paplašinājums; neiekļaujiet to.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 tāpēc tie pēc lauka `type` tiek filtrēti, pirms nonāk izvēlnē. **Responses API
 modeļi tiek saglabāti** — katrs Codex / GPT-5.x ieraksts publicē `supported_endpoints: ["responses"]`,
-un OmniRoute tos pārveido izmantošanai ar `/v1/chat/completions`, tāpēc tie ir pilnībā izmantojami.
+un 67router tos pārveido izmantošanai ar `/v1/chat/completions`, tāpēc tie ir pilnībā izmantojami.
 
 ### Nodrošinātāji, kurus nekad neesat konfigurējis
 
@@ -88,7 +88,7 @@ nekas nav jāmaina.
 
 ## Informācijas panelis VS Code cilnē
 
-`omnicopilot.dashboardOpen: "editor"` atveido OmniRoute informācijas paneli redaktora cilnē, izmantojot
+`omnicopilot.dashboardOpen: "editor"` atveido 67router informācijas paneli redaktora cilnē, izmantojot
 Simple Browser, nevis ārēju pārlūkprogrammu. Iegulšana serverī ir **jāiespējo atsevišķi**, izmantojot
 `DASHBOARD_ALLOW_EMBED=vscode`, kas nodrošina HTML lapas ar
 `frame-ancestors 'self' vscode-webview:`, nevis noklusējuma `frame-ancestors 'none'` +
@@ -121,7 +121,7 @@ Skatiet [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) un problēmu
 
 ## Citu rīku konfigurēšana no VS Code
 
-**`OmniRoute: Configure Coding CLI`** izmanto `omniroute` CLI, lai izveidotu lietošanai gatavus profilus
+**`67router: Configure Coding CLI`** izmanto `omniroute` CLI, lai izveidotu lietošanai gatavus profilus
 Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo un Roo — tās pašas konfigurācijas, kas aprakstītas
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API atslēga CLI tiek nodota, izmantojot
@@ -131,20 +131,20 @@ vides mainīgo `OMNIROUTE_API_KEY`, un nekad netiek norādīta komandrindā.
 
 ## Problēmu novēršana
 
-| Pazīme                                                                            | Cēlonis/risinājums                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Atlasītājā nav OmniRoute modeļu                                                   | Serveris nav sasniedzams. Statusa joslas punkts kļūst pelēks; palaidiet `OmniRoute: Check Connection`. Atklāšana pēc nolūka notiek bez paziņojumiem un nepievieno nevienu modeli, nevis parāda uzvedni.                                                                                    |
-| Katrs modelis tiek parādīts divreiz                                               | Jūs izmantojat OmniCopilot versiju, kas vecāka par 1.0.1 — atjauniniet to. Tagad paplašinājums pieprasa `?prefix=alias`.                                                                                                                                                                   |
-| Iepriekš sarakstā redzamais attēlu/audio modelis ir pazudis                       | Tas ir apzināti kopš versijas 1.0.1 — tas nekad nevarēja atbildēt uz tērzēšanas pieprasījumu.                                                                                                                                                                                              |
-| Darbību joslā nav paneļa                                                          | VS Code pārvieto papildu skatu konteinerus uz **"…"** pārpildes izvēlni darbību joslas apakšdaļā, un ar labo klikšķi paslēpts konteiners paliek paslēpts. Ar peles labo pogu noklikšķiniet uz darbību joslas → atzīmējiet **OmniRoute** vai atveriet to ar `OmniRoute: Manage Connection`. |
-| Informācijas panelis tiek atvērts pārlūkprogrammā, neraugoties uz `editor` režīmu | Serveris netika **uzbūvēts** ar `DASHBOARD_ALLOW_EMBED=vscode` (skatiet iepriekš) — tā iestatīšana palaišanas laikā iepriekš uzbūvētā instalācijā neko nemaina. Pārslēgšanās ir apzināta.                                                                                                  |
-| Pēc pakalpojumu sniedzēju maiņas modeļu saraksts ir novecojis                     | `OmniRoute: Refresh Models` vai ↻ saite panelī.                                                                                                                                                                                                                                            |
+| Pazīme                                                                            | Cēlonis/risinājums                                                                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Atlasītājā nav 67router modeļu                                                    | Serveris nav sasniedzams. Statusa joslas punkts kļūst pelēks; palaidiet `67router: Check Connection`. Atklāšana pēc nolūka notiek bez paziņojumiem un nepievieno nevienu modeli, nevis parāda uzvedni.                                                                                   |
+| Katrs modelis tiek parādīts divreiz                                               | Jūs izmantojat OmniCopilot versiju, kas vecāka par 1.0.1 — atjauniniet to. Tagad paplašinājums pieprasa `?prefix=alias`.                                                                                                                                                                 |
+| Iepriekš sarakstā redzamais attēlu/audio modelis ir pazudis                       | Tas ir apzināti kopš versijas 1.0.1 — tas nekad nevarēja atbildēt uz tērzēšanas pieprasījumu.                                                                                                                                                                                            |
+| Darbību joslā nav paneļa                                                          | VS Code pārvieto papildu skatu konteinerus uz **"…"** pārpildes izvēlni darbību joslas apakšdaļā, un ar labo klikšķi paslēpts konteiners paliek paslēpts. Ar peles labo pogu noklikšķiniet uz darbību joslas → atzīmējiet **67router** vai atveriet to ar `67router: Manage Connection`. |
+| Informācijas panelis tiek atvērts pārlūkprogrammā, neraugoties uz `editor` režīmu | Serveris netika **uzbūvēts** ar `DASHBOARD_ALLOW_EMBED=vscode` (skatiet iepriekš) — tā iestatīšana palaišanas laikā iepriekš uzbūvētā instalācijā neko nemaina. Pārslēgšanās ir apzināta.                                                                                                |
+| Pēc pakalpojumu sniedzēju maiņas modeļu saraksts ir novecojis                     | `67router: Refresh Models` vai ↻ saite panelī.                                                                                                                                                                                                                                           |
 
 ---
 
 ## Skatiet arī
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — visi pārējie kodēšanas rīki
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — attālinātas OmniRoute vadīšana
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — attālinātas 67router vadīšana
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` līgums
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — paša paplašinājuma kataloga piezīmes

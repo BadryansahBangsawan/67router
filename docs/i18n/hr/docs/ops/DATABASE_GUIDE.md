@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute koristi **SQLite s WAL dnevnikom** kao primarno spremište, uz enkripciju **AES-256-GCM** podataka u mirovanju za osjetljiva polja. Ovaj vodič obuhvaća shemu, migracije, sigurnosno kopiranje/oporavak i operativne postupnike.
+> **TL;DR**: 67router koristi **SQLite s WAL dnevnikom** kao primarno spremište, uz enkripciju **AES-256-GCM** podataka u mirovanju za osjetljiva polja. Ovaj vodič obuhvaća shemu, migracije, sigurnosno kopiranje/oporavak i operativne postupnike.
 
 **Izvori:**
 
@@ -19,7 +19,7 @@
 
 ## Zašto SQLite?
 
-OmniRoute je odabrao SQLite umjesto PostgreSQL-a/MySQL-a iz nekoliko razloga:
+67router je odabrao SQLite umjesto PostgreSQL-a/MySQL-a iz nekoliko razloga:
 
 | Čimbenik              | SQLite                                      | PostgreSQL                                 |
 | --------------------- | ------------------------------------------- | ------------------------------------------ |
@@ -30,7 +30,7 @@ OmniRoute je odabrao SQLite umjesto PostgreSQL-a/MySQL-a iz nekoliko razloga:
 | **Sigurnosna kopija** | Kopiranje jedne datoteke                    | `pg_dump` ili snimka datotečnog sustava    |
 | **Slučaj uporabe**    | Instalacija po korisniku, ugrađeno rješenje | Višekorisnički SaaS                        |
 
-Za implementacije s **jednim korisnikom i jednom instancom** (primarni slučaj uporabe za OmniRoute), SQLite je jednostavniji i brži.
+Za implementacije s **jednim korisnikom i jednom instancom** (primarni slučaj uporabe za 67router), SQLite je jednostavniji i brži.
 
 ### WAL dnevnik
 
@@ -50,7 +50,7 @@ Zadana veličina predmemorije iznosi **65,536 KiB (64 MiB)**. SQLite negativnu v
 `cache_size` tumači kao približnu gornju granicu u KiB i dodjeljuje stranice prema potrebi.
 **Postavke > Sustav i pohrana > Veličina predmemorije** prihvaća cijele brojeve od **1 do
 1,000,000 KiB**; spremanjem postavke ona se primjenjuje na aktivnu vezu s bazom podataka,
-a OmniRoute pri pokretanju vraća pohranjenu vrijednost.
+a 67router pri pokretanju vraća pohranjenu vrijednost.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Arhitektura domenskih modula
 
-Baza podataka OmniRoutea ima **110 vršnih TypeScript modula** u `src/lib/db/`. Svaki domenski modul:
+Baza podataka 67routera ima **110 vršnih TypeScript modula** u `src/lib/db/`. Svaki domenski modul:
 
 - Posjeduje jednu ili više određenih tablica
 - Izvozi tipizirane CRUD funkcije
@@ -90,7 +90,7 @@ Baza podataka OmniRoutea ima **110 vršnih TypeScript modula** u `src/lib/db/`. 
 
 ### 110 vršnih modula baze podataka
 
-OmniRoute ima **110 vršnih TypeScript datoteka** u `src/lib/db/`. U nastavku je prikazan izbor osnovnih modula; potpuni popis nalazi se u sadržaju direktorija:
+67router ima **110 vršnih TypeScript datoteka** u `src/lib/db/`. U nastavku je prikazan izbor osnovnih modula; potpuni popis nalazi se u sadržaju direktorija:
 
 | Modul                   | Tablice                                                        | Odgovornost                                                                   |
 | ----------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Potpuni popis od približno 30+ tablica nalazi se u `src/lib/db/migrations/`.
 
 ## Migracije
 
-OmniRoute koristi **verzionirane, idempotentne migracije** u `src/lib/db/migrations/`. Svaka migracija zasebna je SQL datoteka nazvana `NNN_description.sql`.
+67router koristi **verzionirane, idempotentne migracije** u `src/lib/db/migrations/`. Svaka migracija zasebna je SQL datoteka nazvana `NNN_description.sql`.
 
 ### Imenovanje migracija
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Promjene koje nisu kompatibilne unatrag** (npr. uklanjanje stupaca) složene su. OmniRoute NE podržava vraćanje na prethodnu verziju — nakon što se migracija primijeni, promjena sheme trajna je. Planirajte u skladu s tim.
+> **Promjene koje nisu kompatibilne unatrag** (npr. uklanjanje stupaca) složene su. 67router NE podržava vraćanje na prethodnu verziju — nakon što se migracija primijeni, promjena sheme trajna je. Planirajte u skladu s tim.
 
 ---
 
@@ -310,7 +310,7 @@ Zbog performansi se sljedeće stavke pohranjuju kao čisti tekst:
 
 ## Napomene o šifriranju (v3.8.16+)
 
-OmniRoute koristi **`migrateLegacyEncryptedString()`** za transparentno rukovanje dvjema shemama šifriranja:
+67router koristi **`migrateLegacyEncryptedString()`** za transparentno rukovanje dvjema shemama šifriranja:
 
 - **Naslijeđena** (prije v3.5.0): „šifriranje” temeljeno na XOR-u (nije prava kriptografija)
 - **Trenutačna**: AES-256-GCM s odgovarajućim IV-om i autentifikacijskom oznakom
@@ -399,7 +399,7 @@ Za sigurnosno kopiranje aktivne baze podataka bez prekida rada:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Ovo koristi SQLiteov API za mrežno sigurnosno kopiranje — može se sigurno pokrenuti dok je OmniRoute aktivan.
+Ovo koristi SQLiteov API za mrežno sigurnosno kopiranje — može se sigurno pokrenuti dok je 67router aktivan.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Sažimanje
 
-Dugotrajno pokrenute instance OmniRoutea imaju koristi od povremenog izvršavanja naredbe `VACUUM`:
+Dugotrajno pokrenute instance 67routera imaju koristi od povremenog izvršavanja naredbe `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Ponovno postavljanje (brisanje) svih podataka
 
 ```bash
-# Najprije zaustavite OmniRoute
+# Najprije zaustavite 67router
 omniroute stop
 
 # Izbrišite datoteku baze podataka
@@ -613,7 +613,7 @@ Drugi proces drži zaključavanje za pisanje. Možete:
 
 - Pričekati da drugi proces završi (provjerite pomoću `lsof | grep storage.sqlite`)
 - Prekinuti drugi proces
-- Ako problem potraje, ponovno pokrenuti OmniRoute
+- Ako problem potraje, ponovno pokrenuti 67router
 
 ### "Ograničenje stranog ključa nije zadovoljeno"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migracija se izvodila unutar transakcije, pa su promjene trebale biti poništene. Ako nisu:
 
-1. **Zaustavite OmniRoute** (spriječite daljnje pokušaje)
+1. **Zaustavite 67router** (spriječite daljnje pokušaje)
 2. **Provjerite stanje baze podataka** pomoću alata `sqlite3`
 3. **Ručno ispravite** djelomičnu migraciju
-4. **Ponovno pokrenite** OmniRoute (migracija će se ponovno pokušati izvršiti)
+4. **Ponovno pokrenite** 67router (migracija će se ponovno pokušati izvršiti)
 
 Kako biste to spriječili, migracije uvijek najprije testirajte na kopiji.
 

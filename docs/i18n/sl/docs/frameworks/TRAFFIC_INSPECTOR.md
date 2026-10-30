@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector je v OmniRoute vgrajeni razhroščevalnik prometa HTTPS — orodje, podobno Charles Proxy / mitmweb / HTTP Toolkit, ki **razume LLM-je** in **agente**. Nahaja se na `/dashboard/tools/traffic-inspector` in prejema promet v živo iz največ 5 sočasnih virov zajema.
+Traffic Inspector je v 67router vgrajeni razhroščevalnik prometa HTTPS — orodje, podobno Charles Proxy / mitmweb / HTTP Toolkit, ki **razume LLM-je** in **agente**. Nahaja se na `/dashboard/tools/traffic-inspector` in prejema promet v živo iz največ 5 sočasnih virov zajema.
 
 **Lokacija na nadzorni plošči:** `/dashboard/tools/traffic-inspector`
 **Skupina v stranski vrstici:** Orodja (za AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector je v OmniRoute vgrajeni razhroščevalnik prometa HTTPS — or
 
 ### Po čem je Traffic Inspector edinstven
 
-| Funkcija                                                                                         | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------------------ | :-----: | :-----: | :-----: | :-----------------------------: |
-| Spletni vmesnik                                                                                  |    ✓    |    ✗    |    ✗    |                ✓                |
-| Odprtokoden                                                                                      |    ✓    |    ✗    |  delno  |                ✓                |
-| **Razume agente** (ve, ali zahteva prihaja iz Antigravity/Copilot/itd.)                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Razume LLM-je** (razčleni obliko OpenAI/Anthropic/Gemini, žetone in model)                     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Vidna preslikava modelov** (gemini-3-flash → claude-sonnet-4.7)                                |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ločena zakasnitev posredniškega in nadrejenega strežnika**                                     |  delno  |    ✗    |    ✗    |                ✓                |
-| **Integracija z usmerjanjem, nadomestnimi možnostmi in stroški OmniRoute**                       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sistemsko razhroščevanje prek posredniškega strežnika** (katera koli aplikacija v računalniku) |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Zajem gostiteljev po meri** (preusmeritev DNS za posameznega gostitelja)                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Način okoljske spremenljivke HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Pogled pogovora** (večizmenični oblački, tool_use/tool_result)                                 |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Združevalnik toka SSE** (rekonstrukcija iz dogodkov delta)                                     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Snemanje sej** (poimenovane seje, izvozljive v .har/.jsonl)                                    |    ✗    |    ✓    |    ✓    |                ✓                |
+| Funkcija                                                                                         | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------------------ | :-----: | :-----: | :-----: | :----------------------------: |
+| Spletni vmesnik                                                                                  |    ✓    |    ✗    |    ✗    |               ✓                |
+| Odprtokoden                                                                                      |    ✓    |    ✗    |  delno  |               ✓                |
+| **Razume agente** (ve, ali zahteva prihaja iz Antigravity/Copilot/itd.)                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Razume LLM-je** (razčleni obliko OpenAI/Anthropic/Gemini, žetone in model)                     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Vidna preslikava modelov** (gemini-3-flash → claude-sonnet-4.7)                                |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ločena zakasnitev posredniškega in nadrejenega strežnika**                                     |  delno  |    ✗    |    ✗    |               ✓                |
+| **Integracija z usmerjanjem, nadomestnimi možnostmi in stroški 67router**                        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sistemsko razhroščevanje prek posredniškega strežnika** (katera koli aplikacija v računalniku) |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Zajem gostiteljev po meri** (preusmeritev DNS za posameznega gostitelja)                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Način okoljske spremenljivke HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Pogled pogovora** (večizmenični oblački, tool_use/tool_result)                                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Združevalnik toka SSE** (rekonstrukcija iz dogodkov delta)                                     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Snemanje sej** (poimenovane seje, izvozljive v .har/.jsonl)                                    |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arhitektura v enem odstavku
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, če gre za odgovor SSE
   mappedTo: string | null; // glava x-omniroute-mapped
-  costEstimateUsd: number | null; // ocenjeni strošek na podlagi cen OmniRoute
+  costEstimateUsd: number | null; // ocenjeni strošek na podlagi cen 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistemski posredniški strežnik ni bil povrnjen
 
-Če se OmniRoute zruši, ko je aktiven način sistemskega posredniškega strežnika:
+Če se 67router zruši, ko je aktiven način sistemskega posredniškega strežnika:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Osnovna pot: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Seznam zahtev (z možnostjo filtriranja: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Podrobnosti posamezne zahteve                                                                   |
 | DELETE | `/requests`                 | Počisti medpomnilnik v pomnilniku                                                               |
-| POST   | `/requests/{id}/replay`     | Ponovno izvede isto zahtevo prek usmerjevalnika OmniRoute                                       |
+| POST   | `/requests/{id}/replay`     | Ponovno izvede isto zahtevo prek usmerjevalnika 67router                                        |
 | PUT    | `/requests/{id}/annotation` | Shrani ali posodobi opombo pri zahtevi                                                          |
 
 ### WebSocket

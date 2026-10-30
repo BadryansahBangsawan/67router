@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie provayderləri OmniRoute-a API açarı əvəzinə mövcud brauzer sessiyanız vasitəsilə AI xidmətindən istifadə etməyə imkan verir. Onlar veb-saytı vasitəsilə xidmətə artıq girişiniz olduqda və OmniRoute-un eyni autentifikasiya edilmiş sessiyadan istifadə etməsini istədikdə faydalıdır.
+Web Cookie provayderləri 67router-a API açarı əvəzinə mövcud brauzer sessiyanız vasitəsilə AI xidmətindən istifadə etməyə imkan verir. Onlar veb-saytı vasitəsilə xidmətə artıq girişiniz olduqda və 67router-un eyni autentifikasiya edilmiş sessiyadan istifadə etməsini istədikdə faydalıdır.
 
 API açarı provayderlərindən fərqli olaraq, Web Cookie provayderləri brauzerinizin veb-sayta göndərdiyi giriş məlumatlarından istifadə edərək autentifikasiya həyata keçirir.
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie` sorğu başlığı brauzerinizin uğurla istifadə etdiyi dəqiq autentifikasiya məlumatlarını ehtiva edir.
 
-Əksər Web Cookie provayderləri üçün OmniRoute-a yapışdırılmalı dəyər budur.
+Əksər Web Cookie provayderləri üçün 67router-a yapışdırılmalı dəyər budur.
 
 ---
 
@@ -63,7 +63,7 @@ Quraşdırma prosesi əksər Web Cookie provayderləri üçün eynidir.
 4. Səhifəni yeniləyin.
 5. Autentifikasiya edilmiş söhbət və ya dialoq sorğusunu açın.
 6. Tələb olunan autentifikasiya məlumatlarını kopyalayın.
-7. OmniRoute-u açın.
+7. 67router-u açın.
 8. **Providers → Add Provider** bölməsinə keçin.
 9. Web Cookie provayderinizi seçin.
 10. Giriş məlumatlarını yapışdırın.
@@ -92,17 +92,17 @@ Müxtəlif veb-saytlar autentifikasiya məlumatlarını fərqli şəkildə saxla
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) qeydiyyat tələb etməyən pulsuz istehlakçı çat platformasıdır — sessiya ilk ziyarət zamanı anonim şəkildə yaradılır və üç kuki vasitəsilə saxlanılır: `uid`, `si_usr_id` və `si_ses_id`. OmniRoute eyni `/api/dispatch` son nöqtəsini vahid model identifikatoru (`notrack-c`, ləqəbi `ntw`) vasitəsilə proksiləyir.
+NoTrack ([notrack.ai](https://notrack.ai)) qeydiyyat tələb etməyən pulsuz istehlakçı çat platformasıdır — sessiya ilk ziyarət zamanı anonim şəkildə yaradılır və üç kuki vasitəsilə saxlanılır: `uid`, `si_usr_id` və `si_ses_id`. 67router eyni `/api/dispatch` son nöqtəsini vahid model identifikatoru (`notrack-c`, ləqəbi `ntw`) vasitəsilə proksiləyir.
 
 ### Qoşulma addımları
 
 1. Brauzerinizdə [notrack.ai](https://notrack.ai) saytını açın və anonim sessiya kukisinin təyin edilməsinə icazə verin.
 2. **Tərtibatçı Alətləri → Şəbəkə** bölməsini açın, səhifəni yeniləyin və istənilən `/api` sorğusuna klikləyin.
 3. **Sorğu Başlıqları** bölməsində tam `Cookie` başlıq dəyərini kopyalayın.
-4. OmniRoute-da **Provayderlər → Provayder əlavə et → NoTrack Web (Pulsuz)** bölməsinə keçin.
+4. 67router-da **Provayderlər → Provayder əlavə et → NoTrack Web (Pulsuz)** bölməsinə keçin.
 5. Kuki sətrini `apiKey` sahəsinə yapışdırın və **Yadda saxla** düyməsinə klikləyin.
 
-OmniRoute yapışdırılmış sətirdən `uid`, `si_usr_id` və `si_ses_id` dəyərlərini çıxarır və yalnız həmin cütlüklərdən ibarət təmiz `Cookie` başlığı yaradır — mövcud olduqda buna əlavə olaraq daxil olmuş hesablar üçün təyin edilən `nt_session` (`ntk_…` tokeni) də daxil edilir. Bu üç dəyərdən hər hansı biri çatışmırsa, operatorların alternativ formatlarla təcrübə apara bilməsi üçün yapışdırılmış xam sətir dəyişdirilmədən yönləndirilir.
+67router yapışdırılmış sətirdən `uid`, `si_usr_id` və `si_ses_id` dəyərlərini çıxarır və yalnız həmin cütlüklərdən ibarət təmiz `Cookie` başlığı yaradır — mövcud olduqda buna əlavə olaraq daxil olmuş hesablar üçün təyin edilən `nt_session` (`ntk_…` tokeni) də daxil edilir. Bu üç dəyərdən hər hansı biri çatışmırsa, operatorların alternativ formatlarla təcrübə apara bilməsi üçün yapışdırılmış xam sətir dəyişdirilmədən yönləndirilir.
 
 ### Model identifikatorları
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Kuki brauzerdə işləyir, lakin OmniRoute-da işləmir
+## Kuki brauzerdə işləyir, lakin 67router-da işləmir
 
 Bəzi provayderlərə yalnız autentifikasiya edilmiş sorğular zamanı göndərilən kukilər daxildir.
 
