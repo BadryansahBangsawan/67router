@@ -1081,6 +1081,24 @@ html[dir="rtl"] :where(.react-flow) {
   }
 }
 
+/* === 67router topbar (Header) === */
+@layer components {
+  .ci-sidebar-shell-header.r67-topbar {
+    gap: 1rem;
+    padding-inline: 1.25rem 1.5rem;
+    border-bottom-color: var(--ci-color-border);
+  }
+  @media (min-width: 1024px) {
+    .ci-sidebar-shell-header.r67-topbar {
+      padding-inline: 1.5rem 2rem;
+    }
+  }
+  .ci-sidebar-shell-header.r67-topbar .ci-sidebar-trigger {
+    padding-inline-end: 0.75rem;
+    color: var(--ci-color-text-muted);
+  }
+}
+
 /* === OmniRoute kit extensions: trilha C === */
 @layer components {
   /* Native <select> fallback for callers that pass <option> children (Select adapter). */

@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import React from "react";
-import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { SidebarProvider } from "@omniroute/ui-kit/sidebar";
 
@@ -125,9 +125,8 @@ describe("Header on the kit shell", () => {
       );
       let style = document.querySelector("header")!.getAttribute("style") ?? "";
       expect(style).toContain("padding-top: var(--ios-safe-top, 0px)");
-      expect(style).toContain(
-        "height: calc(4rem + var(--ci-border-default) + var(--ios-safe-top, 0px))"
-      );
+      // 67router topbar: 60 px + the inset.
+      expect(style).toContain("height: calc(60px + var(--ios-safe-top, 0px))");
       unmount();
 
       isElectron = true;
@@ -139,27 +138,39 @@ describe("Header on the kit shell", () => {
       );
       style = document.querySelector("header")!.getAttribute("style") ?? "";
       expect(style).toContain("padding-top: var(--desktop-safe-top)");
-      expect(style).toContain(
-        "height: calc(4rem + var(--ci-border-default) + var(--desktop-safe-top))"
-      );
+      expect(style).toContain("height: calc(60px + var(--desktop-safe-top))");
     }
   );
 
   it(
-    "ThemeToggle is a ghost icon button with a translated name that flips",
+    "ThemeToggle is a two-segment sun/moon switch whose pressed segment follows the theme",
     { timeout: 20_000 },
     () => {
       render(<ThemeToggle />);
-      const btn = screen.getByRole("button", { name: /Switch to (dark|light) mode/ });
-      expect(btn.className).toContain("ci-button--ghost");
-      expect(btn.querySelector("svg.oi-icon")).not.toBeNull();
-      const before = btn.getAttribute("aria-label");
-      fireEvent.click(btn);
-      expect(
-        screen
-          .getByRole("button", { name: /Switch to (dark|light) mode/ })
-          .getAttribute("aria-label")
-      ).not.toBe(before);
+      const group = screen.getByRole("group", { name: "Themes" });
+      const light = within(group).getByRole("button", { name: "Switch to light mode" });
+      const dark = within(group).getByRole("button", { name: "Switch to dark mode" });
+      expect(light.querySelector("svg.oi-icon")).not.toBeNull();
+      expect(dark.querySelector("svg.oi-icon")).not.toBeNull();
+      fireEvent.click(dark);
+      expect(dark.getAttribute("aria-pressed")).toBe("true");
+      expect(light.getAttribute("aria-pressed")).toBe("false");
+      fireEvent.click(light);
+      expect(light.getAttribute("aria-pressed")).toBe("true");
+      expect(dark.getAttribute("aria-pressed")).toBe("false");
     }
   );
+
+  it("shows a section / page breadcrumb and a Docs link in the topbar", { timeout: 20_000 }, () => {
+    render(
+      <SidebarProvider>
+        <Header />
+      </SidebarProvider>
+    );
+    const header = document.querySelector<HTMLElement>("header.ci-sidebar-shell-header")!;
+    const crumbs = within(header).getByRole("navigation", { name: "Breadcrumb" });
+    // /dashboard/providers lives in the v2 Routing section.
+    expect(crumbs.textContent).toMatch(/Routing\s*\/\s*Providers/);
+    expect(within(header).getByRole("link", { name: /Docs/ }).getAttribute("href")).toBe("/docs");
+  });
 });
