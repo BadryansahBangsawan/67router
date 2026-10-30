@@ -100,10 +100,10 @@ export function buildPkceLoopbackMismatchHint(
 export function buildPkceLoopbackMismatchWarning(provider: string): string {
   const redirect = PKCE_LOOPBACK_REDIRECT_HINT[provider] ?? "a fixed localhost callback URL";
   return (
-    `OmniRoute is being accessed from a LAN IP, not true localhost. ${provider}'s OAuth app ` +
+    `67router is being accessed from a LAN IP, not true localhost. ${provider}'s OAuth app ` +
     `is registered with a fixed loopback redirect (${redirect}) that only resolves on the ` +
-    "machine running this browser tab, not on the OmniRoute server — the login will silently " +
-    "fail on the provider's side. Open the OmniRoute dashboard from true localhost instead " +
+    "machine running this browser tab, not on the 67router server — the login will silently " +
+    "fail on the provider's side. Open the 67router dashboard from true localhost instead " +
     "(SSH port-forward: ssh -L <port>:127.0.0.1:<port> <user>@<omniroute-host>, then browse to " +
     "http://localhost:<port>), or use the token-import flow for this provider if available."
   );

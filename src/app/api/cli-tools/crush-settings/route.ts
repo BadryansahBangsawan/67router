@@ -262,7 +262,7 @@ export async function DELETE(request: Request) {
       /* non-critical */
     }
 
-    return NextResponse.json({ success: true, message: "Crush OmniRoute settings removed" });
+    return NextResponse.json({ success: true, message: "Crush 67router settings removed" });
   } catch (err) {
     return NextResponse.json({ error: { message: sanitizeErrorMessage(err) } }, { status: 500 });
   }

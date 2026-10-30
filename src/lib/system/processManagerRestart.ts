@@ -83,9 +83,7 @@ function defaultExecPm2(args: string[]): Promise<unknown> {
  *  3. Neither detected — return an honest "restart-required" outcome rather than a
  *     silently-skipped step that reads like nothing was wrong.
  */
-export async function restartRunningServer(
-  deps: RestartManagerDeps = {}
-): Promise<RestartOutcome> {
+export async function restartRunningServer(deps: RestartManagerDeps = {}): Promise<RestartOutcome> {
   const readPidFile = deps.readPidFile ?? defaultReadPidFile;
   const isPidRunning = deps.isPidRunning ?? defaultIsPidRunning;
   const killProcess = deps.killProcess ?? defaultKillProcess;
@@ -102,7 +100,7 @@ export async function restartRunningServer(
       return {
         method: "own-supervisor",
         status: "done",
-        message: "Restarted via the OmniRoute supervisor (server process recycled).",
+        message: "Restarted via the 67router supervisor (server process recycled).",
       };
     } catch {
       // Fall through to pm2 / restart-required below.
@@ -117,7 +115,7 @@ export async function restartRunningServer(
       method: "none",
       status: "restart-required",
       message:
-        "Files were updated, but no supported process manager (OmniRoute's own supervisor or pm2) was detected — restart the server manually to apply the update.",
+        "Files were updated, but no supported process manager (67router's own supervisor or pm2) was detected — restart the server manually to apply the update.",
     };
   }
 }

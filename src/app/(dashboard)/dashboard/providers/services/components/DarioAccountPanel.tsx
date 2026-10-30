@@ -316,9 +316,9 @@ export function DarioAccountPanel() {
 
         {/* Import from OmniRoute */}
         <div className="space-y-2 border-t border-border pt-3">
-          <p className="text-xs font-medium">Import from OmniRoute</p>
+          <p className="text-xs font-medium">Import from 67router</p>
           <p className="text-xs text-text-muted">
-            Reuse an existing OmniRoute Claude connection&apos;s OAuth tokens instead of logging in
+            Reuse an existing 67router Claude connection&apos;s OAuth tokens instead of logging in
             again — skips the browser approval step entirely.
           </p>
           {omniLoading && omniConnections.length === 0 ? (
@@ -326,9 +326,9 @@ export function DarioAccountPanel() {
           ) : omniConnections.length === 0 ? (
             <div className="flex items-center justify-between gap-3 rounded-lg border border-border px-3 py-2">
               <p className="text-xs text-text-muted">
-                No eligible OmniRoute Claude connections found.
+                No eligible 67router Claude connections found.
               </p>
-              <Tooltip content="Will be active once a Claude connection exists in OmniRoute.">
+              <Tooltip content="Will be active once a Claude connection exists in 67router.">
                 <Button size="sm" disabled>
                   Import
                 </Button>

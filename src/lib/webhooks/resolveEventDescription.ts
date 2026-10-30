@@ -3,7 +3,7 @@ import type { EventDescription, WebhookEvent } from "./eventDescriptions";
 
 const UNKNOWN_EVENT_DESCRIPTION: EventDescription = {
   label: "Webhook Event",
-  description: "An OmniRoute webhook event was received.",
+  description: "A 67router webhook event was received.",
   emoji: "🔔",
   exampleData: {},
 };

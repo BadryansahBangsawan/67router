@@ -479,7 +479,7 @@ export default function GrokBuildToolCard({
               value={effectiveKeyId}
               onChange={(event) => setSelectedKeyId(event.target.value)}
             >
-              <option value="">Use the OmniRoute default key</option>
+              <option value="">Use the 67router default key</option>
               {apiKeys.map((key) => (
                 <option key={key.id} value={key.id}>
                   {key.key || key.name || key.id}

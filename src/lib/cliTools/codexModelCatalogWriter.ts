@@ -79,7 +79,7 @@ export async function writeCodexModelCatalog({
     listed = await listModels();
   } catch (error) {
     console.log(
-      "Could not build the OmniRoute model list for Codex:",
+      "Could not build the 67router model list for Codex:",
       error instanceof Error ? error.message : String(error)
     );
   }
@@ -99,7 +99,7 @@ export async function writeCodexModelCatalog({
   models.push(...listed);
 
   if (models.length === 0) {
-    return { warning: "No OmniRoute models available; the /model picker was not updated" };
+    return { warning: "No 67router models available; the /model picker was not updated" };
   }
 
   const catalog = buildCodexModelCatalog(bundled, models);

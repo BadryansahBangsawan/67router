@@ -251,7 +251,7 @@ export const COPILOT_TOOLS: CopilotTool[] = [
   {
     name: "searchCodeGraph",
     description:
-      "Search for symbols in the OmniRoute codebase by name (functions, classes, types, variables). Use this to understand how the app works internally.",
+      "Search for symbols in the 67router codebase by name (functions, classes, types, variables). Use this to understand how the app works internally.",
     parameters: [
       {
         name: "query",
@@ -294,7 +294,7 @@ export const COPILOT_TOOLS: CopilotTool[] = [
   {
     name: "findCallees",
     description:
-      "Find all functions/symbols that a specific function calls. Useful for understanding dependencies and code flow within OmniRoute.",
+      "Find all functions/symbols that a specific function calls. Useful for understanding dependencies and code flow within 67router.",
     parameters: [
       {
         name: "symbol",
@@ -364,7 +364,7 @@ export const COPILOT_TOOLS: CopilotTool[] = [
   {
     name: "runOmniRouteCli",
     description:
-      "Execute an 'omniroute' CLI command to configure or query the OmniRoute app. Gives complete control over the app — use for advanced operations not covered by other tools. Common commands: omniroute list-keys, omniroute switch-combo [id], omniroute set-budget 10, omniroute set-strategy [id] priority, omniroute health, omniroute mcp (starts MCP server), omniroute db-health, omniroute reset-password.",
+      "Execute an 'omniroute' CLI command to configure or query the 67router app. Gives complete control over the app — use for advanced operations not covered by other tools. Common commands: omniroute list-keys, omniroute switch-combo [id], omniroute set-budget 10, omniroute set-strategy [id] priority, omniroute health, omniroute mcp (starts MCP server), omniroute db-health, omniroute reset-password.",
     parameters: [
       {
         name: "command",
@@ -379,7 +379,7 @@ export const COPILOT_TOOLS: CopilotTool[] = [
       if (!cmd) return "Please provide a command to execute.";
 
       const cliPath = getOmniRouteCliPath();
-      if (!cliPath) return "omniroute CLI not found in PATH. Install OmniRoute first.";
+      if (!cliPath) return "omniroute CLI not found in PATH. Install 67router first.";
 
       try {
         const trimmedCmd = cmd.trim();

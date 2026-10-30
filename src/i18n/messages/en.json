@@ -3906,7 +3906,7 @@
     "usageGuideInvokeTitle": "How to call this combo",
     "usageGuideInvokeDesc": "Send the combo's exact name as the model, e.g. model: \"my-combo\" (or combo/my-combo).",
     "usageGuideInvokeAutoNote": "auto and auto/* are a separate zero-config router that does not use your combos (unless a combo is literally named auto).",
-    "usageGuideInvokeOpenrouterNote": "openrouter/auto is a real paid OpenRouter product (Auto Best Available), not an 67router alias — exclude it via Settings → Routing → Hide paid models.",
+    "usageGuideInvokeOpenrouterNote": "openrouter/auto is a real paid OpenRouter product (Auto Best Available), not a 67router alias — exclude it via Settings → Routing → Hide paid models.",
     "emailVisibilityStateOn": "On",
     "emailVisibilityStateOff": "Off",
     "reorderHandle": "Drag to reorder",
@@ -15121,7 +15121,7 @@
     "contextWindowMismatch": "Request exceeds provider context window"
   },
   "cheaperInferenceSponsorBanner": {
-    "title": "Cheaper Inference is an 67router Open Source Friend",
+    "title": "Cheaper Inference is a 67router Open Source Friend",
     "description": "A cost-ranked gateway reselling dozens of frontier models behind one OpenAI-compatible endpoint — routing each request to the cheapest eligible provider, never above list price.",
     "cta": "Get an API Key",
     "partnerLinkNote": "Partner link",
@@ -15172,7 +15172,7 @@
     "exportDone": "Exported {count} accounts.",
     "exportFailed": "Export failed.",
     "chooseFile": "Choose transfer file",
-    "invalidFile": "This is not an 67router provider transfer file.",
+    "invalidFile": "This is not a 67router provider transfer file.",
     "previewButton": "Preview",
     "previewFailed": "Could not read the transfer file.",
     "summary": "{connections} accounts and {nodes} provider nodes in this file. Nothing here will be deleted.",

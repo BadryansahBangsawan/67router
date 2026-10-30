@@ -39,7 +39,7 @@ export function buildDiscordPayload(
         title: `${desc.emoji} ${desc.label}`,
         description: lines.join("\n"),
         color: (Object.hasOwn(EVENT_COLORS, event) ? EVENT_COLORS[event] : undefined) ?? 0x6366f1,
-        footer: { text: `OmniRoute · ${new Date().toISOString()}` },
+        footer: { text: `67router · ${new Date().toISOString()}` },
       },
     ],
   };

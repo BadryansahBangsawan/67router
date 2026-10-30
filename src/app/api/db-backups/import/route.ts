@@ -122,7 +122,7 @@ async function inspectCandidate(tmpPath: string): Promise<CandidateSummary | Res
     const tables = getTableNamesFromAdapter(testDb);
     const missingTables = REQUIRED_TABLES.filter((t) => !tables.includes(t));
     if (missingTables.length > 0) {
-      return badRequest(`Invalid OmniRoute database. Missing tables: ${missingTables.join(", ")}`);
+      return badRequest(`Invalid 67router database. Missing tables: ${missingTables.join(", ")}`);
     }
     return summarizeImportCandidate(testDb, tables);
   } catch (e) {
