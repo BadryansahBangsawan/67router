@@ -13,6 +13,8 @@ const TONES = {
   warning: "warning",
   error: "danger",
   info: "info",
+  // 67router orange — ONLY for fallback / recovered-request semantics (globals.css tone).
+  fallback: "fallback",
 } as const;
 // Tailwind utilities win over kit components (layer order), so sizes stay utilities.
 const SIZES = { sm: "text-[10px] px-2 py-0.5", md: "", lg: "text-sm px-3 py-1.5" } as const;
@@ -27,7 +29,7 @@ interface BadgeProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "childr
   className?: string;
 }
 
-/** Badge — adapter over the kit Badge (pill shape, like the legacy badge). */
+/** Badge — adapter over the kit Badge (6 px chip in the 67router theme; see globals.css). */
 export default function Badge({
   children,
   variant = "default",
