@@ -222,14 +222,12 @@ import {
   writeCompressionAnalytics,
   writeCompressionSkip,
 } from "./chatCore/compressionAnalyticsWrite.ts";
-import { runPluginRequestGate } from "./chatCore/pluginRequestGate.ts";
 import { recordContextEditingTelemetryHook } from "./chatCore/contextEditingTelemetry.ts";
 import { recordCompressionCacheStats } from "./chatCore/compressionCacheStats.ts";
 import { writeCavemanOutputAnalytics } from "./chatCore/cavemanOutputAnalytics.ts";
 import { scheduleQuotaShareConsumption } from "./chatCore/quotaShareConsumption.ts";
 import { runQuotaSharePreHook } from "./chatCore/quotaSharePreHook.ts";
 import { emitRequestGamificationEvent } from "./chatCore/gamificationEvent.ts";
-import { runPluginOnResponseHook } from "./chatCore/pluginOnResponse.ts";
 import { applyPostTranslationCompression } from "./chatCore/postTranslationCompression.ts";
 import { isJsonRecord } from "./chatCore/nonStreamingResponseParse.ts";
 import { recordNonStreamingUsageStats } from "./chatCore/nonStreamingUsageStats.ts";
@@ -469,19 +467,6 @@ async function handleChatCoreInner({
   // Extracted to chatCore/customSystemPrompt.ts (chatCore slice 2); reads cachedSettings when the
   // combo/chat layer passed it in, so the hot path does no extra DB read.
   body = applyCustomSystemPrompt(body, cachedSettings ?? (await getCachedSettings()), log);
-  // ── Plugin onRequest hook ── extracted to chatCore/pluginRequestGate.ts (chatCore slice 2):
-  // a block becomes the labelled 403 `plugin_block` result; a rewrite replaces the body.
-  const pluginGate = await runPluginRequestGate({
-    requestId: traceId,
-    body,
-    model,
-    provider,
-    apiKeyInfo,
-    headers: clientRawRequest?.headers,
-    log,
-  });
-  if (pluginGate.blocked === true) return pluginGate.result;
-  body = pluginGate.body;
   // Per-API-key device/connection tracking (port of upstream 9router#931,
   // thanks @mugnimaestra). In-memory only, never blocks the request path.
   trackRequestDevice({
@@ -2236,17 +2221,9 @@ async function handleChatCoreInner({
       );
     }
   } catch (error) {
-    // Plugin onError hook + defensive status/message/type derivation extracted to
+    // Defensive status/message/type derivation extracted to
     // chatCore/requestTranslationError.ts (chatCore slice 2).
-    const result = await buildRequestTranslationErrorResult({
-      error,
-      traceId,
-      body,
-      model,
-      provider,
-      apiKeyInfo,
-      log,
-    });
+    const result = await buildRequestTranslationErrorResult({ error, log });
     trackPendingRequest(model, provider, pendingConnId, false, undefined, pendingRequestId);
     return result;
   }
@@ -3248,7 +3225,6 @@ async function handleChatCoreInner({
       requestToolIdentityMap,
       resolveReportedServiceTier,
       runMemoryExtractionGate,
-      runPluginOnResponseHook,
       sanitizeErrorMessage,
       sanitizeUpstreamDetails,
       saveIdempotency: saveIdempotencyWithConfiguredWindow,

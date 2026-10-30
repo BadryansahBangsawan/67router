@@ -16,8 +16,6 @@ import {
   acquireExclusiveConnectionLease,
   releaseExclusiveConnectionLease,
 } from "../../src/lib/db/exclusiveConnectionLeases.ts";
-import { insertPlugin, deletePlugin } from "../../src/lib/db/plugins.ts";
-import { registerHook, unregisterHooks, runOnResponse } from "../../src/lib/plugins/hooks.ts";
 import { validateAndAddModel } from "../../src/lib/modelValidation/service.ts";
 
 class ProofTransport {
@@ -167,76 +165,21 @@ async function fixture(modelId: string, provider = "openai") {
   };
 }
 
-test("active plugins are rejected without running their handlers or dispatching", async () => {
-  let hooks = 0;
-  registerHook("onRequest", "validation-fixture", () => {
-    hooks++;
-  });
+test("a legacy active plugins row no longer blocks validation (plugin system removed)", async () => {
+  // The plugins table outlives the removed plugin runtime. No plugin code can run any more,
+  // so a stale `active` row from an older install must not refuse strict validation.
+  const db = getDbInstance();
+  db.prepare(
+    `INSERT INTO plugins (id, name, manifest, plugin_dir, status, enabled)
+     VALUES ('validation-legacy', 'validation-legacy', '{}', '/nonexistent-validation-fixture', 'active', 1)`
+  ).run();
   try {
-    const input = await fixture("active-plugin-proof");
-    await assert.rejects(() => validateAndAddModel(input, new AbortController().signal), {
-      code: "VALIDATION_PLUGINS_UNSUPPORTED",
-    });
-    assert.equal(hooks, 0);
-    assert.equal(executor.calls.length, 0);
-    assert.equal(
-      (await getCustomModels(input.provider)).some((model) => model.id === input.modelId),
-      false
-    );
+    const input = await fixture("legacy-plugin-row-proof");
+    const result = await validateAndAddModel(input, new AbortController().signal);
+    assert.equal(result.persistenceVerified, true);
+    assert.equal(executor.calls.length, 3);
   } finally {
-    unregisterHooks("validation-fixture");
-  }
-});
-
-test("plugins activated during dispatch cannot run or produce a receipt", async () => {
-  let hooks = 0;
-  executor.onDispatch = async () => {
-    registerHook("onResponse", "validation-late-fixture", () => {
-      hooks++;
-    });
-    // Mirror an onResponse hook called asynchronously inside the request's inherited scope.
-    await runOnResponse(
-      { requestId: "validation", body: {}, model: "model", provider: "openai", metadata: {} },
-      {}
-    );
-  };
-  try {
-    const input = await fixture("late-plugin-proof");
-    await assert.rejects(() => validateAndAddModel(input, new AbortController().signal));
-    assert.equal(hooks, 0);
-    assert.equal(executor.calls.length, 1);
-    assert.equal(
-      (await getCustomModels(input.provider)).some((model) => model.id === input.modelId),
-      false
-    );
-  } finally {
-    unregisterHooks("validation-late-fixture");
-  }
-});
-
-test("persisted active plugins are rejected before lazy plugin loading", async () => {
-  insertPlugin({
-    id: "validation-persisted",
-    name: "validation-persisted",
-    version: "1.0.0",
-    main: "absent.js",
-    pluginDir: "/nonexistent-validation-fixture",
-    manifest: {},
-    status: "active",
-    enabled: true,
-  });
-  try {
-    const input = await fixture("persisted-plugin-proof");
-    await assert.rejects(() => validateAndAddModel(input, new AbortController().signal), {
-      code: "VALIDATION_PLUGINS_UNSUPPORTED",
-    });
-    assert.equal(executor.calls.length, 0);
-    assert.equal(
-      (await getCustomModels(input.provider)).some((model) => model.id === input.modelId),
-      false
-    );
-  } finally {
-    deletePlugin("validation-persisted");
+    db.prepare("DELETE FROM plugins WHERE id = 'validation-legacy'").run();
   }
 });
 

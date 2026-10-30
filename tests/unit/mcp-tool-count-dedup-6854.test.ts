@@ -18,7 +18,6 @@ const { agentSkillTools } = await import("../../open-sse/mcp-server/tools/agentS
 const { githubSkillTools } = await import("../../open-sse/mcp-server/tools/githubSkillTools.ts");
 const { poolTools } = await import("../../open-sse/mcp-server/tools/poolTools.ts");
 const { gamificationTools } = await import("../../open-sse/mcp-server/tools/gamificationTools.ts");
-const { pluginTools } = await import("../../open-sse/mcp-server/tools/pluginTools.ts");
 const { notionTools } = await import("../../open-sse/mcp-server/tools/notionTools.ts");
 const { obsidianTools } = await import("../../open-sse/mcp-server/tools/obsidianTools.ts");
 const { localCorpusTools } = await import("../../open-sse/mcp-server/tools/localCorpusTools.ts");
@@ -52,7 +51,6 @@ test("#6854: countUniqueMcpTools de-duplicates tools registered in multiple coll
     githubSkillTools: githubSkillTools as unknown as Record<string, NamedTool>,
     poolTools: poolTools as unknown as Record<string, NamedTool>,
     gamificationTools: gamificationTools as unknown as NamedTool[],
-    pluginTools: pluginTools as unknown as NamedTool[],
     notionTools: notionTools as unknown as NamedTool[],
     obsidianTools: obsidianTools as unknown as NamedTool[],
     localCorpusTools: localCorpusTools as unknown as NamedTool[],
@@ -60,7 +58,7 @@ test("#6854: countUniqueMcpTools de-duplicates tools registered in multiple coll
   };
 
   const total = countUniqueMcpTools(collections);
-  assert.equal(total, 107, "the published MCP inventory must match the registered tool set");
+  assert.equal(total, 99, "the published MCP inventory must match the registered tool set");
 
   // Independently compute the "true" unique count by unioning every collection's
   // tool names into a Set — this must equal countUniqueMcpTools's own result AND

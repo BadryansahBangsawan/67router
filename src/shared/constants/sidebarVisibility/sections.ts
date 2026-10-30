@@ -622,13 +622,6 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     subtitleKey: "a2aSubtitle",
     icon: "device_hub",
   },
-  {
-    id: "plugins",
-    href: "/dashboard/plugins",
-    i18nKey: "plugins",
-    subtitleKey: "pluginsSubtitle",
-    icon: "extension",
-  },
 ];
 
 const GAMIFICATION_GROUP: SidebarItemGroup = {

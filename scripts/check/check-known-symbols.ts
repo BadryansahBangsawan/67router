@@ -27,7 +27,7 @@
 //       novos não falham — apenas são reportados — para não bloquear adições legítimas.
 //
 //   (4) MCP TOOLS — todos os tools registrados em createMcpServer() (base MCP_TOOLS +
-//       memoryTools + skillTools + gamificationTools + pluginTools + notionTools +
+//       memoryTools + skillTools + gamificationTools + notionTools +
 //       obsidianTools) DEVEM ter ao menos um escopo atribuído (scope-enforcement). Os
 //       nomes são congelados em KNOWN_MCP_TOOL_NAMES. Catraca: tool removido = fail.
 //       Tool novo = report (não bloqueia adições legítimas).
@@ -287,7 +287,6 @@ export function findNewMcpTools(frozen: readonly string[], live: Set<string>): s
  *   - memoryTools (3): omniroute_memory_*
  *   - skillTools (4): omniroute_skills_*
  *   - gamificationTools (8): gamification_*
- *   - pluginTools (8): plugin_*
  *   - notionTools (6): notion_*
  *   - obsidianTools (22): obsidian_*
  * agentSkillTools and compressionTools are included in MCP_TOOLS (deduped by RESERVED_MCP_NAMES).
@@ -343,15 +342,6 @@ export const KNOWN_MCP_TOOL_NAMES: readonly string[] = [
   "gamification_invite",
   "gamification_servers",
   "gamification_anomalies",
-  // pluginTools (8)
-  "plugin_list",
-  "plugin_install",
-  "plugin_activate",
-  "plugin_deactivate",
-  "plugin_uninstall",
-  "plugin_configure",
-  "plugin_executions",
-  "plugin_scan",
   // notionTools (6)
   "notion_search",
   "notion_get_page",
@@ -593,7 +583,6 @@ async function main(): Promise<void> {
   const { skillTools } = await import("@omniroute/open-sse/mcp-server/tools/skillTools.ts");
   const { gamificationTools } =
     await import("@omniroute/open-sse/mcp-server/tools/gamificationTools.ts");
-  const { pluginTools } = await import("@omniroute/open-sse/mcp-server/tools/pluginTools.ts");
   const { notionTools } = await import("@omniroute/open-sse/mcp-server/tools/notionTools.ts");
   const { obsidianTools } = await import("@omniroute/open-sse/mcp-server/tools/obsidianTools.ts");
 
@@ -604,7 +593,6 @@ async function main(): Promise<void> {
     ...Object.values(memoryTools as Record<string, McpToolLike>),
     ...Object.values(skillTools as Record<string, McpToolLike>),
     ...(gamificationTools as unknown as McpToolLike[]),
-    ...(pluginTools as unknown as McpToolLike[]),
     ...(notionTools as unknown as McpToolLike[]),
     ...(obsidianTools as unknown as McpToolLike[]),
   ];

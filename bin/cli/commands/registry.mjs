@@ -79,7 +79,6 @@ import { registerContexts } from "./contexts.mjs";
 import { registerTokens } from "./tokens.mjs";
 import { registerConfigure } from "./configure.mjs";
 import { registerApiCommands } from "../api-commands/registry.mjs";
-import { registerPlugin } from "./plugin.mjs";
 import { registerRadar } from "./radar.mjs";
 import { registerPacks } from "./packs.mjs";
 
@@ -166,7 +165,6 @@ export function registerCommands(program) {
   registerTokens(program);
   registerConfigure(program);
   registerApiCommands(program);
-  registerPlugin(program);
   registerRadar(program);
   registerPacks(program);
 }

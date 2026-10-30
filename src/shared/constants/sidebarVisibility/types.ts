@@ -85,7 +85,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "chaos-config",
   "mcp",
   "a2a",
-  "plugins",
   // Gamification
   "leaderboard",
   "profile",

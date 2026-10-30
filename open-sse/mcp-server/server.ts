@@ -86,7 +86,6 @@ import { agentSkillTools } from "./tools/agentSkillTools.ts";
 import { githubSkillTools } from "./tools/githubSkillTools.ts";
 import { skillRegistry } from "../../src/lib/skills/registry.ts";
 import { skillExecutor } from "../../src/lib/skills/executor.ts";
-import { pluginTools } from "./tools/pluginTools.ts";
 import { compressionTools } from "./tools/compressionTools.ts";
 import { poolTools } from "./tools/poolTools.ts";
 import { gamificationTools } from "./tools/gamificationTools.ts";
@@ -122,7 +121,6 @@ const TOTAL_MCP_TOOL_COUNT = countUniqueMcpTools({
   githubSkillTools,
   poolTools,
   gamificationTools,
-  pluginTools,
   notionTools,
   obsidianTools,
   localCorpusTools,
@@ -302,7 +300,6 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     ...Object.keys(skillTools),
     ...Object.keys(compressionTools),
     ...Object.keys(poolTools),
-    ...pluginTools.map((t) => t.name),
     ...gamificationTools.map((t) => t.name),
     ...obsidianTools.map((t) => t.name),
     ...notionTools.map((t) => t.name),
@@ -716,33 +713,6 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
             return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
           } catch (err) {
             const msg = toSafeMcpErrorMessage(err, "GitHub skill tool execution failed");
-            return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
-          }
-        },
-        toolDef.scopes
-      )
-    );
-  });
-
-  // ── Plugin Tools ──────────────────────────────
-  pluginTools.forEach((toolDef) => {
-    server.registerTool(
-      toolDef.name,
-      {
-        description: toolDef.description,
-        // @ts-ignore: dynamic zod access
-        inputSchema: toolDef.inputSchema,
-      },
-      withScopeEnforcement(
-        toolDef.name,
-        async (args, extra) => {
-          try {
-            const parsedArgs = toolDef.inputSchema.parse(args ?? {});
-            // @ts-ignore: handler expected specific object
-            const result = await toolDef.handler(parsedArgs, extra);
-            return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
-          } catch (err) {
-            const msg = toSafeMcpErrorMessage(err, "Plugin tool execution failed");
             return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
           }
         },

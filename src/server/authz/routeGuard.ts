@@ -77,8 +77,8 @@ export const LOCAL_ONLY_API_PREFIXES: ReadonlyArray<string> = [
   "/api/cli-tools/antigravity-mitm", // Antigravity MITM enable flow: same privileged CA-trust + DNS surface as /api/settings/mitm (GHSA-x7vm-hp44-9p79, Hard Rules #15 + #17). Covers the /alias child route by prefix.
   "/api/tools/traffic-inspector/", // Traffic Inspector: http-proxy listener + system proxy (Hard Rules #15 + #17)
   "/api/issue-agent/", // Issue Agent: recorded/local triage executor surface; keep loopback/LAN until sandbox + audit hardening is complete
-  "/api/plugins/", // plugins: load/execute via worker_threads + child_process (Hard Rules #15 + #17)
-  "/api/plugins", // bare path: GET list + POST install also trigger plugin loading
+  "/api/plugins/", // plugins (removed in 67router) loaded/executed code via worker_threads + child_process; kept loopback-gated so a reintroduced route never opens remotely (Hard Rules #15 + #17)
+  "/api/plugins", // bare path of the removed plugins API, same reason
   "/api/middleware/", // SECURITY_AUDIT M8: middleware hooks (removed in 67router) compiled+ran arbitrary JS on the request hot path; kept loopback-gated so a reintroduced route never opens remotely (Hard Rules #15 + #17)
   "/api/system/version", // auto-update: spawns git checkout + npm install — RCE-via-tunnel surface (Hard Rules #15 + #17, found by 6A.8 route-guard gate)
   "/api/db-backups/exportAll", // spawns tar for export archive (Hard Rules #15 + #17, found by 6A.8 route-guard gate)

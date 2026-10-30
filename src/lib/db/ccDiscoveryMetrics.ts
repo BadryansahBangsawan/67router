@@ -16,7 +16,7 @@
  * so no new table is warranted.
  *
  * Every write is best-effort: a DB hiccup here must never break the request
- * it is instrumenting (mirrors src/lib/db/pluginMetrics.ts).
+ * it is instrumenting.
  */
 import { getDbInstance } from "./core";
 

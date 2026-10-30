@@ -98,7 +98,6 @@ const PATH_LABELS = {
   leaderboard: "leaderboard",
   limits: "limits",
   profile: "profile",
-  plugins: "plugins",
   "provider-stats": "providerStats",
   new: "new",
   quota: "quota",
