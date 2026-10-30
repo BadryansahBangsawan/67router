@@ -395,7 +395,7 @@ export default function McpDashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid overflow-hidden rounded-xl border border-border bg-surface md:grid-cols-2 xl:grid-cols-4">
         <StatCard label={t("processStatus")} value={status?.online ? t("online") : t("offline")} />
         <StatCard label={t("pid")} value={status?.heartbeat?.pid ?? "—"} />
         <StatCard label={t("sessionUptime")} value={runtimeUptime} />
@@ -403,7 +403,7 @@ export default function McpDashboardPage() {
       </div>
 
       <Card className="p-5">
-        <h2 className="text-lg font-semibold mb-4">{t("activity24h")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("activity24h")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           <StatCard label={t("totalCalls")} value={status?.activity?.totalCalls24h ?? 0} compact />
           <StatCard
@@ -466,7 +466,7 @@ export default function McpDashboardPage() {
       </Card>
 
       <Card className="p-5">
-        <h2 className="text-lg font-semibold mb-4">{t("operationalControls")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("operationalControls")}</h2>
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
           <div className="rounded-lg border border-border p-3 space-y-3">
             <p className="text-sm font-semibold">{t("switchCombo")}</p>
@@ -531,7 +531,7 @@ export default function McpDashboardPage() {
       </Card>
 
       <Card className="p-5">
-        <h2 className="text-lg font-semibold mb-4">{t("toolsAndScopes")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("toolsAndScopes")}</h2>
         <div className="overflow-x-auto">
           <Table scrollbarLabel={t("toolsAndScopes")}>
             <TableHeader>
@@ -559,7 +559,7 @@ export default function McpDashboardPage() {
       <Card className="p-5">
         <div className="flex flex-wrap gap-2 items-end justify-between mb-4">
           <div>
-            <h2 className="text-lg font-semibold">{t("auditLog")}</h2>
+            <h2 className="text-sm font-semibold">{t("auditLog")}</h2>
             <p className="text-sm text-text-muted">
               {t("auditSummary", { total: auditData.total, page: currentPage, totalPages })}
             </p>
@@ -675,10 +675,22 @@ function StatCard({
   value: string | number;
   compact?: boolean;
 }) {
+  if (compact) {
+    return (
+      <div className="rounded-lg border border-border bg-bg-subtle px-4 py-3">
+        <p className="text-xs text-text-muted">{label}</p>
+        <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums">{value}</p>
+      </div>
+    );
+  }
+  // One cell of a KPI strip (one bordered card split by hairline dividers): each cell draws its
+  // top/left border, pulled 1px out so the strip's own border hides the outer ones.
   return (
-    <div className={`rounded-lg border border-border bg-bg p-4 ${compact ? "" : "min-h-[84px]"}`}>
-      <p className="text-xs text-text-muted uppercase tracking-wide">{label}</p>
-      <p className="text-xl font-semibold mt-1">{value}</p>
+    <div className="-ml-px -mt-px min-h-[84px] border-l border-t border-border px-5 py-4">
+      <p className="text-[13px] text-text-muted">{label}</p>
+      <p className="mt-1.5 text-[22px] font-semibold leading-7 tracking-[-0.03em] tabular-nums">
+        {value}
+      </p>
     </div>
   );
 }

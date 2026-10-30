@@ -320,7 +320,7 @@ export default function A2ADashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid overflow-hidden rounded-xl border border-border bg-surface md:grid-cols-2 xl:grid-cols-4">
         <StatCard label={t("health")} value={status?.status === "ok" ? t("ok") : "—"} />
         <StatCard label={t("totalTasks")} value={status?.tasks?.total || 0} />
         <StatCard label={t("activeStreams")} value={status?.tasks?.activeStreams || 0} />
@@ -333,13 +333,15 @@ export default function A2ADashboardPage() {
       </div>
 
       <Card className="p-5">
-        <h2 className="text-lg font-semibold mb-4">{t("taskStateOverview")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("taskStateOverview")}</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {(["submitted", "working", "completed", "failed", "cancelled"] as A2ATaskState[]).map(
             (state) => (
-              <div key={state} className="rounded-lg border border-border p-3 bg-bg">
-                <p className="text-xs text-text-muted uppercase">{t(`state.${state}`)}</p>
-                <p className="text-2xl font-semibold mt-1">{status?.tasks?.counts?.[state] || 0}</p>
+              <div key={state} className="rounded-lg border border-border px-4 py-3 bg-bg-subtle">
+                <p className="text-xs text-text-muted">{t(`state.${state}`)}</p>
+                <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums">
+                  {status?.tasks?.counts?.[state] || 0}
+                </p>
               </div>
             )
           )}
@@ -348,7 +350,7 @@ export default function A2ADashboardPage() {
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         <Card className="p-5">
-          <h2 className="text-lg font-semibold mb-3">{t("agentCard")}</h2>
+          <h2 className="text-sm font-semibold mb-3">{t("agentCard")}</h2>
           {status?.agent ? (
             <div className="space-y-2 text-sm">
               <p className="font-semibold">{status.agent.name}</p>
@@ -372,7 +374,7 @@ export default function A2ADashboardPage() {
         </Card>
 
         <Card className="p-5">
-          <h2 className="text-lg font-semibold mb-3">{t("quickValidation")}</h2>
+          <h2 className="text-sm font-semibold mb-3">{t("quickValidation")}</h2>
           <p className="text-sm text-text-muted mb-3">{t("quickValidationDescription")}</p>
           <div className="flex flex-wrap gap-2">
             <Button
@@ -399,7 +401,7 @@ export default function A2ADashboardPage() {
       <Card className="p-5">
         <div className="flex flex-wrap items-end justify-between gap-3 mb-4">
           <div>
-            <h2 className="text-lg font-semibold">{t("taskManagement")}</h2>
+            <h2 className="text-sm font-semibold">{t("taskManagement")}</h2>
             <p className="text-sm text-text-muted">
               {t("taskSummary", { total: tasksData.total, page: currentPage, totalPages })}
             </p>
@@ -460,7 +462,7 @@ export default function A2ADashboardPage() {
                     task.metadata?.fsmPhase || (task.metadata?.workflowFSM as any)?.currentPhase;
                   let fsmBadgeColor = "bg-surface-2 text-text-muted";
                   if (fsmPhase === "plan" || fsmPhase === "plan_review")
-                    fsmBadgeColor = "bg-chart-3/15 text-chart-3";
+                    fsmBadgeColor = "bg-bg-subtle text-text-secondary";
                   else if (fsmPhase === "execute") fsmBadgeColor = "bg-info/15 text-info";
                   else if (
                     ["code_review", "quality_review", "security", "test", "output_review"].includes(
@@ -553,7 +555,7 @@ export default function A2ADashboardPage() {
       {selectedTask && (
         <Card className="p-5">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-semibold">{t("taskDetail")}</h2>
+            <h2 className="text-sm font-semibold">{t("taskDetail")}</h2>
             <Button size="sm" variant="secondary" onClick={() => setSelectedTask(null)}>
               {t("close")}
             </Button>
@@ -597,10 +599,14 @@ export default function A2ADashboardPage() {
 }
 
 function StatCard({ label, value }: { label: string; value: string | number }) {
+  // One cell of a KPI strip (one bordered card split by hairline dividers): each cell draws its
+  // top/left border, pulled 1px out so the strip's own border hides the outer ones.
   return (
-    <div className="rounded-lg border border-border bg-bg p-4">
-      <p className="text-xs text-text-muted uppercase tracking-wide">{label}</p>
-      <p className="text-xl font-semibold mt-1">{value}</p>
+    <div className="-ml-px -mt-px border-l border-t border-border px-5 py-4">
+      <p className="text-[13px] text-text-muted">{label}</p>
+      <p className="mt-1.5 text-[22px] font-semibold leading-7 tracking-[-0.03em] tabular-nums">
+        {value}
+      </p>
     </div>
   );
 }
