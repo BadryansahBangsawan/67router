@@ -1015,11 +1015,6 @@
       "count": 1
     }
   },
-  "src/app/api/v1/embeddings/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/api/v1/images/edits/route.ts": {
     "no-restricted-imports": {
       "count": 1
@@ -1058,11 +1053,6 @@
   "src/app/api/v1/ocr/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
-    }
-  },
-  "src/app/api/v1/providers/[provider]/embeddings/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
     }
   },
   "src/app/api/v1/rerank/route.ts": {
@@ -1951,7 +1941,7 @@
   },
   "tests/integration/v1-contracts-behavior.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 10
+      "count": 9
     }
   },
   "tests/live/deepseek-web-live.test.ts": {
@@ -2138,11 +2128,6 @@
   "tests/unit/auth-clear-account-error.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 5
-    }
-  },
-  "tests/unit/auth-clear-provider-routes.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/unit/auth-disable-cooling-2997.test.ts": {
@@ -3180,26 +3165,6 @@
       "count": 2
     }
   },
-  "tests/unit/embedding-cooldown-integration-10347.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "tests/unit/embeddings-auth.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/embeddings-nvidia-input-type.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/embeddings-proxy-forwarding.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
   "tests/unit/empty-tool-name-loop.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 8
@@ -4065,7 +4030,7 @@
   },
   "tests/unit/route-edge-coverage.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 57
+      "count": 43
     },
     "@typescript-eslint/no-unused-vars": {
       "count": 1

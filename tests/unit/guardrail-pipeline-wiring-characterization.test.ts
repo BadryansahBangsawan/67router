@@ -99,7 +99,6 @@ test("image, embeddings and audio routes never reach the guardrail registry", ()
   // The only injection check those routes get is the legacy middleware facade (prompt
   // injection only; see the disable-channel characterization in the behavioral file).
   for (const route of [
-    "src/app/api/v1/embeddings/route.ts",
     "src/app/api/v1/images/generations/route.ts",
     "src/app/api/v1/images/edits/route.ts",
     "src/app/api/v1/audio/speech/route.ts",

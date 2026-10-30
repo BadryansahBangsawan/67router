@@ -39,14 +39,6 @@ test("resolveEndpointCategory: maps /v1/search/analytics to 'search'", () => {
   assert.equal(resolveEndpointCategory("/v1/search/analytics"), "search");
 });
 
-test("resolveEndpointCategory: maps /v1/embeddings to 'embeddings'", () => {
-  assert.equal(resolveEndpointCategory("/v1/embeddings"), "embeddings");
-});
-
-test("resolveEndpointCategory: maps /v1/multimodal-embeddings to 'embeddings'", () => {
-  assert.equal(resolveEndpointCategory("/v1/multimodal-embeddings"), "embeddings");
-});
-
 test("resolveEndpointCategory: maps /v1/images/generations to 'images'", () => {
   assert.equal(resolveEndpointCategory("/v1/images/generations"), "images");
 });

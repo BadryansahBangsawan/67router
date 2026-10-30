@@ -41,7 +41,6 @@ const translationsRoute = await import("../../src/app/api/v1/audio/translations/
 const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
 const imagesRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const videosRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
-const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
 const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const segmentRoute = await import("../../src/app/api/v1/segment/route.ts");
 const classifyRoute = await import("../../src/app/api/v1/classify/route.ts");
@@ -49,8 +48,6 @@ const alphaSearchRoute = await import("../../src/app/api/v1/alpha/search/route.t
 const searchRoute = await import("../../src/app/api/v1/search/route.ts");
 const ocrRoute = await import("../../src/app/api/v1/ocr/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
-const providerEmbeddingsRoute =
-  await import("../../src/app/api/v1/providers/[provider]/embeddings/route.ts");
 const providerImagesRoute =
   await import("../../src/app/api/v1/providers/[provider]/images/generations/route.ts");
 const webFetchRoute = await import("../../src/app/api/v1/web/fetch/route.ts");
@@ -244,18 +241,6 @@ const ROUTE_CASES: RouteCase[] = [
       ),
   },
   {
-    name: "POST /v1/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "openai/text-embedding-3-small",
-          input: "hello",
-        }),
-        noContext
-      ),
-  },
-  {
     name: "POST /v1/rerank",
     provider: "cohere",
     call: (bearer) =>
@@ -322,18 +307,6 @@ const ROUTE_CASES: RouteCase[] = [
           prompt: "calm piano",
         }),
         noContext
-      ),
-  },
-  {
-    name: "POST /v1/providers/{provider}/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      providerEmbeddingsRoute.POST(
-        jsonRequest("/v1/providers/openai/embeddings", bearer, {
-          model: "text-embedding-3-small",
-          input: "hello",
-        }),
-        params("openai")
       ),
   },
   {
@@ -463,14 +436,9 @@ for (const routeCase of ROUTE_CASES) {
 
 // ── combo fan-out ───────────────────────────────────────────────────────────
 
-test("GHSA-3w2r combos: embedding / speech / rerank combo targets stay inside the key's scope", async () => {
+test("GHSA-3w2r combos: speech / rerank combo targets stay inside the key's scope", async () => {
   const openai = await seedPair("openai");
   const cohere = await seedPair("cohere");
-  await combosDb.createCombo({
-    name: "ghsa3w2r-embed-combo",
-    strategy: "priority",
-    models: ["openai/text-embedding-3-small"],
-  });
   await combosDb.createCombo({
     name: "ghsa3w2r-speech-combo",
     strategy: "priority",
@@ -485,12 +453,6 @@ test("GHSA-3w2r combos: embedding / speech / rerank combo targets stay inside th
 
   const upstream = stubUpstream();
   try {
-    await (
-      await embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", scopedKey, { model: "ghsa3w2r-embed-combo", input: "x" }),
-        noContext
-      )
-    ).text();
     await (
       await speechRoute.POST(
         jsonRequest("/v1/audio/speech", scopedKey, {
@@ -591,17 +553,6 @@ const KEYLESS_CASES: KeylessCase[] = [
           model: "coqui/tts_models/en/ljspeech/tacotron2-DDC",
           input: "hello",
           voice: "default",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/embeddings (ollama-local)",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "ollama-local/nomic-embed-text",
-          input: "hello",
         }),
         noContext
       ),

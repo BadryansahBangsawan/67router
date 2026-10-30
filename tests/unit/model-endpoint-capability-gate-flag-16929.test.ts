@@ -23,7 +23,6 @@ const { getRequestedModelEndpointMismatch } =
   await import("../../src/lib/providerModels/modelEndpointGuard.ts");
 const { isUnifiedChatSourceModelSelectable } =
   await import("../../src/app/api/v1/models/catalogModelPolicy.ts");
-const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
 const modelTestRoute = await import("../../src/app/api/models/test/route.ts");
 
 const TRANSCRIBE = "gemini-3.5-transcribe"; // inferred audio-transcriptions, no gemini adapter
@@ -137,30 +136,6 @@ test("/v1/chat/completions: flag off dispatches as before, flag on answers 400 l
   const onBody = (await on.json()) as { error?: { message?: string } };
   assert.match(onBody.error?.message ?? "", /does not serve POST \/v1\/chat\/completions/);
   assert.equal(upstreamCalls, 0, "flag on must reject before any upstream call");
-});
-
-test("/v1/embeddings: flag off keeps the tip path, flag on answers 400 locally", async () => {
-  globalThis.fetch = async () =>
-    new Response(
-      JSON.stringify({ embedding: { values: [0.1, 0.2] }, embeddings: [{ values: [0.1] }] }),
-      { status: 200, headers: { "content-type": "application/json" } }
-    );
-  const makeReq = () =>
-    new Request("http://localhost/v1/embeddings", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ model: `gemini/${TRANSCRIBE}`, input: "hello" }),
-    });
-
-  const off = await embeddingsRoute.POST(makeReq(), {});
-  assert.doesNotMatch(await off.text(), /does not serve/);
-
-  withFlag("true");
-  const on = await embeddingsRoute.POST(makeReq(), {});
-  assert.equal(on.status, 400);
-  const onText = await on.text();
-  assert.match(onText, /does not serve POST \/v1\/embeddings/);
-  assert.match(onText, /Use POST \/v1\/audio\/transcriptions instead/);
 });
 
 test("/v1/models policy: flag off keeps an unrunnable tagged model listed, flag on hides it", () => {

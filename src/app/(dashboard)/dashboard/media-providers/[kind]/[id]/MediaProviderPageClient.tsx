@@ -11,7 +11,6 @@ import Icon from "@/shared/components/Icon";
 import MediaProviderHeader from "../../components/MediaProviderHeader";
 import MediaProviderKindNav from "../../components/MediaProviderKindNav";
 import type { MediaKind } from "../../components/mediaKinds";
-import { EmbeddingExampleCard } from "../../components/EmbeddingExampleCard";
 import { ImageExampleCard } from "../../components/ImageExampleCard";
 import { TtsExampleCard } from "../../components/TtsExampleCard";
 import { SttExampleCard } from "../../components/SttExampleCard";
@@ -50,8 +49,6 @@ function renderPlayground(
   }
 ) {
   switch (kind) {
-    case "embedding":
-      return <EmbeddingExampleCard providerId={providerId} />;
     case "image":
       return <ImageExampleCard providerId={providerId} />;
     case "tts":

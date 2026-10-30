@@ -52,9 +52,6 @@ vi.mock("@/app/(dashboard)/dashboard/media-providers/components/MediaProviderHea
 vi.mock("@/app/(dashboard)/dashboard/media-providers/components/MediaProviderKindNav", () => ({
   default: () => null,
 }));
-vi.mock("@/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard", () => ({
-  EmbeddingExampleCard: () => null,
-}));
 vi.mock("@/app/(dashboard)/dashboard/media-providers/components/ImageExampleCard", () => ({
   ImageExampleCard: () => null,
 }));

@@ -227,27 +227,27 @@ test("search-only key still reaches /v1/search through the canonical path", asyn
   assert.equal(result.rejection, null);
 });
 
-test("chat+embeddings key allows /v1/embeddings", async () => {
-  const policy = await loadPolicy("chat-emb-allowed");
-  const key = await createKeyWithEndpoints(["chat", "embeddings"]);
+test("chat+video key allows /v1/videos/generations", async () => {
+  const policy = await loadPolicy("chat-video-allowed");
+  const key = await createKeyWithEndpoints(["chat", "video"]);
 
-  const request = makeRequest("http://localhost/v1/embeddings", key.key);
-  const result = await policy.enforceApiKeyPolicy(request, "text-embedding-3");
+  const request = makeRequest("http://localhost/v1/videos/generations", key.key);
+  const result = await policy.enforceApiKeyPolicy(request, "veo-3");
 
   assert.equal(result.rejection, null);
 });
 
-test("chat-only key blocks /v1/embeddings", async () => {
-  const policy = await loadPolicy("chat-blocks-emb");
+test("chat-only key blocks /v1/videos/generations", async () => {
+  const policy = await loadPolicy("chat-blocks-video");
   const key = await createKeyWithEndpoints(["chat"]);
 
-  const request = makeRequest("http://localhost/v1/embeddings", key.key);
-  const result = await policy.enforceApiKeyPolicy(request, "text-embedding-3");
+  const request = makeRequest("http://localhost/v1/videos/generations", key.key);
+  const result = await policy.enforceApiKeyPolicy(request, "veo-3");
 
   assert.ok(result.rejection, "Should reject the request");
   assert.equal(result.rejection.status, 403);
   const msg = await readErrorMessage(result.rejection);
-  assert.ok(msg.includes("embeddings"), `Error message should mention 'embeddings', got: ${msg}`);
+  assert.ok(msg.includes("video"), `Error message should mention 'video', got: ${msg}`);
 });
 
 test("search-only key blocks /v1/images/generations", async () => {

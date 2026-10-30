@@ -43,11 +43,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     null,
     2
   ),
-  "/api/v1/embeddings": JSON.stringify(
-    { model: "openai/text-embedding-3-small", input: "Hello world" },
-    null,
-    2
-  ),
   "/api/v1/images/generations": JSON.stringify(
     { model: "openai/gpt-image-2", prompt: "A sunset over mountains", n: 1 },
     null,

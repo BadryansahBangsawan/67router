@@ -343,7 +343,6 @@ const ENV_VAR_DENYLIST = new Set([
 const ENDPOINT_ALLOWLIST = new Set([
   "/api/v1/models",
   "/api/v1/chat/completions",
-  "/api/v1/embeddings",
   "/api/v1/responses",
   "/api/v1/images/generations",
   "/api/v1/audio/transcriptions",
@@ -360,7 +359,6 @@ const ENDPOINT_ALLOWLIST = new Set([
   "/.well-known/agent.json",
   "/v1/models",
   "/v1/chat/completions",
-  "/v1/embeddings",
   "/v1/responses",
   "/v1/ws", // WebSocket bridge, not standard route.ts
   "/a2a", // JSON-RPC 2.0 entry

@@ -13,7 +13,6 @@ const { createCombo } = await import("../../src/lib/db/combos.ts");
 const { createProviderNode, createProviderConnection } =
   await import("../../src/lib/db/providers.ts");
 const { waitForCallLogSaves } = await import("../../src/lib/usage/callLogs.ts");
-const { createEmbeddingResponse } = await import("../../src/lib/embeddings/service.ts");
 const { handleValidatedRerankRequestBody } = await import("../../src/app/api/v1/rerank/route.ts");
 const transcriptions = await import("../../src/app/api/v1/audio/transcriptions/route.ts");
 const translations = await import("../../src/app/api/v1/audio/translations/route.ts");
@@ -62,11 +61,6 @@ function audioRequest(endpoint: string): Request {
 }
 
 const cases: Array<{ name: string; run: () => Promise<Response>; upstream: string }> = [
-  {
-    name: "embeddings",
-    run: () => createEmbeddingResponse({ model: "scanembed-combo", input: "synthetic input" }),
-    upstream: "/embeddings",
-  },
   {
     name: "rerank",
     run: () =>

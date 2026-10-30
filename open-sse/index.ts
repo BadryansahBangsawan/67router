@@ -87,8 +87,7 @@ export {
   createPassthroughStreamWithLogger,
 } from "./utils/stream.ts";
 
-// Embeddings
-export { handleEmbedding } from "./handlers/embeddings.ts";
+// Embeddings (registry only; the /v1/embeddings endpoint was removed)
 export {
   EMBEDDING_PROVIDERS,
   getEmbeddingProvider,

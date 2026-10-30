@@ -69,7 +69,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // resolveLocalOverrideCredentials (_shared/videoModelResolution.ts), 2->1.
     "src/app/api/v1/music/generations/route.ts": 1,
     "src/app/api/v1/ocr/route.ts": 1,
-    "src/app/api/v1/providers/[provider]/embeddings/route.ts": 1,
     "src/app/api/v1/providers/[provider]/images/generations/route.ts": 1,
     "src/app/api/v1/rerank/route.ts": 2,
     "src/app/api/v1/search/route.ts": 2,
@@ -86,12 +85,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // credentials through getProviderCredentials with the connection allowlist
     // from resolveLocalSyncedEndpointRoute, and handles allRateLimited, so it is
     // fenced the same way as the two pre-existing sites.
-    // #15761: local embeddings resolve credentials through the serving-connection allowlist
-    // (getProviderCredentials(provider, null, servingIds)) — one more site (3 -> 4).
-    // GHSA-3w2r: keyless providers (local zero-config defaults, keyless
-    // remotes) look up an in-scope connection for a connection-scoped API key
-    // before running (chat's #9057 rule) — one extra scoped lookup per site.
-    "src/lib/embeddings/service.ts": 5,
     "src/lib/images/adobeFireflyEdit.ts": 1,
     "src/lib/search/executeWebSearch.ts": 2,
     "src/lib/skills/webFetchExecution.ts": 1,
@@ -232,10 +225,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // #15485: the priority-0 move-to-top edit re-reads the row by id after reorderConnections (3 -> 4).
     "src/lib/db/providers.ts": 4,
     "src/lib/db/readCache.ts": 2,
-    // Local embedding providers: reads the active rows only to build the allowlist of
-    // connections whose default model does not conflict with the requested one; the
-    // connection itself is still selected by getProviderCredentials (class C).
-    "src/lib/embeddings/service.ts": 1,
     "src/lib/freeProviderRankings.ts": 1,
     "src/lib/guardrails/visionBridgeCredentials.ts": 2,
     "src/lib/kimi/tokenRefresh.ts": 1,

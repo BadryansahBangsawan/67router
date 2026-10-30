@@ -7,7 +7,7 @@
  */
 
 export interface CurlOptions {
-  /** Full URL, e.g. http://localhost:20128/api/v1/embeddings */
+  /** Full URL, e.g. http://localhost:20128/api/v1/chat/completions */
   endpoint: string;
   /** HTTP method (default: POST) */
   method?: string;
@@ -31,9 +31,9 @@ function escSq(s: string): string {
  *
  * @example
  * buildCurl({
- *   endpoint: "http://localhost:20128/api/v1/embeddings",
+ *   endpoint: "http://localhost:20128/api/v1/chat/completions",
  *   headers: { Authorization: "Bearer sk-123", "Content-Type": "application/json" },
- *   body: { model: "text-embedding-3-small", input: "Hello world" },
+ *   body: { model: "openai/gpt-4o-mini", messages: [{ role: "user", content: "Hi" }] },
  * })
  * // => "curl -s -X POST \\\n  ..."
  */

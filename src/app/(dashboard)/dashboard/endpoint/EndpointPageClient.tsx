@@ -351,7 +351,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   // Filter out parent models (models with parent field set) to avoid showing duplicates
   const endpointData = useMemo(() => {
     const chat = allModels.filter((m) => !m.type && !m.parent);
-    const embeddings = allModels.filter((m) => m.type === "embedding" && !m.parent);
     const images = allModels.filter((m) => m.type === "image" && !m.parent);
     const video = allModels.filter((m) => m.type === "video" && !m.parent);
     const rerank = allModels.filter((m) => m.type === "rerank" && !m.parent);
@@ -364,7 +363,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
     const music = allModels.filter((m) => m.type === "music" && !m.parent);
     return {
       chat,
-      embeddings,
       images,
       video,
       rerank,
@@ -383,7 +381,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
     const chatCount = endpointData.chat.length > 0 ? 4 : 0; // chat + responses + completions + messages
     const imageCount = endpointData.images.length > 0 ? 2 : 0; // image gen + image edits
     const otherMedia = [
-      endpointData.embeddings,
       endpointData.audioTranscription,
       endpointData.audioSpeech,
       endpointData.music,
@@ -1925,18 +1922,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
             <div className="flex-1 h-px bg-border/50" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            <EndpointCard
-              icon="data_array"
-              iconColor="text-success"
-              iconBg="bg-success/10"
-              title={t("embeddings")}
-              path="/v1/embeddings"
-              models={endpointData.embeddings}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
             <EndpointCard
               icon="image"
               iconColor="text-chart-3"

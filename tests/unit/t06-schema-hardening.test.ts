@@ -6,7 +6,6 @@ import {
   translatorSendSchema,
   translatorTranslateSchema,
   cliSettingsEnvSchema,
-  v1EmbeddingsSchema,
   providerChatCompletionSchema,
   v1CountTokensSchema,
   intelligenceSyncRequestSchema,
@@ -64,28 +63,6 @@ test("cliSettingsEnvSchema rejects invalid key format", () => {
     env: {
       "anthropic-base-url": "https://example.com/v1",
     },
-  });
-  assert.equal(validation.success, false);
-});
-
-test("v1EmbeddingsSchema accepts string and token-array inputs", () => {
-  const withString = validateBody(v1EmbeddingsSchema, {
-    model: "openai/text-embedding-3-small",
-    input: "hello world",
-  });
-  assert.equal(withString.success, true);
-
-  const withTokenArray = validateBody(v1EmbeddingsSchema, {
-    model: "openai/text-embedding-3-small",
-    input: [101, 102, 103],
-  });
-  assert.equal(withTokenArray.success, true);
-});
-
-test("v1EmbeddingsSchema rejects empty embedding input", () => {
-  const validation = validateBody(v1EmbeddingsSchema, {
-    model: "openai/text-embedding-3-small",
-    input: [],
   });
   assert.equal(validation.success, false);
 });

@@ -3,7 +3,6 @@ import { prepareConnectionModelTest } from "@/lib/providerModels/prepareConnecti
 import { POST as postChatCompletion } from "@/app/api/v1/chat/completions/route";
 import { POST as postAudioSpeech } from "@/app/api/v1/audio/speech/route";
 import { POST as postAudioTranscription } from "@/app/api/v1/audio/transcriptions/route";
-import { handleValidatedEmbeddingRequestBody } from "@/app/api/v1/embeddings/route";
 import { POST as postRerank } from "@/app/api/v1/rerank/route";
 import { POST as postResponses } from "@/app/api/v1/responses/route";
 import {
@@ -619,10 +618,20 @@ export async function runSingleModelTest(
     };
   }
 
-  if (
-    options.prompt !== undefined &&
-    (isEmbedding || isRerank || isAudioTranscription || isAudioSpeech)
-  ) {
+  // Embedding models stay classified so they are never dispatched as chat, but there is
+  // no /v1/embeddings endpoint to exercise them any more.
+  if (isEmbedding) {
+    return {
+      modelId: fullModelStr,
+      status: "error",
+      latencyMs: 0,
+      httpStatus: 422,
+      skipped: true,
+      error: "Skipped: embedding models cannot be tested (the embeddings endpoint was removed)",
+    };
+  }
+
+  if (options.prompt !== undefined && (isRerank || isAudioTranscription || isAudioSpeech)) {
     return {
       modelId: fullModelStr,
       status: "error",
@@ -657,9 +666,9 @@ export async function runSingleModelTest(
             // streamed answer would read as empty — the very failure being fixed.
             stream: false,
           }
-        : buildComboTestRequestBody(fullModelStr, isEmbedding, {
-            stream: !isEmbedding && streamChat,
-            maxTokens: !isEmbedding && streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
+        : buildComboTestRequestBody(fullModelStr, false, {
+            stream: streamChat,
+            maxTokens: streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
           });
 
   if (options.prompt !== undefined && "messages" in testBody) {
@@ -677,12 +686,6 @@ export async function runSingleModelTest(
   }, effectiveTimeoutMs);
 
   const runInner = async (signal: AbortSignal): Promise<Response> => {
-    if (isEmbedding) {
-      return handleValidatedEmbeddingRequestBody(
-        testBody as Record<string, unknown> & { model: string },
-        { connectionId: connectionId || undefined }
-      );
-    }
     if (isRerank) {
       return postRerank(buildInternalRerankRequest(testBody, signal, connectionId));
     }

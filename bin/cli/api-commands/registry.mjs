@@ -3,7 +3,6 @@ import { register_playground } from "./playground.mjs";
 import { register_chat } from "./chat.mjs";
 import { register_messages } from "./messages.mjs";
 import { register_responses } from "./responses.mjs";
-import { register_embeddings } from "./embeddings.mjs";
 import { register_images } from "./images.mjs";
 import { register_audio } from "./audio.mjs";
 import { register_rerank } from "./rerank.mjs";
@@ -34,7 +33,6 @@ export const API_TAGS = [
   "chat",
   "messages",
   "responses",
-  "embeddings",
   "images",
   "audio",
   "rerank",
@@ -75,7 +73,6 @@ export function registerApiCommands(program) {
   register_chat(api);
   register_messages(api);
   register_responses(api);
-  register_embeddings(api);
   register_images(api);
   register_audio(api);
   register_rerank(api);

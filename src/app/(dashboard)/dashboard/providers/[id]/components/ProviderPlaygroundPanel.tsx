@@ -9,7 +9,6 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { LlmChatCard } from "@/app/(dashboard)/dashboard/media-providers/components/LlmChatCard";
 import { ServiceKindTabs } from "@/app/(dashboard)/dashboard/media-providers/components/ServiceKindTabs";
-import { EmbeddingExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard";
 import { ImageExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/ImageExampleCard";
 import { TtsExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/TtsExampleCard";
 import { SttExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/SttExampleCard";
@@ -36,8 +35,6 @@ export function renderKindPanel(kind: ServiceKind, providerId: string): JSX.Elem
   switch (kind) {
     case "llm":
       return <LlmChatCard providerId={providerId} />;
-    case "embedding":
-      return <EmbeddingExampleCard providerId={providerId} />;
     case "image":
       return <ImageExampleCard providerId={providerId} />;
     case "tts":

@@ -96,6 +96,15 @@ const REMOVED_PATHS: string[] = [
   "open-sse/mcp-server/tools/skillTools.ts",
   "open-sse/mcp-server/tools/githubSkillTools.ts",
   "bin/cli/commands/skills.mjs",
+  // embeddings endpoints (embeddingRegistry stays: /v1/models, provider validation, cache settings)
+  "src/app/api/v1/embeddings",
+  "src/app/api/v1/multimodal-embeddings",
+  "src/app/api/v1/providers/[provider]/embeddings",
+  "open-sse/handlers/embeddings.ts",
+  "open-sse/handlers/embeddingStructuredInput.ts",
+  "src/lib/embeddings",
+  "bin/cli/api-commands/embeddings.mjs",
+  "src/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard.tsx",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -148,6 +157,12 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /dashboard\/omni-skills/,
   /\b(skillTools|githubSkillTools)\b|omniroute_(skills|github_skills)_/,
   /\b(skillRegistry|skillExecutor|registerBuiltinSkills)\b/,
+  // embeddings endpoints
+  /handlers\/(embeddings|embeddingStructuredInput)\b/,
+  /lib\/embeddings\//,
+  /app\/api\/v1\/(embeddings|multimodal-embeddings)\b|providers\/\[provider\]\/embeddings/,
+  /\b(handleEmbedding|createEmbeddingResponse|handleValidatedEmbeddingRequestBody|v1EmbeddingsSchema)\b/,
+  /EmbeddingExampleCard/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
