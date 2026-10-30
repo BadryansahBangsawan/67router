@@ -83,7 +83,7 @@ export default function SessionsTab() {
           <Icon name="fingerprint" size={20} />
         </div>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold">{t("activeSessions")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("activeSessions")}</h3>
           <p className="text-sm text-text-muted">{t("sessionsTrackedHint")}</p>
         </div>
         <div className="flex items-center gap-2">
@@ -113,16 +113,16 @@ export default function SessionsTab() {
         >
           <TableHeader>
             <TableRow>
-              <TableHead className="text-left py-2 px-3 text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <TableHead className="text-left py-2 px-3 text-xs font-medium text-text-muted">
                 {t("session")}
               </TableHead>
-              <TableHead className="text-left py-2 px-3 text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <TableHead className="text-left py-2 px-3 text-xs font-medium text-text-muted">
                 {t("age")}
               </TableHead>
-              <TableHead className="text-right py-2 px-3 text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <TableHead className="text-right py-2 px-3 text-xs font-medium text-text-muted">
                 {t("requests")}
               </TableHead>
-              <TableHead className="text-left py-2 px-3 text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <TableHead className="text-left py-2 px-3 text-xs font-medium text-text-muted">
                 {t("connection")}
               </TableHead>
             </TableRow>

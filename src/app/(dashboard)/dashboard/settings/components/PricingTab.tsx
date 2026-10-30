@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { EmptyState } from "@omniroute/ui-kit/empty-state";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import {
   Table,
   TableBody,
@@ -505,40 +506,33 @@ export default function PricingTab() {
     stats.totalModels > 0 ? Math.round((stats.pricedCount / stats.totalModels) * 100) : 0;
 
   return (
-    <div className="flex flex-col gap-4">
-      {/* Hero — combined header (stats + sync + how-it-works tooltip) */}
-      <Card className="p-5">
-        <div className="flex items-start justify-between gap-3 mb-4">
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-bold flex items-center gap-2">
-              <Icon name="payments" size={22} className="text-primary" />
-              {t("modelPricing")}
-            </h2>
+    <div className="flex flex-col gap-6">
+      <PageHeader
+        compact
+        title={
+          <span className="inline-flex items-center gap-2">
+            {t("modelPricing")}
             <InfoTooltip
               text={`${t("pricingDescInput")} · ${t("pricingDescOutput")} · ${t("pricingDescCached")} · ${t("pricingDescReasoning")} · ${t("pricingDescCacheWrite")} · ${t("pricingDescFormula")}`}
             />
-          </div>
-          <p className="text-text-muted text-xs hidden sm:block self-center">
-            {t("modelPricingDesc")}
-          </p>
-        </div>
-
+          </span>
+        }
+        description={t("modelPricingDesc")}
+      />
+      {/* Hero — stats + sync */}
+      <Card className="p-5">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-4">
           {/* Stats panel with coverage bar */}
-          <div className="rounded-lg border border-border/40 bg-bg-subtle/30 p-4">
+          <div className="rounded-lg border border-border bg-bg-subtle p-4">
             <div className="grid grid-cols-4 gap-3 mb-3">
               <HeroStat label={t("providers")} value={stats.providers} />
               <HeroStat label={t("registry")} value={stats.totalModels} />
-              <HeroStat label={t("priced")} value={stats.pricedCount} accent="text-success" />
-              <HeroStat
-                label={t("pricingSourceUser")}
-                value={stats.overriddenCount}
-                accent="text-warning"
-              />
+              <HeroStat label={t("priced")} value={stats.pricedCount} />
+              <HeroStat label={t("pricingSourceUser")} value={stats.overriddenCount} />
             </div>
             <div>
               <div className="flex items-center justify-between text-[11px] text-text-muted mb-1">
-                <span className="uppercase tracking-wide font-semibold">
+                <span className="font-medium">
                   {t("priced")} / {t("registry")}
                 </span>
                 <span className="tabular-nums font-semibold">{coveragePct}%</span>
@@ -555,7 +549,7 @@ export default function PricingTab() {
           </div>
 
           {/* Sync panel */}
-          <div className="rounded-lg border border-border/40 bg-bg-subtle/30 p-4 flex flex-col gap-3">
+          <div className="rounded-lg border border-border bg-bg-subtle p-4 flex flex-col gap-3">
             <div className="flex items-start justify-between gap-2">
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wide text-text-muted">
