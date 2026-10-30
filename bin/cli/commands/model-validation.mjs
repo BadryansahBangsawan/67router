@@ -212,7 +212,7 @@ export function registerModelValidation(program) {
     .option("--max-output-tokens <count>", "User-supplied positive output token limit")
     .option("--api-format <format>", "chat-completions or responses", "chat-completions")
     .option("--context <name>", "Existing local or remote context")
-    .option("--base-url <url>", "Explicit OmniRoute management base URL")
+    .option("--base-url <url>", "Explicit 67router management base URL")
     .option("--allow-inference", "Allow test requests that may incur provider charges")
     .option("--yes", "Confirm persistence after successful validation")
     .option("--dry-run", "Preview only; no requests or persistence")

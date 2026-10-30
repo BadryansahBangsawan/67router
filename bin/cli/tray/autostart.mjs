@@ -121,7 +121,7 @@ function writeLinuxSystemdUnit(cliPath) {
   const pathEnv = `${nodeBinDir}:${userLocalBin}:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin`;
   const lines = [
     "[Unit]",
-    "Description=OmniRoute AI proxy router",
+    "Description=67router AI proxy router",
     "After=network-online.target graphical-session.target",
     "Wants=network-online.target",
     "",
@@ -153,7 +153,7 @@ function writeLinuxDesktopEntry(cliPath) {
     [
       "[Desktop Entry]",
       "Type=Application",
-      "Name=OmniRoute",
+      "Name=67router",
       "Comment=AI proxy router with auto fallback",
       `Exec=${buildServeExecLine(cliPath, { tray: true })}`,
       "Terminal=false",

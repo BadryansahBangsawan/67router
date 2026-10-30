@@ -104,7 +104,7 @@ export async function runSetupGooseCommand(opts = {}) {
   });
   if (guard !== 0) return guard;
 
-  printHeading("OmniRoute → Goose (openai-compatible)");
+  printHeading("67router → Goose (openai-compatible)");
   printInfo(`OPENAI_HOST: ${host}   (no /v1 — Goose appends it)`);
 
   let model = opts.model;
@@ -148,11 +148,11 @@ export function registerSetupGoose(program) {
   program
     .command("setup-goose")
     .description(
-      "Configure Goose for OmniRoute: write ~/.config/goose/config.yaml + print the env recipe"
+      "Configure Goose for 67router: write ~/.config/goose/config.yaml + print the env recipe"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--model <id>", "Model id for Goose (required unless picked interactively)")
     .option("--config-path <path>", "config.yaml path (default: ~/.config/goose/config.yaml)")
     .option("--yes", "Non-interactive: do not prompt (requires --model)")

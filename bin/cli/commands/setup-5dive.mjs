@@ -97,7 +97,7 @@ export function validateFivediveBaseUrl(rawUrl) {
     ok: false,
     reason:
       `5dive accepts http:// only for a loopback host; '${host}' is off-box, so the agent's ` +
-      `API key would travel in plaintext. Serve OmniRoute over https:// and pass ` +
+      `API key would travel in plaintext. Serve 67router over https:// and pass ` +
       `--remote https://${host}...`,
   };
 }
@@ -182,7 +182,7 @@ export async function runSetup5diveCommand(opts = {}) {
   const provider = String(opts.byoProvider ?? opts["byo-provider"] ?? "openai");
   const agents = agentList(opts);
 
-  printHeading("OmniRoute -> 5dive (claude BYO endpoint)");
+  printHeading("67router -> 5dive (claude BYO endpoint)");
   printInfo(`Server:  ${baseUrl}`);
   printInfo(`Profile: ${profile}`);
 
@@ -213,7 +213,7 @@ export async function runSetup5diveCommand(opts = {}) {
     return 2;
   }
   if (!apiKey) {
-    printError("An OmniRoute API key is required. Pass --api-key, or set OMNIROUTE_API_KEY.");
+    printError("A 67router API key is required. Pass --api-key, or set OMNIROUTE_API_KEY.");
     return 2;
   }
 
@@ -289,13 +289,13 @@ export function registerSetup5dive(program) {
   program
     .command("setup-5dive")
     .description(
-      "Point a 5dive agent fleet's claude seats at OmniRoute (writes a 5dive auth profile)"
+      "Point a 5dive agent fleet's claude seats at 67router (writes a 5dive auth profile)"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. https://omniroute.example.com")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. https://omniroute.example.com")
     .option("--context <name>", "Named local/remote context")
-    .option("--api-key <key>", "OmniRoute API key (defaults to the active context/env)")
-    .option("--model <id>", "OmniRoute model or combo id the agents should use")
+    .option("--api-key <key>", "67router API key (defaults to the active context/env)")
+    .option("--model <id>", "67router model or combo id the agents should use")
     .option("--byo-provider <id>", "5dive BYO provider id (default: openai)", "openai")
     .option("--auth-profile <name>", "5dive auth profile to write", DEFAULT_PROFILE)
     .option(

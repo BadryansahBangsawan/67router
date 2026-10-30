@@ -16,7 +16,9 @@ import { t } from "../i18n.mjs";
 const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 
 async function getListCliTools() {
-  const { listCliTools } = await import(pathToFileURL(resolve(PROJECT_ROOT, "src/shared/constants/cliTools.ts")).href);
+  const { listCliTools } = await import(
+    pathToFileURL(resolve(PROJECT_ROOT, "src/shared/constants/cliTools.ts")).href
+  );
   return listCliTools;
 }
 
@@ -203,7 +205,7 @@ export async function runSetupCommand(opts = {}) {
   const prompt = createPrompt();
 
   try {
-    printHeading("OmniRoute Setup");
+    printHeading("67router Setup");
     const { db, dbPath } = await openOmniRouteDb();
     printInfo(`Database: ${dbPath}`);
 

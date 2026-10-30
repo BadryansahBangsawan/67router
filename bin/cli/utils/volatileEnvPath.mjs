@@ -36,7 +36,7 @@ export function describeVolatileEnvWarning({
   if (suppliedValues && suppliesOnlyTemplateDefaults(packageRoot, suppliedValues)) return null;
 
   return (
-    `${envPath} lives inside the installed package: updating OmniRoute replaces it. ` +
+    `${envPath} lives inside the installed package: updating 67router replaces it. ` +
     `Move the values you set to ${durableEnvPath}, which updates leave alone.`
   );
 }

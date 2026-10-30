@@ -112,7 +112,7 @@ export async function runSetupCrushCommand(opts = {}) {
   });
   if (guard !== 0) return guard;
 
-  printHeading("OmniRoute → Crush (openai-compat)");
+  printHeading("67router → Crush (openai-compat)");
   printInfo(`base_url: ${baseUrl}`);
 
   let ids;
@@ -120,7 +120,7 @@ export async function runSetupCrushCommand(opts = {}) {
     ids = await fetchModelIds(baseUrl, apiKey);
   } catch (e) {
     printError(`Could not fetch models: ${e.message}`);
-    printInfo("Make sure OmniRoute is running and --remote/--api-key are correct.");
+    printInfo("Make sure 67router is running and --remote/--api-key are correct.");
     return 1;
   }
   if (only) ids = ids.filter((id) => only.some((f) => id.includes(f)));
@@ -153,10 +153,10 @@ export async function runSetupCrushCommand(opts = {}) {
 export function registerSetupCrush(program) {
   program
     .command("setup-crush")
-    .description("Generate the OmniRoute openai-compat provider in ~/.config/crush/crush.json")
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .description("Generate the 67router openai-compat provider in ~/.config/crush/crush.json")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--only <patterns>", "Comma-separated substrings — keep only matching model IDs")
     .option("--config-path <path>", "crush.json path (default: ~/.config/crush/crush.json)")
     .option("--dry-run", "Print what would be written without touching the filesystem")

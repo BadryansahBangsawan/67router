@@ -107,10 +107,10 @@ _omniroute_get_cache() {
 _omniroute() {
   local -a commands
   commands=(
-    'serve:Start the OmniRoute server'
+    'serve:Start the 67router server'
     'stop:Stop the server'
     'restart:Restart the server'
-    'setup:Configure OmniRoute'
+    'setup:Configure 67router'
     'doctor:Run health diagnostics'
     'status:Show server status'
     'logs:View application logs'
@@ -137,12 +137,12 @@ _omniroute() {
     'completion:Shell completion'
     'memory:Manage memory store'
     'skills:Manage skills'
-    'connect:Connect to a local or remote OmniRoute server'
+    'connect:Connect to a local or remote 67router server'
     'contexts:Manage local and remote server contexts'
     'configure:Configure a supported AI CLI'
-    'launch:Launch an AI CLI through OmniRoute'
-    'launch-codex:Launch Codex through OmniRoute'
-    'run:Run a supported AI CLI through OmniRoute'
+    'launch:Launch an AI CLI through 67router'
+    'launch-codex:Launch Codex through 67router'
+    'run:Run a supported AI CLI through 67router'
     'runtime:Inspect CLI runtime capabilities'
     'repair:Repair native runtime dependencies'
   )
@@ -267,7 +267,7 @@ complete -F _omniroute omniroute
 }
 
 function generateFishScript(modelCommands) {
-  return `# OmniRoute CLI fish completion (dynamic)
+  return `# 67router CLI fish completion (dynamic)
 complete -c omniroute -f
 
 set -l commands serve stop restart setup doctor status logs providers config keys models combo chat stream completion dashboard open backup restore health quota cache mcp a2a tunnel env memory skills connect contexts configure launch launch-codex update test run runtime repair

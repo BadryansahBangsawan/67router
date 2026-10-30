@@ -352,10 +352,10 @@ export function registerConfigure(program) {
       t("configure.description") ||
         "Pick a provider+model from the active server and configure a supported local CLI"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL")
     .option("--context <name>", "Named local/remote context")
-    .option("--api-key <key>", "OmniRoute API key (defaults to the active context/env)")
+    .option("--api-key <key>", "67router API key (defaults to the active context/env)")
     .option("--provider <id>", "Provider id (skips the interactive provider prompt)")
     .option("--model <id>", "Model id (skips the interactive model prompt)")
     .option("--name <name>", "Profile name to write (default: derived from model)")
@@ -366,7 +366,7 @@ export function registerConfigure(program) {
     .option("--dry-run", "Preview the generated config without writing")
     .option(
       "--allow-container-write",
-      "Write the config even when OmniRoute runs in a container and the target is not mounted from the host"
+      "Write the config even when 67router runs in a container and the target is not mounted from the host"
     )
     .action(async (cli, opts, cmd) => {
       const code = await runConfigureCommand(cli, opts, cmd);

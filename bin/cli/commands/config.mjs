@@ -309,7 +309,7 @@ export function registerConfig(program) {
     .option("--yes", "Skip confirmation prompt")
     .option(
       "--allow-container-write",
-      "Write the config even when OmniRoute runs in a container and the target is not mounted from the host"
+      "Write the config even when 67router runs in a container and the target is not mounted from the host"
     )
     .action(async (tool, opts, cmd) => {
       const globalOpts = cmd.parent.optsWithGlobals();
@@ -348,7 +348,7 @@ export function registerConfig(program) {
     .option("--yes", "Skip confirmation prompt")
     .option(
       "--allow-container-write",
-      "Write the config even when OmniRoute runs in a container and the target is not mounted from the host"
+      "Write the config even when 67router runs in a container and the target is not mounted from the host"
     )
     .action(async (opts, cmd) => {
       const globalOpts = cmd.parent.optsWithGlobals();

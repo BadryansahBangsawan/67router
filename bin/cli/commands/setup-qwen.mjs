@@ -100,7 +100,7 @@ export async function runSetupQwenCommand(opts = {}) {
     opts.configPath ?? opts["config-path"] ?? path.join(os.homedir(), ".qwen", "settings.json");
   const envPath = opts.envPath ?? opts["env-path"] ?? path.join(path.dirname(settingsPath), ".env");
 
-  printHeading("OmniRoute → Qwen Code (OpenAI-compatible)");
+  printHeading("67router → Qwen Code (OpenAI-compatible)");
   printInfo(`baseUrl: ${baseUrl}`);
 
   for (const target of [settingsPath, envPath]) {
@@ -161,10 +161,10 @@ export async function runSetupQwenCommand(opts = {}) {
 export function registerSetupQwen(program) {
   program
     .command("setup-qwen")
-    .description("Configure Qwen Code's upstream V4 modelProviders format for OmniRoute")
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL")
-    .option("--api-key <key>", "OmniRoute API key")
+    .description("Configure Qwen Code's upstream V4 modelProviders format for 67router")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL")
+    .option("--api-key <key>", "67router API key")
     .option("--model <id>", "Model id for Qwen Code")
     .option("--config-path <path>", "Qwen Code settings.json path")
     .option("--env-path <path>", "Qwen Code .env path")
