@@ -44,7 +44,7 @@
 | `better-sqlite3`   | ルート `^13.0.2`（Node-API のビルド済みバイナリ — Electron のリビルド不要） |
 | アプリバージョン   | `3.8.0`                                                                     |
 | アプリ ID          | `online.omniroute.desktop`                                                  |
-| 製品名             | `67router`                                                                  |
+| 製品名             | `OmniRoute`                                                                 |
 
 ## スクリプト（ルートの `package.json`）
 

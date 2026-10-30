@@ -45,7 +45,7 @@ Ikkonfermati minn `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (prebuilds ta’ Node-API — ma jeħtieġ ebda rebuild ta’ Electron) |
 | Verżjoni tal-app   | `3.8.0`                                                                        |
 | ID tal-app         | `online.omniroute.desktop`                                                     |
-| Isem tal-prodott   | `67router`                                                                     |
+| Isem tal-prodott   | `OmniRoute`                                                                    |
 
 ## Skripts (`package.json` tal-għerq)
 

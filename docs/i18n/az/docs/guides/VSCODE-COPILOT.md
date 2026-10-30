@@ -24,12 +24,12 @@ MCP serverləri və fərdi təlimatları işləməyə davam edir, sadəcə seçd
 ## Quraşdırma
 
 1. **67router-u işə salın** — `npm install -g omniroute && omniroute` (idarəetmə paneli `http://localhost:20128` ünvanındadır).
-2. **Genişlənməni quraşdırın** — Extensions görünüşündə "67router" axtarın.
-3. **Model seçin** — Copilot Chat → model seçicisi → **Manage Models…** → **67router**, sonra
+2. **Genişlənməni quraşdırın** — Extensions görünüşündə "OmniRoute" axtarın.
+3. **Model seçin** — Copilot Chat → model seçicisi → **Manage Models…** → **OmniRoute**, sonra
    istədiklərinizi işarələyin.
 
 67router standart portda işləyərkən heç nə konfiqurasiya etməyə ehtiyac yoxdur. Uzaq instansiya üçün
-**Activity Bar-da 67router ikonunu** açın (və ya `67router: Manage Connection` əmrini işlədin) və bunları təyin edin:
+**Activity Bar-da 67router ikonunu** açın (və ya `OmniRoute: Manage Connection` əmrini işlədin) və bunları təyin edin:
 
 - **Server URL-i** — serverin kök ünvanı, məsələn, `http://192.168.0.15:20128`. `/v1` suffiksi
   genişlənmə tərəfindən əlavə edilir; onu daxil etməyin.
@@ -114,21 +114,21 @@ Daxiletmənin aktiv olduğu yığma olmadan səhifə çərçivədə göstərilm�
 
 ## Digər alətlərinizi VS Code daxilindən konfiqurasiya etmək
 
-**`67router: Configure Coding CLI`** Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo və Roo üçün istifadəyə hazır profillər yazmaq məqsədilə `omniroute` CLI alətini idarə edir — bunlar
+**`OmniRoute: Configure Coding CLI`** Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo və Roo üçün istifadəyə hazır profillər yazmaq məqsədilə `omniroute` CLI alətini idarə edir — bunlar
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) sənədində təsvir edilən eyni konfiqurasiyalardır. API açarı CLI alətinə heç vaxt əmr sətrində deyil, `OMNIROUTE_API_KEY` mühit dəyişəni vasitəsilə ötürülür.
 
 ---
 
 ## Problemlərin aradan qaldırılması
 
-| Əlamət                                                     | Səbəb / həll                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Seçicidə 67router modelləri yoxdur                         | Server əlçatan deyil. Status panelindəki nöqtə boz rəngə çevrilir; `67router: Check Connection` əmrini işə salın. Aşkarlama məqsədli şəkildə səssizdir və sorğu göstərmək əvəzinə heç bir model təqdim etmir.                                                         |
-| Hər model iki dəfə görünür                                 | OmniCopilot versiyanız 1.0.1-dən köhnədir — yeniləyin. Genişləndirmə artıq `?prefix=alias` tələb edir.                                                                                                                                                                |
-| Əvvəllər siyahıda olan şəkil/audio modeli yoxa çıxıb       | Bu, 1.0.1 versiyasından etibarən qəsdən belədir — həmin model heç vaxt çat sorğusuna cavab verə bilmirdi.                                                                                                                                                             |
-| Panel Activity Bar-da yoxdur                               | VS Code əlavə görünüş konteynerlərini Activity Bar-ın aşağısındakı **"…"** daşma menyusuna köçürür və sağ kliklə gizlədilmiş konteyner gizli qalır. Activity Bar-a sağ klikləyin → **67router** seçimini işarələyin və ya onu `67router: Manage Connection` ilə açın. |
-| `editor` rejiminə baxmayaraq idarə paneli brauzerdə açılır | Server `DASHBOARD_ALLOW_EMBED=vscode` ilə **yığılmayıb** (yuxarıya baxın) — əvvəlcədən yığılmış quraşdırmada bunu işəsalma zamanı təyin etmək heç nəyi dəyişmir. Xarici brauzerə keçid məqsədlidir.                                                                   |
-| Provayderləri dəyişdikdən sonra model siyahısı köhnə qalır | `67router: Refresh Models` əmrini və ya paneldəki ↻ keçidini istifadə edin.                                                                                                                                                                                           |
+| Əlamət                                                     | Səbəb / həll                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Seçicidə 67router modelləri yoxdur                         | Server əlçatan deyil. Status panelindəki nöqtə boz rəngə çevrilir; `OmniRoute: Check Connection` əmrini işə salın. Aşkarlama məqsədli şəkildə səssizdir və sorğu göstərmək əvəzinə heç bir model təqdim etmir.                                                          |
+| Hər model iki dəfə görünür                                 | OmniCopilot versiyanız 1.0.1-dən köhnədir — yeniləyin. Genişləndirmə artıq `?prefix=alias` tələb edir.                                                                                                                                                                  |
+| Əvvəllər siyahıda olan şəkil/audio modeli yoxa çıxıb       | Bu, 1.0.1 versiyasından etibarən qəsdən belədir — həmin model heç vaxt çat sorğusuna cavab verə bilmirdi.                                                                                                                                                               |
+| Panel Activity Bar-da yoxdur                               | VS Code əlavə görünüş konteynerlərini Activity Bar-ın aşağısındakı **"…"** daşma menyusuna köçürür və sağ kliklə gizlədilmiş konteyner gizli qalır. Activity Bar-a sağ klikləyin → **OmniRoute** seçimini işarələyin və ya onu `OmniRoute: Manage Connection` ilə açın. |
+| `editor` rejiminə baxmayaraq idarə paneli brauzerdə açılır | Server `DASHBOARD_ALLOW_EMBED=vscode` ilə **yığılmayıb** (yuxarıya baxın) — əvvəlcədən yığılmış quraşdırmada bunu işəsalma zamanı təyin etmək heç nəyi dəyişmir. Xarici brauzerə keçid məqsədlidir.                                                                     |
+| Provayderləri dəyişdikdən sonra model siyahısı köhnə qalır | `OmniRoute: Refresh Models` əmrini və ya paneldəki ↻ keçidini istifadə edin.                                                                                                                                                                                            |
 
 ---
 

@@ -45,7 +45,7 @@ Patvirtinta pagal `electron/package.json`:
 | `better-sqlite3`     | šakniniame projekte `^13.0.2` (Node-API iš anksto sukompiliuoti paketai — nereikia perkompiliuoti Electron aplinkai) |
 | Programos versija    | `3.8.0`                                                                                                              |
 | Programos ID         | `online.omniroute.desktop`                                                                                           |
-| Produkto pavadinimas | `67router`                                                                                                           |
+| Produkto pavadinimas | `OmniRoute`                                                                                                          |
 
 ## Scenarijai (šakninis `package.json`)
 

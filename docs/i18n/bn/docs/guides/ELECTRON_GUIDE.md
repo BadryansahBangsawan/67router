@@ -45,7 +45,7 @@
 | `better-sqlite3`   | রুট `^13.0.2` (Node-API প্রিবিল্ড — Electron রিবিল্ডের প্রয়োজন নেই) |
 | অ্যাপের সংস্করণ    | `3.8.0`                                                              |
 | অ্যাপ আইডি         | `online.omniroute.desktop`                                           |
-| পণ্যের নাম         | `67router`                                                           |
+| পণ্যের নাম         | `OmniRoute`                                                          |
 
 ## স্ক্রিপ্টসমূহ (রুট `package.json`)
 

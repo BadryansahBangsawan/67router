@@ -205,7 +205,7 @@ AgentBridge-CA-certifikatet måste vara betrott av operativsystemet innan IDE:er
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Nyckelring):**
@@ -448,7 +448,7 @@ Alternativt kan du konfigurera en icke-privilegierad port i AgentBridge-inställ
 
 Om IDE:n visar TLS-fel efter att AgentBridge har startats:
 
-1. Kontrollera att certifikatet installerades: `security find-certificate -c "67router AgentBridge"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Kontrollera att certifikatet installerades: `security find-certificate -c "OmniRoute MITM CA"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Vissa appar använder ett eget betrott certifikatarkiv (Firefox, Chrome på Linux). Kör "Trust Cert" igen och kontrollera det NSS-/Firefox-specifika certifikatarkivet.
 3. Starta om IDE:n efter att certifikatet har gjorts betrott — pågående TLS-sessioner använder den tidigare betrodda statusen.
 

@@ -206,7 +206,7 @@ Cheti cha CA cha AgentBridge lazima kiaminiwe na OS kabla ya IDE kukubali muunga
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -449,7 +449,7 @@ Vinginevyo, sanidi port isiyohitaji ruhusa za juu katika mipangilio ya AgentBrid
 
 Ikiwa IDE inaonyesha hitilafu za TLS baada ya kuanzisha AgentBridge:
 
-1. Thibitisha kuwa cheti kilisakinishwa: `security find-certificate -c "67router AgentBridge"` (macOS) au `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Thibitisha kuwa cheti kilisakinishwa: `security find-certificate -c "OmniRoute MITM CA"` (macOS) au `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Baadhi ya programu hudumisha hifadhi yao wenyewe ya uaminifu (Firefox, Chrome kwenye Linux). Endesha "Amini Cheti" tena na ukague hifadhi ya cheti maalum ya NSS/Firefox.
 3. Anzisha upya IDE baada ya kuamini cheti — vipindi vya TLS vinavyoendelea hutumia hali ya zamani ya uaminifu.
 

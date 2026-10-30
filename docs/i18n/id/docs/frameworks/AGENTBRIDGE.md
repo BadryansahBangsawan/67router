@@ -206,7 +206,7 @@ Sertifikat CA AgentBridge harus dipercaya oleh OS sebelum IDE dapat menerima kon
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -450,7 +450,7 @@ Sebagai alternatif, konfigurasikan port nonprivileged di pengaturan AgentBridge 
 
 Jika IDE menampilkan kesalahan TLS setelah AgentBridge dimulai:
 
-1. Pastikan sertifikat telah diinstal: `security find-certificate -c "67router AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Pastikan sertifikat telah diinstal: `security find-certificate -c "OmniRoute MITM CA"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Beberapa aplikasi memiliki trust store sendiri (Firefox, Chrome di Linux). Jalankan "Trust Cert" lagi dan periksa trust store khusus NSS/Firefox.
 3. Mulai ulang IDE setelah memercayai sertifikat — sesi TLS yang sedang berlangsung menggunakan status kepercayaan lama.
 

@@ -536,12 +536,12 @@ ba tare da canji ba, ana tsallake shi a matsayin `no_styles`), yana haɗa umarni
 jerin katalog,
 yana ƙara ƙa'idar iyakoki **sau ɗaya** (tare da ƙa'idar tsaro, `SAFETY_BOUNDARIES` ko
 fassararta, idan an zaɓi `less-code` ko `ponytail`), kuma yana fara tubalin da
-alama guda ta hana maimaita aiki (`[67router Output Styles]`), don haka sake aiwatarwa
+alama guda ta hana maimaita aiki (`[OmniRoute Output Styles]`), don haka sake aiwatarwa
 ba ya yin komai. Idan harshen da aka tantance (duba Zaɓin harshe a ƙasa) yana da fassara,
 ana saka umarnin da aka fassara maimakon na Turanci.
 
 A jikin da ke da jerin `messages` mara komai ba, ana gudanar da binciken hana maimaitawa kafin
-kaucewa abun ciki: idan alamar `[67router Output Styles]` ta riga ta kasance a filin
+kaucewa abun ciki: idan alamar `[OmniRoute Output Styles]` ta riga ta kasance a filin
 `system` na babban mataki (string ko jerin tubalan abun ciki) ko kuma a saƙon system mai
 abun ciki na string, ana barin jikin ba tare da canji ba a matsayin `already_applied` kuma ba a
 gudanar da binciken kalmomin maɓalli. In ba haka ba, kaucewar abun ciki
@@ -569,7 +569,7 @@ waɗannan da ya samu:
 A jikin da ba shi da jerin `messages` (ko yake da wanda babu komai a ciki), ba a gudanar da
 kaucewar abun ciki kuma ba a duba filin `system` na babban mataki. Ana ƙara tubalin bayan
 rubutun filin `instructions` na string, sai dai idan filin ya riga ya ƙunshi
-alamar `[67router Output Styles]`, inda a wannan yanayin ake barin jikin ba tare da canji ba
+alamar `[OmniRoute Output Styles]`, inda a wannan yanayin ake barin jikin ba tare da canji ba
 a matsayin `already_applied`. Idan jikin ba shi da filin `instructions` na string amma yana
 ɗauke da `input` (string ko jeri), tubalin yana zama `instructions`, yana maye gurbin duk
 ƙimar da ba string ba da filin ya riƙe. Jikin da ba shi da filin `instructions` na string
@@ -597,8 +597,8 @@ Ta hanyar shirye-shirye, tsarin compression yana adana zaɓin kamar haka:
 Daidaituwa da tsoffin nau'ikan: yayin da `outputStyles` yake babu komai, tsohon saitin
 `cavemanOutputMode.enabled` yana daidaituwa da `terse-prose` a
 `cavemanOutputMode.intensity`. Daga nan tubalin yana farawa da alamar
-`[67router Output Styles]`, inda tsohon mai saka `applyCavemanOutputMode()` ya rubuta
-`[67router Caveman Output Mode]`. A ƙarƙashin alamar, rubutun yana daidai da tsohuwar
+`[OmniRoute Output Styles]`, inda tsohon mai saka `applyCavemanOutputMode()` ya rubuta
+`[OmniRoute Caveman Output Mode]`. A ƙarƙashin alamar, rubutun yana daidai da tsohuwar
 sakawa a en, pt-BR, es, de, fr, it, ru, id da vi; a ja da zh yana ɗauke da ƙarin
 sarari guda kafin ƙa'idar iyakoki. Ana fassara `terse-prose` zuwa pt-BR, es, de,
 fr, it, ru, zh, ja, id da vi, don haka buƙatar da harshenta da aka tantance yake `hu`

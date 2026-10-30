@@ -45,7 +45,7 @@
 | `better-sqlite3`   | ریشه `^13.0.2` (باینریهای ازپیشساختهشده Node-API — بدون بازسازی Electron) |
 | نسخه برنامه        | `3.8.0`                                                                   |
 | شناسه برنامه       | `online.omniroute.desktop`                                                |
-| نام محصول          | `67router`                                                                |
+| نام محصول          | `OmniRoute`                                                               |
 
 ## اسکریپتها (`package.json` ریشه)
 

@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows：**
 
-- 打开 `设置 → 应用 → 67router → 卸载`
+- 打开 `设置 → 应用 → OmniRoute → 卸载`
 - 或从安装目录运行 NSIS 卸载程序
 
 **macOS：**

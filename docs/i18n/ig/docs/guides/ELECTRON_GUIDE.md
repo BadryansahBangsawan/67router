@@ -45,7 +45,7 @@ Ekwenyere site na `electron/package.json`:
 | `better-sqlite3`   | mgbọrọgwụ `^13.0.2` (Node-API prebuilds — enweghị nrụgharị Electron) |
 | Ụdị ngwa           | `3.8.0`                                                              |
 | NJ ngwa            | `online.omniroute.desktop`                                           |
-| Aha ngwaahịa       | `67router`                                                           |
+| Aha ngwaahịa       | `OmniRoute`                                                          |
 
 ## Skript (mgbọrọgwụ `package.json`)
 

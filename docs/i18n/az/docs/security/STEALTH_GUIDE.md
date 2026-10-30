@@ -212,7 +212,7 @@ Hədəf tutulan host: **`daily-cloudcode-pa.googleapis.com`** (Antigravity-nin y
 
 Sertifikat faylının adı: `omniroute-mitm.crt`. Barmaq izi uyğunluğu `getCertFingerprint()` vasitəsilə yoxlanılır (DER-in SHA-1 heşi).
 
-Əlavə olaraq, `certutil` mövcud olduqda `updateNssDatabases()` sertifikatı istifadəçiyə aid NSS verilənlər bazalarına quraşdırır: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, bütün Firefox profilləri (snap daxil olmaqla); ləqəb isə **`67router MITM Root CA`** olur.
+Əlavə olaraq, `certutil` mövcud olduqda `updateNssDatabases()` sertifikatı istifadəçiyə aid NSS verilənlər bazalarına quraşdırır: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, bütün Firefox profilləri (snap daxil olmaqla); ləqəb isə **`OmniRoute MITM Root CA`** olur.
 
 ### macOS / Windows
 

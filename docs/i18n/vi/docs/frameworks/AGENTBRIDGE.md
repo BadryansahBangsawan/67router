@@ -205,7 +205,7 @@ Chứng chỉ CA của AgentBridge phải được HĐH tin cậy trước khi c
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ Ngoài ra, hãy cấu hình một cổng không đặc quyền trong phần cài
 
 Nếu IDE hiển thị lỗi TLS sau khi khởi động AgentBridge:
 
-1. Xác minh chứng chỉ đã được cài đặt: `security find-certificate -c "67router AgentBridge"` (macOS) hoặc `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Xác minh chứng chỉ đã được cài đặt: `security find-certificate -c "OmniRoute MITM CA"` (macOS) hoặc `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Một số ứng dụng duy trì kho tin cậy riêng (Firefox, Chrome trên Linux). Chạy lại "Trust Cert" và kiểm tra kho chứng chỉ dành riêng cho NSS/Firefox.
 3. Khởi động lại IDE sau khi thiết lập tin cậy — các phiên TLS đang hoạt động sử dụng trạng thái tin cậy cũ.
 

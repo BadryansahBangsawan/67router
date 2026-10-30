@@ -22,11 +22,11 @@ MCP ሰርቨሮች እና ብጁ መመሪያዎች ሁሉ መስራታቸው�
 ## ማዋቀር
 
 1. **67routerን ያስኪዱ** — `npm install -g omniroute && omniroute` (ዳሽቦርዱ `http://localhost:20128` ላይ ነው)።
-2. **ቅጥያውን ይጫኑ** — በExtensions እይታ ውስጥ "67router" ብለው ይፈልጉ።
-3. **ሞዴል ይምረጡ** — Copilot Chat → የሞዴል መምረጫ → **ሞዴሎችን ያስተዳድሩ…** → **67router**፣ ከዚያ የሚፈልጉትን ምልክት ያድርጉበት።
+2. **ቅጥያውን ይጫኑ** — በExtensions እይታ ውስጥ "OmniRoute" ብለው ይፈልጉ።
+3. **ሞዴል ይምረጡ** — Copilot Chat → የሞዴል መምረጫ → **ሞዴሎችን ያስተዳድሩ…** → **OmniRoute**፣ ከዚያ የሚፈልጉትን ምልክት ያድርጉበት።
 
 67router በነባሪው ወደብ ላይ ሲሰራ የሚዋቀር ነገር የለም። ለርቀት ምሳሌ፣
-**በActivity Bar ውስጥ ያለውን የ67router አዶ ይክፈቱ** (ወይም `67router: Manage Connection`ን ያስኪዱ) እና የሚከተሉትን ያዋቅሩ፦
+**በActivity Bar ውስጥ ያለውን የ67router አዶ ይክፈቱ** (ወይም `OmniRoute: Manage Connection`ን ያስኪዱ) እና የሚከተሉትን ያዋቅሩ፦
 
 - **የሰርቨር URL** — የሰርቨሩ ስር፣ ለምሳሌ `http://192.168.0.15:20128`። የ`/v1` ቅጥያ
   በቅጥያው በራስ-ሰር ይጨመራል፤ እርስዎ አያካትቱት።
@@ -111,7 +111,7 @@ npm start
 
 ## ሌሎች toolsዎን ከVS Code ውስጥ ማዋቀር
 
-**`67router: Configure Coding CLI`** ለCodex CLI፣ Claude Code፣ Cline፣ Continue፣ Cursor፣ Aider፣ OpenCode፣ Goose፣ Crush፣ Qwen Code፣
+**`OmniRoute: Configure Coding CLI`** ለCodex CLI፣ Claude Code፣ Cline፣ Continue፣ Cursor፣ Aider፣ OpenCode፣ Goose፣ Crush፣ Qwen Code፣
 Kilo እና Roo ዝግጁ-ለአጠቃቀም profiles እንዲጽፍ `omniroute` CLIን ያንቀሳቅሳል — እነዚህም በ
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) የተገለጹት ተመሳሳይ configs ናቸው። API keyው ለCLIው በ
 `OMNIROUTE_API_KEY` environment variable በኩል ይሰጣል፤ በcommand line ላይ ፈጽሞ አይሰጥም።
@@ -120,14 +120,14 @@ Kilo እና Roo ዝግጁ-ለአጠቃቀም profiles እንዲጽፍ `omniroute
 
 ## ችግር መፍታት
 
-| ምልክት                                            | ምክንያት / መፍትሔ                                                                                                                                                                                                                     |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| በpicker ውስጥ የ67router models አይታዩም              | Serverውን ማግኘት አልተቻለም። የstatus-bar ነጥቡ ግራጫ ይሆናል፤ `67router: Check Connection`ን ያሂዱ። Discovery ሆን ተብሎ ያለማሳወቂያ ይከናወናል፣ እና ጥያቄ ከማቅረብ ይልቅ ምንም models አያክልም።                                                                           |
-| እያንዳንዱ model ሁለት ጊዜ ይታያል                        | ከ1.0.1 በፊት የሆነ OmniCopilot እየተጠቀሙ ነው — update ያድርጉ። extensionው አሁን `?prefix=alias`ን ይጠይቃል።                                                                                                                                       |
-| ቀደም ሲል የነበረ image/audio model ከዝርዝሩ ጠፍቷል        | ከ1.0.1 ጀምሮ ሆን ተብሎ የተደረገ ነው — የchat requestን ፈጽሞ መመለስ አይችልም ነበር።                                                                                                                                                                  |
-| Panel ከActivity Bar ጠፍቷል                        | VS Code ተጨማሪ view containersን በActivity Bar ግርጌ ወዳለው **"…"** overflow ያንቀሳቅሳል፣ እና በright-click የተደበቀ container እንደተደበቀ ይቆያል። Activity Barን right-click ያድርጉ → **67router**ን ምልክት ያድርጉ፣ ወይም በ`67router: Manage Connection` ይክፈቱት። |
-| `editor` mode ቢሆንም Dashboard በbrowser ውስጥ ይከፈታል | Serverው በ`DASHBOARD_ALLOW_EMBED=vscode` **አልተገነባም** (ከላይ ይመልከቱ) — ቀድሞ በተገነባ install ላይ በstartup ጊዜ ማዘጋጀት ምንም አይቀይርም። fallbackው ሆን ተብሎ የተደረገ ነው።                                                                                  |
-| providersን ከቀየሩ በኋላ የModels ዝርዝሩ አልታደሰም         | `67router: Refresh Models`፣ ወይም በpanel ውስጥ ያለው ↻ link።                                                                                                                                                                           |
+| ምልክት                                            | ምክንያት / መፍትሔ                                                                                                                                                                                                                       |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| በpicker ውስጥ የ67router models አይታዩም              | Serverውን ማግኘት አልተቻለም። የstatus-bar ነጥቡ ግራጫ ይሆናል፤ `OmniRoute: Check Connection`ን ያሂዱ። Discovery ሆን ተብሎ ያለማሳወቂያ ይከናወናል፣ እና ጥያቄ ከማቅረብ ይልቅ ምንም models አያክልም።                                                                            |
+| እያንዳንዱ model ሁለት ጊዜ ይታያል                        | ከ1.0.1 በፊት የሆነ OmniCopilot እየተጠቀሙ ነው — update ያድርጉ። extensionው አሁን `?prefix=alias`ን ይጠይቃል።                                                                                                                                         |
+| ቀደም ሲል የነበረ image/audio model ከዝርዝሩ ጠፍቷል        | ከ1.0.1 ጀምሮ ሆን ተብሎ የተደረገ ነው — የchat requestን ፈጽሞ መመለስ አይችልም ነበር።                                                                                                                                                                    |
+| Panel ከActivity Bar ጠፍቷል                        | VS Code ተጨማሪ view containersን በActivity Bar ግርጌ ወዳለው **"…"** overflow ያንቀሳቅሳል፣ እና በright-click የተደበቀ container እንደተደበቀ ይቆያል። Activity Barን right-click ያድርጉ → **OmniRoute**ን ምልክት ያድርጉ፣ ወይም በ`OmniRoute: Manage Connection` ይክፈቱት። |
+| `editor` mode ቢሆንም Dashboard በbrowser ውስጥ ይከፈታል | Serverው በ`DASHBOARD_ALLOW_EMBED=vscode` **አልተገነባም** (ከላይ ይመልከቱ) — ቀድሞ በተገነባ install ላይ በstartup ጊዜ ማዘጋጀት ምንም አይቀይርም። fallbackው ሆን ተብሎ የተደረገ ነው።                                                                                    |
+| providersን ከቀየሩ በኋላ የModels ዝርዝሩ አልታደሰም         | `OmniRoute: Refresh Models`፣ ወይም በpanel ውስጥ ያለው ↻ link።                                                                                                                                                                            |
 
 ---
 

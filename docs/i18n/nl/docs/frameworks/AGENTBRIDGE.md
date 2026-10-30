@@ -205,7 +205,7 @@ Het CA-certificaat van AgentBridge moet door het besturingssysteem worden vertro
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Sleutelhanger):**
@@ -449,7 +449,7 @@ U kunt ook een niet-geprivilegieerde poort configureren in de AgentBridge-instel
 
 Als de IDE TLS-fouten weergeeft nadat AgentBridge is gestart:
 
-1. Controleer of het certificaat is geïnstalleerd: `security find-certificate -c "67router AgentBridge"` (macOS) of `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Controleer of het certificaat is geïnstalleerd: `security find-certificate -c "OmniRoute MITM CA"` (macOS) of `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Sommige apps beheren hun eigen vertrouwensarchief (Firefox, Chrome op Linux). Voer ‘Certificaat vertrouwen’ opnieuw uit en controleer het NSS-/Firefox-specifieke certificaatarchief.
 3. Start de IDE opnieuw nadat u het certificaat hebt vertrouwd — actieve TLS-sessies gebruiken nog de oude vertrouwensstatus.
 

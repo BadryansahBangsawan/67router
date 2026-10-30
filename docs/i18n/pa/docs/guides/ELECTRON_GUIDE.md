@@ -45,7 +45,7 @@
 | `better-sqlite3`   | ਰੂਟ `^13.0.2` (Node-API ਪ੍ਰੀਬਿਲਡ — Electron ਰੀਬਿਲਡ ਨਹੀਂ) |
 | ਐਪ ਵਰਜਨ            | `3.8.0`                                                  |
 | ਐਪ id              | `online.omniroute.desktop`                               |
-| ਉਤਪਾਦ ਦਾ ਨਾਮ       | `67router`                                               |
+| ਉਤਪਾਦ ਦਾ ਨਾਮ       | `OmniRoute`                                              |
 
 ## ਸਕ੍ਰਿਪਟਾਂ (ਰੂਟ `package.json`)
 

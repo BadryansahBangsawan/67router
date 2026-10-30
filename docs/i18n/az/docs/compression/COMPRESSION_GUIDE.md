@@ -538,13 +538,13 @@ heç vaxt xəta baş vermir; heç bir üsluba uyğun gəlməyən seçim gövdən
 və `no_styles` kimi ötürülür), seçilmiş təlimatları kataloq sırası ilə birləşdirir,
 sərhədlər bəndini **bir dəfə** əlavə edir (həmçinin `less-code` və ya `ponytail`
 seçildikdə təhlükəsizlik bəndini, `SAFETY_BOUNDARIES` və ya onun tərcüməsini əlavə edir)
-və bloku vahid idempotentlik markeri (`[67router Output Styles]`) ilə başladır; beləliklə,
+və bloku vahid idempotentlik markeri (`[OmniRoute Output Styles]`) ilə başladır; beləliklə,
 təkrar tətbiq heç bir əməliyyat yaratmır. Müəyyən edilmiş dilin (aşağıdakı Dil seçimi
 bölməsinə baxın) tərcüməsi olduqda ingiliscə təlimat əvəzinə lokallaşdırılmış təlimat
 daxil edilir.
 
 Boş olmayan `messages` massivi olan gövdədə idempotentlik yoxlaması məzmuna görə yan
-keçmədən əvvəl icra olunur: `[67router Output Styles]` markeri artıq yuxarı səviyyəli
+keçmədən əvvəl icra olunur: `[OmniRoute Output Styles]` markeri artıq yuxarı səviyyəli
 `system` sahəsində (sətir və ya məzmun blokları massivi) yaxud sətir məzmunlu sistem
 mesajında olduqda gövdə `already_applied` kimi dəyişməz saxlanılır və açar söz yoxlaması
 aparılmır. Əks halda məzmuna görə yan keçmə
@@ -573,7 +573,7 @@ yerləşdirir:
 `messages` massivi olmayan (və ya massivi boş olan) gövdədə məzmuna görə yan keçmə
 işləmir və yuxarı səviyyəli `system` sahəsi nəzərə alınmır. Blok sətir tipli
 `instructions` sahəsinin mətnindən sonra əlavə edilir; həmin sahədə artıq
-`[67router Output Styles]` markeri varsa, gövdə `already_applied` kimi dəyişməz
+`[OmniRoute Output Styles]` markeri varsa, gövdə `already_applied` kimi dəyişməz
 saxlanılır. Gövdədə sətir tipli `instructions` sahəsi olmadıqda, lakin `input` (sətir və
 ya massiv) olduqda blok `instructions` dəyərinə çevrilərək bu sahənin əvvəlki qeyri-sətir
 dəyərini əvəz edir. Nə sətir tipli `instructions` sahəsi, nə də sətir və ya massiv tipli
@@ -599,9 +599,9 @@ vasitəsilə sıxışdırma konfiqurasiyası seçimi belə saxlayır:
 
 Geriyə uyğunluq: `outputStyles` boş olduğu müddətdə köhnə
 `cavemanOutputMode.enabled` parametri `cavemanOutputMode.intensity` səviyyəsində
-`terse-prose` ilə əlaqələndirilir. Bundan sonra blok `[67router Output Styles]` markeri
+`terse-prose` ilə əlaqələndirilir. Bundan sonra blok `[OmniRoute Output Styles]` markeri
 ilə başlayır; köhnə `applyCavemanOutputMode()` inyektoru isə
-`[67router Caveman Output Mode]` yazırdı. Markerin altında mətn en, pt-BR, es, de, fr,
+`[OmniRoute Caveman Output Mode]` yazırdı. Markerin altında mətn en, pt-BR, es, de, fr,
 it, ru, id və vi dillərində köhnə inyeksiya ilə eynidir; ja və zh dillərində sərhədlər
 bəndindən əvvəl bir əlavə boşluq olur. `terse-prose` pt-BR, es, de, fr, it, ru, zh, ja,
 id və vi dillərinə tərcümə olunur; buna görə müəyyən edilmiş dili `hu` olan sorğuya köhnə

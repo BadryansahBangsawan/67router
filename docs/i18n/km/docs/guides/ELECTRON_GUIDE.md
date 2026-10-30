@@ -45,7 +45,7 @@
 | `better-sqlite3`   | root `^13.0.2` (Node-API prebuilds — មិនត្រូវការ Electron rebuild) |
 | កំណែកម្មវិធី       | `3.8.0`                                                            |
 | App id             | `online.omniroute.desktop`                                         |
-| ឈ្មោះផលិតផល        | `67router`                                                         |
+| ឈ្មោះផលិតផល        | `OmniRoute`                                                        |
 
 ## ស្គ្រីប (root `package.json`)
 

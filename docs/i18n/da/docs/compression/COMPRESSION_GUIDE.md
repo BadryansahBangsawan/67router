@@ -516,12 +516,12 @@ efterlader body'en uændret og springes over som `no_styles`), sammenkæder de v
 instruktioner i katalogets rækkefølge, tilføjer afgrænsningsklausulen **én gang** (samt
 sikkerhedsklausulen, `SAFETY_BOUNDARIES` eller dens oversættelse, når `less-code` eller
 `ponytail` er valgt) og indleder blokken med en enkelt idempotensmarkør
-(`[67router Output Styles]`), så gentagen anvendelse ikke har nogen effekt. Når det
+(`[OmniRoute Output Styles]`), så gentagen anvendelse ikke har nogen effekt. Når det
 fastlagte sprog (se Sprogvalg nedenfor) har en oversættelse, indsættes den lokaliserede
 instruktion i stedet for den engelske.
 
 For en body med et ikke-tomt `messages`-array udføres idempotenskontrollen før
-indholdsforbigåelsen: Når markøren `[67router Output Styles]` allerede findes i feltet
+indholdsforbigåelsen: Når markøren `[OmniRoute Output Styles]` allerede findes i feltet
 `system` på øverste niveau (en streng eller et array af indholdsblokke) eller i en
 systemmeddelelse med strengindhold, efterlades body'en uændret som `already_applied`,
 og der udføres ingen nøgleordskontrol. Ellers kontrollerer en indholdsforbigåelse
@@ -550,7 +550,7 @@ finder:
 For en body uden et `messages`-array (eller med et tomt array) udføres ingen
 indholdsforbigåelse, og et `system`-felt på øverste niveau tages ikke i betragtning.
 Blokken tilføjes efter teksten i et `instructions`-felt af typen streng, medmindre
-feltet allerede indeholder markøren `[67router Output Styles]`; i så fald efterlades
+feltet allerede indeholder markøren `[OmniRoute Output Styles]`; i så fald efterlades
 body'en uændret som `already_applied`. Når body'en ikke har et `instructions`-felt af
 typen streng, men indeholder `input` (en streng eller et array), bliver blokken til
 `instructions` og erstatter enhver værdi, der ikke er en streng, som feltet måtte
@@ -579,8 +579,8 @@ komprimeringskonfigurationen valget som:
 Bagudkompatibilitet: Mens `outputStyles` er tom, knyttes den ældre indstilling
 `cavemanOutputMode.enabled` til `terse-prose` på
 `cavemanOutputMode.intensity`. Blokken starter derefter med markøren
-`[67router Output Styles]`, hvor den ældre `applyCavemanOutputMode()`-injektor skrev
-`[67router Caveman Output Mode]`. Under markøren matcher teksten den ældre indsættelse
+`[OmniRoute Output Styles]`, hvor den ældre `applyCavemanOutputMode()`-injektor skrev
+`[OmniRoute Caveman Output Mode]`. Under markøren matcher teksten den ældre indsættelse
 på en, pt-BR, es, de, fr, it, ru, id og vi; på ja og zh indeholder den ét ekstra
 mellemrum før afgrænsningsklausulen. `terse-prose` oversættes til pt-BR, es, de, fr, it,
 ru, zh, ja, id og vi, så en anmodning, hvis fastlagte sprog er `hu`, får den engelske

@@ -233,7 +233,7 @@ Siúlann `getLinuxCertConfig()` trí liosta tosaíochta agus roghnaíonn sé an 
 
 Ainm comhaid an teastais: `omniroute-mitm.crt`. Meaitseáil méarloirg trí `getCertFingerprint()` (SHA-1 de DER).
 
-Ina theannta sin, suiteálann `updateNssDatabases()` i mbunachair sonraí NSS in aghaidh an úsáideora nuair atá `certutil` ar fáil: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gach próifíl Firefox (snap san áireamh), faoin leasainm **`67router MITM Root CA`**.
+Ina theannta sin, suiteálann `updateNssDatabases()` i mbunachair sonraí NSS in aghaidh an úsáideora nuair atá `certutil` ar fáil: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gach próifíl Firefox (snap san áireamh), faoin leasainm **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

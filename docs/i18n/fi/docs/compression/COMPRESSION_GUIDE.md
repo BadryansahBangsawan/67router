@@ -538,12 +538,12 @@ runko jätetään muuttamatta ja ohitetaan syyllä `no_styles`), yhdistää vali
 luettelon mukaisessa järjestyksessä,
 lisää rajausehdon **kerran** (sekä turvallisuusehdon, `SAFETY_BOUNDARIES` tai sen
 käännöksen, kun `less-code` tai `ponytail` on valittuna) ja aloittaa lohkon yhdellä
-idempotenssimerkinnällä (`[67router Output Styles]`), joten uudelleensoveltaminen ei
+idempotenssimerkinnällä (`[OmniRoute Output Styles]`), joten uudelleensoveltaminen ei
 tee mitään. Kun ratkaistulle kielelle (katso Kielen valinta jäljempänä) on olemassa
 käännös, englanninkielisen ohjeen sijasta lisätään lokalisoitu ohje.
 
 Rungossa, jossa on ei-tyhjä `messages`-taulukko, idempotenssitarkistus suoritetaan ennen
-sisällön ohitustarkistusta: kun `[67router Output Styles]` -merkintä on jo ylätason
+sisällön ohitustarkistusta: kun `[OmniRoute Output Styles]` -merkintä on jo ylätason
 `system`-kentässä (merkkijonona tai sisältölohkojen taulukkona) tai järjestelmäviestissä,
 jonka sisältö on merkkijono, runko jätetään muuttamatta syyllä `already_applied`, eikä
 avainsanatarkistusta suoriteta. Muussa tapauksessa sisällön ohitustarkistus
@@ -573,7 +573,7 @@ seuraavista paikoista:
 Rungossa, jossa ei ole `messages`-taulukkoa (tai jossa se on tyhjä), sisällön
 ohitustarkistusta ei suoriteta eikä ylätason `system`-kenttää huomioida. Lohko lisätään
 merkkijonotyyppisen `instructions`-kentän tekstin perään, ellei kentässä jo ole
-`[67router Output Styles]` -merkintää, jolloin runko jätetään muuttamatta syyllä
+`[OmniRoute Output Styles]` -merkintää, jolloin runko jätetään muuttamatta syyllä
 `already_applied`. Kun rungossa ei ole merkkijonotyyppistä `instructions`-kenttää mutta
 siinä on `input` (merkkijono tai taulukko), lohkosta tulee `instructions`, ja se korvaa
 kentässä mahdollisesti olleen muun kuin merkkijonoarvon. Runko, jossa ei ole
@@ -600,9 +600,9 @@ Ohjelmallisesti pakkausmääritykset säilyttävät valinnan seuraavasti:
 
 Taaksepäin yhteensopivuus: kun `outputStyles` on tyhjä, vanha
 `cavemanOutputMode.enabled`-asetus vastaa `terse-prose`-tyyliä tasolla
-`cavemanOutputMode.intensity`. Lohko alkaa tällöin `[67router Output Styles]`
+`cavemanOutputMode.intensity`. Lohko alkaa tällöin `[OmniRoute Output Styles]`
 -merkinnällä, kun taas vanha `applyCavemanOutputMode()`-lisäystoiminto käytti
-`[67router Caveman Output Mode]` -merkintää. Merkinnän alapuolella oleva teksti vastaa
+`[OmniRoute Caveman Output Mode]` -merkintää. Merkinnän alapuolella oleva teksti vastaa
 vanhaa lisäystä kielillä en, pt-BR, es, de, fr, it, ru, id ja vi; kielillä ja ja zh siinä
 on yksi ylimääräinen välilyönti ennen rajausehtoa. `terse-prose` on käännetty kielille
 pt-BR, es, de, fr, it, ru, zh, ja, id ja vi, joten pyyntö, jonka ratkaistu kieli on

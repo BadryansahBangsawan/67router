@@ -45,7 +45,7 @@
 | `better-sqlite3`   | kök `^13.0.2` (Node-API ön derlemeleri — Electron için yeniden derleme gerekmez) |
 | Uygulama sürümü    | `3.8.0`                                                                          |
 | Uygulama kimliği   | `online.omniroute.desktop`                                                       |
-| Ürün adı           | `67router`                                                                       |
+| Ürün adı           | `OmniRoute`                                                                      |
 
 ## Betikler (kök `package.json`)
 

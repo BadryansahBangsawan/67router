@@ -226,7 +226,7 @@ Gazda țintă interceptată: **`daily-cloudcode-pa.googleapis.com`** (serverul u
 
 Numele fișierului certificatului: `omniroute-mitm.crt`. Verificarea amprentei se face prin `getCertFingerprint()` (SHA-1 al DER).
 
-În plus, `updateNssDatabases()` instalează certificatul în bazele de date NSS ale fiecărui utilizator atunci când `certutil` este disponibil: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, toate profilurile Firefox (inclusiv snap), sub pseudonimul **`67router MITM Root CA`**.
+În plus, `updateNssDatabases()` instalează certificatul în bazele de date NSS ale fiecărui utilizator atunci când `certutil` este disponibil: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, toate profilurile Firefox (inclusiv snap), sub pseudonimul **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

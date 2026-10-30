@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 Ім’я файлу сертифіката: `omniroute-mitm.crt`. Зіставлення відбитка виконується через `getCertFingerprint()` (SHA-1 від DER).
 
-Крім того, `updateNssDatabases()` установлює сертифікат у користувацькі бази даних NSS, коли доступна команда `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, усі профілі Firefox (включно зі snap), під псевдонімом **`67router MITM Root CA`**.
+Крім того, `updateNssDatabases()` установлює сертифікат у користувацькі бази даних NSS, коли доступна команда `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, усі профілі Firefox (включно зі snap), під псевдонімом **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux ‏(NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS ‏(Keychain):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # إنهاء قسري (استخدمه بحذر)
 
 إذا أظهرت بيئة التطوير المتكاملة أخطاء TLS بعد تشغيل AgentBridge:
 
-1. تحقق من تثبيت الشهادة: `security find-certificate -c "67router AgentBridge"` ‏(macOS) أو `certutil -L -d sql:$HOME/.pki/nssdb` ‏(Linux/NSS)
+1. تحقق من تثبيت الشهادة: `security find-certificate -c "OmniRoute MITM CA"` ‏(macOS) أو `certutil -L -d sql:$HOME/.pki/nssdb` ‏(Linux/NSS)
 2. تحتفظ بعض التطبيقات بمخزن ثقة خاص بها (Firefox وChrome على Linux). شغّل "الوثوق بالشهادة" مرة أخرى وتحقق من مخزن الشهادات الخاص بـNSS/Firefox.
 3. أعد تشغيل بيئة التطوير المتكاملة بعد منح الثقة — تستخدم جلسات TLS الجارية حالة الثقة القديمة.
 

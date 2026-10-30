@@ -25,11 +25,11 @@ strežniki MCP in navodila po meri še naprej delujejo, le da se izvajajo z mode
 
 1. **Zaženite 67router** — `npm install -g omniroute && omniroute` (nadzorna plošča je na `http://localhost:20128`).
 2. **Namestite razširitev** — v pogledu Extensions poiščite »67router«.
-3. **Izberite model** — Copilot Chat → izbirnik modelov → **Manage Models…** → **67router**, nato označite
+3. **Izberite model** — Copilot Chat → izbirnik modelov → **Manage Models…** → **OmniRoute**, nato označite
    želene modele.
 
 Ko 67router deluje na privzetih vratih, ni treba nastaviti ničesar. Za oddaljeni primerek odprite
-**ikono 67router v vrstici dejavnosti** (ali zaženite `67router: Manage Connection`) in nastavite:
+**ikono 67router v vrstici dejavnosti** (ali zaženite `OmniRoute: Manage Connection`) in nastavite:
 
 - **URL strežnika** — korenski naslov strežnika, npr. `http://192.168.0.15:20128`. Pripono `/v1`
   doda razširitev; ne vključite je.
@@ -120,7 +120,7 @@ Glejte [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) in težavo
 
 ## Konfiguriranje drugih orodij znotraj VS Code
 
-**`67router: Configure Coding CLI`** uporablja vmesnik CLI `omniroute` za zapis profilov, pripravljenih
+**`OmniRoute: Configure Coding CLI`** uporablja vmesnik CLI `omniroute` za zapis profilov, pripravljenih
 za uporabo z orodji Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo in Roo — gre za iste konfiguracije, opisane v
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Ključ API je vmesniku CLI posredovan prek
@@ -130,14 +130,14 @@ okoljske spremenljivke `OMNIROUTE_API_KEY`, nikoli prek ukazne vrstice.
 
 ## Odpravljanje težav
 
-| Simptom                                                     | Vzrok/rešitev                                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| V izbirniku ni modelov 67router                             | Strežnik ni dosegljiv. Pika v vrstici stanja postane siva; zaženite `67router: Check Connection`. Odkrivanje je načrtno tiho in namesto prikaza poziva ne doda nobenega modela.                                                                                           |
-| Vsak model se prikaže dvakrat                               | Uporabljate različico OmniCopilot, starejšo od 1.0.1 — posodobite jo. Razširitev zdaj zahteva `?prefix=alias`.                                                                                                                                                            |
-| Model za slike/zvok je bil prej naveden, zdaj pa ga ni      | Namerno od različice 1.0.1 — nikoli ni mogel odgovoriti na zahtevo klepeta.                                                                                                                                                                                               |
-| Podokno manjka v vrstici dejavnosti                         | VS Code premakne dodatne vsebnike pogledov v prelivni meni **"…"** na dnu vrstice dejavnosti, vsebnik, skrit z desnim klikom, pa ostane skrit. Z desno tipko miške kliknite vrstico dejavnosti → označite **67router** ali pa ga odprite z `67router: Manage Connection`. |
-| Nadzorna plošča se kljub načinu `editor` odpre v brskalniku | Strežnik ni bil **zgrajen** z `DASHBOARD_ALLOW_EMBED=vscode` (glejte zgoraj) — nastavitev ob zagonu vnaprej zgrajene namestitve nima učinka. Nadomestno vedenje je namerno.                                                                                               |
-| Seznam modelov je po spremembi ponudnikov zastarel          | `67router: Refresh Models` ali povezava ↻ v podoknu.                                                                                                                                                                                                                      |
+| Simptom                                                     | Vzrok/rešitev                                                                                                                                                                                                                                                               |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| V izbirniku ni modelov 67router                             | Strežnik ni dosegljiv. Pika v vrstici stanja postane siva; zaženite `OmniRoute: Check Connection`. Odkrivanje je načrtno tiho in namesto prikaza poziva ne doda nobenega modela.                                                                                            |
+| Vsak model se prikaže dvakrat                               | Uporabljate različico OmniCopilot, starejšo od 1.0.1 — posodobite jo. Razširitev zdaj zahteva `?prefix=alias`.                                                                                                                                                              |
+| Model za slike/zvok je bil prej naveden, zdaj pa ga ni      | Namerno od različice 1.0.1 — nikoli ni mogel odgovoriti na zahtevo klepeta.                                                                                                                                                                                                 |
+| Podokno manjka v vrstici dejavnosti                         | VS Code premakne dodatne vsebnike pogledov v prelivni meni **"…"** na dnu vrstice dejavnosti, vsebnik, skrit z desnim klikom, pa ostane skrit. Z desno tipko miške kliknite vrstico dejavnosti → označite **OmniRoute** ali pa ga odprite z `OmniRoute: Manage Connection`. |
+| Nadzorna plošča se kljub načinu `editor` odpre v brskalniku | Strežnik ni bil **zgrajen** z `DASHBOARD_ALLOW_EMBED=vscode` (glejte zgoraj) — nastavitev ob zagonu vnaprej zgrajene namestitve nima učinka. Nadomestno vedenje je namerno.                                                                                                 |
+| Seznam modelov je po spremembi ponudnikov zastarel          | `OmniRoute: Refresh Models` ali povezava ↻ v podoknu.                                                                                                                                                                                                                       |
 
 ---
 

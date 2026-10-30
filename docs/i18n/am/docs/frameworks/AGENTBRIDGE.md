@@ -205,7 +205,7 @@ IDEs የMITM ግንኙነቱን ከመቀበላቸው በፊት የAgentBridge C
 **Linux (NSS — Chrome/Firefox)፦**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain)፦**
@@ -447,7 +447,7 @@ sudo fuser -k 443/tcp  # በግድ ያቋርጡ (በጥንቃቄ ይጠቀሙ)
 
 AgentBridgeን ካስጀመሩ በኋላ IDEው የTLS ስህተቶችን ካሳየ፦
 
-1. ሰርተፍኬቱ መጫኑን ያረጋግጡ፦ `security find-certificate -c "67router AgentBridge"` (macOS) ወይም `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ሰርተፍኬቱ መጫኑን ያረጋግጡ፦ `security find-certificate -c "OmniRoute MITM CA"` (macOS) ወይም `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. አንዳንድ መተግበሪያዎች የራሳቸውን የታመኑ ሰርተፍኬቶች ማከማቻ ይይዛሉ (Firefox፣ Chrome በLinux ላይ)። "Trust Cert"ን እንደገና ያስኪዱ እና ለNSS/Firefox የተለየውን የሰርተፍኬት ማከማቻ ያረጋግጡ።
 3. እምነት ከሰጡ በኋላ IDEውን እንደገና ያስጀምሩ — በሂደት ላይ ያሉ የTLS ክፍለ ጊዜዎች የድሮውን የእምነት ሁኔታ ይጠቀማሉ።
 

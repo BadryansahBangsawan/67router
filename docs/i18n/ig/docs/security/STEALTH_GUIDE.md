@@ -229,7 +229,7 @@ Host ebumnuche a na-egbochi: **`daily-cloudcode-pa.googleapis.com`** (upstream n
 
 Aha faịlụ cert: `omniroute-mitm.crt`. A na-eji `getCertFingerprint()` tụnyere fingerprint (SHA-1 nke DER).
 
-Ọzọkwa, `updateNssDatabases()` na-etinye ya n'ime DB NSS nke onye ọrụ ọ bụla mgbe `certutil` dị: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, profaịlụ Firefox niile (gụnyere snap), n'okpuru aha otutu **`67router MITM Root CA`**.
+Ọzọkwa, `updateNssDatabases()` na-etinye ya n'ime DB NSS nke onye ọrụ ọ bụla mgbe `certutil` dị: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, profaịlụ Firefox niile (gụnyere snap), n'okpuru aha otutu **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

@@ -205,7 +205,7 @@ OS ga-atụkwasịrịrị asambodo CA nke AgentBridge obi tupu IDE anabata njik
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -449,7 +449,7 @@ N'aka nke ọzọ, hazie port na-achọghị ikike pụrụ iche na ntọala Age
 
 Ọ bụrụ na IDE gosipụta njehie TLS mgbe ịmalitechara AgentBridge:
 
-1. Nyochaa na etinyere asambodo ahụ: `security find-certificate -c "67router AgentBridge"` (macOS) ma ọ bụ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Nyochaa na etinyere asambodo ahụ: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ma ọ bụ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Ụfọdụ ngwa na-edobe ebe nchekwa ntụkwasị obi nke ha (Firefox, Chrome na Linux). Gbaa "Trust Cert" ọzọ ma lelee ebe nchekwa asambodo pụrụ iche nke NSS/Firefox.
 3. Malitegharịa IDE mgbe ị tụkwasịrị asambodo ahụ obi — nnọkọ TLS ndị na-aga n'ihu na-eji ọnọdụ ntụkwasị obi ochie.
 

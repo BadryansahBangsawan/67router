@@ -237,7 +237,7 @@ Cel interceptowanego hosta: **`daily-cloudcode-pa.googleapis.com`** (upstream An
 
 Nazwa pliku cert: `omniroute-mitm.crt`. Dopasowanie fingerprintu przez `getCertFingerprint()` (SHA-1 z DER).
 
-Dodatkowo `updateNssDatabases()` instaluje do per-user NSS DB, gdy dostępne jest `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wszystkie profile Firefox (w tym snap), pod nickiem **`67router MITM Root CA`**.
+Dodatkowo `updateNssDatabases()` instaluje do per-user NSS DB, gdy dostępne jest `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wszystkie profile Firefox (w tym snap), pod nickiem **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

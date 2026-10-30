@@ -42,7 +42,7 @@
 | `better-sqlite3`      | root `^13.0.2` (Node-API prebuilds — Electron rebuild ആവശ്യമില്ല) |
 | ആപ്പ് പതിപ്പ്         | `3.8.0`                                                           |
 | ആപ്പ് id              | `online.omniroute.desktop`                                        |
-| ഉൽപ്പന്നത്തിന്റെ പേര് | `67router`                                                        |
+| ഉൽപ്പന്നത്തിന്റെ പേര് | `OmniRoute`                                                       |
 
 ## സ്ക്രിപ്റ്റുകൾ (root `package.json`)
 

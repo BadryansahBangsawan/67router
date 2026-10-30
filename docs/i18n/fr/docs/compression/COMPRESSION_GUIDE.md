@@ -534,13 +534,13 @@ qui ne correspond à aucun style laisse le corps inchangé et est ignorée avec 
 ajoute la clause relative aux limites **une seule fois** (ainsi que la clause de sécurité,
 `SAFETY_BOUNDARIES` ou sa traduction, lorsque `less-code` ou `ponytail` est sélectionné),
 et commence le bloc par un unique marqueur d’idempotence
-(`[67router Output Styles]`), de sorte qu’une nouvelle application n’a aucun effet.
+(`[OmniRoute Output Styles]`), de sorte qu’une nouvelle application n’a aucun effet.
 Lorsque la langue résolue (voir Sélection de la langue ci-dessous) dispose d’une
 traduction, l’instruction localisée est injectée à la place de celle en anglais.
 
 Sur un corps contenant un tableau `messages` non vide, la vérification d’idempotence
 s’exécute avant le contournement fondé sur le contenu : lorsque le marqueur
-`[67router Output Styles]` est déjà présent dans le champ `system` de premier niveau
+`[OmniRoute Output Styles]` est déjà présent dans le champ `system` de premier niveau
 (une chaîne ou un tableau de blocs de contenu) ou dans un message système dont le
 contenu est une chaîne, le corps reste inchangé avec le motif `already_applied` et
 aucune vérification de mots-clés n’est effectuée. Sinon, un contournement fondé sur le
@@ -571,7 +571,7 @@ emplacement disponible parmi les suivants :
 Sur un corps sans tableau `messages` (ou avec un tableau vide), aucun contournement
 fondé sur le contenu n’est exécuté et le champ `system` de premier niveau n’est pas
 consulté. Le bloc est ajouté après le texte d’un champ `instructions` de type chaîne,
-sauf si ce champ contient déjà le marqueur `[67router Output Styles]`, auquel cas le
+sauf si ce champ contient déjà le marqueur `[OmniRoute Output Styles]`, auquel cas le
 corps reste inchangé avec le motif `already_applied`. Lorsque le corps ne possède pas de
 champ `instructions` de type chaîne, mais comporte `input` (une chaîne ou un tableau),
 le bloc devient `instructions`, en remplaçant toute valeur non textuelle que ce champ
@@ -601,8 +601,8 @@ Par programmation, la configuration de compression conserve la sélection comme 
 Rétrocompatibilité : tant que `outputStyles` est vide, le paramètre historique
 `cavemanOutputMode.enabled` est associé à `terse-prose` au niveau défini par
 `cavemanOutputMode.intensity`. Le bloc commence alors par le marqueur
-`[67router Output Styles]`, là où l’ancien injecteur `applyCavemanOutputMode()`
-écrivait `[67router Caveman Output Mode]`. Sous le marqueur, le texte correspond à
+`[OmniRoute Output Styles]`, là où l’ancien injecteur `applyCavemanOutputMode()`
+écrivait `[OmniRoute Caveman Output Mode]`. Sous le marqueur, le texte correspond à
 l’injection historique en en, pt-BR, es, de, fr, it, ru, id et vi ; en ja et zh, il
 comporte une espace supplémentaire avant la clause relative aux limites. `terse-prose`
 est traduit en pt-BR, es, de, fr, it, ru, zh, ja, id et vi ; ainsi, une requête dont la

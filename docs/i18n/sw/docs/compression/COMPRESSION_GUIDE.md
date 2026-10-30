@@ -534,12 +534,12 @@ huacha mwili bila kubadilishwa, ukirukwa kama `no_styles`), huunganisha maagizo
 yaliyochaguliwa kwa mpangilio wa katalogi,
 huongeza kifungu cha mipaka **mara moja** (pamoja na kifungu cha usalama,
 `SAFETY_BOUNDARIES` au tafsiri yake, wakati `less-code` au `ponytail` imechaguliwa), na
-huanzisha bloku kwa alama moja ya kutorudiwa (`[67router Output Styles]`), hivyo
+huanzisha bloku kwa alama moja ya kutorudiwa (`[OmniRoute Output Styles]`), hivyo
 kutekeleza tena hakufanyi chochote. Wakati lugha iliyotatuliwa (tazama Uteuzi wa lugha
 hapa chini) ina tafsiri, agizo lililotafsiriwa huingizwa badala ya Kiingereza.
 
 Kwenye mwili wenye safu ya `messages` isiyo tupu, ukaguzi wa kutorudiwa huendeshwa kabla
-ya upitaji wa maudhui: wakati alama ya `[67router Output Styles]` tayari ipo katika uga
+ya upitaji wa maudhui: wakati alama ya `[OmniRoute Output Styles]` tayari ipo katika uga
 wa kiwango cha juu wa `system` (mfuatano au safu ya bloku za maudhui) au katika ujumbe wa
 mfumo wenye maudhui ya mfuatano, mwili huachwa bila kubadilishwa kama
 `already_applied` na hakuna ukaguzi wa maneno muhimu unaoendeshwa.
@@ -569,7 +569,7 @@ hizi inayopata:
 Kwenye mwili usio na safu ya `messages` (au wenye safu tupu), hakuna upitaji wa maudhui
 unaoendeshwa na uga wa kiwango cha juu wa `system` hauangaliwi. Bloku huongezwa baada ya
 maandishi ya uga wa mfuatano wa `instructions`, isipokuwa uga huo tayari una alama ya
-`[67router Output Styles]`, ambapo mwili huachwa bila kubadilishwa kama
+`[OmniRoute Output Styles]`, ambapo mwili huachwa bila kubadilishwa kama
 `already_applied`. Wakati mwili hauna uga wa mfuatano wa `instructions` lakini una
 `input` (mfuatano au safu), bloku huwa `instructions`, ikibadilisha thamani yoyote isiyo
 mfuatano iliyokuwapo katika uga huo. Mwili usio na uga wa mfuatano wa `instructions`
@@ -598,8 +598,8 @@ usanidi wa mbano huhifadhi uteuzi kama:
 Utangamano wa nyuma: wakati `outputStyles` ni tupu, mpangilio wa zamani wa
 `cavemanOutputMode.enabled` huwekewa `terse-prose` katika
 `cavemanOutputMode.intensity`. Kisha bloku huanza kwa alama ya
-`[67router Output Styles]`, ambapo kiingiza cha zamani cha
-`applyCavemanOutputMode()` kiliandika `[67router Caveman Output Mode]`. Chini ya alama
+`[OmniRoute Output Styles]`, ambapo kiingiza cha zamani cha
+`applyCavemanOutputMode()` kiliandika `[OmniRoute Caveman Output Mode]`. Chini ya alama
 hiyo, maandishi yanalingana na uingizaji wa zamani katika en, pt-BR, es, de, fr, it, ru,
 id na vi; katika ja na zh yana nafasi moja ya ziada kabla ya kifungu cha mipaka.
 `terse-prose` hutafsiriwa katika pt-BR, es, de, fr, it, ru, zh, ja, id na vi, kwa hivyo

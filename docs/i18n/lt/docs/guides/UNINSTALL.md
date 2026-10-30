@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- Atidarykite `Nustatymai → Programėlės → 67router → Pašalinti`
+- Atidarykite `Nustatymai → Programėlės → OmniRoute → Pašalinti`
 - Arba paleiskite NSIS šalinimo programą iš diegimo katalogo
 
 **macOS:**

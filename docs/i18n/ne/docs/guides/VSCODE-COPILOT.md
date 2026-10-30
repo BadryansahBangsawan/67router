@@ -24,12 +24,12 @@ MCP सर्भरहरू र अनुकूलन निर्देशन�
 ## सेटअप
 
 1. **67router चलाउनुहोस्** — `npm install -g omniroute && omniroute` (`http://localhost:20128` मा ड्यासबोर्ड)।
-2. **एक्सटेन्सन स्थापना गर्नुहोस्** — Extensions दृश्यमा "67router" खोज्नुहोस्।
-3. **मोडेल रोज्नुहोस्** — Copilot Chat → मोडेल चयनकर्ता → **Manage Models…** → **67router**, त्यसपछि
+2. **एक्सटेन्सन स्थापना गर्नुहोस्** — Extensions दृश्यमा "OmniRoute" खोज्नुहोस्।
+3. **मोडेल रोज्नुहोस्** — Copilot Chat → मोडेल चयनकर्ता → **Manage Models…** → **OmniRoute**, त्यसपछि
    आफूले चाहेका विकल्पहरूमा चिनो लगाउनुहोस्।
 
 67router पूर्वनिर्धारित पोर्टमा चल्दा केही पनि कन्फिगर गर्नु पर्दैन। रिमोट इन्स्ट्यान्सका लागि,
-**Activity Bar मा रहेको 67router आइकन** खोल्नुहोस् (वा `67router: Manage Connection` चलाउनुहोस्) र निम्न सेट गर्नुहोस्:
+**Activity Bar मा रहेको 67router आइकन** खोल्नुहोस् (वा `OmniRoute: Manage Connection` चलाउनुहोस्) र निम्न सेट गर्नुहोस्:
 
 - **सर्भर URL** — सर्भरको रुट, जस्तै `http://192.168.0.15:20128`। `/v1` प्रत्यय
   एक्सटेन्सनले थप्छ; यसलाई समावेश नगर्नुहोस्।
@@ -112,21 +112,21 @@ Embedding सक्षम गरिएको build बिना पृष्ठ�
 
 ## VS Code भित्रबाट आफ्ना अन्य उपकरणहरू कन्फिगर गर्ने
 
-**`67router: Configure Coding CLI`** ले Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo र Roo का लागि प्रयोग गर्न तयार profiles लेख्न `omniroute` CLI चलाउँछ — यी
+**`OmniRoute: Configure Coding CLI`** ले Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo र Roo का लागि प्रयोग गर्न तयार profiles लेख्न `omniroute` CLI चलाउँछ — यी
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) मा वर्णन गरिएका उही configs हुन्। API key लाई command line मा कहिल्यै नराखी `OMNIROUTE_API_KEY` environment variable मार्फत CLI लाई दिइन्छ।
 
 ---
 
 ## समस्या समाधान
 
-| लक्षण                                          | कारण / समाधान                                                                                                                                                                                                                                                                        |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| picker मा कुनै 67router models छैनन्           | सर्भर पहुँचयोग्य छैन। status-bar को थोप्लो खैरो हुन्छ; `67router: Check Connection` चलाउनुहोस्। Discovery डिजाइनअनुसार मौन हुन्छ र prompt देखाउनुको सट्टा कुनै models योगदान गर्दैन।                                                                                                 |
-| प्रत्येक model दुईपटक देखिन्छ                  | तपाईं 1.0.1 भन्दा पुरानो OmniCopilot प्रयोग गर्दै हुनुहुन्छ — update गर्नुहोस्। Extension ले अब `?prefix=alias` अनुरोध गर्छ।                                                                                                                                                         |
-| पहिले सूचीमा रहेको image/audio model अहिले छैन | 1.0.1 देखि जानाजानी हटाइएको हो — यसले कहिल्यै chat request को उत्तर दिन सक्दैनथ्यो।                                                                                                                                                                                                  |
-| Activity Bar बाट panel हराएको छ                | VS Code ले अतिरिक्त view containers लाई Activity Bar को तल रहेको **"…"** overflow मा सार्छ, र right-click मार्फत लुकाइएको container लुकेकै रहन्छ। Activity Bar मा right-click गर्नुहोस् → **67router** मा चिन्ह लगाउनुहोस्, वा `67router: Manage Connection` प्रयोग गरेर खोल्नुहोस्। |
-| `editor` mode भए पनि Dashboard ब्राउजरमा खुल्छ | सर्भर `DASHBOARD_ALLOW_EMBED=vscode` सहित **build** गरिएको थिएन (माथि हेर्नुहोस्) — prebuilt install मा startup का बेला यसलाई सेट गर्दा केही हुँदैन। Fallback जानाजानी राखिएको हो।                                                                                                   |
-| providers परिवर्तन गरेपछि Models सूची पुरानो छ | `67router: Refresh Models`, वा panel मा रहेको ↻ link प्रयोग गर्नुहोस्।                                                                                                                                                                                                               |
+| लक्षण                                          | कारण / समाधान                                                                                                                                                                                                                                                                          |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| picker मा कुनै 67router models छैनन्           | सर्भर पहुँचयोग्य छैन। status-bar को थोप्लो खैरो हुन्छ; `OmniRoute: Check Connection` चलाउनुहोस्। Discovery डिजाइनअनुसार मौन हुन्छ र prompt देखाउनुको सट्टा कुनै models योगदान गर्दैन।                                                                                                  |
+| प्रत्येक model दुईपटक देखिन्छ                  | तपाईं 1.0.1 भन्दा पुरानो OmniCopilot प्रयोग गर्दै हुनुहुन्छ — update गर्नुहोस्। Extension ले अब `?prefix=alias` अनुरोध गर्छ।                                                                                                                                                           |
+| पहिले सूचीमा रहेको image/audio model अहिले छैन | 1.0.1 देखि जानाजानी हटाइएको हो — यसले कहिल्यै chat request को उत्तर दिन सक्दैनथ्यो।                                                                                                                                                                                                    |
+| Activity Bar बाट panel हराएको छ                | VS Code ले अतिरिक्त view containers लाई Activity Bar को तल रहेको **"…"** overflow मा सार्छ, र right-click मार्फत लुकाइएको container लुकेकै रहन्छ। Activity Bar मा right-click गर्नुहोस् → **OmniRoute** मा चिन्ह लगाउनुहोस्, वा `OmniRoute: Manage Connection` प्रयोग गरेर खोल्नुहोस्। |
+| `editor` mode भए पनि Dashboard ब्राउजरमा खुल्छ | सर्भर `DASHBOARD_ALLOW_EMBED=vscode` सहित **build** गरिएको थिएन (माथि हेर्नुहोस्) — prebuilt install मा startup का बेला यसलाई सेट गर्दा केही हुँदैन। Fallback जानाजानी राखिएको हो।                                                                                                     |
+| providers परिवर्तन गरेपछि Models सूची पुरानो छ | `OmniRoute: Refresh Models`, वा panel मा रहेको ↻ link प्रयोग गर्नुहोस्।                                                                                                                                                                                                                |
 
 ---
 

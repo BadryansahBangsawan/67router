@@ -23,11 +23,11 @@
 
 1. **67router ausführen** — `npm install -g omniroute && omniroute` (Dashboard unter `http://localhost:20128`).
 2. **Erweiterung installieren** — suchen Sie in der Erweiterungsansicht nach „67router“.
-3. **Modell auswählen** — Copilot Chat → Modellauswahl → **Modelle verwalten…** → **67router**, und wählen Sie dann
+3. **Modell auswählen** — Copilot Chat → Modellauswahl → **Modelle verwalten…** → **OmniRoute**, und wählen Sie dann
    die gewünschten Modelle aus.
 
 Wenn 67router auf dem Standardport läuft, muss nichts konfiguriert werden. Öffnen Sie für eine Remote-Instanz das
-**67router-Symbol in der Aktivitätsleiste** (oder führen Sie `67router: Manage Connection` aus) und legen Sie Folgendes fest:
+**OmniRoute-Symbol in der Aktivitätsleiste** (oder führen Sie `OmniRoute: Manage Connection` aus) und legen Sie Folgendes fest:
 
 - **Server-URL** — die Server-Stammadresse, z. B. `http://192.168.0.15:20128`. Das Suffix `/v1` wird
   von der Erweiterung angehängt; geben Sie es nicht mit an.
@@ -118,7 +118,7 @@ Siehe [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) und Issue
 
 ## Konfiguration anderer Tools direkt aus VS Code
 
-**`67router: Configure Coding CLI`** steuert die `omniroute`-CLI, um sofort einsatzbereite Profile
+**`OmniRoute: Configure Coding CLI`** steuert die `omniroute`-CLI, um sofort einsatzbereite Profile
 für Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo und Roo zu erstellen — dieselben Konfigurationen, die in
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) beschrieben sind. Der API-Schlüssel wird über die
@@ -128,14 +128,14 @@ Umgebungsvariable `OMNIROUTE_API_KEY` an die CLI übergeben, niemals über die B
 
 ## Fehlerbehebung
 
-| Symptom                                                                  | Ursache / Lösung                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Keine 67router-Modelle in der Auswahlliste                               | Der Server ist nicht erreichbar. Der Punkt in der Statusleiste wird grau; führen Sie `67router: Check Connection` aus. Die Erkennung erfolgt absichtlich ohne Rückmeldung und fügt keine Modelle hinzu, statt zu einer Eingabe aufzufordern.                                                                                             |
-| Jedes Modell wird zweimal angezeigt                                      | Sie verwenden eine OmniCopilot-Version vor 1.0.1 — führen Sie ein Update durch. Die Erweiterung fordert jetzt `?prefix=alias` an.                                                                                                                                                                                                        |
-| Ein Bild-/Audiomodell wurde früher aufgeführt und ist jetzt verschwunden | Absichtlich seit 1.0.1 — es konnte nie auf eine Chat-Anfrage antworten.                                                                                                                                                                                                                                                                  |
-| Panel fehlt in der Aktivitätsleiste                                      | VS Code verschiebt zusätzliche Ansichtscontainer in das **„…“**-Überlaufmenü am unteren Rand der Aktivitätsleiste. Ein per Rechtsklick ausgeblendeter Container bleibt ausgeblendet. Klicken Sie mit der rechten Maustaste auf die Aktivitätsleiste → aktivieren Sie **67router**, oder öffnen Sie es mit `67router: Manage Connection`. |
-| Dashboard wird trotz `editor`-Modus im Browser geöffnet                  | Der Server wurde nicht mit `DASHBOARD_ALLOW_EMBED=vscode` **erstellt** (siehe oben) — das Setzen der Variable beim Start einer vorab erstellten Installation bewirkt nichts. Dieses Ausweichverhalten ist beabsichtigt.                                                                                                                  |
-| Modellliste ist nach einer Änderung der Anbieter veraltet                | `67router: Refresh Models` oder der ↻-Link im Panel.                                                                                                                                                                                                                                                                                     |
+| Symptom                                                                  | Ursache / Lösung                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Keine 67router-Modelle in der Auswahlliste                               | Der Server ist nicht erreichbar. Der Punkt in der Statusleiste wird grau; führen Sie `OmniRoute: Check Connection` aus. Die Erkennung erfolgt absichtlich ohne Rückmeldung und fügt keine Modelle hinzu, statt zu einer Eingabe aufzufordern.                                                                                              |
+| Jedes Modell wird zweimal angezeigt                                      | Sie verwenden eine OmniCopilot-Version vor 1.0.1 — führen Sie ein Update durch. Die Erweiterung fordert jetzt `?prefix=alias` an.                                                                                                                                                                                                          |
+| Ein Bild-/Audiomodell wurde früher aufgeführt und ist jetzt verschwunden | Absichtlich seit 1.0.1 — es konnte nie auf eine Chat-Anfrage antworten.                                                                                                                                                                                                                                                                    |
+| Panel fehlt in der Aktivitätsleiste                                      | VS Code verschiebt zusätzliche Ansichtscontainer in das **„…“**-Überlaufmenü am unteren Rand der Aktivitätsleiste. Ein per Rechtsklick ausgeblendeter Container bleibt ausgeblendet. Klicken Sie mit der rechten Maustaste auf die Aktivitätsleiste → aktivieren Sie **OmniRoute**, oder öffnen Sie es mit `OmniRoute: Manage Connection`. |
+| Dashboard wird trotz `editor`-Modus im Browser geöffnet                  | Der Server wurde nicht mit `DASHBOARD_ALLOW_EMBED=vscode` **erstellt** (siehe oben) — das Setzen der Variable beim Start einer vorab erstellten Installation bewirkt nichts. Dieses Ausweichverhalten ist beabsichtigt.                                                                                                                    |
+| Modellliste ist nach einer Änderung der Anbieter veraltet                | `OmniRoute: Refresh Models` oder der ↻-Link im Panel.                                                                                                                                                                                                                                                                                      |
 
 ---
 

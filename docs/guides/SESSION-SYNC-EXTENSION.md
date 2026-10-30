@@ -89,7 +89,7 @@ Run the embedded setup command:
 npm run setup:embedded
 ```
 
-This adds `--import=.../bridge/omniroute-preload.mjs` to 67router's local `.env` and configures autostart via Windows Task Scheduler (`67router Session Sync`).
+This adds `--import=.../bridge/omniroute-preload.mjs` to 67router's local `.env` and configures autostart via Windows Task Scheduler (`OmniRoute Session Sync`).
 
 Start 67router with integrated sync:
 

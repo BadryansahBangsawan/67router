@@ -22,12 +22,12 @@
 ## Opsætning
 
 1. **Kør 67router** — `npm install -g omniroute && omniroute` (dashboard på `http://localhost:20128`).
-2. **Installer udvidelsen** — søg efter "67router" i visningen Udvidelser.
-3. **Vælg en model** — Copilot Chat → modelvælger → **Administrer modeller…** → **67router**, og markér derefter
+2. **Installer udvidelsen** — søg efter "OmniRoute" i visningen Udvidelser.
+3. **Vælg en model** — Copilot Chat → modelvælger → **Administrer modeller…** → **OmniRoute**, og markér derefter
    dem, du ønsker.
 
 Der er intet at konfigurere, når 67router kører på standardporten. For en fjerninstans skal du åbne
-**67router-ikonet på aktivitetslinjen** (eller køre `67router: Manage Connection`) og angive:
+**OmniRoute-ikonet på aktivitetslinjen** (eller køre `OmniRoute: Manage Connection`) og angive:
 
 - **Server-URL** — serverens rodadresse, f.eks. `http://192.168.0.15:20128`. Suffikset `/v1`
   tilføjes af udvidelsen; medtag det ikke.
@@ -119,7 +119,7 @@ Se [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) og issue
 
 ## Konfiguration af dine andre værktøjer fra VS Code
 
-**`67router: Configure Coding CLI`** bruger `omniroute`-CLI'en til at skrive brugsklare profiler
+**`OmniRoute: Configure Coding CLI`** bruger `omniroute`-CLI'en til at skrive brugsklare profiler
 til Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo og Roo — de samme konfigurationer, som er beskrevet i
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API-nøglen overføres til CLI'en via
@@ -129,14 +129,14 @@ miljøvariablen `OMNIROUTE_API_KEY`, aldrig på kommandolinjen.
 
 ## Fejlfinding
 
-| Symptom                                               | Årsag/løsning                                                                                                                                                                                                                                                           |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ingen 67router-modeller i vælgeren                    | Serveren kan ikke nås. Prikken på statuslinjen bliver grå; kør `67router: Check Connection`. Registrering foregår lydløst efter hensigten og tilføjer ingen modeller i stedet for at vise en prompt.                                                                    |
-| Hver model vises to gange                             | Du bruger en version af OmniCopilot, der er ældre end 1.0.1 — opdater. Udvidelsen anmoder nu med `?prefix=alias`.                                                                                                                                                       |
-| En billed-/lydmodel blev tidligere vist, men er væk   | Dette er tilsigtet siden 1.0.1 — den kunne aldrig besvare en chatanmodning.                                                                                                                                                                                             |
-| Panelet mangler på aktivitetslinjen                   | VS Code flytter ekstra visningscontainere til overløbsmenuen **"…"** nederst på aktivitetslinjen, og en container, der er skjult via højreklik, forbliver skjult. Højreklik på aktivitetslinjen → markér **67router**, eller åbn den med `67router: Manage Connection`. |
-| Dashboardet åbnes i browseren trods `editor`-tilstand | Serveren blev ikke **bygget** med `DASHBOARD_ALLOW_EMBED=vscode` (se ovenfor) — det ændrer intet at angive den ved opstart af en færdigbygget installation. Tilbagefaldet er tilsigtet.                                                                                 |
-| Modellisten er forældet efter ændring af udbydere     | `67router: Refresh Models` eller linket ↻ i panelet.                                                                                                                                                                                                                    |
+| Symptom                                               | Årsag/løsning                                                                                                                                                                                                                                                             |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ingen 67router-modeller i vælgeren                    | Serveren kan ikke nås. Prikken på statuslinjen bliver grå; kør `OmniRoute: Check Connection`. Registrering foregår lydløst efter hensigten og tilføjer ingen modeller i stedet for at vise en prompt.                                                                     |
+| Hver model vises to gange                             | Du bruger en version af OmniCopilot, der er ældre end 1.0.1 — opdater. Udvidelsen anmoder nu med `?prefix=alias`.                                                                                                                                                         |
+| En billed-/lydmodel blev tidligere vist, men er væk   | Dette er tilsigtet siden 1.0.1 — den kunne aldrig besvare en chatanmodning.                                                                                                                                                                                               |
+| Panelet mangler på aktivitetslinjen                   | VS Code flytter ekstra visningscontainere til overløbsmenuen **"…"** nederst på aktivitetslinjen, og en container, der er skjult via højreklik, forbliver skjult. Højreklik på aktivitetslinjen → markér **OmniRoute**, eller åbn den med `OmniRoute: Manage Connection`. |
+| Dashboardet åbnes i browseren trods `editor`-tilstand | Serveren blev ikke **bygget** med `DASHBOARD_ALLOW_EMBED=vscode` (se ovenfor) — det ændrer intet at angive den ved opstart af en færdigbygget installation. Tilbagefaldet er tilsigtet.                                                                                   |
+| Modellisten er forældet efter ændring af udbydere     | `OmniRoute: Refresh Models` eller linket ↻ i panelet.                                                                                                                                                                                                                     |
 
 ---
 

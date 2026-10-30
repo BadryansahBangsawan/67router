@@ -26,12 +26,12 @@ MCP servers and custom instructions all keep working, just running on the model 
 ## Setup
 
 1. **Run 67router** — `npm install -g omniroute && omniroute` (dashboard on `http://localhost:20128`).
-2. **Install the extension** — search "67router" in the Extensions view.
-3. **Pick a model** — Copilot Chat → model picker → **Manage Models…** → **67router**, then tick
+2. **Install the extension** — search "OmniRoute" in the Extensions view.
+3. **Pick a model** — Copilot Chat → model picker → **Manage Models…** → **OmniRoute**, then tick
    what you want.
 
 Nothing to configure when 67router runs on the default port. For a remote instance, open the
-**67router icon in the Activity Bar** (or run `67router: Manage Connection`) and set:
+**OmniRoute icon in the Activity Bar** (or run `OmniRoute: Manage Connection`) and set:
 
 - **Server URL** — the server root, e.g. `http://192.168.0.15:20128`. The `/v1` suffix is
   appended by the extension; do not include it.
@@ -123,7 +123,7 @@ See [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) and issue
 
 ## Configuring your other tools from inside VS Code
 
-**`67router: Configure Coding CLI`** drives the `omniroute` CLI to write ready-to-use profiles
+**`OmniRoute: Configure Coding CLI`** drives the `omniroute` CLI to write ready-to-use profiles
 for Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo and Roo — the same configs described in
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). The API key is handed to the CLI through the
@@ -133,14 +133,14 @@ Kilo and Roo — the same configs described in
 
 ## Troubleshooting
 
-| Symptom                                              | Cause / fix                                                                                                                                                                                                                                            |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| No 67router models in the picker                     | Server unreachable. The status-bar dot goes grey; run `67router: Check Connection`. Discovery is silent by design and contributes no models rather than prompting.                                                                                     |
-| Every model appears twice                            | You are on an OmniCopilot older than 1.0.1 — update. The extension now requests `?prefix=alias`.                                                                                                                                                       |
-| An image/audio model used to be listed and is gone   | Intentional since 1.0.1 — it could never answer a chat request.                                                                                                                                                                                        |
-| Panel missing from the Activity Bar                  | VS Code moves extra view containers into the **"…"** overflow at the bottom of the Activity Bar, and a container hidden via right-click stays hidden. Right-click the Activity Bar → tick **67router**, or open it with `67router: Manage Connection`. |
-| Dashboard opens in the browser despite `editor` mode | The server was not **built** with `DASHBOARD_ALLOW_EMBED=vscode` (see above) — setting it at startup on a prebuilt install does nothing. The fallback is deliberate.                                                                                   |
-| Models list is stale after changing providers        | `67router: Refresh Models`, or the ↻ link in the panel.                                                                                                                                                                                                |
+| Symptom                                              | Cause / fix                                                                                                                                                                                                                                              |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| No 67router models in the picker                     | Server unreachable. The status-bar dot goes grey; run `OmniRoute: Check Connection`. Discovery is silent by design and contributes no models rather than prompting.                                                                                      |
+| Every model appears twice                            | You are on an OmniCopilot older than 1.0.1 — update. The extension now requests `?prefix=alias`.                                                                                                                                                         |
+| An image/audio model used to be listed and is gone   | Intentional since 1.0.1 — it could never answer a chat request.                                                                                                                                                                                          |
+| Panel missing from the Activity Bar                  | VS Code moves extra view containers into the **"…"** overflow at the bottom of the Activity Bar, and a container hidden via right-click stays hidden. Right-click the Activity Bar → tick **OmniRoute**, or open it with `OmniRoute: Manage Connection`. |
+| Dashboard opens in the browser despite `editor` mode | The server was not **built** with `DASHBOARD_ALLOW_EMBED=vscode` (see above) — setting it at startup on a prebuilt install does nothing. The fallback is deliberate.                                                                                     |
+| Models list is stale after changing providers        | `OmniRoute: Refresh Models`, or the ↻ link in the panel.                                                                                                                                                                                                 |
 
 ---
 

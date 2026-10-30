@@ -45,7 +45,7 @@
 | `better-sqlite3`   | روٹ `^13.0.2` (Node-API پری بلڈز — Electron ری بلڈ نہیں) |
 | ایپ ورژن           | `3.8.0`                                                  |
 | ایپ آئی ڈی         | `online.omniroute.desktop`                               |
-| پروڈکٹ کا نام      | `67router`                                               |
+| پروڈکٹ کا نام      | `OmniRoute`                                              |
 
 ## اسکرپٹس (روٹ `package.json`)
 

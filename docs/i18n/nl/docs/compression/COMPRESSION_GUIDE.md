@@ -539,13 +539,13 @@ voegt de geselecteerde instructies samen in catalogusvolgorde,
 voegt de clausule met grenzen **eenmaal** toe (plus de veiligheidsclausule,
 `SAFETY_BOUNDARIES` of de vertaling daarvan, wanneer `less-code` of `ponytail` is
 geselecteerd) en begint het blok met één idempotentiemarkering
-(`[67router Output Styles]`), zodat opnieuw toepassen geen effect heeft. Wanneer voor
+(`[OmniRoute Output Styles]`), zodat opnieuw toepassen geen effect heeft. Wanneer voor
 de vastgestelde taal (zie Taalkeuze hieronder) een vertaling beschikbaar is, wordt de
 gelokaliseerde instructie ingevoegd in plaats van de Engelse.
 
 Bij een body met een niet-lege `messages`-array wordt de idempotentiecontrole vóór het
 omzeilen op basis van inhoud uitgevoerd: wanneer de markering
-`[67router Output Styles]` al aanwezig is in het `system`-veld op het hoogste niveau
+`[OmniRoute Output Styles]` al aanwezig is in het `system`-veld op het hoogste niveau
 (een tekenreeks of een array van inhoudsblokken) of in een systeembericht met inhoud
 van het type tekenreeks, blijft de body ongewijzigd als `already_applied` en wordt er
 geen trefwoordcontrole uitgevoerd. Anders controleert een omzeiling op basis van inhoud
@@ -576,7 +576,7 @@ gevonden locaties:
 Bij een body zonder `messages`-array (of met een lege array) wordt geen omzeiling op
 basis van inhoud uitgevoerd en wordt een `system`-veld op het hoogste niveau niet
 geraadpleegd. Het blok wordt toegevoegd na de tekst van een `instructions`-veld van het
-type tekenreeks, tenzij dat veld al de markering `[67router Output Styles]` bevat. In
+type tekenreeks, tenzij dat veld al de markering `[OmniRoute Output Styles]` bevat. In
 dat geval blijft de body ongewijzigd als `already_applied`. Wanneer de body geen
 `instructions`-veld van het type tekenreeks heeft, maar wel `input` bevat (een
 tekenreeks of een array), wordt het blok `instructions`, waarbij een eventuele waarde
@@ -606,8 +606,8 @@ de compressieconfiguratie de selectie als:
 Achterwaartse compatibiliteit: zolang `outputStyles` leeg is, wordt de oude instelling
 `cavemanOutputMode.enabled` gekoppeld aan `terse-prose` op
 `cavemanOutputMode.intensity`. Het blok begint dan met de markering
-`[67router Output Styles]`, waar het oude injectiemechanisme
-`applyCavemanOutputMode()` `[67router Caveman Output Mode]` invoegde. Onder de
+`[OmniRoute Output Styles]`, waar het oude injectiemechanisme
+`applyCavemanOutputMode()` `[OmniRoute Caveman Output Mode]` invoegde. Onder de
 markering komt de tekst overeen met de oude invoeging in en, pt-BR, es, de, fr, it, ru,
 id en vi; in ja en zh bevat deze één extra spatie vóór de clausule met grenzen.
 `terse-prose` is vertaald naar pt-BR, es, de, fr, it, ru, zh, ja, id en vi, zodat een

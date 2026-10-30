@@ -205,7 +205,7 @@ Mpangishaji lengwa anayenaswa: **`daily-cloudcode-pa.googleapis.com`** (seva ya 
 
 Jina la faili ya cheti: `omniroute-mitm.crt`. Ulinganishaji wa alama ya kipekee kupitia `getCertFingerprint()` (SHA-1 ya DER).
 
-Zaidi ya hayo, `updateNssDatabases()` husakinisha kwenye hifadhidata za NSS za kila mtumiaji wakati `certutil` inapatikana: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wasifu wote wa Firefox (ikiwemo snap), chini ya jina la utani **`67router MITM Root CA`**.
+Zaidi ya hayo, `updateNssDatabases()` husakinisha kwenye hifadhidata za NSS za kila mtumiaji wakati `certutil` inapatikana: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, wasifu wote wa Firefox (ikiwemo snap), chini ya jina la utani **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

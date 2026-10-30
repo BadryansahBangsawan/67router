@@ -532,12 +532,12 @@ mhux mibdul, maqbuż bħala `no_styles`), jgħaqqad l-istruzzjonijiet magħżula
 tal-katalgu,
 iżid il-klawżola tal-limiti **darba** (flimkien mal-klawżola tas-sikurezza, `SAFETY_BOUNDARIES` jew
 it-traduzzjoni tagħha, meta jintgħażel `less-code` jew `ponytail`), u jibda l-blokka
-b'markatur wieħed ta' idempotenza (`[67router Output Styles]`), sabiex applikazzjoni
+b'markatur wieħed ta' idempotenza (`[OmniRoute Output Styles]`), sabiex applikazzjoni
 mill-ġdid ma tagħmel xejn. Meta l-lingwa riżolta (ara l-Għażla tal-lingwa hawn taħt) ikollha
 traduzzjoni, tiddaħħal l-istruzzjoni lokalizzata minflok dik bl-Ingliż.
 
 Fuq body b'array `messages` mhux vojt, il-verifika tal-idempotenza taħdem qabel
-il-bypass tal-kontenut: meta l-markatur `[67router Output Styles]` ikun diġà fil-field
+il-bypass tal-kontenut: meta l-markatur `[OmniRoute Output Styles]` ikun diġà fil-field
 `system` tal-ogħla livell (string jew array ta' blokok tal-kontenut) jew f'messaġġ tas-system
 b'kontenut string, il-body jitħalla mhux mibdul bħala `already_applied` u ma ssir l-ebda
 verifika tal-kliem ewlieni.
@@ -564,7 +564,7 @@ qatt ma joħloq `messages[0]` ġdid, iqiegħed il-blokka fl-ewwel wieħed minn d
 Fuq body mingħajr array `messages` (jew b'wieħed vojt), ma jsir l-ebda bypass tal-kontenut u
 l-field `system` tal-ogħla livell ma jiġix ikkonsultat. Il-blokka tiżdied wara t-test ta'
 field `instructions` string, sakemm dak il-field ma jkunx diġà fih il-markatur
-`[67router Output Styles]`, f'liema każ il-body jitħalla mhux mibdul bħala
+`[OmniRoute Output Styles]`, f'liema każ il-body jitħalla mhux mibdul bħala
 `already_applied`. Meta l-body ma jkollux field `instructions` string iżda jkollu `input`
 (string jew array), il-blokka ssir `instructions`, u tissostitwixxi kwalunkwe valur mhux string
 li dak il-field kellu. Body li la għandu field `instructions` string u lanqas `input` string jew
@@ -591,8 +591,8 @@ il-config tal-kompressjoni jippersisti l-għażla bħala:
 Kompatibbiltà b'lura: waqt li `outputStyles` ikun vojt, is-setting legat
 `cavemanOutputMode.enabled` jiġi mmappjat għal `terse-prose` f'
 `cavemanOutputMode.intensity`. Imbagħad il-blokka tibda bil-markatur
-`[67router Output Styles]`, fejn l-injettur legat `applyCavemanOutputMode()`
-kien idaħħal `[67router Caveman Output Mode]`. Taħt il-markatur, it-test jaqbel mal-injezzjoni
+`[OmniRoute Output Styles]`, fejn l-injettur legat `applyCavemanOutputMode()`
+kien idaħħal `[OmniRoute Caveman Output Mode]`. Taħt il-markatur, it-test jaqbel mal-injezzjoni
 legata f'en, pt-BR, es, de, fr, it, ru, id u vi; f'ja u zh ikollu spazju żejjed wieħed
 qabel il-klawżola tal-limiti. `terse-prose` jiġi tradott għal pt-BR, es, de,
 fr, it, ru, zh, ja, id u vi, għalhekk request li l-lingwa riżolta tiegħu tkun `hu` jirċievi

@@ -205,7 +205,7 @@ IDE가 MITM 연결을 수락하려면 먼저 OS에서 AgentBridge CA 인증서�
 **Linux(NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS(Keychain):**
@@ -436,7 +436,7 @@ sudo fuser -k 443/tcp  # 강제 종료(주의해서 사용)
 
 AgentBridge를 시작한 후 IDE에 TLS 오류가 표시되는 경우:
 
-1. 인증서가 설치되었는지 확인합니다: `security find-certificate -c "67router AgentBridge"` (macOS) 또는 `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. 인증서가 설치되었는지 확인합니다: `security find-certificate -c "OmniRoute MITM CA"` (macOS) 또는 `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. 일부 앱은 자체 신뢰 저장소를 유지합니다(Firefox, Linux의 Chrome). "Trust Cert"를 다시 실행하고 NSS/Firefox 전용 인증서 저장소를 확인하세요.
 3. 신뢰 설정 후 IDE를 다시 시작하세요. 진행 중인 TLS 세션은 이전 신뢰 상태를 사용합니다.
 

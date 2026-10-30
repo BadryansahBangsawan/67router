@@ -513,12 +513,12 @@ settings API ले कुनै पनि style id स्वीकार गर
 क्रममा जोड्छ,
 boundaries clause लाई **एक पटक** थप्छ (साथै `less-code` वा `ponytail` चयन गरिएको
 अवस्थामा safety clause, `SAFETY_BOUNDARIES` वा यसको अनुवाद पनि थप्छ), र block लाई
-एउटै idempotency marker (`[67router Output Styles]`) बाट सुरु गर्छ, त्यसैले फेरि
+एउटै idempotency marker (`[OmniRoute Output Styles]`) बाट सुरु गर्छ, त्यसैले फेरि
 apply गर्दा कुनै परिवर्तन हुँदैन। समाधान गरिएको भाषामा (तलको Language selection
 हेर्नुहोस्) अनुवाद उपलब्ध हुँदा, अंग्रेजीको सट्टा स्थानीयकृत निर्देशन inject गरिन्छ।
 
 खाली नभएको `messages` array भएको body मा, idempotency जाँच content bypass भन्दा
-पहिले चल्छ: `[67router Output Styles]` marker पहिले नै top-level `system` field
+पहिले चल्छ: `[OmniRoute Output Styles]` marker पहिले नै top-level `system` field
 (string वा content-block array) मा वा string content भएको system message मा छ भने,
 body लाई `already_applied` का रूपमा अपरिवर्तित छोडिन्छ र keyword जाँच चल्दैन।
 अन्यथा content bypass (`open-sse/services/compression/outputMode.ts` मा रहेको
@@ -546,7 +546,7 @@ Bypass ले turn लाई अघि बढ्न दिएपछि, `placeSy
 
 `messages` array नभएको (वा खाली array भएको) body मा content bypass चल्दैन र
 top-level `system` field हेरिँदैन। Block लाई string `instructions` field को text
-पछि append गरिन्छ, जबसम्म त्यस field मा पहिले नै `[67router Output Styles]`
+पछि append गरिन्छ, जबसम्म त्यस field मा पहिले नै `[OmniRoute Output Styles]`
 marker छैन; marker भए body लाई `already_applied` का रूपमा अपरिवर्तित छोडिन्छ।
 Body मा string `instructions` field नभए पनि `input` (string वा array) भएमा, block
 `instructions` बन्छ र त्यस field मा रहेको कुनै पनि non-string value लाई
@@ -573,8 +573,8 @@ compression config ले चयनलाई यसरी persist गर्छ:
 
 Back-compat: `outputStyles` खाली रहँदासम्म, पुरानो `cavemanOutputMode.enabled`
 setting लाई `cavemanOutputMode.intensity` मा रहेको `terse-prose` सँग map गरिन्छ।
-त्यसपछि block `[67router Output Styles]` marker बाट सुरु हुन्छ, जहाँ पुरानो
-`applyCavemanOutputMode()` injector ले `[67router Caveman Output Mode]` लेख्थ्यो।
+त्यसपछि block `[OmniRoute Output Styles]` marker बाट सुरु हुन्छ, जहाँ पुरानो
+`applyCavemanOutputMode()` injector ले `[OmniRoute Caveman Output Mode]` लेख्थ्यो।
 Marker मुनिको text en, pt-BR, es, de, fr, it, ru, id र vi मा पुरानो injection सँग
 मेल खान्छ; ja र zh मा boundaries clause अघि एउटा अतिरिक्त space हुन्छ।
 `terse-prose` लाई pt-BR, es, de, fr, it, ru, zh, ja, id र vi मा अनुवाद गरिन्छ,

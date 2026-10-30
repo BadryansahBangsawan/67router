@@ -520,12 +520,12 @@ inalterado, ignorado como `no_styles`), concatena as instruções selecionadas n
 catálogo,
 acrescenta a cláusula de limites **uma vez** (além da cláusula de segurança, `SAFETY_BOUNDARIES` ou sua
 tradução, quando `less-code` ou `ponytail` está selecionado) e inicia o bloco com um
-único marcador de idempotência (`[67router Output Styles]`), de modo que uma nova
+único marcador de idempotência (`[OmniRoute Output Styles]`), de modo que uma nova
 aplicação não tenha efeito. Quando o idioma resolvido (consulte Seleção de idioma abaixo) tem uma tradução, a
 instrução localizada é injetada em vez da instrução em inglês.
 
 Em um corpo com um array `messages` não vazio, a verificação de idempotência é executada antes do
-bypass de conteúdo: quando o marcador `[67router Output Styles]` já está no campo
+bypass de conteúdo: quando o marcador `[OmniRoute Output Styles]` já está no campo
 `system` de nível superior (uma string ou um array de blocos de conteúdo) ou em uma mensagem de sistema com conteúdo
 em string, o corpo permanece inalterado como `already_applied` e nenhuma verificação de palavra-chave é executada.
 Caso contrário, um bypass de conteúdo (`shouldBypassCavemanOutputMode()` em
@@ -551,7 +551,7 @@ nunca cria um novo `messages[0]`, coloca o bloco no primeiro destes locais que e
 Em um corpo sem um array `messages` (ou com um array vazio), nenhum bypass de conteúdo é executado e
 um campo `system` de nível superior não é consultado. O bloco é acrescentado após o texto de um
 campo `instructions` do tipo string, a menos que esse campo já contenha o marcador
-`[67router Output Styles]`; nesse caso, o corpo permanece inalterado como
+`[OmniRoute Output Styles]`; nesse caso, o corpo permanece inalterado como
 `already_applied`. Quando o corpo não tem um campo `instructions` do tipo string, mas contém `input`
 (uma string ou um array), o bloco se torna `instructions`, substituindo qualquer valor que não seja string
 que esse campo continha. Um corpo sem um campo `instructions` do tipo string nem um `input` do tipo string ou array
@@ -577,8 +577,8 @@ configuração de compressão persiste a seleção como:
 
 Compatibilidade retroativa: enquanto `outputStyles` estiver vazio, a configuração legada
 `cavemanOutputMode.enabled` será mapeada para `terse-prose` em `cavemanOutputMode.intensity`. O bloco então começa
-com o marcador `[67router Output Styles]`, enquanto o injetor legado `applyCavemanOutputMode()`
-escrevia `[67router Caveman Output Mode]`. Abaixo do marcador, o texto corresponde à
+com o marcador `[OmniRoute Output Styles]`, enquanto o injetor legado `applyCavemanOutputMode()`
+escrevia `[OmniRoute Caveman Output Mode]`. Abaixo do marcador, o texto corresponde à
 injeção legada em en, pt-BR, es, de, fr, it, ru, id e vi; em ja e zh, há um
 espaço adicional antes da cláusula de limites. `terse-prose` é traduzido para pt-BR, es, de,
 fr, it, ru, zh, ja, id e vi, portanto uma solicitação cujo idioma resolvido seja `hu` recebe o

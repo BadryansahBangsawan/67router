@@ -204,7 +204,7 @@ IDEʼlar MITM ulanishini qabul qilishi uchun avval AgentBridge CA sertifikati OT
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -437,7 +437,7 @@ Muqobil ravishda, AgentBridge sozlamalarida imtiyozsiz portni sozlang va `iptabl
 
 Agar AgentBridge ishga tushirilgandan keyin IDE TLS xatolarini koʻrsatsa:
 
-1. Sertifikat oʻrnatilganini tekshiring: `security find-certificate -c "67router AgentBridge"` (macOS) yoki `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sertifikat oʻrnatilganini tekshiring: `security find-certificate -c "OmniRoute MITM CA"` (macOS) yoki `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Ayrim ilovalar oʻz ishonchli sertifikatlar omborini yuritadi (Firefox, Linux’dagi Chrome). "Trust Cert" amalini yana bajaring va NSS/Firefox’ga xos sertifikatlar omborini tekshiring.
 3. Ishonch oʻrnatilgandan keyin IDE’ni qayta ishga tushiring — davom etayotgan TLS seanslari eski ishonch holatidan foydalanadi.
 

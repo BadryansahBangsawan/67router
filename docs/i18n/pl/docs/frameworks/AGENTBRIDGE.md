@@ -200,7 +200,7 @@ Certyfikat urzędu certyfikacji AgentBridge musi być zaufany przez system opera
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Pęk kluczy):**
@@ -443,7 +443,7 @@ Alternatywnie skonfiguruj nieuprzywilejowany port w ustawieniach AgentBridge i u
 
 Jeśli IDE pokazuje błędy TLS po starcie AgentBridge:
 
-1. Sprawdź, czy cert został zainstalowany: `security find-certificate -c "67router AgentBridge"` (macOS) lub `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sprawdź, czy cert został zainstalowany: `security find-certificate -c "OmniRoute MITM CA"` (macOS) lub `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Niektóre aplikacje utrzymują własny magazyn zaufania (Firefox, Chrome na Linuxie). Uruchom „Trust Cert” ponownie i sprawdź store certyfikatów NSS/Firefox.
 3. Zrestartuj IDE po zaufaniu — trwające sesje TLS używają starego stanu zaufania.
 

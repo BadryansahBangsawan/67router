@@ -228,7 +228,7 @@ interface CliFingerprint {
 
 שם קובץ האישור: `omniroute-mitm.crt`. התאמת טביעת האצבע מתבצעת באמצעות `getCertFingerprint()`‏ (SHA-1 של DER).
 
-בנוסף, `updateNssDatabases()` מתקינה את האישור במסדי נתונים של NSS עבור כל משתמש כאשר `certutil` זמין: `~/.pki/nssdb`,‏ `~/snap/chromium/.../nssdb`, כל פרופילי Firefox (כולל snap), תחת הכינוי **`67router MITM Root CA`**.
+בנוסף, `updateNssDatabases()` מתקינה את האישור במסדי נתונים של NSS עבור כל משתמש כאשר `certutil` זמין: `~/.pki/nssdb`,‏ `~/snap/chromium/.../nssdb`, כל פרופילי Firefox (כולל snap), תחת הכינוי **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

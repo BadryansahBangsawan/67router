@@ -229,7 +229,7 @@ Host គោលដៅដែលត្រូវបានស្ទាក់ចាប
 
 ឈ្មោះឯកសារវិញ្ញាបនបត្រ៖ `omniroute-mitm.crt`។ ផ្គូផ្គងស្នាមម្រាមដៃតាមរយៈ `getCertFingerprint()` (SHA-1 នៃ DER)។
 
-លើសពីនេះ `updateNssDatabases()` ដំឡើងទៅក្នុង NSS DB របស់អ្នកប្រើម្នាក់ៗ នៅពេលមាន `certutil`៖ `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, profile ទាំងអស់របស់ Firefox (រួមទាំង snap) ក្រោម nickname **`67router MITM Root CA`**។
+លើសពីនេះ `updateNssDatabases()` ដំឡើងទៅក្នុង NSS DB របស់អ្នកប្រើម្នាក់ៗ នៅពេលមាន `certutil`៖ `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, profile ទាំងអស់របស់ Firefox (រួមទាំង snap) ក្រោម nickname **`OmniRoute MITM Root CA`**។
 
 ### macOS / Windows
 

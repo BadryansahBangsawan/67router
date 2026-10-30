@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux（NSS — Chrome/Firefox）：**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS（鑰匙圈）：**
@@ -437,7 +437,7 @@ sudo fuser -k 443/tcp  # 強制終止（請謹慎使用）
 
 如果啟動 AgentBridge 後 IDE 顯示 TLS 錯誤：
 
-1. 確認憑證已安裝：`security find-certificate -c "67router AgentBridge"`（macOS）或 `certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
+1. 確認憑證已安裝：`security find-certificate -c "OmniRoute MITM CA"`（macOS）或 `certutil -L -d sql:$HOME/.pki/nssdb`（Linux/NSS）
 2. 某些應用程式會維護自己的信任存放區（Firefox、Linux 上的 Chrome）。再次執行「Trust Cert」，並檢查 NSS/Firefox 專用的憑證存放區。
 3. 信任憑證後重新啟動 IDE——進行中的 TLS 工作階段會使用舊的信任狀態。
 

@@ -226,7 +226,7 @@ Cieľový zachytávaný hostiteľ: **`daily-cloudcode-pa.googleapis.com`** (upst
 
 Názov súboru certifikátu: `omniroute-mitm.crt`. Zhoda odtlačku prostredníctvom `getCertFingerprint()` (SHA-1 údajov DER).
 
-Okrem toho `updateNssDatabases()` nainštaluje certifikát do databáz NSS jednotlivých používateľov, keď je k dispozícii `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, všetky profily Firefoxu (vrátane verzie snap), pod prezývkou **`67router MITM Root CA`**.
+Okrem toho `updateNssDatabases()` nainštaluje certifikát do databáz NSS jednotlivých používateľov, keď je k dispozícii `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, všetky profily Firefoxu (vrátane verzie snap), pod prezývkou **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

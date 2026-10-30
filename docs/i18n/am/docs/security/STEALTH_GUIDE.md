@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 የሰርተፍኬት ፋይል ስም፦ `omniroute-mitm.crt`። የአሻራ ማዛመድ በ`getCertFingerprint()` በኩል (የDER SHA-1)።
 
-በተጨማሪም፣ `certutil` ሲገኝ `updateNssDatabases()` በየተጠቃሚው NSS DBዎች ውስጥ ይጭናል፦ `~/.pki/nssdb`፣ `~/snap/chromium/.../nssdb`፣ ሁሉም የFirefox መገለጫዎች (snapን ጨምሮ)፣ **`67router MITM Root CA`** በሚለው ቅጽል ስም።
+በተጨማሪም፣ `certutil` ሲገኝ `updateNssDatabases()` በየተጠቃሚው NSS DBዎች ውስጥ ይጭናል፦ `~/.pki/nssdb`፣ `~/snap/chromium/.../nssdb`፣ ሁሉም የFirefox መገለጫዎች (snapን ጨምሮ)፣ **`OmniRoute MITM Root CA`** በሚለው ቅጽል ስም።
 
 ### macOS / Windows
 

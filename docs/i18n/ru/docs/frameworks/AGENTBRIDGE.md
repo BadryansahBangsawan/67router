@@ -209,7 +209,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Связка ключей):**
@@ -441,7 +441,7 @@ sudo fuser -k 443/tcp  # принудительно завершить (испо
 
 Если после запуска AgentBridge IDE показывает ошибки TLS:
 
-1. Убедитесь, что сертификат установлен: `security find-certificate -c "67router AgentBridge"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Убедитесь, что сертификат установлен: `security find-certificate -c "OmniRoute MITM CA"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Некоторые приложения используют собственное хранилище доверенных сертификатов (Firefox, Chrome в Linux). Снова выполните «Trust Cert» и проверьте хранилище сертификатов, используемое NSS/Firefox.
 3. Перезапустите IDE после добавления сертификата в доверенные — активные сеансы TLS используют прежнее состояние доверия.
 

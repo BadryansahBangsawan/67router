@@ -65,7 +65,7 @@ OpenCode v1 と v2 では異なる契約を通じてプラグインを読み込�
 | `baseURL`                        | 必須                                       | ゲートウェイのルート。`http(s)` のみ。必要に応じて `/v1` サフィックスが追加されます                                                    |
 | `apiKey`                         | 接続済み認証情報、次に `OMNIROUTE_API_KEY` | `/v1/*` 用のチャットキー                                                                                                               |
 | `managementReadToken`            | `apiKey` にフォールバック                  | `/api/*` 用のキー。通常は同じキーでは**ありません**                                                                                    |
-| `displayName`                    | `"67router"`                               | 選択画面に表示されるプロバイダー名                                                                                                     |
+| `displayName`                    | `"OmniRoute"`                              | 選択画面に表示されるプロバイダー名                                                                                                     |
 | `timeoutMs`                      | `10000`                                    | エンドポイントごとのフェッチタイムアウト（auto-combos では5秒）                                                                        |
 | `modelCacheTtlMs`                | `300000`                                   | カタログキャッシュのTTL。ディスクスナップショットによりコールドスタートが高速化されます                                                |
 | `timeouts`                       | `timeoutMs` にフォールバック               | エンドポイントごとの時間上限（ミリ秒）：`models`、`combos`、`autoCombos`、`enrichment`                                                 |

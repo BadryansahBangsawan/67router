@@ -45,7 +45,7 @@ An tabbatar daga `electron/package.json`:
 | `better-sqlite3`   | tushen `^13.0.2` (ginannun Node-API — babu sake ginin Electron) |
 | Sigar manhaja      | `3.8.0`                                                         |
 | ID na manhaja      | `online.omniroute.desktop`                                      |
-| Sunan samfur       | `67router`                                                      |
+| Sunan samfur       | `OmniRoute`                                                     |
 
 ## Rubutun umarni (`package.json` na tushe)
 

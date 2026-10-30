@@ -225,7 +225,7 @@ Pārtvertais mērķa resursdators: **`daily-cloudcode-pa.googleapis.com`** (Anti
 
 Sertifikāta faila nosaukums: `omniroute-mitm.crt`. Pirkstu nospieduma atbilstība tiek pārbaudīta, izmantojot `getCertFingerprint()` (DER SHA-1).
 
-Turklāt `updateNssDatabases()` instalē sertifikātu katra lietotāja NSS datubāzēs, ja ir pieejams `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visos Firefox profilos (tostarp snap), ar segvārdu **`67router MITM Root CA`**.
+Turklāt `updateNssDatabases()` instalē sertifikātu katra lietotāja NSS datubāzēs, ja ir pieejams `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visos Firefox profilos (tostarp snap), ar segvārdu **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

@@ -205,7 +205,7 @@ Máy chủ đích bị chặn: **`daily-cloudcode-pa.googleapis.com`** (upstream
 
 Tên tệp chứng chỉ: `omniroute-mitm.crt`. Đối chiếu dấu vân tay thông qua `getCertFingerprint()` (SHA-1 của DER).
 
-Ngoài ra, `updateNssDatabases()` cài đặt vào các cơ sở dữ liệu NSS theo từng người dùng khi `certutil` khả dụng: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, tất cả hồ sơ Firefox (bao gồm cả snap), với biệt danh **`67router MITM Root CA`**.
+Ngoài ra, `updateNssDatabases()` cài đặt vào các cơ sở dữ liệu NSS theo từng người dùng khi `certutil` khả dụng: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, tất cả hồ sơ Firefox (bao gồm cả snap), với biệt danh **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

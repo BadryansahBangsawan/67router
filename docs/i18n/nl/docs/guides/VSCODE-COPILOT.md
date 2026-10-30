@@ -24,12 +24,12 @@ MCP-servers en aangepaste instructies blijven allemaal werken, maar dan op het m
 ## Installatie
 
 1. **Start 67router** — `npm install -g omniroute && omniroute` (dashboard op `http://localhost:20128`).
-2. **Installeer de extensie** — zoek naar "67router" in de extensieweergave.
-3. **Kies een model** — Copilot Chat → modelkiezer → **Modellen beheren…** → **67router** en vink vervolgens
+2. **Installeer de extensie** — zoek naar "OmniRoute" in de extensieweergave.
+3. **Kies een model** — Copilot Chat → modelkiezer → **Modellen beheren…** → **OmniRoute** en vink vervolgens
    aan wat je wilt.
 
 Je hoeft niets te configureren wanneer 67router op de standaardpoort draait. Open voor een externe instantie het
-**67router-pictogram in de activiteitenbalk** (of voer `67router: Manage Connection` uit) en stel het volgende in:
+**OmniRoute-pictogram in de activiteitenbalk** (of voer `OmniRoute: Manage Connection` uit) en stel het volgende in:
 
 - **Server-URL** — de hoofd-URL van de server, bijvoorbeeld `http://192.168.0.15:20128`. Het achtervoegsel `/v1` wordt
   door de extensie toegevoegd; neem dit niet zelf op.
@@ -121,7 +121,7 @@ Zie [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) en issue
 
 ## Je andere tools configureren vanuit VS Code
 
-**`67router: Configure Coding CLI`** gebruikt de `omniroute`-CLI om direct bruikbare profielen te schrijven
+**`OmniRoute: Configure Coding CLI`** gebruikt de `omniroute`-CLI om direct bruikbare profielen te schrijven
 voor Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo en Roo — dezelfde configuraties die worden beschreven in
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). De API-sleutel wordt via de
@@ -131,14 +131,14 @@ omgevingsvariabele `OMNIROUTE_API_KEY` aan de CLI doorgegeven, nooit via de opdr
 
 ## Problemen oplossen
 
-| Symptoom                                                 | Oorzaak / oplossing                                                                                                                                                                                                                                                                               |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Geen 67router-modellen in de kiezer                      | De server is niet bereikbaar. De stip in de statusbalk wordt grijs; voer `67router: Check Connection` uit. Detectie verloopt bewust stil en levert geen modellen op in plaats van een melding te tonen.                                                                                           |
-| Elk model wordt tweemaal weergegeven                     | Je gebruikt een versie van OmniCopilot ouder dan 1.0.1 — werk deze bij. De extensie vraagt nu `?prefix=alias` op.                                                                                                                                                                                 |
-| Een eerder vermeld beeld-/audiomodel is verdwenen        | Dit is sinds 1.0.1 opzettelijk — het kon nooit een chatverzoek beantwoorden.                                                                                                                                                                                                                      |
-| Paneel ontbreekt in de Activity Bar                      | VS Code verplaatst extra weergavecontainers naar het overloopmenu **"…"** onderaan de Activity Bar, en een container die via rechtsklikken is verborgen, blijft verborgen. Klik met de rechtermuisknop op de Activity Bar → vink **67router** aan, of open het met `67router: Manage Connection`. |
-| Dashboard opent ondanks de modus `editor` in de browser  | De server is niet **gebouwd** met `DASHBOARD_ALLOW_EMBED=vscode` (zie hierboven) — dit bij het opstarten instellen voor een vooraf gebouwde installatie heeft geen effect. Het terugvallen is opzettelijk.                                                                                        |
-| Modellenlijst is verouderd na het wijzigen van providers | `67router: Refresh Models`, of de ↻-link in het paneel.                                                                                                                                                                                                                                           |
+| Symptoom                                                 | Oorzaak / oplossing                                                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Geen 67router-modellen in de kiezer                      | De server is niet bereikbaar. De stip in de statusbalk wordt grijs; voer `OmniRoute: Check Connection` uit. Detectie verloopt bewust stil en levert geen modellen op in plaats van een melding te tonen.                                                                                            |
+| Elk model wordt tweemaal weergegeven                     | Je gebruikt een versie van OmniCopilot ouder dan 1.0.1 — werk deze bij. De extensie vraagt nu `?prefix=alias` op.                                                                                                                                                                                   |
+| Een eerder vermeld beeld-/audiomodel is verdwenen        | Dit is sinds 1.0.1 opzettelijk — het kon nooit een chatverzoek beantwoorden.                                                                                                                                                                                                                        |
+| Paneel ontbreekt in de Activity Bar                      | VS Code verplaatst extra weergavecontainers naar het overloopmenu **"…"** onderaan de Activity Bar, en een container die via rechtsklikken is verborgen, blijft verborgen. Klik met de rechtermuisknop op de Activity Bar → vink **OmniRoute** aan, of open het met `OmniRoute: Manage Connection`. |
+| Dashboard opent ondanks de modus `editor` in de browser  | De server is niet **gebouwd** met `DASHBOARD_ALLOW_EMBED=vscode` (zie hierboven) — dit bij het opstarten instellen voor een vooraf gebouwde installatie heeft geen effect. Het terugvallen is opzettelijk.                                                                                          |
+| Modellenlijst is verouderd na het wijzigen van providers | `OmniRoute: Refresh Models`, of de ↻-link in het paneel.                                                                                                                                                                                                                                            |
 
 ---
 

@@ -516,12 +516,12 @@ nguyên phần body và được bỏ qua với lý do `no_styles`), nối các 
 tự trong danh mục,
 chỉ thêm mệnh đề ranh giới **một lần** (cùng với mệnh đề an toàn,
 `SAFETY_BOUNDARIES` hoặc bản dịch của nó, khi `less-code` hoặc `ponytail` được chọn),
-và bắt đầu khối bằng một dấu idempotency duy nhất (`[67router Output Styles]`), vì vậy
+và bắt đầu khối bằng một dấu idempotency duy nhất (`[OmniRoute Output Styles]`), vì vậy
 việc áp dụng lại không tạo ra thay đổi. Khi ngôn ngữ đã phân giải (xem phần Lựa chọn
 ngôn ngữ bên dưới) có bản dịch, chỉ dẫn đã bản địa hóa sẽ được chèn thay cho tiếng Anh.
 
 Đối với body có mảng `messages` không rỗng, việc kiểm tra idempotency chạy trước cơ chế
-bỏ qua theo nội dung: khi dấu `[67router Output Styles]` đã có trong trường `system`
+bỏ qua theo nội dung: khi dấu `[OmniRoute Output Styles]` đã có trong trường `system`
 cấp cao nhất (dạng chuỗi hoặc mảng khối nội dung), hoặc trong một system message có nội
 dung dạng chuỗi, body được giữ nguyên với lý do `already_applied` và không thực hiện
 kiểm tra từ khóa. Nếu không, cơ chế bỏ qua theo nội dung
@@ -551,7 +551,7 @@ các vị trí sau:
 Đối với body không có mảng `messages` (hoặc có mảng rỗng), cơ chế bỏ qua theo nội dung
 không chạy và trường `system` cấp cao nhất không được xét đến. Khối được nối vào sau văn
 bản của trường `instructions` dạng chuỗi, trừ khi trường đó đã chứa dấu
-`[67router Output Styles]`; trong trường hợp này, body được giữ nguyên với lý do
+`[OmniRoute Output Styles]`; trong trường hợp này, body được giữ nguyên với lý do
 `already_applied`. Khi body không có trường `instructions` dạng chuỗi nhưng có `input`
 (một chuỗi hoặc một mảng), khối sẽ trở thành `instructions`, thay thế mọi giá trị không
 phải chuỗi mà trường đó từng chứa. Body không có cả trường `instructions` dạng chuỗi lẫn
@@ -578,8 +578,8 @@ hình nén lưu lựa chọn dưới dạng:
 Khả năng tương thích ngược: khi `outputStyles` trống, thiết lập cũ
 `cavemanOutputMode.enabled` ánh xạ tới `terse-prose` ở mức
 `cavemanOutputMode.intensity`. Khi đó, khối bắt đầu bằng dấu
-`[67router Output Styles]`, trong khi bộ chèn `applyCavemanOutputMode()` cũ sử dụng
-`[67router Caveman Output Mode]`. Bên dưới dấu này, văn bản khớp với nội dung chèn cũ
+`[OmniRoute Output Styles]`, trong khi bộ chèn `applyCavemanOutputMode()` cũ sử dụng
+`[OmniRoute Caveman Output Mode]`. Bên dưới dấu này, văn bản khớp với nội dung chèn cũ
 trong en, pt-BR, es, de, fr, it, ru, id và vi; trong ja và zh, văn bản có thêm một
 khoảng trắng trước mệnh đề ranh giới. `terse-prose` được dịch sang pt-BR, es, de, fr,
 it, ru, zh, ja, id và vi, vì vậy một yêu cầu có ngôn ngữ đã phân giải là `hu` sẽ nhận

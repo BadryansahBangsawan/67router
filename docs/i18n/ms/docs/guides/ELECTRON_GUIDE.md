@@ -45,7 +45,7 @@ Disahkan daripada `electron/package.json`:
 | `better-sqlite3`   | akar `^13.0.2` (prabinaan Node-API — tiada binaan semula Electron) |
 | Versi aplikasi     | `3.8.0`                                                            |
 | ID aplikasi        | `online.omniroute.desktop`                                         |
-| Nama produk        | `67router`                                                         |
+| Nama produk        | `OmniRoute`                                                        |
 
 ## Skrip (`package.json` akar)
 

@@ -529,12 +529,12 @@ paliekamas nepakeistas ir praleidžiamas kaip `no_styles`), sujungia pasirinktas
 katalogo tvarka,
 **vieną kartą** prideda ribų sąlygą (taip pat saugos sąlygą, `SAFETY_BOUNDARIES` arba jos
 vertimą, kai pasirinktas `less-code` arba `ponytail`) ir pradeda bloką vienu
-idempotentiškumo žymekliu (`[67router Output Styles]`), todėl pakartotinis pritaikymas
+idempotentiškumo žymekliu (`[OmniRoute Output Styles]`), todėl pakartotinis pritaikymas
 nieko nekeičia. Kai nustatyta kalba (žr. toliau pateiktą skiltį „Kalbos pasirinkimas“)
 turi vertimą, vietoje angliškos instrukcijos įterpiama lokalizuota instrukcija.
 
 Turinyje su netuščiu `messages` masyvu idempotentiškumo patikra atliekama prieš
-turinio apėjimą: kai `[67router Output Styles]` žymeklis jau yra aukščiausio lygio
+turinio apėjimą: kai `[OmniRoute Output Styles]` žymeklis jau yra aukščiausio lygio
 `system` lauke (eilutėje arba turinio blokų masyve) arba sistemos pranešime su eilutės
 turiniu, turinys paliekamas nepakeistas kaip `already_applied` ir raktažodžiai
 netikrinami. Kitu atveju turinio apėjimo funkcija (`shouldBypassCavemanOutputMode()`,
@@ -560,7 +560,7 @@ kuri niekada nesukuria naujo `messages[0]`, įdeda bloką į pirmą rastą viet�
 
 Turinyje be `messages` masyvo (arba su tuščiu masyvu) turinio apėjimas nevykdomas ir
 neatsižvelgiama į aukščiausio lygio `system` lauką. Blokas pridedamas po eilutės tipo
-`instructions` lauko teksto, nebent tame lauke jau yra `[67router Output Styles]`
+`instructions` lauko teksto, nebent tame lauke jau yra `[OmniRoute Output Styles]`
 žymeklis – tokiu atveju turinys paliekamas nepakeistas kaip `already_applied`. Kai
 turinyje nėra eilutės tipo `instructions` lauko, tačiau yra `input` (eilutė arba masyvas),
 blokas tampa `instructions`, pakeisdamas bet kokią tame lauke buvusią ne eilutės tipo
@@ -588,9 +588,9 @@ konfigūracijoje pasirinkimas išsaugomas taip:
 
 Atgalinis suderinamumas: kol `outputStyles` yra tuščias, senasis
 `cavemanOutputMode.enabled` nustatymas susiejamas su `terse-prose`, naudojant
-`cavemanOutputMode.intensity`. Tada blokas prasideda `[67router Output Styles]`
+`cavemanOutputMode.intensity`. Tada blokas prasideda `[OmniRoute Output Styles]`
 žymekliu, o senasis `applyCavemanOutputMode()` įterpiklis įrašydavo
-`[67router Caveman Output Mode]`. Po žymekliu esantis tekstas sutampa su senuoju
+`[OmniRoute Caveman Output Mode]`. Po žymekliu esantis tekstas sutampa su senuoju
 įterptu tekstu en, pt-BR, es, de, fr, it, ru, id ir vi kalbomis; ja ir zh kalbomis prieš
 ribų sąlygą yra vienas papildomas tarpas. `terse-prose` išverstas į pt-BR, es, de, fr,
 it, ru, zh, ja, id ir vi kalbas, todėl užklausa, kurios nustatyta kalba yra `hu`, gauna

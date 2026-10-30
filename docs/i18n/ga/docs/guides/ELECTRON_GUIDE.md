@@ -47,7 +47,7 @@ Deimhnithe ó `electron/package.json`:
 | `better-sqlite3`    | fréamh `^13.0.2` (réamhleaganacha Node-API — ní gá Electron a atógáil) |
 | Leagan na haipe     | `3.8.0`                                                                |
 | Aitheantas na haipe | `online.omniroute.desktop`                                             |
-| Ainm an táirge      | `67router`                                                             |
+| Ainm an táirge      | `OmniRoute`                                                            |
 
 ## Scripteanna (`package.json` fréimhe)
 

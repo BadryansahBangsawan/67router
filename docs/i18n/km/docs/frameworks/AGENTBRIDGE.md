@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox)៖**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain)៖**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # បង្ខំឱ្យបញ្ឈប់ (ប្រ�
 
 ប្រសិនបើ IDE បង្ហាញកំហុស TLS បន្ទាប់ពីចាប់ផ្ដើម AgentBridge៖
 
-1. ផ្ទៀងផ្ទាត់ថាវិញ្ញាបនបត្រត្រូវបានដំឡើង៖ `security find-certificate -c "67router AgentBridge"` (macOS) ឬ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ផ្ទៀងផ្ទាត់ថាវិញ្ញាបនបត្រត្រូវបានដំឡើង៖ `security find-certificate -c "OmniRoute MITM CA"` (macOS) ឬ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. កម្មវិធីមួយចំនួនរក្សាទុកឃ្លាំងទុកចិត្តផ្ទាល់ខ្លួន (Firefox, Chrome នៅលើ Linux)។ ដំណើរការ "Trust Cert" ម្ដងទៀត ហើយពិនិត្យឃ្លាំងវិញ្ញាបនបត្រជាក់លាក់សម្រាប់ NSS/Firefox។
 3. ចាប់ផ្ដើម IDE ឡើងវិញបន្ទាប់ពីកំណត់ការទុកចិត្ត — សម័យ TLS ដែលកំពុងដំណើរការប្រើស្ថានភាពទុកចិត្តចាស់។
 

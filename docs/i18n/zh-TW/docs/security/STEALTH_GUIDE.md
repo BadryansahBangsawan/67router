@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 憑證檔名：`omniroute-mitm.crt`。透過 `getCertFingerprint()` 比對指紋（DER 的 SHA-1）。
 
-此外，當 `certutil` 可用時，`updateNssDatabases()` 會將憑證安裝至每位使用者的 NSS DB：`~/.pki/nssdb`、`~/snap/chromium/.../nssdb`，以及所有 Firefox 設定檔（包括 snap），其暱稱為 **`67router MITM Root CA`**。
+此外，當 `certutil` 可用時，`updateNssDatabases()` 會將憑證安裝至每位使用者的 NSS DB：`~/.pki/nssdb`、`~/snap/chromium/.../nssdb`，以及所有 Firefox 設定檔（包括 snap），其暱稱為 **`OmniRoute MITM Root CA`**。
 
 ### macOS / Windows
 

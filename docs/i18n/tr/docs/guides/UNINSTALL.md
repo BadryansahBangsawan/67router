@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- `Ayarlar → Uygulamalar → 67router → Kaldır` yolunu açın
+- `Ayarlar → Uygulamalar → OmniRoute → Kaldır` yolunu açın
 - Veya kurulum dizinindeki NSIS kaldırma programını çalıştırın
 
 **macOS:**

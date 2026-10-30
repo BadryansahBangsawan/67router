@@ -24,12 +24,12 @@ pelayan MCP dan arahan tersuai semuanya terus berfungsi, cuma dijalankan pada mo
 ## Persediaan
 
 1. **Jalankan 67router** — `npm install -g omniroute && omniroute` (papan pemuka di `http://localhost:20128`).
-2. **Pasang sambungan** — cari "67router" dalam paparan Extensions.
-3. **Pilih model** — Copilot Chat → pemilih model → **Manage Models…** → **67router**, kemudian tandakan
+2. **Pasang sambungan** — cari "OmniRoute" dalam paparan Extensions.
+3. **Pilih model** — Copilot Chat → pemilih model → **Manage Models…** → **OmniRoute**, kemudian tandakan
    model yang anda mahu.
 
 Tiada apa-apa yang perlu dikonfigurasikan apabila 67router berjalan pada port lalai. Untuk tika jauh, buka
-**ikon 67router dalam Activity Bar** (atau jalankan `67router: Manage Connection`) dan tetapkan:
+**ikon 67router dalam Activity Bar** (atau jalankan `OmniRoute: Manage Connection`) dan tetapkan:
 
 - **URL pelayan** — akar pelayan, contohnya `http://192.168.0.15:20128`. Akhiran `/v1`
   ditambahkan oleh sambungan; jangan sertakannya.
@@ -121,7 +121,7 @@ Lihat [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) dan isu
 
 ## Mengkonfigurasi alat anda yang lain dari dalam VS Code
 
-**`67router: Configure Coding CLI`** menggunakan CLI `omniroute` untuk menulis profil sedia digunakan
+**`OmniRoute: Configure Coding CLI`** menggunakan CLI `omniroute` untuk menulis profil sedia digunakan
 bagi Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo dan Roo — konfigurasi yang sama seperti yang diterangkan dalam
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Kunci API diserahkan kepada CLI melalui pemboleh ubah persekitaran
@@ -131,14 +131,14 @@ Kilo dan Roo — konfigurasi yang sama seperti yang diterangkan dalam
 
 ## Penyelesaian masalah
 
-| Gejala                                                        | Punca / penyelesaian                                                                                                                                                                                                                                                       |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tiada model 67router dalam pemilih                            | Pelayan tidak dapat dicapai. Titik bar status bertukar kelabu; jalankan `67router: Check Connection`. Penemuan tidak memaparkan pemberitahuan secara sengaja dan tidak menyumbang sebarang model, dan bukannya memaparkan gesaan.                                          |
-| Setiap model muncul dua kali                                  | Anda menggunakan OmniCopilot yang lebih lama daripada 1.0.1 — kemas kini. Sambungan kini meminta `?prefix=alias`.                                                                                                                                                          |
-| Model imej/audio yang pernah disenaraikan kini tiada          | Disengajakan sejak 1.0.1 — model tersebut sememangnya tidak dapat menjawab permintaan sembang.                                                                                                                                                                             |
-| Panel tiada pada Bar Aktiviti                                 | VS Code memindahkan bekas paparan tambahan ke limpahan **"…"** di bahagian bawah Bar Aktiviti, dan bekas yang disembunyikan melalui klik kanan akan kekal tersembunyi. Klik kanan Bar Aktiviti → tandakan **67router**, atau bukanya dengan `67router: Manage Connection`. |
-| Papan pemuka dibuka dalam pelayar walaupun dalam mod `editor` | Pelayan tidak **dibina** dengan `DASHBOARD_ALLOW_EMBED=vscode` (lihat di atas) — menetapkannya semasa permulaan pada pemasangan prabina tidak mengubah apa-apa. Penggunaan pelayar luaran sebagai sandaran adalah disengajakan.                                            |
-| Senarai model lapuk selepas menukar penyedia                  | `67router: Refresh Models`, atau pautan ↻ dalam panel.                                                                                                                                                                                                                     |
+| Gejala                                                        | Punca / penyelesaian                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tiada model 67router dalam pemilih                            | Pelayan tidak dapat dicapai. Titik bar status bertukar kelabu; jalankan `OmniRoute: Check Connection`. Penemuan tidak memaparkan pemberitahuan secara sengaja dan tidak menyumbang sebarang model, dan bukannya memaparkan gesaan.                                           |
+| Setiap model muncul dua kali                                  | Anda menggunakan OmniCopilot yang lebih lama daripada 1.0.1 — kemas kini. Sambungan kini meminta `?prefix=alias`.                                                                                                                                                            |
+| Model imej/audio yang pernah disenaraikan kini tiada          | Disengajakan sejak 1.0.1 — model tersebut sememangnya tidak dapat menjawab permintaan sembang.                                                                                                                                                                               |
+| Panel tiada pada Bar Aktiviti                                 | VS Code memindahkan bekas paparan tambahan ke limpahan **"…"** di bahagian bawah Bar Aktiviti, dan bekas yang disembunyikan melalui klik kanan akan kekal tersembunyi. Klik kanan Bar Aktiviti → tandakan **OmniRoute**, atau bukanya dengan `OmniRoute: Manage Connection`. |
+| Papan pemuka dibuka dalam pelayar walaupun dalam mod `editor` | Pelayan tidak **dibina** dengan `DASHBOARD_ALLOW_EMBED=vscode` (lihat di atas) — menetapkannya semasa permulaan pada pemasangan prabina tidak mengubah apa-apa. Penggunaan pelayar luaran sebagai sandaran adalah disengajakan.                                              |
+| Senarai model lapuk selepas menukar penyedia                  | `OmniRoute: Refresh Models`, atau pautan ↻ dalam panel.                                                                                                                                                                                                                      |
 
 ---
 

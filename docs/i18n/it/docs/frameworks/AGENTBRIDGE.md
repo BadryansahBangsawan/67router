@@ -206,7 +206,7 @@ Il certificato CA di AgentBridge deve essere considerato attendibile dal sistema
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Portachiavi):**
@@ -449,7 +449,7 @@ In alternativa, configura una porta non privilegiata nelle impostazioni di Agent
 
 Se l'IDE mostra errori TLS dopo l'avvio di AgentBridge:
 
-1. Verifica che il certificato sia stato installato: `security find-certificate -c "67router AgentBridge"` (macOS) oppure `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Verifica che il certificato sia stato installato: `security find-certificate -c "OmniRoute MITM CA"` (macOS) oppure `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Alcune applicazioni gestiscono un proprio archivio di attendibilità (Firefox, Chrome su Linux). Esegui nuovamente "Considera attendibile il certificato" e controlla l'archivio dei certificati specifico di NSS/Firefox.
 3. Riavvia l'IDE dopo aver considerato attendibile il certificato: le sessioni TLS in corso utilizzano il precedente stato di attendibilità.
 

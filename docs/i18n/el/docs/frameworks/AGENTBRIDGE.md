@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # αναγκαστικός τερματισμός (χρη
 
 Εάν το IDE εμφανίζει σφάλματα TLS μετά την εκκίνηση του AgentBridge:
 
-1. Επαληθεύστε ότι το πιστοποιητικό εγκαταστάθηκε: `security find-certificate -c "67router AgentBridge"` (macOS) ή `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Επαληθεύστε ότι το πιστοποιητικό εγκαταστάθηκε: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ή `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Ορισμένες εφαρμογές διατηρούν τη δική τους αποθήκη αξιόπιστων πιστοποιητικών (Firefox, Chrome σε Linux). Εκτελέστε ξανά το "Trust Cert" και ελέγξτε την αποθήκη πιστοποιητικών που αφορά ειδικά το NSS/Firefox.
 3. Επανεκκινήστε το IDE μετά την προσθήκη του πιστοποιητικού ως αξιόπιστου — οι ενεργές συνεδρίες TLS χρησιμοποιούν την προηγούμενη κατάσταση αξιοπιστίας.
 

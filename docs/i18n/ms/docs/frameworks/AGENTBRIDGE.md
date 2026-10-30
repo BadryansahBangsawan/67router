@@ -205,7 +205,7 @@ Sijil CA AgentBridge mesti dipercayai oleh OS sebelum IDE menerima sambungan MIT
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ Sebagai alternatif, konfigurasikan port tanpa keistimewaan dalam tetapan AgentBr
 
 Jika IDE memaparkan ralat TLS selepas memulakan AgentBridge:
 
-1. Sahkan sijil telah dipasang: `security find-certificate -c "67router AgentBridge"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sahkan sijil telah dipasang: `security find-certificate -c "OmniRoute MITM CA"` (macOS) atau `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Sesetengah aplikasi mengekalkan stor kepercayaan mereka sendiri (Firefox, Chrome pada Linux). Jalankan "Trust Cert" sekali lagi dan semak stor sijil khusus NSS/Firefox.
 3. Mulakan semula IDE selepas mempercayai sijil — sesi TLS yang sedang berlangsung menggunakan keadaan kepercayaan lama.
 

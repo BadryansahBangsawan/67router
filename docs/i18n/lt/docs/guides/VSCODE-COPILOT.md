@@ -25,11 +25,11 @@ MCP serveriai ir pasirinktinės instrukcijos veikia kaip anksčiau, tik naudojam
 
 1. **Paleiskite 67router** — `npm install -g omniroute && omniroute` (valdymo skydas pasiekiamas adresu `http://localhost:20128`).
 2. **Įdiekite plėtinį** — plėtinių rodinyje ieškokite „67router“.
-3. **Pasirinkite modelį** — Copilot Chat → modelių parinkiklis → **Valdyti modelius…** → **67router**, tada pažymėkite
+3. **Pasirinkite modelį** — Copilot Chat → modelių parinkiklis → **Valdyti modelius…** → **OmniRoute**, tada pažymėkite
    norimus modelius.
 
 Kai 67router veikia numatytuoju prievadu, nieko konfigūruoti nereikia. Jei naudojate nuotolinį egzempliorių, atverkite
-**67router piktogramą veiklos juostoje** (arba paleiskite `67router: Manage Connection`) ir nustatykite:
+**OmniRoute piktogramą veiklos juostoje** (arba paleiskite `OmniRoute: Manage Connection`) ir nustatykite:
 
 - **Serverio URL** — serverio šakninis adresas, pvz., `http://192.168.0.15:20128`. Plėtinys
   prideda `/v1` priesagą; jos neįtraukite.
@@ -120,7 +120,7 @@ atsako antraštes ir grįžta prie išorinės naršyklės — niekas nesugenda, 
 
 ## Kitų įrankių konfigūravimas iš VS Code
 
-**`67router: Configure Coding CLI`** naudoja `omniroute` CLI, kad įrašytų paruoštus naudoti profilius,
+**`OmniRoute: Configure Coding CLI`** naudoja `omniroute` CLI, kad įrašytų paruoštus naudoti profilius,
 skirtus Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo ir Roo — tas pačias konfigūracijas, kurios aprašytos
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API raktas CLI perduodamas per
@@ -130,14 +130,14 @@ Kilo ir Roo — tas pačias konfigūracijas, kurios aprašytos
 
 ## Trikčių šalinimas
 
-| Požymis                                                           | Priežastis / sprendimas                                                                                                                                                                                                                                                                                           |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modelių pasirinkimo sąraše nėra 67router modelių                  | Serveris nepasiekiamas. Būsenos juostos taškas tampa pilkas; paleiskite `67router: Check Connection`. Aptikimas tyčia vyksta tyliai ir, užuot rodęs raginimą, tiesiog nepateikia jokių modelių.                                                                                                                   |
-| Kiekvienas modelis rodomas du kartus                              | Naudojate senesnę nei 1.0.1 OmniCopilot versiją — atnaujinkite. Dabar plėtinys siunčia užklausą su `?prefix=alias`.                                                                                                                                                                                               |
-| Anksčiau rodytas vaizdo / garso modelis dingo                     | Nuo 1.0.1 taip yra tyčia — jis niekada negalėjo atsakyti į pokalbio užklausą.                                                                                                                                                                                                                                     |
-| Veiklos juostoje nėra skydelio                                    | VS Code perkelia papildomus rodinių konteinerius į **„…“** perpildymo meniu Veiklos juostos apačioje, o dešiniuoju pelės mygtuku paslėptas konteineris lieka paslėptas. Dešiniuoju pelės mygtuku spustelėkite Veiklos juostą → pažymėkite **67router** arba atverkite jį naudodami `67router: Manage Connection`. |
-| Nepaisant `editor` režimo, valdymo skydelis atveriamas naršyklėje | Serveris nebuvo **sukompiliuotas** su `DASHBOARD_ALLOW_EMBED=vscode` (žr. pirmiau) — jo nustatymas paleidimo metu iš anksto sukompiliuotame dieginyje nieko nekeičia. Perėjimas prie atsarginio varianto yra numatytas.                                                                                           |
-| Pakeitus teikėjus modelių sąrašas yra pasenęs                     | `67router: Refresh Models` arba skydelyje esanti ↻ nuoroda.                                                                                                                                                                                                                                                       |
+| Požymis                                                           | Priežastis / sprendimas                                                                                                                                                                                                                                                                                             |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modelių pasirinkimo sąraše nėra 67router modelių                  | Serveris nepasiekiamas. Būsenos juostos taškas tampa pilkas; paleiskite `OmniRoute: Check Connection`. Aptikimas tyčia vyksta tyliai ir, užuot rodęs raginimą, tiesiog nepateikia jokių modelių.                                                                                                                    |
+| Kiekvienas modelis rodomas du kartus                              | Naudojate senesnę nei 1.0.1 OmniCopilot versiją — atnaujinkite. Dabar plėtinys siunčia užklausą su `?prefix=alias`.                                                                                                                                                                                                 |
+| Anksčiau rodytas vaizdo / garso modelis dingo                     | Nuo 1.0.1 taip yra tyčia — jis niekada negalėjo atsakyti į pokalbio užklausą.                                                                                                                                                                                                                                       |
+| Veiklos juostoje nėra skydelio                                    | VS Code perkelia papildomus rodinių konteinerius į **„…“** perpildymo meniu Veiklos juostos apačioje, o dešiniuoju pelės mygtuku paslėptas konteineris lieka paslėptas. Dešiniuoju pelės mygtuku spustelėkite Veiklos juostą → pažymėkite **OmniRoute** arba atverkite jį naudodami `OmniRoute: Manage Connection`. |
+| Nepaisant `editor` režimo, valdymo skydelis atveriamas naršyklėje | Serveris nebuvo **sukompiliuotas** su `DASHBOARD_ALLOW_EMBED=vscode` (žr. pirmiau) — jo nustatymas paleidimo metu iš anksto sukompiliuotame dieginyje nieko nekeičia. Perėjimas prie atsarginio varianto yra numatytas.                                                                                             |
+| Pakeitus teikėjus modelių sąrašas yra pasenęs                     | `OmniRoute: Refresh Models` arba skydelyje esanti ↻ nuoroda.                                                                                                                                                                                                                                                        |
 
 ---
 

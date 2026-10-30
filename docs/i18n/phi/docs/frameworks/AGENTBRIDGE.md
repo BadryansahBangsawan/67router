@@ -206,7 +206,7 @@ Kailangang pagkatiwalaan ng OS ang AgentBridge CA certificate bago tanggapin ng 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -450,7 +450,7 @@ Bilang alternatibo, mag-configure ng hindi pribilehiyong port sa mga setting ng 
 
 Kung nagpapakita ang IDE ng mga TLS error pagkatapos simulan ang AgentBridge:
 
-1. Tiyaking na-install ang cert: `security find-certificate -c "67router AgentBridge"` (macOS) o `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Tiyaking na-install ang cert: `security find-certificate -c "OmniRoute MITM CA"` (macOS) o `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Pinapanatili ng ilang app ang sarili nilang trust store (Firefox, Chrome sa Linux). Patakbuhin muli ang "Trust Cert" at suriin ang cert store na partikular sa NSS/Firefox.
 3. I-restart ang IDE pagkatapos pagkatiwalaan ang certificate — ginagamit ng mga kasalukuyang TLS session ang lumang trust state.
 

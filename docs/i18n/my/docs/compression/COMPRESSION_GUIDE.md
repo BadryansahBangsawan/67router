@@ -523,12 +523,12 @@ settings API သည် မည်သည့် style id ကိုမဆို လ�
 boundaries clause ကို **တစ်ကြိမ်သာ** ထပ်ဖြည့်သည် (`less-code` သို့မဟုတ် `ponytail` ကို
 ရွေးထားလျှင် safety clause ဖြစ်သည့် `SAFETY_BOUNDARIES` သို့မဟုတ် ၎င်း၏
 ဘာသာပြန်ကိုပါ ထည့်သည်)၊ ထို့နောက် block ကို idempotency marker တစ်ခုတည်းဖြစ်သော
-(`[67router Output Styles]`) ဖြင့် စတင်သဖြင့် ပြန်လည် apply လုပ်ခြင်းသည် မည်သည့်ပြောင်းလဲမှုမျှ မဖြစ်စေပါ။
+(`[OmniRoute Output Styles]`) ဖြင့် စတင်သဖြင့် ပြန်လည် apply လုပ်ခြင်းသည် မည်သည့်ပြောင်းလဲမှုမျှ မဖြစ်စေပါ။
 ဖြေရှင်းဆုံးဖြတ်ထားသော ဘာသာစကားအတွက် (အောက်ရှိ Language selection ကို ကြည့်ပါ)
 ဘာသာပြန်ရှိပါက English instruction အစား localized instruction ကို ထည့်သွင်းသည်။
 
 ဗလာမဟုတ်သော `messages` array ပါသည့် body တစ်ခုတွင် idempotency စစ်ဆေးမှုကို
-content bypass မတိုင်မီ လုပ်ဆောင်သည်။ `[67router Output Styles]` marker သည် top-level
+content bypass မတိုင်မီ လုပ်ဆောင်သည်။ `[OmniRoute Output Styles]` marker သည် top-level
 `system` field (string သို့မဟုတ် content-block array) အတွင်း သို့မဟုတ် string
 content ပါသည့် system message အတွင်း ရှိပြီးသားဖြစ်လျှင် body ကို `already_applied` အဖြစ်
 မပြောင်းလဲဘဲထားပြီး keyword စစ်ဆေးမှုကို မလုပ်ဆောင်ပါ။
@@ -556,7 +556,7 @@ Bypass က turn ကို ဖြတ်သန်းခွင့်ပေးသေ
 `messages` array မပါသော body (သို့မဟုတ် array အလွတ်ပါသော body) တွင် content bypass
 မလုပ်ဆောင်ဘဲ top-level `system` field ကိုလည်း မစစ်ဆေးပါ။ String အမျိုးအစား
 `instructions` field ၏ စာသားနောက်တွင် block ကို ထပ်ဖြည့်သည်။ သို့သော် ထို field တွင်
-`[67router Output Styles]` marker ပါပြီးသားဖြစ်ပါက body ကို `already_applied` အဖြစ်
+`[OmniRoute Output Styles]` marker ပါပြီးသားဖြစ်ပါက body ကို `already_applied` အဖြစ်
 မပြောင်းလဲဘဲထားသည်။ Body တွင် string `instructions` field မရှိသော်လည်း `input`
 (string သို့မဟုတ် array) ပါရှိပါက block သည် `instructions` ဖြစ်လာပြီး ထို field တွင်ရှိခဲ့သည့်
 string မဟုတ်သော value ကို အစားထိုးသည်။ String `instructions` field လည်းမရှိ၊ string
@@ -584,9 +584,9 @@ toggle သည် **Caveman** စာမျက်နှာ (`/dashboard/context/ca
 
 နောက်ကြောင်းပြန်လိုက်ဖက်မှု- `outputStyles` အလွတ်ဖြစ်နေစဉ် legacy
 `cavemanOutputMode.enabled` setting သည် `cavemanOutputMode.intensity` ရှိ
-`terse-prose` သို့ mapping လုပ်သည်။ ထို့နောက် block သည် `[67router Output Styles]`
+`terse-prose` သို့ mapping လုပ်သည်။ ထို့နောက် block သည် `[OmniRoute Output Styles]`
 marker ဖြင့် စတင်ပြီး legacy `applyCavemanOutputMode()` injector ကမူ
-`[67router Caveman Output Mode]` ကို ထည့်သွင်းခဲ့သည်။ Marker အောက်ရှိ စာသားသည်
+`[OmniRoute Caveman Output Mode]` ကို ထည့်သွင်းခဲ့သည်။ Marker အောက်ရှိ စာသားသည်
 en, pt-BR, es, de, fr, it, ru, id နှင့် vi တို့တွင် legacy injection နှင့် တူညီသည်။
 ja နှင့် zh တို့တွင် boundaries clause မတိုင်မီ space တစ်ခု ပိုပါသည်။
 `terse-prose` ကို pt-BR, es, de, fr, it, ru, zh, ja, id နှင့် vi သို့ ဘာသာပြန်ပေးထားသဖြင့်

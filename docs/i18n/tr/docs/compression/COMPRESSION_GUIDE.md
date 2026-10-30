@@ -540,12 +540,12 @@ değiştirmeden bırakır ve `no_styles` olarak atlanır), seçilen talimatları
 sırasına göre birleştirir,
 sınırlar maddesini **bir kez** ekler (ayrıca `less-code` veya `ponytail` seçildiğinde
 güvenlik maddesini, `SAFETY_BOUNDARIES` ya da çevirisini ekler) ve bloğu tek bir
-idempotans işaretiyle (`[67router Output Styles]`) başlatır; dolayısıyla yeniden uygulama
+idempotans işaretiyle (`[OmniRoute Output Styles]`) başlatır; dolayısıyla yeniden uygulama
 işlem yapmaz. Çözümlenen dilin (aşağıdaki Dil seçimi bölümüne bakın) çevirisi varsa
 İngilizce yerine yerelleştirilmiş talimat eklenir.
 
 Boş olmayan bir `messages` dizisine sahip gövdede, idempotans denetimi içerik baypasından
-önce çalışır: `[67router Output Styles]` işareti üst düzey `system` alanında (bir dize
+önce çalışır: `[OmniRoute Output Styles]` işareti üst düzey `system` alanında (bir dize
 veya içerik bloğu dizisi) ya da dize içeriğine sahip bir sistem mesajında zaten
 bulunuyorsa gövde `already_applied` olarak değiştirilmeden bırakılır ve anahtar sözcük
 denetimi çalışmaz. Aksi takdirde bir içerik baypası
@@ -571,7 +571,7 @@ Baypas turun geçmesine izin verdiğinde, hiçbir zaman yeni bir `messages[0]` o
 
 `messages` dizisi olmayan (veya boş bir diziye sahip) gövdede içerik baypası çalışmaz ve
 üst düzey `system` alanına bakılmaz. Blok, dize türündeki bir `instructions` alanının
-metninden sonra eklenir; ancak bu alan zaten `[67router Output Styles]` işaretini
+metninden sonra eklenir; ancak bu alan zaten `[OmniRoute Output Styles]` işaretini
 içeriyorsa gövde `already_applied` olarak değiştirilmeden bırakılır. Gövdede dize
 türünde bir `instructions` alanı bulunmayıp `input` (bir dize veya dizi) bulunuyorsa
 blok, bu alanın taşıdığı dize olmayan değerin yerine geçerek `instructions` olur. Dize
@@ -598,8 +598,8 @@ Program aracılığıyla sıkıştırma yapılandırması seçimi şu şekilde k
 
 Geriye dönük uyumluluk: `outputStyles` boşken eski `cavemanOutputMode.enabled` ayarı,
 `cavemanOutputMode.intensity` düzeyinde `terse-prose` stiline eşlenir. Bu durumda blok,
-eski `applyCavemanOutputMode()` ekleyicisinin yazdığı `[67router Caveman Output Mode]`
-yerine `[67router Output Styles]` işaretiyle başlar. İşaretin altında metin; en, pt-BR,
+eski `applyCavemanOutputMode()` ekleyicisinin yazdığı `[OmniRoute Caveman Output Mode]`
+yerine `[OmniRoute Output Styles]` işaretiyle başlar. İşaretin altında metin; en, pt-BR,
 es, de, fr, it, ru, id ve vi dillerindeki eski eklemeyle eşleşir; ja ve zh dillerinde
 sınırlar maddesinden önce fazladan bir boşluk içerir. `terse-prose`; pt-BR, es, de, fr,
 it, ru, zh, ja, id ve vi dillerine çevrilir; dolayısıyla çözümlenen dili `hu` olan bir

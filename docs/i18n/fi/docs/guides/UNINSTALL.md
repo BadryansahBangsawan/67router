@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- Avaa `Asetukset → Sovellukset → 67router → Poista asennus`
+- Avaa `Asetukset → Sovellukset → OmniRoute → Poista asennus`
 - Tai suorita NSIS-asennuksenpoisto-ohjelma asennushakemistosta
 
 **macOS:**

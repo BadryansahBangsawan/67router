@@ -26,12 +26,12 @@ personalizadas continuam funcionando, apenas executados no modelo que você esco
 ## Configuração
 
 1. **Execute o 67router** — `npm install -g omniroute && omniroute` (painel em `http://localhost:20128`).
-2. **Instale a extensão** — pesquise por "67router" na visualização Extensions.
-3. **Escolha um modelo** — Copilot Chat → seletor de modelos → **Manage Models…** → **67router** e, em seguida, marque
+2. **Instale a extensão** — pesquise por "OmniRoute" na visualização Extensions.
+3. **Escolha um modelo** — Copilot Chat → seletor de modelos → **Manage Models…** → **OmniRoute** e, em seguida, marque
    os modelos desejados.
 
 Não é necessário configurar nada quando o 67router é executado na porta padrão. Para uma instância remota, abra o
-**ícone do 67router na Activity Bar** (ou execute `67router: Manage Connection`) e defina:
+**ícone do 67router na Activity Bar** (ou execute `OmniRoute: Manage Connection`) e defina:
 
 - **URL do servidor** — a raiz do servidor, por exemplo, `http://192.168.0.15:20128`. O sufixo `/v1` é
   adicionado pela extensão; não o inclua.
@@ -123,7 +123,7 @@ Consulte [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) e a issue
 
 ## Configurando suas outras ferramentas pelo VS Code
 
-**`67router: Configure Coding CLI`** usa a CLI `omniroute` para gravar perfis prontos para uso
+**`OmniRoute: Configure Coding CLI`** usa a CLI `omniroute` para gravar perfis prontos para uso
 para Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo e Roo — as mesmas configurações descritas em
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). A chave de API é fornecida à CLI por meio da variável de ambiente
@@ -133,14 +133,14 @@ Kilo e Roo — as mesmas configurações descritas em
 
 ## Solução de problemas
 
-| Sintoma                                                          | Causa / correção                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nenhum modelo do 67router no seletor                             | O servidor está inacessível. O ponto da barra de status fica cinza; execute `67router: Check Connection`. A descoberta é silenciosa por design e não fornece nenhum modelo, em vez de exibir uma solicitação.                                                                                                                   |
-| Todos os modelos aparecem duas vezes                             | Você está usando uma versão do OmniCopilot anterior à 1.0.1 — atualize. Agora, a extensão solicita `?prefix=alias`.                                                                                                                                                                                                             |
-| Um modelo de imagem/áudio que aparecia não está mais listado     | Intencional desde a versão 1.0.1 — ele nunca poderia responder a uma solicitação de chat.                                                                                                                                                                                                                                       |
-| Painel ausente na Barra de Atividades                            | O VS Code move os contêineres de visualização adicionais para o menu excedente **"…"** na parte inferior da Barra de Atividades, e um contêiner ocultado pelo clique com o botão direito permanece oculto. Clique com o botão direito na Barra de Atividades → marque **67router** ou abra-o com `67router: Manage Connection`. |
-| O dashboard abre no navegador apesar do modo `editor`            | O servidor não foi **compilado** com `DASHBOARD_ALLOW_EMBED=vscode` (veja acima) — defini-la na inicialização de uma instalação pré-compilada não altera nada. O fallback é intencional.                                                                                                                                        |
-| A lista de modelos está desatualizada após alterar os provedores | Execute `67router: Refresh Models` ou use o link ↻ no painel.                                                                                                                                                                                                                                                                   |
+| Sintoma                                                          | Causa / correção                                                                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nenhum modelo do 67router no seletor                             | O servidor está inacessível. O ponto da barra de status fica cinza; execute `OmniRoute: Check Connection`. A descoberta é silenciosa por design e não fornece nenhum modelo, em vez de exibir uma solicitação.                                                                                                                    |
+| Todos os modelos aparecem duas vezes                             | Você está usando uma versão do OmniCopilot anterior à 1.0.1 — atualize. Agora, a extensão solicita `?prefix=alias`.                                                                                                                                                                                                               |
+| Um modelo de imagem/áudio que aparecia não está mais listado     | Intencional desde a versão 1.0.1 — ele nunca poderia responder a uma solicitação de chat.                                                                                                                                                                                                                                         |
+| Painel ausente na Barra de Atividades                            | O VS Code move os contêineres de visualização adicionais para o menu excedente **"…"** na parte inferior da Barra de Atividades, e um contêiner ocultado pelo clique com o botão direito permanece oculto. Clique com o botão direito na Barra de Atividades → marque **OmniRoute** ou abra-o com `OmniRoute: Manage Connection`. |
+| O dashboard abre no navegador apesar do modo `editor`            | O servidor não foi **compilado** com `DASHBOARD_ALLOW_EMBED=vscode` (veja acima) — defini-la na inicialização de uma instalação pré-compilada não altera nada. O fallback é intencional.                                                                                                                                          |
+| A lista de modelos está desatualizada após alterar os provedores | Execute `OmniRoute: Refresh Models` ou use o link ↻ no painel.                                                                                                                                                                                                                                                                    |
 
 ---
 

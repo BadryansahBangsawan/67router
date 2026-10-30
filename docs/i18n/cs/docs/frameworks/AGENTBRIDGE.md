@@ -205,7 +205,7 @@ Než budou IDE přijímat připojení MITM, musí operační systém považovat 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Klíčenka):**
@@ -449,7 +449,7 @@ Případně v nastavení AgentBridge nakonfigurujte neprivilegovaný port a nast
 
 Pokud IDE po spuštění AgentBridge zobrazuje chyby TLS:
 
-1. Ověřte, že byl certifikát nainstalován: `security find-certificate -c "67router AgentBridge"` (macOS) nebo `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ověřte, že byl certifikát nainstalován: `security find-certificate -c "OmniRoute MITM CA"` (macOS) nebo `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Některé aplikace používají vlastní úložiště důvěryhodných certifikátů (Firefox, Chrome v Linuxu). Spusťte znovu „Trust Cert“ a zkontrolujte úložiště certifikátů specifické pro NSS/Firefox.
 3. Po nastavení důvěryhodnosti IDE restartujte — probíhající relace TLS používají původní stav důvěryhodnosti.
 

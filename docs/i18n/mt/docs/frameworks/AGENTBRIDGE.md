@@ -205,7 +205,7 @@ Iċ-ċertifikat CA ta’ AgentBridge jrid ikun fdat mill-OS qabel ma l-IDEs jaċ
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ Inkella, ikkonfigura port mhux privileġġat fis-settings ta' AgentBridge u stab
 
 Jekk l-IDE juri żbalji TLS wara li jinbeda AgentBridge:
 
-1. Ivverifika li ċ-ċertifikat ġie installat: `security find-certificate -c "67router AgentBridge"` (macOS) jew `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ivverifika li ċ-ċertifikat ġie installat: `security find-certificate -c "OmniRoute MITM CA"` (macOS) jew `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Xi apps iżommu l-maħżen tal-fiduċja tagħhom stess (Firefox, Chrome fuq Linux). Erġa' ħaddem "Trust Cert" u ċċekkja l-maħżen taċ-ċertifikati speċifiku għal NSS/Firefox.
 3. Erġa' ibda l-IDE wara li tafda ċ-ċertifikat — is-sessjonijiet TLS li jkunu għaddejjin jużaw l-istat ta' fiduċja l-antik.
 

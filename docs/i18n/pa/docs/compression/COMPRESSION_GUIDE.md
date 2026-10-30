@@ -512,12 +512,12 @@ body ਨੂੰ ਬਿਨਾਂ ਬਦਲੇ ਛੱਡ ਦਿੰਦੀ ਹੈ ਅ
 ਕੈਟਾਲਾਗ ਕ੍ਰਮ ਵਿੱਚ ਜੋੜਦਾ ਹੈ,
 boundaries clause ਨੂੰ **ਇੱਕ ਵਾਰ** ਜੋੜਦਾ ਹੈ (ਨਾਲ ਹੀ safety clause, `SAFETY_BOUNDARIES` ਜਾਂ ਇਸਦਾ
 ਅਨੁਵਾਦ, ਜਦੋਂ `less-code` ਜਾਂ `ponytail` ਚੁਣਿਆ ਗਿਆ ਹੋਵੇ), ਅਤੇ block ਨੂੰ ਇੱਕੋ
-idempotency marker (`[67router Output Styles]`) ਨਾਲ ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਇਸਨੂੰ ਮੁੜ ਲਾਗੂ ਕਰਨਾ
+idempotency marker (`[OmniRoute Output Styles]`) ਨਾਲ ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਇਸਨੂੰ ਮੁੜ ਲਾਗੂ ਕਰਨਾ
 ਕੋਈ ਤਬਦੀਲੀ ਨਹੀਂ ਕਰਦਾ। ਜਦੋਂ ਹੱਲ ਕੀਤੀ ਗਈ ਭਾਸ਼ਾ (ਹੇਠਾਂ Language selection ਵੇਖੋ) ਦਾ ਅਨੁਵਾਦ
 ਉਪਲਬਧ ਹੋਵੇ, ਤਾਂ ਅੰਗਰੇਜ਼ੀ ਦੀ ਥਾਂ ਸਥਾਨਕ ਬਣਾਈ ਹਦਾਇਤ ਸ਼ਾਮਲ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।
 
 ਗੈਰ-ਖਾਲੀ `messages` array ਵਾਲੀ body ਉੱਤੇ, idempotency ਜਾਂਚ content bypass ਤੋਂ ਪਹਿਲਾਂ
-ਚੱਲਦੀ ਹੈ: ਜਦੋਂ `[67router Output Styles]` marker ਪਹਿਲਾਂ ਹੀ top-level
+ਚੱਲਦੀ ਹੈ: ਜਦੋਂ `[OmniRoute Output Styles]` marker ਪਹਿਲਾਂ ਹੀ top-level
 `system` field (ਇੱਕ string ਜਾਂ content-block array) ਵਿੱਚ, ਜਾਂ string content ਵਾਲੇ system
 message ਵਿੱਚ ਮੌਜੂਦ ਹੋਵੇ, ਤਾਂ body ਨੂੰ `already_applied` ਵਜੋਂ ਬਿਨਾਂ ਬਦਲੇ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ
 ਅਤੇ ਕੋਈ keyword ਜਾਂਚ ਨਹੀਂ ਚੱਲਦੀ। ਨਹੀਂ ਤਾਂ content bypass
@@ -546,7 +546,7 @@ keyword ਜਾਂਚ ਛੱਡ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।
 `messages` array ਤੋਂ ਬਿਨਾਂ body ਉੱਤੇ (ਜਾਂ ਖਾਲੀ array ਵਾਲੀ body ਉੱਤੇ), ਕੋਈ content bypass
 ਨਹੀਂ ਚੱਲਦਾ ਅਤੇ top-level `system` field ਦੀ ਜਾਂਚ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। block ਨੂੰ string
 `instructions` field ਦੇ text ਤੋਂ ਬਾਅਦ ਜੋੜਿਆ ਜਾਂਦਾ ਹੈ, ਜਦ ਤੱਕ ਉਸ field ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ
-`[67router Output Styles]` marker ਨਾ ਹੋਵੇ; ਉਸ ਸਥਿਤੀ ਵਿੱਚ body ਨੂੰ
+`[OmniRoute Output Styles]` marker ਨਾ ਹੋਵੇ; ਉਸ ਸਥਿਤੀ ਵਿੱਚ body ਨੂੰ
 `already_applied` ਵਜੋਂ ਬਿਨਾਂ ਬਦਲੇ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਜਦੋਂ body ਵਿੱਚ string
 `instructions` field ਨਹੀਂ ਹੁੰਦਾ ਪਰ `input` (ਇੱਕ string ਜਾਂ array) ਮੌਜੂਦ ਹੁੰਦਾ ਹੈ,
 ਤਾਂ block `instructions` ਬਣ ਜਾਂਦਾ ਹੈ ਅਤੇ ਉਸ field ਵਿੱਚ ਮੌਜੂਦ ਕਿਸੇ ਵੀ non-string value
@@ -574,8 +574,8 @@ Programmatically, compression config ਚੋਣ ਨੂੰ ਇਸ ਤਰ੍ਹਾ�
 
 Back-compat: ਜਦੋਂ `outputStyles` ਖਾਲੀ ਹੁੰਦਾ ਹੈ, legacy
 `cavemanOutputMode.enabled` setting, `cavemanOutputMode.intensity` ਉੱਤੇ `terse-prose`
-ਨਾਲ map ਹੁੰਦੀ ਹੈ। ਫਿਰ block `[67router Output Styles]` marker ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ, ਜਦਕਿ
-legacy `applyCavemanOutputMode()` injector `[67router Caveman Output Mode]` ਲਿਖਦਾ ਸੀ।
+ਨਾਲ map ਹੁੰਦੀ ਹੈ। ਫਿਰ block `[OmniRoute Output Styles]` marker ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ, ਜਦਕਿ
+legacy `applyCavemanOutputMode()` injector `[OmniRoute Caveman Output Mode]` ਲਿਖਦਾ ਸੀ।
 marker ਤੋਂ ਹੇਠਾਂ, text en, pt-BR, es, de, fr, it, ru, id ਅਤੇ vi ਵਿੱਚ legacy injection
 ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ; ja ਅਤੇ zh ਵਿੱਚ boundaries clause ਤੋਂ ਪਹਿਲਾਂ ਇੱਕ ਵਾਧੂ space ਹੁੰਦੀ ਹੈ।
 `terse-prose` ਦਾ pt-BR, es, de, fr, it, ru, zh, ja, id ਅਤੇ vi ਵਿੱਚ ਅਨੁਵਾਦ ਹੁੰਦਾ ਹੈ,

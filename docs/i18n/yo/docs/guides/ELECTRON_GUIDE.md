@@ -45,7 +45,7 @@ A fìdí rẹ̀ múlẹ̀ láti `electron/package.json`:
 | `better-sqlite3`   | root `^13.0.2` (Àwọn ìkọ́lé-tẹ́lẹ̀ Node-API — kò nílò àtúnkọ́ Electron) |
 | Ẹ̀dà ètò ìṣàfilọ́lẹ̀  | `3.8.0`                                                             |
 | ID ètò ìṣàfilọ́lẹ̀   | `online.omniroute.desktop`                                          |
-| Orúkọ ọjà          | `67router`                                                          |
+| Orúkọ ọjà          | `OmniRoute`                                                         |
 
 ## Àwọn ìwé-àṣẹ (root `package.json`)
 

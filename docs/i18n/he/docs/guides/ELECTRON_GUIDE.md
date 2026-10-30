@@ -45,7 +45,7 @@
 | `better-sqlite3`   | שורש `^13.0.2` (בנייה מוכנה מראש של Node-API — ללא בנייה מחדש עבור Electron) |
 | גרסת היישום        | `3.8.0`                                                                      |
 | מזהה היישום        | `online.omniroute.desktop`                                                   |
-| שם המוצר           | `67router`                                                                   |
+| שם המוצר           | `OmniRoute`                                                                  |
 
 ## סקריפטים (`package.json` בשורש)
 

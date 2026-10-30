@@ -205,7 +205,7 @@ Perimamas tikslinis pagrindinis kompiuteris: **`daily-cloudcode-pa.googleapis.co
 
 Sertifikato failo pavadinimas: `omniroute-mitm.crt`. Kontrolinis požymis tikrinamas naudojant `getCertFingerprint()` (DER SHA-1).
 
-Be to, kai pasiekiama `certutil`, `updateNssDatabases()` įdiegia sertifikatą kiekvieno naudotojo NSS duomenų bazėse: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visuose Firefox profiliuose (įskaitant snap), naudodama slapyvardį **`67router MITM Root CA`**.
+Be to, kai pasiekiama `certutil`, `updateNssDatabases()` įdiegia sertifikatą kiekvieno naudotojo NSS duomenų bazėse: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, visuose Firefox profiliuose (įskaitant snap), naudodama slapyvardį **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

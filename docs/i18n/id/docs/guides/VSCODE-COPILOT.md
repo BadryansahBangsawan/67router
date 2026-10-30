@@ -24,12 +24,12 @@ server MCP, dan instruksi khusus semuanya tetap berfungsi, hanya saja dijalankan
 ## Penyiapan
 
 1. **Jalankan 67router** — `npm install -g omniroute && omniroute` (dasbor di `http://localhost:20128`).
-2. **Instal ekstensi** — cari "67router" di tampilan Extensions.
-3. **Pilih model** — Copilot Chat → pemilih model → **Manage Models…** → **67router**, lalu centang
+2. **Instal ekstensi** — cari "OmniRoute" di tampilan Extensions.
+3. **Pilih model** — Copilot Chat → pemilih model → **Manage Models…** → **OmniRoute**, lalu centang
    model yang Anda inginkan.
 
 Tidak ada yang perlu dikonfigurasi ketika 67router berjalan pada port default. Untuk instans jarak jauh, buka
-**ikon 67router di Activity Bar** (atau jalankan `67router: Manage Connection`) dan atur:
+**ikon 67router di Activity Bar** (atau jalankan `OmniRoute: Manage Connection`) dan atur:
 
 - **URL server** — root server, misalnya `http://192.168.0.15:20128`. Sufiks `/v1`
   ditambahkan oleh ekstensi; jangan sertakan sufiks tersebut.
@@ -121,7 +121,7 @@ Lihat [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) dan isu
 
 ## Mengonfigurasi alat lain dari dalam VS Code
 
-**`67router: Configure Coding CLI`** menjalankan CLI `omniroute` untuk membuat profil siap pakai
+**`OmniRoute: Configure Coding CLI`** menjalankan CLI `omniroute` untuk membuat profil siap pakai
 bagi Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo, dan Roo — konfigurasi yang sama seperti yang dijelaskan dalam
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Kunci API diteruskan ke CLI melalui variabel lingkungan
@@ -131,14 +131,14 @@ Kilo, dan Roo — konfigurasi yang sama seperti yang dijelaskan dalam
 
 ## Pemecahan masalah
 
-| Gejala                                                   | Penyebab / perbaikan                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tidak ada model 67router di pemilih                      | Server tidak dapat dijangkau. Titik pada bilah status berubah menjadi abu-abu; jalankan `67router: Check Connection`. Penemuan model sengaja dilakukan tanpa notifikasi dan tidak menambahkan model apa pun alih-alih menampilkan perintah interaktif.                                 |
-| Setiap model muncul dua kali                             | Anda menggunakan OmniCopilot versi sebelum 1.0.1 — lakukan pembaruan. Ekstensi kini meminta `?prefix=alias`.                                                                                                                                                                           |
-| Model gambar/audio yang sebelumnya tercantum kini hilang | Disengaja sejak 1.0.1 — model tersebut memang tidak pernah dapat menjawab permintaan obrolan.                                                                                                                                                                                          |
-| Panel tidak ada di Bilah Aktivitas                       | VS Code memindahkan kontainer tampilan tambahan ke menu luapan **"…"** di bagian bawah Bilah Aktivitas, dan kontainer yang disembunyikan melalui klik kanan akan tetap tersembunyi. Klik kanan Bilah Aktivitas → centang **67router**, atau buka dengan `67router: Manage Connection`. |
-| Dasbor terbuka di browser meskipun dalam mode `editor`   | Server tidak **dibuat** dengan `DASHBOARD_ALLOW_EMBED=vscode` (lihat di atas) — mengaturnya saat startup pada instalasi siap pakai tidak berpengaruh. Peralihan ke browser eksternal memang disengaja.                                                                                 |
-| Daftar model tidak mutakhir setelah mengubah penyedia    | `67router: Refresh Models`, atau tautan ↻ di panel.                                                                                                                                                                                                                                    |
+| Gejala                                                   | Penyebab / perbaikan                                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tidak ada model 67router di pemilih                      | Server tidak dapat dijangkau. Titik pada bilah status berubah menjadi abu-abu; jalankan `OmniRoute: Check Connection`. Penemuan model sengaja dilakukan tanpa notifikasi dan tidak menambahkan model apa pun alih-alih menampilkan perintah interaktif.                                  |
+| Setiap model muncul dua kali                             | Anda menggunakan OmniCopilot versi sebelum 1.0.1 — lakukan pembaruan. Ekstensi kini meminta `?prefix=alias`.                                                                                                                                                                             |
+| Model gambar/audio yang sebelumnya tercantum kini hilang | Disengaja sejak 1.0.1 — model tersebut memang tidak pernah dapat menjawab permintaan obrolan.                                                                                                                                                                                            |
+| Panel tidak ada di Bilah Aktivitas                       | VS Code memindahkan kontainer tampilan tambahan ke menu luapan **"…"** di bagian bawah Bilah Aktivitas, dan kontainer yang disembunyikan melalui klik kanan akan tetap tersembunyi. Klik kanan Bilah Aktivitas → centang **OmniRoute**, atau buka dengan `OmniRoute: Manage Connection`. |
+| Dasbor terbuka di browser meskipun dalam mode `editor`   | Server tidak **dibuat** dengan `DASHBOARD_ALLOW_EMBED=vscode` (lihat di atas) — mengaturnya saat startup pada instalasi siap pakai tidak berpengaruh. Peralihan ke browser eksternal memang disengaja.                                                                                   |
+| Daftar model tidak mutakhir setelah mengubah penyedia    | `OmniRoute: Refresh Models`, atau tautan ↻ di panel.                                                                                                                                                                                                                                     |
 
 ---
 

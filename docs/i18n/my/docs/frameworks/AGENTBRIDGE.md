@@ -205,7 +205,7 @@ IDE များက MITM ချိတ်ဆက်မှုကို လက်မ
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -437,7 +437,7 @@ sudo fuser -k 443/tcp  # အတင်းအကျပ် ရပ်တန့်ရ
 
 AgentBridge ကို စတင်ပြီးနောက် IDE တွင် TLS errors များ ပြသပါက:
 
-1. cert ကို install လုပ်ထားခြင်းရှိမရှိ စစ်ဆေးပါ: `security find-certificate -c "67router AgentBridge"` (macOS) သို့မဟုတ် `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. cert ကို install လုပ်ထားခြင်းရှိမရှိ စစ်ဆေးပါ: `security find-certificate -c "OmniRoute MITM CA"` (macOS) သို့မဟုတ် `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. အချို့ app များသည် ၎င်းတို့၏ကိုယ်ပိုင် trust store ကို ထိန်းသိမ်းထားသည် (Firefox၊ Linux ပေါ်ရှိ Chrome)။ "Trust Cert" ကို ထပ်မံလုပ်ဆောင်ပြီး NSS/Firefox သီးသန့် cert store ကို စစ်ဆေးပါ။
 3. ယုံကြည်မှုပေးပြီးနောက် IDE ကို restart လုပ်ပါ — လက်ရှိလုပ်ဆောင်နေသော TLS sessions များသည် trust state အဟောင်းကို အသုံးပြုသည်။
 

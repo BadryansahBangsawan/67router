@@ -205,7 +205,7 @@ Binary များကို `OPENAI_BASE_URL` မှတစ်ဆင့် လ�
 
 Certificate ဖိုင်အမည်: `omniroute-mitm.crt`။ `getCertFingerprint()` မှတစ်ဆင့် fingerprint ကိုက်ညီမှု စစ်ဆေးသည် (DER ၏ SHA-1)။
 
-ထို့အပြင် `certutil` ကို အသုံးပြုနိုင်သည့်အခါ `updateNssDatabases()` သည် အသုံးပြုသူတစ်ဦးချင်းစီ၏ NSS DB များဖြစ်သော `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` နှင့် Firefox profile အားလုံး (snap အပါအဝင်) ထဲသို့ **`67router MITM Root CA`** ဟူသော nickname ဖြင့် ထည့်သွင်းသည်။
+ထို့အပြင် `certutil` ကို အသုံးပြုနိုင်သည့်အခါ `updateNssDatabases()` သည် အသုံးပြုသူတစ်ဦးချင်းစီ၏ NSS DB များဖြစ်သော `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` နှင့် Firefox profile အားလုံး (snap အပါအဝင်) ထဲသို့ **`OmniRoute MITM Root CA`** ဟူသော nickname ဖြင့် ထည့်သွင်းသည်။
 
 ### macOS / Windows
 

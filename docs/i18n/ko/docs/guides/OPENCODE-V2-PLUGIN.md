@@ -81,7 +81,7 @@ OpenCode v1과 v2는 서로 다른 계약을 통해 플러그인을 로드하므
 | `baseURL`                        | 필수                                         | 게이트웨이 루트, `http(s)`만 지원하며 필요한 경우 `/v1` 접미사가 추가됨                                               |
 | `apiKey`                         | 연결된 자격 증명, 그다음 `OMNIROUTE_API_KEY` | `/v1/*`용 채팅 키                                                                                                     |
 | `managementReadToken`            | `apiKey`로 대체                              | `/api/*`용 키 — 일반적으로 **동일한 키가 아님**                                                                       |
-| `displayName`                    | `"67router"`                                 | 선택기에 표시되는 공급자 이름                                                                                         |
+| `displayName`                    | `"OmniRoute"`                                | 선택기에 표시되는 공급자 이름                                                                                         |
 | `timeoutMs`                      | `10000`                                      | 엔드포인트별 가져오기 제한 시간(자동 콤보는 5초 사용)                                                                 |
 | `modelCacheTtlMs`                | `300000`                                     | 카탈로그 캐시 TTL. 디스크 스냅샷으로 콜드 스타트를 예열함                                                             |
 | `timeouts`                       | `timeoutMs`로 대체                           | 엔드포인트별 제한 시간(ms): `models`, `combos`, `autoCombos`, `enrichment`                                            |

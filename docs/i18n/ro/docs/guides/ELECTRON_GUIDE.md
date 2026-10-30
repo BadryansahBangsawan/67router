@@ -46,7 +46,7 @@ Confirmate din `electron/package.json`:
 | `better-sqlite3`     | rădăcină `^13.0.2` (versiuni Node-API precompilate — fără recompilare Electron) |
 | Versiunea aplicației | `3.8.0`                                                                         |
 | ID-ul aplicației     | `online.omniroute.desktop`                                                      |
-| Numele produsului    | `67router`                                                                      |
+| Numele produsului    | `OmniRoute`                                                                     |
 
 ## Scripturi (`package.json` din rădăcină)
 

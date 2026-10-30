@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 සහතික ගොනු නාමය: `omniroute-mitm.crt`. `getCertFingerprint()` හරහා ඇඟිලි සලකුණු ගැළපීම සිදු වේ (DER හි SHA-1).
 
-මීට අමතරව, `certutil` පවතින විට `updateNssDatabases()` එක් එක් පරිශීලකයාගේ NSS DB තුළ ස්ථාපනය කරයි: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, සහ සියලු Firefox පැතිකඩවල් (snap ඇතුළුව), **`67router MITM Root CA`** යන අන්වර්ථ නාමය යටතේ.
+මීට අමතරව, `certutil` පවතින විට `updateNssDatabases()` එක් එක් පරිශීලකයාගේ NSS DB තුළ ස්ථාපනය කරයි: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, සහ සියලු Firefox පැතිකඩවල් (snap ඇතුළුව), **`OmniRoute MITM Root CA`** යන අන්වර්ථ නාමය යටතේ.
 
 ### macOS / Windows
 

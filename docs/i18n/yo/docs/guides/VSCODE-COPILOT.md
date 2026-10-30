@@ -24,12 +24,12 @@ _abínibí_. Kò sí sidebar kejì, kò sí UI ìfọ̀rọ̀wérọ̀ ọ̀tọ
 ## Ìṣètò
 
 1. **Ṣiṣẹ́ 67router** — `npm install -g omniroute && omniroute` (dashboard wà ní `http://localhost:20128`).
-2. **Fi extension náà sílẹ̀** — wá "67router" nínú ojú-ìwòye Extensions.
-3. **Yan model kan** — Copilot Chat → olùyan model → **Ṣàkóso Àwọn Model…** → **67router**, lẹ́yìn náà yan
+2. **Fi extension náà sílẹ̀** — wá "OmniRoute" nínú ojú-ìwòye Extensions.
+3. **Yan model kan** — Copilot Chat → olùyan model → **Ṣàkóso Àwọn Model…** → **OmniRoute**, lẹ́yìn náà yan
    àwọn tí o fẹ́.
 
 Kò sí ohun tí o nílò láti ṣètò nígbà tí 67router bá ń ṣiṣẹ́ lórí port àìyípadà. Fún instance tó wà ní ọ̀nà jíjìn, ṣí
-**àmì 67router nínú Activity Bar** (tàbí ṣiṣẹ́ `67router: Manage Connection`) kí o sì ṣètò:
+**àmì 67router nínú Activity Bar** (tàbí ṣiṣẹ́ `OmniRoute: Manage Connection`) kí o sì ṣètò:
 
 - **URL olupin** — root olupin náà, fún àpẹẹrẹ `http://192.168.0.15:20128`. Extension náà yóò
   fi suffix `/v1` kún un; má ṣe fi í sínú rẹ.
@@ -121,7 +121,7 @@ Wo [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) àti ọ̀ràn
 
 ## Ṣíṣètò àwọn irinṣẹ́ rẹ mìíràn láti inú VS Code
 
-**`67router: Configure Coding CLI`** máa ń darí CLI `omniroute` láti kọ àwọn prófáìlì tí ó ti ṣetán fún lílò
+**`OmniRoute: Configure Coding CLI`** máa ń darí CLI `omniroute` láti kọ àwọn prófáìlì tí ó ti ṣetán fún lílò
 fún Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo àti Roo — àwọn ìṣètò kan náà tí a ṣàpèjúwe nínú
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). A máa ń fi kọ́kọ́rọ́ API náà fún CLI nípasẹ̀
@@ -131,14 +131,14 @@ oníyípadà àyíká `OMNIROUTE_API_KEY`, kì í ṣe lórí ìlà àṣẹ lá
 
 ## Yíyanjú àwọn ìṣòro
 
-| Àmì ìṣòro                                                    | Okùnfà / àtúnṣe                                                                                                                                                                                                                           |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kò sí àwọn módẹ́ẹ̀lì 67router nínú ohun àṣàyàn                 | A kò lè dé ọ̀dọ̀ apèsè. Dọ́ọ̀tì ọ̀pá-ipò máa di ewú; ṣiṣẹ́ `67router: Check Connection`. A ṣe àwárí láìfi ìkìlọ̀ hàn ní ìmọ̀ọ́mọ̀, kò sì ní fi módẹ́ẹ̀lì kankan kún dípò fífi ìbéèrè hàn.                                                             |
-| Módẹ́ẹ̀lì kọ̀ọ̀kan hàn lẹ́ẹ̀mejì                                   | O ń lo OmniCopilot tí ó dàgbà ju 1.0.1 lọ — ṣe ìmúdójúìwọ̀n. Àfikún náà ń béèrè `?prefix=alias` báyìí.                                                                                                                                     |
-| Módẹ́ẹ̀lì àwòrán/ohùn kan tí ó máa ń wà lórí àtòjọ ti pòórá    | Èyí jẹ́ ìmọ̀ọ́mọ̀ láti 1.0.1 — kò lè dáhùn ìbéèrè ìbánisọ̀rọ̀ láé.                                                                                                                                                                              |
-| Pánẹ́ẹ̀lì kò sí ní Ọ̀pá Ìṣe                                     | VS Code máa ń gbé àwọn àpótí ìwòran àfikún sínú àkúnwọ́sílẹ̀ **"…"** ní ìsàlẹ̀ Ọ̀pá Ìṣe, àpótí tí a sì fi pamọ́ nípasẹ̀ títẹ̀-ọ̀tún yóò ṣì wà ní fífarapamọ́. Tẹ Ọ̀pá Ìṣe ní ọ̀tún → yan **67router**, tàbí ṣí i pẹ̀lú `67router: Manage Connection`. |
-| Pátákó ìṣàkóso ṣí nínú aṣàwákiri láìka módù `editor` sí      | A kò **kọ́** apèsè náà pẹ̀lú `DASHBOARD_ALLOW_EMBED=vscode` (wo òkè) — ṣíṣètò rẹ̀ nígbà ìbẹ̀rẹ̀ lórí ìfisílẹ̀ tí a ti kọ́ tẹ́lẹ̀ kò ní ṣe ohunkóhun. Ìpadà sí aṣàwákiri jẹ́ ìmọ̀ọ́mọ̀.                                                                 |
-| Àtòjọ àwọn módẹ́ẹ̀lì kò jẹ́ tuntun lẹ́yìn yíyí àwọn olùpèsè padà | `67router: Refresh Models`, tàbí ìjápọ̀ ↻ nínú pánẹ́ẹ̀lì.                                                                                                                                                                                    |
+| Àmì ìṣòro                                                    | Okùnfà / àtúnṣe                                                                                                                                                                                                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kò sí àwọn módẹ́ẹ̀lì 67router nínú ohun àṣàyàn                 | A kò lè dé ọ̀dọ̀ apèsè. Dọ́ọ̀tì ọ̀pá-ipò máa di ewú; ṣiṣẹ́ `OmniRoute: Check Connection`. A ṣe àwárí láìfi ìkìlọ̀ hàn ní ìmọ̀ọ́mọ̀, kò sì ní fi módẹ́ẹ̀lì kankan kún dípò fífi ìbéèrè hàn.                                                              |
+| Módẹ́ẹ̀lì kọ̀ọ̀kan hàn lẹ́ẹ̀mejì                                   | O ń lo OmniCopilot tí ó dàgbà ju 1.0.1 lọ — ṣe ìmúdójúìwọ̀n. Àfikún náà ń béèrè `?prefix=alias` báyìí.                                                                                                                                       |
+| Módẹ́ẹ̀lì àwòrán/ohùn kan tí ó máa ń wà lórí àtòjọ ti pòórá    | Èyí jẹ́ ìmọ̀ọ́mọ̀ láti 1.0.1 — kò lè dáhùn ìbéèrè ìbánisọ̀rọ̀ láé.                                                                                                                                                                                |
+| Pánẹ́ẹ̀lì kò sí ní Ọ̀pá Ìṣe                                     | VS Code máa ń gbé àwọn àpótí ìwòran àfikún sínú àkúnwọ́sílẹ̀ **"…"** ní ìsàlẹ̀ Ọ̀pá Ìṣe, àpótí tí a sì fi pamọ́ nípasẹ̀ títẹ̀-ọ̀tún yóò ṣì wà ní fífarapamọ́. Tẹ Ọ̀pá Ìṣe ní ọ̀tún → yan **OmniRoute**, tàbí ṣí i pẹ̀lú `OmniRoute: Manage Connection`. |
+| Pátákó ìṣàkóso ṣí nínú aṣàwákiri láìka módù `editor` sí      | A kò **kọ́** apèsè náà pẹ̀lú `DASHBOARD_ALLOW_EMBED=vscode` (wo òkè) — ṣíṣètò rẹ̀ nígbà ìbẹ̀rẹ̀ lórí ìfisílẹ̀ tí a ti kọ́ tẹ́lẹ̀ kò ní ṣe ohunkóhun. Ìpadà sí aṣàwákiri jẹ́ ìmọ̀ọ́mọ̀.                                                                   |
+| Àtòjọ àwọn módẹ́ẹ̀lì kò jẹ́ tuntun lẹ́yìn yíyí àwọn olùpèsè padà | `OmniRoute: Refresh Models`, tàbí ìjápọ̀ ↻ nínú pánẹ́ẹ̀lì.                                                                                                                                                                                     |
 
 ---
 

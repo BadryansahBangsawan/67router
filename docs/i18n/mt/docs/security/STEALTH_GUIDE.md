@@ -233,7 +233,7 @@ Host fil-mira li jiġi interċettat: **`daily-cloudcode-pa.googleapis.com`** (is
 
 Isem il-fajl taċ-ċertifikat: `omniroute-mitm.crt`. It-tqabbil tal-marki diġitali jsir permezz ta’ `getCertFingerprint()` (SHA-1 tad-DER).
 
-Barra minn hekk, `updateNssDatabases()` jinstalla fid-databases NSS għal kull utent meta `certutil` ikun disponibbli: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, u l-profili kollha ta’ Firefox (inklużi dawk tas-snap), taħt il-laqam **`67router MITM Root CA`**.
+Barra minn hekk, `updateNssDatabases()` jinstalla fid-databases NSS għal kull utent meta `certutil` ikun disponibbli: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, u l-profili kollha ta’ Firefox (inklużi dawk tas-snap), taħt il-laqam **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

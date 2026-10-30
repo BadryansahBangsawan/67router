@@ -228,7 +228,7 @@ Sinusuri ng `getLinuxCertConfig()` ang isang listahan ayon sa priyoridad at pini
 
 Filename ng cert: `omniroute-mitm.crt`. Pagtutugma ng fingerprint sa pamamagitan ng `getCertFingerprint()` (SHA-1 ng DER).
 
-Bukod pa rito, nag-i-install ang `updateNssDatabases()` sa mga NSS DB ng bawat user kapag available ang `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, lahat ng profile ng Firefox (kabilang ang snap), sa ilalim ng palayaw na **`67router MITM Root CA`**.
+Bukod pa rito, nag-i-install ang `updateNssDatabases()` sa mga NSS DB ng bawat user kapag available ang `certutil`: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, lahat ng profile ng Firefox (kabilang ang snap), sa ilalim ng palayaw na **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

@@ -78,7 +78,7 @@ OpenCode ምስክርነቱን የሚያከማችበትን የውህደት መ�
 | `baseURL`                        | ያስፈልጋል                               | የጌትዌይ ሥር፤ `http(s)` ብቻ፤ አስፈላጊ በሆነበት ቦታ `/v1` ቅጥያው ይጨመራል                                             |
 | `apiKey`                         | የተገናኘ ማረጋገጫ፣ ከዚያ `OMNIROUTE_API_KEY` | ለ`/v1/*` የውይይት ቁልፍ                                                                                  |
 | `managementReadToken`            | ከሌለ `apiKey` ጥቅም ላይ ይውላል             | ለ`/api/*` የሚያገለግል ቁልፍ — በአብዛኛው ተመሳሳዩ **አይደለም**                                                      |
-| `displayName`                    | `"67router"`                         | በመምረጫው ውስጥ የሚታየው የአቅራቢ ስም                                                                           |
+| `displayName`                    | `"OmniRoute"`                        | በመምረጫው ውስጥ የሚታየው የአቅራቢ ስም                                                                           |
 | `timeoutMs`                      | `10000`                              | ለእያንዳንዱ መጨረሻ ነጥብ የጥያቄ ጊዜ ገደብ (ራስ-ሰር ጥምረቶች 5 ሰከንድ ይጠቀማሉ)                                             |
 | `modelCacheTtlMs`                | `300000`                             | የካታሎግ መሸጎጫ TTL፤ የዲስክ ቅጽበታዊ ቅጂ ከቀዝቃዛ ጅምር በፊት ውሂቡን ያዘጋጃል                                              |
 | `timeouts`                       | ከሌለ `timeoutMs` ጥቅም ላይ ይውላል          | ለእያንዳንዱ መጨረሻ ነጥብ በms የተወሰኑ የጊዜ በጀቶች፦ `models`፣ `combos`፣ `autoCombos`፣ `enrichment`                 |

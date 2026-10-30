@@ -24,12 +24,12 @@ is-servers MCP u l-istruzzjonijiet personalizzati kollha jibqgħu jaħdmu, sempl
 ## Konfigurazzjoni
 
 1. **Ħaddem 67router** — `npm install -g omniroute && omniroute` (dashboard fuq `http://localhost:20128`).
-2. **Installa l-estensjoni** — fittex "67router" fil-veduta tal-Estensjonijiet.
-3. **Agħżel mudell** — Copilot Chat → selettur tal-mudelli → **Immaniġġja l-Mudelli…** → **67router**, imbagħad immarka
+2. **Installa l-estensjoni** — fittex "OmniRoute" fil-veduta tal-Estensjonijiet.
+3. **Agħżel mudell** — Copilot Chat → selettur tal-mudelli → **Immaniġġja l-Mudelli…** → **OmniRoute**, imbagħad immarka
    dak li trid.
 
 M’hemm xejn x’tikkonfigura meta 67router jaħdem fuq il-port predefinit. Għal istanza remota, iftaħ
-l-**ikona ta’ 67router fl-Activity Bar** (jew ħaddem `67router: Manage Connection`) u ssettja:
+l-**ikona ta’ 67router fl-Activity Bar** (jew ħaddem `OmniRoute: Manage Connection`) u ssettja:
 
 - **URL tas-server** — l-għerq tas-server, eż. `http://192.168.0.15:20128`. Is-suffiss `/v1`
   jiżdied mill-estensjoni; tinkludihx.
@@ -120,7 +120,7 @@ Ara [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) u l-issue
 
 ## Il-konfigurazzjoni tal-għodod l-oħra tiegħek minn ġewwa VS Code
 
-**`67router: Configure Coding CLI`** juża s-CLI `omniroute` biex jikteb profili lesti għall-użu
+**`OmniRoute: Configure Coding CLI`** juża s-CLI `omniroute` biex jikteb profili lesti għall-użu
 għal Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo u Roo — l-istess konfigurazzjonijiet deskritti f'
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Iċ-ċavetta tal-API tingħata lis-CLI permezz tal-
@@ -130,14 +130,14 @@ varjabbli tal-ambjent `OMNIROUTE_API_KEY`, u qatt mil-linja tal-kmand.
 
 ## Soluzzjoni tal-problemi
 
-| Sintomu                                                             | Kawża / soluzzjoni                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ma jidhrux mudelli ta' 67router fis-selettur                        | Is-server ma jistax jintlaħaq. It-tikka fl-istrixxa tal-istatus issir griża; ħaddem `67router: Check Connection`. L-iskoperta hija siekta apposta u ma żżid ebda mudell minflok ma turi mistoqsija.                                                                                |
-| Kull mudell jidher darbtejn                                         | Qed tuża verżjoni ta' OmniCopilot eqdem minn 1.0.1 — aġġorna. L-estensjoni issa titlob `?prefix=alias`.                                                                                                                                                                            |
-| Mudell tal-immaġni/awdjo kien jidher u issa sparixxa                | Dan huwa intenzjonat minn 1.0.1 'l hawn — qatt ma seta' jwieġeb talba taċ-chat.                                                                                                                                                                                                    |
-| Il-panel nieqes mill-Activity Bar                                   | VS Code jmexxi l-kontenituri żejda tal-veduti lejn l-overflow **"…"** fil-qiegħ tal-Activity Bar, u kontenitur moħbi permezz ta' klikk bil-lemin jibqa' moħbi. Ikklikkja bil-lemin fuq l-Activity Bar → immarka **67router**, jew iftaħ permezz ta' `67router: Manage Connection`. |
-| Id-dashboard jinfetaħ fil-browser minkejja l-modalità `editor`      | Is-server ma kienx **mibni** b'`DASHBOARD_ALLOW_EMBED=vscode` (ara hawn fuq) — l-issettjar tiegħu waqt l-istartjar fuq installazzjoni mibnija minn qabel ma jagħmel xejn. Ir-ritorn alternattiv huwa intenzjonat.                                                                  |
-| Il-lista tal-mudelli ma tiġix aġġornata wara li tibdel il-fornituri | `67router: Refresh Models`, jew il-link ↻ fil-panel.                                                                                                                                                                                                                               |
+| Sintomu                                                             | Kawża / soluzzjoni                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Ma jidhrux mudelli ta' 67router fis-selettur                        | Is-server ma jistax jintlaħaq. It-tikka fl-istrixxa tal-istatus issir griża; ħaddem `OmniRoute: Check Connection`. L-iskoperta hija siekta apposta u ma żżid ebda mudell minflok ma turi mistoqsija.                                                                                 |
+| Kull mudell jidher darbtejn                                         | Qed tuża verżjoni ta' OmniCopilot eqdem minn 1.0.1 — aġġorna. L-estensjoni issa titlob `?prefix=alias`.                                                                                                                                                                              |
+| Mudell tal-immaġni/awdjo kien jidher u issa sparixxa                | Dan huwa intenzjonat minn 1.0.1 'l hawn — qatt ma seta' jwieġeb talba taċ-chat.                                                                                                                                                                                                      |
+| Il-panel nieqes mill-Activity Bar                                   | VS Code jmexxi l-kontenituri żejda tal-veduti lejn l-overflow **"…"** fil-qiegħ tal-Activity Bar, u kontenitur moħbi permezz ta' klikk bil-lemin jibqa' moħbi. Ikklikkja bil-lemin fuq l-Activity Bar → immarka **OmniRoute**, jew iftaħ permezz ta' `OmniRoute: Manage Connection`. |
+| Id-dashboard jinfetaħ fil-browser minkejja l-modalità `editor`      | Is-server ma kienx **mibni** b'`DASHBOARD_ALLOW_EMBED=vscode` (ara hawn fuq) — l-issettjar tiegħu waqt l-istartjar fuq installazzjoni mibnija minn qabel ma jagħmel xejn. Ir-ritorn alternattiv huwa intenzjonat.                                                                    |
+| Il-lista tal-mudelli ma tiġix aġġornata wara li tibdel il-fornituri | `OmniRoute: Refresh Models`, jew il-link ↻ fil-panel.                                                                                                                                                                                                                                |
 
 ---
 

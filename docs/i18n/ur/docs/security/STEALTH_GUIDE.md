@@ -217,7 +217,7 @@ interface CliFingerprint {
 
 سرٹیفکیٹ فائل کا نام: `omniroute-mitm.crt`۔ فنگرپرنٹ کی مماثلت `getCertFingerprint()` کے ذریعے (DER کا SHA-1)۔
 
-مزید برآں، جب `certutil` دستیاب ہو تو `updateNssDatabases()` ہر صارف کے NSS DBs میں انسٹال کرتا ہے: `~/.pki/nssdb`، `~/snap/chromium/.../nssdb`، تمام Firefox پروفائلز (بشمول snap)، عرفی نام **`67router MITM Root CA`** کے تحت۔
+مزید برآں، جب `certutil` دستیاب ہو تو `updateNssDatabases()` ہر صارف کے NSS DBs میں انسٹال کرتا ہے: `~/.pki/nssdb`، `~/snap/chromium/.../nssdb`، تمام Firefox پروفائلز (بشمول snap)، عرفی نام **`OmniRoute MITM Root CA`** کے تحت۔
 
 ### macOS / Windows
 

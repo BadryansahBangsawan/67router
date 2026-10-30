@@ -24,12 +24,12 @@ freastalaithe MCP agus treoracha saincheaptha ar aghaidh ag obair, ach iad ag ri
 ## Socrú
 
 1. **Rith 67router** — `npm install -g omniroute && omniroute` (an deais ar `http://localhost:20128`).
-2. **Suiteáil an eisínteacht** — cuardaigh "67router" san amharc Eisínteachtaí.
-3. **Roghnaigh samhail** — Copilot Chat → roghnóir samhlacha → **Bainistigh Samhlacha…** → **67router**, ansin cuir tic leis
+2. **Suiteáil an eisínteacht** — cuardaigh "OmniRoute" san amharc Eisínteachtaí.
+3. **Roghnaigh samhail** — Copilot Chat → roghnóir samhlacha → **Bainistigh Samhlacha…** → **OmniRoute**, ansin cuir tic leis
    na cinn atá uait.
 
 Ní gá aon rud a chumrú nuair a ritheann 67router ar an bport réamhshocraithe. I gcás cianásc, oscail
-**deilbhín 67router sa Bharra Gníomhaíochta** (nó rith `67router: Manage Connection`) agus socraigh:
+**deilbhín 67router sa Bharra Gníomhaíochta** (nó rith `OmniRoute: Manage Connection`) agus socraigh:
 
 - **URL an fhreastalaí** — fréamh an fhreastalaí, m.sh. `http://192.168.0.15:20128`. Cuireann an eisínteacht
   an iarmhír `/v1` leis; ná cuir san áireamh í.
@@ -121,7 +121,7 @@ Féach [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) agus saincheist
 
 ## Do chuid uirlisí eile a chumrú ón taobh istigh de VS Code
 
-Úsáideann **`67router: Configure Coding CLI`** an CLI `omniroute` chun próifílí atá réidh le húsáid a scríobh
+Úsáideann **`OmniRoute: Configure Coding CLI`** an CLI `omniroute` chun próifílí atá réidh le húsáid a scríobh
 do Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo agus Roo — na cumraíochtaí céanna a bhfuil cur síos orthu in
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Cuirtear an eochair API ar fáil don CLI tríd an
@@ -131,14 +131,14 @@ athróg timpeallachta `OMNIROUTE_API_KEY`, agus ní chuirtear ar líne na n-ordu
 
 ## Fabhtcheartú
 
-| Siomptóm                                                        | Cúis / réiteach                                                                                                                                                                                                                                                                                             |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Níl aon samhlacha 67router sa roghnóir                          | Ní féidir an freastalaí a rochtain. Éiríonn ponc an bharra stádais liath; rith `67router: Check Connection`. Tá an aimsiú ciúin de réir dearaidh agus ní chuireann sé aon samhlacha leis seachas leid a thaispeáint.                                                                                        |
-| Taispeántar gach samhail faoi dhó                               | Tá leagan OmniCopilot níos sine ná 1.0.1 agat — nuashonraigh é. Iarrann an eisínteacht `?prefix=alias` anois.                                                                                                                                                                                               |
-| Bhí samhail íomhá/fuaime liostaithe ach níl sí ann a thuilleadh | D’aon ghnó ó 1.0.1 — ní raibh sí in ann freagra a thabhairt ar iarratas comhrá riamh.                                                                                                                                                                                                                       |
-| Tá an painéal ar iarraidh ón mBarra Gníomhaíochta               | Bogann VS Code coimeádáin amhairc bhreise isteach sa roghchlár thar maoil **"…"** ag bun an Bharra Gníomhaíochta, agus fanann coimeádán a cuireadh i bhfolach trí dheaschliceáil i bhfolach. Deaschliceáil an Barra Gníomhaíochta → cuir tic le **67router**, nó oscail é le `67router: Manage Connection`. |
-| Osclaítear an painéal sa bhrabhsálaí in ainneoin mód `editor`   | Níor **tógadh** an freastalaí le `DASHBOARD_ALLOW_EMBED=vscode` (féach thuas) — ní dhéanann a shocrú ag am tosaithe ar shuiteáil réamhthógtha aon rud. Tá an cúlú d’aon ghnó.                                                                                                                               |
-| Tá liosta na samhlacha as dáta tar éis soláthraithe a athrú     | `67router: Refresh Models`, nó an nasc ↻ sa phainéal.                                                                                                                                                                                                                                                       |
+| Siomptóm                                                        | Cúis / réiteach                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Níl aon samhlacha 67router sa roghnóir                          | Ní féidir an freastalaí a rochtain. Éiríonn ponc an bharra stádais liath; rith `OmniRoute: Check Connection`. Tá an aimsiú ciúin de réir dearaidh agus ní chuireann sé aon samhlacha leis seachas leid a thaispeáint.                                                                                         |
+| Taispeántar gach samhail faoi dhó                               | Tá leagan OmniCopilot níos sine ná 1.0.1 agat — nuashonraigh é. Iarrann an eisínteacht `?prefix=alias` anois.                                                                                                                                                                                                 |
+| Bhí samhail íomhá/fuaime liostaithe ach níl sí ann a thuilleadh | D’aon ghnó ó 1.0.1 — ní raibh sí in ann freagra a thabhairt ar iarratas comhrá riamh.                                                                                                                                                                                                                         |
+| Tá an painéal ar iarraidh ón mBarra Gníomhaíochta               | Bogann VS Code coimeádáin amhairc bhreise isteach sa roghchlár thar maoil **"…"** ag bun an Bharra Gníomhaíochta, agus fanann coimeádán a cuireadh i bhfolach trí dheaschliceáil i bhfolach. Deaschliceáil an Barra Gníomhaíochta → cuir tic le **OmniRoute**, nó oscail é le `OmniRoute: Manage Connection`. |
+| Osclaítear an painéal sa bhrabhsálaí in ainneoin mód `editor`   | Níor **tógadh** an freastalaí le `DASHBOARD_ALLOW_EMBED=vscode` (féach thuas) — ní dhéanann a shocrú ag am tosaithe ar shuiteáil réamhthógtha aon rud. Tá an cúlú d’aon ghnó.                                                                                                                                 |
+| Tá liosta na samhlacha as dáta tar éis soláthraithe a athrú     | `OmniRoute: Refresh Models`, nó an nasc ↻ sa phainéal.                                                                                                                                                                                                                                                        |
 
 ---
 

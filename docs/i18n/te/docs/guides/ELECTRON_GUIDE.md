@@ -42,7 +42,7 @@
 | `better-sqlite3`   | రూట్ `^13.0.2` (Node-API ముందస్తు బిల్డ్లు — Electron రీబిల్డ్ అవసరం లేదు) |
 | యాప్ వెర్షన్       | `3.8.0`                                                                    |
 | యాప్ ఐడి           | `online.omniroute.desktop`                                                 |
-| ఉత్పత్తి పేరు      | `67router`                                                                 |
+| ఉత్పత్తి పేరు      | `OmniRoute`                                                                |
 
 ## స్క్రిప్ట్లు (రూట్ `package.json`)
 

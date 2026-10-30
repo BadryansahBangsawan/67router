@@ -42,7 +42,7 @@
 | `better-sqlite3`   | 根目录 `^13.0.2`（Node-API 预构建版本——无需为 Electron 重新构建） |
 | 应用版本           | `3.8.0`                                                           |
 | 应用 ID            | `online.omniroute.desktop`                                        |
-| 产品名称           | `67router`                                                        |
+| 产品名称           | `OmniRoute`                                                       |
 
 ## 脚本（根目录 `package.json`）
 

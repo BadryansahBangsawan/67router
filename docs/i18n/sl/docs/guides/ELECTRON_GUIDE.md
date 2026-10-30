@@ -45,7 +45,7 @@ Potrjeno iz `electron/package.json`:
 | `better-sqlite3`     | korenska `^13.0.2` (vnaprej prevedene datoteke Node-API — brez ponovne gradnje za Electron) |
 | Različica aplikacije | `3.8.0`                                                                                     |
 | ID aplikacije        | `online.omniroute.desktop`                                                                  |
-| Ime izdelka          | `67router`                                                                                  |
+| Ime izdelka          | `OmniRoute`                                                                                 |
 
 ## Skripti (korenski `package.json`)
 

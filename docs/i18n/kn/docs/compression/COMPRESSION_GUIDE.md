@@ -528,12 +528,12 @@ Styles ನೋಡಿ).
 ಕ್ರಮದಲ್ಲಿ ಸಂಯೋಜಿಸುತ್ತದೆ,
 boundaries ಷರತ್ತನ್ನು **ಒಮ್ಮೆ** ಸೇರಿಸುತ್ತದೆ (ಜೊತೆಗೆ, `less-code` ಅಥವಾ `ponytail`
 ಆಯ್ಕೆಮಾಡಿದಾಗ safety ಷರತ್ತು, `SAFETY_BOUNDARIES` ಅಥವಾ ಅದರ ಅನುವಾದ), ಮತ್ತು ಬ್ಲಾಕ್ ಅನ್ನು
-ಒಂದೇ idempotency ಗುರುತಿನಿಂದ (`[67router Output Styles]`) ಪ್ರಾರಂಭಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಅದನ್ನು
+ಒಂದೇ idempotency ಗುರುತಿನಿಂದ (`[OmniRoute Output Styles]`) ಪ್ರಾರಂಭಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಅದನ್ನು
 ಮರು-ಅನ್ವಯಿಸುವುದು ಯಾವುದೇ ಪರಿಣಾಮ ಬೀರುವುದಿಲ್ಲ. ನಿರ್ಧರಿಸಲಾದ ಭಾಷೆಗೆ (ಕೆಳಗಿನ ಭಾಷೆ ಆಯ್ಕೆ
 ನೋಡಿ) ಅನುವಾದವಿದ್ದಾಗ, ಇಂಗ್ಲಿಷ್ ಬದಲಿಗೆ ಸ್ಥಳೀಕೃತ ಸೂಚನೆಯನ್ನು ಸೇರಿಸಲಾಗುತ್ತದೆ.
 
 ಖಾಲಿಯಲ್ಲದ `messages` array ಹೊಂದಿರುವ bodyಯಲ್ಲಿ, content bypassಗಿಂತ ಮೊದಲು idempotency
-ಪರಿಶೀಲನೆ ನಡೆಯುತ್ತದೆ: `[67router Output Styles]` ಗುರುತು ಈಗಾಗಲೇ ಮೇಲ್ಮಟ್ಟದ
+ಪರಿಶೀಲನೆ ನಡೆಯುತ್ತದೆ: `[OmniRoute Output Styles]` ಗುರುತು ಈಗಾಗಲೇ ಮೇಲ್ಮಟ್ಟದ
 `system` fieldನಲ್ಲಿ (string ಅಥವಾ content-block array) ಅಥವಾ string content ಹೊಂದಿರುವ
 system messageನಲ್ಲಿ ಇದ್ದರೆ, bodyಯನ್ನು `already_applied` ಎಂದು ಬದಲಾಯಿಸದೆ ಬಿಡಲಾಗುತ್ತದೆ
 ಮತ್ತು ಯಾವುದೇ keyword ಪರಿಶೀಲನೆ ನಡೆಯುವುದಿಲ್ಲ. ಇಲ್ಲದಿದ್ದರೆ content bypass
@@ -563,7 +563,7 @@ bypass turn ಅನ್ನು ಮುಂದುವರಿಯಲು ಅನುಮತಿ
 `messages` array ಇಲ್ಲದ bodyಯಲ್ಲಿ (ಅಥವಾ ಖಾಲಿ array ಹೊಂದಿರುವ bodyಯಲ್ಲಿ), ಯಾವುದೇ content
 bypass ನಡೆಯುವುದಿಲ್ಲ ಮತ್ತು ಮೇಲ್ಮಟ್ಟದ `system` field ಅನ್ನು ಪರಿಗಣಿಸಲಾಗುವುದಿಲ್ಲ. string
 `instructions` fieldನ text ನಂತರ block ಅನ್ನು ಸೇರಿಸಲಾಗುತ್ತದೆ, ಆದರೆ ಆ field ಈಗಾಗಲೇ
-`[67router Output Styles]` ಗುರುತನ್ನು ಹೊಂದಿದ್ದರೆ bodyಯನ್ನು `already_applied` ಎಂದು
+`[OmniRoute Output Styles]` ಗುರುತನ್ನು ಹೊಂದಿದ್ದರೆ bodyಯನ್ನು `already_applied` ಎಂದು
 ಬದಲಾಯಿಸದೆ ಬಿಡಲಾಗುತ್ತದೆ. bodyಯಲ್ಲಿ string `instructions` field ಇಲ್ಲದಿದ್ದರೂ `input`
 (string ಅಥವಾ array) ಇದ್ದರೆ, ಆ fieldನಲ್ಲಿ ಇದ್ದ ಯಾವುದೇ non-string value ಅನ್ನು
 ಬದಲಾಯಿಸಿ block `instructions` ಆಗುತ್ತದೆ. string `instructions` field ಅಥವಾ string
@@ -590,9 +590,9 @@ toggle, `enabled`) styles ಸೇರಿಸಲ್ಪಡುತ್ತವೆ. **Auto-
 
 ಹಿಂದಿನ ಆವೃತ್ತಿಗಳೊಂದಿಗಿನ ಹೊಂದಾಣಿಕೆ: `outputStyles` ಖಾಲಿಯಾಗಿರುವವರೆಗೆ, ಹಳೆಯ
 `cavemanOutputMode.enabled` setting ಅನ್ನು `cavemanOutputMode.intensity`ನಲ್ಲಿರುವ
-`terse-prose`ಗೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ. ಆಗ block `[67router Output Styles]` ಗುರುತಿನಿಂದ
+`terse-prose`ಗೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ. ಆಗ block `[OmniRoute Output Styles]` ಗುರುತಿನಿಂದ
 ಪ್ರಾರಂಭವಾಗುತ್ತದೆ; ಹಳೆಯ `applyCavemanOutputMode()` injector
-`[67router Caveman Output Mode]` ಅನ್ನು ಸೇರಿಸುತ್ತಿತ್ತು. ಗುರುತಿನ ಕೆಳಗೆ, text en, pt-BR,
+`[OmniRoute Caveman Output Mode]` ಅನ್ನು ಸೇರಿಸುತ್ತಿತ್ತು. ಗುರುತಿನ ಕೆಳಗೆ, text en, pt-BR,
 es, de, fr, it, ru, id ಮತ್ತು vi ಭಾಷೆಗಳಲ್ಲಿ ಹಳೆಯ injectionಗೆ ಹೊಂದಿಕೆಯಾಗುತ್ತದೆ; ja ಮತ್ತು
 zhನಲ್ಲಿ boundaries ಷರತ್ತಿನ ಮೊದಲು ಒಂದು ಹೆಚ್ಚುವರಿ space ಇರುತ್ತದೆ. `terse-prose` ಅನ್ನು
 pt-BR, es, de, fr, it, ru, zh, ja, id ಮತ್ತು vi ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ

@@ -527,12 +527,12 @@ selectionን ይመልከቱ) `zh` ሲሆን ብቻ ያስገባዋል። ረድ
 ቅደም ተከተል ያገናኛል፣
 የboundaries clauseን **አንድ ጊዜ** ይጨምራል (እንዲሁም `less-code` ወይም
 `ponytail` ሲመረጥ safety clauseን፣ `SAFETY_BOUNDARIES`ን ወይም ትርጉሙን)፣ እና blockውን
-በአንድ idempotency marker (`[67router Output Styles]`) ይጀምራል፤ ስለዚህ እንደገና
+በአንድ idempotency marker (`[OmniRoute Output Styles]`) ይጀምራል፤ ስለዚህ እንደገና
 መተግበር ምንም ለውጥ አያመጣም። የተወሰነው ቋንቋ (ከታች ያለውን የቋንቋ ምርጫ ይመልከቱ)
 ትርጉም ሲኖረው፣ ከእንግሊዝኛው ይልቅ localized instruction ይገባል።
 
 ባዶ ያልሆነ `messages` array ባለው body ላይ idempotency check ከcontent bypass
-በፊት ይሰራል፦ `[67router Output Styles]` marker አስቀድሞ በtop-level
+በፊት ይሰራል፦ `[OmniRoute Output Styles]` marker አስቀድሞ በtop-level
 `system` field (string ወይም content-block array) ወይም string content ባለው system
 message ውስጥ ካለ፣ bodyው እንደ `already_applied` ሳይቀየር ይቀራል እና ምንም keyword
 check አይከናወንም። አለበለዚያ content bypass (`shouldBypassCavemanOutputMode()`
@@ -559,7 +559,7 @@ bypassው turnን ሲያሳልፍ፣ `placeSystemInstruction()` (በዚያው fi
 `messages` array በሌለው body ላይ (ወይም ባዶ ከሆነ) ምንም content bypass
 አይሰራም እና top-level `system` field አይመረመርም። blockው ከstring
 `instructions` field ጽሑፍ በኋላ ይጨመራል፣ fieldው አስቀድሞ
-`[67router Output Styles]` markerን ካልያዘ በስተቀር፤ ከያዘ፣ bodyው እንደ
+`[OmniRoute Output Styles]` markerን ካልያዘ በስተቀር፤ ከያዘ፣ bodyው እንደ
 `already_applied` ሳይቀየር ይቀራል። bodyው string `instructions` field ሳይኖረው
 `input` (string ወይም array) ካለው፣ blockው `instructions` ይሆናል፣ ያ field
 ይዞት የነበረውን string ያልሆነ value ይተካል። string `instructions` fieldም ሆነ
@@ -587,8 +587,8 @@ toggle፣ `enabled`) styles ይገባሉ። **Auto-Clarity Bypass** toggle በ**
 የኋላ-ተኳኋኝነት፦ `outputStyles` ባዶ ሆኖ ሳለ፣ የቆየው
 `cavemanOutputMode.enabled` setting ወደ `terse-prose` በ
 `cavemanOutputMode.intensity` ይመደባል። ከዚያ blockው በ
-`[67router Output Styles]` marker ይጀምራል፣ የቆየው `applyCavemanOutputMode()`
-injector `[67router Caveman Output Mode]`ን በጻፈበት ቦታ። ከmarkerው በታች፣
+`[OmniRoute Output Styles]` marker ይጀምራል፣ የቆየው `applyCavemanOutputMode()`
+injector `[OmniRoute Caveman Output Mode]`ን በጻፈበት ቦታ። ከmarkerው በታች፣
 ጽሑፉ በen፣ pt-BR፣ es፣ de፣ fr፣ it፣ ru፣ id እና vi ከቆየው injection ጋር
 ይዛመዳል፤ በja እና zh ግን ከboundaries clause በፊት አንድ ተጨማሪ space አለው።
 `terse-prose` ወደ pt-BR፣ es፣ de፣ fr፣ it፣ ru፣ zh፣ ja፣ id እና vi ይተረጎማል፤

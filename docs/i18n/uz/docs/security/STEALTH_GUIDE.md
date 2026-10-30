@@ -205,7 +205,7 @@ Ushlab qolinadigan maqsadli host: **`daily-cloudcode-pa.googleapis.com`** (Antig
 
 Sertifikat fayli nomi: `omniroute-mitm.crt`. Barmoq izi `getCertFingerprint()` orqali moslashtiriladi (DER’ning SHA-1 xeshi).
 
-Bundan tashqari, `certutil` mavjud boʻlganda, `updateNssDatabases()` har bir foydalanuvchining NSS maʼlumotlar bazalariga oʻrnatadi: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, barcha Firefox profillari (jumladan snap), **`67router MITM Root CA`** taxallusi ostida.
+Bundan tashqari, `certutil` mavjud boʻlganda, `updateNssDatabases()` har bir foydalanuvchining NSS maʼlumotlar bazalariga oʻrnatadi: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, barcha Firefox profillari (jumladan snap), **`OmniRoute MITM Root CA`** taxallusi ostida.
 
 ### macOS / Windows
 

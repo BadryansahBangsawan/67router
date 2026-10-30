@@ -24,12 +24,12 @@ MCP sunucuları ve özel talimatları çalışmaya devam eder; yalnızca seçti�
 ## Kurulum
 
 1. **67router'u çalıştırın** — `npm install -g omniroute && omniroute` (kontrol paneli: `http://localhost:20128`).
-2. **Uzantıyı yükleyin** — Uzantılar görünümünde "67router" ifadesini arayın.
-3. **Bir model seçin** — Copilot Chat → model seçici → **Modelleri Yönet…** → **67router**, ardından
+2. **Uzantıyı yükleyin** — Uzantılar görünümünde "OmniRoute" ifadesini arayın.
+3. **Bir model seçin** — Copilot Chat → model seçici → **Modelleri Yönet…** → **OmniRoute**, ardından
    istediğiniz modelleri işaretleyin.
 
 67router varsayılan portta çalıştığında yapılandırılacak hiçbir şey yoktur. Uzak bir örnek için
-**Etkinlik Çubuğu'ndaki 67router simgesini** açın (veya `67router: Manage Connection` komutunu çalıştırın) ve şunları ayarlayın:
+**Etkinlik Çubuğu'ndaki 67router simgesini** açın (veya `OmniRoute: Manage Connection` komutunu çalıştırın) ve şunları ayarlayın:
 
 - **Sunucu URL'si** — sunucu kökü; örneğin `http://192.168.0.15:20128`. `/v1` son eki
   uzantı tarafından eklenir; bunu dahil etmeyin.
@@ -112,20 +112,20 @@ Gömme özelliği etkinleştirilmiş bir derleme olmadığında sayfa çerçeve 
 
 ## Diğer araçlarınızı VS Code içinden yapılandırma
 
-**`67router: Configure Coding CLI`**, Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ve Roo için kullanıma hazır profiller yazmak üzere `omniroute` CLI aracını çalıştırır — bunlar [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) içinde açıklanan yapılandırmalarla aynıdır. API anahtarı CLI aracına komut satırı üzerinden değil, `OMNIROUTE_API_KEY` ortam değişkeni aracılığıyla aktarılır.
+**`OmniRoute: Configure Coding CLI`**, Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ve Roo için kullanıma hazır profiller yazmak üzere `omniroute` CLI aracını çalıştırır — bunlar [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) içinde açıklanan yapılandırmalarla aynıdır. API anahtarı CLI aracına komut satırı üzerinden değil, `OMNIROUTE_API_KEY` ortam değişkeni aracılığıyla aktarılır.
 
 ---
 
 ## Sorun giderme
 
-| Belirti                                                        | Neden / çözüm                                                                                                                                                                                                                                                           |
-| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Seçicide 67router modeli yok                                   | Sunucuya erişilemiyor. Durum çubuğu noktası griye döner; `67router: Check Connection` komutunu çalıştırın. Keşif, tasarım gereği sessizdir ve istem göstermek yerine hiçbir model sağlamaz.                                                                             |
-| Her model iki kez görünüyor                                    | 1.0.1 sürümünden eski bir OmniCopilot kullanıyorsunuz — güncelleyin. Uzantı artık `?prefix=alias` talep ediyor.                                                                                                                                                         |
-| Daha önce listelenen bir görüntü/ses modeli artık yok          | 1.0.1 sürümünden bu yana kasıtlıdır — bu model hiçbir zaman sohbet isteğine yanıt veremiyordu.                                                                                                                                                                          |
-| Etkinlik Çubuğu'nda panel eksik                                | VS Code, ek görünüm kapsayıcılarını Etkinlik Çubuğu'nun altındaki **"…"** taşma menüsüne taşır ve sağ tıklamayla gizlenen bir kapsayıcı gizli kalır. Etkinlik Çubuğu'na sağ tıklayın → **67router** seçeneğini işaretleyin veya `67router: Manage Connection` ile açın. |
-| Dashboard, `editor` moduna rağmen tarayıcıda açılıyor          | Sunucu `DASHBOARD_ALLOW_EMBED=vscode` ile **derlenmemiştir** (yukarıya bakın) — bunu önceden derlenmiş bir kurulumda başlatma sırasında ayarlamak hiçbir şeyi değiştirmez. Harici tarayıcıya geri dönüş kasıtlıdır.                                                     |
-| Sağlayıcılar değiştirildikten sonra model listesi eski kalıyor | `67router: Refresh Models` komutunu veya paneldeki ↻ bağlantısını kullanın.                                                                                                                                                                                             |
+| Belirti                                                        | Neden / çözüm                                                                                                                                                                                                                                                             |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Seçicide 67router modeli yok                                   | Sunucuya erişilemiyor. Durum çubuğu noktası griye döner; `OmniRoute: Check Connection` komutunu çalıştırın. Keşif, tasarım gereği sessizdir ve istem göstermek yerine hiçbir model sağlamaz.                                                                              |
+| Her model iki kez görünüyor                                    | 1.0.1 sürümünden eski bir OmniCopilot kullanıyorsunuz — güncelleyin. Uzantı artık `?prefix=alias` talep ediyor.                                                                                                                                                           |
+| Daha önce listelenen bir görüntü/ses modeli artık yok          | 1.0.1 sürümünden bu yana kasıtlıdır — bu model hiçbir zaman sohbet isteğine yanıt veremiyordu.                                                                                                                                                                            |
+| Etkinlik Çubuğu'nda panel eksik                                | VS Code, ek görünüm kapsayıcılarını Etkinlik Çubuğu'nun altındaki **"…"** taşma menüsüne taşır ve sağ tıklamayla gizlenen bir kapsayıcı gizli kalır. Etkinlik Çubuğu'na sağ tıklayın → **OmniRoute** seçeneğini işaretleyin veya `OmniRoute: Manage Connection` ile açın. |
+| Dashboard, `editor` moduna rağmen tarayıcıda açılıyor          | Sunucu `DASHBOARD_ALLOW_EMBED=vscode` ile **derlenmemiştir** (yukarıya bakın) — bunu önceden derlenmiş bir kurulumda başlatma sırasında ayarlamak hiçbir şeyi değiştirmez. Harici tarayıcıya geri dönüş kasıtlıdır.                                                       |
+| Sağlayıcılar değiştirildikten sonra model listesi eski kalıyor | `OmniRoute: Refresh Models` komutunu veya paneldeki ↻ bağlantısını kullanın.                                                                                                                                                                                              |
 
 ---
 

@@ -25,11 +25,11 @@ serverele MCP și instrucțiunile personalizate continuă să funcționeze, doar
 
 1. **Rulați 67router** — `npm install -g omniroute && omniroute` (panoul de control la `http://localhost:20128`).
 2. **Instalați extensia** — căutați „67router” în vizualizarea Extensions.
-3. **Alegeți un model** — Copilot Chat → selectorul de modele → **Manage Models…** → **67router**, apoi bifați
+3. **Alegeți un model** — Copilot Chat → selectorul de modele → **Manage Models…** → **OmniRoute**, apoi bifați
    modelele dorite.
 
 Nu trebuie configurat nimic atunci când 67router rulează pe portul implicit. Pentru o instanță la distanță, deschideți
-**pictograma 67router din Activity Bar** (sau rulați `67router: Manage Connection`) și setați:
+**pictograma 67router din Activity Bar** (sau rulați `OmniRoute: Manage Connection`) și setați:
 
 - **URL-ul serverului** — rădăcina serverului, de exemplu `http://192.168.0.15:20128`. Sufixul `/v1` este
   adăugat de extensie; nu îl includeți.
@@ -121,7 +121,7 @@ Consultați [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) și problema
 
 ## Configurarea celorlalte instrumente din VS Code
 
-**`67router: Configure Coding CLI`** utilizează CLI-ul `omniroute` pentru a scrie profiluri gata de utilizare
+**`OmniRoute: Configure Coding CLI`** utilizează CLI-ul `omniroute` pentru a scrie profiluri gata de utilizare
 pentru Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo și Roo — aceleași configurații descrise în
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Cheia API este transmisă CLI-ului prin variabila de mediu
@@ -131,14 +131,14 @@ Kilo și Roo — aceleași configurații descrise în
 
 ## Depanare
 
-| Simptom                                                            | Cauză / soluție                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Niciun model 67router în selector                                  | Serverul nu este accesibil. Punctul din bara de stare devine gri; rulați `67router: Check Connection`. Detectarea nu afișează mesaje prin proiectare și nu furnizează niciun model, în loc să solicite intervenția utilizatorului.                                                                       |
-| Fiecare model apare de două ori                                    | Utilizați o versiune OmniCopilot mai veche de 1.0.1 — actualizați-o. Extensia solicită acum `?prefix=alias`.                                                                                                                                                                                             |
-| Un model de imagine/audio care era listat a dispărut               | Intenționat începând cu versiunea 1.0.1 — acesta nu putea răspunde niciodată unei solicitări de chat.                                                                                                                                                                                                    |
-| Panoul lipsește din bara de activități                             | VS Code mută containerele de vizualizare suplimentare în meniul de depășire **„…”** din partea de jos a barei de activități, iar un container ascuns prin clic dreapta rămâne ascuns. Faceți clic dreapta pe bara de activități → bifați **67router** sau deschideți-l cu `67router: Manage Connection`. |
-| Panoul de control se deschide în browser în ciuda modului `editor` | Serverul nu a fost **compilat** cu `DASHBOARD_ALLOW_EMBED=vscode` (consultați mai sus) — setarea acestei variabile la pornirea unei instalări precompilate nu schimbă nimic. Revenirea la browser este intenționată.                                                                                     |
-| Lista de modele este învechită după schimbarea furnizorilor        | `67router: Refresh Models` sau linkul ↻ din panou.                                                                                                                                                                                                                                                       |
+| Simptom                                                            | Cauză / soluție                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Niciun model 67router în selector                                  | Serverul nu este accesibil. Punctul din bara de stare devine gri; rulați `OmniRoute: Check Connection`. Detectarea nu afișează mesaje prin proiectare și nu furnizează niciun model, în loc să solicite intervenția utilizatorului.                                                                        |
+| Fiecare model apare de două ori                                    | Utilizați o versiune OmniCopilot mai veche de 1.0.1 — actualizați-o. Extensia solicită acum `?prefix=alias`.                                                                                                                                                                                               |
+| Un model de imagine/audio care era listat a dispărut               | Intenționat începând cu versiunea 1.0.1 — acesta nu putea răspunde niciodată unei solicitări de chat.                                                                                                                                                                                                      |
+| Panoul lipsește din bara de activități                             | VS Code mută containerele de vizualizare suplimentare în meniul de depășire **„…”** din partea de jos a barei de activități, iar un container ascuns prin clic dreapta rămâne ascuns. Faceți clic dreapta pe bara de activități → bifați **OmniRoute** sau deschideți-l cu `OmniRoute: Manage Connection`. |
+| Panoul de control se deschide în browser în ciuda modului `editor` | Serverul nu a fost **compilat** cu `DASHBOARD_ALLOW_EMBED=vscode` (consultați mai sus) — setarea acestei variabile la pornirea unei instalări precompilate nu schimbă nimic. Revenirea la browser este intenționată.                                                                                       |
+| Lista de modele este învechită după schimbarea furnizorilor        | `OmniRoute: Refresh Models` sau linkul ↻ din panou.                                                                                                                                                                                                                                                        |
 
 ---
 

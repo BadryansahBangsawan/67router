@@ -205,7 +205,7 @@ Ní mór don OS muinín a bheith aige i dteastas CA AgentBridge sula nglacfaidh 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ Mar rogha eile, cumraigh port neamhphribhléideach i socruithe AgentBridge agus 
 
 Má thaispeánann an IDE earráidí TLS tar éis AgentBridge a thosú:
 
-1. Deimhnigh gur suiteáladh an teastas: `security find-certificate -c "67router AgentBridge"` (macOS) nó `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Deimhnigh gur suiteáladh an teastas: `security find-certificate -c "OmniRoute MITM CA"` (macOS) nó `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Coinníonn roinnt aipeanna a stór muiníne féin (Firefox, Chrome ar Linux). Rith "Trust Cert" arís agus seiceáil an stór teastas a bhaineann go sonrach le NSS/Firefox.
 3. Atosaigh an IDE tar éis muinín a chur sa teastas — úsáideann seisiúin TLS atá ar bun cheana féin an seanstádas muiníne.
 

@@ -205,7 +205,7 @@ AgentBridge CA հավաստագիրը պետք է վստահելի լինի ՕՀ
 **Linux (NSS — Chrome/Firefox).**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain).**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # հարկադրաբար դադարեցնել (օգտագ
 
 Եթե AgentBridge-ը գործարկելուց հետո IDE-ն ցուցադրում է TLS սխալներ՝
 
-1. Ստուգեք, որ վկայագիրը տեղադրված է՝ `security find-certificate -c "67router AgentBridge"` (macOS) կամ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ստուգեք, որ վկայագիրը տեղադրված է՝ `security find-certificate -c "OmniRoute MITM CA"` (macOS) կամ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Որոշ հավելվածներ պահպանում են վստահելի վկայագրերի սեփական շտեմարանը (Firefox, Chrome-ը Linux-ում)։ Կրկին գործարկեք «Trust Cert»-ը և ստուգեք NSS/Firefox-ին հատուկ վկայագրերի շտեմարանը։
 3. Վստահություն սահմանելուց հետո վերագործարկեք IDE-ն. ընթացիկ TLS աշխատաշրջաններն օգտագործում են վստահության հին վիճակը։
 

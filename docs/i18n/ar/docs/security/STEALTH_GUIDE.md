@@ -229,7 +229,7 @@ interface CliFingerprint {
 
 اسم ملف الشهادة: `omniroute-mitm.crt`. تتم مطابقة البصمة عبر `getCertFingerprint()` ‏(SHA-1 لبيانات DER).
 
-بالإضافة إلى ذلك، تثبّت `updateNssDatabases()` الشهادة في قواعد بيانات NSS الخاصة بكل مستخدم عندما تكون `certutil` متاحة: `~/.pki/nssdb`، و`~/snap/chromium/.../nssdb`، وجميع ملفات تعريف Firefox (بما فيها snap)، تحت الاسم المستعار **`67router MITM Root CA`**.
+بالإضافة إلى ذلك، تثبّت `updateNssDatabases()` الشهادة في قواعد بيانات NSS الخاصة بكل مستخدم عندما تكون `certutil` متاحة: `~/.pki/nssdb`، و`~/snap/chromium/.../nssdb`، وجميع ملفات تعريف Firefox (بما فيها snap)، تحت الاسم المستعار **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

@@ -230,7 +230,7 @@ Pealtkuulatav sihthost: **`daily-cloudcode-pa.googleapis.com`** (Antigravity ül
 
 Sertifikaadi failinimi: `omniroute-mitm.crt`. Sõrmejälje vastavust kontrollitakse funktsiooniga `getCertFingerprint()` (DER-i SHA-1).
 
-Lisaks installib `updateNssDatabases()` sertifikaadi kasutajapõhistesse NSS-andmebaasidesse, kui `certutil` on saadaval: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, kõik Firefoxi profiilid (sh snap) hüüdnimega **`67router MITM Root CA`**.
+Lisaks installib `updateNssDatabases()` sertifikaadi kasutajapõhistesse NSS-andmebaasidesse, kui `certutil` on saadaval: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, kõik Firefoxi profiilid (sh snap) hüüdnimega **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

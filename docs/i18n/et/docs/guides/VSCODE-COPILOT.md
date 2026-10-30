@@ -25,11 +25,11 @@ tööriistakutsed, MCP-serverid ja kohandatud juhised töötavad edasi, kuid kas
 
 1. **Käivitage 67router** — `npm install -g omniroute && omniroute` (juhtpaneel aadressil `http://localhost:20128`).
 2. **Installige laiendus** — otsige laienduste vaates fraasi „67router“.
-3. **Valige mudel** — Copilot Chat → mudelivalik → **Halda mudeleid…** → **67router**, seejärel märkige
+3. **Valige mudel** — Copilot Chat → mudelivalik → **Halda mudeleid…** → **OmniRoute**, seejärel märkige
    soovitud mudelid.
 
 Kui 67router töötab vaikepordil, pole midagi vaja seadistada. Kaugserveri korral avage
-**67router’i ikoon tegevusribal** (või käivitage `67router: Manage Connection`) ja määrake:
+**OmniRoute’i ikoon tegevusribal** (või käivitage `OmniRoute: Manage Connection`) ja määrake:
 
 - **Serveri URL** — serveri juuraadress, nt `http://192.168.0.15:20128`. Järelliite `/v1` lisab
   laiendus; ärge seda lisage.
@@ -114,21 +114,21 @@ Vaadake faili [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) ja probleemi
 
 ## Muude tööriistade seadistamine VS Code'is
 
-**`67router: Configure Coding CLI`** kasutab `omniroute` CLI-d, et luua kasutusvalmis profiilid tööriistadele Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ja Roo — need on samad konfiguratsioonid, mida kirjeldatakse failis
+**`OmniRoute: Configure Coding CLI`** kasutab `omniroute` CLI-d, et luua kasutusvalmis profiilid tööriistadele Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo ja Roo — need on samad konfiguratsioonid, mida kirjeldatakse failis
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API-võti edastatakse CLI-le keskkonnamuutuja `OMNIROUTE_API_KEY` kaudu, mitte kunagi käsureal.
 
 ---
 
 ## Tõrkeotsing
 
-| Sümptom                                                  | Põhjus / lahendus                                                                                                                                                                                                                                               |
-| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mudelivalijas pole 67router'i mudeleid                   | Server pole kättesaadav. Olekuriba punkt muutub halliks; käivitage `67router: Check Connection`. Tuvastamine on taotluslikult vaikne ja viiba kuvamise asemel ei lisa ühtegi mudelit.                                                                           |
-| Iga mudel kuvatakse kaks korda                           | Kasutate OmniCopiloti versiooni, mis on vanem kui 1.0.1 — värskendage seda. Laiendus saadab nüüd päringu `?prefix=alias`.                                                                                                                                       |
-| Varem kuvatud pildi-/helimudel on kadunud                | Alates versioonist 1.0.1 on see taotluslik — selline mudel ei saanud vestluspäringule kunagi vastata.                                                                                                                                                           |
-| Paan puudub tegevusribalt                                | VS Code teisaldab täiendavad vaatekonteinerid tegevusriba allosas asuvasse **„…“** ületäitemenüüsse ning paremklõpsuga peidetud konteiner jääb peidetuks. Paremklõpsake tegevusribal → märkige **67router** või avage see käsuga `67router: Manage Connection`. |
-| Juhtpaneel avaneb brauseris vaatamata režiimile `editor` | Serverit ei **kompileeritud** muutujaga `DASHBOARD_ALLOW_EMBED=vscode` (vt eespool) — selle määramine eelkompileeritud paigalduse käivitamisel ei muuda midagi. Varuvariandi kasutamine on taotluslik.                                                          |
-| Mudelite loend on pärast pakkujate muutmist aegunud      | Käivitage `67router: Refresh Models` või klõpsake paanil linki ↻.                                                                                                                                                                                               |
+| Sümptom                                                  | Põhjus / lahendus                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mudelivalijas pole 67router'i mudeleid                   | Server pole kättesaadav. Olekuriba punkt muutub halliks; käivitage `OmniRoute: Check Connection`. Tuvastamine on taotluslikult vaikne ja viiba kuvamise asemel ei lisa ühtegi mudelit.                                                                            |
+| Iga mudel kuvatakse kaks korda                           | Kasutate OmniCopiloti versiooni, mis on vanem kui 1.0.1 — värskendage seda. Laiendus saadab nüüd päringu `?prefix=alias`.                                                                                                                                         |
+| Varem kuvatud pildi-/helimudel on kadunud                | Alates versioonist 1.0.1 on see taotluslik — selline mudel ei saanud vestluspäringule kunagi vastata.                                                                                                                                                             |
+| Paan puudub tegevusribalt                                | VS Code teisaldab täiendavad vaatekonteinerid tegevusriba allosas asuvasse **„…“** ületäitemenüüsse ning paremklõpsuga peidetud konteiner jääb peidetuks. Paremklõpsake tegevusribal → märkige **OmniRoute** või avage see käsuga `OmniRoute: Manage Connection`. |
+| Juhtpaneel avaneb brauseris vaatamata režiimile `editor` | Serverit ei **kompileeritud** muutujaga `DASHBOARD_ALLOW_EMBED=vscode` (vt eespool) — selle määramine eelkompileeritud paigalduse käivitamisel ei muuda midagi. Varuvariandi kasutamine on taotluslik.                                                            |
+| Mudelite loend on pärast pakkujate muutmist aegunud      | Käivitage `OmniRoute: Refresh Models` või klõpsake paanil linki ↻.                                                                                                                                                                                                |
 
 ---
 

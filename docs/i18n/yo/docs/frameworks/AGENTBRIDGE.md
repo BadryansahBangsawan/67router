@@ -205,7 +205,7 @@ OS gbọ́dọ̀ fọkàn tán ìwé-ẹ̀rí CA AgentBridge kí àwọn IDE tó
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ Gẹ́gẹ́ bí ọ̀nà mìíràn, ṣètò port tí kò nílò àṣẹ gíga
 
 Tí IDE bá fi àwọn àṣìṣe TLS hàn lẹ́yìn tí o bá bẹ̀rẹ̀ AgentBridge:
 
-1. Ṣàyẹ̀wò pé a ti fi cert náà sí ẹrọ: `security find-certificate -c "67router AgentBridge"` (macOS) tàbí `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ṣàyẹ̀wò pé a ti fi cert náà sí ẹrọ: `security find-certificate -c "OmniRoute MITM CA"` (macOS) tàbí `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Àwọn app kan máa ń ṣàkóso ibi ìfọkàntán tiwọn (Firefox, Chrome lórí Linux). Ṣiṣe "Fọkàn Tán Cert" lẹ́ẹ̀kan sí i, kí o sì ṣàyẹ̀wò ibi ìpamọ́ cert pàtó fún NSS/Firefox.
 3. Tun IDE bẹ̀rẹ̀ lẹ́yìn fífọkàn tán án — àwọn session TLS tó ń lọ lọ́wọ́ ń lo ipò ìfọkàntán àtijọ́.
 

@@ -228,7 +228,7 @@ interface CliFingerprint {
 
 სერტიფიკატის ფაილის სახელი: `omniroute-mitm.crt`. თითის ანაბეჭდის დამთხვევა ხდება `getCertFingerprint()`-ის მეშვეობით (DER-ის SHA-1).
 
-დამატებით, როდესაც `certutil` ხელმისაწვდომია, `updateNssDatabases()` სერტიფიკატს აყენებს თითოეული მომხმარებლის NSS მონაცემთა ბაზებში: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, Firefox-ის ყველა პროფილში (snap-ის ჩათვლით), მეტსახელით **`67router MITM Root CA`**.
+დამატებით, როდესაც `certutil` ხელმისაწვდომია, `updateNssDatabases()` სერტიფიკატს აყენებს თითოეული მომხმარებლის NSS მონაცემთა ბაზებში: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, Firefox-ის ყველა პროფილში (snap-ის ჩათვლით), მეტსახელით **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

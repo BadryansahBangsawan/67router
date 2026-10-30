@@ -190,7 +190,7 @@ Operativni sistem mora smatrati AgentBridge CA certifikat pouzdanim prije nego �
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -433,7 +433,7 @@ Alternativno, konfigurišite neprivilegovani port u postavkama AgentBridge-a i p
 
 Ako IDE prikazuje TLS greške nakon pokretanja AgentBridge-a:
 
-1. Provjerite da li je certifikat instaliran: `security find-certificate -c "67router AgentBridge"` (macOS) ili `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Provjerite da li je certifikat instaliran: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ili `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Neke aplikacije održavaju vlastito skladište povjerenja (Firefox, Chrome na Linuxu). Ponovo pokrenite „Trust Cert“ i provjerite NSS/Firefox-specifično skladište certifikata.
 3. Ponovo pokrenite IDE nakon dodavanja povjerenja — TLS sesije u toku koriste staro stanje povjerenja.
 

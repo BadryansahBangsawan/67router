@@ -42,7 +42,7 @@
 | `better-sqlite3`   | 根目錄 `^13.0.2`（Node-API 預先建置版本 — 無須重新建置 Electron） |
 | 應用程式版本       | `3.8.0`                                                           |
 | 應用程式 ID        | `online.omniroute.desktop`                                        |
-| 產品名稱           | `67router`                                                        |
+| 產品名稱           | `OmniRoute`                                                       |
 
 ## 指令碼（根目錄 `package.json`）
 

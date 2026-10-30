@@ -533,13 +533,13 @@ pozostawia treść bez zmian i jest pomijany jako `no_styles`), łączy wybrane 
 w kolejności katalogowej, dodaje klauzulę ograniczeń **jeden raz** (wraz z klauzulą
 bezpieczeństwa, `SAFETY_BOUNDARIES` lub jej tłumaczeniem, gdy wybrano `less-code` albo
 `ponytail`) i rozpoczyna blok pojedynczym znacznikiem idempotencji
-(`[67router Output Styles]`), dzięki czemu ponowne zastosowanie nie powoduje żadnych
+(`[OmniRoute Output Styles]`), dzięki czemu ponowne zastosowanie nie powoduje żadnych
 zmian. Gdy ustalony język (zobacz sekcję Wybór języka poniżej) ma tłumaczenie,
 wstrzykiwana jest zlokalizowana instrukcja zamiast angielskiej.
 
 W przypadku treści z niepustą tablicą `messages` sprawdzenie idempotencji jest wykonywane
 przed mechanizmem pomijania na podstawie zawartości: jeśli znacznik
-`[67router Output Styles]` znajduje się już w polu `system` najwyższego poziomu (będącym
+`[OmniRoute Output Styles]` znajduje się już w polu `system` najwyższego poziomu (będącym
 ciągiem znaków albo tablicą bloków zawartości) lub w komunikacie systemowym z zawartością
 tekstową, treść pozostaje niezmieniona ze statusem `already_applied`, a sprawdzanie słów
 kluczowych nie jest wykonywane. W przeciwnym razie mechanizm pomijania na podstawie
@@ -568,7 +568,7 @@ spośród następujących miejsc:
 W przypadku treści bez tablicy `messages` (lub z pustą tablicą) mechanizm pomijania na
 podstawie zawartości nie jest wykonywany, a pole `system` najwyższego poziomu nie jest
 brane pod uwagę. Blok jest dodawany po tekście pola `instructions` będącego ciągiem
-znaków, chyba że pole to zawiera już znacznik `[67router Output Styles]`; w takim
+znaków, chyba że pole to zawiera już znacznik `[OmniRoute Output Styles]`; w takim
 przypadku treść pozostaje niezmieniona ze statusem `already_applied`. Gdy treść nie ma
 pola `instructions` będącego ciągiem znaków, ale zawiera `input` (ciąg znaków albo
 tablicę), blok staje się wartością `instructions`, zastępując każdą wartość tego pola,
@@ -598,8 +598,8 @@ kompresji przechowuje wybór w następującej postaci:
 Zgodność wsteczna: gdy `outputStyles` jest puste, starsze ustawienie
 `cavemanOutputMode.enabled` jest mapowane na `terse-prose` z poziomem określonym przez
 `cavemanOutputMode.intensity`. Blok zaczyna się wtedy od znacznika
-`[67router Output Styles]`, podczas gdy starszy mechanizm wstrzykiwania
-`applyCavemanOutputMode()` używał `[67router Caveman Output Mode]`. Poniżej znacznika
+`[OmniRoute Output Styles]`, podczas gdy starszy mechanizm wstrzykiwania
+`applyCavemanOutputMode()` używał `[OmniRoute Caveman Output Mode]`. Poniżej znacznika
 tekst jest zgodny ze starszym wstrzyknięciem w językach en, pt-BR, es, de, fr, it, ru,
 id i vi; w językach ja i zh zawiera jedną dodatkową spację przed klauzulą ograniczeń.
 `terse-prose` ma tłumaczenia na języki pt-BR, es, de, fr, it, ru, zh, ja, id i vi,

@@ -205,7 +205,7 @@ AgentBridge-CA-sertifikatet må være klarert av operativsystemet før IDE-er go
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Nøkkelring):**
@@ -448,7 +448,7 @@ Alternativt kan du konfigurere en ikke-privilegert port i AgentBridge-innstillin
 
 Hvis IDE-en viser TLS-feil etter at AgentBridge er startet:
 
-1. Kontroller at sertifikatet ble installert: `security find-certificate -c "67router AgentBridge"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Kontroller at sertifikatet ble installert: `security find-certificate -c "OmniRoute MITM CA"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Enkelte apper har sitt eget klareringslager (Firefox, Chrome på Linux). Kjør «Klarer sertifikat» på nytt, og kontroller det NSS-/Firefox-spesifikke sertifikatlageret.
 3. Start IDE-en på nytt etter klareringen — aktive TLS-økter bruker den gamle klareringstilstanden.
 

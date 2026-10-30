@@ -45,7 +45,7 @@ Yamethibitishwa kutoka `electron/package.json`:
 | `better-sqlite3`          | chanzo `^13.0.2` (miundo ya awali ya Node-API — hakuna ujenzi upya wa Electron) |
 | Toleo la programu         | `3.8.0`                                                                         |
 | Kitambulisho cha programu | `online.omniroute.desktop`                                                      |
-| Jina la bidhaa            | `67router`                                                                      |
+| Jina la bidhaa            | `OmniRoute`                                                                     |
 
 ## Hati (mzizi wa `package.json`)
 

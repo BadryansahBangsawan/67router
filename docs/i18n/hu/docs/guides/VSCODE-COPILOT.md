@@ -25,11 +25,11 @@ MCP-kiszolgálói és egyéni utasításai mind tovább működnek, csak éppen 
 
 1. **Indítsa el a 67router-ot** — `npm install -g omniroute && omniroute` (az irányítópult címe: `http://localhost:20128`).
 2. **Telepítse a bővítményt** — keressen rá az „67router” kifejezésre a Bővítmények nézetben.
-3. **Válasszon modellt** — Copilot Chat → modellválasztó → **Manage Models…** → **67router**, majd jelölje be
+3. **Válasszon modellt** — Copilot Chat → modellválasztó → **Manage Models…** → **OmniRoute**, majd jelölje be
    a kívánt modelleket.
 
 Ha a 67router az alapértelmezett porton fut, nincs szükség beállításra. Távoli példány esetén nyissa meg az
-**67router ikont a Tevékenységsávon** (vagy futtassa az `67router: Manage Connection` parancsot), és állítsa be a következőket:
+**OmniRoute ikont a Tevékenységsávon** (vagy futtassa az `OmniRoute: Manage Connection` parancsot), és állítsa be a következőket:
 
 - **Kiszolgáló URL-címe** — a kiszolgáló gyökércíme, például `http://192.168.0.15:20128`. A `/v1` utótagot
   a bővítmény fűzi hozzá; ne adja meg.
@@ -114,7 +114,7 @@ Lásd az [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) dokumentumot és a
 
 ## Más eszközök konfigurálása a VS Code-ból
 
-Az **`67router: Configure Coding CLI`** az `omniroute` CLI használatával azonnal használható profilokat ír a Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo és Roo számára — ugyanazokat a konfigurációkat, amelyeket a
+Az **`OmniRoute: Configure Coding CLI`** az `omniroute` CLI használatával azonnal használható profilokat ír a Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo és Roo számára — ugyanazokat a konfigurációkat, amelyeket a
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) ismertet. Az API-kulcs a
 `OMNIROUTE_API_KEY` környezeti változón keresztül kerül átadásra a CLI-nek, soha nem a parancssorban.
 
@@ -122,14 +122,14 @@ Az **`67router: Configure Coding CLI`** az `omniroute` CLI használatával azonn
 
 ## Hibaelhárítás
 
-| Jelenség                                                    | Ok / megoldás                                                                                                                                                                                                                                                                                               |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nem jelennek meg 67router-modellek a választóban            | A kiszolgáló nem érhető el. Az állapotsoron lévő pont szürkére vált; futtassa az `67router: Check Connection` parancsot. A felderítés szándékosan csendben történik, és kérdés megjelenítése helyett egyszerűen nem ad hozzá modelleket.                                                                    |
-| Minden modell kétszer jelenik meg                           | Az OmniCopilot 1.0.1-nél régebbi verzióját használja — frissítse. A bővítmény mostantól a `?prefix=alias` paraméterrel küldi a kéréseket.                                                                                                                                                                   |
-| Egy korábban felsorolt kép-/hangmodell eltűnt               | Az 1.0.1-es verzió óta szándékos — az ilyen modellek soha nem tudtak csevegési kérésre válaszolni.                                                                                                                                                                                                          |
-| A panel hiányzik a Tevékenységsávról                        | A VS Code a további nézettárolókat a Tevékenységsáv alján található **„…”** túlcsordulási menübe helyezi, és a jobb gombbal elrejtett tárolók rejtve maradnak. Kattintson jobb gombbal a Tevékenységsávra → jelölje be az **67router** elemet, vagy nyissa meg az `67router: Manage Connection` paranccsal. |
-| Az irányítópult `editor` módban is a böngészőben nyílik meg | A kiszolgáló nem a `DASHBOARD_ALLOW_EMBED=vscode` beállítással lett **összeállítva** (lásd fent) — egy előre összeállított telepítés indításakor beállítva nincs hatása. A visszaváltás szándékos.                                                                                                          |
-| A modelllista elavult a szolgáltatók módosítása után        | `67router: Refresh Models`, vagy a panelen található ↻ hivatkozás.                                                                                                                                                                                                                                          |
+| Jelenség                                                    | Ok / megoldás                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nem jelennek meg 67router-modellek a választóban            | A kiszolgáló nem érhető el. Az állapotsoron lévő pont szürkére vált; futtassa az `OmniRoute: Check Connection` parancsot. A felderítés szándékosan csendben történik, és kérdés megjelenítése helyett egyszerűen nem ad hozzá modelleket.                                                                     |
+| Minden modell kétszer jelenik meg                           | Az OmniCopilot 1.0.1-nél régebbi verzióját használja — frissítse. A bővítmény mostantól a `?prefix=alias` paraméterrel küldi a kéréseket.                                                                                                                                                                     |
+| Egy korábban felsorolt kép-/hangmodell eltűnt               | Az 1.0.1-es verzió óta szándékos — az ilyen modellek soha nem tudtak csevegési kérésre válaszolni.                                                                                                                                                                                                            |
+| A panel hiányzik a Tevékenységsávról                        | A VS Code a további nézettárolókat a Tevékenységsáv alján található **„…”** túlcsordulási menübe helyezi, és a jobb gombbal elrejtett tárolók rejtve maradnak. Kattintson jobb gombbal a Tevékenységsávra → jelölje be az **OmniRoute** elemet, vagy nyissa meg az `OmniRoute: Manage Connection` paranccsal. |
+| Az irányítópult `editor` módban is a böngészőben nyílik meg | A kiszolgáló nem a `DASHBOARD_ALLOW_EMBED=vscode` beállítással lett **összeállítva** (lásd fent) — egy előre összeállított telepítés indításakor beállítva nincs hatása. A visszaváltás szándékos.                                                                                                            |
+| A modelllista elavult a szolgáltatók módosítása után        | `OmniRoute: Refresh Models`, vagy a panelen található ↻ hivatkozás.                                                                                                                                                                                                                                           |
 
 ---
 

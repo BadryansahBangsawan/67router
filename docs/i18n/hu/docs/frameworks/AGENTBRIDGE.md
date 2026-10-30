@@ -206,7 +206,7 @@ Az AgentBridge CA-tanúsítványát megbízhatóvá kell tenni az operációs re
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Kulcskarika):**
@@ -438,7 +438,7 @@ Másik lehetőségként állítson be egy nem privilegizált portot az AgentBrid
 
 Ha az IDE TLS-hibákat jelez az AgentBridge elindítása után:
 
-1. Ellenőrizze, hogy a tanúsítvány telepítve van-e: `security find-certificate -c "67router AgentBridge"` (macOS) vagy `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Ellenőrizze, hogy a tanúsítvány telepítve van-e: `security find-certificate -c "OmniRoute MITM CA"` (macOS) vagy `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Egyes alkalmazások saját megbízhatósági tárolót használnak (Firefox, Chrome Linuxon). Futtassa újra a „Trust Cert” műveletet, és ellenőrizze az NSS-/Firefox-specifikus tanúsítványtárolót.
 3. A megbízhatóként való beállítás után indítsa újra az IDE-t — a folyamatban lévő TLS-munkamenetek a korábbi megbízhatósági állapotot használják.
 

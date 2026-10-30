@@ -205,7 +205,7 @@ hop-by-hop/ფრეიმინგის აკრძალულ სიას 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # იძულებით შეწყვეტა (გ�
 
 თუ AgentBridge-ის გაშვების შემდეგ IDE აჩვენებს TLS შეცდომებს:
 
-1. გადაამოწმეთ, რომ სერტიფიკატი დაინსტალირებულია: `security find-certificate -c "67router AgentBridge"` (macOS) ან `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. გადაამოწმეთ, რომ სერტიფიკატი დაინსტალირებულია: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ან `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. ზოგიერთი აპლიკაცია საკუთარ სანდოობის საცავს იყენებს (Firefox, Chrome Linux-ზე). ხელახლა გაუშვით „Trust Cert“ და შეამოწმეთ NSS/Firefox-ისთვის განკუთვნილი სერტიფიკატების საცავი.
 3. სერტიფიკატის სანდოდ მონიშვნის შემდეგ გადატვირთეთ IDE — მიმდინარე TLS სესიები სანდოობის ძველ მდგომარეობას იყენებს.
 

@@ -205,7 +205,7 @@ IDE'lerin MITM bağlantısını kabul edebilmesi için öncelikle AgentBridge CA
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Anahtar Zinciri):**
@@ -432,7 +432,7 @@ Alternatif olarak, AgentBridge ayarlarında ayrıcalıksız bir port yapılandı
 
 AgentBridge başlatıldıktan sonra IDE TLS hataları gösteriyorsa:
 
-1. Sertifikanın yüklendiğini doğrulayın: `security find-certificate -c "67router AgentBridge"` (macOS) veya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sertifikanın yüklendiğini doğrulayın: `security find-certificate -c "OmniRoute MITM CA"` (macOS) veya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Bazı uygulamalar kendi güven depolarını kullanır (Firefox, Linux'ta Chrome). "Trust Cert" işlemini yeniden çalıştırın ve NSS/Firefox'a özgü sertifika deposunu kontrol edin.
 3. Güven sağladıktan sonra IDE'yi yeniden başlatın — devam eden TLS oturumları eski güven durumunu kullanır.
 

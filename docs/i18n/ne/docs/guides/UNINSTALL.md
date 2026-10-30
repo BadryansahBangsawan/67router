@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- `Settings → Apps → 67router → Uninstall` खोल्नुहोस्
+- `Settings → Apps → OmniRoute → Uninstall` खोल्नुहोस्
 - वा इन्स्टल डाइरेक्टरीबाट NSIS अनइन्स्टलर चलाउनुहोस्
 
 **macOS:**

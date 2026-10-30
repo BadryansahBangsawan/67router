@@ -46,7 +46,7 @@ Az `electron/package.json` alapján megerősítve:
 | `better-sqlite3`    | gyökérszintű `^13.0.2` (Node-API előre lefordított binárisok — nincs szükség Electronhoz való újrafordításra) |
 | Alkalmazásverzió    | `3.8.0`                                                                                                       |
 | Alkalmazásazonosító | `online.omniroute.desktop`                                                                                    |
-| Terméknév           | `67router`                                                                                                    |
+| Terméknév           | `OmniRoute`                                                                                                   |
 
 ## Szkriptek (gyökérszintű `package.json`)
 

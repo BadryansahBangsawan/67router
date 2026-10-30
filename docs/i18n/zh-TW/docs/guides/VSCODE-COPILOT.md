@@ -24,12 +24,12 @@ MCP 伺服器與自訂指示全都能繼續運作，只是改為在您選擇的�
 ## 設定
 
 1. **執行 67router** — `npm install -g omniroute && omniroute`（儀表板位於 `http://localhost:20128`）。
-2. **安裝擴充功能** — 在「擴充功能」檢視中搜尋「67router」。
-3. **選擇模型** — Copilot Chat → 模型選擇器 → **管理模型…** → **67router**，然後勾選
+2. **安裝擴充功能** — 在「擴充功能」檢視中搜尋「OmniRoute」。
+3. **選擇模型** — Copilot Chat → 模型選擇器 → **管理模型…** → **OmniRoute**，然後勾選
    您想要的模型。
 
 當 67router 在預設連接埠上執行時，無需進行任何設定。若使用遠端執行個體，請開啟
-**活動列中的 67router 圖示**（或執行 `67router: Manage Connection`），並設定：
+**活動列中的 67router 圖示**（或執行 `OmniRoute: Manage Connection`），並設定：
 
 - **伺服器 URL** — 伺服器根位址，例如 `http://192.168.0.15:20128`。擴充功能會自動附加
   `/v1` 後綴；請勿自行加入。
@@ -110,20 +110,20 @@ npm start
 
 ## 從 VS Code 內設定其他工具
 
-**`67router: Configure Coding CLI`** 會驅動 `omniroute` CLI，為 Codex CLI、Claude Code、Cline、Continue、Cursor、Aider、OpenCode、Goose、Crush、Qwen Code、Kilo 和 Roo 寫入可直接使用的設定檔——也就是 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) 中所述的相同設定。API 金鑰會透過 `OMNIROUTE_API_KEY` 環境變數傳給 CLI，絕不會出現在命令列上。
+**`OmniRoute: Configure Coding CLI`** 會驅動 `omniroute` CLI，為 Codex CLI、Claude Code、Cline、Continue、Cursor、Aider、OpenCode、Goose、Crush、Qwen Code、Kilo 和 Roo 寫入可直接使用的設定檔——也就是 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) 中所述的相同設定。API 金鑰會透過 `OMNIROUTE_API_KEY` 環境變數傳給 CLI，絕不會出現在命令列上。
 
 ---
 
 ## 疑難排解
 
-| 症狀                                           | 原因／修正方式                                                                                                                                                                                                   |
-| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 選擇器中沒有 67router 模型                     | 無法連線至伺服器。狀態列圓點會變成灰色；請執行 `67router: Check Connection`。模型探索依設計不會顯示提示，無法連線時不會提供任何模型。                                                                            |
-| 每個模型都出現兩次                             | 您使用的 OmniCopilot 版本低於 1.0.1——請更新。擴充功能現在會要求 `?prefix=alias`。                                                                                                                                |
-| 先前列出的圖片／音訊模型消失了                 | 自 1.0.1 起刻意如此——這些模型本來就無法回應聊天請求。                                                                                                                                                            |
-| Activity Bar 中缺少面板                        | VS Code 會將額外的檢視容器移至 Activity Bar 底部的 **「…」** 溢位選單中，而透過右鍵選單隱藏的容器會保持隱藏。請在 Activity Bar 上按一下滑鼠右鍵 → 勾選 **67router**，或使用 `67router: Manage Connection` 開啟。 |
-| 儘管使用 `editor` 模式，儀表板仍在瀏覽器中開啟 | 伺服器在**建置**時未設定 `DASHBOARD_ALLOW_EMBED=vscode`（見上文）——在預先建置的安裝項目啟動時設定它不會有任何作用。這是刻意設計的備援行為。                                                                      |
-| 變更提供者後，模型清單仍是舊的                 | 執行 `67router: Refresh Models`，或按一下分頁中的 ↻ 連結。                                                                                                                                                       |
+| 症狀                                           | 原因／修正方式                                                                                                                                                                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 選擇器中沒有 67router 模型                     | 無法連線至伺服器。狀態列圓點會變成灰色；請執行 `OmniRoute: Check Connection`。模型探索依設計不會顯示提示，無法連線時不會提供任何模型。                                                                             |
+| 每個模型都出現兩次                             | 您使用的 OmniCopilot 版本低於 1.0.1——請更新。擴充功能現在會要求 `?prefix=alias`。                                                                                                                                  |
+| 先前列出的圖片／音訊模型消失了                 | 自 1.0.1 起刻意如此——這些模型本來就無法回應聊天請求。                                                                                                                                                              |
+| Activity Bar 中缺少面板                        | VS Code 會將額外的檢視容器移至 Activity Bar 底部的 **「…」** 溢位選單中，而透過右鍵選單隱藏的容器會保持隱藏。請在 Activity Bar 上按一下滑鼠右鍵 → 勾選 **OmniRoute**，或使用 `OmniRoute: Manage Connection` 開啟。 |
+| 儘管使用 `editor` 模式，儀表板仍在瀏覽器中開啟 | 伺服器在**建置**時未設定 `DASHBOARD_ALLOW_EMBED=vscode`（見上文）——在預先建置的安裝項目啟動時設定它不會有任何作用。這是刻意設計的備援行為。                                                                        |
+| 變更提供者後，模型清單仍是舊的                 | 執行 `OmniRoute: Refresh Models`，或按一下分頁中的 ↻ 連結。                                                                                                                                                        |
 
 ---
 

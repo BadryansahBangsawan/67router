@@ -45,7 +45,7 @@ Apstiprināts, izmantojot `electron/package.json`:
 | `better-sqlite3`   | saknes `^13.0.2` (Node-API priekšbūvējumi — Electron nav jāpārbūvē) |
 | Lietotnes versija  | `3.8.0`                                                             |
 | Lietotnes ID       | `online.omniroute.desktop`                                          |
-| Produkta nosaukums | `67router`                                                          |
+| Produkta nosaukums | `OmniRoute`                                                         |
 
 ## Skripti (saknes `package.json`)
 

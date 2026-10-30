@@ -533,12 +533,12 @@ katalógu,
 jedenkrát pridá klauzulu o hraniciach **once** (spolu s bezpečnostnou klauzulou,
 `SAFETY_BOUNDARIES` alebo jej prekladom, keď je vybratý štýl `less-code` alebo
 `ponytail`) a blok začne jedinou značkou idempotencie
-(`[67router Output Styles]`), takže opätovné použitie nevykoná žiadnu zmenu. Keď má
+(`[OmniRoute Output Styles]`), takže opätovné použitie nevykoná žiadnu zmenu. Keď má
 rozpoznaný jazyk (pozrite časť Výber jazyka nižšie) preklad, namiesto angličtiny sa
 vloží lokalizovaný pokyn.
 
 V tele s neprázdnym poľom `messages` sa kontrola idempotencie vykoná pred obídením na
-základe obsahu: keď sa značka `[67router Output Styles]` už nachádza v poli `system`
+základe obsahu: keď sa značka `[OmniRoute Output Styles]` už nachádza v poli `system`
 najvyššej úrovne (ako reťazec alebo pole blokov obsahu) alebo v systémovej správe s
 reťazcovým obsahom, telo zostane nezmenené ako `already_applied` a kontrola kľúčových
 slov sa nevykoná. V opačnom prípade obídenie na základe obsahu
@@ -568,7 +568,7 @@ z nasledujúcich:
 V tele bez poľa `messages` (alebo s prázdnym poľom) sa nevykoná obídenie na základe
 obsahu a pole `system` najvyššej úrovne sa nekontroluje. Blok sa pripojí za text
 reťazcového poľa `instructions`, pokiaľ toto pole už neobsahuje značku
-`[67router Output Styles]`; v takom prípade telo zostane nezmenené ako
+`[OmniRoute Output Styles]`; v takom prípade telo zostane nezmenené ako
 `already_applied`. Keď telo nemá reťazcové pole `instructions`, ale obsahuje `input`
 (reťazec alebo pole), blok sa stane hodnotou `instructions` a nahradí akúkoľvek
 nereťazcovú hodnotu, ktorú toto pole obsahovalo. Telo bez reťazcového poľa `instructions`
@@ -596,8 +596,8 @@ nachádza na stránke **Caveman** (`/dashboard/context/caveman`) na jej karte
 Spätná kompatibilita: kým je `outputStyles` prázdne, staršie nastavenie
 `cavemanOutputMode.enabled` sa mapuje na `terse-prose` s hodnotou
 `cavemanOutputMode.intensity`. Blok sa potom začína značkou
-`[67router Output Styles]`, zatiaľ čo starší vkladač `applyCavemanOutputMode()`
-vkladal `[67router Caveman Output Mode]`. Pod značkou sa text zhoduje so starším
+`[OmniRoute Output Styles]`, zatiaľ čo starší vkladač `applyCavemanOutputMode()`
+vkladal `[OmniRoute Caveman Output Mode]`. Pod značkou sa text zhoduje so starším
 vloženým textom v jazykoch en, pt-BR, es, de, fr, it, ru, id a vi; v ja a zh obsahuje
 pred klauzulou o hraniciach jednu medzeru navyše. `terse-prose` má preklady do pt-BR,
 es, de, fr, it, ru, zh, ja, id a vi, takže požiadavka, ktorej rozpoznaný jazyk je `hu`,

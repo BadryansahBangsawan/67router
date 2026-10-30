@@ -517,13 +517,13 @@ concatena le istruzioni selezionate nell'ordine del catalogo,
 aggiunge la clausola sui limiti **una sola volta** (più la clausola di sicurezza,
 `SAFETY_BOUNDARIES` o la relativa traduzione, quando è selezionato `less-code` o
 `ponytail`) e inizia il blocco con un singolo marcatore di idempotenza
-(`[67router Output Styles]`), perciò una nuova applicazione non produce alcun effetto.
+(`[OmniRoute Output Styles]`), perciò una nuova applicazione non produce alcun effetto.
 Quando la lingua risolta (vedere Selezione della lingua di seguito) dispone di una
 traduzione, viene inserita l'istruzione localizzata anziché quella inglese.
 
 In un corpo con un array `messages` non vuoto, il controllo di idempotenza viene
 eseguito prima del bypass basato sul contenuto: quando il marcatore
-`[67router Output Styles]` è già presente nel campo `system` di primo livello
+`[OmniRoute Output Styles]` è già presente nel campo `system` di primo livello
 (una stringa o un array di blocchi di contenuto) oppure in un messaggio di sistema con
 contenuto stringa, il corpo viene lasciato invariato come `already_applied` e non viene
 eseguito alcun controllo delle parole chiave. In caso contrario, un bypass basato sul
@@ -553,7 +553,7 @@ posizione disponibile tra le seguenti:
 In un corpo senza un array `messages` (o con un array vuoto), non viene eseguito alcun
 bypass basato sul contenuto e il campo `system` di primo livello non viene consultato.
 Il blocco viene aggiunto dopo il testo di un campo `instructions` di tipo stringa, a
-meno che tale campo non contenga già il marcatore `[67router Output Styles]`, nel qual
+meno che tale campo non contenga già il marcatore `[OmniRoute Output Styles]`, nel qual
 caso il corpo viene lasciato invariato come `already_applied`. Quando il corpo non
 dispone di un campo `instructions` di tipo stringa ma contiene `input` (una stringa o un
 array), il blocco diventa `instructions`, sostituendo qualsiasi valore non stringa
@@ -584,8 +584,8 @@ seguente formato:
 Compatibilità con le versioni precedenti: finché `outputStyles` è vuoto, l'impostazione
 legacy `cavemanOutputMode.enabled` viene mappata su `terse-prose` al livello indicato da
 `cavemanOutputMode.intensity`. Il blocco inizia quindi con il marcatore
-`[67router Output Styles]`, mentre l'iniettore legacy `applyCavemanOutputMode()`
-inseriva `[67router Caveman Output Mode]`. Sotto il marcatore, il testo corrisponde
+`[OmniRoute Output Styles]`, mentre l'iniettore legacy `applyCavemanOutputMode()`
+inseriva `[OmniRoute Caveman Output Mode]`. Sotto il marcatore, il testo corrisponde
 all'inserimento legacy nelle lingue en, pt-BR, es, de, fr, it, ru, id e vi; in ja e zh
 contiene uno spazio aggiuntivo prima della clausola sui limiti. `terse-prose` dispone di
 traduzioni in pt-BR, es, de, fr, it, ru, zh, ja, id e vi, quindi una richiesta la cui

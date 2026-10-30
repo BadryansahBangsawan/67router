@@ -24,12 +24,12 @@ MCP serverlari va maxsus koʻrsatmalari ishlashda davom etadi, faqat siz tanlaga
 ## Sozlash
 
 1. **67router’ni ishga tushiring** — `npm install -g omniroute && omniroute` (boshqaruv paneli `http://localhost:20128` manzilida).
-2. **Kengaytmani oʻrnating** — Extensions koʻrinishida "67router" deb qidiring.
-3. **Modelni tanlang** — Copilot Chat → model tanlagichi → **Manage Models…** → **67router**, soʻng
+2. **Kengaytmani oʻrnating** — Extensions koʻrinishida "OmniRoute" deb qidiring.
+3. **Modelni tanlang** — Copilot Chat → model tanlagichi → **Manage Models…** → **OmniRoute**, soʻng
    kerakli modellarni belgilang.
 
 67router standart portda ishlayotganida hech narsani sozlash shart emas. Masofaviy nusxa uchun
-**Activity Bar’dagi 67router belgisini** oching (yoki `67router: Manage Connection` buyrugʻini ishga tushiring) va quyidagilarni belgilang:
+**Activity Bar’dagi 67router belgisini** oching (yoki `OmniRoute: Manage Connection` buyrugʻini ishga tushiring) va quyidagilarni belgilang:
 
 - **Server URL** — serverning asosiy manzili, masalan, `http://192.168.0.15:20128`. `/v1` suffiksi
   kengaytma tomonidan qoʻshiladi; uni kiritmang.
@@ -113,21 +113,21 @@ Ichki joylashtirish yoqilgan qurilma bo‘lmasa, sahifa freym ichida ko‘rsatil
 
 ## Boshqa vositalaringizni VS Code ichidan sozlash
 
-**`67router: Configure Coding CLI`** Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo va Roo uchun foydalanishga tayyor profillarni yozish maqsadida `omniroute` CLI vositasini boshqaradi — bular
+**`OmniRoute: Configure Coding CLI`** Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo va Roo uchun foydalanishga tayyor profillarni yozish maqsadida `omniroute` CLI vositasini boshqaradi — bular
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) hujjatida tavsiflangan ayni konfiguratsiyalardir. API kaliti CLI vositasiga buyruq satrida emas, balki `OMNIROUTE_API_KEY` muhit o‘zgaruvchisi orqali uzatiladi.
 
 ---
 
 ## Muammolarni bartaraf etish
 
-| Alomat                                                                | Sabab / yechim                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tanlagichda 67router modellari yo‘q                                   | Serverga ulanib bo‘lmaydi. Holat panelidagi nuqta kulrang tusga kiradi; `67router: Check Connection` buyrug‘ini ishga tushiring. Aniqlash jarayoni ataylab jim bajariladi va so‘rov ko‘rsatish o‘rniga hech qanday model qo‘shmaydi.                                                                                            |
-| Har bir model ikki marta ko‘rinadi                                    | Siz 1.0.1 dan eski OmniCopilot versiyasidan foydalanmoqdasiz — yangilang. Endi kengaytma `?prefix=alias` parametrini so‘raydi.                                                                                                                                                                                                  |
-| Oldin ko‘rsatilgan tasvir/audio modeli yo‘qolgan                      | Bu 1.0.1 versiyasidan boshlab ataylab qilingan — u hech qachon chat so‘roviga javob bera olmas edi.                                                                                                                                                                                                                             |
-| Activity Bar’da panel yo‘q                                            | VS Code ortiqcha ko‘rinish konteynerlarini Activity Bar pastidagi **"…"** to‘lib ketish menyusiga ko‘chiradi va sichqonchaning o‘ng tugmasi orqali yashirilgan konteyner yashirinligicha qoladi. Activity Bar ustida o‘ng tugmani bosing → **67router** bandini belgilang yoki uni `67router: Manage Connection` orqali oching. |
-| `editor` rejimiga qaramay, boshqaruv paneli brauzerda ochiladi        | Server `DASHBOARD_ALLOW_EMBED=vscode` bilan **qurilmagan** (yuqoriga qarang) — uni oldindan qurilgan o‘rnatmada ishga tushirish vaqtida belgilash hech narsani o‘zgartirmaydi. Tashqi brauzerga qaytish ataylab amalga oshiriladi.                                                                                              |
-| Provayderlarni o‘zgartirgandan keyin modellar ro‘yxati eskicha qoladi | `67router: Refresh Models` buyrug‘ini yoki paneldagi ↻ havolasini bosing.                                                                                                                                                                                                                                                       |
+| Alomat                                                                | Sabab / yechim                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tanlagichda 67router modellari yo‘q                                   | Serverga ulanib bo‘lmaydi. Holat panelidagi nuqta kulrang tusga kiradi; `OmniRoute: Check Connection` buyrug‘ini ishga tushiring. Aniqlash jarayoni ataylab jim bajariladi va so‘rov ko‘rsatish o‘rniga hech qanday model qo‘shmaydi.                                                                                             |
+| Har bir model ikki marta ko‘rinadi                                    | Siz 1.0.1 dan eski OmniCopilot versiyasidan foydalanmoqdasiz — yangilang. Endi kengaytma `?prefix=alias` parametrini so‘raydi.                                                                                                                                                                                                    |
+| Oldin ko‘rsatilgan tasvir/audio modeli yo‘qolgan                      | Bu 1.0.1 versiyasidan boshlab ataylab qilingan — u hech qachon chat so‘roviga javob bera olmas edi.                                                                                                                                                                                                                               |
+| Activity Bar’da panel yo‘q                                            | VS Code ortiqcha ko‘rinish konteynerlarini Activity Bar pastidagi **"…"** to‘lib ketish menyusiga ko‘chiradi va sichqonchaning o‘ng tugmasi orqali yashirilgan konteyner yashirinligicha qoladi. Activity Bar ustida o‘ng tugmani bosing → **OmniRoute** bandini belgilang yoki uni `OmniRoute: Manage Connection` orqali oching. |
+| `editor` rejimiga qaramay, boshqaruv paneli brauzerda ochiladi        | Server `DASHBOARD_ALLOW_EMBED=vscode` bilan **qurilmagan** (yuqoriga qarang) — uni oldindan qurilgan o‘rnatmada ishga tushirish vaqtida belgilash hech narsani o‘zgartirmaydi. Tashqi brauzerga qaytish ataylab amalga oshiriladi.                                                                                                |
+| Provayderlarni o‘zgartirgandan keyin modellar ro‘yxati eskicha qoladi | `OmniRoute: Refresh Models` buyrug‘ini yoki paneldagi ↻ havolasini bosing.                                                                                                                                                                                                                                                        |
 
 ---
 

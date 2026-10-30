@@ -535,13 +535,13 @@ tanlov tana qismini o‘zgartirmaydi va `no_styles` sifatida o‘tkazib yuborila
 ko‘rsatmalarni katalogdagi tartibda birlashtiradi,
 chegaralar bandini **bir marta** qo‘shadi (shuningdek, `less-code` yoki `ponytail`
 tanlanganida xavfsizlik bandini, `SAFETY_BOUNDARIES` yoki uning tarjimasini qo‘shadi) va
-blokni bitta idempotentlik belgisi (`[67router Output Styles]`) bilan boshlaydi, shu
+blokni bitta idempotentlik belgisi (`[OmniRoute Output Styles]`) bilan boshlaydi, shu
 sababli uni qayta qo‘llash hech qanday amal bajarmaydi. Aniqlangan tilning (quyidagi Til
 tanlovi bo‘limiga qarang) tarjimasi mavjud bo‘lsa, inglizcha ko‘rsatma o‘rniga
 mahalliylashtirilgan ko‘rsatma kiritiladi.
 
 Bo‘sh bo‘lmagan `messages` massiviga ega tana qismida idempotentlik tekshiruvi kontentni
-chetlab o‘tishdan oldin bajariladi: `[67router Output Styles]` belgisi yuqori darajadagi
+chetlab o‘tishdan oldin bajariladi: `[OmniRoute Output Styles]` belgisi yuqori darajadagi
 `system` maydonida (satr yoki kontent bloklari massivi) yoxud satrli kontentga ega tizim
 xabarida allaqachon mavjud bo‘lsa, tana qismi `already_applied` sifatida o‘zgartirilmaydi
 va kalit so‘zlar tekshiruvi bajarilmaydi. Aks holda, kontentni chetlab o‘tish
@@ -570,7 +570,7 @@ variantlardan birinchi topilganiga joylashtiradi:
 `messages` massivi bo‘lmagan (yoki u bo‘sh bo‘lgan) tana qismida kontentni chetlab
 o‘tish bajarilmaydi va yuqori darajadagi `system` maydoni hisobga olinmaydi. Blok satrli
 `instructions` maydoni matnidan keyin qo‘shiladi, bu maydon
-`[67router Output Styles]` belgisini allaqachon o‘z ichiga olgan holat bundan mustasno;
+`[OmniRoute Output Styles]` belgisini allaqachon o‘z ichiga olgan holat bundan mustasno;
 bunday holda tana qismi `already_applied` sifatida o‘zgartirilmaydi. Tana qismida satrli
 `instructions` maydoni bo‘lmasa, ammo `input` (satr yoki massiv) mavjud bo‘lsa, blok
 `instructions` qiymatiga aylanib, ushbu maydondagi har qanday satr bo‘lmagan qiymatni
@@ -598,9 +598,9 @@ siqish konfiguratsiyasi tanlovni quyidagicha saqlaydi:
 
 Orqaga muvofiqlik: `outputStyles` bo‘sh bo‘lib turganida, eski
 `cavemanOutputMode.enabled` sozlamasi `cavemanOutputMode.intensity` darajasidagi
-`terse-prose` bilan moslashtiriladi. Shundan so‘ng blok `[67router Output Styles]`
+`terse-prose` bilan moslashtiriladi. Shundan so‘ng blok `[OmniRoute Output Styles]`
 belgisi bilan boshlanadi, eski `applyCavemanOutputMode()` kirituvchisi esa
-`[67router Caveman Output Mode]` belgisini yozgan. Belgi ostidagi matn en, pt-BR, es,
+`[OmniRoute Caveman Output Mode]` belgisini yozgan. Belgi ostidagi matn en, pt-BR, es,
 de, fr, it, ru, id va vi tillarida eski kiritma bilan bir xil; ja va zh tillarida
 chegaralar bandidan oldin bitta qo‘shimcha bo‘shliq mavjud. `terse-prose` pt-BR, es, de,
 fr, it, ru, zh, ja, id va vi tillariga tarjima qilinadi, shu sababli aniqlangan tili

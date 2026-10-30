@@ -42,7 +42,7 @@
 | `better-sqlite3`   | root `^13.0.2` (የNode-API ቀድሞ-ግንባታዎች — የElectron ዳግም ግንባታ አያስፈልግም) |
 | የመተግበሪያ ስሪት        | `3.8.0`                                                            |
 | የመተግበሪያ መለያ        | `online.omniroute.desktop`                                         |
-| የምርት ስም            | `67router`                                                         |
+| የምርት ስም            | `OmniRoute`                                                        |
 
 ## ስክሪፕቶች (root `package.json`)
 

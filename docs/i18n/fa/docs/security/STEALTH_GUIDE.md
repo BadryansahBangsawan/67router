@@ -235,7 +235,7 @@ interface CliFingerprint {
 
 نام فایل گواهی: `omniroute-mitm.crt`. تطبیق اثرانگشت از طریق `getCertFingerprint()` ‏(SHA-1 از DER).
 
-علاوه بر این، هنگامی که `certutil` در دسترس باشد، `updateNssDatabases()` گواهی را در پایگاهدادههای NSS مختص هر کاربر نصب میکند: `~/.pki/nssdb`،‏ `~/snap/chromium/.../nssdb`، همه پروفایلهای Firefox (از جمله snap)، با نام مستعار **`67router MITM Root CA`**.
+علاوه بر این، هنگامی که `certutil` در دسترس باشد، `updateNssDatabases()` گواهی را در پایگاهدادههای NSS مختص هر کاربر نصب میکند: `~/.pki/nssdb`،‏ `~/snap/chromium/.../nssdb`، همه پروفایلهای Firefox (از جمله snap)، با نام مستعار **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

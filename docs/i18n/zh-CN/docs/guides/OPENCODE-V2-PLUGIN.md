@@ -65,7 +65,7 @@
 | `baseURL`                        | 必填                                     | 网关根地址，仅支持 `http(s)`；会在需要时添加 `/v1` 后缀                                    |
 | `apiKey`                         | 已连接的凭据，然后是 `OMNIROUTE_API_KEY` | 用于 `/v1/*` 的聊天密钥                                                                    |
 | `managementReadToken`            | 回退到 `apiKey`                          | 用于 `/api/*` 的密钥——通常与前者**不同**                                                   |
-| `displayName`                    | `"67router"`                             | 选择器中显示的提供者名称                                                                   |
+| `displayName`                    | `"OmniRoute"`                            | 选择器中显示的提供者名称                                                                   |
 | `timeoutMs`                      | `10000`                                  | 每个端点的请求超时时间（自动组合使用 5 秒）                                                |
 | `modelCacheTtlMs`                | `300000`                                 | 目录缓存 TTL；磁盘快照用于预热冷启动                                                       |
 | `timeouts`                       | 回退到 `timeoutMs`                       | 各端点的超时预算（毫秒）：`models`、`combos`、`autoCombos`、`enrichment`                   |

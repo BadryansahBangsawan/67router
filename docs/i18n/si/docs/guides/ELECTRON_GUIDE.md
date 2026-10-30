@@ -45,7 +45,7 @@
 | `better-sqlite3`   | මූලය `^13.0.2` (Node-API පූර්ව ගොඩනැඟීම් — Electron නැවත ගොඩනැඟීමක් නැත) |
 | යෙදුම් අනුවාදය     | `3.8.0`                                                                  |
 | යෙදුම් හැඳුනුම     | `online.omniroute.desktop`                                               |
-| නිෂ්පාදන නාමය      | `67router`                                                               |
+| නිෂ්පාදන නාමය      | `OmniRoute`                                                              |
 
 ## ස්ක්රිප්ට් (මූල `package.json`)
 

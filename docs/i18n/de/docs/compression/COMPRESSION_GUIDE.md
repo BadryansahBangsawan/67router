@@ -515,14 +515,14 @@ wird, bleibt der Body unverändert und wird als `no_styles` übersprungen), verk
 ausgewählten Anweisungen in der Reihenfolge des Katalogs, hängt die Begrenzungsklausel
 **einmal** an (zusammen mit der Sicherheitsklausel, `SAFETY_BOUNDARIES` oder deren
 Übersetzung, wenn `less-code` oder `ponytail` ausgewählt ist) und beginnt den Block mit
-einem einzelnen Idempotenzmarker (`[67router Output Styles]`), sodass eine erneute
+einem einzelnen Idempotenzmarker (`[OmniRoute Output Styles]`), sodass eine erneute
 Anwendung keine Änderung bewirkt. Wenn für die aufgelöste Sprache (siehe
 Sprachauswahl unten) eine Übersetzung vorhanden ist, wird statt der englischen
 Anweisung die lokalisierte Anweisung eingefügt.
 
 Bei einem Body mit einem nicht leeren `messages`-Array wird die Idempotenzprüfung vor
 dem inhaltsbasierten Umgehen ausgeführt: Wenn der Marker
-`[67router Output Styles]` bereits im `system`-Feld der obersten Ebene (als String oder
+`[OmniRoute Output Styles]` bereits im `system`-Feld der obersten Ebene (als String oder
 Content-Block-Array) oder in einer Systemnachricht mit String-Inhalt vorhanden ist,
 bleibt der Body als `already_applied` unverändert, und es wird keine Schlüsselwortprüfung
 ausgeführt. Andernfalls prüft ein inhaltsbasiertes Umgehen
@@ -554,7 +554,7 @@ Bei einem Body ohne `messages`-Array (oder mit einem leeren Array) wird kein
 inhaltsbasiertes Umgehen ausgeführt, und ein `system`-Feld der obersten Ebene wird nicht
 berücksichtigt. Der Block wird nach dem Text eines als String vorliegenden
 `instructions`-Felds angehängt, sofern dieses Feld nicht bereits den Marker
-`[67router Output Styles]` enthält; in diesem Fall bleibt der Body als
+`[OmniRoute Output Styles]` enthält; in diesem Fall bleibt der Body als
 `already_applied` unverändert. Wenn der Body kein als String vorliegendes
 `instructions`-Feld besitzt, aber `input` enthält (einen String oder ein Array), wird
 der Block zu `instructions` und ersetzt dabei jeden dort zuvor vorhandenen
@@ -584,8 +584,8 @@ die Kompressionskonfiguration die Auswahl wie folgt:
 Abwärtskompatibilität: Solange `outputStyles` leer ist, wird die ältere Einstellung
 `cavemanOutputMode.enabled` auf `terse-prose` mit
 `cavemanOutputMode.intensity` abgebildet. Der Block beginnt dann mit dem Marker
-`[67router Output Styles]`, während der ältere Injector
-`applyCavemanOutputMode()` den Marker `[67router Caveman Output Mode]` einfügte.
+`[OmniRoute Output Styles]`, während der ältere Injector
+`applyCavemanOutputMode()` den Marker `[OmniRoute Caveman Output Mode]` einfügte.
 Unterhalb des Markers entspricht der Text in en, pt-BR, es, de, fr, it, ru, id und vi
 der älteren Einfügung; in ja und zh enthält er vor der Begrenzungsklausel ein
 zusätzliches Leerzeichen. `terse-prose` wird in pt-BR, es, de, fr, it, ru, zh, ja, id

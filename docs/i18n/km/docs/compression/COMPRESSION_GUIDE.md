@@ -525,9 +525,9 @@ settings API ទទួលយក style id ណាមួយ ហើយការរ�
 #### របៀបដែលការបញ្ចូលដំណើរការ
 
 `applyOutputStyles()` (`open-sse/services/compression/outputStyles/apply.ts`) ផ្គូផ្គងជម្រើសជាមួយកាតាឡុក (id ដែលមិនស្គាល់ និងស្ទីលដែលមិនត្រូវគ្នានឹង locale ត្រូវបានដកចេញ ដោយមិនចាត់ទុកជាកំហុសឡើយ; ជម្រើសដែលផ្គូផ្គងហើយមិនទទួលបានស្ទីលណាមួយ នឹងទុក body ឱ្យនៅដដែល ហើយរំលងជា `no_styles`), ភ្ជាប់សេចក្ដីណែនាំដែលបានជ្រើសតាមលំដាប់កាតាឡុក,
-បន្ថែមឃ្លាកំណត់ព្រំដែន **តែម្ដង** (រួមទាំងឃ្លាសុវត្ថិភាព `SAFETY_BOUNDARIES` ឬការបកប្រែរបស់វា នៅពេលបានជ្រើស `less-code` ឬ `ponytail`) ហើយចាប់ផ្ដើមប្លុកដោយសញ្ញាសម្គាល់ idempotency តែមួយ (`[67router Output Styles]`) ដូច្នេះការអនុវត្តម្ដងទៀតនឹងមិនធ្វើអ្វីឡើយ។ នៅពេលភាសាដែលបានកំណត់ (សូមមើលការជ្រើសរើសភាសាខាងក្រោម) មានការបកប្រែ សេចក្ដីណែនាំជាភាសាមូលដ្ឋាននឹងត្រូវបានបញ្ចូលជំនួសភាសាអង់គ្លេស។
+បន្ថែមឃ្លាកំណត់ព្រំដែន **តែម្ដង** (រួមទាំងឃ្លាសុវត្ថិភាព `SAFETY_BOUNDARIES` ឬការបកប្រែរបស់វា នៅពេលបានជ្រើស `less-code` ឬ `ponytail`) ហើយចាប់ផ្ដើមប្លុកដោយសញ្ញាសម្គាល់ idempotency តែមួយ (`[OmniRoute Output Styles]`) ដូច្នេះការអនុវត្តម្ដងទៀតនឹងមិនធ្វើអ្វីឡើយ។ នៅពេលភាសាដែលបានកំណត់ (សូមមើលការជ្រើសរើសភាសាខាងក្រោម) មានការបកប្រែ សេចក្ដីណែនាំជាភាសាមូលដ្ឋាននឹងត្រូវបានបញ្ចូលជំនួសភាសាអង់គ្លេស។
 
-សម្រាប់ body ដែលមាន array `messages` មិនទទេ ការត្រួតពិនិត្យ idempotency ដំណើរការមុនការរំលងផ្អែកលើខ្លឹមសារ៖ នៅពេលសញ្ញាសម្គាល់ `[67router Output Styles]` មានរួចហើយក្នុង field `system` កម្រិតកំពូល (ជា string ឬជា array នៃ content-block) ឬក្នុង system message ដែលមានខ្លឹមសារជា string នោះ body ត្រូវបានទុកឱ្យនៅដដែលជា `already_applied` ហើយមិនមានការត្រួតពិនិត្យពាក្យគន្លឹះណាមួយទេ។
+សម្រាប់ body ដែលមាន array `messages` មិនទទេ ការត្រួតពិនិត្យ idempotency ដំណើរការមុនការរំលងផ្អែកលើខ្លឹមសារ៖ នៅពេលសញ្ញាសម្គាល់ `[OmniRoute Output Styles]` មានរួចហើយក្នុង field `system` កម្រិតកំពូល (ជា string ឬជា array នៃ content-block) ឬក្នុង system message ដែលមានខ្លឹមសារជា string នោះ body ត្រូវបានទុកឱ្យនៅដដែលជា `already_applied` ហើយមិនមានការត្រួតពិនិត្យពាក្យគន្លឹះណាមួយទេ។
 បើមិនដូច្នោះទេ ការរំលងផ្អែកលើខ្លឹមសារ (`shouldBypassCavemanOutputMode()` ក្នុង
 `open-sse/services/compression/outputMode.ts`) នឹងពិនិត្យអត្ថបទនៃ message បីចុងក្រោយ ដោយមិនគិតពី role របស់វា ហើយរំលងស្ទីលសម្រាប់វេនទាំងមូល នៅពេលអត្ថបទនោះត្រូវគ្នានឹងពាក្យគន្លឹះស្ដីពីសុវត្ថិភាព សកម្មភាពដែលមិនអាចត្រឡប់ក្រោយបាន ឬការសុំបញ្ជាក់បន្ថែម ឬលំដាប់ដែលអាស្រ័យលើលំដាប់ពាក្យ៖ `first`, `then`, `after that`, `before`, `rollback` ឬ `backup` ដែលមាន `delete`, `drop`, `migrate`, `deploy` ឬ `release` តាមពីក្រោយក្នុងចម្ងាយ 240 តួអក្សរ។ ការរំលងនេះដំណើរការខណៈដែល toggle **Auto-Clarity Bypass**
 (`cavemanOutputMode.autoClarity` ដែលបើកតាមលំនាំដើម) កំពុងបើក; ការបិទ toggle នេះនឹងរំលងការត្រួតពិនិត្យពាក្យគន្លឹះ។
@@ -539,7 +539,7 @@ settings API ទទួលយក style id ណាមួយ ហើយការរ�
 3. system message ដំបូងនៅខាងក្រោយដែលមានខ្លឹមសារជា string៖ ប្លុកត្រូវបានបន្ថែមបន្ទាប់ពីអត្ថបទរបស់វា។
 4. មិនមានករណីខាងលើ៖ ប្លុកត្រូវបានដាក់ក្នុង system message ថ្មីនៅចុងបញ្ចប់នៃ `messages`។
 
-សម្រាប់ body ដែលគ្មាន array `messages` (ឬមាន array ទទេ) មិនមានការរំលងផ្អែកលើខ្លឹមសារដំណើរការទេ ហើយ field `system` កម្រិតកំពូលក៏មិនត្រូវបានពិនិត្យដែរ។ ប្លុកត្រូវបានបន្ថែមបន្ទាប់ពីអត្ថបទនៃ field `instructions` ដែលជា string លុះត្រាតែ field នោះមានសញ្ញាសម្គាល់ `[67router Output Styles]` រួចហើយ ដែលក្នុងករណីនេះ body ត្រូវបានទុកឱ្យនៅដដែលជា `already_applied`។ នៅពេល body គ្មាន field `instructions` ជា string ប៉ុន្តែមាន `input`
+សម្រាប់ body ដែលគ្មាន array `messages` (ឬមាន array ទទេ) មិនមានការរំលងផ្អែកលើខ្លឹមសារដំណើរការទេ ហើយ field `system` កម្រិតកំពូលក៏មិនត្រូវបានពិនិត្យដែរ។ ប្លុកត្រូវបានបន្ថែមបន្ទាប់ពីអត្ថបទនៃ field `instructions` ដែលជា string លុះត្រាតែ field នោះមានសញ្ញាសម្គាល់ `[OmniRoute Output Styles]` រួចហើយ ដែលក្នុងករណីនេះ body ត្រូវបានទុកឱ្យនៅដដែលជា `already_applied`។ នៅពេល body គ្មាន field `instructions` ជា string ប៉ុន្តែមាន `input`
 (ជា string ឬជា array) ប្លុកនឹងក្លាយជា `instructions` ដោយជំនួសតម្លៃមិនមែន string ណាមួយដែល field នោះមានពីមុន។ body ដែលគ្មានទាំង field `instructions` ជា string និង `input` ជា string ឬ array នឹងត្រូវបានទុកឱ្យនៅដដែល ហើយរំលងជា `no_messages`។
 
 #### របៀបបើកប្រើ
@@ -558,8 +558,8 @@ settings API ទទួលយក style id ណាមួយ ហើយការរ�
 ```
 
 ភាពឆបគ្នាថយក្រោយ៖ ខណៈដែល `outputStyles` ទទេ ការកំណត់ចាស់ `cavemanOutputMode.enabled`
-នឹងផ្គូផ្គងទៅ `terse-prose` នៅកម្រិត `cavemanOutputMode.intensity`។ បន្ទាប់មក ប្លុកចាប់ផ្ដើមដោយសញ្ញាសម្គាល់ `[67router Output Styles]` ខណៈដែល injector ចាស់ `applyCavemanOutputMode()`
-ធ្លាប់បញ្ចូល `[67router Caveman Output Mode]`។ នៅខាងក្រោមសញ្ញាសម្គាល់ អត្ថបទត្រូវគ្នានឹងការបញ្ចូលចាស់ក្នុង en, pt-BR, es, de, fr, it, ru, id និង vi; ក្នុង ja និង zh វាមានដកឃ្លាបន្ថែមមួយនៅមុខឃ្លាកំណត់ព្រំដែន។ `terse-prose` មានការបកប្រែជា pt-BR, es, de,
+នឹងផ្គូផ្គងទៅ `terse-prose` នៅកម្រិត `cavemanOutputMode.intensity`។ បន្ទាប់មក ប្លុកចាប់ផ្ដើមដោយសញ្ញាសម្គាល់ `[OmniRoute Output Styles]` ខណៈដែល injector ចាស់ `applyCavemanOutputMode()`
+ធ្លាប់បញ្ចូល `[OmniRoute Caveman Output Mode]`។ នៅខាងក្រោមសញ្ញាសម្គាល់ អត្ថបទត្រូវគ្នានឹងការបញ្ចូលចាស់ក្នុង en, pt-BR, es, de, fr, it, ru, id និង vi; ក្នុង ja និង zh វាមានដកឃ្លាបន្ថែមមួយនៅមុខឃ្លាកំណត់ព្រំដែន។ `terse-prose` មានការបកប្រែជា pt-BR, es, de,
 fr, it, ru, zh, ja, id និង vi ដូច្នេះ request ដែលភាសាដែលបានកំណត់របស់វាគឺ `hu` នឹងទទួលបានអត្ថបទជាភាសាអង់គ្លេស នៅកន្លែងដែល injector ចាស់ប្រើអត្ថបទជាភាសាហុងគ្រីរបស់វា។
 
 ការជ្រើសរើសភាសាសម្រាប់ output-style (`resolveOutputStyleLanguage()` ក្នុង

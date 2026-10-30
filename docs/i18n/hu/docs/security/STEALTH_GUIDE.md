@@ -221,7 +221,7 @@ A `getLinuxCertConfig()` végigjár egy prioritási listát, és az első létez
 
 A tanúsítvány fájlneve: `omniroute-mitm.crt`. Az ujjlenyomat egyeztetése a `getCertFingerprint()` használatával történik (a DER SHA-1-kivonata).
 
-Emellett az `updateNssDatabases()` felhasználónkénti NSS-adatbázisokba telepíti a tanúsítványt, ha a `certutil` elérhető: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, valamint minden Firefox-profilba (a snap-verziókat is beleértve), **`67router MITM Root CA`** becenévvel.
+Emellett az `updateNssDatabases()` felhasználónkénti NSS-adatbázisokba telepíti a tanúsítványt, ha a `certutil` elérhető: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, valamint minden Firefox-profilba (a snap-verziókat is beleértve), **`OmniRoute MITM Root CA`** becenévvel.
 
 ### macOS / Windows
 

@@ -205,7 +205,7 @@ env വഴി ഓരോ പ്രൊവൈഡറിനും ഇത് ടോഗ
 
 സർട്ടിഫിക്കറ്റ് ഫയൽനാമം: `omniroute-mitm.crt`. `getCertFingerprint()` വഴി ഫിംഗർപ്രിന്റ് പൊരുത്തപ്പെടുത്തുന്നു (DER-ന്റെ SHA-1).
 
-കൂടാതെ, `certutil` ലഭ്യമാകുമ്പോൾ `updateNssDatabases()` ഓരോ ഉപയോക്താവിന്റെയും NSS DB-കളിൽ ഇൻസ്റ്റാൾ ചെയ്യുന്നു: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, എല്ലാ Firefox പ്രൊഫൈലുകളും (snap ഉൾപ്പെടെ), **`67router MITM Root CA`** എന്ന വിളിപ്പേരിന് കീഴിൽ.
+കൂടാതെ, `certutil` ലഭ്യമാകുമ്പോൾ `updateNssDatabases()` ഓരോ ഉപയോക്താവിന്റെയും NSS DB-കളിൽ ഇൻസ്റ്റാൾ ചെയ്യുന്നു: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, എല്ലാ Firefox പ്രൊഫൈലുകളും (snap ഉൾപ്പെടെ), **`OmniRoute MITM Root CA`** എന്ന വിളിപ്പേരിന് കീഴിൽ.
 
 ### macOS / Windows
 

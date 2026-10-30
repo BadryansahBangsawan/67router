@@ -42,7 +42,7 @@
 | `better-sqlite3`   | ରୁଟ୍ `^13.0.2` (Node-API ପ୍ରିବିଲ୍ଡ୍ଗୁଡ଼ିକ — Electron ପୁନଃବିଲ୍ଡ୍ ଆବଶ୍ୟକ ନୁହେଁ) |
 | ଆପ୍ ସଂସ୍କରଣ        | `3.8.0`                                                                       |
 | ଆପ୍ id             | `online.omniroute.desktop`                                                    |
-| ପ୍ରଡକ୍ଟ ନାମ        | `67router`                                                                    |
+| ପ୍ରଡକ୍ଟ ନାମ        | `OmniRoute`                                                                   |
 
 ## ସ୍କ୍ରିପ୍ଟଗୁଡ଼ିକ (ରୁଟ୍ `package.json`)
 

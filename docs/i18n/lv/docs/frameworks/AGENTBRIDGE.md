@@ -209,7 +209,7 @@ Pirms IDE pieņems MITM savienojumu, operētājsistēmai ir jāuzticas AgentBrid
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -452,7 +452,7 @@ Alternatīvi AgentBridge iestatījumos konfigurējiet neprivilēģētu portu un 
 
 Ja pēc AgentBridge palaišanas IDE rāda TLS kļūdas:
 
-1. Pārbaudiet, vai sertifikāts tika instalēts: `security find-certificate -c "67router AgentBridge"` (macOS) vai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Pārbaudiet, vai sertifikāts tika instalēts: `security find-certificate -c "OmniRoute MITM CA"` (macOS) vai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Dažas lietotnes uztur savu uzticamības krātuvi (Firefox, Chrome operētājsistēmā Linux). Vēlreiz palaidiet „Trust Cert” un pārbaudiet NSS/Firefox specifisko sertifikātu krātuvi.
 3. Pēc uzticamības piešķiršanas restartējiet IDE — aktīvās TLS sesijas izmanto iepriekšējo uzticamības stāvokli.
 

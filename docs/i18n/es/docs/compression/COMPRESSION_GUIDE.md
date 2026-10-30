@@ -534,12 +534,12 @@ sin cambios y se omite como `no_styles`), concatena las instrucciones selecciona
 del catálogo,
 añade la cláusula de límites **una vez** (más la cláusula de seguridad, `SAFETY_BOUNDARIES` o su
 traducción, cuando se selecciona `less-code` o `ponytail`) e inicia el bloque con un
-único marcador de idempotencia (`[67router Output Styles]`), por lo que volver a aplicarlo
+único marcador de idempotencia (`[OmniRoute Output Styles]`), por lo que volver a aplicarlo
 no tiene efecto. Cuando el idioma resuelto (consulte Selección de idioma más abajo) tiene una
 traducción, se inserta la instrucción localizada en lugar de la inglesa.
 
 En un cuerpo con un array `messages` no vacío, la comprobación de idempotencia se ejecuta antes que
-la omisión por contenido: cuando el marcador `[67router Output Styles]` ya está en el campo
+la omisión por contenido: cuando el marcador `[OmniRoute Output Styles]` ya está en el campo
 `system` de nivel superior (una cadena o un array de bloques de contenido) o en un mensaje de sistema
 con contenido de cadena, el cuerpo se deja sin cambios como `already_applied` y no se realiza ninguna
 comprobación de palabras clave. De lo contrario, una omisión por contenido
@@ -566,7 +566,7 @@ nunca crea un nuevo `messages[0]`, coloca el bloque en el primero de estos lugar
 En un cuerpo sin un array `messages` (o con uno vacío), no se ejecuta ninguna omisión por contenido y
 no se consulta un campo `system` de nivel superior. El bloque se añade después del texto de un
 campo `instructions` de cadena, salvo que ese campo ya contenga el marcador
-`[67router Output Styles]`, en cuyo caso el cuerpo se deja sin cambios como
+`[OmniRoute Output Styles]`, en cuyo caso el cuerpo se deja sin cambios como
 `already_applied`. Cuando el cuerpo no tiene un campo `instructions` de cadena, pero contiene `input`
 (una cadena o un array), el bloque se convierte en `instructions`, reemplazando cualquier valor que
 no sea una cadena que tuviera dicho campo. Un cuerpo sin un campo `instructions` de cadena ni un
@@ -594,8 +594,8 @@ configuración de compresión conserva la selección como:
 Compatibilidad con versiones anteriores: mientras `outputStyles` esté vacío, la configuración heredada
 `cavemanOutputMode.enabled` se asigna a `terse-prose` con el valor de
 `cavemanOutputMode.intensity`. El bloque comienza entonces con el marcador
-`[67router Output Styles]`, mientras que el inyector heredado `applyCavemanOutputMode()`
-escribía `[67router Caveman Output Mode]`. Debajo del marcador, el texto coincide con la
+`[OmniRoute Output Styles]`, mientras que el inyector heredado `applyCavemanOutputMode()`
+escribía `[OmniRoute Caveman Output Mode]`. Debajo del marcador, el texto coincide con la
 inserción heredada en en, pt-BR, es, de, fr, it, ru, id y vi; en ja y zh contiene un
 espacio adicional antes de la cláusula de límites. `terse-prose` tiene traducciones a pt-BR, es, de,
 fr, it, ru, zh, ja, id y vi, por lo que una solicitud cuyo idioma resuelto sea `hu` recibe el

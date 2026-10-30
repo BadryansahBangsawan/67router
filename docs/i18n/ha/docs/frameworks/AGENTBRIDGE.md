@@ -205,7 +205,7 @@ Dole ne OS ya amince da takardar shaidar CA ta AgentBridge kafin IDEs su karɓi 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -437,7 +437,7 @@ A madadin haka, saita port marar gata a cikin saitunan AgentBridge sannan ka kaf
 
 Idan IDE ya nuna kurakuran TLS bayan kunna AgentBridge:
 
-1. Tabbatar an shigar da cert ɗin: `security find-certificate -c "67router AgentBridge"` (macOS) ko `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Tabbatar an shigar da cert ɗin: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ko `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Wasu apps suna da nasu trust store (Firefox, Chrome a Linux). Sake gudanar da "Trust Cert" sannan ka duba cert store na musamman na NSS/Firefox.
 3. Sake kunna IDE bayan amincewa — zaman TLS da ke gudana suna amfani da tsohon yanayin amincewa.
 

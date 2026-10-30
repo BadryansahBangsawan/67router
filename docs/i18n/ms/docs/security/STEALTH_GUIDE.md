@@ -226,7 +226,7 @@ Hos sasaran yang dipintas: **`daily-cloudcode-pa.googleapis.com`** (pelayan hulu
 
 Nama fail sijil: `omniroute-mitm.crt`. Pemadanan cap jari melalui `getCertFingerprint()` (SHA-1 bagi DER).
 
-Selain itu, `updateNssDatabases()` memasang sijil ke dalam DB NSS setiap pengguna apabila `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), menggunakan nama panggilan **`67router MITM Root CA`**.
+Selain itu, `updateNssDatabases()` memasang sijil ke dalam DB NSS setiap pengguna apabila `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), menggunakan nama panggilan **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

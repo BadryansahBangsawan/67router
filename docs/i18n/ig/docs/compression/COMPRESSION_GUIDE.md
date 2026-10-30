@@ -513,12 +513,12 @@ ahụ dịka ọ dị, a na-amafe ya dịka `no_styles`), na-ejikọta ntuziaka 
 usoro ha si dị na katalọgụ,
 na-agbakwunye nkebi boundaries ahụ **otu ugboro** (tinyere nkebi nchekwa,
 `SAFETY_BOUNDARIES` ma ọ bụ ntụgharị ya, mgbe ahọpụtara `less-code` ma ọ bụ `ponytail`),
-ma jiri otu akara idempotency (`[67router Output Styles]`) malite block ahụ, ya mere
+ma jiri otu akara idempotency (`[OmniRoute Output Styles]`) malite block ahụ, ya mere
 itinye ya ọzọ anaghị eme ihe ọ bụla. Mgbe asụsụ e kpebiri (lee Nhọrọ asụsụ n'okpuru)
 nwere ntụgharị, a na-etinye ntuziaka e mere ka ọ kwekọọ na locale kama nke Bekee.
 
 N’elu body nwere array `messages` na-adịghị efu, a na-eme nyocha idempotency tupu
-content bypass: mgbe akara `[67router Output Styles]` adịlarị n’ime field `system`
+content bypass: mgbe akara `[OmniRoute Output Styles]` adịlarị n’ime field `system`
 nke top-level (string ma ọ bụ content-block array), ma ọ bụ n’ime system message nwere
 string content, a na-ahapụ body ahụ dịka ọ dị dịka `already_applied`, a naghịkwa eme
 nnyocha keyword. Ma ọ bụghị ya, content bypass (`shouldBypassCavemanOutputMode()` dị na
@@ -547,7 +547,7 @@ hụrụ:
 N’elu body na-enweghị array `messages` (ma ọ bụ nke nwere nke tọgbọ chakoo), content
 bypass anaghị arụ ọrụ, a naghịkwa ele field `system` nke top-level anya. A na-agbakwunye
 block ahụ n’azụ ederede nke string field `instructions`, belụsọ ma field ahụ enweelarị
-akara `[67router Output Styles]`; n’ọnọdụ ahụ, a na-ahapụ body ahụ dịka ọ dị dịka
+akara `[OmniRoute Output Styles]`; n’ọnọdụ ahụ, a na-ahapụ body ahụ dịka ọ dị dịka
 `already_applied`. Mgbe body ahụ na-enweghị string field `instructions` ma nwee `input`
 (string ma ọ bụ array), block ahụ na-aghọ `instructions`, ma dochie uru ọ bụla na-abụghị
 string nke field ahụ nwere. A na-ahapụ body na-enweghị string field `instructions` ma ọ
@@ -574,8 +574,8 @@ program, compression config na-echekwa nhọrọ ahụ dịka:
 Ndakọrịta azụ: mgbe `outputStyles` tọgbọ chakoo, setting ochie
 `cavemanOutputMode.enabled` na-ejikọta na `terse-prose` na
 `cavemanOutputMode.intensity`. Mgbe ahụ, block ahụ na-amalite na akara
-`[67router Output Styles]`, ebe injector ochie `applyCavemanOutputMode()` dere
-`[67router Caveman Output Mode]`. N’okpuru akara ahụ, ederede ahụ dabara na injection
+`[OmniRoute Output Styles]`, ebe injector ochie `applyCavemanOutputMode()` dere
+`[OmniRoute Caveman Output Mode]`. N’okpuru akara ahụ, ederede ahụ dabara na injection
 ochie na en, pt-BR, es, de, fr, it, ru, id na vi; na ja na zh, ọ nwere otu oghere ọzọ
 tupu nkebi boundaries ahụ. A na-atụgharị `terse-prose` gaa na pt-BR, es, de, fr, it, ru,
 zh, ja, id na vi, ya mere request nke asụsụ e kpebiri bụ `hu` na-enweta ederede Bekee

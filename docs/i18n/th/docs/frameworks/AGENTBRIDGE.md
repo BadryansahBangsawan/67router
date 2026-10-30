@@ -205,7 +205,7 @@ hop-by-hop/framing ที่ใช้ร่วมกันออก (รวม�
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # บังคับยุติกระบวนกา�
 
 หาก IDE แสดงข้อผิดพลาด TLS หลังจากเริ่ม AgentBridge:
 
-1. ตรวจสอบว่าได้ติดตั้งใบรับรองแล้ว: `security find-certificate -c "67router AgentBridge"` (macOS) หรือ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ตรวจสอบว่าได้ติดตั้งใบรับรองแล้ว: `security find-certificate -c "OmniRoute MITM CA"` (macOS) หรือ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. แอปบางตัวจัดเก็บคลังความเชื่อถือของตนเอง (Firefox, Chrome บน Linux) ให้เรียกใช้ "เชื่อถือใบรับรอง" อีกครั้งและตรวจสอบคลังใบรับรองเฉพาะสำหรับ NSS/Firefox
 3. รีสตาร์ต IDE หลังจากกำหนดให้เชื่อถือแล้ว — เซสชัน TLS ที่กำลังดำเนินการอยู่จะยังใช้สถานะความเชื่อถือเดิม
 

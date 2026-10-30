@@ -226,7 +226,7 @@ Host target yang dicegat: **`daily-cloudcode-pa.googleapis.com`** (upstream Anti
 
 Nama file sertifikat: `omniroute-mitm.crt`. Pencocokan fingerprint melalui `getCertFingerprint()` (SHA-1 dari DER).
 
-Selain itu, `updateNssDatabases()` menginstal ke DB NSS per pengguna saat `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), dengan nama panggilan **`67router MITM Root CA`**.
+Selain itu, `updateNssDatabases()` menginstal ke DB NSS per pengguna saat `certutil` tersedia: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, semua profil Firefox (termasuk snap), dengan nama panggilan **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

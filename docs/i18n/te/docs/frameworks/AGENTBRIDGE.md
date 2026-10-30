@@ -205,7 +205,7 @@ IDEలు MITM కనెక్షన్ను అంగీకరించడా�
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -449,7 +449,7 @@ sudo fuser -k 443/tcp  # బలవంతంగా నిలిపివేయం
 
 AgentBridgeను ప్రారంభించిన తర్వాత IDEలో TLS errors కనిపిస్తే:
 
-1. cert install అయిందో లేదో ధృవీకరించండి: `security find-certificate -c "67router AgentBridge"` (macOS) లేదా `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. cert install అయిందో లేదో ధృవీకరించండి: `security find-certificate -c "OmniRoute MITM CA"` (macOS) లేదా `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. కొన్ని apps తమ స్వంత trust storeను నిర్వహిస్తాయి (Firefox, Linuxలో Chrome). "Trust Cert"ను మళ్లీ అమలు చేసి, NSS/Firefoxకు ప్రత్యేకమైన cert storeను తనిఖీ చేయండి.
 3. విశ్వసనీయంగా గుర్తించిన తర్వాత IDEని restart చేయండి — ప్రస్తుతం కొనసాగుతున్న TLS sessions పాత trust stateను ఉపయోగిస్తాయి.
 

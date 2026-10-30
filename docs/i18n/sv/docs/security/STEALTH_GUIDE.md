@@ -238,7 +238,7 @@ Målvärd som avlyssnas: **`daily-cloudcode-pa.googleapis.com`** (Antigravitys u
 
 Certifikatets filnamn: `omniroute-mitm.crt`. Fingeravtrycksmatchning via `getCertFingerprint()` (SHA-1 av DER).
 
-Dessutom installerar `updateNssDatabases()` certifikatet i NSS-databaser per användare när `certutil` är tillgängligt: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alla Firefox-profiler (inklusive snap), under smeknamnet **`67router MITM Root CA`**.
+Dessutom installerar `updateNssDatabases()` certifikatet i NSS-databaser per användare när `certutil` är tillgängligt: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alla Firefox-profiler (inklusive snap), under smeknamnet **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

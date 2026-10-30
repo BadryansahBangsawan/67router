@@ -229,7 +229,7 @@ env के माध्यम से प्रत्येक प्रदात
 
 प्रमाणपत्र फ़ाइल नाम: `omniroute-mitm.crt`। `getCertFingerprint()` के माध्यम से फ़िंगरप्रिंट मिलान (DER का SHA-1)।
 
-इसके अतिरिक्त, `certutil` उपलब्ध होने पर `updateNssDatabases()` प्रति-उपयोगकर्ता NSS DB में इंस्टॉल करता है: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, सभी Firefox प्रोफ़ाइल (snap सहित), उपनाम **`67router MITM Root CA`** के अंतर्गत।
+इसके अतिरिक्त, `certutil` उपलब्ध होने पर `updateNssDatabases()` प्रति-उपयोगकर्ता NSS DB में इंस्टॉल करता है: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, सभी Firefox प्रोफ़ाइल (snap सहित), उपनाम **`OmniRoute MITM Root CA`** के अंतर्गत।
 
 ### macOS / Windows
 

@@ -42,7 +42,7 @@
 | `better-sqlite3`     | asosiy `^13.0.2` (Node-API tayyor yigʻmalari — Electron uchun qayta yigʻish talab qilinmaydi) |
 | Ilova versiyasi      | `3.8.0`                                                                                       |
 | Ilova identifikatori | `online.omniroute.desktop`                                                                    |
-| Mahsulot nomi        | `67router`                                                                                    |
+| Mahsulot nomi        | `OmniRoute`                                                                                   |
 
 ## Skriptlar (asosiy `package.json`)
 

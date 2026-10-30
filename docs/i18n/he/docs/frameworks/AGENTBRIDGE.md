@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (צרור המפתחות):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # סיום כפוי (יש להשתמש בזהירות)
 
 אם ה-IDE מציג שגיאות TLS לאחר הפעלת AgentBridge:
 
-1. ודאו שהאישור הותקן: `security find-certificate -c "67router AgentBridge"` (macOS) או `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. ודאו שהאישור הותקן: `security find-certificate -c "OmniRoute MITM CA"` (macOS) או `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. יישומים מסוימים מנהלים מאגר אמון משלהם (Firefox, Chrome ב-Linux). הפעילו שוב את "Trust Cert" ובדקו את מאגר האישורים הייעודי ל-NSS/Firefox.
 3. הפעילו מחדש את ה-IDE לאחר מתן האמון — חיבורי TLS פעילים משתמשים במצב האמון הישן.
 

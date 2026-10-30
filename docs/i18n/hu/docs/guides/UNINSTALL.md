@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- Nyissa meg a `Beállítások → Alkalmazások → 67router → Eltávolítás` menüpontot
+- Nyissa meg a `Beállítások → Alkalmazások → OmniRoute → Eltávolítás` menüpontot
 - Vagy futtassa az NSIS eltávolítót a telepítési könyvtárból
 
 **macOS:**

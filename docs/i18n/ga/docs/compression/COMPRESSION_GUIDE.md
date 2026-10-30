@@ -532,12 +532,12 @@ sé na treoracha roghnaithe in ord na catalóige,
 iarcheanglaíonn sé an clásal teorainneacha **uair amháin** (mar aon leis an gclásal
 sábháilteachta, `SAFETY_BOUNDARIES` nó a aistriúchán, nuair a roghnaítear `less-code` nó
 `ponytail`), agus tosaíonn sé an bloc le marcóir idéimitheachta amháin
-(`[67router Output Styles]`), ionas nach ndéanann athchur i bhfeidhm aon rud. Nuair a
+(`[OmniRoute Output Styles]`), ionas nach ndéanann athchur i bhfeidhm aon rud. Nuair a
 bhíonn aistriúchán ar fáil don teanga réitithe (féach Roghnú teanga thíos), instealltar
 an treoir logánaithe in ionad an Bhéarla.
 
 Ar chorp a bhfuil eagar `messages` neamhfholamh aige, ritear an tseiceáil idéimitheachta
-roimh an seachbhóthar inneachair: nuair atá an marcóir `[67router Output Styles]`
+roimh an seachbhóthar inneachair: nuair atá an marcóir `[OmniRoute Output Styles]`
 cheana féin sa réimse barrleibhéil `system` (teaghrán nó eagar bloic inneachair) nó i
 dteachtaireacht chórais a bhfuil inneachar teaghráin aici, fágtar an corp gan athrú mar
 `already_applied` agus ní ritear aon seiceáil eochairfhocal. Seachas sin, seiceálann
@@ -567,7 +567,7 @@ an bloc sa chéad áit díobh seo a aimsíonn sé:
 Ar chorp gan eagar `messages` (nó a bhfuil ceann folamh aige), ní ritear aon seachbhóthar
 inneachair agus ní bhreathnaítear ar réimse barrleibhéil `system`. Iarcheanglaítear an
 bloc i ndiaidh théacs réimse teaghráin `instructions`, ach amháin má tá an marcóir
-`[67router Output Styles]` sa réimse sin cheana féin, agus sa chás sin fágtar an corp
+`[OmniRoute Output Styles]` sa réimse sin cheana féin, agus sa chás sin fágtar an corp
 gan athrú mar `already_applied`. Nuair nach bhfuil réimse teaghráin `instructions` ag
 an gcorp ach go bhfuil `input` aige (teaghrán nó eagar), déantar `instructions` den
 bhloc, agus cuirtear é in ionad aon luacha neamhtheaghráin a bhí sa réimse sin. Fágtar
@@ -596,8 +596,8 @@ coinníonn an chumraíocht chomhbhrúite an roghnúchán mar:
 Comhoiriúnacht siarghabhálach: fad atá `outputStyles` folamh, mapálann an socrú
 oidhreachta `cavemanOutputMode.enabled` go `terse-prose` ag
 `cavemanOutputMode.intensity`. Tosaíonn an bloc ansin leis an marcóir
-`[67router Output Styles]`, san áit ar insteall an t-insteallaire oidhreachta
-`applyCavemanOutputMode()` `[67router Caveman Output Mode]`. Faoin marcóir, meaitseálann
+`[OmniRoute Output Styles]`, san áit ar insteall an t-insteallaire oidhreachta
+`applyCavemanOutputMode()` `[OmniRoute Caveman Output Mode]`. Faoin marcóir, meaitseálann
 an téacs an t-instealladh oidhreachta in en, pt-BR, es, de, fr, it, ru, id agus vi; in
 ja agus zh tá spás breise amháin ann roimh an gclásal teorainneacha. Aistrítear
 `terse-prose` go pt-BR, es, de, fr, it, ru, zh, ja, id agus vi, mar sin faigheann iarratas

@@ -530,12 +530,12 @@ keha muutmata ja vahelejätmise põhjuseks on `no_styles`), ühendab valitud juh
 kataloogi järjekorras,
 lisab piirangute klausli **ühe korra** (ning ohutusklausli, `SAFETY_BOUNDARIES` või selle
 tõlke, kui valitud on `less-code` või `ponytail`) ja alustab plokki ühe
-idempotentsusmarkeriga (`[67router Output Styles]`), mistõttu ei tee korduv rakendamine
+idempotentsusmarkeriga (`[OmniRoute Output Styles]`), mistõttu ei tee korduv rakendamine
 midagi. Kui tuvastatud keelel (vt allpool jaotist Keele valimine) on tõlge, lisatakse
 ingliskeelse juhise asemel lokaliseeritud juhis.
 
 Keha puhul, millel on mittetühi `messages`-massiiv, tehakse idempotentsuse kontroll enne
-sisupõhist möödumist: kui marker `[67router Output Styles]` on juba ülataseme väljal
+sisupõhist möödumist: kui marker `[OmniRoute Output Styles]` on juba ülataseme väljal
 `system` (string või sisuplokkide massiiv) või stringist sisuga süsteemisõnumis,
 jäetakse keha muutmata olekuga `already_applied` ning märksõnu ei kontrollita.
 Vastasel juhul kontrollib sisupõhine möödumine (`shouldBypassCavemanOutputMode()`
@@ -562,7 +562,7 @@ järgmises järjekorras:
 Keha puhul, millel puudub `messages`-massiiv (või mille massiiv on tühi), sisupõhist
 möödumist ei rakendata ja ülataseme välja `system` ei arvestata. Plokk lisatakse
 stringist `instructions`-välja teksti järele, välja arvatud juhul, kui see väli juba
-sisaldab markerit `[67router Output Styles]`; sel juhul jäetakse keha muutmata olekuga
+sisaldab markerit `[OmniRoute Output Styles]`; sel juhul jäetakse keha muutmata olekuga
 `already_applied`. Kui kehal puudub stringist `instructions`-väli, kuid sellel on
 `input` (string või massiiv), saab plokist `instructions`, asendades selle välja
 võimaliku mittestringilise väärtuse. Keha, millel pole stringist `instructions`-välja
@@ -590,8 +590,8 @@ Programmiliselt salvestab tihendamise konfiguratsioon valiku järgmiselt:
 Tagasiühilduvus: kuni `outputStyles` on tühi, vastendatakse pärandseadistus
 `cavemanOutputMode.enabled` stiilile `terse-prose` tasemega
 `cavemanOutputMode.intensity`. Plokk algab siis markeriga
-`[67router Output Styles]`, samas kui pärand-injektor `applyCavemanOutputMode()`
-lisas markeri `[67router Caveman Output Mode]`. Markeri all vastab tekst pärandina
+`[OmniRoute Output Styles]`, samas kui pärand-injektor `applyCavemanOutputMode()`
+lisas markeri `[OmniRoute Caveman Output Mode]`. Markeri all vastab tekst pärandina
 lisatud tekstile keeltes en, pt-BR, es, de, fr, it, ru, id ja vi; keeltes ja ja zh on
 enne piirangute klauslit üks lisatühik. `terse-prose` on tõlgitud keeltesse pt-BR, es,
 de, fr, it, ru, zh, ja, id ja vi, mistõttu saab päring, mille tuvastatud keel on `hu`,

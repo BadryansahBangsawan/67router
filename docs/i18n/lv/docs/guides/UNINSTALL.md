@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- Atvērt `Iestatījumi → Lietojumprogrammas → 67router → Deinstalēt`
+- Atvērt `Iestatījumi → Lietojumprogrammas → OmniRoute → Deinstalēt`
 - Vai palaist NSIS deinstalatoru no instalācijas mapes
 
 **macOS:**

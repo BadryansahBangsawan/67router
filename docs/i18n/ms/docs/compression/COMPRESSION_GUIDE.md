@@ -533,13 +533,13 @@ sebarang gaya membiarkan isi tidak berubah, dilangkau sebagai `no_styles`), meng
 arahan yang dipilih mengikut turutan katalog,
 menambahkan klausa sempadan **sekali sahaja** (berserta klausa keselamatan,
 `SAFETY_BOUNDARIES` atau terjemahannya, apabila `less-code` atau `ponytail` dipilih), dan
-memulakan blok dengan satu penanda keidempotenan (`[67router Output Styles]`), supaya
+memulakan blok dengan satu penanda keidempotenan (`[OmniRoute Output Styles]`), supaya
 penggunaan semula tidak menghasilkan sebarang perubahan. Apabila bahasa yang ditentukan
 (lihat Pemilihan bahasa di bawah) mempunyai terjemahan, arahan setempat disuntik bagi
 menggantikan bahasa Inggeris.
 
 Pada isi dengan tatasusunan `messages` yang tidak kosong, semakan keidempotenan dijalankan
-sebelum pintasan kandungan: apabila penanda `[67router Output Styles]` sudah wujud dalam
+sebelum pintasan kandungan: apabila penanda `[OmniRoute Output Styles]` sudah wujud dalam
 medan `system` peringkat teratas (rentetan atau tatasusunan blok kandungan) atau dalam mesej
 sistem dengan kandungan rentetan, isi dibiarkan tidak berubah sebagai `already_applied` dan
 tiada semakan kata kunci dijalankan. Jika tidak, pintasan kandungan
@@ -568,7 +568,7 @@ ditemuinya antara yang berikut:
 Pada isi tanpa tatasusunan `messages` (atau dengan tatasusunan kosong), tiada pintasan
 kandungan dijalankan dan medan `system` peringkat teratas tidak dirujuk. Blok ditambahkan
 selepas teks dalam medan `instructions` berbentuk rentetan, melainkan medan tersebut sudah
-mengandungi penanda `[67router Output Styles]`, yang menyebabkan isi dibiarkan tidak
+mengandungi penanda `[OmniRoute Output Styles]`, yang menyebabkan isi dibiarkan tidak
 berubah sebagai `already_applied`. Apabila isi tidak mempunyai medan `instructions`
 berbentuk rentetan tetapi mengandungi `input` (rentetan atau tatasusunan), blok menjadi
 `instructions`, menggantikan apa-apa nilai bukan rentetan yang sebelum ini terkandung dalam
@@ -597,8 +597,8 @@ konfigurasi pemampatan menyimpan pemilihan seperti berikut:
 Keserasian ke belakang: selagi `outputStyles` kosong, tetapan legasi
 `cavemanOutputMode.enabled` dipetakan kepada `terse-prose` pada
 `cavemanOutputMode.intensity`. Blok itu kemudiannya bermula dengan penanda
-`[67router Output Styles]`, manakala penyuntik legasi `applyCavemanOutputMode()` menulis
-`[67router Caveman Output Mode]`. Di bawah penanda tersebut, teks sepadan dengan suntikan
+`[OmniRoute Output Styles]`, manakala penyuntik legasi `applyCavemanOutputMode()` menulis
+`[OmniRoute Caveman Output Mode]`. Di bawah penanda tersebut, teks sepadan dengan suntikan
 legasi dalam en, pt-BR, es, de, fr, it, ru, id dan vi; dalam ja dan zh, teks itu mempunyai
 satu ruang tambahan sebelum klausa sempadan. `terse-prose` diterjemahkan ke dalam pt-BR,
 es, de, fr, it, ru, zh, ja, id dan vi, maka permintaan yang bahasa ditentukannya ialah

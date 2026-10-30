@@ -531,11 +531,11 @@ const { messages: aged, saved } = applyAging(messages, {
 הקטלוג,
 מוסיפה את סעיף הגבולות **פעם אחת** (וכן את סעיף הבטיחות, `SAFETY_BOUNDARIES` או
 התרגום שלו, כאשר `less-code` או `ponytail` נבחרים), ומתחילה את הבלוק בסמן
-אידמפוטנטיות יחיד (`[67router Output Styles]`), כך שהפעלה חוזרת אינה עושה דבר. כאשר
+אידמפוטנטיות יחיד (`[OmniRoute Output Styles]`), כך שהפעלה חוזרת אינה עושה דבר. כאשר
 לשפה שנפתרה (ראו בחירת שפה להלן) יש תרגום, ההנחיה המתורגמת מוזרקת במקום זו שבאנגלית.
 
 בגוף בקשה עם מערך `messages` שאינו ריק, בדיקת האידמפוטנטיות רצה לפני
-עקיפת התוכן: כאשר הסמן `[67router Output Styles]` כבר נמצא בשדה `system`
+עקיפת התוכן: כאשר הסמן `[OmniRoute Output Styles]` כבר נמצא בשדה `system`
 ברמה העליונה (מחרוזת או מערך של בלוקי תוכן) או בהודעת מערכת עם תוכן מסוג
 מחרוזת, גוף הבקשה נותר ללא שינוי במצב `already_applied` ולא מתבצעת בדיקת מילות מפתח.
 אחרת, עקיפת תוכן (`shouldBypassCavemanOutputMode()` בקובץ
@@ -561,7 +561,7 @@ const { messages: aged, saved } = applyAging(messages, {
 בגוף בקשה ללא מערך `messages` (או עם מערך ריק), לא מתבצעת עקיפת תוכן
 והשדה `system` ברמה העליונה אינו נבדק. הבלוק מצורף לאחר הטקסט של
 שדה `instructions` מסוג מחרוזת, אלא אם שדה זה כבר מכיל את הסמן
-`[67router Output Styles]`, ובמקרה כזה גוף הבקשה נותר ללא שינוי במצב
+`[OmniRoute Output Styles]`, ובמקרה כזה גוף הבקשה נותר ללא שינוי במצב
 `already_applied`. כאשר לגוף הבקשה אין שדה `instructions` מסוג מחרוזת אך הוא מכיל `input`
 (מחרוזת או מערך), הבלוק הופך לערך של `instructions`, ומחליף כל ערך שאינו מחרוזת
 שהשדה הכיל. גוף בקשה שאין בו לא שדה `instructions` מסוג מחרוזת ולא `input` מסוג מחרוזת או
@@ -587,8 +587,8 @@ const { messages: aged, saved } = applyAging(messages, {
 
 תאימות לאחור: כל עוד `outputStyles` ריק, ההגדרה הישנה `cavemanOutputMode.enabled`
 ממופה אל `terse-prose` ברמה `cavemanOutputMode.intensity`. לאחר מכן הבלוק מתחיל
-בסמן `[67router Output Styles]`, בעוד שהמזריק הישן `applyCavemanOutputMode()`
-כתב את `[67router Caveman Output Mode]`. מתחת לסמן, הטקסט תואם להזרקה
+בסמן `[OmniRoute Output Styles]`, בעוד שהמזריק הישן `applyCavemanOutputMode()`
+כתב את `[OmniRoute Caveman Output Mode]`. מתחת לסמן, הטקסט תואם להזרקה
 הישנה בשפות en, pt-BR, es, de, fr, it, ru, id ו-vi; בשפות ja ו-zh הוא כולל רווח
 נוסף אחד לפני סעיף הגבולות. `terse-prose` מתורגם ל-pt-BR, es, de,
 fr, it, ru, zh, ja, id ו-vi, ולכן בקשה שהשפה שנפתרה עבורה היא `hu` מקבלת את

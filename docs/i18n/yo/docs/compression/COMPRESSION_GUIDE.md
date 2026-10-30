@@ -530,12 +530,12 @@ kúrò, kì í jẹ́ àṣìṣe láéláé; àṣàyàn tí kò yọrí sí ar
 a ó sì fò ó gẹ́gẹ́ bí `no_styles`), ó so àwọn ìtọ́nisọ́nà tí a yàn pọ̀ ní ìtòlẹ́sẹẹsẹ àkójọ,
 ó fi gbólóhùn ààlà kún un **lẹ́ẹ̀kan ṣoṣo** (pẹ̀lú gbólóhùn ààbò, `SAFETY_BOUNDARIES` tàbí
 ìtumọ̀ rẹ̀, nígbà tí a bá yan `less-code` tàbí `ponytail`), ó sì bẹ̀rẹ̀ block náà pẹ̀lú
-àmì idempotency kan ṣoṣo (`[67router Output Styles]`), nítorí náà fífi í sílò lẹ́ẹ̀kan sí i
+àmì idempotency kan ṣoṣo (`[OmniRoute Output Styles]`), nítorí náà fífi í sílò lẹ́ẹ̀kan sí i
 kò ní ṣe ohunkóhun. Nígbà tí èdè tí a yanjú (wo Àṣàyàn èdè ní ìsàlẹ̀) bá ní ìtumọ̀,
 ìtọ́nisọ́nà tí a ṣe sí àdúgbò ni a ó fi sínú rẹ̀ dípò ti Gẹ̀ẹ́sì.
 
 Lórí body tí ó ní array `messages` tí kò ṣófo, àyẹ̀wò idempotency máa ń ṣiṣẹ́ ṣáájú
-content bypass: nígbà tí àmì `[67router Output Styles]` bá ti wà nínú field `system`
+content bypass: nígbà tí àmì `[OmniRoute Output Styles]` bá ti wà nínú field `system`
 ìpele-òkè (string kan tàbí array content-block) tàbí nínú system message tí content rẹ̀
 jẹ́ string, a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí `already_applied`, kò sì ní sí àyẹ̀wò
 keyword kankan. Bí kò bá rí bẹ́ẹ̀, content bypass kan (`shouldBypassCavemanOutputMode()`
@@ -564,7 +564,7 @@ tí ó bá rí:
 Lórí body tí kò ní array `messages` (tàbí tí ó ní èyí tí ó ṣófo), kò sí content bypass
 tí yóò ṣiṣẹ́, a kò sì ní ṣàyẹ̀wò field `system` ìpele-òkè. A ó fi block náà kún un lẹ́yìn
 ọ̀rọ̀ field `instructions` tí ó jẹ́ string, àyàfi bí field náà bá ti ní àmì
-`[67router Output Styles]`, nígbà náà a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí
+`[OmniRoute Output Styles]`, nígbà náà a ó fi body náà sílẹ̀ láìyípadà gẹ́gẹ́ bí
 `already_applied`. Nígbà tí body kò bá ní field `instructions` tí ó jẹ́ string ṣùgbọ́n
 ó ní `input` (string kan tàbí array), block náà yóò di `instructions`, yóò sì rọ́pò iye
 tí kì í ṣe string èyíkéyìí tí field náà ní tẹ́lẹ̀. Body tí kò ní field `instructions`
@@ -593,8 +593,8 @@ config compression máa ń tọ́jú àṣàyàn náà bí:
 Ìbámu-sẹ́yìn: nígbà tí `outputStyles` bá ṣófo, setting àtijọ́
 `cavemanOutputMode.enabled` máa ń darí sí `terse-prose` ní
 `cavemanOutputMode.intensity`. Block náà yóò bẹ̀rẹ̀ pẹ̀lú àmì
-`[67router Output Styles]`, níbi tí injector àtijọ́ `applyCavemanOutputMode()` ti kọ
-`[67router Caveman Output Mode]`. Ní ìsàlẹ̀ àmì náà, ọ̀rọ̀ náà bá injection àtijọ́ mu
+`[OmniRoute Output Styles]`, níbi tí injector àtijọ́ `applyCavemanOutputMode()` ti kọ
+`[OmniRoute Caveman Output Mode]`. Ní ìsàlẹ̀ àmì náà, ọ̀rọ̀ náà bá injection àtijọ́ mu
 ní en, pt-BR, es, de, fr, it, ru, id àti vi; ní ja àti zh ó ní àyè àfikún kan ṣáájú
 gbólóhùn ààlà náà. `terse-prose` ní ìtumọ̀ sí pt-BR, es, de, fr, it, ru, zh, ja, id àti
 vi, nítorí náà request tí èdè tí a yanjú fún un jẹ́ `hu` máa ń gba ọ̀rọ̀ Gẹ̀ẹ́sì níbi tí

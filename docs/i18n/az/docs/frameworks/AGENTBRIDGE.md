@@ -206,7 +206,7 @@ IDE-lərin MITM bağlantısını qəbul etməsi üçün AgentBridge CA sertifika
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -450,7 +450,7 @@ Alternativ olaraq, AgentBridge parametrlərində imtiyaz tələb etməyən port 
 
 AgentBridge işə salındıqdan sonra IDE TLS xətaları göstərirsə:
 
-1. Sertifikatın quraşdırıldığını yoxlayın: `security find-certificate -c "67router AgentBridge"` (macOS) və ya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Sertifikatın quraşdırıldığını yoxlayın: `security find-certificate -c "OmniRoute MITM CA"` (macOS) və ya `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Bəzi tətbiqlər öz etibar anbarını saxlayır (Firefox, Linux-da Chrome). "Trust Cert" əməliyyatını yenidən başladın və NSS/Firefox-a məxsus sertifikat anbarını yoxlayın.
 3. Etibar verdikdən sonra IDE-ni yenidən başladın — davam edən TLS sessiyaları köhnə etibar vəziyyətindən istifadə edir.
 

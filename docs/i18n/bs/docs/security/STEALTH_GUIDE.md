@@ -225,7 +225,7 @@ Ciljni presretnuti host: **`daily-cloudcode-pa.googleapis.com`** (Antigravity up
 
 Naziv certifikata: `omniroute-mitm.crt`. Podudaranje fingerprinta putem `getCertFingerprint()` (SHA-1 od DER).
 
-Dodatno, `updateNssDatabases()` instalira certifikate u NSS baze podataka po korisniku kada je `certutil` dostupan: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, svi Firefox profili (uključujući snap), pod nadimkom **`67router MITM Root CA`**.
+Dodatno, `updateNssDatabases()` instalira certifikate u NSS baze podataka po korisniku kada je `certutil` dostupan: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, svi Firefox profili (uključujući snap), pod nadimkom **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

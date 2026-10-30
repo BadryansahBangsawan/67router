@@ -42,7 +42,7 @@
 | `better-sqlite3`   | रुट `^13.0.2` (Node-API पूर्वनिर्मित बाइनरीहरू — Electron पुनर्निर्माण आवश्यक छैन) |
 | एप संस्करण         | `3.8.0`                                                                            |
 | एप आईडी            | `online.omniroute.desktop`                                                         |
-| उत्पादनको नाम      | `67router`                                                                         |
+| उत्पादनको नाम      | `OmniRoute`                                                                        |
 
 ## स्क्रिप्टहरू (रुट `package.json`)
 

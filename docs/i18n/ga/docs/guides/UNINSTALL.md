@@ -85,7 +85,7 @@ docker compose down -v
 
 **Windows:**
 
-- Oscail `Socrúcháin → Aipeanna → 67router → Díshuiteáil`
+- Oscail `Socrúcháin → Aipeanna → OmniRoute → Díshuiteáil`
 - Nó rith an suiteálaí NSIS ón eolaire suiteála
 
 **macOS:**

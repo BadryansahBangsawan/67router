@@ -205,7 +205,7 @@ interface CliFingerprint {
 
 証明書ファイル名: `omniroute-mitm.crt`。`getCertFingerprint()` を使用してフィンガープリントを照合します（DER の SHA-1）。
 
-さらに、`certutil` が利用可能な場合、`updateNssDatabases()` はユーザーごとの NSS DB に証明書をインストールします: `~/.pki/nssdb`、`~/snap/chromium/.../nssdb`、すべての Firefox プロファイル（snap を含む）。ニックネームは **`67router MITM Root CA`** です。
+さらに、`certutil` が利用可能な場合、`updateNssDatabases()` はユーザーごとの NSS DB に証明書をインストールします: `~/.pki/nssdb`、`~/snap/chromium/.../nssdb`、すべての Firefox プロファイル（snap を含む）。ニックネームは **`OmniRoute MITM Root CA`** です。
 
 ### macOS / Windows
 

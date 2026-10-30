@@ -24,12 +24,12 @@ seva za MCP na maagizo maalum yote huendelea kufanya kazi, ila sasa yakitumia mo
 ## Usanidi
 
 1. **Endesha 67router** — `npm install -g omniroute && omniroute` (dashibodi kwenye `http://localhost:20128`).
-2. **Sakinisha kiendelezi** — tafuta "67router" katika mwonekano wa Extensions.
-3. **Chagua modeli** — Copilot Chat → kichagua modeli → **Manage Models…** → **67router**, kisha teua
+2. **Sakinisha kiendelezi** — tafuta "OmniRoute" katika mwonekano wa Extensions.
+3. **Chagua modeli** — Copilot Chat → kichagua modeli → **Manage Models…** → **OmniRoute**, kisha teua
    unazotaka.
 
 Hakuna cha kusanidi wakati 67router inaendeshwa kwenye kituo chaguomsingi. Kwa instansi ya mbali, fungua
-**ikoni ya 67router katika Activity Bar** (au endesha `67router: Manage Connection`) na uweke:
+**ikoni ya 67router katika Activity Bar** (au endesha `OmniRoute: Manage Connection`) na uweke:
 
 - **URL ya seva** — mzizi wa seva, k.m. `http://192.168.0.15:20128`. Kiambishi `/v1`
   huongezwa na kiendelezi; usikijumuishe.
@@ -121,7 +121,7 @@ Tazama [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) na suala
 
 ## Kusanidi zana zako nyingine ukiwa ndani ya VS Code
 
-**`67router: Configure Coding CLI`** huendesha CLI ya `omniroute` ili kuandika wasifu ulio tayari kutumika
+**`OmniRoute: Configure Coding CLI`** huendesha CLI ya `omniroute` ili kuandika wasifu ulio tayari kutumika
 kwa Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo na Roo — usanidi uleule uliofafanuliwa katika
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Ufunguo wa API hupitishwa kwa CLI kupitia
@@ -131,14 +131,14 @@ kigezo cha mazingira cha `OMNIROUTE_API_KEY`, kamwe si kwenye mstari wa amri.
 
 ## Utatuzi wa matatizo
 
-| Dalili                                                                | Sababu / suluhisho                                                                                                                                                                                                                                                                            |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hakuna modeli za 67router kwenye kiteuzi                              | Seva haifikiki. Nukta ya upau wa hali huwa ya kijivu; endesha `67router: Check Connection`. Ugunduzi hufanyika kimya kimakusudi na hauongezi modeli zozote badala ya kuonyesha ombi.                                                                                                          |
-| Kila modeli huonekana mara mbili                                      | Unatumia OmniCopilot ya zamani kuliko 1.0.1 — sasisha. Sasa kiendelezi huomba `?prefix=alias`.                                                                                                                                                                                                |
-| Modeli ya picha/sauti iliyokuwa ikiorodheshwa imetoweka               | Hii ni ya makusudi tangu 1.0.1 — haikuweza kamwe kujibu ombi la gumzo.                                                                                                                                                                                                                        |
-| Paneli haipo kwenye Activity Bar                                      | VS Code huhamisha vikasha vya ziada vya mionekano hadi kwenye sehemu ya ziada ya **"…"** iliyo chini ya Activity Bar, na kikasha kilichofichwa kwa kubofya kulia hubaki kimefichwa. Bofya kulia Activity Bar → weka tiki kwenye **67router**, au ukifungue kwa `67router: Manage Connection`. |
-| Dashibodi hufunguka kwenye kivinjari licha ya modi ya `editor`        | Seva haiku**jengwa** kwa `DASHBOARD_ALLOW_EMBED=vscode` (tazama hapo juu) — kuiweka wakati wa kuanzisha usakinishaji uliojengwa tayari hakubadilishi chochote. Kurudi kwenye kivinjari cha nje ni jambo la makusudi.                                                                          |
-| Orodha ya modeli imepitwa na wakati baada ya kubadilisha watoa huduma | `67router: Refresh Models`, au kiungo cha ↻ kwenye paneli.                                                                                                                                                                                                                                    |
+| Dalili                                                                | Sababu / suluhisho                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hakuna modeli za 67router kwenye kiteuzi                              | Seva haifikiki. Nukta ya upau wa hali huwa ya kijivu; endesha `OmniRoute: Check Connection`. Ugunduzi hufanyika kimya kimakusudi na hauongezi modeli zozote badala ya kuonyesha ombi.                                                                                                           |
+| Kila modeli huonekana mara mbili                                      | Unatumia OmniCopilot ya zamani kuliko 1.0.1 — sasisha. Sasa kiendelezi huomba `?prefix=alias`.                                                                                                                                                                                                  |
+| Modeli ya picha/sauti iliyokuwa ikiorodheshwa imetoweka               | Hii ni ya makusudi tangu 1.0.1 — haikuweza kamwe kujibu ombi la gumzo.                                                                                                                                                                                                                          |
+| Paneli haipo kwenye Activity Bar                                      | VS Code huhamisha vikasha vya ziada vya mionekano hadi kwenye sehemu ya ziada ya **"…"** iliyo chini ya Activity Bar, na kikasha kilichofichwa kwa kubofya kulia hubaki kimefichwa. Bofya kulia Activity Bar → weka tiki kwenye **OmniRoute**, au ukifungue kwa `OmniRoute: Manage Connection`. |
+| Dashibodi hufunguka kwenye kivinjari licha ya modi ya `editor`        | Seva haiku**jengwa** kwa `DASHBOARD_ALLOW_EMBED=vscode` (tazama hapo juu) — kuiweka wakati wa kuanzisha usakinishaji uliojengwa tayari hakubadilishi chochote. Kurudi kwenye kivinjari cha nje ni jambo la makusudi.                                                                            |
+| Orodha ya modeli imepitwa na wakati baada ya kubadilisha watoa huduma | `OmniRoute: Refresh Models`, au kiungo cha ↻ kwenye paneli.                                                                                                                                                                                                                                     |
 
 ---
 

@@ -205,7 +205,7 @@ Enne kui IDE-d MITM-ühenduse aktsepteerivad, peab operatsioonisüsteem AgentBri
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -440,7 +440,7 @@ Teise võimalusena seadista AgentBridge'i sätetes mitteprivilegeeritud port nin
 
 Kui IDE kuvab pärast AgentBridge'i käivitamist TLS-i tõrkeid:
 
-1. Kontrolli, kas sertifikaat paigaldati: `security find-certificate -c "67router AgentBridge"` (macOS) või `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Kontrolli, kas sertifikaat paigaldati: `security find-certificate -c "OmniRoute MITM CA"` (macOS) või `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Mõned rakendused haldavad oma usaldushoidlat (Firefox, Chrome Linuxis). Käivita „Trust Cert” uuesti ja kontrolli NSS-i/Firefoxi-spetsiifilist sertifikaadihoidlat.
 3. Pärast usalduse määramist taaskäivita IDE — pooleliolevad TLS-seansid kasutavad vana usaldusolekut.
 

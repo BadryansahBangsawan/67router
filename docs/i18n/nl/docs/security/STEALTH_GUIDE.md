@@ -205,7 +205,7 @@ Onderschepte doelhost: **`daily-cloudcode-pa.googleapis.com`** (de upstream van 
 
 Certificaatbestandsnaam: `omniroute-mitm.crt`. Fingerprintvergelijking via `getCertFingerprint()` (SHA-1 van DER).
 
-Daarnaast installeert `updateNssDatabases()` het certificaat in NSS-databases per gebruiker wanneer `certutil` beschikbaar is: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-profielen (inclusief snap), onder de bijnaam **`67router MITM Root CA`**.
+Daarnaast installeert `updateNssDatabases()` het certificaat in NSS-databases per gebruiker wanneer `certutil` beschikbaar is: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-profielen (inclusief snap), onder de bijnaam **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

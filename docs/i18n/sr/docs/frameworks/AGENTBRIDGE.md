@@ -205,7 +205,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -448,7 +448,7 @@ sudo fuser -k 443/tcp  # принудно заустављање (користи
 
 Ако IDE приказује TLS грешке након покретања AgentBridge-а:
 
-1. Проверите да ли је сертификат инсталиран: `security find-certificate -c "67router AgentBridge"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Проверите да ли је сертификат инсталиран: `security find-certificate -c "OmniRoute MITM CA"` (macOS) или `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Неке апликације одржавају сопствено складиште поузданих сертификата (Firefox, Chrome на Linux-у). Поново покрените „Trust Cert“ и проверите складиште сертификата специфично за NSS/Firefox.
 3. Поново покрените IDE након што означите сертификат као поуздан — активне TLS сесије користе претходно стање поверења.
 

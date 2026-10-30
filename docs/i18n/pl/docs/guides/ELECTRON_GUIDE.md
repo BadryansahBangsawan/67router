@@ -45,7 +45,7 @@ Potwierdzone na podstawie `electron/package.json`:
 | `better-sqlite3`        | główny `^13.0.2` (gotowe kompilacje Node-API — bez przebudowy dla Electron) |
 | Wersja aplikacji        | `3.8.0`                                                                     |
 | Identyfikator aplikacji | `online.omniroute.desktop`                                                  |
-| Nazwa produktu          | `67router`                                                                  |
+| Nazwa produktu          | `OmniRoute`                                                                 |
 
 ## Skrypty (główny `package.json`)
 

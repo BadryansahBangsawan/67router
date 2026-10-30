@@ -42,7 +42,7 @@
 | `better-sqlite3`   | root `^13.0.2` (Node-API ကြိုတင် build များ — Electron rebuild မလိုအပ်ပါ) |
 | App ဗားရှင်း       | `3.8.0`                                                                   |
 | App id             | `online.omniroute.desktop`                                                |
-| ထုတ်ကုန်အမည်       | `67router`                                                                |
+| ထုတ်ကုန်အမည်       | `OmniRoute`                                                               |
 
 ## Script များ (root `package.json`)
 

@@ -233,7 +233,7 @@ Hedef olarak yakalanan ana makine: **`daily-cloudcode-pa.googleapis.com`** (Anti
 
 Sertifika dosya adı: `omniroute-mitm.crt`. Parmak izi eşleştirmesi `getCertFingerprint()` aracılığıyla yapılır (DER'in SHA-1 özeti).
 
-Ayrıca `updateNssDatabases()`, `certutil` kullanılabildiğinde kullanıcı başına NSS veritabanlarına yükleme yapar: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ve tüm Firefox profilleri (snap dâhil). Kullanılan takma ad: **`67router MITM Root CA`**.
+Ayrıca `updateNssDatabases()`, `certutil` kullanılabildiğinde kullanıcı başına NSS veritabanlarına yükleme yapar: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ve tüm Firefox profilleri (snap dâhil). Kullanılan takma ad: **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

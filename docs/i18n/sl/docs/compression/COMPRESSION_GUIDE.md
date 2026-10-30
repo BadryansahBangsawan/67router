@@ -534,12 +534,12 @@ ostane nespremenjeno in se preskoči kot `no_styles`), združi izbrana navodila 
 redu v katalogu,
 **enkrat** doda določilo o mejah (ter varnostno določilo, `SAFETY_BOUNDARIES` ali njegov
 prevod, kadar je izbran `less-code` ali `ponytail`) in začne blok z enim označevalnikom
-idempotentnosti (`[67router Output Styles]`), zato ponovna uporaba ne povzroči sprememb.
+idempotentnosti (`[OmniRoute Output Styles]`), zato ponovna uporaba ne povzroči sprememb.
 Kadar ima razrešeni jezik (glejte razdelek Izbira jezika spodaj) prevod, se namesto
 angleškega navodila vstavi lokalizirano navodilo.
 
 Pri telesu z neprazno matriko `messages` se preverjanje idempotentnosti izvede pred
-obhodom glede na vsebino: kadar je označevalnik `[67router Output Styles]` že v polju
+obhodom glede na vsebino: kadar je označevalnik `[OmniRoute Output Styles]` že v polju
 `system` na vrhnji ravni (kot niz ali matrika vsebinskih blokov) ali v sistemskem
 sporočilu z vsebino v obliki niza, telo ostane nespremenjeno kot `already_applied`,
 preverjanje ključnih besed pa se ne izvede. Sicer obhod glede na vsebino
@@ -566,7 +566,7 @@ ne ustvari novega `messages[0]`, blok umesti na prvo od naslednjih mest, ki ga n
 Pri telesu brez matrike `messages` (ali s prazno matriko) se obhod glede na vsebino ne
 izvede, polje `system` na vrhnji ravni pa se ne upošteva. Blok se doda za besedilo polja
 `instructions` v obliki niza, razen če to polje že vsebuje označevalnik
-`[67router Output Styles]`; v tem primeru telo ostane nespremenjeno kot
+`[OmniRoute Output Styles]`; v tem primeru telo ostane nespremenjeno kot
 `already_applied`. Kadar telo nima polja `instructions` v obliki niza, vendar vsebuje
 `input` (niz ali matriko), blok postane vrednost `instructions` in nadomesti morebitno
 vrednost, ki ni niz in jo je to polje vsebovalo. Telo, ki nima niti polja `instructions`
@@ -594,8 +594,8 @@ Mode**. Programsko konfiguracija stiskanja shrani izbor kot:
 Združljivost za nazaj: dokler je `outputStyles` prazen, se podedovana nastavitev
 `cavemanOutputMode.enabled` preslika v `terse-prose` pri
 `cavemanOutputMode.intensity`. Blok se nato začne z označevalnikom
-`[67router Output Styles]`, medtem ko je podedovani vstavljalnik
-`applyCavemanOutputMode()` vstavil `[67router Caveman Output Mode]`. Pod
+`[OmniRoute Output Styles]`, medtem ko je podedovani vstavljalnik
+`applyCavemanOutputMode()` vstavil `[OmniRoute Caveman Output Mode]`. Pod
 označevalnikom se besedilo ujema s podedovanim vstavljenim besedilom v jezikih en,
 pt-BR, es, de, fr, it, ru, id in vi; v ja in zh vsebuje en dodaten presledek pred
 določilom o mejah. `terse-prose` je preveden v pt-BR, es, de, fr, it, ru, zh, ja, id in

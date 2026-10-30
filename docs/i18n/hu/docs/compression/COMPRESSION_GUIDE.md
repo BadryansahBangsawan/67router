@@ -514,12 +514,12 @@ okkal lesz kihagyva), a kiválasztott utasításokat katalógusbeli sorrendben �
 **egyszer** hozzáfűzi a korlátokra vonatkozó záradékot (valamint a biztonsági záradékot,
 a `SAFETY_BOUNDARIES` értékét vagy annak fordítását, ha a `less-code` vagy a `ponytail`
 van kiválasztva), és a blokkot egyetlen idempotenciajelölővel
-(`[67router Output Styles]`) kezdi, így az ismételt alkalmazás nem jár módosítással. Ha
+(`[OmniRoute Output Styles]`) kezdi, így az ismételt alkalmazás nem jár módosítással. Ha
 a feloldott nyelvhez (lásd alább a Nyelvválasztás részt) létezik fordítás, az angol
 helyett a lokalizált utasítás kerül beillesztésre.
 
 Nem üres `messages` tömböt tartalmazó törzsön az idempotencia-ellenőrzés a
-tartalomalapú megkerülés előtt fut le: ha az `[67router Output Styles]` jelölő már
+tartalomalapú megkerülés előtt fut le: ha az `[OmniRoute Output Styles]` jelölő már
 szerepel a felső szintű `system` mezőben (amely lehet karakterlánc vagy
 tartalomblokkokból álló tömb), illetve karakterlánc típusú tartalommal rendelkező
 rendszerüzenetben, a törzs `already_applied` okkal változatlan marad, és
@@ -551,7 +551,7 @@ az első megtalált helyre teszi:
 `messages` tömb nélküli (vagy üres tömbbel rendelkező) törzsön nem fut tartalomalapú
 megkerülés, és a felső szintű `system` mezőt sem veszi figyelembe a rendszer. A blokk
 egy karakterlánc típusú `instructions` mező szövege után lesz hozzáfűzve, kivéve, ha az
-a mező már tartalmazza az `[67router Output Styles]` jelölőt; ebben az esetben a törzs
+a mező már tartalmazza az `[OmniRoute Output Styles]` jelölőt; ebben az esetben a törzs
 `already_applied` okkal változatlan marad. Ha a törzs nem rendelkezik karakterlánc
 típusú `instructions` mezővel, de tartalmaz `input` mezőt (karakterláncot vagy tömböt),
 akkor a blokk lesz az `instructions` értéke, felülírva a mező esetleges nem
@@ -581,8 +581,8 @@ használat esetén a tömörítési konfiguráció a következőképpen tárolja
 Visszafelé kompatibilitás: amíg az `outputStyles` üres, a régi
 `cavemanOutputMode.enabled` beállítás a `terse-prose` stílusra képeződik le a
 `cavemanOutputMode.intensity` intenzitással. Ekkor a blokk az
-`[67router Output Styles]` jelölővel kezdődik, míg a régi
-`applyCavemanOutputMode()` beillesztő az `[67router Caveman Output Mode]` jelölőt írta.
+`[OmniRoute Output Styles]` jelölővel kezdődik, míg a régi
+`applyCavemanOutputMode()` beillesztő az `[OmniRoute Caveman Output Mode]` jelölőt írta.
 A jelölő alatt a szöveg megegyezik a régi beillesztés szövegével en, pt-BR, es, de, fr,
 it, ru, id és vi nyelven; ja és zh nyelven egy további szóközt tartalmaz a korlátokra
 vonatkozó záradék előtt. A `terse-prose` rendelkezik pt-BR, es, de, fr, it, ru, zh, ja,

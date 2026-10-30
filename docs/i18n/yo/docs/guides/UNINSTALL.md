@@ -87,7 +87,7 @@ docker compose down -v
 
 **Windows:**
 
-- Ṣí `Settings → Apps → 67router → Uninstall`
+- Ṣí `Settings → Apps → OmniRoute → Uninstall`
 - Tàbí ṣiṣẹ́ ohun èlò NSIS uninstaller láti inú àkọsílẹ̀ fífìsílẹ̀
 
 **macOS:**

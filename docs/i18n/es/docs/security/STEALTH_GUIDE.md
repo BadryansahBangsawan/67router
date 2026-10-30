@@ -230,7 +230,7 @@ Host objetivo interceptado: **`daily-cloudcode-pa.googleapis.com`** (servidor up
 
 Nombre de archivo del certificado: `omniroute-mitm.crt`. Coincidencia de huellas digitales mediante `getCertFingerprint()` (SHA-1 del DER).
 
-Además, `updateNssDatabases()` instala el certificado en las bases de datos NSS de cada usuario cuando `certutil` está disponible: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` y todos los perfiles de Firefox (incluidos los de snap), con el nombre descriptivo **`67router MITM Root CA`**.
+Además, `updateNssDatabases()` instala el certificado en las bases de datos NSS de cada usuario cuando `certutil` está disponible: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` y todos los perfiles de Firefox (incluidos los de snap), con el nombre descriptivo **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

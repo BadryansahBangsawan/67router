@@ -528,12 +528,12 @@ selection ଦେଖନ୍ତୁ) `zh` ହେଲେ ମାତ୍ର `applyOutputS
 boundaries clause କୁ **ଥରେ ମାତ୍ର** ଶେଷରେ ଯୋଡ଼େ (ଏଥିସହ safety clause,
 `SAFETY_BOUNDARIES` କିମ୍ବା ଏହାର ଅନୁବାଦ, ଯେତେବେଳେ `less-code` କିମ୍ବା `ponytail`
 ଚୟନ କରାଯାଇଥାଏ), ଏବଂ block କୁ ଗୋଟିଏ idempotency marker
-(`[67router Output Styles]`) ସହିତ ଆରମ୍ଭ କରେ, ତେଣୁ ପୁନଃ ପ୍ରୟୋଗ କଲେ କୌଣସି ପରିବର୍ତ୍ତନ
+(`[OmniRoute Output Styles]`) ସହିତ ଆରମ୍ଭ କରେ, ତେଣୁ ପୁନଃ ପ୍ରୟୋଗ କଲେ କୌଣସି ପରିବର୍ତ୍ତନ
 ହୁଏ ନାହିଁ। ସମାଧାନ ହୋଇଥିବା ଭାଷାର (ନିମ୍ନରେ Language selection ଦେଖନ୍ତୁ) ଅନୁବାଦ
 ଉପଲବ୍ଧ ଥିଲେ, ଇଂରାଜୀ ପରିବର୍ତ୍ତେ ସ୍ଥାନୀୟକୃତ ନିର୍ଦ୍ଦେଶ ପ୍ରବେଶ କରାଯାଏ।
 
 ଏକ ଖାଲି ନଥିବା `messages` array ଥିବା body ରେ, idempotency ଯାଞ୍ଚ content bypass
-ପୂର୍ବରୁ ଚାଲେ: ଯେତେବେଳେ `[67router Output Styles]` marker ପୂର୍ବରୁ top-level
+ପୂର୍ବରୁ ଚାଲେ: ଯେତେବେଳେ `[OmniRoute Output Styles]` marker ପୂର୍ବରୁ top-level
 `system` field ରେ (ଏକ string କିମ୍ବା content-block array) କିମ୍ବା string content ଥିବା
 ଏକ system message ରେ ରହିଥାଏ, body କୁ `already_applied` ଭାବେ ଅପରିବର୍ତ୍ତିତ ରଖାଯାଏ
 ଏବଂ କୌଣସି keyword ଯାଞ୍ଚ ଚାଲେ ନାହିଁ।
@@ -563,7 +563,7 @@ on ଥିବାବେଳେ bypass ଚାଲେ; toggle କୁ off କଲେ key
 `messages` array ନଥିବା (କିମ୍ବା ଏକ ଖାଲି array ଥିବା) body ରେ କୌଣସି content bypass
 ଚାଲେ ନାହିଁ ଏବଂ top-level `system` field କୁ ଦେଖାଯାଏ ନାହିଁ। block କୁ ଏକ string
 `instructions` field ର text ପରେ ଯୋଡ଼ାଯାଏ, ଯଦି ସେହି field ରେ ପୂର୍ବରୁ
-`[67router Output Styles]` marker ନଥାଏ; marker ଥିଲେ body କୁ
+`[OmniRoute Output Styles]` marker ନଥାଏ; marker ଥିଲେ body କୁ
 `already_applied` ଭାବେ ଅପରିବର୍ତ୍ତିତ ରଖାଯାଏ। body ରେ string `instructions`
 field ନଥିଲେ କିନ୍ତୁ `input` (ଏକ string କିମ୍ବା array) ଥିଲେ, block ଟି
 `instructions` ହୋଇଯାଏ ଏବଂ ସେହି field ରେ ଥିବା ଯେକୌଣସି non-string value କୁ
@@ -591,9 +591,9 @@ toggle ଟି **Caveman** page (`/dashboard/context/caveman`) ର **Output Mode*
 
 Back-compat: `outputStyles` ଖାଲି ଥିବା ପର୍ଯ୍ୟନ୍ତ, legacy
 `cavemanOutputMode.enabled` setting `cavemanOutputMode.intensity` ରେ `terse-prose`
-ସହିତ map ହୁଏ। ତା’ପରେ block ଟି `[67router Output Styles]` marker ସହିତ ଆରମ୍ଭ
+ସହିତ map ହୁଏ। ତା’ପରେ block ଟି `[OmniRoute Output Styles]` marker ସହିତ ଆରମ୍ଭ
 ହୁଏ, ଯେଉଁଠାରେ legacy `applyCavemanOutputMode()` injector
-`[67router Caveman Output Mode]` ଲେଖୁଥିଲା। marker ତଳେ, text ଟି en, pt-BR, es,
+`[OmniRoute Caveman Output Mode]` ଲେଖୁଥିଲା। marker ତଳେ, text ଟି en, pt-BR, es,
 de, fr, it, ru, id ଏବଂ vi ରେ legacy injection ସହିତ ମେଳ ଖାଏ; ja ଏବଂ zh ରେ
 boundaries clause ପୂର୍ବରୁ ଏହା ଗୋଟିଏ ଅତିରିକ୍ତ space ଧାରଣ କରେ। `terse-prose`
 pt-BR, es, de, fr, it, ru, zh, ja, id ଏବଂ vi କୁ ଅନୁବାଦ ହୁଏ, ତେଣୁ ସମାଧାନ

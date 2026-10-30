@@ -229,7 +229,7 @@ Abgefangener Zielhost: **`daily-cloudcode-pa.googleapis.com`** (Antigravity-Upst
 
 Zertifikatsdateiname: `omniroute-mitm.crt`. Fingerprint-Abgleich über `getCertFingerprint()` (SHA-1 des DER-Formats).
 
-Zusätzlich installiert `updateNssDatabases()` das Zertifikat in benutzerspezifischen NSS-Datenbanken, wenn `certutil` verfügbar ist: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-Profile (einschließlich snap), unter dem Anzeigenamen **`67router MITM Root CA`**.
+Zusätzlich installiert `updateNssDatabases()` das Zertifikat in benutzerspezifischen NSS-Datenbanken, wenn `certutil` verfügbar ist: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, alle Firefox-Profile (einschließlich snap), unter dem Anzeigenamen **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

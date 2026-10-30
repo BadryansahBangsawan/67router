@@ -47,7 +47,7 @@
 | `better-sqlite3`        | ριζικό `^13.0.2` (προκατασκευασμένα Node-API — χωρίς αναδόμηση Electron) |
 | Έκδοση εφαρμογής        | `3.8.0`                                                                  |
 | Αναγνωριστικό εφαρμογής | `online.omniroute.desktop`                                               |
-| Όνομα προϊόντος         | `67router`                                                               |
+| Όνομα προϊόντος         | `OmniRoute`                                                              |
 
 ## Scripts (ριζικό `package.json`)
 

@@ -226,7 +226,7 @@ Siepattava kohdeisäntä: **`daily-cloudcode-pa.googleapis.com`** (Antigravityn 
 
 Varmenteen tiedostonimi: `omniroute-mitm.crt`. Sormenjäljen täsmäytys funktiolla `getCertFingerprint()` (DER-muodon SHA-1).
 
-Lisäksi `updateNssDatabases()` asentaa varmenteen käyttäjäkohtaisiin NSS-tietokantoihin, kun `certutil` on käytettävissä: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ja kaikki Firefox-profiilit (mukaan lukien snap) lempinimellä **`67router MITM Root CA`**.
+Lisäksi `updateNssDatabases()` asentaa varmenteen käyttäjäkohtaisiin NSS-tietokantoihin, kun `certutil` on käytettävissä: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb` ja kaikki Firefox-profiilit (mukaan lukien snap) lempinimellä **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

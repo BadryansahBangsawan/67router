@@ -228,7 +228,7 @@ Host ɗin da ake kutsewa: **`daily-cloudcode-pa.googleapis.com`** (upstream na A
 
 Sunan fayil ɗin cert: `omniroute-mitm.crt`. Daidaita fingerprint ta `getCertFingerprint()` (SHA-1 na DER).
 
-Bugu da ƙari, `updateNssDatabases()` yana shigarwa cikin NSS DBs na kowane mai amfani idan `certutil` yana akwai: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, duk Firefox profiles (har da snap), ƙarƙashin laƙabin **`67router MITM Root CA`**.
+Bugu da ƙari, `updateNssDatabases()` yana shigarwa cikin NSS DBs na kowane mai amfani idan `certutil` yana akwai: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, duk Firefox profiles (har da snap), ƙarƙashin laƙabin **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

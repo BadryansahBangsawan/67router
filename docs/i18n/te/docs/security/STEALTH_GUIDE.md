@@ -205,7 +205,7 @@ env ద్వారా ప్రతి ప్రొవైడర్కు టా�
 
 సర్టిఫికేట్ ఫైల్ పేరు: `omniroute-mitm.crt`. `getCertFingerprint()` ద్వారా ఫింగర్ప్రింట్ సరిపోలిక (DER యొక్క SHA-1).
 
-అదనంగా, `certutil` అందుబాటులో ఉన్నప్పుడు `updateNssDatabases()` ప్రతి-వినియోగదారు NSS DBలలో ఇన్స్టాల్ చేస్తుంది: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, అన్ని Firefox ప్రొఫైల్లు (snapతో సహా), **`67router MITM Root CA`** అనే ముద్దుపేరు కింద.
+అదనంగా, `certutil` అందుబాటులో ఉన్నప్పుడు `updateNssDatabases()` ప్రతి-వినియోగదారు NSS DBలలో ఇన్స్టాల్ చేస్తుంది: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, అన్ని Firefox ప్రొఫైల్లు (snapతో సహా), **`OmniRoute MITM Root CA`** అనే ముద్దుపేరు కింద.
 
 ### macOS / Windows
 

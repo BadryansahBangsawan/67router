@@ -511,13 +511,13 @@ const { messages: aged, saved } = applyAging(messages, {
 క్రమంలో కలుపుతుంది,
 boundaries clauseను **ఒక్కసారి** జోడిస్తుంది (అదనంగా, `less-code` లేదా `ponytail`
 ఎంచుకున్నప్పుడు safety clause, `SAFETY_BOUNDARIES` లేదా దాని అనువాదాన్ని జోడిస్తుంది),
-మరియు blockను ఒకే idempotency marker (`[67router Output Styles]`)తో ప్రారంభిస్తుంది,
+మరియు blockను ఒకే idempotency marker (`[OmniRoute Output Styles]`)తో ప్రారంభిస్తుంది,
 కాబట్టి మళ్లీ వర్తింపజేయడం no-op అవుతుంది. పరిష్కరించిన languageకు (క్రింద Language
 selection చూడండి) అనువాదం ఉన్నప్పుడు, Englishకు బదులుగా localized instruction
 చొప్పించబడుతుంది.
 
 ఖాళీ కాని `messages` array ఉన్న bodyలో, idempotency check content bypassకు ముందు
-నడుస్తుంది: `[67router Output Styles]` marker ఇప్పటికే top-level `system` fieldలో
+నడుస్తుంది: `[OmniRoute Output Styles]` marker ఇప్పటికే top-level `system` fieldలో
 (string లేదా content-block arrayలో) లేదా string content ఉన్న system messageలో ఉంటే,
 body `already_applied`గా మార్పు లేకుండా ఉంచబడుతుంది మరియు keyword check నడవదు.
 లేకపోతే, content bypass (`open-sse/services/compression/outputMode.ts`లోని
@@ -543,7 +543,7 @@ Bypass turnను అనుమతించినప్పుడు, ఎప్ప
 
 `messages` array లేని (లేదా ఖాళీగా ఉన్న) bodyలో content bypass నడవదు మరియు top-level
 `system` fieldను పరిగణనలోకి తీసుకోరు. String `instructions` field యొక్క text తర్వాత
-block జోడించబడుతుంది; అయితే ఆ fieldలో ఇప్పటికే `[67router Output Styles]` marker
+block జోడించబడుతుంది; అయితే ఆ fieldలో ఇప్పటికే `[OmniRoute Output Styles]` marker
 ఉంటే, body `already_applied`గా మార్పు లేకుండా ఉంచబడుతుంది. Bodyలో string
 `instructions` field లేకపోయినా `input` (string లేదా array) ఉంటే, ఆ fieldలో ఉన్న
 string కాని valueను భర్తీ చేస్తూ block `instructions` అవుతుంది. String
@@ -570,9 +570,9 @@ Programmatically, compression config ఎంపికను ఇలా నిల�
 
 Back-compat: `outputStyles` ఖాళీగా ఉన్నంతవరకు, legacy
 `cavemanOutputMode.enabled` setting `cavemanOutputMode.intensity` వద్ద
-`terse-prose`కు map అవుతుంది. అప్పుడు block `[67router Output Styles]` markerతో
+`terse-prose`కు map అవుతుంది. అప్పుడు block `[OmniRoute Output Styles]` markerతో
 ప్రారంభమవుతుంది; legacy `applyCavemanOutputMode()` injector
-`[67router Caveman Output Mode]`ను చొప్పించేది. Marker క్రింద, text en, pt-BR, es,
+`[OmniRoute Caveman Output Mode]`ను చొప్పించేది. Marker క్రింద, text en, pt-BR, es,
 de, fr, it, ru, id మరియు viలో legacy injectionతో సరిపోలుతుంది; ja మరియు zhలో
 boundaries clauseకు ముందు ఒక అదనపు space ఉంటుంది. `terse-prose` pt-BR, es, de, fr,
 it, ru, zh, ja, id మరియు viలోకి అనువదించబడుతుంది, కాబట్టి resolved language `hu`

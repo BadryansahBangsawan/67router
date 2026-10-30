@@ -533,12 +533,12 @@ apstrāde tiek izlaista ar statusu `no_styles`), apvieno atlasītās instrukcija
 secībā,
 **vienreiz** pievieno robežu klauzulu (kā arī drošības klauzulu, `SAFETY_BOUNDARIES` vai tās
 tulkojumu, ja ir atlasīts `less-code` vai `ponytail`) un sāk bloku ar vienu
-idempotences marķieri (`[67router Output Styles]`), tādēļ atkārtota lietošana neko
+idempotences marķieri (`[OmniRoute Output Styles]`), tādēļ atkārtota lietošana neko
 nemaina. Ja noteiktajai valodai (skatiet tālāk sadaļu par valodas atlasi) ir pieejams
 tulkojums, angļu valodas instrukcijas vietā tiek ievietota lokalizētā instrukcija.
 
 Pamattekstā ar netukšu `messages` masīvu idempotences pārbaude tiek veikta pirms
-satura apiešanas: ja marķieris `[67router Output Styles]` jau atrodas augšējā līmeņa
+satura apiešanas: ja marķieris `[OmniRoute Output Styles]` jau atrodas augšējā līmeņa
 laukā `system` (virknē vai satura bloku masīvā) vai sistēmas ziņojumā ar virknes
 saturu, pamatteksts paliek nemainīts ar statusu `already_applied`, un atslēgvārdu pārbaude
 netiek veikta. Pretējā gadījumā satura apiešana (`shouldBypassCavemanOutputMode()` failā
@@ -566,7 +566,7 @@ failā), kas nekad neizveido jaunu `messages[0]`, ievieto bloku pirmajā atrasta
 Pamattekstam bez `messages` masīva (vai ar tukšu masīvu) satura apiešana netiek veikta,
 un augšējā līmeņa lauks `system` netiek pārbaudīts. Bloks tiek pievienots aiz virknes
 lauka `instructions` teksta, ja vien šajā laukā jau nav marķiera
-`[67router Output Styles]`; tādā gadījumā pamatteksts paliek nemainīts ar statusu
+`[OmniRoute Output Styles]`; tādā gadījumā pamatteksts paliek nemainīts ar statusu
 `already_applied`. Ja pamattekstā nav virknes lauka `instructions`, bet ir `input`
 (virkne vai masīvs), bloks kļūst par `instructions`, aizstājot jebkuru iepriekš tajā
 laukā esošu vērtību, kas nav virkne. Pamatteksts, kurā nav ne virknes lauka
@@ -595,8 +595,8 @@ konfigurācijā atlase tiek saglabāta šādi:
 Atpakaļsaderība: kamēr `outputStyles` ir tukšs, mantotais
 `cavemanOutputMode.enabled` iestatījums tiek kartēts uz `terse-prose` ar
 `cavemanOutputMode.intensity`. Tad bloks sākas ar marķieri
-`[67router Output Styles]`, kur mantotais `applyCavemanOutputMode()` ievietotājs
-rakstīja `[67router Caveman Output Mode]`. Zem marķiera teksts atbilst mantotajam
+`[OmniRoute Output Styles]`, kur mantotais `applyCavemanOutputMode()` ievietotājs
+rakstīja `[OmniRoute Caveman Output Mode]`. Zem marķiera teksts atbilst mantotajam
 ievietojumam valodās en, pt-BR, es, de, fr, it, ru, id un vi; valodās ja un zh pirms
 robežu klauzulas ir viena papildu atstarpe. `terse-prose` ir tulkots valodās pt-BR, es,
 de, fr, it, ru, zh, ja, id un vi, tādēļ pieprasījums, kura noteiktā valoda ir `hu`,

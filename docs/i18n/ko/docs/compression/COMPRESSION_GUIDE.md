@@ -502,12 +502,12 @@ Styles 참조).
 변경하지 않고 `no_styles`로 건너뜁니다). 선택된 지침을 카탈로그 순서대로
 연결하고, 경계 조항을 **한 번만** 추가하며(`less-code` 또는 `ponytail`이 선택된
 경우 안전 조항인 `SAFETY_BOUNDARIES` 또는 해당 번역도 추가), 단일 멱등성 마커
-(`[67router Output Styles]`)로 블록을 시작하므로 다시 적용해도 아무 작업도 하지
+(`[OmniRoute Output Styles]`)로 블록을 시작하므로 다시 적용해도 아무 작업도 하지
 않습니다. 해석된 언어(아래의 언어 선택 참조)에 번역이 있으면 영어 대신 현지화된
 지침이 삽입됩니다.
 
 비어 있지 않은 `messages` 배열이 있는 본문에서는 콘텐츠 우회 검사보다 멱등성
-검사가 먼저 실행됩니다. `[67router Output Styles]` 마커가 이미 최상위 `system`
+검사가 먼저 실행됩니다. `[OmniRoute Output Styles]` 마커가 이미 최상위 `system`
 필드(문자열 또는 콘텐츠 블록 배열)에 있거나 문자열 콘텐츠가 있는 시스템 메시지에
 있으면 본문을 `already_applied` 상태로 변경하지 않고 키워드 검사도 실행하지
 않습니다. 그렇지 않으면 콘텐츠 우회(`open-sse/services/compression/outputMode.ts`의
@@ -533,7 +533,7 @@ Styles 참조).
 
 `messages` 배열이 없거나 빈 본문에서는 콘텐츠 우회가 실행되지 않으며 최상위
 `system` 필드도 참조하지 않습니다. 문자열 `instructions` 필드의 텍스트 뒤에
-블록을 추가합니다. 단, 해당 필드에 이미 `[67router Output Styles]` 마커가
+블록을 추가합니다. 단, 해당 필드에 이미 `[OmniRoute Output Styles]` 마커가
 있으면 본문을 `already_applied` 상태로 변경하지 않습니다. 본문에 문자열
 `instructions` 필드는 없지만 `input`(문자열 또는 배열)이 있으면 블록이
 `instructions`가 되며, 해당 필드에 있던 문자열이 아닌 값을 대체합니다. 문자열
@@ -560,9 +560,9 @@ Styles 참조).
 
 하위 호환성: `outputStyles`가 비어 있는 동안 기존
 `cavemanOutputMode.enabled` 설정은 `cavemanOutputMode.intensity` 수준의
-`terse-prose`에 매핑됩니다. 그러면 블록은 `[67router Output Styles]` 마커로
+`terse-prose`에 매핑됩니다. 그러면 블록은 `[OmniRoute Output Styles]` 마커로
 시작합니다. 기존 `applyCavemanOutputMode()` 삽입기는
-`[67router Caveman Output Mode]`를 사용했습니다. 마커 아래 텍스트는 en, pt-BR,
+`[OmniRoute Caveman Output Mode]`를 사용했습니다. 마커 아래 텍스트는 en, pt-BR,
 es, de, fr, it, ru, id 및 vi에서 기존 삽입 내용과 일치하며, ja와 zh에서는 경계
 조항 앞에 공백이 하나 더 들어갑니다. `terse-prose`는 pt-BR, es, de, fr, it, ru,
 zh, ja, id 및 vi로 번역되므로 해석된 언어가 `hu`인 요청에는 기존 삽입기가

@@ -22,10 +22,10 @@
 ## Postavljanje
 
 1. **Pokrenite 67router** — `npm install -g omniroute && omniroute` (kontrolna ploča na `http://localhost:20128`).
-2. **Instalirajte ekstenziju** — pretražite "67router" u prikazu ekstenzija.
-3. **Odaberite model** — Copilot Chat → birač modela → **Manage Models…** → **67router**, zatim označite ono što želite.
+2. **Instalirajte ekstenziju** — pretražite "OmniRoute" u prikazu ekstenzija.
+3. **Odaberite model** — Copilot Chat → birač modela → **Manage Models…** → **OmniRoute**, zatim označite ono što želite.
 
-Nema ništa za konfigurisanje kada 67router radi na zadanom portu. Za udaljenu instancu, otvorite **67router ikonu u Activity Bar-u** (ili pokrenite `67router: Manage Connection`) i postavite:
+Nema ništa za konfigurisanje kada 67router radi na zadanom portu. Za udaljenu instancu, otvorite **OmniRoute ikonu u Activity Bar-u** (ili pokrenite `OmniRoute: Manage Connection`) i postavite:
 
 - **Server URL** — korijen servera, npr. `http://192.168.0.15:20128`. Sufiks `/v1` dodaje ekstenzija; nemojte ga uključivati.
 - **API ključ** — samo kada server postavi `REQUIRE_API_KEY`. Pohranjeno u OS keychain putem VS Code SecretStorage, nikada u `settings.json`.
@@ -90,20 +90,20 @@ Bez build-a sa omogućenim ugrađivanjem, stranica odbija da se prikaže u okvir
 
 ## Konfigurisanje vaših drugih alata iz VS Code-a
 
-**`67router: Configure Coding CLI`** pokreće `omniroute` CLI da zapiše profile spremne za upotrebu za Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo i Roo — iste konfiguracije opisane u [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API ključ se prosljeđuje CLI-u putem `OMNIROUTE_API_KEY` varijable okruženja, nikada putem komandne linije.
+**`OmniRoute: Configure Coding CLI`** pokreće `omniroute` CLI da zapiše profile spremne za upotrebu za Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code, Kilo i Roo — iste konfiguracije opisane u [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). API ključ se prosljeđuje CLI-u putem `OMNIROUTE_API_KEY` varijable okruženja, nikada putem komandne linije.
 
 ---
 
 ## Rješavanje problema
 
-| Simptom                                                         | Uzrok / rješenje                                                                                                                                                                                                                                                             |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nema 67router modela u biraču                                   | Server nije dostupan. Tačka na statusnoj traci postaje siva; pokrenite `67router: Check Connection`. Otkrivanje je tiho po dizajnu i ne dodaje modele umjesto da vas upozori.                                                                                                |
-| Svaki model se pojavljuje dvaput                                | Koristite OmniCopilot stariji od 1.0.1 — ažurirajte. Ekstenzija sada zahtijeva `?prefix=alias`.                                                                                                                                                                              |
-| Model za sliku/audio je bio naveden, a sada ga nema             | Namjerno od 1.0.1 — nikada nije mogao odgovoriti na zahtjev za chat.                                                                                                                                                                                                         |
-| Panel nedostaje na traci aktivnosti (Activity Bar)              | VS Code pomjera dodatne kontejnere prikaza u "…" preliv (overflow) na dnu trake aktivnosti, a kontejner sakriven desnim klikom ostaje sakriven. Kliknite desnim tasterom miša na traku aktivnosti → označite **67router**, ili ga otvorite sa `67router: Manage Connection`. |
-| Kontrolna tabla se otvara u pretraživaču uprkos `editor` režimu | Server nije **izgrađen** sa `DASHBOARD_ALLOW_EMBED=vscode` (pogledajte iznad) — postavljanje pri pokretanju na već izgrađenoj instalaciji ne radi ništa. Rezervna opcija (fallback) je namjerna.                                                                             |
-| Lista modela je zastarjela nakon promjene provajdera            | `67router: Refresh Models`, ili ↻ link u panelu.                                                                                                                                                                                                                             |
+| Simptom                                                         | Uzrok / rješenje                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Nema 67router modela u biraču                                   | Server nije dostupan. Tačka na statusnoj traci postaje siva; pokrenite `OmniRoute: Check Connection`. Otkrivanje je tiho po dizajnu i ne dodaje modele umjesto da vas upozori.                                                                                                 |
+| Svaki model se pojavljuje dvaput                                | Koristite OmniCopilot stariji od 1.0.1 — ažurirajte. Ekstenzija sada zahtijeva `?prefix=alias`.                                                                                                                                                                                |
+| Model za sliku/audio je bio naveden, a sada ga nema             | Namjerno od 1.0.1 — nikada nije mogao odgovoriti na zahtjev za chat.                                                                                                                                                                                                           |
+| Panel nedostaje na traci aktivnosti (Activity Bar)              | VS Code pomjera dodatne kontejnere prikaza u "…" preliv (overflow) na dnu trake aktivnosti, a kontejner sakriven desnim klikom ostaje sakriven. Kliknite desnim tasterom miša na traku aktivnosti → označite **OmniRoute**, ili ga otvorite sa `OmniRoute: Manage Connection`. |
+| Kontrolna tabla se otvara u pretraživaču uprkos `editor` režimu | Server nije **izgrađen** sa `DASHBOARD_ALLOW_EMBED=vscode` (pogledajte iznad) — postavljanje pri pokretanju na već izgrađenoj instalaciji ne radi ništa. Rezervna opcija (fallback) je namjerna.                                                                               |
+| Lista modela je zastarjela nakon promjene provajdera            | `OmniRoute: Refresh Models`, ili ↻ link u panelu.                                                                                                                                                                                                                              |
 
 ---
 

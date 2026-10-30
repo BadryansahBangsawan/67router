@@ -205,7 +205,7 @@ O certificado da CA do AgentBridge deve ser considerado confiável pelo SO antes
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Chaves):**
@@ -448,7 +448,7 @@ Como alternativa, configure uma porta não privilegiada nas configurações do A
 
 Se a IDE exibir erros de TLS após iniciar o AgentBridge:
 
-1. Verifique se o certificado foi instalado: `security find-certificate -c "67router AgentBridge"` (macOS) ou `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Verifique se o certificado foi instalado: `security find-certificate -c "OmniRoute MITM CA"` (macOS) ou `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Alguns aplicativos mantêm seu próprio repositório de confiança (Firefox, Chrome no Linux). Execute "Confiar no certificado" novamente e verifique o repositório de certificados específico do NSS/Firefox.
 3. Reinicie a IDE após confiar no certificado — sessões TLS em andamento usam o estado de confiança anterior.
 

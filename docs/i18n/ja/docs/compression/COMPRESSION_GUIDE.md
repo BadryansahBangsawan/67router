@@ -529,9 +529,9 @@ Stylesを参照）。
 
 #### 注入の仕組み
 
-`applyOutputStyles()`（`open-sse/services/compression/outputStyles/apply.ts`）は、選択内容をカタログと照合して解決します（不明な ID やロケールが一致しないスタイルは除外され、エラーにはなりません。解決後にスタイルが 1 つも残らない選択では本文は変更されず、`no_styles` としてスキップされます）。選択された指示をカタログ順に連結し、境界条項を **1 回だけ** 追加します（`less-code` または `ponytail` が選択されている場合は、安全条項である `SAFETY_BOUNDARIES` またはその翻訳も追加されます）。また、ブロックの先頭には単一の冪等性マーカー（`[67router Output Styles]`）が付くため、再適用しても何も起こりません。解決された言語（下記の「言語選択」を参照）に翻訳がある場合は、英語ではなくローカライズされた指示が挿入されます。
+`applyOutputStyles()`（`open-sse/services/compression/outputStyles/apply.ts`）は、選択内容をカタログと照合して解決します（不明な ID やロケールが一致しないスタイルは除外され、エラーにはなりません。解決後にスタイルが 1 つも残らない選択では本文は変更されず、`no_styles` としてスキップされます）。選択された指示をカタログ順に連結し、境界条項を **1 回だけ** 追加します（`less-code` または `ponytail` が選択されている場合は、安全条項である `SAFETY_BOUNDARIES` またはその翻訳も追加されます）。また、ブロックの先頭には単一の冪等性マーカー（`[OmniRoute Output Styles]`）が付くため、再適用しても何も起こりません。解決された言語（下記の「言語選択」を参照）に翻訳がある場合は、英語ではなくローカライズされた指示が挿入されます。
 
-空でない `messages` 配列を持つ本文では、冪等性チェックがコンテンツバイパスより先に実行されます。`[67router Output Styles]` マーカーが、トップレベルの `system` フィールド（文字列またはコンテンツブロック配列）、あるいは文字列コンテンツを持つ system メッセージにすでに含まれている場合、本文は `already_applied` として変更されず、キーワードチェックも実行されません。それ以外の場合、コンテンツバイパス（`open-sse/services/compression/outputMode.ts` の `shouldBypassCavemanOutputMode()`）が、ロールを問わず直近 3 件のメッセージのテキストを確認し、そのテキストがセキュリティ、不可逆操作、明確化に関するキーワード、または順序依存のシーケンスに一致すると、ターン全体でスタイルをスキップします。順序依存のシーケンスとは、`first`、`then`、`after that`、`before`、`rollback`、`backup` のいずれかに続き、240 文字以内に `delete`、`drop`、`migrate`、`deploy`、`release` のいずれかが現れるものです。バイパスは **Auto-Clarity Bypass** トグル（`cavemanOutputMode.autoClarity`、デフォルトでオン）がオンの間に実行されます。このトグルをオフにすると、キーワードチェックはスキップされます。
+空でない `messages` 配列を持つ本文では、冪等性チェックがコンテンツバイパスより先に実行されます。`[OmniRoute Output Styles]` マーカーが、トップレベルの `system` フィールド（文字列またはコンテンツブロック配列）、あるいは文字列コンテンツを持つ system メッセージにすでに含まれている場合、本文は `already_applied` として変更されず、キーワードチェックも実行されません。それ以外の場合、コンテンツバイパス（`open-sse/services/compression/outputMode.ts` の `shouldBypassCavemanOutputMode()`）が、ロールを問わず直近 3 件のメッセージのテキストを確認し、そのテキストがセキュリティ、不可逆操作、明確化に関するキーワード、または順序依存のシーケンスに一致すると、ターン全体でスタイルをスキップします。順序依存のシーケンスとは、`first`、`then`、`after that`、`before`、`rollback`、`backup` のいずれかに続き、240 文字以内に `delete`、`drop`、`migrate`、`deploy`、`release` のいずれかが現れるものです。バイパスは **Auto-Clarity Bypass** トグル（`cavemanOutputMode.autoClarity`、デフォルトでオン）がオンの間に実行されます。このトグルをオフにすると、キーワードチェックはスキップされます。
 
 バイパスによってターンの処理が許可されると、`placeSystemInstruction()`（同じファイル）が、以下のうち最初に見つかった場所へブロックを配置します。この関数が新しい `messages[0]` を作成することはありません。
 
@@ -540,7 +540,7 @@ Stylesを参照）。
 3. それより後ろで最初に見つかった、文字列コンテンツを持つ system メッセージ：そのテキストの後ろにブロックを追加します。
 4. 上記のいずれにも該当しない場合：`messages` の末尾に新しい system メッセージとしてブロックを追加します。
 
-`messages` 配列がない（または空の）本文では、コンテンツバイパスは実行されず、トップレベルの `system` フィールドも参照されません。文字列の `instructions` フィールドがある場合、そのテキストの後ろにブロックが追加されます。ただし、そのフィールドに `[67router Output Styles]` マーカーがすでに含まれている場合、本文は `already_applied` として変更されません。文字列の `instructions` フィールドがなく、`input`（文字列または配列）がある場合、ブロックが `instructions` となり、そのフィールドに保持されていた文字列以外の値を置き換えます。文字列の `instructions` フィールドも、文字列または配列の `input` もない本文は変更されず、`no_messages` としてスキップされます。
+`messages` 配列がない（または空の）本文では、コンテンツバイパスは実行されず、トップレベルの `system` フィールドも参照されません。文字列の `instructions` フィールドがある場合、そのテキストの後ろにブロックが追加されます。ただし、そのフィールドに `[OmniRoute Output Styles]` マーカーがすでに含まれている場合、本文は `already_applied` として変更されません。文字列の `instructions` フィールドがなく、`input`（文字列または配列）がある場合、ブロックが `instructions` となり、そのフィールドに保持されていた文字列以外の値を置き換えます。文字列の `instructions` フィールドも、文字列または配列の `input` もない本文は変更されず、`no_messages` としてスキップされます。
 
 #### 有効化方法
 
@@ -555,7 +555,7 @@ Stylesを参照）。
 }
 ```
 
-後方互換性：`outputStyles` が空の間は、従来の `cavemanOutputMode.enabled` 設定が、`cavemanOutputMode.intensity` の強度で `terse-prose` にマッピングされます。この場合、従来の `applyCavemanOutputMode()` インジェクターが `[67router Caveman Output Mode]` を挿入していた箇所で、ブロックは `[67router Output Styles]` マーカーから始まります。マーカーより下のテキストは、en、pt-BR、es、de、fr、it、ru、id、vi では従来の挿入内容と一致します。ja と zh では、境界条項の前にスペースが 1 つ余分に入ります。`terse-prose` には pt-BR、es、de、fr、it、ru、zh、ja、id、vi の翻訳があるため、解決された言語が `hu` のリクエストでは、従来のインジェクターがハンガリー語のテキストを使用していたのに対し、英語のテキストが使用されます。
+後方互換性：`outputStyles` が空の間は、従来の `cavemanOutputMode.enabled` 設定が、`cavemanOutputMode.intensity` の強度で `terse-prose` にマッピングされます。この場合、従来の `applyCavemanOutputMode()` インジェクターが `[OmniRoute Caveman Output Mode]` を挿入していた箇所で、ブロックは `[OmniRoute Output Styles]` マーカーから始まります。マーカーより下のテキストは、en、pt-BR、es、de、fr、it、ru、id、vi では従来の挿入内容と一致します。ja と zh では、境界条項の前にスペースが 1 つ余分に入ります。`terse-prose` には pt-BR、es、de、fr、it、ru、zh、ja、id、vi の翻訳があるため、解決された言語が `hu` のリクエストでは、従来のインジェクターがハンガリー語のテキストを使用していたのに対し、英語のテキストが使用されます。
 
 出力スタイルの言語選択（`outputStyles/apply.ts` の `resolveOutputStyleLanguage()`）：`languageConfig.enabled` がオンの場合、`autoDetect` はリクエストの `messages` 配列から、テキストを持つ最新の user メッセージ（文字列コンテンツ、またはコンテンツパーツの `text`）をサンプリングし、Caveman エンジンの検出器（`detectCompressionLanguage()`）をそのテキストに対して実行します。検出器は、漢字を含み、かなを含まないテキストに対して `zh` を返します。それ以外の場合は、`it`、`pt-BR`、`es`、`de`、`fr`、`ru`、`ja`、`hu`、`id` のうちヒントの一致数が最も多いものを返し、一致がない場合は `en` を返します。分類できないテキストには `defaultLanguage` ではなく常に英語が使用されます。また、スタイルに `vi` のテキストが含まれていても、`vi` が検出されることはありません。Responses API の本文ではターンが `input` に保持されますが、これはサンプリングされないため、`defaultLanguage`、次いで英語が使用されます。`messages` 内にテキストを持つ user メッセージがない場合、または `autoDetect` がオフの場合は、`defaultLanguage`、次いで英語が適用されます。`languageConfig.enabled` がオフの場合、言語は英語になります。ただし、圧縮コンボがリクエストに適用される場合（リクエストのルーティングコンボに割り当てられたコンボ、または組み込みのスタックパイプラインで chatCore がフォールバックするデフォルトの圧縮コンボ）は例外です。コンボを適用すると、そのリクエストでは `languageConfig.enabled` がオンになり、コンボの言語パックから `defaultLanguage` が設定されます（保存済みの値がコンボのパックのいずれかであればその値、それ以外の場合はコンボの最初のパック。デフォルトは `en`）。一方、保存済みの `autoDetect`（デフォルトでオン）は引き続き適用されます。Caveman 入力エンジンは、これとは異なる方法でルールパックの言語を選択します。選択はテキストパーツごとに行われ、自動検出がオフの場合は `enabledPacks` によって制限されます。
 

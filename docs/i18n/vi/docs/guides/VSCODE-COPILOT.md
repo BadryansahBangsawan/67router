@@ -24,12 +24,12 @@ máy chủ MCP và hướng dẫn tùy chỉnh đều tiếp tục hoạt độn
 ## Thiết lập
 
 1. **Chạy 67router** — `npm install -g omniroute && omniroute` (bảng điều khiển tại `http://localhost:20128`).
-2. **Cài đặt tiện ích mở rộng** — tìm kiếm "67router" trong chế độ xem Extensions.
-3. **Chọn mô hình** — Copilot Chat → trình chọn mô hình → **Manage Models…** → **67router**, sau đó đánh dấu
+2. **Cài đặt tiện ích mở rộng** — tìm kiếm "OmniRoute" trong chế độ xem Extensions.
+3. **Chọn mô hình** — Copilot Chat → trình chọn mô hình → **Manage Models…** → **OmniRoute**, sau đó đánh dấu
    những mô hình bạn muốn.
 
 Không cần cấu hình gì khi 67router chạy trên cổng mặc định. Với một phiên bản từ xa, hãy mở
-**biểu tượng 67router trên Activity Bar** (hoặc chạy `67router: Manage Connection`) và thiết lập:
+**biểu tượng 67router trên Activity Bar** (hoặc chạy `OmniRoute: Manage Connection`) và thiết lập:
 
 - **URL máy chủ** — URL gốc của máy chủ, ví dụ: `http://192.168.0.15:20128`. Hậu tố `/v1` được
   tiện ích mở rộng tự động thêm vào; đừng đưa nó vào.
@@ -121,7 +121,7 @@ Xem [`ENVIRONMENT.md`](../reference/ENVIRONMENT.md) và issue
 
 ## Cấu hình các công cụ khác của bạn từ bên trong VS Code
 
-**`67router: Configure Coding CLI`** điều khiển CLI `omniroute` để ghi các profile sẵn sàng sử dụng
+**`OmniRoute: Configure Coding CLI`** điều khiển CLI `omniroute` để ghi các profile sẵn sàng sử dụng
 cho Codex CLI, Claude Code, Cline, Continue, Cursor, Aider, OpenCode, Goose, Crush, Qwen Code,
 Kilo và Roo — các cấu hình tương tự được mô tả trong
 [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md). Khóa API được chuyển cho CLI thông qua biến môi trường
@@ -131,14 +131,14 @@ Kilo và Roo — các cấu hình tương tự được mô tả trong
 
 ## Khắc phục sự cố
 
-| Triệu chứng                                                         | Nguyên nhân / cách khắc phục                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Không có model 67router trong trình chọn                            | Không thể kết nối đến máy chủ. Dấu chấm trên thanh trạng thái chuyển sang màu xám; chạy `67router: Check Connection`. Theo thiết kế, quá trình khám phá diễn ra âm thầm và không cung cấp model nào thay vì hiển thị lời nhắc.                                  |
-| Mỗi model xuất hiện hai lần                                         | Bạn đang dùng phiên bản OmniCopilot cũ hơn 1.0.1 — hãy cập nhật. Extension hiện yêu cầu `?prefix=alias`.                                                                                                                                                        |
-| Một model hình ảnh/âm thanh từng được liệt kê nhưng nay đã biến mất | Đây là thay đổi có chủ đích kể từ 1.0.1 — model đó vốn không thể phản hồi yêu cầu trò chuyện.                                                                                                                                                                   |
-| Bảng điều khiển bị thiếu trên Activity Bar                          | VS Code chuyển các container khung nhìn bổ sung vào mục tràn **"…"** ở cuối Activity Bar, và container bị ẩn bằng thao tác nhấp chuột phải sẽ tiếp tục bị ẩn. Nhấp chuột phải vào Activity Bar → chọn **67router**, hoặc mở bằng `67router: Manage Connection`. |
-| Bảng điều khiển mở trong trình duyệt dù đang ở chế độ `editor`      | Máy chủ chưa được **build** với `DASHBOARD_ALLOW_EMBED=vscode` (xem ở trên) — việc đặt biến này khi khởi động một bản cài đặt được build sẵn không có tác dụng. Việc chuyển sang phương án dự phòng là có chủ đích.                                             |
-| Danh sách model đã lỗi thời sau khi thay đổi provider               | Chạy `67router: Refresh Models` hoặc nhấp vào liên kết ↻ trong bảng điều khiển.                                                                                                                                                                                 |
+| Triệu chứng                                                         | Nguyên nhân / cách khắc phục                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Không có model 67router trong trình chọn                            | Không thể kết nối đến máy chủ. Dấu chấm trên thanh trạng thái chuyển sang màu xám; chạy `OmniRoute: Check Connection`. Theo thiết kế, quá trình khám phá diễn ra âm thầm và không cung cấp model nào thay vì hiển thị lời nhắc.                                   |
+| Mỗi model xuất hiện hai lần                                         | Bạn đang dùng phiên bản OmniCopilot cũ hơn 1.0.1 — hãy cập nhật. Extension hiện yêu cầu `?prefix=alias`.                                                                                                                                                          |
+| Một model hình ảnh/âm thanh từng được liệt kê nhưng nay đã biến mất | Đây là thay đổi có chủ đích kể từ 1.0.1 — model đó vốn không thể phản hồi yêu cầu trò chuyện.                                                                                                                                                                     |
+| Bảng điều khiển bị thiếu trên Activity Bar                          | VS Code chuyển các container khung nhìn bổ sung vào mục tràn **"…"** ở cuối Activity Bar, và container bị ẩn bằng thao tác nhấp chuột phải sẽ tiếp tục bị ẩn. Nhấp chuột phải vào Activity Bar → chọn **OmniRoute**, hoặc mở bằng `OmniRoute: Manage Connection`. |
+| Bảng điều khiển mở trong trình duyệt dù đang ở chế độ `editor`      | Máy chủ chưa được **build** với `DASHBOARD_ALLOW_EMBED=vscode` (xem ở trên) — việc đặt biến này khi khởi động một bản cài đặt được build sẵn không có tác dụng. Việc chuyển sang phương án dự phòng là có chủ đích.                                               |
+| Danh sách model đã lỗi thời sau khi thay đổi provider               | Chạy `OmniRoute: Refresh Models` hoặc nhấp vào liên kết ↻ trong bảng điều khiển.                                                                                                                                                                                  |
 
 ---
 

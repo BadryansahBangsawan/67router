@@ -205,7 +205,7 @@ IDE हरूले MITM जडान स्वीकार गर्नुअ�
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -449,7 +449,7 @@ sudo fuser -k 443/tcp  # जबर्जस्ती बन्द गर्न�
 
 AgentBridge सुरु गरेपछि IDE ले TLS त्रुटिहरू देखाउँछ भने:
 
-1. प्रमाणपत्र स्थापना भएको पुष्टि गर्नुहोस्: `security find-certificate -c "67router AgentBridge"` (macOS) वा `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. प्रमाणपत्र स्थापना भएको पुष्टि गर्नुहोस्: `security find-certificate -c "OmniRoute MITM CA"` (macOS) वा `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. केही एपहरूले आफ्नै विश्वसनीयता भण्डार कायम राख्छन् (Firefox, Linux मा Chrome)। "Trust Cert" फेरि चलाउनुहोस् र NSS/Firefox-विशिष्ट प्रमाणपत्र भण्डार जाँच गर्नुहोस्।
 3. विश्वसनीय बनाएपछि IDE पुनः सुरु गर्नुहोस् — चलिरहेका TLS सत्रहरूले पुरानै विश्वसनीयता अवस्था प्रयोग गर्छन्।
 

@@ -42,7 +42,7 @@
 | `better-sqlite3`   | 루트 `^13.0.2` (Node-API 사전 빌드 — Electron 재빌드 불필요) |
 | 앱 버전            | `3.8.0`                                                      |
 | 앱 ID              | `online.omniroute.desktop`                                   |
-| 제품명             | `67router`                                                   |
+| 제품명             | `OmniRoute`                                                  |
 
 ## 스크립트(루트 `package.json`)
 

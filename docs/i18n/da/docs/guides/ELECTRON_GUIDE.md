@@ -46,7 +46,7 @@ Bekræftet fra `electron/package.json`:
 | `better-sqlite3`   | rod `^13.0.2` (Node-API-præbuilds — ingen Electron-genbygning) |
 | Appversion         | `3.8.0`                                                        |
 | App-id             | `online.omniroute.desktop`                                     |
-| Produktnavn        | `67router`                                                     |
+| Produktnavn        | `OmniRoute`                                                    |
 
 ## Scripts (`package.json` i roden)
 

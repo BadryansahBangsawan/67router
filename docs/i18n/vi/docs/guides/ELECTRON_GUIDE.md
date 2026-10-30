@@ -45,7 +45,7 @@ khay hệ thống, trình tự động cập nhật, cầu nối IPC và cơ ch�
 | `better-sqlite3`   | gốc `^13.0.2` (bản dựng sẵn Node-API — không cần dựng lại Electron) |
 | Phiên bản ứng dụng | `3.8.0`                                                             |
 | ID ứng dụng        | `online.omniroute.desktop`                                          |
-| Tên sản phẩm       | `67router`                                                          |
+| Tên sản phẩm       | `OmniRoute`                                                         |
 
 ## Tập lệnh (`package.json` gốc)
 

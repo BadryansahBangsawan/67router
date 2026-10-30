@@ -207,7 +207,7 @@ AGENTBRIDGE_UPSTREAM_CA_CERT=/path/to/corporate-ca.pem
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -451,7 +451,7 @@ sudo fuser -k 443/tcp  # خاتمه اجباری فرایند (با احتیاط
 
 اگر IDE پس از راهاندازی AgentBridge خطاهای TLS نشان میدهد:
 
-1. بررسی کنید که گواهی نصب شده باشد: `security find-certificate -c "67router AgentBridge"` (macOS) یا `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. بررسی کنید که گواهی نصب شده باشد: `security find-certificate -c "OmniRoute MITM CA"` (macOS) یا `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. برخی برنامهها مخزن اعتماد خود را نگه میدارند (Firefox و Chrome در Linux). دوباره «Trust Cert» را اجرا و مخزن گواهی مخصوص NSS/Firefox را بررسی کنید.
 3. پس از مورد اعتماد قرار دادن گواهی، IDE را مجدداً راهاندازی کنید — نشستهای TLS در حال اجرا از وضعیت اعتماد قبلی استفاده میکنند.
 

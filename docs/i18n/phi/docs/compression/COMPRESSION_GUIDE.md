@@ -530,7 +530,7 @@ mula sa seleksyon, hindi binabago ang body at nilalaktawan ito bilang `no_styles
 pinagdudugtong ang mga napiling instruction ayon sa pagkakasunod-sunod sa catalog,
 idinurugtong ang boundaries clause nang **isang beses** (kasama ang safety clause,
 `SAFETY_BOUNDARIES` o ang salin nito, kapag napili ang `less-code` o `ponytail`), at
-sinisimulan ang block gamit ang iisang idempotency marker (`[67router Output Styles]`),
+sinisimulan ang block gamit ang iisang idempotency marker (`[OmniRoute Output Styles]`),
 kaya walang epekto ang muling paglalapat. Kapag may salin ang nalutas na wika (tingnan
 ang Pagpili ng wika sa ibaba), ang naka-localize na instruction ang ini-inject sa halip
 na English.
@@ -538,7 +538,7 @@ na English.
 Sa body na may hindi bakanteng `messages` array, isinasagawa ang idempotency check bago
 ang content bypass: kapag nasa top-level na `system` field (isang string o
 content-block array) o nasa isang system message na may string content na ang
-`[67router Output Styles]` marker, hindi binabago ang body bilang `already_applied` at
+`[OmniRoute Output Styles]` marker, hindi binabago ang body bilang `already_applied` at
 walang isinasagawang keyword check. Kung hindi, sinusuri ng content bypass
 (`shouldBypassCavemanOutputMode()` sa
 `open-sse/services/compression/outputMode.ts`) ang text ng huling tatlong message,
@@ -566,7 +566,7 @@ unang makita nito sa mga sumusunod:
 Sa body na walang `messages` array (o may bakanteng array), walang isinasagawang
 content bypass at hindi sinusuri ang top-level na `system` field. Idinaragdag ang block
 pagkatapos ng text ng isang string na `instructions` field, maliban kung taglay na ng
-field na iyon ang `[67router Output Styles]` marker, kung saan hindi binabago ang body
+field na iyon ang `[OmniRoute Output Styles]` marker, kung saan hindi binabago ang body
 bilang `already_applied`. Kapag walang string na `instructions` field ang body ngunit
 mayroon itong `input` (isang string o array), nagiging `instructions` ang block at
 pinapalitan ang anumang non-string value na dating nasa field na iyon. Hindi binabago
@@ -594,9 +594,9 @@ seleksyon bilang:
 
 Back-compat: habang walang laman ang `outputStyles`, nagmamapa ang legacy na setting na
 `cavemanOutputMode.enabled` sa `terse-prose` sa `cavemanOutputMode.intensity`.
-Pagkatapos, nagsisimula ang block sa `[67router Output Styles]` marker, samantalang
+Pagkatapos, nagsisimula ang block sa `[OmniRoute Output Styles]` marker, samantalang
 isinusulat noon ng legacy na `applyCavemanOutputMode()` injector ang
-`[67router Caveman Output Mode]`. Sa ibaba ng marker, tumutugma ang text sa legacy na
+`[OmniRoute Caveman Output Mode]`. Sa ibaba ng marker, tumutugma ang text sa legacy na
 injection sa en, pt-BR, es, de, fr, it, ru, id at vi; sa ja at zh, mayroon itong isang
 dagdag na space bago ang boundaries clause. May mga salin ang `terse-prose` sa pt-BR,
 es, de, fr, it, ru, zh, ja, id at vi, kaya nakukuha ng request na ang nalutas na wika ay

@@ -45,7 +45,7 @@ Vahvistettu tiedostosta `electron/package.json`:
 | `better-sqlite3`   | juuressa `^13.0.2` (Node-API:n esikäännetyt versiot — Electron-uudelleenkoontia ei tarvita) |
 | Sovellusversio     | `3.8.0`                                                                                     |
 | Sovellustunnus     | `online.omniroute.desktop`                                                                  |
-| Tuotenimi          | `67router`                                                                                  |
+| Tuotenimi          | `OmniRoute`                                                                                 |
 
 ## Komentosarjat (juuren `package.json`)
 

@@ -516,12 +516,12 @@ lasă corpul nemodificat, fiind omisă ca `no_styles`), concatenează instrucți
 ordinea din catalog,
 adaugă clauza privind limitele **o singură dată** (plus clauza de siguranță, `SAFETY_BOUNDARIES`
 sau traducerea acesteia, când este selectat `less-code` sau `ponytail`) și începe blocul cu un
-singur marcator de idempotență (`[67router Output Styles]`), astfel încât reaplicarea nu are
+singur marcator de idempotență (`[OmniRoute Output Styles]`), astfel încât reaplicarea nu are
 niciun efect. Când limba rezolvată (consultați mai jos secțiunea Selectarea limbii) are o
 traducere, este inserată instrucțiunea localizată în locul celei în limba engleză.
 
 Pentru un corp cu o matrice `messages` nevidă, verificarea idempotenței rulează înaintea
-ocolirii bazate pe conținut: când marcatorul `[67router Output Styles]` există deja în câmpul
+ocolirii bazate pe conținut: când marcatorul `[OmniRoute Output Styles]` există deja în câmpul
 `system` de nivel superior (un șir sau o matrice de blocuri de conținut) ori într-un mesaj de
 sistem cu un conținut de tip șir, corpul este lăsat nemodificat ca `already_applied` și nu se
 efectuează nicio verificare a cuvintelor-cheie. În caz contrar, o ocolire bazată pe conținut
@@ -549,7 +549,7 @@ pe care le găsește:
 Pentru un corp fără o matrice `messages` (sau cu una goală), nu rulează nicio ocolire bazată pe
 conținut, iar câmpul `system` de nivel superior nu este consultat. Blocul este adăugat după
 textul unui câmp `instructions` de tip șir, cu excepția cazului în care câmpul respectiv
-conține deja marcatorul `[67router Output Styles]`; în acest caz, corpul este lăsat
+conține deja marcatorul `[OmniRoute Output Styles]`; în acest caz, corpul este lăsat
 nemodificat ca `already_applied`. Când corpul nu are un câmp `instructions` de tip șir, dar
 conține `input` (un șir sau o matrice), blocul devine `instructions`, înlocuind orice valoare
 care nu este de tip șir pe care o conținea câmpul. Un corp care nu are nici un câmp
@@ -578,8 +578,8 @@ compresie persistă selecția astfel:
 Compatibilitate cu versiunile anterioare: cât timp `outputStyles` este gol, setarea veche
 `cavemanOutputMode.enabled` se mapează la `terse-prose` la intensitatea
 `cavemanOutputMode.intensity`. Blocul începe apoi cu marcatorul
-`[67router Output Styles]`, în timp ce injectorul vechi `applyCavemanOutputMode()` scria
-`[67router Caveman Output Mode]`. Sub marcator, textul corespunde inserării vechi în en,
+`[OmniRoute Output Styles]`, în timp ce injectorul vechi `applyCavemanOutputMode()` scria
+`[OmniRoute Caveman Output Mode]`. Sub marcator, textul corespunde inserării vechi în en,
 pt-BR, es, de, fr, it, ru, id și vi; în ja și zh, acesta conține un spațiu suplimentar înaintea
 clauzei privind limitele. `terse-prose` este tradus în pt-BR, es, de, fr, it, ru, zh, ja, id
 și vi, astfel încât o solicitare a cărei limbă rezolvată este `hu` primește textul în limba

@@ -229,7 +229,7 @@ Ciljni prestreženi gostitelj: **`daily-cloudcode-pa.googleapis.com`** (Antigrav
 
 Ime datoteke potrdila: `omniroute-mitm.crt`. Ujemanje prstnega odtisa prek `getCertFingerprint()` (SHA-1 zapisa DER).
 
-Poleg tega `updateNssDatabases()` namesti potrdilo v uporabniške zbirke podatkov NSS, ko je `certutil` na voljo: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, vse profile Firefox (vključno s snap), pod vzdevkom **`67router MITM Root CA`**.
+Poleg tega `updateNssDatabases()` namesti potrdilo v uporabniške zbirke podatkov NSS, ko je `certutil` na voljo: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, vse profile Firefox (vključno s snap), pod vzdevkom **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

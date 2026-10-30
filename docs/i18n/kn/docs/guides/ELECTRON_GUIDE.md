@@ -42,7 +42,7 @@
 | `better-sqlite3`   | ರೂಟ್ `^13.0.2` (Node-API ಪೂರ್ವನಿರ್ಮಿತಗಳು — Electron ಮರುನಿರ್ಮಾಣವಿಲ್ಲ) |
 | ಆ್ಯಪ್ ಆವೃತ್ತಿ      | `3.8.0`                                                              |
 | ಆ್ಯಪ್ ಐಡಿ          | `online.omniroute.desktop`                                           |
-| ಉತ್ಪನ್ನದ ಹೆಸರು     | `67router`                                                           |
+| ಉತ್ಪನ್ನದ ಹೆಸರು     | `OmniRoute`                                                          |
 
 ## ಸ್ಕ್ರಿಪ್ಟ್ಗಳು (ರೂಟ್ `package.json`)
 

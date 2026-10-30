@@ -532,13 +532,13 @@ menghasilkan gaya apa pun membiarkan isi tetap tidak berubah, dilewati sebagai
 `no_styles`), menggabungkan instruksi yang dipilih sesuai urutan katalog,
 menambahkan klausa batasan **satu kali** (ditambah klausa keamanan,
 `SAFETY_BOUNDARIES` atau terjemahannya, ketika `less-code` atau `ponytail` dipilih), dan
-memulai blok dengan satu penanda idempotensi (`[67router Output Styles]`), sehingga
+memulai blok dengan satu penanda idempotensi (`[OmniRoute Output Styles]`), sehingga
 penerapan ulang tidak melakukan apa pun. Ketika bahasa yang ditentukan (lihat Pemilihan
 bahasa di bawah) memiliki terjemahan, instruksi yang telah dilokalkan disisipkan sebagai
 pengganti bahasa Inggris.
 
 Pada isi dengan array `messages` yang tidak kosong, pemeriksaan idempotensi dijalankan
-sebelum bypass konten: ketika penanda `[67router Output Styles]` sudah ada di kolom
+sebelum bypass konten: ketika penanda `[OmniRoute Output Styles]` sudah ada di kolom
 `system` tingkat teratas (berupa string atau array blok konten) atau di dalam pesan
 sistem dengan konten string, isi dibiarkan tidak berubah sebagai `already_applied` dan
 pemeriksaan kata kunci tidak dijalankan. Jika tidak, bypass konten
@@ -567,7 +567,7 @@ yang ditemukannya dari urutan berikut:
 Pada isi tanpa array `messages` (atau dengan array kosong), bypass konten tidak
 dijalankan dan kolom `system` tingkat teratas tidak diperiksa. Blok ditambahkan setelah
 teks dalam kolom `instructions` bertipe string, kecuali jika kolom tersebut sudah
-memuat penanda `[67router Output Styles]`; dalam hal ini, isi dibiarkan tidak berubah
+memuat penanda `[OmniRoute Output Styles]`; dalam hal ini, isi dibiarkan tidak berubah
 sebagai `already_applied`. Ketika isi tidak memiliki kolom `instructions` bertipe
 string tetapi membawa `input` (berupa string atau array), blok menjadi `instructions`,
 menggantikan nilai non-string apa pun yang sebelumnya dimiliki kolom tersebut. Isi
@@ -595,8 +595,8 @@ terprogram, konfigurasi kompresi menyimpan pilihan sebagai:
 Kompatibilitas mundur: selama `outputStyles` kosong, pengaturan lama
 `cavemanOutputMode.enabled` dipetakan ke `terse-prose` pada
 `cavemanOutputMode.intensity`. Blok kemudian dimulai dengan penanda
-`[67router Output Styles]`, sedangkan penyisip lama `applyCavemanOutputMode()`
-menuliskan `[67router Caveman Output Mode]`. Di bawah penanda, teksnya sama dengan
+`[OmniRoute Output Styles]`, sedangkan penyisip lama `applyCavemanOutputMode()`
+menuliskan `[OmniRoute Caveman Output Mode]`. Di bawah penanda, teksnya sama dengan
 sisipan lama dalam en, pt-BR, es, de, fr, it, ru, id, dan vi; dalam ja dan zh, teks
 tersebut memiliki satu spasi tambahan sebelum klausa batasan. `terse-prose`
 diterjemahkan ke dalam pt-BR, es, de, fr, it, ru, zh, ja, id, dan vi, sehingga

@@ -225,7 +225,7 @@ Olùgbàlejò àfojúsùn tí a dá ọ̀nà rẹ̀ dúró: **`daily-cloudcode-p
 
 Orúkọ fáìlì cert: `omniroute-mitm.crt`. Ìbáramu àmì-ìdánimọ̀ nípasẹ̀ `getCertFingerprint()` (SHA-1 ti DER).
 
-Ní àfikún, `updateNssDatabases()` ń fi sí àwọn NSS DB ti aṣàmúlò kọ̀ọ̀kan nígbà tí `certutil` bá wà: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gbogbo àwọn prófáìlì Firefox (títí kan snap), lábẹ́ orúkọ ìnagijẹ **`67router MITM Root CA`**.
+Ní àfikún, `updateNssDatabases()` ń fi sí àwọn NSS DB ti aṣàmúlò kọ̀ọ̀kan nígbà tí `certutil` bá wà: `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, gbogbo àwọn prófáìlì Firefox (títí kan snap), lábẹ́ orúkọ ìnagijẹ **`OmniRoute MITM Root CA`**.
 
 ### macOS / Windows
 

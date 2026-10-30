@@ -534,12 +534,12 @@ unchanged, skipped as `no_styles`), concatenates the selected instructions in ca
 order,
 appends the boundaries clause **once** (plus the safety clause, `SAFETY_BOUNDARIES` or its
 translation, when `less-code` or `ponytail` is selected), and starts the block with a
-single idempotency marker (`[67router Output Styles]`), so re-applying is a no-op. When
+single idempotency marker (`[OmniRoute Output Styles]`), so re-applying is a no-op. When
 the resolved language (see Language selection below) has a translation, the localized
 instruction is injected instead of English.
 
 On a body with a non-empty `messages` array, the idempotency check runs before the
-content bypass: when the `[67router Output Styles]` marker is already in the top-level
+content bypass: when the `[OmniRoute Output Styles]` marker is already in the top-level
 `system` field (a string or a content-block array) or in a system message with string
 content, the body is left unchanged as `already_applied` and no keyword check runs.
 Otherwise a content bypass (`shouldBypassCavemanOutputMode()` in
@@ -565,7 +565,7 @@ never creates a new `messages[0]`, places the block in the first of these it fin
 On a body without a `messages` array (or with an empty one), no content bypass runs and
 a top-level `system` field is not consulted. The block is appended after the text of a
 string `instructions` field, unless that field already contains the
-`[67router Output Styles]` marker, in which case the body is left unchanged as
+`[OmniRoute Output Styles]` marker, in which case the body is left unchanged as
 `already_applied`. When the body has no string `instructions` field but carries `input`
 (a string or an array), the block becomes `instructions`, replacing any non-string value
 that field held. A body with neither a string `instructions` field nor a string or array
@@ -591,8 +591,8 @@ compression config persists the selection as:
 
 Back-compat: while `outputStyles` is empty, the legacy `cavemanOutputMode.enabled`
 setting maps to `terse-prose` at `cavemanOutputMode.intensity`. The block then starts
-with the `[67router Output Styles]` marker, where the legacy `applyCavemanOutputMode()`
-injector wrote `[67router Caveman Output Mode]`. Below the marker, the text matches the
+with the `[OmniRoute Output Styles]` marker, where the legacy `applyCavemanOutputMode()`
+injector wrote `[OmniRoute Caveman Output Mode]`. Below the marker, the text matches the
 legacy injection in en, pt-BR, es, de, fr, it, ru, id and vi; in ja and zh it carries one
 extra space before the boundaries clause. `terse-prose` translates into pt-BR, es, de,
 fr, it, ru, zh, ja, id and vi, so a request whose resolved language is `hu` gets the

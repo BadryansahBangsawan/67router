@@ -205,7 +205,7 @@ Käyttöjärjestelmän on luotettava AgentBridge-CA-varmenteeseen, ennen kuin ID
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "67router AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Avainnippu):**
@@ -448,7 +448,7 @@ Vaihtoehtoisesti voit määrittää AgentBridgen asetuksissa ei-etuoikeutetun po
 
 Jos IDE näyttää TLS-virheitä AgentBridgen käynnistämisen jälkeen:
 
-1. Varmista, että varmenne on asennettu: `security find-certificate -c "67router AgentBridge"` (macOS) tai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Varmista, että varmenne on asennettu: `security find-certificate -c "OmniRoute MITM CA"` (macOS) tai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Jotkin sovellukset ylläpitävät omaa luottamusvarastoaan (Firefox, Chrome Linuxissa). Suorita "Luota varmenteeseen" uudelleen ja tarkista NSS-/Firefox-kohtainen varmennevarasto.
 3. Käynnistä IDE uudelleen varmenteeseen luottamisen jälkeen — käynnissä olevat TLS-istunnot käyttävät vanhaa luottamustilaa.
 

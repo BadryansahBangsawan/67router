@@ -226,7 +226,7 @@ interface CliFingerprint {
 
 Վկայագրի ֆայլի անուն՝ `omniroute-mitm.crt`։ Մատնահետքի համընկնումը կատարվում է `getCertFingerprint()`-ի միջոցով (DER-ի SHA-1)։
 
-Բացի այդ, երբ հասանելի է `certutil`-ը, `updateNssDatabases()`-ը վկայագիրը տեղադրում է յուրաքանչյուր օգտատիրոջ NSS տվյալների բազաներում՝ `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, Firefox-ի բոլոր պրոֆիլներում (ներառյալ snap-ը), **`67router MITM Root CA`** մականվամբ։
+Բացի այդ, երբ հասանելի է `certutil`-ը, `updateNssDatabases()`-ը վկայագիրը տեղադրում է յուրաքանչյուր օգտատիրոջ NSS տվյալների բազաներում՝ `~/.pki/nssdb`, `~/snap/chromium/.../nssdb`, Firefox-ի բոլոր պրոֆիլներում (ներառյալ snap-ը), **`OmniRoute MITM Root CA`** մականվամբ։
 
 ### macOS / Windows
 

@@ -45,7 +45,7 @@ Kinnitatud faili `electron/package.json` põhjal:
 | `better-sqlite3`   | juurkaustas `^13.0.2` (Node-API eelkompileeritud järgud — Electroni jaoks pole vaja uuesti kompileerida) |
 | Rakenduse versioon | `3.8.0`                                                                                                  |
 | Rakenduse ID       | `online.omniroute.desktop`                                                                               |
-| Toote nimi         | `67router`                                                                                               |
+| Toote nimi         | `OmniRoute`                                                                                              |
 
 ## Skriptid (juurkausta `package.json`)
 
