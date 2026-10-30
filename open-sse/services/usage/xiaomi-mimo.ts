@@ -41,7 +41,7 @@ const CONSOLE_FETCH_TIMEOUT_MS = 8_000;
 /** providerSpecificData keys scanned for the console `Cookie:` value (first hit wins). */
 const CONSOLE_COOKIE_KEYS = ["xiaomiMimoConsoleCookie", "cookie"] as const;
 
-const PLAN_LABEL_TRACKED = "Xiaomi MiMo Token Plan (OmniRoute-tracked)";
+const PLAN_LABEL_TRACKED = "Xiaomi MiMo Token Plan (67router-tracked)";
 const PLAN_LABEL_LIVE = "Xiaomi MiMo Token Plan";
 
 const CONSOLE_COOKIE_HINT =

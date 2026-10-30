@@ -273,7 +273,7 @@ export function classifyCfBrowserStartFailure(error: unknown): {
       message:
         "Cloudflare Playground needs Playwright and its Chromium browser. " +
         "Install the browser runtime (npm i playwright && npx playwright install chromium) " +
-        "or use an OmniRoute browser-enabled deployment.",
+        "or use a 67router browser-enabled deployment.",
     };
   }
   // Raw browser startup messages may contain local paths, proxy credentials,

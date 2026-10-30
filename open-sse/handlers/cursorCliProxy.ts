@@ -179,7 +179,7 @@ async function authenticateExchange(
   return connectError(
     HTTP_STATUS.UNAUTHORIZED,
     "unauthenticated",
-    "CURSOR_API_KEY must be an OmniRoute API key when OmniRoute requires API keys"
+    "CURSOR_API_KEY must be a 67router API key when 67router requires API keys"
   );
 }
 
@@ -259,7 +259,7 @@ async function resolveUpstreamConnection(
     return connectError(
       HTTP_STATUS.SERVICE_UNAVAILABLE,
       "unavailable",
-      "No active Cursor API connection configured in OmniRoute"
+      "No active Cursor API connection configured in 67router"
     );
   }
   let lastError: unknown = null;
@@ -401,7 +401,7 @@ async function handleExchange(
       startedAt,
       principal: null,
       connectionId: null,
-      error: "OmniRoute API key rejected",
+      error: "67router API key rejected",
     });
     return principal;
   }
@@ -441,7 +441,7 @@ async function handleForward(
     return connectError(
       HTTP_STATUS.UNAUTHORIZED,
       "unauthenticated",
-      "Missing or expired OmniRoute Cursor CLI session token"
+      "Missing or expired 67router Cursor CLI session token"
     );
   }
 

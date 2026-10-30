@@ -319,7 +319,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_get_health",
     {
       description:
-        "Returns OmniRoute health status including uptime, memory, circuit breakers, rate limits, and cache stats",
+        "Returns 67router health status including uptime, memory, circuit breakers, rate limits, and cache stats",
       inputSchema: getHealthInput,
     },
     withScopeEnforcement("omniroute_get_health", async (args) => {
@@ -387,7 +387,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
   server.registerTool(
     "omniroute_route_request",
     {
-      description: "Sends a chat completion request through OmniRoute intelligent routing",
+      description: "Sends a chat completion request through 67router intelligent routing",
       inputSchema: routeRequestInput,
     },
     withScopeEnforcement("omniroute_route_request", (args) =>
@@ -542,7 +542,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_db_health_check",
     {
       description:
-        "Diagnoses or repairs OmniRoute database drift, including broken combo references and orphan quota/domain rows",
+        "Diagnoses or repairs 67router database drift, including broken combo references and orphan quota/domain rows",
       inputSchema: dbHealthCheckInput,
     },
     withScopeEnforcement("omniroute_db_health_check", (args) =>
@@ -554,7 +554,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_sync_pricing",
     {
       description:
-        "Syncs pricing data from external sources (LiteLLM) into OmniRoute without overwriting user-set prices",
+        "Syncs pricing data from external sources (LiteLLM) into 67router without overwriting user-set prices",
       inputSchema: syncPricingInput,
     },
     withScopeEnforcement("omniroute_sync_pricing", (args) =>
@@ -566,7 +566,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_web_search",
     {
       description:
-        "Performs a web search using OmniRoute's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily) with automatic failover. Returns search results with titles, URLs, snippets, and position data.",
+        "Performs a web search using 67router's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily) with automatic failover. Returns search results with titles, URLs, snippets, and position data.",
       inputSchema: dynamicWebSearchInput,
     },
     withScopeEnforcement("omniroute_web_search", (args) =>
@@ -582,7 +582,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_x_search",
     {
       description:
-        "Search X (Twitter) through OmniRoute using SuperGrok / xAI server-side x_search. Requires xai-oauth or an xAI API key. Not web search.",
+        "Search X (Twitter) through 67router using SuperGrok / xAI server-side x_search. Requires xai-oauth or an xAI API key. Not web search.",
       inputSchema: xSearchInput,
     },
     withScopeEnforcement("omniroute_x_search", (args) => handleXSearch(xSearchInput.parse(args)))
@@ -592,7 +592,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_web_fetch",
     {
       description:
-        "Fetches and extracts content from a URL using OmniRoute's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
+        "Fetches and extracts content from a URL using 67router's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
       inputSchema: webFetchInput,
     },
     withScopeEnforcement("omniroute_web_fetch", (args) => handleWebFetch(webFetchInput.parse(args)))
@@ -1045,10 +1045,10 @@ export async function startMcpStdio(): Promise<void> {
   process.once("SIGINT", stopHeartbeatOnce);
   process.once("SIGTERM", stopHeartbeatOnce);
 
-  console.error("[MCP] OmniRoute MCP Server starting (stdio transport)...");
+  console.error("[MCP] 67router MCP Server starting (stdio transport)...");
   try {
     await server.connect(transport);
-    console.error("[MCP] OmniRoute MCP Server connected and ready.");
+    console.error("[MCP] 67router MCP Server connected and ready.");
   } finally {
     if (closeAuditDb()) {
       console.error("[MCP] Audit database checkpointed and closed.");
