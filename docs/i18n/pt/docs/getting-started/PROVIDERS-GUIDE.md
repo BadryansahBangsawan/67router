@@ -357,7 +357,3 @@ Aceda a Fornecedores → clique no fornecedor → clique em **Desligar**.
 - **[Guia dos níveis gratuitos](./FREE-TIERS-GUIDE.md)** — Obtenha IA gratuita sem cartão de crédito
 - **[Resolução de problemas](../guides/TROUBLESHOOTING.md)** — Resolva problemas comuns
 - **[Referência de fornecedores](../reference/PROVIDER_REFERENCE.md)** — Lista completa de 226 fornecedores
-
-## Imagens do Cursor
-
-As imagens do plano Cursor utilizam `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Consulte [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

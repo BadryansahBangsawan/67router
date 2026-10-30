@@ -364,7 +364,3 @@ OmniRoute автоматически пропустит недоступного
 - **[Руководство по бесплатным тарифам](./FREE-TIERS-GUIDE.md)** — получите бесплатный доступ к ИИ без банковской карты
 - **[Устранение неполадок](../guides/TROUBLESHOOTING.md)** — решение распространённых проблем
 - **[Справочник провайдеров](../reference/PROVIDER_REFERENCE.md)** — полный список из 226 провайдеров
-
-## Изображения Cursor
-
-Для изображений плана Cursor используется `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). См. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

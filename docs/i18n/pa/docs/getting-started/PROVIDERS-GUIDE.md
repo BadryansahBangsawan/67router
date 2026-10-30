@@ -363,7 +363,3 @@ Providers 'ਤੇ ਜਾਓ → ਪ੍ਰਦਾਤਾ 'ਤੇ ਕਲਿੱਕ �
 - **[ਮੁਫ਼ਤ ਟੀਅਰ ਗਾਈਡ](./FREE-TIERS-GUIDE.md)** — ਬਿਨਾਂ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਦੇ ਮੁਫ਼ਤ AI ਪ੍ਰਾਪਤ ਕਰੋ
 - **[ਸਮੱਸਿਆ-ਨਿਪਟਾਰਾ](../guides/TROUBLESHOOTING.md)** — ਆਮ ਸਮੱਸਿਆਵਾਂ ਨੂੰ ਠੀਕ ਕਰੋ
 - **[ਪ੍ਰਦਾਤਾ ਹਵਾਲਾ](../reference/PROVIDER_REFERENCE.md)** — 226 ਪ੍ਰਦਾਤਾਵਾਂ ਦੀ ਪੂਰੀ ਸੂਚੀ
-
-## Cursor ਚਿੱਤਰ
-
-Cursor ਪਲਾਨ ਦੇ ਚਿੱਤਰ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਨ। [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) ਵੇਖੋ।

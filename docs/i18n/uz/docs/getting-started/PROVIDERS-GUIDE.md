@@ -363,7 +363,3 @@ Providers → provayder ustiga bosing → **Disconnect** tugmasini bosing.
 - **[Bepul tariflar qoʻllanmasi](./FREE-TIERS-GUIDE.md)** — Kredit kartasiz bepul sunʼiy intellektdan foydalaning
 - **[Muammolarni bartaraf etish](../guides/TROUBLESHOOTING.md)** — Keng tarqalgan muammolarni tuzating
 - **[Provayderlar maʼlumotnomasi](../reference/PROVIDER_REFERENCE.md)** — 226 ta provayderning toʻliq roʻyxati
-
-## Cursor tasvirlari
-
-Cursor tarifidagi tasvirlar `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) dan foydalanadi. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) fayliga qarang.

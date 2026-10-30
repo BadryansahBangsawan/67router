@@ -363,7 +363,3 @@ CLI. Ένα κλειδί HTTP δεν εγγυάται ότι κάθε μοντέ
 - **[Οδηγός δωρεάν πακέτων](./FREE-TIERS-GUIDE.md)** — Αποκτήστε δωρεάν AI χωρίς πιστωτική κάρτα
 - **[Αντιμετώπιση προβλημάτων](../guides/TROUBLESHOOTING.md)** — Διορθώστε συνήθη προβλήματα
 - **[Αναφορά παρόχων](../reference/PROVIDER_REFERENCE.md)** — Πλήρης κατάλογος 226 παρόχων
-
-## Εικόνες Cursor
-
-Οι εικόνες προγράμματος του Cursor χρησιμοποιούν το `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Δείτε το [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

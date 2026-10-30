@@ -357,7 +357,3 @@ OmniRoute 会自动跳过失败的提供者，并尝试下一个。你无需执�
 - **[免费套餐指南](./FREE-TIERS-GUIDE.md)** — 无需信用卡即可免费使用 AI
 - **[故障排除](../guides/TROUBLESHOOTING.md)** — 解决常见问题
 - **[提供者参考](../reference/PROVIDER_REFERENCE.md)** — 226 个提供者的完整列表
-
-## Cursor 图像
-
-Cursor 套餐图像使用 `IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）。请参阅 [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)。

@@ -363,7 +363,3 @@ Providers-এ যান → প্রদানকারীটিতে ক্ল
 - **[বিনামূল্যের স্তরসমূহের নির্দেশিকা](./FREE-TIERS-GUIDE.md)** — ক্রেডিট কার্ড ছাড়াই বিনামূল্যে AI পান
 - **[সমস্যা সমাধান](../guides/TROUBLESHOOTING.md)** — সাধারণ সমস্যাগুলো সমাধান করুন
 - **[প্রোভাইডার রেফারেন্স](../reference/PROVIDER_REFERENCE.md)** — 226টি প্রোভাইডারের সম্পূর্ণ তালিকা
-
-## Cursor-এর ছবি
-
-Cursor প্ল্যানের ছবিগুলো `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ব্যবহার করে। [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) দেখুন।

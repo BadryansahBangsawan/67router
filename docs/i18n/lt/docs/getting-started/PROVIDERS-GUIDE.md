@@ -363,7 +363,3 @@ Eikite į „Providers“ → spustelėkite paslaugų teikėją → spustelėkit
 - **[Nemokamų planų vadovas](./FREE-TIERS-GUIDE.md)** — Naudokitės DI nemokamai, be kredito kortelės
 - **[Trikčių šalinimas](../guides/TROUBLESHOOTING.md)** — Išspręskite dažniausiai pasitaikančias problemas
 - **[Paslaugų teikėjų žinynas](../reference/PROVIDER_REFERENCE.md)** — Visas 226 paslaugų teikėjų sąrašas
-
-## Cursor vaizdai
-
-Cursor plano vaizdams naudojamas `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Žr. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

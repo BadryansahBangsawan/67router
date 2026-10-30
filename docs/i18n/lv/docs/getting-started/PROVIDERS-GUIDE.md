@@ -363,7 +363,3 @@ Atveriet sadaļu Providers → noklikšķiniet uz pakalpojumu sniedzēja → nok
 - **[Bezmaksas līmeņu ceļvedis](./FREE-TIERS-GUIDE.md)** — Iegūstiet bezmaksas mākslīgo intelektu bez kredītkartes
 - **[Problēmu novēršana](../guides/TROUBLESHOOTING.md)** — Novērsiet bieži sastopamas problēmas
 - **[Pakalpojumu sniedzēju uzziņu materiāls](../reference/PROVIDER_REFERENCE.md)** — Pilns 226 pakalpojumu sniedzēju saraksts
-
-## Cursor attēli
-
-Cursor plāna attēli izmanto `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Skatiet [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

@@ -357,7 +357,3 @@ OmniRoute រំលងអ្នកផ្តល់សេវាដែលបរា�
 - **[មគ្គុទ្ទេសក៍កម្រិតប្រើប្រាស់ឥតគិតថ្លៃ](./FREE-TIERS-GUIDE.md)** — ទទួលបាន AI ឥតគិតថ្លៃដោយមិនត្រូវការប័ណ្ណឥណទាន
 - **[ការដោះស្រាយបញ្ហា](../guides/TROUBLESHOOTING.md)** — ដោះស្រាយបញ្ហាទូទៅ
 - **[ឯកសារយោងអ្នកផ្តល់សេវា](../reference/PROVIDER_REFERENCE.md)** — បញ្ជីពេញលេញនៃអ្នកផ្តល់សេវាចំនួន 226
-
-## រូបភាព Cursor
-
-រូបភាពក្នុងគម្រោង Cursor ប្រើ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`)។ សូមមើល [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)។

@@ -114,8 +114,6 @@ Verify: `curl $OMNIROUTE_URL/api/health` → `{"ok":true}`
 
 ```bash
 curl $OMNIROUTE_URL/v1/models                  # chat/LLM (default)
-curl $OMNIROUTE_URL/v1/models/image            # image-gen
-curl $OMNIROUTE_URL/v1/models/tts              # text-to-speech
 curl $OMNIROUTE_URL/v1/models/embedding        # embeddings
 curl $OMNIROUTE_URL/v1/models/web              # web search + fetch
 curl $OMNIROUTE_URL/v1/models/stt              # speech-to-text
@@ -128,8 +126,6 @@ Use `data[].id` as `model` field in requests. Combos appear with `owned_by:"comb
 | Capability             | Raw URL                                                                                           |
 | ---------------------- | ------------------------------------------------------------------------------------------------- |
 | Chat / code-gen        | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |
-| Image generation       | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |
-| Text-to-speech         | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |
 | Speech-to-text         | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |
 | Embeddings             | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |
 | Web search             | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-inference/SKILL.md      |

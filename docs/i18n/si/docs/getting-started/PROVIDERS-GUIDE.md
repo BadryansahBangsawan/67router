@@ -357,7 +357,3 @@ Providers වෙත යන්න → සපයන්නා මත ක්ලි�
 - **[නොමිලේ ස්ථර පිළිබඳ මාර්ගෝපදේශය](./FREE-TIERS-GUIDE.md)** — ක්රෙඩිට් කාඩ්පතක් නොමැතිව නොමිලේ AI ලබා ගන්න
 - **[දෝෂ නිරාකරණය](../guides/TROUBLESHOOTING.md)** — පොදු ගැටලු විසඳන්න
 - **[සපයන්නන් පිළිබඳ යොමුව](../reference/PROVIDER_REFERENCE.md)** — සපයන්නන් 226 දෙනාගේ සම්පූර්ණ ලැයිස්තුව
-
-## Cursor රූප
-
-Cursor සැලසුම් රූප `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) භාවිත කරයි. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) බලන්න.

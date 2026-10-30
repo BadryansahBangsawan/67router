@@ -362,7 +362,3 @@ Providers → പ്രൊവൈഡറിൽ ക്ലിക്ക് ചെയ�
 - **[സൗജന്യ ടിയറുകളുടെ ഗൈഡ്](./FREE-TIERS-GUIDE.md)** — ക്രെഡിറ്റ് കാർഡ് ഇല്ലാതെ സൗജന്യ AI നേടുക
 - **[പ്രശ്നപരിഹാരം](../guides/TROUBLESHOOTING.md)** — പൊതുവായ പ്രശ്നങ്ങൾ പരിഹരിക്കുക
 - **[പ്രൊവൈഡർ റഫറൻസ്](../reference/PROVIDER_REFERENCE.md)** — 226 പ്രൊവൈഡറുകളുടെ പൂർണ്ണ പട്ടിക
-
-## Cursor ചിത്രങ്ങൾ
-
-Cursor പ്ലാൻ ചിത്രങ്ങൾ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ഉപയോഗിക്കുന്നു. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) കാണുക.

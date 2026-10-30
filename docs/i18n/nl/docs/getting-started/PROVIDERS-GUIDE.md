@@ -363,7 +363,3 @@ Ga naar Providers → klik op de provider → klik op **Ontkoppelen**.
 - **[Handleiding voor gratis abonnementen](./FREE-TIERS-GUIDE.md)** — Krijg gratis AI zonder creditcard
 - **[Probleemoplossing](../guides/TROUBLESHOOTING.md)** — Los veelvoorkomende problemen op
 - **[Providerreferentie](../reference/PROVIDER_REFERENCE.md)** — Volledige lijst van 226 providers
-
-## Cursor-afbeeldingen
-
-Afbeeldingen van Cursor-abonnementen gebruiken `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Zie [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

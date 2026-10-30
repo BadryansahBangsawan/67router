@@ -25,9 +25,7 @@ Core capabilities:
 - Quota preflight and quota-aware P2C account selection in the main chat path
 - OAuth + API-key provider connection management (27 OAuth provider modules)
 - Embedding generation via `/v1/embeddings` (18 providers)
-- Image generation via `/v1/images/generations` (10+ providers, 20+ models)
 - Audio transcription via `/v1/audio/transcriptions` (18 providers)
-- Text-to-speech via `/v1/audio/speech` (24 built-in providers)
 - Video generation via `/v1/videos/generations` (ComfyUI + SD WebUI)
 - Music generation via `/v1/music/generations` (ComfyUI)
 - Web search via `/v1/search` (20 providers)
@@ -224,7 +222,6 @@ Important compatibility routes:
 - `src/app/api/v1/responses/route.ts`
 - `src/app/api/v1/models/route.ts` — includes custom models with `custom: true`
 - `src/app/api/v1/embeddings/route.ts` — embedding generation (6 providers)
-- `src/app/api/v1/images/generations/route.ts` — image generation (4+ providers incl. Antigravity/Nebius)
 - `src/app/api/v1/messages/count_tokens/route.ts`
 - `src/app/api/v1/providers/[provider]/chat/completions/route.ts` — dedicated per-provider chat
 - `src/app/api/v1/providers/[provider]/embeddings/route.ts` — dedicated per-provider embeddings
@@ -281,8 +278,7 @@ Main flow modules:
 - Think tag parser: `open-sse/utils/thinkTagParser.ts`
 - Embedding handler: `open-sse/handlers/embeddings.ts`
 - Embedding provider registry: `open-sse/config/embeddingRegistry.ts`
-- Image generation handler: `open-sse/handlers/imageGeneration.ts`
-- Image provider registry: `open-sse/config/imageRegistry.ts`
+- Image provider registry (catalog data only; the image endpoints were removed): `open-sse/config/imageRegistry.ts`
 - Response sanitization: `open-sse/handlers/responseSanitizer.ts`
 - Role normalization: `open-sse/services/roleNormalizer.ts`
 
@@ -1041,8 +1037,6 @@ Additional processing layers in the translation pipeline:
 | `POST /v1/responses`                               | OpenAI Responses   | `open-sse/handlers/responsesHandler.ts`                             |
 | `POST /v1/embeddings`                              | OpenAI Embeddings  | `open-sse/handlers/embeddings.ts`                                   |
 | `GET /v1/embeddings`                               | Model listing      | API route                                                           |
-| `POST /v1/images/generations`                      | OpenAI Images      | `open-sse/handlers/imageGeneration.ts`                              |
-| `GET /v1/images/generations`                       | Model listing      | API route                                                           |
 | `POST /v1/providers/{provider}/chat/completions`   | OpenAI Chat        | Dedicated per-provider with model validation                        |
 | `POST /v1/providers/{provider}/embeddings`         | OpenAI Embeddings  | Dedicated per-provider with model validation                        |
 | `POST /v1/providers/{provider}/images/generations` | OpenAI Images      | Dedicated per-provider with model validation                        |

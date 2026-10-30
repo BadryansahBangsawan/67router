@@ -344,7 +344,3 @@ Providers → வழங்குநரைக் கிளிக் செய்�
 - **[இலவச அடுக்குகள் வழிகாட்டி](./FREE-TIERS-GUIDE.md)** — கிரெடிட் கார்டு இல்லாமல் இலவச AI-ஐப் பெறுங்கள்
 - **[சிக்கல் தீர்த்தல்](../guides/TROUBLESHOOTING.md)** — பொதுவான சிக்கல்களைச் சரிசெய்யுங்கள்
 - **[வழங்குநர் மேற்கோள்](../reference/PROVIDER_REFERENCE.md)** — 226 வழங்குநர்களின் முழுப் பட்டியல்
-
-## Cursor படங்கள்
-
-Cursor திட்டப் படங்கள் `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) என்பதைப் பயன்படுத்துகின்றன. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)-ஐப் பார்க்கவும்.

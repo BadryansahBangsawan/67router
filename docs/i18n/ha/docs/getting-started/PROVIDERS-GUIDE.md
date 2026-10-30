@@ -357,7 +357,3 @@ Je zuwa Providers → danna mai samar da sabis ɗin → danna **Disconnect**.
 - **[Jagorar Matakan Kyauta](./FREE-TIERS-GUIDE.md)** — Sami AI kyauta ba tare da katin kuɗi ba
 - **[Magance Matsaloli](../guides/TROUBLESHOOTING.md)** — Gyara matsalolin da aka fi samu
 - **[Bayanin Masu Bayarwa](../reference/PROVIDER_REFERENCE.md)** — Cikakken jerin masu bayarwa 226
-
-## Hotunan Cursor
-
-Hotunan tsarin Cursor suna amfani da `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Duba [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

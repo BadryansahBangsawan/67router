@@ -71,8 +71,8 @@ The catalog also lists image, video, audio, rerank, embedding and moderation mod
 rejected on a chat request anyway:
 
 ```
-HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
-/v1/chat/completions. Use POST /v1/images/generations instead.
+HTTP 400 — Model '<id>' is an image-generation model. Image generation is not supported
+on this server, so it cannot be used with POST /v1/chat/completions.
 ```
 
 so they are filtered out by their `type` field before reaching the picker. **Responses-API

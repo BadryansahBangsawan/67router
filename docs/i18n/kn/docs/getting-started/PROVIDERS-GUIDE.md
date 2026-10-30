@@ -363,7 +363,3 @@ Providers → ಪೂರೈಕೆದಾರರ ಮೇಲೆ ಕ್ಲಿಕ್ ಮ
 - **[ಉಚಿತ ಶ್ರೇಣಿಗಳ ಮಾರ್ಗದರ್ಶಿ](./FREE-TIERS-GUIDE.md)** — ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ ಇಲ್ಲದೆ ಉಚಿತ AI ಪಡೆಯಿರಿ
 - **[ಸಮಸ್ಯೆ ನಿವಾರಣೆ](../guides/TROUBLESHOOTING.md)** — ಸಾಮಾನ್ಯ ಸಮಸ್ಯೆಗಳನ್ನು ಸರಿಪಡಿಸಿ
 - **[ಪೂರೈಕೆದಾರರ ಉಲ್ಲೇಖ](../reference/PROVIDER_REFERENCE.md)** — 226 ಪೂರೈಕೆದಾರರ ಸಂಪೂರ್ಣ ಪಟ್ಟಿ
-
-## Cursor ಚಿತ್ರಗಳು
-
-Cursor ಯೋಜನೆಯ ಚಿತ್ರಗಳು `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ಅನ್ನು ಬಳಸುತ್ತವೆ. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) ನೋಡಿ.

@@ -363,7 +363,3 @@ Accesați Furnizori → faceți clic pe furnizor → faceți clic pe **Deconecta
 - **[Ghidul nivelurilor gratuite](./FREE-TIERS-GUIDE.md)** — Obțineți acces gratuit la AI fără card de credit
 - **[Depanare](../guides/TROUBLESHOOTING.md)** — Remediați problemele frecvente
 - **[Referință pentru furnizori](../reference/PROVIDER_REFERENCE.md)** — Lista completă a celor 226 de furnizori
-
-## Imagini Cursor
-
-Imaginile planului Cursor utilizează `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Consultați [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

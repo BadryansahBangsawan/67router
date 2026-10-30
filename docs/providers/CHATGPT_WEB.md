@@ -146,6 +146,5 @@ Retirement regression guards live in:
 
 - `tests/unit/chatgpt-web-retirement.test.ts`
 - `tests/unit/chatgpt-web-runtime-block.test.ts`
-- `tests/unit/chatgpt-web-image-handler-retirement.test.ts`
 - `tests/unit/chatgpt-web-source-retirement.test.ts`
 - `tests/unit/migration-168-retire-chatgpt-web.test.ts`

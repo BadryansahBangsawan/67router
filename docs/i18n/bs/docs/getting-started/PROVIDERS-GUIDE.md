@@ -365,7 +365,3 @@ Idite na Providers → kliknite na pružaoca usluga → kliknite **Disconnect**.
 - **[Vodič za besplatne pakete](./FREE-TIERS-GUIDE.md)** — Dobijte besplatan AI bez kreditne kartice
 - **[Rješavanje problema](../guides/TROUBLESHOOTING.md)** — Popravite uobičajene probleme
 - **[Referenca provajdera](../reference/PROVIDER_REFERENCE.md)** — Kompletna lista od 226 provajdera
-
-## Cursor slike
-
-Slike Cursor plana koriste `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Pogledajte [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

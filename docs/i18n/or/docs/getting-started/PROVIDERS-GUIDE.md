@@ -363,7 +363,3 @@ Providersକୁ ଯାଆନ୍ତୁ → ପ୍ରଦାନକାରୀ ଉପ�
 - **[ମାଗଣା ଟିୟର୍ ମାର୍ଗଦର୍ଶିକା](./FREE-TIERS-GUIDE.md)** — କ୍ରେଡିଟ୍ କାର୍ଡ ବିନା ମାଗଣା AI ପାଆନ୍ତୁ
 - **[ସମସ୍ୟା ସମାଧାନ](../guides/TROUBLESHOOTING.md)** — ସାଧାରଣ ସମସ୍ୟାଗୁଡ଼ିକ ସମାଧାନ କରନ୍ତୁ
 - **[ପ୍ରଦାନକାରୀ ସନ୍ଦର୍ଭ](../reference/PROVIDER_REFERENCE.md)** — 226 ପ୍ରଦାନକାରୀଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ତାଲିକା
-
-## Cursor ଛବିଗୁଡ଼ିକ
-
-Cursor ପ୍ଲାନ୍ ଛବିଗୁଡ଼ିକ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ବ୍ୟବହାର କରେ। [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) ଦେଖନ୍ତୁ।

@@ -363,7 +363,3 @@ Téigh chuig Soláthraithe → cliceáil ar an soláthraí → cliceáil **Dích
 - **[Treoir maidir le Sraitheanna Saor in Aisce](./FREE-TIERS-GUIDE.md)** — Faigh AI saor in aisce gan chárta creidmheasa
 - **[Fabhtcheartú](../guides/TROUBLESHOOTING.md)** — Réitigh fadhbanna coitianta
 - **[Tagairt Soláthraithe](../reference/PROVIDER_REFERENCE.md)** — Liosta iomlán de 226 soláthraí
-
-## Íomhánna Cursor
-
-Úsáideann íomhánna phlean Cursor `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Féach [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

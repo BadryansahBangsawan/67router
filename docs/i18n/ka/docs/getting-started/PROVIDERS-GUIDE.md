@@ -346,7 +346,3 @@ OmniRoute ავტომატურად გამოტოვებს გ�
 - **[უფასო ტარიფების გზამკვლევი](./FREE-TIERS-GUIDE.md)** — მიიღეთ უფასო AI საკრედიტო ბარათის გარეშე
 - **[პრობლემების მოგვარება](../guides/TROUBLESHOOTING.md)** — მოაგვარეთ გავრცელებული პრობლემები
 - **[პროვაიდერების ცნობარი](../reference/PROVIDER_REFERENCE.md)** — 226 პროვაიდერის სრული სია
-
-## Cursor-ის სურათები
-
-Cursor-ის გეგმის სურათები იყენებს `IMAGE_PROVIDERS.cursor`-ს (`cursor-agent-image`). იხილეთ [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

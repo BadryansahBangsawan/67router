@@ -357,7 +357,3 @@ Nenda kwenye Providers → bofya mtoa huduma → bofya **Disconnect**.
 - **[Mwongozo wa Viwango vya Bure](./FREE-TIERS-GUIDE.md)** — Pata AI ya bure bila kadi ya mkopo
 - **[Utatuzi wa Matatizo](../guides/TROUBLESHOOTING.md)** — Tatua matatizo ya kawaida
 - **[Rejeleo la Watoa Huduma](../reference/PROVIDER_REFERENCE.md)** — Orodha kamili ya watoa huduma 226
-
-## Picha za Cursor
-
-Picha za mpango wa Cursor hutumia `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Tazama [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

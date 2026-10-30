@@ -362,7 +362,3 @@ Providers → ప్రొవైడర్పై క్లిక్ చేయం�
 - **[ఉచిత టియర్ల గైడ్](./FREE-TIERS-GUIDE.md)** — క్రెడిట్ కార్డ్ లేకుండానే ఉచిత AIని పొందండి
 - **[సమస్య పరిష్కారం](../guides/TROUBLESHOOTING.md)** — సాధారణ సమస్యలను పరిష్కరించండి
 - **[ప్రొవైడర్ రిఫరెన్స్](../reference/PROVIDER_REFERENCE.md)** — 226 ప్రొవైడర్ల పూర్తి జాబితా
-
-## Cursor చిత్రాలు
-
-Cursor ప్లాన్ చిత్రాలు `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`)ను ఉపయోగిస్తాయి. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) చూడండి.

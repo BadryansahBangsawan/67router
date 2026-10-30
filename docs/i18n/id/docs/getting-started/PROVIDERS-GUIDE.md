@@ -340,7 +340,3 @@ Buka Penyedia → klik penyedia tersebut → klik **Putuskan Koneksi**.
 - **[Panduan Tingkat Gratis](./FREE-TIERS-GUIDE.md)** — Dapatkan AI gratis tanpa kartu kredit
 - **[Pemecahan Masalah](../guides/TROUBLESHOOTING.md)** — Atasi masalah umum
 - **[Referensi Penyedia](../reference/PROVIDER_REFERENCE.md)** — Daftar lengkap 226 penyedia
-
-## Gambar Cursor
-
-Gambar paket Cursor menggunakan `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Lihat [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

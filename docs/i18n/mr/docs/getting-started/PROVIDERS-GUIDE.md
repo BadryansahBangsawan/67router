@@ -363,7 +363,3 @@ Providers वर जा → प्रदात्यावर क्लिक �
 - **[विनामूल्य स्तर मार्गदर्शक](./FREE-TIERS-GUIDE.md)** — क्रेडिट कार्डशिवाय विनामूल्य AI मिळवा
 - **[समस्यानिवारण](../guides/TROUBLESHOOTING.md)** — सामान्य समस्यांचे निराकरण करा
 - **[प्रदाता संदर्भ](../reference/PROVIDER_REFERENCE.md)** — 226 प्रदात्यांची संपूर्ण यादी
-
-## Cursor प्रतिमा
-
-Cursor प्लॅनच्या प्रतिमा `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) वापरतात. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) पहा.

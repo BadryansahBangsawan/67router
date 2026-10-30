@@ -363,7 +363,3 @@ Gå till Providers → klicka på leverantören → klicka på **Disconnect**.
 - **[Guide till kostnadsfria nivåer](./FREE-TIERS-GUIDE.md)** — Få kostnadsfri AI utan kreditkort
 - **[Felsökning](../guides/TROUBLESHOOTING.md)** — Åtgärda vanliga problem
 - **[Leverantörsreferens](../reference/PROVIDER_REFERENCE.md)** — Fullständig lista över 226 leverantörer
-
-## Cursor-bilder
-
-Bilder från Cursor-planer använder `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Se [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

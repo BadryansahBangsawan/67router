@@ -132,7 +132,7 @@ account per project:
 Source: `src/sse/handlers/chat.ts` (header read), `src/sse/services/auth.ts` and
 `src/sse/services/sessionAffinityPin.ts` (pin release and the missing-from-pool check).
 
-> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/speech`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-image, per-second, per-character, per search-unit) when pricing is available, otherwise `0` (fail-open).
+> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-second, per search-unit) when pricing is available, otherwise `0` (fail-open).
 
 > **Cache-hit cost semantics:** on a semantic-cache HIT (`X-OmniRoute-Cache-Hit: true`) no upstream call is made, so `X-OmniRoute-Response-Cost` is `0.0000000000` (the **incremental** cost of serving the hit). The original/would-have-been cost is reported separately in `X-OmniRoute-Cost-Saved`. Billing consumers should sum `X-OmniRoute-Response-Cost` (hits cost nothing); cache analytics can aggregate `X-OmniRoute-Cost-Saved`.
 
@@ -351,56 +351,6 @@ extension fields on legacy string/token requests continue to pass through unchan
 ```bash
 # List all embedding models
 GET /v1/embeddings
-```
-
----
-
-## Image Generation
-
-```bash
-POST /v1/images/generations
-Authorization: Bearer your-api-key
-Content-Type: application/json
-
-{
-  "model": "openai/gpt-image-2",
-  "prompt": "A beautiful sunset over mountains",
-  "size": "1024x1024"
-}
-```
-
-Available providers include OpenAI (GPT Image 2), xAI (Grok Image), Together AI (FLUX), Fireworks AI, Nebius (FLUX), Hyperbolic, NanoBanana, **OpenRouter**, **ZenMux**, SD WebUI (local), ComfyUI (local).
-
-`n` returns `n` images in `data[]`. Providers whose upstream API returns one image per call
-(Black Forest Labs, Stability AI, Leonardo, Ideogram, Haiper, Hyperbolic, Magnific/Freepik,
-NVIDIA NIM, Cloudflare Workers AI) get `n` separate upstream calls, at most 4 in flight. A
-fixed `seed` is offset by call index (`seed`, `seed + 1`, …), so the images differ but stay
-reproducible. `n` is capped at 10. The request fails as a whole if any call fails. The list
-of fan-out formats is `SINGLE_IMAGE_FANOUT_FORMATS` in
-`open-sse/handlers/imageGeneration/fanOut.ts`.
-
-ZenMux reuses the existing API-key connection and accepts `zenmux/` or `zm/` prefixes:
-
-- `zenmux/openai/gpt-image-2` uses ZenMux's OpenAI Images API. Options include `size`,
-  `quality`, `n`, `output_format`, `output_compression`, `background`, and `response_format`.
-- Other publishers, such as `zm/meta/muse-image-1.0`, use ZenMux's Vertex AI `:predict`
-  endpoint. `n` maps to `sampleCount`, `aspect_ratio` to `aspectRatio`, and `image_size`
-  (`1K`, `2K`, `4K`) to `sampleImageSize`. A pixel `size` supplies only an aspect ratio,
-  not guaranteed pixel dimensions. Supported ratios, resolutions, and counts vary by model.
-- `zm/inclusionai/ming-image-0.1-design` chooses its own dimensions. Omit `size`,
-  `aspect_ratio`, and `image_size`; explicit values return HTTP 400. PNG, JPEG, and WebP
-  can be requested with `output_format`.
-
-This integration supports text-to-image generation, not reference-image editing. Vertex
-output is normalized to `data[].b64_json`; `response_format: "url"` returns an upstream
-HTTPS URL or a base64 data URL when only image bytes are available. Empty/filtered outputs
-return an error rather than an empty success. Model access depends on the ZenMux account.
-See [ZenMux's Vertex API](https://docs.zenmux.ai/api/vertexai/generate-images) and
-[OpenAI Images API](https://docs.zenmux.ai/api/openai/generate-an-image).
-
-```bash
-# List all image models
-GET /v1/images/generations
 ```
 
 ---
@@ -645,8 +595,7 @@ as the gateway bearer token.
 | POST   | `/v1/music/detailed/stream` | Native SSE metadata and audio chunks        | `music`                   |
 | POST   | `/v1/music/plan`            | JSON composition plan                       | `music`                   |
 
-These endpoints complement the existing `/v1/audio/speech`, `/v1/audio/transcriptions`,
-`/v1/voices`, `/v1/text-to-speech/{voiceId}` and `/v1/speech-to-text` routes. Native JSON fields
+These endpoints complement the existing `/v1/audio/transcriptions` route. Native JSON fields
 and query parameters such as `output_format` and `enable_logging` are preserved.
 `/v1/music/detailed` responses retain their multipart boundaries; parse them as multipart.
 `/v1/music/detailed/stream` returns `text/event-stream` with composition metadata and
@@ -713,12 +662,9 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/v1/messages`                            | Anthropic                          |
 | POST   | `/v1/responses`                           | OpenAI Responses                   |
 | POST   | `/v1/embeddings`                          | OpenAI                             |
-| POST   | `/v1/images/generations`                  | OpenAI Images                      |
-| POST   | `/v1/images/edits`                        | OpenAI Images (edit/inpaint)       |
 | POST   | `/v1/videos/generations`                  | OpenAI-style video generation      |
 | POST   | `/v1/music/generations`                   | OpenAI-style music generation      |
 | POST   | `/v1/audio/transcriptions`                | OpenAI Audio (STT)                 |
-| POST   | `/v1/audio/speech`                        | OpenAI TTS (returns audio body)    |
 | POST   | `/v1/rerank`                              | Cohere/Voyage-style rerank         |
 | POST   | `/v1/classify`                            | Jina classify (`api.jina.ai`)      |
 | POST   | `/v1/segment`                             | Jina segmenter (`segment.jina.ai`) |
@@ -735,7 +681,7 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/api/v1/vscode/{token}/api/chat`         | Ollama tokenized alias             |
 | GET    | `/api/v1/vscode/{token}/api/tags`         | Ollama tags tokenized alias        |
 
-All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
+All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1RerankSchema`, `v1OcrSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
 
 For clients that cannot attach `Authorization: Bearer ...`, OmniRoute also accepts API keys in the URL via either query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) or the dedicated `/api/v1/vscode/{token}/...` endpoints documented below.
 
@@ -751,16 +697,6 @@ POST /v1/segment     { "content": "...", "return_chunks": true }
 
 # Jina search (s.jina.ai; provider aliases: jina-search, jina-ai, jina)
 POST /v1/search      { "query": "...", "provider": "jina-search" }
-
-# TTS — returns audio/mpeg (or requested format) body
-POST /v1/audio/speech { "model": "openai/tts-1", "input": "Hello", "voice": "alloy" }
-
-# Soniox TTS requires a language and a voice: `language` defaults to "en"; a missing
-# voice or an OpenAI stock voice name (alloy, nova, …) becomes "Adrian"
-POST /v1/audio/speech { "model": "soniox/tts-rt-v1", "input": "Xin chào", "voice": "Adrian", "language": "vi" }
-
-# Image edit (multipart)
-POST /v1/images/edits  -F image=@input.png -F prompt="..." -F mask=@mask.png
 
 # Video / music generation (provider-prefixed model id)
 POST /v1/videos/generations { "model": "runway/gen-3", "prompt": "..." }
@@ -797,7 +733,6 @@ POST /v1/music/generations  { "model": "kie/suno-v4.0",   "prompt": "..." }
 ```bash
 POST /v1/providers/{provider}/chat/completions
 POST /v1/providers/{provider}/embeddings
-POST /v1/providers/{provider}/images/generations
 ```
 
 The provider prefix is auto-added if missing. Mismatched models return `400`.
@@ -1661,7 +1596,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 5. For chat: `handleChatCore` checks semantic/signature cache and resolves combo compression settings
 6. Proactive compression runs before provider translation when enabled (`lite`, Caveman, RTK, or stacked)
 7. Provider executor sends upstream request
-8. Response translated back to client format (chat) or returned as-is (embeddings/images/audio)
+8. Response translated back to client format (chat) or returned as-is (embeddings/audio)
 9. Usage, compression analytics, and request logs are recorded
 10. Fallback applies on errors according to combo rules
 

@@ -346,7 +346,3 @@ OmniRoute-ն ավտոմատ կերպով բաց է թողնում չաշխատո
 - **[Անվճար փաթեթների ուղեցույց](./FREE-TIERS-GUIDE.md)** — Ստացեք անվճար AI՝ առանց վարկային քարտի
 - **[Խնդիրների լուծում](../guides/TROUBLESHOOTING.md)** — Լուծեք տարածված խնդիրները
 - **[Մատակարարների տեղեկատու](../reference/PROVIDER_REFERENCE.md)** — 226 մատակարարների ամբողջական ցանկը
-
-## Cursor-ի պատկերներ
-
-Cursor փաթեթի պատկերներն օգտագործում են `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`)։ Տե՛ս [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)։

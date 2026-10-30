@@ -363,7 +363,3 @@ Accédez à Fournisseurs → cliquez sur le fournisseur → cliquez sur **Décon
 - **[Guide des offres gratuites](./FREE-TIERS-GUIDE.md)** — Accédez gratuitement à l'IA sans carte bancaire
 - **[Dépannage](../guides/TROUBLESHOOTING.md)** — Résolvez les problèmes courants
 - **[Référence des fournisseurs](../reference/PROVIDER_REFERENCE.md)** — Liste complète des 226 fournisseurs
-
-## Images Cursor
-
-Les images du forfait Cursor utilisent `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Consultez [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

@@ -137,7 +137,6 @@ Themes for Phases 6-7:
 - [ ] Add handler-level tests for:
   - `open-sse/handlers/chatCore.ts`
   - `open-sse/handlers/responsesHandler.js`
-  - `open-sse/handlers/imageGeneration.js`
   - `open-sse/handlers/embeddings.js`
 - [ ] Add executor branch coverage for provider-specific auth, retries, and endpoint overrides
 

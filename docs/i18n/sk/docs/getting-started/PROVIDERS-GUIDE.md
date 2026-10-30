@@ -363,7 +363,3 @@ Prejdite do časti Poskytovatelia → kliknite na poskytovateľa → kliknite na
 - **[Sprievodca bezplatnými úrovňami](./FREE-TIERS-GUIDE.md)** — Získajte bezplatnú AI bez kreditnej karty
 - **[Riešenie problémov](../guides/TROUBLESHOOTING.md)** — Vyriešte bežné problémy
 - **[Prehľad poskytovateľov](../reference/PROVIDER_REFERENCE.md)** — Úplný zoznam 226 poskytovateľov
-
-## Obrázky služby Cursor
-
-Obrázky plánu Cursor používajú `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Pozrite si dokument [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

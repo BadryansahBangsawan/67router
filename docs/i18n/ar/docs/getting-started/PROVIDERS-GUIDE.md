@@ -363,7 +363,3 @@ CLI بنفسها. لا يضمن مفتاح HTTP أن كل نموذج يدعم ا
 - **[دليل الخطط المجانية](./FREE-TIERS-GUIDE.md)** — احصل على ذكاء اصطناعي مجاني دون بطاقة ائتمان
 - **[استكشاف الأخطاء وإصلاحها](../guides/TROUBLESHOOTING.md)** — أصلح المشكلات الشائعة
 - **[مرجع المزوّدين](../reference/PROVIDER_REFERENCE.md)** — القائمة الكاملة التي تضم 226 مزوّدًا
-
-## صور Cursor
-
-تستخدم صور خطة Cursor القيمة `IMAGE_PROVIDERS.cursor` ‏(`cursor-agent-image`). راجع [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

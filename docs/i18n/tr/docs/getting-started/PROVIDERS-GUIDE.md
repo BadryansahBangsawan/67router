@@ -345,7 +345,3 @@ Providers → sağlayıcıya tıklayın → **Disconnect** seçeneğine tıklay�
 - **[Ücretsiz Katmanlar Kılavuzu](./FREE-TIERS-GUIDE.md)** — Kredi kartı olmadan ücretsiz yapay zekâ kullanın
 - **[Sorun Giderme](../guides/TROUBLESHOOTING.md)** — Yaygın sorunları giderin
 - **[Sağlayıcı Referansı](../reference/PROVIDER_REFERENCE.md)** — 226 sağlayıcının tam listesi
-
-## Cursor görselleri
-
-Cursor planı görselleri `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) kullanır. Bkz. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

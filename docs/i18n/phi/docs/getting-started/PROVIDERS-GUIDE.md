@@ -363,7 +363,3 @@ Pumunta sa Providers → i-click ang provider → i-click ang **Disconnect**.
 - **[Gabay sa Mga Libreng Tier](./FREE-TIERS-GUIDE.md)** — Kumuha ng libreng AI nang walang credit card
 - **[Pag-troubleshoot](../guides/TROUBLESHOOTING.md)** — Ayusin ang mga karaniwang isyu
 - **[Sanggunian ng Provider](../reference/PROVIDER_REFERENCE.md)** — Kumpletong listahan ng 226 na provider
-
-## Mga larawan ng Cursor
-
-Ginagamit ng mga larawan ng Cursor plan ang `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Tingnan ang [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

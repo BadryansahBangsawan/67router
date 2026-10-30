@@ -363,7 +363,3 @@ Providers → પ્રદાતા પર ક્લિક કરો → **Disco
 - **[મફત ટિયર્સ માર્ગદર્શિકા](./FREE-TIERS-GUIDE.md)** — ક્રેડિટ કાર્ડ વિના મફત AI મેળવો
 - **[સમસ્યાનિવારણ](../guides/TROUBLESHOOTING.md)** — સામાન્ય સમસ્યાઓ ઉકેલો
 - **[પ્રદાતા સંદર્ભ](../reference/PROVIDER_REFERENCE.md)** — 226 પ્રદાતાઓની સંપૂર્ણ સૂચિ
-
-## Cursor છબીઓ
-
-Cursor પ્લાનની છબીઓ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) નો ઉપયોગ કરે છે. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) જુઓ.

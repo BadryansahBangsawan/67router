@@ -363,7 +363,3 @@ Pergi ke Providers → klik penyedia tersebut → klik **Disconnect**.
 - **[Panduan Peringkat Percuma](./FREE-TIERS-GUIDE.md)** — Dapatkan AI percuma tanpa kad kredit
 - **[Penyelesaian Masalah](../guides/TROUBLESHOOTING.md)** — Selesaikan isu lazim
 - **[Rujukan Penyedia](../reference/PROVIDER_REFERENCE.md)** — Senarai penuh 226 penyedia
-
-## Imej Cursor
-
-Imej pelan Cursor menggunakan `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Lihat [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

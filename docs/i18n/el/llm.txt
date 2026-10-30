@@ -335,7 +335,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **API Manager** — API key management with scoped permissions
 
 ### Protocol Support
-- **OpenAI-compatible** — `/v1/chat/completions`, `/v1/models`, `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/transcriptions`, `/v1/audio/speech`, `/v1/rerank`, `/v1/videos/generations`, `/v1/music/generations`
+- **OpenAI-compatible** — `/v1/chat/completions`, `/v1/models`, `/v1/embeddings`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, `/v1/music/generations`
 - **Anthropic** — `/v1/messages`, `/v1/messages/count_tokens`
 - **OpenAI Responses** — `/v1/responses`
 - **Gemini** — `/v1beta/models`, `/v1beta/models/{...path}`

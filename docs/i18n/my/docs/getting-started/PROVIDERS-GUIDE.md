@@ -343,7 +343,3 @@ Providers သို့ သွားပါ → provider ကို နှိပ်
 - **[အခမဲ့အဆင့်များ လမ်းညွှန်](./FREE-TIERS-GUIDE.md)** — ခရက်ဒစ်ကတ်မလိုဘဲ အခမဲ့ AI ရယူပါ
 - **[ပြဿနာဖြေရှင်းခြင်း](../guides/TROUBLESHOOTING.md)** — အဖြစ်များသော ပြဿနာများကို ဖြေရှင်းပါ
 - **[Provider ကိုးကားချက်](../reference/PROVIDER_REFERENCE.md)** — Provider 226 ခု၏ စာရင်းအပြည့်အစုံ
-
-## Cursor ပုံများ
-
-Cursor အစီအစဉ်၏ ပုံများသည် `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ကို အသုံးပြုသည်။ [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) ကို ကြည့်ပါ။

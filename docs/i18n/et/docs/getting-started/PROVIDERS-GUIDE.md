@@ -357,7 +357,3 @@ Ava Providers → klõpsa teenusepakkujal → klõpsa **Disconnect**.
 - **[Tasuta pakettide juhend](./FREE-TIERS-GUIDE.md)** — Hankige tasuta tehisintellekt ilma krediitkaardita
 - **[Tõrkeotsing](../guides/TROUBLESHOOTING.md)** — Lahendage levinud probleemid
 - **[Teenusepakkujate teatmik](../reference/PROVIDER_REFERENCE.md)** — Kõigi 226 teenusepakkuja täielik loend
-
-## Cursori pildid
-
-Cursori paketi pildid kasutavad väärtust `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Vaadake dokumenti [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

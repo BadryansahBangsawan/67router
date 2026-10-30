@@ -363,7 +363,3 @@ Mur f'Providers → ikklikkja fuq il-fornitur → ikklikkja **Disconnect**.
 - **[Gwida għall-Pjanijiet Bla Ħlas](./FREE-TIERS-GUIDE.md)** — Ikseb AI b'xejn mingħajr karta ta' kreditu
 - **[Soluzzjoni tal-Problemi](../guides/TROUBLESHOOTING.md)** — Irranġa problemi komuni
 - **[Referenza tal-Fornituri](../reference/PROVIDER_REFERENCE.md)** — Lista sħiħa ta' 226 fornitur
-
-## Immaġnijiet ta' Cursor
-
-L-immaġnijiet tal-pjan ta' Cursor jużaw `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Ara [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

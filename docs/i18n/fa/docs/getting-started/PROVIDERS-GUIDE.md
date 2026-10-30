@@ -357,7 +357,3 @@ OmniRoute بهطور خودکار ارائهدهندگانی را که با خط
 - **[راهنمای سطوح رایگان](./FREE-TIERS-GUIDE.md)** — بدون کارت اعتباری به هوش مصنوعی رایگان دسترسی پیدا کنید
 - **[عیبیابی](../guides/TROUBLESHOOTING.md)** — مشکلات رایج را برطرف کنید
 - **[مرجع ارائهدهندگان](../reference/PROVIDER_REFERENCE.md)** — فهرست کامل ۲۲۶ ارائهدهنده
-
-## تصاویر Cursor
-
-تصاویر طرح Cursor از `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) استفاده میکنند. به [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) مراجعه کنید.

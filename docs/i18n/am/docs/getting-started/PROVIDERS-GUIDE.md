@@ -363,7 +363,3 @@ OmniRoute ያልተሳካላቸውን አቅራቢዎች በራስ-ሰር ይዘ
 - **[የነፃ ደረጃዎች መመሪያ](./FREE-TIERS-GUIDE.md)** — ያለ ክሬዲት ካርድ ነፃ AI ያግኙ
 - **[መላ ፍለጋ](../guides/TROUBLESHOOTING.md)** — የተለመዱ ችግሮችን ይፍቱ
 - **[የአቅራቢዎች ማጣቀሻ](../reference/PROVIDER_REFERENCE.md)** — የ226 አቅራቢዎች ሙሉ ዝርዝር
-
-## የCursor ምስሎች
-
-የCursor ዕቅድ ምስሎች `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`)ን ይጠቀማሉ። [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)ን ይመልከቱ።

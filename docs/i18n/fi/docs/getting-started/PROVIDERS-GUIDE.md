@@ -363,7 +363,3 @@ Siirry kohtaan Providers → napsauta palveluntarjoajaa → napsauta **Disconnec
 - **[Ilmaistasojen opas](./FREE-TIERS-GUIDE.md)** — Käytä tekoälyä ilmaiseksi ilman luottokorttia
 - **[Vianmääritys](../guides/TROUBLESHOOTING.md)** — Korjaa yleisiä ongelmia
 - **[Palveluntarjoajien viiteopas](../reference/PROVIDER_REFERENCE.md)** — Kaikkien 226 palveluntarjoajan luettelo
-
-## Cursor-kuvat
-
-Cursor-pakettien kuvat käyttävät määritystä `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Katso [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

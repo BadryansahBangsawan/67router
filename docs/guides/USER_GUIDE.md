@@ -1111,24 +1111,7 @@ If only OpenRouter is configured, use `openrouter/deepgram/nova-3`.
 - `huggingface/` (whisper variants)
 - `qwen/`
 
-**Text-to-Speech (`POST /v1/audio/speech`)** providers:
-
-- `openai/` (tts-1, tts-1-hd)
-- `hyperbolic/`
-- `deepgram/` (Aura)
-- `nvidia/` (Magpie TTS)
-- `elevenlabs/`
-- `huggingface/`
-- `inworld/`
-- `cartesia/`
-- `playht/`
-- `kie/`
-- `aws-polly/`
-- `xiaomi-mimo/`
-- `coqui/`, `tortoise/`
-- `qwen/`
-
-Supported audio formats for transcription: `mp3`, `wav`, `m4a`, `flac`, `ogg`, `webm`. TTS output formats depend on the provider (mp3, wav, opus, pcm, mulaw).
+Supported audio formats for transcription: `mp3`, `wav`, `m4a`, `flac`, `ogg`, `webm`.
 
 ---
 
