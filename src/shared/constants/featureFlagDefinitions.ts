@@ -148,7 +148,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "AUDIO_REMOTE_PROVIDER_NODES",
     label: "Remote Audio Provider Nodes",
     description:
-      "Allow the /v1/audio/* routes to use OpenAI-compatible provider nodes hosted outside localhost. Off by default — routing audio to a remote host changes egress identity and must be an explicit operator decision. Loopback nodes are always allowed and unaffected.",
+      "Allow the /v1/audio/transcriptions route to use OpenAI-compatible provider nodes hosted outside localhost. Off by default — routing audio to a remote host changes egress identity and must be an explicit operator decision. Loopback nodes are always allowed and unaffected.",
     descriptionI18nKey: "settings.featureFlags.audioRemoteProviderNodes",
     category: "network",
     defaultValue: "false",
@@ -555,7 +555,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "MODEL_ENDPOINT_CAPABILITY_GATE_ENABLED",
     label: "Model Endpoint Capability Gate",
     description:
-      "Enforce trusted model endpoint tags (declared by the provider catalog, inferred from a specialty model id, or set by the operator): reject a request sent to an endpoint the model does not serve with HTTP 400 before dispatch on /v1/chat/completions, /v1/embeddings, /v1/rerank, /v1/images/generations, /v1/videos/generations, /v1/music/generations and /v1/audio/*; hide models whose tagged endpoints have no OmniRoute adapter from /v1/models; and answer the dashboard model test with 422 for such models. Off by default: endpoint tags stay informational and requests are dispatched exactly as before.",
+      "Enforce trusted model endpoint tags (declared by the provider catalog, inferred from a specialty model id, or set by the operator): reject a request sent to an endpoint the model does not serve with HTTP 400 before dispatch on /v1/chat/completions, /v1/embeddings, /v1/rerank, /v1/videos/generations, /v1/music/generations and /v1/audio/transcriptions; hide models whose tagged endpoints have no OmniRoute adapter from /v1/models; and answer the dashboard model test with 422 for such models. Off by default: endpoint tags stay informational and requests are dispatched exactly as before.",
     descriptionI18nKey: "featureFlagModelEndpointCapabilityGateEnabledDescription",
     category: "policies",
     defaultValue: "false",
@@ -1036,18 +1036,6 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     description:
       "Let the per-window quota policy (session/weekly thresholds used by account selection) honour the bounded exhaustion park: once the capped park deadline has passed, or the cached quota observation is older than the park cap, the window stops excluding the account until a fresh quota fetch. Off by default: a cached window keeps blocking on its last reported percentage until its own reset time.",
     descriptionI18nKey: "featureFlagQuotaWindowBoundedParkDescription",
-    category: "runtime",
-    defaultValue: "false",
-    type: "boolean",
-    requiresRestart: false,
-    warningLevel: "caution",
-  },
-  {
-    key: "IMAGE_GENERATION_LONG_JOBS",
-    label: "Image Generation: Long Jobs",
-    description:
-      "For OpenAI-compatible image generation: use the connection's timeout (providerSpecificData.timeoutMs), else the central upstream fetch timeout (FETCH_TIMEOUT_MS, then REQUEST_TIMEOUT_MS, default 600 s) instead of the fixed 120 s image budget; end a request the caller cancelled with 499; and let the Playground receive long image jobs as an SSE stream with keepalive heartbeats. Off by default: the fixed budget applies and caller cancellation is not propagated. The deadline covering the response body read is always on.",
-    descriptionI18nKey: "featureFlagImageGenerationLongJobsDescription",
     category: "runtime",
     defaultValue: "false",
     type: "boolean",

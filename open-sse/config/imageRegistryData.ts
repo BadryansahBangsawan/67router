@@ -734,7 +734,7 @@ export const IMAGE_PROVIDERS: Record<string, ImageProviderConfig> = {
   },
 
   // SenseNova (商汤日日新) Text-to-Image on the free Token Plan. OpenAI-compatible
-  // `/v1/images/generations`, so the generic OpenAI image handler routes it — same
+  // `/images/generations`, so the generic OpenAI image handler routes it — same
   // SenseNova api-key/connection as the chat provider. (9router#2233)
   sensenova: {
     id: "sensenova",

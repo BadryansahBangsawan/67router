@@ -15,9 +15,7 @@ export type PlaygroundEndpoint =
   | "responses"
   | "completions"
   | "embeddings"
-  | "images"
   | "audio.transcriptions"
-  | "audio.speech"
   | "video"
   | "music"
   | "rerank"
@@ -86,9 +84,7 @@ export const PlaygroundStateSchema = z.object({
     "responses",
     "completions",
     "embeddings",
-    "images",
     "audio.transcriptions",
-    "audio.speech",
     "video",
     "music",
     "rerank",
@@ -125,9 +121,7 @@ const ENDPOINT_PATHS: Record<PlaygroundEndpoint, string> = {
   responses: "/v1/responses",
   completions: "/v1/completions",
   embeddings: "/v1/embeddings",
-  images: "/v1/images/generations",
   "audio.transcriptions": "/v1/audio/transcriptions",
-  "audio.speech": "/v1/audio/speech",
   video: "/v1/videos/generations",
   music: "/v1/music/generations",
   rerank: "/v1/rerank",
@@ -145,7 +139,7 @@ export function endpointToPath(endpoint: PlaygroundEndpoint): string {
 
 /**
  * Coerce a stored endpoint value (e.g. from a saved preset) to a supported endpoint.
- * Unknown or removed endpoints (such as the old "moderations") fall back to chat completions.
+ * Unknown or removed endpoints (such as the old "moderations", "images" or "audio.speech") fall back to chat completions.
  */
 export function normalizePlaygroundEndpoint(value: unknown): PlaygroundEndpoint {
   return typeof value === "string" && Object.hasOwn(ENDPOINT_PATHS, value)
@@ -212,29 +206,12 @@ function buildBody(state: PlaygroundState): Record<string, unknown> {
       };
     }
 
-    case "images": {
-      return {
-        model: model ?? "dall-e-3",
-        prompt: state.prompt ?? "A beautiful sunset",
-        n: 1,
-        size: "1024x1024",
-      };
-    }
-
     case "audio.transcriptions": {
       // Note: actual usage needs multipart/form-data; shown as JSON for documentation
       return {
         model: model ?? "whisper-1",
         file: "<audio-file-binary>",
         language: "en",
-      };
-    }
-
-    case "audio.speech": {
-      return {
-        model: model ?? "tts-1",
-        input: state.prompt ?? "Hello, world!",
-        voice: "alloy",
       };
     }
 

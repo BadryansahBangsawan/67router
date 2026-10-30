@@ -58,7 +58,8 @@ const {
 // tool_call wrapper repair, default on) to 86.
 // OPENCODE_PUBLISHED_CATALOG_ROUTING_ENABLED (#16798, OpenCode model surface from the
 // published catalog, default off) takes it to 87.
-const EXPECTED_FEATURE_FLAG_COUNT = 110;
+// 67router PR-4 removed IMAGE_GENERATION_LONG_JOBS with the image endpoints: 109.
+const EXPECTED_FEATURE_FLAG_COUNT = 109;
 // tool_call wrapper repair, default on) to 86; OPENCODE_V2_CLIENT_FINGERPRINT_ENABLED
 // (#16571, OpenCode v2 client fingerprint, default off) to 87.
 // tool_call wrapper repair, default on) to 86; CLAUDE_OAUTH_SUMMARIZED_THINKING_UNREDACTED

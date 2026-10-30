@@ -39,11 +39,6 @@
       "count": 1
     }
   },
-  "open-sse/executors/awsPollyTts.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "open-sse/executors/azure-openai.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -187,11 +182,6 @@
   "open-sse/handlers/chatCore/streamFinalize.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
-    }
-  },
-  "open-sse/handlers/imageGeneration.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 4
     }
   },
   "open-sse/handlers/musicGeneration.ts": {
@@ -1025,27 +1015,12 @@
       "count": 1
     }
   },
-  "src/app/api/v1/audio/speech/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/api/v1/chat/completions/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
   },
   "src/app/api/v1/embeddings/route.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/app/api/v1/images/edits/route.ts": {
-    "no-restricted-imports": {
-      "count": 1
-    }
-  },
-  "src/app/api/v1/images/generations/route.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
@@ -2071,7 +2046,7 @@
   },
   "tests/integration/v1-contracts-behavior.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 10
+      "count": 9
     }
   },
   "tests/live/deepseek-web-live.test.ts": {
@@ -2139,7 +2114,7 @@
   },
   "tests/unit/adobe-firefly.test.ts": {
     "@typescript-eslint/no-unused-vars": {
-      "count": 3
+      "count": 2
     }
   },
   "tests/unit/adversarialPii.test.ts": {
@@ -2235,19 +2210,9 @@
       "count": 1
     }
   },
-  "tests/unit/audio-speech-handler.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 9
-    }
-  },
   "tests/unit/audio-transcription-handler.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 9
-    }
-  },
-  "tests/unit/audio-translations-route.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 6
     }
   },
   "tests/unit/auggie-executor.test.ts": {
@@ -3489,11 +3454,6 @@
       "count": 25
     }
   },
-  "tests/unit/gtts-provider.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/guardrails/visionBridgeHelpers.callVisionModel.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
@@ -3507,21 +3467,6 @@
   "tests/unit/i18n-nest-dotted-keys.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 4
-    }
-  },
-  "tests/unit/image-generation-fetch-timeout.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/image-generation-handler.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/image-generation-route.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
     }
   },
   "tests/unit/injection-guard-nonchat-route-logging.test.ts": {
@@ -3639,11 +3584,6 @@
       "count": 2
     }
   },
-  "tests/unit/minimax-tts-1043.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 6
-    }
-  },
   "tests/unit/model-alias-route.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 6
@@ -3696,7 +3636,7 @@
   },
   "tests/unit/models-catalog-route.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 79
+      "count": 67
     },
     "@typescript-eslint/no-unused-vars": {
       "count": 3

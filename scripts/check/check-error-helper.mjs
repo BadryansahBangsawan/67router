@@ -96,12 +96,10 @@ export const KNOWN_MISSING_ERROR_HELPER = new Set([
   "src/app/api/providers/[id]/codex-auth/apply-local/route.ts",
   "src/app/api/providers/[id]/codex-auth/export/route.ts",
 
-  // --- Image generation/upscale/video handlers: `error: err.message` on an
+  // --- Video handler: `error: err.message` on an
   // internal result object that a caller later serializes. The sibling
   // `errorText = sanitizeErrorMessage(...)` on the next line proves the intent.
   // This is the class E-15 closed at stability.ts but missed here.
-  "open-sse/handlers/imageGeneration/providers/adobeFirefly.ts",
-  "open-sse/handlers/imageUpscale/adobeFirefly.ts",
   "open-sse/handlers/videoGeneration/adobeFireflyHandler.ts",
 
   // --- UNFROZEN #15159 wave 1.2 (removed, do not re-add).

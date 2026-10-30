@@ -10,7 +10,6 @@ process.env.API_KEY_SECRET = process.env.API_KEY_SECRET || "specialty-catalog-te
 
 const core = await import("../../src/lib/db/core.ts");
 const providersDb = await import("../../src/lib/db/providers.ts");
-const imageRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
 const videoRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
@@ -58,42 +57,6 @@ test.beforeEach(async () => {
 test.after(() => {
   core.resetDbInstance();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
-});
-
-test("image catalog GET uses the unified active-credential model list", async () => {
-  await seedConnection("codex");
-
-  const ids = await listedIds(imageRoute, "/v1/images/generations");
-
-  // #14976 added the Codex GPT Image models (dedicated Codex Images API route)
-  // after the GPT-5.6 hosted-tool ids; see tests/unit/image-registry-gpt56.test.ts.
-  assert.deepEqual(
-    ids.filter((id) => id.startsWith("codex/")),
-    [
-      "codex/gpt-5.6-sol-image",
-      "codex/gpt-5.6-terra-image",
-      "codex/gpt-5.6-luna-image",
-      "codex/gpt-image-2.5-flare",
-      "codex/gpt-image-2.5-sunburst",
-      "codex/gpt-image-2",
-    ]
-  );
-  assert.ok(!ids.includes("openai/gpt-image-2"));
-});
-
-test("specialty catalog GET preserves unified catalog headers", async () => {
-  await seedConnection("codex");
-
-  const response = await imageRoute.GET(
-    new Request("http://localhost/v1/images/generations", {
-      headers: { "x-request-id": "specialty-catalog-test" },
-    })
-  );
-  await response.json();
-
-  assert.equal(response.headers.get("x-request-id"), "specialty-catalog-test");
-  assert.ok(response.headers.get("x-model-catalog-version"));
-  assert.match(response.headers.get("content-type") || "", /application\/json/);
 });
 
 test("embedding catalog GET hides providers without active credentials", async () => {

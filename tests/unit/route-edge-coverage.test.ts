@@ -23,7 +23,6 @@ const listKeysRoute = await import("../../src/app/api/keys/route.ts");
 const settingsProxyRoute = await import("../../src/app/api/settings/proxy/route.ts");
 const managementProxiesRoute = await import("../../src/app/api/v1/management/proxies/route.ts");
 const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
-const audioSpeechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
 const audioTranscriptionsRoute = await import("../../src/app/api/v1/audio/transcriptions/route.ts");
 const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const searchRoute = await import("../../src/app/api/v1/search/route.ts");
@@ -851,13 +850,6 @@ test("v1 routes surface provider-rate-limit sentinels instead of missing credent
   transcriptionForm.set("model", "openai/whisper-1");
 
   const responses = [
-    await audioSpeechRoute.POST(
-      makeRequest("http://localhost/v1/audio/speech", {
-        method: "POST",
-        token,
-        body: { model: "openai/tts-1", input: "hello" },
-      })
-    ),
     await audioTranscriptionsRoute.POST(
       new Request("http://localhost/v1/audio/transcriptions", {
         method: "POST",

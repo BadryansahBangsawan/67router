@@ -13,7 +13,6 @@ const core = await import("../../src/lib/db/core.ts");
 const { OMNIROUTE_RESPONSE_HEADERS } = await import("../../src/shared/constants/headers.ts");
 const { saveSyncedPricing } = await import("../../src/lib/pricingSync.ts");
 const rerankHandler = await import("../../open-sse/handlers/rerank.ts");
-const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
 const transcriptionRoute = await import("../../src/app/api/v1/audio/transcriptions/route.ts");
 const videoRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
 
@@ -173,38 +172,6 @@ test("rerank NVIDIA-format success Response reflects synthesized search unit in 
     response.headers.get(OMNIROUTE_RESPONSE_HEADERS.responseCost),
     "0.0020000000",
     "NVIDIA rerank cost must reflect the synthesized 1 search unit read from result"
-  );
-});
-
-test("v1 audio speech success Response carries cost telemetry headers", async () => {
-  globalThis.fetch = (async (url: unknown) => {
-    const stringUrl = String(url);
-    if (stringUrl === "http://localhost:8000/v1/audio/speech") {
-      return new Response(new Uint8Array([1, 2, 3, 4]), {
-        status: 200,
-        headers: { "content-type": "audio/mpeg" },
-      });
-    }
-    throw new Error(`Unexpected URL: ${stringUrl}`);
-  }) as typeof fetch;
-
-  const response = await speechRoute.POST(
-    new Request("http://localhost/api/v1/audio/speech", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "qwen/qwen3-tts",
-        input: "telemetry speech text",
-      }),
-    }),
-    {}
-  );
-
-  assertCostTelemetryHeaders(response);
-  assert.equal(
-    response.headers.get("Content-Type"),
-    "audio/mpeg",
-    "audio Content-Type must be preserved"
   );
 });
 

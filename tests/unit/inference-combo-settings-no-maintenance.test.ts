@@ -16,7 +16,6 @@ const { waitForCallLogSaves } = await import("../../src/lib/usage/callLogs.ts");
 const { createEmbeddingResponse } = await import("../../src/lib/embeddings/service.ts");
 const { handleValidatedRerankRequestBody } = await import("../../src/app/api/v1/rerank/route.ts");
 const transcriptions = await import("../../src/app/api/v1/audio/transcriptions/route.ts");
-const translations = await import("../../src/app/api/v1/audio/translations/route.ts");
 const originalFetch = globalThis.fetch;
 
 test.before(async () => {
@@ -81,11 +80,6 @@ const cases: Array<{ name: string; run: () => Promise<Response>; upstream: strin
     name: "transcriptions",
     run: () => transcriptions.POST(audioRequest("transcriptions")),
     upstream: "/audio/transcriptions",
-  },
-  {
-    name: "translations",
-    run: () => translations.POST(audioRequest("translations")),
-    upstream: "/audio/translations",
   },
 ];
 

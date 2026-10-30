@@ -86,14 +86,13 @@ test("#16929: multimodal chat models remain chat-selectable", () => {
   );
 });
 
-test("#16929: normalize legacy image alias and preserve trusted multi-endpoint route checks", () => {
+test("#16929: image/speech-only models are rejected without suggesting removed routes", () => {
   const model = {
     supportedEndpoints: ["images-generations", "audio-speech"],
     endpointCapabilitySource: "operator",
   };
-  assert.equal(getModelEndpointMismatchMessage("p/media", model, "images"), null);
-  assert.equal(getModelEndpointMismatchMessage("p/media", model, "audio-speech"), null);
   const mismatch = getModelEndpointMismatchMessage("p/media", model, "embeddings");
-  assert.match(mismatch || "", /\/v1\/images\/generations/);
-  assert.match(mismatch || "", /\/v1\/audio\/speech/);
+  assert.ok(mismatch, "an image/speech-only model does not serve embeddings");
+  // 67router removed /v1/images/* and /v1/audio/speech: never point clients at them.
+  assert.doesNotMatch(mismatch || "", /\/v1\/images|\/v1\/audio\/speech/);
 });

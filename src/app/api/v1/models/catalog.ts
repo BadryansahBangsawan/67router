@@ -13,12 +13,7 @@ import {
 } from "./catalogSyncedCoverage";
 import { buildSyncedCapabilities, mergeSyncedCapabilities } from "./syncedCapabilities";
 import { getAllEmbeddingModels } from "@omniroute/open-sse/config/embeddingRegistry";
-import {
-  getAllImageModels,
-  isRegisteredImageModel,
-  parseImageModel,
-} from "@omniroute/open-sse/config/imageRegistry";
-import { aiHordeImageCatalog } from "@omniroute/open-sse/services/aihordeImageCatalog";
+import { isRegisteredImageModel } from "@omniroute/open-sse/config/imageRegistry";
 import { getAllRerankModels } from "@omniroute/open-sse/config/rerankRegistry";
 import { getAllAudioModels } from "@omniroute/open-sse/config/audioRegistry";
 import { getAllVideoModels } from "@omniroute/open-sse/config/videoRegistry";
@@ -1296,7 +1291,7 @@ async function buildUnifiedModelsResponseCore(
           // them as chat-capable. Skip a registered image model only when its
           // synced metadata does not explicitly advertise a chat endpoint.
           // Multi-capability models may intentionally share an id between the
-          // chat and image catalogs; getAllImageModels() adds the image entry.
+          // chat and image catalogs; the image entry itself is no longer listed.
           const explicitlySupportsChat = sm.supportedEndpoints?.some(
             (endpoint) => endpoint === "chat" || endpoint === "responses"
           );
@@ -1586,38 +1581,7 @@ async function buildUnifiedModelsResponseCore(
       });
     }
 
-    // Add image models (filtered by active providers).
-    // AI Horde image workers come and go — refresh the live detector first.
-    if (isProviderActive("aihorde")) {
-      try {
-        await aiHordeImageCatalog.ensureFresh();
-      } catch {
-        // Keep the last good snapshot (or none) if Horde is unreachable.
-      }
-    }
-    for (const imgModel of getAllImageModels()) {
-      await maybeYieldCatalogBuild();
-      if (!isProviderActive(imgModel.provider)) continue;
-      const parsedImageModel = parseImageModel(imgModel.id);
-      const rawModelId =
-        parsedImageModel.provider === imgModel.provider && parsedImageModel.model
-          ? parsedImageModel.model
-          : getSpecialtyModelRelativeId(imgModel.id, imgModel.provider);
-      if (!providerSupportsModel(imgModel.provider, rawModelId)) continue;
-      if (isModelHiddenBulk(imgModel.provider, rawModelId, null, "images")) continue;
-      models.push({
-        id: imgModel.id,
-        object: "model",
-        created: timestamp,
-        owned_by: imgModel.provider,
-        type: "image",
-        supported_sizes: imgModel.supportedSizes,
-        input_modalities: imgModel.inputModalities || ["text"],
-        output_modalities: ["image"],
-        ...(imgModel.description ? { description: imgModel.description } : {}),
-        ...(imgModel.mediaCapabilities ? { media_capabilities: imgModel.mediaCapabilities } : {}),
-      });
-    }
+    // Image models are not listed: 67router removed /v1/images/*.
 
     // Add rerank models (filtered by active providers)
     for (const rerankModel of getAllRerankModels()) {
@@ -1639,9 +1603,11 @@ async function buildUnifiedModelsResponseCore(
       });
     }
 
-    // Add audio models (filtered by active providers)
+    // Add audio models (filtered by active providers). Only transcription is listed:
+    // 67router removed /v1/audio/speech, so speech models would only lead to a 404.
     for (const audioModel of getAllAudioModels()) {
       await maybeYieldCatalogBuild();
+      if (audioModel.subtype !== "transcription") continue;
       if (!isProviderActive(audioModel.provider)) continue;
       const rawModelId = getSpecialtyModelRelativeId(audioModel.id, audioModel.provider);
       if (!providerSupportsModel(audioModel.provider, rawModelId)) continue;

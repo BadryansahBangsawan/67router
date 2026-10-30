@@ -65,7 +65,7 @@ function isValidPathSegment(segment: string): boolean {
  * decoder from the *filename* and their allow-list
  * (`flac, m4a, mp3, mp4, mpeg, mpga, oga, ogg, wav, webm`) has no `opus`, so
  * `note.opus` 400s while byte-identical `note.ogg` succeeds. Since
- * `/v1/audio/speech` emits `audio/opus` for `response_format=opus`, clients
+ * The speech API emits `audio/opus` for `response_format=opus`, clients
  * round-tripping their own voice notes hit this constantly. Relabel to the
  * container that actually describes the bytes.
  */

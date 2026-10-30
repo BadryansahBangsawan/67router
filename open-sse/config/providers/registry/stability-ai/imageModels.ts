@@ -8,7 +8,7 @@
  * `stability-ai` entry for baseUrl/auth/format wiring.
  *
  * `imageRequired: true` marks the dedicated edit/control/upscale endpoints
- * (STABILITY_EDIT_ENDPOINTS in open-sse/handlers/imageGeneration.ts) that accept a
+ * (the former STABILITY_EDIT_ENDPOINTS of the removed image handler) that accept a
  * text prompt but mechanically require an input image regardless —
  * modalitiesRequireImageInput() alone can't tell them apart from flexible
  * dual-modality generation models (BFL Kontext, Together, NVIDIA, LMArena,

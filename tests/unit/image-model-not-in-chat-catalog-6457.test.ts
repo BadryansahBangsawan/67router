@@ -82,7 +82,8 @@ test("#6457 image/diffusion model discovered via live sync is NOT listed as a ch
     m.id.includes("stabilityai/stable-diffusion-xl-base-1.0")
   );
 
-  assert.ok(imageModelEntries.length > 0, "the image model must still be listed somewhere");
+  // 67router removed /v1/images/*, so registry image entries are no longer listed either;
+  // whatever remains must never be a chat row.
   for (const entry of imageModelEntries) {
     assert.equal(
       entry.type,
@@ -102,7 +103,7 @@ test("#6457 image/diffusion model discovered via live sync is NOT listed as a ch
   }
 });
 
-test("Codex Responses and image entries keep distinct public IDs for the same upstream model", async () => {
+test("Codex Responses entry is not shadowed by an image entry for the same upstream model", async () => {
   const connection = await seedProviderConnection("codex");
 
   await modelsDb.replaceSyncedAvailableModelsForConnection("codex", connection.id, [
@@ -134,7 +135,7 @@ test("Codex Responses and image entries keep distinct public IDs for the same up
     "an image entry must not shadow the Responses model ID"
   );
   assert.ok(
-    body.data.some((model) => model.id === "codex/gpt-5.6-sol-image" && model.type === "image"),
-    "the image surface must remain available under its distinct catalog ID"
+    !body.data.some((model) => model.type === "image"),
+    "image entries are not listed: 67router removed /v1/images/*"
   );
 });
