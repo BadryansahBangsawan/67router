@@ -39,7 +39,6 @@ OmniRoute のすべての管理 API ルートは、3 つの保護階層のいず
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy リスナーとシステムプロキシ                                                                   |
 | `/api/settings/mitm`                                                                                     | MITM 傍受を有効化（システムレベルのプロキシ状態）                                                                           |
 | `/api/issue-agent/`                                                                                      | Issue エージェント — リポジトリに対してローカルツールを起動                                                                 |
-| `/api/plugins/`, `/api/plugins`                                                                          | プラグイン — `worker_threads` と `child_process` を介して読み込み・実行                                                     |
 | `/api/middleware/`                                                                                       | ユーザーミドルウェア — オペレーターコードをプロセス内で読み込み・実行                                                       |
 | `/api/system/version`                                                                                    | 自動更新（POST のみ。GET/HEAD/OPTIONS は除外）— `git checkout` と `npm install` を起動                                      |
 | `/api/db-backups/exportAll`                                                                              | エクスポートアーカイブ用に `tar` を起動                                                                                     |

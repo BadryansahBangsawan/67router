@@ -57,7 +57,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — מאזין http-proxy ופרוקסי מערכת                                               |
 | `/api/settings/mitm`                                                                                     | מאפשר יירוט MITM (מצב פרוקסי ברמת המערכת)                                                        |
 | `/api/issue-agent/`                                                                                      | סוכן טיפול בבעיות — מפעיל כלים מקומיים מול המאגר                                                 |
-| `/api/plugins/`, `/api/plugins`                                                                          | תוספים — נטענים/מורצים באמצעות `worker_threads` ו-`child_process`                                |
 | `/api/middleware/`                                                                                       | תוכנת תווכה של המשתמש — טוענת/מריצה קוד של המפעיל בתוך התהליך                                    |
 | `/api/system/version`                                                                                    | עדכון אוטומטי (POST בלבד; GET/HEAD/OPTIONS מוחרגות) — מפעיל `git checkout` ו-`npm install`       |
 | `/api/db-backups/exportAll`                                                                              | מפעיל `tar` עבור ארכיון הייצוא                                                                   |

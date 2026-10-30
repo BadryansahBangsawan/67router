@@ -55,7 +55,6 @@ OmniRoute 透過在每個具備產生程序能力的路由上，**無條件地�
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy 監聽器與系統 Proxy                                      |
 | `/api/settings/mitm`                                                                                     | 啟用 MITM 攔截（系統層級 Proxy 狀態）                                                  |
 | `/api/issue-agent/`                                                                                      | Issue Agent — 產生針對儲存庫執行的本機工具                                             |
-| `/api/plugins/`, `/api/plugins`                                                                          | 外掛程式 — 透過 `worker_threads` + `child_process` 載入／執行                          |
 | `/api/middleware/`                                                                                       | 使用者中介軟體 — 在程序內載入／執行操作者程式碼                                        |
 | `/api/system/version`                                                                                    | 自動更新（僅限 POST；GET/HEAD/OPTIONS 除外）— 產生 `git checkout` + `npm install` 程序 |
 | `/api/db-backups/exportAll`                                                                              | 產生 `tar` 程序以建立匯出封存檔                                                        |

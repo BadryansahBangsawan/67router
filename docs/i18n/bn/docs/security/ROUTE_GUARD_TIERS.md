@@ -39,7 +39,6 @@ OmniRoute-এর সব ম্যানেজমেন্ট API রুটকে
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy লিসেনার + সিস্টেম প্রক্সি                                                  |
 | `/api/settings/mitm`                                                                                     | MITM ইন্টারসেপশন সক্রিয় করে (সিস্টেম-স্তরের প্রক্সি অবস্থা)                                              |
 | `/api/issue-agent/`                                                                                      | ইস্যু এজেন্ট — রিপোজিটরির বিরুদ্ধে লোকাল টুলিং চালু করে                                                   |
-| `/api/plugins/`, `/api/plugins`                                                                          | প্লাগইন — `worker_threads` + `child_process`-এর মাধ্যমে লোড/নির্বাহ করে                                   |
 | `/api/middleware/`                                                                                       | ব্যবহারকারীর মিডলওয়্যার — অপারেটর কোড একই প্রসেসের মধ্যে লোড/নির্বাহ করে                                 |
 | `/api/system/version`                                                                                    | স্বয়ংক্রিয় আপডেট (শুধু POST; GET/HEAD/OPTIONS অব্যাহতি পায়) — `git checkout` + `npm install` চালু করে  |
 | `/api/db-backups/exportAll`                                                                              | এক্সপোর্ট আর্কাইভের জন্য `tar` প্রসেস চালু করে                                                            |

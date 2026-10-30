@@ -55,7 +55,6 @@ nginx/Cloudflare/Tailscale 터널 뒤에 배치했고 JWT가 유출되었거나 
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy 리스너 및 시스템 프록시                                    |
 | `/api/settings/mitm`                                                                                     | MITM 가로채기를 활성화(시스템 수준 프록시 상태)                                           |
 | `/api/issue-agent/`                                                                                      | 이슈 에이전트 — 저장소를 대상으로 로컬 도구를 생성                                        |
-| `/api/plugins/`, `/api/plugins`                                                                          | 플러그인 — `worker_threads` + `child_process`를 통해 로드/실행                            |
 | `/api/middleware/`                                                                                       | 사용자 미들웨어 — 운영자 코드를 프로세스 내에서 로드/실행                                 |
 | `/api/system/version`                                                                                    | 자동 업데이트(POST만 해당, GET/HEAD/OPTIONS는 제외) — `git checkout` + `npm install` 생성 |
 | `/api/db-backups/exportAll`                                                                              | 내보내기 아카이브를 위해 `tar` 생성                                                       |

@@ -56,7 +56,6 @@ route ላይ **ምንም ሁኔታ ሳይኖርበት፣ ከማንኛውም auth
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy listener + system proxy                                                |
 | `/api/settings/mitm`                                                                                     | MITM interceptionን ያነቃል (የsystem-ደረጃ proxy ሁኔታ)                                                       |
 | `/api/issue-agent/`                                                                                      | የIssue agent — በrepo ላይ አካባቢያዊ toolingን ያስነሳል                                                         |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — በ`worker_threads` + `child_process` ይጫናሉ/ይፈጸማሉ                                              |
 | `/api/middleware/`                                                                                       | የተጠቃሚ middleware — የoperator ኮድን በprocess ውስጥ ይጭናል/ያስፈጽማል                                             |
 | `/api/system/version`                                                                                    | ራስ-ሰር ማዘመን (POST ብቻ፤ GET/HEAD/OPTIONS ነጻ ናቸው) — `git checkout` + `npm install` ያስነሳል                  |
 | `/api/db-backups/exportAll`                                                                              | ለexport archive `tar`ን ያስነሳል                                                                          |
