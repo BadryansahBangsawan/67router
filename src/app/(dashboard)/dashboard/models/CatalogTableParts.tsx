@@ -87,15 +87,17 @@ export function CatalogTableFooter({
   const t = useTranslations("modelCatalog");
   return (
     <DataTableFooter
-      className="border-t border-border px-4 py-3"
+      className="border-t border-border px-5 py-3"
       metadata={
-        <p className="text-sm text-text-muted" aria-live="polite">
+        <p className="text-[13px] tabular-nums text-text-muted" aria-live="polite">
           {children}
         </p>
       }
       pagination={
         <div className="flex items-center gap-3">
-          <span className="text-sm text-text-muted">{t("page", { page, pageCount })}</span>
+          <span className="text-[13px] tabular-nums text-text-muted">
+            {t("page", { page, pageCount })}
+          </span>
           <Button variant="outline" size="sm" disabled={page === 1} onClick={onPrevious}>
             {t("previous")}
           </Button>
