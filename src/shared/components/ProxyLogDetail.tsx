@@ -49,7 +49,7 @@ function ObservedLinkField({ label, href, title, short }) {
         <a
           href={href}
           title={title}
-          className="text-sm font-medium font-mono text-primary hover:underline break-all"
+          className="text-sm font-medium font-mono text-text-main underline-offset-2 hover:underline break-all"
         >
           {short}…
         </a>
@@ -62,24 +62,17 @@ function ObservedLinkField({ label, href, title, short }) {
 
 function StatusBadges({ log, t }) {
   const typeColor = TYPE_COLORS[log.proxy?.type] || {
-    bg: "#6B7280",
-    text: "#fff",
     label: log.proxy?.type || "-",
   };
   const levelColor = LEVEL_COLORS[log.level] || LEVEL_COLORS.direct;
   const providerColor = PROVIDER_COLORS[log.provider] || {
-    bg: "#374151",
-    text: "#fff",
     label: (log.provider || "-").toUpperCase(),
   };
   return (
     <>
       <div>
         <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">{t("type")}</div>
-        <span
-          className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-          style={{ backgroundColor: typeColor.bg, color: typeColor.text }}
-        >
+        <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
           {typeColor.label}
         </span>
       </div>
@@ -87,10 +80,7 @@ function StatusBadges({ log, t }) {
         <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
           {t("level")}
         </div>
-        <span
-          className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-          style={{ backgroundColor: levelColor.bg, color: levelColor.text }}
-        >
+        <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
           {levelColor.label}
         </span>
       </div>
@@ -99,10 +89,7 @@ function StatusBadges({ log, t }) {
           {t("provider")}
         </div>
         {log.provider ? (
-          <span
-            className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-            style={{ backgroundColor: providerColor.bg, color: providerColor.text }}
-          >
+          <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
             {providerColor.label}
           </span>
         ) : (
@@ -154,7 +141,7 @@ function ObservedMetadataGrid({ log, t, emailsVisible }) {
         <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
           {t("proxy")}
         </div>
-        <div className="text-sm font-medium font-mono text-primary">
+        <div className="text-sm font-medium font-mono text-text-main">
           {formatProxyLabel(log.proxy, t("direct"))}
         </div>
       </div>
