@@ -8,10 +8,11 @@ lastUpdated: 2026-10-22
 > **Status:** the dashboard is built on the **Keak CI UI Kit** (`@keak/cheaper-inference-ui-kit`), vendored
 > as the workspace `packages/ui-kit` (`@omniroute/ui-kit`; the upstream snapshot is pinned in
 > `packages/ui-kit/UPSTREAM.md` and guarded by `npm run check:ui-kit-snapshot`). Light is the canonical
-> theme; the default preference is `system`. The accent is Keak lime (`--ci-color-accent`). Inter
-> (letter-spacing 0, `--ci-letter-spacing-ui`) is the UI family, Instrument Serif only for large sparse
-> display text (`.ci-dashboard-display`), IBM Plex Mono for code — all self-hosted through the
-> `@fontsource/*` imports at the top of `src/app/globals.css`. Every icon is a Lucide glyph.
+> theme; the default preference is `system`. The accent is Keak lime (`--ci-color-accent`). Geist is
+> the UI family and also the display face (`--ci-font-display` points at `--ci-font-ui`; there is no
+> display serif), Geist Mono carries code, model ids, URLs and keys — both self-hosted through the
+> `@fontsource-variable/geist` and `@fontsource-variable/geist-mono` imports at the top of
+> `src/app/globals.css`. Every icon is a Lucide glyph.
 
 ## 1. Where things live
 
@@ -96,8 +97,8 @@ lastUpdated: 2026-10-22
 4. Tailwind utilities win over kit component classes (the kit declares
    `@layer theme, base, components, utilities` and its rules live in `components`) — use utilities for
    spacing and layout, not to re-color kit components.
-5. Headings: `.ci-heading` (Inter, no tracking) for page and section titles; `.ci-dashboard-display`
-   (Instrument Serif) only for large, sparse display text such as the error-page status code.
+5. Headings: `.ci-heading` (Geist) for page and section titles; `.ci-dashboard-display` (Geist,
+   semibold) only for large, sparse display text such as the error-page status code.
 6. `tests/unit/dashboard-kit-sweep.test.ts` guards the kit adoption: no Material ligature span under
    `src/app` or `src/shared/components`; in the dashboard tree (`src/app/(dashboard)` and
    `src/shared/components`) no raw `<select>`, `<textarea>` or `<table>` and no hand-rolled
