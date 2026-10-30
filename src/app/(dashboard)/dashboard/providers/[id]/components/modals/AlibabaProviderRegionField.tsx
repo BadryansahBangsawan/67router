@@ -83,7 +83,7 @@ export function AlibabaProviderRegionChoices({
           className="h-auto w-full justify-start whitespace-normal p-4 text-left font-normal"
         >
           <div className="flex items-start gap-3">
-            <Icon name={choice.icon} className="mt-0.5 text-primary" />
+            <Icon name={choice.icon} className="mt-0.5 text-text-muted" />
             <div className="min-w-0 flex-1">
               <h3 className="mb-1 font-semibold">{choice.label}</h3>
               <p className="text-sm text-text-muted">{choice.description}</p>
@@ -142,7 +142,7 @@ export function XiaomiTokenPlanRegionChoices({
           className="h-auto w-full justify-start whitespace-normal p-4 text-left font-normal"
         >
           <div className="flex items-start gap-3">
-            <Icon name={choice.icon} className="mt-0.5 text-primary" />
+            <Icon name={choice.icon} className="mt-0.5 text-text-muted" />
             <div className="min-w-0 flex-1">
               <h3 className="mb-1 font-semibold">{choice.label}</h3>
               <p className="text-sm text-text-muted">{choice.description}</p>

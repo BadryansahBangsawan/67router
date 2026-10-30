@@ -450,7 +450,7 @@ export default function CustomModelsSection({
   return (
     <div className="mt-6 pt-6 border-t border-border">
       <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-        <Icon name="tune" size={16} className="text-primary" />
+        <Icon name="tune" size={16} className="text-text-muted" />
         {t("customModels")}
       </h3>
       <p className="text-xs text-text-muted mb-3">{t("customModelsHint")}</p>
@@ -587,7 +587,7 @@ export default function CustomModelsSection({
                 className="flex items-center gap-3 rounded-lg border border-border p-3 hover:bg-sidebar/50"
               >
                 {editingModelId !== model.id && (
-                  <Icon name="tune" size={16} className="text-primary" />
+                  <Icon name="tune" size={16} className="text-text-muted" />
                 )}
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium truncate">{model.name || model.id}</p>
@@ -611,7 +611,7 @@ export default function CustomModelsSection({
                     )}
                     {hasSyncedBase && (
                       <span
-                        className="text-[10px] px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-medium"
+                        className="text-[10px] px-1.5 py-0.5 rounded-full border border-border bg-bg-subtle text-text-main font-medium"
                         title={providerText(
                           t,
                           "overridesUpstreamModelHint",

@@ -115,7 +115,7 @@ export default function ModelEndpointTagsEditor({
           className={
             adapterStatuses[endpoint] === "unavailable"
               ? "rounded bg-error/15 px-1 py-0.5 text-error"
-              : "rounded bg-primary/10 px-1 py-0.5 text-primary"
+              : "rounded border border-border bg-bg-subtle px-1 py-0.5 text-text-main"
           }
         >
           {endpoint}

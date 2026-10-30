@@ -948,8 +948,8 @@ export default function EditConnectionModal({
             setFormData({ ...formData, priority: Number.parseInt(e.target.value) || 1 })
           }
         />
-        <div className="flex flex-col gap-2 rounded-lg border border-primary/30 bg-primary/5 p-4">
-          <div className="flex items-center gap-1.5 text-sm font-semibold text-primary">
+        <div className="flex flex-col gap-2 rounded-lg border border-border bg-bg-subtle p-4">
+          <div className="flex items-center gap-1.5 text-sm font-semibold text-text-main">
             <Icon name="dynamic_feed" size={18} />
             {t("accountConcurrencyCapLabel")}
           </div>
