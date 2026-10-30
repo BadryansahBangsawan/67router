@@ -4,7 +4,7 @@
 
 ---
 
-Kétféleképpen helyezhető a Cursor az 67router mögé IDE-munkamenet nélkül:
+Kétféleképpen helyezhető a Cursor a 67router mögé IDE-munkamenet nélkül:
 
 1. **`cursor-api` szolgáltató** („Cursor API” kártya, alias: `cua`): API-kulcsos
    szolgáltató, amely egy Cursor felhasználói API-kulcsot tárol (`crsr_…`, létrehozható
@@ -63,7 +63,7 @@ Megjegyzések:
 
 - A `cursor-api` modelllistája a statikus Cursor-regisztrációs adatbázisból
   származik (ugyanaz a lista, amelyet az IDE-szolgáltató tartalékként használ);
-  nincs szükség a `cursor-agent` telepítésére az 67router-gazdagépen.
+  nincs szükség a `cursor-agent` telepítésére a 67router-gazdagépen.
 - A `POST /api/providers/{id}/refresh-cursor` kizárólag a `cursor`
   IDE-szolgáltatóhoz használható; a `cursor-api` kapcsolatok nem rendelkeznek
   megújítandó IDE-munkamenettel.
@@ -88,14 +88,14 @@ kiválasztott Cursor-fiók katalógusától és jogosultságaitól függ.
 `src/shared/constants/publicApiRoutes.ts` fájlban van regisztrálva, mivel a kezelő
 saját maga végzi a hitelesítést:
 
-| Útvonal                                                                                                                        | A CLI által küldendő hitelesítés | Az 67router működése                                                                                                                                                                                              |
+| Útvonal                                                                                                                        | A CLI által küldendő hitelesítés | A 67router működése                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <67router API-kulcs>`    | Ellenőrzi a kulcsot, kiállít egy 1 órás HS256 JWT-t (a `JWT_SECRET` használatával aláírva), és visszaadja azt                                                                                                     |
 | minden más útvonal (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <az a JWT>`              | Ellenőrzi a kibocsátót, a célközönséget és a lejáratot, kiválaszt egy aktív `cursor-api` kapcsolatot, lecseréli az Authorization fejlécet a kicserélt Cursor-tokenre, majd streamelve továbbítja vissza a választ |
 
 A CLI dekódolja az `exp` mezőt minden kapott tokenből, ezért ha nem átlátszó
 tokent kap, szinte minden kérés előtt újra elvégzi a cserét; a kiállított JWT
-ezt elkerüli. Az 67router-tól kapott 401-es válasz hatására a CLI újra
+ezt elkerüli. A 67router-tól kapott 401-es válasz hatására a CLI újra
 elvégzi a cserét.
 
 ### Beállítás
@@ -113,7 +113,7 @@ elvégzi a cserét.
    konfigurált ügynökgazdagéphez nyitja meg, és csak a vezérlősík RPC-i haladnak
    át a végponton.
 
-3. Futtassa a CLI-t az 67router-on keresztül:
+3. Futtassa a CLI-t a 67router-on keresztül:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -122,7 +122,7 @@ elvégzi a cserét.
    ```
 
 Minden továbbítás megjelenik a Naplókban `cursor-api` szolgáltatóval,
-`cursor-cli` kéréstípussal és `/api/cursor-cli/<rpc>` útvonallal, az 67router
+`cursor-cli` kéréstípussal és `/api/cursor-cli/<rpc>` útvonallal, a 67router
 API-kulcshoz és a kérést kiszolgáló kapcsolathoz társítva.
 
 ### Hibamódok

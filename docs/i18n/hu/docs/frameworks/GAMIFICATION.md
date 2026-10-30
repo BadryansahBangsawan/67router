@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az 67router egy helyi működést előnyben részesítő gamifikációs réteget tartalmaz, amely
+A 67router egy helyi működést előnyben részesítő gamifikációs réteget tartalmaz, amely
 a platform használatáért jutalmazza a felhasználókat — kérések indításáért, szolgáltatóváltásért,
 kombinációk létrehozásáért, tokenek megosztásáért és a közösség támogatásáért. Minden állapot
 SQLite-adatbázisban található; a közösségi szerverekkel való föderáció opcionális és push-alapú.
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Művelet           | XP  | Leírás                                                               |
 | ----------------- | --- | -------------------------------------------------------------------- |
-| `request`         | 1   | Minden, az 67router-on keresztül irányított API-kérés után           |
+| `request`         | 1   | Minden, a 67router-on keresztül irányított API-kérés után            |
 | `provider_switch` | 5   | Másik szolgáltatóra váltás                                           |
 | `model_switch`    | 3   | Másik modellre váltás                                                |
 | `combo_create`    | 10  | Új kombináció létrehozása                                            |
@@ -582,7 +582,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (egyedi, indexelt) |
 | `token_hash` | SHA-256(raw_token)            |
 
-A nyers tokent a rendszer pontosan egyszer, a létrehozáskor adja vissza a felhasználónak. Az 67router
+A nyers tokent a rendszer pontosan egyszer, a létrehozáskor adja vissza a felhasználónak. A 67router
 soha többé nem tárolja és nem jeleníti meg — kizárólag a kivonat marad meg.
 
 ### Az önajánlás megakadályozása

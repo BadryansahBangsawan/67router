@@ -6,7 +6,7 @@
 
 ## Összefoglalás
 
-Az 67router mostantól három továbbítási módot támogat az `/api/v1/relay/chat/completions` végponton:
+A 67router mostantól három továbbítási módot támogat az `/api/v1/relay/chat/completions` végponton:
 
 - `ts`: A TypeScript-továbbító használata folyamaton belül.
 - `bifrost`: A Bifrost-átjáró kényszerített használata.
@@ -45,7 +45,7 @@ Ha jelenleg a 9router és a CLIPROXYAPI megoldásokat hasonlítja össze:
 
 ## A háttérrendszer határfelületének szerződése
 
-A stabil termékhatárt az 67router továbbítási API-ja jelenti, nem az irányítópult megvalósítása. A Next.js irányítópult telepítheti, konfigurálhatja és felügyelheti a helyi szolgáltatásokat, a kérések útválasztásának azonban a továbbítási API-n keresztül kell belépnie, és az átadást e határ mögött kell elvégezni.
+A stabil termékhatárt a 67router továbbítási API-ja jelenti, nem az irányítópult megvalósítása. A Next.js irányítópult telepítheti, konfigurálhatja és felügyelheti a helyi szolgáltatásokat, a kérések útválasztásának azonban a továbbítási API-n keresztül kell belépnie, és az átadást e határ mögött kell elvégezni.
 
 Hosszú távú háttérrendszer-választások:
 

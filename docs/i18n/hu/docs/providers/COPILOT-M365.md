@@ -39,7 +39,7 @@ A teljes URL formátuma:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Az 67router-ban lépjen a **Providers → Add Provider** menüpontra, válassza a **Microsoft 365 Copilot
+6. A 67router-ban lépjen a **Providers → Add Provider** menüpontra, válassza a **Microsoft 365 Copilot
    (BizChat)** lehetőséget, majd illessze be a hitelesítő adatot a következő formátumban:
 
 ```
@@ -55,9 +55,9 @@ Ahelyett, hogy manuálisan másolná ki az értékeket a WebSocket URL-jéből, 
 1. Nyissa meg a **DevTools → Network** lapot.
 2. Indítson el vagy folytasson egy BizChat-beszélgetést (ez létrehozza a WebSocket-kapcsolatot).
 3. Kattintson jobb gombbal a Network panelen, majd válassza a **Save all as HAR with content** lehetőséget.
-4. Az 67router szolgáltatói kapcsolat párbeszédpanelén használja az **Import .har file** gombot.
+4. A 67router szolgáltatói kapcsolat párbeszédpanelén használja az **Import .har file** gombot.
 
-Az 67router megkeresi a HAR-fájlban a Chathub WebSocket URL-jét, kinyeri az
+A 67router megkeresi a HAR-fájlban a Chathub WebSocket URL-jét, kinyeri az
 `access_token` és `chathubPath` értékeket, majd automatikusan kitölti a hitelesítőadat-mezőket. A
 HAR-importálás dekódolja a JWT lejárati idejét, és megjeleníti a token hátralévő élettartamát.
 
@@ -80,7 +80,7 @@ A manuális újbóli rögzítés elkerüléséhez Microsoft-frissítési tokent 
 | `tier`         | `individual` (alapértelmezett), `edu` vagy `enterprise`                     |
 
 A frissítési tokent egy, a `substrate.office.com/sydney` hatókörre korlátozott Microsoft eszközkódos vagy engedélyezésikód-folyamatból szerezheti be.
-Ha a `refreshToken` be van állítva, az 67router minden kérés előtt előzetesen frissíti az `access_token` értékét, így nem kell
+Ha a `refreshToken` be van állítva, a 67router minden kérés előtt előzetesen frissíti az `access_token` értékét, így nem kell
 minden ~75 perces lejárat után újból rögzítenie azt.
 
 Ha a `refreshToken` nincs beállítva, minden lejárat után manuálisan kell újból

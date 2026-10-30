@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router egyetlen, központi engedélyezési listával szabályozza, hogy mely
+A 67router egyetlen, központi engedélyezési listával szabályozza, hogy mely
 **böngészőeredetek** olvashatják a más eredetű válaszokat. A modell
 **alapértelmezés szerint mindent tilt**: egyetlen eredet sem engedélyezett, amíg
 kifejezetten fel nem veszi. Ez az oldal bemutatja, hogyan történik az engedélyezési
@@ -52,7 +52,7 @@ A köztes réteg minden kérésnél a következő sorrendben számítja ki az
 ## Fenyegetési modell — mit tesz ténylegesen elérhetővé a `CORS_ALLOW_ALL=true`
 
 Az általános OWASP-figyelmeztetést („helyettesítő karakteres CORS = bármely
-webhely meghívhatja az API-t”) érdemes komolyan venni, az 67router kitettsége
+webhely meghívhatja az API-t”) érdemes komolyan venni, a 67router kitettsége
 azonban **szűkebb az általános esetnél**, egy konkrét megvalósítási sajátosság
 miatt:
 
@@ -103,7 +103,7 @@ nyomon.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ha az 67router fordított proxy / alagút (nginx, Caddy, Cloudflare
+- Ha a 67router fordított proxy / alagút (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) mögött fut, a CORS **nem** az egyetlen védelmi mechanizmus — a loopback útvonalvédő
   továbbra is védi a folyamatindításra képes útvonalakat (lásd:
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ne hamisítsa meg az
@@ -138,12 +138,12 @@ Az eredetek összehasonlítása nem érzékeny a kis- és nagybetűkre, a záró
   felügyeleti/irányítópulti eredeteket ne vegye fel semmilyen megengedő konfigurációba; ezeknek továbbra is
   szigorúan hiba esetén tiltó módon kell működniük.
 
-## Példa: fordított proxy az 67router előtt
+## Példa: fordított proxy a 67router előtt
 
-A CORS-szabályokat maga az 67router érvényesíti, ezért a proxynak általában **nem** szabad `Access-Control-*` fejléceket hozzáadnia vagy átírnia (a duplikált fejlécek hibát okoznak a böngészőkben). Zárja le a TLS-kapcsolatot, majd továbbítsa a kérést — az előzetes kérésre az 67router válaszoljon:
+A CORS-szabályokat maga a 67router érvényesíti, ezért a proxynak általában **nem** szabad `Access-Control-*` fejléceket hozzáadnia vagy átírnia (a duplikált fejlécek hibát okoznak a böngészőkben). Zárja le a TLS-kapcsolatot, majd továbbítsa a kérést — az előzetes kérésre a 67router válaszoljon:
 
 ```nginx
-# nginx — továbbítás az 67router-nak; itt NE szúrjon be Access-Control-* fejléceket
+# nginx — továbbítás a 67router-nak; itt NE szúrjon be Access-Control-* fejléceket
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -151,13 +151,13 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Tartsa meg a továbbítási fejléceket: az azonos gépen futó proxy a loopback felől csatlakozik,
-    # és ezek jelzik az 67router számára, hogy a hívó nem a helyi üzemeltető. Ha a proxy egyiket
+    # és ezek jelzik a 67router számára, hogy a hívó nem a helyi üzemeltető. Ha a proxy egyiket
     # sem adja hozzá, minden távoli hívó helyinek fog látszani. Az X-Forwarded-For értékét se állítsa
     # soha 127.0.0.1-re.
 }
 ```
 
-Az engedélyezett böngészőeredeteket az 67router-ban (`CORS_ALLOWED_ORIGINS` vagy a Security lapon) állítsa be, ne a proxyban.
+Az engedélyezett böngészőeredeteket a 67router-ban (`CORS_ALLOWED_ORIGINS` vagy a Security lapon) állítsa be, ne a proxyban.
 
 ## Forrásfájlok
 

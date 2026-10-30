@@ -93,7 +93,7 @@
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "ഒന്നിലധികം ദാതാക്കളുടെ LLM-കൾക്കായുള്ള ഒരു AI ഗേറ്റ്വേയാണ് 67router. നിങ്ങളുടെ എല്ലാ AI ദാതാക്കൾക്കും ഒരൊറ്റ എൻഡ്പോയിന്റ്.",
   "start_url": "/",

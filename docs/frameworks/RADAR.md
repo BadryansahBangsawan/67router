@@ -43,7 +43,7 @@ or external integration is currently available.
 | Supporter offers                 | Implemented as a separate signed, live-only feed and dashboard page. The client revalidates the closed benefit schema, preserves the last good cache, filters expired entries, and labels partner offers explicitly.     |
 | Intel and supporter recognition  | Implemented as a strict signed live-only feed with Radar-owned ELO, factual catalog freshness/trend, a verified local supporter badge, dashboard page, and local-only CLI status/sync commands.                          |
 | Payments and transactional email | Not implemented in the OSS client. Purchase, donation, receipt review, recovery, and mail delivery belong to the private service; hosted availability still depends on its supervised deploy and provider configuration. |
-| Research-agent workstream        | Not part of this client release. Curated feed contents remain server-side data; no autonomous research agent runs in an 67router installation.                                                                           |
+| Research-agent workstream        | Not part of this client release. Curated feed contents remain server-side data; no autonomous research agent runs in a 67router installation.                                                                            |
 
 ---
 

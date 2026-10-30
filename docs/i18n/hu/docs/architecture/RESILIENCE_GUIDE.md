@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router három különálló, de egymással összefüggő rezilienciamechanizmussal rendelkezik. Mindegyik más hatókörrel és céllal bír. Az útválasztási viselkedés hibakeresésekor tartsd őket elkülönítve.
+A 67router három különálló, de egymással összefüggő rezilienciamechanizmussal rendelkezik. Mindegyik más hatókörrel és céllal bír. Az útválasztási viselkedés hibakeresésekor tartsd őket elkülönítve.
 
 ![3 rétegű rezilienciamodell](../diagrams/exported/resilience-3layers.svg)
 
@@ -199,7 +199,7 @@ Az életciklus a `POST /api/v1/session-leases` végpontra épül, `acquire`, `re
 A felügyelt inferenciakérések megadják az átlátszatlan `X-OmniRoute-Lease-Owner` értéket és a pontos
 `X-OmniRoute-Lease-Generation` értéket. A tulajdonos a `vlo_` előtagból és az azt követő 43 base64url karakterből áll; csak a SHA-256-kivonatát tárolja a rendszer. Minden végső továbbítási kirekesztés hozzáköti a hitelesített API-kulcs-azonosítót és az aktív kapcsolatazonosítót is. A bérletvezérlő fejlécek eltávolításra kerülnek a naplókból, a megőrzött kéréspillanatképekből és az upstream-végrehajtó fejléceiből.
 
-Ha a közönséges útválasztásnak vannak jogosult felügyelt jelöltjei, de minden szabad jelöltet idegen aktív bérlet foglal le, az 67router HTTP `429` választ ad, „a bérletkapacitás nem áll rendelkezésre" kóddal, „kapacitásra várakozó" állapottal és a legkorábbi releváns lejáratból származtatott korlátozott `Retry-After` értékkel.
+Ha a közönséges útválasztásnak vannak jogosult felügyelt jelöltjei, de minden szabad jelöltet idegen aktív bérlet foglal le, a 67router HTTP `429` választ ad, „a bérletkapacitás nem áll rendelkezésre" kóddal, „kapacitásra várakozó" állapottal és a legkorábbi releváns lejáratból származtatott korlátozott `Retry-After` értékkel.
 A közönséges üres jogosultság nem bérletversengés, és megtartja a meglévő útválasztási hibaszemantikáját.
 
 A kapcsolódó mechanizmusok elkülönülve maradnak:
@@ -219,7 +219,7 @@ A kapcsolódó mechanizmusok elkülönülve maradnak:
 - `429` / `403` / `402` — kvóta- vagy jogosultsági jelzés — a **kvótacsalád** zárolása:
   codex esetén a teljes `codex` / `spark` hatókör (a kapcsolat összes `gpt-5*` modellje), más szolgáltatóknál a `getQuotaScopedModelForProvider()`.
 - A `404` a puszta modellt zárolja (a `getModelLockKey()` a `not_found` esetre szűkít).
-- Bármely más státusz — `5xx` transport-/szerverhibák és az 67router saját, minőségvalidálásból szintetizált `502`-ese — csak a **pontos** szolgáltató/kapcsolat/modell hármast zárolja. Egy rossz stream egyetlen modellen nem bizonyíték a fiók kvótájára vonatkozóan; e szabály előtt egyetlen üres válasz a `codex/gpt-5.6-luna`-n 2–30 percre (fokozódóan) kivette az adott kapcsolat összes `gpt-5*` modelljét a routingból, miközben a kvótája érintetlen maradt.
+- Bármely más státusz — `5xx` transport-/szerverhibák és a 67router saját, minőségvalidálásból szintetizált `502`-ese — csak a **pontos** szolgáltató/kapcsolat/modell hármast zárolja. Egy rossz stream egyetlen modellen nem bizonyíték a fiók kvótájára vonatkozóan; e szabály előtt egyetlen üres válasz a `codex/gpt-5.6-luna`-n 2–30 percre (fokozódóan) kivette az adott kapcsolat összes `gpt-5*` modelljét a routingból, miközben a kvótája érintetlen maradt.
 - A hívó explicit `scope` opciója mindig nyer (az Antigravity `"exact"`-et ad át).
 
 **Cél:** elkerülni egy egész kapcsolat letiltását, amikor csak egyetlen modell nem érhető el vagy kvótakorlátozott.
@@ -323,7 +323,7 @@ párhuzamossági korlátok**, soronként egy `model=cap`) vagy a
   felső korlátok.
 - **Helyi sorbaállítás, felderítés nélkül:** a többletkérések helyben állnak sorba a
   meglévő várólista-/időtúllépési szemantikával (típusos `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL` beléptetési hibák). Az 67router nem deríti fel és nem
+  `SEMAPHORE_QUEUE_FULL` beléptetési hibák). A 67router nem deríti fel és nem
   következteti le az upstream szabályzatát — pontosan az üzemeltető által beállított
   korlátokat kényszeríti ki. Egy telített modellkapu sosem tiltja le a szolgáltatót,
   és sosem hoz létre végleges modellzárolást; az upstream 429/cooldown/fallback
@@ -428,7 +428,7 @@ Maga a befogadási ellenőrzés tiszta függvény (`open-sse/services/rateLimitM
 ### A rate-limit automatikus engedélyezésének biztonsági hálója és kapcsolatvédelem (`rateLimitProtection`)
 
 **Automatikus engedélyezési biztonsági háló** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, alapértelmezett `true`):
-Alapértelmezés szerint az 67router automatikusan engedélyezi a rate-limit sorvédelmet az összes aktív API-kulcsos szolgáltatókapcsolathoz (`getProviderCategory(provider) === "apikey"`). Ez biztosítja, hogy a rate-érzékeny upstream API-kulcsok felé érkező kérések sorba álljanak, és a Bottleneck-en keresztül szabályozva fussanak, ahelyett, hogy upstream 429-es hibákba robbannának. A biztonsági háló felülírható a `RATE_LIMIT_AUTO_ENABLE` környezeti változóval (`false`/`0`/`off` kikapcsolja, `true`/`1`/`on` kényszeríti a bekapcsolást), amely elsőbbséget élvez a mentett dashboard-beállítással szemben (**Beállítások → Rugalmasság** / `PATCH /api/resilience`).
+Alapértelmezés szerint a 67router automatikusan engedélyezi a rate-limit sorvédelmet az összes aktív API-kulcsos szolgáltatókapcsolathoz (`getProviderCategory(provider) === "apikey"`). Ez biztosítja, hogy a rate-érzékeny upstream API-kulcsok felé érkező kérések sorba álljanak, és a Bottleneck-en keresztül szabályozva fussanak, ahelyett, hogy upstream 429-es hibákba robbannának. A biztonsági háló felülírható a `RATE_LIMIT_AUTO_ENABLE` környezeti változóval (`false`/`0`/`off` kikapcsolja, `true`/`1`/`on` kényszeríti a bekapcsolást), amely elsőbbséget élvez a mentett dashboard-beállítással szemben (**Beállítások → Rugalmasság** / `PATCH /api/resilience`).
 
 **A kapcsolatonkénti `rateLimitProtection` szemantikája:**
 A kapcsolatonkénti rate-limit védelmet a szolgáltatókapcsolatok `rateLimitProtection` logikai mezője követi nyomon (SQLite-ban `rate_limit_protection` néven tárolva):
@@ -801,7 +801,7 @@ korlátok:
 
 > Szó szerint áthelyezve az `AGENTS.md` fájlból → "Resilience Runtime State" (PR #12743), hogy az ügynök-útmutató a 40k kontextuskeret alatt maradjon. Ez a fenti szakaszok sűrített, ügynököknek szóló nézete; a számozott szakaszok maradnak a teljes referencia.
 
-Az 67router három rokon, de eltérő ideigleneshiba-kezelési mechanizmussal rendelkezik. Az útválasztási viselkedés hibakeresésekor tartsa külön a hatókörüket. Tekintse meg a [3 rétegű hibatűrési diagramot](../diagrams/exported/resilience-3layers.svg)
+A 67router három rokon, de eltérő ideigleneshiba-kezelési mechanizmussal rendelkezik. Az útválasztási viselkedés hibakeresésekor tartsa külön a hatókörüket. Tekintse meg a [3 rétegű hibatűrési diagramot](../diagrams/exported/resilience-3layers.svg)
 (forrás: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))
 az egy pillantással áttekinthető térképért.
 

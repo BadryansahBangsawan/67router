@@ -332,7 +332,7 @@ Full PT-BR and EN translations are provided. 39 other locales fall back to EN au
 
 ## 9. Quick Start
 
-### Step 1 — Get an 67router API Key
+### Step 1 — Get a 67router API Key
 
 1. Open `/dashboard/api-manager` → **Create API Key**
 2. Give it a name (e.g. `cli-tools`) and select all permissions

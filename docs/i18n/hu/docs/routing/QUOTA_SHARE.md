@@ -15,7 +15,7 @@ A kvótamegosztó motor méltányosan osztja el egy szolgáltató időalapú kv�
 (pl. a Codex 5 órás időablakát vagy a Kimi 1500 kérés/óra korlátját) az azonos
 kapcsolatot használó több API-kulcs között.
 
-**A megoldott probléma:** Az 67router számos API-kulcs kéréseit továbbítja
+**A megoldott probléma:** A 67router számos API-kulcs kéréseit továbbítja
 ugyanahhoz a felsőbb szintű szolgáltatói fiókhoz. Megosztási logika nélkül az A
 kulcstól érkező hirtelen terhelés kimerítheti a szolgáltató adott órára vonatkozó
 kvótáját, így a B és C kulcsok az időablak visszaállásáig blokkolva maradnak.

@@ -4,11 +4,11 @@
 
 ---
 
-Az 67router teljes mértékben telepíthető Progressive Web Appként érhető el. Ha bármely mobilböngészőből — Androidon (Chrome) vagy iOS-en (Safari) — megnyitja az irányítópultot, a „Hozzáadás a kezdőképernyőhöz” lehetőséggel alkalmazás-áruház használata nélkül is natív alkalmazásszerű élményben lehet része.
+A 67router teljes mértékben telepíthető Progressive Web Appként érhető el. Ha bármely mobilböngészőből — Androidon (Chrome) vagy iOS-en (Safari) — megnyitja az irányítópultot, a „Hozzáadás a kezdőképernyőhöz” lehetőséggel alkalmazás-áruház használata nélkül is natív alkalmazásszerű élményben lehet része.
 
 ## Mi az a PWA?
 
-A Progressive Web App az 67router webes irányítópultját natív mobilalkalmazáshoz hasonló megjelenésűvé és működésűvé alakítja. A telepítés után:
+A Progressive Web App a 67router webes irányítópultját natív mobilalkalmazáshoz hasonló megjelenésűvé és működésűvé alakítja. A telepítés után:
 
 - Saját ikonjával indítható a kezdőképernyőről
 - Teljes képernyőn nyílik meg — böngészőcímsor és lapkezelő felület nélkül
@@ -20,26 +20,26 @@ A Progressive Web App az 67router webes irányítópultját natív mobilalkalmaz
 
 ### Android (Chrome)
 
-1. Nyissa meg az 67router irányítópultját a Chrome-ban: `http://YOUR_IP:20128`
+1. Nyissa meg a 67router irányítópultját a Chrome-ban: `http://YOUR_IP:20128`
 2. A Chrome automatikusan megjeleníti az **„67router hozzáadása a kezdőképernyőhöz”** szalagcímet, vagy:
    - Koppintson a **⋮** menüre (három pont) → **„Hozzáadás a kezdőképernyőhöz”** vagy **„Alkalmazás telepítése”**
 3. Erősítse meg a műveletet
-4. Az 67router önálló alkalmazásként jelenik meg a kezdőképernyőn
+4. A 67router önálló alkalmazásként jelenik meg a kezdőképernyőn
 
 ### iOS (Safari)
 
-1. Nyissa meg az 67router irányítópultját a Safariban: `http://YOUR_IP:20128`
+1. Nyissa meg a 67router irányítópultját a Safariban: `http://YOUR_IP:20128`
 2. Koppintson a **Megosztás** gombra (nyíllal ellátott négyzet)
 3. Görgessen lefelé, majd koppintson a **„Hozzáadás a Főképernyőhöz”** lehetőségre
 4. Adjon neki nevet (alapértelmezés szerint „67router”), majd koppintson a **Hozzáadás** gombra
-5. Az 67router az alkalmazás ikonjával együtt megjelenik a kezdőképernyőn
+5. A 67router az alkalmazás ikonjával együtt megjelenik a kezdőképernyőn
 
 ### Asztali számítógép (Chrome / Edge)
 
-1. Nyissa meg az 67router irányítópultját
+1. Nyissa meg a 67router irányítópultját
 2. Kattintson a címsorban található **telepítési ikonra** (vagy ⋮ → „67router telepítése...”)
 3. Erősítse meg a műveletet
-4. Az 67router önálló ablakban nyílik meg — lapok és címsor nélkül
+4. A 67router önálló ablakban nyílik meg — lapok és címsor nélkül
 
 ## Funkciók
 
@@ -49,7 +49,7 @@ A jegyzék `display: "fullscreen"` beállítással rendelkezik, ami azt jelenti,
 
 ### Offline támogatás
 
-Az 67router intelligens gyorsítótárazást biztosító service workert (`sw.js`) tartalmaz:
+A 67router intelligens gyorsítótárazást biztosító service workert (`sw.js`) tartalmaz:
 
 | Erőforrás típusa                                                  | Stratégia                                     | Működés                                                                                                            |
 | ----------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -70,7 +70,7 @@ Ha a hálózat nem érhető el, és a felhasználó új oldalra navigál, a serv
 
 ### Alkalmazásikonok
 
-Az 67router minden platformhoz optimalizált ikonokat biztosít:
+A 67router minden platformhoz optimalizált ikonokat biztosít:
 
 | Fájl                   | Méret              | Felhasználás                                 |
 | ---------------------- | ------------------ | -------------------------------------------- |
@@ -93,7 +93,7 @@ A Next.js generálja a `src/app/manifest.ts` fájlon keresztül:
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
@@ -145,9 +145,9 @@ A `src/shared/components/PwaRegister.tsx` helyen található klienskomponens:
 
 ## Használat Termuxszal (Android)
 
-Ha az 67router-ot Androidon, Termuxon keresztül futtatod, a PWA zökkenőmentesen működik:
+Ha a 67router-ot Androidon, Termuxon keresztül futtatod, a PWA zökkenőmentesen működik:
 
-1. Indítsd el az 67router-ot a Termuxban: `npx omniroute`
+1. Indítsd el a 67router-ot a Termuxban: `npx omniroute`
 2. Nyisd meg a Chrome-ot ugyanazon a telefonon: `http://localhost:20128`
 3. Telepítsd a PWA-t a „Hozzáadás a kezdőképernyőhöz” lehetőséggel
 4. A PWA csatlakozik a helyi Termux-kiszolgálóhoz — minden az eszközön fut
@@ -156,7 +156,7 @@ Ez a kombináció azt jelenti, hogy az Android-telefonod egyszerre **kiszolgál�
 
 ## Használat más eszközökről
 
-Telepítsd a PWA-t bármely olyan eszközre, amelynek böngészője hozzáfér az 67router-kiszolgálódhoz:
+Telepítsd a PWA-t bármely olyan eszközre, amelynek böngészője hozzáfér a 67router-kiszolgálódhoz:
 
 - **Másik telefon/táblagép**: Nyisd meg a `http://PHONE_IP:20128` címet, és telepítsd a PWA-t
 - **Laptop**: Nyisd meg a Chrome vagy az Edge böngészőt, és telepítsd asztali PWA-ként

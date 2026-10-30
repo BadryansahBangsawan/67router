@@ -4,7 +4,7 @@
 
 ---
 
-Irányítsa a **Claude Code** CLI-t (`claude`) az 67router-ra — helyi vagy távoli VPS-en —
+Irányítsa a **Claude Code** CLI-t (`claude`) a 67router-ra — helyi vagy távoli VPS-en —
 modellenkénti profilokkal, a Codex beállítását tükrözve.
 
 ---
@@ -20,7 +20,7 @@ omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # Modellenkénti profilok létrehozása, majd az egyik elindítása
 omniroute setup-claude            # létrehozza a ~/.claude/profiles/<name>/settings.json fájlt
-omniroute launch --profile glm52  # Claude Code a glm/glm-5.2 használatával az 67router-on keresztül
+omniroute launch --profile glm52  # Claude Code a glm/glm-5.2 használatával a 67router-on keresztül
 ```
 
 ---
@@ -33,7 +33,7 @@ irányítható egy egyéni végpontra (nincs `--base-url` kapcsolója):
 | Változó                                      | Cél                                                                                                                    |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | Az átjáró gyökér-URL-je (a Claude Code hozzáfűzi a `/v1/messages` útvonalat). **Ne legyen `/v1` utótag.**              |
-| `ANTHROPIC_AUTH_TOKEN`                       | `Authorization: Bearer …` fejlécként küldi el — használja az 67router hozzáférési tokenjét/API-kulcsát                 |
+| `ANTHROPIC_AUTH_TOKEN`                       | `Authorization: Bearer …` fejlécként küldi el — használja a 67router hozzáférési tokenjét/API-kulcsát                  |
 | `ANTHROPIC_API_KEY`                          | Alternatíva: `x-api-key` fejlécként küldi el. Ha mindkettő be van állítva, az `ANTHROPIC_AUTH_TOKEN` élvez elsőbbséget |
 | `ANTHROPIC_MODEL`                            | Egy adott modell kényszerítése (felülírja a `/model` választó alapértelmezését)                                        |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → a natív `/model` választó felsorolja a `/v1/models` végpont `claude*`/`anthropic*` modelljeit                    |
@@ -50,9 +50,9 @@ egyszerűen működik), ellenőrzi a kiszolgáló állapotát, majd elindítja a
 
 ## Discovery-aliasok – nem Claude modellek megjelenítése a `/model` választóban
 
-A Claude Code gateway modellfelderítése csak azokat az azonosítókat listázza, amelyek `claude` vagy `anthropic` előtaggal kezdődnek, ezért `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` mellett a natív `/model` választó alapesetben **csak** az 67router Claude/Anthropic modelljeit mutatja – egy `kimi/kimi-k2.6` vagy `glm/glm-5.2` sosem jelenik meg, pedig a routing hibátlanul működik.
+A Claude Code gateway modellfelderítése csak azokat az azonosítókat listázza, amelyek `claude` vagy `anthropic` előtaggal kezdődnek, ezért `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` mellett a natív `/model` választó alapesetben **csak** a 67router Claude/Anthropic modelljeit mutatja – egy `kimi/kimi-k2.6` vagy `glm/glm-5.2` sosem jelenik meg, pedig a routing hibátlanul működik.
 
-Az 67router bármely engedélyezett modellt (és kombót) tükrözhet egy `claude/…` azonosító alatt, így az átmegy ezen a szűrőn, és megjelenik a választóban:
+A 67router bármely engedélyezett modellt (és kombót) tükrözhet egy `claude/…` azonosító alatt, így az átmegy ezen a szűrőn, és megjelenik a választóban:
 
 ```
 kimi/kimi-k2.6            →  claude/kimi/kimi-k2.6      "Kimi K2.6 (OmniRoute)"
@@ -60,7 +60,7 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-Amikor kiválasztja az egyiket a Claude Code-ban, az 67router a routing előtt leválasztja a `claude/` burkolót, visszaállítva a valódi azonosítót – egy valódi `claude/<real-claude-model>` azonosítót (a tényleges Claude OAuth providert) mindig érintetlenül hagy.
+Amikor kiválasztja az egyiket a Claude Code-ban, a 67router a routing előtt leválasztja a `claude/` burkolót, visszaállítva a valódi azonosítót – egy valódi `claude/<real-claude-model>` azonosítót (a tényleges Claude OAuth providert) mindig érintetlenül hagy.
 
 Alapértelmezetten csak az alapazonosítók kerülnek tükrözésre. Az opt-in `CATALOG_MIRROR_REFINEMENTS_ENABLED` feature flag bekapcsolásával a katalógus által már felsorolt reasoning-effort változatok (pl. `codex/gpt-6-sol-high`) ugyanúgy tükröződnek, mint bármely más azonosító, így a Claude Code explicit effort-szintet választhat, a beépített `auto/*` azonosítók pedig, amelyeket a kérési útvonal nem tud előállítani, nem kerülnek tükrözésre. Hogy az effort-változatok egyáltalán megjelennek-e, azt továbbra is az `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIANTS` szabályozza – a tükör sosem ad hozzá olyan változatot, amely az alapkatalógusban nem szerepel.
 
@@ -138,7 +138,7 @@ egy profilt ír a `~/.claude/profiles/<name>/settings.json` helyre, a
 > aktív kontextusból), vagy exportálja saját maga az `ANTHROPIC_AUTH_TOKEN` változót, majd futtassa ezt:
 > `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude`.
 
-**Automatikus szinkronizálás a modellfelderítés után (opcionális).** Az 67router automatikusan újragenerálhatja ugyanezeket a
+**Automatikus szinkronizálás a modellfelderítés után (opcionális).** A 67router automatikusan újragenerálhatja ugyanezeket a
 `~/.claude/profiles/<name>/settings.json` fájlokat, amikor egy szolgáltatói modellszinkronizálás
 módosítja az aktuális katalógust — így az új vagy átnevezett modellekhez a parancs ismételt futtatása
 nélkül jönnek létre profilok. Ez **alapértelmezés szerint ki van kapcsolva**: kapcsolja be a **CLI Code irányítópulton**

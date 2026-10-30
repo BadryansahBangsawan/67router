@@ -4,13 +4,13 @@
 
 ---
 
-> **TL;DR**: Állítsd a modellt `auto` értékre, és az 67router automatikusan kiválasztja minden kéréshez a legjobb AI-szolgáltatót. Nincs szükség konfigurálásra.
+> **TL;DR**: Állítsd a modellt `auto` értékre, és a 67router automatikusan kiválasztja minden kéréshez a legjobb AI-szolgáltatót. Nincs szükség konfigurálásra.
 
 ---
 
 ## Mit csinál?
 
-Ahelyett, hogy egy konkrét AI-modellt választanál (például a GPT-4o vagy a Claude modellt), hagyhatod, hogy az 67router **automatikusan kiválassza a legjobbat** minden kéréshez. A következőket veszi figyelembe:
+Ahelyett, hogy egy konkrét AI-modellt választanál (például a GPT-4o vagy a Claude modellt), hagyhatod, hogy a 67router **automatikusan kiválassza a legjobbat** minden kéréshez. A következőket veszi figyelembe:
 
 - **Állapot** — Működik jelenleg a szolgáltató?
 - **Sebesség** — Milyen gyors?
@@ -18,7 +18,7 @@ Ahelyett, hogy egy konkrét AI-modellt választanál (például a GPT-4o vagy a 
 - **Minőség** — Megfelelő az ilyen típusú feladatokhoz?
 - **Kapacitás** — Maradt még kvótája?
 
-Az 67router pontozza az összes csatlakoztatott szolgáltatót, és kiválasztja a legjobbat. Ha az nem működik, automatikusan megpróbálkozik a következővel.
+A 67router pontozza az összes csatlakoztatott szolgáltatót, és kiválasztja a legjobbat. Ha az nem működik, automatikusan megpróbálkozik a következővel.
 
 ---
 
@@ -30,7 +30,7 @@ Az 67router pontozza az összes csatlakoztatott szolgáltatót, és kiválasztja
 model: "auto"
 ```
 
-**2. lépés**: Ennyi! A többiről az 67router gondoskodik.
+**2. lépés**: Ennyi! A többiről a 67router gondoskodik.
 
 **3. lépés** (nem kötelező): Adott feladatokhoz használj egy változatot:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## Hogyan működik? (Egyszerű változat)
 
-Amikor `model: "auto"` értékkel küldesz egy kérést, az 67router:
+Amikor `model: "auto"` értékkel küldesz egy kérést, a 67router:
 
 1. **Megvizsgálja az összes csatlakoztatott szolgáltatót** — Minden általad hozzáadott szolgáltatót (OpenAI, Anthropic, Google stb.)
 2. **Mindegyiket pontozza**, többek között az alábbiakat mérlegelve:
@@ -86,7 +86,7 @@ Amikor `model: "auto"` értékkel küldesz egy kérést, az 67router:
    - Milyen gyors? (sebesség)
    - Megfelelő ehhez a feladathoz? (minőség)
 3. **Kiválasztja a legjobbat** — A legmagasabb pontszámú szolgáltató kapja meg a kérésedet
-4. **Automatikusan helyreáll** — Ha az nem működik, az 67router automatikusan megpróbálkozik a következővel
+4. **Automatikusan helyreáll** — Ha az nem működik, a 67router automatikusan megpróbálkozik a következővel
 
 ### A pontozási rendszer
 
@@ -120,11 +120,11 @@ Minden változat eltérő súlyozást használ:
 
 ## Hogyan kezeli a hibákat
 
-Az 67router **háromszintű védelmet** biztosít:
+A 67router **háromszintű védelmet** biztosít:
 
 ### 1. Automatikus tartalékra váltás
 
-Ha a legjobb szolgáltató meghibásodik, az 67router automatikusan megpróbálkozik a következővel. Önnek semmit sem kell tennie.
+Ha a legjobb szolgáltató meghibásodik, a 67router automatikusan megpróbálkozik a következővel. Önnek semmit sem kell tennie.
 
 ### 2. Öngyógyítás
 
@@ -136,13 +136,13 @@ Ha egy szolgáltató folyamatosan hibázik:
 
 ### 3. Vészhelyzeti tartalék
 
-Ha minden szolgáltató meghibásodik, az 67router végső megoldásként stabil, ingyenes szolgáltatókhoz (például Kiro vagy Qoder) irányítja a kéréseket.
+Ha minden szolgáltató meghibásodik, a 67router végső megoldásként stabil, ingyenes szolgáltatókhoz (például Kiro vagy Qoder) irányítja a kéréseket.
 
 ---
 
 ## Több fiók támogatása
 
-Ha ugyanahhoz a szolgáltatóhoz több fiókkal rendelkezik (például két OpenAI-kulccsal), az 67router mindegyiket **külön jelöltként** kezeli. Ez azt jelenti:
+Ha ugyanahhoz a szolgáltatóhoz több fiókkal rendelkezik (például két OpenAI-kulccsal), a 67router mindegyiket **külön jelöltként** kezeli. Ez azt jelenti:
 
 - Az A fióknak maradt kvótája → használja
 - A B fiók sebességkorlátozás alatt áll → kihagyja
@@ -154,13 +154,13 @@ Minden fiók külön pontszámot kap a saját állapota, kvótája és sebesség
 
 ## Banditalapú felderítés
 
-Az 67router időnként **felderít** új szolgáltatókat, hogy jobb lehetőségeket találjon:
+A 67router időnként **felderít** új szolgáltatókat, hogy jobb lehetőségeket találjon:
 
 - **Alapértelmezett**: a kérések 5%-a véletlenszerű szolgáltatókhoz kerül
 - **Auto/smart**: 10%-os felderítési arány
 - **Letiltva**, ha a szolgáltatók több mint 50%-a nem megfelelő állapotú
 
-Ez segít az 67router-nak megtanulni, hogy az Ön használati mintáihoz mely szolgáltatók működnek a legjobban.
+Ez segít a 67router-nak megtanulni, hogy az Ön használati mintáihoz mely szolgáltatók működnek a legjobban.
 
 ---
 
@@ -172,11 +172,11 @@ Ez segít az 67router-nak megtanulni, hogy az Ön használati mintáihoz mely sz
 
 ### „Mi történik, ha egy szolgáltató leáll?”
 
-Az 67router automatikusan kihagyja, és megpróbálkozik a következővel. Ha egy szolgáltató folyamatosan hibázik, ideiglenesen (5–30 percre) kizárásra kerül. Önnek semmit sem kell tennie.
+A 67router automatikusan kihagyja, és megpróbálkozik a következővel. Ha egy szolgáltató folyamatosan hibázik, ideiglenesen (5–30 percre) kizárásra kerül. Önnek semmit sem kell tennie.
 
 ### „Láthatom, hogy melyik szolgáltatót használta?”
 
-Ellenőrizze a válasz fejléceit — az 67router minden válaszban feltünteti a használt szolgáltatót és modellt.
+Ellenőrizze a válasz fejléceit — a 67router minden válaszban feltünteti a használt szolgáltatót és modellt.
 
 ### „Tanul a használati adataimból?”
 

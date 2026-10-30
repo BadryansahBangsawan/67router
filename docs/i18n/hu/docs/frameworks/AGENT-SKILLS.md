@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/agentSkills/` (katalógus, generátor, elemzők) + `skills/` könyvtár (SKILL.md fájlok)
 > **Utolsó frissítés:** 2026-08-02 — v3.8.50
 
-Az Agent Skills strukturált SKILL.md fájlok, amelyek megtanítják a külső ügynököknek, MCP-klienseknek és A2A-orkesztrátoroknak, hogyan használják az 67router REST API-ját és CLI-jét. Az [Omni Skills](./SKILLS.md) funkciótól eltérően (amely az 67router-on belül végrehajtott LLM-eszközdefiníciókat tartalmazza) az Agent Skills egy _dokumentációs katalógus_ — statikus markdown-tartalom, amely közvetlenül beilleszthető az ügynök kontextusába.
+Az Agent Skills strukturált SKILL.md fájlok, amelyek megtanítják a külső ügynököknek, MCP-klienseknek és A2A-orkesztrátoroknak, hogyan használják a 67router REST API-ját és CLI-jét. Az [Omni Skills](./SKILLS.md) funkciótól eltérően (amely a 67router-on belül végrehajtott LLM-eszközdefiníciókat tartalmazza) az Agent Skills egy _dokumentációs katalógus_ — statikus markdown-tartalom, amely közvetlenül beilleszthető az ügynök kontextusába.
 
 ---
 

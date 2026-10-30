@@ -10,7 +10,7 @@
 
 ## Telepítés
 
-Az 67router MCP beépített. Indítsa el a következővel:
+A 67router MCP beépített. Indítsa el a következővel:
 
 ```bash
 omniroute --mcp
@@ -144,7 +144,7 @@ A CCR bejegyzések csak memóriában léteznek, és újraindításkor eltűnnek.
 
 ### MCP akadálymentességi fa szűrő (v3.8.0)
 
-A fenti tömörítő eszközöktől elkülönülten az 67router tartalmaz egy végrehajtás utáni szűrőt, amely tömöríti az MCP böngésző/akadálymentességi eszközök **eszközeredményeit**, mielőtt azok visszakerülnének az ügynökhöz. Ez a szűrő önmagában nem eszköz – átláthatóan fut minden olyan eszközeredményen, amely részletes akadálymentességi fa vagy böngésző-pillanatkép szöveget tartalmaz (≥2000 karakter).
+A fenti tömörítő eszközöktől elkülönülten a 67router tartalmaz egy végrehajtás utáni szűrőt, amely tömöríti az MCP böngésző/akadálymentességi eszközök **eszközeredményeit**, mielőtt azok visszakerülnének az ügynökhöz. Ez a szűrő önmagában nem eszköz – átláthatóan fut minden olyan eszközeredményen, amely részletes akadálymentességi fa vagy böngésző-pillanatkép szöveget tartalmaz (≥2000 karakter).
 
 Főbb viselkedések:
 
@@ -238,7 +238,7 @@ vannak dokumentálva:
 ### Felhőügynökök
 
 A felhőügynökök folyamaton kívüli AI kódoló ügynökök (codex-cloud, cursor-cloud, devin, jules),
-amelyek az 67router-ba ugyanazon a kapcsolati modellen keresztül vannak bekötve, mint az LLM szolgáltatók.
+amelyek a 67router-ba ugyanazon a kapcsolati modellen keresztül vannak bekötve, mint az LLM szolgáltatók.
 Saját REST felületükön keresztül érhetők el (`/api/v1/agents/*`), és **nem** részei az MCP
 eszközkatalógusnak — egy felhőügynök hívása nem fogyaszt MCP hatókört.
 
@@ -469,7 +469,7 @@ a meglévő, `OMNIROUTE_MCP_ENFORCE_SCOPES` által vezérelt működés változa
 
 | Változó                                 | Alapértelmezett érték                 | Rendeltetés                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :-------------------------------------- | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Az MCP-kiszolgáló által az 67router belső API-jainak hívásakor használt alap-URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Az MCP-kiszolgáló által a 67router belső API-jainak hívásakor használt alap-URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_API_KEY`                     | (üres)                                | A belső API-hívásokhoz `Authorization: Bearer` formában továbbított API-kulcs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (csak a `"true"` engedélyezi) | Engedélyezése esetén a hiányzó hatókörök miatt az eszközhívások elutasításra kerülnek, és a naplóba bekerül a `scope_denied:<reason>` bejegyzés. A kikényszerítés ettől a jelzőtől függetlenül IS aktiválódik minden olyan HTTP/SSE-hívónál, amelyet kulcsonkénti Authorization fejlécből azonosítottak (`source === "authInfo"`), és amely nem rendelkezik teljes `manage`/`admin` hatókörrel — például egy olyan kulcsnál, amely csak a szűk `mcp:connect` megkerülési hatókörrel rendelkezik —, ezért ez az alapértelmezés csak a helyi/stdio, egyetlen operátoros folyamathoz biztonságos, távoli, nem visszacsatolt hálózati eléréshez soha |
 | `OMNIROUTE_MCP_SCOPES`                  | (üres)                                | Az alapértelmezés szerint „elérhetőnek” tekintett hatókörök vesszővel elválasztott engedélyezési listája (akkor használatos, ha a hívó nem adja meg a saját hatóköreit)                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |

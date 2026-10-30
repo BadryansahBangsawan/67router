@@ -124,7 +124,7 @@ Ha mindkettő be van kapcsolva, a szinkronizálás menete a következő:
    csonkolt HMAC-értékét használja a manuális visszaélés-ellenőrzéshez; ezek a táblák sem a
    kulcsot, sem az IP-címet nem őrzik meg nyers formában. Az infrastruktúra hozzáférési naplói
    és a titkosított kézbesítési kimenő tár különálló üzemeltetési határokat képeznek.
-3. Az 67router soha nem küld promptokat, válaszokat, beszélgetéseket, szolgáltatói hitelesítő
+3. A 67router soha nem küld promptokat, válaszokat, beszélgetéseket, szolgáltatói hitelesítő
    adatokat, modellforgalmat, üzemidőt, késleltetést vagy helyi szolgáltatói konfigurációt a
    Radar szolgáltatásnak.
 4. A válasz hitelesítése és ellenőrzése után az helyileg gyorsítótárazásra kerül (lásd:
@@ -480,7 +480,7 @@ A feed `enabled: false` értéke továbbra is biztonsági kivétel: elsőbbsége
 A katalóguskiadványok `schemaVersion: 2` értéket használnak. A `contextWindow`, valamint a `tools`, a `vision` és a
 `thinking` mind egymástól függetlenül `number | null` / `boolean | null`: a `null` azt jelenti, hogy ismeretlen, míg a
 `false` azt jelenti, hogy egy D16 által megerősített hivatalos szolgáltatói forrás kifejezetten azt állítja, hogy a képesség nem érhető el.
-Az 67router belső beállításjegyzék-/modellspecifikációs jelzői soha nem minősülnek közvetlenül feedtényeknek. A kliens
+A 67router belső beállításjegyzék-/modellspecifikációs jelzői soha nem minősülnek közvetlenül feedtényeknek. A kliens
 továbbra is elfogadja a v1 pillanatképeket; mivel a régi összeállító a `false` értéket a hiány helyőrzőjeként használta, a v1 `false`
 ismeretlenre normalizálódik, míg a v1 `true` tényszerű marad. Az ismeretlen sémaverziók biztonságosan meghiúsulnak, és az
 utolsó érvényes gyorsítótár továbbra is elérhető marad. Minden olyan v2 modellnek, amely nem null értékű kontextussal/képességgel rendelkezik,

@@ -178,7 +178,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Two common pitfalls:
 
 - **`auto` does not use your combos.** `auto`/`auto/*` builds its own zero-config candidate pool and only consults persisted combos if a combo is literally named `auto` (not recommended). To route through a combo, send its exact name — not `auto`.
-- **`openrouter/auto` is a real paid OpenRouter product** ("Auto Best Available"), not an 67router alias. It is the single static model entry of the OpenRouter registry (`open-sse/config/providers/registry/openrouter/index.ts`) and is billed separately. Use Settings → Routing → Hide paid models to exclude it from `auto` pools.
+- **`openrouter/auto` is a real paid OpenRouter product** ("Auto Best Available"), not a 67router alias. It is the single static model entry of the OpenRouter registry (`open-sse/config/providers/registry/openrouter/index.ts`) and is billed separately. Use Settings → Routing → Hide paid models to exclude it from `auto` pools.
 
 See [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) and [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) for the original confusion this documents.
 

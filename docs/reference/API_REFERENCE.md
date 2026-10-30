@@ -990,7 +990,7 @@ env_key = "OMNIROUTE_API_KEY"             # holds the 67router API key (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # an 67router API key (any key if REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # a 67router API key (any key if REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 

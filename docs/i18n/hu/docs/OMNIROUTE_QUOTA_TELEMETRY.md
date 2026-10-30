@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router elkülöníti a szolgáltatói kvóták telemetriáját a Ghostlight elszámolásától.
+A 67router elkülöníti a szolgáltatói kvóták telemetriáját a Ghostlight elszámolásától.
 
 ## Valós állapotok
 

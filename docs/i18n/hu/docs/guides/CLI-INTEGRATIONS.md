@@ -7,9 +7,9 @@
 A megosztott végrehajtható manifesttel, a korlátozott gyermekfolyamat-környezetekkel és a tartós
 Gemini-beállítással kapcsolatban lásd: [CLI-indítási szerződések](./CLI-LAUNCH-CONTRACTS.md).
 
-Az 67router `setup-*` parancsok egész családját kínálja, amelyek úgy konfigurálnak egy kódolási
-CLI-t (Codex, Claude Code, OpenCode, Cline, …), hogy az 67router-ot használja háttérrendszerként — így
-az eszköz **egyetlen** végponttal kommunikál, az 67router pedig automatikus tartalékra váltással
+A 67router `setup-*` parancsok egész családját kínálja, amelyek úgy konfigurálnak egy kódolási
+CLI-t (Codex, Claude Code, OpenCode, Cline, …), hogy a 67router-ot használja háttérrendszerként — így
+az eszköz **egyetlen** végponttal kommunikál, a 67router pedig automatikus tartalékra váltással
 a megfelelő szolgáltatóhoz irányítja a kéréseket. Minden parancs egy futó
 67router (helyi vagy távoli) **élő** modellkatalógusát olvassa be, és az eszköz saját konfigurációs fájlját írja ki az
 **Ön** gépén. Az API-kulcsra környezeti változón keresztül történik hivatkozás minden olyan esetben, amikor ezt az eszköz
@@ -155,7 +155,7 @@ nem jelennek meg indítható célként.
 
 ## Helyi használat
 
-Ha az 67router a `localhost:20128` címen fut, csak futtasd az eszközödhöz tartozó beállítási parancsot. A katalógus a helyi kiszolgálóról töltődik le.
+Ha a 67router a `localhost:20128` címen fut, csak futtasd az eszközödhöz tartozó beállítási parancsot. A katalógus a helyi kiszolgálóról töltődik le.
 
 ```bash
 # Codex: minden illeszkedő modellhez profilt ír a ~/.codex/ könyvtárba
@@ -239,7 +239,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Mindkét forma egyetlen 5dive **hitelesítési profilt** ír, ezután pedig minden, ehhez a profilhoz kötött `claude`-munkahely az 67router-tal kommunikál. Három dolog jellemző kifejezetten erre a célpontra:
+Mindkét forma egyetlen 5dive **hitelesítési profilt** ír, ezután pedig minden, ehhez a profilhoz kötött `claude`-munkahely a 67router-tal kommunikál. Három dolog jellemző kifejezetten erre a célpontra:
 
 - **A flotta gazdagépén, rootként fut.** A 5dive műveletei helyi systemd-egységeken és egy root tulajdonában lévő állapotkönyvtáron dolgoznak; távoli mód nem érhető el. A recept `sudo` használatával újraindítja önmagát, ha még nem rootként fut (a `--no-sudo` kikapcsolja ezt, és helyette kiírja a parancsot).
 - **A végpontnak `https://` protokollt kell használnia, kivéve, ha loopback címről van szó.** Az ügynök API-kulcsa minden kérésnél ezen az URL-en keresztül halad, a 5dive pedig elutasítja a titkosítatlan, gépen kívüli végpontokat. Ez alól a privát LAN-cím sem kivétel.
@@ -254,7 +254,7 @@ Ha a profilt nem egyetlen modellre, hanem egy 67router-**kombinációra** irány
 
 ## Alap-URL-konvenciók (mely eszközök igénylik a `/v1` útvonalat)
 
-Az 67router az OpenAI-felületet a `/v1`, az Anthropic-felületet a gyökérútvonalon,
+A 67router az OpenAI-felületet a `/v1`, az Anthropic-felületet a gyökérútvonalon,
 a natív Gemini-felületet pedig a `/v1beta` útvonalon teszi elérhetővé. Minden integráció
 az eszköz által elvárt formára van konfigurálva (a parancs forráskódjában ellenőrizve):
 
@@ -276,7 +276,7 @@ az eszköz által elvárt formára van konfigurálva (a parancs forráskódjába
 ## Natív függőségek megtartása frissítéskor: `--include=optional`
 
 Amikor az `omniroute update` paranccsal frissít (megerősítés után vagy az `--apply`
-kapcsolóval), az 67router a beépített `--include=optional` kapcsolóval futtatja
+kapcsolóval), a 67router a beépített `--include=optional` kapcsolóval futtatja
 a telepítést:
 
 ```bash
@@ -307,7 +307,7 @@ Az `omniroute update` további kapcsolói (a forráskódban ellenőrizve): `--ch
 A szerződés az `@google/gemini-cli` 0.50.0 verziója alapján ellenőrizve: a CLI
 figyelembe veszi a `GOOGLE_GEMINI_BASE_URL` értékét, és a
 `POST /v1beta/models/<model>:generateContent` (valamint a
-`:streamGenerateContent?alt=sse`) kéréseket erre küldi — pontosan az 67router
+`:streamGenerateContent?alt=sse`) kéréseket erre küldi — pontosan a 67router
 natív Gemini-felületére (`/v1beta`). Az `omniroute run gemini` ezt automatikusan
 beállítja:
 

@@ -11,11 +11,11 @@
 
 ## Mi ez?
 
-Az 67router egy **Notion**-munkaterülethez **kontextusforrásként** tud csatlakozni — ez egy
+A 67router egy **Notion**-munkaterülethez **kontextusforrásként** tud csatlakozni — ez egy
 írható és olvasható tudásbázis, amelyet az ügynökök a beépített MCP-kiszolgálón keresztül érnek el.
 Egy Notion-integrációs token beállítása után az MCP-eszközök lehetővé teszik az LLM számára az oldalak
 és adatbázisok keresését, az oldaltartalom és a blokkfák olvasását, az adatbázisok szűrőkkel és
-rendezésekkel történő lekérdezését, valamint új blokkok hozzáfűzését — mindezt az 67router közvetíti
+rendezésekkel történő lekérdezését, valamint új blokkok hozzáfűzését — mindezt a 67router közvetíti
 (újrapróbálkozással, időtúllépés-kezeléssel és hibabesorolással), így a modell soha nem éri el
 közvetlenül a Notion API-ját.
 
@@ -41,7 +41,7 @@ A Notion-tokenhez **nincs környezeti változó** — azt az SQLite `key_value` 
 > [!NOTE]
 > A token egy **belső Notion-integrációs token**. Hozzon létre egy integrációt a
 > <https://www.notion.com/my-integrations> oldalon, majd ossza meg az integrációval azokat az
-> oldalakat/adatbázisokat, amelyekhez hozzáférést kíván biztosítani az 67router számára
+> oldalakat/adatbázisokat, amelyekhez hozzáférést kíván biztosítani a 67router számára
 > (a Notion jogosultsági modellje megosztásalapú, nem az egész munkaterületre kiterjedő).
 
 ### Konfigurálás REST-en keresztül
@@ -60,7 +60,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Mindhárom metódus irányítópult-hitelesítést (`isAuthenticated`) igényel. `POST` esetén
-az 67router menti a tokent, majd azonnal lefuttat egy 1 találatos próbakeresést; ha a Notion
+a 67router menti a tokent, majd azonnal lefuttat egy 1 találatos próbakeresést; ha a Notion
 hibaobjektumot ad vissza, a token törlődik, és a hívás `400` hibával meghiúsul.
 
 ## MCP-eszközök (6)

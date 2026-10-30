@@ -4,7 +4,7 @@
 
 ---
 
-> **Mi ez a dokumentum?** Az 67router minőségkapu-rendszerének kritikai értékelése,
+> **Mi ez a dokumentum?** A 67router minőségkapu-rendszerének kritikai értékelése,
 > összehasonlítva az iparági bevált gyakorlatokkal, **valamint** az összes minőségi
 > ellenőrzési pont átfogó katalógusa és egy **eszközfüggetlen replikációs terv**, amelynek
 > segítségével ugyanez a rendszer bármely projektre alkalmazható. A tényleges adattár állapota

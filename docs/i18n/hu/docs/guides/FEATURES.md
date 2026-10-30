@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
-Vizuális útmutató az 67router irányítópult minden szakaszához.
+Vizuális útmutató a 67router irányítópult minden szakaszához.
 
 > 📅 **Legutóbb frissítve:** 2026-06-28 — **v3.8.40**
 
@@ -51,7 +51,7 @@ A v3.7.x → v3.8.0 fejlesztési ciklus konfigurációmentes automatikus útvál
 
 AI-szolgáltatói kapcsolatok kezelése: OAuth-szolgáltatók (Claude Code, Codex), API-kulcsot használó szolgáltatók (Groq, DeepSeek, OpenRouter), valamint ingyenes szolgáltatók (Qoder, Kiro). A Kiro-fiókoknál a kreditegyenleg is nyomon követhető — a fennmaradó kreditek, a teljes keret és a megújítás dátuma az Irányítópult → Használat oldalon látható.
 
-Az OpenRouter-kapcsolatok kapcsolatonként egy `preset` értéket tárolhatnak a Speciális beállításokban. Ha be van állítva, az 67router az OpenRouter-kérés felső szintű mezőjeként küldi el, például `"preset": "email-copywriter"`, kivéve, ha az ügyfél kérése már megadta a saját `preset` értékét.
+Az OpenRouter-kapcsolatok kapcsolatonként egy `preset` értéket tárolhatnak a Speciális beállításokban. Ha be van állítva, a 67router az OpenRouter-kérés felső szintű mezőjeként küldi el, például `"preset": "email-copywriter"`, kivéve, ha az ügyfél kérése már megadta a saját `preset` értékét.
 
 ![Szolgáltatói irányítópult](../screenshots/01-providers.png)
 
@@ -157,7 +157,7 @@ Irányítópult CLI-ügynökök felfedezéséhez és kezeléséhez. A 16 beépí
 
 ## 🔗 Kontextusátadás _(v3.5.5+)_
 
-Kombinált stratégia, amely megőrzi a munkamenet folytonosságát, amikor egy beszélgetés közben fiókváltás történik. Mielőtt az aktív fiók kvótája kimerülne, az 67router a háttérben strukturált átadási összefoglalót készít. Miután a következő kérés egy másik fiókhoz kerül, az összefoglalót rendszerüzenetként illeszti be, így az új fiók a teljes kontextus birtokában folytathatja a munkát.
+Kombinált stratégia, amely megőrzi a munkamenet folytonosságát, amikor egy beszélgetés közben fiókváltás történik. Mielőtt az aktív fiók kvótája kimerülne, a 67router a háttérben strukturált átadási összefoglalót készít. Miután a következő kérés egy másik fiókhoz kerül, az összefoglalót rendszerüzenetként illeszti be, így az új fiók a teljes kontextus birtokában folytathatja a munkát.
 
 Kombinációszintű vagy globális beállításokkal konfigurálható:
 
@@ -267,7 +267,7 @@ Adminisztratív műveletek nyomon követése művelettípus, végrehajtó, cél,
 
 ## 🖥️ Asztali alkalmazás
 
-Natív Electron asztali alkalmazás Windows, macOS és Linux rendszerekhez. Az 67router önálló alkalmazásként futtatható rendszertálca-integrációval, offline támogatással, automatikus frissítéssel és egykattintásos telepítéssel.
+Natív Electron asztali alkalmazás Windows, macOS és Linux rendszerekhez. A 67router önálló alkalmazásként futtatható rendszertálca-integrációval, offline támogatással, automatikus frissítéssel és egykattintásos telepítéssel.
 
 Főbb funkciók:
 
@@ -286,7 +286,7 @@ Főbb funkciók:
 
 ## 🌐 V1 WebSocket-híd _(v3.6.6+)_
 
-Az 67router mostantól támogatja az **OpenAI-kompatibilis WebSocket-klienseket** a `/v1/ws` frissítési végponton keresztül. Az egyedi `scripts/dev/v1-ws-bridge.mjs` szerver körülveszi a Next.js rendszert, és a WS-kapcsolatokat teljes, kétirányú streamelési munkamenetekké frissíti. A hitelesítés ugyanazt az API-kulcsot vagy munkamenet-sütit használja, mint a HTTP-kérelmek.
+A 67router mostantól támogatja az **OpenAI-kompatibilis WebSocket-klienseket** a `/v1/ws` frissítési végponton keresztül. Az egyedi `scripts/dev/v1-ws-bridge.mjs` szerver körülveszi a Next.js rendszert, és a WS-kapcsolatokat teljes, kétirányú streamelési munkamenetekké frissíti. A hitelesítés ugyanazt az API-kulcsot vagy munkamenet-sütit használja, mint a HTTP-kérelmek.
 
 Főbb működési jellemzők:
 
@@ -312,7 +312,7 @@ A konfigurációs csomagot a `src/lib/sync/bundle.ts` állítja elő. A fogyaszt
 
 A **GLM Thinking (`glmt`)** mostantól regisztrált, teljes értékű szolgáltató: legfeljebb 65 536 kimeneti token, 24 576 tokenes gondolkodási keret, 900 s alapértelmezett időtúllépés, Claude-kompatibilis API-formátum, valamint a GLM-családdal megosztott használati adatok szinkronizálása.
 
-A **hibrid tokenszámlálás** szintén a v3.6.6 verzióban érkezik: amikor egy Claude-kompatibilis szolgáltató elérhetővé teszi a `/messages/count_tokens` végpontot, az 67router nagy kérések előtt meghívja azt, és sikertelenség esetén zökkenőmentesen becslésre vált.
+A **hibrid tokenszámlálás** szintén a v3.6.6 verzióban érkezik: amikor egy Claude-kompatibilis szolgáltató elérhetővé teszi a `/messages/count_tokens` végpontot, a 67router nagy kérések előtt meghívja azt, és sikertelenség esetén zökkenőmentesen becslésre vált.
 
 ---
 

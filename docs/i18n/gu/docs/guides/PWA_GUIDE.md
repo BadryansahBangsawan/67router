@@ -93,7 +93,7 @@ Progressive Web App, 67router વેબ ડૅશબોર્ડને એવી
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router બહુવિધ પ્રદાતાઓના LLM માટેનું AI ગેટવે છે. તમારા તમામ AI પ્રદાતાઓ માટે એક જ એન્ડપૉઇન્ટ.",
   "start_url": "/",

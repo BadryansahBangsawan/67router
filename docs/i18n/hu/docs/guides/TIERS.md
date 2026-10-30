@@ -4,14 +4,14 @@
 
 ---
 
-Az 67router a 352 támogatott szolgáltatót 3 gazdasági szintbe szervezi. Minden
+A 67router a 352 támogatott szolgáltatót 3 gazdasági szintbe szervezi. Minden
 kérés sorrendben halad végig rajtuk, amíg valamelyik sikeres választ nem ad —
 így mindig a legolcsóbb működőképes választ kapja, anélkül, hogy tartalékkezelő
 kódot kellene írnia.
 
 ## 1. szint — Előfizetés
 
-**Szolgáltatók, amelyekért már fizet.** Az 67router a kvóta minden részét
+**Szolgáltatók, amelyekért már fizet.** A 67router a kvóta minden részét
 felhasználja annak lejárata előtt.
 
 | Szolgáltató                       | Miért 1. szint                                            |

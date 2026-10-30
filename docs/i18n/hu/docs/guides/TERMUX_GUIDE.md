@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router fej nélküli kiszolgálóként futtatható Androidon a Termuxon keresztül. Az Electron asztali alkalmazás nem támogatott Termuxban, de a webes irányítópult és az OpenAI-kompatibilis API elérhető a helyi böngészőből vagy az ugyanazon a hálózaton lévő más eszközökről.
+A 67router fej nélküli kiszolgálóként futtatható Androidon a Termuxon keresztül. Az Electron asztali alkalmazás nem támogatott Termuxban, de a webes irányítópult és az OpenAI-kompatibilis API elérhető a helyi böngészőből vagy az ugyanazon a hálózaton lévő más eszközökről.
 
 ## Előfeltételek
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js-verzió:** Az 67router a következő Node-verziókat igényli: `>=22.22.2 <23 || >=24.0.0 <27` (ez megegyezik a `package.json` fájlban lévő `engines` / `SUPPORTED_NODE_RANGE` értékével). A Termux `nodejs-lts` csomagja jellemzően a Node 20 LTS verzióját tartalmazza, amely **már nem támogatott** — ehelyett telepítse az aktuális verziót a `pkg install nodejs` paranccsal, és ellenőrizze, hogy a `node --version` kimenete 22.x/24.x+ verziót jelez-e.
+> **Node.js-verzió:** A 67router a következő Node-verziókat igényli: `>=22.22.2 <23 || >=24.0.0 <27` (ez megegyezik a `package.json` fájlban lévő `engines` / `SUPPORTED_NODE_RANGE` értékével). A Termux `nodejs-lts` csomagja jellemzően a Node 20 LTS verzióját tartalmazza, amely **már nem támogatott** — ehelyett telepítse az aktuális verziót a `pkg install nodejs` paranccsal, és ellenőrizze, hogy a `node --version` kimenete 22.x/24.x+ verziót jelez-e.
 
-Ha a natív csomag fordítása sikertelen, futtassa újra a fenti `pkg install` parancsot, majd próbálja meg ismét telepíteni az 67router-ot.
+Ha a natív csomag fordítása sikertelen, futtassa újra a fenti `pkg install` parancsot, majd próbálja meg ismét telepíteni a 67router-ot.
 
 ## Telepítés
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Futtatás
 
-Indítsa el az 67router-ot fej nélküli kiszolgálói módban:
+Indítsa el a 67router-ot fej nélküli kiszolgálói módban:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Például:
 http://192.168.1.50:20128
 ```
 
-A telefont és a klienst ugyanazon a megbízható hálózaton használja. Ha az 67router-ot a telefonon kívülről is elérhetővé teszi, engedélyezze az API-kulcsokat és az irányítópult hitelesítését.
+A telefont és a klienst ugyanazon a megbízható hálózaton használja. Ha a 67router-ot a telefonon kívülről is elérhetővé teszi, engedélyezze az API-kulcsokat és az irányítópult hitelesítését.
 
 ## Adatkönyvtár
 
-Alapértelmezés szerint az 67router a Termux saját könyvtárában tárolja az adatokat, a Linuxon használt kiszolgálóoldali adatelérési út viselkedését követve. Ha az adatbázist egy kifejezetten megadott helyen szeretné tárolni:
+Alapértelmezés szerint a 67router a Termux saját könyvtárában tárolja az adatokat, a Linuxon használt kiszolgálóoldali adatelérési út viselkedését követve. Ha az adatbázist egy kifejezetten megadott helyen szeretné tárolni:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Mivel a horog soha nem töltődik be, a naplózás sem indul el — így az 500-as hiba teljesen diagnosztizálhatatlannak tűnik. Az 67router létrehozza a `~/.cache` könyvtárat (és beállítja az `XDG_CACHE_HOME` változót, ha az nincs beállítva) a CLI belépési pontjában, mielőtt a Next.js elindulna, így ez az ellenőrzés sikeres lesz Androidon/Termuxban.
+Mivel a horog soha nem töltődik be, a naplózás sem indul el — így az 500-as hiba teljesen diagnosztizálhatatlannak tűnik. A 67router létrehozza a `~/.cache` könyvtárat (és beállítja az `XDG_CACHE_HOME` változót, ha az nincs beállítva) a CLI belépési pontjában, mielőtt a Next.js elindulna, így ez az ellenőrzés sikeres lesz Androidon/Termuxban.
 
 **Támogatott megoldás (a csomag módosítása nélkül):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Az 67router jelenlegi buildjeiben a CLI ezt automatikusan elvégzi Androidon/Termuxban — egy friss `npx -y omniroute@latest` futtatás vagy globális telepítés esetén nincs szükség erre a manuális lépésre. Ha a frissítés után továbbra is látja a hibát, hozza létre egyszer a `~/.cache` könyvtárat a fentiek szerint, majd indítsa újra.
+A 67router jelenlegi buildjeiben a CLI ezt automatikusan elvégzi Androidon/Termuxban — egy friss `npx -y omniroute@latest` futtatás vagy globális telepítés esetén nincs szükség erre a manuális lépésre. Ha a frissítés után továbbra is látja a hibát, hozza létre egyszer a `~/.cache` könyvtárat a fentiek szerint, majd indítsa újra.
 
 **Ne** módosítsa a `dist/server.js` fájlt úgy, hogy a `process.platform = "linux"` értéket kényszerítse ki. Az ilyen csomagmódosítás minden újratelepítéskor/frissítéskor felülíródik, és a gyorsítótárkönyvtár létrehozása után szükségtelen.
 

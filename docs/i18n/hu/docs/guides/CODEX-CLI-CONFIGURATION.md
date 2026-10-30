@@ -4,7 +4,7 @@
 
 ---
 
-Teljes körű útmutató a Codex CLI használatához, amikor az OpenAI-jal kompatibilis háttérrendszerként az 67router van beállítva.
+Teljes körű útmutató a Codex CLI használatához, amikor az OpenAI-jal kompatibilis háttérrendszerként a 67router van beállítva.
 
 ---
 
@@ -73,7 +73,7 @@ példányod nem igényel hitelesítést, bármilyen nem üres helyőrző megfele
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Használj valódi kulcsot, ha az 67router-kiszolgálód védett vagy távoli.
+Használj valódi kulcsot, ha a 67router-kiszolgálód védett vagy távoli.
 
 > **Gyakori gazdagép-beállítások**
 >
@@ -95,22 +95,22 @@ indításkor.
 
 Számos szolgáltató, köztük a GLM és a Kimi, továbbra is csak Chat Completions
 végpontot kínál. A DeepSeek V4 most már natív Responses API-t és Anthropic-
-kompatibilis végpontot is biztosít; az 67router alapértelmezés szerint a Responses
+kompatibilis végpontot is biztosít; a 67router alapértelmezés szerint a Responses
 protokollt használja, és lehetővé teszi, hogy minden DeepSeek-kapcsolat külön
 válassza ki az Anthropic-kompatibilitást.
 
-**Az 67router ezt átlátható módon oldja meg:**
+**A 67router ezt átlátható módon oldja meg:**
 
 ```
 Codex CLI
   → wire_api = "responses"
   → POST /v1/responses (67router)
-    → Az 67router kiválasztja a szolgáltató natív protokollját, és szükség esetén átalakítja
+    → A 67router kiválasztja a szolgáltató natív protokollját, és szükség esetén átalakítja
     → POST /responses (DeepSeek V4) vagy /chat/completions (Mistral / GLM / Kimi / egyebek)
 ```
 
-Az 67router használatakor soha nincs szükséged külön fordítóproxyra. **Minden modell
-a `wire_api = "responses"` beállítást használja** — a többit az 67router kezeli.
+A 67router használatakor soha nincs szükséged külön fordítóproxyra. **Minden modell
+a `wire_api = "responses"` beállítást használja** — a többit a 67router kezeli.
 
 > **A `wire_api` az alapértelmezett** — a mező alapértelmezett értéke `"responses"`,
 > ezért teljesen elhagyható a `config.toml` fájlból. Csak akkor állítsd be kifejezetten,
@@ -161,7 +161,7 @@ a `wire_api = "responses"` beállítást használja** — a többit az 67router 
 
 ## Modell-előtag: `cx/`
 
-Az 67router összes Codex modellje a `cx/` előtagot használja:
+A 67router összes Codex modellje a `cx/` előtagot használja:
 
 | Codex CLI-név           | 67router-modell    |
 | ----------------------- | ------------------ |
@@ -170,7 +170,7 @@ Az 67router összes Codex modellje a `cx/` előtagot használja:
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini       |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini |
 
-Más szolgáltatók saját előtagot használnak (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — az előtag megegyezik az 67router szolgáltatói aliasával.
+Más szolgáltatók saját előtagot használnak (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — az előtag megegyezik a 67router szolgáltatói aliasával.
 
 ---
 
@@ -202,7 +202,7 @@ model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 
 ### 67router gondolkodási keret (kiszolgálóbeállítás)
 
-Az 67router-gazdagépen a **Settings → AI → Thinking Budget** értékének **`passthrough`**-nak kell lennie ahhoz, hogy a Codex ráfordítási és összefoglalási beállításai eljussanak a felsőbb szolgáltatóhoz. Az **`auto` mód eltávolítja** az összes kliensoldali `reasoning` / `reasoning_effort` mezőt, és kiüríti a gondolkodási paneleket még akkor is, ha a Codex megfelelően van konfigurálva.
+A 67router-gazdagépen a **Settings → AI → Thinking Budget** értékének **`passthrough`**-nak kell lennie ahhoz, hogy a Codex ráfordítási és összefoglalási beállításai eljussanak a felsőbb szolgáltatóhoz. Az **`auto` mód eltávolítja** az összes kliensoldali `reasoning` / `reasoning_effort` mezőt, és kiüríti a gondolkodási paneleket még akkor is, ha a Codex megfelelően van konfigurálva.
 
 Teljes útmutató: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -288,7 +288,7 @@ codex -p chat     # cx/gpt-5.5, nincs beállított ráfordítás (kiszolgálói 
 
 ## Profilok automatikus létrehozása az `omniroute setup-codex` használatával
 
-Ha az 67router-ot VPS-en futtatja, automatikusan létrehozhat profilfájlokat az aktuális modellkatalógusból:
+Ha a 67router-ot VPS-en futtatja, automatikusan létrehozhat profilfájlokat az aktuális modellkatalógusból:
 
 ```bash
 # VPS-ről (a helyi 67router-ot használja a 20128-as porton)
@@ -326,13 +326,13 @@ meglévő szolgáltatói definíciókat, de nem hoz létre új szolgáltatói be
 explicit beállítással vagy az irányítópulton. A meglévő szolgáltatói beállítások nem jelennek meg
 a próbaüzem előnézetében, mert üzemeltető által kezelt hitelesítő adatokat tartalmazhatnak.
 
-Az 67router ezeket a profilfájlokat **automatikusan is szinkronizálhatja**, miután egy sikeres szolgáltatói modellfelderítés vagy -importálás módosítja az aktuális katalógust. Ez a funkció **külön engedélyezendő, és alapértelmezés szerint ki van kapcsolva**: kapcsolja be a **CLI Code irányítópulton** („CLI-profilok automatikus szinkronizálása” → Codex), vagy állítsa be az `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` értéket (figyelembe veszi az alapértelmezés szerint bekapcsolt `CLI_ALLOW_CONFIG_WRITES` beállítást is). Ha engedélyezve van, kizárólag különálló `~/.codex/*.config.toml` profilfájlokat ír; soha nem módosítja az aktív/alapértelmezett `~/.codex/config.toml` fájlt, a Codex-lb beállításait, a hitelesítést vagy a szolgáltató kiválasztását.
+A 67router ezeket a profilfájlokat **automatikusan is szinkronizálhatja**, miután egy sikeres szolgáltatói modellfelderítés vagy -importálás módosítja az aktuális katalógust. Ez a funkció **külön engedélyezendő, és alapértelmezés szerint ki van kapcsolva**: kapcsolja be a **CLI Code irányítópulton** („CLI-profilok automatikus szinkronizálása” → Codex), vagy állítsa be az `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` értéket (figyelembe veszi az alapértelmezés szerint bekapcsolt `CLI_ALLOW_CONFIG_WRITES` beállítást is). Ha engedélyezve van, kizárólag különálló `~/.codex/*.config.toml` profilfájlokat ír; soha nem módosítja az aktív/alapértelmezett `~/.codex/config.toml` fájlt, a Codex-lb beállításait, a hitelesítést vagy a szolgáltató kiválasztását.
 
 ---
 
 ## A Codex indítása az `omniroute launch-codex` használatával
 
-A Codex indítása előtt állapotellenőrzést végez az 67router-példányon:
+A Codex indítása előtt állapotellenőrzést végez a 67router-példányon:
 
 ```bash
 # Indítás a helyi 67router használatával (alapértelmezett port: 20128)
@@ -485,7 +485,7 @@ Interaktív munkameneten belül:
 
 ## Hosszú ideig futó feladatok
 
-Az 67router két alapértelmezett beállítása észrevétlenül tönkreteheti a többórás Codex CLI-munkameneteket. Egyik sem Codex CLI-beállítás — mindkettő az 67router oldalán található. Azok a felhasználók, akik olyan upstream proxykról migrálnak konfigurációt, amelyek fiókokhoz rögzítik a munkameneteket és letiltják az inaktivitási időkorlátokat, gyakran mindkét problémába beleütköznek, és arra következtetnek, hogy az 67router „nem képes fenntartani egy hosszú munkamenetet”.
+A 67router két alapértelmezett beállítása észrevétlenül tönkreteheti a többórás Codex CLI-munkameneteket. Egyik sem Codex CLI-beállítás — mindkettő a 67router oldalán található. Azok a felhasználók, akik olyan upstream proxykról migrálnak konfigurációt, amelyek fiókokhoz rögzítik a munkameneteket és letiltják az inaktivitási időkorlátokat, gyakran mindkét problémába beleütköznek, és arra következtetnek, hogy a 67router „nem képes fenntartani egy hosszú munkamenetet”.
 
 | Tünet                                                                                                  | Valószínű ok                                                                          | Beállítás                |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | ------------------------ |
@@ -507,7 +507,7 @@ Kapcsolódó beszélgetések: [#7126](https://github.com/diegosouzapw/OmniRoute/
 
 **Mi romlik el, ha az érték 0 marad**
 
-Egy többfordulós Codex-beszélgetés minden fordulóját az aktív kombinációs stratégia egymástól függetlenül irányítja, így az egyes fordulók **eltérő fiókhoz kerülhetnek**. Ez megszakítja az upstream munkamenet / prompt-gyorsítótár folytonosságát. Az 67router csak akkor veszi figyelembe a Codex munkamenet-fejléceit (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) és a törzs olyan mezőit, mint a `prompt_cache_key` / `session_id`, ha a TTL nagyobb `0`-nál (`extractSessionAffinityKey` a `src/sse/services/auth.ts` fájlban).
+Egy többfordulós Codex-beszélgetés minden fordulóját az aktív kombinációs stratégia egymástól függetlenül irányítja, így az egyes fordulók **eltérő fiókhoz kerülhetnek**. Ez megszakítja az upstream munkamenet / prompt-gyorsítótár folytonosságát. A 67router csak akkor veszi figyelembe a Codex munkamenet-fejléceit (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) és a törzs olyan mezőit, mint a `prompt_cache_key` / `session_id`, ha a TTL nagyobb `0`-nál (`extractSessionAffinityKey` a `src/sse/services/auth.ts` fájlban).
 
 **Javaslat többórás, egyetlen feladathoz**
 
@@ -529,13 +529,13 @@ A külön engedélyezés szándékos: az affinitás letiltása a fiókok közöt
 
 Az olyan Codex reasoning / tool kör, amely több mint 10 percig csendben marad, és **nem érkezik tényleges upstream adatblokk**, az SSE inaktivitásfigyelő (`open-sse/utils/stream.ts`) kényszerített lezárása alá kerül. A kliens gyakran csak a kapcsolat minden további tájékoztatás nélküli megszakadását érzékeli — ami megfelel annak, hogy „értesítés nélkül automatikusan leállt”.
 
-Fontos részlet: az 67router szintetikus SSE-**szívverése nem nullázza** az inaktivitási időzítőt. A `lastChunkTime` értékét csak egy tényleges upstream törzsadatblokk frissíti. Az inaktivitásfigyelő szempontjából egy csendben tovább „gondolkodó” modell megkülönböztethetetlen az elakadt upstream kapcsolattól.
+Fontos részlet: a 67router szintetikus SSE-**szívverése nem nullázza** az inaktivitási időzítőt. A `lastChunkTime` értékét csak egy tényleges upstream törzsadatblokk frissíti. Az inaktivitásfigyelő szempontjából egy csendben tovább „gondolkodó” modell megkülönböztethetetlen az elakadt upstream kapcsolattól.
 
 Kapcsolódó Undici törzsinaktivitási beállítás: `FETCH_BODY_TIMEOUT_MS` (szintén ugyanaz az alapértelmezett 10 perces alapérték; a `0` letiltja). Streamelés esetén a `FETCH_TIMEOUT_MS` csak a kapcsolat felépítésére / első fejlécek megérkezésére vonatkozik — miután a stream aktívvá vált, az elakadásokat a `STREAM_IDLE_TIMEOUT_MS` és a `FETCH_BODY_TIMEOUT_MS` szabályozza.
 
 **Többórás, egyetlen feladathoz ajánlott beállítás**
 
-Az 67router folyamat környezetében (`.env` / compose / systemd):
+A 67router folyamat környezetében (`.env` / compose / systemd):
 
 ```bash
 # A stream inaktivitási és a törzsinaktivitási időkorlátok letiltása hosszú reasoning körökhöz
@@ -551,12 +551,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-A környezeti változók módosítása után indítsa újra az 67router-ot.
+A környezeti változók módosítása után indítsa újra a 67router-ot.
 
 ### Konkrét recept — többórás Codex-feladat
 
 1. **Rögzítse a fiókot:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12 óra) vagy `86400` (legfeljebb 24 óra).
-2. **Növelje vagy tiltsa le az inaktivitási időkorlátokat** az 67router környezetében:
+2. **Növelje vagy tiltsa le az inaktivitási időkorlátokat** a 67router környezetében:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -564,7 +564,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Tartsa meg a szokásos Codex `config.toml` konfigurációt (`wire_api = "responses"`, helyes `base_url`, `OMNIROUTE_API_KEY`) — ehhez a két viselkedéshez nem léteznek Codex-oldali affinitási/inaktivitási beállítások.
-4. Indítsa újra az 67router-ot, majd indítsa el a hosszú Codex-feladatot.
+4. Indítsa újra a 67router-ot, majd indítsa el a hosszú Codex-feladatot.
 
 ### Döntés az alapértelmezésekről (#7287)
 
@@ -577,13 +577,13 @@ Bármelyik alapértelmezés globális átállítása az adott példány minden k
 
 ### Inaktivitás miatti megszakítások diagnosztizálása
 
-Amikor az inaktivitásfigyelő aktiválódik, az 67router a következő formájú sort naplózza:
+Amikor az inaktivitásfigyelő aktiválódik, a 67router a következő formájú sort naplózza:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Keressen rá az `Idle timeout: no data from` szövegre (vagy a `stream_idle_timeout` kódra / `StreamIdleTimeoutError` hibanévre). A szolgáltatói szegmens azt mutatja, amit az 67router az adott kéréshez használt (`codex`, egy másik szolgáltatói azonosító, vagy ismeretlen szolgáltató esetén `provider`) — ez nem mindig szó szerint a `codex` karakterlánc.
+Keressen rá az `Idle timeout: no data from` szövegre (vagy a `stream_idle_timeout` kódra / `StreamIdleTimeoutError` hibanévre). A szolgáltatói szegmens azt mutatja, amit a 67router az adott kéréshez használt (`codex`, egy másik szolgáltatói azonosító, vagy ismeretlen szolgáltató esetén `provider`) — ez nem mindig szó szerint a `codex` karakterlánc.
 
 ---
 
@@ -593,7 +593,7 @@ Keressen rá az `Idle timeout: no data from` szövegre (vagy a `stream_idle_time
 Távolítsa el a `wire_api = "chat"` beállítást a konfigurációból. Állítsa be a `wire_api = "responses"` értéket, vagy hagyja ki a mezőt (a v0.138 óta az alapértelmezett érték `"responses"`).
 
 **`Error: model not found`**
-Ellenőrizze, hogy a modell létezik-e az 67router-ban a megfelelő előtaggal. Használja az `omniroute models list` parancsot, vagy nyissa meg a `/dashboard/providers/<provider>` oldalt.
+Ellenőrizze, hogy a modell létezik-e a 67router-ban a megfelelő előtaggal. Használja az `omniroute models list` parancsot, vagy nyissa meg a `/dashboard/providers/<provider>` oldalt.
 
 **`Authentication error`**
 Ellenőrizze, hogy az `OMNIROUTE_API_KEY` exportálva van-e: `echo $OMNIROUTE_API_KEY`.
@@ -602,7 +602,7 @@ Ellenőrizze, hogy az `OMNIROUTE_API_KEY` exportálva van-e: `echo $OMNIROUTE_AP
 A Codex az első kérés elküldése előtt ellenőrzi, hogy létezik-e a környezeti változó. Védett szerverek esetén exportáljon egy valódi kulcsot, vagy használjon egy nem üres helyőrzőt, például az `OMNIROUTE_API_KEY=local` értéket, ha a **helyi** 67router-példány nem igényel hitelesítést. Indítsa újra a parancsértelmezőt, ha a változót a `~/.bashrc` vagy a `~/.zshrc` fájlhoz adta hozzá.
 
 **`Connection refused`**
-Ellenőrizze, hogy az 67router fut-e, valamint hogy a `base_url` állomásneve és portja megfelelő-e a hálózatához (helyi, Tailscale vagy VPS).
+Ellenőrizze, hogy a 67router fut-e, valamint hogy a `base_url` állomásneve és portja megfelelő-e a hálózatához (helyi, Tailscale vagy VPS).
 
 **A munkamenet összeomlik a kontextuskorlát közelében**
 Állítsa be explicit módon a `model_context_window` és a `model_auto_compact_token_limit` értékét. Tekintse meg a fenti, kontextusablakot bemutató táblázatot.
@@ -614,4 +614,4 @@ Csökkentse a `model_auto_compact_token_limit` értékét az ablak 80–85%-ára
 Ellenőrizze, hogy a fájl létezik-e a `~/.codex/<name>.config.toml` helyen (`profile-` előtag nélkül). Futtassa az `ls ~/.codex/*.config.toml` parancsot.
 
 **A hosszan futó Codex-feladat futás közben megszakad / a rendszer a fordulók között fiókot vált**
-Tekintse meg a [Hosszan futó feladatok](#long-running-tasks) című részt. Engedélyezze a munkamenet-affinitást (a TTL legyen hosszabb a feladat időtartamánál), és növelje az értékét, vagy tiltsa le a `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS` időkorlátot. Keresse meg az 67router naplóiban az `Idle timeout: no data from` szöveget.
+Tekintse meg a [Hosszan futó feladatok](#long-running-tasks) című részt. Engedélyezze a munkamenet-affinitást (a TTL legyen hosszabb a feladat időtartamánál), és növelje az értékét, vagy tiltsa le a `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS` időkorlátot. Keresse meg a 67router naplóiban az `Idle timeout: no data from` szöveget.

@@ -6225,7 +6225,7 @@ paths:
           description: Missing or invalid admin auth
     post:
       tags: [Embedded Services]
-      summary: Import an 67router claude connection's OAuth tokens into Dario
+      summary: Import a 67router claude connection's OAuth tokens into Dario
       description: >-
         Writes the source connection's access/refresh token pair directly into
         Dario's own account-file store (`~/.dario/accounts/<alias>.json`), reusing
@@ -8718,7 +8718,7 @@ paths:
   /api/openapi/try:
     post:
       tags: [System]
-      summary: Proxy an API Explorer request to an 67router endpoint
+      summary: Proxy an API Explorer request to a 67router endpoint
       description: >-
         Executes an API Explorer request through a server-side, same-origin proxy. The target
         must start with `/api/`, `/v1/`, `/v1beta/`, `/a2a`, or

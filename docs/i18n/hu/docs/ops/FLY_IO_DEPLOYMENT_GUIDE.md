@@ -4,7 +4,7 @@
 
 ---
 
-Ez a dokumentum az 67router Fly.io platformra történő tényleges telepítési folyamatát ismerteti, a következő forgatókönyvekre kiterjedően:
+Ez a dokumentum a 67router Fly.io platformra történő tényleges telepítési folyamatát ismerteti, a következő forgatókönyvekre kiterjedően:
 
 - A jelenlegi projekt első telepítése a Fly.io platformra
 - Későbbi kódfrissítések közzététele

@@ -12,7 +12,7 @@
 
 ## Mi ez?
 
-A Local Corpus lehetővé teszi, hogy egy üzemeltető egyetlen, kifejezetten jóváhagyott, szövegfájlokat tartalmazó könyvtárat tegyen elérhetővé az 67router MCP-kiszolgálója számára. A fájlok az eredeti könyvtárukban maradnak: az 67router csak a kanonikus gyökérútvonalat tárolja az SQLite-adatbázisban, és egy memóriában tartott keresési indexet kezel. A korpusz tartalmát nem másolja a tárolóba vagy az adatbázisba.
+A Local Corpus lehetővé teszi, hogy egy üzemeltető egyetlen, kifejezetten jóváhagyott, szövegfájlokat tartalmazó könyvtárat tegyen elérhetővé a 67router MCP-kiszolgálója számára. A fájlok az eredeti könyvtárukban maradnak: a 67router csak a kanonikus gyökérútvonalat tárolja az SQLite-adatbázisban, és egy memóriában tartott keresési indexet kezel. A korpusz tartalmát nem másolja a tárolóba vagy az adatbázisba.
 
 Az index frissítése inkrementális. A változatlan fájlokat a méretük és módosítási idejük alapján újra felhasználja, a módosított fájlokat újra beolvassa, és SHA-256 használatával kivonatolja, a törölt fájlokat pedig eltávolítja. A keresés frissíti a 30 másodpercnél régebbi indexet; a hívók azonnali frissítést is kérhetnek.
 

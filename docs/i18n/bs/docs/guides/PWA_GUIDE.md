@@ -95,7 +95,7 @@ Generisano od strane Next.js putem `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",

@@ -4,7 +4,7 @@
 
 ---
 
-> Agent-to-Agent Protocol v0.3 — Az 67router mint intelligens útválasztó ügynök
+> Agent-to-Agent Protocol v0.3 — A 67router mint intelligens útválasztó ügynök
 
 Az A2A felületnek két oldala van:
 
@@ -19,7 +19,7 @@ A feladatokat az `A2ATaskManager` követi nyomon (`src/lib/a2a/taskManager.ts`, 
 curl http://localhost:20128/.well-known/agent.json
 ```
 
-Visszaadja az 67router képességeit, készségeit és hitelesítési követelményeit leíró Ügynökkártyát.
+Visszaadja a 67router képességeit, készségeit és hitelesítési követelményeit leíró Ügynökkártyát.
 
 Az Ügynökkártya `version` mezőjének forrása a `process.env.npm_package_version` (lásd: `src/app/.well-known/agent.json/route.ts:13`), így minden kiadáskor automatikusan szinkronban marad a `package.json` fájllal.
 
@@ -145,11 +145,11 @@ curl -X POST http://localhost:20128/a2a \
 
 ## Elérhető készségek
 
-Az 67router 6 A2A-készséget tesz elérhetővé, amelyek a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` helyen vannak bekötve. Minden készségmodul a `src/lib/a2a/skills/` könyvtárban található.
+A 67router 6 A2A-készséget tesz elérhetővé, amelyek a `src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS` helyen vannak bekötve. Minden készségmodul a `src/lib/a2a/skills/` könyvtárban található.
 
 | Készség                 | ID                   | Leírás                                                                                                                                                                          | Címkék                           | Példák                                                  |
 | :---------------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------- | :------------------------------------------------------ |
-| Intelligens útválasztás | `smart-routing`      | Az 67router kombinációs motorja és pontozási rendszere segítségével az optimális szolgáltatón/kombináción keresztül irányítja a promptot                                        | útválasztás, szolgáltatók        | "Irányítsd ezt a promptot a legjobb modellen keresztül" |
+| Intelligens útválasztás | `smart-routing`      | A 67router kombinációs motorja és pontozási rendszere segítségével az optimális szolgáltatón/kombináción keresztül irányítja a promptot                                         | útválasztás, szolgáltatók        | "Irányítsd ezt a promptot a legjobb modellen keresztül" |
 | Kvótakezelés            | `quota-management`   | Szolgáltatónként jelenti a kvótaállapotot, és segít a hívóknak eldönteni, mikor kell korlátozni vagy váltani                                                                    | kvóta, szolgáltatók              | "Ellenőrizd az anthropic kvótáját"                      |
 | Szolgáltató-felfedezés  | `provider-discovery` | Felsorolja a telepített szolgáltatókat képességeikkel, ingyenes csomag jelzőikkel és OAuth-állapotukkal                                                                         | szolgáltatók, felfedezés         | "Milyen szolgáltatók érhetők el?"                       |
 | Költségelemzés          | `cost-analysis`      | A katalógus és a közelmúltbeli használat alapján megbecsüli egy kérés/beszélgetés költségét                                                                                     | költség, használat               | "Becsüld meg ennek a beszélgetésnek a költségét"        |
@@ -160,7 +160,7 @@ Az 67router 6 A2A-készséget tesz elérhetővé, amelyek a `src/lib/a2a/taskExe
 
 ### A `list-capabilities` készség részletei
 
-A `list-capabilities` készség különösen hasznos olyan külső ágensek számára, amelyeknek API-hívások küldése előtt fel kell ismerniük, mit kínál az 67router. Strukturált markdown-táblázat artefaktumot ad vissza:
+A `list-capabilities` készség különösen hasznos olyan külső ágensek számára, amelyeknek API-hívások küldése előtt fel kell ismerniük, mit kínál a 67router. Strukturált markdown-táblázat artefaktumot ad vissza:
 
 ```
 | ID | Name | Category | Area | Endpoints/Commands | Raw URL |
@@ -186,7 +186,7 @@ A JSON-RPC `/a2a` végpont a kanonikus A2A belépési pont. Az alábbi REST-vég
 | `/.well-known/agent.json`    | GET     | Ügynökkártya (A2A-felderítés)                                   | (nyilvános, 3600 másodpercig gyorsítótárazva) |
 | `/api/a2a/tasks`             | POST    | Bejövő delegálás az OmniConductor flottának (Conductor PRD RF5) | Bearer és `OMNIROUTE_API_KEY` + `a2aEnabled`  |
 
-**Bejövő Conductor-delegálás (`POST /api/a2a/tasks`):** a külső A2A-ügynökök az 67router-on keresztül delegálják a kódolási munkát az OmniConductor flottának. Törzs: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — csak a Conductor-flotta képességei (az Ügynökkártyán közzétettek) delegálhatók; a `metadata.conductor.repo.url` megadása kötelező (a flotta git-tárolókon dolgozik). Az útvonal a központ `POST /v1/tasks` kérésére fordítja le a hívást a kiszolgálóoldali `CONDUCTOR_ORCHESTRATOR_TOKEN` használatával (tartalék: `CONDUCTOR_HUB_TOKEN`), és `201 { conductor_task_id, state: "submitted" }` választ ad vissza; a feladatállapotok az SSE→A2A tükrözésen (RF1) keresztül jutnak vissza, és a `GET /api/a2a/tasks?skill=conductor` végponton tekinthetők meg.
+**Bejövő Conductor-delegálás (`POST /api/a2a/tasks`):** a külső A2A-ügynökök a 67router-on keresztül delegálják a kódolási munkát az OmniConductor flottának. Törzs: `{ skill: "conductor" | "conductor-cli-<profile>", messages: [{role, content}], metadata: { conductor: { repo: { url, base_ref? }, mode?, cli?, model? } } }` — csak a Conductor-flotta képességei (az Ügynökkártyán közzétettek) delegálhatók; a `metadata.conductor.repo.url` megadása kötelező (a flotta git-tárolókon dolgozik). Az útvonal a központ `POST /v1/tasks` kérésére fordítja le a hívást a kiszolgálóoldali `CONDUCTOR_ORCHESTRATOR_TOKEN` használatával (tartalék: `CONDUCTOR_HUB_TOKEN`), és `201 { conductor_task_id, state: "submitted" }` választ ad vissza; a feladatállapotok az SSE→A2A tükrözésen (RF1) keresztül jutnak vissza, és a `GET /api/a2a/tasks?skill=conductor` végponton tekinthetők meg.
 
 ---
 

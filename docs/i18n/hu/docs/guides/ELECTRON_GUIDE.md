@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `electron/` munkaterület
 > **Utolsó frissítés:** 2026-06-28 — v3.8.40
 
-Az 67router egy több platformon (Windows / macOS / Linux) használható asztali alkalmazást biztosít, amely az
+A 67router egy több platformon (Windows / macOS / Linux) használható asztali alkalmazást biztosít, amely az
 **Electron 41** + **electron-builder 26.10** technológiákra épül. Az asztali alkalmazás gyermekfolyamatként
 elindítja a Next.js önálló kiszolgálóját, egy `BrowserWindow` ablakot irányít rá, továbbá
 rendszertálcát, automatikus frissítőt, IPC-hidat és konfiguráció nélküli titok-inicializálást biztosít.

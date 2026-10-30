@@ -93,7 +93,7 @@ Service worker ត្រូវបានចុះឈ្មោះដោយស្�
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router គឺជា AI gateway សម្រាប់ LLMs ពីអ្នកផ្តល់សេវាច្រើន។ endpoint តែមួយសម្រាប់អ្នកផ្តល់សេវា AI របស់អ្នកទាំងអស់។",
   "start_url": "/",

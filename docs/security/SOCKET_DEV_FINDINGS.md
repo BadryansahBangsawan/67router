@@ -204,7 +204,7 @@ rawBody)`) before parsing the JSON. If the secret is set, the signature is
    `rateLimitedUntil`, `updatedAt`). This is a **breaking change** for users
    who relied on remote token sync — they must explicitly opt in.
 
-**Why we keep it**: Cloud Sync is the only way for an 67router Cloud tenant
+**Why we keep it**: Cloud Sync is the only way for a 67router Cloud tenant
 to centralise team credentials. The fix makes the threat model honest:
 "server signs, client verifies, operator opts in."
 

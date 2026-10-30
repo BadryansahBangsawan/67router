@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/cloudAgent/` és `src/app/api/v1/agents/tasks/`
 > **Utolsó frissítés:** 2026-06-28 — v3.8.40 (frontmatter frissítése; 4 ügynök, köztük a cursor-cloud)
 
-Az 67router harmadik fél által felhőben üzemeltetett kódoló ügynököket (Codex Cloud, Cursor,
+A 67router harmadik fél által felhőben üzemeltetett kódoló ügynököket (Codex Cloud, Cursor,
 Devin, Jules) hangol össze hosszú ideig futó feladatokként. Minden ügynök egységes interfész
 mögé van csomagolva, így az ügyfelek beküldhetnek egy promptot és egy adattár-URL-t, majd
 anélkül kaphatják meg az eredményeket, hogy a szolgáltatóspecifikus API-kkal kellene foglalkozniuk.

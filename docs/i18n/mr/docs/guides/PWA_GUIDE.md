@@ -93,7 +93,7 @@ Next.js द्वारे `src/app/manifest.ts` मधून व्युत्
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",

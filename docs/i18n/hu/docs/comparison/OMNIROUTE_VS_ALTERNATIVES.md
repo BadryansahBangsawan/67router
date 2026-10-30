@@ -37,7 +37,7 @@ Objektív funkcióösszehasonlítás népszerű nyílt forráskódú AI-routerek
 | **Alagúttámogatás (Cloudflared, Tailscale, Ngrok)**    |                      ✅                      |       ❌       |        n/a        |    n/a     |
 | **Licenc**                                             |                     MIT                      |      MIT       |       zárt        |    zárt    |
 
-## Mikor érdemes az 67router-ot választani
+## Mikor érdemes a 67router-ot választani
 
 - Saját magad üzemelteted (self-host), és **maximális szolgáltatói lefedettségre** van szükséged (375 szolgáltató, 155 ingyenes/hitelesítés nélküli katalógusbejegyzés)
 - **Beépített MCP-szerverre** van szükséged (LLM-eszközök, memória és skill-ek eszközökként érhetők el)

@@ -4,7 +4,7 @@
 
 ---
 
-Ez a dokumentum az 67router összes CI-minőségi kapujának mérvadó referenciája.
+Ez a dokumentum a 67router összes CI-minőségi kapujának mérvadó referenciája.
 Ismerteti az egyes kapukat, az általuk ellenőrzött szempontokat, azt, hogy melyik CI-feladatban futnak, hogy
 küszöbérték-alapvonalat vagy megfelelt/nem felelt meg szabályt használnak-e, valamint hogy blokkolják-e a buildet, vagy csak tájékoztató jellegűek.
 
@@ -567,7 +567,7 @@ engedélyezési listával hamis minőségérzetet kelt.
 
 ## Ügynökeszközök: LSP a munkafolyamatban (választható)
 
-A CI-kapuk mellett az 67router egy **választható** `agent-lsp` vázat is biztosít
+A CI-kapuk mellett a 67router egy **választható** `agent-lsp` vázat is biztosít
 (egy projektszintű `.mcp.json`, Fase 7 15. feladat). Hozd létre a `.mcp.json` fájlt,
 hogy TypeScript nyelvi kiszolgálót tegyél elérhetővé a kódoló ügynökök számára, így azok a szimbólumokat /
 diagnosztikát **a kód megírása előtt** feloldhatják — ez a `typecheck:core` „fordítás az állítás előtt” elvű kiegészítője,

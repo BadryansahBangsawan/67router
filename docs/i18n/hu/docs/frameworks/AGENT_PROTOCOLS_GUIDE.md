@@ -7,7 +7,7 @@
 > **Forrás:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az 67router három különböző, ügynökökkel kapcsolatos felületet biztosít. Első pillantásra hasonlónak tűnnek, de eltérő problémákat oldanak meg. Ezen az oldalon kiválaszthatja a megfelelőt.
+A 67router három különböző, ügynökökkel kapcsolatos felületet biztosít. Első pillantásra hasonlónak tűnnek, de eltérő problémákat oldanak meg. Ezen az oldalon kiválaszthatja a megfelelőt.
 
 ## Röviden
 
@@ -43,9 +43,9 @@ Szüksége van egy felhőszolgáltatásra, amely ezen a gépen kívül végzi el
 
 ### Mikor használja
 
-- Többügynökös rendszer építésekor, amelyben az 67router az egyik partner
-- Az 67router útválasztási intelligenciájának (intelligens útválasztás, kvótakezelés stb.) elérhetővé tétele olyan keretrendszerek ügynökei számára, mint a Google ADK, illetve általános ügynökhálózatok számára
-- Az 67router szabványos felderítési és meghívási felülettel történő ellátásakor
+- Többügynökös rendszer építésekor, amelyben a 67router az egyik partner
+- A 67router útválasztási intelligenciájának (intelligens útválasztás, kvótakezelés stb.) elérhetővé tétele olyan keretrendszerek ügynökei számára, mint a Google ADK, illetve általános ügynökhálózatok számára
+- A 67router szabványos felderítési és meghívási felülettel történő ellátásakor
 
 ### Metódusok
 
@@ -74,7 +74,7 @@ Az átviteli részleteket, az ügynökkártya felépítését, a feladatok TTL-k
 
 ### Mi ez?
 
-Az ACP az 67router **helyi CLI-ügynöknyilvántartása**. Észleli, hogy mely programozási CLI-k vannak telepítve a gazdagépen (Cursor, Cline, Claude Code, Codex CLI, Continue stb.), meghatározza a verziójukat, és megjeleníti őket az irányítópulton, hogy a felhasználó mindegyik CLI-t beállíthassa az 67router használatára.
+Az ACP a 67router **helyi CLI-ügynöknyilvántartása**. Észleli, hogy mely programozási CLI-k vannak telepítve a gazdagépen (Cursor, Cline, Claude Code, Codex CLI, Continue stb.), meghatározza a verziójukat, és megjeleníti őket az irányítópulton, hogy a felhasználó mindegyik CLI-t beállíthassa a 67router használatára.
 
 A HTTP-felület egy belső nyilvántartás, amely a „CLI Tools” felhasználói felületet és
 a CLI-ujjlenyomatok követését működteti (lásd: [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Ettől elkülönülten
@@ -114,8 +114,8 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
 
 ### Felhasználási esetek
 
-- Az irányítópult „CLI Tools” oldala felsorolja a telepített eszközöket, és segít mindegyiket az 67router használatára beállítani
-- Az egyéni ügynökök lehetővé teszik a haladó felhasználók számára olyan belső/saját fejlesztésű CLI-k regisztrálását, amelyeket az 67router alapértelmezés szerint nem ismer
+- Az irányítópult „CLI Tools” oldala felsorolja a telepített eszközöket, és segít mindegyiket a 67router használatára beállítani
+- Az egyéni ügynökök lehetővé teszik a haladó felhasználók számára olyan belső/saját fejlesztésű CLI-k regisztrálását, amelyeket a 67router alapértelmezés szerint nem ismer
 - Az észlelés eredménye szolgáltat adatokat a `cli-tools` ujjlenyomatmátrixhoz
 
 ### Mikor NE használja az ACP-t?
@@ -132,7 +132,7 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
 
 ### Mi ez?
 
-Egységes felület külső szolgáltatók felhőalapú programozási ügynökeihez. Ön elküld egy promptot és egy adattár-URL-t, az 67router továbbítja ezeket a megfelelő felhőalapú ügynöknek, lekérdezi az állapotot, majd visszaadja az eredményeket.
+Egységes felület külső szolgáltatók felhőalapú programozási ügynökeihez. Ön elküld egy promptot és egy adattár-URL-t, a 67router továbbítja ezeket a megfelelő felhőalapú ügynöknek, lekérdezi az állapotot, majd visszaadja az eredményeket.
 
 ### Támogatott ügynökök (4, mind megerősítve az `src/lib/cloudAgent/agents/` könyvtárban)
 
@@ -174,7 +174,7 @@ Mindkettő támogat „hosszú ideig futó feladatokat”, de különböző rét
 | Szempont                    | A2A                                                                                                       | Cloud Agents                                            |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Szabvány                    | Nyílt A2A v0.3                                                                                            | 67router-specifikus                                     |
-| A számítás futtatási helye  | Az 67router-on belül (a konfigurált kombinációkat használja)                                              | Külső (Codex / Devin / Jules szerverek)                 |
+| A számítás futtatási helye  | A 67router-on belül (a konfigurált kombinációkat használja)                                               | Külső (Codex / Devin / Jules szerverek)                 |
 | Feladat időtartama          | Alapértelmezett TTL: 5 perc (a `TaskManager` osztályban konfigurálható)                                   | Percektől órákig                                        |
 | Tároló tartalmának ismerete | Nem (csak promptokat továbbít)                                                                            | Igen (tároló URL-je + ág)                               |
 | Felhasználási eset          | Ügynökök közötti együttműködés, intelligens útválasztás szolgáltatásként                                  | „Valósítsd meg az X funkciót az Y tárolóban” delegálása |
@@ -182,7 +182,7 @@ Mindkettő támogat „hosszú ideig futó feladatokat”, de különböző rét
 
 ## Integrációs példák
 
-### Az 67router A2A-képességeinek felderítése
+### A 67router A2A-képességeinek felderítése
 
 ```bash
 curl http://localhost:20128/.well-known/agent.json
@@ -190,7 +190,7 @@ curl http://localhost:20128/.well-known/agent.json
 
 Visszaadja az Agent Cardot mind a 6 készséggel, az átviteli módokkal és a verzióval.
 
-### Az 67router meghívása A2A-ügynökként
+### A 67router meghívása A2A-ügynökként
 
 ```bash
 curl -X POST http://localhost:20128/a2a \

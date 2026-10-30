@@ -8,7 +8,7 @@
 
 > **Hiteles forrás:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-Az 67router lehetővé teszi, hogy minden proxy rendelkezzen egy **címcsalád-alapú kimeneti direktívával**. Alapértelmezés szerint az operációs rendszer választ az IPv4 és az IPv6 közül (kettős protokollverem, „Happy Eyeballs”). Ha a direktívát `ipv4` vagy `ipv6` értékre állítja, az 67router az adott proxyn keresztüli összes kapcsolatot a kiválasztott családhoz rögzíti, és **biztonságosan meghiúsul**, ahelyett, hogy visszaváltana a másik családra.
+A 67router lehetővé teszi, hogy minden proxy rendelkezzen egy **címcsalád-alapú kimeneti direktívával**. Alapértelmezés szerint az operációs rendszer választ az IPv4 és az IPv6 közül (kettős protokollverem, „Happy Eyeballs”). Ha a direktívát `ipv4` vagy `ipv6` értékre állítja, a 67router az adott proxyn keresztüli összes kapcsolatot a kiválasztott családhoz rögzíti, és **biztonságosan meghiúsul**, ahelyett, hogy visszaváltana a másik családra.
 
 Ez az oldal bemutatja, hogy mi ez a direktíva, miért létezik, hol konfigurálható, és hogyan oldja fel a futtatókörnyezet.
 
@@ -122,7 +122,7 @@ A proxy CRUD-/hozzárendelési API-jának további részeiről lásd a [PROXY_GU
 
 ## Az `auto` feloldási módja
 
-Ha a `family` értéke `auto`, az 67router **nem** fűz hozzá semmilyen direktívát — a proxy URL-címét változtatás nélkül használja, a kapcsolathoz tartozó címcsalád pedig eleve adott módon lesz meghatározva.
+Ha a `family` értéke `auto`, a 67router **nem** fűz hozzá semmilyen direktívát — a proxy URL-címét változtatás nélkül használja, a kapcsolathoz tartozó címcsalád pedig eleve adott módon lesz meghatározva.
 
 Az URL összeállításakor (az `open-sse/utils/proxyDispatcher.ts` fájl `proxyConfigToUrl` / `normalizeProxyUrl` függvényében) az `auto` beállítású proxy egy jelölő nélküli egyszerű URL-címet eredményez:
 
@@ -158,7 +158,7 @@ Tehát:
 
 A nem `auto` direktíva egyetlen szintetikus lekérdezési jelölőként — `?family=ipv4` vagy `?family=ipv6` — kerül hozzáfűzésre egyszer a normalizált proxy URL-hez. A `normalizeProxyUrl` gondosan eltávolítja, majd pontosan egyszer újra hozzáfűzi ezt a jelölőt, így az soha nem rontja el a port feldolgozását.
 
-A diszpécser létrehozásakor a rendszer beolvassa a jelölőt, és konkrét kapcsolódási családdá alakítja. Ha a gazdagép a **másik** családba tartozó IP-literál, az 67router hibát dob (ellentmondás esetén zárt hibakezelést alkalmaz):
+A diszpécser létrehozásakor a rendszer beolvassa a jelölőt, és konkrét kapcsolódási családdá alakítja. Ha a gazdagép a **másik** családba tartozó IP-literál, a 67router hibát dob (ellentmondás esetén zárt hibakezelést alkalmaz):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Ezután a rendszer rögzíti a konkrét családot a csatlakozón:
 
 ## SOCKS5-kompatibilitás
 
-A családrögzítés SOCKS5-proxykkal is működik, azonban az alapértelmezett `fetch-socks` nem teszi elérhetővé a proxykapcsolat családjának rögzítéséhez szükséges socketbeállításokat. Az 67router ezért saját csatlakozót biztosít:
+A családrögzítés SOCKS5-proxykkal is működik, azonban az alapértelmezett `fetch-socks` nem teszi elérhetővé a proxykapcsolat családjának rögzítéséhez szükséges socketbeállításokat. A 67router ezért saját csatlakozót biztosít:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

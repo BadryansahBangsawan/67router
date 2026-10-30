@@ -90,7 +90,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Combined with env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, etc.), this lets you spin up an 67router instance fully scriptable.
+Combined with env vars (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, etc.), this lets you spin up a 67router instance fully scriptable.
 
 ### CLI Options
 

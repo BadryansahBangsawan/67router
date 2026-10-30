@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Az 67router beépített állapotfigyelést, szolgáltatói autopilotot, kvótakövetést és megfigyelhetőségi hookokat tartalmaz. Ez az útmutató az irányítópultot, a riasztásokat és a hibaelhárítást ismerteti.
+> **TL;DR**: A 67router beépített állapotfigyelést, szolgáltatói autopilotot, kvótakövetést és megfigyelhetőségi hookokat tartalmaz. Ez az útmutató az irányítópultot, a riasztásokat és a hibaelhárítást ismerteti.
 
 **Források:**
 
@@ -20,7 +20,7 @@
 
 ## Áttekintés
 
-Az 67router **3 megfigyelési réteggel** rendelkezik:
+A 67router **3 megfigyelési réteggel** rendelkezik:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Kombinációnként:
 
 ## Állapot-ellenőrzési API
 
-Az 67router **két** HTTP-s állapotfelületet biztosít. Ezek nem cserélhetők fel egymással az orchestratorokban.
+A 67router **két** HTTP-s állapotfelületet biztosít. Ezek nem cserélhetők fel egymással az orchestratorokban.
 
 | Útvonal                      | Cél                                                                           | Terhelés                                   | Használat                                                                                                   |
 | ---------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ tartós állapotok számához pedig a `staleDbNonOkCount` értéket.
 
 ### Kubernetes-próbákra vonatkozó ajánlások
 
-Az 67router **egyetlen Node-folyamat** (egy eseményhurok). Az alapértelmezett Docker `HEALTHCHECK` a könnyűsúlyú `/healthz` útvonalat célozza. A `/api/monitoring/health` **túl nagy terhelésű** a kubelet működésképességi ellenőrzési időközeihez.
+A 67router **egyetlen Node-folyamat** (egy eseményhurok). Az alapértelmezett Docker `HEALTHCHECK` a könnyűsúlyú `/healthz` útvonalat célozza. A `/api/monitoring/health` **túl nagy terhelésű** a kubelet működésképességi ellenőrzési időközeihez.
 
 | Próba                            | Ajánlott cél                                                                                       | Megjegyzések                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | -------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Kapcsolódó: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (
 
 ### systemd watchdog (lefagyott eseményciklus)
 
-Egy systemd-gazdagépen az 67router jelzi a szolgáltatáskezelőnek, amikor készen áll, és folyamatosan életjeleket küld neki, így az elakadt eseményciklusú kiszolgálót a rendszer leállítja és újraindítja ahelyett, hogy működőnek tűnve, de válasz nélkül maradna. Az életjelek a kiszolgáló saját eseményciklusából érkeznek: amikor az blokkolódik, az életjelek leállnak, és a systemd újraindítja a szolgáltatást, amint a `WatchdogSec` időtartama úgy telik el, hogy nem érkezik életjel.
+Egy systemd-gazdagépen a 67router jelzi a szolgáltatáskezelőnek, amikor készen áll, és folyamatosan életjeleket küld neki, így az elakadt eseményciklusú kiszolgálót a rendszer leállítja és újraindítja ahelyett, hogy működőnek tűnve, de válasz nélkül maradna. Az életjelek a kiszolgáló saját eseményciklusából érkeznek: amikor az blokkolódik, az életjelek leállnak, és a systemd újraindítja a szolgáltatást, amint a `WatchdogSec` időtartama úgy telik el, hogy nem érkezik életjel.
 
 Az [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) már eleve egy ilyen felhasználói egységet ír. A saját kezűleg létrehozott egység (az alapértelmezett `Type=simple` beállítással) nem kap watchdogot, ezért adja hozzá a következő sorokat a `[Service]` szakaszához:
 
@@ -443,7 +443,7 @@ A tokenállapot-ellenőrzés konfigurációját a `tokenHealthCheck.ts` belsőle
 
 ### Beépített csatornák
 
-Az 67router **3 riasztási csatornát** támogat:
+A 67router **3 riasztási csatornát** támogat:
 
 | Csatorna              | Beállítás         | Felhasználási terület           |
 | --------------------- | ----------------- | ------------------------------- |
@@ -559,7 +559,7 @@ Hozzon létre egy `~/.omniroute/dashboard.json` fájlt:
 ### „A kvóta állapota megfelelő, de 429-es hibákat látok”
 
 - A 429 azt jelenti, hogy a szolgáltató szerint felhasználta a kvótáját
-- Az 67router kvótakövetése **elavult** lehet — a szolgáltató felsőbb szintű adatai az irányadók
+- A 67router kvótakövetése **elavult** lehet — a szolgáltató felsőbb szintű adatai az irányadók
 - A kvótaadatokat a belső kvótafigyelő automatikusan frissíti
 
 ### „A kombináció sikertelen, de minden cél állapota megfelelőnek tűnik”
@@ -572,7 +572,7 @@ Hozzon létre egy `~/.omniroute/dashboard.json` fájlt:
 
 - Futtassa a következőt: `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Ha az eredmény „ok” — téves riasztás, az állapotellenőrzés túl szigorú
-- Ha bármi más — **állítsa le az 67router-ot**, és kövesse a [vészhelyzeti helyreállítási útmutatót](./DATABASE_GUIDE.md#disaster-recovery)
+- Ha bármi más — **állítsa le a 67router-ot**, és kövesse a [vészhelyzeti helyreállítási útmutatót](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „A memóriahalom terhelése kritikus”
 

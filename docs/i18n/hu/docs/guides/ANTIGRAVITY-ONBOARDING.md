@@ -4,7 +4,7 @@
 
 ---
 
-> **Amit kap**: Hozzáférést a Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6 és más modellekhez a Google One AI Pro-előfizetésén keresztül — az 67router-on át, egységes átjáróként továbbítva.
+> **Amit kap**: Hozzáférést a Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6 és más modellekhez a Google One AI Pro-előfizetésén keresztül — a 67router-on át, egységes átjáróként továbbítva.
 
 **Hivatalos hivatkozások**:
 
@@ -89,11 +89,11 @@ A kreditek külön vásárolhatók meg, és levonásuk a szabványos API-árazá
 
 ### Főbb részletek
 
-- A kvóta **fiókszinten megosztott** — ugyanaz a Google-fiók az Antigravity IDE-ben, a CLI-ben és az 67router-ban egyetlen közös kvótakeretet használ
+- A kvóta **fiókszinten megosztott** — ugyanaz a Google-fiók az Antigravity IDE-ben, a CLI-ben és a 67router-ban egyetlen közös kvótakeretet használ
 - Minden Google-fiók saját, független kvótával rendelkezik — több fiók = több kvótakeret
 - Az AI Pro felhasználói **7 napos zárolásokról** számoltak be az 5 órás visszaállítás helyett, amikor elérik a heti alapkvótát (a Google megerősítette, hogy nagy terhelés esetén ez szándékos működés)
 
-**Amikor a fiók kvótája kimerül**: Az 67router automatikusan újrapróbálkozik a kombinált útvonal következő elérhető fiókjával. Nincs szükség kézi beavatkozásra.
+**Amikor a fiók kvótája kimerül**: A 67router automatikusan újrapróbálkozik a kombinált útvonal következő elérhető fiókjával. Nincs szükség kézi beavatkozásra.
 
 ---
 
@@ -103,9 +103,9 @@ Minden antigravity/agy-kapcsolathoz szükség van egy Google Cloud Code `project
 
 ### A módszer: Automatikus (ajánlott)
 
-Az 67router ezt automatikusan kezeli. Amikor új Google-fiókot ad hozzá az irányítópult OAuth-folyamatán keresztül:
+A 67router ezt automatikusan kezeli. Amikor új Google-fiókot ad hozzá az irányítópult OAuth-folyamatán keresztül:
 
-1. Az 67router frissíti a tokent
+1. A 67router frissíti a tokent
 2. Meghívja a `loadCodeAssist` függvényt a projectId felderítéséhez
 3. Ha még nem létezik projekt, meghívja az `onboardUser` függvényt egy projekt létrehozásához
 4. Újra meghívja a `loadCodeAssist` függvényt az újonnan létrehozott projectId lekéréséhez
@@ -128,14 +128,14 @@ agy login
 # Ez elindítja a Cloud Code-regisztrációt, és hozzárendel egy projectId értéket
 ```
 
-Miután az `agy login` sikeresen befejeződött, frissítse a tokent az 67router irányítópultján. A projectId felderítése automatikusan megtörténik.
+Miután az `agy login` sikeresen befejeződött, frissítse a tokent a 67router irányítópultján. A projectId felderítése automatikusan megtörténik.
 
 ### Ellenőrzés
 
 Ellenőrizze az adatbázist:
 
 ```bash
-# Az 67router-konténeren belül
+# A 67router-konténeren belül
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### A probléma
 
-A Google OAuth érvényes átirányítási URI-t igényel. Az 67router alapértelmezés szerint a `http://127.0.0.1:20128/callback` címet használja (loopback). Ez helyi buildek esetén működik, de **távoli telepítéseknél nem** (például LAN IP-címen keresztül elért szerver esetén).
+A Google OAuth érvényes átirányítási URI-t igényel. A 67router alapértelmezés szerint a `http://127.0.0.1:20128/callback` címet használja (loopback). Ez helyi buildek esetén működik, de **távoli telepítéseknél nem** (például LAN IP-címen keresztül elért szerver esetén).
 
 A Google elutasítja azokat az átirányítási URI-kat, amelyek:
 
@@ -165,7 +165,7 @@ A Google elutasítja azokat az átirányítási URI-kat, amelyek:
 
 **A lehetőség: A beépített OAuth-folyamat használata (alapértelmezett)**
 
-- Akkor működik, ha az 67router-ot a `localhost` vagy a `127.0.0.1` címről éri el
+- Akkor működik, ha a 67router-ot a `localhost` vagy a `127.0.0.1` címről éri el
 - Nincs szükség konfigurációra
 
 **B lehetőség: Egyéni OAuth-hitelesítő adatok**
@@ -180,9 +180,9 @@ A Google elutasítja azokat az átirányítási URI-kat, amelyek:
 
 **C lehetőség: Az agy CLI használata a kezdeti bejelentkezéshez**
 
-- Futtassa az `agy login` parancsot azon a gépen, amelyről az 67router-ot el fogja érni
+- Futtassa az `agy login` parancsot azon a gépen, amelyről a 67router-ot el fogja érni
 - Az OAuth-folyamat helyileg fejeződik be, a tokenek pedig tárolásra kerülnek
-- Importálja a kapcsolatot az 67router-ba a Dashboardon keresztül
+- Importálja a kapcsolatot a 67router-ba a Dashboardon keresztül
 
 ### Korlátozások
 
@@ -193,7 +193,7 @@ A Google elutasítja azokat az átirányítási URI-kat, amelyek:
 
 ## 5. Hibaelhárítás: Ha az automatikus beállítás sikertelen
 
-Az 67router a legtöbb fiók esetében automatikusan kezeli a projectId felderítését és a kezdeti beállítást. Sikertelenség esetén a kiváltó ok általában az alábbiak egyike:
+A 67router a legtöbb fiók esetében automatikusan kezeli a projectId felderítését és a kezdeti beállítást. Sikertelenség esetén a kiváltó ok általában az alábbiak egyike:
 
 ### A fiók régiója blokkolva van
 
@@ -221,7 +221,7 @@ Az 67router a legtöbb fiók esetében automatikusan kezeli a projectId felderí
 
 **Kiváltó ok**: A fiókot még soha nem regisztrálták a Google Cloud Code szolgáltatásban, és az automatikus kezdeti beállítás sikertelen volt.
 
-**Javítás**: Futtassa manuálisan az `agy login` parancsot a Cloud Code-regisztráció elindításához, majd frissítse a tokent az 67router Dashboardon.
+**Javítás**: Futtassa manuálisan az `agy login` parancsot a Cloud Code-regisztráció elindításához, majd frissítse a tokent a 67router Dashboardon.
 
 ### A token lejárt vagy visszavonták
 
@@ -273,4 +273,4 @@ Nem működik a fiók?
 
 ---
 
-_Utolsó frissítés: 2026-07-31. Az 67router v3.8.50 alapján._
+_Utolsó frissítés: 2026-07-31. A 67router v3.8.50 alapján._

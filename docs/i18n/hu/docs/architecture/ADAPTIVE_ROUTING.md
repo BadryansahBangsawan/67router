@@ -4,11 +4,11 @@
 
 ---
 
-Ez a dokumentum az 67router-hoz hozzáadott, visszajelzés-vezérelt adaptív útválasztási alapokat ismerteti. Szándékosan kis terjedelmű: bevezet egy típusos útválasztási eredménycsatornát, egy online minőségi jelet, amely a meglévő auto-combo pontozót táplálja, egy opcionális OpenTelemetry-exportálót, valamint egy magyarázhatósági végpontot. **Nem** helyettesíti a meglévő rezilienciaréteget (áramkör-megszakító, kapcsolati várakozási idő, modellzárolás, állapotmátrix, autopilot) — hanem kiegészíti azt.
+Ez a dokumentum a 67router-hoz hozzáadott, visszajelzés-vezérelt adaptív útválasztási alapokat ismerteti. Szándékosan kis terjedelmű: bevezet egy típusos útválasztási eredménycsatornát, egy online minőségi jelet, amely a meglévő auto-combo pontozót táplálja, egy opcionális OpenTelemetry-exportálót, valamint egy magyarázhatósági végpontot. **Nem** helyettesíti a meglévő rezilienciaréteget (áramkör-megszakító, kapcsolati várakozási idő, modellzárolás, állapotmátrix, autopilot) — hanem kiegészíti azt.
 
 ## 1. Architekturális kontextus
 
-Az 67router egy adatsík, amely rendelkezik egy **kérések gyors feldolgozási útvonalával** és egy **vezérlési/intelligencia-síkkal**. A gyors útvonalnak gyorsnak, memóriatakarékosnak, aszinkronnak, reziliensnek és kiszámíthatónak kell maradnia. A kiértékelés, a minőségpontozás, a kísérletek és az előzmények elemzése a vezérlési síkhoz tartozik.
+A 67router egy adatsík, amely rendelkezik egy **kérések gyors feldolgozási útvonalával** és egy **vezérlési/intelligencia-síkkal**. A gyors útvonalnak gyorsnak, memóriatakarékosnak, aszinkronnak, reziliensnek és kiszámíthatónak kell maradnia. A kiértékelés, a minőségpontozás, a kísérletek és az előzmények elemzése a vezérlési síkhoz tartozik.
 
 ```
 AI-ügynök / IDE
@@ -231,7 +231,7 @@ Fájlok: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK nélkül).
 - A spanek követik a GenAI szemantikai konvencióit (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`), valamint az 67router útválasztási
+  `gen_ai.completion.finish_reason`, `gen_ai.system`), valamint a 67router útválasztási
   attribútumait (eredmény, állapot, TTFT, újrapróbálkozások, tartalék útvonal).
 - A `record()` csak egy korlátozott méretű pufferbe helyezi az adatot (O(1)); egy háttérben
   futó időzítő aszinkron módon üríti azt a `POST {endpoint}/v1/traces` kéréssel. Túlterhelés
@@ -254,7 +254,7 @@ Fájlok: `open-sse/services/routing/otel.ts`
 
 ## 6. Integráció a kiértékelési síkkal (felkészülés a Future AGI-ra)
 
-Az 67router a Future AGI-t (vagy bármely kiértékelőt) **lehetséges
+A 67router a Future AGI-t (vagy bármely kiértékelőt) **lehetséges
 intelligencia-/kiértékelési háttérrendszerként, nem pedig függőségként** kezeli. Az illesztési pontok:
 
 - Egy `RoutingEventSink` aszinkron módon továbbíthat eseményeket egy kiértékelőnek.

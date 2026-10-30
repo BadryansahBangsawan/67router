@@ -25,9 +25,9 @@
 
 </div>
 
-> **Használd a saját szolgáltatói fiókjaidat.** Ez a külön-külön igénybe vehető, külső szolgáltatók által kínált ingyenes csomagok becsült összesített mennyisége, nem pedig az 67router által biztosított tokenkeret. Regisztrálj, szerezd be a szükséges hitelesítő adatokat, és csatlakoztasd az általad használható szolgáltatókat; minden szolgáltató maga szabályozza a korlátait, az elérhetőségét és a feltételeit.
+> **Használd a saját szolgáltatói fiókjaidat.** Ez a külön-külön igénybe vehető, külső szolgáltatók által kínált ingyenes csomagok becsült összesített mennyisége, nem pedig a 67router által biztosított tokenkeret. Regisztrálj, szerezd be a szükséges hitelesítő adatokat, és csatlakoztasd az általad használható szolgáltatókat; minden szolgáltató maga szabályozza a korlátait, az elérhetőségét és a feltételeit.
 >
-> Az ingyenes csomagok kézi összefűzése körülményes — több tucat SDK, több tucat sebességkorlát, és fogalmad sincs arról, valójában mekkora keret áll rendelkezésedre. Az 67router **471 ingyenes csomagbejegyzést tart nyilván 34 ismétlődő keretkulcshoz**, és a kiemelt tokenmennyiséget a **17 közzétett, pozitív havi kerettel rendelkező készletből, valamint öt modellenkénti Groq-korlátból** számítja ki, a megosztott készleteket deduplikálva. A csak regionális személyazonosság-ellenőrzés után elérhető kereteket (jelenleg: ModelScope) külön jelenítjük meg: +~6M regionális személyazonosság-ellenőrzés mögött, és ezeket soha nem adjuk hozzá a kiemelt értékhez. Az eredmény mindig látható marad az irányítópulton (`/dashboard/free-tiers`).
+> Az ingyenes csomagok kézi összefűzése körülményes — több tucat SDK, több tucat sebességkorlát, és fogalmad sincs arról, valójában mekkora keret áll rendelkezésedre. A 67router **471 ingyenes csomagbejegyzést tart nyilván 34 ismétlődő keretkulcshoz**, és a kiemelt tokenmennyiséget a **17 közzétett, pozitív havi kerettel rendelkező készletből, valamint öt modellenkénti Groq-korlátból** számítja ki, a megosztott készleteket deduplikálva. A csak regionális személyazonosság-ellenőrzés után elérhető kereteket (jelenleg: ModelScope) külön jelenítjük meg: +~6M regionális személyazonosság-ellenőrzés mögött, és ezeket soha nem adjuk hozzá a kiemelt értékhez. Az eredmény mindig látható marad az irányítópulton (`/dashboard/free-tiers`).
 
 <img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="67router ingyenes keretkártya: stabilan havi ~1,62 milliárd ingyenes token, a regisztrációs jóváírásokkal pedig akár ~2,22 milliárd az első hónapban, 34 dokumentált, ismétlődő keretkulcsból, amelyek 471 katalogizált ingyenes csomagbejegyzést fednek le egyetlen végpont mögött. Őszinte, készletenként deduplikált számítás — minden megosztott készletet csak egyszer számolunk, beleértve 17 ismétlődő, közzétett pozitív havi tokenkerettel rendelkező készletet, valamint öt modellenkénti Groq-korlátot; 12 szolgáltató kerülendőként van megjelölve a feltételkockázati katalógusban, így te dönthetsz. A keretsáv tartalmazza a Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (öt modellenkénti korlát) és kisebb készleteket, továbbá külön jeleníti meg az első havi regisztrációs jóváírásokat és a tartósan ingyenes, tokenkorlát nélküli szolgáltatókat, így azok soha nem növelik mesterségesen a kiemelt értéket. Élő felhasznált/fennmaradó mennyiség a /dashboard/free-tiers oldalon."/>
 
@@ -108,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Ismerkedés</b></td>
     <td align="center"><a href="#-the-promise">💥 Az ígéret</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Miért az 67router?</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Miért a 67router?</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Mitől különleges?</a></td>
   </tr>
   <tr>
@@ -228,7 +228,7 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Három lépés: telepítsd és indítsd el az 67router-ot, csatlakoztass egy jogosult szolgáltatót a saját fiókoddal vagy API-kulcsoddal, majd irányítsd az eszközödet a localhost:20128/v1 címre egy 67router API-kulccsal és a model auto értékkel. Az útvonalválasztás a rendelkezésre álló jogosult kapcsolatoktól és a szolgáltatói korlátoktól függ."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Három lépés: telepítsd és indítsd el a 67router-ot, csatlakoztass egy jogosult szolgáltatót a saját fiókoddal vagy API-kulcsoddal, majd irányítsd az eszközödet a localhost:20128/v1 címre egy 67router API-kulccsal és a model auto értékkel. Az útvonalválasztás a rendelkezésre álló jogosult kapcsolatoktól és a szolgáltatói korlátoktól függ."/>
 
 ```bash
 # After connecting a provider, copy your 67router key from Dashboard → Endpoints:
@@ -257,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Miért az 67router?
+# 🤔 Miért a 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Miért az 67router — hagyd abba a 10 irányítópult közötti zsonglőrködést, a lejárt API-kulcsokat és a váratlan számlákat. Tíz mindennapi fájdalom a megoldással szemben: kihasználatlanul lejáró kvóta → előfizetések maximalizálása; kódolás közbeni sebességkorlátok → 4 szintű automatikus visszaállás (Előfizetés → API → Olcsó → Ingyenes); tokent égető eszközkimenetek → RTK + Caveman tömörítés (15–95%); drága API-k → költségoptimalizált útvonalválasztás; minden eszköznek saját beállítás → egy végpont, egy irányítópult; blokkolt AI → 3 szintű proxy + TLS-stealth; halott kulcsok → 3 rétegű ellenállóképesség (áramköri megszakítók, kulcshűtés, modellzárolás); egy előfizetés megosztása a csapatban → kulcspoolok fair-share kvótákkal; más felhőjén átmenő promptok → local-first AES-256-GCM titkosított kulcsokkal; kiadási átláthatóság hiánya → élő analitika (használat, kvóta, megtakarítások, p95 késleltetés)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Miért a 67router — hagyd abba a 10 irányítópult közötti zsonglőrködést, a lejárt API-kulcsokat és a váratlan számlákat. Tíz mindennapi fájdalom a megoldással szemben: kihasználatlanul lejáró kvóta → előfizetések maximalizálása; kódolás közbeni sebességkorlátok → 4 szintű automatikus visszaállás (Előfizetés → API → Olcsó → Ingyenes); tokent égető eszközkimenetek → RTK + Caveman tömörítés (15–95%); drága API-k → költségoptimalizált útvonalválasztás; minden eszköznek saját beállítás → egy végpont, egy irányítópult; blokkolt AI → 3 szintű proxy + TLS-stealth; halott kulcsok → 3 rétegű ellenállóképesség (áramköri megszakítók, kulcshűtés, modellzárolás); egy előfizetés megosztása a csapatban → kulcspoolok fair-share kvótákkal; más felhőjén átmenő promptok → local-first AES-256-GCM titkosított kulcsokkal; kiadási átláthatóság hiánya → élő analitika (használat, kvóta, megtakarítások, p95 késleltetés)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router kérésfolyam: az IDE-d vagy CLI-ed (Claude Code, Cursor, Cline…) egyetlen helyi végpontot hív (http://localhost:20128/v1); az 67router Smart Router (RTK + Caveman tömörítés, 20 útvonalválasztási stratégia, áramköri megszakítók, TLS-stealth, MCP, A2A, guardrail-ek) 4 szolgáltatói szinten keresztül tud visszaállni, amíg egy jogosult, egészséges célpont elérhető — 1. szint Előfizetés, 2. szint API-kulcs, 3. szint Olcsó és 4. szint Ingyenes."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router kérésfolyam: az IDE-d vagy CLI-ed (Claude Code, Cursor, Cline…) egyetlen helyi végpontot hív (http://localhost:20128/v1); a 67router Smart Router (RTK + Caveman tömörítés, 20 útvonalválasztási stratégia, áramköri megszakítók, TLS-stealth, MCP, A2A, guardrail-ek) 4 szolgáltatói szinten keresztül tud visszaállni, amíg egy jogosult, egészséges célpont elérhető — 1. szint Előfizetés, 2. szint API-kulcs, 3. szint Olcsó és 4. szint Ingyenes."/>
 
 </div>
 
@@ -283,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Szeretnél csatlakozni nyílt forráskódú barátként?** Ezek azok a cégek, amelyek támogatják a nyílt forráskódot, és segítenek az 67router működésében – és nyilvánosan elmondjuk, hogy minden tőlük kapott token mire megy. Keress minket: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Szeretnél csatlakozni nyílt forráskódú barátként?** Ezek azok a cégek, amelyek támogatják a nyílt forráskódot, és segítenek a 67router működésében – és nyilvánosan elmondjuk, hogy minden tőlük kapott token mire megy. Keress minket: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -298,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Alapító_Barát-1783FF?style=flat-square" alt="Alapító nyílt forráskódú barát"/>
     </td>
     <td>
-      Köszönjük a <b>Kimi (Moonshot AI)</b>-nak, alapító nyílt forráskódú barátunknak, hogy támogatja ezt a projektet! A Kimi az AI labor a nyílt súlyú K2 és K3 modellcsaládok mögött — a <b>Kimi K3</b> 1M-token kontextusablakot, natív látást és határszintű kódolást biztosít a zárt modellek árának töredékéért, és azonnal működik a Claude Code, Codex és minden kódoló eszközzel, amit az 67router kiszolgál.
+      Köszönjük a <b>Kimi (Moonshot AI)</b>-nak, alapító nyílt forráskódú barátunknak, hogy támogatja ezt a projektet! A Kimi az AI labor a nyílt súlyú K2 és K3 modellcsaládok mögött — a <b>Kimi K3</b> 1M-token kontextusablakot, natív látást és határszintű kódolást biztosít a zárt modellek árának töredékéért, és azonnal működik a Claude Code, Codex és minden kódoló eszközzel, amit a 67router kiszolgál.
       <br/><br/>
-      <b>Mire használja a Kimi támogatását:</b> A Kimi API kreditek az 67router AI-val validált kiadási folyamatát táplálják — a <i>Kimi K3 által működtetett egyesítési validálás</i> fázist, amely minden pull requestet áttekint, mielőtt kiadják — plusz a napi funkciófejlesztést. Az első osztályú Kimi támogatás mindkét sínen elérhető: a közvetlen <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) és a <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code kódolási terv</a> (OAuth és API kulcs). Az 67router az első brazil nyílt forráskódú projekt a Kimi támogatási programjában. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Szerezzen Kimi API kulcsot 15% extra kredittel →</b></a>
+      <b>Mire használja a Kimi támogatását:</b> A Kimi API kreditek a 67router AI-val validált kiadási folyamatát táplálják — a <i>Kimi K3 által működtetett egyesítési validálás</i> fázist, amely minden pull requestet áttekint, mielőtt kiadják — plusz a napi funkciófejlesztést. Az első osztályú Kimi támogatás mindkét sínen elérhető: a közvetlen <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) és a <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code kódolási terv</a> (OAuth és API kulcs). A 67router az első brazil nyílt forráskódú projekt a Kimi támogatási programjában. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Szerezzen Kimi API kulcsot 15% extra kredittel →</b></a>
     </td>
   </tr>
   <tr>
@@ -312,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Nyílt_Forráskódú_Barát-31f889?style=flat-square&labelColor=04170d" alt="Nyílt Forráskódú Barát"/>
     </td>
     <td>
-      Köszönjük a <b>Cheaper Inference</b>-nek, az 67router nyílt forráskódú barátjának, hogy támogatja ezt a projektet! A Cheaper Inference egy költség-rangsorolt átjáró, amely 42 határmodellt – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok és MiniMax – értékesít egy OpenAI-kompatibilis végpont mögött, minden kérést a legolcsóbb jogosult szolgáltatóhoz irányítva anélkül, hogy valaha is többet számolna fel, mint a modellgyártó listaára.
+      Köszönjük a <b>Cheaper Inference</b>-nek, a 67router nyílt forráskódú barátjának, hogy támogatja ezt a projektet! A Cheaper Inference egy költség-rangsorolt átjáró, amely 42 határmodellt – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok és MiniMax – értékesít egy OpenAI-kompatibilis végpont mögött, minden kérést a legolcsóbb jogosult szolgáltatóhoz irányítva anélkül, hogy valaha is többet számolna fel, mint a modellgyártó listaára.
       <br/><br/>
-      <b>Első osztályú támogatás az 67router-ban:</b> Chat Completions, a natív <code>/v1/responses</code> végpont, látás, eszközhívás és 3 képmodell (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, elérhető mint <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Szerezzen API kulcsot →</b></a>
+      <b>Első osztályú támogatás a 67router-ban:</b> Chat Completions, a natív <code>/v1/responses</code> végpont, látás, eszközhívás és 3 képmodell (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, elérhető mint <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Szerezzen API kulcsot →</b></a>
     </td>
   </tr>
 </table>
@@ -326,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Partneri promóció</b> — ingyenes regisztrációs kuponok olyan szolgáltatóktól, amelyeket nem szponzorálunk (kattintson a kibontáshoz)</sub></summary>
 
-<sub><i>Ez a szakasz csak ajánló/kuponkódokról szól. A szponzorált partnerségek a fenti <b>🤝 Támogatnak nyílt forráskódú barátaink</b> részben találhatók. Az 67router-nak nincs szponzorálási vagy partnerségi kapcsolata az itt felsorolt szolgáltatókkal – ezek nyilvános kuponok, amelyeket bárki használhat.</i></sub>
+<sub><i>Ez a szakasz csak ajánló/kuponkódokról szól. A szponzorált partnerségek a fenti <b>🤝 Támogatnak nyílt forráskódú barátaink</b> részben találhatók. A 67router-nak nincs szponzorálási vagy partnerségi kapcsolata az itt felsorolt szolgáltatókkal – ezek nyilvános kuponok, amelyeket bárki használhat.</i></sub>
 
 <table>
   <tr>
@@ -337,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — partneri regisztráció · <b>100 dollár ingyenes kredit</b> regisztrációkor (ingyenes szerver, magasabb késleltetésre számíthat – tesztelésre a legjobb, nem éles környezetbe). Első osztályú támogatás az 67router-ban <b>v3.8.50</b> óta: Chat Completions, az Anthropic-kompatibilis vezetékes formátum és az OpenAI-kompatibilis útvonal. Elérhető modellek: <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> és még sok más. <b><a href="https://agentrouter.org/register?aff=70LM">Szerezze meg a 100 dollárját →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — partneri regisztráció · <b>100 dollár ingyenes kredit</b> regisztrációkor (ingyenes szerver, magasabb késleltetésre számíthat – tesztelésre a legjobb, nem éles környezetbe). Első osztályú támogatás a 67router-ban <b>v3.8.50</b> óta: Chat Completions, az Anthropic-kompatibilis vezetékes formátum és az OpenAI-kompatibilis útvonal. Elérhető modellek: <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> és még sok más. <b><a href="https://agentrouter.org/register?aff=70LM">Szerezze meg a 100 dollárját →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Partneri link – Az 67router-nak nincs szponzorálási vagy partnerségi kapcsolata ezzel a szolgáltatóval.</i></sub>
+      <sub>⚠️ <i>Partneri link – A 67router-nak nincs szponzorálási vagy partnerségi kapcsolata ezzel a szolgáltatóval.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Ismer más szolgáltatót, amely nagylelkű ingyenes regisztrációs kupont kínál, ami az 67router felhasználóinak előnyére válik? Nyisson egy hibajegyet, és hozzáadjuk ide.</sub>
+<sub>Ismer más szolgáltatót, amely nagylelkű ingyenes regisztrációs kupont kínál, ami a 67router felhasználóinak előnyére válik? Nyisson egy hibajegyet, és hozzáadjuk ide.</sub>
 
 </details>
 
@@ -358,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Animált példák a 20 kombinált útválasztási stratégia közül 18-ra — stratégiánként egy csempe: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. A cache-optimized és a quota-weighted nincs animálva; az alábbi táblázat mind a 20-at ismerteti."/>
 
-> A **kombó** olyan modelllánc, amelyen az 67router **automatikusan** végzi az útválasztást. Ha elfogy a kvóta, meghibásodik egy szolgáltató, vagy megugranak a költségek, a kombó továbbléphet a következő megfelelő és működőképes modellre. 🛡️
+> A **kombó** olyan modelllánc, amelyen a 67router **automatikusan** végzi az útválasztást. Ha elfogy a kvóta, meghibásodik egy szolgáltató, vagy megugranak a költségek, a kombó továbbléphet a következő megfelelő és működőképes modellre. 🛡️
 
 ### ⚡ Konfiguráció nélkül — csak használd az `auto` értéket
 
-Nem kell kombót létrehoznod. Állítsd a modelledet `auto` értékre (vagy valamelyik változatára), és az 67router a csatlakoztatott szolgáltatóidból valós időben pontozott virtuális kombót hoz létre:
+Nem kell kombót létrehoznod. Állítsd a modelledet `auto` értékre (vagy valamelyik változatára), és a 67router a csatlakoztatott szolgáltatóidból valós időben pontozott virtuális kombót hoz létre:
 
 <table>
   <tr><th align="left">Modellazonosító</th><th align="left">Mire optimalizál</th></tr>
@@ -498,7 +498,7 @@ Mind a **20** stratégia — szabadon kombinálhatók a kombó egyes lépéseibe
 
 ### 🧱 Beépített ellenálló képesség (3 független réteg)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Az 67router ellenálló képessége — 3 független, öngyógyító réteg; minden hibát a megfelelő réteg kezel. 1. réteg: szolgáltatói áramkör-megszakító (teljes szolgáltató): csak 408/5xx esetén lép működésbe; küszöbértékek: OAuth 8× / API-kulcs 12× / helyi 2×; 60s/30s/15s után HALF-OPEN próbaállapotba áll vissza, igény szerinti helyreállítással; OPEN állapotban a kombináció a következő szolgáltatóhoz irányítja át a kéréseket. 2. réteg: kapcsolati várakozási idő (egy kulcs/fiók): alapérték OAuth esetén 5s / API-kulcs esetén 3s; exponenciális ×2 visszalépés a kéréshullámot megelőző védelemmel; a 429 figyelembe veszi a Retry-After értékét; a siker minden hibaállapotot töröl; a várakozó kulcs kimarad, miközben a többi kulcs továbbra is kiszolgálja a kéréseket. 3. réteg: modellzárolás (egy modell): a modellenkénti 429, a helyi 404 vagy az üzemmód megtagadása csak az adott modellt zárolja — soha nem a teljes kapcsolatot. A végleges állapotok (letiltva, lejárt, keret kimerült) az üzemeltető beavatkozását igénylik, nem várakozási időt."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="A 67router ellenálló képessége — 3 független, öngyógyító réteg; minden hibát a megfelelő réteg kezel. 1. réteg: szolgáltatói áramkör-megszakító (teljes szolgáltató): csak 408/5xx esetén lép működésbe; küszöbértékek: OAuth 8× / API-kulcs 12× / helyi 2×; 60s/30s/15s után HALF-OPEN próbaállapotba áll vissza, igény szerinti helyreállítással; OPEN állapotban a kombináció a következő szolgáltatóhoz irányítja át a kéréseket. 2. réteg: kapcsolati várakozási idő (egy kulcs/fiók): alapérték OAuth esetén 5s / API-kulcs esetén 3s; exponenciális ×2 visszalépés a kéréshullámot megelőző védelemmel; a 429 figyelembe veszi a Retry-After értékét; a siker minden hibaállapotot töröl; a várakozó kulcs kimarad, miközben a többi kulcs továbbra is kiszolgálja a kéréseket. 3. réteg: modellzárolás (egy modell): a modellenkénti 429, a helyi 404 vagy az üzemmód megtagadása csak az adott modellt zárolja — soha nem a teljes kapcsolatot. A végleges állapotok (letiltva, lejárt, keret kimerült) az üzemeltető beavatkozását igénylik, nem várakozási időt."/>
 
 <sub>📖 [Auto-Combo motor](docs/routing/AUTO-COMBO.md) · [Ellenálló képességi útmutató](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -506,22 +506,22 @@ Mind a **20** stratégia — szabadon kombinálhatók a kombó egyes lépéseibe
 
 <div align="center">
 
-## 🏆 Miben emelkedik ki az 67router
+## 🏆 Miben emelkedik ki a 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Mi különbözteti meg az 67router-ot — egy adott időpontban készült funkció-összehasonlítás a 9router, az OpenRouter, a CLIProxyAPI és a LiteLLM megoldásokkal, 13 képesség alapján. 67router: 375 szolgáltató, több mint 150 beépített ingyenes csomag, 20 útválasztási stratégia, 12 motoros token-tömörítés, beépített MCP-kiszolgáló 110 eszközzel, A2A-ügynökprotokoll, tartós memória, védelmi korlátok, felhőügynökök, TLS-ujjlenyomat-alapú rejtőzködés, Desktop/Termux/PWA, valamint 67 lokalizált felhasználói felületi nyelv. Az 67router MIT-licenccel rendelkezik, és saját infrastruktúrán is üzemeltethető. A versenytársak képességei és számai változhatnak; lásd a hivatkozott módszertant."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Mi különbözteti meg a 67router-ot — egy adott időpontban készült funkció-összehasonlítás a 9router, az OpenRouter, a CLIProxyAPI és a LiteLLM megoldásokkal, 13 képesség alapján. 67router: 375 szolgáltató, több mint 150 beépített ingyenes csomag, 20 útválasztási stratégia, 12 motoros token-tömörítés, beépített MCP-kiszolgáló 110 eszközzel, A2A-ügynökprotokoll, tartós memória, védelmi korlátok, felhőügynökök, TLS-ujjlenyomat-alapú rejtőzködés, Desktop/Termux/PWA, valamint 67 lokalizált felhasználói felületi nyelv. A 67router MIT-licenccel rendelkezik, és saját infrastruktúrán is üzemeltethető. A versenytársak képességei és számai változhatnak; lásd a hivatkozott módszertant."/>
 
 <sub>📊 Teljes módszertan és funkciónkénti részletek a 9router, az OpenRouter, a CLIProxyAPI és a LiteLLM megoldásokkal összehasonlítva → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Az 67router támogatása
+## 💚 A 67router támogatása
 
-Az 67router MIT-licencű, és nyíltan karbantartott projekt. Ha időt vagy pénzt takarít meg Önnek, így segíthet megőrizni a függetlenségét — válassza az Önnek megfelelő lehetőséget. A szponzoráció soha nem befolyásolja az útválasztási prioritást; láthatóságot vásárol, nem jobb helyezést.
+A 67router MIT-licencű, és nyíltan karbantartott projekt. Ha időt vagy pénzt takarít meg Önnek, így segíthet megőrizni a függetlenségét — válassza az Önnek megfelelő lehetőséget. A szponzoráció soha nem befolyásolja az útválasztási prioritást; láthatóságot vásárol, nem jobb helyezést.
 
 <table>
-  <tr><td nowrap>⭐ <b>Adjon csillagot a tárolónak</b></td><td>Ingyenes — valóban növeli a láthatóságot</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Adjon csillagot az 67router-nak</a></td></tr>
+  <tr><td nowrap>⭐ <b>Adjon csillagot a tárolónak</b></td><td>Ingyenes — valóban növeli a láthatóságot</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Adjon csillagot a 67router-nak</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Egyszeri vagy havi · nulla platformdíj</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Gyors, egyszeri támogatás, a támogatónak nem kell regisztrálnia</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Kis, kötetlen gesztus</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -532,7 +532,7 @@ Az 67router MIT-licencű, és nyíltan karbantartott projekt. Ha időt vagy pén
 
 **🇧🇷 PIX** — azonnali, díjmentes (Brazília)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Az 67router PIX QR-kódja"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="A 67router PIX QR-kódja"/>
 
 Kulcs (véletlenszerű): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -566,11 +566,11 @@ Másolható és beilleszthető Pix-kód:
 
 ## 📡 67router Radar
 
-A fő, ingyenes csomagra vonatkozó érték továbbra is **~1,62 milliárd token/hó** a fent dokumentált, készletek között duplikációmentesített katalógus alapján. A szolgáltatók ideiglenes regisztrációs jóváírásai ezen felül az első havi keretet **~2,22 milliárdra** növelhetik. A Radar egy opcionális, aláírt katalógusréteg azok számára, akik az 67router kiadásai között naprakészebb információkat szeretnének az ingyenes modellek elérhetőségéről; a közösségi katalógus és minden meglévő ingyenes funkció továbbra is ingyenes marad.
+A fő, ingyenes csomagra vonatkozó érték továbbra is **~1,62 milliárd token/hó** a fent dokumentált, készletek között duplikációmentesített katalógus alapján. A szolgáltatók ideiglenes regisztrációs jóváírásai ezen felül az első havi keretet **~2,22 milliárdra** növelhetik. A Radar egy opcionális, aláírt katalógusréteg azok számára, akik a 67router kiadásai között naprakészebb információkat szeretnének az ingyenes modellek elérhetőségéről; a közösségi katalógus és minden meglévő ingyenes funkció továbbra is ingyenes marad.
 
 A támogatók hozzáférhetnek az élő katalógushoz és további szolgáltatói lehetőségekhez. Ennek különálló, változó felső határa a szolgáltatók elérhetőségétől függően **legfeljebb körülbelül 3 milliárd token/hó**. Ez a felső határ nem jelent garanciát: a szolgáltatók bármikor módosíthatják a kvótákat, a jogosultsági feltételeket, a modelleket vagy a régiókat.
 
-A Radar használata opcionális, és kizárólag GET-kéréseket alkalmaz. Az 67router kliens nem tölt fel promptokat, forgalmi adatokat, szolgáltatói konfigurációt, használati telemetriát vagy a közlemények elvetésének helyi állapotát. A jogosultsági feltételekről és az aktuális katalógusról a **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)** oldalon tájékozódhat.
+A Radar használata opcionális, és kizárólag GET-kéréseket alkalmaz. A 67router kliens nem tölt fel promptokat, forgalmi adatokat, szolgáltatói konfigurációt, használati telemetriát vagy a közlemények elvetésének helyi állapotát. A jogosultsági feltételekről és az aktuális katalógusról a **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)** oldalon tájékozódhat.
 
 <br/>
 
@@ -665,7 +665,7 @@ A Radar használata opcionális, és kizárólag GET-kéréseket alkalmaz. Az 67
 
 <br/>
 
-**Bármely támogatott CLI elindítása az 67router-on keresztül egyetlen paranccsal** — konfigurációs fájlok létrehozása nélkül,
+**Bármely támogatott CLI elindítása a 67router-on keresztül egyetlen paranccsal** — konfigurációs fájlok létrehozása nélkül,
 folyamatonként beadott hitelesítő adatokkal, a Qwen/Gemini számára pedig ideiglenes, elkülönített saját könyvtárral:
 
 ```bash
@@ -758,7 +758,7 @@ a shell előzményeitől. → [CLI-integrációk](docs/guides/CLI-INTEGRATIONS.m
 
 <div align="center">
 
-## 🖥️ Hol fut az 67router — bárhol
+## 🖥️ Hol fut a 67router — bárhol
 
 </div>
 
@@ -788,13 +788,13 @@ a shell előzményeitől. → [CLI-integrációk](docs/guides/CLI-INTEGRATIONS.m
 
 </div>
 
-> Nincs új oldalsáv, nincs új csevegőfelület — az 67router által kiszolgált összes modell közvetlenül
+> Nincs új oldalsáv, nincs új csevegőfelület — a 67router által kiszolgált összes modell közvetlenül
 > **a már használt Copilot Chat modellválasztóban** jelenik meg. A VS Code 1.122 óta a szolgáltatói modellek
 > GitHub-bejelentkezés és Copilot-előfizetés nélkül is működnek — ügynökmóddal, eszközhívással és képfeldolgozással,
 > ingyenesen.
 
 Telepítsd az **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)** bővítményt, állítsd be
-az 67router-szervered címét (alapértelmezés szerint `localhost:20128`), majd nyisd meg a Copilot Chat → modellválasztó
+a 67router-szervered címét (alapértelmezés szerint `localhost:20128`), majd nyisd meg a Copilot Chat → modellválasztó
 → **Modellek kezelése…** → **67router** menüpontot.
 
 <table>
@@ -825,7 +825,7 @@ gombra — mindkét áruházban ugyanúgy működik. A forráskód, a hibajegyek
 A [Tauri v2](https://v2.tauri.app/) használatával készült (egy kerekítési hibányi méretű Rust-maggal), saját
 aláírt Node 24 futtatókörnyezettel érkezik, és egy alkalmazás által kezelt 67router-telepítést használ, így soha nem ütközik a
 globális `node`/`bun` környezeteddel. **Megosztja a meglévő `~/.omniroute/` konfigurációdat és adatbázisodat** — tehát ugyanaz
-az 67router, amelyet már most is futtatsz, csak éppen kalapban. 🎩
+a 67router, amelyet már most is futtatsz, csak éppen kalapban. 🎩
 
 <table>
   <tr><th align="left">Funkció</th><th align="left">Működés</th></tr>
@@ -853,7 +853,7 @@ dokumentáció itt található: <a href="https://github.com/zoispag/omniroute-tr
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privát és helyi működésre tervezve — az 67router átjárója és vezérlősíkja az Ön gépén fut. A promptok az egyes kérésekhez kiválasztott külső szolgáltatóhoz kerülnek; az 67router nem iktat be további hosztolt promptfeldolgozási lépést, a telemetria pedig alapértelmezés szerint le van tiltva. A hitelesítő adatok tároláskor AES-256-GCM titkosítást kapnak; a védelmi megoldások közé tartozik az API-kulcsok hatókörének korlátozása, az IP-szűrés, a sebességkorlátozás, a promptinjektálás elleni védelem, a külső szolgáltatói fejlécek megtisztítása, a választható PII-kitakarás, a megtisztított hibaüzenetek és a helyi SQLite auditnapló. Az 67router MIT-licencű és saját infrastruktúrán üzemeltethető."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privát és helyi működésre tervezve — a 67router átjárója és vezérlősíkja az Ön gépén fut. A promptok az egyes kérésekhez kiválasztott külső szolgáltatóhoz kerülnek; a 67router nem iktat be további hosztolt promptfeldolgozási lépést, a telemetria pedig alapértelmezés szerint le van tiltva. A hitelesítő adatok tároláskor AES-256-GCM titkosítást kapnak; a védelmi megoldások közé tartozik az API-kulcsok hatókörének korlátozása, az IP-szűrés, a sebességkorlátozás, a promptinjektálás elleni védelem, a külső szolgáltatói fejlécek megtisztítása, a választható PII-kitakarás, a megtisztított hibaüzenetek és a helyi SQLite auditnapló. A 67router MIT-licencű és saját infrastruktúrán üzemeltethető."/>
 
 <sub>📖 [Engedélyezés](docs/architecture/AUTHZ_GUIDE.md) · [Védelmi korlátok](docs/security/GUARDRAILS.md) · [Megfelelőség](docs/security/COMPLIANCE.md)</sub>
 
@@ -865,7 +865,7 @@ dokumentáció itt található: <a href="https://github.com/zoispag/omniroute-tr
 
 </div>
 
-> A szerveren túl az 67router egy **teljes parancssori vezérlőpult** **több mint 80 paranccsal**, valamint nyílt ügynökprotokollokkal, így egy MI-ügynök **önállóan** is vezérelheti.
+> A szerveren túl a 67router egy **teljes parancssori vezérlőpult** **több mint 80 paranccsal**, valamint nyílt ügynökprotokollokkal, így egy MI-ügynök **önállóan** is vezérelheti.
 
 ### ⌨️ Valódi CLI (nem csupán `start`)
 
@@ -876,9 +876,9 @@ omniroute setup         # vezetett első indítási varázsló
 omniroute doctor        # szolgáltatók, portok és natív függőségek diagnosztizálása
 ```
 
-### 🛰️ Távoli mód — a CLI itt, az 67router egy VPS-en fut
+### 🛰️ Távoli mód — a CLI itt, a 67router egy VPS-en fut
 
-Az 67router egy szerveren fut? Vezérelje laptopjáról **ugyanazzal a CLI-vel**. Jelentkezzen be egyszer
+A 67router egy szerveren fut? Vezérelje laptopjáról **ugyanazzal a CLI-vel**. Jelentkezzen be egyszer
 egy korlátozott hatókörű hozzáférési tokennel; ezután minden parancs a távoli példányt célozza.
 
 ```bash
@@ -894,13 +894,13 @@ A tokenek hatóköre `read` / `write` / `admin`; a folyamatokat indító útvona
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animált termináldemó az 67router CLI-ről — omniroute providers list, omniroute combo list és omniroute health — végiglépkedve a 89 parancsot tartalmazó legfelső szintű felületen: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animált termináldemó a 67router CLI-ről — omniroute providers list, omniroute combo list és omniroute health — végiglépkedve a 89 parancsot tartalmazó legfelső szintű felületen: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Csatlakoztasson egy ügynököt — és az maga vezérli az 67router-ot
+### 🤝 Csatlakoztasson egy ügynököt — és az maga vezérli a 67router-ot
 
-Tegye elérhetővé az 67router-ot **MCP**, **A2A**, **REST API**, **webhookok** vagy **távoli CLI** használatával — így bármely megfelelő képességű ügynök (vagy a saját kódja) önállóan hozzáférhet a teljes átjáróhoz: útválasztás, szolgáltatók, kombinációk, gyorsítótár, tömörítés és memória. Az alábbi HTTP-végpontok a `http://localhost:20128` címen érhetők el.
+Tegye elérhetővé a 67router-ot **MCP**, **A2A**, **REST API**, **webhookok** vagy **távoli CLI** használatával — így bármely megfelelő képességű ügynök (vagy a saját kódja) önállóan hozzáférhet a teljes átjáróhoz: útválasztás, szolgáltatók, kombinációk, gyorsítótár, tömörítés és memória. Az alábbi HTTP-végpontok a `http://localhost:20128` címen érhetők el.
 
 <table>
   <tr><th align="left">Interfész</th><th align="left">Végpont / parancs</th><th align="left">Felhasználási terület</th></tr>
@@ -942,7 +942,7 @@ range    = 78.4 – 94.6%
 
 A kódblokkokat, URL-eket, a JSON-t és a strukturált adatokat a megőrzési motor **mindig védi**.
 
-> **Miért használjunk sok tokent, ha kevés token is elvégzi a munkát?** Minden kérés **transzparensen** áthalad az 67router tömörítési pipeline-ján — ügyféloldali módosítások nélkül. Ez mára egy **12 összekapcsolható motorból álló verem**, amelyek sorrendben futnak, és routing-kombinációnként szabadon kombinálhatók — olyan ötletekre építve, mint a [RTK](https://github.com/rtk-ai/rtk), a [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), a [LLMLingua-2](https://github.com/microsoft/LLMLingua) és a [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Miért használjunk sok tokent, ha kevés token is elvégzi a munkát?** Minden kérés **transzparensen** áthalad a 67router tömörítési pipeline-ján — ügyféloldali módosítások nélkül. Ez mára egy **12 összekapcsolható motorból álló verem**, amelyek sorrendben futnak, és routing-kombinációnként szabadon kombinálhatók — olyan ötletekre építve, mint a [RTK](https://github.com/rtk-ai/rtk), a [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), a [LLMLingua-2](https://github.com/microsoft/LLMLingua) és a [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 A 12 motoros verem
 
@@ -1027,7 +1027,7 @@ omniroute
 ```
 
 > 💡 `npm warn ERESOLVE` vagy tárfüggőségi figyelmeztetéseket látsz? [Ezek ártalmatlanok](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **npm 11-et vagy újabbat használsz?** Az npm blokkolhatja a csomagok életciklus-szkriptjeit, ha azok nincsenek engedélyezve. Az 67router `postinstall` szkriptje (`node scripts/build/postinstall.mjs`) szükséges a natív futtatókörnyezeti fájlok előkészítéséhez. Globális telepítéskor engedélyezd az npm figyelmeztetésében megnevezett csomagokat. Az 67router 3.8.53 által jelzett csomagkészlet esetén:
+> **npm 11-et vagy újabbat használsz?** Az npm blokkolhatja a csomagok életciklus-szkriptjeit, ha azok nincsenek engedélyezve. A 67router `postinstall` szkriptje (`node scripts/build/postinstall.mjs`) szükséges a natív futtatókörnyezeti fájlok előkészítéséhez. Globális telepítéskor engedélyezd az npm figyelmeztetésében megnevezett csomagokat. A 67router 3.8.53 által jelzett csomagkészlet esetén:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1066,9 +1066,9 @@ Modell:    auto            (az elérhető kapcsolatok között irányít — vag
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-A csatlakoztatott modellek listáját kell látnod. 🎉 Ennyi — kezdj el kódolni, az 67router pedig automatikusan útválaszt és szükség esetén tartalék szolgáltatóra vált.
+A csatlakoztatott modellek listáját kell látnod. 🎉 Ennyi — kezdj el kódolni, a 67router pedig automatikusan útválaszt és szükség esetén tartalék szolgáltatóra vált.
 
-Ha a kliensed nem tud egyéni fejléceket küldeni, az 67router tokenizált kompatibilitási aliasokat is biztosít:
+Ha a kliensed nem tud egyéni fejléceket küldeni, a 67router tokenizált kompatibilitási aliasokat is biztosít:
 
 ```txt
 OpenAI-katalógus: http://localhost:20128/vscode/YOUR_KEY/
@@ -1118,7 +1118,7 @@ Teljes táblázat: [Docker útmutató — futásidejű RAM](docs/guides/DOCKER_G
 
 A szabványos `bun install` és a globális telepítés (`bun install -g omniroute`) a Bun futtatókörnyezetének felismerésével támogatott:
 
-- **Beépített `bun:sqlite`**: Az 67router a Bun alatt történő futtatáskor a Bun beépített `bun:sqlite` illesztőprogramját használja, Node.js alatt pedig a `better-sqlite3`, illetve a `sql.js` használatára tér át.
+- **Beépített `bun:sqlite`**: A 67router a Bun alatt történő futtatáskor a Bun beépített `bun:sqlite` illesztőprogramját használja, Node.js alatt pedig a `better-sqlite3`, illetve a `sql.js` használatára tér át.
 - **A Webpack csomagoló automatikus kiválasztása fejlesztéskor**: A fejlesztési mód (`bun run dev`) automatikusan felismeri a Bunt, és a natív V8-kötések inkompatibilitásának megelőzése érdekében letiltja a Turbopacket a Webpack javára. Az éles buildelés (`bun run build`) pontosan úgy követi az `OMNIROUTE_USE_TURBOPACK` értékét, mint Node alatt: alapértelmezés szerint Turbopacket használ; Webpackkel történő buildeléshez állítsa be az `OMNIROUTE_USE_TURBOPACK=0` értéket (a `Dockerfile.bun` ezt `--build-arg` argumentumként teszi elérhetővé).
 - **Dedikált Bun Dockerfile**: Többlépcsős `Dockerfile.bun` natív Bun-alapú éles telepítésekhez (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1202,7 +1202,7 @@ folyamat szolgálja ki egyetlen porton, ezért jelenleg nincs külön, kizáról
 
 <div align="center">
 
-# 🎬 Az 67router működés közben
+# 🎬 A 67router működés közben
 
 </div>
 
@@ -1266,7 +1266,7 @@ folyamat szolgálja ki egyetlen porton, ezért jelenleg nincs külön, kizáról
 
 Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 ismert megtekintés** (`v > 0`) · **1.210 csatorna/profil hálózatonként**. A nyers vezérlőpult 1.976 sort tartalmaz (YouTube 1.352 = 740 hosszú videó + 612 Shorts · TikTok 334 · Instagram 290); a kanonikus URL szerinti normalizálás után egyetlen duplikátum sem maradt, és videónként a legnagyobb számlálóérték maradt meg. A YouTube-adatgyűjtés 2026-10-13 óta szünetel (az API-kvóta 14. és 18/10. között kimerült), a TikTok/Instagram adatgyűjtése pedig 2026-09-02 óta (nincs adatgyűjtési kredit); 76 videóhoz továbbra sem tartozik megtekintésszám.
 
-> 🎬 **Készítettél videót az 67router-ról?** Nyiss egy [hibajegyet](https://github.com/diegosouzapw/OmniRoute/issues/new) vagy egy [beszélgetést](https://github.com/diegosouzapw/OmniRoute/discussions) a hivatkozással — itt fogjuk kiemelni.
+> 🎬 **Készítettél videót a 67router-ról?** Nyiss egy [hibajegyet](https://github.com/diegosouzapw/OmniRoute/issues/new) vagy egy [beszélgetést](https://github.com/diegosouzapw/OmniRoute/discussions) a hivatkozással — itt fogjuk kiemelni.
 
 <br/>
 
@@ -1339,7 +1339,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Beállítási útmutató</a></b></td><td>Teljes körű telepítési módszerek, CLI-eszközök konfigurációi, protokollbeállítás, időtúllépések finomhangolása</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">CLI-eszközök útmutatója</a></b></td><td>Eszközönkénti beállítás a Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo és Copilot számára</td></tr>
   <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Távoli mód</a></b></td><td>Távoli 67router (VPS) vezérlése a laptop CLI-jéből korlátozott hatókörű hozzáférési tokenekkel</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code-konfiguráció</a></b></td><td>A Claude Code csatlakoztatása az 67router-hoz (helyi/távoli) a <code>launch</code> paranccsal és modellenkénti profilokkal</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code-konfiguráció</a></b></td><td>A Claude Code csatlakoztatása a 67router-hoz (helyi/távoli) a <code>launch</code> paranccsal és modellenkénti profilokkal</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Gyors kezdés</a></b></td><td>3 lépéses telepítés → csatlakoztatás → konfigurálás</td></tr>
 </table>
 
@@ -1351,7 +1351,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman-útmutató</a></b></td><td>Quadlet systemd-integráció, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Virtuális gépes üzembe helyezés</a></b></td><td>Teljes útmutató: virtuális gép + nginx + Cloudflare beállítása</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Üzembe helyezés a Fly.io-n</a></b></td><td>Üzembe helyezés a Fly.io-n tartós tárhellyel</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-útmutató</a></b></td><td>Az 67router futtatása Androidon a Termux segítségével</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-útmutató</a></b></td><td>A 67router futtatása Androidon a Termux segítségével</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA-útmutató</a></b></td><td>Progresszív webalkalmazás telepítése, gyorsítótárazása és architektúrája</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Eltávolítási útmutató</a></b></td><td>Tiszta eltávolítás minden telepítési módszerhez</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Környezeti konfiguráció</a></b></td><td>A <code>.env</code> változók és hivatkozások teljes körű leírása</td></tr>
@@ -1406,7 +1406,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
 
 # ⭐ Legkiemelkedőbb közreműködők
 
-> Az 67router-ot egy lelkes nyílt forráskódú közösség formálja. Ezek a személyek olyan kiemelkedő hozzájárulásokat tettek, amelyek közvetlenül befolyásolják a projekt minőségét, stabilitását és elérését. **Köszönjük.**
+> A 67router-ot egy lelkes nyílt forráskódú közösség formálja. Ezek a személyek olyan kiemelkedő hozzájárulásokat tettek, amelyek közvetlenül befolyásolják a projekt minőségét, stabilitását és elérését. **Köszönjük.**
 
 ### Külső közreműködők az egyesített pull requestek száma szerint
 
@@ -1524,7 +1524,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
 
 <sub>Újraellenőrizve: 2026-10-18 14:44:45 UTC. A GitHubhoz rendelt commitokat a tároló Contributors API-ja jelentette a <code>release/v3.8.52</code> alapértelmezett ághoz. Az API 849 identitást adott vissza (429 felhasználó, 2 bot, 418 névtelen); ez a táblázat nem tartalmazza a karbantartót, a botokat és a névtelen identitásokat, a holtversenyeket pedig megőrzi. Ez eltér mind a fenti egyesített PR-ok szerinti rangsortól, mind az alábbi Git-metaadatok alapján készült összesítéstől.</sub>
 
-> 🙏 E közreműködők funkciói, hibajavításai és infrastruktúra-fejlesztései **alapvető részét** képezik annak, amitől az 67router megbízható és funkciókban gazdag. Minden pull request, minden teszteset és minden i18n-fordítási fájl számít. A nyílt forráskódot hozzájuk hasonló emberek építik.
+> 🙏 E közreműködők funkciói, hibajavításai és infrastruktúra-fejlesztései **alapvető részét** képezik annak, amitől a 67router megbízható és funkciókban gazdag. Minden pull request, minden teszteset és minden i18n-fordítási fájl számít. A nyílt forráskódot hozzájuk hasonló emberek építik.
 
 </div>
 
@@ -1536,7 +1536,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
 
 <div align="center">
 
-Szívből köszönjük azoknak, akik saját pénzükből finanszírozzák az 67router-ot — minden hozzájárulás segít abban, hogy a projekt ingyenes és független maradjon, és tovább fejlődjön.
+Szívből köszönjük azoknak, akik saját pénzükből finanszírozzák a 67router-ot — minden hozzájárulás segít abban, hogy a projekt ingyenes és független maradjon, és tovább fejlődjön.
 
 <table>
   <tr>
@@ -1626,7 +1626,7 @@ Szívből köszönjük azoknak, akik saját pénzükből finanszírozzák az 67r
 
 <sub>A nyilvános GitHub Sponsors-adatokat 2026-10-18-án ellenőriztük újra a GitHub Sponsors GraphQL API segítségével: az összesen 14 szponzorációból 11 nyilvános (6 aktív, 5 korábbi). A fenti aktív címkéket a GitHub <code>isActive</code> állapota határozza meg; a korábbi nyilvános egyszeri támogatóknak továbbra is köszönetet mondunk, a privát szponzorok pedig névtelenek maradnak. A Ko-fi-, Buy Me a Coffee-, Liberapay-, PIX- és kriptoadományok nem szerepelnek a listán, mivel nem tartozik hozzájuk nyilvános szponzori bejegyzés.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Legyél szponzor →</a></b> — minden dollár segít abban, hogy az 67router ingyenes és független maradjon.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Legyél szponzor →</a></b> — minden dollár segít abban, hogy a 67router ingyenes és független maradjon.
 
 </div>
 
@@ -1698,14 +1698,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/decolua/9router)** forkjaként és a Go nyelvű **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** projekt TypeScript-portjaként indult — ezt követően pedig az alábbi alrendszerek mindegyikét egy-egy olyan nyílt forráskódú projekt ihlette, amely korábban valósította meg az adott megoldást. Mindegyikük az 67router egy konkrét részét formálta. Ezzel szeretnénk köszönetet mondani mindannyiuknak. 🙏
+A 67router óriások vállán áll. A projekt a **[9router](https://github.com/decolua/9router)** forkjaként és a Go nyelvű **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** projekt TypeScript-portjaként indult — ezt követően pedig az alábbi alrendszerek mindegyikét egy-egy olyan nyílt forráskódú projekt ihlette, amely korábban valósította meg az adott megoldást. Mindegyikük a 67router egy konkrét részét formálta. Ezzel szeretnénk köszönetet mondani mindannyiuknak. 🙏
 
 > ⭐ a csillagok száma a GitHub REST API-jával lett ellenőrizve 2026. október 18-án — adjatok egy csillagot ezeknek a projekteknek. Az értékek egy adott időpontban készült pontos pillanatképet tükröznek, ezért természetesen változni fognak.
 
 ### 🧬 Eredet és átjáró
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan ihlette az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan ihlette a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Az eredeti projekt, amelyre ez a fork épül — itt multimodális API-kkal és egy teljes TypeScript-újraírással kibővítve.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Az a Go-implementáció, amely ezt a JavaScript / TypeScript-portot ihlette.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>Az az MI-átjáró, amelynek nyilvános árazási adatkészlete biztosítja a költségkövetési szinkronizálásunk adatait, szolgáltatónormalizálási modellje pedig hatással volt az útválasztásunkra.</td></tr>
@@ -1713,19 +1713,19 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>A stream-helyreállításba, a gondolkodás nélküli aliasokba, a tartalék webes keresésbe, a csúszóablakos korlátokba, a naplóadatok kitakarásába és a megerősített indítási folyamatokba átültetett minták.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>A Cursor Composer eszközválasztási, kimenetkorlátozási és eszközvéglegesítési mintái, amelyeket a natív Cursor-végrehajtóhoz adaptáltunk.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>A Codex OAuth-újrahitelesítésbe átültetett friss bejelentkezési és frissítésitoken-rotációs minták.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>A Claude Code-dal kompatibilis átalakítási alapértékek és számlázásifejléc-viselkedés, amelyeket általánosítottunk az 67router konfigurációvezérelt hídjához.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>A Grok-modellleképezéseit, hamis TypeError-t használó Statsig-generátorát, kérés- és eszközalapértékeit, valamint NDJSON-válaszfeldolgozóját érdemben adaptáltuk az 67router Grok Web-végrehajtójához.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>A Claude Code-dal kompatibilis átalakítási alapértékek és számlázásifejléc-viselkedés, amelyeket általánosítottunk a 67router konfigurációvezérelt hídjához.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>A Grok-modellleképezéseit, hamis TypeError-t használó Statsig-generátorát, kérés- és eszközalapértékeit, valamint NDJSON-válaszfeldolgozóját érdemben adaptáltuk a 67router Grok Web-végrehajtójához.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>A grok2api-merged mögötti elsődleges tranzitív kódforrás; modell-, fejléc-, hasznosadat-, Statsig- és feldolgozóimplementációit a Grok Web eredeti származási lánca megőrzi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>A Grok hasznosadat- és eszközalapértékeinek, a Statsig-generátornak, valamint a TQZHR-en és a grok2api-merged projekten keresztül átvett <code>result.response</code> feldolgozónak az alapjául szolgáló MIT-licencű forráskód.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Egy tranzitív forrás, amelyet a grok2api-merged a proxykészlet-rétegéért tüntet fel; az 67router megőrzi ezt a származási hivatkozást, de nem állítja, hogy a korlátozott hatókörű Grok Web-végrehajtója a proxykészlet portját tartalmazná.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>A cookie-hitelesítésű Grok-proxyja és <code>result.response.token</code> streamelési mintája hatással volt az 67router Grok Web-átvitelére.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Egy tranzitív forrás, amelyet a grok2api-merged a proxykészlet-rétegéért tüntet fel; a 67router megőrzi ezt a származási hivatkozást, de nem állítja, hogy a korlátozott hatókörű Grok Web-végrehajtója a proxykészlet portját tartalmazná.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>A cookie-hitelesítésű Grok-proxyja és <code>result.response.token</code> streamelési mintája hatással volt a 67router Grok Web-átvitelére.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Az eredeti Grok Web-implementáció a projekt HTTP-/böngészőalapú upstream kialakítását vette alapul; közvetlen HTTP-útvonala a GrokProxyból származik, ezért nem állítjuk, hogy önálló kódport történt.</td></tr>
 </table>
 
 ### 🗜️ Kontextus- és tokentömörítés — motorok
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>A virálissá vált „miért használ sok token, ha kevés token elég” projekt — ősemberbeszéd-filozófiája adja a szabványos tömörítési módunk, valamint több mint 30 töltelékszó-eltávolítási és sűrítési szabályunk alapját.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Nagy teljesítményű parancskimenet-tömörítés — ez inspirálta az RTK motorunkat, a JSON-szűrő DSL-t, a nyers kimenet visszaállítását és az egymásra épülő RTK → Caveman feldolgozási láncot.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Visszafordítható kontextustömörítés (SmartCrusher) — ez inspirálta a <code>headroom</code> motorunkat és a <code>ccr</code> lekérési jelölőmintát.</td></tr>
@@ -1733,15 +1733,15 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>A JS/ONNX-port (MobileBERT / XLM-RoBERTa), amelyet az LLMLingua motorunk munkaszálas háttérrendszereként használunk.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>pt-BR tokentömörítés — erre épül a pt-BR nyelvi csomagunk: a brazil portugál nyelvtanhoz hangolt pleonazmuscsökkentés és töltelékszó-eltávolítás.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>A virálissá vált „lusta senior fejlesztő” YAGNI-kódolási készség — ez inspirálta a <b>less-code</b> kimeneti stílusunkat: a legkisebb működő módosításra ösztönöz, így csökkenti a _generált_ kód mennyiségét (a Caveman tömör prózájának kimeneti tengelyen elhelyezkedő párja).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Cselekvésközpontú, ADHD-barát válaszstílusát öt nyelven adaptáltuk az 67router tömör kimeneti stílusához.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Cselekvésközpontú, ADHD-barát válaszstílusát öt nyelven adaptáltuk a 67router tömör kimeneti stílusához.</td></tr>
 </table>
 
 ### 🧩 Kompakt formátumok, tokenkutatás és kódtudatos eszközök
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Tokenorientált objektumjelölés — oszlopos, fejlécből és sorokból álló modellje formálta a táblázatos tömörítési szakaszunkat.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Kompakt gráfformátuma és általánosprofil-tervezése hatással volt az 67router táblázatos tömörítésére és a Headroom kodekformátumára.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Kompakt gráfformátuma és általánosprofil-tervezése hatással volt a 67router táblázatos tömörítésére és a Headroom kodekformátumára.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>Az MIT-licencű TypeScript-megvalósítás, amelyet közvetlenül beemeltünk és kibővítettünk a Headroom általánosprofil-kodekeként.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite gyorsítótár + munkamenetenkénti kontextuskülönbség — ez inspirálta a <code>session-dedup</code> motorunkat.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Bash-kimenet tömörítése + MCP-profilok — ez inspirálta a tömörítés megszakítására vonatkozó fegyelmünket és az MCP-eszközjegyzék csökkentését.</td></tr>
@@ -1758,7 +1758,7 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
 ### 🧠 Memória és RAG
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Univerzális memóriaréteg — a proxyt írási/olvasási határként alkalmazó modellje alakította memóriaarchitektúránkat.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Állapottartó ágensek többszintű memóriával — ez inspirálta a Context Control & Recovery (CCR) többszintű modelljét.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>A 16 visszatérő RAG-/LLM-hibatípust rendszerező ProblemMap taxonómia — ez biztosítja hibaelhárítási útmutatónk közös szókincsét.</td></tr>
@@ -1767,7 +1767,7 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
 ### 🛰️ Forgalomvizsgálat, MITM és transzparens proxy
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>A kódolási asszisztens ↔ LLM közötti forgalom MITM-elfogása/-elemzése meghatározta a Traffic Inspector korai követelményeit. Négy korábban származtatott modult — az SSE-egyesítést, a beszélgetések normalizálását, a titkos adatok maszkolását és a fejlécek tisztítását — nyilvános protokollszabványokon alapuló, független, tiszta megvalósításokra cseréltünk. A két gazdagép-közvetlen továbbítási felület (<code>passthrough.ts</code> és <code>_internal/bypass.cjs</code>) továbbra is egymástól függetlenül besorolt, belső 67router-megvalósítás; ezeket nem írtuk újra a csere részeként.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Transzparens, folyamatonkénti proxyútválasztás — ez inspirálta az összeomlásbiztos MITM-leállítást, a socketek inaktivitási időtúllépéseit, a <code>/proc</code> alapú folyamathoz-rendelést és a TPROXY-forgalomrögzítést.</td></tr>
 </table>
@@ -1775,7 +1775,7 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
 ### 📚 Modelladatok, megfigyelhetőség és felhasználói felület
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>MI-modellek specifikációinak, árainak és képességeinek nyílt adatbázisa — natívan szinkronizáljuk a modellkatalógusunkkal.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>A csomópontalapú gráfkönyvtár, amely a valós idejű Compression Studio és Combo/Routing Studio működését biztosítja.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>A LangGraph Studio élő munkafolyamatgráf-vizualizációja inspirálta stúdióink valós idejű kaszkádnézetét.</td></tr>
@@ -1788,19 +1788,19 @@ Az 67router óriások vállán áll. A projekt a **[9router](https://github.com/
 ### 🛡️ Biztonság
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>A biztonságos alapbeállításokat alkalmazó könyvtárak válogatott listája, amely biztonsági döntéseinket irányítja (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Kiegészítő eszközök
 
 <table>
-  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta az 67router-ot</th></tr>
+  <tr><th align="left">Projekt</th><th align="center">⭐</th><th align="left">Hogyan inspirálta a 67router-ot</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Inspirálta a kérések deduplikálását, a vészhelyzeti, költségmentes tartalékmegoldást, a bővíthető Auto-Combo stratégiákat és a többnyelvű szándékosztályozást.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>A fióktudatos modell-újraleképezés, a végrehajtható fájlok elérési útjának ellenőrzése és a csomagcímkék kezelése hozzájárult az 67router Antigravity-futtatókörnyezetének kialakításához.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>A kvóta-visszaállításig hátralévő idő kompakt formátuma inspirálta az 67router megfelelő szolgáltatóikorlát-kijelzését.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>A fióktudatos modell-újraleképezés, a végrehajtható fájlok elérési útjának ellenőrzése és a csomagcímkék kezelése hozzájárult a 67router Antigravity-futtatókörnyezetének kialakításához.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>A kvóta-visszaállításig hátralévő idő kompakt formátuma inspirálta a 67router megfelelő szolgáltatóikorlát-kijelzését.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>ACP-integrációi inspirálták a telepített CLI-ágensek 67router általi automatikus észlelését.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Azonosította a Grok Build kvótafelületét; az 67router ezt követően függetlenül ellenőrizte és javította a tényleges átviteli formátumot.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Azonosította a Grok Build kvótafelületét; a 67router ezt követően függetlenül ellenőrizte és javította a tényleges átviteli formátumot.</td></tr>
 </table>
 
 ## 📄 Licenc

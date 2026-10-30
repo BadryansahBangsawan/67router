@@ -93,7 +93,7 @@
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router ହେଉଛି ଏକାଧିକ ପ୍ରଦାନକାରୀଙ୍କ LLM ପାଇଁ ଏକ AI ଗେଟୱେ। ଆପଣଙ୍କ ସମସ୍ତ AI ପ୍ରଦାନକାରୀଙ୍କ ପାଇଁ ଗୋଟିଏ ଏଣ୍ଡପଏଣ୍ଟ।",
   "start_url": "/",

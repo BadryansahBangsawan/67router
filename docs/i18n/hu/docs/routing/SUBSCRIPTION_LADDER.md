@@ -10,7 +10,7 @@
 
 ## Miért létezik ez?
 
-Az 67router már megválaszol két költségekkel kapcsolatos kérdést, de egyik sem az, amelyet a legtöbb üzemeltető feltesz.
+A 67router már megválaszol két költségekkel kapcsolatos kérdést, de egyik sem az, amelyet a legtöbb üzemeltető feltesz.
 
 | Meglévő mechanizmus                                      | Ezt válaszolja meg                            |
 | -------------------------------------------------------- | --------------------------------------------- |

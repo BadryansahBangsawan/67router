@@ -212,7 +212,7 @@ omniroute launch --profile kimi-k27
 
 ## Model tiers (optional)
 
-Claude Code routes to capability tiers. Map each to an 67router model via env /
+Claude Code routes to capability tiers. Map each to a 67router model via env /
 settings if you want different providers per tier:
 
 ```bash

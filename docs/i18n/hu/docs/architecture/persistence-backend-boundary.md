@@ -10,7 +10,7 @@
 
 ## Kontextus
 
-Az 67router jelenleg tartományorientált perzisztenciafüggvényeket biztosít a `src/lib/db/` könyvtárból, míg a
+A 67router jelenleg tartományorientált perzisztenciafüggvényeket biztosít a `src/lib/db/` könyvtárból, míg a
 `src/lib/db/core.ts` által visszaadott megosztott kapcsolat a `src/lib/db/adapters/types.ts` fájlban definiált szinkron `SqliteAdapter`
 szerződést valósítja meg. Ez az adapter több SQLite-futtatókörnyezetet támogat, a
 felülete azonban továbbra is SQLite-jellegű: szinkron előkészített utasítások, `pragma`, késleltetett és azonnali

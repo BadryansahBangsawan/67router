@@ -4,7 +4,7 @@
 
 ---
 
-Amikor az 67router Dockerben fut, a régi **Importálás a Cursor IDE-ből** /
+Amikor a 67router Dockerben fut, a régi **Importálás a Cursor IDE-ből** /
 `cursor-agent` folyamatok meghiúsulnak, mert a konténer nem látja a gazdagépen
 telepített Cursort. Használja helyette a **Bejelentkezés a Cursorral** (deep-control PKCE) lehetőséget.
 
@@ -24,11 +24,11 @@ telepített Cursort. Használja helyette a **Bejelentkezés a Cursorral** (deep-
 
 1. Nyissa meg az **Irányítópult → Szolgáltatók → Cursor** oldalt.
 2. Válassza a **Bejelentkezés a Cursorral** lapot.
-3. Kattintson a **Bejelentkezés a Cursorral** gombra — az 67router megnyitja a
+3. Kattintson a **Bejelentkezés a Cursorral** gombra — a 67router megnyitja a
    `https://cursor.com/loginDeepControl?…` címet a **gazdagép** böngészőjében.
-4. Hagyja jóvá a bejelentkezést a böngészőben, majd térjen vissza az irányítópultra. Az 67router
+4. Hagyja jóvá a bejelentkezést a böngészőben, majd térjen vissza az irányítópultra. A 67router
    addig kérdezi le az `api2.cursor.sh/auth/poll` végpontot, amíg meg nem érkeznek a tokenek.
-5. Az 67router tárolja a **hozzáférési és frissítési** tokeneket, és a
+5. A 67router tárolja a **hozzáférési és frissítési** tokeneket, és a
    `https://api2.cursor.sh/auth/exchange_user_api_key` címen keresztül frissíti őket.
 
 Ehhez az eljáráshoz nincs szükség Cursor IDE-re vagy `cursor-agent` binárisra a konténerben.
@@ -37,10 +37,10 @@ Ehhez az eljáráshoz nincs szükség Cursor IDE-re vagy `cursor-agent` bináris
 
 Bejelentkezett kapcsolat esetén az **Elérhető modellek / Automatikus szinkronizálás** előnyben részesíti a Cursor
 HTTP-alapú `AiService/AvailableModels` katalógusát, a kapcsolat bearer tokenjét használva.
-Ha ez sikertelen, az 67router továbbra is megpróbálja használni a gazdagép `cursor-agent`
+Ha ez sikertelen, a 67router továbbra is megpróbálja használni a gazdagép `cursor-agent`
 binárisát (ha elérhető), majd a statikus jegyzék kezdőadatait.
 
-Az 67router mindig elérhetővé teszi az **`auto`** modellt a katalógusban („Auto” megjelenítési névvel), valamint
+A 67router mindig elérhetővé teszi az **`auto`** modellt a katalógusban („Auto” megjelenítési névvel), valamint
 az OpenCodex-stílusú **`auto-cost`**, **`auto-balance`** és
 **`auto-intelligence`** útválasztási módokat. Az adatátvitel során ezek a Cursor `default` modelljére
 képeződnek le (a három változat esetén egy `optimization` ModelParameter használatával). Részesítse előnyben
@@ -87,7 +87,7 @@ már nem szükséges).
 ## Üres fordulók / elfogyott használati keret
 
 Amikor a Cursor elfogad egy futtatást, de nem ad vissza asszisztensi szöveget (ami gyakori, amikor a prémium
-használati keret elfogyott), az 67router egy cselekvésre ösztönző **429**-es (kvótára utaló) vagy
+használati keret elfogyott), a 67router egy cselekvésre ösztönző **429**-es (kvótára utaló) vagy
 útmutatást tartalmazó **502**-es hibát jelenít meg — nem pusztán a „A szolgáltató üres tartalmat adott vissza” üzenetet. Az olyan streamelési
 hibák, mint a `not_found: AI Model Not Found` (a használati időszak kerete elfogyott),
 **Cursor-sebességkorlátozás / használati keret túllépve** hibaként lesznek besorolva, és ez az üzenet
@@ -97,7 +97,7 @@ a Cursor-előfizetés korlátait.
 
 ## Kliensverzió (grafikus felület nélkül)
 
-Helyi `cursor-agent`-telepítés hiányában az 67router az
+Helyi `cursor-agent`-telepítés hiányában a 67router az
 `x-cursor-client-version` értékét először a `CURSOR_AGENT_CLI_VERSION` környezeti változóból, majd a Cursor telepítőszkriptjének
 lemezen gyorsítótárazott feldolgozásából, végül pedig egy rögzített buildazonosítóból határozza meg. Szükség esetén felülbírálhatja
 a `CURSOR_AGENT_CLI_VERSION` használatával.

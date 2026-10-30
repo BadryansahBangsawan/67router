@@ -4,9 +4,9 @@
 
 ---
 
-Üzemeltetői megjegyzések a `POST /v1/embeddings` végponthoz, amikor az 67router a
+Üzemeltetői megjegyzések a `POST /v1/embeddings` végponthoz, amikor a 67router a
 Hindsight 0.9.1 (csak szöveges `encode(list[str])`) és a Memorix 1.6.0 (Jina média-
-kapu) előtt helyezkedik el. Élőben ellenőrizve 2026-08-17-én az 67router 3.8.49-cel a
+kapu) előtt helyezkedik el. Élőben ellenőrizve 2026-08-17-én a 67router 3.8.49-cel a
 `https://omniroute.jaguar-fish.ts.net/v1` címen. Alább nincsenek titkos adatok.
 
 ## Működő modellazonosítók
@@ -82,7 +82,7 @@ curl -sS https://omniroute.example/v1/embeddings \
 
 A natív `gemini-embedding-2` önmagában a GitOps használatával nem működhet.
 Egy Google AI Studio-kulcsot kell hozzáadni `gemini` szolgáltatói kapcsolatként
-az irányítópulton, vagy az 67router-ba importált `GEMINI_API_KEY` formájában.
+az irányítópulton, vagy a 67router-ba importált `GEMINI_API_KEY` formájában.
 Ez a titkos adat nincs ebben a tárolóban.
 
 ### Jina multimodális útvonal
@@ -104,7 +104,7 @@ Használja a `POST /v1/embeddings` végpontot, amíg nem létezik alias.
 
 ### Jina / Memorix képobjektum
 
-Az 67router kanonikus képeleme (28×28-as PNG, 784 képpont — a Jina elutasítja
+A 67router kanonikus képeleme (28×28-as PNG, 784 képpont — a Jina elutasítja
 az 1×1-es képet):
 
 ```json
@@ -155,7 +155,7 @@ A `{ "text": "..." }` és a `{ "image": "data:..." }` keverése ugyanilyen
 
 A Hindsight beágyazásai csak szövegesek (`encode(list[str])`). Nem küld
 képobjektumokat. Állítsa a Hindsight OpenAI-kompatibilis beágyazási alap-URL-jét
-az 67router `/v1` címére, és használjon egy működő azonosítót a fenti
+a 67router `/v1` címére, és használjon egy működő azonosítót a fenti
 táblázatból (`jina-ai/jina-embeddings-v5-omni-small` vagy
 `openrouter/google/gemini-embedding-2`). Ne állítsa a modellt a csupasz
 `gemini-embedding-2` értékre, kivéve, ha létezik `gemini` API-kulcs az
@@ -164,11 +164,11 @@ táblázatból (`jina-ai/jina-embeddings-v5-omni-small` vagy
 ### Memorix 1.6.0
 
 A Memorix csak a `/jina\.ai/i` mintára illeszkedő `baseUrl` értéket kezeli
-natív médiaként. Az 67router URL-je akkor is a csak szöveges útvonalon marad,
+natív médiaként. A 67router URL-je akkor is a csak szöveges útvonalon marad,
 ha a modell Jina omni. Ez a kapu a Memorix kliens hibája. Ettől függetlenül az
 67router továbbra is elutasítja azt a Jina-féle `{image: "data:..."}`
 törzset, amelyet a Memorix küldene, ha a kapu megnyílna, ezért a
-Jina-kompatibilis kliensek nem ágyazhatnak be képeket az 67router-on keresztül
+Jina-kompatibilis kliensek nem ágyazhatnak be képeket a 67router-on keresztül
 a kanonikus `{type,source}` séma nélkül.
 
 Szöveghez használja a `jina-ai/jina-embeddings-v5-omni-small` modellt. Ne

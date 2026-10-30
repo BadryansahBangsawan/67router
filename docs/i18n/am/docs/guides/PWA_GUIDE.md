@@ -93,7 +93,7 @@ service worker በዋናው አቀማመጥ ውስጥ ባለው `<PwaRegister />
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router ለብዙ አቅራቢዎች LLMs የሚያገለግል AI ጌትዌይ ነው። ለሁሉም የAI አቅራቢዎችዎ አንድ የመገናኛ ነጥብ።",
   "start_url": "/",

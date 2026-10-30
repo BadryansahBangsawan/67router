@@ -93,7 +93,7 @@ Binuo ng Next.js sa pamamagitan ng `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "Ang 67router ay isang AI gateway para sa mga multi-provider na LLM. Isang endpoint para sa lahat ng iyong AI provider.",
   "start_url": "/",

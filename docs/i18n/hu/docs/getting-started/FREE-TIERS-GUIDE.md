@@ -4,7 +4,7 @@
 
 ---
 
-> **Röviden**: Használd a saját, feltételeknek megfelelő szolgáltatói fiókjaidat. Az 67router az általad konfigurált kapcsolatokat egyesíti; nem biztosítja a hirdetett összesített tokenkeretet. Az ingyenes hozzáféréshez regisztrációra, API-kulcsra, jóváhagyásra vagy fizetési mód megadására lehet szükség. A szolgáltatók korlátozásai, adatvédelmi szabályzatai és feltételei továbbra is érvényesek.
+> **Röviden**: Használd a saját, feltételeknek megfelelő szolgáltatói fiókjaidat. A 67router az általad konfigurált kapcsolatokat egyesíti; nem biztosítja a hirdetett összesített tokenkeretet. Az ingyenes hozzáféréshez regisztrációra, API-kulcsra, jóváhagyásra vagy fizetési mód megadására lehet szükség. A szolgáltatók korlátozásai, adatvédelmi szabályzatai és feltételei továbbra is érvényesek.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Számos MI-szolgáltató kínál valamilyen **ingyenes hozzáférést**. A szolgáltatótól függően ez jelenthet hitelesítés nélküli végpontot, rendszeresen megújuló kvótát, sebességkorlátozott, de összességében korlátlan hozzáférést, regisztrációkor kapott keretet, manuális jóváhagyást vagy ideiglenes promóciót. Egyes lehetőségekhez fiók, API-kulcs, hitelkártya, ügyfél-azonosítás (KYC) vagy szolgáltatóspecifikus feltételek elfogadása szükséges.
 
-Az 67router egyetlen végpontban **egyesíti** a konfigurált kapcsolatokat. Továbbra is külön kell regisztrálnia minden olyan szolgáltatónál, amely fiókot igényel. Csatlakoztassa ezeket a fiókokat, és használja a `model: "auto"` beállítást a megfelelő célpontok közötti útválasztáshoz. Előfordulhat, hogy egy friss telepítésben nincs használható, kulcsot nem igénylő célpont; az 67router telepítése önmagában nem garantál sikeres csevegési választ.
+A 67router egyetlen végpontban **egyesíti** a konfigurált kapcsolatokat. Továbbra is külön kell regisztrálnia minden olyan szolgáltatónál, amely fiókot igényel. Csatlakoztassa ezeket a fiókokat, és használja a `model: "auto"` beállítást a megfelelő célpontok közötti útválasztáshoz. Előfordulhat, hogy egy friss telepítésben nincs használható, kulcsot nem igénylő célpont; a 67router telepítése önmagában nem garantál sikeres csevegési választ.
 
 ---
 
@@ -57,7 +57,7 @@ Ezek a szolgáltatók meghatározott korlátokkal rendelkező **ingyenes csomago
 
 ## Az ingyenes csomagok halmozása
 
-Az 67router ereje az **ingyenes csomagok halmozásában** rejlik. Ahelyett, hogy egyetlen szolgáltatóra támaszkodna, több ingyenes szolgáltatót csatlakoztathat, és az 67router automatikusan kiválasztja az egyes kérésekhez leginkább megfelelőt.
+A 67router ereje az **ingyenes csomagok halmozásában** rejlik. Ahelyett, hogy egyetlen szolgáltatóra támaszkodna, több ingyenes szolgáltatót csatlakoztathat, és a 67router automatikusan kiválasztja az egyes kérésekhez leginkább megfelelőt.
 
 ### Példa: szélesebb körű ingyenes lefedettség
 
@@ -68,7 +68,7 @@ Csatlakoztasson több szolgáltatót, hogy csökkentse az egyetlen kvótától v
 3. **Pollinations** — kulcs nélküli, sebességkorlátozott hozzáférés
 4. **LongCat** — egyszeri regisztrációs jóváírás (KYC szükséges)
 
-Ezután használja a `model: "auto"` beállítást, és az 67router:
+Ezután használja a `model: "auto"` beállítást, és a 67router:
 
 - Először a legmagasabb rangú, használható kapcsolatot próbálja meg
 - Ha annak kvótája kimerült, vagy az állapotellenőrzése sikertelen → megpróbálja a következő beállított szolgáltatót
@@ -101,7 +101,7 @@ a korlátlan vagy kulcs nélküli hozzáférést, a regisztrációs krediteket, 
 
 ### 5. lépés: Kattintson a Csatlakozás lehetőségre
 
-Egy `NOAUTH` szolgáltató esetén az 67router nem kér hitelesítő adatot a külső szolgáltatáshoz. Ez nem garantálja, hogy a külső szolgáltatás elfogad külső fejlesztésű klienseket, vagy rendelkezik szabad kapacitással. Az OAuth- és API-kulcs-alapú szolgáltatókat a dokumentált fiókfolyamatukon keresztül kell csatlakoztatni. Amikor az útválasztó hitelesítése engedélyezve van, a kliens továbbra is az **Irányítópult → Végpontok** alatt megjelenő 67router API-kulcsot használja.
+Egy `NOAUTH` szolgáltató esetén a 67router nem kér hitelesítő adatot a külső szolgáltatáshoz. Ez nem garantálja, hogy a külső szolgáltatás elfogad külső fejlesztésű klienseket, vagy rendelkezik szabad kapacitással. Az OAuth- és API-kulcs-alapú szolgáltatókat a dokumentált fiókfolyamatukon keresztül kell csatlakoztatni. Amikor az útválasztó hitelesítése engedélyezve van, a kliens továbbra is az **Irányítópult → Végpontok** alatt megjelenő 67router API-kulcsot használja.
 
 ### 6. lépés: Ismételje meg
 
@@ -111,7 +111,7 @@ Csatlakoztasson több olyan szolgáltatót, amelyek felhasználási feltételei 
 
 ## A katalógus helyes értelmezése
 
-- A `NOAUTH` azt jelenti, hogy az 67router nem kér szolgáltatói hitelesítő adatot; ez nem
+- A `NOAUTH` azt jelenti, hogy a 67router nem kér szolgáltatói hitelesítő adatot; ez nem
   garantálja a rendelkezésre állást, az adatvédelmet vagy a korlátlan kapacitást.
 - A `hasFree` felderítési metaadat. Jelölhet megújuló kvótát, kulcs nélküli hozzáférést,
   regisztrációs kreditet, jóváhagyási programot vagy promóciót.
@@ -124,15 +124,15 @@ Csatlakoztasson több olyan szolgáltatót, amelyek felhasználási feltételei 
 
 ---
 
-## Hogyan teszi jobbá az 67router az ingyenes csomagokat?
+## Hogyan teszi jobbá a 67router az ingyenes csomagokat?
 
 ### 1. Automatikus tartalékra váltás
 
-Ha egy ingyenes szolgáltató túlterhelt vagy nem működik, az 67router automatikusan megpróbálja a következőt. Önnek semmit sem kell tennie.
+Ha egy ingyenes szolgáltató túlterhelt vagy nem működik, a 67router automatikusan megpróbálja a következőt. Önnek semmit sem kell tennie.
 
 ### 2. Intelligens útválasztás
 
-Az 67router minden kéréshez kiválasztja a **legjobb ingyenes szolgáltatót** a következők alapján:
+A 67router minden kéréshez kiválasztja a **legjobb ingyenes szolgáltatót** a következők alapján:
 
 - Sebesség — Melyik szolgáltató a leggyorsabb jelenleg?
 - Minőség — Melyik szolgáltató a legjobb ehhez a feladathoz?
@@ -140,13 +140,13 @@ Az 67router minden kéréshez kiválasztja a **legjobb ingyenes szolgáltatót**
 
 ### 3. Tokenmegtakarítás
 
-Az 67router tömörítési folyamata csökkentheti a megfelelő promptok és eszközkimenetek tokenszámát. A
+A 67router tömörítési folyamata csökkentheti a megfelelő promptok és eszközkimenetek tokenszámát. A
 tényleges megtakarítás a tartalomtól, a kiválasztott motoroktól, a szolgáltató elszámolási módjától és a tartalomhűségi
 beállításoktól függ; a tömörítés nem sokszorozza meg rögzített mértékben az egyes szolgáltatók kvótáját.
 
 ### 4. Több fiók támogatása
 
-Ha a szolgáltató feltételei több fiókot vagy hitelesítési adatot is engedélyeznek, az 67router minden
+Ha a szolgáltató feltételei több fiókot vagy hitelesítési adatot is engedélyeznek, a 67router minden
 kapcsolatot külön útválasztási jelöltként kezelhet. Ne hozzon létre további fiókokat a szolgáltató
 kvótájának vagy hozzáférési szabályzatának megkerülésére.
 
@@ -161,7 +161,7 @@ Az élő, közös keretek alapján deduplikált katalógus jelenleg a következ�
 | Ismétlődő, számszerűsített keret    |   **~1.62B token/hónap** | A közös keretek csak egyszer szerepelnek; a korlátlan szolgáltatók kimaradnak az összegből |
 | Első hónap regisztrációs keretekkel |         **~2.22B token** | Az ismétlődő összeg, valamint az egyszeri és ismétlődő jóváírások együtt                   |
 
-Ezek különálló, jogosult fiókokra vonatkozó, teljes katalógust lefedő becslések, nem pedig az 67router által biztosított keret vagy egy új telepítésre vonatkozó előrejelzés. A felhasználható kapacitás a csatlakoztatott szolgáltatóktól és azok aktuális feltételeitől függ. Az értékeket az `open-sse/config/freeModelCatalog.ts` alapján számítjuk ki; a közös keretek deduplikálásával, a szolgáltatási feltételekre vonatkozó jelölésekkel, a megszüntetett bejegyzésekkel és a regisztrációs jóváírások módszertanával kapcsolatban lásd az
+Ezek különálló, jogosult fiókokra vonatkozó, teljes katalógust lefedő becslések, nem pedig a 67router által biztosított keret vagy egy új telepítésre vonatkozó előrejelzés. A felhasználható kapacitás a csatlakoztatott szolgáltatóktól és azok aktuális feltételeitől függ. Az értékeket az `open-sse/config/freeModelCatalog.ts` alapján számítjuk ki; a közös keretek deduplikálásával, a szolgáltatási feltételekre vonatkozó jelölésekkel, a megszüntetett bejegyzésekkel és a regisztrációs jóváírások módszertanával kapcsolatban lásd az
 [Ingyenes csomagok referenciáját](../reference/FREE_TIERS.md).
 
 ---
@@ -187,7 +187,7 @@ követelményeinek. A kritikus munkaterhelésekhez felügyelt, szerződéses sze
 
 A kompromisszumok közé tartozhatnak a szigorú korlátok, várólisták, KYC, bankkártyás ellenőrzés, a promptok
 betanítási célú felhasználása, gyengébb adatvédelem, az SLA hiánya, a modellek gyakori cseréje, földrajzi korlátozások, fizetős kerettúllépés vagy
-a fiókszabályzatból eredő kockázatok. Az 67router megjeleníti az elérhető metaadatokat; Ön dönti el, mit engedélyez.
+a fiókszabályzatból eredő kockázatok. A 67router megjeleníti az elérhető metaadatokat; Ön dönti el, mit engedélyez.
 
 ### „Hogyan szerezhetek több ingyenes kvótát?”
 
@@ -206,7 +206,7 @@ az Ingyenes szolgáltatók rangsora oldalt minőségi jelzésként, és ellenőr
 
 ## Mi a következő lépés?
 
-- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Hagyja, hogy az 67router válassza ki Önnek a legjobb MI-t
+- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Hagyja, hogy a 67router válassza ki Önnek a legjobb MI-t
 - **[Szolgáltatói útmutató](./PROVIDERS-GUIDE.md)** — Csatlakoztasson további szolgáltatókat
 - **[Hibaelhárítás](../guides/TROUBLESHOOTING.md)** — Gyakori problémák megoldása
 - **[Ingyenes csomagok referenciája](../reference/FREE_TIERS.md)** — Az ingyenes csomagok teljes listája

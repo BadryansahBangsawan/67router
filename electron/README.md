@@ -1,6 +1,6 @@
-# OmniRoute Electron Desktop App
+# 67router Electron Desktop App
 
-This directory contains the Electron desktop application wrapper for OmniRoute.
+This directory contains the Electron desktop application wrapper for 67router.
 
 ## Architecture (v1.6.4)
 
@@ -151,7 +151,7 @@ Built applications are placed in `dist-electron/`:
 - **Server Readiness** — Waits for health check before showing window
 - **System Tray** — Minimize to tray with quick actions (open, port change, quit)
 - **Port Management** — Change port from tray menu (server restarts automatically)
-- **Remote Server Mode** — Point the shell at an already-running OmniRoute server (e.g. a Docker/OrbStack container, or another machine) instead of spawning a local one — see below
+- **Remote Server Mode** — Point the shell at an already-running 67router server (e.g. a Docker/OrbStack container, or another machine) instead of spawning a local one — see below
 - **Window Controls** — Custom minimize, maximize, close via IPC
 - **Content Security Policy** — Restrictive CSP via session headers
 - **Offline Support** — Bundled Next.js standalone server
@@ -160,7 +160,7 @@ Built applications are placed in `dist-electron/`:
 ## Remote Server Mode
 
 By default the desktop shell spawns and manages its own bundled Next.js server. If you
-already run OmniRoute elsewhere — most commonly in a Docker/OrbStack container, so
+already run 67router elsewhere — most commonly in a Docker/OrbStack container, so
 provider credentials and env-var handling stay isolated from the host — you can point the
 shell at that instance instead, so it's purely a native window + tray onto a server you
 already run.

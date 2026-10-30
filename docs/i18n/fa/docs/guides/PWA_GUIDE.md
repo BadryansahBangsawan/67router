@@ -93,7 +93,7 @@
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router یک درگاه هوش مصنوعی برای LLMهای چندارائهدهندهای است. یک نقطهٔ پایانی برای تمام ارائهدهندگان هوش مصنوعی شما.",
   "start_url": "/",

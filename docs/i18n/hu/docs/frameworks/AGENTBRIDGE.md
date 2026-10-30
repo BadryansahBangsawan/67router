@@ -4,7 +4,7 @@
 
 ---
 
-Az AgentBridge az 67router MITM (Man-in-the-Middle, közbeékelődéses) proxyja, amely elfogja az IDE-k AI-ügynökeinek HTTPS-forgalmát, és átirányítja azt az 67router egységes útválasztási motorján keresztül. **10 IDE-ügynököt** támogat — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code és Trae (vizsgálat alatt) —, így az 67router AgentBridge kínálja a piacon a legszélesebb lefedettségű MITM proxyt az AI-alapú programozási asszisztensekhez.
+Az AgentBridge a 67router MITM (Man-in-the-Middle, közbeékelődéses) proxyja, amely elfogja az IDE-k AI-ügynökeinek HTTPS-forgalmát, és átirányítja azt a 67router egységes útválasztási motorján keresztül. **10 IDE-ügynököt** támogat — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code és Trae (vizsgálat alatt) —, így a 67router AgentBridge kínálja a piacon a legszélesebb lefedettségű MITM proxyt az AI-alapú programozási asszisztensekhez.
 
 **Irányítópult helye:** `/dashboard/tools/agent-bridge`
 **Oldalsáv csoportja:** Eszközök (a Cloud Agents után)
@@ -16,14 +16,14 @@ Az AgentBridge az 67router MITM (Man-in-the-Middle, közbeékelődéses) proxyja
 
 ### Mi az AgentBridge?
 
-Amikor egy IDE-ügynök (pl. GitHub Copilot, Cursor, Claude Code) API-hívást indít, közvetlenül az upstream AI-szolgáltatóhoz (OpenAI, Anthropic stb.) csatlakozik. Az AgentBridge transzparens módon, TLS-szinten elfogja ezt a kapcsolatot — az ügynök konfigurációjának bármilyen módosítása nélkül —, és a kérést az 67router-on keresztül átírja.
+Amikor egy IDE-ügynök (pl. GitHub Copilot, Cursor, Claude Code) API-hívást indít, közvetlenül az upstream AI-szolgáltatóhoz (OpenAI, Anthropic stb.) csatlakozik. Az AgentBridge transzparens módon, TLS-szinten elfogja ezt a kapcsolatot — az ügynök konfigurációjának bármilyen módosítása nélkül —, és a kérést a 67router-on keresztül átírja.
 
 Ez lehetővé teszi, hogy:
 
-- **Bármely ügynököt bármely szolgáltatóhoz átirányítson**: A Copilot az OpenAI felé kommunikál? Irányítsa át az Anthropic Claude-hoz, a Geminihez vagy az 67router 375 szolgáltatója közül bármelyikhez.
+- **Bármely ügynököt bármely szolgáltatóhoz átirányítson**: A Copilot az OpenAI felé kommunikál? Irányítsa át az Anthropic Claude-hoz, a Geminihez vagy a 67router 375 szolgáltatója közül bármelyikhez.
 - **Modell-hozzárendeléseket alkalmazzon**: `gemini-3-flash` → `claude-sonnet-4.7` transzparensen, handler-szinten.
 - **Az összes ügynökforgalmat megfigyelje**: minden elfogott kérés megjelenik a [Forgalomfigyelőben](./TRAFFIC_INSPECTOR.md).
-- **Kihasználja az 67router hibatűrését**: a combo routing, a circuit breakerek, a fallback-mechanizmusok és a költségkövetés az IDE-ügynökök forgalmára is működnek.
+- **Kihasználja a 67router hibatűrését**: a combo routing, a circuit breakerek, a fallback-mechanizmusok és a költségkövetés az IDE-ügynökök forgalmára is működnek.
 
 ### Pozicionálás a piaccal szemben
 
@@ -267,7 +267,7 @@ A `*` helyettesítő karakter minden fel nem ismert modellt a megadott célmodel
 
 ### 3.5 Kockázati figyelmeztetés
 
-Az AgentBridge elfogja azokat a hitelesítő adatokat (OAuth-tokeneket, API-kulcsokat), amelyeket az IDE a felsőbb szolgáltatóknál történő hitelesítéshez használ. Ezeket a rendszer **naplózás előtt maszkolja** (lásd: §2.7), de az 67router MITM-rétege számára láthatók. Az egyes ügynökök első aktiválásakor egy bezárható, kockázatra figyelmeztető modális ablak jelenik meg.
+Az AgentBridge elfogja azokat a hitelesítő adatokat (OAuth-tokeneket, API-kulcsokat), amelyeket az IDE a felsőbb szolgáltatóknál történő hitelesítéshez használ. Ezeket a rendszer **naplózás előtt maszkolja** (lásd: §2.7), de a 67router MITM-rétege számára láthatók. Az egyes ügynökök első aktiválásakor egy bezárható, kockázatra figyelmeztető modális ablak jelenik meg.
 
 ### 3.6 Karbantartás és diagnosztika
 
@@ -387,7 +387,7 @@ Az észlelés operációsrendszer-specifikus elérési utakat és binárisellen�
 
 ### Megkerülési lista érzékeny gazdagépekhez
 
-A megkerülési lista biztosítja, hogy a pénzügyi intézmények, OAuth-/SSO-szolgáltatók és más érzékeny gazdagépek forgalma **soha ne legyen visszafejtve**. TLS-forgalmuk transzparens TCP-alagúton halad át — az 67router soha nem látja a titkosítatlan tartalmat.
+A megkerülési lista biztosítja, hogy a pénzügyi intézmények, OAuth-/SSO-szolgáltatók és más érzékeny gazdagépek forgalma **soha ne legyen visszafejtve**. TLS-forgalmuk transzparens TCP-alagúton halad át — a 67router soha nem látja a titkosítatlan tartalmat.
 
 Az alapértelmezett megkerülési minták a következőket tartalmazzák:
 
@@ -489,7 +489,7 @@ Az automatikus észlelés gyakori telepítési útvonalakat használ. Ha az ész
 Ha az AgentBridge elfogja a kéréseket, de mindegyik sikertelen:
 
 1. Ellenőrizze, hogy legalább egy szolgáltató csatlakoztatva van-e a `/dashboard/providers` oldalon
-2. Ellenőrizze az 67router-kiszolgáló naplóit: `APP_LOG_LEVEL=debug` a `.env` fájlban
+2. Ellenőrizze a 67router-kiszolgáló naplóit: `APP_LOG_LEVEL=debug` a `.env` fájlban
 3. Ellenőrizze, hogy az `OMNIROUTE_BASE_URL` a megfelelő útválasztó-végpontra mutat-e (alapértelmezés: `http://127.0.0.1:20128`)
 
 ---

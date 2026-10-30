@@ -5,7 +5,7 @@
 ---
 
 > **Állapot:** referencia — az itt leírt szabványosítás **megvalósult** (1–6. fázis: rácsos háttér, primitívek, állapotszínek központosítása, monospace token, DataTable-tokenek migrációja, fókuszgyűrű → kiemelőszín, Checkbox/Textarea primitívek, `cn()` → tailwind-merge, rács minden önálló képernyőn, folyékony 4K-s tartalmi keret, átlátszatlan adattábla-felületek). Ez a dokumentum az irányítópult tervezési tokenjeinek, komponenseinek és konvencióinak hivatalos leírása; az alábbi fázisokra bontás az egyes döntések indoklásaként maradt meg.
-> **Hatókör:** az 67router irányítópult (`src/`) és a marketingwebhely (`_mono_repo/omnirouteSite/`) **egységes vizuális arculatot** használ — ugyanaz a milliméterpapír-szerű rácsháttér (32px), ugyanazok a színtokenek és szabványosított komponensek.
+> **Hatókör:** a 67router irányítópult (`src/`) és a marketingwebhely (`_mono_repo/omnirouteSite/`) **egységes vizuális arculatot** használ — ugyanaz a milliméterpapír-szerű rácsháttér (32px), ugyanazok a színtokenek és szabványosított komponensek.
 >
 > Gyakorlati megjegyzések a karbantartók számára:
 >
@@ -17,7 +17,7 @@
 
 ## 1. Cél
 
-A marketingwebhelynek (`viral.omniroute.online`, `why.omniroute.online`, `omniroute.online`) és a termék irányítópultjának úgy kell kinéznie, mintha **ugyanannak a terméknek** a részei lennének. A webhely már átvette a színpalettáját az irányítópulttól — a `css/tokens.css` fájlban még ez is szerepel: _„A paletta az 67router irányítópultját tükrözi (src/app/globals.css)”_. Így a kettő színszinten már körülbelül 80%-ban egységes. Ami még hiányzik az irányítópultból:
+A marketingwebhelynek (`viral.omniroute.online`, `why.omniroute.online`, `omniroute.online`) és a termék irányítópultjának úgy kell kinéznie, mintha **ugyanannak a terméknek** a részei lennének. A webhely már átvette a színpalettáját az irányítópulttól — a `css/tokens.css` fájlban még ez is szerepel: _„A paletta a 67router irányítópultját tükrözi (src/app/globals.css)”_. Így a kettő színszinten már körülbelül 80%-ban egységes. Ami még hiányzik az irányítópultból:
 
 1. A **milliméterpapír-szerű rácsháttér**, amelyet a webhely minden oldalon használ.
 2. Néhány, a webhelyen már meglévő, de az irányítópultból hiányzó **megosztott tervezési token** (lekerekítési skála, márkagradiens, `surface-2`, monospace betűtípus).

@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router **két**, folyamaton belüli sávkezelő rendszerrel rendelkezik, amelyek hatóköre eltérő. Ezek
+A 67router **két**, folyamaton belüli sávkezelő rendszerrel rendelkezik, amelyek hatóköre eltérő. Ezek
 kiegészítik egymást; az üzemeltetőknek tudniuk kell, hogy éppen melyiket vizsgálják.
 
 ## 1. Bájtszintű, teljes folyamatra kiterjedő beléptetés (`chatBodyAdmission.ts`)

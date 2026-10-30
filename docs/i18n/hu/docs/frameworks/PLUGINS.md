@@ -54,7 +54,7 @@ omniroute-cmd-myplugin/
 export const meta = {
   name: "myplugin",
   version: "0.1.0",
-  description: "Saját bővítményem az 67router-hoz",
+  description: "Saját bővítményem a 67router-hoz",
   omnirouteApi: ">=4.0.0",
 };
 
@@ -81,7 +81,7 @@ A `register(program, ctx)` függvénynek átadott `ctx` objektum:
 
 | Tulajdonság                  | Típus            | Leírás                                                                 |
 | ---------------------------- | ---------------- | ---------------------------------------------------------------------- |
-| `ctx.apiFetch(path, opts)`   | `async function` | Hitelesített lekérés az 67router-kiszolgálóhoz                         |
+| `ctx.apiFetch(path, opts)`   | `async function` | Hitelesített lekérés a 67router-kiszolgálóhoz                          |
 | `ctx.emit(data, opts)`       | `function`       | Kimenet table/json/jsonl/csv formátumban a `--output` kapcsoló szerint |
 | `ctx.t(key)`                 | `async function` | i18n-fordítás keresése                                                 |
 | `ctx.withSpinner(label, fn)` | `async function` | Az aszinkron fn futtatása ora folyamatjelzővel                         |

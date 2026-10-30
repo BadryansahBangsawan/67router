@@ -93,7 +93,7 @@ Next.js により `src/app/manifest.ts` から生成されます。
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router は、複数プロバイダーの LLM に対応する AI ゲートウェイです。すべての AI プロバイダーを単一のエンドポイントで利用できます。",
   "start_url": "/",

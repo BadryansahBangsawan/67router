@@ -13,7 +13,7 @@ hálózati képmásának megfelelő forgalmat fogadja el (meghatározott User-Ag
 
 ## Gyors kezdés — a natív `agentrouter` szolgáltató használata (ajánlott)
 
-A legtöbb felhasználó számára **nincs szükség különleges beállításra**. Az 67router
+A legtöbb felhasználó számára **nincs szükség különleges beállításra**. A 67router
 beépített `agentrouter` szolgáltatóval rendelkezik, amely már tartalmazza a teljes
 Claude Code hálózati képmását (lásd: `open-sse/config/providerRegistry.ts` →
 `agentrouter`). A használatához:
@@ -37,7 +37,7 @@ illetve a fejléckészlet felülbírálásakor.
 
 ## Haladó: csatlakozás a Claude Code-kompatibilis szolgáltatótípussal
 
-Az 67router az AgentRoutert (és a hasonló közvetítőszolgáltatásokat) a **Claude
+A 67router az AgentRoutert (és a hasonló közvetítőszolgáltatásokat) a **Claude
 Code-kompatibilis** szolgáltatótípuson (`anthropic-compatible-cc-*`) keresztül is
 támogatja, amely a megfelelő hálózati képmással használja az Anthropic Messages
 API-t. A `https://agentrouter.org` címre mutató általános
@@ -50,7 +50,7 @@ elutasítja azokat a kéréseket, amelyek nem hasonlítanak a Claude Code kéré
 
 - Egy AgentRouter-fiók és API-kulcs. Az új regisztrálók ingyenes krediteket kapnak a
   projekt [README](../README.md) fájljában található partnerhivatkozáson keresztül.
-- Az 67router futtatása engedélyezett `ENABLE_CC_COMPATIBLE_PROVIDER`
+- A 67router futtatása engedélyezett `ENABLE_CC_COMPATIBLE_PROVIDER`
   funkciójelzővel (lásd alább).
 
 ## 1. A CC-kompatibilis szolgáltatótípus engedélyezése

@@ -4,7 +4,7 @@
 
 ---
 
-> Az 67router teljes körű beállítási referenciája. A rövid változatért tekintse meg a [README gyorsútmutatóját](../README.md#-quick-start).
+> A 67router teljes körű beállítási referenciája. A rövid változatért tekintse meg a [README gyorsútmutatóját](../README.md#-quick-start).
 
 ## Tartalomjegyzék
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-Az [AUR-csomag](https://aur.archlinux.org/packages/omniroute-bin) telepíti az 67router-ot, és egy systemd felhasználói szolgáltatást biztosít.
+Az [AUR-csomag](https://aur.archlinux.org/packages/omniroute-bin) telepíti a 67router-ot, és egy systemd felhasználói szolgáltatást biztosít.
 
 ### Forráskódból
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Megjegyzés Windows rendszerhez:** Alapértelmezés szerint az 67router a `%APPDATA%\omniroute` könyvtárat használja, ha a korábbi `%USERPROFILE%\.omniroute` könyvtár nem található. Másik adatkönyvtár-hely kiválasztásához állítsa be a `DATA_DIR` értékét.
+> **Megjegyzés Windows rendszerhez:** Alapértelmezés szerint a 67router a `%APPDATA%\omniroute` könyvtárat használja, ha a korábbi `%USERPROFILE%\.omniroute` könyvtár nem található. Másik adatkönyvtár-hely kiválasztásához állítsa be a `DATA_DIR` értékét.
 
 > **Megjegyzés:** az `npm install` az első futtatáskor automatikusan létrehozza az `.env` fájlt az `.env.example` alapján. A későbbi telepítések nem írják felül a meglévő `.env` fájlt, így az egyéni beállítások megmaradnak. Az újbóli inicializáláshoz törölje az `.env` fájlt az ismételt futtatás előtt.
 
@@ -64,7 +64,7 @@ A teljes Docker-beállításhoz, beleértve a Compose-profilokat és a Caddy HTT
 
 ### Asztali alkalmazás (Electron)
 
-Az 67router egy Electron 41 + electron-builder 26.10 alapú asztali csomagolóalkalmazást is tartalmaz. Elérhető szkriptek (a munkaterület gyökerében):
+A 67router egy Electron 41 + electron-builder 26.10 alapú asztali csomagolóalkalmazást is tartalmaz. Elérhető szkriptek (a munkaterület gyökerében):
 
 ```bash
 npm run electron:dev          # Az asztali alkalmazás futtatása automatikus újratöltéssel
@@ -165,7 +165,7 @@ Működik a Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode és az Ope
 
 #### Automatikus konfigurálás a `setup-*` parancsokkal
 
-Az alap-URL és a kulcs kézi beillesztése helyett hagyja, hogy az 67router az élő modellkatalógus alapján létrehozza az egyes eszközök
+Az alap-URL és a kulcs kézi beillesztése helyett hagyja, hogy a 67router az élő modellkatalógus alapján létrehozza az egyes eszközök
 saját konfigurációját. Eszközönként egy parancs szükséges:
 
 ```bash
@@ -277,15 +277,15 @@ A legtöbb telepítésnél csak erre a két változóra van szükség:
 | Változó                  | Alapértelmezett érték                 | Rendeltetés                                                                                                                                                                              |
 | ------------------------ | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                              | Közös alapérték a külső szolgáltató válaszkezdési időtúllépéséhez, a rejtett Undici-időtúllépésekhez, a TLS-ujjlenyomat-kérésekhez, valamint az API-híd kérés- és proxy-időtúllépéseihez |
-| `STREAM_IDLE_TIMEOUT_MS` | örökli a `REQUEST_TIMEOUT_MS` értékét | A streamelési adatblokkok közötti maximális időköz, amelynek letelte után az 67router megszakítja az SSE-adatfolyamot                                                                    |
+| `STREAM_IDLE_TIMEOUT_MS` | örökli a `REQUEST_TIMEOUT_MS` értékét | A streamelési adatblokkok közötti maximális időköz, amelynek letelte után a 67router megszakítja az SSE-adatfolyamot                                                                     |
 
 A visszamenőleges kompatibilitás megmarad: a meglévő `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` és más, rétegenkénti időtúllépési változók továbbra is működnek, és felülírják a közös alapértéket.
 
 ### Szolgáltatóspecifikus megjegyzések
 
-A Claude Code-kompatibilis külső szolgáltatók (`anthropic-compatible-cc-*`) esetében az 67router a feloldott lekérési időtúllépésből származtatja a kimenő `X-Stainless-Timeout` fejlécet, így a szolgáltatói oldali olvasási időtúllépések összhangban maradnak a környezeti konfigurációval.
+A Claude Code-kompatibilis külső szolgáltatók (`anthropic-compatible-cc-*`) esetében a 67router a feloldott lekérési időtúllépésből származtatja a kimenő `X-Stainless-Timeout` fejlécet, így a szolgáltatói oldali olvasási időtúllépések összhangban maradnak a környezeti konfigurációval.
 
-Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén az 67router konzervatív értéken tartja az alapértelmezett `anthropic-beta` beállítást, és ha a `Client Cache Control` értéke `Auto` marad, csak a kliens által megadott `cache_control` jelölőket továbbítja. Kapcsolatonként csak akkor engedélyezze az „Enable redact-thinking beta” kapcsolót, ha a külső szolgáltató kifejezetten megköveteli a kitakart Claude-gondolatmeneti adatfolyamokat.
+Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén a 67router konzervatív értéken tartja az alapértelmezett `anthropic-beta` beállítást, és ha a `Client Cache Control` értéke `Auto` marad, csak a kliens által megadott `cache_control` jelölőket továbbítja. Kapcsolatonként csak akkor engedélyezze az „Enable redact-thinking beta” kapcsolót, ha a külső szolgáltató kifejezetten megköveteli a kitakart Claude-gondolatmeneti adatfolyamokat.
 
 ### Speciális időtúllépés-felülbírálások
 
@@ -303,11 +303,11 @@ Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                               | Keep-alive időtúllépés az API-híd kiszolgálóján                                               |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                  | A socket inaktivitási időtúllépése az API-híd kiszolgálóján (a `0` letiltja)                  |
 
-> **Megjegyzés:** Streamelési kérések esetén a `FETCH_TIMEOUT_MS` csak a kapcsolat létrehozására, illetve a külső szolgáltató első válaszára való várakozásra vonatkozik. Amint az adatfolyam aktívvá válik, az 67router csak tényleges elakadás (`STREAM_IDLE_TIMEOUT_MS`) vagy az Undici törzsadat-inaktivitása (`FETCH_BODY_TIMEOUT_MS`) esetén szakítja meg.
+> **Megjegyzés:** Streamelési kérések esetén a `FETCH_TIMEOUT_MS` csak a kapcsolat létrehozására, illetve a külső szolgáltató első válaszára való várakozásra vonatkozik. Amint az adatfolyam aktívvá válik, a 67router csak tényleges elakadás (`STREAM_IDLE_TIMEOUT_MS`) vagy az Undici törzsadat-inaktivitása (`FETCH_BODY_TIMEOUT_MS`) esetén szakítja meg.
 
 ### Fordított proxykkal való kompatibilitás
 
-Ha az 67router-ot Nginx, Caddy, Cloudflare vagy más fordított proxy mögött futtatja, győződjön meg arról, hogy a proxy időtúllépései is hosszabbak az 67router adatfolyam-/lekérési időtúllépéseinél.
+Ha a 67router-ot Nginx, Caddy, Cloudflare vagy más fordított proxy mögött futtatja, győződjön meg arról, hogy a proxy időtúllépései is hosszabbak a 67router adatfolyam-/lekérési időtúllépéseinél.
 
 ---
 

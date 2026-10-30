@@ -6,7 +6,7 @@
 
 > **Verzió:** v3.8.51
 > **Utolsó frissítés:** 2026-06-28
-> **Célközönség:** Az 67router fejlesztésében közreműködő vagy arra épülő integrációkat készítő mérnökök.
+> **Célközönség:** A 67router fejlesztésében közreműködő vagy arra épülő integrációkat készítő mérnökök.
 >
 > A magas szintű architekturális diagramokért és az egyes alrendszerek mögötti tervezési megfontolásokért olvassa el az
 > [ARCHITECTURE.md](./ARCHITECTURE.md) fájlt. Az egyes alrendszerek részletes ismertetését

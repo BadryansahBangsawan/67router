@@ -9,9 +9,9 @@
 > **Legutóbbi kutatás:** 2026-06-17 — szolgáltatónkénti webes kutatás (hivatalos dokumentáció + az elmúlt 7 nap hírei, 50 ügynökös ellenőrzés adverszariális felülvizsgálattal), amely minden ingyenes csomag kvótáját és használati feltételeit frissítette. **Részleges újbóli audit: 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — lásd az alábbi, dátummal ellátott megjegyzést).
 > **Hiteles forrás (katalógus):** `open-sse/config/freeModelCatalog.ts` (MODELLENKÉNTI keretek, készletenként deduplikálva). Az alábbi tokenkeretek élő webes kutatásból származnak, és **becslések** — lásd: [Módszertan és fenntartások](#methodology--caveats).
 
-## TL;DR — valójában mennyi ingyenes inferenciát összesít az 67router?
+## TL;DR — valójában mennyi ingyenes inferenciát összesít a 67router?
 
-Ezek a számok a katalógusban szereplő, különálló külső szolgáltatói fiókokra és jogosultsági feltételekre vonatkoznak. Az 67router nem biztosítja ezt a keretet: Önnek kell megszereznie a szükséges fiókokat vagy hitelesítő adatokat, csatlakoztatnia a jogosult szolgáltatókat, és betartania azok korlátait. A ténylegesen használható kapacitás ennél alacsonyabb lehet, akár nulla is egy friss telepítés esetén, ha nincs jogosult útvonal. A `tos: avoid` jelölésű szolgáltatók alapértelmezés szerint ki vannak zárva az automatikus útválasztásból.
+Ezek a számok a katalógusban szereplő, különálló külső szolgáltatói fiókokra és jogosultsági feltételekre vonatkoznak. A 67router nem biztosítja ezt a keretet: Önnek kell megszereznie a szükséges fiókokat vagy hitelesítő adatokat, csatlakoztatnia a jogosult szolgáltatókat, és betartania azok korlátait. A ténylegesen használható kapacitás ennél alacsonyabb lehet, akár nulla is egy friss telepítés esetén, ha nincs jogosult útvonal. A `tos: avoid` jelölésű szolgáltatók alapértelmezés szerint ki vannak zárva az automatikus útválasztásból.
 
 **Ellenőrizve: 2026-10-08:** A [Cerebras](https://www.cerebras.ai/pricing) egyszeri, $5 értékű promóciós kreditet kínál, amelyhez fizetési mód szükséges, és 30 nap után lejár. A [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) projektenkénti, modellenkénti és csomagszintenkénti sebességkorlátokat tesz közzé; továbbra sem része a számszerűsített havi főösszegnek.
 
@@ -94,7 +94,7 @@ megjegyzés részletezi.
 
 ## Két rezsim — számlálás és döntés
 
-Az 67router két rezsim alapján válaszolja meg az „ingyenes-e?” kérdést,
+A 67router két rezsim alapján válaszolja meg az „ingyenes-e?” kérdést,
 amelyek szándékosan eltérő forrásokat olvasnak:
 
 | Rezsim                       | Hiteles forrás                                                                                                                                                                          | Felületek                                                                                                                                      |
@@ -142,7 +142,7 @@ Az ezen a területen szereplő legtöbb „havi ingyenes token” érték modell
 
 ### ⚠️ Figyelem — ellenőrzésre érdemes személyes használati / proxykikötések (16)
 
-> Az ingyenes hozzáférésük valódi, és az 67router képes hozzájuk irányítani a kéréseket; az alábbi kikötéseket egyszerűen érdemes ismerni. Az OAuth-alapú/kulcs nélküli szolgáltatások használata tokenekben nem számszerűsíthető, ezért nem szerepelnek a fő értékben (nem azért, mert használhatatlanok).
+> Az ingyenes hozzáférésük valódi, és a 67router képes hozzájuk irányítani a kéréseket; az alábbi kikötéseket egyszerűen érdemes ismerni. Az OAuth-alapú/kulcs nélküli szolgáltatások használata tokenekben nem számszerűsíthető, ezért nem szerepelnek a fő értékben (nem azért, mert használhatatlanok).
 
 | Szolgáltató      | Megjegyzés                                                                                                                                                                                                                                 |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -156,7 +156,7 @@ Az ezen a területen szereplő legtöbb „havi ingyenes token” érték modell
 | `fireworks`      | A ToS kifejezetten tiltja a proxyként/közvetítőként való használatot, az API-kulcsok átadását és a továbbengedélyezést (2.1 és 2.2(i)(j) szakasz); a saját üzemeltetésű személyes proxyk n…                                                |
 | `friendliai`     | A ToS 8(e) és 8(f) szakasza kifejezetten tiltja a FriendliAI proxyként való használatát vagy harmadik felek önálló hozzáférésének engedélyezését, valamint a továbbértékesítést/…                                                          |
 | `iflytek`        | Az iFlytek Spark LLM Service Agreement 2.4(3) szakasza kifejezetten tiltja „bármilyen automatizált vagy programozott módszer használatát adatok vagy kimenetek kinyerésére…                                                                |
-| `kiro`           | A Kiro FAQ kifejezetten tiltja a használatot az „OpenClaw és hasonló, harmadik féltől származó keretrendszereket használó eszközökkel” — egy saját üzemeltetésű AI-proxy (például az 67router), amely…                                     |
+| `kiro`           | A Kiro FAQ kifejezetten tiltja a használatot az „OpenClaw és hasonló, harmadik féltől származó keretrendszereket használó eszközökkel” — egy saját üzemeltetésű AI-proxy (például a 67router), amely…                                      |
 | `modal`          | A ToS 1.3 szakasza kifejezetten tiltja „a Szolgáltatás bérbeadását, továbbértékesítését, illetve közvetlen hozzáférésének vagy használatának bármely harmadik fél számára történő más módon való engedélyezését” — egy saját üzemeltetésű… |
 | `muse-spark-web` | A Meta ToS kifejezetten tiltja az előzetes engedély nélküli automatizált hozzáférést, az írásos engedély nélküli visszafejtést és a technológiai korlátozások megkerülését…                                                                |
 | `nlpcloud`       | A ToS kifejezetten tiltja „olyan proxy vagy egyéb eszköz beállítását, amelyen keresztül mások hozzáférhetnek a Szolgáltatáshoz”, és csak át nem ruházható,…                                                                                |
@@ -318,7 +318,7 @@ Az ezen a területen szereplő legtöbb „havi ingyenes token” érték modell
 
 - **`360ai`** — A mellékelt freeNote, „Ingyenes 360 AI Brain modellek”, elavultnak tűnik. A jelenlegi hozzáférés jelentkezéshez kötött és fizetős. A 2023-as induláskor kínált egyszeri promóciós tokenek (100M–250M) szolgálhattak alapul ehhez…
 - **`agentrouter`** — A mellékelt freeNote szerint „$200 ingyenes kredit regisztrációkor”. Jelenleg a szokásos (nem ajánlással történő) regisztrációk csak $100 kreditet kapnak; ajánlással regisztrálva $200 is járhat, de egy 2026. áprilisi közösségi hozzászólás…
-- **`agy`** — A mellékelt freeNote szerint „(nincs)”, ami arra utal, hogy nincs ingyenes csomag, az Antigravity azonban rendelkezik egy ingyenes, OAuth-hitelesítéshez kötött csomaggal. Az ÁSZF ugyanakkor kifejezetten tiltja ennek az ingyenes csomagnak az olyan proxyn keresztüli használatát, mint az 67router …
+- **`agy`** — A mellékelt freeNote szerint „(nincs)”, ami arra utal, hogy nincs ingyenes csomag, az Antigravity azonban rendelkezik egy ingyenes, OAuth-hitelesítéshez kötött csomaggal. Az ÁSZF ugyanakkor kifejezetten tiltja ennek az ingyenes csomagnak az olyan proxyn keresztüli használatát, mint a 67router …
 - **`ai21`** — Szigorodott: a próbaidőszak „3 hónapról” 7 napra csökkent. A $10 kreditösszeg változatlan maradt, az érvényesség azonban jelentősen, ~90 napról 7 napra csökkent.
 - **`aimlapi`** — Jelentősen megváltozott. A mellékelt freeNote „napi $0.025 ingyenes kreditet — 200+ modellt” hirdetett, de az ingyenes csomagot most szüneteltetik/megszüntették. A napi $0.025 kreditkeret (napi 50 000 kredit, 10 kérés/na…
 - **`amazon-q`** — A mellékelt freeNote szerint „(nincs)” — a valóság ennél rosszabb: a termékhez 2026. május 15-től már nem lehet újonnan regisztrálni. Korábban az ingyenes csomag havi 50 ügynöki kérést és korlátlan beágya…

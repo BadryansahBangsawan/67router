@@ -7,7 +7,7 @@ lastUpdated: 2027-07-27
 # OpenCode Integration
 
 > **Status:** Generally available.
-> **Audience:** Operators wiring OpenCode to an 67router deployment.
+> **Audience:** Operators wiring OpenCode to a 67router deployment.
 > **Source of truth (config schema):** `src/shared/services/opencodeConfig.ts`
 > **Source of truth (npm package):** `@omniroute/opencode-provider/` (publishable workspace)
 

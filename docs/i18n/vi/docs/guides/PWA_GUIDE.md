@@ -93,7 +93,7 @@ Service worker được đăng ký tự động thông qua thành phần `<PwaRe
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",

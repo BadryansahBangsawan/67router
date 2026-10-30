@@ -265,7 +265,7 @@ profile then talks to 67router. Three things are specific to this target:
 The API key is handed to 5dive on **stdin** (`--api-key=-`), so it never appears in
 `ps` output.
 
-Pointing the profile at an 67router **combo** rather than a single model is what
+Pointing the profile at a 67router **combo** rather than a single model is what
 gets the fleet provider failover: when the primary endpoint went hard-down mid-turn
 in the run recorded on
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), the agent finished

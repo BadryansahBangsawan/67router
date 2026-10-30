@@ -4,7 +4,7 @@
 
 ---
 
-Ez az útmutató bemutatja, hogyan adhat Kiro- (az AWS által üzemeltetett AI-kódolási asszisztens) fiókokat az 67router-hoz,
+Ez az útmutató bemutatja, hogyan adhat Kiro- (az AWS által üzemeltetett AI-kódolási asszisztens) fiókokat a 67router-hoz,
 különös tekintettel több fiók egyidejű, munkamenet-ütközések nélküli használatára.
 
 ---
@@ -22,9 +22,9 @@ első fiók tokenjét.
 
 ---
 
-## Hogyan oldja meg ezt az 67router (v3.8.0+)
+## Hogyan oldja meg ezt a 67router (v3.8.0+)
 
-A v3.8.0 verziótól kezdve az 67router minden Kiro-kapcsolat importálása során meghívja a
+A v3.8.0 verziótól kezdve a 67router minden Kiro-kapcsolat importálása során meghívja a
 `registerClient()` (AWS SSO OIDC) függvényt. Így minden 67router-kapcsolat saját, dedikált OIDC-
 kliensregisztrációt kap. Mivel minden kliensregisztráció független, az egyik fiók frissítése vagy
 újrahitelesítése nincs hatással egyetlen másik fiók frissítési tokenjére sem.
@@ -70,7 +70,7 @@ automatikusan saját kliensregisztrációt kap.
    - **Token importálása** — illesszen be egy `aorAAAAAG` kezdetű frissítési tokent.
    - **API-kulcs** — illesszen be egy hosszú élettartamú Kiro- / CodeWhisperer API-kulcsot.
    - **Google- / GitHub-bejelentkezés** — fejezze be az OAuth-folyamatot a böngészőben.
-   - **Automatikus importálás** — kattintson a gombra; az 67router beolvassa a hitelesítő adatokat a
+   - **Automatikus importálás** — kattintson a gombra; a 67router beolvassa a hitelesítő adatokat a
      helyi kiro-cli-adatbázisból vagy a `~/.aws/sso/cache` útvonalról.
 3. A kapcsolat mentésre kerül. A frissítési tokenes folyamatok automatikusan regisztrálnak egy dedikált
    OIDC-klienst. Az API-kulcsos folyamatok ellenőrzik a kulcsot az AWS segítségével, és nem tárolnak frissítési tokent.
@@ -126,7 +126,7 @@ Az API-kulcsos hitelesítés hosszú élettartamú Kiro / AWS CodeWhisperer bear
 2. Válassza az **API-kulcs** lehetőséget.
 3. Illessze be az API-kulcsot, és válassza ki az AWS-régiót: **Automatikus észlelés** (alapértelmezett), **USA keleti régiója
    (Észak-Virginia)** vagy **Európa (Frankfurt)**.
-4. Az 67router ellenőrzi a kulcsot, és a kapcsolatot ahhoz a régióhoz rögzítve menti, ahol a
+4. A 67router ellenőrzi a kulcsot, és a kapcsolatot ahhoz a régióhoz rögzítve menti, ahol a
    kulcs működik.
 
 ### API
@@ -176,7 +176,7 @@ régiót is —, mivel a Kiro IDE-átjáró elutasítja a `TokenType=API_KEY` é
 ## Az OIDC-kliens lejárata
 
 Az AWS SSO OIDC nyilvános kliensei jellemzően 90 nap után járnak le
-(`clientSecretExpiresAt`). Az 67router megfigyelhetőségi célból a `providerSpecificData`
+(`clientSecretExpiresAt`). A 67router megfigyelhetőségi célból a `providerSpecificData`
 mezőben tárolja ezt az időbélyeget. Ha egy kapcsolat körülbelül 90 nap elteltével már nem frissül, importálja
 újra a kapcsolatot, hogy új OIDC-kliensregisztrációt kapjon. A lejáratkor történő automatikus
 újraregisztrálás jövőbeli fejlesztésként van nyilvántartva.
@@ -197,7 +197,7 @@ az AWS SSO OIDC-n keresztül frissülnek.
 ### Az importálás sikertelen, „A token ellenőrzése sikertelen” hibaüzenettel
 
 - Győződjön meg arról, hogy a frissítési token `aorAAAAAG` karakterekkel kezdődik.
-- Győződjön meg arról, hogy az 67router eléri a `https://oidc.us-east-1.amazonaws.com` címet (vagy a beállított
+- Győződjön meg arról, hogy a 67router eléri a `https://oidc.us-east-1.amazonaws.com` címet (vagy a beállított
   régiót). Ha vállalati proxy mögött van, állítson be szolgáltatószintű proxyt az
   **Irányítópult → Beállítások → Proxyk** oldalon.
 
@@ -205,7 +205,7 @@ az AWS SSO OIDC-n keresztül frissülnek.
 
 - Ellenőrizze, hogy a kulcs Kiro / CodeWhisperer API-kulcs, nem pedig frissítési token.
 - Ellenőrizze, hogy az AWS-régió megfelel a kulcsnak/fióknak. Az alapértelmezett régió `us-east-1`.
-- A kulcsnak képesnek kell lennie a `ListAvailableProfiles` meghívására; ellenkező esetben az 67router nem tudja
+- A kulcsnak képesnek kell lennie a `ListAvailableProfiles` meghívására; ellenkező esetben a 67router nem tudja
   feloldani a szükséges `profileArn` értéket.
 
 Egyéb problémák esetén tekintse meg a fő [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) dokumentumot.

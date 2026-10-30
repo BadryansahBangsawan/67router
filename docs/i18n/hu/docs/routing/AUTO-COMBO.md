@@ -60,7 +60,7 @@ model: "auto/cheap"           # tokenenként a legolcsóbb
 
 **Mi történik:**
 
-1. Az 67router észleli az `auto/` előtagot az `src/sse/handlers/chat.ts` fájlban
+1. A 67router észleli az `auto/` előtagot az `src/sse/handlers/chat.ts` fájlban
 2. Lekérdezi az összes **aktív szolgáltatói kapcsolatot** az adatbázisból
 3. Az érvényes hitelesítő adatokkal (API-kulccsal vagy OAuth-tokennel) rendelkezőkre szűr
 4. Meghatározza a kapcsolatonkénti modellt (`connection.defaultModel` vagy a szolgáltató első modellje)
@@ -88,7 +88,7 @@ a meglévő reziliencia-lekérdezések újrafelhasználásával (soha nem a megs
 - modellzárolás — `isModelLocked(provider, connectionId, model)`
 
 Minden jelölt tartalmazza továbbá az adott API-kulcshoz tartozó `excluded` jelzőt. A kizárások
-API-kulcsonként vannak tárolva (`auto_candidate_overrides` tábla, `128` migráció) — az 67router
+API-kulcsonként vannak tárolva (`auto_candidate_overrides` tábla, `128` migráció) — a 67router
 egybérlős rendszer, `users` tábla nélkül, így az `apiKeyId` a hívónkénti identitás legközelebbi
 valós megfelelője —, és érvényesítésük a jelöltkészlet szűk keresztmetszeténél történik az
 `open-sse/services/autoCombo/virtualFactory.ts` fájlban, a tiszta, egységtesztekkel ellenőrzött
@@ -283,7 +283,7 @@ feloldott értékek a motor meglévő `config.modePack` / `config.budgetCap` /
 
 ## Az összes útválasztási stratégia
 
-Az 67router kombinációs motorja **20 útválasztási stratégiát** támogat (deklaráció: `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Maga az Auto Combo motor az `auto` stratégián keresztül érhető el; a többi stratégia a mentett kombinációkhoz használható.
+A 67router kombinációs motorja **20 útválasztási stratégiát** támogat (deklaráció: `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Maga az Auto Combo motor az `auto` stratégián keresztül érhető el; a többi stratégia a mentett kombinációkhoz használható.
 
 | Stratégia           | Leírás                                                                                                                                                                                                                                                      |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -331,7 +331,7 @@ Szigorú rotációhoz használja a `round-robin` stratégiát; a `weighted` stra
 
 ### Ügynökalapú pipeline mód
 
-Egy legalább két modellt tartalmazó `pipeline` kombináció a `config.agenticOrchestration.enabled` beállítással használhat tervező/végrehajtó alapú útválasztást. Az első cél felel a tervezésért és a végső válaszokért; a második cél a kliens natív eszközhívásait bocsátja ki. Az 67router a kérés protokollja alapján észleli az eszközeredményeket folytató kéréseket, megkérdezi a tervezőt, hogy szükség van-e újabb eszközkörre, majd dinamikusan vagy a végrehajtót, vagy a tervezőt teszi meg a kliens számára látható utolsó lépésnek.
+Egy legalább két modellt tartalmazó `pipeline` kombináció a `config.agenticOrchestration.enabled` beállítással használhat tervező/végrehajtó alapú útválasztást. Az első cél felel a tervezésért és a végső válaszokért; a második cél a kliens natív eszközhívásait bocsátja ki. A 67router a kérés protokollja alapján észleli az eszközeredményeket folytató kéréseket, megkérdezi a tervezőt, hogy szükség van-e újabb eszközkörre, majd dinamikusan vagy a végrehajtót, vagy a tervezőt teszi meg a kliens számára látható utolsó lépésnek.
 
 A második cél utáni további modellek sorrendbe állított tartalék végrehajtóként szolgálnak. Sikertelen HTTP-válasz vagy átviteli kivétel esetén a rendszer a következő végrehajtóra lép, megtartva ugyanazt a tervezői döntést és ugyanazokat a natív eszközöket, de az adott végrehajtó saját lépéspromptját és feloldott kapcsolatát használva. Az első sikeres választ változtatás nélkül adja vissza, beleértve az SSE-streamelést is; a sikeres stream elindulása után bekövetkező hibák itt nem próbálhatók újra. Ha minden végrehajtó sikertelen, az utolsó hiba kerül visszaadásra. A kliens általi megszakítás leállítja a továbbítást.
 

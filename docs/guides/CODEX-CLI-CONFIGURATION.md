@@ -306,7 +306,7 @@ base TOML stops generation before writing profiles.
 When you supply `--api-key` or `OMNIROUTE_API_KEY`, a newly defined provider refers to
 `env_key = "OMNIROUTE_API_KEY"`; the key itself is never saved or printed in the
 preview. Set that variable in the environment where you launch Codex. Without a
-supplied key, the new definition has no key requirement, for an 67router instance
+supplied key, the new definition has no key requirement, for a 67router instance
 configured to accept unauthenticated requests.
 
 The opt-in catalog auto-sync described below preserves provider definitions already

@@ -4,12 +4,12 @@
 
 ---
 
-Az 67router **kétféle** módot kínál az OpenAI Codex használatára:
+A 67router **kétféle** módot kínál az OpenAI Codex használatára:
 
 | Szolgáltató            | Hogyan kommunikál az OpenAI-jal                                                                                                                                                                                                                    | Használati korlátozás                                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | **`codex`**            | A ChatGPT/OpenAI OAuth-tokenjét közvetlenül továbbítja a Responses API-nak                                                                                                                                                                         | **Igen** — a hivatalos munkamenet nem használható proxykon vagy routereken keresztül |
-| **`codex-app-server`** | A **Codex CLI saját `codex app-server` folyamatát** vezérli JSON-RPC/WebSocket kapcsolaton keresztül; az OAuth-hitelesítést (`~/.codex/auth.json`) a CLI kezeli és frissíti automatikusan, pontosan úgy, mint egy interaktív `codex` munkamenetben | **Nincs** — az 67router soha nem továbbít tokent az API-nak                          |
+| **`codex-app-server`** | A **Codex CLI saját `codex app-server` folyamatát** vezérli JSON-RPC/WebSocket kapcsolaton keresztül; az OAuth-hitelesítést (`~/.codex/auth.json`) a CLI kezeli és frissíti automatikusan, pontosan úgy, mint egy interaktív `codex` munkamenetben | **Nincs** — a 67router soha nem továbbít tokent az API-nak                           |
 
 Mivel a `codex-app-server` soha nem továbbít tokent, nem vonatkozik rá a
 munkamenet-továbbítással kapcsolatos használati korlátozás. Ehhez azonban

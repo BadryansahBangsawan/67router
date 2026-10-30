@@ -93,7 +93,7 @@ Iġġenerat minn Next.js permezz ta’ `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router huwa gateway tal-AI għal LLMs minn diversi fornituri. Endpoint wieħed għall-fornituri kollha tal-AI tiegħek.",
   "start_url": "/",

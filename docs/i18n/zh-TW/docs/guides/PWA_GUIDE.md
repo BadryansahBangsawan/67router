@@ -93,7 +93,7 @@ Service Worker 會透過根版面配置中的 `<PwaRegister />` 元件自動註�
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router 是適用於多提供者 LLM 的 AI 閘道。只需一個端點，即可連接所有 AI 提供者。",
   "start_url": "/",

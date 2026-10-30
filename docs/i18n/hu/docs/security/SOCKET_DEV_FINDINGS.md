@@ -54,7 +54,7 @@ keresztül nyilvánosságra került JWT **nem** aktiválhatja ezt a kódútvonal
 | Linux+Firefox/Chromium | profilonkénti NSS-adatbázis-frissítés a `certutil -d sql:<profile>` használatával                                 |
 
 Ezek ugyanazok a parancsok, amelyeket a `mitmproxy`, a Charles Proxy, a Fiddler
-és a Caddy használ. Az, hogy ezek jelen vannak az 67router-ban, a
+és a Caddy használ. Az, hogy ezek jelen vannak a 67router-ban, a
 `docs/security/STEALTH_GUIDE.md` fájlban van dokumentálva.
 
 **v3.8.6 kockázatcsökkentés**:
@@ -126,7 +126,7 @@ beállítási lehetőség azoknak a felhasználóknak, akik már használják a 
 `execFileWithPassword`, a `runElevatedPowerShell`, valamint a közös
 `quotePowerShell` segédfüggvényt. A Socket.dev MI-osztályozója ezeket egy
 általános „gazdagépen történő végrehajtást és jogosultságszint-emelést végző
-eszközkészletként” érzékeli. Az 67router-on belül ezeket kizárólag a MITM-
+eszközkészletként” érzékeli. A 67router-on belül ezeket kizárólag a MITM-
 tanúsítvány telepítési útvonala (§1), illetve az `execFileWithPassword` esetén
 a `sudo` parancsok végrehajtása használja.
 

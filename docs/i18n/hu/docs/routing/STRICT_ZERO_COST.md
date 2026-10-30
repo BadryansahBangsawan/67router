@@ -31,7 +31,7 @@ A készlet minden jelöltjénél (`open-sse/services/autoCombo/virtualFactory.ts
 közvetlenül a `filterPaidOnlyCandidates` után):
 
 1. **Egyáltalán nem szerepel a `FREE_MODEL_BUDGETS` nyilvántartásban** → kizárva. Ez lefedi a ténylegesen fizetős modelleket és minden olyan
-   szolgáltatót/modellt, amelyet az 67router még nem sorolt be — az új jelöltek alapértelmezés szerint kizártak, nem pedig engedélyezettek.
+   szolgáltatót/modellt, amelyet a 67router még nem sorolt be — az új jelöltek alapértelmezés szerint kizártak, nem pedig engedélyezettek.
 2. **`freeType: "keyless"`** → azonnal átmegy, **de csak akkor, ha a jelölt valóban
    a hitelesítés nélküli útvonalon érkezett** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Ehhez a jelölthöz nem tartoznak hitelesítő adatok,
@@ -87,7 +87,7 @@ soha ne ugyanazon jelölt egy másik, nem ellenőrzött fiókja. A regresszió b
 (kulcs nélküli megkerülési esetek A/B/C, többfiókos esetek 1–5).
 
 `discovered automatically`: egy holnap kiadott, megfelelő metaadatokkal rendelkező szolgáltató/modell (szerepel a
-katalógusban, rendelkezik használati adapterrel, `hardStopGuaranteed: true`) attól a pillanattól használható, hogy az 67router
+katalógusban, rendelkezik használati adapterrel, `hardStopGuaranteed: true`) attól a pillanattól használható, hogy a 67router
 tudomást szerez róla — nincs szükség kódmódosításra, engedélyezésilista-bejegyzésre, és ebben a modulban semmit sem kell szerkeszteni. A katalógusból
 eltávolított elem ugyanilyen módon eltűnik. A regresszió bizonyítását lásd:
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (injektálható

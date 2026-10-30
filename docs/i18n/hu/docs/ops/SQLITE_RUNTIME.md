@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router indításkor egy ötlépéses tartalékmechanizmuson keresztül választja ki a SQLite-illesztőprogramját:
+A 67router indításkor egy ötlépéses tartalékmechanizmuson keresztül választja ki a SQLite-illesztőprogramját:
 
 1. **Csomagolt `better-sqlite3`** (a `package.json` `dependencies` mezőjén keresztül)
    — a leggyorsabb, natív bináris; az `npm install` telepíti, ha rendelkezésre állnak a fordítóeszközök.
@@ -28,14 +28,14 @@ Az 67router indításkor egy ötlépéses tartalékmechanizmuson keresztül vál
 - **Nincsenek fordítóeszközök**: Egyes környezetek (például VS Build Tools nélküli vállalati
   Windows-rendszerek vagy minimális Docker-lemezképek) nem képesek lefordítani a `better-sqlite3`
   csomagot. A futásidejű telepítő egy előre lefordított binárist szerez be az npm-regisztrációs
-  adatbázisból; a tartalék illesztőprogramok pedig gondoskodnak arról, hogy az 67router akkor is
+  adatbázisból; a tartalék illesztőprogramok pedig gondoskodnak arról, hogy a 67router akkor is
   elinduljon, ha ez sikertelen.
 - **Hálózattól elszigetelt rendszerek**: Ha az npm-regisztrációs adatbázis nem érhető el,
   a `node:sqlite` vagy a `sql.js` garantálja az alapvető működést.
 
 ## Mágikusbájt-ellenőrzés
 
-Egy futásidőben telepített `.node` fájl betöltése előtt az 67router beolvassa az első 8
+Egy futásidőben telepített `.node` fájl betöltése előtt a 67router beolvassa az első 8
 bájtot, és összeveti azokat az ismert platformspecifikus mágikus értékekkel:
 
 | Platform                | Bájtok (hex)  | Címke       |

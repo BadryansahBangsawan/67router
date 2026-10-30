@@ -10,7 +10,7 @@ _Utolsó frissítés: 2026-06-28_
 
 ## Vezetői összefoglaló
 
-Az 67router egy Next.js alapú, helyi AI-útválasztó átjáró és irányítópult.
+A 67router egy Next.js alapú, helyi AI-útválasztó átjáró és irányítópult.
 Egyetlen, OpenAI-kompatibilis végpontot (`/v1/*`) biztosít, és fordítással, tartalék útvonalakkal, tokenfrissítéssel, valamint használatkövetéssel irányítja a forgalmat több felsőbb szintű szolgáltató között.
 
 Fő képességek:
@@ -328,7 +328,7 @@ OAuth-szolgáltatói modulok (27 különálló fájl a `src/lib/oauth/providers/
 
 ## 5) Beágyazott szolgáltatások (v3.8.4)
 
-Az 67router képes telepíteni, felügyelni és útválasztási célként használni a helyben futó, **beágyazott szolgáltatásoknak** nevezett AI-eszközfolyamatokat. Öt ilyen szolgáltatást tartalmaz: 9Router, CLIProxyAPI, Bifrost, Mux és Dario.
+A 67router képes telepíteni, felügyelni és útválasztási célként használni a helyben futó, **beágyazott szolgáltatásoknak** nevezett AI-eszközfolyamatokat. Öt ilyen szolgáltatást tartalmaz: 9Router, CLIProxyAPI, Bifrost, Mux és Dario.
 
 Architekturális rétegek:
 
@@ -921,7 +921,7 @@ Minden más szolgáltató (beleértve az egyéni kompatibilis csomópontokat is)
 
 ## Szolgáltatói kompatibilitási mátrix
 
-> **Megjegyzés:** Az alábbi mátrix az 67router v3.8.0 rendszerben regisztrált 351 szolgáltató reprezentatív mintája.
+> **Megjegyzés:** Az alábbi mátrix a 67router v3.8.0 rendszerben regisztrált 351 szolgáltató reprezentatív mintája.
 > A hiteles és folyamatosan frissített listát lásd az
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automatikusan generált) fájlban, vagy a mérvadó
 > `src/shared/constants/providers.ts` forrásban (betöltéskor Zod által validálva).
@@ -1103,7 +1103,7 @@ A részletes kérés-adattartalom rögzítése irányított hívásonként legfe
 - a klienstől fogadott nyers kérés
 - a ténylegesen a felsőbb szintre küldött, átalakított kérés
 - a szolgáltató JSON-ként rekonstruált válasza; az adatfolyamban továbbított válaszok a végső összefoglalóra és az adatfolyam metaadataira tömörítve kerülnek tárolásra
-- az 67router által visszaadott végső kliensválasz; az adatfolyamban továbbított válaszok ugyanebben a tömörített összefoglaló-formában kerülnek tárolásra
+- a 67router által visszaadott végső kliensválasz; az adatfolyamban továbbított válaszok ugyanebben a tömörített összefoglaló-formában kerülnek tárolásra
 
 ## Biztonsági szempontból érzékeny határok
 

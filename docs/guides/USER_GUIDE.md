@@ -266,7 +266,7 @@ Cost: currently listed as $0; terms and availability may change
 
 ### Cursor IDE
 
-**Using Cursor as an 67router client** (route Cursor chat through 67router):
+**Using Cursor as a 67router client** (route Cursor chat through 67router):
 
 ```
 Settings → Models → Advanced:
@@ -809,7 +809,7 @@ Returns models grouped by provider with types (`chat`, `embedding`, `image`).
 - Available in **Dashboard → Endpoints** for Docker and other self-hosted deployments
 - Creates a temporary `https://*.trycloudflare.com` URL that forwards to your current OpenAI-compatible `/v1` endpoint
 - First enable installs `cloudflared` only when needed; later restarts reuse the same managed binary
-- Quick Tunnels are not auto-restored after an 67router or container restart; re-enable them from the dashboard when needed
+- Quick Tunnels are not auto-restored after a 67router or container restart; re-enable them from the dashboard when needed
 - Tunnel URLs are ephemeral and change every time you stop/start the tunnel
 - Managed Quick Tunnels default to HTTP/2 transport to avoid noisy QUIC UDP buffer warnings in constrained containers
 - Set `CLOUDFLARED_PROTOCOL=quic` or `auto` if you want to override the managed transport choice

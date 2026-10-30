@@ -4,11 +4,11 @@
 
 ---
 
-> **Röviden**: Telepítés → Csatlakoztass egy jogosult szolgáltatót → Irányítsd az IDE-det az 67router-ra. Kész.
+> **Röviden**: Telepítés → Csatlakoztass egy jogosult szolgáltatót → Irányítsd az IDE-det a 67router-ra. Kész.
 
 ---
 
-## 1. lépés: Az 67router telepítése
+## 1. lépés: A 67router telepítése
 
 Válaszd ki az általad előnyben részesített módszert:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## 2. lépés: Az 67router elindítása
+## 2. lépés: A 67router elindítása
 
 ```bash
 omniroute
 ```
 
-Az 67router a `http://localhost:20128` címen indul el. Az irányítópult automatikusan megnyílik.
+A 67router a `http://localhost:20128` címen indul el. Az irányítópult automatikusan megnyílik.
 
 ---
 
@@ -67,7 +67,7 @@ A csatlakoztatott modellek listájának kell megjelennie.
 
 ---
 
-## 5. lépés: Az IDE vagy a CLI beállítása az 67router használatára
+## 5. lépés: Az IDE vagy a CLI beállítása a 67router használatára
 
 Az IDE-ben vagy a CLI-eszközben állítsd be a következőket:
 
@@ -77,7 +77,7 @@ API-kulcs: [másold ki az irányítópult → Endpoints oldaláról]
 Modell:    auto
 ```
 
-Ennyi! Az IDE mostantól az 67router-ot használja automatikus szolgáltatóválasztással.
+Ennyi! Az IDE mostantól a 67router-ot használja automatikus szolgáltatóválasztással.
 
 ### IDE-példa: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ Ennyi! Az IDE mostantól az 67router-ot használja automatikus szolgáltatóvál
     apiKey: <YOUR_KEY>
 ```
 
-3. A Continue.dev csevegőpaneljén válaszd az `OmniRoute - Auto` lehetőséget, és a kéréseket az 67router-nak fogod elküldeni.
+3. A Continue.dev csevegőpaneljén válaszd az `OmniRoute - Auto` lehetőséget, és a kéréseket a 67router-nak fogod elküldeni.
 4. (Nem kötelező) Gyakorlat az olvasónak: frissíttesd az IDE-vel a `config.yaml` fájlt az összes többi előre elkészített konfigurációval 😊
 
 ### CLI-példa: Codex CLI
@@ -110,19 +110,19 @@ Windows esetén (Parancssor):
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. Most indítsuk el a Codexet az 67router használatára konfigurálva. Futtasd:
+2. Most indítsuk el a Codexet a 67router használatára konfigurálva. Futtasd:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-Ezt manuálisan is megteheted a `codex` és a végpontot, illetve az API-kulcsot megadó parancssori paraméterek használatával, de a fenti paranccsal az 67router mindent elintéz helyetted.
+Ezt manuálisan is megteheted a `codex` és a végpontot, illetve az API-kulcsot megadó parancssori paraméterek használatával, de a fenti paranccsal a 67router mindent elintéz helyetted.
 
 Ugyanez az egyparancsos indítás más CLI-k esetén is működik az általános indítón keresztül — az `omniroute run <target>` támogatja a `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` és `gemini` célokat (lásd: [CLI-integrációk](../guides/CLI-INTEGRATIONS.md)).
 
-3. A CLI-nek most már az 67router részére kell küldenie a kéréseket.
+3. A CLI-nek most már a 67router részére kell küldenie a kéréseket.
 
-### Ellenőrizd, hogy az eszközöd az 67router-on keresztül irányítja-e a kéréseket
+### Ellenőrizd, hogy az eszközöd a 67router-on keresztül irányítja-e a kéréseket
 
 A kérés részleteit a bal oldali oldalsáv [Monitoring/Logs](http://localhost:20128/dashboard/logs) elemére kattintva tekintheted meg. Továbblépve további részleteket láthatsz. Emellett azt is megtekintheted, hogy a kedvenc klienskörnyezeted milyen adatokat küld tovább. Ez oktatási és hibakeresési szempontból is hasznos.
 
@@ -130,7 +130,7 @@ A kérés részleteit a bal oldali oldalsáv [Monitoring/Logs](http://localhost:
 
 ## Mi a következő lépés?
 
-- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Hagyd, hogy az 67router kiválassza számodra a legjobb MI-t
+- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Hagyd, hogy a 67router kiválassza számodra a legjobb MI-t
 - **[Szolgáltatói útmutató](./PROVIDERS-GUIDE.md)** — Csatlakoztass további szolgáltatókat (ingyeneseket és fizetőseket)
 - **[Ingyenes csomagok útmutató](./FREE-TIERS-GUIDE.md)** — Tekintsd át a szolgáltatói feltételeket és az ingyenes csomagok korlátait
 - **[Hibaelhárítás](../guides/TROUBLESHOOTING.md)** — Gyakori problémák megoldása
@@ -141,23 +141,23 @@ A kérés részleteit a bal oldali oldalsáv [Monitoring/Logs](http://localhost:
 
 ### „Szükségem van API-kulcsra?”
 
-Az 67router API-kulcs hitelesíti az eszközeit. A külső szolgáltatások hitelesítő adatai a szolgáltatótól függnek: egyesek API-kulcsot vagy fiókba való bejelentkezést igényelnek. Az ingyenes hozzáférés nem garantált.
+A 67router API-kulcs hitelesíti az eszközeit. A külső szolgáltatások hitelesítő adatai a szolgáltatótól függnek: egyesek API-kulcsot vagy fiókba való bejelentkezést igényelnek. Az ingyenes hozzáférés nem garantált.
 
 ### „Mi az az `auto`?”
 
-Az `auto` arra utasítja az 67router-ot, hogy minden kéréshez automatikusan válassza ki a legjobb szolgáltatót. Figyelembe veszi a sebességet, a költséget, a minőséget és az elérhetőséget. Részletekért tekintse meg az [Automatikus kombináció útmutatóját](./AUTO-COMBO-GUIDE.md).
+Az `auto` arra utasítja a 67router-ot, hogy minden kéréshez automatikusan válassza ki a legjobb szolgáltatót. Figyelembe veszi a sebességet, a költséget, a minőséget és az elérhetőséget. Részletekért tekintse meg az [Automatikus kombináció útmutatóját](./AUTO-COMBO-GUIDE.md).
 
 ### „Mennyibe kerül?”
 
-Maga az 67router **ingyenes és nyílt forráskódú**. Csak az Ön által használt szolgáltatókért kell fizetnie. Számos szolgáltató kínál ingyenes csomagot — tekintse meg az [Ingyenes csomagok útmutatóját](./FREE-TIERS-GUIDE.md).
+Maga a 67router **ingyenes és nyílt forráskódú**. Csak az Ön által használt szolgáltatókért kell fizetnie. Számos szolgáltató kínál ingyenes csomagot — tekintse meg az [Ingyenes csomagok útmutatóját](./FREE-TIERS-GUIDE.md).
 
 ### „Használhatom a Claude Code-dal / Cursorral / Copilottal?”
 
-**Igen!** Az 67router minden olyan eszközzel működik, amely támogatja az OpenAI formátumát. Csak állítsa be az alap URL-t a következőre: `http://localhost:20128/v1`. A konkrét beállítási utasításokat a [CLI-eszközök útmutatójában](../reference/CLI-TOOLS.md) találja.
+**Igen!** A 67router minden olyan eszközzel működik, amely támogatja az OpenAI formátumát. Csak állítsa be az alap URL-t a következőre: `http://localhost:20128/v1`. A konkrét beállítási utasításokat a [CLI-eszközök útmutatójában](../reference/CLI-TOOLS.md) találja.
 
 ### „Mi történik, ha egy szolgáltató leáll?”
 
-Az 67router automatikusan kihagyja a hibás szolgáltatókat, és megpróbálkozik a következővel. Önnek semmit sem kell tennie. Részletekért tekintse meg az [Automatikus kombináció útmutatóját](./AUTO-COMBO-GUIDE.md).
+A 67router automatikusan kihagyja a hibás szolgáltatókat, és megpróbálkozik a következővel. Önnek semmit sem kell tennie. Részletekért tekintse meg az [Automatikus kombináció útmutatóját](./AUTO-COMBO-GUIDE.md).
 
 ---
 

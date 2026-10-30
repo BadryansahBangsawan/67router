@@ -4,7 +4,7 @@
 
 ---
 
-Az 67router npm + Docker műtermékeket tesz közzé. Ezek a kapuk származási adatokat (provenance), leltárt (SBOM) és CVE-vizsgálatot biztosítanak, mindezt nyílt forráskódú eszközökkel, beépítve a kiadási munkafolyamatokba. **Tanácsadás-központú** megközelítés — most jelentenek, és az első sikeres (zöld) kiadás után válnak blokkolóvá.
+A 67router npm + Docker műtermékeket tesz közzé. Ezek a kapuk származási adatokat (provenance), leltárt (SBOM) és CVE-vizsgálatot biztosítanak, mindezt nyílt forráskódú eszközökkel, beépítve a kiadási munkafolyamatokba. **Tanácsadás-központú** megközelítés — most jelentenek, és az első sikeres (zöld) kiadás után válnak blokkolóvá.
 
 | Kapu                  | Eszköz                                         | Hol                           | Blokkol?                        | Kimenet                                                 |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------------ | :------------------------------------------------------ |
@@ -47,7 +47,7 @@ A fenti CVE Variance orvoslás "nincs upstream javítás" ága szerint ez egy
   jelenlegi npm-latest (`0.1.29`) továbbra is az `extract-zip@2.0.1`-et húzza be.
 - **Elérhetetlen a produkcióból.** A `promptfoo` csak devDependency (soha nincs felsorolva
   a `dependencies` alatt), és a `src/`, `open-sse/` vagy `bin/` alatt egyetlen fájl sem importálja az
-  `extract-zip` npm csomagot — az 67router saját `extractZip()` segédje
+  `extract-zip` npm csomagot — a 67router saját `extractZip()` segédje
   (`src/lib/versionManager/binaryManager.ts:93`) natív `unzip`/`tar`
   parancsokat használ, és nem kapcsolódik ehhez. Az `@openai/codex-security` emellett saját szimbolikus link bejárási
   védelmet is tartalmaz az extract-zip `onEntry` callback-je felett.

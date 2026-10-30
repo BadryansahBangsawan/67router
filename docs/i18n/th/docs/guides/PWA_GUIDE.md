@@ -93,7 +93,7 @@ service worker จะได้รับการลงทะเบียนโ�
 
 ```json
 {
-  "name": "OmniRoute",
+  "name": "67router",
   "short_name": "67router",
   "description": "67router คือเกตเวย์ AI สำหรับ LLM จากผู้ให้บริการหลายราย ใช้เอนด์พอยต์เดียวสำหรับผู้ให้บริการ AI ทั้งหมดของคุณ",
   "start_url": "/",

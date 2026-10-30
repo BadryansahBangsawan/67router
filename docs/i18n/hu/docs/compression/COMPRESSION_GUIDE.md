@@ -8,7 +8,7 @@
 
 ## Áttekintés
 
-Az 67router moduláris prompttömörítési folyamatot valósít meg, amely **proaktívan**, még azelőtt fut le, hogy a kérések elérnék a háttérszolgáltatókat. Ez azt jelenti, hogy a tokenmegtakarítás átlátható módon történik — a munkafolyamatot nem kell módosítani.
+A 67router moduláris prompttömörítési folyamatot valósít meg, amely **proaktívan**, még azelőtt fut le, hogy a kérések elérnék a háttérszolgáltatókat. Ez azt jelenti, hogy a tokenmegtakarítás átlátható módon történik — a munkafolyamatot nem kell módosítani.
 
 ```
 Ügyfélkérés
@@ -122,7 +122,7 @@ kombinációkhoz rendelt tömörítési kombinációkon keresztül konfigurálha
 
 ## Upstream megtakarítások számítása
 
-Az 67router két forrás alapján dokumentálja a tömörítési megtakarításokat: az upstream projektek teljesítménytesztjei és az 67router saját motor-összeállítása alapján.
+A 67router két forrás alapján dokumentálja a tömörítési megtakarításokat: az upstream projektek teljesítménytesztjei és a 67router saját motor-összeállítása alapján.
 
 | Forrás  | Az itt használt szám az upstream README-ből                                                                                                                |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
