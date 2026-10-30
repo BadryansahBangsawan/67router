@@ -14,7 +14,7 @@ import { HIDDEN_TAB_REVEAL_SCRIPT } from "@/shared/utils/hiddenTabReveal";
 import { BasePathNetworkProvider } from "@/shared/components/BasePathNetworkProvider";
 
 export const viewport: Viewport = {
-  themeColor: "#0b0f1a",
+  themeColor: "#0a0a0a",
   viewportFit: "cover",
 };
 

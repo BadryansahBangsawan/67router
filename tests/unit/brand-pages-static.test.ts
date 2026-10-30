@@ -32,10 +32,16 @@ test("standalone pages use the Keak lockup instead of the gradient hub glyph", (
   }
 });
 
-test("the logo wrappers import the kit brand module, not the package barrel", () => {
+test("the logo wrapper draws the 67router mark inline and never imports the kit barrel", () => {
   // The barrel evaluates all kit modules (Radix, charts…) in every importer of the logo;
   // in vitest that alone pushed the Sidebar import past the 5 s test timeout.
   const src = read("src/shared/components/OmniRouteLogo.tsx");
-  assert.match(src, /from "@omniroute\/ui-kit\/keak-brand"/);
   assert.doesNotMatch(src, /from "@omniroute\/ui-kit"/);
+  assert.doesNotMatch(src, /keak-brand/, "the Keak product glyph is gone");
+  assert.match(src, /M55\.5 133\.5 L138 51 H214 L154 218/, "Route 67 mark path");
+  assert.match(src, /BRAND_WORDMARK = "67router"/);
+  // The tab icon and the raster sources carry the same geometry.
+  for (const icon of ["public/favicon.svg", "public/apple-touch-icon.svg"]) {
+    assert.match(read(icon), /M55\.5 133\.5 L138 51 H214 L154 218/, `${icon} draws the mark`);
+  }
 });

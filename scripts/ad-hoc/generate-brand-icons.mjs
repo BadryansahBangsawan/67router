@@ -1,9 +1,12 @@
 // Regenerates the raster brand icons in public/ from their SVG sources, so the
 // PNG/ICO assets can never drift from the canonical vector artwork again.
 //
-//   public/favicon.svg           → public/favicon.ico (16/32/48/64/96/128/256, PNG frames)
-//   public/favicon.svg           → public/icon-512.png
+//   public/apple-touch-icon.svg  → public/favicon.ico (16/32/48/64/96/128/256, PNG frames)
+//   public/apple-touch-icon.svg  → public/icon-512.png
 //   public/apple-touch-icon.svg  → public/apple-touch-icon.png (180×180, as declared in layout.tsx)
+//
+// 67router: every raster comes from the app icon (light mark on a solid dark square), which
+// reads on any tab strip. public/favicon.svg stays a vector-only, theme-adaptive mark.
 //
 // Usage:
 //   npm i --no-save sharp
@@ -22,10 +25,9 @@ try {
 }
 
 const publicDir = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "public");
-const faviconSvg = readFileSync(join(publicDir, "favicon.svg"));
 const appleSvg = readFileSync(join(publicDir, "apple-touch-icon.svg"));
 
-// favicon.svg is authored on a 32×32 viewBox; scale density so each target
+// apple-touch-icon.svg is authored on a 180×180 viewBox; scale density so each target
 // size is rendered from the vector instead of upscaling a small raster.
 // Palette quantization (8-bit, ≤256 colors) is only applied where asked:
 // it keeps the ICO frames tiny, but measurably clips the antialiased
@@ -64,11 +66,11 @@ function buildIco(frames) {
 const icoSizes = [16, 32, 48, 64, 96, 128, 256];
 const frames = [];
 for (const size of icoSizes) {
-  frames.push({ size, png: await renderPng(faviconSvg, 32, size, true) });
+  frames.push({ size, png: await renderPng(appleSvg, 180, size, true) });
 }
 writeFileSync(join(publicDir, "favicon.ico"), buildIco(frames));
 
-writeFileSync(join(publicDir, "icon-512.png"), await renderPng(faviconSvg, 32, 512));
+writeFileSync(join(publicDir, "icon-512.png"), await renderPng(appleSvg, 180, 512));
 
 // layout.tsx declares apple-touch-icon.png as 180×180; its SVG source is
 // authored on a 180×180 viewBox.
