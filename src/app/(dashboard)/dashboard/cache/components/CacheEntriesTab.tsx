@@ -142,7 +142,7 @@ export default function CacheEntriesTab() {
       }
     >
       {error ? (
-        <div className="flex items-center justify-between gap-3 rounded-lg border border-error/30 bg-error-bg px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-control border border-error/30 bg-error-bg px-4 py-3">
           <div className="text-sm text-error">{error}</div>
           <Button variant="secondary" size="sm" onClick={() => fetchEntries(pagination.page)}>
             {t("refresh")}

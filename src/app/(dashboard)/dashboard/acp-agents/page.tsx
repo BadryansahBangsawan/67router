@@ -10,6 +10,7 @@ import Badge from "@/shared/components/Badge";
 import ProviderIcon from "@/shared/components/ProviderIcon";
 import { CliConceptCard, CliComparisonCard } from "@/shared/components/cli";
 import { useTranslations } from "next-intl";
+import { KpiCell, KpiStrip } from "../_r67/KpiStrip";
 
 interface AgentInfo {
   id: string;
@@ -176,34 +177,22 @@ export default function AgentsPage() {
 
       {/* Summary Cards */}
       {summary && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <Card padding="sm" className="text-center">
-            <div className="text-2xl font-bold text-primary">{summary.installed}</div>
-            <div className="text-xs text-text-muted mt-1">{t("installed")}</div>
-          </Card>
-          <Card padding="sm" className="text-center">
-            <div className="text-2xl font-bold text-text-muted">{summary.notFound}</div>
-            <div className="text-xs text-text-muted mt-1">{t("notFound")}</div>
-          </Card>
-          <Card padding="sm" className="text-center">
-            <div className="text-2xl font-bold">{summary.builtIn}</div>
-            <div className="text-xs text-text-muted mt-1">{t("builtIn")}</div>
-          </Card>
-          <Card padding="sm" className="text-center">
-            <div className="text-2xl font-bold text-warning">{summary.custom}</div>
-            <div className="text-xs text-text-muted mt-1">{t("custom")}</div>
-          </Card>
-        </div>
+        <KpiStrip columns={4}>
+          <KpiCell label={t("installed")} value={summary.installed} />
+          <KpiCell label={t("notFound")} value={summary.notFound} />
+          <KpiCell label={t("builtIn")} value={summary.builtIn} />
+          <KpiCell label={t("custom")} value={summary.custom} />
+        </KpiStrip>
       )}
 
       {/* Setup Guide */}
       <Card>
         <div className="flex items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-info/10 text-info">
-              <Icon name="support" size={20} />
+            <div className="flex size-8 items-center justify-center rounded-control border border-border bg-surface text-text-muted">
+              <Icon name="support" size={16} />
             </div>
-            <h3 className="text-lg font-semibold">{t("setupGuideTitle")}</h3>
+            <h3 className="text-sm font-semibold text-text-main">{t("setupGuideTitle")}</h3>
           </div>
           <Link
             href="/dashboard/cli-code"
@@ -213,29 +202,29 @@ export default function AgentsPage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className="rounded-lg border border-border/50 bg-bg-subtle p-3">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
             <div className="flex items-center gap-2 mb-1.5">
-              <Icon name="radar" size={16} className="text-info" />
+              <Icon name="radar" size={16} className="text-text-muted" />
               <p className="text-sm font-medium">{t("setupGuideDetectCliTitle")}</p>
             </div>
             <p className="text-xs text-text-muted">{t("setupGuideDetectCliDesc")}</p>
           </div>
-          <div className="rounded-lg border border-border/50 bg-bg-subtle p-3">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
             <div className="flex items-center gap-2 mb-1.5">
-              <Icon name="build" size={16} className="text-warning" />
+              <Icon name="build" size={16} className="text-text-muted" />
               <p className="text-sm font-medium">{t("setupGuideCustomAgentTitle")}</p>
             </div>
             <p className="text-xs text-text-muted">{t("setupGuideCustomAgentDesc")}</p>
           </div>
-          <div className="rounded-lg border border-border/50 bg-bg-subtle p-3">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
             <div className="flex items-center gap-2 mb-1.5">
-              <Icon name="terminal" size={16} className="text-success" />
+              <Icon name="terminal" size={16} className="text-text-muted" />
               <p className="text-sm font-medium">{t("setupGuideCommandMissingTitle")}</p>
             </div>
             <p className="text-xs text-text-muted">{t("setupGuideCommandMissingDesc")}</p>
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-2 rounded-lg border border-border/30 bg-bg-subtle p-3">
+        <div className="mt-3 flex items-center gap-2 rounded-control border border-border bg-bg-subtle p-3">
           <Icon name="fingerprint" size={14} className="text-text-muted" />
           <p className="text-xs text-text-muted">
             {t("fingerprintSettingsHint")}{" "}
@@ -253,10 +242,8 @@ export default function AgentsPage() {
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <div
-                  className={`p-2 rounded-lg ${
-                    agent.installed
-                      ? "bg-success/10 text-success "
-                      : "bg-surface-2/10 text-text-muted"
+                  className={`flex size-9 items-center justify-center rounded-control border border-border bg-surface ${
+                    agent.installed ? "text-text-main" : "text-text-muted"
                   }`}
                 >
                   {getAgentIconId(agent.id) ? (
@@ -274,7 +261,7 @@ export default function AgentsPage() {
                       </Badge>
                     )}
                   </div>
-                  <code className="text-xs text-text-muted">{agent.binary}</code>
+                  <code className="font-mono text-xs text-text-muted">{agent.binary}</code>
                 </div>
               </div>
               <div className="flex items-center gap-1">
@@ -289,9 +276,9 @@ export default function AgentsPage() {
                 )}
               </div>
             </div>
-            <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/30">
+            <div className="flex items-center justify-between mt-3 pt-3 border-t border-border">
               <div>
-                <Badge variant="info" size="sm" className="font-mono">
+                <Badge size="sm" className="font-mono">
                   {agent.protocol}
                 </Badge>
                 {agent.installed && (
@@ -341,7 +328,7 @@ export default function AgentsPage() {
         {showAddForm && (
           <form
             onSubmit={handleAddAgent}
-            className="flex flex-col gap-4 pt-4 border-t border-border/50"
+            className="flex flex-col gap-4 pt-4 border-t border-border"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Input

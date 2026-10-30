@@ -70,7 +70,7 @@ export default function SearchConceptCard({ defaultCollapsed = false }: SearchCo
         aria-expanded={!collapsed}
         aria-controls="concept-card-content"
       >
-        <span className="text-xs font-semibold text-text-muted uppercase tracking-wider flex items-center gap-2">
+        <span className="text-xs font-semibold text-text-muted uppercase tracking-[0.04em] flex items-center gap-2">
           <span>ⓘ</span>
           <span>{t("modalitiesGuide")}</span>
         </span>
@@ -92,7 +92,7 @@ export default function SearchConceptCard({ defaultCollapsed = false }: SearchCo
               className="flex gap-3 p-3 bg-bg-alt rounded-lg border border-border"
               data-testid={`concept-item-${c.key}`}
             >
-              <Icon name={c.icon} size={20} className="text-primary" />
+              <Icon name={c.icon} size={20} className="text-text-muted" />
               <div>
                 <div className="text-xs font-semibold text-text-main mb-0.5">{t(c.titleKey)}</div>
                 <div className="text-[11px] text-text-muted leading-relaxed">{t(c.descKey)}</div>

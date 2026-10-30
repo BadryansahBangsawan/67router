@@ -45,7 +45,7 @@ export default function SearchHistory({ onReplay }: SearchHistoryProps) {
 
   return (
     <div className="p-4 flex-1">
-      <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+      <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
         {t("searchHistory")}
       </span>
       <div className="mt-2 space-y-1.5">

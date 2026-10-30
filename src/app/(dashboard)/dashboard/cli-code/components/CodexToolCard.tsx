@@ -679,7 +679,7 @@ openai_base_url = "${getEffectiveBaseUrl()}"
 
                 <div className="h-px bg-border/50 my-2"></div>
 
-                <div className="text-[11px] text-text-muted mb-2 font-medium uppercase tracking-wider text-right">
+                <div className="text-[11px] text-text-muted mb-2 font-medium uppercase tracking-[0.04em] text-right">
                   {t("modelAliases")} ([notice.model_migrations])
                 </div>
                 {CODEX_DEFAULT_MODELS.map((defaultModel) => (

@@ -77,7 +77,7 @@ function FleetOverview({ comboEvents }: FleetOverviewProps) {
     <div className="flex flex-col gap-3 p-4 h-full overflow-auto" data-testid="fleet-overview">
       {sets.active.size > 0 && (
         <div>
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-text-muted mb-1.5">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.04em] text-text-muted mb-1.5">
             {t("liveActiveCount", { count: sets.active.size })}
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -98,7 +98,7 @@ function FleetOverview({ comboEvents }: FleetOverviewProps) {
       )}
       {sets.error.size > 0 && (
         <div>
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-text-muted mb-1.5">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.04em] text-text-muted mb-1.5">
             {t("liveErrorCount", { count: sets.error.size })}
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -119,7 +119,7 @@ function FleetOverview({ comboEvents }: FleetOverviewProps) {
       )}
       {sets.last.size > 0 && (
         <div>
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-text-muted mb-1.5">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.04em] text-text-muted mb-1.5">
             {t("liveInactiveCount", { count: sets.last.size })}
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -333,7 +333,7 @@ export function ComboLiveStudio({
               {t("liveTargetCount", { count: displayRun.targets.length })}
             </span>
             <span
-              className="text-xs font-bold"
+              className="text-xs font-semibold"
               style={{
                 color:
                   displayRun.outcome === "succeeded"

@@ -313,7 +313,7 @@ export default function CustomCliCard({
             </div>
           </div>
 
-          <div className="rounded-lg border border-border/60 bg-bg-subtle p-3 text-xs text-text-muted">
+          <div className="rounded-lg border border-border bg-bg-subtle p-3 text-xs text-text-muted">
             <p className="font-medium text-text-main">
               {translateOrFallback("customCliEndpointHintLabel", "How to wire the endpoint")}
             </p>

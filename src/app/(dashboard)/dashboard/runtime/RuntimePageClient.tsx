@@ -542,7 +542,7 @@ export default function RuntimePageClient() {
         compact
         title={
           <span className="inline-flex items-center gap-2">
-            <Icon name="bolt" size={24} className="text-primary" />
+            <Icon name="bolt" size={24} className="text-text-muted" />
             {t("title")}
           </span>
         }
@@ -696,7 +696,7 @@ export default function RuntimePageClient() {
                         <span className="truncate flex-1">
                           {resolveProviderName(b.provider, nodeMap)}
                         </span>
-                        <span style={{ color: tone.dot }} className="text-[10px] font-bold">
+                        <span style={{ color: tone.dot }} className="text-[10px] font-semibold">
                           {tone.label}
                         </span>
                       </div>
@@ -948,7 +948,7 @@ export default function RuntimePageClient() {
                 </TableBody>
               </Table>
               {Object.keys(health?.sessions?.byApiKey ?? {}).length > 0 && (
-                <div className="mt-2 pt-2 border-t border-border/40 text-[10px] text-text-muted">
+                <div className="mt-2 pt-2 border-t border-border text-[10px] text-text-muted">
                   {t("topApiKeys")}:{" "}
                   {Object.entries(health?.sessions?.byApiKey ?? {})
                     .sort((a, b) => b[1] - a[1])
@@ -1050,24 +1050,28 @@ function KpiCard({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className="text-left rounded-xl border px-4 py-3 transition-colors cursor-pointer bg-surface"
-      style={{
-        borderColor: active ? tone : "var(--color-border)",
-        boxShadow: active ? `0 0 0 2px color-mix(in srgb, ${tone} 14%, transparent)` : undefined,
-      }}
+      className={`cursor-pointer rounded-card border px-5 py-4 text-left transition-colors ${
+        active
+          ? "border-border-strong bg-bg-subtle"
+          : "border-border bg-surface hover:border-border-strong"
+      }`}
     >
-      <div className="flex items-center justify-between">
-        <span className="text-[11px] uppercase tracking-wider font-semibold text-text-muted">
-          {label}
+      {/* 67router KPI: muted label, ink value; the tone lives on the status dot only. */}
+      <div className="flex items-center justify-between gap-2">
+        <span className="flex min-w-0 items-center gap-2 text-[13px] text-text-muted">
+          <span
+            aria-hidden="true"
+            className="size-2 shrink-0 rounded-full"
+            style={{ backgroundColor: tone }}
+          />
+          <span className="truncate">{label}</span>
         </span>
-        <span style={{ color: tone }}>
-          <Icon name={icon} size={16} />
-        </span>
+        <Icon name={icon} size={16} className="shrink-0 text-text-muted" />
       </div>
-      <div className="mt-1 text-2xl font-bold tabular-nums" style={{ color: tone }}>
+      <div className="mt-1 text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
         {value}
       </div>
-      <div className="text-[10px] text-text-muted truncate">{hint}</div>
+      <div className="truncate text-[12.5px] text-text-muted">{hint}</div>
     </button>
   );
 }
@@ -1087,7 +1091,7 @@ function SectionHeader({
     <KitSectionHeader
       title={
         <span className="inline-flex items-center gap-2">
-          <Icon name={icon} size={20} className="text-primary" />
+          <Icon name={icon} size={20} className="text-text-muted" />
           {title}
         </span>
       }
@@ -1136,10 +1140,10 @@ function LayerSection({
   } as const;
   const tone = toneMap[badgeTone];
   return (
-    <div className="mt-4 border-t border-border/40 pt-3 first-of-type:border-t-0 first-of-type:pt-0">
+    <div className="mt-4 border-t border-border pt-3 first-of-type:border-t-0 first-of-type:pt-0">
       <div className="flex items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <span className="text-[10px] uppercase tracking-wider font-bold text-text-muted">
+          <span className="text-[10px] uppercase tracking-[0.04em] font-semibold text-text-muted">
             Layer {id}
           </span>
           <h3 className="text-[13px] font-semibold text-text-main">{title}</h3>
@@ -1198,7 +1202,7 @@ function QuotaGroup({
   return (
     <div>
       <div
-        className="text-[10px] font-bold uppercase tracking-wider mb-1.5"
+        className="text-[10px] font-semibold uppercase tracking-[0.04em] mb-1.5"
         style={{ color: tc.text }}
       >
         {label}
@@ -1218,7 +1222,7 @@ function QuotaGroup({
               <div className="text-[10px] text-text-muted">{m.window ?? ""}</div>
             </div>
             {typeof m.remainingPercent === "number" && (
-              <span className="text-[11px] font-bold tabular-nums" style={{ color: tc.text }}>
+              <span className="text-[11px] font-semibold tabular-nums" style={{ color: tc.text }}>
                 {Math.round(m.remainingPercent)}%
               </span>
             )}

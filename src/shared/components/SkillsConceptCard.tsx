@@ -30,12 +30,12 @@ export function SkillsConceptCard({
   return (
     <div
       data-testid={`skills-concept-card-${variant}`}
-      className={`rounded-xl border border-border bg-bg-subtle p-4 ${className}`}
+      className={`rounded-card border border-border bg-surface p-4 ${className}`}
     >
       {/* Header row */}
       <div className="flex items-start gap-4 mb-4">
-        <div className="flex items-center justify-center size-10 rounded-lg bg-primary/10 shrink-0">
-          <Icon name={icon} size={20} className="text-primary" />
+        <div className="flex items-center justify-center size-10 rounded-control border border-border bg-surface shrink-0">
+          <Icon name={icon} size={20} className="text-text-muted" />
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="text-sm font-semibold text-text-main">{title}</h3>

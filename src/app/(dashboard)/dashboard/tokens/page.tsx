@@ -309,7 +309,7 @@ export default function TokensPage() {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-text-muted">{t("tokensTokenBalance")}</p>
-            <p className="text-4xl font-bold mt-1">{balance.toLocaleString(locale)}</p>
+            <p className="text-4xl font-semibold mt-1">{balance.toLocaleString(locale)}</p>
           </div>
           <div className="text-6xl opacity-20" aria-hidden="true">
             🪙
@@ -437,7 +437,7 @@ export default function TokensPage() {
               onDismiss={() => setNewInviteCode(null)}
             >
               {t("tokensInviteCreated")}:{" "}
-              <span className="font-mono font-bold">{newInviteCode}</span>
+              <span className="font-mono font-semibold">{newInviteCode}</span>
             </Alert>
           )}
 
@@ -472,10 +472,10 @@ export default function TokensPage() {
                 {invites.map((inv) => (
                   <div
                     key={inv.id}
-                    className="flex items-center justify-between p-3 rounded-lg bg-surface-2 border border-border"
+                    className="flex items-center justify-between rounded-control border border-border bg-bg-subtle p-3"
                   >
                     <div>
-                      <span className="font-mono font-bold">{inv.code}</span>
+                      <span className="font-mono font-semibold">{inv.code}</span>
                       <span className="text-xs text-text-muted ml-3">
                         {t("tokensInviteUses", { used: inv.useCount, max: inv.maxUses })}
                       </span>
@@ -552,7 +552,7 @@ export default function TokensPage() {
               {servers.map((server) => (
                 <div
                   key={server.id}
-                  className="flex items-center justify-between p-3 rounded-lg bg-surface-2 border border-border"
+                  className="flex items-center justify-between rounded-control border border-border bg-bg-subtle p-3"
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">

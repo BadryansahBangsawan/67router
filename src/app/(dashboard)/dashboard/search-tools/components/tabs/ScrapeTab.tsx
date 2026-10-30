@@ -125,7 +125,7 @@ export default function ScrapeTab({ configState, onMetrics }: ScrapeTabProps) {
       {/* Loading spinner */}
       {loading && (
         <div className="flex items-center justify-center py-12" data-testid="scrape-loading">
-          <Icon name="progress_activity" size={32} className="text-primary animate-spin" />
+          <Icon name="progress_activity" size={32} className="text-text-muted animate-spin" />
         </div>
       )}
 

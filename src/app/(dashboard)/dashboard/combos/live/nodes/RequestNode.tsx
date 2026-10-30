@@ -24,7 +24,7 @@ export function RequestNode({ data }: NodeProps) {
 
   return (
     <div
-      className="rounded-xl border-2 bg-bg px-4 py-3 min-w-[110px] text-center transition-all duration-200"
+      className="rounded-card border-2 bg-bg px-4 py-3 min-w-[110px] text-center transition-all duration-200"
       style={{
         borderColor: color,
         boxShadow: `0 0 12px ${flowColorAlpha(color, 15)}`,
@@ -37,7 +37,7 @@ export function RequestNode({ data }: NodeProps) {
         className="!bg-transparent !border-0 !w-0 !h-0"
       />
 
-      <div className="text-[10px] font-semibold uppercase tracking-wider mb-1" style={{ color }}>
+      <div className="text-[10px] font-semibold uppercase tracking-[0.04em] mb-1" style={{ color }}>
         Request
       </div>
       <div

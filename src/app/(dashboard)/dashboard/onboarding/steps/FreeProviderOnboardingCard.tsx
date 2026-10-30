@@ -96,7 +96,7 @@ export function FreeProviderOnboardingCard() {
   }
 
   return (
-    <section className="space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
+    <section className="space-y-3 rounded-card border border-border bg-bg-subtle p-4">
       <div>
         <h3 className="text-sm font-semibold text-text-main">{t("title")}</h3>
         <p className="mt-1 text-xs leading-relaxed text-text-muted">{t("description")}</p>

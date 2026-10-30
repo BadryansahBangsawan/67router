@@ -68,29 +68,29 @@ export default function IdempotencyLayer({
         )}
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="p-3 rounded-lg bg-bg-subtle">
-            <div className="text-lg font-semibold tabular-nums">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
+            <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
               {loading ? <Skeleton /> : resolvedDeduplicated}
             </div>
             <div className="text-xs text-text-muted mt-0.5">{t("deduplicatedRequests")}</div>
           </div>
 
-          <div className="p-3 rounded-lg bg-bg-subtle">
-            <div className="text-lg font-semibold tabular-nums">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
+            <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
               {loading ? <Skeleton /> : resolvedWindowMs != null ? resolvedWindowMs : "—"}
             </div>
             <div className="text-xs text-text-muted mt-0.5">{t("dedupWindow")}</div>
           </div>
 
-          <div className="p-3 rounded-lg bg-bg-subtle">
-            <div className="text-lg font-semibold tabular-nums">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
+            <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
               {loading ? <Skeleton /> : resolvedActiveKeys}
             </div>
             <div className="text-xs text-text-muted mt-0.5">{t("activeDedupKeys")}</div>
           </div>
 
-          <div className="p-3 rounded-lg bg-bg-subtle">
-            <div className="text-lg font-semibold tabular-nums">
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
+            <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
               {loading ? <Skeleton /> : resolvedTotalProcessed}
             </div>
             <div className="text-xs text-text-muted mt-0.5">{t("totalProcessed")}</div>
@@ -98,8 +98,10 @@ export default function IdempotencyLayer({
         </div>
 
         {!loading && resolvedSavedCalls > 0 && (
-          <div className="p-3 rounded-lg bg-bg-subtle">
-            <div className="text-lg font-semibold tabular-nums">{resolvedSavedCalls}</div>
+          <div className="rounded-control border border-border bg-bg-subtle p-3">
+            <div className="text-xl font-semibold tracking-[-0.02em] tabular-nums">
+              {resolvedSavedCalls}
+            </div>
             <div className="text-xs text-text-muted mt-0.5">{t("savedCalls")}</div>
           </div>
         )}

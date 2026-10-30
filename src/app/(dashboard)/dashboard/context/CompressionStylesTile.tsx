@@ -40,12 +40,12 @@ export default function CompressionStylesTile() {
   const styles = Object.entries(summary.appliedStyleCounts);
 
   return (
-    <Card padding="sm" data-testid="compression-styles-tile">
-      <p className="text-sm font-medium text-text-main">{t("compressionStylesTileTitle")}</p>
-      <p className="mt-1 text-2xl font-semibold text-text-main">
+    <Card padding="none" className="px-5 py-4" data-testid="compression-styles-tile">
+      <p className="text-[13px] text-text-muted">{t("compressionStylesTileTitle")}</p>
+      <p className="mt-1 text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
         {summary.totalTokensSaved.toLocaleString(locale, { useGrouping: false })}
       </p>
-      <p className="text-xs text-text-muted">
+      <p className="text-[12.5px] text-text-muted">
         {t("compressionStylesTileSummary", {
           tokens: summary.totalTokensSaved,
           runs: summary.runsWithStyles,
@@ -56,7 +56,7 @@ export default function CompressionStylesTile() {
           <span className="text-xs text-text-muted">{t("compressionStylesTileEmpty")}</span>
         ) : (
           styles.map(([id, count]) => (
-            <Badge key={id} size="sm">
+            <Badge key={id} size="sm" className="font-mono">
               {id} · {count}
             </Badge>
           ))

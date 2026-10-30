@@ -587,7 +587,7 @@ export default function DefaultToolCard({
         {canShowGuide() && tool.codeBlock && (
           <div className="mt-2">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-text-muted uppercase tracking-wide">
+              <span className="text-xs text-text-muted uppercase tracking-[0.04em]">
                 {tool.codeBlock.language}
               </span>
               <Button

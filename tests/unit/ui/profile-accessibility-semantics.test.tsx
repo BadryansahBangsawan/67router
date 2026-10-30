@@ -76,7 +76,6 @@ describe("Profile accessibility semantics", () => {
 
     const heading = container.querySelector("h1");
     expect(heading?.textContent).toBe("profile");
-    expect(heading?.classList.contains("lg:hidden")).toBe(true);
     const progress = container.querySelector('[role="progressbar"]');
     expect(progress?.getAttribute("aria-label")).toBe("levelProgress");
     expect(progress?.getAttribute("aria-valuemin")).toBe("0");

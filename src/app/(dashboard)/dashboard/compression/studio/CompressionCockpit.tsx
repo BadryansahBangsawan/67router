@@ -52,7 +52,7 @@ function SpeedButton({
       size="sm"
       onClick={onClick}
       aria-pressed={active}
-      className={`h-6 min-h-6 px-2 text-[11px] ${active ? "text-primary" : "text-text-muted"}`}
+      className={`h-6 min-h-6 px-2 text-[11px] ${active ? "bg-bg-subtle font-medium text-text-main" : "text-text-muted"}`}
     >
       {s}×
     </Button>
@@ -79,7 +79,7 @@ function ViewButton({
       onClick={onClick}
       data-testid={testId}
       aria-pressed={active}
-      className={`h-6 min-h-6 px-2 text-[11px] ${active ? "text-primary" : "text-text-muted"}`}
+      className={`h-6 min-h-6 px-2 text-[11px] ${active ? "bg-bg-subtle font-medium text-text-main" : "text-text-muted"}`}
     >
       {label}
     </Button>
@@ -172,12 +172,12 @@ export function CompressionCockpit({ run: runProp }: CompressionCockpitProps) {
   return (
     <div className="flex flex-col h-full gap-2" data-testid="compression-cockpit">
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <div className="flex items-center gap-3 px-3 py-2 rounded-lg border border-border bg-bg/60 shrink-0">
-        <span className="text-xs font-semibold text-text-muted uppercase tracking-wide">
+      <div className="flex items-center gap-3 px-3 py-2 rounded-card border border-border bg-surface shrink-0">
+        <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
           {run.mode}
         </span>
         {run.comboId && (
-          <span className="text-xs text-text-muted px-1.5 py-0.5 rounded bg-border/40 font-mono">
+          <span className="rounded-[5px] border border-border bg-bg-subtle px-1.5 py-px font-mono text-xs text-text-muted">
             {run.comboId}
           </span>
         )}
@@ -214,11 +214,14 @@ export function CompressionCockpit({ run: runProp }: CompressionCockpitProps) {
           <span className="text-[11px] text-text-muted">
             {fmt(run.originalTokens)} → {fmt(run.compressedTokens)} {t("tokenShort")}
           </span>
-          <span className="text-xs font-bold" style={{ color: "var(--orch-status-success)" }}>
+          <span
+            className="text-xs font-semibold tabular-nums"
+            style={{ color: "var(--orch-status-success)" }}
+          >
             −{run.savingsPercent.toFixed(1)}%
           </span>
           {isComplete && view === "canvas" && (
-            <span className="text-[10px] px-1.5 py-0.5 rounded border border-border text-text-muted">
+            <span className="rounded-[5px] border border-border px-1.5 py-px text-[10px] text-text-muted">
               {t("replayDone")}
             </span>
           )}
@@ -227,11 +230,11 @@ export function CompressionCockpit({ run: runProp }: CompressionCockpitProps) {
 
       {/* ── Body: Canvas (A2) or Waterfall (A1) ──────────────────────────── */}
       {view === "waterfall" ? (
-        <div className="flex-1 min-h-0 overflow-auto rounded-lg border border-border bg-bg/60 p-3">
+        <div className="flex-1 min-h-0 overflow-auto rounded-card border border-border bg-surface p-3">
           <WaterfallInspector run={run} />
         </div>
       ) : (
-        <div className="flex-1 min-h-0 rounded-lg overflow-hidden border border-border">
+        <div className="flex-1 min-h-0 overflow-hidden rounded-card border border-border">
           <FlowCanvas
             nodes={nodes}
             edges={edges}
@@ -244,7 +247,7 @@ export function CompressionCockpit({ run: runProp }: CompressionCockpitProps) {
 
       {/* ── Replay controls (canvas only — the waterfall is static) ──────── */}
       {view === "canvas" && (
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-bg/60 shrink-0">
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-card border border-border bg-surface shrink-0">
           <Button
             variant="outline"
             size="sm"

@@ -39,8 +39,8 @@ function LinkCard({ label, url, icon, prompt }: LinkCardProps): JSX.Element {
 
   return (
     <div className="flex-1 flex items-start gap-3 rounded-lg border border-border bg-bg-subtle p-3 min-w-0">
-      <div className="flex items-center justify-center size-8 rounded-lg bg-primary/10 shrink-0">
-        <Icon name={icon} size={16} className="text-primary" />
+      <div className="flex items-center justify-center size-8 rounded-control border border-border bg-surface shrink-0">
+        <Icon name={icon} size={16} className="text-text-muted" />
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-1 mb-1">

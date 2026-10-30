@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Alert } from "@omniroute/ui-kit/alert";
+import { KpiCell, KpiStrip } from "../../_r67/KpiStrip";
 import { PageHeader, SectionHeader } from "@omniroute/ui-kit/page-header";
 import { Collapsible, SegmentedControl } from "@/shared/components";
 import Button from "@/shared/components/Button";
@@ -435,7 +436,7 @@ export default function RtkContextPageClient() {
         compact
         title={
           <span className="flex items-center gap-3">
-            <Icon name="filter_alt" size={30} className="text-primary" />
+            <Icon name="filter_alt" size={24} className="text-text-muted" />
             {t("title")}
           </span>
         }
@@ -453,14 +454,11 @@ export default function RtkContextPageClient() {
         }
       />
 
-      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <KpiStrip columns={4} aria-label={t("title")}>
         {statCards.map(([label, value]) => (
-          <Card key={label} padding="sm">
-            <p className="text-xs uppercase text-text-muted">{label}</p>
-            <p className="mt-1 text-xl font-semibold text-text-main">{value}</p>
-          </Card>
+          <KpiCell key={label} label={label} value={value} />
         ))}
-      </section>
+      </KpiStrip>
 
       {masterEnabled === false && (
         <Alert
@@ -571,7 +569,7 @@ export default function RtkContextPageClient() {
                 {Math.round(preview.detection.confidence * 100)}%)
               </p>
             )}
-            <pre className="h-72 overflow-auto rounded-lg border border-border bg-bg p-3 text-xs text-text-main">
+            <pre className="h-72 overflow-auto rounded-control border border-border bg-bg-subtle p-3 font-mono text-xs leading-5 text-text-main">
               {preview ? JSON.stringify(preview, null, 2) : t("previewEmpty")}
             </pre>
           </Card>
@@ -591,7 +589,7 @@ export default function RtkContextPageClient() {
       >
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           {Object.entries(groupedFilters).map(([category, items]) => (
-            <div key={category} className="rounded-lg border border-border bg-bg p-3">
+            <div key={category} className="rounded-card border border-border bg-surface p-3">
               <h3 className="text-xs font-semibold capitalize text-text-main">{category}</h3>
               <div className="mt-2 space-y-2">
                 {items.map((filter) => {
