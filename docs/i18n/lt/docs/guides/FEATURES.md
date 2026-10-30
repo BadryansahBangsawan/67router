@@ -107,12 +107,6 @@ Keturi API vertimų derinimo režimai: **Bandomoji aplinka** (formatų keitiklis
 
 ---
 
-## 🎮 Modelių bandomoji aplinka _(v2.0.9+)_
-
-Išbandykite bet kurį modelį tiesiogiai valdymo skydelyje. Pasirinkite teikėją, modelį ir galinį tašką, kurkite užklausas naudodami Monaco Editor, gaukite atsakymų srautą realiuoju laiku, nutraukite jį vykdymo metu ir peržiūrėkite laiko metrikas.
-
----
-
 ## 🎨 Temos _(v2.0.5+)_
 
 Tinkinamos viso valdymo skydelio spalvų temos. Pasirinkite iš 7 iš anksto nustatytų spalvų (koralinės, mėlynos, raudonos, žalios, violetinės, oranžinės, žydros) arba sukurkite pasirinktinę temą nurodydami bet kurią šešioliktainę spalvą. Palaikomi šviesus, tamsus ir sistemos režimai.

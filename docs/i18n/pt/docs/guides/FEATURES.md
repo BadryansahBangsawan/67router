@@ -107,12 +107,6 @@ Quatro modos para depurar traduções da API: **Área de Testes** (conversor de 
 
 ---
 
-## 🎮 Área de Testes de Modelos _(v2.0.9+)_
-
-Teste qualquer modelo diretamente a partir do painel. Selecione o fornecedor, o modelo e o endpoint, escreva instruções com o Monaco Editor, receba respostas em fluxo contínuo em tempo real, interrompa-as a meio e consulte métricas de tempo.
-
----
-
 ## 🎨 Temas _(v2.0.5+)_
 
 Temas de cores personalizáveis para todo o painel. Escolha entre 7 cores predefinidas (Coral, Azul, Vermelho, Verde, Violeta, Laranja, Ciano) ou crie um tema personalizado ao selecionar qualquer cor hexadecimal. Suporta os modos claro, escuro e do sistema.

@@ -41,7 +41,6 @@ const PATH_LABELS = {
   console: "console",
   logger: "logger",
   translator: "translator",
-  playground: "playground",
   add: "add",
   edit: "edit",
   keys: "apiKeys",

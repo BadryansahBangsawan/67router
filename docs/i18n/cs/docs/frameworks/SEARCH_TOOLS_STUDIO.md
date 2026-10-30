@@ -169,5 +169,4 @@ Soubor `src/app/api/search/providers/route.ts` byl rozšířen tak, aby:
 - Hlavní plán: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plán funkce: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registr poskytovatelů vyhledávání: `open-sse/config/searchRegistry.ts`
-- Playground Studio (sdílené `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend pro načítání webu: `src/app/api/v1/web/fetch/route.ts`

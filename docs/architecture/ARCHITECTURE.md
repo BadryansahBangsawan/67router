@@ -133,7 +133,6 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/skills` — A2A skill registry, sandbox execution, built-in skill catalog
 - `/dashboard/memory` — persistent conversational memory inspection and retrieval
 - `/dashboard/cache` — read-through and reasoning cache statistics, eviction controls
-- `/dashboard/playground` — interactive chat playground against any configured combo/model
 - `/dashboard/changelog` — in-app changelog viewer (renders `CHANGELOG.md`)
 - `/dashboard/system` — runtime diagnostics, version info, environment validation surface
 - `/dashboard/onboarding` — first-run setup wizard for new installations

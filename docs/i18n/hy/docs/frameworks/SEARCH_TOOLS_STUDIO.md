@@ -169,5 +169,4 @@ API բանալու տեղապահը միշտ `$OMNIROUTE_API_KEY` է (D11, ըն�
 - Հիմնական պլան՝ `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Գործառույթի պլան՝ `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Որոնման մատակարարների գրանցամատյան՝ `open-sse/config/searchRegistry.ts`
-- Playground Studio (ընդհանուր `ExportCodeModal` + `codeExport.ts`)՝ `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Վեբ ներբեռնման հետնամաս՝ `src/app/api/v1/web/fetch/route.ts`

@@ -168,5 +168,4 @@ API ਕੁੰਜੀ ਲਈ ਪਲੇਸਹੋਲਡਰ ਹਮੇਸ਼ਾ `$OMNI
 - ਮੁੱਖ ਯੋਜਨਾ: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ਫੀਚਰ ਯੋਜਨਾ: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - ਖੋਜ ਪ੍ਰਦਾਤਾ ਰਜਿਸਟਰੀ: `open-sse/config/searchRegistry.ts`
-- Playground Studio (ਸਾਂਝੇ `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch ਬੈਕਐਂਡ: `src/app/api/v1/web/fetch/route.ts`

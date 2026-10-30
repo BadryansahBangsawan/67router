@@ -106,12 +106,6 @@ API tərcümələrini sazlamaq üçün dörd rejim: **Sınaq Mühiti** (format �
 
 ---
 
-## 🎮 Model Sınaq Mühiti _(v2.0.9+)_
-
-İstənilən modeli birbaşa idarəetmə panelindən sınaqdan keçirin. Provayderi, modeli və son nöqtəni seçin, Monaco Editor ilə sorğular yazın, cavabları real vaxtda axın şəklində alın, axını yarıda dayandırın və vaxt göstəricilərinə baxın.
-
----
-
 ## 🎨 Mövzular _(v2.0.5+)_
 
 Bütün idarəetmə paneli üçün fərdiləşdirilə bilən rəng mövzuları. 7 hazır rəngdən (Mərcan, Mavi, Qırmızı, Yaşıl, Bənövşəyi, Narıncı, Firuzəyi) birini seçin və ya istənilən hex rəngi seçərək fərdi mövzu yaradın. Açıq, tünd və sistem rejimlərini dəstəkləyir.

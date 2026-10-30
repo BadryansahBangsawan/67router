@@ -107,12 +107,6 @@ Nlekota ozugbo: uptime, memory, version, percentile latency (p50/p95/p99), ọn�
 
 ---
 
-## 🎮 Ebe Nnwale Model _(v2.0.9+)_
-
-Nwalee model ọ bụla ozugbo site na dashboard. Họrọ provider, model, na endpoint, jiri Monaco Editor dee prompts, nata nzaghachi n'iyi ozugbo, kwụsị ya mgbe ọ ka na-aga, ma lelee metrik oge.
-
----
-
 ## 🎨 Gịm _(v2.0.5+)_
 
 Gịm agba a na-ahazi maka dashboard niile. Họrọ n'ime agba 7 a kwadebere (Coral, Blue, Red, Green, Violet, Orange, Cyan) ma ọ bụ mepụta gịm nke gị site n'ịhọrọ agba hex ọ bụla. Ọ na-akwado ọnọdụ ìhè, ọchịchịrị, na nke sistemụ.

@@ -169,5 +169,4 @@ API कुंजी का प्लेसहोल्डर हमेशा `$O
 - मास्टर प्लान: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - फ़ीचर प्लान: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - खोज प्रदाता रजिस्ट्री: `open-sse/config/searchRegistry.ts`
-- Playground Studio (साझा `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - वेब फ़ेच बैकएंड: `src/app/api/v1/web/fetch/route.ts`

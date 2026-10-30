@@ -107,12 +107,6 @@ Quattro modalità per il debug delle traduzioni API: **Playground** (convertitor
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testa qualsiasi modello direttamente dalla dashboard. Seleziona provider, modello ed endpoint, scrivi i prompt con Monaco Editor, visualizza le risposte in streaming in tempo reale, interrompi lo streaming in corso e consulta le metriche relative ai tempi.
-
----
-
 ## 🎨 Temi _(v2.0.5+)_
 
 Temi cromatici personalizzabili per l'intera dashboard. Scegli tra 7 colori predefiniti (corallo, blu, rosso, verde, viola, arancione, ciano) oppure crea un tema personalizzato selezionando un qualsiasi colore esadecimale. Supporta le modalità chiara, scura e di sistema.

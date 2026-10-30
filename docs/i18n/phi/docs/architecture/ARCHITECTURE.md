@@ -134,7 +134,6 @@ Mga pangunahing page sa ilalim ng `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — mga outbound webhook subscription, pag-rotate ng secret, mga istatistika ng retry
 - `/dashboard/batch` — pagsusumite ng batch job at progreso
 - `/dashboard/cache` — mga istatistika ng read-through at reasoning cache, mga kontrol sa eviction
-- `/dashboard/playground` — interactive na chat playground para sa anumang naka-configure na combo/modelo
 - `/dashboard/changelog` — viewer ng changelog sa loob ng app (nire-render ang `CHANGELOG.md`)
 - `/dashboard/system` — mga diagnostic ng runtime, impormasyon ng bersyon, surface para sa validation ng environment
 - `/dashboard/onboarding` — wizard para sa unang setup ng mga bagong installation

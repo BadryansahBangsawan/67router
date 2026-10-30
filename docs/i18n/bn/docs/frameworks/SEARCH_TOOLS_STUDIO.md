@@ -169,5 +169,4 @@ API কী প্লেসহোল্ডার সর্বদা `$OMNIROUTE_A
 - মাস্টার প্ল্যান: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ফিচার প্ল্যান: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Search provider রেজিস্ট্রি: `open-sse/config/searchRegistry.ts`
-- Playground Studio (শেয়ার করা `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch ব্যাকএন্ড: `src/app/api/v1/web/fetch/route.ts`

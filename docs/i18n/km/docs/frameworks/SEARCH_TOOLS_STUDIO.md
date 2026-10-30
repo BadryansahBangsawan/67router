@@ -169,5 +169,4 @@ snippet សម្រាប់ curl / Python / TypeScript សម្រាប់�
 - ផែនការមេ៖ `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ផែនការមុខងារ៖ `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - បញ្ជីចុះឈ្មោះអ្នកផ្តល់សេវាស្វែងរក៖ `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` ដែលប្រើរួមគ្នា)៖ `docs/frameworks/PLAYGROUND_STUDIO.md`
 - កម្មវិធីផ្នែកខាងក្រោយសម្រាប់ទាញយកពីវេប៖ `src/app/api/v1/web/fetch/route.ts`

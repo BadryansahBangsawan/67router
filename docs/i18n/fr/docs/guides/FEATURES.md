@@ -107,12 +107,6 @@ Quatre modes pour déboguer les traductions de l’API : **Playground** (convert
 
 ---
 
-## 🎮 Espace de test des modèles _(v2.0.9+)_
-
-Testez n’importe quel modèle directement depuis le tableau de bord. Sélectionnez le fournisseur, le modèle et le point de terminaison, rédigez des invites avec Monaco Editor, diffusez les réponses en temps réel, interrompez la diffusion en cours et consultez les métriques de temps.
-
----
-
 ## 🎨 Thèmes _(v2.0.5+)_
 
 Thèmes de couleurs personnalisables pour l’ensemble du tableau de bord. Choisissez parmi 7 couleurs prédéfinies (corail, bleu, rouge, vert, violet, orange, cyan) ou créez un thème personnalisé en sélectionnant n’importe quelle couleur hexadécimale. Prend en charge les modes clair, sombre et système.

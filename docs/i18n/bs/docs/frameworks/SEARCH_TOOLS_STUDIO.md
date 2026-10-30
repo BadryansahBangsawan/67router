@@ -170,5 +170,4 @@ Za ovu funkcionalnost bila je potrebna samo jedna promjena na backendu:
 - Glavni plan (Master plan): `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plan funkcije (Feature plan): `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registar provajdera pretrage: `open-sse/config/searchRegistry.ts`
-- Playground Studio (dijeljeni `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch pozadinski sistem (backend): `src/app/api/v1/web/fetch/route.ts`

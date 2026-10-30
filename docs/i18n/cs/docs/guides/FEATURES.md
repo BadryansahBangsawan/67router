@@ -107,12 +107,6 @@ Monitorování v reálném čase: doba provozu, paměť, verze, percentily laten
 
 ---
 
-## 🎮 Hřiště modelů _(v2.0.9+)_
-
-Testujte libovolný model přímo z řídicího panelu. Vyberte poskytovatele, model a koncový bod, pište prompty v editoru Monaco, streamujte odpovědi v reálném čase, přerušujte je v průběhu streamování a zobrazujte metriky časování.
-
----
-
 ## 🎨 Motivy _(v2.0.5+)_
 
 Přizpůsobitelné barevné motivy pro celý řídicí panel. Vyberte si ze 7 přednastavených barev (korálová, modrá, červená, zelená, fialová, oranžová, azurová) nebo vytvořte vlastní motiv výběrem libovolné barvy ve formátu hex. Podporuje světlý, tmavý a systémový režim.

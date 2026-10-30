@@ -167,5 +167,4 @@ API key placeholder သည် အမြဲတမ်း `$OMNIROUTE_API_KEY` ဖ�
 - မူလအစီအစဉ်: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - လုပ်ဆောင်ချက်အစီအစဉ်: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Search provider registry: `open-sse/config/searchRegistry.ts`
-- Playground Studio (မျှဝေသုံးစွဲသည့် `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch backend: `src/app/api/v1/web/fetch/route.ts`

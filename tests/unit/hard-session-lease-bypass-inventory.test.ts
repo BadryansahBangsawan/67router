@@ -178,7 +178,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     "src/app/api/oauth/kiro/auto-import/route.ts": 2,
     "src/app/api/oauth/kiro/import/route.ts": 1,
     "src/app/api/oauth/kiro/social-exchange/route.ts": 1,
-    "src/app/api/playground/simulate-route/route.ts": 1,
     "src/app/api/provider-nodes/[id]/route.ts": 1,
     "src/app/api/providers/[id]/chatgpt-web-codex-doctor/route.ts": 1,
     "src/app/api/providers/[id]/refresh-token/route.ts": 1,

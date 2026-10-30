@@ -169,5 +169,4 @@ A fẹ̀ `src/app/api/search/providers/route.ts` sí i láti:
 - Ètò àgbà: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Ètò ẹ̀yà: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Àkọsílẹ̀ àwọn olùpèsè ìṣàwárí: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` tí wọ́n pín lò): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Ẹ̀yìn-ètò ìgbàjáde wẹ́ẹ̀bù: `src/app/api/v1/web/fetch/route.ts`

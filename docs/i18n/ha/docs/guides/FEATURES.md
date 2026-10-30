@@ -107,12 +107,6 @@ Hanyoyi huɗu don gano matsalolin fassarar API: **Filin Gwaji** (mai sauya tsari
 
 ---
 
-## 🎮 Filin Gwajin Samfuri _(v2.0.9+)_
-
-Gwada kowane samfuri kai-tsaye daga dashboard. Zaɓi mai bayarwa, samfuri, da endpoint, rubuta prompts da Monaco Editor, watsa amsoshi a ainihin lokaci, dakatar a tsakiyar watsawa, sannan duba ma'aunin lokuta.
-
----
-
 ## 🎨 Jigogi _(v2.0.5+)_
 
 Jigogin launi da za a iya keɓancewa ga dukkan dashboard. Zaɓi daga launuka 7 da aka riga aka saita (Murjani, Shuɗi, Ja, Kore, Shunayya, Lemu, Cyan) ko ƙirƙiri jigo na musamman ta zaɓar kowane launin hex. Yana goyon bayan yanayin haske, duhu, da na tsarin kwamfuta.

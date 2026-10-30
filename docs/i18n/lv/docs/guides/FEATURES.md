@@ -109,12 +109,6 @@ Reāllaika uzraudzība: darbspējas laiks, atmiņa, versija, latentuma procentil
 
 ---
 
-## 🎮 Modeļu izmēģinājuma vide _(v2.0.9+)_
-
-Testējiet jebkuru modeli tieši vadības panelī. Atlasiet nodrošinātāju, modeli un galapunktu, rakstiet uzvednes ar Monaco Editor, straumējiet atbildes reāllaikā, pārtrauciet straumi tās laikā un skatiet laika mērījumus.
-
----
-
 ## 🎨 Motīvi _(v2.0.5+)_
 
 Pielāgojami krāsu motīvi visam vadības panelim. Izvēlieties kādu no 7 iepriekš iestatītām krāsām (Coral, Blue, Red, Green, Violet, Orange, Cyan) vai izveidojiet pielāgotu motīvu, izvēloties jebkuru heksadecimālo krāsu. Tiek atbalstīti gaišais, tumšais un sistēmas režīms.

@@ -107,12 +107,6 @@
 
 ---
 
-## 🎮 Pápá Ìdánwò Módẹ́lì _(v2.0.9+)_
-
-Ṣe ìdánwò módẹ́lì èyíkéyìí ní tààrà láti ojú ìdarí. Yan olùpèsè, módẹ́lì, àti endpoint, kọ àwọn prompt pẹ̀lú Monaco Editor, gba àwọn ìdáhùn tí ń ṣàn ní àkókò gidi, dá a dúró láàárín ìṣàn, kí o sì wo àwọn ìwọ̀n àkókò.
-
----
-
 ## 🎨 Àwọn Àkòrí Àwọ̀ _(v2.0.5+)_
 
 Àwọn àkòrí àwọ̀ tí a lè ṣàtúnṣe fún gbogbo ojú ìdarí. Yan lára àwọn àwọ̀ àtòjọ 7 (Coral, Blue, Red, Green, Violet, Orange, Cyan) tàbí ṣẹ̀dá àkòrí àwọ̀ àdáni nípa yíyan àwọ̀ hex èyíkéyìí. Ó ṣe àtìlẹ́yìn fún ìpo ìmọ́lẹ̀, òkùnkùn, àti ti ẹ̀rọ.

@@ -169,5 +169,4 @@ curl / Python / TypeScript را برای فراخوانیهای `/v1/search` و 
 - طرح جامع: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - طرح ویژگی: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - رجیستری ارائهدهنده جستجو: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` مشترک + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - بکاند واکشی وب: `src/app/api/v1/web/fetch/route.ts`

@@ -143,7 +143,6 @@ v3.8.0 平台的权威版本控制 Mermaid 源文件位于
 - `/dashboard/webhooks` — 出站 Webhook 订阅、密钥轮换、重试统计
 - `/dashboard/batch` — 批量任务提交和进度
 - `/dashboard/cache` — 读穿式缓存和推理缓存统计、淘汰控制
-- `/dashboard/playground` — 针对任意配置 Combo/模型的交互式对话演练
 - `/dashboard/changelog` — 应用内更新日志查看器（渲染 `CHANGELOG.md`）
 - `/dashboard/system` — 运行时诊断、版本信息、环境校验界面
 - `/dashboard/onboarding` — 新装首次运行设置向导

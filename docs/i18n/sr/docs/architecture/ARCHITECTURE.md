@@ -134,7 +134,6 @@ OmniRoute је локални мрежни пролаз за усмеравањ�
 - `/dashboard/webhooks` — исходне webhook претплате, ротација тајних кључева, статистика поновних покушаја
 - `/dashboard/batch` — слање batch послова и праћење напретка
 - `/dashboard/cache` — статистике read-through и reasoning cache-a, контроле избацивања (eviction)
-- `/dashboard/playground` — интерактивни чет playground против било којег конфигурисаног combo/модела
 - `/dashboard/changelog` — приказивач changelog-а у апликацији (рендерује `CHANGELOG.md`)
 - `/dashboard/system` — runtime дијагностика, информације о верзији, површина за валидацију окружења
 - `/dashboard/onboarding` — чаробњак почетног подешавања за нове инсталације

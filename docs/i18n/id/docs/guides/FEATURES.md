@@ -107,12 +107,6 @@ Empat mode untuk men-debug terjemahan API: **Playground** (konverter format), **
 
 ---
 
-## 🎮 Playground Model _(v2.0.9+)_
-
-Uji model apa pun secara langsung dari dasbor. Pilih penyedia, model, dan endpoint, tulis prompt dengan Monaco Editor, stream respons secara waktu nyata, hentikan di tengah stream, dan lihat metrik waktu.
-
----
-
 ## 🎨 Tema _(v2.0.5+)_
 
 Tema warna yang dapat disesuaikan untuk seluruh dasbor. Pilih dari 7 warna prasetel (Koral, Biru, Merah, Hijau, Violet, Oranye, Sian) atau buat tema khusus dengan memilih warna hex apa pun. Mendukung mode terang, gelap, dan sistem.

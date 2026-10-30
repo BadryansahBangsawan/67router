@@ -107,12 +107,6 @@ Fire moduser for feilsøking av API-oversettelser: **Sandkasse** (formatkonverte
 
 ---
 
-## 🎮 Modell-sandkasse _(v2.0.9+)_
-
-Test en hvilken som helst modell direkte fra kontrollpanelet. Velg leverandør, modell og endepunkt, skriv ledetekster med Monaco Editor, strøm svar i sanntid, avbryt underveis og se tidsmålinger.
-
----
-
 ## 🎨 Temaer _(v2.0.5+)_
 
 Tilpassbare fargetemaer for hele kontrollpanelet. Velg blant 7 forhåndsinnstilte farger (korall, blå, rød, grønn, fiolett, oransje, cyan), eller opprett et egendefinert tema ved å velge en hvilken som helst heksadesimal farge. Støtter lys, mørk og systemstyrt modus.

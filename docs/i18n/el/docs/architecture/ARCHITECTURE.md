@@ -134,7 +134,6 @@ _Τελευταία ενημέρωση: 2026-06-28_
 - `/dashboard/webhooks` — εξερχόμενες συνδρομές webhook, εναλλαγή secret, στατιστικά επανάληψης
 - `/dashboard/batch` — υποβολή μαζικής εργασίας και πρόοδος
 - `/dashboard/cache` — στατιστικά read-through και cache συλλογισμού, έλεγχοι εκκαθάρισης
-- `/dashboard/playground` — διαδραστικό playground συνομιλίας έναντι οποιουδήποτε διαμορφωμένου combo/μοντέλου
 - `/dashboard/changelog` — πρόγραμμα προβολής changelog εντός εφαρμογής (αποδίδει το `CHANGELOG.md`)
 - `/dashboard/system` — διαγνωστικά runtime, πληροφορίες έκδοσης, επιφάνεια επαλήθευσης περιβάλλοντος
 - `/dashboard/onboarding` — οδηγός πρώτης εγκατάστασης για νέες εγκαταστάσεις

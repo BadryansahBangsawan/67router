@@ -106,12 +106,6 @@ API tarjimalarini nosozliklardan tozalash uchun toʻrtta rejim: **Sinov maydonch
 
 ---
 
-## 🎮 Model sinov maydonchasi _(v2.0.9+)_
-
-Istalgan modelni bevosita boshqaruv panelidan sinab koʻring. Provayder, model va endpointni tanlang, Monaco Editor yordamida promptlar yozing, javoblarni real vaqtda oqim tarzida oling, oqimni jarayon davomida bekor qiling va vaqt koʻrsatkichlarini koʻring.
-
----
-
 ## 🎨 Mavzular _(v2.0.5+)_
 
 Butun boshqaruv paneli uchun moslashtiriladigan rang mavzulari. 7 ta tayyor rangdan (marjon, koʻk, qizil, yashil, binafsha, toʻq sariq, havorang) birini tanlang yoki istalgan hex rangni tanlab, maxsus mavzu yarating. Yorugʻ, qorongʻi va tizim rejimlarini qoʻllab-quvvatlaydi.

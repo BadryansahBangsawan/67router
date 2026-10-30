@@ -107,12 +107,6 @@ Empat mod untuk menyahpepijat terjemahan API: **Ruang Uji** (penukar format), **
 
 ---
 
-## 🎮 Ruang Uji Model _(v2.0.9+)_
-
-Uji mana-mana model secara terus daripada papan pemuka. Pilih penyedia, model dan titik akhir, tulis gesaan dengan Monaco Editor, strim respons dalam masa nyata, hentikan di pertengahan strim dan lihat metrik pemasaan.
-
----
-
 ## 🎨 Tema _(v2.0.5+)_
 
 Tema warna yang boleh disesuaikan untuk keseluruhan papan pemuka. Pilih daripada 7 warna pratetap (Karang, Biru, Merah, Hijau, Ungu, Jingga, Sian) atau cipta tema tersuai dengan memilih sebarang warna heksadesimal. Menyokong mod cerah, gelap dan sistem.

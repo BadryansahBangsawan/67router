@@ -106,12 +106,6 @@ Neli režiimi API tõlgete silumiseks: **Mängu ala** (vormingu teisendaja), **V
 
 ---
 
-## 🎮 Mudeli mängu ala _(v2.0.9+)_
-
-Testi otse töölaualt mis tahes mudelit. Vali pakkuja, mudel ja lõpp-punkt, kirjuta viibaid Monaco Editoriga, voogesita vastuseid reaalajas, katkesta voog keskel ning vaata ajastuse mõõdikuid.
-
----
-
 ## 🎨 Teemad _(v2.0.5+)_
 
 Kohandatavad värviteemad kogu töölauale. Vali 7 eelseadistatud värvi seast (Coral, Blue, Red, Green, Violet, Orange, Cyan) või loo kohandatud teema, valides suvalise heksavärvi. Toetab heledat, tumedat ja süsteemi režiimi.

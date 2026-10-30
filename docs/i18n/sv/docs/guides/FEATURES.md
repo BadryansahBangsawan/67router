@@ -107,12 +107,6 @@ Fyra lägen för felsökning av API-översättningar: **Playground** (formatkonv
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testa valfri modell direkt från kontrollpanelen. Välj leverantör, modell och endpoint, skriv prompter med Monaco Editor, strömma svar i realtid, avbryt mitt i strömningen och visa tidsmätvärden.
-
----
-
 ## 🎨 Teman _(v2.0.5+)_
 
 Anpassningsbara färgteman för hela kontrollpanelen. Välj bland 7 förinställda färger (korall, blå, röd, grön, violett, orange, cyan) eller skapa ett eget tema genom att välja valfri hex-färg. Stöder ljust, mörkt och systemanpassat läge.

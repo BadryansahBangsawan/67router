@@ -134,7 +134,6 @@ Hauptseiten unter `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — ausgehende Webhook-Abonnements, Rotation geheimer Schlüssel und Wiederholungsstatistiken
 - `/dashboard/batch` — Übermittlung von Batch-Aufträgen und Fortschrittsanzeige
 - `/dashboard/cache` — Statistiken zu Read-Through- und Reasoning-Caches sowie Steuerung der Cache-Bereinigung
-- `/dashboard/playground` — interaktiver Chat-Playground für beliebige konfigurierte Combos/Modelle
 - `/dashboard/changelog` — integrierte Änderungsprotokoll-Ansicht (rendert `CHANGELOG.md`)
 - `/dashboard/system` — Laufzeitdiagnose, Versionsinformationen und Oberfläche zur Umgebungsvalidierung
 - `/dashboard/onboarding` — Assistent zur Ersteinrichtung für neue Installationen

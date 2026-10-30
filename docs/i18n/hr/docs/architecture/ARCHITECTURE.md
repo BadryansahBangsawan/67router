@@ -136,7 +136,6 @@ Glavne stranice pod `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — pretplate na odlazne webhookove, rotacija tajni, statistika ponovnih pokušaja
 - `/dashboard/batch` — slanje batch poslova i praćenje napretka
 - `/dashboard/cache` — statistika read-through i reasoning cachea, kontrole izbacivanja
-- `/dashboard/playground` — interaktivni chat playground protiv bilo kojeg konfiguriranog combo/modela
 - `/dashboard/changelog` — preglednik changeloga unutar aplikacije (prikazuje `CHANGELOG.md`)
 - `/dashboard/system` — dijagnostika runtimea, informacije o verziji, površina za validaciju okoline
 - `/dashboard/onboarding` — čarobnjak za prvo postavljanje kod nove instalacije

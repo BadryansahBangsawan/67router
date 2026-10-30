@@ -107,12 +107,6 @@ Spremljanje v realnem času: čas delovanja, pomnilnik, različica, percentili z
 
 ---
 
-## 🎮 Preizkusno okolje modelov _(v2.0.9+)_
-
-Preizkusite kateri koli model neposredno na nadzorni plošči. Izberite ponudnika, model in končno točko, napišite pozive z urejevalnikom Monaco Editor, pretakajte odgovore v realnem času, prekinite jih med pretakanjem in si oglejte časovne metrike.
-
----
-
 ## 🎨 Teme _(v2.0.5+)_
 
 Prilagodljive barvne teme za celotno nadzorno ploščo. Izbirate lahko med 7 prednastavljenimi barvami (koralna, modra, rdeča, zelena, vijolična, oranžna, sinja) ali ustvarite temo po meri tako, da izberete katero koli šestnajstiško barvo. Podprti so svetli, temni in sistemski način.

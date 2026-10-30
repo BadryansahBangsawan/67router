@@ -96,7 +96,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "context-rtk": "contextRtkDescription",
   "context-combos": "contextCombosDescription",
   translator: "translatorDescription",
-  playground: "playgroundDescription",
   "search-tools": "searchToolsDescription",
   logs: "logsDescription",
   audit: "auditDescription",

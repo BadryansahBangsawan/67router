@@ -104,12 +104,6 @@ Ceithre mhodh chun aistriúcháin API a dhífhabhtú: **Clósúchán** (tiontair
 
 ---
 
-## 🎮 Clósúchán Múnla _(v2.0.9+)_
-
-Tástáil aon mhúnla go díreach ón deais. Roghnaigh soláthraí, múnla, agus críochphointe, scríobh leideanna le hEagarthóir Monaco, sruthaigh freagraí i bhfíor-am, cuir deireadh le sruth leathbhealaigh, agus féach ar mhéadracht ama.
-
----
-
 ## 🎨 Téamaí _(v2.0.5+)_
 
 Téamaí datha inoiriúnaithe don deais iomlán. Roghnaigh as 7 ndath réamhshocraithe (Córal, Gorm, Dearg, Glas, Corcra, Oráiste, Cian) nó cruthaigh téama saincheaptha trí aon dath heicsidheachúlach a roghnú. Tacaíonn sé le mód éadrom, dorcha, agus córais.

@@ -114,9 +114,9 @@ all keys are currently in cooldown.
 
 ## Export Code
 
-`ExportCodeModal` (imported from Playground Studio) + `codeExport.ts` generate
+`ExportCodeModal` (`src/shared/components/`) + `src/lib/codeExport.ts` generate
 curl / Python / TypeScript snippets for both `/v1/search` and `/v1/web/fetch` calls.
-API key placeholder is always `$OMNIROUTE_API_KEY` (D11, shared with Playground Studio).
+API key placeholder is always `$OMNIROUTE_API_KEY` (D11).
 
 ---
 
@@ -171,5 +171,4 @@ Only one backend change was needed for this feature:
 - Master plan: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Feature plan: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Search provider registry: `open-sse/config/searchRegistry.ts`
-- Playground Studio (shared `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch backend: `src/app/api/v1/web/fetch/route.ts`

@@ -134,7 +134,6 @@ OmniRoute គឺជា gateway សម្រាប់បញ្ជូនសំណ�
 - `/dashboard/webhooks` — ការជាវ webhook ចេញ, ការប្តូរ secret និងស្ថិតិនៃការព្យាយាមឡើងវិញ
 - `/dashboard/batch` — ការដាក់ស្នើ batch job និងវឌ្ឍនភាព
 - `/dashboard/cache` — ស្ថិតិ read-through cache និង reasoning cache ព្រមទាំងការគ្រប់គ្រង eviction
-- `/dashboard/playground` — កន្លែងសាកល្បង chat អន្តរកម្មជាមួយ combo/model ណាមួយដែលបានកំណត់រចនាសម្ព័ន្ធ
 - `/dashboard/changelog` — កម្មវិធីមើល changelog ក្នុងកម្មវិធី (បង្ហាញ `CHANGELOG.md`)
 - `/dashboard/system` — ការវិនិច្ឆ័យ runtime, ព័ត៌មានកំណែ និងផ្ទៃសម្រាប់ផ្ទៀងផ្ទាត់ environment
 - `/dashboard/onboarding` — អ្នកជំនួយការរៀបចំនៅពេលដំណើរការលើកដំបូង សម្រាប់ការដំឡើងថ្មី

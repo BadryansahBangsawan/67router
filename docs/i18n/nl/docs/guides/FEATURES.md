@@ -107,12 +107,6 @@ Vier modi voor het debuggen van API-vertalingen: **Playground** (formaatconverte
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Test elk model rechtstreeks vanuit het dashboard. Selecteer de provider, het model en het endpoint, schrijf prompts met Monaco Editor, stream reacties in realtime, breek halverwege de stream af en bekijk timingstatistieken.
-
----
-
 ## 🎨 Thema's _(v2.0.5+)_
 
 Aanpasbare kleurthema's voor het volledige dashboard. Kies uit 7 vooraf ingestelde kleuren (koraal, blauw, rood, groen, violet, oranje, cyaan) of maak een aangepast thema door een willekeurige hexkleur te kiezen. Ondersteunt de lichte, donkere en systeemmodus.

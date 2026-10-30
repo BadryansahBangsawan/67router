@@ -107,12 +107,6 @@ Patru moduri pentru depanarea traducerilor API: **Spațiu de testare** (converto
 
 ---
 
-## 🎮 Spațiu de testare pentru modele _(v2.0.9+)_
-
-Testați orice model direct din panoul de control. Selectați furnizorul, modelul și endpoint-ul, scrieți prompturi cu Monaco Editor, transmiteți răspunsurile în timp real, întrerupeți-le în timpul fluxului și vizualizați metricile temporale.
-
----
-
 ## 🎨 Teme _(v2.0.5+)_
 
 Teme de culori personalizabile pentru întregul panou de control. Alegeți dintre 7 culori prestabilite (Coral, Albastru, Roșu, Verde, Violet, Portocaliu, Cyan) sau creați o temă personalizată alegând orice culoare hexazecimală. Acceptă modurile luminos, întunecat și sistem.

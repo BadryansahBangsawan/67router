@@ -134,7 +134,6 @@ Halaman utama di bawah `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — langganan webhook keluar, rotasi secret, statistik percobaan ulang
 - `/dashboard/batch` — pengiriman pekerjaan batch dan progres
 - `/dashboard/cache` — statistik cache read-through dan penalaran, kontrol eviksi
-- `/dashboard/playground` — playground chat interaktif terhadap combo/model apa pun yang dikonfigurasi
 - `/dashboard/changelog` — penampil changelog dalam aplikasi (merender `CHANGELOG.md`)
 - `/dashboard/system` — diagnostik runtime, info versi, permukaan validasi lingkungan
 - `/dashboard/onboarding` — wizard penyiapan penggunaan pertama untuk instalasi baru

@@ -134,7 +134,6 @@ Hoofdpagina's onder `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — uitgaande webhookabonnementen, rotatie van geheimen, statistieken voor nieuwe pogingen
 - `/dashboard/batch` — indienen van batchtaken en voortgang
 - `/dashboard/cache` — statistieken voor read-through- en redeneercache, beheer voor verwijdering
-- `/dashboard/playground` — interactieve chatomgeving voor elke geconfigureerde combo of elk geconfigureerd model
 - `/dashboard/changelog` — changelogviewer in de app (geeft `CHANGELOG.md` weer)
 - `/dashboard/system` — runtimediagnostiek, versie-informatie, interface voor omgevingsvalidatie
 - `/dashboard/onboarding` — wizard voor de eerste configuratie van nieuwe installaties

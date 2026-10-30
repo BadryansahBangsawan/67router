@@ -107,12 +107,6 @@ Négy mód az API-fordítások hibakereséséhez: **Játszótér** (formátumkon
 
 ---
 
-## 🎮 Modelljátszótér _(v2.0.9+)_
-
-Teszteljen bármilyen modellt közvetlenül az irányítópultról. Válassza ki a szolgáltatót, a modellt és a végpontot, írja meg a promptokat a Monaco Editor segítségével, kövesse valós időben a válaszfolyamot, szakítsa meg azt menet közben, és tekintse meg az időzítési mérőszámokat.
-
----
-
 ## 🎨 Témák _(v2.0.5+)_
 
 Testreszabható színtémák a teljes irányítópulthoz. Válasszon 7 előre beállított szín közül (korall, kék, piros, zöld, ibolya, narancs, cián), vagy hozzon létre egyéni témát tetszőleges hexadecimális szín kiválasztásával. Támogatja a világos, a sötét és a rendszerhez igazodó módot.

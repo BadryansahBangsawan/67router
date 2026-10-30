@@ -169,5 +169,4 @@ Studio τριών καρτελών που ενοποιεί την αναζήτη
 - Κύριο σχέδιο: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Σχέδιο λειτουργικότητας: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Μητρώο παρόχων αναζήτησης: `open-sse/config/searchRegistry.ts`
-- Playground Studio (κοινόχρηστα `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend ανάκτησης ιστού: `src/app/api/v1/web/fetch/route.ts`

@@ -107,12 +107,6 @@ Vier Modi zum Debuggen von API-Übersetzungen: **Playground** (Formatkonverter),
 
 ---
 
-## 🎮 Modell-Playground _(v2.0.9+)_
-
-Testen Sie jedes Modell direkt über das Dashboard. Wählen Sie Anbieter, Modell und Endpunkt aus, verfassen Sie Prompts mit dem Monaco Editor, streamen Sie Antworten in Echtzeit, brechen Sie sie während des Streams ab und sehen Sie sich Zeitmesswerte an.
-
----
-
 ## 🎨 Designs _(v2.0.5+)_
 
 Anpassbare Farbschemata für das gesamte Dashboard. Wählen Sie aus 7 voreingestellten Farben (Koralle, Blau, Rot, Grün, Violett, Orange, Cyan) oder erstellen Sie ein benutzerdefiniertes Design, indem Sie eine beliebige Hex-Farbe auswählen. Unterstützt den hellen, dunklen und Systemmodus.

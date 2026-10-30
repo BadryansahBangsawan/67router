@@ -76,7 +76,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "audit-a2a",
   // Dev Tools
   "translator",
-  "playground",
   "search-tools",
   // Agentic Features
   "memory",

@@ -107,12 +107,6 @@ Bốn chế độ để gỡ lỗi bản dịch API: **Sân Chơi** (trình chuy
 
 ---
 
-## 🎮 Sân Chơi Mô Hình _(v2.0.9+)_
-
-Kiểm thử bất kỳ mô hình nào trực tiếp từ bảng điều khiển. Chọn nhà cung cấp, mô hình và endpoint, viết prompt bằng Monaco Editor, truyền phát phản hồi theo thời gian thực, hủy giữa chừng và xem các chỉ số thời gian.
-
----
-
 ## 🎨 Chủ Đề _(v2.0.5+)_
 
 Các chủ đề màu có thể tùy chỉnh cho toàn bộ bảng điều khiển. Chọn trong 7 màu cài sẵn (San hô, Xanh dương, Đỏ, Xanh lá, Tím, Cam, Xanh lơ) hoặc tạo chủ đề tùy chỉnh bằng cách chọn bất kỳ màu hex nào. Hỗ trợ chế độ sáng, tối và hệ thống.

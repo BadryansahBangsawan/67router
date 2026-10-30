@@ -107,12 +107,6 @@ Monitorovanie v reálnom čase: dostupnosť, pamäť, verzia, percentily latenci
 
 ---
 
-## 🎮 Testovacie prostredie modelov _(v2.0.9+)_
-
-Testujte ľubovoľný model priamo z ovládacieho panela. Vyberte poskytovateľa, model a koncový bod, píšte pokyny pomocou editora Monaco Editor, sledujte odpovede v reálnom čase, prerušte ich počas streamovania a zobrazte metriky časovania.
-
----
-
 ## 🎨 Motívy _(v2.0.5+)_
 
 Prispôsobiteľné farebné motívy pre celý ovládací panel. Vyberte si zo 7 predvolených farieb (koralová, modrá, červená, zelená, fialová, oranžová, azúrová) alebo vytvorte vlastný motív výberom ľubovoľnej hexadecimálnej farby. Podporuje svetlý, tmavý a systémový režim.

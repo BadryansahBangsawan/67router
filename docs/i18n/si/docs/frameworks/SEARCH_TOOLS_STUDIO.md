@@ -167,5 +167,4 @@ API යතුරු ස්ථානධාරකය සැමවිටම `$OMNIR
 - ප්රධාන සැලැස්ම: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - විශේෂාංග සැලැස්ම: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - සෙවුම් සපයන්නන්ගේ ලේඛනය: `open-sse/config/searchRegistry.ts`
-- Playground Studio (හවුල් `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch පසුපෙළ: `src/app/api/v1/web/fetch/route.ts`

@@ -167,5 +167,4 @@ API की प्लेसहोल्डर नेहमी `$OMNIROUTE_API_KEY
 - मास्टर प्लॅन: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - फीचर प्लॅन: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - सर्च प्रोव्हायडर रजिस्ट्री: `open-sse/config/searchRegistry.ts`
-- Playground Studio (सामायिक `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - वेब फेच बॅकएंड: `src/app/api/v1/web/fetch/route.ts`

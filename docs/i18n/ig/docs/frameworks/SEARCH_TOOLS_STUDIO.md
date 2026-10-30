@@ -169,5 +169,4 @@ Agbasawanyere `src/app/api/search/providers/route.ts` ka ọ:
 - Atụmatụ ukwu: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Atụmatụ njirimara: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Ndebanye aha ndị na-eweta ọchụchọ: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` ndị a na-ekekọrịta): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend nke web fetch: `src/app/api/v1/web/fetch/route.ts`

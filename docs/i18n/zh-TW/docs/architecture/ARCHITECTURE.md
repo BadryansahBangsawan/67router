@@ -141,7 +141,6 @@ v3.8.0 平台的標準版本控制 Mermaid 原始檔位於
 - `/dashboard/webhooks` — 外送 Webhook 訂閱、金鑰輪換、重試統計
 - `/dashboard/batch` — 批次任務提交與進度
 - `/dashboard/cache` — 讀取快取與推理快取統計、清除控制
-- `/dashboard/playground` — 針對任何已設定組合/模型的互動式聊天測試區
 - `/dashboard/changelog` — 應用內更新日誌檢視器（渲染 `CHANGELOG.md`）
 - `/dashboard/system` — 執行時期診斷、版本資訊、環境驗證表面
 - `/dashboard/onboarding` — 新安裝的首次執行設定精靈

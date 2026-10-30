@@ -169,5 +169,4 @@ Kienet meħtieġa bidla waħda biss fil-backend għal din il-funzjonalità:
 - Pjan ewlieni: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Pjan tal-funzjonalità: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Reġistru tal-fornituri tat-tiftix: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` kondiviżi): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend tal-ġbir mill-web: `src/app/api/v1/web/fetch/route.ts`

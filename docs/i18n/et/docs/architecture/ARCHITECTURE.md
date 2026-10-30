@@ -134,7 +134,6 @@ Peamised lehed kausta `src/app/(dashboard)/dashboard/` alt:
 - `/dashboard/webhooks` — väljuvad veebihaagi (webhook) tellimused, saladuste rotatsioon, uuestisaatmise statistika
 - `/dashboard/batch` — partii tööde esitamine ja edenemine
 - `/dashboard/cache` — läbilugemise ja põhjendamise puhvri (cache) statistika, eemaldamise kontrollid
-- `/dashboard/playground` — interaktiivne vestluse mänguväljak vastu suvalise seadistatud kombo/mudeli
 - `/dashboard/changelog` — rakendusesisene muudatuste logi vaatur (renderdab `CHANGELOG.md`)
 - `/dashboard/system` — käitusaja diagnostika, versiooniinfo, keskkonna valideerimise pind
 - `/dashboard/onboarding` — esmakordse käivituse seadistusviisard uute paigalduste jaoks

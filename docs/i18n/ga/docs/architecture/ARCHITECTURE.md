@@ -134,7 +134,6 @@ Na príomhleathanaigh faoi `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — síntiúis webhook amach, rothlú rún, staitisticí atrialacha
 - `/dashboard/batch` — cur isteach baiscphost agus dul chun cinn
 - `/dashboard/cache` — staitisticí taisce léite tríd agus taisce réasúnaíochta, rialuithe díshealbhaithe
-- `/dashboard/playground` — clós súgartha comhrá idirghníomhach in aghaidh aon teaglama/samhla cumraithe
 - `/dashboard/changelog` — amharcán loga athruithe laistigh den aip (rindreálann sé `CHANGELOG.md`)
 - `/dashboard/system` — diagnóisic ama rite, faisnéis leagain, dromchla bailíochtaithe timpeallachta
 - `/dashboard/onboarding` — treoraí socraithe céadrite le haghaidh suiteálacha nua

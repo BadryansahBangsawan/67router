@@ -169,5 +169,4 @@ Search Tools Studio превращает `/dashboard/search-tools` из прос
 - Основной план: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - План функции: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Реестр поисковых провайдеров: `open-sse/config/searchRegistry.ts`
-- Playground Studio (общие `ExportCodeModal` и `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Бэкенд веб-загрузки: `src/app/api/v1/web/fetch/route.ts`

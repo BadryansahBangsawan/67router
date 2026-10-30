@@ -134,7 +134,6 @@ Galvenās lapas mapē `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — izejošo tīmekļa āķu abonementi, noslēpumu rotācija, atkārtojumu statistika
 - `/dashboard/batch` — pakešdarbu iesniegšana un norise
 - `/dashboard/cache` — lasīšanas laikā aizpildāmās un spriešanas kešatmiņas statistika, izlikšanas vadīklas
-- `/dashboard/playground` — interaktīvs tērzēšanas izmēģinājums ar jebkuru konfigurētu kombināciju/modeli
 - `/dashboard/changelog` — lietotnē iebūvēts izmaiņu žurnāla skatītājs (atveido `CHANGELOG.md`)
 - `/dashboard/system` — izpildlaika diagnostika, informācija par versiju, vides validācijas sadaļa
 - `/dashboard/onboarding` — pirmās palaišanas iestatīšanas vednis jaunām instalācijām

@@ -168,5 +168,4 @@ API key کا placeholder ہمیشہ `$OMNIROUTE_API_KEY` ہوتا ہے (D11، Pl
 - ماسٹر پلان: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - فیچر پلان: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - تلاش فراہم کنندہ رجسٹری: `open-sse/config/searchRegistry.ts`
-- Playground Studio (مشترکہ `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch بیک اینڈ: `src/app/api/v1/web/fetch/route.ts`

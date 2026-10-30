@@ -134,7 +134,6 @@ Pagrindiniai puslapiai, esantys `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — siunčiamų webhook prenumeratos, paslapčių keitimas ir pakartotinių bandymų statistika
 - `/dashboard/batch` — paketinių užduočių pateikimas ir eiga
 - `/dashboard/cache` — skaitymo metu užpildomo ir samprotavimo podėlių statistika bei šalinimo valdikliai
-- `/dashboard/playground` — interaktyvi pokalbių bandymų aplinka, skirta bet kuriam sukonfigūruotam deriniui ar modeliui
 - `/dashboard/changelog` — programoje integruota pakeitimų žurnalo peržiūros priemonė (atvaizduoja `CHANGELOG.md`)
 - `/dashboard/system` — vykdymo aplinkos diagnostika, versijos informacija ir aplinkos tikrinimo sąsaja
 - `/dashboard/onboarding` — pirmojo paleidimo sąrankos vedlys naujoms įdiegtims

@@ -106,12 +106,6 @@ Apat na mode para sa pag-debug ng mga pagsasalin ng API: **Playground** (tagapag
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Subukan ang anumang model nang direkta mula sa dashboard. Piliin ang provider, model, at endpoint, magsulat ng mga prompt gamit ang Monaco Editor, mag-stream ng mga tugon nang real-time, ihinto habang nagsi-stream, at tingnan ang mga sukatan ng oras.
-
----
-
 ## 🎨 Mga Tema _(v2.0.5+)_
 
 Nako-customize na mga tema ng kulay para sa buong dashboard. Pumili mula sa 7 preset na kulay (Coral, Blue, Red, Green, Violet, Orange, Cyan) o gumawa ng custom na tema sa pamamagitan ng pagpili ng anumang hex na kulay. Sinusuportahan ang light, dark, at system mode.

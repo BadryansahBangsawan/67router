@@ -93,12 +93,6 @@ Erbgħa ta' modi għad-dijanjostika tat-traduzzjonijiet tal-API: **Playground** 
 
 ---
 
-## 🎮 Terren tal-Mudell _(v2.0.9+)_
-
-Ittestja kwalunkwe mudell direttament mill-dashboard. Agħżel il-fornitur, il-mudell, u t-tmiem, uħtu prompts bl-Editor Monaco,流 stream ir-risponsi f'ħin reali, irrevoka nofs is-stream, u ħares lejn il-miżuri tal-ħin.
-
----
-
 ## 🎨 Temi _(v2.0.5+)_
 
 Temi tal-lewn personalizzabbli għad-dashboard kollha. Agħżel minn 7 lewnijiet presets (Coral, Blu, Aħmar, Ħdar, Violetta, Oranġo, Ċjan) jew oħloq tema personalizzata billi tagħżel kwalunkwe lewn hex. Jappoġġa dawl, skur, u modalità tal-sistema.

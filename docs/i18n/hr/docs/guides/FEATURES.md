@@ -107,12 +107,6 @@ Praćenje u stvarnom vremenu: vrijeme aktivnosti (uptime), memorija, verzija, pe
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testirajte bilo koji model izravno s nadzorne ploče. Odaberite pružatelja usluge, model i endpoint, pišite upite pomoću Monaco Editora, streamajte odgovore u stvarnom vremenu, prekinite stream u sredini i pregledajte metrike vremena.
-
----
-
 ## 🎨 Teme _(v2.0.5+)_
 
 Prilagodljive teme boja za cijelu nadzornu ploču. Odaberite između 7 unaprijed postavljenih boja (Coral, Blue, Red, Green, Violet, Orange, Cyan) ili izradite prilagođenu temu odabirom bilo koje hex boje. Podržava svijetli, tamni i sistemski način rada.

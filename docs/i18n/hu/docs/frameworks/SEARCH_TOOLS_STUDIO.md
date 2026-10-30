@@ -169,5 +169,4 @@ A `src/app/api/search/providers/route.ts` a következőkkel bővült:
 - Főterv: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funkcióterv: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Keresési szolgáltatók nyilvántartása: `open-sse/config/searchRegistry.ts`
-- Playground Studio (megosztott `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Webes lekérési háttérrendszer: `src/app/api/v1/web/fetch/route.ts`

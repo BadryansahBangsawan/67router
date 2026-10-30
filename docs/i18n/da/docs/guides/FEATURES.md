@@ -107,12 +107,6 @@ Fire tilstande til fejlfinding af API-oversættelser: **Playground** (formatkonv
 
 ---
 
-## 🎮 Model-playground _(v2.0.9+)_
-
-Test enhver model direkte fra dashboardet. Vælg udbyder, model og endpoint, skriv prompts med Monaco Editor, stream svar i realtid, afbryd midt i en stream, og se tidsmålinger.
-
----
-
 ## 🎨 Temaer _(v2.0.5+)_
 
 Farvetemaer, der kan tilpasses for hele dashboardet. Vælg mellem 7 foruddefinerede farver (koral, blå, rød, grøn, violet, orange, cyan), eller opret et brugerdefineret tema ved at vælge en vilkårlig hex-farve. Understøtter lys, mørk og systemtilstand.

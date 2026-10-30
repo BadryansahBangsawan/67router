@@ -169,5 +169,4 @@ Tiedostoa `src/app/api/search/providers/route.ts` laajennettiin seuraavasti:
 - Pääsuunnitelma: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Ominaisuussuunnitelma: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Hakupalveluntarjoajien rekisteri: `open-sse/config/searchRegistry.ts`
-- Playground Studio (jaetut `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Verkkonoudon taustajärjestelmä: `src/app/api/v1/web/fetch/route.ts`

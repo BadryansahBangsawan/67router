@@ -107,12 +107,6 @@ API çevirilerinde hata ayıklamak için dört mod: **Deneme Alanı** (biçim d�
 
 ---
 
-## 🎮 Model Deneme Alanı _(v2.0.9+)_
-
-Herhangi bir modeli doğrudan kontrol panelinden test edin. Sağlayıcıyı, modeli ve uç noktayı seçin; Monaco Editor ile istemler yazın, yanıtları gerçek zamanlı olarak akış halinde alın, akışı devam ederken iptal edin ve zamanlama metriklerini görüntüleyin.
-
----
-
 ## 🎨 Temalar _(v2.0.5+)_
 
 Tüm kontrol paneli için özelleştirilebilir renk temaları. 7 hazır renkten (Mercan, Mavi, Kırmızı, Yeşil, Menekşe, Turuncu, Camgöbeği) birini seçin veya herhangi bir onaltılık renk kodunu seçerek özel bir tema oluşturun. Açık, koyu ve sistem modlarını destekler.

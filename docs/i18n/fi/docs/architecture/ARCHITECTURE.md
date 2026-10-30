@@ -134,7 +134,6 @@ Pääsivut hakemistossa `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — lähtevien webhook-kutsujen tilaukset, salaisuuksien kierrätys ja uudelleenyritystilastot
 - `/dashboard/batch` — eräajojen lähetys ja edistyminen
 - `/dashboard/cache` — läpilukevan välimuistin ja päättelyvälimuistin tilastot sekä poistamistoiminnot
-- `/dashboard/playground` — vuorovaikutteinen keskustelukokeiluympäristö mille tahansa määritetylle yhdistelmälle tai mallille
 - `/dashboard/changelog` — sovelluksen sisäinen muutoslokin katseluohjelma (hahmontaa tiedoston `CHANGELOG.md`)
 - `/dashboard/system` — suoritusympäristön diagnostiikka, versiotiedot ja ympäristön validointinäkymä
 - `/dashboard/onboarding` — ensimmäisen käyttökerran ohjattu määritys uusille asennuksille

@@ -107,12 +107,6 @@ Quatro modos para depurar traduções da API: **Playground** (conversor de forma
 
 ---
 
-## 🎮 Playground de Modelos _(v2.0.9+)_
-
-Teste qualquer modelo diretamente pelo painel. Selecione o provedor, o modelo e o endpoint, escreva prompts com o Monaco Editor, acompanhe as respostas em tempo real, interrompa durante o fluxo e visualize métricas de tempo.
-
----
-
 ## 🎨 Temas _(v2.0.5+)_
 
 Temas de cores personalizáveis para todo o painel. Escolha entre 7 cores predefinidas (Coral, Azul, Vermelho, Verde, Violeta, Laranja, Ciano) ou crie um tema personalizado selecionando qualquer cor hexadecimal. Compatível com os modos claro, escuro e do sistema.

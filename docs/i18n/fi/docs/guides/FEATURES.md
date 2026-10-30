@@ -107,12 +107,6 @@ Neljä tilaa API-käännösten virheenkorjaukseen: **Playground** (muotomuunnin)
 
 ---
 
-## 🎮 Mallien testialusta _(v2.0.9+)_
-
-Testaa mitä tahansa mallia suoraan hallintapaneelista. Valitse palveluntarjoaja, malli ja päätepiste, kirjoita kehotteita Monaco Editorilla, suoratoista vastaukset reaaliajassa, keskeytä suoratoisto ja tarkastele ajoitusmittareita.
-
----
-
 ## 🎨 Teemat _(v2.0.5+)_
 
 Mukautettavat väriteemat koko hallintapaneelille. Valitse 7 esiasetetusta väristä (koralli, sininen, punainen, vihreä, violetti, oranssi, syaani) tai luo mukautettu teema valitsemalla mikä tahansa heksaväri. Tukee vaaleaa, tummaa ja järjestelmän tilaa.

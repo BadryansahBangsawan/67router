@@ -107,12 +107,6 @@ Cztery tryby debugowania tłumaczeń API: **Playground** (konwerter formatów), 
 
 ---
 
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testuj dowolny model bezpośrednio z poziomu panelu. Wybierz dostawcę, model i punkt końcowy, twórz prompty w edytorze Monaco Editor, odbieraj strumieniowo odpowiedzi w czasie rzeczywistym, przerywaj je w trakcie przesyłania i przeglądaj metryki czasowe.
-
----
-
 ## 🎨 Motywy _(v2.0.5+)_
 
 Konfigurowalne motywy kolorystyczne dla całego panelu. Wybierz jeden z 7 gotowych kolorów (koralowy, niebieski, czerwony, zielony, fioletowy, pomarańczowy, cyjan) lub utwórz własny motyw, wybierając dowolny kolor w formacie szesnastkowym. Obsługuje tryb jasny, ciemny i systemowy.

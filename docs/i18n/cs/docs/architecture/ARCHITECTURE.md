@@ -134,7 +134,6 @@ Hlavní stránky v `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — odběry odchozích webhooků, rotace tajných klíčů a statistiky opakovaných pokusů
 - `/dashboard/batch` — odesílání dávkových úloh a sledování průběhu
 - `/dashboard/cache` — statistiky mezipaměti pro průběžné čtení a uvažování a ovládací prvky vyprazdňování
-- `/dashboard/playground` — interaktivní chatovací prostředí pro libovolnou nakonfigurovanou kombinaci či model
 - `/dashboard/changelog` — prohlížeč přehledu změn v aplikaci (vykresluje `CHANGELOG.md`)
 - `/dashboard/system` — diagnostika běhového prostředí, informace o verzi a rozhraní pro ověření prostředí
 - `/dashboard/onboarding` — průvodce prvotním nastavením pro nové instalace

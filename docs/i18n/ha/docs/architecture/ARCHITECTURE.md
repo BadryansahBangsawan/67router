@@ -134,7 +134,6 @@ Manyan shafuka da ke ƙarƙashin `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — rajistar webhook masu fita, sauya sirri, ƙididdigar sake gwadawa
 - `/dashboard/batch` — ƙaddamar da aikin rukuni da ci gabansa
 - `/dashboard/cache` — ƙididdigar cache na karantawa kai tsaye da tunani, sarrafa fitarwa
-- `/dashboard/playground` — filin gwajin hira mai hulɗa da duk wani haɗaka/model da aka saita
 - `/dashboard/changelog` — mai duba tarihin canje-canje a cikin manhaja (yana nuna `CHANGELOG.md`)
 - `/dashboard/system` — binciken yanayin gudanarwa, bayanin siga, wajen tabbatar da muhalli
 - `/dashboard/onboarding` — jagoran saiti na farkon amfani don sabbin girkawa

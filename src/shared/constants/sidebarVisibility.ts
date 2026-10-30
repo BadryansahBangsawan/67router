@@ -168,7 +168,6 @@ const ESSENTIALS_SHOWN: ReadonlySet<HideableSidebarItemId> = new Set([
 
 /** Hidden in Essentials sidebar but kept searchable in Command Palette. */
 export const ESSENTIALS_ADVANCED_TOOL_IDS: ReadonlySet<HideableSidebarItemId> = new Set([
-  "playground",
   "logs",
   "translator",
   "combos",
@@ -223,7 +222,6 @@ const DEVELOPER_SHOWN: ReadonlySet<HideableSidebarItemId> = new Set([
   "runtime",
   "resilience-connections",
   "translator",
-  "playground",
   "memory",
   "skills",
   "mcp",

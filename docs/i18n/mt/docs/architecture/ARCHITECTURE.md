@@ -134,7 +134,6 @@ Paġni ewlenin taħt `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — abbonamenti tal-webhook outbound, rotazzjoni tal-isigri, statistika tal-ħdid mill-ġdid
 - `/dashboard/batch` — sottomissjoni tal-impjiegi tal-batch u progress
 - `/dashboard/cache` — statistika tal-cache read-through u r-raġunar, kontrolli tal-evikament
-- `/dashboard/playground` — playground interattiv tal-chat kontra kwalunkwe combo/mudell konfigurat
 - `/dashboard/changelog` — viżitur tal-changelog fl-app (jirrend `CHANGELOG.md`)
 - `/dashboard/system` — dijanjostika tal-runtime, informazzjoni tal-verżjoni, superfiċja tal-validazzjoni tal-ambjent
 - `/dashboard/onboarding` — wizzard tal-installazzjoni għal installazzjonijiet ġodda

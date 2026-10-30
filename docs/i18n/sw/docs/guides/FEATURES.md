@@ -107,12 +107,6 @@ Hali nne za kutatua hitilafu za tafsiri za API: **Mazingira ya Majaribio** (kige
 
 ---
 
-## 🎮 Mazingira ya Majaribio ya Modeli _(v2.0.9+)_
-
-Jaribu modeli yoyote moja kwa moja kutoka kwenye dashibodi. Chagua mtoa huduma, modeli na endpoint, andika vidokezo kwa kutumia Monaco Editor, tiririsha majibu kwa wakati halisi, katisha katikati ya mtiririko, na uone vipimo vya muda.
-
----
-
 ## 🎨 Mandhari _(v2.0.5+)_
 
 Mandhari za rangi zinazoweza kubinafsishwa kwa dashibodi nzima. Chagua kutoka kwenye rangi 7 zilizowekwa awali (Matumbawe, Bluu, Nyekundu, Kijani, Urujuani, Machungwa, Samawati) au unda mandhari maalum kwa kuchagua rangi yoyote ya hex. Inaauni hali ya mwanga, giza na mfumo.

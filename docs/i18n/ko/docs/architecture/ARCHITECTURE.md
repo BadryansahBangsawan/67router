@@ -134,7 +134,6 @@ v3.8.0 플랫폼의 표준 버전 관리 Mermaid 소스는
 - `/dashboard/webhooks` — 아웃바운드 웹훅 구독, 시크릿 교체, 재시도 통계
 - `/dashboard/batch` — 배치 작업 제출 및 진행 상황
 - `/dashboard/cache` — 읽기 통과 및 추론 캐시 통계, 제거 제어
-- `/dashboard/playground` — 구성된 모든 콤보/모델을 대상으로 하는 대화형 채팅 플레이그라운드
 - `/dashboard/changelog` — 앱 내 변경 로그 뷰어(`CHANGELOG.md` 렌더링)
 - `/dashboard/system` — 런타임 진단, 버전 정보, 환경 검증 화면
 - `/dashboard/onboarding` — 새 설치를 위한 최초 실행 설정 마법사

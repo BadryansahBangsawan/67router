@@ -53,6 +53,14 @@ const REMOVED_PATHS: string[] = [
   "src/app/api/webhooks",
   "src/app/(dashboard)/dashboard/webhooks",
   "bin/cli/commands/webhooks.mjs",
+  // playground
+  "src/app/(dashboard)/dashboard/playground",
+  "src/app/(dashboard)/dashboard/combos/playground",
+  "src/app/api/playground",
+  "src/lib/playground",
+  "src/lib/db/playgroundPresets.ts",
+  "src/shared/schemas/playground.ts",
+  "bin/cli/api-commands/playground.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -89,6 +97,14 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /api\/webhooks/,
   /dashboard\/webhooks/,
   /\bparseAndValidateWebhookUrl\b/,
+  // playground
+  /dashboard\/playground\b/,
+  /combos\/playground\b/,
+  /api\/playground\//,
+  /lib\/playground\//,
+  /db\/playgroundPresets\b/,
+  /schemas\/playground\b/,
+  /\bregister_playground\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

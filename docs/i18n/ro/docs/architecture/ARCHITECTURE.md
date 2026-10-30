@@ -134,7 +134,6 @@ Pagini principale din `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — abonamente webhook pentru ieșire, rotația secretelor, statistici privind reîncercările
 - `/dashboard/batch` — trimiterea sarcinilor în lot și progresul acestora
 - `/dashboard/cache` — statistici pentru memoria cache de tip read-through și pentru raționament, controale de evacuare
-- `/dashboard/playground` — spațiu de testare interactiv pentru conversații cu orice combinație/model configurat
 - `/dashboard/changelog` — vizualizator integrat al istoricului modificărilor (afișează `CHANGELOG.md`)
 - `/dashboard/system` — diagnosticarea mediului de execuție, informații despre versiune, interfață pentru validarea mediului
 - `/dashboard/onboarding` — expert de configurare la prima rulare pentru instalările noi

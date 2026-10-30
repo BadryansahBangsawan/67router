@@ -167,5 +167,4 @@ Bu özellik için yalnızca bir backend değişikliği gerekti:
 - Ana plan: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Özellik planı: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Arama sağlayıcısı kayıt defteri: `open-sse/config/searchRegistry.ts`
-- Playground Studio (paylaşılan `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch arka ucu: `src/app/api/v1/web/fetch/route.ts`

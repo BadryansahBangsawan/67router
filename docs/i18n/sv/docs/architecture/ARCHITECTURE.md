@@ -134,7 +134,6 @@ Huvudsidor under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/webhooks` — utgående webhook-prenumerationer, rotation av hemligheter, statistik över återförsök
 - `/dashboard/batch` — inskickning av batchjobb och förlopp
 - `/dashboard/cache` — statistik för genomläsnings- och resonemangscache, kontroller för avhysning
-- `/dashboard/playground` — interaktiv chattmiljö mot valfri konfigurerad kombination/modell
 - `/dashboard/changelog` — ändringsloggvisare i appen (renderar `CHANGELOG.md`)
 - `/dashboard/system` — körningsdiagnostik, versionsinformation, vy för miljövalidering
 - `/dashboard/onboarding` — konfigurationsguide vid första körningen för nya installationer
