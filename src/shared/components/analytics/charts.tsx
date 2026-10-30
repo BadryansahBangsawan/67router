@@ -83,6 +83,7 @@ export function StatCard({
   const isCell = variant === "cell";
   const valueElement = (
     <span
+      data-kpi-value=""
       className={
         isCell
           ? `text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums ${color} truncate cursor-default`
@@ -164,6 +165,7 @@ export function CompactStatGrid({ sections }: { sections: CompactStatSection[] }
               {section.items.map((stat, i) => {
                 const statValueEl = (
                   <span
+                    data-stat-value=""
                     className={`text-[13px] font-semibold tabular-nums text-right cursor-default ${section.wideValues ? "truncate min-w-0" : "shrink-0"} ${stat.color || "text-text-main"}`}
                     data-tooltip={stat.tooltip}
                     title={stat.tooltip ? undefined : String(stat.value)}

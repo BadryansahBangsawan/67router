@@ -177,7 +177,9 @@ function assertRetainedView(scrollContainer: HTMLDivElement) {
 
   expect(search?.value).toBe("model");
   expect(sort?.value).toBe("oldest");
-  expect(successFilter?.className).toContain("bg-success/20");
+  // The success quick filter is still on (67router renders active chips neutrally, so the
+  // pressed state — not a tint class — is the signal).
+  expect(successFilter?.getAttribute("aria-pressed")).toBe("true");
   expect(rows).toHaveLength(100);
   expect(rows[0]?.textContent).toContain("model-099");
   expect(scrollContainer.scrollTop).toBe(337);
