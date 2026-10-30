@@ -126,7 +126,7 @@ export function SkillInspectorPane({
       {/* Inspector header */}
       <div className="px-4 pt-4 pb-2 border-b border-border">
         <div className="flex items-center gap-2 mb-1">
-          <Icon name="auto_fix_high" size={18} className="text-primary" />
+          <Icon name="auto_fix_high" size={18} className="text-text-muted" />
           <h3 className="font-semibold text-text-main text-sm">{skill.name}</h3>
         </div>
         <p className="text-xs text-text-muted line-clamp-2">{skill.description}</p>
@@ -170,7 +170,7 @@ export function SkillInspectorPane({
         {activeTab === "schema" && (
           <div className="space-y-3">
             <div>
-              <p className="text-xs font-medium text-text-muted uppercase tracking-wide mb-1.5">
+              <p className="text-xs font-medium text-text-muted uppercase tracking-[0.04em] mb-1.5">
                 {t("inputSchema")}
               </p>
               <pre className="text-xs bg-bg-subtle rounded-lg p-3 overflow-auto max-h-[200px] text-text-main font-mono whitespace-pre-wrap">
@@ -178,7 +178,7 @@ export function SkillInspectorPane({
               </pre>
             </div>
             <div>
-              <p className="text-xs font-medium text-text-muted uppercase tracking-wide mb-1.5">
+              <p className="text-xs font-medium text-text-muted uppercase tracking-[0.04em] mb-1.5">
                 {t("outputSchema")}
               </p>
               <pre className="text-xs bg-bg-subtle rounded-lg p-3 overflow-auto max-h-[200px] text-text-main font-mono whitespace-pre-wrap">
@@ -190,7 +190,7 @@ export function SkillInspectorPane({
 
         {activeTab === "handler" && (
           <div>
-            <p className="text-xs font-medium text-text-muted uppercase tracking-wide mb-1.5">
+            <p className="text-xs font-medium text-text-muted uppercase tracking-[0.04em] mb-1.5">
               {t("handlerCode")}
             </p>
             <pre className="text-xs bg-bg-subtle rounded-lg p-3 overflow-auto max-h-[400px] text-text-main font-mono whitespace-pre-wrap">
@@ -248,7 +248,7 @@ export function SkillInspectorPane({
 
         {activeTab === "sandbox" && (
           <div className="space-y-2">
-            <p className="text-xs font-medium text-text-muted uppercase tracking-wide mb-1.5">
+            <p className="text-xs font-medium text-text-muted uppercase tracking-[0.04em] mb-1.5">
               {t("sandboxConfig")}
             </p>
             {[

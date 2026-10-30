@@ -32,7 +32,7 @@ function ServiceToggle({
   const loading = enabled && status.loading;
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex h-9 items-center gap-3 rounded-control border border-border bg-surface px-3">
       <Badge variant={loading ? "default" : online ? "success" : "error"} dot>
         {loading ? "..." : online ? t("online") : t("offline")}
       </Badge>
@@ -133,40 +133,56 @@ export default function A2APage() {
   return (
     <div className="flex flex-col gap-6">
       {/* Page title (lote 7 pendência 12): the shell title hides when a PageHeader is present. */}
-      <PageHeader compact title={tSidebar("a2a")} description={tSidebar("a2aSubtitle")} />
+      <PageHeader
+        compact
+        title={tSidebar("a2a")}
+        description={tSidebar("a2aSubtitle")}
+        actions={
+          <ServiceToggle
+            label={t("serviceLabel")}
+            status={a2aStatus}
+            enabled={a2aEnabled}
+            onToggle={() => void toggleA2a()}
+            toggling={a2aToggling}
+          />
+        }
+      />
       <Card>
-        <div className="flex items-start justify-between gap-4">
+        <div>
           <div>
             <p className="text-sm text-text-muted">{t("a2aIntro")}</p>
             <ol className="mt-2 text-sm space-y-0.5 list-decimal list-inside text-text-muted">
               <li>
                 {interpolateNodes(t("a2aStep1", nodeArgs(["code"])), {
-                  code: <code className="text-xs">{t("agentCardPath")}</code>,
+                  code: (
+                    <code className="font-mono text-xs text-text-main">{t("agentCardPath")}</code>
+                  ),
                 })}
               </li>
               <li>
                 {interpolateNodes(t("a2aStep2", nodeArgs(["code1", "code2", "code3"])), {
-                  code1: <code className="text-xs">{t("rpcEndpoint")}</code>,
-                  code2: <code className="text-xs">{t("rpcMethodSend")}</code>,
-                  code3: <code className="text-xs">{t("rpcMethodStream")}</code>,
+                  code1: (
+                    <code className="font-mono text-xs text-text-main">{t("rpcEndpoint")}</code>
+                  ),
+                  code2: (
+                    <code className="font-mono text-xs text-text-main">{t("rpcMethodSend")}</code>
+                  ),
+                  code3: (
+                    <code className="font-mono text-xs text-text-main">{t("rpcMethodStream")}</code>
+                  ),
                 })}
               </li>
               <li>
                 {interpolateNodes(t("a2aStep3", nodeArgs(["code1", "code2"])), {
-                  code1: <code className="text-xs">{t("rpcMethodGet")}</code>,
-                  code2: <code className="text-xs">{t("rpcMethodCancel")}</code>,
+                  code1: (
+                    <code className="font-mono text-xs text-text-main">{t("rpcMethodGet")}</code>
+                  ),
+                  code2: (
+                    <code className="font-mono text-xs text-text-main">{t("rpcMethodCancel")}</code>
+                  ),
                 })}
               </li>
             </ol>
-          </div>
-          <div className="shrink-0">
-            <ServiceToggle
-              label={t("serviceLabel")}
-              status={a2aStatus}
-              enabled={a2aEnabled}
-              onToggle={() => void toggleA2a()}
-              toggling={a2aToggling}
-            />
           </div>
         </div>
       </Card>

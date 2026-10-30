@@ -522,7 +522,7 @@ export default function GrokBuildToolCard({
           </div>
 
           <div className="my-2 h-px bg-border/50" />
-          <div className="mb-2 text-right text-[11px] font-medium uppercase tracking-wider text-text-muted">
+          <div className="mb-2 text-right text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
             Subagent model overrides
           </div>
           {SUBAGENTS.map((type) => (

@@ -97,7 +97,10 @@ export default function ClaudeClassifierCompatToggle() {
           onClick={cycle}
           disabled={loading || saving}
           title={t("classifierCompatCycle")}
-          className={cn("shrink-0 text-xs font-medium uppercase tracking-wide", MODE_STYLES[mode])}
+          className={cn(
+            "shrink-0 text-xs font-medium uppercase tracking-[0.04em]",
+            MODE_STYLES[mode]
+          )}
         >
           {t(`classifierCompatMode.${mode}`)}
         </Button>

@@ -281,7 +281,7 @@ export default function CompareTab({ providers, onMetrics }: CompareTabProps) {
       {/* Loading */}
       {loading && (
         <div className="flex items-center justify-center py-10" data-testid="compare-loading">
-          <Icon name="progress_activity" size={28} className="text-primary animate-spin" />
+          <Icon name="progress_activity" size={28} className="text-text-muted animate-spin" />
         </div>
       )}
 
@@ -292,7 +292,7 @@ export default function CompareTab({ providers, onMetrics }: CompareTabProps) {
           data-testid="compare-results"
         >
           <div className="px-4 py-2.5 bg-bg-alt border-b border-border">
-            <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <span className="text-xs font-semibold text-text-muted uppercase tracking-[0.04em]">
               {t("compareResults", { query })}
             </span>
           </div>

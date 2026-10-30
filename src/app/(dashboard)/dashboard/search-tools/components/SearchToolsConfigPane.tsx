@@ -45,7 +45,7 @@ export default function SearchToolsConfigPane({
       aria-label={t("configurationPane")}
     >
       <div className="p-3 border-b border-border">
-        <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+        <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
           {t("configuration")}
         </span>
       </div>
@@ -181,7 +181,7 @@ export default function SearchToolsConfigPane({
           onClick={() => setHistoryExpanded((e) => !e)}
           aria-expanded={historyExpanded}
         >
-          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
             {t("history")}
           </span>
           <span className="text-text-muted text-xs" aria-hidden="true">

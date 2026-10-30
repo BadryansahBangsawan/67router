@@ -224,7 +224,7 @@ export function AgentSkillsPageClient(): JSX.Element {
         {/* Coverage */}
         <div>
           <div className="mb-2 flex items-center justify-between gap-2">
-            <span className="text-xs font-semibold text-text-muted uppercase tracking-wide">
+            <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
               {t("coverageLabel")}
             </span>
             {showGenerateButton && (
@@ -233,7 +233,7 @@ export function AgentSkillsPageClient(): JSX.Element {
                 size="sm"
                 onClick={() => void handleGenerate()}
                 disabled={generatingSkills}
-                className="gap-1.5 border-primary/30 bg-primary/10 text-xs text-primary hover:bg-primary/15"
+                className="gap-1.5 text-xs"
                 data-testid="generate-button"
               >
                 <Icon
@@ -276,7 +276,7 @@ export function AgentSkillsPageClient(): JSX.Element {
               className={cn(
                 "text-xs",
                 filter === cat
-                  ? "bg-primary/10 text-primary border-primary/30"
+                  ? "border-border-strong bg-bg-subtle text-text-main"
                   : "text-text-muted hover:text-text-main"
               )}
             >

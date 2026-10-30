@@ -83,7 +83,7 @@ export default function ResultsPanel({
       {/* Header */}
       <div className="flex justify-between items-center p-3 border-b border-border">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+          <span className="text-xs font-semibold text-text-muted uppercase tracking-[0.04em]">
             {t("searchResults")}
           </span>
           {statusCode > 0 && (
@@ -120,7 +120,7 @@ export default function ResultsPanel({
       {/* Content */}
       {loading && (
         <div className="flex items-center justify-center py-20">
-          <Icon name="progress_activity" size={24} className="text-primary animate-spin" />
+          <Icon name="progress_activity" size={24} className="text-text-muted animate-spin" />
         </div>
       )}
 
