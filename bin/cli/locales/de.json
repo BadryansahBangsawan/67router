@@ -225,7 +225,7 @@
     "noCombo": "Keine passende Kombination gefunden. Konfigurieren Sie eine mit: omniroute combo create"
   },
   "chat": {
-    "description": "Eine einmalige Chat-Eingabe a 67router senden",
+    "description": "Eine einmalige Chat-Eingabe an 67router senden",
     "file": "Eingabe aus Datei lesen",
     "stdin": "Eingabe von stdin lesen",
     "system": "System-Prompt",
