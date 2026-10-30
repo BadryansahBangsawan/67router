@@ -157,7 +157,11 @@ function TargetConfiguredRow({ target }: { target: ComboControlCenterTarget }) {
             <Badge size="sm">
               {target.kind === "combo-ref" ? t("nestedCombo") : t("modelTarget")}
             </Badge>
-            {target.weight > 0 && <Badge size="sm">{t("weight", { value: target.weight })}</Badge>}
+            {target.weight > 0 && (
+              <Badge size="sm" variant="outline">
+                {t("weight", { value: target.weight })}
+              </Badge>
+            )}
           </div>
           <p className="mt-2 truncate font-mono text-sm text-text-main">{target.label}</p>
           <p className="mt-1 text-xs text-text-muted">

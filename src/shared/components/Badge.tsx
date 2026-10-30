@@ -8,6 +8,8 @@ import Icon from "./Icon";
 // variants are an outline kit badge with a `data-tone` (globals.css → "Badge status tones").
 const TONES = {
   default: null,
+  // Neutral hairline chip (kit outline, no tone) for secondary metadata such as weights.
+  outline: null,
   primary: "primary",
   success: "success",
   warning: "warning",
@@ -43,7 +45,7 @@ export default function Badge({
   return (
     <KitBadge
       {...props}
-      variant={tone ? "outline" : "secondary"}
+      variant={tone || variant === "outline" ? "outline" : "secondary"}
       shape="pill"
       data-tone={tone ?? undefined}
       icon={typeof icon === "string" ? <Icon name={icon} size={14} /> : icon}
