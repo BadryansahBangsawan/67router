@@ -17,7 +17,7 @@ import {
   HIDEABLE_SIDEBAR_ITEM_IDS,
   LEGACY_SIDEBAR_SECTION_IDS,
   SIDEBAR_SECTIONS,
-  migrateHiddenSidebarSectionIds,
+  persistHiddenSidebarSectionIds,
   migrateSidebarItemOrder,
   migrateSidebarSectionIds,
 } from "@/shared/constants/sidebarVisibility";
@@ -243,10 +243,12 @@ export const updateSettingsSchema = z.object({
   hiddenSidebarItems: z.array(z.enum(HIDEABLE_SIDEBAR_ITEM_IDS)).optional(),
   // Sidebar v2 (67router): current AND pre-v2 section / group ids are accepted, then migrated
   // to the v2 ids before they are stored (sidebarVisibility/legacy.ts), so an older client or a
-  // settings export from before the regrouping still saves.
+  // settings export from before the regrouping still saves. A pre-v2 section that was not the
+  // only source of its v2 section is stored as-is: readers hide just its pages
+  // (resolveHiddenSidebarItems()).
   hiddenSidebarSections: z
     .array(z.enum(SIDEBAR_SECTION_SCHEMA_IDS))
-    .transform(migrateHiddenSidebarSectionIds)
+    .transform(persistHiddenSidebarSectionIds)
     .optional(),
   hiddenSidebarGroupLabels: z
     .array(z.enum(ACCEPTED_SIDEBAR_GROUP_IDS as [string, ...string[]]))

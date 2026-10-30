@@ -1,3 +1,4 @@
+import { LEGACY_SIDEBAR_SECTION_ITEMS, SIDEBAR_SECTIONS } from "./sections";
 import type { LegacySidebarSectionId, SidebarItemOrder, SidebarSectionId } from "./types";
 
 /**
@@ -59,26 +60,84 @@ export function migrateSidebarSectionIds(value: unknown): SidebarSectionId[] {
   return out;
 }
 
+/** v2 section id → the item ids it holds (groups flattened). */
+const V2_SECTION_ITEMS: ReadonlyMap<SidebarSectionId, readonly string[]> = new Map(
+  SIDEBAR_SECTIONS.map((section) => [
+    section.id,
+    section.children.flatMap((child) =>
+      "type" in child && child.type === "group" ? child.items.map((i) => i.id) : [child.id]
+    ),
+  ])
+);
+
+/** Legacy sections that contributed at least one page to a v2 section. */
+function legacySourcesOf(sectionId: SidebarSectionId): LegacySidebarSectionId[] {
+  const items = V2_SECTION_ITEMS.get(sectionId) ?? [];
+  return LEGACY_SIDEBAR_SECTION_IDS.filter((legacy) =>
+    LEGACY_SIDEBAR_SECTION_ITEMS[legacy].some((id) => items.includes(id))
+  );
+}
+
+function savedIdSet(value: unknown): Set<string> {
+  return new Set(Array.isArray(value) ? value.filter((id) => typeof id === "string") : []);
+}
+
 /**
  * Hidden sections are migrated conservatively: a v2 section is hidden only when the saved list
- * already names it, or when EVERY legacy section folded into it was hidden. Hiding "costs" alone
- * must not hide the whole Observe section (Usage, Logs, Health… were visible before).
+ * already names it, or when EVERY legacy section that contributed any page to it was hidden.
+ * Agents, for instance, holds Agentic Features pages AND the CLI agents / Tools pages from
+ * OmniProxy, so hiding "agentic-features" alone must not hide the whole Agents section. Pages
+ * of a partly-hidden legacy section are hidden one by one instead
+ * (`resolveLegacyHiddenSidebarItems()` in sidebarVisibility.ts).
  */
 export function migrateHiddenSidebarSectionIds(value: unknown): SidebarSectionId[] {
   if (!Array.isArray(value)) return [];
-  const saved = new Set(value.filter((id): id is string => typeof id === "string"));
+  const saved = savedIdSet(value);
   const out: SidebarSectionId[] = [];
   for (const id of SIDEBAR_SECTION_IDS) {
     if (saved.has(id)) {
       out.push(id);
       continue;
     }
-    const sources = LEGACY_SIDEBAR_SECTION_IDS.filter(
-      (legacy) => LEGACY_SIDEBAR_SECTION_ID_MAP[legacy] === id
-    );
+    const sources = legacySourcesOf(id);
     if (sources.length > 0 && sources.every((legacy) => saved.has(legacy))) out.push(id);
   }
   return out;
+}
+
+/**
+ * Hidden legacy sections whose pages are NOT all inside a hidden v2 section. These are kept on
+ * the saved list so the pages they held stay hidden page by page.
+ */
+export function partlyHiddenLegacySidebarSectionIds(value: unknown): LegacySidebarSectionId[] {
+  if (!Array.isArray(value)) return [];
+  const saved = savedIdSet(value);
+  const hidden = migrateHiddenSidebarSectionIds(value);
+  const hiddenItems = new Set(hidden.flatMap((id) => V2_SECTION_ITEMS.get(id) ?? []));
+  return LEGACY_SIDEBAR_SECTION_IDS.filter(
+    (legacy) =>
+      saved.has(legacy) && LEGACY_SIDEBAR_SECTION_ITEMS[legacy].some((id) => !hiddenItems.has(id))
+  );
+}
+
+/**
+ * What the settings schema stores for `hiddenSidebarSections`: the v2 sections to hide, then
+ * the partly-hidden legacy ids (nothing the user hid is lost, nothing extra gets hidden).
+ */
+export function persistHiddenSidebarSectionIds(
+  value: unknown
+): (SidebarSectionId | LegacySidebarSectionId)[] {
+  return [...migrateHiddenSidebarSectionIds(value), ...partlyHiddenLegacySidebarSectionIds(value)];
+}
+
+/** Item ids held by the given legacy sections, in catalog order. */
+export function legacySidebarSectionItemIds(ids: readonly LegacySidebarSectionId[]): string[] {
+  return [...new Set(ids.flatMap((legacy) => LEGACY_SIDEBAR_SECTION_ITEMS[legacy]))];
+}
+
+/** Item ids inside the given v2 sections. */
+export function sidebarSectionItemIds(ids: readonly SidebarSectionId[]): Set<string> {
+  return new Set(ids.flatMap((id) => V2_SECTION_ITEMS.get(id) ?? []));
 }
 
 /**

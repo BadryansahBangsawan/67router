@@ -45,8 +45,8 @@ import {
   SIDEBAR_SECTION_ORDER_KEY,
   SIDEBAR_ITEM_ORDER_KEY,
   SIDEBAR_SECTIONS,
-  normalizeHiddenSidebarItems,
   normalizeHiddenSidebarSections,
+  resolveHiddenSidebarItems,
   applySectionOrder,
   applyItemOrder,
   isSidebarItemVisibleForFlags,
@@ -232,7 +232,13 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
   useEffect(() => {
     const applySettings = (data) => {
       setShowDebug(data?.debugMode === true);
-      setHiddenSidebarItems(normalizeHiddenSidebarItems(data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]));
+      // A saved pre-v2 section id that only partly maps onto a v2 section hides its pages.
+      setHiddenSidebarItems(
+        resolveHiddenSidebarItems(
+          data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY],
+          data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]
+        )
+      );
       setHiddenSidebarSections(
         normalizeHiddenSidebarSections(data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY])
       );
@@ -265,7 +271,10 @@ export default function Sidebar({ isMacElectron = false }: SidebarProps) {
       if ("debugMode" in detail) setShowDebug(detail.debugMode === true);
       if (HIDDEN_SIDEBAR_ITEMS_SETTING_KEY in detail) {
         setHiddenSidebarItems(
-          normalizeHiddenSidebarItems(detail[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY])
+          resolveHiddenSidebarItems(
+            detail[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY],
+            detail[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]
+          )
         );
       }
       if (HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY in detail) {

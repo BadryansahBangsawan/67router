@@ -52,7 +52,7 @@ import {
   isSidebarSectionHidden,
   normalizeHiddenSidebarSections,
   toggleSidebarSectionVisibility,
-  normalizeHiddenSidebarItems,
+  resolveHiddenSidebarItems,
   HIDEABLE_SIDEBAR_ITEM_IDS,
   resolveRuntimeSidebarSections,
   type HideableSidebarItemId,
@@ -446,8 +446,13 @@ export default function SidebarTab() {
     fetch("/api/settings")
       .then((r) => r.json())
       .then((data) => {
+        // Pages of a partly-hidden pre-v2 section are folded into the item list; every save of
+        // items or sections below writes both keys, so the legacy id is dropped on next save.
         setHiddenSidebarItems(
-          normalizeHiddenSidebarItems(data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY])
+          resolveHiddenSidebarItems(
+            data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY],
+            data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]
+          )
         );
         setHiddenSidebarSections(
           normalizeHiddenSidebarSections(data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY])
@@ -493,7 +498,11 @@ export default function SidebarTab() {
     setHiddenSidebarItems(next);
     // Any manual change → custom mode
     setActivePreset(null);
-    patch({ [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: next, [SIDEBAR_PRESET_KEY]: null });
+    patch({
+      [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: next,
+      [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: hiddenSidebarSections,
+      [SIDEBAR_PRESET_KEY]: null,
+    });
   };
 
   const hiddenSet = new Set(hiddenSidebarItems);
@@ -512,7 +521,11 @@ export default function SidebarTab() {
     setHiddenSidebarSections(next);
     // Any manual change → custom mode
     setActivePreset(null);
-    patch({ [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: next, [SIDEBAR_PRESET_KEY]: null });
+    patch({
+      [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: next,
+      [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: hiddenSidebarItems,
+      [SIDEBAR_PRESET_KEY]: null,
+    });
   };
 
   const toggleGroupLabel = (id: HideableSidebarGroupId) => {

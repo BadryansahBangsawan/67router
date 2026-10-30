@@ -18,6 +18,9 @@ const {
   getSectionItems,
   migrateHiddenSidebarSectionIds,
   migrateSidebarItemOrder,
+  persistHiddenSidebarSectionIds,
+  resolveHiddenSidebarItems,
+  resolveLegacyHiddenSidebarItems,
   migrateSidebarSectionId,
   migrateSidebarSectionIds,
   normalizeHiddenSidebarSections,
@@ -124,22 +127,78 @@ test("a saved pre-v2 section order still sorts the v2 sections", () => {
   );
 });
 
-test("hidden pre-v2 sections hide a v2 section only when all of its sources were hidden", () => {
+test("hidden pre-v2 sections hide a v2 section only when every page source was hidden", () => {
   // "costs" alone must not hide Observe (Usage, Logs, Health… were visible).
   assert.deepEqual(migrateHiddenSidebarSectionIds(["costs"]), []);
   assert.deepEqual(migrateHiddenSidebarSectionIds(["analytics", "costs", "monitoring"]), [
     "observe",
   ]);
-  assert.deepEqual(migrateHiddenSidebarSectionIds(["devtools", "agentic-features"]), [
-    "optimize",
-    "agents",
-  ]);
+  // Agents also holds CLI agents + the Tools group (from OmniProxy); Optimize also holds
+  // Context & compression (OmniProxy), Cache (Analytics), Media (Other Features) and
+  // chaos-config (Agentic Features). Hiding one legacy section never hides those pages.
+  assert.deepEqual(migrateHiddenSidebarSectionIds(["agentic-features"]), []);
+  assert.deepEqual(migrateHiddenSidebarSectionIds(["devtools"]), []);
+  assert.deepEqual(migrateHiddenSidebarSectionIds(["devtools", "agentic-features"]), []);
+  assert.deepEqual(
+    migrateHiddenSidebarSectionIds([
+      "home",
+      "omni-proxy",
+      "analytics",
+      "devtools",
+      "agentic-features",
+      "other-features",
+    ]),
+    ["routing", "optimize", "agents", "access"]
+  );
   assert.deepEqual(migrateHiddenSidebarSectionIds(["access", "junk", 3]), ["access"]);
   // System holds the protected items (proxy, settings-sidebar): never hideable.
   assert.deepEqual(
     normalizeHiddenSidebarSections(["other-features", "configuration", "help", "devtools"]),
-    ["optimize"]
+    []
   );
+});
+
+test("a partly-hidden pre-v2 section hides exactly the pages it held", () => {
+  const agentic = resolveLegacyHiddenSidebarItems(["agentic-features"]);
+  assert.deepEqual(
+    [...agentic].sort(),
+    ["a2a", "agent-skills", "chaos-config", "mcp", "memory", "plugins", "skills"].sort()
+  );
+  // Pages that joined Agents from OmniProxy stay visible.
+  for (const id of ["cli-agents", "cli-code", "conductor"]) assert.ok(!agentic.includes(id));
+
+  const devtools = resolveLegacyHiddenSidebarItems(["devtools"]);
+  assert.deepEqual([...devtools].sort(), ["playground", "search-tools", "translator"]);
+  for (const id of ["cache", "context-settings", "media"]) assert.ok(!devtools.includes(id));
+
+  // A legacy section whose pages all sit in a hidden v2 section adds nothing.
+  assert.deepEqual(resolveLegacyHiddenSidebarItems(["access", "observe"]), []);
+  // Analytics moved Cache to Optimize; hiding analytics+costs+monitoring hides Observe and Cache.
+  assert.deepEqual(resolveLegacyHiddenSidebarItems(["analytics", "costs", "monitoring"]), [
+    "cache",
+  ]);
+  // Protected items are never hidden (proxy came from OmniProxy).
+  assert.ok(!resolveLegacyHiddenSidebarItems(["omni-proxy"]).includes("proxy"));
+  assert.ok(!resolveLegacyHiddenSidebarItems(["configuration"]).includes("settings-sidebar"));
+  // Merged with the saved item list (catalog order, no duplicates).
+  assert.deepEqual(resolveHiddenSidebarItems(["memory", "translator"], ["devtools"]), [
+    "translator",
+    "playground",
+    "search-tools",
+    "memory",
+  ]);
+});
+
+test("the stored hidden-section list keeps partly-hidden legacy ids, drops absorbed ones", () => {
+  assert.deepEqual(persistHiddenSidebarSectionIds(["agentic-features", "access"]), [
+    "access",
+    "agentic-features",
+  ]);
+  assert.deepEqual(persistHiddenSidebarSectionIds(["analytics", "costs", "monitoring"]), [
+    "observe",
+    "analytics",
+  ]);
+  assert.deepEqual(persistHiddenSidebarSectionIds(["observe", "junk"]), ["observe"]);
 });
 
 test("a saved pre-v2 item order is merged into the v2 section that now holds the items", () => {
@@ -188,7 +247,15 @@ test("the settings schema accepts pre-v2 ids and stores v2 ids", () => {
     sidebarItemOrder: { "omni-proxy": ["combos"], configuration: ["settings-sidebar"] },
   });
   assert.ok(parsed.success, JSON.stringify(parsed.error?.issues));
-  assert.deepEqual(parsed.data.hiddenSidebarSections, ["optimize"]);
+  // Neither legacy section was the only source of its v2 section: both are kept so the pages
+  // they held (and only those) stay hidden — see resolveLegacyHiddenSidebarItems().
+  assert.deepEqual(parsed.data.hiddenSidebarSections, ["costs", "devtools"]);
+  assert.deepEqual(
+    updateSettingsSchema.safeParse({
+      hiddenSidebarSections: ["home", "omni-proxy", "devtools", "agentic-features"],
+    }).data?.hiddenSidebarSections,
+    ["routing", "agents", "access", "omni-proxy", "devtools", "agentic-features"]
+  );
   assert.deepEqual(parsed.data.sidebarSectionOrder, ["system", "routing"]);
   assert.deepEqual(parsed.data.hiddenSidebarGroupLabels, ["integrations", "logs-more"]);
   assert.deepEqual(parsed.data.sidebarItemOrder, {

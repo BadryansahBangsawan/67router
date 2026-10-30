@@ -1,4 +1,5 @@
 import type {
+  LegacySidebarSectionId,
   SidebarItemDefinition,
   SidebarItemGroup,
   SidebarSectionChild,
@@ -855,6 +856,41 @@ const ITEM_CATALOG: ReadonlyMap<string, SidebarItemDefinition> = new Map(
     ...LEGACY_GROUPS.flatMap((g) => g.items),
   ].map((item) => [item.id, item])
 );
+
+/**
+ * Which pre-v2 section held each page (the pre-v2 layout, composed from the same arrays). v2
+ * sections mix pages from several legacy sections, so a saved hidden legacy section is migrated
+ * page by page from this map (sidebarVisibility/legacy.ts).
+ */
+export const LEGACY_SIDEBAR_SECTION_ITEMS: Readonly<
+  Record<LegacySidebarSectionId, readonly string[]>
+> = {
+  home: HOME_ITEMS.map((i) => i.id),
+  "omni-proxy": [
+    ...OMNI_PROXY_ITEMS,
+    ...COMPRESSION_CONTEXT_GROUP.items,
+    ...TOOLS_GROUP.items,
+    ...INTEGRATIONS_GROUP.items,
+    PROXY_ITEM,
+  ].map((i) => i.id),
+  analytics: ANALYTICS_ITEMS.map((i) => i.id),
+  costs: COSTS_ITEMS.map((i) => i.id),
+  monitoring: [
+    ...MONITORING_ITEMS,
+    ...LOGS_GROUP.items,
+    ...AUDIT_GROUP.items,
+    ...SYSTEM_GROUP.items,
+  ].map((i) => i.id),
+  devtools: DEVTOOLS_ITEMS.map((i) => i.id),
+  "agentic-features": (AGENTIC_FEATURES_ITEMS as readonly SidebarItemDefinition[]).map((i) => i.id),
+  "other-features": [
+    ...GAMIFICATION_GROUP.items,
+    ...OTHER_FEATURES_ITEMS,
+    ...BATCH_GROUP.items,
+  ].map((i) => i.id),
+  configuration: CONFIGURATION_ITEMS.map((i) => i.id),
+  help: HELP_ITEMS.map((i) => i.id),
+};
 
 /**
  * Sidebar v2 glyphs (67router design). Only the icon changes; labels keep their i18n keys so the

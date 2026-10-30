@@ -3,8 +3,11 @@ export * from "./sidebarVisibility/legacy";
 export { COMPRESSION_CONTEXT_GROUP, SIDEBAR_SECTIONS } from "./sidebarVisibility/sections";
 
 import {
+  legacySidebarSectionItemIds,
   migrateHiddenSidebarSectionIds,
   migrateSidebarSectionIds,
+  partlyHiddenLegacySidebarSectionIds,
+  sidebarSectionItemIds,
 } from "./sidebarVisibility/legacy";
 
 import { SIDEBAR_SECTIONS } from "./sidebarVisibility/sections";
@@ -359,4 +362,31 @@ export function normalizeHiddenSidebarItems(value: unknown): HideableSidebarItem
   }
 
   return HIDEABLE_SIDEBAR_ITEM_IDS.filter((item) => hiddenItems.has(item));
+}
+
+/**
+ * Pages hidden by a saved pre-v2 section id that no longer maps onto a whole v2 section (see
+ * `migrateHiddenSidebarSectionIds()`): exactly the pages that legacy section held, minus pages
+ * already inside a hidden v2 section and protected pages.
+ */
+export function resolveLegacyHiddenSidebarItems(hiddenSections: unknown): HideableSidebarItemId[] {
+  const partial = partlyHiddenLegacySidebarSectionIds(hiddenSections);
+  if (partial.length === 0) return [];
+  const covered = sidebarSectionItemIds(migrateHiddenSidebarSectionIds(hiddenSections));
+  return normalizeHiddenSidebarItems(
+    legacySidebarSectionItemIds(partial).filter(
+      (id) => !covered.has(id) && !PROTECTED_SIDEBAR_ITEM_IDS.has(id as SidebarItemId)
+    )
+  );
+}
+
+/** The effective hidden-item list: saved items plus pages hidden by partly-hidden legacy ids. */
+export function resolveHiddenSidebarItems(
+  hiddenItems: unknown,
+  hiddenSections: unknown
+): HideableSidebarItemId[] {
+  return normalizeHiddenSidebarItems([
+    ...(Array.isArray(hiddenItems) ? hiddenItems : []),
+    ...resolveLegacyHiddenSidebarItems(hiddenSections),
+  ]);
 }
