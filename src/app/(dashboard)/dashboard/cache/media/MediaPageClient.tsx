@@ -12,26 +12,21 @@ import Input from "@/shared/components/Input";
 import SegmentedControl from "@/shared/components/SegmentedControl";
 import Select from "@/shared/components/Select";
 import Textarea from "@/shared/components/Textarea";
-import { IMAGE_PROVIDERS } from "@omniroute/open-sse/config/imageRegistryData.ts";
 import { VIDEO_PROVIDERS } from "@omniroute/open-sse/config/videoRegistry.ts";
 import { MUSIC_PROVIDERS } from "@omniroute/open-sse/config/musicRegistry.ts";
-import {
-  AUDIO_SPEECH_PROVIDERS,
-  AUDIO_TRANSCRIPTION_PROVIDERS,
-} from "@omniroute/open-sse/config/audioRegistry.ts";
+import { AUDIO_TRANSCRIPTION_PROVIDERS } from "@omniroute/open-sse/config/audioRegistry.ts";
 import { toProviderModels, type ProviderModelGroup } from "./mediaProviderModels";
 
-type Modality = "image" | "video" | "music" | "speech" | "transcription";
+// Image generation and text-to-speech were removed from 67router; only the kept media
+// endpoints (video, music, transcription) are offered here.
+type Modality = "video" | "music" | "transcription";
 type GenerationResult = {
   type: Modality;
   data: any;
   timestamp: number;
-  audioUrl?: string;
 };
-const IMAGE_PROVIDER_MODELS = toProviderModels(IMAGE_PROVIDERS);
 const VIDEO_PROVIDER_MODELS = toProviderModels(VIDEO_PROVIDERS);
 const MUSIC_PROVIDER_MODELS = toProviderModels(MUSIC_PROVIDERS);
-const SPEECH_PROVIDER_MODELS = toProviderModels(AUDIO_SPEECH_PROVIDERS);
 const TRANSCRIPTION_PROVIDER_MODELS = toProviderModels(AUDIO_TRANSCRIPTION_PROVIDERS);
 
 const MODALITY_CONFIG: Record<
@@ -43,12 +38,6 @@ const MODALITY_CONFIG: Record<
     placeholderKey?: string;
   }
 > = {
-  image: {
-    icon: "image",
-    endpoint: "/api/v1/images/generations",
-    labelKey: "imageGeneration",
-    placeholderKey: "imagePromptPlaceholder",
-  },
   video: {
     icon: "videocam",
     endpoint: "/api/v1/videos/generations",
@@ -61,12 +50,6 @@ const MODALITY_CONFIG: Record<
     labelKey: "musicGeneration",
     placeholderKey: "musicPromptPlaceholder",
   },
-  speech: {
-    icon: "record_voice_over",
-    endpoint: "/api/v1/audio/speech",
-    labelKey: "textToSpeech",
-    placeholderKey: "speechTextPlaceholder",
-  },
   transcription: {
     icon: "mic",
     endpoint: "/api/v1/audio/transcriptions",
@@ -77,220 +60,12 @@ const MODALITY_CONFIG: Record<
 
 // Provider+model registry derived from runtime registries to avoid dashboard drift
 const PROVIDER_MODELS: Record<Modality, ProviderModelGroup[]> = {
-  image: IMAGE_PROVIDER_MODELS,
   video: VIDEO_PROVIDER_MODELS,
   music: MUSIC_PROVIDER_MODELS,
-  speech: SPEECH_PROVIDER_MODELS,
   transcription: TRANSCRIPTION_PROVIDER_MODELS,
 };
-const INITIAL_IMAGE_PROVIDER = PROVIDER_MODELS.image[0];
-const INITIAL_IMAGE_MODEL = INITIAL_IMAGE_PROVIDER?.models[0];
-
-// Voice presets per TTS provider
-const VOICE_PRESETS: Record<string, { id: string; label: string }[]> = {
-  default: [
-    { id: "alloy", label: "Alloy" },
-    { id: "echo", label: "Echo" },
-    { id: "fable", label: "Fable" },
-    { id: "onyx", label: "Onyx" },
-    { id: "nova", label: "Nova" },
-    { id: "shimmer", label: "Shimmer" },
-  ],
-  elevenlabs: [
-    { id: "21m00Tcm4TlvDq8ikWAM", label: "Rachel (EN)" },
-    { id: "AZnzlk1XvdvUeBnXmlld", label: "Domi (EN)" },
-    { id: "EXAVITQu4vr4xnSDxMaL", label: "Bella (EN)" },
-    { id: "ErXwobaYiN019PkySvjV", label: "Antoni (EN)" },
-    { id: "MF3mGyEYCl7XYWbV9V6O", label: "Elli (EN)" },
-    { id: "TxGEqnHWrfWFTfGW9XjX", label: "Josh (EN)" },
-    { id: "VR6AewLTigWG4xSOukaG", label: "Arnold (EN)" },
-    { id: "pNInz6obpgDQGcFmaJgB", label: "Adam (EN)" },
-    { id: "yoZ06aMxZJJ28mfd3POQ", label: "Sam (EN)" },
-  ],
-  kie: [
-    { id: "Rachel", label: "Rachel (EN)" },
-    { id: "Adam", label: "Adam (EN)" },
-    { id: "Brian", label: "Brian (EN)" },
-    { id: "Roger", label: "Roger (EN)" },
-    { id: "Bella", label: "Bella (EN)" },
-  ],
-  cartesia: [
-    { id: "a0e99841-438c-4a64-b679-ae501e7d6091", label: "Barbershop Man" },
-    { id: "694f9389-aac1-45b6-b726-9d9369183238", label: "Friendly Reading Man" },
-    { id: "b7d50908-b17c-442d-ad8d-810c63997ed9", label: "California Girl" },
-  ],
-  deepgram: [
-    { id: "aura-asteria-en", label: "Asteria (EN)" },
-    { id: "aura-luna-en", label: "Luna (EN)" },
-    { id: "aura-stella-en", label: "Stella (EN)" },
-    { id: "aura-zeus-en", label: "Zeus (EN)" },
-    { id: "aura-orion-en", label: "Orion (EN)" },
-  ],
-  inworld: [
-    { id: "Abby", label: "Abby (EN)" },
-    { id: "Alex", label: "Alex (EN)" },
-    { id: "Amina", label: "Amina (EN)" },
-    { id: "Anjali", label: "Anjali (EN)" },
-    { id: "Arjun", label: "Arjun (EN)" },
-    { id: "Ashley", label: "Ashley (EN)" },
-    { id: "Avery", label: "Avery (EN)" },
-    { id: "Bianca", label: "Bianca (EN)" },
-    { id: "Blake", label: "Blake (EN)" },
-    { id: "Brandon", label: "Brandon (EN)" },
-    { id: "Brian", label: "Brian (EN)" },
-    { id: "Callum", label: "Callum (EN)" },
-    { id: "Carter", label: "Carter (EN)" },
-    { id: "Cedric", label: "Cedric (EN)" },
-    { id: "Celeste", label: "Celeste (EN)" },
-    { id: "Chloe", label: "Chloe (EN)" },
-    { id: "Claire", label: "Claire (EN)" },
-    { id: "Clive", label: "Clive (EN)" },
-    { id: "Conrad", label: "Conrad (EN)" },
-    { id: "Craig", label: "Craig (EN)" },
-    { id: "Damon", label: "Damon (EN)" },
-    { id: "Darlene", label: "Darlene (EN)" },
-    { id: "Deborah", label: "Deborah (EN)" },
-    { id: "Dennis", label: "Dennis (EN)" },
-    { id: "Derek", label: "Derek (EN)" },
-    { id: "Dominus", label: "Dominus (EN)" },
-    { id: "Duncan", label: "Duncan (EN)" },
-    { id: "Edward", label: "Edward (EN)" },
-    { id: "Eleanor", label: "Eleanor (EN)" },
-    { id: "Elliot", label: "Elliot (EN)" },
-    { id: "Ethan", label: "Ethan (EN)" },
-    { id: "Evan", label: "Evan (EN)" },
-    { id: "Evelyn", label: "Evelyn (EN)" },
-    { id: "Felix", label: "Felix (EN)" },
-    { id: "Gareth", label: "Gareth (EN)" },
-    { id: "Graham", label: "Graham (EN)" },
-    { id: "Hades", label: "Hades (EN)" },
-    { id: "Hamish", label: "Hamish (EN)" },
-    { id: "Hana", label: "Hana (EN)" },
-    { id: "Hank", label: "Hank (EN)" },
-    { id: "James", label: "James (EN)" },
-    { id: "Jason", label: "Jason (EN)" },
-    { id: "Jessica", label: "Jessica (EN)" },
-    { id: "Jonah", label: "Jonah (EN)" },
-    { id: "Kelsey", label: "Kelsey (EN)" },
-    { id: "Lauren", label: "Lauren (EN)" },
-    { id: "Levi", label: "Levi (EN)" },
-    { id: "Liam", label: "Liam (EN)" },
-    { id: "Loretta", label: "Loretta (EN)" },
-    { id: "Lucian", label: "Lucian (EN)" },
-    { id: "Luna", label: "Luna (EN)" },
-    { id: "Malcolm", label: "Malcolm (EN)" },
-    { id: "Marcus", label: "Marcus (EN)" },
-    { id: "Mark", label: "Mark (EN)" },
-    { id: "Marlene", label: "Marlene (EN)" },
-    { id: "Mia", label: "Mia (EN)" },
-    { id: "Miranda", label: "Miranda (EN)" },
-    { id: "Mortimer", label: "Mortimer (EN)" },
-    { id: "Nadia", label: "Nadia (EN)" },
-    { id: "Naomi", label: "Naomi (EN)" },
-    { id: "Nate", label: "Nate (EN)" },
-    { id: "Oliver", label: "Oliver (EN)" },
-    { id: "Olivia", label: "Olivia (EN)" },
-    { id: "Pippa", label: "Pippa (EN)" },
-    { id: "Pixie", label: "Pixie (EN)" },
-    { id: "Reed", label: "Reed (EN)" },
-    { id: "Riley", label: "Riley (EN)" },
-    { id: "Ronald", label: "Ronald (EN)" },
-    { id: "Rupert", label: "Rupert (EN)" },
-    { id: "Saanvi", label: "Saanvi (EN)" },
-    { id: "Sarah", label: "Sarah (EN)" },
-    { id: "Sebastian", label: "Sebastian (EN)" },
-    { id: "Selene", label: "Selene (EN)" },
-    { id: "Serena", label: "Serena (EN)" },
-    { id: "Simon", label: "Simon (EN)" },
-    { id: "Snik", label: "Snik (EN)" },
-    { id: "Sophie", label: "Sophie (EN)" },
-    { id: "Tessa", label: "Tessa (EN)" },
-    { id: "Theodore", label: "Theodore (EN)" },
-    { id: "Timothy", label: "Timothy (EN)" },
-    { id: "Trevor", label: "Trevor (EN)" },
-    { id: "Tristan", label: "Tristan (EN)" },
-    { id: "Tyler", label: "Tyler (EN)" },
-    { id: "Veronica", label: "Veronica (EN)" },
-    { id: "Victor", label: "Victor (EN)" },
-    { id: "Victoria", label: "Victoria (EN)" },
-    { id: "Vinny", label: "Vinny (EN)" },
-    { id: "Wendy", label: "Wendy (EN)" },
-    { id: "Aanya", label: "Aanya (HI)" },
-    { id: "Aarav", label: "Aarav (HI)" },
-    { id: "Manoj", label: "Manoj (HI)" },
-    { id: "Riya", label: "Riya (HI)" },
-    { id: "Alain", label: "Alain (FR)" },
-    { id: "Étienne", label: "Étienne (FR)" },
-    { id: "Hélène", label: "Hélène (FR)" },
-    { id: "Mathieu", label: "Mathieu (FR)" },
-    { id: "Asuka", label: "Asuka (JP)" },
-    { id: "Haruto", label: "Haruto (JP)" },
-    { id: "Hina", label: "Hina (JP)" },
-    { id: "Satoshi", label: "Satoshi (JP)" },
-    { id: "Beatriz", label: "Beatriz (PT)" },
-    { id: "Heitor", label: "Heitor (PT)" },
-    { id: "Maitê", label: "Maitê (PT)" },
-    { id: "Mariana", label: "Mariana (PT)" },
-    { id: "Murilo", label: "Murilo (PT)" },
-    { id: "Camila", label: "Camila (ES)" },
-    { id: "Diego", label: "Diego (ES)" },
-    { id: "Lupita", label: "Lupita (ES)" },
-    { id: "Mateo", label: "Mateo (ES)" },
-    { id: "Mauricio", label: "Mauricio (ES)" },
-    { id: "Miguel", label: "Miguel (ES)" },
-    { id: "Rafael", label: "Rafael (ES)" },
-    { id: "Sofia", label: "Sofia (ES)" },
-    { id: "Dmitry", label: "Dmitry (RU)" },
-    { id: "Elena", label: "Elena (RU)" },
-    { id: "Nikolai", label: "Nikolai (RU)" },
-    { id: "Svetlana", label: "Svetlana (RU)" },
-    { id: "Erik", label: "Erik (NL)" },
-    { id: "Katrien", label: "Katrien (NL)" },
-    { id: "Lennart", label: "Lennart (NL)" },
-    { id: "Lore", label: "Lore (NL)" },
-    { id: "Gianni", label: "Gianni (IT)" },
-    { id: "Orietta", label: "Orietta (IT)" },
-    { id: "Hyunwoo", label: "Hyunwoo (KO)" },
-    { id: "Minji", label: "Minji (KO)" },
-    { id: "Seojun", label: "Seojun (KO)" },
-    { id: "Yoona", label: "Yoona (KO)" },
-    { id: "Jing", label: "Jing (ZH)" },
-    { id: "Mei", label: "Mei (ZH)" },
-    { id: "Ming", label: "Ming (ZH)" },
-    { id: "Xiaoyin", label: "Xiaoyin (ZH)" },
-    { id: "Xinyi", label: "Xinyi (ZH)" },
-    { id: "Yichen", label: "Yichen (ZH)" },
-    { id: "Johanna", label: "Johanna (DE)" },
-    { id: "Josef", label: "Josef (DE)" },
-    { id: "Nour", label: "Nour (AR)" },
-    { id: "Omar", label: "Omar (AR)" },
-    { id: "Oren", label: "Oren (HE)" },
-    { id: "Yael", label: "Yael (HE)" },
-    { id: "Szymon", label: "Szymon (PL)" },
-    { id: "Wojciech", label: "Wojciech (PL)" },
-  ],
-  "xiaomi-mimo": [
-    { id: "冰糖", label: "冰糖 (Chinese Female)" },
-    { id: "茉莉", label: "茉莉 (Chinese Female)" },
-    { id: "苏打", label: "苏打 (Chinese Male)" },
-    { id: "白桦", label: "白桦 (Chinese Male)" },
-    { id: "Mia", label: "Mia (English Female)" },
-    { id: "Chloe", label: "Chloe (English Female)" },
-    { id: "Milo", label: "Milo (English Male)" },
-    { id: "Dean", label: "Dean (English Male)" },
-  ],
-};
-
-const SPEECH_FORMATS = ["mp3", "wav", "opus", "flac", "pcm"];
-
-function getSpeechFormats(providerId: string): string[] {
-  const providerFormats = AUDIO_SPEECH_PROVIDERS[providerId]?.supportedFormats;
-  return providerFormats?.length ? providerFormats : SPEECH_FORMATS;
-}
-
-function getVoiceList(providerId: string) {
-  return VOICE_PRESETS[providerId] ?? VOICE_PRESETS.default;
-}
+const INITIAL_PROVIDER = PROVIDER_MODELS.video[0];
+const INITIAL_MODEL = INITIAL_PROVIDER?.models[0];
 
 /** Parse a human-readable error from the API error response */
 function parseApiError(
@@ -362,93 +137,26 @@ function formatFileSize(bytes: number): string {
   return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
 }
 
-function fileToDataUrl(file: File, errorMessage: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (typeof reader.result === "string") {
-        resolve(reader.result);
-        return;
-      }
-      reject(new Error(errorMessage));
-    };
-    reader.onerror = () => reject(reader.error || new Error(errorMessage));
-    reader.readAsDataURL(file);
-  });
-}
-
-/** Render image result thumbnails */
-function ImageResults({ data }: { data: any }) {
-  const t = useTranslations("media");
-  const images: Array<{ url?: string; b64_json?: string; revised_prompt?: string }> =
-    data?.data || [];
-  if (images.length === 0) {
-    return <p className="text-sm text-text-muted italic">{t("noImagesReturned")}</p>;
-  }
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {images.map((img, i) => {
-        const src = img.url || (img.b64_json ? `data:image/png;base64,${img.b64_json}` : null);
-        if (!src) return null;
-        return (
-          <div key={i} className="relative group rounded-lg overflow-hidden border border-border">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={src}
-              alt={img.revised_prompt || t("generatedImageAlt", { index: i + 1 })}
-              className="w-full"
-            />
-            <a
-              href={src}
-              download={`image-${i + 1}.png`}
-              className="absolute bottom-2 right-2 bg-surface/90 text-text-main border border-border text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity flex items-center gap-1"
-            >
-              <Icon name="download" size={13} />
-              {t("save")}
-            </a>
-            {img.revised_prompt && (
-              <p
-                className="text-[11px] text-text-muted px-2 py-1 bg-surface/80 truncate"
-                title={img.revised_prompt}
-              >
-                {img.revised_prompt}
-              </p>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
 export default function MediaPageClient() {
   const t = useTranslations("media");
   const tc = useTranslations("common");
-  const [activeTab, setActiveTab] = useState<Modality>("image");
+  const [activeTab, setActiveTab] = useState<Modality>("video");
   const [prompt, setPrompt] = useState("");
 
   // Selected provider and model per modality
-  const [selectedProvider, setSelectedProvider] = useState<string>(
-    INITIAL_IMAGE_PROVIDER?.id ?? ""
-  );
-  const [selectedModel, setSelectedModel] = useState<string>(INITIAL_IMAGE_MODEL?.id ?? "");
+  const [selectedProvider, setSelectedProvider] = useState<string>(INITIAL_PROVIDER?.id ?? "");
+  const [selectedModel, setSelectedModel] = useState<string>(INITIAL_MODEL?.id ?? "");
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<GenerationResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isCredentialsError, setIsCredentialsError] = useState(false);
 
-  // Speech-specific
-  const [speechVoice, setSpeechVoice] = useState("alloy");
-  const [speechFormat, setSpeechFormat] = useState("mp3");
-
   // Transcription-specific
   const MAX_TRANSCRIPTION_FILE_SIZE = 4 * 1024 * 1024 * 1024; // 4 GB
   const promptId = useId();
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [fileSizeError, setFileSizeError] = useState<string | null>(null);
-  const [imageInputFile, setImageInputFile] = useState<File | null>(null);
-  const [imageMaskFile, setImageMaskFile] = useState<File | null>(null);
 
   // Fix #390: Track which local providers (sdwebui, comfyui) are actually configured
   // so we can hide them when they haven't been set up in the providers page
@@ -456,15 +164,6 @@ export default function MediaPageClient() {
   const [configuredLocalProviders, setConfiguredLocalProviders] = useState<Set<string>>(
     new Set(LOCAL_PROVIDERS) // Optimistic: show all until we know otherwise
   );
-
-  useEffect(() => {
-    const audioUrl = result?.audioUrl;
-    return () => {
-      if (audioUrl) {
-        URL.revokeObjectURL(audioUrl);
-      }
-    };
-  }, [result?.audioUrl]);
 
   useEffect(() => {
     // Fetch configured provider connections to determine which local providers are set up
@@ -508,18 +207,12 @@ export default function MediaPageClient() {
     setError(null);
     setIsCredentialsError(false);
     setAudioFile(null);
-    setImageInputFile(null);
-    setImageMaskFile(null);
     // Pick first provider and first model automatically
     const providers = PROVIDER_MODELS[tab] ?? [];
     const firstProvider = providers[0];
     setSelectedProvider(firstProvider?.id ?? "");
     const firstModel = firstProvider?.models[0]?.id ?? "";
     setSelectedModel(firstModel);
-    if (tab === "speech") {
-      setSpeechVoice(getVoiceList(firstProvider?.id ?? "")[0]?.id ?? "alloy");
-      setSpeechFormat(getSpeechFormats(firstProvider?.id ?? "")[0] ?? "mp3");
-    }
   };
 
   const handleProviderChange = (providerId: string) => {
@@ -527,11 +220,6 @@ export default function MediaPageClient() {
     const models = PROVIDER_MODELS[activeTab]?.find((p) => p.id === providerId)?.models ?? [];
     const firstModel = models[0]?.id ?? "";
     setSelectedModel(firstModel);
-    if (activeTab === "speech") {
-      setSpeechVoice(getVoiceList(providerId)[0]?.id ?? "alloy");
-      const formats = getSpeechFormats(providerId);
-      setSpeechFormat((current) => (formats.includes(current) ? current : (formats[0] ?? "mp3")));
-    }
   };
 
   const handleGenerate = async () => {
@@ -544,44 +232,6 @@ export default function MediaPageClient() {
       const config = MODALITY_CONFIG[activeTab];
       const modelId = selectedModel;
       const promptValue = prompt.trim();
-
-      if (activeTab === "speech") {
-        if (!promptValue) {
-          setError(t("enterTextToSynthesize"));
-          setLoading(false);
-          return;
-        }
-        const res = await fetch(config.endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            model: modelId,
-            input: promptValue,
-            voice: speechVoice,
-            response_format: speechFormat,
-          }),
-        });
-        if (!res.ok) {
-          const raw = await res.json().catch(() => ({}));
-          const { message, isCredentials } = parseApiError(
-            raw,
-            res.status,
-            t("requestFailed", { status: res.status })
-          );
-          setIsCredentialsError(isCredentials);
-          throw new Error(message);
-        }
-        const blob = await res.blob();
-        const audioUrl = URL.createObjectURL(blob);
-        setResult({
-          type: "speech",
-          data: { format: speechFormat },
-          timestamp: Date.now(),
-          audioUrl,
-        });
-        setLoading(false);
-        return;
-      }
 
       if (activeTab === "transcription") {
         if (!audioFile) {
@@ -624,39 +274,13 @@ export default function MediaPageClient() {
         return;
       }
 
-      if (activeTab === "image" && selectedProvider === "topaz" && !imageInputFile) {
-        setError(t("topazRequiresImage"));
+      if (!promptValue) {
+        setError(t("enterPrompt"));
         setLoading(false);
         return;
       }
 
-      if (!prompt.trim()) {
-        if (activeTab !== "image" || selectedProvider !== "topaz") {
-          setError(t("enterPrompt"));
-          setLoading(false);
-          return;
-        }
-      }
-
-      const payload: Record<string, unknown> = {
-        model: modelId,
-        prompt:
-          promptValue ||
-          (activeTab === "image" && selectedProvider === "topaz" ? t("enhanceThisImage") : ""),
-        ...(activeTab === "image" ? { size: "1024x1024", n: 1 } : {}),
-      };
-
-      if (activeTab === "image" && imageInputFile) {
-        const imageDataUrl = await fileToDataUrl(imageInputFile, t("failedToReadFile"));
-        payload.image_url = imageDataUrl;
-        payload.imageUrls = [imageDataUrl];
-      }
-
-      if (activeTab === "image" && imageMaskFile) {
-        const maskDataUrl = await fileToDataUrl(imageMaskFile, t("failedToReadFile"));
-        payload.mask = maskDataUrl;
-        payload.mask_url = maskDataUrl;
-      }
+      const payload: Record<string, unknown> = { model: modelId, prompt: promptValue };
 
       const res = await fetch(config.endpoint, {
         method: "POST",
@@ -682,18 +306,8 @@ export default function MediaPageClient() {
   };
 
   const config = MODALITY_CONFIG[activeTab];
-  const voiceList = getVoiceList(selectedProvider);
-  const currentSpeechFormats = getSpeechFormats(selectedProvider);
-  const isTopazImageFlow = activeTab === "image" && selectedProvider === "topaz";
   const isGenerateDisabled =
-    loading ||
-    (activeTab === "transcription"
-      ? !audioFile
-      : activeTab === "image"
-        ? isTopazImageFlow
-          ? !imageInputFile
-          : !prompt.trim()
-        : !prompt.trim());
+    loading || (activeTab === "transcription" ? !audioFile : !prompt.trim());
 
   return (
     <div className="space-y-6">
@@ -745,24 +359,6 @@ export default function MediaPageClient() {
           </p>
         )}
 
-        {/* Speech: voice + format */}
-        {activeTab === "speech" && (
-          <div className="grid grid-cols-2 gap-4">
-            <Select
-              label={t("voice")}
-              value={speechVoice}
-              onChange={(e) => setSpeechVoice(e.target.value)}
-              options={voiceList.map((v) => ({ value: v.id, label: v.label }))}
-            />
-            <Select
-              label={t("format")}
-              value={speechFormat}
-              onChange={(e) => setSpeechFormat(e.target.value)}
-              options={currentSpeechFormats.map((f) => ({ value: f, label: f }))}
-            />
-          </div>
-        )}
-
         {/* Transcription: file upload */}
         {activeTab === "transcription" ? (
           <Input
@@ -797,68 +393,14 @@ export default function MediaPageClient() {
           />
         ) : (
           <>
-            {activeTab === "image" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Input
-                  type="file"
-                  accept="image/*"
-                  label={t("sourceImage")}
-                  hint={
-                    <>
-                      {imageInputFile && (
-                        <span className="block">
-                          {imageInputFile.name} ({formatFileSize(imageInputFile.size)})
-                        </span>
-                      )}
-                      <span className="block">{t("sourceImageHint")}</span>
-                    </>
-                  }
-                  inputClassName={FILE_INPUT_CLASS}
-                  onChange={(e) => setImageInputFile(e.target.files?.[0] ?? null)}
-                />
-                <Input
-                  type="file"
-                  accept="image/*"
-                  label={t("maskImage")}
-                  hint={
-                    <>
-                      {imageMaskFile && (
-                        <span className="block">
-                          {imageMaskFile.name} ({formatFileSize(imageMaskFile.size)})
-                        </span>
-                      )}
-                      <span className="block">{t("maskImageHint")}</span>
-                    </>
-                  }
-                  inputClassName={FILE_INPUT_CLASS}
-                  onChange={(e) => setImageMaskFile(e.target.files?.[0] ?? null)}
-                />
-              </div>
-            )}
-
             {/* Prompt / Text */}
-            <Field
-              htmlFor={promptId}
-              label={
-                activeTab === "speech"
-                  ? t("text")
-                  : activeTab === "image" && selectedProvider === "topaz"
-                    ? t("promptOptional")
-                    : t("prompt")
-              }
-            >
+            <Field htmlFor={promptId} label={t("prompt")}>
               <Textarea
                 id={promptId}
                 rows={3}
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
-                placeholder={
-                  activeTab === "image" && selectedProvider === "topaz"
-                    ? t("enhancementInstructionsPlaceholder")
-                    : config.placeholderKey
-                      ? t(config.placeholderKey)
-                      : undefined
-                }
+                placeholder={config.placeholderKey ? t(config.placeholderKey) : undefined}
                 className="resize-none"
               />
             </Field>
@@ -873,27 +415,15 @@ export default function MediaPageClient() {
           onClick={handleGenerate}
           disabled={isGenerateDisabled}
           loading={loading}
-          icon={
-            loading
-              ? undefined
-              : activeTab === "speech"
-                ? "volume_up"
-                : activeTab === "transcription"
-                  ? "mic"
-                  : "auto_awesome"
-          }
+          icon={loading ? undefined : activeTab === "transcription" ? "mic" : "auto_awesome"}
         >
           {loading
-            ? activeTab === "speech"
-              ? t("synthesizing")
-              : activeTab === "transcription"
-                ? t("transcribing")
-                : t("generating")
-            : activeTab === "speech"
-              ? t("synthesizeSpeech")
-              : activeTab === "transcription"
-                ? t("transcribeAudio")
-                : t("generateModality", { modality: t(config.labelKey) })}
+            ? activeTab === "transcription"
+              ? t("transcribing")
+              : t("generating")
+            : activeTab === "transcription"
+              ? t("transcribeAudio")
+              : t("generateModality", { modality: t(config.labelKey) })}
         </Button>
       </Card>
 
@@ -931,21 +461,7 @@ export default function MediaPageClient() {
             </span>
           </div>
 
-          {result.type === "speech" && result.audioUrl ? (
-            <div className="space-y-3">
-              <audio controls src={result.audioUrl} className="w-full rounded-lg" autoPlay />
-              <a
-                href={result.audioUrl}
-                download={`speech.${result.data?.format || "mp3"}`}
-                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-              >
-                <Icon name="download" size={16} />
-                {t("downloadFormat", { format: result.data?.format?.toUpperCase() || "MP3" })}
-              </a>
-            </div>
-          ) : result.type === "image" ? (
-            <ImageResults data={result.data} />
-          ) : result.type === "transcription" ? (
+          {result.type === "transcription" ? (
             <div className="space-y-3">
               <div className="bg-bg-subtle rounded-lg p-4 text-sm text-text-main leading-relaxed whitespace-pre-wrap">
                 {result.data?.text || (
@@ -972,7 +488,7 @@ export default function MediaPageClient() {
       )}
 
       {/* Info cards */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {(Object.keys(MODALITY_CONFIG) as Modality[]).map((key) => {
           const cfg = MODALITY_CONFIG[key];
           const providerCount = PROVIDER_MODELS[key]?.length ?? 0;

@@ -168,17 +168,17 @@ describe("ApiTab", () => {
     expect(editors.length).toBeGreaterThanOrEqual(1);
   });
 
-  it("renders all 10 endpoint options in select", async () => {
+  it("renders all 8 endpoint options in select", async () => {
     const el = renderApiTab();
     await waitFor(() => el.querySelector("select") !== null);
 
     const selects = el.querySelectorAll("select");
     // First select should be the endpoint select
     const endpointSelect = selects[0] as HTMLSelectElement;
-    expect(endpointSelect.options.length).toBe(10);
+    expect(endpointSelect.options.length).toBe(8);
   });
 
-  it("verifies the 10 endpoint paths are present in the endpoint options", async () => {
+  it("verifies the 8 endpoint paths are present in the endpoint options", async () => {
     const el = renderApiTab();
     await waitFor(() => el.querySelector("select") !== null);
 
@@ -187,9 +187,9 @@ describe("ApiTab", () => {
 
     expect(optionValues).toContain("chat");
     expect(optionValues).toContain("responses");
-    expect(optionValues).toContain("images");
     expect(optionValues).toContain("embeddings");
-    expect(optionValues).toContain("speech");
+    expect(optionValues).not.toContain("images");
+    expect(optionValues).not.toContain("speech");
     expect(optionValues).toContain("transcription");
     expect(optionValues).toContain("video");
     expect(optionValues).toContain("music");
@@ -280,115 +280,6 @@ describe("ApiTab", () => {
     const editors = el.querySelectorAll("[data-testid='monaco-editor']");
     const responseEditor = editors[1] as HTMLTextAreaElement;
     expect(responseEditor.value).toContain("Hello!");
-  });
-
-  it("opts image requests into the bounded stream and renders the restored image", async () => {
-    let capturedHeaders: Record<string, string> | undefined;
-    const imageBody = JSON.stringify({
-      data: [{ url: "https://cdn.example.com/api-image.png" }],
-    });
-    const terminal = `: keepalive\n\nevent: playground.image.result\ndata: ${JSON.stringify({
-      status: 200,
-      body: imageBody,
-      headers: { "content-type": "application/json" },
-    })}\n\n`;
-    mockFetch.mockImplementation(async (url: string, init?: RequestInit) => {
-      if (typeof url === "string" && url.includes("/v1/models")) {
-        return new Response(JSON.stringify({ data: [{ id: "openai/gpt-image-2" }] }), {
-          headers: { "content-type": "application/json" },
-        });
-      }
-      if (typeof url === "string" && url.includes("/api/providers/client")) {
-        return new Response(JSON.stringify({ connections: [] }), {
-          headers: { "content-type": "application/json" },
-        });
-      }
-      capturedHeaders = init?.headers as Record<string, string>;
-      return new Response(terminal, {
-        status: 200,
-        headers: { "content-type": "text/event-stream" },
-      });
-    });
-
-    const el = renderApiTab();
-    await waitFor(() => el.querySelectorAll("select").length >= 3);
-    const endpointSelect = el.querySelectorAll("select")[0] as HTMLSelectElement;
-    act(() => {
-      endpointSelect.value = "images";
-      endpointSelect.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-    const modelSelect = el.querySelectorAll("select")[2] as HTMLSelectElement;
-    await waitFor(() => modelSelect.options.length > 0);
-    act(() => {
-      modelSelect.value = "openai/gpt-image-2";
-      modelSelect.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-    const sendBtn = Array.from(el.querySelectorAll("button")).find((button) =>
-      button.textContent?.includes("send")
-    );
-
-    await act(async () => sendBtn?.click());
-    await waitFor(() => el.querySelector("img") !== null);
-
-    expect(capturedHeaders?.["X-OmniRoute-Playground-Stream"]).toBe("1");
-    expect((el.querySelector("img") as HTMLImageElement).src).toBe(
-      "https://cdn.example.com/api-image.png"
-    );
-  });
-
-  it("keeps the image response preview after the shared renderer extraction", async () => {
-    mockFetch.mockImplementation(async (url: string) => {
-      if (typeof url === "string" && url.includes("/v1/models")) {
-        return new Response(JSON.stringify({ data: [{ id: "image-provider/model-image" }] }), {
-          headers: { "content-type": "application/json" },
-        });
-      }
-      if (typeof url === "string" && url.includes("/api/providers/client")) {
-        return new Response(JSON.stringify({ connections: [] }), {
-          headers: { "content-type": "application/json" },
-        });
-      }
-      return new Response(
-        JSON.stringify({
-          data: [
-            { b64_json: "QUJDRA==", revised_prompt: "Synthetic image" },
-            { url: "javascript:alert(1)", revised_prompt: "Unsafe image" },
-          ],
-        }),
-        { status: 200, headers: { "content-type": "application/json" } }
-      );
-    });
-    const el = renderApiTab();
-    await waitFor(() => el.querySelectorAll("select").length >= 3);
-    const [endpointSelect, , modelSelect] = Array.from(
-      el.querySelectorAll<HTMLSelectElement>("select")
-    );
-    await waitFor(() => modelSelect.options.length > 0);
-
-    act(() => {
-      endpointSelect.value = "images";
-      endpointSelect.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-    act(() => {
-      modelSelect.value = "image-provider/model-image";
-      modelSelect.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-    const sendBtn = Array.from(el.querySelectorAll("button")).find((button) =>
-      button.textContent?.includes("send")
-    ) as HTMLButtonElement | undefined;
-    expect(sendBtn?.disabled).toBe(false);
-
-    await act(async () => {
-      sendBtn?.click();
-    });
-    await waitFor(() => el.querySelector("img") !== null);
-
-    const image = el.querySelector("img") as HTMLImageElement;
-    expect(el.querySelectorAll("img")).toHaveLength(1);
-    expect(image.getAttribute("src")).toBe("data:image/png;base64,QUJDRA==");
-    expect(image.alt).toBe("Synthetic image");
-    expect(el.querySelector('a[href^="javascript:"]')).toBeNull();
-    expect(el.querySelector("a[download]")?.className).toContain("focus-visible:opacity-100");
   });
 
   it("shows info banner", async () => {

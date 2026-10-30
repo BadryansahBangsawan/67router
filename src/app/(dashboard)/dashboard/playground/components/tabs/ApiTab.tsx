@@ -59,22 +59,10 @@ const DEFAULT_BODIES: Record<string, object> = {
     input: "Hello! Say hi in one sentence.",
     stream: false,
   },
-  images: {
-    model: "",
-    prompt: "A beautiful sunset over mountains",
-    n: 1,
-    size: "1024x1024",
-  },
   embeddings: {
     model: "",
     input: "Hello world",
     encoding_format: "float",
-  },
-  speech: {
-    model: "openai/tts-1",
-    input: "Hello, this is a test of the text-to-speech endpoint.",
-    voice: "alloy",
-    response_format: "mp3",
   },
   transcription: {
     model: "deepgram/nova-3",
@@ -110,9 +98,7 @@ const DEFAULT_BODIES: Record<string, object> = {
 const ENDPOINT_PATHS: Record<string, string> = {
   chat: "/v1/chat/completions",
   responses: "/v1/responses",
-  images: "/v1/images/generations",
   embeddings: "/v1/embeddings",
-  speech: "/v1/audio/speech",
   transcription: "/v1/audio/transcriptions",
   video: "/v1/videos/generations",
   music: "/v1/music/generations",
@@ -170,9 +156,7 @@ export default function ApiTab(_props: ApiTabProps) {
     () => [
       { value: "chat", label: t("endpointOptions.chat") },
       { value: "responses", label: t("endpointOptions.responses") },
-      { value: "images", label: t("endpointOptions.images") },
       { value: "embeddings", label: t("endpointOptions.embeddings") },
-      { value: "speech", label: t("endpointOptions.speech") },
       { value: "transcription", label: t("endpointOptions.transcription") },
       { value: "video", label: t("endpointOptions.video") },
       { value: "music", label: t("endpointOptions.music") },

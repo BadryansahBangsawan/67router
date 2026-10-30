@@ -6,11 +6,11 @@
  * answer carries `pending`, Faro is asking for confirmation: the Sim/Não
  * buttons just send "sim"/"não" — the safety gate lives in Faro's engine.
  *
- * Voice (guaranteed cycle, PRD RF4): push-to-talk → MediaRecorder →
- * POST /api/v1/audio/transcriptions (multipart) → text → /ask → response →
- * POST /api/v1/audio/speech → play the returned audio blob. STT/TTS models are
- * operator-configurable (provider/model of THIS OmniRoute install), persisted
- * in localStorage.
+ * Voice input (PRD RF4): push-to-talk → MediaRecorder →
+ * POST /api/v1/audio/transcriptions (multipart) → text → /ask → response shown
+ * as text. 67router removed the text-to-speech endpoint, so answers are not
+ * spoken. The STT model is operator-configurable (provider/model of THIS
+ * OmniRoute install), persisted in localStorage.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -19,7 +19,6 @@ import { useTranslations } from "next-intl";
 import Badge from "@/shared/components/Badge";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
-import Checkbox from "@/shared/components/Checkbox";
 import Icon from "@/shared/components/Icon";
 import Input from "@/shared/components/Input";
 
@@ -28,10 +27,9 @@ interface ChatMessage {
   text: string;
 }
 
-type VoiceState = "idle" | "listening" | "thinking" | "speaking";
+type VoiceState = "idle" | "listening" | "thinking";
 
 const STT_KEY = "conductor.sttModel";
-const TTS_KEY = "conductor.ttsModel";
 
 function safeGet(key: string, fallback: string): string {
   try {
@@ -57,9 +55,7 @@ export default function FaroChat() {
   const [pending, setPending] = useState(false);
   const [busy, setBusy] = useState(false);
   const [voice, setVoice] = useState<VoiceState>("idle");
-  const [speak, setSpeak] = useState(false);
   const [sttModel, setSttModel] = useState("openai/whisper-1");
-  const [ttsModel, setTtsModel] = useState("openai/tts-1");
   const [err, setErr] = useState("");
   const recorderRef = useRef<MediaRecorder | null>(null);
   const logRef = useRef<HTMLDivElement>(null);
@@ -68,46 +64,22 @@ export default function FaroChat() {
     void (async () => {
       await Promise.resolve();
       setSttModel(safeGet(STT_KEY, "openai/whisper-1"));
-      setTtsModel(safeGet(TTS_KEY, "openai/tts-1"));
     })();
   }, []);
   useEffect(() => {
     logRef.current?.scrollTo({ top: logRef.current.scrollHeight });
   }, [messages]);
 
-  const persistModels = (stt: string, tts: string) => {
+  const persistSttModel = (stt: string) => {
     setSttModel(stt);
-    setTtsModel(tts);
     try {
       localStorage.setItem(STT_KEY, stt);
-      localStorage.setItem(TTS_KEY, tts);
     } catch {
       // modo privado: segue só em memória
     }
   };
 
-  const playAnswer = async (text: string) => {
-    setVoice("speaking");
-    try {
-      const res = await fetch("/api/v1/audio/speech", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model: ttsModel, input: text }),
-      });
-      if (!res.ok) {
-        setErr(await errorMessageOf(res, t("ttsFailed")));
-        return;
-      }
-      const url = URL.createObjectURL(await res.blob());
-      const audio = new Audio(url);
-      await audio.play().catch(() => undefined);
-      audio.onended = () => URL.revokeObjectURL(url);
-    } finally {
-      setVoice("idle");
-    }
-  };
-
-  const send = async (message: string, viaVoice = false) => {
+  const send = async (message: string) => {
     const clean = message.trim();
     if (!clean || busy) return;
     setErr("");
@@ -128,7 +100,6 @@ export default function FaroChat() {
       const data = await res.json();
       setMessages((m) => [...m, { role: "faro", text: data.text }]);
       setPending(Boolean(data.pending));
-      if (viaVoice && speak && data.text) await playAnswer(data.text);
     } catch {
       setErr(t("faroOffline"));
     } finally {
@@ -160,7 +131,7 @@ export default function FaroChat() {
             return;
           }
           const data = await res.json();
-          if (data.text) await send(data.text, true);
+          if (data.text) await send(data.text);
           else setVoice("idle");
         } catch {
           setErr(t("sttFailed"));
@@ -184,7 +155,6 @@ export default function FaroChat() {
     idle: t("voiceIdle"),
     listening: t("voiceListening"),
     thinking: t("voiceThinking"),
-    speaking: t("voiceSpeaking"),
   };
 
   return (
@@ -251,12 +221,6 @@ export default function FaroChat() {
             <Icon name="mic" size={14} />
             {voiceLabel[voice]}
           </Button>
-          <Checkbox
-            className="text-xs"
-            label={t("speakAnswers")}
-            checked={speak}
-            onChange={(e) => setSpeak(e.target.checked)}
-          />
         </div>
 
         <details className="text-xs text-text-muted">
@@ -266,13 +230,7 @@ export default function FaroChat() {
               className="flex-1"
               label="STT"
               value={sttModel}
-              onChange={(e) => persistModels(e.target.value, ttsModel)}
-            />
-            <Input
-              className="flex-1"
-              label="TTS"
-              value={ttsModel}
-              onChange={(e) => persistModels(sttModel, e.target.value)}
+              onChange={(e) => persistSttModel(e.target.value)}
             />
           </div>
         </details>
