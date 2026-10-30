@@ -91,6 +91,25 @@ describe("Collapsible / CollapsibleSection / SegmentedControl adapters", () => {
     }
   });
 
+  it("SegmentedControl variant=underline renders kit underline tabs at natural width", () => {
+    const { container } = render(
+      <SegmentedControl
+        aria-label="Sections"
+        variant="underline"
+        value="a"
+        options={[
+          { value: "a", label: "A" },
+          { value: "b", label: "B" },
+        ]}
+      />
+    );
+    expect(container.querySelector(".ci-tabs--underline")).not.toBeNull();
+    expect(container.querySelector(".ci-tabs--capsule")).toBeNull();
+    const list = screen.getByRole("tablist", { name: "Sections" });
+    expect(list.classList.contains("w-full")).toBe(false);
+    expect(list.classList.contains("[&>*]:flex-1")).toBe(false);
+  });
+
   it("a closed CollapsibleSection keeps its content out of the tab order", () => {
     render(
       <CollapsibleSection title="Closed" defaultOpen={false}>
