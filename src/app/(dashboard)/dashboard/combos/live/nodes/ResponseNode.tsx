@@ -66,7 +66,7 @@ export function ResponseNode({ data }: NodeProps) {
 
       {/* Outcome indicator */}
       <span
-        className="text-[10px] font-semibold uppercase tracking-wide"
+        className="text-[10px] font-semibold uppercase tracking-[0.04em]"
         style={{ color }}
         data-testid="response-outcome"
       >
@@ -81,7 +81,7 @@ export function ResponseNode({ data }: NodeProps) {
       )}
 
       {/* Response label */}
-      <span className="text-xs font-bold" style={{ color }}>
+      <span className="text-xs font-semibold" style={{ color }}>
         Response
       </span>
     </div>

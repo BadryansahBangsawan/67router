@@ -366,13 +366,17 @@ export default function RadarPage() {
 
       {/* Feed freshness header */}
       {meta && (
-        <div className="flex items-center gap-4 text-sm text-text-muted">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[13px] text-text-muted">
           <span>
             {t("feedVersion")}: <span className="font-mono">{meta.version}</span>
           </span>
           <span>
             {t("feedTier")}:{" "}
-            <span className={meta.tier === "live" ? "text-success" : "text-warning"}>
+            <span className="inline-flex items-center gap-1.5 text-text-main">
+              <span
+                aria-hidden="true"
+                className={`size-2 rounded-full ${meta.tier === "live" ? "bg-success" : "bg-warning"}`}
+              />
               {meta.tier === "live" ? t("tierLive") : t("tierCommunity")}
             </span>
           </span>
@@ -382,7 +386,11 @@ export default function RadarPage() {
         </div>
       )}
 
-      {error && <div className="p-3 rounded-lg bg-error/10 text-error text-sm">{error}</div>}
+      {error && (
+        <div className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error">
+          {error}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex items-center justify-center min-h-[200px]">
@@ -394,7 +402,7 @@ export default function RadarPage() {
           {pageState === "optin_pending" && (
             <Card>
               <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 py-8 text-center">
-                <Icon name="radar" size={36} className="text-primary" />
+                <Icon name="radar" size={36} className="text-text-muted" />
                 <h2 className="text-xl font-semibold">{t("activateTitle")}</h2>
                 <p className="max-w-2xl text-text-muted">{t("activateDescription")}</p>
 
@@ -403,7 +411,7 @@ export default function RadarPage() {
                 {/* F4/T7 — ways to obtain a supporter key. These conditions
                     intentionally precede both activation actions (D32). */}
                 {contributorClaimUrl && supporterPlansUrl && (
-                  <div className="flex w-full flex-col gap-3 rounded-xl border border-border p-4">
+                  <div className="flex w-full flex-col gap-3 rounded-card border border-border p-4">
                     <p className="text-sm font-medium">{t("claimSectionTitle")}</p>
                     <div className="flex w-full flex-col gap-3 sm:flex-row">
                       <a

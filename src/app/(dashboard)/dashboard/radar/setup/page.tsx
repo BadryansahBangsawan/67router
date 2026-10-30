@@ -187,7 +187,11 @@ function RadarSetupPageContent() {
         description={t("setupSubtitle")}
       />
 
-      {error && <div className="p-3 rounded-lg bg-error/10 text-error text-sm">{error}</div>}
+      {error && (
+        <div className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error">
+          {error}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex items-center justify-center min-h-[200px]">
@@ -230,7 +234,7 @@ function RadarSetupPageContent() {
                 <ol className="flex flex-col gap-3">
                   {setupData.setup.steps.map((step, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-medium">
+                      <span className="flex-shrink-0 w-7 h-7 rounded-full border border-border bg-surface text-text-muted flex items-center justify-center text-sm font-medium">
                         {idx + 1}
                       </span>
                       <span className="text-sm text-text-muted pt-1">
