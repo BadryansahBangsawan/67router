@@ -172,13 +172,6 @@
       "period": "Saklaw ng oras: 1d|7d|30d|90d|ytd|all (default: 30d)",
       "provider": "I-filter ayon sa provider ID"
     },
-    "budget": {
-      "description": "Pamahalaan ang mga badyet sa gastos",
-      "set": {
-        "scope": "Saklaw ng badyet (default: global)",
-        "period": "Panahon ng badyet: daily|weekly|monthly (default: monthly)"
-      }
-    },
     "quota": {
       "description": "Ipakita ang paggamit ng quota ng provider",
       "provider": "I-filter ayon sa provider ID",

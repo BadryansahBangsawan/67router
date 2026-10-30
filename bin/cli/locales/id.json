@@ -172,13 +172,6 @@
       "period": "Rentang waktu: 1d|7d|30d|90d|ytd|all (default: 30d)",
       "provider": "Filter berdasarkan ID provider"
     },
-    "budget": {
-      "description": "Kelola anggaran biaya",
-      "set": {
-        "scope": "Cakupan anggaran (default: global)",
-        "period": "Periode anggaran: daily|weekly|monthly (default: monthly)"
-      }
-    },
     "quota": {
       "description": "Tampilkan penggunaan kuota provider",
       "provider": "Filter berdasarkan ID provider",

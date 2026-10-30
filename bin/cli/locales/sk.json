@@ -172,13 +172,6 @@
       "period": "Časový rozsah: 1d|7d|30d|90d|ytd|all (predvolené: 30d)",
       "provider": "Filtrovať podľa ID poskytovateľa"
     },
-    "budget": {
-      "description": "Spravovať rozpočty nákladov",
-      "set": {
-        "scope": "Rozsah rozpočtu (predvolené: global)",
-        "period": "Obdobie rozpočtu: daily|weekly|monthly (predvolené: monthly)"
-      }
-    },
     "quota": {
       "description": "Zobraziť využitie kvóty poskytovateľa",
       "provider": "Filtrovať podľa ID poskytovateľa",

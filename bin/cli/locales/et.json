@@ -172,13 +172,6 @@
       "period": "Ajavahemik: 1d|7d|30d|90d|ytd|all (vaikimisi: 30d)",
       "provider": "Filtreeri teenusepakkuja ID järgi"
     },
-    "budget": {
-      "description": "Halda kuluüelarveid",
-      "set": {
-        "scope": "Eelarve ulatus (vaikimisi: global)",
-        "period": "Eelarve periood: daily|weekly|monthly (vaikimisi: monthly)"
-      }
-    },
     "quota": {
       "description": "Kuva teenusepakkuja kvoodi kasutus",
       "provider": "Filtreeri teenusepakkuja ID järgi",

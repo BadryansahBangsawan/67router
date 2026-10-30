@@ -17,7 +17,7 @@ See also: [User Guide](./USER_GUIDE.md) · [Features Gallery](./FEATURES.md)
 
 OmniRoute attributes a per-request USD cost to every completion by multiplying token
 counts by a model's pricing rates. These numbers power the **Costs** dashboard, the
-`omniroute cost` / `omniroute usage` CLI, CSV/JSON exports, and per-API-key budgets.
+`omniroute cost` / `omniroute usage` CLI and CSV/JSON exports.
 
 > **The dashboard "cost" is a savings tracker, not a bill.** OmniRoute never charges you
 > — it routes your requests to providers you have already connected (your own
@@ -135,8 +135,6 @@ The Costs area also hosts (all under `/dashboard/costs/`):
 
 - **Pricing** (`/dashboard/costs/pricing`) — view and override per-model prices (renders
   the shared Pricing tab).
-- **Budget** (`/dashboard/costs/budget`) — set per-scope spend limits (renders the shared
-  Budget tab).
 - **Quota Share** (`/dashboard/costs/quota-share`) — shared-quota pools and burn-rate
   views.
 
@@ -157,18 +155,6 @@ noted.
 | `GET`  | `/api/usage/call-logs`   | Per-request call logs (model, tokens, cost, latency, status).                                                                                            |
 | `GET`  | `/api/usage/quota`       | Provider quota status.                                                                                                                                   |
 | `GET`  | `/api/usage/proxy-logs`  | Proxy request logs.                                                                                                                                      |
-
-### Budgets
-
-| Method | Endpoint                 | Purpose                                                                        |
-| ------ | ------------------------ | ------------------------------------------------------------------------------ |
-| `GET`  | `/api/usage/budget`      | Cost summary + budget check for one API key (`apiKeyId` query param required). |
-| `POST` | `/api/usage/budget`      | Set daily/weekly/monthly USD limits + warning threshold for an API key.        |
-| `GET`  | `/api/usage/budget/bulk` | Bulk budget summaries across API keys.                                         |
-
-> The budget API is scoped per **API key** (`apiKeyId`). Limits returned by
-> `GET /api/usage/budget` include `dailyLimitUsd`, `weeklyLimitUsd`, `monthlyLimitUsd`,
-> a `warningThreshold`, and the running totals (`totalCostToday`, `totalCostMonth`, …).
 
 ### Pricing
 
@@ -221,12 +207,6 @@ omniroute usage quota [--provider <id>] [--check]
 omniroute usage utilization [--api-key <k>]
 omniroute usage history [--limit 100]
 omniroute usage proxy-logs [--limit 100]
-
-# Budgets
-omniroute usage budget list
-omniroute usage budget get [scope]
-omniroute usage budget set <amount> [--scope global] [--period monthly]
-omniroute usage budget reset [scope]
 ```
 
 ### `omniroute pricing`

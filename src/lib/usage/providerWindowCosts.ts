@@ -7,7 +7,6 @@
  */
 
 import { setImmediate as yieldToEventLoop } from "node:timers/promises";
-import { getCostSummary } from "@/domain/costRules";
 import { getApiKeys } from "@/lib/db/apiKeys";
 import { getDbInstance } from "@/lib/db/core";
 import { getAllProviderLimitsCache, getProviderLimitsCache } from "@/lib/db/providerLimits";
@@ -94,10 +93,6 @@ export interface ProviderWindowCostBreakdownRow {
   completionTokens: number;
   totalTokens: number;
   costUsd: number;
-  limitUsd: number | null;
-  limitPeriod: string | null;
-  limitUsedPercent: number | null;
-  budgetResetAt: string | null;
   lastUsed: string | null;
   models: ProviderWindowCostModelRow[];
 }
@@ -711,21 +706,6 @@ export async function getProviderWindowCostBreakdown({
       getMatcher,
     });
 
-    let limitUsd: number | null = null;
-    let limitPeriod: string | null = null;
-    let budgetResetAt: string | null = null;
-    if (apiKeyId) {
-      const summary = getCostSummary(apiKeyId);
-      if (summary.activeLimitUsd > 0) {
-        limitUsd = summary.activeLimitUsd;
-        limitPeriod = summary.resetInterval;
-        budgetResetAt =
-          typeof summary.nextResetAt === "number" && Number.isFinite(summary.nextResetAt)
-            ? new Date(summary.nextResetAt).toISOString()
-            : null;
-      }
-    }
-
     const aggregate: ProviderWindowCostAggregateRow = {
       apiKeyKey,
       apiKeyId,
@@ -735,10 +715,6 @@ export async function getProviderWindowCostBreakdown({
       completionTokens: 0,
       totalTokens: 0,
       costUsd: 0,
-      limitUsd,
-      limitPeriod,
-      limitUsedPercent: null,
-      budgetResetAt,
       lastUsed: null,
       models: [],
       modelMap: new Map(),
@@ -775,8 +751,6 @@ export async function getProviderWindowCostBreakdown({
 
   const breakdownRows = Array.from(byApiKey.values())
     .map((row) => {
-      const limitUsedPercent =
-        row.limitUsd && row.limitUsd > 0 ? roundPercent((row.costUsd / row.limitUsd) * 100) : null;
       const models = Array.from(row.modelMap.values())
         .map((model) => ({ ...model, costUsd: roundUsd(model.costUsd) }))
         .sort((left, right) => right.costUsd - left.costUsd);
@@ -785,7 +759,6 @@ export async function getProviderWindowCostBreakdown({
       return {
         ...publicRow,
         costUsd: roundUsd(row.costUsd),
-        limitUsedPercent,
         models,
       };
     })

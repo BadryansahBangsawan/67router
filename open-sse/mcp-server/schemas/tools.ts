@@ -427,7 +427,7 @@ export const costReportTool: McpToolDefinition<typeof costReportInput, typeof co
   scopes: ["read:usage"],
   auditLevel: "basic",
   phase: 1,
-  sourceEndpoints: ["/api/usage/analytics", "/api/usage/budget"],
+  sourceEndpoints: ["/api/usage/analytics"],
 };
 
 // --- Tool 8: omniroute_list_models_catalog ---
@@ -669,7 +669,7 @@ export const setBudgetGuardTool: McpToolDefinition<
   scopes: ["write:budget"],
   auditLevel: "full",
   phase: 2,
-  sourceEndpoints: ["/api/usage/budget"],
+  sourceEndpoints: ["/api/usage/analytics"],
 };
 
 // --- Tool 11: omniroute_set_routing_strategy ---

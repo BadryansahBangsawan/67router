@@ -172,13 +172,6 @@
       "period": "Tidsintervall: 1d|7d|30d|90d|ytd|all (standard: 30d)",
       "provider": "Filtrera efter leverantörs-ID"
     },
-    "budget": {
-      "description": "Hantera kostnadsbudgetar",
-      "set": {
-        "scope": "Budgetomfattning (standard: global)",
-        "period": "Budgetperiod: daily|weekly|monthly (standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Visa användning av leverantörskvot",
       "provider": "Filtrera efter leverantörs-ID",

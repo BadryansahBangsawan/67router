@@ -503,12 +503,12 @@ test("enforceApiKeyPolicy enforces allowedModels for a bare x-api-key (GHSA-2phc
   assert.equal(allowed.rejection, null);
 });
 
-test("enforceApiKeyPolicy rejects disallowed models and exhausted budgets", async () => {
+test("enforceApiKeyPolicy rejects disallowed models and does not gate on recorded spend", async () => {
   const restrictedKey = await createKeyWithPolicy({
     allowedModels: ["openai/gpt-4.1"],
   });
-  const budgetedKey = await createKeyWithPolicy();
-  const policy = await loadPolicy("model-and-budget");
+  const spendingKey = await createKeyWithPolicy();
+  const policy = await loadPolicy("model-and-spend");
 
   const disallowed = await policy.enforceApiKeyPolicy(
     makePolicyRequest(restrictedKey.key),
@@ -517,25 +517,15 @@ test("enforceApiKeyPolicy rejects disallowed models and exhausted budgets", asyn
   assert.equal(disallowed.rejection.status, 403);
   assert.match(await readErrorMessage(disallowed.rejection), /not allowed/);
 
-  const budgetMeta = await apiKeysDb.getApiKeyMetadata(budgetedKey.key);
-  costRules.setBudget(budgetMeta.id, { dailyLimitUsd: 1, warningThreshold: 0.5 });
-  costRules.recordCost(budgetMeta.id, 2);
+  // Domain budgets were removed: recorded spend alone never rejects a request.
+  const spendingMeta = await apiKeysDb.getApiKeyMetadata(spendingKey.key);
+  costRules.recordCost(spendingMeta.id, 1000);
 
-  const overBudget = await policy.enforceApiKeyPolicy(
-    makePolicyRequest(budgetedKey.key),
+  const allowed = await policy.enforceApiKeyPolicy(
+    makePolicyRequest(spendingKey.key),
     "openai/gpt-4.1"
   );
-  assert.equal(overBudget.rejection.status, 429);
-  const budgetBody = await readErrorBody(overBudget.rejection);
-  assert.match(String(budgetBody.error?.message), /Daily budget exceeded/);
-  assert.match(String(budgetBody.error?.message), /Resets in/);
-  assert.equal(budgetBody.error?.code, "budget_exceeded");
-  assert.equal(typeof budgetBody.error?.retry_after, "number");
-  assert.equal(typeof budgetBody.error?.reset_at, "string");
-  assert.equal(
-    overBudget.rejection.headers.get("Retry-After"),
-    String(budgetBody.error?.retry_after)
-  );
+  assert.equal(allowed.rejection, null);
 });
 
 test("enforceApiKeyPolicy returns the token-limit reset instant", async () => {

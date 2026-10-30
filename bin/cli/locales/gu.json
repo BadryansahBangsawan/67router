@@ -172,13 +172,6 @@
       "period": "સમયગાળો: 1d|7d|30d|90d|ytd|all (ડિફૉલ્ટ: 30d)",
       "provider": "પ્રોવાઇડર ID દ્વારા ફિલ્ટર કરો"
     },
-    "budget": {
-      "description": "ખર્ચના બજેટ મેનેજ કરો",
-      "set": {
-        "scope": "બજેટનો વ્યાપ (ડિફૉલ્ટ: global)",
-        "period": "બજેટ અવધિ: daily|weekly|monthly (ડિફૉલ્ટ: monthly)"
-      }
-    },
     "quota": {
       "description": "પ્રોવાઇડરના ક્વોટાનો વપરાશ બતાવો",
       "provider": "પ્રોવાઇડર ID દ્વારા ફિલ્ટર કરો",

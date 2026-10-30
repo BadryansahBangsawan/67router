@@ -172,13 +172,6 @@
       "period": "Tijdsbereik: 1d|7d|30d|90d|ytd|all (standaard: 30d)",
       "provider": "Filteren op provider-ID"
     },
-    "budget": {
-      "description": "Kostenbudgetten beheren",
-      "set": {
-        "scope": "Budgetbereik (standaard: global)",
-        "period": "Budgetperiode: daily|weekly|monthly (standaard: monthly)"
-      }
-    },
     "quota": {
       "description": "Quotagebruik van provider weergeven",
       "provider": "Filteren op provider-ID",

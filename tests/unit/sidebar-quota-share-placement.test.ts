@@ -54,21 +54,6 @@ test("sidebar: no array close ]; between quota and costs-quota-share (same array
   );
 });
 
-// ── Costs section no longer contains costs-quota-share ───────────────────────
-
-test("sidebar: costs section does not have costs-quota-share right after costs-budget", () => {
-  // costs-budget and costs-quota-share should NOT be close neighbours (within 200 chars)
-  const idxBudget = src.indexOf('id: "costs-budget"');
-  const idxQuotaShare = src.indexOf('id: "costs-quota-share"');
-  assert.ok(idxBudget >= 0, 'Could not find id: "costs-budget"');
-  assert.ok(idxQuotaShare >= 0, 'Could not find id: "costs-quota-share"');
-  const gap = Math.abs(idxQuotaShare - idxBudget);
-  assert.ok(
-    gap > 200,
-    `costs-quota-share must NOT be immediately after costs-budget in the costs section (gap: ${gap} chars, expected > 200)`
-  );
-});
-
 // ── Exactly one occurrence of costs-quota-share ───────────────────────────────
 
 test("sidebar: exactly one occurrence of costs-quota-share", () => {

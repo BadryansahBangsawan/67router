@@ -1603,31 +1603,9 @@ GET /api/telemetry/summary
 
 ---
 
-## Budget
-
-```bash
-# Get budget status for all API keys
-GET /api/usage/budget
-
-# Set or update a budget
-POST /api/usage/budget
-Content-Type: application/json
-
-{
-  "apiKeyId": "key-123",
-  "dailyLimitUsd": 5.00,
-  "weeklyLimitUsd": 30.00,
-  "monthlyLimitUsd": 100.00,
-  "warningThreshold": 0.8,
-  "resetInterval": "monthly"
-}
-```
-
-> **Schema notes** (`setBudgetSchema`): `apiKeyId` is required; at least one of `dailyLimitUsd`, `weeklyLimitUsd`, or `monthlyLimitUsd` must be greater than zero. Optional fields: `warningThreshold` (0–1), `resetInterval` (`daily` | `weekly` | `monthly`), `resetTime` (`HH:MM`). The legacy `{keyId, limit, period}` shape returns `400 Bad Request`.
-
 ## Token Limits
 
-Per-API-key **token** budgets (distinct from the USD-based Budget above). Enforced inline on the request path: when a key's current window usage reaches its limit, requests are rejected with `429 Too Many Requests`. Limits can be scoped to a specific `model`, a `provider`, or applied `global`ly across the key; when several limits match a request, the most restrictive one wins.
+Per-API-key **token** budgets. Enforced inline on the request path: when a key's current window usage reaches its limit, requests are rejected with `429 Too Many Requests`. Limits can be scoped to a specific `model`, a `provider`, or applied `global`ly across the key; when several limits match a request, the most restrictive one wins.
 
 ```bash
 # List a key's token limits (includes live window usage)

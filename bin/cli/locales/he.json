@@ -172,13 +172,6 @@
       "period": "טווח זמן: 1d|7d|30d|90d|ytd|all (ברירת מחדל: 30d)",
       "provider": "סינון לפי מזהה ספק"
     },
-    "budget": {
-      "description": "ניהול תקציבי עלויות",
-      "set": {
-        "scope": "תחום התקציב (ברירת מחדל: global)",
-        "period": "תקופת התקציב: daily|weekly|monthly (ברירת מחדל: monthly)"
-      }
-    },
     "quota": {
       "description": "הצגת ניצול מכסת הספק",
       "provider": "סינון לפי מזהה ספק",

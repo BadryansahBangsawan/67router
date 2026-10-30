@@ -13,10 +13,6 @@ interface ProviderWindowCostRow {
   requests: number;
   totalTokens: number;
   costUsd: number;
-  limitUsd: number | null;
-  limitPeriod: string | null;
-  limitUsedPercent: number | null;
-  budgetResetAt: string | null;
   lastUsed: string | null;
 }
 
@@ -253,16 +249,6 @@ export default function ProviderUsdCostModal({
                           <div className="text-sm font-semibold tabular-nums text-text-main">
                             {formatUsd(row.costUsd)}
                           </div>
-                          {row.limitUsd ? (
-                            <div className="mt-0.5 text-[11px] tabular-nums text-text-muted">
-                              {formatPercent(row.limitUsedPercent)} of {formatUsd(row.limitUsd)}
-                              {row.limitPeriod ? ` ${row.limitPeriod}` : ""}
-                            </div>
-                          ) : (
-                            <div className="mt-0.5 text-[11px] text-text-muted">
-                              {t("noUsdLimit")}
-                            </div>
-                          )}
                         </div>
                       </div>
                       <div className="mt-2 h-2 overflow-hidden rounded-sm bg-border/60">

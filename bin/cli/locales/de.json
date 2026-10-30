@@ -172,13 +172,6 @@
       "period": "Zeitraum: 1d|7d|30d|90d|ytd|all (Standard: 30d)",
       "provider": "Nach Anbieter-ID filtern"
     },
-    "budget": {
-      "description": "Kostenbudgets verwalten",
-      "set": {
-        "scope": "Budgetbereich (Standard: global)",
-        "period": "Budgetzeitraum: daily|weekly|monthly (Standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Nutzung des Anbieterkontingents anzeigen",
       "provider": "Nach Anbieter-ID filtern",

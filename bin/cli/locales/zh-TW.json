@@ -172,13 +172,6 @@
       "period": "時間範圍：1d|7d|30d|90d|ytd|all（預設：30d）",
       "provider": "按提供者 ID 篩選"
     },
-    "budget": {
-      "description": "管理成本預算",
-      "set": {
-        "scope": "預算範圍（預設：全域性）",
-        "period": "預算週期：daily|weekly|monthly（預設：monthly）"
-      }
-    },
     "quota": {
       "description": "顯示提供者配額使用情況",
       "provider": "按提供者 ID 篩選",

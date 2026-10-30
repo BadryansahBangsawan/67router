@@ -172,13 +172,6 @@
       "period": "የጊዜ ክልል፦ 1d|7d|30d|90d|ytd|all (ነባሪ፦ 30d)",
       "provider": "በአቅራቢ መታወቂያ አጣራ"
     },
-    "budget": {
-      "description": "የወጪ በጀቶችን ያስተዳድሩ",
-      "set": {
-        "scope": "የበጀት ወሰን (ነባሪ፦ global)",
-        "period": "የበጀት ጊዜ፦ daily|weekly|monthly (ነባሪ፦ monthly)"
-      }
-    },
     "quota": {
       "description": "የአቅራቢውን የኮታ አጠቃቀም አሳይ",
       "provider": "በአቅራቢ መታወቂያ አጣራ",

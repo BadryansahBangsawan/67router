@@ -172,13 +172,6 @@
       "period": "Laika diapazons: 1d|7d|30d|90d|ytd|all (noklusējums: 30d)",
       "provider": "Filtrēt pēc pakalpojuma sniedzēja ID"
     },
-    "budget": {
-      "description": "Pārvaldīt izmaksu budžetus",
-      "set": {
-        "scope": "Budžeta mērogs (noklusējums: globāls)",
-        "period": "Budžeta periods: dienas|nedēļas|mēneša (noklusējums: mēneša)"
-      }
-    },
     "quota": {
       "description": "Rādīt pakalpojuma sniedzēja kvotas izmantojumu",
       "provider": "Filtrēt pēc pakalpojuma sniedzēja ID",

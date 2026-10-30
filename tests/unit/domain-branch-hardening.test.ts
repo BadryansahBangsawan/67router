@@ -391,7 +391,7 @@ test("quotaCache covers empty quotas, invalid dates and fallback percentage norm
   );
 });
 
-test("policyEngine evaluates lockout, budget, fallback chains and policy class actions", () => {
+test("policyEngine evaluates lockout, fallback chains and policy class actions", () => {
   const lockConfig = {
     maxAttempts: 1,
     lockoutDurationMs: 500,
@@ -410,15 +410,13 @@ test("policyEngine evaluates lockout, budget, fallback chains and policy class a
 
   lockoutPolicy.recordSuccess("10.0.0.1");
   Date.now = originalDateNow;
-  costRules.setBudget("key-budget", { dailyLimitUsd: 5, warningThreshold: 0.5 });
-  costRules.recordCost("key-budget", 6);
+  costRules.recordCost("key-spend", 6);
 
-  const overBudget = policyEngineModule.evaluateRequest({
+  const withSpend = policyEngineModule.evaluateRequest({
     model: "claude-sonnet",
-    apiKeyId: "key-budget",
+    apiKeyId: "key-spend",
   });
-  assert.equal(overBudget.allowed, false);
-  assert.equal(overBudget.policyPhase, "budget");
+  assert.equal(withSpend.allowed, true);
 
   fallbackPolicy.registerFallback("claude-sonnet", [
     { provider: "vertex", priority: 2 },

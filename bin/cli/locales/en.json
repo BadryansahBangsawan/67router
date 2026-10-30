@@ -172,13 +172,6 @@
       "period": "Time range: 1d|7d|30d|90d|ytd|all (default: 30d)",
       "provider": "Filter by provider ID"
     },
-    "budget": {
-      "description": "Manage cost budgets",
-      "set": {
-        "scope": "Budget scope (default: global)",
-        "period": "Budget period: daily|weekly|monthly (default: monthly)"
-      }
-    },
     "quota": {
       "description": "Show provider quota usage",
       "provider": "Filter by provider ID",

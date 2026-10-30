@@ -172,13 +172,6 @@
       "period": "Julat masa: 1d|7d|30d|90d|ytd|all (lalai: 30d)",
       "provider": "Tapis mengikut ID penyedia"
     },
-    "budget": {
-      "description": "Urus belanjawan kos",
-      "set": {
-        "scope": "Skop belanjawan (lalai: global)",
-        "period": "Tempoh belanjawan: daily|weekly|monthly (lalai: monthly)"
-      }
-    },
     "quota": {
       "description": "Tunjukkan penggunaan kuota penyedia",
       "provider": "Tapis mengikut ID penyedia",

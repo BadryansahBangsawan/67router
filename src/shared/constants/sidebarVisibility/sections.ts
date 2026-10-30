@@ -491,13 +491,6 @@ const COSTS_ITEMS: readonly SidebarItemDefinition[] = [
     icon: "price_change",
   },
   {
-    id: "costs-budget",
-    href: "/dashboard/costs/budget",
-    i18nKey: "costsBudget",
-    subtitleKey: "costsBudgetSubtitle",
-    icon: "savings",
-  },
-  {
     id: "costs-free-tiers",
     href: "/dashboard/free-tiers",
     i18nKey: "costsFreeTiers",

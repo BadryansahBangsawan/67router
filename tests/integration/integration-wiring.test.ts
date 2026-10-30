@@ -152,7 +152,6 @@ describe("API Routes — existence check", () => {
   const routes = [
     "src/app/api/cache/stats/route.ts",
     "src/app/api/telemetry/summary/route.ts",
-    "src/app/api/usage/budget/route.ts",
     "src/app/api/usage/quota/route.ts",
     "src/app/api/fallback/chains/route.ts",
     "src/app/api/compliance/audit-log/route.ts",
@@ -175,10 +174,6 @@ describe("API Routes — export HTTP methods", () => {
 
   it("/api/telemetry/summary should export GET", () => {
     assertRouteMethods("src/app/api/telemetry/summary/route.ts", ["GET"]);
-  });
-
-  it("/api/usage/budget should export GET and POST", () => {
-    assertRouteMethods("src/app/api/usage/budget/route.ts", ["GET", "POST"]);
   });
 
   it("/api/usage/quota should export GET", () => {

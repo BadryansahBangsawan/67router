@@ -172,13 +172,6 @@
       "period": "Laikotarpis: 1d|7d|30d|90d|ytd|all (numatytoji reikšmė: 30d)",
       "provider": "Filtruoti pagal teikėjo ID"
     },
-    "budget": {
-      "description": "Tvarkyti išlaidų biudžetus",
-      "set": {
-        "scope": "Biudžeto taikymo sritis (numatytoji reikšmė: global)",
-        "period": "Biudžeto laikotarpis: daily|weekly|monthly (numatytoji reikšmė: monthly)"
-      }
-    },
     "quota": {
       "description": "Rodyti teikėjo kvotos naudojimą",
       "provider": "Filtruoti pagal teikėjo ID",

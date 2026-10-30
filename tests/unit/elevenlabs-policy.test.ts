@@ -100,22 +100,6 @@ test.after(() => {
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 });
 
-test("an over-budget key is rejected with 429 on all native ElevenLabs routes without reaching upstream", async () => {
-  const key = await apiKeysDb.createApiKey("EL Budget Key", "machine-elevenlabs-budget");
-  costRules.setBudget(key.id, { dailyLimitUsd: 1, warningThreshold: 0.5 });
-  costRules.recordCost(key.id, 2);
-
-  const upstreamWasCalled = stubUpstream();
-  const responses = await callAllNativeRoutes(key.key);
-
-  for (const response of responses) {
-    assert.equal(response.status, 429);
-    const body = (await response.json()) as { error?: { message?: string } };
-    assert.match(body.error?.message ?? "", /Daily budget exceeded/);
-  }
-  assert.equal(upstreamWasCalled(), false);
-});
-
 test("a key scoped away from the elevenlabs category is rejected with 403 on all native routes", async () => {
   const key = await apiKeysDb.createApiKey("EL Scoped Key", "machine-elevenlabs-scope");
   await apiKeysDb.updateApiKeyPermissions(key.id, { allowedEndpoints: ["chat"] });

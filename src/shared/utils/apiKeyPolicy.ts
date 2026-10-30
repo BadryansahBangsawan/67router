@@ -1,7 +1,7 @@
 /**
  * API Key Policy Enforcement — Shared middleware for all /v1/* endpoints.
  *
- * Enforces API key policies: model restrictions and budget limits.
+ * Enforces API key policies: model restrictions and usage limits.
  * Should be called after API key authentication in every endpoint that
  * accepts a model parameter.
  *
@@ -14,7 +14,6 @@ import { getApiKeyMetadata, isModelAllowedForKey, getApiKeyById } from "@/lib/db
 import { getComboByName } from "@/lib/db/combos";
 import { isDashboardSessionAuthenticated } from "./apiAuth";
 import { resolveComboForModel } from "@/lib/db/modelComboMappings";
-import { checkBudget } from "@/domain/costRules";
 import { checkKeyQuota } from "@/domain/keyQuota";
 import { checkTokenLimits } from "@omniroute/open-sse/services/tokenLimitCounter.ts";
 import {
@@ -442,37 +441,14 @@ export interface ApiKeyPolicyResult {
   rejection: Response | null;
 }
 
-export interface EnforceApiKeyPolicyOptions {
-  /**
-   * Where the metered dollar budget is enforced for this request.
-   *
-   * `"enforce"` (the default) rejects here, the moment the key's allowance is
-   * spent. That is correct for every endpoint that dispatches to a single,
-   * already-determined provider.
-   *
-   * `"defer-to-candidate"` is for callers that route across several provider
-   * candidates. The budget is scoped by apiKeyId and knows nothing about which
-   * provider will serve the request, so rejecting here also rejects flat-rate
-   * subscription capacity that the allowance does not pay for. A caller passing
-   * this MUST re-apply the budget per resolved candidate — see
-   * `lib/usage/meteredBudgetPolicy` — or it drops metered-spend enforcement
-   * entirely. Every other check on this path is unaffected.
-   */
-  meteredBudget?: "enforce" | "defer-to-candidate";
-}
-
 /**
  * Enforce API key policies for a request.
  *
  * Checks:
  * 1. Model restriction — if the key has `allowedModels`, verify the requested model is permitted
- * 2. Budget limit — if the key has a budget configured, verify it hasn't been exceeded
  *
  * @param request - The incoming HTTP request
  * @param modelStr - The model ID from the request body
- * @param options - See {@link EnforceApiKeyPolicyOptions}; omitted means every
- *   check is enforced here, which is the behaviour every caller had before the
- *   option existed.
  * @returns ApiKeyPolicyResult with apiKey, metadata, and optional rejection response
  *
  * @example
@@ -700,40 +676,6 @@ function formatResetDurationSuffix(untilMs: unknown, nowMs = Date.now()): string
   return hours > 0 ? `Resets in ${hours}h ${minutes}m.` : `Resets in ${minutes}m.`;
 }
 
-/**
- * The metered dollar budget check, skipped when the caller defers it to the
- * resolved candidate (see {@link EnforceApiKeyPolicyOptions.meteredBudget}).
- */
-function validateBudgetUnlessDeferred(
-  context: PolicyContext,
-  options: EnforceApiKeyPolicyOptions | undefined
-): Response | null {
-  if (options?.meteredBudget === "defer-to-candidate") return null;
-  return validateBudget(context);
-}
-
-function validateBudget(context: PolicyContext): Response | null {
-  const { apiKeyInfo } = context;
-  if (!apiKeyInfo.id) return null;
-  try {
-    const budgetOk = checkBudget(apiKeyInfo.id);
-    if (budgetOk.allowed) return null;
-    const resetSuffix = formatResetDurationSuffix(budgetOk.budgetResetAt);
-    const reason = budgetOk.reason || "Budget limit exceeded";
-    return errorResponse(
-      HTTP_STATUS.RATE_LIMITED,
-      resetSuffix ? `${reason} ${resetSuffix}` : reason,
-      {
-        code: "budget_exceeded",
-        retryAfter: budgetOk.budgetResetAt,
-      }
-    );
-  } catch (error) {
-    log.error("API_POLICY", "Budget check failed. Request blocked.", { error });
-    return errorResponse(HTTP_STATUS.SERVICE_UNAVAILABLE, "Budget policy unavailable");
-  }
-}
-
 function validateTokenLimit(context: PolicyContext): Response | null {
   const { apiKeyInfo, modelStr } = context;
   if (!apiKeyInfo.id) return null;
@@ -939,8 +881,7 @@ async function validateSelfLoopScopedAccess(
 
 export async function enforceApiKeyPolicy(
   request: Request,
-  modelStr: string | null,
-  options?: EnforceApiKeyPolicyOptions
+  modelStr: string | null
 ): Promise<ApiKeyPolicyResult> {
   const { apiKey, selfLoopScope } = await resolveEnforcedPolicyKey(request);
   if (selfLoopScope.rejection) {
@@ -987,8 +928,6 @@ export async function enforceApiKeyPolicy(
   const modelRejection = await validateModelAccess(context);
   if (modelRejection) return { apiKey, apiKeyInfo, rejection: modelRejection };
 
-  const budgetRejection = validateBudgetUnlessDeferred(context, options);
-  if (budgetRejection) return { apiKey, apiKeyInfo, rejection: budgetRejection };
   const keyQuotaRejection = validateKeyQuota(context);
   if (keyQuotaRejection) return { apiKey, apiKeyInfo, rejection: keyQuotaRejection };
   const tokenRejection = validateTokenLimit(context);

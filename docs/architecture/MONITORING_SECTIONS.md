@@ -36,11 +36,10 @@ Path prefix: `/dashboard/costs/`
 | ------------- | ------------------------------------ | ------------------------------------------------ |
 | Overview      | `/dashboard/costs`                   | Aggregated cost dashboard (moved from Analytics) |
 | Pricing       | `/dashboard/costs/pricing`           | Per-model pricing table                          |
-| Budget        | `/dashboard/costs/budget`            | Budget thresholds + alerts                       |
 | Quota Sharing | `/dashboard/costs/quota-share`       | Quota Share pools + usage                        |
 | Plan Config   | `/dashboard/costs/quota-share/plans` | Per-provider plan overrides                      |
 
-**Rationale**: Pricing, Budget, and Quota Sharing were previously under
+**Rationale**: Pricing and Quota Sharing were previously under
 `Monitoring > Costs Parameters`. Moving them to a dedicated top-level section
 makes them discoverable without navigating through observability tooling.
 
@@ -68,11 +67,11 @@ Monitoring
 
 ### What changed from the old structure
 
-| Before                                                                           | After                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------- |
-| Activity = tab inside Logs that rendered the Audit Log                           | Activity = dedicated feed (`/dashboard/activity`) |
-| Costs Parameters group in Monitoring                                             | Moved to Costs section                            |
-| Flat list: Logs, Activity (logs), Audit, Health, Runtime, Pricing, Budget, Quota | Structured 3-group + dedicated Costs section      |
+| Before                                                                   | After                                             |
+| ------------------------------------------------------------------------ | ------------------------------------------------- |
+| Activity = tab inside Logs that rendered the Audit Log                   | Activity = dedicated feed (`/dashboard/activity`) |
+| Costs Parameters group in Monitoring                                     | Moved to Costs section                            |
+| Flat list: Logs, Activity (logs), Audit, Health, Runtime, Pricing, Quota | Structured 3-group + dedicated Costs section      |
 
 ---
 

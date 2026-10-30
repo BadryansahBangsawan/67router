@@ -1059,24 +1059,13 @@ optimization settings are persisted through `/api/settings/database`; manual cac
 
 ---
 
-### Costs & Budget Management
+### Costs Management
 
 Access via **Dashboard → Costs**.
 
-| Tab         | Purpose                                                                                  |
-| ----------- | ---------------------------------------------------------------------------------------- |
-| **Budget**  | Set spending limits per API key with daily/weekly/monthly budgets and real-time tracking |
-| **Pricing** | View and edit model pricing entries — cost per 1K input/output tokens per provider       |
-
-```bash
-# API: Set a budget
-curl -X POST http://localhost:20128/api/usage/budget \
-  -H "Content-Type: application/json" \
-  -d '{"keyId": "key-123", "limit": 50.00, "period": "monthly"}'
-
-# API: Get current budget status
-curl http://localhost:20128/api/usage/budget
-```
+| Tab         | Purpose                                                                            |
+| ----------- | ---------------------------------------------------------------------------------- |
+| **Pricing** | View and edit model pricing entries — cost per 1K input/output tokens per provider |
 
 **Cost Tracking:** Every request logs token usage and calculates cost using the pricing table. View breakdowns in **Dashboard → Usage** by provider, model, and API key.
 

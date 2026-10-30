@@ -53,6 +53,11 @@ const REMOVED_PATHS: string[] = [
   "src/app/api/webhooks",
   "src/app/(dashboard)/dashboard/webhooks",
   "bin/cli/commands/webhooks.mjs",
+  // domain budgets
+  "src/app/api/usage/budget",
+  "src/app/(dashboard)/dashboard/costs/budget",
+  "src/app/(dashboard)/dashboard/usage/components/BudgetTab.tsx",
+  "src/lib/jobs/budgetResetJob.ts",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -89,6 +94,12 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /api\/webhooks/,
   /dashboard\/webhooks/,
   /\bparseAndValidateWebhookUrl\b/,
+  // domain budgets
+  /api\/usage\/budget/,
+  /usage\/components\/BudgetTab/,
+  /\b(checkBudget|syncAllBudgetSchedules|setBudgetSchema)\b/,
+  /\b(registerBudgetResetJob|budgetResetJob)\b/,
+  /\b(rejectIfMeteredBudgetExceeded|checkMeteredBudgetForProvider)\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

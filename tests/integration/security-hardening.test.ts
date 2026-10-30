@@ -235,7 +235,6 @@ test("ACP agents route requires management authentication before CLI discovery",
 
 test("T06 route payload validation uses validateBody in critical endpoints", () => {
   const targets = [
-    "src/app/api/usage/budget/route.ts",
     "src/app/api/policies/route.ts",
     "src/app/api/fallback/chains/route.ts",
     "src/app/api/models/route.ts",

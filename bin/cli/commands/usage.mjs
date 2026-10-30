@@ -21,15 +21,6 @@ const analyticsSchema = [
   { key: "costUsd", header: "Cost (USD)", formatter: fmtCost },
 ];
 
-const budgetSchema = [
-  { key: "scope", header: "Scope", width: 25 },
-  { key: "period", header: "Period" },
-  { key: "limit", header: "Limit (USD)", formatter: (v) => `$${Number(v).toFixed(2)}` },
-  { key: "used", header: "Used (USD)", formatter: (v) => `$${Number(v).toFixed(2)}` },
-  { key: "remaining", header: "Remaining", formatter: (v) => `$${Number(v).toFixed(2)}` },
-  { key: "pct", header: "%", formatter: (v) => `${(Number(v) * 100).toFixed(1)}%` },
-];
-
 const quotaSchema = [
   { key: "provider", header: "Provider", width: 20 },
   { key: "limit", header: "Limit", formatter: fmtTokens },
@@ -61,17 +52,6 @@ export function registerUsage(program) {
     .option("--period <range>", t("usage.analytics.period"), "30d")
     .option("--provider <id>", t("usage.analytics.provider"))
     .action(runUsageAnalytics);
-
-  // budget
-  const budget = usage.command("budget").description(t("usage.budget.description"));
-  budget.command("list").action(runBudgetList);
-  budget.command("get [scope]").action(runBudgetGet);
-  budget
-    .command("set <amount>")
-    .option("--scope <s>", t("usage.budget.set.scope"), "global")
-    .option("--period <p>", t("usage.budget.set.period"), "monthly")
-    .action(runBudgetSet);
-  budget.command("reset [scope]").action(runBudgetReset);
 
   // quota
   usage
@@ -128,63 +108,6 @@ export async function runUsageAnalytics(opts, cmd) {
     costUsd: r.totalCost ?? r.cost ?? r.costUsd ?? 0,
   }));
   emit(rows, globalOpts, analyticsSchema);
-}
-
-export async function runBudgetList(opts, cmd) {
-  const globalOpts = cmd.optsWithGlobals();
-  const res = await fetchOrExit("/api/usage/budget", globalOpts);
-  const data = await res.json();
-  const rows = normalizeBudgetRows(data);
-  emit(rows, globalOpts, budgetSchema);
-}
-
-export async function runBudgetGet(scope, opts, cmd) {
-  const globalOpts = cmd.optsWithGlobals();
-  const p = new URLSearchParams();
-  if (scope) p.set("scope", scope);
-  const res = await fetchOrExit(`/api/usage/budget?${p}`, globalOpts);
-  const data = await res.json();
-  const rows = normalizeBudgetRows(data);
-  emit(rows, globalOpts, budgetSchema);
-}
-
-export async function runBudgetSet(amount, opts, cmd) {
-  const globalOpts = cmd.optsWithGlobals();
-  const res = await apiFetch("/api/usage/budget", {
-    method: "POST",
-    body: {
-      amount: Number(amount),
-      scope: opts.scope ?? "global",
-      period: opts.period ?? "monthly",
-    },
-    timeout: globalOpts.timeout,
-    acceptNotOk: true,
-  });
-  if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    process.stderr.write(`[error] HTTP ${res.status}: ${txt.slice(0, 200)}\n`);
-    process.exit(res.exitCode ?? 1);
-  }
-  if (!globalOpts.quiet)
-    process.stdout.write(
-      `Budget set: $${Number(amount).toFixed(2)} / ${opts.scope ?? "global"} / ${opts.period ?? "monthly"}\n`
-    );
-}
-
-export async function runBudgetReset(scope, opts, cmd) {
-  const globalOpts = cmd.optsWithGlobals();
-  const res = await apiFetch("/api/usage/budget", {
-    method: "DELETE",
-    body: { scope: scope ?? "global" },
-    timeout: globalOpts.timeout,
-    acceptNotOk: true,
-  });
-  if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    process.stderr.write(`[error] HTTP ${res.status}: ${txt.slice(0, 200)}\n`);
-    process.exit(res.exitCode ?? 1);
-  }
-  if (!globalOpts.quiet) process.stdout.write(`Budget reset: ${scope ?? "global"}\n`);
 }
 
 export async function runUsageQuota(opts, cmd) {
@@ -298,18 +221,6 @@ function toLogRows(items) {
     costUsd: r.cost ?? r.costUsd ?? r.totalCost,
     latencyMs: r.latencyMs ?? r.durationMs,
     status: r.status ?? r.statusCode,
-  }));
-}
-
-function normalizeBudgetRows(data) {
-  const items = toArray(data.budgets ?? data.items ?? (Array.isArray(data) ? data : [data]));
-  return items.map((r) => ({
-    scope: r.scope ?? r.scopeId ?? "global",
-    period: r.period ?? "monthly",
-    limit: r.limit ?? r.amount ?? 0,
-    used: r.used ?? r.spent ?? 0,
-    remaining: r.remaining ?? Math.max(0, (r.limit ?? 0) - (r.used ?? 0)),
-    pct: r.pct ?? (r.limit > 0 ? (r.used ?? 0) / r.limit : 0),
   }));
 }
 

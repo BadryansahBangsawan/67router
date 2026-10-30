@@ -172,13 +172,6 @@
       "period": "সময়সীমা: 1d|7d|30d|90d|ytd|all (ডিফল্ট: 30d)",
       "provider": "প্রোভাইডার ID অনুযায়ী ফিল্টার করুন"
     },
-    "budget": {
-      "description": "ব্যয় বাজেট পরিচালনা করুন",
-      "set": {
-        "scope": "বাজেটের পরিধি (ডিফল্ট: global)",
-        "period": "বাজেটের সময়কাল: daily|weekly|monthly (ডিফল্ট: monthly)"
-      }
-    },
     "quota": {
       "description": "প্রোভাইডারের কোটা ব্যবহার দেখান",
       "provider": "প্রোভাইডার ID অনুযায়ী ফিল্টার করুন",

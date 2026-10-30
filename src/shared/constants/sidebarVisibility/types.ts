@@ -64,7 +64,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "resilience-cooldowns",
   // Costs section
   "costs-pricing",
-  "costs-budget",
   "costs-free-tiers",
   "costs-quota-share",
   "free-provider-rankings",

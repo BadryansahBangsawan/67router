@@ -172,13 +172,6 @@
       "period": "Kipindi: 1d|7d|30d|90d|ytd|all (chaguo-msingi: 30d)",
       "provider": "Chuja kwa kitambulisho cha mtoa huduma"
     },
-    "budget": {
-      "description": "Dhibiti bajeti za gharama",
-      "set": {
-        "scope": "Upeo wa bajeti (chaguo-msingi: global)",
-        "period": "Kipindi cha bajeti: daily|weekly|monthly (chaguo-msingi: monthly)"
-      }
-    },
     "quota": {
       "description": "Onyesha matumizi ya kiwango cha mtoa huduma",
       "provider": "Chuja kwa kitambulisho cha mtoa huduma",

@@ -172,13 +172,6 @@
       "period": "ចន្លោះពេល៖ 1d|7d|30d|90d|ytd|all (លំនាំដើម៖ 30d)",
       "provider": "ត្រងតាមលេខសម្គាល់ provider"
     },
-    "budget": {
-      "description": "គ្រប់គ្រងថវិកាចំណាយ",
-      "set": {
-        "scope": "វិសាលភាពថវិកា (លំនាំដើម៖ global)",
-        "period": "រយៈពេលថវិកា៖ daily|weekly|monthly (លំនាំដើម៖ monthly)"
-      }
-    },
     "quota": {
       "description": "បង្ហាញការប្រើប្រាស់កូតារបស់ provider",
       "provider": "ត្រងតាមលេខសម្គាល់ provider",

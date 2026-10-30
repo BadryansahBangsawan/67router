@@ -172,13 +172,6 @@
       "period": "Période : 1d|7d|30d|90d|ytd|all (par défaut : 30d)",
       "provider": "Filtrer par ID de fournisseur"
     },
-    "budget": {
-      "description": "Gérer les budgets de coûts",
-      "set": {
-        "scope": "Portée du budget (par défaut : globale)",
-        "period": "Période budgétaire : daily|weekly|monthly (par défaut : monthly)"
-      }
-    },
     "quota": {
       "description": "Afficher l’utilisation des quotas des fournisseurs",
       "provider": "Filtrer par ID de fournisseur",

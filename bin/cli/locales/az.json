@@ -172,13 +172,6 @@
       "period": "Vaxt aralığı: 1d|7d|30d|90d|ytd|all (standart: 30d)",
       "provider": "Provayder ID-sinə görə filtrlə"
     },
-    "budget": {
-      "description": "Xərc büdcələrini idarə et",
-      "set": {
-        "scope": "Büdcənin əhatə dairəsi (standart: global)",
-        "period": "Büdcə dövrü: daily|weekly|monthly (standart: monthly)"
-      }
-    },
     "quota": {
       "description": "Provayder kvotasının istifadəsini göstər",
       "provider": "Provayder ID-sinə görə filtrlə",

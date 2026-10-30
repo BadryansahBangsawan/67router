@@ -172,13 +172,6 @@
       "period": "Ogologo oge: 1d|7d|30d|90d|ytd|all (ndabara: 30d)",
       "provider": "Jiri NJ provider nyochaa"
     },
-    "budget": {
-      "description": "Jikwaa mmefu ego",
-      "set": {
-        "scope": "Oke mmefu ego (ndabara: global)",
-        "period": "Oge mmefu ego: daily|weekly|monthly (ndabara: monthly)"
-      }
-    },
     "quota": {
       "description": "Gosi ojiji oke provider",
       "provider": "Jiri NJ provider nyochaa",

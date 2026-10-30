@@ -172,13 +172,6 @@
       "period": "Tidsperiode: 1d|7d|30d|90d|ytd|all (standard: 30d)",
       "provider": "Filtrer etter leverandør-ID"
     },
-    "budget": {
-      "description": "Administrer kostnadsbudsjetter",
-      "set": {
-        "scope": "Budsjettomfang (standard: globalt)",
-        "period": "Budsjettperiode: daily|weekly|monthly (standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Vis leverandørens kvotebruk",
       "provider": "Filtrer etter leverandør-ID",

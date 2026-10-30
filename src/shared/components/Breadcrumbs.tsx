@@ -86,7 +86,6 @@ const PATH_LABELS = {
   rtk: "rtk",
   "session-dedup": "sessionDedup",
   ultra: "ultra",
-  budget: "budget",
   pricing: "pricing",
   "quota-share": "quotaShare",
   discovery: "discovery",

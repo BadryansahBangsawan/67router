@@ -172,13 +172,6 @@
       "period": "期間: 1d|7d|30d|90d|ytd|all（デフォルト: 30d）",
       "provider": "プロバイダーIDで絞り込み"
     },
-    "budget": {
-      "description": "コスト予算を管理",
-      "set": {
-        "scope": "予算の適用範囲（デフォルト: global）",
-        "period": "予算期間: daily|weekly|monthly（デフォルト: monthly）"
-      }
-    },
     "quota": {
       "description": "プロバイダーのクォータ使用状況を表示",
       "provider": "プロバイダーIDで絞り込み",

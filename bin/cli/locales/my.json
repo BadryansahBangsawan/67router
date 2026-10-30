@@ -172,13 +172,6 @@
       "period": "အချိန်အပိုင်းအခြား: 1d|7d|30d|90d|ytd|all (မူလသတ်မှတ်ချက်: 30d)",
       "provider": "Provider ID ဖြင့် စစ်ထုတ်ပါ"
     },
-    "budget": {
-      "description": "ကုန်ကျစရိတ် ဘတ်ဂျက်များကို စီမံပါ",
-      "set": {
-        "scope": "ဘတ်ဂျက်အတိုင်းအတာ (မူလသတ်မှတ်ချက်: global)",
-        "period": "ဘတ်ဂျက်ကာလ: daily|weekly|monthly (မူလသတ်မှတ်ချက်: monthly)"
-      }
-    },
     "quota": {
       "description": "Provider quota အသုံးပြုမှုကို ပြပါ",
       "provider": "Provider ID ဖြင့် စစ်ထုတ်ပါ",

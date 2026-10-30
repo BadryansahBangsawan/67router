@@ -172,13 +172,6 @@
       "period": "Aikaväli: 1d|7d|30d|90d|ytd|all (oletus: 30d)",
       "provider": "Suodata palveluntarjoajan tunnuksen mukaan"
     },
-    "budget": {
-      "description": "Hallinnoi kustannusbudjetteja",
-      "set": {
-        "scope": "Budjetin laajuus (oletus: global)",
-        "period": "Budjettijakso: daily|weekly|monthly (oletus: monthly)"
-      }
-    },
     "quota": {
       "description": "Näytä palveluntarjoajan kiintiön käyttö",
       "provider": "Suodata palveluntarjoajan tunnuksen mukaan",

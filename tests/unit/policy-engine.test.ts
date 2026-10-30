@@ -26,7 +26,7 @@ describe("policyEngine", async () => {
   const { evaluateRequest, evaluateFirstAllowed } =
     await import("../../src/domain/policyEngine.ts");
   const { registerFallback } = await import("../../src/domain/fallbackPolicy.ts");
-  const { setBudget, recordCost } = await import("../../src/domain/costRules.ts");
+  const { recordCost } = await import("../../src/domain/costRules.ts");
   const { recordFailedAttempt } = await import("../../src/domain/lockoutPolicy.ts");
 
   test("allows a basic request with no restrictions", () => {
@@ -48,15 +48,13 @@ describe("policyEngine", async () => {
     assert.ok(verdict.adjustments.fallbackChain.length > 0);
   });
 
-  test("denies when budget is exceeded", () => {
-    const keyId = `pe-budget-${Date.now()}`;
-    setBudget(keyId, { dailyLimitUsd: 0.001 });
+  test("recorded spend never denies a request (domain budgets removed)", () => {
+    const keyId = `pe-spend-${Date.now()}`;
     recordCost(keyId, 100);
 
     const verdict = evaluateRequest({ model: "gpt-4o", apiKeyId: keyId });
-    assert.equal(verdict.allowed, false);
-    assert.equal(verdict.policyPhase, "budget");
-    assert.ok(verdict.reason.includes("Budget exceeded"));
+    assert.equal(verdict.allowed, true);
+    assert.equal(verdict.policyPhase, "passed");
   });
 
   test("denies when client is locked out", () => {
@@ -78,11 +76,12 @@ describe("policyEngine", async () => {
   });
 
   test("evaluateFirstAllowed returns null when all denied", () => {
-    const keyId = `pe-all-denied-${Date.now()}`;
-    setBudget(keyId, { dailyLimitUsd: 0.001 });
-    recordCost(keyId, 100);
+    const ip = `pe-all-denied-${Date.now()}`;
+    for (let i = 0; i < 20; i++) {
+      recordFailedAttempt(ip);
+    }
 
-    const result = evaluateFirstAllowed(["model-a", "model-b"], { apiKeyId: keyId });
+    const result = evaluateFirstAllowed(["model-a", "model-b"], { clientIp: ip });
     assert.equal(result.model, null);
     assert.equal(result.verdict.allowed, false);
   });

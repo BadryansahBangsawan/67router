@@ -97,30 +97,6 @@ curl http://localhost:20128/api/usage/request-logs \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN"
 ```
 
-### GET /api/usage/budget
-
-Get usage budget status
-
-Returns current budget limits and consumption.
-
-```bash
-curl http://localhost:20128/api/usage/budget \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/usage/budget
-
-Configure usage budget
-
-Set or update budget limits for usage tracking.
-
-```bash
-curl -X POST http://localhost:20128/api/usage/budget \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
 ### GET /api/usage/cache-health
 
 Get prompt-cache health summary
@@ -145,15 +121,6 @@ Aggregates `usage_history` rows into per-(provider, model) latency stats (avg/p5
 
 ```bash
 curl http://localhost:20128/api/usage/model-latency-stats \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### GET /api/usage/budget/bulk
-
-GET usage › budget › bulk
-
-```bash
-curl http://localhost:20128/api/usage/budget/bulk \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN"
 ```
 

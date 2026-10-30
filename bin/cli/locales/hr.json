@@ -172,13 +172,6 @@
       "period": "Vremenski raspon: 1d|7d|30d|90d|ytd|all (zadano: 30d)",
       "provider": "Filtriraj prema ID-u pružatelja usluge"
     },
-    "budget": {
-      "description": "Upravljanje troškovnim proračunima",
-      "set": {
-        "scope": "Opseg proračuna (zadano: global)",
-        "period": "Razdoblje proračuna: daily|weekly|monthly (zadano: monthly)"
-      }
-    },
     "quota": {
       "description": "Prikaži iskorištenost kvote pružatelja usluge",
       "provider": "Filtriraj prema ID-u pružatelja usluge",

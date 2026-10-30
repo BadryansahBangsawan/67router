@@ -4145,28 +4145,6 @@ paths:
         "200":
           description: Request log entries
 
-  /api/usage/budget:
-    get:
-      tags: [Usage]
-      summary: Get usage budget status
-      description: Returns current budget limits and consumption.
-      responses:
-        "200":
-          description: Budget status
-    post:
-      tags: [Usage]
-      summary: Configure usage budget
-      description: Set or update budget limits for usage tracking.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Updated budget configuration
-
   /api/usage/cache-health:
     get:
       tags: [Usage]
@@ -13735,14 +13713,6 @@ paths:
       tags:
         - Upstream proxy
       summary: "PUT upstream proxy › <providerId>"
-      responses:
-        "200":
-          description: OK
-  /api/usage/budget/bulk:
-    get:
-      tags:
-        - Usage
-      summary: "GET usage › budget › bulk"
       responses:
         "200":
           description: OK

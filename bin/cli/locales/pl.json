@@ -172,13 +172,6 @@
       "period": "Zakres czasu: 1d|7d|30d|90d|ytd|all (domyślnie: 30d)",
       "provider": "Filtruj według identyfikatora dostawcy"
     },
-    "budget": {
-      "description": "Zarządzaj budżetami kosztów",
-      "set": {
-        "scope": "Zakres budżetu (domyślnie: globalny)",
-        "period": "Okres budżetowy: daily|weekly|monthly (domyślnie: monthly)"
-      }
-    },
     "quota": {
       "description": "Pokaż wykorzystanie limitu dostawcy",
       "provider": "Filtruj według identyfikatora dostawcy",

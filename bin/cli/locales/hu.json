@@ -172,13 +172,6 @@
       "period": "Időtartomány: 1d|7d|30d|90d|ytd|all (alapértelmezett: 30d)",
       "provider": "Szűrés szolgáltatóazonosító alapján"
     },
-    "budget": {
-      "description": "Költségkeretek kezelése",
-      "set": {
-        "scope": "Költségkeret hatóköre (alapértelmezett: global)",
-        "period": "Költségkeret időszaka: daily|weekly|monthly (alapértelmezett: monthly)"
-      }
-    },
     "quota": {
       "description": "Szolgáltatói kvótahasználat megjelenítése",
       "provider": "Szűrés szolgáltatóazonosító alapján",

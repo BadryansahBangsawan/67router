@@ -382,9 +382,8 @@ function scanQuotaSnapshots(
  * so every row it owns looks like a broken reference while being live state —
  * see `@/shared/constants/apiKeyIdentities`.
  *
- * Deleting those rows removes the active spend policy, and `checkBudget()` is
- * fail-open when no budget row exists: the "repair" silently lifts the spend
- * ceiling instead of degrading it. Genuinely unowned rows are still removed.
+ * Deleting those rows would discard live cost history for that key, so they
+ * are skipped. Genuinely unowned rows are still removed.
  */
 const SYNTHETIC_OWNER_IDS = getSyntheticApiKeyIds();
 

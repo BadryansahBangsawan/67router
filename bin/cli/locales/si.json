@@ -172,13 +172,6 @@
       "period": "කාල පරාසය: 1d|7d|30d|90d|ytd|all (පෙරනිමිය: 30d)",
       "provider": "සපයන්නාගේ ID අනුව පෙරහන් කරන්න"
     },
-    "budget": {
-      "description": "පිරිවැය අයවැය කළමනාකරණය කරන්න",
-      "set": {
-        "scope": "අයවැය විෂය පථය (පෙරනිමිය: global)",
-        "period": "අයවැය කාලසීමාව: daily|weekly|monthly (පෙරනිමිය: monthly)"
-      }
-    },
     "quota": {
       "description": "සපයන්නාගේ කෝටා භාවිතය පෙන්වන්න",
       "provider": "සපයන්නාගේ ID අනුව පෙරහන් කරන්න",
