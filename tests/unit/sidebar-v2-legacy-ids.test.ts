@@ -212,13 +212,30 @@ test("a saved pre-v2 item order is merged into the v2 section that now holds the
   // Current key first, then legacy keys in catalog order (home before omni-proxy).
   assert.deepEqual(migrated, {
     routing: ["home", "combos", "providers"],
-    observe: ["logs", "health"],
+    // Legacy "logs" was the Monitoring group: its v2 group "logs-more" joins the order too.
+    observe: ["logs", "health", "logs-more"],
   });
   const routing = SIDEBAR_SECTIONS.find((s) => s.id === "routing")!;
   const sorted = applyItemOrder(routing.children, migrated.routing!).map((c) => c.id);
   assert.deepEqual(sorted.slice(0, 3), ["home", "combos", "providers"]);
   assert.deepEqual(migrateSidebarItemOrder(null), {});
   assert.deepEqual(migrateSidebarItemOrder(["a"]), {});
+});
+
+test("a saved Monitoring order keeps the renamed Logs / Audit groups next to their rows", () => {
+  // Pre-v2 "logs" / "audit" were group ids in Monitoring; in Observe they are flat rows and the
+  // groups are "logs-more" / "audit-more". A legacy order places both where the group was.
+  const migrated = migrateSidebarItemOrder({ monitoring: ["system", "audit", "logs", "activity"] });
+  assert.deepEqual(migrated, {
+    observe: ["system", "audit", "audit-more", "logs", "logs-more", "activity"],
+  });
+  const observe = SIDEBAR_SECTIONS.find((s) => s.id === "observe")!;
+  const sorted = applyItemOrder(observe.children, migrated.observe!).map((c) => c.id);
+  assert.deepEqual(sorted.slice(0, 5), ["system", "audit", "audit-more", "logs", "logs-more"]);
+  // A v2 key already means the flat rows: no expansion.
+  assert.deepEqual(migrateSidebarItemOrder({ observe: ["logs", "audit"] }), {
+    observe: ["logs", "audit"],
+  });
 });
 
 test("renamed sub-groups keep saved hidden group labels; all v2 groups are hideable", () => {

@@ -1,3 +1,4 @@
+import { LEGACY_SIDEBAR_GROUP_ID_MAP } from "../sidebarGroupVisibility";
 import { LEGACY_SIDEBAR_SECTION_ITEMS, SIDEBAR_SECTIONS } from "./sections";
 import type { LegacySidebarSectionId, SidebarItemOrder, SidebarSectionId } from "./types";
 
@@ -143,20 +144,30 @@ export function sidebarSectionItemIds(ids: readonly SidebarSectionId[]): Set<str
 /**
  * Per-section item order: legacy keys are merged into their v2 section (current key first, then
  * legacy keys in catalog order), ids de-duplicated. Child ids are unchanged, so a saved order
- * still sorts the items it names; `applyItemOrder()` ignores ids a section does not hold.
+ * still sorts the items it names; `applyItemOrder()` ignores ids a section does not hold. The
+ * two renamed Monitoring groups expand to row + group (LEGACY_SIDEBAR_GROUP_ID_MAP).
  */
 export function migrateSidebarItemOrder(value: unknown): SidebarItemOrder {
   if (!value || typeof value !== "object" || Array.isArray(value)) return {};
   const source = value as Record<string, unknown>;
   const out: SidebarItemOrder = {};
-  const append = (target: SidebarSectionId, ids: unknown) => {
+  const append = (target: SidebarSectionId, ids: unknown, legacy = false) => {
     if (!Array.isArray(ids)) return;
     const list = (out[target] ??= []);
-    for (const id of ids) if (typeof id === "string" && !list.includes(id)) list.push(id);
+    for (const id of ids) {
+      if (typeof id !== "string") continue;
+      // In a legacy order "logs" / "audit" named the Monitoring groups; v2 splits each into a
+      // flat row plus a renamed group, so both take the group's place.
+      const expanded =
+        legacy && Object.hasOwn(LEGACY_SIDEBAR_GROUP_ID_MAP, id)
+          ? [id, LEGACY_SIDEBAR_GROUP_ID_MAP[id]]
+          : [id];
+      for (const next of expanded) if (!list.includes(next)) list.push(next);
+    }
   };
   for (const id of SIDEBAR_SECTION_IDS) append(id, source[id]);
   for (const legacy of LEGACY_SIDEBAR_SECTION_IDS) {
-    append(LEGACY_SIDEBAR_SECTION_ID_MAP[legacy], source[legacy]);
+    append(LEGACY_SIDEBAR_SECTION_ID_MAP[legacy], source[legacy], true);
   }
   for (const key of Object.keys(out) as SidebarSectionId[]) {
     if (out[key]?.length === 0) delete out[key];
