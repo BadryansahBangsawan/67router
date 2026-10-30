@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Card, Input } from "@/shared/components";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
+import { Button, Input } from "@/shared/components";
 import type { ProviderDisplayMode } from "../providerPageStorage";
 import { CategoryDot } from "./CategoryDot";
 import ProviderDisplayModeControl from "./ProviderDisplayModeControl";
@@ -133,7 +134,7 @@ export default function ProviderSummaryCard({
     { key: "apikey", color: "bg-amber-500", label: t("apiKeyLabel"), stat: summaryStats.apikey },
     {
       key: "compatible",
-      color: "bg-orange-500",
+      color: "bg-sky-500",
       label: t("compatibleLabel"),
       stat: summaryStats.compatible,
     },
@@ -151,7 +152,7 @@ export default function ProviderSummaryCard({
     },
     {
       key: "webfetch",
-      color: "bg-orange-500",
+      color: "bg-pink-500",
       label: t("webFetch"),
       stat: summaryStats.webfetch,
       title: t("webFetchTooltip"),
@@ -176,8 +177,40 @@ export default function ProviderSummaryCard({
     },
   ].filter((category) => category.key !== "no-auth" || category.stat.total > 0);
 
+  // 67router page anatomy: the page header carries the title, the configured count and the
+  // page actions; the search fields and the display-mode switch sit in a toolbar row below it,
+  // and the category filters read as an underline tab row.
   return (
-    <Card padding="sm">
+    <div className="flex flex-col gap-4">
+      <PageHeader
+        title={t("title")}
+        description={
+          <span className="tabular-nums">
+            {summaryStats.all.configured}/{summaryStats.all.total} {t("configured")}
+          </span>
+        }
+        actions={
+          <>
+            <Button size="sm" variant="secondary" icon="upload_file" onClick={onImportFromFile}>
+              {providerText(t, "importFromFile", "Import from file")}
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              icon="play_arrow"
+              loading={testingMode === "all"}
+              onClick={() => onBatchTest("all")}
+              disabled={!!testingMode}
+              title={t("testAll")}
+            >
+              {testingMode === "all" ? t("testing") : t("testAll")}
+            </Button>
+            <Button size="sm" icon="add" onClick={onNewProvider}>
+              {providerText(t, "onboardingWizardShort", "Onboarding Wizard")}
+            </Button>
+          </>
+        }
+      />
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3 flex-wrap">
           <div className="relative flex-1 min-w-[160px]">
@@ -226,26 +259,9 @@ export default function ProviderSummaryCard({
             onChange={onDisplayModeChange}
             t={t}
           />
-          <Button size="sm" icon="add" onClick={onNewProvider}>
-            {providerText(t, "onboardingWizardShort", "Onboarding Wizard")}
-          </Button>
-          <Button size="sm" variant="secondary" icon="upload_file" onClick={onImportFromFile}>
-            {providerText(t, "importFromFile", "Import from file")}
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            icon="play_arrow"
-            loading={testingMode === "all"}
-            onClick={() => onBatchTest("all")}
-            disabled={!!testingMode}
-            title={t("testAll")}
-          >
-            {testingMode === "all" ? t("testing") : t("testAll")}
-          </Button>
         </div>
 
-        <div className="border-t border-border pt-3 flex flex-wrap items-center gap-2 [&>button]:grow [&>button]:justify-center sm:[&>button]:grow-0">
+        <div className="flex flex-wrap items-end gap-x-1 border-b border-border">
           {categories.map((cat) => {
             const isActive =
               (cat.key === null && !activeCategory && !showFreeOnly) ||
@@ -258,17 +274,21 @@ export default function ProviderSummaryCard({
               <Button
                 key={cat.key ?? "all"}
                 size="sm"
-                variant={isActive ? "secondary" : "ghost"}
+                variant="ghost"
                 aria-pressed={isActive}
                 onClick={() => onCategoryChange(cat.key, cat.key === "free")}
-                className="gap-1.5"
+                className={`-mb-px gap-1.5 rounded-none border-b-2 px-2.5 hover:bg-transparent ${
+                  isActive
+                    ? "border-text-main font-medium text-text-main"
+                    : "border-transparent font-normal text-text-muted hover:text-text-main"
+                }`}
                 title={cat.title || cat.label}
               >
                 {cat.color && <CategoryDot color={cat.color} label={cat.label} />}
                 <span>{cat.label}</span>
                 {/* Full-opacity muted ink: the old opacity-70 "/total" fell to 3.28:1 on the kit
                     button (axe color-contrast, F4). */}
-                <span className="text-[11px] text-text-muted">
+                <span className="text-[11px] tabular-nums text-text-muted">
                   {cat.stat.configured}
                   <span>/{cat.stat.total}</span>
                 </span>
@@ -277,8 +297,8 @@ export default function ProviderSummaryCard({
           })}
         </div>
 
-        <div className="border-t border-border pt-3 flex flex-wrap items-center gap-2 [&>button]:grow [&>button]:justify-center sm:[&>button]:grow-0">
-          <span className="text-[11px] font-medium uppercase tracking-wide text-text-muted mr-1">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted mr-1">
             {providerText(t, "filterByMedia", "Media")}
           </span>
           {SERVICE_KIND_CHIPS.map((chip) => {
@@ -309,6 +329,6 @@ export default function ProviderSummaryCard({
           )}
         </div>
       </div>
-    </Card>
+    </div>
   );
 }

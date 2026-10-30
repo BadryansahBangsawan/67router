@@ -100,7 +100,7 @@ const DOT_COLORS: Record<string, string> = {
   "no-auth": "bg-stone-500",
   oauth: "bg-blue-500",
   apikey: "bg-amber-500",
-  compatible: "bg-orange-500",
+  compatible: "bg-sky-500",
   "web-cookie": "bg-purple-500",
   search: "bg-teal-500",
   audio: "bg-rose-500",
@@ -471,8 +471,8 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
         onClick={handleCardClick}
       >
         <Card
-          padding="xs"
-          className={`h-full flex flex-col hover:bg-bg-subtle transition-colors cursor-pointer ${
+          padding="sm"
+          className={`h-full flex flex-col transition-colors cursor-pointer ${
             isKimiPartner
               ? // Kimi (Moonshot AI) official-partnership accent — official Kimi blue
                 // (#1783FF) border (2px, clearly legible) + a subtle whole-card tint
@@ -486,16 +486,13 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
                   // its brand green (#31f889 = rgb(49,248,137)). Keep in sync with
                   // CHEAPERINFERENCE_BRAND_COLOR (featuredProviders.ts).
                   "border-2 border-[#31f889]/70 hover:border-[#31f889]/90 shadow-[inset_0_0_0_100px_rgba(49,248,137,0.035),0_4px_16px_-4px_rgba(49,248,137,0.45)]"
-                : "hover:border-primary/40"
+                : "hover:border-border-strong"
           } ${allDisabled ? "opacity-50" : ""} ${provider.deprecated ? "opacity-60" : ""}`}
         >
           <div className="flex flex-col gap-2 h-full">
             {/* Row 1 — Identity: icon + full name + risk/category indicators */}
             <div className="flex items-start gap-3 min-w-0">
-              <div
-                className="size-9 rounded-lg flex items-center justify-center shrink-0"
-                style={{ backgroundColor: `${provider.color || "#64748b"}15` }}
-              >
+              <div className="size-9 rounded-lg flex items-center justify-center shrink-0 border border-border bg-surface">
                 {provider.iconUrl ? (
                   <ProviderIcon
                     providerId={provider.id || providerId}
@@ -598,7 +595,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
             )}
 
             {/* Row 3 — Footer: connection status + controls (toggle, test) */}
-            <div className="flex items-center justify-between gap-2 mt-auto pt-1.5 border-t border-border/40">
+            <div className="flex items-center justify-between gap-2 mt-auto pt-2.5 border-t border-border">
               <div className="flex items-center gap-1.5 text-xs flex-nowrap min-w-0 overflow-hidden">
                 {allDisabled ? (
                   <Badge variant="default" size="sm">
