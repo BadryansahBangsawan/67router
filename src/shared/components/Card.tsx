@@ -51,7 +51,8 @@ function Card({
     <KitCard
       className={cn(
         PADDING[padding] ?? PADDING.md,
-        hover && "oi-card--hover cursor-pointer transition-shadow hover:shadow-md",
+        // 67router is flat: a hover lifts the border, not a shadow.
+        hover && "oi-card--hover cursor-pointer transition-colors hover:border-border-strong",
         className
       )}
       {...props}
@@ -59,8 +60,8 @@ function Card({
       {hasHeader && (
         <CardHeader className="mb-4 flex items-center justify-between gap-3 p-0">
           {icon && (
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-control bg-bg-subtle text-text-muted">
-              <Icon name={icon} size={20} />
+            <span className="flex size-8 shrink-0 items-center justify-center rounded-control border border-border bg-surface text-text-muted">
+              <Icon name={icon} size={16} />
             </span>
           )}
           <div className="min-w-0 flex-1">
@@ -91,7 +92,7 @@ interface CardSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 function CardSection({ children, className, ...props }: CardSectionProps) {
   return (
     <div
-      className={cn("p-4 rounded-lg", "bg-surface-2", "border border-border", className)}
+      className={cn("p-4 rounded-control", "bg-bg-subtle", "border border-border", className)}
       {...props}
     >
       {children}

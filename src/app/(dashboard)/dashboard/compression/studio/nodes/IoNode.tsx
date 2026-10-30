@@ -18,16 +18,11 @@ export function IoNode({ data }: NodeProps) {
   const { variant, tokens, savingsPercent } = data as IoNodeData;
 
   const isInput = variant === "input";
-  const color = isInput ? "#6366f1" : "#22c55e"; // indigo for input, green for output
+  // 67router flow nodes are monochrome: input/output read from the label, not a hue.
+  const color = "var(--color-text-main)";
 
   return (
-    <div
-      className="rounded-xl border-2 bg-bg px-4 py-3 min-w-[120px] text-center transition-all duration-200"
-      style={{
-        borderColor: color,
-        boxShadow: `0 0 12px ${color}25`,
-      }}
-    >
+    <div className="min-w-[120px] rounded-card border border-border-strong bg-surface px-4 py-3 text-center transition-colors duration-200">
       {/* Input only uses source handle; Output only uses target handle */}
       {isInput ? (
         <Handle
@@ -43,11 +38,11 @@ export function IoNode({ data }: NodeProps) {
         />
       )}
 
-      <div className="text-[10px] font-semibold uppercase tracking-wider mb-1" style={{ color }}>
+      <div className="mb-1 text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
         {isInput ? "Input" : "Output"}
       </div>
 
-      <div className="text-base font-bold" style={{ color }}>
+      <div className="text-base font-semibold tabular-nums" style={{ color }}>
         {(tokens as number).toLocaleString()}
       </div>
       <div className="text-[10px] text-text-muted">tokens</div>

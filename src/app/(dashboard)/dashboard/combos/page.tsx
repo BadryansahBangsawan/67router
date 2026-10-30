@@ -600,22 +600,10 @@ function getStrategyDescription(t, strategy) {
   );
 }
 
-// Categorical strategy hues from the kit chart palette (--ci-chart-*) plus the status tokens;
-// chart-1 (lime) is skipped because lime text is unreadable on the light surface.
-const STRATEGY_BADGE_CLASS = {
-  weighted: "bg-warning/15 text-warning",
-  "round-robin": "bg-chart-4/15 text-chart-4",
-  "context-relay": "bg-chart-5/15 text-chart-5",
-  random: "bg-chart-3/15 text-chart-3",
-  "least-used": "bg-chart-2/15 text-chart-2",
-  "cost-optimized": "bg-success/15 text-success",
-  "reset-aware": "bg-chart-5/15 text-chart-5",
-  "fill-first": "bg-warning/15 text-warning",
-  p2c: "bg-chart-3/15 text-chart-3",
-};
-
-function getStrategyBadgeClass(strategy) {
-  return STRATEGY_BADGE_CLASS[strategy] || "bg-info/15 text-info";
+// 67router: strategies read as one neutral soft chip (monochrome UI; colour is reserved for
+// status, and orange for fallback). The label carries the distinction.
+function getStrategyBadgeClass(_strategy) {
+  return "bg-bg-subtle text-text-secondary";
 }
 
 function moveArrayItem(items, fromIndex, toIndex) {
@@ -1388,7 +1376,7 @@ function CombosPageContent() {
           </div>
         </Card>
       ) : (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col divide-y divide-border overflow-hidden rounded-xl border border-border bg-surface">
           {filteredCombos.map((combo, index) => (
             <div
               key={combo.id}
@@ -1806,12 +1794,12 @@ function ComboCardInner({
 
   return (
     <Card
-      padding="sm"
-      className={`group transition-all ${
+      padding="none"
+      className={`group rounded-none border-0 bg-transparent px-5 py-3.5 transition-colors hover:bg-bg-subtle ${
         isDisabled ? "opacity-50" : ""
-      } ${isDropTarget ? "border border-primary/30 bg-primary/5" : ""} ${
+      } ${isDropTarget ? "bg-bg-subtle shadow-[inset_0_2px_0_var(--color-text-main)]" : ""} ${
         isDragged ? "opacity-60" : ""
-      } ${isSelected ? "border-primary/30 bg-primary/[0.04]" : ""}`}
+      } ${isSelected ? "bg-bg-subtle shadow-[inset_2px_0_0_var(--color-text-main)]" : ""}`}
     >
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-0">
         <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0 w-full">
@@ -1834,15 +1822,15 @@ function ComboCardInner({
             <Icon name="drag_indicator" size={18} />
           </Button>
 
-          <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-            <Icon name="layers" size={18} className="text-primary" />
+          <div className="size-8 rounded-lg border border-border bg-surface flex items-center justify-center shrink-0">
+            <Icon name="layers" size={16} className="text-text-muted" />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <code className="text-sm font-medium font-mono truncate">{combo.name}</code>
               <Tooltip content={strategyDescription}>
                 <span
-                  className={`text-[9px] uppercase font-semibold px-1.5 py-0.5 rounded-full ${getStrategyBadgeClass(
+                  className={`text-[11px] font-medium px-1.5 py-px rounded-md border border-border ${getStrategyBadgeClass(
                     strategy
                   )}`}
                 >
@@ -1885,7 +1873,7 @@ function ComboCardInner({
                   return (
                     <code
                       key={index}
-                      className="text-[10px] font-mono bg-bg-subtle px-1.5 py-0.5 rounded text-text-muted"
+                      className="text-[11px] font-mono bg-bg-subtle px-1.5 py-0.5 rounded-md border border-border text-text-secondary"
                     >
                       {formatComboEntryDisplay(entry, {
                         providerNodes,
@@ -1905,17 +1893,17 @@ function ComboCardInner({
             </div>
 
             {metrics && (
-              <div className="flex items-center gap-3 mt-1">
-                <span className="text-[10px] text-text-muted">
-                  <span className="text-success">{metrics.totalSuccesses}</span>/
+              <div className="flex items-center gap-3 mt-1 text-xs tabular-nums text-text-muted">
+                <span>
+                  <span className="text-text-main">{metrics.totalSuccesses}</span>/
                   {metrics.totalRequests} {t("reqs")}
                 </span>
-                <span className="text-[10px] text-text-muted">
+                <span>
                   {metrics.successRate}% {t("success")}
                 </span>
-                <span className="text-[10px] text-text-muted">~{metrics.avgLatencyMs}ms</span>
+                <span>~{metrics.avgLatencyMs}ms</span>
                 {metrics.fallbackRate > 0 && (
-                  <span className="text-[10px] text-warning">{metrics.fallbackRate}% fallback</span>
+                  <span className="text-fallback">{metrics.fallbackRate}% fallback</span>
                 )}
               </div>
             )}

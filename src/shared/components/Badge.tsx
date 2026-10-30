@@ -8,11 +8,15 @@ import Icon from "./Icon";
 // variants are an outline kit badge with a `data-tone` (globals.css → "Badge status tones").
 const TONES = {
   default: null,
+  // Neutral hairline chip (kit outline, no tone) for secondary metadata such as weights.
+  outline: null,
   primary: "primary",
   success: "success",
   warning: "warning",
   error: "danger",
   info: "info",
+  // 67router orange — ONLY for fallback / recovered-request semantics (globals.css tone).
+  fallback: "fallback",
 } as const;
 // Tailwind utilities win over kit components (layer order), so sizes stay utilities.
 const SIZES = { sm: "text-[10px] px-2 py-0.5", md: "", lg: "text-sm px-3 py-1.5" } as const;
@@ -27,7 +31,7 @@ interface BadgeProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "childr
   className?: string;
 }
 
-/** Badge — adapter over the kit Badge (pill shape, like the legacy badge). */
+/** Badge — adapter over the kit Badge (6 px chip in the 67router theme; see globals.css). */
 export default function Badge({
   children,
   variant = "default",
@@ -41,7 +45,7 @@ export default function Badge({
   return (
     <KitBadge
       {...props}
-      variant={tone ? "outline" : "secondary"}
+      variant={tone || variant === "outline" ? "outline" : "secondary"}
       shape="pill"
       data-tone={tone ?? undefined}
       icon={typeof icon === "string" ? <Icon name={icon} size={14} /> : icon}

@@ -40,21 +40,17 @@ export function SkillCard({ skill, selected, onClick }: SkillCardProps): JSX.Ele
       onClick={onClick}
       onKeyDown={handleKeyDown}
       data-testid={`skill-card-${skill.id}`}
-      className={`flex items-start gap-3 rounded-lg border p-3 cursor-pointer transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
+      className={`flex items-start gap-3 rounded-control border p-3 cursor-pointer transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
         selected
-          ? "border-primary/40 bg-primary/10"
-          : "border-border bg-bg hover:bg-bg-subtle hover:border-border"
+          ? "border-border-strong bg-bg-subtle"
+          : "border-border bg-surface hover:border-border-strong"
       }`}
     >
-      <div
-        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
-          selected ? "bg-primary/15" : "bg-bg-subtle"
-        }`}
-      >
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-control border border-border bg-surface">
         <Icon
           name={skill.icon ?? "article"}
           size={18}
-          className={selected ? "text-primary" : "text-text-muted"}
+          className={selected ? "text-text-main" : "text-text-muted"}
         />
       </div>
 
@@ -67,7 +63,7 @@ export function SkillCard({ skill, selected, onClick }: SkillCardProps): JSX.Ele
             variant={
               skill.category === "api" ? "info" : skill.category === "cli" ? "primary" : "success"
             }
-            className="font-bold uppercase tracking-wide"
+            className="font-medium"
           >
             {skill.category === "api"
               ? t("categoryApi")
@@ -77,13 +73,13 @@ export function SkillCard({ skill, selected, onClick }: SkillCardProps): JSX.Ele
           </Badge>
 
           {skill.isEntry && (
-            <Badge variant="primary" size="sm" className="font-bold uppercase tracking-wide">
+            <Badge variant="primary" size="sm" className="font-medium">
               start
             </Badge>
           )}
 
           {skill.isNew && (
-            <Badge variant="warning" size="sm" className="font-bold uppercase tracking-wide">
+            <Badge variant="warning" size="sm" className="font-medium">
               new
             </Badge>
           )}
@@ -96,7 +92,7 @@ export function SkillCard({ skill, selected, onClick }: SkillCardProps): JSX.Ele
             {previewItems.map((item) => (
               <code
                 key={item}
-                className="rounded bg-bg-subtle px-1.5 py-0.5 font-mono text-[10px] text-text-muted border border-border/50"
+                className="rounded bg-bg-subtle px-1.5 py-0.5 font-mono text-[10px] text-text-muted border border-border"
               >
                 {item}
               </code>

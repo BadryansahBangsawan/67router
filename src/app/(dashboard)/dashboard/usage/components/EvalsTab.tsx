@@ -1053,7 +1053,7 @@ export default function EvalsTab() {
             <Icon name="route" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("evalControlsTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("evalControlsTitle")}</h3>
             <p className="text-xs text-text-muted">{t("evalControlsHint")}</p>
           </div>
         </div>
@@ -1119,7 +1119,7 @@ export default function EvalsTab() {
               <Icon name="analytics" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("scorecardTitle")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">{t("scorecardTitle")}</h3>
               <p className="text-xs text-text-muted">{t("scorecardHint")}</p>
             </div>
           </div>
@@ -1253,7 +1253,7 @@ export default function EvalsTab() {
             <Icon name="history" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("recentRunsTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("recentRunsTitle")}</h3>
             <p className="text-xs text-text-muted">{t("recentRunsHint")}</p>
           </div>
         </div>
@@ -1314,7 +1314,7 @@ export default function EvalsTab() {
               <Icon name="science" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("evalSuites")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">{t("evalSuites")}</h3>
               <p className="text-xs text-text-muted">{t("evalSuitesHint")}</p>
             </div>
           </div>

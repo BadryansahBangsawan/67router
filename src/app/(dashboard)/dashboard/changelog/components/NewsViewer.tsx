@@ -61,8 +61,8 @@ export default function NewsViewer() {
         return (
           <Card key={announcement.id} padding="md">
             <article className="flex flex-col gap-6 md:flex-row md:items-center">
-              <div className="flex size-14 shrink-0 items-center justify-center rounded-control bg-bg-subtle text-text-main">
-                <Icon name={announcement.icon} size={30} />
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-control border border-border bg-surface text-text-muted">
+                <Icon name={announcement.icon} size={20} />
               </div>
 
               <div className="flex-1">
@@ -71,7 +71,9 @@ export default function NewsViewer() {
                     {dateFormat.format(published)}
                   </time>
                 )}
-                <h2 className="ci-heading mt-1 mb-2 text-xl">{announcement.title}</h2>
+                <h2 className="mt-1 mb-2 text-base font-semibold tracking-[-0.01em] text-text-main">
+                  {announcement.title}
+                </h2>
                 <p className="max-w-2xl text-sm leading-relaxed text-text-muted">
                   {announcement.message}
                 </p>

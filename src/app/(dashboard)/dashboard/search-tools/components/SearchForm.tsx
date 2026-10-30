@@ -223,7 +223,7 @@ export default function SearchForm({
           aria-expanded={showFilters}
           onClick={() => setShowFilters(!showFilters)}
         >
-          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
             {t("filters")}
           </span>
           <span className="text-text-muted text-xs">{showFilters ? "▼" : "▶"}</span>

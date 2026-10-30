@@ -35,7 +35,7 @@ export default function ActivityItem({ entry, referenceNowMs }: ActivityItemProp
 
   return (
     <li className="flex items-start gap-3 px-4 py-3 hover:bg-bg-subtle transition-colors">
-      <Icon name={icon} size={20} className="flex-shrink-0 mt-0.5 text-primary" />
+      <Icon name={icon} size={20} className="flex-shrink-0 mt-0.5 text-text-muted" />
       <div className="flex-1 min-w-0">
         <p className="text-sm text-text-main truncate" title={phrase}>
           {phrase}

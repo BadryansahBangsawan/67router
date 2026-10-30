@@ -64,7 +64,7 @@ function ProviderCard({
     <div
       className={[
         "border rounded-lg p-3 transition-colors",
-        selected ? "border-primary/40 bg-primary/5" : "border-border bg-surface",
+        selected ? "border-border-strong bg-bg-subtle" : "border-border bg-surface",
         isClickable ? "cursor-pointer hover:border-primary/30" : "",
       ]
         .filter(Boolean)
@@ -181,7 +181,7 @@ export default function ProviderCatalog({
   if (loading) {
     return (
       <div className="flex items-center justify-center py-8" data-testid="catalog-loading">
-        <Icon name="progress_activity" size={20} className="text-primary animate-spin" />
+        <Icon name="progress_activity" size={20} className="text-text-muted animate-spin" />
       </div>
     );
   }

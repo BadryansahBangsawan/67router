@@ -23,8 +23,9 @@ function runtimeCostsItems(input: unknown) {
   const sections = resolveRuntimeSidebarSections(SIDEBAR_SECTIONS, {
     radarAdminUrl: input,
   });
-  const costs = sections.find((section) => section.id === "costs");
-  assert.ok(costs, "costs section must exist");
+  // Sidebar v2: Radar lives in Observe → "Costs" sub-group (the Costs section folded in).
+  const costs = sections.find((section) => section.id === "observe");
+  assert.ok(costs, "observe section must exist");
   return getSectionItems(costs);
 }
 
@@ -78,11 +79,11 @@ test("G17: rejects unsafe or non-tunnel URL shapes and keeps the sidebar inert",
 });
 
 test("G17: runtime injection never mutates the canonical static sections", () => {
-  const before = getSectionItems(SIDEBAR_SECTIONS.find((section) => section.id === "costs")!);
+  const before = getSectionItems(SIDEBAR_SECTIONS.find((section) => section.id === "observe")!);
   resolveRuntimeSidebarSections(SIDEBAR_SECTIONS, {
     radarAdminUrl: "https://radar-admin.example.test",
   });
-  const after = getSectionItems(SIDEBAR_SECTIONS.find((section) => section.id === "costs")!);
+  const after = getSectionItems(SIDEBAR_SECTIONS.find((section) => section.id === "observe")!);
 
   assert.equal(
     before.some((item) => item.id === "radar-admin"),

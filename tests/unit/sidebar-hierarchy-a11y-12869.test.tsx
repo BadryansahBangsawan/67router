@@ -123,7 +123,7 @@ async function mount(ui: React.ReactElement) {
   return view;
 }
 
-// At /home the accordion keeps only the Home section open, so the e2e spec opens OmniProxy first.
+// Sidebar v2: sections start pinned open; openSection() still opens one if a test closed it.
 async function openSection(
   aside: HTMLElement,
   user: ReturnType<typeof userEvent.setup>,
@@ -181,8 +181,8 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
     const view = await mount(<Harness {...loaded} />);
     const aside = sidebarElement(view.container);
 
-    await openSection(aside, userEvent.setup(), "OmniProxy");
-    const group = within(aside).getByRole("button", { name: "Compression Context" });
+    await openSection(aside, userEvent.setup(), "Optimize");
+    const group = within(aside).getByRole("button", { name: "Context & compression" });
     expect(group.getAttribute("aria-expanded")).toBe("false");
 
     nav.pathname = "/dashboard/context/caveman";
@@ -197,7 +197,7 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
     expect(aside.querySelectorAll('[aria-current="page"]')).toHaveLength(1);
     expect(
       within(aside)
-        .getByRole("button", { name: "Compression Context" })
+        .getByRole("button", { name: "Context & compression" })
         .getAttribute("aria-expanded")
     ).toBe("true");
   });
@@ -208,9 +208,9 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
     const { container } = await mount(<Harness {...loaded} />);
     const aside = sidebarElement(container);
 
-    await openSection(aside, user, "OmniProxy");
+    await openSection(aside, user, "Optimize");
 
-    const group = within(aside).getByRole("button", { name: "Compression Context" });
+    const group = within(aside).getByRole("button", { name: "Context & compression" });
     expect(group.getAttribute("aria-expanded")).toBe("false");
     expect(within(aside).queryByRole("link", { name: "Caveman" })).toBeNull();
 
@@ -236,8 +236,8 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
     const loaded = await loadSidebar();
     const { container } = await mount(<Harness {...loaded} />);
     const aside = sidebarElement(container);
-    await openSection(aside, user, "OmniProxy");
-    const group = () => within(aside).queryByRole("button", { name: "Compression Context" });
+    await openSection(aside, user, "Optimize");
+    const group = () => within(aside).queryByRole("button", { name: "Context & compression" });
 
     expect(group()?.getAttribute("aria-expanded")).toBe("false");
     const search = within(aside).getByRole("searchbox");
@@ -299,8 +299,11 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
       );
     }
     // The collapse toggle left the aside for the shell Header (trilha G), so it is no stop here.
-    expect(stops, `tab stops: ${JSON.stringify(stops)}`).toEqual(["OmniRoute", "Search", "Home"]);
-    // The third stop is the first item of the navigation landmark.
+    // Sidebar v2: the navigation opens with the "Routing" section header (Home was a title-less
+    // section before), so the third stop is that disclosure button.
+    expect(stops, `tab stops: ${JSON.stringify(stops)}`).toEqual(["OmniRoute", "Search", "button"]);
+    expect(document.activeElement!.textContent?.trim()).toBe("Routing");
+    // The third stop is the first control of the navigation landmark.
     expect(aside.querySelector("nav")!.contains(document.activeElement)).toBe(true);
   });
 
@@ -310,8 +313,8 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
     const { container } = await mount(<Harness {...loaded} />);
     const aside = sidebarElement(container);
 
-    await openSection(aside, user, "OmniProxy");
-    const group = within(aside).getByRole("button", { name: "Compression Context" });
+    await openSection(aside, user, "Optimize");
+    const group = within(aside).getByRole("button", { name: "Context & compression" });
     await user.click(group); // open one subgroup so both open and closed states are present
 
     const expandables = aside.querySelectorAll("button[aria-expanded]");
@@ -365,8 +368,8 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
 
     const desktop = await mount(<Harness {...loaded} />);
     const desktopAside = sidebarElement(desktop.container);
-    await openSection(desktopAside, user, "OmniProxy");
-    await user.click(within(desktopAside).getByRole("button", { name: "Compression Context" }));
+    await openSection(desktopAside, user, "Optimize");
+    await user.click(within(desktopAside).getByRole("button", { name: "Context & compression" }));
     await user.type(within(desktopAside).getByRole("searchbox"), "Caveman");
     let results = await runAxe(desktopAside);
     expect(results.violations.map((v) => `${v.id}: ${v.nodes[0]?.html}`)).toEqual([]);

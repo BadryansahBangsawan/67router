@@ -129,6 +129,9 @@ export default function Breadcrumbs() {
   if (!pathname || pathname === "/dashboard") return null;
 
   const segments = pathname.split("/").filter(Boolean);
+  // The 60 px topbar (Header) already shows "section / page" for top-level pages, so the
+  // in-content trail only appears on deeper paths, where it adds the parent links.
+  if (segments.length <= 2) return null;
   const crumbs = segments.map((seg, idx) => ({
     label: getLabel(seg, t),
     href: "/" + segments.slice(0, idx + 1).join("/"),
@@ -136,7 +139,7 @@ export default function Breadcrumbs() {
   }));
 
   return (
-    <Breadcrumb aria-label={t("ariaLabel")} className="mb-2 py-2">
+    <Breadcrumb aria-label={t("ariaLabel")} className="mb-4 text-[13px]">
       <BreadcrumbList>
         {crumbs.map((crumb, i) => (
           <Fragment key={crumb.href}>

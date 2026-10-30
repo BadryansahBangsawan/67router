@@ -118,7 +118,7 @@ export function OrchestrationToolbar({
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2">
+    <div className="flex flex-wrap items-center gap-3 rounded-card border border-border bg-surface px-3 py-2">
       <Input
         type="search"
         value={text}

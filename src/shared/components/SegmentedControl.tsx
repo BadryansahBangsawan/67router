@@ -15,6 +15,8 @@ interface SegmentedControlProps {
   value?: string;
   onChange?: (value: string) => void;
   size?: "sm" | "md" | "lg";
+  /** `capsule` (default) is the segmented pill; `underline` is a 67router tab row. */
+  variant?: "capsule" | "underline";
   className?: string;
   "aria-label"?: string;
 }
@@ -38,20 +40,26 @@ export default function SegmentedControl({
   value,
   onChange,
   size = "md",
+  variant = "capsule",
   className,
   "aria-label": ariaLabel,
 }: SegmentedControlProps) {
   return (
     <Tabs
-      variant="capsule"
+      variant={variant}
       value={value}
       onValueChange={(next) => onChange?.(next)}
       className={cn("max-w-full", className)}
     >
-      {/* Phones: full width, segments share the line; from sm up, natural width (legacy). */}
+      {/* Capsule on phones: full width, segments share the line; from sm up, natural width
+          (legacy). Underline tabs keep their natural width and wrap. */}
       <TabsList
         aria-label={ariaLabel}
-        className="w-full flex-wrap sm:w-auto [&>*]:flex-1 sm:[&>*]:flex-none"
+        className={
+          variant === "underline"
+            ? "max-w-full flex-wrap"
+            : "w-full flex-wrap sm:w-auto [&>*]:flex-1 sm:[&>*]:flex-none"
+        }
       >
         {options.map((option) => (
           <TabsTrigger

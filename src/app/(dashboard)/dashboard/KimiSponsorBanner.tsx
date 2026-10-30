@@ -81,10 +81,10 @@ export default function KimiSponsorBanner() {
     <div
       role="complementary"
       aria-label={t("foundingFriendTitle")}
-      className="mb-4 flex flex-col gap-3 rounded-lg border border-[#1783FF]/30 bg-[#1783FF]/5 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
+      className="flex flex-col gap-3 rounded-xl border border-border bg-surface px-5 py-4 sm:flex-row sm:items-center sm:justify-between"
     >
       <div className="flex min-w-0 items-start gap-3">
-        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#1783FF]/10">
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-bg-subtle">
           <ProviderIcon providerId="moonshot" size={24} type="color" />
         </div>
         <div className="min-w-0">

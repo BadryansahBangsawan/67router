@@ -1203,7 +1203,7 @@ export default function SystemStorageTab() {
           <Icon name="database" size={20} />
         </span>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold">{t("systemStorage")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("systemStorage")}</h3>
           <p className="text-xs text-text-muted">{t("allDataLocal")}</p>
           <p className="text-xs text-text-muted mt-1">
             Database backups are stored on this server in the db_backups folder under its data

@@ -1,7 +1,8 @@
 "use client";
 
 import Icon from "@/shared/components/Icon";
-import { OmniRouteLockup } from "@/shared/components/OmniRouteLogo";
+import OmniRouteLogo, { OmniRouteLockup } from "@/shared/components/OmniRouteLogo";
+import { APP_CONFIG } from "@/shared/constants/appConfig";
 
 import { useTranslations } from "next-intl";
 
@@ -14,6 +15,7 @@ import Card from "@/shared/components/Card";
 import Input from "@/shared/components/Input";
 import { Spinner } from "@/shared/components/Loading";
 import { AlertDescription, AlertTitle } from "@omniroute/ui-kit/alert";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
@@ -228,23 +230,28 @@ export default function LoginPage() {
     );
   }
 
+  // Sign-in: two columns — the form on the left, a dark brand panel on the right (lg and up).
+  // Auth behaviour (checkAuth, handleLogin, OIDC, forgot-password) is unchanged.
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-bg">
       {nodeWarningBanner && (
         <div className="flex justify-center pt-6 px-6">{nodeWarningBanner}</div>
       )}
       <div className="flex-1 flex">
-        <div className="flex-1 flex items-center justify-center p-6">
-          <div
-            className={`w-full max-w-sm transition-all duration-700 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-          >
-            <Card padding="lg">
+        <div className="flex flex-1 flex-col px-6 py-6 sm:px-10 sm:py-8">
+          <div className="flex items-center">
+            <OmniRouteLockup />
+          </div>
+
+          <div className="flex flex-1 items-center justify-center py-12">
+            <div
+              className={`w-full max-w-sm transition-all duration-700 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            >
               <div className="mb-8">
-                <div className="mb-8">
-                  <OmniRouteLockup />
-                </div>
-                <h1 className="ci-heading text-2xl">{t("signIn")}</h1>
-                <p className="text-text-muted mt-1.5">
+                <h1 className="text-[26px] font-semibold leading-8 tracking-[-0.025em] text-text-main">
+                  {t("signIn")}
+                </h1>
+                <p className="mt-1.5 text-sm text-text-muted">
                   {oidcEnabled && oidcDisablePasswordLogin
                     ? t("continueWithOidc")
                     : t("enterPassword")}
@@ -257,7 +264,7 @@ export default function LoginPage() {
                     type="button"
                     variant="primary"
                     icon="login"
-                    className="w-full h-11 text-sm font-medium"
+                    className="w-full h-10 text-sm font-medium"
                     onClick={() => (window.location.href = "/api/auth/oidc/login")}
                   >
                     {t("continueWithOidc")}
@@ -281,7 +288,7 @@ export default function LoginPage() {
                     <Button
                       type="submit"
                       variant="primary"
-                      className="w-full h-11 text-sm font-medium"
+                      className="w-full h-10 text-sm font-medium"
                       loading={loading}
                     >
                       {t("continue")}
@@ -294,7 +301,7 @@ export default function LoginPage() {
                         type="button"
                         variant="secondary"
                         icon="login"
-                        className="w-full h-11 text-sm font-medium"
+                        className="w-full h-10 text-sm font-medium"
                         onClick={() => (window.location.href = "/api/auth/oidc/login")}
                       >
                         {t("continueWithOidc")}
@@ -305,64 +312,56 @@ export default function LoginPage() {
               )}
 
               {!oidcEnabled && (
-                <div className="mt-6 pt-6 border-t border-border">
+                <div className="mt-6">
                   <a
                     href="/forgot-password"
-                    className="text-sm text-text-muted hover:text-primary transition-colors"
+                    className="text-[13px] text-text-muted underline-offset-4 hover:text-text-main hover:underline"
                   >
                     {t("forgotPassword")}
                   </a>
                 </div>
               )}
-            </Card>
-          </div>
-        </div>
-
-        <div className="hidden lg:flex lg:w-1/2 bg-bg-subtle border-l border-border items-center justify-center p-12">
-          <div
-            className={`max-w-md transition-all duration-700 delay-200 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-          >
-            <div className="space-y-8">
-              <div>
-                <h2 className="ci-heading text-2xl mb-3">{t("unifiedAiApiProxy")}</h2>
-                <p className="text-text-muted leading-relaxed">{t("unifiedAiApiProxyDesc")}</p>
-              </div>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    icon: "swap_horiz",
-                    title: t("featureMultiProviderTitle"),
-                    desc: t("featureMultiProviderDesc"),
-                  },
-                  {
-                    icon: "speed",
-                    title: t("featureLoadBalancingTitle"),
-                    desc: t("featureLoadBalancingDesc"),
-                  },
-                  {
-                    icon: "analytics",
-                    title: t("featureUsageTrackingTitle"),
-                    desc: t("featureUsageTrackingDesc"),
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.icon}
-                    className="flex items-start gap-4 p-4 rounded-card bg-surface border border-border"
-                  >
-                    <div className="w-10 h-10 rounded-control bg-bg-subtle flex items-center justify-center flex-shrink-0">
-                      <Icon name={item.icon} size={20} className="text-text-muted" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-text-main">{item.title}</h3>
-                      <p className="text-sm text-text-muted">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
+
+          <div className="flex items-center gap-5 text-[13px] text-text-muted">
+            <span className="tabular-nums">v{APP_CONFIG.version}</span>
+            <Link href="/docs" prefetch={false} className="hover:text-text-main">
+              {t("docsLink")}
+            </Link>
+          </div>
         </div>
+
+        {/* Brand panel: always dark. `ci-theme` + data-theme="dark" scopes the 67router dark
+            tokens to this subtree, so it reads the --ci-* tokens directly (the --color-* bridge
+            is resolved once at :root and would keep the page theme). */}
+        <aside
+          data-theme="dark"
+          aria-hidden="true"
+          className="ci-theme hidden lg:flex lg:w-1/2 flex-col justify-between border-s border-[var(--ci-color-border)] bg-[var(--ci-color-background)] p-12 text-[var(--ci-color-foreground)]"
+        >
+          <OmniRouteLogo size={28} />
+          <div
+            className={`max-w-lg transition-all duration-700 delay-200 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          >
+            <p className="text-[32px] font-semibold leading-[1.15] tracking-[-0.03em]">
+              {t("brandTagline")}
+            </p>
+            <pre className="mt-10 overflow-x-auto rounded-xl border border-[var(--ci-color-border)] bg-[var(--ci-color-surface)] p-5 font-mono text-[12.5px] leading-[21px] text-[var(--ci-sidebar-fg)]">
+              <span className="text-[var(--ci-color-text-muted)]">$ </span>
+              {"curl $ROUTER/v1/chat/completions \\\n"}
+              {'    -H "Authorization: Bearer $KEY" \\\n'}
+              {'    -d \'{"model": "claude-coding", "messages": [...]}\'\n\n'}
+              <span className="text-[var(--ci-color-text-muted)]">
+                {"→ anthropic  429  rate limited\n"}
+              </span>
+              <span className="text-[var(--color-fallback-text)]">
+                {"→ openai     200  412 ms  recovered by fallback"}
+              </span>
+            </pre>
+          </div>
+          <p className="text-[13px] text-[var(--ci-color-text-muted)]">67router</p>
+        </aside>
       </div>
     </div>
   );

@@ -134,7 +134,11 @@ export default function RadarCombosPage() {
         description={t("subtitle")}
       />
 
-      {error && <div className="p-3 rounded-lg bg-error/10 text-error text-sm">{error}</div>}
+      {error && (
+        <div className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error">
+          {error}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex items-center justify-center min-h-[200px] text-text-muted">
@@ -157,7 +161,7 @@ export default function RadarCombosPage() {
               <Card key={suggestion.familyId}>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1">
-                    <span className="text-xs uppercase tracking-wide text-text-muted">
+                    <span className="text-xs uppercase tracking-[0.04em] text-text-muted">
                       {t("familyLabel")}
                     </span>
                     <h2 className="text-lg font-semibold font-mono">{suggestion.familyId}</h2>

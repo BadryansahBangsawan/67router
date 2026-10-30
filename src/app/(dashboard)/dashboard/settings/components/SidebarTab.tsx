@@ -44,13 +44,15 @@ import {
   SIDEBAR_PRESETS,
   PROTECTED_SIDEBAR_ITEM_IDS,
   applySectionOrder,
+  migrateSidebarItemOrder,
+  migrateSidebarSectionIds,
   applyItemOrder,
   HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY,
   isSidebarSectionHideable,
   isSidebarSectionHidden,
   normalizeHiddenSidebarSections,
   toggleSidebarSectionVisibility,
-  normalizeHiddenSidebarItems,
+  resolveHiddenSidebarItems,
   HIDEABLE_SIDEBAR_ITEM_IDS,
   resolveRuntimeSidebarSections,
   type HideableSidebarItemId,
@@ -444,8 +446,13 @@ export default function SidebarTab() {
     fetch("/api/settings")
       .then((r) => r.json())
       .then((data) => {
+        // Pages of a partly-hidden pre-v2 section are folded into the item list; every save of
+        // items or sections below writes both keys, so the legacy id is dropped on next save.
         setHiddenSidebarItems(
-          normalizeHiddenSidebarItems(data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY])
+          resolveHiddenSidebarItems(
+            data?.[HIDDEN_SIDEBAR_ITEMS_SETTING_KEY],
+            data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]
+          )
         );
         setHiddenSidebarSections(
           normalizeHiddenSidebarSections(data?.[HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY])
@@ -453,14 +460,10 @@ export default function SidebarTab() {
         setHiddenSidebarGroupLabels(
           normalizeHiddenSidebarGroupLabels(data?.[HIDDEN_SIDEBAR_GROUP_LABELS_SETTING_KEY])
         );
-        setSectionOrder(
-          Array.isArray(data?.[SIDEBAR_SECTION_ORDER_KEY]) ? data[SIDEBAR_SECTION_ORDER_KEY] : []
-        );
-        setItemOrder(
-          data?.[SIDEBAR_ITEM_ORDER_KEY] && typeof data[SIDEBAR_ITEM_ORDER_KEY] === "object"
-            ? data[SIDEBAR_ITEM_ORDER_KEY]
-            : {}
-        );
+        // Saved orders may predate sidebar v2: fold legacy section ids into the v2 ones, so the
+        // next save writes v2 ids only.
+        setSectionOrder(migrateSidebarSectionIds(data?.[SIDEBAR_SECTION_ORDER_KEY]));
+        setItemOrder(migrateSidebarItemOrder(data?.[SIDEBAR_ITEM_ORDER_KEY]));
         setActivePreset(data?.[SIDEBAR_PRESET_KEY] ?? null);
         setShowDebug(data?.debugMode === true);
         setRadarAdminUrl(data?.radarAdminUrl ?? null);
@@ -495,7 +498,11 @@ export default function SidebarTab() {
     setHiddenSidebarItems(next);
     // Any manual change → custom mode
     setActivePreset(null);
-    patch({ [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: next, [SIDEBAR_PRESET_KEY]: null });
+    patch({
+      [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: next,
+      [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: hiddenSidebarSections,
+      [SIDEBAR_PRESET_KEY]: null,
+    });
   };
 
   const hiddenSet = new Set(hiddenSidebarItems);
@@ -514,7 +521,11 @@ export default function SidebarTab() {
     setHiddenSidebarSections(next);
     // Any manual change → custom mode
     setActivePreset(null);
-    patch({ [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: next, [SIDEBAR_PRESET_KEY]: null });
+    patch({
+      [HIDDEN_SIDEBAR_SECTIONS_SETTING_KEY]: next,
+      [HIDDEN_SIDEBAR_ITEMS_SETTING_KEY]: hiddenSidebarItems,
+      [SIDEBAR_PRESET_KEY]: null,
+    });
   };
 
   const toggleGroupLabel = (id: HideableSidebarGroupId) => {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ProductSwitcher } from "@omniroute/ui-kit/keak-brand";
 import { SidebarTrigger, useSidebar } from "@omniroute/ui-kit/sidebar";
@@ -135,23 +136,26 @@ const HEADER_DESCRIPTIONS: Partial<
   "mitm-proxy": "mitmProxyDescription",
 };
 
-// Build href → sidebar item lookup (non-external items only)
-const sidebarByHref = new Map<string, SidebarItemDefinition>();
+type SidebarSection = (typeof SIDEBAR_SECTIONS)[number];
+type SidebarMatch = { item: SidebarItemDefinition; section: SidebarSection };
+
+// Build href → sidebar item (+ its v2 section, for the breadcrumb) lookup; non-external only.
+const sidebarByHref = new Map<string, SidebarMatch>();
 for (const section of SIDEBAR_SECTIONS) {
   for (const item of getSectionItems(section)) {
-    if (!item.external) sidebarByHref.set(item.href, item);
+    if (!item.external) sidebarByHref.set(item.href, { item, section });
   }
 }
 
-function getSidebarItem(pathname: string): SidebarItemDefinition | undefined {
+function getSidebarMatch(pathname: string): SidebarMatch | undefined {
   const exact = sidebarByHref.get(pathname);
   if (exact) return exact;
   // Longest prefix match
-  let best: SidebarItemDefinition | undefined;
+  let best: SidebarMatch | undefined;
   let bestLen = 0;
-  for (const [href, item] of sidebarByHref) {
+  for (const [href, match] of sidebarByHref) {
     if (pathname.startsWith(href) && href.length > bestLen) {
-      best = item;
+      best = match;
       bestLen = href.length;
     }
   }
@@ -167,36 +171,58 @@ type PageInfo = {
   description: string;
   icon?: string;
   providerId?: string;
+  /** v2 sidebar section of the page (first breadcrumb), when the page is in the sidebar. */
+  section?: string;
+  /** Parent page (middle breadcrumb) for detail pages such as /dashboard/providers/[id]. */
+  parent?: { label: string; href: string };
 };
 
 function usePageInfo(pathname: string | null): PageInfo {
   const ts = useTranslations("sidebar");
   const th = useTranslations("header");
+  const label = (key: string, fallback: string) =>
+    typeof ts.has === "function" && ts.has(key) ? ts(key) : fallback;
 
   if (!pathname) return { title: "", description: "" };
+
+  const match = getSidebarMatch(pathname);
+  const section = match ? label(match.section.titleKey, match.section.titleFallback) : undefined;
 
   // Special: provider detail page /dashboard/providers/[id]
   const providerMatch = pathname.match(/\/providers\/([^/]+)$/);
   if (providerMatch) {
     const pid = providerMatch[1];
+    const parent = match ? { label: ts(match.item.i18nKey), href: match.item.href } : undefined;
     const info = OAUTH_PROVIDERS[pid] || NOAUTH_PROVIDERS[pid] || APIKEY_PROVIDERS[pid];
-    if (info) return { title: info.name, description: "", providerId: info.id };
+    if (info) return { title: info.name, description: "", providerId: info.id, section, parent };
     if (pid.startsWith(CLAUDE_CODE_COMPATIBLE_PREFIX))
-      return { title: "CC Compatible", description: "", providerId: "claude" };
+      return { title: "CC Compatible", description: "", providerId: "claude", section, parent };
     if (pid.startsWith(OPENAI_COMPATIBLE_PREFIX))
-      return { title: th("openaiCompatible"), description: "", providerId: "oai-cc" };
+      return {
+        title: th("openaiCompatible"),
+        description: "",
+        providerId: "oai-cc",
+        section,
+        parent,
+      };
     if (pid.startsWith(ANTHROPIC_COMPATIBLE_PREFIX))
-      return { title: th("anthropicCompatible"), description: "", providerId: "anthropic-m" };
+      return {
+        title: th("anthropicCompatible"),
+        description: "",
+        providerId: "anthropic-m",
+        section,
+        parent,
+      };
   }
 
   // Derive from sidebar
-  const item = getSidebarItem(pathname);
-  if (item) {
-    const descKey = HEADER_DESCRIPTIONS[item.id];
+  if (match) {
+    const descKey = HEADER_DESCRIPTIONS[match.item.id];
     return {
-      title: ts(item.i18nKey),
+      title: ts(match.item.i18nKey),
       description: descKey ? th(descKey) : "",
-      icon: item.icon,
+      icon: match.item.icon,
+      section,
     };
   }
 
@@ -229,7 +255,8 @@ export default function Header({ onOpenCommandPalette }: HeaderProps) {
     : open
       ? ts("collapseSidebar")
       : ts("expandSidebar");
-  const { title, description, icon, providerId } = usePageInfo(pathname);
+  const tb = useTranslations("breadcrumbs");
+  const { title, description, icon, providerId, section, parent } = usePageInfo(pathname);
   const isMacElectron =
     isElectron &&
     typeof window !== "undefined" &&
@@ -250,38 +277,57 @@ export default function Header({ onOpenCommandPalette }: HeaderProps) {
 
   return (
     // No explicit role="banner": the kit shell mounts this inside SidebarInset's <main>, and a
-    // banner landmark must stay top-level. The kit header has a fixed height, so the safe-area
-    // inset (macOS Electron title bar / iOS standalone notch) is added to it, not carved out of it.
+    // banner landmark must stay top-level. The 67router topbar is 60 px; the safe-area inset
+    // (macOS Electron title bar / iOS standalone notch) is added to it, not carved out of it.
     <header
-      className="ci-sidebar-shell-header sticky top-0 z-10 bg-bg"
-      style={{ paddingTop: safeTop, height: `calc(4rem + var(--ci-border-default) + ${safeTop})` }}
+      className="ci-sidebar-shell-header r67-topbar sticky top-0 z-10 bg-bg"
+      style={{ paddingTop: safeTop, height: `calc(60px + ${safeTop})` }}
     >
       <SidebarTrigger aria-label={triggerLabel}>
-        <Icon name="menu" size={18} />
+        <Icon name="menu" size={16} />
       </SidebarTrigger>
-      <div className="hidden min-w-0 items-center gap-3 lg:flex">
-        {/* The icon tile goes with the title: alone it would be an orphan glyph (review M-2). */}
-        {(icon || providerId) && !pageHasHeader && (
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-control bg-accent-light text-heading">
-            {icon ? (
-              <Icon name={icon} size={20} />
-            ) : (
-              providerId && <ProviderIcon providerId={providerId} size={22} type="color" />
-            )}
-          </span>
-        )}
-        {title && !pageHasHeader && (
-          <div className="min-w-0">
-            <h1 className="ci-heading truncate text-lg">{title}</h1>
-            {description && <p className="truncate text-xs text-text-muted">{description}</p>}
-          </div>
-        )}
-      </div>
-      <div className="ms-auto flex items-center gap-2">
+      {/* Breadcrumb: section / [parent /] page. The page crumb doubles as the shell's h1 while
+          the page renders no kit PageHeader of its own (one heading per page, F4). */}
+      {title && (
+        <nav
+          aria-label={tb("ariaLabel")}
+          className="hidden min-w-0 items-center gap-2 text-[13.5px] text-text-muted lg:flex"
+        >
+          {section && (
+            <>
+              <span className="shrink-0">{section}</span>
+              <span aria-hidden="true">/</span>
+            </>
+          )}
+          {parent && (
+            <>
+              <Link href={parent.href} prefetch={false} className="shrink-0 hover:text-text-main">
+                {parent.label}
+              </Link>
+              <span aria-hidden="true">/</span>
+            </>
+          )}
+          {providerId && !icon && <ProviderIcon providerId={providerId} size={16} type="color" />}
+          {pageHasHeader ? (
+            <span aria-current="page" className="truncate font-medium text-text-main">
+              {title}
+            </span>
+          ) : (
+            <h1
+              aria-current="page"
+              title={description || undefined}
+              className="truncate text-[13.5px] font-medium text-text-main"
+            >
+              {title}
+            </h1>
+          )}
+        </nav>
+      )}
+      <div className="ms-auto flex items-center gap-1.5 text-text-secondary">
         <ProductSwitcher
           items={KEAK_PRODUCT_LINKS}
           activeProduct={KEAK_ACTIVE_PRODUCT}
-          className="hidden md:block"
+          className="hidden xl:block"
           aria-label={t("products")}
         />
         {onOpenCommandPalette && (
@@ -308,13 +354,23 @@ export default function Header({ onOpenCommandPalette }: HeaderProps) {
             onClick={onOpenCommandPalette}
             aria-label={t("openQuickNavigation")}
           >
-            <Icon name="search" size={20} />
+            <Icon name="search" size={18} />
           </Button>
         )}
-        <LanguageSelector />
-        <ThemeToggle />
+        <Link
+          href="/docs"
+          prefetch={false}
+          className="hidden h-8 items-center gap-1.5 rounded-control px-2.5 text-[13px] hover:text-text-main sm:flex"
+        >
+          <Icon name="menu_book" size={15} />
+          {ts("docs")}
+        </Link>
+        {/* Status notifications: degraded routing and OAuth token health. Each renders only
+            when it has something to report. */}
         {!isE2EMode && <DegradationBadge />}
         {!isE2EMode && <TokenHealthBadge />}
+        <LanguageSelector />
+        <ThemeToggle />
         <Button
           variant="ghost"
           size="icon"
@@ -323,7 +379,7 @@ export default function Header({ onOpenCommandPalette }: HeaderProps) {
           title={t("logout")}
           aria-label={t("logout")}
         >
-          <Icon name="logout" size={20} />
+          <Icon name="logout" size={18} />
         </Button>
       </div>
     </header>

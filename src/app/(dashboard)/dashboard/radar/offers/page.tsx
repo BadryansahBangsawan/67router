@@ -166,7 +166,11 @@ export default function RadarOffersPage() {
         }
       />
 
-      {error && <div className="p-3 rounded-lg bg-error/10 text-error text-sm">{error}</div>}
+      {error && (
+        <div className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error">
+          {error}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex min-h-48 items-center justify-center text-text-muted">
@@ -175,7 +179,7 @@ export default function RadarOffersPage() {
       ) : !hasSupporterKey ? (
         <Card>
           <div className="flex flex-col items-center gap-4 py-8 text-center">
-            <Icon name="redeem" size={36} className="text-primary" />
+            <Icon name="redeem" size={36} className="text-text-muted" />
             <h2 className="text-xl font-semibold">{t("keyRequiredTitle")}</h2>
             <p className="max-w-xl text-text-muted">{t("keyRequiredDescription")}</p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -213,7 +217,7 @@ export default function RadarOffersPage() {
               <div className="flex h-full flex-col gap-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-xs uppercase tracking-wide text-text-muted">
+                    <p className="text-xs uppercase tracking-[0.04em] text-text-muted">
                       {offer.provider}
                     </p>
                     <h2 className="text-lg font-semibold">
@@ -229,7 +233,9 @@ export default function RadarOffersPage() {
                   </span>
                 </div>
 
-                <p className="text-2xl font-bold text-primary">{formatBenefit(offer.benefit)}</p>
+                <p className="text-2xl font-semibold text-primary">
+                  {formatBenefit(offer.benefit)}
+                </p>
                 <p className="text-sm text-text-muted">
                   {localizeRadarOfferText(offer.description, locale)}
                 </p>

@@ -265,11 +265,13 @@ export default function RoutingStrategyCard() {
   return (
     <Card>
       <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted shrink-0">
+        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted shrink-0">
           <Icon name="route" size={20} />
         </div>
         <div>
-          <h3 className="text-base sm:text-lg font-semibold">{t("routingStrategyTitle")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">
+            {t("routingStrategyTitle")}
+          </h3>
           <p className="text-xs text-text-muted">{t("routingStrategySubtitle")}</p>
         </div>
       </div>

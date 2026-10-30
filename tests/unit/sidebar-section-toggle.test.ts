@@ -25,24 +25,13 @@ const {
 
 // ─── HIDEABLE_SIDEBAR_SECTION_IDS ────────────────────────────────────────────
 
+// Sidebar v2 (67router): System holds both protected items ("proxy", "settings-sidebar").
 test("sections containing protected items are not hideable", () => {
-  // omni-proxy contains the protected "proxy" item
-  assert.equal(HIDEABLE_SIDEBAR_SECTION_IDS.includes("omni-proxy"), false);
-  // configuration contains the protected "settings-sidebar" item
-  assert.equal(HIDEABLE_SIDEBAR_SECTION_IDS.includes("configuration"), false);
+  assert.equal(HIDEABLE_SIDEBAR_SECTION_IDS.includes("system"), false);
 });
 
 test("sections without protected items are hideable", () => {
-  for (const id of [
-    "home",
-    "analytics",
-    "costs",
-    "monitoring",
-    "devtools",
-    "agentic-features",
-    "other-features",
-    "help",
-  ]) {
+  for (const id of ["routing", "optimize", "agents", "access", "observe"]) {
     assert.ok(HIDEABLE_SIDEBAR_SECTION_IDS.includes(id), `section ${id} must be hideable`);
   }
 });
@@ -59,59 +48,53 @@ test("isSidebarSectionHideable agrees with HIDEABLE_SIDEBAR_SECTION_IDS", () => 
 // ─── normalizeHiddenSidebarSections ──────────────────────────────────────────
 
 test("normalizeHiddenSidebarSections accepts valid hideable section ids", () => {
-  const result = normalizeHiddenSidebarSections(["analytics", "costs"]);
-  assert.deepEqual(result.sort(), ["analytics", "costs"]);
+  const result = normalizeHiddenSidebarSections(["observe", "agents"]);
+  assert.deepEqual(result.sort(), ["agents", "observe"]);
 });
 
 test("normalizeHiddenSidebarSections drops unknown and non-hideable ids", () => {
-  const result = normalizeHiddenSidebarSections([
-    "analytics",
-    "omni-proxy",
-    "configuration",
-    "bogus-section",
-  ]);
-  assert.deepEqual(result, ["analytics"]);
+  const result = normalizeHiddenSidebarSections(["observe", "system", "bogus-section"]);
+  assert.deepEqual(result, ["observe"]);
 });
 
 test("normalizeHiddenSidebarSections rejects non-arrays and non-strings", () => {
   assert.deepEqual(normalizeHiddenSidebarSections(null), []);
-  assert.deepEqual(normalizeHiddenSidebarSections("analytics"), []);
-  assert.deepEqual(normalizeHiddenSidebarSections([42, "analytics"]), ["analytics"]);
+  assert.deepEqual(normalizeHiddenSidebarSections("observe"), []);
+  assert.deepEqual(normalizeHiddenSidebarSections([42, "observe"]), ["observe"]);
 });
 
 test("normalizeHiddenSidebarSections deduplicates", () => {
-  const result = normalizeHiddenSidebarSections(["analytics", "analytics", "costs"]);
-  assert.deepEqual(result.sort(), ["analytics", "costs"]);
+  const result = normalizeHiddenSidebarSections(["observe", "observe", "agents"]);
+  assert.deepEqual(result.sort(), ["agents", "observe"]);
 });
 
 // ─── isSidebarSectionHidden / toggleSidebarSectionVisibility ─────────────────
 
 test("isSidebarSectionHidden reflects the hidden list", () => {
-  assert.equal(isSidebarSectionHidden("analytics", []), false);
-  assert.equal(isSidebarSectionHidden("analytics", ["analytics"]), true);
+  assert.equal(isSidebarSectionHidden("observe", []), false);
+  assert.equal(isSidebarSectionHidden("observe", ["observe"]), true);
 });
 
 test("toggleSidebarSectionVisibility hides a section without touching others", () => {
-  const next = toggleSidebarSectionVisibility(["costs"], "analytics", false);
-  assert.deepEqual(next.sort(), ["analytics", "costs"]);
+  const next = toggleSidebarSectionVisibility(["agents"], "observe", false);
+  assert.deepEqual(next.sort(), ["agents", "observe"]);
 });
 
 test("toggleSidebarSectionVisibility shows a section without touching others", () => {
-  const next = toggleSidebarSectionVisibility(["analytics", "costs"], "analytics", true);
-  assert.deepEqual(next, ["costs"]);
+  const next = toggleSidebarSectionVisibility(["observe", "agents"], "observe", true);
+  assert.deepEqual(next, ["agents"]);
 });
 
 test("toggleSidebarSectionVisibility refuses to hide a protected section", () => {
-  const before = ["analytics"];
-  assert.deepEqual(toggleSidebarSectionVisibility(before, "omni-proxy", false), before);
-  assert.deepEqual(toggleSidebarSectionVisibility(before, "configuration", false), before);
+  const before = ["observe"];
+  assert.deepEqual(toggleSidebarSectionVisibility(before, "system", false), before);
 });
 
 test("toggleSidebarSectionVisibility is idempotent", () => {
-  const once = toggleSidebarSectionVisibility([], "analytics", false);
-  const twice = toggleSidebarSectionVisibility(once, "analytics", false);
+  const once = toggleSidebarSectionVisibility([], "observe", false);
+  const twice = toggleSidebarSectionVisibility(once, "observe", false);
   assert.deepEqual([...twice].sort(), [...once].sort());
-  const shownOnce = toggleSidebarSectionVisibility(once, "analytics", true);
-  const shownTwice = toggleSidebarSectionVisibility(shownOnce, "analytics", true);
+  const shownOnce = toggleSidebarSectionVisibility(once, "observe", true);
+  const shownTwice = toggleSidebarSectionVisibility(shownOnce, "observe", true);
   assert.deepEqual([...shownTwice].sort(), [...shownOnce].sort());
 });

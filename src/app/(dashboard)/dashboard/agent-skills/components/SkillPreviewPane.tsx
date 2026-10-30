@@ -62,7 +62,7 @@ export function SkillPreviewPane({
   if (!skillId) {
     return (
       <div
-        className="flex flex-col items-center justify-center h-full min-h-[300px] rounded-xl border border-dashed border-border bg-bg-subtle/30 p-8 text-center"
+        className="flex flex-col items-center justify-center h-full min-h-[300px] rounded-card border border-dashed border-border bg-bg-subtle/30 p-8 text-center"
         data-testid="skill-preview-empty"
       >
         <Icon name="article" size={32} className="text-text-muted mb-3" />
@@ -73,7 +73,7 @@ export function SkillPreviewPane({
 
   return (
     <div
-      className="flex flex-col rounded-xl border border-border bg-bg h-full"
+      className="flex flex-col rounded-card border border-border bg-bg h-full"
       data-testid="skill-preview-pane"
     >
       {/* Header */}

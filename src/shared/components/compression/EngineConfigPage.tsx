@@ -9,6 +9,7 @@ import { PageHeader, SectionHeader } from "@omniroute/ui-kit/page-header";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import Icon from "@/shared/components/Icon";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import Textarea from "@/shared/components/Textarea";
 import {
   buildEngineDetailUpdate,
@@ -90,15 +91,6 @@ const ENGINE_ICON_ALIASES: Record<string, string> = {
 
 // ── Sub-components ────────────────────────────────────────────────────────
 
-function StatCard({ label, value }: { label: string; value: string }) {
-  return (
-    <Card padding="sm" className="flex flex-col gap-0.5">
-      <span className="text-xs text-text-muted">{label}</span>
-      <span className="text-lg font-semibold text-text-main">{value}</span>
-    </Card>
-  );
-}
-
 function renderDiffSegment(
   segment: PreviewDiffSegment,
   index: number,
@@ -115,8 +107,11 @@ function renderDiffSegment(
     "";
 
   return (
-    <div key={`${label}-${index}`} className="rounded border border-border bg-bg p-2">
-      <span className="mr-2 rounded bg-bg-subtle px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-text-muted">
+    <div
+      key={`${label}-${index}`}
+      className="rounded-control border border-border bg-bg-subtle p-2 font-mono text-xs"
+    >
+      <span className="mr-2 rounded-[5px] border border-border bg-surface px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-text-muted">
         {translateLabel(label)}
       </span>
       <span className="whitespace-pre-wrap break-words text-text-main">{text}</span>
@@ -129,6 +124,7 @@ function renderDiffSegment(
 export function EngineConfigPage({ engineId }: { engineId: string }) {
   const locale = useLocale();
   const t = useTranslations("compressionEngineConfig");
+  const tCommon = useTranslations("common");
   // ── Data state ──────────────────────────────────────────────────────────
   const [engine, setEngine] = useState<EngineEntry | null>(null);
   const [configState, setConfigState] = useState<Record<string, unknown>>({});
@@ -136,6 +132,8 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
   // changed since.
   const [savedConfig, setSavedConfig] = useState<Record<string, unknown>>({});
   const [analytics, setAnalytics] = useState<Analytics | null>(null);
+  // This engine's on/off from the panel's `engines` map — shown read-only in the header.
+  const [engineSettings, setEngineSettings] = useState<{ enabled?: boolean } | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -188,6 +186,7 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
           setLoadError(t("settingsLoadFailed"));
         }
         if (analyticsData) setAnalytics(analyticsData);
+        setEngineSettings(settingsData?.engines?.[engineId] ?? null);
         setEngine(foundEngine);
         const seeded = seedEngineForm(engineId, foundEngine?.configSchema ?? [], stored);
         setConfigState(seeded);
@@ -362,24 +361,52 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
   // Only engines with a dedicated settings sub-object can persist their detail here.
   const persistable = Boolean(SETTINGS_SUBOBJECT[engineId]);
 
+  const engineEnabled = engineSettings?.enabled;
+
   return (
-    <div className="flex flex-col gap-6 p-6 max-w-3xl">
-      {/* ── Header ── */}
+    <div className="flex max-w-6xl flex-col gap-6 p-6">
+      {/* ── Header: engine name + mono id + on/off (read-only; the panel owns it) ── */}
       <PageHeader
         compact
         title={
-          <span className="flex items-center gap-2">
+          <span className="flex flex-wrap items-center gap-3">
             {engine.icon && (
               <Icon
                 name={ENGINE_ICON_ALIASES[engine.icon] || engine.icon}
-                size={28}
+                size={24}
                 className="text-text-muted"
               />
             )}
             {engineName}
+            <span className="rounded-[5px] border border-border px-1.5 py-px font-mono text-xs font-normal tracking-normal text-text-muted">
+              {engine.id}
+            </span>
           </span>
         }
         description={subtitle || undefined}
+        actions={
+          <>
+            {typeof engineEnabled === "boolean" && (
+              <span
+                data-testid="engine-status"
+                className="inline-flex h-8 items-center gap-2 rounded-control border border-border bg-surface px-3 text-[13px] text-text-main"
+              >
+                <span
+                  aria-hidden="true"
+                  className={`size-2 rounded-full ${engineEnabled ? "bg-success" : "border-[1.5px] border-text-muted"}`}
+                />
+                {engineEnabled ? tCommon("enabled") : tCommon("disabled")}
+              </span>
+            )}
+            <a
+              href="/dashboard/context/settings"
+              className="inline-flex h-8 items-center gap-1.5 rounded-control border border-border bg-surface px-3 text-[13px] font-medium text-text-main transition-colors hover:border-border-strong"
+            >
+              {t("compressionSettings")}
+              <Icon name="open_in_new" size={14} />
+            </a>
+          </>
+        }
       />
 
       {loadError && (
@@ -390,6 +417,33 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
           // Cleared only by a successful reload; the kit Alert has no non-dismissible mode.
           className="[&>.ci-alert__dismiss]:hidden"
         />
+      )}
+
+      {/* ── 7-day stats: one KPI strip. Nothing while the read is pending or failed; "No data
+           yet" only for a successful read with no runs. ── */}
+      {analytics && (
+        <section aria-label={t("last7Days")} className="flex flex-col gap-2">
+          <h2 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+            {t("last7Days")}
+          </h2>
+          {analytics.runs > 0 ? (
+            <KpiStrip columns={3}>
+              <KpiCell label={t("runs")} value={analytics.runs.toLocaleString(locale)} />
+              <KpiCell
+                label={t("tokensSaved")}
+                value={analytics.tokensSaved.toLocaleString(locale)}
+              />
+              <KpiCell
+                label={t("averageSavings")}
+                value={`${analytics.avgSavingsPercent.toFixed(1)}%`}
+              />
+            </KpiStrip>
+          ) : (
+            <p className="rounded-card border border-border bg-surface px-5 py-4 text-sm text-text-muted">
+              {t("noDataYet")}
+            </p>
+          )}
+        </section>
       )}
 
       {/* ── Panel pointer (on/off + level live there now) ── */}
@@ -408,129 +462,136 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
         }
       />
 
-      {/* ── Config form ── */}
-      <Card padding="sm" className="flex flex-col gap-3">
-        <SectionHeader title={t("configuration")} />
-        {visibleConfigSchema.length > 0 ? (
-          <EngineConfigForm
-            schema={visibleConfigSchema}
-            value={configState}
-            onChange={(key, next) => setConfigState((prev) => ({ ...prev, [key]: next }))}
-          />
-        ) : (
-          <p className="text-sm text-text-muted">{t("noAdditionalConfiguration")}</p>
-        )}
-        <div className="flex items-center gap-3 pt-1">
-          {persistable ? (
-            <Button size="sm" onClick={handleSave} disabled={saving || Boolean(loadError)}>
-              {saving ? t("saving") : t("save")}
-            </Button>
-          ) : (
-            <p className="text-xs text-text-muted" data-testid="no-detail-store-notice">
-              {t("globalSettingsOnly")}
-            </p>
-          )}
-          {saveError && (
-            <p className="text-xs text-error" role="alert">
-              {saveError}
-            </p>
-          )}
-        </div>
-      </Card>
-
-      {/* ── Live preview ── */}
-      <Card padding="sm" className="flex flex-col gap-3">
-        <SectionHeader title={t("preview")} />
-        <Textarea
-          className="min-h-[80px] resize-y"
-          value={previewText}
-          onChange={(e) => setPreviewText(e.target.value)}
-          aria-label={t("previewInput")}
-        />
-        <div className="flex items-center gap-3">
-          <Button variant="secondary" size="sm" onClick={handlePreview} disabled={previewLoading}>
-            {previewLoading ? t("processing") : t("preview")}
-          </Button>
-        </div>
-        {previewError && (
-          <p className="text-xs text-error" role="alert">
-            {previewError}
-          </p>
-        )}
-        {preview && (
-          <div className="flex flex-col gap-3 pt-1 text-sm">
-            <div className="flex flex-wrap gap-4">
-              <span className="text-text-muted">
-                {t("originalTokens")}:{" "}
-                <strong className="text-text-main">{preview.originalTokens}</strong>
-              </span>
-              <span className="text-text-muted">
-                {t("compressedTokens")}:{" "}
-                <strong className="text-text-main">{preview.compressedTokens}</strong>
-              </span>
-              <span className="text-text-muted">
-                {t("savings")}:{" "}
-                <strong className="text-primary">{preview.savingsPct.toFixed(1)}%</strong>
-              </span>
-            </div>
-            <div className="grid gap-3 md:grid-cols-2">
-              <div className="flex flex-col gap-1">
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-                  {t("original")}
-                </h3>
-                <pre className="max-h-72 overflow-auto whitespace-pre-wrap break-words rounded border border-border bg-bg p-3 text-text-main">
-                  {preview.original ?? ""}
-                </pre>
-              </div>
-              <div className="flex flex-col gap-1">
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-                  {t("compressed")}
-                </h3>
-                <pre className="max-h-72 overflow-auto whitespace-pre-wrap break-words rounded border border-border bg-bg p-3 text-text-main">
-                  {preview.compressed ?? ""}
-                </pre>
-              </div>
-            </div>
-            {preview.diff && preview.diff.length > 0 && (
-              <div className="flex flex-col gap-2" data-testid="compression-preview-diff">
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-                  {t("diff")}
-                </h3>
-                <div className="flex max-h-72 flex-col gap-2 overflow-auto rounded border border-border p-2">
-                  {preview.diff.map((segment, index) =>
-                    renderDiffSegment(segment, index, (label) => {
-                      const key = `diffLabels.${label}`;
-                      return t.has(key) ? t(key) : label;
-                    })
-                  )}
-                </div>
-              </div>
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        {/* ── Config form ── */}
+        <Card padding="none" className="flex flex-col">
+          <div className="px-5 pt-5 pb-4">
+            <SectionHeader title={t("configuration")} className="ci-section-header--plain" />
+          </div>
+          <div className="border-t border-border px-5 py-4">
+            {visibleConfigSchema.length > 0 ? (
+              <EngineConfigForm
+                schema={visibleConfigSchema}
+                value={configState}
+                onChange={(key, next) => setConfigState((prev) => ({ ...prev, [key]: next }))}
+              />
+            ) : (
+              <p className="text-sm text-text-muted">{t("noAdditionalConfiguration")}</p>
             )}
           </div>
-        )}
-      </Card>
-
-      {/* ── Analytics strip ── */}
-      <Card padding="sm" className="flex flex-col gap-3">
-        <SectionHeader title={t("last7Days")} />
-        {analytics && analytics.runs === 0 ? (
-          <p className="text-sm text-text-muted">{t("noDataYet")}</p>
-        ) : analytics ? (
-          <div className="grid grid-cols-3 gap-3">
-            <StatCard label={t("runs")} value={analytics.runs.toLocaleString(locale)} />
-            <StatCard
-              label={t("tokensSaved")}
-              value={analytics.tokensSaved.toLocaleString(locale)}
-            />
-            <StatCard
-              label={t("averageSavings")}
-              value={`${analytics.avgSavingsPercent.toFixed(1)}%`}
-            />
+          <div className="flex items-center gap-3 border-t border-border bg-bg-subtle px-5 py-3">
+            {saveError && (
+              <p className="text-xs text-error" role="alert">
+                {saveError}
+              </p>
+            )}
+            {persistable ? (
+              <Button
+                size="sm"
+                className="ml-auto"
+                onClick={handleSave}
+                disabled={saving || Boolean(loadError)}
+              >
+                {saving ? t("saving") : t("save")}
+              </Button>
+            ) : (
+              <p className="text-xs text-text-muted" data-testid="no-detail-store-notice">
+                {t("globalSettingsOnly")}
+              </p>
+            )}
           </div>
-        ) : (
-          <p className="text-sm text-text-muted">{t("noDataYet")}</p>
-        )}
-      </Card>
+        </Card>
+
+        {/* ── Live preview: original vs compressed ── */}
+        <Card padding="none" className="flex flex-col">
+          <div className="flex flex-col gap-3 px-5 pt-5 pb-4">
+            <SectionHeader
+              title={t("preview")}
+              className="ci-section-header--plain"
+              actions={
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  icon="play_arrow"
+                  onClick={handlePreview}
+                  disabled={previewLoading}
+                >
+                  {previewLoading ? t("processing") : t("preview")}
+                </Button>
+              }
+            />
+            <Textarea
+              className="min-h-[80px] resize-y font-mono text-xs"
+              value={previewText}
+              onChange={(e) => setPreviewText(e.target.value)}
+              aria-label={t("previewInput")}
+            />
+            {previewError && (
+              <p className="text-xs text-error" role="alert">
+                {previewError}
+              </p>
+            )}
+          </div>
+          {preview && (
+            <div className="flex flex-col text-sm">
+              <div className="flex flex-wrap gap-x-6 gap-y-1 border-y border-border bg-bg-subtle px-5 py-2.5 text-[13px] tabular-nums">
+                <span className="text-text-muted">
+                  {t("originalTokens")}:{" "}
+                  <strong className="font-semibold text-text-main">{preview.originalTokens}</strong>
+                </span>
+                <span className="text-text-muted">
+                  {t("compressedTokens")}:{" "}
+                  <strong className="font-semibold text-text-main">
+                    {preview.compressedTokens}
+                  </strong>
+                </span>
+                <span className="text-text-muted">
+                  {t("savings")}:{" "}
+                  <strong className="font-semibold text-success">
+                    {preview.savingsPct.toFixed(1)}%
+                  </strong>
+                </span>
+              </div>
+              <div className="grid md:grid-cols-2 md:divide-x divide-border">
+                <div className="flex min-w-0 flex-col gap-2 px-5 py-4">
+                  <h3 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+                    {t("original")}
+                  </h3>
+                  <pre className="max-h-72 overflow-auto whitespace-pre-wrap break-words font-mono text-xs leading-5 text-text-main">
+                    {preview.original ?? ""}
+                  </pre>
+                </div>
+                <div className="flex min-w-0 flex-col gap-2 border-t border-border px-5 py-4 md:border-t-0">
+                  <h3 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+                    {t("compressed")}
+                  </h3>
+                  <pre className="max-h-72 overflow-auto whitespace-pre-wrap break-words font-mono text-xs leading-5 text-text-main">
+                    {preview.compressed ?? ""}
+                  </pre>
+                </div>
+              </div>
+              {preview.diff && preview.diff.length > 0 && (
+                <div
+                  className="flex flex-col gap-2 border-t border-border px-5 py-4"
+                  data-testid="compression-preview-diff"
+                >
+                  <h3 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+                    {t("diff")}
+                  </h3>
+                  <div className="flex max-h-72 flex-col gap-2 overflow-auto">
+                    {preview.diff.map((segment, index) =>
+                      renderDiffSegment(segment, index, (label) => {
+                        const key = `diffLabels.${label}`;
+                        return t.has(key) ? t(key) : label;
+                      })
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </Card>
+      </div>
     </div>
   );
 }

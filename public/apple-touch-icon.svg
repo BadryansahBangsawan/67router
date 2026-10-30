@@ -1,26 +1,10 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="180" height="180" rx="36" fill="url(#gradient)" />
-    <!-- Central node -->
-    <circle cx="90" cy="90" r="17" fill="white" />
-    <!-- Outer nodes -->
-    <circle cx="45" cy="45" r="11" fill="white" />
-    <circle cx="135" cy="45" r="11" fill="white" />
-    <circle cx="45" cy="135" r="11" fill="white" />
-    <circle cx="135" cy="135" r="11" fill="white" />
-    <circle cx="90" cy="28" r="8.5" fill="white" />
-    <circle cx="90" cy="152" r="8.5" fill="white" />
-    <!-- Connection lines -->
-    <line x1="90" y1="73" x2="45" y2="45" stroke="white" stroke-width="6.5" stroke-linecap="round" />
-    <line x1="90" y1="73" x2="135" y2="45" stroke="white" stroke-width="6.5" stroke-linecap="round" />
-    <line x1="90" y1="107" x2="45" y2="135" stroke="white" stroke-width="6.5" stroke-linecap="round" />
-    <line x1="90" y1="107" x2="135" y2="135" stroke="white" stroke-width="6.5"
-        stroke-linecap="round" />
-    <line x1="90" y1="73" x2="90" y2="28" stroke="white" stroke-width="6.5" stroke-linecap="round" />
-    <line x1="90" y1="107" x2="90" y2="152" stroke="white" stroke-width="6.5" stroke-linecap="round" />
-    <defs>
-        <linearGradient id="gradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E54D5E" />
-            <stop offset="1" stop-color="#C93D4E" />
-        </linearGradient>
-    </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <!-- 67router app icon: the mark in #FAFAFA on a full-bleed #0A0A0A square (iOS rounds the
+       corners itself; the mark stays inside the maskable safe zone). Source of every raster
+       icon — see scripts/ad-hoc/generate-brand-icons.mjs. -->
+  <rect width="180" height="180" fill="#0a0a0a"/>
+  <g transform="translate(21.5 18) scale(0.535)" fill="none" stroke="#fafafa" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="88" cy="166" r="46"/>
+    <path d="M55.5 133.5 L138 51 H214 L154 218"/>
+  </g>
 </svg>

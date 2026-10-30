@@ -75,7 +75,7 @@ export default function CliProfileAutoSyncToggles() {
   );
 
   return (
-    <div className="rounded-xl border border-border bg-surface/40 p-4">
+    <div className="rounded-card border border-border bg-surface p-4">
       <div className="mb-3">
         <h3 className="text-sm font-semibold text-text-main">{t("profileSyncTitle")}</h3>
         <p className="text-xs text-text-muted">{t("profileSyncDescription")}</p>

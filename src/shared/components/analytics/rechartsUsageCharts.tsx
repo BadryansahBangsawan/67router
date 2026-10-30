@@ -25,7 +25,7 @@ export function DailyTrendChart({ dailyTrend }) {
   if (!chartData.length) {
     return (
       <Card className="p-4">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-text-main mb-3">
           {t("chartModelUsageOverTime")}
         </h3>
         <div className="text-center text-text-muted text-sm py-8">{t("chartNoData")}</div>
@@ -44,13 +44,12 @@ function DailyTrendChartBody({ chartData, hasCost }) {
     return <ChartLoadingCard />;
   }
 
-  const { ComposedChart, Bar, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } = recharts;
+  const { ComposedChart, Bar, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } =
+    recharts;
 
   return (
     <Card className="p-4 flex-1">
-      <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
-        {t("chartModelUsageOverTime")}
-      </h3>
+      <h3 className="text-sm font-semibold text-text-main mb-3">{t("chartModelUsageOverTime")}</h3>
       <ResponsiveContainer width="100%" height={140}>
         <ComposedChart
           data={chartData}
@@ -74,12 +73,12 @@ function DailyTrendChartBody({ chartData, hasCost }) {
               width={36}
             />
           )}
+          <CartesianGrid vertical={false} stroke="var(--color-border)" strokeDasharray="3 4" />
           <Tooltip content={<CostTooltip />} cursor={{ fill: "var(--color-surface-2)" }} />
           <Bar
             dataKey={t("chartInput")}
             stackId="a"
             fill={CHART_SERIES.input}
-            opacity={0.7}
             radius={[0, 0, 0, 0]}
             animationDuration={600}
           />
@@ -87,7 +86,6 @@ function DailyTrendChartBody({ chartData, hasCost }) {
             dataKey={t("chartOutput")}
             stackId="a"
             fill={CHART_SERIES.output}
-            opacity={0.7}
             radius={[3, 3, 0, 0]}
             animationDuration={600}
           />
@@ -106,14 +104,14 @@ function DailyTrendChartBody({ chartData, hasCost }) {
       </ResponsiveContainer>
       <div className="flex items-center gap-4 mt-2 text-[10px] text-text-muted">
         <span className="flex items-center gap-1">
-          <span className="w-2 h-2 rounded-full bg-chart-1/70" /> {t("chartInput")}
+          <span className="w-2 h-2 rounded-full bg-chart-1" /> {t("chartInput")}
         </span>
         <span className="flex items-center gap-1">
-          <span className="w-2 h-2 rounded-full bg-chart-4/70" /> {t("chartOutput")}
+          <span className="w-2 h-2 rounded-full bg-chart-2" /> {t("chartOutput")}
         </span>
         {hasCost && (
           <span className="flex items-center gap-1">
-            <span className="w-2 h-2 rounded-full bg-chart-5/70" /> {t("chartCost")} ($)
+            <span className="w-2 h-2 rounded-full bg-chart-3" /> {t("chartCost")} ($)
           </span>
         )}
       </div>
@@ -173,9 +171,7 @@ function WeeklyPatternBody({ chartData, title }) {
   if (!recharts) {
     return (
       <Card className="px-4 py-3">
-        <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
-          {title}
-        </h3>
+        <h3 className="text-xs font-medium text-text-muted mb-2">{title}</h3>
         <div className="h-12" />
       </Card>
     );
@@ -185,9 +181,7 @@ function WeeklyPatternBody({ chartData, title }) {
 
   return (
     <Card className="px-4 py-3">
-      <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
-        {title}
-      </h3>
+      <h3 className="text-xs font-medium text-text-muted mb-2">{title}</h3>
       <ResponsiveContainer width="100%" height={48}>
         <BarChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
           <XAxis
@@ -236,7 +230,7 @@ export function ModelOverTimeChart({ dailyByModel, modelNames }) {
   if (!data.length || !models.length) {
     return (
       <Card className="p-4">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-text-main mb-3">
           {t("chartModelUsageOverTime")}
         </h3>
         <div className="text-center text-text-muted text-sm py-8">{t("chartNoData")}</div>
@@ -259,9 +253,7 @@ function ModelOverTimeChartBody({ chartData, models }) {
 
   return (
     <Card className="p-4">
-      <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
-        {t("chartModelUsageOverTime")}
-      </h3>
+      <h3 className="text-sm font-semibold text-text-main mb-3">{t("chartModelUsageOverTime")}</h3>
       <ResponsiveContainer width="100%" height={240}>
         <AreaChart data={chartData} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
           <XAxis

@@ -9,6 +9,7 @@ import { Progress } from "@omniroute/ui-kit/progress";
 import Button from "@/shared/components/Button";
 import Icon from "@/shared/components/Icon";
 import { Card } from "@/shared/components";
+import { KpiStrip } from "@/shared/components/KpiStrip";
 import { AI_PROVIDERS } from "@/shared/constants/providers";
 import { getProviderDisplayName } from "@/lib/display/names";
 import { useProviderNodeMap, resolveProviderName } from "@/lib/display/useProviderNodeMap";
@@ -308,18 +309,18 @@ function HealthSnapshot() {
       <div
         role="status"
         aria-live="polite"
-        className={`rounded-xl p-4 flex items-center gap-3 ${
-          data.status === "healthy"
-            ? "bg-success/10 border border-success/20"
-            : "bg-error/10 border border-error/20"
+        className={`rounded-card border px-5 py-4 flex items-center gap-3 text-sm ${
+          data.status === "healthy" ? "border-border bg-surface" : "border-error/30 bg-error-bg"
         }`}
       >
-        <Icon
-          name={data.status === "healthy" ? "check_circle" : "error"}
-          size={24}
-          className={data.status === "healthy" ? "text-success" : "text-error"}
+        {/* 67router status dot: colour lives on the dot, the copy stays in the text ink. */}
+        <span
+          aria-hidden="true"
+          className={`size-2 shrink-0 rounded-full ${
+            data.status === "healthy" ? "bg-success" : "bg-error"
+          }`}
         />
-        <span className={data.status === "healthy" ? "text-success" : "text-error"}>
+        <span className={data.status === "healthy" ? "text-text-main" : "text-error"}>
           {data.status === "healthy" ? t("allOperational") : t("issuesDetected")}
         </span>
       </div>
@@ -352,20 +353,22 @@ function HealthSnapshot() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <div
-                className={`flex items-center justify-center size-9 rounded-lg ${
-                  dbHealth?.isHealthy ? "bg-success/10 text-success" : "bg-warning/10 text-warning"
+                className={`flex items-center justify-center size-8 rounded-control border border-border bg-surface ${
+                  dbHealth?.isHealthy ? "text-success" : "text-warning"
                 }`}
               >
                 <Icon name="database" size={18} />
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-text-main">{t("databaseHealth")}</h2>
+                <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
+                  {t("databaseHealth")}
+                </h2>
                 <p className="text-sm text-text-muted">{t("databaseHealthDescription")}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
-              <div className="rounded-xl border border-border bg-surface/50 p-3">
-                <p className="text-xs uppercase tracking-wide text-text-muted">{t("status")}</p>
+              <div className="rounded-control border border-border bg-bg-subtle p-3">
+                <p className="text-xs text-text-muted">{t("status")}</p>
                 <p
                   className={`mt-1 text-sm font-medium ${
                     dbHealth?.isHealthy ? "text-success" : "text-warning"
@@ -374,14 +377,14 @@ function HealthSnapshot() {
                   {dbHealth?.isHealthy ? t("healthy") : t("attentionNeeded")}
                 </p>
               </div>
-              <div className="rounded-xl border border-border bg-surface/50 p-3">
-                <p className="text-xs uppercase tracking-wide text-text-muted">{t("issues")}</p>
+              <div className="rounded-control border border-border bg-bg-subtle p-3">
+                <p className="text-xs text-text-muted">{t("issues")}</p>
                 <p className="mt-1 text-sm font-medium text-text-main">
                   {dbHealth?.issues?.length ?? 0}
                 </p>
               </div>
-              <div className="rounded-xl border border-border bg-surface/50 p-3">
-                <p className="text-xs uppercase tracking-wide text-text-muted">{t("repairs")}</p>
+              <div className="rounded-control border border-border bg-bg-subtle p-3">
+                <p className="text-xs text-text-muted">{t("repairs")}</p>
                 <p className="mt-1 text-sm font-medium text-text-main">
                   {dbHealth?.repairedCount ?? 0}
                 </p>
@@ -418,55 +421,39 @@ function HealthSnapshot() {
         )}
       </Card>
 
-      {/* System Info Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card className="p-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="flex items-center justify-center size-8 rounded-lg bg-primary/10 text-primary">
-              <Icon name="timer" size={18} />
-            </div>
-            <span className="text-sm text-text-muted">{t("uptime")}</span>
-          </div>
-          <p className="text-xl font-semibold text-text-main">{formatUptime(system.uptime)}</p>
-        </Card>
+      {/* System info — 67router KPI row (one card split by dividers) */}
+      <KpiStrip columns={4}>
+        <div className="flex min-w-0 flex-col px-5 py-4">
+          <span className="mb-1 text-[13px] text-text-muted">{t("uptime")}</span>
+          <p className="text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
+            {formatUptime(system.uptime)}
+          </p>
+        </div>
 
-        <Card className="p-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="flex items-center justify-center size-8 rounded-lg bg-info/10 text-info">
-              <Icon name="info" size={18} />
-            </div>
-            <span className="text-sm text-text-muted">{t("version")}</span>
-          </div>
-          <p className="text-xl font-semibold text-text-main">v{system.version}</p>
+        <div className="flex min-w-0 flex-col px-5 py-4">
+          <span className="mb-1 text-[13px] text-text-muted">{t("version")}</span>
+          <p className="text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
+            v{system.version}
+          </p>
           <p className="text-xs text-text-muted mt-1">
             {t("nodeVersion", { version: system.nodeVersion })}
           </p>
-        </Card>
+        </div>
 
-        <Card className="p-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="flex items-center justify-center size-8 rounded-lg bg-chart-3/10 text-chart-3">
-              <Icon name="memory" size={18} />
-            </div>
-            <span className="text-sm text-text-muted">{t("memoryRss")}</span>
-          </div>
-          <p className="text-xl font-semibold text-text-main">
+        <div className="flex min-w-0 flex-col px-5 py-4">
+          <span className="mb-1 text-[13px] text-text-muted">{t("memoryRss")}</span>
+          <p className="text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
             {formatBytes(system.memoryUsage?.rss || 0)}
           </p>
           <p className="text-xs text-text-muted mt-1">
             {t("heap")}: {formatBytes(system.memoryUsage?.heapUsed || 0)} /{" "}
             {formatBytes(system.memoryUsage?.heapTotal || 0)}
           </p>
-        </Card>
+        </div>
 
-        <Card className="p-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="flex items-center justify-center size-8 rounded-lg bg-warning/10 text-warning">
-              <Icon name="dns" size={18} />
-            </div>
-            <span className="text-sm text-text-muted">{t("providers")}</span>
-          </div>
-          <p className="text-xl font-semibold text-text-main">
+        <div className="flex min-w-0 flex-col px-5 py-4">
+          <span className="mb-1 text-[13px] text-text-muted">{t("providers")}</span>
+          <p className="text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
             {providerSummary?.configuredCount ?? cbEntries.length}
           </p>
           <p
@@ -492,15 +479,15 @@ function HealthSnapshot() {
             })}
             <Icon name="info" size={12} />
           </p>
-        </Card>
-      </div>
+        </div>
+      </KpiStrip>
 
       {/* Session & Quota Observability */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
         <Card className="p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
-              <Icon name="groups" size={20} className="text-primary" />
+            <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
+              <Icon name="groups" size={20} className="text-text-muted" />
               {t("sessionActivity")}
             </h2>
             <span className="text-xs text-text-muted">
@@ -508,13 +495,13 @@ function HealthSnapshot() {
             </span>
           </div>
           <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("stickyBoundSessions")}</div>
               <div className="text-2xl font-semibold text-text-main mt-1">
                 {sessions?.stickyBoundCount ?? 0}
               </div>
             </div>
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("sessionsByApiKey")}</div>
               <div className="text-2xl font-semibold text-text-main mt-1">
                 {Object.keys(sessions?.byApiKey || {}).length}
@@ -553,8 +540,8 @@ function HealthSnapshot() {
 
         <Card className="p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
-              <Icon name="radar" size={20} className="text-primary" />
+            <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
+              <Icon name="radar" size={20} className="text-text-muted" />
               {t("quotaMonitors")}
             </h2>
             <span className="text-xs text-text-muted">
@@ -562,25 +549,25 @@ function HealthSnapshot() {
             </span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("alerting")}</div>
               <div className="text-2xl font-semibold text-warning mt-1">
                 {quotaMonitor?.alerting ?? 0}
               </div>
             </div>
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("limitExhausted")}</div>
               <div className="text-2xl font-semibold text-error mt-1">
                 {quotaMonitor?.exhausted ?? 0}
               </div>
             </div>
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("errors")}</div>
               <div className="text-2xl font-semibold text-warning mt-1">
                 {quotaMonitor?.errors ?? 0}
               </div>
             </div>
-            <div className="rounded-xl border border-border/40 bg-surface/30 p-3">
+            <div className="rounded-control border border-border bg-bg-subtle p-3">
               <div className="text-xs text-text-muted">{t("providers")}</div>
               <div className="text-2xl font-semibold text-text-main mt-1">
                 {Object.keys(quotaMonitor?.byProvider || {}).length}
@@ -637,8 +624,8 @@ function HealthSnapshot() {
       {degradation && degradation.features && degradation.features.length > 0 && (
         <Card className="p-5" role="region" aria-label={t("gracefulDegradationStatus")}>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
-              <Icon name="healing" size={20} className="text-primary" />
+            <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
+              <Icon name="healing" size={20} className="text-text-muted" />
               {t("gracefulDegradationStatus")}
             </h2>
             <div className="flex items-center gap-3 text-xs text-text-muted font-medium">
@@ -789,8 +776,8 @@ function HealthSnapshot() {
       {/* Provider Health */}
       <Card className="p-5" role="region" aria-label={t("providerHealthStatusAria")}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
-            <Icon name="health_and_safety" size={20} className="text-primary" />
+          <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
+            <Icon name="health_and_safety" size={20} className="text-text-muted" />
             {t("providerHealth")}
           </h2>
           <div className="flex items-center gap-3">
@@ -966,7 +953,7 @@ function HealthSnapshot() {
           return (
             <Card className="p-5">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
+                <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
                   <Icon name="speed" size={20} className="text-warning" />
                   {t("rateLimitStatus")}
                 </h2>
@@ -1129,7 +1116,7 @@ function HealthSnapshot() {
       {lockoutEntries.length > 0 && (
         <Card className="p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-text-main flex items-center gap-2">
+            <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main flex items-center gap-2">
               <Icon name="lock" size={20} className="text-error" />
               {t("activeLockouts")}
             </h2>

@@ -154,7 +154,7 @@ export default function MonitorTab({ onGoToTranslate }: MonitorTabProps) {
     <div className="space-y-5 min-w-0">
       {/* Origin hint — always visible (monitorOriginHint) */}
       <div
-        className="flex items-start gap-3 px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-sm text-text-muted"
+        className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted"
         data-testid="monitor-origin-hint"
       >
         <Icon name="info" size={20} className="text-primary mt-0.5" />

@@ -305,11 +305,11 @@ export default function MemorySkillsTab() {
     return (
       <Card data-testid="memory-settings-card">
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="psychology" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("memorySkillsTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("memorySkillsTitle")}</h3>
             <p className="text-sm text-text-muted">{t("memorySkillsDesc")}</p>
           </div>
         </div>
@@ -323,11 +323,11 @@ export default function MemorySkillsTab() {
       {/* Memory Settings */}
       <Card>
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="memory" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("memoryTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("memoryTitle")}</h3>
             <p className="text-sm text-text-muted">{t("memoryDesc")}</p>
           </div>
           {status === "saved" && (
@@ -438,11 +438,11 @@ export default function MemorySkillsTab() {
       {/* Qdrant (optional semantic memory index) */}
       <Card data-testid="qdrant-settings-card">
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="database" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("qdrantTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("qdrantTitle")}</h3>
             <p className="text-sm text-text-muted">{t("qdrantDesc")}</p>
           </div>
 
@@ -694,11 +694,11 @@ export default function MemorySkillsTab() {
       {/* Skills Settings */}
       <Card data-testid="skills-settings-card">
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="handyman" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("skillsTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("skillsTitle")}</h3>
             <p className="text-sm text-text-muted">{t("skillsDesc")}</p>
           </div>
         </div>
@@ -722,11 +722,13 @@ export default function MemorySkillsTab() {
       {/* SkillsMP Marketplace API Key */}
       <Card>
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="storefront" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("memorySkillsSkillsmpMarketplace")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">
+              {t("memorySkillsSkillsmpMarketplace")}
+            </h3>
             <p className="text-sm text-text-muted">{t("memorySkillsSkillsmpDescription")}</p>
           </div>
           {skillsmpStatus === "saved" && (
@@ -766,11 +768,13 @@ export default function MemorySkillsTab() {
       {/* Active Skills Provider */}
       <Card>
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="hub" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("memorySkillsActiveSkillsProvider")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">
+              {t("memorySkillsActiveSkillsProvider")}
+            </h3>
             <p className="text-sm text-text-muted">{t("memorySkillsActiveProviderDescription")}</p>
           </div>
           {skillsProviderStatus === "saved" && (

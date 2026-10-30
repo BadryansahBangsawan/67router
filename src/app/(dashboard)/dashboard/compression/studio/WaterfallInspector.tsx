@@ -77,7 +77,7 @@ function StepRow({ step, maxTokens }: { step: CompressionEngineStep; maxTokens: 
         </div>
         {!skipped && (
           <div
-            className="text-[11px] font-bold"
+            className="text-[11px] font-semibold tabular-nums"
             style={{ color }}
             data-testid="waterfall-savings-text"
           >
@@ -118,7 +118,7 @@ export function WaterfallInspector({ run, className = "" }: WaterfallInspectorPr
     <div className={`flex flex-col ${className}`} data-testid="waterfall-inspector">
       {/* Header — INPUT */}
       <div className="flex items-center gap-3 py-2 border-b border-border font-semibold text-xs text-text-muted">
-        <span className="w-28 shrink-0 text-primary">⌁ {t("input")}</span>
+        <span className="w-28 shrink-0 font-medium text-text-main">⌁ {t("input")}</span>
         <div className="flex-1">
           <div className="h-2 rounded-full bg-border/30 overflow-hidden">
             <div className="h-full w-full rounded-full bg-border/50" />
@@ -150,7 +150,7 @@ export function WaterfallInspector({ run, className = "" }: WaterfallInspectorPr
             {t("tokenCount", { count: run.compressedTokens })}
           </div>
           <div
-            className="text-[11px] font-bold"
+            className="text-[11px] font-semibold tabular-nums"
             style={{ color: "var(--orch-status-success)" }}
             data-testid="waterfall-total-savings"
           >
@@ -160,11 +160,13 @@ export function WaterfallInspector({ run, className = "" }: WaterfallInspectorPr
       </div>
 
       {/* Summary bar */}
-      <div className="flex items-center gap-3 px-3 py-2 rounded-lg bg-border/10 mt-2 text-[11px] text-text-muted">
+      <div className="flex items-center gap-3 px-3 py-2 mt-2 rounded-control border border-border bg-bg-subtle text-[11px] text-text-muted">
         <span>
           {fmt(run.originalTokens)} → {fmt(run.compressedTokens)} {t("tokenShort")}
         </span>
-        <span className="text-success font-bold">−{run.savingsPercent.toFixed(1)}%</span>
+        <span className="font-semibold tabular-nums text-success">
+          −{run.savingsPercent.toFixed(1)}%
+        </span>
         {run.comboId && <span className="font-mono opacity-70">{run.comboId}</span>}
         <span className="ml-auto opacity-60">{run.mode}</span>
       </div>

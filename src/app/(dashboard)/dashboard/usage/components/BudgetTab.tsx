@@ -2,8 +2,10 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Icon from "@/shared/components/Icon";
-import { Card, Button, Input, EmptyState, Select, Checkbox } from "@/shared/components";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
+import { Button, Input, EmptyState, Select, Checkbox } from "@/shared/components";
 import { useNotificationStore } from "@/store/notificationStore";
 import { compareTr, matchesSearch } from "@/shared/utils/turkishText";
 // ────────────────────────────────────────────────────────────────────────────
@@ -451,49 +453,45 @@ export default function BudgetTab() {
   });
 
   return (
-    <div className="flex flex-col gap-4">
-      {/* Hero KPIs */}
-      <Card className="p-5">
-        <div className="flex items-start justify-between gap-3 mb-4">
-          <div>
-            <h2 className="text-xl font-bold flex items-center gap-2">
-              <Icon name="account_balance_wallet" size={22} className="text-primary" />
-              {t("budgetPageTitle")}
-            </h2>
-            <p className="text-text-muted text-xs mt-0.5">{t("budgetPageDescription")}</p>
-          </div>
-          <span className="text-[11px] text-text-muted">
+    <div className="flex flex-col gap-6">
+      <PageHeader
+        compact
+        title={t("budgetPageTitle")}
+        description={t("budgetPageDescription")}
+        actions={
+          <span className="text-xs text-text-muted">
             {t("budgetTemplateStorageHint", { count: templates.length })}{" "}
             <code className="text-text-main">{LS_TEMPLATES}</code>
           </span>
-        </div>
+        }
+      />
 
-        <div className="grid grid-cols-2 lg:grid-cols-6 gap-2">
-          <KpiBlock label={t("budgetKpiToday")} value={formatCurrency(stats.today)} />
-          <KpiBlock label={t("budgetKpiThisMonth")} value={formatCurrency(stats.month)} />
-          <KpiBlock
-            label={t("budgetKpiProjEom")}
-            value={formatCurrency(stats.projectionEom)}
-            tone={projectionOverBudget ? "amber" : undefined}
-            hint={projectionOverBudget ? t("budgetAboveLimitShort") : t("budgetOnTrackShort")}
-          />
-          <KpiBlock
-            label={t("budgetKpiBlocked")}
-            value={String(stats.counts.blocked)}
-            tone={stats.counts.blocked > 0 ? "red" : undefined}
-          />
-          <KpiBlock
-            label={t("budgetKpiAtRisk")}
-            value={String(stats.counts.alerting)}
-            tone={stats.counts.alerting > 0 ? "amber" : undefined}
-            hint={t("budgetAtOrAboveWarning")}
-          />
-          <KpiBlock
-            label={t("budgetKpiActiveKeys")}
-            value={`${stats.counts.active} / ${rows.length}`}
-          />
-        </div>
-      </Card>
+      {/* KPI row — one bordered card split by dividers */}
+      <KpiStrip columns={6}>
+        <KpiBlock label={t("budgetKpiToday")} value={formatCurrency(stats.today)} />
+        <KpiBlock label={t("budgetKpiThisMonth")} value={formatCurrency(stats.month)} />
+        <KpiBlock
+          label={t("budgetKpiProjEom")}
+          value={formatCurrency(stats.projectionEom)}
+          tone={projectionOverBudget ? "amber" : undefined}
+          hint={projectionOverBudget ? t("budgetAboveLimitShort") : t("budgetOnTrackShort")}
+        />
+        <KpiBlock
+          label={t("budgetKpiBlocked")}
+          value={String(stats.counts.blocked)}
+          tone={stats.counts.blocked > 0 ? "red" : undefined}
+        />
+        <KpiBlock
+          label={t("budgetKpiAtRisk")}
+          value={String(stats.counts.alerting)}
+          tone={stats.counts.alerting > 0 ? "amber" : undefined}
+          hint={t("budgetAtOrAboveWarning")}
+        />
+        <KpiBlock
+          label={t("budgetKpiActiveKeys")}
+          value={`${stats.counts.active} / ${rows.length}`}
+        />
+      </KpiStrip>
 
       {/* Filters + Templates */}
       <div className="flex flex-col gap-2">
@@ -667,15 +665,7 @@ function KpiBlock({
 }) {
   const color =
     tone === "red" ? "text-error" : tone === "amber" ? "text-warning" : "text-text-main";
-  return (
-    <div className="rounded-lg border border-border/40 bg-bg-subtle/30 px-3 py-2">
-      <div className="text-[10px] uppercase tracking-wide text-text-muted font-semibold truncate">
-        {label}
-      </div>
-      <div className={`text-xl font-bold tabular-nums leading-tight ${color}`}>{value}</div>
-      {hint && <div className="text-[10px] text-text-muted truncate">{hint}</div>}
-    </div>
-  );
+  return <KpiCell label={label} value={value} footnote={hint} valueClassName={color} />;
 }
 
 function ProgressBarTinyColored({ value, max }: { value: number; max: number }) {

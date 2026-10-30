@@ -136,7 +136,7 @@ export function OmniSkillsList({
 
       {/* Right: inspector pane */}
       <div className="col-span-12 lg:col-span-5">
-        <div className="sticky top-4 rounded-xl border border-border bg-bg-subtle overflow-hidden min-h-[400px]">
+        <div className="sticky top-4 rounded-card border border-border bg-bg-subtle overflow-hidden min-h-[400px]">
           <SkillInspectorPane
             selectedSkillId={selectedSkillId}
             skill={selectedSkill}

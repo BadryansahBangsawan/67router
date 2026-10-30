@@ -10,13 +10,13 @@ import {
   TableHeader,
   TableRow,
 } from "@omniroute/ui-kit/table";
-import { SectionHeader } from "@omniroute/ui-kit/page-header";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Badge from "@/shared/components/Badge";
 import Button from "@/shared/components/Button";
 import Icon from "@/shared/components/Icon";
 import Input from "@/shared/components/Input";
 import Modal from "@/shared/components/Modal";
-import { PROVIDER_COLORS, getHttpStatusStyle } from "@/shared/constants/colors";
+import { PROVIDER_COLORS } from "@/shared/constants/colors";
 import { formatTime } from "@/shared/utils/formatting";
 import { copyToClipboard } from "@/shared/utils/clipboard";
 import RequestLoggerDetail from "@/shared/components/RequestLoggerDetail";
@@ -85,31 +85,21 @@ function ProviderBadge({ provider }: { provider: string | null }) {
   const style = (PROVIDER_COLORS as Record<string, { bg: string; text: string; label: string }>)[
     provider
   ];
-  if (!style) {
-    return (
-      <span className="inline-block px-2 py-0.5 rounded-full text-[9px] font-bold bg-bg-subtle text-text-muted border border-border">
-        {provider}
-      </span>
-    );
-  }
+  // 67router: providers read as neutral mono chips; colour is reserved for status.
   return (
-    <span
-      className="inline-block px-2 py-0.5 rounded-full text-[9px] font-bold"
-      style={{ backgroundColor: style.bg, color: style.text }}
-    >
-      {style.label}
+    <span className="inline-block rounded-[5px] border border-border bg-bg-subtle px-1.5 py-px font-mono text-[11px] text-text-main">
+      {style?.label ?? provider}
     </span>
   );
 }
 
 function StatusBadge({ status }: { status: number | null }) {
   if (status == null) return <span className="text-text-muted text-[10px]">—</span>;
-  const style = getHttpStatusStyle(status);
+  // 67router status: a coloured dot next to the code in the text ink.
+  const dot = status >= 500 ? "bg-error" : status >= 400 ? "bg-warning" : "bg-success";
   return (
-    <span
-      className="inline-block px-2 py-0.5 rounded-full text-[9px] font-bold"
-      style={{ backgroundColor: style.bg, color: style.text ?? "#fff" }}
-    >
+    <span className="inline-flex items-center gap-1.5 font-mono text-xs tabular-nums text-text-main">
+      <span aria-hidden="true" className={`size-2 shrink-0 rounded-full ${dot}`} />
       {status}
     </span>
   );
@@ -782,7 +772,8 @@ function ConversationsPageContent() {
 
   return (
     <div className="flex flex-col gap-4">
-      <SectionHeader
+      <PageHeader
+        compact
         title="Conversations"
         description={`${total} conversation${total === 1 ? "" : "s"} with 2+ turns`}
         actions={
@@ -827,7 +818,7 @@ function ConversationsPageContent() {
               <div
                 key={row.id}
                 onClick={() => openConversation(row)}
-                className="rounded-xl border border-border p-3 flex flex-col gap-2 active:bg-bg-subtle cursor-pointer"
+                className="rounded-card border border-border p-3 flex flex-col gap-2 active:bg-bg-subtle cursor-pointer"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="flex items-center gap-1.5 min-w-0">
@@ -851,7 +842,9 @@ function ConversationsPageContent() {
                 </div>
                 <div className="flex items-center justify-between gap-2 flex-wrap">
                   <div className="flex items-center gap-1.5 min-w-0">
-                    <span className="text-sm text-text-main truncate">{row.lastModel ?? "—"}</span>
+                    <span className="truncate font-mono text-xs text-text-main">
+                      {row.lastModel ?? "—"}
+                    </span>
                     <ProviderBadge provider={row.lastProvider} />
                   </div>
                   <StatusBadge status={row.lastStatus} />
@@ -909,7 +902,9 @@ function ConversationsPageContent() {
                     <ContinuationBadge isGenuine={row.isGenuineContinuation} />
                     <StalledBadge isStalled={row.isStalled} />
                   </TableCell>
-                  <TableCell className="text-text-main">{row.lastModel ?? "—"}</TableCell>
+                  <TableCell className="font-mono text-xs text-text-main">
+                    {row.lastModel ?? "—"}
+                  </TableCell>
                   <TableCell>
                     <ProviderBadge provider={row.lastProvider} />
                   </TableCell>

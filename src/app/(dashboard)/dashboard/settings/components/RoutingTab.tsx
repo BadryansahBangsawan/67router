@@ -911,11 +911,13 @@ export default function RoutingTab() {
       <Card>
         <div className="flex items-start justify-between gap-4">
           <div className="flex gap-3">
-            <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+            <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
               <Icon name="auto_awesome" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("routingZeroConfigTitle")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">
+                {t("routingZeroConfigTitle")}
+              </h3>
               <p className="text-sm text-text-muted mt-1">{t("routingZeroConfigDesc")}</p>
             </div>
           </div>
@@ -982,11 +984,11 @@ export default function RoutingTab() {
 
       <Card>
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
             <Icon name="tune" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("systemTransforms")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("systemTransforms")}</h3>
             <p className="text-sm text-text-muted mt-1">{t("systemTransformsDesc")}</p>
           </div>
         </div>
@@ -1272,11 +1274,11 @@ export default function RoutingTab() {
 
       <Card>
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
             <Icon name="security" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("cliFingerprint")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("cliFingerprint")}</h3>
             <p className="text-sm text-text-muted mt-1">{t("cliFingerprintDesc")}</p>
           </div>
         </div>
@@ -1316,11 +1318,13 @@ export default function RoutingTab() {
 
       <Card>
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="cached" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("routingClientCacheControlTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">
+              {t("routingClientCacheControlTitle")}
+            </h3>
             <p className="text-sm text-text-muted">{t("routingClientCacheControlDesc")}</p>
           </div>
         </div>
@@ -1361,11 +1365,13 @@ export default function RoutingTab() {
 
       <Card>
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="fingerprint" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("routingAntigravitySignatureTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">
+              {t("routingAntigravitySignatureTitle")}
+            </h3>
             <p className="text-sm text-text-muted">{t("routingAntigravitySignatureDesc")}</p>
           </div>
         </div>
@@ -1407,11 +1413,13 @@ export default function RoutingTab() {
       <Card>
         <div className="flex items-start justify-between gap-4">
           <div className="flex gap-3">
-            <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+            <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
               <Icon name="badge" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("echoRequestedModelTitle")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">
+                {t("echoRequestedModelTitle")}
+              </h3>
               <p className="text-sm text-text-muted mt-1">{t("echoRequestedModelDesc")}</p>
             </div>
           </div>
@@ -1429,11 +1437,13 @@ export default function RoutingTab() {
       {/* #4481 layer 2 — Web-Search Routing (CCR-style Router.webSearch) */}
       <Card>
         <div className="flex gap-3">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
             <Icon name="travel_explore" size={20} />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold">{t("webSearchRouteTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">
+              {t("webSearchRouteTitle")}
+            </h3>
             <p className="text-sm text-text-muted mt-1">{t("webSearchRouteDesc")}</p>
             <div className="mt-3">
               <ModelSelectField
@@ -1461,11 +1471,11 @@ export default function RoutingTab() {
 
       <Card>
         <div className="flex gap-3">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
             <Icon name="timer" size={20} />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold">Search timeouts</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">Search timeouts</h3>
             <p className="text-sm text-text-muted mt-1">
               How long a search waits before it is cut off. Leave a field empty to keep the default:
               15 seconds overall, and each provider&apos;s own limit.
@@ -1515,11 +1525,11 @@ export default function RoutingTab() {
       <Card>
         <div className="flex items-start justify-between gap-4">
           <div className="flex gap-3">
-            <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+            <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
               <Icon name="verified" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("lkgpToggleTitle")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">{t("lkgpToggleTitle")}</h3>
               <p className="text-sm text-text-muted mt-1">{t("lkgpToggleDesc")}</p>
             </div>
           </div>
@@ -1580,11 +1590,13 @@ export default function RoutingTab() {
       <Card>
         <div className="flex items-start justify-between gap-4">
           <div className="flex gap-3">
-            <div className="p-2 rounded-lg bg-bg-subtle text-text-muted h-fit">
+            <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted h-fit">
               <Icon name="network_ping" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("adaptiveVolumeRouting")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">
+                {t("adaptiveVolumeRouting")}
+              </h3>
               <p className="text-sm text-text-muted mt-1">{t("adaptiveVolumeRoutingDesc")}</p>
             </div>
           </div>

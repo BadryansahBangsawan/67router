@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { PageHeader } from "@omniroute/ui-kit/page-header";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Tabs, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
-import { Card } from "@/shared/components";
 import { SkillsConceptCard } from "@/shared/components";
 import Button from "@/shared/components/Button";
 import Modal from "@/shared/components/Modal";
@@ -214,33 +214,20 @@ export function OmniSkillsPageClient(): JSX.Element {
         compact
         title={tSidebar("omniSkills")}
         description={tSidebar("omniSkillsSubtitle")}
+        actions={
+          <Button onClick={() => setShowInstallModal(true)}>{t("installSkillButton")}</Button>
+        }
       />
       {/* Concept card */}
       <SkillsConceptCard variant="omni" />
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Card padding="sm">
-          <p className="text-xs text-text-muted uppercase tracking-wide">{t("totalSkills")}</p>
-          <p className="text-2xl font-bold text-text-main mt-1">{skillsTotal}</p>
-        </Card>
-        <Card padding="sm">
-          <p className="text-xs text-text-muted uppercase tracking-wide">{t("enabledSkills")}</p>
-          <p className="text-2xl font-bold text-success mt-1">{enabledCount}</p>
-        </Card>
-        <Card padding="sm">
-          <p className="text-xs text-text-muted uppercase tracking-wide">{t("totalExecutions")}</p>
-          <p className="text-2xl font-bold text-primary mt-1">{execTotal}</p>
-        </Card>
-        <Card padding="sm">
-          <p className="text-xs text-text-muted uppercase tracking-wide">{t("successRate")}</p>
-          <p className="text-2xl font-bold text-warning mt-1">{successRate}%</p>
-        </Card>
-      </div>
-
-      <div className="flex justify-end">
-        <Button onClick={() => setShowInstallModal(true)}>{t("installSkillButton")}</Button>
-      </div>
+      <KpiStrip columns={4}>
+        <KpiCell label={t("totalSkills")} value={skillsTotal} />
+        <KpiCell label={t("enabledSkills")} value={enabledCount} />
+        <KpiCell label={t("totalExecutions")} value={execTotal} />
+        <KpiCell label={t("successRate")} value={`${successRate}%`} />
+      </KpiStrip>
 
       {/* Tab bar — the panels below are rendered by the page (no TabsContent). */}
       <Tabs

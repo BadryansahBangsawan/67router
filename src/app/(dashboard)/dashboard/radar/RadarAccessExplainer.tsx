@@ -21,7 +21,7 @@ export function RadarAccessExplainer() {
   return (
     <section
       aria-labelledby="radar-access-scale-title"
-      className="w-full rounded-xl border border-border bg-primary/5 p-4 text-left sm:p-5"
+      className="w-full rounded-card border border-border bg-primary/5 p-4 text-left sm:p-5"
     >
       <h3 id="radar-access-scale-title" className="text-base font-semibold text-text-main">
         {t("accessScaleTitle")}

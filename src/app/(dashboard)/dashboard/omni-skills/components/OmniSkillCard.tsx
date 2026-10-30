@@ -48,16 +48,12 @@ export function OmniSkillCard({ skill, selected, onClick }: OmniSkillCardProps):
       className={cn(
         "h-auto w-full justify-start whitespace-normal p-3 text-left font-normal",
         selected
-          ? "border-primary bg-primary/10"
-          : "border-border bg-bg-subtle hover:border-border/80 hover:bg-surface-2"
+          ? "border-border-strong bg-bg-subtle"
+          : "border-border bg-surface hover:border-border-strong"
       )}
     >
       <div className="flex items-start gap-2">
-        <div
-          className={`flex items-center justify-center size-8 rounded-md shrink-0 ${
-            selected ? "bg-primary/20" : "bg-surface-2"
-          }`}
-        >
+        <div className="flex size-8 shrink-0 items-center justify-center rounded-control border border-border bg-surface">
           <Icon name="auto_fix_high" size={18} className="text-text-muted" />
         </div>
         <div className="flex-1 min-w-0">

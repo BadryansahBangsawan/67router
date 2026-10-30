@@ -392,7 +392,7 @@ export default function CompressionSettingsTab() {
           <Icon name="compress" size={20} />
         </div>
         <div>
-          <h3 className="text-lg font-semibold">{t("compressionTitle")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("compressionTitle")}</h3>
           <p className="text-sm text-text-muted">{t("compressionDesc")}</p>
         </div>
         {status === "saved" && (

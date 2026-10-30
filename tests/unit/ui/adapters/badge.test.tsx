@@ -38,6 +38,13 @@ describe("Badge adapter → kit Badge + tone", () => {
     expect(el.querySelector("[data-testid=i]")).not.toBeNull();
   });
 
+  it("outline variant is a neutral kit outline badge with no tone", () => {
+    const { getByText } = render(<Badge variant="outline">w</Badge>);
+    const el = getByText("w");
+    expect(el.className).toContain("ci-badge--outline");
+    expect(el.hasAttribute("data-tone")).toBe(false);
+  });
+
   it("a string icon is a Material Symbols name rendered through <Icon> (not as text)", () => {
     const { getByText } = render(
       <Badge variant="warning" icon="warning">

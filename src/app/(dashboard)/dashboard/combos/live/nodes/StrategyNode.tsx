@@ -71,7 +71,7 @@ export function StrategyNode({ data }: NodeProps) {
       />
 
       <span
-        className="text-xs font-semibold uppercase tracking-wide truncate"
+        className="text-xs font-semibold uppercase tracking-[0.04em] truncate"
         style={{ color }}
         data-testid="strategy-label"
       >

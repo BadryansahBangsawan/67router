@@ -49,7 +49,7 @@ export function FilterSearchRow({
       />
 
       <div className="flex items-center gap-3">
-        <span className="text-sm text-text-muted">
+        <span className="text-[13px] tabular-nums text-text-muted">
           {totalCount} {countLabel}
         </span>
         {hasActiveFilters && (

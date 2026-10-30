@@ -154,11 +154,9 @@ export default function HomeRecentRequests({ enabled = true }: { enabled?: boole
   }, [enabled, load]);
 
   return (
-    <Card padding="sm" className="flex min-w-0 flex-col overflow-hidden h-[300px] sm:h-[420px]">
-      <div className="pb-2 mb-1 border-b border-border shrink-0">
-        <span className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-          {t("recentRequests")}
-        </span>
+    <Card padding="none" className="flex min-w-0 flex-col overflow-hidden h-[300px] sm:h-[420px]">
+      <div className="flex h-12 shrink-0 items-center border-b border-border px-5">
+        <h2 className="text-sm font-semibold text-text-main">{t("recentRequests")}</h2>
       </div>
 
       {loaded && rows.length === 0 ? (
@@ -166,25 +164,25 @@ export default function HomeRecentRequests({ enabled = true }: { enabled?: boole
           {t("recentRequestsEmpty")}
         </div>
       ) : (
-        <div className="flex-1 overflow-y-auto -mx-1 px-1">
+        <div className="flex-1 overflow-y-auto">
           <Table
-            className="min-w-0 text-xs [&_td]:h-auto [&_th]:h-auto"
+            className="min-w-0 text-[13px] tabular-nums [&_td]:h-auto [&_th]:h-auto [&_td:first-child]:pl-5 [&_th:first-child]:pl-5 [&_td:last-child]:pr-5 [&_th:last-child]:pr-5"
             // Vertical scroll lives on the card body and the header is sticky to it: the kit
             // container must not become a scroll box (no persistent horizontal bar either).
             persistentScrollbars={false}
             containerClassName="overflow-visible rounded-none border-0"
             scrollbarLabel={t("recentRequests")}
           >
-            <TableHeader className="sticky top-0 z-10 bg-surface">
-              <TableRow className="border-b border-border text-text-muted">
+            <TableHeader className="sticky top-0 z-10 bg-bg-subtle">
+              <TableRow className="border-b border-border text-xs text-text-muted">
                 <TableHead className="w-2 py-1.5" />
-                <TableHead className="py-1.5 text-left font-semibold">
+                <TableHead className="py-1.5 text-left font-medium">
                   {t("recentRequestsModel")}
                 </TableHead>
-                <TableHead className="py-1.5 text-right font-semibold whitespace-nowrap">
+                <TableHead className="py-1.5 text-right font-medium whitespace-nowrap">
                   {t("recentRequestsTokens")}
                 </TableHead>
-                <TableHead className="py-1.5 text-right font-semibold">
+                <TableHead className="py-1.5 text-right font-medium">
                   {t("recentRequestsWhen")}
                 </TableHead>
               </TableRow>
@@ -198,18 +196,18 @@ export default function HomeRecentRequests({ enabled = true }: { enabled?: boole
                       <span className={`block size-1.5 rounded-full ${STATE_DOT[state]}`} />
                     </TableCell>
                     <TableCell
-                      className="py-1.5 font-mono truncate max-w-[140px]"
+                      className="py-2 font-mono text-xs truncate max-w-[140px]"
                       title={row.model || ""}
                     >
                       {row.model || "—"}
                     </TableCell>
                     <TableCell className="py-1.5 text-right whitespace-nowrap">
-                      <span className="text-primary">{fmtCompact(row.tokens?.in)}↑</span>{" "}
-                      <span className="text-success">{fmtCompact(row.tokens?.out)}↓</span>
+                      <span className="text-text-main">{fmtCompact(row.tokens?.in)}↑</span>{" "}
+                      <span className="text-text-muted">{fmtCompact(row.tokens?.out)}↓</span>
                     </TableCell>
                     <TableCell className="py-1.5 text-right whitespace-nowrap text-text-muted">
                       {state === "active" ? (
-                        <span className="text-primary">•••</span>
+                        <span className="text-text-main">•••</span>
                       ) : (
                         timeAgo(row.timestamp, nowMs)
                       )}

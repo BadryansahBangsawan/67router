@@ -296,7 +296,7 @@ export default function ToolDetailClient({ toolId, category }: ToolDetailClientP
         eyebrow={
           <Link
             href={backCategory}
-            className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-primary transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-text-main"
           >
             <Icon name="arrow_back" size={16} />
             {category === "code" ? t("concept.code.title") : t("concept.agent.title")}
@@ -321,7 +321,7 @@ export default function ToolDetailClient({ toolId, category }: ToolDetailClientP
       {/* Specialized card — always expanded */}
       {loading ? (
         <div className="flex flex-col gap-4">
-          <Skeleton className="h-24 rounded-xl" />
+          <Skeleton className="h-24 rounded-card" />
         </div>
       ) : (
         renderCard()

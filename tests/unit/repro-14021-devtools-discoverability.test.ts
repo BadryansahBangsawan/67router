@@ -29,8 +29,9 @@ function visibleItemIdsWithDebug(showDebug: boolean): string[] {
 }
 
 test("issue #14021: devtools section is not debug-gated in config", () => {
-  const devtools = sidebarVisibility.SIDEBAR_SECTIONS.find((s) => s.id === "devtools");
-  assert.ok(devtools, "expected a 'devtools' sidebar section to exist");
+  // Sidebar v2: the Dev Tools section folded into Optimize (translator, playground, search tools).
+  const devtools = sidebarVisibility.SIDEBAR_SECTIONS.find((s) => s.id === "optimize");
+  assert.ok(devtools, "expected the 'optimize' sidebar section (ex Dev Tools) to exist");
   assert.notEqual(
     devtools!.visibility,
     "debug",

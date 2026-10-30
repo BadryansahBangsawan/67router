@@ -1025,7 +1025,7 @@ function ProvidersPageContent() {
                     <span className="flex items-center gap-2">
                       {t("compatibleProviders")}{" "}
                       <span
-                        className="size-2.5 rounded-full bg-orange-500"
+                        className="size-2.5 rounded-full bg-sky-500"
                         title={t("compatibleLabel")}
                       />
                       <ProviderCountBadge {...countConfigured(compatibleProviderEntriesAll)} />
@@ -1453,7 +1453,7 @@ function ProvidersPageContent() {
                     <span className="flex items-center gap-2">
                       {t("webFetchProvidersHeading")}{" "}
                       <span
-                        className="size-2.5 rounded-full bg-orange-500"
+                        className="size-2.5 rounded-full bg-pink-500"
                         title={t("webFetchTooltip")}
                       />
                       <ProviderCountBadge {...countConfigured(webFetchEntriesAll)} />
