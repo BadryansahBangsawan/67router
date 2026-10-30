@@ -63,11 +63,11 @@ export default function SystemPromptTab() {
   return (
     <Card>
       <div className="flex items-center gap-3 mb-5">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
           <Icon name="edit_note" size={20} />
         </div>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold">{t("globalSystemPrompt")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("globalSystemPrompt")}</h3>
         </div>
         <div className="flex items-center gap-3">
           {status === "saved" && (

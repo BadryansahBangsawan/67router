@@ -37,9 +37,7 @@ export async function loadAllProxyUsage(
         fetch(`/api/settings/proxies/assignments?proxyId=${encodeURIComponent(id)}`)
           .then((response) => (response.ok ? response.json() : null))
           .then((data) => {
-            const assignments = uniqueAssignments(
-              Array.isArray(data?.items) ? data.items : []
-            );
+            const assignments = uniqueAssignments(Array.isArray(data?.items) ? data.items : []);
             return [id, { count: assignments.length, assignments }] as [string, UsageInfo];
           })
           .catch(() => [id, { count: 0, assignments: [] }] as [string, UsageInfo])
