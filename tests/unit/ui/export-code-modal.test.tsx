@@ -17,10 +17,9 @@ vi.mock("next-intl", () => ({
   },
 }));
 
-import { API_KEY_PLACEHOLDER } from "../../../src/lib/playground/codeExport";
+import { API_KEY_PLACEHOLDER } from "../../../src/lib/codeExport";
 
-const { default: ExportCodeModal } =
-  await import("../../../src/app/(dashboard)/dashboard/playground/components/ExportCodeModal");
+const { default: ExportCodeModal } = await import("../../../src/shared/components/ExportCodeModal");
 
 const BASE_STATE = {
   endpoint: "chat.completions" as const,

@@ -1,4 +1,4 @@
-// src/app/(dashboard)/dashboard/playground/components/tabs/chatTabEndpointRequest.ts
+// src/shared/utils/chatEndpointRequest.ts
 //
 // #10592 — ChatTab.tsx hardcoded every "Send" click to POST /api/v1/chat/completions,
 // ignoring configState.endpoint entirely. Selecting a search-only provider (exa-search,
@@ -9,7 +9,7 @@
 // to their real path with an endpoint-shaped body instead of the chat.completions
 // messages/SSE shape.
 
-import { endpointToPath, type PlaygroundEndpoint } from "@/lib/playground/codeExport";
+import { endpointToPath, type PlaygroundEndpoint } from "@/lib/codeExport";
 
 /** Chat-shaped endpoints keep the existing messages[] + SSE-delta request/response flow. */
 export function isChatCompletionsEndpoint(endpoint: PlaygroundEndpoint | undefined): boolean {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import type { SearchProviderCatalogItem } from "@/shared/schemas/searchTools";
-import type { PlaygroundState } from "@/lib/playground/codeExport";
+import type { PlaygroundState } from "@/lib/codeExport";
 
 import SearchToolsTopBar, { type ActiveTab } from "./components/SearchToolsTopBar";
 import SearchToolsConfigPane, { type ConfigState } from "./components/SearchToolsConfigPane";
@@ -92,7 +92,12 @@ export default function SearchToolsClient() {
       {/* Main area: tab content + config pane */}
       <div className="flex flex-1 overflow-hidden">
         {/* Tab content */}
-        <div className="flex-1 overflow-y-auto" role="tabpanel" id={`tabpanel-${activeTab}`} aria-labelledby={`tab-${activeTab}`}>
+        <div
+          className="flex-1 overflow-y-auto"
+          role="tabpanel"
+          id={`tabpanel-${activeTab}`}
+          aria-labelledby={`tab-${activeTab}`}
+        >
           {activeTab === "search" && (
             <SearchTab
               configState={configState}

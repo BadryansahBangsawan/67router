@@ -11249,6 +11249,18 @@
     "upstream5xx": "កំហុសម៉ាស៊ីនមេ {count}",
     "uniformEgressLine": "{affected} ក្នុងចំណោម {exits} ច្រកចេញបានបរាជ័យជាមួយគ្នានៅលើ {provider} (ក្នុង {hours}ម៉ោងចុងក្រោយ) — មិនមែនជាបញ្ហាច្រកចេញទេ"
   },
+  "codeExport": {
+    "exportCodeTitle": "នាំចេញកូដ",
+    "close": "បិទ",
+    "exportCode": "នាំចេញកូដ",
+    "exportShort": "នាំចេញ",
+    "exportRealKeyWarning": "ការព្រមានអំពីសុវត្ថិភាព៖ ការនាំចេញត្រូវបានរារាំង — បានរកឃើញ API key ពិតប្រាកដនៅក្នុងលទ្ធផល។ សូមកំណត់ API key របស់អ្នកឡើងវិញ ហើយព្យាយាមម្ដងទៀត។",
+    "copy": "ចម្លង",
+    "copiedCode": "បានចម្លង!",
+    "copyLangCode": "ចម្លងកូដ {language}",
+    "placeholderHintPrefix": "ជំនួស",
+    "placeholderHintSuffix": "ដោយ API key ពិតប្រាកដរបស់អ្នក ឬកំណត់វាជាអថេរបរិស្ថាន។"
+  },
   "playground": {
     "title": "កន្លែងសាកល្បងម៉ូដែល",
     "description": "សាកល្បងម៉ូដែលណាមួយដោយផ្ទាល់ពីផ្ទាំងគ្រប់គ្រង។ ជ្រើសរើសអ្នកផ្តល់សេវា ម៉ូដែល និងប្រភេទ endpoint រួចផ្ញើសំណើដើម្បីមើលការឆ្លើយតបដើម។",

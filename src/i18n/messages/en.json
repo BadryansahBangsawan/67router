@@ -11278,6 +11278,18 @@
     "upstream5xx": "{count} upstream server errors",
     "uniformEgressLine": "{affected} of {exits} exits fail together on {provider} (last {hours}h) — not an exit problem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Export Code",
+    "close": "Close",
+    "exportCode": "Export code",
+    "exportShort": "Export",
+    "exportRealKeyWarning": "Security warning: export blocked — a real API key was detected in the output. Please reset your API key and try again.",
+    "copy": "Copy",
+    "copiedCode": "Copied!",
+    "copyLangCode": "Copy {language} code",
+    "placeholderHintPrefix": "Replace",
+    "placeholderHintSuffix": "with your actual API key, or set it as an environment variable."
+  },
   "playground": {
     "title": "Model Playground",
     "description": "Test any model directly from the dashboard. Select provider, model, and endpoint type, then send a request to see the raw response.",

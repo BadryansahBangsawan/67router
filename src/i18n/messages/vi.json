@@ -11278,6 +11278,18 @@
     "upstream5xx": "{count} lỗi máy chủ",
     "uniformEgressLine": "{affected} trên {exits} exit cùng lỗi trên {provider} (trong {hours} giờ qua) — không phải vấn đề exit"
   },
+  "codeExport": {
+    "exportCodeTitle": "Xuất mã",
+    "close": "Đóng",
+    "exportCode": "Xuất mã",
+    "exportShort": "Xuất",
+    "exportRealKeyWarning": "Cảnh báo bảo mật: đã chặn việc xuất mã — phát hiện khóa API thực trong kết quả đầu ra. Vui lòng đặt lại khóa API của bạn rồi thử lại.",
+    "copy": "Sao chép",
+    "copiedCode": "Đã sao chép!",
+    "copyLangCode": "Sao chép mã {language}",
+    "placeholderHintPrefix": "Thay thế",
+    "placeholderHintSuffix": "bằng khóa API thực tế của bạn hoặc thiết lập khóa này dưới dạng biến môi trường."
+  },
   "playground": {
     "title": "Khu thử nghiệm mô hình",
     "description": "Thử nghiệm bất kỳ mô hình nào trực tiếp từ bảng điều khiển. Chọn nhà cung cấp, mô hình và loại endpoint, sau đó gửi một yêu cầu để xem phản hồi thô.",

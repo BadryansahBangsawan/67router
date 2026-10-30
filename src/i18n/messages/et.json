@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} ülespoole serverivigad",
     "uniformEgressLine": "{affected} {exits} väljumistest ebaõnnestuvad koos {provider} (viimased {hours}h) — mitte väljumisprobleem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Ekspordi kood",
+    "close": "Sulge",
+    "exportCode": "Ekspordi kood",
+    "exportShort": "Ekspordi",
+    "exportRealKeyWarning": "Turvahoiatus: eksportimine blokeeriti — väljundis tuvastati tegelik API-võti. Lähtesta oma API-võti ja proovi uuesti.",
+    "copy": "Kopeeri",
+    "copiedCode": "Kopeeritud!",
+    "copyLangCode": "Kopeeri {language}-kood",
+    "placeholderHintPrefix": "Asenda",
+    "placeholderHintSuffix": "oma tegeliku API-võtmega või määra see keskkonnamuutujana."
+  },
   "playground": {
     "title": "Mudelite testkeskkond",
     "description": "Testi mis tahes mudelit otse juhtpaneelilt. Vali teenusepakkuja, mudel ja lõpp-punkti tüüp ning saada päring, et näha töötlemata vastust.",

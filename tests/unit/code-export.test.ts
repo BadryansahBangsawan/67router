@@ -7,7 +7,7 @@ const {
   endpointToPath,
   normalizePlaygroundEndpoint,
   API_KEY_PLACEHOLDER,
-} = await import("../../src/lib/playground/codeExport.ts");
+} = await import("../../src/lib/codeExport.ts");
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 

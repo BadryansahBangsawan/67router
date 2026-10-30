@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} napake strežnika na gornjem",
     "uniformEgressLine": "Sočasen izpad {affected} od {exits} izhodov pri {provider} (zadnjih {hours}h) — ni težava izhoda"
   },
+  "codeExport": {
+    "exportCodeTitle": "Izvozi kodo",
+    "close": "Zapri",
+    "exportCode": "Izvozi kodo",
+    "exportShort": "Izvozi",
+    "exportRealKeyWarning": "Varnostno opozorilo: izvoz je blokiran — v izhodu je bil zaznan pravi ključ API. Ponastavite svoj ključ API in poskusite znova.",
+    "copy": "Kopiraj",
+    "copiedCode": "Kopirano!",
+    "copyLangCode": "Kopiraj kodo za {language}",
+    "placeholderHintPrefix": "Zamenjajte",
+    "placeholderHintSuffix": "s svojim dejanskim ključem API ali ga nastavite kot okoljsko spremenljivko."
+  },
   "playground": {
     "title": "Preizkusno okolje za modele",
     "description": "Preizkusite kateri koli model neposredno na nadzorni plošči. Izberite ponudnika, model in vrsto končne točke, nato pošljite zahtevo za ogled neobdelanega odgovora.",

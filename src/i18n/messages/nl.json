@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} upstream serverfouten",
     "uniformEgressLine": "{affected} van {exits} exits falen tegelijk op {provider} (laatste {hours}u) — geen exit-probleem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Code exporteren",
+    "close": "Sluiten",
+    "exportCode": "Code exporteren",
+    "exportShort": "Exporteren",
+    "exportRealKeyWarning": "Beveiligingswaarschuwing: export geblokkeerd — er is een echte API-sleutel gedetecteerd in de uitvoer. Reset uw API-sleutel en probeer het opnieuw.",
+    "copy": "Kopiëren",
+    "copiedCode": "Gekopieerd!",
+    "copyLangCode": "{language}-code kopiëren",
+    "placeholderHintPrefix": "Vervang",
+    "placeholderHintSuffix": "door uw daadwerkelijke API-sleutel, of stel deze in als een omgevingsvariabele."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

@@ -8,7 +8,7 @@ import Icon from "@/shared/components/Icon";
 
 import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import MarkdownMessage from "../MarkdownMessage";
+import MarkdownMessage from "@/shared/components/MarkdownMessage";
 import TokenCostCounter from "../TokenCostCounter";
 import ImageResultsInline, {
   extractPlaygroundImageResults,
@@ -22,7 +22,7 @@ import {
   restorePlaygroundImageResponse,
 } from "@/shared/utils/playgroundImageStream";
 import type { StreamMetrics } from "@/shared/schemas/playground";
-import { buildReasoningRequestFields } from "../reasoningControlUtils";
+import { buildReasoningRequestFields } from "@/shared/reasoning/reasoningControlUtils";
 import {
   buildNativeCodexPlaygroundRequest,
   buildNonChatRequestBody,
@@ -31,7 +31,7 @@ import {
   isNativeCodexPlaygroundModel,
   lastUserContent,
   resolveChatTabRequestPath,
-} from "./chatTabEndpointRequest";
+} from "@/shared/utils/chatEndpointRequest";
 
 interface Message {
   role: "system" | "user" | "assistant";

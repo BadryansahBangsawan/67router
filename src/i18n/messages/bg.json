@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} грешки от горния сървър",
     "uniformEgressLine": "{affected} от {exits} изхода не успяват заедно на {provider} (последните {hours}ч) — не е проблем с изхода"
   },
+  "codeExport": {
+    "exportCodeTitle": "Експортиране на код",
+    "close": "Затваряне",
+    "exportCode": "Експортиране на код",
+    "exportShort": "Експортиране",
+    "exportRealKeyWarning": "Предупреждение за сигурност: експортирането е блокирано — в изходните данни беше открит реален API ключ. Моля, нулирайте своя API ключ и опитайте отново.",
+    "copy": "Копиране",
+    "copiedCode": "Копирано!",
+    "copyLangCode": "Копиране на {language} код",
+    "placeholderHintPrefix": "Заменете",
+    "placeholderHintSuffix": "с вашия действителен API ключ или го задайте като променлива на средата."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

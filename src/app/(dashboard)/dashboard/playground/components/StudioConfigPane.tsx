@@ -11,8 +11,8 @@ import Textarea from "@/shared/components/Textarea";
 import { useEffect, useId, useMemo, useState, type Dispatch, type SetStateAction } from "react";
 import { useTranslations } from "next-intl";
 import ParamSliders, { type PlaygroundParams } from "./ParamSliders";
-import type { PlaygroundEndpoint } from "@/lib/playground/codeExport";
-import { endpointToPath } from "@/lib/playground/codeExport";
+import type { PlaygroundEndpoint } from "@/lib/codeExport";
+import { endpointToPath } from "@/lib/codeExport";
 import PresetPicker from "./PresetPicker";
 import ImprovePromptButton from "./ImprovePromptButton";
 import { useProviderOptions } from "@/app/(dashboard)/dashboard/translator/hooks/useProviderOptions";
@@ -24,7 +24,10 @@ import {
 } from "@/shared/constants/providers";
 import { filterModelsByQuery, pickDefaultModel, resolveModelFilterKey } from "./modelSelection";
 import ReasoningControls from "./ReasoningControls";
-import { resolveReasoningControls, type ReasoningControlSpec } from "./reasoningControlUtils";
+import {
+  resolveReasoningControls,
+  type ReasoningControlSpec,
+} from "@/shared/reasoning/reasoningControlUtils";
 
 export interface ConfigState {
   endpoint: PlaygroundEndpoint;

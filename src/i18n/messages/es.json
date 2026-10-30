@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} errores de servidor upstream",
     "uniformEgressLine": "{affected} de {exits} salidas fallan juntas en {provider} (últimas {hours}h) — no es un problema de salida"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exportar código",
+    "close": "Cerrar",
+    "exportCode": "Exportar código",
+    "exportShort": "Exportar",
+    "exportRealKeyWarning": "Advertencia de seguridad: exportación bloqueada; se ha detectado una clave de API real en la salida. Restablece tu clave de API e inténtalo de nuevo.",
+    "copy": "Copiar",
+    "copiedCode": "¡Copiado!",
+    "copyLangCode": "Copiar código {language}",
+    "placeholderHintPrefix": "Reemplaza",
+    "placeholderHintSuffix": "por tu clave de API real o configúrala como variable de entorno."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

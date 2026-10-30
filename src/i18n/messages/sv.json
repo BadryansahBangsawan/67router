@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} uppströms serverfel",
     "uniformEgressLine": "{affected} av {exits} utgångar fallerar samtidigt hos {provider} (senaste {hours}h) — inte ett utgångsproblem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exportera kod",
+    "close": "Stäng",
+    "exportCode": "Exportera kod",
+    "exportShort": "Exportera",
+    "exportRealKeyWarning": "Säkerhetsvarning: export blockerad — en riktig API-nyckel upptäcktes i utdata. Återställ din API-nyckel och försök igen.",
+    "copy": "Kopiera",
+    "copiedCode": "Kopierat!",
+    "copyLangCode": "Kopiera {language}-kod",
+    "placeholderHintPrefix": "Ersätt",
+    "placeholderHintSuffix": "med din faktiska API-nyckel, eller ställ in den som en miljövariabel."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

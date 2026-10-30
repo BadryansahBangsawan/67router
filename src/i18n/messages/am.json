@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} የላይ ሰርቨር ስህተቶች",
     "uniformEgressLine": "{affected} የ{exits} ውጦች በ{provider} ላይ በአንድ ጊዜ ይተፋሉ (የቅርብ {hours}h) — የውጤት ችግኝ አይደለም"
   },
+  "codeExport": {
+    "exportCodeTitle": "ኮድ ላክ",
+    "close": "ዝጋ",
+    "exportCode": "ኮድ ላክ",
+    "exportShort": "ላክ",
+    "exportRealKeyWarning": "የደህንነት ማስጠንቀቂያ፦ መላክ ታግዷል — በውጤቱ ውስጥ እውነተኛ API ቁልፍ ተገኝቷል። እባክዎ API ቁልፍዎን ዳግም ያቀናብሩና እንደገና ይሞክሩ።",
+    "copy": "ቅዳ",
+    "copiedCode": "ተቀድቷል!",
+    "copyLangCode": "የ{language} ኮድ ቅዳ",
+    "placeholderHintPrefix": "ይተኩ",
+    "placeholderHintSuffix": "በእውነተኛው API ቁልፍዎ፣ ወይም እንደ environment variable ያዘጋጁት።"
+  },
   "playground": {
     "title": "የሞዴል መሞከሪያ",
     "description": "ማንኛውንም ሞዴል በቀጥታ ከዳሽቦርዱ ይሞክሩ። አቅራቢ፣ ሞዴል እና የመገናኛ ነጥብ ዓይነት ይምረጡ፤ ከዚያም ጥሬውን ምላሽ ለማየት ጥያቄ ይላኩ።",

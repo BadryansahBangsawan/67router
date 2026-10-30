@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} grešaka servera na upstream-u",
     "uniformEgressLine": "{affected} od {exits} izlaza padaju zajedno na {provider} (poslednjih {hours} сати) — nije problem izlaza"
   },
+  "codeExport": {
+    "exportCodeTitle": "Извоз кода",
+    "close": "Затвори",
+    "exportCode": "Извези код",
+    "exportShort": "Извези",
+    "exportRealKeyWarning": "Безбедносно упозорење: извоз је блокиран — у излазу је откривен стварни API кључ. Ресетујте свој API кључ и покушајте поново.",
+    "copy": "Копирај",
+    "copiedCode": "Копирано!",
+    "copyLangCode": "Копирај {language} код",
+    "placeholderHintPrefix": "Замените",
+    "placeholderHintSuffix": "вашим стварним API кључем или га подесите као променљиву окружења."
+  },
   "playground": {
     "title": "Окружење за тестирање модела",
     "description": "Тестирајте било који модел директно из контролне табле. Изаберите провајдера, модел и тип крајње тачке, а затим пошаљите захтев да бисте видели необрађени одговор.",

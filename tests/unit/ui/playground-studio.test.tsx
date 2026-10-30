@@ -93,7 +93,7 @@ vi.mock("@/store/emailPrivacyStore", () => ({
   default: (_selector: (s: { emailsVisible: boolean }) => boolean) => true,
 }));
 
-vi.mock("@/lib/playground/codeExport", () => ({
+vi.mock("@/lib/codeExport", () => ({
   endpointToPath: (ep: string) => `/v1/${ep}`,
   exportAllLanguages: () => ({
     curl: "curl mock",

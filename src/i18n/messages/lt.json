@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} serverio klaidos",
     "uniformEgressLine": "{affected} iš {exits} išėjimų genda kartu tinkle {provider} (per paskutines {hours}h) — ne išėjimo problema"
   },
+  "codeExport": {
+    "exportCodeTitle": "Eksportuoti kodą",
+    "close": "Uždaryti",
+    "exportCode": "Eksportuoti kodą",
+    "exportShort": "Eksportuoti",
+    "exportRealKeyWarning": "Saugos įspėjimas: eksportavimas užblokuotas — išvestyje aptiktas tikras API raktas. Nustatykite API raktą iš naujo ir bandykite dar kartą.",
+    "copy": "Kopijuoti",
+    "copiedCode": "Nukopijuota!",
+    "copyLangCode": "Kopijuoti {language} kodą",
+    "placeholderHintPrefix": "Pakeiskite",
+    "placeholderHintSuffix": "savo tikruoju API raktu arba nustatykite jį kaip aplinkos kintamąjį."
+  },
   "playground": {
     "title": "Modelių bandymų aplinka",
     "description": "Išbandykite bet kurį modelį tiesiogiai valdymo skydelyje. Pasirinkite teikėją, modelį ir galinio taško tipą, tada išsiųskite užklausą, kad pamatytumėte neapdorotą atsakymą.",

@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} chyby servera",
     "uniformEgressLine": "{affected} z {exits} exitov zlyhávajú súčasne na {provider} (za posledných {hours} h) — nejde o problém exitu"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exportovať kód",
+    "close": "Zavrieť",
+    "exportCode": "Exportovať kód",
+    "exportShort": "Exportovať",
+    "exportRealKeyWarning": "Bezpečnostné upozornenie: export bol zablokovaný — vo výstupe bol zistený skutočný API kľúč. Resetujte svoj API kľúč a skúste to znova.",
+    "copy": "Kopírovať",
+    "copiedCode": "Skopírované!",
+    "copyLangCode": "Kopírovať kód v jazyku {language}",
+    "placeholderHintPrefix": "Nahradiť",
+    "placeholderHintSuffix": "vaším skutočným API kľúčom alebo ho nastavte ako premennú prostredia."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

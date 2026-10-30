@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} yuxarı axın server səhvləri",
     "uniformEgressLine": "{affected} of {exits} çıxışları {provider} üzərində eyni anda uğursuz oldu (son {hours} saat) — çıxış problemi deyil"
   },
+  "codeExport": {
+    "exportCodeTitle": "Kodu ixrac et",
+    "close": "Bağla",
+    "exportCode": "Kodu ixrac et",
+    "exportShort": "İxrac",
+    "exportRealKeyWarning": "Təhlükəsizlik xəbərdarlığı: ixrac bloklandı — çıxışda real API açarı aşkar edildi. Zəhmət olmasa, API açarınızı sıfırlayın və yenidən cəhd edin.",
+    "copy": "Kopyala",
+    "copiedCode": "Kopyalandı!",
+    "copyLangCode": "{language} kodunu kopyala",
+    "placeholderHintPrefix": "Əvəz et",
+    "placeholderHintSuffix": "faktiki API açarınızla və ya onu mühit dəyişəni kimi təyin edin."
+  },
   "playground": {
     "title": "Model sınaq meydanı",
     "description": "İstənilən modeli birbaşa idarəetmə panelindən sınaqdan keçirin. Provayderi, modeli və son nöqtə növünü seçin, sonra xam cavabı görmək üçün sorğu göndərin.",

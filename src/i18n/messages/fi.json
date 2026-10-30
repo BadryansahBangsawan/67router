@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} ylävirta-palvelinvirheet",
     "uniformEgressLine": "{affected} kpl {exits} poistoa epäonnistuu yhdessä {provider} (viimeisen {hours}h) — ei ole poistoprobleema"
   },
+  "codeExport": {
+    "exportCodeTitle": "Vie koodi",
+    "close": "Sulje",
+    "exportCode": "Vie koodi",
+    "exportShort": "Vie",
+    "exportRealKeyWarning": "Turvallisuusvaroitus: vienti estetty — tulosteesta havaittiin todellinen API-avain. Nollaa API-avaimesi ja yritä uudelleen.",
+    "copy": "Kopioi",
+    "copiedCode": "Kopioitu!",
+    "copyLangCode": "Kopioi {language}-koodi",
+    "placeholderHintPrefix": "Korvaa",
+    "placeholderHintSuffix": "todellisella API-avaimellasi tai aseta se ympäristömuuttujaksi."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

@@ -7,7 +7,7 @@
 // (fallback to the canonical vocabulary), resolved by `resolveReasoningControls`.
 
 import type { PlaygroundParams } from "./ParamSliders";
-import type { ReasoningControlSpec } from "./reasoningControlUtils";
+import type { ReasoningControlSpec } from "@/shared/reasoning/reasoningControlUtils";
 import { useTranslations } from "next-intl";
 import Select from "@/shared/components/Select";
 import Toggle from "@/shared/components/Toggle";

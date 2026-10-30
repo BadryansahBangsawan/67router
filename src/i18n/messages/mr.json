@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} अपस्ट्रीम सर्व्हर त्रुटी",
     "uniformEgressLine": "{provider} वर {exits} पैकी {affected} एक्झिट्स एकत्र अयशस्वी (गेल्या {hours} तासांत) — ही एक्झिट समस्या नाही"
   },
+  "codeExport": {
+    "exportCodeTitle": "कोड निर्यात करा",
+    "close": "बंद करा",
+    "exportCode": "कोड निर्यात करा",
+    "exportShort": "एक्सपोर्ट",
+    "exportRealKeyWarning": "सुरक्षा चेतावणी: एक्सपोर्ट ब्लॉक केले आहे — आउटपुटमध्ये एक वास्तविक API की आढळली आहे. कृपया तुमची API की रीसेट करा आणि पुन्हा प्रयत्न करा.",
+    "copy": "कॉपी करा",
+    "copiedCode": "कॉपी केले!",
+    "copyLangCode": "{language} कोड कॉपी करा",
+    "placeholderHintPrefix": "बदला",
+    "placeholderHintSuffix": "तुमच्या वास्तविक API की सह, किंवा त्याला environment variable म्हणून सेट करा."
+  },
   "playground": {
     "title": "मॉडेल प्लेग्राउंड",
     "description": "डॅशबोर्डवरून कोणत्याही मॉडेलची थेट चाचणी करा. प्रदाता, मॉडेल आणि एंडपॉइंट प्रकार निवडा, त्यानंतर रॉ प्रतिसाद पाहण्यासाठी विनंती पाठवा.",

@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} erori de server upstream",
     "uniformEgressLine": "{affected} din {exits} exit-uri eșuează împreună pe {provider} (ultimele {hours}h) — nu este o problemă de exit"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exportă codul",
+    "close": "Închide",
+    "exportCode": "Exportă codul",
+    "exportShort": "Exportă",
+    "exportRealKeyWarning": "Avertisment de securitate: export blocat — a fost detectată o cheie API reală în rezultat. Resetează cheia API și încearcă din nou.",
+    "copy": "Copiază",
+    "copiedCode": "Copiat!",
+    "copyLangCode": "Copiază codul {language}",
+    "placeholderHintPrefix": "Înlocuiește",
+    "placeholderHintSuffix": "cu cheia API reală sau seteaz-o ca variabilă de mediu."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

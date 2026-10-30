@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} server tashqarisidagi xatolar",
     "uniformEgressLine": "{provider} da {exits} ta chiqishdan {affected} tasi birga ishlamayapti (soʻnggi {hours} soat) — chiqish muammosi emas"
   },
+  "codeExport": {
+    "exportCodeTitle": "Kodni eksport qilish",
+    "close": "Yopish",
+    "exportCode": "Kodni eksport qilish",
+    "exportShort": "Eksport qilish",
+    "exportRealKeyWarning": "Xavfsizlik ogohlantirishi: eksport bloklandi — natijada haqiqiy API kaliti aniqlandi. API kalitingizni qayta o‘rnating va yana urinib ko‘ring.",
+    "copy": "Nusxalash",
+    "copiedCode": "Nusxalandi!",
+    "copyLangCode": "{language} kodini nusxalash",
+    "placeholderHintPrefix": "Quyidagi",
+    "placeholderHintSuffix": "ni haqiqiy API kalitingiz bilan almashtiring yoki uni muhit o‘zgaruvchisi sifatida belgilang."
+  },
   "playground": {
     "title": "Model sinov maydoni",
     "description": "Istalgan modelni bevosita boshqaruv panelidan sinab ko‘ring. Provayder, model va endpoint turini tanlang, so‘ng xom javobni ko‘rish uchun so‘rov yuboring.",

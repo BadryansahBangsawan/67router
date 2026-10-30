@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} oppstrøms serverfeil",
     "uniformEgressLine": "{affected} av {exits} utganger feiler sammen på {provider} (siste {hours}t) — ikke et utgangsproblem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Eksporter kode",
+    "close": "Lukk",
+    "exportCode": "Eksporter kode",
+    "exportShort": "Eksporter",
+    "exportRealKeyWarning": "Sikkerhetsadvarsel: eksport blokkert — en ekte API-nøkkel ble oppdaget i utdataene. Vennligst tilbakestill API-nøkkelen din og prøv igjen.",
+    "copy": "Kopier",
+    "copiedCode": "Kopiert!",
+    "copyLangCode": "Kopier {language}-kode",
+    "placeholderHintPrefix": "Erstatt",
+    "placeholderHintSuffix": "med din faktiske API-nøkkel, eller angi den som en miljøvariabel."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

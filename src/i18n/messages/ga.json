@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} earráidí seirbhís ar an gceann chlé",
     "uniformEgressLine": "{affected} de {exits} éits bailiú le chéile ar {provider} (deis {hours}h) — níl ceist éit"
   },
+  "codeExport": {
+    "exportCodeTitle": "Easpórtáil Cód",
+    "close": "Dún",
+    "exportCode": "Easpórtáil an cód",
+    "exportShort": "Easpórtáil",
+    "exportRealKeyWarning": "Rabhadh slándála: cuireadh bac ar an easpórtáil — braitheadh eochair API iarbhír san aschur. Athshocraigh d'eochair API agus bain triail eile as.",
+    "copy": "Cóipeáil",
+    "copiedCode": "Cóipeáladh!",
+    "copyLangCode": "Cóipeáil cód {language}",
+    "placeholderHintPrefix": "Cuir in ionad",
+    "placeholderHintSuffix": "le d'eochair API iarbhír, nó socraigh í mar athróg timpeallachta."
+  },
   "playground": {
     "title": "Clós Súgartha Múnlaí",
     "description": "Tástáil aon mhúnla go díreach ón deais. Roghnaigh soláthraí, múnla, agus cineál críochphointe, ansin seol iarratas chun an freagra amh a fheiceáil.",

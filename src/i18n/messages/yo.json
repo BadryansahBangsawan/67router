@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} ìwà àwọn àkàntà ní àwọn àkàntà",
     "uniformEgressLine": "{affected} ya ka {exits} ẹjọ kò rí nipa {provider} (lẹhin {hours}h) — kò si ẹjọ"
   },
+  "codeExport": {
+    "exportCodeTitle": "Gbé Kóòdù Jáde",
+    "close": "Pa á",
+    "exportCode": "Gbé kóòdù jáde",
+    "exportShort": "Gbé jáde",
+    "exportRealKeyWarning": "Ìkìlọ̀ ààbò: a dènà gbígbéjáde — a ṣàwárí bọ́tìnì API gidi kan nínú àbájáde náà. Jọ̀wọ́ tún bọ́tìnì API rẹ ṣètò kí o sì gbìyànjú lẹ́ẹ̀kan síi.",
+    "copy": "Dàkọ",
+    "copiedCode": "A ti dà á kọ̀!",
+    "copyLangCode": "Da kóòdù {language} kọ̀",
+    "placeholderHintPrefix": "Rọ́pò",
+    "placeholderHintSuffix": "pẹ̀lú bọ́tìnì API rẹ gangan, tàbí ṣètò rẹ̀ gẹ́gẹ́ bí oníyí àyíká."
+  },
   "playground": {
     "title": "Pápá Ìdánwò Àwòṣe",
     "description": "Dán àwòṣe èyíkéyìí wò tààrà láti ojú-iṣẹ́ náà. Yan olùpèsè, àwòṣe, àti irú ojú òpin, lẹ́yìn náà fi ìbéèrè ránṣẹ́ láti wo ìdáhùn gẹ́gẹ́ bí ó ṣe rí láìsí àtúnṣe.",

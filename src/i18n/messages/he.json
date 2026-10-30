@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} שגיאות שרת עליון",
     "uniformEgressLine": "{affected} מתוך {exits} יציאות נכשלות יחד ב-{provider} (ב-({hours}h)) — אינו בעיית יציאה"
   },
+  "codeExport": {
+    "exportCodeTitle": "ייצוא קוד",
+    "close": "סגור",
+    "exportCode": "ייצוא קוד",
+    "exportShort": "ייצוא",
+    "exportRealKeyWarning": "אזהרת אבטחה: הייצוא נחסם — זוהה מפתח API אמיתי בפלט. אנא אפס את מפתח ה-API שלך ונסה שוב.",
+    "copy": "העתקה",
+    "copiedCode": "הועתק!",
+    "copyLangCode": "העתק קוד {language}",
+    "placeholderHintPrefix": "החלף",
+    "placeholderHintSuffix": "במפתח ה-API האמיתי שלך, או הגדר אותו כמשתנה סביבה."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

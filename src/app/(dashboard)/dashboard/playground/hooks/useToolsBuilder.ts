@@ -3,7 +3,7 @@
 
 import { useState, useCallback } from "react";
 import { ToolDefinitionSchema } from "@/shared/schemas/playground";
-import type { ToolDefinition } from "@/lib/playground/codeExport";
+import type { ToolDefinition } from "@/lib/codeExport";
 
 export interface ToolsBuildResult {
   ok: true;

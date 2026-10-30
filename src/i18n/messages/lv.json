@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} upstream servera kļūdas",
     "uniformEgressLine": "{affected} no {exits} izejām neizdodas vienlaikus pie {provider} (pēdējo {hours} h laikā) — tā nav izejas problēma"
   },
+  "codeExport": {
+    "exportCodeTitle": "Eksportēt kodu",
+    "close": "Aizvērt",
+    "exportCode": "Eksportēt kodu",
+    "exportShort": "Eksportēt",
+    "exportRealKeyWarning": "Drošības brīdinājums: eksportēšana bloķēta — izvadē tika atrasta īsta API atslēga. Lūdzu, atiestati savu API atslēgu un mēģini vēlreiz.",
+    "copy": "Kopēt",
+    "copiedCode": "Nokopēts!",
+    "copyLangCode": "Kopēt {language} kodu",
+    "placeholderHintPrefix": "Aizvieto",
+    "placeholderHintSuffix": "ar savu faktisko API atslēgu vai iestati to kā vides mainīgo."
+  },
   "playground": {
     "title": "Modeļu testēšanas vide",
     "description": "Testējiet jebkuru modeli tieši no informācijas paneļa. Izvēlieties nodrošinātāju, modeli un galapunkta veidu, tad nosūtiet pieprasījumu, lai redzētu neapstrādāto atbildi.",

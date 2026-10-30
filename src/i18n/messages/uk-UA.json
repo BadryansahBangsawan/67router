@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} помилки верхнього сервера",
     "uniformEgressLine": "{affected} з {exits} виходів одночасно виходять з ладу на {provider} (останні {hours} год.) — це не проблема виходу"
   },
+  "codeExport": {
+    "exportCodeTitle": "Експортувати код",
+    "close": "Закрити",
+    "exportCode": "Експортувати код",
+    "exportShort": "Експорт",
+    "exportRealKeyWarning": "Попередження системи безпеки: експорт заблоковано — у вихідних даних виявлено справжній ключ API. Будь ласка, скиньте свій ключ API та спробуйте знову.",
+    "copy": "Копіювати",
+    "copiedCode": "Скопійовано!",
+    "copyLangCode": "Копіювати код {language}",
+    "placeholderHintPrefix": "Замініть",
+    "placeholderHintSuffix": "на ваш справжній ключ API або встановіть його як змінну середовища."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

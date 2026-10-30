@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count}件の上流サーバーエラー",
     "uniformEgressLine": "{affected}個の{exits}エグジットが、過去{hours}時間に{provider}上で同時に障害を起こしています — エグジット側の問題ではありません"
   },
+  "codeExport": {
+    "exportCodeTitle": "コードをエクスポート",
+    "close": "閉じる",
+    "exportCode": "コードをエクスポート",
+    "exportShort": "エクスポート",
+    "exportRealKeyWarning": "セキュリティ警告: エクスポートがブロックされました — 出力内に実際のAPIキーが検出されました。APIキーをリセットして、もう一度お試しください。",
+    "copy": "コピー",
+    "copiedCode": "コピーしました！",
+    "copyLangCode": "{language}コードをコピー",
+    "placeholderHintPrefix": "置換",
+    "placeholderHintSuffix": "を実際のAPIキーに置き換えるか、環境変数として設定してください。"
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

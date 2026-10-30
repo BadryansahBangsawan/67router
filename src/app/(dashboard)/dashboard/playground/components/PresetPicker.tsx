@@ -9,7 +9,7 @@ import Select from "@/shared/components/Select";
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { normalizePlaygroundEndpoint } from "@/lib/playground/codeExport";
+import { normalizePlaygroundEndpoint } from "@/lib/codeExport";
 import { usePresets } from "../hooks/usePresets";
 import type { ConfigState, ConfigStateSetter } from "./StudioConfigPane";
 

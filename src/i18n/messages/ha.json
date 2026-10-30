@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} kudin kudin siriya",
     "uniformEgressLine": "{affected} da {exits} exits sakawa suna na {provider} (suna {hours} saa) — suna sakawa"
   },
+  "codeExport": {
+    "exportCodeTitle": "Fitar da Lamba",
+    "close": "Rufe",
+    "exportCode": "Fitar da lamba",
+    "exportShort": "Fitar",
+    "exportRealKeyWarning": "Gargadin tsaro: an hana fitarwa — an gano ainihin maɓallin API a cikin sakamakon. Da fatan za a sake saita maɓallin API ɗinka sannan a sake gwadawa.",
+    "copy": "Kwafa",
+    "copiedCode": "An kwafa!",
+    "copyLangCode": "Kwafi lambar {language}",
+    "placeholderHintPrefix": "Sauya",
+    "placeholderHintSuffix": "da ainihin maɓallin API ɗinka, ko saita shi a matsayin canjin muhalli."
+  },
   "playground": {
     "title": "Filin Gwajin Model",
     "description": "Gwada kowane model kai tsaye daga dashboard. Zaɓi provider, model, da nau'in endpoint, sannan ka aika buƙata don ganin amsar da ba a sarrafa ba.",

@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} makosa ya server kaskazini",
     "uniformEgressLine": "{affected} kati ya {exits} milango yanashindwa pamoja kwenye {provider} (masaa {hours} yaliyopita) — si shida la kilango"
   },
+  "codeExport": {
+    "exportCodeTitle": "Hamisha Msimbo",
+    "close": "Funga",
+    "exportCode": "Hamisha msimbo",
+    "exportShort": "Hamisha",
+    "exportRealKeyWarning": "Onyo la usalama: uhamishaji umezuiwa — ufunguo halisi wa API umegunduliwa kwenye matokeo. Tafadhali weka upya ufunguo wako wa API na ujaribu tena.",
+    "copy": "Nakili",
+    "copiedCode": "Imenakiliwa!",
+    "copyLangCode": "Nakili msimbo wa {language}",
+    "placeholderHintPrefix": "Badilisha",
+    "placeholderHintSuffix": "na ufunguo wako halisi wa API, au uweke kama kigezo cha mazingira."
+  },
   "playground": {
     "title": "Mazingira ya Majaribio ya Modeli",
     "description": "Jaribu modeli yoyote moja kwa moja kutoka kwenye dashibodi. Chagua mtoa huduma, modeli na aina ya endpoint, kisha tuma ombi ili kuona jibu asili.",

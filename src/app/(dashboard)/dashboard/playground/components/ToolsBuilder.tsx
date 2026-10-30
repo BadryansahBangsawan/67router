@@ -10,7 +10,7 @@ import Icon from "@/shared/components/Icon";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useToolsBuilder } from "../hooks/useToolsBuilder";
-import type { ToolDefinition } from "@/lib/playground/codeExport";
+import type { ToolDefinition } from "@/lib/codeExport";
 
 interface ToolsBuilderProps {
   toolsBuilder: ReturnType<typeof useToolsBuilder>;

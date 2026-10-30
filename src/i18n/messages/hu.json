@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} upstream szerverhiba",
     "uniformEgressLine": "{affected} a {exits} exit közül együtt meghibásodik a {provider} szolgáltatónál (utolsó {hours} órában) — nem exit-hiba"
   },
+  "codeExport": {
+    "exportCodeTitle": "Kód exportálása",
+    "close": "Bezárás",
+    "exportCode": "Kód exportálása",
+    "exportShort": "Exportálás",
+    "exportRealKeyWarning": "Biztonsági figyelmeztetés: az exportálás blokkolva — valós API-kulcsot észleltünk a kimenetben. Kérjük, állítsa vissza az API-kulcsot, és próbálja újra.",
+    "copy": "Másolás",
+    "copiedCode": "Másolva!",
+    "copyLangCode": "{language} kód másolása",
+    "placeholderHintPrefix": "Cseréld le",
+    "placeholderHintSuffix": "a tényleges API-kulcsodra, vagy állítsd be környezeti változóként."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

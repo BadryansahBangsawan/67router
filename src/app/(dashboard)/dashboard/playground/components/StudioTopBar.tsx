@@ -9,9 +9,9 @@ import SegmentedControl from "@/shared/components/SegmentedControl";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import TokenCostCounter from "./TokenCostCounter";
-import ExportCodeModal from "./ExportCodeModal";
+import ExportCodeModal from "@/shared/components/ExportCodeModal";
 import type { StreamMetrics } from "@/shared/schemas/playground";
-import type { PlaygroundState } from "@/lib/playground/codeExport";
+import type { PlaygroundState } from "@/lib/codeExport";
 
 export type StudioTab = "chat" | "compare" | "api" | "build";
 

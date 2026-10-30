@@ -11,7 +11,7 @@ import type { ConfigStateSetter } from "../../../src/app/(dashboard)/dashboard/p
 // real `aria-label` text (playground.collapseConfig/expandConfig in en.json), which the
 // previous `(key) => key` mock never produced (it rendered the raw key as the label).
 
-vi.mock("@/lib/playground/codeExport", () => ({
+vi.mock("@/lib/codeExport", () => ({
   endpointToPath: (ep: string) => `/v1/${ep}`,
 }));
 

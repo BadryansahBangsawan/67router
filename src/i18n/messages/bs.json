@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} grešaka servera na izvoru",
     "uniformEgressLine": "{affected} od {exits} izlaza neuspješno zajedno na {provider} (posljednjih {hours}h) — nije problem izlaza"
   },
+  "codeExport": {
+    "exportCodeTitle": "Izvezi Kod",
+    "close": "Zatvori",
+    "exportCode": "Izvezi kod",
+    "exportShort": "Izvezi",
+    "exportRealKeyWarning": "Sigurnosno upozorenje: izvoz blokiran — detektovan je stvarni API ključ u izlazu. Resetujte svoj API ključ i pokušajte ponovo.",
+    "copy": "Kopiraj",
+    "copiedCode": "Kopirano!",
+    "copyLangCode": "Kopiraj {language} kod",
+    "placeholderHintPrefix": "Zamijenite",
+    "placeholderHintSuffix": "sa vašim stvarnim API ključem ili ga postavite kao varijablu okruženja."
+  },
   "playground": {
     "title": "Testno okruženje za modele",
     "description": "Testirajte bilo koji model direktno iz kontrolne ploče. Odaberite provajdera, model i tip endpoint-a, zatim pošaljite zahtjev kako biste vidjeli sirovi odgovor.",

@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} għajnħa server errors",
     "uniformEgressLine": "{affected} minn {exits} ħruġijiet ifallu flimkien fuq {provider} (l-aħħar {hours}h) — mhix problema tal-ħruġ"
   },
+  "codeExport": {
+    "exportCodeTitle": "Esporta l-Kodiċi",
+    "close": "Agħlaq",
+    "exportCode": "Esporta l-kodiċi",
+    "exportShort": "Esporta",
+    "exportRealKeyWarning": "Twissija ta’ sigurtà: l-esportazzjoni ġiet imblukkata — instabet ċavetta API reali fl-output. Jekk jogħġbok irrisettja ċ-ċavetta API tiegħek u erġa’ pprova.",
+    "copy": "Ikkopja",
+    "copiedCode": "Ikkupjat!",
+    "copyLangCode": "Ikkopja l-kodiċi {language}",
+    "placeholderHintPrefix": "Ibdel",
+    "placeholderHintSuffix": "biċ-ċavetta API attwali tiegħek, jew issettjaha bħala varjabbli tal-ambjent."
+  },
   "playground": {
     "title": "Żona tal-Ittestjar tal-Mudelli",
     "description": "Ittestja kwalunkwe mudell direttament mid-dashboard. Agħżel il-fornitur, il-mudell u t-tip ta’ endpoint, imbagħad ibgħat talba biex tara r-rispons mhux ipproċessat.",

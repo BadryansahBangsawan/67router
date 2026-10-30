@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} błędów serwera upstream",
     "uniformEgressLine": "{affected} z {exits} wyjść przestają działać jednocześnie u {provider} (ostatnie {hours} h) — to nie problem wyjścia"
   },
+  "codeExport": {
+    "exportCodeTitle": "Eksportuj kod",
+    "close": "Zamknij",
+    "exportCode": "Eksportuj kod",
+    "exportShort": "Eksportuj",
+    "exportRealKeyWarning": "Ostrzeżenie o bezpieczeństwie: eksport zablokowany — w danych wyjściowych wykryto prawdziwy klucz API. Zresetuj swój klucz API i spróbuj ponownie.",
+    "copy": "Kopiuj",
+    "copiedCode": "Skopiowano!",
+    "copyLangCode": "Kopiuj kod {language}",
+    "placeholderHintPrefix": "Zastąp",
+    "placeholderHintSuffix": "swoim rzeczywistym kluczem API lub ustaw go jako zmienną środowiskową."
+  },
   "playground": {
     "title": "Środowisko testowe modeli",
     "description": "Testuj dowolny model bezpośrednio z dashboard. Wybierz provider, model i typ endpoint, a następnie wyślij żądanie, aby zobaczyć surową odpowiedź.",

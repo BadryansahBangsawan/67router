@@ -29,7 +29,7 @@ const presetControls = vi.hoisted(() => ({
   remove: vi.fn(),
 }));
 
-vi.mock("@/lib/playground/codeExport", () => ({
+vi.mock("@/lib/codeExport", () => ({
   endpointToPath: (endpoint: string) => `/v1/${endpoint}`,
 }));
 

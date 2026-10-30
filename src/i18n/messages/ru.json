@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} ошибки сервера вверху",
     "uniformEgressLine": "{affected} из {exits} выходов одновременно дают сбой у {provider} (за последние {hours} ч) — проблема не в выходе"
   },
+  "codeExport": {
+    "exportCodeTitle": "Экспорт кода",
+    "close": "Закрыть",
+    "exportCode": "Экспортировать код",
+    "exportShort": "Экспорт",
+    "exportRealKeyWarning": "Предупреждение о безопасности: экспорт заблокирован — в выводе был обнаружен реальный ключ API. Пожалуйста, сбросьте свой ключ API и попробуйте снова.",
+    "copy": "Копировать",
+    "copiedCode": "Скопировано!",
+    "copyLangCode": "Скопировать код {language}",
+    "placeholderHintPrefix": "Заменить",
+    "placeholderHintSuffix": "с вашим фактическим ключом API или установите его как переменную окружения."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

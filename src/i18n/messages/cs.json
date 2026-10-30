@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} chyby serveru ve výstupním směru",
     "uniformEgressLine": "{affected} z {exits} výstupů selhávají společně na {provider} (posledních {hours}h) — nejedná se o problém výstupu"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exportovat kód",
+    "close": "Zavřít",
+    "exportCode": "Exportovat kód",
+    "exportShort": "Exportovat",
+    "exportRealKeyWarning": "Bezpečnostní varování: export byl zablokován — ve výstupu byl detekován skutečný API klíč. Resetujte prosím svůj API klíč a zkuste to znovu.",
+    "copy": "Kopírovat",
+    "copiedCode": "Zkopírováno!",
+    "copyLangCode": "Kopírovat kód v jazyce {language}",
+    "placeholderHintPrefix": "Nahraďte",
+    "placeholderHintSuffix": "vaším skutečným API klíčem, nebo jej nastavte jako proměnnou prostředí."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

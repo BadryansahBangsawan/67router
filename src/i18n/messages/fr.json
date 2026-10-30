@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} erreurs de serveur en amont",
     "uniformEgressLine": "{affected} sur {exits} sorties échouent simultanément sur {provider} (dernières {hours}h) — pas un problème de sortie"
   },
+  "codeExport": {
+    "exportCodeTitle": "Exporter le code",
+    "close": "Fermer",
+    "exportCode": "Exporter le code",
+    "exportShort": "Exporter",
+    "exportRealKeyWarning": "Avertissement de sécurité : exportation bloquée — une véritable clé API a été détectée dans la sortie. Veuillez réinitialiser votre clé API et réessayer.",
+    "copy": "Copier",
+    "copiedCode": "Copié !",
+    "copyLangCode": "Copier le code {language}",
+    "placeholderHintPrefix": "Remplacer",
+    "placeholderHintSuffix": "par votre véritable clé API, ou définissez-la comme variable d'environnement."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

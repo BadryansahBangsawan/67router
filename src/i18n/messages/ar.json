@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} أخطاء الخادم العلوي",
     "uniformEgressLine": "فشل {affected} من {exits} مخرجًا معًا على {provider} (آخر {hours}h) — ليس مشكلة خروج"
   },
+  "codeExport": {
+    "exportCodeTitle": "تصدير الرمز",
+    "close": "إغلاق",
+    "exportCode": "تصدير الرمز",
+    "exportShort": "تصدير",
+    "exportRealKeyWarning": "تحذير أمني: تم حظر التصدير — تم اكتشاف مفتاح API حقيقي في المخرجات. يرجى إعادة تعيين مفتاح API الخاص بك والمحاولة مرة أخرى.",
+    "copy": "نسخ",
+    "copiedCode": "تم النسخ!",
+    "copyLangCode": "نسخ كود {language}",
+    "placeholderHintPrefix": "استبدل",
+    "placeholderHintSuffix": "بمفتاح API الفعلي الخاص بك، أو قم بتعيينه كمتغير بيئة."
+  },
   "playground": {
     "title": "العنوان",
     "description": "الوصف",

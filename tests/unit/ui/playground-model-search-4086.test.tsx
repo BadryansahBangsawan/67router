@@ -14,7 +14,7 @@ vi.mock("next-intl", () => ({
   useTranslations: () => (key: string) => key,
 }));
 
-vi.mock("@/lib/playground/codeExport", () => ({
+vi.mock("@/lib/codeExport", () => ({
   endpointToPath: (ep: string) => `/v1/${ep}`,
 }));
 

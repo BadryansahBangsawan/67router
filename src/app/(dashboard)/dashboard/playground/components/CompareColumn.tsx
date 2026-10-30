@@ -7,7 +7,7 @@ import Button from "@/shared/components/Button";
 import { useTranslations } from "next-intl";
 import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 import type { StreamMetrics } from "@/shared/schemas/playground";
-import MarkdownMessage from "./MarkdownMessage";
+import MarkdownMessage from "@/shared/components/MarkdownMessage";
 import ProviderMetrics from "./ProviderMetrics";
 
 export type ColumnStatus = "idle" | "streaming" | "done" | "error";

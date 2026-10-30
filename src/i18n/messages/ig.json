@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} njehie sava n'elu",
     "uniformEgressLine": "{affected} n'ime {exits} ụzọ ọpụpụ na-ada ọnụ na {provider} (n'ime {hours}h gara aga) — ọ bụghị nsogbu ụzọ ọpụpụ"
   },
+  "codeExport": {
+    "exportCodeTitle": "Bupụ Koodu",
+    "close": "Mechie",
+    "exportCode": "Bupụ koodu",
+    "exportShort": "Bupụ",
+    "exportRealKeyWarning": "Ịdọ aka ná ntị nchekwa: egbochiri mbupụ — achọpụtara ezigbo API key na nsonaazụ ahụ. Biko tọgharịa API key gị ma nwaa ọzọ.",
+    "copy": "Detuo",
+    "copiedCode": "E detuoola!",
+    "copyLangCode": "Detuo koodu {language}",
+    "placeholderHintPrefix": "Dochie",
+    "placeholderHintSuffix": "na API key gị n'ezie, ma ọ bụ tọọ ya dị ka environment variable."
+  },
   "playground": {
     "title": "Ebe Nnwale Model",
     "description": "Nwalee model ọ bụla ozugbo site na dashboard. Họrọ provider, model, na ụdị endpoint, wee zipụ arịrịọ ka ị hụ nzaghachi ahụ n'ụdị ya mbụ.",

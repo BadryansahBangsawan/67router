@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} kesalahan server upstream",
     "uniformEgressLine": "{affected} dari {exits} exit gagal bersamaan di {provider} ({hours} jam terakhir) — bukan masalah exit"
   },
+  "codeExport": {
+    "exportCodeTitle": "Ekspor kode",
+    "close": "Tutup",
+    "exportCode": "Ekspor kode",
+    "exportShort": "Ekspor",
+    "exportRealKeyWarning": "Peringatan keamanan: ekspor diblokir — kunci API asli terdeteksi dalam output. Harap reset kunci API Anda dan coba lagi.",
+    "copy": "Salin",
+    "copiedCode": "Disalin!",
+    "copyLangCode": "Salin kode {language}",
+    "placeholderHintPrefix": "Ganti",
+    "placeholderHintSuffix": "dengan kunci API Anda yang sebenarnya, atau atur sebagai variabel lingkungan."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} upstream sunucu hatası",
     "uniformEgressLine": "{exits} çıkışın {affected} tanesi {provider} üzerinde birlikte başarısız oluyor (son {hours} sa) — çıkış sorunu değil"
   },
+  "codeExport": {
+    "exportCodeTitle": "Kodu dışa aktar",
+    "close": "Kapat",
+    "exportCode": "Kodu dışa aktar",
+    "exportShort": "Dışa aktar",
+    "exportRealKeyWarning": "Güvenlik uyarısı: dışa aktarma engellendi — çıktıda gerçek bir API anahtarı tespit edildi. Lütfen API anahtarınızı sıfırlayıp tekrar deneyin.",
+    "copy": "Kopyala",
+    "copiedCode": "Kopyalandı!",
+    "copyLangCode": "{language} kodunu kopyala",
+    "placeholderHintPrefix": "Değiştirin",
+    "placeholderHintSuffix": "gerçek API anahtarınızla veya bunu bir ortam değişkeni olarak ayarlayın."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

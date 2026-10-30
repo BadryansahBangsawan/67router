@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} Upstream-Server-Fehler",
     "uniformEgressLine": "{affected} von {exits} Ausgängen fallen gemeinsam auf {provider} aus (letzte {hours}h) — kein Ausgangsproblem"
   },
+  "codeExport": {
+    "exportCodeTitle": "Code exportieren",
+    "close": "Schließen",
+    "exportCode": "Code exportieren",
+    "exportShort": "Exportieren",
+    "exportRealKeyWarning": "Sicherheitswarnung: Export blockiert — ein echter API-Schlüssel wurde in der Ausgabe erkannt. Bitte setzen Sie Ihren API-Schlüssel zurück und versuchen Sie es erneut.",
+    "copy": "Kopieren",
+    "copiedCode": "Kopiert!",
+    "copyLangCode": "{language}-Code kopieren",
+    "placeholderHintPrefix": "Ersetzen Sie",
+    "placeholderHintSuffix": "durch Ihren tatsächlichen API-Schlüssel oder legen Sie ihn als Umgebungsvariable fest."
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

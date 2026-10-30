@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count}개의 업스트림 서버 오류",
     "uniformEgressLine": "{provider}에서 {exits}개 exit 중 {affected}개가 함께 실패함 (최근 {hours}시간) — exit 문제가 아님"
   },
+  "codeExport": {
+    "exportCodeTitle": "코드 내보내기",
+    "close": "닫기",
+    "exportCode": "코드 내보내기",
+    "exportShort": "내보내기",
+    "exportRealKeyWarning": "보안 경고: 내보내기 차단됨 — 출력에서 실제 API 키가 감지되었습니다. API 키를 재설정하고 다시 시도하세요.",
+    "copy": "복사",
+    "copiedCode": "복사됨!",
+    "copyLangCode": "{language} 코드 복사",
+    "placeholderHintPrefix": "바꾸기",
+    "placeholderHintSuffix": "실제 API 키로 바꾸거나 환경 변수로 설정하세요."
+  },
   "playground": {
     "title": "모델 플레이그라운드",
     "description": "대시보드에서 직접 모든 모델을 테스트하세요. 공급자, 모델, 엔드포인트 유형을 선택한 후 요청을 보내 원시 응답을 확인하세요.",

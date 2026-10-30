@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} 上游服务器错误",
     "uniformEgressLine": "{affected}/{exits} 个出口在 {provider} 上同时失败（最近 {hours} 小时）—— 不是出口问题"
   },
+  "codeExport": {
+    "exportCodeTitle": "导出代码",
+    "close": "关闭",
+    "exportCode": "导出代码",
+    "exportShort": "导出",
+    "exportRealKeyWarning": "安全警告：导出被阻止 — 输出中检测到真实的 API 密钥。请重置您的 API 密钥并重试。",
+    "copy": "复制",
+    "copiedCode": "已复制！",
+    "copyLangCode": "复制 {language} 代码",
+    "placeholderHintPrefix": "替换",
+    "placeholderHintSuffix": "使用您的实际 API 密钥，或将其设置为环境变量。"
+  },
   "playground": {
     "title": "模型演练场",
     "description": "直接从仪表板测试任何模型。选择提供者、模型和端点类型，然后发送请求以查看原始响应。",

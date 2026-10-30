@@ -1,6 +1,6 @@
 "use client";
 
-// src/app/(dashboard)/dashboard/playground/components/ExportCodeModal.tsx
+// src/shared/components/ExportCodeModal.tsx
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -8,8 +8,8 @@ import { CodePreview } from "@omniroute/ui-kit/code-preview";
 import { Tabs, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
 import Button from "@/shared/components/Button";
 import Modal from "@/shared/components/Modal";
-import type { PlaygroundState, ExportLanguage } from "@/lib/playground/codeExport";
-import { exportAllLanguages, API_KEY_PLACEHOLDER } from "@/lib/playground/codeExport";
+import type { PlaygroundState, ExportLanguage } from "@/lib/codeExport";
+import { exportAllLanguages, API_KEY_PLACEHOLDER } from "@/lib/codeExport";
 
 interface ExportCodeModalProps {
   state: PlaygroundState;
@@ -28,7 +28,7 @@ const LANGUAGE_TABS: Array<{ id: ExportLanguage; label: string }> = [
  * Security: always uses API_KEY_PLACEHOLDER ("$OMNIROUTE_API_KEY") — never a real key (D11 / Hard Rule #1).
  */
 export default function ExportCodeModal({ state, onClose }: ExportCodeModalProps) {
-  const t = useTranslations("playground");
+  const t = useTranslations("codeExport");
   const [activeLanguage, setActiveLanguage] = useState<ExportLanguage>("curl");
 
   // Generate all snippets once (state is passed in from parent, not re-fetched).

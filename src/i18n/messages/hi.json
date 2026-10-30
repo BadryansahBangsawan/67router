@@ -11249,6 +11249,18 @@
     "upstream5xx": "{count} उपरी सर्वर त्रुटियाँ",
     "uniformEgressLine": "{exits} में से {affected} एग्ज़िट {provider} पर एक साथ विफल हो रहे हैं (पिछले {hours} घंटों में) — यह एग्ज़िट की समस्या नहीं है"
   },
+  "codeExport": {
+    "exportCodeTitle": "कोड निर्यात करें",
+    "close": "बंद करें",
+    "exportCode": "कोड निर्यात करें",
+    "exportShort": "निर्यात",
+    "exportRealKeyWarning": "सुरक्षा चेतावनी: निर्यात अवरुद्ध — आउटपुट में एक वास्तविक API कुंजी का पता चला था। कृपया अपनी API कुंजी रीसेट करें और पुनः प्रयास करें।",
+    "copy": "कॉपी करें",
+    "copiedCode": "कॉपी हो गया!",
+    "copyLangCode": "{language} कोड कॉपी करें",
+    "placeholderHintPrefix": "बदलें",
+    "placeholderHintSuffix": "को अपनी वास्तविक API कुंजी से बदलें, या इसे एक एनवायरनमेंट वेरिएबल के रूप में सेट करें।"
+  },
   "playground": {
     "title": "Title",
     "description": "Description",

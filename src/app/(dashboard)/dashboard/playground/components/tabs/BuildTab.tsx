@@ -10,7 +10,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useToolsBuilder } from "../../hooks/useToolsBuilder";
 import { useStructuredOutput } from "../../hooks/useStructuredOutput";
-import MarkdownMessage from "../MarkdownMessage";
+import MarkdownMessage from "@/shared/components/MarkdownMessage";
 import BuildWizard from "./build/BuildWizard";
 import type { ConfigState } from "../StudioConfigPane";
 
