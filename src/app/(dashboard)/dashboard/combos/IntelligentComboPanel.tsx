@@ -114,15 +114,12 @@ export default function IntelligentComboPanel({
   };
 
   return (
-    <Card
-      className="border-primary/10 bg-gradient-to-br from-primary/[0.04] via-transparent to-transparent"
-      padding="sm"
-    >
+    <Card className="border-border" padding="sm">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-3">
           <div>
             <div className="flex items-center gap-2">
-              <Icon name="auto_awesome" size={18} className="text-primary" />
+              <Icon name="auto_awesome" size={18} className="text-text-muted" />
               <h2 className="text-lg font-semibold text-text-main">
                 {getI18nOrFallback(t, "intelligentPanelTitle", "Intelligent Routing Dashboard")}
               </h2>
@@ -258,7 +255,7 @@ export default function IntelligentComboPanel({
                           </p>
                           <p className="text-[11px] text-text-muted mt-0.5">{entry.model}</p>
                         </div>
-                        <span className="rounded-full bg-primary/10 px-2 py-1 text-[11px] font-semibold text-primary">
+                        <span className="rounded-full border border-border bg-bg-subtle px-2 py-1 text-[11px] font-semibold text-text-main">
                           {percentage}%
                         </span>
                       </div>

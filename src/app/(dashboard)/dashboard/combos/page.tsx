@@ -1350,7 +1350,7 @@ function CombosPageContent() {
         <Card padding="sm">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <Icon name="filter_alt" size={18} className="text-primary" />
+              <Icon name="filter_alt" size={18} className="text-text-muted" />
               <p className="text-sm font-semibold text-text-main">
                 {getI18nOrFallback(t, "filterEmptyTitle", "No combos match this strategy filter.")}
               </p>
@@ -1506,8 +1506,8 @@ function ComboUsageGuide({ onHide, onHideForever, onCreateCombo }) {
     <Card padding="sm">
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
-          <div className="size-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-            <Icon name="tips_and_updates" size={16} className="text-primary" />
+          <div className="size-7 rounded-lg bg-bg-subtle flex items-center justify-center shrink-0">
+            <Icon name="tips_and_updates" size={16} className="text-text-muted" />
           </div>
           <div className="min-w-0">
             <h2 className="text-sm font-semibold">
@@ -1545,10 +1545,10 @@ function ComboUsageGuide({ onHide, onHideForever, onCreateCombo }) {
               className="relative rounded-lg border border-border bg-bg-subtle p-2.5"
             >
               <div className="flex items-center gap-1.5 mb-1.5">
-                <span className="inline-flex size-5 items-center justify-center rounded-full bg-primary/10 text-[10px] font-bold text-primary">
+                <span className="inline-flex size-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-accent-foreground">
                   {step.step}
                 </span>
-                <Icon name={step.icon} size={14} className="text-primary" />
+                <Icon name={step.icon} size={14} className="text-text-muted" />
               </div>
               <p className="text-xs font-medium">
                 {getI18nOrFallback(t, step.titleKey, step.titleKey)}
@@ -1566,7 +1566,7 @@ function ComboUsageGuide({ onHide, onHideForever, onCreateCombo }) {
         })}
       </div>
 
-      <div className="mt-3 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2">
+      <div className="mt-3 rounded-lg border border-border bg-bg-subtle px-3 py-2">
         <p className="text-[11px] font-semibold text-primary">
           {getI18nOrFallback(t, "usageGuideInvokeTitle", "How to call this combo")}
         </p>
@@ -1675,7 +1675,7 @@ function StrategyRecommendationsPanel({ strategy, onApply, showNudge }) {
       {showNudge && (
         <div
           data-testid="strategy-change-nudge"
-          className="mt-2 rounded-md border border-primary/20 bg-primary/10 px-2 py-1 text-[10px] text-primary"
+          className="mt-2 rounded-md border border-border bg-bg-subtle px-2 py-1 text-[10px] text-primary"
         >
           {getI18nOrFallback(
             t,
@@ -3267,9 +3267,9 @@ function ComboFormModal({
                       disabled={!canVisitStage}
                       className={`text-start rounded-lg border px-3 py-2 transition-all ${
                         isActive
-                          ? "border-primary bg-primary/8"
+                          ? "border-primary bg-bg-subtle"
                           : canVisitStage
-                            ? "border-border bg-surface hover:border-primary/40"
+                            ? "border-border bg-surface hover:border-border-strong"
                             : "border-border bg-bg-subtle opacity-60 cursor-not-allowed"
                       }`}
                     >
@@ -3378,14 +3378,14 @@ function ComboFormModal({
                         className={`text-start rounded-md border px-3 py-2 transition-all ${
                           template.isFeatured
                             ? "border-success/50 bg-success/5 hover:border-success/80 hover:bg-success/10 ring-1 ring-success/20"
-                            : "border-border bg-surface hover:border-primary/40 hover:bg-primary/5"
+                            : "border-border bg-surface hover:border-border-strong hover:bg-bg-subtle"
                         }`}
                       >
                         <div className="flex items-center gap-2">
                           <Icon
                             name={template.icon}
                             size={16}
-                            className={template.isFeatured ? "text-success" : "text-primary"}
+                            className={template.isFeatured ? "text-success" : "text-text-muted"}
                           />
                           <span className="text-[12px] font-semibold text-text-main">
                             {getI18nOrFallback(t, template.titleKey, template.fallbackTitle)}
@@ -3820,7 +3820,7 @@ function ComboFormModal({
                       onDrop={(e) => handleDrop(e, index)}
                       className={`group/item flex items-center gap-1.5 px-2 py-1.5 rounded-md transition-all cursor-grab active:cursor-grabbing ${
                         dragOverIndex === index && dragIndex !== index
-                          ? "bg-primary/10 border border-primary/30"
+                          ? "bg-bg-subtle border border-primary"
                           : "bg-bg-subtle hover:bg-bg-subtle border border-transparent"
                       } ${dragIndex === index ? "opacity-50" : ""}`}
                     >
@@ -3838,7 +3838,7 @@ function ComboFormModal({
 
                       {/* Model display */}
                       <div className="flex-1 min-w-0 px-1">
-                        <div className="text-xs text-text-main truncate">
+                        <div className="font-mono text-xs text-text-main truncate">
                           {formatModelDisplay(entry)}
                         </div>
                         <div className="text-[10px] text-text-muted truncate">
@@ -4663,7 +4663,7 @@ function ComboFormModal({
           {showStrategySection && (
             <div className="flex flex-col gap-2 p-3 bg-bg-subtle rounded-lg border border-border">
               <div className="flex items-center gap-1.5 mb-1">
-                <Icon name="rule" size={14} className="text-primary" />
+                <Icon name="rule" size={14} className="text-text-muted" />
                 <p className="text-xs font-medium">
                   {getI18nOrFallback(t, "responseValidationTitle", "Response validation")}
                 </p>
@@ -4680,7 +4680,7 @@ function ComboFormModal({
           {showStrategySection && (
             <div className="flex flex-col gap-2 p-3 bg-bg-subtle rounded-lg border border-border">
               <div className="flex items-center gap-1.5 mb-1">
-                <Icon name="smart_toy" size={14} className="text-primary" />
+                <Icon name="smart_toy" size={14} className="text-text-muted" />
                 <p className="text-xs font-medium">
                   {getI18nOrFallback(t, "agentFeaturesTitle", "Agent features")}
                 </p>
@@ -4850,9 +4850,9 @@ function ComboFormModal({
               </div>
 
               {usesIntelligentBuilderStage && (
-                <div className="rounded-lg border border-primary/15 bg-primary/[0.04] p-3">
+                <div className="rounded-lg border border-border bg-bg-subtle p-3">
                   <div className="flex items-center gap-2">
-                    <Icon name="auto_awesome" size={16} className="text-primary" />
+                    <Icon name="auto_awesome" size={16} className="text-text-muted" />
                     <p className="text-sm font-semibold text-text-main">
                       {getI18nOrFallback(t, "reviewIntelligentTitle", "Intelligent Routing Config")}
                     </p>
