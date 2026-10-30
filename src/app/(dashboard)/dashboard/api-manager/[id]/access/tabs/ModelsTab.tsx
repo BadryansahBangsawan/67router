@@ -346,10 +346,10 @@ function SelectedModelsSummary({
   } = scopeSummary;
 
   return (
-    <div className="flex flex-col gap-2 p-3 bg-primary/5 rounded-lg border border-primary/20">
+    <div className="flex flex-col gap-2 p-3 bg-bg-subtle rounded-lg border border-border">
       {/* Selected Models Summary (only in restrict mode) */}
       <div className="flex items-center justify-between">
-        <span className="text-xs font-medium text-primary">{selectedPermissionSummary}</span>
+        <span className="text-xs font-medium text-text-main">{selectedPermissionSummary}</span>
         <div className="flex gap-1">
           <Button
             variant="ghost"
@@ -439,7 +439,7 @@ function ClaudeCodeDefaultScopeChip({
 
   return (
     <div className="flex flex-col gap-1 basis-full">
-      <span className="inline-flex w-fit items-center gap-0.5 px-1.5 py-0.5 bg-primary/10 text-text-main text-[10px] rounded border border-primary/35">
+      <span className="inline-flex w-fit items-center gap-0.5 px-1.5 py-0.5 bg-bg-subtle text-text-main font-mono text-[11px] rounded-md border border-border">
         <Button
           variant="ghost"
           size="sm"
@@ -499,11 +499,11 @@ function ClaudeCodeFamilyChips({
     <div className="relative ml-2 flex flex-wrap gap-1 pl-5 animate-in fade-in slide-in-from-top-1 duration-150">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1.5 top-0 bottom-1 w-px bg-primary/25"
+        className="pointer-events-none absolute left-1.5 top-0 bottom-1 w-px bg-border-strong"
       />
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1.5 top-3 h-px w-3 bg-primary/25"
+        className="pointer-events-none absolute left-1.5 top-3 h-px w-3 bg-border-strong"
       />
       {visibleClaudeCodeFamilies.map((family) => {
         const canBlock = family.id !== "other";
@@ -549,7 +549,7 @@ function ProviderScopeChip({
   const provider = scope.slice(0, -2);
   return (
     <span
-      className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-primary/10 text-text-main text-[10px] rounded border border-primary/35"
+      className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-bg-subtle text-text-main font-mono text-[11px] rounded-md border border-border"
       title={scope}
     >
       <span className="font-mono truncate max-w-[120px]">{provider}</span>
