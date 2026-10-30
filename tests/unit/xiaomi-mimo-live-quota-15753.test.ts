@@ -177,7 +177,7 @@ describe("xiaomi-mimo live Token Plan quota (#15753)", () => {
 
     assert.match(r.message ?? "", /console cookie/i, "hint must point at the cookie field");
     assert.ok(r.quotas, "self-tracked numbers stay usable");
-    assert.equal(r.plan, "Xiaomi MiMo Token Plan (OmniRoute-tracked)");
+    assert.equal(r.plan, "Xiaomi MiMo Token Plan (67router-tracked)");
     assert.equal(r.quotas.monthly.total, XIAOMI_LIMIT);
     assert.equal(r.quotas.monthly.used, 1_600_000);
   });

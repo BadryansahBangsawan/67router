@@ -26,7 +26,7 @@ const ENGLISH_RULES = {
     "Supporters — one-time purchases grant 6 months, 1 year, or lifetime with no automatic renewal. Purchases, donations, contributor periods, and manual grants accumulate; lifetime always prevails.",
   accessUseTitle: "Personal use, recovery, and review",
   accessInstallationRule:
-    "Personal license — use the key on one active installation at a time. OmniRoute does not fingerprint hardware. Recovery revokes and replaces a lost key without resetting its expiration.",
+    "Personal license — use the key on one active installation at a time. 67router does not fingerprint hardware. Recovery revokes and replaces a lost key without resetting its expiration.",
   accessAbuseRule:
     "Abuse review — the 4th distinct IP in 24 hours creates a manual review flag only; it never blocks or revokes a key automatically.",
   accessOffersRule: "Live offers are manually curated and may change or expire.",
@@ -52,7 +52,7 @@ const PORTUGUESE_RULES = {
     "Apoiadores — compras únicas concedem 6 meses, 1 ano ou acesso vitalício, sem renovação automática. Compras, doações, períodos de contribuidor e concessões manuais se acumulam; o vitalício sempre prevalece.",
   accessUseTitle: "Uso pessoal, recuperação e revisão",
   accessInstallationRule:
-    "Licença pessoal — use a chave em uma instalação ativa por vez. O OmniRoute não cria fingerprint de hardware. A recuperação revoga e substitui uma chave perdida sem reiniciar a validade.",
+    "Licença pessoal — use a chave em uma instalação ativa por vez. O 67router não cria fingerprint de hardware. A recuperação revoga e substitui uma chave perdida sem reiniciar a validade.",
   accessAbuseRule:
     "Revisão de abuso — o 4º IP distinto em 24 horas cria somente uma sinalização para revisão manual; nunca bloqueia nem revoga a chave automaticamente.",
   accessOffersRule: "As ofertas ao vivo passam por curadoria manual e podem mudar ou expirar.",

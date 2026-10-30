@@ -72,7 +72,7 @@ test("M-05: handleSyncPricing returns a sanitized error, not the raw upstream bo
     // error [..]`. One shared hop means one prefix. The sanitization assertion below is
     // what this test is actually for; the prefix just pins the envelope shape.
     assert.ok(
-      text.startsWith("Error: OmniRoute API error [500]"),
+      text.startsWith("Error: 67router API error [500]"),
       `unexpected result shape: ${text}`
     );
     assertSanitized(result);
@@ -130,7 +130,7 @@ test("M-05: handlePickFastestModel sanitizes an upstream failure while applying 
     const text = result.content[0]?.text ?? "";
     // Same M-06 prefix unification as the sync-pricing case above.
     assert.ok(
-      text.startsWith("Error: OmniRoute API error [500]"),
+      text.startsWith("Error: 67router API error [500]"),
       `unexpected result shape: ${text}`
     );
     assertSanitized(result);

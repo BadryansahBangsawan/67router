@@ -175,7 +175,7 @@ test("list-capabilities handler returns a markdown catalog artifact and coverage
   const result = await A2A_SKILL_HANDLERS["list-capabilities"](task);
   assert.equal(result.artifacts.length, 1);
   assert.equal(result.artifacts[0].type, "text");
-  assert.match(result.artifacts[0].content, /^# OmniRoute Agent Skills Catalog/);
+  assert.match(result.artifacts[0].content, /^# 67router Agent Skills Catalog/);
   assert.match(result.artifacts[0].content, /\| ID \| Name \| Category \| Area \|/);
 
   const metadata = result.metadata as {

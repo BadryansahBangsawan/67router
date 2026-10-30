@@ -47,7 +47,7 @@ function expectedSlack(title: string) {
     text: title,
     blocks: [
       { type: "section", text: { type: "mrkdwn", text: title } },
-      { type: "context", elements: [{ type: "mrkdwn", text: `OmniRoute · ${timestamp}` }] },
+      { type: "context", elements: [{ type: "mrkdwn", text: `67router · ${timestamp}` }] },
     ],
   };
 }
@@ -110,7 +110,7 @@ const eventCases: [string, string, string, string, number][] = [
     event,
     "Webhook Event",
     "🔔",
-    "An OmniRoute webhook event was received.",
+    "A 67router webhook event was received.",
     0x6366f1,
   ]),
 ];
@@ -131,7 +131,7 @@ for (const [event, label, emoji, description, color] of eventCases) {
           title: `${emoji} ${label}`,
           description,
           color,
-          footer: { text: `OmniRoute · ${timestamp}` },
+          footer: { text: `67router · ${timestamp}` },
         },
       ],
     });
@@ -140,7 +140,7 @@ for (const [event, label, emoji, description, color] of eventCases) {
     context.mock.timers.enable({ apis: ["Date"], now: new Date(timestamp) });
     assert.deepEqual(telegram.buildTelegramPayload(event as WebhookEvent, {}, "synthetic-chat"), {
       chat_id: "synthetic-chat",
-      text: `${emoji} *${label}*\n_OmniRoute · ${timestamp}_`,
+      text: `${emoji} *${label}*\n_67router · ${timestamp}_`,
       parse_mode: "Markdown",
     });
   });
@@ -173,7 +173,7 @@ for (const event of ["test.ping", "future.event"]) {
         "Latency: `12ms`",
         "Fallbacks: `2`",
         `Error: \`${escaped}\``,
-        `_OmniRoute · ${timestamp}_`,
+        `_67router · ${timestamp}_`,
       ].join("\n"),
     });
   });

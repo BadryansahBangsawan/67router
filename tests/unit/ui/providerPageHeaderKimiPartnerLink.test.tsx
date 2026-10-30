@@ -63,12 +63,12 @@ describe("ProviderPageHeader — Kimi partner-link note", () => {
     const link = el.querySelector(`a[href="${website}"]`);
     expect(link).not.toBeNull();
     expect(link?.getAttribute("title")).toBe(
-      "Partner link — supports OmniRoute at no extra cost to you"
+      "Partner link — supports 67router at no extra cost to you"
     );
     expect(link?.getAttribute("aria-label")).toBe(
-      `${name} — Partner link — supports OmniRoute at no extra cost to you`
+      `${name} — Partner link — supports 67router at no extra cost to you`
     );
-    expect(el.textContent).toContain("Partner link — supports OmniRoute at no extra cost to you");
+    expect(el.textContent).toContain("Partner link — supports 67router at no extra cost to you");
   });
 
   it("does NOT flag an unrelated provider's website link as a partner link", () => {

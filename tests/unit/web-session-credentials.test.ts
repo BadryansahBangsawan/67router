@@ -121,7 +121,7 @@ test("MaxAI and UC keep independent top-level credential contracts", () => {
     kind: "token",
     credentialName: "MaxAI access token (Bearer) + device id",
     placeholder:
-      "Use browser sign-in — OmniRoute mints the MaxAI access token, device id, and user id for you",
+      "Use browser sign-in — 67router mints the MaxAI access token, device id, and user id for you",
     acceptsFullCookieHeader: false,
     storageKeys: [
       "accessToken",

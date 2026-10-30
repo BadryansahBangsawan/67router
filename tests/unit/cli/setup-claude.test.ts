@@ -230,14 +230,14 @@ test("formatManualLaunchHint uses PowerShell syntax on win32 (#11525)", () => {
   const hint = formatManualLaunchHint(dir, "win32");
   assert.equal(hint.includes("~"), false);
   assert.ok(hint.startsWith(`$env:CLAUDE_CONFIG_DIR="${dir}";`));
-  assert.ok(hint.includes('$env:ANTHROPIC_AUTH_TOKEN="<your OmniRoute key>";'));
+  assert.ok(hint.includes('$env:ANTHROPIC_AUTH_TOKEN="<your 67router key>";'));
   // The bash `VAR=value cmd` prefix form is a parse error in PowerShell.
   assert.equal(hint.includes("CLAUDE_CONFIG_DIR=C:"), false);
 });
 
 test("formatManualLaunchHint never bakes a real key into the hint", () => {
   const hint = formatManualLaunchHint("/home/u/.claude/profiles/glm52", "linux");
-  assert.ok(hint.includes("<your OmniRoute key>"));
+  assert.ok(hint.includes("<your 67router key>"));
 });
 
 test("inheritedAnthropicKeyWarning fires only when ANTHROPIC_API_KEY is set (#11525)", () => {

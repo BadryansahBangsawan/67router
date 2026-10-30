@@ -299,7 +299,7 @@ describe("Sidebar hierarchy, keyboard navigation and ARIA contract (#12869)", ()
       );
     }
     // The collapse toggle left the aside for the shell Header (trilha G), so it is no stop here.
-    expect(stops, `tab stops: ${JSON.stringify(stops)}`).toEqual(["OmniRoute", "Search", "Home"]);
+    expect(stops, `tab stops: ${JSON.stringify(stops)}`).toEqual(["67router", "Search", "Home"]);
     // The third stop is the first item of the navigation landmark.
     expect(aside.querySelector("nav")!.contains(document.activeElement)).toBe(true);
   });
