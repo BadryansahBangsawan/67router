@@ -279,12 +279,17 @@ test("the settings schema accepts pre-v2 ids and stores v2 ids", () => {
     routing: ["combos"],
     system: ["settings-sidebar"],
   });
-  // Unknown ids are still rejected, as before.
-  assert.equal(updateSettingsSchema.safeParse({ sidebarSectionOrder: ["bogus"] }).success, false);
-  assert.equal(
-    updateSettingsSchema.safeParse({ hiddenSidebarGroupLabels: ["bogus"] }).success,
-    false
-  );
+  // Legacy ids are mapped first; ids still unknown after that (e.g. sidebar entries of removed
+  // features such as the old "batch" group) are dropped instead of rejecting the update.
+  const unknown = updateSettingsSchema.safeParse({
+    sidebarSectionOrder: ["bogus", "help"],
+    hiddenSidebarGroupLabels: ["bogus", "batch", "logs"],
+    hiddenSidebarSections: ["bogus", "costs"],
+  });
+  assert.ok(unknown.success, JSON.stringify(unknown.error?.issues));
+  assert.deepEqual(unknown.data.sidebarSectionOrder, ["system"]);
+  assert.deepEqual(unknown.data.hiddenSidebarGroupLabels, ["logs-more"]);
+  assert.deepEqual(unknown.data.hiddenSidebarSections, ["costs"]);
 });
 
 test("the owner-only Radar Admin entry still lands right after Radar (now in Observe → Costs)", () => {
