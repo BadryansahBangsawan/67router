@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Card, Button, Badge, Checkbox, ConfirmModal, Input, Select } from "@/shared/components";
+import { Button, Badge, Checkbox, ConfirmModal, Input, Select } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import DatabaseBackupRetentionCard from "./DatabaseBackupRetentionCard";
 import ProviderTransferPanel from "./ProviderTransferPanel";
@@ -1197,28 +1198,27 @@ export default function SystemStorageTab() {
   };
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-4">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-control bg-bg-subtle text-text-muted">
-          <Icon name="database" size={20} />
-        </span>
-        <div className="flex-1">
-          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("systemStorage")}</h3>
-          <p className="text-xs text-text-muted">{t("allDataLocal")}</p>
-          <p className="text-xs text-text-muted mt-1">
+    <SettingsSection
+      title={t("systemStorage")}
+      description={
+        <>
+          {t("allDataLocal")}{" "}
+          <span className="mt-1 block">
             Database backups are stored on this server in the db_backups folder under its data
             directory.{" "}
             <a href="/dashboard/endpoint" className="underline">
               Cloud sync is a separate setting under Endpoints
             </a>{" "}
             and can upload credentials to a configured remote destination.
-          </p>
-        </div>
+          </span>
+        </>
+      }
+      action={
         <Badge variant="success" size="sm">
           {storageHealth.driver || "json"}
         </Badge>
-      </div>
-
+      }
+    >
       <div className="grid grid-cols-1 gap-3 mb-4">
         <div className="p-3 rounded-lg bg-bg border border-border">
           <p className="text-[11px] text-text-muted uppercase tracking-wide mb-1">
@@ -1505,6 +1505,6 @@ export default function SystemStorageTab() {
         variant="danger"
         loading={resetUsageLoading}
       />
-    </Card>
+    </SettingsSection>
   );
 }

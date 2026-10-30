@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Checkbox, CheckboxGroup } from "@omniroute/ui-kit/checkbox";
-import { Card, Button, Input, Toggle, Modal, Badge } from "@/shared/components";
+import { Button, Input, Toggle, Modal, Badge } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import { AI_PROVIDERS } from "@/shared/constants/providers";
 import ProviderIcon from "@/shared/components/ProviderIcon";
@@ -199,7 +200,7 @@ export default function SecurityTab() {
 
   return (
     <div className="flex flex-col gap-6">
-      <Card title={t("security")} icon="shield">
+      <SettingsSection title={t("security")}>
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div>
@@ -309,14 +310,14 @@ export default function SecurityTab() {
             </form>
           )}
         </div>
-      </Card>
+      </SettingsSection>
 
       <IPFilterSection />
 
       <PiiMaskingCard />
 
       {/* API Endpoint Protection */}
-      <Card title={t("apiEndpointProtection")} icon="api">
+      <SettingsSection title={t("apiEndpointProtection")}>
         <div className="flex flex-col gap-4">
           <div className="rounded-lg border border-border bg-bg-subtle p-3 text-sm text-text-muted">
             <p className="font-medium text-text-main">{t("authModelHeading")}</p>
@@ -405,13 +406,12 @@ export default function SecurityTab() {
             )}
           </div>
         </div>
-      </Card>
+      </SettingsSection>
 
       {/* Custom Banned Keywords */}
-      <Card
-        icon="report"
+      <SettingsSection
         title={getSettingsLabel("customBannedSignals", "Banned Keywords")}
-        subtitle={getSettingsLabel(
+        description={getSettingsLabel(
           "customBannedSignalsDesc",
           "Additional keywords that trigger permanent account ban detection. Built-in keywords always apply."
         )}
@@ -469,12 +469,11 @@ export default function SecurityTab() {
             </p>
           )}
         </div>
-      </Card>
+      </SettingsSection>
 
-      <Card
-        icon="shield"
+      <SettingsSection
         title={getSettingsLabel("credentialRedaction", "Credential Redaction")}
-        subtitle={getSettingsLabel(
+        description={getSettingsLabel(
           "credentialRedactionDesc",
           "Redact API keys, tokens, and secrets from context sent to providers and from responses."
         )}
@@ -500,7 +499,7 @@ export default function SecurityTab() {
             disabled={loading}
           />
         </div>
-      </Card>
+      </SettingsSection>
 
       <AuthzSection />
       <SessionInfoCard />

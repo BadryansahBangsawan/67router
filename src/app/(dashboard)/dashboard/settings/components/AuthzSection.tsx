@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Badge, Button, Card, Input, Modal, Toggle } from "@/shared/components";
+import { Badge, Button, Input, Modal, Toggle } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 
 type TierName = "LOCAL_ONLY" | "ALWAYS_PROTECTED" | "MANAGEMENT" | "CLIENT_API" | "PUBLIC";
@@ -241,21 +242,21 @@ export default function AuthzSection() {
 
   if (loading) {
     return (
-      <Card title={t("authz.title")} icon="shield_lock">
+      <SettingsSection title={t("authz.title")}>
         <p className="text-sm text-text-muted" role="status">
           {t("authz.loading")}
         </p>
-      </Card>
+      </SettingsSection>
     );
   }
 
   if (loadError || !inventory) {
     return (
-      <Card title={t("authz.title")} icon="shield_lock">
+      <SettingsSection title={t("authz.title")}>
         <p className="text-sm text-error" role="alert">
           {loadError ?? t("authz.loadError")}
         </p>
-      </Card>
+      </SettingsSection>
     );
   }
 
@@ -278,7 +279,7 @@ export default function AuthzSection() {
       )}
 
       {/* Bypass policy editor */}
-      <Card title={t("authz.bypass.section")} icon="tune">
+      <SettingsSection title={t("authz.bypass.section")}>
         <div className="flex items-center justify-between gap-4 mb-6">
           <div>
             <p className="font-medium">{t("authz.bypass.kill_switch.label")}</p>
@@ -389,10 +390,10 @@ export default function AuthzSection() {
             {t("authz.save")}
           </Button>
         </div>
-      </Card>
+      </SettingsSection>
 
       {/* Authorization tier inventory */}
-      <Card title={t("authz.title")} subtitle={t("authz.description")} icon="shield_lock">
+      <SettingsSection title={t("authz.title")} description={t("authz.description")}>
         <div className="flex flex-col gap-4">
           {inventory.tiers.map((tier) => (
             <div key={tier.name} className="rounded-lg border border-border bg-bg-subtle p-4">
@@ -432,7 +433,7 @@ export default function AuthzSection() {
             </div>
           ))}
         </div>
-      </Card>
+      </SettingsSection>
 
       {/* Password re-auth modal — fires for every security-impacting PATCH */}
       <Modal

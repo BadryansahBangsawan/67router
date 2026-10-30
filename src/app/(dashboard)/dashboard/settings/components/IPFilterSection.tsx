@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { RadioGroup, RadioGroupItem } from "@omniroute/ui-kit/radio-group";
-import { Card, Button, Input, Badge } from "@/shared/components";
+import { Button, Input, Badge } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 
 const MODES = [
@@ -81,7 +82,7 @@ export default function IPFilterSection() {
   const activeMode = !config.enabled ? "disabled" : config.mode;
 
   return (
-    <Card title={t("ipAccessControl")} subtitle={t("ipAccessControlDesc")} icon="security">
+    <SettingsSection title={t("ipAccessControl")} description={t("ipAccessControlDesc")}>
       {/* Mode selector */}
       <RadioGroup
         aria-label={t("ipAccessControl")}
@@ -231,6 +232,6 @@ export default function IPFilterSection() {
           )}
         </div>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

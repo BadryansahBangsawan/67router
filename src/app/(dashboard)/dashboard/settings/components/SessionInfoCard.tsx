@@ -9,6 +9,7 @@
 
 import { useState, useEffect } from "react";
 import { Card, Button, Skeleton } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import { useTranslations } from "next-intl";
 
 interface SessionInfo {
@@ -101,7 +102,7 @@ export default function SessionInfoCard() {
   }
 
   return (
-    <Card title={t("session")} icon="person">
+    <SettingsSection title={t("session")}>
       <div className="flex flex-col gap-3" role="list" aria-label={t("sessionDetailsAria")}>
         <div className="flex justify-between items-center text-sm" role="listitem">
           <span className="text-text-muted">{t("status")}</span>
@@ -142,6 +143,6 @@ export default function SessionInfoCard() {
           </Button>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

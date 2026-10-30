@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Card, Collapsible, Input, ModelSelectField, Select, Toggle } from "@/shared/components";
+import { Collapsible, Input, ModelSelectField, Select, Toggle } from "@/shared/components";
+import { SettingsSection } from "../SettingsSection";
 import type { ApiModel } from "@/shared/components/ModelSelectField";
 import {
   MODALITY_BRIDGE_DEFAULTS,
@@ -186,10 +187,9 @@ export default function ModalityBridgeVideoTab({
   };
 
   return (
-    <Card
+    <SettingsSection
       title={t("modalityBridgeVideoTitle")}
-      subtitle={t("modalityBridgeVideoDesc")}
-      icon="movie"
+      description={t("modalityBridgeVideoDesc")}
     >
       <div className="space-y-4">
         {errorState === "save" ? (
@@ -343,7 +343,7 @@ export default function ModalityBridgeVideoTab({
 
         <ModalityBridgeStatsRow kind="video" />
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 

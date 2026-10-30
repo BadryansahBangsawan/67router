@@ -13,16 +13,8 @@ import {
   TableRow,
 } from "@omniroute/ui-kit/table";
 import { TableLoadingState } from "@omniroute/ui-kit/table-loading";
-import {
-  Card,
-  Button,
-  Input,
-  Select,
-  Badge,
-  ConfirmModal,
-  EmptyState,
-  Modal,
-} from "@/shared/components";
+import { Button, Input, Select, Badge, ConfirmModal, EmptyState, Modal } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 
 interface AccessTokenRow {
   id: string;
@@ -175,7 +167,7 @@ export default function AccessTokensTab() {
       />
 
       {/* Create */}
-      <Card title={t("accessTokensCreateHeading")}>
+      <SettingsSection title={t("accessTokensCreateHeading")}>
         <div className="grid gap-3 sm:grid-cols-4 sm:items-end">
           <Input
             ref={nameRef}
@@ -206,7 +198,7 @@ export default function AccessTokensTab() {
             {creating ? t("accessTokensCreating") : t("accessTokensCreate")}
           </Button>
         </div>
-      </Card>
+      </SettingsSection>
 
       <Modal
         isOpen={Boolean(newSecret)}
@@ -245,7 +237,7 @@ export default function AccessTokensTab() {
       )}
 
       {/* List */}
-      <Card title={t("accessTokensExisting")}>
+      <SettingsSection title={t("accessTokensExisting")}>
         {loading ? (
           <TableLoadingState label={tc("loading")} />
         ) : tokens.length === 0 ? (
@@ -299,7 +291,7 @@ export default function AccessTokensTab() {
             </TableBody>
           </Table>
         )}
-      </Card>
+      </SettingsSection>
 
       <ConfirmModal
         isOpen={Boolean(revokeTarget)}

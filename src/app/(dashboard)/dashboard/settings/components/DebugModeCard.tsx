@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, Toggle } from "@/shared/components";
+import { Toggle } from "@/shared/components";
+import { SettingsRow, SettingsSection } from "./SettingsSection";
 import { useTranslations } from "next-intl";
 
 export default function DebugModeCard() {
@@ -50,20 +51,18 @@ export default function DebugModeCard() {
   };
 
   return (
-    // Header-only card: the toggle sits in the header action slot, so the header's
-    // bottom margin (there is no body below it) is dropped.
-    <Card
-      icon="bug_report"
-      title={t("debugToggle")}
-      className="[&>[data-slot=card-header]]:mb-0"
-      action={
-        <Toggle
-          ariaLabel={t("debugToggle")}
-          checked={debugMode}
-          onChange={updateDebugMode}
-          disabled={loading}
-        />
-      }
-    />
+    <SettingsSection>
+      <SettingsRow
+        label={t("debugToggle")}
+        control={
+          <Toggle
+            ariaLabel={t("debugToggle")}
+            checked={debugMode}
+            onChange={updateDebugMode}
+            disabled={loading}
+          />
+        }
+      />
+    </SettingsSection>
   );
 }

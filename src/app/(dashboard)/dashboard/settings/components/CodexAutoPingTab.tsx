@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Card, Toggle, InfoTooltip } from "@/shared/components";
+import { Toggle, InfoTooltip } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import CodexWakeupsSection from "./CodexWakeupsSection";
 
@@ -136,15 +137,14 @@ export default function CodexAutoPingTab() {
   if (!loading && connections.length === 0) return null;
 
   return (
-    <Card
-      icon="bolt"
+    <SettingsSection
       title={
         <span className="flex items-center gap-1.5">
           {t("codexAutoPingTitle")}
           <InfoTooltip text={t("codexAutoPingWarning")} />
         </span>
       }
-      subtitle={t("codexAutoPingDesc")}
+      description={t("codexAutoPingDesc")}
       action={<CodexAutoPingStatus status={status} />}
     >
       {loading ? (
@@ -164,6 +164,6 @@ export default function CodexAutoPingTab() {
           />
         </>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

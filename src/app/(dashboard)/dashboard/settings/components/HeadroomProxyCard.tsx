@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Card, Button, Input } from "@/shared/components";
+import { Button, Input } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import { isHttpUrl } from "@/shared/validation/schemas/misc";
 
@@ -168,11 +169,11 @@ export default function HeadroomProxyCard() {
   const busy = saving || acting;
 
   return (
-    <Card
+    <SettingsSection
       padding="md"
-      icon="compress"
+
       title={t("headroomProxyTitle")}
-      subtitle={t("headroomProxyDesc")}
+      description={t("headroomProxyDesc")}
     >
       {msg && (
         <div
@@ -221,6 +222,6 @@ export default function HeadroomProxyCard() {
           <p className="text-xs text-text-muted">{t("headroomProxyExternalHint")}</p>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

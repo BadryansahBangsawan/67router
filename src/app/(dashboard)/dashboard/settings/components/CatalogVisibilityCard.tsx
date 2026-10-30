@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Button from "@/shared/components/Button";
-import Card from "@/shared/components/Card";
+import { SettingsSection } from "./SettingsSection";
 import Toggle from "@/shared/components/Toggle";
 
 type VisibilitySettings = { hideAutoCombos: boolean; hideNoThinkVariants: boolean };
@@ -71,7 +71,7 @@ export default function CatalogVisibilityCard() {
   );
 
   return (
-    <Card title={t("catalogScopeTitle")} subtitle={t("catalogVisibilityHint")}>
+    <SettingsSection title={t("catalogScopeTitle")} description={t("catalogVisibilityHint")}>
       <div className="space-y-4">
         {FLAGS.map((key) => (
           <Toggle
@@ -105,6 +105,6 @@ export default function CatalogVisibilityCard() {
           {loading ? t("loading") : saving ? t("saving") : saved ? t("settingSaved") : ""}
         </p>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

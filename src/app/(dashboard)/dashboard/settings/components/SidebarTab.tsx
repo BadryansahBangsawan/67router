@@ -24,7 +24,8 @@ import {
 } from "@omniroute/ui-kit/accordion";
 import { Checkbox } from "@omniroute/ui-kit/checkbox";
 import { RadioGroup, RadioGroupItem } from "@omniroute/ui-kit/radio-group";
-import { Badge, Button, Card, Toggle } from "@/shared/components";
+import { Badge, Button, Toggle } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import { cn } from "@/shared/utils/cn";
 import { useTranslations } from "next-intl";
@@ -625,10 +626,9 @@ export default function SidebarTab() {
     : "";
 
   return (
-    <Card
-      icon="view_sidebar"
+    <SettingsSection
       title={getSettingsLabel("settingsSidebarTitle", "Sidebar Customization")}
-      subtitle={getSettingsLabel(
+      description={getSettingsLabel(
         "settingsSidebarDesc",
         "Control which items appear in the sidebar and their order"
       )}
@@ -777,6 +777,6 @@ export default function SidebarTab() {
           </p>
         </div>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

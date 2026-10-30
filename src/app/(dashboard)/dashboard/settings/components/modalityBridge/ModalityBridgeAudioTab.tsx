@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Card, Collapsible, Input, ModelSelectField, Toggle } from "@/shared/components";
+import { Collapsible, Input, ModelSelectField, Toggle } from "@/shared/components";
+import { SettingsSection } from "../SettingsSection";
 import type { ApiModel } from "@/shared/components/ModelSelectField";
 import {
   MODALITY_BRIDGE_DEFAULTS,
@@ -95,10 +96,9 @@ export default function ModalityBridgeAudioTab() {
   };
 
   return (
-    <Card
+    <SettingsSection
       title={t("modalityBridgeAudioTitle")}
-      subtitle={t("modalityBridgeAudioDesc")}
-      icon="graphic_eq"
+      description={t("modalityBridgeAudioDesc")}
     >
       <div className="space-y-4">
         <Toggle
@@ -161,7 +161,7 @@ export default function ModalityBridgeAudioTab() {
         <ModalityBridgeStatsRow kind="audio" />
         <ModalityBridgeAudioTestButton />
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
