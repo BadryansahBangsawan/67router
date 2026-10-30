@@ -651,7 +651,7 @@ export default function RuntimePageClient() {
           <div className="mb-4 mt-2">
             <div className="h-2 rounded-sm bg-border/60 overflow-hidden">
               <div
-                className="h-full rounded-sm bg-gradient-to-r from-success via-warning to-error/40"
+                className="h-full rounded-sm bg-success"
                 style={{ width: `${overallPercent}%` }}
               />
             </div>

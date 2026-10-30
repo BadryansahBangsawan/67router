@@ -19,6 +19,7 @@ import {
   TableRow,
 } from "@omniroute/ui-kit/table";
 import Textarea from "@/shared/components/Textarea";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 // ─── Sample payloads ──────────────────────────────────────────────────────────
 
@@ -103,15 +104,9 @@ function parseSseFrames(rawSse: string): Array<{ event: string; preview: string 
 
 // ─── MiniStat ────────────────────────────────────────────────────────────────
 
+/** One cell of the stats KPI strip (the parent grid is a <KpiStrip>). */
 function MiniStat({ label, value }: { label: string; value: number }) {
-  return (
-    <Card>
-      <div className="p-4">
-        <p className="text-lg font-bold text-text-main">{value}</p>
-        <p className="text-[10px] uppercase tracking-wider text-text-muted">{label}</p>
-      </div>
-    </Card>
-  );
+  return <KpiCell label={label} value={value} />;
 }
 
 // ─── Props ───────────────────────────────────────────────────────────────────
@@ -275,7 +270,7 @@ export default function StreamTransformerAccordion({
           <div className="space-y-5 min-w-0">
             {/* Info banner */}
             <div className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted">
-              <Icon name="swap_horiz" size={20} className="text-primary mt-0.5" />
+              <Icon name="swap_horiz" size={20} className="text-text-muted mt-0.5" />
               <div>
                 <p className="font-medium text-text-main mb-0.5">
                   {translateOrFallback("streamTransformerTitle", "Responses Stream Transformer")}
@@ -398,7 +393,7 @@ export default function StreamTransformerAccordion({
             </Card>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <KpiStrip columns={4}>
               <MiniStat
                 label={translateOrFallback("transformedEvents", "Transformed events")}
                 value={eventCount}
@@ -415,7 +410,7 @@ export default function StreamTransformerAccordion({
                 label={translateOrFallback("outputLines", "Output lines")}
                 value={transformedSse ? transformedSse.split("\n").length : 0}
               />
-            </div>
+            </KpiStrip>
 
             {/* Event timeline */}
             <Card>
