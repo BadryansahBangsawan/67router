@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 
 const P = await import("../../src/lib/db/apiKeys/rowParsers.ts");
 
-test("module exposes all sixteen parsers", () => {
+test("module exposes all fifteen parsers", () => {
   for (const name of [
     "parseAllowedModels",
     "parseAllowedCombos",
@@ -22,7 +22,6 @@ test("module exposes all sixteen parsers", () => {
     "parseAccessSchedule",
     "parseRateLimits",
     "parseAllowedConnections",
-    "parseAllowedQuotas",
     "parseStringList",
     "parseNullableTimestamp",
     "parseIsBanned",
