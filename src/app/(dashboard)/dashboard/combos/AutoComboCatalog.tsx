@@ -143,7 +143,7 @@ function CatalogItemCard({
   t: ReturnType<typeof useTranslations>;
 }) {
   return (
-    <div className="relative rounded-lg border border-border bg-bg-subtle p-3 pb-7 text-xs">
+    <div className="relative rounded-lg border border-border bg-surface p-3 pb-7 text-xs">
       <CatalogItemActions
         item={item}
         testing={testing}
@@ -308,7 +308,7 @@ export default function AutoComboCatalog({
   const items = liveItems ?? FALLBACK_ITEMS;
 
   return (
-    <Card className="p-4">
+    <Card padding="none" className="px-5 py-4">
       {/* kit-exception: Raw <button> on purpose: a full-width disclosure header that carries the section
           heading — the kit Button is a fixed-height control, not a disclosure region. Focus
           ring comes from the global :focus-visible rule (globals.css). */}
@@ -321,15 +321,15 @@ export default function AutoComboCatalog({
       >
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <Icon name="auto_awesome" size={20} className="text-primary" />
-            <h2 className="text-base font-bold text-text-main">{t("autoCatalogTitle")}</h2>
-            <Badge size="sm" variant="primary" className="font-semibold">
+            <Icon name="auto_awesome" size={16} className="text-text-muted" />
+            <h2 className="text-sm font-semibold text-text-main">{t("autoCatalogTitle")}</h2>
+            <Badge size="sm" variant="secondary" className="tabular-nums">
               {liveItems
                 ? t("autoCatalogComboCount", { count: liveItems.length })
                 : t("autoCatalogTemplateCount", { count: FALLBACK_ITEMS.length })}
             </Badge>
           </div>
-          <p className="mt-1 text-xs text-text-muted">{t("autoCatalogDescription")}</p>
+          <p className="mt-0.5 text-[13px] text-text-muted">{t("autoCatalogDescription")}</p>
         </div>
         <Icon name={open ? "expand_less" : "expand_more"} size={16} className="text-text-muted" />
       </button>
