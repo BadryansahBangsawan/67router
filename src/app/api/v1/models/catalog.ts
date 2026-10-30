@@ -21,7 +21,6 @@ import {
 import { aiHordeImageCatalog } from "@omniroute/open-sse/services/aihordeImageCatalog";
 import { getAllRerankModels } from "@omniroute/open-sse/config/rerankRegistry";
 import { getAllAudioModels } from "@omniroute/open-sse/config/audioRegistry";
-import { getAllModerationModels } from "@omniroute/open-sse/config/moderationRegistry";
 import { getAllVideoModels } from "@omniroute/open-sse/config/videoRegistry";
 import { getAllMusicModels } from "@omniroute/open-sse/config/musicRegistry";
 import {
@@ -352,7 +351,7 @@ async function buildUnifiedModelsResponseCore(
     // #6316: Opt-in filter — hide paid-only models via `isFreeModel()`. Only applied to
     // PROVIDER_MODELS + OpenRouter loops (where pricing metadata / :free suffix / catalog
     // membership is available). Modality registries (embedding/image/rerank/audio/
-    // moderation/video/music) represent local capabilities without pricing, so they are
+    // video/music) represent local capabilities without pricing, so they are
     // exempt. Combos + auto/* + synced/custom/alias-backed rows also stay unfiltered —
     // extending v1 scope to those requires per-entry pricing lookup not available today.
     const hidePaid = settings.hidePaidModels === true;
@@ -1654,22 +1653,6 @@ async function buildUnifiedModelsResponseCore(
         owned_by: audioModel.provider,
         type: "audio",
         subtype: audioModel.subtype,
-      });
-    }
-
-    // Add moderation models (filtered by active providers)
-    for (const modModel of getAllModerationModels()) {
-      await maybeYieldCatalogBuild();
-      if (!isProviderActive(modModel.provider)) continue;
-      const rawModelId = getSpecialtyModelRelativeId(modModel.id, modModel.provider);
-      if (!providerSupportsModel(modModel.provider, rawModelId)) continue;
-      if (isModelHiddenBulk(modModel.provider, rawModelId, null, "moderation")) continue;
-      models.push({
-        id: modModel.id,
-        object: "model",
-        created: timestamp,
-        owned_by: modModel.provider,
-        type: "moderation",
       });
     }
 
