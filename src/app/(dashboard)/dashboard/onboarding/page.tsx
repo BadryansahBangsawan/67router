@@ -296,8 +296,8 @@ export default function OnboardingWizard() {
                   i < step
                     ? "bg-success-bg text-success"
                     : i === step
-                      ? "bg-primary/20 text-primary ring-2 ring-primary/40"
-                      : "bg-surface-2 text-text-muted"
+                      ? "bg-text-main text-bg"
+                      : "border border-border bg-surface text-text-muted"
                 )}
               >
                 {i < step ? <Icon name="check" size={16} /> : i + 1}
@@ -317,19 +317,21 @@ export default function OnboardingWizard() {
         </ol>
 
         {/* Card */}
-        <Card padding="lg" className="shadow-xl">
+        <Card padding="lg">
           {/* Step Header */}
           <div className="text-center mb-6">
             <Icon
               name={currentStep.icon}
-              size={48}
+              size={40}
               className={cn(
                 "mx-auto mb-3 block",
-                currentStep.id === "done" ? "text-success" : "text-primary"
+                currentStep.id === "done" ? "text-success" : "text-text-muted"
               )}
             />
             {/* The step title is the page heading (the wizard has no PageHeader). */}
-            <h1 className="text-2xl font-bold text-text-main">{currentStep.title}</h1>
+            <h1 className="text-[26px] font-semibold leading-8 tracking-[-0.025em] text-text-main">
+              {currentStep.title}
+            </h1>
             {currentStep.id === "tiers" && (
               <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-text-muted text-balance">
                 {t("tier.subtitle")}
@@ -384,7 +386,7 @@ export default function OnboardingWizard() {
                   ].map((f) => (
                     <div
                       key={f.icon}
-                      className="h-full bg-surface-2 rounded-xl p-3 text-center border border-border"
+                      className="h-full rounded-card border border-border bg-bg-subtle p-3 text-center"
                     >
                       <div className="flex h-full flex-col items-center justify-center">
                         <Icon name={f.icon} size={24} className="text-primary mb-1 block" />

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Badge from "@/shared/components/Badge";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
@@ -100,6 +101,7 @@ const RARITY_COLORS: Record<string, string> = {
 export default function ProfilePage() {
   const t = useTranslations("common");
   const tg = useTranslations("gamification");
+  const tSidebar = useTranslations("sidebar");
   const locale = useLocale();
   const [userLevel, setUserLevel] = useState<UserLevel | null>(null);
   const [allBadges, setAllBadges] = useState<BadgeDef[]>([]);
@@ -197,9 +199,12 @@ export default function ProfilePage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="sr-only lg:hidden">{t("profile")}</h1>
+      <PageHeader compact title={t("profile")} description={tSidebar("profileSubtitle")} />
       {error && (
-        <div role="alert" className="p-3 rounded-lg bg-error-bg text-error text-sm">
+        <div
+          role="alert"
+          className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error"
+        >
           {error}
         </div>
       )}
@@ -208,13 +213,11 @@ export default function ProfilePage() {
       <Card>
         <div className="flex flex-col md:flex-row md:items-center gap-6">
           <div className="flex items-center gap-4">
-            <div
-              className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-black ${tierConfig.bg} ${tierConfig.color}`}
-            >
+            <div className="flex h-20 w-20 items-center justify-center rounded-card border border-border bg-bg-subtle text-3xl font-semibold tracking-[-0.03em] tabular-nums text-text-main">
               {level}
             </div>
             <div>
-              <h2 className="text-xl font-bold">
+              <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
                 {tg(`levelTitles.${getLevelTitle(level).toLowerCase()}`)}
               </h2>
               <div className="flex items-center gap-2 mt-1">
@@ -245,10 +248,10 @@ export default function ProfilePage() {
               aria-valuemin={0}
               aria-valuemax={xpForNext}
               aria-valuenow={Math.min(Math.max(xpInCurrentLevel, 0), xpForNext)}
-              className="w-full h-3 rounded-full bg-border overflow-hidden"
+              className="h-2 w-full overflow-hidden rounded-full bg-bg-subtle"
             >
               <div
-                className="h-full rounded-full bg-gradient-to-r from-chart-3 to-chart-5 transition-all duration-500"
+                className="h-full rounded-full bg-text-main transition-all duration-500"
                 style={{ width: `${Math.min(xpProgress, 100)}%` }}
               />
             </div>
@@ -265,7 +268,9 @@ export default function ProfilePage() {
           <div className="flex items-center gap-4">
             <div className="text-5xl">🔥</div>
             <div>
-              <p className="text-2xl font-bold">{tg("dayStreak", { count: streak })}</p>
+              <p className="text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums">
+                {tg("dayStreak", { count: streak })}
+              </p>
               <p className="text-sm text-text-muted">{tg("maintainStreak")}</p>
             </div>
           </div>
@@ -274,7 +279,7 @@ export default function ProfilePage() {
 
       {/* Badges Grid */}
       <div>
-        <h3 className="text-lg font-semibold mb-4">
+        <h3 className="mb-4 text-sm font-semibold text-text-main">
           {tg("badgesTitle", { earned: earnedBadges.length, total: allBadges.length })}
         </h3>
 

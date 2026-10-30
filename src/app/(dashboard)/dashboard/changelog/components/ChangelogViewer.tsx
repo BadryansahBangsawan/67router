@@ -54,8 +54,8 @@ const markdownComponents: Components = {
     const { version, date } = splitReleaseHeading(textOf(children));
     return (
       <header className="mb-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <h2 className="ci-dashboard-display flex items-center gap-2 text-2xl">
-          <Icon name="sell" size={20} className="text-text-muted" />
+        <h2 className="flex items-center gap-2 font-mono text-lg font-semibold tracking-[-0.01em] text-text-main">
+          <Icon name="sell" size={16} className="text-text-muted" />
           {version}
         </h2>
         {date && <span className="ci-eyebrow">{date}</span>}
