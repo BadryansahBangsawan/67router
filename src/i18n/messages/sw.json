@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Tumia mtoa huduma huyu tu kwa relay zinazohudumia wateja wa Claude Code pekee. 67router huandika upya kila ombi linaloingia katika umbizo la usafirishaji linalooana na Claude Code ili relay hizo zilikubali. Ikiwa unataka kutumia Claude Code CLI pekee, au huna uhakika aina hii ya relay inamaanisha nini, tumia badala yake mtoa huduma wa kawaida anayeoana na Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Maagizo yaliyoingizwa baada ya prompt ya wakala/mtoa huduma...",
     "chars": "herufi {count}",
     "thinkingBudgetTitle": "Bajeti ya Kufikiri",
-    "thinkingBudgetDesc": "Control AI reasoning token usage across all requests",
+    "thinkingBudgetDesc": "Hudhibiti iwapo 67router huandika upya vigezo vya thinking/reasoning vya mteja kabla maombi hayajatumwa upstream. Hili ni tofauti na mfinyazo, akiba ya prompt, na vikomo vya tokeni vya funguo za API.",
     "thinkingBudgetIndependenceHint": "Vipengele vya kufinya, uelekezaji, na kikomo cha token vinaendelea kufanya kazi katika kila hali. Auto haitafsiri kama \"kuonyesha mawazo kiotomatiki\" — inafuta maeneo ya mantiki ya mteja.",
     "passthrough": "Kupitisha Moja kwa Moja",
     "passthroughDesc": "Hakuna mabadiliko — kiteja kinadhibiti bajeti ya kufikiri",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Hakiki",
-    "description": "Mfinyazo wa muktadha-kama-picha. Inatoa kidokezo cha mfumo, nyaraka za zana, na historia mnene kama kurasa fupi za PNG ambazo Claude Fable 5 husoma badala ya maandishi. Tokeni za picha hutozwa kwa vipimo badala ya herufi, kwa hivyo kizuizi kilichobadilishwa kinagharimu takriban mara 10 chini. Njia ya moja kwa moja ya Anthropic pekee.",
+    "description": "Mfinyazo wa muktadha-kama-picha. Inatoa kidokezo cha mfumo, nyaraka za zana, na historia mnene kama kurasa fupi za PNG kwa njia ya Claude Fable 5 iliyopimwa. Kifurushi cha OmniGlyph kilichochapishwa pia kinatoa vigeuzi asili vya GPT 5.6, lakini 67router huziweka njia hizo zimefungwa (fail-closed) hadi kuwe na uthibitisho wa uaminifu wa mtoa huduma na risiti za usomaji.",
     "economicsTitle": "Uchumi",
     "economics": {
       "fewerTokens": "tokeni chache kwenye kizuizi kilichobadilishwa",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modeli",
         "pass": "claude-fable-5",
-        "why": "Ni Fable 5 pekee inayosoma kurasa mnene kwa usahihi wa 100% (iliyopimwa, n=30). GPT-5.5 na Gemini 2.5 Flash zimezuiwa."
+        "why": "Ni njia ya Fable 5 iliyopimwa pekee ndiyo imewezeshwa katika 67router. GPT 5.6 inaungwa mkono kimuundo na kifurushi lakini inabaki imezuiwa hadi risiti ya mtoa huduma wake ipatikane; familia ambazo hazijathibitishwa kama Grok zinabaki kuwa maandishi pekee."
       },
       "transport": {
         "label": "Usafirishaji",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Rekebisha hitilafu ya 'command not found'",
     "setupGuideCommandMissingDesc": "Hakikisha amri ya CLI ipo kwenye PATH, fungua kipindi kipya cha terminal, kisha ubofye Sasisha tena.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Ikiwa unataka kuelekeza Claude Code, Cursor, Codex, au IDE yoyote kwa 67router kama proksi, nenda kwenye Zana za CLI badala yake. Ukurasa huu ni kwa kinyume chake — kutumia faili jozi za CLI za ndani kama malengo ya utekelezaji ambayo 67router inaweza kuzindua na kupitisha maombi kupitia.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Ombi linapofika, 67router inaweza kuzindua faili jozi ya CLI ya ndani (k.m. claude, codex, goose) na kupitisha ombi kupitia hiyo. CLI huchakata ombi kwa kutumia vitambulisho vyake yenyewe na kurudisha matokeo kupitia 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router inazindua faili jozi ya ndani",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Zana za CLI dhidi ya Malengo ya Wakala - Kuna Tofauti Gani?",
     "comparisonCliToolsLabel": "Ukurasa wa Zana za CLI",

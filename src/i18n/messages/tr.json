@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Yapay zeka kodlama asistanlarını 67router üzerinden yönlendirilecek şekilde yapılandırın",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Bu sağlayıcıyı yalnızca Claude Code istemcilerine özel hizmet veren aktarıcılar (relay) için kullanın. 67router, bu aktarıcıların kabul etmesi için gelen her isteği Claude Code uyumlu aktarım biçimine yeniden yazar. Yalnızca Claude Code CLI kullanmak istiyorsanız veya bu aktarıcı türünün ne anlama geldiğinden emin değilseniz, bunun yerine normal bir Anthropic uyumlu sağlayıcı kullanın.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Ajan/sağlayıcı isteminden sonra eklenen talimatlar...",
     "chars": "{count} karakter",
     "thinkingBudgetTitle": "Düşünme Bütçesi",
-    "thinkingBudgetDesc": "Tüm isteklerde yapay zeka akıl yürütme jetonu kullanımını kontrol edin",
+    "thinkingBudgetDesc": "İstekler upstream'e gitmeden önce 67router'ın istemcinin thinking/reasoning parametrelerini yeniden yazıp yazmayacağını denetler. Bu ayar sıkıştırma, istem önbelleği ve API anahtarı token sınırlarından ayrıdır.",
     "thinkingBudgetIndependenceHint": "Sıkıştırma, yönlendirme ve token-limit özellikleri her modda çalışmaya devam eder. Otomatik, “otomatik-göster düşüncesi” anlamına gelmez — istemci akıl yürütme alanlarını kaldırır.",
     "passthrough": "Passthrough Modu",
     "passthroughDesc": "Değişiklik yapma — düşünme bütçesini istemci kontrol etsin",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Önizleme",
-    "description": "Görsel formatında bağlam sıkıştırması. Sistem istemini, araç belgelerini ve yoğun geçmişi, Claude Fable 5'in metin yerine okuduğu kompakt PNG sayfaları olarak işler. Görsel token'ları karakterler yerine boyutlara göre faturalandırılır, bu nedenle dönüştürülen blok yaklaşık 10 kat daha az maliyetlidir. Yalnızca doğrudan Anthropic rotası.",
+    "description": "Görsel formatında bağlam sıkıştırması. Sistem istemini, araç belgelerini ve yoğun geçmişi, ölçülmüş Claude Fable 5 yolu için kompakt PNG sayfaları olarak işler. Yayımlanan OmniGlyph paketi yerel GPT 5.6 dönüştürücüleri de sunar, ancak 67router sağlayıcı doğruluğu ve okuma kanıtları oluşana kadar bu rotaları kapalı (fail-closed) tutar.",
     "economicsTitle": "Ekonomi",
     "economics": {
       "fewerTokens": "dönüştürülen blokta daha az token",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Yalnızca Fable 5 yoğun sayfaları %100 doğrulukla okur (ölçülen, n=30). GPT-5.5 ve Gemini 2.5 Flash engellenir."
+        "why": "67router'da yalnızca ölçülmüş Fable 5 yolu etkindir. GPT 5.6 paket tarafından yapısal olarak desteklenir ancak sağlayıcı kanıtı gelene kadar engelli kalır; Grok gibi doğrulanmamış aileler yalnızca metin olarak kalır."
       },
       "transport": {
         "label": "Aktarım",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "'Komut bulunamadı' sorununu düzeltin",
     "setupGuideCommandMissingDesc": "PATH'de CLI komutunun mevcut olduğundan emin olun, yeni bir terminal oturumu açın ve Yenile'yi yeniden çalıştırın.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Claude Code, Cursor, Codex veya herhangi bir IDE'yi proxy olarak 67router'a yönlendirmek istiyorsanız bunun yerine CLI Araçları'na gidin. Bu sayfa tersi içindir — yerel CLI ikili dosyalarını, 67router'ın başlatabileceği ve istekleri üzerinden yönlendirebileceği yürütme hedefleri olarak kullanmak.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Bir istek geldiğinde 67router yerel bir CLI ikili dosyasını (ör. claude, codex, goose) başlatabilir ve isteği onun üzerinden iletebilir. CLI, isteği kendi kimlik bilgileriyle işler ve sonucu 67router üzerinden geri döndürür.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router yerel ikili dosyayı başlatır",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI Araçları ve Aracı Hedefleri — Fark Nedir?",
     "comparisonCliToolsLabel": "CLI Araçları sayfası",

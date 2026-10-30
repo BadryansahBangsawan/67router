@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Määritä tekoälykoodausavustajat reitittämään 67routerin kautta",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Käytä tätä palveluntarjoajaa vain välityspalveluille, jotka palvelevat yksinomaan Claude Code -asiakkaita. 67router kirjoittaa jokaisen saapuvan pyynnön Claude Code -yhteensopivaan siirtomuotoon, jotta nämä välityspalvelut hyväksyvät sen. Jos haluat käyttää vain Claude Code CLI:tä tai et ole varma, mitä tämä välitystyyppi tarkoittaa, käytä sen sijaan tavallista Anthropic-yhteensopivaa palveluntarjoajaa.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Ohjeet lisätään agentin/palveluntarjoajan kehotteen jälkeen...",
     "chars": "{count} merkkiä",
     "thinkingBudgetTitle": "Miettivä budjetti",
-    "thinkingBudgetDesc": "Hallitse tekoälyn päättelytunnuksen käyttöä kaikissa pyynnöissä",
+    "thinkingBudgetDesc": "Määrittää, kirjoittaako 67router asiakkaan thinking/reasoning-parametrit uudelleen ennen kuin pyynnöt lähetetään upstreamiin. Tämä on erillinen pakkauksesta, kehotevälimuistista ja API-avainten tokenrajoista.",
     "thinkingBudgetIndependenceHint": "Pakkaus-, reititys- ja token-rajaratkaisut toimivat kaikissa tiloissa. Auto ei tarkoita \"automaattista ajattelua\" — se poistaa asiakasajattelun kentät.",
     "passthrough": "Läpivienti",
     "passthroughDesc": "Ei muutoksia – asiakas hallitsee ajattelubudjettia",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Esikatselu",
-    "description": "Konteksti kuvana -pakkaus. Renderöi järjestelmäkehotteen, työkaludokumentaation ja tiiviin historian tiiviiksi PNG-sivuiksi, joita Claude Fable 5 lukee tekstin sijaan. Kuvatokenit laskutetaan mittojen mukaan merkkien sijaan, joten muunnettu lohko maksaa noin 10× vähemmän. Vain suora Anthropic-reitti.",
+    "description": "Konteksti kuvana -pakkaus. Renderöi järjestelmäkehotteen, työkaludokumentaation ja tiiviin historian tiiviiksi PNG-sivuiksi mitattua Claude Fable 5 -reittiä varten. Julkaistu OmniGlyph-paketti tarjoaa myös natiivit GPT 5.6 -muuntimet, mutta 67router pitää nuo reitit suljettuina (fail-closed), kunnes palveluntarjoajan tarkkuudesta ja lukemisesta on näyttöä.",
     "economicsTitle": "Taloudellisuus",
     "economics": {
       "fewerTokens": "vähemmän tokeneita muunnetussa lohkossa",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Malli",
         "pass": "claude-fable-5",
-        "why": "Vain Fable 5 lukee tiheitä sivuja 100 % tarkkuudella (mitattu, n=30). GPT-5.5 ja Gemini 2.5 Flash on estetty."
+        "why": "67routerissa on käytössä vain mitattu Fable 5 -reitti. Paketti tukee GPT 5.6:ta rakenteellisesti, mutta se pysyy estettynä, kunnes palveluntarjoajalta on näyttö; vahvistamattomat mallisarjat, kuten Grok, pysyvät vain tekstimuotoisina."
       },
       "transport": {
         "label": "Siirtotapa",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Korjaa ”komentoa ei löydy” -virhe",
     "setupGuideCommandMissingDesc": "Varmista, että CLI-komento löytyy PATH-ympäristömuuttujasta, avaa uusi pääteistunto ja suorita Päivitä uudelleen.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Jos haluat ohjata Claude Coden, Cursorin, Codexin tai minkä tahansa IDE:n käyttämään 67routeria välityspalvelimena, siirry sen sijaan CLI-työkalut-sivulle. Tämä sivu on päinvastaiseen käyttöön — paikallisten CLI-binäärien käyttämiseen suorituskohteina, jotka 67router voi käynnistää ja joiden kautta se voi reitittää pyyntöjä.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Kun pyyntö saapuu, 67router voi käynnistää paikallisen CLI-binäärin (esim. claude, codex, goose) ja ohjata pyynnön sen kautta. CLI käsittelee pyynnön omilla tunnistetiedoillaan ja palauttaa tuloksen takaisin 67routerin kautta.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router käynnistää paikallisen binäärin",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI-työkalut vs. agenttikohteet – mitä eroa on?",
     "comparisonCliToolsLabel": "CLI Tools -sivu",

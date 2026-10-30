@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Configura os assistentes de programação com IA para encaminharem através do 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -5840,7 +5840,7 @@
     "ccAliasLoadError": "Não foi possível carregar as definições dos aliases de deteção: {error}",
     "ccAliasSaveError": "Não foi possível guardar a definição do alias de deteção: {error}",
     "compatUpstreamHeadersLabel": "Cabeçalhos upstream extra",
-    "compatUpstreamHeadersHint": "Definição de alto privilégio — mesmo nível de confiança que editar credenciais de API do fornecedor; só admins de confiança devem usar.",
+    "compatUpstreamHeadersHint": "Definição de alto privilégio — mesmo nível de confiança que editar as credenciais de API do fornecedor; só administradores de confiança a devem usar. Os cabeçalhos são aplicados depois de o 67router adicionar a autenticação a partir da chave de API do fornecedor. Se um cabeçalho personalizado usar o mesmo nome de um existente (p. ex. Authorization), o teu valor substitui por completo o cabeçalho gerado automaticamente (incluindo o token Bearer) — o upstream só vê o que escreveste, não a chave das definições. Uma configuração errada pode causar 401 ou falhas na autenticação upstream. Uma linha por cabeçalho (p. ex. Authentication adicional para alguns gateways). Passa o cursor ou foca o valor para pré-visualizar. Guarda ao perder o foco, ao clicar fora ou ao fechar este painel.",
     "compatUpstreamHeaderName": "Nome do cabeçalho",
     "compatUpstreamHeaderValue": "Valor",
     "compatUpstreamAddRow": "Adicionar cabeçalho",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Usa este fornecedor apenas para relays que servem exclusivamente clientes Claude Code. O 67router reescreve qualquer pedido recebido no formato de transmissão compatível com Claude Code para que esses relays o aceitem. Se só queres usar o Claude Code CLI, ou não tens a certeza do que significa este tipo de relay, usa antes um fornecedor normal compatível com Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -6930,7 +6930,7 @@
     "memoryTitle": "Memória",
     "memoryDesc": "Memória conversacional persistente entre sessões",
     "memoryEnabled": "Ativar Memória",
-    "memoryEnabledDesc": "Quando ativado, injetará o contexto passado relevante de forma dinâmica.",
+    "memoryEnabledDesc": "Quando ativado, o 67router injeta o contexto passado relevante.",
     "memoryTokenCostWarning": "Atenção: com a memória ativada, o 67router injeta até {tokens} tokens de contexto recuperado em cada pedido de chat — isto aumenta o uso de tokens e o custo. Para ignorar a injeção num pedido específico, envie o cabeçalho \"x-omniroute-no-memory: true\".",
     "maxTokens": "Tokens Máximos",
     "retentionDays": "Retenção",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instruções inseridas após o prompt do agente/provedor...",
     "chars": "{count} caracteres",
     "thinkingBudgetTitle": "Pensando no orçamento",
-    "thinkingBudgetDesc": "Controle o uso do token de raciocínio de IA em todas as solicitações",
+    "thinkingBudgetDesc": "Controla se o 67router reescreve os parâmetros de thinking/reasoning do cliente antes de os pedidos seguirem para o upstream. É independente da compressão, da cache de prompts e dos limites de tokens das chaves de API.",
     "thinkingBudgetIndependenceHint": "Os recursos de compressão, roteamento e limite de tokens continuam a funcionar em todos os modos. Auto não significa \"auto-exibir raciocínio\" — remove os campos de raciocínio do cliente.",
     "passthrough": "Passagem",
     "passthroughDesc": "Sem alterações – o cliente controla o orçamento pensado",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Pré-visualização",
-    "description": "Compressão de contexto como imagem. Renderiza a instrução do sistema, a documentação das ferramentas e o histórico denso como páginas PNG compactas que o Claude Fable 5 lê em vez de texto. Os tokens de imagem são faturados pelas dimensões e não pelos carateres, pelo que o bloco convertido custa cerca de 10× menos. Apenas rota direta da Anthropic.",
+    "description": "Compressão de contexto como imagem. Renderiza a instrução do sistema, a documentação das ferramentas e o histórico denso como páginas PNG compactas para o percurso medido do Claude Fable 5. O pacote OmniGlyph publicado também expõe transformadores nativos para GPT 5.6, mas o 67router mantém essas rotas fechadas (fail-closed) até existirem provas de fidelidade do fornecedor e recibos de leitura.",
     "economicsTitle": "A economia",
     "economics": {
       "fewerTokens": "menos tokens no bloco convertido",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modelo",
         "pass": "claude-fable-5",
-        "why": "Apenas o Fable 5 lê páginas densas com 100% de precisão (medido, n=30). O GPT-5.5 e o Gemini 2.5 Flash estão bloqueados."
+        "why": "No 67router só está ativado o percurso medido do Fable 5. O GPT 5.6 é suportado estruturalmente pelo pacote, mas continua bloqueado até existir o recibo do fornecedor; famílias não verificadas, como o Grok, ficam apenas em texto."
       },
       "transport": {
         "label": "Transporte",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Corrigir erro 'comando não encontrado'",
     "setupGuideCommandMissingDesc": "Certifica-te de que o comando CLI existe no PATH, abre uma nova sessão de terminal e volta a correr Atualizar.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Se quiseres apontar o Claude Code, Cursor, Codex ou qualquer IDE para o 67router como proxy, vai antes a Ferramentas CLI. Esta página serve para o inverso — usar binários CLI locais como destinos de execução que o 67router pode iniciar e através dos quais pode encaminhar pedidos.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Quando chega um pedido, o 67router pode iniciar um binário CLI local (p. ex., claude, codex, goose) e encaminhar o pedido através dele. A CLI processa o pedido com as suas próprias credenciais e devolve o resultado através do 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · O 67router inicia o binário local",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Ferramentas CLI versus alvos de agente – Qual é a diferença?",
     "comparisonCliToolsLabel": "Página de ferramentas CLI",
@@ -11203,7 +11203,7 @@
     "tableProvider": "Fornecedor",
     "tableModel": "Modelo",
     "performanceTitle": "Desempenho",
-    "semanticCacheSectionDesc": "Secção de cache semântica",
+    "semanticCacheSectionDesc": "A cache de respostas determinística do próprio 67router. Quando ativada, pedidos repetidos sem streaming com temperature=0 podem ser servidos localmente sem contactar o fornecedor upstream.",
     "semanticCacheDisabledDesc": "A cache semântica está desativada. O 67router vai saltar a reutilização local de respostas até a reativares nas Definições.",
     "semanticEntriesDesc": "Registos de cache semântica persistidos atualmente armazenados em SQLite. A atividade de cache de prompt do lado do fornecedor não está listada aqui.",
     "searchEntries": "Pesquisar entradas...",
@@ -13101,7 +13101,7 @@
       },
       "cli-serve": {
         "name": "CLI: Servir",
-        "description": "Serve o agente localmente"
+        "description": "Inicia, para e reinicia o servidor do 67router a partir da CLI. Gere o modo daemon, a configuração da porta, a recuperação automática, a integração com a área de notificação e o atalho para abrir o painel."
       },
       "cli-health": {
         "name": "CLI: Saúde",
@@ -13121,7 +13121,7 @@
       },
       "cli-chat": {
         "name": "CLI: Conversa",
-        "description": "Cliente de chat em linha de comandos"
+        "description": "Envia chat completions, transmite respostas em streaming e inicia uma sessão REPL interativa a partir da CLI. Suporta todos os fornecedores do 67router, o encaminhamento por combo e a configuração do prompt de sistema."
       },
       "cli-routing": {
         "name": "CLI: Encaminhamento e Combos",

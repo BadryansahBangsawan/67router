@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Configura gli assistenti di programmazione IA per instradare tramite 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Usa questo provider solo per i relay che servono esclusivamente client Claude Code. 67router riscrive ogni richiesta in arrivo nel formato di trasmissione compatibile con Claude Code, così che quei relay la accettino. Se vuoi solo usare Claude Code CLI o non sei sicuro di cosa significhi questo tipo di relay, usa invece un normale provider compatibile con Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Istruzioni inserite dopo il prompt dell'agente/provider...",
     "chars": "{count} caratteri",
     "thinkingBudgetTitle": "Pensare al bilancio",
-    "thinkingBudgetDesc": "Controlla l'utilizzo dei token di ragionamento dell'intelligenza artificiale in tutte le richieste",
+    "thinkingBudgetDesc": "Controlla se 67router riscrive i parametri di thinking/reasoning del client prima che le richieste vengano inoltrate upstream. È separato dalla compressione, dalla cache dei prompt e dai limiti di token delle chiavi API.",
     "thinkingBudgetIndependenceHint": "Le funzionalità di compressione, instradamento e limite di token continuano a funzionare in ogni modalità. Auto non significa \"auto-mostrare il pensiero\" — rimuove i campi di ragionamento del client.",
     "passthrough": "Passante",
     "passthroughDesc": "Nessun cambiamento: il cliente controlla il budget",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Anteprima",
-    "description": "Compressione del contesto come immagine. Esegue il rendering del prompt di sistema, della documentazione degli strumenti e della cronologia densa come pagine PNG compatte che Claude Fable 5 legge al posto del testo. I token delle immagini vengono fatturati in base alle dimensioni anziché ai caratteri, quindi il blocco convertito costa circa 10× meno. Solo route Anthropic diretta.",
+    "description": "Compressione del contesto come immagine. Esegue il rendering del prompt di sistema, della documentazione degli strumenti e della cronologia densa come pagine PNG compatte per il percorso Claude Fable 5 misurato. Il pacchetto OmniGlyph pubblicato espone anche trasformatori nativi per GPT 5.6, ma 67router mantiene queste route chiuse (fail-closed) finché non esistono prove di fedeltà del provider e ricevute di lettura.",
     "economicsTitle": "Aspetti economici",
     "economics": {
       "fewerTokens": "meno token sul blocco convertito",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modello",
         "pass": "claude-fable-5",
-        "why": "Solo Fable 5 legge le pagine dense con un'accuratezza del 100% (misurata, n=30). GPT-5.5 e Gemini 2.5 Flash sono bloccati."
+        "why": "In 67router è abilitato solo il percorso Fable 5 misurato. GPT 5.6 è supportato strutturalmente dal pacchetto, ma resta bloccato fino alla ricevuta del suo provider; le famiglie non verificate come Grok restano solo testo."
       },
       "transport": {
         "label": "Trasporto",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Correggi l'errore 'comando non trovato'",
     "setupGuideCommandMissingDesc": "Assicurati che il comando CLI sia disponibile nel PATH, apri una nuova sessione del terminale e fai nuovamente clic su Aggiorna.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Se vuoi puntare Claude Code, Cursor, Codex o qualsiasi IDE verso 67router come proxy, vai invece su Strumenti CLI. Questa pagina serve per il caso opposto: usare binari CLI locali come destinazioni di esecuzione che 67router può avviare e attraverso cui può instradare le richieste.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Quando arriva una richiesta, 67router può avviare un binario CLI locale (ad es. claude, codex, goose) e farvi passare la richiesta. La CLI elabora la richiesta con le proprie credenziali e restituisce il risultato tramite 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router avvia il binario locale",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Strumenti CLI e destinazioni agente: qual è la differenza?",
     "comparisonCliToolsLabel": "Pagina Strumenti CLI",

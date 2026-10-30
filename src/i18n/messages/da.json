@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Konfigurer AI-kodningsassistenter til at route via 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Brug kun denne udbyder til relæer, der udelukkende betjener Claude Code-klienter. 67router omskriver enhver indgående anmodning til det Claude Code-kompatible overførselsformat, så disse relæer accepterer den. Hvis du kun vil bruge Claude Code CLI, eller hvis du ikke er sikker på, hvad denne relætype betyder, skal du i stedet bruge en almindelig Anthropic-kompatibel udbyder.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instruktioner indsat efter agent-/udbyderprompt...",
     "chars": "{count} tegn",
     "thinkingBudgetTitle": "Tænke budget",
-    "thinkingBudgetDesc": "Kontroller brugen af AI-ræsonnementstoken på tværs af alle anmodninger",
+    "thinkingBudgetDesc": "Styrer, om 67router omskriver klientens thinking/reasoning-parametre, før anmodninger sendes upstream. Dette er adskilt fra komprimering, prompt-cache og tokengrænser for API-nøgler.",
     "thinkingBudgetIndependenceHint": "Kompressions-, routing- og token-grænsefunktioner fortsætter med at fungere i alle tilstande. Auto betyder ikke \"auto-vis tænkning\" - det fjerner klientens ræsonneringsfelter.",
     "passthrough": "Gennemløb",
     "passthroughDesc": "Ingen ændringer - klienten styrer tænkebudgettet",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Forhåndsvisning",
-    "description": "Kontekst-som-billede-komprimering. Renderer system-prompten, værktøjsdokumentationen og den tætte historik som kompakte PNG-sider, som Claude Fable 5 læser i stedet for tekst. Billed-tokens afregnes efter dimensioner i stedet for tegn, så den konverterede blok koster omkring 10× mindre. Kun direkte Anthropic-rute.",
+    "description": "Kontekst-som-billede-komprimering. Renderer system-prompten, værktøjsdokumentationen og den tætte historik som kompakte PNG-sider til den målte Claude Fable 5-rute. Den udgivne OmniGlyph-pakke indeholder også native GPT 5.6-transformere, men 67router holder de ruter lukkede (fail-closed), indtil der findes dokumentation for udbyderens nøjagtighed og læsekvitteringer.",
     "economicsTitle": "Økonomien",
     "economics": {
       "fewerTokens": "færre tokens på den konverterede blok",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Kun Fable 5 læser tætte sider med 100 % nøjagtighed (målt, n=30). GPT-5.5 og Gemini 2.5 Flash er blokeret."
+        "why": "Kun den målte Fable 5-rute er aktiveret i 67router. GPT 5.6 understøttes strukturelt af pakken, men forbliver blokeret, indtil udbyderens kvittering foreligger; ikke-verificerede familier som Grok forbliver kun tekst."
       },
       "transport": {
         "label": "Transport",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Ret 'command not found'",
     "setupGuideCommandMissingDesc": "Sørg for, at CLI-kommandoen findes i PATH, åbn en ny terminalsession, og kør Opdater igen.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Hvis du vil pege Claude Code, Cursor, Codex eller en anden IDE mod 67router som proxy, skal du i stedet gå til CLI værktøjer. Denne side er til det modsatte — at bruge lokale CLI-binærfiler som eksekveringsmål, som 67router kan starte og sende anmodninger igennem.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Når en anmodning ankommer, kan 67router starte en lokal CLI-binærfil (f.eks. claude, codex, goose) og sende anmodningen igennem den. CLI'en behandler anmodningen med sine egne legitimationsoplysninger og returnerer resultatet via 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router starter lokal binærfil",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI Tools vs Agent Targets — Hvad er forskellen?",
     "comparisonCliToolsLabel": "CLI Tools side",

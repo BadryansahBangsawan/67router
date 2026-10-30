@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Agent/provayder promptundan sonra daxil edilən təlimatlar...",
     "chars": "{count} simvol",
     "thinkingBudgetTitle": "Düşünmə Büdcəsi",
-    "thinkingBudgetDesc": "Control AI reasoning token usage across all requests",
+    "thinkingBudgetDesc": "Sorğular upstream-ə göndərilməzdən əvvəl 67router-in müştərinin thinking/reasoning parametrlərini yenidən yazıb-yazmamasını idarə edir. Bu, sıxılma, prompt keşi və API açarı token limitlərindən ayrıdır.",
     "thinkingBudgetIndependenceHint": "Sıxma, yönləndirmə və token-limit xüsusiyyətləri hər bir rejimdə işləməyə davam edir. Auto \"avtomatik düşüncə göstərmək\" demək deyil - bu, müştəri düşüncə sahələrini çıxarır.",
     "passthrough": "Dəyişikliksiz ötürmə",
     "passthroughDesc": "Dəyişiklik yoxdur — düşünmə büdcəsini müştəri idarə edir",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Önizləmə",
-    "description": "Kontekstin şəkil kimi sıxılması. Sistem sorğusunu, alət sənədlərini və sıx tarixçəni Claude Fable 5-in mətn əvəzinə oxuduğu yığcam PNG səhifələri kimi render edir. Şəkil tokenləri simvollar əvəzinə ölçülərə görə hesablanır, buna görə də çevrilmiş blok təxminən 10× daha ucuz başa gəlir. Yalnız birbaşa Anthropic marşrutu.",
+    "description": "Kontekstin şəkil kimi sıxılması. Sistem sorğusunu, alət sənədlərini və sıx tarixçəni ölçülmüş Claude Fable 5 marşrutu üçün yığcam PNG səhifələri kimi render edir. Dərc edilmiş OmniGlyph paketi yerli GPT 5.6 transformatorlarını da təqdim edir, lakin provayder dəqiqliyi və oxuma təsdiqləri olana qədər 67router həmin marşrutları bağlı (fail-closed) saxlayır.",
     "economicsTitle": "İqtisadiyyat",
     "economics": {
       "fewerTokens": "çevrilmiş blokda daha az token",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Yalnız Fable 5 sıx səhifələri 100% dəqiqliklə oxuyur (ölçülmüş, n=30). GPT-5.5 və Gemini 2.5 Flash bloklanıb."
+        "why": "67router-da yalnız ölçülmüş Fable 5 marşrutu aktivdir. GPT 5.6 paket tərəfindən struktur baxımından dəstəklənir, lakin provayder təsdiqi gələnə qədər bloklanmış qalır; Grok kimi yoxlanılmamış ailələr yalnız mətn rejimində qalır."
       },
       "transport": {
         "label": "Ötürmə",

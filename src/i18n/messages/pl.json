@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instrukcje wstawiane po prompcie agenta/provider...",
     "chars": "{count} znaków",
     "thinkingBudgetTitle": "Budżet na thinking",
-    "thinkingBudgetDesc": "Kontrolowanie zużycia tokens reasoning AI we wszystkich żądaniach.",
+    "thinkingBudgetDesc": "Określa, czy 67router przepisuje parametry thinking/reasoning klienta, zanim żądania trafią do upstreamu. Jest to niezależne od kompresji, pamięci podręcznej promptów i limitów tokenów kluczy API.",
     "thinkingBudgetIndependenceHint": "Funkcje kompresji, routingu i limitu tokenów działają w każdym trybie. Auto nie oznacza „automatycznego pokazywania myślenia” — usuwa pola rozumowania klienta.",
     "passthrough": "Przekazywanie bez zmian",
     "passthroughDesc": "Brak zmian — klient kontroluje budżet na thinking.",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Podgląd",
-    "description": "Kompresja kontekstu do obrazu. Renderuje monit systemowy, dokumentację narzędzi i gęstą historię jako kompaktowe strony PNG, które Claude Fable 5 odczytuje zamiast tekstu. Tokeny obrazu są rozliczane na podstawie wymiarów, a nie znaków, dzięki czemu przekonwertowany blok kosztuje około 10-krotnie mniej. Tylko bezpośrednia trasa Anthropic.",
+    "description": "Kompresja kontekstu do obrazu. Renderuje monit systemowy, dokumentację narzędzi i gęstą historię jako kompaktowe strony PNG dla zmierzonej ścieżki Claude Fable 5. Opublikowany pakiet OmniGlyph udostępnia też natywne transformatory GPT 5.6, ale 67router utrzymuje te trasy w trybie zamkniętym (fail-closed), dopóki nie pojawią się dowody wierności dostawcy i potwierdzenia odczytu.",
     "economicsTitle": "Ekonomia",
     "economics": {
       "fewerTokens": "mniej tokenów w przekonwertowanym bloku",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Tylko Fable 5 odczytuje gęste strony ze 100% dokładnością (zmierzono, n=30). GPT-5.5 i Gemini 2.5 Flash są zablokowane."
+        "why": "W 67router włączona jest tylko zmierzona ścieżka Fable 5. GPT 5.6 jest strukturalnie obsługiwany przez pakiet, ale pozostaje zablokowany do czasu potwierdzenia od dostawcy; niezweryfikowane rodziny, takie jak Grok, pozostają wyłącznie tekstowe."
       },
       "transport": {
         "label": "Transport",

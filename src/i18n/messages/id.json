@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Konfigurasikan asisten coding AI agar dirutekan melalui 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Gunakan penyedia ini hanya untuk relay yang khusus melayani klien Claude Code. 67router menulis ulang setiap permintaan masuk ke format wire yang kompatibel dengan Claude Code agar relay tersebut menerimanya. Jika Anda hanya ingin menggunakan Claude Code CLI, atau tidak yakin apa arti jenis relay ini, gunakan penyedia biasa yang kompatibel dengan Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instruksi disisipkan setelah prompt agen/penyedia...",
     "chars": "{count} karakter",
     "thinkingBudgetTitle": "Memikirkan Anggaran",
-    "thinkingBudgetDesc": "Kontrol penggunaan token penalaran AI di semua permintaan",
+    "thinkingBudgetDesc": "Mengontrol apakah 67router menulis ulang parameter thinking/reasoning klien sebelum permintaan diteruskan ke upstream. Ini terpisah dari kompresi, cache prompt, dan batas token kunci API.",
     "thinkingBudgetIndependenceHint": "Fitur kompresi, pengalihan, dan batas-token tetap berfungsi di setiap mode. Auto tidak berarti “auto-show thinking” — itu menghapus bidang penalaran klien.",
     "passthrough": "Melewati",
     "passthroughDesc": "Tidak ada perubahan — klien mengontrol anggaran pemikiran",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Pratinjau",
-    "description": "Kompresi context-as-image. Merender prompt sistem, dokumentasi alat, dan riwayat padat sebagai halaman PNG ringkas yang dibaca Claude Fable 5 alih-alih teks. Token gambar ditagih berdasarkan dimensi alih-alih karakter, sehingga blok yang dikonversi berbiaya sekitar 10× lebih murah. Hanya rute langsung Anthropic.",
+    "description": "Kompresi context-as-image. Merender prompt sistem, dokumentasi alat, dan riwayat padat sebagai halaman PNG ringkas untuk jalur Claude Fable 5 yang telah diukur. Paket OmniGlyph yang dipublikasikan juga menyediakan transformer GPT 5.6 native, tetapi 67router menjaga rute tersebut tetap tertutup (fail-closed) hingga ada bukti fidelitas penyedia dan bukti pembacaan.",
     "economicsTitle": "Segi ekonomi",
     "economics": {
       "fewerTokens": "lebih sedikit token pada blok yang dikonversi",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Hanya Fable 5 yang membaca halaman padat dengan akurasi 100% (terukur, n=30). GPT-5.5 dan Gemini 2.5 Flash diblokir."
+        "why": "Hanya jalur Fable 5 yang telah diukur yang diaktifkan di 67router. GPT 5.6 didukung secara struktural oleh paket, tetapi tetap diblokir hingga ada bukti dari penyedianya; keluarga model yang belum diverifikasi seperti Grok tetap hanya teks."
       },
       "transport": {
         "label": "Transpor",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Perbaiki 'perintah tidak ditemukan'",
     "setupGuideCommandMissingDesc": "Pastikan perintah CLI tersedia di PATH, buka sesi terminal baru, lalu jalankan kembali Muat Ulang.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Jika Anda ingin mengarahkan Claude Code, Cursor, Codex, atau IDE apa pun ke 67router sebagai proxy, buka Alat CLI. Halaman ini untuk kebalikannya — menggunakan biner CLI lokal sebagai target eksekusi yang dapat dijalankan oleh 67router dan dilalui untuk merutekan permintaan.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Saat permintaan masuk, 67router dapat menjalankan biner CLI lokal (mis. claude, codex, goose) dan meneruskan permintaan melaluinya. CLI memproses permintaan menggunakan kredensialnya sendiri dan mengembalikan hasilnya melalui 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router menjalankan biner lokal",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Alat CLI vs Target Agen — Apa Bedanya?",
     "comparisonCliToolsLabel": "halaman Alat CLI",

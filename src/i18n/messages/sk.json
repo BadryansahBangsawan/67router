@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Nastavte AI asistentov programovania tak, aby smerovali cez 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Tohto poskytovateľa používajte len pre relaye, ktoré obsluhujú výhradne klientov Claude Code. 67router prepíše každú prichádzajúcu požiadavku do prenosového formátu kompatibilného s Claude Code, aby ju tieto relaye prijali. Ak chcete používať iba Claude Code CLI alebo si nie ste istí, čo tento typ relaya znamená, použite namiesto toho bežného poskytovateľa kompatibilného s Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Inštrukcie vložené po prompte agenta/poskytovateľa...",
     "chars": "{count} znakov",
     "thinkingBudgetTitle": "Myslenie na rozpočet",
-    "thinkingBudgetDesc": "Ovládajte používanie tokenu uvažovania AI vo všetkých požiadavkách",
+    "thinkingBudgetDesc": "Určuje, či 67router prepisuje parametre thinking/reasoning klienta predtým, ako požiadavky odídu upstream. Je to oddelené od kompresie, vyrovnávacej pamäte promptov a limitov tokenov kľúčov API.",
     "thinkingBudgetIndependenceHint": "Funkcie kompresie, smerovania a limitu tokenov fungujú vo všetkých režimoch. Auto neznamená „auto-zobrazenie myslenia“ — odstraňuje polia klientskeho uvažovania.",
     "passthrough": "Priamy prenos",
     "passthroughDesc": "Žiadne zmeny – klient kontroluje rozpočet",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Náhľad",
-    "description": "Kompresia kontextu na obrázok. Vykresľuje systémový prompt, dokumentáciu nástrojov a hustú históriu ako kompaktné PNG stránky, ktoré Claude Fable 5 číta namiesto textu. Obrázkové tokeny sa účtujú podľa rozmerov a nie podľa znakov, takže konvertovaný blok stojí približne 10× menej. Iba priama trasa Anthropic.",
+    "description": "Kompresia kontextu na obrázok. Vykresľuje systémový prompt, dokumentáciu nástrojov a hustú históriu ako kompaktné PNG stránky pre zmeranú trasu Claude Fable 5. Publikovaný balík OmniGlyph poskytuje aj natívne transformátory pre GPT 5.6, no 67router drží tieto trasy zatvorené (fail-closed), kým nebude overená vernosť poskytovateľa a nebudú k dispozícii doklady o čítaní.",
     "economicsTitle": "Ekonomika",
     "economics": {
       "fewerTokens": "menej tokenov v konvertovanom bloku",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Iba Fable 5 číta husté stránky so 100% presnosťou (namerané, n=30). GPT-5.5 a Gemini 2.5 Flash sú blokované."
+        "why": "V 67router je povolená iba zmeraná trasa Fable 5. GPT 5.6 je balíkom štrukturálne podporovaný, no zostáva blokovaný, kým nebude k dispozícii doklad od poskytovateľa; neoverené rodiny modelov, ako je Grok, zostávajú iba textové."
       },
       "transport": {
         "label": "Prenos",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "Opraviť chybu „príkaz sa nenašiel“",
     "setupGuideCommandMissingDesc": "Uistite sa, že príkaz CLI existuje v PATH, otvorte novú reláciu terminálu a znova spustite obnovenie.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Ak chcete nasmerovať Claude Code, Cursor, Codex alebo akékoľvek IDE na 67router ako proxy, prejdite namiesto toho do Nástroje CLI. Táto stránka slúži na opak — na používanie lokálnych binárnych súborov CLI ako cieľov spustenia, ktoré môže 67router spúšťať a smerovať cez ne požiadavky.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Keď príde požiadavka, 67router môže spustiť lokálny binárny súbor CLI (napr. claude, codex, goose) a odovzdať mu požiadavku. CLI spracuje požiadavku pomocou vlastných prihlasovacích údajov a vráti výsledok späť cez 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router spúšťa lokálny binárny súbor",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "Nástroje CLI verzus ciele agentov – aký je rozdiel?",
     "comparisonCliToolsLabel": "Stránka Nástroje CLI",

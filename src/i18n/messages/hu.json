@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "MI-alapú kódolási asszisztensek beállítása a 67router-en keresztüli útválasztáshoz",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Ezt a szolgáltatót csak olyan továbbítókhoz (relay) használja, amelyek kizárólag Claude Code klienseket szolgálnak ki. A 67router minden bejövő kérést a Claude Code-kompatibilis átviteli formátumra ír át, hogy ezek a továbbítók elfogadják. Ha csak a Claude Code CLI-t szeretné használni, vagy nem biztos benne, mit jelent ez a továbbítótípus, használjon helyette egy szokásos Anthropic-kompatibilis szolgáltatót.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Az ágens/szolgáltató promptja után beillesztett utasítások...",
     "chars": "{count} karakter",
     "thinkingBudgetTitle": "Gondolkodó költségvetés",
-    "thinkingBudgetDesc": "Az AI érvelési jogkivonat használatának szabályozása minden kérésnél",
+    "thinkingBudgetDesc": "Azt szabályozza, hogy a 67router átírja-e a kliens thinking/reasoning paramétereit, mielőtt a kérések továbbmennek az upstream felé. Ez független a tömörítéstől, a prompt-gyorsítótártól és az API-kulcsok tokenkorlátaitól.",
     "thinkingBudgetIndependenceHint": "A tömörítési, irányítási és token-korlátozási funkciók minden módban működnek. Az automatikus nem azt jelenti, hogy „automatikus megjelenítés gondolkodás” — eltávolítja az ügyfél érvelési mezőit.",
     "passthrough": "Átjárás",
     "passthroughDesc": "Nincs változás – az ügyfél irányítja a költségvetést",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Előnézet",
-    "description": "Kontextus-képként való tömörítés. A rendszerpromptot, az eszközdokumentációt és a sűrű előzményeket kompakt PNG-oldalakká rendereli, amelyeket a Claude Fable 5 szöveg helyett olvas be. A képtokenek számlázása a dimenziók, nem pedig a karakterek alapján történik, így az átalakított blokk körülbelül 10-szer kevesebbe kerül. Kizárólag közvetlen Anthropic útvonalon.",
+    "description": "Kontextus-képként való tömörítés. A rendszerpromptot, az eszközdokumentációt és a sűrű előzményeket kompakt PNG-oldalakká rendereli a mért Claude Fable 5 útvonalhoz. A közzétett OmniGlyph csomag natív GPT 5.6 transzformereket is biztosít, de a 67router ezeket az útvonalakat zárva tartja (fail-closed), amíg nem áll rendelkezésre igazolás a szolgáltató hűségéről és az olvasásról.",
     "economicsTitle": "A gazdaságosság",
     "economics": {
       "fewerTokens": "kevesebb token az átalakított blokkban",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Modell",
         "pass": "claude-fable-5",
-        "why": "Csak a Fable 5 olvassa a sűrű oldalakat 100%-os pontossággal (mért, n=30). A GPT-5.5 és a Gemini 2.5 Flash blokkolva van."
+        "why": "A 67router-ben csak a mért Fable 5 útvonal engedélyezett. A csomag szerkezetileg támogatja a GPT 5.6-ot, de az blokkolva marad, amíg meg nem érkezik a szolgáltatói igazolás; a nem ellenőrzött modellcsaládok, például a Grok, csak szövegesek maradnak."
       },
       "transport": {
         "label": "Átvitel",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "A „command not found” hiba javítása",
     "setupGuideCommandMissingDesc": "Győződjön meg arról, hogy a CLI-parancs megtalálható a PATH-ban, nyisson új terminál-munkamenetet, majd kattintson ismét a Frissítés gombra.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Ha a Claude Code-ot, a Cursort, a Codexet vagy bármely IDE-t proxyként a 67router-re szeretné irányítani, lépjen inkább a CLI eszközök oldalra. Ez az oldal a fordított esetre szolgál: helyi CLI-binárisok használatára végrehajtási célként, amelyeket a 67router elindíthat, és amelyeken keresztül kéréseket irányíthat.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Amikor kérés érkezik, a 67router elindíthat egy helyi CLI-binárist (pl. claude, codex, goose), és azon keresztül továbbíthatja a kérést. A CLI a saját hitelesítő adataival dolgozza fel a kérést, és az eredményt a 67router-en keresztül adja vissza.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · A 67router elindítja a helyi binárist",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI eszközök és ügynökcélok – mi a különbség?",
     "comparisonCliToolsLabel": "CLI Tools oldal",

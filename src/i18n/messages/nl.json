@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "Configureer AI-codeerassistenten om via 67router te routeren",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "Gebruik deze provider alleen voor relays die uitsluitend Claude Code-clients bedienen. 67router herschrijft elk binnenkomend verzoek naar het Claude Code-compatibele wire-formaat zodat die relays het accepteren. Als je alleen Claude Code CLI wilt gebruiken, of niet zeker weet wat dit relaytype betekent, gebruik dan een gewone Anthropic-compatibele provider.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "Instructies ingevoegd na agent/provider-prompt...",
     "chars": "{count} tekens",
     "thinkingBudgetTitle": "Denkbudget",
-    "thinkingBudgetDesc": "Beheer het gebruik van AI-redeneringstokens voor alle verzoeken",
+    "thinkingBudgetDesc": "Bepaalt of 67router de thinking/reasoning-parameters van de client herschrijft voordat verzoeken naar upstream gaan. Dit staat los van compressie, promptcache en tokenlimieten per API-sleutel.",
     "thinkingBudgetIndependenceHint": "Compressie-, routerings- en tokenlimietfuncties blijven in elke modus werken. Auto betekent niet “auto-show denken” — het verwijdert de redeneervelden van de client.",
     "passthrough": "Doorvoer",
     "passthroughDesc": "Geen wijzigingen – de klant bepaalt het denkbudget",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "Voorbeeld",
-    "description": "Context-als-afbeelding-compressie. Rendert de systeemprompt, tooldocumentatie en dichte geschiedenis als compacte PNG-pagina's die Claude Fable 5 leest in plaats van tekst. Afbeeldingstokens worden gefactureerd op basis van afmetingen in plaats van tekens, waardoor het geconverteerde blok ongeveer 10× minder kost. Alleen directe Anthropic-route.",
+    "description": "Context-als-afbeelding-compressie. Rendert de systeemprompt, tooldocumentatie en dichte geschiedenis als compacte PNG-pagina's voor het gemeten Claude Fable 5-pad. Het gepubliceerde OmniGlyph-pakket biedt ook native GPT 5.6-transformers, maar 67router houdt die routes gesloten (fail-closed) totdat er bewijs is van providergetrouwheid en leesbewijzen.",
     "economicsTitle": "De economische aspecten",
     "economics": {
       "fewerTokens": "minder tokens op het geconverteerde blok",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "Model",
         "pass": "claude-fable-5",
-        "why": "Alleen Fable 5 leest dichte pagina's met 100% nauwkeurigheid (gemeten, n=30). GPT-5.5 en Gemini 2.5 Flash zijn geblokkeerd."
+        "why": "Alleen het gemeten Fable 5-pad is ingeschakeld in 67router. GPT 5.6 wordt structureel ondersteund door het pakket, maar blijft geblokkeerd tot het providerbewijs er is; niet-geverifieerde families zoals Grok blijven alleen tekst."
       },
       "transport": {
         "label": "Transport",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "'command not found' oplossen",
     "setupGuideCommandMissingDesc": "Controleer of de CLI-opdracht in PATH staat, open een nieuwe terminalsessie en voer Vernieuwen opnieuw uit.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "Wil je Claude Code, Cursor, Codex of een andere IDE via 67router als proxy laten lopen, ga dan naar CLI-hulpmiddelen. Deze pagina is voor het omgekeerde: lokale CLI-binaire bestanden gebruiken als uitvoeringsdoelen die 67router kan starten en waarlangs het verzoeken kan routeren.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "Wanneer er een verzoek binnenkomt, kan 67router een lokaal CLI-binair bestand starten (bijv. claude, codex, goose) en het verzoek daardoorheen leiden. De CLI verwerkt het verzoek met zijn eigen inloggegevens en stuurt het resultaat terug via 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router start lokaal binair bestand",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI-tools versus agentdoelen: wat is het verschil?",
     "comparisonCliToolsLabel": "CLI Tools-pagina",

@@ -9349,7 +9349,7 @@
   },
   "omniglyph": {
     "preview": "Xem trước",
-    "description": "Nén ngữ cảnh thành hình ảnh. Kết xuất prompt hệ thống, tài liệu công cụ và lịch sử dày đặc thành các trang PNG gọn nhẹ để Claude Fable 5 đọc thay cho văn bản. Token hình ảnh được tính phí theo kích thước thay vì số ký tự, nên khối đã chuyển đổi có chi phí thấp hơn khoảng 10 lần. Chỉ dùng định tuyến Anthropic trực tiếp.",
+    "description": "Nén ngữ cảnh thành hình ảnh. Kết xuất prompt hệ thống, tài liệu công cụ và lịch sử dày đặc thành các trang PNG gọn nhẹ cho đường dẫn Claude Fable 5 đã được đo lường. Gói OmniGlyph đã phát hành cũng cung cấp các bộ chuyển đổi GPT 5.6 gốc, nhưng 67router giữ các tuyến đó ở trạng thái đóng (fail-closed) cho đến khi có bằng chứng về độ trung thực của nhà cung cấp và biên nhận đọc.",
     "economicsTitle": "Hiệu quả kinh tế",
     "economics": {
       "fewerTokens": "ít token hơn cho khối đã chuyển đổi",
@@ -9369,7 +9369,7 @@
       "model": {
         "label": "Mô hình",
         "pass": "claude-fable-5",
-        "why": "Chỉ Fable 5 đọc chính xác 100% các trang dày đặc (đã đo, n=30). GPT-5.5 và Gemini 2.5 Flash bị chặn."
+        "why": "Chỉ đường dẫn Fable 5 đã được đo lường mới được bật trong 67router. GPT 5.6 được gói hỗ trợ về mặt cấu trúc nhưng vẫn bị chặn cho đến khi có biên nhận từ nhà cung cấp; các dòng mô hình chưa được xác minh như Grok vẫn chỉ dùng văn bản."
       },
       "transport": {
         "label": "Đường truyền",

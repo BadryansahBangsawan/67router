@@ -3148,7 +3148,7 @@
       }
     },
     "autoConfiguredTab": "Auto Configured Tab",
-    "toolCategoriesDesc": "Tool Categories Desc",
+    "toolCategoriesDesc": "הגדירו עוזרי קוד מבוססי AI לניתוב דרך 67router",
     "allToolsTab": "All Tools Tab",
     "guidedClientsTab": "Guided Clients Tab",
     "mitmClientsTab": "Mitm Clients Tab",
@@ -6101,7 +6101,7 @@
     "ccCompatibleNamePlaceholder": "Cc Compatible Name Placeholder",
     "ccCompatiblePrefixHint": "Cc Compatible Prefix Hint",
     "ccCompatiblePrefixPlaceholder": "Cc Compatible Prefix Placeholder",
-    "ccCompatibleValidationHint": "Cc Compatible Validation Hint",
+    "ccCompatibleValidationHint": "השתמשו בספק זה רק עבור ממסרים (relays) שמשרתים באופן בלעדי לקוחות Claude Code. 67router משכתב כל בקשה נכנסת לפורמט התעבורה התואם ל-Claude Code כדי שהממסרים האלה יקבלו אותה. אם אתם רוצים להשתמש רק ב-Claude Code CLI, או שאינכם בטוחים מה המשמעות של סוג ממסר זה, השתמשו במקום זאת בספק רגיל התואם ל-Anthropic.",
     "claudeExtraUsageShort": "Claude Extra Usage Short",
     "claudeExtraUsageToggleTitle": "Claude Extra Usage Toggle Title",
     "codex5hToggleTitle": "Codex5H Toggle Title",
@@ -7350,7 +7350,7 @@
     "afterPromptPlaceholder": "הנחיות שמוכנסות אחרי פרומפט הסוכן/הספק...",
     "chars": "{count} תווים",
     "thinkingBudgetTitle": "חשיבה תקציב",
-    "thinkingBudgetDesc": "שליטה בשימוש באסימונים של AI בכל הבקשות",
+    "thinkingBudgetDesc": "קובע אם 67router משכתב את פרמטרי ה-thinking/reasoning של הלקוח לפני שהבקשות נשלחות ל-upstream. זה נפרד מדחיסה, ממטמון הנחיות ומהגבלות הטוקנים של מפתחות API.",
     "thinkingBudgetIndependenceHint": "תכונות דחיסה, ניתוב ומגבלת טוקנים ממשיכות לפעול בכל מצב. אוטומטי לא אומר \"הצגת חשיבה אוטומטית\" — זה מסיר את שדות ההיגיון של הלקוח.",
     "passthrough": "מעבר",
     "passthroughDesc": "ללא שינויים - הלקוח שולט בתקציב החשיבה",
@@ -9321,7 +9321,7 @@
   },
   "omniglyph": {
     "preview": "תצוגה מקדימה",
-    "description": "דחיסת הקשר-כתמונה. מרנדרת את הנחיית המערכת, תיעוד הכלים והיסטוריה צפופה כדפי PNG קומפקטיים ש-Claude Fable 5 קורא במקום טקסט. החיוב על טוקנים של תמונה מתבצע לפי מימדים ולא לפי תווים, כך שהבלוק המומר עולה כפי 10 פחות. נתיב ישיר של Anthropic בלבד.",
+    "description": "דחיסת הקשר-כתמונה. מרנדרת את הנחיית המערכת, תיעוד הכלים והיסטוריה צפופה כדפי PNG קומפקטיים עבור נתיב Claude Fable 5 שנמדד. חבילת OmniGlyph שפורסמה חושפת גם ממירים מקוריים ל-GPT 5.6, אך 67router משאיר את הנתיבים האלה חסומים (fail-closed) עד שיהיו הוכחות לנאמנות הספק ואישורי קריאה.",
     "economicsTitle": "ההיבט הכלכלי",
     "economics": {
       "fewerTokens": "פחות טוקנים בבלוק המומר",
@@ -9341,7 +9341,7 @@
       "model": {
         "label": "מודל",
         "pass": "claude-fable-5",
-        "why": "רק Fable 5 קורא דפים צפופים בדיוק של 100% (נמדד, n=30). GPT-5.5 ו-Gemini 2.5 Flash חסומים."
+        "why": "ב-67router מופעל רק נתיב Fable 5 שנמדד. GPT 5.6 נתמך מבנית על ידי החבילה, אך נשאר חסום עד שתתקבל הוכחה מהספק; משפחות שלא אומתו, כמו Grok, נשארות בטקסט בלבד."
       },
       "transport": {
         "label": "תעבורה",
@@ -10956,7 +10956,7 @@
     "setupGuideCommandMissingTitle": "תיקון השגיאה 'command not found'",
     "setupGuideCommandMissingDesc": "ודאו שפקודת ה-CLI קיימת ב-PATH, פתחו סשן מסוף חדש והפעילו שוב את הרענון.",
     "cliToolsRedirectTitle": "Cli Tools Redirect Title",
-    "cliToolsRedirectDesc": "Cli Tools Redirect Desc",
+    "cliToolsRedirectDesc": "אם אתם רוצים להפנות את Claude Code, Cursor, Codex או כל IDE אחר אל 67router כפרוקסי, עברו במקום זאת אל כלי CLI. דף זה מיועד למצב ההפוך — שימוש בקבצים בינאריים מקומיים של CLI כיעדי הרצה ש-67router יכול להפעיל ולנתב דרכם בקשות.",
     "spawnArgsPlaceholder": "Spawn Args Placeholder",
     "binaryNamePlaceholder": "Binary Name Placeholder",
     "versionCommandPlaceholder": "Version Command Placeholder",
@@ -10964,9 +10964,9 @@
     "flowLocalBinary": "Flow Local Binary",
     "flowOmniRoute": "Flow 67router Route",
     "agentNamePlaceholder": "Agent Name Placeholder",
-    "architectureDescription": "Architecture Description",
+    "architectureDescription": "כאשר מגיעה בקשה, 67router יכול להפעיל קובץ בינארי מקומי של CLI (למשל claude, codex, goose) ולהעביר דרכו את הבקשה. ה-CLI מעבד את הבקשה באמצעות פרטי ההתחברות שלו ומחזיר את התוצאה דרך 67router.",
     "flowExecute": "Flow Execute",
-    "flowSpawn": "Flow Spawn",
+    "flowSpawn": "2 · 67router מפעיל קובץ בינארי מקומי",
     "cliToolsRedirectCta": "Cli Tools Redirect Cta",
     "comparisonTitle": "CLI Tools לעומת יעדי סוכן - מה ההבדל?",
     "comparisonCliToolsLabel": "דף כלי CLI",
