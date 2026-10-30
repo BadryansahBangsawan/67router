@@ -9,6 +9,7 @@ import { PageHeader, SectionHeader } from "@omniroute/ui-kit/page-header";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import Icon from "@/shared/components/Icon";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import Textarea from "@/shared/components/Textarea";
 import {
   buildEngineDetailUpdate,
@@ -89,17 +90,6 @@ const ENGINE_ICON_ALIASES: Record<string, string> = {
 };
 
 // ── Sub-components ────────────────────────────────────────────────────────
-
-function StatCard({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex min-w-0 flex-col gap-1 px-5 py-4">
-      <span className="truncate text-[13px] text-text-muted">{label}</span>
-      <span className="truncate text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
-        {value}
-      </span>
-    </div>
-  );
-}
 
 function renderDiffSegment(
   segment: PreviewDiffSegment,
@@ -372,7 +362,6 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
   const persistable = Boolean(SETTINGS_SUBOBJECT[engineId]);
 
   const engineEnabled = engineSettings?.enabled;
-  const hasRuns = Boolean(analytics && analytics.runs > 0);
 
   return (
     <div className="flex max-w-6xl flex-col gap-6 p-6">
@@ -430,31 +419,32 @@ export function EngineConfigPage({ engineId }: { engineId: string }) {
         />
       )}
 
-      {/* ── 7-day stats: one KPI strip ── */}
-      <section aria-label={t("last7Days")} className="flex flex-col gap-2">
-        <h2 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
-          {t("last7Days")}
-        </h2>
-        {hasRuns && analytics ? (
-          <div className="overflow-hidden rounded-card border border-border bg-surface">
-            <div className="-ml-px -mt-px grid grid-cols-1 sm:grid-cols-3 [&>*]:border-l [&>*]:border-t [&>*]:border-border">
-              <StatCard label={t("runs")} value={analytics.runs.toLocaleString(locale)} />
-              <StatCard
+      {/* ── 7-day stats: one KPI strip. Nothing while the read is pending or failed; "No data
+           yet" only for a successful read with no runs. ── */}
+      {analytics && (
+        <section aria-label={t("last7Days")} className="flex flex-col gap-2">
+          <h2 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+            {t("last7Days")}
+          </h2>
+          {analytics.runs > 0 ? (
+            <KpiStrip columns={3}>
+              <KpiCell label={t("runs")} value={analytics.runs.toLocaleString(locale)} />
+              <KpiCell
                 label={t("tokensSaved")}
                 value={analytics.tokensSaved.toLocaleString(locale)}
               />
-              <StatCard
+              <KpiCell
                 label={t("averageSavings")}
                 value={`${analytics.avgSavingsPercent.toFixed(1)}%`}
               />
-            </div>
-          </div>
-        ) : (
-          <p className="rounded-card border border-border bg-surface px-5 py-4 text-sm text-text-muted">
-            {t("noDataYet")}
-          </p>
-        )}
-      </section>
+            </KpiStrip>
+          ) : (
+            <p className="rounded-card border border-border bg-surface px-5 py-4 text-sm text-text-muted">
+              {t("noDataYet")}
+            </p>
+          )}
+        </section>
+      )}
 
       {/* ── Panel pointer (on/off + level live there now) ── */}
       <Alert

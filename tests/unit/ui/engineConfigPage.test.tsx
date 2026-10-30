@@ -435,6 +435,67 @@ describe("EngineConfigPage", () => {
     expect(hasEmptyState).toBe(true);
   });
 
+  it("shows no empty state when the 7-day analytics request fails", async () => {
+    setupFetchMock();
+    const mocked = vi.mocked(globalThis.fetch);
+    const base = mocked.getMockImplementation()!;
+    mocked.mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) =>
+      input.toString().includes("/api/context/analytics/engine")
+        ? new Response("{}", { status: 500 })
+        : base(input, init)
+    );
+    const { EngineConfigPage } =
+      await import("../../../src/shared/components/compression/EngineConfigPage");
+
+    let container!: HTMLElement;
+    await act(async () => {
+      container = mountInContainer(<EngineConfigPage engineId="headroom" />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(container.textContent).toContain("Headroom");
+    // A failed read is not "no runs": the strip renders nothing.
+    expect(container.textContent).not.toContain("No data");
+    expect(container.textContent).not.toContain("Sem dados");
+  });
+
+  it("renders 7-day runs in the shared KPI strip", async () => {
+    setupFetchMock();
+    const mocked = vi.mocked(globalThis.fetch);
+    const base = mocked.getMockImplementation()!;
+    mocked.mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) =>
+      input.toString().includes("/api/context/analytics/engine")
+        ? new Response(
+            JSON.stringify({
+              ...ANALYTICS_PAYLOAD,
+              runs: 12,
+              tokensSaved: 3400,
+              avgSavingsPercent: 41.25,
+            }),
+            { status: 200, headers: { "Content-Type": "application/json" } }
+          )
+        : base(input, init)
+    );
+    const { EngineConfigPage } =
+      await import("../../../src/shared/components/compression/EngineConfigPage");
+
+    let container!: HTMLElement;
+    await act(async () => {
+      container = mountInContainer(<EngineConfigPage engineId="headroom" />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(container.textContent).toContain("12");
+    expect(container.textContent).toContain("41.3%");
+    expect(container.textContent).not.toContain("No data");
+    // KpiStrip's grid (one card, hairline-divided cells).
+    expect(container.querySelector(".rounded-card > .-ml-px.-mt-px.grid")).not.toBeNull();
+  });
+
   it("points to the Compression Settings panel for enabling the layer", async () => {
     setupFetchMock();
     const { EngineConfigPage } =
