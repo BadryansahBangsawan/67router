@@ -78,9 +78,7 @@ export function ModelTable({ byModel, summary, displayMode = "compact" }: ModelT
   return (
     <Card className="overflow-hidden">
       <div className="p-4 border-b border-border">
-        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          {t("chartModelBreakdown")}
-        </h3>
+        <h3 className="text-sm font-semibold text-text-main">{t("chartModelBreakdown")}</h3>
       </div>
       <Table
         containerClassName="rounded-none border-0"

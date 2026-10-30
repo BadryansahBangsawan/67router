@@ -324,10 +324,10 @@ export default function ComboDefaultsTab() {
   return (
     <Card>
       <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
           <Icon name="tune" size={20} />
         </div>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-base font-semibold tracking-[-0.01em]">
           {translateOrFallback(t, "comboDefaultsTitle", "Default Routing & Combo Settings")}
         </h3>
         <span className="text-xs text-text-muted ml-auto">{t("globalComboConfig")}</span>

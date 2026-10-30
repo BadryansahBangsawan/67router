@@ -217,11 +217,11 @@ export default function ModelsDevSyncTab() {
     return (
       <Card>
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="sync" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("modelsDevTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("modelsDevTitle")}</h3>
             <p className="text-sm text-text-muted">{t("modelsDevDesc")}</p>
           </div>
         </div>
@@ -248,11 +248,11 @@ export default function ModelsDevSyncTab() {
       {/* Main sync card */}
       <Card>
         <div className="flex items-center gap-3 mb-5">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="database" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("modelsDevTitle")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("modelsDevTitle")}</h3>
             <p className="text-sm text-text-muted">{t("modelsDevDesc")}</p>
           </div>
           {feedback && (
@@ -328,11 +328,11 @@ export default function ModelsDevSyncTab() {
       {status && (status.providerCount > 0 || status.modelCount > 0) && (
         <Card>
           <div className="flex items-center gap-3 mb-5">
-            <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+            <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
               <Icon name="bar_chart" size={20} />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{t("modelsDevStats")}</h3>
+              <h3 className="text-base font-semibold tracking-[-0.01em]">{t("modelsDevStats")}</h3>
               <p className="text-sm text-text-muted">{t("modelsDevStatsDesc")}</p>
             </div>
           </div>
@@ -375,11 +375,11 @@ export default function ModelsDevSyncTab() {
       {/* Info card */}
       <Card>
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+          <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
             <Icon name="info" size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">{t("modelsDevInfo")}</h3>
+            <h3 className="text-base font-semibold tracking-[-0.01em]">{t("modelsDevInfo")}</h3>
           </div>
         </div>
         <div className="text-sm text-text-muted space-y-2">

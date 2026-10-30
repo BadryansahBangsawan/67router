@@ -419,14 +419,13 @@ export default function ProxyLogger() {
               onClick={() => setActiveFilter(activeFilter === f.key ? "all" : f.key)}
               className={cn(
                 "h-7 min-h-7 rounded-full px-3 text-xs",
+                // 67router: neutral chips; error / timeout keep their status ink.
                 activeFilter === f.key
                   ? f.key === "error"
-                    ? "bg-error/20 text-error border-error/40"
-                    : f.key === "ok"
-                      ? "bg-success/20 text-success border-success/40"
-                      : f.key === "timeout"
-                        ? "bg-warning/20 text-warning border-warning/40"
-                        : "bg-primary text-accent-foreground border-primary"
+                    ? "bg-error-bg text-error border-error/40"
+                    : f.key === "timeout"
+                      ? "bg-warning-bg text-warning border-warning/40"
+                      : "bg-surface-2 text-text-main border-border-strong"
                   : "text-text-muted"
               )}
             >
@@ -439,9 +438,7 @@ export default function ProxyLogger() {
             <span aria-hidden="true" className="mx-1 h-5 w-px bg-border" />
           )}
 
-          <span className="mr-1 text-[10px] uppercase tracking-wider text-text-muted">
-            {t("filterSource")}
-          </span>
+          <span className="mr-1 text-xs text-text-muted">{t("filterSource")}</span>
           {sourceFilters.map((f) => (
             <Button
               key={`source-${f.key}`}
@@ -452,7 +449,7 @@ export default function ProxyLogger() {
               className={cn(
                 "h-7 min-h-7 rounded-full px-3 text-xs",
                 sourceFilter === f.key
-                  ? "bg-primary text-accent-foreground border-primary"
+                  ? "bg-surface-2 text-text-main border-border-strong"
                   : "text-text-muted"
               )}
             >
@@ -465,12 +462,8 @@ export default function ProxyLogger() {
           )}
 
           {uniqueProviders.map((p) => {
-            // Provider identity colours (brand palette in constants/colors), not status tones.
-            const pc = PROVIDER_COLORS[p] || {
-              bg: "#374151",
-              text: "#fff",
-              label: p.toUpperCase(),
-            };
+            // Provider label from constants/colors; rendered as a neutral chip (67router).
+            const pc = PROVIDER_COLORS[p] || { label: p.toUpperCase() };
             const isActive = selectedProvider === p;
             return (
               <Button
@@ -480,15 +473,11 @@ export default function ProxyLogger() {
                 aria-pressed={isActive}
                 onClick={() => setSelectedProvider(isActive ? "" : p)}
                 className={cn(
-                  "h-7 min-h-7 rounded-full border px-3 text-xs font-bold uppercase",
+                  "h-7 min-h-7 rounded-full border px-3 text-xs font-medium",
                   isActive
-                    ? "border-border-strong ring-1 ring-border-strong"
-                    : "border-transparent opacity-70 hover:opacity-100"
+                    ? "border-border-strong bg-surface-2 text-text-main"
+                    : "border-border text-text-muted hover:text-text-main"
                 )}
-                style={{
-                  backgroundColor: isActive ? pc.bg : `${pc.bg}33`,
-                  color: isActive ? pc.text : pc.bg,
-                }}
               >
                 {pc.label}
               </Button>
@@ -542,19 +531,14 @@ export default function ProxyLogger() {
             </TableHeader>
             <TableBody>
               {sortedLogs.map((log) => {
-                // Proxy type / level keep their categorical palettes (constants/colors).
-                const typeColor = TYPE_COLORS[log.proxy?.type] || {
-                  bg: "#6B7280",
-                  text: "#fff",
-                  label: log.proxy?.type || "-",
-                };
+                // Proxy type / level / provider: labels from constants/colors, rendered as neutral
+                // soft badges (67router reserves colour for status).
+                const typeColor = TYPE_COLORS[log.proxy?.type] || { label: log.proxy?.type || "-" };
                 const levelColor = LEVEL_COLORS[log.level] || LEVEL_COLORS.direct;
                 const resolvedProviderLabel =
                   getProviderDisplayLabel(log.provider, providerNodes) ||
                   (log.provider || "-").toUpperCase();
                 const providerColor = PROVIDER_COLORS[log.provider] || {
-                  bg: "#374151",
-                  text: "#fff",
                   label: resolvedProviderLabel,
                 };
                 const isError = log.status === "error" || log.status === "timeout";
@@ -602,20 +586,14 @@ export default function ProxyLogger() {
                     )}
                     {visibleColumns.type && (
                       <TableCell className="px-3 py-2">
-                        <span
-                          className="inline-block rounded px-2 py-0.5 text-[9px] font-bold uppercase"
-                          style={{ backgroundColor: typeColor.bg, color: typeColor.text }}
-                        >
+                        <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11px] font-medium text-text-main">
                           {typeColor.label}
                         </span>
                       </TableCell>
                     )}
                     {visibleColumns.level && (
                       <TableCell className="px-3 py-2">
-                        <span
-                          className="inline-block rounded px-2 py-0.5 text-[9px] font-bold uppercase"
-                          style={{ backgroundColor: levelColor.bg, color: levelColor.text }}
-                        >
+                        <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11px] font-medium text-text-main">
                           {levelColor.label}
                         </span>
                       </TableCell>
@@ -623,13 +601,7 @@ export default function ProxyLogger() {
                     {visibleColumns.provider && (
                       <TableCell className="px-3 py-2">
                         {log.provider ? (
-                          <span
-                            className="inline-block rounded px-2 py-0.5 text-[9px] font-bold uppercase"
-                            style={{
-                              backgroundColor: providerColor.bg,
-                              color: providerColor.text,
-                            }}
-                          >
+                          <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11px] font-medium text-text-main">
                             {providerColor.label}
                           </span>
                         ) : (

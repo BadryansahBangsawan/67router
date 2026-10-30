@@ -91,11 +91,11 @@ export default function ThinkingBudgetTab() {
   return (
     <Card>
       <div className="flex items-center gap-3 mb-5">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
+        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
           <Icon name="psychology" size={20} />
         </div>
         <div>
-          <h3 className="text-lg font-semibold">{t("thinkingBudgetTitle")}</h3>
+          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("thinkingBudgetTitle")}</h3>
           <p className="text-sm text-text-muted">{t("thinkingBudgetDesc")}</p>
           <p className="text-xs text-text-muted mt-1 leading-relaxed">
             {t("thinkingBudgetIndependenceHint")}

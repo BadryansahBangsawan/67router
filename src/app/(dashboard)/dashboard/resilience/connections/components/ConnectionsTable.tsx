@@ -153,7 +153,11 @@ export default function ConnectionsTable({
               return <StatusWithAvailability badge={badge} connection={r} />;
             }
             case "id":
-              return <span>{r.id.length > 8 ? `${r.id.slice(0, 8)}...` : r.id}</span>;
+              return (
+                <span className="font-mono text-xs">
+                  {r.id.length > 8 ? `${r.id.slice(0, 8)}...` : r.id}
+                </span>
+              );
             case "cooldown":
               // memoized: isolates the 1s tick to a single cell
               return <CountdownCell connection={r} receivedAt={receivedAt} />;
