@@ -108,14 +108,6 @@ export const v1OcrSchema = z
   })
   .catchall(z.unknown());
 
-export const v1RerankSchema = z
-  .object({
-    model: modelIdSchema,
-    query: nonEmptyStringSchema,
-    documents: z.array(z.unknown()).min(1, "documents must contain at least one item"),
-  })
-  .catchall(z.unknown());
-
 // POST /v1/classify — Jina zero/few-shot classification (api.jina.ai).
 export const v1ClassifySchema = z
   .object({

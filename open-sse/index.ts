@@ -112,8 +112,7 @@ export {
   flushThinkBuffer,
 } from "./utils/thinkTagParser.ts";
 
-// Rerank
-export { handleRerank } from "./handlers/rerank.ts";
+// Rerank (registry only; the /v1/rerank endpoint was removed)
 export {
   RERANK_PROVIDERS,
   getRerankProvider,

@@ -32,7 +32,6 @@ import os from "node:os";
 const repoRoot = path.resolve(fileURLToPath(new URL("../../", import.meta.url)));
 
 const ROUTES_REQUIRING_QUOTA_PREFLIGHT = [
-  "src/app/api/v1/rerank/route.ts",
   "src/app/api/v1/images/generations/route.ts",
   "src/app/api/v1/images/edits/route.ts",
   "src/app/api/v1/audio/transcriptions/route.ts",

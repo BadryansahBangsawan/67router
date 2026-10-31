@@ -70,15 +70,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     null,
     2
   ),
-  "/api/v1/rerank": JSON.stringify(
-    {
-      model: "cohere/rerank-v3.5",
-      query: "best ai gateway",
-      documents: ["Document 1", "Document 2"],
-    },
-    null,
-    2
-  ),
   "/api/v1/audio/transcriptions": "",
   "/api/v1/audio/speech": JSON.stringify(
     { model: "openai/tts-1", input: "Hello world", voice: "alloy" },

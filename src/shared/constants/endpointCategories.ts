@@ -61,12 +61,6 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     prefixes: ["/v1/music"],
   },
   {
-    id: "rerank",
-    label: "Rerank",
-    description: "Document reranking",
-    prefixes: ["/v1/rerank"],
-  },
-  {
     id: "models",
     label: "Models",
     description: "List available models (read-only)",

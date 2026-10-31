@@ -3,7 +3,6 @@ import { prepareConnectionModelTest } from "@/lib/providerModels/prepareConnecti
 import { POST as postChatCompletion } from "@/app/api/v1/chat/completions/route";
 import { POST as postAudioSpeech } from "@/app/api/v1/audio/speech/route";
 import { POST as postAudioTranscription } from "@/app/api/v1/audio/transcriptions/route";
-import { POST as postRerank } from "@/app/api/v1/rerank/route";
 import { POST as postResponses } from "@/app/api/v1/responses/route";
 import {
   buildComboTestPrompt,
@@ -219,26 +218,6 @@ export function buildInternalResponsesRequest(
       // Same in-process authentication and memory opt-out as buildInternalChatRequest.
       Authorization: `Bearer ${resolveSelfLoopBearer()}`,
       "x-omniroute-no-memory": "true",
-      "X-Internal-Test": "combo-health-check",
-      "X-OmniRoute-No-Cache": "true",
-      "X-OmniRoute-Compression": "off",
-      "X-Request-Id": `model-test-${randomUUID()}`,
-      ...(connectionId ? { "X-OmniRoute-Connection": connectionId } : {}),
-    },
-    body: JSON.stringify(testBody),
-    signal,
-  });
-}
-
-export function buildInternalRerankRequest(
-  testBody: Record<string, unknown>,
-  signal: AbortSignal,
-  connectionId?: string
-) {
-  return new Request(`${INTERNAL_ORIGIN}/v1/rerank`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
       "X-Internal-Test": "combo-health-check",
       "X-OmniRoute-No-Cache": "true",
       "X-OmniRoute-Compression": "off",
@@ -618,20 +597,21 @@ export async function runSingleModelTest(
     };
   }
 
-  // Embedding models stay classified so they are never dispatched as chat, but there is
-  // no /v1/embeddings endpoint to exercise them any more.
-  if (isEmbedding) {
+  // Embedding and rerank models stay classified so they are never dispatched as chat, but
+  // there is no /v1/embeddings or /v1/rerank endpoint to exercise them any more.
+  if (isEmbedding || isRerank) {
+    const kind = isEmbedding ? "embedding" : "rerank";
     return {
       modelId: fullModelStr,
       status: "error",
       latencyMs: 0,
       httpStatus: 422,
       skipped: true,
-      error: "Skipped: embedding models cannot be tested (the embeddings endpoint was removed)",
+      error: `Skipped: ${kind} models cannot be tested (the ${kind === "embedding" ? "embeddings" : "rerank"} endpoint was removed)`,
     };
   }
 
-  if (options.prompt !== undefined && (isRerank || isAudioTranscription || isAudioSpeech)) {
+  if (options.prompt !== undefined && (isAudioTranscription || isAudioSpeech)) {
     return {
       modelId: fullModelStr,
       status: "error",
@@ -641,35 +621,24 @@ export async function runSingleModelTest(
     };
   }
 
-  const testBody = isRerank
-    ? {
-        model: fullModelStr,
-        query: "What is OmniRoute?",
-        documents: [
-          "OmniRoute routes AI requests across configured providers.",
-          "This document is unrelated to the test query.",
-        ],
-        top_n: 1,
-        return_documents: false,
-      }
-    : isAudioTranscription
-      ? { model: fullModelStr }
-      : isResponses
-        ? {
-            model: fullModelStr,
-            // Responses takes `input`, not `messages`.
-            input: buildComboTestPrompt(),
-            max_output_tokens: RESPONSES_TEST_MAX_OUTPUT_TOKENS,
-            // Non-streaming on purpose: the SSE reader below understands Chat
-            // Completions deltas and the `output_text`/`output[]` shapes, but not
-            // Responses stream events (`response.output_text.delta`), so a
-            // streamed answer would read as empty — the very failure being fixed.
-            stream: false,
-          }
-        : buildComboTestRequestBody(fullModelStr, false, {
-            stream: streamChat,
-            maxTokens: streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
-          });
+  const testBody = isAudioTranscription
+    ? { model: fullModelStr }
+    : isResponses
+      ? {
+          model: fullModelStr,
+          // Responses takes `input`, not `messages`.
+          input: buildComboTestPrompt(),
+          max_output_tokens: RESPONSES_TEST_MAX_OUTPUT_TOKENS,
+          // Non-streaming on purpose: the SSE reader below understands Chat
+          // Completions deltas and the `output_text`/`output[]` shapes, but not
+          // Responses stream events (`response.output_text.delta`), so a
+          // streamed answer would read as empty — the very failure being fixed.
+          stream: false,
+        }
+      : buildComboTestRequestBody(fullModelStr, false, {
+          stream: streamChat,
+          maxTokens: streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
+        });
 
   if (options.prompt !== undefined && "messages" in testBody) {
     testBody.messages = [{ role: "user", content: options.prompt }];
@@ -686,9 +655,6 @@ export async function runSingleModelTest(
   }, effectiveTimeoutMs);
 
   const runInner = async (signal: AbortSignal): Promise<Response> => {
-    if (isRerank) {
-      return postRerank(buildInternalRerankRequest(testBody, signal, connectionId));
-    }
     if (isAudioSpeech) {
       return postAudioSpeech(buildInternalAudioSpeechRequest(fullModelStr, signal, connectionId));
     }
@@ -853,15 +819,6 @@ export async function runSingleModelTest(
         httpStatus: 504,
         error: `No model output within ${Math.round(effectiveTimeoutMs / 1000)}s`,
         isTimeout: true,
-      };
-    }
-    if (isRerank) {
-      return {
-        modelId: fullModelStr,
-        status: "ok",
-        latencyMs,
-        httpStatus: 200,
-        responseText: "[Rerank completed successfully]",
       };
     }
     if (outputState === "empty") {

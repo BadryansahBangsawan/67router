@@ -1,6 +1,6 @@
 /**
  * The per-key dollar budget gates every endpoint at the policy phase, but only
- * chat and web search ever charged it. Image, speech, video/music and rerank
+ * chat and web search ever charged it. Image, speech and video/music
  * routes already price each successful call (`calculateModalCost`) — the
  * number was only attached to the X-OmniRoute cost header — so a key with a
  * budget could spend without limit on those routes. They now charge the
@@ -23,7 +23,6 @@ const { saveSyncedPricing } = await import("../../src/lib/pricingSync.ts");
 const { waitForCallLogSaves } = await import("../../src/lib/usage/callLogs.ts");
 const costRules = await import("../../src/domain/costRules.ts");
 const mediaRoute = await import("../../src/app/api/v1/_shared/mediaGenerationRoute.ts");
-const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
 const imageRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 
@@ -81,33 +80,6 @@ function post(url: string, key: string, body: unknown) {
 function spent(apiKeyId: string): number {
   return Number(costRules.checkBudget(apiKeyId).periodUsed) || 0;
 }
-
-test("rerank: a priced call charges the key's dollar budget", async () => {
-  saveSyncedPricing({ cohere: { "rerank-v3.5": { input: 0, output: 0, search_unit_cost: 0.5 } } });
-  await seedConnection("cohere");
-  const key = await keyWithDailyBudget(10);
-  globalThis.fetch = (async (url: unknown) => {
-    assert.equal(String(url), "https://api.cohere.com/v2/rerank");
-    return new Response(
-      JSON.stringify({
-        id: "rerank-budget",
-        results: [{ index: 0, relevance_score: 0.9 }],
-        meta: { billed_units: { search_units: 3 } },
-      }),
-      { status: 200, headers: { "content-type": "application/json" } }
-    );
-  }) as typeof fetch;
-
-  const response = await rerankRoute.POST(
-    post("http://localhost/api/v1/rerank", key.key, {
-      model: "cohere/rerank-v3.5",
-      query: "budget",
-      documents: ["a", "b"],
-    })
-  );
-  assert.equal(response.status, 200, await response.clone().text());
-  assert.ok(Math.abs(spent(key.id) - 1.5) < 1e-9, `expected $1.5 charged, got ${spent(key.id)}`);
-});
 
 test("audio speech: a priced call charges the key's dollar budget", async () => {
   saveSyncedPricing({

@@ -1,6 +1,7 @@
-// The /v1/embeddings endpoint was removed, so a model test for an embedding model has
-// nothing to call. detectTestKind still classifies the model (so it is never sent as a
-// chat completion) and runSingleModelTest skips it with 422, like non-chat generation models.
+// The /v1/embeddings and /v1/rerank endpoints were removed, so a model test for an embedding
+// or rerank model has nothing to call. detectTestKind still classifies the model (so it is
+// never sent as a chat completion) and runSingleModelTest skips it with 422, like non-chat
+// generation models.
 
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -56,4 +57,19 @@ test("an embedding model test is skipped with 422 and never dispatched", serial,
   assert.equal(result.httpStatus, 422);
   assert.equal(result.skipped, true);
   assert.match(String(result.error), /embedding/i);
+});
+
+test("rerank models are still classified as rerank", serial, () => {
+  const kind = detectTestKind("cohere/rerank-v3.5", { supportedEndpoints: ["rerank"] }, undefined);
+  assert.equal(kind.isRerank, true);
+  assert.equal(kind.isEmbedding, false);
+});
+
+test("a rerank model test is skipped with 422 and never dispatched", serial, async () => {
+  const { result, dispatched } = await runWithoutUpstream("cohere", "rerank-v3.5");
+  assert.equal(dispatched, false);
+  assert.equal(result.status, "error");
+  assert.equal(result.httpStatus, 422);
+  assert.equal(result.skipped, true);
+  assert.match(String(result.error), /rerank/i);
 });

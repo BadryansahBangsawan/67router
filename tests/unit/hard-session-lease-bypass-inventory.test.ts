@@ -70,7 +70,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     "src/app/api/v1/music/generations/route.ts": 1,
     "src/app/api/v1/ocr/route.ts": 1,
     "src/app/api/v1/providers/[provider]/images/generations/route.ts": 1,
-    "src/app/api/v1/rerank/route.ts": 2,
     "src/app/api/v1/search/route.ts": 2,
     "src/app/api/v1/segment/route.ts": 1,
     "src/app/api/v1/session-leases/route.ts": 1,

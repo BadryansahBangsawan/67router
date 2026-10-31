@@ -353,7 +353,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
     const chat = allModels.filter((m) => !m.type && !m.parent);
     const images = allModels.filter((m) => m.type === "image" && !m.parent);
     const video = allModels.filter((m) => m.type === "video" && !m.parent);
-    const rerank = allModels.filter((m) => m.type === "rerank" && !m.parent);
     const audioTranscription = allModels.filter(
       (m) => m.type === "audio" && m.subtype === "transcription" && !m.parent
     );
@@ -365,7 +364,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       chat,
       images,
       video,
-      rerank,
       audioTranscription,
       audioSpeech,
       music,
@@ -387,9 +385,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       endpointData.video,
     ].filter((m) => m.length > 0).length;
     const utilityFixed = 1; // list models (always available)
-    const modelUtility = endpointData.rerank.length > 0 ? 1 : 0;
     const searchCount = searchProviders.length > 0 ? 1 : 0;
-    return chatCount + imageCount + otherMedia + utilityFixed + modelUtility + searchCount;
+    return chatCount + imageCount + otherMedia + utilityFixed + searchCount;
   }, [endpointData, searchProviders]);
 
   const postCloudAction = async (action, timeoutMs = CLOUD_ACTION_TIMEOUT_MS) => {
@@ -2033,18 +2030,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
             <div className="flex-1 h-px bg-border/50" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            <EndpointCard
-              icon="sort"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("rerank")}
-              path="/v1/rerank"
-              models={endpointData.rerank}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
             <EndpointCard
               icon="list"
               iconColor="text-chart-4"

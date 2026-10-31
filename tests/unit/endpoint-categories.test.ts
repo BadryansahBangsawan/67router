@@ -63,10 +63,6 @@ test("resolveEndpointCategory: maps /v1/music/generations to 'music'", () => {
   assert.equal(resolveEndpointCategory("/v1/music/generations"), "music");
 });
 
-test("resolveEndpointCategory: maps /v1/rerank to 'rerank'", () => {
-  assert.equal(resolveEndpointCategory("/v1/rerank"), "rerank");
-});
-
 test("resolveEndpointCategory: maps /v1/models to 'models'", () => {
   assert.equal(resolveEndpointCategory("/v1/models"), "models");
 });

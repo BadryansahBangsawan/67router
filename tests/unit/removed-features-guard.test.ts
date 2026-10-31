@@ -105,6 +105,14 @@ const REMOVED_PATHS: string[] = [
   "src/lib/embeddings",
   "bin/cli/api-commands/embeddings.mjs",
   "src/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard.tsx",
+  // rerank endpoint (rerankRegistry stays: /v1/models, provider validation, model discovery)
+  "src/app/api/v1/rerank",
+  "src/app/api/v1/_shared/rerankProviderNodes.ts",
+  "src/app/api/v1/_shared/rerankLocalNodeShapes.ts",
+  "open-sse/handlers/rerank.ts",
+  "bin/cli/api-commands/rerank.mjs",
+  "src/app/(dashboard)/dashboard/search-tools/components/RerankPanel.tsx",
+  "src/shared/network/providerNodeHost.ts",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -163,6 +171,13 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /app\/api\/v1\/(embeddings|multimodal-embeddings)\b|providers\/\[provider\]\/embeddings/,
   /\b(handleEmbedding|createEmbeddingResponse|handleValidatedEmbeddingRequestBody|v1EmbeddingsSchema)\b/,
   /EmbeddingExampleCard/,
+  // rerank endpoint
+  /handlers\/rerank\b/,
+  /app\/api\/v1\/rerank\b|_shared\/rerank(ProviderNodes|LocalNodeShapes)\b/,
+  /\b(handleRerank|handleValidatedRerankRequestBody|v1RerankSchema|buildInternalRerankRequest)\b/,
+  /RerankPanel/,
+  /RERANK_REMOTE_PROVIDER_NODES/,
+  /network\/providerNodeHost\b|\bisEligibleProviderNodeHost\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

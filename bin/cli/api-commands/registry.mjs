@@ -5,7 +5,6 @@ import { register_messages } from "./messages.mjs";
 import { register_responses } from "./responses.mjs";
 import { register_images } from "./images.mjs";
 import { register_audio } from "./audio.mjs";
-import { register_rerank } from "./rerank.mjs";
 import { register_system } from "./system.mjs";
 import { register_models } from "./models.mjs";
 import { register_providers } from "./providers.mjs";
@@ -35,7 +34,6 @@ export const API_TAGS = [
   "responses",
   "images",
   "audio",
-  "rerank",
   "system",
   "models",
   "providers",
@@ -75,7 +73,6 @@ export function registerApiCommands(program) {
   register_responses(api);
   register_images(api);
   register_audio(api);
-  register_rerank(api);
   register_system(api);
   register_models(api);
   register_providers(api);

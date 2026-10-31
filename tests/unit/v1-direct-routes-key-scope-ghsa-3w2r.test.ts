@@ -41,7 +41,6 @@ const translationsRoute = await import("../../src/app/api/v1/audio/translations/
 const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
 const imagesRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const videosRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
-const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const segmentRoute = await import("../../src/app/api/v1/segment/route.ts");
 const classifyRoute = await import("../../src/app/api/v1/classify/route.ts");
 const alphaSearchRoute = await import("../../src/app/api/v1/alpha/search/route.ts");
@@ -241,19 +240,6 @@ const ROUTE_CASES: RouteCase[] = [
       ),
   },
   {
-    name: "POST /v1/rerank",
-    provider: "cohere",
-    call: (bearer) =>
-      rerankRoute.POST(
-        jsonRequest("/v1/rerank", bearer, {
-          model: "cohere/rerank-v3.5",
-          query: "lighthouse",
-          documents: ["a lighthouse", "a tree"],
-        }),
-        noContext
-      ),
-  },
-  {
     name: "POST /v1/segment",
     provider: "jina-ai",
     call: (bearer) =>
@@ -436,20 +422,14 @@ for (const routeCase of ROUTE_CASES) {
 
 // ── combo fan-out ───────────────────────────────────────────────────────────
 
-test("GHSA-3w2r combos: speech / rerank combo targets stay inside the key's scope", async () => {
+test("GHSA-3w2r combos: speech combo targets stay inside the key's scope", async () => {
   const openai = await seedPair("openai");
-  const cohere = await seedPair("cohere");
   await combosDb.createCombo({
     name: "ghsa3w2r-speech-combo",
     strategy: "priority",
     models: ["openai/tts-1"],
   });
-  await combosDb.createCombo({
-    name: "ghsa3w2r-rerank-combo",
-    strategy: "priority",
-    models: ["cohere/rerank-v3.5"],
-  });
-  const scopedKey = await makeKey({ allowedConnections: [openai.aId, cohere.aId] });
+  const scopedKey = await makeKey({ allowedConnections: [openai.aId] });
 
   const upstream = stubUpstream();
   try {
@@ -463,17 +443,7 @@ test("GHSA-3w2r combos: speech / rerank combo targets stay inside the key's scop
         noContext
       )
     ).text();
-    await (
-      await rerankRoute.POST(
-        jsonRequest("/v1/rerank", scopedKey, {
-          model: "ghsa3w2r-rerank-combo",
-          query: "x",
-          documents: ["a", "b"],
-        }),
-        noContext
-      )
-    ).text();
-    assert.deepEqual(upstream.secretsSeen().sort(), [openai.aSecret, cohere.aSecret].sort());
+    assert.deepEqual(upstream.secretsSeen().sort(), [openai.aSecret].sort());
   } finally {
     upstream.restore();
   }

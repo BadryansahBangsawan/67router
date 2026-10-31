@@ -824,16 +824,6 @@ export const OPENAPI_ENDPOINTS: OpenApiEndpoint[] = [
     hasRequestBody: false,
   },
   {
-    path: "/api/v1/rerank",
-    method: "POST",
-    summary: "Rerank documents",
-    description: "Document reranking endpoint.",
-    tag: "Rerank",
-    tags: ["Rerank"],
-    requiresAuth: true,
-    hasRequestBody: true,
-  },
-  {
     path: "/api/v1/responses",
     method: "POST",
     summary: "Create response (OpenAI Responses API)",

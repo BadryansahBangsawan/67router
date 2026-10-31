@@ -35,8 +35,6 @@ tags:
     description: Image generation
   - name: Audio
     description: Audio speech and transcription
-  - name: Rerank
-    description: Document reranking
   - name: Search
     description: Unified web, news, and X search
   - name: Models
@@ -1053,37 +1051,6 @@ paths:
             Transcription result. Success responses carry the `X-OmniRoute-*`
             cost-telemetry headers (see `POST /api/v1/chat/completions`);
             transcription cost is computed per second when pricing is available,
-            otherwise `0` (fail-open).
-
-  /api/v1/rerank:
-    post:
-      tags: [Rerank]
-      summary: Rerank documents
-      description: Document reranking endpoint.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [query, documents]
-              properties:
-                query:
-                  type: string
-                documents:
-                  type: array
-                  items:
-                    type: string
-                model:
-                  type: string
-      responses:
-        "200":
-          description: >-
-            Reranked documents. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`); rerank
-            cost is computed per search-unit when pricing is available,
             otherwise `0` (fail-open).
 
   /api/v1:

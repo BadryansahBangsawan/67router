@@ -11,7 +11,6 @@ export interface ConfigState {
   searchType: "web" | "news";
   fetchFormat: "markdown" | "html" | "text";
   fullPage: boolean;
-  rerankModel: string;
 }
 
 interface SearchToolsConfigPaneProps {
@@ -19,7 +18,6 @@ interface SearchToolsConfigPaneProps {
   onConfigChange: (patch: Partial<ConfigState>) => void;
   providers: SearchProviderCatalogItem[];
   activeTab: ActiveTab;
-  rerankModels?: { value: string; label: string }[];
 }
 
 export default function SearchToolsConfigPane({
@@ -27,7 +25,6 @@ export default function SearchToolsConfigPane({
   onConfigChange,
   providers,
   activeTab,
-  rerankModels = [],
 }: SearchToolsConfigPaneProps) {
   const t = useTranslations("search");
   const [historyExpanded, setHistoryExpanded] = useState(false);
@@ -154,21 +151,6 @@ export default function SearchToolsConfigPane({
       {activeTab === "compare" && (
         <div className="p-3 border-b border-border">
           <div className="text-[10px] text-text-muted">{t("compareProviderHint")}</div>
-        </div>
-      )}
-
-      {/* Rerank model (only for search tab) */}
-      {activeTab === "search" && rerankModels.length > 0 && (
-        <div className="p-3 border-b border-border space-y-1">
-          <Select
-            label={t("rerankModelLabel")}
-            value={config.rerankModel}
-            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-              onConfigChange({ rerankModel: e.target.value })
-            }
-            options={[{ value: "", label: t("noneOption") }, ...rerankModels]}
-            className="w-full"
-          />
         </div>
       )}
 
