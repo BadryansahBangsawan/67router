@@ -43,11 +43,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     null,
     2
   ),
-  "/api/v1/embeddings": JSON.stringify(
-    { model: "openai/text-embedding-3-small", input: "Hello world" },
-    null,
-    2
-  ),
   "/api/v1/responses": JSON.stringify(
     { model: "openai/gpt-4o-mini", input: "What is 67router?" },
     null,
@@ -66,15 +61,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     {
       model: "anthropic/claude-3-5-sonnet",
       messages: [{ role: "user", content: "Hi" }],
-    },
-    null,
-    2
-  ),
-  "/api/v1/rerank": JSON.stringify(
-    {
-      model: "cohere/rerank-v3.5",
-      query: "best ai gateway",
-      documents: ["Document 1", "Document 2"],
     },
     null,
     2

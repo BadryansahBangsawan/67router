@@ -31,12 +31,6 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     prefixes: ["/v1/search"],
   },
   {
-    id: "embeddings",
-    label: "Embeddings",
-    description: "Text embeddings generation",
-    prefixes: ["/v1/embeddings", "/v1/multimodal-embeddings"],
-  },
-  {
     id: "audio",
     label: "Audio / Speech",
     description: "Speech-to-text transcription",
@@ -59,12 +53,6 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     label: "Music",
     description: "Music generation",
     prefixes: ["/v1/music"],
-  },
-  {
-    id: "rerank",
-    label: "Rerank",
-    description: "Document reranking",
-    prefixes: ["/v1/rerank"],
   },
   {
     id: "models",

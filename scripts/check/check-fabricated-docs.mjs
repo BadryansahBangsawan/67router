@@ -343,17 +343,14 @@ const ENV_VAR_DENYLIST = new Set([
 const ENDPOINT_ALLOWLIST = new Set([
   "/api/v1/models",
   "/api/v1/chat/completions",
-  "/api/v1/embeddings",
   "/api/v1/responses",
   "/api/v1/audio/transcriptions",
   "/api/v1/videos/generations",
   "/api/v1/music/generations",
-  "/api/v1/rerank",
   "/api/v1/search",
   "/api/v1/messages",
   "/v1/models",
   "/v1/chat/completions",
-  "/v1/embeddings",
   "/v1/responses",
   "/v1/ws", // WebSocket bridge, not standard route.ts
   "/api/mcp/stream", // Streamable HTTP MCP transport

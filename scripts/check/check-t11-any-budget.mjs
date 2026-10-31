@@ -85,8 +85,6 @@ const budget = [
   { file: "open-sse/config/registryUtils.ts", maxAny: 0 },
   { file: "open-sse/executors/antigravity.ts", maxAny: 0 },
   { file: "open-sse/executors/default.ts", maxAny: 0 },
-  { file: "open-sse/handlers/embeddings.ts", maxAny: 0 },
-  { file: "open-sse/handlers/rerank.ts", maxAny: 0 },
   { file: "open-sse/handlers/responsesHandler.ts", maxAny: 0 },
   { file: "open-sse/mcp-server/__tests__/advancedTools.test.ts", maxAny: 0 },
   { file: "open-sse/mcp-server/__tests__/essentialTools.test.ts", maxAny: 0 },

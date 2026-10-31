@@ -10,7 +10,6 @@ process.env.API_KEY_SECRET = process.env.API_KEY_SECRET || "specialty-catalog-te
 
 const core = await import("../../src/lib/db/core.ts");
 const providersDb = await import("../../src/lib/db/providers.ts");
-const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
 const videoRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
 const v1ModelsCatalog = await import("../../src/app/api/v1/models/catalog.ts");
@@ -57,15 +56,6 @@ test.beforeEach(async () => {
 test.after(() => {
   core.resetDbInstance();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
-});
-
-test("embedding catalog GET hides providers without active credentials", async () => {
-  await seedConnection("cohere");
-
-  const ids = await listedIds(embeddingsRoute, "/v1/embeddings");
-
-  assert.ok(ids.includes("cohere/embed-v4.0"));
-  assert.ok(!ids.includes("openai/text-embedding-3-small"));
 });
 
 test("video catalog GET hides credential-backed providers without credentials", async () => {

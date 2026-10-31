@@ -1,7 +1,6 @@
 {
   "root": ["auth", "common", "docs", "endpoint", "header", "landing", "publicSystem"],
   "chrome": [
-    "agentSkills",
     "analytics",
     "breadcrumbs",
     "cache",
@@ -28,7 +27,6 @@
     "trafficInspector"
   ],
   "home": [
-    "agentSkills",
     "analytics",
     "breadcrumbs",
     "cache",
@@ -63,7 +61,6 @@
   "sections": {
     "acp-agents": [
       "acpAgents",
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -93,7 +90,6 @@
     ],
     "activity": [
       "activity",
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -147,7 +143,6 @@
       "trafficInspector"
     ],
     "analytics": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -174,7 +169,6 @@
       "trafficInspector"
     ],
     "api-endpoints": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -202,7 +196,6 @@
       "trafficInspector"
     ],
     "api-manager": [
-      "agentSkills",
       "analytics",
       "apiManager",
       "breadcrumbs",
@@ -233,7 +226,6 @@
       "usageLimits"
     ],
     "audit": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -261,7 +253,6 @@
       "trafficInspector"
     ],
     "auto-combo": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -288,7 +279,6 @@
       "trafficInspector"
     ],
     "cache": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -318,7 +308,6 @@
       "trafficInspector"
     ],
     "changelog": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -346,7 +335,6 @@
       "trafficInspector"
     ],
     "chaos": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -374,7 +362,6 @@
       "trafficInspector"
     ],
     "cli-agents": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -404,7 +391,6 @@
       "trafficInspector"
     ],
     "cli-code": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -434,7 +420,6 @@
       "trafficInspector"
     ],
     "combos": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -464,7 +449,6 @@
       "trafficInspector"
     ],
     "compression": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -493,7 +477,6 @@
       "trafficInspector"
     ],
     "conductor": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -521,7 +504,6 @@
       "trafficInspector"
     ],
     "context": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -554,7 +536,6 @@
       "trafficInspector"
     ],
     "conversations": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -581,7 +562,6 @@
       "trafficInspector"
     ],
     "costs": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -611,7 +591,6 @@
       "usageLimits"
     ],
     "discovery": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -639,7 +618,6 @@
       "trafficInspector"
     ],
     "endpoint": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -668,7 +646,6 @@
       "trafficInspector"
     ],
     "free-provider-rankings": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -696,7 +673,6 @@
       "trafficInspector"
     ],
     "free-tiers": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -724,7 +700,6 @@
       "trafficInspector"
     ],
     "gamification": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -751,7 +726,6 @@
       "trafficInspector"
     ],
     "health": [
-      "agentSkills",
       "analytics",
       "auth",
       "breadcrumbs",
@@ -784,7 +758,6 @@
       "trafficInspector"
     ],
     "leaderboard": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -812,7 +785,6 @@
       "trafficInspector"
     ],
     "limits": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -839,7 +811,6 @@
       "trafficInspector"
     ],
     "log-export": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -866,7 +837,6 @@
       "trafficInspector"
     ],
     "logs": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -895,7 +865,6 @@
       "trafficInspector"
     ],
     "mcp": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -923,7 +892,6 @@
       "trafficInspector"
     ],
     "media-providers": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -952,36 +920,7 @@
       "traeAuthModal",
       "trafficInspector"
     ],
-    "memory": [
-      "agentSkills",
-      "analytics",
-      "breadcrumbs",
-      "cache",
-      "cloudSyncStatus",
-      "codexKeyServiceMode",
-      "common",
-      "costs",
-      "cursorAuthModal",
-      "header",
-      "kiroAuthModal",
-      "kiroSocialOAuthModal",
-      "memory",
-      "noAuthProvider",
-      "oauthModal",
-      "proxyConfigModal",
-      "proxyLog",
-      "proxyLogger",
-      "reasoningRouting",
-      "requestLogger",
-      "requestTimeline",
-      "sharedComponents",
-      "sidebar",
-      "stats",
-      "traeAuthModal",
-      "trafficInspector"
-    ],
     "models": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1008,36 +947,7 @@
       "traeAuthModal",
       "trafficInspector"
     ],
-    "omni-skills": [
-      "agentSkills",
-      "analytics",
-      "breadcrumbs",
-      "cache",
-      "cloudSyncStatus",
-      "codexKeyServiceMode",
-      "common",
-      "costs",
-      "cursorAuthModal",
-      "header",
-      "kiroAuthModal",
-      "kiroSocialOAuthModal",
-      "noAuthProvider",
-      "oauthModal",
-      "proxyConfigModal",
-      "proxyLog",
-      "proxyLogger",
-      "reasoningRouting",
-      "requestLogger",
-      "requestTimeline",
-      "sharedComponents",
-      "sidebar",
-      "skills",
-      "stats",
-      "traeAuthModal",
-      "trafficInspector"
-    ],
     "onboarding": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1065,7 +975,6 @@
       "trafficInspector"
     ],
     "orchestration": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1094,7 +1003,6 @@
       "trafficInspector"
     ],
     "profile": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1122,7 +1030,6 @@
       "trafficInspector"
     ],
     "provider-stats": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1150,7 +1057,6 @@
       "trafficInspector"
     ],
     "providers": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1185,7 +1091,6 @@
       "trafficInspector"
     ],
     "quota": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1215,7 +1120,6 @@
       "usageLimits"
     ],
     "radar": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1247,7 +1151,6 @@
       "trafficInspector"
     ],
     "resilience": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1276,7 +1179,6 @@
       "trafficInspector"
     ],
     "runtime": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1305,7 +1207,6 @@
       "trafficInspector"
     ],
     "search-tools": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1334,7 +1235,6 @@
       "trafficInspector"
     ],
     "settings": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1373,7 +1273,6 @@
     ],
     "system": [
       "agentBridge",
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1402,7 +1301,6 @@
       "trafficInspector"
     ],
     "tokens": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1430,7 +1328,6 @@
     ],
     "tools": [
       "agentBridge",
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1458,7 +1355,6 @@
       "trafficInspector"
     ],
     "translator": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",
@@ -1487,7 +1383,6 @@
       "translator"
     ],
     "usage": [
-      "agentSkills",
       "analytics",
       "breadcrumbs",
       "cache",

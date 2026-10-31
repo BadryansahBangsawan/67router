@@ -34,20 +34,15 @@ useDecollidedMigrationsDir();
 const core = await import("../../src/lib/db/core.ts");
 const providersDb = await import("../../src/lib/db/providers.ts");
 const apiKeysDb = await import("../../src/lib/db/apiKeys.ts");
-const combosDb = await import("../../src/lib/db/combos.ts");
 const { selectProvider } = await import("../../open-sse/config/searchRegistry.ts");
 
 const videosRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
-const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
-const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const segmentRoute = await import("../../src/app/api/v1/segment/route.ts");
 const classifyRoute = await import("../../src/app/api/v1/classify/route.ts");
 const alphaSearchRoute = await import("../../src/app/api/v1/alpha/search/route.ts");
 const searchRoute = await import("../../src/app/api/v1/search/route.ts");
 const ocrRoute = await import("../../src/app/api/v1/ocr/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
-const providerEmbeddingsRoute =
-  await import("../../src/app/api/v1/providers/[provider]/embeddings/route.ts");
 const webFetchRoute = await import("../../src/app/api/v1/web/fetch/route.ts");
 const webMapRoute = await import("../../src/app/api/v1/web/map/route.ts");
 const { nativeGenerationRoutes } = await import("./helpers/elevenLabsGenerationRoutes.ts");
@@ -148,7 +143,6 @@ function jsonRequest(url: string, bearer: string, body: unknown, method = "POST"
   });
 }
 
-const params = (provider: string) => ({ params: Promise.resolve({ provider }) });
 const noContext = {} as never;
 
 type RouteCase = {
@@ -167,31 +161,6 @@ const ROUTE_CASES: RouteCase[] = [
         jsonRequest("/v1/videos/generations", bearer, {
           model: "fal-ai/veo3.1/lite",
           prompt: "a lighthouse at dusk",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "openai/text-embedding-3-small",
-          input: "hello",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/rerank",
-    provider: "cohere",
-    call: (bearer) =>
-      rerankRoute.POST(
-        jsonRequest("/v1/rerank", bearer, {
-          model: "cohere/rerank-v3.5",
-          query: "lighthouse",
-          documents: ["a lighthouse", "a tree"],
         }),
         noContext
       ),
@@ -250,18 +219,6 @@ const ROUTE_CASES: RouteCase[] = [
           prompt: "calm piano",
         }),
         noContext
-      ),
-  },
-  {
-    name: "POST /v1/providers/{provider}/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      providerEmbeddingsRoute.POST(
-        jsonRequest("/v1/providers/openai/embeddings", bearer, {
-          model: "text-embedding-3-small",
-          input: "hello",
-        }),
-        params("openai")
       ),
   },
   {
@@ -365,45 +322,6 @@ for (const routeCase of ROUTE_CASES) {
 
 // ── combo fan-out ───────────────────────────────────────────────────────────
 
-test("GHSA-3w2r combos: embedding / rerank combo targets stay inside the key's scope", async () => {
-  const openai = await seedPair("openai");
-  const cohere = await seedPair("cohere");
-  await combosDb.createCombo({
-    name: "ghsa3w2r-embed-combo",
-    strategy: "priority",
-    models: ["openai/text-embedding-3-small"],
-  });
-  await combosDb.createCombo({
-    name: "ghsa3w2r-rerank-combo",
-    strategy: "priority",
-    models: ["cohere/rerank-v3.5"],
-  });
-  const scopedKey = await makeKey({ allowedConnections: [openai.aId, cohere.aId] });
-
-  const upstream = stubUpstream();
-  try {
-    await (
-      await embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", scopedKey, { model: "ghsa3w2r-embed-combo", input: "x" }),
-        noContext
-      )
-    ).text();
-    await (
-      await rerankRoute.POST(
-        jsonRequest("/v1/rerank", scopedKey, {
-          model: "ghsa3w2r-rerank-combo",
-          query: "x",
-          documents: ["a", "b"],
-        }),
-        noContext
-      )
-    ).text();
-    assert.deepEqual(upstream.secretsSeen().sort(), [openai.aSecret, cohere.aSecret].sort());
-  } finally {
-    upstream.restore();
-  }
-});
-
 test("GHSA-3w2r combos: the per-target model gate follows chat's combo policy", async () => {
   const { createComboTargetKeyGate } = await import("../../src/sse/services/keyConnectionScope.ts");
   const target = "openai/text-embedding-3-small";
@@ -455,17 +373,6 @@ const KEYLESS_CASES: KeylessCase[] = [
         jsonRequest("/v1/music/generations", bearer, {
           model: "comfyui/musicgen-medium",
           prompt: "calm piano",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/embeddings (ollama-local)",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "ollama-local/nomic-embed-text",
-          input: "hello",
         }),
         noContext
       ),

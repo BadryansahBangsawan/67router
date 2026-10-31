@@ -11,7 +11,6 @@ const EXAMPLE_CARDS = [
   "SttExampleCard.tsx",
   "OcrExampleCard.tsx",
   "MusicExampleCard.tsx",
-  "EmbeddingExampleCard.tsx",
   "VideoExampleCard.tsx",
 ];
 const FIXED_REFERENCE = "LlmChatCard.tsx";

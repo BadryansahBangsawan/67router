@@ -349,11 +349,8 @@ Compression exposes five MCP tools:
 
 ## Scope & exclusions
 
-**Embeddings are never compressed.** `open-sse/handlers/embeddings.ts` never calls any
-compression engine — the request/response bodies pass straight to the executor untouched.
-This is structural today (embeddings and chat completions are disjoint handlers), not a
-runtime check, but it means the vector-distortion concern in #8034 has no exposure surface
-in the embeddings path.
+**Embeddings are never compressed.** OmniRoute no longer serves `/v1/embeddings`, so the
+vector-distortion concern in #8034 has no exposure surface.
 
 **Per-model/endpoint exclusion filter (#8034).** For chat completions, an operator can name
 model ids / `provider/model` targets that must never be compressed — a guardrail useful if

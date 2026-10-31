@@ -1,11 +1,8 @@
 // AUTO-GENERATED. Do not edit.
-import { register_memory } from "./memory.mjs";
 import { register_chat } from "./chat.mjs";
 import { register_messages } from "./messages.mjs";
 import { register_responses } from "./responses.mjs";
-import { register_embeddings } from "./embeddings.mjs";
 import { register_audio } from "./audio.mjs";
-import { register_rerank } from "./rerank.mjs";
 import { register_system } from "./system.mjs";
 import { register_models } from "./models.mjs";
 import { register_providers } from "./providers.mjs";
@@ -28,13 +25,10 @@ import { register_traffic_inspector } from "./traffic-inspector.mjs";
 import { register_agent_skills } from "./agent-skills.mjs";
 
 export const API_TAGS = [
-  "memory",
   "chat",
   "messages",
   "responses",
-  "embeddings",
   "audio",
-  "rerank",
   "system",
   "models",
   "providers",
@@ -67,13 +61,10 @@ export function registerApiCommands(program) {
     .action(() => {
       API_TAGS.forEach((t) => console.log(t));
     });
-  register_memory(api);
   register_chat(api);
   register_messages(api);
   register_responses(api);
-  register_embeddings(api);
   register_audio(api);
-  register_rerank(api);
   register_system(api);
   register_models(api);
   register_providers(api);

@@ -23,8 +23,6 @@ Complete guide for configuring providers, creating combos, integrating CLI tools
 - [Advanced Features](#-advanced-features)
 - [Auto-Routing (Zero-config)](#-auto-routing-zero-config)
 - [MCP Integration](#-mcp-integration)
-- [Skills System](#-skills-system)
-- [Memory System](#-memory-system)
 - [Programmatic Management](#-programmatic-management)
 - [Internal CLI](#-internal-cli)
 - [Desktop Application (Electron)](#-desktop-application-electron)
@@ -1214,31 +1212,7 @@ Use the SSE URL `http://localhost:20128/api/mcp/sse` and a Bearer API key genera
 
 ### Scopes
 
-MCP currently defines 30 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory.
-
----
-
-## 🧠 Skills System
-
-67router exposes an extensible **skill framework** (`src/lib/skills/`) so agents can run domain-specific routines (e.g. `code-review`, `summarize`, `extract-facts`, `web-research`).
-
-- **Marketplace UI** — Browse and install skills from **Dashboard → Skills**
-- **Per-key scopes** — Restrict which API keys can invoke which skills
-
-Full reference: [SKILLS.md](../frameworks/SKILLS.md).
-
----
-
-## 💾 Memory System
-
-67router persists **long-term conversational memory** with hybrid retrieval:
-
-- **SQLite FTS5** for keyword search across past turns
-- **Qdrant vector store** (optional) for semantic recall
-- **Automatic fact extraction** — entities, preferences, and decisions are summarized after each session and stored in the `memory_facts` table
-- Memories are scoped per API key and per session
-
-Manage memories in **Dashboard → Memory** (search, edit, export, purge). The HTTP surface (`/api/memory/*`) lets agents push and query facts programmatically — see [MEMORY.md](../frameworks/MEMORY.md).
+MCP currently defines 27 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory.
 
 ---
 

@@ -32,16 +32,16 @@ Running tests: see [Testing](#testing) below (run the most focused test for chan
 **OmniRoute** — unified AI proxy/router. One endpoint, 372 LLM providers, auto-fallback.
 
 - API Routes — `src/app/api/v1/` (Next.js App Router entry points)
-- Handlers — `open-sse/handlers/` (request processing: chat, embeddings, etc)
+- Handlers — `open-sse/handlers/` (request processing: chat, responses, search, etc)
 - Executors — `open-sse/executors/` (provider-specific HTTP dispatch)
 - Translators — `open-sse/translator/` (format conversion OpenAI↔Claude↔Gemini)
 - Transformer — `open-sse/transformer/` (Responses API ↔ Chat Completions)
 - Services — `open-sse/services/` (combo routing, rate limits, caching, etc)
 - Database — `src/lib/db/` (SQLite domain modules, 209 migrations)
 - Domain/Policy — `src/domain/` (policy engine, cost rules, fallback logic)
-- MCP Server — `open-sse/mcp-server/` (99 tools: 42 canonical + memory/skill/GitHub/pool/gamification/Notion/Obsidian/local-corpus/RTK modules; 3 transports: stdio / SSE / Streamable HTTP; 30 scopes)
+- MCP Server — `open-sse/mcp-server/` (97 tools: 42 canonical + pool/gamification/Notion/Obsidian/local-corpus/RTK modules; 3 transports: stdio / SSE / Streamable HTTP; 27 scopes)
 - A2A tasks — `src/lib/a2a/` (TaskManager backing Conductor; the public A2A protocol surface was removed)
-- Skills — `src/lib/skills/` (extensible skill framework); Memory — `src/lib/memory/` (persistent conversational memory)
+- Tool loop — `src/lib/skills/` (built-in `web_search` / `web_fetch` interception + server-owned tool loop for chat)
 
 Monorepo: `src/` (Next.js 16 app), `open-sse/` (streaming engine workspace), `electron/` (desktop app), `tests/`, `bin/` (CLI entry point).
 
@@ -94,7 +94,7 @@ Read the nearest `AGENTS.md` and the linked deep-dive before making a non-trivia
 - Database and migrations — `src/lib/db/`, `src/lib/db/migrations/` → `src/lib/db/AGENTS.md`
 - Domain policy — `src/domain/` → `docs/architecture/ARCHITECTURE.md`
 - MCP — `open-sse/mcp-server/` → `docs/frameworks/MCP-SERVER.md`
-- Agent features — `src/lib/{acp,memory,skills}/` → `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`, `docs/frameworks/SKILLS.md`
+- Agent features — `src/lib/{acp}/` → `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`
 - Safety and governance — `src/lib/{guardrails,compliance}/`, `src/server/authz/` → `docs/security/GUARDRAILS.md`, `docs/architecture/AUTHZ_GUIDE.md`
 - Operations — `src/mitm/`, tunnel modules, `electron/` → `docs/ops/TUNNELS_GUIDE.md`, `docs/guides/ELECTRON_GUIDE.md`
 
@@ -200,7 +200,7 @@ For any non-trivial change, read the matching deep-dive first:
 - Auto-Combo (16-factor scoring, 20 strategies) — `docs/routing/AUTO-COMBO.md` · Reasoning replay — `docs/routing/REASONING_REPLAY.md`
 - Resilience (3 mechanisms + debugging) — `docs/architecture/RESILIENCE_GUIDE.md`
 - Modification recipes — `docs/architecture/MODIFICATION_SCENARIOS.md`
-- Skills framework — `docs/frameworks/SKILLS.md` · Radar (free-model catalog overlay) — `docs/frameworks/RADAR.md` · Memory system (FTS5 + Qdrant) — `docs/frameworks/MEMORY.md`
+- Radar (free-model catalog overlay) — `docs/frameworks/RADAR.md`
 - Agent protocols (ACP) — `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`
 - Guardrails (PII / injection / vision) — `docs/security/GUARDRAILS.md` · Public upstream credentials (Gemini/etc.) — `docs/security/PUBLIC_CREDS.md` · Error message sanitization — `docs/security/ERROR_SANITIZATION.md` · Compliance / audit — `docs/security/COMPLIANCE.md` · Stealth (TLS / fingerprint) — `docs/security/STEALTH_GUIDE.md`
 - Log export (call logs → BigQuery/…) — `docs/frameworks/LOG-EXPORT.md`
@@ -240,8 +240,8 @@ For any non-trivial change, read the matching deep-dive first:
 - Keep the MCP page as a tab inside `/dashboard/endpoint`.
 - Preserve SSE cleanup, rate-limit header parsing, Zod validation, and provider-schema
   validation.
-- Treat Memory and Skills as cross-cutting changes that can affect MCP tools, the request
-  pipeline, and A2A skills.
+- Treat the chat tool loop (`src/lib/skills/`) as a cross-cutting change that can affect the
+  request pipeline.
 - Do not close a contributor pull request after using its code; merge it through GitHub so
   the contributor receives credit.
 - **Never merge a PR that touches an agent-instruction surface without explicit operator

@@ -73,8 +73,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "translator",
   "search-tools",
   // Agentic Features
-  "memory",
-  "skills",
   "agent-skills",
   "chaos-config",
   "mcp",

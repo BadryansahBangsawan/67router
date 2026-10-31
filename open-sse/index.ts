@@ -87,8 +87,7 @@ export {
   createPassthroughStreamWithLogger,
 } from "./utils/stream.ts";
 
-// Embeddings
-export { handleEmbedding } from "./handlers/embeddings.ts";
+// Embeddings (registry only; the /v1/embeddings endpoint was removed)
 export {
   EMBEDDING_PROVIDERS,
   getEmbeddingProvider,
@@ -112,8 +111,7 @@ export {
   flushThinkBuffer,
 } from "./utils/thinkTagParser.ts";
 
-// Rerank
-export { handleRerank } from "./handlers/rerank.ts";
+// Rerank (registry only; the /v1/rerank endpoint was removed)
 export {
   RERANK_PROVIDERS,
   getRerankProvider,

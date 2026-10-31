@@ -39,14 +39,6 @@ test("resolveEndpointCategory: maps /v1/search/analytics to 'search'", () => {
   assert.equal(resolveEndpointCategory("/v1/search/analytics"), "search");
 });
 
-test("resolveEndpointCategory: maps /v1/embeddings to 'embeddings'", () => {
-  assert.equal(resolveEndpointCategory("/v1/embeddings"), "embeddings");
-});
-
-test("resolveEndpointCategory: maps /v1/multimodal-embeddings to 'embeddings'", () => {
-  assert.equal(resolveEndpointCategory("/v1/multimodal-embeddings"), "embeddings");
-});
-
 test("resolveEndpointCategory: maps /v1/audio/transcriptions to 'audio'", () => {
   assert.equal(resolveEndpointCategory("/v1/audio/transcriptions"), "audio");
 });
@@ -57,10 +49,6 @@ test("resolveEndpointCategory: maps /v1/videos/generations to 'video'", () => {
 
 test("resolveEndpointCategory: maps /v1/music/generations to 'music'", () => {
   assert.equal(resolveEndpointCategory("/v1/music/generations"), "music");
-});
-
-test("resolveEndpointCategory: maps /v1/rerank to 'rerank'", () => {
-  assert.equal(resolveEndpointCategory("/v1/rerank"), "rerank");
 });
 
 test("resolveEndpointCategory: maps /v1/models to 'models'", () => {

@@ -8,8 +8,8 @@
 //   3. scans every non-test source file under src/, open-sse/, bin/ and electron/ for callers
 //      of runPreCallHooks / runPostCallHooks and for importers of the chat handler, and pins
 //      the exact sets — so a new caller or a new chat-family route fails here on purpose;
-//   4. asserts the textual order of the post-call block in nonStreamingResponse.ts (memory
-//      extraction → tool execution → post-call → block exit → semantic-cache store);
+//   4. asserts the textual order of the post-call block in nonStreamingResponse.ts (tool
+//      execution → post-call → block exit → semantic-cache store);
 //   5. asserts the self-loop plumbing (undici fetch in the vision bridge, the proxyFetch stamp).
 // When a refactor legitimately moves a call, update the expected set/order here in the same PR
 // and say why — that is the point of a characterization test.
@@ -86,21 +86,18 @@ test("the chat handler is imported by exactly these modules (the chat-family rou
   ]);
 });
 
-test("embeddings and audio routes never reach the guardrail registry", () => {
+test("audio routes never reach the guardrail registry", () => {
   const routes = SOURCE_FILES.filter((file) =>
-    /^src\/app\/api\/v1\/(embeddings|audio)\/.*route\.ts$/.test(file)
+    /^src\/app\/api\/v1\/audio\/.*route\.ts$/.test(file)
   );
-  assert.ok(routes.length >= 2, `expected the embeddings/audio routes, got ${routes}`);
+  assert.ok(routes.length >= 1, `expected the audio routes, got ${routes}`);
   for (const route of routes) {
     const source = read(route);
     assert.ok(!/sse\/handlers\/chat["']/.test(source), `${route} imports the chat handler`);
     assert.ok(!/lib\/guardrails/.test(source), `${route} imports the guardrail registry`);
   }
-  // The only injection check those routes get is the legacy middleware facade (prompt
-  // injection only; see the disable-channel characterization in the behavioral file).
-  for (const route of ["src/app/api/v1/embeddings/route.ts"]) {
-    assert.ok(/(?:withInjectionGuard|createInjectionGuard)\(/.test(read(route)), route);
-  }
+  // 67router removed the image, speech and embeddings routes, which were the ones wrapped in
+  // the legacy injection-guard facade; the remaining transcription route has no text prompt.
 });
 
 test("chat.ts feeds the pre-call pass all disable channels and maps a block to HTTP 400", () => {
@@ -133,10 +130,11 @@ test("post-call runs only on the non-streaming branch of handleChatCore", () => 
 
 // ─── 4. Ordering inside nonStreamingResponse.ts ──────────────────────────────
 
-test("non-streaming order: memory extraction → tool execution → post-call → block exit → cache store", () => {
+test("non-streaming order: tool execution → post-call → block exit → cache store", () => {
   const leaf = read("open-sse/handlers/chatCore/nonStreamingResponse.ts");
-  const memory = indexOrFail(leaf, "runMemoryExtractionGate({");
-  const tools = indexOrFail(leaf, "translatedResponse = await handleToolCallExecution(", memory);
+  // Memory extraction was removed with the Memory feature; nothing runs before tool execution.
+  assert.equal(leaf.includes("runMemoryExtractionGate"), false);
+  const tools = indexOrFail(leaf, "translatedResponse = await handleToolCallExecution(");
   const context = indexOrFail(leaf, "buildPostCallGuardrailContext({", tools);
   const postCall = indexOrFail(leaf, "guardrailRegistry.runPostCallHooks(", context);
   const apply = indexOrFail(leaf, "translatedResponse = postCallGuardrails.response;", postCall);
@@ -148,19 +146,19 @@ test("non-streaming order: memory extraction → tool execution → post-call �
   );
   const cacheStore = indexOrFail(leaf, "storeSemanticCacheResponse({", blockedExit);
   const idempotency = indexOrFail(leaf, "await saveIdempotency(", cacheStore);
-  assert.ok(memory < tools && tools < postCall && postCall < blocked);
+  assert.ok(tools < postCall && postCall < blocked);
   assert.ok(blocked < blockedExit && blockedExit < cacheStore && cacheStore < idempotency);
   // Each anchor appears once, so the order above is unambiguous.
   for (const anchor of [
-    "runMemoryExtractionGate({",
+    "translatedResponse = await handleToolCallExecution(",
     "guardrailRegistry.runPostCallHooks(",
     "storeSemanticCacheResponse({",
   ]) {
     assert.equal(leaf.split(anchor).length - 1, 1, anchor);
   }
-  // characterization: memory extraction and tool execution see the response BEFORE the
-  // post-call guardrails, so a response later blocked (or rewritten) by a post-call
-  // guardrail has already been offered to memory extraction / built-in tool execution.
+  // characterization: built-in tool execution sees the response BEFORE the post-call
+  // guardrails, so a response later blocked (or rewritten) by a post-call guardrail has
+  // already been offered to built-in tool execution.
 });
 
 test("the post-call verdict is applied to what is cached, and the cache write is keyed per API key", () => {

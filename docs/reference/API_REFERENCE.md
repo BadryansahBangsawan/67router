@@ -19,7 +19,6 @@ For the focused OpenAI-compatible protocol and provider capability matrix, see
 
 - [Chat Completions](#chat-completions)
 - [Exclusive Managed Session Leases](#exclusive-managed-session-leases)
-- [Embeddings](#embeddings)
 - [Image Generation](#image-generation)
 - [Document OCR](#document-ocr)
 - [List Models](#list-models)
@@ -35,8 +34,6 @@ For the focused OpenAI-compatible protocol and provider capability matrix, see
 - [Agents Protocol](#agents-protocol)
 - [Management Proxies](#management-proxies)
 - [Resilience (extended)](#resilience-extended)
-- [Skills](#skills)
-- [Memory](#memory)
 - [MCP Server](#mcp-server)
 - [A2A Server](#a2a-server)
 - [Cloud, Evals & Assess](#cloud-evals--assess)
@@ -132,7 +129,7 @@ account per project:
 Source: `src/sse/handlers/chat.ts` (header read), `src/sse/services/auth.ts` and
 `src/sse/services/sessionAffinityPin.ts` (pin release and the missing-from-pool check).
 
-> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-second, per search-unit) when pricing is available, otherwise `0` (fail-open).
+> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/audio/transcriptions`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-second) when pricing is available, otherwise `0` (fail-open).
 
 > **Cache-hit cost semantics:** on a semantic-cache HIT (`X-OmniRoute-Cache-Hit: true`) no upstream call is made, so `X-OmniRoute-Response-Cost` is `0.0000000000` (the **incremental** cost of serving the hit). The original/would-have-been cost is reported separately in `X-OmniRoute-Cost-Saved`. Billing consumers should sum `X-OmniRoute-Response-Cost` (hits cost nothing); cache analytics can aggregate `X-OmniRoute-Cost-Saved`.
 
@@ -260,98 +257,6 @@ X-OmniRoute-Compression: <mode>; source=<source>
 ```
 
 where `<source>` is one of `request-header`, `routing-override`, `active-profile`, `auto-trigger`, `default`, or `off`.
-
----
-
-## Embeddings
-
-```bash
-POST /v1/embeddings
-Authorization: Bearer your-api-key
-Content-Type: application/json
-
-{
-  "model": "nebius/Qwen/Qwen3-Embedding-8B",
-  "input": "The food was delicious"
-}
-```
-
-Available providers: Nebius, OpenAI, Mistral, Together AI, Fireworks, NVIDIA, **OpenRouter**, Jina AI.
-
-Catalog ids are `provider/model` (example: `jina-ai/jina-embeddings-v5-omni-small`). Bare Jina model ids that appear in the registry (for example `jina-embeddings-v5-text-small`, `jina-reranker-v3.5`) also resolve. Jina embed/rerank/classify/segment use dashboard `jina-ai` credentials first; `JINA_AI_API_KEY` is a fallback only when no dashboard key exists. The `jina-reader` card is Reader / `r.jina.ai` only (`POST /v1/web/fetch`) and never serves embeddings or rerank.
-
-Registry models that advertise multimodal support also accept up to 32 provider-neutral structured
-items. Media item types are `text`, `image`, `audio`, `video`, and `document`. Their media `source`
-is either `{"type":"url","url":"https://..."}` or
-`{"type":"base64","data":"...","media_type":"..."}`.
-
-Jina v5 Omni (`jina-ai/jina-embeddings-v5-omni-small`, `jina-ai/jina-embeddings-v5-omni-nano`,
-and the family alias `jina-ai/jina-embeddings-v5-omni` → omni-small) also accepts Jina's native
-EmbeddingsV5Request docs and **forwards them intact** to `https://api.jina.ai/v1/embeddings`:
-
-```json
-{
-  "model": "jina-ai/jina-embeddings-v5-omni-small",
-  "task": "retrieval.query",
-  "normalized": true,
-  "input": [
-    { "text": "a red bicycle" },
-    { "image": "https://example.com/bike.png" },
-    { "content": [{ "text": "caption" }, { "image": "data:image/png;base64,..." }] }
-  ]
-}
-```
-
-Native `{ image | audio | video | pdf }` values may be a public HTTPS URL, a `data:` URI, or raw
-base64. 67router does not stringify those objects or fetch native image URLs — Jina retrieves
-public media itself. Extra Jina fields (`task`, `normalized`, `truncate`, `embedding_type`) are
-forwarded. Text-only Jina SKUs still reject non-text docs.
-
-Security and transport bounds:
-
-- Remote media URLs must be public HTTPS. Canonical `{type,source:url}` items are fetched
-  server-side (redirect revalidation, timeout, size limits, public DNS, connection pinning) and
-  inlined before the provider call. Jina-native `{image:"https://..."}` items are forwarded as-is
-  after the same public-HTTPS check; Jina fetches the URL.
-- Inline base64 media is limited to 8 MiB decoded per item and 16 MiB decoded across the request.
-
-Provider translation (canonical items are never forwarded unchanged):
-
-- Jina multimodal models: each top-level item becomes one modality-keyed object
-  (`text` / `image` / `audio` / `video` / `pdf`) using data URIs for inline media; one vector per
-  top-level item.
-- Gemini Embedding 2 family: one top-level array becomes a single native
-  `models/{model}:embedContent` request with `content.parts` (`text` or `inline_data`).
-- llama.cpp (`llama-cpp/<model>`, any model the local server loaded): canonical `text` items
-  become plain strings, and `image` / `audio` / `video` become one
-  `{"content": [part]}` object each, using llama-server's chat content parts (`image_url`,
-  `input_audio` with format `wav` / `mp3` / `flac`, `input_video`) with inline data; one vector
-  per top-level item. The server must run with `--embedding --mmproj …`; without a projector it
-  rejects media itself. `document` is not supported.
-- Unknown/dynamic models without explicit modality metadata reject structured input with HTTP 400.
-
-```json
-{
-  "model": "jina-ai/jina-embeddings-v5-omni-small",
-  "input": [
-    { "type": "text", "text": "A red bicycle" },
-    {
-      "type": "image",
-      "source": { "type": "url", "url": "https://example.com/bicycle.png" }
-    }
-  ],
-  "dimensions": 512,
-  "encoding_format": "float"
-}
-```
-
-Unsupported model/modality combinations return HTTP 400 rather than coercing the item. Non-input
-extension fields on legacy string/token requests continue to pass through unchanged.
-
-```bash
-# List all embedding models
-GET /v1/embeddings
-```
 
 ---
 
@@ -661,11 +566,9 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/v1/chat/completions`                    | OpenAI                             |
 | POST   | `/v1/messages`                            | Anthropic                          |
 | POST   | `/v1/responses`                           | OpenAI Responses                   |
-| POST   | `/v1/embeddings`                          | OpenAI                             |
 | POST   | `/v1/videos/generations`                  | OpenAI-style video generation      |
 | POST   | `/v1/music/generations`                   | OpenAI-style music generation      |
 | POST   | `/v1/audio/transcriptions`                | OpenAI Audio (STT)                 |
-| POST   | `/v1/rerank`                              | Cohere/Voyage-style rerank         |
 | POST   | `/v1/classify`                            | Jina classify (`api.jina.ai`)      |
 | POST   | `/v1/segment`                             | Jina segmenter (`segment.jina.ai`) |
 | GET    | `/v1/models`                              | OpenAI                             |
@@ -681,14 +584,11 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/api/v1/vscode/{token}/api/chat`         | Ollama tokenized alias             |
 | GET    | `/api/v1/vscode/{token}/api/tags`         | Ollama tags tokenized alias        |
 
-All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1RerankSchema`, `v1OcrSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
+All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1ClassifySchema`, `v1OcrSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
 
 For clients that cannot attach `Authorization: Bearer ...`, 67router also accepts API keys in the URL via either query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) or the dedicated `/api/v1/vscode/{token}/...` endpoints documented below.
 
 ```bash
-# Rerank (cloud registry provider, or an OpenAI-compatible provider node as "<prefix>/<model>")
-POST /v1/rerank      { "model": "jina-ai/jina-reranker-v3.5", "query": "...", "documents": ["..."] }
-
 # Jina classify (Foundation API credentials)
 POST /v1/classify    { "model": "jina-embeddings-v5-text-small", "input": ["..."], "labels": ["a", "b"] }
 
@@ -703,25 +603,6 @@ POST /v1/videos/generations { "model": "runway/gen-3", "prompt": "..." }
 POST /v1/music/generations  { "model": "kie/suno-v4.0",   "prompt": "..." }
 ```
 
-> **Rerank provider nodes:** `POST /v1/rerank` also routes to OpenAI-compatible provider nodes
-> (oMLX, vLLM, Infinity, TEI behind a gateway, …) addressed as `<node-prefix>/<model>`. Loopback
-> nodes (`localhost`, `127.0.0.1`, `172.16.0.0/12`) are always eligible, and so are hostnames the
-> operator lists in `OMNIROUTE_LOCAL_PROVIDER_NODE_HOSTS` (e.g. a Docker/Compose service name such
-> as `http://reranker:8080/v1`; these are called directly, never through `HTTP(S)_PROXY` or a
-> connection's pinned proxy). Nodes on any other
-> host — a LAN box or Tailscale peer — are eligible only when the operator enables the
-> `RERANK_REMOTE_PROVIDER_NODES` feature flag **and** the node's base URL passes the provider
-> outbound URL policy (`OMNIROUTE_ALLOW_LOCAL_PROVIDER_URLS` / `OMNIROUTE_ALLOW_PRIVATE_PROVIDER_URLS`).
-> The memory engine's rerank step calls this route over
-> loopback, so the same rule governs `rerankProviderModel` in the Memory settings.
->
-> **Local server shapes:** the node is called at `<base>/v1/rerank` and, on 404, at `<base>/rerank`
-> (Infinity, TEI). The upstream body carries both the Cohere/OpenAI spelling (`documents`,
-> `return_documents`) and the TEI spelling (`texts`, `return_text`), and the upstream response is
-> normalized to the Cohere envelope: TEI's bare `[{index, score, text}]`, `{results: [{index, score}]}`
-> from thin gateways, and Voyage-style `{data: [...]}` all come back to the client as
-> `{results: [{index, relevance_score, document?}]}`, sorted by score and capped at `top_n`.
-
 > **Provider-node discovery:** models on an OpenAI-compatible provider node appear in `GET /v1/models`
 > under the node prefix. Rows that carry no endpoint metadata (typical for local `/v1/models` listings)
 > inherit the node's `apiType`, so an `embeddings` node's models are `type: "embedding"` and a
@@ -732,7 +613,6 @@ POST /v1/music/generations  { "model": "kie/suno-v4.0",   "prompt": "..." }
 
 ```bash
 POST /v1/providers/{provider}/chat/completions
-POST /v1/providers/{provider}/embeddings
 ```
 
 The provider prefix is auto-added if missing. Mismatched models return `400`.
@@ -1573,7 +1453,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 5. For chat: `handleChatCore` checks semantic/signature cache and resolves combo compression settings
 6. Proactive compression runs before provider translation when enabled (`lite`, Caveman, RTK, or stacked)
 7. Provider executor sends upstream request
-8. Response translated back to client format (chat) or returned as-is (embeddings/audio)
+8. Response translated back to client format (chat) or returned as-is (audio)
 9. Usage, compression analytics, and request logs are recorded
 10. Fallback applies on errors according to combo rules
 
@@ -1666,43 +1546,6 @@ Full conceptual reference and breaker defaults: see [`CLAUDE.md`](../../CLAUDE.m
 - **Supported write path**: `POST /api/rate-limits` with body `{"connectionId": "<id>", "enabled": true|false}` is the supported management endpoint to toggle rate-limit protection for a connection. `PUT /api/providers/[id]` deliberately does not modify or flip `rateLimitProtection` (#11278).
 - **Semantics of `enabled: false`**: Setting `enabled: false` removes explicit protection for the connection, but **does not** opt an active API-key connection out of the global auto-enable safety net (`autoEnableApiKeyProviders = true`). In `reconcileEnabledConnections` (`open-sse/services/rateLimitManager.ts`), `false` and `undefined` are equivalent; active API-key connections without explicit protection remain protected under the auto-enable safety net.
 - **Global disable**: To run API-key connections without rate-limit queues, disable the safety net globally via `RATE_LIMIT_AUTO_ENABLE=false` (env) or `resilienceSettings.requestQueue.autoEnableApiKeyProviders = false` (Settings → Resilience / `PATCH /api/resilience`).
-
----
-
-## Skills
-
-Skill framework for extending 67router with custom executable handlers, plus marketplace integrations.
-
-| Method | Path                              | Description                                                                                                                |
-| ------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/skills`                     | List installed skills — filterable by `?q=`, `?mode=on\|off\|auto`, `?source=skillsmp\|skillssh\|local`, paginated         |
-| GET    | `/api/skills/[id]`                | Retrieve one skill                                                                                                         |
-| PUT    | `/api/skills/[id]`                | Update skill (name, description, mode, schema, handler, tags)                                                              |
-| DELETE | `/api/skills/[id]`                | Uninstall a skill                                                                                                          |
-| POST   | `/api/skills/install`             | Install a skill from a raw manifest — body: `{name, version, description, schema:{input, output}, handlerCode, apiKeyId?}` |
-| GET    | `/api/skills/executions`          | List recent skill executions (audit trail with inputs/outputs/duration)                                                    |
-| GET    | `/api/skills/marketplace?q=...`   | Search/popular list from the SkillsMP marketplace (requires `skillsmpApiKey` setting)                                      |
-| POST   | `/api/skills/marketplace/install` | Install a skill by id from SkillsMP                                                                                        |
-| GET    | `/api/skills/skillssh?q=&limit=`  | Search the skills.sh registry                                                                                              |
-| POST   | `/api/skills/skillssh/install`    | Install a skill by id from skills.sh                                                                                       |
-
-**Auth:** management session/API key. Marketplace search routes accept either management auth or a Bearer API key (`isAuthenticated`).
-
----
-
-## Memory
-
-Persistent conversational/factual memory store, scoped per API key / session.
-
-| Method | Path                 | Description                                                                                                  |
-| ------ | -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/memory`        | List memories — `?apiKeyId=`, `?type=`, `?sessionId=`, `?q=`, with `offset/limit` or `page/limit` pagination |
-| POST   | `/api/memory`        | Create memory — body validated by Zod: `{content, key, type?, sessionId?, apiKeyId?, metadata?, expiresAt?}` |
-| GET    | `/api/memory/[id]`   | Retrieve one memory                                                                                          |
-| DELETE | `/api/memory/[id]`   | Delete a memory                                                                                              |
-| GET    | `/api/memory/health` | Memory subsystem health (DB connectivity, embeddings backend, vector index status)                           |
-
-**Auth:** management session/API key (`requireManagementAuth`). `type` enum: `FACTUAL`, `EPISODIC`, `SEMANTIC`, `PROCEDURAL` (see `MemoryType` in `src/lib/memory/types.ts`).
 
 ---
 
@@ -1967,42 +1810,6 @@ Manage the semantic cache and reasoning cache.
 | DELETE | `/api/cache/reasoning` | Clear reasoning cache — query params: `?toolCallId=<id>` (single) or `?provider=<p>` or no params (all) |
 
 **Auth:** Requires management session.
-
----
-
-## Memory System
-
-Manage persistent memory (FTS5 + vector embeddings).
-
-| Method | Path               | Description                                                             |
-| ------ | ------------------ | ----------------------------------------------------------------------- |
-| GET    | `/api/memory`      | List memory entries (filter by scope, type, search query)               |
-| POST   | `/api/memory`      | Create a new memory entry — body: `{scope, type, content, metadata?}`   |
-| GET    | `/api/memory/[id]` | Get a specific memory entry                                             |
-| PUT    | `/api/memory/[id]` | Update a memory entry                                                   |
-| DELETE | `/api/memory/[id]` | Delete a memory entry                                                   |
-| GET    | `/api/memory?q=`   | Search memory (FTS5 + vector) — stats are included in the same response |
-
-**Auth:** Requires management session or management-scoped API key.
-
----
-
-## Skills Framework
-
-Manage Skills (the agentic extensions framework).
-
-| Method | Path                     | Description                                                                             |
-| ------ | ------------------------ | --------------------------------------------------------------------------------------- |
-| GET    | `/api/skills`            | List all installed skills (built-in + custom)                                           |
-| POST   | `/api/skills/install`    | Install a skill from a local path or URL                                                |
-| DELETE | `/api/skills/[id]`       | Uninstall a skill                                                                       |
-| PUT    | `/api/skills/[id]`       | Enable or disable a skill — body: `{enabled?: boolean, mode?: "on" \| "off" \| "auto"}` |
-| POST   | `/api/skills/executions` | Execute a skill — body: `{skillName, apiKeyId, input?, sessionId?}`                     |
-| GET    | `/api/skills/executions` | List execution history for all skills (filter by `?apiKeyId=`)                          |
-
-**Auth:** Requires management session or management-scoped API key.
-
-See [Skills Framework](../frameworks/SKILLS.md) for full details.
 
 ---
 

@@ -127,5 +127,3 @@ full scope model.
 
 - [MCP Server](./MCP-SERVER.md) — transports, scope enforcement, full tool inventory.
 - [Obsidian Context Source](./OBSIDIAN_CONTEXT.md) — the other built-in context source.
-- [Memory System](./MEMORY.md) — persistent conversational memory (complementary
-  context layer, injected automatically rather than tool-fetched).

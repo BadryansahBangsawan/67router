@@ -11,7 +11,6 @@ import Icon from "@/shared/components/Icon";
 import MediaProviderHeader from "../../components/MediaProviderHeader";
 import MediaProviderKindNav from "../../components/MediaProviderKindNav";
 import type { MediaKind } from "../../components/mediaKinds";
-import { EmbeddingExampleCard } from "../../components/EmbeddingExampleCard";
 import { SttExampleCard } from "../../components/SttExampleCard";
 import { WebSearchExampleCard } from "../../components/WebSearchExampleCard";
 import { WebFetchExampleCard } from "../../components/WebFetchExampleCard";
@@ -48,8 +47,6 @@ function renderPlayground(
   }
 ) {
   switch (kind) {
-    case "embedding":
-      return <EmbeddingExampleCard providerId={providerId} />;
     case "stt":
       return (
         <div className="flex flex-col gap-3">

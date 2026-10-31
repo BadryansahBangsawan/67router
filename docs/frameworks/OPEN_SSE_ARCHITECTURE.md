@@ -323,14 +323,6 @@ Services are **focused, single-purpose modules** that handlers compose. The big 
 - `compression/` (subdirectory) — full compression pipeline
 - 39 files covering engines, rule packs, adapters
 
-### Skills
-
-- (covered in [SKILLS.md](./SKILLS.md))
-
-### Memory
-
-- (covered in [MEMORY.md](./MEMORY.md))
-
 ---
 
 ## Executors (150 modules)

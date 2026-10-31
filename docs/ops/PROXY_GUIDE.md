@@ -109,7 +109,6 @@ The first match wins. This means you can set a global proxy as a fallback but ov
 | Traffic Type         | Proxied? | Notes                                         |
 | -------------------- | -------- | --------------------------------------------- |
 | Chat completions     | ✅       | All `/v1/chat/completions` requests           |
-| Embeddings           | ✅       | `/v1/embeddings`                              |
 | Audio (STT)          | ✅       | `/v1/audio/transcriptions`                    |
 | OAuth token exchange | ✅       | Solves `unsupported_country_region_territory` |
 | Connection tests     | ✅       | "Test Connection" button uses proxy           |

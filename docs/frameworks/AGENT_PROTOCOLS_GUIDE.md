@@ -137,6 +137,5 @@ curl -X POST http://localhost:20128/api/acp/agents \
 ## See Also
 
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — External CLI integrations (uses ACP)
-- [SKILLS.md](./SKILLS.md) — Skills framework (local execution sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint reference
 - Source: `src/lib/acp/`

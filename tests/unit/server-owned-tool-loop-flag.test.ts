@@ -78,7 +78,8 @@ describe("feature-flags-settings count update", () => {
     // (#13505, default off) to 85; KIRO_TOOL_CALL_REPAIR_ENABLED (default on) to 86;
     // OPENCODE_PUBLISHED_CATALOG_ROUTING_ENABLED (#16798, default off) to 87.
     // 67router PR-4 removed IMAGE_GENERATION_LONG_JOBS: 109.
-    assert.equal(FEATURE_FLAG_DEFINITIONS.length, 109);
+    // 67router removed RERANK_REMOTE_PROVIDER_NODES with /v1/rerank: 108.
+    assert.equal(FEATURE_FLAG_DEFINITIONS.length, 108);
     // OPENCODE_V2_CLIENT_FINGERPRINT_ENABLED (#16571, default off) to 87.
     // COMBO_EMPTY_POOL_NO_ELIGIBLE_TARGETS_ENABLED (#16256, default off) to 87.
     // OPENCODE_ZEN_EGRESS_IP_LOCK_ENABLED (#16797, default off) to 87;

@@ -1,8 +1,5 @@
-import { projectSkillOutputForBoundary, skillExecutor } from "./executor";
-import { skillRegistry } from "./registry";
+import { projectSkillOutputForBoundary } from "./outputBoundary";
 import { builtinSkills } from "./builtins";
-import { memoryBuiltinHandlers, MEMORY_BUILTIN_TOOL_NAMES } from "./memoryBuiltins";
-import { detectProvider, decodeSkillToolName } from "./injection";
 import { OMNIROUTE_WEB_SEARCH_FALLBACK_TOOL_NAME } from "@omniroute/open-sse/services/webSearchFallback.ts";
 import { OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME } from "@omniroute/open-sse/services/webFetchInterception.ts";
 import { sanitizeErrorMessage } from "@omniroute/open-sse/utils/errorSanitization.ts";
@@ -45,17 +42,31 @@ function projectSkillResultForPublicResponse(result: unknown): unknown {
 
 // ToolCall and ExecutionContext types are imported from ./toolLoopTypes.ts
 
+function detectProvider(modelId: string): "openai" | "anthropic" | "google" | "other" {
+  const lower = modelId.toLowerCase();
+
+  if (lower.includes("gpt") || lower.includes("openai")) {
+    return "openai";
+  }
+  if (lower.includes("claude") || lower.includes("anthropic")) {
+    return "anthropic";
+  }
+  if (lower.includes("gemini") || lower.includes("google")) {
+    return "google";
+  }
+
+  return "other";
+}
+
 const BUILTIN_TOOL_ALIASES: Record<string, string> = {
   [OMNIROUTE_WEB_SEARCH_FALLBACK_TOOL_NAME]: "web_search",
   [OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME]: "web_fetch",
 };
 
-const MEMORY_TOOL_NAMES = new Set<string>(MEMORY_BUILTIN_TOOL_NAMES);
-
 function resolveBuiltinHandlerName(
   toolName: string,
   context: ExecutionContext
-): keyof typeof builtinSkills | keyof typeof memoryBuiltinHandlers | null {
+): keyof typeof builtinSkills | null {
   const [rawName] = toolName.includes("@") ? toolName.split("@") : [toolName];
   const canonicalName = BUILTIN_TOOL_ALIASES[rawName] || rawName;
   const allowed = new Set(
@@ -68,9 +79,6 @@ function resolveBuiltinHandlerName(
 
   if (canonicalName in builtinSkills) {
     return canonicalName as keyof typeof builtinSkills;
-  }
-  if (MEMORY_TOOL_NAMES.has(canonicalName)) {
-    return canonicalName as keyof typeof memoryBuiltinHandlers;
   }
   return null;
 }
@@ -121,24 +129,12 @@ export async function interceptToolCalls(
             callId: call.id,
           });
 
-          const isMemoryHandler = MEMORY_TOOL_NAMES.has(builtinHandlerName);
-          const result = isMemoryHandler
-            ? await memoryBuiltinHandlers[builtinHandlerName as keyof typeof memoryBuiltinHandlers](
-                call.arguments,
-                {
-                  apiKeyId: context.apiKeyId,
-                  sessionId: context.sessionId,
-                }
-              )
-            : await builtinSkills[builtinHandlerName as keyof typeof builtinSkills](
-                call.arguments,
-                {
-                  apiKeyId: context.apiKeyId,
-                  sessionId: context.sessionId,
-                  provider: context.provider,
-                  model: context.model,
-                }
-              );
+          const result = await builtinSkills[builtinHandlerName](call.arguments, {
+            apiKeyId: context.apiKeyId,
+            sessionId: context.sessionId,
+            provider: context.provider,
+            model: context.model,
+          });
 
           log.info("skills.interception.execution_complete", {
             toolName: call.name,
@@ -151,38 +147,9 @@ export async function interceptToolCalls(
           };
         }
 
-        const decodedName = decodeSkillToolName(call.name);
-        const [name, version] = decodedName.includes("@")
-          ? decodedName.split("@")
-          : [decodedName, "latest"];
-
-        const skillName = version === "latest" ? name : `${name}@${version}`;
-
-        log.info("skills.interception.tool_call_detected", {
-          toolName: call.name,
-          callId: call.id,
-        });
-
-        const execution = await skillExecutor.execute(skillName, call.arguments, {
-          apiKeyId: context.apiKeyId,
-          sessionId: context.sessionId,
-        });
-
-        const result = projectSkillResultForPublicResponse(
-          execution.output ??
-            (execution.errorMessage
-              ? { error: toSafeSkillErrorMessage(execution.errorMessage) }
-              : { error: "Skill execution returned no output" })
-        );
-
-        log.info("skills.interception.execution_complete", {
-          toolName: call.name,
-          callId: call.id,
-        });
-
         return {
           id: call.id,
-          result,
+          result: { error: "No handler for tool" },
         };
       } catch (err) {
         const safeError = toSafeSkillErrorMessage(err);
@@ -277,15 +244,6 @@ function parseArguments(args: string | Record<string, unknown>): Record<string, 
   }
 }
 
-function isRegisteredCustomSkill(toolName: string, apiKeyId: string): boolean {
-  const decodedName = decodeSkillToolName(toolName);
-  const [name, version] = decodedName.includes("@")
-    ? decodedName.split("@", 2)
-    : [decodedName, undefined];
-  const identifier = version ? `${name}@${version}` : name;
-  return skillRegistry.getSkill(identifier, apiKeyId) != null;
-}
-
 /**
  * Build a native Responses API `web_search_call` output item from an executed
  * web-search fallback call. OpenAI Responses clients (Codex CLI, pi-web-access,
@@ -338,24 +296,12 @@ export async function handleToolCallExecution(
   modelId: string,
   context: ExecutionContext
 ): Promise<any> {
-  // Only intercept tool_use blocks that resolve to a builtin handler or a
-  // registered custom skill. Unknown tool names are forwarded untouched so
-  // client-native tools (Bash, Read, etc.) are not turned into Skill-not-found
-  // tool_result blocks appended back into the assistant response. See #2815.
-
-  // Ensure the registry cache is warm for this apiKeyId before filtering.
-  // isRegisteredCustomSkill() reads registeredSkills synchronously, so on a
-  // cold/fresh process a skill that exists only in the DB would be missed
-  // (false negative → silently skipped). Mirror the pattern used in
-  // open-sse/mcp-server/tools/skillTools.ts. loadFromDatabase() is a no-op
-  // when the cache is already warm (TTL = 60 s), so repeated calls are cheap.
-  await skillRegistry.loadFromDatabase(context.apiKeyId);
-
+  // Only intercept tool_use blocks that resolve to a builtin handler. Unknown tool
+  // names are forwarded untouched so client-native tools (Bash, Read, etc.) are not
+  // turned into tool_result blocks appended back into the assistant response. See #2815.
   const toolCalls = extractToolCalls(response, modelId).filter((call) => {
     if (typeof call?.name !== "string" || !call.name) return false;
-    if (resolveBuiltinHandlerName(call.name, context)) return true;
-    if (context.customSkillExecutionEnabled === false) return false;
-    return isRegisteredCustomSkill(call.name, context.apiKeyId);
+    return Boolean(resolveBuiltinHandlerName(call.name, context));
   });
 
   if (toolCalls.length === 0) {
@@ -467,15 +413,12 @@ export async function classifyServerOwnedCalls(
   context: ExecutionContext
 ): Promise<{ serverOwned: ToolCall[]; clientNative: ToolCall[] }> {
   const builtinSet = new Set(context.builtinToolNames || []);
-  const customSet = new Set(context.injectedCustomSkillNames || []);
 
   const serverOwned: ToolCall[] = [];
   const clientNative: ToolCall[] = [];
 
   for (const call of toolCalls) {
     if (builtinSet.has(call.name)) {
-      serverOwned.push(call);
-    } else if (context.customSkillExecutionEnabled && customSet.has(call.name)) {
       serverOwned.push(call);
     } else {
       clientNative.push(call);
@@ -515,51 +458,15 @@ export async function executeServerOwned(
 
   for (const call of calls) {
     const builtinHandlerName = resolveBuiltinHandlerName(call.name, context);
-    const isMemoryBuiltin = builtinHandlerName && MEMORY_TOOL_NAMES.has(builtinHandlerName);
-    const isOrdinaryBuiltin = builtinHandlerName && builtinHandlerName in builtinSkills;
-    const isCustomSkill =
-      !builtinHandlerName &&
-      context.customSkillExecutionEnabled &&
-      context.injectedCustomSkillNames?.includes(call.name);
 
-    const executeFn = async (executionId: string): Promise<unknown> => {
-      if (isMemoryBuiltin) {
-        const handlerName = builtinHandlerName as keyof typeof memoryBuiltinHandlers;
-        return memoryBuiltinHandlers[handlerName](call.arguments, {
-          apiKeyId: context.apiKeyId,
-          sessionId: context.sessionId,
-        });
-      }
-      if (isOrdinaryBuiltin) {
-        const handlerName = builtinHandlerName as keyof typeof builtinSkills;
-        return builtinSkills[handlerName](call.arguments, {
+    const executeFn = async (_executionId: string): Promise<unknown> => {
+      if (builtinHandlerName) {
+        return builtinSkills[builtinHandlerName](call.arguments, {
           apiKeyId: context.apiKeyId,
           sessionId: context.sessionId,
           provider: context.provider,
           model: context.model,
         });
-      }
-      if (isCustomSkill) {
-        const decodedName = decodeSkillToolName(call.name);
-        const [name, version] = decodedName.includes("@")
-          ? decodedName.split("@", 2)
-          : [decodedName, "latest"];
-        const skillName = version === "latest" ? name : `${name}@${version}`;
-        const execution = await skillExecutor.executeClaimed(
-          skillName,
-          call.arguments,
-          {
-            apiKeyId: context.apiKeyId,
-            sessionId: context.sessionId,
-          },
-          executionId
-        );
-        return (
-          execution.output ??
-          (execution.errorMessage
-            ? { error: toSafeSkillErrorMessage(execution.errorMessage) }
-            : { error: "Skill execution returned no output" })
-        );
       }
       throw new Error(`No handler for tool: ${call.name}`);
     };

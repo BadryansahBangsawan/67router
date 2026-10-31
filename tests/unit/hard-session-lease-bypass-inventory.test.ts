@@ -39,7 +39,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     "src/app/api/internal/codex-responses-ws/route.ts": 1,
     // PR #11390: rerank listing endpoint probes configured credentials so the
     // dashboard rerank selector only offers providers that can actually serve.
-    "src/app/api/memory/rerank-providers/route.ts": 1,
     "src/app/api/search/providers/route.ts": 3,
     "src/app/api/v1/_shared/elevenLabsProxy.ts": 1,
     // GHSA-3w2r: keyless providers (local zero-config defaults, keyless
@@ -62,8 +61,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // resolveLocalOverrideCredentials (_shared/videoModelResolution.ts), 2->1.
     "src/app/api/v1/music/generations/route.ts": 1,
     "src/app/api/v1/ocr/route.ts": 1,
-    "src/app/api/v1/providers/[provider]/embeddings/route.ts": 1,
-    "src/app/api/v1/rerank/route.ts": 2,
     "src/app/api/v1/search/route.ts": 2,
     "src/app/api/v1/segment/route.ts": 1,
     "src/app/api/v1/session-leases/route.ts": 1,
@@ -78,16 +75,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // credentials through getProviderCredentials with the connection allowlist
     // from resolveLocalSyncedEndpointRoute, and handles allRateLimited, so it is
     // fenced the same way as the two pre-existing sites.
-    // #15761: local embeddings resolve credentials through the serving-connection allowlist
-    // (getProviderCredentials(provider, null, servingIds)) — one more site (3 -> 4).
-    // GHSA-3w2r: keyless providers (local zero-config defaults, keyless
-    // remotes) look up an in-scope connection for a connection-scoped API key
-    // before running (chat's #9057 rule) — one extra scoped lookup per site.
-    "src/lib/embeddings/service.ts": 5,
-    // PR #11390: second site is the generic derived-provider listing fallback —
-    // read-only key presence probe used to decide whether a configured chat
-    // provider may appear in the memory embedding-source dropdown.
-    "src/lib/memory/embedding/index.ts": 2,
     "src/lib/search/executeWebSearch.ts": 2,
     "src/lib/skills/webFetchExecution.ts": 1,
     "src/sse/handlers/chat.ts": 2,
@@ -190,7 +177,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // 7a921299 (configurable semantic-cache embeddings): the provider picker reads the connection rows once.
     "src/app/api/settings/cache-config/embeddingOptions.ts": 1,
     "src/app/api/settings/export-json/route.ts": 1,
-    "src/app/api/settings/qdrant/embedding-models/route.ts": 1,
     "src/app/api/settings/route.ts": 1,
     "src/app/api/token-health/route.ts": 1,
     "src/app/api/translator/send/route.ts": 1,
@@ -224,10 +210,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     // #15485: the priority-0 move-to-top edit re-reads the row by id after reorderConnections (3 -> 4).
     "src/lib/db/providers.ts": 4,
     "src/lib/db/readCache.ts": 2,
-    // Local embedding providers: reads the active rows only to build the allowlist of
-    // connections whose default model does not conflict with the requested one; the
-    // connection itself is still selected by getProviderCredentials (class C).
-    "src/lib/embeddings/service.ts": 1,
     "src/lib/freeProviderRankings.ts": 1,
     "src/lib/guardrails/visionBridgeCredentials.ts": 2,
     "src/lib/kimi/tokenRefresh.ts": 1,

@@ -259,10 +259,10 @@ Runs on pull requests only.
 
 Runs after `build`. Blocks merge on failure.
 
-| Suite            | Validates                                                | Blocking                                                                                                      |
-| ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `test:vitest`    | MCP server (107 tools), autoCombo, cache — vitest runner | Yes                                                                                                           |
-| `test:vitest:ui` | UI component tests — vitest runner                       | **Blocking** — pre-existing failures are explicitly excluded in `vitest.config.ts`; new failures fail the job |
+| Suite            | Validates                                               | Blocking                                                                                                      |
+| ---------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `test:vitest`    | MCP server (97 tools), autoCombo, cache — vitest runner | Yes                                                                                                           |
+| `test:vitest:ui` | UI component tests — vitest runner                      | **Blocking** — pre-existing failures are explicitly excluded in `vitest.config.ts`; new failures fail the job |
 
 ### Nightly workflows (scheduled, advisory)
 

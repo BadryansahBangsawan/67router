@@ -460,9 +460,9 @@ export const updateSettingsSchema = z.object({
       })
     )
     .optional(),
-  // SkillsMP marketplace API key
+  // Legacy keys of the removed Skills marketplace: still accepted so a settings round-trip
+  // from an older install does not fail the strict schema; nothing reads them.
   skillsmpApiKey: z.string().max(200).optional(),
-  // Active skills provider (single source of truth for skills page)
   skillsProvider: z.enum(["skillsmp", "skillssh"]).optional(),
   // models.dev sync settings
   modelsDevSyncEnabled: z.boolean().optional(),

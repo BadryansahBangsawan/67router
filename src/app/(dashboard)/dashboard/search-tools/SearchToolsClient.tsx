@@ -29,7 +29,6 @@ const DEFAULT_CONFIG: ConfigState = {
   searchType: "web",
   fetchFormat: "markdown",
   fullPage: false,
-  rerankModel: "",
 };
 
 export default function SearchToolsClient() {

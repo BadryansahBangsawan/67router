@@ -4,23 +4,14 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Icon from "@/shared/components/Icon";
 
-type ConceptKey = "search" | "scrape" | "compare" | "rerank" | "auto";
+type ConceptKey = "search" | "scrape" | "compare" | "auto";
 
 interface ConceptItem {
   icon: string;
   key: ConceptKey;
   titleKey:
-    | "searchConceptTitle"
-    | "scrapeConceptTitle"
-    | "compareConceptTitle"
-    | "rerankConceptTitle"
-    | "autoConceptTitle";
-  descKey:
-    | "searchConceptDesc"
-    | "scrapeConceptDesc"
-    | "compareConceptDesc"
-    | "rerankConceptDesc"
-    | "autoConceptDesc";
+    "searchConceptTitle" | "scrapeConceptTitle" | "compareConceptTitle" | "autoConceptTitle";
+  descKey: "searchConceptDesc" | "scrapeConceptDesc" | "compareConceptDesc" | "autoConceptDesc";
 }
 
 const CONCEPTS: ConceptItem[] = [
@@ -36,12 +27,6 @@ const CONCEPTS: ConceptItem[] = [
     key: "compare",
     titleKey: "compareConceptTitle",
     descKey: "compareConceptDesc",
-  },
-  {
-    icon: "swap_vert",
-    key: "rerank",
-    titleKey: "rerankConceptTitle",
-    descKey: "rerankConceptDesc",
   },
   { icon: "bolt", key: "auto", titleKey: "autoConceptTitle", descKey: "autoConceptDesc" },
 ];

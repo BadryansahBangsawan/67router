@@ -8,7 +8,6 @@ import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import EmptyState from "@/shared/components/EmptyState";
 import Input from "@/shared/components/Input";
-import { SkillsConceptCard } from "@/shared/components/SkillsConceptCard";
 import { cn } from "@/shared/utils/cn";
 import { matchesSearch } from "@/shared/utils/turkishText";
 import { CoverageBar } from "./components/CoverageBar";
@@ -216,9 +215,6 @@ export function AgentSkillsPageClient(): JSX.Element {
         title={tSidebar("agentSkills")}
         description={tSidebar("agentSkillsSubtitle")}
       />
-      {/* Concept card — full width */}
-      <SkillsConceptCard variant="agent" />
-
       {/* Header: coverage + MCP/A2A bar + generate button */}
       <Card padding="sm" className="flex flex-col gap-3">
         {/* Coverage */}

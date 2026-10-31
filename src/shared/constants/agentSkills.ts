@@ -203,7 +203,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-mcp",
     name: "MCP Server",
     description:
-      "Connect to the 67router MCP server (99 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 30 permission scopes.",
+      "Connect to the 67router MCP server (97 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, providers, and audit tools across 27 permission scopes.",
     category: "api",
     area: "mcp",
     icon: "electrical_services",
@@ -230,7 +230,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-inference",
     name: "Inference (OpenAI-compatible)",
     description:
-      "The core OpenAI-compatible inference endpoints: chat completions, embeddings, audio transcription (STT), rerank, and the Responses API. The primary integration surface for AI agents.",
+      "The core OpenAI-compatible inference endpoints: chat completions, audio transcription (STT), and the Responses API. The primary integration surface for AI agents.",
     category: "api",
     area: "inference",
     icon: "hub",
@@ -385,9 +385,8 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "cli-plugins-skills",
-    name: "CLI: Skills & Memory",
-    description:
-      "Manage Omni Skills (list, install, test, remove) and persistent memory (search, add, clear) from the CLI.",
+    name: "CLI: Plugins",
+    description: "Manage plugins (list, install, scaffold) from the CLI.",
     category: "cli",
     area: "cli-plugins-skills",
     icon: "extension",

@@ -1,9 +1,9 @@
 /**
  * DeepInfra native text/image-to-video generation.
  *
- * DeepInfra's `/v1/inference/{model}` endpoint is already proven in this codebase for
- * reranking (`open-sse/handlers/rerank.ts` + `open-sse/config/rerankRegistry.ts`) — same
- * host, same Bearer auth, same non-OpenAI response shape. This reuses the stored
+ * DeepInfra's `/v1/inference/{model}` endpoint (also listed for reranking in
+ * `open-sse/config/rerankRegistry.ts`) uses the same host, Bearer auth and
+ * non-OpenAI response shape. This reuses the stored
  * `deepinfra` provider credential (already registered for chat) — no new credential flow.
  *
  * Confirmed against DeepInfra's own docs (https://deepinfra.com/<model>/api): the call is

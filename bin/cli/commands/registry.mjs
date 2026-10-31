@@ -1,5 +1,3 @@
-import { registerMemory } from "./memory.mjs";
-import { registerSkills } from "./skills.mjs";
 import { registerAudit } from "./audit.mjs";
 import { registerOAuth } from "./oauth.mjs";
 import { registerLogin } from "./login.mjs";
@@ -80,8 +78,6 @@ import { registerRadar } from "./radar.mjs";
 import { registerPacks } from "./packs.mjs";
 
 export function registerCommands(program) {
-  registerMemory(program);
-  registerSkills(program);
   registerAudit(program);
   registerOAuth(program);
   registerLogin(program);

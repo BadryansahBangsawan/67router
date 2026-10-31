@@ -242,8 +242,6 @@ test("T06 route payload validation uses validateBody in critical endpoints", () 
     "src/app/api/pricing/route.ts",
     "src/app/api/rate-limits/route.ts",
     "src/app/api/resilience/route.ts",
-    "src/app/api/v1/embeddings/route.ts",
-    "src/app/api/v1/rerank/route.ts",
     "src/app/api/oauth/[provider]/[action]/route.ts",
     "src/app/api/oauth/cursor/import/route.ts",
     "src/app/api/oauth/kiro/import/route.ts",

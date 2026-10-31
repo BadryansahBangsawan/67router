@@ -939,9 +939,9 @@ deliberately when the behavior changes.
 
 ### What is not covered
 
-- **Media, embeddings and data routes** (`/v1/embeddings`,
-  `/v1/audio/transcriptions`, `/v1/videos/generations`, `/v1/music/generations`,
-  `/v1/rerank`, `/v1/search`) never reach the registry. No
+- **Media and data routes** (`/v1/audio/*`,
+  transcriptions`/v1/videos/generations`, `/v1/music/generations`, `/v1/search`) never reach the
+  registry. No
   PII masking, credential masking or modality bridge runs there. Their only
   check is the legacy injection-guard middleware.
 - **Streamed responses** get no post-call guardrails: no `pii-masker` or
@@ -1075,7 +1075,7 @@ that accept user prompts. It respects `INJECTION_GUARD_MODE` (default `warn` = l
 | --------------- | ---------------------------------------------------------------------------------- | ------------ |
 | Text (existing) | `/v1/chat/completions`, `/v1/completions`                                          | warn         |
 | Generative      | `/v1/messages`, `/v1/responses`, `/v1/videos/generations`, `/v1/music/generations` | warn         |
-| Data            | `/v1/embeddings`, `/v1/rerank`, `/v1/search`                                       | warn         |
+| Data            | `/v1/search`                                                                       | warn         |
 
 Text extraction (`extractMessageContents`) covers `messages`/`input`/`prompt`/`query`+`documents`/`instructions`/`system`.
 

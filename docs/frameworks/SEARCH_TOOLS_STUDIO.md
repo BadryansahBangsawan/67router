@@ -30,7 +30,6 @@ three-tab Studio unifying web search, web scraping, and side-by-side provider co
 │                                          │ Type   [web | news]         │
 │                                          │ Full page [ ] (scrape)      │
 │                                          │ Format [md|text|html]       │
-│                                          │ Rerank model [∨]            │
 └──────────────────────────────────────────┴─────────────────────────────┘
 ```
 
@@ -40,11 +39,10 @@ three-tab Studio unifying web search, web scraping, and side-by-side provider co
 
 ### Search Tab
 
-Evolves the existing `SearchForm` + `ResultsPanel` + `RerankPanel` into a tab:
+Evolves the existing `SearchForm` + `ResultsPanel` into a tab:
 
 - Query → results (title, URL, snippet, relevance score).
 - Provider metadata in Config pane (cost, quota, status).
-- Rerank section: pick a rerank model, reorder results, show `positionDelta`.
 - Empty state with CTA when no search providers are configured.
 - Search history via `SearchHistory.tsx`.
 - Calls `POST /v1/search` (existing endpoint, no changes).
@@ -75,14 +73,13 @@ Runs the same query/URL across up to **4 providers in parallel** (D22):
 
 `SearchToolsConfigPane.tsx` — always visible, collapsible.
 
-| Field        | Notes                                                            |
-| ------------ | ---------------------------------------------------------------- |
-| Provider     | Dropdown with status badge (configured / missing / rate limited) |
-| Type         | `web` or `news` (search only)                                    |
-| Full page    | Toggle for scrape — fetches entire page vs first visible content |
-| Format       | `markdown`, `text`, or `html` (scrape only)                      |
-| Rerank model | Optional model for post-search reranking                         |
-| History      | Collapsible search history section                               |
+| Field     | Notes                                                            |
+| --------- | ---------------------------------------------------------------- |
+| Provider  | Dropdown with status badge (configured / missing / rate limited) |
+| Type      | `web` or `news` (search only)                                    |
+| Full page | Toggle for scrape — fetches entire page vs first visible content |
+| Format    | `markdown`, `text`, or `html` (scrape only)                      |
+| History   | Collapsible search history section                               |
 
 ---
 
@@ -95,7 +92,6 @@ Runs the same query/URL across up to **4 providers in parallel** (D22):
 | **Search**          | Fetches a list of web results (title, URL, snippet, relevance score) |
 | **Scrape**          | Extracts the full content of a URL (markdown, text or HTML)          |
 | **Compare**         | Runs the same query in N providers side-by-side                      |
-| **Rerank**          | Reorders results via LLM to improve query relevance                  |
 | **Auto (cheapest)** | Picks the cheapest available provider automatically                  |
 
 ---
@@ -145,7 +141,7 @@ Only one backend change was needed for this feature:
 | `src/app/(dashboard)/dashboard/search-tools/components/SearchConceptCard.tsx`     | Explainer cards (always visible)                  |
 | `src/app/(dashboard)/dashboard/search-tools/components/ProviderCatalog.tsx`       | Provider list with metadata                       |
 | `src/app/(dashboard)/dashboard/search-tools/components/ScrapeResult.tsx`          | Markdown preview + raw toggle                     |
-| `src/app/(dashboard)/dashboard/search-tools/components/tabs/SearchTab.tsx`        | Search + rerank tab                               |
+| `src/app/(dashboard)/dashboard/search-tools/components/tabs/SearchTab.tsx`        | Search tab                                        |
 | `src/app/(dashboard)/dashboard/search-tools/components/tabs/ScrapeTab.tsx`        | Scrape tab                                        |
 | `src/app/(dashboard)/dashboard/search-tools/components/tabs/CompareTab.tsx`       | Multi-provider compare tab                        |
 | `src/app/(dashboard)/dashboard/search-tools/hooks/useScrapeFetch.ts`              | Scrape fetch hook                                 |
