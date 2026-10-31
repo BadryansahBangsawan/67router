@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 /**
- * F4 (wave-2/3 checkpoint §6.11): MCP/A2A step hints use ICU *arguments* (`Run via {code}`).
+ * F4 (wave-2/3 checkpoint §6.11): MCP step hints use ICU *arguments* (`Run via {code}`).
  * t.rich takes functions only for <tag> placeholders, so `code: (chunks) => <code/>` rendered a
  * function ("Functions are not valid as a React child") and a node is a type error. The helper
  * passes sentinels through the real ICU formatter and swaps them for nodes.
@@ -14,7 +14,13 @@ import { interpolateNodes, nodeArgs } from "@/shared/utils/interpolateNodes";
 import en from "@/i18n/messages/en.json";
 
 const t = createTranslator({ locale: "en", messages: en as never, namespace: "mcpDashboard" });
-const ta = createTranslator({ locale: "en", messages: en as never, namespace: "a2aDashboard" });
+// The A2A dashboard (whose a2aStep2 hint used three arguments) was removed in 67router; an
+// inline message keeps the several-arguments case covered.
+const tm = createTranslator({
+  locale: "en",
+  messages: { demo: { multi: "Send to {code1} with {code2} or {code3}" } },
+  namespace: "demo",
+});
 
 describe("interpolateNodes", () => {
   it("renders the mcpStep1 hint with its command as a <code> node", () => {
@@ -32,16 +38,16 @@ describe("interpolateNodes", () => {
     expect(container.querySelector("code")?.textContent).toBe("omniroute --mcp");
   });
 
-  it("handles several arguments in one message (a2aStep2)", () => {
+  it("handles several arguments in one message", () => {
     const { container } = render(
       <p>
         {interpolateNodes(
-          (ta as never as (k: string, v: object) => string)(
-            "a2aStep2",
+          (tm as never as (k: string, v: object) => string)(
+            "multi",
             nodeArgs(["code1", "code2", "code3"])
           ),
           {
-            code1: <code>/a2a</code>,
+            code1: <code>/v1/chat</code>,
             code2: <code>message/send</code>,
             code3: <code>message/stream</code>,
           }
@@ -49,10 +55,11 @@ describe("interpolateNodes", () => {
       </p>
     );
     expect([...container.querySelectorAll("code")].map((c) => c.textContent)).toEqual([
-      "/a2a",
+      "/v1/chat",
       "message/send",
       "message/stream",
     ]);
+    expect(container.textContent).toBe("Send to /v1/chat with message/send or message/stream");
     expect(container.textContent).not.toMatch(/\u0000/);
   });
 
