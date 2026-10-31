@@ -20,38 +20,6 @@ Ha atọ anaghị adabere n’otu ibe ha — họrọ ngwakọta ọ bụla.
 
 ## Osisi Mkpebi
 
-## 1. A2A — Onye nnọchi anya nye Onye nnọchi anya
-
-**Nkọwapụta:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kaadị Onye nnọchi anya:** `GET /.well-known/agent.json`
-
-### Mgbe a ga-eji ya
-
-- Mgbe ị na-ewu sistemụ nwere ọtụtụ ndị nnọchi anya ebe OmniRoute bụ otu n’ime ndị otu ya
-- Mgbe ị na-enye ndị nnọchi anya nọ na framework dịka Google ADK ma ọ bụ netwọkụ ndị nnọchi anya izugbe ohere iji ọgụgụ isi ntụgharị ụzọ nke OmniRoute (smart-routing, quota-management, wdg.)
-- Mgbe ị na-etinye OmniRoute n’azụ ụzọ ọkọlọtọ maka nchọpụta + ịkpọ ọrụ
-
-### Metọd
-
-- `message/send` — zipụ ozi, nata nzaghachi sync
-- `message/stream` — zipụ ozi + nata mmemme ọganihu a na-ebufe site na SSE
-- `tasks/get` — jiri ID gụọ ọrụ
-- `tasks/cancel` — kagbuo ọrụ na-aga n’ihu
-
-### Nkà arụnyere n’ime ya (6)
-
-- `smart-routing` — ziga prompt site na ngwakọta kacha mma
-- `quota-management` — kọọ ọnọdụ quota nke provider ọ bụla
-- `provider-discovery` — depụta provider arụnyere yana ikike ha
-- `cost-analysis` — tụọ ọnụ ahịa arịrịọ/mkparịta ụka
-- `health-report` — chịkọta ọnọdụ breaker/cooldown/lockout nke provider ọ bụla
-- `list-capabilities` — depụta nkà na metadata niile onye nnọchi anya nwere
-
-### Nkọwa miri emi
-
-Lee [A2A-SERVER.md](./A2A-SERVER.md) maka nkọwa ụzọ mbufe, nhazi kaadị onye nnọchi anya, nhazi TTL nke ọrụ, na template maka ịgbakwunye nkà ọhụrụ.
-
 ## 2. ACP — Ndebanye Aha Ndị Nnọchi Anya CLI
 
 **Ebe njedebe OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Lee [ndebanye aha ACP na ndị mbido](./ACP.md) maka ọnọdụ na oke ndị ah
 
 ## Ihe Nlereanya Njikọta
 
-### Chọpụta ikike A2A nke OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Ọ na-eweghachi Agent Card nke nwere nkà 6 niile, ụzọ mbufe, na ụdị.
-
-### Kpọọ OmniRoute dị ka agent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Depụta ndị agent CLI arụnyere site na ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Hụkwa
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — nkọwa miri emi gbasara A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — njikọ CLI mpụga (na-eji ACP)
 - [SKILLS.md](./SKILLS.md) — usoro Skills (dị iche na skills A2A — sandbox mmezu mpaghara)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — ntụaka endpoint

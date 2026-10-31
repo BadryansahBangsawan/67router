@@ -100,8 +100,6 @@ App Router เปิดให้ใช้งานทั้ง UI แดชบ�
 | พาธ                                                                           | วัตถุประสงค์                                    |
 | ----------------------------------------------------------------------------- | ----------------------------------------------- |
 | `api/`                                                                        | เส้นทาง HTTP API ทั้งหมด (ดูรายละเอียดด้านล่าง) |
-| `a2a/`                                                                        | เอนด์พอยต์ A2A JSON-RPC 2.0 (`POST /a2a`)       |
-| `.well-known/agent.json/`                                                     | เอกสารการค้นหา A2A Agent Card                   |
 | `(dashboard)/`                                                                | UI แดชบอร์ด (กลุ่มเส้นทาง ไม่มีคำนำหน้า URL)    |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | โฟลว์การยืนยันตัวตน                             |
 | `landing/`                                                                    | หน้าเพื่อการตลาด/หน้าแลนดิ้ง                    |
@@ -773,13 +771,6 @@ bin/
 4. เพิ่มการทดสอบภายใต้ `open-sse/mcp-server/__tests__/`
 5. อัปเดต [MCP-SERVER.md](../frameworks/MCP-SERVER.md)
 
-### เพิ่มทักษะ A2A ใหม่
-
-ดู [A2A-SERVER.md § การเพิ่มทักษะใหม่](../frameworks/A2A-SERVER.md) ทักษะอยู่ใน
-`src/lib/a2a/skills/` และลงทะเบียนผ่านตัวจัดการงาน A2A
-
----
-
 ## 11. ข้อตกลงร่วมกัน
 
 - **รูปแบบโค้ด**: เยื้อง 2 ช่อง, ใช้เครื่องหมายอัญประกาศคู่, ความกว้าง 100 อักขระ, ใช้ semicolon,
@@ -846,7 +837,6 @@ bin/
   และ lockout
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — การให้คะแนนและกลยุทธ์ของ Auto Combo
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — แค็ตตาล็อกเครื่องมือ MCP และรูปแบบการรับส่งข้อมูลทั้งหมด
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — ความสามารถและการค้นหาบริการตามโปรโตคอล A2A
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — การบีบอัดด้วย RTK และ Caveman
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — การผสานรวม CLI
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (หากมี), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — เป้าหมายการนำไปใช้งาน

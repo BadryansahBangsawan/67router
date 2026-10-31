@@ -8501,7 +8501,7 @@ paths:
                 path:
                   type: string
                   minLength: 1
-                  pattern: "^/(?:api/|v1/|v1beta/|a2a|\\.well-known/agent\\.json)"
+                  pattern: "^/(?:api/|v1/|v1beta/)"
                   description: Same-origin OmniRoute API path, optionally including a query string.
                 headers:
                   type: object
@@ -9559,14 +9559,6 @@ paths:
       tags:
         - OmnirouteApiCatchAll
       summary: "PUT <omnirouteApiCatchAll>"
-      responses:
-        "200":
-          description: OK
-  /api/a2a/status:
-    get:
-      tags:
-        - A2a
-      summary: "GET a2a › status"
       responses:
         "200":
           description: OK

@@ -2,7 +2,6 @@
 /** Fetches per-source task detail on drawer open + approve/cancel/repeat actions. */
 import { useEffect, useState } from "react";
 import type { OrchNode } from "../model/orchestrationTypes";
-import type { A2ATask } from "@/lib/a2a/taskManager";
 import type { ConductorTaskDetail } from "@/lib/conductor/hubProxy";
 
 // Client-safe stand-in for sanitizeErrorMessage (server-only, breaks the client bundle — #10692): only our own `HTTP <status>` / `RPC <code>` errors and AbortError pass through verbatim, everything else collapses to a generic string. `RPC <code>` carries the JSON-RPC error CODE only — never the upstream `error.message`, which is attacker/upstream-controlled text (Hard Rule #12).
@@ -58,60 +57,17 @@ function routeFor(node: OrchNode): SourceRoute {
  * EVERY field the target route treats as mandatory, not merely one of them (a partially
  * recoverable detail is not recoverable: a POST missing one required field 400s, which is
  * an enabled button that cannot work):
- *   - a2a → `POST /a2a`, JSON-RPC `message/send` (`src/app/a2a/route.ts`) — only
- *     `messages` is required (`skill` defaults to `"smart-routing"`, `metadata` is
- *     optional), so that is the only field guarded here.
  *   - conductor → `POST /api/conductor/tasks` (D1, `src/app/api/conductor/tasks/route.ts`)
  *     — `repoUrl` and `prompt` are both `z.string().min(1)` (required); `ConductorTaskDetail`
  *     leaves `repo`/`prompt` independently nullable, so either one missing must null out
  *     the whole request.
  */
-/**
- * Strips `memoryHits` from the metadata a repeat re-sends. `metadata.memoryHits` is
- * OBSERVABILITY written by the previous run (`src/lib/a2a/taskExecution.ts`) — never
- * caller input — so echoing it back would make the new task be born carrying the old
- * run's memory snippets, and would keep showing them in the drawer even with the
- * `OMNIROUTE_A2A_MEMORY_HITS=0` kill-switch on. `taskManager.createTask` no longer aliases
- * `metadata` into `input`, but historical tasks persisted before that fix still carry the
- * hits inside `input.metadata`, so the repeat path must drop them too.
- * Returns `undefined` for a missing/non-object metadata so the JSON body omits the field
- * entirely (the route treats `params.metadata` as optional).
- */
-function withoutMemoryHits(metadata: unknown): Record<string, unknown> | undefined {
-  if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) return undefined;
-  const rest = { ...(metadata as Record<string, unknown>) };
-  delete rest.memoryHits;
-  return rest;
-}
-
 /** Builds the JSON-body `RequestInit` shared by every `repeatReqFor*` source builder below. */
 function postJson(body: unknown): RequestInit {
   return {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
-  };
-}
-
-/** a2a repeat builder — `POST /a2a`, JSON-RPC `message/send` from `detail.input`. */
-function repeatReqForA2a(
-  nodeId: string,
-  detail: unknown
-): { url: string; init: RequestInit } | null {
-  const d = detail as A2ATask | null;
-  if (!d?.input?.messages?.length) return null;
-  return {
-    url: "/a2a",
-    init: postJson({
-      jsonrpc: "2.0",
-      id: nodeId,
-      method: "message/send",
-      params: {
-        skill: d.input.skill,
-        messages: d.input.messages,
-        metadata: withoutMemoryHits(d.input.metadata),
-      },
-    }),
   };
 }
 
@@ -143,7 +99,6 @@ export function repeatReqFor(
   node: OrchNode,
   detail: unknown
 ): { url: string; init: RequestInit } | null {
-  if (node.id.startsWith("a2a:")) return repeatReqForA2a(node.id, detail);
   if (node.id.startsWith("conductor:task:")) return repeatReqForConductor(detail);
   return null;
 }
@@ -160,16 +115,11 @@ function prefixedNodeId(prefix: string, id: unknown): string | null {
  * (`mergeSnapshot.ts`), so the raw upstream id is never returned on its own. Response
  * envelopes, verified against the live routes:
  *   - conductor (`POST /api/conductor/tasks`): `{ task_id }`.
- *   - a2a (`POST /a2a`, JSON-RPC `message/send`): `{ result: { task: { id } } }`.
  */
 export function newNodeIdFrom(node: OrchNode, body: unknown): string | null {
   if (!body || typeof body !== "object") return null;
   const b = body as Record<string, unknown>;
   if (node.id.startsWith("conductor:task:")) return prefixedNodeId("conductor:task:", b.task_id);
-  if (node.id.startsWith("a2a:")) {
-    const result = b.result as { task?: { id?: unknown } } | undefined;
-    return prefixedNodeId("a2a:", result?.task?.id);
-  }
   return null;
 }
 
@@ -256,19 +206,6 @@ function useFetchDetail(
 }
 
 /**
- * A JSON-RPC endpoint can report a failure with an HTTP 200: `/a2a`'s `jsonRpcError()`
- * only maps a few codes to 4xx/5xx and defaults to `status: 200`
- * (`src/app/a2a/route.ts`). `res.ok` alone would then render the success toast for a run
- * that never happened, so the `/a2a` action also inspects the envelope. Only the numeric
- * `error.code` is surfaced (`RPC <code>`) — never the upstream `error.message`.
- */
-function jsonRpcErrorCode(body: unknown): number | undefined {
-  const b = body as { error?: { code?: unknown } } | undefined | null;
-  const code = b?.error?.code;
-  return typeof code === "number" ? code : b?.error ? -32603 : undefined;
-}
-
-/**
  * Reads an action response body ONCE, tolerating a non-JSON/empty body. A body that cannot be
  * parsed is not evidence of failure — the status already stood — so it yields `null` and the
  * action stays successful (it just has no new-task id to focus).
@@ -297,10 +234,6 @@ async function performAction(
     const res = await fetch(req.url, req.init);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const body = await readJsonBody(res);
-    if (req.url === "/a2a") {
-      const code = jsonRpcErrorCode(body);
-      if (code !== undefined) throw new Error(`RPC ${code}`);
-    }
     // The banner is not sticky: a retry (or any later action) that works clears whatever
     // detail/action error was on screen, so the drawer never shows a failure the operator
     // already recovered from.

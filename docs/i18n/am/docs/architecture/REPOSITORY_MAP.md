@@ -143,8 +143,6 @@ src/
 | `app/api/` (non-v1)                                                          | የአስተዳደር/አስተዳዳሪ መስመሮች (~60 ማውጫዎች፦ providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, ወዘተ።)                                                                                                                                            |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 መስመሮች (የአገልጋይ ቁጥጥር፣ የወኪል ሁኔታ/DNS/ማመሳሰያዎች፣ ማለፊያ፣ ሰርተፍኬት፣ upstream-CA)። LOCAL_ONLY + SPAWN_CAPABLE። `docs/frameworks/AGENTBRIDGE.md §7`ን ይመልከቱ።                                                                                                                                           |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ መስመሮች (ጥያቄዎች፣ ክፍለ-ጊዜዎች፣ አስተናጋጆች፣ የቀረጻ ሁነታዎች፣ ወደ ውጭ መላክ፣ ws)። LOCAL_ONLY + SPAWN_CAPABLE። `docs/frameworks/TRAFFIC_INSPECTOR.md §8`ን ይመልከቱ።                                                                                                                                  |
-| `app/a2a/`                                                                   | የA2A JSON-RPC 2.0 መግቢያ ነጥብ (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (ለማግኘት)                                                                                                                                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/`                                                 | የዳሽቦርድ UI ገጾች (50+ ክፍሎች፣ ~118 page.tsx ፋይሎች፦ providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, ወዘተ።)                                                                                                                                            |
 | `app/(dashboard)/dashboard/search-tools/`                                    | የSearch Tools Studio UI (3 ትሮች፦ Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md`ን ይመልከቱ                                                                                                                                                                    |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ዕቅድ 21)፦ `page.tsx` (ባለ3-ትር መዋቅር)፣ `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard)፣ `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab)፣ `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ሰነድ                                       | ዓላማ                                                          |
 | ----------------------------------------- | ------------------------------------------------------------ |
 | `MCP-SERVER.md`                           | MCP አገልጋይ፦ 110 መሣሪያዎች፣ 3 ማጓጓዣዎች፣ 33 ወሰኖች፣ REST መዳረሻ ነጥቦች     |
-| `A2A-SERVER.md`                           | A2A v0.3፦ JSON-RPC፣ 6 ክህሎቶች፣ REST አጋዥ መሣሪያዎች፣ የወኪል ካርድ       |
 | `AGENT_PROTOCOLS_GUIDE.md`                | የተዋሃደ መመሪያ፦ A2A ከ ACP እና Cloud Agents ጋር                     |
 | `SKILLS.md`                               | የክህሎቶች ማዕቀፍ (አብሮገነብ + የገበያ ቦታ + SkillsSH + ማጠሪያ)             |
 | `RADAR.md`                                | የRadar ነጻ-ሞዴል ካታሎግ ተደራቢ (`RADAR_ENABLED`፣ በነባሪ የጠፋ)          |
@@ -567,7 +564,6 @@ open-sse/
 - **አቅራቢ እያከሉ ነው?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider`ን ይከተሉ + ከ`docs/reference/PROVIDER_REFERENCE.md` ጋር ያመሳክሩ።
 - **መስመር እያከሉ ነው?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`።
 - **የMCP መሣሪያ እያከሉ ነው?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`።
-- **የA2A ክህሎት እያከሉ ነው?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`።
 - **በአካባቢዎ እያስኬዱ ነው?** `docs/guides/SETUP_GUIDE.md`።
 - **ሥምሪት እያደረጉ ነው?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`።
 - **ልቀት እያደረጉ ነው?** `docs/ops/RELEASE_CHECKLIST.md` (እና `/generate-release-cc` የClaude Code ክህሎት)።

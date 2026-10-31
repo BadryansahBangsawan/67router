@@ -20,38 +20,6 @@ Cả ba đều độc lập — có thể chọn bất kỳ tập hợp con nào
 
 ## Cây quyết định
 
-## 1. A2A — Agent-to-Agent
-
-**Đặc tả:** [A2A v0.3](https://a2a-protocol.org)
-**Điểm cuối OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Thẻ Agent:** `GET /.well-known/agent.json`
-
-### Khi nào nên sử dụng
-
-- Xây dựng hệ thống đa agent, trong đó OmniRoute là một trong các agent ngang hàng
-- Cung cấp khả năng định tuyến thông minh của OmniRoute (`smart-routing`, `quota-management`, v.v.) cho các agent trong những framework như Google ADK hoặc các mạng lưới agent tổng quát
-- Bao bọc OmniRoute phía sau một giao diện khám phá + gọi thực thi tiêu chuẩn
-
-### Phương thức
-
-- `message/send` — gửi một thông điệp và nhận phản hồi đồng bộ
-- `message/stream` — gửi thông điệp + nhận các sự kiện tiến trình được truyền phát qua SSE
-- `tasks/get` — đọc tác vụ theo ID
-- `tasks/cancel` — hủy một tác vụ đang chạy
-
-### Kỹ năng tích hợp sẵn (6)
-
-- `smart-routing` — định tuyến lời nhắc qua tổ hợp tối ưu
-- `quota-management` — báo cáo trạng thái hạn ngạch của từng nhà cung cấp
-- `provider-discovery` — liệt kê các nhà cung cấp đã cài đặt cùng khả năng của họ
-- `cost-analysis` — ước tính chi phí của một yêu cầu/cuộc hội thoại
-- `health-report` — tổng hợp trạng thái ngắt mạch/thời gian chờ/khóa của từng nhà cung cấp
-- `list-capabilities` — liệt kê các kỹ năng và siêu dữ liệu hiện có của agent
-
-### Tìm hiểu chuyên sâu
-
-Xem [A2A-SERVER.md](./A2A-SERVER.md) để biết chi tiết về phương thức truyền tải, cấu trúc thẻ agent, cấu hình TTL của tác vụ và mẫu để thêm kỹ năng mới.
-
 ## 2. ACP — Sổ đăng ký tác nhân CLI
 
 **Điểm cuối OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Cấu trúc phần thân cho POST (`customAgentBodySchema` trong `src/app/api/ac
 
 ## Ví dụ tích hợp
 
-### Khám phá các khả năng A2A của OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Trả về Agent Card chứa đầy đủ cả 6 kỹ năng, phương thức vận chuyển và phiên bản.
-
-### Gọi OmniRoute dưới dạng một tác nhân A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Định tuyến prompt này"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Liệt kê các tác nhân CLI đã cài đặt thông qua ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Xem thêm
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Tìm hiểu chuyên sâu về A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Các tích hợp CLI bên ngoài (sử dụng ACP)
 - [SKILLS.md](./SKILLS.md) — Khung kỹ năng (khác với kỹ năng A2A — sandbox thực thi cục bộ)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — tài liệu tham khảo về endpoint

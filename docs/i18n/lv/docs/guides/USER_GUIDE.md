@@ -1237,8 +1237,6 @@ Izmantojiet SSE URL `http://localhost:20128/api/mcp/sse` un Bearer API atslēgu,
 
 ### Pielāgošanas līmeņi
 
-MCP pašlaik definē 32 nosauktus pielāgošanas līmeņus. Katru Bearer atslēgu var ierobežot līdz konkrētiem līmeņiem — skatiet [MCP-SERVER.md](../frameworks/MCP-SERVER.md) par autoritatīvo pielāgošanas līmeņu un rīku inventāru un [A2A-SERVER.md](../frameworks/A2A-SERVER.md) par JSON-RPC shēmu.
-
 ---
 
 ## 🧠 Prasmju sistēma
@@ -1247,7 +1245,6 @@ OmniRoute piedāvā paplašināmu **prasmju ietvaru** (`src/lib/skills/`), lai a
 
 - **Tirgus lietotāja saskarne** — Pārlūkojiet un instalējiet prasmes no **Vadības paneļa → Prasmes**
 - **Atslēgu mērogi** — Ierobežojiet, kuras API atslēgas var izsaukt kuras prasmes
-- **Pielāgotas prasmes** — Novietojiet TypeScript failu mapē `src/lib/a2a/skills/`, reģistrējiet to, un tas uzreiz kļūst pieejams izsaukšanai caur A2A
 
 Pilna atsauce: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1332,7 +1329,6 @@ omniroute restore [<timestamp>]    # Atjaunot no momentuzņēmuma
 omniroute health                   # Detalizēta veselības informācija (pārtraucēji, kešatmiņa, atmiņa)
 omniroute quota                    # Pakalpojumu sniedzēja kvotas lietojums
 omniroute mcp status               # MCP servera statuss
-omniroute a2a status               # A2A servera statuss
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneļi
 omniroute reset-password           # Atiestatīt administratora paroli
 omniroute --mcp                    # Sākt MCP serveri pār stdio

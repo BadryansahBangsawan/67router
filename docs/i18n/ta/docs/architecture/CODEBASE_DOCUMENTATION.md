@@ -100,8 +100,6 @@ App Router, டாஷ்போர்டு UI மற்றும் பொது
 | பாதை                                                                          | நோக்கம்                                                           |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `api/`                                                                        | அனைத்து HTTP API வழித்தடங்களும் (கீழேயுள்ள விவரப் பிரிவைக் காண்க) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 முனைப்புள்ளி (`POST /a2a`)                       |
-| `.well-known/agent.json/`                                                     | A2A Agent Card கண்டறிதல் ஆவணம்                                    |
 | `(dashboard)/`                                                                | டாஷ்போர்டு UI (வழித்தடக் குழு, URL முன்னொட்டு இல்லை)              |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | அங்கீகாரச் செயல்பாடுகள்                                           |
 | `landing/`                                                                    | சந்தைப்படுத்தல்/இறங்குப் பக்கம்                                   |
@@ -772,13 +770,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/`-இன் கீழ் சோதனைகளைச் சேர்க்கவும்.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md)-ஐப் புதுப்பிக்கவும்.
 
-### புதிய A2A skill-ஐச் சேர்த்தல்
-
-[A2A-SERVER.md § புதிய Skill-ஐச் சேர்த்தல்](../frameworks/A2A-SERVER.md)-ஐப் பார்க்கவும். Skills
-`src/lib/a2a/skills/`-இல் இருக்கும்; அவை A2A task manager மூலம் பதிவுசெய்யப்படும்.
-
----
-
 ## 11. மரபுகள்
 
 - **Code பாணி**: 2-space indent, double quotes, 100 எழுத்து அகலம், semicolons,
@@ -845,7 +836,6 @@ bin/
   lockout பற்றிய ஆழமான விளக்கம்.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo மதிப்பீடு மற்றும் உத்திகள்.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — முழுமையான MCP கருவிப் பட்டியல் + போக்குவரத்து முறைகள்.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A நெறிமுறைத் திறன்கள் மற்றும் கண்டறிதல்.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman சுருக்கம்.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ஒருங்கிணைப்புகள்.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (இருந்தால்), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — நிறுவல் இலக்குகள்.

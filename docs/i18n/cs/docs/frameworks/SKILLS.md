@@ -258,12 +258,6 @@ Nastavení přenosu a přiřazení rozsahů oprávnění naleznete v souboru [MC
 
 ---
 
-## Integrace A2A
-
-`src/lib/skills/a2a.ts` exportuje deskriptor dovednosti A2A `memory_aware_routing` a pomocnou funkci `registerA2ASkill(registry)`. Vlastní dovednosti A2A se nacházejí v `src/lib/a2a/skills/` a jsou směrovány prostřednictvím `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Úplný životní cyklus úlohy naleznete v souboru [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Přidání nové vestavěné dovednosti
 
 1. **Definujte obslužnou funkci** v `src/lib/skills/builtins.ts` (nebo v souvisejícím souboru v adresáři `src/lib/skills/builtin/`). Signatura: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Informace o přidání vlastní dovednosti prostřednictvím systému pluginů n
 ## Viz také
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — registrace nástrojů MCP a transporty
-- [A2A-SERVER.md](./A2A-SERVER.md) — životní cyklus úloh A2A a směrování dovedností
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — úvod pro uživatele
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — zpracování požadavků a mapa komponent
 - Zdroj: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

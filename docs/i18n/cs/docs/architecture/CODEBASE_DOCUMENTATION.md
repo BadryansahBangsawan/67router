@@ -100,8 +100,6 @@ Segmenty nejvyšší úrovně v `src/app/`:
 | Cesta                                                                         | Účel                                                                 |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | `api/`                                                                        | Všechny trasy HTTP API (viz rozpis níže)                             |
-| `a2a/`                                                                        | Koncový bod A2A JSON-RPC 2.0 (`POST /a2a`)                           |
-| `.well-known/agent.json/`                                                     | Dokument pro zjišťování karty agenta A2A                             |
 | `(dashboard)/`                                                                | Uživatelské rozhraní řídicího panelu (skupina tras, bez prefixu URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Toky ověřování                                                       |
 | `landing/`                                                                    | Marketingová/vstupní stránka                                         |
@@ -773,13 +771,6 @@ Viz [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) a vyhrazená část v souboru
 4. Přidejte testy do `open-sse/mcp-server/__tests__/`.
 5. Aktualizujte [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Přidání nové dovednosti A2A
-
-Viz [A2A-SERVER.md § Přidání nové dovednosti](../frameworks/A2A-SERVER.md). Dovednosti se nacházejí v
-`src/lib/a2a/skills/` a registrují se prostřednictvím správce úloh A2A.
-
----
-
 ## 11. Konvence
 
 - **Styl kódu**: odsazení 2 mezerami, dvojité uvozovky, šířka 100 znaků, středníky,
@@ -847,7 +838,6 @@ Viz [A2A-SERVER.md § Přidání nové dovednosti](../frameworks/A2A-SERVER.md).
   a lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — hodnocení a strategie Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — kompletní katalog nástrojů MCP a transportních mechanismů.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — dovednosti protokolu A2A a jejich zjišťování.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — komprese RTK a Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integrace CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (pokud je k dispozici), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — cílová prostředí pro nasazení.

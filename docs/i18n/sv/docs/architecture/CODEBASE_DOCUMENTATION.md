@@ -100,8 +100,6 @@ Segment på toppnivå under `src/app/`:
 | Sökväg                                                                        | Syfte                                                       |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | `api/`                                                                        | Alla HTTP API-rutter (se uppdelningen nedan)                |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0-slutpunkt (`POST /a2a`)                    |
-| `.well-known/agent.json/`                                                     | Identifieringsdokument för A2A Agent Card                   |
 | `(dashboard)/`                                                                | Instrumentpanelens gränssnitt (ruttgrupp, inget URL-prefix) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentiseringsflöden                                        |
 | `landing/`                                                                    | Marknadsförings-/landningssida                              |
@@ -773,13 +771,6 @@ Se [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) och det särskilda avsnittet i
 4. Lägg till tester under `open-sse/mcp-server/__tests__/`.
 5. Uppdatera [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Lägg till en ny A2A-färdighet
-
-Se [A2A-SERVER.md § Lägga till en ny färdighet](../frameworks/A2A-SERVER.md). Färdigheter finns i
-`src/lib/a2a/skills/` och registreras via A2A-uppgiftshanteraren.
-
----
-
 ## 11. Konventioner
 
 - **Kodstil**: indrag med 2 blanksteg, dubbla citattecken, radbredd på 100 tecken, semikolon,
@@ -847,7 +838,6 @@ Se [A2A-SERVER.md § Lägga till en ny färdighet](../frameworks/A2A-SERVER.md).
   och lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — poängsättning och strategier för Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — fullständig katalog över MCP-verktyg och transporter.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — färdigheter och identifiering i A2A-protokollet.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- och Caveman-komprimering.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-integrationer.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (om den finns), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — distributionsmål.

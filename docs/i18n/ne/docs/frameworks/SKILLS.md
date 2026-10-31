@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A एकीकरण
-
-`src/lib/skills/a2a.ts` ले `memory_aware_routing` A2A कौशल वर्णनकर्ता र `registerA2ASkill(registry)` सहायक निर्यात गर्छ। अनुकूलन A2A कौशलहरू `src/lib/a2a/skills/` मा रहन्छन् र `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) मार्फत डिस्प्याच हुन्छन्। पूर्ण कार्य जीवनचक्रका लागि [A2A-SERVER.md](./A2A-SERVER.md) हेर्नुहोस्।
-
----
-
 ## नयाँ अन्तर्निर्मित कौशल थप्ने
 
 1. **ह्यान्डलर परिभाषित गर्नुहोस्** `src/lib/skills/builtins.ts` मा (वा `src/lib/skills/builtin/` अन्तर्गतको समानान्तर फाइलमा)। हस्ताक्षर: `(input, { apiKeyId, sessionId }) => Promise<output>`।
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## यो पनि हेर्नुहोस्
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP उपकरण दर्ता र ट्रान्सपोर्टहरू
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A कार्य जीवनचक्र र सीप प्रेषण
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — प्रयोगकर्ता-केन्द्रित परिचय
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — अनुरोध पाइपलाइन र कम्पोनेन्ट नक्सा
 - स्रोत: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

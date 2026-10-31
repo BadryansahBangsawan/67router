@@ -127,4 +127,3 @@ nell'ambiente di destinazione.
 - [Protocolli degli agenti](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contratti di avvio delle CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Strumenti CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)

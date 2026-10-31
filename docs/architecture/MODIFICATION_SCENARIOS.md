@@ -50,15 +50,6 @@ lastUpdated: 2026-10-18
 3. Assign to appropriate scope(s)
 4. Write tests (tool invocation logged to the `mcp_tool_audit` table)
 
-## Adding a New A2A Skill
-
-1. Create skill in `src/lib/a2a/skills/` (6 already exist: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities)
-2. Skill receives task context (messages, metadata) → returns structured result
-3. Register in `A2A_SKILL_HANDLERS` in `src/lib/a2a/taskExecution.ts`
-4. Expose in `src/app/.well-known/agent.json/route.ts` (Agent Card)
-5. Write tests in `tests/unit/`
-6. Document in `docs/frameworks/A2A-SERVER.md` skill table
-
 ## Adding a New Embedded Service
 
 1. Create installer in `src/lib/services/installers/{name}.ts` modeled on `ninerouter.ts` (use `runNpm` from `installers/utils.ts` — no shell interpolation, hard rule #13).

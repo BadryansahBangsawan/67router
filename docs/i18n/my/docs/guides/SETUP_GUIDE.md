@@ -247,26 +247,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **MCP စာရွက်စာတမ်းအပြည့်အစုံ:** [MCP Server README](../../open-sse/mcp-server/README.md) — tool 110 ခု၊ IDE config များ၊ Python/TS/Go client များ။
 
-### A2A ဖွဲ့စည်းသတ်မှတ်ခြင်း (Agent-to-Agent Protocol)
-
-Agent Card ကို စစ်ဆေးအတည်ပြုပါ-
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Task တစ်ခု ပို့ပါ-
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A စာရွက်စာတမ်းအပြည့်အစုံ:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0၊ skill များ၊ streaming၊ task lifecycle။
-
----
-
 ## အချိန်ကုန်ဆုံးမှု သတ်မှတ်ခြင်း
 
 ### အခြေခံ အချိန်ကုန်ဆုံးမှုများ

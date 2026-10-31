@@ -92,7 +92,7 @@ extensie verandert er niets.
 Simple Browser weer in een editortabblad in plaats van in een externe browser. Insluiten moet **expliciet op de server worden ingeschakeld** via
 `DASHBOARD_ALLOW_EMBED=vscode`, waardoor de HTML-pagina's worden aangeboden met
 `frame-ancestors 'self' vscode-webview:` in plaats van de standaardinstelling `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Het API-oppervlak (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) behoudt in
+`X-Frame-Options: DENY`. Het API-oppervlak (`/api`, `/v1`, `/v1beta`, `/healthz`) behoudt in
 beide gevallen de strikte headers.
 
 > ⚠️ **Dit is een build-time-vlag, geen runtime-vlag.** Next.js compileert `headers()` in het route-

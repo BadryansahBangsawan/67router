@@ -740,7 +740,6 @@ omniroute cache                        # 캐시 상태
 omniroute cache clear                  # 시맨틱 + 시그니처 캐시 삭제
 
 omniroute mcp status | restart         # MCP 서버 상태 / 재시작
-omniroute a2a status | card            # A2A 서버 상태 / 에이전트 카드
 
 omniroute tunnel list | create | stop  # 터널 관리(cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # 환경 변수 확인 / 설정(임시)

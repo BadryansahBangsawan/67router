@@ -586,7 +586,6 @@ Radar bersifat pilihan dan hanya menggunakan GET. Klien OmniRoute tidak mengungg
 - **🔑 Kontrol perutean per kunci** — sematkan kunci API ke satu model atau kombo dengan `forcedModel`, serta tambahkan atau hapus model dan kombo milik suatu kunci secara atomik (`/api/keys/{id}/access`). → [Referensi API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kontrol PII yang lebih terperinci** — pemilihan per jenis, hingga 20 pola penyamaran khusus yang tervalidasi, serta penghitung deteksi per jenis; penyamaran itu sendiri tetap bersifat opsional. → [Pagar Pengaman](docs/security/GUARDRAILS.md)
 - **🌍 67 bahasa** — dasbor, mirror dokumentasi, dan CLI, dengan `npm run i18n:add-locale` untuk menambahkan bahasa di seluruh bagian hanya dengan satu perintah. → [Panduan i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegasi A2A masuk ke armada agen Anda, keterampilan Conductor pada Kartu Agen, serta panel dasbor dengan obrolan suara tekan-untuk-bicara Faro. → [Server A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Penerimaan adaptif & perlindungan beban berlebih** — permintaan obrolan berat masuk antrean alih-alih menghasilkan 503, dengan sewa bergulir RPM atomik per koneksi. → [Panduan Ketahanan](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Pengurutan `/v1/models` kanonis** — satu blok berurutan yang dikelompokkan berdasarkan penyedia untuk setiap penyedia (kombo disematkan terlebih dahulu), stabil di semua sumber katalog. → [Referensi API](docs/reference/API_REFERENCE.md)
 - **🗜️ Penguatan kompresi** — perlindungan inflasi yang aktif secara default, paket Caveman untuk DE / FR / JA + bahasa Tionghoa (wényán), filter RTK untuk Gradle & .NET. → [Kompresi](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ Ekspos OmniRoute melalui **MCP**, **A2A**, **REST API**, **webhook**, atau **CLI
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integrasikan dengan Claude Desktop, Cursor, atau klien MCP apa pun</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP jarak jauh — <b>110 alat</b>, 33 cakupan (penegakan bersifat opsional), jejak audit lengkap</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Transportasi MCP streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Antaragen, <b>JSON-RPC 2.0</b> + SSE, 6 keterampilan</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Kompatibel dengan OpenAI — obrolan, embedding, gambar, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Kirim peristiwa permintaan / kuota ke Slack, Discord, Telegram, atau URL apa pun</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Jarak Jauh</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Kendalikan instans jarak jauh menggunakan token akses bercakupan</td></tr>
@@ -915,8 +913,6 @@ Ekspos OmniRoute melalui **MCP**, **A2A**, **REST API**, **webhook**, atau **CLI
 # Berikan rangkaian alat OmniRoute lengkap kepada Claude Code melalui MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Server MCP](docs/frameworks/MCP-SERVER.md) · [Server A2A](docs/frameworks/A2A-SERVER.md) · [Protokol Agen](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ Metrik kanonis pada 2026-10-18: **1.976 video unik** · **20.220.289 tayangan ya
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>110 alat MCP, konfigurasi IDE, klien Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Panduan Server MCP</a></b></td><td>Instalasi MCP, transport, dan referensi alat</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protokol JSON-RPC 2.0, keterampilan, streaming, pengelolaan tugas</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Panduan Server A2A</a></b></td><td>Kartu agen A2A, tugas, keterampilan, dan streaming</td></tr>
 </table>
 
 ### 📋 Proyek & Kualitas

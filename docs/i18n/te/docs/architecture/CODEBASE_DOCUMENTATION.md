@@ -100,8 +100,6 @@ App Router డ్యాష్బోర్డ్ UI మరియు పబ్ల�
 | పాత్                                                                          | ఉద్దేశ్యం                                          |
 | ----------------------------------------------------------------------------- | -------------------------------------------------- |
 | `api/`                                                                        | అన్ని HTTP API రూట్లు (దిగువ విభజనను చూడండి)       |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 ఎండ్పాయింట్ (`POST /a2a`)         |
-| `.well-known/agent.json/`                                                     | A2A Agent Card డిస్కవరీ డాక్యుమెంట్                |
 | `(dashboard)/`                                                                | డ్యాష్బోర్డ్ UI (రూట్ గ్రూప్, URL ప్రిఫిక్స్ లేదు) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ప్రామాణీకరణ ప్రవాహాలు                              |
 | `landing/`                                                                    | మార్కెటింగ్/ల్యాండింగ్ పేజీ                        |
@@ -772,13 +770,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` కింద పరీక్షలను జోడించండి.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md)ను నవీకరించండి.
 
-### కొత్త A2A skillను జోడించడం
-
-[A2A-SERVER.md § కొత్త Skillను జోడించడం](../frameworks/A2A-SERVER.md) చూడండి. Skills
-`src/lib/a2a/skills/`లో ఉంటాయి మరియు A2A task manager ద్వారా నమోదు చేయబడతాయి.
-
----
-
 ## 11. నియమాలు
 
 - **Code style**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -846,7 +837,6 @@ bin/
   లాకౌట్పై లోతైన వివరణ.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo స్కోరింగ్ మరియు వ్యూహాలు.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — పూర్తి MCP టూల్ కేటలాగ్ + ట్రాన్స్పోర్ట్లు.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A ప్రోటోకాల్ నైపుణ్యాలు మరియు డిస్కవరీ.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman కంప్రెషన్.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ఇంటిగ్రేషన్లు.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ఉంటే), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — డిప్లాయ్మెంట్ లక్ష్యాలు.

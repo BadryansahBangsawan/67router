@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — డైరెక్టరీ-వారీగా
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-కారకాల స్కోరింగ్
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP సర్వర్
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A సర్వర్
 - సోర్స్: `open-sse/` (400+ ఫైళ్లు, ~143K కోడ్ పంక్తులు)

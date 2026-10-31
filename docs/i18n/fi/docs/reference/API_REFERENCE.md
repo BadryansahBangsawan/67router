@@ -1883,48 +1883,10 @@ OmniRoute sisältää sisäänrakennetun Model Context Protocol -palvelimen, jos
 
 OmniRoute tarjoaa A2A (Agent-to-Agent) JSON-RPC 2.0 -päätepisteen sekä REST-kääreen tarkastelua ja hallintapaneelien käyttöä varten.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valinnainen, ellei OMNIROUTE_API_KEY ole asetettu
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Tuetut metodit (kaikki edellyttävät, että `settings.a2aEnabled` on käytössä):
-
-| Metodi           | Kuvaus                                                             |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | Synkroninen taitosuoritus; palauttaa `{task, artifacts, metadata}` |
-| `message/stream` | Saman taitojoukon suoritus SSE-suoratoistona                       |
-| `tasks/get`      | Hakee tehtävän tunnuksella `taskId`                                |
-| `tasks/cancel`   | Peruuttaa tehtävän tunnuksella `taskId`                            |
-
-Sisäänrakennetut taidot: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agenttikortti
-
-```bash
-GET /.well-known/agent.json
-```
-
-Palauttaa julkisen A2A-agenttikortin (nimi, kuvaus, ominaisuudet, taitoluettelo ja todennusmenetelmä) — välimuistissa julkisesti 1 tunnin ajan. Todennusta ei vaadita.
-
 ### REST-apurit
 
 | Metodi | Polku                        | Kuvaus                                                                                                               |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A:n käyttötila + tehtävätilastot + välimuistissa olevan agenttikortin yhteenveto                                   |
 | GET    | `/api/a2a/tasks`             | Listaa tehtävät — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Ei toteutettu REST-apurina — luo JSON-RPC-metodilla `message/send`)                                                 |
 | GET    | `/api/a2a/tasks/[id]`        | Hakee yhden tehtävän                                                                                                 |

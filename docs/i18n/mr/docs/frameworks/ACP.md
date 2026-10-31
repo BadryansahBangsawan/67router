@@ -119,4 +119,3 @@ SIGKILL पाठवते. लेगसी प्रॉम्प्ट टा�
 - [एजंट प्रोटोकॉल](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI लॉन्च करार](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI साधने](../reference/CLI-TOOLS.md)
-- [A2A सर्व्हर](./A2A-SERVER.md)

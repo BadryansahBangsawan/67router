@@ -100,8 +100,6 @@ App Router သည် dashboard UI နှင့် အများသုံး/�
 | လမ်းကြောင်း                                                                   | ရည်ရွယ်ချက်                                             |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------- |
 | `api/`                                                                        | HTTP API လမ်းကြောင်းအားလုံး (အောက်တွင် အသေးစိတ်ကြည့်ပါ) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 endpoint (`POST /a2a`)                 |
-| `.well-known/agent.json/`                                                     | A2A Agent Card ရှာဖွေဖော်ထုတ်ရေး စာရွက်စာတမ်း           |
 | `(dashboard)/`                                                                | Dashboard UI (လမ်းကြောင်းအုပ်စု၊ URL prefix မရှိ)       |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | စစ်မှန်ကြောင်းအတည်ပြုမှု လုပ်ငန်းစဉ်များ                |
 | `landing/`                                                                    | စျေးကွက်မြှင့်တင်ရေး/အဖွင့်စာမျက်နှာ                    |
@@ -773,13 +771,6 @@ Client တောင်းဆိုမှု
 4. `open-sse/mcp-server/__tests__/` အောက်တွင် test များ ထည့်ပါ။
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ကို အပ်ဒိတ်လုပ်ပါ။
 
-### A2A skill အသစ်တစ်ခု ထည့်သွင်းခြင်း
-
-[A2A-SERVER.md § Skill အသစ်တစ်ခု ထည့်သွင်းခြင်း](../frameworks/A2A-SERVER.md) ကို ကြည့်ပါ။ Skill များသည်
-`src/lib/a2a/skills/` တွင်ရှိပြီး A2A task manager မှတစ်ဆင့် မှတ်ပုံတင်ထားသည်။
-
----
-
 ## 11. သတ်မှတ်စည်းမျဉ်းများ
 
 - **Code style**: 2-space indent၊ double quotes၊ စာလုံး 100 အကျယ်၊ semicolon များနှင့်
@@ -844,7 +835,6 @@ Client တောင်းဆိုမှု
   lockout တို့ကို အသေးစိတ်လေ့လာရန်။
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo အမှတ်ပေးစနစ်နှင့် မဟာဗျူဟာများ။
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — MCP tool catalog အပြည့်အစုံ + transport များ။
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protocol စွမ်းရည်များနှင့် ရှာဖွေဖော်ထုတ်မှု။
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman compression။
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ပေါင်းစည်းမှုများ။
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ရှိလျှင်)၊ [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)၊ [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)၊ [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)၊ [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)၊ [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — deployment ပစ်မှတ်များ။

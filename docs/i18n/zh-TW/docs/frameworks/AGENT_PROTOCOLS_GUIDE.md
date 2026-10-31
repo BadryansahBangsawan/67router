@@ -20,38 +20,6 @@ OmniRoute 提供三種不同的代理程式相關介面。乍看之下它們很�
 
 ## 決策樹
 
-## 1. A2A — 代理程式對代理程式
-
-**規範：** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute 端點：** `POST /a2a`（JSON-RPC 2.0）
-**代理程式資訊卡：** `GET /.well-known/agent.json`
-
-### 使用時機
-
-- 建置以 OmniRoute 作為其中一個對等端的多代理程式系統
-- 將 OmniRoute 的路由智慧（智慧路由、配額管理等）提供給 Google ADK 等框架中的代理程式或通用代理程式網狀架構
-- 將 OmniRoute 封裝於標準的探索與呼叫介面之後
-
-### 方法
-
-- `message/send` — 提交訊息並接收同步回應
-- `message/stream` — 提交訊息並接收透過 SSE 串流傳送的進度事件
-- `tasks/get` — 依 ID 讀取任務
-- `tasks/cancel` — 取消執行中的任務
-
-### 內建技能（6 項）
-
-- `smart-routing` — 透過最佳組合路由提示詞
-- `quota-management` — 回報各提供者的配額狀態
-- `provider-discovery` — 列出已安裝的提供者及其功能
-- `cost-analysis` — 估算請求／對話的成本
-- `health-report` — 彙整各提供者的斷路器／冷卻／鎖定狀態
-- `list-capabilities` — 列舉代理程式可用的技能與中繼資料
-
-### 深入瞭解
-
-如需傳輸詳細資料、代理程式資訊卡結構、任務 TTL 設定，以及新增技能的範本，請參閱 [A2A-SERVER.md](./A2A-SERVER.md)。
-
 ## 2. ACP — CLI 代理程式登錄檔
 
 **OmniRoute 端點：** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ POST 的本文格式（`src/app/api/acp/agents/route.ts` 中的 `customAgentBody
 
 ## 整合範例
 
-### 探索 OmniRoute 的 A2A 功能
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-傳回包含全部 6 項技能、傳輸方式及版本資訊的 Agent Card。
-
-### 將 OmniRoute 作為 A2A 代理程式呼叫
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### 透過 ACP 列出已安裝的 CLI 代理程式
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## 另請參閱
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 深入解析
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 外部 CLI 整合（使用 ACP）
 - [SKILLS.md](./SKILLS.md) — 技能框架（不同於 A2A 技能——本機執行沙箱）
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — 端點參考

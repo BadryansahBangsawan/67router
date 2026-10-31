@@ -1875,48 +1875,10 @@ May kasamang naka-embed na server ng Model Context Protocol ang OmniRoute na may
 
 Naglalantad ang OmniRoute ng A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint at isang REST wrapper para sa inspeksiyon/paggamit ng dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opsyonal maliban kung nakatakda ang OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mga sinusuportahang method (lahat ay nakadepende sa `settings.a2aEnabled`):
-
-| Method           | Paglalarawan                                                                |
-| ---------------- | --------------------------------------------------------------------------- |
-| `message/send`   | Sabayang pagpapatupad ng skill; nagbabalik ng `{task, artifacts, metadata}` |
-| `message/stream` | Pagpapatupad gamit ang streaming SSE para sa parehong hanay ng mga skill    |
-| `tasks/get`      | Kunin ang isang task gamit ang `taskId`                                     |
-| `tasks/cancel`   | Kanselahin ang isang task gamit ang `taskId`                                |
-
-Mga built-in na skill: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayahan, katalogo ng skill, auth scheme) — pampublikong naka-cache nang 1 oras. Hindi kailangan ang auth.
-
 ### Mga REST helper
 
 | Method | Path                         | Paglalarawan                                                                                                             |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/a2a/status`            | Naka-enable ang A2A + mga istatistika ng task + buod ng naka-cache na agent card                                         |
 | GET    | `/api/a2a/tasks`             | Ilista ang mga task — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Hindi ipinatupad bilang REST helper — gumawa gamit ang JSON-RPC `message/send`)                                         |
 | GET    | `/api/a2a/tasks/[id]`        | Kunin ang isang task                                                                                                     |

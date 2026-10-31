@@ -390,34 +390,6 @@
       "description": "MCP-Auditprotokoll (Alias für audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Verfügbare A2A-Skills aus der Agentenkarte auflisten"
-    },
-    "invoke": {
-      "description": "Einen A2A-Skill aufrufen und die Aufgaben-ID zurückgeben",
-      "input": "JSON-Eingabeobjekt",
-      "input_file": "Pfad zur JSON-Eingabedatei",
-      "wait": "Vor der Rückgabe auf den Abschluss der Aufgabe warten",
-      "timeout": "Zeitüberschreitung beim Warten auf den Abschluss in ms (Standard: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-Aufgaben verwalten",
-      "list": {
-        "status": "Nach Status filtern",
-        "skill": "Nach Skill-ID filtern"
-      },
-      "watch": {
-        "description": "Aufgabenstatus bis zum Abschluss abfragen"
-      },
-      "stream": {
-        "description": "Ereignisse der Aufgabenausführung über SSE streamen"
-      },
-      "logs": {
-        "description": "Aufgabennachrichten und Artefakte anzeigen"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute-Autorisierungsrichtlinien verwalten",
     "list": {

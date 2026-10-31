@@ -1864,48 +1864,10 @@ OmniRoute obsahuje vestavěný server protokolu Model Context Protocol se 3 tran
 
 OmniRoute zpřístupňuje koncový bod A2A (Agent-to-Agent) využívající JSON-RPC 2.0 a také REST wrapper pro účely kontroly a použití v řídicím panelu.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # volitelné, pokud není nastavena proměnná OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podporované metody (všechny podmíněné nastavením `settings.a2aEnabled`):
-
-| Metoda           | Popis                                                               |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Synchronní spuštění dovednosti; vrací `{task, artifacts, metadata}` |
-| `message/stream` | Streamované spuštění stejné sady dovedností pomocí SSE              |
-| `tasks/get`      | Načte úlohu podle `taskId`                                          |
-| `tasks/cancel`   | Zruší úlohu podle `taskId`                                          |
-
-Vestavěné dovednosti: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vrací veřejnou kartu agenta A2A (název, popis, schopnosti, katalog dovedností, schéma ověřování) — veřejně ukládanou do mezipaměti na 1 hodinu. Ověření není vyžadováno.
-
 ### Pomocné endpointy REST
 
 | Metoda | Cesta                        | Popis                                                                                                             |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stav povolení A2A + statistiky úloh + souhrn karty agenta z mezipaměti                                            |
 | GET    | `/api/a2a/tasks`             | Vypíše úlohy — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Není implementováno jako pomocný endpoint REST — vytvořte prostřednictvím JSON-RPC `message/send`)               |
 | GET    | `/api/a2a/tasks/[id]`        | Načte jednu úlohu                                                                                                 |

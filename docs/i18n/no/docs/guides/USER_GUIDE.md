@@ -1239,8 +1239,6 @@ Bruk SSE-URL-en `http://localhost:20128/api/mcp/sse` og en Bearer API-nøkkel ge
 
 ### Tilgangsområder
 
-MCP definerer for øyeblikket 32 navngitte tilgangsområder. Hver Bearer-nøkkel kan begrenses til bestemte tilgangsområder — se [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for den autoritative oversikten over tilgangsområder og verktøy, og [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for JSON-RPC-skjemaet.
-
 ---
 
 ## 🧠 Ferdighetssystem
@@ -1249,7 +1247,6 @@ OmniRoute tilbyr et utvidbart **rammeverk for ferdigheter** (`src/lib/skills/`),
 
 - **Markedsplassgrensesnitt** — Bla gjennom og installer ferdigheter fra **Kontrollpanel → Ferdigheter**
 - **Omfang per nøkkel** — Begrens hvilke API-nøkler som kan bruke hvilke ferdigheter
-- **Egendefinerte ferdigheter** — Legg en TypeScript-fil i `src/lib/a2a/skills/`, registrer den, så kan den umiddelbart brukes via A2A
 
 Fullstendig referanse: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Gjenopprett fra et øyeblikksbilde
 omniroute health                   # Detaljert helsestatus (sikringsmekanismer, hurtigbuffer, minne)
 omniroute quota                    # Bruk av leverandørkvoter
 omniroute mcp status               # Status for MCP-serveren
-omniroute a2a status               # Status for A2A-serveren
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunneler
 omniroute reset-password           # Tilbakestill administratorpassordet
 omniroute --mcp                    # Start MCP-serveren over stdio

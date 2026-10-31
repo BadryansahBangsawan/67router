@@ -390,34 +390,6 @@
       "description": "MCP auditnapló (az audit --source mcp aliasa)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Az elérhető A2A-képességek listázása az ügynökkártyáról"
-    },
-    "invoke": {
-      "description": "Egy A2A-képesség meghívása és a feladatazonosító visszaadása",
-      "input": "JSON bemeneti objektum",
-      "input_file": "A JSON bemeneti fájl elérési útja",
-      "wait": "Várakozás a feladat befejezésére a visszatérés előtt",
-      "timeout": "A befejezésre való várakozás időkorlátja ms-ban (alapértelmezett: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-feladatok kezelése",
-      "list": {
-        "status": "Szűrés állapot szerint",
-        "skill": "Szűrés képességazonosító szerint"
-      },
-      "watch": {
-        "description": "A feladat állapotának lekérdezése a befejezésig"
-      },
-      "stream": {
-        "description": "A feladat-végrehajtási események streamelése SSE-n keresztül"
-      },
-      "logs": {
-        "description": "Feladatüzenetek és műtermékek megjelenítése"
-      }
-    }
-  },
   "policy": {
     "description": "Az OmniRoute engedélyezési szabályzatainak kezelése",
     "list": {

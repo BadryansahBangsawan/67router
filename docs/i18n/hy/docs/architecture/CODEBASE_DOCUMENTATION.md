@@ -100,8 +100,6 @@ App Router-ը տրամադրում է և՛ կառավարման վահանակի
 | Ուղի                                                                          | Նպատակ                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | `api/`                                                                        | Բոլոր HTTP API երթուղիները (տե՛ս ստորև ներկայացված բաժանումը)   |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 վերջնակետ (`POST /a2a`)                        |
-| `.well-known/agent.json/`                                                     | A2A Agent Card-ի հայտնաբերման փաստաթուղթ                        |
 | `(dashboard)/`                                                                | Կառավարման վահանակի UI (երթուղիների խումբ, առանց URL նախածանցի) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Նույնականացման հոսքեր                                           |
 | `landing/`                                                                    | Մարքեթինգային/մուտքային էջ                                      |
@@ -769,13 +767,6 @@ bin/
 4. Ավելացրեք թեստեր `open-sse/mcp-server/__tests__/`-ում։
 5. Թարմացրեք [MCP-SERVER.md](../frameworks/MCP-SERVER.md)-ը։
 
-### Ավելացնել նոր A2A հմտություն
-
-Տե՛ս [A2A-SERVER.md § Նոր հմտության ավելացում](../frameworks/A2A-SERVER.md)։ Հմտությունները գտնվում են
-`src/lib/a2a/skills/`-ում և գրանցվում են A2A առաջադրանքների կառավարչի միջոցով։
-
----
-
 ## 11. Պայմանավորվածություններ
 
 - **Կոդի ոճ**: 2 բացատով նահանջ, կրկնակի չակերտներ, 100 նիշ լայնություն, կետ-ստորակետեր,
@@ -843,7 +834,6 @@ bin/
   lockout-ի մանրամասն նկարագրություն։
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo-ի գնահատում և ռազմավարություններ։
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — MCP գործիքների ամբողջական կատալոգը և փոխանցման եղանակները։
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A արձանագրության հմտությունները և հայտնաբերումը։
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman սեղմում։
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ինտեգրումներ։
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (եթե առկա է), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — տեղակայման թիրախներ։

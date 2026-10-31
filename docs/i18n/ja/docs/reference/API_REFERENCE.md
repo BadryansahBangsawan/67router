@@ -1833,48 +1833,10 @@ OmniRoute には、3 つのトランスポート（stdio、SSE、streamable-http
 
 OmniRouteは、A2A（Agent-to-Agent）JSON-RPC 2.0エンドポイントに加えて、検査およびダッシュボード用途のRESTラッパーを公開します。
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEYが設定されていない限り省略可能
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-サポートされているメソッド（すべて`settings.a2aEnabled`によって制御されます）：
-
-| メソッド         | 説明                                                    |
-| ---------------- | ------------------------------------------------------- |
-| `message/send`   | スキルを同期実行し、`{task, artifacts, metadata}`を返す |
-| `message/stream` | 同じスキルセットをストリーミングSSEで実行               |
-| `tasks/get`      | `taskId`でタスクを取得                                  |
-| `tasks/cancel`   | `taskId`でタスクをキャンセル                            |
-
-組み込みスキル：`smart-routing`、`quota-management`、`provider-discovery`、`cost-analysis`、`health-report`。
-
-### エージェントカード
-
-```bash
-GET /.well-known/agent.json
-```
-
-公開A2Aエージェントカード（名前、説明、機能、スキルカタログ、認証方式）を返します。公開キャッシュの有効期間は1時間です。認証は不要です。
-
 ### RESTヘルパー
 
 | メソッド | パス                         | 説明                                                                                                             |
 | -------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET      | `/api/a2a/status`            | A2Aの有効状態、タスク統計、キャッシュ済みエージェントカードの概要                                                |
 | GET      | `/api/a2a/tasks`             | タスク一覧 — `?state=submitted\|working\|completed\|failed\|cancelled`、`?skill=`、`?limit=`（≤200）、`?offset=` |
 | POST     | `/api/a2a/tasks`             | （RESTヘルパーとしては未実装 — JSON-RPCの`message/send`で作成）                                                  |
 | GET      | `/api/a2a/tasks/[id]`        | 単一のタスクを取得                                                                                               |

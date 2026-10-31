@@ -1233,8 +1233,6 @@ Lo URL SSE `http://localhost:20128/api/mcp/sse` àti kọ́kọ́rọ́ API Bear
 
 ### Àwọn ààlà-àṣẹ
 
-MCP ń ṣàlàyé àwọn ààlà-àṣẹ 32 tí a dárúkọ lọ́wọ́lọ́wọ́. A lè fi kọ́kọ́rọ́ Bearer kọ̀ọ̀kan mọ́ àwọn ààlà-àṣẹ pàtó — wo [MCP-SERVER.md](../frameworks/MCP-SERVER.md) fún àkójọ àṣẹ àti irinṣẹ́ tó jẹ́ ìtọ́kasí pàtàkì, àti [A2A-SERVER.md](../frameworks/A2A-SERVER.md) fún schema JSON-RPC.
-
 ---
 
 ## 🧠 Ètò Àwọn Ọgbọ́n
@@ -1243,7 +1241,6 @@ OmniRoute ń pèsè **ìlànà ọgbọ́n** tí a lè mú gbòòrò sí i (`src
 
 - **Ìrísí Marketplace** — Ṣàwárí kí o sì fi àwọn ọgbọ́n sílẹ̀ láti **Dashboard → Skills**
 - **Àwọn scope fún kọ́kọ́rọ́ kọ̀ọ̀kan** — Dín àwọn ọgbọ́n tí kọ́kọ́rọ́ API kọ̀ọ̀kan lè pè lò kù
-- **Àwọn ọgbọ́n àdáni** — Fi fáìlì TypeScript kan sínú `src/lib/a2a/skills/`, forúkọ rẹ̀ sílẹ̀, yóò sì lè jẹ́ pípè lẹ́sẹ̀kẹsẹ̀ lórí A2A
 
 Ìtọ́kasí kíkún: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1328,7 +1325,6 @@ omniroute restore [<timestamp>]    # Mú padà láti inú àwòrán ìpamọ́
 omniroute health                   # Ìlera ní ẹ̀kúnrẹ́rẹ́ (breakers, cache, memory)
 omniroute quota                    # Lílo ìwọ̀n olùpèsè
 omniroute mcp status               # Ipò server MCP
-omniroute a2a status               # Ipò server A2A
 omniroute tunnel list|create|stop  # Àwọn tunnel Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tún ọ̀rọ̀ aṣínà alákóso ṣètò
 omniroute --mcp                    # Bẹ̀rẹ̀ server MCP lórí stdio

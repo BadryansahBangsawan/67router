@@ -241,26 +241,6 @@ Přidejte do nastavení MCP:
 
 **Úplná dokumentace MCP:** [README serveru MCP](../../open-sse/mcp-server/README.md) — 110 nástrojů, konfigurace IDE, klienti pro Python/TS/Go.
 
-### Nastavení A2A (protokol Agent-to-Agent)
-
-Ověřte kartu agenta:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Odešlete úlohu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Úplná dokumentace A2A:** [README serveru A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, dovednosti, streamování, životní cyklus úloh.
-
----
-
 ## Konfigurace časových limitů
 
 ### Základní časové limity

@@ -100,8 +100,6 @@ App Router ಡ್ಯಾಶ್ಬೋರ್ಡ್ UI ಮತ್ತು ಸಾರ್�
 | ಪಥ                                                                            | ಉದ್ದೇಶ                                              |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- |
 | `api/`                                                                        | ಎಲ್ಲಾ HTTP API ರೂಟ್ಗಳು (ಕೆಳಗಿನ ವಿವರ ನೋಡಿ)           |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 ಎಂಡ್ಪಾಯಿಂಟ್ (`POST /a2a`)          |
-| `.well-known/agent.json/`                                                     | A2A Agent Card ಡಿಸ್ಕವರಿ ಡಾಕ್ಯುಮೆಂಟ್                 |
 | `(dashboard)/`                                                                | ಡ್ಯಾಶ್ಬೋರ್ಡ್ UI (ರೂಟ್ ಗುಂಪು, URL ಪೂರ್ವಪ್ರತ್ಯಯವಿಲ್ಲ) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ದೃಢೀಕರಣ ಫ್ಲೋಗಳು                                     |
 | `landing/`                                                                    | ಮಾರ್ಕೆಟಿಂಗ್/ಲ್ಯಾಂಡಿಂಗ್ ಪುಟ                          |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` ಅಡಿಯಲ್ಲಿ ಪರೀಕ್ಷೆಗಳನ್ನು ಸೇರಿಸಿ.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ಅನ್ನು ನವೀಕರಿಸಿ.
 
-### ಹೊಸ A2A skill ಅನ್ನು ಸೇರಿಸಿ
-
-[A2A-SERVER.md § ಹೊಸ Skill ಸೇರಿಸುವುದು](../frameworks/A2A-SERVER.md) ನೋಡಿ. Skills ಗಳು
-`src/lib/a2a/skills/` ನಲ್ಲಿ ಇರುತ್ತವೆ ಮತ್ತು A2A task manager ಮೂಲಕ ನೋಂದಾಯಿಸಲ್ಪಡುತ್ತವೆ.
-
----
-
 ## 11. ಸಂಪ್ರದಾಯಗಳು
 
 - **Code style**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -844,7 +835,6 @@ bin/
   ಲಾಕ್ಔಟ್ನ ಆಳವಾದ ವಿವರಣೆ.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo ಸ್ಕೋರಿಂಗ್ ಮತ್ತು ಕಾರ್ಯತಂತ್ರಗಳು.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — ಸಂಪೂರ್ಣ MCP ಪರಿಕರ ಕ್ಯಾಟಲಾಗ್ + ಟ್ರಾನ್ಸ್ಪೋರ್ಟ್ಗಳು.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A ಪ್ರೋಟೋಕಾಲ್ ಕೌಶಲ್ಯಗಳು ಮತ್ತು ಅನ್ವೇಷಣೆ.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman ಕಂಪ್ರೆಷನ್.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ಏಕೀಕರಣಗಳು.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ಲಭ್ಯವಿದ್ದರೆ), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ನಿಯೋಜನಾ ಗುರಿಗಳು.

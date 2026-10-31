@@ -390,34 +390,6 @@
       "description": "MCP-auditointiloki (alias komennolle audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Luettele agenttikortin käytettävissä olevat A2A-taidot"
-    },
-    "invoke": {
-      "description": "Kutsu A2A-taitoa ja palauta tehtävän tunnus",
-      "input": "JSON-syöteobjekti",
-      "input_file": "JSON-syötetiedoston polku",
-      "wait": "Odota tehtävän valmistumista ennen palautusta",
-      "timeout": "Valmistumisen odotuksen aikakatkaisu millisekunteina (oletus: 60000)"
-    },
-    "tasks": {
-      "description": "Hallinnoi A2A-tehtäviä",
-      "list": {
-        "status": "Suodata tilan mukaan",
-        "skill": "Suodata taidon tunnuksen mukaan"
-      },
-      "watch": {
-        "description": "Tarkista tehtävän tila toistuvasti valmistumiseen asti"
-      },
-      "stream": {
-        "description": "Suoratoista tehtävän suoritustapahtumat SSE:n kautta"
-      },
-      "logs": {
-        "description": "Näytä tehtävän viestit ja artefaktit"
-      }
-    }
-  },
   "policy": {
     "description": "Hallinnoi OmniRoute-valtuutuskäytäntöjä",
     "list": {

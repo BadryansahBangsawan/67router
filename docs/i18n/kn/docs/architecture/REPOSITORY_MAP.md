@@ -143,8 +143,6 @@ src/
 | `app/api/` (v1 ಅಲ್ಲದ)                                                        | ನಿರ್ವಹಣೆ/ನಿರ್ವಾಹಕ ಮಾರ್ಗಗಳು (~60 ಡೈರೆಕ್ಟರಿಗಳು: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, ಇತ್ಯಾದಿ)                                                                                                                                |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 ಮಾರ್ಗಗಳು (ಸರ್ವರ್ ನಿಯಂತ್ರಣ, ಏಜೆಂಟ್ ಸ್ಥಿತಿ/DNS/ಮ್ಯಾಪಿಂಗ್ಗಳು, ಬೈಪಾಸ್, ಪ್ರಮಾಣಪತ್ರ, ಅಪ್ಸ್ಟ್ರೀಮ್-CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` ನೋಡಿ.                                                                                                                       |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ ಮಾರ್ಗಗಳು (ವಿನಂತಿಗಳು, ಸೆಷನ್ಗಳು, ಹೋಸ್ಟ್ಗಳು, ಕ್ಯಾಪ್ಚರ್-ಮೋಡ್ಗಳು, ರಫ್ತು, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` ನೋಡಿ.                                                                                                                            |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 ಪ್ರವೇಶ ಬಿಂದು (`POST /a2a`)                                                                                                                                                                                                                                                                           |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (ಅನ್ವೇಷಣೆ)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | ಡ್ಯಾಶ್ಬೋರ್ಡ್ UI ಪುಟಗಳು (50+ ವಿಭಾಗಗಳು, ~118 page.tsx ಫೈಲ್ಗಳು: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, ಇತ್ಯಾದಿ)                                                                                                                             |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ಟ್ಯಾಬ್ಗಳು: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` ನೋಡಿ                                                                                                                                                                     |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ಯೋಜನೆ 21): `page.tsx` (3-ಟ್ಯಾಬ್ ಶೆಲ್), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ದಸ್ತಾವೇಜು                                    | ಉದ್ದೇಶ                                                                          |
 | -------------------------------------------- | ------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                              | MCP ಸರ್ವರ್: 110 ಪರಿಕರಗಳು, 3 ಸಾಗಣೆ ವಿಧಾನಗಳು, 33 ವ್ಯಾಪ್ತಿಗಳು, REST ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, 6 ಕೌಶಲ್ಯಗಳು, REST ಸಹಾಯಕಗಳು, ಏಜೆಂಟ್ ಕಾರ್ಡ್                   |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | ಏಕೀಕೃತ ಮಾರ್ಗದರ್ಶಿ: A2A ವಿರುದ್ಧ ACP ವಿರುದ್ಧ Cloud Agents                         |
 | `SKILLS.md`                                  | ಕೌಶಲ್ಯಗಳ ಫ್ರೇಮ್ವರ್ಕ್ (ಅಂತರ್ನಿರ್ಮಿತ + ಮಾರುಕಟ್ಟೆಸ್ಥಳ + SkillsSH + ಸ್ಯಾಂಡ್ಬಾಕ್ಸ್)  |
 | `RADAR.md`                                   | Radar ಉಚಿತ-ಮಾದರಿ ಕ್ಯಾಟಲಾಗ್ ಓವರ್ಲೇ (`RADAR_ENABLED`, ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ನಿಷ್ಕ್ರಿಯ) |
@@ -567,7 +564,6 @@ open-sse/
 - **ಪ್ರೊವೈಡರ್ ಸೇರಿಸುತ್ತಿದ್ದೀರಾ?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` ಅನುಸರಿಸಿ + `docs/reference/PROVIDER_REFERENCE.md` ಜೊತೆಗೆ ಅಡ್ಡ-ಪರಿಶೀಲಿಸಿ.
 - **ರೂಟ್ ಸೇರಿಸುತ್ತಿದ್ದೀರಾ?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **MCP ಟೂಲ್ ಸೇರಿಸುತ್ತಿದ್ದೀರಾ?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **A2A ಸ್ಕಿಲ್ ಸೇರಿಸುತ್ತಿದ್ದೀರಾ?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **ಸ್ಥಳೀಯವಾಗಿ ರನ್ ಮಾಡುತ್ತಿದ್ದೀರಾ?** `docs/guides/SETUP_GUIDE.md`.
 - **ನಿಯೋಜಿಸುತ್ತಿದ್ದೀರಾ?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **ಬಿಡುಗಡೆ ಮಾಡುತ್ತಿದ್ದೀರಾ?** `docs/ops/RELEASE_CHECKLIST.md` (ಮತ್ತು `/generate-release-cc` Claude Code ಸ್ಕಿಲ್).

@@ -573,5 +573,4 @@ Zod-ვალიდაცია მოდულის ჩატვირთვ�
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — აღწერა დირექტორიების მიხედვით
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-ფაქტორიანი შეფასება
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP სერვერი
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A სერვერი
 - წყარო: `open-sse/` (400+ ფაილი, ~143K კოდის ხაზი)

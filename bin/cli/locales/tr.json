@@ -390,34 +390,6 @@
       "description": "MCP denetim günlüğü (audit --source mcp için diğer ad)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Aracı kartındaki kullanılabilir A2A becerilerini listele"
-    },
-    "invoke": {
-      "description": "Bir A2A becerisini çağır ve görev kimliğini döndür",
-      "input": "JSON girdi nesnesi",
-      "input_file": "JSON girdi dosyasının yolu",
-      "wait": "Dönmeden önce görevin tamamlanmasını bekle",
-      "timeout": "Tamamlanmayı bekleme zaman aşımı, ms cinsinden (varsayılan: 60000)"
-    },
-    "tasks": {
-      "description": "A2A görevlerini yönet",
-      "list": {
-        "status": "Duruma göre filtrele",
-        "skill": "Beceri kimliğine göre filtrele"
-      },
-      "watch": {
-        "description": "Tamamlanana kadar görev durumunu sorgula"
-      },
-      "stream": {
-        "description": "Görev yürütme olaylarını SSE üzerinden akışla aktar"
-      },
-      "logs": {
-        "description": "Görev mesajlarını ve yapıtlarını göster"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute yetkilendirme politikalarını yönet",
     "list": {

@@ -91,12 +91,12 @@ test("dry-run (default) returns report without writing any files", async () => {
       outputDir: tmpDir,
     });
 
-    // All 44 skills (43 canonical + ponytail external, #9058) should appear as
+    // All 43 skills (42 canonical + ponytail external, #9058) should appear as
     // generated (would-write) since dir is empty
     assert.equal(
       report.generated.length + report.unchanged.length,
-      44,
-      `Expected 44 total (generated+unchanged), got generated=${report.generated.length} unchanged=${report.unchanged.length}`
+      43,
+      `Expected 43 total (generated+unchanged), got generated=${report.generated.length} unchanged=${report.unchanged.length}`
     );
     assert.equal(report.errors.length, 0, `Unexpected errors: ${JSON.stringify(report.errors)}`);
 
@@ -112,7 +112,7 @@ test("dry-run (default) returns report without writing any files", async () => {
   }
 });
 
-test("dry-run generates report with 44 total (generated+unchanged)", async () => {
+test("dry-run generates report with 43 total (generated+unchanged)", async () => {
   const tmpDir = mkTmpDir();
   try {
     refreshCatalog();
@@ -122,7 +122,7 @@ test("dry-run generates report with 44 total (generated+unchanged)", async () =>
       outputDir: tmpDir,
     });
     const total = report.generated.length + report.unchanged.length;
-    assert.equal(total, 44);
+    assert.equal(total, 43);
   } finally {
     rmTmpDir(tmpDir);
   }
@@ -165,7 +165,7 @@ test("apply mode writes SKILL.md with valid frontmatter for omni-providers", asy
   }
 });
 
-test("apply mode writes all 44 SKILL.md files when no onlyIds filter", async () => {
+test("apply mode writes all 43 SKILL.md files when no onlyIds filter", async () => {
   const tmpDir = mkTmpDir();
   try {
     refreshCatalog();
@@ -176,7 +176,7 @@ test("apply mode writes all 44 SKILL.md files when no onlyIds filter", async () 
     });
 
     assert.equal(report.errors.length, 0, `Errors: ${JSON.stringify(report.errors)}`);
-    assert.equal(report.generated.length, 44);
+    assert.equal(report.generated.length, 43);
 
     // Verify all dirs exist
     const catalog = getCatalog();

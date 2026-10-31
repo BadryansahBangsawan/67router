@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **MCP-ის სრული დოკუმენტაცია:** [MCP სერვერის README](../../open-sse/mcp-server/README.md) — 110 ინსტრუმენტი, IDE კონფიგურაციები, Python/TS/Go კლიენტები.
 
-### A2A-ის დაყენება (Agent-to-Agent Protocol)
-
-შეამოწმეთ Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-გაგზავნეთ დავალება:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A-ის სრული დოკუმენტაცია:** [A2A სერვერის README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, უნარები, ნაკადური გადაცემა, დავალების სასიცოცხლო ციკლი.
-
----
-
 ## ტაიმაუტის კონფიგურაცია
 
 ### ძირითადი ტაიმაუტები

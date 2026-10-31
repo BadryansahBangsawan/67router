@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ଡିରେକ୍ଟୋରୀ-ଅନୁଯାୟୀ ବିବରଣୀ
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-ଫ୍ୟାକ୍ଟର୍ ସ୍କୋରିଂ
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ସର୍ଭର୍
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ସର୍ଭର୍
 - ଉତ୍ସ: `open-sse/` (400+ ଫାଇଲ୍, ~143K LOC)

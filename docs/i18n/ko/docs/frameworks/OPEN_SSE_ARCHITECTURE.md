@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — 디렉터리별 안내
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16개 요소 기반 점수 산정
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 서버
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 서버
 - 소스: `open-sse/` (400개 이상의 파일, 약 143K LOC)

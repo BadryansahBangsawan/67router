@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Cikakkun takardun MCP:** [README na Sabar MCP](../../open-sse/mcp-server/README.md) — kayan aiki 110, saitunan IDE, clients na Python/TS/Go.
 
-### Saitin A2A (Yarjejeniyar Agent-zuwa-Agent)
-
-Tabbatar da Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Aika wani aiki:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Cikakkun takardun A2A:** [README na Sabar A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ƙwarewa, watsawa kai tsaye, da zagayowar rayuwar aiki.
-
----
-
 ## Saitin Lokacin Jira
 
 ### Lokutan Jira na Asali

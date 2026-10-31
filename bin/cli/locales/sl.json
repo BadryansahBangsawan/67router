@@ -390,34 +390,6 @@
       "description": "Dnevnik revizij MCP (vzdevek za audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Prikaži razpoložljive zmožnosti A2A s kartice agenta"
-    },
-    "invoke": {
-      "description": "Prikliči zmožnost A2A in vrni ID opravila",
-      "input": "Vhodni objekt JSON",
-      "input_file": "Pot do vhodne datoteke JSON",
-      "wait": "Pred vrnitvijo počakaj na dokončanje opravila",
-      "timeout": "Časovna omejitev čakanja na dokončanje v ms (privzeto: 60000)"
-    },
-    "tasks": {
-      "description": "Upravljaj opravila A2A",
-      "list": {
-        "status": "Filtriraj po stanju",
-        "skill": "Filtriraj po ID-ju zmožnosti"
-      },
-      "watch": {
-        "description": "Preverjaj stanje opravila do dokončanja"
-      },
-      "stream": {
-        "description": "Pretakaj dogodke izvajanja opravila prek SSE"
-      },
-      "logs": {
-        "description": "Prikaži sporočila in artefakte opravila"
-      }
-    }
-  },
   "policy": {
     "description": "Upravljaj pravilnike za avtorizacijo OmniRoute",
     "list": {

@@ -143,8 +143,6 @@ src/
 | `app/api/` (v1 제외)                                                         | 관리/관리자 라우트(약 60개 디렉터리: 제공자, 조합, 설정, mcp, a2a, 평가, 메모리, 스킬, 웹훅, 규정 준수, 복원력, 모니터링, 터널, cli-tools 등)                                                                                                                                                               |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12개 라우트(서버 제어, 에이전트 상태/DNS/매핑, 우회, 인증서, 업스트림 CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` 참조.                                                                                                                                     |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16개 이상의 라우트(요청, 세션, 호스트, 캡처 모드, 내보내기, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` 참조.                                                                                                                              |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 진입점(`POST /a2a`)                                                                                                                                                                                                                                                                        |
-| `app/.well-known/agent.json/`                                                | A2A 에이전트 카드(검색)                                                                                                                                                                                                                                                                                     |
 | `app/(dashboard)/dashboard/`                                                 | 대시보드 UI 페이지(50개 이상의 섹션, 약 118개의 page.tsx 파일: 제공자, 조합, 설정, 메모리, 스킬, 웹훅, 평가, 감사, 배치, 캐시, 비용, 상태, 시스템, 활동 등)                                                                                                                                                 |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI(3개 탭: 검색/스크레이핑/비교 + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` 참조                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio(계획 21): `page.tsx`(3개 탭 셸), `components/`(MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/`(MemoriesTab, PlaygroundTab, EngineTab), `hooks/`(useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | 문서                                        | 용도                                                              |
 | ------------------------------------------- | ----------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP 서버: 도구 110개, 전송 방식 3개, 범위 33개, REST 엔드포인트   |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 스킬 6개, REST 도우미, 에이전트 카드          |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | 통합 가이드: A2A와 ACP 및 Cloud Agents 비교                       |
 | `SKILLS.md`                                 | 스킬 프레임워크(기본 제공 + 마켓플레이스 + SkillsSH + 샌드박스)   |
 | `RADAR.md`                                  | Radar 무료 모델 카탈로그 오버레이(`RADAR_ENABLED`, 기본값은 꺼짐) |
@@ -567,7 +564,6 @@ open-sse/
 - **프로바이더를 추가하나요?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider`를 따르고 `docs/reference/PROVIDER_REFERENCE.md`와 교차 확인하세요.
 - **라우트를 추가하나요?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route`와 `src/shared/validation/schemas.ts`를 참조하세요.
 - **MCP 도구를 추가하나요?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`을 참조하세요.
-- **A2A 스킬을 추가하나요?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`을 참조하세요.
 - **로컬에서 실행하나요?** `docs/guides/SETUP_GUIDE.md`를 참조하세요.
 - **배포하나요?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`를 참조하세요.
 - **릴리스하나요?** `docs/ops/RELEASE_CHECKLIST.md`와 `/generate-release-cc` Claude Code 스킬을 참조하세요.

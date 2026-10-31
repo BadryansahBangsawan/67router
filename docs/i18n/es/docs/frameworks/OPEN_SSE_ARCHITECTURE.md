@@ -573,5 +573,4 @@ El motor de enrutamiento tiene presupuestos de rendimiento estrictos:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — descripción directorio por directorio
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — puntuación de 16 factores
 - [MCP-SERVER.md](./MCP-SERVER.md) — servidor MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — servidor A2A
 - Fuente: `open-sse/` (más de 400 archivos, ~143K líneas de código)

@@ -90,7 +90,7 @@ tillägget.
 Simple Browser i stället för i en extern webbläsare. Inbäddning måste **aktiveras explicit på servern** via
 `DASHBOARD_ALLOW_EMBED=vscode`, vilket levererar HTML-sidorna med
 `frame-ancestors 'self' vscode-webview:` i stället för standardinställningen `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API-ytan (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) behåller de
+`X-Frame-Options: DENY`. API-ytan (`/api`, `/v1`, `/v1beta`, `/healthz`) behåller de
 strikta rubrikerna oavsett inställning.
 
 > ⚠️ **Det är en flagga för byggtid, inte för körning.** Next.js kompilerar `headers()` till ruttmanifestet,

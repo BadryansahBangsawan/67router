@@ -123,4 +123,3 @@ SIGKILL পাঠায়। লিগ্যাসি প্রম্পট ট
 - [এজেন্ট প্রোটোকল](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI লঞ্চ কনট্র্যাক্ট](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI টুল](../reference/CLI-TOOLS.md)
-- [A2A সার্ভার](./A2A-SERVER.md)

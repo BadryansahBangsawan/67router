@@ -119,4 +119,3 @@ test u ciljnom okruženju.
 - [Protokoli agenata](./AGENT_PROTOCOLS_GUIDE.md)
 - [Ugovori za pokretanje CLI-ja](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI alati](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)

@@ -1239,8 +1239,6 @@ Käytä SSE-URL-osoitetta `http://localhost:20128/api/mcp/sse` ja Bearer-API-ava
 
 ### Käyttöoikeusalueet
 
-MCP määrittelee tällä hetkellä 32 nimettyä käyttöoikeusaluetta. Kukin Bearer-avain voidaan rajata tiettyihin käyttöoikeusalueisiin — kattava käyttöoikeusalueiden ja työkalujen luettelo on tiedostossa [MCP-SERVER.md](../frameworks/MCP-SERVER.md), ja JSON-RPC-skeema on tiedostossa [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Taitojärjestelmä
@@ -1249,7 +1247,6 @@ OmniRoute tarjoaa laajennettavan **taitokehyksen** (`src/lib/skills/`), jonka av
 
 - **Markkinapaikan käyttöliittymä** — Selaa ja asenna taitoja kohdassa **Hallintapaneeli → Taidot**
 - **Avainkohtaiset käyttöoikeudet** — Rajoita, mitkä API-avaimet voivat kutsua mitäkin taitoja
-- **Mukautetut taidot** — Lisää TypeScript-tiedosto hakemistoon `src/lib/a2a/skills/`, rekisteröi se, minkä jälkeen sitä voidaan kutsua välittömästi A2A:n kautta
 
 Täydellinen viite: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Palauta tilannevedoksesta
 omniroute health                   # Yksityiskohtaiset kuntotiedot (katkaisimet, välimuisti, muisti)
 omniroute quota                    # Palveluntarjoajien kiintiöiden käyttö
 omniroute mcp status               # MCP-palvelimen tila
-omniroute a2a status               # A2A-palvelimen tila
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnelit
 omniroute reset-password           # Nollaa järjestelmänvalvojan salasana
 omniroute --mcp                    # Käynnistä MCP-palvelin stdio-yhteydellä

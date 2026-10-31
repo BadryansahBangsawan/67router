@@ -390,34 +390,6 @@
       "description": "የMCP ኦዲት ምዝግብ (ለ audit --source mcp ተለዋጭ ስም)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "ከወኪሉ ካርድ የሚገኙትን A2A ክህሎቶች ዘርዝር"
-    },
-    "invoke": {
-      "description": "የA2A ክህሎትን ጥራ እና የተግባሩን ID መልስ",
-      "input": "የJSON ግብዓት ነገር",
-      "input_file": "ወደ JSON ግብዓት ፋይል የሚወስድ ዱካ",
-      "wait": "ከመመለስ በፊት ተግባሩ እስኪጠናቀቅ ድረስ ጠብቅ",
-      "timeout": "ማጠናቀቅን ለመጠበቅ የሚፈቀደው ጊዜ በms (ነባሪ፦ 60000)"
-    },
-    "tasks": {
-      "description": "የA2A ተግባራትን አስተዳድር",
-      "list": {
-        "status": "በሁኔታ አጣራ",
-        "skill": "በክህሎት ID አጣራ"
-      },
-      "watch": {
-        "description": "እስኪጠናቀቅ ድረስ የተግባሩን ሁኔታ በየጊዜው ፈትሽ"
-      },
-      "stream": {
-        "description": "የተግባር አፈጻጸም ክስተቶችን በSSE በቀጥታ አስተላልፍ"
-      },
-      "logs": {
-        "description": "የተግባር መልዕክቶችን እና ቅርሶችን አሳይ"
-      }
-    }
-  },
   "policy": {
     "description": "የOmniRoute ፈቃድ አሰጣጥ ፖሊሲዎችን አስተዳድር",
     "list": {

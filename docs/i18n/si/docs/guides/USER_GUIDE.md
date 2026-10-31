@@ -1236,8 +1236,6 @@ SSE URL එක වන `http://localhost:20128/api/mcp/sse` සහ **Dashboard �
 
 ### විෂය පථ
 
-MCP දැනට නම් කරන ලද විෂය පථ 32ක් නිර්වචනය කරයි. එක් එක් Bearer යතුර නිශ්චිත විෂය පථවලට සීමා කළ හැක — නිල විෂය පථ සහ මෙවලම් ලැයිස්තුව සඳහා [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ද, JSON-RPC යෝජනා ක්රමය සඳහා [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ද බලන්න.
-
 ---
 
 ## 🧠 කුසලතා පද්ධතිය
@@ -1246,7 +1244,6 @@ MCP දැනට නම් කරන ලද විෂය පථ 32ක් නි�
 
 - **වෙළඳපොළ UI** — **උපකරණ පුවරුව → කුසලතා** වෙතින් කුසලතා පිරික්සා ස්ථාපනය කරන්න
 - **යතුරකට අදාළ විෂය පථ** — කුමන API යතුරුවලට කුමන කුසලතා කැඳවිය හැකිද යන්න සීමා කරන්න
-- **අභිරුචි කුසලතා** — TypeScript ගොනුවක් `src/lib/a2a/skills/` තුළට දමා, එය ලියාපදිංචි කරන්න; එවිට එය වහාම A2A හරහා කැඳවිය හැකි වේ
 
 සම්පූර්ණ යොමුව: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1331,7 +1328,6 @@ omniroute restore [<timestamp>]    # ස්නැප්ෂොට් එකකි
 omniroute health                   # සවිස්තරාත්මක සෞඛ්ය තොරතුරු (බ්රේකර්, හැඹිලිය, මතකය)
 omniroute quota                    # සපයන්නන්ගේ කෝටා භාවිතය
 omniroute mcp status               # MCP සේවාදායකයේ තත්ත්වය
-omniroute a2a status               # A2A සේවාදායකයේ තත්ත්වය
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ටනල්
 omniroute reset-password           # පරිපාලක මුරපදය යළි සකසන්න
 omniroute --mcp                    # stdio හරහා MCP සේවාදායකය ආරම්භ කරන්න

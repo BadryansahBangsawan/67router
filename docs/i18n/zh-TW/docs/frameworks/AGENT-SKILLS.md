@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate（需要驗證）
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 個 MCP 工具（列出、取得、涵蓋範圍）
-src/lib/a2a/skills/listCapabilities.ts        — A2A 技能：list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A 技能 `list-capabilities` 會以 Markdown 表格成品傳回完整的 45 �
 }
 ```
 
-如需通訊協定詳細資訊，請參閱 [A2A-SERVER.md](./A2A-SERVER.md)。
-
 ---
 
 ## 目錄 — 45 個技能 ID
@@ -189,7 +186,6 @@ A2A 技能 `list-capabilities` 會以 Markdown 表格成品傳回完整的 45 �
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills 框架（LLM 工具注入 + 市集）
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 工具目錄（`omniroute_agent_skills_*` 工具）
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 協定（`list-capabilities` 技能）
 - `src/lib/agentSkills/` — 目錄、產生器、解析器
 - `skills/` — 已產生的 SKILL.md 檔案（45 個項目）

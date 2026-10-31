@@ -715,7 +715,6 @@ omniroute cache                        # Cachestatus
 omniroute cache clear                  # Rensa semantiska cacheminnen och signaturcacheminnen
 
 omniroute mcp status | restart         # MCP-serverstatus/omstart
-omniroute a2a status | card            # A2A-serverstatus/agentkort
 
 omniroute tunnel list | create | stop  # Hantera tunnlar (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Inspektera/ange miljövariabler (tillfälligt)

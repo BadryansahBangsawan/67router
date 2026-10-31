@@ -92,7 +92,7 @@ HTTP 400 — המודל '<id>' הוא מודל ליצירת תמונות ולא 
 Simple Browser במקום בדפדפן חיצוני. ההטמעה היא **בהצטרפות מפורשת בצד השרת** באמצעות
 `DASHBOARD_ALLOW_EMBED=vscode`, שמגיש את דפי ה-HTML עם
 `frame-ancestors 'self' vscode-webview:` במקום ברירת המחדל `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. ממשק ה-API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) שומר על
+`X-Frame-Options: DENY`. ממשק ה-API (`/api`, `/v1`, `/v1beta`, `/healthz`) שומר על
 הכותרות המחמירות בכל מקרה.
 
 > ⚠️ **זהו דגל של זמן הבנייה, לא של זמן הריצה.** Next.js מקמפל את `headers()` לתוך מניפסט

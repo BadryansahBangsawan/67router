@@ -586,7 +586,6 @@ Radar ਦੀ ਵਰਤੋਂ ਇੱਛਿਕ ਹੈ ਅਤੇ ਇਹ ਸਿਰ�
 - **🔑 ਪ੍ਰਤੀ-ਕੁੰਜੀ ਰੂਟਿੰਗ ਨਿਯੰਤਰਣ** — `forcedModel` ਨਾਲ ਕਿਸੇ API ਕੁੰਜੀ ਨੂੰ ਇੱਕ ਮਾਡਲ ਜਾਂ ਕੰਬੋ ਨਾਲ ਪਿੰਨ ਕਰੋ, ਅਤੇ ਕੁੰਜੀ ਦੇ ਮਾਡਲ ਅਤੇ ਕੰਬੋ ਐਟਮਿਕ ਤੌਰ 'ਤੇ ਜੋੜੋ ਜਾਂ ਹਟਾਓ (`/api/keys/{id}/access`)। → [API ਹਵਾਲਾ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ਵਧੇਰੇ ਸੁਝੀਲੇ PII ਨਿਯੰਤਰਣ** — ਪ੍ਰਤੀ-ਕਿਸਮ ਚੋਣ, 20 ਤੱਕ ਪ੍ਰਮਾਣਿਤ ਕਸਟਮ ਮਾਸਕਿੰਗ ਪੈਟਰਨ ਅਤੇ ਪ੍ਰਤੀ-ਕਿਸਮ ਖੋਜ ਕਾਊਂਟਰ; ਮਾਸਕਿੰਗ ਆਪਣੇ ਆਪ ਚੋਣਵੀਂ (opt-in) ਹੀ ਰਹਿੰਦੀ ਹੈ। → [ਗਾਰਡਰੇਲ](docs/security/GUARDRAILS.md)
 - **🌍 67 ਭਾਸ਼ਾਵਾਂ** — ਡੈਸ਼ਬੋਰਡ, ਦਸਤਾਵੇਜ਼ ਮਿਰਰ ਅਤੇ CLI, `npm run i18n:add-locale` ਨਾਲ ਇੱਕ ਹੀ ਕਮਾਂਡ ਵਿੱਚ ਹਰ ਥਾਂ ਭਾਸ਼ਾ ਜੁੜਦੀ ਹੈ। → [i18n ਗਾਈਡ](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ਤੁਹਾਡੇ ਏਜੰਟ ਫਲੀਟ ਲਈ ਇਨਬਾਊਂਡ A2A ਡੈਲੀਗੇਸ਼ਨ, ਏਜੰਟ ਕਾਰਡ 'ਤੇ Conductor ਸਕਿੱਲਜ਼, ਅਤੇ Faro ਪੁਸ਼-ਟੂ-ਟਾਕ ਵੌਇਸ ਚੈਟ ਵਾਲਾ ਡੈਸ਼ਬੋਰਡ ਪੈਨਲ। → [A2A ਸਰਵਰ](docs/frameworks/A2A-SERVER.md)
 - **🛂 ਅਨੁਕੂਲ ਐਡਮਿਸ਼ਨ ਅਤੇ ਓਵਰਲੋਡ ਸੁਰੱਖਿਆ** — ਭਾਰੀ ਚੈਟ ਬੇਨਤੀਆਂ 503 ਦੇਣ ਦੀ ਬਜਾਏ ਕਤਾਰਬੱਧ ਹੁੰਦੀਆਂ ਹਨ, ਪ੍ਰਤੀ ਕਨੈਕਸ਼ਨ ਐਟਮਿਕ RPM ਰੋਲਿੰਗ ਲੀਜ਼ ਨਾਲ। → [ਰੈਜ਼ੀਲੀਅੰਸ ਗਾਈਡ](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ਕੈਨੋਨਿਕਲ `/v1/models` ਕ੍ਰਮ** — ਹਰ ਪ੍ਰਦਾਤਾ ਲਈ ਇੱਕ ਸੱਤਰ ਪ੍ਰਦਾਤਾ-ਸਮੂਹਿਤ ਬਲਾਕ (ਕੰਬੋ ਪਹਿਲਾਂ ਪਿੰਨ ਕੀਤੇ), ਹਰ ਕੈਟਾਲਾਗ ਸਰੋਤ ਵਿੱਚ ਸਥਿਰ। → [API ਹਵਾਲਾ](docs/reference/API_REFERENCE.md)
 - **🗜️ ਕੰਪ੍ਰੈਸ਼ਨ ਮਜ਼ਬੂਤੀ** — ਡਿਫ਼ਾਲਟ-ਚਾਲੂ ਇਨਫਲੇਸ਼ਨ ਗਾਰਡ, DE / FR / JA + ਚੀਨੀ (wényán) ਲਈ Caveman ਪੈਕ, Gradle ਅਤੇ .NET ਲਈ RTK ਫਿਲਟਰ। → [ਕੰਪ੍ਰੈਸ਼ਨ](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ OmniRoute ਨੂੰ **MCP**, **A2A**, ਇੱਕ **REST API**, **ਵੈੱਬਹ�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor ਜਾਂ ਕਿਸੇ ਵੀ MCP ਕਲਾਇੰਟ ਨਾਲ ਜੋੜੋ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">ਰਿਮੋਟ MCP — <b>110 ਟੂਲ</b>, 33 ਸਕੋਪ (ਲਾਗੂਕਰਨ ਵਿਕਲਪਿਕ), ਪੂਰਾ ਆਡਿਟ ਰਿਕਾਰਡ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">ਸਟ੍ਰੀਮਿੰਗ MCP ਟ੍ਰਾਂਸਪੋਰਟ</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ਏਜੰਟ-ਤੋਂ-ਏਜੰਟ, <b>JSON-RPC 2.0</b> + SSE, 6 ਹੁਨਰ</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-ਅਨੁਕੂਲ — ਚੈਟ, ਐਮਬੈਡਿੰਗਾਂ, ਚਿੱਤਰ, ਆਡੀਓ, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>ਵੈੱਬਹੁੱਕ</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ਬੇਨਤੀ / ਕੋਟਾ ਇਵੈਂਟ Slack, Discord, Telegram ਜਾਂ ਕਿਸੇ ਵੀ URL ਉੱਤੇ ਭੇਜੋ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>ਰਿਮੋਟ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">ਸੀਮਿਤ-ਅਧਿਕਾਰ ਵਾਲੇ ਐਕਸੈੱਸ ਟੋਕਨਾਂ ਨਾਲ ਇੱਕ ਰਿਮੋਟ ਇੰਸਟੈਂਸ ਚਲਾਓ</td></tr>
@@ -915,8 +913,6 @@ OmniRoute ਨੂੰ **MCP**, **A2A**, ਇੱਕ **REST API**, **ਵੈੱਬਹ�
 # Claude Code ਨੂੰ MCP ਰਾਹੀਂ ਪੂਰਾ OmniRoute ਟੂਲਸੈੱਟ ਦਿਓ:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP ਸਰਵਰ](docs/frameworks/MCP-SERVER.md) · [A2A ਸਰਵਰ](docs/frameworks/A2A-SERVER.md) · [ਏਜੰਟ ਪ੍ਰੋਟੋਕੋਲ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 ਵੀ ਇਸਨ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP ਸਰਵਰ</a></b></td><td>110 MCP ਟੂਲ, IDE ਸੰਰਚਨਾਵਾਂ, Python/TS/Go ਕਲਾਇੰਟ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP ਸਰਵਰ ਗਾਈਡ</a></b></td><td>MCP ਇੰਸਟਾਲੇਸ਼ਨ, ਟ੍ਰਾਂਸਪੋਰਟ ਅਤੇ ਟੂਲ ਹਵਾਲਾ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A ਸਰਵਰ</a></b></td><td>JSON-RPC 2.0 ਪ੍ਰੋਟੋਕੋਲ, ਹੁਨਰ, ਸਟ੍ਰੀਮਿੰਗ, ਕਾਰਜ ਪ੍ਰਬੰਧਨ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A ਸਰਵਰ ਗਾਈਡ</a></b></td><td>A2A ਏਜੰਟ ਕਾਰਡ, ਕਾਰਜ, ਹੁਨਰ ਅਤੇ ਸਟ੍ਰੀਮਿੰਗ</td></tr>
 </table>
 
 ### 📋 ਪ੍ਰੋਜੈਕਟ ਅਤੇ ਗੁਣਵੱਤਾ

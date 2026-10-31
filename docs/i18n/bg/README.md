@@ -594,7 +594,7 @@ Radar се използва само по желание и поддържа е�
 - **🔑 Контрол на маршрутизирането за всеки ключ** — фиксирайте API ключ към един модел или комбо с `forcedModel` и добавяйте или премахвайте моделите и комботата на даден ключ атомарно (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ По-фини контроли за PII** — избор по тип, до 20 валидирани потребителски шаблона за маскиране и броячи за откриване по тип; самото маскиране остава по избор. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 езика** — табло, огледала на документацията и CLI, като `npm run i18n:add-locale` добавя език навсякъде с една команда. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — входящо A2A делегиране към вашата флота от агенти, Conductor умения в Agent Card и панел в таблото с гласов чат с push-to-talk на Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — входящо A2A делегиране към вашата флота от агенти, Conductor умения в Agent Card и панел в таблото с гласов чат с push-to-talk на Faro.
 - **🛂 Адаптивно приемане и защита от претоварване** — тежките чат заявки се нареждат на опашка вместо да връщат 503, с атомарни RPM подвижни наеми за всяка връзка. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Канонично подреждане на `/v1/models`** — един непрекъснат блок, групиран по доставчик, за всеки доставчик (комботата са фиксирани първи), стабилно във всеки източник на каталог. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Затягане на компресията** — защита срещу раздуване, включена по подразбиране, Caveman пакети за DE / FR / JA + китайски (wényán), RTK филтри за Gradle & .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -913,7 +913,6 @@ omniroute contexts use default            # ← превключва обрат�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Свързване с Claude Desktop, Cursor или който и да е MCP клиент</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Отдалечен MCP — <b>110 инструмента</b>, 33 обхвата (прилагането се включва по избор), пълна одитна следа</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Поточно MCP предаване</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Комуникация между агенти, <b>JSON-RPC 2.0</b> + SSE, 6 умения</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Съвместим с OpenAI — чат, вграждания, изображения, аудио, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Изпращане на събития за заявки / квоти към Slack, Discord, Telegram или произволен URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Отдалечен CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Управление на отдалечена инстанция с токени за достъп с определен обхват</td></tr>
@@ -923,8 +922,6 @@ omniroute contexts use default            # ← превключва обрат�
 # Предоставете на Claude Code пълния набор от инструменти на OmniRoute чрез MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP сървър](docs/frameworks/MCP-SERVER.md) · [A2A сървър](docs/frameworks/A2A-SERVER.md) · [Протоколи за агенти](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1390,7 +1387,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 също го п�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP сървър</a></b></td><td>110 MCP инструмента, конфигурации за IDE, клиенти за Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Ръководство за MCP сървъра</a></b></td><td>Инсталиране на MCP, транспортни механизми и справочник за инструментите</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A сървър</a></b></td><td>Протокол JSON-RPC 2.0, умения, поточно предаване, управление на задачи</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Ръководство за A2A сървъра</a></b></td><td>Картичка на A2A агента, задачи, умения и поточно предаване</td></tr>
 </table>
 
 ### 📋 Проект и качество

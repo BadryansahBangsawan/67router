@@ -20,38 +20,6 @@ OmniRoute חושף שלושה ממשקים שונים הקשורים לסוכנ�
 
 ## עץ החלטה
 
-## 1. A2A — סוכן-לסוכן
-
-**מפרט:** [A2A v0.3](https://a2a-protocol.org)
-**נקודת הקצה של OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**כרטיס סוכן:** `GET /.well-known/agent.json`
-
-### מתי להשתמש
-
-- בעת בניית מערכת מרובת סוכנים שבה OmniRoute הוא אחד מהעמיתים
-- בעת חשיפת יכולות הניתוב החכמות של OmniRoute (`smart-routing`, `quota-management` וכו׳) לסוכנים במסגרות כמו Google ADK או ברשתות סוכנים כלליות
-- בעת עטיפת OmniRoute מאחורי ממשק תקני לגילוי ולהפעלה
-
-### שיטות
-
-- `message/send` — שליחת הודעה וקבלת תגובה סינכרונית
-- `message/stream` — שליחה וקבלת אירועי התקדמות בהזרמה באמצעות SSE
-- `tasks/get` — קריאת משימה לפי מזהה
-- `tasks/cancel` — ביטול משימה פעילה
-
-### יכולות מובנות (6)
-
-- `smart-routing` — ניתוב הנחיה דרך השילוב המיטבי
-- `quota-management` — דיווח על מצב המכסה של כל ספק
-- `provider-discovery` — הצגת הספקים המותקנים והיכולות שלהם
-- `cost-analysis` — הערכת העלות של בקשה/שיחה
-- `health-report` — צבירת מצב מפסק המעגל/תקופת הצינון/הנעילה של כל ספק
-- `list-capabilities` — פירוט היכולות הזמינות של הסוכן והמטא-נתונים שלהן
-
-### צלילה לעומק
-
-ראו [A2A-SERVER.md](./A2A-SERVER.md) לפרטים על התעבורה, מבנה כרטיס הסוכן, הגדרת TTL למשימות והתבנית להוספת יכולות חדשות.
-
 ## 2. ACP — מרשם סוכני CLI
 
 **נקודת הקצה של OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ ACP הוא **מלאי סוכני ה-CLI המקומיים** של OmniRoute. הו�
 
 ## דוגמאות לשילוב
 
-### גילוי יכולות ה-A2A של OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-מחזיר את כרטיס הסוכן עם כל 6 המיומנויות, אמצעי התעבורה והגרסה.
-
-### קריאה ל-OmniRoute כסוכן A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "נתב את ההנחיה הזו"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### הצגת סוכני CLI מותקנים באמצעות ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## ראו גם
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — סקירה מעמיקה של A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — שילובי CLI חיצוניים (משתמשים ב-ACP)
 - [SKILLS.md](./SKILLS.md) — מסגרת מיומנויות (שונה ממיומנויות A2A — ארגז חול להפעלה מקומית)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — תיעוד נקודות קצה

@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ต้องมีการยืนยันตัวตน)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — เครื่องมือ MCP 3 รายการ (แสดงรายการ, รับข้อมูล, ความครอบคลุม)
-src/lib/a2a/skills/listCapabilities.ts        — สกิล A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 }
 ```
 
-ดูรายละเอียดโปรโตคอลได้ที่ [A2A-SERVER.md](./A2A-SERVER.md)
-
 ---
 
 ## แค็ตตาล็อก — ID สกิล 45 รายการ
@@ -189,7 +186,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — เฟรมเวิร์ก Omni Skills (การแทรกเครื่องมือสำหรับ LLM + มาร์เก็ตเพลส)
 - [MCP-SERVER.md](./MCP-SERVER.md) — แค็ตตาล็อกเครื่องมือ MCP (เครื่องมือ `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — โปรโตคอล A2A (skill `list-capabilities`)
 - `src/lib/agentSkills/` — แค็ตตาล็อก ตัวสร้าง และตัวแยกวิเคราะห์
 - `skills/` — ไฟล์ SKILL.md ที่สร้างขึ้น (45 รายการ)

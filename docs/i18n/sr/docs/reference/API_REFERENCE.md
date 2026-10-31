@@ -1883,48 +1883,10 @@ OmniRoute се испоручује са уграђеним Model Context Protoc
 
 OmniRoute пружа A2A (Agent-to-Agent) JSON-RPC 2.0 крајњу тачку, као и REST омотач за потребе прегледа и контролне табле.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # опционо, осим ако је OMNIROUTE_API_KEY подешен
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Подржани методи (сви зависе од `settings.a2aEnabled`):
-
-| Метод            | Опис                                                             |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | Синхроно извршавање вештине; враћа `{task, artifacts, metadata}` |
-| `message/stream` | SSE стримовање извршавања истог скупа вештина                    |
-| `tasks/get`      | Добавља задатак према `taskId`                                   |
-| `tasks/cancel`   | Отказује задатак према `taskId`                                  |
-
-Уграђене вештине: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Картица агента
-
-```bash
-GET /.well-known/agent.json
-```
-
-Враћа јавну A2A картицу агента (назив, опис, могућности, каталог вештина, шему аутентификације) — јавно се кешира 1 сат. Аутентификација није потребна.
-
 ### REST помоћне крајње тачке
 
 | Метод | Путања                       | Опис                                                                                                                |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Статус омогућености A2A-а + статистика задатака + сажетак кеширане картице агента                                   |
 | GET   | `/api/a2a/tasks`             | Листа задатака — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Није имплементирано као REST помоћна крајња тачка — креирајте преко JSON-RPC метода `message/send`)                |
 | GET   | `/api/a2a/tasks/[id]`        | Добавља један задатак                                                                                               |

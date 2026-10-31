@@ -1855,48 +1855,10 @@ OmniRoute همراه با یک سرور داخلی Model Context Protocol با �
 
 OmniRoute یک نقطه پایانی A2A (عاملبهعامل) مبتنی بر JSON-RPC 2.0، بههمراه یک پوشش REST برای بازرسی و استفاده در داشبورد ارائه میکند.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختیاری است، مگر اینکه OMNIROUTE_API_KEY تنظیم شده باشد
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-متدهای پشتیبانیشده (همه وابسته به فعال بودن `settings.a2aEnabled` هستند):
-
-| متد              | توضیحات                                                        |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | اجرای همگام مهارت؛ `{task, artifacts, metadata}` را برمیگرداند |
-| `message/stream` | اجرای جریانی SSE برای همان مجموعه مهارتها                      |
-| `tasks/get`      | دریافت یک وظیفه بر اساس `taskId`                               |
-| `tasks/cancel`   | لغو یک وظیفه بر اساس `taskId`                                  |
-
-مهارتهای داخلی: `smart-routing`، `quota-management`، `provider-discovery`، `cost-analysis`، `health-report`.
-
-### کارت عامل
-
-```bash
-GET /.well-known/agent.json
-```
-
-کارت عمومی عامل A2A (نام، توضیحات، قابلیتها، کاتالوگ مهارتها و طرح احراز هویت) را برمیگرداند — این کارت بهمدت 1h بهصورت عمومی کش میشود. نیازی به احراز هویت نیست.
-
 ### ابزارهای کمکی REST
 
 | متد  | مسیر                         | توضیحات                                                                                                          |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | وضعیت فعال بودن A2A + آمار وظایف + خلاصه کارت عامل کششده                                                         |
 | GET  | `/api/a2a/tasks`             | فهرست وظایف — `?state=submitted\|working\|completed\|failed\|cancelled`، `?skill=`، `?limit=` (≤200)، `?offset=` |
 | POST | `/api/a2a/tasks`             | (بهعنوان ابزار کمکی REST پیادهسازی نشده است — از طریق JSON-RPC و `message/send` ایجاد کنید)                      |
 | GET  | `/api/a2a/tasks/[id]`        | بازیابی یک وظیفه                                                                                                 |

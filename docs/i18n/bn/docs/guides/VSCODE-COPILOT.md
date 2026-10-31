@@ -88,7 +88,7 @@ provider-ও তালিকাভুক্ত থাকে — এগুলো 
 
 `omnicopilot.dashboardOpen: "editor"` একটি বাহ্যিক ব্রাউজারের পরিবর্তে Simple Browser-এর মাধ্যমে একটি এডিটর ট্যাবে OmniRoute ড্যাশবোর্ড রেন্ডার করে। এম্বেডিং **সার্ভারে অপ্ট-ইন করতে হয়**
 `DASHBOARD_ALLOW_EMBED=vscode`-এর মাধ্যমে, যা ডিফল্ট `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`-এর পরিবর্তে `frame-ancestors 'self' vscode-webview:` সহ HTML পেজগুলো পরিবেশন করে। উভয় ক্ষেত্রেই API সারফেস (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) কঠোর হেডারগুলো বজায় রাখে।
+`X-Frame-Options: DENY`-এর পরিবর্তে `frame-ancestors 'self' vscode-webview:` সহ HTML পেজগুলো পরিবেশন করে। উভয় ক্ষেত্রেই API সারফেস (`/api`, `/v1`, `/v1beta`, `/healthz`) কঠোর হেডারগুলো বজায় রাখে।
 
 > ⚠️ **এটি বিল্ড-টাইম ফ্ল্যাগ, রানটাইম ফ্ল্যাগ নয়।** Next.js `headers()`-কে রুট
 > ম্যানিফেস্টে কম্পাইল করে, তাই বান্ডেল বিল্ড করার সময় `next.config.mjs` ভেরিয়েবলটি পড়ে

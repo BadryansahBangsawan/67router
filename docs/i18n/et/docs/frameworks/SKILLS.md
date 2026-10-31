@@ -258,12 +258,6 @@ Transpordi seadistamise ja ulatuste määramise kohta vaadake faili [MCP-SERVER.
 
 ---
 
-## A2A integratsioon
-
-`src/lib/skills/a2a.ts` ekspordib A2A oskuse `memory_aware_routing` deskriptori ja abifunktsiooni `registerA2ASkill(registry)`. Kohandatud A2A oskused asuvad kataloogis `src/lib/a2a/skills/` ja neid suunatakse `A2A_SKILL_HANDLERS` kaudu (`src/lib/a2a/taskExecution.ts`). Ülesande täieliku elutsükli kohta vaadake faili [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Uue sisseehitatud oskuse lisamine
 
 1. **Määratlege töötleja** failis `src/lib/skills/builtins.ts` (või mõnes sama taseme failis kataloogis `src/lib/skills/builtin/`). Signatuur: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Teavet selle kohta, kuidas lisada pistikprogrammisüsteemi kaudu kohandatud osku
 ## Vaata ka
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tööriistade registreerimine ja transpordid
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ülesannete elutsükkel ja oskuste suunamine
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — kasutajatele mõeldud sissejuhatus
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — päringute töötlusahel ja komponentide kaart
 - Lähtekood: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

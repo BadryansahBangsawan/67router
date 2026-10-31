@@ -20,38 +20,6 @@ OmniRoute มีช่องทางที่เกี่ยวข้องก�
 
 ## แผนผังการตัดสินใจ
 
-## 1. A2A — เอเจนต์ถึงเอเจนต์
-
-**ข้อกำหนด:** [A2A v0.3](https://a2a-protocol.org)
-**เอนด์พอยต์ของ OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**การ์ดเอเจนต์:** `GET /.well-known/agent.json`
-
-### ควรใช้เมื่อใด
-
-- สร้างระบบหลายเอเจนต์ที่มี OmniRoute เป็นหนึ่งในเอเจนต์ที่ทำงานร่วมกัน
-- เปิดให้เอเจนต์ในเฟรมเวิร์กอย่าง Google ADK หรือเครือข่ายเอเจนต์ทั่วไปสามารถใช้ความสามารถด้านการกำหนดเส้นทางอัจฉริยะของ OmniRoute (smart-routing, quota-management ฯลฯ)
-- ครอบ OmniRoute ไว้เบื้องหลังช่องทางมาตรฐานสำหรับการค้นหาและการเรียกใช้งาน
-
-### เมธอด
-
-- `message/send` — ส่งข้อความและรับการตอบกลับแบบซิงโครนัส
-- `message/stream` — ส่งข้อความและรับเหตุการณ์ความคืบหน้าแบบสตรีมผ่าน SSE
-- `tasks/get` — อ่านงานตาม ID
-- `tasks/cancel` — ยกเลิกงานที่กำลังทำงานอยู่
-
-### ทักษะในตัว (6)
-
-- `smart-routing` — กำหนดเส้นทางพรอมต์ผ่านชุดการทำงานที่เหมาะสมที่สุด
-- `quota-management` — รายงานสถานะโควตาของผู้ให้บริการแต่ละราย
-- `provider-discovery` — แสดงรายการผู้ให้บริการที่ติดตั้งไว้พร้อมความสามารถ
-- `cost-analysis` — ประเมินค่าใช้จ่ายของคำขอ/การสนทนา
-- `health-report` — รวบรวมสถานะ breaker/cooldown/lockout ของผู้ให้บริการแต่ละราย
-- `list-capabilities` — แจกแจงทักษะและข้อมูลเมตาที่เอเจนต์มีให้ใช้งาน
-
-### เจาะลึก
-
-ดูรายละเอียดการรับส่งข้อมูล โครงสร้างการ์ดเอเจนต์ การกำหนดค่า TTL ของงาน และเทมเพลตสำหรับเพิ่มทักษะใหม่ได้ที่ [A2A-SERVER.md](./A2A-SERVER.md)
-
 ## 2. ACP — รีจิสทรีเอเจนต์ CLI
 
 **เอนด์พอยต์ OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Gemini ที่ลงทะเบียนไว้ และอะแดปเ
 
 ## ตัวอย่างการเชื่อมต่อ
 
-### ค้นหาความสามารถ A2A ของ OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ส่งคืน Agent Card พร้อมทักษะทั้ง 6 รายการ รูปแบบการรับส่งข้อมูล และเวอร์ชัน
-
-### เรียกใช้ OmniRoute ในฐานะเอเจนต์ A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### แสดงรายการเอเจนต์ CLI ที่ติดตั้งผ่าน ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## ดูเพิ่มเติม
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — เจาะลึก A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — การผสานการทำงานกับ CLI ภายนอก (ใช้ ACP)
 - [SKILLS.md](./SKILLS.md) — เฟรมเวิร์กทักษะ (แตกต่างจากทักษะ A2A — แซนด์บ็อกซ์สำหรับการดำเนินการภายในเครื่อง)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — เอกสารอ้างอิง endpoint

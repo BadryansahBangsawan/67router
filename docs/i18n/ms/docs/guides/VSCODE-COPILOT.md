@@ -92,7 +92,7 @@ sambungan.
 Simple Browser dan bukannya pelayar luaran. Pembenaman perlu **didayakan secara pilihan pada pelayan** melalui
 `DASHBOARD_ALLOW_EMBED=vscode`, yang menyediakan halaman HTML dengan
 `frame-ancestors 'self' vscode-webview:` dan bukannya tetapan lalai `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mengekalkan
+`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/healthz`) mengekalkan
 pengepala yang ketat dalam kedua-dua keadaan.
 
 > ⚠️ **Ini ialah penanda masa binaan, bukan masa jalan.** Next.js mengkompil `headers()` ke dalam manifes

@@ -22,38 +22,6 @@ Ove tri su nezavisne — odaberite bilo koji podskup.
 
 ## Stablo odlučivanja
 
-## 1. A2A — Agent-to-Agent
-
-**Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute krajnja tačka:** `POST /a2a` (JSON-RPC 2.0)
-**Agent kartica:** `GET /.well-known/agent.json`
-
-### Kada koristiti
-
-- Izgradnja multi-agent sistema gdje je OmniRoute jedan od ravnopravnih učesnika
-- Izlaganje OmniRoute inteligencije rutiranja (smart-routing, quota-management, itd.) agentima u okvirima kao što su Google ADK ili generičke agent mreže
-- Omotavanje OmniRoute-a iza standardne površine za otkrivanje + pozivanje
-
-### Metode
-
-- `message/send` — pošalji poruku, primi sinhroni odgovor
-- `message/stream` — pošalji + primi SSE-streamovane događaje napretka
-- `tasks/get` — čitaj zadatak po ID-u
-- `tasks/cancel` — otkaži zadatak koji je u toku
-
-### Ugrađene vještine (6)
-
-- `smart-routing` — rutiraj prompt kroz optimalnu kombinaciju
-- `quota-management` — izvijesti o stanju kvote po provajderu
-- `provider-discovery` — izlistaj instalirane provajdere s mogućnostima
-- `cost-analysis` — procijeni trošak zahtjeva/razgovora
-- `health-report` — agregiraj stanje prekidača/hlađenja/zaključavanja po provajderu
-- `list-capabilities` — pobroj dostupne vještine i metapodatke agenta
-
-### Detaljan pregled
-
-Pogledajte [A2A-SERVER.md](./A2A-SERVER.md) za detalje o transportu, strukturu agent kartice, konfiguraciju TTL-a zadatka i šablon za dodavanje novih vještina.
-
 ## 2. ACP — Registar CLI agenata
 
 **OmniRoute krajnja tačka:** `GET /api/acp/agents`
@@ -128,10 +96,6 @@ Oba imaju "dugotrajne zadatke" (long-running tasks), ali na različitim nivoima:
 ## Primjeri integracije
 
 ### Otkrivanje A2A mogućnosti OmniRoute-a
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
 
 Vraća Agent Card sa svih 6 vještina, transporta i verzijom.
 
@@ -208,7 +172,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Vidi također
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Detaljan pregled A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Vanjske CLI integracije (koriste ACP)
 - [SKILLS.md](./SKILLS.md) — Okvir vještina (razlikuje se od A2A vještina — lokalno okruženje za izvršavanje)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenca krajnjih tačaka

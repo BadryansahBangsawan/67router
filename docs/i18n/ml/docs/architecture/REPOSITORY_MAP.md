@@ -143,8 +143,6 @@ src/
 | `app/api/` (non-v1)                                                          | മാനേജ്മെന്റ്/അഡ്മിൻ റൂട്ടുകൾ (~60 ഡയറക്ടറികൾ: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools മുതലായവ)                                                                                                                              |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 റൂട്ടുകൾ (സെർവർ നിയന്ത്രണം, ഏജന്റ് നില/DNS/മാപ്പിങ്ങുകൾ, ബൈപാസ്, സർട്ടിഫിക്കറ്റ്, അപ്സ്ട്രീം-CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` കാണുക.                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ റൂട്ടുകൾ (അഭ്യർത്ഥനകൾ, സെഷനുകൾ, ഹോസ്റ്റുകൾ, ക്യാപ്ചർ മോഡുകൾ, എക്സ്പോർട്ട്, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` കാണുക.                                                                                                                 |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 പ്രവേശന പോയിന്റ് (`POST /a2a`)                                                                                                                                                                                                                                                                    |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (കണ്ടെത്തൽ)                                                                                                                                                                                                                                                                                         |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard UI പേജുകൾ (50+ വിഭാഗങ്ങൾ, ~118 page.tsx ഫയലുകൾ: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity മുതലായവ)                                                                                                                              |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ടാബുകൾ: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` കാണുക                                                                                                                                                                    |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (പ്ലാൻ 21): `page.tsx` (3-ടാബ് ഷെൽ), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ഡോക്യുമെന്റ്                                    | ഉദ്ദേശ്യം                                                                      |
 | ----------------------------------------------- | ------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                                 | MCP സെർവർ: 110 ടൂളുകൾ, 3 ട്രാൻസ്പോർട്ടുകൾ, 33 സ്കോപ്പുകൾ, REST എൻഡ്പോയിന്റുകൾ  |
-| `A2A-SERVER.md`                                 | A2A v0.3: JSON-RPC, 6 സ്കില്ലുകൾ, REST ഹെൽപ്പറുകൾ, ഏജന്റ് കാർഡ്                |
 | `AGENT_PROTOCOLS_GUIDE.md`                      | ഏകീകൃത ഗൈഡ്: A2A vs ACP vs ക്ലൗഡ് ഏജന്റുകൾ                                     |
 | `SKILLS.md`                                     | സ്കിൽസ് ഫ്രെയിംവർക്ക് (ബിൽറ്റ്-ഇൻ + മാർക്കറ്റ്പ്ലേസ് + SkillsSH + സാൻഡ്ബോക്സ്) |
 | `RADAR.md`                                      | Radar സൗജന്യ-മോഡൽ കാറ്റലോഗ് ഓവർലേ (`RADAR_ENABLED`, ഡിഫോൾട്ടായി ഓഫ്)           |
@@ -567,7 +564,6 @@ open-sse/
 - **ഒരു പ്രൊവൈഡർ ചേർക്കുകയാണോ?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` പിന്തുടരുക + `docs/reference/PROVIDER_REFERENCE.md` ഉപയോഗിച്ച് ക്രോസ്-ചെക്ക് ചെയ്യുക.
 - **ഒരു റൂട്ട് ചേർക്കുകയാണോ?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **ഒരു MCP ടൂൾ ചേർക്കുകയാണോ?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **ഒരു A2A സ്കിൽ ചേർക്കുകയാണോ?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **ലോക്കലായി പ്രവർത്തിപ്പിക്കുകയാണോ?** `docs/guides/SETUP_GUIDE.md`.
 - **ഡിപ്ലോയ് ചെയ്യുകയാണോ?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **റിലീസ് ചെയ്യുകയാണോ?** `docs/ops/RELEASE_CHECKLIST.md` (കൂടാതെ `/generate-release-cc` Claude Code സ്കിൽ).

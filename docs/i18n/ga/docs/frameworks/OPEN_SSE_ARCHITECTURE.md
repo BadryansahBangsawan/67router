@@ -573,5 +573,4 @@ Tá buiséid dhiana feidhmíochta ag an inneall ródaithe:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — eolaire ar eolaire
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scóráil 16 fhachtóir
 - [MCP-SERVER.md](./MCP-SERVER.md) — freastalaí MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — freastalaí A2A
 - Foinse: `open-sse/` (400+ comhad, ~143K líne de chód)

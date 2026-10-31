@@ -92,7 +92,7 @@ extension náà.
 Simple Browser dípò aṣàwákiri òde. Ìfìmọ́ra jẹ́ **ohun tí a gbọ́dọ̀ yàn láti mú ṣiṣẹ́ lórí apèsè** nípasẹ̀
 `DASHBOARD_ALLOW_EMBED=vscode`, èyí tí ó ń fi àwọn ojú-ewé HTML ránṣẹ́ pẹ̀lú
 `frame-ancestors 'self' vscode-webview:` dípò `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` àìyípadà. Ojú API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ṣì ń pa
+`X-Frame-Options: DENY` àìyípadà. Ojú API (`/api`, `/v1`, `/v1beta`, `/healthz`) ṣì ń pa
 àwọn àkọlé tó le koko mọ́ lọ́nà méjèèjì.
 
 > ⚠️ **Àmì àsìkò ìkọ́ ni, kì í ṣe ti àsìkò ìṣiṣẹ́.** Next.js máa ń ṣàkójọ `headers()` sínú àkọsílẹ̀ ipa-ọ̀nà,

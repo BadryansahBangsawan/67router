@@ -749,7 +749,6 @@ omniroute cache                        # สถานะแคช
 omniroute cache clear                  # ล้างแคชเชิงความหมาย + แคชลายเซ็น
 
 omniroute mcp status | restart         # สถานะ / รีสตาร์ตเซิร์ฟเวอร์ MCP
-omniroute a2a status | card            # สถานะเซิร์ฟเวอร์ A2A / การ์ดเอเจนต์
 
 omniroute tunnel list | create | stop  # จัดการทันเนล (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # ตรวจสอบ / ตั้งค่าตัวแปรสภาพแวดล้อม (ชั่วคราว)

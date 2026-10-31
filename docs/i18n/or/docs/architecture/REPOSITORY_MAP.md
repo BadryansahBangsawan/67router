@@ -143,8 +143,6 @@ src/
 | `app/api/` (non-v1)                                                          | ପରିଚାଳନା/ଆଡମିନ୍ ରୁଟ୍ (~60ଟି ଡିରେକ୍ଟୋରୀ: ପ୍ରଦାତା, କମ୍ବୋ, ସେଟିଂସ୍, mcp, a2a, ମୂଲ୍ୟାୟନ, ମେମୋରୀ, ଦକ୍ଷତା, ୱେବହୁକ୍, ଅନୁପାଳନ, ସହନଶୀଳତା, ମନିଟରିଂ, ଟନେଲ୍, cli-tools ଇତ୍ୟାଦି)                                                                                                                                                   |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12ଟି ରୁଟ୍ (ସର୍ଭର ନିୟନ୍ତ୍ରଣ, ଏଜେଣ୍ଟ ସ୍ଥିତି/DNS/ମ୍ୟାପିଂ, ବାଇପାସ୍, ସର୍ଟିଫିକେଟ୍, upstream-CA)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/AGENTBRIDGE.md §7` ଦେଖନ୍ତୁ।                                                                                                                            |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ଟି ରୁଟ୍ (ଅନୁରୋଧ, ସେସନ୍, ହୋଷ୍ଟ, କ୍ୟାପଚର୍ ମୋଡ୍, ରପ୍ତାନି, ws)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/TRAFFIC_INSPECTOR.md §8` ଦେଖନ୍ତୁ।                                                                                                                                       |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 ପ୍ରବେଶ ବିନ୍ଦୁ (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (ଆବିଷ୍କାର)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | ଡ୍ୟାସବୋର୍ଡ UI ପୃଷ୍ଠା (50+ଟି ବିଭାଗ, ~118ଟି page.tsx ଫାଇଲ୍: ପ୍ରଦାତା, କମ୍ବୋ, ସେଟିଂସ୍, ମେମୋରୀ, ଦକ୍ଷତା, ୱେବହୁକ୍, ମୂଲ୍ୟାୟନ, ଅଡିଟ୍, ବ୍ୟାଚ୍, କ୍ୟାଶ୍, ଖର୍ଚ୍ଚ, ସ୍ୱାସ୍ଥ୍ୟ, ସିଷ୍ଟମ୍, କାର୍ଯ୍ୟକଳାପ ଇତ୍ୟାଦି)                                                                                                                         |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3ଟି ଟ୍ୟାବ୍: ସନ୍ଧାନ/ସ୍କ୍ରାପ୍/ତୁଳନା + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` ଦେଖନ୍ତୁ                                                                                                                                                                   |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ଯୋଜନା 21): `page.tsx` (3-ଟ୍ୟାବ୍ ଶେଲ୍), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ଡକ୍ୟୁମେଣ୍ଟ୍                                 | ଉଦ୍ଦେଶ୍ୟ                                                                        |
 | ------------------------------------------- | ------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP ସର୍ଭର୍: 110ଟି ଟୁଲ୍, 3ଟି ଟ୍ରାନ୍ସପୋର୍ଟ୍, 33ଟି ସ୍କୋପ୍, REST ଏଣ୍ଡପଏଣ୍ଟ୍         |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6ଟି ସ୍କିଲ୍, REST ସହାୟକ, ଏଜେଣ୍ଟ୍ କାର୍ଡ୍                      |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | ଏକୀକୃତ ମାର୍ଗଦର୍ଶିକା: A2A ବନାମ ACP ବନାମ କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ୍                          |
 | `SKILLS.md`                                 | ସ୍କିଲ୍ ଫ୍ରେମ୍ୱର୍କ୍ (ବିଲ୍ଟ-ଇନ୍ + ମାର୍କେଟ୍ପ୍ଲେସ୍ + SkillsSH + ସ୍ୟାଣ୍ଡବକ୍ସ୍)       |
 | `RADAR.md`                                  | Radar ମାଗଣା-ମଡେଲ୍ କ୍ୟାଟାଲଗ୍ ଓଭର୍ଲେ (`RADAR_ENABLED`, ଡିଫଲ୍ଟ ଭାବେ ବନ୍ଦ)          |
@@ -567,7 +564,6 @@ open-sse/
 - **ଏକ ପ୍ରଦାନକାରୀ ଯୋଡ଼ୁଛନ୍ତି?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` ଅନୁସରଣ କରନ୍ତୁ + `docs/reference/PROVIDER_REFERENCE.md` ସହ ପୁନଃଯାଞ୍ଚ କରନ୍ତୁ।
 - **ଏକ ରୁଟ୍ ଯୋଡ଼ୁଛନ୍ତି?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`।
 - **ଏକ MCP ଟୁଲ୍ ଯୋଡ଼ୁଛନ୍ତି?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`।
-- **ଏକ A2A ସ୍କିଲ୍ ଯୋଡ଼ୁଛନ୍ତି?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`।
 - **ସ୍ଥାନୀୟ ଭାବେ ଚଲାଉଛନ୍ତି?** `docs/guides/SETUP_GUIDE.md`।
 - **ଡିପ୍ଲୟ କରୁଛନ୍ତି?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`।
 - **ରିଲିଜ୍ କରୁଛନ୍ତି?** `docs/ops/RELEASE_CHECKLIST.md` (ଏବଂ `/generate-release-cc` Claude Code ସ୍କିଲ୍)।

@@ -247,26 +247,6 @@ MCP sozlamalaringizga qo‘shing:
 
 **To‘liq MCP hujjatlari:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 ta vosita, IDE konfiguratsiyalari, Python/TS/Go mijozlari.
 
-### A2A sozlamalari (Agentlararo protokol)
-
-Agent kartasini tekshiring:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vazifa yuboring:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**To‘liq A2A hujjatlari:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ko‘nikmalar, oqimli uzatish, vazifaning hayot sikli.
-
----
-
 ## Taym-aut sozlamalari
 
 ### Asosiy taym-autlar

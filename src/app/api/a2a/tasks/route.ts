@@ -92,7 +92,7 @@ export function tokensMatch(provided: string, expected: string): boolean {
 }
 
 /**
- * Mesma semântica de auth do JSON-RPC A2A (src/app/a2a/route.ts): Bearer vs OMNIROUTE_API_KEY; aberto se não configurada.
+ * Bearer vs OMNIROUTE_API_KEY (the semantics the removed A2A JSON-RPC route used); open when unset.
  *
  * Exported as a test seam only — not part of the route contract.
  */

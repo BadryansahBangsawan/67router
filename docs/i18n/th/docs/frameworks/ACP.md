@@ -119,4 +119,3 @@ try {
 - [โปรโตคอลเอเจนต์](./AGENT_PROTOCOLS_GUIDE.md)
 - [สัญญาการเรียกใช้งาน CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [เครื่องมือ CLI](../reference/CLI-TOOLS.md)
-- [เซิร์ฟเวอร์ A2A](./A2A-SERVER.md)

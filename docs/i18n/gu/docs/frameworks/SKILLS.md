@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ઇન્ટિગ્રેશન
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A સ્કિલ ડિસ્ક્રિપ્ટર અને `registerA2ASkill(registry)` હેલ્પરને એક્સપોર્ટ કરે છે. કસ્ટમ A2A સ્કિલ્સ `src/lib/a2a/skills/`માં રહે છે અને `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) મારફતે ડિસ્પૅચ થાય છે. સંપૂર્ણ ટાસ્ક લાઇફસાઇકલ માટે [A2A-SERVER.md](./A2A-SERVER.md) જુઓ.
-
----
-
 ## નવી બિલ્ટ-ઇન સ્કિલ ઉમેરવી
 
 1. `src/lib/skills/builtins.ts`માં (અથવા `src/lib/skills/builtin/` હેઠળની સમકક્ષ ફાઇલમાં) **હેન્ડલર વ્યાખ્યાયિત કરો**. સિગ્નેચર: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## આ પણ જુઓ
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ટૂલ નોંધણી અને ટ્રાન્સપોર્ટ્સ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ટાસ્ક જીવનચક્ર અને સ્કિલ ડિસ્પેચ
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — વપરાશકર્તા-કેન્દ્રિત પરિચય
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — રિક્વેસ્ટ પાઇપલાઇન અને કમ્પોનન્ટ નકશો
 - સોર્સ: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

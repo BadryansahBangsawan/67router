@@ -1235,8 +1235,6 @@ Gebruik de SSE-URL `http://localhost:20128/api/mcp/sse` en een Bearer-API-sleute
 
 ### Bereiken
 
-MCP definieert momenteel 32 benoemde bereiken. Elke Bearer-sleutel kan tot specifieke bereiken worden beperkt — raadpleeg [MCP-SERVER.md](../frameworks/MCP-SERVER.md) voor het gezaghebbende overzicht van bereiken en tools, en [A2A-SERVER.md](../frameworks/A2A-SERVER.md) voor het JSON-RPC-schema.
-
 ---
 
 ## 🧠 Vaardighedensysteem
@@ -1245,7 +1243,6 @@ OmniRoute biedt een uitbreidbaar **vaardighedenframework** (`src/lib/skills/`), 
 
 - **Marketplace-interface** — Bekijk en installeer vaardigheden via **Dashboard → Vaardigheden**
 - **Scopes per sleutel** — Beperk welke API-sleutels welke vaardigheden kunnen aanroepen
-- **Aangepaste vaardigheden** — Plaats een TypeScript-bestand in `src/lib/a2a/skills/`, registreer het en het kan direct via A2A worden aangeroepen
 
 Volledige naslag: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1330,7 +1327,6 @@ omniroute restore [<timestamp>]    # Herstellen vanuit een momentopname
 omniroute health                   # Gedetailleerde status (stroomonderbrekers, cache, geheugen)
 omniroute quota                    # Quotagebruik van providers
 omniroute mcp status               # Status van de MCP-server
-omniroute a2a status               # Status van de A2A-server
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnels
 omniroute reset-password           # Beheerderswachtwoord opnieuw instellen
 omniroute --mcp                    # MCP-server starten via stdio

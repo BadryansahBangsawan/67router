@@ -1238,8 +1238,6 @@ OmniRoute هم یک **سرور MCP** (پروتکل زمینه مدل) و هم ی
 
 ### دامنهها
 
-MCP در حال حاضر 32 دامنه نامگذاریشده تعریف میکند. هر کلید Bearer را میتوان به دامنههای مشخصی محدود کرد — برای فهرست مرجع دامنهها و ابزارها به [MCP-SERVER.md](../frameworks/MCP-SERVER.md) و برای طرحواره JSON-RPC به [A2A-SERVER.md](../frameworks/A2A-SERVER.md) مراجعه کنید.
-
 ---
 
 ## 🧠 سیستم مهارتها
@@ -1248,7 +1246,6 @@ OmniRoute یک **چارچوب مهارت** توسعهپذیر (`src/lib/skills/`
 
 - **رابط کاربری بازارچه** — مهارتها را از مسیر **داشبورد ← مهارتها** مرور و نصب کنید
 - **دامنههای اختصاصی هر کلید** — مشخص کنید کدام کلیدهای API میتوانند کدام مهارتها را فراخوانی کنند
-- **مهارتهای سفارشی** — یک فایل TypeScript را در `src/lib/a2a/skills/` قرار دهید و آن را ثبت کنید تا بلافاصله از طریق A2A قابل فراخوانی شود
 
 مرجع کامل: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # بازیابی از یک اسنپشات
 omniroute health                   # جزئیات سلامت (قطعکنندهها، کش، حافظه)
 omniroute quota                    # میزان مصرف سهمیه ارائهدهنده
 omniroute mcp status               # وضعیت سرور MCP
-omniroute a2a status               # وضعیت سرور A2A
 omniroute tunnel list|create|stop  # تونلهای Cloudflare/Tailscale/ngrok
 omniroute reset-password           # بازنشانی رمز عبور مدیر
 omniroute --mcp                    # راهاندازی سرور MCP از طریق stdio

@@ -573,5 +573,4 @@ Il motore di routing ha budget prestazionali rigorosi:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — descrizione directory per directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — punteggio basato su 16 fattori
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sorgente: `open-sse/` (oltre 400 file, ~143K righe di codice)

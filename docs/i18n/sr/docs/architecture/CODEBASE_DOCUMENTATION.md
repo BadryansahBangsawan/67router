@@ -100,8 +100,6 @@ Segmenti najvišeg nivoa pod `src/app/`:
 | Putanja                                                                       | Namena                                         |
 | ----------------------------------------------------------------------------- | ---------------------------------------------- |
 | `api/`                                                                        | Sve HTTP API rute (vidi detaljnu podelu ispod) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 endpoint (`POST /a2a`)        |
-| `.well-known/agent.json/`                                                     | A2A dokument za otkrivanje Agent Card-a        |
 | `(dashboard)/`                                                                | UI dashboard-a (route grupa, bez URL prefiksa) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Tokovi autentifikacije                         |
 | `landing/`                                                                    | Marketing/landing stranica                     |
@@ -773,13 +771,6 @@ Pogledajte [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) i posebni odeljak u
 4. Dodajte testove pod `open-sse/mcp-server/__tests__/`.
 5. Ažurirajte [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Dodavanje nove A2A veštine
-
-Pogledajte [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Veštine se nalaze u
-`src/lib/a2a/skills/` i registruju se putem A2A menadžera zadataka.
-
----
-
 ## 11. Konvencije
 
 - **Stil koda**: uvlačenje od 2 razmaka, duplo navodnici, širina 100 karaktera, tačka-zapeta,
@@ -847,7 +838,6 @@ Pogledajte [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). V
   lockout-а.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo скоровање и стратегије.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — потпуни каталог MCP алата + транспорти.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A протокол вештине и откривање (discovery).
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman компресија.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI интеграције.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ако постоји), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — циљеви за deployment.

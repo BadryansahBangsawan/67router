@@ -99,8 +99,6 @@ Tasetaseme segmendid `src/app/` all:
 | Tee                                                                           | Otstarve                                                   |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | `api/`                                                                        | Kõik HTTP API marsruudid (vaata allolevat üksikasja)       |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 lõpp-punkt (`POST /a2a`)                  |
-| `.well-known/agent.json/`                                                     | A2A Agent Card avastamisdokument                           |
 | `(dashboard)/`                                                                | Töölaua kasutajaliides (marsruutide grupp, URL prefiksita) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentimise voolud                                         |
 | `landing/`                                                                    | Turundusleht                                               |
@@ -774,13 +772,6 @@ Vaata [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) ja pühendatud jaotist
 4. Lisa testid `open-sse/mcp-server/__tests__/` alla.
 5. Uuenda [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Uue A2A oskuse lisamine
-
-Vaata [A2A-SERVER.md § Uue oskuse lisamine](../frameworks/A2A-SERVER.md). Oskused asuvad
-`src/lib/a2a/skills/` ja registreeritakse A2A ülesannete halduri kaudu.
-
----
-
 ## 11. Konventsioonid
 
 - **Koodistiil**: 2-tühiku sisesed, topelt jutumärgid, 100 märgi laius, semikoolonid,
@@ -846,7 +837,6 @@ Vaata [A2A-SERVER.md § Uue oskuse lisamine](../frameworks/A2A-SERVER.md). Oskus
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) – vooluringi katkestaja, jahtumisaeg, lukustamise süvauuring.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) – Auto Combo skoorimine ja strateegiad.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) – täielik MCP tööriistade kataloog + transpordid.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) – A2A protokolli oskused ja avastamine.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) – RTK + Caveman tihendus.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) – CLI integratsioonid.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (kui olemas), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) – deployeerimise sihtkohad.

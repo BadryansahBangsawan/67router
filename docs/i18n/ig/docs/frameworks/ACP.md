@@ -120,4 +120,3 @@ e nyere authorization iche na target environment.
 - [Protocol agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [Nkwekọrịta mmalite CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Tool CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)

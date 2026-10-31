@@ -1876,48 +1876,10 @@ OmniRoute มาพร้อมเซิร์ฟเวอร์ Model Context P
 
 OmniRoute เปิดให้ใช้งานตำแหน่งข้อมูล JSON-RPC 2.0 แบบ A2A (Agent-to-Agent) พร้อม REST wrapper สำหรับการตรวจสอบและการใช้งานแดชบอร์ด
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ไม่บังคับ เว้นแต่มีการตั้งค่า OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-เมธอดที่รองรับ (ทั้งหมดควบคุมโดย `settings.a2aEnabled`):
-
-| เมธอด            | คำอธิบาย                                                      |
-| ---------------- | ------------------------------------------------------------- |
-| `message/send`   | เรียกใช้สกิลแบบซิงโครนัส ส่งคืน `{task, artifacts, metadata}` |
-| `message/stream` | เรียกใช้สกิลชุดเดียวกันแบบสตรีมผ่าน SSE                       |
-| `tasks/get`      | ดึงข้อมูลงานตาม `taskId`                                      |
-| `tasks/cancel`   | ยกเลิกงานตาม `taskId`                                         |
-
-สกิลในตัว: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`
-
-### การ์ดเอเจนต์
-
-```bash
-GET /.well-known/agent.json
-```
-
-ส่งคืนการ์ดเอเจนต์ A2A สาธารณะ (ชื่อ คำอธิบาย ความสามารถ แค็ตตาล็อกสกิล และรูปแบบการยืนยันตัวตน) — แคชแบบสาธารณะเป็นเวลา 1 ชั่วโมง ไม่จำเป็นต้องยืนยันตัวตน
-
 ### ตัวช่วย REST
 
 | เมธอด | พาธ                          | คำอธิบาย                                                                                                           |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET   | `/api/a2a/status`            | สถานะการเปิดใช้งาน A2A + สถิติงาน + สรุปการ์ดเอเจนต์ที่แคชไว้                                                      |
 | GET   | `/api/a2a/tasks`             | แสดงรายการงาน — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (ยังไม่ได้ทำเป็นตัวช่วย REST — สร้างผ่าน JSON-RPC `message/send`)                                                  |
 | GET   | `/api/a2a/tasks/[id]`        | เรียกดูงานหนึ่งรายการ                                                                                              |

@@ -1237,8 +1237,6 @@ Gunakan URL SSE `http://localhost:20128/api/mcp/sse` dan kunci API Bearer yang d
 
 ### Skop
 
-MCP kini mentakrifkan 32 skop bernama. Setiap kunci Bearer boleh dihadkan kepada skop tertentu — lihat [MCP-SERVER.md](../frameworks/MCP-SERVER.md) untuk inventori skop dan alat yang berwibawa serta [A2A-SERVER.md](../frameworks/A2A-SERVER.md) untuk skema JSON-RPC.
-
 ---
 
 ## 🧠 Sistem Kemahiran
@@ -1247,7 +1245,6 @@ OmniRoute menyediakan **rangka kerja kemahiran** yang boleh diperluas (`src/lib/
 
 - **UI Marketplace** — Semak imbas dan pasang kemahiran melalui **Papan Pemuka → Kemahiran**
 - **Skop setiap kunci** — Hadkan kemahiran yang boleh digunakan oleh setiap kunci API
-- **Kemahiran tersuai** — Letakkan fail TypeScript dalam `src/lib/a2a/skills/`, daftarkannya, dan kemahiran itu boleh digunakan serta-merta melalui A2A
 
 Rujukan penuh: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1332,7 +1329,6 @@ omniroute restore [<timestamp>]    # Pulihkan daripada petikan
 omniroute health                   # Kesihatan terperinci (pemutus, cache, memori)
 omniroute quota                    # Penggunaan kuota penyedia
 omniroute mcp status               # Status pelayan MCP
-omniroute a2a status               # Status pelayan A2A
 omniroute tunnel list|create|stop  # Terowong Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tetapkan semula kata laluan pentadbir
 omniroute --mcp                    # Mulakan pelayan MCP melalui stdio

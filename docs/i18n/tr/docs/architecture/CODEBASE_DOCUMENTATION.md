@@ -100,8 +100,6 @@ App Router, hem kontrol paneli kullanıcı arayüzünü hem de genel/yönetim HT
 | Yol                                                                           | Amaç                                                          |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `api/`                                                                        | Tüm HTTP API rotaları (aşağıdaki döküme bakın)                |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 uç noktası (`POST /a2a`)                     |
-| `.well-known/agent.json/`                                                     | A2A Agent Card keşif belgesi                                  |
 | `(dashboard)/`                                                                | Kontrol paneli kullanıcı arayüzü (rota grubu, URL ön eki yok) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Kimlik doğrulama akışları                                     |
 | `landing/`                                                                    | Pazarlama/açılış sayfası                                      |
@@ -775,13 +773,6 @@ Bkz. [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) ve
 4. Testleri `open-sse/mcp-server/__tests__/` altına ekleyin.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) dosyasını güncelleyin.
 
-### Yeni bir A2A becerisi ekleme
-
-Bkz. [A2A-SERVER.md § Yeni Bir Beceri Ekleme](../frameworks/A2A-SERVER.md). Beceriler
-`src/lib/a2a/skills/` altında bulunur ve A2A görev yöneticisi aracılığıyla kaydedilir.
-
----
-
 ## 11. Kurallar
 
 - **Kod stili**: 2 boşluklu girinti, çift tırnak, 100 karakter genişliği, noktalı virgüller,
@@ -848,7 +839,6 @@ Bkz. [A2A-SERVER.md § Yeni Bir Beceri Ekleme](../frameworks/A2A-SERVER.md). Bec
   kilitleme hakkında ayrıntılı inceleme.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo puanlaması ve stratejileri.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — eksiksiz MCP araç kataloğu + aktarımlar.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protokolü becerileri ve keşfi.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman sıkıştırması.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI entegrasyonları.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (varsa), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — dağıtım hedefleri.

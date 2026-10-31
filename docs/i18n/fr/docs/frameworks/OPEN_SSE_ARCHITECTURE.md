@@ -573,5 +573,4 @@ Le moteur de routage est soumis à des budgets de performance stricts :
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — description répertoire par répertoire
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — notation à 16 facteurs
 - [MCP-SERVER.md](./MCP-SERVER.md) — serveur MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — serveur A2A
 - Source : `open-sse/` (plus de 400 fichiers, environ 143 000 lignes de code)

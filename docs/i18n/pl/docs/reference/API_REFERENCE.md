@@ -1879,48 +1879,10 @@ OmniRoute zawiera wbudowany serwer Model Context Protocol z 3 transportami (stdi
 
 OmniRoute udostępnia punkt końcowy A2A (Agent-to-Agent) zgodny z JSON-RPC 2.0 oraz nakładkę REST do inspekcji i wykorzystania w panelu.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opcjonalne, chyba że ustawiono OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Obsługiwane metody (wszystkie zależne od `settings.a2aEnabled`):
-
-| Metoda           | Opis                                                                       |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Synchroniczne wykonanie umiejętności; zwraca `{task, artifacts, metadata}` |
-| `message/stream` | Strumieniowe wykonanie SSE tego samego zestawu umiejętności                |
-| `tasks/get`      | Pobranie zadania według `taskId`                                           |
-| `tasks/cancel`   | Anulowanie zadania według `taskId`                                         |
-
-Wbudowane umiejętności: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Zwraca publiczną kartę agenta A2A (nazwę, opis, możliwości, katalog umiejętności i schemat uwierzytelniania) — publicznie buforowaną przez 1 godz. Uwierzytelnianie nie jest wymagane.
-
 ### Pomocnicze punkty końcowe REST
 
 | Metoda | Ścieżka                      | Opis                                                                                                             |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stan włączenia A2A, statystyki zadań i podsumowanie karty agenta z pamięci podręcznej                            |
 | GET    | `/api/a2a/tasks`             | Lista zadań — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Niezaimplementowane jako pomocniczy punkt końcowy REST — utwórz za pomocą JSON-RPC `message/send`)              |
 | GET    | `/api/a2a/tasks/[id]`        | Pobranie pojedynczego zadania                                                                                    |

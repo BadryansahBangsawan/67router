@@ -713,7 +713,6 @@ omniroute cache                        # Stav mezipaměti
 omniroute cache clear                  # Vymazání sémantické mezipaměti + mezipaměti signatur
 
 omniroute mcp status | restart         # Stav / restart serveru MCP
-omniroute a2a status | card            # Stav serveru A2A / karta agenta
 
 omniroute tunnel list | create | stop  # Správa tunelů (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Zobrazení / nastavení proměnných prostředí (dočasně)

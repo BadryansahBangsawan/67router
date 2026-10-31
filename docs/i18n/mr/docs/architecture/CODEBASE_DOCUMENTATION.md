@@ -100,8 +100,6 @@ App Router डॅशबोर्ड UI आणि सार्वजनिक/व
 | मार्ग                                                                         | उद्देश                                  |
 | ----------------------------------------------------------------------------- | --------------------------------------- |
 | `api/`                                                                        | सर्व HTTP API मार्ग (खालील तपशील पाहा)  |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 एंडपॉइंट (`POST /a2a`) |
-| `.well-known/agent.json/`                                                     | A2A Agent Card शोध दस्तऐवज              |
 | `(dashboard)/`                                                                | डॅशबोर्ड UI (मार्ग गट, URL उपसर्ग नाही) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | प्रमाणीकरण प्रवाह                       |
 | `landing/`                                                                    | विपणन/लँडिंग पृष्ठ                      |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` अंतर्गत चाचण्या जोडा.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) अद्ययावत करा.
 
-### नवीन A2A skill जोडा
-
-[A2A-SERVER.md § नवीन Skill जोडणे](../frameworks/A2A-SERVER.md) पहा. Skills
-`src/lib/a2a/skills/` मध्ये असतात आणि A2A task manager द्वारे नोंदणीकृत केले जातात.
-
----
-
 ## 11. संकेतपद्धती
 
 - **कोड शैली**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -846,7 +837,6 @@ bin/
   लॉकआउटचा सखोल आढावा.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo स्कोअरिंग आणि धोरणे.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — संपूर्ण MCP टूल कॅटलॉग + ट्रान्सपोर्ट्स.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A प्रोटोकॉल कौशल्ये आणि डिस्कव्हरी.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman कॉम्प्रेशन.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI इंटिग्रेशन्स.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (उपलब्ध असल्यास), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — डिप्लॉयमेंट लक्ष्ये.

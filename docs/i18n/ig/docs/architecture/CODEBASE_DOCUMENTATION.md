@@ -100,8 +100,6 @@ Ngalaba ọkwa elu dị n'okpuru `src/app/`:
 | Ụzọ                                                                           | Ebumnuche                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------- |
 | `api/`                                                                        | Ụzọ HTTP API niile (lee nkọwa n'okpuru)      |
-| `a2a/`                                                                        | Endpoint A2A JSON-RPC 2.0 (`POST /a2a`)      |
-| `.well-known/agent.json/`                                                     | Dọkụmentị nchọpụta A2A Agent Card            |
 | `(dashboard)/`                                                                | UI dashboard (otu route, enweghị prefix URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Usoro auth                                   |
 | `landing/`                                                                    | Ibe ahịa/landing                             |
@@ -772,13 +770,6 @@ Lee [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) na ngalaba pụrụ iche dị n
 4. Tinye ule n'okpuru `open-sse/mcp-server/__tests__/`.
 5. Melite [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Tinye nka A2A ọhụrụ
-
-Lee [A2A-SERVER.md § Ịtinye Nka Ọhụrụ](../frameworks/A2A-SERVER.md). Nkà dị na
-`src/lib/a2a/skills/`, a na-edebanyekwa ha site na onye njikwa ọrụ A2A.
-
----
-
 ## 11. Ụkpụrụ
 
 - **Ụdị koodu**: oghere 2 maka indent, akara nhota abụọ, obosara mkpụrụedemede 100, semicolon,
@@ -846,7 +837,6 @@ Lee [A2A-SERVER.md § Ịtinye Nka Ọhụrụ](../frameworks/A2A-SERVER.md). Nk
   na lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo scoring na strategies.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — katalọgụ MCP tools zuru ezu na transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — nka protocol A2A na discovery.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — compression RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — njikọta CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ọ bụrụ na ọ dị), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ebe e bu n'obi ime deployment.

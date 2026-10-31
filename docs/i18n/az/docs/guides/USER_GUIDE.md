@@ -1234,8 +1234,6 @@ OmniRoute həm **MCP serveri** (Model Kontekst Protokolu), həm də **A2A server
 
 ### Əhatə dairələri
 
-MCP hazırda 32 adlandırılmış əhatə dairəsi müəyyən edir. Hər bir Bearer açarı konkret əhatə dairələri ilə məhdudlaşdırıla bilər — səlahiyyətli əhatə dairəsi və alətlər siyahısı üçün [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC sxemi üçün isə [A2A-SERVER.md](../frameworks/A2A-SERVER.md) sənədinə baxın.
-
 ---
 
 ## 🧠 Bacarıqlar Sistemi
@@ -1244,7 +1242,6 @@ OmniRoute agentlərin və A2A son nöqtəsinin domenə xas prosedurları (məsə
 
 - **Marketplace interfeysi** — **İdarəetmə paneli → Bacarıqlar** bölməsindən bacarıqlara baxın və onları quraşdırın
 - **Hər açar üzrə əhatə dairələri** — Hansı API açarlarının hansı bacarıqları çağıra biləcəyini məhdudlaşdırın
-- **Fərdi bacarıqlar** — TypeScript faylını `src/lib/a2a/skills/` qovluğuna yerləşdirib qeydiyyatdan keçirin və o, dərhal A2A üzərindən çağırıla bilsin
 
 Tam istinad sənədi: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1329,7 +1326,6 @@ omniroute restore [<timestamp>]    # Anlıq surətdən bərpa et
 omniroute health                   # Ətraflı sağlamlıq məlumatı (qoruyucular, keş, yaddaş)
 omniroute quota                    # Provayder kvotasının istifadəsi
 omniroute mcp status               # MCP serverinin statusu
-omniroute a2a status               # A2A serverinin statusu
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunelləri
 omniroute reset-password           # Administrator parolunu sıfırla
 omniroute --mcp                    # MCP serverini stdio üzərindən işə sal

@@ -1237,8 +1237,6 @@ OmniRoute **የMCP አገልጋይ** (Model Context Protocol) እና **የA2A �
 
 ### የፈቃድ ወሰኖች
 
-MCP በአሁኑ ጊዜ 32 ስያሜ ያላቸው የፈቃድ ወሰኖችን ይገልጻል። እያንዳንዱ Bearer ቁልፍ ለተወሰኑ የፈቃድ ወሰኖች ብቻ ሊገደብ ይችላል — ለዋናው የፈቃድ ወሰንና የመሣሪያ ዝርዝር [MCP-SERVER.md](../frameworks/MCP-SERVER.md)ን፣ ለJSON-RPC መርሐግብር ደግሞ [A2A-SERVER.md](../frameworks/A2A-SERVER.md)ን ይመልከቱ።
-
 ---
 
 ## 🧠 የክህሎት ስርዓት
@@ -1247,7 +1245,6 @@ OmniRoute ኤጀንቶች እና የA2A መገናኛ ነጥብ ለተወሰኑ �
 
 - **የገበያ ቦታ በይነገጽ** — ክህሎቶችን ከ**Dashboard → Skills** ያስሱ እና ይጫኑ
 - **የየቁልፍ ወሰኖች** — የትኞቹ API ቁልፎች የትኞቹን ክህሎቶች መጥራት እንደሚችሉ ይገድቡ
-- **ብጁ ክህሎቶች** — የTypeScript ፋይልን በ`src/lib/a2a/skills/` ውስጥ ያስቀምጡ፣ ይመዝግቡት፣ ከዚያም ወዲያውኑ በA2A በኩል ሊጠራ ይችላል
 
 ሙሉ ማጣቀሻ፦ [SKILLS.md](../frameworks/SKILLS.md)።
 
@@ -1332,7 +1329,6 @@ omniroute restore [<timestamp>]    # ከቅጽበታዊ ቅጂ መልስ
 omniroute health                   # ዝርዝር የጤና ሁኔታ (ሰባሪዎች፣ መሸጎጫ፣ ማህደረ ትውስታ)
 omniroute quota                    # የአቅራቢ ኮታ አጠቃቀም
 omniroute mcp status               # የMCP አገልጋይ ሁኔታ
-omniroute a2a status               # የA2A አገልጋይ ሁኔታ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ዋሻዎች
 omniroute reset-password           # የአስተዳዳሪውን የይለፍ ቃል ዳግም አስጀምር
 omniroute --mcp                    # የMCP አገልጋይን በstdio ላይ አስጀምር

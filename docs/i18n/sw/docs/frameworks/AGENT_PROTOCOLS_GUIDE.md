@@ -20,38 +20,6 @@ Vyote vitatu vinajitegemea — chagua mchanganyiko wowote.
 
 ## Mti wa Maamuzi
 
-## 1. A2A — Wakala-kwa-Wakala
-
-**Vipimo:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint ya OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kadi ya Wakala:** `GET /.well-known/agent.json`
-
-### Wakati wa kutumia
-
-- Kujenga mfumo wa mawakala wengi ambapo OmniRoute ni mmoja wa washiriki
-- Kutoa uwezo mahiri wa uelekezaji wa OmniRoute (uelekezaji mahiri, usimamizi wa mgao, n.k.) kwa mawakala katika mifumo kama Google ADK au mitandao ya jumla ya mawakala
-- Kufunika OmniRoute kwa kiolesura sanifu cha ugunduzi + utekelezaji
-
-### Mbinu
-
-- `message/send` — wasilisha ujumbe, pokea jibu lililosawazishwa
-- `message/stream` — wasilisha + pokea matukio ya maendeleo yanayotiririshwa kupitia SSE
-- `tasks/get` — soma kazi kwa kutumia kitambulisho
-- `tasks/cancel` — ghairi kazi inayoendelea
-
-### Ujuzi uliojengewa ndani (6)
-
-- `smart-routing` — elekeza kidokezo kupitia mchanganyiko bora zaidi
-- `quota-management` — ripoti hali ya mgao kwa kila mtoa huduma
-- `provider-discovery` — orodhesha watoa huduma waliosakinishwa pamoja na uwezo wao
-- `cost-analysis` — kadiria gharama ya ombi/mazungumzo
-- `health-report` — kusanya hali ya breaker/cooldown/lockout kwa kila mtoa huduma
-- `list-capabilities` — orodhesha ujuzi na metadata zinazopatikana za wakala
-
-### Maelezo ya kina
-
-Tazama [A2A-SERVER.md](./A2A-SERVER.md) kwa maelezo ya usafirishaji, muundo wa kadi ya wakala, usanidi wa TTL ya kazi, na kiolezo cha kuongeza ujuzi mpya.
-
 ## 2. ACP — Sajili ya Mawakala wa CLI
 
 **Endpoint ya OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Muundo wa body kwa POST (`customAgentBodySchema` katika `src/app/api/acp/agents/
 
 ## Mifano ya Ujumuishaji
 
-### Gundua uwezo wa A2A wa OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Hurejesha Agent Card yenye stadi zote 6, njia za usafirishaji, na toleo.
-
-### Ita OmniRoute kama wakala wa A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Orodhesha mawakala wa CLI waliosakinishwa kupitia ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Tazama Pia
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Uchambuzi wa kina wa A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Miunganisho ya CLI za nje (hutumia ACP)
 - [SKILLS.md](./SKILLS.md) — Mfumo wa ujuzi (tofauti na ujuzi wa A2A — sandbox ya utekelezaji wa ndani)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — marejeleo ya endpoint

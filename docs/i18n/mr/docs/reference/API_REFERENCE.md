@@ -1827,48 +1827,10 @@ OmniRoute मध्ये 3 ट्रान्सपोर्टसह (stdio, S
 
 OmniRoute तपासणी/डॅशबोर्ड वापरासाठी REST रॅपरसह A2A (एजंट-टू-एजंट) JSON-RPC 2.0 एंडपॉइंट उपलब्ध करून देते.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY सेट केलेले नसल्यास पर्यायी
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-समर्थित पद्धती (सर्व `settings.a2aEnabled` द्वारे नियंत्रित):
-
-| पद्धत            | वर्णन                                                             |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | समकालिक कौशल्य अंमलबजावणी; `{task, artifacts, metadata}` परत करते |
-| `message/stream` | त्याच कौशल्य संचाची स्ट्रीमिंग SSE अंमलबजावणी                     |
-| `tasks/get`      | `taskId` द्वारे कार्य मिळवा                                       |
-| `tasks/cancel`   | `taskId` द्वारे कार्य रद्द करा                                    |
-
-अंगभूत कौशल्ये: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### एजंट कार्ड
-
-```bash
-GET /.well-known/agent.json
-```
-
-सार्वजनिक A2A एजंट कार्ड (नाव, वर्णन, क्षमता, कौशल्य कॅटलॉग, प्रमाणीकरण योजना) परत करते — सार्वजनिकरीत्या 1 तासासाठी कॅश केले जाते. प्रमाणीकरण आवश्यक नाही.
-
 ### REST सहाय्यक
 
 | पद्धत | पथ                           | वर्णन                                                                                                               |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A सक्षम स्थिती + कार्य आकडेवारी + कॅश केलेल्या एजंट कार्डचा सारांश                                                |
 | GET   | `/api/a2a/tasks`             | कार्यांची सूची — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST सहाय्यक म्हणून अंमलात आणलेले नाही — JSON-RPC `message/send` द्वारे तयार करा)                                  |
 | GET   | `/api/a2a/tasks/[id]`        | एक कार्य मिळवा                                                                                                      |

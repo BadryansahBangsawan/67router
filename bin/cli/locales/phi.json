@@ -390,34 +390,6 @@
       "description": "MCP audit log (alias para sa audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Ilista ang mga available na A2A skill mula sa agent card"
-    },
-    "invoke": {
-      "description": "Magpatakbo ng A2A skill at ibalik ang task ID",
-      "input": "JSON input object",
-      "input_file": "Path patungo sa JSON input file",
-      "wait": "Hintaying makumpleto ang task bago ibalik",
-      "timeout": "Timeout sa paghihintay na makumpleto sa ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Pamahalaan ang mga A2A task",
-      "list": {
-        "status": "I-filter ayon sa status",
-        "skill": "I-filter ayon sa skill ID"
-      },
-      "watch": {
-        "description": "I-poll ang status ng task hanggang sa makumpleto"
-      },
-      "stream": {
-        "description": "I-stream ang mga event sa pagpapatakbo ng task sa pamamagitan ng SSE"
-      },
-      "logs": {
-        "description": "Ipakita ang mga mensahe at artifact ng task"
-      }
-    }
-  },
   "policy": {
     "description": "Pamahalaan ang mga patakaran sa awtorisasyon ng OmniRoute",
     "list": {

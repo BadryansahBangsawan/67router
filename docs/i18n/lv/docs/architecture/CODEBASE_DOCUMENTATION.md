@@ -100,8 +100,6 @@ Augstākā līmeņa segmenti zem `src/app/`:
 | Ceļš                                                                          | Nolūks                                                                   |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `api/`                                                                        | Visi HTTP API maršruti (skatiet sadalījumu tālāk)                        |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 galapunkts (`POST /a2a`)                                |
-| `.well-known/agent.json/`                                                     | A2A aģenta kartes atklāšanas dokuments                                   |
 | `(dashboard)/`                                                                | Informācijas paneļa lietotāja saskarne (maršrutu grupa bez URL prefiksa) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentifikācijas plūsmas                                                 |
 | `landing/`                                                                    | Mārketinga/sākumlapa                                                     |
@@ -773,13 +771,6 @@ Skatiet [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) un tam veltīto sadaļu
 4. Pievienojiet testus direktorijā `open-sse/mcp-server/__tests__/`.
 5. Atjauniniet [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Jaunas A2A prasmes pievienošana
-
-Skatiet [A2A-SERVER.md § Jaunas prasmes pievienošana](../frameworks/A2A-SERVER.md). Prasmes atrodas
-direktorijā `src/lib/a2a/skills/` un tiek reģistrētas, izmantojot A2A uzdevumu pārvaldnieku.
-
----
-
 ## 11. Konvencijas
 
 - **Koda stils**: 2 atstarpju atkāpe, dubultpēdiņas, 100 rakstzīmju platums, semikoli,
@@ -846,7 +837,6 @@ direktorijā `src/lib/a2a/skills/` un tiek reģistrētas, izmantojot A2A uzdevum
   un bloķēšanā.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo vērtēšana un stratēģijas.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — pilns MCP rīku katalogs un transporti.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protokola prasmes un atklāšana.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK un Caveman saspiešana.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integrācijas.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ja pieejams), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — izvietošanas mērķi.

@@ -20,38 +20,6 @@ OmniRoute ከወኪሎች ጋር የተያያዙ ሦስት የተለያዩ በ�
 
 ## የውሳኔ ዛፍ
 
-## 1. A2A — ከወኪል ወደ ወኪል
-
-**መስፈርት፦** [A2A v0.3](https://a2a-protocol.org)
-**የOmniRoute መዳረሻ፦** `POST /a2a` (JSON-RPC 2.0)
-**የወኪል ካርድ፦** `GET /.well-known/agent.json`
-
-### መቼ መጠቀም እንዳለብዎት
-
-- OmniRoute ከአቻዎቹ አንዱ የሆነበትን ባለብዙ-ወኪል ሥርዓት ሲገነቡ
-- የOmniRouteን የማስተላለፊያ ብልህነት (ብልህ ማስተላለፊያ፣ የኮታ አስተዳደር፣ ወዘተ) Google ADKን በመሳሰሉ ማዕቀፎች ወይም አጠቃላይ የወኪል መረቦች ውስጥ ላሉ ወኪሎች ሲያቀርቡ
-- OmniRouteን በመደበኛ የፍለጋ + የጥሪ በይነገጽ ኋላ ሲያቀናጁ
-
-### ስልቶች
-
-- `message/send` — መልዕክት ያስገቡ፣ የተመሳሰለ ምላሽ ይቀበሉ
-- `message/stream` — ያስገቡ + በSSE የሚለቀቁ የሂደት ክስተቶችን ይቀበሉ
-- `tasks/get` — ተግባሩን በID ያንብቡ
-- `tasks/cancel` — በመሠራት ላይ ያለን ተግባር ይሰርዙ
-
-### አብረው የተካተቱ ክህሎቶች (6)
-
-- `smart-routing` — ጥያቄን በምርጥ ጥምረት በኩል ያስተላልፉ
-- `quota-management` — የእያንዳንዱን አቅራቢ የኮታ ሁኔታ ሪፖርት ያድርጉ
-- `provider-discovery` — የተጫኑ አቅራቢዎችን ከችሎታዎቻቸው ጋር ይዘርዝሩ
-- `cost-analysis` — የጥያቄ/ውይይት ወጪን ይገምቱ
-- `health-report` — የእያንዳንዱን አቅራቢ breaker/cooldown/lockout ሁኔታ ያጠቃልሉ
-- `list-capabilities` — የወኪሉን የሚገኙ ክህሎቶችና ሜታዳታ ይዘርዝሩ
-
-### ዝርዝር ማብራሪያ
-
-ስለ ማጓጓዣ ዝርዝሮች፣ የወኪል ካርድ መዋቅር፣ የተግባር TTL ውቅር እና አዳዲስ ክህሎቶችን ለመጨመር የሚያገለግለው አብነት [A2A-SERVER.md](./A2A-SERVER.md)ን ይመልከቱ።
-
 ## 2. ACP — የCLI ኤጀንቶች መዝገብ
 
 **OmniRoute መጨረሻ ነጥብ:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ ACP የOmniRoute **አካባቢያዊ የCLI ኤጀንት ዝርዝር** ነው�
 
 ## የውህደት ምሳሌዎች
 
-### የOmniRouteን A2A ችሎታዎች ያግኙ
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ሁሉንም 6 ክህሎቶች፣ ማጓጓዣዎች እና ስሪት የያዘውን Agent Card ይመልሳል።
-
-### OmniRouteን እንደ A2A ወኪል ይጠቀሙ
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### በACP በኩል የተጫኑ CLI ወኪሎችን ይዘርዝሩ
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## በተጨማሪ ይመልከቱ
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — ስለ A2A ዝርዝር ማብራሪያ
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — የውጫዊ CLI ውህደቶች (ACPን ይጠቀማል)
 - [SKILLS.md](./SKILLS.md) — የክህሎቶች ማዕቀፍ (ከA2A ክህሎቶች የተለየ — የአካባቢያዊ ማስፈጸሚያ ማግለያ)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — የመዳረሻ ነጥብ ማጣቀሻ

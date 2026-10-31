@@ -143,8 +143,6 @@ src/
 | `app/api/`（非 v1）                                                          | 管理/管理员路由（约 60 个目录：提供者、组合、设置、mcp、a2a、评估、记忆、技能、Webhook、合规、韧性、监控、隧道、cli-tools 等）                                                                                                                                                                                           |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 个路由（服务器控制、智能体状态/DNS/映射、绕过、证书、上游 CA）。LOCAL_ONLY + SPAWN_CAPABLE。参见 `docs/frameworks/AGENTBRIDGE.md §7`。                                                                                                                                                         |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16 个以上路由（请求、会话、主机、捕获模式、导出、ws）。LOCAL_ONLY + SPAWN_CAPABLE。参见 `docs/frameworks/TRAFFIC_INSPECTOR.md §8`。                                                                                                                                                    |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 入口点（`POST /a2a`）                                                                                                                                                                                                                                                                                   |
-| `app/.well-known/agent.json/`                                                | A2A 智能体卡片（发现）                                                                                                                                                                                                                                                                                                   |
 | `app/(dashboard)/dashboard/`                                                 | 仪表板 UI 页面（50 多个区块，约 118 个 page.tsx 文件：提供者、组合、设置、记忆、技能、Webhook、评估、审计、批处理、缓存、成本、健康状况、系统、活动等）                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI（3 个选项卡：搜索/抓取/比较 + SearchConceptCard + ProviderCatalog）— 参见 `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                                |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio（计划 21）：`page.tsx`（3 选项卡外壳）、`components/`（MemoryConceptCard、MemoryEngineStatus、EmbeddingSourceSelector、EditMemoryModal、RetrievePreview、QdrantConfigCard、RerankConfigCard）、`components/tabs/`（MemoriesTab、PlaygroundTab、EngineTab）、`hooks/`（useEngineStatus、useMemorySettings） |
@@ -396,7 +394,6 @@ open-sse/
 | 文档                                         | 用途                                                         |
 | -------------------------------------------- | ------------------------------------------------------------ |
 | `MCP-SERVER.md`                              | MCP 服务器：110 个工具、3 种传输方式、33 个作用域、REST 端点 |
-| `A2A-SERVER.md`                              | A2A v0.3：JSON-RPC、6 项技能、REST 辅助工具、智能体卡片      |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | 统一指南：A2A、ACP 与云端智能体的对比                        |
 | `SKILLS.md`                                  | 技能框架（内置 + 市场 + SkillsSH + 沙箱）                    |
 | `RADAR.md`                                   | Radar 免费模型目录覆盖层（`RADAR_ENABLED`，默认关闭）        |
@@ -563,7 +560,6 @@ open-sse/
 - **添加提供者？** 按照 `docs/architecture/ARCHITECTURE.md § Adding a New Provider` 操作，并交叉核对 `docs/reference/PROVIDER_REFERENCE.md`。
 - **添加路由？** 请参阅 `docs/architecture/ARCHITECTURE.md § Adding a New API Route` 和 `src/shared/validation/schemas.ts`。
 - **添加 MCP 工具？** 请参阅 `docs/frameworks/MCP-SERVER.md § Adding a Tool`。
-- **添加 A2A 技能？** 请参阅 `docs/frameworks/A2A-SERVER.md § Adding a New Skill`。
 - **在本地运行？** 请参阅 `docs/guides/SETUP_GUIDE.md`。
 - **部署？** 请参阅 `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`。
 - **发布？** 请参阅 `docs/ops/RELEASE_CHECKLIST.md`（以及 `/generate-release-cc` Claude Code 技能）。

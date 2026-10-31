@@ -573,5 +573,4 @@ Module load சமயத்தில் Zod சரிபார்ப்பு �
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — கோப்பகம் வாரியான விவரம்
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-காரணி மதிப்பீடு
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP சேவையகம்
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A சேவையகம்
 - மூலம்: `open-sse/` (400+ கோப்புகள், ~143K LOC)

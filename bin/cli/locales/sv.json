@@ -390,34 +390,6 @@
       "description": "MCP-granskningslogg (alias för audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Lista tillgängliga A2A-färdigheter från agentkortet"
-    },
-    "invoke": {
-      "description": "Anropa en A2A-färdighet och returnera uppgifts-ID:t",
-      "input": "JSON-indataobjekt",
-      "input_file": "Sökväg till JSON-indatafil",
-      "wait": "Vänta tills uppgiften har slutförts innan retur",
-      "timeout": "Tidsgräns för väntan på slutförande i ms (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Hantera A2A-uppgifter",
-      "list": {
-        "status": "Filtrera efter status",
-        "skill": "Filtrera efter färdighets-ID"
-      },
-      "watch": {
-        "description": "Kontrollera uppgiftsstatusen regelbundet tills uppgiften har slutförts"
-      },
-      "stream": {
-        "description": "Strömma händelser från uppgiftskörningen via SSE"
-      },
-      "logs": {
-        "description": "Visa uppgiftsmeddelanden och artefakter"
-      }
-    }
-  },
   "policy": {
     "description": "Hantera OmniRoute-auktoriseringspolicyer",
     "list": {

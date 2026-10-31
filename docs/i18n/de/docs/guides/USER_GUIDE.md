@@ -1235,8 +1235,6 @@ Verwenden Sie die SSE-URL `http://localhost:20128/api/mcp/sse` und einen Bearer-
 
 ### Berechtigungsbereiche
 
-MCP definiert derzeit 32 benannte Berechtigungsbereiche. Jeder Bearer-Schlüssel kann auf bestimmte Berechtigungsbereiche beschränkt werden — das maßgebliche Verzeichnis der Berechtigungsbereiche und Tools finden Sie in [MCP-SERVER.md](../frameworks/MCP-SERVER.md), das JSON-RPC-Schema in [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Skills-System
@@ -1245,7 +1243,6 @@ OmniRoute stellt ein erweiterbares **Skill-Framework** (`src/lib/skills/`) berei
 
 - **Marketplace-UI** — Skills über **Dashboard → Skills** durchsuchen und installieren
 - **Schlüsselbezogene Scopes** — Einschränken, welche API-Schlüssel welche Skills aufrufen dürfen
-- **Benutzerdefinierte Skills** — Eine TypeScript-Datei in `src/lib/a2a/skills/` ablegen und registrieren; anschließend kann sie sofort über A2A aufgerufen werden
 
 Vollständige Referenz: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1330,7 +1327,6 @@ omniroute restore [<timestamp>]    # Aus einem Snapshot wiederherstellen
 omniroute health                   # Detaillierter Systemzustand (Schutzschalter, Cache, Arbeitsspeicher)
 omniroute quota                    # Nutzung der Anbieter-Kontingente
 omniroute mcp status               # Status des MCP-Servers
-omniroute a2a status               # Status des A2A-Servers
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-Tunnel
 omniroute reset-password           # Administratorpasswort zurücksetzen
 omniroute --mcp                    # MCP-Server über stdio starten

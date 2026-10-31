@@ -119,4 +119,3 @@ try {
 - [ఏజెంట్ ప్రోటోకాల్లు](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI లాంచ్ కాంట్రాక్ట్లు](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI టూల్లు](../reference/CLI-TOOLS.md)
-- [A2A సర్వర్](./A2A-SERVER.md)

@@ -143,8 +143,6 @@ src/
 | `app/api/` (v1 නොවන)                                                         | කළමනාකරණ/පරිපාලක මාර්ග (~60 නාමාවලි: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, ආදිය)                                                                                                                                                 |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — මාර්ග 12ක් (සේවාදායක පාලනය, agent තත්ත්වය/DNS/mappings, bypass, cert, upstream-CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` බලන්න.                                                                                                                                          |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — මාර්ග 16+ක් (ඉල්ලීම්, සැසි, hosts, capture-modes, export, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` බලන්න.                                                                                                                                              |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 ප්රවේශ ලක්ෂ්යය (`POST /a2a`)                                                                                                                                                                                                                                                                              |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (සොයාගැනීම)                                                                                                                                                                                                                                                                                                 |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard UI පිටු (කොටස් 50+, page.tsx ගොනු ~118ක්: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, ආදිය)                                                                                                                                              |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (ටැබ් 3ක්: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` බලන්න                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (සැලැස්ම 21): `page.tsx` (ටැබ් 3ක shell එක), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ලේඛනය                                       | අරමුණ                                                                                  |
 | ------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP සේවාදායකය: මෙවලම් 110ක්, ප්රවාහන 3ක්, විෂයපථ 33ක්, REST අන්තලක්ෂ්ය                 |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, කුසලතා 6ක්, REST උපකාරක, නියෝජිත කාඩ්පත                            |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | ඒකාබද්ධ මාර්ගෝපදේශය: A2A එදිරිව ACP එදිරිව Cloud Agents                                |
 | `SKILLS.md`                                 | කුසලතා රාමුව (අන්තර්ගත + වෙළඳපොළ + SkillsSH + sandbox)                                 |
 | `RADAR.md`                                  | Radar නිදහස්-ආකෘති නාමාවලි අතිපිහිටුවීම (`RADAR_ENABLED`, පෙරනිමියෙන් අක්රියයි)        |
@@ -567,7 +564,6 @@ open-sse/
 - **සපයන්නෙකු එක් කරනවාද?** `docs/architecture/ARCHITECTURE.md § නව සපයන්නෙකු එක් කිරීම` අනුගමනය කර `docs/reference/PROVIDER_REFERENCE.md` සමඟ හරස් පරීක්ෂා කරන්න.
 - **මාර්ගයක් එක් කරනවාද?** `docs/architecture/ARCHITECTURE.md § නව API මාර්ගයක් එක් කිරීම` + `src/shared/validation/schemas.ts`.
 - **MCP මෙවලමක් එක් කරනවාද?** `docs/frameworks/MCP-SERVER.md § මෙවලමක් එක් කිරීම`.
-- **A2A කුසලතාවක් එක් කරනවාද?** `docs/frameworks/A2A-SERVER.md § නව කුසලතාවක් එක් කිරීම`.
 - **දේශීයව ධාවනය කරනවාද?** `docs/guides/SETUP_GUIDE.md`.
 - **යොදවනවාද?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **නිකුත් කරනවාද?** `docs/ops/RELEASE_CHECKLIST.md` (සහ `/generate-release-cc` Claude Code කුසලතාව).

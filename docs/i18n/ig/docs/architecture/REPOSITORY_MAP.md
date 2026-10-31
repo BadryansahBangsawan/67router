@@ -143,8 +143,6 @@ src/
 | `app/api/` (na-abụghị v1)                                                    | Ụzọ njikwa/onye nchịkwa (~direktori 60: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, wdg.)                                                                                                                                          |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — ụzọ 12 (njikwa sava, ọnọdụ agent/DNS/mappings, bypass, cert, upstream-CA). LOCAL_ONLY + SPAWN_CAPABLE. Lee `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — ụzọ 16+ (requests, sessions, hosts, capture-modes, export, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lee `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                           |
-| `app/a2a/`                                                                   | Ebe ntinye A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                              |
-| `app/.well-known/agent.json/`                                                | Kaadị Agent A2A (nchọpụta)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | Peeji UI dashboard (ngalaba 50+, ~faịlụ page.tsx 118: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, wdg.)                                                                                                                                        |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI Search Tools Studio (taabụ 3: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — lee `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                           |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (atụmatụ 21): `page.tsx` (shei taabụ 3), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Akwụkwọ                                      | Ebumnuche                                                                    |
 | -------------------------------------------- | ---------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                              | Sava MCP: ngwaọrụ 110, ụzọ mbufe 3, scopes 33, endpoint REST                 |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, nkà 6, ndị enyemaka REST, kaadị agent                    |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | Ntuziaka jikọtara ọnụ: A2A vs ACP vs Cloud Agents                            |
 | `SKILLS.md`                                  | Framework nkà (nke arụnyere n’ime + marketplace + SkillsSH + sandbox)        |
 | `RADAR.md`                                   | Overlay katalọgụ ụdị n’efu nke Radar (`RADAR_ENABLED`, agbanyụrụ na ndabara) |
@@ -567,7 +564,6 @@ Anaghị etinye ha na nsonaazụ `npm pack`. Lee `.npmignore`.
 - **Ị na-agbakwunye provider?** Soro `docs/architecture/ARCHITECTURE.md § Ịgbakwunye Provider Ọhụrụ` + jiri `docs/reference/PROVIDER_REFERENCE.md` tụlee ya.
 - **Ị na-agbakwunye route?** `docs/architecture/ARCHITECTURE.md § Ịgbakwunye API Route Ọhụrụ` + `src/shared/validation/schemas.ts`.
 - **Ị na-agbakwunye ngwa MCP?** `docs/frameworks/MCP-SERVER.md § Ịgbakwunye Ngwa`.
-- **Ị na-agbakwunye nkà A2A?** `docs/frameworks/A2A-SERVER.md § Ịgbakwunye Nkà Ọhụrụ`.
 - **Ị na-eme ya na kọmputa mpaghara?** `docs/guides/SETUP_GUIDE.md`.
 - **Ị na-ebuga ya?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Ị na-ewepụta ụdị ọhụrụ?** `docs/ops/RELEASE_CHECKLIST.md` (na nkà Claude Code `/generate-release-cc`).

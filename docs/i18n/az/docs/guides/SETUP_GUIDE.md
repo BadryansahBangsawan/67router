@@ -247,26 +247,6 @@ MCP parametrlərinizə əlavə edin:
 
 **Tam MCP sənədləri:** [MCP Serverinin README-si](../../open-sse/mcp-server/README.md) — 110 alət, IDE konfiqurasiyaları, Python/TS/Go klientləri.
 
-### A2A Quraşdırılması (Agentlərarası Protokol)
-
-Agent Kartını yoxlayın:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tapşırıq göndərin:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Tam A2A sənədləri:** [A2A Serverinin README-si](../../src/lib/a2a/README.md) — JSON-RPC 2.0, bacarıqlar, axınla ötürmə, tapşırığın həyat dövrü.
-
----
-
 ## Taymaut Konfiqurasiyası
 
 ### Əsas Taymautlar

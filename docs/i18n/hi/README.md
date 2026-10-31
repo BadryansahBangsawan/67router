@@ -595,7 +595,6 @@ Radar ऑप्ट-इन और केवल-GET है। OmniRoute क्ल�
 - **🔑 प्रति-कुंजी रूटिंग नियंत्रण** — `forcedModel` के साथ किसी API कुंजी को एक मॉडल या कॉम्बो से जोड़ें, और किसी कुंजी के मॉडल व कॉम्बो को एटॉमिक रूप से जोड़ें या हटाएँ (`/api/keys/{id}/access`)। → [API संदर्भ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ अधिक सूक्ष्म PII नियंत्रण** — प्रति-प्रकार चयन, अधिकतम 20 सत्यापित कस्टम मास्किंग पैटर्न और प्रति-प्रकार पहचान काउंटर; मास्किंग स्वयं ऑप्ट-इन बनी रहती है। → [गार्डरेल्स](docs/security/GUARDRAILS.md)
 - **🌍 67 भाषाएँ** — डैशबोर्ड, दस्तावेज़ मिरर और CLI में उपलब्ध; `npm run i18n:add-locale` एक ही कमांड से हर जगह भाषा जोड़ता है। → [i18n मार्गदर्शिका](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — आपके एजेंट समूह के लिए इनबाउंड A2A डेलीगेशन, Agent Card पर Conductor कौशल और Faro पुश-टू-टॉक वॉइस चैट वाला डैशबोर्ड पैनल। → [A2A सर्वर](docs/frameworks/A2A-SERVER.md)
 - **🛂 अनुकूली प्रवेश और ओवरलोड सुरक्षा** — भारी चैट अनुरोध 503 लौटाने के बजाय कतार में लगते हैं, और प्रत्येक कनेक्शन के लिए एटॉमिक RPM रोलिंग लीज़ उपलब्ध हैं। → [रेज़िलिएंस मार्गदर्शिका](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ कैनोनिकल `/v1/models` क्रम** — प्रत्येक प्रदाता के लिए एक सतत, प्रदाता-समूहित ब्लॉक (कॉम्बो सबसे पहले), जो प्रत्येक कैटलॉग स्रोत में स्थिर रहता है। → [API संदर्भ](docs/reference/API_REFERENCE.md)
 - **🗜️ कम्प्रेशन सुदृढ़ीकरण** — डिफ़ॉल्ट रूप से चालू इन्फ्लेशन गार्ड, DE / FR / JA + चीनी (wényán) के लिए Caveman पैक, और Gradle व .NET के लिए RTK फ़िल्टर। → [कम्प्रेशन](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +913,6 @@ OmniRoute को **MCP**, **A2A**, **REST API**, **webhooks** या **रिम
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor या किसी भी MCP क्लाइंट से जोड़ने के लिए</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">रिमोट MCP — <b>110 टूल</b>, 33 दायरे (प्रवर्तन वैकल्पिक), पूर्ण ऑडिट ट्रेल</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">स्ट्रीमिंग MCP ट्रांसपोर्ट</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">एजेंट-से-एजेंट, <b>JSON-RPC 2.0</b> + SSE, 6 कौशल</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-संगत — चैट, एम्बेडिंग, इमेज, ऑडियो, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">अनुरोध / कोटा इवेंट को Slack, Discord, Telegram या किसी भी URL पर पुश करने के लिए</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>रिमोट CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">सीमित-दायरे वाले एक्सेस टोकन से रिमोट इंस्टेंस संचालित करने के लिए</td></tr>
@@ -924,8 +922,6 @@ OmniRoute को **MCP**, **A2A**, **REST API**, **webhooks** या **रिम
 # Claude Code को MCP के माध्यम से पूरा OmniRoute टूलसेट दें:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP सर्वर](docs/frameworks/MCP-SERVER.md) · [A2A सर्वर](docs/frameworks/A2A-SERVER.md) · [एजेंट प्रोटोकॉल](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1391,7 +1387,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 भी इसे 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP सर्वर</a></b></td><td>110 MCP टूल, IDE कॉन्फ़िगरेशन, Python/TS/Go क्लाइंट</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP सर्वर मार्गदर्शिका</a></b></td><td>MCP इंस्टॉलेशन, ट्रांसपोर्ट और टूल संदर्भ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A सर्वर</a></b></td><td>JSON-RPC 2.0 प्रोटोकॉल, कौशल, स्ट्रीमिंग, कार्य प्रबंधन</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A सर्वर मार्गदर्शिका</a></b></td><td>A2A एजेंट कार्ड, कार्य, कौशल और स्ट्रीमिंग</td></tr>
 </table>
 
 ### 📋 परियोजना और गुणवत्ता

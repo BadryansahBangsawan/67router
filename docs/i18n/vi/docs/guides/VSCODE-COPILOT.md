@@ -92,7 +92,7 @@ không thay đổi gì.
 Simple Browser thay vì trình duyệt bên ngoài. Việc nhúng phải được **chủ động bật trên máy chủ** thông qua
 `DASHBOARD_ALLOW_EMBED=vscode`, khi đó các trang HTML sẽ được phục vụ với
 `frame-ancestors 'self' vscode-webview:` thay vì thiết lập mặc định `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Bề mặt API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) vẫn giữ
+`X-Frame-Options: DENY`. Bề mặt API (`/api`, `/v1`, `/v1beta`, `/healthz`) vẫn giữ
 các header nghiêm ngặt trong cả hai trường hợp.
 
 > ⚠️ **Đây là cờ tại thời điểm build, không phải tại thời điểm chạy.** Next.js biên dịch `headers()` vào manifest

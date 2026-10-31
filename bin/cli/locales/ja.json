@@ -390,34 +390,6 @@
       "description": "MCP監査ログ（audit --source mcpのエイリアス）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "エージェントカードから利用可能なA2Aスキルを一覧表示"
-    },
-    "invoke": {
-      "description": "A2Aスキルを呼び出し、タスクIDを返す",
-      "input": "JSON入力オブジェクト",
-      "input_file": "JSON入力ファイルへのパス",
-      "wait": "タスクが完了するまで待機してから返す",
-      "timeout": "完了待機のタイムアウト（ミリ秒、デフォルト: 60000）"
-    },
-    "tasks": {
-      "description": "A2Aタスクを管理",
-      "list": {
-        "status": "ステータスでフィルタリング",
-        "skill": "スキルIDでフィルタリング"
-      },
-      "watch": {
-        "description": "完了するまでタスクのステータスをポーリング"
-      },
-      "stream": {
-        "description": "SSE経由でタスク実行イベントをストリーミング"
-      },
-      "logs": {
-        "description": "タスクのメッセージと成果物を表示"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRouteの認可ポリシーを管理",
     "list": {

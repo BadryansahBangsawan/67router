@@ -702,7 +702,6 @@ omniroute cache                        # தற்காலிகச் சே�
 omniroute cache clear                  # சொற்பொருள் + கையொப்பத் தற்காலிகச் சேமிப்புகளை அழி
 
 omniroute mcp status | restart         # MCP சேவையக நிலை / மறுதொடக்கம்
-omniroute a2a status | card            # A2A சேவையக நிலை / முகவர் அட்டை
 
 omniroute tunnel list | create | stop  # சுரங்கங்களை நிர்வகி (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # சூழல் மாறிகளை ஆய்வுசெய் / அமை (தற்காலிகமானது)

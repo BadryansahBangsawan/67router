@@ -390,34 +390,6 @@
       "description": "Log iniúcháin MCP (ailias le haghaidh iniúchadh --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Liostaigh scileanna A2A ar fáil ón chárta gníomhaire"
-    },
-    "invoke": {
-      "description": "Glaigh ar scil A2A agus fill ar ID an tasc",
-      "input": "Oibiacht ionchur JSON",
-      "input_file": "Cosán go comhad ionchur JSON",
-      "wait": "Fan le críoch an tasc sula dteagmháil ar ais",
-      "timeout": "Am barraíochta ag fanacht le críoch i ms (réamhshocrú: 60000)"
-    },
-    "tasks": {
-      "description": "Bainistigh tascanna A2A",
-      "list": {
-        "status": "Scag de réir stádais",
-        "skill": "Scag de réir ID scile"
-      },
-      "watch": {
-        "description": "Ceap stádas an tasc go dtí críoch"
-      },
-      "stream": {
-        "description": "Straimh imeartha tasc trí SSE"
-      },
-      "logs": {
-        "description": "Taispeáin teachtaireachtaí tasc agus gléasraí"
-      }
-    }
-  },
   "policy": {
     "description": "Bainistigh polasaithe údarúcháin OmniRoute",
     "list": {

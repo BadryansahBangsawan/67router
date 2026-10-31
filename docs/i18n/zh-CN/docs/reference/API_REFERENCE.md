@@ -1796,48 +1796,10 @@ OmniRoute 内置了一个模型上下文协议服务器，支持 3 种传输方�
 
 OmniRoute 提供了一个 A2A（Agent-to-Agent，智能体到智能体）JSON-RPC 2.0 端点，以及一个用于检查和仪表板的 REST 封装。
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # 可选，除非设置了 OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-支持的方法（全部受 `settings.a2aEnabled` 控制）：
-
-| 方法             | 描述                                             |
-| ---------------- | ------------------------------------------------ |
-| `message/send`   | 同步执行技能；返回 `{task, artifacts, metadata}` |
-| `message/stream` | 通过 SSE 流式执行同一组技能                      |
-| `tasks/get`      | 通过 `taskId` 获取任务                           |
-| `tasks/cancel`   | 通过 `taskId` 取消任务                           |
-
-内置技能：`smart-routing`、`quota-management`、`provider-discovery`、`cost-analysis`、`health-report`。
-
-### 智能体卡片
-
-```bash
-GET /.well-known/agent.json
-```
-
-返回公开的 A2A 智能体卡片（名称、描述、能力、技能目录、身份验证方案）——公开缓存 1h。无需身份验证。
-
 ### REST 辅助接口
 
 | 方法 | 路径                         | 描述                                                                                                           |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A 启用状态 + 任务统计信息 + 缓存的智能体卡片摘要                                                             |
 | GET  | `/api/a2a/tasks`             | 列出任务 — `?state=submitted\|working\|completed\|failed\|cancelled`、`?skill=`、`?limit=`（≤200）、`?offset=` |
 | POST | `/api/a2a/tasks`             | （未作为 REST 辅助接口实现——请通过 JSON-RPC `message/send` 创建）                                              |
 | GET  | `/api/a2a/tasks/[id]`        | 获取单个任务                                                                                                   |

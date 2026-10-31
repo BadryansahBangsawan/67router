@@ -18,7 +18,6 @@ import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 import { isPublicDisplayBaseUrl, useDisplayBaseUrl } from "@/shared/hooks";
 import { extractApiErrorMessage } from "@/shared/http/apiErrorMessage";
 import { useTranslations } from "next-intl";
-import A2ADashboardPage from "./components/A2ADashboard";
 import McpDashboardPage from "./components/MCPDashboard";
 import NotionSourceCard from "./components/NotionSourceCard";
 import ObsidianSourceCard from "./components/ObsidianSourceCard";
@@ -117,12 +116,11 @@ type EndpointTunnelVisibility = {
   showNgrokTunnel: boolean;
 };
 
-type EndpointTab = "apis" | "mcp" | "a2a" | "context-sources";
+type EndpointTab = "apis" | "mcp" | "context-sources";
 
 const ENDPOINT_TABS: Array<{ value: EndpointTab; labelKey: string; icon: string }> = [
   { value: "apis", labelKey: "tabApis", icon: "api" },
   { value: "mcp", labelKey: "tabMcp", icon: "extension" },
-  { value: "a2a", labelKey: "tabA2a", icon: "hub" },
   { value: "context-sources", labelKey: "tabContextSources", icon: "database" },
 ];
 
@@ -161,7 +159,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   const [cloudBaseUrl, setCloudBaseUrl] = useState(BUILD_TIME_CLOUD_URL); // dynamic cloud URL from API response
   const [cloudConfigured, setCloudConfigured] = useState(Boolean(BUILD_TIME_CLOUD_URL));
   const [_mcpStatus, setMcpStatus] = useState<any>(null);
-  const [_a2aStatus, setA2aStatus] = useState<any>(null);
   const [searchProviders, setSearchProviders] = useState<any[]>([]);
   const [cloudflaredStatus, setCloudflaredStatus] = useState<CloudflaredTunnelStatus | null>(null);
   const [cloudflaredBusy, setCloudflaredBusy] = useState(false);
@@ -331,16 +328,10 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
   const fetchProtocolStatus = async () => {
     try {
-      const [mcpRes, a2aRes] = await Promise.allSettled([
-        fetch("/api/mcp/status"),
-        fetch("/api/a2a/status"),
-      ]);
+      const [mcpRes] = await Promise.allSettled([fetch("/api/mcp/status")]);
 
       if (mcpRes.status === "fulfilled" && mcpRes.value.ok) {
         setMcpStatus(await mcpRes.value.json());
-      }
-      if (a2aRes.status === "fulfilled" && a2aRes.value.ok) {
-        setA2aStatus(await a2aRes.value.json());
       }
     } catch {
       // Ignore status failures; protocols panel has fallback text.
@@ -1281,7 +1272,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       />
 
       {activeEndpointTab === "mcp" ? <McpDashboardPage /> : null}
-      {activeEndpointTab === "a2a" ? <A2ADashboardPage /> : null}
       {activeEndpointTab === "context-sources" ? (
         <div className="flex flex-col gap-4">
           <NotionSourceCard />

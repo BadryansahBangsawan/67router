@@ -573,5 +573,4 @@ Maršrutēšanas dzinējam ir stingri veiktspējas limiti:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — direktoriju pārskats
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 faktoru vērtēšana
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP serveris
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A serveris
 - Avota kods: `open-sse/` (vairāk nekā 400 failu, ~143K koda rindu)

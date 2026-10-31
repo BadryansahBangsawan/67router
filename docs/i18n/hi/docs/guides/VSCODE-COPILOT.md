@@ -86,7 +86,7 @@ HTTP 400 — मॉडल '<id>' एक इमेज-जनरेशन मॉ�
 
 ## VS Code टैब के भीतर डैशबोर्ड
 
-`omnicopilot.dashboardOpen: "editor"` बाहरी ब्राउज़र के बजाय Simple Browser के माध्यम से OmniRoute डैशबोर्ड को एडिटर टैब में रेंडर करता है। एम्बेडिंग को **सर्वर पर ऑप्ट-इन** करना होता है, जिसके लिए `DASHBOARD_ALLOW_EMBED=vscode` का उपयोग किया जाता है। इससे HTML पेज डिफ़ॉल्ट `frame-ancestors 'none'` + `X-Frame-Options: DENY` के बजाय `frame-ancestors 'self' vscode-webview:` के साथ सर्व किए जाते हैं। API सरफ़ेस (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) दोनों ही स्थितियों में सख़्त हेडर बनाए रखता है।
+`omnicopilot.dashboardOpen: "editor"` बाहरी ब्राउज़र के बजाय Simple Browser के माध्यम से OmniRoute डैशबोर्ड को एडिटर टैब में रेंडर करता है। एम्बेडिंग को **सर्वर पर ऑप्ट-इन** करना होता है, जिसके लिए `DASHBOARD_ALLOW_EMBED=vscode` का उपयोग किया जाता है। इससे HTML पेज डिफ़ॉल्ट `frame-ancestors 'none'` + `X-Frame-Options: DENY` के बजाय `frame-ancestors 'self' vscode-webview:` के साथ सर्व किए जाते हैं। API सरफ़ेस (`/api`, `/v1`, `/v1beta`, `/healthz`) दोनों ही स्थितियों में सख़्त हेडर बनाए रखता है।
 
 > ⚠️ **यह बिल्ड-टाइम फ़्लैग है, रनटाइम फ़्लैग नहीं।** Next.js `headers()` को रूट
 > मैनिफ़ेस्ट में कंपाइल करता है, इसलिए `next.config.mjs` बंडल बनाए जाते समय वेरिएबल पढ़ता है

@@ -705,7 +705,6 @@ omniroute cache                        # Kesh holati
 omniroute cache clear                  # Semantik va imzo keshlarini tozalash
 
 omniroute mcp status | restart         # MCP serverining holati / qayta ishga tushirish
-omniroute a2a status | card            # A2A serverining holati / agent kartasi
 
 omniroute tunnel list | create | stop  # Tunnellarni boshqarish (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Muhit oʻzgaruvchilarini koʻrish / sozlash (vaqtincha)

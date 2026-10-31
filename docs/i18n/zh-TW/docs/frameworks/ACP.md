@@ -119,4 +119,3 @@ try {
 - [代理程式通訊協定](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 啟動合約](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI 工具](../reference/CLI-TOOLS.md)
-- [A2A 伺服器](./A2A-SERVER.md)

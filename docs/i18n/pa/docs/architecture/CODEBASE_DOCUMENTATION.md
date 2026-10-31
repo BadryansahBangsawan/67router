@@ -100,8 +100,6 @@ App Router ਡੈਸ਼ਬੋਰਡ UI ਅਤੇ ਜਨਤਕ/ਪ੍ਰਬੰਧ
 | ਪਾਥ                                                                           | ਉਦੇਸ਼                                         |
 | ----------------------------------------------------------------------------- | --------------------------------------------- |
 | `api/`                                                                        | ਸਾਰੇ HTTP API ਰੂਟ (ਹੇਠਾਂ ਵੇਰਵਾ ਦੇਖੋ)          |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 ਐਂਡਪੌਇੰਟ (`POST /a2a`)       |
-| `.well-known/agent.json/`                                                     | A2A Agent Card ਖੋਜ ਦਸਤਾਵੇਜ਼                   |
 | `(dashboard)/`                                                                | ਡੈਸ਼ਬੋਰਡ UI (ਰੂਟ ਸਮੂਹ, ਕੋਈ URL ਪ੍ਰੀਫਿਕਸ ਨਹੀਂ) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ਪ੍ਰਮਾਣੀਕਰਨ ਪ੍ਰਵਾਹ                             |
 | `landing/`                                                                    | ਮਾਰਕੀਟਿੰਗ/ਲੈਂਡਿੰਗ ਪੰਨਾ                        |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` ਹੇਠ ਟੈਸਟ ਸ਼ਾਮਲ ਕਰੋ।
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ।
 
-### ਨਵਾਂ A2A ਹੁਨਰ ਸ਼ਾਮਲ ਕਰੋ
-
-[A2A-SERVER.md § ਨਵਾਂ ਹੁਨਰ ਸ਼ਾਮਲ ਕਰਨਾ](../frameworks/A2A-SERVER.md) ਵੇਖੋ। ਹੁਨਰ
-`src/lib/a2a/skills/` ਵਿੱਚ ਹੁੰਦੇ ਹਨ ਅਤੇ A2A ਟਾਸਕ ਮੈਨੇਜਰ ਰਾਹੀਂ ਰਜਿਸਟਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।
-
----
-
 ## 11. ਰਵਾਇਤਾਂ
 
 - **ਕੋਡ ਸ਼ੈਲੀ**: 2-ਸਪੇਸ ਇੰਡੈਂਟ, ਡਬਲ ਕੋਟ, 100 ਅੱਖਰ ਚੌੜਾਈ, ਸੈਮੀਕੋਲਨ,
@@ -846,7 +837,6 @@ bin/
   ਲੌਕਆਊਟ ਬਾਰੇ ਡੂੰਘੀ ਜਾਣਕਾਰੀ।
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo ਸਕੋਰਿੰਗ ਅਤੇ ਰਣਨੀਤੀਆਂ।
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — ਪੂਰਾ MCP ਟੂਲ ਕੈਟਾਲੌਗ + ਟ੍ਰਾਂਸਪੋਰਟ।
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A ਪ੍ਰੋਟੋਕੋਲ ਹੁਨਰ ਅਤੇ ਖੋਜ।
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman ਕੰਪ੍ਰੈਸ਼ਨ।
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ਇੰਟੀਗ੍ਰੇਸ਼ਨ।
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ਜੇ ਮੌਜੂਦ ਹੋਵੇ), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ਡਿਪਲੌਇਮੈਂਟ ਟੀਚੇ।

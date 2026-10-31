@@ -586,7 +586,6 @@ Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. Om
 - **🔑 Maršrutēšanas kontrole pa atslēgām** — piespraudiet API atslēgu vienam modelim vai kombinācijai ar `forcedModel` un atomiski pievienojiet vai noņemiet atslēgas modeļus un kombinācijas (`/api/keys/{id}/access`). → [API atsauce](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Precīzāka PII kontrole** — atlase pa veidiem, līdz 20 validēti pielāgoti maskēšanas modeļi un atklāšanas skaitītāji pa veidiem; pati maskēšana paliek opt-in. → [Aizsargmehānismi](docs/security/GUARDRAILS.md)
 - **🌍 67 valodas** — informācijas panelis, dokumentācijas spoguļi un CLI, ar `npm run i18n:add-locale` pievienojot valodu visur vienā komandā. → [i18n ceļvedis](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ienākoša A2A deleģēšana jūsu aģentu flotei, Conductor prasmes Agent Card kartītē un informācijas paneļa panelis ar Faro push-to-talk balss tērzēšanu. → [A2A serveris](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptīvā uzņemšana un pārslodzes aizsardzība** — resursietilpīgi tērzēšanas pieprasījumi tiek likti rindā, nevis atgriež 503, ar atomiskām RPM mainīgām īrēm uz savienojumu. → [Noturības ceļvedis](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanoniskā `/v1/models` secība** — viens nepārtraukts, pēc nodrošinātāja grupēts bloks katram nodrošinātājam (kombinācijas piespraustas pirmās), stabils visos kataloga avotos. → [API atsauce](docs/reference/API_REFERENCE.md)
 - **🗜️ Saspiešanas nostiprināšana** — pēc noklusējuma ieslēgts inflācijas aizsargs, Caveman pakas DE / FR / JA + ķīniešu (wényán), RTK filtri Gradle & .NET. → [Saspiešana](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ Padariet OmniRoute pieejamu, izmantojot **MCP**, **A2A**, **REST API**, **tīmek
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Savienošanai ar Claude Desktop, Cursor vai jebkuru MCP klientu</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Attālais MCP — <b>110 rīki</b>, 33 tvērumi (piemērošana pēc izvēles), pilnīga audita vēsture</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Straumēšanas MCP transports</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Saziņa starp aģentiem, <b>JSON-RPC 2.0</b> + SSE, 6 prasmes</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Saderīgs ar OpenAI — tērzēšana, iegulumi, attēli, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Tīmekļa aizķeres</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Pieprasījumu / kvotu notikumu nosūtīšana uz Slack, Discord, Telegram vai jebkuru URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Attālais CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Attālas instances pārvaldīšana ar ierobežota tvēruma piekļuves pilnvarām</td></tr>
@@ -915,8 +913,6 @@ Padariet OmniRoute pieejamu, izmantojot **MCP**, **A2A**, **REST API**, **tīmek
 # Nodrošiniet Claude Code pilnu OmniRoute rīku komplektu, izmantojot MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP serveris](docs/frameworks/MCP-SERVER.md) · [A2A serveris](docs/frameworks/A2A-SERVER.md) · [Aģentu protokoli](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP serveris</a></b></td><td>110 MCP rīki, IDE konfigurācijas, Python/TS/Go klienti</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP servera rokasgrāmata</a></b></td><td>MCP instalēšana, transporti un rīku atsauce</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A serveris</a></b></td><td>JSON-RPC 2.0 protokols, prasmes, straumēšana, uzdevumu pārvaldība</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A servera rokasgrāmata</a></b></td><td>A2A aģenta kartīte, uzdevumi, prasmes un straumēšana</td></tr>
 </table>
 
 ### 📋 Projekts un kvalitāte

@@ -1238,8 +1238,6 @@ SSE URL ആയ `http://localhost:20128/api/mcp/sse`-ഉം **Dashboard → API K
 
 ### സ്കോപ്പുകൾ
 
-MCP നിലവിൽ പേരിട്ട 32 സ്കോപ്പുകൾ നിർവചിക്കുന്നു. ഓരോ Bearer കീയും നിർദിഷ്ട സ്കോപ്പുകളിലേക്ക് പരിമിതപ്പെടുത്താനാകും — ആധികാരികമായ സ്കോപ്പ്, ടൂൾ ഇൻവെന്ററികൾക്കായി [MCP-SERVER.md](../frameworks/MCP-SERVER.md)-ഉം JSON-RPC സ്കീമയ്ക്കായി [A2A-SERVER.md](../frameworks/A2A-SERVER.md)-ഉം കാണുക.
-
 ---
 
 ## 🧠 കഴിവുകളുടെ സംവിധാനം
@@ -1248,7 +1246,6 @@ MCP നിലവിൽ പേരിട്ട 32 സ്കോപ്പുകൾ �
 
 - **മാർക്കറ്റ്പ്ലേസ് UI** — **ഡാഷ്ബോർഡ് → കഴിവുകൾ** എന്നതിൽ നിന്ന് കഴിവുകൾ ബ്രൗസ് ചെയ്യുകയും ഇൻസ്റ്റാൾ ചെയ്യുകയും ചെയ്യുക
 - **ഓരോ കീയ്ക്കുമുള്ള സ്കോപ്പുകൾ** — ഏതൊക്കെ API കീകൾക്ക് ഏതൊക്കെ കഴിവുകൾ പ്രവർത്തിപ്പിക്കാനാകുമെന്ന് നിയന്ത്രിക്കുക
-- **ഇഷ്ടാനുസൃത കഴിവുകൾ** — `src/lib/a2a/skills/` എന്നതിൽ ഒരു TypeScript ഫയൽ ചേർത്ത് അത് രജിസ്റ്റർ ചെയ്യുക; ഉടൻതന്നെ A2A വഴി അത് പ്രവർത്തിപ്പിക്കാനാകും
 
 പൂർണ്ണ റഫറൻസ്: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # ഒരു സ്നാപ്പ്ഷോട
 omniroute health                   # വിശദമായ ആരോഗ്യനില (ബ്രേക്കറുകൾ, കാഷ്, മെമ്മറി)
 omniroute quota                    # പ്രൊവൈഡർ ക്വോട്ട ഉപയോഗം
 omniroute mcp status               # MCP സെർവർ നില
-omniroute a2a status               # A2A സെർവർ നില
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ടണലുകൾ
 omniroute reset-password           # അഡ്മിൻ പാസ്വേഡ് പുനഃസജ്ജമാക്കുക
 omniroute --mcp                    # stdio വഴി MCP സെർവർ ആരംഭിക്കുക

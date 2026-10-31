@@ -1236,8 +1236,6 @@ macOS tizimida `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 ### Qamrovlar
 
-MCP hozirda 32 ta nomlangan qamrovni belgilaydi. Har bir Bearer kalitini muayyan qamrovlar bilan cheklash mumkin — rasmiy qamrov va vositalar roʻyxati uchun [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC sxemasi uchun esa [A2A-SERVER.md](../frameworks/A2A-SERVER.md) hujjatiga qarang.
-
 ---
 
 ## 🧠 Koʻnikmalar tizimi
@@ -1246,7 +1244,6 @@ OmniRoute agentlar va A2A endpointi muayyan sohaga oid amallarni (masalan, `code
 
 - **Marketpleys interfeysi** — **Boshqaruv paneli → Koʻnikmalar** orqali koʻnikmalarni koʻrib chiqing va oʻrnating
 - **Har bir kalit uchun ruxsat doiralari** — Qaysi API kalitlari qaysi koʻnikmalarni ishga tushirishi mumkinligini cheklang
-- **Maxsus koʻnikmalar** — TypeScript faylini `src/lib/a2a/skills/` ichiga joylashtirib, uni roʻyxatdan oʻtkazing, shunda uni A2A orqali darhol ishga tushirish mumkin boʻladi
 
 Toʻliq maʼlumotnoma: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1331,7 +1328,6 @@ omniroute restore [<timestamp>]    # Oniy nusxadan tiklash
 omniroute health                   # Batafsil tizim holati (uzgichlar, kesh, xotira)
 omniroute quota                    # Provayder kvotasidan foydalanish
 omniroute mcp status               # MCP serveri holati
-omniroute a2a status               # A2A serveri holati
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnellari
 omniroute reset-password           # Administrator parolini tiklash
 omniroute --mcp                    # MCP serverini stdio orqali ishga tushirish

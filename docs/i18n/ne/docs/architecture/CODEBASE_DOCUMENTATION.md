@@ -100,8 +100,6 @@ App Router ले ड्यासबोर्ड UI र सार्वजनि
 | पथ                                                                            | उद्देश्य                                    |
 | ----------------------------------------------------------------------------- | ------------------------------------------- |
 | `api/`                                                                        | सबै HTTP API रुटहरू (तलको विवरण हेर्नुहोस्) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 एन्डपोइन्ट (`POST /a2a`)   |
-| `.well-known/agent.json/`                                                     | A2A Agent Card खोज दस्तावेज                 |
 | `(dashboard)/`                                                                | ड्यासबोर्ड UI (रुट समूह, URL उपसर्ग छैन)    |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | प्रमाणीकरण प्रवाहहरू                        |
 | `landing/`                                                                    | मार्केटिङ/ल्यान्डिङ पृष्ठ                   |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` अन्तर्गत परीक्षणहरू थप्नुहोस्।
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) अद्यावधिक गर्नुहोस्।
 
-### नयाँ A2A skill थप्ने
-
-[A2A-SERVER.md § नयाँ Skill थप्ने](../frameworks/A2A-SERVER.md) हेर्नुहोस्। Skills
-`src/lib/a2a/skills/` मा रहन्छन् र A2A task manager मार्फत दर्ता गरिन्छन्।
-
----
-
 ## 11. प्रचलनहरू
 
 - **Code style**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -846,7 +837,6 @@ bin/
   र lockout को गहन विवरण।
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo स्कोरिङ र रणनीतिहरू।
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — पूर्ण MCP टुल सूची + ट्रान्सपोर्टहरू।
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A प्रोटोकलका सीपहरू र डिस्कभरी।
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman कम्प्रेसन।
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI एकीकरणहरू।
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (उपलब्ध भएमा), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — डिप्लोयमेन्ट लक्ष्यहरू।

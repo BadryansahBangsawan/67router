@@ -712,7 +712,6 @@ omniroute cache                        # Välimuistin tila
 omniroute cache clear                  # Tyhjennä semanttiset välimuistit ja allekirjoitusvälimuistit
 
 omniroute mcp status | restart         # MCP-palvelimen tila / uudelleenkäynnistys
-omniroute a2a status | card            # A2A-palvelimen tila / agenttikortti
 
 omniroute tunnel list | create | stop  # Hallitse tunneleita (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Tarkastele / aseta ympäristömuuttujia (väliaikaisesti)

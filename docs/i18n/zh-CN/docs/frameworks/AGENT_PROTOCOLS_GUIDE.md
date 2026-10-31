@@ -20,38 +20,6 @@ OmniRoute 提供了三个不同的智能体相关接口。它们乍看之下很�
 
 ## 决策树
 
-## 1. A2A — 智能体到智能体
-
-**规范：** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute 端点：** `POST /a2a`（JSON-RPC 2.0）
-**智能体卡片：** `GET /.well-known/agent.json`
-
-### 适用场景
-
-- 构建以 OmniRoute 作为对等方之一的多智能体系统
-- 向 Google ADK 等框架中的智能体或通用智能体网络开放 OmniRoute 的路由能力（智能路由、配额管理等）
-- 使用标准的发现与调用接口封装 OmniRoute
-
-### 方法
-
-- `message/send` — 提交消息并接收同步响应
-- `message/stream` — 提交消息并接收通过 SSE 流式传输的进度事件
-- `tasks/get` — 通过 ID 读取任务
-- `tasks/cancel` — 取消正在运行的任务
-
-### 内置技能（6 项）
-
-- `smart-routing` — 通过最佳组合路由提示词
-- `quota-management` — 报告各提供者的配额状态
-- `provider-discovery` — 列出已安装的提供者及其功能
-- `cost-analysis` — 估算请求/对话的成本
-- `health-report` — 汇总各提供者的断路器/冷却/锁定状态
-- `list-capabilities` — 列举智能体可用的技能及元数据
-
-### 深入了解
-
-有关传输细节、智能体卡片结构、任务 TTL 配置以及添加新技能的模板，请参阅 [A2A-SERVER.md](./A2A-SERVER.md)。
-
 ## 2. ACP — CLI 代理注册表
 
 **OmniRoute 端点：** `GET /api/acp/agents`
@@ -110,30 +78,6 @@ POST 的请求体结构（`src/app/api/acp/agents/route.ts` 中的 `customAgentB
 
 ## 集成示例
 
-### 探索 OmniRoute 的 A2A 能力
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-返回包含全部 6 项技能、传输方式和版本信息的 Agent Card。
-
-### 将 OmniRoute 作为 A2A 智能体调用
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### 通过 ACP 列出已安装的 CLI 智能体
 
 ```bash
@@ -187,7 +131,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## 另请参阅
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 深入解析
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 外部 CLI 集成（使用 ACP）
 - [SKILLS.md](./SKILLS.md) — Skills 框架（不同于 A2A Skills——本地执行沙箱）
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — 端点参考

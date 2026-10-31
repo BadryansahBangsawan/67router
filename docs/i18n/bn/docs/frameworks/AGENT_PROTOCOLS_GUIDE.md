@@ -20,38 +20,6 @@ OmniRoute এজেন্ট-সম্পর্কিত তিনটি ভি�
 
 ## সিদ্ধান্তের ধাপসমূহ
 
-## 1. A2A — এজেন্ট-টু-এজেন্ট
-
-**স্পেসিফিকেশন:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute এন্ডপয়েন্ট:** `POST /a2a` (JSON-RPC 2.0)
-**এজেন্ট কার্ড:** `GET /.well-known/agent.json`
-
-### কখন ব্যবহার করবেন
-
-- এমন একটি বহু-এজেন্ট সিস্টেম তৈরি করার সময়, যেখানে OmniRoute সমকক্ষগুলোর একটি
-- Google ADK-এর মতো ফ্রেমওয়ার্ক বা সাধারণ এজেন্ট মেশে থাকা এজেন্টগুলোর জন্য OmniRoute-এর রাউটিং সক্ষমতা (`smart-routing`, `quota-management` ইত্যাদি) উন্মুক্ত করার সময়
-- একটি প্রমিত অনুসন্ধান + আহ্বান ইন্টারফেসের আড়ালে OmniRoute-কে মোড়ানোর সময়
-
-### মেথডসমূহ
-
-- `message/send` — একটি বার্তা জমা দিন এবং সিঙ্ক্রোনাস প্রতিক্রিয়া গ্রহণ করুন
-- `message/stream` — বার্তা জমা দিন + SSE-এর মাধ্যমে স্ট্রিম করা অগ্রগতির ইভেন্ট গ্রহণ করুন
-- `tasks/get` — ID অনুযায়ী টাস্ক পড়ুন
-- `tasks/cancel` — চলমান টাস্ক বাতিল করুন
-
-### অন্তর্নির্মিত দক্ষতা (6)
-
-- `smart-routing` — সর্বোত্তম কম্বোর মাধ্যমে একটি প্রম্পট রাউট করুন
-- `quota-management` — প্রতিটি প্রদানকারীর কোটা-অবস্থা রিপোর্ট করুন
-- `provider-discovery` — সক্ষমতাসহ ইনস্টল করা প্রদানকারীদের তালিকা দেখান
-- `cost-analysis` — একটি অনুরোধ/কথোপকথনের আনুমানিক খরচ নির্ধারণ করুন
-- `health-report` — প্রতিটি প্রদানকারীর breaker/cooldown/lockout অবস্থা একত্রিত করুন
-- `list-capabilities` — এজেন্টটির উপলভ্য দক্ষতা ও মেটাডেটা তালিকাভুক্ত করুন
-
-### বিস্তারিত আলোচনা
-
-পরিবহন ব্যবস্থার বিস্তারিত, এজেন্ট কার্ডের কাঠামো, টাস্ক TTL কনফিগারেশন এবং নতুন দক্ষতা যোগ করার টেমপ্লেটের জন্য [A2A-SERVER.md](./A2A-SERVER.md) দেখুন।
-
 ## 2. ACP — CLI এজেন্ট রেজিস্ট্রি
 
 **OmniRoute এন্ডপয়েন্ট:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ POST-এর বডি কাঠামো (`src/app/api/acp/agents/route.ts`-এ 
 
 ## ইন্টিগ্রেশনের উদাহরণ
 
-### OmniRoute-এর A2A সক্ষমতাগুলো আবিষ্কার করুন
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-সব 6টি দক্ষতা, ট্রান্সপোর্ট এবং সংস্করণসহ Agent Card ফেরত দেয়।
-
-### A2A এজেন্ট হিসেবে OmniRoute-কে কল করুন
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP-এর মাধ্যমে ইনস্টল করা CLI এজেন্টগুলোর তালিকা দেখুন
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## আরও দেখুন
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-এর বিস্তারিত আলোচনা
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — বহিরাগত CLI ইন্টিগ্রেশন (ACP ব্যবহার করে)
 - [SKILLS.md](./SKILLS.md) — স্কিল ফ্রেমওয়ার্ক (A2A স্কিল থেকে আলাদা — স্থানীয় এক্সিকিউশন স্যান্ডবক্স)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — এন্ডপয়েন্ট রেফারেন্স

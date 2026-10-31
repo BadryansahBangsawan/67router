@@ -595,7 +595,7 @@ tẹlifíṣọ̀nù lílò, tàbí ipò ìkọ̀sílẹ̀ ìkéde abẹ́lẹ̀
 - **🔑 Ìṣàkóso ìtọ́nisọna per-key** — fi kókó API kan mọ́ model tàbí combo kan ṣoṣo pẹ̀lú `forcedModel`, kí o sì fi kún tàbí yọ àwọn model àti combo ti kókó kan kúrò ní ọ̀nà atomiki (`/api/keys/{id}/access`). → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Àwọn ìṣàkóso PII tó jinlẹ̀** — àṣàyàn gẹ́gẹ́ bí irú, títí dé àwọn àpẹẹrẹ ìbòjú àdáni 20 tí wọ́n ti fọwọ́ sí, àti àwọn àkóópọ̀ ìwárí gẹ́gẹ́ bí irú; ìbòjú fúnra rẹ̀ ṣì wà gẹ́gẹ́ bí ohun tí ẹni gbọ́dọ̀ yan fúnra rẹ̀ (opt-in). → [Ààbò](docs/security/GUARDRAILS.md)
 - **🌍 Àwọn èdè 67** — dashboard, àwọn digi àkọsílẹ̀ àti CLI, pẹ̀lú `npm run i18n:add-locale` tó ń fi èdè kan kún gbogbo ibi ní àṣẹ kan ṣoṣo. → [Ìtọ́sọ́nà i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ìfi àṣẹ fún àwọn agent rẹ (A2A) tó ń wọlé, àwọn ọgbọ́n Conductor lórí Káàdì Agent, àti pánéélì dashboard kan pẹ̀lú ìjíròrò ohùn Faro push-to-talk. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ìfi àṣẹ fún àwọn agent rẹ (A2A) tó ń wọlé, àwọn ọgbọ́n Conductor lórí Káàdì Agent, àti pánéélì dashboard kan pẹ̀lú ìjíròrò ohùn Faro push-to-talk.
 - **🛂 Ìgbaniláàyè àti ààbò kó ti ẹ̀rù** — àwọn ìbéèrè ìjíròrò tó lewu ń lọ sínú ìlà ìdúró dípò kí wọ́n máa dáhùn 503, pẹ̀lú àwọn àyọ̀yí RPM atomiki (rolling leases) fún ìsopọ̀ kọ̀ọ̀kan. → [Ìtọ́sọ́nà Ìfaradà](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ètò àṣẹyẹsílẹ̀ ti `/v1/models`** — àkótán kan ṣoṣo tó tẹ̀ lé ara rẹ̀ tí wọ́n ṣàkójọpọ̀ gẹ́gẹ́ bí olupese fún olupese kọ̀ọ̀kan (àwọn combo ni wọ́n fi kọ́kọ́ síwájú), tó dúró dájú ní gbogbo orísun àtòkọ. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
 - **🗜️ Ìmúdúró ìdínkù (compression)** — ààbò ìfúwẹ̀ tó wà láìsí ìtọ́ka, àwọn ìdì Caveman fún DE / FR / JA + èdè Ṣáínà (wényán), àti àwọn àlẹ̀mọ́ RTK fún Gradle àti .NET. → [Ìdínkù](docs/compression/COMPRESSION_ENGINES.md)
@@ -913,7 +913,6 @@ omniroute contexts use default            # ← padà sí olupin agbègbè
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">So pọ̀ mọ́ Claude Desktop, Cursor, tàbí oníbàárà MCP èyíkéyìí</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP jíjìnnà — <b>irinṣẹ́ 110</b>, ààlà 33 (ìfipámúlò jẹ́ àṣàyàn), àkọsílẹ̀ àyẹ̀wò kíkún</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Ọ̀nà ìgbéwọlé MCP ṣiṣanwọle</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Aṣojú-sí-aṣojú, <b>JSON-RPC 2.0</b> + SSE, òye 6</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Ó bá OpenAI mu — ìfọ̀rọ̀wérọ̀, embeddings, àwọn àwòrán, ohun, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Fi àwọn ìṣẹ̀lẹ̀ ìbéèrè / quota ránṣẹ́ sí Slack, Discord, Telegram tàbí URL èyíkéyìí</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Jíjìnnà</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Darí instance jíjìnnà kan pẹ̀lú àwọn token ìráyè tó ní ààlà</td></tr>
@@ -923,8 +922,6 @@ omniroute contexts use default            # ← padà sí olupin agbègbè
 # Fún Claude Code ní gbogbo àkójọpọ̀ irinṣẹ́ OmniRoute nípasẹ̀ MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Olupin MCP](docs/frameworks/MCP-SERVER.md) · [Olupin A2A](docs/frameworks/A2A-SERVER.md) · [Àwọn Ìlànà Aṣojú](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1390,7 +1387,6 @@ port kan, nítorí náà kò sí package CLI-nìkan lọ́tọ̀ ní báyìí.
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Sẹ́fà MCP</a></b></td><td>Àwọn irinṣẹ́ MCP 110, àwọn àtúnṣe IDE, àwọn client Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Ìtọ́sọ́nà Sẹ́fà MCP</a></b></td><td>Ìfiṣọ̀rọ̀ MCP, àwọn ọ̀nà ìgbéka, àti ìtọ́kasí irinṣẹ́</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Sẹ́fà A2A</a></b></td><td>Ìlànà JSON-RPC 2.0, àwọn ọgbọ́n, ìṣànwọ́, ìṣàkóso iṣẹ́</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Ìtọ́sọ́nà Sẹ́fà A2A</a></b></td><td>Káàdì aṣojú A2A, àwọn iṣẹ́, àwọn ọgbọ́n, àti ìṣànwọ́</td></tr>
 </table>
 
 ### 📋 Iṣẹ́ Àkànṣe & Didára

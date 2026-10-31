@@ -1881,48 +1881,10 @@ OmniRoute wordt geleverd met een ingebouwde Model Context Protocol-server met 3 
 
 OmniRoute biedt een A2A-eindpunt (Agent-to-Agent) voor JSON-RPC 2.0 plus een REST-wrapper voor inspectie- en dashboardgebruik.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optioneel, tenzij OMNIROUTE_API_KEY is ingesteld
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Ondersteunde methoden (allemaal afhankelijk van `settings.a2aEnabled`):
-
-| Methode          | Beschrijving                                                                  |
-| ---------------- | ----------------------------------------------------------------------------- |
-| `message/send`   | Synchrone uitvoering van een skill; retourneert `{task, artifacts, metadata}` |
-| `message/stream` | Streaming SSE-uitvoering van dezelfde verzameling skills                      |
-| `tasks/get`      | Haal een taak op via `taskId`                                                 |
-| `tasks/cancel`   | Annuleer een taak via `taskId`                                                |
-
-Ingebouwde skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skillcatalogus, authenticatieschema) — openbaar gecachet gedurende 1 uur. Geen authenticatie vereist.
-
 ### REST-hulproutes
 
 | Methode | Pad                          | Beschrijving                                                                                                         |
 | ------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | A2A ingeschakeld + taakstatistieken + samenvatting van de gecachete agentkaart                                       |
 | GET     | `/api/a2a/tasks`             | Taken weergeven — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Niet geïmplementeerd als REST-hulproute — maak aan via JSON-RPC `message/send`)                                     |
 | GET     | `/api/a2a/tasks/[id]`        | Eén taak ophalen                                                                                                     |

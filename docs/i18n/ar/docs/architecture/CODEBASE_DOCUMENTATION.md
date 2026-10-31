@@ -100,8 +100,6 @@ src/
 | المسار                                                                        | الغرض                                                      |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | `api/`                                                                        | جميع مسارات HTTP API (راجع التفاصيل أدناه)                 |
-| `a2a/`                                                                        | نقطة نهاية A2A بتنسيق JSON-RPC 2.0 ‏(`POST /a2a`)          |
-| `.well-known/agent.json/`                                                     | مستند اكتشاف بطاقة وكيل A2A                                |
 | `(dashboard)/`                                                                | واجهة مستخدم لوحة المعلومات (مجموعة مسارات، بلا بادئة URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | تدفقات المصادقة                                            |
 | `landing/`                                                                    | صفحة التسويق/الهبوط                                        |
@@ -773,13 +771,6 @@ bin/
 4. أضف الاختبارات ضمن `open-sse/mcp-server/__tests__/`.
 5. حدّث [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### إضافة مهارة A2A جديدة
-
-راجع [A2A-SERVER.md § إضافة مهارة جديدة](../frameworks/A2A-SERVER.md). توجد المهارات في
-`src/lib/a2a/skills/` وتُسجّل من خلال مدير مهام A2A.
-
----
-
 ## 11. الاصطلاحات
 
 - **نمط الشيفرة**: مسافة بادئة بمقدار مسافتين، وعلامات اقتباس مزدوجة، وعرض 100 محرف، وفواصل منقوطة،
@@ -847,7 +838,6 @@ bin/
   والقفل.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — تسجيل نقاط Auto Combo واستراتيجياته.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — الفهرس الكامل لأدوات MCP ووسائل النقل.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — مهارات بروتوكول A2A وآلية الاكتشاف.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — الضغط باستخدام RTK وCaveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — عمليات تكامل CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (إن وُجد)، [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)، [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)، [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)، [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)، [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — أهداف النشر.

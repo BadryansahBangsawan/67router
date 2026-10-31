@@ -20,38 +20,6 @@ Tieto tri rozhrania sú nezávislé — vyberte si ľubovoľnú podmnožinu.
 
 ## Rozhodovací strom
 
-## 1. A2A — Agent-to-Agent
-
-**Špecifikácia:** [A2A v0.3](https://a2a-protocol.org)
-**Koncový bod OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Karta agenta:** `GET /.well-known/agent.json`
-
-### Kedy použiť
-
-- Pri vytváraní systému s viacerými agentmi, v ktorom je OmniRoute jedným z partnerských agentov
-- Pri sprístupňovaní smerovacej inteligencie OmniRoute (inteligentné smerovanie, správa kvót atď.) agentom vo frameworkoch, ako je Google ADK, alebo vo všeobecných sieťach agentov
-- Pri sprístupňovaní OmniRoute prostredníctvom štandardného rozhrania na vyhľadávanie a vyvolávanie
-
-### Metódy
-
-- `message/send` — odošle správu a prijme synchrónnu odpoveď
-- `message/stream` — odošle správu a prijíma udalosti priebehu streamované cez SSE
-- `tasks/get` — načíta úlohu podľa ID
-- `tasks/cancel` — zruší prebiehajúcu úlohu
-
-### Vstavané zručnosti (6)
-
-- `smart-routing` — smeruje výzvu cez optimálnu kombináciu
-- `quota-management` — poskytuje stav kvóty pre jednotlivých poskytovateľov
-- `provider-discovery` — zobrazí zoznam nainštalovaných poskytovateľov s ich schopnosťami
-- `cost-analysis` — odhadne náklady na požiadavku/konverzáciu
-- `health-report` — agreguje stav prerušovača/cooldownu/uzamknutia pre jednotlivých poskytovateľov
-- `list-capabilities` — vymenuje dostupné zručnosti agenta a metadáta
-
-### Podrobnosti
-
-Podrobnosti o prenose, štruktúre karty agenta, konfigurácii TTL úloh a šablóne na pridávanie nových zručností nájdete v dokumente [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — Register CLI agentov
 
 **Endpoint OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Informácie o týchto odlišných režimoch a obmedzeniach nájdete v dokumente 
 
 ## Príklady integrácie
 
-### Zistenie možností A2A služby OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vráti kartu agenta so všetkými 6 schopnosťami, prenosmi a verziou.
-
-### Volanie OmniRoute ako agenta A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Smeruj tento prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Zobrazenie zoznamu nainštalovaných agentov CLI prostredníctvom ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Pozrite tiež
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — podrobný prehľad A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — externé integrácie CLI (používajú ACP)
 - [SKILLS.md](./SKILLS.md) — rámec zručností (odlišný od zručností A2A — lokálny sandbox na vykonávanie)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referencia koncových bodov

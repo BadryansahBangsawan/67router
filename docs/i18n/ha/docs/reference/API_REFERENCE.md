@@ -1877,48 +1877,10 @@ OmniRoute yana zuwa da sabar Model Context Protocol da aka haɗa cikinsa, mai ha
 
 OmniRoute yana samar da mashigar A2A (Agent-to-Agent) ta JSON-RPC 2.0 tare da marufin REST don dubawa/amfani da dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # na zaɓi ne sai dai idan an saita OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Hanyoyin da ake tallafawa (duk suna dogara da `settings.a2aEnabled`):
-
-| Hanya            | Bayani                                                                   |
-| ---------------- | ------------------------------------------------------------------------ |
-| `message/send`   | Gudanar da ƙwarewa kai-tsaye; yana dawo da `{task, artifacts, metadata}` |
-| `message/stream` | Gudanarwar SSE mai gudana ta saitin ƙwarewa iri ɗaya                     |
-| `tasks/get`      | Ɗauko aiki ta amfani da `taskId`                                         |
-| `tasks/cancel`   | Soke aiki ta amfani da `taskId`                                          |
-
-Ƙwarewar da ke ciki tun farko: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Katin Wakili
-
-```bash
-GET /.well-known/agent.json
-```
-
-Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, tsarin tantancewa) — ana adana shi a cache na jama'a na awa 1. Ba a buƙatar tantancewa.
-
 ### Mataimakan REST
 
 | Hanya | Tafarki                      | Bayani                                                                                                           |
 | ----- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Ko an kunna A2A + ƙididdigar ayyuka + taƙaitaccen katin wakili da aka adana a cache                              |
 | GET   | `/api/a2a/tasks`             | Jera ayyuka — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Ba a aiwatar da shi a matsayin mataimakin REST ba — ƙirƙira ta JSON-RPC `message/send`)                         |
 | GET   | `/api/a2a/tasks/[id]`        | Ɗauko aiki guda ɗaya                                                                                             |

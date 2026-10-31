@@ -100,8 +100,6 @@ Segmen tingkat atas di bawah `src/app/`:
 | Path                                                                          | Tujuan                                         |
 | ----------------------------------------------------------------------------- | ---------------------------------------------- |
 | `api/`                                                                        | Semua rute API HTTP (lihat perincian di bawah) |
-| `a2a/`                                                                        | Endpoint A2A JSON-RPC 2.0 (`POST /a2a`)        |
-| `.well-known/agent.json/`                                                     | Dokumen penemuan Agent Card A2A                |
 | `(dashboard)/`                                                                | UI dasbor (grup rute, tanpa prefiks URL)       |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Alur autentikasi                               |
 | `landing/`                                                                    | Halaman pemasaran/landing                      |
@@ -773,13 +771,6 @@ Lihat [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) dan bagian khusus di
 4. Tambahkan pengujian di bawah `open-sse/mcp-server/__tests__/`.
 5. Perbarui [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Menambahkan skill A2A baru
-
-Lihat [A2A-SERVER.md § Menambahkan Skill Baru](../frameworks/A2A-SERVER.md). Skill berada di
-`src/lib/a2a/skills/` dan didaftarkan melalui pengelola tugas A2A.
-
----
-
 ## 11. Konvensi
 
 - **Gaya kode**: indentasi 2 spasi, tanda kutip ganda, lebar 100 karakter, titik koma,
@@ -847,7 +838,6 @@ Lihat [A2A-SERVER.md § Menambahkan Skill Baru](../frameworks/A2A-SERVER.md). Sk
   dan lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — penilaian dan strategi Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — katalog lengkap alat MCP + transport.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — keterampilan dan penemuan protokol A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — kompresi RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integrasi CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (jika tersedia), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — target deployment.

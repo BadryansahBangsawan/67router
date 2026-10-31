@@ -1875,48 +1875,10 @@ OmniRoute ایک اندرونی Model Context Protocol سرور کے ساتھ ف
 
 OmniRoute معائنے اور ڈیش بورڈ کے استعمال کے لیے REST ریپر کے ساتھ ایک A2A (ایجنٹ سے ایجنٹ) JSON-RPC 2.0 اینڈ پوائنٹ فراہم کرتا ہے۔
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختیاری، الا یہ کہ OMNIROUTE_API_KEY سیٹ ہو
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-معاونت یافتہ طریقے (تمام `settings.a2aEnabled` کے ذریعے محدود ہیں):
-
-| طریقہ            | وضاحت                                                            |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | ہم وقت مہارت کا نفاذ؛ `{task, artifacts, metadata}` واپس کرتا ہے |
-| `message/stream` | اسی مہارت کے مجموعے کا اسٹریمنگ SSE نفاذ                         |
-| `tasks/get`      | `taskId` کے ذریعے ٹاسک حاصل کریں                                 |
-| `tasks/cancel`   | `taskId` کے ذریعے ٹاسک منسوخ کریں                                |
-
-بلٹ اِن مہارتیں: `smart-routing`، `quota-management`، `provider-discovery`، `cost-analysis`، `health-report`۔
-
-### ایجنٹ کارڈ
-
-```bash
-GET /.well-known/agent.json
-```
-
-عوامی A2A ایجنٹ کارڈ (نام، وضاحت، صلاحیتیں، مہارتوں کا کیٹلاگ، تصدیقی اسکیم) واپس کرتا ہے — جسے عوامی طور پر 1 گھنٹے کے لیے کیش کیا جاتا ہے۔ کسی تصدیق کی ضرورت نہیں۔
-
 ### REST معاون ذرائع
 
 | طریقہ | راستہ                        | وضاحت                                                                                                               |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A فعال ہونے کی حالت + ٹاسک کے اعداد و شمار + کیش شدہ ایجنٹ کارڈ کا خلاصہ                                          |
 | GET   | `/api/a2a/tasks`             | ٹاسکس کی فہرست — `?state=submitted\|working\|completed\|failed\|cancelled`، `?skill=`، `?limit=` (≤200)، `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST معاون ذریعے کے طور پر نافذ نہیں کیا گیا — JSON-RPC `message/send` کے ذریعے بنائیں)                            |
 | GET   | `/api/a2a/tasks/[id]`        | ایک ٹاسک حاصل کریں                                                                                                  |

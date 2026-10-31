@@ -390,34 +390,6 @@
       "description": "Rajistan binciken MCP (wani suna na audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Jera ƙwarewar A2A da ake da su daga katin wakili"
-    },
-    "invoke": {
-      "description": "Kira wata ƙwarewar A2A kuma dawo da ID na aikin",
-      "input": "Abun shigarwa na JSON",
-      "input_file": "Hanyar zuwa fayil ɗin shigarwa na JSON",
-      "wait": "Jira aikin ya kammala kafin a dawo",
-      "timeout": "Iyakar lokacin jiran kammalawa a ms (tsoho: 60000)"
-    },
-    "tasks": {
-      "description": "Sarrafa ayyukan A2A",
-      "list": {
-        "status": "Tace bisa matsayi",
-        "skill": "Tace bisa ID na ƙwarewa"
-      },
-      "watch": {
-        "description": "Duba matsayin aiki akai-akai har sai ya kammala"
-      },
-      "stream": {
-        "description": "Watsa abubuwan da ke faruwa yayin aiwatar da aiki ta SSE"
-      },
-      "logs": {
-        "description": "Nuna saƙonnin aiki da kayayyakin da aka samar"
-      }
-    }
-  },
   "policy": {
     "description": "Sarrafa manufofin ba da izini na OmniRoute",
     "list": {

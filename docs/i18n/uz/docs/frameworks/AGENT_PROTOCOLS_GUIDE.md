@@ -20,38 +20,6 @@ Uchala interfeys ham bir-biridan mustaqil — ularning istalgan kombinatsiyasini
 
 ## Qaror daraxti
 
-## 1. A2A — Agentdan agentga
-
-**Spetsifikatsiya:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute endpointi:** `POST /a2a` (JSON-RPC 2.0)
-**Agent kartasi:** `GET /.well-known/agent.json`
-
-### Qachon foydalanish kerak
-
-- OmniRoute tengdosh agentlardan biri boʻlgan koʻp agentli tizim yaratishda
-- OmniRoute-ning marshrutlash imkoniyatlarini (aqlli marshrutlash, kvotalarni boshqarish va boshqalar) Google ADK kabi freymvorklardagi agentlarga yoki umumiy agent tarmoqlariga taqdim etishda
-- OmniRoute-ni standart aniqlash + chaqirish interfeysi ortiga joylashtirishda
-
-### Metodlar
-
-- `message/send` — xabar yuborish va sinxron javob olish
-- `message/stream` — xabar yuborish + SSE orqali uzatiladigan jarayon hodisalarini olish
-- `tasks/get` — vazifani ID boʻyicha oʻqish
-- `tasks/cancel` — bajarilayotgan vazifani bekor qilish
-
-### Ichki koʻnikmalar (6)
-
-- `smart-routing` — soʻrovni optimal kombinatsiya orqali yoʻnaltirish
-- `quota-management` — har bir provayder boʻyicha kvota holatini bildirish
-- `provider-discovery` — oʻrnatilgan provayderlarni imkoniyatlari bilan birga roʻyxatlash
-- `cost-analysis` — soʻrov/suhbat narxini hisoblash
-- `health-report` — har bir provayder boʻyicha uzgich/sovish/bloklanish holatini jamlash
-- `list-capabilities` — agentning mavjud koʻnikmalari va metamaʼlumotlarini sanab oʻtish
-
-### Batafsil maʼlumot
-
-Transport tafsilotlari, agent kartasi tuzilishi, vazifaning TTL sozlamalari va yangi koʻnikmalar qoʻshish shabloni uchun [A2A-SERVER.md](./A2A-SERVER.md) fayliga qarang.
-
 ## 2. ACP — CLI agentlari reyestri
 
 **OmniRoute endpointi:** `GET /api/acp/agents`
@@ -104,30 +72,6 @@ POST uchun tana tuzilishi (`src/app/api/acp/agents/route.ts` ichidagi `customAge
 - HTTP reyestri vazifalarni qabul qilmaydi yoki jarayonlarni ishga tushirish imkoniyatini taqdim etmaydi. Ichki menejer ro‘yxatdan o‘tkazilgan CLI'ni ishga tushira oladi, biroq u avtomatik provayder zaxira varianti sifatida ulanmagan. Oddiy interaktiv foydalanish uchun sozlangan CLI'ni o‘zingiz ishga tushiring yoki `omniroute run` buyrug‘idan foydalaning.
 
 ## Integratsiya misollari
-
-### OmniRouteʼning A2A imkoniyatlarini aniqlash
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Barcha 6 ta koʻnikma, transportlar va versiyani oʻz ichiga olgan Agent Card qaytaradi.
-
-### OmniRouteʼni A2A agenti sifatida chaqirish
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### ACP orqali oʻrnatilgan CLI agentlarini roʻyxatlash
 
@@ -182,7 +126,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Shuningdek qarang
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A haqida batafsil
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — tashqi CLI integratsiyalari (ACP’dan foydalanadi)
 - [SKILLS.md](./SKILLS.md) — ko‘nikmalar freymvorki (A2A ko‘nikmalaridan farq qiladi — lokal bajarish qumdoni)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint ma’lumotnomasi

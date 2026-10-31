@@ -573,5 +573,4 @@ Injin nhazi ụzọ nwere oke arụmọrụ siri ike:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — nkọwa ndekọ n'otu n'otu
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — akara ihe 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — sava MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — sava A2A
 - Isi mmalite: `open-sse/` (faịlụ 400+, ~143K LOC)

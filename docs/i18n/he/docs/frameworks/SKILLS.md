@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## שילוב A2A
-
-`src/lib/skills/a2a.ts` מייצא את מתאר מיומנות ה-A2A בשם `memory_aware_routing` ופונקציית עזר `registerA2ASkill(registry)`. מיומנויות A2A מותאמות אישית נמצאות ב-`src/lib/a2a/skills/` ומנותבות באמצעות `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). ראו [A2A-SERVER.md](./A2A-SERVER.md) למחזור החיים המלא של משימה.
-
----
-
 ## הוספת מיומנות מובנית חדשה
 
 1. **הגדירו את המטפל** ב-`src/lib/skills/builtins.ts` (או בקובץ מקביל תחת `src/lib/skills/builtin/`). חתימה: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## ראו גם
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — רישום כלי MCP ותעבורות
-- [A2A-SERVER.md](./A2A-SERVER.md) — מחזור החיים של משימות A2A וניתוב מיומנויות
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — מבוא למשתמשים
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — צינור עיבוד הבקשות ומפת הרכיבים
 - קוד מקור: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

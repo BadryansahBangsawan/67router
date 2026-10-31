@@ -83,7 +83,6 @@ Materiały referencyjne — powierzchnia API, zmienne środowiskowe, flagi CLI, 
 Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — serwer Model Context Protocol.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — serwer Agent-to-Agent (A2A) JSON-RPC.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
 - [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — przegląd agentów A2A / ACP / Cloud.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — most agenta IDE.

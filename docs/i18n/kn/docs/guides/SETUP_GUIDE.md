@@ -247,26 +247,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **ಸಂಪೂರ್ಣ MCP ದಸ್ತಾವೇಜು:** [MCP ಸರ್ವರ್ README](../../open-sse/mcp-server/README.md) — 110 ಪರಿಕರಗಳು, IDE ಸಂರಚನೆಗಳು, Python/TS/Go ಕ್ಲೈಂಟ್ಗಳು.
 
-### A2A ಸೆಟಪ್ (ಏಜೆಂಟ್-ನಿಂದ-ಏಜೆಂಟ್ ಪ್ರೋಟೋಕಾಲ್)
-
-ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ಕಾರ್ಯವೊಂದನ್ನು ಕಳುಹಿಸಿ:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**ಸಂಪೂರ್ಣ A2A ದಸ್ತಾವೇಜು:** [A2A ಸರ್ವರ್ README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ಕೌಶಲ್ಯಗಳು, ಸ್ಟ್ರೀಮಿಂಗ್, ಕಾರ್ಯದ ಜೀವನಚಕ್ರ.
-
----
-
 ## ಕಾಲಾವಧಿ ಮೀರಿಕೆ ಸಂರಚನೆ
 
 ### ಮೂಲಭೂತ ಕಾಲಾವಧಿ ಮೀರಿಕೆಗಳು

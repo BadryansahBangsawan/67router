@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ana buƙatar tantancewa)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — kayan aikin MCP 3 (jeri, samu, ɗaukar nauyi)
-src/lib/a2a/skills/listCapabilities.ts        — fasahar A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Duba [MCP-SERVER.md](./MCP-SERVER.md) don haɗa scope da tantancewa.
 }
 ```
 
-Duba [A2A-SERVER.md](./A2A-SERVER.md) don cikakkun bayanan protocol.
-
 ---
 
 ## Kundi — ID na Ƙwarewa 45
@@ -189,7 +186,6 @@ Duba [A2A-SERVER.md](./A2A-SERVER.md) don cikakkun bayanan protocol.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — tsarin Omni Skills (saka kayan aikin LLM + kasuwa)
 - [MCP-SERVER.md](./MCP-SERVER.md) — kundin kayan aikin MCP (kayan aikin `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — ƙa'idar A2A (skill na `list-capabilities`)
 - `src/lib/agentSkills/` — kundi, mai ƙirƙirawa, masu fassara
 - `skills/` — fayilolin SKILL.md da aka ƙirƙira (shigarwa 45)

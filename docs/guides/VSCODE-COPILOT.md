@@ -94,7 +94,7 @@ extension.
 Simple Browser instead of an external browser. Embedding is **opt-in on the server** through
 `DASHBOARD_ALLOW_EMBED=vscode`, which serves the HTML pages with
 `frame-ancestors 'self' vscode-webview:` instead of the default `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. The API surface (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) keeps the
+`X-Frame-Options: DENY`. The API surface (`/api`, `/v1`, `/v1beta`, `/healthz`) keeps the
 strict headers either way.
 
 > ⚠️ **It is a build-time flag, not a runtime one.** Next.js compiles `headers()` into the route

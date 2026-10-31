@@ -100,8 +100,6 @@ Segmenter på topniveau under `src/app/`:
 | Sti                                                                           | Formål                                                         |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | `api/`                                                                        | Alle HTTP API-ruter (se opdelingen nedenfor)                   |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0-slutpunkt (`POST /a2a`)                       |
-| `.well-known/agent.json/`                                                     | Registreringsdokument for A2A Agent Card                       |
 | `(dashboard)/`                                                                | Dashboardets brugergrænseflade (rutegruppe, intet URL-præfiks) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Godkendelsesforløb                                             |
 | `landing/`                                                                    | Marketing-/landingsside                                        |
@@ -773,13 +771,6 @@ Se [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) og det dedikerede afsnit i
 4. Tilføj tests under `open-sse/mcp-server/__tests__/`.
 5. Opdater [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Tilføj en ny A2A-færdighed
-
-Se [A2A-SERVER.md § Tilføjelse af en ny færdighed](../frameworks/A2A-SERVER.md). Færdigheder findes i
-`src/lib/a2a/skills/` og registreres via A2A-opgavestyringen.
-
----
-
 ## 11. Konventioner
 
 - **Kodestil**: indrykning med 2 mellemrum, dobbelte anførselstegn, linjebredde på 100 tegn, semikoloner,
@@ -847,7 +838,6 @@ Se [A2A-SERVER.md § Tilføjelse af en ny færdighed](../frameworks/A2A-SERVER.m
   og lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo-scoringsmetoder og -strategier.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — komplet katalog over MCP-værktøjer og transportsystemer.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A-protokolfærdigheder og discovery.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- og Caveman-komprimering.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-integrationer.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (hvis den findes), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — udrulningsmål.

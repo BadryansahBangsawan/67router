@@ -100,8 +100,6 @@ A `src/app/` legfelső szintű szegmensei:
 | Útvonal                                                                       | Rendeltetés                                                           |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `api/`                                                                        | Minden HTTP API-útvonal (a bontást lásd alább)                        |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 végpont (`POST /a2a`)                                |
-| `.well-known/agent.json/`                                                     | A2A Agent Card felderítési dokumentum                                 |
 | `(dashboard)/`                                                                | Vezérlőpult felhasználói felülete (útvonalcsoport, URL-előtag nélkül) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Hitelesítési folyamatok                                               |
 | `landing/`                                                                    | Marketing-/nyitóoldal                                                 |
@@ -775,13 +773,6 @@ Lásd a [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) fájlt és a
 4. Adj hozzá teszteket az `open-sse/mcp-server/__tests__/` könyvtárban.
 5. Frissítsd az [MCP-SERVER.md](../frameworks/MCP-SERVER.md) fájlt.
 
-### Új A2A-képesség hozzáadása
-
-Lásd: [A2A-SERVER.md § Új képesség hozzáadása](../frameworks/A2A-SERVER.md). A képességek a
-`src/lib/a2a/skills/` könyvtárban találhatók, és az A2A-feladatkezelőn keresztül vannak regisztrálva.
-
----
-
 ## 11. Konvenciók
 
 - **Kódstílus**: 2 szóközös behúzás, dupla idézőjelek, 100 karakteres sorhossz, pontosvesszők,
@@ -848,7 +839,6 @@ Lásd: [A2A-SERVER.md § Új képesség hozzáadása](../frameworks/A2A-SERVER.m
   a kizárás részletes ismertetése.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — az Auto Combo pontozása és stratégiái.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — az MCP-eszközök teljes katalógusa és az átviteli módok.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — az A2A protokoll képességei és felderítése.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- és Caveman-tömörítés.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-integrációk.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ha elérhető), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — telepítési célkörnyezetek.

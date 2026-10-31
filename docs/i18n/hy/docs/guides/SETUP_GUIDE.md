@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **MCP-ի ամբողջական փաստաթղթեր:** [MCP սերվերի README](../../open-sse/mcp-server/README.md) — 110 գործիք, IDE կազմաձևեր, Python/TS/Go հաճախորդներ:
 
-### A2A-ի կարգավորում (գործակալից գործակալ արձանագրություն)
-
-Ստուգեք Agent Card-ը.
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Ուղարկեք առաջադրանք.
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A-ի ամբողջական փաստաթղթեր:** [A2A սերվերի README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, հմտություններ, հոսքային փոխանցում, առաջադրանքի կենսափուլ:
-
----
-
 ## Սպասման ժամանակի կազմաձևում
 
 ### Հիմնական սպասման ժամանակներ

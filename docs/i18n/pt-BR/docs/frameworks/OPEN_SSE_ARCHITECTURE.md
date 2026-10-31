@@ -573,5 +573,4 @@ O mecanismo de roteamento tem orçamentos de desempenho rigorosos:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — detalhamento diretório por diretório
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — pontuação de 16 fatores
 - [MCP-SERVER.md](./MCP-SERVER.md) — servidor MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — servidor A2A
 - Código-fonte: `open-sse/` (mais de 400 arquivos, ~143 mil linhas de código)

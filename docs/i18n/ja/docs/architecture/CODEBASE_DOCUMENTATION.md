@@ -100,8 +100,6 @@ App Router は、ダッシュボード UI と公開・管理用 HTTP API の両�
 | パス                                                                          | 目的                                                        |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | `api/`                                                                        | すべての HTTP API ルート（内訳は以下を参照）                |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 エンドポイント（`POST /a2a`）              |
-| `.well-known/agent.json/`                                                     | A2A Agent Card 検出ドキュメント                             |
 | `(dashboard)/`                                                                | ダッシュボード UI（ルートグループ、URL プレフィックスなし） |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | 認証フロー                                                  |
 | `landing/`                                                                    | マーケティング / ランディングページ                         |
@@ -768,13 +766,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` 配下にテストを追加します。
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) を更新します。
 
-### 新しい A2A スキルを追加する
-
-[A2A-SERVER.md § 新しいスキルの追加](../frameworks/A2A-SERVER.md)を参照してください。スキルは
-`src/lib/a2a/skills/` に配置し、A2A タスクマネージャーを通じて登録します。
-
----
-
 ## 11. 規約
 
 - **コードスタイル**: 2 スペースのインデント、ダブルクォート、100 文字幅、セミコロン、
@@ -841,7 +832,6 @@ bin/
   ロックアウトの詳細解説。
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo のスコアリングと戦略。
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — MCP ツールの完全なカタログとトランスポート。
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A プロトコルのスキルとディスカバリー。
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman 圧縮。
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI 連携。
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md)（存在する場合）、[DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)、[FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)、[VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)、[TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)、[PWA_GUIDE.md](../guides/PWA_GUIDE.md) — デプロイ先。

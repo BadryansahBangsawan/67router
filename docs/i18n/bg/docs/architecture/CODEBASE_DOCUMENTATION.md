@@ -100,8 +100,6 @@ App Router предоставя както потребителския инте
 | Път                                                                           | Предназначение                                                       |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | `api/`                                                                        | Всички HTTP API маршрути (вижте разбивката по-долу)                  |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 крайна точка (`POST /a2a`)                          |
-| `.well-known/agent.json/`                                                     | Документ за откриване на A2A Agent Card                              |
 | `(dashboard)/`                                                                | Потребителски интерфейс на таблото (група маршрути, без URL префикс) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Потоци за удостоверяване                                             |
 | `landing/`                                                                    | Маркетингова/целева страница                                         |
@@ -769,13 +767,6 @@ bin/
 4. Добавете тестове в `open-sse/mcp-server/__tests__/`.
 5. Актуализирайте [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Добавяне на ново A2A умение
-
-Вижте [A2A-SERVER.md § Добавяне на ново умение](../frameworks/A2A-SERVER.md). Уменията се намират в
-`src/lib/a2a/skills/` и се регистрират чрез диспечера на A2A задачи.
-
----
-
 ## 11. Конвенции
 
 - **Стил на кода**: отстъп от 2 интервала, двойни кавички, ширина от 100 знака, точки и запетаи,
@@ -843,7 +834,6 @@ bin/
   и блокирането.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — оценяване и стратегии на Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — пълен каталог на MCP инструменти и транспортни механизми.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — умения и откриване в A2A протокола.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — компресия с RTK и Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI интеграции.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ако е наличен), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — цели за внедряване.

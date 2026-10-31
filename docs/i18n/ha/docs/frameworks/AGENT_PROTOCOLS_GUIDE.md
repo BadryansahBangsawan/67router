@@ -20,38 +20,6 @@ Dukkan ukun masu zaman kansu ne — zaɓi kowane haɗinsu da kake so.
 
 ## Bishiyar Yanke Shawara
 
-## 1. A2A — Wakili-zuwa-Wakili
-
-**Ƙayyadewa:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint na OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Katin Wakili:** `GET /.well-known/agent.json`
-
-### Lokacin amfani
-
-- Gina tsarin wakilai da yawa inda OmniRoute yake ɗaya daga cikin takwarorin
-- Bayar da basirar turawa ta OmniRoute (smart-routing, quota-management, da sauransu) ga wakilai a cikin frameworks kamar Google ADK ko hanyoyin haɗin wakilai na gama-gari
-- Ƙunshe OmniRoute a bayan daidaitacciyar hanyar ganowa + kira
-
-### Hanyoyin aiki
-
-- `message/send` — miƙa saƙo, karɓi amsa ta sync
-- `message/stream` — miƙa saƙo + karɓi al'amuran ci gaba da ake watsawa ta SSE
-- `tasks/get` — karanta aiki ta ID
-- `tasks/cancel` — soke aiki mai gudana
-
-### Ƙwarewar da aka haɗa (6)
-
-- `smart-routing` — tura prompt ta mafi kyawun combo
-- `quota-management` — bayar da rahoton yanayin quota na kowane provider
-- `provider-discovery` — jera providers da aka girka tare da iyawarsu
-- `cost-analysis` — ƙiyasta kuɗin buƙata/tattaunawa
-- `health-report` — tattara yanayin breaker/cooldown/lockout na kowane provider
-- `list-capabilities` — jera ƙwarewar wakilin da ake da su da metadata
-
-### Cikakken bayani
-
-Duba [A2A-SERVER.md](./A2A-SERVER.md) don cikakkun bayanan hanyar sadarwa, tsarin katin wakili, saitin TTL na aiki, da template na ƙara sababbin ƙwarewa.
-
 ## 2. ACP — Rijistar Wakilan CLI
 
 **Ƙarshen OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Tsarin body na POST (`customAgentBodySchema` a cikin `src/app/api/acp/agents/rou
 
 ## Misalan Haɗawa
 
-### Gano damar A2A na OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Yana mayar da Agent Card tare da dukkan skills guda 6, transports, da version.
-
-### Kiran OmniRoute a matsayin A2A agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Jera CLI agents da aka girka ta hanyar ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Duba Kuma
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Cikakken bayani kan A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Haɗin kai da CLI na waje (yana amfani da ACP)
 - [SKILLS.md](./SKILLS.md) — Tsarin ƙwarewa (ya bambanta da ƙwarewar A2A — keɓaɓɓen muhallin aiwatarwa na gida)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — bayanin endpoint

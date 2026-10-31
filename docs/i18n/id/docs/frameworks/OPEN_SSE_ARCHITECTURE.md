@@ -573,5 +573,4 @@ Mesin perutean memiliki batas performa yang ketat:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — penjelasan setiap direktori
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — penilaian 16 faktor
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sumber: `open-sse/` (400+ file, ~143K LOC)

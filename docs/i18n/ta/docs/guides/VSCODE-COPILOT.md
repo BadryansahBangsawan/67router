@@ -89,7 +89,7 @@ dashboard settings-இல் உள்ள `blockedProviders`-க்கு அவ
 
 `omnicopilot.dashboardOpen: "editor"` என்பது வெளிப்புற உலாவிக்குப் பதிலாக Simple Browser வழியாக OmniRoute dashboard-ஐ editor தாவலில் காட்சிப்படுத்துகிறது. உட்பொதித்தல் என்பது **server-இல் விருப்பத் தேர்வாக இயக்கப்பட வேண்டியது**; இதற்காக `DASHBOARD_ALLOW_EMBED=vscode` பயன்படுத்தப்படுகிறது. இது இயல்புநிலை `frame-ancestors 'none'` +
 `X-Frame-Options: DENY` என்பதற்குப் பதிலாக, HTML பக்கங்களை
-`frame-ancestors 'self' vscode-webview:` என்பதுடன் வழங்குகிறது. API பரப்பு (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) எந்த நிலையிலும் கடுமையான headers-ஐத் தொடர்ந்து பயன்படுத்தும்.
+`frame-ancestors 'self' vscode-webview:` என்பதுடன் வழங்குகிறது. API பரப்பு (`/api`, `/v1`, `/v1beta`, `/healthz`) எந்த நிலையிலும் கடுமையான headers-ஐத் தொடர்ந்து பயன்படுத்தும்.
 
 > ⚠️ **இது build-time flag; runtime flag அல்ல.** Next.js, `headers()`-ஐ route
 > manifest-இல் compile செய்வதால், bundle உருவாக்கப்படும்போதே `next.config.mjs` அந்த variable-ஐப் படிக்கிறது

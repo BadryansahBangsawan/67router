@@ -1859,48 +1859,10 @@ Tagann OmniRoute le freastalaí leabaithe Model Context Protocol ina bhfuil 3 io
 
 Cuireann OmniRoute críochphointe A2A (Gníomhaire le Gníomhaire) JSON-RPC 2.0 ar fáil, chomh maith le fillteán REST le haghaidh iniúchta agus úsáide deaise.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # roghnach mura bhfuil OMNIROUTE_API_KEY socraithe
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Modhanna a dtacaítear leo (iad uile faoi rialú `settings.a2aEnabled`):
-
-| Modh             | Cur síos                                                            |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Rith sioncrónach scile; tugtar `{task, artifacts, metadata}` ar ais |
-| `message/stream` | Rith sruthaithe SSE den tacar céanna scileanna                      |
-| `tasks/get`      | Faigh tasc de réir `taskId`                                         |
-| `tasks/cancel`   | Cealaigh tasc de réir `taskId`                                      |
-
-Scileanna ionsuite: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Cárta Gníomhaire
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catalóg scileanna, scéim fíordheimhnithe) — taiscthe go poiblí ar feadh 1u. Ní theastaíonn fíordheimhniú.
-
 ### Cúntóirí REST
 
 | Modh | Conair                       | Cur síos                                                                                                                |
 | ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A cumasaithe + staitisticí tascanna + achoimre thaiscthe ar chárta an ghníomhaire                                     |
 | GET  | `/api/a2a/tasks`             | Liostaigh tascanna — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (Níl sé curtha i bhfeidhm mar chúntóir REST — cruthaigh trí JSON-RPC `message/send`)                                    |
 | GET  | `/api/a2a/tasks/[id]`        | Aisghabh tasc amháin                                                                                                    |

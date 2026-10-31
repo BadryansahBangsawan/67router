@@ -1232,8 +1232,6 @@ OmniRoute 同時是 **MCP 伺服器**（Model Context Protocol，模型上下文
 
 ### 權限範圍
 
-MCP 目前定義了 32 個具名權限範圍。每個 Bearer 金鑰都能限制為僅可存取特定權限範圍——如需具權威性的權限範圍與工具清單，請參閱 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)；如需 JSON-RPC 結構描述，請參閱 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)。
-
 ---
 
 ## 🧠 技能系統
@@ -1242,7 +1240,6 @@ OmniRoute 提供可擴充的**技能框架**（`src/lib/skills/`），讓代理�
 
 - **市集 UI** — 從**儀表板 → 技能**瀏覽並安裝技能
 - **各金鑰的作用域** — 限制哪些 API 金鑰可以叫用哪些技能
-- **自訂技能** — 將 TypeScript 檔案放入 `src/lib/a2a/skills/`、進行註冊後，即可立即透過 A2A 叫用
 
 完整參考資料：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1327,7 +1324,6 @@ omniroute restore [<timestamp>]    # 從快照還原
 omniroute health                   # 詳細健康狀態（斷路器、快取、記憶體）
 omniroute quota                    # 提供者配額使用情況
 omniroute mcp status               # MCP 伺服器狀態
-omniroute a2a status               # A2A 伺服器狀態
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 通道
 omniroute reset-password           # 重設管理員密碼
 omniroute --mcp                    # 透過 stdio 啟動 MCP 伺服器

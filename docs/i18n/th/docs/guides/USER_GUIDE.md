@@ -1236,8 +1236,6 @@ OmniRoute เป็นทั้ง **เซิร์ฟเวอร์ MCP** (Mo
 
 ### ขอบเขตสิทธิ์
 
-ปัจจุบัน MCP กำหนดขอบเขตสิทธิ์ที่มีชื่อไว้ 32 รายการ โดยคีย์ Bearer แต่ละคีย์สามารถจำกัดให้ใช้เฉพาะขอบเขตสิทธิ์ที่กำหนดได้ — ดูรายการขอบเขตสิทธิ์และเครื่องมือที่เป็นแหล่งอ้างอิงหลักได้ใน [MCP-SERVER.md](../frameworks/MCP-SERVER.md) และดูสคีมา JSON-RPC ได้ใน [A2A-SERVER.md](../frameworks/A2A-SERVER.md)
-
 ---
 
 ## 🧠 ระบบทักษะ
@@ -1246,7 +1244,6 @@ OmniRoute มี **เฟรมเวิร์กทักษะ** ที่ข�
 
 - **UI มาร์เก็ตเพลส** — เรียกดูและติดตั้งทักษะจาก **แดชบอร์ด → ทักษะ**
 - **ขอบเขตต่อคีย์** — จำกัดว่า API key ใดสามารถเรียกใช้ทักษะใดได้บ้าง
-- **ทักษะแบบกำหนดเอง** — วางไฟล์ TypeScript ใน `src/lib/a2a/skills/` ลงทะเบียนไฟล์ดังกล่าว แล้วทักษะนั้นจะพร้อมให้เรียกใช้ผ่าน A2A ได้ทันที
 
 เอกสารอ้างอิงฉบับเต็ม: [SKILLS.md](../frameworks/SKILLS.md)
 
@@ -1331,7 +1328,6 @@ omniroute restore [<timestamp>]    # กู้คืนจากสแนปช�
 omniroute health                   # สถานะโดยละเอียด (เบรกเกอร์, แคช, หน่วยความจำ)
 omniroute quota                    # การใช้โควตาของผู้ให้บริการ
 omniroute mcp status               # สถานะเซิร์ฟเวอร์ MCP
-omniroute a2a status               # สถานะเซิร์ฟเวอร์ A2A
 omniroute tunnel list|create|stop  # ทันเนล Cloudflare/Tailscale/ngrok
 omniroute reset-password           # รีเซ็ตรหัสผ่านผู้ดูแลระบบ
 omniroute --mcp                    # เริ่มเซิร์ฟเวอร์ MCP ผ่าน stdio

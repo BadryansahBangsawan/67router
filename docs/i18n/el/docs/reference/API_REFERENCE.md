@@ -1882,48 +1882,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 Το OmniRoute εκθέτει ένα endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, καθώς και ένα REST wrapper για χρήση επιθεώρησης/πίνακα ελέγχου.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # προαιρετικό, εκτός αν έχει οριστεί το OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Υποστηριζόμενες μέθοδοι (όλες ελέγχονται από το `settings.a2aEnabled`):
-
-| Μέθοδος          | Περιγραφή                                                              |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Σύγχρονη εκτέλεση δεξιότητας· επιστρέφει `{task, artifacts, metadata}` |
-| `message/stream` | Εκτέλεση ροής SSE για το ίδιο σύνολο δεξιοτήτων                        |
-| `tasks/get`      | Ανάκτηση μιας εργασίας μέσω `taskId`                                   |
-| `tasks/cancel`   | Ακύρωση μιας εργασίας μέσω `taskId`                                    |
-
-Ενσωματωμένες δεξιότητες: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Κάρτα πράκτορα
-
-```bash
-GET /.well-known/agent.json
-```
-
-Επιστρέφει τη δημόσια κάρτα πράκτορα A2A (όνομα, περιγραφή, δυνατότητες, κατάλογος δεξιοτήτων, σχήμα ελέγχου ταυτότητας) — αποθηκεύεται δημόσια στην κρυφή μνήμη για 1 ώρα. Δεν απαιτείται έλεγχος ταυτότητας.
-
 ### Βοηθητικά endpoints REST
 
 | Μέθοδος | Διαδρομή                     | Περιγραφή                                                                                                           |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | Κατάσταση ενεργοποίησης A2A + στατιστικά εργασιών + σύνοψη κάρτας πράκτορα από την κρυφή μνήμη                      |
 | GET     | `/api/a2a/tasks`             | Λίστα εργασιών — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Δεν έχει υλοποιηθεί ως βοηθητικό endpoint REST — δημιουργήστε μέσω JSON-RPC `message/send`)                        |
 | GET     | `/api/a2a/tasks/[id]`        | Ανάκτηση μίας εργασίας                                                                                              |

@@ -390,34 +390,6 @@
       "description": "MCP audita žurnāls (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Pieejamo A2A prasmju saraksts no aģenta kartītes"
-    },
-    "invoke": {
-      "description": "Izsaukt A2A prasmi un atgriezt uzdevuma ID",
-      "input": "JSON ievades objekts",
-      "input_file": "Ceļš uz JSON ievades failu",
-      "wait": "Gaidīt uzdevuma pabeigšanu pirms atgriešanās",
-      "timeout": "Laika limits gaidot pabeigšanu ms (noklusējums: 60000)"
-    },
-    "tasks": {
-      "description": "Pārvaldīt A2A uzdevumus",
-      "list": {
-        "status": "Filtrēt pēc statusa",
-        "skill": "Filtrēt pēc prasmes ID"
-      },
-      "watch": {
-        "description": "Balsot par uzdevuma statusu līdz pabeigšanai"
-      },
-      "stream": {
-        "description": "Strumēt uzdevuma izpildes notikumus caur SSE"
-      },
-      "logs": {
-        "description": "Rādīt uzdevuma ziņojumus un artefaktus"
-      }
-    }
-  },
   "policy": {
     "description": "Pārvaldīt OmniRoute autorizācijas politikas",
     "list": {

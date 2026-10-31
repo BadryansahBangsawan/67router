@@ -143,8 +143,6 @@ src/
 | `app/api/` (không phải v1)                                                   | Các tuyến quản lý/quản trị (~60 thư mục: nhà cung cấp, tổ hợp, cài đặt, mcp, a2a, đánh giá, bộ nhớ, kỹ năng, webhook, tuân thủ, khả năng phục hồi, giám sát, đường hầm, công cụ CLI, v.v.)                                                                                                                             |
 | `app/api/tools/agent-bridge/`                                                | API REST AgentBridge — 12 tuyến (điều khiển máy chủ, trạng thái/DNS/ánh xạ tác tử, bỏ qua, chứng chỉ, CA ngược dòng). LOCAL_ONLY + SPAWN_CAPABLE. Xem `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                             |
 | `app/api/tools/traffic-inspector/`                                           | API REST + WS của Traffic Inspector — hơn 16 tuyến (yêu cầu, phiên, máy chủ, chế độ thu thập, xuất, ws). LOCAL_ONLY + SPAWN_CAPABLE. Xem `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                    |
-| `app/a2a/`                                                                   | Điểm truy cập A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                           |
-| `app/.well-known/agent.json/`                                                | Thẻ tác tử A2A (khám phá)                                                                                                                                                                                                                                                                                              |
 | `app/(dashboard)/dashboard/`                                                 | Các trang giao diện bảng điều khiển (hơn 50 phần, ~118 tệp page.tsx: nhà cung cấp, tổ hợp, cài đặt, bộ nhớ, kỹ năng, webhook, đánh giá, kiểm toán, lô, bộ nhớ đệm, chi phí, tình trạng, hệ thống, hoạt động, v.v.)                                                                                                     |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Giao diện Search Tools Studio (3 tab: Tìm kiếm/Thu thập dữ liệu/So sánh + SearchConceptCard + ProviderCatalog) — xem `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                          |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (kế hoạch 21): `page.tsx` (khung 3 tab), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Tài liệu                                           | Mục đích                                                                      |
 | -------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                                    | Máy chủ MCP: 110 công cụ, 3 phương thức truyền tải, 33 phạm vi, endpoint REST |
-| `A2A-SERVER.md`                                    | A2A v0.3: JSON-RPC, 6 kỹ năng, trình trợ giúp REST, thẻ tác nhân              |
 | `AGENT_PROTOCOLS_GUIDE.md`                         | Hướng dẫn hợp nhất: A2A so với ACP so với Cloud Agents                        |
 | `SKILLS.md`                                        | Khung kỹ năng (tích hợp sẵn + marketplace + SkillsSH + sandbox)               |
 | `RADAR.md`                                         | Lớp phủ danh mục mô hình miễn phí Radar (`RADAR_ENABLED`, mặc định tắt)       |
@@ -565,7 +562,6 @@ Không được bao gồm trong đầu ra của `npm pack`. Xem `.npmignore`.
 - **Thêm provider?** Làm theo `docs/architecture/ARCHITECTURE.md § Adding a New Provider` + đối chiếu với `docs/reference/PROVIDER_REFERENCE.md`.
 - **Thêm route?** Xem `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **Thêm công cụ MCP?** Xem `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **Thêm kỹ năng A2A?** Xem `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Chạy cục bộ?** Xem `docs/guides/SETUP_GUIDE.md`.
 - **Triển khai?** Xem `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Phát hành?** Xem `docs/ops/RELEASE_CHECKLIST.md` (và kỹ năng Claude Code `/generate-release-cc`).

@@ -1873,48 +1873,10 @@ OmniRoute umfasst einen eingebetteten Model-Context-Protocol-Server mit 3 Transp
 
 OmniRoute stellt einen A2A-Endpunkt (Agent-to-Agent) gemäß JSON-RPC 2.0 sowie einen REST-Wrapper für Inspektions- und Dashboard-Zwecke bereit.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optional, sofern OMNIROUTE_API_KEY nicht gesetzt ist
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Unterstützte Methoden (alle abhängig von `settings.a2aEnabled`):
-
-| Methode          | Beschreibung                                                          |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Synchrone Skill-Ausführung; gibt `{task, artifacts, metadata}` zurück |
-| `message/stream` | Streaming-SSE-Ausführung derselben Skill-Gruppe                       |
-| `tasks/get`      | Ruft eine Aufgabe anhand der `taskId` ab                              |
-| `tasks/cancel`   | Bricht eine Aufgabe anhand der `taskId` ab                            |
-
-Integrierte Skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentenkarte
-
-```bash
-GET /.well-known/agent.json
-```
-
-Gibt die öffentliche A2A-Agentenkarte zurück (Name, Beschreibung, Funktionen, Skill-Katalog, Authentifizierungsschema) — wird öffentlich für 1 Stunde zwischengespeichert. Keine Authentifizierung erforderlich.
-
 ### REST-Hilfsendpunkte
 
 | Methode | Pfad                         | Beschreibung                                                                                                             |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | A2A-Aktivierungsstatus + Aufgabenstatistiken + Zusammenfassung der zwischengespeicherten Agentenkarte                    |
 | GET     | `/api/a2a/tasks`             | Listet Aufgaben auf — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Nicht als REST-Hilfsendpunkt implementiert — Erstellung über JSON-RPC `message/send`)                                   |
 | GET     | `/api/a2a/tasks/[id]`        | Ruft eine einzelne Aufgabe ab                                                                                            |

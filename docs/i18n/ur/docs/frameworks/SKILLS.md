@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A انٹیگریشن
-
-`src/lib/skills/a2a.ts`، `memory_aware_routing` A2A اسکل ڈسکرپٹر اور ایک `registerA2ASkill(registry)` ہیلپر ایکسپورٹ کرتا ہے۔ کسٹم A2A اسکلز `src/lib/a2a/skills/` میں موجود ہوتی ہیں اور `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) کے ذریعے ڈسپیچ کی جاتی ہیں۔ ٹاسک کے مکمل لائف سائیکل کے لیے [A2A-SERVER.md](./A2A-SERVER.md) دیکھیں۔
-
----
-
 ## نئی بلٹ اِن اسکل شامل کرنا
 
 1. **ہینڈلر کی تعریف کریں** `src/lib/skills/builtins.ts` میں (یا `src/lib/skills/builtin/` کے تحت کسی ملحقہ فائل میں)۔ سگنیچر: `(input, { apiKeyId, sessionId }) => Promise<output>`۔
@@ -478,7 +472,6 @@ plugin system کے ذریعے custom skill شامل کرنے کا طریقہ ج�
 ## مزید دیکھیں
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ٹول کی رجسٹریشن اور ٹرانسپورٹس
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ٹاسک کا لائف سائیکل اور اسکل ڈسپیچ
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — صارفین کے لیے تعارف
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — ریکویسٹ پائپ لائن اور کمپوننٹ میپ
 - ماخذ: `src/lib/skills/`، `src/app/api/skills/`، `open-sse/mcp-server/tools/skillTools.ts`

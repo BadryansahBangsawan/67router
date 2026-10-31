@@ -258,12 +258,6 @@ Consulte [MCP-SERVER.md](./MCP-SERVER.md) para a configuração de transporte e 
 
 ---
 
-## Integração A2A
-
-`src/lib/skills/a2a.ts` exporta o descritor da skill A2A `memory_aware_routing` e um auxiliar `registerA2ASkill(registry)`. As skills A2A personalizadas ficam em `src/lib/a2a/skills/` e são despachadas por meio de `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Consulte [A2A-SERVER.md](./A2A-SERVER.md) para conhecer o ciclo de vida completo das tarefas.
-
----
-
 ## Como adicionar uma nova skill integrada
 
 1. **Defina o handler** em `src/lib/skills/builtins.ts` (ou em um arquivo relacionado em `src/lib/skills/builtin/`). Assinatura: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Consulte [SDK de Plugins e Integração de Skills](./PLUGIN_SDK.md) para saber c
 ## Veja Também
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — registro de ferramentas MCP e transportes
-- [A2A-SERVER.md](./A2A-SERVER.md) — ciclo de vida das tarefas A2A e encaminhamento de skills
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — introdução voltada ao usuário
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — pipeline de requisições e mapa de componentes
 - Código-fonte: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

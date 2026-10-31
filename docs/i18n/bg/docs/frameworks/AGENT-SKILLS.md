@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (изисква удостоверяване)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP инструмента (списък, извличане, покритие)
-src/lib/a2a/skills/listCapabilities.ts        — A2A умение: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A умението `list-capabilities` връща пълния каталог 
 }
 ```
 
-Вижте [A2A-SERVER.md](./A2A-SERVER.md) за подробности относно протокола.
-
 ---
 
 ## Каталог — 45 идентификатора на умения
@@ -189,7 +186,6 @@ A2A умението `list-capabilities` връща пълния каталог 
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — рамка Omni Skills (добавяне на инструменти към LLM + пазар)
 - [MCP-SERVER.md](./MCP-SERVER.md) — каталог с MCP инструменти (инструментите `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A протокол (умението `list-capabilities`)
 - `src/lib/agentSkills/` — каталог, генератор, анализатори
 - `skills/` — генерирани файлове SKILL.md (45 записа)

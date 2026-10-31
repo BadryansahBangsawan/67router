@@ -1786,48 +1786,10 @@ OmniRoute 內建一個模型上下文協定伺服器，提供 3 種傳輸方式�
 
 OmniRoute 提供一個 A2A（代理對代理）JSON-RPC 2.0 端點，以及供檢查／儀表板使用的 REST 包裝介面。
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # 選用，除非已設定 OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-支援的方法（全部受 `settings.a2aEnabled` 控制）：
-
-| 方法             | 說明                                             |
-| ---------------- | ------------------------------------------------ |
-| `message/send`   | 同步執行技能；回傳 `{task, artifacts, metadata}` |
-| `message/stream` | 透過 SSE 串流執行相同的技能集                    |
-| `tasks/get`      | 依 `taskId` 擷取任務                             |
-| `tasks/cancel`   | 依 `taskId` 取消任務                             |
-
-內建技能：`smart-routing`、`quota-management`、`provider-discovery`、`cost-analysis`、`health-report`。
-
-### 代理卡片
-
-```bash
-GET /.well-known/agent.json
-```
-
-回傳公開的 A2A 代理卡片（名稱、說明、功能、技能目錄、驗證機制）— 公開快取 1 小時。不需要驗證。
-
 ### REST 輔助端點
 
 | 方法 | 路徑                         | 說明                                                                                                           |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A 啟用狀態 + 任務統計資料 + 已快取的代理卡片摘要                                                             |
 | GET  | `/api/a2a/tasks`             | 列出任務 — `?state=submitted\|working\|completed\|failed\|cancelled`、`?skill=`、`?limit=`（≤200）、`?offset=` |
 | POST | `/api/a2a/tasks`             | （未實作為 REST 輔助端點 — 請透過 JSON-RPC `message/send` 建立）                                               |
 | GET  | `/api/a2a/tasks/[id]`        | 擷取單一任務                                                                                                   |

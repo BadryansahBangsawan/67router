@@ -123,4 +123,3 @@ SIGKILL ପଠାଏ। ପୁରୁଣା ପ୍ରମ୍ପ୍ଟ ସମୟସ
 - [ଏଜେଣ୍ଟ ପ୍ରୋଟୋକଲ୍ଗୁଡ଼ିକ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ଲଞ୍ଚ୍ ଚୁକ୍ତିଗୁଡ଼ିକ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ଟୁଲ୍ଗୁଡ଼ିକ](../reference/CLI-TOOLS.md)
-- [A2A ସର୍ଭର୍](./A2A-SERVER.md)

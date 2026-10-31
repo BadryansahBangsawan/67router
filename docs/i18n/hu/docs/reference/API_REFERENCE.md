@@ -1840,48 +1840,10 @@ Az OmniRoute egy beágyazott Model Context Protocol-kiszolgálót biztosít 3 á
 
 Az OmniRoute egy A2A (ügynökök közötti) JSON-RPC 2.0-végpontot, valamint egy REST-burkolót biztosít ellenőrzési és vezérlőpultbeli használatra.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opcionális, kivéve, ha az OMNIROUTE_API_KEY be van állítva
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Irányítsd ezt a programozási feladatot"}]
-  }
-}
-```
-
-Támogatott metódusok (mindegyik a `settings.a2aEnabled` beállítástól függ):
-
-| Metódus          | Leírás                                                                 |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Szinkron képességvégrehajtás; eredménye: `{task, artifacts, metadata}` |
-| `message/stream` | Ugyanazon képességkészlet streamelt SSE-végrehajtása                   |
-| `tasks/get`      | Feladat lekérése `taskId` alapján                                      |
-| `tasks/cancel`   | Feladat megszakítása `taskId` alapján                                  |
-
-Beépített képességek: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Ügynökkártya
-
-```bash
-GET /.well-known/agent.json
-```
-
-Visszaadja a nyilvános A2A-ügynökkártyát (név, leírás, képességek, képességkatalógus, hitelesítési séma) — nyilvánosan gyorsítótárazva 1 órán át. Nincs szükség hitelesítésre.
-
 ### REST-segédfüggvények
 
 | Metódus | Útvonal                      | Leírás                                                                                                                   |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | A2A engedélyezési állapota + feladatstatisztikák + a gyorsítótárazott ügynökkártya összefoglalója                        |
 | GET     | `/api/a2a/tasks`             | Feladatok listázása — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Nincs REST-segédfüggvényként megvalósítva — létrehozás JSON-RPC `message/send` segítségével)                            |
 | GET     | `/api/a2a/tasks/[id]`        | Egy feladat lekérése                                                                                                     |

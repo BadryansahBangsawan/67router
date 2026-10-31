@@ -573,5 +573,4 @@ Routingmotoren har strenge ydeevnebudgetter:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — mappe for mappe
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring baseret på 16 faktorer
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Kildekode: `open-sse/` (mere end 400 filer, ca. 143.000 kodelinjer)

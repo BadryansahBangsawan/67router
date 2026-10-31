@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (প্রমাণীকরণ আবশ্যক)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3টি MCP টুল (তালিকা, সংগ্রহ, কভারেজ)
-src/lib/a2a/skills/listCapabilities.ts        — A2A স্কিল: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A স্কিল `list-capabilities` সম্পূর্ণ 45-স্কি
 }
 ```
 
-প্রোটোকলের বিস্তারিত তথ্যের জন্য [A2A-SERVER.md](./A2A-SERVER.md) দেখুন।
-
 ---
 
 ## ক্যাটালগ — 45টি স্কিল ID
@@ -189,7 +186,6 @@ A2A স্কিল `list-capabilities` সম্পূর্ণ 45-স্কি
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ফ্রেমওয়ার্ক (LLM টুল ইনজেকশন + মার্কেটপ্লেস)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP টুল ক্যাটালগ (`omniroute_agent_skills_*` টুলসমূহ)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A প্রোটোকল (`list-capabilities` স্কিল)
 - `src/lib/agentSkills/` — ক্যাটালগ, জেনারেটর, পার্সারসমূহ
 - `skills/` — উৎপাদিত SKILL.md ফাইলসমূহ (45টি এন্ট্রি)

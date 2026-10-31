@@ -143,8 +143,6 @@ src/
 | `app/api/` (غیر-v1)                                                          | انتظامی/ایڈمن روٹس (~60 ڈائریکٹریاں: فراہم کنندگان، کومبوز، ترتیبات، mcp، a2a، جائزے، میموری، مہارتیں، ویب ہکس، تعمیل، لچک، نگرانی، ٹنلز، cli-tools وغیرہ)                                                                                                                                                         |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 روٹس (سرور کنٹرول، ایجنٹ اسٹیٹ/DNS/میپنگز، بائی پاس، سرٹیفکیٹ، upstream-CA)۔ LOCAL_ONLY + SPAWN_CAPABLE۔ `docs/frameworks/AGENTBRIDGE.md §7` دیکھیں۔                                                                                                                                     |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ روٹس (درخواستیں، سیشنز، ہوسٹس، کیپچر موڈز، برآمد، ws)۔ LOCAL_ONLY + SPAWN_CAPABLE۔ `docs/frameworks/TRAFFIC_INSPECTOR.md §8` دیکھیں۔                                                                                                                                         |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 داخلہ نقطہ (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (دریافت)                                                                                                                                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/`                                                 | ڈیش بورڈ UI صفحات (50+ حصے، ~118 page.tsx فائلیں: فراہم کنندگان، کومبوز، ترتیبات، میموری، مہارتیں، ویب ہکس، جائزے، آڈٹ، بیچ، کیش، اخراجات، صحت، نظام، سرگرمی وغیرہ)                                                                                                                                                |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ٹیبز: تلاش/اسکریپ/موازنہ + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` دیکھیں                                                                                                                                                                        |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (منصوبہ 21): `page.tsx` (3-ٹیب شیل)، `components/` (MemoryConceptCard، MemoryEngineStatus، EmbeddingSourceSelector، EditMemoryModal، RetrievePreview، QdrantConfigCard، RerankConfigCard)، `components/tabs/` (MemoriesTab، PlaygroundTab، EngineTab)، `hooks/` (useEngineStatus، useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | دستاویز                                    | مقصد                                                             |
 | ------------------------------------------ | ---------------------------------------------------------------- |
 | `MCP-SERVER.md`                            | MCP سرور: 110 ٹولز، 3 ٹرانسپورٹس، 33 اسکوپس، REST اینڈ پوائنٹس   |
-| `A2A-SERVER.md`                            | A2A v0.3: JSON-RPC، 6 اسکلز، REST معاونین، ایجنٹ کارڈ            |
 | `AGENT_PROTOCOLS_GUIDE.md`                 | متحد رہنما: A2A بمقابلہ ACP بمقابلہ کلاؤڈ ایجنٹس                 |
 | `SKILLS.md`                                | اسکلز فریم ورک (بلٹ اِن + مارکیٹ پلیس + SkillsSH + سینڈ باکس)    |
 | `RADAR.md`                                 | Radar مفت ماڈل کیٹلاگ اوورلے (`RADAR_ENABLED`، بطور ڈیفالٹ بند)  |
@@ -567,7 +564,6 @@ open-sse/
 - **کوئی provider شامل کر رہے ہیں؟** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` کی پیروی کریں اور `docs/reference/PROVIDER_REFERENCE.md` سے دوبارہ جانچ کریں۔
 - **کوئی route شامل کر رہے ہیں؟** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`۔
 - **کوئی MCP tool شامل کر رہے ہیں؟** `docs/frameworks/MCP-SERVER.md § Adding a Tool`۔
-- **کوئی A2A skill شامل کر رہے ہیں؟** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`۔
 - **مقامی طور پر چلا رہے ہیں؟** `docs/guides/SETUP_GUIDE.md`۔
 - **تعینات کر رہے ہیں؟** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`۔
 - **ریلیز کر رہے ہیں؟** `docs/ops/RELEASE_CHECKLIST.md` (اور `/generate-release-cc` Claude Code skill)۔

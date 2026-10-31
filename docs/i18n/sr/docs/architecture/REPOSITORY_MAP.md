@@ -143,8 +143,6 @@ src/
 | `app/api/` (није v1)                                                         | Руте за управљање/администрацију (~60 директоријума: добављачи, комбинације, подешавања, mcp, a2a, евалуације, меморија, вештине, веб-куке, усклађеност, отпорност, надзор, тунели, cli алати итд.)                                                                                                                       |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 рута (контрола сервера, стање агента/DNS/мапирања, заобилажење, сертификат, надређени CA). LOCAL_ONLY + SPAWN_CAPABLE. Погледајте `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                          |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ рута (захтеви, сесије, домаћини, режими снимања, извоз, ws). LOCAL_ONLY + SPAWN_CAPABLE. Погледајте `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                      |
-| `app/a2a/`                                                                   | Улазна тачка за A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                            |
-| `app/.well-known/agent.json/`                                                | A2A картица агента (откривање)                                                                                                                                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/`                                                 | Странице корисничког интерфејса контролне табле (50+ одељака, ~118 page.tsx датотека: добављачи, комбинације, подешавања, меморија, вештине, веб-куке, евалуације, ревизија, групна обрада, кеш, трошкови, здравље, систем, активност итд.)                                                                               |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Кориснички интерфејс Search Tools Studio-а (3 картице: претрага/издвајање/поређење + SearchConceptCard + ProviderCatalog) — погледајте `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                           |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (план 21): `page.tsx` (оквир са 3 картице), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Документ                                    | Намена                                                                             |
 | ------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP сервер: 110 алата, 3 транспорта, 33 опсега, REST крајње тачке                  |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6 вештина, REST помоћне функције, картица агента               |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | Обједињени водич: A2A наспрам ACP наспрам агената у облаку                         |
 | `SKILLS.md`                                 | Оквир вештина (уграђене + продавница + SkillsSH + изоловано окружење)              |
 | `RADAR.md`                                  | Radar слој каталога бесплатних модела (`RADAR_ENABLED`, подразумевано искључен)    |
@@ -567,7 +564,6 @@ open-sse/
 - **Додајете добављача?** Пратите `docs/architecture/ARCHITECTURE.md § Додавање новог добављача` и упоредите са `docs/reference/PROVIDER_REFERENCE.md`.
 - **Додајете руту?** `docs/architecture/ARCHITECTURE.md § Додавање нове API руте` + `src/shared/validation/schemas.ts`.
 - **Додајете MCP алатку?** `docs/frameworks/MCP-SERVER.md § Додавање алатке`.
-- **Додајете A2A вештину?** `docs/frameworks/A2A-SERVER.md § Додавање нове вештине`.
 - **Покрећете локално?** `docs/guides/SETUP_GUIDE.md`.
 - **Примењујете?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Објављујете издање?** `docs/ops/RELEASE_CHECKLIST.md` (и Claude Code вештина `/generate-release-cc`).

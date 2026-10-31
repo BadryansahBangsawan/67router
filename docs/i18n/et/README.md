@@ -595,7 +595,7 @@ praeguse kataloogi kohta leiate teavet aadressilt **[radar.omniroute.online/plan
 - **🔑 Võtmepõhine marsruutimise juhtimine** — kinnita API-võti ühe mudeli või kombo külge parameetriga `forcedModel` ning lisa või eemalda võtme mudeleid ja kombosid aatomselt (`/api/keys/{id}/access`). → [API viide](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Täpsemad PII-juhtelemendid** — tüübipõhine valik, kuni 20 valideeritud kohandatud maskeerimismustrit ja tüübipõhised tuvastusloendurid; maskeerimine ise jääb valikuliseks. → [Kaitserauded](docs/security/GUARDRAILS.md)
 - **🌍 67 keelt** — armatuurlaud, dokumentatsiooni peeglid ja CLI, kusjuures `npm run i18n:add-locale` lisab keele kõikjal üheainsa käsuga. → [i18n juhend](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — sissetulev A2A-delegeerimine sinu agentide laevastikku, Conductori oskused agendikaardil ning armatuurlaua paneel Faro push-to-talk häälvestlusega. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — sissetulev A2A-delegeerimine sinu agentide laevastikku, Conductori oskused agendikaardil ning armatuurlaua paneel Faro push-to-talk häälvestlusega.
 - **🛂 Adaptiivne vastuvõtt ja ülekoormuskaitse** — mahukad vestluspäringud lähevad järjekorda 503-vea asemel, koos aatomsete RPM-i rulluvate liisingutega ühenduse kohta. → [Vastupidavuse juhend](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanooniline `/v1/models` järjestus** — üks katkematu pakkujapõhiselt rühmitatud plokk iga pakkkuja kohta (kombod kinnitatud esimesena), stabiilne kõigi kataloogiallikate vahel. → [API viide](docs/reference/API_REFERENCE.md)
 - **🗜️ Tihenduse tugevdamine** — vaikimisi sisse lülitatud paisumiskaitse, Cavemani paketid keeltele DE / FR / JA + hiina keel (wényán), RTK-filtrid Gradle'i ja .NET-i jaoks. → [Tihendus](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +914,6 @@ Tee OmniRoute kättesaadavaks **MCP**, **A2A**, **REST API**, **veebihaakide** v
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Ühenda Claude Desktopi, Cursori või mis tahes MCP-kliendiga</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP kaugühendus — <b>110 tööriista</b>, 33 ulatust (jõustamine valikuline), täielik auditilogi</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Voogedastust toetav MCP-transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agentidevaheline suhtlus, <b>JSON-RPC 2.0</b> + SSE, 6 oskust</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-ga ühilduv — vestlus, manused, pildid, heli, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Veebihaagid</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Saada päringu- ja kvoodisündmused Slacki, Discordi, Telegrami või mis tahes URL-ile</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Kaug-CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Juhi kauginstantsi piiratud ulatusega juurdepääsutõenditega</td></tr>
@@ -924,8 +923,6 @@ Tee OmniRoute kättesaadavaks **MCP**, **A2A**, **REST API**, **veebihaakide** v
 # Anna Claude Code'ile MCP kaudu täielik OmniRoute'i tööriistakomplekt:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-server](docs/frameworks/MCP-SERVER.md) · [A2A-server](docs/frameworks/A2A-SERVER.md) · [Agendiprotokollid](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1394,7 +1391,6 @@ Kanoonilised mõõdikud seisuga 2026-10-18: **1.976 unikaalset videot** · **20.
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-server</a></b></td><td>110 MCP-tööriista, IDE-konfiguratsioonid, Python/TS/Go kliendid</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-serveri juhend</a></b></td><td>MCP paigaldamine, transpordid ja tööriistade viitedokumentatsioon</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-server</a></b></td><td>JSON-RPC 2.0 protokoll, oskused, voogedastus, ülesannete haldus</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-serveri juhend</a></b></td><td>A2A agendikaart, ülesanded, oskused ja voogedastus</td></tr>
 </table>
 
 ### 📋 Projekt ja kvaliteet

@@ -586,7 +586,6 @@ Radar 採選擇加入制，且僅使用 GET。OmniRoute 用戶端不會上傳提
 - **🔑 逐金鑰路由控制** — 使用 `forcedModel` 將 API 金鑰釘選到單一模型或 combo，並以原子操作新增或移除金鑰可用的模型與 combo（`/api/keys/{id}/access`）。→ [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ 更精細的 PII 控制** — 可依類型選取、最多 20 組經驗證的自訂遮罩樣式，以及逐類型偵測計數器；遮罩本身仍維持選用。→ [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 種語言** — 涵蓋儀表板、文件鏡像與 CLI，並可透過 `npm run i18n:add-locale` 以單一指令在所有位置新增一種語言。→ [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — 將傳入的 A2A 委派轉送至你的代理艦隊、在 Agent Card 上提供 Conductor 技能，以及具備 Faro 按住即說語音聊天的儀表板面板。→ [A2A Server](docs/frameworks/A2A-SERVER.md)
 - **🛂 自適應准入與過載防護** — 重量級聊天請求會排隊等待，而非直接回傳 503，並為每條連線提供原子性的 RPM 滾動租約。→ [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ 標準化的 `/v1/models` 排序** — 每個提供者各成一個連續且依提供者分組的區塊（combo 優先釘選），並在所有目錄來源間維持穩定。→ [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ 壓縮強化** — 預設啟用的膨脹防護、適用於 DE / FR / JA + 中文（文言）的 Caveman 封包，以及適用於 Gradle 與 .NET 的 RTK 篩選器。→ [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -904,7 +903,6 @@ omniroute contexts use default            # ← 切換回本機伺服器
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">整合至 Claude Desktop、Cursor 或任何 MCP 用戶端</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">遠端 MCP — <b>110 個工具</b>、33 個範圍（可選擇啟用強制執行），並提供完整稽核軌跡</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">串流 MCP 傳輸</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">代理對代理，<b>JSON-RPC 2.0</b> + SSE，6 項技能</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">相容於 OpenAI — 聊天、嵌入、影像、音訊、OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">將請求／配額事件推送至 Slack、Discord、Telegram 或任何 URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>遠端 CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">使用具範圍限制的存取權杖操作遠端執行個體</td></tr>
@@ -914,8 +912,6 @@ omniroute contexts use default            # ← 切換回本機伺服器
 # 透過 MCP 為 Claude Code 提供完整的 OmniRoute 工具集：
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP 伺服器](docs/frameworks/MCP-SERVER.md) · [A2A 伺服器](docs/frameworks/A2A-SERVER.md) · [代理協定](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1380,7 +1376,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也會略過
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP 伺服器</a></b></td><td>110 個 MCP 工具、IDE 設定、Python／TS／Go 用戶端</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP 伺服器指南</a></b></td><td>MCP 安裝、傳輸方式與工具參考資料</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A 伺服器</a></b></td><td>JSON-RPC 2.0 協定、技能、串流、工作管理</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A 伺服器指南</a></b></td><td>A2A 代理程式卡片、工作、技能與串流</td></tr>
 </table>
 
 ### 📋 專案與品質

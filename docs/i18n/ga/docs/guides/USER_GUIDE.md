@@ -1235,8 +1235,6 @@ Cuir `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) n
 
 ### Scóip
 
-Sainmhíníonn MCP faoi láthair 32 scóip ainmnithe. Is féidir gach eochair Bearer a theorannú do scóip shonracha — féach [MCP-SERVER.md](../frameworks/MCP-SERVER.md) le haghaidh an iontrála údarásach scóip agus uirlisí agus [A2A-SERVER.md](../frameworks/A2A-SERVER.md) le haghaidh an scéim JSON-RPC.
-
 ---
 
 ## � Áiseanna Scileanna
@@ -1245,7 +1243,6 @@ Taispeánann OmniRoute **chreat scileanna in-infhiarmaithe** (`src/lib/skills/`)
 
 - **Comhéadan Margaidh** — Brabhsáil agus suiteáil scileanna ó **Dashboard → Skills**
 - **Scóipeanna in aghaidh an eochracha** — Cuir teorainn le cén eochracha API a fhéadfaidh scileanna áirithe a thionscnamh
-- **Scileanna saincheaptha** - Cuir comhad TypeScript i bhfilléan `src/lib/a2a/skills/`, cláraigh é, agus beidh sé ar fáil láithreach tríd an A2A
 
 Lámhleabhar iomlán: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1328,7 +1325,6 @@ omniroute restore [<timestamp>]    # Athchóirigh ó ghrianghraf
 omniroute health                   # Sláinte mionsonraithe (briseoirí, taisce, cuimhne)
 omniroute quota                    # Úsáid cuóta soláthraí
 omniroute mcp status               # Stádas freastalaí MCP
-omniroute a2a status               # Stádas freastalaí A2A
 omniroute tunnel list|create|stop  # Toilí Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Athshocraigh pasfhocal an riaracháin
 omniroute --mcp                    # Tosaigh freastalaí MCP thar stdio

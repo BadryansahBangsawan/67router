@@ -1,13 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import "../_setup/isolateDataDir.ts";
-import type { A2ATask } from "../../src/lib/a2a/taskManager.ts";
 
 process.env.DISABLE_SQLITE_AUTO_BACKUP = "true";
 delete process.env.OMNIROUTE_A2A_MEMORY_HITS;
 
 const { resetDbInstance } = await import("../../src/lib/db/core.ts");
-const { collectMemoryHits } = await import("../../src/lib/a2a/taskExecution.ts");
 const { sqliteBackend, memoryManager, retrieveMemories, MemoryType } =
   await import("../../src/lib/memory/index.ts");
 
@@ -204,46 +202,4 @@ test("invalid explicit token budgets still reject through the central schema", a
       (error: Error) => error.name === "ZodError"
     );
   }
-});
-
-function keylessTask(query: string): A2ATask {
-  return {
-    id: "memory-contract-task",
-    skill: "smart-routing",
-    state: "working",
-    input: { skill: "smart-routing", messages: [{ role: "user", content: query }] },
-    artifacts: [],
-    events: [],
-    metadata: {},
-    createdAt: "2026-10-10T00:00:00.000Z",
-    updatedAt: "2026-10-10T00:00:00.000Z",
-    expiresAt: "2026-10-11T00:00:00.000Z",
-  };
-}
-
-test("#16184: real keyless A2A recall returns the persisted SQLite hit and truncates its snippet", async () => {
-  const [stored] = await seed("mcp", ["Aurora staging ".repeat(20)]);
-  await seed("foreign-a2a-owner", ["Aurora staging private"]);
-  const direct = await retrieveMemories("mcp", { query: "aurora staging" });
-  assert.deepEqual(
-    direct.map((memory) => memory.id),
-    [stored.id]
-  );
-  const hits = await collectMemoryHits(keylessTask("aurora staging"));
-  assert.deepEqual(hits, [
-    { id: stored.id, key: stored.key, type: stored.type, snippet: stored.content.slice(0, 200) },
-  ]);
-  assert.equal(hits[0].snippet.length, 200);
-});
-
-test("#16184/#16185: real A2A recall caps matching SQLite memories at five", async () => {
-  const stored = await seed(
-    "mcp",
-    Array.from({ length: 7 }, (_, index) => `Aurora staging node ${index}`)
-  );
-  await seed("foreign-a2a-owner", ["Aurora staging private"]);
-  const hits = await collectMemoryHits(keylessTask("aurora staging"));
-  assert.equal(hits.length, 5);
-  assert.equal(new Set(hits.map((hit) => hit.id)).size, 5);
-  assert.ok(hits.every((hit) => stored.some((memory) => memory.id === hit.id)));
 });

@@ -20,38 +20,6 @@ OmniRoute suteikia tris skirtingas su agentais susijusias sąsajas. Iš pirmo ž
 
 ## Sprendimų medis
 
-## 1. A2A — agentas agentui
-
-**Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute galinis taškas:** `POST /a2a` (JSON-RPC 2.0)
-**Agento kortelė:** `GET /.well-known/agent.json`
-
-### Kada naudoti
-
-- Kuriant kelių agentų sistemą, kurioje OmniRoute yra vienas iš lygiaverčių dalyvių
-- Suteikiant agentams tokiose sistemose kaip Google ADK ar bendruosiuose agentų tinkluose prieigą prie OmniRoute maršruto parinkimo galimybių (išmaniojo maršruto parinkimo, kvotų valdymo ir kt.)
-- Pateikiant OmniRoute per standartinę aptikimo ir iškvietimo sąsają
-
-### Metodai
-
-- `message/send` — pateikti pranešimą ir gauti sinchroninį atsakymą
-- `message/stream` — pateikti pranešimą ir gauti per SSE srautiniu būdu perduodamus eigos įvykius
-- `tasks/get` — nuskaityti užduotį pagal ID
-- `tasks/cancel` — atšaukti vykdomą užduotį
-
-### Integruoti įgūdžiai (6)
-
-- `smart-routing` — nukreipti užklausą per optimalų derinį
-- `quota-management` — pateikti kiekvieno teikėjo kvotos būseną
-- `provider-discovery` — pateikti įdiegtų teikėjų ir jų galimybių sąrašą
-- `cost-analysis` — įvertinti užklausos ar pokalbio kainą
-- `health-report` — apibendrinti kiekvieno teikėjo grandinės pertraukiklio, atvėsimo laikotarpio ir blokavimo būseną
-- `list-capabilities` — išvardyti galimus agento įgūdžius ir metaduomenis
-
-### Išsamiau
-
-Perdavimo informacija, agento kortelės struktūra, užduočių TTL konfigūracija ir naujų įgūdžių pridėjimo šablonas pateikti dokumente [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — CLI agentų registras
 
 **OmniRoute galinis taškas:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ POST užklausos turinio struktūra (`customAgentBodySchema` faile `src/app/api/a
 
 ## Integravimo pavyzdžiai
 
-### „OmniRoute“ A2A galimybių aptikimas
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Grąžinama agento kortelė su visais 6 įgūdžiais, transportais ir versija.
-
-### „OmniRoute“ iškvietimas kaip A2A agento
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Įdiegtų CLI agentų sąrašo gavimas per ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Taip pat žr.
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — išsami A2A apžvalga
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — išorinės CLI integracijos (naudoja ACP)
 - [SKILLS.md](./SKILLS.md) — įgūdžių sistema (skiriasi nuo A2A įgūdžių — vietinė izoliuota vykdymo aplinka)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — galinių taškų žinynas

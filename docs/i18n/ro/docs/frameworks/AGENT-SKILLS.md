@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (necesită autentificare)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 instrumente MCP (listare, obținere, acoperire)
-src/lib/a2a/skills/listCapabilities.ts        — skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Abilitatea A2A `list-capabilities` returnează catalogul complet cu 45 de abilit
 }
 ```
 
-Consultați [A2A-SERVER.md](./A2A-SERVER.md) pentru detalii despre protocol.
-
 ---
 
 ## Catalog — 45 de ID-uri de abilități
@@ -189,7 +186,6 @@ Consultați [A2A-SERVER.md](./A2A-SERVER.md) pentru detalii despre protocol.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — cadrul Omni Skills (injectarea instrumentelor LLM + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — catalogul de instrumente MCP (instrumentele `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — protocolul A2A (abilitatea `list-capabilities`)
 - `src/lib/agentSkills/` — catalog, generator, analizoare
 - `skills/` — fișiere SKILL.md generate (45 de intrări)

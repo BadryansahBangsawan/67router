@@ -586,7 +586,6 @@ Radar භාවිතය තෝරාගත හැකි අතර එය GET �
 - **🔑 Per-key යොමු කිරීමේ පාලනය** — `forcedModel` සමඟ API යතුරක් එක් ආකෘතියකට හෝ combo එකකට සවි කරන්න, සහ යතුරක ආකෘති සහ combos පරමාණුකව (atomically) එක් කරන්න හෝ ඉවත් කරන්න (`/api/keys/{id}/access`). → [API යොමුව](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ වඩා සියුම් PII පාලනයන්** — වර්ගය අනුව තේරීම, වලංගු කළ අභිරුචි mask patterns 20ක් දක්වා සහ වර්ගය අනුව හඳුනාගැනීමේ ගණන්; mask කිරීමම opt-in ලෙසම පවතී. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 භාෂා 67ක්** — dashboard, ලේඛන mirrors සහ CLI සඳහා, `npm run i18n:add-locale` සමඟ එක් විධානයකින්ම භාෂාවක් හැම තැනටම එක් කරයි. → [i18n මාර්ගෝපදේශය](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ඔබගේ agent බලඇණියට ඇතුළට එන A2A පැවරීම, Agent Card මත Conductor කුසලතා, සහ Faro push-to-talk හඬ කතාබහ සහිත dashboard පැනලයක්. → [A2A සේවාදායකය](docs/frameworks/A2A-SERVER.md)
 - **🛂 අනුවර්තී පිළිගැනීම සහ අධිබර ආරක්ෂාව** — 503 දෙනවා වෙනුවට බර වැඩි chat ඉල්ලීම් පෝලිමක රැඳේ, connection එකකට atomic RPM rolling leases සමඟ. → [Resilience මාර්ගෝපදේශය](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical `/v1/models` පිළිවෙළ** — සෑම provider එකකටම එක් අඛණ්ඩ provider-කාණ්ඩගත කොටසක් (combos මුලින්ම සවි කර), සෑම catalog මූලාශ්රයක් හරහාම ස්ථාවරයි. → [API යොමුව](docs/reference/API_REFERENCE.md)
 - **🗜️ සම්පීඩන ශක්තිමත් කිරීම** — පෙරනිමියෙන් ක්රියාත්මක inflation ආරක්ෂකය, DE / FR / JA + චීන (wényán) සඳහා Caveman packs, Gradle සහ .NET සඳහා RTK පෙරහන්. → [සම්පීඩනය](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ OmniRoute **MCP**, **A2A**, **REST API**, **webhooks** හෝ **දුරස්�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor හෝ ඕනෑම MCP සේවාලාභියෙකුට සම්බන්ධ කරන්න</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">දුරස්ථ MCP — <b>මෙවලම් 110ක්</b>, විෂයපථ 33ක් (බලාත්මක කිරීම තේරීමෙන් සක්රිය කළ යුතුය), සම්පූර්ණ විගණන සටහන</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">ප්රවාහ MCP ප්රවාහනය</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">නියෝජිතයාගෙන් නියෝජිතයාට, <b>JSON-RPC 2.0</b> + SSE, කුසලතා 6ක්</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-අනුකූලයි — කතාබස්, embeddings, රූප, ශ්රව්ය, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ඉල්ලීම් / quota සිදුවීම් Slack, Discord, Telegram හෝ ඕනෑම URL එකකට යවන්න</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>දුරස්ථ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">විෂයපථගත ප්රවේශ ටෝකන සමඟ දුරස්ථ instance එකක් පාලනය කරන්න</td></tr>
@@ -915,8 +913,6 @@ OmniRoute **MCP**, **A2A**, **REST API**, **webhooks** හෝ **දුරස්�
 # MCP හරහා Claude Code වෙත සම්පූර්ණ OmniRoute මෙවලම් කට්ටලය ලබා දෙන්න:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP සේවාදායකය](docs/frameworks/MCP-SERVER.md) · [A2A සේවාදායකය](docs/frameworks/A2A-SERVER.md) · [නියෝජිත ප්රොටෝකෝල](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1377,6 @@ Dashboard රහිත, headless runtime එකක් සඳහා Docker `base`
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP සේවාදායකය</a></b></td><td>MCP මෙවලම් 110ක්, IDE වින්යාස, Python/TS/Go සේවාලාභීන්</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP සේවාදායක මාර්ගෝපදේශය</a></b></td><td>MCP ස්ථාපනය, ප්රවාහන සහ මෙවලම් යොමුව</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A සේවාදායකය</a></b></td><td>JSON-RPC 2.0 ප්රොටෝකෝලය, කුසලතා, ප්රවාහනය, කාර්ය කළමනාකරණය</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A සේවාදායක මාර්ගෝපදේශය</a></b></td><td>A2A නියෝජිත කාඩ්පත, කාර්ය, කුසලතා සහ ප්රවාහනය</td></tr>
 </table>
 
 ### 📋 ව්යාපෘතිය සහ ගුණාත්මකභාවය

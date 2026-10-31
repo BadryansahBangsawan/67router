@@ -100,8 +100,6 @@ Segmenten op het hoogste niveau onder `src/app/`:
 | Pad                                                                           | Doel                                              |
 | ----------------------------------------------------------------------------- | ------------------------------------------------- |
 | `api/`                                                                        | Alle HTTP-API-routes (zie uitsplitsing hieronder) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0-eindpunt (`POST /a2a`)           |
-| `.well-known/agent.json/`                                                     | A2A Agent Card-detectiedocument                   |
 | `(dashboard)/`                                                                | Dashboard-UI (routegroep, geen URL-prefix)        |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Authenticatiestromen                              |
 | `landing/`                                                                    | Marketing-/landingspagina                         |
@@ -772,13 +770,6 @@ Zie [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) en de betreffende sectie in
 4. Voeg tests toe onder `open-sse/mcp-server/__tests__/`.
 5. Werk [MCP-SERVER.md](../frameworks/MCP-SERVER.md) bij.
 
-### Een nieuwe A2A-skill toevoegen
-
-Zie [A2A-SERVER.md § Een nieuwe skill toevoegen](../frameworks/A2A-SERVER.md). Skills bevinden zich in
-`src/lib/a2a/skills/` en worden geregistreerd via de A2A-taakbeheerder.
-
----
-
 ## 11. Conventies
 
 - **Codestijl**: inspringing van 2 spaties, dubbele aanhalingstekens, regelbreedte van 100 tekens, puntkomma's,
@@ -846,7 +837,6 @@ Zie [A2A-SERVER.md § Een nieuwe skill toevoegen](../frameworks/A2A-SERVER.md). 
   en lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scores en strategieën voor Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — volledige catalogus van MCP-tools en transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — vaardigheden en detectie van het A2A-protocol.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- en Caveman-compressie.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-integraties.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (indien aanwezig), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — implementatiedoelen.

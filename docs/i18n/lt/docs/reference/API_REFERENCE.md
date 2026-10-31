@@ -1877,48 +1877,10 @@ OmniRoute pateikiamas su integruotu Model Context Protocol serveriu, turinčiu 3
 
 „OmniRoute“ teikia A2A („Agent-to-Agent“) JSON-RPC 2.0 galinį tašką ir REST apvalkalą, skirtą tikrinimui bei ataskaitų skydeliui.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neprivaloma, nebent nustatytas OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Palaikomi metodai (visi priklauso nuo `settings.a2aEnabled`):
-
-| Metodas          | Aprašymas                                                             |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Sinchroninis gebėjimo vykdymas; grąžina `{task, artifacts, metadata}` |
-| `message/stream` | To paties gebėjimų rinkinio srautinis vykdymas naudojant SSE          |
-| `tasks/get`      | Gauti užduotį pagal `taskId`                                          |
-| `tasks/cancel`   | Atšaukti užduotį pagal `taskId`                                       |
-
-Integruoti gebėjimai: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agento kortelė
-
-```bash
-GET /.well-known/agent.json
-```
-
-Grąžina viešą A2A agento kortelę (pavadinimą, aprašymą, galimybes, gebėjimų katalogą ir autentifikavimo schemą) — viešai saugoma podėlyje 1 val. Autentifikavimas nereikalingas.
-
 ### REST pagalbinės sąsajos
 
 | Metodas | Kelias                       | Aprašymas                                                                                                             |
 | ------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | A2A įjungimo būsena + užduočių statistika + podėlyje saugomos agento kortelės santrauka                               |
 | GET     | `/api/a2a/tasks`             | Užduočių sąrašas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Neįgyvendinta kaip REST pagalbinė sąsaja — kurkite naudodami JSON-RPC `message/send`)                                |
 | GET     | `/api/a2a/tasks/[id]`        | Gauti vieną užduotį                                                                                                   |

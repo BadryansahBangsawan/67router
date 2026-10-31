@@ -390,34 +390,6 @@
       "description": "Log audit MCP (alias untuk audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Cantumkan skill A2A yang tersedia dari kartu agen"
-    },
-    "invoke": {
-      "description": "Jalankan skill A2A dan kembalikan ID tugas",
-      "input": "Objek input JSON",
-      "input_file": "Jalur ke file input JSON",
-      "wait": "Tunggu hingga tugas selesai sebelum mengembalikan hasil",
-      "timeout": "Batas waktu menunggu penyelesaian dalam ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Kelola tugas A2A",
-      "list": {
-        "status": "Filter berdasarkan status",
-        "skill": "Filter berdasarkan ID skill"
-      },
-      "watch": {
-        "description": "Periksa status tugas secara berkala hingga selesai"
-      },
-      "stream": {
-        "description": "Streaming peristiwa eksekusi tugas melalui SSE"
-      },
-      "logs": {
-        "description": "Tampilkan pesan dan artefak tugas"
-      }
-    }
-  },
   "policy": {
     "description": "Kelola kebijakan otorisasi OmniRoute",
     "list": {

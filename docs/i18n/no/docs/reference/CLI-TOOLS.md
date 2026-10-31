@@ -716,7 +716,6 @@ omniroute cache                        # Hurtigbufferstatus
 omniroute cache clear                  # Tøm semantiske hurtigbuffere og signaturhurtigbuffere
 
 omniroute mcp status | restart         # Status for / omstart av MCP-server
-omniroute a2a status | card            # Status for A2A-server / agentkort
 
 omniroute tunnel list | create | stop  # Administrer tunneler (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Inspiser / angi miljøvariabler (midlertidig)

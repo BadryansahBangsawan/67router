@@ -119,4 +119,3 @@ test တစ်ခု လိုအပ်သည်။
 - [Agent protocol များ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI launch contract များ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tool များ](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)

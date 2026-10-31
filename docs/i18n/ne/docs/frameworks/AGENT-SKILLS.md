@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (प्रमाणीकरण आवश्यक)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 वटा MCP उपकरण (सूची, प्राप्ति, कभरेज)
-src/lib/a2a/skills/listCapabilities.ts        — A2A स्किल: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A सिप `list-capabilities` ले पूर्ण 45-सिप क्य�
 }
 ```
 
-प्रोटोकल विवरणका लागि [A2A-SERVER.md](./A2A-SERVER.md) हेर्नुहोस्।
-
 ---
 
 ## क्याटलग — 45 सिप ID हरू
@@ -189,7 +186,6 @@ A2A सिप `list-capabilities` ले पूर्ण 45-सिप क्य�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills फ्रेमवर्क (LLM उपकरण इन्जेक्सन + मार्केटप्लेस)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP उपकरण क्याटलग (`omniroute_agent_skills_*` उपकरणहरू)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A प्रोटोकल (`list-capabilities` स्किल)
 - `src/lib/agentSkills/` — क्याटलग, जेनेरेटर, पार्सरहरू
 - `skills/` — उत्पन्न गरिएका SKILL.md फाइलहरू (45 प्रविष्टिहरू)

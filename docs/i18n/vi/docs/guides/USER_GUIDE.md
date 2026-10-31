@@ -1239,8 +1239,6 @@ Sử dụng URL SSE `http://localhost:20128/api/mcp/sse` và khóa API Bearer đ
 
 ### Phạm vi
 
-MCP hiện định nghĩa 32 phạm vi có tên. Mỗi khóa Bearer có thể được giới hạn ở các phạm vi cụ thể — xem [MCP-SERVER.md](../frameworks/MCP-SERVER.md) để biết danh sách phạm vi và công cụ chính thức, cũng như [A2A-SERVER.md](../frameworks/A2A-SERVER.md) để biết lược đồ JSON-RPC.
-
 ---
 
 ## 🧠 Hệ thống kỹ năng
@@ -1249,7 +1247,6 @@ OmniRoute cung cấp một **framework kỹ năng** có khả năng mở rộng 
 
 - **Giao diện Marketplace** — Duyệt và cài đặt kỹ năng từ **Dashboard → Skills**
 - **Phạm vi theo từng khóa** — Giới hạn những kỹ năng mà mỗi API key có thể gọi
-- **Kỹ năng tùy chỉnh** — Thêm một tệp TypeScript vào `src/lib/a2a/skills/`, đăng ký tệp đó và kỹ năng sẽ có thể được gọi ngay lập tức qua A2A
 
 Tài liệu tham khảo đầy đủ: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Khôi phục từ bản chụp nhanh
 omniroute health                   # Tình trạng chi tiết (bộ ngắt mạch, bộ nhớ đệm, bộ nhớ)
 omniroute quota                    # Mức sử dụng hạn ngạch của nhà cung cấp
 omniroute mcp status               # Trạng thái máy chủ MCP
-omniroute a2a status               # Trạng thái máy chủ A2A
 omniroute tunnel list|create|stop  # Đường hầm Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Đặt lại mật khẩu quản trị viên
 omniroute --mcp                    # Khởi động máy chủ MCP qua stdio

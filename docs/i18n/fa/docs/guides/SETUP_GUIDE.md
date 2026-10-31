@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **مستندات کامل MCP:** [README سرور MCP](../../open-sse/mcp-server/README.md) — شامل 110 ابزار، پیکربندیهای IDE و کلاینتهای Python/TS/Go.
 
-### راهاندازی A2A (پروتکل عاملبهعامل)
-
-کارت عامل را بررسی کنید:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-یک وظیفه ارسال کنید:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**مستندات کامل A2A:** [README سرور A2A](../../src/lib/a2a/README.md) — شامل JSON-RPC 2.0، مهارتها، استریم و چرخه عمر وظیفه.
-
----
-
 ## پیکربندی مهلت زمانی
 
 ### مهلتهای زمانی پایه

@@ -1880,48 +1880,10 @@ OmniRoute поставляется со встроенным сервером Mo
 
 OmniRoute предоставляет конечную точку A2A (Agent-to-Agent) JSON-RPC 2.0, а также REST-обёртку для проверки и использования в панели мониторинга.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # необязательно, если не задана переменная OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Поддерживаемые методы (все зависят от `settings.a2aEnabled`):
-
-| Метод            | Описание                                                               |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Синхронное выполнение навыка; возвращает `{task, artifacts, metadata}` |
-| `message/stream` | Потоковое выполнение того же набора навыков через SSE                  |
-| `tasks/get`      | Получение задачи по `taskId`                                           |
-| `tasks/cancel`   | Отмена задачи по `taskId`                                              |
-
-Встроенные навыки: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Карточка агента
-
-```bash
-GET /.well-known/agent.json
-```
-
-Возвращает общедоступную карточку агента A2A (имя, описание, возможности, каталог навыков, схему аутентификации), которая публично кэшируется на 1 час. Аутентификация не требуется.
-
 ### Вспомогательные REST-маршруты
 
 | Метод | Путь                         | Описание                                                                                                          |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Состояние A2A + статистика задач + сводка кэшированной карточки агента                                            |
 | GET   | `/api/a2a/tasks`             | Список задач — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Не реализовано как вспомогательный REST-маршрут — создавайте через JSON-RPC `message/send`)                      |
 | GET   | `/api/a2a/tasks/[id]`        | Получение одной задачи                                                                                            |

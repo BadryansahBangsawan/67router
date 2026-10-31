@@ -749,7 +749,6 @@ omniroute cache                        # Status cache
 omniroute cache clear                  # Kosongkan cache semantik + tandatangan
 
 omniroute mcp status | restart         # Status / mulakan semula pelayan MCP
-omniroute a2a status | card            # Status pelayan A2A / kad ejen
 
 omniroute tunnel list | create | stop  # Urus terowong (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Periksa / tetapkan pemboleh ubah persekitaran (sementara)

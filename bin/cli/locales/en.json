@@ -390,34 +390,6 @@
       "description": "MCP audit log (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "List available A2A skills from the agent card"
-    },
-    "invoke": {
-      "description": "Invoke an A2A skill and return the task ID",
-      "input": "JSON input object",
-      "input_file": "Path to JSON input file",
-      "wait": "Wait for task completion before returning",
-      "timeout": "Timeout waiting for completion in ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Manage A2A tasks",
-      "list": {
-        "status": "Filter by status",
-        "skill": "Filter by skill ID"
-      },
-      "watch": {
-        "description": "Poll task status until completion"
-      },
-      "stream": {
-        "description": "Stream task execution events via SSE"
-      },
-      "logs": {
-        "description": "Show task messages and artifacts"
-      }
-    }
-  },
   "policy": {
     "description": "Manage OmniRoute authorization policies",
     "list": {

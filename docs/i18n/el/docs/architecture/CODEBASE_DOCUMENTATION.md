@@ -100,8 +100,6 @@ src/
 | Διαδρομή                                                                      | Σκοπός                                                 |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
 | `api/`                                                                        | Όλες οι διαδρομές HTTP API (δείτε ανάλυση παρακάτω)    |
-| `a2a/`                                                                        | Τελικό σημείο A2A JSON-RPC 2.0 (`POST /a2a`)           |
-| `.well-known/agent.json/`                                                     | Έγγραφο ανακάλυψης A2A Agent Card                      |
 | `(dashboard)/`                                                                | UI πίνακα ελέγχου (ομάδα διαδρομών, χωρίς πρόθεμα URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Ροές αυθεντικοποίησης                                  |
 | `landing/`                                                                    | Σελίδα marketing/landing                               |
@@ -772,13 +770,6 @@ bin/
 4. Προσθέστε δοκιμές στο `open-sse/mcp-server/__tests__/`.
 5. Ενημερώστε το [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Προσθήκη νέου A2A skill
-
-Δείτε [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Τα skills βρίσκονται στο
-`src/lib/a2a/skills/` και καταχωρίζονται μέσω του A2A task manager.
-
----
-
 ## 11. Συμβάσεις
 
 - **Στυλ κώδικα**: εσοχή 2 κενών, διπλά εισαγωγικά, πλάτος 100 χαρακτήρων, ερωτηματικά,
@@ -844,7 +835,6 @@ bin/
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — αναλυτική παρουσίαση circuit breaker, cooldown και lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — βαθμολόγηση και στρατηγικές Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — πλήρης κατάλογος εργαλείων MCP + transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — δεξιότητες πρωτοκόλλου A2A και ανακάλυψη.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — συμπίεση RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ενσωματώσεις CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (εάν υπάρχει), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — στόχοι ανάπτυξης/εγκατάστασης.

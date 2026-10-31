@@ -573,5 +573,4 @@ Công cụ định tuyến có ngân sách hiệu năng nghiêm ngặt:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — mô tả theo từng thư mục
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — chấm điểm theo 16 yếu tố
 - [MCP-SERVER.md](./MCP-SERVER.md) — máy chủ MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — máy chủ A2A
 - Mã nguồn: `open-sse/` (hơn 400 tệp, khoảng 143K dòng mã)

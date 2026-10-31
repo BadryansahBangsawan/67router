@@ -87,7 +87,7 @@ HTTP 400 — मॉडेल '<id>' हे प्रतिमा-निर्म
 
 ## VS Code टॅबमधील Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` बाह्य ब्राउझरऐवजी Simple Browser द्वारे OmniRoute dashboard एडिटर टॅबमध्ये रेंडर करते. एम्बेडिंग हे सर्व्हरवर `DASHBOARD_ALLOW_EMBED=vscode` द्वारे **निवडून सक्षम करावे लागते**, ज्यामुळे HTML पृष्ठे डीफॉल्ट `frame-ancestors 'none'` + `X-Frame-Options: DENY` ऐवजी `frame-ancestors 'self' vscode-webview:` सह सर्व्ह केली जातात. API पृष्ठभाग (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) दोन्ही परिस्थितींमध्ये कठोर हेडर्स कायम ठेवतो.
+`omnicopilot.dashboardOpen: "editor"` बाह्य ब्राउझरऐवजी Simple Browser द्वारे OmniRoute dashboard एडिटर टॅबमध्ये रेंडर करते. एम्बेडिंग हे सर्व्हरवर `DASHBOARD_ALLOW_EMBED=vscode` द्वारे **निवडून सक्षम करावे लागते**, ज्यामुळे HTML पृष्ठे डीफॉल्ट `frame-ancestors 'none'` + `X-Frame-Options: DENY` ऐवजी `frame-ancestors 'self' vscode-webview:` सह सर्व्ह केली जातात. API पृष्ठभाग (`/api`, `/v1`, `/v1beta`, `/healthz`) दोन्ही परिस्थितींमध्ये कठोर हेडर्स कायम ठेवतो.
 
 > ⚠️ **हा build-time फ्लॅग आहे, runtime फ्लॅग नाही.** Next.js हे `headers()` रूट मॅनिफेस्टमध्ये कंपाइल करते, त्यामुळे बंडल बिल्ड होत असताना `next.config.mjs` हे व्हेरिएबल वाचते
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

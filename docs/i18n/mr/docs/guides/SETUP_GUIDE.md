@@ -247,26 +247,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **संपूर्ण MCP दस्तऐवजीकरण:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 साधने, IDE कॉन्फिगरेशन्स, Python/TS/Go क्लायंट्स.
 
-### A2A सेटअप (Agent-to-Agent Protocol)
-
-Agent Card सत्यापित करा:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-टास्क पाठवा:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**संपूर्ण A2A दस्तऐवजीकरण:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, कौशल्ये, स्ट्रीमिंग, टास्क जीवनचक्र.
-
----
-
 ## टाइमआउट कॉन्फिगरेशन
 
 ### मूलभूत टाइमआउट्स

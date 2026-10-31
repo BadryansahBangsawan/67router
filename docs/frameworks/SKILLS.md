@@ -254,12 +254,6 @@ See [MCP-SERVER.md](./MCP-SERVER.md) for transport setup and scope assignments.
 
 ---
 
-## A2A Integration
-
-Custom A2A skills live in `src/lib/a2a/skills/` and are dispatched via `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). See [A2A-SERVER.md](./A2A-SERVER.md) for the full task lifecycle.
-
----
-
 ## Adding a New Built-in Skill
 
 1. **Define the handler** in `src/lib/skills/builtins.ts` (or a sibling file under `src/lib/skills/builtin/`). Signature: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -474,7 +468,6 @@ See the [Plugin SDK & Skills Integration](./PLUGIN_SDK.md) for how to add a cust
 ## See Also
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tool registration and transports
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A task lifecycle and skill dispatch
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — user-facing introduction
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — request pipeline and component map
 - Source: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

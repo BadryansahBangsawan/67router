@@ -1238,8 +1238,6 @@ Použijte adresu URL SSE `http://localhost:20128/api/mcp/sse` a klíč API typu 
 
 ### Rozsahy oprávnění
 
-MCP aktuálně definuje 32 pojmenovaných rozsahů oprávnění. Každý klíč typu Bearer lze omezit na konkrétní rozsahy — autoritativní seznam rozsahů a nástrojů naleznete v dokumentu [MCP-SERVER.md](../frameworks/MCP-SERVER.md) a schéma JSON-RPC v dokumentu [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Systém dovedností
@@ -1248,7 +1246,6 @@ OmniRoute poskytuje rozšiřitelný **framework dovedností** (`src/lib/skills/`
 
 - **Uživatelské rozhraní tržiště** — Procházejte a instalujte dovednosti v části **Dashboard → Skills**
 - **Rozsahy pro jednotlivé klíče** — Omezte, které API klíče mohou vyvolávat jednotlivé dovednosti
-- **Vlastní dovednosti** — Vložte soubor TypeScript do `src/lib/a2a/skills/`, zaregistrujte jej a okamžitě jej bude možné vyvolat přes A2A
 
 Úplná dokumentace: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # Obnovení ze snímku
 omniroute health                   # Podrobný stav (jističe, mezipaměť, paměť)
 omniroute quota                    # Využití kvót poskytovatelů
 omniroute mcp status               # Stav serveru MCP
-omniroute a2a status               # Stav serveru A2A
 omniroute tunnel list|create|stop  # Tunely Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Resetování hesla správce
 omniroute --mcp                    # Spuštění serveru MCP přes stdio

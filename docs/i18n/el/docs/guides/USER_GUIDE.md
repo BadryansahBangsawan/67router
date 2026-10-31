@@ -1238,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### Εμβέλειες
 
-Το MCP ορίζει αυτήν τη στιγμή 32 ονομαστικές εμβέλειες. Κάθε κλειδί Bearer μπορεί να περιοριστεί σε συγκεκριμένες εμβέλειες — δείτε το [MCP-SERVER.md](../frameworks/MCP-SERVER.md) για το αυθεντικό ευρετήριο εμβελειών και εργαλείων, και το [A2A-SERVER.md](../frameworks/A2A-SERVER.md) για το σχήμα JSON-RPC.
-
 ---
 
 ## 🧠 Σύστημα Δεξιοτήτων
@@ -1248,7 +1246,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **Marketplace UI** — Περιήγηση και εγκατάσταση δεξιοτήτων από **Dashboard → Skills**
 - **Εμβέλειες ανά κλειδί** — Περιορισμός των κλειδιών API που μπορούν να καλούν συγκεκριμένες δεξιότητες
-- **Προσαρμοσμένες δεξιότητες** — Τοποθετήστε ένα αρχείο TypeScript στον φάκελο `src/lib/a2a/skills/`, καταχωρίστε το, και γίνεται αμέσως κλητό μέσω A2A
 
 Πλήρης αναφορά: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # Επαναφορά από στιγμιότ�
 omniroute health                   # Λεπτομερής υγεία (breakers, cache, μνήμη)
 omniroute quota                    # Χρήση ορίου παρόχου
 omniroute mcp status               # Κατάσταση διακομιστή MCP
-omniroute a2a status               # Κατάσταση διακομιστή A2A
 omniroute tunnel list|create|stop  # Tunnels Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Επαναφορά κωδικού πρόσβασης διαχειριστή
 omniroute --mcp                    # Εκκίνηση διακομιστή MCP μέσω stdio

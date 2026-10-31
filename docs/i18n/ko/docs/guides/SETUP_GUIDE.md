@@ -247,26 +247,6 @@ MCP 설정에 다음을 추가합니다.
 
 **전체 MCP 문서:** [MCP 서버 README](../../open-sse/mcp-server/README.md) — 도구 110개, IDE 구성, Python/TS/Go 클라이언트.
 
-### A2A 설정(Agent-to-Agent Protocol)
-
-Agent Card를 확인합니다.
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-작업을 전송합니다.
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**전체 A2A 문서:** [A2A 서버 README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, 스킬, 스트리밍, 작업 수명 주기.
-
----
-
 ## 타임아웃 구성
 
 ### 기본 타임아웃

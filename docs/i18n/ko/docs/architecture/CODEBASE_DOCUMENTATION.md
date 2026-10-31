@@ -99,8 +99,6 @@ App Router는 대시보드 UI와 공개/관리 HTTP API를 모두 제공합니�
 | 경로                                                                          | 용도                                      |
 | ----------------------------------------------------------------------------- | ----------------------------------------- |
 | `api/`                                                                        | 모든 HTTP API 라우트(아래 세부 내역 참조) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 엔드포인트(`POST /a2a`)  |
-| `.well-known/agent.json/`                                                     | A2A Agent Card 검색 문서                  |
 | `(dashboard)/`                                                                | 대시보드 UI(라우트 그룹, URL 접두사 없음) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | 인증 흐름                                 |
 | `landing/`                                                                    | 마케팅/랜딩 페이지                        |
@@ -772,13 +770,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` 아래에 테스트를 추가합니다.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md)를 업데이트합니다.
 
-### 새 A2A 스킬 추가
-
-[A2A-SERVER.md § 새 스킬 추가](../frameworks/A2A-SERVER.md)를 참조하세요. 스킬은
-`src/lib/a2a/skills/`에 있으며 A2A 작업 관리자를 통해 등록됩니다.
-
----
-
 ## 11. 규칙
 
 - **코드 스타일**: 2칸 들여쓰기, 큰따옴표, 100자 너비, 세미콜론,
@@ -845,7 +836,6 @@ bin/
   잠금에 대한 심층 설명.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo 점수 산정 및 전략.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — 전체 MCP 도구 카탈로그 및 전송 방식.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A 프로토콜 스킬 및 검색.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK 및 Caveman 압축.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI 통합.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md)(있는 경우), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — 배포 대상.

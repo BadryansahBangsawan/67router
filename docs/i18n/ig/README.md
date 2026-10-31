@@ -586,7 +586,7 @@ A na-ahọrọ iji Radar n'onwe gị, ọ na-ejikwa naanị GET. Klayentị Omni
 - **🔑 Njikwa nrụzi ụzọ kwa igodo** — jiri `forcedModel` kpọọ igodo API na otu model ma ọ bụ combo, ma tinye ma ọ bụ wepụ models na combos nke igodo n'ụzọ atomic (`/api/keys/{id}/access`). → [Ntụaka API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Njikwa PII dị nkenke karịa** — nhọrọ kwa ụdị, ruo ụkpụrụ nzochi omenala iri abụọ e kwadoro na ihe ọgụgụ nchọpụta kwa ụdị; nzochi n'onwe ya ka na-anọ opt-in. → [Nchedo](docs/security/GUARDRAILS.md)
 - **🌍 Asụsụ 67** — dashboard, nlere anya akwụkwọ na CLI, na `npm run i18n:add-locale` na-agbakwụnye asụsụ n'ebe niile na otu iwu. → [Ntuziaka i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inyefe ọrụ A2A na-abata n'ime na otu ndị nnọchi anya gị, nkà Conductor na Agent Card, na panel dashboard nwere mkparịta ụka olu push-to-talk Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — inyefe ọrụ A2A na-abata n'ime na otu ndị nnọchi anya gị, nkà Conductor na Agent Card, na panel dashboard nwere mkparịta ụka olu push-to-talk Faro.
 - **🛂 Nnabata na-adabara & nchekwa ibu ọrụ ukwuu** — arịrị chat arọ na-echere n'ahịrị kama ịza 503, na leases RPM na-agagharị n'ụzọ atomic kwa njikọ. → [Ntuziaka Ịdịgide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Nhazi ọkọlọtọ nke `/v1/models`** — otu ngọngọ jikọrọ ọnụ nke e jikọtara site na provider kwa provider (combos kpọrọ nkụ n'ụzọ mbụ), na-adịgide adịgide n'ofe isi iyi catalog ọ bụla. → [Ntụaka API](docs/reference/API_REFERENCE.md)
 - **🗜️ Ịkwado Compression** — nchebe inflation na-arụ ọrụ n'emepụtara, Caveman packs maka DE / FR / JA + Chinese (wényán), nzacha RTK maka Gradle & .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Kpughee OmniRoute site na **MCP**, **A2A**, **REST API**, **webhooks** ma ọ b�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Jikọọ ya na Claude Desktop, Cursor, ma ọ bụ onye ahịa MCP ọ bụla</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP remote — <b>ngwaọrụ 110</b>, oke 33 (ịmanye ha bụ nhọrọ), ndekọ audit zuru ezu</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Ụzọ mbufe MCP na-aga n'ihu</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Site n'aka onye nnọchi anya gaa na onye nnọchi anya, <b>JSON-RPC 2.0</b> + SSE, nkà 6</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Dakọtara na OpenAI — nkata, embeddings, onyonyo, ọdịyo, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Ziga request / quota event na Slack, Discord, Telegram ma ọ bụ URL ọ bụla</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Remote</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Jiri token nnweta nwere oke jikwaa instance remote</td></tr>
@@ -915,8 +914,6 @@ Kpughee OmniRoute site na **MCP**, **A2A**, **REST API**, **webhooks** ma ọ b�
 # Nye Claude Code ngwa ọrụ OmniRoute niile site na MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Sava MCP](docs/frameworks/MCP-SERVER.md) · [Sava A2A](docs/frameworks/A2A-SERVER.md) · [Protocol Ndị Nnọchi Anya](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1376,6 @@ Metrik iwu na 2026-10-18: **vidiyo pụrụ iche 1.976** · **nlele amaara 20.22
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>Ngwaọrụ MCP 110, nhazi IDE, clients Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Ntuziaka Server MCP</a></b></td><td>Nwụnye MCP, ụzọ mbufe, na ntụaka ngwaọrụ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protocol JSON-RPC 2.0, nka, streaming, njikwa ọrụ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Ntuziaka Server A2A</a></b></td><td>Kaadị agent A2A, ọrụ, nka, na streaming</td></tr>
 </table>
 
 ### 📋 Ọrụ Ngo & Ogo

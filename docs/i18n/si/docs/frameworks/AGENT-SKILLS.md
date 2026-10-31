@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (සත්යාපනය අවශ්යයි)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — MCP මෙවලම් 3ක් (ලැයිස්තුගත කිරීම, ලබා ගැනීම, ආවරණය)
-src/lib/a2a/skills/listCapabilities.ts        — A2A කුසලතාව: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A කුසලතාව වන `list-capabilities`, කුසලතා 45ක �
 }
 ```
 
-ප්රොටෝකෝල විස්තර සඳහා [A2A-SERVER.md](./A2A-SERVER.md) බලන්න.
-
 ---
 
 ## නාමාවලිය — කුසලතා ID 45ක්
@@ -189,7 +186,6 @@ A2A කුසලතාව වන `list-capabilities`, කුසලතා 45ක �
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills රාමුව (LLM මෙවලම් ඇතුළත් කිරීම + වෙළඳපොළ)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP මෙවලම් නාමාවලිය (`omniroute_agent_skills_*` මෙවලම්)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ප්රොටෝකෝලය (`list-capabilities` කුසලතාව)
 - `src/lib/agentSkills/` — නාමාවලිය, ජනකය, විග්රහක
 - `skills/` — ජනනය කළ SKILL.md ගොනු (ඇතුළත් කිරීම් 45ක්)

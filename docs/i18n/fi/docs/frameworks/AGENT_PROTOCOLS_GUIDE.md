@@ -20,38 +20,6 @@ Nämä kolme ovat toisistaan riippumattomia — voit valita niistä minkä tahan
 
 ## Päätöspuu
 
-## 1. A2A — Agent-to-Agent
-
-**Määritys:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-päätepiste:** `POST /a2a` (JSON-RPC 2.0)
-**Agenttikortti:** `GET /.well-known/agent.json`
-
-### Milloin käyttää
-
-- Kun rakennat moniagenttijärjestelmää, jossa OmniRoute on yksi vertaisosapuolista
-- Kun haluat tarjota OmniRouten reititysälykkyyden (`smart-routing`, `quota-management` jne.) esimerkiksi Google ADK:ta käyttävien kehysten tai yleisten agenttiverkkojen käyttöön
-- Kun haluat kääriä OmniRouten standardinmukaisen löytämis- ja kutsurajapinnan taakse
-
-### Menetelmät
-
-- `message/send` — lähetä viesti ja vastaanota synkroninen vastaus
-- `message/stream` — lähetä viesti ja vastaanota edistymistapahtumia SSE-suoratoistona
-- `tasks/get` — lue tehtävä tunnuksen perusteella
-- `tasks/cancel` — peruuta käynnissä oleva tehtävä
-
-### Sisäänrakennetut taidot (6)
-
-- `smart-routing` — reititä kehote optimaalisen yhdistelmän kautta
-- `quota-management` — raportoi palveluntarjoajakohtainen kiintiötila
-- `provider-discovery` — luettele asennetut palveluntarjoajat ominaisuuksineen
-- `cost-analysis` — arvioi pyynnön tai keskustelun kustannukset
-- `health-report` — kokoa palveluntarjoajakohtaiset katkaisija-, jäähdytys- ja lukitustilat
-- `list-capabilities` — luettele agentin käytettävissä olevat taidot ja metatiedot
-
-### Syvällisempi katsaus
-
-Katso siirtotavan yksityiskohdat, agenttikortin rakenne, tehtävien TTL-määritykset ja uusien taitojen lisäämiseen tarkoitettu malli tiedostosta [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — CLI-agenttirekisteri
 
 **OmniRoute-päätepiste:** `GET /api/acp/agents`
@@ -104,30 +72,6 @@ POST-pyynnön rungon muoto (`customAgentBodySchema` tiedostossa `src/app/api/acp
 - HTTP-rekisteri ei vastaanota tehtäviä eikä tarjoa prosessien käynnistystä. Sisäinen hallinta voi käynnistää rekisteröidyn CLI:n, mutta sitä ei ole kytketty automaattiseksi palveluntarjoajan varajärjestelmäksi. Tavallisessa vuorovaikutteisessa käytössä käynnistä määritetty CLI itse tai käytä komentoa `omniroute run`.
 
 ## Integrointiesimerkkejä
-
-### Tutustu OmniRouten A2A-ominaisuuksiin
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Palauttaa agenttikortin, joka sisältää kaikki 6 taitoa, siirtotavat ja version.
-
-### Kutsu OmniRoutea A2A-agenttina
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Listaa asennetut CLI-agentit ACP:n kautta
 
@@ -182,7 +126,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Katso myös
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A:n syvällinen esittely
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Ulkoiset CLI-integraatiot (käyttävät ACP:tä)
 - [SKILLS.md](./SKILLS.md) — Taitokehys (eri asia kuin A2A-taidot — paikallinen suoritushiekkalaatikko)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — päätepisteiden viite

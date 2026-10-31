@@ -204,11 +204,9 @@ function DrawerResult({ a2a, t }: { a2a: A2ATask | null; t: Translate }) {
 
 /**
  * "Memory used" section (Task D4, PR-C): lists the memories consulted for an a2a task's
- * last user message (`task.metadata.memoryHits`, written by `collectMemoryHits` in
- * `src/lib/a2a/taskExecution.ts` — observability only, never injected into a skill's
- * behavior). `metadata` is caller-supplied and unvalidated end to end
- * (`src/app/a2a/route.ts` passes `params?.metadata` straight through, and
- * `collectMemoryHits` only overwrites it when it finds hits), so `memoryHits` cannot be
+ * last user message (`task.metadata.memoryHits`, written by the A2A task executor that 67router
+ * has since removed — historical rows can still carry it; observability only). `metadata`
+ * is caller-supplied and unvalidated end to end, so `memoryHits` cannot be
  * trusted at the `A2ATask` type — a malicious/buggy A2A client could post
  * `metadata: { memoryHits: "boom" }` (a string's `.length` is truthy, so a plain
  * `!hits || hits.length === 0` guard would let it through) or an array containing
@@ -443,7 +441,7 @@ export function OrchestrationDrawer({
   if (!node) return null;
   const state = node.state ?? "queued";
   const { a2a } = narrowDetail(node, detail);
-  const showRepeat = node.source === "a2a" || node.source === "conductor";
+  const showRepeat = node.source === "conductor";
 
   return (
     // Kit Sheet (Radix Dialog): overlay click and Escape close it, focus is trapped while open

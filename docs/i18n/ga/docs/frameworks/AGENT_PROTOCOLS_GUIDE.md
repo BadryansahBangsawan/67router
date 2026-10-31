@@ -20,38 +20,6 @@ Tá na trí cinn neamhspleách ar a chéile — roghnaigh aon fhothacar díobh.
 
 ## Crann Cinnidh
 
-## 1. A2A — Gníomhaire le Gníomhaire
-
-**Sonraíocht:** [A2A v0.3](https://a2a-protocol.org)
-**Críochphointe OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Cárta Gníomhaire:** `GET /.well-known/agent.json`
-
-### Cathain ba cheart é a úsáid
-
-- Córas ilghníomhaire a thógáil ina bhfuil OmniRoute ar cheann de na piaraí
-- Faisnéis ródúcháin OmniRoute (ródú cliste, bainistiú cuótaí, etc.) a chur ar fáil do ghníomhairí i gcreataí amhail Google ADK nó i mogaill ghinearálta gníomhairí
-- OmniRoute a fhilleadh taobh thiar de chomhéadan caighdeánach aimsithe + agartha
-
-### Modhanna
-
-- `message/send` — cuir teachtaireacht isteach agus faigh freagairt shioncrónach
-- `message/stream` — cuir teachtaireacht isteach + faigh teagmhais dul chun cinn a shruthaítear trí SSE
-- `tasks/get` — léigh tasc de réir a aitheantais
-- `tasks/cancel` — cealaigh tasc atá ar siúl
-
-### Scileanna ionsuite (6)
-
-- `smart-routing` — ródáil leid tríd an teaglaim is fearr
-- `quota-management` — tuairiscigh staid chuóta gach soláthraí
-- `provider-discovery` — liostaigh soláthraithe suiteáilte agus a gcumais
-- `cost-analysis` — déan costas iarratais/comhrá a mheas
-- `health-report` — comhiomlánaigh staid scoradáin/tréimhse shuaimhnithe/frithdhúnadh gach soláthraí
-- `list-capabilities` — liostaigh scileanna agus meiteashonraí an ghníomhaire atá ar fáil
-
-### Mionscrúdú
-
-Féach ar [A2A-SERVER.md](./A2A-SERVER.md) le haghaidh sonraí iompair, struchtúr an chárta gníomhaire, cumraíocht TTL na dtascanna, agus an teimpléad chun scileanna nua a chur leis.
-
 ## 2. ACP — Clárlann Gníomhairí CLI
 
 **Críochphointe OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Cruth an choirp do POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
 
 ## Samplaí Comhtháthaithe
 
-### Faigh amach cumais A2A OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Seolann sé an Cárta Gníomhaire ar ais leis na 6 scil, na hiompróirí agus an leagan go léir.
-
-### Glaoigh ar OmniRoute mar ghníomhaire A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Liostaigh gníomhairí CLI suiteáilte trí ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Féach Freisin
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — mionléargas ar A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — comhtháthuithe seachtracha CLI (úsáideann ACP)
 - [SKILLS.md](./SKILLS.md) — creat scileanna (éagsúil ó scileanna A2A — bosca gainimh rite áitiúil)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — tagairt críochphointe

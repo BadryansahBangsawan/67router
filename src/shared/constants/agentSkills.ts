@@ -210,9 +210,9 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "omni-agents-a2a",
-    name: "Agents & A2A Protocol",
+    name: "A2A Tasks",
     description:
-      "Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities.",
+      "Inspect A2A tasks (the Conductor fleet mirrors its runs into them) through the /api/a2a/tasks REST routes: list, history, detail and cancel.",
     category: "api",
     area: "agents-a2a",
     icon: "device_hub",
@@ -346,15 +346,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     category: "cli",
     area: "cli-mcp",
     icon: "electrical_services",
-  },
-  {
-    id: "cli-a2a",
-    name: "CLI: A2A Protocol",
-    description:
-      "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.",
-    category: "cli",
-    area: "cli-a2a",
-    icon: "device_hub",
   },
   {
     id: "cli-tunnel",

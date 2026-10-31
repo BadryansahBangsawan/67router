@@ -143,8 +143,6 @@ src/
 | `app/api/` (गैर-v1)                                                          | प्रबंधन/एडमिन रूट (~60 डायरेक्टरी: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools आदि)                                                                                                                                            |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 रूट (सर्वर नियंत्रण, एजेंट स्थिति/DNS/मैपिंग, बायपास, प्रमाणपत्र, अपस्ट्रीम-CA)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/AGENTBRIDGE.md §7` देखें।                                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ रूट (अनुरोध, सत्र, होस्ट, कैप्चर मोड, निर्यात, ws)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/TRAFFIC_INSPECTOR.md §8` देखें।                                                                                                                                            |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 प्रवेश बिंदु (`POST /a2a`)                                                                                                                                                                                                                                                                       |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (खोज)                                                                                                                                                                                                                                                                                              |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard UI पृष्ठ (50+ अनुभाग, ~118 page.tsx फ़ाइलें: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity आदि)                                                                                                                                    |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 टैब: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` देखें                                                                                                                                                                      |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (योजना 21): `page.tsx` (3-टैब शेल), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | दस्तावेज़                                   | उद्देश्य                                                                |
 | ------------------------------------------- | ----------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP सर्वर: 110 टूल, 3 ट्रांसपोर्ट, 33 स्कोप, REST एंडपॉइंट              |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6 स्किल्स, REST सहायक, एजेंट कार्ड                  |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | एकीकृत मार्गदर्शिका: A2A बनाम ACP बनाम क्लाउड एजेंट                     |
 | `SKILLS.md`                                 | स्किल्स फ़्रेमवर्क (अंतर्निहित + मार्केटप्लेस + SkillsSH + सैंडबॉक्स)   |
 | `RADAR.md`                                  | Radar निःशुल्क-मॉडल कैटलॉग ओवरले (`RADAR_ENABLED`, डिफ़ॉल्ट रूप से बंद) |
@@ -567,7 +564,6 @@ open-sse/
 - **प्रोवाइडर जोड़ रहे हैं?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` का अनुसरण करें + `docs/reference/PROVIDER_REFERENCE.md` से क्रॉस-चेक करें।
 - **रूट जोड़ रहे हैं?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`।
 - **MCP टूल जोड़ रहे हैं?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`।
-- **A2A स्किल जोड़ रहे हैं?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`।
 - **स्थानीय रूप से चला रहे हैं?** `docs/guides/SETUP_GUIDE.md`।
 - **डिप्लॉय कर रहे हैं?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`।
 - **रिलीज़ कर रहे हैं?** `docs/ops/RELEASE_CHECKLIST.md` (और `/generate-release-cc` Claude Code स्किल)।

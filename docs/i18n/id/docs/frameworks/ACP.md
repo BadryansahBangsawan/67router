@@ -121,4 +121,3 @@ secara terpisah di environment target.
 - [Protokol agen](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kontrak peluncuran CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Alat CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)

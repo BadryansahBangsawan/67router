@@ -1859,48 +1859,10 @@ OmniRoute ní sẹ́fà Model Context Protocol tí a fi sínú rẹ̀ pẹ̀lú 
 
 OmniRoute ń pèsè ibi ìparí A2A (Agent-to-Agent) JSON-RPC 2.0 pẹ̀lú àpò REST fún àyẹ̀wò àti lílò pátákó ìdarí.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # kò pọndandan àyàfi tí a bá ṣètò OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Àwọn ọ̀nà tí a ṣe àtìlẹ́yìn fún (gbogbo wọn sinmi lórí `settings.a2aEnabled`):
-
-| Ọ̀nà              | Àpèjúwe                                                        |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | Ìṣiṣẹ́ ọgbọ́n aláṣiṣẹ́pọ̀; ó dá `{task, artifacts, metadata}` padà |
-| `message/stream` | Ìṣiṣẹ́ SSE tí ń ṣàn fún àkójọpọ̀ ọgbọ́n kan náà                   |
-| `tasks/get`      | Gba iṣẹ́ kan nípasẹ̀ `taskId`                                    |
-| `tasks/cancel`   | Fagilé iṣẹ́ kan nípasẹ̀ `taskId`                                 |
-
-Àwọn ọgbọ́n inú ètò: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Káàdì Aṣojú
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ó dá káàdì aṣojú A2A ti gbogbo ènìyàn padà (orúkọ, àpèjúwe, àwọn agbára, àkójọ ọgbọ́n, ètò ìfàṣẹsí) — a fi pamọ́ sínú cache gbangba fún wákàtí 1. Kò nílò ìfàṣẹsí.
-
 ### Àwọn olùrànlọ́wọ́ REST
 
 | Ọ̀nà  | Ipa-ọ̀nà                      | Àpèjúwe                                                                                                                |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A ti ṣiṣẹ́ + àwọn ìṣirò iṣẹ́ + àkótán káàdì aṣojú tí a fi pamọ́ sínú cache                                              |
 | GET  | `/api/a2a/tasks`             | Ṣàkọsílẹ̀ àwọn iṣẹ́ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (A kò tíì mú un ṣiṣẹ́ gẹ́gẹ́ bí olùrànlọ́wọ́ REST — ṣẹ̀dá nípasẹ̀ JSON-RPC `message/send`)                                    |
 | GET  | `/api/a2a/tasks/[id]`        | Gba iṣẹ́ kan                                                                                                            |

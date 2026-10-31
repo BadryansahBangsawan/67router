@@ -1238,8 +1238,6 @@ OmniRoute គឺជា **ម៉ាស៊ីនមេ MCP** (Model Context Protoc
 
 ### វិសាលភាព
 
-បច្ចុប្បន្ន MCP កំណត់វិសាលភាពដែលមានឈ្មោះចំនួន 32។ សោ Bearer នីមួយៗអាចត្រូវបានកំណត់ឱ្យប្រើតែវិសាលភាពជាក់លាក់ — សូមមើល [MCP-SERVER.md](../frameworks/MCP-SERVER.md) សម្រាប់បញ្ជីវិសាលភាព និងឧបករណ៍ផ្លូវការ និង [A2A-SERVER.md](../frameworks/A2A-SERVER.md) សម្រាប់គ្រោងការណ៍ JSON-RPC។
-
 ---
 
 ## 🧠 ប្រព័ន្ធជំនាញ
@@ -1248,7 +1246,6 @@ OmniRoute ផ្តល់នូវ **ក្របខណ្ឌជំនាញ** �
 
 - **ចំណុចប្រទាក់ Marketplace** — រុករក និងដំឡើងជំនាញពី **Dashboard → Skills**
 - **វិសាលភាពតាម key នីមួយៗ** — កំណត់ថា API key ណាខ្លះអាចហៅប្រើជំនាញណាខ្លះ
-- **ជំនាញផ្ទាល់ខ្លួន** — ដាក់ឯកសារ TypeScript មួយក្នុង `src/lib/a2a/skills/` ចុះឈ្មោះវា ហើយវានឹងអាចត្រូវបានហៅប្រើភ្លាមៗតាមរយៈ A2A
 
 ឯកសារយោងពេញលេញ៖ [SKILLS.md](../frameworks/SKILLS.md)។
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # ស្ដារពីរូបថតចម�
 omniroute health                   # ព័ត៌មានសុខភាពលម្អិត (ឧបករណ៍ផ្ដាច់ cache អង្គចងចាំ)
 omniroute quota                    # ការប្រើប្រាស់កូតារបស់អ្នកផ្តល់សេវា
 omniroute mcp status               # ស្ថានភាពម៉ាស៊ីនមេ MCP
-omniroute a2a status               # ស្ថានភាពម៉ាស៊ីនមេ A2A
 omniroute tunnel list|create|stop  # ផ្លូវរូង Cloudflare/Tailscale/ngrok
 omniroute reset-password           # កំណត់ពាក្យសម្ងាត់អ្នកគ្រប់គ្រងឡើងវិញ
 omniroute --mcp                    # ចាប់ផ្ដើមម៉ាស៊ីនមេ MCP តាម stdio

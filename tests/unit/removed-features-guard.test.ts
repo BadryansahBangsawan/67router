@@ -78,6 +78,22 @@ const REMOVED_PATHS: string[] = [
   "src/app/(dashboard)/dashboard/orchestration/model/fromCloudAgent.ts",
   "src/shared/constants/providers/cloud-agent.ts",
   "bin/cli/commands/cloud.mjs",
+  // A2A public protocol surface (TaskManager, db/a2aTasks and /api/a2a/tasks* stay)
+  "src/app/a2a",
+  "src/app/api/a2a/status",
+  "src/app/.well-known/agent.json",
+  "src/app/.well-known/agent-card.json",
+  "src/lib/wellKnown.ts",
+  "src/lib/conductor/fleetSkills.ts",
+  "src/lib/a2a/skills",
+  "src/lib/a2a/taskExecution.ts",
+  "src/lib/a2a/streaming.ts",
+  "src/lib/a2a/routingLogger.ts",
+  "src/lib/a2a/resolveComboAttribution.ts",
+  "src/app/(dashboard)/dashboard/a2a",
+  "src/app/(dashboard)/dashboard/endpoint/components/A2ADashboard.tsx",
+  "src/app/(dashboard)/dashboard/audit/A2aAuditTab.tsx",
+  "bin/cli/commands/a2a.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -138,6 +154,15 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /\bCLOUD_AGENT_PROVIDERS\b|\bCloudAgentTask\b|\bfromCloudAgent\b/,
   /\bvalidate(Jules|DevinCloudAgent)Provider\b/,
   /\bregisterCloud\b/,
+  // A2A public protocol surface
+  /app\/a2a\/route|api\/a2a\/status/,
+  /\.well-known\/agent(-card)?\.json/,
+  /lib\/wellKnown\b/,
+  /conductor\/fleetSkills\b|\bgetFleetSkills\b/,
+  /a2a\/(skills\/|taskExecution|streaming|routingLogger|resolveComboAttribution)/,
+  /\bA2A_SKILL_HANDLERS\b|\bexecuteA2ATaskWithState\b/,
+  /\bA2ADashboard\b|\bA2aAuditTab\b/,
+  /\bregisterA2a\b|commands\/a2a\.mjs/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

@@ -20,38 +20,6 @@ OmniRoute ایجنٹس سے متعلق تین مختلف سطحیں فراہم �
 
 ## فیصلہ جاتی شجرہ
 
-## 1. A2A — ایجنٹ سے ایجنٹ
-
-**تخصیص:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute اینڈ پوائنٹ:** `POST /a2a` (JSON-RPC 2.0)
-**ایجنٹ کارڈ:** `GET /.well-known/agent.json`
-
-### کب استعمال کریں
-
-- ایسا کثیر ایجنٹ نظام بناتے وقت جس میں OmniRoute ہم مرتبہ ایجنٹس میں سے ایک ہو
-- Google ADK جیسے فریم ورکس یا عمومی ایجنٹ میشز میں موجود ایجنٹس کو OmniRoute کی روٹنگ ذہانت (smart-routing، quota-management وغیرہ) فراہم کرتے وقت
-- OmniRoute کو معیاری دریافت + استدعا سطح کے پیچھے لپیٹتے وقت
-
-### طریقے
-
-- `message/send` — پیغام جمع کرائیں اور ہم وقت جواب وصول کریں
-- `message/stream` — پیغام جمع کرائیں + SSE کے ذریعے اسٹریم کردہ پیش رفت کے واقعات وصول کریں
-- `tasks/get` — ID کے ذریعے کام پڑھیں
-- `tasks/cancel` — جاری کام منسوخ کریں
-
-### بلٹ اِن مہارتیں (6)
-
-- `smart-routing` — پرامپٹ کو بہترین مجموعے کے ذریعے روٹ کریں
-- `quota-management` — ہر فراہم کنندہ کے کوٹے کی حالت رپورٹ کریں
-- `provider-discovery` — نصب شدہ فراہم کنندگان کو ان کی صلاحیتوں سمیت فہرست کریں
-- `cost-analysis` — کسی درخواست/گفتگو کی لاگت کا تخمینہ لگائیں
-- `health-report` — ہر فراہم کنندہ کے لیے بریکر/کول ڈاؤن/لاک آؤٹ کی حالت یکجا کریں
-- `list-capabilities` — ایجنٹ کی دستیاب مہارتوں اور میٹا ڈیٹا کی فہرست بنائیں
-
-### تفصیلی جائزہ
-
-ترسیل کی تفصیلات، ایجنٹ کارڈ کی ساخت، کام کی TTL ترتیب، اور نئی مہارتیں شامل کرنے کے سانچے کے لیے [A2A-SERVER.md](./A2A-SERVER.md) دیکھیں۔
-
 ## 2. ACP — CLI ایجنٹس رجسٹری
 
 **OmniRoute اینڈ پوائنٹ:** `GET /api/acp/agents`
@@ -111,30 +79,6 @@ POST کے لیے باڈی کی ساخت (`src/app/api/acp/agents/route.ts` می�
 
 ## انضمام کی مثالیں
 
-### OmniRoute کی A2A صلاحیتیں دریافت کریں
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-تمام 6 مہارتوں، ٹرانسپورٹس اور ورژن کے ساتھ Agent Card واپس کرتا ہے۔
-
-### OmniRoute کو بطور A2A ایجنٹ کال کریں
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP کے ذریعے انسٹال شدہ CLI ایجنٹس کی فہرست حاصل کریں
 
 ```bash
@@ -188,7 +132,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## مزید دیکھیں
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A کا تفصیلی جائزہ
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — بیرونی CLI انضمامات (ACP استعمال کرتا ہے)
 - [SKILLS.md](./SKILLS.md) — مہارتوں کا فریم ورک (A2A مہارتوں سے مختلف — مقامی نفاذ کا سینڈ باکس)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — اینڈ پوائنٹ کا حوالہ

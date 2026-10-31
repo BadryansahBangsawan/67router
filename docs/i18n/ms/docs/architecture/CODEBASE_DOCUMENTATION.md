@@ -100,8 +100,6 @@ Segmen peringkat atas di bawah `src/app/`:
 | Laluan                                                                        | Tujuan                                              |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- |
 | `api/`                                                                        | Semua laluan API HTTP (lihat pecahan di bawah)      |
-| `a2a/`                                                                        | Titik akhir JSON-RPC 2.0 A2A (`POST /a2a`)          |
-| `.well-known/agent.json/`                                                     | Dokumen penemuan Kad Ejen A2A                       |
 | `(dashboard)/`                                                                | UI papan pemuka (kumpulan laluan, tiada awalan URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Aliran pengesahan                                   |
 | `landing/`                                                                    | Halaman pemasaran/pendaratan                        |
@@ -773,13 +771,6 @@ Lihat [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) dan bahagian khusus dalam
 4. Tambah ujian di bawah `open-sse/mcp-server/__tests__/`.
 5. Kemas kini [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Tambah kemahiran A2A baharu
-
-Lihat [A2A-SERVER.md § Menambah Kemahiran Baharu](../frameworks/A2A-SERVER.md). Kemahiran ditempatkan dalam
-`src/lib/a2a/skills/` dan didaftarkan melalui pengurus tugas A2A.
-
----
-
 ## 11. Konvensyen
 
 - **Gaya kod**: inden 2 ruang, petikan berganda, lebar 100 aksara, koma bernoktah,
@@ -847,7 +838,6 @@ Lihat [A2A-SERVER.md § Menambah Kemahiran Baharu](../frameworks/A2A-SERVER.md).
   dan penguncian.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — pemarkahan dan strategi Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — katalog penuh alat MCP + pengangkutan.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — kemahiran dan penemuan protokol A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — pemampatan RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — penyepaduan CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (jika tersedia), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — sasaran penggunaan.

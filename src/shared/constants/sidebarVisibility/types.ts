@@ -71,7 +71,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   // Monitoring > Audit
   "audit",
   "audit-mcp",
-  "audit-a2a",
   // Dev Tools
   "translator",
   "search-tools",
@@ -81,7 +80,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "agent-skills",
   "chaos-config",
   "mcp",
-  "a2a",
   "plugins",
   // Gamification
   "leaderboard",

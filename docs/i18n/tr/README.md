@@ -586,7 +586,7 @@ Radar isteğe bağlıdır ve yalnızca GET kullanır. OmniRoute istemcisi isteml
 - **🔑 Anahtar başına yönlendirme kontrolü** — bir API anahtarını `forcedModel` ile tek bir modele veya combo'ya sabitleyin; bir anahtarın modellerini ve combo'larını atomik olarak ekleyin veya kaldırın (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Daha ayrıntılı PII kontrolleri** — tür bazında seçim, 20'ye kadar doğrulanmış özel maskeleme deseni ve tür bazında algılama sayaçları; maskelemenin kendisi opt-in olarak kalır. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 dil** — dashboard, doküman yansıları ve CLI; `npm run i18n:add-locale` tek komutla her yere bir dil ekler. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ajan filonuza gelen A2A delegasyonu, Agent Card üzerinde Conductor yetenekleri ve Faro bas-konuş sesli sohbeti içeren bir dashboard paneli. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ajan filonuza gelen A2A delegasyonu, Agent Card üzerinde Conductor yetenekleri ve Faro bas-konuş sesli sohbeti içeren bir dashboard paneli.
 - **🛂 Uyarlanabilir kabul ve aşırı yük koruması** — ağır sohbet istekleri 503 dönmek yerine kuyruğa alınır; bağlantı başına atomik RPM kayan kiralar kullanılır. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonik `/v1/models` sıralaması** — her sağlayıcı için sağlayıcıya göre gruplanmış tek bitişik blok (combo'lar önce sabitlenir), her katalog kaynağında kararlı. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Sıkıştırma sağlamlaştırması** — varsayılan açık şişme koruması, DE / FR / JA + Çince (wényán) için Caveman paketleri, Gradle ve .NET için RTK filtreleri. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ OmniRoute'u **MCP**, **A2A**, bir **REST API**, **webhook'lar** veya bir **uzak 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor veya herhangi bir MCP istemcisine bağlayın</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Uzak MCP — <b>110 araç</b>, 33 kapsam (yaptırım isteğe bağlıdır), eksiksiz denetim izi</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Akış tabanlı MCP aktarımı</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Ajandan ajana, <b>JSON-RPC 2.0</b> + SSE, 6 beceri</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI uyumlu — sohbet, gömmeler, görseller, ses, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook'lar</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">İstek / kota olaylarını Slack, Discord, Telegram veya herhangi bir URL'ye gönderin</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Uzak CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Uzak bir örneği kapsamlı erişim belirteçleriyle yönetin</td></tr>
@@ -915,8 +914,6 @@ OmniRoute'u **MCP**, **A2A**, bir **REST API**, **webhook'lar** veya bir **uzak 
 # Claude Code'a MCP üzerinden eksiksiz OmniRoute araç setini verin:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP Sunucusu](docs/frameworks/MCP-SERVER.md) · [A2A Sunucusu](docs/frameworks/A2A-SERVER.md) · [Ajan Protokolleri](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1378,6 @@ aynı süreç tarafından sunulur, bu nedenle bugün için ayrı bir yalnızca C
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Sunucusu</a></b></td><td>110 MCP aracı, IDE yapılandırmaları, Python/TS/Go istemcileri</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP Sunucusu Kılavuzu</a></b></td><td>MCP kurulumu, aktarımlar ve araç referansı</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Sunucusu</a></b></td><td>JSON-RPC 2.0 protokolü, beceriler, akış, görev yönetimi</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A Sunucusu Kılavuzu</a></b></td><td>A2A aracı kartı, görevler, beceriler ve akış</td></tr>
 </table>
 
 ### 📋 Proje ve Kalite

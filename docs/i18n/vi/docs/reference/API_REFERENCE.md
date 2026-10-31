@@ -1858,48 +1858,10 @@ OmniRoute cung cấp một máy chủ Model Context Protocol được nhúng s�
 
 OmniRoute cung cấp một điểm cuối A2A (Agent-to-Agent) JSON-RPC 2.0 cùng với một lớp bọc REST phục vụ việc kiểm tra/sử dụng bảng điều khiển.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # tùy chọn trừ khi OMNIROUTE_API_KEY được thiết lập
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Các phương thức được hỗ trợ (tất cả đều phụ thuộc vào `settings.a2aEnabled`):
-
-| Phương thức      | Mô tả                                                          |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | Thực thi kỹ năng đồng bộ; trả về `{task, artifacts, metadata}` |
-| `message/stream` | Thực thi SSE dạng luồng cho cùng một tập hợp kỹ năng           |
-| `tasks/get`      | Truy xuất một tác vụ theo `taskId`                             |
-| `tasks/cancel`   | Hủy một tác vụ theo `taskId`                                   |
-
-Các kỹ năng tích hợp sẵn: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Thẻ tác nhân
-
-```bash
-GET /.well-known/agent.json
-```
-
-Trả về thẻ tác nhân A2A công khai (tên, mô tả, các khả năng, danh mục kỹ năng, cơ chế xác thực) — được lưu vào bộ nhớ đệm công khai trong 1 giờ. Không yêu cầu xác thực.
-
 ### Các trình trợ giúp REST
 
 | Phương thức | Đường dẫn                    | Mô tả                                                                                                               |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/a2a/status`            | Trạng thái bật A2A + số liệu thống kê tác vụ + bản tóm tắt thẻ tác nhân đã lưu vào bộ nhớ đệm                       |
 | GET         | `/api/a2a/tasks`             | Liệt kê tác vụ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST        | `/api/a2a/tasks`             | (Chưa được triển khai dưới dạng trình trợ giúp REST — tạo qua JSON-RPC `message/send`)                              |
 | GET         | `/api/a2a/tasks/[id]`        | Truy xuất một tác vụ                                                                                                |

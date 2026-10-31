@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ഓതന്റിക്കേഷൻ ആവശ്യമാണ്)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP ടൂളുകൾ (പട്ടികപ്പെടുത്തൽ, ലഭ്യമാക്കൽ, കവറേജ്)
-src/lib/a2a/skills/listCapabilities.ts        — A2A സ്കിൽ: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A സ്കിൽ `list-capabilities`, 45 സ്കില്ലുകളുള
 }
 ```
 
-പ്രോട്ടോക്കോൾ വിശദാംശങ്ങൾക്ക് [A2A-SERVER.md](./A2A-SERVER.md) കാണുക.
-
 ---
 
 ## കാറ്റലോഗ് — 45 സ്കിൽ ID-കൾ
@@ -189,7 +186,6 @@ A2A സ്കിൽ `list-capabilities`, 45 സ്കില്ലുകളുള
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ഫ്രെയിംവർക്ക് (LLM ടൂൾ ഇൻജക്ഷൻ + മാർക്കറ്റ്പ്ലേസ്)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ടൂൾ കാറ്റലോഗ് (`omniroute_agent_skills_*` ടൂളുകൾ)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A പ്രോട്ടോക്കോൾ (`list-capabilities` സ്കിൽ)
 - `src/lib/agentSkills/` — കാറ്റലോഗ്, ജനറേറ്റർ, പാർസറുകൾ
 - `skills/` — ജനറേറ്റ് ചെയ്ത SKILL.md ഫയലുകൾ (45 എൻട്രികൾ)

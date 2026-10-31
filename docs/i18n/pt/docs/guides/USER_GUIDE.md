@@ -1238,7 +1238,7 @@ Utilize o URL SSE `http://localhost:20128/api/mcp/sse` e uma chave de API Bearer
 
 ### Âmbitos
 
-Atualmente, o MCP define 32 âmbitos com nome. Cada chave Bearer pode ser limitada a âmbitos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de âmbitos e ferramentas e [A2A-SERVER.md](../frameworks/A2A-SERVER.md) para obter o esquema JSON-RPC.
+Atualmente, o MCP define 32 âmbitos com nome. Cada chave Bearer pode ser limitada a âmbitos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de âmbitos e ferramentas.
 
 ---
 
@@ -1248,7 +1248,6 @@ O OmniRoute disponibiliza uma **framework de skills** extensível (`src/lib/skil
 
 - **Interface do Marketplace** — Explore e instale skills em **Painel → Skills**
 - **Âmbitos por chave** — Restrinja as skills que cada chave de API pode invocar
-- **Skills personalizadas** — Coloque um ficheiro TypeScript em `src/lib/a2a/skills/`, registe-o e este poderá ser imediatamente invocado através de A2A
 
 Referência completa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1332,6 @@ omniroute restore [<timestamp>]    # Restaurar a partir de um instantâneo
 omniroute health                   # Estado de funcionamento detalhado (disjuntores, cache, memória)
 omniroute quota                    # Utilização da quota dos fornecedores
 omniroute mcp status               # Estado do servidor MCP
-omniroute a2a status               # Estado do servidor A2A
 omniroute tunnel list|create|stop  # Túneis Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Repor a palavra-passe de administrador
 omniroute --mcp                    # Iniciar o servidor MCP através de stdio

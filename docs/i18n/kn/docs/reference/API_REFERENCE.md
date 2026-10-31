@@ -1846,48 +1846,10 @@ OmniRoute 3 ಸಾರಿಗೆ ವಿಧಾನಗಳು (stdio, SSE, streamable-
 
 OmniRoute, ಪರಿಶೀಲನೆ/ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಬಳಕೆಗಾಗಿ REST ರ್ಯಾಪರ್ ಜೊತೆಗೆ A2A (ಏಜೆಂಟ್-ಟು-ಏಜೆಂಟ್) JSON-RPC 2.0 ಎಂಡ್ಪಾಯಿಂಟ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY ಹೊಂದಿಸದಿದ್ದರೆ ಐಚ್ಛಿಕ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ಬೆಂಬಲಿತ ವಿಧಾನಗಳು (ಎಲ್ಲವೂ `settings.a2aEnabled` ಮೂಲಕ ನಿಯಂತ್ರಿತವಾಗಿವೆ):
-
-| ವಿಧಾನ            | ವಿವರಣೆ                                                                                    |
-| ---------------- | ----------------------------------------------------------------------------------------- |
-| `message/send`   | ಸಿಂಕ್ರೊನಸ್ ಕೌಶಲ್ಯ ಕಾರ್ಯಗತಗೊಳಿಸುವಿಕೆ; `{task, artifacts, metadata}` ಅನ್ನು ಹಿಂತಿರುಗಿಸುತ್ತದೆ |
-| `message/stream` | ಅದೇ ಕೌಶಲ್ಯ ಸಮೂಹದ ಸ್ಟ್ರೀಮಿಂಗ್ SSE ಕಾರ್ಯಗತಗೊಳಿಸುವಿಕೆ                                        |
-| `tasks/get`      | `taskId` ಮೂಲಕ ಕಾರ್ಯವನ್ನು ಪಡೆಯುತ್ತದೆ                                                       |
-| `tasks/cancel`   | `taskId` ಮೂಲಕ ಕಾರ್ಯವನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ                                                 |
-
-ಅಂತರ್ನಿರ್ಮಿತ ಕೌಶಲ್ಯಗಳು: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### ಏಜೆಂಟ್ ಕಾರ್ಡ್
-
-```bash
-GET /.well-known/agent.json
-```
-
-ಸಾರ್ವಜನಿಕ A2A ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಅನ್ನು (ಹೆಸರು, ವಿವರಣೆ, ಸಾಮರ್ಥ್ಯಗಳು, ಕೌಶಲ್ಯ ಕ್ಯಾಟಲಾಗ್, ದೃಢೀಕರಣ ಸ್ಕೀಮ್) ಹಿಂತಿರುಗಿಸುತ್ತದೆ — ಸಾರ್ವಜನಿಕವಾಗಿ 1 ಗಂಟೆಯವರೆಗೆ ಕ್ಯಾಶ್ ಮಾಡಲಾಗುತ್ತದೆ. ದೃಢೀಕರಣ ಅಗತ್ಯವಿಲ್ಲ.
-
 ### REST ಸಹಾಯಕಗಳು
 
 | ವಿಧಾನ | ಪಥ                           | ವಿವರಣೆ                                                                                                             |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET   | `/api/a2a/status`            | A2A ಸಕ್ರಿಯ ಸ್ಥಿತಿ + ಕಾರ್ಯದ ಅಂಕಿಅಂಶಗಳು + ಕ್ಯಾಶ್ ಮಾಡಿದ ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಸಾರಾಂಶ                                          |
 | GET   | `/api/a2a/tasks`             | ಕಾರ್ಯಗಳ ಪಟ್ಟಿ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST ಸಹಾಯಕವಾಗಿ ಅಳವಡಿಸಲಾಗಿಲ್ಲ — JSON-RPC `message/send` ಮೂಲಕ ರಚಿಸಿ)                                                |
 | GET   | `/api/a2a/tasks/[id]`        | ಒಂದು ಕಾರ್ಯವನ್ನು ಹಿಂಪಡೆಯುತ್ತದೆ                                                                                      |

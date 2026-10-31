@@ -258,12 +258,6 @@ Za nastavitev prenosa in dodelitve obsegov glejte [MCP-SERVER.md](./MCP-SERVER.m
 
 ---
 
-## Integracija A2A
-
-`src/lib/skills/a2a.ts` izvaža deskriptor veščine A2A `memory_aware_routing` in pomožno funkcijo `registerA2ASkill(registry)`. Veščine A2A po meri so v `src/lib/a2a/skills/`, zahteve zanje pa se usmerjajo prek `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Za celoten življenjski cikel opravila glejte [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Dodajanje nove vgrajene veščine
 
 1. **Določite obravnavalnik** v `src/lib/skills/builtins.ts` (ali v sorodni datoteki pod `src/lib/skills/builtin/`). Podpis: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -480,7 +474,6 @@ Navodila za dodajanje spretnosti po meri prek sistema vtičnikov najdete v dokum
 ## Glejte tudi
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — registracija orodij MCP in transporti
-- [A2A-SERVER.md](./A2A-SERVER.md) — življenjski cikel opravil A2A in usmerjanje veščin
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — uvod za uporabnike
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — cevovod zahtev in zemljevid komponent
 - Izvorna koda: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

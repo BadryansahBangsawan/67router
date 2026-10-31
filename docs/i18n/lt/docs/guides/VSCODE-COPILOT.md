@@ -91,7 +91,7 @@ niekas nesikeičia.
 Simple Browser, o ne išorinėje naršyklėje. Įterpimas yra **pasirenkamas serverio pusėje** naudojant
 `DASHBOARD_ALLOW_EMBED=vscode`, todėl HTML puslapiai pateikiami su
 `frame-ancestors 'self' vscode-webview:`, o ne su numatytaisiais `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API sąsajos (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) abiem atvejais
+`X-Frame-Options: DENY`. API sąsajos (`/api`, `/v1`, `/v1beta`, `/healthz`) abiem atvejais
 išlaiko griežtas antraštes.
 
 > ⚠️ **Tai yra kompiliavimo, o ne vykdymo laiko vėliavėlė.** Next.js sukompiliuoja `headers()` į maršrutų

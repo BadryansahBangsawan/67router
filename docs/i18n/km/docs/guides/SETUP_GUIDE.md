@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **ឯកសារ MCP ពេញលេញ៖** [README របស់ម៉ាស៊ីនមេ MCP](../../open-sse/mcp-server/README.md) — ឧបករណ៍ 110, ការកំណត់ IDE, ម៉ាស៊ីនភ្ញៀវ Python/TS/Go។
 
-### ការរៀបចំ A2A (Agent-to-Agent Protocol)
-
-ផ្ទៀងផ្ទាត់ Agent Card៖
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ផ្ញើភារកិច្ចមួយ៖
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**ឯកសារ A2A ពេញលេញ៖** [README របស់ម៉ាស៊ីនមេ A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ជំនាញ, ការស្ទ្រីម, វដ្តជីវិតភារកិច្ច។
-
----
-
 ## ការកំណត់រចនាសម្ព័ន្ធ Timeout
 
 ### Timeout មូលដ្ឋាន

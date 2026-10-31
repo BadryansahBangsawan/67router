@@ -742,7 +742,6 @@ omniroute cache                        # État du cache
 omniroute cache clear                  # Vider les caches sémantique et de signatures
 
 omniroute mcp status | restart         # État / redémarrage du serveur MCP
-omniroute a2a status | card            # État du serveur A2A / fiche de l’agent
 
 omniroute tunnel list | create | stop  # Gérer les tunnels (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Examiner / définir les variables d’environnement (temporaire)

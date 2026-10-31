@@ -20,38 +20,6 @@ Les trois sont indépendantes — vous pouvez en choisir n’importe quelle comb
 
 ## Arbre de décision
 
-## 1. A2A — Agent à agent
-
-**Spécification :** [A2A v0.3](https://a2a-protocol.org)
-**Point de terminaison OmniRoute :** `POST /a2a` (JSON-RPC 2.0)
-**Fiche de l’agent :** `GET /.well-known/agent.json`
-
-### Quand l’utiliser
-
-- Créer un système multi-agent dans lequel OmniRoute est l’un des pairs
-- Exposer l’intelligence de routage d’OmniRoute (`smart-routing`, `quota-management`, etc.) aux agents de frameworks tels que Google ADK ou de réseaux d’agents génériques
-- Encapsuler OmniRoute derrière une interface standard de découverte et d’invocation
-
-### Méthodes
-
-- `message/send` — soumettre un message et recevoir une réponse synchrone
-- `message/stream` — soumettre un message et recevoir des événements de progression diffusés via SSE
-- `tasks/get` — lire une tâche à partir de son ID
-- `tasks/cancel` — annuler une tâche en cours d’exécution
-
-### Compétences intégrées (6)
-
-- `smart-routing` — acheminer une requête via la combinaison optimale
-- `quota-management` — indiquer l’état des quotas pour chaque fournisseur
-- `provider-discovery` — répertorier les fournisseurs installés avec leurs capacités
-- `cost-analysis` — estimer le coût d’une requête ou d’une conversation
-- `health-report` — agréger l’état du disjoncteur, du délai de récupération et du verrouillage pour chaque fournisseur
-- `list-capabilities` — énumérer les compétences disponibles de l’agent et leurs métadonnées
-
-### Présentation détaillée
-
-Consultez [A2A-SERVER.md](./A2A-SERVER.md) pour obtenir des détails sur le transport, la structure de la fiche de l’agent, la configuration de la durée de vie des tâches et le modèle permettant d’ajouter de nouvelles compétences.
-
 ## 2. ACP — Registre des agents CLI
 
 **Point de terminaison OmniRoute :** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Structure du corps pour POST (`customAgentBodySchema` dans `src/app/api/acp/agen
 
 ## Exemples d’intégration
 
-### Découvrir les fonctionnalités A2A d’OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Renvoie l’Agent Card avec les 6 compétences, les transports et la version.
-
-### Appeler OmniRoute en tant qu’agent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Répertorier les agents CLI installés via ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Voir aussi
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Analyse approfondie d’A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Intégrations CLI externes (utilise ACP)
 - [SKILLS.md](./SKILLS.md) — Framework de compétences (différent des compétences A2A — bac à sable d’exécution locale)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — Référence des points de terminaison

@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **ሙሉ የMCP ሰነድ፦** [የMCP አገልጋይ README](../../open-sse/mcp-server/README.md) — 110 መሣሪያዎች፣ የIDE ውቅሮች፣ Python/TS/Go ደንበኞች።
 
-### A2A ማዋቀር (ከወኪል-ወደ-ወኪል ፕሮቶኮል)
-
-Agent Cardን ያረጋግጡ፦
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ተግባር ይላኩ፦
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**ሙሉ የA2A ሰነድ፦** [የA2A አገልጋይ README](../../src/lib/a2a/README.md) — JSON-RPC 2.0፣ ክህሎቶች፣ streaming፣ የተግባር የሕይወት ዑደት።
-
----
-
 ## የጊዜ ገደብ ውቅር
 
 ### መሠረታዊ የጊዜ ገደቦች

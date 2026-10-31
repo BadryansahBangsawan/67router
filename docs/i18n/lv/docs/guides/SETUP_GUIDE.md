@@ -248,26 +248,6 @@ Pievienojiet saviem MCP iestatījumiem:
 
 **Pilna MCP dokumentācija:** [MCP servera README](../../open-sse/mcp-server/README.md) — 110 rīki, IDE konfigurācijas, Python/TS/Go klienti.
 
-### A2A iestatīšana (Aģentu savstarpējās saziņas protokols)
-
-Pārbaudiet aģenta karti:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Nosūtiet uzdevumu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Pilna A2A dokumentācija:** [A2A servera README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, prasmes, straumēšana, uzdevuma dzīves cikls.
-
----
-
 ## Taimauta konfigurācija
 
 ### Pamata taimauti

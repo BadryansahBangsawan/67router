@@ -1881,48 +1881,10 @@ OmniRoute ietver iegultu Model Context Protocol serveri ar 3 transportiem (stdio
 
 OmniRoute nodrošina A2A (aģents–aģents) JSON-RPC 2.0 galapunktu, kā arī REST ietvaru pārbaudes un informācijas paneļa vajadzībām.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neobligāts, ja vien nav iestatīts OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Atbalstītās metodes (visas ir atkarīgas no `settings.a2aEnabled`):
-
-| Metode           | Apraksts                                                        |
-| ---------------- | --------------------------------------------------------------- |
-| `message/send`   | Sinhrona prasmes izpilde; atgriež `{task, artifacts, metadata}` |
-| `message/stream` | Tās pašas prasmju kopas straumēta SSE izpilde                   |
-| `tasks/get`      | Iegūst uzdevumu pēc `taskId`                                    |
-| `tasks/cancel`   | Atceļ uzdevumu pēc `taskId`                                     |
-
-Iebūvētās prasmes: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Aģenta karte
-
-```bash
-GET /.well-known/agent.json
-```
-
-Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju katalogu, autentifikācijas shēmu) — publiski kešota 1 stundu. Autentifikācija nav nepieciešama.
-
 ### REST palīgfunkcijas
 
 | Metode | Ceļš                         | Apraksts                                                                                                               |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A iespējots statuss + uzdevumu statistika + kešotās aģenta kartes kopsavilkums                                       |
 | GET    | `/api/a2a/tasks`             | Uzdevumu saraksts — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nav ieviests kā REST palīgfunkcija — izveidojiet, izmantojot JSON-RPC `message/send`)                                 |
 | GET    | `/api/a2a/tasks/[id]`        | Iegūst vienu uzdevumu                                                                                                  |

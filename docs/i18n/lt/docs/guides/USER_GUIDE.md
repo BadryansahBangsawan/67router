@@ -1221,8 +1221,6 @@ Naudokite SSE URL `http://localhost:20128/api/mcp/sse` ir „Bearer“ API rakt�
 
 ### Aprėptys
 
-Šiuo metu MCP apibrėžia 32 įvardytas aprėptis. Kiekvieną „Bearer“ raktą galima apriboti konkrečiomis aprėptimis — autoritetingą aprėpčių ir įrankių sąrašą rasite dokumente [MCP-SERVER.md](../frameworks/MCP-SERVER.md), o JSON-RPC schemą — dokumente [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Įgūdžių sistema
@@ -1231,7 +1229,6 @@ Naudokite SSE URL `http://localhost:20128/api/mcp/sse` ir „Bearer“ API rakt�
 
 - **Prekyvietės sąsaja** — Naršykite ir diekite įgūdžius skiltyje **Valdymo skydas → Įgūdžiai**
 - **Atskirų raktų aprėptys** — Apribokite, kurie API raktai gali iškviesti konkrečius įgūdžius
-- **Pasirinktiniai įgūdžiai** — Įkelkite TypeScript failą į `src/lib/a2a/skills/`, užregistruokite jį ir jį iš karto bus galima iškviesti per A2A
 
 Išsami dokumentacija: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1316,7 +1313,6 @@ omniroute restore [<timestamp>]    # Atkurti iš momentinės kopijos
 omniroute health                   # Išsami būklė (grandinės pertraukikliai, podėlis, atmintis)
 omniroute quota                    # Teikėjų kvotų naudojimas
 omniroute mcp status               # MCP serverio būsena
-omniroute a2a status               # A2A serverio būsena
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneliai
 omniroute reset-password           # Iš naujo nustatyti administratoriaus slaptažodį
 omniroute --mcp                    # Paleisti MCP serverį per stdio

@@ -253,7 +253,6 @@ Pročitajte najbliži `AGENTS.md` i povezanu detaljnu dokumentaciju prije nego �
 | Usmjeravanje i otpornost           | `open-sse/services/`                                    | [`open-sse/services/AGENTS.md`](open-sse/services/AGENTS.md), [`docs/routing/AUTO-COMBO.md`](docs/routing/AUTO-COMBO.md)                         |
 | Baza podataka i migracije          | `src/lib/db/`, `src/lib/db/migrations/`                 | [`src/lib/db/AGENTS.md`](src/lib/db/AGENTS.md)                                                                                                   |
 | Politika domene                    | `src/domain/`                                           | [`docs/architecture/ARCHITECTURE.md`](docs/architecture/ARCHITECTURE.md)                                                                         |
-| MCP i A2A                          | `open-sse/mcp-server/`, `src/lib/a2a/`                  | [`docs/frameworks/MCP-SERVER.md`](docs/frameworks/MCP-SERVER.md), [`docs/frameworks/A2A-SERVER.md`](docs/frameworks/A2A-SERVER.md)               |
 | Funkcionalnosti agenata            | `src/lib/{acp,memory,skills,cloudAgent}/`               | [`docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md), [`docs/frameworks/SKILLS.md`](docs/frameworks/SKILLS.md) |
 | Sigurnost i upravljanje            | `src/lib/{guardrails,compliance}/`, `src/server/authz/` | [`docs/security/GUARDRAILS.md`](docs/security/GUARDRAILS.md), [`docs/architecture/AUTHZ_GUIDE.md`](docs/architecture/AUTHZ_GUIDE.md)             |
 | Operacije                          | `src/mitm/`, moduli tunela, `electron/`                 | [`docs/ops/TUNNELS_GUIDE.md`](docs/ops/TUNNELS_GUIDE.md), [`docs/guides/ELECTRON_GUIDE.md`](docs/guides/ELECTRON_GUIDE.md)                       |
@@ -381,12 +380,8 @@ Dokumentacija mora opisivati provjereno ponašanje, a ne vjerovatno ponašanje.
 
 ### Dodavanje nove A2A vještine
 
-1. Kreirajte vještinu u `src/lib/a2a/skills/` (već postoji 6: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities)
 2. Vještina prima kontekst zadatka (poruke, metapodatke) → vraća strukturirani rezultat
-3. Registrujte je u `A2A_SKILL_HANDLERS` u `src/lib/a2a/taskExecution.ts`
-4. Izložite je u `src/app/.well-known/agent.json/route.ts` (kartica agenta)
-5. Napišite testove u `tests/unit/`
-6. Dokumentujte je u tabeli vještina u `docs/frameworks/A2A-SERVER.md`
+3. Napišite testove u `tests/unit/`
 
 ### Dodavanje novog agenta u oblaku
 
@@ -440,7 +435,6 @@ Za svaku netrivijalnu izmjenu prvo pročitajte odgovarajući detaljni dokument:
 | Prikrivenost (TLS / otisak)                                         | `docs/security/STEALTH_GUIDE.md`                        |
 | Protokoli agenata (A2A / ACP / Cloud)                               | `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`              |
 | MCP server                                                          | `docs/frameworks/MCP-SERVER.md`                         |
-| A2A server                                                          | `docs/frameworks/A2A-SERVER.md`                         |
 | API referenca + OpenAPI                                             | `docs/reference/API_REFERENCE.md` + `docs/openapi.yaml` |
 | Katalog pružalaca usluga (automatski generiran)                     | `docs/reference/PROVIDER_REFERENCE.md`                  |
 | Tuneli                                                              | `docs/ops/TUNNELS_GUIDE.md`                             |

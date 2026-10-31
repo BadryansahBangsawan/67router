@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **完整的 MCP 文档：** [MCP 服务器 README](../../open-sse/mcp-server/README.md) — 110 个工具、IDE 配置以及 Python/TS/Go 客户端。
 
-### A2A 设置（智能体间协议）
-
-验证 Agent Card：
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-发送任务：
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**完整的 A2A 文档：** [A2A 服务器 README](../../src/lib/a2a/README.md) — JSON-RPC 2.0、技能、流式传输和任务生命周期。
-
----
-
 ## 超时配置
 
 ### 基本超时设置

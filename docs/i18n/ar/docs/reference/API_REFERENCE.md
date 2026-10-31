@@ -1880,48 +1880,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 يوفّر OmniRoute نقطة نهاية A2A (من وكيل إلى وكيل) تستخدم JSON-RPC 2.0، بالإضافة إلى غلاف REST لأغراض الفحص ولوحة المعلومات.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختياري ما لم يكن OMNIROUTE_API_KEY معيّنًا
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-الأساليب المدعومة (جميعها خاضعة لإعداد `settings.a2aEnabled`):
-
-| الأسلوب          | الوصف                                                     |
-| ---------------- | --------------------------------------------------------- |
-| `message/send`   | تنفيذ متزامن للمهارة؛ يُرجع `{task, artifacts, metadata}` |
-| `message/stream` | تنفيذ متدفق عبر SSE لمجموعة المهارات نفسها                |
-| `tasks/get`      | جلب مهمة بواسطة `taskId`                                  |
-| `tasks/cancel`   | إلغاء مهمة بواسطة `taskId`                                |
-
-المهارات المدمجة: `smart-routing`، و`quota-management`، و`provider-discovery`، و`cost-analysis`، و`health-report`.
-
-### بطاقة الوكيل
-
-```bash
-GET /.well-known/agent.json
-```
-
-يُرجع بطاقة وكيل A2A العامة (الاسم، والوصف، والإمكانات، ودليل المهارات، ونظام المصادقة) — وتُخزّن مؤقتًا بشكل عام لمدة ساعة واحدة. لا تتطلب مصادقة.
-
 ### أدوات REST المساعدة
 
 | الأسلوب | المسار                       | الوصف                                                                                                              |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | حالة تفعيل A2A + إحصاءات المهام + ملخص بطاقة الوكيل المخزّن مؤقتًا                                                 |
 | GET     | `/api/a2a/tasks`             | سرد المهام — `?state=submitted\|working\|completed\|failed\|cancelled`، و`?skill=`، و`?limit=` (≤200)، و`?offset=` |
 | POST    | `/api/a2a/tasks`             | (غير منفّذ كأداة REST مساعدة — أنشئ المهمة عبر JSON-RPC باستخدام `message/send`)                                   |
 | GET     | `/api/a2a/tasks/[id]`        | استرداد مهمة واحدة                                                                                                 |

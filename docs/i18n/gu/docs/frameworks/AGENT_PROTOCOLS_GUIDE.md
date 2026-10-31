@@ -20,38 +20,6 @@ OmniRoute એજન્ટ-સંબંધિત ત્રણ અલગ ઇન્
 
 ## નિર્ણય વૃક્ષ
 
-## 1. A2A — એજન્ટ-થી-એજન્ટ
-
-**સ્પેક:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute એન્ડપૉઇન્ટ:** `POST /a2a` (JSON-RPC 2.0)
-**એજન્ટ કાર્ડ:** `GET /.well-known/agent.json`
-
-### ક્યારે ઉપયોગ કરવો
-
-- એવી મલ્ટિ-એજન્ટ સિસ્ટમ બનાવતી વખતે જેમાં OmniRoute પીઅર્સ પૈકીનું એક હોય
-- Google ADK જેવા ફ્રેમવર્ક્સ અથવા સામાન્ય એજન્ટ મેશમાં રહેલા એજન્ટ્સ માટે OmniRouteની રૂટિંગ ઇન્ટેલિજન્સ (સ્માર્ટ રૂટિંગ, ક્વોટા મેનેજમેન્ટ વગેરે) ઉપલબ્ધ કરાવતી વખતે
-- OmniRouteને માનક ડિસ્કવરી + ઇન્વોકેશન ઇન્ટરફેસ પાછળ રૅપ કરતી વખતે
-
-### મેથડ્સ
-
-- `message/send` — સંદેશ સબમિટ કરો અને સિંક્રનસ પ્રતિસાદ મેળવો
-- `message/stream` — સંદેશ સબમિટ કરો + SSE-સ્ટ્રીમ કરેલી પ્રગતિ ઇવેન્ટ્સ મેળવો
-- `tasks/get` — ID દ્વારા કાર્ય વાંચો
-- `tasks/cancel` — ચાલી રહેલું કાર્ય રદ કરો
-
-### બિલ્ટ-ઇન સ્કિલ્સ (6)
-
-- `smart-routing` — પ્રોમ્પ્ટને શ્રેષ્ઠ કૉમ્બો મારફતે રૂટ કરો
-- `quota-management` — દરેક પ્રદાતા માટે ક્વોટાની સ્થિતિનો રિપોર્ટ આપો
-- `provider-discovery` — ઇન્સ્ટૉલ થયેલા પ્રદાતાઓની તેમની ક્ષમતાઓ સહિત સૂચિ બનાવો
-- `cost-analysis` — વિનંતી/વાતચીતના ખર્ચનો અંદાજ કાઢો
-- `health-report` — દરેક પ્રદાતા માટે બ્રેકર/કૂલડાઉન/લૉકઆઉટ સ્થિતિ એકત્રિત કરો
-- `list-capabilities` — એજન્ટની ઉપલબ્ધ સ્કિલ્સ અને મેટાડેટાની ગણના કરો
-
-### વિગતવાર માહિતી
-
-ટ્રાન્સપોર્ટની વિગતો, એજન્ટ કાર્ડની સંરચના, કાર્ય TTL કૉન્ફિગ અને નવી સ્કિલ્સ ઉમેરવા માટેના ટેમ્પ્લેટ માટે [A2A-SERVER.md](./A2A-SERVER.md) જુઓ.
-
 ## 2. ACP — CLI એજન્ટ્સ રજિસ્ટ્રી
 
 **OmniRoute એન્ડપોઇન્ટ:** `GET /api/acp/agents`
@@ -111,30 +79,6 @@ POST માટેનું બૉડી સ્વરૂપ (`src/app/api/acp/age
 
 ## એકીકરણનાં ઉદાહરણો
 
-### OmniRouteની A2A ક્ષમતાઓ શોધો
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-તમામ 6 સ્કિલ્સ, ટ્રાન્સપોર્ટ્સ અને વર્ઝન સાથે Agent Card પરત કરે છે.
-
-### OmniRouteને A2A એજન્ટ તરીકે કૉલ કરો
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP દ્વારા ઇન્સ્ટોલ કરેલા CLI એજન્ટ્સની સૂચિ મેળવો
 
 ```bash
@@ -188,7 +132,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## આ પણ જુઓ
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2Aનું ઊંડાણપૂર્વકનું વર્ણન
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — બાહ્ય CLI એકીકરણો (ACPનો ઉપયોગ કરે છે)
 - [SKILLS.md](./SKILLS.md) — કૌશલ્ય ફ્રેમવર્ક (A2A કૌશલ્યોથી અલગ — સ્થાનિક એક્ઝિક્યુશન સેન્ડબોક્સ)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — એન્ડપોઇન્ટ સંદર્ભ

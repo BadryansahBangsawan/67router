@@ -1236,8 +1236,6 @@ SSE URL `http://localhost:20128/api/mcp/sse`과 **Dashboard → API Keys**에서
 
 ### 범위
 
-MCP는 현재 이름이 지정된 32개의 범위를 정의합니다. 각 Bearer 키를 특정 범위로 제한할 수 있습니다. 공식 범위 및 도구 목록은 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)를, JSON-RPC 스키마는 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)를 참조하세요.
-
 ---
 
 ## 🧠 스킬 시스템
@@ -1246,7 +1244,6 @@ OmniRoute는 에이전트와 A2A 엔드포인트가 도메인별 루틴(예: `co
 
 - **마켓플레이스 UI** — **대시보드 → 스킬**에서 스킬 탐색 및 설치
 - **키별 범위** — 각 API 키가 호출할 수 있는 스킬 제한
-- **사용자 정의 스킬** — TypeScript 파일을 `src/lib/a2a/skills/`에 추가하고 등록하면 A2A를 통해 즉시 호출 가능
 
 전체 레퍼런스: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1331,7 +1328,6 @@ omniroute restore [<timestamp>]    # 스냅샷에서 복원
 omniroute health                   # 상세 상태(차단기, 캐시, 메모리)
 omniroute quota                    # 공급자 할당량 사용량
 omniroute mcp status               # MCP 서버 상태
-omniroute a2a status               # A2A 서버 상태
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 터널
 omniroute reset-password           # 관리자 비밀번호 재설정
 omniroute --mcp                    # stdio를 통해 MCP 서버 시작

@@ -100,8 +100,6 @@ App Router هم رابط کاربری داشبورد و هم API عمومی/مد
 | مسیر                                                                          | هدف                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- |
 | `api/`                                                                        | همه مسیرهای API مبتنی بر HTTP (تفکیک زیر را ببینید) |
-| `a2a/`                                                                        | نقطه پایانی A2A مبتنی بر JSON-RPC 2.0 (`POST /a2a`) |
-| `.well-known/agent.json/`                                                     | سند کشف Agent Card مربوط به A2A                     |
 | `(dashboard)/`                                                                | رابط کاربری داشبورد (گروه مسیر، بدون پیشوند URL)    |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | جریانهای احراز هویت                                 |
 | `landing/`                                                                    | صفحه بازاریابی/فرود                                 |
@@ -773,13 +771,6 @@ bin/
 4. تستها را در `open-sse/mcp-server/__tests__/` اضافه کنید.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) را بهروزرسانی کنید.
 
-### افزودن یک مهارت A2A جدید
-
-به [A2A-SERVER.md § افزودن یک مهارت جدید](../frameworks/A2A-SERVER.md) مراجعه کنید. مهارتها در
-`src/lib/a2a/skills/` قرار دارند و از طریق مدیر وظایف A2A ثبت میشوند.
-
----
-
 ## 11. قراردادها
 
 - **سبک کد**: تورفتگی ۲ فاصلهای، نقلقول دوتایی، عرض ۱۰۰ نویسه، نقطهویرگول،
@@ -847,7 +838,6 @@ bin/
   lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — امتیازدهی و راهبردهای Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — فهرست کامل ابزارهای MCP و روشهای انتقال.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — مهارتها و سازوکار کشف پروتکل A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — فشردهسازی RTK و Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — یکپارچهسازیهای CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (در صورت وجود)، [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)، [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)، [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)، [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)، [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — اهداف استقرار.

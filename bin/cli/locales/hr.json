@@ -390,34 +390,6 @@
       "description": "MCP zapisnik revizije (alias za audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Prikaz dostupnih A2A vještina iz kartice agenta"
-    },
-    "invoke": {
-      "description": "Pozovi A2A vještinu i vrati ID zadatka",
-      "input": "Ulazni JSON objekt",
-      "input_file": "Putanja do ulazne JSON datoteke",
-      "wait": "Čekaj dovršetak zadatka prije vraćanja rezultata",
-      "timeout": "Vremensko ograničenje za čekanje dovršetka u ms (zadano: 60000)"
-    },
-    "tasks": {
-      "description": "Upravljanje A2A zadacima",
-      "list": {
-        "status": "Filtriraj po statusu",
-        "skill": "Filtriraj po ID-u vještine"
-      },
-      "watch": {
-        "description": "Provjeravaj status zadatka do dovršetka"
-      },
-      "stream": {
-        "description": "Streaming događaja izvršavanja zadatka putem SSE"
-      },
-      "logs": {
-        "description": "Prikaz poruka i artefakata zadatka"
-      }
-    }
-  },
   "policy": {
     "description": "Upravljanje OmniRoute politikama autorizacije",
     "list": {

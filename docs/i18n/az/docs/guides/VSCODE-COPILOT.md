@@ -88,7 +88,7 @@ idarəetmə panelinin parametrlərində `blockedProviders` siyahısına əlavə 
 
 `omnicopilot.dashboardOpen: "editor"` OmniRoute idarə panelini xarici brauzer əvəzinə Simple Browser vasitəsilə redaktor vərəqində göstərir. Daxiletmə **serverdə könüllü aktivləşdirilir**:
 `DASHBOARD_ALLOW_EMBED=vscode`. Bu parametr HTML səhifələrini standart `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` əvəzinə `frame-ancestors 'self' vscode-webview:` ilə təqdim edir. API səthi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) hər iki halda sərt başlıqları saxlayır.
+`X-Frame-Options: DENY` əvəzinə `frame-ancestors 'self' vscode-webview:` ilə təqdim edir. API səthi (`/api`, `/v1`, `/v1beta`, `/healthz`) hər iki halda sərt başlıqları saxlayır.
 
 > ⚠️ **Bu, icra vaxtı deyil, yığma vaxtı parametridir.** Next.js `headers()` funksiyasını marşrut manifestinə kompilyasiya edir, buna görə də `next.config.mjs` dəyişəni paket yığılarkən oxuyur
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

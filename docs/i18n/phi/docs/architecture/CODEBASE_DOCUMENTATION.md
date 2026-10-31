@@ -100,8 +100,6 @@ Mga top-level segment sa ilalim ng `src/app/`:
 | Path                                                                          | Layunin                                                |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
 | `api/`                                                                        | Lahat ng HTTP API route (tingnan ang detalye sa ibaba) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 endpoint (`POST /a2a`)                |
-| `.well-known/agent.json/`                                                     | Dokumento sa pagtuklas ng A2A Agent Card               |
 | `(dashboard)/`                                                                | Dashboard UI (route group, walang URL prefix)          |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Mga daloy ng auth                                      |
 | `landing/`                                                                    | Marketing/landing page                                 |
@@ -771,13 +769,6 @@ Tingnan ang [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) at ang nakalaang seksyo
 4. Magdagdag ng mga test sa ilalim ng `open-sse/mcp-server/__tests__/`.
 5. I-update ang [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Magdagdag ng bagong A2A skill
-
-Tingnan ang [A2A-SERVER.md § Pagdaragdag ng Bagong Skill](../frameworks/A2A-SERVER.md). Matatagpuan ang mga skill sa
-`src/lib/a2a/skills/` at inirerehistro ang mga ito sa pamamagitan ng A2A task manager.
-
----
-
 ## 11. Mga Kumbensiyon
 
 - **Estilo ng code**: 2-space na indent, mga double quote, lapad na 100 character, mga semicolon,
@@ -845,7 +836,6 @@ Tingnan ang [A2A-SERVER.md § Pagdaragdag ng Bagong Skill](../frameworks/A2A-SER
   at lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — pagmamarka at mga estratehiya ng Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — kumpletong katalogo ng mga MCP tool at mga transport.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — mga kasanayan at discovery ng A2A protocol.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman compression.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — mga integrasyon ng CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (kung mayroon), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — mga target ng deployment.

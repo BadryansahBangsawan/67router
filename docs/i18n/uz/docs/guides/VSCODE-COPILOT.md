@@ -87,7 +87,7 @@ boshqaruv paneli sozlamalaridagi `blockedProviders` roʻyxatiga qoʻshing; kenga
 
 ## VS Code ichidagi ichki oynada boshqaruv paneli
 
-`omnicopilot.dashboardOpen: "editor"` sozlamasi OmniRoute boshqaruv panelini tashqi brauzer o‘rniga Simple Browser orqali muharrir ichki oynasida ko‘rsatadi. Ichki joylashtirish serverda **ixtiyoriy ravishda yoqiladi**: `DASHBOARD_ALLOW_EMBED=vscode` orqali HTML sahifalar standart `frame-ancestors 'none'` + `X-Frame-Options: DENY` o‘rniga `frame-ancestors 'self' vscode-webview:` bilan taqdim etiladi. API yuzasi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) har qanday holatda ham qat’iy sarlavhalarni saqlab qoladi.
+`omnicopilot.dashboardOpen: "editor"` sozlamasi OmniRoute boshqaruv panelini tashqi brauzer o‘rniga Simple Browser orqali muharrir ichki oynasida ko‘rsatadi. Ichki joylashtirish serverda **ixtiyoriy ravishda yoqiladi**: `DASHBOARD_ALLOW_EMBED=vscode` orqali HTML sahifalar standart `frame-ancestors 'none'` + `X-Frame-Options: DENY` o‘rniga `frame-ancestors 'self' vscode-webview:` bilan taqdim etiladi. API yuzasi (`/api`, `/v1`, `/v1beta`, `/healthz`) har qanday holatda ham qat’iy sarlavhalarni saqlab qoladi.
 
 > ⚠️ **Bu bajarilish vaqtida emas, qurish vaqtida ishlatiladigan bayroq.** Next.js `headers()` funksiyasini marshrut manifestiga kompilyatsiya qiladi, shuning uchun `next.config.mjs` o‘zgaruvchini to‘plam qurilayotgan paytda o‘qiydi
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

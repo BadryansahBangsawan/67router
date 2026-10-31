@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ஒருங்கிணைப்பு
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A திறன் விவரிப்பியையும் `registerA2ASkill(registry)` உதவிச் செயல்பாட்டையும் ஏற்றுமதி செய்கிறது. தனிப்பயன் A2A திறன்கள் `src/lib/a2a/skills/`-இல் உள்ளன; அவை `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) வழியாக அனுப்பப்படுகின்றன. முழுமையான பணிச் சுழற்சிக்கு [A2A-SERVER.md](./A2A-SERVER.md)-ஐப் பார்க்கவும்.
-
----
-
 ## புதிய உள்ளமைந்த திறனைச் சேர்த்தல்
 
 1. **கையாளுநரை வரையறுக்கவும்**: `src/lib/skills/builtins.ts`-இல் (அல்லது `src/lib/skills/builtin/`-இன் கீழுள்ள இணை கோப்பில்). கையொப்பம்: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## மேலும் காண்க
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP கருவிப் பதிவும் போக்குவரத்து முறைகளும்
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A பணியின் வாழ்க்கைச் சுழற்சியும் திறன் அனுப்புதலும்
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — பயனர் சார்ந்த அறிமுகம்
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — கோரிக்கை செயலாக்கத் தொடரும் கூறுகளின் வரைபடமும்
 - மூலம்: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

@@ -143,8 +143,6 @@ src/
 | `app/api/` (មិនមែន v1)                                                       | ផ្លូវគ្រប់គ្រង/អ្នកគ្រប់គ្រងប្រព័ន្ធ (~60 ថត៖ providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools ជាដើម)                                                                                                                                    |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 ផ្លូវ (ការគ្រប់គ្រងម៉ាស៊ីនមេ, ស្ថានភាពភ្នាក់ងារ/DNS/mappings, bypass, cert, upstream-CA)។ LOCAL_ONLY + SPAWN_CAPABLE។ សូមមើល `docs/frameworks/AGENTBRIDGE.md §7`។                                                                                                                            |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ ផ្លូវ (requests, sessions, hosts, capture-modes, export, ws)។ LOCAL_ONLY + SPAWN_CAPABLE។ សូមមើល `docs/frameworks/TRAFFIC_INSPECTOR.md §8`។                                                                                                                                      |
-| `app/a2a/`                                                                   | ចំណុចចូល A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                                |
-| `app/.well-known/agent.json/`                                                | កាតភ្នាក់ងារ A2A (ការស្វែងរក)                                                                                                                                                                                                                                                                                          |
 | `app/(dashboard)/dashboard/`                                                 | ទំព័រ UI ផ្ទាំងគ្រប់គ្រង (50+ ផ្នែក, ឯកសារ page.tsx ប្រហែល 118៖ providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity ជាដើម)                                                                                                                              |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI របស់ Search Tools Studio (3 ផ្ទាំង៖ Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — សូមមើល `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ផែនការ 21)៖ `page.tsx` (ស៊ុម 3 ផ្ទាំង), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ឯកសារ                                           | គោលបំណង                                                                      |
 | ----------------------------------------------- | ---------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                                 | ម៉ាស៊ីនបម្រើ MCP៖ ឧបករណ៍ 110 ការដឹកជញ្ជូន 3 scope 33 និង REST endpoints      |
-| `A2A-SERVER.md`                                 | A2A v0.3៖ JSON-RPC ជំនាញ 6 ជំនួយការ REST និងកាតភ្នាក់ងារ                     |
 | `AGENT_PROTOCOLS_GUIDE.md`                      | មគ្គុទ្ទេសក៍រួម៖ A2A ទល់នឹង ACP ទល់នឹង Cloud Agents                          |
 | `SKILLS.md`                                     | គ្រោងការណ៍ជំនាញ (ភ្ជាប់មកជាមួយ + ទីផ្សារ + SkillsSH + sandbox)               |
 | `RADAR.md`                                      | ស្រទាប់គ្របពីលើកាតាឡុកម៉ូដែលឥតគិតថ្លៃ Radar (`RADAR_ENABLED` បិទតាមលំនាំដើម) |
@@ -567,7 +564,6 @@ open-sse/
 - **កំពុងបន្ថែម provider មែនទេ?** អនុវត្តតាម `docs/architecture/ARCHITECTURE.md § ការបន្ថែម Provider ថ្មី` + ផ្ទៀងផ្ទាត់ជាមួយ `docs/reference/PROVIDER_REFERENCE.md`។
 - **កំពុងបន្ថែម route មែនទេ?** `docs/architecture/ARCHITECTURE.md § ការបន្ថែម API Route ថ្មី` + `src/shared/validation/schemas.ts`។
 - **កំពុងបន្ថែមឧបករណ៍ MCP មែនទេ?** `docs/frameworks/MCP-SERVER.md § ការបន្ថែមឧបករណ៍`។
-- **កំពុងបន្ថែមជំនាញ A2A មែនទេ?** `docs/frameworks/A2A-SERVER.md § ការបន្ថែមជំនាញថ្មី`។
 - **កំពុងដំណើរការក្នុងម៉ាស៊ីនមូលដ្ឋានមែនទេ?** `docs/guides/SETUP_GUIDE.md`។
 - **កំពុងដាក់ឱ្យដំណើរការមែនទេ?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`។
 - **កំពុងចេញផ្សាយមែនទេ?** `docs/ops/RELEASE_CHECKLIST.md` (និងជំនាញ Claude Code `/generate-release-cc`)។

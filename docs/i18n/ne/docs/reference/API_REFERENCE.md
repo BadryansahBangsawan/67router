@@ -1818,48 +1818,10 @@ OmniRoute मा 3 वटा ट्रान्सपोर्ट (stdio, SSE, s
 
 OmniRoute ले निरीक्षण/ड्यासबोर्ड प्रयोगका लागि REST र्यापरसहित A2A (Agent-to-Agent) JSON-RPC 2.0 एन्डपोइन्ट उपलब्ध गराउँछ।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY सेट नगरिएको अवस्थामा वैकल्पिक
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-समर्थित विधिहरू (सबै `settings.a2aEnabled` द्वारा नियन्त्रित):
-
-| विधि             | विवरण                                                                 |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | सिङ्क्रोनस सीप कार्यान्वयन; `{task, artifacts, metadata}` फिर्ता गर्छ |
-| `message/stream` | उही सीप समूहको स्ट्रिमिङ SSE कार्यान्वयन                              |
-| `tasks/get`      | `taskId` अनुसार कार्य प्राप्त गर्छ                                    |
-| `tasks/cancel`   | `taskId` अनुसार कार्य रद्द गर्छ                                       |
-
-अन्तर्निर्मित सीपहरू: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### एजेन्ट कार्ड
-
-```bash
-GET /.well-known/agent.json
-```
-
-सार्वजनिक A2A एजेन्ट कार्ड (नाम, विवरण, क्षमताहरू, सीप सूची, प्रमाणीकरण योजना) फिर्ता गर्छ — सार्वजनिक रूपमा 1 घण्टाका लागि क्यास गरिन्छ। प्रमाणीकरण आवश्यक पर्दैन।
-
 ### REST सहायकहरू
 
 | विधि | पथ                           | विवरण                                                                                                                |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A सक्षम स्थिति + कार्य तथ्याङ्क + क्यास गरिएको एजेन्ट कार्डको सारांश                                               |
 | GET  | `/api/a2a/tasks`             | कार्यहरूको सूची — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST सहायकका रूपमा कार्यान्वयन गरिएको छैन — JSON-RPC `message/send` मार्फत सिर्जना गर्नुहोस्)                       |
 | GET  | `/api/a2a/tasks/[id]`        | एउटा कार्य प्राप्त गर्छ                                                                                              |

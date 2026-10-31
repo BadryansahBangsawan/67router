@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Dokumentazzjoni sħiħa tal-MCP:** [README tas-Server MCP](../../open-sse/mcp-server/README.md) — 110 għodod, konfigurazzjonijiet tal-IDE, klijenti Python/TS/Go.
 
-### Konfigurazzjoni tal-A2A (Agent-to-Agent Protocol)
-
-Ivverifika l-Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Ibgħat kompitu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Agħtini sommarju qasir tal-kwota."}]}}'
-```
-
-**Dokumentazzjoni sħiħa tal-A2A:** [README tas-Server A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ħiliet, streaming, ċiklu tal-ħajja tal-kompiti.
-
----
-
 ## Konfigurazzjoni tat-Timeout
 
 ### Timeouts Bażiċi

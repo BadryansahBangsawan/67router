@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — بررسی پوشهبهپوشه
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — امتیازدهی 16 عاملی
 - [MCP-SERVER.md](./MCP-SERVER.md) — سرور MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — سرور A2A
 - منبع: `open-sse/` (بیش از 400 فایل، حدود 143K خط کد)

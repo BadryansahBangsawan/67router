@@ -1852,48 +1852,10 @@ OmniRoute intègre un serveur Model Context Protocol avec 3 transports (stdio, S
 
 OmniRoute expose un point de terminaison A2A (Agent-to-Agent) JSON-RPC 2.0 ainsi qu’une enveloppe REST à des fins d’inspection et d’utilisation dans le tableau de bord.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # facultatif sauf si OMNIROUTE_API_KEY est défini
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Méthodes prises en charge (toutes conditionnées par `settings.a2aEnabled`) :
-
-| Méthode          | Description                                                                  |
-| ---------------- | ---------------------------------------------------------------------------- |
-| `message/send`   | Exécution synchrone d’une compétence ; renvoie `{task, artifacts, metadata}` |
-| `message/stream` | Exécution en flux SSE du même ensemble de compétences                        |
-| `tasks/get`      | Récupère une tâche selon son `taskId`                                        |
-| `tasks/cancel`   | Annule une tâche selon son `taskId`                                          |
-
-Compétences intégrées : `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Fiche de l’agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Renvoie la fiche publique de l’agent A2A (nom, description, fonctionnalités, catalogue de compétences, schéma d’authentification), mise en cache publiquement pendant 1 h. Aucune authentification requise.
-
 ### Utilitaires REST
 
 | Méthode | Chemin                       | Description                                                                                                                |
 | ------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | État d’activation d’A2A, statistiques des tâches et résumé de la fiche d’agent mise en cache                               |
 | GET     | `/api/a2a/tasks`             | Répertorie les tâches — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Non implémenté en tant qu’utilitaire REST — créer via JSON-RPC `message/send`)                                            |
 | GET     | `/api/a2a/tasks/[id]`        | Récupère une tâche                                                                                                         |

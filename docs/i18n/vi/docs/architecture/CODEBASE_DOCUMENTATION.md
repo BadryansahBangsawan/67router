@@ -100,8 +100,6 @@ Các phân đoạn cấp cao nhất trong `src/app/`:
 | Đường dẫn                                                                     | Mục đích                                                     |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `api/`                                                                        | Tất cả các tuyến API HTTP (xem phân tích bên dưới)           |
-| `a2a/`                                                                        | Điểm cuối A2A JSON-RPC 2.0 (`POST /a2a`)                     |
-| `.well-known/agent.json/`                                                     | Tài liệu khám phá A2A Agent Card                             |
 | `(dashboard)/`                                                                | Giao diện bảng điều khiển (nhóm tuyến, không có tiền tố URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Các luồng xác thực                                           |
 | `landing/`                                                                    | Trang tiếp thị/trang đích                                    |
@@ -775,13 +773,6 @@ Xem [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) và phần chuyên biệt trong
 4. Thêm kiểm thử trong `open-sse/mcp-server/__tests__/`.
 5. Cập nhật [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Thêm kỹ năng A2A mới
-
-Xem [A2A-SERVER.md § Thêm kỹ năng mới](../frameworks/A2A-SERVER.md). Các kỹ năng nằm trong
-`src/lib/a2a/skills/` và được đăng ký thông qua trình quản lý tác vụ A2A.
-
----
-
 ## 11. Quy ước
 
 - **Kiểu mã nguồn**: thụt lề 2 khoảng trắng, dấu ngoặc kép, chiều rộng 100 ký tự, dấu chấm phẩy,
@@ -849,7 +840,6 @@ Xem [A2A-SERVER.md § Thêm kỹ năng mới](../frameworks/A2A-SERVER.md). Các
   và lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — cách tính điểm và các chiến lược của Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — danh mục đầy đủ các công cụ MCP + phương thức truyền tải.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — các kỹ năng và cơ chế khám phá của giao thức A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — nén RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — các tích hợp CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (nếu có), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — các mục tiêu triển khai.

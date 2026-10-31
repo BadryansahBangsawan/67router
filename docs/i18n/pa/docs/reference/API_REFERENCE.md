@@ -1877,48 +1877,10 @@ OmniRoute 3 ਟ੍ਰਾਂਸਪੋਰਟਾਂ (stdio, SSE, streamable-http) �
 
 OmniRoute ਨਿਰੀਖਣ/ਡੈਸ਼ਬੋਰਡ ਦੀ ਵਰਤੋਂ ਲਈ ਇੱਕ A2A (Agent-to-Agent) JSON-RPC 2.0 ਐਂਡਪੌਇੰਟ ਦੇ ਨਾਲ ਇੱਕ REST ਰੈਪਰ ਉਪਲਬਧ ਕਰਵਾਉਂਦਾ ਹੈ।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ਵਿਕਲਪਿਕ, ਜਦੋਂ ਤੱਕ OMNIROUTE_API_KEY ਸੈੱਟ ਨਾ ਹੋਵੇ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ਸਮਰਥਿਤ ਵਿਧੀਆਂ (ਸਾਰੀਆਂ `settings.a2aEnabled` ਦੁਆਰਾ ਨਿਯੰਤਰਿਤ ਹਨ):
-
-| ਵਿਧੀ             | ਵੇਰਵਾ                                                                |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | ਸਮਕਾਲੀ ਸਕਿੱਲ ਐਗਜ਼ੀਕਿਊਸ਼ਨ; `{task, artifacts, metadata}` ਵਾਪਸ ਕਰਦਾ ਹੈ |
-| `message/stream` | ਉਸੇ ਸਕਿੱਲ ਸੈੱਟ ਦਾ ਸਟ੍ਰੀਮਿੰਗ SSE ਐਗਜ਼ੀਕਿਊਸ਼ਨ                          |
-| `tasks/get`      | `taskId` ਰਾਹੀਂ ਕੋਈ ਟਾਸਕ ਪ੍ਰਾਪਤ ਕਰੋ                                   |
-| `tasks/cancel`   | `taskId` ਰਾਹੀਂ ਕੋਈ ਟਾਸਕ ਰੱਦ ਕਰੋ                                      |
-
-ਬਿਲਟ-ਇਨ ਸਕਿੱਲ: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### ਏਜੰਟ ਕਾਰਡ
-
-```bash
-GET /.well-known/agent.json
-```
-
-ਜਨਤਕ A2A ਏਜੰਟ ਕਾਰਡ (ਨਾਮ, ਵੇਰਵਾ, ਸਮਰੱਥਾਵਾਂ, ਸਕਿੱਲ ਕੈਟਾਲੌਗ, ਪ੍ਰਮਾਣੀਕਰਨ ਸਕੀਮ) ਵਾਪਸ ਕਰਦਾ ਹੈ — 1 ਘੰਟੇ ਲਈ ਜਨਤਕ ਤੌਰ 'ਤੇ ਕੈਸ਼ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਕਿਸੇ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।
-
 ### REST ਸਹਾਇਕ
 
 | ਵਿਧੀ | ਪਾਥ                          | ਵੇਰਵਾ                                                                                                               |
 | ---- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A ਸਮਰੱਥ ਸਥਿਤੀ + ਟਾਸਕ ਅੰਕੜੇ + ਕੈਸ਼ ਕੀਤੇ ਏਜੰਟ ਕਾਰਡ ਦਾ ਸੰਖੇਪ                                                         |
 | GET  | `/api/a2a/tasks`             | ਟਾਸਕਾਂ ਦੀ ਸੂਚੀ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST ਸਹਾਇਕ ਵਜੋਂ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਗਿਆ — JSON-RPC `message/send` ਰਾਹੀਂ ਬਣਾਓ)                                           |
 | GET  | `/api/a2a/tasks/[id]`        | ਇੱਕ ਟਾਸਕ ਪ੍ਰਾਪਤ ਕਰੋ                                                                                                 |

@@ -390,34 +390,6 @@
       "description": "Log audit MCP (alias untuk audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Senaraikan kemahiran A2A yang tersedia daripada kad ejen"
-    },
-    "invoke": {
-      "description": "Panggil kemahiran A2A dan kembalikan ID tugas",
-      "input": "Objek input JSON",
-      "input_file": "Laluan ke fail input JSON",
-      "wait": "Tunggu sehingga tugas selesai sebelum kembali",
-      "timeout": "Had masa menunggu sehingga selesai dalam ms (lalai: 60000)"
-    },
-    "tasks": {
-      "description": "Urus tugas A2A",
-      "list": {
-        "status": "Tapis mengikut status",
-        "skill": "Tapis mengikut ID kemahiran"
-      },
-      "watch": {
-        "description": "Semak status tugas secara berkala sehingga selesai"
-      },
-      "stream": {
-        "description": "Strim peristiwa pelaksanaan tugas melalui SSE"
-      },
-      "logs": {
-        "description": "Tunjukkan mesej dan artifak tugas"
-      }
-    }
-  },
   "policy": {
     "description": "Urus dasar kebenaran OmniRoute",
     "list": {

@@ -100,8 +100,6 @@ src/
 | ପାଥ                                                                           | ଉଦ୍ଦେଶ୍ୟ                                             |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------- |
 | `api/`                                                                        | ସମସ୍ତ HTTP API ରୁଟ୍ (ନିମ୍ନରେ ବିଭାଜନ ଦେଖନ୍ତୁ)         |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 ଏଣ୍ଡପଏଣ୍ଟ୍ (`POST /a2a`)            |
-| `.well-known/agent.json/`                                                     | A2A ଏଜେଣ୍ଟ୍ କାର୍ଡ୍ ଆବିଷ୍କାର ଡକୁମେଣ୍ଟ                 |
 | `(dashboard)/`                                                                | ଡ୍ୟାସବୋର୍ଡ୍ UI (ରୁଟ୍ ଗ୍ରୁପ୍, କୌଣସି URL ଉପସର୍ଗ ନାହିଁ) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ଅଥ ପ୍ରବାହ                                            |
 | `landing/`                                                                    | ମାର୍କେଟିଙ୍ଗ/ଲ୍ୟାଣ୍ଡିଙ୍ଗ୍ ପୃଷ୍ଠା                      |
@@ -772,13 +770,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` ଅଧୀନରେ ପରୀକ୍ଷା ଯୋଗ କରନ୍ତୁ।
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ଅଦ୍ୟତନ କରନ୍ତୁ।
 
-### ଏକ ନୂତନ A2A ସ୍କିଲ୍ ଯୋଗ କରନ୍ତୁ
-
-[A2A-SERVER.md § ନୂତନ ସ୍କିଲ୍ ଯୋଗ କରିବା](../frameworks/A2A-SERVER.md) ଦେଖନ୍ତୁ। ସ୍କିଲ୍ଗୁଡ଼ିକ
-`src/lib/a2a/skills/` ରେ ଥାଏ ଏବଂ A2A ଟାସ୍କ ମ୍ୟାନେଜର୍ ମାଧ୍ୟମରେ ପଞ୍ଜିକୃତ ହୋଇଥାଏ।
-
----
-
 ## ୧୧. ସମ୍ମେଳନ
 
 - **କୋଡ୍ ଶୈଳୀ**: 2-ସ୍ଥାନ ଇନ୍ଡେଣ୍ଟ, ଦ୍ୱିଗୁଣ ଉଦ୍ଧୃତି, ୧୦୦ ଅକ୍ଷର ପ୍ରସ୍ଥ, ସେମିକୋଲନ,
@@ -838,7 +829,6 @@ bin/
   ଲକଆଉଟ୍ ଗଭୀର ଅନୁସନ୍ଧାନ।
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ଅଟୋ କମ୍ବୋ ସ୍କୋରିଂ ଏବଂ ରଣନୀତି।
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — ସମ୍ପୂର୍ଣ୍ଣ MCP ଟୁଲ୍ କ୍ୟାଟାଲଗ୍ + ପରିବହନ।
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A ପ୍ରୋଟୋକଲ୍ ସ୍କିଲ୍ସ ଏବଂ ଆବିଷ୍କାର।
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + କେଭମ୍ୟାନ୍ ସଞ୍ଚେତନ।
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ଏକୀକରଣ।
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ଯଦି ଉପସ୍ଥିତ), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ପ୍ରଦର୍ଶନ ଲକ୍ଷ୍ୟ।

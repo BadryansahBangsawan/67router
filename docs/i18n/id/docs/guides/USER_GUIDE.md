@@ -1239,8 +1239,6 @@ Gunakan URL SSE `http://localhost:20128/api/mcp/sse` dan kunci API Bearer yang d
 
 ### Cakupan
 
-MCP saat ini mendefinisikan 32 cakupan bernama. Setiap kunci Bearer dapat dibatasi untuk cakupan tertentu — lihat [MCP-SERVER.md](../frameworks/MCP-SERVER.md) untuk daftar cakupan dan alat yang menjadi acuan resmi, serta [A2A-SERVER.md](../frameworks/A2A-SERVER.md) untuk skema JSON-RPC.
-
 ---
 
 ## 🧠 Sistem Skill
@@ -1249,7 +1247,6 @@ OmniRoute menyediakan **framework skill** yang dapat diperluas (`src/lib/skills/
 
 - **UI Marketplace** — Jelajahi dan instal skill dari **Dasbor → Skill**
 - **Cakupan per kunci** — Batasi skill yang dapat dipanggil oleh setiap API key
-- **Skill kustom** — Letakkan file TypeScript di `src/lib/a2a/skills/`, daftarkan, dan skill tersebut dapat segera dipanggil melalui A2A
 
 Referensi lengkap: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Pulihkan dari snapshot
 omniroute health                   # Informasi kesehatan mendetail (pemutus, cache, memori)
 omniroute quota                    # Penggunaan kuota penyedia
 omniroute mcp status               # Status server MCP
-omniroute a2a status               # Status server A2A
 omniroute tunnel list|create|stop  # Tunnel Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Atur ulang kata sandi admin
 omniroute --mcp                    # Mulai server MCP melalui stdio

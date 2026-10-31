@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (potrebna je autentifikacija)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP alata (popis, dohvaćanje, pokrivenost)
-src/lib/a2a/skills/listCapabilities.ts        — A2A vještina: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A vještina `list-capabilities` vraća potpuni katalog od 45 vještina kao art
 }
 ```
 
-Pogledajte [A2A-SERVER.md](./A2A-SERVER.md) za pojedinosti o protokolu.
-
 ---
 
 ## Katalog — 45 ID-jeva vještina
@@ -189,7 +186,6 @@ Pogledajte [A2A-SERVER.md](./A2A-SERVER.md) za pojedinosti o protokolu.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — okvir Omni Skills (umetanje LLM alata + tržište)
 - [MCP-SERVER.md](./MCP-SERVER.md) — katalog MCP alata (alati `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokol (vještina `list-capabilities`)
 - `src/lib/agentSkills/` — katalog, generator, parseri
 - `skills/` — generirane datoteke SKILL.md (45 unosa)

@@ -100,8 +100,6 @@ App Router डैशबोर्ड UI और सार्वजनिक/प्
 | पथ                                                                            | उद्देश्य                                        |
 | ----------------------------------------------------------------------------- | ----------------------------------------------- |
 | `api/`                                                                        | सभी HTTP API रूट (नीचे विवरण देखें)             |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 एंडपॉइंट (`POST /a2a`)         |
-| `.well-known/agent.json/`                                                     | A2A Agent Card डिस्कवरी दस्तावेज़               |
 | `(dashboard)/`                                                                | डैशबोर्ड UI (रूट समूह, कोई URL प्रीफ़िक्स नहीं) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | प्रमाणीकरण फ़्लो                                |
 | `landing/`                                                                    | मार्केटिंग/लैंडिंग पेज                          |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` के अंतर्गत परीक्षण जोड़ें।
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) को अपडेट करें।
 
-### नया A2A कौशल जोड़ें
-
-[A2A-SERVER.md § नया कौशल जोड़ना](../frameworks/A2A-SERVER.md) देखें। कौशल
-`src/lib/a2a/skills/` में स्थित होते हैं और A2A कार्य प्रबंधक के माध्यम से पंजीकृत किए जाते हैं।
-
----
-
 ## 11. परिपाटियाँ
 
 - **कोड शैली**: 2-स्पेस इंडेंट, दोहरे उद्धरण-चिह्न, 100 वर्ण चौड़ाई, सेमीकोलन,
@@ -846,7 +837,6 @@ bin/
   लॉकआउट का गहन विवरण।
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo स्कोरिंग और रणनीतियाँ।
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — संपूर्ण MCP टूल कैटलॉग + ट्रांसपोर्ट्स।
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A प्रोटोकॉल स्किल्स और डिस्कवरी।
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman कम्प्रेशन।
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI इंटीग्रेशंस।
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (यदि उपलब्ध हो), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — डिप्लॉयमेंट लक्ष्य।

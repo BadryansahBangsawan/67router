@@ -20,38 +20,6 @@
 
 ## شجرة القرار
 
-## 1. A2A — من وكيل إلى وكيل
-
-**المواصفة:** [A2A v0.3](https://a2a-protocol.org)
-**نقطة نهاية OmniRoute:** `POST /a2a` ‏(JSON-RPC 2.0)
-**بطاقة الوكيل:** `GET /.well-known/agent.json`
-
-### متى تستخدمها
-
-- بناء نظام متعدد الوكلاء يكون فيه OmniRoute أحد النظراء
-- إتاحة إمكانات التوجيه الذكية في OmniRoute (`smart-routing`، و`quota-management`، وغيرها) للوكلاء في أطر عمل مثل Google ADK أو شبكات الوكلاء العامة
-- تغليف OmniRoute خلف واجهة قياسية للاكتشاف والاستدعاء
-
-### الأساليب
-
-- `message/send` — إرسال رسالة وتلقّي استجابة متزامنة
-- `message/stream` — الإرسال وتلقّي أحداث التقدم المتدفقة عبر SSE
-- `tasks/get` — قراءة المهمة حسب المعرّف
-- `tasks/cancel` — إلغاء مهمة قيد التشغيل
-
-### المهارات المضمّنة (6)
-
-- `smart-routing` — توجيه مطالبة عبر التركيبة المثلى
-- `quota-management` — الإبلاغ عن حالة الحصة لكل مزوّد
-- `provider-discovery` — سرد المزوّدين المثبّتين مع إمكاناتهم
-- `cost-analysis` — تقدير تكلفة طلب/محادثة
-- `health-report` — تجميع حالة قاطع الدارة/فترة التهدئة/الحظر لكل مزوّد
-- `list-capabilities` — تعداد مهارات الوكيل المتاحة وبياناتها الوصفية
-
-### شرح متعمق
-
-راجع [A2A-SERVER.md](./A2A-SERVER.md) للاطلاع على تفاصيل النقل، وبنية بطاقة الوكيل، وتهيئة مدة بقاء المهمة (TTL)، والقالب المستخدم لإضافة مهارات جديدة.
-
 ## 2. ACP — سجل وكلاء CLI
 
 **نقطة نهاية OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@
 
 ## أمثلة التكامل
 
-### اكتشاف إمكانات A2A في OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-يعيد بطاقة الوكيل متضمنةً جميع المهارات الست ووسائل النقل والإصدار.
-
-### استدعاء OmniRoute بصفته وكيل A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "وجّه هذه المطالبة"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### عرض وكلاء CLI المثبتين عبر ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## انظر أيضًا
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — نظرة متعمقة على A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — عمليات تكامل CLI الخارجية (تستخدم ACP)
 - [SKILLS.md](./SKILLS.md) — إطار عمل المهارات (يختلف عن مهارات A2A — بيئة تنفيذ محلية معزولة)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — مرجع نقاط النهاية

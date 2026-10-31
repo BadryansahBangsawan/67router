@@ -241,26 +241,6 @@ Tambahkan ke pengaturan MCP Anda:
 
 **Dokumentasi lengkap MCP:** [README Server MCP](../../open-sse/mcp-server/README.md) — 110 alat, konfigurasi IDE, klien Python/TS/Go.
 
-### Penyiapan A2A (Agent-to-Agent Protocol)
-
-Verifikasi Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Kirim tugas:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Dokumentasi lengkap A2A:** [README Server A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, keterampilan, streaming, siklus hidup tugas.
-
----
-
 ## Konfigurasi Timeout
 
 ### Timeout Dasar

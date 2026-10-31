@@ -91,7 +91,7 @@ nič.
 preprostega brskalnika namesto v zunanjem brskalniku. Vdelava je **omogočena izrecno v strežniku** prek
 `DASHBOARD_ALLOW_EMBED=vscode`, zaradi česar so strani HTML posredovane z
 `frame-ancestors 'self' vscode-webview:` namesto s privzetima `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Površina API-ja (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) v obeh
+`X-Frame-Options: DENY`. Površina API-ja (`/api`, `/v1`, `/v1beta`, `/healthz`) v obeh
 primerih ohrani stroge glave.
 
 > ⚠️ **To je zastavica časa gradnje, ne časa izvajanja.** Next.js prevede `headers()` v manifest

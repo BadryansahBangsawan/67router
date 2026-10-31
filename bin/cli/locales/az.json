@@ -390,34 +390,6 @@
       "description": "MCP audit jurnalı (audit --source mcp üçün alias)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Agent kartındakı mövcud A2A bacarıqlarını siyahıya alın"
-    },
-    "invoke": {
-      "description": "A2A bacarığını çağırın və tapşırıq ID-sini qaytarın",
-      "input": "JSON giriş obyekti",
-      "input_file": "JSON giriş faylına yol",
-      "wait": "Qayıtmazdan əvvəl tapşırığın tamamlanmasını gözləyin",
-      "timeout": "Tamamlanmanı gözləmə müddəti, ms ilə (standart: 60000)"
-    },
-    "tasks": {
-      "description": "A2A tapşırıqlarını idarə edin",
-      "list": {
-        "status": "Statusa görə filtrləyin",
-        "skill": "Bacarıq ID-sinə görə filtrləyin"
-      },
-      "watch": {
-        "description": "Tamamlanana qədər tapşırıq statusunu yoxlayın"
-      },
-      "stream": {
-        "description": "Tapşırığın icra hadisələrini SSE vasitəsilə yayımlayın"
-      },
-      "logs": {
-        "description": "Tapşırıq mesajlarını və artefaktlarını göstərin"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute avtorizasiya siyasətlərini idarə edin",
     "list": {

@@ -390,34 +390,6 @@
       "description": "MCP 審計日誌（audit --source mcp 的別名）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "從代理卡片列出可用的 A2A 技能"
-    },
-    "invoke": {
-      "description": "呼叫 A2A 技能並返回任務 ID",
-      "input": "JSON 輸入物件",
-      "input_file": "JSON 輸入檔案路徑",
-      "wait": "等待任務完成後返回",
-      "timeout": "等待完成的超時時間（毫秒，預設：60000）"
-    },
-    "tasks": {
-      "description": "管理 A2A 任務",
-      "list": {
-        "status": "按狀態篩選",
-        "skill": "按技能 ID 篩選"
-      },
-      "watch": {
-        "description": "輪詢任務狀態直至完成"
-      },
-      "stream": {
-        "description": "通過 SSE 流式傳輸任務執行事件"
-      },
-      "logs": {
-        "description": "顯示任務訊息和產物"
-      }
-    }
-  },
   "policy": {
     "description": "管理 OmniRoute 授權策略",
     "list": {

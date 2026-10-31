@@ -119,4 +119,3 @@ fixture ដែលផ្ដល់លទ្ធផលថេរ គ្របដណ�
 - [ពិធីការរបស់ agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [កិច្ចសន្យាសម្រាប់ដំណើរការ CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [ឧបករណ៍ CLI](../reference/CLI-TOOLS.md)
-- [server A2A](./A2A-SERVER.md)

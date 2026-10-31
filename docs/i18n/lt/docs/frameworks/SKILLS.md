@@ -258,12 +258,6 @@ Transporto konfigūravimą ir aprėpties priskyrimus žr. [MCP-SERVER.md](./MCP-
 
 ---
 
-## A2A integracija
-
-`src/lib/skills/a2a.ts` eksportuoja `memory_aware_routing` A2A įgūdžio deskriptorių ir pagalbinę funkciją `registerA2ASkill(registry)`. Pasirinktiniai A2A įgūdžiai yra kataloge `src/lib/a2a/skills/` ir nukreipiami per `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Visą užduoties gyvavimo ciklą žr. [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Naujo integruoto įgūdžio pridėjimas
 
 1. **Apibrėžkite apdorojimo funkciją** faile `src/lib/skills/builtins.ts` (arba gretimame faile, esančiame `src/lib/skills/builtin/`). Signatūra: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Kaip pridėti pasirinktinį įgūdį naudojant papildinių sistemą, žr. [Papil
 ## Taip pat žr.
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP įrankių registravimas ir transportai
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A užduočių gyvavimo ciklas ir įgūdžių iškvietimas
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — naudotojams skirta įžanga
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — užklausų apdorojimo seka ir komponentų schema
 - Pirminis kodas: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

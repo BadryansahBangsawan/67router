@@ -20,38 +20,6 @@ OmniRoute သည် agent နှင့်သက်ဆိုင်သော မ�
 
 ## ဆုံးဖြတ်ချက်ချရန် လမ်းညွှန်ပုံ
 
-## 1. A2A — Agent အချင်းချင်း
-
-**Spec:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agent Card:** `GET /.well-known/agent.json`
-
-### အသုံးပြုသင့်သည့်အချိန်
-
-- OmniRoute က peer များထဲမှ တစ်ခုဖြစ်သည့် multi-agent system တစ်ခုကို တည်ဆောက်သည့်အခါ
-- OmniRoute ၏ routing ဆိုင်ရာ အသိဉာဏ် (smart-routing, quota-management စသည်) ကို Google ADK ကဲ့သို့သော framework များ သို့မဟုတ် ယေဘုယျ agent mesh များရှိ agent များထံ ဖော်ထုတ်ပေးသည့်အခါ
-- OmniRoute ကို စံသတ်မှတ်ထားသော ရှာဖွေတွေ့ရှိမှု + ခေါ်ယူအသုံးပြုမှု မျက်နှာပြင်နောက်ကွယ်တွင် ထည့်သွင်းအသုံးပြုသည့်အခါ
-
-### နည်းလမ်းများ
-
-- `message/send` — message တစ်ခု ပေးပို့ပြီး synchronous တုံ့ပြန်မှုကို လက်ခံရယူသည်
-- `message/stream` — ပေးပို့ပြီး SSE ဖြင့် stream လုပ်ထားသော တိုးတက်မှု event များကို လက်ခံရယူသည်
-- `tasks/get` — ID ဖြင့် task ကို ဖတ်ရှုသည်
-- `tasks/cancel` — လုပ်ဆောင်နေသော task တစ်ခုကို ပယ်ဖျက်သည်
-
-### အသင့်ပါဝင်သော skill များ (6)
-
-- `smart-routing` — prompt တစ်ခုကို အသင့်တော်ဆုံး combo မှတစ်ဆင့် လမ်းကြောင်းသတ်မှတ်ပေးသည်
-- `quota-management` — provider တစ်ခုချင်းစီ၏ quota အခြေအနေကို အစီရင်ခံသည်
-- `provider-discovery` — ထည့်သွင်းထားသော provider များကို ၎င်းတို့၏ လုပ်ဆောင်နိုင်စွမ်းများနှင့်အတူ စာရင်းပြုစုသည်
-- `cost-analysis` — request/conversation တစ်ခု၏ ကုန်ကျစရိတ်ကို ခန့်မှန်းသည်
-- `health-report` — provider တစ်ခုချင်းစီ၏ breaker/cooldown/lockout အခြေအနေကို စုစည်းဖော်ပြသည်
-- `list-capabilities` — agent တွင် ရရှိနိုင်သော skill များနှင့် metadata ကို စာရင်းကောက်ယူဖော်ပြသည်
-
-### အသေးစိတ်လေ့လာရန်
-
-ဆက်သွယ်ပို့ဆောင်မှု အသေးစိတ်များ၊ agent card ဖွဲ့စည်းပုံ၊ task TTL စီစဉ်သတ်မှတ်မှုနှင့် skill အသစ်များ ထည့်သွင်းရန် template အတွက် [A2A-SERVER.md](./A2A-SERVER.md) ကို ကြည့်ပါ။
-
 ## 2. ACP — CLI Agent Registry
 
 **OmniRoute endpoint:** `GET /api/acp/agents`
@@ -111,30 +79,6 @@ POST အတွက် body ပုံစံ (`src/app/api/acp/agents/route.ts` ရ
 
 ## ပေါင်းစပ်အသုံးပြုမှု နမူနာများ
 
-### OmniRoute ၏ A2A စွမ်းဆောင်ရည်များကို ရှာဖွေကြည့်ရှုခြင်း
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Skill 6 ခုလုံး၊ transport များနှင့် version ပါဝင်သော Agent Card ကို ပြန်ပေးပါသည်။
-
-### OmniRoute ကို A2A agent အဖြစ် ခေါ်ယူအသုံးပြုခြင်း
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP မှတစ်ဆင့် ထည့်သွင်းထားသော CLI agent များကို စာရင်းပြုစုခြင်း
 
 ```bash
@@ -188,7 +132,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## ထပ်မံကြည့်ရှုရန်
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A အကြောင်း အသေးစိတ်လေ့လာရန်
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ပြင်ပ CLI ပေါင်းစည်းမှုများ (ACP ကို အသုံးပြုသည်)
 - [SKILLS.md](./SKILLS.md) — Skills framework (A2A skills နှင့် ကွဲပြားသည် — ဒေသတွင်း လုပ်ဆောင်မှု sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint ကိုးကားချက်

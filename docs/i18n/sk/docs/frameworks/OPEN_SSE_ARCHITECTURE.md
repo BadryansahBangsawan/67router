@@ -573,5 +573,4 @@ Smerovací engine má prísne výkonnostné limity:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — prehľad jednotlivých adresárov
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — hodnotenie podľa 16 faktorov
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Zdroj: `open-sse/` (viac ako 400 súborov, ~143K riadkov kódu)

@@ -390,34 +390,6 @@
       "description": "MCP 감사 로그(audit --source mcp의 별칭)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "에이전트 카드에서 사용 가능한 A2A 스킬 목록 표시"
-    },
-    "invoke": {
-      "description": "A2A 스킬을 호출하고 작업 ID 반환",
-      "input": "JSON 입력 객체",
-      "input_file": "JSON 입력 파일 경로",
-      "wait": "반환하기 전에 작업이 완료될 때까지 대기",
-      "timeout": "완료 대기 시간 제한(ms)(기본값: 60000)"
-    },
-    "tasks": {
-      "description": "A2A 작업 관리",
-      "list": {
-        "status": "상태별 필터링",
-        "skill": "스킬 ID별 필터링"
-      },
-      "watch": {
-        "description": "완료될 때까지 작업 상태 폴링"
-      },
-      "stream": {
-        "description": "SSE를 통해 작업 실행 이벤트 스트리밍"
-      },
-      "logs": {
-        "description": "작업 메시지 및 아티팩트 표시"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute 권한 부여 정책 관리",
     "list": {

@@ -20,38 +20,6 @@ Bu üçü bir-birindən müstəqildir — istənilən alt çoxluğu seçə bilə
 
 ## Qərar Ağacı
 
-## 1. A2A — Agentdən agentə
-
-**Spesifikasiya:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute son nöqtəsi:** `POST /a2a` (JSON-RPC 2.0)
-**Agent Kartı:** `GET /.well-known/agent.json`
-
-### Nə zaman istifadə etməli
-
-- OmniRoute-un həmkarlardan biri olduğu çoxagentli sistem qurarkən
-- OmniRoute-un marşrutlaşdırma imkanlarını (ağıllı marşrutlaşdırma, kvota idarəetməsi və s.) Google ADK kimi freymvorklardakı agentlərə və ya ümumi agent şəbəkələrinə təqdim edərkən
-- OmniRoute-u standart aşkarlama + çağırış interfeysi ilə əhatə edərkən
-
-### Metodlar
-
-- `message/send` — mesaj göndərin, sinxron cavab alın
-- `message/stream` — mesaj göndərin + SSE vasitəsilə yayımlanan irəliləyiş hadisələrini alın
-- `tasks/get` — tapşırığı ID üzrə oxuyun
-- `tasks/cancel` — icra olunan tapşırığı ləğv edin
-
-### Daxili bacarıqlar (6)
-
-- `smart-routing` — sorğunu optimal kombinasiya vasitəsilə marşrutlaşdırır
-- `quota-management` — hər provayder üzrə kvota vəziyyətini bildirir
-- `provider-discovery` — quraşdırılmış provayderləri imkanları ilə birlikdə siyahıya alır
-- `cost-analysis` — sorğunun/söhbətin dəyərini hesablayır
-- `health-report` — hər provayder üzrə kəsici/soyuma/bloklanma vəziyyətini ümumiləşdirir
-- `list-capabilities` — agentin mövcud bacarıqlarını və metadatasını sadalayır
-
-### Ətraflı məlumat
-
-Nəqliyyat təfərrüatları, agent kartının strukturu, tapşırıq TTL konfiqurasiyası və yeni bacarıqlar əlavə etmək üçün şablon barədə [A2A-SERVER.md](./A2A-SERVER.md) sənədinə baxın.
-
 ## 2. ACP — CLI Agentləri Reyestri
 
 **OmniRoute endpoint-i:** `GET /api/acp/agents`
@@ -106,30 +74,6 @@ POST üçün sorğu gövdəsinin strukturu (`src/app/api/acp/agents/route.ts` da
 
 ## İnteqrasiya Nümunələri
 
-### OmniRoute-un A2A imkanlarını kəşf edin
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Bütün 6 bacarıq, nəqliyyat və versiya məlumatları ilə Agent Kartını qaytarır.
-
-### OmniRoute-u A2A agenti kimi çağırın
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP vasitəsilə quraşdırılmış CLI agentlərini siyahıya alın
 
 ```bash
@@ -183,7 +127,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Həmçinin baxın
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A haqqında ətraflı məlumat
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Xarici CLI inteqrasiyaları (ACP-dən istifadə edir)
 - [SKILLS.md](./SKILLS.md) — Bacarıqlar çərçivəsi (A2A bacarıqlarından fərqlidir — lokal icra qum qutusu)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — son nöqtələr üzrə arayış

@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ព័ត៌មានលម្អិតតាមថតនីមួយៗ
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ការដាក់ពិន្ទុ 16 កត្តា
 - [MCP-SERVER.md](./MCP-SERVER.md) — ម៉ាស៊ីនមេ MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — ម៉ាស៊ីនមេ A2A
 - កូដប្រភព៖ `open-sse/` (ឯកសារ 400+, ~143K LOC)

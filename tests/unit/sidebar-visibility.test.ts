@@ -27,7 +27,6 @@ test("system sidebar items: monitoring has activity at top then logs/audit/syste
       "conversations",
       "audit",
       "audit-mcp",
-      "audit-a2a",
       "health",
       "runtime",
       "resilience-connections",

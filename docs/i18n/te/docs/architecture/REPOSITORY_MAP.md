@@ -143,8 +143,6 @@ src/
 | `app/api/` (non-v1)                                                          | నిర్వహణ/అడ్మిన్ రూట్లు (~60 డైరెక్టరీలు: ప్రొవైడర్లు, కాంబోలు, సెట్టింగ్లు, mcp, a2a, మూల్యాంకనాలు, మెమరీ, నైపుణ్యాలు, వెబ్హుక్లు, అనుసరణ, స్థితిస్థాపకత, పర్యవేక్షణ, టన్నెల్లు, cli-tools మొదలైనవి)                                                                                                                   |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 రూట్లు (సర్వర్ నియంత్రణ, ఏజెంట్ స్థితి/DNS/మ్యాపింగ్లు, బైపాస్, సర్టిఫికేట్, upstream-CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` చూడండి.                                                                                                                           |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ రూట్లు (అభ్యర్థనలు, సెషన్లు, హోస్ట్లు, క్యాప్చర్ మోడ్లు, ఎగుమతి, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` చూడండి.                                                                                                                              |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 ప్రవేశ బిందువు (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (కనుగొనడం)                                                                                                                                                                                                                                                                                              |
 | `app/(dashboard)/dashboard/`                                                 | డ్యాష్బోర్డ్ UI పేజీలు (50+ విభాగాలు, ~118 page.tsx ఫైళ్లు: ప్రొవైడర్లు, కాంబోలు, సెట్టింగ్లు, మెమరీ, నైపుణ్యాలు, వెబ్హుక్లు, మూల్యాంకనాలు, ఆడిట్, బ్యాచ్, క్యాష్, ఖర్చులు, ఆరోగ్యం, సిస్టమ్, కార్యకలాపం మొదలైనవి)                                                                                                     |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ట్యాబ్లు: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` చూడండి                                                                                                                                                                     |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ప్లాన్ 21): `page.tsx` (3-ట్యాబ్ షెల్), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | డాక్యుమెంట్                                 | ఉద్దేశ్యం                                                                      |
 | ------------------------------------------- | ------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                             | MCP సర్వర్: 110 సాధనాలు, 3 ట్రాన్స్పోర్ట్లు, 33 స్కోప్లు, REST ఎండ్పాయింట్లు   |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6 స్కిల్స్, REST సహాయకాలు, ఏజెంట్ కార్డ్                   |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | ఏకీకృత మార్గదర్శకం: A2A vs ACP vs Cloud Agents                                 |
 | `SKILLS.md`                                 | స్కిల్స్ ఫ్రేమ్వర్క్ (అంతర్నిర్మితం + మార్కెట్ప్లేస్ + SkillsSH + శాండ్బాక్స్) |
 | `RADAR.md`                                  | Radar ఉచిత-మోడల్ కేటలాగ్ ఓవర్లే (`RADAR_ENABLED`, డిఫాల్ట్గా ఆఫ్)              |
@@ -567,7 +564,6 @@ open-sse/
 - **ప్రొవైడర్ను జోడిస్తున్నారా?** `docs/architecture/ARCHITECTURE.md § కొత్త ప్రొవైడర్ను జోడించడం` అనుసరించి, `docs/reference/PROVIDER_REFERENCE.md`తో సరిచూసుకోండి.
 - **రూట్ను జోడిస్తున్నారా?** `docs/architecture/ARCHITECTURE.md § కొత్త API రూట్ను జోడించడం` + `src/shared/validation/schemas.ts`.
 - **MCP టూల్ను జోడిస్తున్నారా?** `docs/frameworks/MCP-SERVER.md § టూల్ను జోడించడం`.
-- **A2A స్కిల్ను జోడిస్తున్నారా?** `docs/frameworks/A2A-SERVER.md § కొత్త స్కిల్ను జోడించడం`.
 - **స్థానికంగా రన్ చేస్తున్నారా?** `docs/guides/SETUP_GUIDE.md`.
 - **డిప్లాయ్ చేస్తున్నారా?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **రిలీజ్ చేస్తున్నారా?** `docs/ops/RELEASE_CHECKLIST.md` (మరియు `/generate-release-cc` Claude Code స్కిల్).

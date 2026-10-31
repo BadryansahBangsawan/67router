@@ -595,7 +595,6 @@ Pix copia-e-cola:
 - **🔑 Έλεγχος δρομολόγησης ανά κλειδί** — καρφιτσώστε ένα κλειδί API σε ένα μοντέλο ή συνδυασμό με το `forcedModel` και προσθέστε ή αφαιρέστε ατομικά τα μοντέλα και τους συνδυασμούς ενός κλειδιού (`/api/keys/{id}/access`). → [Αναφορά API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Λεπτομερέστεροι έλεγχοι PII** — επιλογή ανά τύπο, έως 20 επικυρωμένα προσαρμοσμένα μοτίβα απόκρυψης και μετρητές ανίχνευσης ανά τύπο· η ίδια η απόκρυψη παραμένει προαιρετική. → [Μηχανισμοί προστασίας](docs/security/GUARDRAILS.md)
 - **🌍 67 γλώσσες** — πίνακας ελέγχου, αντίγραφα τεκμηρίωσης και CLI, με το `npm run i18n:add-locale` να προσθέτει μια γλώσσα παντού με μία εντολή. → [Οδηγός i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — εισερχόμενη ανάθεση A2A προς τον στόλο πρακτόρων σας, δεξιότητες Conductor στην Κάρτα Πράκτορα και ένας πίνακας ελέγχου με φωνητική συνομιλία push-to-talk Faro. → [Διακομιστής A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Προσαρμοστική αποδοχή και προστασία από υπερφόρτωση** — τα απαιτητικά αιτήματα συνομιλίας μπαίνουν σε ουρά αντί να επιστρέφουν 503, με ατομικές κυλιόμενες μισθώσεις RPM ανά σύνδεση. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Κανονική ταξινόμηση `/v1/models`** — ένα συνεχόμενο μπλοκ ομαδοποιημένο ανά πάροχο για κάθε πάροχο (με τους συνδυασμούς καρφιτσωμένους πρώτους), σταθερό σε κάθε πηγή καταλόγου. → [Αναφορά API](docs/reference/API_REFERENCE.md)
 - **🗜️ Ενίσχυση συμπίεσης** — προστασία από διόγκωση ενεργοποιημένη από προεπιλογή, πακέτα Caveman για DE / FR / JA + Κινεζικά (wényán), φίλτρα RTK για Gradle και .NET. → [Συμπίεση](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +913,6 @@ omniroute contexts use default            # ← επιστροφή στον το
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Σύνδεση με Claude Desktop, Cursor ή οποιοδήποτε πρόγραμμα-πελάτη MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Απομακρυσμένο MCP — <b>110 εργαλεία</b>, 33 εύρη (προαιρετική επιβολή), πλήρες ιστορικό ελέγχου</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Μεταφορά MCP με ροή δεδομένων</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Επικοινωνία πράκτορα προς πράκτορα, <b>JSON-RPC 2.0</b> + SSE, 6 δεξιότητες</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Συμβατό με OpenAI — συνομιλία, ενσωματώσεις, εικόνες, ήχος, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Προώθηση συμβάντων αιτημάτων / ορίων χρήσης στο Slack, Discord, Telegram ή σε οποιοδήποτε URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Απομακρυσμένο CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Χειρισμός απομακρυσμένης παρουσίας με διακριτικά πρόσβασης περιορισμένου εύρους</td></tr>
@@ -924,8 +922,6 @@ omniroute contexts use default            # ← επιστροφή στον το
 # Παροχή του πλήρους συνόλου εργαλείων του OmniRoute στο Claude Code μέσω MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Διακομιστής MCP](docs/frameworks/MCP-SERVER.md) · [Διακομιστής A2A](docs/frameworks/A2A-SERVER.md) · [Πρωτόκολλα πρακτόρων](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1391,7 +1387,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 επίσης τη
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Διακομιστής MCP</a></b></td><td>110 εργαλεία MCP, ρυθμίσεις IDE, πελάτες Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Οδηγός διακομιστή MCP</a></b></td><td>Εγκατάσταση MCP, μέσα μεταφοράς και αναφορά εργαλείων</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Διακομιστής A2A</a></b></td><td>Πρωτόκολλο JSON-RPC 2.0, δεξιότητες, ροή δεδομένων, διαχείριση εργασιών</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Οδηγός διακομιστή A2A</a></b></td><td>Κάρτα πράκτορα A2A, εργασίες, δεξιότητες και ροή δεδομένων</td></tr>
 </table>
 
 ### 📋 Έργο & ποιότητα

@@ -14,8 +14,6 @@ import {
   findMissingMcpTools,
   findNewMcpTools,
   KNOWN_MCP_TOOL_NAMES,
-  // (5) A2A skills
-  diffA2ASkills,
   type ExecutorLike,
 } from "../../scripts/check/check-known-symbols.ts";
 import { reportStaleEntries } from "../../scripts/check/lib/allowlist.mjs";
@@ -356,32 +354,4 @@ test("KNOWN_MCP_TOOL_NAMES is a non-empty, well-formed, deduped snapshot", () =>
   for (const name of KNOWN_MCP_TOOL_NAMES) {
     assert.match(name, /^[a-z0-9_]+$/, `malformed MCP tool name: ${name}`);
   }
-});
-
-// ───────────────────────────────────────────────────────────────────────────
-// (5) A2A SKILLS — bidirectional diff
-// ───────────────────────────────────────────────────────────────────────────
-
-test("diffA2ASkills returns empty when handlers and agent card match exactly", () => {
-  const handlers = new Set(["smart-routing", "quota-management", "health-report"]);
-  const agentCard = new Set(["smart-routing", "quota-management", "health-report"]);
-  const result = diffA2ASkills(handlers, agentCard);
-  assert.deepEqual(result.inHandlersNotCard, []);
-  assert.deepEqual(result.inCardNotHandlers, []);
-});
-
-test("diffA2ASkills flags skill in handlers but missing from agent card", () => {
-  const handlers = new Set(["smart-routing", "ghost-skill"]);
-  const agentCard = new Set(["smart-routing"]);
-  const result = diffA2ASkills(handlers, agentCard);
-  assert.deepEqual(result.inHandlersNotCard, ["ghost-skill"]);
-  assert.deepEqual(result.inCardNotHandlers, []);
-});
-
-test("diffA2ASkills flags skill in agent card but missing from handlers", () => {
-  const handlers = new Set(["smart-routing"]);
-  const agentCard = new Set(["smart-routing", "orphan-skill"]);
-  const result = diffA2ASkills(handlers, agentCard);
-  assert.deepEqual(result.inHandlersNotCard, []);
-  assert.deepEqual(result.inCardNotHandlers, ["orphan-skill"]);
 });

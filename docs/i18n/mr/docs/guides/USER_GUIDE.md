@@ -1234,8 +1234,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` आणि **Dashboard → API Keys*
 
 ### व्याप्ती
 
-MCP सध्या 32 नामांकित व्याप्ती परिभाषित करते. प्रत्येक Bearer की विशिष्ट व्याप्तींपुरती मर्यादित करता येते — अधिकृत व्याप्ती आणि साधन-सूचीसाठी [MCP-SERVER.md](../frameworks/MCP-SERVER.md), तसेच JSON-RPC स्कीमासाठी [A2A-SERVER.md](../frameworks/A2A-SERVER.md) पहा.
-
 ---
 
 ## 🧠 कौशल्य प्रणाली
@@ -1244,7 +1242,6 @@ OmniRoute एक विस्तारक्षम **कौशल्य फ्�
 
 - **मार्केटप्लेस UI** — **डॅशबोर्ड → कौशल्ये** मधून कौशल्ये ब्राउझ आणि इंस्टॉल करा
 - **प्रति-की स्कोप्स** — कोणत्या API की कोणती कौशल्ये वापरू शकतात हे मर्यादित करा
-- **सानुकूल कौशल्ये** — `src/lib/a2a/skills/` मध्ये TypeScript फाइल ठेवा, तिची नोंदणी करा आणि ती A2A वरून त्वरित वापरण्यायोग्य होते
 
 संपूर्ण संदर्भ: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1329,7 +1326,6 @@ omniroute restore [<timestamp>]    # स्नॅपशॉटमधून पु
 omniroute health                   # सविस्तर आरोग्य माहिती (ब्रेकर्स, कॅशे, मेमरी)
 omniroute quota                    # प्रदाता कोटा वापर
 omniroute mcp status               # MCP सर्व्हरची स्थिती
-omniroute a2a status               # A2A सर्व्हरची स्थिती
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok टनेल
 omniroute reset-password           # प्रशासकाचा पासवर्ड रीसेट करा
 omniroute --mcp                    # stdio वर MCP सर्व्हर सुरू करा

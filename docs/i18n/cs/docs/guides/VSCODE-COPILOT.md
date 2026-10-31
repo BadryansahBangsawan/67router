@@ -90,7 +90,7 @@ nic měnit.
 Simple Browser namísto externího prohlížeče. Vkládání je **nutné výslovně povolit na serveru** pomocí
 `DASHBOARD_ALLOW_EMBED=vscode`, což zajistí, že se HTML stránky budou poskytovat s
 `frame-ancestors 'self' vscode-webview:` namísto výchozího `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Rozhraní API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) si v obou
+`X-Frame-Options: DENY`. Rozhraní API (`/api`, `/v1`, `/v1beta`, `/healthz`) si v obou
 případech zachovává striktní hlavičky.
 
 > ⚠️ **Jde o příznak při sestavení, nikoli za běhu.** Next.js zkompiluje `headers()` do manifestu

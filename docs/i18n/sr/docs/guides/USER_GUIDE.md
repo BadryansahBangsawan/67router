@@ -1235,7 +1235,7 @@ OmniRoute је истовремено **MCP сервер** (Model Context Protoc
 
 ### Опсези (Scopes)
 
-MCP тренутно дефинише 32 именована опсега. Сваки Bearer кључ може бити ограничен на одређене опсеге — погледајте [MCP-SERVER.md](../frameworks/MCP-SERVER.md) за меродаван преглед опсега и алата, и [A2A-SERVER.md](../frameworks/A2A-SERVER.md) за JSON-RPC шему.
+MCP тренутно дефинише 32 именована опсега. Сваки Bearer кључ може бити ограничен на одређене опсеге — погледајте [MCP-SERVER.md](../frameworks/MCP-SERVER.md) за меродаван преглед опсега и алата,.
 
 ---
 
@@ -1245,7 +1245,6 @@ OmniRoute izlaže proširivi **skill framework** (`src/lib/skills/`) tako da age
 
 - **Marketplace UI** — Pregledajte i instalirajte vештine iz **Dashboard → Skills**
 - **Opsezi po ključu** — Ograničite koji API ključevi mogu da pozivaju koje vештине
-- **Prilagođene vештine** — Ubacite TypeScript fajl u `src/lib/a2a/skills/`, registrujte ga, i on postaje odmah pozivljiv preko A2A
 
 Kompletna referenca: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1330,7 +1329,6 @@ omniroute restore [<timestamp>]    # Vraćanje iz snimka
 omniroute health                   # Detaljno stanje sistema (breakeri, keš, memorija)
 omniroute quota                    # Iskorišćenost kvote provajdera
 omniroute mcp status                # Status MCP servera
-omniroute a2a status                # Status A2A servera
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneli
 omniroute reset-password           # Resetovanje admin lozinke
 omniroute --mcp                    # Pokretanje MCP servera preko stdio

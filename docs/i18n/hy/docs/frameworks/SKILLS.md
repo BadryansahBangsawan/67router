@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ինտեգրում
-
-`src/lib/skills/a2a.ts`-ն արտահանում է `memory_aware_routing` A2A հմտության նկարագրիչը և `registerA2ASkill(registry)` օժանդակ ֆունկցիան։ Հատուկ A2A հմտությունները գտնվում են `src/lib/a2a/skills/`-ում և ուղղորդվում են `A2A_SKILL_HANDLERS`-ի միջոցով (`src/lib/a2a/taskExecution.ts`)։ Առաջադրանքի ամբողջական կենսացիկլի համար տե՛ս [A2A-SERVER.md](./A2A-SERVER.md)։
-
----
-
 ## Նոր ներկառուցված հմտության ավելացում
 
 1. **Սահմանեք մշակիչը** `src/lib/skills/builtins.ts`-ում (կամ `src/lib/skills/builtin/`-ի տակ գտնվող հարակից ֆայլում)։ Ստորագրություն՝ `(input, { apiKeyId, sessionId }) => Promise<output>`։
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## Տե՛ս նաև
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP գործիքների գրանցում և փոխադրման մեխանիզմներ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A առաջադրանքի կենսացիկլ և հմտությունների ուղղորդում
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — օգտատերերին ուղղված ներածություն
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — հարցումների մշակման շղթա և բաղադրիչների քարտեզ
 - Սկզբնաղբյուր՝ `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

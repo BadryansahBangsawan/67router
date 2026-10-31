@@ -586,7 +586,6 @@ Radar-ի օգտագործումը կամընտիր է, և այն աշխատու�
 - **🔑 Յուրաքանչյուր բանալու երթուղման կառավարում** — API բանալին ամրակցեք մեկ մոդելի կամ համակցման՝ `forcedModel`-ի միջոցով, ինչպես նաև ատոմար կերպով ավելացրեք կամ հեռացրեք բանալու մոդելներն ու համակցումները (`/api/keys/{id}/access`)։ → [API տեղեկատու](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ PII-ի ավելի ճշգրիտ կառավարում** — ընտրություն ըստ տեսակի, մինչև 20 վավերացված հատուկ քողարկման ձևանմուշ և հայտնաբերման հաշվիչներ ըստ տեսակի․ քողարկումն ինքնին շարունակում է պահանջել կամավոր միացում։ → [Պաշտպանիչ սահմանափակումներ](docs/security/GUARDRAILS.md)
 - **🌍 67 լեզու** — կառավարման վահանակ, փաստաթղթերի հայելիներ և CLI, ընդ որում `npm run i18n:add-locale` հրամանը մեկ քայլով ամենուր ավելացնում է լեզու։ → [i18n ուղեցույց](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — մուտքային A2A պատվիրակում ձեր գործակալների խմբին, Conductor-ի հմտություններ Agent Card-ում և կառավարման վահանակի վահանակամաս՝ Faro-ի «սեղմիր և խոսիր» ձայնային զրույցով։ → [A2A սերվեր](docs/frameworks/A2A-SERVER.md)
 - **🛂 Հարմարվողական ընդունում և գերբեռնվածությունից պաշտպանություն** — մեծածավալ զրույցի հարցումները 503 սխալ վերադարձնելու փոխարեն հերթագրվում են՝ յուրաքանչյուր կապի համար RPM-ի ատոմար սահող վարձակալումներով։ → [Կայունության ուղեցույց](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ `/v1/models`-ի կանոնական դասավորում** — յուրաքանչյուր մատակարարի համար մեկ անընդհատ, ըստ մատակարարի խմբավորված բլոկ (համակցումները՝ սկզբում ամրակցված), որը կայուն է կատալոգի բոլոր աղբյուրներում։ → [API տեղեկատու](docs/reference/API_REFERENCE.md)
 - **🗜️ Սեղմման ամրապնդում** — լռելյայն միացված ընդարձակման պաշտպանիչ սահմանափակում, Caveman փաթեթներ DE / FR / JA + չինարենի (wényán) համար, RTK զտիչներ Gradle-ի և .NET-ի համար։ → [Սեղմում](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ Token-ների իրավասություններն են՝ `read` / `write` / `adm
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Միացրեք Claude Desktop-ին, Cursor-ին կամ ցանկացած MCP client-ի</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Հեռակա MCP՝ <b>110 գործիք</b>, 33 scope (կիրարկումը միացվում է ըստ ցանկության), ամբողջական audit trail</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Հոսքային MCP transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Գործակալից գործակալ հաղորդակցություն՝ <b>JSON-RPC 2.0</b> + SSE, 6 հմտություն</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-ի հետ համատեղելի՝ զրույց, embeddings, պատկերներ, աուդիո, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Ուղարկեք request-ի / quota-ի իրադարձությունները Slack, Discord, Telegram կամ ցանկացած URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Հեռակա CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Կառավարեք հեռակա instance-ը սահմանափակ իրավասություններով հասանելիության token-ների միջոցով</td></tr>
@@ -915,8 +913,6 @@ Token-ների իրավասություններն են՝ `read` / `write` / `adm
 # MCP-ի միջոցով Claude Code-ին տրամադրեք OmniRoute-ի գործիքների ամբողջական հավաքածուն.
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP սերվեր](docs/frameworks/MCP-SERVER.md) · [A2A սերվեր](docs/frameworks/A2A-SERVER.md) · [Գործակալների արձանագրություններ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1-ը նույնպե
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP սերվեր</a></b></td><td>110 MCP գործիք, IDE կազմաձևումներ, Python/TS/Go հաճախորդներ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP սերվերի ուղեցույց</a></b></td><td>MCP-ի տեղադրում, փոխադրամիջոցներ և գործիքների տեղեկատու</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A սերվեր</a></b></td><td>JSON-RPC 2.0 արձանագրություն, հմտություններ, հոսքային փոխանցում, առաջադրանքների կառավարում</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A սերվերի ուղեցույց</a></b></td><td>A2A գործակալի քարտ, առաջադրանքներ, հմտություններ և հոսքային փոխանցում</td></tr>
 </table>
 
 ### 📋 Նախագիծ և որակ

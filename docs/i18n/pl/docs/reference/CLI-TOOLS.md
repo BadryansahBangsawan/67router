@@ -712,7 +712,6 @@ omniroute cache                        # Stan pamięci podręcznej
 omniroute cache clear                  # Czyszczenie semantycznej pamięci podręcznej i pamięci podręcznej sygnatur
 
 omniroute mcp status | restart         # Stan / ponowne uruchomienie serwera MCP
-omniroute a2a status | card            # Stan serwera A2A / karta agenta
 
 omniroute tunnel list | create | stop  # Zarządzanie tunelami (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Wyświetlanie / ustawianie zmiennych środowiskowych (tymczasowo)

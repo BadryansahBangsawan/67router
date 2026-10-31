@@ -248,26 +248,6 @@ Ongeza kwenye mipangilio yako ya MCP:
 
 **Nyaraka kamili za MCP:** [README ya Seva ya MCP](../../open-sse/mcp-server/README.md) — zana 110, usanidi wa IDE, viteja vya Python/TS/Go.
 
-### Usanidi wa A2A (Itifaki ya Wakala-kwa-Wakala)
-
-Thibitisha Kadi ya Wakala:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tuma jukumu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Nyaraka kamili za A2A:** [README ya Seva ya A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ujuzi, utiririshaji, mzunguko wa maisha wa jukumu.
-
----
-
 ## Usanidi wa Muda wa Kuisha
 
 ### Muda wa Msingi wa Kuisha

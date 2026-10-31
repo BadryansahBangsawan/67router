@@ -20,38 +20,6 @@ Need kolm on üksteisest sõltumatud — valige neist mistahes alamhulk.
 
 ## Otsustuspuu
 
-## 1. A2A — agentidevaheline
-
-**Spetsifikatsioon:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute'i lõpp-punkt:** `POST /a2a` (JSON-RPC 2.0)
-**Agendikaart:** `GET /.well-known/agent.json`
-
-### Millal kasutada
-
-- Mitme agendiga süsteemi loomisel, kus OmniRoute on üks osalistest
-- OmniRoute'i marsruutimisvõimekuse (nutikas marsruutimine, kvoodihaldus jne) pakkumiseks selliste raamistike agentidele nagu Google ADK või üldistes agendivõrkudes
-- OmniRoute'i mähkimiseks standardse tuvastus- ja käivitusliidese taha
-
-### Meetodid
-
-- `message/send` — sõnumi saatmine ja sünkroonse vastuse vastuvõtmine
-- `message/stream` — sõnumi saatmine ja edenemissündmuste vastuvõtmine SSE-voona
-- `tasks/get` — ülesande lugemine ID alusel
-- `tasks/cancel` — töötava ülesande tühistamine
-
-### Sisseehitatud oskused (6)
-
-- `smart-routing` — päringu marsruutimine optimaalse kombinatsiooni kaudu
-- `quota-management` — iga teenusepakkuja kvoodi oleku esitamine
-- `provider-discovery` — installitud teenusepakkujate ja nende võimaluste loetlemine
-- `cost-analysis` — päringu või vestluse maksumuse hindamine
-- `health-report` — iga teenusepakkuja kaitselüliti, jahtumisaja ja lukustuse oleku koondamine
-- `list-capabilities` — agendi saadaolevate oskuste ja metaandmete loetlemine
-
-### Põhjalikum ülevaade
-
-Transpordi üksikasjade, agendikaardi struktuuri, ülesannete TTL-i seadistuse ja uute oskuste lisamise malli kohta vaadake faili [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — CLI-agentide register
 
 **OmniRoute'i lõpp-punkt:** `GET /api/acp/agents`
@@ -104,30 +72,6 @@ POST-päringu keha kuju (`customAgentBodySchema` failis `src/app/api/acp/agents/
 - HTTP-register ei võta vastu ülesandeid ega võimalda protsesse käivitada. Sisemine haldur saab registreeritud CLI käivitada, kuid seda ei ole ühendatud automaatse teenusepakkuja varuvariandina. Tavaliseks interaktiivseks kasutuseks käivitage seadistatud CLI ise või kasutage käsku `omniroute run`.
 
 ## Integratsiooninäited
-
-### OmniRoute’i A2A-võimekuste tuvastamine
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tagastab agendikaardi kõigi 6 oskuse, transpordimeetodi ja versiooniga.
-
-### OmniRoute’i kutsumine A2A-agendina
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Installitud CLI-agentide loetlemine ACP kaudu
 
@@ -182,7 +126,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Vaata ka
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A põhjalik ülevaade
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — välised CLI-integratsioonid (kasutab ACP-d)
 - [SKILLS.md](./SKILLS.md) — oskuste raamistik (erineb A2A oskustest — kohalik käivituse liivakast)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — otspunktide teatmik

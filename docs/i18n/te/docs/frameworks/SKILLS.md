@@ -258,12 +258,6 @@ transport సెటప్ మరియు scope కేటాయింపుల �
 
 ---
 
-## A2A అనుసంధానం
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A skill descriptorను మరియు `registerA2ASkill(registry)` సహాయకాన్ని ఎగుమతి చేస్తుంది. అనుకూల A2A skills `src/lib/a2a/skills/`లో ఉంటాయి మరియు `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) ద్వారా పంపిణీ చేయబడతాయి. పూర్తి task lifecycle కోసం [A2A-SERVER.md](./A2A-SERVER.md) చూడండి.
-
----
-
 ## కొత్త అంతర్నిర్మిత Skillను జోడించడం
 
 1. **handlerను నిర్వచించండి** — `src/lib/skills/builtins.ts`లో (లేదా `src/lib/skills/builtin/` కింద ఉన్న అనుబంధ ఫైల్లో). Signature: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## ఇవి కూడా చూడండి
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP సాధన నమోదు మరియు ట్రాన్స్పోర్ట్లు
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A టాస్క్ జీవితచక్రం మరియు నైపుణ్య డిస్పాచ్
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — వినియోగదారు-కేంద్రీకృత పరిచయం
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — అభ్యర్థన పైప్లైన్ మరియు కాంపోనెంట్ మ్యాప్
 - సోర్స్: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

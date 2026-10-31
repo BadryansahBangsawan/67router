@@ -100,8 +100,6 @@ Vrhnji segmenti pod `src/app/`:
 | Pot                                                                           | Namen                                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `api/`                                                                        | Vse poti HTTP API (glejte razčlenitev spodaj)                         |
-| `a2a/`                                                                        | Končna točka A2A JSON-RPC 2.0 (`POST /a2a`)                           |
-| `.well-known/agent.json/`                                                     | Dokument za odkrivanje kartice agenta A2A                             |
 | `(dashboard)/`                                                                | Uporabniški vmesnik nadzorne plošče (skupina poti, brez predpone URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Tokovi overjanja                                                      |
 | `landing/`                                                                    | Trženjska/vstopna stran                                               |
@@ -773,13 +771,6 @@ Glejte [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) in namenski razdelek v
 4. Dodajte teste v `open-sse/mcp-server/__tests__/`.
 5. Posodobite [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Dodajanje nove veščine A2A
-
-Glejte [A2A-SERVER.md § Dodajanje nove veščine](../frameworks/A2A-SERVER.md). Veščine se nahajajo v
-`src/lib/a2a/skills/` in so registrirane prek upravljalnika opravil A2A.
-
----
-
 ## 11. Dogovori
 
 - **Slog kode**: zamik z 2 presledkoma, dvojni narekovaji, širina 100 znakov, podpičja,
@@ -847,7 +838,6 @@ Glejte [A2A-SERVER.md § Dodajanje nove veščine](../frameworks/A2A-SERVER.md).
   in zaklepanja.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — točkovanje in strategije funkcije Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — celoten katalog orodij MCP in načini prenosa.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — zmožnosti in odkrivanje protokola A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — stiskanje RTK in Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integracije CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (če je prisoten), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ciljna okolja za uvedbo.

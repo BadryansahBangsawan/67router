@@ -100,8 +100,6 @@ Segmenti najviše razine pod `src/app/`:
 | Putanja                                                                       | Svrha                                                            |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `api/`                                                                        | Sve HTTP API rute (vidi razčlambu ispod)                         |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 krajnja točka (`POST /a2a`)                     |
-| `.well-known/agent.json/`                                                     | Dokument za otkrivanje A2A Agent Card-a                          |
 | `(dashboard)/`                                                                | Korisničko sučelje nadzorne ploče (grupa ruta, bez URL prefiksa) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Tokovi autentifikacije                                           |
 | `landing/`                                                                    | Marketinška/odredišna stranica                                   |
@@ -773,13 +771,6 @@ Pogledajte [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) i posvećeni odjeljak u
 4. Dodajte testove u `open-sse/mcp-server/__tests__/`.
 5. Ažurirajte [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Dodavanje nove A2A vještine
-
-Pogledajte [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Vještine se nalaze u
-`src/lib/a2a/skills/` i registriraju se putem A2A upravitelja zadataka.
-
----
-
 ## 11. Konvencije
 
 - **Stil koda**: uvlačenje 2 razmaka, dvostruki navodnici, širina 100 znakova, točka-zarezi,
@@ -840,7 +831,6 @@ Pogledajte [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). V
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — dubinska analiza circuit breakera, cooldowna i lockota.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — bodovanje i strategije Auto Combo-a.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — potpuni katalog MCP alata i transporti.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — vještine A2A protokola i otkrivanje.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman kompresija.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integracije.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ako postoji), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ciljane platforme za implementaciju.

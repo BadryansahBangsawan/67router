@@ -1860,48 +1860,10 @@ OmniRoute jinkludi server integrat tal-Model Context Protocol bi 3 transports (s
 
 OmniRoute jesponi punt ta' tmiem A2A (Minn Aġent għal Aġent) JSON-RPC 2.0 flimkien ma' wrapper REST għall-ispezzjoni/użu fid-dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # fakultattiv sakemm OMNIROUTE_API_KEY ma jkunx issettjat
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metodi appoġġjati (kollha jiddependu fuq `settings.a2aEnabled`):
-
-| Metodu           | Deskrizzjoni                                                              |
-| ---------------- | ------------------------------------------------------------------------- |
-| `message/send`   | Eżekuzzjoni sinkronika tal-ħila; tirritorna `{task, artifacts, metadata}` |
-| `message/stream` | Eżekuzzjoni SSE bi streaming tal-istess sett ta' ħiliet                   |
-| `tasks/get`      | Iġib kompitu permezz ta' `taskId`                                         |
-| `tasks/cancel`   | Jikkanċella kompitu permezz ta' `taskId`                                  |
-
-Ħiliet inkorporati: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kard tal-Aġent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Jirritorna l-kard pubblika tal-aġent A2A (isem, deskrizzjoni, kapaċitajiet, katalogu tal-ħiliet, skema tal-awtentikazzjoni) — maħżuna fil-cache pubblikament għal siegħa. Ma hija meħtieġa ebda awtentikazzjoni.
-
 ### Għodod awżiljarji REST
 
 | Metodu | Mogħdija                     | Deskrizzjoni                                                                                                           |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A attivat + statistika tal-kompiti + sommarju tal-kard tal-aġent maħżuna fil-cache                                   |
 | GET    | `/api/a2a/tasks`             | Jelenka l-kompiti — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Mhux implimentat bħala għodda awżiljarja REST — oħloq permezz ta' JSON-RPC `message/send`)                            |
 | GET    | `/api/a2a/tasks/[id]`        | Jirkupra kompitu wieħed                                                                                                |

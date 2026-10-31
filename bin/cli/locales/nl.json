@@ -390,34 +390,6 @@
       "description": "MCP-auditlogboek (alias voor audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Beschikbare A2A-vaardigheden van de agentkaart weergeven"
-    },
-    "invoke": {
-      "description": "Een A2A-vaardigheid aanroepen en de taak-ID retourneren",
-      "input": "JSON-invoerobject",
-      "input_file": "Pad naar JSON-invoerbestand",
-      "wait": "Wachten tot de taak is voltooid alvorens terug te keren",
-      "timeout": "Time-out voor wachten op voltooiing in ms (standaard: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-taken beheren",
-      "list": {
-        "status": "Filteren op status",
-        "skill": "Filteren op vaardigheids-ID"
-      },
-      "watch": {
-        "description": "Taakstatus opvragen tot voltooiing"
-      },
-      "stream": {
-        "description": "Taakuitvoeringsgebeurtenissen streamen via SSE"
-      },
-      "logs": {
-        "description": "Taakberichten en artefacten weergeven"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute-autorisatiebeleid beheren",
     "list": {

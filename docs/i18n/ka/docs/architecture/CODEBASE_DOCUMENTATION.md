@@ -100,8 +100,6 @@ App Router ხელმისაწვდომს ხდის როგორ�
 | გზა                                                                           | დანიშნულება                                                          |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | `api/`                                                                        | ყველა HTTP API მარშრუტი (იხილეთ ქვემოთ დაყოფა)                       |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 ბოლო წერტილი (`POST /a2a`)                          |
-| `.well-known/agent.json/`                                                     | A2A Agent Card-ის აღმოჩენის დოკუმენტი                                |
 | `(dashboard)/`                                                                | მართვის პანელის ინტერფეისი (მარშრუტების ჯგუფი, URL პრეფიქსის გარეშე) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ავთენტიფიკაციის ნაკადები                                             |
 | `landing/`                                                                    | მარკეტინგული/საწყისი გვერდი                                          |
@@ -773,13 +771,6 @@ bin/
 4. დაამატეთ ტესტები `open-sse/mcp-server/__tests__/`-ში.
 5. განაახლეთ [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### ახალი A2A უნარის დამატება
-
-იხილეთ [A2A-SERVER.md § ახალი უნარის დამატება](../frameworks/A2A-SERVER.md). უნარები განთავსებულია
-`src/lib/a2a/skills/`-ში და რეგისტრირდება A2A ამოცანების მმართველის მეშვეობით.
-
----
-
 ## 11. შეთანხმებები
 
 - **კოდის სტილი**: 2-ჰარიანი შეწევა, ორმაგი ბრჭყალები, 100-სიმბოლოიანი სიგანე, წერტილ-მძიმეები,
@@ -846,7 +837,6 @@ bin/
   lockout-ის დეტალური მიმოხილვა.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo-ს შეფასება და სტრატეგიები.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — MCP ინსტრუმენტების სრული კატალოგი და ტრანსპორტები.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A პროტოკოლის უნარები და აღმოჩენა.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK და Caveman შეკუმშვა.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ინტეგრაციები.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (თუ არსებობს), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — განთავსების სამიზნეები.

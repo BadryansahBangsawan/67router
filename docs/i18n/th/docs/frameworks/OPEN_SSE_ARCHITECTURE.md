@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — รายละเอียดของแต่ละไดเรกทอรี
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — การให้คะแนน 16 ปัจจัย
 - [MCP-SERVER.md](./MCP-SERVER.md) — เซิร์ฟเวอร์ MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — เซิร์ฟเวอร์ A2A
 - ซอร์สโค้ด: `open-sse/` (มากกว่า 400 ไฟล์, ~143K LOC)

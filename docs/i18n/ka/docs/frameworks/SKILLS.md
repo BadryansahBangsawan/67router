@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ინტეგრაცია
-
-`src/lib/skills/a2a.ts` ახდენს `memory_aware_routing` A2A უნარის დესკრიპტორისა და `registerA2ASkill(registry)` დამხმარე ფუნქციის ექსპორტს. მორგებული A2A უნარები განთავსებულია `src/lib/a2a/skills/`-ში და მათი გადამისამართება ხდება `A2A_SKILL_HANDLERS`-ის მეშვეობით (`src/lib/a2a/taskExecution.ts`). დავალების სრული სასიცოცხლო ციკლისთვის იხილეთ [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## ახალი ჩაშენებული უნარის დამატება
 
 1. **განსაზღვრეთ დამმუშავებელი** `src/lib/skills/builtins.ts`-ში (ან `src/lib/skills/builtin/`-ის ქვეშ მდებარე მეზობელ ფაილში). სიგნატურა: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## აგრეთვე იხილეთ
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ინსტრუმენტების რეგისტრაცია და ტრანსპორტები
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ამოცანის სასიცოცხლო ციკლი და უნარების დისპეტჩერიზაცია
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — მომხმარებელზე ორიენტირებული შესავალი
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — მოთხოვნების დამუშავების კონვეიერი და კომპონენტების რუკა
 - წყარო: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

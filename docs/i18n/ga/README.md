@@ -595,7 +595,6 @@ faoin gcatalóg reatha ag **[radar.omniroute.online/planos](https://radar.omniro
 - **🔑 Rialú ródaithe in aghaidh na heochrach** — greamaigh eochair API le samhail nó teaglam amháin le `forcedModel`, agus cuir samhlacha agus teaglaim eochrach leis nó bain iad go hidimhiúil (`/api/keys/{id}/access`). → [Tagairt API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Rialuithe PII níos míne** — roghnú in aghaidh an chineáil, suas le 20 patrún maiscithe saincheaptha bailíochtaithe agus cuntairí braite in aghaidh an chineáil; fanann an maisciú féin roghnach. → [Cosaintí](docs/security/GUARDRAILS.md)
 - **🌍 67 teanga** — deais, scátháin doiciméad agus CLI, agus cuireann `npm run i18n:add-locale` teanga leis i ngach áit in aon ordú amháin. → [Treoir i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — toscaireacht A2A isteach chuig do chabhlach gníomhairí, scileanna Conductor ar an gCárta Gníomhaire, agus painéal deais le comhrá gutha push-to-talk Faro. → [Freastalaí A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Iontráil oiriúnaitheach & cosaint róualaithe** — téann iarratais chomhrá throma ar scuaine in áit freagra 503 a thabhairt, le léasanna rollta adamhacha RPM in aghaidh an nasctha. → [Treoir Athléimneachta](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ordú canónta `/v1/models`** — bloc leanúnach amháin grúpáilte de réir soláthraí in aghaidh an tsoláthraí (teaglaim greamaithe ar dtús), seasmhach thar gach foinse catalaíochta. → [Tagairt API](docs/reference/API_REFERENCE.md)
 - **🗜️ Neartú comhbhrúite** — garda boliscithe ar siúl de réir réamhshocraithe, pacáistí Caveman do DE / FR / JA + an tSínis (wényán), scagairí RTK do Gradle & .NET. → [Comhbhrú](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +913,6 @@ Nocht OmniRoute trí **MCP**, **A2A**, **REST API**, **webhooks** nó **CLI cian
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Ceangail le Claude Desktop, Cursor nó aon chliant MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP cianda — <b>110 uirlis</b>, 33 raon feidhme (forfheidhmiú roghnach), rian iniúchta iomlán</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Iompar sruthaithe MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Ó ghníomhaire go gníomhaire, <b>JSON-RPC 2.0</b> + SSE, 6 scil</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Comhoiriúnach le OpenAI — comhrá, leabuithe, íomhánna, fuaim, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Brúigh imeachtaí iarratais / cuóta chuig Slack, Discord, Telegram nó aon URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Cianda</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Rialaigh ásc cianda le comharthaí rochtana a bhfuil raon feidhme acu</td></tr>
@@ -924,8 +922,6 @@ Nocht OmniRoute trí **MCP**, **A2A**, **REST API**, **webhooks** nó **CLI cian
 # Tabhair tacar iomlán uirlisí OmniRoute do Claude Code thar MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Freastalaí MCP](docs/frameworks/MCP-SERVER.md) · [Freastalaí A2A](docs/frameworks/A2A-SERVER.md) · [Prótacail Gníomhairí](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1391,7 +1387,6 @@ Méadrachtaí canónacha ar 2026-10-18: **1.976 físeán uathúil** · **20.220.
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Freastalaí MCP</a></b></td><td>110 uirlis MCP, cumraíochtaí IDE, cliaint Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Treoir Freastalaí MCP</a></b></td><td>Suiteáil MCP, iompróirí agus tagairt uirlisí</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Freastalaí A2A</a></b></td><td>Prótacal JSON-RPC 2.0, scileanna, sruthú, bainistíocht tascanna</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Treoir Freastalaí A2A</a></b></td><td>Cárta gníomhaire A2A, tascanna, scileanna agus sruthú</td></tr>
 </table>
 
 ### 📋 Tionscadal & Cáilíocht

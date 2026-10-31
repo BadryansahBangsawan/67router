@@ -390,34 +390,6 @@
       "description": "MCP auditilogi (alias käsule audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Kuva agendikaardil saadaolevad A2A oskused"
-    },
-    "invoke": {
-      "description": "Käivita A2A oskus ja tagasta ülesande ID",
-      "input": "JSON-sisendobjekt",
-      "input_file": "JSON-sisendfaili tee",
-      "wait": "Oota enne tagastamist ülesande valmimist",
-      "timeout": "Valmimise ootamise ajapiirang millisekundites (vaikimisi: 60000)"
-    },
-    "tasks": {
-      "description": "Halda A2A ülesandeid",
-      "list": {
-        "status": "Filtreeri oleku järgi",
-        "skill": "Filtreeri oskuse ID järgi"
-      },
-      "watch": {
-        "description": "Küsi perioodiliselt ülesande olekut kuni valmimiseni"
-      },
-      "stream": {
-        "description": "Voogesita ülesande täitmissündmusi SSE kaudu"
-      },
-      "logs": {
-        "description": "Kuva ülesande sõnumid ja artefaktid"
-      }
-    }
-  },
   "policy": {
     "description": "Halda OmniRoute'i autoriseerimispoliitikaid",
     "list": {

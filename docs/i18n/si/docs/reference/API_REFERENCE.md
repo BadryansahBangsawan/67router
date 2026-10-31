@@ -1872,48 +1872,10 @@ OmniRoute විෂය පථගත මෙවලම් සහිත ප්රව
 
 OmniRoute විසින් A2A (Agent-to-Agent) JSON-RPC 2.0 අන්ත ලක්ෂ්යයක් සහ පරීක්ෂා කිරීම/උපකරණ පුවරු භාවිතය සඳහා REST ආවරණයක් සපයයි.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY සකසා නොමැති නම් විකල්ප වේ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-සහාය දක්වන ක්රම (සියල්ල `settings.a2aEnabled` මඟින් පාලනය වේ):
-
-| ක්රමය            | විස්තරය                                                                        |
-| ---------------- | ------------------------------------------------------------------------------ |
-| `message/send`   | සමමුහුර්ත කුසලතා ක්රියාත්මක කිරීම; `{task, artifacts, metadata}` ආපසු ලබා දෙයි |
-| `message/stream` | එම කුසලතා කට්ටලයේ ප්රවාහක SSE ක්රියාත්මක කිරීම                                 |
-| `tasks/get`      | `taskId` අනුව කාර්යයක් ලබා ගනී                                                 |
-| `tasks/cancel`   | `taskId` අනුව කාර්යයක් අවලංගු කරයි                                             |
-
-අන්තර්ගත කුසලතා: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### නියෝජිත කාඩ්පත
-
-```bash
-GET /.well-known/agent.json
-```
-
-පොදු A2A නියෝජිත කාඩ්පත (නම, විස්තරය, හැකියා, කුසලතා නාමාවලිය, සත්යාපන ක්රමය) ආපසු ලබා දෙයි — පැය 1ක් සඳහා පොදුවේ හැඹිලිගත කර ඇත. සත්යාපනය අවශ්ය නොවේ.
-
 ### REST උපකාරක
 
 | ක්රමය | මාර්ගය                       | විස්තරය                                                                                                                    |
 | ----- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A සක්රීය තත්ත්වය + කාර්ය සංඛ්යාලේඛන + හැඹිලිගත නියෝජිත කාඩ්පත් සාරාංශය                                                   |
 | GET   | `/api/a2a/tasks`             | කාර්ය ලැයිස්තුගත කරයි — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST උපකාරකයක් ලෙස ක්රියාත්මක කර නැත — JSON-RPC `message/send` හරහා සාදන්න)                                               |
 | GET   | `/api/a2a/tasks/[id]`        | එක් කාර්යයක් ලබා ගනී                                                                                                       |

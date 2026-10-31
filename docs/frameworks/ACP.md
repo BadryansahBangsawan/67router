@@ -121,4 +121,3 @@ test in the target environment.
 - [Agent protocols](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI launch contracts](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tools](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)

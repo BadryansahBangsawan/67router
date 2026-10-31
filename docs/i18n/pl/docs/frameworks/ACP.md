@@ -120,4 +120,3 @@ dymnego w środowisku docelowym.
 - [Protokoły agentów](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kontrakty uruchamiania CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Narzędzia CLI](../reference/CLI-TOOLS.md)
-- [Serwer A2A](./A2A-SERVER.md)

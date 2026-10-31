@@ -1880,48 +1880,10 @@ OmniRoute כולל שרת Model Context Protocol מובנה עם 3 תעבורו�
 
 OmniRoute חושף נקודת קצה מסוג A2A (סוכן-לסוכן) בתקן JSON-RPC 2.0, וכן מעטפת REST לצורכי בדיקה ולוח בקרה.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # אופציונלי, אלא אם OMNIROUTE_API_KEY מוגדר
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-שיטות נתמכות (כולן תלויות בהפעלת `settings.a2aEnabled`):
-
-| שיטה             | תיאור                                                            |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | הפעלה סינכרונית של מיומנות; מחזירה `{task, artifacts, metadata}` |
-| `message/stream` | הפעלת SSE בזרימה של אותה קבוצת מיומנויות                         |
-| `tasks/get`      | אחזור משימה לפי `taskId`                                         |
-| `tasks/cancel`   | ביטול משימה לפי `taskId`                                         |
-
-מיומנויות מובנות: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### כרטיס סוכן
-
-```bash
-GET /.well-known/agent.json
-```
-
-מחזיר את כרטיס סוכן ה-A2A הציבורי (שם, תיאור, יכולות, קטלוג מיומנויות, סכמת אימות) — נשמר במטמון ציבורי למשך שעה. לא נדרש אימות.
-
 ### מסייעי REST
 
 | שיטה | נתיב                         | תיאור                                                                                                                  |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | מצב הפעלת A2A + נתוני משימות + תקציר כרטיס הסוכן השמור במטמון                                                          |
 | GET  | `/api/a2a/tasks`             | הצגת רשימת משימות — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (לא ממומש כמסייע REST — יש ליצור באמצעות JSON-RPC‏ `message/send`)                                                     |
 | GET  | `/api/a2a/tasks/[id]`        | אחזור משימה אחת                                                                                                        |

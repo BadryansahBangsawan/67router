@@ -1877,48 +1877,10 @@ OmniRoute ផ្ដល់មកជាមួយ Model Context Protocol server ដ
 
 OmniRoute ផ្តល់ endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 រួមជាមួយ REST wrapper សម្រាប់ការត្រួតពិនិត្យ/ការប្រើប្រាស់ dashboard។
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ជាជម្រើស លុះត្រាតែ OMNIROUTE_API_KEY ត្រូវបានកំណត់
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-វិធីសាស្ត្រដែលគាំទ្រ (ទាំងអស់ត្រូវបានគ្រប់គ្រងដោយ `settings.a2aEnabled`)៖
-
-| វិធីសាស្ត្រ      | ការពិពណ៌នា                                                        |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | ប្រតិបត្តិជំនាញដោយសមកាលកម្ម; ត្រឡប់ `{task, artifacts, metadata}` |
-| `message/stream` | ប្រតិបត្តិការ SSE ជាបន្តបន្ទាប់នៃសំណុំជំនាញដូចគ្នា                |
-| `tasks/get`      | ទាញយកកិច្ចការតាម `taskId`                                         |
-| `tasks/cancel`   | បោះបង់កិច្ចការតាម `taskId`                                        |
-
-ជំនាញដែលមានស្រាប់៖ `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`។
-
-### កាត Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-ត្រឡប់កាត agent A2A សាធារណៈ (ឈ្មោះ ការពិពណ៌នា សមត្ថភាព កាតាឡុកជំនាញ គម្រោង auth) — ត្រូវបាន cache ជាសាធារណៈរយៈពេល 1h។ មិនតម្រូវឱ្យមាន auth ទេ។
-
 ### ឧបករណ៍ជំនួយ REST
 
 | វិធីសាស្ត្រ | Path                         | ការពិពណ៌នា                                                                                                       |
 | ----------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/a2a/status`            | ស្ថានភាពបើក A2A + ស្ថិតិកិច្ចការ + សេចក្ដីសង្ខេបកាត agent ដែលបាន cache                                           |
 | GET         | `/api/a2a/tasks`             | រាយកិច្ចការ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST        | `/api/a2a/tasks`             | (មិនទាន់ត្រូវបានអនុវត្តជា REST helper ទេ — បង្កើតតាម JSON-RPC `message/send`)                                    |
 | GET         | `/api/a2a/tasks/[id]`        | ទាញយកកិច្ចការមួយ                                                                                                 |

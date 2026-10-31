@@ -1880,48 +1880,10 @@ OmniRoute menyertakan server Model Context Protocol tertanam dengan 3 transport 
 
 OmniRoute menyediakan endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 serta pembungkus REST untuk keperluan inspeksi/dasbor.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opsional kecuali OMNIROUTE_API_KEY ditetapkan
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metode yang didukung (semuanya bergantung pada `settings.a2aEnabled`):
-
-| Metode           | Deskripsi                                                                  |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Eksekusi keterampilan sinkron; mengembalikan `{task, artifacts, metadata}` |
-| `message/stream` | Eksekusi SSE streaming untuk kumpulan keterampilan yang sama               |
-| `tasks/get`      | Mengambil tugas berdasarkan `taskId`                                       |
-| `tasks/cancel`   | Membatalkan tugas berdasarkan `taskId`                                     |
-
-Keterampilan bawaan: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kartu Agen
-
-```bash
-GET /.well-known/agent.json
-```
-
-Mengembalikan kartu agen A2A publik (nama, deskripsi, kapabilitas, katalog keterampilan, skema autentikasi) — di-cache secara publik selama 1 jam. Tidak memerlukan autentikasi.
-
 ### Pembantu REST
 
 | Metode | Path                         | Deskripsi                                                                                                               |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Status aktif A2A + statistik tugas + ringkasan kartu agen yang di-cache                                                 |
 | GET    | `/api/a2a/tasks`             | Mencantumkan tugas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Tidak diimplementasikan sebagai pembantu REST — buat melalui JSON-RPC `message/send`)                                  |
 | GET    | `/api/a2a/tasks/[id]`        | Mengambil satu tugas                                                                                                    |

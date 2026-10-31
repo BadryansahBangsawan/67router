@@ -390,34 +390,6 @@
       "description": "Ndekọ nyocha MCP (aha ọzọ maka audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Depụta nkà A2A dịnụ site na kaadị onye nnọchi anya"
-    },
-    "invoke": {
-      "description": "Kpọọ nkà A2A ma weghachite ID ọrụ ahụ",
-      "input": "Ihe JSON ntinye",
-      "input_file": "Ụzọ faịlụ ntinye JSON",
-      "wait": "Chere ka ọrụ ahụ gwụ tupu ịlaghachi",
-      "timeout": "Oge njedebe ichere ka ọ gwụ na ms (ndabara: 60000)"
-    },
-    "tasks": {
-      "description": "Jikwaa ọrụ A2A",
-      "list": {
-        "status": "Jiri ọkwa nyochaa",
-        "skill": "Jiri ID nkà nyochaa"
-      },
-      "watch": {
-        "description": "Na-ajụgharị ọkwa ọrụ ruo mgbe ọ gwụ"
-      },
-      "stream": {
-        "description": "Ziga mmemme mmezu ọrụ n'usoro site na SSE"
-      },
-      "logs": {
-        "description": "Gosi ozi na artefact ọrụ"
-      }
-    }
-  },
   "policy": {
     "description": "Jikwaa iwu ikike OmniRoute",
     "list": {

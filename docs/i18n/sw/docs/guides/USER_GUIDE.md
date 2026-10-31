@@ -1238,8 +1238,6 @@ Tumia URL ya SSE `http://localhost:20128/api/mcp/sse` na ufunguo wa API wa Beare
 
 ### Mawanda
 
-Kwa sasa MCP inafafanua mawanda 32 yenye majina. Kila ufunguo wa Bearer unaweza kuwekewa kikomo cha mawanda mahususi — angalia [MCP-SERVER.md](../frameworks/MCP-SERVER.md) kwa orodha rasmi ya mawanda na zana, na [A2A-SERVER.md](../frameworks/A2A-SERVER.md) kwa skema ya JSON-RPC.
-
 ---
 
 ## 🧠 Mfumo wa Ujuzi
@@ -1248,7 +1246,6 @@ OmniRoute hutoa **mfumo wa ujuzi** unaoweza kupanuliwa (`src/lib/skills/`) ili m
 
 - **Kiolesura cha Marketplace** — Vinjari na usakinishe ujuzi kupitia **Dashboard → Skills**
 - **Mawanda kwa kila ufunguo** — Dhibiti ni funguo zipi za API zinazoweza kuitisha ujuzi upi
-- **Ujuzi maalum** — Weka faili ya TypeScript katika `src/lib/a2a/skills/`, isajili, na mara moja itaweza kuitishwa kupitia A2A
 
 Rejeleo kamili: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # Rejesha kutoka kwenye picha ya muda
 omniroute health                   # Afya ya kina (vikataji, akiba, kumbukumbu)
 omniroute quota                    # Matumizi ya kiwango cha mtoa huduma
 omniroute mcp status               # Hali ya seva ya MCP
-omniroute a2a status               # Hali ya seva ya A2A
 omniroute tunnel list|create|stop  # Vichuguu vya Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Weka upya nenosiri la msimamizi
 omniroute --mcp                    # Anzisha seva ya MCP kupitia stdio

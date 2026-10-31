@@ -750,7 +750,6 @@ omniroute cache                        # Starea cache-ului
 omniroute cache clear                  # Golește cache-urile semantice și de semnături
 
 omniroute mcp status | restart         # Starea / repornirea serverului MCP
-omniroute a2a status | card            # Starea serverului A2A / fișa agentului
 
 omniroute tunnel list | create | stop  # Gestionează tunelurile (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Inspectează / setează variabilele de mediu (temporar)

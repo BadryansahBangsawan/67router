@@ -127,4 +127,3 @@ cible.
 - [Protocoles d’agents](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contrats de lancement des CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Outils CLI](../reference/CLI-TOOLS.md)
-- [Serveur A2A](./A2A-SERVER.md)

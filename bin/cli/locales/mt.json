@@ -390,34 +390,6 @@
       "description": "Reġistru ta' verifika MCP (alias għal audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Lista l-ħiliet A2A disponibbli mill-karta tal-aġent"
-    },
-    "invoke": {
-      "description": "Sejjaħ ħila A2A u rritorna l-ID tal-kompitu",
-      "input": "Oġġett JSON ta' input",
-      "input_file": "Triq għal fajl JSON ta' input",
-      "wait": "Stenna għat-tlestija tal-kompitu qabel ma tirritorna",
-      "timeout": "Timeout ta' stennija għat-tlestija f'ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Immaniġġja l-kompiti A2A",
-      "list": {
-        "status": "Iffiltra bl-istatus",
-        "skill": "Iffiltra bl-ID tal-ħila"
-      },
-      "watch": {
-        "description": "Iċċekkja l-istatus tal-kompitu sakemm jitlesta"
-      },
-      "stream": {
-        "description": "Stream avvenimenti ta' eżekuzzjoni tal-kompitu permezz ta' SSE"
-      },
-      "logs": {
-        "description": "Uri messaġġi u artifacts tal-kompitu"
-      }
-    }
-  },
   "policy": {
     "description": "Immaniġġja l-politiki ta' awtorizzazzjoni OmniRoute",
     "list": {

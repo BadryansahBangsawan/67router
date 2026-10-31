@@ -20,38 +20,6 @@ Visas trīs saskarnes ir neatkarīgas — izvēlieties jebkuru to kombināciju.
 
 ## Lēmumu koks
 
-## 1. A2A — Agent-to-Agent
-
-**Specifikācija:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute galapunkts:** `POST /a2a` (JSON-RPC 2.0)
-**Aģenta karte:** `GET /.well-known/agent.json`
-
-### Kad izmantot
-
-- Veidojot vairāku aģentu sistēmu, kurā OmniRoute ir viens no sadarbības dalībniekiem
-- Nodrošinot OmniRoute maršrutēšanas iespējas (`smart-routing`, `quota-management` u.c.) aģentiem tādos ietvaros kā Google ADK vai vispārīgos aģentu tīklos
-- Ietverot OmniRoute standarta atklāšanas un izsaukšanas saskarnē
-
-### Metodes
-
-- `message/send` — iesniegt ziņojumu un saņemt sinhronu atbildi
-- `message/stream` — iesniegt ziņojumu un saņemt SSE straumētus progresa notikumus
-- `tasks/get` — nolasīt uzdevumu pēc ID
-- `tasks/cancel` — atcelt izpildē esošu uzdevumu
-
-### Iebūvētās prasmes (6)
-
-- `smart-routing` — maršrutēt uzvedni, izmantojot optimālo kombināciju
-- `quota-management` — ziņot par katra nodrošinātāja kvotas stāvokli
-- `provider-discovery` — uzskaitīt instalētos nodrošinātājus un to iespējas
-- `cost-analysis` — novērtēt pieprasījuma vai sarunas izmaksas
-- `health-report` — apkopot katra nodrošinātāja slēdža, nogaidīšanas perioda un bloķēšanas stāvokli
-- `list-capabilities` — uzskaitīt aģenta pieejamās prasmes un metadatus
-
-### Padziļināta informācija
-
-Transporta informāciju, aģenta kartes struktūru, uzdevumu TTL konfigurāciju un jaunu prasmju pievienošanas veidni skatiet dokumentā [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — CLI aģentu reģistrs
 
 **OmniRoute galapunkts:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ POST pieprasījuma pamatteksta struktūra (`customAgentBodySchema` failā `src/a
 
 ## Integrācijas piemēri
 
-### OmniRoute A2A iespēju atklāšana
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Atgriež aģenta karti ar visām 6 prasmēm, transportiem un versiju.
-
-### OmniRoute izsaukšana kā A2A aģentam
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Instalēto CLI aģentu uzskaitīšana, izmantojot ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Skatiet arī
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — padziļināts A2A apskats
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ārējo CLI integrācijas (izmanto ACP)
 - [SKILLS.md](./SKILLS.md) — prasmju ietvars (atšķiras no A2A prasmēm — lokāla izpildes smilškaste)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — galapunktu atsauce

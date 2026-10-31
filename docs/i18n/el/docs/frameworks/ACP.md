@@ -119,4 +119,3 @@ frame περιορίζεται σε 2 MiB byte πριν από την ανάλυ
 - [Πρωτόκολλα agents](./AGENT_PROTOCOLS_GUIDE.md)
 - [Συμβάσεις εκκίνησης CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Εργαλεία CLI](../reference/CLI-TOOLS.md)
-- [Διακομιστής A2A](./A2A-SERVER.md)

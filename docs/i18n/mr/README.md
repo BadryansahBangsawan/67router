@@ -586,7 +586,6 @@ Radar वापरणे ऐच्छिक असून तो केवळ GET
 - **🔑 प्रति-की राउटिंग नियंत्रण** — `forcedModel` वापरून API की एका मॉडेल किंवा कॉम्बोला पिन करा, आणि कीची मॉडेल्स व कॉम्बो अणुक्रियेने (atomically) जोडा किंवा काढा (`/api/keys/{id}/access`). → [API संदर्भ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ अधिक सूक्ष्म PII नियंत्रणे** — प्रति-प्रकार निवड, 20 पर्यंत प्रमाणित कस्टम मास्किंग नमुने आणि प्रति-प्रकार शोध काउंटर; मास्किंग स्वतः opt-inच राहते. → [गार्डरेला](docs/security/GUARDRAILS.md)
 - **🌍 67 भाषा** — डॅशबोर्ड, डॉक्स मिरर आणि CLI, जिथे `npm run i18n:add-locale` एका आज्ञेने सर्वत्र भाषा जोडते. → [i18n मार्गदर्शक](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — तुमच्या एजंट फ्लीटकडे इनबाउंड A2A डेलिगेशन, Agent Card वर Conductor कौशल्ये, आणि Faro push-to-talk व्हॉइस चॅटसह डॅशबोर्ड पॅनेल. → [A2A सर्व्हर](docs/frameworks/A2A-SERVER.md)
 - **🛂 अनुकूल प्रवेश व ओव्हरलोड संरक्षण** — जड चॅट विनंत्या 503 टाकण्याऐवजी रांगेत उभ्या राहतात, प्रति कनेक्शन अणुक्रिय (atomic) RPM रोलिंग लीजसह. → [रेझिलियन्स मार्गदर्शक](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ कॅनोनिकल `/v1/models` क्रम** — प्रत्येक प्रोव्हायडरसाठी एक सलग प्रोव्हायडर-गटबद्ध ब्लॉक (कॉम्बो प्रथम पिन केलेले), प्रत्येक कॅटलॉग स्रोतांमध्ये स्थिर. → [API संदर्भ](docs/reference/API_REFERENCE.md)
 - **🗜️ कॉम्प्रेशन हार्डनिंग** — डीफॉल्ट-ऑन इन्फ्लेशन गार्ड, DE / FR / JA + चीनी (wényán) साठी Caveman पॅक्स, Gradle व .NET साठी RTK फिल्टर. → [कॉम्प्रेशन](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ OmniRoute **MCP**, **A2A**, **REST API**, **webhooks** किंवा **remote 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor किंवा कोणत्याही MCP क्लायंटमध्ये जोडा</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">रिमोट MCP — <b>110 टूल्स</b>, 33 स्कोप्स (अंमलबजावणी ऐच्छिक), संपूर्ण ऑडिट ट्रेल</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">स्ट्रीमिंग MCP ट्रान्सपोर्ट</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">एजंट-टू-एजंट, <b>JSON-RPC 2.0</b> + SSE, 6 कौशल्ये</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-सुसंगत — चॅट, एम्बेडिंग्ज, प्रतिमा, ऑडिओ, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">रिक्वेस्ट / कोटा इव्हेंट्स Slack, Discord, Telegram किंवा कोणत्याही URL कडे पुश करा</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">स्कोप केलेल्या अॅक्सेस टोकन्सद्वारे रिमोट इन्स्टन्स चालवा</td></tr>
@@ -915,8 +913,6 @@ OmniRoute **MCP**, **A2A**, **REST API**, **webhooks** किंवा **remote 
 # MCP द्वारे Claude Code ला संपूर्ण OmniRoute टूलसेट द्या:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP सर्व्हर](docs/frameworks/MCP-SERVER.md) · [A2A सर्व्हर](docs/frameworks/A2A-SERVER.md) · [एजंट प्रोटोकॉल्स](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 देखील �
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP सर्व्हर</a></b></td><td>110 MCP साधने, IDE कॉन्फिगरेशन, Python/TS/Go क्लायंट</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP सर्व्हर मार्गदर्शक</a></b></td><td>MCP स्थापना, ट्रान्सपोर्ट आणि साधन संदर्भ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A सर्व्हर</a></b></td><td>JSON-RPC 2.0 प्रोटोकॉल, कौशल्ये, स्ट्रीमिंग, कार्य व्यवस्थापन</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A सर्व्हर मार्गदर्शक</a></b></td><td>A2A एजंट कार्ड, कार्ये, कौशल्ये आणि स्ट्रीमिंग</td></tr>
 </table>
 
 ### 📋 प्रकल्प आणि गुणवत्ता

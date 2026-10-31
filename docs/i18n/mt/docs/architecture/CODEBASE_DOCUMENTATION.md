@@ -101,8 +101,6 @@ Segimenti ta' livell ta' fuq taħt `src/app/`:
 | Path                                                                          | Għan                                                          |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `api/`                                                                        | Rotot kollha tal-API HTTP (ara l-breakdown t'hawn taħt)       |
-| `a2a/`                                                                        | Tpunkt tad-dħul A2A JSON-RPC 2.0 (`POST /a2a`)                |
-| `.well-known/agent.json/`                                                     | Dokument tad-diskoverija tal-Kard tal-Aġent A2A               |
 | `(dashboard)/`                                                                | Interface tal-dashboard (grupp ta' rotta, l-ebda prefiss URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Flussi tal-awtentikazzjoni                                    |
 | `landing/`                                                                    | Paġna ta' marketing/landing                                   |
@@ -774,13 +772,6 @@ Ara [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) u t-taqsima ddedikata f'
 4. Żid testijiet taħt `open-sse/mcp-server/__tests__/`.
 5. Aġġorna [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Żid ħiliet A2A ġdida
-
-Ara [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Il-ħiliet jgħixu fi
-`src/lib/a2a/skills/` u ġew irreġistrati permezz tal-manager tal-ħiliet A2A.
-
----
-
 ## 11. Konvenzjonijiet
 
 - **Stil tal-kodice**: indentazzjoni ta' 2 spazji, virgoletti doppji, wisa' ta' 100 karattru, punti u virgoli,
@@ -843,7 +834,6 @@ Ara [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Il-ħili
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — dfin fil-fond ta' l-isaffar tal-ċirkuwit, il-ħin ta' mistrieħ, u l-blokk.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — skoring u strateġiji tal-Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — katalogu sħiħ ta' għodod MCP + trasporti.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — għarfien u għarfien tal-protokoll A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — xogħol RTK + xogħol tal-Kavman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integrazzjonijiet CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (jekk preżenti), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — miri ta' manipulazzjoni.

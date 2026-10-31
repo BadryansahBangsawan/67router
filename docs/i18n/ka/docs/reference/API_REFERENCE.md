@@ -1880,48 +1880,10 @@ OmniRoute-ს მოჰყვება ჩაშენებული Model Cont
 
 OmniRoute უზრუნველყოფს A2A (აგენტებს შორის) JSON-RPC 2.0 ბოლო წერტილს, ასევე REST გარსს ინსპექტირებისა და საინფორმაციო დაფის გამოყენებისთვის.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # არასავალდებულოა, თუ OMNIROUTE_API_KEY არ არის დაყენებული
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-მხარდაჭერილი მეთოდები (ყველა დამოკიდებულია `settings.a2aEnabled`-ზე):
-
-| მეთოდი           | აღწერა                                                              |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | უნარის სინქრონული შესრულება; აბრუნებს `{task, artifacts, metadata}` |
-| `message/stream` | იმავე უნარების ნაკრების ნაკადური SSE შესრულება                      |
-| `tasks/get`      | დავალების მიღება `taskId`-ის მიხედვით                               |
-| `tasks/cancel`   | დავალების გაუქმება `taskId`-ის მიხედვით                             |
-
-ჩაშენებული უნარები: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### აგენტის ბარათი
-
-```bash
-GET /.well-known/agent.json
-```
-
-აბრუნებს საჯარო A2A აგენტის ბარათს (სახელი, აღწერა, შესაძლებლობები, უნარების კატალოგი, ავტორიზაციის სქემა) — საჯაროდ კეშირდება 1 საათით. ავტორიზაცია საჭირო არ არის.
-
 ### REST დამხმარე საშუალებები
 
 | მეთოდი | მისამართი                    | აღწერა                                                                                                               |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A-ის ჩართულობის სტატუსი + დავალებების სტატისტიკა + კეშირებული აგენტის ბარათის შეჯამება                             |
 | GET    | `/api/a2a/tasks`             | დავალებების სია — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (არ არის იმპლემენტირებული REST დამხმარე საშუალების სახით — შექმენით JSON-RPC `message/send`-ის მეშვეობით)            |
 | GET    | `/api/a2a/tasks/[id]`        | ერთი დავალების მიღება                                                                                                |

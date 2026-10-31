@@ -20,38 +20,6 @@ Le tre interfacce sono indipendenti: puoi sceglierne qualsiasi combinazione.
 
 ## Albero decisionale
 
-## 1. A2A — Da agente ad agente
-
-**Specifica:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Scheda agente:** `GET /.well-known/agent.json`
-
-### Quando usarlo
-
-- Creazione di un sistema multi-agente in cui OmniRoute è uno dei peer
-- Esposizione dell'intelligenza di routing di OmniRoute (routing intelligente, gestione delle quote, ecc.) ad agenti in framework come Google ADK o in reti generiche di agenti
-- Integrazione di OmniRoute dietro un'interfaccia standard di rilevamento e invocazione
-
-### Metodi
-
-- `message/send` — invia un messaggio e riceve una risposta sincrona
-- `message/stream` — invia un messaggio e riceve eventi di avanzamento tramite streaming SSE
-- `tasks/get` — legge un'attività tramite ID
-- `tasks/cancel` — annulla un'attività in esecuzione
-
-### Funzionalità integrate (6)
-
-- `smart-routing` — instrada un prompt tramite la combinazione ottimale
-- `quota-management` — segnala lo stato delle quote per ciascun provider
-- `provider-discovery` — elenca i provider installati e le relative funzionalità
-- `cost-analysis` — stima il costo di una richiesta/conversazione
-- `health-report` — aggrega lo stato di breaker/cooldown/lockout per ciascun provider
-- `list-capabilities` — elenca le funzionalità disponibili dell'agente e i relativi metadati
-
-### Approfondimento
-
-Consulta [A2A-SERVER.md](./A2A-SERVER.md) per i dettagli sul trasporto, la struttura della scheda agente, la configurazione del TTL delle attività e il modello per aggiungere nuove funzionalità.
-
 ## 2. ACP — Registro degli agenti CLI
 
 **Endpoint OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Struttura del body per POST (`customAgentBodySchema` in `src/app/api/acp/agents/
 
 ## Esempi di integrazione
 
-### Scoprire le funzionalità A2A di OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Restituisce la scheda dell'agente con tutte e 6 le skill, i trasporti e la versione.
-
-### Chiamare OmniRoute come agente A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Instrada questo prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Elencare gli agenti CLI installati tramite ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Vedi anche
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Approfondimento su A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrazioni CLI esterne (utilizzano ACP)
 - [SKILLS.md](./SKILLS.md) — Framework delle skill (diverse dalle skill A2A: sandbox di esecuzione locale)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — Riferimento degli endpoint

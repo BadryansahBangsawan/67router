@@ -143,8 +143,6 @@ src/
 | `app/api/` (ไม่ใช่ v1)                                                       | เส้นทางการจัดการ/ผู้ดูแลระบบ (ประมาณ 60 ไดเรกทอรี: ผู้ให้บริการ, คอมโบ, การตั้งค่า, mcp, a2a, การประเมินผล, หน่วยความจำ, ทักษะ, เว็บฮุก, การปฏิบัติตามข้อกำหนด, ความยืดหยุ่น, การตรวจสอบ, ทันเนล, เครื่องมือ CLI ฯลฯ)                                                                                                 |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 เส้นทาง (การควบคุมเซิร์ฟเวอร์, สถานะเอเจนต์/DNS/การแมป, การข้าม, ใบรับรอง, upstream-CA) LOCAL_ONLY + SPAWN_CAPABLE ดู `docs/frameworks/AGENTBRIDGE.md §7`                                                                                                                                   |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — มากกว่า 16 เส้นทาง (คำขอ, เซสชัน, โฮสต์, โหมดการจับข้อมูล, การส่งออก, ws) LOCAL_ONLY + SPAWN_CAPABLE ดู `docs/frameworks/TRAFFIC_INSPECTOR.md §8`                                                                                                                                   |
-| `app/a2a/`                                                                   | จุดเข้าสำหรับ A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (การค้นหา)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | หน้า UI แดชบอร์ด (มากกว่า 50 ส่วน, ไฟล์ page.tsx ประมาณ 118 ไฟล์: ผู้ให้บริการ, คอมโบ, การตั้งค่า, หน่วยความจำ, ทักษะ, เว็บฮุก, การประเมินผล, การตรวจสอบ, แบตช์, แคช, ค่าใช้จ่าย, สถานะระบบ, ระบบ, กิจกรรม ฯลฯ)                                                                                                       |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI ของ Search Tools Studio (3 แท็บ: ค้นหา/ดึงข้อมูล/เปรียบเทียบ + SearchConceptCard + ProviderCatalog) — ดู `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (แผน 21): `page.tsx` (เชลล์แบบ 3 แท็บ), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | เอกสาร                                       | วัตถุประสงค์                                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                              | เซิร์ฟเวอร์ MCP: เครื่องมือ 110 รายการ, ทรานสปอร์ต 3 แบบ, ขอบเขต 33 รายการ, REST endpoints |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, สกิล 6 รายการ, ตัวช่วย REST, agent card                                |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | คู่มือแบบรวม: A2A เทียบกับ ACP เทียบกับ Cloud Agents                                       |
 | `SKILLS.md`                                  | เฟรมเวิร์กสกิล (มีมาให้ในตัว + มาร์เก็ตเพลส + SkillsSH + แซนด์บ็อกซ์)                      |
 | `RADAR.md`                                   | โอเวอร์เลย์แค็ตตาล็อกโมเดลฟรีของ Radar (`RADAR_ENABLED`, ปิดไว้โดยค่าเริ่มต้น)             |
@@ -567,7 +564,6 @@ open-sse/
 - **กำลังเพิ่ม provider?** ทำตาม `docs/architecture/ARCHITECTURE.md § Adding a New Provider` และตรวจสอบเทียบกับ `docs/reference/PROVIDER_REFERENCE.md`
 - **กำลังเพิ่ม route?** ดู `docs/architecture/ARCHITECTURE.md § Adding a New API Route` และ `src/shared/validation/schemas.ts`
 - **กำลังเพิ่มเครื่องมือ MCP?** ดู `docs/frameworks/MCP-SERVER.md § Adding a Tool`
-- **กำลังเพิ่มสกิล A2A?** ดู `docs/frameworks/A2A-SERVER.md § Adding a New Skill`
 - **กำลังรันภายในเครื่อง?** ดู `docs/guides/SETUP_GUIDE.md`
 - **กำลัง deploy?** ดู `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`
 - **กำลัง release?** ดู `docs/ops/RELEASE_CHECKLIST.md` (และสกิล Claude Code `/generate-release-cc`)

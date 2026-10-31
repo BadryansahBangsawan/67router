@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Ìwé MCP kíkún:** [README Olupin MCP](../../open-sse/mcp-server/README.md) — ohun èlò 110, àwọn àtòpọ̀ IDE, àti àwọn oníbàárà Python/TS/Go.
 
-### Ìṣètò A2A (Ìlànà Aṣojú-sí-Aṣojú)
-
-Ṣàrídájú Káàdì Aṣojú náà:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Fi iṣẹ́ kan ránṣẹ́:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Ìwé A2A kíkún:** [README Olupin A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, àwọn ọgbọ́n, ìṣànwọ́lé, àti ìgbésí-ayé iṣẹ́.
-
----
-
 ## Ìṣètò Àkókò Ìdádúró
 
 ### Àwọn Àkókò Ìdádúró Ìpìlẹ̀

@@ -143,8 +143,6 @@ src/
 | `app/api/` (bukan v1)                                                        | Laluan pengurusan/pentadbir (~60 direktori: penyedia, gabungan, tetapan, mcp, a2a, penilaian, memori, kemahiran, webhook, pematuhan, ketahanan, pemantauan, terowong, alat CLI, dll.)                                                                                                                                  |
 | `app/api/tools/agent-bridge/`                                                | API REST AgentBridge — 12 laluan (kawalan pelayan, keadaan/DNS/pemetaan ejen, pintasan, sijil, CA huluan). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                      |
 | `app/api/tools/traffic-inspector/`                                           | API REST + WS Traffic Inspector — 16+ laluan (permintaan, sesi, hos, mod tangkapan, eksport, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                         |
-| `app/a2a/`                                                                   | Titik masuk A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                             |
-| `app/.well-known/agent.json/`                                                | Kad Ejen A2A (penemuan)                                                                                                                                                                                                                                                                                                |
 | `app/(dashboard)/dashboard/`                                                 | Halaman UI papan pemuka (50+ bahagian, ~118 fail page.tsx: penyedia, gabungan, tetapan, memori, kemahiran, webhook, penilaian, audit, kelompok, cache, kos, kesihatan, sistem, aktiviti, dll.)                                                                                                                         |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI Search Tools Studio (3 tab: Cari/Kikis/Banding + SearchConceptCard + ProviderCatalog) — lihat `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                              |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (pelan 21): `page.tsx` (kerangka 3 tab), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Dokumen                                       | Tujuan                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                               | Pelayan MCP: 110 alat, 3 pengangkutan, 33 skop, titik akhir REST              |
-| `A2A-SERVER.md`                               | A2A v0.3: JSON-RPC, 6 kemahiran, pembantu REST, kad ejen                      |
 | `AGENT_PROTOCOLS_GUIDE.md`                    | Panduan bersepadu: A2A lwn. ACP lwn. Ejen Awan                                |
 | `SKILLS.md`                                   | Rangka kerja kemahiran (terbina dalam + pasaran + SkillsSH + kotak pasir)     |
 | `RADAR.md`                                    | Lapisan katalog model percuma Radar (`RADAR_ENABLED`, dimatikan secara lalai) |
@@ -567,7 +564,6 @@ Tidak disertakan dalam output `npm pack`. Lihat `.npmignore`.
 - **Menambah penyedia?** Ikuti `docs/architecture/ARCHITECTURE.md § Adding a New Provider` + semak silang dengan `docs/reference/PROVIDER_REFERENCE.md`.
 - **Menambah laluan?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **Menambah alat MCP?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **Menambah kemahiran A2A?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Menjalankan secara setempat?** `docs/guides/SETUP_GUIDE.md`.
 - **Melaksanakan penggunaan?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Membuat keluaran?** `docs/ops/RELEASE_CHECKLIST.md` (dan kemahiran Claude Code `/generate-release-cc`).

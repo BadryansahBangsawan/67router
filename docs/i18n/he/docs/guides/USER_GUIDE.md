@@ -1238,8 +1238,6 @@ OmniRoute הוא גם **שרת MCP** (פרוטוקול הקשר למודל) וג
 
 ### תחומי הרשאה
 
-MCP מגדיר כעת 32 תחומי הרשאה בעלי שם. ניתן להגביל כל מפתח Bearer לתחומי הרשאה מסוימים — ראו [MCP-SERVER.md](../frameworks/MCP-SERVER.md) לקבלת הרשימה המוסמכת של תחומי ההרשאה והכלים, ואת [A2A-SERVER.md](../frameworks/A2A-SERVER.md) לקבלת סכמת JSON-RPC.
-
 ---
 
 ## 🧠 מערכת המיומנויות
@@ -1248,7 +1246,6 @@ OmniRoute חושפת **מסגרת מיומנויות הניתנת להרחבה**
 
 - **ממשק משתמש של שוק המיומנויות** — עיינו במיומנויות והתקינו אותן דרך **לוח הבקרה → מיומנויות**
 - **תחומים לפי מפתח** — הגבילו אילו מפתחות API יכולים להפעיל אילו מיומנויות
-- **מיומנויות מותאמות אישית** — הוסיפו קובץ TypeScript אל `src/lib/a2a/skills/`, רשמו אותו, והוא יהיה זמין מיד להפעלה דרך A2A
 
 תיעוד מלא: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # שחזור מתמונת מצב
 omniroute health                   # מצב תקינות מפורט (מנתקי מעגל, מטמון, זיכרון)
 omniroute quota                    # שימוש במכסת הספק
 omniroute mcp status               # מצב שרת MCP
-omniroute a2a status               # מצב שרת A2A
 omniroute tunnel list|create|stop  # מנהרות Cloudflare/Tailscale/ngrok
 omniroute reset-password           # איפוס סיסמת מנהל המערכת
 omniroute --mcp                    # הפעלת שרת MCP דרך stdio

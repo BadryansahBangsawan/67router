@@ -390,34 +390,6 @@
       "description": "Nhật ký kiểm tra MCP (bí danh của audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Liệt kê các kỹ năng A2A khả dụng từ thẻ tác nhân"
-    },
-    "invoke": {
-      "description": "Gọi một kỹ năng A2A và trả về ID tác vụ",
-      "input": "Đối tượng đầu vào JSON",
-      "input_file": "Đường dẫn đến tệp đầu vào JSON",
-      "wait": "Chờ tác vụ hoàn tất trước khi trả về",
-      "timeout": "Thời gian chờ hoàn tất tính bằng mili giây (mặc định: 60000)"
-    },
-    "tasks": {
-      "description": "Quản lý tác vụ A2A",
-      "list": {
-        "status": "Lọc theo trạng thái",
-        "skill": "Lọc theo ID kỹ năng"
-      },
-      "watch": {
-        "description": "Thăm dò trạng thái tác vụ cho đến khi hoàn tất"
-      },
-      "stream": {
-        "description": "Truyền trực tiếp các sự kiện thực thi tác vụ qua SSE"
-      },
-      "logs": {
-        "description": "Hiển thị thông báo và thành phần tạo tác của tác vụ"
-      }
-    }
-  },
   "policy": {
     "description": "Quản lý các chính sách ủy quyền của OmniRoute",
     "list": {

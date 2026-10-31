@@ -519,7 +519,7 @@ Radar ni ya kujiunga kwa hiari na hutumia GET pekee. Kiteja cha OmniRoute hakipa
 - **🔑 Udhibiti wa uelekezaji kwa kila ufunguo** — bamba ufunguo wa API kwa modeli moja au combo kwa `forcedModel`, na ongeza au ondoa modeli na combo za ufunguo kwa mpigo mmoja (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Vidhibiti bora vya PII** — uteuzi kwa kila aina, hadi mifumo 20 ya ufichaji maalum iliyothibitishwa na vihesabio vya utambuzi kwa kila aina; ufichaji wenyewe unabaki wa hiari. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 Lugha 67** — dashibodi, nakala za nyaraka na CLI, huku `npm run i18n:add-locale` ikiongeza lugha kila mahali kwa amri moja. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ukabidhi wa A2A unaoingia kwa kundi lako la maajenti, ujuzi wa Conductor kwenye Kadi ya Ajenti, na paneli ya dashibodi yenye gumzo la sauti la Faro la kushinikiza-kuzungumza. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ukabidhi wa A2A unaoingia kwa kundi lako la maajenti, ujuzi wa Conductor kwenye Kadi ya Ajenti, na paneli ya dashibodi yenye gumzo la sauti la Faro la kushinikiza-kuzungumza.
 - **🛂 Ukubalifu adaptif na ulinzi dhidi ya mzigo kupita kiasi** — maombi mazito ya gumzo hupanga foleni badala ya kurudisha 503, na ukodishaji wa RPM unaozunguka kwa kila muunganisho. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Mpangilio wa kikanoni wa `/v1/models`** — kizuizi kimoja mfululizo kilichopangwa kwa mtoa huduma kwa kila mtoa huduma (combo zimebambwa kwanza), thabiti katika kila chanzo cha katalogi. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Uimarishaji wa mbano** — kinga ya upanuzi iliyowashwa kwa chaguo-msingi, pakiti za Caveman kwa DE / FR / JA + Kichina (wényán), vichujio vya RTK kwa Gradle na .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -838,7 +838,6 @@ Fichua OmniRoute kupitia **MCP**, **A2A**, **REST API**, **webhooks** au **CLI y
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Unganisha na Claude Desktop, Cursor au kiteja chochote cha MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP ya mbali — <b>zana 110</b>, wigo 33 (utekelezaji wa hiari), kumbukumbu kamili ya ukaguzi</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Usafirishaji wa MCP wa kutiririsha</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Wakala-kwa-wakala, <b>JSON-RPC 2.0</b> + SSE, ujuzi 6</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Inayooana na OpenAI — gumzo, embeddings, picha, sauti, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Tuma matukio ya maombi / quota kwenda Slack, Discord, Telegram au URL yoyote</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI ya mbali</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Dhibiti instance ya mbali kwa tokeni za ufikiaji zenye wigo</td></tr>
@@ -848,8 +847,6 @@ Fichua OmniRoute kupitia **MCP**, **A2A**, **REST API**, **webhooks** au **CLI y
 # Ipe Claude Code seti kamili ya zana za OmniRoute kupitia MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Seva ya MCP](docs/frameworks/MCP-SERVER.md) · [Seva ya A2A](docs/frameworks/A2A-SERVER.md) · [Itifaki za Mawakala](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1315,7 +1312,6 @@ Vipimo kanoniki mnamo 2026-10-18: **video 1.976 za kipekee** · **mara 20.220.28
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Seva ya MCP</a></b></td><td>Zana 110 za MCP, usanidi wa IDE, wateja wa Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Mwongozo wa Seva ya MCP</a></b></td><td>Usakinishaji wa MCP, njia za usafirishaji, na rejeleo la zana</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Seva ya A2A</a></b></td><td>Itifaki ya JSON-RPC 2.0, ujuzi, utiririshaji, usimamizi wa kazi</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Mwongozo wa Seva ya A2A</a></b></td><td>Kadi ya wakala wa A2A, kazi, ujuzi, na utiririshaji</td></tr>
 </table>
 
 ### 📋 Mradi na Ubora

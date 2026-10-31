@@ -586,7 +586,7 @@ Radar ಬಳಸುವುದು ಐಚ್ಛಿಕವಾಗಿದ್ದು, ಅ�
 - **🔑 ಪ್ರತಿ-ಕೀಲಿ ರೂಟಿಂಗ್ ನಿಯಂತ್ರಣ** — `forcedModel` ಮೂಲಕ API ಕೀಲಿಯನ್ನು ಒಂದು ಮಾಡೆಲ್ ಅಥವಾ ಕಾಂಬೋಗೆ ಪಿನ್ ಮಾಡಿ, ಮತ್ತು ಕೀಲಿಯ ಮಾಡೆಲ್ಗಳು ಹಾಗೂ ಕಾಂಬೋಗಳನ್ನು ಆಣವಿಕವಾಗಿ ಸೇರಿಸಿ ಅಥವಾ ತೆಗೆದುಹಾಕಿ (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ಸೂಕ್ಷ್ಮ PII ನಿಯಂತ್ರಣಗಳು** — ಪ್ರತಿ-ಪ್ರಕಾರ ಆಯ್ಕೆ, 20 ರವರೆಗೆ ಮೌಲ್ಯೀಕರಿಸಿದ ಕಸ್ಟಮ್ ಮಾಸ್ಕಿಂಗ್ ಪ್ಯಾಟರ್ನ್ಗಳು ಮತ್ತು ಪ್ರತಿ-ಪ್ರಕಾರ ಪತ್ತೆ ಕೌಂಟರ್ಗಳು; ಮಾಸ್ಕಿಂಗ್ ತನ್ನಷ್ಟಕ್ಕೆ ಆಪ್ಟ್-ಇನ್ ಆಗಿಯೇ ಉಳಿಯುತ್ತದೆ. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ಭಾಷೆಗಳು** — ಡ್ಯಾಶ್ಬೋರ್ಡ್, ಡಾಕ್ಸ್ ಮಿರರ್ಗಳು ಮತ್ತು CLI, `npm run i18n:add-locale` ಒಂದೇ ಆಜ್ಞೆಯಲ್ಲಿ ಎಲ್ಲೆಡೆ ಭಾಷೆಯನ್ನು ಸೇರಿಸುತ್ತದೆ. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ನಿಮ್ಮ ಏಜೆಂಟ್ ಫ್ಲೀಟ್ಗೆ ಇನ್ಬೌಂಡ್ A2A ಡೆಲಿಗೇಶನ್, ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಮೇಲೆ Conductor ಸ್ಕಿಲ್ಗಳು, ಮತ್ತು Faro ಪುಶ್-ಟು-ಟಾಕ್ ವಾಯ್ಸ್ ಚಾಟ್ ಅನ್ನು ಒಳಗೊಂಡ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಪ್ಯಾನಲ್. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ನಿಮ್ಮ ಏಜೆಂಟ್ ಫ್ಲೀಟ್ಗೆ ಇನ್ಬೌಂಡ್ A2A ಡೆಲಿಗೇಶನ್, ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಮೇಲೆ Conductor ಸ್ಕಿಲ್ಗಳು, ಮತ್ತು Faro ಪುಶ್-ಟು-ಟಾಕ್ ವಾಯ್ಸ್ ಚಾಟ್ ಅನ್ನು ಒಳಗೊಂಡ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಪ್ಯಾನಲ್.
 - **🛂 ಅಡಾಪ್ಟಿವ್ ಅಡ್ಮಿಷನ್ & ಓವರ್ಲೋಡ್ ರಕ್ಷಣೆ** — ಭಾರವಾದ ಚಾಟ್ ವಿನಂತಿಗಳು 503 ನೀಡುವ ಬದಲು ಸರದಿಯಲ್ಲಿ ನಿಲ್ಲುತ್ತವೆ, ಪ್ರತಿ ಸಂಪರ್ಕಕ್ಕೆ ಆಣವಿಕ RPM ರೋಲಿಂಗ್ ಲೀಸ್ಗಳೊಂದಿಗೆ. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ಕ್ಯಾನೋನಿಕಲ್ `/v1/models` ಕ್ರಮ** — ಪ್ರತಿ ಪ್ರೊವೈಡರ್ಗೆ ಒಂದು ಸತತ ಪ್ರೊವೈಡರ್-ಗುಂಪಿನ ಬ್ಲಾಕ್ (ಕಾಂಬೋಗಳು ಮೊದಲು ಪಿನ್ ಆಗಿರುತ್ತವೆ), ಪ್ರತಿ ಕ್ಯಾಟಲಾಗ್ ಮೂಲದಾದ್ಯಂತ ಸ್ಥಿರ. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ ಕಂಪ್ರೆಶನ್ ಹಾರ್ಡನಿಂಗ್** — ಡೀಫಾಲ್ಟ್-ಆನ್ ಇನ್ಫ್ಲೇಶನ್ ಗಾರ್ಡ್, DE / FR / JA + ಚೈನೀಸ್ (wényán) ಗಾಗಿ Caveman ಪ್ಯಾಕ್ಗಳು, Gradle & .NET ಗಾಗಿ RTK ಫಿಲ್ಟರ್ಗಳು. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ OmniRoute ಅನ್ನು **MCP**, **A2A**, **REST API**, **ವೆಬ್ಹು�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor ಅಥವಾ ಯಾವುದೇ MCP ಕ್ಲೈಂಟ್ಗೆ ಜೋಡಿಸಿ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">ರಿಮೋಟ್ MCP — <b>110 ಪರಿಕರಗಳು</b>, 33 ಸ್ಕೋಪ್ಗಳು (ಜಾರಿಗೊಳಿಸುವಿಕೆಯು ಆಯ್ಕಾಧಾರಿತ), ಸಂಪೂರ್ಣ ಆಡಿಟ್ ಟ್ರೇಲ್</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">ಸ್ಟ್ರೀಮಿಂಗ್ MCP ಟ್ರಾನ್ಸ್ಪೋರ್ಟ್</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ಏಜೆಂಟ್ನಿಂದ ಏಜೆಂಟ್ಗೆ, <b>JSON-RPC 2.0</b> + SSE, 6 ಕೌಶಲ್ಯಗಳು</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-ಹೊಂದಾಣಿಕೆಯ — ಚಾಟ್, ಎಂಬೆಡಿಂಗ್ಗಳು, ಚಿತ್ರಗಳು, ಆಡಿಯೊ, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>ವೆಬ್ಹುಕ್ಗಳು</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ವಿನಂತಿ / ಕೋಟಾ ಈವೆಂಟ್ಗಳನ್ನು Slack, Discord, Telegram ಅಥವಾ ಯಾವುದೇ URL ಗೆ ಪುಶ್ ಮಾಡಿ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>ರಿಮೋಟ್ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">ಸ್ಕೋಪ್ ಮಾಡಲಾದ ಪ್ರವೇಶ ಟೋಕನ್ಗಳೊಂದಿಗೆ ರಿಮೋಟ್ ಇನ್ಸ್ಟೆನ್ಸ್ ಅನ್ನು ನಿರ್ವಹಿಸಿ</td></tr>
@@ -915,8 +914,6 @@ OmniRoute ಅನ್ನು **MCP**, **A2A**, **REST API**, **ವೆಬ್ಹು�
 # MCP ಮೂಲಕ Claude Code ಗೆ ಸಂಪೂರ್ಣ OmniRoute ಪರಿಕರಸಮೂಹವನ್ನು ನೀಡಿ:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP ಸರ್ವರ್](docs/frameworks/MCP-SERVER.md) · [A2A ಸರ್ವರ್](docs/frameworks/A2A-SERVER.md) · [ಏಜೆಂಟ್ ಪ್ರೋಟೋಕಾಲ್ಗಳು](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1376,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 ಕೂಡ ಇದ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP ಸರ್ವರ್</a></b></td><td>110 MCP ಪರಿಕರಗಳು, IDE ಸಂರಚನೆಗಳು, Python/TS/Go ಕ್ಲೈಂಟ್ಗಳು</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP ಸರ್ವರ್ ಮಾರ್ಗದರ್ಶಿ</a></b></td><td>MCP ಸ್ಥಾಪನೆ, ಸಾರಿಗೆ ವಿಧಾನಗಳು ಮತ್ತು ಪರಿಕರ ಉಲ್ಲೇಖ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A ಸರ್ವರ್</a></b></td><td>JSON-RPC 2.0 ಪ್ರೋಟೋಕಾಲ್, ಕೌಶಲ್ಯಗಳು, ಸ್ಟ್ರೀಮಿಂಗ್, ಕಾರ್ಯ ನಿರ್ವಹಣೆ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A ಸರ್ವರ್ ಮಾರ್ಗದರ್ಶಿ</a></b></td><td>A2A ಏಜೆಂಟ್ ಕಾರ್ಡ್, ಕಾರ್ಯಗಳು, ಕೌಶಲ್ಯಗಳು ಮತ್ತು ಸ್ಟ್ರೀಮಿಂಗ್</td></tr>
 </table>
 
 ### 📋 ಪ್ರಾಜೆಕ್ಟ್ ಮತ್ತು ಗುಣಮಟ್ಟ

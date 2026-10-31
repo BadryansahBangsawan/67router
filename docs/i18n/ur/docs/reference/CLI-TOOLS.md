@@ -746,7 +746,6 @@ omniroute cache                        # cache کی حالت
 omniroute cache clear                  # semantic + signature caches صاف کریں
 
 omniroute mcp status | restart         # MCP server کی حالت / دوبارہ شروع کرنا
-omniroute a2a status | card            # A2A server کی حالت / agent card
 
 omniroute tunnel list | create | stop  # tunnels کا نظم کریں (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # env vars کا معائنہ / تعین کریں (عارضی)

@@ -92,7 +92,7 @@ HTTP 400 — Модел '<id>' је модел за генерисање сли�
 Simple Browser-а уместо у спољном прегледачу. Уграђивање се **изричито омогућава на серверу** путем
 `DASHBOARD_ALLOW_EMBED=vscode`, чиме се HTML странице испоручују са
 `frame-ancestors 'self' vscode-webview:` уместо подразумеваног `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Површина API-ја (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) у сваком
+`X-Frame-Options: DENY`. Површина API-ја (`/api`, `/v1`, `/v1beta`, `/healthz`) у сваком
 случају задржава строга заглавља.
 
 > ⚠️ **Ово је опција у време изградње, а не током извршавања.** Next.js компилира `headers()` у манифест

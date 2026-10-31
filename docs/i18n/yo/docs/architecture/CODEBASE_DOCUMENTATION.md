@@ -100,8 +100,6 @@ App Router ń ṣí UI dashboard àti API HTTP gbogbogbò/ìṣàkóso síta.
 | Ipa-ọ̀nà                                                                       | Ète                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- |
 | `api/`                                                                        | Gbogbo àwọn ipa-ọ̀nà API HTTP (wo ìtúpalẹ̀ ní ìsàlẹ̀)  |
-| `a2a/`                                                                        | Endpoint A2A JSON-RPC 2.0 (`POST /a2a`)             |
-| `.well-known/agent.json/`                                                     | Àkọsílẹ̀ ìṣàwárí A2A Agent Card                      |
 | `(dashboard)/`                                                                | UI dashboard (ẹgbẹ́ ipa-ọ̀nà, kò ní ìpele URL níwájú) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Àwọn ìṣàn ìfàṣẹsí                                   |
 | `landing/`                                                                    | Ojú-ewé títajà/ìbẹ̀rẹ̀                                |
@@ -773,13 +771,6 @@ Wo [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) àti abala tí a yà sọ́tọ�
 4. Ṣàfikún àwọn àdánwò lábẹ́ `open-sse/mcp-server/__tests__/`.
 5. Ṣe àfikún sí [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Ṣàfikún ọgbọ́n A2A tuntun
-
-Wo [A2A-SERVER.md § Ṣíṣàfikún Ọgbọ́n Tuntun](../frameworks/A2A-SERVER.md). Àwọn ọgbọ́n wà nínú
-`src/lib/a2a/skills/`, a sì máa ń forúkọsílẹ̀ wọn nípasẹ̀ olùṣàkóso iṣẹ́ A2A.
-
----
-
 ## 11. Àwọn Àṣà
 
 - **Ọ̀nà-kíkọ code**: indent aláyè méjì, double quotes, ìbú character 100, semicolons,
@@ -847,7 +838,6 @@ Wo [A2A-SERVER.md § Ṣíṣàfikún Ọgbọ́n Tuntun](../frameworks/A2A-SERV
   àti lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — fífi àmì sí Auto Combo àti àwọn ọ̀nà ìmúlò.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — àkójọ irinṣẹ́ MCP kíkún + àwọn ọ̀nà ìgbékalẹ̀.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — àwọn ọgbọ́n protocol A2A àti ìṣàwárí.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — compression RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — àwọn ìṣọ̀kan CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (tí ó bá wà), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — àwọn ibi ìmúṣiṣẹ́.

@@ -573,5 +573,4 @@ Die Routing-Engine unterliegt strengen Performancevorgaben:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — Verzeichnisübersicht
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Bewertung anhand von 16 Faktoren
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-Server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-Server
 - Quellcode: `open-sse/` (über 400 Dateien, ca. 143.000 Codezeilen)

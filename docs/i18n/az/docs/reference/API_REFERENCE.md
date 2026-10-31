@@ -1801,48 +1801,10 @@ OmniRoute 3 nəqliyyat mexanizminə (stdio, SSE, streamable-http) və əhatə da
 
 OmniRoute yoxlama və idarə panelində istifadə üçün A2A (Agent-to-Agent) JSON-RPC 2.0 son nöqtəsini və REST örtüyünü təqdim edir.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY təyin edilməyibsə, istəyə bağlıdır
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Dəstəklənən metodlar (hamısı `settings.a2aEnabled` ilə idarə olunur):
-
-| Metod            | Təsvir                                                         |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | Sinxron bacarıq icrası; `{task, artifacts, metadata}` qaytarır |
-| `message/stream` | Eyni bacarıq dəstinin SSE axınlı icrası                        |
-| `tasks/get`      | Tapşırığı `taskId` üzrə əldə edir                              |
-| `tasks/cancel`   | Tapşırığı `taskId` üzrə ləğv edir                              |
-
-Daxili bacarıqlar: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Kartı
-
-```bash
-GET /.well-known/agent.json
-```
-
-İctimai A2A agent kartını (ad, təsvir, imkanlar, bacarıq kataloqu, autentifikasiya sxemi) qaytarır — ictimai şəkildə 1 saat keşlənir. Autentifikasiya tələb olunmur.
-
 ### REST köməkçiləri
 
 | Metod | Yol                          | Təsvir                                                                                                                      |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A-nın aktivlik vəziyyəti + tapşırıq statistikası + keşlənmiş agent kartının xülasəsi                                      |
 | GET   | `/api/a2a/tasks`             | Tapşırıqları sadalayır — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST köməkçisi kimi həyata keçirilməyib — JSON-RPC `message/send` vasitəsilə yaradın)                                      |
 | GET   | `/api/a2a/tasks/[id]`        | Bir tapşırığı əldə edir                                                                                                     |

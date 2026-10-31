@@ -1875,48 +1875,10 @@ OmniRoute disertakan dengan pelayan Model Context Protocol terbina dalam yang me
 
 OmniRoute menyediakan titik akhir JSON-RPC 2.0 A2A (Ejen-ke-Ejen) serta pembalut REST untuk kegunaan pemeriksaan/papan pemuka.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # pilihan melainkan OMNIROUTE_API_KEY ditetapkan
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Kaedah yang disokong (semuanya bergantung pada `settings.a2aEnabled`):
-
-| Kaedah           | Penerangan                                                                 |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Pelaksanaan kemahiran segerak; mengembalikan `{task, artifacts, metadata}` |
-| `message/stream` | Pelaksanaan penstriman SSE bagi set kemahiran yang sama                    |
-| `tasks/get`      | Dapatkan tugas mengikut `taskId`                                           |
-| `tasks/cancel`   | Batalkan tugas mengikut `taskId`                                           |
-
-Kemahiran terbina dalam: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kad Ejen
-
-```bash
-GET /.well-known/agent.json
-```
-
-Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran, skim pengesahan) — dicache secara awam selama 1h. Pengesahan tidak diperlukan.
-
 ### Pembantu REST
 
 | Kaedah | Laluan                       | Penerangan                                                                                                            |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A didayakan + statistik tugas + ringkasan kad ejen yang dicache                                                     |
 | GET    | `/api/a2a/tasks`             | Senaraikan tugas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Tidak dilaksanakan sebagai pembantu REST — cipta melalui JSON-RPC `message/send`)                                    |
 | GET    | `/api/a2a/tasks/[id]`        | Dapatkan satu tugas                                                                                                   |

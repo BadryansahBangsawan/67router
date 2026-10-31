@@ -20,38 +20,6 @@ Ketiganya bersifat independen — pilih kombinasi mana pun.
 
 ## Pohon Keputusan
 
-## 1. A2A — Agen-ke-Agen
-
-**Spesifikasi:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kartu Agen:** `GET /.well-known/agent.json`
-
-### Kapan digunakan
-
-- Membangun sistem multiagen dengan OmniRoute sebagai salah satu agen sejawat
-- Mengekspos kecerdasan perutean OmniRoute (perutean cerdas, pengelolaan kuota, dll.) kepada agen dalam framework seperti Google ADK atau mesh agen generik
-- Membungkus OmniRoute di balik antarmuka penemuan + pemanggilan standar
-
-### Metode
-
-- `message/send` — kirim pesan, terima respons sinkron
-- `message/stream` — kirim pesan + terima peristiwa progres yang dialirkan melalui SSE
-- `tasks/get` — baca tugas berdasarkan ID
-- `tasks/cancel` — batalkan tugas yang sedang berjalan
-
-### Keterampilan bawaan (6)
-
-- `smart-routing` — merutekan prompt melalui kombinasi optimal
-- `quota-management` — melaporkan status kuota per penyedia
-- `provider-discovery` — mencantumkan penyedia yang terinstal beserta kemampuannya
-- `cost-analysis` — memperkirakan biaya permintaan/percakapan
-- `health-report` — mengagregasikan status pemutus sirkuit/periode tunggu/penguncian per penyedia
-- `list-capabilities` — mencantumkan keterampilan dan metadata agen yang tersedia
-
-### Pembahasan mendalam
-
-Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk detail transportasi, struktur kartu agen, konfigurasi TTL tugas, dan templat untuk menambahkan keterampilan baru.
-
 ## 2. ACP — Registri Agen CLI
 
 **Endpoint OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Struktur body untuk POST (`customAgentBodySchema` di `src/app/api/acp/agents/rou
 
 ## Contoh Integrasi
 
-### Menemukan kapabilitas A2A OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Mengembalikan Agent Card yang berisi seluruh 6 skill, transport, dan versi.
-
-### Memanggil OmniRoute sebagai agen A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Menampilkan daftar agen CLI yang terinstal melalui ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Lihat Juga
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Pembahasan mendalam tentang A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrasi CLI eksternal (menggunakan ACP)
 - [SKILLS.md](./SKILLS.md) — Kerangka kerja keterampilan (berbeda dari keterampilan A2A — sandbox eksekusi lokal)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referensi titik akhir

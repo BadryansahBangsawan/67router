@@ -20,38 +20,6 @@ OmniRoute は、エージェントに関連する3つの異なるインターフ
 
 ## 判断フロー
 
-## 1. A2A — エージェント間連携
-
-**仕様:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute エンドポイント:** `POST /a2a`（JSON-RPC 2.0）
-**エージェントカード:** `GET /.well-known/agent.json`
-
-### 使用する場面
-
-- OmniRoute がピアの1つとなるマルチエージェントシステムを構築する場合
-- OmniRoute のルーティング機能（スマートルーティング、クォータ管理など）を、Google ADK のようなフレームワークや汎用エージェントメッシュ内のエージェントに公開する場合
-- OmniRoute を標準の検出および呼び出しインターフェースでラップする場合
-
-### メソッド
-
-- `message/send` — メッセージを送信し、同期レスポンスを受信
-- `message/stream` — メッセージを送信し、SSE ストリーミングによる進捗イベントを受信
-- `tasks/get` — ID を指定してタスクを取得
-- `tasks/cancel` — 実行中のタスクをキャンセル
-
-### 組み込みスキル（6種類）
-
-- `smart-routing` — 最適な組み合わせを通じてプロンプトをルーティング
-- `quota-management` — プロバイダーごとのクォータ状態を報告
-- `provider-discovery` — インストール済みプロバイダーとその機能を一覧表示
-- `cost-analysis` — リクエストまたは会話のコストを見積もり
-- `health-report` — プロバイダーごとのブレーカー、クールダウン、ロックアウト状態を集約
-- `list-capabilities` — エージェントで利用可能なスキルとメタデータを列挙
-
-### 詳細
-
-トランスポートの詳細、エージェントカードの構造、タスクの TTL 設定、新しいスキルを追加するためのテンプレートについては、[A2A-SERVER.md](./A2A-SERVER.md)を参照してください。
-
 ## 2. ACP — CLIエージェントレジストリ
 
 **OmniRouteエンドポイント:** `GET /api/acp/agents`
@@ -104,30 +72,6 @@ POSTの本文形式（`src/app/api/acp/agents/route.ts`内の`customAgentBodySch
 - HTTPレジストリはタスクを受け付けず、プロセス起動機能も公開しません。内部マネージャーは登録済みCLIを起動できますが、自動的なプロバイダーのフォールバックとしては接続されていません。通常の対話的な使用では、設定済みのCLIを自分で起動するか、`omniroute run`を使用してください。
 
 ## 統合例
-
-### OmniRoute の A2A 機能を検出する
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-6 つのスキル、トランスポート、バージョンをすべて含む Agent Card を返します。
-
-### OmniRoute を A2A エージェントとして呼び出す
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### ACP 経由でインストール済みの CLI エージェントを一覧表示する
 
@@ -182,7 +126,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## 関連項目
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2Aの詳細
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 外部CLI統合（ACPを使用）
 - [SKILLS.md](./SKILLS.md) — スキルフレームワーク（A2Aスキルとは異なるローカル実行サンドボックス）
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — エンドポイントリファレンス

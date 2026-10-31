@@ -248,26 +248,6 @@ Cuir le do shocruithe MCP é:
 
 **Doiciméadacht iomlán MCP:** [README Fhreastalaí MCP](../../open-sse/mcp-server/README.md) — 110 uirlis, cumraíochtaí IDE, cliaint Python/TS/Go.
 
-### Socrú A2A (Prótacal Gníomhaire-go-Gníomhaire)
-
-Fíoraigh Cárta an Ghníomhaire:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Seol tasc:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Doiciméadacht iomlán A2A:** [README Fhreastalaí A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, scileanna, sruthú, saolré tascanna.
-
----
-
 ## Cumraíocht Teorainneacha Ama
 
 ### Teorainneacha Ama Bunúsacha

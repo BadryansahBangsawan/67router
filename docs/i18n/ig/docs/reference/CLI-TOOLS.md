@@ -750,7 +750,6 @@ omniroute cache                        # Ọnọdụ cache
 omniroute cache clear                  # Hichapụ cache semantic + signature
 
 omniroute mcp status | restart         # Ọnọdụ sava MCP / ịmalitegharị
-omniroute a2a status | card            # Ọnọdụ sava A2A / kaadị agent
 
 omniroute tunnel list | create | stop  # Jikwaa tunnel (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Nyochaa / tọọ env vars (nwa oge)

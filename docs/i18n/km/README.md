@@ -586,7 +586,7 @@ Radar គឺជាមុខងារដែលត្រូវជ្រើសរ�
 - **🔑 ការគ្រប់គ្រងការនាំផ្លូវតាម key** — កំណត់ API key ទៅម៉ូដែល ឬ combo មួយដោយប្រើ `forcedModel` ហើយបន្ថែម ឬដកម៉ូដែល និង combo របស់ key បានយ៉ាងស្អាតក្នុងពេលតែមួយ (`/api/keys/{id}/access`)។ → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ការគ្រប់គ្រង PII លម្អិតជាងមុន** — ជ្រើសរើសតាមប្រភេទ, រហូតដល់ 20 លំនាំការបិទបាំងផ្ទាល់ខ្លួនដែលបានផ្ទៀងផ្ទាត់ និងការរាប់ការរកឃើញតាមប្រភេទ; ការបិទបាំងខ្លួនវានៅតែជាជម្រើសស្រេចចិត្ត។ → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ភាសា** — ផ្ទាំងគ្រប់គ្រង, ការចម្លងឯកសារ និង CLI ដោយ `npm run i18n:add-locale` បន្ថែមភាសាគ្រប់ទីកន្លែងដោយពាក្យបញ្ជាតែមួយ។ → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ការប្រគល់ភារកិច្ច A2A ចូលមករកក្រុម agent របស់អ្នក, ជំនាញ Conductor នៅលើ Agent Card និងផ្ទាំងផ្ទាំងគ្រប់គ្រងជាមួយការជជែកដោយសំឡេង Faro push-to-talk។ → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ការប្រគល់ភារកិច្ច A2A ចូលមករកក្រុម agent របស់អ្នក, ជំនាញ Conductor នៅលើ Agent Card និងផ្ទាំងផ្ទាំងគ្រប់គ្រងជាមួយការជជែកដោយសំឡេង Faro push-to-talk។
 - **🛂 ការទទួលភារកិច្ចបត់បែន និងការការពារការផ្ទុកលើស** — សំណើជជែកធំៗចូលជួររង់ចាំជំនួសឱ្យការឆ្លើយតប 503 ជាមួយការជួល RPM បែប rolling ជាអាតូមិកក្នុងមួយការតភ្ជាប់។ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ លំដាប់ `/v1/models` តាមស្តង់ដារ** — ប្លុកតែមួយជាប់គ្នាដាក់តាមក្រុមអ្នកផ្តល់សេវាក្នុងមួយអ្នកផ្តល់ (combo ត្រូវបានដាក់មុន) ដែលនៅថេរគ្រប់ប្រភពកាតាឡុក។ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ ការពង្រឹងការបង្ហាប់** — ការការពារការហើមដែលបើកតាមលំនាំដើម, កញ្ចប់ Caveman សម្រាប់ DE / FR / JA + ចិន (wényán), តម្រង RTK សម្រាប់ Gradle & .NET។ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Token មានវិសាលភាព `read` / `write` / `admin`; route ដែ
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">ភ្ជាប់ទៅ Claude Desktop, Cursor ឬកម្មវិធី MCP ណាមួយ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP ពីចម្ងាយ — <b>ឧបករណ៍ 110</b>, 33 វិសាលភាព (ការអនុវត្តតាមគឺជាជម្រើស), កំណត់ត្រាសវនកម្មពេញលេញ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">មធ្យោបាយបញ្ជូន MCP ជាស្ទ្រីម</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ភ្នាក់ងារទៅភ្នាក់ងារ, <b>JSON-RPC 2.0</b> + SSE, ជំនាញ 6</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">ឆបគ្នាជាមួយ OpenAI — ការជជែក, embeddings, រូបភាព, សំឡេង និង OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">បញ្ជូនព្រឹត្តិការណ៍សំណើ / កូតាទៅ Slack, Discord, Telegram ឬ URL ណាមួយ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI ពីចម្ងាយ</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">បញ្ជា instance ពីចម្ងាយដោយប្រើ access token ដែលមានវិសាលភាពកំណត់</td></tr>
@@ -915,8 +914,6 @@ Token មានវិសាលភាព `read` / `write` / `admin`; route ដែ
 # ផ្តល់សំណុំឧបករណ៍ OmniRoute ពេញលេញឱ្យ Claude Code តាមរយៈ MCP៖
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [ម៉ាស៊ីនមេ MCP](docs/frameworks/MCP-SERVER.md) · [ម៉ាស៊ីនមេ A2A](docs/frameworks/A2A-SERVER.md) · [ពិធីការភ្នាក់ងារ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1379,6 @@ process ដូចគ្នានៅលើ port តែមួយ ដូច្ន�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">ម៉ាស៊ីនមេ MCP</a></b></td><td>ឧបករណ៍ MCP ចំនួន 110 ការកំណត់រចនាសម្ព័ន្ធ IDE និងកម្មវិធីអតិថិជន Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">មគ្គុទ្ទេសក៍ម៉ាស៊ីនមេ MCP</a></b></td><td>ការដំឡើង MCP មធ្យោបាយបញ្ជូន និងឯកសារយោងឧបករណ៍</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">ម៉ាស៊ីនមេ A2A</a></b></td><td>ពិធីការ JSON-RPC 2.0 ជំនាញ ការបញ្ជូនបន្ត និងការគ្រប់គ្រងកិច្ចការ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">មគ្គុទ្ទេសក៍ម៉ាស៊ីនមេ A2A</a></b></td><td>កាតភ្នាក់ងារ A2A កិច្ចការ ជំនាញ និងការបញ្ជូនបន្ត</td></tr>
 </table>
 
 ### 📋 គម្រោង និងគុណភាព

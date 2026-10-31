@@ -87,7 +87,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 ## დაფა VS Code-ის ჩანართში
 
-`omnicopilot.dashboardOpen: "editor"` OmniRoute-ის დაფას გარე ბრაუზერის ნაცვლად, Simple Browser-ის საშუალებით, რედაქტორის ჩანართში ასახავს. ჩაშენება **სერვერზე ცალკე უნდა ჩაირთოს** `DASHBOARD_ALLOW_EMBED=vscode`-ის მეშვეობით, რის შედეგადაც HTML გვერდები ნაგულისხმევი `frame-ancestors 'none'` + `X-Frame-Options: DENY`-ის ნაცვლად `frame-ancestors 'self' vscode-webview:`-ით მიეწოდება. API-ის ზედაპირი (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ორივე შემთხვევაში მკაცრ სათაურებს ინარჩუნებს.
+`omnicopilot.dashboardOpen: "editor"` OmniRoute-ის დაფას გარე ბრაუზერის ნაცვლად, Simple Browser-ის საშუალებით, რედაქტორის ჩანართში ასახავს. ჩაშენება **სერვერზე ცალკე უნდა ჩაირთოს** `DASHBOARD_ALLOW_EMBED=vscode`-ის მეშვეობით, რის შედეგადაც HTML გვერდები ნაგულისხმევი `frame-ancestors 'none'` + `X-Frame-Options: DENY`-ის ნაცვლად `frame-ancestors 'self' vscode-webview:`-ით მიეწოდება. API-ის ზედაპირი (`/api`, `/v1`, `/v1beta`, `/healthz`) ორივე შემთხვევაში მკაცრ სათაურებს ინარჩუნებს.
 
 > ⚠️ **ეს აგების დროის დროშაა და არა შესრულების დროის.** Next.js `headers()`-ს მარშრუტების
 > მანიფესტში აკომპილირებს, ამიტომ `next.config.mjs` ცვლადს პაკეტის აგებისას კითხულობს

@@ -241,26 +241,6 @@ MCP 設定に以下を追加します。
 
 **MCP の完全なドキュメント：** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 個のツール、IDE 設定、Python/TS/Go クライアント。
 
-### A2A のセットアップ（Agent-to-Agent Protocol）
-
-Agent Card を確認します。
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-タスクを送信します。
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A の完全なドキュメント：** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0、スキル、ストリーミング、タスクのライフサイクル。
-
----
-
 ## タイムアウト設定
 
 ### 基本的なタイムアウト

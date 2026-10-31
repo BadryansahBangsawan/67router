@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (autentifikatsiya talab qilinadi)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 ta MCP vositasi (roʻyxat, olish, qamrov)
-src/lib/a2a/skills/listCapabilities.ts        — A2A skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2Aʼning `list-capabilities` koʻnikmasi 45 ta koʻnikmadan iborat toʻliq kata
 }
 ```
 
-Protokol tafsilotlari uchun [A2A-SERVER.md](./A2A-SERVER.md) fayliga qarang.
-
 ---
 
 ## Katalog — 45 ta koʻnikma IDsi
@@ -189,7 +186,6 @@ Protokol tafsilotlari uchun [A2A-SERVER.md](./A2A-SERVER.md) fayliga qarang.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills freymvorki (LLM vositalarini kiritish + marketpleys)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP vositalari katalogi (`omniroute_agent_skills_*` vositalari)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokoli (`list-capabilities` ko‘nikmasi)
 - `src/lib/agentSkills/` — katalog, generator, parserlar
 - `skills/` — yaratilgan SKILL.md fayllari (45 ta yozuv)

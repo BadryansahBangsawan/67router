@@ -594,7 +594,6 @@ aktuálním katalogu najdete na **[radar.omniroute.online/planos](https://radar.
 - **🔑 Řízení směrování podle klíče** — připněte API klíč k jednomu modelu nebo kombinaci pomocí `forcedModel` a atomicky přidávejte či odebírejte modely a kombinace daného klíče (`/api/keys/{id}/access`). → [Referenční příručka API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Podrobnější řízení PII** — výběr podle jednotlivých typů, až 20 ověřovaných vlastních vzorů maskování a počítadla detekcí pro jednotlivé typy; samotné maskování zůstává volitelné. → [Ochranná opatření](docs/security/GUARDRAILS.md)
 - **🌍 67 jazyků** — řídicí panel, zrcadla dokumentace a CLI, přičemž `npm run i18n:add-locale` přidá jazyk všude jediným příkazem. → [Průvodce i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — příchozí delegování A2A do vaší flotily agentů, dovednosti Conductor na kartě agenta a panel v řídicím panelu s hlasovým chatem Faro využívajícím funkci push-to-talk. → [Server A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptivní přijímání a ochrana proti přetížení** — náročné požadavky chatu se namísto vrácení chyby 503 zařadí do fronty, s atomickými průběžnými pronájmy RPM pro jednotlivá připojení. → [Průvodce odolností](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonické řazení `/v1/models`** — jeden souvislý blok seskupený podle poskytovatele pro každého poskytovatele (kombinace jsou připnuté jako první), stabilní napříč všemi zdroji katalogu. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
 - **🗜️ Posílení komprese** — ve výchozím nastavení zapnutá ochrana proti inflaci, balíčky Caveman pro DE / FR / JA + čínštinu (wényán), filtry RTK pro Gradle a .NET. → [Komprese](docs/compression/COMPRESSION_ENGINES.md)
@@ -913,7 +912,6 @@ Zpřístupněte OmniRoute přes **MCP**, **A2A**, **REST API**, **webhooky** neb
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Propojení s Claude Desktop, Cursor nebo libovolným klientem MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Vzdálené MCP — <b>110 nástrojů</b>, 33 rozsahů oprávnění (vynucování je volitelné), kompletní auditní stopa</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streamovací přenos MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Komunikace mezi agenty, <b>JSON-RPC 2.0</b> + SSE, 6 dovedností</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Kompatibilní s OpenAI — chat, embeddings, obrázky, zvuk, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooky</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Odesílání událostí požadavků / kvót do služeb Slack, Discord, Telegram nebo na libovolnou URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Vzdálené CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Ovládání vzdálené instance pomocí přístupových tokenů s omezeným rozsahem oprávnění</td></tr>
@@ -923,8 +921,6 @@ Zpřístupněte OmniRoute přes **MCP**, **A2A**, **REST API**, **webhooky** neb
 # Zpřístupnění kompletní sady nástrojů OmniRoute aplikaci Claude Code přes MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Server MCP](docs/frameworks/MCP-SERVER.md) · [Server A2A](docs/frameworks/A2A-SERVER.md) · [Protokoly pro agenty](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1390,7 +1386,6 @@ Kanonické metriky k 2026-10-18: **1.976 unikátních videí** · **20.220.289 z
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>110 nástrojů MCP, konfigurace IDE, klienti pro Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Průvodce serverem MCP</a></b></td><td>Instalace MCP, přenosové mechanismy a referenční příručka nástrojů</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protokol JSON-RPC 2.0, dovednosti, streamování, správa úloh</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Průvodce serverem A2A</a></b></td><td>Karta agenta A2A, úlohy, dovednosti a streamování</td></tr>
 </table>
 
 ### 📋 Projekt a kvalita

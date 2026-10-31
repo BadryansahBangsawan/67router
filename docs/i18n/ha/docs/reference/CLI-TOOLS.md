@@ -749,7 +749,6 @@ omniroute cache                        # Matsayin cache
 omniroute cache clear                  # Share semantic + signature caches
 
 omniroute mcp status | restart         # Matsayin sabar MCP / sake farawa
-omniroute a2a status | card            # Matsayin sabar A2A / katin wakili
 
 omniroute tunnel list | create | stop  # Sarrafa tunnels (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Duba / saita masu canjin env (na ɗan lokaci)

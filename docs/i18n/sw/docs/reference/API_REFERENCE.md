@@ -1876,48 +1876,10 @@ OmniRoute huja na seva iliyopachikwa ya Model Context Protocol yenye njia 3 za u
 
 OmniRoute hutoa kituo cha mwisho cha A2A (Agent-to-Agent) cha JSON-RPC 2.0 pamoja na kifungashio cha REST kwa ajili ya ukaguzi/matumizi ya dashibodi.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # si lazima isipokuwa OMNIROUTE_API_KEY imewekwa
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mbinu zinazotumika (zote zinategemea `settings.a2aEnabled`):
-
-| Mbinu            | Maelezo                                                             |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Utekelezaji sawia wa ujuzi; hurejesha `{task, artifacts, metadata}` |
-| `message/stream` | Utekelezaji wa utiririshaji wa SSE wa seti ileile ya ujuzi          |
-| `tasks/get`      | Leta jukumu kwa kutumia `taskId`                                    |
-| `tasks/cancel`   | Ghairi jukumu kwa kutumia `taskId`                                  |
-
-Ujuzi uliojengewa ndani: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kadi ya Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi, mpango wa uthibitishaji) — imehifadhiwa kwenye akiba hadharani kwa saa 1. Uthibitishaji hauhitajiki.
-
 ### Visaidizi vya REST
 
 | Mbinu | Njia                         | Maelezo                                                                                                                 |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A imewezeshwa + takwimu za majukumu + muhtasari wa kadi ya agent uliohifadhiwa kwenye akiba                           |
 | GET   | `/api/a2a/tasks`             | Orodhesha majukumu — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Haijatekelezwa kama kisaidizi cha REST — unda kupitia JSON-RPC `message/send`)                                         |
 | GET   | `/api/a2a/tasks/[id]`        | Rejesha jukumu moja                                                                                                     |

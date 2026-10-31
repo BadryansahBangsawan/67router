@@ -573,5 +573,4 @@ Enjin penghalaan mempunyai belanjawan prestasi yang ketat:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — direktori demi direktori
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — pemarkahan 16 faktor
 - [MCP-SERVER.md](./MCP-SERVER.md) — pelayan MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — pelayan A2A
 - Sumber: `open-sse/` (400+ fail, ~143K LOC)

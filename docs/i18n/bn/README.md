@@ -586,7 +586,6 @@ Radar ব্যবহার ঐচ্ছিক এবং এটি কেবল 
 - **🔑 প্রতি-কী রাউটিং নিয়ন্ত্রণ** — `forcedModel` দিয়ে একটি API কী-কে একটি মডেল বা কম্বোতে পিন করুন এবং কোনো কী-এর মডেল ও কম্বো পারমাণবিকভাবে যোগ বা অপসারণ করুন (`/api/keys/{id}/access`)। → [API রেফারেন্স](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ আরও সূক্ষ্ম PII নিয়ন্ত্রণ** — প্রতি-ধরন নির্বাচন, সর্বোচ্চ ২০টি যাচাইকৃত কাস্টম মাস্কিং প্যাটার্ন এবং প্রতি-ধরন শনাক্তকরণ কাউন্টার; মাস্কিং নিজে অপ্ট-ইন হিসেবেই থাকে। → [গার্ডরেল](docs/security/GUARDRAILS.md)
 - **🌍 ৬৭টি ভাষা** — ড্যাশবোর্ড, ডকুমেন্টেশনের মিরর ও CLI-তে সমর্থন; `npm run i18n:add-locale` একটি কমান্ডেই সর্বত্র একটি ভাষা যোগ করে। → [i18n নির্দেশিকা](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — আপনার এজেন্ট বহরের কাছে ইনবাউন্ড A2A ডেলিগেশন, Agent Card-এ Conductor দক্ষতা এবং Faro পুশ-টু-টক ভয়েস চ্যাটসহ একটি ড্যাশবোর্ড প্যানেল। → [A2A সার্ভার](docs/frameworks/A2A-SERVER.md)
 - **🛂 অভিযোজিত অ্যাডমিশন ও ওভারলোড সুরক্ষা** — ভারী চ্যাট অনুরোধগুলো 503 ফেরত দেওয়ার বদলে সারিতে অপেক্ষা করে, যেখানে প্রতিটি সংযোগের জন্য পারমাণবিক RPM রোলিং লিজ ব্যবহৃত হয়। → [স্থিতিস্থাপকতা নির্দেশিকা](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ প্রামাণ্য `/v1/models` ক্রমবিন্যাস** — প্রতিটি প্রোভাইডারের জন্য একটি করে সংলগ্ন, প্রোভাইডারভিত্তিক ব্লক (কম্বোগুলো প্রথমে পিন করা), যা প্রতিটি ক্যাটালগ উৎসে স্থিতিশীল থাকে। → [API রেফারেন্স](docs/reference/API_REFERENCE.md)
 - **🗜️ কম্প্রেশন আরও সুরক্ষিত** — ডিফল্টভাবে সক্রিয় ইনফ্লেশন গার্ড, DE / FR / JA + Chinese (wényán)-এর জন্য Caveman প্যাক এবং Gradle ও .NET-এর জন্য RTK ফিল্টার। → [কম্প্রেশন](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ omniroute contexts use default            # ← স্থানীয় সা�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor অথবা যেকোনো MCP ক্লায়েন্টের সঙ্গে সংযুক্ত করুন</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">রিমোট MCP—<b>১১০টি টুল</b>, ৩৩টি স্কোপ (প্রয়োগ ঐচ্ছিক), পূর্ণাঙ্গ অডিট ট্রেইল</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">স্ট্রিমিং MCP ট্রান্সপোর্ট</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">এজেন্ট-টু-এজেন্ট, <b>JSON-RPC 2.0</b> + SSE, ৬টি স্কিল</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-সামঞ্জস্যপূর্ণ—চ্যাট, এমবেডিং, ছবি, অডিও, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">রিকোয়েস্ট / কোটা ইভেন্ট Slack, Discord, Telegram অথবা যেকোনো URL-এ পাঠান</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>রিমোট CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">স্কোপযুক্ত অ্যাক্সেস টোকেন দিয়ে একটি রিমোট ইনস্ট্যান্স পরিচালনা করুন</td></tr>
@@ -915,8 +913,6 @@ omniroute contexts use default            # ← স্থানীয় সা�
 # MCP-এর মাধ্যমে Claude Code-কে OmniRoute-এর সম্পূর্ণ টুলসেট দিন:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP সার্ভার](docs/frameworks/MCP-SERVER.md) · [A2A সার্ভার](docs/frameworks/A2A-SERVER.md) · [এজেন্ট প্রোটোকল](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1375,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1-ও এটি এ
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP সার্ভার</a></b></td><td>১১০টি MCP টুল, IDE কনফিগারেশন, Python/TS/Go ক্লায়েন্ট</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP সার্ভার নির্দেশিকা</a></b></td><td>MCP ইনস্টলেশন, ট্রান্সপোর্ট এবং টুল রেফারেন্স</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A সার্ভার</a></b></td><td>JSON-RPC 2.0 প্রোটোকল, স্কিল, স্ট্রিমিং, টাস্ক ব্যবস্থাপনা</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A সার্ভার নির্দেশিকা</a></b></td><td>A2A এজেন্ট কার্ড, টাস্ক, স্কিল এবং স্ট্রিমিং</td></tr>
 </table>
 
 ### 📋 প্রকল্প ও গুণমান

@@ -92,7 +92,7 @@ nekas nav jāmaina.
 Simple Browser, nevis ārēju pārlūkprogrammu. Iegulšana serverī ir **jāiespējo atsevišķi**, izmantojot
 `DASHBOARD_ALLOW_EMBED=vscode`, kas nodrošina HTML lapas ar
 `frame-ancestors 'self' vscode-webview:`, nevis noklusējuma `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API saskarne (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) jebkurā
+`X-Frame-Options: DENY`. API saskarne (`/api`, `/v1`, `/v1beta`, `/healthz`) jebkurā
 gadījumā saglabā stingrās galvenes.
 
 > ⚠️ **Tas ir būvēšanas laika, nevis izpildlaika karogs.** Next.js kompilē `headers()` maršrutu

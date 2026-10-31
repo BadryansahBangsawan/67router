@@ -101,8 +101,6 @@ Es gibt **keine globale Middleware** — die Abfanglogik wird pro Route implemen
 | Pfad                                                                          | Zweck                                                        |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `api/`                                                                        | Alle HTTP-API-Routen (siehe Aufschlüsselung unten)           |
-| `a2a/`                                                                        | A2A-JSON-RPC-2.0-Endpunkt (`POST /a2a`)                      |
-| `.well-known/agent.json/`                                                     | A2A-Agent-Card-Erkennungsdokument                            |
 | `(dashboard)/`                                                                | Dashboard-Benutzeroberfläche (Routengruppe, kein URL-Präfix) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Authentifizierungsabläufe                                    |
 | `landing/`                                                                    | Marketing-/Landingpage                                       |
@@ -772,13 +770,6 @@ Siehe [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) und den entsprechenden Abschn
 4. Tests unter `open-sse/mcp-server/__tests__/` hinzufügen.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) aktualisieren.
 
-### Einen neuen A2A-Skill hinzufügen
-
-Siehe [A2A-SERVER.md § Hinzufügen eines neuen Skills](../frameworks/A2A-SERVER.md). Skills befinden sich in
-`src/lib/a2a/skills/` und werden über den A2A-Task-Manager registriert.
-
----
-
 ## 11. Konventionen
 
 - **Codestil**: Einrückung mit 2 Leerzeichen, doppelte Anführungszeichen, Zeilenbreite von 100 Zeichen, Semikolons,
@@ -846,7 +837,6 @@ Siehe [A2A-SERVER.md § Hinzufügen eines neuen Skills](../frameworks/A2A-SERVER
   und Lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Bewertung und Strategien für Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — vollständiger MCP-Toolkatalog und Transportmechanismen.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — Fähigkeiten und Erkennung des A2A-Protokolls.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- und Caveman-Komprimierung.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-Integrationen.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (falls vorhanden), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — Bereitstellungsziele.

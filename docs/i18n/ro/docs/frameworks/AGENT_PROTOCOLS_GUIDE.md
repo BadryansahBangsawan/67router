@@ -20,38 +20,6 @@ Cele trei sunt independente — puteți alege orice combinație.
 
 ## Arbore decizional
 
-## 1. A2A — Agent-la-Agent
-
-**Specificație:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Fișa agentului:** `GET /.well-known/agent.json`
-
-### Când se utilizează
-
-- Construirea unui sistem multi-agent în care OmniRoute este unul dintre participanți
-- Expunerea mecanismelor inteligente de rutare ale OmniRoute (`smart-routing`, `quota-management` etc.) către agenți din framework-uri precum Google ADK sau din rețele generice de agenți
-- Încapsularea OmniRoute în spatele unei interfețe standard de descoperire și invocare
-
-### Metode
-
-- `message/send` — trimite un mesaj și primește un răspuns sincron
-- `message/stream` — trimite un mesaj și primește evenimente de progres transmise prin SSE
-- `tasks/get` — citește sarcina după ID
-- `tasks/cancel` — anulează o sarcină în curs de execuție
-
-### Capabilități încorporate (6)
-
-- `smart-routing` — direcționează un prompt prin combinația optimă
-- `quota-management` — raportează starea cotei pentru fiecare furnizor
-- `provider-discovery` — listează furnizorii instalați și capabilitățile acestora
-- `cost-analysis` — estimează costul unei solicitări/conversații
-- `health-report` — agregă starea mecanismelor de întrerupere, a perioadelor de așteptare și a blocărilor pentru fiecare furnizor
-- `list-capabilities` — enumeră capabilitățile disponibile ale agentului și metadatele acestora
-
-### Detalii aprofundate
-
-Consultați [A2A-SERVER.md](./A2A-SERVER.md) pentru detalii despre transport, structura fișei agentului, configurarea TTL-ului sarcinilor și șablonul pentru adăugarea unor capabilități noi.
-
 ## 2. ACP — Registrul agenților CLI
 
 **Endpoint OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Structura corpului pentru POST (`customAgentBodySchema` în `src/app/api/acp/age
 
 ## Exemple de integrare
 
-### Descoperirea capabilităților A2A ale OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Returnează fișa agentului cu toate cele 6 abilități, mecanismele de transport și versiunea.
-
-### Apelarea OmniRoute ca agent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Listarea agenților CLI instalați prin ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Consultați și
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Prezentare detaliată a A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrări CLI externe (utilizează ACP)
 - [SKILLS.md](./SKILLS.md) — Cadru pentru abilități (diferit de abilitățile A2A — mediu izolat pentru execuție locală)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referința endpointurilor

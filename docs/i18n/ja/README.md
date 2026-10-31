@@ -586,7 +586,6 @@ Radarはオプトイン方式で、GETリクエストのみを使用します。
 - **🔑 キーごとのルーティング制御** — `forcedModel` で API キーを 1 つのモデルまたはコンボに固定し、キーのモデルとコンボをアトミックに追加・削除できます(`/api/keys/{id}/access`)。→ [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ より細かい PII 制御** — タイプごとの選択、最大 20 個の検証済みカスタムマスキングパターン、タイプごとの検出カウンター。マスキング自体はオプトインのままです。→ [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 言語** — ダッシュボード、ドキュメントミラー、CLI。`npm run i18n:add-locale` を使えば 1 つのコマンドで全箇所に言語を追加できます。→ [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — インバウンドの A2A 委任をエージェントフリートへ、Agent Card 上の Conductor スキル、Faro のプッシュトゥトーク音声チャット付きダッシュボードパネル。→ [A2A Server](docs/frameworks/A2A-SERVER.md)
 - **🛂 適応型アドミッション & 過負荷保護** — 重量級のチャットリクエストは 503 を返す代わりにキューに入り、接続ごとのアトミックな RPM ローリングリースを備えます。→ [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ 正規化された `/v1/models` の順序** — プロバイダーごとに 1 つの連続したプロバイダーグループブロック(コンボは先頭に固定)で、あらゆるカタログソースにわたって安定しています。→ [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ 圧縮の強化** — デフォルトで有効なインフレガード、DE / FR / JA + 中国語(文言)向けの Caveman パック、Gradle & .NET 向けの RTK フィルター。→ [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ omniroute contexts use default            # ← ローカルサーバーに切�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop、Cursor、任意の MCP クライアントに接続</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">リモート MCP — <b>110 個のツール</b>、33 個のスコープ（適用はオプトイン）、完全な監査証跡</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">ストリーミング MCP トランスポート</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">エージェント間通信、<b>JSON-RPC 2.0</b> + SSE、6 個のスキル</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI 互換 — チャット、埋め込み、画像、音声、OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">リクエスト / クォータイベントを Slack、Discord、Telegram、または任意の URL にプッシュ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>リモート CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">スコープ付きアクセストークンを使用してリモートインスタンスを操作</td></tr>
@@ -915,8 +913,6 @@ omniroute contexts use default            # ← ローカルサーバーに切�
 # MCP 経由で Claude Code に OmniRoute の全ツールセットを提供:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP サーバー](docs/frameworks/MCP-SERVER.md) · [A2A サーバー](docs/frameworks/A2A-SERVER.md) · [エージェントプロトコル](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1383,7 +1379,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 でも省略さ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCPサーバー</a></b></td><td>110個のMCPツール、IDE設定、Python／TS／Goクライアント</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCPサーバーガイド</a></b></td><td>MCPのインストール、トランスポート、ツールリファレンス</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2Aサーバー</a></b></td><td>JSON-RPC 2.0プロトコル、スキル、ストリーミング、タスク管理</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2Aサーバーガイド</a></b></td><td>A2Aエージェントカード、タスク、スキル、ストリーミング</td></tr>
 </table>
 
 ### 📋 プロジェクトと品質

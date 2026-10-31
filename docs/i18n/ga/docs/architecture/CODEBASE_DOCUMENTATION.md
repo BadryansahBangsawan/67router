@@ -100,8 +100,6 @@ Suíomhanna ar an leibhéal is airde faoi `src/app/`:
 | Conair                                                                        | Cuspóir                                              |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------- |
 | `api/`                                                                        | Gach rótaire API HTTP (féach an mionbhriseadh thíos) |
-| `a2a/`                                                                        | Crios deiridh A2A JSON-RPC 2.0 (`POST /a2a`)         |
-| `.well-known/agent.json/`                                                     | Cáipéis faoimhscríbhinne A2A Agent Card              |
 | `(dashboard)/`                                                                | UI Deais (grúpa rótaire, gan réimír URL)             |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Sreafaí fíordheimhnithe                              |
 | `landing/`                                                                    | Leathanach margaíochta/landála                       |
@@ -772,13 +770,6 @@ Féach [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) agus an chuid thiomnaithe in
 4. Cuir tástálacha leis faoi `open-sse/mcp-server/__tests__/`.
 5. Nuashonraigh [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Cuir scil A2A nua leis
-
-Féach [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Tá scileanna i
-`src/lib/a2a/skills/` agus cláraítear iad trí bhainisteoir tascanna A2A.
-
----
-
 ## 11. Coinbhinsiúin
 
 - **Stíl chód**: eallaigh 2-spás, dátheisteacha, leithead 100 carachtar, leathchomharthaí,
@@ -843,7 +834,6 @@ Féach [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Tá s
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — tumléargas ar scoradán ciorcaid, fuarú, agus glasáil amach.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scóráil agus straitéisí Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — catalóg iomlán uirlisí MCP + iompar.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — scileanna agus fionnachtain phrótacal A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — comhbhrú RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — comhtháthú CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (má tá sé i láthair), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — spriocanna imlonnaithe.

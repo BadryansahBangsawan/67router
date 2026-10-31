@@ -1235,8 +1235,6 @@ Ipprovdilhom l-URL SSE `http://localhost:20128/api/mcp/sse` u API key ġenerata 
 
 ### Ambiti
 
-L-MCP bħalissa jiddefinixxi 32 ambitu magħruf. Kull Bearer key jista’ jiġi limitat għal ambitti speċifiċi — ara [MCP-SERVER.md](../frameworks/MCP-SERVER.md) għall-inventarju awtorevoli tal-ambiti u l-għodod, u [A2A-SERVER.md](../frameworks/A2A-SERVER.md) għas-skema JSON-RPC.
-
 ---
 
 ## 🧩 Sistema ta' Ħiliet
@@ -1245,7 +1243,6 @@ OmniRoute toffri **qafas ta' ħiliet estensibbli** (`src/lib/skills/`) sabiex l-
 
 - **Interfaċi tal-Marketplace** — Stenna u tinstalla ħiliet minn **Dashboard → Ħiliet**
 - **Ambiti fuq iċ-ċavetta** — Irstrinġu liema ċavetti tal-API jistgħu jsejħu liema ħiliet
-- **Ħiliet personalizzati** — Waqqa' fajl TypeScript f' `src/lib/a2a/skills/`, irreġistrah, u immedjatament isir invokabbli permezz tal-A2A
 
 Referenza sħiħa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1330,7 +1327,6 @@ omniroute restore [<timestamp>]    # Irrestorja minn fenfas
 omniroute health                   # Saħħa dettaljata (breakers, cache, memorja)
 omniroute quota                    # Użu tal-kwota tal-fornitur
 omniroute mcp status               # Statut tal-server MCP
-omniroute a2a status               # Statut tal-server A2A
 omniroute tunnel list|create|stop  # Tunelli Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Ġeddid il-password tal-amministratur
 omniroute --mcp                    # Daħħal server MCP permezz ta' stdio

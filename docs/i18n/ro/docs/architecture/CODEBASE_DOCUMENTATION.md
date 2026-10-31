@@ -100,8 +100,6 @@ Segmente de nivel superior din `src/app/`:
 | Cale                                                                          | Scop                                                          |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `api/`                                                                        | Toate rutele API HTTP (consultați detalierea de mai jos)      |
-| `a2a/`                                                                        | Endpoint A2A JSON-RPC 2.0 (`POST /a2a`)                       |
-| `.well-known/agent.json/`                                                     | Document de descoperire A2A Agent Card                        |
 | `(dashboard)/`                                                                | Interfața panoului de control (grup de rute, fără prefix URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Fluxuri de autentificare                                      |
 | `landing/`                                                                    | Pagină de marketing/destinație                                |
@@ -773,13 +771,6 @@ Consultați [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) și secțiunea dedicat�
 4. Adăugați teste în `open-sse/mcp-server/__tests__/`.
 5. Actualizați [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Adăugarea unei abilități A2A noi
-
-Consultați [A2A-SERVER.md § Adăugarea unei abilități noi](../frameworks/A2A-SERVER.md). Abilitățile se află în
-`src/lib/a2a/skills/` și sunt înregistrate prin managerul de sarcini A2A.
-
----
-
 ## 11. Convenții
 
 - **Stilul codului**: indentare cu 2 spații, ghilimele duble, lățime de 100 de caractere, punct și virgulă,
@@ -847,7 +838,6 @@ Consultați [A2A-SERVER.md § Adăugarea unei abilități noi](../frameworks/A2A
   și lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — punctajul și strategiile Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — catalogul complet de instrumente MCP și metodele de transport.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — capabilitățile protocolului A2A și mecanismele de descoperire.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — compresia RTK și Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integrări CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (dacă există), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — medii-țintă de implementare.

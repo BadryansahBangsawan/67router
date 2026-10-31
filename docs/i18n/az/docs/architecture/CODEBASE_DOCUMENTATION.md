@@ -99,8 +99,6 @@ App Router həm idarəetmə paneli interfeysini, həm də ictimai/idarəetmə HT
 | Yol                                                                           | Təyinatı                                                         |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `api/`                                                                        | Bütün HTTP API marşrutları (aşağıdakı bölgüyə baxın)             |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 son nöqtəsi (`POST /a2a`)                       |
-| `.well-known/agent.json/`                                                     | A2A Agent Card aşkarlama sənədi                                  |
 | `(dashboard)/`                                                                | İdarəetmə paneli interfeysi (marşrut qrupu, URL prefiksi yoxdur) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentifikasiya axınları                                         |
 | `landing/`                                                                    | Marketinq/tanıtım səhifəsi                                       |
@@ -772,13 +770,6 @@ Müştəri sorğusu
 4. Testləri `open-sse/mcp-server/__tests__/` altında əlavə edin.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) faylını yeniləyin.
 
-### Yeni A2A bacarığı əlavə etmək
-
-[A2A-SERVER.md § Yeni bacarığın əlavə edilməsi](../frameworks/A2A-SERVER.md) bölməsinə baxın. Bacarıqlar
-`src/lib/a2a/skills/` qovluğunda yerləşir və A2A tapşırıq meneceri vasitəsilə qeydiyyatdan keçirilir.
-
----
-
 ## 11. Konvensiyalar
 
 - **Kod üslubu**: 2 boşluqluq abzas, qoşa dırnaqlar, 100 simvol eni, nöqtəli vergüllər,
@@ -845,7 +836,6 @@ Müştəri sorğusu
   bloklama haqqında ətraflı məlumat.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo qiymətləndirməsi və strategiyaları.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — tam MCP alət kataloqu + nəqliyyat üsulları.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protokolunun bacarıqları və aşkarlanması.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman sıxışdırması.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI inteqrasiyaları.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (mövcuddursa), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — yerləşdirmə hədəfləri.

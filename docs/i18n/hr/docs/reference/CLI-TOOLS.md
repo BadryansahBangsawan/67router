@@ -714,7 +714,6 @@ omniroute cache                        # Status predmemorije
 omniroute cache clear                  # Brisanje semantičke predmemorije i predmemorije potpisa
 
 omniroute mcp status | restart         # Status / ponovno pokretanje MCP poslužitelja
-omniroute a2a status | card            # Status A2A poslužitelja / kartica agenta
 
 omniroute tunnel list | create | stop  # Upravljanje tunelima (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Pregled / postavljanje varijabli okruženja (privremeno)

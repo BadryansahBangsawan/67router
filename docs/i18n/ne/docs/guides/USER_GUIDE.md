@@ -1235,8 +1235,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` र **ड्यासबोर्�
 
 ### स्कोपहरू
 
-MCP ले हाल नाम दिइएका 32 वटा स्कोपहरू परिभाषित गर्छ। प्रत्येक Bearer कुञ्जीलाई निश्चित स्कोपहरूमा सीमित गर्न सकिन्छ — आधिकारिक स्कोप तथा उपकरण सूचीका लागि [MCP-SERVER.md](../frameworks/MCP-SERVER.md) र JSON-RPC स्किमाका लागि [A2A-SERVER.md](../frameworks/A2A-SERVER.md) हेर्नुहोस्।
-
 ---
 
 ## 🧠 सीप प्रणाली
@@ -1245,7 +1243,6 @@ OmniRoute ले विस्तारयोग्य **सीप फ्रे�
 
 - **Marketplace UI** — **Dashboard → Skills** बाट सीपहरू ब्राउज र स्थापना गर्नुहोस्
 - **प्रति-key scopes** — कुन API keys ले कुन सीपहरू आह्वान गर्न सक्छन् भन्ने सीमित गर्नुहोस्
-- **अनुकूलित सीपहरू** — `src/lib/a2a/skills/` मा TypeScript फाइल राख्नुहोस्, त्यसलाई दर्ता गर्नुहोस्, र यो तुरुन्तै A2A मार्फत आह्वानयोग्य हुन्छ
 
 पूर्ण सन्दर्भ: [SKILLS.md](../frameworks/SKILLS.md)।
 
@@ -1330,7 +1327,6 @@ omniroute restore [<timestamp>]    # स्न्यापसटबाट पु
 omniroute health                   # विस्तृत स्वास्थ्य जानकारी (ब्रेकरहरू, क्यास, मेमोरी)
 omniroute quota                    # प्रदायक कोटा प्रयोग
 omniroute mcp status               # MCP सर्भरको स्थिति
-omniroute a2a status               # A2A सर्भरको स्थिति
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok टनेलहरू
 omniroute reset-password           # प्रशासकको पासवर्ड रिसेट गर्नुहोस्
 omniroute --mcp                    # stdio मार्फत MCP सर्भर सुरु गर्नुहोस्

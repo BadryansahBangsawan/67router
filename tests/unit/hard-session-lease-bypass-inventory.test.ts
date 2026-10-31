@@ -219,7 +219,6 @@ const EXPECTED: Record<InventoryKind, Record<string, number>> = {
     "src/app/api/v1/vscode/raw/[token]/api/tags/route.ts": 1,
     "src/app/api/v1beta/models/route.ts": 1,
     "src/instrumentation-node.ts": 1,
-    "src/lib/a2a/skills/providerDiscovery.ts": 1,
     "src/lib/chaos/chaosExecutor.ts": 1,
     "src/lib/cloudSync.ts": 1,
     "src/lib/combos/builderOptions.ts": 1,

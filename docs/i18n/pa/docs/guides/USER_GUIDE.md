@@ -1231,8 +1231,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` ਅਤੇ **Dashboard → API Keys*
 
 ### ਸਕੋਪ
 
-MCP ਇਸ ਵੇਲੇ 32 ਨਾਮਿਤ ਸਕੋਪ ਪਰਿਭਾਸ਼ਿਤ ਕਰਦਾ ਹੈ। ਹਰੇਕ Bearer ਕੁੰਜੀ ਨੂੰ ਖਾਸ ਸਕੋਪਾਂ ਤੱਕ ਸੀਮਿਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ — ਅਧਿਕਾਰਤ ਸਕੋਪ ਅਤੇ ਟੂਲ ਸੂਚੀ ਲਈ [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ਅਤੇ JSON-RPC ਸਕੀਮਾ ਲਈ [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ਵੇਖੋ।
-
 ---
 
 ## 🧠 ਹੁਨਰ ਪ੍ਰਣਾਲੀ
@@ -1241,7 +1239,6 @@ OmniRoute ਇੱਕ ਵਿਸਤਾਰਯੋਗ **ਹੁਨਰ ਫਰੇਮਵ�
 
 - **ਮਾਰਕੀਟਪਲੇਸ UI** — **Dashboard → Skills** ਤੋਂ ਹੁਨਰ ਬ੍ਰਾਊਜ਼ ਅਤੇ ਇੰਸਟਾਲ ਕਰੋ
 - **ਪ੍ਰਤੀ-ਕੁੰਜੀ ਸਕੋਪ** — ਨਿਯੰਤਰਿਤ ਕਰੋ ਕਿ ਕਿਹੜੀਆਂ API ਕੁੰਜੀਆਂ ਕਿਹੜੇ ਹੁਨਰਾਂ ਨੂੰ ਚਲਾ ਸਕਦੀਆਂ ਹਨ
-- **ਕਸਟਮ ਹੁਨਰ** — `src/lib/a2a/skills/` ਵਿੱਚ ਇੱਕ TypeScript ਫ਼ਾਈਲ ਰੱਖੋ, ਇਸਨੂੰ ਰਜਿਸਟਰ ਕਰੋ, ਅਤੇ ਇਹ ਤੁਰੰਤ A2A ਰਾਹੀਂ ਚਲਾਉਣਯੋਗ ਬਣ ਜਾਂਦੀ ਹੈ
 
 ਪੂਰਾ ਹਵਾਲਾ: [SKILLS.md](../frameworks/SKILLS.md)।
 
@@ -1326,7 +1323,6 @@ omniroute restore [<timestamp>]    # ਸਨੈਪਸ਼ਾਟ ਤੋਂ ਰੀ�
 omniroute health                   # ਵਿਸਤ੍ਰਿਤ ਸਿਹਤ ਜਾਣਕਾਰੀ (ਬ੍ਰੇਕਰ, ਕੈਸ਼, ਮੈਮੋਰੀ)
 omniroute quota                    # ਪ੍ਰਦਾਤਾ ਕੋਟੇ ਦੀ ਵਰਤੋਂ
 omniroute mcp status               # MCP ਸਰਵਰ ਦੀ ਸਥਿਤੀ
-omniroute a2a status               # A2A ਸਰਵਰ ਦੀ ਸਥਿਤੀ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ਟਨਲਾਂ
 omniroute reset-password           # ਐਡਮਿਨ ਪਾਸਵਰਡ ਰੀਸੈੱਟ ਕਰੋ
 omniroute --mcp                    # stdio ਉੱਤੇ MCP ਸਰਵਰ ਸ਼ੁਰੂ ਕਰੋ

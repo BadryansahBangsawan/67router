@@ -81,4 +81,3 @@ try {
 - [بروتوكولات الوكلاء](./AGENT_PROTOCOLS_GUIDE.md)
 - [عقود تشغيل CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [أدوات CLI](../reference/CLI-TOOLS.md)
-- [خادم A2A](./A2A-SERVER.md)

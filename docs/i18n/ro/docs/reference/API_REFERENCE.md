@@ -1881,48 +1881,10 @@ OmniRoute include un server Model Context Protocol încorporat, cu 3 mecanisme d
 
 OmniRoute expune un endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, precum și un wrapper REST pentru inspectare/utilizare în panoul de control.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opțional, cu excepția cazului în care OMNIROUTE_API_KEY este setată
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metode acceptate (toate condiționate de `settings.a2aEnabled`):
-
-| Metodă           | Descriere                                                                  |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Executarea sincronă a abilității; returnează `{task, artifacts, metadata}` |
-| `message/stream` | Executarea prin flux SSE a aceluiași set de abilități                      |
-| `tasks/get`      | Preia o sarcină după `taskId`                                              |
-| `tasks/cancel`   | Anulează o sarcină după `taskId`                                           |
-
-Abilități încorporate: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Fișa agentului
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnează fișa publică a agentului A2A (nume, descriere, capabilități, catalog de abilități, schemă de autentificare) — stocată în cache public timp de 1 h. Nu este necesară autentificarea.
-
 ### Utilitare REST
 
 | Metodă | Cale                         | Descriere                                                                                                               |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Starea de activare A2A + statistici despre sarcini + rezumatul fișei agentului din cache                                |
 | GET    | `/api/a2a/tasks`             | Listează sarcinile — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Neimplementat ca utilitar REST — creați prin JSON-RPC `message/send`)                                                  |
 | GET    | `/api/a2a/tasks/[id]`        | Preia o sarcină                                                                                                         |

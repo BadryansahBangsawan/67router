@@ -527,13 +527,6 @@ const AUDIT_GROUP: SidebarItemGroup = {
       subtitleKey: "auditMcpSubtitle",
       icon: "security",
     },
-    {
-      id: "audit-a2a",
-      href: "/dashboard/audit/a2a",
-      i18nKey: "auditA2a",
-      subtitleKey: "auditA2aSubtitle",
-      icon: "device_hub",
-    },
   ],
 };
 
@@ -594,13 +587,6 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     icon: "auto_fix_high",
   },
   MCP_ITEM,
-  {
-    id: "a2a",
-    href: "/dashboard/a2a",
-    i18nKey: "a2a",
-    subtitleKey: "a2aSubtitle",
-    icon: "device_hub",
-  },
   {
     id: "plugins",
     href: "/dashboard/plugins",

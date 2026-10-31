@@ -100,8 +100,6 @@ App Router ڈیش بورڈ UI اور عوامی/انتظامی HTTP API، دون
 | راستہ                                                                         | مقصد                                        |
 | ----------------------------------------------------------------------------- | ------------------------------------------- |
 | `api/`                                                                        | تمام HTTP API روٹس (ذیل میں تفصیل دیکھیں)   |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 اینڈ پوائنٹ (`POST /a2a`)  |
-| `.well-known/agent.json/`                                                     | A2A Agent Card دریافت دستاویز               |
 | `(dashboard)/`                                                                | ڈیش بورڈ UI (روٹ گروپ، کوئی URL سابقہ نہیں) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | تصدیقی فلوز                                 |
 | `landing/`                                                                    | مارکیٹنگ/لینڈنگ صفحہ                        |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` کے تحت tests شامل کریں۔
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) کو اپ ڈیٹ کریں۔
 
-### نئی A2A skill شامل کریں
-
-[A2A-SERVER.md § نئی Skill شامل کرنا](../frameworks/A2A-SERVER.md) دیکھیں۔ Skills
-`src/lib/a2a/skills/` میں موجود ہوتی ہیں اور A2A task manager کے ذریعے رجسٹر کی جاتی ہیں۔
-
----
-
 ## 11. روایات
 
 - **Code style**: 2-space indent، double quotes، 100 حروف کی چوڑائی، semicolons،
@@ -846,7 +837,6 @@ bin/
   اور لاک آؤٹ کا گہرائی سے جائزہ۔
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo اسکورنگ اور حکمتِ عملیاں۔
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — مکمل MCP ٹول کیٹلاگ + ٹرانسپورٹس۔
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A پروٹوکول کی مہارتیں اور دریافت۔
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman کمپریشن۔
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI انضمامات۔
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (اگر موجود ہو)، [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)، [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)، [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)، [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)، [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — تعیناتی کے اہداف۔

@@ -390,34 +390,6 @@
       "description": "MCP audito žurnalas (audit --source mcp pseudonimas)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Išvardyti agento kortelėje nurodytus galimus A2A įgūdžius"
-    },
-    "invoke": {
-      "description": "Iškviesti A2A įgūdį ir grąžinti užduoties ID",
-      "input": "JSON įvesties objektas",
-      "input_file": "Kelias į JSON įvesties failą",
-      "wait": "Prieš grąžinant rezultatą palaukti, kol užduotis bus baigta",
-      "timeout": "Užduoties baigimo laukimo skirtasis laikas milisekundėmis (numatytoji reikšmė: 60000)"
-    },
-    "tasks": {
-      "description": "Tvarkyti A2A užduotis",
-      "list": {
-        "status": "Filtruoti pagal būseną",
-        "skill": "Filtruoti pagal įgūdžio ID"
-      },
-      "watch": {
-        "description": "Periodiškai tikrinti užduoties būseną, kol ji bus baigta"
-      },
-      "stream": {
-        "description": "Transliuoti užduoties vykdymo įvykius per SSE"
-      },
-      "logs": {
-        "description": "Rodyti užduoties pranešimus ir artefaktus"
-      }
-    }
-  },
   "policy": {
     "description": "Tvarkyti OmniRoute autorizavimo strategijas",
     "list": {

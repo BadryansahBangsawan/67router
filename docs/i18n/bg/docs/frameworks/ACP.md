@@ -124,4 +124,3 @@ try {
 - [Протоколи за агенти](./AGENT_PROTOCOLS_GUIDE.md)
 - [Договори за стартиране на CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI инструменти](../reference/CLI-TOOLS.md)
-- [A2A сървър](./A2A-SERVER.md)

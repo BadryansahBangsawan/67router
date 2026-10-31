@@ -87,7 +87,7 @@ OmniRoute അവയെ `/v1/chat/completions`-നായി പരിവർത്
 ## VS Code ടാബിനുള്ളിലെ ഡാഷ്ബോർഡ്
 
 `omnicopilot.dashboardOpen: "editor"` എന്നത് ഒരു ബാഹ്യ ബ്രൗസറിന് പകരം Simple Browser വഴി OmniRoute ഡാഷ്ബോർഡ് ഒരു എഡിറ്റർ ടാബിൽ റെൻഡർ ചെയ്യുന്നു. എംബെഡ്ഡിംഗ് **സെർവറിൽ ഓപ്റ്റ്-ഇൻ ചെയ്യേണ്ടതാണ്**; ഇതിനായി `DASHBOARD_ALLOW_EMBED=vscode` ഉപയോഗിക്കുന്നു. ഇത് ഡിഫോൾട്ടായ `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` എന്നതിന് പകരം `frame-ancestors 'self' vscode-webview:` ഉപയോഗിച്ച് HTML പേജുകൾ നൽകുന്നു. ഏത് സാഹചര്യത്തിലും API ഉപരിതലം (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) കർശനമായ ഹെഡറുകൾ നിലനിർത്തുന്നു.
+`X-Frame-Options: DENY` എന്നതിന് പകരം `frame-ancestors 'self' vscode-webview:` ഉപയോഗിച്ച് HTML പേജുകൾ നൽകുന്നു. ഏത് സാഹചര്യത്തിലും API ഉപരിതലം (`/api`, `/v1`, `/v1beta`, `/healthz`) കർശനമായ ഹെഡറുകൾ നിലനിർത്തുന്നു.
 
 > ⚠️ **ഇത് ഒരു ബിൽഡ്-ടൈം ഫ്ലാഗാണ്, റൺടൈം ഫ്ലാഗല്ല.** Next.js, `headers()`-നെ റൂട്ട്
 > മാനിഫെസ്റ്റിലേക്ക് കംപൈൽ ചെയ്യുന്നതിനാൽ, ബണ്ടിൽ ബിൽഡ് ചെയ്യുമ്പോൾ `next.config.mjs` വേരിയബിൾ വായിക്കുന്നു

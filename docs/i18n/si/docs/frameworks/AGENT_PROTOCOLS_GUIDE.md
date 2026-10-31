@@ -20,38 +20,6 @@ OmniRoute විසින් නියෝජිතයන්ට අදාළ ව�
 
 ## තීරණ වෘක්ෂය
 
-## 1. A2A — නියෝජිතයාගෙන් නියෝජිතයාට
-
-**පිරිවිතරය:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute අන්ත ලක්ෂ්යය:** `POST /a2a` (JSON-RPC 2.0)
-**නියෝජිත කාඩ්පත:** `GET /.well-known/agent.json`
-
-### භාවිත කළ යුත්තේ කවදාද
-
-- OmniRoute සම නියෝජිතයන්ගෙන් එකක් වන බහු-නියෝජිත පද්ධතියක් ගොඩනඟන විට
-- Google ADK වැනි රාමු හෝ සාමාන්ය නියෝජිත ජාල තුළ සිටින නියෝජිතයන්ට OmniRoute හි මාර්ගගත කිරීමේ බුද්ධිය (smart-routing, quota-management, ආදිය) ලබා දෙන විට
-- සම්මත සොයාගැනීමේ + ආයාචන අතුරුමුහුණතක් පිටුපස OmniRoute ආවරණය කරන විට
-
-### ක්රම
-
-- `message/send` — පණිවිඩයක් ඉදිරිපත් කර, සමමුහුර්ත ප්රතිචාරයක් ලබාගන්න
-- `message/stream` — පණිවිඩයක් ඉදිරිපත් කර, SSE හරහා ප්රවාහනය වන ප්රගති සිදුවීම් ලබාගන්න
-- `tasks/get` — ID අනුව කාර්යයක් කියවන්න
-- `tasks/cancel` — ක්රියාත්මක වන කාර්යයක් අවලංගු කරන්න
-
-### අන්තර්ගත කුසලතා (6)
-
-- `smart-routing` — ප්රශස්ත සංයෝජනය හරහා prompt එකක් මාර්ගගත කරන්න
-- `quota-management` — එක් එක් provider සඳහා quota තත්ත්වය වාර්තා කරන්න
-- `provider-discovery` — හැකියාවන් සමඟ ස්ථාපිත providers ලැයිස්තුගත කරන්න
-- `cost-analysis` — ඉල්ලීමක/සංවාදයක පිරිවැය ඇස්තමේන්තු කරන්න
-- `health-report` — එක් එක් provider සඳහා breaker/cooldown/lockout තත්ත්වය සමස්ත ලෙස වාර්තා කරන්න
-- `list-capabilities` — නියෝජිතයාගේ ලබාගත හැකි කුසලතා සහ metadata ලැයිස්තුගත කරන්න
-
-### සවිස්තරාත්මක විස්තර
-
-ප්රවාහන විස්තර, නියෝජිත කාඩ්පතේ ව්යුහය, කාර්ය TTL වින්යාසය සහ නව කුසලතා එක් කිරීමේ අච්චුව සඳහා [A2A-SERVER.md](./A2A-SERVER.md) බලන්න.
-
 ## 2. ACP — CLI ඒජන්ත රෙජිස්ට්රිය
 
 **OmniRoute අන්ත ලක්ෂ්යය:** `GET /api/acp/agents`
@@ -111,30 +79,6 @@ POST සඳහා body ව්යුහය (`src/app/api/acp/agents/route.ts` ත
 
 ## ඒකාබද්ධ කිරීමේ උදාහරණ
 
-### OmniRoute හි A2A හැකියාවන් සොයාගන්න
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-සියලු කුසලතා 6, ප්රවාහන ක්රම සහ අනුවාදය සමඟ Agent Card එක ආපසු ලබා දෙයි.
-
-### A2A නියෝජිතයෙකු ලෙස OmniRoute අමතන්න
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP හරහා ස්ථාපිත CLI නියෝජිතයන් ලැයිස්තුගත කරන්න
 
 ```bash
@@ -188,7 +132,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## මෙයද බලන්න
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A පිළිබඳ ගැඹුරු විග්රහය
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — බාහිර CLI ඒකාබද්ධ කිරීම් (ACP භාවිත කරයි)
 - [SKILLS.md](./SKILLS.md) — කුසලතා රාමුව (A2A කුසලතාවලට වඩා වෙනස්ය — දේශීය ක්රියාත්මක කිරීමේ හුදකලා පරිසරය)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — අන්තලක්ෂ්ය යොමුව

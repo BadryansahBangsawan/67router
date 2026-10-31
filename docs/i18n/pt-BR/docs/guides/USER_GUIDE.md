@@ -1237,7 +1237,7 @@ Use a URL SSE `http://localhost:20128/api/mcp/sse` e uma chave de API Bearer ger
 
 ### Escopos
 
-Atualmente, o MCP define 32 escopos nomeados. Cada chave Bearer pode ser limitada a escopos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de escopos e ferramentas e [A2A-SERVER.md](../frameworks/A2A-SERVER.md) para o esquema JSON-RPC.
+Atualmente, o MCP define 32 escopos nomeados. Cada chave Bearer pode ser limitada a escopos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de escopos e ferramentas.
 
 ---
 
@@ -1247,7 +1247,6 @@ O OmniRoute oferece um **framework extensível de skills** (`src/lib/skills/`) p
 
 - **Interface do Marketplace** — Explore e instale skills em **Dashboard → Skills**
 - **Escopos por chave** — Restrinja quais chaves de API podem invocar cada skill
-- **Skills personalizadas** — Adicione um arquivo TypeScript em `src/lib/a2a/skills/`, registre-o e ele poderá ser invocado imediatamente via A2A
 
 Referência completa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1332,7 +1331,6 @@ omniroute restore [<timestamp>]    # Restaura a partir de um snapshot
 omniroute health                   # Integridade detalhada (disjuntores, cache, memória)
 omniroute quota                    # Uso da cota dos provedores
 omniroute mcp status               # Status do servidor MCP
-omniroute a2a status               # Status do servidor A2A
 omniroute tunnel list|create|stop  # Túneis do Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Redefine a senha do administrador
 omniroute --mcp                    # Inicia o servidor MCP via stdio

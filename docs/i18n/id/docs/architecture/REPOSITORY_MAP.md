@@ -143,8 +143,6 @@ src/
 | `app/api/` (non-v1)                                                          | Rute pengelolaan/admin (~60 direktori: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, dll.)                                                                                                                                             |
 | `app/api/tools/agent-bridge/`                                                | REST API AgentBridge — 12 rute (kontrol server, status/DNS/pemetaan agen, bypass, sertifikat, CA upstream). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                       |
 | `app/api/tools/traffic-inspector/`                                           | REST + WS API Traffic Inspector — 16+ rute (requests, sessions, hosts, capture-modes, export, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                          |
-| `app/a2a/`                                                                   | Titik masuk A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                               |
-| `app/.well-known/agent.json/`                                                | Kartu Agen A2A (penemuan)                                                                                                                                                                                                                                                                                                |
 | `app/(dashboard)/dashboard/`                                                 | Halaman UI dasbor (50+ bagian, ~118 file page.tsx: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, dll.)                                                                                                                                             |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI Search Tools Studio (3 tab: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — lihat `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (rencana 21): `page.tsx` (kerangka 3 tab), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Dokumen                                       | Tujuan                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                               | Server MCP: 110 alat, 3 transport, 33 cakupan, endpoint REST                  |
-| `A2A-SERVER.md`                               | A2A v0.3: JSON-RPC, 6 skill, pembantu REST, kartu agen                        |
 | `AGENT_PROTOCOLS_GUIDE.md`                    | Panduan terpadu: A2A vs ACP vs Agen Cloud                                     |
 | `SKILLS.md`                                   | Kerangka kerja skill (bawaan + marketplace + SkillsSH + sandbox)              |
 | `RADAR.md`                                    | Overlay katalog model gratis Radar (`RADAR_ENABLED`, nonaktif secara default) |
@@ -565,7 +562,6 @@ Tidak disertakan dalam keluaran `npm pack`. Lihat `.npmignore`.
 - **Menambahkan provider?** Ikuti `docs/architecture/ARCHITECTURE.md § Adding a New Provider` + periksa silang dengan `docs/reference/PROVIDER_REFERENCE.md`.
 - **Menambahkan route?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **Menambahkan tool MCP?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **Menambahkan skill A2A?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Menjalankan secara lokal?** `docs/guides/SETUP_GUIDE.md`.
 - **Melakukan deployment?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Melakukan rilis?** `docs/ops/RELEASE_CHECKLIST.md` (dan skill Claude Code `/generate-release-cc`).

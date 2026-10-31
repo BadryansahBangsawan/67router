@@ -100,8 +100,6 @@ App Router ড্যাশবোর্ড UI এবং পাবলিক/ম্
 | পাথ                                                                           | উদ্দেশ্য                                          |
 | ----------------------------------------------------------------------------- | ------------------------------------------------- |
 | `api/`                                                                        | সব HTTP API রুট (নিচে বিস্তারিত দেখুন)            |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 এন্ডপয়েন্ট (`POST /a2a`)        |
-| `.well-known/agent.json/`                                                     | A2A Agent Card আবিষ্কার ডকুমেন্ট                  |
 | `(dashboard)/`                                                                | ড্যাশবোর্ড UI (রুট গ্রুপ, কোনো URL প্রিফিক্স নেই) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | অথেনটিকেশন ফ্লো                                   |
 | `landing/`                                                                    | মার্কেটিং/ল্যান্ডিং পেজ                           |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/`-এর অধীনে টেস্ট যোগ করুন।
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) আপডেট করুন।
 
-### একটি নতুন A2A skill যোগ করুন
-
-[A2A-SERVER.md § একটি নতুন Skill যোগ করা](../frameworks/A2A-SERVER.md) দেখুন। Skill-গুলো
-`src/lib/a2a/skills/`-এ থাকে এবং A2A task manager-এর মাধ্যমে নিবন্ধিত হয়।
-
----
-
 ## 11. রীতিনীতি
 
 - **কোড স্টাইল**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -847,7 +838,6 @@ bin/
   লকআউটের বিস্তারিত আলোচনা।
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo স্কোরিং এবং কৌশলসমূহ।
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — সম্পূর্ণ MCP টুল ক্যাটালগ + ট্রান্সপোর্টসমূহ।
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A প্রোটোকলের দক্ষতা এবং ডিসকভারি।
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman কম্প্রেশন।
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ইন্টিগ্রেশনসমূহ।
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (উপস্থিত থাকলে), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ডিপ্লয়মেন্টের লক্ষ্যসমূহ।

@@ -122,4 +122,3 @@ sprioc-thimpeallacht dóibh sin.
 - [Prótacail ghníomhairí](./AGENT_PROTOCOLS_GUIDE.md)
 - [Conarthaí seolta CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Uirlisí CLI](../reference/CLI-TOOLS.md)
-- [Freastalaí A2A](./A2A-SERVER.md)

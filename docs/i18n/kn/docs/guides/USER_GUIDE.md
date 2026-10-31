@@ -1234,8 +1234,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` ಮತ್ತು **Dashboard → API
 
 ### ವ್ಯಾಪ್ತಿಗಳು
 
-MCP ಪ್ರಸ್ತುತ ಹೆಸರಿಸಲಾದ 32 ವ್ಯಾಪ್ತಿಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುತ್ತದೆ. ಪ್ರತಿಯೊಂದು Bearer ಕೀಲಿಯನ್ನು ನಿರ್ದಿಷ್ಟ ವ್ಯಾಪ್ತಿಗಳಿಗೆ ಸೀಮಿತಗೊಳಿಸಬಹುದು — ಅಧಿಕೃತ ವ್ಯಾಪ್ತಿ ಮತ್ತು ಪರಿಕರಗಳ ಪಟ್ಟಿಗಾಗಿ [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ಹಾಗೂ JSON-RPC ಸ್ಕೀಮಾಕ್ಕಾಗಿ [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ನೋಡಿ.
-
 ---
 
 ## 🧠 ಕೌಶಲ್ಯಗಳ ವ್ಯವಸ್ಥೆ
@@ -1244,7 +1242,6 @@ MCP ಪ್ರಸ್ತುತ ಹೆಸರಿಸಲಾದ 32 ವ್ಯಾಪ್�
 
 - **ಮಾರ್ಕೆಟ್ಪ್ಲೇಸ್ UI** — **Dashboard → Skills** ನಿಂದ ಕೌಶಲ್ಯಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ ಮತ್ತು ಸ್ಥಾಪಿಸಿ
 - **ಪ್ರತಿ-ಕೀ ಸ್ಕೋಪ್ಗಳು** — ಯಾವ API ಕೀಗಳು ಯಾವ ಕೌಶಲ್ಯಗಳನ್ನು ಆಹ್ವಾನಿಸಬಹುದು ಎಂಬುದನ್ನು ನಿರ್ಬಂಧಿಸಿ
-- **ಕಸ್ಟಮ್ ಕೌಶಲ್ಯಗಳು** — `src/lib/a2a/skills/` ನಲ್ಲಿ TypeScript ಫೈಲ್ ಅನ್ನು ಇರಿಸಿ, ಅದನ್ನು ನೋಂದಾಯಿಸಿ; ನಂತರ ಅದನ್ನು A2A ಮೂಲಕ ತಕ್ಷಣವೇ ಆಹ್ವಾನಿಸಬಹುದು
 
 ಸಂಪೂರ್ಣ ಉಲ್ಲೇಖ: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1329,7 +1326,6 @@ omniroute restore [<timestamp>]    # ಸ್ನ್ಯಾಪ್ಶಾಟ್ನಿ�
 omniroute health                   # ವಿವರವಾದ ಸ್ಥಿತಿಗತಿ (ಬ್ರೇಕರ್ಗಳು, ಕ್ಯಾಶ್, ಮೆಮೊರಿ)
 omniroute quota                    # ಪೂರೈಕೆದಾರರ ಕೋಟಾ ಬಳಕೆ
 omniroute mcp status               # MCP ಸರ್ವರ್ ಸ್ಥಿತಿ
-omniroute a2a status               # A2A ಸರ್ವರ್ ಸ್ಥಿತಿ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ಟನಲ್ಗಳು
 omniroute reset-password           # ನಿರ್ವಾಹಕರ ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ
 omniroute --mcp                    # stdio ಮೂಲಕ MCP ಸರ್ವರ್ ಪ್ರಾರಂಭಿಸಿ

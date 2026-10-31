@@ -586,7 +586,6 @@ Radar തിരഞ്ഞെടുക്കുന്നവർക്ക് മാ�
 - **🔑 പെർ-കീ റൂട്ടിംഗ് നിയന്ത്രണം** — `forcedModel` ഉപയോഗിച്ച് ഒരു API കീയെ ഒരൊറ്റ മോഡലിലേക്കോ കോംബോയിലേക്കോ പിൻ ചെയ്യുക; ഒരു കീയുടെ മോഡലുകളും കോംബോകളും ആറ്റോമിക്കായി ചേർക്കുകയോ നീക്കം ചെയ്യുകയോ ചെയ്യുക (`/api/keys/{id}/access`). → [API റഫറൻസ്](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ കൂടുതൽ സൂക്ഷ്മമായ PII നിയന്ത്രണങ്ങൾ** — തരം തിരിച്ചുള്ള തിരഞ്ഞെടുപ്പ്, 20 വരെ വാലിഡേറ്റ് ചെയ്ത കസ്റ്റം മാസ്കിംഗ് പാറ്റേണുകൾ, തരം അനുസരിച്ചുള്ള ഡിറ്റക്ഷൻ കൗണ്ടറുകൾ; മാസ്കിംഗ് തന്നെ ഓപ്റ്റ്-ഇൻ ആയി തുടരുന്നു. → [ഗാർഡ്റെയിൽസ്](docs/security/GUARDRAILS.md)
 - **🌍 67 ഭാഷകൾ** — ഡാഷ്ബോർഡ്, ഡോക്സ് മിററുകൾ, CLI എന്നിവയിൽ; `npm run i18n:add-locale` ഒരു കമാൻഡുകൊണ്ട് എല്ലായിടത്തും ഒരു ഭാഷ ചേർക്കുന്നു. → [i18n ഗൈഡ്](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — നിങ്ങളുടെ ഏജന്റ് സംഘത്തിലേക്ക് ഇൻബൗണ്ട് A2A ഡെലിഗേഷൻ, Agent Card-ൽ Conductor സ്കില്ലുകൾ, Faro പുഷ്-ടു-ടോക്ക് വോയ്സ് ചാറ്റുള്ള ഒരു ഡാഷ്ബോർഡ് പാനൽ. → [A2A സെർവർ](docs/frameworks/A2A-SERVER.md)
 - **🛂 അഡാപ്റ്റീവ് അഡ്മിഷനും ഓവർലോഡ് സംരക്ഷണവും** — ഹെവിവെയ്റ്റ് ചാറ്റ് റിക്വസ്റ്റുകൾ 503 പിഴവ് മടക്കുന്നതിനു പകരം ക്യൂവിൽ കാത്തിരിക്കുന്നു; ഓരോ കണക്ഷനും ആറ്റോമിക് RPM റോളിംഗ് ലീസുകളോടെ. → [റെസിലിയൻസ് ഗൈഡ്](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ കാനോനിക്കൽ `/v1/models` ക്രമീകരണം** — ഓരോ പ്രൊവൈഡർക്കും ഒരു തുടർച്ചയായ പ്രൊവൈഡർ-ഗ്രൂപ്പ് ചെയ്ത ബ്ലോക്ക് (കോംബോകൾ ആദ്യം പിൻ ചെയ്യും), എല്ലാ കാറ്റലോഗ് സോഴ്സുകളിലും സ്ഥിരം. → [API റഫറൻസ്](docs/reference/API_REFERENCE.md)
 - **🗜️ കംപ്രഷൻ ഹാർഡനിംഗ്** — ഡിഫോൾട്ടായി ഓൺ ആയ ഇൻഫ്ലേഷൻ ഗാർഡ്, DE / FR / JA + ചൈനീസ് (wényán)-നുള്ള Caveman പായ്ക്കുകൾ, Gradle & .NET-നുള്ള RTK ഫിൽട്ടറുകൾ. → [കംപ്രഷൻ](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ OmniRoute-നെ **MCP**, **A2A**, ഒരു **REST API**, **വെബ്ഹു�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor, അല്ലെങ്കിൽ ഏത് MCP ക്ലയന്റുമായും ബന്ധിപ്പിക്കുക</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">റിമോട്ട് MCP — <b>110 ടൂളുകൾ</b>, 33 പരിധികൾ (നിർബന്ധിത പ്രയോഗം ഐച്ഛികമാണ്), സമ്പൂർണ്ണ ഓഡിറ്റ് ട്രെയിൽ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">സ്ട്രീമിംഗ് MCP ട്രാൻസ്പോർട്ട്</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ഏജന്റിൽ നിന്ന് ഏജന്റിലേക്ക്, <b>JSON-RPC 2.0</b> + SSE, 6 സ്കില്ലുകൾ</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-അനുയോജ്യം — ചാറ്റ്, എംബെഡ്ഡിംഗുകൾ, ചിത്രങ്ങൾ, ഓഡിയോ, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>വെബ്ഹുക്കുകൾ</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">റിക്വസ്റ്റ് / ക്വോട്ട ഇവന്റുകൾ Slack, Discord, Telegram, അല്ലെങ്കിൽ ഏത് URL-ലേക്കും പുഷ് ചെയ്യുക</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>റിമോട്ട് CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">നിർദ്ദിഷ്ട പരിധിയുള്ള ആക്സസ് ടോക്കണുകൾ ഉപയോഗിച്ച് ഒരു റിമോട്ട് ഇൻസ്റ്റൻസ് നിയന്ത്രിക്കുക</td></tr>
@@ -915,8 +913,6 @@ OmniRoute-നെ **MCP**, **A2A**, ഒരു **REST API**, **വെബ്ഹു�
 # MCP വഴി Claude Code-ന് സമ്പൂർണ്ണ OmniRoute ടൂൾസെറ്റ് നൽകുക:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP സെർവർ](docs/frameworks/MCP-SERVER.md) · [A2A സെർവർ](docs/frameworks/A2A-SERVER.md) · [ഏജന്റ് പ്രോട്ടോക്കോളുകൾ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1378,6 @@ port-ൽ ഒരേ process വഴിയാണ് ലഭ്യമാക്കു�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP സെർവർ</a></b></td><td>110 MCP ടൂളുകൾ, IDE കോൺഫിഗറേഷനുകൾ, Python/TS/Go ക്ലയന്റുകൾ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP സെർവർ ഗൈഡ്</a></b></td><td>MCP ഇൻസ്റ്റാളേഷൻ, ട്രാൻസ്പോർട്ടുകൾ, ടൂൾ റഫറൻസ്</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A സെർവർ</a></b></td><td>JSON-RPC 2.0 പ്രോട്ടോക്കോൾ, കഴിവുകൾ, സ്ട്രീമിങ്, ടാസ്ക് മാനേജ്മെന്റ്</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A സെർവർ ഗൈഡ്</a></b></td><td>A2A ഏജന്റ് കാർഡ്, ടാസ്കുകൾ, കഴിവുകൾ, സ്ട്രീമിങ്</td></tr>
 </table>
 
 ### 📋 പ്രോജക്റ്റും ഗുണനിലവാരവും

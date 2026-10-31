@@ -1237,8 +1237,6 @@ Yi amfani da SSE URL `http://localhost:20128/api/mcp/sse` da Bearer API key da a
 
 ### Scopes
 
-A halin yanzu MCP yana ayyana scopes 32 masu suna. Ana iya iyakance kowace Bearer key zuwa takamaiman scopes — duba [MCP-SERVER.md](../frameworks/MCP-SERVER.md) don tabbataccen jerin scope da tool, da kuma [A2A-SERVER.md](../frameworks/A2A-SERVER.md) don JSON-RPC schema.
-
 ---
 
 ## 🧠 Tsarin Ƙwarewa
@@ -1247,7 +1245,6 @@ OmniRoute yana samar da **tsarin ƙwarewa mai faɗaɗawa** (`src/lib/skills/`) d
 
 - **UI na Marketplace** — Bincika kuma shigar da ƙwarewa daga **Dashboard → Skills**
 - **Scopes na kowane maɓalli** — Ƙayyade waɗanne maɓallan API ne za su iya kiran waɗanne ƙwarewa
-- **Ƙwarewa na musamman** — Saka fayil na TypeScript a `src/lib/a2a/skills/`, yi masa rajista, kuma nan take zai zama abin kira ta A2A
 
 Cikakken bayani: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1332,7 +1329,6 @@ omniroute restore [<timestamp>]    # Mayar da bayanai daga hoton ajiya
 omniroute health                   # Cikakken bayani kan lafiya (breakers, cache, memory)
 omniroute quota                    # Amfani da ƙayyadadden kaso na mai samarwa
 omniroute mcp status               # Matsayin uwar garken MCP
-omniroute a2a status               # Matsayin uwar garken A2A
 omniroute tunnel list|create|stop  # Tunnels na Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Sake saita kalmar sirrin mai gudanarwa
 omniroute --mcp                    # Fara uwar garken MCP ta stdio

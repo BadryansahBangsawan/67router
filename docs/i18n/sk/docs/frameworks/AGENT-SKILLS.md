@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (vyžaduje sa autentifikácia)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 nástroje MCP (zoznam, získanie, pokrytie)
-src/lib/a2a/skills/listCapabilities.ts        — Zručnosť A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Zručnosť A2A `list-capabilities` vracia kompletný katalóg 45 zručností ako
 }
 ```
 
-Podrobnosti o protokole nájdete v dokumente [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalóg — 45 ID zručností
@@ -189,7 +186,6 @@ Podrobnosti o protokole nájdete v dokumente [A2A-SERVER.md](./A2A-SERVER.md).
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — framework Omni Skills (vkladanie nástrojov LLM + trhovisko)
 - [MCP-SERVER.md](./MCP-SERVER.md) — katalóg nástrojov MCP (nástroje `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — protokol A2A (zručnosť `list-capabilities`)
 - `src/lib/agentSkills/` — katalóg, generátor a syntaktické analyzátory
 - `skills/` — vygenerované súbory SKILL.md (45 položiek)

@@ -20,38 +20,6 @@ Bu üçü birbirinden bağımsızdır — istediğiniz herhangi bir alt kümeyi 
 
 ## Karar Ağacı
 
-## 1. A2A — Ajandan Ajana
-
-**Standart:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute uç noktası:** `POST /a2a` (JSON-RPC 2.0)
-**Ajan Kartı:** `GET /.well-known/agent.json`
-
-### Ne zaman kullanılmalı?
-
-- OmniRoute'un eşlerden biri olduğu çok ajanlı bir sistem oluştururken
-- OmniRoute'un yönlendirme zekâsını (akıllı yönlendirme, kota yönetimi vb.) Google ADK gibi çerçevelerdeki veya genel ajan ağlarındaki ajanlara sunarken
-- OmniRoute'u standart bir keşif + çağırma arayüzünün arkasında sarmalarken
-
-### Yöntemler
-
-- `message/send` — bir mesaj gönderir ve eşzamanlı yanıt alır
-- `message/stream` — mesaj gönderir ve SSE ile aktarılan ilerleme olaylarını alır
-- `tasks/get` — görevi kimliğine göre okur
-- `tasks/cancel` — çalışan bir görevi iptal eder
-
-### Yerleşik beceriler (6)
-
-- `smart-routing` — bir istemi en uygun kombinasyon üzerinden yönlendirir
-- `quota-management` — sağlayıcı başına kota durumunu bildirir
-- `provider-discovery` — yüklü sağlayıcıları yetenekleriyle birlikte listeler
-- `cost-analysis` — bir isteğin/görüşmenin maliyetini tahmin eder
-- `health-report` — sağlayıcı başına devre kesici/bekleme/kilitleme durumunu toplu olarak bildirir
-- `list-capabilities` — ajanın kullanılabilir becerilerini ve meta verilerini sıralar
-
-### Ayrıntılı inceleme
-
-Aktarım ayrıntıları, ajan kartı yapısı, görev TTL yapılandırması ve yeni beceriler ekleme şablonu için [A2A-SERVER.md](./A2A-SERVER.md) belgesine bakın.
-
 ## 2. ACP — CLI Ajanları Kayıt Defteri
 
 **OmniRoute uç noktası:** `GET /api/acp/agents`
@@ -106,30 +74,6 @@ POST için gövde yapısı (`src/app/api/acp/agents/route.ts` içindeki `customA
 
 ## Entegrasyon Örnekleri
 
-### OmniRoute'un A2A yeteneklerini keşfetme
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tüm 6 beceriyi, aktarım yöntemlerini ve sürümü içeren Ajan Kartı'nı döndürür.
-
-### OmniRoute'u bir A2A ajanı olarak çağırma
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Bu istemi yönlendir"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### ACP aracılığıyla yüklü CLI ajanlarını listeleme
 
 ```bash
@@ -183,7 +127,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Ayrıca Bkz.
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A hakkında ayrıntılı inceleme
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Harici CLI entegrasyonları (ACP kullanır)
 - [SKILLS.md](./SKILLS.md) — Yetenekler çerçevesi (A2A yeteneklerinden farklıdır — yerel yürütme korumalı alanı)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — uç nokta referansı

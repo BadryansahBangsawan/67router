@@ -128,4 +128,3 @@ separat godkendt smoke-test i målmiljøet.
 - [Agentprotokoller](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-startkontrakter](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-værktøjer](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)

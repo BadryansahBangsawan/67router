@@ -20,38 +20,6 @@ Ketiga-tiganya adalah bebas — pilih mana-mana gabungan.
 
 ## Pepohon Keputusan
 
-## 1. A2A — Ejen-ke-Ejen
-
-**Spesifikasi:** [A2A v0.3](https://a2a-protocol.org)
-**Titik akhir OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kad Ejen:** `GET /.well-known/agent.json`
-
-### Bila hendak digunakan
-
-- Membina sistem berbilang ejen dengan OmniRoute sebagai salah satu rakan setara
-- Mendedahkan kecerdasan penghalaan OmniRoute (penghalaan pintar, pengurusan kuota, dll.) kepada ejen dalam rangka kerja seperti Google ADK atau rangkaian ejen generik
-- Membungkus OmniRoute di sebalik antara muka penemuan + penyeruan standard
-
-### Kaedah
-
-- `message/send` — hantar mesej dan terima respons segerak
-- `message/stream` — hantar mesej + terima peristiwa kemajuan yang distrim melalui SSE
-- `tasks/get` — baca tugas mengikut ID
-- `tasks/cancel` — batalkan tugas yang sedang berjalan
-
-### Kemahiran terbina dalam (6)
-
-- `smart-routing` — halakan gesaan melalui gabungan yang optimum
-- `quota-management` — laporkan keadaan kuota bagi setiap penyedia
-- `provider-discovery` — senaraikan penyedia yang dipasang berserta keupayaannya
-- `cost-analysis` — anggarkan kos permintaan/perbualan
-- `health-report` — agregatkan keadaan pemutus/lengahan/sekat masuk bagi setiap penyedia
-- `list-capabilities` — senaraikan kemahiran dan metadata yang tersedia untuk ejen
-
-### Penjelasan terperinci
-
-Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk butiran pengangkutan, struktur kad ejen, konfigurasi TTL tugas dan templat bagi menambahkan kemahiran baharu.
-
 ## 2. ACP — Daftar Ejen CLI
 
 **Titik akhir OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Bentuk isi untuk POST (`customAgentBodySchema` dalam `src/app/api/acp/agents/rou
 
 ## Contoh Integrasi
 
-### Temui keupayaan A2A OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Mengembalikan Kad Ejen dengan kesemua 6 kemahiran, pengangkutan dan versi.
-
-### Panggil OmniRoute sebagai ejen A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Senaraikan ejen CLI yang dipasang melalui ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Lihat Juga
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Penjelasan mendalam tentang A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Penyepaduan CLI luaran (menggunakan ACP)
 - [SKILLS.md](./SKILLS.md) — Rangka kerja kemahiran (berbeza daripada kemahiran A2A — kotak pasir pelaksanaan setempat)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — rujukan titik akhir

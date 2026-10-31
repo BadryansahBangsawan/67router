@@ -20,38 +20,6 @@ OmniRoute는 서로 다른 세 가지 에이전트 관련 인터페이스를 제
 
 ## 결정 트리
 
-## 1. A2A — 에이전트 간 통신
-
-**사양:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute 엔드포인트:** `POST /a2a` (JSON-RPC 2.0)
-**에이전트 카드:** `GET /.well-known/agent.json`
-
-### 사용 시기
-
-- OmniRoute가 동료 중 하나로 참여하는 멀티 에이전트 시스템을 구축할 때
-- Google ADK 또는 범용 에이전트 메시와 같은 프레임워크의 에이전트에 OmniRoute의 라우팅 인텔리전스(smart-routing, quota-management 등)를 제공할 때
-- 표준 검색 및 호출 인터페이스 뒤에 OmniRoute를 래핑할 때
-
-### 메서드
-
-- `message/send` — 메시지를 제출하고 동기 응답 수신
-- `message/stream` — 메시지를 제출하고 SSE로 스트리밍되는 진행 이벤트 수신
-- `tasks/get` — ID로 작업 조회
-- `tasks/cancel` — 실행 중인 작업 취소
-
-### 기본 제공 스킬(6개)
-
-- `smart-routing` — 최적의 조합을 통해 프롬프트 라우팅
-- `quota-management` — 공급자별 할당량 상태 보고
-- `provider-discovery` — 설치된 공급자와 해당 기능 목록 표시
-- `cost-analysis` — 요청 또는 대화 비용 추정
-- `health-report` — 공급자별 차단기, 쿨다운 및 잠금 상태 집계
-- `list-capabilities` — 에이전트에서 사용 가능한 스킬과 메타데이터 열거
-
-### 자세히 알아보기
-
-전송 세부 정보, 에이전트 카드 구조, 작업 TTL 구성 및 새 스킬을 추가하기 위한 템플릿은 [A2A-SERVER.md](./A2A-SERVER.md)를 참조하세요.
-
 ## 2. ACP — CLI 에이전트 레지스트리
 
 **OmniRoute 엔드포인트:** `GET /api/acp/agents`
@@ -104,30 +72,6 @@ POST 본문 형식(`src/app/api/acp/agents/route.ts`의 `customAgentBodySchema`)
 - HTTP 레지스트리는 작업을 받거나 프로세스 실행 기능을 노출하지 않습니다. 내부 관리자는 등록된 CLI를 실행할 수 있지만 자동 제공자 폴백으로 연결되어 있지는 않습니다. 일반적인 대화형 사용의 경우 구성된 CLI를 직접 실행하거나 `omniroute run`을 사용하세요.
 
 ## 통합 예시
-
-### OmniRoute의 A2A 기능 검색
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-6개의 모든 스킬, 전송 방식 및 버전이 포함된 Agent Card를 반환합니다.
-
-### OmniRoute를 A2A 에이전트로 호출
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### ACP를 통해 설치된 CLI 에이전트 목록 조회
 
@@ -182,7 +126,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## 함께 보기
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 심층 분석
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — 외부 CLI 통합(ACP 사용)
 - [SKILLS.md](./SKILLS.md) — 스킬 프레임워크(A2A 스킬과는 다른 로컬 실행 샌드박스)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — 엔드포인트 참조

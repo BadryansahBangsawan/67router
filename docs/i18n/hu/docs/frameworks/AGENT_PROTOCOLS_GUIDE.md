@@ -20,38 +20,6 @@ A három egymástól független — bármelyik részhalmazuk használható.
 
 ## Döntési fa
 
-## 1. A2A — ügynökök között
-
-**Specifikáció:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-végpont:** `POST /a2a` (JSON-RPC 2.0)
-**Ügynökkártya:** `GET /.well-known/agent.json`
-
-### Mikor használja
-
-- Többügynökös rendszer építésekor, amelyben az OmniRoute az egyik partner
-- Az OmniRoute útválasztási intelligenciájának (intelligens útválasztás, kvótakezelés stb.) elérhetővé tétele olyan keretrendszerek ügynökei számára, mint a Google ADK, illetve általános ügynökhálózatok számára
-- Az OmniRoute szabványos felderítési és meghívási felülettel történő ellátásakor
-
-### Metódusok
-
-- `message/send` — üzenet beküldése és szinkron válasz fogadása
-- `message/stream` — üzenet beküldése és SSE-adatfolyamon továbbított előrehaladási események fogadása
-- `tasks/get` — feladat lekérése azonosító alapján
-- `tasks/cancel` — futó feladat megszakítása
-
-### Beépített képességek (6)
-
-- `smart-routing` — kérés továbbítása az optimális kombináción keresztül
-- `quota-management` — szolgáltatónkénti kvótaállapot jelentése
-- `provider-discovery` — a telepített szolgáltatók és képességeik listázása
-- `cost-analysis` — egy kérés vagy beszélgetés költségének becslése
-- `health-report` — a megszakító, lehűlési és kizárási állapot összesítése szolgáltatónként
-- `list-capabilities` — az ügynök elérhető képességeinek és metaadatainak felsorolása
-
-### Részletes ismertető
-
-Az átviteli részleteket, az ügynökkártya felépítését, a feladatok TTL-konfigurációját és az új képességek hozzáadására szolgáló sablont az [A2A-SERVER.md](./A2A-SERVER.md) dokumentumban találja.
-
 ## 2. ACP — CLI-ügynökök nyilvántartása
 
 **OmniRoute-végpont:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ A POST törzsének szerkezete (`customAgentBodySchema` itt: `src/app/api/acp/age
 
 ## Integrációs példák
 
-### Az OmniRoute A2A-képességeinek felderítése
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Visszaadja az Agent Cardot mind a 6 készséggel, az átviteli módokkal és a verzióval.
-
-### Az OmniRoute meghívása A2A-ügynökként
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Irányítsd ezt a promptot"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Telepített CLI-ügynökök listázása ACP-n keresztül
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Lásd még
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Az A2A részletes ismertetése
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Külső CLI-integrációk (ACP-t használnak)
 - [SKILLS.md](./SKILLS.md) — Képességkeretrendszer (eltér az A2A-képességektől — helyi végrehajtási környezet)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — végpontreferencia

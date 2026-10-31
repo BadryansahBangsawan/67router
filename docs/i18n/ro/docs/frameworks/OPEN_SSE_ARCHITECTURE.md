@@ -573,5 +573,4 @@ Motorul de rutare are bugete stricte de performanță:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — prezentare director cu director
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — evaluare bazată pe 16 factori
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sursă: `open-sse/` (peste 400 de fișiere, ~143K linii de cod)

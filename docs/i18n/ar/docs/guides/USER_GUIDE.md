@@ -1238,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### النطاقات
 
-يعرّف MCP حاليًا 32 نطاقًا مسمّى. يمكن تقييد كل مفتاح Bearer بنطاقات محددة — راجع [MCP-SERVER.md](../frameworks/MCP-SERVER.md) للاطلاع على القائمة المرجعية للنطاقات والأدوات، و[A2A-SERVER.md](../frameworks/A2A-SERVER.md) للاطلاع على مخطط JSON-RPC.
-
 ---
 
 ## 🧠 نظام المهارات
@@ -1248,7 +1246,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **واجهة سوق المهارات** — تصفّح المهارات وثبّتها من **لوحة التحكم → المهارات**
 - **نطاقات مخصّصة لكل مفتاح** — قيّد المهارات التي يمكن لكل مفتاح API استدعاؤها
-- **مهارات مخصّصة** — ضع ملف TypeScript في `src/lib/a2a/skills/`، وسجّله، وسيصبح قابلًا للاستدعاء فورًا عبر A2A
 
 المرجع الكامل: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # الاستعادة من لقطة
 omniroute health                   # تفاصيل السلامة (قواطع الدارة، وذاكرة التخزين المؤقت، والذاكرة)
 omniroute quota                    # استخدام حصة الموفر
 omniroute mcp status               # حالة خادم MCP
-omniroute a2a status               # حالة خادم A2A
 omniroute tunnel list|create|stop  # أنفاق Cloudflare/Tailscale/ngrok
 omniroute reset-password           # إعادة تعيين كلمة مرور المسؤول
 omniroute --mcp                    # تشغيل خادم MCP عبر stdio

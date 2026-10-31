@@ -131,4 +131,3 @@ bunlar hedef ortamda ayrıca yetkilendirilmiş bir duman testi gerektirir.
 - [Ajan protokolleri](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI başlatma sözleşmeleri](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI araçları](../reference/CLI-TOOLS.md)
-- [A2A sunucusu](./A2A-SERVER.md)

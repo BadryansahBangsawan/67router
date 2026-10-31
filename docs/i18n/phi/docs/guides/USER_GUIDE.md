@@ -1239,8 +1239,6 @@ Gamitin ang SSE URL na `http://localhost:20128/api/mcp/sse` at isang Bearer API 
 
 ### Mga scope
 
-Kasalukuyang tumutukoy ang MCP ng 32 pinangalanang scope. Maaaring limitahan ang bawat Bearer key sa mga partikular na scope — tingnan ang [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para sa opisyal na imbentaryo ng mga scope at tool, at ang [A2A-SERVER.md](../frameworks/A2A-SERVER.md) para sa JSON-RPC schema.
-
 ---
 
 ## 🧠 Sistema ng Skills
@@ -1249,7 +1247,6 @@ Nagbibigay ang OmniRoute ng napapalawak na **skill framework** (`src/lib/skills/
 
 - **Marketplace UI** — Mag-browse at mag-install ng mga skill mula sa **Dashboard → Skills**
 - **Mga scope kada key** — Limitahan kung aling mga API key ang maaaring gumamit ng partikular na mga skill
-- **Mga custom na skill** — Maglagay ng TypeScript file sa `src/lib/a2a/skills/`, irehistro ito, at maaari na agad itong gamitin sa pamamagitan ng A2A
 
 Kumpletong sanggunian: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Mag-restore mula sa isang snapshot
 omniroute health                   # Detalyadong kalagayan (mga breaker, cache, memory)
 omniroute quota                    # Paggamit ng quota ng provider
 omniroute mcp status               # Katayuan ng MCP server
-omniroute a2a status               # Katayuan ng A2A server
 omniroute tunnel list|create|stop  # Mga Cloudflare/Tailscale/ngrok tunnel
 omniroute reset-password           # I-reset ang admin password
 omniroute --mcp                    # Simulan ang MCP server sa pamamagitan ng stdio

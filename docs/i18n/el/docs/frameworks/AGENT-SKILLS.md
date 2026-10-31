@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (απαιτείται έλεγχος ταυτότητας)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 εργαλεία MCP (λίστα, ανάκτηση, κάλυψη)
-src/lib/a2a/skills/listCapabilities.ts        — Skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 }
 ```
 
-Δείτε το [A2A-SERVER.md](./A2A-SERVER.md) για λεπτομέρειες του πρωτοκόλλου.
-
 ---
 
 ## Κατάλογος — 45 αναγνωριστικά δεξιοτήτων
@@ -189,7 +186,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Πλαίσιο Omni Skills (εισαγωγή εργαλείων LLM + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — Κατάλογος εργαλείων MCP (εργαλεία `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — Πρωτόκολλο A2A (δεξιότητα `list-capabilities`)
 - `src/lib/agentSkills/` — κατάλογος, γεννήτρια, αναλυτές
 - `skills/` — δημιουργημένα αρχεία SKILL.md (45 καταχωρίσεις)

@@ -119,4 +119,3 @@ fl-ambjent fil-mira.
 - [Protokolli tal-aġenti](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kuntratti tat-tnedija tas-CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Għodod tas-CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)

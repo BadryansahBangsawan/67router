@@ -65,7 +65,6 @@ const PATH_LABELS = {
   utilization: "utilization",
   "api-endpoints": "apiEndpoints",
   audit: "audit",
-  a2a: "a2a",
   mcp: "mcp",
   media: "media",
   cache: "cache",

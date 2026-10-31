@@ -1236,8 +1236,6 @@ macOS'ta `~/Library/Application Support/Claude/claude_desktop_config.json` dosya
 
 ### Kapsamlar
 
-MCP şu anda 32 adlandırılmış kapsam tanımlar. Her Bearer anahtarı belirli kapsamlarla sınırlandırılabilir — kapsamların ve araçların kesin listesi için [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC şeması içinse [A2A-SERVER.md](../frameworks/A2A-SERVER.md) dosyasına bakın.
-
 ---
 
 ## 🧠 Beceri Sistemi
@@ -1246,7 +1244,6 @@ OmniRoute, ajanların ve A2A uç noktasının alana özgü rutinleri (ör. `code
 
 - **Pazar Yeri Arayüzü** — **Panel → Beceriler** bölümünden becerilere göz atın ve bunları yükleyin
 - **Anahtar başına kapsamlar** — Hangi API anahtarlarının hangi becerileri çağırabileceğini kısıtlayın
-- **Özel beceriler** — `src/lib/a2a/skills/` dizinine bir TypeScript dosyası ekleyip kaydedin; beceri A2A üzerinden hemen çağrılabilir hâle gelir
 
 Tam referans: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1331,7 +1328,6 @@ omniroute restore [<timestamp>]    # Bir anlık görüntüden geri yükle
 omniroute health                   # Ayrıntılı sistem durumu (devre kesiciler, önbellek, bellek)
 omniroute quota                    # Sağlayıcı kota kullanımı
 omniroute mcp status               # MCP sunucusu durumu
-omniroute a2a status               # A2A sunucusu durumu
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tünelleri
 omniroute reset-password           # Yönetici parolasını sıfırla
 omniroute --mcp                    # MCP sunucusunu stdio üzerinden başlat

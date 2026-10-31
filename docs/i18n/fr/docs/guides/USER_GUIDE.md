@@ -1238,8 +1238,6 @@ Utilisez l’URL SSE `http://localhost:20128/api/mcp/sse` ainsi qu’une clé AP
 
 ### Portées
 
-MCP définit actuellement 32 portées nommées. Chaque clé Bearer peut être limitée à des portées spécifiques — consultez [MCP-SERVER.md](../frameworks/MCP-SERVER.md) pour la liste de référence des portées et des outils, ainsi que [A2A-SERVER.md](../frameworks/A2A-SERVER.md) pour le schéma JSON-RPC.
-
 ---
 
 ## 🧠 Système de compétences
@@ -1248,7 +1246,6 @@ OmniRoute propose un **framework de compétences** extensible (`src/lib/skills/`
 
 - **Interface de la marketplace** — Parcourez et installez des compétences depuis **Tableau de bord → Compétences**
 - **Portées par clé** — Limitez les compétences que chaque clé API peut invoquer
-- **Compétences personnalisées** — Déposez un fichier TypeScript dans `src/lib/a2a/skills/`, enregistrez-le et il devient immédiatement invocable via A2A
 
 Référence complète : [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # Restaure depuis un instantané
 omniroute health                   # État détaillé (disjoncteurs, cache, mémoire)
 omniroute quota                    # Utilisation des quotas des fournisseurs
 omniroute mcp status               # État du serveur MCP
-omniroute a2a status               # État du serveur A2A
 omniroute tunnel list|create|stop  # Tunnels Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Réinitialise le mot de passe administrateur
 omniroute --mcp                    # Démarre le serveur MCP via stdio

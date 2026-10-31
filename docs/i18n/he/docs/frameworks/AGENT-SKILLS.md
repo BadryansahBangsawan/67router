@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (נדרש אימות)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 כלי MCP (רשימה, אחזור, כיסוי)
-src/lib/a2a/skills/listCapabilities.ts        — מיומנות A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 }
 ```
 
-עיינו ב-[A2A-SERVER.md](./A2A-SERVER.md) לפרטי הפרוטוקול.
-
 ---
 
 ## קטלוג — 45 מזהי מיומנויות
@@ -189,7 +186,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — תשתית Omni Skills (הזרקת כלי LLM + זירת מסחר)
 - [MCP-SERVER.md](./MCP-SERVER.md) — קטלוג כלי MCP (כלי `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — פרוטוקול A2A (המיומנות `list-capabilities`)
 - `src/lib/agentSkills/` — קטלוג, מחולל, מנתחים
 - `skills/` — קובצי SKILL.md שנוצרו (45 רשומות)

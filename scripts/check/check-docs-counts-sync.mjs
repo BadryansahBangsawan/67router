@@ -12,7 +12,6 @@
 //       - executors count in open-sse/executors/
 //       - routing strategies in src/shared/constants/routingStrategies.ts
 //       - OAuth providers in src/lib/oauth/providers/
-//       - A2A skills in src/lib/a2a/skills/
 //
 // Exits 0 on success, 1 on STRICT drift (or any drift with --strict).
 // Run: node scripts/check/check-docs-counts-sync.mjs
@@ -1168,13 +1167,6 @@ export function buildChecks() {
       docKey: "OAuth providers",
       strict: false,
       files: ["docs/architecture/ARCHITECTURE.md"],
-    },
-    {
-      label: "A2A skills count",
-      actual: countFiles("src/lib/a2a/skills"),
-      docKey: "A2A skills",
-      strict: false,
-      files: ["docs/frameworks/A2A-SERVER.md"],
     },
   ];
 }

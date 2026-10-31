@@ -749,7 +749,6 @@ omniroute cache                        # Hali ya akiba
 omniroute cache clear                  # Futa akiba za kisemantiki + sahihi
 
 omniroute mcp status | restart         # Hali / uanzishaji upya wa seva ya MCP
-omniroute a2a status | card            # Hali ya seva ya A2A / kadi ya wakala
 
 omniroute tunnel list | create | stop  # Dhibiti vichuguu (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Kagua / weka vigeu vya mazingira (kwa muda)

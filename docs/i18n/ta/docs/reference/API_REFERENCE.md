@@ -1849,48 +1849,10 @@ OmniRoute ஆனது 3 transports (stdio, SSE, streamable-http) மற்ற�
 
 OmniRoute, A2A (Agent-to-Agent) JSON-RPC 2.0 முனைப்புள்ளியையும், ஆய்வு/டாஷ்போர்டு பயன்பாட்டிற்கான REST மேலுறையையும் வழங்குகிறது.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY அமைக்கப்பட்டிருந்தால் தவிர, விருப்பத்தேர்வு
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ஆதரிக்கப்படும் முறைகள் (அனைத்தும் `settings.a2aEnabled` மூலம் கட்டுப்படுத்தப்படுகின்றன):
-
-| முறை             | விளக்கம்                                                                                 |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| `message/send`   | ஒத்திசைவான திறன் செயல்படுத்தல்; `{task, artifacts, metadata}` என்பதைத் திருப்பியளிக்கும் |
-| `message/stream` | அதே திறன் தொகுப்பின் ஸ்ட்ரீமிங் SSE செயல்படுத்தல்                                        |
-| `tasks/get`      | `taskId` மூலம் ஒரு பணியைப் பெறும்                                                        |
-| `tasks/cancel`   | `taskId` மூலம் ஒரு பணியை ரத்துசெய்யும்                                                   |
-
-உள்ளமைக்கப்பட்ட திறன்கள்: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### முகவர் அட்டை
-
-```bash
-GET /.well-known/agent.json
-```
-
-பொது A2A முகவர் அட்டையை (பெயர், விளக்கம், திறன்கள், திறன் பட்டியல், அங்கீகாரத் திட்டம்) திருப்பியளிக்கும் — பொதுவாக 1h நேரத்திற்கு தற்காலிகச் சேமிப்பில் வைக்கப்படும். அங்கீகாரம் தேவையில்லை.
-
 ### REST உதவியாளர்கள்
 
 | முறை | பாதை                         | விளக்கம்                                                                                                                   |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A இயக்கப்பட்ட நிலை + பணிப் புள்ளிவிவரங்கள் + தற்காலிகச் சேமிப்பிலுள்ள முகவர் அட்டைச் சுருக்கம்                           |
 | GET  | `/api/a2a/tasks`             | பணிகளைப் பட்டியலிடும் — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST உதவியாளராகச் செயல்படுத்தப்படவில்லை — JSON-RPC `message/send` மூலம் உருவாக்கவும்)                                     |
 | GET  | `/api/a2a/tasks/[id]`        | ஒரு பணியைப் பெறும்                                                                                                         |

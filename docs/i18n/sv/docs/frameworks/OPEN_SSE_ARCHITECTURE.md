@@ -573,5 +573,4 @@ Routningsmotorn har strikta prestandabudgetar:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — katalog för katalog
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — poängsättning med 16 faktorer
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Källkod: `open-sse/` (över 400 filer, ~143K kodrader)

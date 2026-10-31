@@ -58,7 +58,7 @@ Core capabilities:
 - Eval framework for LLM quality assurance
 - Health dashboard with real-time provider circuit breaker status
 - MCP Server (107 tools) with 3 transports (stdio/SSE/Streamable HTTP)
-- A2A Server (JSON-RPC 2.0 + SSE) with skills and task lifecycle
+- A2A task store (Conductor-mirrored tasks, `/api/a2a/tasks`)
 - Memory system (extraction, injection, retrieval, summarization)
 - Skills system (registry, executor, sandbox, built-in skills)
 - MITM proxy with certificate management and DNS handling
@@ -120,7 +120,7 @@ the rest are linked from their domain-specific guides.
 Main pages under `src/app/(dashboard)/dashboard/`:
 
 - `/dashboard` — quick start + provider overview
-- `/dashboard/endpoint` — endpoint proxy + MCP + A2A + API endpoint tabs
+- `/dashboard/endpoint` — endpoint proxy + MCP + API endpoint tabs
 - `/dashboard/providers` — provider connections and credentials
 - `/dashboard/combos` — combo strategies, templates, step-based builder, model routing rules, manual persisted ordering
 - `/dashboard/auto-combo` — Auto Combo Engine: scoring weights, mode packs, virtual factory presets, telemetry

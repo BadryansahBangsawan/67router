@@ -122,4 +122,3 @@ ayrıca avtorizasiya edilmiş tüstü testi tələb edir.
 - [Agent protokolları](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI işəsalma müqavilələri](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI alətləri](../reference/CLI-TOOLS.md)
-- [A2A serveri](./A2A-SERVER.md)

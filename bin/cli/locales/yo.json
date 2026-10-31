@@ -390,34 +390,6 @@
       "description": "Àkọsílẹ̀ àyẹ̀wò MCP (orúkọ mìíràn fún audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Ṣe àkójọ àwọn ọgbọ́n A2A tó wà láti inú káàdì aṣojú"
-    },
-    "invoke": {
-      "description": "Pe ọgbọ́n A2A kan kí o sì dá ID iṣẹ́ náà padà",
-      "input": "Ohun àbáwọlé JSON",
-      "input_file": "Ọ̀nà sí fáìlì àbáwọlé JSON",
-      "wait": "Dúró de ìparí iṣẹ́ kí o tó dá èsì padà",
-      "timeout": "Àkókò tó pọ̀jù fún dídúró de ìparí ní ms (àìpé: 60000)"
-    },
-    "tasks": {
-      "description": "Ṣàkóso àwọn iṣẹ́ A2A",
-      "list": {
-        "status": "Ṣe àsẹ̀ nípasẹ̀ ipò",
-        "skill": "Ṣe àsẹ̀ nípasẹ̀ ID ọgbọ́n"
-      },
-      "watch": {
-        "description": "Máa ṣàyẹ̀wò ipò iṣẹ́ títí yóò fi parí"
-      },
-      "stream": {
-        "description": "San àwọn ìṣẹ̀lẹ̀ ìmúṣẹ iṣẹ́ jáde nípasẹ̀ SSE"
-      },
-      "logs": {
-        "description": "Ṣàfihàn àwọn ìfiránṣẹ́ iṣẹ́ àti àwọn artifact"
-      }
-    }
-  },
   "policy": {
     "description": "Ṣàkóso àwọn ìlànà ìfúnni-láṣẹ OmniRoute",
     "list": {

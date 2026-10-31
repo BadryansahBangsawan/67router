@@ -586,7 +586,7 @@ Radar ixtiyoriy ravishda yoqiladi va faqat GET so‘rovlaridan foydalanadi. Omni
 - **🔑 Har bir kalit uchun marshrutlash nazorati** — API kalitini `forcedModel` orqali bitta model yoki komboga bogʻlang, hamda kalitning modellari va kombolari atomar tarzda qoʻshing yoki olib tashlang (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Yanada nozik PII nazorati** — turlar boʻyicha tanlash, 20 tagacha tekshirilgan maxsus maskalash shablonlari va har bir tur uchun aniqlash hisoblagichlari; maskalashning oʻzi ixtiyoriy boʻlib qoladi. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 til** — boshqaruv paneli, hujjat nusxalari va CLI, `npm run i18n:add-locale` esa bitta buyruq bilan tilni hamma joyga qoʻshadi. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — agentlar toʻplamingizga kiruvchi A2A delegatsiyasi, Agent Card'dagi Conductor koʻnikmalari va Faro push-to-talk ovozli suhbatiga ega boshqaruv paneli. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — agentlar toʻplamingizga kiruvchi A2A delegatsiyasi, Agent Card'dagi Conductor koʻnikmalari va Faro push-to-talk ovozli suhbatiga ega boshqaruv paneli.
 - **🛂 Moslashuvchan qabul va ortiqcha yuklanishdan himoya** — ogʻir chat soʻrovlari 503 qaytarish oʻrniga navbatga qoʻyiladi, har bir ulanish uchun atomar RPM aylanma lizinglari bilan. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonik `/v1/models` tartiblash** — har bir provayder uchun bitta uzluksiz, provayder boʻyicha guruhlangan blok (kombolari birinchi oʻrinda), har bir katalog manbasida barqaror. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Siqishni mustahkamlash** — standart yoqilgan shishib ketishdan himoya, DE / FR / JA + xitoy tili (wényán) uchun Caveman toʻplamlari, Gradle & .NET uchun RTK filtrlari. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -904,7 +904,6 @@ OmniRoute'ni **MCP**, **A2A**, **REST API**, **webhooklar** yoki **masofaviy CLI
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor yoki istalgan MCP mijoziga ulang</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Masofaviy MCP — <b>110 ta vosita</b>, 33 ta qamrov (majburiy nazorat ixtiyoriy), toʻliq audit jurnali</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Oqimli MCP transporti</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agentlararo aloqa, <b>JSON-RPC 2.0</b> + SSE, 6 ta koʻnikma</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI bilan mos — chat, embeddinglar, tasvirlar, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooklar</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Soʻrov / kvota hodisalarini Slack, Discord, Telegram yoki istalgan URL manziliga yuboring</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Masofaviy CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Masofaviy nusxani qamrovi cheklangan kirish tokenlari bilan boshqaring</td></tr>
@@ -914,8 +913,6 @@ OmniRoute'ni **MCP**, **A2A**, **REST API**, **webhooklar** yoki **masofaviy CLI
 # Claude Code'ga MCP orqali OmniRoute vositalarining toʻliq toʻplamini taqdim eting:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP serveri](docs/frameworks/MCP-SERVER.md) · [A2A serveri](docs/frameworks/A2A-SERVER.md) · [Agent protokollari](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1379,6 @@ bitta jarayon xizmat koʻrsatadi, shu sababli hozircha faqat CLI uchun alohida p
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP serveri</a></b></td><td>110 ta MCP vositasi, IDE konfiguratsiyalari, Python/TS/Go mijozlari</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP serveri qoʻllanmasi</a></b></td><td>MCP’ni oʻrnatish, transportlar va vositalar maʼlumotnomasi</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A serveri</a></b></td><td>JSON-RPC 2.0 protokoli, koʻnikmalar, oqimli uzatish, vazifalarni boshqarish</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A serveri qoʻllanmasi</a></b></td><td>A2A agent kartasi, vazifalar, koʻnikmalar va oqimli uzatish</td></tr>
 </table>
 
 ### 📋 Loyiha va sifat

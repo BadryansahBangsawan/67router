@@ -390,34 +390,6 @@
       "description": "MCP-revisjonslogg (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "List tilgjengelige A2A-ferdigheter fra agentkortet"
-    },
-    "invoke": {
-      "description": "Kall en A2A-ferdighet og returner oppgave-ID-en",
-      "input": "JSON-inndataobjekt",
-      "input_file": "Bane til JSON-inndatafil",
-      "wait": "Vent til oppgaven er fullført før retur",
-      "timeout": "Tidsavbrudd i ms mens det ventes på fullføring (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Administrer A2A-oppgaver",
-      "list": {
-        "status": "Filtrer etter status",
-        "skill": "Filtrer etter ferdighets-ID"
-      },
-      "watch": {
-        "description": "Kontroller oppgavestatus regelmessig til fullføring"
-      },
-      "stream": {
-        "description": "Strøm hendelser fra oppgavekjøringen via SSE"
-      },
-      "logs": {
-        "description": "Vis oppgavemeldinger og artefakter"
-      }
-    }
-  },
   "policy": {
     "description": "Administrer autorisasjonspolicyer for OmniRoute",
     "list": {

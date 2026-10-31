@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକ)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3ଟି MCP ଟୁଲ୍ (ତାଲିକା, ପ୍ରାପ୍ତି, କଭରେଜ୍)
-src/lib/a2a/skills/listCapabilities.ts        — A2A ସ୍କିଲ୍: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A କୌଶଳ `list-capabilities`, ସମ୍ପୂର୍ଣ୍ଣ 45ଟି �
 }
 ```
 
-ପ୍ରୋଟୋକଲ୍ ବିବରଣୀ ପାଇଁ [A2A-SERVER.md](./A2A-SERVER.md) ଦେଖନ୍ତୁ।
-
 ---
 
 ## କ୍ୟାଟାଲଗ୍ — 45ଟି କୌଶଳ ID
@@ -189,7 +186,6 @@ A2A କୌଶଳ `list-capabilities`, ସମ୍ପୂର୍ଣ୍ଣ 45ଟି �
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ଫ୍ରେମ୍ୱର୍କ (LLM ଟୁଲ୍ ଇଞ୍ଜେକ୍ସନ୍ + ମାର୍କେଟ୍ପ୍ଲେସ୍)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ଟୁଲ୍ କ୍ୟାଟାଲଗ୍ (`omniroute_agent_skills_*` ଟୁଲ୍ଗୁଡ଼ିକ)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ପ୍ରୋଟୋକଲ୍ (`list-capabilities` ସ୍କିଲ୍)
 - `src/lib/agentSkills/` — କ୍ୟାଟାଲଗ୍, ଜେନେରେଟର୍, ପାର୍ସର୍ଗୁଡ଼ିକ
 - `skills/` — ଜେନେରେଟ୍ ହୋଇଥିବା SKILL.md ଫାଇଲ୍ଗୁଡ଼ିକ (45ଟି ଏଣ୍ଟ୍ରି)

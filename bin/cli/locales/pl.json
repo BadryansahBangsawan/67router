@@ -390,34 +390,6 @@
       "description": "Dziennik audytu MCP (alias dla audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Wyświetl dostępne umiejętności A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Wywołaj umiejętność A2A i zwróć identyfikator zadania",
-      "input": "Obiekt wejściowy JSON",
-      "input_file": "Ścieżka do wejściowego pliku JSON",
-      "wait": "Przed zwróceniem wyniku poczekaj na ukończenie zadania",
-      "timeout": "Limit czasu oczekiwania na ukończenie w ms (domyślnie: 60000)"
-    },
-    "tasks": {
-      "description": "Zarządzaj zadaniami A2A",
-      "list": {
-        "status": "Filtruj według statusu",
-        "skill": "Filtruj według identyfikatora umiejętności"
-      },
-      "watch": {
-        "description": "Sprawdzaj status zadania aż do ukończenia"
-      },
-      "stream": {
-        "description": "Przesyłaj strumieniowo zdarzenia wykonania zadania przez SSE"
-      },
-      "logs": {
-        "description": "Pokaż komunikaty i artefakty zadania"
-      }
-    }
-  },
   "policy": {
     "description": "Zarządzaj zasadami autoryzacji OmniRoute",
     "list": {

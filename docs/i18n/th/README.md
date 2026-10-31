@@ -586,7 +586,6 @@ Radar เป็นฟีเจอร์ที่ต้องเลือกเ�
 - **🔑 การควบคุมการกำหนดเส้นทางแยกตามคีย์** — ผูก API key เข้ากับโมเดลหรือคอมโบเดียวด้วย `forcedModel` และเพิ่มหรือลบโมเดลกับคอมโบของคีย์แบบอะตอมมิก (`/api/keys/{id}/access`) → [ข้อมูลอ้างอิง API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ การควบคุม PII ที่ละเอียดยิ่งขึ้น** — เลือกแยกตามประเภท รองรับรูปแบบการมาสก์แบบกำหนดเองที่ผ่านการตรวจสอบสูงสุด 20 รูปแบบ และตัวนับการตรวจจับแยกตามประเภท โดยการมาสก์ยังคงต้องเลือกเปิดใช้งาน → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ภาษา** — รองรับแดชบอร์ด สำเนาเอกสาร และ CLI โดย `npm run i18n:add-locale` สามารถเพิ่มภาษาได้ทุกส่วนด้วยคำสั่งเดียว → [คู่มือ i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — การมอบหมายงาน A2A ขาเข้าไปยังกลุ่มเอเจนต์ของคุณ ทักษะ Conductor บน Agent Card และแผงแดชบอร์ดพร้อมการสนทนาด้วยเสียงแบบกดเพื่อพูดของ Faro → [เซิร์ฟเวอร์ A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 การควบคุมการรับโหลดแบบปรับตัวและการป้องกันโอเวอร์โหลด** — คำขอแชตที่ใช้ทรัพยากรสูงจะเข้าคิวแทนการตอบกลับ 503 พร้อม rolling lease ของ RPM แบบอะตอมมิกต่อการเชื่อมต่อ → [คู่มือความยืดหยุ่น](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ลำดับมาตรฐานของ `/v1/models`** — หนึ่งบล็อกที่ต่อเนื่องและจัดกลุ่มตามผู้ให้บริการสำหรับผู้ให้บริการแต่ละราย (ปักหมุดคอมโบไว้ก่อน) โดยคงลำดับเสถียรในทุกแหล่งแค็ตตาล็อก → [ข้อมูลอ้างอิง API](docs/reference/API_REFERENCE.md)
 - **🗜️ การเพิ่มความแข็งแกร่งให้การบีบอัด** — เปิดใช้ตัวป้องกัน inflation เป็นค่าเริ่มต้น, แพ็ก Caveman สำหรับ DE / FR / JA + ภาษาจีน (wényán), และตัวกรอง RTK สำหรับ Gradle และ .NET → [การบีบอัด](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ omniroute contexts use default            # ← สลับกลับไป�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">เชื่อมต่อกับ Claude Desktop, Cursor หรือไคลเอนต์ MCP ใดๆ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP ระยะไกล — <b>110 เครื่องมือ</b>, 33 ขอบเขต (เลือกเปิดใช้การบังคับใช้ได้) พร้อมบันทึกการตรวจสอบแบบครบถ้วน</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">การรับส่งข้อมูล MCP แบบสตรีมมิง</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">การสื่อสารระหว่างเอเจนต์, <b>JSON-RPC 2.0</b> + SSE, 6 ทักษะ</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">เข้ากันได้กับ OpenAI — แชต เอ็มเบดดิง รูปภาพ เสียง และ OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>เว็บฮุก</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ส่งเหตุการณ์คำขอ / โควตาไปยัง Slack, Discord, Telegram หรือ URL ใดๆ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI รีโมต</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">ควบคุมอินสแตนซ์ระยะไกลด้วยโทเค็นการเข้าถึงที่จำกัดขอบเขต</td></tr>
@@ -915,8 +913,6 @@ omniroute contexts use default            # ← สลับกลับไป�
 # มอบชุดเครื่องมือ OmniRoute แบบเต็มให้ Claude Code ผ่าน MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [เซิร์ฟเวอร์ MCP](docs/frameworks/MCP-SERVER.md) · [เซิร์ฟเวอร์ A2A](docs/frameworks/A2A-SERVER.md) · [โปรโตคอลสำหรับเอเจนต์](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1375,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 จะข้า�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">เซิร์ฟเวอร์ MCP</a></b></td><td>เครื่องมือ MCP 110 รายการ การกำหนดค่า IDE และไคลเอนต์ Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">คู่มือเซิร์ฟเวอร์ MCP</a></b></td><td>การติดตั้ง MCP วิธีการรับส่งข้อมูล และเอกสารอ้างอิงเครื่องมือ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">เซิร์ฟเวอร์ A2A</a></b></td><td>โปรโตคอล JSON-RPC 2.0, ทักษะ, การสตรีม และการจัดการงาน</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">คู่มือเซิร์ฟเวอร์ A2A</a></b></td><td>การ์ดเอเจนต์ A2A, งาน, ทักษะ และการสตรีม</td></tr>
 </table>
 
 ### 📋 โปรเจกต์และคุณภาพ

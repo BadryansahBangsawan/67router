@@ -100,8 +100,6 @@ App Router ഡാഷ്ബോർഡ് UI-യും പൊതു/മാനേജ
 | പാത                                                                           | ഉദ്ദേശ്യം                                           |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- |
 | `api/`                                                                        | എല്ലാ HTTP API റൂട്ടുകളും (താഴെയുള്ള വിഭജനം കാണുക)  |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 എൻഡ്പോയിന്റ് (`POST /a2a`)         |
-| `.well-known/agent.json/`                                                     | A2A Agent Card കണ്ടെത്തൽ ഡോക്യുമെന്റ്               |
 | `(dashboard)/`                                                                | ഡാഷ്ബോർഡ് UI (റൂട്ട് ഗ്രൂപ്പ്, URL പ്രിഫിക്സ് ഇല്ല) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | ഓതന്റിക്കേഷൻ ഫ്ലോകൾ                                 |
 | `landing/`                                                                    | മാർക്കറ്റിംഗ്/ലാൻഡിംഗ് പേജ്                         |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/`-ന് കീഴിൽ ടെസ്റ്റുകൾ ചേർക്കുക.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) പുതുക്കുക.
 
-### ഒരു പുതിയ A2A സ്കിൽ ചേർക്കുക
-
-[A2A-SERVER.md § ഒരു പുതിയ സ്കിൽ ചേർക്കൽ](../frameworks/A2A-SERVER.md) കാണുക. സ്കില്ലുകൾ
-`src/lib/a2a/skills/`-ലാണ് സ്ഥിതിചെയ്യുന്നത്, അവ A2A ടാസ്ക് മാനേജർ മുഖേന രജിസ്റ്റർ ചെയ്യപ്പെടുന്നു.
-
----
-
 ## 11. കൺവെൻഷനുകൾ
 
 - **കോഡ് ശൈലി**: 2-സ്പേസ് ഇൻഡന്റ്, ഡബിൾ ക്വോട്ടുകൾ, 100 പ്രതീക വീതി, സെമിക്കോളനുകൾ,
@@ -846,7 +837,6 @@ bin/
   lockout എന്നിവയുടെ ആഴത്തിലുള്ള വിശദീകരണം.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo scoring-ഉം strategies-ഉം.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — സമ്പൂർണ്ണ MCP tool catalog + transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protocol skills-ഉം discovery-ഉം.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman compression.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integrations.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (നിലവിലുണ്ടെങ്കിൽ), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — deployment targets.

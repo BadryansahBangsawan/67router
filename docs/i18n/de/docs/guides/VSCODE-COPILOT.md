@@ -89,7 +89,7 @@ Erweiterung ändert sich nichts.
 Simple Browser in einem Editor-Tab statt in einem externen Browser. Das Einbetten muss **serverseitig explizit aktiviert werden**. Dies geschieht mit
 `DASHBOARD_ALLOW_EMBED=vscode`, wodurch die HTML-Seiten mit
 `frame-ancestors 'self' vscode-webview:` statt mit den standardmäßigen Einstellungen `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` ausgeliefert werden. Die API-Endpunkte (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) behalten
+`X-Frame-Options: DENY` ausgeliefert werden. Die API-Endpunkte (`/api`, `/v1`, `/v1beta`, `/healthz`) behalten
 in beiden Fällen die strikten Header bei.
 
 > ⚠️ **Dies ist ein Build-Time-Flag, kein Runtime-Flag.** Next.js kompiliert `headers()` in das Routenmanifest,

@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (hitelesítés szükséges)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-eszköz (listázás, lekérés, lefedettség)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A `list-capabilities` A2A-készség a teljes, 45 készséget tartalmazó kataló
 }
 ```
 
-A protokoll részleteit lásd az [A2A-SERVER.md](./A2A-SERVER.md) dokumentumban.
-
 ---
 
 ## Katalógus — 45 készségazonosító
@@ -189,7 +186,6 @@ A protokoll részleteit lásd az [A2A-SERVER.md](./A2A-SERVER.md) dokumentumban.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills keretrendszer (LLM-eszközinjektálás + piactér)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-eszközkatalógus (`omniroute_agent_skills_*` eszközök)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-protokoll (`list-capabilities` készség)
 - `src/lib/agentSkills/` — katalógus, generátor, elemzők
 - `skills/` — generált SKILL.md fájlok (45 bejegyzés)

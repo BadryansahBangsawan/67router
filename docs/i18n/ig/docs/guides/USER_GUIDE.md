@@ -1235,8 +1235,6 @@ Jiri URL SSE `http://localhost:20128/api/mcp/sse` na igodo API Bearer e mepụta
 
 ### Scopes
 
-MCP na-akọwapụta scopes 32 nwere aha ugbu a. Enwere ike ịmachi igodo Bearer ọ bụla ka ọ bụrụ naanị scopes akọwapụtara — lee [MCP-SERVER.md](../frameworks/MCP-SERVER.md) maka ndepụta scope na ngwaọrụ bụ isi na [A2A-SERVER.md](../frameworks/A2A-SERVER.md) maka schema JSON-RPC.
-
 ---
 
 ## 🧠 Usoro Nkà
@@ -1245,7 +1243,6 @@ OmniRoute na-enye **usoro nkà** (`src/lib/skills/`) enwere ike ịgbatị ka nd
 
 - **UI Ahịa** — Chọgharịa ma wụnye nkà site na **Dashboard → Skills**
 - **Oke ikike n'otu igodo** — Machibido nkà ndị igodo API ọ bụla nwere ike ịkpọ
-- **Nkà ahaziri iche** — Tinye faịlụ TypeScript na `src/lib/a2a/skills/`, debanye ya aha, a ga-enwekwa ike ịkpọ ya ozugbo site na A2A
 
 Ntụaka zuru ezu: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1330,7 +1327,6 @@ omniroute restore [<timestamp>]    # Weghachite site na snapshot
 omniroute health                   # Ọnọdụ ọrụ zuru ezu (ndị nkwụsị, cache, ebe nchekwa)
 omniroute quota                    # Ojiji oke onye na-eweta ọrụ
 omniroute mcp status               # Ọnọdụ sava MCP
-omniroute a2a status               # Ọnọdụ sava A2A
 omniroute tunnel list|create|stop  # Ọwara Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tọgharịa paswọọdụ onye nchịkwa
 omniroute --mcp                    # Malite sava MCP site na stdio

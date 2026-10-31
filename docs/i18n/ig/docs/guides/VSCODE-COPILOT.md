@@ -91,7 +91,7 @@ extension ahụ.
 Simple Browser kama iji ihe nchọgharị mpụga. Ịtinye ya n'ime edita bụ **nhọrọ a ga-agbanye na sava** site na
 `DASHBOARD_ALLOW_EMBED=vscode`, nke na-ewepụta ibe HTML nwere
 `frame-ancestors 'self' vscode-webview:` kama ndabara `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Akụkụ API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ka na-eji
+`X-Frame-Options: DENY`. Akụkụ API (`/api`, `/v1`, `/v1beta`, `/healthz`) ka na-eji
 nkụnye isi ndị siri ike n'agbanyeghị usoro e ji mee ya.
 
 > ⚠️ **Ọ bụ ọkọlọtọ oge-build, ọ bụghị nke oge-runtime.** Next.js na-achịkọta `headers()` n'ime route

@@ -595,7 +595,6 @@ zum aktuellen Katalog finden Sie unter **[radar.omniroute.online/planos](https:/
 - **🔑 Routing-Steuerung pro Schlüssel** — einen API-Schlüssel mit `forcedModel` an ein Modell oder eine Combo binden und die Modelle und Combos eines Schlüssels atomar hinzufügen oder entfernen (`/api/keys/{id}/access`). → [API-Referenz](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Feinschliff bei PII-Kontrollen** — Auswahl pro Typ, bis zu 20 validierte benutzerdefinierte Maskierungsmuster und Erkennungszähler pro Typ; die Maskierung selbst bleibt opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 Sprachen** — Dashboard, Docs-Spiegel und CLI, wobei `npm run i18n:add-locale` eine Sprache überall mit einem einzigen Befehl hinzufügt. → [i18n-Leitfaden](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — eingehende A2A-Delegierung an Ihre Agentenflotte, Conductor-Skills auf der Agent Card und ein Dashboard-Panel mit Faro-Push-to-Talk-Sprachchat. → [A2A-Server](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptive Admission & Überlastschutz** — schwere Chat-Anfragen werden eingereiht statt mit 503 beantwortet, mit atomaren rollierenden RPM-Leases pro Verbindung. → [Resilienz-Leitfaden](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonische `/v1/models`-Reihenfolge** — ein zusammenhängender, nach Anbieter gruppierter Block pro Anbieter (Combos zuerst angepinnt), stabil über jede Katalogquelle hinweg. → [API-Referenz](docs/reference/API_REFERENCE.md)
 - **🗜️ Härtung der Kompression** — standardmäßig aktiver Inflation Guard, Caveman-Pakete für DE / FR / JA + Chinesisch (wényán), RTK-Filter für Gradle & .NET. → [Kompression](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +913,6 @@ Stelle OmniRoute über **MCP**, **A2A**, eine **REST API**, **Webhooks** oder ei
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">In Claude Desktop, Cursor oder einen beliebigen MCP-Client integrieren</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Remote-MCP — <b>110 Tools</b>, 33 Bereiche (Durchsetzung optional), vollständiger Audit-Trail</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streaming-Transport für MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-zu-Agent-Kommunikation, <b>JSON-RPC 2.0</b> + SSE, 6 Fähigkeiten</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-kompatibel — Chat, Embeddings, Bilder, Audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Anfrage- und Kontingentereignisse an Slack, Discord, Telegram oder eine beliebige URL senden</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote-CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Eine Remote-Instanz mit bereichsbeschränkten Zugriffstokens steuern</td></tr>
@@ -924,8 +922,6 @@ Stelle OmniRoute über **MCP**, **A2A**, eine **REST API**, **Webhooks** oder ei
 # Claude Code über MCP den vollständigen OmniRoute-Werkzeugsatz bereitstellen:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-Server](docs/frameworks/MCP-SERVER.md) · [A2A-Server](docs/frameworks/A2A-SERVER.md) · [Agentenprotokolle](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1390,7 +1386,6 @@ Kanonische Metriken vom 2026-10-18: **1.976 einzigartige Videos** · **20.220.28
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-Server</a></b></td><td>110 MCP-Tools, IDE-Konfigurationen, Python-/TS-/Go-Clients</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-Server-Leitfaden</a></b></td><td>MCP-Installation, Transporte und Tool-Referenz</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-Server</a></b></td><td>JSON-RPC 2.0-Protokoll, Fähigkeiten, Streaming, Aufgabenverwaltung</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-Server-Leitfaden</a></b></td><td>A2A-Agentenkarte, Aufgaben, Fähigkeiten und Streaming</td></tr>
 </table>
 
 ### 📋 Projekt & Qualität

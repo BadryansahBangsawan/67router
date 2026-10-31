@@ -713,7 +713,6 @@ omniroute cache                        # 缓存状态
 omniroute cache clear                  # 清除语义缓存和签名缓存
 
 omniroute mcp status | restart         # MCP 服务器状态/重启
-omniroute a2a status | card            # A2A 服务器状态/智能体卡片
 
 omniroute tunnel list | create | stop  # 管理隧道（cloudflare/tailscale/ngrok）
 omniroute env show | get <k> | set <k> <v>  # 检查/设置环境变量（临时）

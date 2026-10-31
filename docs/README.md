@@ -95,9 +95,8 @@ Lookup material — API surface, environment variables, CLI flags, provider cata
 Pluggable subsystems exposed to clients, agents, and operators.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — Model Context Protocol server.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — Agent-to-Agent (A2A) JSON-RPC server.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
-- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — A2A / ACP overview.
+- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — ACP (CLI agent registry) overview.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — IDE agent bridge.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — agent skills catalog.
 - [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).

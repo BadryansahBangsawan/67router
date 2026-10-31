@@ -1807,48 +1807,10 @@ OmniRoute에는 3가지 전송 방식(stdio, SSE, streamable-http)과 범위가 
 
 OmniRoute는 A2A(Agent-to-Agent) JSON-RPC 2.0 엔드포인트와 검사/대시보드용 REST 래퍼를 제공합니다.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY가 설정되지 않은 경우 선택 사항
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-지원되는 메서드(모두 `settings.a2aEnabled`에 의해 제어됨):
-
-| 메서드           | 설명                                                         |
-| ---------------- | ------------------------------------------------------------ |
-| `message/send`   | 동기식 스킬 실행. `{task, artifacts, metadata}`를 반환합니다 |
-| `message/stream` | 동일한 스킬 세트의 스트리밍 SSE 실행                         |
-| `tasks/get`      | `taskId`로 작업을 가져옵니다                                 |
-| `tasks/cancel`   | `taskId`로 작업을 취소합니다                                 |
-
-기본 제공 스킬: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### 에이전트 카드
-
-```bash
-GET /.well-known/agent.json
-```
-
-공개 A2A 에이전트 카드(이름, 설명, 기능, 스킬 카탈로그, 인증 방식)를 반환하며, 공개적으로 1시간 동안 캐시됩니다. 인증은 필요하지 않습니다.
-
 ### REST 헬퍼
 
 | 메서드 | 경로                         | 설명                                                                                                           |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A 활성화 여부 + 작업 통계 + 캐시된 에이전트 카드 요약                                                        |
 | GET    | `/api/a2a/tasks`             | 작업 목록 — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST 헬퍼로 구현되지 않음 — JSON-RPC `message/send`를 통해 생성)                                              |
 | GET    | `/api/a2a/tasks/[id]`        | 작업 하나 조회                                                                                                 |

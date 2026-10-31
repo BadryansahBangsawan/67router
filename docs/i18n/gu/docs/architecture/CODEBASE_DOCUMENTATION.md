@@ -100,8 +100,6 @@ App Router ડેશબોર્ડ UI અને જાહેર/વ્યવસ
 | પાથ                                                                           | હેતુ                                            |
 | ----------------------------------------------------------------------------- | ----------------------------------------------- |
 | `api/`                                                                        | બધા HTTP API રૂટ્સ (નીચેનું વિભાજન જુઓ)         |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 એન્ડપોઇન્ટ (`POST /a2a`)       |
-| `.well-known/agent.json/`                                                     | A2A Agent Card ડિસ્કવરી દસ્તાવેજ                |
 | `(dashboard)/`                                                                | ડેશબોર્ડ UI (રૂટ ગ્રૂપ, કોઈ URL પ્રિફિક્સ નહીં) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | પ્રમાણીકરણ પ્રવાહો                              |
 | `landing/`                                                                    | માર્કેટિંગ/લેન્ડિંગ પૃષ્ઠ                       |
@@ -773,13 +771,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` હેઠળ ટેસ્ટ ઉમેરો.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) અપડેટ કરો.
 
-### નવી A2A સ્કિલ ઉમેરો
-
-[A2A-SERVER.md § નવી સ્કિલ ઉમેરવી](../frameworks/A2A-SERVER.md) જુઓ. સ્કિલ્સ
-`src/lib/a2a/skills/` માં રહે છે અને A2A ટાસ્ક મેનેજર દ્વારા નોંધાવવામાં આવે છે.
-
----
-
 ## 11. પ્રણાલીઓ
 
 - **કોડ શૈલી**: 2-સ્પેસ ઇન્ડેન્ટ, ડબલ ક્વોટ્સ, 100 અક્ષરની પહોળાઈ, સેમિકોલન્સ,
@@ -845,7 +836,6 @@ bin/
   લોકઆઉટનું ઊંડાણપૂર્વકનું વિશ્લેષણ.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo સ્કોરિંગ અને વ્યૂહરચનાઓ.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — સંપૂર્ણ MCP ટૂલ કેટલોગ + ટ્રાન્સપોર્ટ્સ.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A પ્રોટોકોલ કુશળતાઓ અને ડિસ્કવરી.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman કમ્પ્રેશન.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ઇન્ટિગ્રેશન્સ.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (જો ઉપલબ્ધ હોય), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — ડિપ્લોયમેન્ટ લક્ષ્યો.

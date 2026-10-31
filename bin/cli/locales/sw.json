@@ -390,34 +390,6 @@
       "description": "Kumbukumbu ya ukaguzi ya MCP (jina mbadala la audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Orodhesha ujuzi wa A2A unaopatikana kutoka kwenye kadi ya ajenti"
-    },
-    "invoke": {
-      "description": "Tekeleza ujuzi wa A2A na urudishe kitambulisho cha jukumu",
-      "input": "Objekti ya ingizo la JSON",
-      "input_file": "Njia ya faili ya ingizo la JSON",
-      "wait": "Subiri jukumu likamilike kabla ya kurudi",
-      "timeout": "Muda wa juu wa kusubiri kukamilika kwa ms (chaguo-msingi: 60000)"
-    },
-    "tasks": {
-      "description": "Dhibiti majukumu ya A2A",
-      "list": {
-        "status": "Chuja kwa hali",
-        "skill": "Chuja kwa kitambulisho cha ujuzi"
-      },
-      "watch": {
-        "description": "Kagua hali ya jukumu mara kwa mara hadi likamilike"
-      },
-      "stream": {
-        "description": "Tiririsha matukio ya utekelezaji wa jukumu kupitia SSE"
-      },
-      "logs": {
-        "description": "Onyesha ujumbe na vizalia vya jukumu"
-      }
-    }
-  },
   "policy": {
     "description": "Dhibiti sera za uidhinishaji za OmniRoute",
     "list": {

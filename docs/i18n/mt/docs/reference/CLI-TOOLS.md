@@ -749,7 +749,6 @@ omniroute cache                        # Status tal-cache
 omniroute cache clear                  # Żvojta l-caches semantiċi u tal-firem
 
 omniroute mcp status | restart         # Status / startjar mill-ġdid tas-server MCP
-omniroute a2a status | card            # Status tas-server A2A / kard tal-aġent
 
 omniroute tunnel list | create | stop  # Immaniġġja t-tunnels (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Eżamina / issettja l-varjabbli tal-ambjent (temporanji)

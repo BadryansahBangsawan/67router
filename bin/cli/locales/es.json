@@ -390,34 +390,6 @@
       "description": "Registro de auditoría de MCP (alias de audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listar las habilidades A2A disponibles en la tarjeta del agente"
-    },
-    "invoke": {
-      "description": "Invocar una habilidad A2A y devolver el ID de la tarea",
-      "input": "Objeto JSON de entrada",
-      "input_file": "Ruta al archivo JSON de entrada",
-      "wait": "Esperar a que finalice la tarea antes de devolver el resultado",
-      "timeout": "Tiempo de espera para la finalización en ms (predeterminado: 60000)"
-    },
-    "tasks": {
-      "description": "Gestionar tareas A2A",
-      "list": {
-        "status": "Filtrar por estado",
-        "skill": "Filtrar por ID de habilidad"
-      },
-      "watch": {
-        "description": "Consultar periódicamente el estado de la tarea hasta que finalice"
-      },
-      "stream": {
-        "description": "Transmitir eventos de ejecución de tareas mediante SSE"
-      },
-      "logs": {
-        "description": "Mostrar mensajes y artefactos de la tarea"
-      }
-    }
-  },
   "policy": {
     "description": "Gestionar las políticas de autorización de OmniRoute",
     "list": {

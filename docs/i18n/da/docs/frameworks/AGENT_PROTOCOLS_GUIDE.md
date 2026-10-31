@@ -20,38 +20,6 @@ De tre er uafhængige — vælg en hvilken som helst kombination.
 
 ## Beslutningstræ
 
-## 1. A2A — agent-til-agent
-
-**Specifikation:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agentkort:** `GET /.well-known/agent.json`
-
-### Hvornår det skal bruges
-
-- Opbygning af et multiagentsystem, hvor OmniRoute er en af peer-agenterne
-- Eksponering af OmniRoutes routingintelligens (smart routing, kvotestyring osv.) for agenter i frameworks som Google ADK eller generiske agentnetværk
-- Indkapsling af OmniRoute bag en standardiseret grænseflade til registrering og kald
-
-### Metoder
-
-- `message/send` — indsend en meddelelse, og modtag et synkront svar
-- `message/stream` — indsend, og modtag SSE-streamede statushændelser
-- `tasks/get` — læs en opgave efter ID
-- `tasks/cancel` — annuller en igangværende opgave
-
-### Indbyggede færdigheder (6)
-
-- `smart-routing` — send en prompt gennem den optimale kombination
-- `quota-management` — rapportér kvotestatussen for hver udbyder
-- `provider-discovery` — vis installerede udbydere med deres funktioner
-- `cost-analysis` — estimér omkostningerne ved en anmodning/samtale
-- `health-report` — sammenlæg breaker-, cooldown- og lockout-status for hver udbyder
-- `list-capabilities` — oplist agentens tilgængelige færdigheder og metadata
-
-### Fordybelse
-
-Se [A2A-SERVER.md](./A2A-SERVER.md) for transportdetaljer, agentkortets struktur, konfiguration af opgavers TTL og skabelonen til tilføjelse af nye færdigheder.
-
 ## 2. ACP — register over CLI-agenter
 
 **OmniRoute-slutpunkt:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Body-format for POST (`customAgentBodySchema` i `src/app/api/acp/agents/route.ts
 
 ## Integrationseksempler
 
-### Find OmniRoutes A2A-funktioner
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Returnerer agentkortet med alle 6 færdigheder, transportmekanismer og version.
-
-### Kald OmniRoute som en A2A-agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Vis installerede CLI-agenter via ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Se også
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Dybdegående gennemgang af A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Eksterne CLI-integrationer (bruger ACP)
 - [SKILLS.md](./SKILLS.md) — Framework til færdigheder (adskiller sig fra A2A-færdigheder — lokal eksekveringssandkasse)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — reference til slutpunkter

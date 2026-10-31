@@ -1876,48 +1876,10 @@ OmniRoute-এ ৩টি ট্রান্সপোর্ট (stdio, SSE, stream
 
 OmniRoute পরিদর্শন/ড্যাশবোর্ডে ব্যবহারের জন্য একটি REST র্যাপারসহ A2A (Agent-to-Agent) JSON-RPC 2.0 এন্ডপয়েন্ট প্রদান করে।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY সেট করা না থাকলে ঐচ্ছিক
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-সমর্থিত মেথডসমূহ (সবগুলোই `settings.a2aEnabled` দ্বারা নিয়ন্ত্রিত):
-
-| মেথড             | বিবরণ                                                                   |
-| ---------------- | ----------------------------------------------------------------------- |
-| `message/send`   | সিঙ্ক্রোনাস স্কিল এক্সিকিউশন; `{task, artifacts, metadata}` রিটার্ন করে |
-| `message/stream` | একই স্কিল সেটের স্ট্রিমিং SSE এক্সিকিউশন                                |
-| `tasks/get`      | `taskId` দিয়ে একটি টাস্ক ফেচ করে                                       |
-| `tasks/cancel`   | `taskId` দিয়ে একটি টাস্ক বাতিল করে                                     |
-
-বিল্ট-ইন স্কিলসমূহ: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### এজেন্ট কার্ড
-
-```bash
-GET /.well-known/agent.json
-```
-
-পাবলিক A2A এজেন্ট কার্ড (নাম, বিবরণ, সক্ষমতা, স্কিল ক্যাটালগ, অথ স্কিম) রিটার্ন করে—যা সর্বজনীনভাবে 1h-এর জন্য ক্যাশ করা হয়। কোনো অথ প্রয়োজন নেই।
-
 ### REST সহায়ক
 
 | মেথড | পাথ                          | বিবরণ                                                                                                             |
 | ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A সক্রিয় আছে কি না + টাস্কের পরিসংখ্যান + ক্যাশ করা এজেন্ট কার্ডের সারাংশ                                      |
 | GET  | `/api/a2a/tasks`             | টাস্কের তালিকা—`?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST সহায়ক হিসেবে বাস্তবায়িত নয়—JSON-RPC `message/send` দিয়ে তৈরি করুন)                                      |
 | GET  | `/api/a2a/tasks/[id]`        | একটি টাস্ক রিট্রিভ করে                                                                                            |

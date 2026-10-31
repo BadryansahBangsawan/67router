@@ -143,8 +143,6 @@ src/
 | `app/api/`（v1 以外）                                                        | 管理者向けルート（約60ディレクトリ：プロバイダー、コンボ、設定、mcp、a2a、評価、メモリ、スキル、Webhook、コンプライアンス、レジリエンス、監視、トンネル、CLI ツールなど）                                                                                                                                              |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12ルート（サーバー制御、エージェントの状態/DNS/マッピング、バイパス、証明書、上流 CA）。LOCAL_ONLY + SPAWN_CAPABLE。`docs/frameworks/AGENTBRIDGE.md §7` を参照。                                                                                                                                |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16以上のルート（リクエスト、セッション、ホスト、キャプチャモード、エクスポート、ws）。LOCAL_ONLY + SPAWN_CAPABLE。`docs/frameworks/TRAFFIC_INSPECTOR.md §8` を参照。                                                                                                                 |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 エントリーポイント（`POST /a2a`）                                                                                                                                                                                                                                                                     |
-| `app/.well-known/agent.json/`                                                | A2A エージェントカード（ディスカバリー）                                                                                                                                                                                                                                                                               |
 | `app/(dashboard)/dashboard/`                                                 | ダッシュボード UI ページ（50以上のセクション、約118個の page.tsx ファイル：プロバイダー、コンボ、設定、メモリ、スキル、Webhook、評価、監査、バッチ、キャッシュ、コスト、ヘルス、システム、アクティビティなど）                                                                                                         |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI（3つのタブ：検索/スクレイピング/比較 + SearchConceptCard + ProviderCatalog）— `docs/frameworks/SEARCH_TOOLS_STUDIO.md` を参照                                                                                                                                                                   |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio（プラン21）：`page.tsx`（3タブ構成）、`components/`（MemoryConceptCard、MemoryEngineStatus、EmbeddingSourceSelector、EditMemoryModal、RetrievePreview、QdrantConfigCard、RerankConfigCard）、`components/tabs/`（MemoriesTab、PlaygroundTab、EngineTab）、`hooks/`（useEngineStatus、useMemorySettings） |
@@ -398,7 +396,6 @@ open-sse/
 | ドキュメント                                | 目的                                                                              |
 | ------------------------------------------- | --------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCPサーバー：110ツール、3トランスポート、33スコープ、RESTエンドポイント           |
-| `A2A-SERVER.md`                             | A2A v0.3：JSON-RPC、6スキル、RESTヘルパー、エージェントカード                     |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | 統合ガイド：A2A対ACP対Cloud Agents                                                |
 | `SKILLS.md`                                 | スキルフレームワーク（組み込み + マーケットプレイス + SkillsSH + サンドボックス） |
 | `RADAR.md`                                  | Radar無料モデルカタログオーバーレイ（`RADAR_ENABLED`、デフォルトでは無効）        |
@@ -567,7 +564,6 @@ open-sse/
 - **プロバイダーを追加する場合** `docs/architecture/ARCHITECTURE.md § 新しいプロバイダーの追加` に従い、`docs/reference/PROVIDER_REFERENCE.md` と照合してください。
 - **ルートを追加する場合** `docs/architecture/ARCHITECTURE.md § 新しい API ルートの追加` と `src/shared/validation/schemas.ts` を参照してください。
 - **MCP ツールを追加する場合** `docs/frameworks/MCP-SERVER.md § ツールの追加` を参照してください。
-- **A2A スキルを追加する場合** `docs/frameworks/A2A-SERVER.md § 新しいスキルの追加` を参照してください。
 - **ローカルで実行する場合** `docs/guides/SETUP_GUIDE.md` を参照してください。
 - **デプロイする場合** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md` を参照してください。
 - **リリースする場合** `docs/ops/RELEASE_CHECKLIST.md`（および Claude Code スキル `/generate-release-cc`）を参照してください。

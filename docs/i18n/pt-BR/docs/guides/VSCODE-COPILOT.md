@@ -94,7 +94,7 @@ muda na extensão.
 Simple Browser, em vez de em um navegador externo. A incorporação é **habilitada explicitamente no servidor** por meio de
 `DASHBOARD_ALLOW_EMBED=vscode`, que fornece as páginas HTML com
 `frame-ancestors 'self' vscode-webview:` em vez do padrão `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. A superfície da API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mantém os
+`X-Frame-Options: DENY`. A superfície da API (`/api`, `/v1`, `/v1beta`, `/healthz`) mantém os
 cabeçalhos restritivos em ambos os casos.
 
 > ⚠️ **Essa é uma opção de tempo de build, não de runtime.** O Next.js compila `headers()` no manifesto de

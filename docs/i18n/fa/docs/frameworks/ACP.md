@@ -125,4 +125,3 @@ try {
 - [پروتکلهای عامل](./AGENT_PROTOCOLS_GUIDE.md)
 - [قراردادهای راهاندازی CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [ابزارهای CLI](../reference/CLI-TOOLS.md)
-- [سرور A2A](./A2A-SERVER.md)

@@ -100,8 +100,6 @@ Sehemu za kiwango cha juu chini ya `src/app/`:
 | Njia                                                                          | Madhumuni                                                       |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | `api/`                                                                        | Njia zote za API ya HTTP (tazama uchanganuzi hapa chini)        |
-| `a2a/`                                                                        | Endpoint ya A2A JSON-RPC 2.0 (`POST /a2a`)                      |
-| `.well-known/agent.json/`                                                     | Hati ya ugunduzi ya A2A Agent Card                              |
 | `(dashboard)/`                                                                | UI ya dashibodi (kundi la njia, hakuna kiambishi awali cha URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Mitiririko ya uthibitishaji                                     |
 | `landing/`                                                                    | Ukurasa wa uuzaji/utangulizi                                    |
@@ -772,13 +770,6 @@ Angalia [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) na sehemu maalumu katika
 4. Ongeza majaribio chini ya `open-sse/mcp-server/__tests__/`.
 5. Sasisha [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Ongeza ujuzi mpya wa A2A
-
-Tazama [A2A-SERVER.md § Kuongeza Ujuzi Mpya](../frameworks/A2A-SERVER.md). Ujuzi hupatikana katika
-`src/lib/a2a/skills/` na husajiliwa kupitia kidhibiti cha kazi cha A2A.
-
----
-
 ## 11. Kanuni
 
 - **Mtindo wa msimbo**: ujongezaji wa nafasi 2, alama mbili za kunukuu, upana wa herufi 100, semikoni,
@@ -845,7 +836,6 @@ Tazama [A2A-SERVER.md § Kuongeza Ujuzi Mpya](../frameworks/A2A-SERVER.md). Ujuz
   na lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — uwekaji alama na mikakati ya Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — katalogi kamili ya zana za MCP + njia za usafirishaji.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — ujuzi na ugunduzi wa itifaki ya A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — ubanaji wa RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — miunganisho ya CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ikiwa ipo), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — mazingira lengwa ya usambazaji.

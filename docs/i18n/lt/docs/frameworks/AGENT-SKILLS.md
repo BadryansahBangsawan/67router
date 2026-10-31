@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (reikalingas autentifikavimas)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP įrankiai (sąrašas, gavimas, aprėptis)
-src/lib/a2a/skills/listCapabilities.ts        — A2A įgūdis: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A įgūdis `list-capabilities` grąžina visą 45 įgūdžių katalogą kaip �
 }
 ```
 
-Išsamią protokolo informaciją žr. [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalogas — 45 įgūdžių ID
@@ -189,7 +186,6 @@ Išsamią protokolo informaciją žr. [A2A-SERVER.md](./A2A-SERVER.md).
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills sistema (LLM įrankių įterpimas ir prekyvietė)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP įrankių katalogas (`omniroute_agent_skills_*` įrankiai)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokolas (`list-capabilities` įgūdis)
 - `src/lib/agentSkills/` — katalogas, generatorius, analizatoriai
 - `skills/` — sugeneruoti SKILL.md failai (45 įrašai)

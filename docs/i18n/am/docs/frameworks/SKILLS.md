@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ውህደት
-
-`src/lib/skills/a2a.ts` የ`memory_aware_routing` A2A ክህሎት ገላጭን እና የ`registerA2ASkill(registry)` አጋዥን ወደ ውጭ ይልካል። ብጁ A2A ክህሎቶች በ`src/lib/a2a/skills/` ውስጥ ይገኛሉ፣ እና በ`A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) በኩል ይላካሉ። ለሙሉው የተግባር የሕይወት ዑደት [A2A-SERVER.md](./A2A-SERVER.md)ን ይመልከቱ።
-
----
-
 ## አዲስ አብሮገነብ ክህሎት ማከል
 
 1. **handlerን ይግለጹ** በ`src/lib/skills/builtins.ts` (ወይም በ`src/lib/skills/builtin/` ሥር ባለ ተጓዳኝ ፋይል)። ፊርማ፦ `(input, { apiKeyId, sessionId }) => Promise<output>`።
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## ተጨማሪ ይመልከቱ
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — የMCP መሣሪያ ምዝገባ እና የመጓጓዣ ዘዴዎች
-- [A2A-SERVER.md](./A2A-SERVER.md) — የA2A ተግባር የሕይወት ዑደት እና የክህሎት ስርጭት
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — ለተጠቃሚዎች የቀረበ መግቢያ
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — የጥያቄ ማስኬጃ ሂደት እና የክፍሎች ካርታ
 - ምንጭ፦ `src/lib/skills/`፣ `src/app/api/skills/`፣ `open-sse/mcp-server/tools/skillTools.ts`

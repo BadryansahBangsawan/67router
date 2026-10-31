@@ -586,7 +586,6 @@ Radar הוא שירות אופציונלי המבוסס על GET בלבד. לק�
 - **🔑 בקרת ניתוב לכל מפתח** — הצמידו מפתח API למודל או לשילוב יחיד באמצעות `forcedModel`, והוסיפו או הסירו מודלים ושילובים של מפתח באופן אטומי (`/api/keys/{id}/access`). → [תיעוד ה-API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ בקרות PII מדויקות יותר** — בחירה לפי סוג, עד 20 תבניות מיסוך מותאמות אישית ומאומתות, ומוני זיהוי לפי סוג; המיסוך עצמו נשאר אופציונלי. → [אמצעי הגנה](docs/security/GUARDRAILS.md)
 - **🌍 67 שפות** — לוח הבקרה, עותקי התיעוד וה-CLI, כאשר `npm run i18n:add-locale` מוסיף שפה בכל מקום באמצעות פקודה אחת. → [מדריך i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — האצלת A2A נכנסת לצי הסוכנים שלכם, מיומנויות Conductor בכרטיס הסוכן, ופאנל בלוח הבקרה עם צ'אט קולי בלחיצה-לדיבור של Faro. → [שרת A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 בקרת כניסה אדפטיבית והגנה מעומס יתר** — בקשות צ'אט כבדות נכנסות לתור במקום להחזיר 503, עם חכירות RPM מתגלגלות ואטומיות לכל חיבור. → [מדריך החוסן](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ סדר קנוני של `/v1/models`** — מקטע רציף אחד המקובץ לפי ספק עבור כל ספק (שילובים מוצמדים ראשונים), היציב בכל מקורות הקטלוג. → [תיעוד ה-API](docs/reference/API_REFERENCE.md)
 - **🗜️ הקשחת דחיסה** — הגנה מפני ניפוח המופעלת כברירת מחדל, חבילות Caveman לגרמנית / צרפתית / יפנית + סינית (wényán), ומסנני RTK עבור Gradle ו-.NET. → [דחיסה](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ omniroute contexts use default            # ← חזרה לשרת המקומי
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">חיבור ל-Claude Desktop, ל-Cursor או לכל לקוח MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP מרוחק — <b>110 כלים</b>, 33 היקפים (האכיפה ניתנת להפעלה), יומן ביקורת מלא</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">תעבורת MCP בהזרמה</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">תקשורת בין סוכנים, <b>JSON-RPC 2.0</b> + SSE,‏ 6 מיומנויות</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">תואם OpenAI — צ'אט, הטמעות, תמונות, שמע ו-OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">דחיפת אירועי בקשות / מכסות אל Slack,‏ Discord,‏ Telegram או כל URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI מרוחק</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">הפעלת מופע מרוחק באמצעות אסימוני גישה מוגבלי-היקף</td></tr>
@@ -915,8 +913,6 @@ omniroute contexts use default            # ← חזרה לשרת המקומי
 # הענקת ערכת הכלים המלאה של OmniRoute ל-Claude Code דרך MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [שרת MCP](docs/frameworks/MCP-SERVER.md) · [שרת A2A](docs/frameworks/A2A-SERVER.md) · [פרוטוקולים לסוכנים](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1375,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">שרת MCP</a></b></td><td>110 כלי MCP, תצורות IDE, לקוחות Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">מדריך שרת MCP</a></b></td><td>התקנת MCP, אמצעי תעבורה ומדריך עזר לכלים</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">שרת A2A</a></b></td><td>פרוטוקול JSON-RPC 2.0, מיומנויות, הזרמה, ניהול משימות</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">מדריך שרת A2A</a></b></td><td>כרטיס סוכן A2A, משימות, מיומנויות והזרמה</td></tr>
 </table>
 
 ### 📋 פרויקט ואיכות

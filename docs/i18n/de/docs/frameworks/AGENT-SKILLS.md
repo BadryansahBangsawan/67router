@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (Authentifizierung erforderlich)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-Tools (Auflisten, Abrufen, Abdeckung)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-Skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Die A2A-Fähigkeit `list-capabilities` gibt den vollständigen Katalog mit 45 F�
 }
 ```
 
-Protokolldetails finden Sie unter [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalog — 45 Fähigkeits-IDs
@@ -189,7 +186,6 @@ Protokolldetails finden Sie unter [A2A-SERVER.md](./A2A-SERVER.md).
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni-Skills-Framework (LLM-Tool-Injektion + Marktplatz)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-Tool-Katalog (`omniroute_agent_skills_*`-Tools)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-Protokoll (`list-capabilities`-Skill)
 - `src/lib/agentSkills/` — Katalog, Generator, Parser
 - `skills/` — generierte SKILL.md-Dateien (45 Einträge)

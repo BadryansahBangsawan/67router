@@ -1237,8 +1237,6 @@ SSE URL `http://localhost:20128/api/mcp/sse`ను మరియు **Dashboard �
 
 ### స్కోప్లు
 
-MCP ప్రస్తుతం 32 పేరుగల స్కోప్లను నిర్వచిస్తుంది. ప్రతి Bearer కీని నిర్దిష్ట స్కోప్లకు పరిమితం చేయవచ్చు — ప్రామాణిక స్కోప్ మరియు టూల్ జాబితా కోసం [MCP-SERVER.md](../frameworks/MCP-SERVER.md)ను, JSON-RPC స్కీమా కోసం [A2A-SERVER.md](../frameworks/A2A-SERVER.md)ను చూడండి.
-
 ---
 
 ## 🧠 నైపుణ్యాల వ్యవస్థ
@@ -1247,7 +1245,6 @@ MCP ప్రస్తుతం 32 పేరుగల స్కోప్లన�
 
 - **మార్కెట్ప్లేస్ UI** — **డ్యాష్బోర్డ్ → నైపుణ్యాలు** నుండి నైపుణ్యాలను బ్రౌజ్ చేసి, ఇన్స్టాల్ చేయండి
 - **ఒక్కో కీకి స్కోప్లు** — ఏ API కీలు ఏ నైపుణ్యాలను అమలు చేయగలవో నియంత్రించండి
-- **అనుకూల నైపుణ్యాలు** — `src/lib/a2a/skills/`లో ఒక TypeScript ఫైల్ను ఉంచి, దాన్ని నమోదు చేస్తే, అది వెంటనే A2A ద్వారా అమలు చేయదగినదిగా మారుతుంది
 
 పూర్తి సూచన: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1332,7 +1329,6 @@ omniroute restore [<timestamp>]    # స్నాప్షాట్ నుండ
 omniroute health                   # వివరణాత్మక ఆరోగ్య స్థితి (బ్రేకర్లు, కాష్, మెమరీ)
 omniroute quota                    # ప్రొవైడర్ కోటా వినియోగం
 omniroute mcp status               # MCP సర్వర్ స్థితి
-omniroute a2a status               # A2A సర్వర్ స్థితి
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok టన్నెల్లు
 omniroute reset-password           # అడ్మిన్ పాస్వర్డ్ను రీసెట్ చేయండి
 omniroute --mcp                    # stdio ద్వారా MCP సర్వర్ను ప్రారంభించండి

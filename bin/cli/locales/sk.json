@@ -390,34 +390,6 @@
       "description": "Protokol auditu MCP (alias pre audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Zobraziť zoznam dostupných zručností A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Vyvolať zručnosť A2A a vrátiť ID úlohy",
-      "input": "Vstupný objekt JSON",
-      "input_file": "Cesta k vstupnému súboru JSON",
-      "wait": "Pred návratom počkať na dokončenie úlohy",
-      "timeout": "Časový limit čakania na dokončenie v ms (predvolené: 60000)"
-    },
-    "tasks": {
-      "description": "Spravovať úlohy A2A",
-      "list": {
-        "status": "Filtrovať podľa stavu",
-        "skill": "Filtrovať podľa ID zručnosti"
-      },
-      "watch": {
-        "description": "Opakovane kontrolovať stav úlohy až do dokončenia"
-      },
-      "stream": {
-        "description": "Streamovať udalosti vykonávania úlohy prostredníctvom SSE"
-      },
-      "logs": {
-        "description": "Zobraziť správy a artefakty úlohy"
-      }
-    }
-  },
   "policy": {
     "description": "Spravovať autorizačné politiky OmniRoute",
     "list": {

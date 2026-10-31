@@ -586,7 +586,7 @@ Radar በምርጫ የሚነቃ ሲሆን GET ጥያቄዎችን ብቻ ይጠ�
 - **🔑 በእያንዳንዱ ቁልፍ የማስተላለፊያ ቁጥጥር** — የአንድ API ቁልፍ ከአንድ ሞዴል ወይም ኮምቦ ጋር በ`forcedModel` ያስገድዱት፣ እና የአንድ ቁልፍ ሞዴሎችን እና ኮምቦዎችን በአቶሚክ ያክሉ ወይም ያስወግዱ (`/api/keys/{id}/access` በኩል)። → [API ማጣቀሻ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ የተሻሻሉ PII ቁጥጥሮች** — በአይነቱ ምርጫ፣ እስከ 20 ድረስ የተረጋገጡ ልዩ የማስደበቂያ (masking) ስነ-ሥርዓቶች እና በአይነቱ የመገኘት ቆጣሪዎች፤ ማስደበቂያው ራሱ በገዛ ፈቃድ (opt-in) እንደሆነ ይቆያል። → [መከላከያዎች](docs/security/GUARDRAILS.md)
 - **🌍 67 ቋንቋዎች** — ዳሽቦርድ፣ የሰነድ ሚራሮች እና CLI፣ `npm run i18n:add-locale` በአንድ ትእዛዝ በሁሉም ቦታ ቋንቋ ያክላል። → [i18n መመሪያ](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ወደ የእርስዎ ወኪል ቡድን የሚገባ A2A ስልጣን ማስተላለፍ፣ በAgent Card ላይ የConductor ክህሎቶች፣ እና ከFaro push-to-talk የድምፅ ውይይት ጋር የዳሽቦርድ ፓነል። → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ወደ የእርስዎ ወኪል ቡድን የሚገባ A2A ስልጣን ማስተላለፍ፣ በAgent Card ላይ የConductor ክህሎቶች፣ እና ከFaro push-to-talk የድምፅ ውይይት ጋር የዳሽቦርድ ፓነል።
 - **🛂 ተስማሚ ተቀባይነት እና የጭምር ጭንመት ጥበቃ** — ከባድ የውይይት ጥያቄዎች 503 መልስ በመስጠት ፈንታ በወረፋ ይጠብቃሉ፣ ከእያንዳንዱ ግንኙነት ጋር አቶሚክ RPM የሚጠራሩ ኪራዮች ተጠቅሟል። → [የመቋቋም መመሪያ](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ መደበኛ `/v1/models` ደረጃ አቀማመጥ** — ለእያንዳንዱ አቅራቢ አንድ ተያያዥ የአቅራቢ ቡድን አገናኝ (ኮምቦዎች መጀመሪያ ተሰክረው)፣ በሁሉም የካታሎግ ምንጮች ዘላቂ። → [API ማጣቀሻ](docs/reference/API_REFERENCE.md)
 - **🗜️ የመጭመቂያ ጥንካሬ** — በነባሩ የሚበራ የማራዘሚያ (inflation) ጠባቂ፣ ለDE / FR / JA + ቻይንኛ (wényán) የCaveman ጥቅሎች፣ ለGradle እና .NET የRTK ማጣሪያዎች። → [መጭመቂያ](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ OmniRouteን በ**MCP**፣ **A2A**፣ **REST API**፣ **webhooks** ወይም **�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">ከClaude Desktop፣ Cursor እና ከማንኛውም MCP ደንበኛ ጋር ያገናኙ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">የርቀት MCP — <b>110 መሳሪያዎች</b>፣ 33 ወሰኖች (ማስፈጸም በምርጫ የሚነቃ)፣ ሙሉ የኦዲት መዝገብ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">የዥረት MCP ማጓጓዣ</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ከወኪል-ወደ-ወኪል፣ <b>JSON-RPC 2.0</b> + SSE፣ 6 ክህሎቶች</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">ከOpenAI ጋር ተኳኋኝ — ውይይት፣ መክተቶች፣ ምስሎች፣ ድምጽ፣ OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">የጥያቄ / የኮታ ክስተቶችን ወደ Slack፣ Discord፣ Telegram ወይም ማንኛውም URL ይላኩ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>የርቀት CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">የተወሰነ ወሰን ባላቸው የመዳረሻ ቶከኖች የርቀት ኢንስታንስን ያንቀሳቅሱ</td></tr>
@@ -915,8 +914,6 @@ OmniRouteን በ**MCP**፣ **A2A**፣ **REST API**፣ **webhooks** ወይም **�
 # ለClaude Code ሙሉውን የOmniRoute መሳሪያ ስብስብ በMCP በኩል ይስጡ፦
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP አገልጋይ](docs/frameworks/MCP-SERVER.md) · [A2A አገልጋይ](docs/frameworks/A2A-SERVER.md) · [የወኪል ፕሮቶኮሎች](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1379,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1ም ይዘለዋ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">የMCP ሰርቨር</a></b></td><td>110 የMCP መሣሪያዎች፣ የIDE ውቅሮች፣ Python/TS/Go ደንበኞች</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">የMCP ሰርቨር መመሪያ</a></b></td><td>የMCP መጫን፣ ማጓጓዣዎች እና የመሣሪያ ማጣቀሻ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">የA2A ሰርቨር</a></b></td><td>የJSON-RPC 2.0 ፕሮቶኮል፣ ክህሎቶች፣ ዥረት ማስተላለፍ፣ የተግባር አስተዳደር</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">የA2A ሰርቨር መመሪያ</a></b></td><td>የA2A ወኪል ካርድ፣ ተግባራት፣ ክህሎቶች እና ዥረት ማስተላለፍ</td></tr>
 </table>
 
 ### 📋 ፕሮጀክት እና ጥራት

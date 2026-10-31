@@ -247,26 +247,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **සම්පූර්ණ MCP ලේඛනගත කිරීම:** [MCP Server README](../../open-sse/mcp-server/README.md) — මෙවලම් 110ක්, IDE වින්යාස, Python/TS/Go සේවාලාභීන්.
 
-### A2A සැකසුම (Agent-to-Agent Protocol)
-
-Agent Card එක සත්යාපනය කරන්න:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-කාර්යයක් යවන්න:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**සම්පූර්ණ A2A ලේඛනගත කිරීම:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, කුසලතා, ප්රවාහනය, කාර්ය ජීවන චක්රය.
-
----
-
 ## කල් ඉකුත්වීමේ වින්යාසය
 
 ### මූලික කල් ඉකුත්වීම්

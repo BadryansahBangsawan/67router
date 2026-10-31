@@ -32,11 +32,6 @@
 //       nomes são congelados em KNOWN_MCP_TOOL_NAMES. Catraca: tool removido = fail.
 //       Tool novo = report (não bloqueia adições legítimas).
 //
-//   (5) A2A SKILLS — chaves de A2A_SKILL_HANDLERS (src/lib/a2a/taskExecution.ts) DEVEM
-//       bater bidirecionalmente com skills[].id expostos no Agent Card
-//       (src/app/.well-known/agent.json/route.ts). Divergência em qualquer direção = fail.
-//
-//
 // Catraca: cada divergência pré-existente fica numa allowlist documentada e sai 0 hoje.
 // Padrão herdado de scripts/check/check-provider-consistency.ts (gate .ts via
 // `node --import tsx` que IMPORTA módulos reais + funções puras + main() guardado).
@@ -382,30 +377,7 @@ export const KNOWN_MCP_TOOL_NAMES: readonly string[] = [
 ];
 
 // ───────────────────────────────────────────────────────────────────────────
-// (5) A2A SKILLS — bidirectional diff between handlers and agent card
-// ───────────────────────────────────────────────────────────────────────────
-
-export type A2ASkillDiff = {
-  /** Skills registered in A2A_SKILL_HANDLERS but not exposed in the Agent Card */
-  inHandlersNotCard: string[];
-  /** Skills exposed in the Agent Card but not registered in A2A_SKILL_HANDLERS */
-  inCardNotHandlers: string[];
-};
-
-/**
- * Bidirectionally diffs A2A skill handler keys against Agent Card skill IDs.
- * Both directions matter:
- *   - inHandlersNotCard: skill is routable but agents can't discover it
- *   - inCardNotHandlers: skill is advertised but calling it fails silently
- */
-export function diffA2ASkills(handlers: Set<string>, agentCard: Set<string>): A2ASkillDiff {
-  const inHandlersNotCard = [...handlers].filter((s) => !agentCard.has(s)).sort();
-  const inCardNotHandlers = [...agentCard].filter((s) => !handlers.has(s)).sort();
-  return { inHandlersNotCard, inCardNotHandlers };
-}
-
-// ───────────────────────────────────────────────────────────────────────────
-// main() — importa módulos reais, lê fontes, roda as seis sub-checagens
+// main() — importa módulos reais, lê fontes, roda as quatro sub-checagens
 // ───────────────────────────────────────────────────────────────────────────
 
 async function main(): Promise<void> {
@@ -567,44 +539,6 @@ async function main(): Promise<void> {
   }
   const newMcpTools = findNewMcpTools(KNOWN_MCP_TOOL_NAMES, liveMcpToolNames);
 
-  // ── (5) A2A skills ───────────────────────────────────────────────────────
-  const { A2A_SKILL_HANDLERS } = await import("@/lib/a2a/taskExecution.ts");
-  const handlerKeys = new Set(Object.keys(A2A_SKILL_HANDLERS as Record<string, unknown>));
-
-  // Parse the Agent Card route statically (the skills array is a literal in the source).
-  const agentCardSource = readFileSync(
-    resolvePath(REPO_ROOT, "src/app/.well-known/agent.json/route.ts"),
-    "utf8"
-  );
-  // Extract skill IDs: `id: "..."` lines inside the skills array.
-  const skillIdRe = /\bid:\s*"([^"]+)"/g;
-  const agentCardSkills = new Set<string>();
-  let skillMatch: RegExpExecArray | null;
-  while ((skillMatch = skillIdRe.exec(agentCardSource)) !== null) {
-    agentCardSkills.add(skillMatch[1]);
-  }
-  if (agentCardSkills.size === 0) {
-    failures.push(
-      `[a2a-skills] parse do Agent Card não encontrou nenhum skill id (regex quebrada ou arquivo movido?)`
-    );
-  }
-
-  const { inHandlersNotCard, inCardNotHandlers } = diffA2ASkills(handlerKeys, agentCardSkills);
-  if (inHandlersNotCard.length) {
-    failures.push(
-      `[a2a-skills] ${inHandlersNotCard.length} skill(s) em A2A_SKILL_HANDLERS mas ausente(s) do Agent Card (agentes não conseguem descobrir):\n` +
-        inHandlersNotCard.map((s) => `    ✗ ${s}`).join("\n") +
-        `\n    → adicione o skill em src/app/.well-known/agent.json/route.ts (skills array).`
-    );
-  }
-  if (inCardNotHandlers.length) {
-    failures.push(
-      `[a2a-skills] ${inCardNotHandlers.length} skill(s) expostos no Agent Card mas ausente(s) de A2A_SKILL_HANDLERS (chamada silenciosamente falha):\n` +
-        inCardNotHandlers.map((s) => `    ✗ ${s}`).join("\n") +
-        `\n    → registre o handler em src/lib/a2a/taskExecution.ts (A2A_SKILL_HANDLERS).`
-    );
-  }
-
   // ── Resultado ─────────────────────────────────────────────────────────────
   if (failures.length) {
     console.error(
@@ -627,8 +561,7 @@ async function main(): Promise<void> {
       `${aliases.length} executores conformes; ` +
       `${canonical.length} estratégias canônicas (${handled.size} via despacho + ${Object.keys(IMPLICIT_DEFAULT_STRATEGIES).length} default(s) implícito(s)); ` +
       `${livePairs.size} pares de tradutor vivos vs ${KNOWN_TRANSLATOR_PAIRS.length} congelados${newPairsNote}; ` +
-      `${liveMcpToolNames.size} tools MCP (${toolsWithoutScopes.length === 0 ? "todos com scope" : `${toolsWithoutScopes.length} sem scope`}) vs ${KNOWN_MCP_TOOL_NAMES.length} congelados${newMcpNote}; ` +
-      `${handlerKeys.size} A2A skills (handlers↔card OK)`
+      `${liveMcpToolNames.size} tools MCP (${toolsWithoutScopes.length === 0 ? "todos com scope" : `${toolsWithoutScopes.length} sem scope`}) vs ${KNOWN_MCP_TOOL_NAMES.length} congelados${newMcpNote}`
   );
 }
 

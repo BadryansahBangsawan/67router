@@ -390,34 +390,6 @@
       "description": "Journal d’audit MCP (alias de audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Répertorier les compétences A2A disponibles depuis la fiche de l’agent"
-    },
-    "invoke": {
-      "description": "Invoquer une compétence A2A et renvoyer l’ID de la tâche",
-      "input": "Objet d’entrée JSON",
-      "input_file": "Chemin vers le fichier d’entrée JSON",
-      "wait": "Attendre la fin de la tâche avant de renvoyer le résultat",
-      "timeout": "Délai d’attente maximal avant la fin, en ms (par défaut : 60000)"
-    },
-    "tasks": {
-      "description": "Gérer les tâches A2A",
-      "list": {
-        "status": "Filtrer par statut",
-        "skill": "Filtrer par ID de compétence"
-      },
-      "watch": {
-        "description": "Interroger le statut de la tâche jusqu’à sa fin"
-      },
-      "stream": {
-        "description": "Diffuser les événements d’exécution de la tâche via SSE"
-      },
-      "logs": {
-        "description": "Afficher les messages et les artefacts de la tâche"
-      }
-    }
-  },
   "policy": {
     "description": "Gérer les politiques d’autorisation d’OmniRoute",
     "list": {

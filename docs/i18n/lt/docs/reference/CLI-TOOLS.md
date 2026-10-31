@@ -748,7 +748,6 @@ omniroute cache                        # Podėlio būsena
 omniroute cache clear                  # Išvalyti semantinį ir parašų podėlius
 
 omniroute mcp status | restart         # MCP serverio būsena / paleidimas iš naujo
-omniroute a2a status | card            # A2A serverio būsena / agento kortelė
 
 omniroute tunnel list | create | stop  # Tvarkyti tunelius (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Peržiūrėti / nustatyti aplinkos kintamuosius (laikinai)

@@ -100,8 +100,6 @@ Manyan sassan da ke ƙarƙashin `src/app/`:
 | Hanya                                                                         | Manufa                                        |
 | ----------------------------------------------------------------------------- | --------------------------------------------- |
 | `api/`                                                                        | Duk hanyoyin HTTP API (duba rarrabuwar ƙasa)  |
-| `a2a/`                                                                        | Endpoint na A2A JSON-RPC 2.0 (`POST /a2a`)    |
-| `.well-known/agent.json/`                                                     | Takardar gano A2A Agent Card                  |
 | `(dashboard)/`                                                                | Dashboard UI (rukunin hanya, babu URL prefix) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Matakan auth                                  |
 | `landing/`                                                                    | Shafin talla/farawa                           |
@@ -772,13 +770,6 @@ Duba [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) da kuma sashen da aka keɓe a 
 4. Ƙara gwaje-gwaje a ƙarƙashin `open-sse/mcp-server/__tests__/`.
 5. Sabunta [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Ƙara sabuwar ƙwarewar A2A
-
-Duba [A2A-SERVER.md § Ƙara Sabuwar Ƙwarewa](../frameworks/A2A-SERVER.md). Ƙwarewa suna cikin
-`src/lib/a2a/skills/` kuma ana yi musu rajista ta hanyar mai sarrafa ayyukan A2A.
-
----
-
 ## 11. Ka'idoji
 
 - **Salon code**: indent na spaces 2, double quotes, faɗin characters 100, semicolons,
@@ -845,7 +836,6 @@ Duba [A2A-SERVER.md § Ƙara Sabuwar Ƙwarewa](../frameworks/A2A-SERVER.md). Ƙw
   da lockout.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — tsarin scoring da dabarun Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — cikakken kundin MCP tools + transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — ƙwarewar A2A protocol da discovery.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman compression.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — haɗaɗɗun CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (idan yana nan), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — wuraren deployment.

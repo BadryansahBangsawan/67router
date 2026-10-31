@@ -586,7 +586,7 @@ Ang Radar ay opt-in at GET-only. Hindi nag-a-upload ang OmniRoute client ng mga 
 - **🔑 Kontrol sa routing kada key** — i-pin ang isang API key sa isang model o combo gamit ang `forcedModel`, at idagdag o alisin nang atomiko ang mga model at combo ng isang key (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Mas pinong mga kontrol sa PII** — pagpili kada uri, hanggang 20 validated na custom masking pattern at per-type detection counter; nananatiling opt-in ang masking mismo. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 na wika** — dashboard, mga docs mirror at CLI, kung saan ang `npm run i18n:add-locale` ay nagdaragdag ng wika sa lahat ng lugar sa isang command. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — papasok na A2A delegation patungo sa iyong agent fleet, mga Conductor skill sa Agent Card, at panel sa dashboard na may Faro push-to-talk voice chat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — papasok na A2A delegation patungo sa iyong agent fleet, mga Conductor skill sa Agent Card, at panel sa dashboard na may Faro push-to-talk voice chat.
 - **🛂 Adaptive admission at proteksyon sa overload** — ang mabibigat na chat request ay pumipila sa halip na mag-503, na may atomic RPM rolling lease kada koneksyon. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical na pagkakasunod-sunod ng `/v1/models`** — isang magkadikit na block na naka-group ayon sa provider para sa bawat provider (mga combo ang naka-pin muna), stable sa lahat ng catalog source. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Pagpapatatag ng compression** — naka-default na inflation guard, mga Caveman pack para sa DE / FR / JA + Chinese (wényán), mga RTK filter para sa Gradle at .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Ilantad ang OmniRoute sa pamamagitan ng **MCP**, **A2A**, isang **REST API**, mg
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Ikonekta sa Claude Desktop, Cursor, o anumang MCP client</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Remote MCP — <b>110 tool</b>, 33 scope (opsyonal ang pagpapatupad), kumpletong audit trail</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streaming na MCP transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-to-agent, <b>JSON-RPC 2.0</b> + SSE, 6 na skill</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Compatible sa OpenAI — chat, embedding, larawan, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Mga Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Mag-push ng mga request / quota event sa Slack, Discord, Telegram, o anumang URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Kontrolin ang isang remote instance gamit ang mga scoped access token</td></tr>
@@ -916,7 +915,7 @@ Ilantad ang OmniRoute sa pamamagitan ng **MCP**, **A2A**, isang **REST API**, mg
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
-<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [A2A Server](docs/frameworks/A2A-SERVER.md) · [Mga Protocol ng Agent](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
+<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [Mga Protocol ng Agent](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1378,6 @@ Mga canonical na sukatan noong 2026-10-18: **1.976 natatanging video** · **20.2
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Server</a></b></td><td>110 MCP tool, mga config ng IDE, mga client ng Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Gabay sa MCP Server</a></b></td><td>Pag-install ng MCP, mga transport, at sanggunian ng tool</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Server</a></b></td><td>Protocol na JSON-RPC 2.0, mga skill, streaming, pamamahala ng gawain</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Gabay sa A2A Server</a></b></td><td>A2A agent card, mga gawain, skill, at streaming</td></tr>
 </table>
 
 ### 📋 Proyekto at Kalidad

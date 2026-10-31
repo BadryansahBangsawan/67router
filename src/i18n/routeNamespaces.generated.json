@@ -61,34 +61,6 @@
     "vscodeCopilotBanner"
   ],
   "sections": {
-    "a2a": [
-      "a2aDashboard",
-      "agentSkills",
-      "analytics",
-      "breadcrumbs",
-      "cache",
-      "cloudSyncStatus",
-      "codexKeyServiceMode",
-      "common",
-      "costs",
-      "cursorAuthModal",
-      "header",
-      "kiroAuthModal",
-      "kiroSocialOAuthModal",
-      "noAuthProvider",
-      "oauthModal",
-      "proxyConfigModal",
-      "proxyLog",
-      "proxyLogger",
-      "reasoningRouting",
-      "requestLogger",
-      "requestTimeline",
-      "sharedComponents",
-      "sidebar",
-      "stats",
-      "traeAuthModal",
-      "trafficInspector"
-    ],
     "acp-agents": [
       "acpAgents",
       "agentSkills",
@@ -670,7 +642,6 @@
       "trafficInspector"
     ],
     "endpoint": [
-      "a2aDashboard",
       "agentSkills",
       "analytics",
       "breadcrumbs",

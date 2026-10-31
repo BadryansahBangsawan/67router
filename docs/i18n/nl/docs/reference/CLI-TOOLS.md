@@ -718,7 +718,6 @@ omniroute cache                        # Cachestatus
 omniroute cache clear                  # Semantische cache en handtekeningcache wissen
 
 omniroute mcp status | restart         # MCP-serverstatus / opnieuw starten
-omniroute a2a status | card            # A2A-serverstatus / agentkaart
 
 omniroute tunnel list | create | stop  # Tunnels beheren (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Omgevingsvariabelen bekijken / instellen (tijdelijk)

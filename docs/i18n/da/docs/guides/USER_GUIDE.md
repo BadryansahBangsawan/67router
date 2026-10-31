@@ -1239,8 +1239,6 @@ Brug SSE-URL'en `http://localhost:20128/api/mcp/sse` og en Bearer API-nøgle, de
 
 ### Omfang
 
-MCP definerer i øjeblikket 32 navngivne omfang. Hver Bearer-nøgle kan begrænses til specifikke omfang — se [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for den autoritative oversigt over omfang og værktøjer samt [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for JSON-RPC-skemaet.
-
 ---
 
 ## 🧠 Færdighedssystem
@@ -1249,7 +1247,6 @@ OmniRoute tilbyder en udvidelig **færdighedsramme** (`src/lib/skills/`), så ag
 
 - **Markedspladsgrænseflade** — Gennemse og installer færdigheder via **Kontrolpanel → Færdigheder**
 - **Omfang pr. nøgle** — Begræns, hvilke API-nøgler der kan aktivere hvilke færdigheder
-- **Brugerdefinerede færdigheder** — Placer en TypeScript-fil i `src/lib/a2a/skills/`, registrer den, og den kan straks aktiveres via A2A
 
 Fuld dokumentation: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Gendan fra et øjebliksbillede
 omniroute health                   # Detaljeret sundhedsstatus (afbrydere, cache, hukommelse)
 omniroute quota                    # Brug af udbyderkvoter
 omniroute mcp status               # Status for MCP-server
-omniroute a2a status               # Status for A2A-server
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunneler
 omniroute reset-password           # Nulstil administratoradgangskoden
 omniroute --mcp                    # Start MCP-serveren via stdio

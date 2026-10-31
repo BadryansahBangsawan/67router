@@ -12,7 +12,7 @@ lastUpdated: 2026-06-28
 >
 > For high-level architecture diagrams and the reasoning behind each subsystem, read
 > [ARCHITECTURE.md](./ARCHITECTURE.md). For deep dives on individual subsystems
-> (Auto Combo, MCP server, A2A server, Skills, Memory, Resilience,
+> (Auto Combo, MCP server, A2A task store, Skills, Memory, Resilience,
 > Compression, etc.) see their dedicated files in this `docs/` directory.
 
 This file describes **what exists in the repository today** so that a new engineer
@@ -105,8 +105,6 @@ Top-level segments under `src/app/`:
 | Path                                                                          | Purpose                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------- |
 | `api/`                                                                        | All HTTP API routes (see breakdown below) |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 endpoint (`POST /a2a`)   |
-| `.well-known/agent.json/`                                                     | A2A Agent Card discovery document         |
 | `(dashboard)/`                                                                | Dashboard UI (route group, no URL prefix) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Auth flows                                |
 | `landing/`                                                                    | Marketing/landing page                    |
@@ -130,7 +128,7 @@ Top-level segments under `src/app/`:
 
 ```
 src/app/api/
-├── a2a/{status, tasks}
+├── a2a/tasks
 ├── acp/
 ├── admin/
 ├── analytics/
@@ -275,7 +273,7 @@ table groups the actual directories and notable top-level files.
 
 | Module            | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `a2a/`            | A2A protocol server: `taskManager.ts`, `streaming.ts`, `taskExecution.ts`, `routingLogger.ts`, `skills/` (6 skills: cost analysis, health report, provider discovery, quota management, smart routing, list-capabilities)                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `a2a/`            | A2A task store used by the Conductor bridge: `taskManager.ts`, `authenticate.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `acp/`            | Agent-Control-Protocol: `index.ts`, `manager.ts`, `registry.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `api/`            | Internal API helpers: `requireManagementAuth.ts`, `requireCliToolsAuth.ts`, `errorResponse.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `auth/`           | `managementPassword.ts` (password reset / hashing)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -785,13 +783,6 @@ See [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) and the dedicated section in
 4. Add tests under `open-sse/mcp-server/__tests__/`.
 5. Update [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Add a new A2A skill
-
-See [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Skills live in
-`src/lib/a2a/skills/` and are registered through the A2A task manager.
-
----
-
 ## 11. Conventions
 
 - **Code style**: 2-space indent, double quotes, 100 char width, semicolons,
@@ -859,7 +850,6 @@ See [A2A-SERVER.md § Adding a New Skill](../frameworks/A2A-SERVER.md). Skills l
   lockout deep dive.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo scoring and strategies.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — full MCP tool catalog + transports.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protocol skills and discovery.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman compression.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integrations.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (if present), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — deployment targets.

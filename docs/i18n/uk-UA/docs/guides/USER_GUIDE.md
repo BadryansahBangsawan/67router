@@ -1234,8 +1234,6 @@ OmniRoute одночасно є **сервером MCP** (Model Context Protocol
 
 ### Області доступу
 
-Наразі MCP визначає 32 іменовані області доступу. Кожен Bearer-ключ можна обмежити певними областями доступу — актуальний перелік областей та інструментів наведено в [MCP-SERVER.md](../frameworks/MCP-SERVER.md), а схему JSON-RPC — у [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Система навичок
@@ -1244,7 +1242,6 @@ OmniRoute надає розширюваний **фреймворк навичо�
 
 - **Інтерфейс маркетплейсу** — Переглядайте та встановлюйте навички через **Панель керування → Навички**
 - **Області доступу для окремих ключів** — Обмежуйте, які ключі API можуть викликати певні навички
-- **Власні навички** — Додайте файл TypeScript до `src/lib/a2a/skills/`, зареєструйте його, і він одразу стане доступним для виклику через A2A
 
 Повна довідка: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1329,7 +1326,6 @@ omniroute restore [<timestamp>]    # Відновити зі знімка
 omniroute health                   # Докладний стан (запобіжники, кеш, пам’ять)
 omniroute quota                    # Використання квоти провайдера
 omniroute mcp status               # Стан сервера MCP
-omniroute a2a status               # Стан сервера A2A
 omniroute tunnel list|create|stop  # Тунелі Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Скинути пароль адміністратора
 omniroute --mcp                    # Запустити сервер MCP через stdio

@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (autentimine nõutud)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP tööriista (loend, hankimine, katvus)
-src/lib/a2a/skills/listCapabilities.ts        — A2A oskus: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A oskus `list-capabilities` tagastab täieliku 45 oskusega kataloogi markdown-
 }
 ```
 
-Protokolli üksikasjade kohta vaadake dokumenti [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Kataloog — 45 oskuse ID-d
@@ -189,7 +186,6 @@ Protokolli üksikasjade kohta vaadake dokumenti [A2A-SERVER.md](./A2A-SERVER.md)
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skillsi raamistik (LLM-i tööriistade sisestamine + turuplats)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tööriistakataloog (`omniroute_agent_skills_*` tööriistad)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokoll (`list-capabilities` oskus)
 - `src/lib/agentSkills/` — kataloog, generaator, parserid
 - `skills/` — genereeritud SKILL.md failid (45 kirjet)

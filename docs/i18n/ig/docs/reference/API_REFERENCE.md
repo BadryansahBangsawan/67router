@@ -1879,48 +1879,10 @@ OmniRoute na-abịa na sava Model Context Protocol agbakwunyere nke nwere ụz�
 
 OmniRoute na-enye endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 yana ihe mkpuchi REST maka nyocha/ojiji dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ọ bụ nhọrọ ma e wezụga ma edobere OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Method ndị akwadoro (ha niile dabere na `settings.a2aEnabled`):
-
-| Method           | Nkọwa                                                             |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | Mmezu skill n'otu oge; na-eweghachi `{task, artifacts, metadata}` |
-| `message/stream` | Mmezu SSE na-asọgharị nke otu nchịkọta skill ahụ                  |
-| `tasks/get`      | Were task site na `taskId`                                        |
-| `tasks/cancel`   | Kagbuo task site na `taskId`                                      |
-
-Skill ndị arụnyere n'ime ya: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kaadị Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Na-eweghachi kaadị agent A2A ọha (aha, nkọwa, ikike, katalọgụ skill, usoro auth) — a na-echekwa ya n'ihu ọha ruo 1h. Achọghị auth.
-
 ### Ihe enyemaka REST
 
 | Method | Path                         | Nkọwa                                                                                                            |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A agbanyere + ọnụ ọgụgụ task + nchịkọta kaadị agent echekwara                                                  |
 | GET    | `/api/a2a/tasks`             | Depụta task — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Emebeghị ya dịka ihe enyemaka REST — mepụta site na JSON-RPC `message/send`)                                    |
 | GET    | `/api/a2a/tasks/[id]`        | Nweta otu task                                                                                                   |

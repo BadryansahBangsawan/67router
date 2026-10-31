@@ -122,4 +122,3 @@ aka ba izini daban a cikin target environment.
 - [Ka'idojin wakilai](./AGENT_PROTOCOLS_GUIDE.md)
 - [Yarjejeniyoyin ƙaddamar da CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Kayan aikin CLI](../reference/CLI-TOOLS.md)
-- [Server na A2A](./A2A-SERVER.md)

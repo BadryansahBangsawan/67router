@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (fíordheimhniú riachtanach)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 uirlis MCP (liosta, faigh, clúdach)
-src/lib/a2a/skills/listCapabilities.ts        — Scil A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Filleann an scil A2A `list-capabilities` an chatalóg iomlán de 45 scil mar dh�
 }
 ```
 
-Féach [A2A-SERVER.md](./A2A-SERVER.md) le haghaidh sonraí an phrótacail.
-
 ---
 
 ## Catalóg — 45 ID Scile
@@ -189,7 +186,6 @@ Féach [A2A-SERVER.md](./A2A-SERVER.md) le haghaidh sonraí an phrótacail.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Creat Omni Skills (instealladh uirlisí LLM + margadh)
 - [MCP-SERVER.md](./MCP-SERVER.md) — Catalóg uirlisí MCP (uirlisí `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — Prótacal A2A (scil `list-capabilities`)
 - `src/lib/agentSkills/` — catalóg, gineadóir, parsálaithe
 - `skills/` — comhaid ghinte SKILL.md (45 iontráil)

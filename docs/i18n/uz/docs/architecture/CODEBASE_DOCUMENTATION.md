@@ -98,8 +98,6 @@ App Router boshqaruv paneli interfeysini hamda ommaviy/boshqaruv HTTP APIʼsini 
 | Yo‘l                                                                          | Maqsad                                                         |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | `api/`                                                                        | Barcha HTTP API marshrutlari (quyidagi tafsilotlar)            |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 oxirgi nuqtasi (`POST /a2a`)                  |
-| `.well-known/agent.json/`                                                     | A2A Agent Card aniqlash hujjati                                |
 | `(dashboard)/`                                                                | Boshqaruv paneli interfeysi (marshrut guruhi, URL prefiksisiz) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentifikatsiya jarayonlari                                   |
 | `landing/`                                                                    | Marketing/boshlang‘ich sahifa                                  |
@@ -773,13 +771,6 @@ Mijoz so‘rovi
 4. Testlarni `open-sse/mcp-server/__tests__/` ichiga qoʻshing.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) faylini yangilang.
 
-### Yangi A2A koʻnikmasini qoʻshish
-
-[A2A-SERVER.md § Yangi koʻnikma qoʻshish](../frameworks/A2A-SERVER.md) boʻlimiga qarang. Koʻnikmalar
-`src/lib/a2a/skills/` ichida joylashadi va A2A vazifalar menejeri orqali roʻyxatdan oʻtkaziladi.
-
----
-
 ## 11. Qoidalar
 
 - **Kod uslubi**: 2 boʻsh joyli chekinish, qoʻshtirnoqlar, 100 belgilik kenglik, nuqtali vergullar,
@@ -846,7 +837,6 @@ Mijoz so‘rovi
   lockout mexanizmlarining batafsil tahlili.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo baholash tizimi va strategiyalari.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — MCP vositalarining toʻliq katalogi va transportlar.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protokoli imkoniyatlari va aniqlash mexanizmi.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK va Caveman siqish mexanizmlari.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integratsiyalari.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (agar mavjud boʻlsa), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — joylashtirish maqsadlari.

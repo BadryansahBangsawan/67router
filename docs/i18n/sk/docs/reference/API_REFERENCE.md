@@ -1885,48 +1885,10 @@ OmniRoute obsahuje vstavaný server Model Context Protocol s 3 transportmi (stdi
 
 OmniRoute poskytuje koncový bod A2A (Agent-to-Agent) JSON-RPC 2.0 spolu s obalom REST na účely kontroly a použitia v ovládacom paneli.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # voliteľné, pokiaľ nie je nastavené OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podporované metódy (všetky závisia od `settings.a2aEnabled`):
-
-| Metóda           | Popis                                                                |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | Synchrónne vykonanie zručnosti; vracia `{task, artifacts, metadata}` |
-| `message/stream` | Streamované vykonanie rovnakej množiny zručností cez SSE             |
-| `tasks/get`      | Načíta úlohu podľa `taskId`                                          |
-| `tasks/cancel`   | Zruší úlohu podľa `taskId`                                           |
-
-Vstavané zručnosti: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vracia verejnú kartu agenta A2A (názov, popis, možnosti, katalóg zručností, schéma autentifikácie) — verejne uloženú vo vyrovnávacej pamäti na 1 hodinu. Nevyžaduje sa autentifikácia.
-
 ### Pomocné rozhrania REST
 
 | Metóda | Cesta                        | Popis                                                                                                            |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stav povolenia A2A + štatistiky úloh + súhrn karty agenta z vyrovnávacej pamäte                                  |
 | GET    | `/api/a2a/tasks`             | Zoznam úloh — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nie je implementované ako pomocné rozhranie REST — vytvárajte prostredníctvom JSON-RPC `message/send`)          |
 | GET    | `/api/a2a/tasks/[id]`        | Načíta jednu úlohu                                                                                               |

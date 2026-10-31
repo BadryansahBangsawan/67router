@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## یکپارچهسازی A2A
-
-فایل `src/lib/skills/a2a.ts` توصیفگر مهارت A2A با نام `memory_aware_routing` و یک تابع کمکی `registerA2ASkill(registry)` را صادر میکند. مهارتهای سفارشی A2A در `src/lib/a2a/skills/` قرار میگیرند و از طریق `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) توزیع میشوند. برای چرخه کامل عمر وظیفه، به [A2A-SERVER.md](./A2A-SERVER.md) مراجعه کنید.
-
----
-
 ## افزودن یک مهارت داخلی جدید
 
 1. **مدیریتکننده را تعریف کنید** در `src/lib/skills/builtins.ts` (یا فایلی همسطح در `src/lib/skills/builtin/`). امضا: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -479,7 +473,6 @@ const config: SkillConfig = {
 ## همچنین ببینید
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — ثبت ابزار MCP و روشهای انتقال
-- [A2A-SERVER.md](./A2A-SERVER.md) — چرخهٔ حیات وظیفه در A2A و هدایت مهارت
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — مقدمهای برای کاربران
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — خط لولهٔ درخواست و نقشهٔ مؤلفهها
 - منبع: `src/lib/skills/`، `src/app/api/skills/`، `open-sse/mcp-server/tools/skillTools.ts`

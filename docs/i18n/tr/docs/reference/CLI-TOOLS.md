@@ -714,7 +714,6 @@ omniroute cache                        # Önbellek durumu
 omniroute cache clear                  # Anlamsal + imza önbelleklerini temizle
 
 omniroute mcp status | restart         # MCP sunucusu durumu / yeniden başlatma
-omniroute a2a status | card            # A2A sunucusu durumu / aracı kartı
 
 omniroute tunnel list | create | stop  # Tünelleri yönet (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Ortam değişkenlerini incele / ayarla (geçici)

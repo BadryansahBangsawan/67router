@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (autentisering kreves)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-verktøy (liste, hent, dekning)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-ferdighet: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A-ferdigheten `list-capabilities` returnerer hele katalogen med 45 ferdigheter
 }
 ```
 
-Se [A2A-SERVER.md](./A2A-SERVER.md) for protokolldetaljer.
-
 ---
 
 ## Katalog — 45 ferdighets-ID-er
@@ -189,7 +186,6 @@ Se [A2A-SERVER.md](./A2A-SERVER.md) for protokolldetaljer.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills-rammeverket (LLM-verktøyinjeksjon + markedsplass)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-verktøykatalog (`omniroute_agent_skills_*`-verktøy)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-protokoll (`list-capabilities`-ferdighet)
 - `src/lib/agentSkills/` — katalog, generator, parsere
 - `skills/` — genererte SKILL.md-filer (45 oppføringer)

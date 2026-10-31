@@ -119,4 +119,3 @@ test sa target environment.
 - [Mga protocol ng agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [Mga kontrata sa paglulunsad ng CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Mga tool ng CLI](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)

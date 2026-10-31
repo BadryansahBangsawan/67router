@@ -119,4 +119,3 @@ a célkörnyezetben.
 - [Ügynökprotokollok](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-indítási szerződések](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-eszközök](../reference/CLI-TOOLS.md)
-- [A2A-kiszolgáló](./A2A-SERVER.md)

@@ -143,8 +143,6 @@ src/
 | `app/api/` (من دون v1)                                                       | مسارات الإدارة/المشرف (نحو 60 دليلًا: المزوّدون، التركيبات، الإعدادات، mcp، a2a، التقييمات، الذاكرة، المهارات، خطافات الويب، الامتثال، المرونة، المراقبة، الأنفاق، أدوات CLI، إلخ.)                                                                                                                                                   |
 | `app/api/tools/agent-bridge/`                                                | واجهة AgentBridge REST API — ‏12 مسارًا (التحكم في الخادم، حالة الوكيل/DNS/التعيينات، التجاوز، الشهادة، upstream-CA). ‏LOCAL_ONLY + SPAWN_CAPABLE. راجع `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                          |
 | `app/api/tools/traffic-inspector/`                                           | واجهة Traffic Inspector ‏REST + WS API — أكثر من 16 مسارًا (الطلبات، الجلسات، المضيفون، أوضاع الالتقاط، التصدير، ws). ‏LOCAL_ONLY + SPAWN_CAPABLE. راجع `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                    |
-| `app/a2a/`                                                                   | نقطة دخول A2A ‏JSON-RPC 2.0 ‏(`POST /a2a`)                                                                                                                                                                                                                                                                                            |
-| `app/.well-known/agent.json/`                                                | بطاقة وكيل A2A (للاكتشاف)                                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | صفحات واجهة مستخدم لوحة المعلومات (أكثر من 50 قسمًا، ونحو 118 ملفًا باسم page.tsx: المزوّدون، التركيبات، الإعدادات، الذاكرة، المهارات، خطافات الويب، التقييمات، التدقيق، الدُفعات، ذاكرة التخزين المؤقت، التكاليف، الصحة، النظام، النشاط، إلخ.)                                                                                       |
 | `app/(dashboard)/dashboard/search-tools/`                                    | واجهة Search Tools Studio (3 علامات تبويب: البحث/الاستخراج/المقارنة + SearchConceptCard + ProviderCatalog) — راجع `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (الخطة 21): ‏`page.tsx` (هيكل من 3 علامات تبويب)، و`components/` ‏(MemoryConceptCard، MemoryEngineStatus، EmbeddingSourceSelector، EditMemoryModal، RetrievePreview، QdrantConfigCard، RerankConfigCard)، و`components/tabs/` ‏(MemoriesTab، PlaygroundTab، EngineTab)، و`hooks/` ‏(useEngineStatus، useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | المستند                                    | الغرض                                                                  |
 | ------------------------------------------ | ---------------------------------------------------------------------- |
 | `MCP-SERVER.md`                            | خادم MCP: ‏110 أدوات، و3 وسائل نقل، و33 نطاقًا، ونقاط نهاية REST       |
-| `A2A-SERVER.md`                            | ‏A2A v0.3: ‏JSON-RPC، و6 مهارات، وأدوات REST مساعدة، وبطاقة وكيل       |
 | `AGENT_PROTOCOLS_GUIDE.md`                 | دليل موحّد: ‏A2A مقابل ACP مقابل الوكلاء السحابيين                     |
 | `SKILLS.md`                                | إطار عمل المهارات (مدمجة + سوق + SkillsSH + بيئة معزولة)               |
 | `RADAR.md`                                 | طبقة كتالوج Radar للنماذج المجانية (`RADAR_ENABLED`، معطّلة افتراضيًا) |
@@ -567,7 +564,6 @@ open-sse/
 - **هل تضيف موفّرًا؟** اتبع `docs/architecture/ARCHITECTURE.md § Adding a New Provider` وراجِع أيضًا `docs/reference/PROVIDER_REFERENCE.md`.
 - **هل تضيف مسارًا؟** راجع `docs/architecture/ARCHITECTURE.md § Adding a New API Route` و`src/shared/validation/schemas.ts`.
 - **هل تضيف أداة MCP؟** راجع `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **هل تضيف مهارة A2A؟** راجع `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **هل تريد التشغيل محليًا؟** راجع `docs/guides/SETUP_GUIDE.md`.
 - **هل تريد النشر؟** راجع `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **هل تريد إصدار نسخة؟** راجع `docs/ops/RELEASE_CHECKLIST.md` (ومهارة Claude Code المسماة `/generate-release-cc`).

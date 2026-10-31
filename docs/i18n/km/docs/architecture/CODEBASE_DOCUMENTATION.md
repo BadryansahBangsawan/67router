@@ -100,8 +100,6 @@ App Router ផ្ដល់ទាំង UI ផ្ទាំងគ្រប់គ�
 | ផ្លូវ                                                                         | គោលបំណង                                          |
 | ----------------------------------------------------------------------------- | ------------------------------------------------ |
 | `api/`                                                                        | ផ្លូវ HTTP API ទាំងអស់ (សូមមើលការបែងចែកខាងក្រោម) |
-| `a2a/`                                                                        | ចំណុចចុង JSON-RPC 2.0 របស់ A2A (`POST /a2a`)     |
-| `.well-known/agent.json/`                                                     | ឯកសារស្វែងរក A2A Agent Card                      |
 | `(dashboard)/`                                                                | UI ផ្ទាំងគ្រប់គ្រង (ក្រុមផ្លូវ គ្មានបុព្វបទ URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | លំហូរផ្ទៀងផ្ទាត់អត្តសញ្ញាណ                       |
 | `landing/`                                                                    | ទំព័រទីផ្សារ/ទំព័រចុះចត                          |
@@ -772,13 +770,6 @@ Command ដែលប្រើជាទូទៅ៖
 4. បន្ថែមការធ្វើតេស្តក្រោម `open-sse/mcp-server/__tests__/`។
 5. ធ្វើបច្ចុប្បន្នភាព [MCP-SERVER.md](../frameworks/MCP-SERVER.md)។
 
-### បន្ថែមជំនាញ A2A ថ្មី
-
-សូមមើល [A2A-SERVER.md § ការបន្ថែមជំនាញថ្មី](../frameworks/A2A-SERVER.md)។ ជំនាញស្ថិតនៅក្នុង
-`src/lib/a2a/skills/` ហើយត្រូវបានចុះឈ្មោះតាមរយៈកម្មវិធីគ្រប់គ្រងកិច្ចការ A2A។
-
----
-
 ## 11. អនុសញ្ញា
 
 - **រចនាប័ទ្មកូដ**៖ ចូលបន្ទាត់ដោយ 2 space, ប្រើ double quotes, ទទឹង 100 តួអក្សរ, ប្រើ semicolons,
@@ -845,7 +836,6 @@ Command ដែលប្រើជាទូទៅ៖
   lockout។
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ការដាក់ពិន្ទុ និងយុទ្ធសាស្ត្រ Auto Combo។
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — កាតាឡុកឧបករណ៍ MCP ពេញលេញ + transports។
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — ជំនាញ និងការស្វែងរករបស់ពិធីការ A2A។
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — ការបង្ហាប់ RTK + Caveman។
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ការរួមបញ្ចូល CLI។
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (ប្រសិនបើមាន), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — គោលដៅដាក់ឱ្យដំណើរការ។

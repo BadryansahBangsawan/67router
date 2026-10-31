@@ -586,7 +586,7 @@ Radar is opt-in en gebruikt alleen GET. De OmniRoute-client uploadt geen prompts
 - **🔑 Routingbesturing per sleutel** — pin een API-sleutel aan één model of combo met `forcedModel`, en voeg modellen en combo's van een sleutel atomair toe of verwijder ze (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Fijnmazigere PII-controles** — selectie per type, tot 20 gevalideerde aangepaste maskeerpatronen en detectietellers per type; maskeren zelf blijft optioneel. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 talen** — dashboard, documentatiespiegels en CLI, waarbij `npm run i18n:add-locale` met één opdracht een taal overal toevoegt. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inkomende A2A-delegatie naar je agentvloot, Conductor-vaardigheden op de Agent Card, en een dashboardpaneel met Faro push-to-talk spraakchat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — inkomende A2A-delegatie naar je agentvloot, Conductor-vaardigheden op de Agent Card, en een dashboardpaneel met Faro push-to-talk spraakchat.
 - **🛂 Adaptieve toelating & overbelastingsbeveiliging** — zware chatverzoeken komen in de wachtrij in plaats van een 503 te krijgen, met atomaire RPM-rollende leases per verbinding. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonieke `/v1/models`-ordening** — één aaneengesloten, per provider gegroepeerd blok per provider (combo's eerst vastgepind), stabiel over elke catalogusbron. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Compressie-hardening** — standaard ingeschakelde inflatieguard, Caveman-packs voor DE / FR / JA + Chinees (wényán), RTK-filters voor Gradle & .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Stel OmniRoute beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integreer met Claude Desktop, Cursor of elke andere MCP-client</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Externe MCP — <b>110 tools</b>, 33 bereiken (handhaving is opt-in), volledig auditspoor</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streamingtransport voor MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Van agent naar agent, <b>JSON-RPC 2.0</b> + SSE, 6 vaardigheden</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-compatibel — chat, embeddings, afbeeldingen, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Stuur aanvraag- en quotagebeurtenissen naar Slack, Discord, Telegram of elke gewenste URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Externe CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Bedien een externe instantie met toegangstokens met een beperkt bereik</td></tr>
@@ -915,8 +914,6 @@ Stel OmniRoute beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** 
 # Geef Claude Code via MCP toegang tot de volledige OmniRoute-toolset:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-server](docs/frameworks/MCP-SERVER.md) · [A2A-server](docs/frameworks/A2A-SERVER.md) · [Agentprotocollen](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1378,6 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-server</a></b></td><td>110 MCP-tools, IDE-configuraties, Python/TS/Go-clients</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-serverhandleiding</a></b></td><td>MCP-installatie, transporten en naslagwerk voor tools</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-server</a></b></td><td>JSON-RPC 2.0-protocol, vaardigheden, streaming, taakbeheer</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-serverhandleiding</a></b></td><td>A2A-agentkaart, taken, vaardigheden en streaming</td></tr>
 </table>
 
 ### 📋 Project en kwaliteit

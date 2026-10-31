@@ -143,8 +143,6 @@ src/
 | `app/api/` (ਗੈਰ-v1)                                                          | ਪ੍ਰਬੰਧਨ/ਐਡਮਿਨ ਰੂਟ (~60 ਡਾਇਰੈਕਟਰੀਆਂ: ਪ੍ਰਦਾਤਾ, ਕੰਬੋ, ਸੈਟਿੰਗਾਂ, mcp, a2a, ਮੁਲਾਂਕਣ, ਮੈਮੋਰੀ, ਹੁਨਰ, ਵੈੱਬਹੁੱਕ, ਪਾਲਣਾ, ਲਚਕੀਲਾਪਣ, ਨਿਗਰਾਨੀ, ਟਨਲ, cli-tools ਆਦਿ)                                                                                                                                                               |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 ਰੂਟ (ਸਰਵਰ ਕੰਟਰੋਲ, ਏਜੰਟ ਸਥਿਤੀ/DNS/ਮੈਪਿੰਗ, ਬਾਈਪਾਸ, ਸਰਟੀਫਿਕੇਟ, upstream-CA)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/AGENTBRIDGE.md §7` ਵੇਖੋ।                                                                                                                                           |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ ਰੂਟ (ਬੇਨਤੀਆਂ, ਸੈਸ਼ਨ, ਹੋਸਟ, ਕੈਪਚਰ-ਮੋਡ, ਐਕਸਪੋਰਟ, ws)। LOCAL_ONLY + SPAWN_CAPABLE। `docs/frameworks/TRAFFIC_INSPECTOR.md §8` ਵੇਖੋ।                                                                                                                                               |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 ਐਂਟਰੀ ਪੁਆਇੰਟ (`POST /a2a`)                                                                                                                                                                                                                                                                         |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (ਖੋਜ)                                                                                                                                                                                                                                                                                                |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard UI ਪੰਨੇ (50+ ਭਾਗ, ~118 page.tsx ਫ਼ਾਈਲਾਂ: ਪ੍ਰਦਾਤਾ, ਕੰਬੋ, ਸੈਟਿੰਗਾਂ, ਮੈਮੋਰੀ, ਹੁਨਰ, ਵੈੱਬਹੁੱਕ, ਮੁਲਾਂਕਣ, ਆਡਿਟ, ਬੈਚ, ਕੈਸ਼, ਲਾਗਤਾਂ, ਸਿਹਤ, ਸਿਸਟਮ, ਸਰਗਰਮੀ ਆਦਿ)                                                                                                                                                      |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ਟੈਬਾਂ: ਖੋਜ/ਸਕ੍ਰੇਪ/ਤੁਲਨਾ + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` ਵੇਖੋ                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (ਯੋਜਨਾ 21): `page.tsx` (3-ਟੈਬ ਸ਼ੈੱਲ), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | ਦਸਤਾਵੇਜ਼                                     | ਉਦੇਸ਼                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------- |
 | `MCP-SERVER.md`                              | MCP ਸਰਵਰ: 110 ਟੂਲ, 3 ਟ੍ਰਾਂਸਪੋਰਟ, 33 ਸਕੋਪ, REST ਐਂਡਪੌਇੰਟ             |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, 6 ਸਕਿੱਲਾਂ, REST ਸਹਾਇਕ, ਏਜੰਟ ਕਾਰਡ                |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | ਏਕੀਕ੍ਰਿਤ ਗਾਈਡ: A2A ਬਨਾਮ ACP ਬਨਾਮ ਕਲਾਊਡ ਏਜੰਟ                         |
 | `SKILLS.md`                                  | ਸਕਿੱਲ ਫਰੇਮਵਰਕ (ਬਿਲਟ-ਇਨ + ਮਾਰਕੀਟਪਲੇਸ + SkillsSH + ਸੈਂਡਬਾਕਸ)          |
 | `RADAR.md`                                   | Radar ਮੁਫ਼ਤ-ਮਾਡਲ ਕੈਟਾਲਾਗ ਓਵਰਲੇ (`RADAR_ENABLED`, ਮੂਲ ਰੂਪ ਵਿੱਚ ਬੰਦ)  |
@@ -567,7 +564,6 @@ open-sse/
 - **ਕੋਈ ਪ੍ਰੋਵਾਈਡਰ ਜੋੜ ਰਹੇ ਹੋ?** `docs/architecture/ARCHITECTURE.md § ਨਵਾਂ ਪ੍ਰੋਵਾਈਡਰ ਜੋੜਨਾ` ਦੀ ਪਾਲਣਾ ਕਰੋ + `docs/reference/PROVIDER_REFERENCE.md` ਨਾਲ ਮੁੜ ਜਾਂਚ ਕਰੋ।
 - **ਕੋਈ ਰੂਟ ਜੋੜ ਰਹੇ ਹੋ?** `docs/architecture/ARCHITECTURE.md § ਨਵਾਂ API ਰੂਟ ਜੋੜਨਾ` + `src/shared/validation/schemas.ts`।
 - **ਕੋਈ MCP ਟੂਲ ਜੋੜ ਰਹੇ ਹੋ?** `docs/frameworks/MCP-SERVER.md § ਟੂਲ ਜੋੜਨਾ`।
-- **ਕੋਈ A2A ਸਕਿੱਲ ਜੋੜ ਰਹੇ ਹੋ?** `docs/frameworks/A2A-SERVER.md § ਨਵੀਂ ਸਕਿੱਲ ਜੋੜਨਾ`।
 - **ਲੋਕਲ ਤੌਰ ’ਤੇ ਚਲਾ ਰਹੇ ਹੋ?** `docs/guides/SETUP_GUIDE.md`।
 - **ਡਿਪਲੌਇ ਕਰ ਰਹੇ ਹੋ?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`।
 - **ਰਿਲੀਜ਼ ਕਰ ਰਹੇ ਹੋ?** `docs/ops/RELEASE_CHECKLIST.md` (ਅਤੇ `/generate-release-cc` Claude Code ਸਕਿੱਲ)।

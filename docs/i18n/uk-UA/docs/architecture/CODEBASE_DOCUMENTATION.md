@@ -100,8 +100,6 @@ App Router надає як інтерфейс панелі керування, �
 | Шлях                                                                          | Призначення                                                   |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `api/`                                                                        | Усі маршрути HTTP API (див. структуру нижче)                  |
-| `a2a/`                                                                        | Кінцева точка A2A JSON-RPC 2.0 (`POST /a2a`)                  |
-| `.well-known/agent.json/`                                                     | Документ виявлення Agent Card для A2A                         |
 | `(dashboard)/`                                                                | Інтерфейс панелі керування (група маршрутів без префікса URL) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Процеси автентифікації                                        |
 | `landing/`                                                                    | Маркетингова/цільова сторінка                                 |
@@ -773,13 +771,6 @@ bin/
 4. Додайте тести до `open-sse/mcp-server/__tests__/`.
 5. Оновіть [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Додавання нової навички A2A
-
-Див. [A2A-SERVER.md § Додавання нової навички](../frameworks/A2A-SERVER.md). Навички розміщуються в
-`src/lib/a2a/skills/` і реєструються через диспетчер завдань A2A.
-
----
-
 ## 11. Угоди
 
 - **Стиль коду**: відступ у 2 пробіли, подвійні лапки, ширина 100 символів, крапки з комою,
@@ -847,7 +838,6 @@ bin/
   очікування та блокування.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — оцінювання та стратегії Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — повний каталог інструментів MCP і транспортів.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — навички та виявлення протоколу A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — стиснення RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — інтеграції CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (якщо є), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — цільові середовища розгортання.

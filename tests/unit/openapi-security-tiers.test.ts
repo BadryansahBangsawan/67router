@@ -83,10 +83,7 @@ test("POST /api/openapi/try documents its bounded management proxy contract", ()
   ]);
   assert.equal(requestSchema?.properties?.method?.default, "GET");
   assert.equal(requestSchema?.properties?.path?.minLength, 1);
-  assert.equal(
-    requestSchema?.properties?.path?.pattern,
-    "^/(?:api/|v1/|v1beta/|a2a|\\.well-known/agent\\.json)"
-  );
+  assert.equal(requestSchema?.properties?.path?.pattern, "^/(?:api/|v1/|v1beta/)");
   assert.equal(requestSchema?.properties?.headers?.type, "object");
   assert.deepEqual(requestSchema?.properties?.headers?.additionalProperties, {
     type: "string",

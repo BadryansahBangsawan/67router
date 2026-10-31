@@ -390,34 +390,6 @@
       "description": "Jurnal de audit MCP (alias pentru audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listează abilitățile A2A disponibile din cardul agentului"
-    },
-    "invoke": {
-      "description": "Invocă o abilitate A2A și returnează ID-ul sarcinii",
-      "input": "Obiect JSON de intrare",
-      "input_file": "Calea către fișierul JSON de intrare",
-      "wait": "Așteaptă finalizarea sarcinii înainte de returnare",
-      "timeout": "Timp maxim de așteptare pentru finalizare, în ms (implicit: 60000)"
-    },
-    "tasks": {
-      "description": "Gestionează sarcinile A2A",
-      "list": {
-        "status": "Filtrează după stare",
-        "skill": "Filtrează după ID-ul abilității"
-      },
-      "watch": {
-        "description": "Verifică periodic starea sarcinii până la finalizare"
-      },
-      "stream": {
-        "description": "Transmite în flux evenimentele de execuție a sarcinii prin SSE"
-      },
-      "logs": {
-        "description": "Afișează mesajele și artefactele sarcinii"
-      }
-    }
-  },
   "policy": {
     "description": "Gestionează politicile de autorizare OmniRoute",
     "list": {

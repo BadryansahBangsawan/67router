@@ -573,5 +573,4 @@ Směrovací modul má striktní výkonnostní limity:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — popis jednotlivých adresářů
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — hodnocení podle 16 faktorů
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Zdrojový kód: `open-sse/` (více než 400 souborů, přibližně 143 tisíc řádků kódu)

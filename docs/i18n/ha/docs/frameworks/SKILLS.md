@@ -258,12 +258,6 @@ Duba [MCP-SERVER.md](./MCP-SERVER.md) don saitin sufuri da rabon izini.
 
 ---
 
-## Haɗewar A2A
-
-`src/lib/skills/a2a.ts` yana fitar da mai bayyana A2A skill na `memory_aware_routing` da kuma mataimakin `registerA2ASkill(registry)`. A2A skills na musamman suna cikin `src/lib/a2a/skills/` kuma ana tura su ta hanyar `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Duba [A2A-SERVER.md](./A2A-SERVER.md) don cikakken tsarin rayuwar aiki.
-
----
-
 ## Ƙara Sabon Built-in Skill
 
 1. **Ayyaɗa handler** a cikin `src/lib/skills/builtins.ts` (ko wani fayil makamancinsa ƙarƙashin `src/lib/skills/builtin/`). Sa hannu: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Duba [Plugin SDK & Haɗa Skills](./PLUGIN_SDK.md) don yadda ake ƙara custom ski
 ## Duba Kuma
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — rajistar kayan aikin MCP da hanyoyin sufuri
-- [A2A-SERVER.md](./A2A-SERVER.md) — zagayowar rayuwar aikin A2A da tura ƙwarewa
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — gabatarwa ga masu amfani
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — bututun sarrafa buƙata da taswirar sassa
 - Tushe: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

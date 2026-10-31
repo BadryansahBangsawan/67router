@@ -76,4 +76,3 @@ try {
 - [에이전트 프로토콜](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 실행 계약](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI 도구](../reference/CLI-TOOLS.md)
-- [A2A 서버](./A2A-SERVER.md)

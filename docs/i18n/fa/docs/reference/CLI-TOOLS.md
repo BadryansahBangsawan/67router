@@ -714,7 +714,6 @@ omniroute cache                        # وضعیت حافظه نهان
 omniroute cache clear                  # پاککردن حافظههای نهان معنایی + امضا
 
 omniroute mcp status | restart         # وضعیت / راهاندازی مجدد سرور MCP
-omniroute a2a status | card            # وضعیت سرور A2A / کارت عامل
 
 omniroute tunnel list | create | stop  # مدیریت تونلها (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # بررسی / تنظیم متغیرهای محیطی (موقت)

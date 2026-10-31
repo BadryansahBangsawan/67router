@@ -1874,48 +1874,10 @@ OmniRoute levereras med en inbäddad Model Context Protocol-server med 3 transpo
 
 OmniRoute tillhandahåller en A2A-slutpunkt (Agent-to-Agent) för JSON-RPC 2.0 samt ett REST-omslag för inspektion och användning i kontrollpaneler.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valfritt om inte OMNIROUTE_API_KEY har angetts
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metoder som stöds (samtliga styrs av `settings.a2aEnabled`):
-
-| Metod            | Beskrivning                                                            |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Synkron körning av färdighet; returnerar `{task, artifacts, metadata}` |
-| `message/stream` | Strömmande SSE-körning av samma uppsättning färdigheter                |
-| `tasks/get`      | Hämtar en uppgift via `taskId`                                         |
-| `tasks/cancel`   | Avbryter en uppgift via `taskId`                                       |
-
-Inbyggda färdigheter: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkort
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnerar det offentliga A2A-agentkortet (namn, beskrivning, funktioner, färdighetskatalog och autentiseringsschema) — cachelagrat offentligt i 1 timme. Ingen autentisering krävs.
-
 ### REST-hjälpfunktioner
 
 | Metod | Sökväg                       | Beskrivning                                                                                                           |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A-status + uppgiftsstatistik + sammanfattning av cachelagrat agentkort                                              |
 | GET   | `/api/a2a/tasks`             | Listar uppgifter — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Inte implementerad som REST-hjälpfunktion — skapa via JSON-RPC `message/send`)                                       |
 | GET   | `/api/a2a/tasks/[id]`        | Hämtar en uppgift                                                                                                     |

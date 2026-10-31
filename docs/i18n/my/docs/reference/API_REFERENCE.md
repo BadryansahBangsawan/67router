@@ -1809,48 +1809,10 @@ OmniRoute တွင် transport 3 မျိုး (stdio, SSE, streamable-http)
 
 OmniRoute သည် A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint တစ်ခုနှင့် စစ်ဆေးခြင်း/dashboard အသုံးပြုမှုအတွက် REST wrapper တစ်ခုကို ပံ့ပိုးပေးသည်။
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY သတ်မှတ်ထားခြင်းမရှိပါက ထည့်သွင်းရန်မလိုပါ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ပံ့ပိုးထားသော method များ (အားလုံးကို `settings.a2aEnabled` ဖြင့် ထိန်းချုပ်ထားသည်)-
-
-| Method           | ဖော်ပြချက်                                                                     |
-| ---------------- | ------------------------------------------------------------------------------ |
-| `message/send`   | တစ်ပြိုင်တည်း skill လုပ်ဆောင်မှု၊ `{task, artifacts, metadata}` ကို ပြန်ပေးသည် |
-| `message/stream` | အလားတူ skill အစုကို Streaming SSE ဖြင့် လုပ်ဆောင်မှု                           |
-| `tasks/get`      | `taskId` ဖြင့် task တစ်ခုကို ရယူသည်                                            |
-| `tasks/cancel`   | `taskId` ဖြင့် task တစ်ခုကို ပယ်ဖျက်သည်                                        |
-
-ပါဝင်ပြီးသား skill များ- `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`။
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-အများသုံး A2A agent card (အမည်၊ ဖော်ပြချက်၊ လုပ်ဆောင်နိုင်စွမ်းများ၊ skill catalog၊ auth scheme) ကို ပြန်ပေးသည် — အများသုံးအဖြစ် 1h ကြာ cache လုပ်ထားသည်။ auth မလိုအပ်ပါ။
-
 ### REST helper များ
 
 | Method | Path                         | ဖော်ပြချက်                                                                                                                       |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A ဖွင့်ထားမှု + task စာရင်းအင်းများ + cache လုပ်ထားသော agent card အကျဉ်းချုပ်                                                  |
 | GET    | `/api/a2a/tasks`             | task များကို စာရင်းပြုစုသည် — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST helper အဖြစ် အကောင်အထည်မဖော်ရသေးပါ — JSON-RPC `message/send` မှတစ်ဆင့် ဖန်တီးပါ)                                           |
 | GET    | `/api/a2a/tasks/[id]`        | task တစ်ခုကို ရယူသည်                                                                                                             |

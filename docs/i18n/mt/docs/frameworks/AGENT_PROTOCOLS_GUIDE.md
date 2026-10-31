@@ -20,38 +20,6 @@ It-tlieta huma indipendenti — agħżel kwalunkwe subsett.
 
 ## Siġra tad-Deċiżjonijiet
 
-## 1. A2A — Minn Aġent għal Aġent
-
-**Speċifikazzjoni:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint ta' OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kard tal-Aġent:** `GET /.well-known/agent.json`
-
-### Meta għandek tużah
-
-- Meta tkun qed tibni sistema b'diversi aġenti fejn OmniRoute ikun wieħed mill-pari
-- Meta tkun qed tesponi l-intelliġenza tar-routing ta' OmniRoute (routing intelliġenti, ġestjoni tal-kwoti, eċċ.) lil aġenti f'oqfsa bħal Google ADK jew f'networks ġeneriċi ta' aġenti
-- Meta tkun qed tqiegħed OmniRoute wara interfaċċa standard ta' skoperta + invokazzjoni
-
-### Metodi
-
-- `message/send` — issottometti messaġġ u rċievi tweġiba sinkronika
-- `message/stream` — issottometti u rċievi avvenimenti tal-progress trażmessi permezz ta' SSE
-- `tasks/get` — aqra kompitu skont l-ID
-- `tasks/cancel` — ikkanċella kompitu li jkun qed jitħaddem
-
-### Ħiliet integrati (6)
-
-- `smart-routing` — għaddi prompt mill-aħjar kombinazzjoni
-- `quota-management` — irrapporta l-istat tal-kwota għal kull fornitur
-- `provider-discovery` — elenka l-fornituri installati flimkien mal-kapaċitajiet tagħhom
-- `cost-analysis` — stima l-ispiża ta' talba/konverżazzjoni
-- `health-report` — agħmel aggregazzjoni tal-istat tal-breaker/cooldown/lockout għal kull fornitur
-- `list-capabilities` — elenka l-ħiliet disponibbli tal-aġent u l-metadata
-
-### Analiżi fil-fond
-
-Ara [A2A-SERVER.md](./A2A-SERVER.md) għad-dettalji tat-trasport, l-istruttura tal-kard tal-aġent, il-konfigurazzjoni tat-TTL tal-kompiti, u l-mudell biex iżżid ħiliet ġodda.
-
 ## 2. ACP — Reġistru tal-Aġenti CLI
 
 **Endpoint ta’ OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Struttura tal-body għal POST (`customAgentBodySchema` f’`src/app/api/acp/agen
 
 ## Eżempji ta' Integrazzjoni
 
-### Skopri l-kapaċitajiet A2A ta' OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Jirritorna l-Kard tal-Aġent bis-6 ħiliet kollha, it-trasporti u l-verżjoni.
-
-### Sejjaħ lil OmniRoute bħala aġent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Elenka l-aġenti CLI installati permezz ta' ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Ara Wkoll
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Analiżi fil-fond ta’ A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrazzjonijiet CLI esterni (juża ACP)
 - [SKILLS.md](./SKILLS.md) — Qafas tal-ħiliet (differenti mill-ħiliet A2A — sandbox ta’ eżekuzzjoni lokali)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenza tal-endpoint

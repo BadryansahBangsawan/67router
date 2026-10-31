@@ -595,7 +595,6 @@ adgangskrav og det aktuelle katalog på **[radar.omniroute.online/planos](https:
 - **🔑 Routingstyring pr. nøgle** — fastlås en API-nøgle til én model eller kombo med `forcedModel`, og tilføj eller fjern en nøgles modeller og komboer atomisk (`/api/keys/{id}/access`). → [API-reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Finere PII-kontroller** — pr.-type-udvælgelse, op til 20 validerede brugerdefinerede maskeringsmønstre og pr.-type-registreringstællere; selve maskeringen forbliver tilvalg. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 sprog** — dashboard, dokumentationsspejle og CLI, hvor `npm run i18n:add-locale` tilføjer et sprog overalt med én kommando. → [i18n-guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — indgående A2A-delegering til din agentflåde, Conductor-færdigheder på Agent Card og et dashboardpanel med Faro push-to-talk-stemmechat. → [A2A-server](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptiv adgang og overbelastningsbeskyttelse** — tunge chat-forespørgsler sættes i kø i stedet for at svare 503, med atomiske rullende RPM-leases pr. forbindelse. → [Robusthedsguide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonisk `/v1/models`-sortering** — én sammenhængende udbydergrupperet blok pr. udbyder (komboer fastlåst først), stabil på tværs af alle katalogkilder. → [API-reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Komprimeringshærdning** — inflationsbeskyttelse slået til som standard, Caveman-pakker til DE / FR / JA + kinesisk (wényán), RTK-filtre til Gradle & .NET. → [Komprimering](docs/compression/COMPRESSION_ENGINES.md)
@@ -914,7 +913,6 @@ Gør OmniRoute tilgængelig via **MCP**, **A2A**, en **REST API**, **webhooks** 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integrer med Claude Desktop, Cursor eller enhver MCP-klient</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Fjern-MCP — <b>110 værktøjer</b>, 33 omfang (håndhævelse skal aktivt tilvælges), komplet revisionsspor</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streamingtransport til MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-til-agent, <b>JSON-RPC 2.0</b> + SSE, 6 færdigheder</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-kompatibel — chat, embeddings, billeder, lyd og OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Send hændelser for anmodninger / kvoter til Slack, Discord, Telegram eller en vilkårlig URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Fjern-CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Styr en fjerninstans med adgangstokens med afgrænset omfang</td></tr>
@@ -924,8 +922,6 @@ Gør OmniRoute tilgængelig via **MCP**, **A2A**, en **REST API**, **webhooks** 
 # Giv Claude Code adgang til hele OmniRoute-værktøjssættet via MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-server](docs/frameworks/MCP-SERVER.md) · [A2A-server](docs/frameworks/A2A-SERVER.md) · [Agentprotokoller](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1391,7 +1387,6 @@ Kanoniske målinger pr. 2026-10-18: **1.976 unikke videoer** · **20.220.289 ken
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-server</a></b></td><td>110 MCP-værktøjer, IDE-konfigurationer, Python-/TS-/Go-klienter</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Vejledning til MCP-serveren</a></b></td><td>MCP-installation, transporter og værktøjsreference</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-server</a></b></td><td>JSON-RPC 2.0-protokol, færdigheder, streaming, opgavestyring</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Vejledning til A2A-serveren</a></b></td><td>A2A-agentkort, opgaver, færdigheder og streaming</td></tr>
 </table>
 
 ### 📋 Projekt og kvalitet

@@ -98,8 +98,6 @@ App Router මඟින් උපකරණ පුවරු UI එක සහ ප�
 | මාර්ගය                                                                        | අරමුණ                                           |
 | ----------------------------------------------------------------------------- | ----------------------------------------------- |
 | `api/`                                                                        | සියලුම HTTP API මාර්ග (පහත විස්තරය බලන්න)       |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 අන්ත ලක්ෂ්යය (`POST /a2a`)     |
-| `.well-known/agent.json/`                                                     | A2A Agent Card සොයාගැනීමේ ලේඛනය                 |
 | `(dashboard)/`                                                                | උපකරණ පුවරු UI (මාර්ග සමූහය, URL උපසර්ගයක් නැත) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | සත්යාපන ප්රවාහ                                  |
 | `landing/`                                                                    | අලෙවිකරණ/පිවිසුම් පිටුව                         |
@@ -770,13 +768,6 @@ bin/
 4. `open-sse/mcp-server/__tests__/` යටතේ පරීක්ෂණ එක් කරන්න.
 5. [MCP-SERVER.md](../frameworks/MCP-SERVER.md) යාවත්කාලීන කරන්න.
 
-### නව A2A skill එකක් එක් කිරීම
-
-[A2A-SERVER.md § නව Skill එකක් එක් කිරීම](../frameworks/A2A-SERVER.md) බලන්න. Skills
-`src/lib/a2a/skills/` තුළ පවතින අතර A2A task manager හරහා ලියාපදිංචි කෙරේ.
-
----
-
 ## 11. සම්මුතීන්
 
 - **කේත ශෛලිය**: හිස්තැන් 2ක indent කිරීම, ද්විත්ව උද්ධෘත ලකුණු, අක්ෂර 100ක පළල, semicolons,
@@ -843,7 +834,6 @@ bin/
   lockout පිළිබඳ ගැඹුරු විග්රහය.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo ලකුණුකරණය සහ උපායමාර්ග.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — සම්පූර්ණ MCP මෙවලම් නාමාවලිය + ප්රවාහන ක්රම.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A ප්රොටෝකෝල කුසලතා සහ සොයාගැනීම.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman සම්පීඩනය.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI ඒකාබද්ධ කිරීම්.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (තිබේ නම්), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — යෙදවුම් ඉලක්ක.

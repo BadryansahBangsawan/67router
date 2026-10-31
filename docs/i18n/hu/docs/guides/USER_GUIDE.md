@@ -1239,8 +1239,6 @@ Használja a `http://localhost:20128/api/mcp/sse` SSE URL-t és az **Irányító
 
 ### Hatókörök
 
-Az MCP jelenleg 32 elnevezett hatókört definiál. Minden Bearer-kulcs meghatározott hatókörökre korlátozható — a hiteles hatókör- és eszközleltárért tekintse meg az [MCP-SERVER.md](../frameworks/MCP-SERVER.md), a JSON-RPC-sémáért pedig az [A2A-SERVER.md](../frameworks/A2A-SERVER.md) dokumentumot.
-
 ---
 
 ## 🧠 Készségrendszer
@@ -1249,7 +1247,6 @@ Az OmniRoute egy bővíthető **készség-keretrendszert** (`src/lib/skills/`) b
 
 - **Piactér felhasználói felület** — Készségek böngészése és telepítése a **Vezérlőpult → Készségek** menüpontban
 - **Kulcsonkénti hatókörök** — Korlátozhatja, hogy mely API-kulcsok mely készségeket hívhatják meg
-- **Egyéni készségek** — Helyezzen el egy TypeScript-fájlt a `src/lib/a2a/skills/` könyvtárban, regisztrálja, és azonnal meghívhatóvá válik A2A-n keresztül
 
 A teljes referencia: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1334,7 +1331,6 @@ omniroute restore [<timestamp>]    # Visszaállítás pillanatképből
 omniroute health                   # Részletes állapot (megszakítók, gyorsítótár, memória)
 omniroute quota                    # Szolgáltatói kvóták felhasználása
 omniroute mcp status               # MCP-kiszolgáló állapota
-omniroute a2a status               # A2A-kiszolgáló állapota
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-alagutak
 omniroute reset-password           # Rendszergazdai jelszó visszaállítása
 omniroute --mcp                    # MCP-kiszolgáló indítása szabványos I/O-n keresztül

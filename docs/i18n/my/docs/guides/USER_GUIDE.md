@@ -1234,8 +1234,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` နှင့် **Dashboard → API
 
 ### Scope များ
 
-လက်ရှိတွင် MCP က အမည်သတ်မှတ်ထားသော scope 32 ခုကို သတ်မှတ်ပေးထားသည်။ Bearer key တစ်ခုချင်းစီကို သီးခြား scope များအတွက်သာ အသုံးပြုနိုင်ရန် ကန့်သတ်နိုင်သည် — တရားဝင်သတ်မှတ်ထားသော scope နှင့် tool စာရင်းအတွက် [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ကို ကြည့်ရှုပြီး JSON-RPC schema အတွက် [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ကို ကြည့်ရှုပါ။
-
 ---
 
 ## 🧠 Skills စနစ်
@@ -1244,7 +1242,6 @@ OmniRoute သည် agent များနှင့် A2A endpoint တို့�
 
 - **Marketplace UI** — **Dashboard → Skills** မှ skill များကို ရှာဖွေကြည့်ရှုပြီး ထည့်သွင်းပါ
 - **Key တစ်ခုချင်းအလိုက် scope များ** — မည်သည့် API key များက မည်သည့် skill များကို ခေါ်ယူအသုံးပြုနိုင်သည်ကို ကန့်သတ်ပါ
-- **စိတ်ကြိုက် skill များ** — TypeScript ဖိုင်တစ်ခုကို `src/lib/a2a/skills/` ထဲသို့ ထည့်၍ register လုပ်လိုက်သည်နှင့် A2A မှတစ်ဆင့် ချက်ချင်းခေါ်ယူအသုံးပြုနိုင်မည်ဖြစ်သည်
 
 အပြည့်အစုံကို [SKILLS.md](../frameworks/SKILLS.md) တွင် ကြည့်ပါ။
 
@@ -1329,7 +1326,6 @@ omniroute restore [<timestamp>]    # snapshot တစ်ခုမှ ပြန်
 omniroute health                   # အသေးစိတ်စနစ်ကျန်းမာရေး (breaker များ၊ cache၊ memory)
 omniroute quota                    # provider quota အသုံးပြုမှု
 omniroute mcp status               # MCP server အခြေအနေ
-omniroute a2a status               # A2A server အခြေအနေ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnel များ
 omniroute reset-password           # admin စကားဝှက်ကို ပြန်လည်သတ်မှတ်ရန်
 omniroute --mcp                    # stdio မှတစ်ဆင့် MCP server ကို စတင်ရန်

@@ -1836,48 +1836,10 @@ OmniRoute, 3 ട്രാൻസ്പോർട്ടുകളും (stdio, SSE,
 
 പരിശോധനയ്ക്കും ഡാഷ്ബോർഡ് ഉപയോഗത്തിനുമായി ഒരു REST റാപ്പറിനൊപ്പം A2A (Agent-to-Agent) JSON-RPC 2.0 എൻഡ്പോയിന്റ് OmniRoute ലഭ്യമാക്കുന്നു.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY സജ്ജീകരിച്ചിട്ടില്ലെങ്കിൽ ഐച്ഛികം
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-പിന്തുണയ്ക്കുന്ന രീതികൾ (എല്ലാം `settings.a2aEnabled` മുഖേന നിയന്ത്രിക്കപ്പെടുന്നു):
-
-| രീതി             | വിവരണം                                                              |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | സമകാലിക സ്കിൽ നിർവഹണം; `{task, artifacts, metadata}` മടക്കിനൽകുന്നു |
-| `message/stream` | അതേ സ്കിൽ സെറ്റിന്റെ സ്ട്രീമിംഗ് SSE നിർവഹണം                        |
-| `tasks/get`      | `taskId` ഉപയോഗിച്ച് ഒരു ടാസ്ക് ലഭ്യമാക്കുന്നു                       |
-| `tasks/cancel`   | `taskId` ഉപയോഗിച്ച് ഒരു ടാസ്ക് റദ്ദാക്കുന്നു                        |
-
-ബിൽറ്റ്-ഇൻ സ്കില്ലുകൾ: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### ഏജന്റ് കാർഡ്
-
-```bash
-GET /.well-known/agent.json
-```
-
-പൊതുവായ A2A ഏജന്റ് കാർഡ് (പേര്, വിവരണം, ശേഷികൾ, സ്കിൽ കാറ്റലോഗ്, ഓതന്റിക്കേഷൻ സ്കീം) മടക്കിനൽകുന്നു — പൊതുവായി 1h നേരത്തേക്ക് കാഷ് ചെയ്യുന്നു. ഓതന്റിക്കേഷൻ ആവശ്യമില്ല.
-
 ### REST സഹായികൾ
 
 | രീതി | പാത്ത്                       | വിവരണം                                                                                                                             |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A പ്രവർത്തനക്ഷമമാണോ എന്ന വിവരം + ടാസ്ക് സ്ഥിതിവിവരക്കണക്കുകൾ + കാഷ് ചെയ്ത ഏജന്റ് കാർഡിന്റെ സംഗ്രഹം                               |
 | GET  | `/api/a2a/tasks`             | ടാസ്കുകൾ പട്ടികപ്പെടുത്തുന്നു — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST സഹായിയായി നടപ്പാക്കിയിട്ടില്ല — JSON-RPC `message/send` മുഖേന സൃഷ്ടിക്കുക)                                                   |
 | GET  | `/api/a2a/tasks/[id]`        | ഒരു ടാസ്ക് വീണ്ടെടുക്കുന്നു                                                                                                        |

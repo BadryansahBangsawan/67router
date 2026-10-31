@@ -20,38 +20,6 @@ De drie zijn onafhankelijk van elkaar — kies een willekeurige combinatie.
 
 ## Beslisboom
 
-## 1. A2A — Agent-naar-agent
-
-**Specificatie:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agentkaart:** `GET /.well-known/agent.json`
-
-### Wanneer te gebruiken
-
-- Bij het bouwen van een multi-agentsysteem waarin OmniRoute een van de deelnemers is
-- Om de routeringsintelligentie van OmniRoute (`smart-routing`, `quota-management` enz.) beschikbaar te stellen aan agents in frameworks zoals Google ADK of generieke agentnetwerken
-- Om OmniRoute beschikbaar te stellen via een standaardinterface voor detectie en aanroepen
-
-### Methoden
-
-- `message/send` — een bericht indienen en een synchrone respons ontvangen
-- `message/stream` — een bericht indienen en via SSE gestreamde voortgangsgebeurtenissen ontvangen
-- `tasks/get` — een taak op basis van ID ophalen
-- `tasks/cancel` — een actieve taak annuleren
-
-### Ingebouwde vaardigheden (6)
-
-- `smart-routing` — een prompt via de optimale combinatie routeren
-- `quota-management` — de quotastatus per provider rapporteren
-- `provider-discovery` — geïnstalleerde providers met hun mogelijkheden weergeven
-- `cost-analysis` — de kosten van een verzoek/gesprek schatten
-- `health-report` — de status van stroomonderbrekers, afkoelperioden en blokkeringen per provider aggregeren
-- `list-capabilities` — de beschikbare vaardigheden en metadata van de agent opsommen
-
-### Meer informatie
-
-Zie [A2A-SERVER.md](./A2A-SERVER.md) voor transportdetails, de structuur van de agentkaart, configuratie van de TTL van taken en de sjabloon voor het toevoegen van nieuwe vaardigheden.
-
 ## 2. ACP — register van CLI-agents
 
 **OmniRoute-endpoint:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Structuur van de body voor POST (`customAgentBodySchema` in `src/app/api/acp/age
 
 ## Integratievoorbeelden
 
-### Ontdek de A2A-mogelijkheden van OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Retourneert de Agent Card met alle 6 vaardigheden, transportmethoden en de versie.
-
-### Roep OmniRoute aan als een A2A-agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Geef geïnstalleerde CLI-agents weer via ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Zie ook
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — uitgebreide uitleg over A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — externe CLI-integraties (gebruikt ACP)
 - [SKILLS.md](./SKILLS.md) — skills-framework (verschilt van A2A-skills — lokale uitvoeringssandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpointreferentie

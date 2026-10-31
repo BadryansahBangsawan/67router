@@ -143,8 +143,6 @@ src/
 | `app/api/`（非 v1）                                                          | 管理／系統管理員路由（約 60 個目錄：提供者、組合、設定、mcp、a2a、評估、記憶、技能、webhook、合規、韌性、監控、通道、CLI 工具等）                                                                                                                                                                                      |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 個路由（伺服器控制、代理程式狀態／DNS／對應、繞過、憑證、上游 CA）。LOCAL_ONLY + SPAWN_CAPABLE。請參閱 `docs/frameworks/AGENTBRIDGE.md §7`。                                                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16 個以上的路由（請求、工作階段、主機、擷取模式、匯出、ws）。LOCAL_ONLY + SPAWN_CAPABLE。請參閱 `docs/frameworks/TRAFFIC_INSPECTOR.md §8`。                                                                                                                                          |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 進入點（`POST /a2a`）                                                                                                                                                                                                                                                                                 |
-| `app/.well-known/agent.json/`                                                | A2A 代理程式卡片（探索）                                                                                                                                                                                                                                                                                               |
 | `app/(dashboard)/dashboard/`                                                 | 儀表板 UI 頁面（50 多個區段、約 118 個 page.tsx 檔案：提供者、組合、設定、記憶、技能、webhook、評估、稽核、批次、快取、成本、健康狀態、系統、活動等）                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI（3 個分頁：搜尋／擷取／比較 + SearchConceptCard + ProviderCatalog）— 請參閱 `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio（計畫 21）：`page.tsx`（3 分頁外殼）、`components/`（MemoryConceptCard、MemoryEngineStatus、EmbeddingSourceSelector、EditMemoryModal、RetrievePreview、QdrantConfigCard、RerankConfigCard）、`components/tabs/`（MemoriesTab、PlaygroundTab、EngineTab）、`hooks/`（useEngineStatus、useMemorySettings） |
@@ -398,7 +396,6 @@ open-sse/
 | 文件                                         | 用途                                                       |
 | -------------------------------------------- | ---------------------------------------------------------- |
 | `MCP-SERVER.md`                              | MCP 伺服器：110 個工具、3 種傳輸方式、33 個範圍、REST 端點 |
-| `A2A-SERVER.md`                              | A2A v0.3：JSON-RPC、6 項技能、REST 輔助工具、代理卡片      |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | 統一指南：A2A、ACP 與 Cloud Agents 的比較                  |
 | `SKILLS.md`                                  | 技能框架（內建 + 市集 + SkillsSH + 沙箱）                  |
 | `RADAR.md`                                   | Radar 免費模型目錄覆蓋層（`RADAR_ENABLED`，預設關閉）      |
@@ -567,7 +564,6 @@ open-sse/
 - **新增 provider？** 遵循 `docs/architecture/ARCHITECTURE.md § Adding a New Provider`，並交叉核對 `docs/reference/PROVIDER_REFERENCE.md`。
 - **新增路由？** 請參閱 `docs/architecture/ARCHITECTURE.md § Adding a New API Route` 與 `src/shared/validation/schemas.ts`。
 - **新增 MCP 工具？** 請參閱 `docs/frameworks/MCP-SERVER.md § Adding a Tool`。
-- **新增 A2A skill？** 請參閱 `docs/frameworks/A2A-SERVER.md § Adding a New Skill`。
 - **在本機執行？** 請參閱 `docs/guides/SETUP_GUIDE.md`。
 - **部署？** 請參閱 `docs/guides/DOCKER_GUIDE.md`／`docs/ops/VM_DEPLOYMENT_GUIDE.md`／`docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`。
 - **發布版本？** 請參閱 `docs/ops/RELEASE_CHECKLIST.md`（以及 `/generate-release-cc` Claude Code skill）。

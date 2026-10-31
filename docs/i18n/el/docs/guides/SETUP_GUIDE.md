@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Πλήρης τεκμηρίωση MCP:** [README διακομιστή MCP](../../open-sse/mcp-server/README.md) — 110 εργαλεία, διαμορφώσεις IDE, πελάτες Python/TS/Go.
 
-### Ρύθμιση A2A (Πρωτόκολλο μεταξύ πρακτόρων)
-
-Επαληθεύστε την κάρτα πράκτορα:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Στείλτε μια εργασία:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Πλήρης τεκμηρίωση A2A:** [README διακομιστή A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, δεξιότητες, ροή δεδομένων, κύκλος ζωής εργασιών.
-
----
-
 ## Ρύθμιση χρονικών ορίων
 
 ### Βασικά χρονικά όρια

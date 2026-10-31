@@ -573,5 +573,4 @@ Usmerjevalni mehanizem ima strogo določene zmogljivostne omejitve:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — pregled po imenikih
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-faktorsko ocenjevanje
 - [MCP-SERVER.md](./MCP-SERVER.md) — strežnik MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — strežnik A2A
 - Izvorna koda: `open-sse/` (več kot 400 datotek, ~143K vrstic kode)

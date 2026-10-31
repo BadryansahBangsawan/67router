@@ -20,38 +20,6 @@ OmniRoute سه رابط متفاوت مرتبط با عاملها ارائه م�
 
 ## درخت تصمیم
 
-## 1. A2A — عاملبهعامل
-
-**مشخصات:** [A2A v0.3](https://a2a-protocol.org)
-**نقطه پایانی OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**کارت عامل:** `GET /.well-known/agent.json`
-
-### چه زمانی استفاده شود
-
-- ساخت یک سامانه چندعاملی که OmniRoute یکی از عاملهای همتای آن است
-- ارائه هوشمندی مسیریابی OmniRoute (مسیریابی هوشمند، مدیریت سهمیه و غیره) به عاملهای موجود در چارچوبهایی مانند Google ADK یا شبکههای عمومی عاملها
-- قراردادن OmniRoute پشت یک رابط استاندارد برای کشف و فراخوانی
-
-### متدها
-
-- `message/send` — ارسال یک پیام و دریافت پاسخ همگام
-- `message/stream` — ارسال پیام و دریافت رویدادهای پیشرفت بهصورت جریان SSE
-- `tasks/get` — خواندن وظیفه براساس شناسه
-- `tasks/cancel` — لغو یک وظیفه در حال اجرا
-
-### مهارتهای داخلی (6)
-
-- `smart-routing` — مسیریابی یک پرامپت از طریق ترکیب بهینه
-- `quota-management` — گزارش وضعیت سهمیه هر ارائهدهنده
-- `provider-discovery` — فهرستکردن ارائهدهندگان نصبشده همراه با قابلیتهای آنها
-- `cost-analysis` — برآورد هزینه یک درخواست/مکالمه
-- `health-report` — تجمیع وضعیت قطعکننده مدار/دوره انتظار/قفلشدگی برای هر ارائهدهنده
-- `list-capabilities` — فهرستکردن مهارتها و فرادادههای موجود عامل
-
-### بررسی عمیق
-
-برای جزئیات انتقال، ساختار کارت عامل، پیکربندی TTL وظایف و الگوی افزودن مهارتهای جدید، به [A2A-SERVER.md](./A2A-SERVER.md) مراجعه کنید.
-
 ## 2. ACP — رجیستری عاملهای CLI
 
 **نقطه پایانی OmniRoute:** `GET /api/acp/agents`
@@ -111,30 +79,6 @@ ACP، **فهرست محلی عاملهای CLI** در OmniRoute است. این �
 
 ## نمونههای یکپارچهسازی
 
-### کشف قابلیتهای A2A در OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-کارت عامل را همراه با هر ۶ مهارت، انتقالها و نسخه برمیگرداند.
-
-### فراخوانی OmniRoute بهعنوان یک عامل A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### فهرستکردن عاملهای CLI نصبشده از طریق ACP
 
 ```bash
@@ -188,7 +132,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## همچنین ببینید
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — بررسی عمیق A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — یکپارچهسازیهای CLI خارجی (با استفاده از ACP)
 - [SKILLS.md](./SKILLS.md) — چارچوب مهارتها (متفاوت از مهارتهای A2A — محیط اجرای ایزوله محلی)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — مرجع نقطه پایانی

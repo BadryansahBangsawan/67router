@@ -1241,8 +1241,6 @@ Kasuta SSE URL-i `http://localhost:20128/api/mcp/sse` ja **Dashboard → API Key
 
 ### Ulatused (Scopes)
 
-MCP defineerib praegu 32 nimelist ulatust (scope). Igat Bearer-võtit saab piirata konkreetsetele ulatustele — vaata autoriteetset ulatuste ja tööriistade loetelu dokumendist [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ning JSON-RPC skeemi dokumendist [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Oskuste süsteem
@@ -1251,7 +1249,6 @@ OmniRoute pakub laiendatavat **oskuste raamistikku** (`src/lib/skills/`), mis v�
 
 - **Turuplatsi kasutajaliides** — Sirvi ja installi oskusi jaotisest **Dashboard → Skills**
 - **Võtmepõhised õigusulatused** — Piira, millised API-võtmed saavad milliseid oskusi käivitada
-- **Kohandatud oskused** — Lisa TypeScript-fail kausta `src/lib/a2a/skills/`, registreeri see, ja see muutub kohe A2A kaudu käivitatavaks
 
 Täielik viide: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1336,7 +1333,6 @@ omniroute restore [<timestamp>]    # Taastamine hetktõmmisest
 omniroute health                   # Detailne terviseseisund (katkestid, vahemälu, mälu)
 omniroute quota                    # Teenusepakkuja kvoodi kasutus
 omniroute mcp status               # MCP serveri olek
-omniroute a2a status               # A2A serveri olek
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnelid
 omniroute reset-password           # Administraatori parooli lähtestamine
 omniroute --mcp                    # Käivita MCP server stdio kaudu

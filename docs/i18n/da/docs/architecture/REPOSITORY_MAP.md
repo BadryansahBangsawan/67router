@@ -143,8 +143,6 @@ src/
 | `app/api/` (ikke-v1)                                                         | Administrationsruter (~60 mapper: udbydere, kombinationer, indstillinger, mcp, a2a, evalueringer, hukommelse, færdigheder, webhooks, compliance, robusthed, overvågning, tunneler, cli-værktøjer osv.)                                                                                                                  |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 ruter (serverstyring, agenttilstand/DNS/tilknytninger, omgåelse, certifikat, upstream-CA). LOCAL_ONLY + SPAWN_CAPABLE. Se `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ ruter (anmodninger, sessioner, værter, registreringstilstande, eksport, ws). LOCAL_ONLY + SPAWN_CAPABLE. Se `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                            |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0-indgangspunkt (`POST /a2a`)                                                                                                                                                                                                                                                                            |
-| `app/.well-known/agent.json/`                                                | A2A-agentkort (registrering)                                                                                                                                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard-UI-sider (50+ sektioner, ~118 page.tsx-filer: udbydere, kombinationer, indstillinger, hukommelse, færdigheder, webhooks, evalueringer, revision, batch, cache, omkostninger, tilstand, system, aktivitet osv.)                                                                                                |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio-UI (3 faner: Søg/Scrape/Sammenlign + SearchConceptCard + ProviderCatalog) — se `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (plan 21): `page.tsx` (skal med 3 faner), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | Dokument                                   | Formål                                                                               |
 | ------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                            | MCP-server: 110 værktøjer, 3 transportmetoder, 33 scopes, REST-endpoints             |
-| `A2A-SERVER.md`                            | A2A v0.3: JSON-RPC, 6 færdigheder, REST-hjælpefunktioner, agentkort                  |
 | `AGENT_PROTOCOLS_GUIDE.md`                 | Samlet vejledning: A2A kontra ACP kontra Cloud Agents                                |
 | `SKILLS.md`                                | Framework til færdigheder (indbyggede + markedsplads + SkillsSH + sandbox)           |
 | `RADAR.md`                                 | Radar-katalogoverlay til gratis modeller (`RADAR_ENABLED`, deaktiveret som standard) |
@@ -565,7 +562,6 @@ Ikke inkluderet i outputtet fra `npm pack`. Se `.npmignore`.
 - **Tilføjer du en provider?** Følg `docs/architecture/ARCHITECTURE.md § Adding a New Provider`, og sammenhold med `docs/reference/PROVIDER_REFERENCE.md`.
 - **Tilføjer du en route?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **Tilføjer du et MCP-værktøj?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **Tilføjer du en A2A-skill?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Kører du lokalt?** `docs/guides/SETUP_GUIDE.md`.
 - **Udruller du?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Udgiver du en release?** `docs/ops/RELEASE_CHECKLIST.md` (og Claude Code-skillen `/generate-release-cc`).

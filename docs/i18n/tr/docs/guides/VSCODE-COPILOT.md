@@ -86,7 +86,7 @@ kontrol paneli ayarlarında `blockedProviders` alanına ekleyin; uzantıda hiçb
 
 ## Bir VS Code sekmesi içinde Dashboard
 
-`omnicopilot.dashboardOpen: "editor"`, OmniRoute Dashboard'u harici bir tarayıcı yerine Simple Browser aracılığıyla bir düzenleyici sekmesinde görüntüler. Gömme özelliği, HTML sayfalarını varsayılan `frame-ancestors 'none'` + `X-Frame-Options: DENY` yerine `frame-ancestors 'self' vscode-webview:` ile sunan `DASHBOARD_ALLOW_EMBED=vscode` aracılığıyla **sunucuda isteğe bağlı olarak etkinleştirilir**. API yüzeyi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) her iki durumda da katı üstbilgileri korur.
+`omnicopilot.dashboardOpen: "editor"`, OmniRoute Dashboard'u harici bir tarayıcı yerine Simple Browser aracılığıyla bir düzenleyici sekmesinde görüntüler. Gömme özelliği, HTML sayfalarını varsayılan `frame-ancestors 'none'` + `X-Frame-Options: DENY` yerine `frame-ancestors 'self' vscode-webview:` ile sunan `DASHBOARD_ALLOW_EMBED=vscode` aracılığıyla **sunucuda isteğe bağlı olarak etkinleştirilir**. API yüzeyi (`/api`, `/v1`, `/v1beta`, `/healthz`) her iki durumda da katı üstbilgileri korur.
 
 > ⚠️ **Bu bir çalışma zamanı değil, derleme zamanı bayrağıdır.** Next.js, `headers()` işlevini rota
 > manifestine derlediğinden `next.config.mjs`, paket derlenirken değişkeni okur

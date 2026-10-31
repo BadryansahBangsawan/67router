@@ -119,4 +119,3 @@ kohdeympäristössä.
 - [Agenttiprotokollat](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-käynnistyssopimukset](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-työkalut](../reference/CLI-TOOLS.md)
-- [A2A-palvelin](./A2A-SERVER.md)

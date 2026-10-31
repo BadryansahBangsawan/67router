@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ìfàṣẹsí pọndandan)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — Irinṣẹ́ MCP 3 (àkójọ, gbà, àgbèkalẹ̀)
-src/lib/a2a/skills/listCapabilities.ts        — Skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Wo [MCP-SERVER.md](./MCP-SERVER.md) fún àsopọ̀ scope àti ìfàṣẹsí.
 }
 ```
 
-Wo [A2A-SERVER.md](./A2A-SERVER.md) fún àwọn àlàyé ìlànà.
-
 ---
 
 ## Katalọ́ọ̀gù — ID Ọgbọ́n 45
@@ -189,7 +186,6 @@ Wo [A2A-SERVER.md](./A2A-SERVER.md) fún àwọn àlàyé ìlànà.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — ètò Omni Skills (fífi irinṣẹ́ LLM sínú + ọjà)
 - [MCP-SERVER.md](./MCP-SERVER.md) — àkójọ irinṣẹ́ MCP (àwọn irinṣẹ́ `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — ìlànà A2A (ọgbọ́n `list-capabilities`)
 - `src/lib/agentSkills/` — àkójọ, ẹ̀rọ ìṣẹ̀dá, àwọn olùtúpalẹ̀
 - `skills/` — àwọn fáìlì SKILL.md tí a ṣẹ̀dá (àwọn àkọsílẹ̀ 45)

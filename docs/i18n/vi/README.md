@@ -586,7 +586,6 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 - **🔑 Điều khiển định tuyến theo từng key** — ghim một API key vào một mô hình hoặc combo bằng `forcedModel`, và thêm hoặc xóa mô hình và combo của một key một cách nguyên tử (`/api/keys/{id}/access`). → [Tham chiếu API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kiểm soát PII tinh vi hơn** — lựa chọn theo từng loại, tối đa 20 mẫu che dữ liệu tùy chỉnh đã được xác thực và bộ đếm phát hiện theo từng loại; bản thân việc che dữ liệu vẫn là tùy chọn bật. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ngôn ngữ** — dashboard, bản sao tài liệu và CLI, với `npm run i18n:add-locale` thêm một ngôn ngữ ở mọi nơi chỉ bằng một lệnh. → [Hướng dẫn i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ủy quyền A2A đến cho đội agent của bạn, các kỹ năng Conductor trên Agent Card và một bảng điều khiển dashboard với trò chuyện thoại nhấn-để-nói Faro. → [Máy chủ A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Tiếp nhận thích ứng & bảo vệ quá tải** — các yêu cầu trò chuyện hạng nặng xếp hàng thay vì trả 503, với lease luân chuyển RPM nguyên tử theo từng kết nối. → [Hướng dẫn khả năng phục hồi](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Thứ tự chuẩn của `/v1/models`** — một khối liền mạch được nhóm theo provider cho mỗi provider (các combo được ghim trước), ổn định trên mọi nguồn catalog. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🗜️ Gia cố nén** — guard chống phình bật mặc định, gói Caveman cho DE / FR / JA + tiếng Trung (wényán), bộ lọc RTK cho Gradle & .NET. → [Nén](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +904,6 @@ Cung cấp OmniRoute qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CL
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Tích hợp với Claude Desktop, Cursor hoặc bất kỳ máy khách MCP nào</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP từ xa — <b>110 công cụ</b>, 33 phạm vi (tùy chọn bật thực thi), nhật ký kiểm tra đầy đủ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Phương thức truyền tải MCP dạng streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Tác nhân với tác nhân, <b>JSON-RPC 2.0</b> + SSE, 6 kỹ năng</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Tương thích với OpenAI — chat, embedding, hình ảnh, âm thanh, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Đẩy các sự kiện yêu cầu / hạn ngạch đến Slack, Discord, Telegram hoặc bất kỳ URL nào</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI từ xa</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Điều khiển một phiên bản từ xa bằng token truy cập có phạm vi</td></tr>
@@ -915,8 +913,6 @@ Cung cấp OmniRoute qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CL
 # Cung cấp cho Claude Code toàn bộ bộ công cụ OmniRoute qua MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Máy chủ MCP](docs/frameworks/MCP-SERVER.md) · [Máy chủ A2A](docs/frameworks/A2A-SERVER.md) · [Giao thức tác nhân](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1379,7 +1375,6 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Máy chủ MCP</a></b></td><td>110 công cụ MCP, cấu hình IDE, client Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Hướng dẫn máy chủ MCP</a></b></td><td>Cài đặt MCP, phương thức truyền tải và tài liệu tham khảo công cụ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Máy chủ A2A</a></b></td><td>Giao thức JSON-RPC 2.0, kỹ năng, truyền phát, quản lý tác vụ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Hướng dẫn máy chủ A2A</a></b></td><td>Thẻ tác nhân A2A, tác vụ, kỹ năng và truyền phát</td></tr>
 </table>
 
 ### 📋 Dự án & Chất lượng

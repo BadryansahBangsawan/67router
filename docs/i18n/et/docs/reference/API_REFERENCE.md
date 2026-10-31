@@ -1881,48 +1881,10 @@ OmniRoute sisaldab sisseehitatud Model Context Protocoli serverit, millel on 3 t
 
 OmniRoute pakub A2A (agendilt agendile) JSON-RPC 2.0 lõpp-punkti ning REST-ümbrist kontrollimiseks ja töölaual kasutamiseks.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valikuline, kui OMNIROUTE_API_KEY pole määratud
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Toetatud meetodid (kõik sõltuvad sättest `settings.a2aEnabled`):
-
-| Meetod           | Kirjeldus                                                             |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Oskuse sünkroonne käivitamine; tagastab `{task, artifacts, metadata}` |
-| `message/stream` | Sama oskustekomplekti voogedastusega SSE-käivitus                     |
-| `tasks/get`      | Toimingu hankimine `taskId` järgi                                     |
-| `tasks/cancel`   | Toimingu tühistamine `taskId` järgi                                   |
-
-Sisseehitatud oskused: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agendikaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloog, autentimisskeem) — avalikult vahemällu salvestatud 1 tunniks. Autentimine pole nõutav.
-
 ### REST-abimeetodid
 
 | Meetod | Tee                          | Kirjeldus                                                                                                             |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A lubatud olek + toimingute statistika + vahemällu salvestatud agendikaardi kokkuvõte                               |
 | GET    | `/api/a2a/tasks`             | Toimingute loend — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Pole REST-abimeetodina rakendatud — looge JSON-RPC `message/send` kaudu)                                             |
 | GET    | `/api/a2a/tasks/[id]`        | Ühe toimingu hankimine                                                                                                |

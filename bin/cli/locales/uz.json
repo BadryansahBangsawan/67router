@@ -390,34 +390,6 @@
       "description": "MCP audit jurnali (audit --source mcp uchun taxallus)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Agent kartasidagi mavjud A2A koʻnikmalarini roʻyxatlash"
-    },
-    "invoke": {
-      "description": "A2A koʻnikmasini ishga tushirish va vazifa ID sini qaytarish",
-      "input": "JSON kirish obyekti",
-      "input_file": "JSON kirish fayliga yoʻl",
-      "wait": "Natijani qaytarishdan oldin vazifa yakunlanishini kutish",
-      "timeout": "Yakunlanishni kutish vaqti, ms da (standart: 60000)"
-    },
-    "tasks": {
-      "description": "A2A vazifalarini boshqarish",
-      "list": {
-        "status": "Holat boʻyicha filtrlash",
-        "skill": "Koʻnikma ID si boʻyicha filtrlash"
-      },
-      "watch": {
-        "description": "Vazifa yakunlanguniga qadar uning holatini soʻrab turish"
-      },
-      "stream": {
-        "description": "SSE orqali vazifa bajarilishi hodisalarini oqimda uzatish"
-      },
-      "logs": {
-        "description": "Vazifa xabarlari va artefaktlarini koʻrsatish"
-      }
-    }
-  },
   "policy": {
     "description": "OmniRoute avtorizatsiya siyosatlarini boshqarish",
     "list": {

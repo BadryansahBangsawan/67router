@@ -143,8 +143,6 @@ src/
 | `app/api/` (לא v1)                                                           | נתיבי ניהול/אדמין (כ־60 תיקיות: ספקים, שילובים, הגדרות, mcp,‏ a2a, הערכות, זיכרון, מיומנויות, webhooks, תאימות, חוסן, ניטור, מנהרות, כלי CLI וכו')                                                                                                                                                                                   |
 | `app/api/tools/agent-bridge/`                                                | API מסוג REST עבור AgentBridge — ‏12 נתיבים (בקרת שרת, מצב סוכן/DNS/מיפויים, עקיפה, אישור, רשות אישורים במעלה הזרם). LOCAL_ONLY + SPAWN_CAPABLE. ראו `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                            |
 | `app/api/tools/traffic-inspector/`                                           | API מסוג REST + WS עבור Traffic Inspector — ‏16+ נתיבים (בקשות, הפעלות, מארחים, מצבי לכידה, ייצוא, ws). LOCAL_ONLY + SPAWN_CAPABLE. ראו `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                                   |
-| `app/a2a/`                                                                   | נקודת כניסה של A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                                        |
-| `app/.well-known/agent.json/`                                                | כרטיס סוכן A2A (גילוי)                                                                                                                                                                                                                                                                                                               |
 | `app/(dashboard)/dashboard/`                                                 | דפי ממשק המשתמש של לוח הבקרה (50+ מקטעים, כ־118 קובצי page.tsx: ספקים, שילובים, הגדרות, זיכרון, מיומנויות, webhooks, הערכות, ביקורת, אצוות, מטמון, עלויות, תקינות, מערכת, פעילות וכו')                                                                                                                                               |
 | `app/(dashboard)/dashboard/search-tools/`                                    | ממשק המשתמש של Search Tools Studio (שלוש לשוניות: חיפוש/גירוד/השוואה + SearchConceptCard + ProviderCatalog) — ראו `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                           |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (תוכנית 21):‏ `page.tsx` (מעטפת בעלת שלוש לשוניות),‏ `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard),‏ `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab),‏ `hooks/` (useEngineStatus, useMemorySettings) |
@@ -398,7 +396,6 @@ open-sse/
 | מסמך                                        | מטרה                                                                       |
 | ------------------------------------------- | -------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | שרת MCP:‏ 110 כלים, 3 תעבורות, 33 תחומים, נקודות קצה של REST               |
-| `A2A-SERVER.md`                             | A2A v0.3:‏ JSON-RPC,‏ 6 מיומנויות, כלי עזר ל־REST, כרטיס סוכן              |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | מדריך מאוחד: A2A לעומת ACP לעומת סוכני ענן                                 |
 | `SKILLS.md`                                 | מסגרת מיומנויות (מובנות + זירת מסחר + SkillsSH + ארגז חול)                 |
 | `RADAR.md`                                  | שכבת קטלוג המודלים החינמיים של Radar‏ (`RADAR_ENABLED`, כבויה כברירת מחדל) |
@@ -567,7 +564,6 @@ open-sse/
 - **מוסיפים ספק?** פעלו לפי `docs/architecture/ARCHITECTURE.md § Adding a New Provider` והצליבו מול `docs/reference/PROVIDER_REFERENCE.md`.
 - **מוסיפים נתיב?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` וגם `src/shared/validation/schemas.ts`.
 - **מוסיפים כלי MCP?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **מוסיפים מיומנות A2A?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **מריצים מקומית?** `docs/guides/SETUP_GUIDE.md`.
 - **פורסים?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **מפרסמים גרסה?** `docs/ops/RELEASE_CHECKLIST.md` (ומיומנות Claude Code בשם `/generate-release-cc`).

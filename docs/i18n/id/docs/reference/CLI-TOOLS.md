@@ -749,7 +749,6 @@ omniroute cache                        # Status cache
 omniroute cache clear                  # Menghapus cache semantik + tanda tangan
 
 omniroute mcp status | restart         # Status / memulai ulang server MCP
-omniroute a2a status | card            # Status server A2A / kartu agen
 
 omniroute tunnel list | create | stop  # Mengelola tunnel (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Memeriksa / menetapkan variabel lingkungan (sementara)

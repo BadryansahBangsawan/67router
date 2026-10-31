@@ -100,8 +100,6 @@ Ylätason segmentit hakemistossa `src/app/`:
 | Polku                                                                         | Tarkoitus                                                         |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `api/`                                                                        | Kaikki HTTP-API-reitit (katso erittely jäljempänä)                |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 -päätepiste (`POST /a2a`)                        |
-| `.well-known/agent.json/`                                                     | A2A Agent Card -etsintäasiakirja                                  |
 | `(dashboard)/`                                                                | Hallintapaneelin käyttöliittymä (reittiryhmä, ei URL-etuliitettä) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Todennuskulut                                                     |
 | `landing/`                                                                    | Markkinointi-/aloitussivu                                         |
@@ -773,13 +771,6 @@ Katso [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) ja erillinen osio tiedostossa
 4. Lisää testit hakemistoon `open-sse/mcp-server/__tests__/`.
 5. Päivitä [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Uuden A2A-taidon lisääminen
-
-Katso [A2A-SERVER.md § Uuden taidon lisääminen](../frameworks/A2A-SERVER.md). Taidot sijaitsevat
-hakemistossa `src/lib/a2a/skills/`, ja ne rekisteröidään A2A-tehtävähallinnan kautta.
-
----
-
 ## 11. Käytännöt
 
 - **Koodityyli**: 2 välilyönnin sisennys, lainausmerkkeinä kaksoislainausmerkit, 100 merkin rivinleveys, puolipisteet,
@@ -847,7 +838,6 @@ hakemistossa `src/lib/a2a/skills/`, ja ne rekisteröidään A2A-tehtävähallinn
   ja lockout-toimintoihin.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo -pisteytys ja -strategiat.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — kattava MCP-työkaluluettelo ja siirtotavat.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A-protokollan taidot ja palvelun löytäminen.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK- ja Caveman-pakkaus.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI-integraatiot.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (jos saatavilla), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — käyttöönottokohteet.

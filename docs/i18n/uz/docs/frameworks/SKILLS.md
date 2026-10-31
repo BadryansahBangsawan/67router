@@ -258,12 +258,6 @@ Transportni sozlash va qamrov tayinlovlari uchun [MCP-SERVER.md](./MCP-SERVER.md
 
 ---
 
-## A2A integratsiyasi
-
-`src/lib/skills/a2a.ts` `memory_aware_routing` A2A ko‘nikma deskriptorini va `registerA2ASkill(registry)` yordamchi funksiyasini eksport qiladi. Maxsus A2A ko‘nikmalari `src/lib/a2a/skills/` ichida joylashadi va `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) orqali yo‘naltiriladi. Vazifaning to‘liq hayot sikli uchun [A2A-SERVER.md](./A2A-SERVER.md) fayliga qarang.
-
----
-
 ## Yangi ichki ko‘nikma qo‘shish
 
 1. **Ishlov beruvchini belgilang** — `src/lib/skills/builtins.ts` faylida (yoki `src/lib/skills/builtin/` ichidagi yonma-yon faylda). Imzo: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Plagin tizimi orqali maxsus ko‘nikma qo‘shish usuli uchun [Plugin SDK va ko�
 ## Shuningdek qarang
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP vositalarini roʻyxatdan oʻtkazish va transportlar
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A vazifasining hayot sikli va koʻnikmalarni yoʻnaltirish
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — foydalanuvchilar uchun kirish
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — soʻrovlarni qayta ishlash konveyeri va komponentlar xaritasi
 - Manba: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

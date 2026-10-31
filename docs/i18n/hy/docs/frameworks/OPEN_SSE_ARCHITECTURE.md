@@ -573,5 +573,4 @@ Zod վավերացումը մոդուլի բեռնման ժամանակ ապահ
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — նկարագրություն՝ ըստ պանակների
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 գործոնով գնահատում
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP սերվեր
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A սերվեր
 - Սկզբնաղբյուր՝ `open-sse/` (400+ ֆայլ, ~143K կոդի տող)

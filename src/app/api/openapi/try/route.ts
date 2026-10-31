@@ -12,7 +12,7 @@ import { isLocalOnlyPath } from "@/server/authz/routeGuard";
 import { getRequestPeerLocality } from "@/shared/utils/apiAuth";
 import { validateBody, isValidationFailure } from "@/shared/validation/helpers";
 
-const ALLOWED_TRY_PATH_PREFIXES = ["/api/", "/v1/", "/v1beta/", "/a2a", "/.well-known/agent.json"];
+const ALLOWED_TRY_PATH_PREFIXES = ["/api/", "/v1/", "/v1beta/"];
 const BLOCKED_FORWARD_HEADERS = new Set([
   "connection",
   "content-length",

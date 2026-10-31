@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ಡೈರೆಕ್ಟರಿ-ವಾರು ವಿವರ
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-ಅಂಶಗಳ ಸ್ಕೋರಿಂಗ್
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ಸರ್ವರ್
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ಸರ್ವರ್
 - ಮೂಲ: `open-sse/` (400+ ಫೈಲ್ಗಳು, ~143K LOC)

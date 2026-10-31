@@ -20,38 +20,6 @@ Vsi trije so neodvisni — izberete lahko katero koli podmnožico.
 
 ## Odločitveno drevo
 
-## 1. A2A — agent-agent
-
-**Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**Končna točka OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kartica agenta:** `GET /.well-known/agent.json`
-
-### Kdaj uporabiti
-
-- Pri izdelavi sistema z več agenti, v katerem je OmniRoute eden od enakovrednih udeležencev
-- Za omogočanje dostopa do usmerjevalne inteligence OmniRoute (pametno usmerjanje, upravljanje kvot itd.) agentom v ogrodjih, kot je Google ADK, ali v splošnih omrežjih agentov
-- Za vključitev OmniRoute za standardiziranim vmesnikom za odkrivanje in priklic
-
-### Metode
-
-- `message/send` — pošlje sporočilo in prejme sinhroni odgovor
-- `message/stream` — pošlje sporočilo in prejema dogodke napredka, pretočno posredovane prek SSE
-- `tasks/get` — prebere opravilo glede na ID
-- `tasks/cancel` — prekliče izvajajoče se opravilo
-
-### Vgrajene veščine (6)
-
-- `smart-routing` — usmeri poziv skozi optimalno kombinacijo
-- `quota-management` — poroča o stanju kvote za posameznega ponudnika
-- `provider-discovery` — prikaže nameščene ponudnike z njihovimi zmožnostmi
-- `cost-analysis` — oceni stroške zahteve/pogovora
-- `health-report` — združi stanje odklopnika/obdobja ohlajanja/zaklepa za posameznega ponudnika
-- `list-capabilities` — našteje razpoložljive veščine in metapodatke agenta
-
-### Podrobnejši pregled
-
-Za podrobnosti o prenosu, strukturo kartice agenta, nastavitev TTL opravil in predlogo za dodajanje novih veščin glejte [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — Register agentov CLI
 
 **Končna točka OmniRoute:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Oblika telesa za POST (`customAgentBodySchema` v `src/app/api/acp/agents/route.t
 
 ## Primeri integracije
 
-### Odkrijte zmogljivosti A2A storitve OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vrne kartico agenta z vsemi 6 veščinami, transporti in različico.
-
-### Pokličite OmniRoute kot agenta A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Prikažite nameščene agente CLI prek ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Glejte tudi
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — podroben pregled A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — zunanje integracije CLI (uporabljajo ACP)
 - [SKILLS.md](./SKILLS.md) — ogrodje veščin (razlikuje se od veščin A2A — lokalno izvajalno okolje s peskovnikom)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenca končnih točk

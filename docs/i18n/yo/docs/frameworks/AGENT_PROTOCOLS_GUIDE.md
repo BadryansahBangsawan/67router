@@ -20,38 +20,6 @@ OmniRoute ń pèsè ojú-ọ̀nà mẹ́ta ọ̀tọ̀ọ̀tọ̀ tó ní í ṣ
 
 ## Igi Ìpinnu
 
-## 1. A2A — Agent-sí-Agent
-
-**Àlàyé ìlànà:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Káàdì Agent:** `GET /.well-known/agent.json`
-
-### Ìgbà tó yẹ kí o lò ó
-
-- Ṣíṣe ètò agent púpọ̀ níbi tí OmniRoute ti jẹ́ ọ̀kan lára àwọn ẹlẹgbẹ́
-- Ṣíṣí òye ìdarí OmniRoute (ìdarí ọlọ́gbọ́n, ìṣàkóso iye-ààyè, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ) sí àwọn agent nínú àwọn framework bíi Google ADK tàbí àwọn nẹ́tíwọ́ọ̀kì agent gbogbogbòò
-- Ṣíṣàkójọpọ̀ OmniRoute lẹ́yìn ojú-ọ̀nà àwárí + ìpè tó tẹ̀lé ìlànà
-
-### Àwọn Method
-
-- `message/send` — fi ìfiránṣẹ́ ránṣẹ́, gba èsì sync
-- `message/stream` — fi ránṣẹ́ + gba àwọn ìṣẹ̀lẹ̀ ìlọsíwájú tí a ń stream nípasẹ̀ SSE
-- `tasks/get` — ka iṣẹ́ nípasẹ̀ ID
-- `tasks/cancel` — fagilé iṣẹ́ tó ń ṣiṣẹ́
-
-### Àwọn ọgbọ́n tí a ti kọ́ sínú rẹ̀ (6)
-
-- `smart-routing` — darí prompt kan gba àkópọ̀ tó dára jù lọ
-- `quota-management` — jálẹ̀ ìpo quota fún provider kọ̀ọ̀kan
-- `provider-discovery` — ṣe àtòjọ àwọn provider tí a fi sílẹ̀ pẹ̀lú agbára wọn
-- `cost-analysis` — ṣírò iye owó tí ìbéèrè/ìjíròrò kan lè ná
-- `health-report` — kó ìpo breaker/cooldown/lockout jọ fún provider kọ̀ọ̀kan
-- `list-capabilities` — ṣe àtòjọ gbogbo ọgbọ́n àti metadata tí agent náà ní
-
-### Àlàyé jíjinlẹ̀
-
-Wo [A2A-SERVER.md](./A2A-SERVER.md) fún àwọn àlàyé ọ̀nà ìgbékalẹ̀, ìṣètò káàdì agent, àtúnṣe TTL iṣẹ́, àti àdàkọ fún fífi àwọn ọgbọ́n tuntun kún un.
-
 ## 2. ACP — Ìforúkọsílẹ̀ Àwọn Aṣojú CLI
 
 **OmniRoute endpoint:** `GET /api/acp/agents`
@@ -112,30 +80,6 @@ Wo [Ìforúkọsílẹ̀ ACP àti àwọn olùbẹ̀rẹ̀](./ACP.md) fún àw�
 
 ## Àwọn Àpẹẹrẹ Ìṣọ̀kan
 
-### Ṣàwárí àwọn agbára A2A ti OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Ó ń dá Agent Card padà pẹ̀lú gbogbo ọgbọ́n mẹ́fà, àwọn ọ̀nà ìgbékalẹ̀, àti ẹ̀yà.
-
-### Pe OmniRoute gẹ́gẹ́ bí aṣojú A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
-
 ### Ṣe àkójọ àwọn aṣojú CLI tí a ti fi sílẹ̀ nípasẹ̀ ACP
 
 ```bash
@@ -189,7 +133,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Tún Wo
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Ìtúpalẹ̀ jinlẹ̀ A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Àwọn ìsopọ̀ mọ́ CLI ìta (ń lo ACP)
 - [SKILLS.md](./SKILLS.md) — Àgbékalẹ̀ àwọn ọgbọ́n (ó yàtọ̀ sí àwọn ọgbọ́n A2A — ààyè àdánwò ìṣiṣẹ́ agbègbè)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — ìtọ́kasí endpoint

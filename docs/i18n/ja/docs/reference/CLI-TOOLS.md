@@ -703,7 +703,6 @@ omniroute cache                        # キャッシュのステータス
 omniroute cache clear                  # セマンティックキャッシュとシグネチャキャッシュをクリア
 
 omniroute mcp status | restart         # MCP サーバーのステータス確認／再起動
-omniroute a2a status | card            # A2A サーバーのステータス／エージェントカード
 
 omniroute tunnel list | create | stop  # トンネルを管理（cloudflare/tailscale/ngrok）
 omniroute env show | get <k> | set <k> <v>  # 環境変数を確認／設定（一時的）

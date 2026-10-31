@@ -1848,48 +1848,10 @@ OmniRoute 3 ટ્રાન્સપોર્ટ (stdio, SSE, streamable-http) �
 
 OmniRoute નિરીક્ષણ/ડૅશબોર્ડના ઉપયોગ માટે REST રૅપર ઉપરાંત A2A (Agent-to-Agent) JSON-RPC 2.0 એન્ડપૉઇન્ટ ઉપલબ્ધ કરાવે છે.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # જ્યાં સુધી OMNIROUTE_API_KEY સેટ ન હોય ત્યાં સુધી વૈકલ્પિક
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-સમર્થિત પદ્ધતિઓ (તમામ `settings.a2aEnabled` પર નિર્ભર છે):
-
-| પદ્ધતિ           | વર્ણન                                                              |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | સિંક્રોનસ કૌશલ્ય અમલીકરણ; `{task, artifacts, metadata}` પરત કરે છે |
-| `message/stream` | સમાન કૌશલ્ય સમૂહનું સ્ટ્રીમિંગ SSE અમલીકરણ                         |
-| `tasks/get`      | `taskId` દ્વારા કાર્ય મેળવો                                        |
-| `tasks/cancel`   | `taskId` દ્વારા કાર્ય રદ કરો                                       |
-
-બિલ્ટ-ઇન કૌશલ્યો: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### એજન્ટ કાર્ડ
-
-```bash
-GET /.well-known/agent.json
-```
-
-જાહેર A2A એજન્ટ કાર્ડ (નામ, વર્ણન, ક્ષમતાઓ, કૌશલ્ય કૅટલૉગ, ઑથ સ્કીમ) પરત કરે છે — 1h માટે સાર્વજનિક રીતે કૅશ કરેલું. ઑથ જરૂરી નથી.
-
 ### REST સહાયકો
 
 | પદ્ધતિ | પાથ                          | વર્ણન                                                                                                              |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/a2a/status`            | A2A સક્ષમ સ્થિતિ + કાર્યના આંકડા + કૅશ કરેલા એજન્ટ કાર્ડનો સારાંશ                                                  |
 | GET    | `/api/a2a/tasks`             | કાર્યોની સૂચિ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST સહાયક તરીકે અમલમાં મૂકેલું નથી — JSON-RPC `message/send` દ્વારા બનાવો)                                       |
 | GET    | `/api/a2a/tasks/[id]`        | એક કાર્ય મેળવો                                                                                                     |

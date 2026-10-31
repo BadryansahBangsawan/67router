@@ -27,38 +27,6 @@ Te trzy są niezależne — wybierz dowolny podzbiór.
 
 ## Drzewo decyzyjne
 
-## 1. A2A — Agent-to-Agent
-
-**Spec:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agent Card:** `GET /.well-known/agent.json`
-
-### Kiedy używać
-
-- Budowa systemu multi-agent, w którym OmniRoute jest jednym z peerów
-- Udostępnianie inteligencji routingu OmniRoute (smart-routing, quota-management itd.) agentom w frameworkach takich jak Google ADK lub generycznych siatkach agentów
-- Opakowanie OmniRoute za standardową powierzchnią discovery + invocation
-
-### Methods
-
-- `message/send` — wyślij wiadomość, otrzymaj odpowiedź synchroniczną
-- `message/stream` — wyślij + otrzymaj zdarzenia postępu strumieniowane SSE
-- `tasks/get` — odczytaj task po ID
-- `tasks/cancel` — anuluj działający task
-
-### Wbudowane skills (6)
-
-- `smart-routing` — kieruj prompt przez optymalne combo
-- `quota-management` — raportuj stan quota per provider
-- `provider-discovery` — listuj zainstalowanych providerów z capabilities
-- `cost-analysis` — szacuj koszt requestu/konwersacji
-- `health-report` — agreguj stan breaker/cooldown/lockout per provider
-- `list-capabilities` — wylicz dostępne skills agenta i metadane
-
-### Deep dive
-
-Zobacz [A2A-SERVER.md](./A2A-SERVER.md) po szczegóły transportu, strukturę agent card, konfigurację TTL tasków oraz szablon dodawania nowych skills.
-
 ## 2. ACP — rejestr agentów CLI
 
 **Endpoint OmniRoute:** `GET /api/acp/agents`
@@ -133,10 +101,6 @@ Oba mają „długotrwałe taski”, ale na różnych warstwach:
 ## Przykłady integracji
 
 ### Odkryj capabilities A2A OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
 
 Zwraca Agent Card ze wszystkimi 5 skills, transportami i wersją.
 
@@ -213,7 +177,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
 
 ## Zobacz też
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — deep dive A2A
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — zewnętrzne integracje CLI (używa ACP)
 - [SKILLS.md](./SKILLS.md) — framework Skills (inny niż A2A skills — lokalny sandbox wykonania)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referencja endpointów

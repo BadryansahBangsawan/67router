@@ -709,7 +709,6 @@ omniroute cache                        # Vahemälu olek
 omniroute cache clear                  # Semantilise ja signatuurivahemälu tühjendamine
 
 omniroute mcp status | restart         # MCP-serveri olek / taaskäivitamine
-omniroute a2a status | card            # A2A-serveri olek / agendikaart
 
 omniroute tunnel list | create | stop  # Tunnelite haldamine (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Keskkonnamuutujate vaatamine / määramine (ajutine)

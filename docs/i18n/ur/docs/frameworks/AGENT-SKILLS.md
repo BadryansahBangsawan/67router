@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (توثیق درکار ہے)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP ٹولز (فہرست، حاصل کرنا، کوریج)
-src/lib/a2a/skills/listCapabilities.ts        — A2A اسکل: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A اسکل `list-capabilities` تمام 45 اسکلز کا کیٹلاگ ایک
 }
 ```
 
-پروٹوکول کی تفصیلات کے لیے [A2A-SERVER.md](./A2A-SERVER.md) دیکھیں۔
-
 ---
 
 ## کیٹلاگ — 45 اسکل IDs
@@ -189,7 +186,6 @@ A2A اسکل `list-capabilities` تمام 45 اسکلز کا کیٹلاگ ایک
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills فریم ورک (LLM ٹول انجیکشن + مارکیٹ پلیس)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ٹول کیٹلاگ (`omniroute_agent_skills_*` ٹولز)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A پروٹوکول (`list-capabilities` اسکل)
 - `src/lib/agentSkills/` — کیٹلاگ، جنریٹر، پارسرز
 - `skills/` — تخلیق شدہ SKILL.md فائلیں (45 اندراجات)

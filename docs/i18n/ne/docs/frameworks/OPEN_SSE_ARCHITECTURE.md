@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — डाइरेक्टरी-अनुसारको विवरण
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-कारक स्कोरिङ
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP सर्भर
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A सर्भर
 - स्रोत: `open-sse/` (400+ फाइलहरू, ~143K LOC)

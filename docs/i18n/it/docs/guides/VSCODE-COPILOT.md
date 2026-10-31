@@ -92,7 +92,7 @@ nell'estensione.
 Simple Browser anziché in un browser esterno. L'incorporamento è **facoltativo sul server** tramite
 `DASHBOARD_ALLOW_EMBED=vscode`, che serve le pagine HTML con
 `frame-ancestors 'self' vscode-webview:` anziché con le impostazioni predefinite `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. La superficie API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mantiene in
+`X-Frame-Options: DENY`. La superficie API (`/api`, `/v1`, `/v1beta`, `/healthz`) mantiene in
 ogni caso gli header restrittivi.
 
 > ⚠️ **È un flag di fase di build, non di runtime.** Next.js compila `headers()` nel manifesto delle route,

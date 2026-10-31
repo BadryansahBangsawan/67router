@@ -100,8 +100,6 @@ Segmentos de nivel superior en `src/app/`:
 | Ruta                                                                          | Propósito                                                         |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `api/`                                                                        | Todas las rutas de la API HTTP (véase el desglose a continuación) |
-| `a2a/`                                                                        | Endpoint A2A JSON-RPC 2.0 (`POST /a2a`)                           |
-| `.well-known/agent.json/`                                                     | Documento de descubrimiento Agent Card de A2A                     |
 | `(dashboard)/`                                                                | Interfaz del panel (grupo de rutas, sin prefijo URL)              |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Flujos de autenticación                                           |
 | `landing/`                                                                    | Página promocional/de destino                                     |
@@ -775,13 +773,6 @@ Consulte [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) y la sección específica 
 4. Añade pruebas en `open-sse/mcp-server/__tests__/`.
 5. Actualiza [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Añadir una nueva habilidad A2A
-
-Consulta [A2A-SERVER.md § Añadir una nueva habilidad](../frameworks/A2A-SERVER.md). Las habilidades se encuentran en
-`src/lib/a2a/skills/` y se registran mediante el gestor de tareas A2A.
-
----
-
 ## 11. Convenciones
 
 - **Estilo de código**: sangría de 2 espacios, comillas dobles, ancho de 100 caracteres, punto y coma,
@@ -849,7 +840,6 @@ Consulta [A2A-SERVER.md § Añadir una nueva habilidad](../frameworks/A2A-SERVER
   y el bloqueo.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — puntuación y estrategias de Auto Combo.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — catálogo completo de herramientas MCP y transportes.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — capacidades y descubrimiento del protocolo A2A.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — compresión RTK + Caveman.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — integraciones de CLI.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (si está presente), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — destinos de despliegue.

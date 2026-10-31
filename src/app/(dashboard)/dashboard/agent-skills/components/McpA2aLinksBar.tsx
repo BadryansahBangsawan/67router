@@ -72,7 +72,6 @@ export function McpA2aLinksBar(): JSX.Element {
   const origin = useOrigin();
 
   const mcpUrl = origin ? `${origin}/api/mcp/sse` : "/api/mcp/sse";
-  const a2aUrl = origin ? `${origin}/.well-known/agent.json` : "/.well-known/agent.json";
 
   return (
     <div className="flex flex-col sm:flex-row gap-2" data-testid="mcp-a2a-links-bar">
@@ -82,7 +81,6 @@ export function McpA2aLinksBar(): JSX.Element {
         icon="electrical_services"
         prompt={t("mcpPrompt")}
       />
-      <LinkCard label={t("a2aLink")} url={a2aUrl} icon="hub" prompt={t("a2aPrompt")} />
     </div>
   );
 }

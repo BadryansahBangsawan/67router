@@ -586,7 +586,7 @@ Radar na zaɓi ne kuma GET-only. Abokin hulɗar OmniRoute ba ya loda prompts, zi
 - **🔑 Per-key routing control** — ɗaure API key zuwa model ɗaya ko combo ɗaya da `forcedModel`, kuma ƙara ko cire models da combos na key a kai ɗaya (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Finer PII controls** — zaɓi na kowane nau'i, har zuwa alamu na masking na al'ada guda 20 da aka tantance, da ƙidayar gano na kowane nau'i; masking kanta tana ci gaba da kasancewa na zaɓi (opt-in). → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 languages** — dashboard, mirrors na docs da CLI, tare da `npm run i18n:add-locale` yana ƙara harshe a ko'ina da umarni ɗaya. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — shigar da A2A delegation zuwa cikin agent fleet naka, Conductor skills a kan Agent Card, da panel na dashboard tare da Faro push-to-talk voice chat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — shigar da A2A delegation zuwa cikin agent fleet naka, Conductor skills a kan Agent Card, da panel na dashboard tare da Faro push-to-talk voice chat.
 - **🛂 Adaptive admission & overload protection** — buƙatun chat masu nauyi suna shiga jerin jira maimakon su dawo da 503, tare da atomic RPM rolling leases ga kowace connection. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical `/v1/models` ordering** — toshe ɗaya mai ci gaba da aka rarraba ta provider ga kowane provider (combos a gaba farko), tabbatacce a dukkan tushen catalog. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Compression hardening** — inflation guard kunne ta tafarki na asali, Caveman packs ga DE / FR / JA + Chinese (wényán), RTK filters ga Gradle & .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Bayyana OmniRoute ta hanyar **MCP**, **A2A**, **REST API**, **webhooks** ko **CL
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Haɗa shi da Claude Desktop, Cursor, ko kowane MCP client</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP na nesa — <b>kayan aiki 110</b>, scopes 33 (aiwatar da ƙuntatawa na zaɓi ne), cikakken tarihin bincike</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Hanyar jigilar MCP mai gudana kai tsaye</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Daga wakili zuwa wakili, <b>JSON-RPC 2.0</b> + SSE, skills 6</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Mai jituwa da OpenAI — taɗi, embeddings, hotuna, sauti, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Tura al'amuran buƙata / quota zuwa Slack, Discord, Telegram ko kowane URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI na nesa</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Sarrafa instance na nesa da scoped access tokens</td></tr>
@@ -915,8 +914,6 @@ Bayyana OmniRoute ta hanyar **MCP**, **A2A**, **REST API**, **webhooks** ko **CL
 # Ba Claude Code cikakken kayan aikin OmniRoute ta hanyar MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Uwar Garken MCP](docs/frameworks/MCP-SERVER.md) · [Uwar Garken A2A](docs/frameworks/A2A-SERVER.md) · [Ƙa'idojin Wakilai](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1379,6 @@ Ma'aunai na asali a 2026-10-18: **bidiyoyi na musamman 1.976** · **sanannun kal
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Sabar MCP</a></b></td><td>Kayan aikin MCP 110, saitunan IDE, clients na Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Jagorar Sabar MCP</a></b></td><td>Girkawar MCP, hanyoyin sufuri, da manazartar kayan aiki</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Sabar A2A</a></b></td><td>Yarjejeniyar JSON-RPC 2.0, ƙwarewa, yaɗawa, sarrafa ayyuka</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Jagorar Sabar A2A</a></b></td><td>Katin wakilin A2A, ayyuka, ƙwarewa, da yaɗawa</td></tr>
 </table>
 
 ### 📋 Aiki da Inganci

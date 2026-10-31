@@ -1238,8 +1238,6 @@ Koristite SSE URL `http://localhost:20128/api/mcp/sse` i Bearer API ključ gener
 
 ### Opsezi (Scopes)
 
-MCP trenutno definira 32 imenovana opsega. Svaki Bearer ključ može se ograničiti na određene opsege — pogledajte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) za autoritativni popis opsega i alata, te [A2A-SERVER.md](../frameworks/A2A-SERVER.md) za JSON-RPC shemu.
-
 ---
 
 ## 🧠 Sustav vještina
@@ -1248,7 +1246,6 @@ OmniRoute izlaže proširivi **okvir vještina** (`src/lib/skills/`) tako da age
 
 - **Marketplace sučelje** — Pregledajte i instalirajte vještine putem **Dashboard → Skills**
 - **Opsezi po ključu** — Ograničite koji API ključevi mogu pozivati koje vještine
-- **Prilagođene vještine** — Dodajte TypeScript datoteku u `src/lib/a2a/skills/`, registrirajte je, i odmah postaje pozivljiva putem A2A
 
 Potpuna referenca: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1333,7 +1330,6 @@ omniroute restore [<timestamp>]    # Vraćanje iz snimke
 omniroute health                   # Detaljno stanje (breakeri, predmemorija, memorija)
 omniroute quota                    # Iskorištenost kvote dobavljača
 omniroute mcp status                # Status MCP servera
-omniroute a2a status                # Status A2A servera
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneli
 omniroute reset-password           # Resetiranje administratorske lozinke
 omniroute --mcp                    # Pokretanje MCP servera preko stdio

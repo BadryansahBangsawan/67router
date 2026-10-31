@@ -103,7 +103,6 @@ const HEADER_DESCRIPTIONS: Partial<
   changelog: "changelogDescription",
   // Protocols
   mcp: "mcpDescription",
-  a2a: "a2aDescription",
   "api-endpoints": "apiEndpointsDescription",
   // Analytics sub-pages
   "analytics-search": "analyticsSearchDescription",

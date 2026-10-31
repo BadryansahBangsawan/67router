@@ -751,7 +751,6 @@ omniroute cache                        # കാഷ് നില
 omniroute cache clear                  # സെമാന്റിക് + സിഗ്നേച്ചർ കാഷുകൾ മായ്ക്കുക
 
 omniroute mcp status | restart         # MCP സെർവർ നില / പുനരാരംഭിക്കൽ
-omniroute a2a status | card            # A2A സെർവർ നില / ഏജന്റ് കാർഡ്
 
 omniroute tunnel list | create | stop  # ടണലുകൾ നിയന്ത്രിക്കുക (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # എൻവയോൺമെന്റ് വേരിയബിളുകൾ പരിശോധിക്കുക / സജ്ജമാക്കുക (താൽക്കാലികം)

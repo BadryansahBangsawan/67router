@@ -1233,8 +1233,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` এবং **ড্যাশবো�
 
 ### স্কোপ
 
-MCP বর্তমানে 32টি নামযুক্ত স্কোপ নির্ধারণ করে। প্রতিটি Bearer কীকে নির্দিষ্ট স্কোপে সীমাবদ্ধ করা যায় — প্রামাণ্য স্কোপ ও টুলের তালিকার জন্য [MCP-SERVER.md](../frameworks/MCP-SERVER.md) এবং JSON-RPC স্কিমার জন্য [A2A-SERVER.md](../frameworks/A2A-SERVER.md) দেখুন।
-
 ---
 
 ## 🧠 স্কিলস সিস্টেম
@@ -1243,7 +1241,6 @@ OmniRoute একটি সম্প্রসারণযোগ্য **স্ক
 
 - **মার্কেটপ্লেস UI** — **ড্যাশবোর্ড → স্কিলস** থেকে স্কিল ব্রাউজ ও ইনস্টল করুন
 - **প্রতি-কী স্কোপ** — কোন API কী কোন স্কিল ব্যবহার করতে পারবে তা সীমিত করুন
-- **কাস্টম স্কিল** — `src/lib/a2a/skills/`-এ একটি TypeScript ফাইল রাখুন, সেটি নিবন্ধন করুন, এবং তা সঙ্গে সঙ্গে A2A-এর মাধ্যমে ব্যবহারযোগ্য হয়ে যাবে
 
 সম্পূর্ণ রেফারেন্স: [SKILLS.md](../frameworks/SKILLS.md)।
 
@@ -1328,7 +1325,6 @@ omniroute restore [<timestamp>]    # একটি স্ন্যাপশট �
 omniroute health                   # বিস্তারিত স্বাস্থ্যতথ্য (ব্রেকার, ক্যাশ, মেমরি)
 omniroute quota                    # প্রোভাইডারের কোটা ব্যবহার
 omniroute mcp status               # MCP সার্ভারের অবস্থা
-omniroute a2a status               # A2A সার্ভারের অবস্থা
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok টানেল
 omniroute reset-password           # অ্যাডমিন পাসওয়ার্ড রিসেট করুন
 omniroute --mcp                    # stdio-এর মাধ্যমে MCP সার্ভার চালু করুন

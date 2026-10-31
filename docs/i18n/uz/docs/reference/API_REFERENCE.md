@@ -1800,48 +1800,10 @@ OmniRoute 3 ta transport (stdio, SSE, streamable-http) va doirasi cheklangan vos
 
 OmniRoute tekshirish/boshqaruv panelida foydalanish uchun REST o‘ramasi bilan birga A2A (agentdan agentga) JSON-RPC 2.0 yakuniy nuqtasini taqdim etadi.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY o‘rnatilmagan bo‘lsa, ixtiyoriy
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Qo‘llab-quvvatlanadigan metodlar (barchasi `settings.a2aEnabled` orqali boshqariladi):
-
-| Metod            | Tavsif                                                               |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | Ko‘nikmani sinxron bajarish; `{task, artifacts, metadata}` qaytaradi |
-| `message/stream` | Xuddi shu ko‘nikmalar to‘plamini SSE orqali oqimli bajarish          |
-| `tasks/get`      | Vazifani `taskId` bo‘yicha olish                                     |
-| `tasks/cancel`   | Vazifani `taskId` bo‘yicha bekor qilish                              |
-
-Ichki ko‘nikmalar: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent kartasi
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalogi, autentifikatsiya sxemasi) qaytaradi — ommaviy tarzda 1 soatga keshlanadi. Autentifikatsiya talab qilinmaydi.
-
 ### REST yordamchilari
 
 | Metod | Yo‘l                         | Tavsif                                                                                                                  |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A yoqilganligi + vazifalar statistikasi + keshlangan agent kartasi xulosasi                                           |
 | GET   | `/api/a2a/tasks`             | Vazifalar ro‘yxati — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST yordamchisi sifatida amalga oshirilmagan — JSON-RPC `message/send` orqali yarating)                               |
 | GET   | `/api/a2a/tasks/[id]`        | Bitta vazifani olish                                                                                                    |

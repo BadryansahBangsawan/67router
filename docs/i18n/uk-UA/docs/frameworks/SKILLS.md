@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## Інтеграція A2A
-
-`src/lib/skills/a2a.ts` експортує дескриптор навички A2A `memory_aware_routing` і допоміжну функцію `registerA2ASkill(registry)`. Користувацькі навички A2A містяться в `src/lib/a2a/skills/` і передаються на виконання через `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Повний життєвий цикл завдання див. у [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Додавання нової вбудованої навички
 
 1. **Визначте обробник** у `src/lib/skills/builtins.ts` (або в сусідньому файлі в каталозі `src/lib/skills/builtin/`). Сигнатура: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -479,7 +473,6 @@ const config: SkillConfig = {
 ## Див. також
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — реєстрація інструментів MCP і транспорти
-- [A2A-SERVER.md](./A2A-SERVER.md) — життєвий цикл завдань A2A та диспетчеризація навичок
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — вступ для користувачів
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — конвеєр обробки запитів і карта компонентів
 - Вихідний код: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

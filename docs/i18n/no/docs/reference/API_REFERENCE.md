@@ -1880,48 +1880,10 @@ OmniRoute leveres med en innebygd Model Context Protocol-server med 3 transporte
 
 OmniRoute tilbyr et A2A-endepunkt (Agent-to-Agent) basert på JSON-RPC 2.0, i tillegg til et REST-grensesnitt for inspeksjon og bruk i kontrollpanelet.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valgfritt med mindre OMNIROUTE_API_KEY er angitt
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Støttede metoder (alle styres av `settings.a2aEnabled`):
-
-| Metode           | Beskrivelse                                                               |
-| ---------------- | ------------------------------------------------------------------------- |
-| `message/send`   | Synkron kjøring av en ferdighet; returnerer `{task, artifacts, metadata}` |
-| `message/stream` | Strømming av SSE-kjøring for det samme ferdighetssettet                   |
-| `tasks/get`      | Hent en oppgave etter `taskId`                                            |
-| `tasks/cancel`   | Avbryt en oppgave etter `taskId`                                          |
-
-Innebygde ferdigheter: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkort
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnerer det offentlige A2A-agentkortet (navn, beskrivelse, funksjoner, ferdighetskatalog og autentiseringsmetode) — bufres offentlig i 1 time. Ingen autentisering kreves.
-
 ### REST-hjelpere
 
 | Metode | Bane                         | Beskrivelse                                                                                                       |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A aktivert + oppgavestatistikk + bufret sammendrag av agentkortet                                               |
 | GET    | `/api/a2a/tasks`             | Vis oppgaver — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Ikke implementert som en REST-hjelper — opprett via JSON-RPC `message/send`)                                     |
 | GET    | `/api/a2a/tasks/[id]`        | Hent én oppgave                                                                                                   |

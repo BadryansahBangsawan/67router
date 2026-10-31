@@ -594,7 +594,6 @@ dabartinį katalogą rasite **[radar.omniroute.online/planos](https://radar.omni
 - **🔑 Maršrutizavimo valdymas pagal raktą** — prisekite API raktą prie vieno modelio ar kombinacijos su `forcedModel`, o rakto modelius ir kombinacijas pridėkite arba šalinkite atomiškai (`/api/keys/{id}/access`). → [API žinynas](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Tikslensnis PII valdymas** — pasirinkimas pagal tipą, iki 20 patvirtintų pasirinktinių maskavimo šablonų ir aptikimo skaitikliai pagal tipą; pats maskavimas lieka pasirenkamas. → [Apsaugos priemonės](docs/security/GUARDRAILS.md)
 - **🌍 67 kalbos** — valdymo skydelis, dokumentacijos veidrodžiai ir CLI; `npm run i18n:add-locale` viena komanda prideda kalbą visur. → [i18n vadovas](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — gaunamasis A2A delegavimas jūsų agentų parkui, Conductor įgūdžiai Agent Card kortelėje ir valdymo skydelio skydas su Faro push-to-talk balso pokalbiais. → [A2A serveris](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptyvus priėmimas ir apsauga nuo perkrovos** — sunkiosios pokalbių užklausos laukia eilėje, o ne grąžina 503 klaidą, su atominėmis slenkančiosiomis RPM nuomomis kiekvienam ryšiui. → [Atsparumo vadovas](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanoninė `/v1/models` rikiuotė** — vienas vientisas, pagal tiekėjus sugrupuotas blokas kiekvienam tiekėjui (kombinacijos prisegtos pirmos), stabilus visuose katalogų šaltiniuose. → [API žinynas](docs/reference/API_REFERENCE.md)
 - **🗜️ Glaudinimo sustiprinimas** — pagal numatymą įjungta apsauga nuo išpūtimo, Caveman paketai DE / FR / JA + kinų kalbai (wényán), RTK filtrai Gradle ir .NET. → [Glaudinimas](docs/compression/COMPRESSION_ENGINES.md)
@@ -913,7 +912,6 @@ Suteikite prieigą prie OmniRoute per **MCP**, **A2A**, **REST API**, **žiniati
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integruoti su Claude Desktop, Cursor ar bet kuriuo MCP klientu</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Nuotolinis MCP — <b>110 įrankių</b>, 33 aprėptys (apribojimų taikymas pasirenkamas), išsamus audito žurnalas</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Srautinis MCP transportas</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Ryšys tarp agentų, <b>JSON-RPC 2.0</b> + SSE, 6 įgūdžiai</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Suderinama su OpenAI — pokalbiai, įterpiniai, vaizdai, garsas, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Žiniatinklio sąsajos</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Siųsti užklausų / kvotų įvykius į Slack, Discord, Telegram arba bet kurį URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Nuotolinė CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Valdyti nuotolinį egzempliorių naudojant ribotos aprėpties prieigos raktus</td></tr>
@@ -923,8 +921,6 @@ Suteikite prieigą prie OmniRoute per **MCP**, **A2A**, **REST API**, **žiniati
 # Suteikti Claude Code visą OmniRoute įrankių rinkinį per MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP serveris](docs/frameworks/MCP-SERVER.md) · [A2A serveris](docs/frameworks/A2A-SERVER.md) · [Agentų protokolai](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1393,7 +1389,6 @@ Kanoninės metrikos 2026-10-18: **1.976 unikalūs vaizdo įrašai** · **20.220.
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP serveris</a></b></td><td>110 MCP įrankių, IDE konfigūracijos, Python / TS / Go klientai</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP serverio vadovas</a></b></td><td>MCP diegimas, transportai ir įrankių žinynas</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A serveris</a></b></td><td>JSON-RPC 2.0 protokolas, gebėjimai, srautinis perdavimas, užduočių valdymas</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A serverio vadovas</a></b></td><td>A2A agento kortelė, užduotys, gebėjimai ir srautinis perdavimas</td></tr>
 </table>
 
 ### 📋 Projektas ir kokybė

@@ -22,7 +22,7 @@ Complete guide for configuring providers, creating combos, integrating CLI tools
 - [Available Models](#-available-models)
 - [Advanced Features](#-advanced-features)
 - [Auto-Routing (Zero-config)](#-auto-routing-zero-config)
-- [MCP & A2A Integration](#-mcp--a2a-integration)
+- [MCP Integration](#-mcp-integration)
 - [Skills System](#-skills-system)
 - [Memory System](#-memory-system)
 - [Programmatic Management](#-programmatic-management)
@@ -1211,9 +1211,9 @@ The auto-router is fully described in [AUTO-COMBO.md](../routing/AUTO-COMBO.md) 
 
 ---
 
-## 🔌 MCP & A2A Integration
+## 🔌 MCP Integration
 
-OmniRoute is both an **MCP server** (Model Context Protocol) and an **A2A server** (Agent-to-Agent JSON-RPC 2.0). Any MCP-compatible IDE or agent host can call OmniRoute tools directly — no extra wrapper required.
+OmniRoute is an **MCP server** (Model Context Protocol). Any MCP-compatible IDE or agent host can call OmniRoute tools directly — no extra wrapper required.
 
 ### MCP transports
 
@@ -1242,17 +1242,16 @@ Use the SSE URL `http://localhost:20128/api/mcp/sse` and a Bearer API key genera
 
 ### Scopes
 
-MCP currently defines 32 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory and [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for the JSON-RPC schema.
+MCP currently defines 32 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory.
 
 ---
 
 ## 🧠 Skills System
 
-OmniRoute exposes an extensible **skill framework** (`src/lib/skills/`) so agents and the A2A endpoint can run domain-specific routines (e.g. `code-review`, `summarize`, `extract-facts`, `web-research`).
+OmniRoute exposes an extensible **skill framework** (`src/lib/skills/`) so agents can run domain-specific routines (e.g. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Marketplace UI** — Browse and install skills from **Dashboard → Skills**
 - **Per-key scopes** — Restrict which API keys can invoke which skills
-- **Custom skills** — Drop a TypeScript file in `src/lib/a2a/skills/`, register it, and it becomes immediately invocable over A2A
 
 Full reference: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1324,7 +1323,6 @@ omniroute restore [<timestamp>]    # Restore from a snapshot
 omniroute health                   # Detailed health (breakers, cache, memory)
 omniroute quota                    # Provider quota usage
 omniroute mcp status               # MCP server status
-omniroute a2a status               # A2A server status
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnels
 omniroute reset-password           # Reset the admin password
 omniroute --mcp                    # Start MCP server over stdio

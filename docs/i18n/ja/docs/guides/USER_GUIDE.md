@@ -1212,8 +1212,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` と、**ダッシュボード → A
 
 ### スコープ
 
-MCP では現在、名前付きスコープが 32 個定義されています。各 Bearer キーは特定のスコープのみに制限できます。正式なスコープとツールの一覧については [MCP-SERVER.md](../frameworks/MCP-SERVER.md) を、JSON-RPC スキーマについては [A2A-SERVER.md](../frameworks/A2A-SERVER.md) を参照してください。
-
 ---
 
 ## 🧠 スキルシステム
@@ -1222,7 +1220,6 @@ OmniRoute は拡張可能な**スキルフレームワーク**（`src/lib/skills
 
 - **マーケットプレイス UI** — **ダッシュボード → スキル**からスキルを参照してインストール
 - **キーごとのスコープ** — 各 API キーが呼び出せるスキルを制限
-- **カスタムスキル** — TypeScript ファイルを `src/lib/a2a/skills/` に配置して登録すると、A2A 経由ですぐに呼び出し可能
 
 完全なリファレンス：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1307,7 +1304,6 @@ omniroute restore [<timestamp>]    # スナップショットから復元
 omniroute health                   # 詳細なヘルス情報（ブレーカー、キャッシュ、メモリ）
 omniroute quota                    # プロバイダーのクォータ使用量
 omniroute mcp status               # MCP サーバーのステータス
-omniroute a2a status               # A2A サーバーのステータス
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok トンネル
 omniroute reset-password           # 管理者パスワードをリセット
 omniroute --mcp                    # stdio 経由で MCP サーバーを起動

@@ -1849,48 +1849,10 @@ OmniRoute 3 ట్రాన్స్పోర్ట్లు (stdio, SSE, stream
 
 OmniRoute తనిఖీ/డ్యాష్బోర్డ్ వినియోగం కోసం A2A (Agent-to-Agent) JSON-RPC 2.0 ఎండ్పాయింట్తో పాటు REST ర్యాపర్ను అందిస్తుంది.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY సెట్ చేయబడితే తప్ప ఐచ్ఛికం
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-మద్దతు ఉన్న పద్ధతులు (అన్నీ `settings.a2aEnabled` ద్వారా నియంత్రించబడతాయి):
-
-| పద్ధతి           | వివరణ                                                             |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | సమకాలిక నైపుణ్య అమలు; `{task, artifacts, metadata}`ను అందిస్తుంది |
-| `message/stream` | అదే నైపుణ్య సమితి యొక్క స్ట్రీమింగ్ SSE అమలు                      |
-| `tasks/get`      | `taskId` ద్వారా టాస్క్ను పొందుతుంది                               |
-| `tasks/cancel`   | `taskId` ద్వారా టాస్క్ను రద్దు చేస్తుంది                          |
-
-అంతర్నిర్మిత నైపుణ్యాలు: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### ఏజెంట్ కార్డ్
-
-```bash
-GET /.well-known/agent.json
-```
-
-పబ్లిక్ A2A ఏజెంట్ కార్డ్ను (పేరు, వివరణ, సామర్థ్యాలు, నైపుణ్యాల కేటలాగ్, ప్రామాణీకరణ పథకం) అందిస్తుంది — పబ్లిక్గా 1 గంట పాటు క్యాష్ చేయబడుతుంది. ప్రామాణీకరణ అవసరం లేదు.
-
 ### REST సహాయకాలు
 
 | పద్ధతి | పాత్                         | వివరణ                                                                                                               |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A ప్రారంభ స్థితి + టాస్క్ గణాంకాలు + క్యాష్ చేసిన ఏజెంట్ కార్డ్ సారాంశం                                           |
 | GET    | `/api/a2a/tasks`             | టాస్క్ల జాబితా — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST సహాయకంగా అమలు చేయబడలేదు — JSON-RPC `message/send` ద్వారా సృష్టించండి)                                         |
 | GET    | `/api/a2a/tasks/[id]`        | ఒక టాస్క్ను పొందండి                                                                                                 |

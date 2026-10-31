@@ -88,7 +88,7 @@ bővítményben semmit sem kell módosítani.
 
 ## Irányítópult egy VS Code-lapon belül
 
-Az `omnicopilot.dashboardOpen: "editor"` a külső böngésző helyett a Simple Browser használatával jeleníti meg az OmniRoute irányítópultját egy szerkesztőlapon. A beágyazás **kiszolgálóoldali engedélyezést igényel** a `DASHBOARD_ALLOW_EMBED=vscode` használatával, amelynek hatására a HTML-oldalak kiszolgálása az alapértelmezett `frame-ancestors 'none'` + `X-Frame-Options: DENY` helyett a `frame-ancestors 'self' vscode-webview:` beállítással történik. Az API-felület (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mindkét esetben megtartja a szigorú fejléceket.
+Az `omnicopilot.dashboardOpen: "editor"` a külső böngésző helyett a Simple Browser használatával jeleníti meg az OmniRoute irányítópultját egy szerkesztőlapon. A beágyazás **kiszolgálóoldali engedélyezést igényel** a `DASHBOARD_ALLOW_EMBED=vscode` használatával, amelynek hatására a HTML-oldalak kiszolgálása az alapértelmezett `frame-ancestors 'none'` + `X-Frame-Options: DENY` helyett a `frame-ancestors 'self' vscode-webview:` beállítással történik. Az API-felület (`/api`, `/v1`, `/v1beta`, `/healthz`) mindkét esetben megtartja a szigorú fejléceket.
 
 > ⚠️ **Ez fordítási idejű, nem pedig futásidejű jelző.** A Next.js a `headers()` függvényt az útvonaljegyzékbe fordítja, ezért a `next.config.mjs` a csomag összeállításakor olvassa be a változót
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

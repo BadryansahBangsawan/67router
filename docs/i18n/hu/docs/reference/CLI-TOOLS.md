@@ -749,7 +749,6 @@ omniroute cache                        # Gyorsítótár állapota
 omniroute cache clear                  # Szemantikai és aláírás-gyorsítótárak törlése
 
 omniroute mcp status | restart         # MCP-kiszolgáló állapota / újraindítása
-omniroute a2a status | card            # A2A-kiszolgáló állapota / ügynökkártya
 
 omniroute tunnel list | create | stop  # Alagutak kezelése (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Környezeti változók megtekintése / beállítása (ideiglenes)

@@ -586,7 +586,7 @@ Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts
 - **🔑 Kontroll tar-rottar skont iċ-ċavetta** — waħħal ċavetta API ma' mudell wieħed jew combo b'`forcedModel`, u żid jew neħħi l-mudelli u l-combos ta' ċavetta b'mod atomiku (`/api/keys/{id}/access`). → [Referenza tal-API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kontrolli PII aktar raffinati** — għażla skont it-tip, sa 20-il mudell ta' masking personalizzat u validat, u kontaturi tas-sejbien skont it-tip; il-masking innifsu jibqa' opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67-il lingwa** — dashboard, mera tad-dokumentazzjoni u CLI, b'`npm run i18n:add-locale` iżżid lingwa kullimkien b'kmand wieħed. → [Gwida i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegazzjoni A2A inbound lejn il-flotta ta' aġenti tiegħek, ħiliet Conductor fuq l-Agent Card, u pannell tad-dashboard b'chat bil-vuċi push-to-talk ta' Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — delegazzjoni A2A inbound lejn il-flotta ta' aġenti tiegħek, ħiliet Conductor fuq l-Agent Card, u pannell tad-dashboard b'chat bil-vuċi push-to-talk ta' Faro.
 - **🛂 Ammissjoni adattiva u protezzjoni mill-tagħbija żejda** — talbiet chat tqil jidħlu fil-kju minflok ma jirċievu 503, b'leases rolling RPM atomiċi għal kull konnessjoni. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ordni kanonika ta' `/v1/models`** — blokk wieħed kontinwu raggruppat skont il-provider għal kull provider (combos mwaħħla l-ewwel), stabbli fuq kull sors tal-katalogu. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
 - **🗜️ Irwebbit tal-kompressjoni** — gwardja kontra l-inflazzjoni mixgħula b'mod predefinit, pakketti Caveman għal DE / FR / JA + Ċiniż (wényán), filtri RTK għal Gradle & .NET. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
@@ -905,7 +905,6 @@ Esponi lil OmniRoute permezz ta’ **MCP**, **A2A**, **REST API**, **webhooks** 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Qabbadha ma’ Claude Desktop, Cursor jew kwalunkwe klijent MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP remot — <b>110 għodda</b>, 33 ambitu (l-infurzar jiġi attivat b’għażla), rekord sħiħ tal-awditjar</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Trasport MCP bi streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Minn aġent għal aġent, <b>JSON-RPC 2.0</b> + SSE, 6 ħiliet</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Kompatibbli ma’ OpenAI — chat, embeddings, stampi, awdjo, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Ibgħat avvenimenti ta’ talbiet / kwoti lil Slack, Discord, Telegram jew kwalunkwe URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Remota</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Ikkontrolla istanza remota b’tokens ta’ aċċess b’ambitu definit</td></tr>
@@ -915,8 +914,6 @@ Esponi lil OmniRoute permezz ta’ **MCP**, **A2A**, **REST API**, **webhooks** 
 # Agħti lil Claude Code is-sett sħiħ ta’ għodod ta’ OmniRoute permezz ta’ MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Server MCP](docs/frameworks/MCP-SERVER.md) · [Server A2A](docs/frameworks/A2A-SERVER.md) · [Protokolli tal-Aġenti](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1382,7 +1379,6 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>110 għodda MCP, konfigurazzjonijiet tal-IDE, klijenti Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Gwida għas-Server MCP</a></b></td><td>Installazzjoni tal-MCP, trasporti u referenza tal-għodod</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protokoll JSON-RPC 2.0, ħiliet, streaming, ġestjoni tal-kompiti</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Gwida għas-Server A2A</a></b></td><td>Kard tal-aġent A2A, kompiti, ħiliet u streaming</td></tr>
 </table>
 
 ### 📋 Proġett u Kwalità

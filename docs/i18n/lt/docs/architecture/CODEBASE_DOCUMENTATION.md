@@ -100,8 +100,6 @@ Aukščiausio lygmens segmentai po `src/app/`:
 | Kelias                                                                        | Paskirtis                                             |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
 | `api/`                                                                        | Visi HTTP API maršrutai (žr. skaidymą toliau)         |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 galinis taškas (`POST /a2a`)         |
-| `.well-known/agent.json/`                                                     | A2A agento kortelės aptikimo dokumentas               |
 | `(dashboard)/`                                                                | Valdymo skydelio UI (maršrutų grupė, be URL prefikso) |
 | `auth/`, `login/`, `forgot-password/`, `callback/`                            | Autentifikavimo srautai                               |
 | `landing/`                                                                    | Rinkodaros / pradžios puslapis                        |
@@ -773,13 +771,6 @@ Kliento užklausa
 4. Pridėkite testus kataloge `open-sse/mcp-server/__tests__/`.
 5. Atnaujinkite [MCP-SERVER.md](../frameworks/MCP-SERVER.md).
 
-### Pridėti naują A2A įgūdį
-
-Žr. [A2A-SERVER.md § Naujo įgūdžio pridėjimas](../frameworks/A2A-SERVER.md). Įgūdžiai laikomi
-`src/lib/a2a/skills/` ir registruojami per A2A užduočių tvarkytuvę.
-
----
-
 ## 11. Susitarimai
 
 - **Kodo stilius**: 2 tarpų įtrauka, dvigubos kabutės, 100 simbolių eilutės plotis, kabliataškiai,
@@ -846,7 +837,6 @@ Kliento užklausa
   blokavimo analizė.
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo vertinimas ir strategijos.
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — visas MCP įrankių katalogas ir perdavimo būdai.
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A protokolo gebėjimai ir aptikimas.
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK ir Caveman glaudinimas.
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI integracijos.
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md) (jei yra), [DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md), [FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md), [VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md), [TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md), [PWA_GUIDE.md](../guides/PWA_GUIDE.md) — diegimo tikslinės aplinkos.
