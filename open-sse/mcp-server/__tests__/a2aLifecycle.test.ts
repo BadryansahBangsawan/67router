@@ -54,14 +54,9 @@ describe("A2A task lifecycle regressions", () => {
     tm.updateTask(task.id, "working");
 
     await expect(
-      executeA2ATaskWithState(
-        tm,
-        task,
-        async () => {
-          throw new Error("upstream failure");
-        },
-        { search: async () => [], appendEvent: () => {} }
-      )
+      executeA2ATaskWithState(tm, task, async () => {
+        throw new Error("upstream failure");
+      })
     ).rejects.toThrow("upstream failure");
 
     const loaded = tm.getTask(task.id);
