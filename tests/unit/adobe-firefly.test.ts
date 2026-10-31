@@ -49,7 +49,6 @@ import {
   buildAdobeFireflyQuotasRecord,
 } from "../../open-sse/services/usage/adobeFirefly.ts";
 import { USAGE_SUPPORTED_PROVIDERS } from "../../src/shared/constants/providers.ts";
-import { handleAdobeFireflyImageGeneration } from "../../open-sse/handlers/imageGeneration/providers/adobeFirefly.ts";
 import { handleAdobeFireflyVideoGeneration } from "../../open-sse/handlers/videoGeneration/adobeFireflyHandler.ts";
 import { WEB_COOKIE_PROVIDERS } from "../../src/shared/constants/providers/web-cookie.ts";
 import { IMAGE_PROVIDERS } from "../../open-sse/config/imageRegistry.ts";
@@ -563,17 +562,6 @@ function jsonResponse(status: number, body: unknown, headerMap: Record<string, s
   } as unknown as Response;
 }
 
-test("handleAdobeFireflyImageGeneration returns 400 when prompt is missing", async () => {
-  const result = await handleAdobeFireflyImageGeneration({
-    model: "nano-banana-pro",
-    provider: "adobe-firefly",
-    body: {},
-    credentials: { apiKey: "aaa.bbb.ccc" },
-  });
-  assert.equal(result.success, false);
-  assert.equal(result.status, 400);
-});
-
 function userImsJwt(userId = "0EB@AdobeID"): string {
   return (
     `eyJhbGciOiJSUzI1NiJ9.` +
@@ -588,87 +576,6 @@ function userImsJwt(userId = "0EB@AdobeID"): string {
     "sig".padEnd(40, "x")
   );
 }
-
-test("handleAdobeFireflyImageGeneration submit+poll happy path (mocked)", async () => {
-  let calls = 0;
-  const fetchImpl = async (url: string, init?: RequestInit) => {
-    calls += 1;
-    const u = String(url);
-    if (u.includes("generate-async")) {
-      return jsonResponse(
-        200,
-        { links: { result: "https://poll.example/job/img1" } },
-        { "x-override-status-link": "https://poll.example/job/img1" }
-      );
-    }
-    if (u.includes("poll.example")) {
-      return jsonResponse(200, {
-        status: "COMPLETED",
-        outputs: [{ image: { presignedUrl: "https://cdn.example/out.png" } }],
-      });
-    }
-    throw new Error(`unexpected fetch ${u}`);
-  };
-
-  const result = await handleAdobeFireflyImageGeneration({
-    model: "nano-banana-pro",
-    provider: "adobe-firefly",
-    body: { prompt: "sunset mountains", size: "16:9", quality: "2k" },
-    credentials: { apiKey: userImsJwt() },
-    fetchImpl: fetchImpl as typeof fetch,
-  });
-
-  assert.equal(result.success, true);
-  assert.ok(result.data?.data?.[0]?.url?.includes("cdn.example/out.png"));
-  assert.ok(calls >= 2);
-});
-
-test("handleAdobeFireflyImageGeneration uploads refs and submits referenceBlobs", async () => {
-  const tinyPng =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
-
-  let sawGenerateBody: Record<string, unknown> | null = null;
-  let uploadCalls = 0;
-  const fetchImpl = async (url: string | URL, init?: RequestInit) => {
-    const u = String(url);
-    if (u.includes("/v2/storage/image")) {
-      uploadCalls += 1;
-      return jsonResponse(200, { images: [{ id: "ref-blob-1" }] });
-    }
-    if (u.includes("generate-async")) {
-      sawGenerateBody = JSON.parse(String(init?.body || "{}"));
-      return jsonResponse(
-        200,
-        { links: { result: { href: "https://poll.example/j1" } } },
-        { "x-override-status-link": "https://poll.example/j1" }
-      );
-    }
-    if (u.includes("poll.example")) {
-      return jsonResponse(200, {
-        status: "COMPLETED",
-        outputs: [{ image: { presignedUrl: "https://cdn.example/out.png" } }],
-      });
-    }
-    throw new Error(`unexpected fetch ${u}`);
-  };
-
-  const result = await handleAdobeFireflyImageGeneration({
-    model: "nano-banana",
-    provider: "adobe-firefly",
-    body: { prompt: "teest", image_url: tinyPng },
-    credentials: { apiKey: userImsJwt() },
-    fetchImpl: fetchImpl as typeof fetch,
-  });
-
-  assert.equal(result.success, true);
-  assert.equal(uploadCalls, 1);
-  assert.ok(sawGenerateBody);
-  const refs = sawGenerateBody!.referenceBlobs as Array<{
-    id: string;
-    usage: string;
-  }>;
-  assert.deepEqual(refs, [{ id: "ref-blob-1", usage: "general" }]);
-});
 
 test("adobeFireflyGenerateVideo submit+poll happy path (mocked)", async () => {
   const fetchImpl = async (url: string) => {
@@ -710,22 +617,6 @@ test("handleAdobeFireflyVideoGeneration returns 400 without prompt", async () =>
   });
   assert.equal(result.success, false);
   assert.equal(result.status, 400);
-});
-
-test("handleAdobeFireflyImageGeneration maps quota exhausted", async () => {
-  const fetchImpl = async () =>
-    jsonResponse(403, { error: "nope" }, { "x-access-error": "taste_exhausted" });
-
-  const result = await handleAdobeFireflyImageGeneration({
-    model: "nano-banana-pro",
-    provider: "adobe-firefly",
-    body: { prompt: "test" },
-    credentials: { apiKey: userImsJwt() },
-    fetchImpl: fetchImpl as typeof fetch,
-  });
-  assert.equal(result.success, false);
-  assert.equal(result.status, 429);
-  assert.match(String(result.error), /quota/i);
 });
 
 test("guest JWT without AdobeID is detected", () => {
@@ -1073,66 +964,6 @@ test("rotateAdobeFireflySessionOnError: attempt1-2 reuse sticky; attempt3 keeps 
   );
   assert.equal(auth.source, "rebuild", "auth failures must bypass quiet sticky reuse");
   assert.ok(auth.tokenExpiresAt > Date.now(), "retry must repair a missing token expiry");
-});
-
-test("adobeFireflyGenerateImage cookie path exchanges IMS token first", async () => {
-  const { __resetAdobeFireflySessionCacheForTests } =
-    await import("../../open-sse/services/adobeFireflySession.ts");
-  __resetAdobeFireflySessionCacheForTests();
-
-  const userTok =
-    `eyJhbGciOiJSUzI1NiJ9.` +
-    Buffer.from(
-      JSON.stringify({
-        user_id: "0EB@AdobeID",
-        type: "access_token",
-        client_id: "clio-playground-web",
-      })
-    ).toString("base64url") +
-    `.` +
-    "s".repeat(40);
-  const urls: string[] = [];
-  const fetchImpl = async (url: string, init?: RequestInit) => {
-    urls.push(String(url));
-    if (String(url).includes("ims/check")) {
-      assert.equal(init?.method, "POST");
-      // Authenticated exchange (guest_allowed=false)
-      return jsonResponse(200, {
-        access_token: userTok,
-        account_type: "type1",
-      });
-    }
-    if (String(url).includes("generate-async")) {
-      const auth =
-        (init?.headers as Record<string, string> | undefined)?.Authorization ||
-        (init?.headers as Headers)?.get?.("Authorization");
-      // headers object from buildAdobeSubmitHeaders
-      const headerAuth =
-        typeof init?.headers === "object" && init.headers && !("get" in (init.headers as object))
-          ? (init.headers as Record<string, string>).Authorization
-          : auth;
-      assert.equal(headerAuth, `Bearer ${userTok}`);
-      return jsonResponse(200, {}, { "x-override-status-link": "https://poll.example/job/c1" });
-    }
-    if (String(url).includes("poll.example")) {
-      return jsonResponse(200, {
-        outputs: [{ image: { presignedUrl: "https://cdn.example/cookie.png" } }],
-      });
-    }
-    throw new Error(`unexpected ${url}`);
-  };
-
-  // Use the image handler which resolves credentials (cookie → IMS).
-  const result = await handleAdobeFireflyImageGeneration({
-    model: "nano-banana-pro",
-    provider: "adobe-firefly",
-    body: { prompt: "cookie path" },
-    credentials: { apiKey: "s_ecid=abc; sessionToken=xyz; other=1" },
-    fetchImpl: fetchImpl as typeof fetch,
-  });
-  assert.equal(result.success, true);
-  assert.ok(urls.some((u) => u.includes("ims/check")));
-  assert.ok(urls.some((u) => u.includes("generate-async")));
 });
 
 test("unit-test setup disables Firefly browser refresh even for a forced warm", async () => {

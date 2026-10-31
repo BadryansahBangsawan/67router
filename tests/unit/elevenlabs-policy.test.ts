@@ -19,9 +19,6 @@ const core = await import("../../src/lib/db/core.ts");
 const readCache = await import("../../src/lib/db/readCache.ts");
 const apiKeysDb = await import("../../src/lib/db/apiKeys.ts");
 const costRules = await import("../../src/domain/costRules.ts");
-const voicesRoute = await import("../../src/app/api/v1/voices/route.ts");
-const speechRoute = await import("../../src/app/api/v1/text-to-speech/[voiceId]/route.ts");
-const transcriptionRoute = await import("../../src/app/api/v1/speech-to-text/route.ts");
 
 const { nativeGenerationRoutes } = await import("./helpers/elevenLabsGenerationRoutes.ts");
 const originalFetch = globalThis.fetch;
@@ -51,24 +48,6 @@ function stubUpstream() {
 
 async function callAllNativeRoutes(apiKey: string) {
   const auth = { Authorization: `Bearer ${apiKey}` };
-  const voicesResponse = await voicesRoute.GET(
-    new Request("http://localhost/v1/voices", { headers: auth })
-  );
-  const speechResponse = await speechRoute.POST(
-    new Request("http://localhost/v1/text-to-speech/voice_123", {
-      method: "POST",
-      headers: { ...auth, "Content-Type": "application/json" },
-      body: "{}",
-    }),
-    { params: Promise.resolve({ voiceId: "voice_123" }) }
-  );
-  const transcriptionResponse = await transcriptionRoute.POST(
-    new Request("http://localhost/v1/speech-to-text", {
-      method: "POST",
-      headers: auth,
-      body: new FormData(),
-    })
-  );
   const generationResponses = await Promise.all(
     nativeGenerationRoutes.map(({ route, body, path: routePath }) =>
       route.POST(
@@ -80,7 +59,7 @@ async function callAllNativeRoutes(apiKey: string) {
       )
     )
   );
-  return [voicesResponse, speechResponse, transcriptionResponse, ...generationResponses];
+  return generationResponses;
 }
 
 test.beforeEach(async () => {
@@ -129,20 +108,6 @@ test("a key scoped away from the elevenlabs category is rejected with 403 on all
     assert.match(body.error?.message ?? "", /(elevenlabs|music).*not allowed/i);
   }
   assert.equal(upstreamWasCalled(), false);
-});
-
-test("an unrestricted key still proxies through to the upstream successfully", async () => {
-  const key = await apiKeysDb.createApiKey("EL Unrestricted Key", "machine-elevenlabs-ok");
-
-  const upstreamWasCalled = stubUpstream();
-  const response = await voicesRoute.GET(
-    new Request("http://localhost/v1/voices", {
-      headers: { Authorization: `Bearer ${key.key}` },
-    })
-  );
-
-  assert.equal(response.status, 200);
-  assert.equal(upstreamWasCalled(), true);
 });
 
 for (const { path: routePath, route, body, defaultModel } of nativeGenerationRoutes) {

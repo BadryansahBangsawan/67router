@@ -363,7 +363,3 @@ Gå til Providers → klikk på leverandøren → klikk på **Disconnect**.
 - **[Veiledning for gratisnivåer](./FREE-TIERS-GUIDE.md)** — Få gratis KI uten kredittkort
 - **[Feilsøking](../guides/TROUBLESHOOTING.md)** — Løs vanlige problemer
 - **[Leverandørreferanse](../reference/PROVIDER_REFERENCE.md)** — Fullstendig liste over 226 leverandører
-
-## Cursor-bilder
-
-Bilder fra Cursor-abonnementet bruker `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Se [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

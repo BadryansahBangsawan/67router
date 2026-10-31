@@ -363,7 +363,3 @@ Providers मा जानुहोस् → प्रदायकमा क्
 - **[निःशुल्क तहहरूको मार्गदर्शिका](./FREE-TIERS-GUIDE.md)** — क्रेडिट कार्डबिना निःशुल्क AI प्राप्त गर्नुहोस्
 - **[समस्या समाधान](../guides/TROUBLESHOOTING.md)** — सामान्य समस्याहरू समाधान गर्नुहोस्
 - **[प्रदायक सन्दर्भ](../reference/PROVIDER_REFERENCE.md)** — 226 प्रदायकहरूको पूर्ण सूची
-
-## Cursor का छविहरू
-
-Cursor योजनाका छविहरूले `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) प्रयोग गर्छन्। [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) हेर्नुहोस्।

@@ -11,7 +11,6 @@ process.env.API_KEY_SECRET = process.env.API_KEY_SECRET || "media-cost-test-api-
 
 const core = await import("../../src/lib/db/core.ts");
 const { OMNIROUTE_RESPONSE_HEADERS } = await import("../../src/shared/constants/headers.ts");
-const imageRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const videoRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
 
@@ -58,34 +57,6 @@ function assertCostTelemetryHeaders(response: Response) {
   const provider = response.headers.get(OMNIROUTE_RESPONSE_HEADERS.provider);
   assert.ok(provider && provider.trim().length > 0, "provider header must be present");
 }
-
-test("v1 images generation success Response carries cost telemetry headers", async () => {
-  globalThis.fetch = (async (url: unknown) => {
-    const stringUrl = String(url);
-    if (stringUrl === "http://localhost:7860/sdapi/v1/txt2img") {
-      return new Response(JSON.stringify({ images: ["YmFzZTY0LWltYWdl"] }), {
-        status: 200,
-        headers: { "content-type": "application/json" },
-      });
-    }
-    throw new Error(`Unexpected URL: ${stringUrl}`);
-  }) as typeof fetch;
-
-  const response = await imageRoute.POST(
-    new Request("http://localhost/api/v1/images/generations", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "sdwebui/stable-diffusion-v1-5",
-        prompt: "telemetry image",
-      }),
-    })
-  );
-
-  assertCostTelemetryHeaders(response);
-  const body = (await response.json()) as { data?: unknown[] };
-  assert.ok(Array.isArray(body.data) && body.data.length >= 1, "should return image data");
-});
 
 test("v1 videos generation success Response carries cost telemetry headers", async () => {
   globalThis.setTimeout = immediateTimeout as typeof setTimeout;

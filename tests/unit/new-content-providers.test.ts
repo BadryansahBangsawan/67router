@@ -100,11 +100,6 @@ test("videoGeneration handler has haiper-video dispatch", async () => {
   assert.equal(typeof mod.handleVideoGeneration, "function");
 });
 
-test("imageGeneration handler has ideogram-image dispatch", async () => {
-  const mod = await import("../../open-sse/handlers/imageGeneration.ts");
-  assert.equal(typeof mod.handleImageGeneration, "function");
-});
-
 test("musicGeneration handler exports handleMusicGeneration (suno-music dispatch retired #14224)", async () => {
   const mod = await import("../../open-sse/handlers/musicGeneration.ts");
   assert.equal(typeof mod.handleMusicGeneration, "function");

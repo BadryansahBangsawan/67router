@@ -2,8 +2,7 @@
 // web-cookie media provider.
 //
 // Adobe Firefly is image/video generation only (Firefly 3P async APIs). There
-// is no chat/completions surface. Real work lives in:
-//   open-sse/handlers/imageGeneration/providers/adobeFirefly.ts
+// is no chat/completions surface. 67router keeps only the video path:
 //   open-sse/handlers/videoGeneration/adobeFireflyHandler.ts
 //
 // Without this executor, getExecutor("adobe-firefly") would fall through to
@@ -23,8 +22,7 @@ export class AdobeFireflyExecutor extends BaseExecutor {
     return makeExecutorErrorResult(
       400,
       "adobe-firefly is a media-generation provider and does not support chat completions. " +
-        "Use POST /v1/images/generations or /v1/images/edits (e.g. model \"adobe-firefly/nano-banana-pro\") " +
-        "or POST /v1/videos/generations (e.g. model \"adobe-firefly/sora-2\").",
+        'Use POST /v1/videos/generations (e.g. model "adobe-firefly/sora-2").',
       _input.body,
       ADOBE_FIREFLY_BASE_URL
     );

@@ -107,6 +107,27 @@ const REMOVED_PATHS: string[] = [
   "open-sse/mcp-server/tools/pluginTools.ts",
   "bin/cli/commands/plugin.mjs",
   "bin/cli/plugins.mjs",
+  // images + audio (PR-4). /v1/audio/transcriptions stays: the chat audio bridge uses it.
+  "src/app/api/v1/images",
+  "src/app/api/v1/providers/[provider]/images",
+  "src/app/api/v1/audio/speech",
+  "src/app/api/v1/audio/translations",
+  "src/app/api/v1/text-to-speech",
+  "src/app/api/v1/speech-to-text",
+  "src/app/api/v1/voices",
+  "src/app/api/v1/providers/[provider]/voices",
+  "open-sse/handlers/imageGeneration.ts",
+  "open-sse/handlers/imageGeneration",
+  "open-sse/handlers/imageUpscale.ts",
+  "open-sse/handlers/imageUpscale",
+  "open-sse/handlers/audioSpeech.ts",
+  "open-sse/handlers/audioTranslation.ts",
+  "open-sse/services/imageCombo.ts",
+  "open-sse/services/speechCombo.ts",
+  "src/lib/images",
+  "src/sse/services/imageCredentialRetry.ts",
+  "src/app/api/v1/_shared/fishAudioProxy.ts",
+  "bin/cli/api-commands/images.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -185,6 +206,17 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /\bpluginTools\b/,
   /\bOMNIROUTE_PLUGINS_DIR\b/,
   /cli\/plugins\.mjs|commands\/plugin\.mjs/,
+  // images + audio (PR-4). String-anchored so upstream provider URLs in the kept
+  // registries (e.g. "https://api.openai.com/v1/images/generations") do not match.
+  /["'][^"'\n]*handlers\/(imageGeneration|imageUpscale|audioSpeech|audioTranslation)\b/,
+  /["'][^"'\n]*services\/(imageCombo|speechCombo)\b/,
+  /\b(handleImageGeneration|handleImageUpscale|handleAudioSpeech|handleAudioTranslation)\b/,
+  /["'][^"'\n]*lib\/images\//,
+  /imageCredentialRetry|imageRequestAccounting|imageGenerationStream|fishAudioProxy/,
+  /["'][^"'\n]*executors\/(awsPollyTts|dashscopeTts|fishAudioTts|geminiTts|gtts)\b/,
+  /["'`](?:\/api)?\/v1\/images\/(generations|edits|upscale)/,
+  /["'`](?:\/api)?\/v1\/audio\/(speech|translations)/,
+  /["'`](?:\/api)?\/v1\/(text-to-speech|speech-to-text|voices)\b/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

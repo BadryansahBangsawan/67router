@@ -35,7 +35,7 @@ test("the app key-scope module re-exports the engine implementations", () => {
 });
 
 test("media combo executors import the key scope from the engine, never from src", () => {
-  for (const file of ["imageCombo.ts", "speechCombo.ts", "videoCombo.ts"]) {
+  for (const file of ["videoCombo.ts"]) {
     const source = fs.readFileSync(path.join("open-sse/services", file), "utf8");
     assert.doesNotMatch(source, /@\/sse\/services\/keyConnectionScope/, file);
     assert.match(source, /open-sse\/services\/comboKeyScope\.ts/, file);

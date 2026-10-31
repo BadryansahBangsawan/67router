@@ -363,7 +363,3 @@ Vai su Provider → fai clic sul provider → fai clic su **Disconnetti**.
 - **[Guida ai piani gratuiti](./FREE-TIERS-GUIDE.md)** — Ottieni un'IA gratuita senza carta di credito
 - **[Risoluzione dei problemi](../guides/TROUBLESHOOTING.md)** — Risolvi i problemi comuni
 - **[Riferimento dei provider](../reference/PROVIDER_REFERENCE.md)** — Elenco completo di 226 provider
-
-## Immagini di Cursor
-
-Le immagini del piano Cursor utilizzano `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Consulta [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

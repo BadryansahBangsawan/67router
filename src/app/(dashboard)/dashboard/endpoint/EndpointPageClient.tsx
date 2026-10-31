@@ -343,24 +343,18 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   const endpointData = useMemo(() => {
     const chat = allModels.filter((m) => !m.type && !m.parent);
     const embeddings = allModels.filter((m) => m.type === "embedding" && !m.parent);
-    const images = allModels.filter((m) => m.type === "image" && !m.parent);
     const video = allModels.filter((m) => m.type === "video" && !m.parent);
     const rerank = allModels.filter((m) => m.type === "rerank" && !m.parent);
     const audioTranscription = allModels.filter(
       (m) => m.type === "audio" && m.subtype === "transcription" && !m.parent
     );
-    const audioSpeech = allModels.filter(
-      (m) => m.type === "audio" && m.subtype === "speech" && !m.parent
-    );
     const music = allModels.filter((m) => m.type === "music" && !m.parent);
     return {
       chat,
       embeddings,
-      images,
       video,
       rerank,
       audioTranscription,
-      audioSpeech,
       music,
     };
   }, [allModels]);
@@ -372,18 +366,16 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
   const availableEndpointCount = useMemo(() => {
     const chatCount = endpointData.chat.length > 0 ? 4 : 0; // chat + responses + completions + messages
-    const imageCount = endpointData.images.length > 0 ? 2 : 0; // image gen + image edits
     const otherMedia = [
       endpointData.embeddings,
       endpointData.audioTranscription,
-      endpointData.audioSpeech,
       endpointData.music,
       endpointData.video,
     ].filter((m) => m.length > 0).length;
     const utilityFixed = 1; // list models (always available)
     const modelUtility = endpointData.rerank.length > 0 ? 1 : 0;
     const searchCount = searchProviders.length > 0 ? 1 : 0;
-    return chatCount + imageCount + otherMedia + utilityFixed + modelUtility + searchCount;
+    return chatCount + otherMedia + utilityFixed + modelUtility + searchCount;
   }, [endpointData, searchProviders]);
 
   const postCloudAction = async (action, timeoutMs = CLOUD_ACTION_TIMEOUT_MS) => {
@@ -1931,48 +1923,12 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
               modelsLoading={modelsLoading}
             />
             <EndpointCard
-              icon="image"
-              iconColor="text-chart-3"
-              iconBg="bg-chart-3/10"
-              title={t("imageGeneration")}
-              path="/v1/images/generations"
-              models={endpointData.images}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="edit_square"
-              iconColor="text-chart-3"
-              iconBg="bg-chart-3/10"
-              title={t("imageEdits")}
-              path="/v1/images/edits"
-              models={endpointData.images}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
               icon="mic"
               iconColor="text-error"
               iconBg="bg-error/10"
               title={t("audioTranscription")}
               path="/v1/audio/transcriptions"
               models={endpointData.audioTranscription}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="record_voice_over"
-              iconColor="text-info"
-              iconBg="bg-info/10"
-              title={t("textToSpeech")}
-              path="/v1/audio/speech"
-              models={endpointData.audioSpeech}
               copy={copy}
               copied={copied}
               baseUrl={currentEndpoint}
@@ -2340,7 +2296,6 @@ function ProviderModelsModal({
 
   const chatModels = providerModels.filter((m) => !m.type);
   const embeddingModels = providerModels.filter((m) => m.type === "embedding");
-  const imageModels = providerModels.filter((m) => m.type === "image");
 
   const renderModelGroup = (title, icon, groupModels) => {
     if (groupModels.length === 0) return null;
@@ -2394,7 +2349,6 @@ function ProviderModelsModal({
           <>
             {renderModelGroup(t("chat"), "chat", chatModels)}
             {renderModelGroup(t("embedding"), "data_array", embeddingModels)}
-            {renderModelGroup(t("image"), "image", imageModels)}
           </>
         )}
       </div>

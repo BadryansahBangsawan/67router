@@ -96,8 +96,7 @@ export {
   getAllEmbeddingModels,
 } from "./config/embeddingRegistry.ts";
 
-// Image Generation
-export { handleImageGeneration } from "./handlers/imageGeneration.ts";
+// Image registry (model catalog only; the image endpoints were removed)
 export {
   IMAGE_PROVIDERS,
   getImageProvider,
@@ -122,9 +121,8 @@ export {
   getAllRerankModels,
 } from "./config/rerankRegistry.ts";
 
-// Audio (Transcription + Speech)
+// Audio (transcription handler; the speech endpoint was removed, its registry stays)
 export { handleAudioTranscription } from "./handlers/audioTranscription.ts";
-export { handleAudioSpeech } from "./handlers/audioSpeech.ts";
 export {
   AUDIO_TRANSCRIPTION_PROVIDERS,
   AUDIO_SPEECH_PROVIDERS,

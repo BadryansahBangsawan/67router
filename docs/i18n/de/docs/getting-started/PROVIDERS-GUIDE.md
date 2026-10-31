@@ -363,7 +363,3 @@ Gehe zu Anbieter → klicke auf den Anbieter → klicke auf **Verbindung trennen
 - **[Leitfaden zu kostenlosen Kontingenten](./FREE-TIERS-GUIDE.md)** — Nutzen Sie kostenlose KI ohne Kreditkarte
 - **[Fehlerbehebung](../guides/TROUBLESHOOTING.md)** — Beheben Sie häufige Probleme
 - **[Anbieterreferenz](../reference/PROVIDER_REFERENCE.md)** — Vollständige Liste mit 226 Anbietern
-
-## Cursor-Bilder
-
-Bilder des Cursor-Tarifs verwenden `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Siehe [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

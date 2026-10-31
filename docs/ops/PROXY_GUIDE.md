@@ -110,8 +110,7 @@ The first match wins. This means you can set a global proxy as a fallback but ov
 | -------------------- | -------- | --------------------------------------------- |
 | Chat completions     | ✅       | All `/v1/chat/completions` requests           |
 | Embeddings           | ✅       | `/v1/embeddings`                              |
-| Image generation     | ✅       | `/v1/images/generations`                      |
-| Audio (TTS/STT)      | ✅       | `/v1/audio/*`                                 |
+| Audio (STT)          | ✅       | `/v1/audio/transcriptions`                    |
 | OAuth token exchange | ✅       | Solves `unsupported_country_region_territory` |
 | Connection tests     | ✅       | "Test Connection" button uses proxy           |
 | Token refresh        | ✅       | Background OAuth renewal                      |

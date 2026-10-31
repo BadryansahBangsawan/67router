@@ -345,7 +345,3 @@ Lépj a Providers menübe → kattints a szolgáltatóra → kattints a **Discon
 - **[Ingyenes csomagok útmutatója](./FREE-TIERS-GUIDE.md)** — Használjon ingyenes MI-t bankkártya nélkül
 - **[Hibaelhárítás](../guides/TROUBLESHOOTING.md)** — Gyakori problémák megoldása
 - **[Szolgáltatói referencia](../reference/PROVIDER_REFERENCE.md)** — A 226 szolgáltató teljes listája
-
-## Cursor-képek
-
-A Cursor-csomag képei az `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) szolgáltatót használják. Lásd: [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

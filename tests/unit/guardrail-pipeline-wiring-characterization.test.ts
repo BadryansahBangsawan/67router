@@ -86,11 +86,11 @@ test("the chat handler is imported by exactly these modules (the chat-family rou
   ]);
 });
 
-test("image, embeddings and audio routes never reach the guardrail registry", () => {
+test("embeddings and audio routes never reach the guardrail registry", () => {
   const routes = SOURCE_FILES.filter((file) =>
-    /^src\/app\/api\/v1\/(images|embeddings|audio)\/.*route\.ts$/.test(file)
+    /^src\/app\/api\/v1\/(embeddings|audio)\/.*route\.ts$/.test(file)
   );
-  assert.ok(routes.length >= 6, `expected the image/embeddings/audio routes, got ${routes}`);
+  assert.ok(routes.length >= 2, `expected the embeddings/audio routes, got ${routes}`);
   for (const route of routes) {
     const source = read(route);
     assert.ok(!/sse\/handlers\/chat["']/.test(source), `${route} imports the chat handler`);
@@ -98,12 +98,7 @@ test("image, embeddings and audio routes never reach the guardrail registry", ()
   }
   // The only injection check those routes get is the legacy middleware facade (prompt
   // injection only; see the disable-channel characterization in the behavioral file).
-  for (const route of [
-    "src/app/api/v1/embeddings/route.ts",
-    "src/app/api/v1/images/generations/route.ts",
-    "src/app/api/v1/images/edits/route.ts",
-    "src/app/api/v1/audio/speech/route.ts",
-  ]) {
+  for (const route of ["src/app/api/v1/embeddings/route.ts"]) {
     assert.ok(/(?:withInjectionGuard|createInjectionGuard)\(/.test(read(route)), route);
   }
 });

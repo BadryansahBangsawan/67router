@@ -363,7 +363,3 @@ Gaa na Ndị na-eweta ọrụ → pịa onye na-eweta ọrụ ahụ → pịa **
 - **[Ntuziaka Ọkwa N'efu](./FREE-TIERS-GUIDE.md)** — Nweta AI n'efu na-enweghị kaadị kredit
 - **[Idozi Nsogbu](../guides/TROUBLESHOOTING.md)** — Dozie nsogbu ndị a na-enwekarị
 - **[Ntụaka Ndị Na-enye Ọrụ](../reference/PROVIDER_REFERENCE.md)** — Ndepụta zuru ezu nke ndị na-enye ọrụ 226
-
-## Onyonyo Cursor
-
-Onyonyo atụmatụ Cursor na-eji `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Lee [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

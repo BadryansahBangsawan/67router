@@ -2,7 +2,6 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 const { handleAudioTranscription } = await import("../../open-sse/handlers/audioTranscription.ts");
-const { handleAudioSpeech } = await import("../../open-sse/handlers/audioSpeech.ts");
 const { AUDIO_TRANSCRIPTION_PROVIDERS, AUDIO_SPEECH_PROVIDERS } =
   await import("../../open-sse/config/audioRegistry.ts");
 const { validateSonioxProvider } =
@@ -188,117 +187,6 @@ test("handleAudioTranscription reports a Soniox job that ends in error", async (
   } finally {
     globalThis.fetch = originalFetch;
     globalThis.setTimeout = originalSetTimeout;
-  }
-});
-
-test("handleAudioSpeech maps the OpenAI speech body to Soniox and passes audio through", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured: { url: string; headers: Record<string, string>; body: Record<string, unknown> };
-
-  globalThis.fetch = async (url, options: FetchInit = {}) => {
-    captured = {
-      url: String(url),
-      headers: options.headers,
-      body: JSON.parse(String(options.body || "{}")),
-    };
-    return new Response(new Uint8Array([1, 2, 3]), { status: 200 });
-  };
-
-  try {
-    const response = await handleAudioSpeech({
-      body: {
-        model: "soniox/tts-rt-v1",
-        input: "hello",
-        voice: "alloy",
-        response_format: "wav",
-      },
-      credentials: { apiKey: "soniox-key" },
-    });
-
-    assert.equal(captured.url, "https://tts-rt.soniox.com/tts");
-    assert.equal(captured.headers.Authorization, "Bearer soniox-key");
-    assert.equal(captured.body.model, "tts-rt-v1");
-    assert.equal(captured.body.text, "hello");
-    // Soniox rejects a request without language and voice (400 "Missing required
-    // field"), and "alloy" is an OpenAI stock voice, not a Soniox one.
-    assert.equal(captured.body.language, "en");
-    assert.equal(captured.body.voice, "Adrian");
-    assert.equal(captured.body.audio_format, "wav");
-    assert.equal(response.status, 200);
-    assert.equal(response.headers.get("content-type"), "audio/wav");
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-});
-
-test("handleAudioSpeech forwards a Soniox voice and language as given", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured: Record<string, unknown> = {};
-
-  globalThis.fetch = async (_url, options: FetchInit = {}) => {
-    captured = JSON.parse(String(options.body || "{}"));
-    return new Response(new Uint8Array([1]), { status: 200 });
-  };
-
-  try {
-    const response = await handleAudioSpeech({
-      body: { model: "soniox/tts-rt-v1", input: "xin chào", voice: "Daniel", language: "vi" },
-      credentials: { apiKey: "soniox-key" },
-    });
-
-    assert.equal(response.status, 200);
-    assert.equal(captured.model, "tts-rt-v1");
-    assert.equal(captured.voice, "Daniel");
-    assert.equal(captured.language, "vi");
-    assert.equal(captured.audio_format, "mp3");
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-});
-
-test("handleAudioSpeech fills the required Soniox voice and language when omitted", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured: Record<string, unknown> = {};
-
-  globalThis.fetch = async (_url, options: FetchInit = {}) => {
-    captured = JSON.parse(String(options.body || "{}"));
-    return new Response(new Uint8Array([1]), { status: 200 });
-  };
-
-  try {
-    const response = await handleAudioSpeech({
-      body: { model: "soniox/tts-rt-v1", input: "hello" },
-      credentials: { apiKey: "soniox-key" },
-    });
-
-    assert.equal(response.status, 200);
-    assert.equal(captured.voice, "Adrian");
-    assert.equal(captured.language, "en");
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-});
-
-test("handleAudioSpeech surfaces sanitized Soniox upstream errors", async () => {
-  const originalFetch = globalThis.fetch;
-
-  globalThis.fetch = async () =>
-    new Response(JSON.stringify({ error: { message: "unknown voice" } }), {
-      status: 400,
-      headers: { "content-type": "application/json" },
-    });
-
-  try {
-    const response = await handleAudioSpeech({
-      body: { model: "soniox/tts-rt-v1", input: "hello" },
-      credentials: { apiKey: "soniox-key" },
-    });
-    const payload = (await response.json()) as ErrorPayload;
-
-    assert.equal(response.status, 400);
-    assert.equal(payload.error.message, "unknown voice");
-  } finally {
-    globalThis.fetch = originalFetch;
   }
 });
 

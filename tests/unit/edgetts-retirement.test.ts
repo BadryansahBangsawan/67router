@@ -8,7 +8,6 @@ import {
   parseSpeechModel,
 } from "../../open-sse/config/audioRegistry.ts";
 import { getRegistryMediaKinds } from "../../open-sse/config/mediaServiceKinds.ts";
-import { handleAudioSpeech } from "../../open-sse/handlers/audioSpeech.ts";
 import { toProviderModels } from "../../src/app/(dashboard)/dashboard/cache/media/mediaProviderModels.ts";
 
 test("retired EdgeTTS is absent from every published speech catalog", () => {
@@ -27,22 +26,6 @@ test("retired EdgeTTS is absent from every published speech catalog", () => {
     toProviderModels(AUDIO_SPEECH_PROVIDERS).some((provider) => provider.id === "edgetts"),
     false
   );
-});
-
-test("speech requests no longer advertise or dispatch EdgeTTS", async () => {
-  const response = await handleAudioSpeech({
-    body: { model: "edgetts/en-US-AriaNeural", input: "hello" },
-    credentials: null,
-  });
-  const payload = (await response.json()) as { error: { message: string } };
-
-  assert.equal(response.status, 400);
-  assert.match(payload.error.message, /No speech provider found/);
-  const available = payload.error.message.split("Available:")[1] || "";
-  assert.doesNotMatch(available, /edgetts/i);
-  for (const control of ["elevenlabs", "aws-polly", "gtts"]) {
-    assert.match(available, new RegExp(`\\b${control}\\b`));
-  }
 });
 
 test("retiring EdgeTTS preserves the supported speech providers", () => {

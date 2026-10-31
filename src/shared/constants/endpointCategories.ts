@@ -37,22 +37,16 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     prefixes: ["/v1/embeddings", "/v1/multimodal-embeddings"],
   },
   {
-    id: "images",
-    label: "Images",
-    description: "Image generation, editing and upscaling",
-    prefixes: ["/v1/images"],
-  },
-  {
     id: "audio",
     label: "Audio / Speech",
-    description: "Text-to-speech and speech-to-text",
+    description: "Speech-to-text transcription",
     prefixes: ["/v1/audio"],
   },
   {
     id: "elevenlabs",
     label: "ElevenLabs Voice",
-    description: "Native ElevenLabs speech-to-text, text-to-speech, voices and sound effects",
-    prefixes: ["/v1/speech-to-text", "/v1/text-to-speech", "/v1/voices", "/v1/sound-generation"],
+    description: "Native ElevenLabs sound effects",
+    prefixes: ["/v1/sound-generation"],
   },
   {
     id: "video",

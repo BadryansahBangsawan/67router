@@ -357,7 +357,3 @@ Hãy bắt đầu với **Kiro AI** — dịch vụ này miễn phí, không yê
 - **[Hướng dẫn các gói miễn phí](./FREE-TIERS-GUIDE.md)** — Sử dụng AI miễn phí mà không cần thẻ tín dụng
 - **[Khắc phục sự cố](../guides/TROUBLESHOOTING.md)** — Khắc phục các sự cố thường gặp
 - **[Tài liệu tham khảo về nhà cung cấp](../reference/PROVIDER_REFERENCE.md)** — Danh sách đầy đủ gồm 226 nhà cung cấp
-
-## Hình ảnh Cursor
-
-Các hình ảnh của gói Cursor sử dụng `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Xem [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

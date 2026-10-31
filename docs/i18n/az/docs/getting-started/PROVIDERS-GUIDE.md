@@ -362,7 +362,3 @@ Providers bölməsinə keçin → provayderin üzərinə klikləyin → **Discon
 - **[Pulsuz Tariflər Təlimatı](./FREE-TIERS-GUIDE.md)** — Kredit kartı olmadan pulsuz süni intellekt əldə edin
 - **[Problemlərin Aradan Qaldırılması](../guides/TROUBLESHOOTING.md)** — Ümumi problemləri həll edin
 - **[Provayder Arayışı](../reference/PROVIDER_REFERENCE.md)** — 226 provayderin tam siyahısı
-
-## Cursor şəkilləri
-
-Cursor plan şəkilləri `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) istifadə edir. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) sənədinə baxın.

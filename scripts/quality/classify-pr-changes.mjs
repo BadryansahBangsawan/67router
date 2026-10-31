@@ -138,8 +138,6 @@ const ROUTING_SERVICE_PREFIXES = [
   "open-sse/services/fusion.",
   "open-sse/services/wildcardRouter.",
   "open-sse/services/taskAwareRout", // taskAwareRouter.ts, taskAwareRouting.ts
-  "open-sse/services/imageCombo.",
-  "open-sse/services/speechCombo.",
   "open-sse/services/videoCombo.",
   "src/lib/resilience/",
   "src/lib/routing/",

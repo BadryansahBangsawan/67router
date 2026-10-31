@@ -346,7 +346,3 @@ Providers पर जाएँ → प्रदाता पर क्लिक �
 - **[मुफ़्त टियर गाइड](./FREE-TIERS-GUIDE.md)** — बिना क्रेडिट कार्ड के मुफ़्त AI प्राप्त करें
 - **[समस्या निवारण](../guides/TROUBLESHOOTING.md)** — सामान्य समस्याएँ ठीक करें
 - **[प्रदाता संदर्भ](../reference/PROVIDER_REFERENCE.md)** — 226 प्रदाताओं की पूरी सूची
-
-## Cursor छवियाँ
-
-Cursor योजना की छवियाँ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) का उपयोग करती हैं। [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) देखें।

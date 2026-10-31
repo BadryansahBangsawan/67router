@@ -357,7 +357,3 @@ OAuth преко прегледача доступан је само када а
 - **[Водич за бесплатне пакете](./FREE-TIERS-GUIDE.md)** — Користите бесплатну вештачку интелигенцију без кредитне картице
 - **[Решавање проблема](../guides/TROUBLESHOOTING.md)** — Решите уобичајене проблеме
 - **[Референтни преглед провајдера](../reference/PROVIDER_REFERENCE.md)** — Потпуна листа од 226 провајдера
-
-## Cursor слике
-
-Слике Cursor пакета користе `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Погледајте [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

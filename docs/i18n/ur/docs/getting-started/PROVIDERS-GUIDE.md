@@ -357,7 +357,3 @@ Providers پر جائیں → فراہم کنندہ پر کلک کریں → **D
 - **[مفت درجات کی رہنما](./FREE-TIERS-GUIDE.md)** — کریڈٹ کارڈ کے بغیر مفت AI حاصل کریں
 - **[مسائل کا ازالہ](../guides/TROUBLESHOOTING.md)** — عام مسائل حل کریں
 - **[فراہم کنندگان کا حوالہ](../reference/PROVIDER_REFERENCE.md)** — 226 فراہم کنندگان کی مکمل فہرست
-
-## Cursor تصاویر
-
-Cursor پلان کی تصاویر `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) استعمال کرتی ہیں۔ [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) دیکھیں۔

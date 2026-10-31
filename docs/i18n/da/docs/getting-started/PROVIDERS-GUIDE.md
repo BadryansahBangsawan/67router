@@ -363,7 +363,3 @@ Gå til Udbydere → klik på udbyderen → klik på **Afbryd forbindelsen**.
 - **[Guide til gratis niveauer](./FREE-TIERS-GUIDE.md)** — Få gratis AI uden kreditkort
 - **[Fejlfinding](../guides/TROUBLESHOOTING.md)** — Løs almindelige problemer
 - **[Udbyderreference](../reference/PROVIDER_REFERENCE.md)** — Komplet liste over 226 udbydere
-
-## Cursor-billeder
-
-Billeder fra Cursor-abonnementet bruger `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Se [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

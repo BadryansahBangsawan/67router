@@ -187,8 +187,7 @@ export const KNOWN_UNCLASSIFIED_SOURCE_SPAWN: Record<string, string> = {
   // `x-omniroute-peer-locality === "loopback"` (stamped by the authz pipeline from the
   // real TCP peer, never the spoofable Host header) before calling
   // fetchCursorAgentModels(), and fails closed to the cached/local catalog otherwise —
-  // the same pattern as handleCursorAgentImageGeneration in
-  // open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts.
+  // the same pattern the (since removed) cursor-agent image handler used.
   // Regression guard: tests/unit/authz/route-guard-providers-spawn-local-only.test.ts
   // (asserts the guard exists, precedes the spawn, and fails closed).
   //
@@ -269,7 +268,6 @@ export const KNOWN_TRANSITIVE_SPAWN_SINKS: Record<string, string> = {
   "open-sse/executors/devin-cli-agentic.ts": `${G09_BASELINE} (child_process)`,
   "open-sse/executors/devin-cli.ts": `${G09_BASELINE} (child_process)`,
   "open-sse/executors/zcodeProtocol.ts": `${G09_BASELINE} (child_process)`,
-  "open-sse/handlers/imageGeneration/providers/cursorAgentImage.ts": `${G09_BASELINE} (child_process)`,
   "open-sse/lib/deepseek-pow.ts": `${G09_BASELINE} (worker_threads)`,
   "open-sse/services/adobeFireflyBrowserLogin.ts": `${G09_BASELINE} (child_process)`,
   "open-sse/services/obscura.ts": `${G09_BASELINE} (child_process)`,

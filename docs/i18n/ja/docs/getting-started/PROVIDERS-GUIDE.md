@@ -355,7 +355,3 @@ Providers → プロバイダーをクリック → **Disconnect**をクリッ�
 - **[無料利用枠ガイド](./FREE-TIERS-GUIDE.md)** — クレジットカードなしで無料のAIを利用する
 - **[トラブルシューティング](../guides/TROUBLESHOOTING.md)** — よくある問題を解決する
 - **[プロバイダーリファレンス](../reference/PROVIDER_REFERENCE.md)** — 226のプロバイダーの完全な一覧
-
-## Cursor画像
-
-Cursorプランの画像では`IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）を使用します。[CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)を参照してください。

@@ -48,11 +48,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     null,
     2
   ),
-  "/api/v1/images/generations": JSON.stringify(
-    { model: "openai/gpt-image-2", prompt: "A sunset over mountains", n: 1 },
-    null,
-    2
-  ),
   "/api/v1/responses": JSON.stringify(
     { model: "openai/gpt-4o-mini", input: "What is 67router?" },
     null,
@@ -85,11 +80,6 @@ const EXAMPLE_BODIES: Record<string, string> = {
     2
   ),
   "/api/v1/audio/transcriptions": "",
-  "/api/v1/audio/speech": JSON.stringify(
-    { model: "openai/tts-1", input: "Hello world", voice: "alloy" },
-    null,
-    2
-  ),
 };
 
 export function ApiExplorerClient() {

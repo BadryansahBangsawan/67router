@@ -1,8 +1,8 @@
 /**
  * Shared provider-node resolution for the audio routes
- * (`/v1/audio/transcriptions`, `/v1/audio/speech`, `/v1/audio/translations`).
+ * (`/v1/audio/transcriptions`).
  *
- * The three routes each carried an identical copy of this filter, and every copy
+ * The audio routes each carried an identical copy of this filter, and every copy
  * accepted only nodes typed `chat`/`responses` — so a node explicitly typed
  * `audio-transcriptions` was rejected by the very route it exists for, and its
  * models fell through to the hardcoded registry's bare-id lookup (where an

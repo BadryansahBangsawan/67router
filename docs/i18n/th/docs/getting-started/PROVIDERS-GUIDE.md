@@ -363,7 +363,3 @@ OAuth ผ่านเบราว์เซอร์จะพร้อมใช�
 - **[คู่มือระดับการใช้งานฟรี](./FREE-TIERS-GUIDE.md)** — ใช้ AI ฟรีโดยไม่ต้องมีบัตรเครดิต
 - **[การแก้ไขปัญหา](../guides/TROUBLESHOOTING.md)** — แก้ไขปัญหาที่พบบ่อย
 - **[ข้อมูลอ้างอิงผู้ให้บริการ](../reference/PROVIDER_REFERENCE.md)** — รายชื่อผู้ให้บริการทั้งหมด 226 ราย
-
-## รูปภาพ Cursor
-
-แผนรูปภาพของ Cursor ใช้ `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) ดู [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)

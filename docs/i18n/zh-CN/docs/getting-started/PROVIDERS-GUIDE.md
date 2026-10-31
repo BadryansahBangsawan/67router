@@ -357,7 +357,3 @@ CLI 自身可能在内部使用的任何工具。HTTP 密钥并不保证每个�
 - **[免费套餐指南](./FREE-TIERS-GUIDE.md)** — 无需信用卡即可免费使用 AI
 - **[故障排除](../guides/TROUBLESHOOTING.md)** — 解决常见问题
 - **[提供者参考](../reference/PROVIDER_REFERENCE.md)** — 226 个提供者的完整列表
-
-## Cursor 图像
-
-Cursor 套餐图像使用 `IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）。请参阅 [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)。

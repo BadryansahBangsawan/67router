@@ -346,7 +346,3 @@ Providers로 이동 → 제공업체 클릭 → **Disconnect**를 클릭하세�
 - **[무료 요금제 가이드](./FREE-TIERS-GUIDE.md)** — 신용카드 없이 무료 AI 이용하기
 - **[문제 해결](../guides/TROUBLESHOOTING.md)** — 일반적인 문제 해결하기
 - **[제공업체 참조](../reference/PROVIDER_REFERENCE.md)** — 226개 제공업체 전체 목록
-
-## Cursor 이미지
-
-Cursor 요금제 이미지는 `IMAGE_PROVIDERS.cursor`(`cursor-agent-image`)를 사용합니다. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)를 참조하세요.

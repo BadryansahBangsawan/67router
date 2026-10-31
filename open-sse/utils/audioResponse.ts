@@ -1,11 +1,8 @@
 /**
  * Shared audio/speech HTTP response helpers.
  *
- * Extracted from `open-sse/handlers/audioSpeech.ts` so that both the handler
- * and any provider-specific adapter modules extracted alongside it (e.g.
- * `open-sse/executors/awsPollyTts.ts`) can share the same response-shaping
- * logic without importing from the (frozen, file-size-ratcheted) handler
- * itself — which would create a circular import.
+ * Originally extracted from the (since removed) speech handler. The kept audio
+ * paths (transcription, SYNTX music/sound) still share this response shaping.
  */
 import { CORS_HEADERS } from "./cors.ts";
 import { errorResponse } from "./error.ts";

@@ -363,7 +363,3 @@ Lọ sí Providers → tẹ olùpèsè náà → tẹ **Disconnect**.
 - **[Ìtọ́sọ́nà Àwọn Ìpele Ọ̀fẹ́](./FREE-TIERS-GUIDE.md)** — Gba AI ọ̀fẹ́ láìlo káàdì kirẹ́díìtì
 - **[Yíyanjú Ìṣòro](../guides/TROUBLESHOOTING.md)** — Ṣàtúnṣe àwọn ìṣòro tó wọ́pọ̀
 - **[Ìtọ́kasí Olùpèsè](../reference/PROVIDER_REFERENCE.md)** — Àkójọ kíkún ti àwọn olùpèsè 226
-
-## Àwọn àwòrán Cursor
-
-Àwọn àwòrán ètò Cursor máa ń lo `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Wo [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

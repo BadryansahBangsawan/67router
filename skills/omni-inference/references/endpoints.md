@@ -18,9 +18,6 @@
 - [`GET /api/v1/multimodal-embeddings`](#get-apiv1multimodal-embeddings)
 - [`POST /api/v1/multimodal-embeddings`](#post-apiv1multimodal-embeddings)
 - [`POST /api/v1/providers/{provider}/embeddings`](#post-apiv1providersproviderembeddings)
-- [`POST /api/v1/images/generations`](#post-apiv1imagesgenerations)
-- [`POST /api/v1/providers/{provider}/images/generations`](#post-apiv1providersproviderimagesgenerations)
-- [`POST /api/v1/audio/speech`](#post-apiv1audiospeech)
 - [`POST /api/v1/audio/transcriptions`](#post-apiv1audiotranscriptions)
 - [`POST /api/v1/rerank`](#post-apiv1rerank)
 - [`GET /api/v1`](#get-apiv1)
@@ -33,10 +30,6 @@
 - [`GET /api/v1/management/proxy-subscriptions/{id}/nodes`](#get-apiv1managementproxy-subscriptionsidnodes)
 - [`POST /api/v1/management/proxy-subscriptions/{id}/refresh`](#post-apiv1managementproxy-subscriptionsidrefresh)
 - [`POST /api/v1/ocr`](#post-apiv1ocr)
-- [`POST /api/v1/audio/translations`](#post-apiv1audiotranslations)
-- [`GET /api/v1/voices`](#get-apiv1voices)
-- [`POST /api/v1/speech-to-text`](#post-apiv1speech-to-text)
-- [`POST /api/v1/text-to-speech/{voiceId}`](#post-apiv1text-to-speechvoiceid)
 - [`POST /api/v1/sound-generation`](#post-apiv1sound-generation)
 - [`POST /api/v1/music`](#post-apiv1music)
 - [`POST /api/v1/music/stream`](#post-apiv1musicstream)
@@ -58,9 +51,6 @@
 - [`POST /api/v1/classify`](#post-apiv1classify)
 - [`GET /api/v1/combos`](#get-apiv1combos)
 - [`POST /api/v1/completions`](#post-apiv1completions)
-- [`POST /api/v1/images/edits`](#post-apiv1imagesedits)
-- [`GET /api/v1/images/upscale`](#get-apiv1imagesupscale)
-- [`POST /api/v1/images/upscale`](#post-apiv1imagesupscale)
 - [`GET /api/v1/media/{id}`](#get-apiv1mediaid)
 - [`POST /api/v1/issues/report`](#post-apiv1issuesreport)
 - [`GET /api/v1/management/proxies`](#get-apiv1managementproxies)
@@ -291,41 +281,6 @@ curl -X POST http://localhost:20128/api/v1/providers/{provider}/embeddings \
   -d '{}'
 ```
 
-### POST /api/v1/images/generations
-
-Generate images
-
-```bash
-curl -X POST http://localhost:20128/api/v1/images/generations \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/providers/{provider}/images/generations
-
-Generate images (provider-specific)
-
-```bash
-curl -X POST http://localhost:20128/api/v1/providers/{provider}/images/generations \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/audio/speech
-
-Generate speech audio
-
-Text-to-speech endpoint. Routes to configured TTS providers.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/audio/speech \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
 ### POST /api/v1/audio/transcriptions
 
 Transcribe audio
@@ -463,56 +418,6 @@ Multi-provider document OCR endpoint (Mistral OCR–compatible request and respo
 
 ```bash
 curl -X POST http://localhost:20128/api/v1/ocr \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/audio/translations
-
-Translate audio to English
-
-OpenAI Whisper–compatible audio translation (multipart/form-data). Unlike `/api/v1/audio/transcriptions`, output is always English regardless of the source language. Success responses carry the `X-OmniRoute-*` cost-telemetry headers.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/audio/translations \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### GET /api/v1/voices
-
-List ElevenLabs voices
-
-Proxies `GET https://api.elevenlabs.io/v1/voices` using the stored `elevenlabs` provider credentials (the caller never sends `xi-api-key`). The incoming query string is forwarded unchanged.
-
-```bash
-curl http://localhost:20128/api/v1/voices \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/v1/speech-to-text
-
-ElevenLabs speech-to-text
-
-Streams the request body to `POST https://api.elevenlabs.io/v1/speech-to-text` using the stored `elevenlabs` provider credentials. `content-type` and `accept` are forwarded; the upstream body is relayed unchanged.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/speech-to-text \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/text-to-speech/{voiceId}
-
-ElevenLabs text-to-speech
-
-Streams the request body to `POST https://api.elevenlabs.io/v1/text-to-speech/{voiceId}` using the stored `elevenlabs` provider credentials. `voiceId` must match `^[A-Za-z0-9_-]+$` or the request is rejected with 400 before any upstream call.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/text-to-speech/{voiceId} \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{}'
@@ -746,37 +651,6 @@ POST completions
 
 ```bash
 curl -X POST http://localhost:20128/api/v1/completions \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/images/edits
-
-POST images › edits
-
-```bash
-curl -X POST http://localhost:20128/api/v1/images/edits \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### GET /api/v1/images/upscale
-
-GET images › upscale
-
-```bash
-curl http://localhost:20128/api/v1/images/upscale \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/v1/images/upscale
-
-POST images › upscale
-
-```bash
-curl -X POST http://localhost:20128/api/v1/images/upscale \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{}'

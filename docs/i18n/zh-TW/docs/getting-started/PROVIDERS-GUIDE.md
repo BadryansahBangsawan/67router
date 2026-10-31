@@ -338,7 +338,3 @@ PAT 聊天路徑的程序逾時時間為 45 秒。它會將對話扁平化為提
 - **[免費方案指南](./FREE-TIERS-GUIDE.md)** — 無須信用卡即可免費使用 AI
 - **[疑難排解](../guides/TROUBLESHOOTING.md)** — 修正常見問題
 - **[提供者參考資料](../reference/PROVIDER_REFERENCE.md)** — 226 個提供者的完整清單
-
-## Cursor 圖片
-
-Cursor 方案圖片使用 `IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）。請參閱 [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)。

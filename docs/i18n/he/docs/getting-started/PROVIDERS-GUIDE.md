@@ -363,7 +363,3 @@ OAuth בדפדפן זמין רק כאשר מנהל המערכת מגדיר את 
 - **[המדריך למסלולים חינמיים](./FREE-TIERS-GUIDE.md)** — קבלו בינה מלאכותית בחינם וללא כרטיס אשראי
 - **[פתרון בעיות](../guides/TROUBLESHOOTING.md)** — פתרו בעיות נפוצות
 - **[עיון בספקים](../reference/PROVIDER_REFERENCE.md)** — רשימה מלאה של 226 ספקים
-
-## תמונות Cursor
-
-תמונות תוכנית Cursor משתמשות ב-`IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). ראו [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

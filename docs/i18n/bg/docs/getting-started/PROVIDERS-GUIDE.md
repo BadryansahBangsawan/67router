@@ -363,7 +363,3 @@ OAuth през браузър е наличен само когато админ
 - **[Ръководство за безплатните нива](./FREE-TIERS-GUIDE.md)** — Получете безплатен AI без кредитна карта
 - **[Отстраняване на неизправности](../guides/TROUBLESHOOTING.md)** — Отстранете често срещани проблеми
 - **[Справочник за доставчиците](../reference/PROVIDER_REFERENCE.md)** — Пълен списък с 226 доставчици
-
-## Изображения на Cursor
-
-Изображенията от плановете на Cursor използват `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Вижте [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

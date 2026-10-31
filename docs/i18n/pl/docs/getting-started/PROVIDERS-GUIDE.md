@@ -363,7 +363,3 @@ Przejdź do Providers → kliknij dostawcę → kliknij **Disconnect**.
 - **[Przewodnik po bezpłatnych planach](./FREE-TIERS-GUIDE.md)** — Uzyskaj bezpłatny dostęp do sztucznej inteligencji bez karty kredytowej
 - **[Rozwiązywanie problemów](../guides/TROUBLESHOOTING.md)** — Rozwiązania typowych problemów
 - **[Dokumentacja dostawców](../reference/PROVIDER_REFERENCE.md)** — Pełna lista 226 dostawców
-
-## Obrazy Cursor
-
-Obrazy planu Cursor używają `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Zobacz [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

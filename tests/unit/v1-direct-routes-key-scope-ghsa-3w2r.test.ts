@@ -37,9 +37,6 @@ const apiKeysDb = await import("../../src/lib/db/apiKeys.ts");
 const combosDb = await import("../../src/lib/db/combos.ts");
 const { selectProvider } = await import("../../open-sse/config/searchRegistry.ts");
 
-const translationsRoute = await import("../../src/app/api/v1/audio/translations/route.ts");
-const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
-const imagesRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const videosRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
 const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
 const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
@@ -51,14 +48,9 @@ const ocrRoute = await import("../../src/app/api/v1/ocr/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
 const providerEmbeddingsRoute =
   await import("../../src/app/api/v1/providers/[provider]/embeddings/route.ts");
-const providerImagesRoute =
-  await import("../../src/app/api/v1/providers/[provider]/images/generations/route.ts");
 const webFetchRoute = await import("../../src/app/api/v1/web/fetch/route.ts");
 const webMapRoute = await import("../../src/app/api/v1/web/map/route.ts");
-const voicesRoute = await import("../../src/app/api/v1/voices/route.ts");
 const { nativeGenerationRoutes } = await import("./helpers/elevenLabsGenerationRoutes.ts");
-const providerVoicesRoute =
-  await import("../../src/app/api/v1/providers/[provider]/voices/route.ts");
 
 test.after(async () => {
   core.resetDbInstance();
@@ -160,25 +152,6 @@ function jsonRequest(url: string, bearer: string, body: unknown, method = "POST"
   });
 }
 
-function wavBlob(): Blob {
-  const dataLen = 320;
-  const b = Buffer.alloc(44 + dataLen);
-  b.write("RIFF", 0, "ascii");
-  b.writeUInt32LE(36 + dataLen, 4);
-  b.write("WAVE", 8, "ascii");
-  b.write("fmt ", 12, "ascii");
-  b.writeUInt32LE(16, 16);
-  b.writeUInt16LE(1, 20);
-  b.writeUInt16LE(1, 22);
-  b.writeUInt32LE(16000, 24);
-  b.writeUInt32LE(32000, 28);
-  b.writeUInt16LE(2, 32);
-  b.writeUInt16LE(16, 34);
-  b.write("data", 36, "ascii");
-  b.writeUInt32LE(dataLen, 40);
-  return new Blob([b], { type: "audio/wav" });
-}
-
 const params = (provider: string) => ({ params: Promise.resolve({ provider }) });
 const noContext = {} as never;
 
@@ -190,47 +163,6 @@ type RouteCase = {
 };
 
 const ROUTE_CASES: RouteCase[] = [
-  {
-    name: "POST /v1/audio/translations",
-    provider: "openai",
-    call: (bearer) => {
-      const fd = new FormData();
-      fd.set("model", "openai/whisper-1");
-      fd.set("file", wavBlob(), "clip.wav");
-      return translationsRoute.POST(
-        new Request("http://localhost/v1/audio/translations", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${bearer}` },
-          body: fd,
-        })
-      );
-    },
-  },
-  {
-    name: "POST /v1/audio/speech",
-    provider: "openai",
-    call: (bearer) =>
-      speechRoute.POST(
-        jsonRequest("/v1/audio/speech", bearer, {
-          model: "openai/tts-1",
-          input: "hello",
-          voice: "alloy",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/images/generations",
-    provider: "openai",
-    call: (bearer) =>
-      imagesRoute.POST(
-        jsonRequest("/v1/images/generations", bearer, {
-          model: "openai/dall-e-3",
-          prompt: "a lighthouse",
-        }),
-        noContext
-      ),
-  },
   {
     name: "POST /v1/videos/generations",
     provider: "fal-ai",
@@ -337,18 +269,6 @@ const ROUTE_CASES: RouteCase[] = [
       ),
   },
   {
-    name: "POST /v1/providers/{provider}/images/generations",
-    provider: "openai",
-    call: (bearer) =>
-      providerImagesRoute.POST(
-        jsonRequest("/v1/providers/openai/images/generations", bearer, {
-          model: "openai/dall-e-3",
-          prompt: "a lighthouse",
-        }),
-        params("openai")
-      ),
-  },
-  {
     name: "POST /v1/web/fetch",
     provider: "firecrawl",
     call: (bearer) =>
@@ -380,20 +300,6 @@ const ROUTE_CASES: RouteCase[] = [
           prompt: "calm piano",
         }),
         noContext
-      ),
-  },
-  {
-    name: "GET /v1/voices (ElevenLabs proxy)",
-    provider: "elevenlabs",
-    call: (bearer) => voicesRoute.GET(jsonRequest("/v1/voices", bearer, null, "GET")),
-  },
-  {
-    name: "GET /v1/providers/fishaudio/voices (Fish Audio proxy)",
-    provider: "fishaudio",
-    call: (bearer) =>
-      providerVoicesRoute.GET(
-        jsonRequest("/v1/providers/fishaudio/voices", bearer, null, "GET"),
-        params("fishaudio")
       ),
   },
 ];
@@ -463,18 +369,13 @@ for (const routeCase of ROUTE_CASES) {
 
 // ── combo fan-out ───────────────────────────────────────────────────────────
 
-test("GHSA-3w2r combos: embedding / speech / rerank combo targets stay inside the key's scope", async () => {
+test("GHSA-3w2r combos: embedding / rerank combo targets stay inside the key's scope", async () => {
   const openai = await seedPair("openai");
   const cohere = await seedPair("cohere");
   await combosDb.createCombo({
     name: "ghsa3w2r-embed-combo",
     strategy: "priority",
     models: ["openai/text-embedding-3-small"],
-  });
-  await combosDb.createCombo({
-    name: "ghsa3w2r-speech-combo",
-    strategy: "priority",
-    models: ["openai/tts-1"],
   });
   await combosDb.createCombo({
     name: "ghsa3w2r-rerank-combo",
@@ -488,16 +389,6 @@ test("GHSA-3w2r combos: embedding / speech / rerank combo targets stay inside th
     await (
       await embeddingsRoute.POST(
         jsonRequest("/v1/embeddings", scopedKey, { model: "ghsa3w2r-embed-combo", input: "x" }),
-        noContext
-      )
-    ).text();
-    await (
-      await speechRoute.POST(
-        jsonRequest("/v1/audio/speech", scopedKey, {
-          model: "ghsa3w2r-speech-combo",
-          input: "x",
-          voice: "alloy",
-        }),
         noContext
       )
     ).text();
@@ -551,17 +442,6 @@ type KeylessCase = { name: string; call: (bearer: string) => Promise<Response> }
 
 const KEYLESS_CASES: KeylessCase[] = [
   {
-    name: "POST /v1/images/generations (sdwebui)",
-    call: (bearer) =>
-      imagesRoute.POST(
-        jsonRequest("/v1/images/generations", bearer, {
-          model: "sdwebui/sdxl-base-1.0",
-          prompt: "a lighthouse",
-        }),
-        noContext
-      ),
-  },
-  {
     name: "POST /v1/videos/generations (comfyui)",
     call: (bearer) =>
       videosRoute.POST(
@@ -579,18 +459,6 @@ const KEYLESS_CASES: KeylessCase[] = [
         jsonRequest("/v1/music/generations", bearer, {
           model: "comfyui/musicgen-medium",
           prompt: "calm piano",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/audio/speech (coqui)",
-    call: (bearer) =>
-      speechRoute.POST(
-        jsonRequest("/v1/audio/speech", bearer, {
-          model: "coqui/tts_models/en/ljspeech/tacotron2-DDC",
-          input: "hello",
-          voice: "default",
         }),
         noContext
       ),
@@ -669,7 +537,7 @@ test("GHSA-3w2r keyless: chat's answer when no connection serves a scoped key", 
   const response = await KEYLESS_CASES[0].call(scopedKey);
   assert.equal(response.status, 404);
   const body = (await response.json()) as { error?: { message?: string } };
-  assert.match(body.error?.message ?? "", /No active credentials for provider: sdwebui/);
+  assert.match(body.error?.message ?? "", /No active credentials for provider: comfyui/);
 });
 
 // ── /v1/search cache partitioned by the key's connection scope ──────────────

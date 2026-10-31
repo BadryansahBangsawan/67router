@@ -363,7 +363,3 @@ Pojdite v Providers → kliknite ponudnika → kliknite **Prekini povezavo**.
 - **[Vodnik po brezplačnih paketih](./FREE-TIERS-GUIDE.md)** — Pridobite brezplačno umetno inteligenco brez kreditne kartice
 - **[Odpravljanje težav](../guides/TROUBLESHOOTING.md)** — Odpravite pogoste težave
 - **[Referenčni priročnik ponudnikov](../reference/PROVIDER_REFERENCE.md)** — Celoten seznam 226 ponudnikov
-
-## Slike Cursor
-
-Slike paketov Cursor uporabljajo `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Glejte [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

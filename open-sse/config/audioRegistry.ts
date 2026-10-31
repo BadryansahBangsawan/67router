@@ -1,10 +1,9 @@
 /**
  * Audio Provider Registry
  *
- * Defines providers that support audio endpoints:
- * - /v1/audio/transcriptions (Whisper API)
- * - /v1/audio/translations (Whisper translate-to-English API)
- * - /v1/audio/speech (TTS API)
+ * Defines providers for the audio endpoints. 67router serves only
+ * /v1/audio/transcriptions (Whisper API); the translation and speech provider
+ * tables stay as catalog data (provider metadata, validation, media kinds).
  */
 
 import { getProviderAlias } from "@/shared/constants/providers";
@@ -601,7 +600,7 @@ export const AUDIO_SPEECH_PROVIDERS: Record<string, AudioProvider> = {
     id: "gtts",
     // Google Translate TTS — reverse-engineered, no API key required.
     // POST batchexecute RPC (unlike the deprecated GET /translate_tts) —
-    // handled by open-sse/executors/gtts.ts, dispatched via the "gtts" format.
+    // Dispatched via the "gtts" format by the speech handler, which 67router removed.
     // No official SLA; per-IP rate-limited by Google without notice.
     baseUrl: "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute",
     authType: "none",

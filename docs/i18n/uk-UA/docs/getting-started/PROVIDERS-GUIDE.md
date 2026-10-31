@@ -363,7 +363,3 @@ OAuth через браузер доступний лише тоді, коли �
 - **[Посібник із безкоштовних тарифів](./FREE-TIERS-GUIDE.md)** — Отримайте безкоштовний доступ до ШІ без кредитної картки
 - **[Усунення несправностей](../guides/TROUBLESHOOTING.md)** — Вирішення поширених проблем
 - **[Довідник провайдерів](../reference/PROVIDER_REFERENCE.md)** — Повний список із 226 провайдерів
-
-## Зображення Cursor
-
-Зображення плану Cursor використовують `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Див. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).
