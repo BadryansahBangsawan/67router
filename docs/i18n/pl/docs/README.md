@@ -98,9 +98,6 @@ Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 - [OPEN_SSE_ARCHITECTURE.md](frameworks/OPEN_SSE_ARCHITECTURE.md) — wnętrze silnika streamingu open-sse.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — UI Search Tools Studio.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — inspector ruchu (MITM).
-- [PLUGINS.md](frameworks/PLUGINS.md) — przegląd systemu wtyczek CLI.
-- [PLUGIN_SDK.md](frameworks/PLUGIN_SDK.md) — referencja SDK wtyczek.
-- [PLUGIN_MARKETPLACE.md](frameworks/PLUGIN_MARKETPLACE.md) — marketplace wtyczek.
 
 ## routing/
 

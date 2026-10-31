@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Tingkat proyek (dimuat saat dimulai)
 ```
 
-Atau muat secara terprogram dari sebuah plugin:
+Or register it programmatically at startup:
 
 ```ts
-// Di dalam plugin Anda
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK plugin menyediakan hook onRequest / onResponse / onError. Daftarkan
-  // mesin saat modul plugin dimuat (atau pada onRequest pertama); batalkan pendaftarannya
-  // melalui jalur teardown Anda sendiri.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Saat teardown:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

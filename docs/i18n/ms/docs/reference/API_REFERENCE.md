@@ -2169,26 +2169,6 @@ Lihat [Rangka Kerja Kemahiran](../frameworks/SKILLS.md) untuk butiran lengkap.
 
 ---
 
-## Pemalam
-
-Urus pemalam 67router (sambungan pihak ketiga).
-
-| Kaedah | Laluan                             | Penerangan                       |
-| ------ | ---------------------------------- | -------------------------------- |
-| GET    | `/api/plugins`                     | Senaraikan pemalam yang dipasang |
-| POST   | `/api/plugins/marketplace/install` | Pasang pemalam daripada pasaran  |
-| DELETE | `/api/plugins/[name]`              | Nyahpasang pemalam               |
-| POST   | `/api/plugins/[name]/activate`     | Aktifkan pemalam                 |
-| POST   | `/api/plugins/[name]/deactivate`   | Nyahaktifkan pemalam             |
-| GET    | `/api/plugins/[name]/config`       | Dapatkan konfigurasi pemalam     |
-| PUT    | `/api/plugins/[name]/config`       | Kemas kini konfigurasi pemalam   |
-
-**Pengesahan:** Memerlukan sesi pengurusan.
-
-Lihat [Rangka Kerja Pemalam](../frameworks/PLUGIN_SDK.md) untuk butiran lengkap.
-
----
-
 ## Penghalaan Bayangan
 
 Perbandingan bayangan / A-B bagi penyedia **bukan antara muka REST kendiri** — ia dikonfigurasikan melalui penghalaan kombo (lihat [Kombo Automatik](../routing/AUTO-COMBO.md)). Metrik perbandingan bagi setiap kombo disediakan oleh `GET /api/combos/metrics`.

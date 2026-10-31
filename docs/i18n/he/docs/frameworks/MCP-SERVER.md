@@ -415,8 +415,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                   |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                            |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
 | `read:obsidian`       | 13 כלי קריאה — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 כלי כתיבה — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
@@ -572,7 +570,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | הגדרות כלי מיומנויות (4 כלים)                                    |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | הגדרות כלי מקור הקשר של Notion (6 כלים)                          |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | הגדרות כלי משחוק (8 כלים)                                        |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | כלים לרישום ולניהול תוספים (8 כלים)                              |
 | `src/app/api/mcp/status/route.ts`                                        | נקודת קצה `/api/mcp/status`                                      |
 | `src/app/api/mcp/tools/route.ts`                                         | נקודת קצה `/api/mcp/tools`                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | נתיב תעבורת SSE‏ `/api/mcp/sse`                                  |

@@ -415,8 +415,6 @@ Har bir vosita muayyan doiralarni talab qiladi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13 ta oʻqish vositasi — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 ta yozish vositasi — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -577,7 +575,6 @@ So‘nggi chaqiruvlarni ko‘rib chiqish uchun boshqaruv paneli yoki `/api/mcp/a
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ko‘nikma vositalari ta’riflari (4 ta vosita)                                                |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion kontekst manbasi vositalari ta’riflari (6 ta vosita)                                 |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Geymifikatsiya vositalari ta’riflari (8 ta vosita)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Plaginlarni ro‘yxatdan o‘tkazish va boshqarish vositalari (8 ta vosita)                     |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` endpointi                                                                 |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` endpointi                                                                  |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transport marshruti                                                      |

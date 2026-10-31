@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Рівень проєкту (завантажується під час запуску)
 ```
 
-Або завантажте програмно з плагіна:
+Or register it programmatically at startup:
 
 ```ts
-// У вашому плагіні
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK плагіна надає хуки onRequest / onResponse / onError. Зареєструйте
-  // рушій під час завантаження модуля плагіна (або під час першого onRequest);
-  // скасуйте його реєстрацію у власній процедурі завершення роботи.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Під час завершення роботи:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

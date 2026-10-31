@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurasi",
     "aiFeaturesSection": "Fitur AI",
     "mcp": "MCP",
-    "plugins": "Plugin",
     "apiEndpoints": "Endpoint API",
     "analyticsSearch": "Pencarian",
     "analyticsUtilization": "Pemanfaatan",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Registri keterampilan sandbox",
     "agentSkillsSubtitle": "Registri keterampilan A2A",
     "mcpSubtitle": "Kontrol server MCP",
-    "pluginsSubtitle": "Marketplace & penginstalan plugin",
     "mediaSubtitle": "File media dalam cache",
     "settingsSubtitle": "Semua pengaturan",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Papan Peringkat",
     "limits": "Batasan",
     "profile": "Profil",
-    "plugins": "Plugin",
     "providerStats": "Statistik Penyedia",
     "new": "Baru",
     "quota": "Kuota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tidak dapat menghapus kumpulan ini.",
     "dismiss": "Tutup"
   },
-  "plugins": {
-    "title": "Plugin",
-    "description": "Instal dan kelola plugin untuk memperluas fungsionalitas 67router",
-    "loading": "Memuat plugin...",
-    "scanning": "Memindai...",
-    "scanForPlugins": "Pindai Plugin",
-    "noPlugins": "Tidak ada plugin yang terpasang",
-    "noPluginsDescription": "Tempatkan direktori plugin di ~/.omniroute/plugins/ lalu klik Pindai.",
-    "activate": "Aktifkan",
-    "deactivate": "Nonaktifkan",
-    "uninstall": "Copot pemasangan",
-    "uninstallConfirm": "Copot plugin \"{name}\"?",
-    "pluginScanComplete": "Pemindaian plugin selesai",
-    "pluginScanFailed": "Pemindaian plugin gagal",
-    "activated": "{name} diaktifkan",
-    "deactivated": "{name} dinonaktifkan",
-    "activateFailed": "Gagal mengaktifkan {name}",
-    "deactivateFailed": "Gagal menonaktifkan {name}",
-    "uninstalled": "{name} telah dicopot",
-    "uninstallFailed": "Gagal mencopot {name}",
-    "configure": "Konfigurasi: {name}",
-    "configurePlugin": "Konfigurasikan",
-    "noConfigSettings": "Plugin ini tidak memiliki pengaturan yang dapat dikonfigurasi.",
-    "saving": "Menyimpan...",
-    "saveConfiguration": "Simpan Konfigurasi",
-    "configurationSaved": "Konfigurasi disimpan",
-    "saveConfigurationFailed": "Gagal menyimpan konfigurasi",
-    "pluginNotFound": "Plugin tidak ditemukan",
-    "version": "Versi",
-    "author": "Pengembang",
-    "description_label": "Deskripsi",
-    "status": "Status",
-    "enabled": "Diaktifkan",
-    "disabled": "Dinonaktifkan",
-    "installedTab": "Terinstal",
-    "marketplaceTab": "Pasar",
-    "marketplaceUrlLabel": "URL Marketplace Kustom",
-    "marketplaceUrlPlaceholder": "Biarkan kosong untuk registri resmi Omniroute",
-    "saveMarketplaceUrl": "Simpan & Muat Ulang",
-    "marketplaceUrlSaved": "URL Marketplace diperbarui",
-    "marketplaceEmpty": "Tidak ada plugin yang ditemukan di marketplace.",
-    "marketplaceInstallComingSoon": "Penginstalan marketplace akan segera hadir.",
-    "verified": "Terverifikasi",
-    "install": "Instal",
-    "installedFromMarketplace": "Plugin {name} terinstal!",
-    "hooks": "Hook"
-  },
   "quotaPlans": {
     "title": "Paket & Kuota",
     "description": "Konfigurasikan paket kuota per penyedia — dimensi (%, permintaan, token, $) dan jendela waktu",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Hubungkan ke server MCP 67router (107 alat, 3 transportasi: SSE/stdio/HTTP). Mencakup perutean, cache, kompresi, memori, keahlian, penyedia, dan alat audit di 32 cakupan izin."
+        "description": "Hubungkan ke server MCP 67router (99 alat, 3 transportasi: SSE/stdio/HTTP). Mencakup perutean, cache, kompresi, memori, keahlian, penyedia, dan alat audit di 30 cakupan izin."
       },
       "omni-agents-a2a": {
         "name": "Agen & Protokol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluasi",
         "description": "Buat dan jalankan rangkaian evaluasi, pantau kemajuan tolok ukur langsung, lihat kartu skor, bandingkan performa model, dan integrasikan pengoperasian evaluasi dengan alur kerja CI dari CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugin, Skill & Memori",
-        "description": "Kelola Omni Skill (daftar, instal, uji, hapus), plugin (buat, konfigurasikan), dan memori persisten (cari, tambah, bersihkan) dari CLI."
       },
       "cli-setup": {
         "name": "CLI: Penyiapan & Konfigurasi",

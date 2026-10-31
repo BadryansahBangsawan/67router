@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguration",
     "aiFeaturesSection": "AI-funktioner",
     "mcp": "MCP",
-    "plugins": "Insticksprogram",
     "apiEndpoints": "API-slutpunkter",
     "analyticsSearch": "Sök",
     "analyticsUtilization": "Utnyttjande",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Register över sandbox-färdigheter",
     "agentSkillsSubtitle": "Register över A2A-färdigheter",
     "mcpSubtitle": "Kontroller för MCP-server",
-    "pluginsSubtitle": "Plugin-marknadsplats och installationer",
     "mediaSubtitle": "Cachelagrade mediefiler",
     "settingsSubtitle": "Alla inställningar",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Topplista",
     "limits": "Gränser",
     "profile": "Profil",
-    "plugins": "Insticksprogram",
     "providerStats": "Leverantörsstatistik",
     "new": "Ny",
     "quota": "Kvot",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Det gick inte att ta bort den här poolen.",
     "dismiss": "Stäng"
   },
-  "plugins": {
-    "title": "Insticksprogram",
-    "description": "Installera och hantera insticksprogram för att utöka funktionaliteten i 67router",
-    "loading": "Läser in insticksprogram...",
-    "scanning": "Söker...",
-    "scanForPlugins": "Sök efter insticksprogram",
-    "noPlugins": "Inga insticksprogram installerade",
-    "noPluginsDescription": "Placera insticksprogramkataloger i ~/.omniroute/plugins/ och klicka på Sök.",
-    "activate": "Aktivera",
-    "deactivate": "Inaktivera",
-    "uninstall": "Avinstallera",
-    "uninstallConfirm": "Avinstallera insticksprogrammet \"{name}\"?",
-    "pluginScanComplete": "Sökningen efter insticksprogram är klar",
-    "pluginScanFailed": "Sökningen efter insticksprogram misslyckades",
-    "activated": "{name} har aktiverats",
-    "deactivated": "{name} har inaktiverats",
-    "activateFailed": "Det gick inte att aktivera {name}",
-    "deactivateFailed": "Det gick inte att inaktivera {name}",
-    "uninstalled": "{name} har avinstallerats",
-    "uninstallFailed": "Det gick inte att avinstallera {name}",
-    "configure": "Konfigurera: {name}",
-    "configurePlugin": "Konfigurera",
-    "noConfigSettings": "Det här insticksprogrammet har inga konfigurerbara inställningar.",
-    "saving": "Sparar...",
-    "saveConfiguration": "Spara konfiguration",
-    "configurationSaved": "Konfigurationen har sparats",
-    "saveConfigurationFailed": "Det gick inte att spara konfigurationen",
-    "pluginNotFound": "Insticksprogrammet hittades inte",
-    "version": "Version",
-    "author": "Utvecklare",
-    "description_label": "Beskrivning",
-    "status": "Status",
-    "enabled": "Aktiverat",
-    "disabled": "Inaktiverat",
-    "installedTab": "Installerade",
-    "marketplaceTab": "Marknadsplats",
-    "marketplaceUrlLabel": "Anpassad marknadsplats-URL",
-    "marketplaceUrlPlaceholder": "Lämna tomt för officiellt Omniroute-register",
-    "saveMarketplaceUrl": "Spara & ladda om",
-    "marketplaceUrlSaved": "Marknadsplats-URL uppdaterad",
-    "marketplaceEmpty": "Inga plugins hittades på marknadsplatsen.",
-    "marketplaceInstallComingSoon": "Installationer från marknadsplatsen kommer snart.",
-    "verified": "Verifierad",
-    "install": "Installera",
-    "installedFromMarketplace": "Plugin {name} installerat!",
-    "hooks": "Krokar"
-  },
   "quotaPlans": {
     "title": "Planer & kvoter",
     "description": "Konfigurera kvotplaner per leverantör — dimensioner (%, förfrågningar, tokens, $) och tidsfönster",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Anslut till 67router MCP-servern (107 verktyg, 3 transporter: SSE/stdio/HTTP). Omfattar dirigering, cache, komprimering, minne, färdigheter, leverantörer och granskningsverktyg över 32 behörighetsomfång."
+        "description": "Anslut till 67router MCP-servern (99 verktyg, 3 transporter: SSE/stdio/HTTP). Omfattar dirigering, cache, komprimering, minne, färdigheter, leverantörer och granskningsverktyg över 30 behörighetsomfång."
       },
       "omni-agents-a2a": {
         "name": "Agenter & A2A-protokoll",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Utvärderingar",
         "description": "Skapa och kör utvärderingssviter, följ benchmarkframsteg i realtid, visa styrkort, jämför modellprestanda och integrera utvärderingskörningar med CI-arbetsflöden från CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, färdigheter och minne",
-        "description": "Hantera Omni Skills (lista, installera, testa, ta bort), plugins (skapa, konfigurera) och beständigt minne (sök, lägg till, rensa) från CLI."
       },
       "cli-setup": {
         "name": "CLI: Installation och konfiguration",

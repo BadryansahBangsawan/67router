@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Koda izpilde | `eval_code` (izolēts JavaScript/Python) | HYBRID |
 | Sistēma      | `execute_command` (izolēta CLI izpilde) | MANUAL |
 
-### Pielāgotas prasmes pievienošana
-
-Informāciju par pielāgotas prasmes pievienošanu, izmantojot spraudņu sistēmu, skatiet sadaļā [Spraudņu SDK un prasmju integrācija](./PLUGIN_SDK.md).
-
 ---
 
 ## Skatiet arī

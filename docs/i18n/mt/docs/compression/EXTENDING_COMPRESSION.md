@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Fil-livell tal-proġett (jitgħabba waqt l-istartjar)
 ```
 
-Jew tellgħu b’mod programmatiku minn plugin:
+Or register it programmatically at startup:
 
 ```ts
-// Fil-plugin tiegħek
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // L-SDK tal-plugin jesponi l-hooks onRequest / onResponse / onError. Irreġistra l-
-  // engine meta jitgħabba l-modulu tal-plugin (jew mal-ewwel onRequest); neħħi r-reġistrazzjoni tiegħu
-  // mill-perkors tat-teardown tiegħek stess.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Waqt it-teardown:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

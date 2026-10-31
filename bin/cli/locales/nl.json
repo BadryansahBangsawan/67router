@@ -1035,16 +1035,6 @@
     "system": "Systeemprompt",
     "resume": "Hervat een opgeslagen sessie op naam"
   },
-  "plugin": {
-    "description": "Beheer CLI-plug-ins (omniroute-cmd-*)",
-    "list": "Geef geïnstalleerde plug-ins weer",
-    "install": "Installeer een plug-in vanuit npm of een lokaal pad",
-    "remove": "Verwijder een geïnstalleerde plug-in",
-    "info": "Toon details van een geïnstalleerde plug-in",
-    "search": "Doorzoek het npm-register naar beschikbare plug-ins",
-    "update": "Werk geïnstalleerde plug-in(s) bij",
-    "scaffold": "Genereer de basisstructuur voor een nieuwe plug-in"
-  },
   "launch": {
     "description": "Start Claude Code, gericht op 67router (lokaal of extern, met --profile)",
     "token": "Token die de Claude-client moet verzenden (ANTHROPIC_AUTH_TOKEN)",

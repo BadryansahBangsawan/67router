@@ -1032,7 +1032,6 @@
     "configurationSection": "Ìṣètò",
     "aiFeaturesSection": "Àwọn Ẹ̀ya AI",
     "mcp": "Sẹ́fà MCP",
-    "plugins": "Àwọn Àfikún",
     "apiEndpoints": "Àwọn Kókó-opin API",
     "analyticsSearch": "Ìṣàwárí",
     "analyticsUtilization": "Ìlò",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Àkọsílẹ̀ àwọn ọgbọ́n sandbox",
     "agentSkillsSubtitle": "Àkọsílẹ̀ àwọn ọgbọ́n A2A",
     "mcpSubtitle": "Àwọn ìṣàkóso server MCP",
-    "pluginsSubtitle": "Ọjà plugin àti àwọn fifi sori ẹrọ",
     "mediaSubtitle": "Àwọn fáìlì media tí a fi pamọ́ sínú cache",
     "settingsSubtitle": "Gbogbo ètò",
     "settingsGeneralSubtitle": "Ìpìlẹ̀ data àti àwọn àfẹ́yìntì",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Àtòjọ àwọn aṣáájú",
     "limits": "Àwọn ààlà",
     "profile": "Prófáìlì",
-    "plugins": "Àwọn àfikún",
     "providerStats": "Àwọn ìṣirò olùpèsè",
     "new": "Tuntun",
     "quota": "Ìpín",
@@ -11455,53 +11452,6 @@
     "removeFailed": "A kò lè yọ àkójọpọ̀ yìí kúrò.",
     "dismiss": "Pa á tì"
   },
-  "plugins": {
-    "title": "Àwọn àfikún",
-    "description": "Fi àwọn àfikún sori ẹrọ kí o sì ṣàkóso wọn láti fa iṣẹ́ 67router gbòòrò sí i",
-    "loading": "Ń gbé àwọn àfikún wọlé...",
-    "scanning": "Ń ṣàyẹ̀wò...",
-    "scanForPlugins": "Ṣàyẹ̀wò fún Àwọn Àfikún",
-    "noPlugins": "Kò sí àfikún kankan tí a fi sori ẹrọ",
-    "noPluginsDescription": "Fi àwọn fódà àfikún sínú ~/.omniroute/plugins/ kí o sì tẹ Ṣàyẹ̀wò.",
-    "activate": "Mú ṣiṣẹ́",
-    "deactivate": "Mú kúrò ní ṣíṣiṣẹ́",
-    "uninstall": "Yọ kúrò",
-    "uninstallConfirm": "Ṣé o fẹ́ yọ àfikún \"{name}\" kúrò?",
-    "pluginScanComplete": "Àyẹ̀wò àfikún ti parí",
-    "pluginScanFailed": "Àyẹ̀wò àfikún kùnà",
-    "activated": "A ti mú {name} ṣiṣẹ́",
-    "deactivated": "A ti mú {name} kúrò ní ṣíṣiṣẹ́",
-    "activateFailed": "Kò ṣeé mú {name} ṣiṣẹ́",
-    "deactivateFailed": "Kò ṣeé mú {name} kúrò ní ṣíṣiṣẹ́",
-    "uninstalled": "A ti yọ {name} kúrò",
-    "uninstallFailed": "Kò ṣeé yọ {name} kúrò",
-    "configure": "Ṣètò: {name}",
-    "configurePlugin": "Ṣètò",
-    "noConfigSettings": "Àfikún yìí kò ní àwọn ààtò tí a lè ṣàtúnṣe.",
-    "saving": "Ń fi pamọ́...",
-    "saveConfiguration": "Fi Ààtò pamọ́",
-    "configurationSaved": "A ti fi ààtò pamọ́",
-    "saveConfigurationFailed": "Kò ṣeé fi ààtò pamọ́",
-    "pluginNotFound": "A kò rí àfikún náà",
-    "version": "Ẹ̀yà",
-    "author": "Olùkọ̀wé",
-    "description_label": "Àpèjúwe",
-    "status": "Ipò",
-    "enabled": "Ti mú ṣiṣẹ́",
-    "disabled": "Ti mú kúrò ní ṣíṣiṣẹ́",
-    "installedTab": "Ti fi sori ẹrọ",
-    "marketplaceTab": "Ọjà",
-    "marketplaceUrlLabel": "URL Ọjà Àkànṣe",
-    "marketplaceUrlPlaceholder": "Fi sí òfo láti lo ibi ìforúkọsílẹ̀ Omniroute ọ̀fíṣialì",
-    "saveMarketplaceUrl": "Fi pamọ́ & Tún gbé wọlé",
-    "marketplaceUrlSaved": "A ti ṣe ìmúdójúìwọ̀n URL Ọjà",
-    "marketplaceEmpty": "A kò rí àfikún kankan ní ọjà.",
-    "marketplaceInstallComingSoon": "Fífi àwọn àfikún láti ọjà sori ẹrọ ń bọ̀ láìpẹ́.",
-    "verified": "Ti jẹ́rìí sí",
-    "install": "Fi sori ẹrọ",
-    "installedFromMarketplace": "A ti fi àfikún {name} sori ẹrọ!",
-    "hooks": "Àwọn ìkọ́"
-  },
   "quotaPlans": {
     "title": "Àwọn Ètò àti Ìwọ̀n Lílo",
     "description": "Ṣètò àwọn ètò ìwọ̀n lílo fún olùpèsè kọ̀ọ̀kan — àwọn ìwọ̀n (%, requests, tokens, $) àti àwọn àkókò",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Sẹ́fà MCP",
-        "description": "Sopọ̀ mọ́ sẹ́fà 67router MCP (irinṣẹ́ 107, ọ̀nà gbigbe 3: SSE/stdio/HTTP). Ó bo ìdarí ọ̀nà, àpamọ́, ìfúnpọ̀, ìrántí, àwọn ọgbọ́n, àwọn olùpèsè, àti àwọn irinṣẹ́ àyẹ̀wò láàrín àyè-àṣẹ 32."
+        "description": "Sopọ̀ mọ́ sẹ́fà 67router MCP (irinṣẹ́ 99, ọ̀nà gbigbe 3: SSE/stdio/HTTP). Ó bo ìdarí ọ̀nà, àpamọ́, ìfúnpọ̀, ìrántí, àwọn ọgbọ́n, àwọn olùpèsè, àti àwọn irinṣẹ́ àyẹ̀wò láàrín àyè-àṣẹ 30."
       },
       "omni-agents-a2a": {
         "name": "Àwọn Aṣojú & Ìlànà A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Àwọn Ìdánwò Ìṣàyẹ̀wò",
         "description": "Ṣẹ̀dá kí o sì ṣiṣẹ́ àwọn ìdìpọ̀ ìṣàyẹ̀wò, wo ìlọsíwájú benchmark ní àkókò-gidi, wo àwọn scorecard, fi iṣẹ́ àwọn àwòṣe wé ara wọn, kí o sì so àwọn ìṣiṣẹ́ eval pọ̀ mọ́ àwọn ìṣàn iṣẹ́ CI láti CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Àwọn Plugin, Ọgbọ́n & Ìrántí",
-        "description": "Ṣàkóso àwọn Omni Skills (ṣe àkójọ, fi sórí ẹ̀rọ, dán wò, yọ kúrò), àwọn plugin (ṣẹ̀dá, ṣètò), àti ìrántí tí ó dúró pẹ́ (wá, ṣàfikún, sọ di òfo) láti inú CLI."
       },
       "cli-setup": {
         "name": "CLI: Ìṣètò Àkọ́kọ́ & Àtúnṣe",

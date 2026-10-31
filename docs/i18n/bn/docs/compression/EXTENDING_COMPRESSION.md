@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # প্রকল্প-স্তরের (স্টার্টআপের সময় লোড করা হয়)
 ```
 
-অথবা কোনো প্লাগইন থেকে প্রোগ্রাম্যাটিকভাবে লোড করুন:
+Or register it programmatically at startup:
 
 ```ts
-// আপনার প্লাগইনে
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // প্লাগইন SDK onRequest / onResponse / onError হুক প্রকাশ করে। প্লাগইন
-  // মডিউল লোড হওয়ার সময় (অথবা প্রথম onRequest-এ) ইঞ্জিন নিবন্ধন করুন; আপনার
-  // নিজস্ব টিয়ারডাউন পাথ থেকে এটি অনিবন্ধিত করুন।
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// টিয়ারডাউনের সময়:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

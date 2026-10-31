@@ -2171,26 +2171,6 @@ Za sve detalje pogledajte [Okvir vještina](../frameworks/SKILLS.md).
 
 ---
 
-## Dodaci
-
-Upravljajte 67router dodacima (proširenjima trećih strana).
-
-| Metoda | Putanja                            | Opis                          |
-| ------ | ---------------------------------- | ----------------------------- |
-| GET    | `/api/plugins`                     | Prikazuje instalirane dodatke |
-| POST   | `/api/plugins/marketplace/install` | Instalira dodatak iz trgovine |
-| DELETE | `/api/plugins/[name]`              | Deinstalira dodatak           |
-| POST   | `/api/plugins/[name]/activate`     | Aktivira dodatak              |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivira dodatak            |
-| GET    | `/api/plugins/[name]/config`       | Dohvata konfiguraciju dodatka |
-| PUT    | `/api/plugins/[name]/config`       | Ažurira konfiguraciju dodatka |
-
-**Autentifikacija:** Zahtijeva sesiju za upravljanje.
-
-Za sve detalje pogledajte [Okvir za dodatke](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Usmjeravanje u sjeni
 
 Poređenje pružalaca usluga u sjeni / A-B poređenje **nije samostalna REST površina** — konfigurira se putem kombinovanog usmjeravanja (pogledajte [Automatsko kombinovanje](../routing/AUTO-COMBO.md)). Metrike poređenja za svaku kombinaciju dostupne su putem `GET /api/combos/metrics`.

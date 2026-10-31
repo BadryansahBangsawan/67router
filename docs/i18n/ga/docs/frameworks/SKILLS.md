@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Rith Cóid  | `eval_code` (JavaScript/Python i mbosca gainimh) | HYBRID |
 | Córas      | `execute_command` (rith CLI i mbosca gainimh)    | MANUAL |
 
-### Scil Shaincheaptha a Chur Leis
-
-Féach [SDK Breiseán & Comhtháthú Scileanna](./PLUGIN_SDK.md) chun foghlaim conas scil shaincheaptha a chur leis tríd an gcóras breiseán.
-
 ---
 
 ## Féach Freisin

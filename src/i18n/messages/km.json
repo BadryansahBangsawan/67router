@@ -1032,7 +1032,6 @@
     "configurationSection": "ការកំណត់រចនាសម្ព័ន្ធ",
     "aiFeaturesSection": "មុខងារ AI",
     "mcp": "ម៉ាស៊ីនមេ MCP",
-    "plugins": "កម្មវិធីជំនួយ",
     "apiEndpoints": "ចំណុចបញ្ចប់ API",
     "analyticsSearch": "ការស្វែងរក",
     "analyticsUtilization": "ការប្រើប្រាស់",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "បញ្ជីជំនាញ Sandbox",
     "agentSkillsSubtitle": "បញ្ជីជំនាញ A2A",
     "mcpSubtitle": "ការគ្រប់គ្រងម៉ាស៊ីនមេ MCP",
-    "pluginsSubtitle": "ទីផ្សារកម្មវិធីជំនួយ និងការដំឡើង",
     "mediaSubtitle": "ឯកសារមេឌៀក្នុងឃ្លាំងសម្ងាត់",
     "settingsSubtitle": "ការកំណត់ទាំងអស់",
     "settingsGeneralSubtitle": "មូលដ្ឋានទិន្នន័យ និងការបម្រុងទុក",
@@ -1486,7 +1484,6 @@
     "leaderboard": "តារាងចំណាត់ថ្នាក់",
     "limits": "ដែនកំណត់",
     "profile": "ប្រវត្តិរូប",
-    "plugins": "កម្មវិធីជំនួយ",
     "providerStats": "ស្ថិតិអ្នកផ្តល់សេវា",
     "new": "ថ្មី",
     "quota": "កូតា",
@@ -11455,53 +11452,6 @@
     "removeFailed": "មិនអាចដកពូលនេះចេញបានទេ។",
     "dismiss": "បិទ"
   },
-  "plugins": {
-    "title": "កម្មវិធីជំនួយ",
-    "description": "ដំឡើង និងគ្រប់គ្រងកម្មវិធីជំនួយ ដើម្បីពង្រីកមុខងាររបស់ 67router",
-    "loading": "កំពុងផ្ទុកកម្មវិធីជំនួយ...",
-    "scanning": "កំពុងស្កេន...",
-    "scanForPlugins": "ស្កេនរកកម្មវិធីជំនួយ",
-    "noPlugins": "មិនមានកម្មវិធីជំនួយដែលបានដំឡើងទេ",
-    "noPluginsDescription": "ដាក់ថតកម្មវិធីជំនួយក្នុង ~/.omniroute/plugins/ ហើយចុច ស្កេន។",
-    "activate": "ធ្វើឱ្យសកម្ម",
-    "deactivate": "ធ្វើឱ្យអសកម្ម",
-    "uninstall": "លុបការដំឡើង",
-    "uninstallConfirm": "លុបការដំឡើងកម្មវិធីជំនួយ \"{name}\" មែនទេ?",
-    "pluginScanComplete": "ការស្កេនកម្មវិធីជំនួយបានបញ្ចប់",
-    "pluginScanFailed": "ការស្កេនកម្មវិធីជំនួយបានបរាជ័យ",
-    "activated": "បានបើកដំណើរការ {name}",
-    "deactivated": "បានបិទដំណើរការ {name}",
-    "activateFailed": "មិនអាចបើកដំណើរការ {name} បានទេ",
-    "deactivateFailed": "មិនអាចបិទដំណើរការ {name} បានទេ",
-    "uninstalled": "បានលុបការដំឡើង {name}",
-    "uninstallFailed": "មិនអាចលុបការដំឡើង {name} បានទេ",
-    "configure": "កំណត់រចនាសម្ព័ន្ធ៖ {name}",
-    "configurePlugin": "កំណត់រចនាសម្ព័ន្ធ",
-    "noConfigSettings": "កម្មវិធីជំនួយនេះមិនមានការកំណត់ដែលអាចកំណត់រចនាសម្ព័ន្ធបានទេ។",
-    "saving": "កំពុងរក្សាទុក...",
-    "saveConfiguration": "រក្សាទុកការកំណត់រចនាសម្ព័ន្ធ",
-    "configurationSaved": "បានរក្សាទុកការកំណត់រចនាសម្ព័ន្ធ",
-    "saveConfigurationFailed": "មិនអាចរក្សាទុកការកំណត់រចនាសម្ព័ន្ធបានទេ",
-    "pluginNotFound": "រកមិនឃើញកម្មវិធីជំនួយ",
-    "version": "កំណែ",
-    "author": "អ្នកនិពន្ធ",
-    "description_label": "ការពិពណ៌នា",
-    "status": "ស្ថានភាព",
-    "enabled": "បានបើក",
-    "disabled": "បានបិទ",
-    "installedTab": "បានដំឡើង",
-    "marketplaceTab": "ទីផ្សារ",
-    "marketplaceUrlLabel": "URL ទីផ្សារផ្ទាល់ខ្លួន",
-    "marketplaceUrlPlaceholder": "ទុកឱ្យទទេសម្រាប់បញ្ជីកម្មវិធីផ្លូវការរបស់ Omniroute",
-    "saveMarketplaceUrl": "រក្សាទុក និងផ្ទុកឡើងវិញ",
-    "marketplaceUrlSaved": "បានធ្វើបច្ចុប្បន្នភាព URL ទីផ្សារ",
-    "marketplaceEmpty": "រកមិនឃើញកម្មវិធីជំនួយនៅក្នុងទីផ្សារទេ។",
-    "marketplaceInstallComingSoon": "ការដំឡើងពីទីផ្សារនឹងមានក្នុងពេលឆាប់ៗនេះ។",
-    "verified": "បានផ្ទៀងផ្ទាត់",
-    "install": "ដំឡើង",
-    "installedFromMarketplace": "បានដំឡើងកម្មវិធីជំនួយ {name}!",
-    "hooks": "ហ៊ុក"
-  },
   "quotaPlans": {
     "title": "គម្រោង និងកូតា",
     "description": "កំណត់រចនាសម្ព័ន្ធគម្រោងកូតាតាមអ្នកផ្តល់សេវា — វិមាត្រ (%, សំណើ, តូខិន, $) និងចន្លោះពេល",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "ម៉ាស៊ីនមេ MCP",
-        "description": "តភ្ជាប់ទៅម៉ាស៊ីនមេ 67router MCP (ឧបករណ៍ 107 និងមធ្យោបាយបញ្ជូន 3៖ SSE/stdio/HTTP)។ គ្របដណ្តប់លើឧបករណ៍កំណត់ផ្លូវ ឃ្លាំងសម្ងាត់ ការបង្ហាប់ អង្គចងចាំ ជំនាញ អ្នកផ្តល់សេវា និងសវនកម្ម នៅទូទាំងវិសាលភាពសិទ្ធិ 32។"
+        "description": "តភ្ជាប់ទៅម៉ាស៊ីនមេ 67router MCP (ឧបករណ៍ 99 និងមធ្យោបាយបញ្ជូន 3៖ SSE/stdio/HTTP)។ គ្របដណ្តប់លើឧបករណ៍កំណត់ផ្លូវ ឃ្លាំងសម្ងាត់ ការបង្ហាប់ អង្គចងចាំ ជំនាញ អ្នកផ្តល់សេវា និងសវនកម្ម នៅទូទាំងវិសាលភាពសិទ្ធិ 30។"
       },
       "omni-agents-a2a": {
         "name": "ភ្នាក់ងារ និងពិធីការ A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI៖ ការវាយតម្លៃ",
         "description": "បង្កើត និងដំណើរការសំណុំការវាយតម្លៃ តាមដានវឌ្ឍនភាព benchmark ផ្ទាល់ មើលតារាងពិន្ទុ ប្រៀបធៀបសមត្ថភាពម៉ូដែល និងរួមបញ្ចូលការដំណើរការវាយតម្លៃជាមួយលំហូរការងារ CI ពី CLI។"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI៖ កម្មវិធីជំនួយ ជំនាញ និងអង្គចងចាំ",
-        "description": "គ្រប់គ្រង Omni Skills (រាយបញ្ជី ដំឡើង សាកល្បង ដកចេញ) កម្មវិធីជំនួយ (បង្កើត កំណត់រចនាសម្ព័ន្ធ) និងអង្គចងចាំអចិន្ត្រៃយ៍ (ស្វែងរក បន្ថែម សម្អាត) ពី CLI។"
       },
       "cli-setup": {
         "name": "CLI៖ ការរៀបចំ និងការកំណត់រចនាសម្ព័ន្ធ",

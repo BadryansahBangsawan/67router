@@ -60,7 +60,6 @@ er klassificeret som local-only.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy-lytter + systemproxy                                                        |
 | `/api/settings/mitm`                                                                                     | Aktiverer MITM-opfangning (proxytilstand på systemniveau)                                                  |
 | `/api/issue-agent/`                                                                                      | Issue-agent — starter lokale værktøjer mod repoet                                                          |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — indlæser/eksekverer via `worker_threads` + `child_process`                                       |
 | `/api/middleware/`                                                                                       | Brugermiddleware — indlæser/eksekverer operatørkode i processen                                            |
 | `/api/system/version`                                                                                    | Automatisk opdatering (kun POST; GET/HEAD/OPTIONS undtaget) — starter `git checkout` + `npm install`       |
 | `/api/db-backups/exportAll`                                                                              | Starter `tar` til eksportarkivet                                                                           |

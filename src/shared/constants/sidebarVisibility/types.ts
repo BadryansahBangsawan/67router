@@ -80,7 +80,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "agent-skills",
   "chaos-config",
   "mcp",
-  "plugins",
   // Gamification
   "leaderboard",
   "profile",

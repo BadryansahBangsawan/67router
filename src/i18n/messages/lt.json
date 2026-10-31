@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigūracija",
     "aiFeaturesSection": "DI funkcijos",
     "mcp": "MCP serveris",
-    "plugins": "Papildiniai",
     "apiEndpoints": "API galiniai taškai",
     "analyticsSearch": "Paieška",
     "analyticsUtilization": "Naudojimas",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Smėlio dėžės įgūdžių registras",
     "agentSkillsSubtitle": "A2A įgūdžių registras",
     "mcpSubtitle": "MCP serverio valdymas",
-    "pluginsSubtitle": "Papildinių rinka ir diegimai",
     "mediaSubtitle": "Talpykloje saugomi medijos failai",
     "settingsSubtitle": "Visi nustatymai",
     "settingsGeneralSubtitle": "Duomenų bazė ir atsarginės kopijos",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Lyderių lentelė",
     "limits": "Ribos",
     "profile": "Profilis",
-    "plugins": "Papildiniai",
     "providerStats": "Teikėjo statistika",
     "new": "Naujas",
     "quota": "Kvota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Nepavyko pašalinti šio telkinio.",
     "dismiss": "Uždaryti"
   },
-  "plugins": {
-    "title": "Įskiepiai",
-    "description": "Įdiekite ir tvarkykite įskiepius, išplečiančius 67router funkcionalumą",
-    "loading": "Įkeliami įskiepiai...",
-    "scanning": "Nuskaitoma...",
-    "scanForPlugins": "Ieškoti įskiepių",
-    "noPlugins": "Nėra įdiegtų įskiepių",
-    "noPluginsDescription": "Įdėkite įskiepių katalogus į ~/.omniroute/plugins/ ir spustelėkite „Ieškoti įskiepių“.",
-    "activate": "Suaktyvinti",
-    "deactivate": "Išjungti",
-    "uninstall": "Pašalinti",
-    "uninstallConfirm": "Pašalinti įskiepį „{name}“?",
-    "pluginScanComplete": "Įskiepių nuskaitymas baigtas",
-    "pluginScanFailed": "Nepavyko nuskaityti įskiepių",
-    "activated": "{name} suaktyvintas",
-    "deactivated": "{name} išjungtas",
-    "activateFailed": "Nepavyko suaktyvinti {name}",
-    "deactivateFailed": "Nepavyko išjungti {name}",
-    "uninstalled": "{name} pašalintas",
-    "uninstallFailed": "Nepavyko pašalinti {name}",
-    "configure": "Konfigūruoti: {name}",
-    "configurePlugin": "Konfigūruoti",
-    "noConfigSettings": "Šis įskiepis neturi konfigūruojamų nustatymų.",
-    "saving": "Išsaugoma...",
-    "saveConfiguration": "Išsaugoti konfigūraciją",
-    "configurationSaved": "Konfigūracija išsaugota",
-    "saveConfigurationFailed": "Nepavyko išsaugoti konfigūracijos",
-    "pluginNotFound": "Įskiepis nerastas",
-    "version": "Versija",
-    "author": "Autorius",
-    "description_label": "Aprašymas",
-    "status": "Būsena",
-    "enabled": "Įjungtas",
-    "disabled": "Išjungtas",
-    "installedTab": "Įdiegti",
-    "marketplaceTab": "Prekyvietė",
-    "marketplaceUrlLabel": "Pasirinktinis prekyvietės URL",
-    "marketplaceUrlPlaceholder": "Palikite tuščią, jei norite naudoti oficialų 67router registrą",
-    "saveMarketplaceUrl": "Išsaugoti ir įkelti iš naujo",
-    "marketplaceUrlSaved": "Prekyvietės URL atnaujintas",
-    "marketplaceEmpty": "Prekyvietėje įskiepių nerasta.",
-    "marketplaceInstallComingSoon": "Netrukus bus galima diegti iš prekyvietės.",
-    "verified": "Patvirtintas",
-    "install": "Įdiegti",
-    "installedFromMarketplace": "Įskiepis {name} įdiegtas!",
-    "hooks": "Kabliai"
-  },
   "quotaPlans": {
     "title": "Planai ir kvotos",
     "description": "Konfigūruokite kiekvieno teikėjo kvotų planus — dimensijas (%, užklausos, žetonai, $) ir laiko intervalus",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP serveris",
-        "description": "Prisijunkite prie 67router MCP serverio (107 įrankių, 3 perdavimo būdai: SSE/stdio/HTTP). Jis apima maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, teikėjų ir audito įrankius 32 leidimų taikymo srityse."
+        "description": "Prisijunkite prie 67router MCP serverio (99 įrankių, 3 perdavimo būdai: SSE/stdio/HTTP). Jis apima maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, teikėjų ir audito įrankius 30 leidimų taikymo srityse."
       },
       "omni-agents-a2a": {
         "name": "Agentai ir A2A protokolas",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: vertinimai",
         "description": "Kurkite ir vykdykite vertinimo rinkinius, stebėkite tiesioginę lyginamųjų testų eigą, peržiūrėkite rezultatų suvestines, palyginkite modelių našumą ir integruokite vertinimo vykdymus į CI darbo eigas naudodami CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: papildiniai, įgūdžiai ir atmintis",
-        "description": "Naudodami CLI valdykite Omni Skills (peržiūrėkite sąrašą, diekite, testuokite, šalinkite), papildinius (kurkite, konfigūruokite) ir nuolatinę atmintį (ieškokite, pridėkite, išvalykite)."
       },
       "cli-setup": {
         "name": "CLI: sąranka ir konfigūracija",

@@ -2166,26 +2166,6 @@ Tingnan ang [Framework ng Skills](../frameworks/SKILLS.md) para sa kumpletong de
 
 ---
 
-## Mga Plugin
-
-Pamahalaan ang mga plugin ng 67router (mga third-party extension).
-
-| Pamamaraan | Path                               | Paglalarawan                              |
-| ---------- | ---------------------------------- | ----------------------------------------- |
-| GET        | `/api/plugins`                     | Ilista ang mga naka-install na plugin     |
-| POST       | `/api/plugins/marketplace/install` | Mag-install ng plugin mula sa marketplace |
-| DELETE     | `/api/plugins/[name]`              | Mag-uninstall ng plugin                   |
-| POST       | `/api/plugins/[name]/activate`     | I-activate ang plugin                     |
-| POST       | `/api/plugins/[name]/deactivate`   | I-deactivate ang plugin                   |
-| GET        | `/api/plugins/[name]/config`       | Kunin ang configuration ng plugin         |
-| PUT        | `/api/plugins/[name]/config`       | I-update ang configuration ng plugin      |
-
-**Auth:** Nangangailangan ng management session.
-
-Tingnan ang [Framework ng Mga Plugin](../frameworks/PLUGIN_SDK.md) para sa kumpletong detalye.
-
----
-
 ## Shadow Routing
 
 Ang shadow / A-B comparison ng mga provider ay **hindi isang standalone REST surface** — kino-configure ito sa pamamagitan ng combo routing (tingnan ang [Auto-Combo](../routing/AUTO-COMBO.md)). Ang mga comparison metric para sa bawat combo ay ibinibigay ng `GET /api/combos/metrics`.

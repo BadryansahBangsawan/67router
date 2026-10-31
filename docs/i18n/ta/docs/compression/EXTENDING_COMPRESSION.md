@@ -202,27 +202,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # திட்ட நிலை (தொடக்கத்தில் ஏற்றப்படும்)
 ```
 
-அல்லது ஒரு செருகுநிரலிலிருந்து நிரல்முறையில் ஏற்றவும்:
+Or register it programmatically at startup:
 
 ```ts
-// உங்கள் செருகுநிரலில்
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // செருகுநிரல் SDK, onRequest / onResponse / onError கொக்கிகளை வழங்குகிறது. செருகுநிரல்
-  // தொகுதி ஏற்றப்படும்போது (அல்லது முதல் onRequest-இல்) இயந்திரத்தைப் பதிவுசெய்யவும்; உங்கள் சொந்த
-  // அகற்றல் பாதையிலிருந்து அதன் பதிவை நீக்கவும்.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// அகற்றும்போது:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

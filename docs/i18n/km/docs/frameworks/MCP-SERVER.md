@@ -407,8 +407,6 @@ Access token ដែលឆ្លងកាត់ `scopeSatisfies` សម្រា�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                   |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                            |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
 | `read:obsidian`       | ឧបករណ៍អាន 13 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | ឧបករណ៍សរសេរ 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
@@ -564,7 +562,6 @@ snapshot នៃចង្វាក់បេះដូងមាន៖
 | `open-sse/mcp-server/tools/skillTools.ts`                                | និយមន័យឧបករណ៍ជំនាញ (ឧបករណ៍ 4)                                                          |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | និយមន័យឧបករណ៍ប្រភពបរិបទ Notion (ឧបករណ៍ 6)                                              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | និយមន័យឧបករណ៍ Gamification (ឧបករណ៍ 8)                                                  |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | ឧបករណ៍ចុះឈ្មោះ និងគ្រប់គ្រងកម្មវិធីជំនួយ (ឧបករណ៍ 8)                                    |
 | `src/app/api/mcp/status/route.ts`                                        | ចំណុចបញ្ចប់ `/api/mcp/status`                                                          |
 | `src/app/api/mcp/tools/route.ts`                                         | ចំណុចបញ្ចប់ `/api/mcp/tools`                                                           |
 | `src/app/api/mcp/sse/route.ts`                                           | ផ្លូវដឹកជញ្ជូន SSE `/api/mcp/sse`                                                      |

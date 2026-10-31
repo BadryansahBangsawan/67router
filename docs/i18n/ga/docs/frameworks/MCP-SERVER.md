@@ -381,8 +381,6 @@ Teastaíonn raonta feidhme sonracha ó gach uirlis:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                      |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                               |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                 |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                             |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                |
 | `read:obsidian`       | 13 uirlis léite — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 n-uirlis scríofa — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …            |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                              |
@@ -506,7 +504,6 @@ Taifeadtar gach glao uirlise sa tábla SQLite `mcp_tool_audit` trí `open-sse/mc
 | `open-sse/mcp-server/tools/skillTools.ts`                                | sainmhínithe uirlisí scile (4 uirlis)                                 |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | sainmhínithe uirlisí foinse comhthéacs Notion (6 uirlis)              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | sainmhínithe uirlisí cluichithe (8 uirlis)                            |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | uirlisí clárlanna agus bainistíochta breiseán (8 uirlis)              |
 | `src/app/api/mcp/status/route.ts`                                        | _pointe deiridh `/api/mcp/status`                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | pointe deiridh `/api/mcp/tools`                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | cosán iompar SSE `/api/mcp/sse`                                       |

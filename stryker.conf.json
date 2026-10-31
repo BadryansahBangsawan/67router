@@ -446,7 +446,6 @@
       "tests/unit/permanent-failure-hammering-other-providers.test.ts",
       "tests/unit/persist-429-cooldown-account-fallback.test.ts",
       "tests/unit/plan3-p0.test.ts",
-      "tests/unit/plugins-route-error-sanitization.test.ts",
       "tests/unit/probe-gate-autodisable.test.ts",
       "tests/unit/probe-production-path.test.ts",
       "tests/unit/probe-testall-isolation.test.ts",

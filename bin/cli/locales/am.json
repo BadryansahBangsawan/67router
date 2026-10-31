@@ -1035,16 +1035,6 @@
     "system": "የስርዓት መጠየቂያ",
     "resume": "የተቀመጠ ክፍለ ጊዜን በስም ከቆመበት ቀጥል"
   },
-  "plugin": {
-    "description": "የCLI ተሰኪዎችን ያስተዳድሩ (omniroute-cmd-*)",
-    "list": "የተጫኑ ተሰኪዎችን ዘርዝር",
-    "install": "ከnpm ወይም ከአካባቢያዊ ዱካ ተሰኪ ጫን",
-    "remove": "የተጫነ ተሰኪን አስወግድ",
-    "info": "ስለተጫነ ተሰኪ ዝርዝሮችን አሳይ",
-    "search": "የሚገኙ ተሰኪዎችን በnpm መዝገብ ውስጥ ፈልግ",
-    "update": "የተጫኑ ተሰኪዎችን አዘምን",
-    "scaffold": "ለአዲስ ተሰኪ መነሻ መዋቅር ፍጠር"
-  },
   "launch": {
     "description": "ወደ 67router የተጠቆመ Claude Codeን አስጀምር (አካባቢያዊ ወይም የርቀት፣ በ--profile)",
     "token": "የClaude ደንበኛው መላክ ያለበት ቶከን (ANTHROPIC_AUTH_TOKEN)",

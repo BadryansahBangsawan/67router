@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # मार्केटिंग / README इमेज एसेट्स
 ├── @omniroute/           # प्रकाशित किए जा सकने वाले सहयोगी पैकेज (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/एजेंट कौशल पैक्स (cli-* + omni-* + config-codex-cli)
-├── examples/             # नमूना प्लगइन्स + omniroute-cmd-hello स्टार्टर
+├── examples/             # Quickstart client samples
 ├── contrib/              # सामुदायिक योगदान (podman/)
 ├── .source/              # Fumadocs स्रोत कॉन्फ़िगरेशन (source.config.mjs + सर्वर/ब्राउज़र/डायनेमिक)
 ├── .github/              # GitHub Actions वर्कफ़्लोज़ + इश्यू टेम्पलेट्स + PR टेम्पलेट
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — बैकग्राउंड में `needs_reindex=1` वाली मेमोरीज़ को प्रोसेस करता है; `POST /api/memory/reindex` और लेज़ी-बैकफ़िल पाथ द्वारा कॉल किया जाता है। (योजना 21)                                                                                                                                           |
 | `monitoring/`                            | हेल्थ चेक, मेट्रिक्स उत्सर्जन                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | 22 प्रोवाइडर मॉड्यूल के लिए OAuth/इम्पोर्ट फ़्लो (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | प्लगइन रजिस्ट्री                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Anthropic-शैली के प्रॉम्प्ट कैश ब्रेकपॉइंट्स                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Skills फ़्रेमवर्क (बिल्ट-इन + मार्केटप्लेस + SkillsSH) — `docs/frameworks/SKILLS.md` देखें                                                                                                                                                                                                                             |
 | `webhookDispatcher.ts`                   | HMAC वेबहुक डिलीवरी — `docs/frameworks/WEBHOOKS.md` देखें                                                                                                                                                                                                                                                              |

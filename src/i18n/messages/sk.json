@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurácia",
     "aiFeaturesSection": "Funkcie AI",
     "mcp": "MCP",
-    "plugins": "Pluginy",
     "apiEndpoints": "Koncové body API",
     "analyticsSearch": "Vyhľadávanie",
     "analyticsUtilization": "Využitie",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Register zručností sandboxu",
     "agentSkillsSubtitle": "Register zručností A2A",
     "mcpSubtitle": "Ovládanie servera MCP",
-    "pluginsSubtitle": "Trhovisko pluginov a inštalácie",
     "mediaSubtitle": "Mediálne súbory vo vyrovnávacej pamäti",
     "settingsSubtitle": "Všetky nastavenia",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Rebríček",
     "limits": "Limity",
     "profile": "Profil",
-    "plugins": "Pluginy",
     "providerStats": "Štatistiky poskytovateľov",
     "new": "Nové",
     "quota": "Kvóta",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tento fond sa nepodarilo odstrániť.",
     "dismiss": "Zavrieť"
   },
-  "plugins": {
-    "title": "Pluginy",
-    "description": "Inštalácia a správa pluginov na rozšírenie funkcií 67router",
-    "loading": "Načítavajú sa pluginy...",
-    "scanning": "Prebieha vyhľadávanie...",
-    "scanForPlugins": "Vyhľadať pluginy",
-    "noPlugins": "Nie sú nainštalované žiadne pluginy",
-    "noPluginsDescription": "Umiestnite adresáre pluginov do ~/.omniroute/plugins/ a kliknite na Vyhľadať.",
-    "activate": "Aktivovať",
-    "deactivate": "Deaktivovať",
-    "uninstall": "Odinštalovať",
-    "uninstallConfirm": "Odinštalovať plugin „{name}“?",
-    "pluginScanComplete": "Vyhľadávanie pluginov je dokončené",
-    "pluginScanFailed": "Skenovanie pluginov zlyhalo",
-    "activated": "{name} aktivovaný",
-    "deactivated": "{name} deaktivovaný",
-    "activateFailed": "Nepodarilo sa aktivovať {name}",
-    "deactivateFailed": "Nepodarilo sa deaktivovať {name}",
-    "uninstalled": "{name} odinštalovaný",
-    "uninstallFailed": "Nepodarilo sa odinštalovať {name}",
-    "configure": "Konfigurovať: {name}",
-    "configurePlugin": "Konfigurovať",
-    "noConfigSettings": "Tento plugin nemá žiadne konfigurovateľné nastavenia.",
-    "saving": "Ukladá sa...",
-    "saveConfiguration": "Uložiť konfiguráciu",
-    "configurationSaved": "Konfigurácia bola uložená",
-    "saveConfigurationFailed": "Konfiguráciu sa nepodarilo uložiť",
-    "pluginNotFound": "Plugin sa nenašiel",
-    "version": "Verzia",
-    "author": "Autor",
-    "description_label": "Popis",
-    "status": "Stav",
-    "enabled": "Povolené",
-    "disabled": "Zakázané",
-    "installedTab": "Nainštalované",
-    "marketplaceTab": "Trhovisko",
-    "marketplaceUrlLabel": "Vlastná URL adresa obchodu",
-    "marketplaceUrlPlaceholder": "Ponechajte prázdne pre oficiálny register Omniroute",
-    "saveMarketplaceUrl": "Uložiť a znova načítať",
-    "marketplaceUrlSaved": "URL adresa obchodu bola aktualizovaná",
-    "marketplaceEmpty": "V obchode sa nenašli žiadne pluginy.",
-    "marketplaceInstallComingSoon": "Inštalácie z obchodu budú čoskoro k dispozícii.",
-    "verified": "Overené",
-    "install": "Inštalovať",
-    "installedFromMarketplace": "Plugin {name} bol nainštalovaný!",
-    "hooks": "Hooky"
-  },
   "quotaPlans": {
     "title": "Plány a kvóty",
     "description": "Nakonfigurujte plány kvót pre jednotlivých poskytovateľov — dimenzie (%, požiadavky, tokeny, $) a časové okná",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Pripojte sa k serveru 67router MCP (107 nástrojov, 3 transporty: SSE/stdio/HTTP). Zahŕňa smerovanie, vyrovnávaciu pamäť, kompresiu, pamäť, zručnosti, poskytovateľov a nástroje auditu v rámci 32 rozsahov oprávnení."
+        "description": "Pripojte sa k serveru 67router MCP (99 nástrojov, 3 transporty: SSE/stdio/HTTP). Zahŕňa smerovanie, vyrovnávaciu pamäť, kompresiu, pamäť, zručnosti, poskytovateľov a nástroje auditu v rámci 30 rozsahov oprávnení."
       },
       "omni-agents-a2a": {
         "name": "Agenti a protokol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluácie",
         "description": "Vytvárajte a spúšťajte evaluačné sady, sledujte priebeh benchmarkov v reálnom čase, zobrazujte scorecards, porovnávajte výkon modelov a integrujte evaluačné behy s CI workflows z CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Pluginy, zručnosti a pamäť",
-        "description": "Spravujte Omni Skills (zoznam, inštalácia, testovanie, odstránenie), pluginy (vytvorenie, konfigurácia) a perzistentnú pamäť (vyhľadávanie, pridanie, vymazanie) z CLI."
       },
       "cli-setup": {
         "name": "CLI: Nastavenie a konfigurácia",

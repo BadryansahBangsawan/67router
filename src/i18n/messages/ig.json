@@ -1032,7 +1032,6 @@
     "configurationSection": "Nhazi",
     "aiFeaturesSection": "Atụmatụ AI",
     "mcp": "Sava MCP",
-    "plugins": "Ngwa mgbakwunye",
     "apiEndpoints": "Ebe njedebe API",
     "analyticsSearch": "Ọchụchọ",
     "analyticsUtilization": "Ojiji",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Ndekọ skill nke sandbox",
     "agentSkillsSubtitle": "Ndekọ skill A2A",
     "mcpSubtitle": "Njikwa sava MCP",
-    "pluginsSubtitle": "Ahịa plugin na nrụnye",
     "mediaSubtitle": "Faịlụ mgbasa ozi dị na cache",
     "settingsSubtitle": "Ntọala niile",
     "settingsGeneralSubtitle": "Ebe nchekwa data na nkwado ndabere",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Tebụl ndị isi",
     "limits": "Oke",
     "profile": "Profaịlụ",
-    "plugins": "Ngwa mgbakwunye",
     "providerStats": "Ọnụ ọgụgụ ndị na-enye ọrụ",
     "new": "Ọhụrụ",
     "quota": "Oke ojiji",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Enweghị ike iwepụ pool a.",
     "dismiss": "Mechie"
   },
-  "plugins": {
-    "title": "Ngwa mgbakwunye",
-    "description": "Wụnye ma jikwaa ngwa mgbakwunye iji gbasaa ọrụ 67router",
-    "loading": "Na-ebunye ngwa mgbakwunye...",
-    "scanning": "Na-enyocha...",
-    "scanForPlugins": "Nyochaa maka ngwa mgbakwunye",
-    "noPlugins": "Enweghị ngwa mgbakwunye arụnyere",
-    "noPluginsDescription": "Debe ndekọ ngwa mgbakwunye na ~/.omniroute/plugins/ wee pịa Nyochaa.",
-    "activate": "Mee ka ọ rụọ ọrụ",
-    "deactivate": "Kwụsị ya ịrụ ọrụ",
-    "uninstall": "Wepụ",
-    "uninstallConfirm": "Ị chọrọ iwepụ ngwa mgbakwunye \"{name}\"?",
-    "pluginScanComplete": "Nnyocha ngwa mgbakwunye agwụla",
-    "pluginScanFailed": "Nnyocha ngwa mgbakwunye kụrụ afọ n’ala",
-    "activated": "Emeela ka {name} rụọ ọrụ",
-    "deactivated": "Akwụsịla {name} ịrụ ọrụ",
-    "activateFailed": "Enweghị ike ime ka {name} rụọ ọrụ",
-    "deactivateFailed": "Enweghị ike ịkwụsị {name} ịrụ ọrụ",
-    "uninstalled": "Ewepụla {name}",
-    "uninstallFailed": "Enweghị ike iwepụ {name}",
-    "configure": "Hazie: {name}",
-    "configurePlugin": "Hazie",
-    "noConfigSettings": "Ngwa mgbakwunye a enweghị ntọala enwere ike ịhazi.",
-    "saving": "Na-echekwa...",
-    "saveConfiguration": "Chekwaa nhazi",
-    "configurationSaved": "Echekwala nhazi",
-    "saveConfigurationFailed": "Enweghị ike ichekwa nhazi",
-    "pluginNotFound": "Ahụghị ngwa mgbakwunye",
-    "version": "Ụdị",
-    "author": "Onye dere ya",
-    "description_label": "Nkọwa",
-    "status": "Ọnọdụ",
-    "enabled": "Agbanyere",
-    "disabled": "Agbanyụghị",
-    "installedTab": "Arụnyere",
-    "marketplaceTab": "Ebe ahịa",
-    "marketplaceUrlLabel": "URL ebe ahịa ahaziri iche",
-    "marketplaceUrlPlaceholder": "Hapụ ya oghere iji jiri ndekọ gọọmentị nke 67router",
-    "saveMarketplaceUrl": "Chekwaa ma bugharịa ọzọ",
-    "marketplaceUrlSaved": "Emelitere URL ebe ahịa",
-    "marketplaceEmpty": "Ahụghị ngwa mgbakwunye ọ bụla n'ebe ahịa.",
-    "marketplaceInstallComingSoon": "Nwụnye sitere n'ebe ahịa ga-abịa n'oge na-adịghị anya.",
-    "verified": "Enyochala",
-    "install": "Wụnye",
-    "installedFromMarketplace": "Awụnyere plọgịnụ {name}!",
-    "hooks": "Nko"
-  },
   "quotaPlans": {
     "title": "Atụmatụ na Oke",
     "description": "Hazie atụmatụ oke maka onye na-eweta ọ bụla — akụkụ (%, arịrịọ, tokens, $) na oghere oge",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Sava MCP",
-        "description": "Jikọọ na sava 67router MCP (ngwaọrụ 107, ụzọ mbufe 3: SSE/stdio/HTTP). Ọ na-ekpuchi nduzi ụzọ, cache, mkpakọ, ebe nchekwa, nka, ndị na-eweta ọrụ, na ngwaọrụ nyocha n'ofe oke ikike 32."
+        "description": "Jikọọ na sava 67router MCP (ngwaọrụ 99, ụzọ mbufe 3: SSE/stdio/HTTP). Ọ na-ekpuchi nduzi ụzọ, cache, mkpakọ, ebe nchekwa, nka, ndị na-eweta ọrụ, na ngwaọrụ nyocha n'ofe oke ikike 30."
       },
       "omni-agents-a2a": {
         "name": "Ndị Nnọchi Anya na Usoro A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Ntụle",
         "description": "Mepụta ma gbaa evaluation suites, lelee ọganihu benchmark dị ndụ, lee scorecards, tulee arụmọrụ model, ma jikọta eval runs na usoro ọrụ CI site na CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, Nka na Ebe Nchekwa",
-        "description": "Jikwaa Omni Skills (depụta, wụnye, nwalee, wepụ), plugins (mepụta, hazie), na ebe nchekwa na-adịgide adịgide (chọọ, tinye, hichapụ) site na CLI."
       },
       "cli-setup": {
         "name": "CLI: Ntọlite na Nhazi",

@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguracija",
     "aiFeaturesSection": "AI funkcije",
     "mcp": "MCP Server",
-    "plugins": "Dodaci",
     "apiEndpoints": "API Endpointi",
     "analyticsSearch": "Pretraga",
     "analyticsUtilization": "Korištenje",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Sandbox registar vještina",
     "agentSkillsSubtitle": "A2A registar vještina",
     "mcpSubtitle": "Kontrole MCP servera",
-    "pluginsSubtitle": "Marketplace i instalacije dodataka",
     "mediaSubtitle": "Keširani medijski fajlovi",
     "settingsSubtitle": "Sva podešavanja",
     "settingsGeneralSubtitle": "Baza podataka i rezervne kopije",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Rang lista",
     "limits": "Limiti",
     "profile": "Profil",
-    "plugins": "Dodaci",
     "providerStats": "Statistika provajdera",
     "new": "Novo",
     "quota": "Kvota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Nije bilo moguće ukloniti ovaj pool.",
     "dismiss": "Zatvori"
   },
-  "plugins": {
-    "title": "Dodaci",
-    "description": "Instalirajte i upravljajte dodacima za proširenje funkcionalnosti 67router-a",
-    "loading": "Učitavanje dodataka.",
-    "scanning": "Skeniranje.",
-    "scanForPlugins": "Skeniraj dodatke",
-    "noPlugins": "Nema instaliranih dodataka",
-    "noPluginsDescription": "Postavite direktorije dodataka u ~/.omniroute/plugins/ i kliknite Skeniraj.",
-    "activate": "Aktiviraj",
-    "deactivate": "Deaktiviraj",
-    "uninstall": "Deinstaliraj",
-    "uninstallConfirm": "Deinstalirati dodatak \"{name}\"?",
-    "pluginScanComplete": "Skeniranje dodataka završeno",
-    "pluginScanFailed": "Skeniranje dodataka nije uspjelo",
-    "activated": "{name} aktiviran",
-    "deactivated": "{name} deaktiviran",
-    "activateFailed": "Neuspjelo aktiviranje {name}",
-    "deactivateFailed": "Neuspjelo deaktiviranje {name}",
-    "uninstalled": "{name} deinstaliran",
-    "uninstallFailed": "Neuspjelo deinstaliranje {name}",
-    "configure": "Konfiguriši: {name}",
-    "configurePlugin": "Konfiguriši",
-    "noConfigSettings": "Ovaj dodatak nema postavke za konfiguraciju.",
-    "saving": "Spremanje.",
-    "saveConfiguration": "Sačuvaj konfiguraciju",
-    "configurationSaved": "Konfiguracija sačuvana",
-    "saveConfigurationFailed": "Neuspjelo spremanje konfiguracije",
-    "pluginNotFound": "Dodatak nije pronađen",
-    "version": "Verzija",
-    "author": "Autor",
-    "description_label": "Opis",
-    "status": "Status",
-    "enabled": "Omogućeno",
-    "disabled": "Onemogućeno",
-    "installedTab": "Instalirano",
-    "marketplaceTab": "Trgovina",
-    "marketplaceUrlLabel": "Prilagođeni Marketplace URL",
-    "marketplaceUrlPlaceholder": "Ostavite prazno za službeni Omniroute registar",
-    "saveMarketplaceUrl": "Sačuvaj i ponovo učitaj",
-    "marketplaceUrlSaved": "Marketplace URL ažuriran",
-    "marketplaceEmpty": "Nema pronađenih dodataka u marketplace-u.",
-    "marketplaceInstallComingSoon": "Instalacije iz marketplace-a dolaze uskoro.",
-    "verified": "Verifikovano",
-    "install": "Instaliraj",
-    "installedFromMarketplace": "Dodatak {name} je instaliran!",
-    "hooks": "Hookovi"
-  },
   "quotaPlans": {
     "title": "Planovi i kvote",
     "description": "Konfigurišite planove kvota po provajderu — dimenzije (%, zahtjevi, tokeni, $) i vremenski prozori",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP server",
-        "description": "Povežite se na 67router MCP server (107 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata rutiranje, keširanje, kompresiju, memoriju, vještine, provajdere i alate za reviziju kroz 32 opsega dozvola."
+        "description": "Povežite se na 67router MCP server (99 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata rutiranje, keširanje, kompresiju, memoriju, vještine, provajdere i alate za reviziju kroz 30 opsega dozvola."
       },
       "omni-agents-a2a": {
         "name": "Agenti i A2A Protokol",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluacije",
         "description": "Kreirajte i pokrećite evaluacione suite-ove, pratite napredak benchmark-a u stvarnom vremenu, pregledajte scorecard-ove, uporedite performanse modela i integrišite eval pokretanja sa CI workflow-ovima putem CLI-ja."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Pluginovi, vještine i memorija",
-        "description": "Upravljajte Omni vještinama (lista, instalacija, testiranje, uklanjanje), pluginovima (kreiranje, konfiguracija) i trajnom memorijom (pretraga, dodavanje, brisanje) putem CLI-ja."
       },
       "cli-setup": {
         "name": "CLI: Postavka i konfiguracija",

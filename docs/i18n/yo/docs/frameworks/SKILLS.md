@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Ṣíṣe Kóòdù    | `eval_code` (JavaScript/Python tó wà nínú sandbox) | HYBRID |
 | Sístẹ́mù       | `execute_command` (ṣíṣe CLI nínú sandbox)          | MANUAL |
 
-### Fífi Ọgbọ́n Àdáni Kún Un
-
-Wo [SDK Plugin & Ìṣọ̀kan Àwọn Ọgbọ́n](./PLUGIN_SDK.md) fún ọ̀nà láti fi ọgbọ́n àdáni kún un nípasẹ̀ ètò plugin.
-
 ---
 
 ## Tún Wo Èyí

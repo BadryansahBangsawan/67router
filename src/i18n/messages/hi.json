@@ -1032,7 +1032,6 @@
     "configurationSection": "कॉन्फ़िगरेशन",
     "aiFeaturesSection": "AI सुविधाएँ",
     "mcp": "MCP",
-    "plugins": "प्लगइन्स",
     "apiEndpoints": "API एंडपॉइंट्स",
     "analyticsSearch": "खोज",
     "analyticsUtilization": "उपयोग",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "सैंडबॉक्स कौशल रजिस्ट्री",
     "agentSkillsSubtitle": "A2A कौशल रजिस्ट्री",
     "mcpSubtitle": "MCP सर्वर नियंत्रण",
-    "pluginsSubtitle": "प्लगइन मार्केटप्लेस और इंस्टॉलेशन",
     "mediaSubtitle": "कैश की गई मीडिया फ़ाइलें",
     "settingsSubtitle": "सभी सेटिंग्स",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "लीडरबोर्ड",
     "limits": "सीमाएं",
     "profile": "प्रोफ़ाइल",
-    "plugins": "प्लगइन्स",
     "providerStats": "प्रदाता आँकड़े",
     "new": "नया",
     "quota": "कोटा",
@@ -11455,53 +11452,6 @@
     "removeFailed": "इस पूल को हटाया नहीं जा सका।",
     "dismiss": "खारिज करें"
   },
-  "plugins": {
-    "title": "प्लगइन",
-    "description": "67router की कार्यक्षमता बढ़ाने के लिए प्लगइन इंस्टॉल और प्रबंधित करें",
-    "loading": "प्लगइन लोड हो रहे हैं...",
-    "scanning": "स्कैन किया जा रहा है...",
-    "scanForPlugins": "प्लगइन खोजें",
-    "noPlugins": "कोई प्लगइन इंस्टॉल नहीं है",
-    "noPluginsDescription": "प्लगइन डायरेक्टरी ~/.omniroute/plugins/ में रखें और स्कैन पर क्लिक करें।",
-    "activate": "सक्रिय करें",
-    "deactivate": "निष्क्रिय करें",
-    "uninstall": "अनइंस्टॉल करें",
-    "uninstallConfirm": "प्लगइन \"{name}\" को अनइंस्टॉल करें?",
-    "pluginScanComplete": "प्लगइन स्कैन पूर्ण हुआ",
-    "pluginScanFailed": "प्लगइन स्कैन विफल रहा",
-    "activated": "{name} सक्रिय किया गया",
-    "deactivated": "{name} निष्क्रिय किया गया",
-    "activateFailed": "{name} को सक्रिय करने में विफल",
-    "deactivateFailed": "{name} को निष्क्रिय करने में विफल",
-    "uninstalled": "{name} अनइंस्टॉल किया गया",
-    "uninstallFailed": "{name} को अनइंस्टॉल करने में विफल",
-    "configure": "कॉन्फ़िगर करें: {name}",
-    "configurePlugin": "कॉन्फ़िगर करें",
-    "noConfigSettings": "इस प्लगइन में कॉन्फ़िगर करने योग्य कोई सेटिंग नहीं है।",
-    "saving": "सहेजा जा रहा है...",
-    "saveConfiguration": "कॉन्फ़िगरेशन सहेजें",
-    "configurationSaved": "कॉन्फ़िगरेशन सहेजा गया",
-    "saveConfigurationFailed": "कॉन्फ़िगरेशन सहेजने में विफल",
-    "pluginNotFound": "प्लगइन नहीं मिला",
-    "version": "संस्करण",
-    "author": "लेखक",
-    "description_label": "विवरण",
-    "status": "स्थिति",
-    "enabled": "सक्षम",
-    "disabled": "अक्षम",
-    "installedTab": "इंस्टॉल किया गया",
-    "marketplaceTab": "मार्केटप्लेस",
-    "marketplaceUrlLabel": "कस्टम मार्केटप्लेस URL",
-    "marketplaceUrlPlaceholder": "आधिकारिक Omniroute रजिस्ट्री के लिए खाली छोड़ें",
-    "saveMarketplaceUrl": "सहेजें और पुनः लोड करें",
-    "marketplaceUrlSaved": "मार्केटप्लेस URL अपडेट किया गया",
-    "marketplaceEmpty": "मार्केटप्लेस में कोई प्लगइन नहीं मिला।",
-    "marketplaceInstallComingSoon": "मार्केटप्लेस इंस्टॉलेशन जल्द ही आ रहे हैं।",
-    "verified": "सत्यापित",
-    "install": "इंस्टॉल करें",
-    "installedFromMarketplace": "प्लगइन {name} इंस्टॉल हो गया!",
-    "hooks": "हुक"
-  },
   "quotaPlans": {
     "title": "योजनाएं और कोटा",
     "description": "प्रति प्रदाता कोटा योजनाएं कॉन्फ़िगर करें — आयाम (%, अनुरोध, टोकन, $) और समय अंतराल",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP सर्वर",
-        "description": "67router MCP सर्वर (107 टूल्स, 3 ट्रांसपोर्ट: SSE/stdio/HTTP) से कनेक्ट करें। 32 परमिशन स्कोप में राउटिंग, कैशे, कम्प्रेशन, मेमोरी, स्किल्स, प्रोवाइडर्स और ऑडिट टूल्स को कवर करता है।"
+        "description": "67router MCP सर्वर (99 टूल्स, 3 ट्रांसपोर्ट: SSE/stdio/HTTP) से कनेक्ट करें। 30 परमिशन स्कोप में राउटिंग, कैशे, कम्प्रेशन, मेमोरी, स्किल्स, प्रोवाइडर्स और ऑडिट टूल्स को कवर करता है।"
       },
       "omni-agents-a2a": {
         "name": "एजेंट और A2A प्रोटोकॉल",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: इवैल",
         "description": "CLI से मूल्यांकन सुइट बनाएं और चलाएं, लाइव बेंचमार्क प्रगति देखें, स्कोरकार्ड देखें, मॉडल प्रदर्शन की तुलना करें, और इवैल रन को CI वर्कफ़्लो के साथ एकीकृत करें।"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: प्लगइन्स, स्किल्स और मेमोरी",
-        "description": "CLI से Omni Skills (सूचीबद्ध करें, इंस्टॉल करें, परीक्षण करें, हटाएं), प्लगइन्स (बनाएं, कॉन्फ़िगर करें), और पर्सिस्टेंट मेमोरी (खोजें, जोड़ें, साफ़ करें) प्रबंधित करें।"
       },
       "cli-setup": {
         "name": "CLI: सेटअप और कॉन्फ़िगरेशन",

@@ -2158,26 +2158,6 @@ Správa dovedností (framework agentních rozšíření).
 
 ---
 
-## Pluginy
-
-Správa pluginů 67router (rozšíření třetích stran).
-
-| Metoda | Cesta                              | Popis                           |
-| ------ | ---------------------------------- | ------------------------------- |
-| GET    | `/api/plugins`                     | Vypíše nainstalované pluginy    |
-| POST   | `/api/plugins/marketplace/install` | Nainstaluje plugin z tržiště    |
-| DELETE | `/api/plugins/[name]`              | Odinstaluje plugin              |
-| POST   | `/api/plugins/[name]/activate`     | Aktivuje plugin                 |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivuje plugin               |
-| GET    | `/api/plugins/[name]/config`       | Získá konfiguraci pluginu       |
-| PUT    | `/api/plugins/[name]/config`       | Aktualizuje konfiguraci pluginu |
-
-**Ověření:** Vyžaduje relaci pro správu.
-
-Úplné podrobnosti naleznete v dokumentaci [Framework pluginů](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Stínové směrování
 
 Stínové porovnávání poskytovatelů / porovnávání A-B **není samostatným rozhraním REST** — konfiguruje se prostřednictvím kombinovaného směrování (viz [Automatické kombinace](../routing/AUTO-COMBO.md)). Metriky porovnání pro jednotlivé kombinace poskytuje `GET /api/combos/metrics`.

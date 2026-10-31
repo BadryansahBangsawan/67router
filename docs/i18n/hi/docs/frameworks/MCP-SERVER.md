@@ -414,8 +414,6 @@ MCP टूल स्कोप के बीच कोई पदानुक्�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                 |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                          |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                            |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                        |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                           |
 | `read:obsidian`       | 13 रीड टूल — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 राइट टूल — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                         |
@@ -570,7 +568,6 @@ stdio ट्रांसपोर्ट हर 5 सेकंड में ल�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | स्किल टूल परिभाषाएँ (4 टूल)                                      |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion संदर्भ स्रोत टूल परिभाषाएँ (6 टूल)                        |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | गेमिफ़िकेशन टूल परिभाषाएँ (8 टूल)                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | प्लगइन पंजीकरण और प्रबंधन टूल (8 टूल)                            |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` एंडपॉइंट                                       |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` एंडपॉइंट                                        |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ट्रांसपोर्ट रूट                               |

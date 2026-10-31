@@ -1032,7 +1032,6 @@
     "configurationSection": "Налаштування",
     "aiFeaturesSection": "Функції AI",
     "mcp": "MCP",
-    "plugins": "Плагіни",
     "apiEndpoints": "API-ендпоінти",
     "analyticsSearch": "Пошук",
     "analyticsUtilization": "Завантаженість",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Реєстр пісочних навичок",
     "agentSkillsSubtitle": "Реєстр навичок A2A",
     "mcpSubtitle": "Керування MCP-сервером",
-    "pluginsSubtitle": "Маркетплейс плагінів та встановлення",
     "mediaSubtitle": "Кешовані медіафайли",
     "settingsSubtitle": "Усі налаштування",
     "settingsGeneralSubtitle": "Основи застосунку",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Таблиця лідерів",
     "limits": "Ліміти",
     "profile": "Профіль",
-    "plugins": "Плагіни",
     "providerStats": "Статистика провайдерів",
     "new": "Нове",
     "quota": "Квота",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Не вдалося видалити цей пул.",
     "dismiss": "Закрити"
   },
-  "plugins": {
-    "title": "Плагіни",
-    "description": "Установлюйте плагіни для розширення функціональності 67router і керуйте ними",
-    "loading": "Завантаження плагінів...",
-    "scanning": "Сканування...",
-    "scanForPlugins": "Сканувати плагіни",
-    "noPlugins": "Плагіни не встановлено",
-    "noPluginsDescription": "Розмістіть каталоги плагінів у ~/.omniroute/plugins/ і натисніть «Сканувати».",
-    "activate": "Активувати",
-    "deactivate": "Деактивувати",
-    "uninstall": "Видалити",
-    "uninstallConfirm": "Видалити плагін «{name}»?",
-    "pluginScanComplete": "Сканування плагінів завершено",
-    "pluginScanFailed": "Не вдалося просканувати плагіни",
-    "activated": "{name} активовано",
-    "deactivated": "{name} деактивовано",
-    "activateFailed": "Не вдалося активувати {name}",
-    "deactivateFailed": "Не вдалося деактивувати {name}",
-    "uninstalled": "{name} видалено",
-    "uninstallFailed": "Не вдалося видалити {name}",
-    "configure": "Налаштувати: {name}",
-    "configurePlugin": "Налаштувати",
-    "noConfigSettings": "Цей плагін не має параметрів для налаштування.",
-    "saving": "Збереження...",
-    "saveConfiguration": "Зберегти конфігурацію",
-    "configurationSaved": "Конфігурацію збережено",
-    "saveConfigurationFailed": "Не вдалося зберегти конфігурацію",
-    "pluginNotFound": "Плагін не знайдено",
-    "version": "Версія",
-    "author": "Автор",
-    "description_label": "Опис",
-    "status": "Стан",
-    "enabled": "Увімкнено",
-    "disabled": "Вимкнено",
-    "installedTab": "Встановлено",
-    "marketplaceTab": "Маркетплейс",
-    "marketplaceUrlLabel": "Спеціальна URL-адреса маркетплейсу",
-    "marketplaceUrlPlaceholder": "Залиште порожнім для офіційного реєстру Omniroute",
-    "saveMarketplaceUrl": "Зберегти та перезавантажити",
-    "marketplaceUrlSaved": "URL-адресу маркетплейсу оновлено",
-    "marketplaceEmpty": "У маркетплейсі не знайдено плагінів.",
-    "marketplaceInstallComingSoon": "Встановлення з маркетплейсу з'явиться незабаром.",
-    "verified": "Перевірено",
-    "install": "Встановити",
-    "installedFromMarketplace": "Плагін {name} встановлено!",
-    "hooks": "Хуки"
-  },
   "quotaPlans": {
     "title": "Тарифні плани та квоти",
     "description": "Налаштування планів квот для кожного провайдера — виміри (%, запити, токени, $) та часові вікна",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Сервер MCP",
-        "description": "Підключайтеся до MCP-сервера 67router (107 інструментів, 3 транспорти: SSE/stdio/HTTP). Охоплює інструменти маршрутизації, кешування, стиснення, пам'яті, навичок, провайдерів та аудиту в межах 32 областей дозволів."
+        "description": "Підключайтеся до MCP-сервера 67router (99 інструментів, 3 транспорти: SSE/stdio/HTTP). Охоплює інструменти маршрутизації, кешування, стиснення, пам'яті, навичок, провайдерів та аудиту в межах 30 областей дозволів."
       },
       "omni-agents-a2a": {
         "name": "Агенти та протокол A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Оцінювання",
         "description": "Створюйте та запускайте набори оцінювання, відстежуйте прогрес тестування в реальному часі, переглядайте картки оцінок, порівнюйте продуктивність моделей та інтегруйте запуски оцінювання з робочими процесами CI через CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Плагіни, навички та пам'ять",
-        "description": "Керуйте Omni Skills (виведення списку, встановлення, тестування, видалення), плагінами (створення, налаштування) та постійною пам'яттю (пошук, додавання, очищення) через CLI."
       },
       "cli-setup": {
         "name": "CLI: Встановлення та налаштування",

@@ -416,8 +416,6 @@ Kull għodda teħtieġ ambiti speċifiċi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13-il għodda tal-qari — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 għodod tal-kitba — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                  |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -571,7 +569,6 @@ Uża d-dashboard jew l-endpoints REST `/api/mcp/audit` u `/api/mcp/audit/stats` 
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definizzjonijiet tal-għodda tal-ħiliet (4 għodda)                                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definizzjonijiet tal-għodda tal-isors Notion (6 għodda)                                      |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definizzjonijiet tal-għodda tal gamifikazzjoni (8 għodda)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Għodda għar-reġistrazzjoni u ġestjoni tal-plugins (8 għodda)                                 |
 | `src/app/api/mcp/status/route.ts`                                        | Tmiem ` /api/mcp/status`                                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | Tmiem ` /api/mcp/tools`                                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | Rotta tal-trasport SSE ` /api/mcp/sse`                                                       |

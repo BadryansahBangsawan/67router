@@ -39,7 +39,7 @@ Running tests: see [Testing](#testing) below (run the most focused test for chan
 - Services — `open-sse/services/` (combo routing, rate limits, caching, etc)
 - Database — `src/lib/db/` (SQLite domain modules, 209 migrations)
 - Domain/Policy — `src/domain/` (policy engine, cost rules, fallback logic)
-- MCP Server — `open-sse/mcp-server/` (107 tools: 42 canonical + memory/skill/GitHub/pool/gamification/plugin/Notion/Obsidian/local-corpus/RTK modules; 3 transports: stdio / SSE / Streamable HTTP; 32 scopes)
+- MCP Server — `open-sse/mcp-server/` (99 tools: 42 canonical + memory/skill/GitHub/pool/gamification/Notion/Obsidian/local-corpus/RTK modules; 3 transports: stdio / SSE / Streamable HTTP; 30 scopes)
 - A2A tasks — `src/lib/a2a/` (TaskManager backing Conductor; the public A2A protocol surface was removed)
 - Skills — `src/lib/skills/` (extensible skill framework); Memory — `src/lib/memory/` (persistent conversational memory)
 

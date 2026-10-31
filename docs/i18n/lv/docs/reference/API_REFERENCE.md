@@ -2175,26 +2175,6 @@ Pilnu informāciju skatiet sadaļā [Prasmju ietvars](../frameworks/SKILLS.md).
 
 ---
 
-## Spraudņi
-
-Pārvaldiet 67router spraudņus (trešo pušu paplašinājumus).
-
-| Metode | Ceļš                               | Apraksts                              |
-| ------ | ---------------------------------- | ------------------------------------- |
-| GET    | `/api/plugins`                     | Uzskaitīt instalētos spraudņus        |
-| POST   | `/api/plugins/marketplace/install` | Instalēt spraudni no spraudņu veikala |
-| DELETE | `/api/plugins/[name]`              | Atinstalēt spraudni                   |
-| POST   | `/api/plugins/[name]/activate`     | Aktivizēt spraudni                    |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivizēt spraudni                  |
-| GET    | `/api/plugins/[name]/config`       | Iegūt spraudņa konfigurāciju          |
-| PUT    | `/api/plugins/[name]/config`       | Atjaunināt spraudņa konfigurāciju     |
-
-**Autentifikācija:** Nepieciešama pārvaldības sesija.
-
-Pilnu informāciju skatiet sadaļā [Spraudņu ietvars](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Ēnu maršrutēšana
 
 Pakalpojumu sniedzēju ēnu/A-B salīdzināšana **nav atsevišķa REST saskarne** — tā tiek konfigurēta, izmantojot kombinēto maršrutēšanu (skatiet [Automātiskā kombinēšana](../routing/AUTO-COMBO.md)). Katras kombinācijas salīdzināšanas metriku nodrošina `GET /api/combos/metrics`.

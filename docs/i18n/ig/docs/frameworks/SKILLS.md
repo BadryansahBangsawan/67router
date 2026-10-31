@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Mmezu Code | `eval_code` (JavaScript/Python dị na sandbox) | HYBRID |
 | Sistemụ    | `execute_command` (mmezu CLI dị na sandbox)   | MANUAL |
 
-### Ịgbakwunye Skill Nke Gị
-
-Lee [Plugin SDK & Njikọ Skills](./PLUGIN_SDK.md) maka otu esi agbakwunye skill nke gị site na sistemụ plugin.
-
 ---
 
 ## Hụkwa

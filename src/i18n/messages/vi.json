@@ -1038,7 +1038,6 @@
     "configurationSection": "Cấu hình",
     "aiFeaturesSection": "Tính năng AI",
     "mcp": "Máy chủ MCP",
-    "plugins": "Tiện ích bổ sung",
     "apiEndpoints": "Các endpoint API",
     "analyticsSearch": "Tìm kiếm",
     "analyticsUtilization": "Mức sử dụng",
@@ -1135,7 +1134,6 @@
     "omniSkillsSubtitle": "Danh mục kỹ năng sandbox",
     "agentSkillsSubtitle": "Danh mục kỹ năng A2A",
     "mcpSubtitle": "Điều khiển máy chủ MCP",
-    "pluginsSubtitle": "Chợ và cài đặt phần bổ trợ",
     "mediaSubtitle": "Tệp phương tiện được lưu trong cache",
     "settingsSubtitle": "Tất cả cài đặt",
     "settingsGeneralSubtitle": "Cơ sở dữ liệu và bản sao lưu",
@@ -1495,7 +1493,6 @@
     "leaderboard": "Bảng xếp hạng",
     "limits": "Giới hạn",
     "profile": "Hồ sơ",
-    "plugins": "Tiện ích bổ sung",
     "providerStats": "Thống kê nhà cung cấp",
     "new": "Mới",
     "quota": "Hạn mức",
@@ -11500,53 +11497,6 @@
     "wizardRemoveDimension": "Xóa chiều hạn mức",
     "wizardRemoveKey": "Xóa khóa"
   },
-  "plugins": {
-    "title": "Plugin",
-    "description": "Cài đặt và quản lý các plugin để mở rộng chức năng của 67router",
-    "loading": "Đang tải các plugin...",
-    "scanning": "Đang quét...",
-    "scanForPlugins": "Quét tìm plugin",
-    "noPlugins": "Chưa cài đặt plugin nào",
-    "noPluginsDescription": "Đặt các thư mục plugin vào ~/.omniroute/plugins/ và nhấp vào Quét.",
-    "activate": "Kích hoạt",
-    "deactivate": "Hủy kích hoạt",
-    "uninstall": "Gỡ cài đặt",
-    "uninstallConfirm": "Gỡ cài đặt plugin \"{name}\"?",
-    "pluginScanComplete": "Đã hoàn tất quét plugin",
-    "pluginScanFailed": "Quét plugin thất bại",
-    "activated": "Đã kích hoạt {name}",
-    "deactivated": "Đã hủy kích hoạt {name}",
-    "activateFailed": "Không thể kích hoạt {name}",
-    "deactivateFailed": "Không thể hủy kích hoạt {name}",
-    "uninstalled": "Đã gỡ cài đặt {name}",
-    "uninstallFailed": "Không thể gỡ cài đặt {name}",
-    "configure": "Cấu hình: {name}",
-    "configurePlugin": "Cấu hình",
-    "noConfigSettings": "Plugin này không có cài đặt nào có thể cấu hình.",
-    "saving": "Đang lưu...",
-    "saveConfiguration": "Lưu cấu hình",
-    "configurationSaved": "Đã lưu cấu hình",
-    "saveConfigurationFailed": "Không thể lưu cấu hình",
-    "pluginNotFound": "Không tìm thấy plugin",
-    "version": "Phiên bản",
-    "author": "Tác giả",
-    "description_label": "Mô tả",
-    "status": "Trạng thái",
-    "enabled": "Đã bật",
-    "disabled": "Đã tắt",
-    "installedTab": "Đã cài đặt",
-    "marketplaceTab": "Kho ứng dụng",
-    "marketplaceUrlLabel": "URL Marketplace tùy chỉnh",
-    "marketplaceUrlPlaceholder": "Để trống để sử dụng kho plugin chính thức của 67router",
-    "saveMarketplaceUrl": "Lưu & Tải lại",
-    "marketplaceUrlSaved": "Đã cập nhật URL Marketplace",
-    "marketplaceEmpty": "Không tìm thấy plugin nào trong marketplace.",
-    "marketplaceInstallComingSoon": "Chức năng cài đặt từ Marketplace sẽ sớm ra mắt.",
-    "verified": "Đã xác minh",
-    "install": "Cài đặt",
-    "installedFromMarketplace": "Đã cài đặt plugin {name}!",
-    "hooks": "Hook"
-  },
   "quotaPlans": {
     "title": "Gói dịch vụ & Hạn ngạch",
     "description": "Cấu hình các gói hạn ngạch theo từng nhà cung cấp — các chỉ số (%, yêu cầu, token, $) và khung thời gian",
@@ -12217,7 +12167,7 @@
       },
       "omni-mcp": {
         "name": "Máy chủ MCP",
-        "description": "Kết nối máy chủ MCP 67router với 107 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 32 phạm vi quyền."
+        "description": "Kết nối máy chủ MCP 67router với 99 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 30 phạm vi quyền."
       },
       "omni-agents-a2a": {
         "name": "Agent & giao thức A2A",
@@ -12302,10 +12252,6 @@
       "cli-eval": {
         "name": "CLI: Đánh giá",
         "description": "Tạo và chạy bộ đánh giá, theo dõi benchmark trực tiếp, xem scorecard, so sánh hiệu năng mô hình và tích hợp lượt đánh giá với quy trình CI từ CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugin, skill & bộ nhớ",
-        "description": "Quản lý Omni Skills (liệt kê, cài đặt, kiểm tra, xóa), plugin (tạo, cấu hình) và bộ nhớ bền vững (tìm kiếm, thêm, xóa) từ CLI."
       },
       "cli-setup": {
         "name": "CLI: Thiết lập & cấu hình",

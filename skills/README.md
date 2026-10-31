@@ -44,7 +44,7 @@ Each manifest URL follows the pattern:
 | `omni-sync-cloud`      | Cloud Sync                    | Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets.                                   |
 | `omni-db-backups`      | Database & Backups            | Trigger system backups, restore from backup files, and manage the SQLite database lifecycle. Supports export, import, and incremental snapshot strategies.                                     |
 | `omni-webhooks`        | Webhooks                      | Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, provider.error, budget.exceeded, etc.) and manage delivery retries.                      |
-| `omni-mcp`             | MCP Server                    | Connect to the OmniRoute MCP server (110 tools, 3 transports: SSE/stdio/HTTP) across 33 permission scopes.                                                                                     |
+| `omni-mcp`             | MCP Server                    | Connect to the OmniRoute MCP server (99 tools, 3 transports: SSE/stdio/HTTP) across 30 permission scopes.                                                                                      |
 | `omni-agents-a2a`      | Agents & A2A Protocol         | Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities. |
 | `omni-version-manager` | Version Manager               | Install, start, stop, restart, and update embedded services (9Router, CLIProxyAPI). Monitor service status, retrieve logs, and configure auto-start.                                           |
 | `omni-inference`       | Inference (OpenAI-compatible) | The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API.                                             |
@@ -54,27 +54,29 @@ Each manifest URL follows the pattern:
 
 ## CLI Skills (21)
 
-| ID                    | Name                          | Description                                                                                                                                                                                    |
-| --------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cli-serve`           | CLI: Serve                    | Start, stop, and restart the OmniRoute server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut.                   |
-| `cli-health`          | CLI: Health                   | Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status. |
-| `cli-providers`       | CLI: Providers                | Manage provider connections from the CLI: list available/configured providers, add, test, test-all, validate, rotate API keys, and view per-provider metrics.                                  |
-| `cli-keys`            | CLI: API Keys                 | Create, list, rotate, and revoke OmniRoute API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration.                                        |
-| `cli-models`          | CLI: Models                   | Query available AI models, list model aliases, and browse the full model catalog from the CLI. Filter by provider, search by capability, and resolve model name variants.                      |
-| `cli-chat`            | CLI: Chat                     | Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all OmniRoute providers, combo routing, and system prompt configuration.                 |
-| `cli-routing`         | CLI: Routing & Combos         | Create, list, update, and delete routing combos from the CLI. Test routing strategies, inspect combo metrics, and configure fallback chains interactively.                                     |
-| `cli-resilience`      | CLI: Resilience & Quotas      | Inspect and manage circuit-breaker states, connection cooldowns, quota limits, and backoff levels from the CLI. Reset stuck providers and configure resilience thresholds.                     |
-| `cli-compression`     | CLI: Compression              | Configure and test prompt compression from the CLI. Manage RTK filters, Caveman rules, stacked compression modes, and preview compression output with real prompts.                            |
-| `cli-contexts`        | CLI: Contexts & Sessions      | Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines.                         |
-| `cli-cost-usage`      | CLI: Cost & Usage             | View cost breakdowns, token usage, and call logs from the CLI. Filter by provider, model, or date range. Export usage reports and inspect per-connection spending.                             |
-| `cli-mcp`             | CLI: MCP                      | Inspect the MCP server status, list registered tools and scopes, run tool invocations, and manage MCP audit logs from the CLI.                                                                 |
-| `cli-tunnel`          | CLI: Tunnels                  | Start and stop tunnel connections (ngrok, Cloudflare, custom) from the CLI. Inspect active tunnel URLs, configure authentication, and test external reachability.                              |
-| `cli-backup-sync`     | CLI: Backup & Sync            | Backup and restore OmniRoute data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files.                                 |
-| `cli-policy-audit`    | CLI: Policy & Audit           | Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows.                  |
-| `cli-eval`            | CLI: Simulate                 | Simulate how a combo would route a request from the CLI, using live combo, health and quota data, without sending traffic upstream.                                                            |
-| `cli-plugins-skills`  | CLI: Plugins, Skills & Memory | Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI.                                                        |
-| `cli-setup`           | CLI: Setup & Config           | Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands.                              |
-| `cli-skill-collector` | CLI: Skill Collector          | Detect installed coding CLI tools, search GitHub for matching agent skills, and plan their installation into the detected tools' skill directories.                                            |
+| ID                    | Name                     | Description                                                                                                                                                                                    |
+| --------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cli-serve`           | CLI: Serve               | Start, stop, and restart the 67router server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut.                    |
+| `cli-health`          | CLI: Health              | Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status. |
+| `cli-providers`       | CLI: Providers           | Manage provider connections from the CLI: list available/configured providers, add, test, test-all, validate, rotate API keys, and view per-provider metrics.                                  |
+| `cli-keys`            | CLI: API Keys            | Create, list, rotate, and revoke 67router API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration.                                         |
+| `cli-models`          | CLI: Models              | Query available AI models, list model aliases, and browse the full model catalog from the CLI. Filter by provider, search by capability, and resolve model name variants.                      |
+| `cli-chat`            | CLI: Chat                | Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all 67router providers, combo routing, and system prompt configuration.                  |
+| `cli-routing`         | CLI: Routing & Combos    | Create, list, update, and delete routing combos from the CLI. Test routing strategies, inspect combo metrics, and configure fallback chains interactively.                                     |
+| `cli-resilience`      | CLI: Resilience & Quotas | Inspect and manage circuit-breaker states, connection cooldowns, quota limits, and backoff levels from the CLI. Reset stuck providers and configure resilience thresholds.                     |
+| `cli-compression`     | CLI: Compression         | Configure and test prompt compression from the CLI. Manage RTK filters, Caveman rules, stacked compression modes, and preview compression output with real prompts.                            |
+| `cli-contexts`        | CLI: Contexts & Sessions | Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines.                         |
+| `cli-cost-usage`      | CLI: Cost & Usage        | View cost breakdowns, token usage, and call logs from the CLI. Filter by provider, model, or date range. Export usage reports and inspect per-connection spending.                             |
+| `cli-mcp`             | CLI: MCP                 | Inspect the MCP server status, list registered tools and scopes, run tool invocations, and manage MCP audit logs from the CLI.                                                                 |
+| `cli-a2a`             | CLI: A2A Protocol        | Interact with the 67router A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.                              |
+| `cli-tunnel`          | CLI: Tunnels             | Start and stop tunnel connections (ngrok, Cloudflare, custom) from the CLI. Inspect active tunnel URLs, configure authentication, and test external reachability.                              |
+| `cli-backup-sync`     | CLI: Backup & Sync       | Backup and restore 67router data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files.                                  |
+| `cli-policy-audit`    | CLI: Policy & Audit      | Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows.                  |
+| `cli-eval`            | CLI: Evals               | Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI.                           |
+| `cli-eval`            | CLI: Simulate            | Simulate how a combo would route a request from the CLI, using live combo, health and quota data, without sending traffic upstream.                                                            |
+| `cli-plugins-skills`  | CLI: Skills & Memory     | Manage Omni Skills (list, install, test, remove) and persistent memory (search, add, clear) from the CLI.                                                                                      |
+| `cli-setup`           | CLI: Setup & Config      | Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands.                              |
+| `cli-skill-collector` | CLI: Skill Collector     | Detect installed coding CLI tools, search GitHub for matching agent skills, and plan their installation into the detected tools' skill directories.                                            |
 
 ## Configuration workflow (1)
 
@@ -109,7 +111,7 @@ examples, and error codes. Assume the reader is an agent with no prior context.
 
 ## What makes OmniRoute skills unique
 
-- `omni-mcp` — 110 MCP tools across 33 scopes over SSE/stdio/Streamable HTTP
+- `omni-mcp` — 99 MCP tools across 30 scopes over SSE/stdio/Streamable HTTP
 - `omni-agents-a2a` — 6 A2A skills (smart-routing, quota, discovery, cost, health, list-capabilities) via JSON-RPC 2.0
 - `omni-combos-routing` — create/configure combos, 19 strategies, Auto-combo scoring, fallback chains
 - `omni-compression` — RTK + Caveman + stacked mode + MCP accessibility filter (60–90% token savings)

@@ -2093,26 +2093,6 @@ See [Skills Framework](../frameworks/SKILLS.md) for full details.
 
 ---
 
-## Plugins
-
-Manage 67router plugins (third-party extensions).
-
-| Method | Path                               | Description                           |
-| ------ | ---------------------------------- | ------------------------------------- |
-| GET    | `/api/plugins`                     | List installed plugins                |
-| POST   | `/api/plugins/marketplace/install` | Install a plugin from the marketplace |
-| DELETE | `/api/plugins/[name]`              | Uninstall a plugin                    |
-| POST   | `/api/plugins/[name]/activate`     | Activate a plugin                     |
-| POST   | `/api/plugins/[name]/deactivate`   | Deactivate a plugin                   |
-| GET    | `/api/plugins/[name]/config`       | Get plugin configuration              |
-| PUT    | `/api/plugins/[name]/config`       | Update plugin configuration           |
-
-**Auth:** Requires management session.
-
-See [Plugins Framework](../frameworks/PLUGIN_SDK.md) for full details.
-
----
-
 ## Shadow Routing
 
 Shadow / A-B comparison of providers is **not a standalone REST surface** — it is configured through combo routing (see [Auto-Combo](../routing/AUTO-COMBO.md)). Per-combo comparison metrics are served by `GET /api/combos/metrics`.

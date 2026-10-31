@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Bild-Assets für Marketing und README
 ├── @omniroute/           # Veröffentlichbare Begleitpakete (opencode-plugin, opencode-provider)
 ├── skills/               # Skill-Pakete für CLI/Agenten (cli-* + omni-* + config-codex-cli)
-├── examples/             # Beispiel-Plug-ins + Starter für omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Beiträge der Community (podman/)
 ├── .source/              # Fumadocs-Quellkonfiguration (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub-Actions-Workflows + Issue-Vorlagen + PR-Vorlage
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — verarbeitet Erinnerungen mit `needs_reindex=1` im Hintergrund; wird von `POST /api/memory/reindex` und dem verzögerten Backfill-Pfad aufgerufen. (Plan 21)                                                                                                                                                         |
 | `monitoring/`                            | Zustandsprüfungen, Ausgabe von Metriken                                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                 | OAuth-/Importabläufe für 22 Anbieter-Module (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                                  |
-| `plugins/`                               | Plugin-Registry                                                                                                                                                                                                                                                                                                                          |
 | `promptCache/`                           | Prompt-Cache-Haltepunkte nach Anthropic-Art                                                                                                                                                                                                                                                                                              |
 | `skills/`                                | Skills-Framework (integriert + Marketplace + SkillsSH) — siehe `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                               |
 | `webhookDispatcher.ts`                   | HMAC-Webhook-Zustellung — siehe `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                            |

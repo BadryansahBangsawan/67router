@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Изображения для маркетинговых материалов / README
 ├── @omniroute/           # Публикуемые сопутствующие пакеты (opencode-plugin, opencode-provider)
 ├── skills/               # Пакеты навыков CLI/агентов (cli-* + omni-* + config-codex-cli)
-├── examples/             # Примеры плагинов + стартовый шаблон omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Вклад сообщества (podman/)
 ├── .source/              # Конфигурация исходников Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Рабочие процессы GitHub Actions + шаблоны задач + шаблон PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — обрабатывает в фоновом режиме воспоминания с `needs_reindex=1`; вызывается через `POST /api/memory/reindex` и механизмом ленивого доиндексирования. (план 21)                                                                                                                                                       |
 | `monitoring/`                            | Проверки работоспособности, отправка метрик                                                                                                                                                                                                                                                                                               |
 | `oauth/`                                 | Потоки OAuth/импорта для 22 модулей провайдеров (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                               |
-| `plugins/`                               | Реестр плагинов                                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`                           | Точки разбиения кэша промптов в стиле Anthropic                                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Фреймворк навыков (встроенные навыки + маркетплейс + SkillsSH) — см. `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                          |
 | `webhookDispatcher.ts`                   | Доставка вебхуков с HMAC — см. `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                              |

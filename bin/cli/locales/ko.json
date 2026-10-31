@@ -1035,16 +1035,6 @@
     "system": "시스템 프롬프트",
     "resume": "이름으로 저장된 세션 재개"
   },
-  "plugin": {
-    "description": "CLI 플러그인 관리(omniroute-cmd-*)",
-    "list": "설치된 플러그인 목록 표시",
-    "install": "npm 또는 로컬 경로에서 플러그인 설치",
-    "remove": "설치된 플러그인 제거",
-    "info": "설치된 플러그인의 세부 정보 표시",
-    "search": "npm 레지스트리에서 사용 가능한 플러그인 검색",
-    "update": "설치된 플러그인 업데이트",
-    "scaffold": "새 플러그인 보일러플레이트 생성"
-  },
   "launch": {
     "description": "67router를 가리키도록 Claude Code 실행(로컬 또는 원격, --profile 사용)",
     "token": "Claude 클라이언트가 전송해야 하는 토큰(ANTHROPIC_AUTH_TOKEN)",

@@ -2107,26 +2107,6 @@ Tüm ayrıntılar için [Skills Framework](../frameworks/SKILLS.md) belgesine ba
 
 ---
 
-## Plugins
-
-67router eklentilerini (üçüncü taraf uzantıları) yönetin.
-
-| Yöntem | Yol                                | Açıklama                             |
-| ------ | ---------------------------------- | ------------------------------------ |
-| GET    | `/api/plugins`                     | Yüklü eklentileri listeleyin         |
-| POST   | `/api/plugins/marketplace/install` | Marketplace'ten bir eklenti yükleyin |
-| DELETE | `/api/plugins/[name]`              | Bir eklentiyi kaldırın               |
-| POST   | `/api/plugins/[name]/activate`     | Bir eklentiyi etkinleştirin          |
-| POST   | `/api/plugins/[name]/deactivate`   | Bir eklentiyi devre dışı bırakın     |
-| GET    | `/api/plugins/[name]/config`       | Eklenti yapılandırmasını alın        |
-| PUT    | `/api/plugins/[name]/config`       | Eklenti yapılandırmasını güncelleyin |
-
-**Kimlik doğrulama:** Yönetim oturumu gerektirir.
-
-Tüm ayrıntılar için [Plugins Framework](../frameworks/PLUGIN_SDK.md) belgesine bakın.
-
----
-
 ## Shadow Routing
 
 Sağlayıcıların Shadow / A-B karşılaştırması **bağımsız bir REST yüzeyi değildir** — combo yönlendirme aracılığıyla yapılandırılır (bkz. [Auto-Combo](../routing/AUTO-COMBO.md)). Combo başına karşılaştırma metrikleri `GET /api/combos/metrics` tarafından sunulur.

@@ -28,7 +28,7 @@ OmniRoute/
 ├── images/               # Marketing / README image assets
 ├── @omniroute/           # Publishable companion packages (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/agent skill packs (cli-* + omni-* + config-codex-cli)
-├── examples/             # Sample plugins + omniroute-cmd-hello starter
+├── examples/             # Quickstart client samples
 ├── contrib/              # Community contributions (podman/)
 ├── .source/              # Fumadocs source config (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions workflows + issue templates + PR template
@@ -191,7 +191,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — processes memories with `needs_reindex=1` in background; called by `POST /api/memory/reindex` and lazy-backfill path. (plan 21)                                                                                                                                                                   |
 | `monitoring/`                            | Health checks, metrics emission                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | OAuth/import flows for 22 provider modules (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Plugin registry                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | Anthropic-style prompt cache breakpoints                                                                                                                                                                                                                                                                                |
 | `skills/`                                | Skills framework (built-in + marketplace + SkillsSH) — see `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                  |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | Tunnel managers — see `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                       |
@@ -263,7 +262,7 @@ open-sse/
 ├── translator/          # Format converters (9 request, 9 response, 9 helpers)
 ├── transformer/         # Responses API ↔ Chat Completions (TransformStream)
 ├── services/            # ~80+ service modules (combo, accountFallback, autoCombo, reasoningCache, claude code/chatgpt stealth, modelDeprecation, taskAwareRouter, workflowFSM, etc.)
-├── mcp-server/          # MCP server (107 tools, 3 transports, 32 scopes)
+├── mcp-server/          # MCP server (99 tools, 3 transports, 30 scopes)
 ├── config/              # Provider/model registries, header config, model aliases
 ├── utils/               # TLS client, proxy fetch/dispatcher, network helpers
 ├── index.ts             # Workspace entry
@@ -412,7 +411,7 @@ open-sse/
 
 | Doc                                         | Purpose                                                              |
 | ------------------------------------------- | -------------------------------------------------------------------- |
-| `MCP-SERVER.md`                             | MCP server: 107 tools, 3 transports, 32 scopes, REST endpoints       |
+| `MCP-SERVER.md`                             | MCP server: 99 tools, 3 transports, 30 scopes, REST endpoints        |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | ACP (CLI agent registry) guide                                       |
 | `SKILLS.md`                                 | Skills framework (built-in + marketplace + SkillsSH + sandbox)       |
 | `RADAR.md`                                  | Radar free-model catalog overlay (`RADAR_ENABLED`, off by default)   |

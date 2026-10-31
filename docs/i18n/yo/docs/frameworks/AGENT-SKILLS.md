@@ -191,7 +191,7 @@ Wo [MCP-SERVER.md](./MCP-SERVER.md) fún àsopọ̀ scope àti ìfàṣẹsí.
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
 | `cli-eval`            | cli-eval           | `omniroute simulate`    |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
+| `cli-plugins-skills`  | cli-plugins-skills | `omniroute skills`      |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
 

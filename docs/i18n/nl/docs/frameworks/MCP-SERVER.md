@@ -416,8 +416,6 @@ Elke tool vereist specifieke scopes:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 leeshulpmiddelen — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 schrijfhulpmiddelen — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …             |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -573,7 +571,6 @@ Gebruik het dashboard of de REST-endpoints `/api/mcp/audit` en `/api/mcp/audit/s
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definities van vaardigheidstools (4 tools)                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definities van tools voor Notion-contextbronnen (6 tools)              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definities van gamificatietools (8 tools)                              |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Tools voor pluginregistratie en -beheer (8 tools)                      |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status`-endpoint                                             |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools`-endpoint                                              |
 | `src/app/api/mcp/sse/route.ts`                                           | SSE-transportroute `/api/mcp/sse`                                      |

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # 营销材料 / README 图像资源
 ├── @omniroute/           # 可发布的配套包（opencode-plugin、opencode-provider）
 ├── skills/               # CLI/智能体技能包（cli-* + omni-* + config-codex-cli）
-├── examples/             # 示例插件 + omniroute-cmd-hello 入门模板
+├── examples/             # Quickstart client samples
 ├── contrib/              # 社区贡献（podman/）
 ├── .source/              # Fumadocs 源配置（source.config.mjs + server/browser/dynamic）
 ├── .github/              # GitHub Actions 工作流 + Issue 模板 + PR 模板
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — 在后台处理 `needs_reindex=1` 的记忆；由 `POST /api/memory/reindex` 和延迟回填路径调用。（计划 21）                                                                                                                                                                                    |
 | `monitoring/`                            | 健康检查、指标发送                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | 22 个提供者模块的 OAuth/导入流程（agy、antigravity、claude、cline、codebuddy-cn、codex、cursor、devin-desktop、ghe-copilot、github、gitlab-duo、grok-cli-oauth、grok-cli、kilocode、kimi-coding、kiro、openference、qoder、trae、xai-oauth、zed-hosted、zed）                                               |
-| `plugins/`                               | 插件注册表                                                                                                                                                                                                                                                                                                  |
 | `promptCache/`                           | Anthropic 风格的提示词缓存断点                                                                                                                                                                                                                                                                              |
 | `skills/`                                | 技能框架（内置 + 市场 + SkillsSH）— 参见 `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                        |
 | `webhookDispatcher.ts`                   | HMAC webhook 交付 — 参见 `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                      |

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # ਮਾਰਕੀਟਿੰਗ / README ਚਿੱਤਰ ਐਸੈੱਟ
 ├── @omniroute/           # ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨ ਯੋਗ ਸਹਾਇਕ ਪੈਕੇਜ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ਏਜੰਟ ਸਕਿੱਲ ਪੈਕ (cli-* + omni-* + config-codex-cli)
-├── examples/             # ਨਮੂਨਾ ਪਲੱਗਇਨ + omniroute-cmd-hello ਸਟਾਰਟਰ
+├── examples/             # Quickstart client samples
 ├── contrib/              # ਕਮਿਊਨਿਟੀ ਯੋਗਦਾਨ (podman/)
 ├── .source/              # Fumadocs ਸਰੋਤ ਸੰਰਚਨਾ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ਵਰਕਫ਼ਲੋ + ਮੁੱਦਾ ਟੈਂਪਲੇਟ + PR ਟੈਂਪਲੇਟ
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ `needs_reindex=1` ਵਾਲੀਆਂ ਮੈਮੋਰੀਆਂ ਨੂੰ ਪ੍ਰੋਸੈਸ ਕਰਦਾ ਹੈ; `POST /api/memory/reindex` ਅਤੇ ਲੇਜ਼ੀ-ਬੈਕਫ਼ਿਲ ਪਾਥ ਵੱਲੋਂ ਕਾਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। (ਯੋਜਨਾ 21)                                                                                                                                     |
 | `monitoring/`                            | ਸਿਹਤ ਜਾਂਚਾਂ, ਮੈਟ੍ਰਿਕਸ ਉਤਸਰਜਨ                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | 22 ਪ੍ਰਦਾਤਾ ਮੋਡੀਊਲਾਂ ਲਈ OAuth/ਇੰਪੋਰਟ ਫ਼ਲੋ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | ਪਲੱਗਇਨ ਰਜਿਸਟਰੀ                                                                                                                                                                                                                                                                                                        |
 | `promptCache/`                           | Anthropic-ਸ਼ੈਲੀ ਦੇ ਪ੍ਰੌਂਪਟ ਕੈਸ਼ ਬ੍ਰੇਕਪੌਇੰਟ                                                                                                                                                                                                                                                                            |
 | `skills/`                                | Skills ਫਰੇਮਵਰਕ (ਬਿਲਟ-ਇਨ + ਮਾਰਕੀਟਪਲੇਸ + SkillsSH) — `docs/frameworks/SKILLS.md` ਵੇਖੋ                                                                                                                                                                                                                                   |
 | `webhookDispatcher.ts`                   | HMAC ਵੈੱਬਹੁੱਕ ਡਿਲਿਵਰੀ — `docs/frameworks/WEBHOOKS.md` ਵੇਖੋ                                                                                                                                                                                                                                                            |

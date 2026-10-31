@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # የፕሮጀክት ደረጃ (ሲጀመር የሚጫን)
 ```
 
-ወይም ከፕለጊን በፕሮግራም ይጫኑ፦
+Or register it programmatically at startup:
 
 ```ts
-// በፕለጊንዎ ውስጥ
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // የፕለጊኑ SDK የonRequest / onResponse / onError ማያያዣዎችን ያቀርባል።
-  // የፕለጊኑ ሞጁል ሲጫን (ወይም በመጀመሪያው onRequest) ሞተሩን ይመዝግቡ፤
-  // ከራስዎ የማፍረሻ መንገድ ደግሞ ምዝገባውን ይሰርዙ።
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// በማፍረስ ጊዜ፦
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

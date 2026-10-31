@@ -465,10 +465,6 @@ const config: SkillConfig = {
 | Izvajanje kode | `eval_code` (izoliran JavaScript/Python)    | HYBRID |
 | Sistem         | `execute_command` (izolirano izvajanje CLI) | MANUAL |
 
-### Dodajanje spretnosti po meri
-
-Navodila za dodajanje spretnosti po meri prek sistema vtičnikov najdete v dokumentu [SDK za vtičnike in integracija spretnosti](./PLUGIN_SDK.md).
-
 ---
 
 ## Glejte tudi

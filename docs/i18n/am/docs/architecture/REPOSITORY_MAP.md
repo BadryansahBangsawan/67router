@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # የግብይት / README ምስል ንብረቶች
 ├── @omniroute/           # ሊታተሙ የሚችሉ አጋር ጥቅሎች (opencode-plugin፣ opencode-provider)
 ├── skills/               # የCLI/ወኪል ክህሎት ጥቅሎች (cli-* + omni-* + config-codex-cli)
-├── examples/             # የናሙና ፕለጊኖች + omniroute-cmd-hello ማስጀመሪያ
+├── examples/             # Quickstart client samples
 ├── contrib/              # የማህበረሰብ አስተዋጽኦዎች (podman/)
 ├── .source/              # የFumadocs ምንጭ ውቅር (source.config.mjs + server/browser/dynamic)
 ├── .github/              # የGitHub Actions የሥራ ፍሰቶች + የጉዳይ አብነቶች + የPR አብነት
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — `needs_reindex=1` ያላቸውን ትውስታዎች በጀርባ ያስኬዳል፤ በ`POST /api/memory/reindex` እና በlazy-backfill መንገድ ይጠራል። (ዕቅድ 21)                                                                                                                                                                               |
 | `monitoring/`                            | የጤና ፍተሻዎች፣ የመለኪያዎች ልቀት                                                                                                                                                                                                                                                                                           |
 | `oauth/`                                 | ለ22 የአቅራቢ ሞጁሎች የOAuth/ማስመጣት ፍሰቶች (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                     |
-| `plugins/`                               | የPlugin መዝገብ                                                                                                                                                                                                                                                                                                     |
 | `promptCache/`                           | Anthropic-ቅጥ ያላቸው የprompt cache ማቋረጫ ነጥቦች                                                                                                                                                                                                                                                                        |
 | `skills/`                                | የSkills ማዕቀፍ (አብሮገነብ + የገበያ ቦታ + SkillsSH) — `docs/frameworks/SKILLS.md`ን ይመልከቱ                                                                                                                                                                                                                                  |
 | `webhookDispatcher.ts`                   | HMAC webhook ማድረስ — `docs/frameworks/WEBHOOKS.md`ን ይመልከቱ                                                                                                                                                                                                                                                         |

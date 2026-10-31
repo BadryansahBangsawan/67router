@@ -1032,7 +1032,6 @@
     "configurationSection": "Конфигурација",
     "aiFeaturesSection": "AI функције",
     "mcp": "MCP сервер",
-    "plugins": "Додаци",
     "apiEndpoints": "API крајње тачке",
     "analyticsSearch": "Претрага",
     "analyticsUtilization": "Искоришћеност",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Регистар вештина у сандбоксу",
     "agentSkillsSubtitle": "Регистар A2A вештина",
     "mcpSubtitle": "Контроле MCP сервера",
-    "pluginsSubtitle": "Тржиште додатака и инсталације",
     "mediaSubtitle": "Кеширане медијске датотеке",
     "settingsSubtitle": "Sva podešavanja",
     "settingsGeneralSubtitle": "Baza podataka i rezervne kopije",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Ранг листа",
     "limits": "Ограничења",
     "profile": "Профил",
-    "plugins": "Плагини",
     "providerStats": "Статистика провајдера",
     "new": "Ново",
     "quota": "Квота",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Није могуће уклонити овај пул.",
     "dismiss": "Одбаци"
   },
-  "plugins": {
-    "title": "Додаци",
-    "description": "Инсталирајте и управљајте додацима за проширење функционалности 67router",
-    "loading": "Учитавање додатака...",
-    "scanning": "Скенирање...",
-    "scanForPlugins": "Скенирај додатке",
-    "noPlugins": "Нема инсталираних додатака",
-    "noPluginsDescription": "Поставите директоријуме додатака у ~/.omniroute/plugins/ и кликните на Скенирај.",
-    "activate": "Активирај",
-    "deactivate": "Деактивирај",
-    "uninstall": "Деинсталирај",
-    "uninstallConfirm": "Деинсталирати додатак „{name}“?",
-    "pluginScanComplete": "Скенирање додатака завршено",
-    "pluginScanFailed": "Скенирање додатака није успело",
-    "activated": "{name} је активиран",
-    "deactivated": "{name} је деактивиран",
-    "activateFailed": "Активирање {name} није успело",
-    "deactivateFailed": "Деактивирање {name} није успело",
-    "uninstalled": "{name} је деинсталиран",
-    "uninstallFailed": "Деинсталирање {name} није успело",
-    "configure": "Подеси: {name}",
-    "configurePlugin": "Подеси",
-    "noConfigSettings": "Овај додатак нема подешавања која се могу конфигурисати.",
-    "saving": "Чување...",
-    "saveConfiguration": "Сачувај конфигурацију",
-    "configurationSaved": "Конфигурација сачувана",
-    "saveConfigurationFailed": "Чување конфигурације није успело",
-    "pluginNotFound": "Додатак није пронађен",
-    "version": "Верзија",
-    "author": "Аутор",
-    "description_label": "Опис",
-    "status": "Статус",
-    "enabled": "Омогућен",
-    "disabled": "Онемогућен",
-    "installedTab": "Инсталирани",
-    "marketplaceTab": "Тржиште додатака",
-    "marketplaceUrlLabel": "Прилагођени URL тржишта додатака",
-    "marketplaceUrlPlaceholder": "Оставите празно за званични 67router регистар",
-    "saveMarketplaceUrl": "Сачувај и поново учитај",
-    "marketplaceUrlSaved": "URL тржишта додатака је ажуриран",
-    "marketplaceEmpty": "На тржишту нема пронађених додатака.",
-    "marketplaceInstallComingSoon": "Инсталирање са тржишта биће ускоро доступно.",
-    "verified": "Верификовано",
-    "install": "Инсталирај",
-    "installedFromMarketplace": "Плагин {name} је инсталиран!",
-    "hooks": "Хукови"
-  },
   "quotaPlans": {
     "title": "Планови и квоте",
     "description": "Конфигуришите планове квота по провајдеру — димензије (%, захтеви, токени, $) и временски прозори",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP server",
-        "description": "Povežite se sa 67router MCP serverom (107 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata alate za rutiranje, keš, kompresiju, memoriju, veštine, provajdere i reviziju u okviru 32 obima ovlašćenja."
+        "description": "Povežite se sa 67router MCP serverom (99 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata alate za rutiranje, keš, kompresiju, memoriju, veštine, provajdere i reviziju u okviru 30 obima ovlašćenja."
       },
       "omni-agents-a2a": {
         "name": "Agenti i A2A protokol",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Евалуације",
         "description": "Креирајте и покрените скупове евалуација, пратите напредак упоредних тестова у реалном времену, прегледајте резултате, упоредите перформансе модела и интегришите покретања евалуација са CI токовима рада из CLI-ја."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Додаци, вештине и меморија",
-        "description": "Управљајте Omni вештинама (листа, инсталација, тестирање, уклањање), додацима (креирање, конфигурисање) и трајном меморијом (претрага, додавање, брисање) из CLI-ја."
       },
       "cli-setup": {
         "name": "CLI: Подешавање и конфигурација",

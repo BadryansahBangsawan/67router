@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | הרצת קוד         | `eval_code` (JavaScript/Python בארגז חול) | HYBRID |
 | מערכת            | `execute_command` (הרצת CLI בארגז חול)    | MANUAL |
 
-### הוספת מיומנות מותאמת אישית
-
-ראו [SDK לתוספים ושילוב מיומנויות](./PLUGIN_SDK.md) כדי ללמוד כיצד להוסיף מיומנות מותאמת אישית באמצעות מערכת התוספים.
-
 ---
 
 ## ראו גם

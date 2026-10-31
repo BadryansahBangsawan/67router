@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguration",
     "aiFeaturesSection": "AI-funktioner",
     "mcp": "MCP",
-    "plugins": "Plugins",
     "apiEndpoints": "API-endepunkter",
     "analyticsSearch": "Søgning",
     "analyticsUtilization": "Udnyttelsesgrad",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Register over sandbox-færdigheder",
     "agentSkillsSubtitle": "Register over A2A-færdigheder",
     "mcpSubtitle": "MCP-serverstyring",
-    "pluginsSubtitle": "Plugin-markedsplads og installationer",
     "mediaSubtitle": "Cachelagrede mediefiler",
     "settingsSubtitle": "Alle indstillinger",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Rangliste",
     "limits": "Grænser",
     "profile": "Profil",
-    "plugins": "Plugins",
     "providerStats": "Udbyderstatistik",
     "new": "Ny",
     "quota": "Kvote",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Denne pulje kunne ikke fjernes.",
     "dismiss": "Luk"
   },
-  "plugins": {
-    "title": "Plugins",
-    "description": "Installer og administrer plugins for at udvide funktionaliteten i 67router",
-    "loading": "Indlæser plugins...",
-    "scanning": "Scanner...",
-    "scanForPlugins": "Scan efter plugins",
-    "noPlugins": "Ingen plugins installeret",
-    "noPluginsDescription": "Placer pluginmapper i ~/.omniroute/plugins/, og klik på Scan.",
-    "activate": "Aktivér",
-    "deactivate": "Deaktivér",
-    "uninstall": "Afinstaller",
-    "uninstallConfirm": "Vil du afinstallere pluginet \"{name}\"?",
-    "pluginScanComplete": "Pluginscanning fuldført",
-    "pluginScanFailed": "Pluginscanning mislykkedes",
-    "activated": "{name} er aktiveret",
-    "deactivated": "{name} er deaktiveret",
-    "activateFailed": "Kunne ikke aktivere {name}",
-    "deactivateFailed": "Kunne ikke deaktivere {name}",
-    "uninstalled": "{name} er afinstalleret",
-    "uninstallFailed": "Kunne ikke afinstallere {name}",
-    "configure": "Konfigurer: {name}",
-    "configurePlugin": "Konfigurer",
-    "noConfigSettings": "Dette plugin har ingen konfigurerbare indstillinger.",
-    "saving": "Gemmer...",
-    "saveConfiguration": "Gem konfiguration",
-    "configurationSaved": "Konfigurationen er gemt",
-    "saveConfigurationFailed": "Kunne ikke gemme konfigurationen",
-    "pluginNotFound": "Pluginet blev ikke fundet",
-    "version": "Version",
-    "author": "Forfatter",
-    "description_label": "Beskrivelse",
-    "status": "Status",
-    "enabled": "Aktiveret",
-    "disabled": "Deaktiveret",
-    "installedTab": "Installeret",
-    "marketplaceTab": "Markedsplads",
-    "marketplaceUrlLabel": "Brugerdefineret Marketplace-URL",
-    "marketplaceUrlPlaceholder": "Efterlad tom for det officielle Omniroute-register",
-    "saveMarketplaceUrl": "Gem & genindlæs",
-    "marketplaceUrlSaved": "Marketplace-URL opdateret",
-    "marketplaceEmpty": "Ingen plugins fundet i marketplace.",
-    "marketplaceInstallComingSoon": "Marketplace-installationer kommer snart.",
-    "verified": "Verificeret",
-    "install": "Installer",
-    "installedFromMarketplace": "Plugin {name} installeret!",
-    "hooks": "Hooks"
-  },
   "quotaPlans": {
     "title": "Planer & kvoter",
     "description": "Konfigurer kvoteplaner pr. udbyder — dimensioner (%, anmodninger, tokens, $) og tidsvinduer",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Opret forbindelse til 67router MCP-serveren (107 værktøjer, 3 transporter: SSE/stdio/HTTP). Dækker routing, cache, komprimering, hukommelse, færdigheder, udbydere og revisionsværktøjer på tværs af 32 rettighedsområder."
+        "description": "Opret forbindelse til 67router MCP-serveren (99 værktøjer, 3 transporter: SSE/stdio/HTTP). Dækker routing, cache, komprimering, hukommelse, færdigheder, udbydere og revisionsværktøjer på tværs af 30 rettighedsområder."
       },
       "omni-agents-a2a": {
         "name": "Agenter & A2A-protokol",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evalueringer",
         "description": "Opret og kør evalueringssuiter, følg benchmark-fremskridt live, vis scorekort, sammenlign modelydelse, og integrer evalueringskørsler med CI-workflows fra CLI'en."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, færdigheder & hukommelse",
-        "description": "Administrer Omni Skills (vis, installer, test, fjern), plugins (opret, konfigurer) og permanent hukommelse (søg, tilføj, ryd) fra CLI'en."
       },
       "cli-setup": {
         "name": "CLI: Opsætning & konfiguration",

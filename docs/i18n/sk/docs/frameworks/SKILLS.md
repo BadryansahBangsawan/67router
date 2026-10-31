@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Spúšťanie kódu        | `eval_code` (JavaScript/Python v sandboxe)   | HYBRID |
 | Systém                | `execute_command` (spúšťanie CLI v sandboxe) | MANUAL |
 
-### Pridanie vlastnej zručnosti
-
-Informácie o pridaní vlastnej zručnosti prostredníctvom systému doplnkov nájdete v dokumente [SDK doplnkov a integrácia zručností](./PLUGIN_SDK.md).
-
 ---
 
 ## Pozri tiež

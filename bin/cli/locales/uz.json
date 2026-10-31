@@ -1035,16 +1035,6 @@
     "system": "Tizim prompti",
     "resume": "Saqlangan sessiyani nomi bo‘yicha davom ettirish"
   },
-  "plugin": {
-    "description": "CLI plaginlarini boshqarish (omniroute-cmd-*)",
-    "list": "O‘rnatilgan plaginlar ro‘yxatini ko‘rsatish",
-    "install": "npm yoki mahalliy yo‘ldan plagin o‘rnatish",
-    "remove": "O‘rnatilgan plaginni olib tashlash",
-    "info": "O‘rnatilgan plagin tafsilotlarini ko‘rsatish",
-    "search": "Mavjud plaginlarni npm reyestridan qidirish",
-    "update": "O‘rnatilgan plagin(lar)ni yangilash",
-    "scaffold": "Yangi plagin uchun boshlang‘ich shablon yaratish"
-  },
   "launch": {
     "description": "67router’ga yo‘naltirilgan Claude Code’ni ishga tushirish (mahalliy yoki masofaviy, --profile bilan)",
     "token": "Claude mijozi yuborishi kerak bo‘lgan token (ANTHROPIC_AUTH_TOKEN)",

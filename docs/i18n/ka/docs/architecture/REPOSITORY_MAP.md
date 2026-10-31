@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # მარკეტინგული / README-ის გამოსახულებების რესურსები
 ├── @omniroute/           # გამოსაქვეყნებელი დამხმარე პაკეტები (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/აგენტის უნარების პაკეტები (cli-* + omni-* + config-codex-cli)
-├── examples/             # სანიმუშო პლაგინები + omniroute-cmd-hello საწყისი შაბლონი
+├── examples/             # Quickstart client samples
 ├── contrib/              # საზოგადოების კონტრიბუციები (podman/)
 ├── .source/              # Fumadocs-ის წყაროს კონფიგურაცია (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions-ის სამუშაო პროცესები + საკითხების შაბლონები + PR შაბლონი
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ფონურ რეჟიმში ამუშავებს მეხსიერების ჩანაწერებს, რომელთაც `needs_reindex=1` აქვთ; გამოიძახება `POST /api/memory/reindex`-ისა და საჭიროებისას უკუშევსების გზით. (გეგმა 21)                                                                                                                                    |
 | `monitoring/`                            | ჯანმრთელობის შემოწმებები, მეტრიკების გენერირება                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | OAuth/იმპორტის ნაკადები 22 პროვაიდერის მოდულისთვის (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                    |
-| `plugins/`                               | პლაგინების რეესტრი                                                                                                                                                                                                                                                                                                                |
 | `promptCache/`                           | Anthropic-ის სტილის პრომპტის კეშის საკონტროლო წერტილები                                                                                                                                                                                                                                                                           |
 | `skills/`                                | უნარების ფრეიმვორკი (ჩაშენებული + მარკეტპლეისი + SkillsSH) — იხილეთ `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                   |
 | `webhookDispatcher.ts`                   | HMAC webhook-ის მიწოდება — იხილეთ `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                   |

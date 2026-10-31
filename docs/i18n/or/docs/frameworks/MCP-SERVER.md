@@ -409,8 +409,6 @@ MCP ଟୁଲ୍ ସ୍କୋପ୍ଗୁଡ଼ିକ ମଧ୍ୟରେ କୌ�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                    |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                             |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                               |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                           |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                              |
 | `read:obsidian`       | 13ଟି ପଠନ ଟୁଲ୍ — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9ଟି ଲିଖନ ଟୁଲ୍ — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                            |
@@ -565,7 +563,6 @@ stdio ଟ୍ରାନ୍ସପୋର୍ଟ ପ୍ରତି 5 ସେକେଣ୍�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | ଦକ୍ଷତା ଟୁଲ୍ ସଂଜ୍ଞାଗୁଡ଼ିକ (4ଟି ଟୁଲ୍)                                   |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion କଣ୍ଟେକ୍ସ୍ଟ ଉତ୍ସ ଟୁଲ୍ ସଂଜ୍ଞାଗୁଡ଼ିକ (6ଟି ଟୁଲ୍)                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | ଗେମିଫିକେସନ୍ ଟୁଲ୍ ସଂଜ୍ଞାଗୁଡ଼ିକ (8ଟି ଟୁଲ୍)                              |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | ପ୍ଲଗଇନ୍ ପଞ୍ଜୀକରଣ ଏବଂ ପରିଚାଳନା ଟୁଲ୍ଗୁଡ଼ିକ (8ଟି ଟୁଲ୍)                   |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` ଏଣ୍ଡପଏଣ୍ଟ                                           |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` ଏଣ୍ଡପଏଣ୍ଟ                                            |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ପରିବହନ ରୁଟ୍                                        |

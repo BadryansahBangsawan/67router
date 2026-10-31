@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projekta līmenī (tiek ielādēts palaišanas laikā)
 ```
 
-Vai ielādējiet programmatiski no spraudņa:
+Or register it programmatically at startup:
 
 ```ts
-// Jūsu spraudnī
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Spraudņa SDK nodrošina onRequest / onResponse / onError āķus. Reģistrējiet
-  // dzinēju, kad tiek ielādēts spraudņa modulis (vai pirmajā onRequest); atceliet tā
-  // reģistrāciju savā izslēgšanas ceļā.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Izslēgšanas laikā:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

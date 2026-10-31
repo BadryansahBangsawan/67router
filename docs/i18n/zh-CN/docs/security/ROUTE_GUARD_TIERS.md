@@ -55,7 +55,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector——http-proxy 监听器和系统代理                                          |
 | `/api/settings/mitm`                                                                                     | 启用 MITM 拦截（系统级代理状态）                                                        |
 | `/api/issue-agent/`                                                                                      | Issue agent——针对仓库生成本地工具进程                                                   |
-| `/api/plugins/`, `/api/plugins`                                                                          | 插件——通过 `worker_threads` 和 `child_process` 加载/执行                                |
 | `/api/middleware/`                                                                                       | 用户中间件——在进程内加载/执行运维人员代码                                               |
 | `/api/system/version`                                                                                    | 自动更新（仅 POST；GET/HEAD/OPTIONS 除外）——生成 `git checkout` 和 `npm install` 进程   |
 | `/api/db-backups/exportAll`                                                                              | 生成 `tar` 进程以创建导出归档                                                           |

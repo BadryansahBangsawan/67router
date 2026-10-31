@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguracja",
     "aiFeaturesSection": "Funkcje AI",
     "mcp": "Serwer MCP",
-    "plugins": "Wtyczki",
     "apiEndpoints": "Endpoints API",
     "analyticsSearch": "Wyszukiwanie",
     "analyticsUtilization": "Utylizacja",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Rejestr umiejętności Sandbox",
     "agentSkillsSubtitle": "Rejestr umiejętności A2A",
     "mcpSubtitle": "Sterowanie serwerem MCP",
-    "pluginsSubtitle": "Sklep z wtyczkami i instalacje",
     "mediaSubtitle": "Pliki multimedialne w cache",
     "settingsSubtitle": "Wszystkie ustawienia",
     "settingsGeneralSubtitle": "Baza danych i kopie zapasowe",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Tabela liderów",
     "limits": "Limity",
     "profile": "Profil",
-    "plugins": "Wtyczki",
     "providerStats": "Statystyki dostawców",
     "new": "Nowość",
     "quota": "Limit",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Nie udało się usunąć tej puli.",
     "dismiss": "Zamknij"
   },
-  "plugins": {
-    "title": "Wtyczki",
-    "description": "Instalowanie i zarządzanie wtyczkami w celu rozszerzenia funkcjonalności 67router",
-    "loading": "Ładowanie wtyczek...",
-    "scanning": "Skanowanie...",
-    "scanForPlugins": "Skanuj w poszukiwaniu wtyczek",
-    "noPlugins": "Brak zainstalowanych wtyczek",
-    "noPluginsDescription": "Umieść katalogi wtyczek w ~/.omniroute/plugins/ i kliknij Skanuj.",
-    "activate": "Aktywuj",
-    "deactivate": "Dezaktywuj",
-    "uninstall": "Odinstaluj",
-    "uninstallConfirm": "Odinstalować wtyczkę \"{name}\"?",
-    "pluginScanComplete": "Zakończono skanowanie wtyczek",
-    "pluginScanFailed": "Skanowanie wtyczek nie powiodło się",
-    "activated": "Aktywowano {name}",
-    "deactivated": "Dezaktywowano {name}",
-    "activateFailed": "Nie udało się aktywować {name}",
-    "deactivateFailed": "Nie udało się dezaktywować {name}",
-    "uninstalled": "Odinstalowano {name}",
-    "uninstallFailed": "Nie udało się odinstalować {name}",
-    "configure": "Konfiguracja: {name}",
-    "configurePlugin": "Konfiguruj",
-    "noConfigSettings": "Ta wtyczka nie ma konfigurowalnych ustawień.",
-    "saving": "Zapisywanie...",
-    "saveConfiguration": "Zapisz konfigurację",
-    "configurationSaved": "Zapisano konfigurację",
-    "saveConfigurationFailed": "Nie udało się zapisać konfiguracji",
-    "pluginNotFound": "Nie znaleziono wtyczki",
-    "version": "Wersja",
-    "author": "Autor",
-    "description_label": "Opis",
-    "status": "Status",
-    "enabled": "Włączone",
-    "disabled": "Wyłączone",
-    "installedTab": "Zainstalowane",
-    "marketplaceTab": "Rynek",
-    "marketplaceUrlLabel": "Niestandardowy URL Marketplace",
-    "marketplaceUrlPlaceholder": "Pozostaw puste dla oficjalnego rejestru Omniroute",
-    "saveMarketplaceUrl": "Zapisz i przeładuj",
-    "marketplaceUrlSaved": "Zaktualizowano URL Marketplace",
-    "marketplaceEmpty": "Nie znaleziono wtyczek w Marketplace.",
-    "marketplaceInstallComingSoon": "Instalacja z Marketplace będzie dostępna wkrótce.",
-    "verified": "Zweryfikowano",
-    "install": "Instaluj",
-    "installedFromMarketplace": "Zainstalowano wtyczkę {name}!",
-    "hooks": "Hooki"
-  },
   "quotaPlans": {
     "title": "Plany i quota",
     "description": "Konfiguracja planów quota na provider — wymiary (%, requests, tokens, $) i okna czasowe",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Serwer MCP",
-        "description": "Połącz się z serwerem MCP 67router (107 narzędzi, 3 transporty: SSE/stdio/HTTP). Obejmuje routing, pamięć podręczną, kompresję, pamięć, umiejętności, dostawców i narzędzia audytowe w ramach 32 zakresów uprawnień."
+        "description": "Połącz się z serwerem MCP 67router (99 narzędzi, 3 transporty: SSE/stdio/HTTP). Obejmuje routing, pamięć podręczną, kompresję, pamięć, umiejętności, dostawców i narzędzia audytowe w ramach 30 zakresów uprawnień."
       },
       "omni-agents-a2a": {
         "name": "Agenci i protokół A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Ewaluacje",
         "description": "Twórz i uruchamiaj zestawy ewaluacyjne, śledź na żywo postęp benchmarków, przeglądaj karty wyników, porównuj wydajność modeli i integruj uruchomienia ewaluacji z przepływami pracy CI z poziomu CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Wtyczki, umiejętności i pamięć",
-        "description": "Zarządzaj Omni Skills (listuj, instaluj, testuj, usuwaj), wtyczkami (twórz, konfiguruj) oraz pamięcią trwałą (przeszukuj, dodawaj, czyść) z poziomu CLI."
       },
       "cli-setup": {
         "name": "CLI: Instalacja i konfiguracja",

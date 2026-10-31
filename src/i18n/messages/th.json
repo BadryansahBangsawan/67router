@@ -1032,7 +1032,6 @@
     "configurationSection": "การกำหนดค่า",
     "aiFeaturesSection": "ฟีเจอร์ AI",
     "mcp": "MCP",
-    "plugins": "ปลั๊กอิน",
     "apiEndpoints": "ปลายทาง API",
     "analyticsSearch": "ค้นหา",
     "analyticsUtilization": "อัตราการใช้งาน",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "รีจิสทรีสกิลของ Sandbox",
     "agentSkillsSubtitle": "รีจิสทรีสกิลของ A2A",
     "mcpSubtitle": "การควบคุมเซิร์ฟเวอร์ MCP",
-    "pluginsSubtitle": "มาร์เก็ตเพลสปลั๊กอินและการติดตั้ง",
     "mediaSubtitle": "ไฟล์สื่อที่แคชไว้",
     "settingsSubtitle": "การตั้งค่าทั้งหมด",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "กระดานผู้นำ",
     "limits": "ขีดจำกัด",
     "profile": "โปรไฟล์",
-    "plugins": "ปลั๊กอิน",
     "providerStats": "สถิติผู้ให้บริการ",
     "new": "ใหม่",
     "quota": "โควตา",
@@ -11455,53 +11452,6 @@
     "removeFailed": "ไม่สามารถลบพูลนี้ได้",
     "dismiss": "ปิด"
   },
-  "plugins": {
-    "title": "ปลั๊กอิน",
-    "description": "ติดตั้งและจัดการปลั๊กอินเพื่อขยายความสามารถของ 67router",
-    "loading": "กำลังโหลดปลั๊กอิน...",
-    "scanning": "กำลังสแกน...",
-    "scanForPlugins": "สแกนหาปลั๊กอิน",
-    "noPlugins": "ไม่มีปลั๊กอินที่ติดตั้งไว้",
-    "noPluginsDescription": "วางไดเรกทอรีปลั๊กอินไว้ใน ~/.omniroute/plugins/ แล้วคลิกสแกน",
-    "activate": "เปิดใช้งาน",
-    "deactivate": "ปิดใช้งาน",
-    "uninstall": "ถอนการติดตั้ง",
-    "uninstallConfirm": "ถอนการติดตั้งปลั๊กอิน \"{name}\" หรือไม่",
-    "pluginScanComplete": "สแกนปลั๊กอินเสร็จแล้ว",
-    "pluginScanFailed": "สแกนปลั๊กอินไม่สำเร็จ",
-    "activated": "เปิดใช้งาน {name} แล้ว",
-    "deactivated": "ปิดใช้งาน {name} แล้ว",
-    "activateFailed": "ไม่สามารถเปิดใช้งาน {name} ได้",
-    "deactivateFailed": "ไม่สามารถปิดใช้งาน {name} ได้",
-    "uninstalled": "ถอนการติดตั้ง {name} แล้ว",
-    "uninstallFailed": "ไม่สามารถถอนการติดตั้ง {name} ได้",
-    "configure": "กำหนดค่า: {name}",
-    "configurePlugin": "กำหนดค่า",
-    "noConfigSettings": "ปลั๊กอินนี้ไม่มีการตั้งค่าที่ปรับแต่งได้",
-    "saving": "กำลังบันทึก...",
-    "saveConfiguration": "บันทึกการตั้งค่า",
-    "configurationSaved": "บันทึกการตั้งค่าแล้ว",
-    "saveConfigurationFailed": "ไม่สามารถบันทึกการตั้งค่าได้",
-    "pluginNotFound": "ไม่พบปลั๊กอิน",
-    "version": "เวอร์ชัน",
-    "author": "ผู้พัฒนา",
-    "description_label": "คำอธิบาย",
-    "status": "สถานะ",
-    "enabled": "เปิดใช้งาน",
-    "disabled": "ปิดใช้งาน",
-    "installedTab": "ติดตั้งแล้ว",
-    "marketplaceTab": "มาร์เก็ตเพลส",
-    "marketplaceUrlLabel": "URL มาร์เก็ตเพลสแบบกำหนดเอง",
-    "marketplaceUrlPlaceholder": "เว้นว่างไว้สำหรับ Omniroute registry อย่างเป็นทางการ",
-    "saveMarketplaceUrl": "บันทึกและโหลดใหม่",
-    "marketplaceUrlSaved": "อัปเดต URL มาร์เก็ตเพลสแล้ว",
-    "marketplaceEmpty": "ไม่พบปลั๊กอินในมาร์เก็ตเพลส",
-    "marketplaceInstallComingSoon": "การติดตั้งจากมาร์เก็ตเพลสจะพร้อมใช้งานเร็วๆ นี้",
-    "verified": "ยืนยันแล้ว",
-    "install": "ติดตั้ง",
-    "installedFromMarketplace": "ติดตั้งปลั๊กอิน {name} แล้ว!",
-    "hooks": "ฮุก"
-  },
   "quotaPlans": {
     "title": "แผนและโควตา",
     "description": "กำหนดค่าแผนโควตาต่อผู้ให้บริการ — มิติข้อมูล (%, คำขอ, โทเค็น, $) และช่วงเวลา",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "เซิร์ฟเวอร์ MCP",
-        "description": "เชื่อมต่อกับเซิร์ฟเวอร์ 67router MCP (107 เครื่องมือ, 3 ช่องทางการรับส่งข้อมูล: SSE/stdio/HTTP) ครอบคลุมการกำหนดเส้นทาง, แคช, การบีบอัดข้อมูล, หน่วยความจำ, ทักษะ, ผู้ให้บริการ และเครื่องมือตรวจสอบใน 32 ขอบเขตสิทธิ์การใช้งาน"
+        "description": "เชื่อมต่อกับเซิร์ฟเวอร์ 67router MCP (99 เครื่องมือ, 3 ช่องทางการรับส่งข้อมูล: SSE/stdio/HTTP) ครอบคลุมการกำหนดเส้นทาง, แคช, การบีบอัดข้อมูล, หน่วยความจำ, ทักษะ, ผู้ให้บริการ และเครื่องมือตรวจสอบใน 30 ขอบเขตสิทธิ์การใช้งาน"
       },
       "omni-agents-a2a": {
         "name": "เอเจนต์และโปรโตคอล A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: การประเมิน",
         "description": "สร้างและรันชุดการประเมินผล, ดูความคืบหน้าของเกณฑ์มาตรฐานแบบสด, ดูการ์ดคะแนน, เปรียบเทียบประสิทธิภาพของโมเดล และรวมการรันการประเมินผลเข้ากับเวิร์กโฟลว์ CI จาก CLI"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: ปลั๊กอิน, ทักษะ และหน่วยความจำ",
-        "description": "จัดการ Omni Skills (แสดงรายการ, ติดตั้ง, ทดสอบ, ลบ), ปลั๊กอิน (สร้าง, กำหนดค่า) และหน่วยความจำถาวร (ค้นหา, เพิ่ม, ล้าง) จาก CLI"
       },
       "cli-setup": {
         "name": "CLI: การตั้งค่าและกำหนดค่า",

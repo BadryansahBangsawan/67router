@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Sócmhainní íomhá margaíochta / README
 ├── @omniroute/           # Pacáistí compánacha in-fhoilsithe (opencode-plugin, opencode-provider)
 ├── skills/               # Pacáistí scileanna CLI/gníomhaire (cli-* + omni-* + config-codex-cli)
-├── examples/             # Breiseáin shamplacha + tionscadal tosaithe omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Rannchuidithe pobail (podman/)
 ├── .source/              # Cumraíocht foinse Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Sreafaí oibre GitHub Actions + teimpléid saincheisteanna + teimpléad PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — próiseálann sé cuimhní a bhfuil `needs_reindex=1` acu sa chúlra; glaonn `POST /api/memory/reindex` agus conair an aislíonta leisciúil air. (plean 21)                                                                                                                                                         |
 | `monitoring/`                            | Seiceálacha sláinte, astú méadrachtaí                                                                                                                                                                                                                                                                                               |
 | `oauth/`                                 | Sreafaí OAuth/iompórtála do 22 modúl soláthraí (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                          |
-| `plugins/`                               | Clárlann breiseán                                                                                                                                                                                                                                                                                                                   |
 | `promptCache/`                           | Brisphointí taisce leide ar nós Anthropic                                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Creat scileanna (ionsuite + margadh + SkillsSH) — féach `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                                 |
 | `webhookDispatcher.ts`                   | Seachadadh webhook HMAC — féach `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                       |

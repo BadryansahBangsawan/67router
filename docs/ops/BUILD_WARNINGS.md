@@ -52,12 +52,12 @@ the **emitted output is unaffected**. 67router suppresses the known benign form 
 `next build` imports application modules while collecting page data, so a few
 runtime-oriented log lines appear during the build as well. They are **not** build errors.
 
-| Message                                                                                       | Owner                                 | Meaning                                                                                                                                          |
-| --------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `[DB] Build phase detected — using no-op SQLite stub (never queried)`                         | `src/lib/db/core.ts`                  | The build never opens the real database. Expected.                                                                                               |
-| `[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting.`                  | `src/shared/utils/rateLimiter.ts`     | Redis is optional; without it rate limiting falls back to memory. Set it only if you run Redis in production — see `REDIS_PRODUCTION_CONFIG.md`. |
-| `[CREDENTIALS] No external credentials file found, using defaults.`                           | `open-sse/config/credentialLoader.ts` | Expected unless you ship an external credentials file.                                                                                           |
-| `[INFO] [PLUGIN_SCANNER] scanner.dir_resolved` / `[INFO] [MEMORY_MANAGER] Registered backend` | plugin + memory registries            | Informational.                                                                                                                                   |
+| Message                                                                      | Owner                                 | Meaning                                                                                                                                          |
+| ---------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `[DB] Build phase detected — using no-op SQLite stub (never queried)`        | `src/lib/db/core.ts`                  | The build never opens the real database. Expected.                                                                                               |
+| `[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting.` | `src/shared/utils/rateLimiter.ts`     | Redis is optional; without it rate limiting falls back to memory. Set it only if you run Redis in production — see `REDIS_PRODUCTION_CONFIG.md`. |
+| `[CREDENTIALS] No external credentials file found, using defaults.`          | `open-sse/config/credentialLoader.ts` | Expected unless you ship an external credentials file.                                                                                           |
+| `[INFO] [MEMORY_MANAGER] Registered backend`                                 | memory registry                       | Informational.                                                                                                                                   |
 
 ### `[SECURITY] FATAL: JWT_SECRET is not set`
 

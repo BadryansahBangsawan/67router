@@ -461,10 +461,6 @@ const config: SkillConfig = {
 | Ejecución de código | `eval_code` (JavaScript/Python en entorno aislado)      | HYBRID |
 | Sistema             | `execute_command` (ejecución de CLI en entorno aislado) | MANUAL |
 
-### Añadir una habilidad personalizada
-
-Consulte [SDK de complementos e integración de habilidades](./PLUGIN_SDK.md) para saber cómo añadir una habilidad personalizada mediante el sistema de complementos.
-
 ---
 
 ## Véase también

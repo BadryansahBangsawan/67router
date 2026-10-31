@@ -418,8 +418,6 @@ Scope enforcement ಅನ್ನು `open-sse/mcp-server/scopeEnforcement.ts`ನ�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                       |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                  |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                              |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                 |
 | `read:obsidian`       | 13 ಓದುವ ಪರಿಕರಗಳು — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 ಬರೆಯುವ ಪರಿಕರಗಳು — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                               |
@@ -574,7 +572,6 @@ stdio ಟ್ರಾನ್ಸ್ಪೋರ್ಟ್ ಪ್ರತಿ 5 ಸೆಕೆ�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | ಕೌಶಲ್ಯ ಟೂಲ್ ವ್ಯಾಖ್ಯಾನಗಳು (4 ಟೂಲ್ಗಳು)                                        |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion ಸಂದರ್ಭ ಮೂಲ ಟೂಲ್ ವ್ಯಾಖ್ಯಾನಗಳು (6 ಟೂಲ್ಗಳು)                             |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | ಗೇಮಿಫಿಕೇಶನ್ ಟೂಲ್ ವ್ಯಾಖ್ಯಾನಗಳು (8 ಟೂಲ್ಗಳು)                                   |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | ಪ್ಲಗಿನ್ ನೋಂದಣಿ ಮತ್ತು ನಿರ್ವಹಣಾ ಟೂಲ್ಗಳು (8 ಟೂಲ್ಗಳು)                           |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` ಎಂಡ್ಪಾಯಿಂಟ್                                               |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` ಎಂಡ್ಪಾಯಿಂಟ್                                                |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ಸಾರಿಗೆ ರೂಟ್                                              |

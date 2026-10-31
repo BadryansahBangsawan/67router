@@ -2087,26 +2087,6 @@ devin-cli 等）。完整列表请参阅[提供者参考](./PROVIDER_REFERENCE.m
 
 ---
 
-## 插件
-
-管理 67router 插件（第三方扩展）。
-
-| 方法   | 路径                               | 描述             |
-| ------ | ---------------------------------- | ---------------- |
-| GET    | `/api/plugins`                     | 列出已安装的插件 |
-| POST   | `/api/plugins/marketplace/install` | 从市场安装插件   |
-| DELETE | `/api/plugins/[name]`              | 卸载插件         |
-| POST   | `/api/plugins/[name]/activate`     | 激活插件         |
-| POST   | `/api/plugins/[name]/deactivate`   | 停用插件         |
-| GET    | `/api/plugins/[name]/config`       | 获取插件配置     |
-| PUT    | `/api/plugins/[name]/config`       | 更新插件配置     |
-
-**身份验证：** 需要管理会话。
-
-完整详情请参阅 [插件框架](../frameworks/PLUGIN_SDK.md)。
-
----
-
 ## 影子路由
 
 提供者的影子 / A-B 对比**并非独立的 REST 接口** — 它通过组合路由进行配置（请参阅 [自动组合](../routing/AUTO-COMBO.md)）。每个组合的对比指标由 `GET /api/combos/metrics` 提供。

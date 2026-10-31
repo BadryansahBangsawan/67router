@@ -1035,16 +1035,6 @@
     "system": "Prompt de sistem",
     "resume": "Reia o sesiune salvată după nume"
   },
-  "plugin": {
-    "description": "Gestionează pluginurile CLI (omniroute-cmd-*)",
-    "list": "Listează pluginurile instalate",
-    "install": "Instalează un plugin din npm sau dintr-o cale locală",
-    "remove": "Elimină un plugin instalat",
-    "info": "Afișează detalii despre un plugin instalat",
-    "search": "Caută pluginuri disponibile în registrul npm",
-    "update": "Actualizează pluginurile instalate",
-    "scaffold": "Generează structura de bază pentru un plugin nou"
-  },
   "launch": {
     "description": "Lansează Claude Code configurat pentru 67router (local sau la distanță, cu --profile)",
     "token": "Tokenul pe care clientul Claude trebuie să îl trimită (ANTHROPIC_AUTH_TOKEN)",

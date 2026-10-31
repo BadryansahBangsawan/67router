@@ -2152,26 +2152,6 @@ Wo [Ètò Àwọn Ọgbọ́n](../frameworks/SKILLS.md) fún gbogbo àlàyé.
 
 ---
 
-## Àwọn Plugin
-
-Ṣàkóso àwọn plugin 67router (àwọn àfikún láti ọ̀dọ̀ ẹnikẹ́ta).
-
-| Ọ̀nà    | Ipa-ọ̀nà                            | Àpèjúwe                              |
-| ------ | ---------------------------------- | ------------------------------------ |
-| GET    | `/api/plugins`                     | Ṣàkọsílẹ̀ àwọn plugin tí a ti fi sílẹ̀ |
-| POST   | `/api/plugins/marketplace/install` | Fi plugin kan sílẹ̀ láti ibi ọjà      |
-| DELETE | `/api/plugins/[name]`              | Yọ plugin kan kúrò                   |
-| POST   | `/api/plugins/[name]/activate`     | Mú plugin kan ṣiṣẹ́                   |
-| POST   | `/api/plugins/[name]/deactivate`   | Dá plugin kan dúró                   |
-| GET    | `/api/plugins/[name]/config`       | Gba àtòpọ̀ plugin                     |
-| PUT    | `/api/plugins/[name]/config`       | Ṣe àfikún sí àtòpọ̀ plugin            |
-
-**Ìfàṣẹsí:** Ó nílò sáà ìṣàkóso.
-
-Wo [Ètò Àwọn Plugin](../frameworks/PLUGIN_SDK.md) fún gbogbo àlàyé.
-
----
-
 ## Ìdarí Shadow
 
 Ìfiwéra Shadow / A-B ti àwọn olùpèsè **kì í ṣe ojú-ọ̀nà REST aládàáṣe** — a ń ṣètò rẹ̀ nípasẹ̀ ìdarí combo (wo [Auto-Combo](../routing/AUTO-COMBO.md)). Àwọn òṣùwọ̀n ìfiwéra fún combo kọ̀ọ̀kan wà nípasẹ̀ `GET /api/combos/metrics`.

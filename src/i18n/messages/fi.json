@@ -1032,7 +1032,6 @@
     "configurationSection": "Määritykset",
     "aiFeaturesSection": "AI-ominaisuudet",
     "mcp": "MCP",
-    "plugins": "Liitännäiset",
     "apiEndpoints": "API-päätepisteet",
     "analyticsSearch": "Haku",
     "analyticsUtilization": "Käyttöaste",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Hiekkalaatikon taitorekisteri",
     "agentSkillsSubtitle": "A2A-taitorekisteri",
     "mcpSubtitle": "MCP-palvelimen hallinta",
-    "pluginsSubtitle": "Liitännäismarkkinapaikka ja asennukset",
     "mediaSubtitle": "Välimuistiin tallennetut mediatiedostot",
     "settingsSubtitle": "Kaikki asetukset",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Tulostaulukko",
     "limits": "Rajat",
     "profile": "Profiili",
-    "plugins": "Liitännäiset",
     "providerStats": "Tarjoajan tilastot",
     "new": "Uusi",
     "quota": "Kiintiö",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tätä poolia ei voitu poistaa.",
     "dismiss": "Sulje"
   },
-  "plugins": {
-    "title": "Lisäosat",
-    "description": "Asenna ja hallitse 67routerin toimintoja laajentavia lisäosia",
-    "loading": "Ladataan lisäosia...",
-    "scanning": "Etsitään...",
-    "scanForPlugins": "Etsi lisäosia",
-    "noPlugins": "Lisäosia ei ole asennettu",
-    "noPluginsDescription": "Sijoita lisäosahakemistot kansioon ~/.omniroute/plugins/ ja napsauta Etsi.",
-    "activate": "Ota käyttöön",
-    "deactivate": "Poista käytöstä",
-    "uninstall": "Poista asennus",
-    "uninstallConfirm": "Poistetaanko lisäosan \"{name}\" asennus?",
-    "pluginScanComplete": "Lisäosien etsintä valmis",
-    "pluginScanFailed": "Lisäosien etsintä epäonnistui",
-    "activated": "{name} otettu käyttöön",
-    "deactivated": "{name} poistettu käytöstä",
-    "activateFailed": "Lisäosan {name} käyttöönotto epäonnistui",
-    "deactivateFailed": "Lisäosan {name} käytöstä poistaminen epäonnistui",
-    "uninstalled": "Lisäosan {name} asennus poistettu",
-    "uninstallFailed": "Lisäosan {name} asennuksen poistaminen epäonnistui",
-    "configure": "Määritä: {name}",
-    "configurePlugin": "Määritä",
-    "noConfigSettings": "Tällä lisäosalla ei ole määritettäviä asetuksia.",
-    "saving": "Tallennetaan...",
-    "saveConfiguration": "Tallenna määritykset",
-    "configurationSaved": "Määritykset tallennettu",
-    "saveConfigurationFailed": "Määritysten tallentaminen epäonnistui",
-    "pluginNotFound": "Lisäosaa ei löytynyt",
-    "version": "Versio",
-    "author": "Tekijä",
-    "description_label": "Kuvaus",
-    "status": "Tila",
-    "enabled": "Käytössä",
-    "disabled": "Ei käytössä",
-    "installedTab": "Asennettu",
-    "marketplaceTab": "Kauppapaikka",
-    "marketplaceUrlLabel": "Mukautettu Marketplace-URL-osoite",
-    "marketplaceUrlPlaceholder": "Jätä tyhjäksi käyttääksesi virallista Omniroute-rekisteriä",
-    "saveMarketplaceUrl": "Tallenna ja lataa uudelleen",
-    "marketplaceUrlSaved": "Marketplace-URL-osoite päivitetty",
-    "marketplaceEmpty": "Marketplacesta ei löytynyt liitännäisiä.",
-    "marketplaceInstallComingSoon": "Marketplace-asennukset ovat tulossa pian.",
-    "verified": "Vahvistettu",
-    "install": "Asenna",
-    "installedFromMarketplace": "Liitännäinen {name} asennettu!",
-    "hooks": "Hookit"
-  },
   "quotaPlans": {
     "title": "Paketit ja kiintiöt",
     "description": "Määritä kiintiöpaketit palveluntarjoajittain — dimensiot (%, pyynnöt, tokenit, $) ja aikaikkunat",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-palvelin",
-        "description": "Yhdistä 67routern MCP-palvelimeen (107 työkalua, 3 siirtotietä: SSE/stdio/HTTP). Kattaa reitityksen, välimuistin, pakkauksen, muistin, taidot, tarjoajat ja auditointityökalut 32 käyttöoikeusalueella."
+        "description": "Yhdistä 67routern MCP-palvelimeen (99 työkalua, 3 siirtotietä: SSE/stdio/HTTP). Kattaa reitityksen, välimuistin, pakkauksen, muistin, taidot, tarjoajat ja auditointityökalut 30 käyttöoikeusalueella."
       },
       "omni-agents-a2a": {
         "name": "Agentit ja A2A-protokolla",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Arvioinnit",
         "description": "Luo ja suorita arviointikokonaisuuksia, seuraa reaaliaikaista suorituskykytestien edistymistä, tarkastele tuloskortteja, vertaile mallien suorituskykyä ja integroi arviointiajot CI-työnkulkuihin CLI:stä."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Liitännäiset, taidot & muisti",
-        "description": "Hallitse Omni Skills -taitoja (listaa, asenna, testaa, poista), liitännäisiä (luo, määritä) ja pysyvää muistia (hae, lisää, tyhjennä) CLI:stä."
       },
       "cli-setup": {
         "name": "CLI: Asennus & määritykset",

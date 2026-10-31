@@ -458,10 +458,6 @@ const config: SkillConfig = {
 | 程式碼執行 | `eval_code`（沙箱化 JavaScript/Python） | HYBRID |
 | 系統       | `execute_command`（沙箱化 CLI 執行）    | MANUAL |
 
-### 新增自訂技能
-
-如需瞭解如何透過外掛程式系統新增自訂技能，請參閱[外掛程式 SDK 與技能整合](./PLUGIN_SDK.md)。
-
 ---
 
 ## 另請參閱

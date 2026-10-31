@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Pazarlama / README görsel varlıkları
 ├── @omniroute/           # Yayımlanabilir yardımcı paketler (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ajan beceri paketleri (cli-* + omni-* + config-codex-cli)
-├── examples/             # Örnek eklentiler + omniroute-cmd-hello başlangıç şablonu
+├── examples/             # Quickstart client samples
 ├── contrib/              # Topluluk katkıları (podman/)
 ├── .source/              # Fumadocs kaynak yapılandırması (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions iş akışları + sorun şablonları + PR şablonu
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — `needs_reindex=1` olan bellekleri arka planda işler; `POST /api/memory/reindex` ve gereksinim üzerine geçmiş verileri doldurma yolu tarafından çağrılır. (plan 21)                                                                                                                                  |
 | `monitoring/`                            | Sistem durumu kontrolleri, metrik yayımı                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                 | 22 sağlayıcı modülü için OAuth/içe aktarma akışları (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | Eklenti kayıt defteri                                                                                                                                                                                                                                                                                                     |
 | `promptCache/`                           | Anthropic tarzı istem önbelleği kesme noktaları                                                                                                                                                                                                                                                                           |
 | `skills/`                                | Yetenekler çerçevesi (yerleşik + pazar yeri + SkillsSH) — bkz. `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                |
 | `webhookDispatcher.ts`                   | HMAC webhook teslimatı — bkz. `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                               |

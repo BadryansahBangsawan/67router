@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Markkinoinnin / README-tiedoston kuvaresurssit
 ├── @omniroute/           # Julkaistavat oheispaketit (opencode-plugin, opencode-provider)
 ├── skills/               # CLI-/agenttitaitopaketit (cli-* + omni-* + config-codex-cli)
-├── examples/             # Esimerkkiliitännäiset + omniroute-cmd-hello-aloituspohja
+├── examples/             # Quickstart client samples
 ├── contrib/              # Yhteisön kontribuutiot (podman/)
 ├── .source/              # Fumadocs-lähdemääritys (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions -työnkulut + ongelmamallit + PR-malli
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — käsittelee taustalla muistit, joilla on `needs_reindex=1`; kutsutaan reitiltä `POST /api/memory/reindex` ja tarvittaessa tehtävän jälkitäytön polusta. (suunnitelma 21)                                                                                                                                  |
 | `monitoring/`                            | Kuntotarkistukset ja mittareiden lähetys                                                                                                                                                                                                                                                                                       |
 | `oauth/`                                 | OAuth-/tuontiprosessit 22 palveluntarjoajamoduulille (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                               |
-| `plugins/`                               | Liitännäisrekisteri                                                                                                                                                                                                                                                                                                            |
 | `promptCache/`                           | Anthropic-tyyliset kehotteiden välimuistin rajakohdat                                                                                                                                                                                                                                                                          |
 | `skills/`                                | Taitokehys (sisäänrakennetut + markkinapaikka + SkillsSH) — katso `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                  |
 | `webhookDispatcher.ts`                   | HMAC-verkkokoukkujen toimitus — katso `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                            |

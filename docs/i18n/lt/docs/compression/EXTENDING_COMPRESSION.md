@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projekto lygmuo (įkeliama paleidžiant)
 ```
 
-Arba įkelkite programiškai iš papildinio:
+Or register it programmatically at startup:
 
 ```ts
-// Jūsų papildinyje
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Papildinio SDK pateikia onRequest / onResponse / onError kablius. Užregistruokite
-  // variklį, kai įkeliamas papildinio modulis (arba per pirmąjį onRequest); išregistruokite jį
-  // naudodami savo užbaigimo procedūrą.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Užbaigiant:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

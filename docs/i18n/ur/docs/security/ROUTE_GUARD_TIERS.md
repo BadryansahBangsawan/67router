@@ -39,7 +39,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy لسنر + سسٹم پراکسی                                                             |
 | `/api/settings/mitm`                                                                                     | MITM انٹرسیپشن فعال کرتا ہے (سسٹم کی سطح کی پراکسی حالت)                                                      |
 | `/api/issue-agent/`                                                                                      | اِشو ایجنٹ — ریپو کے خلاف مقامی ٹولنگ شروع کرتا ہے                                                            |
-| `/api/plugins/`, `/api/plugins`                                                                          | پلگ اِنز — `worker_threads` + `child_process` کے ذریعے لوڈ/چلاتا ہے                                           |
 | `/api/middleware/`                                                                                       | صارف مڈل ویئر — آپریٹر کوڈ کو اسی پروسیس میں لوڈ/چلاتا ہے                                                     |
 | `/api/system/version`                                                                                    | خودکار اپ ڈیٹ (صرف POST؛ GET/HEAD/OPTIONS مستثنیٰ ہیں) — `git checkout` + `npm install` شروع کرتا ہے          |
 | `/api/db-backups/exportAll`                                                                              | ایکسپورٹ آرکائیو کے لیے `tar` شروع کرتا ہے                                                                    |

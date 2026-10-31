@@ -2095,26 +2095,6 @@ Bacarıqları (agent əsaslı genişləndirmələr çərçivəsini) idarə edin.
 
 ---
 
-## Plaginlər
-
-67router plaginlərini (üçüncü tərəf genişləndirmələrini) idarə edin.
-
-| Metod  | Yol                                | Təsvir                                 |
-| ------ | ---------------------------------- | -------------------------------------- |
-| GET    | `/api/plugins`                     | Quraşdırılmış plaginləri siyahıya alın |
-| POST   | `/api/plugins/marketplace/install` | Marketpleysdən plagin quraşdırın       |
-| DELETE | `/api/plugins/[name]`              | Plagini silin                          |
-| POST   | `/api/plugins/[name]/activate`     | Plagini aktivləşdirin                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Plagini deaktiv edin                   |
-| GET    | `/api/plugins/[name]/config`       | Plagin konfiqurasiyasını əldə edin     |
-| PUT    | `/api/plugins/[name]/config`       | Plagin konfiqurasiyasını yeniləyin     |
-
-**Autentifikasiya:** İdarəetmə sessiyası tələb olunur.
-
-Ətraflı məlumat üçün [Plaginlər Çərçivəsi](../frameworks/PLUGIN_SDK.md) bölməsinə baxın.
-
----
-
 ## Kölgə Marşrutlaşdırması
 
 Provayderlərin kölgə / A-B müqayisəsi **müstəqil REST interfeysi deyil** — bu, combo marşrutlaşdırması vasitəsilə konfiqurasiya edilir ([Avtomatik Combo](../routing/AUTO-COMBO.md) bölməsinə baxın). Hər combo üzrə müqayisə metrikləri `GET /api/combos/metrics` vasitəsilə təqdim olunur.

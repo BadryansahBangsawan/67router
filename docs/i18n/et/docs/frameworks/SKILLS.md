@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Koodi käivitamine | `eval_code` (liivakastis JavaScript/Python)  | HYBRID |
 | Süsteem           | `execute_command` (liivakastis CLI-käivitus) | MANUAL |
 
-### Kohandatud oskuse lisamine
-
-Teavet selle kohta, kuidas lisada pistikprogrammisüsteemi kaudu kohandatud oskus, leiate dokumendist [Pistikprogrammi SDK ja oskuste integratsioon](./PLUGIN_SDK.md).
-
 ---
 
 ## Vaata ka

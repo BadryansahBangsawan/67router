@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Code-uitvoering | `eval_code` (JavaScript/Python in een sandbox)    | HYBRID |
 | Systeem         | `execute_command` (CLI-uitvoering in een sandbox) | MANUAL |
 
-### Een aangepaste skill toevoegen
-
-Bekijk de [Plugin-SDK en skillsintegratie](./PLUGIN_SDK.md) om te zien hoe u via het plug-insysteem een aangepaste skill toevoegt.
-
 ---
 
 ## Zie ook

@@ -458,10 +458,6 @@ const config: SkillConfig = {
 | Eksekusi Kode | `eval_code` (JavaScript/Python terisolasi)  | HYBRID |
 | Sistem        | `execute_command` (eksekusi CLI terisolasi) | MANUAL |
 
-### Menambahkan Skill Kustom
-
-Lihat [SDK Plugin & Integrasi Skill](./PLUGIN_SDK.md) untuk mengetahui cara menambahkan skill kustom melalui sistem plugin.
-
 ---
 
 ## Lihat Juga

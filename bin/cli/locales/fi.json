@@ -1035,16 +1035,6 @@
     "system": "Järjestelmäkehote",
     "resume": "Jatka tallennettua istuntoa nimellä"
   },
-  "plugin": {
-    "description": "Hallitse CLI-liitännäisiä (omniroute-cmd-*)",
-    "list": "Luettele asennetut liitännäiset",
-    "install": "Asenna liitännäinen npm:stä tai paikallisesta polusta",
-    "remove": "Poista asennettu liitännäinen",
-    "info": "Näytä asennetun liitännäisen tiedot",
-    "search": "Etsi saatavilla olevia liitännäisiä npm-rekisteristä",
-    "update": "Päivitä asennetut liitännäiset",
-    "scaffold": "Luo uuden liitännäisen perusrakenne"
-  },
   "launch": {
     "description": "Käynnistä Claude Code 67routeriin yhdistettynä (paikallinen tai etäyhteys, --profile-valinnalla)",
     "token": "Tunnus, joka Claude-asiakasohjelman tulee lähettää (ANTHROPIC_AUTH_TOKEN)",

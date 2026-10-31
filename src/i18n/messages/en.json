@@ -1048,7 +1048,6 @@
     "configurationSection": "Configuration",
     "aiFeaturesSection": "AI Features",
     "mcp": "MCP Server",
-    "plugins": "Plugins",
     "apiEndpoints": "API Endpoints",
     "analyticsSearch": "Search",
     "analyticsUtilization": "Utilization",
@@ -1145,7 +1144,6 @@
     "omniSkillsSubtitle": "Sandbox skill registry",
     "agentSkillsSubtitle": "A2A skill registry",
     "mcpSubtitle": "MCP server controls",
-    "pluginsSubtitle": "Plugin marketplace & installs",
     "mediaSubtitle": "Cached media files",
     "settingsSubtitle": "All settings",
     "settingsGeneralSubtitle": "Database and backups",
@@ -1505,7 +1503,6 @@
     "leaderboard": "Leaderboard",
     "limits": "Limits",
     "profile": "Profile",
-    "plugins": "Plugins",
     "providerStats": "Provider Stats",
     "new": "New",
     "quota": "Quota",
@@ -11512,53 +11509,6 @@
     "wizardRemoveDimension": "Remove dimension",
     "wizardRemoveKey": "Remove key"
   },
-  "plugins": {
-    "title": "Plugins",
-    "description": "Install and manage plugins for extending 67router functionality",
-    "loading": "Loading plugins...",
-    "scanning": "Scanning...",
-    "scanForPlugins": "Scan for Plugins",
-    "noPlugins": "No plugins installed",
-    "noPluginsDescription": "Place plugin directories in ~/.omniroute/plugins/ and click Scan.",
-    "activate": "Activate",
-    "deactivate": "Deactivate",
-    "uninstall": "Uninstall",
-    "uninstallConfirm": "Uninstall plugin \"{name}\"?",
-    "pluginScanComplete": "Plugin scan complete",
-    "pluginScanFailed": "Plugin scan failed",
-    "activated": "{name} activated",
-    "deactivated": "{name} deactivated",
-    "activateFailed": "Failed to activate {name}",
-    "deactivateFailed": "Failed to deactivate {name}",
-    "uninstalled": "{name} uninstalled",
-    "uninstallFailed": "Failed to uninstall {name}",
-    "configure": "Configure: {name}",
-    "configurePlugin": "Configure",
-    "noConfigSettings": "This plugin has no configurable settings.",
-    "saving": "Saving...",
-    "saveConfiguration": "Save Configuration",
-    "configurationSaved": "Configuration saved",
-    "saveConfigurationFailed": "Failed to save configuration",
-    "pluginNotFound": "Plugin not found",
-    "version": "Version",
-    "author": "Author",
-    "description_label": "Description",
-    "status": "Status",
-    "enabled": "Enabled",
-    "disabled": "Disabled",
-    "installedTab": "Installed",
-    "marketplaceTab": "Marketplace",
-    "marketplaceUrlLabel": "Custom Marketplace URL",
-    "marketplaceUrlPlaceholder": "Leave empty for official Omniroute registry",
-    "saveMarketplaceUrl": "Save & Reload",
-    "marketplaceUrlSaved": "Marketplace URL updated",
-    "marketplaceEmpty": "No plugins found in marketplace.",
-    "marketplaceInstallComingSoon": "Marketplace installs are coming soon.",
-    "verified": "Verified",
-    "install": "Install",
-    "installedFromMarketplace": "Plugin {name} installed!",
-    "hooks": "Hooks"
-  },
   "quotaPlans": {
     "title": "Plans & Quotas",
     "description": "Configure quota plans per provider — dimensions (%, requests, tokens, $) and time windows",
@@ -12229,7 +12179,7 @@
       },
       "omni-mcp": {
         "name": "MCP Server",
-        "description": "Connect to the 67router MCP server (107 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 32 permission scopes."
+        "description": "Connect to the 67router MCP server (99 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 30 permission scopes."
       },
       "omni-agents-a2a": {
         "name": "Agents & A2A Protocol",
@@ -12314,10 +12264,6 @@
       "cli-eval": {
         "name": "CLI: Evals",
         "description": "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, Skills & Memory",
-        "description": "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI."
       },
       "cli-setup": {
         "name": "CLI: Setup & Config",

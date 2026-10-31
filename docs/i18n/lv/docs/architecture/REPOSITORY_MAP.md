@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Mārketinga / README attēlu resursi
 ├── @omniroute/           # Publicējamas pavadošās pakotnes (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/aģentu prasmju pakotnes (cli-* + omni-* + config-codex-cli)
-├── examples/             # Spraudņu paraugi + omniroute-cmd-hello sākumprojekts
+├── examples/             # Quickstart client samples
 ├── contrib/              # Kopienas ieguldījumi (podman/)
 ├── .source/              # Fumadocs avota konfigurācija (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions darbplūsmas + problēmu veidnes + PR veidne
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — fonā apstrādā atmiņas ar `needs_reindex=1`; to izsauc `POST /api/memory/reindex` un atliktās atpakaļaizpildes ceļš. (21. plāns)                                                                                                                                                                             |
 | `monitoring/`                            | Darbspējas pārbaudes, metriku ģenerēšana                                                                                                                                                                                                                                                                                          |
 | `oauth/`                                 | OAuth/importēšanas plūsmas 22 nodrošinātāju moduļiem (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Spraudņu reģistrs                                                                                                                                                                                                                                                                                                                 |
 | `promptCache/`                           | Anthropic stila uzvedņu kešatmiņas kontrolpunkti                                                                                                                                                                                                                                                                                  |
 | `skills/`                                | Prasmju ietvars (iebūvētās prasmes + tirdzniecības vieta + SkillsSH) — skatiet `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                        |
 | `webhookDispatcher.ts`                   | HMAC tīmekļa aizķeru piegāde — skatiet `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                              |

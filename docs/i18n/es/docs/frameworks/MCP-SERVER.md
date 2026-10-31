@@ -416,8 +416,6 @@ Cada herramienta requiere ámbitos específicos:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                                 |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                          |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                            |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                        |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                           |
 | `read:obsidian`       | 13 herramientas de lectura — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 herramientas de escritura — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                         |
@@ -573,7 +571,6 @@ Use el panel o los endpoints REST `/api/mcp/audit` y `/api/mcp/audit/stats` para
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definiciones de herramientas de habilidades (4 herramientas)                               |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definiciones de herramientas de fuente de contexto de Notion (6 herramientas)              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definiciones de herramientas de gamificación (8 herramientas)                              |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Herramientas de registro y gestión de plugins (8 herramientas)                             |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                                                 |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                                                  |
 | `src/app/api/mcp/sse/route.ts`                                           | Ruta de transporte SSE `/api/mcp/sse`                                                      |

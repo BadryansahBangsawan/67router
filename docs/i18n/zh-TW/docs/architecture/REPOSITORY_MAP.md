@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # 行銷／README 圖片資源
 ├── @omniroute/           # 可發布的配套套件（opencode-plugin、opencode-provider）
 ├── skills/               # CLI／代理技能套件（cli-* + omni-* + config-codex-cli）
-├── examples/             # 範例外掛程式 + omniroute-cmd-hello 入門範本
+├── examples/             # Quickstart client samples
 ├── contrib/              # 社群貢獻內容（podman/）
 ├── .source/              # Fumadocs 來源設定（source.config.mjs + 伺服器／瀏覽器／動態）
 ├── .github/              # GitHub Actions 工作流程 + 議題範本 + PR 範本
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — 在背景處理 `needs_reindex=1` 的記憶；由 `POST /api/memory/reindex` 與延遲回填路徑呼叫。（計畫 21）                                                                                                                                                                                       |
 | `monitoring/`                            | 健康狀態檢查、指標發送                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | 22 個提供者模組的 OAuth／匯入流程（agy、antigravity、claude、cline、codebuddy-cn、codex、cursor、devin-desktop、ghe-copilot、github、gitlab-duo、grok-cli-oauth、grok-cli、kilocode、kimi-coding、kiro、openference、qoder、trae、xai-oauth、zed-hosted、zed）                                                 |
-| `plugins/`                               | 外掛登錄檔                                                                                                                                                                                                                                                                                                     |
 | `promptCache/`                           | Anthropic 風格的提示詞快取中斷點                                                                                                                                                                                                                                                                               |
 | `skills/`                                | 技能框架（內建 + 市集 + SkillsSH）— 請參閱 `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                         |
 | `webhookDispatcher.ts`                   | HMAC Webhook 傳送 — 請參閱 `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                       |

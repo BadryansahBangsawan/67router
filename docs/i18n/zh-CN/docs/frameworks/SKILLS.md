@@ -457,10 +457,6 @@ const config: SkillConfig = {
 | 代码执行 | `eval_code`（沙箱化 JavaScript/Python） | HYBRID |
 | 系统     | `execute_command`（沙箱化 CLI 执行）    | MANUAL |
 
-### 添加自定义技能
-
-有关如何通过插件系统添加自定义技能，请参阅 [Plugin SDK 与技能集成](./PLUGIN_SDK.md)。
-
 ---
 
 ## 另请参阅

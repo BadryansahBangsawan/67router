@@ -1032,7 +1032,6 @@
     "configurationSection": "Configurare",
     "aiFeaturesSection": "Funcții IA",
     "mcp": "MCP",
-    "plugins": "Plugin-uri",
     "apiEndpoints": "Endpointuri API",
     "analyticsSearch": "Căutare",
     "analyticsUtilization": "Utilizare",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Registrul abilităților sandbox",
     "agentSkillsSubtitle": "Registrul abilităților A2A",
     "mcpSubtitle": "Controalele serverului MCP",
-    "pluginsSubtitle": "Magazin de plugin-uri și instalări",
     "mediaSubtitle": "Fișiere media memorate în cache",
     "settingsSubtitle": "Toate setările",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Clasament",
     "limits": "Limite",
     "profile": "Profil",
-    "plugins": "Plugin-uri",
     "providerStats": "Statistici furnizor",
     "new": "Nou",
     "quota": "Cotă",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Acest grup de cote nu a putut fi eliminat.",
     "dismiss": "Închideți"
   },
-  "plugins": {
-    "title": "Pluginuri",
-    "description": "Instalați și gestionați pluginuri pentru a extinde funcționalitatea 67router",
-    "loading": "Se încarcă pluginurile...",
-    "scanning": "Se scanează...",
-    "scanForPlugins": "Căutați pluginuri",
-    "noPlugins": "Nu există pluginuri instalate",
-    "noPluginsDescription": "Plasați directoarele pluginurilor în ~/.omniroute/plugins/ și faceți clic pe „Scanare”.",
-    "activate": "Activați",
-    "deactivate": "Dezactivați",
-    "uninstall": "Dezinstalați",
-    "uninstallConfirm": "Dezinstalați pluginul „{name}”?",
-    "pluginScanComplete": "Scanarea pluginurilor s-a încheiat",
-    "pluginScanFailed": "Scanarea pluginurilor a eșuat",
-    "activated": "{name} a fost activat",
-    "deactivated": "{name} a fost dezactivat",
-    "activateFailed": "Activarea {name} a eșuat",
-    "deactivateFailed": "Dezactivarea {name} a eșuat",
-    "uninstalled": "{name} a fost dezinstalat",
-    "uninstallFailed": "Dezinstalarea {name} a eșuat",
-    "configure": "Configurează: {name}",
-    "configurePlugin": "Configurează",
-    "noConfigSettings": "Acest plugin nu are setări configurabile.",
-    "saving": "Se salvează...",
-    "saveConfiguration": "Salvează configurația",
-    "configurationSaved": "Configurație salvată",
-    "saveConfigurationFailed": "Salvarea configurației a eșuat",
-    "pluginNotFound": "Pluginul nu a fost găsit",
-    "version": "Versiune",
-    "author": "Autor",
-    "description_label": "Descriere",
-    "status": "Stare",
-    "enabled": "Activat",
-    "disabled": "Dezactivat",
-    "installedTab": "Instalat",
-    "marketplaceTab": "Piață",
-    "marketplaceUrlLabel": "URL Marketplace personalizat",
-    "marketplaceUrlPlaceholder": "Lăsați gol pentru registrul oficial Omniroute",
-    "saveMarketplaceUrl": "Salvează și reîncarcă",
-    "marketplaceUrlSaved": "URL-ul Marketplace-ului a fost actualizat",
-    "marketplaceEmpty": "Nu s-au găsit pluginuri în marketplace.",
-    "marketplaceInstallComingSoon": "Instalările din Marketplace vor fi disponibile în curând.",
-    "verified": "Verificat",
-    "install": "Instalează",
-    "installedFromMarketplace": "Pluginul {name} a fost instalat!",
-    "hooks": "Hook-uri"
-  },
   "quotaPlans": {
     "title": "Planuri și cote",
     "description": "Configurați planurile de cote per furnizor — dimensiuni (%, solicitări, tokenuri, $) și ferestre de timp",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Conectează-te la serverul MCP 67router (107 de instrumente, 3 transporturi: SSE/stdio/HTTP). Acoperă rutarea, memoria cache, compresia, memoria, abilitățile, furnizorii și instrumentele de audit în 32 scopuri de permisiuni."
+        "description": "Conectează-te la serverul MCP 67router (99 de instrumente, 3 transporturi: SSE/stdio/HTTP). Acoperă rutarea, memoria cache, compresia, memoria, abilitățile, furnizorii și instrumentele de audit în 30 scopuri de permisiuni."
       },
       "omni-agents-a2a": {
         "name": "Agenți & Protocol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluări",
         "description": "Creați și rulați suite de evaluare, urmăriți progresul benchmark-urilor în timp real, vizualizați fișele de scor (scorecards), comparați performanța modelelor și integrați rulările de evaluare cu fluxurile de lucru CI din CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugin-uri, abilități și memorie",
-        "description": "Gestionați Omni Skills (listare, instalare, testare, eliminare), plugin-urile (creare, configurare) și memoria persistentă (căutare, adăugare, ștergere) din CLI."
       },
       "cli-setup": {
         "name": "CLI: Setup și configurare",

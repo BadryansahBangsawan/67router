@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Kodekjøring | `eval_code` (sandkasseisolert JavaScript/Python) | HYBRID |
 | System      | `execute_command` (sandkasseisolert CLI-kjøring) | MANUAL |
 
-### Legge til en egendefinert ferdighet
-
-Se [SDK for programtillegg og ferdighetsintegrasjon](./PLUGIN_SDK.md) for informasjon om hvordan du legger til en egendefinert ferdighet via systemet for programtillegg.
-
 ---
 
 ## Se også

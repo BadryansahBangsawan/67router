@@ -2171,26 +2171,6 @@ Za vse podrobnosti glejte [Ogrodje veščin](../frameworks/SKILLS.md).
 
 ---
 
-## Vtičniki
-
-Upravljajte vtičnike 67router (razširitve tretjih oseb).
-
-| Metoda | Pot                                | Opis                            |
-| ------ | ---------------------------------- | ------------------------------- |
-| GET    | `/api/plugins`                     | Prikaže nameščene vtičnike      |
-| POST   | `/api/plugins/marketplace/install` | Namesti vtičnik iz tržnice      |
-| DELETE | `/api/plugins/[name]`              | Odstrani vtičnik                |
-| POST   | `/api/plugins/[name]/activate`     | Aktivira vtičnik                |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivira vtičnik              |
-| GET    | `/api/plugins/[name]/config`       | Pridobi konfiguracijo vtičnika  |
-| PUT    | `/api/plugins/[name]/config`       | Posodobi konfiguracijo vtičnika |
-
-**Preverjanje pristnosti:** Zahteva upravljavsko sejo.
-
-Za vse podrobnosti glejte [Ogrodje vtičnikov](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Senčno usmerjanje
 
 Senčna primerjava oziroma primerjava A/B ponudnikov **ni samostojen vmesnik REST** — konfigurira se prek kombiniranega usmerjanja (glejte [Samodejne kombinacije](../routing/AUTO-COMBO.md)). Primerjalne metrike za posamezno kombinacijo zagotavlja `GET /api/combos/metrics`.

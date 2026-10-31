@@ -410,8 +410,6 @@ Tool တစ်ခုစီသည် သီးခြား scope များက�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | ဖတ်ရှုရေးကိရိယာ 13 ခု — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | ရေးသားရေးကိရိယာ 9 ခု — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -570,7 +568,6 @@ Tool ခေါ်ဆိုမှုတိုင်းကို `open-sse/mcp-ser
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Skill tool သတ်မှတ်ချက်များ (tool 4 ခု)                                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion context source tool သတ်မှတ်ချက်များ (tool 6 ခု)                                         |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Gamification tool သတ်မှတ်ချက်များ (tool 8 ခု)                                                  |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Plugin မှတ်ပုံတင်ခြင်းနှင့် စီမံခန့်ခွဲမှု tool များ (tool 8 ခု)                               |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` endpoint                                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` endpoint                                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transport route                                                             |

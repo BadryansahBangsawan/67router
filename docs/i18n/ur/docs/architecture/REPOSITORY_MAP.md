@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # مارکیٹنگ / README تصویری اثاثے
 ├── @omniroute/           # شائع کیے جانے کے قابل معاون پیکیجز (opencode-plugin، opencode-provider)
 ├── skills/               # CLI/ایجنٹ اسکل پیکس (cli-* + omni-* + config-codex-cli)
-├── examples/             # نمونہ پلگ اِنز + omniroute-cmd-hello اسٹارٹر
+├── examples/             # Quickstart client samples
 ├── contrib/              # کمیونٹی کی شراکتیں (podman/)
 ├── .source/              # Fumadocs سورس کنفیگ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ورک فلوز + ایشو ٹیمپلیٹس + PR ٹیمپلیٹ
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — پسِ منظر میں `needs_reindex=1` والی میموریز کو پروسیس کرتا ہے؛ `POST /api/memory/reindex` اور ضرورت پر بیک فل کے راستے کے ذریعے کال کیا جاتا ہے۔ (منصوبہ 21)                                                                                                                                   |
 | `monitoring/`                            | صحت کی جانچ، میٹرکس کا اخراج                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | 22 فراہم کنندہ ماڈیولز کے لیے OAuth/درآمد کے بہاؤ (agy، antigravity، claude، cline، codebuddy-cn، codex، cursor، devin-desktop، ghe-copilot، github، gitlab-duo، grok-cli-oauth، grok-cli، kilocode، kimi-coding، kiro، openference، qoder، trae، xai-oauth، zed-hosted، zed)                                        |
-| `plugins/`                               | پلگ اِن رجسٹری                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Anthropic طرز کے پرامپٹ کیش بریک پوائنٹس                                                                                                                                                                                                                                                                             |
 | `skills/`                                | اسکلز فریم ورک (بلٹ اِن + مارکیٹ پلیس + SkillsSH) — دیکھیے `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                               |
 | `webhookDispatcher.ts`                   | HMAC ویب ہک ترسیل — دیکھیے `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                             |

@@ -408,8 +408,6 @@ Každý nástroj vyžaduje konkrétne rozsahy:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                              |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                       |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                         |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                     |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                        |
 | `read:obsidian`       | 13 nástrojov na čítanie — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 nástrojov na zápis — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                  |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                      |
@@ -563,7 +561,6 @@ Použite dashboard alebo REST koncové body `/api/mcp/audit` a `/api/mcp/audit/s
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definície nástrojov zručností (4 nástroje)                              |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definície nástrojov zdroja kontextu Notion (6 nástrojov)                |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definície nástrojov gamifikácie (8 nástrojov)                           |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Nástroje na registráciu a správu pluginov (8 nástrojov)                 |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                              |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                               |
 | `src/app/api/mcp/sse/route.ts`                                           | Trasa SSE transportu `/api/mcp/sse`                                     |

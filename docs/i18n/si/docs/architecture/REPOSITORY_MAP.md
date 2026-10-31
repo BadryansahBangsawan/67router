@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # අලෙවිකරණ / README රූප සම්පත්
 ├── @omniroute/           # ප්රකාශනය කළ හැකි සහායක පැකේජ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/නියෝජිත කුසලතා ඇසුරුම් (cli-* + omni-* + config-codex-cli)
-├── examples/             # නියැදි ප්ලගින + omniroute-cmd-hello ආරම්භකය
+├── examples/             # Quickstart client samples
 ├── contrib/              # ප්රජා දායකත්ව (podman/)
 ├── .source/              # Fumadocs මූලාශ්ර වින්යාසය (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions කාර්යප්රවාහ + ගැටලු ආකෘති + PR ආකෘතිය
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — පසුබිමේ `needs_reindex=1` සහිත මතක සකසයි; `POST /api/memory/reindex` සහ අවශ්ය විට පසුපිරවීමේ මාර්ගය මඟින් කැඳවනු ලැබේ. (සැලැස්ම 21)                                                                                                                                                                    |
 | `monitoring/`                            | සෞඛ්ය පරීක්ෂණ, ප්රමිතික නිකුත් කිරීම                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | සැපයුම්කරු මොඩියුල 22ක් සඳහා OAuth/ආයාත ප්රවාහ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                   |
-| `plugins/`                               | Plugin ලේඛනය                                                                                                                                                                                                                                                                                                                 |
 | `promptCache/`                           | Anthropic-ආකාරයේ prompt cache විරාම ලක්ෂ්ය                                                                                                                                                                                                                                                                                   |
 | `skills/`                                | Skills රාමුව (අන්තර්ගත + වෙළඳපොළ + SkillsSH) — `docs/frameworks/SKILLS.md` බලන්න                                                                                                                                                                                                                                             |
 | `webhookDispatcher.ts`                   | HMAC webhook බෙදාහැරීම — `docs/frameworks/WEBHOOKS.md` බලන්න                                                                                                                                                                                                                                                                 |

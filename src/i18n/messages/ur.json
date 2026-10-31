@@ -1032,7 +1032,6 @@
     "configurationSection": "کنفیگریشن",
     "aiFeaturesSection": "AI کی خصوصیات",
     "mcp": "MCP",
-    "plugins": "پلگ اِنز",
     "apiEndpoints": "API اینڈ پوائنٹس",
     "analyticsSearch": "تلاش",
     "analyticsUtilization": "استعمال",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "سینڈ باکس اسکل رجسٹری",
     "agentSkillsSubtitle": "A2A اسکل رجسٹری",
     "mcpSubtitle": "MCP سرور کنٹرولز",
-    "pluginsSubtitle": "پلگ اِن مارکیٹ پلیس اور انسٹالیشنز",
     "mediaSubtitle": "کیش شدہ میڈیا فائلیں",
     "settingsSubtitle": "تمام ترتیبات",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "لیڈر بورڈ",
     "limits": "حدود",
     "profile": "پروفائل",
-    "plugins": "پلگ انز",
     "providerStats": "فراہم کنندہ کے اعداد و شمار",
     "new": "نیا",
     "quota": "کوٹہ",
@@ -11455,53 +11452,6 @@
     "removeFailed": "اس پول کو ہٹایا نہیں جا سکا۔",
     "dismiss": "بند کریں"
   },
-  "plugins": {
-    "title": "پلگ اِنز",
-    "description": "67router کی فعالیت کو وسعت دینے کے لیے پلگ اِنز انسٹال اور منظم کریں",
-    "loading": "پلگ اِنز لوڈ ہو رہے ہیں...",
-    "scanning": "اسکین کیا جا رہا ہے...",
-    "scanForPlugins": "پلگ اِنز کے لیے اسکین کریں",
-    "noPlugins": "کوئی پلگ اِن انسٹال نہیں ہے",
-    "noPluginsDescription": "پلگ اِن ڈائریکٹریز ~/.omniroute/plugins/ میں رکھیں اور اسکین پر کلک کریں۔",
-    "activate": "فعال کریں",
-    "deactivate": "غیر فعال کریں",
-    "uninstall": "اَن انسٹال کریں",
-    "uninstallConfirm": "پلگ اِن \"{name}\" اَن انسٹال کریں؟",
-    "pluginScanComplete": "پلگ اِن اسکین مکمل ہو گیا",
-    "pluginScanFailed": "پلگ اِن اسکین ناکام ہو گیا",
-    "activated": "{name} فعال کر دیا گیا",
-    "deactivated": "{name} غیر فعال کر دیا گیا",
-    "activateFailed": "{name} کو فعال کرنے میں ناکامی",
-    "deactivateFailed": "{name} کو غیر فعال کرنے میں ناکامی",
-    "uninstalled": "{name} اَن انسٹال کر دیا گیا",
-    "uninstallFailed": "{name} کو اَن انسٹال کرنے میں ناکامی",
-    "configure": "ترتیب دیں: {name}",
-    "configurePlugin": "ترتیب دیں",
-    "noConfigSettings": "اس پلگ اِن میں قابلِ ترتیب سیٹنگز موجود نہیں ہیں۔",
-    "saving": "محفوظ کیا جا رہا ہے...",
-    "saveConfiguration": "کنفیگریشن محفوظ کریں",
-    "configurationSaved": "کنفیگریشن محفوظ ہو گئی",
-    "saveConfigurationFailed": "کنفیگریشن محفوظ کرنے میں ناکامی",
-    "pluginNotFound": "پلگ اِن نہیں ملا",
-    "version": "ورژن",
-    "author": "مصنف",
-    "description_label": "تفصیل",
-    "status": "حالت",
-    "enabled": "فعال",
-    "disabled": "غیر فعال",
-    "installedTab": "انسٹال شدہ",
-    "marketplaceTab": "مارکیٹ پلیس",
-    "marketplaceUrlLabel": "حسب ضرورت مارکیٹ پلیس URL",
-    "marketplaceUrlPlaceholder": "سرکاری Omniroute رجسٹری کے لیے خالی چھوڑ دیں",
-    "saveMarketplaceUrl": "محفوظ کریں اور دوبارہ لوڈ کریں",
-    "marketplaceUrlSaved": "مارکیٹ پلیس URL اپ ڈیٹ ہو گیا",
-    "marketplaceEmpty": "مارکیٹ پلیس میں کوئی پلگ ان نہیں ملا۔",
-    "marketplaceInstallComingSoon": "مارکیٹ پلیس انسٹالیشنز جلد آرہی ہیں۔",
-    "verified": "تصدیق شدہ",
-    "install": "انسٹال کریں",
-    "installedFromMarketplace": "پلگ ان {name} انسٹال ہو گیا!",
-    "hooks": "ہُکس"
-  },
   "quotaPlans": {
     "title": "پلانز اور کوٹہ جات",
     "description": "فی فراہم کنندہ کوٹہ پلانز ترتیب دیں — ڈائمینشنز (%, درخواستیں، ٹوکنز، $) اور ٹائم ونڈوز",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP سرور",
-        "description": "67router MCP سرور سے جڑیں (107 ٹولز، 3 ٹرانسپورٹس: SSE/stdio/HTTP)۔ 32 اجازت کے اسکوپس میں روٹنگ، کیش، کمپریشن، میموری، اسکلز، پرووائیڈرز، اور آڈٹ ٹولز کا احاطہ کرتا ہے۔"
+        "description": "67router MCP سرور سے جڑیں (99 ٹولز، 3 ٹرانسپورٹس: SSE/stdio/HTTP)۔ 30 اجازت کے اسکوپس میں روٹنگ، کیش، کمپریشن، میموری، اسکلز، پرووائیڈرز، اور آڈٹ ٹولز کا احاطہ کرتا ہے۔"
       },
       "omni-agents-a2a": {
         "name": "ایجنٹس اور A2A پروٹوکول",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: ایویلیوایشنز",
         "description": "CLI سے ایویلیوایشن سوٹس بنائیں اور چلائیں، لائیو بینچ مارک کی پیش رفت دیکھیں، اسکور کارڈز دیکھیں، ماڈل کی کارکردگی کا موازنہ کریں، اور eval رنز کو CI ورک فلوز کے ساتھ مربوط کریں۔"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: پلگ انز، اسکلز اور میموری",
-        "description": "CLI سے Omni Skills (فہرست بنائیں، انسٹال کریں، ٹیسٹ کریں، ہٹائیں)، پلگ انز (بنائیں، کنفیگر کریں)، اور پرسیستینٹ میموری (تلاش کریں، شامل کریں، صاف کریں) کا انتظام کریں۔"
       },
       "cli-setup": {
         "name": "CLI: سیٹ اپ اور کنفگ",

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Aset gambar pemasaran / README
 ├── @omniroute/           # Paket pendamping yang dapat dipublikasikan (opencode-plugin, opencode-provider)
 ├── skills/               # Paket keterampilan CLI/agen (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin contoh + templat awal omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Kontribusi komunitas (podman/)
 ├── .source/              # Konfigurasi sumber Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Workflow GitHub Actions + templat isu + templat PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — memproses memori dengan `needs_reindex=1` di latar belakang; dipanggil oleh `POST /api/memory/reindex` dan jalur lazy-backfill. (rencana 21)                                                                                                                                                      |
 | `monitoring/`                            | Pemeriksaan kesehatan, emisi metrik                                                                                                                                                                                                                                                                                     |
 | `oauth/`                                 | Alur OAuth/impor untuk 22 modul penyedia (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                    |
-| `plugins/`                               | Registri plugin                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | Breakpoint cache prompt bergaya Anthropic                                                                                                                                                                                                                                                                               |
 | `skills/`                                | Kerangka kerja Skills (bawaan + marketplace + SkillsSH) — lihat `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                             |
 | `webhookDispatcher.ts`                   | Pengiriman webhook HMAC — lihat `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                           |

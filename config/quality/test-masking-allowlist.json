@@ -39,6 +39,193 @@
   "tests/unit/docs/remote-token-privilege-locales.test.ts": "release/v3.8.53 PR #17250 (2026-10-20): the remote-token privilege section test asserted .i18n-state.json source_hash against the CURRENT English source (7→5, 2 asserts) — a duplicate of the i18n drift gate (check-translation-drift.mjs, PR-scoped since this PR) that turned every inherited translation drift into a red unit shard on unrelated PRs. Section presence and literals in every locale stay. Content assertions and target_hash provenance are unchanged. Verified legitimate, not masking. Prune after the next i18n wave lands.",
   "_deletedWithReplacement": {
     "_comment": "Deleções de arquivo de teste com SUBSTITUTO verificado (o gate exige que o replacement exista no HEAD e seja arquivo de teste). Uso restrito ao caso 'reescrito em outro path sem rename detectável pelo -M do git'. Cada entrada precisa de reason com PR ref e passa por revisão humana no release PR. Prune após o release mergear para main.",
+    "tests/integration/plugins-lifecycle.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/8374-plugins-status-optional.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/8395-plugin-hooks-fire.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/api-malformed-json-400-plugins.test.ts": {
+      "sourceRemoved": ["src/app/api/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/chatcore-plugin-onrequest.test.ts": {
+      "sourceRemoved": [
+        "open-sse/handlers/chatCore/pluginOnRequest.ts",
+        "open-sse/handlers/chatCore/pluginRequestGate.ts"
+      ],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/chatcore-plugin-onresponse.test.ts": {
+      "sourceRemoved": ["open-sse/handlers/chatCore/pluginOnResponse.ts"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cli-plugin-system.test.ts": {
+      "sourceRemoved": ["bin/cli/plugins.mjs", "bin/cli/commands/plugin.mjs"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/mcp-plugin-tools-error-sanitization-15159.test.ts": {
+      "sourceRemoved": ["open-sse/mcp-server/tools/pluginTools.ts"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/model-validation-plugins.test.ts": {
+      "sourceRemoved": ["src/lib/modelValidation/pluginFence.ts", "src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-analytics.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-api-routes.test.ts": {
+      "sourceRemoved": ["src/app/api/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-config-route.test.ts": {
+      "sourceRemoved": ["src/app/api/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-config-validation.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-config.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-db.test.ts": {
+      "sourceRemoved": ["src/lib/db/plugins.ts"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-dev-mode.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-doctor.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-edge-cases.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-errors.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-fs-safety.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-hook-payload-chaining-3286.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-hooks-rate-limit.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-hooks.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-index.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-loader-ipc.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-loader.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-logger.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-manager-lifecycle.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-manager-restart-reload-7806.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-manager.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-manifest-refresh-on-activate.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-manifest.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-marketplace-install.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-marketplace.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-metrics.test.ts": {
+      "sourceRemoved": ["src/lib/db/pluginMetrics.ts"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-onstreamcomplete-delivery-11825.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-onstreamcomplete-timeout-isolation.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-permissions.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-route-error-sanitization.test.ts": {
+      "sourceRemoved": ["src/app/api/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-scanner.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-set-enabled-shim-3473.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-sigkill-listener-leak-12819.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-signing.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-tools.test.ts": {
+      "sourceRemoved": ["open-sse/mcp-server/tools/pluginTools.ts"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-upgrade.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/plugins-welcome-banner-e2e.test.ts": {
+      "sourceRemoved": ["src/lib/plugins"],
+      "reason": "67router PR-3: the plugin system was removed permanently (unused feature, 0 plugin rows on the VPS); the code under test no longer exists."
+    },
     "open-sse/mcp-server/__tests__/a2aLifecycle.test.ts": {
       "sourceRemoved": [
         "src/app/a2a",
@@ -603,7 +790,6 @@
   "tests/unit/usage-providers.test.ts": "v3.8.49 #7866: o case \"qwen\" saiu de getUsageForProvider (não há mais case \"qwen\" no switch de open-sse/services/usage.ts); o teste cobria esse ramo extinto (net 20→19). Verificado legítimo. Prune após v3.8.49 mergear para main.",
   "tests/unit/usage-service-hardening.test.ts": "v3.8.49 #7866/#8565/#8013: qwen removido (−3 asserts); o Kimi/Kiro builder-id (uso profileless) passou a ter SUCESSO real em vez de erro de ARN — supportsProfilelessKiroUsage(\"builder-id\") retorna true —, trocando 1 assert de regex de erro por 3 asserts de valor; e os ids de bucket de quota do Antigravity foram atualizados para o catálogo atual. Rodado no HEAD: 23/23 passam. Net 210→209. Verificado legítimo. Prune após v3.8.49 mergear para main.",
   "open-sse/services/__tests__/tierResolver.test.ts": "v3.8.49 #7866: refactor(qwen) remove o provider OAuth legado — o teste \"classifies Qwen as free\" e a entrada de qwen na lista do batch saíram junto com o provider, e os índices do batch desceram de 10 para 9 elementos (net 61→59). Superfície extinta, não enfraquecimento. Verificado legítimo. Prune após v3.8.49 mergear para main.",
-  "tests/unit/plugins-welcome-banner-e2e.test.ts": "v3.8.50 #9126 (commit 8fac6bcd48): o teste único 'BUILTIN_EVENTS has all 14 events' (13 asserts .ok/.equal) foi reestruturado em 3 testes mais específicos — 'contains only emitted/public events' (assert.deepEqual da lista completa), 'does not advertise dead events' (7 asserts .equal(false) para eventos sem emissor real: onModelSelect/onComboResolve/onRateLimit/onQuotaExhaust/onProviderError/onStreamStart/onStreamEnd) e 'lifecycle events remain represented' (4 asserts .ok). Contrato mais forte (agora também nega presença dos eventos mortos), não mais fraco — a contagem líquida cai (73→61) porque o assert.deepEqual único substitui múltiplos assert.ok redundantes com a mesma cobertura. Asserts restruturados, não removidos sem substituição. Verificado legítimo.",
   "tests/unit/web-tools-translation-2820.test.ts": "v3.8.50 #9343 (commit d969555417): fix(security) exige envelope <tool> explicito — JSON puro NAO deve mais ser promovido a tool_calls. Os 5 testes foram REESCRITOS para o contrato oposto (antes: 'promove e valida name/arguments'; agora: 'toolCalls === null e content preservado'), o que naturalmente usa menos asserts: verificar a NAO-promocao custa 2 asserts, verificar o objeto promovido custava 4. Contrato mais restritivo, nao mais fraco (39->35). Verificado legitimo — a inversao esta explicita nos proprios nomes dos testes ('does NOT promote ... (#9343)').",
   "tests/unit/deepseek-web-tools-execute-2820.test.ts": "v3.8.50 ed661f2126 (alinhamento ao #9343): o teste 'parses bare JSON reply into OpenAI tool_calls' foi reescrito para o contrato INVERTIDO do fix de seguranca #9343 — JSON puro sem envelope <tool> NAO deve mais ser promovido. Verificar a nao-promocao custa 3 asserts (finish_reason stop, sem tool_calls, content preservado verbatim) onde validar o objeto promovido custava 5 (23->21). Mesma classe da entrada web-tools-translation-2820 acima. Contrato mais restritivo, nao mais fraco.",
   "tests/unit/startup-stale-cooldown-recovery.test.ts": "v3.8.50 #11355: o contrato do startup foi INVERTIDO — clearStaleCrashCooldowns deixou de limpar todo cooldown transiente e passa a limpar apenas os EXPIRADOS/não-parseáveis, preservando um rateLimitedUntil futuro (quota semanal/mensal que era apagada a cada restart). Os asserts das pós-condições da limpeza deixaram de existir e foram substituídos pelos da preservação (cleared === 0 + campos intactos), net 24→21. Asserts migrados ao novo contrato, não enfraquecidos. Prune após v3.8.50 mergear para main.",
@@ -630,6 +816,11 @@
   "@omniroute/opencode-plugin/tests/warm-startup.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh (5 fetchers, was 6); one fan-out assert updated 6 to 5, retired stubs removed, and 9 model-key assertions realigned to the bare-id contract from #9178/#10821 (both already on the base). Coverage kept, not weakened.",
   "@omniroute/opencode-plugin/tests/log-level.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh; the retired fetcher 404 test and its import are removed with the source (21 to 19). Remaining level coverage unchanged.",
   "@omniroute/opencode-plugin/tests/config-shim.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh; the retired twin-wins case and its fixtures are removed with the static publication block (162 to 159). Remaining builder coverage unchanged.",
+  "tests/integration/proxy-pipeline.test.ts": "67router PR-3: the 'Plugin Architecture — plugins/hooks.ts' section tested src/lib/plugins/hooks.ts, which was removed with the plugin system; the other sections are unchanged.",
+  "tests/unit/api-malformed-json-400.test.ts": "67router PR-3: the two PUT /api/plugins/[name]/config cases were dropped because that route was removed with the plugin system; the /api/model-combo-mappings cases are unchanged.",
+  "tests/unit/isolate-datadir.test.ts": "67router PR-3: the two plugin-dir cases probed src/lib/plugins/scanner.ts and the OMNIROUTE_PLUGINS_DIR default, both removed with the plugin system; the DATA_DIR isolation cases are unchanged.",
+  "tests/unit/model-validation-service.test.ts": "67router PR-3: the three active-plugin fence cases were replaced by one case asserting a legacy active plugins row no longer blocks validation (the fence was removed with the plugin system).",
+  "tests/unit/sidebar-visibility.test.ts": "67router PR-3: the plugins sidebar discoverability test became a removal assertion (no plugins item, not hideable) because the page was removed with the plugin system.",
   "tests/e2e/ecosystem.test.ts": "67router PR-2: the A2A Agent Card and JSON-RPC cases were dropped because /a2a and /.well-known/agent.json were removed; the remaining ecosystem cases are unchanged.",
   "tests/e2e/protocol-clients.test.ts": "67router PR-2: the A2A client cases were dropped with the /a2a JSON-RPC endpoint; the MCP client cases are unchanged.",
   "tests/integration/agent-skills-discovery.test.ts": "67router PR-2: the A2A list-capabilities cases were dropped with the A2A skills; the MCP skill-list cases are unchanged (counts follow the removed cli-a2a skill).",

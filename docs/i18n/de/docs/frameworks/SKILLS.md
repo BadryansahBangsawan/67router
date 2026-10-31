@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Codeausführung | `eval_code` (JavaScript/Python in Sandbox)    | HYBRID |
 | System         | `execute_command` (CLI-Ausführung in Sandbox) | MANUAL |
 
-### Hinzufügen eines benutzerdefinierten Skills
-
-Wie Sie über das Plugin-System einen benutzerdefinierten Skill hinzufügen, erfahren Sie unter [Plugin-SDK und Skill-Integration](./PLUGIN_SDK.md).
-
 ---
 
 ## Siehe auch

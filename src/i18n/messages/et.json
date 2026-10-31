@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguratsioon",
     "aiFeaturesSection": "AI-funktsioonid",
     "mcp": "MCP-server",
-    "plugins": "Pistikprogrammid",
     "apiEndpoints": "API-lõpp-punktid",
     "analyticsSearch": "Otsing",
     "analyticsUtilization": "Kasutusaste",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Liivakasti oskuste register",
     "agentSkillsSubtitle": "A2A-oskuste register",
     "mcpSubtitle": "MCP-serveri juhtimine",
-    "pluginsSubtitle": "Pistikprogrammide turg ja installid",
     "mediaSubtitle": "Vahemällu salvestatud meediafailid",
     "settingsSubtitle": "Kõik seaded",
     "settingsGeneralSubtitle": "Andmebaas ja varukoopiad",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Edetabel",
     "limits": "Piirangud",
     "profile": "Profiil",
-    "plugins": "Pluginad",
     "providerStats": "Teenusepakkuja statistika",
     "new": "Uus",
     "quota": "Kvoot",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Seda kogumit ei õnnestunud eemaldada.",
     "dismiss": "Sulge"
   },
-  "plugins": {
-    "title": "Pistikprogrammid",
-    "description": "Installi ja halda pistikprogramme 67router'i funktsionaalsuse laiendamiseks",
-    "loading": "Pistikprogrammide laadimine...",
-    "scanning": "Skannimine...",
-    "scanForPlugins": "Skanni pistikprogramme",
-    "noPlugins": "Ühtegi pistikprogrammi pole installitud",
-    "noPluginsDescription": "Paiguta pistikprogrammide kataloogid asukohta ~/.omniroute/plugins/ ja klõpsa nuppu „Skanni“.",
-    "activate": "Aktiveeri",
-    "deactivate": "Inaktiveeri",
-    "uninstall": "Desinstalli",
-    "uninstallConfirm": "Kas desinstallida pistikprogramm „{name}“?",
-    "pluginScanComplete": "Pistikprogrammide skannimine on lõpetatud",
-    "pluginScanFailed": "Pistikprogrammide skannimine ebaõnnestus",
-    "activated": "{name} on aktiveeritud",
-    "deactivated": "{name} on inaktiveeritud",
-    "activateFailed": "Pistikprogrammi {name} aktiveerimine ebaõnnestus",
-    "deactivateFailed": "Pistikprogrammi {name} inaktiveerimine ebaõnnestus",
-    "uninstalled": "{name} on desinstallitud",
-    "uninstallFailed": "Pistikprogrammi {name} desinstallimine ebaõnnestus",
-    "configure": "Seadista: {name}",
-    "configurePlugin": "Seadista",
-    "noConfigSettings": "Sellel pistikprogrammil pole seadistatavaid sätteid.",
-    "saving": "Salvestamine...",
-    "saveConfiguration": "Salvesta konfiguratsioon",
-    "configurationSaved": "Konfiguratsioon on salvestatud",
-    "saveConfigurationFailed": "Konfiguratsiooni salvestamine ebaõnnestus",
-    "pluginNotFound": "Pistikprogrammi ei leitud",
-    "version": "Versioon",
-    "author": "Autor",
-    "description_label": "Kirjeldus",
-    "status": "Olek",
-    "enabled": "Lubatud",
-    "disabled": "Keelatud",
-    "installedTab": "Installitud",
-    "marketplaceTab": "Turuplats",
-    "marketplaceUrlLabel": "Kohandatud turuplatsi URL",
-    "marketplaceUrlPlaceholder": "Ametliku 67router'i registri kasutamiseks jätke väli tühjaks",
-    "saveMarketplaceUrl": "Salvesta ja laadi uuesti",
-    "marketplaceUrlSaved": "Turuplatsi URL on uuendatud",
-    "marketplaceEmpty": "Turuplatsilt ei leitud ühtegi pistikprogrammi.",
-    "marketplaceInstallComingSoon": "Turuplatsilt installimise võimalus lisandub peagi.",
-    "verified": "Kinnitatud",
-    "install": "Paigalda",
-    "installedFromMarketplace": "Plugin {name} on paigaldatud!",
-    "hooks": "Haagid"
-  },
   "quotaPlans": {
     "title": "Paketid ja kvoodid",
     "description": "Seadista iga teenusepakkuja kvoodipakette — mõõtmed (%, päringud, tokenid, $) ja ajavahemikud",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Loo ühendus 67router MCP-serveriga (107 tööriista, 3 transpordiviisi: SSE/stdio/HTTP). Hõlmab marsruutimise, vahemälu, tihendamise, mälu, oskuste, teenusepakkujate ja auditi tööriistu 32 õiguste kehtivusala piires."
+        "description": "Loo ühendus 67router MCP-serveriga (99 tööriista, 3 transpordiviisi: SSE/stdio/HTTP). Hõlmab marsruutimise, vahemälu, tihendamise, mälu, oskuste, teenusepakkujate ja auditi tööriistu 30 õiguste kehtivusala piires."
       },
       "omni-agents-a2a": {
         "name": "Agendid ja A2A-protokoll",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: hindamised",
         "description": "Loo ja käita hindamiskomplekte, jälgi reaalajas võrdlustestide edenemist, vaata tulemuskaarte, võrdle mudelite jõudlust ning integreeri hindamiskäitused CLI kaudu CI töövoogudega."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: pluginad, oskused ja mälu",
-        "description": "Halda CLI kaudu Omni Skillsi oskusi (loetle, installi, testi, eemalda), pluginaid (loo, konfigureeri) ja püsimälu (otsi, lisa, tühjenda)."
       },
       "cli-setup": {
         "name": "CLI: seadistamine ja konfiguratsioon",

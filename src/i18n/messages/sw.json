@@ -1032,7 +1032,6 @@
     "configurationSection": "Usanidi",
     "aiFeaturesSection": "Vipengele vya AI",
     "mcp": "MCP",
-    "plugins": "Plagini",
     "apiEndpoints": "Vituo vya API",
     "analyticsSearch": "Tafuta",
     "analyticsUtilization": "Matumizi",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Rejista ya ujuzi wa Sandbox",
     "agentSkillsSubtitle": "Rejista ya ujuzi wa A2A",
     "mcpSubtitle": "Vidhibiti vya seva ya MCP",
-    "pluginsSubtitle": "Soko la plagini na usakinishaji",
     "mediaSubtitle": "Faili za midia zilizohifadhiwa kwenye akiba",
     "settingsSubtitle": "Mipangilio yote",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Ubao wa Wanaoongoza",
     "limits": "Vikomo",
     "profile": "Wasifu",
-    "plugins": "Vipachiko",
     "providerStats": "Takwimu za Watoa Huduma",
     "new": "Mpya",
     "quota": "Kikomo",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Haikuwezekana kuondoa hifadhi hii.",
     "dismiss": "Funga"
   },
-  "plugins": {
-    "title": "Programu-jalizi",
-    "description": "Sakinisha na udhibiti programu-jalizi ili kupanua utendaji wa 67router",
-    "loading": "Inapakia programu-jalizi...",
-    "scanning": "Inachanganua...",
-    "scanForPlugins": "Changanua Programu-jalizi",
-    "noPlugins": "Hakuna programu-jalizi zilizosakinishwa",
-    "noPluginsDescription": "Weka saraka za programu-jalizi katika ~/.omniroute/plugins/ kisha ubofye Changanua.",
-    "activate": "Washa",
-    "deactivate": "Zima",
-    "uninstall": "Sanidua",
-    "uninstallConfirm": "Ondoa programu-jalizi \"{name}\"?",
-    "pluginScanComplete": "Uchanganuzi wa programu-jalizi umekamilika",
-    "pluginScanFailed": "Uchanganuzi wa programu-jalizi umeshindwa",
-    "activated": "{name} imewashwa",
-    "deactivated": "{name} imezimwa",
-    "activateFailed": "Imeshindikana kuwasha {name}",
-    "deactivateFailed": "Imeshindikana kuzima {name}",
-    "uninstalled": "{name} imeondolewa",
-    "uninstallFailed": "Imeshindikana kuondoa {name}",
-    "configure": "Sanidi: {name}",
-    "configurePlugin": "Sanidi",
-    "noConfigSettings": "Programu-jalizi hii haina mipangilio inayoweza kusanidiwa.",
-    "saving": "Inahifadhi...",
-    "saveConfiguration": "Hifadhi Usanidi",
-    "configurationSaved": "Usanidi umehifadhiwa",
-    "saveConfigurationFailed": "Imeshindikana kuhifadhi usanidi",
-    "pluginNotFound": "Programu-jalizi haijapatikana",
-    "version": "Toleo",
-    "author": "Mwandishi",
-    "description_label": "Maelezo",
-    "status": "Hali",
-    "enabled": "Imewashwa",
-    "disabled": "Imezimwa",
-    "installedTab": "Imesakinishwa",
-    "marketplaceTab": "Soko",
-    "marketplaceUrlLabel": "URL Maalum ya Soko",
-    "marketplaceUrlPlaceholder": "Acha wazi kwa ajili ya sajili rasmi ya Omniroute",
-    "saveMarketplaceUrl": "Hifadhi na Upakie Upya",
-    "marketplaceUrlSaved": "URL ya Soko imesasishwa",
-    "marketplaceEmpty": "Hakuna programu-jalizi zilizopatikana kwenye soko.",
-    "marketplaceInstallComingSoon": "Usakinishaji wa Soko unakuja hivi karibuni.",
-    "verified": "Imethibitishwa",
-    "install": "Sakinisha",
-    "installedFromMarketplace": "Programu-jalizi {name} imesakinishwa!",
-    "hooks": "Viunganishi"
-  },
   "quotaPlans": {
     "title": "Mipango na Viwango",
     "description": "Sanidi mipango ya viwango kwa kila mtoa huduma — vipimo (%, maombi, tokeni, $) na madirisha ya muda",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Seva ya MCP",
-        "description": "Unganisha kwenye seva ya 67router MCP (zana 107, usafirishaji 3: SSE/stdio/HTTP). Inajumuisha uelekezaji, kache, mgandamizo, kumbukumbu, ujuzi, watoa huduma, na zana za ukaguzi kwenye mawanda 32 ya ruhusa."
+        "description": "Unganisha kwenye seva ya 67router MCP (zana 99, usafirishaji 3: SSE/stdio/HTTP). Inajumuisha uelekezaji, kache, mgandamizo, kumbukumbu, ujuzi, watoa huduma, na zana za ukaguzi kwenye mawanda 30 ya ruhusa."
       },
       "omni-agents-a2a": {
         "name": "Ejenti na Itifaki ya A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Tathmini",
         "description": "Unda na uendeshe seti za tathmini, tazama maendeleo ya kipimo cha utendaji mubashara, angalia kadi za alama, linganisha utendaji wa mfano, na unganisha uendeshaji wa tathmini na mitiririko ya kazi ya CI kutoka kwenye CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Programu-jalizi, Ujuzi na Kumbukumbu",
-        "description": "Dhibiti Ujuzi wa Omni (orodhesha, sakinisha, jaribu, ondoa), programu-jalizi (unda, usanidi), na kumbukumbu ya kudumu (tafuta, ongeza, futa) kutoka kwenye CLI."
       },
       "cli-setup": {
         "name": "CLI: Usanidi na Uwekaji Mipangilio",

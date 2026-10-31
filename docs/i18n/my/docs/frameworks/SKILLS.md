@@ -464,10 +464,6 @@ const config: SkillConfig = {
 | Code လုပ်ဆောင်မှု | `eval_code` (sandbox ထဲရှိ JavaScript/Python)      | HYBRID |
 | စနစ်              | `execute_command` (sandbox ထဲရှိ CLI လုပ်ဆောင်မှု) | MANUAL |
 
-### စိတ်ကြိုက် Skill တစ်ခု ထည့်သွင်းခြင်း
-
-plugin စနစ်မှတစ်ဆင့် စိတ်ကြိုက် skill တစ်ခု ထည့်သွင်းနည်းအတွက် [Plugin SDK နှင့် Skills ပေါင်းစည်းမှု](./PLUGIN_SDK.md) ကို ကြည့်ပါ။
-
 ---
 
 ## ထပ်မံကြည့်ရှုရန်

@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Pagpapatupad ng Code | `eval_code` (naka-sandbox na JavaScript/Python)         | HYBRID |
 | System               | `execute_command` (naka-sandbox na pagpapatupad ng CLI) | MANUAL |
 
-### Pagdaragdag ng Custom na Skill
-
-Tingnan ang [Plugin SDK at Integrasyon ng mga Skill](./PLUGIN_SDK.md) upang malaman kung paano magdagdag ng custom na skill sa pamamagitan ng plugin system.
-
 ---
 
 ## Tingnan Din

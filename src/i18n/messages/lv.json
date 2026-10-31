@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurācija",
     "aiFeaturesSection": "AI funkcijas",
     "mcp": "MCP serveris",
-    "plugins": "Spraudņi",
     "apiEndpoints": "API galapunkti",
     "analyticsSearch": "Meklēšana",
     "analyticsUtilization": "Izmantojums",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Smilškastes prasmju reģistrs",
     "agentSkillsSubtitle": "A2A prasmju reģistrs",
     "mcpSubtitle": "MCP servera vadība",
-    "pluginsSubtitle": "Spraudņu tirgus un instalācijas",
     "mediaSubtitle": "Kešatmiņā saglabātie multimediju faili",
     "settingsSubtitle": "Visi iestatījumi",
     "settingsGeneralSubtitle": "Datubāze un dublējumkopijas",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Līderu saraksts",
     "limits": "Limiti",
     "profile": "Profils",
-    "plugins": "Spraudņi",
     "providerStats": "Pakalpojumu sniedzēju statistika",
     "new": "Jauns",
     "quota": "Kvota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Neizdevās noņemt šo fondu.",
     "dismiss": "Aizvērt"
   },
-  "plugins": {
-    "title": "Spraudņi",
-    "description": "Instalējiet un pārvaldiet spraudņus, lai paplašinātu 67router funkcionalitāti",
-    "loading": "Notiek spraudņu ielāde...",
-    "scanning": "Notiek skenēšana...",
-    "scanForPlugins": "Skenēt spraudņus",
-    "noPlugins": "Nav instalēts neviens spraudnis",
-    "noPluginsDescription": "Ievietojiet spraudņu direktorijas mapē ~/.omniroute/plugins/ un noklikšķiniet uz \"Skenēt spraudņus\".",
-    "activate": "Aktivizēt",
-    "deactivate": "Deaktivizēt",
-    "uninstall": "Atinstalēt",
-    "uninstallConfirm": "Atinstalēt spraudni \"{name}\"?",
-    "pluginScanComplete": "Spraudņu skenēšana pabeigta",
-    "pluginScanFailed": "Spraudņu skenēšana neizdevās",
-    "activated": "{name} aktivizēts",
-    "deactivated": "{name} deaktivizēts",
-    "activateFailed": "Neizdevās aktivizēt {name}",
-    "deactivateFailed": "Neizdevās deaktivizēt {name}",
-    "uninstalled": "{name} atinstalēts",
-    "uninstallFailed": "Neizdevās atinstalēt {name}",
-    "configure": "Konfigurēt: {name}",
-    "configurePlugin": "Konfigurēt",
-    "noConfigSettings": "Šim spraudnim nav konfigurējamu iestatījumu.",
-    "saving": "Notiek saglabāšana...",
-    "saveConfiguration": "Saglabāt konfigurāciju",
-    "configurationSaved": "Konfigurācija saglabāta",
-    "saveConfigurationFailed": "Neizdevās saglabāt konfigurāciju",
-    "pluginNotFound": "Spraudnis nav atrasts",
-    "version": "Versija",
-    "author": "Autors",
-    "description_label": "Apraksts",
-    "status": "Statuss",
-    "enabled": "Iespējots",
-    "disabled": "Atspējots",
-    "installedTab": "Instalētie",
-    "marketplaceTab": "Tirgusvieta",
-    "marketplaceUrlLabel": "Pielāgota tirgusvietas URL adrese",
-    "marketplaceUrlPlaceholder": "Atstājiet tukšu, lai izmantotu oficiālo Omniroute reģistru",
-    "saveMarketplaceUrl": "Saglabāt un pārlādēt",
-    "marketplaceUrlSaved": "Tirgusvietas URL adrese atjaunināta",
-    "marketplaceEmpty": "Tirgusvietā nav atrasts neviens spraudnis.",
-    "marketplaceInstallComingSoon": "Spraudņu instalēšana no tirgusvietas būs pieejama jau drīz.",
-    "verified": "Verificēts",
-    "install": "Instalēt",
-    "installedFromMarketplace": "Spraudnis {name} instalēts!",
-    "hooks": "Āķi"
-  },
   "quotaPlans": {
     "title": "Plāni un kvotas",
     "description": "Konfigurējiet kvotu plānus katram nodrošinātājam — dimensijas (%, pieprasījumi, tokeni, $) un laika periodi",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP serveris",
-        "description": "Izveidojiet savienojumu ar 67router MCP serveri (107 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 32 atļauju tvērumos."
+        "description": "Izveidojiet savienojumu ar 67router MCP serveri (99 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 30 atļauju tvērumos."
       },
       "omni-agents-a2a": {
         "name": "Aģenti un A2A protokols",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Novērtējumi",
         "description": "Izveidojiet un palaidiet novērtēšanas komplektus, sekojiet līdzi etalontestu norisei reāllaikā, skatiet rezultātu kartītes, salīdziniet modeļu veiktspēju un integrējiet novērtēšanas izpildes ar CI darbplūsmām, izmantojot CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Spraudņi, prasmes un atmiņa",
-        "description": "Pārvaldiet Omni Skills (uzskaitīt, instalēt, testēt, noņemt), spraudņus (izveidot, konfigurēt) un pastāvīgo atmiņu (meklēt, pievienot, notīrīt), izmantojot CLI."
       },
       "cli-setup": {
         "name": "CLI: Iestatīšana un konfigurācija",

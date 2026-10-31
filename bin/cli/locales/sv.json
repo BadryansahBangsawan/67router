@@ -1035,16 +1035,6 @@
     "system": "Systemprompt",
     "resume": "Återuppta en sparad session efter namn"
   },
-  "plugin": {
-    "description": "Hantera CLI-insticksprogram (omniroute-cmd-*)",
-    "list": "Lista installerade insticksprogram",
-    "install": "Installera ett insticksprogram från npm eller en lokal sökväg",
-    "remove": "Ta bort ett installerat insticksprogram",
-    "info": "Visa information om ett installerat insticksprogram",
-    "search": "Sök i npm-registret efter tillgängliga insticksprogram",
-    "update": "Uppdatera installerade insticksprogram",
-    "scaffold": "Skapa en grundstruktur för ett nytt insticksprogram"
-  },
   "launch": {
     "description": "Starta Claude Code ansluten till 67router (lokalt eller på distans, med --profile)",
     "token": "Token som Claude-klienten ska skicka (ANTHROPIC_AUTH_TOKEN)",

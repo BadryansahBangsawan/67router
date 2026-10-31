@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Obrázkové zdroje pre marketing a README
 ├── @omniroute/           # Publikovateľné sprievodné balíky (opencode-plugin, opencode-provider)
 ├── skills/               # Balíky zručností pre CLI/agentov (cli-* + omni-* + config-codex-cli)
-├── examples/             # Ukážkové pluginy + štartovacia šablóna omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Komunitné príspevky (podman/)
 ├── .source/              # Konfigurácia zdroja Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Pracovné postupy GitHub Actions + šablóny problémov + šablóna PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — spracúva na pozadí záznamy pamäte s `needs_reindex=1`; volá sa cez `POST /api/memory/reindex` a pri dopĺňaní údajov podľa potreby. (plán 21)                                                                                                                                                            |
 | `monitoring/`                            | Kontroly stavu, emitovanie metrík                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | Toky OAuth/importu pre 22 modulov poskytovateľov (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Register pluginov                                                                                                                                                                                                                                                                                                             |
 | `promptCache/`                           | Body prerušenia vyrovnávacej pamäte promptov v štýle Anthropic                                                                                                                                                                                                                                                                |
 | `skills/`                                | Framework zručností (vstavané + marketplace + SkillsSH) — pozri `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                   |
 | `webhookDispatcher.ts`                   | Doručovanie webhookov s HMAC — pozrite si `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                       |

@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Na razini projekta (učitava se pri pokretanju)
 ```
 
-Ili ih programski učitajte iz dodatka:
+Or register it programmatically at startup:
 
 ```ts
-// U vašem dodatku
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK dodatka izlaže priključke onRequest / onResponse / onError. Registrirajte
-  // mehanizam kada se učita modul dodatka (ili pri prvom onRequest); poništite njegovu registraciju
-  // putem vlastitog postupka uklanjanja.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Pri uklanjanju:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

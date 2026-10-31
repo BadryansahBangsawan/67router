@@ -417,8 +417,6 @@ loopback CLI machine-id 토큰, 그리고 `manage` 또는 `admin` 권한이 있�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                     |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                              |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                            |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                               |
 | `read:obsidian`       | 읽기 도구 13개 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 쓰기 도구 9개 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                             |
@@ -572,7 +570,6 @@ stdio 전송은 5초마다 활성 상태를 `${DATA_DIR}/runtime/mcp-heartbeat.j
 | `open-sse/mcp-server/tools/skillTools.ts`                                | 스킬 도구 정의(도구 4개)                                 |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion 컨텍스트 소스 도구 정의(도구 6개)                 |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | 게이미피케이션 도구 정의(도구 8개)                       |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | 플러그인 등록 및 관리 도구(도구 8개)                     |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` 엔드포인트                             |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` 엔드포인트                              |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE 전송 라우트                           |

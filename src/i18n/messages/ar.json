@@ -1032,7 +1032,6 @@
     "configurationSection": "التكوين",
     "aiFeaturesSection": "ميزات الذكاء الاصطناعي",
     "mcp": "MCP",
-    "plugins": "الإضافات",
     "apiEndpoints": "نقاط نهاية API",
     "analyticsSearch": "البحث",
     "analyticsUtilization": "الاستخدام",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "سجل مهارات وضع الحماية",
     "agentSkillsSubtitle": "سجل مهارات A2A",
     "mcpSubtitle": "عناصر تحكم خادم MCP",
-    "pluginsSubtitle": "متجر الإضافات وعمليات التثبيت",
     "mediaSubtitle": "ملفات الوسائط المخزنة مؤقتًا",
     "settingsSubtitle": "جميع الإعدادات",
     "settingsGeneralSubtitle": "أساسيات التطبيق",
@@ -1486,7 +1484,6 @@
     "leaderboard": "لوحة الصدارة",
     "limits": "الحدود",
     "profile": "الملف الشخصي",
-    "plugins": "المكونات الإضافية",
     "providerStats": "إحصائيات المزود",
     "new": "جديد",
     "quota": "الحصة",
@@ -11455,53 +11452,6 @@
     "removeFailed": "تعذّرت إزالة هذا المجمّع.",
     "dismiss": "تجاهل"
   },
-  "plugins": {
-    "title": "الإضافات",
-    "description": "قم بتثبيت المكونات الإضافية وإدارتها لتوسيع وظائف 67router",
-    "loading": "جارٍ تحميل المكونات الإضافية...",
-    "scanning": "جارٍ المسح...",
-    "scanForPlugins": "البحث عن المكونات الإضافية",
-    "noPlugins": "لم يتم تثبيت أي مكونات إضافية",
-    "noPluginsDescription": "ضع مجلدات الإضافات في ~/.omniroute/plugins/ ثم انقر على «البحث عن المكونات الإضافية».",
-    "activate": "تفعيل",
-    "deactivate": "إلغاء التنشيط",
-    "uninstall": "إلغاء التثبيت",
-    "uninstallConfirm": "إلغاء تثبيت البرنامج المساعد \"{name}\"؟",
-    "pluginScanComplete": "اكتمل فحص البرنامج المساعد",
-    "pluginScanFailed": "فشل فحص البرنامج المساعد",
-    "activated": "تم تفعيل {name}",
-    "deactivated": "تم إلغاء تنشيط {name}",
-    "activateFailed": "فشل في تفعيل {name}",
-    "deactivateFailed": "فشل في إلغاء تنشيط {name}",
-    "uninstalled": "تم إلغاء تثبيت {name}",
-    "uninstallFailed": "فشل في إلغاء تثبيت {name}",
-    "configure": "التكوين: {name}",
-    "configurePlugin": "تكوين",
-    "noConfigSettings": "لا يحتوي هذا البرنامج المساعد على إعدادات قابلة للتكوين.",
-    "saving": "جارٍ الحفظ...",
-    "saveConfiguration": "حفظ التكوين",
-    "configurationSaved": "تم حفظ التكوين",
-    "saveConfigurationFailed": "فشل حفظ التكوين",
-    "pluginNotFound": "لم يتم العثور على البرنامج المساعد",
-    "version": "الإصدار",
-    "author": "المؤلف",
-    "description_label": "الوصف",
-    "status": "الحالة",
-    "enabled": "ممكّن",
-    "disabled": "معطل",
-    "installedTab": "مثبت",
-    "marketplaceTab": "المتجر",
-    "marketplaceUrlLabel": "عنوان URL مخصص للمتجر",
-    "marketplaceUrlPlaceholder": "اتركه فارغًا لسجل Omniroute الرسمي",
-    "saveMarketplaceUrl": "حفظ وإعادة تحميل",
-    "marketplaceUrlSaved": "تم تحديث عنوان URL للمتجر",
-    "marketplaceEmpty": "لم يتم العثور على إضافات في المتجر.",
-    "marketplaceInstallComingSoon": "عمليات التثبيت من المتجر ستتوفر قريبًا.",
-    "verified": "موثق",
-    "install": "تثبيت",
-    "installedFromMarketplace": "تم تثبيت الإضافة {name}!",
-    "hooks": "نقاط الربط البرمجية"
-  },
   "quotaPlans": {
     "title": "الخطط والحصص",
     "description": "تكوين خطط الحصص لكل مزود — الأبعاد (%, الطلبات, الرموز, $) والنوافذ الزمنية",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "خادم MCP",
-        "description": "الاتصال بخادم 67router MCP (107 أداة، 3 وسائط نقل: SSE/stdio/HTTP). يغطي التوجيه، والتخزين المؤقت، والضغط، والذاكرة، والمهارات، والمزودين، وأدوات التدقيق عبر 32 نطاق صلاحية."
+        "description": "الاتصال بخادم 67router MCP (99 أداة، 3 وسائط نقل: SSE/stdio/HTTP). يغطي التوجيه، والتخزين المؤقت، والضغط، والذاكرة، والمهارات، والمزودين، وأدوات التدقيق عبر 30 نطاق صلاحية."
       },
       "omni-agents-a2a": {
         "name": "الوكلاء وبروتوكول A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "واجهة سطر الأوامر (CLI): Evals",
         "description": "إنشاء وتشغيل مجموعات التقييم، ومراقبة تقدم اختبارات الأداء المباشرة، وعرض بطاقات النتائج، ومقارنة أداء النماذج، ودمج عمليات التقييم مع سير عمل CI من واجهة سطر الأوامر (CLI)."
-      },
-      "cli-plugins-skills": {
-        "name": "واجهة سطر الأوامر (CLI): الإضافات، والمهارات، والذاكرة",
-        "description": "إدارة مهارات Omni (عرض، تثبيت، اختبار، إزالة)، والإضافات (إنشاء، تهيئة)، والذاكرة الدائمة (بحث، إضافة، مسح) من واجهة سطر الأوامر (CLI)."
       },
       "cli-setup": {
         "name": "واجهة سطر الأوامر (CLI): الإعداد والتهيئة",

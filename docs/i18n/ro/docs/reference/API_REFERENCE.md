@@ -2175,26 +2175,6 @@ Consultați [Cadrul Skills](../frameworks/SKILLS.md) pentru detalii complete.
 
 ---
 
-## Pluginuri
-
-Gestionați pluginurile 67router (extensii terțe).
-
-| Metodă | Cale                               | Descriere                            |
-| ------ | ---------------------------------- | ------------------------------------ |
-| GET    | `/api/plugins`                     | Listează pluginurile instalate       |
-| POST   | `/api/plugins/marketplace/install` | Instalează un plugin din marketplace |
-| DELETE | `/api/plugins/[name]`              | Dezinstalează un plugin              |
-| POST   | `/api/plugins/[name]/activate`     | Activează un plugin                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Dezactivează un plugin               |
-| GET    | `/api/plugins/[name]/config`       | Obține configurația pluginului       |
-| PUT    | `/api/plugins/[name]/config`       | Actualizează configurația pluginului |
-
-**Autentificare:** Necesită o sesiune de administrare.
-
-Consultați [Cadrul pentru pluginuri](../frameworks/PLUGIN_SDK.md) pentru detalii complete.
-
----
-
 ## Rutare în umbră
 
 Compararea în umbră / A-B a furnizorilor **nu este o suprafață REST independentă** — aceasta este configurată prin rutarea combo (consultați [Auto-Combo](../routing/AUTO-COMBO.md)). Metricile de comparație pentru fiecare combo sunt furnizate de `GET /api/combos/metrics`.

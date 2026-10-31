@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projekti tasand (laaditakse käivitamisel)
 ```
 
-Või laadi pistikprogrammist programmiliselt:
+Or register it programmatically at startup:
 
 ```ts
-// Sinu pistikprogrammis
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Pistikprogrammi SDK pakub onRequest / onResponse / onError haake. Registreeri
-  // mootor pistikprogrammi mooduli laadimisel (või esimesel onRequest-kutsel); eemalda selle
-  // registreering enda sulgemisprotsessis.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Sulgemisel:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

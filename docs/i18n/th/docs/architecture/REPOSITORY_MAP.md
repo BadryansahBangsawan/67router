@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # แอสเซตรูปภาพสำหรับการตลาด / README
 ├── @omniroute/           # แพ็กเกจเสริมที่เผยแพร่ได้ (opencode-plugin, opencode-provider)
 ├── skills/               # ชุดทักษะสำหรับ CLI/เอเจนต์ (cli-* + omni-* + config-codex-cli)
-├── examples/             # ปลั๊กอินตัวอย่าง + โปรเจกต์เริ่มต้น omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # ผลงานจากชุมชน (podman/)
 ├── .source/              # การกำหนดค่าแหล่งที่มาของ Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # เวิร์กโฟลว์ GitHub Actions + เทมเพลต issue + เทมเพลต PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ประมวลผลหน่วยความจำที่มี `needs_reindex=1` ในเบื้องหลัง โดยเรียกใช้ผ่าน `POST /api/memory/reindex` และเส้นทาง lazy-backfill (แผน 21)                                                                                                                                                                |
 | `monitoring/`                            | การตรวจสอบสถานะและการส่งออกเมตริก                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | โฟลว์ OAuth/การนำเข้าสำหรับโมดูลผู้ให้บริการ 22 ราย (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | รีจิสทรีปลั๊กอิน                                                                                                                                                                                                                                                                                                          |
 | `promptCache/`                           | จุดแบ่งแคชพรอมต์สไตล์ Anthropic                                                                                                                                                                                                                                                                                           |
 | `skills/`                                | เฟรมเวิร์กทักษะ (มีมาให้ในตัว + มาร์เก็ตเพลส + SkillsSH) — ดู `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                 |
 | `webhookDispatcher.ts`                   | การส่ง webhook ด้วย HMAC — ดู `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                               |

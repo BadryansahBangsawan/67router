@@ -2164,26 +2164,6 @@ Vollständige Details finden Sie unter [Skills-Framework](../frameworks/SKILLS.m
 
 ---
 
-## Plugins
-
-67router-Plugins (Erweiterungen von Drittanbietern) verwalten.
-
-| Methode | Pfad                               | Beschreibung                            |
-| ------- | ---------------------------------- | --------------------------------------- |
-| GET     | `/api/plugins`                     | Installierte Plugins auflisten          |
-| POST    | `/api/plugins/marketplace/install` | Ein Plugin vom Marketplace installieren |
-| DELETE  | `/api/plugins/[name]`              | Ein Plugin deinstallieren               |
-| POST    | `/api/plugins/[name]/activate`     | Ein Plugin aktivieren                   |
-| POST    | `/api/plugins/[name]/deactivate`   | Ein Plugin deaktivieren                 |
-| GET     | `/api/plugins/[name]/config`       | Plugin-Konfiguration abrufen            |
-| PUT     | `/api/plugins/[name]/config`       | Plugin-Konfiguration aktualisieren      |
-
-**Authentifizierung:** Erfordert eine Verwaltungssitzung.
-
-Vollständige Details finden Sie unter [Plugin-Framework](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Shadow-Routing
 
 Der Shadow-/A-B-Vergleich von Anbietern ist **keine eigenständige REST-Schnittstelle** — er wird über Combo-Routing konfiguriert (siehe [Auto-Combo](../routing/AUTO-COMBO.md)). Vergleichsmetriken pro Combo werden über `GET /api/combos/metrics` bereitgestellt.

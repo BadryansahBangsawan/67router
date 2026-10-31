@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Kod ijrosi | `eval_code` (izolyatsiyalangan JavaScript/Python) | HYBRID |
 | Tizim      | `execute_command` (izolyatsiyalangan CLI ijrosi)  | MANUAL |
 
-### Maxsus ko‘nikma qo‘shish
-
-Plagin tizimi orqali maxsus ko‘nikma qo‘shish usuli uchun [Plugin SDK va ko‘nikmalar integratsiyasi](./PLUGIN_SDK.md) sahifasiga qarang.
-
 ---
 
 ## Shuningdek qarang

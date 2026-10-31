@@ -1032,7 +1032,6 @@
     "configurationSection": "कन्फिगरेसन",
     "aiFeaturesSection": "AI सुविधाहरू",
     "mcp": "MCP सर्भर",
-    "plugins": "प्लगइनहरू",
     "apiEndpoints": "API एन्डपोइन्टहरू",
     "analyticsSearch": "खोज",
     "analyticsUtilization": "उपयोग",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "स्यान्डबक्स सीप रजिस्ट्री",
     "agentSkillsSubtitle": "A2A सीप रजिस्ट्री",
     "mcpSubtitle": "MCP सर्भर नियन्त्रणहरू",
-    "pluginsSubtitle": "प्लगइन बजार र स्थापनाहरू",
     "mediaSubtitle": "क्यास गरिएका मिडिया फाइलहरू",
     "settingsSubtitle": "सबै सेटिङहरू",
     "settingsGeneralSubtitle": "डेटाबेस र ब्याकअपहरू",
@@ -1486,7 +1484,6 @@
     "leaderboard": "अग्रणी सूची",
     "limits": "सीमाहरू",
     "profile": "प्रोफाइल",
-    "plugins": "प्लगइनहरू",
     "providerStats": "प्रदायकका तथ्याङ्क",
     "new": "नयाँ",
     "quota": "कोटा",
@@ -11455,53 +11452,6 @@
     "removeFailed": "यो पूल हटाउन सकिएन।",
     "dismiss": "खारेज गर्नुहोस्"
   },
-  "plugins": {
-    "title": "प्लगइनहरू",
-    "description": "67router को कार्यक्षमता विस्तार गर्न प्लगइनहरू स्थापना र व्यवस्थापन गर्नुहोस्",
-    "loading": "प्लगइनहरू लोड हुँदैछन्...",
-    "scanning": "स्क्यान हुँदैछ...",
-    "scanForPlugins": "प्लगइनहरू स्क्यान गर्नुहोस्",
-    "noPlugins": "कुनै प्लगइन स्थापना गरिएको छैन",
-    "noPluginsDescription": "प्लगइन डाइरेक्टरीहरू ~/.omniroute/plugins/ मा राख्नुहोस् र स्क्यानमा क्लिक गर्नुहोस्।",
-    "activate": "सक्रिय गर्नुहोस्",
-    "deactivate": "निष्क्रिय गर्नुहोस्",
-    "uninstall": "अनइन्स्टल गर्नुहोस्",
-    "uninstallConfirm": "प्लगइन \"{name}\" अनइन्स्टल गर्ने?",
-    "pluginScanComplete": "प्लगइन स्क्यान पूरा भयो",
-    "pluginScanFailed": "प्लगइन स्क्यान असफल भयो",
-    "activated": "{name} सक्रिय गरियो",
-    "deactivated": "{name} निष्क्रिय गरियो",
-    "activateFailed": "{name} सक्रिय गर्न असफल भयो",
-    "deactivateFailed": "{name} निष्क्रिय गर्न असफल भयो",
-    "uninstalled": "{name} अनइन्स्टल गरियो",
-    "uninstallFailed": "{name} अनइन्स्टल गर्न असफल भयो",
-    "configure": "कन्फिगर गर्नुहोस्: {name}",
-    "configurePlugin": "कन्फिगर गर्नुहोस्",
-    "noConfigSettings": "यो प्लगइनमा कन्फिगर गर्न मिल्ने कुनै सेटिङ छैन।",
-    "saving": "सुरक्षित गरिँदै...",
-    "saveConfiguration": "कन्फिगरेसन सुरक्षित गर्नुहोस्",
-    "configurationSaved": "कन्फिगरेसन सुरक्षित गरियो",
-    "saveConfigurationFailed": "कन्फिगरेसन सुरक्षित गर्न असफल भयो",
-    "pluginNotFound": "प्लगइन फेला परेन",
-    "version": "संस्करण",
-    "author": "लेखक",
-    "description_label": "विवरण",
-    "status": "स्थिति",
-    "enabled": "सक्षम",
-    "disabled": "अक्षम",
-    "installedTab": "इन्स्टल गरिएका",
-    "marketplaceTab": "मार्केटप्लेस",
-    "marketplaceUrlLabel": "कस्टम मार्केटप्लेस URL",
-    "marketplaceUrlPlaceholder": "आधिकारिक Omniroute रजिस्ट्रीका लागि खाली छोड्नुहोस्",
-    "saveMarketplaceUrl": "सुरक्षित गरी पुनः लोड गर्नुहोस्",
-    "marketplaceUrlSaved": "मार्केटप्लेस URL अद्यावधिक गरियो",
-    "marketplaceEmpty": "मार्केटप्लेसमा कुनै प्लगइन फेला परेन।",
-    "marketplaceInstallComingSoon": "मार्केटप्लेसबाट इन्स्टल गर्ने सुविधा चाँडै आउँदै छ।",
-    "verified": "प्रमाणित",
-    "install": "इन्स्टल गर्नुहोस्",
-    "installedFromMarketplace": "प्लगइन {name} इन्स्टल भयो!",
-    "hooks": "हुकहरू"
-  },
   "quotaPlans": {
     "title": "योजनाहरू तथा कोटाहरू",
     "description": "प्रत्येक प्रदायकका लागि कोटा योजनाहरू कन्फिगर गर्नुहोस् — आयामहरू (%, अनुरोधहरू, टोकनहरू, $) र समयावधिहरू",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP सर्भर",
-        "description": "67router MCP सर्भरमा जडान गर्नुहोस् (107 उपकरण, 3 ट्रान्सपोर्ट: SSE/stdio/HTTP)। यसले 32 अनुमति क्षेत्रहरूमा राउटिङ, क्यास, सङ्कुचन, मेमोरी, सीप, प्रदायक र अडिट उपकरणहरू समेट्छ।"
+        "description": "67router MCP सर्भरमा जडान गर्नुहोस् (99 उपकरण, 3 ट्रान्सपोर्ट: SSE/stdio/HTTP)। यसले 30 अनुमति क्षेत्रहरूमा राउटिङ, क्यास, सङ्कुचन, मेमोरी, सीप, प्रदायक र अडिट उपकरणहरू समेट्छ।"
       },
       "omni-agents-a2a": {
         "name": "एजेन्टहरू र A2A प्रोटोकल",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: मूल्याङ्कनहरू",
         "description": "CLI बाट मूल्याङ्कन सुइटहरू सिर्जना र सञ्चालन गर्नुहोस्, प्रत्यक्ष बेन्चमार्क प्रगति हेर्नुहोस्, स्कोरकार्डहरू हेर्नुहोस्, मोडेल कार्यसम्पादन तुलना गर्नुहोस् र मूल्याङ्कन रनहरूलाई CI कार्यप्रवाहहरूसँग एकीकृत गर्नुहोस्।"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: प्लगइनहरू, सीपहरू र मेमोरी",
-        "description": "CLI बाट Omni Skills (सूचीबद्ध गर्ने, स्थापना गर्ने, परीक्षण गर्ने, हटाउने), प्लगइनहरू (सिर्जना गर्ने, कन्फिगर गर्ने) र स्थायी मेमोरी (खोज्ने, थप्ने, खाली गर्ने) व्यवस्थापन गर्नुहोस्।"
       },
       "cli-setup": {
         "name": "CLI: सेटअप र कन्फिगरेसन",

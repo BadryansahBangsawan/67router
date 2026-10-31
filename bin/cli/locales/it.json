@@ -1035,16 +1035,6 @@
     "system": "Prompt di sistema",
     "resume": "Riprendi una sessione salvata specificandone il nome"
   },
-  "plugin": {
-    "description": "Gestisci i plugin della CLI (omniroute-cmd-*)",
-    "list": "Elenca i plugin installati",
-    "install": "Installa un plugin da npm o da un percorso locale",
-    "remove": "Rimuovi un plugin installato",
-    "info": "Mostra i dettagli di un plugin installato",
-    "search": "Cerca nel registro npm i plugin disponibili",
-    "update": "Aggiorna i plugin installati",
-    "scaffold": "Genera la struttura di base di un nuovo plugin"
-  },
   "launch": {
     "description": "Avvia Claude Code configurato per 67router (locale o remoto, con --profile)",
     "token": "Token che il client Claude deve inviare (ANTHROPIC_AUTH_TOKEN)",

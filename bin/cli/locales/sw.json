@@ -1035,16 +1035,6 @@
     "system": "Kidokezo cha mfumo",
     "resume": "Endelea na kipindi kilichohifadhiwa kwa jina"
   },
-  "plugin": {
-    "description": "Dhibiti programu-jalizi za CLI (omniroute-cmd-*)",
-    "list": "Orodhesha programu-jalizi zilizosakinishwa",
-    "install": "Sakinisha programu-jalizi kutoka npm au njia ya ndani",
-    "remove": "Ondoa programu-jalizi iliyosakinishwa",
-    "info": "Onyesha maelezo ya programu-jalizi iliyosakinishwa",
-    "search": "Tafuta programu-jalizi zinazopatikana katika sajili ya npm",
-    "update": "Sasisha programu-jalizi zilizosakinishwa",
-    "scaffold": "Unda kiolezo cha msingi cha programu-jalizi mpya"
-  },
   "launch": {
     "description": "Zindua Claude Code ikielekezwa kwenye 67router (ya ndani au ya mbali, kwa kutumia --profile)",
     "token": "Tokeni ambayo kiteja cha Claude kinapaswa kutuma (ANTHROPIC_AUTH_TOKEN)",

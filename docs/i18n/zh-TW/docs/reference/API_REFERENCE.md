@@ -2080,26 +2080,6 @@ devin-cli 等）。完整清單請參閱[提供者參考](./PROVIDER_REFERENCE.m
 
 ---
 
-## 外掛程式
-
-管理 67router 外掛程式（第三方擴充功能）。
-
-| 方法   | 路徑                               | 說明                 |
-| ------ | ---------------------------------- | -------------------- |
-| GET    | `/api/plugins`                     | 列出已安裝的外掛程式 |
-| POST   | `/api/plugins/marketplace/install` | 從市集安裝外掛程式   |
-| DELETE | `/api/plugins/[name]`              | 解除安裝外掛程式     |
-| POST   | `/api/plugins/[name]/activate`     | 啟用外掛程式         |
-| POST   | `/api/plugins/[name]/deactivate`   | 停用外掛程式         |
-| GET    | `/api/plugins/[name]/config`       | 取得外掛程式設定     |
-| PUT    | `/api/plugins/[name]/config`       | 更新外掛程式設定     |
-
-**驗證：** 需要管理工作階段。
-
-如需完整詳細資訊，請參閱 [外掛程式框架](../frameworks/PLUGIN_SDK.md)。
-
----
-
 ## 影子路由
 
 提供者的影子 / A-B 比較**並非獨立的 REST 介面**，而是透過組合路由進行設定（請參閱 [自動組合](../routing/AUTO-COMBO.md)）。每個組合的比較指標由 `GET /api/combos/metrics` 提供。

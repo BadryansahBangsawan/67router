@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # ಮಾರ್ಕೆಟಿಂಗ್ / README ಚಿತ್ರ ಅಸೆಟ್ಗಳು
 ├── @omniroute/           # ಪ್ರಕಟಿಸಬಹುದಾದ ಸಹವರ್ತಿ ಪ್ಯಾಕೇಜ್ಗಳು (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ಏಜೆಂಟ್ ಕೌಶಲ್ಯ ಪ್ಯಾಕ್ಗಳು (cli-* + omni-* + config-codex-cli)
-├── examples/             # ಮಾದರಿ ಪ್ಲಗಿನ್ಗಳು + omniroute-cmd-hello ಸ್ಟಾರ್ಟರ್
+├── examples/             # Quickstart client samples
 ├── contrib/              # ಸಮುದಾಯದ ಕೊಡುಗೆಗಳು (podman/)
 ├── .source/              # Fumadocs ಮೂಲ ಕಾನ್ಫಿಗ್ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ವರ್ಕ್ಫ್ಲೋಗಳು + ಇಶ್ಯೂ ಟೆಂಪ್ಲೇಟ್ಗಳು + PR ಟೆಂಪ್ಲೇಟ್
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ಹಿನ್ನೆಲೆಯಲ್ಲಿ `needs_reindex=1` ಹೊಂದಿರುವ ಮೆಮೊರಿಗಳನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತದೆ; `POST /api/memory/reindex` ಮತ್ತು ಲೇಜಿ-ಬ್ಯಾಕ್ಫಿಲ್ ಪಥದಿಂದ ಕರೆ ಮಾಡಲಾಗುತ್ತದೆ. (ಯೋಜನೆ 21)                                                                                                                                     |
 | `monitoring/`                            | ಆರೋಗ್ಯ ಪರಿಶೀಲನೆಗಳು, ಮೆಟ್ರಿಕ್ಗಳ ಹೊರಸೂಸುವಿಕೆ                                                                                                                                                                                                                                                                                 |
 | `oauth/`                                 | 22 ಪೂರೈಕೆದಾರ ಮಾಡ್ಯೂಲ್ಗಳಿಗಾಗಿ OAuth/ಆಮದು ಹರಿವುಗಳು (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                               |
-| `plugins/`                               | ಪ್ಲಗಿನ್ ರಿಜಿಸ್ಟ್ರಿ                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | Anthropic-ಶೈಲಿಯ ಪ್ರಾಂಪ್ಟ್ ಕ್ಯಾಶ್ ಬ್ರೇಕ್ಪಾಯಿಂಟ್ಗಳು                                                                                                                                                                                                                                                                          |
 | `skills/`                                | ಕೌಶಲ್ಯಗಳ ಫ್ರೇಮ್ವರ್ಕ್ (ಅಂತರ್ನಿರ್ಮಿತ + ಮಾರುಕಟ್ಟೆಸ್ಥಳ + SkillsSH) — `docs/frameworks/SKILLS.md` ನೋಡಿ                                                                                                                                                                                                                          |
 | `webhookDispatcher.ts`                   | HMAC ವೆಬ್ಹುಕ್ ವಿತರಣೆ — `docs/frameworks/WEBHOOKS.md` ನೋಡಿ                                                                                                                                                                                                                                                                  |

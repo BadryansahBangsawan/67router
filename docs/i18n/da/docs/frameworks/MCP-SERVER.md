@@ -416,8 +416,6 @@ Hvert værktøj kræver specifikke scopes:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                       |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                  |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                              |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                 |
 | `read:obsidian`       | 13 læseværktøjer — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 skriveværktøjer — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                               |
@@ -573,7 +571,6 @@ Brug dashboardet eller REST-slutpunkterne `/api/mcp/audit` og `/api/mcp/audit/st
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definitioner af færdighedsværktøjer (4 værktøjer)                               |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Værktøjsdefinitioner for Notion-kontekstkilder (6 værktøjer)                    |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definitioner af gamification-værktøjer (8 værktøjer)                            |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Værktøjer til registrering og administration af plugins (8 værktøjer)           |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status`-slutpunkt                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools`-slutpunkt                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | SSE-transportrute til `/api/mcp/sse`                                            |

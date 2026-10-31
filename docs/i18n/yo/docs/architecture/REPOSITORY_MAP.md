@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Àwọn ohun ìní àwòrán fún ọjà / README
 ├── @omniroute/           # Àwọn package alábàákẹ́gbẹ́ tí a lè tẹ̀jáde (opencode-plugin, opencode-provider)
 ├── skills/               # Àwọn àkójọpọ̀ ọgbọ́n CLI/agent (cli-* + omni-* + config-codex-cli)
-├── examples/             # Àwọn àpẹẹrẹ plugin + ohun ìbẹ̀rẹ̀ omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Àwọn àfikún láti ọ̀dọ̀ àwùjọ (podman/)
 ├── .source/              # Àtúnṣe orísun Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Àwọn ìṣàn-iṣẹ́ GitHub Actions + àwọn àdàkọ ọ̀ràn + àdàkọ PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ń ṣiṣẹ́ lórí àwọn ìrántí tí ó ní `needs_reindex=1` ní abẹ́lẹ̀; `POST /api/memory/reindex` àti ọ̀nà lazy-backfill ni wọ́n ń pè é. (ètò 21)                                                                                                                                                        |
 | `monitoring/`                            | Àyẹ̀wò ìlera, ìtújáde àwọn metrics                                                                                                                                                                                                                                                                                 |
 | `oauth/`                                 | Àwọn ìṣàn OAuth/ìgbéwọlé fún àwọn module provider 22 (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                  |
-| `plugins/`                               | Ìforúkọsílẹ̀ plugin                                                                                                                                                                                                                                                                                                |
 | `promptCache/`                           | Àwọn ibi ìdádúró cache prompt ara Anthropic                                                                                                                                                                                                                                                                       |
 | `skills/`                                | Ètò skills (tí a ti kọ sínú rẹ̀ + marketplace + SkillsSH) — wo `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                         |
 | `webhookDispatcher.ts`                   | Ìfiránṣẹ́ webhook HMAC — wo `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                          |

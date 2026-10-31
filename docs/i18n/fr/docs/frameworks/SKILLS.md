@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Exécution de code | `eval_code` (JavaScript/Python en bac à sable)   | HYBRID |
 | Système           | `execute_command` (exécution CLI en bac à sable) | MANUAL |
 
-### Ajout d’une compétence personnalisée
-
-Consultez [SDK de plugin et intégration des compétences](./PLUGIN_SDK.md) pour savoir comment ajouter une compétence personnalisée via le système de plugins.
-
 ---
 
 ## Voir aussi

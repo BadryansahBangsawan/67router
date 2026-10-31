@@ -410,8 +410,6 @@ Scope enforcement लाई `open-sse/mcp-server/scopeEnforcement.ts` मा क
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                         |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                  |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                    |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                   |
 | `read:obsidian`       | 13 वटा पढ्ने उपकरण — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 वटा लेख्ने उपकरण — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                 |
@@ -567,7 +565,6 @@ stdio ट्रान्सपोर्टले प्रत्येक 5 स�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | सीप उपकरण परिभाषाहरू (4 उपकरणहरू)                                      |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion सन्दर्भ स्रोत उपकरण परिभाषाहरू (6 उपकरणहरू)                     |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | गेमिफिकेसन उपकरण परिभाषाहरू (8 उपकरणहरू)                               |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | प्लगइन दर्ता तथा व्यवस्थापन उपकरणहरू (8 उपकरणहरू)                      |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` अन्त्यबिन्दु                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` अन्त्यबिन्दु                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ट्रान्सपोर्ट रुट                                    |

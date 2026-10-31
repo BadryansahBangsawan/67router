@@ -2176,26 +2176,6 @@ Consulta [Framework Skills](../frameworks/SKILLS.md) per tutti i dettagli.
 
 ---
 
-## Plugin
-
-Gestisci i plugin di 67router (estensioni di terze parti).
-
-| Metodo | Percorso                           | Descrizione                           |
-| ------ | ---------------------------------- | ------------------------------------- |
-| GET    | `/api/plugins`                     | Elenca i plugin installati            |
-| POST   | `/api/plugins/marketplace/install` | Installa un plugin dal marketplace    |
-| DELETE | `/api/plugins/[name]`              | Disinstalla un plugin                 |
-| POST   | `/api/plugins/[name]/activate`     | Attiva un plugin                      |
-| POST   | `/api/plugins/[name]/deactivate`   | Disattiva un plugin                   |
-| GET    | `/api/plugins/[name]/config`       | Ottiene la configurazione del plugin  |
-| PUT    | `/api/plugins/[name]/config`       | Aggiorna la configurazione del plugin |
-
-**Autenticazione:** richiede una sessione di gestione.
-
-Consulta [Framework dei plugin](../frameworks/PLUGIN_SDK.md) per tutti i dettagli.
-
----
-
 ## Shadow routing
 
 Il confronto shadow/A-B dei provider **non è un'interfaccia REST autonoma**: viene configurato tramite il routing combo (consulta [Auto-Combo](../routing/AUTO-COMBO.md)). Le metriche di confronto per ciascuna combo sono fornite da `GET /api/combos/metrics`.

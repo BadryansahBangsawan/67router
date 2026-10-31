@@ -59,7 +59,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — مستمع http-proxy ووكيل النظام                                                               |
 | `/api/settings/mitm`                                                                                     | يفعّل اعتراض MITM (حالة وكيل على مستوى النظام)                                                                  |
 | `/api/issue-agent/`                                                                                      | وكيل المشكلات — يُنشئ أدوات محلية للعمل على المستودع                                                            |
-| `/api/plugins/`, `/api/plugins`                                                                          | الإضافات — تُحمّل/تُنفّذ عبر `worker_threads` + `child_process`                                                 |
 | `/api/middleware/`                                                                                       | البرمجيات الوسيطة للمستخدم — تُحمّل/تُنفّذ تعليمات المشغّل البرمجية داخل العملية                                |
 | `/api/system/version`                                                                                    | التحديث التلقائي (POST فقط؛ GET/HEAD/OPTIONS مستثناة) — يُنشئ `git checkout` + `npm install`                    |
 | `/api/db-backups/exportAll`                                                                              | يُنشئ `tar` لأرشيف التصدير                                                                                      |

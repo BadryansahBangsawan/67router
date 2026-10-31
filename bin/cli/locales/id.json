@@ -1035,16 +1035,6 @@
     "system": "Prompt sistem",
     "resume": "Lanjutkan sesi tersimpan berdasarkan nama"
   },
-  "plugin": {
-    "description": "Kelola plugin CLI (omniroute-cmd-*)",
-    "list": "Cantumkan plugin yang terinstal",
-    "install": "Instal plugin dari npm atau jalur lokal",
-    "remove": "Hapus plugin yang terinstal",
-    "info": "Tampilkan detail plugin yang terinstal",
-    "search": "Cari plugin yang tersedia di registri npm",
-    "update": "Perbarui plugin yang terinstal",
-    "scaffold": "Buat kerangka boilerplate plugin baru"
-  },
   "launch": {
     "description": "Luncurkan Claude Code yang diarahkan ke 67router (lokal atau jarak jauh, dengan --profile)",
     "token": "Token yang harus dikirim oleh klien Claude (ANTHROPIC_AUTH_TOKEN)",

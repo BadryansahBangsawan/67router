@@ -2101,26 +2101,6 @@ Skills(에이전트 확장 프레임워크)를 관리합니다.
 
 ---
 
-## 플러그인
-
-67router 플러그인(서드 파티 확장 기능)을 관리합니다.
-
-| 메서드 | 경로                               | 설명                           |
-| ------ | ---------------------------------- | ------------------------------ |
-| GET    | `/api/plugins`                     | 설치된 플러그인 목록 조회      |
-| POST   | `/api/plugins/marketplace/install` | 마켓플레이스에서 플러그인 설치 |
-| DELETE | `/api/plugins/[name]`              | 플러그인 제거                  |
-| POST   | `/api/plugins/[name]/activate`     | 플러그인 활성화                |
-| POST   | `/api/plugins/[name]/deactivate`   | 플러그인 비활성화              |
-| GET    | `/api/plugins/[name]/config`       | 플러그인 구성 가져오기         |
-| PUT    | `/api/plugins/[name]/config`       | 플러그인 구성 업데이트         |
-
-**인증:** 관리 세션이 필요합니다.
-
-자세한 내용은 [플러그인 프레임워크](../frameworks/PLUGIN_SDK.md)를 참조하세요.
-
----
-
 ## 섀도 라우팅
 
 프로바이더의 섀도/A-B 비교는 **독립적인 REST 인터페이스가 아니며**, 콤보 라우팅을 통해 구성됩니다([Auto-Combo](../routing/AUTO-COMBO.md) 참조). 콤보별 비교 메트릭은 `GET /api/combos/metrics`에서 제공됩니다.

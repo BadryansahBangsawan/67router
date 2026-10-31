@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Marketinq / README təsvir resursları
 ├── @omniroute/           # Dərc edilə bilən köməkçi paketlər (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/agent bacarıq paketləri (cli-* + omni-* + config-codex-cli)
-├── examples/             # Nümunə plaginlər + omniroute-cmd-hello başlanğıc layihəsi
+├── examples/             # Quickstart client samples
 ├── contrib/              # İcma töhfələri (podman/)
 ├── .source/              # Fumadocs mənbə konfiqurasiyası (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions iş axınları + problem şablonları + PR şablonu
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — `needs_reindex=1` olan yaddaş qeydlərini fonda emal edir; `POST /api/memory/reindex` və tənbəl geriyə doldurma yolu tərəfindən çağırılır. (plan 21)                                                                                                                                                        |
 | `monitoring/`                            | Sağlamlıq yoxlamaları, metriklərin ötürülməsi                                                                                                                                                                                                                                                                                    |
 | `oauth/`                                 | 22 provayder modulu üçün OAuth/idxal axınları (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                        |
-| `plugins/`                               | Plagin reyestri                                                                                                                                                                                                                                                                                                                  |
 | `promptCache/`                           | Anthropic üslublu prompt keşinin kəsilmə nöqtələri                                                                                                                                                                                                                                                                               |
 | `skills/`                                | Bacarıqlar freymvorku (daxili + marketpleys + SkillsSH) — baxın: `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                     |
 | `webhookDispatcher.ts`                   | HMAC webhook çatdırılması — baxın: `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                 |

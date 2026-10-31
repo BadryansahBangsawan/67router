@@ -1032,7 +1032,6 @@
     "configurationSection": "Cumraíocht",
     "aiFeaturesSection": "Gnéithe AI",
     "mcp": "Freastalaí MCP",
-    "plugins": "Breiseáin",
     "apiEndpoints": "Críochphointí API",
     "analyticsSearch": "Cuardach",
     "analyticsUtilization": "Úsáid",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Clárlann scileanna bosca gainimh",
     "agentSkillsSubtitle": "Clárlann scileanna A2A",
     "mcpSubtitle": "Rialuithe freastalaí MCP",
-    "pluginsSubtitle": "Margadh breiseán agus suiteálacha",
     "mediaSubtitle": "Comhaid meán i dtaisce",
     "settingsSubtitle": "Gach socrú",
     "settingsGeneralSubtitle": "Bunachar sonraí agus cúltacaí",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Clár Ceannairí",
     "limits": "Teorainneacha",
     "profile": "Próifíl",
-    "plugins": "Breiseáin",
     "providerStats": "Staitisticí Soláthraithe",
     "new": "Nua",
     "quota": "Cóta",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Níorbh fhéidir an linn seo a bhaint.",
     "dismiss": "Dún"
   },
-  "plugins": {
-    "title": "Breiseáin",
-    "description": "Suiteáil agus bainistigh breiseáin chun feidhmiúlacht 67router a leathnú",
-    "loading": "Breiseáin á lódáil...",
-    "scanning": "Scanadh ar siúl...",
-    "scanForPlugins": "Déan Scanadh le haghaidh Breiseán",
-    "noPlugins": "Níl aon bhreiseán suiteáilte",
-    "noPluginsDescription": "Cuir eolairí breiseán in ~/.omniroute/plugins/ agus cliceáil Scan.",
-    "activate": "Gníomhachtaigh",
-    "deactivate": "Díghníomhachtaigh",
-    "uninstall": "Díshuiteáil",
-    "uninstallConfirm": "Díshuiteáil an breiseán \"{name}\"?",
-    "pluginScanComplete": "Scanadh breiseán críochnaithe",
-    "pluginScanFailed": "Theip ar scanadh breiseán",
-    "activated": "Gníomhachtaíodh {name}",
-    "deactivated": "Díghníomhachtaíodh {name}",
-    "activateFailed": "Theip ar {name} a ghníomhachtú",
-    "deactivateFailed": "Theip ar {name} a dhíghníomhachtú",
-    "uninstalled": "Díshuiteáladh {name}",
-    "uninstallFailed": "Theip ar {name} a dhíshuiteáil",
-    "configure": "Cumraigh: {name}",
-    "configurePlugin": "Cumraigh",
-    "noConfigSettings": "Níl aon socruithe inchumraithe ag an mbreiseán seo.",
-    "saving": "Ag sábháil...",
-    "saveConfiguration": "Sábháil an Chumraíocht",
-    "configurationSaved": "Sábháladh an chumraíocht",
-    "saveConfigurationFailed": "Theip ar shábháil na cumraíochta",
-    "pluginNotFound": "Níor aimsíodh an breiseán",
-    "version": "Leagan",
-    "author": "Údar",
-    "description_label": "Cur síos",
-    "status": "Stádas",
-    "enabled": "Cumasaithe",
-    "disabled": "Díchumasaithe",
-    "installedTab": "Suiteáilte",
-    "marketplaceTab": "Margadh",
-    "marketplaceUrlLabel": "URL saincheaptha an mhargaidh",
-    "marketplaceUrlPlaceholder": "Fág folamh le haghaidh chlárlann oifigiúil Omniroute",
-    "saveMarketplaceUrl": "Sábháil & Athlódáil",
-    "marketplaceUrlSaved": "Nuashonraíodh URL an mhargaidh",
-    "marketplaceEmpty": "Níl aon bhreiseáin aimsithe sa mhargadh.",
-    "marketplaceInstallComingSoon": "Tá suiteálacha ón margadh ag teacht go luath.",
-    "verified": "Fíoraithe",
-    "install": "Suiteáil",
-    "installedFromMarketplace": "Suiteáladh an bhreiseán {name}!",
-    "hooks": "Crúcaí"
-  },
   "quotaPlans": {
     "title": "Pleananna & Cuótaí",
     "description": "Cumraigh pleananna cuótaí in aghaidh an soláthraí — toisí (%, iarratais, comharthaí, $) agus fuinneoga ama",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Freastalaí MCP",
-        "description": "Ceangail le freastalaí MCP 67router (107 uirlis, 3 phrótacal iompair: SSE/stdio/HTTP). Clúdaíonn sé ródú, taisceadh, comhbhrú, cuimhne, scileanna, soláthraithe agus uirlisí iniúchóireachta thar 32 scóip cheada."
+        "description": "Ceangail le freastalaí MCP 67router (99 uirlis, 3 phrótacal iompair: SSE/stdio/HTTP). Clúdaíonn sé ródú, taisceadh, comhbhrú, cuimhne, scileanna, soláthraithe agus uirlisí iniúchóireachta thar 30 scóip cheada."
       },
       "omni-agents-a2a": {
         "name": "Gníomhairí & Prótacal A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Measúnuithe",
         "description": "Cruthaigh agus rith sraitheanna measúnaithe, féach ar dhul chun cinn beo na dtagarmharcanna, féach ar chártaí scóir, déan comparáid idir feidhmíocht samhlacha, agus comhtháthaigh ritheanna measúnaithe le sreafaí oibre CI ón CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Breiseáin, Scileanna & Cuimhne",
-        "description": "Bainistigh Scileanna Omni (liostaigh, suiteáil, tástáil, bain), breiseáin (cruthaigh, cumraigh), agus cuimhne sheasmhach (cuardaigh, cuir leis, glan) ón CLI."
       },
       "cli-setup": {
         "name": "CLI: Socrú & Cumraíocht",

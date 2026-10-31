@@ -1032,7 +1032,6 @@
     "configurationSection": "Configuratie",
     "aiFeaturesSection": "AI-functies",
     "mcp": "MCP",
-    "plugins": "Plug-ins",
     "apiEndpoints": "API-eindpunten",
     "analyticsSearch": "Zoeken",
     "analyticsUtilization": "Gebruik",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Register met sandboxvaardigheden",
     "agentSkillsSubtitle": "Register met A2A-vaardigheden",
     "mcpSubtitle": "MCP-serverbeheer",
-    "pluginsSubtitle": "Plug-inmarktplaats & -installaties",
     "mediaSubtitle": "Mediabestanden in de cache",
     "settingsSubtitle": "Alle instellingen",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Ranglijst",
     "limits": "Limieten",
     "profile": "Profiel",
-    "plugins": "Plug-ins",
     "providerStats": "Providerstatistieken",
     "new": "Nieuw",
     "quota": "Quotum",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Deze pool kon niet worden verwijderd.",
     "dismiss": "Sluiten"
   },
-  "plugins": {
-    "title": "Plug-ins",
-    "description": "Installeer en beheer plug-ins om de functionaliteit van 67router uit te breiden",
-    "loading": "Plug-ins laden...",
-    "scanning": "Scannen...",
-    "scanForPlugins": "Scannen naar plug-ins",
-    "noPlugins": "Geen plug-ins geïnstalleerd",
-    "noPluginsDescription": "Plaats plug-inmappen in ~/.omniroute/plugins/ en klik op Scannen.",
-    "activate": "Activeren",
-    "deactivate": "Deactiveren",
-    "uninstall": "Verwijderen",
-    "uninstallConfirm": "Plug-in \"{name}\" verwijderen?",
-    "pluginScanComplete": "Scannen naar plug-ins voltooid",
-    "pluginScanFailed": "Scannen naar plug-ins mislukt",
-    "activated": "{name} geactiveerd",
-    "deactivated": "{name} gedeactiveerd",
-    "activateFailed": "Activeren van {name} mislukt",
-    "deactivateFailed": "Deactiveren van {name} mislukt",
-    "uninstalled": "{name} verwijderd",
-    "uninstallFailed": "Verwijderen van {name} mislukt",
-    "configure": "Configureren: {name}",
-    "configurePlugin": "Configureren",
-    "noConfigSettings": "Deze plug-in heeft geen configureerbare instellingen.",
-    "saving": "Opslaan...",
-    "saveConfiguration": "Configuratie opslaan",
-    "configurationSaved": "Configuratie opgeslagen",
-    "saveConfigurationFailed": "Configuratie opslaan mislukt",
-    "pluginNotFound": "Plug-in niet gevonden",
-    "version": "Versie",
-    "author": "Auteur",
-    "description_label": "Beschrijving",
-    "status": "Status",
-    "enabled": "Ingeschakeld",
-    "disabled": "Uitgeschakeld",
-    "installedTab": "Geïnstalleerd",
-    "marketplaceTab": "Marktplaats",
-    "marketplaceUrlLabel": "Aangepaste Marketplace-URL",
-    "marketplaceUrlPlaceholder": "Laat leeg voor het officiële Omniroute-register",
-    "saveMarketplaceUrl": "Opslaan & herladen",
-    "marketplaceUrlSaved": "Marketplace-URL bijgewerkt",
-    "marketplaceEmpty": "Geen plug-ins gevonden in de marketplace.",
-    "marketplaceInstallComingSoon": "Marketplace-installaties volgen binnenkort.",
-    "verified": "Geverifieerd",
-    "install": "Installeren",
-    "installedFromMarketplace": "Plug-in {name} geïnstalleerd!",
-    "hooks": "Hooks"
-  },
   "quotaPlans": {
     "title": "Plannen & quota's",
     "description": "Configureer quotaplannen per provider — dimensies (%, aanvragen, tokens, $) en tijdsvensters",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Maak verbinding met de 67router MCP-server (107 tools, 3 transporten: SSE/stdio/HTTP). Omvat routering, cache, compressie, geheugen, vaardigheden, providers en audit-tools over 32 machtigingsbereiken."
+        "description": "Maak verbinding met de 67router MCP-server (99 tools, 3 transporten: SSE/stdio/HTTP). Omvat routering, cache, compressie, geheugen, vaardigheden, providers en audit-tools over 30 machtigingsbereiken."
       },
       "omni-agents-a2a": {
         "name": "Agents & A2A-protocol",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluaties",
         "description": "Maak en voer evaluatiesuites uit, bekijk live de voortgang van benchmarks, bekijk scorekaarten, vergelijk modelprestaties en integreer evaluatieruns met CI-workflows vanuit de CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plug-ins, Skills & Geheugen",
-        "description": "Beheer Omni Skills (lijst, installeren, testen, verwijderen), plug-ins (maken, configureren) en persistent geheugen (zoeken, toevoegen, wissen) vanuit de CLI."
       },
       "cli-setup": {
         "name": "CLI: Installatie en configuratie",

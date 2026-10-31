@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | ኮድ ማስፈጸም | `eval_code` (በተገደበ አካባቢ የሚሰራ JavaScript/Python) | HYBRID |
 | ስርዓት     | `execute_command` (በተገደበ አካባቢ የሚሰራ CLI አፈጻጸም)   | MANUAL |
 
-### ብጁ ክህሎት ማከል
-
-በፕለጊን ስርዓቱ አማካኝነት ብጁ ክህሎት እንዴት ማከል እንደሚቻል [የPlugin SDK እና የክህሎቶች ውህደት](./PLUGIN_SDK.md)ን ይመልከቱ።
-
 ---
 
 ## ተጨማሪ ይመልከቱ

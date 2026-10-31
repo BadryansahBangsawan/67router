@@ -2168,26 +2168,6 @@ devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្
 
 ---
 
-## Plugins
-
-គ្រប់គ្រង Plugins របស់ 67router (ផ្នែកបន្ថែមពីភាគីទីបី)។
-
-| វិធីសាស្ត្រ | Path                               | ការពិពណ៌នា                                    |
-| ----------- | ---------------------------------- | --------------------------------------------- |
-| GET         | `/api/plugins`                     | រាយ Plugins ដែលបានដំឡើង                       |
-| POST        | `/api/plugins/marketplace/install` | ដំឡើង Plugin ពី marketplace                   |
-| DELETE      | `/api/plugins/[name]`              | លុបការដំឡើង Plugin                            |
-| POST        | `/api/plugins/[name]/activate`     | ធ្វើឱ្យ Plugin សកម្ម                          |
-| POST        | `/api/plugins/[name]/deactivate`   | ធ្វើឱ្យ Plugin អសកម្ម                         |
-| GET         | `/api/plugins/[name]/config`       | ទទួលយកការកំណត់រចនាសម្ព័ន្ធ Plugin             |
-| PUT         | `/api/plugins/[name]/config`       | ធ្វើបច្ចុប្បន្នភាពការកំណត់រចនាសម្ព័ន្ធ Plugin |
-
-**ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ៖** តម្រូវឱ្យមានសម័យគ្រប់គ្រង។
-
-សូមមើល [គ្រោងការងារ Plugins](../frameworks/PLUGIN_SDK.md) សម្រាប់ព័ត៌មានលម្អិតពេញលេញ។
-
----
-
 ## Shadow Routing
 
 ការប្រៀបធៀបអ្នកផ្តល់សេវាតាមបែប Shadow / A-B **មិនមែនជា REST surface ដាច់ដោយឡែកទេ** — វាត្រូវបានកំណត់រចនាសម្ព័ន្ធតាមរយៈ combo routing (សូមមើល [Auto-Combo](../routing/AUTO-COMBO.md))។ ម៉ែត្ររង្វាស់ប្រៀបធៀបតាម combo នីមួយៗត្រូវបានផ្តល់ដោយ `GET /api/combos/metrics`។

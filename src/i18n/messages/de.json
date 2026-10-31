@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguration",
     "aiFeaturesSection": "KI-Funktionen",
     "mcp": "MCP",
-    "plugins": "Plugins",
     "apiEndpoints": "API-Endpunkte",
     "analyticsSearch": "Suche",
     "analyticsUtilization": "Auslastung",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Sandbox-Skill-Verzeichnis",
     "agentSkillsSubtitle": "A2A-Skill-Verzeichnis",
     "mcpSubtitle": "MCP-Server-Steuerung",
-    "pluginsSubtitle": "Plugin-Marktplatz & Installationen",
     "mediaSubtitle": "Zwischengespeicherte Mediendateien",
     "settingsSubtitle": "Alle Einstellungen",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Bestenliste",
     "limits": "Limits",
     "profile": "Profil",
-    "plugins": "Plugins",
     "providerStats": "Anbieter-Statistiken",
     "new": "Neu",
     "quota": "Kontingent",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Dieser Pool konnte nicht entfernt werden.",
     "dismiss": "Schließen"
   },
-  "plugins": {
-    "title": "Plug-ins",
-    "description": "Plugins installieren und verwalten, um die Funktionalität von 67router zu erweitern",
-    "loading": "Plugins werden geladen...",
-    "scanning": "Suche läuft...",
-    "scanForPlugins": "Nach Plugins suchen",
-    "noPlugins": "Keine Plugins installiert",
-    "noPluginsDescription": "Legen Sie Plugin-Verzeichnisse unter ~/.omniroute/plugins/ ab und klicken Sie auf „Suchen“.",
-    "activate": "Aktivieren",
-    "deactivate": "Deaktivieren",
-    "uninstall": "Deinstallieren",
-    "uninstallConfirm": "Plugin „{name}“ deinstallieren?",
-    "pluginScanComplete": "Plugin-Scan abgeschlossen",
-    "pluginScanFailed": "Plugin-Scan fehlgeschlagen",
-    "activated": "{name} aktiviert",
-    "deactivated": "{name} deaktiviert",
-    "activateFailed": "Aktivierung von {name} fehlgeschlagen",
-    "deactivateFailed": "Deaktivierung von {name} fehlgeschlagen",
-    "uninstalled": "{name} deinstalliert",
-    "uninstallFailed": "Deinstallation von {name} fehlgeschlagen",
-    "configure": "Konfigurieren: {name}",
-    "configurePlugin": "Konfigurieren",
-    "noConfigSettings": "Dieses Plugin hat keine konfigurierbaren Einstellungen.",
-    "saving": "Wird gespeichert...",
-    "saveConfiguration": "Konfiguration speichern",
-    "configurationSaved": "Konfiguration gespeichert",
-    "saveConfigurationFailed": "Konfiguration konnte nicht gespeichert werden",
-    "pluginNotFound": "Plugin nicht gefunden",
-    "version": "Version",
-    "author": "Autor",
-    "description_label": "Beschreibung",
-    "status": "Status",
-    "enabled": "Aktiviert",
-    "disabled": "Deaktiviert",
-    "installedTab": "Installiert",
-    "marketplaceTab": "Marktplatz",
-    "marketplaceUrlLabel": "Benutzerdefinierte Marketplace-URL",
-    "marketplaceUrlPlaceholder": "Leer lassen für offizielle Omniroute-Registry",
-    "saveMarketplaceUrl": "Speichern & neu laden",
-    "marketplaceUrlSaved": "Marketplace-URL aktualisiert",
-    "marketplaceEmpty": "Keine Plugins im Marketplace gefunden.",
-    "marketplaceInstallComingSoon": "Marketplace-Installationen sind bald verfügbar.",
-    "verified": "Verifiziert",
-    "install": "Installieren",
-    "installedFromMarketplace": "Plugin {name} installiert!",
-    "hooks": "Hooks"
-  },
   "quotaPlans": {
     "title": "Tarife & Kontingente",
     "description": "Kontingenttarife pro Anbieter konfigurieren — Dimensionen (%, Anfragen, Token, $) und Zeitfenster",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-Server",
-        "description": "Verbindung zum 67router-MCP-Server herstellen (107 Tools, 3 Transporte: SSE/stdio/HTTP). Deckt Routing-, Cache-, Komprimierungs-, Speicher-, Skill-, Anbieter- und Audit-Tools über 32 Berechtigungsbereiche hinweg ab."
+        "description": "Verbindung zum 67router-MCP-Server herstellen (99 Tools, 3 Transporte: SSE/stdio/HTTP). Deckt Routing-, Cache-, Komprimierungs-, Speicher-, Skill-, Anbieter- und Audit-Tools über 30 Berechtigungsbereiche hinweg ab."
       },
       "omni-agents-a2a": {
         "name": "Agenten & A2A-Protokoll",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluierungen",
         "description": "Erstellen und führen Sie Evaluierungs-Suites aus, verfolgen Sie den Live-Benchmark-Fortschritt, zeigen Sie Scorecards an, vergleichen Sie die Modellleistung und integrieren Sie Eval-Läufe über die CLI in CI-Workflows."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, Skills & Speicher",
-        "description": "Verwalten Sie Omni Skills (auflisten, installieren, testen, entfernen), Plugins (erstellen, konfigurieren) und persistenten Speicher (suchen, hinzufügen, leeren) über die CLI."
       },
       "cli-setup": {
         "name": "CLI: Setup & Konfiguration",

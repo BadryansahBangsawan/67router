@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # პროექტის დონე (იტვირთება გაშვებისას)
 ```
 
-ან ჩატვირთეთ პროგრამულად, პლაგინიდან:
+Or register it programmatically at startup:
 
 ```ts
-// თქვენს პლაგინში
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // პლაგინის SDK ხელმისაწვდომს ხდის onRequest / onResponse / onError ჰუკებს. დაარეგისტრირეთ
-  // ძრავა პლაგინის მოდულის ჩატვირთვისას (ან პირველი onRequest-ის დროს); რეგისტრაცია გააუქმეთ
-  // თქვენი საკუთარი დასრულების გზიდან.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// დასრულებისას:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

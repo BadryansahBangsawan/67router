@@ -4,7 +4,7 @@
 
 ---
 
-> OmniRoute is a free, open-source AI Gateway that acts as a universal API proxy for multi-provider LLMs. It provides smart routing, automatic fallback, load balancing, and format translation across 372 AI providers — all through a single OpenAI-compatible endpoint. Includes a built-in MCP Server (107 tools), Memory/Skills systems, Guardrails framework, and an Electron desktop app.
+> 67router is a free, open-source AI Gateway that acts as a universal API proxy for multi-provider LLMs. It provides smart routing, automatic fallback, load balancing, and format translation across 372 AI providers — all through a single OpenAI-compatible endpoint. Includes a built-in MCP Server (99 tools), Memory/Skills systems, Guardrails framework, and an Electron desktop app.
 
 ## Overview
 
@@ -134,7 +134,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │   ├── providers/        # Provider-specific OAuth configs
 │   │   │   ├── services/         # Provider-specific token exchange logic
 │   │   │   └── utils/            # PKCE, callback server, token helpers
-│   │   ├── plugins/              # Plugin system
 │   │   ├── skills/               # Extensible skill framework
 │   │   │   ├── registry.ts       # Skill registration
 │   │   │   ├── executor.ts       # Skill execution engine
@@ -202,11 +201,11 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   ├── audioTranscription.ts # Speech-to-text (Whisper, Deepgram, AssemblyAI)
 │   │   ├── rerank.ts             # Reranking API
 │   │   └── search.ts             # Web search API
-│   ├── mcp-server/               # Built-in MCP server (107 tools, 3 transports: stdio/SSE/streamable-HTTP)
+│   ├── mcp-server/               # Built-in MCP server (99 tools, 3 transports: stdio/SSE/streamable-HTTP)
 │   │   ├── server.ts             # MCP server core (tool registration, scope enforcement)
 │   │   ├── tools/                # Tool implementations (advancedTools, memoryTools, skillTools)
 │   │   ├── schemas/              # Zod input schemas (tools, audit, a2a)
-│   │   ├── scopeEnforcement.ts   # Scope-based access control (32 scopes)
+│   │   ├── scopeEnforcement.ts   # Scope-based access control (30 scopes)
 │   │   ├── audit.ts              # Tool call audit logging
 │   │   ├── runtimeHeartbeat.ts   # MCP runtime heartbeat
 │   │   └── httpTransport.ts      # HTTP transport handler
@@ -257,7 +256,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   ├── i18n/                     # 66-language translated docs
 │   ├── architecture/             # ARCHITECTURE.md, CODEBASE_DOCUMENTATION.md, REPOSITORY_MAP.md, AUTHZ_GUIDE.md, RESILIENCE_GUIDE.md, QUALITY_GATES.md
 │   ├── reference/                # API_REFERENCE.md, PROVIDER_REFERENCE.md, CLI-TOOLS.md
-│   ├── frameworks/               # MCP-SERVER.md (107 tools), SKILLS.md, MEMORY.md
+│   ├── frameworks/               # MCP-SERVER.md (99 tools), SKILLS.md, MEMORY.md
 │   ├── routing/                  # AUTO-COMBO.md (16-factor scoring), REASONING_REPLAY.md
 │   ├── security/                 # GUARDRAILS.md, COMPLIANCE.md, STEALTH_GUIDE.md, PUBLIC_CREDS.md, ERROR_SANITIZATION.md
 │   ├── guides/                   # USER_GUIDE.md, TROUBLESHOOTING.md, ELECTRON_GUIDE.md, I18N.md
@@ -334,19 +333,19 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **Gemini** — `/v1beta/models`, `/v1beta/models/{...path}`
 - **Ollama** — `/v1/api/chat`, `/api/tags`
 - **Search** — `/v1/search` (Perplexity, Serper, Brave, Exa, Tavily)
-- **MCP** — 107-tool MCP server with scope-based auth (3 transports: stdio, SSE, streamable HTTP)
+- **MCP** — 99-tool MCP server with scope-based auth (3 transports: stdio, SSE, streamable HTTP)
 - **ACP** — Agent Communication Protocol registry and manager
 
-### MCP Server (107 Tools)
+### MCP Server (99 Tools)
 
-107 tools across modules: **42 canonical** (health, combos, quotas, routing, cost, models, cache,
+99 tools across modules: **42 canonical** (health, combos, quotas, routing, cost, models, cache,
 diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool**, **notion**,
-**obsidian**, **localCorpus**, **gamification**, and **plugin** modules. Full per-tool inventory:
+**obsidian**, **localCorpus**, and **gamification** modules. Full per-tool inventory:
 `docs/frameworks/MCP-SERVER.md`.
 
-**MCP Auth Scopes (33):** e.g. `read:health`, `read:combos`, `write:combos`, `read:quota`,
+**MCP Auth Scopes (30):** e.g. `read:health`, `read:combos`, `write:combos`, `read:quota`,
 `read:usage`, `read:models`, `execute:completions`, `execute:search`, `write:budget`,
-`write:resilience`, plus memory/skills/pool/plugin scopes — full list in
+`write:resilience`, plus memory/skills/pool scopes — full list in
 `docs/frameworks/MCP-SERVER.md`.
 
 ### Provider Categories
@@ -469,7 +468,7 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 - **372-provider catalog** with 150+ free tiers, one-click account imports, and bulk key add
 - **20 routing strategies** — including `fusion` (parallel panel + judge synthesis), `pipeline`, `reset-aware`, `reset-window`, `headroom`, and `context-relay`
 - **16-factor Auto-Combo scoring** with bandit exploration and progressive cooldown
-- **MCP server expanded to 107 tools / 32 scopes** (canonical + memory/skill/agentSkill/githubSkill/pool/notion/obsidian/localCorpus/gamification/plugin modules)
+- **MCP server expanded to 99 tools / 30 scopes** (canonical + memory/skill/agentSkill/githubSkill/pool/notion/obsidian/localCorpus/gamification modules)
 - **Guardrails**, **Webhooks**, **Compliance** frameworks
 - **Embedded services** manager (install/start/stop bundled services from the dashboard)
 - **Prompt compression** (RTK + Caveman codecs) saving up to ~95% tokens on eligible traffic

@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguracija",
     "aiFeaturesSection": "AI funkcije",
     "mcp": "MCP poslužitelj",
-    "plugins": "Dodaci",
     "apiEndpoints": "API krajnje točke",
     "analyticsSearch": "Pretraga",
     "analyticsUtilization": "Iskorištenost",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Registar vještina izoliranog okruženja",
     "agentSkillsSubtitle": "Registar A2A vještina",
     "mcpSubtitle": "Kontrole MCP poslužitelja",
-    "pluginsSubtitle": "Tržnica i instalacije dodataka",
     "mediaSubtitle": "Predmemorirane medijske datoteke",
     "settingsSubtitle": "Sve postavke",
     "settingsGeneralSubtitle": "Baza podataka i sigurnosne kopije",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Ljestvica",
     "limits": "Ograničenja",
     "profile": "Profil",
-    "plugins": "Dodaci",
     "providerStats": "Statistike pružatelja",
     "new": "Novo",
     "quota": "Kvota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Nije moguće ukloniti ovaj skup.",
     "dismiss": "Zatvori"
   },
-  "plugins": {
-    "title": "Dodaci",
-    "description": "Instalirajte dodatke i upravljajte njima kako biste proširili funkcionalnost sustava 67router",
-    "loading": "Učitavanje dodataka...",
-    "scanning": "Skeniranje...",
-    "scanForPlugins": "Skeniraj dodatke",
-    "noPlugins": "Nema instaliranih dodataka",
-    "noPluginsDescription": "Postavite direktorije dodataka u ~/.omniroute/plugins/ i kliknite Skeniraj.",
-    "activate": "Aktiviraj",
-    "deactivate": "Deaktiviraj",
-    "uninstall": "Deinstaliraj",
-    "uninstallConfirm": "Deinstalirati dodatak \"{name}\"?",
-    "pluginScanComplete": "Skeniranje dodataka dovršeno",
-    "pluginScanFailed": "Skeniranje dodataka nije uspjelo",
-    "activated": "{name} aktiviran",
-    "deactivated": "{name} deaktiviran",
-    "activateFailed": "Aktivacija {name} nije uspjela",
-    "deactivateFailed": "Deaktivacija {name} nije uspjela",
-    "uninstalled": "{name} deinstaliran",
-    "uninstallFailed": "Deinstalacija {name} nije uspjela",
-    "configure": "Konfiguriraj: {name}",
-    "configurePlugin": "Konfiguriraj",
-    "noConfigSettings": "Ovaj dodatak nema postavki koje se mogu konfigurirati.",
-    "saving": "Spremanje...",
-    "saveConfiguration": "Spremi konfiguraciju",
-    "configurationSaved": "Konfiguracija spremljena",
-    "saveConfigurationFailed": "Spremanje konfiguracije nije uspjelo",
-    "pluginNotFound": "Dodatak nije pronađen",
-    "version": "Verzija",
-    "author": "Autor",
-    "description_label": "Opis",
-    "status": "Status",
-    "enabled": "Omogućen",
-    "disabled": "Onemogućen",
-    "installedTab": "Instalirano",
-    "marketplaceTab": "Tržnica",
-    "marketplaceUrlLabel": "Prilagođeni URL tržnice",
-    "marketplaceUrlPlaceholder": "Ostavite prazno za službeni registar 67router",
-    "saveMarketplaceUrl": "Spremi i ponovno učitaj",
-    "marketplaceUrlSaved": "URL tržnice je ažuriran",
-    "marketplaceEmpty": "Na tržnici nisu pronađeni dodaci.",
-    "marketplaceInstallComingSoon": "Instaliranje putem tržnice bit će dostupno uskoro.",
-    "verified": "Provjereno",
-    "install": "Instaliraj",
-    "installedFromMarketplace": "Dodatak {name} je instaliran!",
-    "hooks": "Hookovi"
-  },
   "quotaPlans": {
     "title": "Planovi i kvote",
     "description": "Konfigurirajte planove kvota po pružatelju — dimenzije (%, zahtjevi, tokeni, $) i vremenski prozori",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP poslužitelj",
-        "description": "Povežite se s 67router MCP poslužiteljem (107 alata, 3 načina prijenosa: SSE/stdio/HTTP). Obuhvaća alate za usmjeravanje, predmemoriju, kompresiju, memoriju, vještine, pružatelje i reviziju, raspoređene u 32 opsega dopuštenja."
+        "description": "Povežite se s 67router MCP poslužiteljem (99 alata, 3 načina prijenosa: SSE/stdio/HTTP). Obuhvaća alate za usmjeravanje, predmemoriju, kompresiju, memoriju, vještine, pružatelje i reviziju, raspoređene u 30 opsega dopuštenja."
       },
       "omni-agents-a2a": {
         "name": "Agenti i A2A protokol",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluacije",
         "description": "Stvarajte i pokrećite skupove evaluacija, pratite napredak testiranja performansi u stvarnom vremenu, pregledavajte kartice s rezultatima, uspoređujte performanse modela i integrirajte pokretanja evaluacija s CI tijekovima rada putem CLI-ja."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Dodaci, vještine i memorija",
-        "description": "Upravljajte Omni vještinama (popis, instalacija, testiranje, uklanjanje), dodacima (izrada, konfiguracija) i trajnom memorijom (pretraživanje, dodavanje, brisanje) putem CLI-ja."
       },
       "cli-setup": {
         "name": "CLI: Postavljanje i konfiguracija",

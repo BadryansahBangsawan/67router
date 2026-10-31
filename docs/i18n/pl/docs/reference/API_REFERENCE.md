@@ -2170,26 +2170,6 @@ Pełne informacje zawiera dokument [Framework umiejętności](../frameworks/SKIL
 
 ---
 
-## Wtyczki
-
-Zarządzanie wtyczkami 67router (rozszerzeniami innych firm).
-
-| Metoda | Ścieżka                            | Opis                              |
-| ------ | ---------------------------------- | --------------------------------- |
-| GET    | `/api/plugins`                     | Wyświetla zainstalowane wtyczki   |
-| POST   | `/api/plugins/marketplace/install` | Instaluje wtyczkę z marketplace'u |
-| DELETE | `/api/plugins/[name]`              | Odinstalowuje wtyczkę             |
-| POST   | `/api/plugins/[name]/activate`     | Aktywuje wtyczkę                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Dezaktywuje wtyczkę               |
-| GET    | `/api/plugins/[name]/config`       | Pobiera konfigurację wtyczki      |
-| PUT    | `/api/plugins/[name]/config`       | Aktualizuje konfigurację wtyczki  |
-
-**Uwierzytelnianie:** Wymaga sesji zarządzania.
-
-Pełne informacje zawiera dokument [Framework wtyczek](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Routing w tle
 
 Porównywanie dostawców w tle / metodą A/B **nie jest samodzielnym interfejsem REST** — konfiguruje się je za pomocą routingu combo (zobacz [Auto-Combo](../routing/AUTO-COMBO.md)). Metryki porównawcze dla poszczególnych combo są udostępniane przez `GET /api/combos/metrics`.

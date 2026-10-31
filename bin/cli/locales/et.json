@@ -1035,16 +1035,6 @@
     "system": "Süsteemi juhis (system prompt)",
     "resume": "Jätka salvestatud seanssi nime järgi"
   },
-  "plugin": {
-    "description": "Halda CLI pluginaid (omniroute-cmd-*)",
-    "list": "Kuva installitud pluginad",
-    "install": "Installi plugin npm-ist või kohalikust asukohast",
-    "remove": "Eemalda installitud plugin",
-    "info": "Kuva installitud plugina üksikasjad",
-    "search": "Otsi npm registrist saadaolevaid pluginaid",
-    "update": "Uuenda installitud plugina(id)",
-    "scaffold": "Loo uue plugina põhistruktuur"
-  },
   "launch": {
     "description": "Käivita Claude Code, mis suunatakse 67router'i (kohalik või kaug, koos lipuga --profile)",
     "token": "Token, mille Claude klient peaks saatma (ANTHROPIC_AUTH_TOKEN)",

@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | ការប្រតិបត្តិ Code | `eval_code` (JavaScript/Python ក្នុង sandbox)       | HYBRID |
 | System             | `execute_command` (ការប្រតិបត្តិ CLI ក្នុង sandbox) | MANUAL |
 
-### ការបន្ថែម Skill ផ្ទាល់ខ្លួន
-
-សូមមើល [Plugin SDK និងការរួមបញ្ចូល Skills](./PLUGIN_SDK.md) សម្រាប់របៀបបន្ថែម skill ផ្ទាល់ខ្លួនតាមរយៈប្រព័ន្ធ plugin។
-
 ---
 
 ## សូមមើលផងដែរ

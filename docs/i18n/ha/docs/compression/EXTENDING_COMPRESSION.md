@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Na matakin aikin (ana loda shi yayin farawa)
 ```
 
-Ko kuma a loda shi ta hanyar shirye-shirye daga plugin:
+Or register it programmatically at startup:
 
 ```ts
-// A cikin plugin ɗinka
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK na plugin yana samar da hooks na onRequest / onResponse / onError. Yi rajistar
-  // injin lokacin da aka loda tsarin plugin (ko a onRequest na farko); cire rajistarsa
-  // ta hanyar tsarin teardown naka.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Yayin teardown:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 

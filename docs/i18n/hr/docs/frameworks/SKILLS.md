@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Izvršavanje koda    | `eval_code` (JavaScript/Python u izoliranom okruženju)        | HYBRID     |
 | Sustav              | `execute_command` (izvršavanje CLI-ja u izoliranom okruženju) | MANUAL     |
 
-### Dodavanje prilagođene vještine
-
-Upute za dodavanje prilagođene vještine putem sustava dodataka potražite u dokumentu [SDK za dodatke i integracija vještina](./PLUGIN_SDK.md).
-
 ---
 
 ## Pogledajte i

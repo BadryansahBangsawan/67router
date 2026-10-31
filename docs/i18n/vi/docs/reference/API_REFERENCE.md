@@ -2149,26 +2149,6 @@ Xem [Khung kỹ năng](../frameworks/SKILLS.md) để biết đầy đủ chi ti
 
 ---
 
-## Plugin
-
-Quản lý các plugin 67router (tiện ích mở rộng của bên thứ ba).
-
-| Phương thức | Đường dẫn                          | Mô tả                             |
-| ----------- | ---------------------------------- | --------------------------------- |
-| GET         | `/api/plugins`                     | Liệt kê các plugin đã cài đặt     |
-| POST        | `/api/plugins/marketplace/install` | Cài đặt một plugin từ marketplace |
-| DELETE      | `/api/plugins/[name]`              | Gỡ cài đặt một plugin             |
-| POST        | `/api/plugins/[name]/activate`     | Kích hoạt một plugin              |
-| POST        | `/api/plugins/[name]/deactivate`   | Hủy kích hoạt một plugin          |
-| GET         | `/api/plugins/[name]/config`       | Lấy cấu hình plugin               |
-| PUT         | `/api/plugins/[name]/config`       | Cập nhật cấu hình plugin          |
-
-**Xác thực:** Yêu cầu phiên quản lý.
-
-Xem [Khung plugin](../frameworks/PLUGIN_SDK.md) để biết đầy đủ chi tiết.
-
----
-
 ## Định tuyến bóng
 
 Việc so sánh nhà cung cấp theo kiểu Shadow / A-B **không phải là một giao diện REST độc lập** — tính năng này được cấu hình thông qua định tuyến kết hợp (xem [Auto-Combo](../routing/AUTO-COMBO.md)). Các chỉ số so sánh theo từng tổ hợp được cung cấp bởi `GET /api/combos/metrics`.

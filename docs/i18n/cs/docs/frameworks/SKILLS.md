@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Spouštění kódu         | `eval_code` (JavaScript/Python v sandboxu)   | HYBRID |
 | Systém                 | `execute_command` (spouštění CLI v sandboxu) | MANUAL |
 
-### Přidání vlastní dovednosti
-
-Informace o přidání vlastní dovednosti prostřednictvím systému pluginů najdete v dokumentu [SDK pro pluginy a integrace dovedností](./PLUGIN_SDK.md).
-
 ---
 
 ## Viz také

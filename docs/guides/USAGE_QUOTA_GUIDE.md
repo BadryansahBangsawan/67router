@@ -60,7 +60,7 @@ The `usage.ts` service captures a **usage event** for every request:
 | `status`           | enum    | `success`, `error`, `rate_limited`, `timeout`, `cancelled` |
 | `errorClass`       | string? | Error class if status != success                           |
 | `timestamp`        | string  | ISO 8601 UTC                                               |
-| `metadata`         | object  | Custom plugin-injected data                                |
+| `metadata`         | object  | Custom request metadata                                    |
 
 ### Where Tokens Come From
 

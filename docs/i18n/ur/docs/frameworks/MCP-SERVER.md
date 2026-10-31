@@ -416,8 +416,6 @@ API کلید پر `manage`، MCP ٹول پر `read:compression`، اور
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                       |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                  |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                              |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                 |
 | `read:obsidian`       | 13 مطالعاتی ٹولز — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 تحریری ٹولز — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                  |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                               |
@@ -574,7 +572,6 @@ stdio ٹرانسپورٹ ہر 5 سیکنڈ بعد لائیونس کی حالت `
 | `open-sse/mcp-server/tools/skillTools.ts`                                | اسکل ٹول کی تعریفیں (4 ٹولز)                                          |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion سیاق و سباق کے ماخذ کے ٹول کی تعریفیں (6 ٹولز)                 |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | گیمیفیکیشن ٹول کی تعریفیں (8 ٹولز)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | پلگ اِن رجسٹریشن اور انتظامی ٹولز (8 ٹولز)                            |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` اینڈ پوائنٹ                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` اینڈ پوائنٹ                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ٹرانسپورٹ روٹ                                      |

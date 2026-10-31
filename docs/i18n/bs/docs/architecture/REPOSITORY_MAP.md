@@ -27,7 +27,7 @@ OmniRoute/
 ├── images/               # Marketinški / README slikovni resursi
 ├── @omniroute/           # Prateći paketi koji se mogu objaviti (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/agent paketi vještina (cli-* + omni-* + config-codex-cli)
-├── examples/             # Primjeri dodataka + omniroute-cmd-hello starter
+├── examples/             # Quickstart client samples
 ├── contrib/              # Doprinosi zajednice (podman/)
 ├── .source/              # Fumadocs izvorna konfiguracija (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions radni tokovi + šabloni za issue-e + šablon za PR
@@ -190,7 +190,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — obrađuje memorije sa `needs_reindex=1` u pozadini; poziva se putem `POST /api/memory/reindex` i putanje lijene naknadne popune. (plan 21)                                                                                                                                                                       |
 | `monitoring/`                            | Provjere stanja, emitovanje metrika                                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | OAuth/tokovi uvoza za 22 modula pružalaca usluga (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                          |
-| `plugins/`                               | Registar dodataka                                                                                                                                                                                                                                                                                                                     |
 | `promptCache/`                           | Tačke prekida predmemorije upita u Anthropic stilu                                                                                                                                                                                                                                                                                    |
 | `skills/`                                | Okvir za vještine (ugrađene + tržište + SkillsSH) — pogledajte `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                            |
 | `webhookDispatcher.ts`                   | HMAC isporuka webhookova — pogledajte `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                   |

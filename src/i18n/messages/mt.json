@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurazzjoni",
     "aiFeaturesSection": "Karatteristiċi tal-IA",
     "mcp": "Server MCP",
-    "plugins": "Plugins",
     "apiEndpoints": "Endpoints tal-API",
     "analyticsSearch": "Tiftix",
     "analyticsUtilization": "Użu",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Reġistru tal-ħiliet tas-sandbox",
     "agentSkillsSubtitle": "Reġistru tal-ħiliet A2A",
     "mcpSubtitle": "Kontrolli tas-server MCP",
-    "pluginsSubtitle": "Suq tal-plugins u installazzjonijiet",
     "mediaSubtitle": "Fajls tal-midja fil-cache",
     "settingsSubtitle": "Is-settings kollha",
     "settingsGeneralSubtitle": "Bażi tad-data u kopji ta' riżerva",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Klassifika",
     "limits": "Limiti",
     "profile": "Profil",
-    "plugins": "Plugins",
     "providerStats": "Statistika tal-Fornituri",
     "new": "Ġdid",
     "quota": "Kwota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Ma setgħetx titneħħa din il-ġabra.",
     "dismiss": "Agħlaq"
   },
-  "plugins": {
-    "title": "Plugins",
-    "description": "Installa u mmaniġġja plugins biex testendi l-funzjonalità ta’ 67router",
-    "loading": "Qed jitgħabbew il-plugins...",
-    "scanning": "Qed isir l-iskannjar...",
-    "scanForPlugins": "Skennja għal Plugins",
-    "noPlugins": "M’hemm l-ebda plugin installat",
-    "noPluginsDescription": "Poġġi d-direttorji tal-plugins f’~/.omniroute/plugins/ u kklikkja Skennja.",
-    "activate": "Attiva",
-    "deactivate": "Iddiżattiva",
-    "uninstall": "Iddiżinstalla",
-    "uninstallConfirm": "Trid tiddiżinstalla l-plugin \"{name}\"?",
-    "pluginScanComplete": "L-iskannjar tal-plugins tlesta",
-    "pluginScanFailed": "L-iskannjar tal-plugins falla",
-    "activated": "{name} ġie attivat",
-    "deactivated": "{name} ġie diżattivat",
-    "activateFailed": "Ma rnexxiex jiġi attivat {name}",
-    "deactivateFailed": "Ma rnexxiex jiġi diżattivat {name}",
-    "uninstalled": "{name} ġie ddiżinstallat",
-    "uninstallFailed": "Ma rnexxiex jiġi ddiżinstallat {name}",
-    "configure": "Ikkonfigura: {name}",
-    "configurePlugin": "Ikkonfigura",
-    "noConfigSettings": "Dan il-plugin m’għandu l-ebda għażla konfigurabbli.",
-    "saving": "Qed tiġi ssejvjata...",
-    "saveConfiguration": "Issejvja l-Konfigurazzjoni",
-    "configurationSaved": "Il-konfigurazzjoni ġiet issejvjata",
-    "saveConfigurationFailed": "Ma rnexxiex tiġi ssejvjata l-konfigurazzjoni",
-    "pluginNotFound": "Il-plugin ma nstabx",
-    "version": "Verżjoni",
-    "author": "Awtur",
-    "description_label": "Deskrizzjoni",
-    "status": "Stat",
-    "enabled": "Attivat",
-    "disabled": "Diżattivat",
-    "installedTab": "Installati",
-    "marketplaceTab": "Suq",
-    "marketplaceUrlLabel": "URL Personalizzat tas-Suq",
-    "marketplaceUrlPlaceholder": "Ħallih vojt għar-reġistru uffiċjali ta’ 67router",
-    "saveMarketplaceUrl": "Issejvja u Erġa’ Għabbi",
-    "marketplaceUrlSaved": "Il-URL tas-suq ġie aġġornat",
-    "marketplaceEmpty": "Ma nstab l-ebda plugin fis-suq.",
-    "marketplaceInstallComingSoon": "L-installazzjonijiet mis-suq se jkunu disponibbli dalwaqt.",
-    "verified": "Verifikat",
-    "install": "Installa",
-    "installedFromMarketplace": "Il-plugin {name} ġie installat!",
-    "hooks": "Ganċijiet"
-  },
   "quotaPlans": {
     "title": "Pjanijiet u Kwoti",
     "description": "Ikkonfigura l-pjanijiet tal-kwoti għal kull fornitur — dimensjonijiet (%, talbiet, tokens, $) u intervalli taż-żmien",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Qabbad mas-server MCP ta’ 67router (107 għodda, 3 trasporti: SSE/stdio/HTTP). Ikopri għodod għar-rototizzazzjoni, il-cache, il-kompressjoni, il-memorja, il-ħiliet, il-fornituri u l-awditjar fi 32 ambitu ta’ permess."
+        "description": "Qabbad mas-server MCP ta’ 67router (99 għodda, 3 trasporti: SSE/stdio/HTTP). Ikopri għodod għar-rototizzazzjoni, il-cache, il-kompressjoni, il-memorja, il-ħiliet, il-fornituri u l-awditjar fi 30 ambitu ta’ permess."
       },
       "omni-agents-a2a": {
         "name": "Aġenti u Protokoll A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evalwazzjonijiet",
         "description": "Oħloq u ħaddem ġabriet ta' evalwazzjoni, segwi l-progress tal-benchmarks f'ħin reali, ara l-karti tal-punteġġ, qabbel il-prestazzjoni tal-mudelli, u integra t-tħaddim tal-evalwazzjonijiet mal-flussi tax-xogħol tas-CI permezz tas-CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, Ħiliet u Memorja",
-        "description": "Immaniġġja Omni Skills (elenka, installa, ittestja, neħħi), plugins (oħloq, ikkonfigura), u memorja persistenti (fittex, żid, ħassar) mis-CLI."
       },
       "cli-setup": {
         "name": "CLI: Installazzjoni u Konfigurazzjoni",

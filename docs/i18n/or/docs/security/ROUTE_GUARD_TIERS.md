@@ -57,7 +57,6 @@ API କି ରହିଥାଏ, ସେତେବେଳେ `LOCAL_ONLY_MANAGE_SCOPE
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy ଲିସନର୍ + ସିଷ୍ଟମ୍ ପ୍ରକ୍ସି                                                |
 | `/api/settings/mitm`                                                                                     | MITM ଇଣ୍ଟରସେପ୍ସନ୍ ସକ୍ଷମ କରେ (ସିଷ୍ଟମ୍-ସ୍ତରୀୟ ପ୍ରକ୍ସି ସ୍ଥିତି)                                            |
 | `/api/issue-agent/`                                                                                      | ଇସ୍ୟୁ ଏଜେଣ୍ଟ — ରେପୋ ବିରୁଦ୍ଧରେ ସ୍ଥାନୀୟ ଟୁଲିଂ ଆରମ୍ଭ କରେ                                                  |
-| `/api/plugins/`, `/api/plugins`                                                                          | ପ୍ଲଗ୍ଇନ୍ଗୁଡ଼ିକ — `worker_threads` + `child_process` ମାଧ୍ୟମରେ ଲୋଡ୍/ନିଷ୍ପାଦନ କରେ                         |
 | `/api/middleware/`                                                                                       | ବ୍ୟବହାରକାରୀ ମିଡଲ୍ୱେୟାର୍ — ପ୍ରକ୍ରିୟା ମଧ୍ୟରେ ଅପରେଟର୍ କୋଡ୍ ଲୋଡ୍/ନିଷ୍ପାଦନ କରେ                              |
 | `/api/system/version`                                                                                    | ସ୍ୱୟଂଚାଳିତ ଅପଡେଟ୍ (କେବଳ POST; GET/HEAD/OPTIONS ଛାଡ଼ପ୍ରାପ୍ତ) — `git checkout` + `npm install` ଆରମ୍ଭ କରେ |
 | `/api/db-backups/exportAll`                                                                              | ରପ୍ତାନି ଆର୍କାଇଭ୍ ପାଇଁ `tar` ଆରମ୍ଭ କରେ                                                                  |

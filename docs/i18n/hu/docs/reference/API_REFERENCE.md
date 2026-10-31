@@ -2131,26 +2131,6 @@ A teljes részletekért lásd: [Készségkeretrendszer](../frameworks/SKILLS.md)
 
 ---
 
-## Bővítmények
-
-67router-bővítmények (külső fejlesztésű kiegészítők) kezelése.
-
-| Metódus | Útvonal                            | Leírás                                 |
-| ------- | ---------------------------------- | -------------------------------------- |
-| GET     | `/api/plugins`                     | A telepített bővítmények listázása     |
-| POST    | `/api/plugins/marketplace/install` | Bővítmény telepítése a piactérről      |
-| DELETE  | `/api/plugins/[name]`              | Bővítmény eltávolítása                 |
-| POST    | `/api/plugins/[name]/activate`     | Bővítmény aktiválása                   |
-| POST    | `/api/plugins/[name]/deactivate`   | Bővítmény deaktiválása                 |
-| GET     | `/api/plugins/[name]/config`       | Bővítmény konfigurációjának lekérése   |
-| PUT     | `/api/plugins/[name]/config`       | Bővítmény konfigurációjának frissítése |
-
-**Hitelesítés:** Kezelési munkamenetet igényel.
-
-A teljes részletekért lásd: [Bővítmény-keretrendszer](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Árnyék-útválasztás
 
 A szolgáltatók árnyék-/A-B összehasonlítása **nem önálló REST-felület** — kombinált útválasztással konfigurálható (lásd: [Automatikus kombináció](../routing/AUTO-COMBO.md)). A kombinációnkénti összehasonlítási metrikákat a `GET /api/combos/metrics` szolgálja ki.

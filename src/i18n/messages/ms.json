@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurasi",
     "aiFeaturesSection": "Ciri AI",
     "mcp": "MCP",
-    "plugins": "Pemalam",
     "apiEndpoints": "Titik Akhir API",
     "analyticsSearch": "Carian",
     "analyticsUtilization": "Penggunaan",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Daftar kemahiran sandbox",
     "agentSkillsSubtitle": "Daftar kemahiran A2A",
     "mcpSubtitle": "Kawalan pelayan MCP",
-    "pluginsSubtitle": "Pasaran pemalam & pemasangan",
     "mediaSubtitle": "Fail media dalam cache",
     "settingsSubtitle": "Semua tetapan",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Papan Pendahulu",
     "limits": "Had",
     "profile": "Profil",
-    "plugins": "Palam Masuk",
     "providerStats": "Statistik Penyedia",
     "new": "Baharu",
     "quota": "Kuota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tidak dapat mengalih keluar kumpulan ini.",
     "dismiss": "Tutup"
   },
-  "plugins": {
-    "title": "Pemalam",
-    "description": "Pasang dan urus pemalam untuk memperluas fungsi 67router",
-    "loading": "Memuatkan pemalam...",
-    "scanning": "Mengimbas...",
-    "scanForPlugins": "Imbas Pemalam",
-    "noPlugins": "Tiada pemalam dipasang",
-    "noPluginsDescription": "Letakkan direktori pemalam dalam ~/.omniroute/plugins/ dan klik Imbas.",
-    "activate": "Aktifkan",
-    "deactivate": "Nyahaktifkan",
-    "uninstall": "Nyahpasang",
-    "uninstallConfirm": "Nyahpasang pemalam \"{name}\"?",
-    "pluginScanComplete": "Imbasan pemalam selesai",
-    "pluginScanFailed": "Imbasan pemalam gagal",
-    "activated": "{name} diaktifkan",
-    "deactivated": "{name} dinyahaktifkan",
-    "activateFailed": "Gagal mengaktifkan {name}",
-    "deactivateFailed": "Gagal menyahaktifkan {name}",
-    "uninstalled": "{name} dinyahpasang",
-    "uninstallFailed": "Gagal menyahpasang {name}",
-    "configure": "Konfigurasikan: {name}",
-    "configurePlugin": "Konfigurasikan",
-    "noConfigSettings": "Pemalam ini tidak mempunyai tetapan yang boleh dikonfigurasikan.",
-    "saving": "Menyimpan...",
-    "saveConfiguration": "Simpan Konfigurasi",
-    "configurationSaved": "Konfigurasi disimpan",
-    "saveConfigurationFailed": "Gagal menyimpan konfigurasi",
-    "pluginNotFound": "Pemalam tidak ditemui",
-    "version": "Versi",
-    "author": "Pengarang",
-    "description_label": "Penerangan",
-    "status": "Status",
-    "enabled": "Didayakan",
-    "disabled": "Dilumpuhkan",
-    "installedTab": "Dipasang",
-    "marketplaceTab": "Pasaran",
-    "marketplaceUrlLabel": "URL Marketplace Tersuai",
-    "marketplaceUrlPlaceholder": "Biarkan kosong untuk pendaftar rasmi Omniroute",
-    "saveMarketplaceUrl": "Simpan & Muat Semula",
-    "marketplaceUrlSaved": "URL Marketplace dikemas kini",
-    "marketplaceEmpty": "Tiada pemalam ditemui dalam marketplace.",
-    "marketplaceInstallComingSoon": "Pemasangan marketplace akan datang tidak lama lagi.",
-    "verified": "Disahkan",
-    "install": "Pasang",
-    "installedFromMarketplace": "Pemalam {name} dipasang!",
-    "hooks": "Cangkuk"
-  },
   "quotaPlans": {
     "title": "Pelan & Kuota",
     "description": "Konfigurasikan pelan kuota bagi setiap penyedia — dimensi (%, permintaan, token, $) dan tetingkap masa",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Pelayan MCP",
-        "description": "Sambung ke pelayan MCP 67router (107 alatan, 3 pengangkutan: SSE/stdio/HTTP). Meliputi penghalaan, cache, pemampatan, memori, kemahiran, penyedia dan alatan audit merentasi 32 skop kebenaran."
+        "description": "Sambung ke pelayan MCP 67router (99 alatan, 3 pengangkutan: SSE/stdio/HTTP). Meliputi penghalaan, cache, pemampatan, memori, kemahiran, penyedia dan alatan audit merentasi 30 skop kebenaran."
       },
       "omni-agents-a2a": {
         "name": "Ejen & Protokol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Penilaian",
         "description": "Cipta dan jalankan suite penilaian, tonton kemajuan penanda aras langsung, lihat kad skor, bandingkan prestasi model, dan integrasikan larian penilaian dengan aliran kerja CI daripada CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Pemalam, Kemahiran & Memori",
-        "description": "Urus Omni Skills (senaraikan, pasang, uji, alih keluar), pemalam (cipta, konfigurasikan), dan memori berterusan (cari, tambah, kosongkan) daripada CLI."
       },
       "cli-setup": {
         "name": "CLI: Persediaan & Konfigurasi",

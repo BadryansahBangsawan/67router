@@ -39,7 +39,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy લિસનર + સિસ્ટમ પ્રૉક્સી                                               |
 | `/api/settings/mitm`                                                                                     | MITM ઇન્ટરસેપ્શન સક્ષમ કરે છે (સિસ્ટમ-સ્તરની પ્રૉક્સી સ્થિતિ)                                        |
 | `/api/issue-agent/`                                                                                      | ઇશ્યૂ એજન્ટ — રેપો સામે સ્થાનિક ટૂલિંગ સ્પૉન કરે છે                                                  |
-| `/api/plugins/`, `/api/plugins`                                                                          | પ્લગઇન્સ — `worker_threads` + `child_process` મારફતે લોડ/એક્ઝિક્યુટ કરે છે                           |
 | `/api/middleware/`                                                                                       | વપરાશકર્તા મિડલવેર — પ્રોસેસની અંદર ઑપરેટર કોડ લોડ/એક્ઝિક્યુટ કરે છે                                 |
 | `/api/system/version`                                                                                    | ઑટો-અપડેટ (માત્ર POST; GET/HEAD/OPTIONS મુક્ત) — `git checkout` + `npm install` સ્પૉન કરે છે         |
 | `/api/db-backups/exportAll`                                                                              | એક્સપોર્ટ આર્કાઇવ માટે `tar` સ્પૉન કરે છે                                                            |

@@ -1032,7 +1032,6 @@
     "configurationSection": "ውቅር",
     "aiFeaturesSection": "የAI ባህሪያት",
     "mcp": "MCP አገልጋይ",
-    "plugins": "ተሰኪዎች",
     "apiEndpoints": "የAPI መዳረሻ ነጥቦች",
     "analyticsSearch": "ፍለጋ",
     "analyticsUtilization": "አጠቃቀም",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "የሳንድቦክስ ክህሎት መዝገብ",
     "agentSkillsSubtitle": "የA2A ክህሎት መዝገብ",
     "mcpSubtitle": "የMCP አገልጋይ መቆጣጠሪያዎች",
-    "pluginsSubtitle": "የተሰኪዎች ገበያ እና ጭነቶች",
     "mediaSubtitle": "የተሸጎጡ የሚዲያ ፋይሎች",
     "settingsSubtitle": "ሁሉም ቅንብሮች",
     "settingsGeneralSubtitle": "የውሂብ ጎታ እና ምትኬዎች",
@@ -1486,7 +1484,6 @@
     "leaderboard": "የደረጃ ሰንጠረዥ",
     "limits": "ገደቦች",
     "profile": "መገለጫ",
-    "plugins": "ተሰኪዎች",
     "providerStats": "የአቅራቢዎች ስታቲስቲክስ",
     "new": "አዲስ",
     "quota": "ኮታ",
@@ -11455,53 +11452,6 @@
     "removeFailed": "ይህን ፑል ማስወገድ አልተቻለም።",
     "dismiss": "ዝጋ"
   },
-  "plugins": {
-    "title": "ተሰኪዎች",
-    "description": "የ67router ተግባራትን ለማስፋት ተሰኪዎችን ይጫኑ እና ያስተዳድሩ",
-    "loading": "ተሰኪዎች በመጫን ላይ...",
-    "scanning": "በመቃኘት ላይ...",
-    "scanForPlugins": "ተሰኪዎችን ቃኝ",
-    "noPlugins": "ምንም ተሰኪ አልተጫነም",
-    "noPluginsDescription": "የተሰኪ ማውጫዎችን በ ~/.omniroute/plugins/ ውስጥ ያስቀምጡና «ቃኝ»ን ጠቅ ያድርጉ።",
-    "activate": "አግብር",
-    "deactivate": "አቦዝን",
-    "uninstall": "አራግፍ",
-    "uninstallConfirm": "ተሰኪው \"{name}\" ይራገፍ?",
-    "pluginScanComplete": "የተሰኪዎች ቅኝት ተጠናቋል",
-    "pluginScanFailed": "የተሰኪዎች ቅኝት አልተሳካም",
-    "activated": "{name} ገቢር ሆኗል",
-    "deactivated": "{name} እንዳይሠራ ተደርጓል",
-    "activateFailed": "{name}ን ማግበር አልተሳካም",
-    "deactivateFailed": "{name}ን ማቦዘን አልተሳካም",
-    "uninstalled": "{name} ተራግፏል",
-    "uninstallFailed": "{name}ን ማራገፍ አልተሳካም",
-    "configure": "አዋቅር፦ {name}",
-    "configurePlugin": "አዋቅር",
-    "noConfigSettings": "ይህ ተሰኪ ሊዋቀሩ የሚችሉ ቅንብሮች የሉትም።",
-    "saving": "በማስቀመጥ ላይ...",
-    "saveConfiguration": "ውቅረቱን አስቀምጥ",
-    "configurationSaved": "ውቅረቱ ተቀምጧል",
-    "saveConfigurationFailed": "ውቅረቱን ማስቀመጥ አልተሳካም",
-    "pluginNotFound": "ተሰኪው አልተገኘም",
-    "version": "ስሪት",
-    "author": "ደራሲ",
-    "description_label": "መግለጫ",
-    "status": "ሁኔታ",
-    "enabled": "ነቅቷል",
-    "disabled": "ቦዝኗል",
-    "installedTab": "ተጭኗል",
-    "marketplaceTab": "የተሰኪዎች ገበያ",
-    "marketplaceUrlLabel": "ብጁ የተሰኪዎች ገበያ URL",
-    "marketplaceUrlPlaceholder": "ለኦፊሴላዊው Omniroute መዝገብ ባዶውን ይተዉት",
-    "saveMarketplaceUrl": "አስቀምጥ እና እንደገና ጫን",
-    "marketplaceUrlSaved": "የተሰኪዎች ገበያ URL ተዘምኗል",
-    "marketplaceEmpty": "በተሰኪዎች ገበያው ውስጥ ምንም ተሰኪዎች አልተገኙም።",
-    "marketplaceInstallComingSoon": "ከተሰኪዎች ገበያ መጫን በቅርቡ ይቀርባል።",
-    "verified": "የተረጋገጠ",
-    "install": "ጫን",
-    "installedFromMarketplace": "ተሰኪ {name} ተጭኗል!",
-    "hooks": "ሁኮች"
-  },
   "quotaPlans": {
     "title": "ዕቅዶች እና ኮታዎች",
     "description": "ለእያንዳንዱ አቅራቢ የኮታ ዕቅዶችን ያዋቅሩ — ልኬቶች (%, ጥያቄዎች፣ ቶከኖች፣ $) እና የጊዜ መስኮቶች",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP አገልጋይ",
-        "description": "ከ67router MCP server (107 መሣሪያዎች፣ 3 መጓጓዣዎች፦ SSE/stdio/HTTP) ጋር ይገናኙ። በ32 የፈቃድ ወሰኖች ውስጥ የማዘዋወር፣ የመሸጎጫ፣ የመጭመቅ፣ የማስታወሻ፣ የክህሎት፣ የአቅራቢ እና የኦዲት መሣሪያዎችን ይሸፍናል።"
+        "description": "ከ67router MCP server (99 መሣሪያዎች፣ 3 መጓጓዣዎች፦ SSE/stdio/HTTP) ጋር ይገናኙ። በ30 የፈቃድ ወሰኖች ውስጥ የማዘዋወር፣ የመሸጎጫ፣ የመጭመቅ፣ የማስታወሻ፣ የክህሎት፣ የአቅራቢ እና የኦዲት መሣሪያዎችን ይሸፍናል።"
       },
       "omni-agents-a2a": {
         "name": "ወኪሎች እና A2A ፕሮቶኮል",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI፦ ግምገማዎች",
         "description": "የግምገማ ስብስቦችን ይፍጠሩ እና ያሂዱ፣ የቀጥታ የመመዘኛ ሂደትን ይከታተሉ፣ የውጤት ካርዶችን ይመልከቱ፣ የሞዴል አፈጻጸምን ያወዳድሩ እና የግምገማ ሂደቶችን ከCLI በመጠቀም ከCI የስራ ፍሰቶች ጋር ያዋህዱ።"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI፦ ፕለጊኖች፣ ክህሎቶች እና ማህደረ ትውስታ",
-        "description": "Omni Skillsን (መዘርዘር፣ መጫን፣ መሞከር፣ ማስወገድ)፣ ፕለጊኖችን (መፍጠር፣ ማዋቀር) እና ቋሚ ማህደረ ትውስታን (መፈለግ፣ ማከል፣ ማጽዳት) ከCLI ያስተዳድሩ።"
       },
       "cli-setup": {
         "name": "CLI፦ ማዋቀር እና ቅንብር",

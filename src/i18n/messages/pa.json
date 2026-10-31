@@ -1032,7 +1032,6 @@
     "configurationSection": "ਸੰਰਚਨਾ",
     "aiFeaturesSection": "AI ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ",
     "mcp": "MCP ਸਰਵਰ",
-    "plugins": "ਪਲੱਗਇਨ",
     "apiEndpoints": "API ਐਂਡਪੌਇੰਟ",
     "analyticsSearch": "ਖੋਜ",
     "analyticsUtilization": "ਵਰਤੋਂ",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "ਸੈਂਡਬਾਕਸ ਹੁਨਰ ਰਜਿਸਟਰੀ",
     "agentSkillsSubtitle": "A2A ਹੁਨਰ ਰਜਿਸਟਰੀ",
     "mcpSubtitle": "MCP ਸਰਵਰ ਨਿਯੰਤਰਣ",
-    "pluginsSubtitle": "ਪਲੱਗਇਨ ਮਾਰਕੀਟਪਲੇਸ ਅਤੇ ਇੰਸਟਾਲੇਸ਼ਨਾਂ",
     "mediaSubtitle": "ਕੈਸ਼ ਕੀਤੀਆਂ ਮੀਡੀਆ ਫਾਈਲਾਂ",
     "settingsSubtitle": "ਸਾਰੀਆਂ ਸੈਟਿੰਗਾਂ",
     "settingsGeneralSubtitle": "ਡਾਟਾਬੇਸ ਅਤੇ ਬੈਕਅੱਪ",
@@ -1486,7 +1484,6 @@
     "leaderboard": "ਲੀਡਰਬੋਰਡ",
     "limits": "ਸੀਮਾਵਾਂ",
     "profile": "ਪ੍ਰੋਫ਼ਾਈਲ",
-    "plugins": "ਪਲੱਗਇਨ",
     "providerStats": "ਪ੍ਰਦਾਤਾ ਅੰਕੜੇ",
     "new": "ਨਵਾਂ",
     "quota": "ਕੋਟਾ",
@@ -11455,53 +11452,6 @@
     "removeFailed": "ਇਹ ਪੂਲ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
     "dismiss": "ਖਾਰਜ ਕਰੋ"
   },
-  "plugins": {
-    "title": "ਪਲੱਗਇਨ",
-    "description": "67router ਦੀ ਕਾਰਜਕੁਸ਼ਲਤਾ ਵਧਾਉਣ ਲਈ ਪਲੱਗਇਨ ਇੰਸਟਾਲ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
-    "loading": "ਪਲੱਗਇਨ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...",
-    "scanning": "ਸਕੈਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
-    "scanForPlugins": "ਪਲੱਗਇਨਾਂ ਲਈ ਸਕੈਨ ਕਰੋ",
-    "noPlugins": "ਕੋਈ ਪਲੱਗਇਨ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ",
-    "noPluginsDescription": "ਪਲੱਗਇਨ ਡਾਇਰੈਕਟਰੀਆਂ ~/.omniroute/plugins/ ਵਿੱਚ ਰੱਖੋ ਅਤੇ ਸਕੈਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
-    "activate": "ਸਰਗਰਮ ਕਰੋ",
-    "deactivate": "ਅਕਿਰਿਆਸ਼ੀਲ ਕਰੋ",
-    "uninstall": "ਅਣਇੰਸਟਾਲ ਕਰੋ",
-    "uninstallConfirm": "ਪਲੱਗਇਨ \"{name}\" ਨੂੰ ਅਣਇੰਸਟਾਲ ਕਰਨਾ ਹੈ?",
-    "pluginScanComplete": "ਪਲੱਗਇਨ ਸਕੈਨ ਪੂਰਾ ਹੋਇਆ",
-    "pluginScanFailed": "ਪਲੱਗਇਨ ਸਕੈਨ ਅਸਫਲ ਰਿਹਾ",
-    "activated": "{name} ਸਰਗਰਮ ਕੀਤਾ ਗਿਆ",
-    "deactivated": "{name} ਅਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ",
-    "activateFailed": "{name} ਨੂੰ ਸਰਗਰਮ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
-    "deactivateFailed": "{name} ਨੂੰ ਅਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
-    "uninstalled": "{name} ਅਣਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ",
-    "uninstallFailed": "{name} ਨੂੰ ਅਣਇੰਸਟਾਲ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
-    "configure": "ਸੰਰਚਨਾ ਕਰੋ: {name}",
-    "configurePlugin": "ਸੰਰਚਨਾ ਕਰੋ",
-    "noConfigSettings": "ਇਸ ਪਲੱਗਇਨ ਵਿੱਚ ਸੰਰਚਿਤ ਕਰਨ ਯੋਗ ਕੋਈ ਸੈਟਿੰਗ ਨਹੀਂ ਹੈ।",
-    "saving": "ਸੰਭਾਲਿਆ ਜਾ ਰਿਹਾ ਹੈ...",
-    "saveConfiguration": "ਸੰਰਚਨਾ ਸੰਭਾਲੋ",
-    "configurationSaved": "ਸੰਰਚਨਾ ਸੰਭਾਲੀ ਗਈ",
-    "saveConfigurationFailed": "ਸੰਰਚਨਾ ਸੰਭਾਲਣ ਵਿੱਚ ਅਸਫਲ",
-    "pluginNotFound": "ਪਲੱਗਇਨ ਨਹੀਂ ਮਿਲਿਆ",
-    "version": "ਵਰਜਨ",
-    "author": "ਲੇਖਕ",
-    "description_label": "ਵੇਰਵਾ",
-    "status": "ਸਥਿਤੀ",
-    "enabled": "ਚਾਲੂ",
-    "disabled": "ਬੰਦ",
-    "installedTab": "ਇੰਸਟਾਲ ਕੀਤੇ ਹੋਏ",
-    "marketplaceTab": "ਮਾਰਕੀਟਪਲੇਸ",
-    "marketplaceUrlLabel": "ਕਸਟਮ ਮਾਰਕੀਟਪਲੇਸ URL",
-    "marketplaceUrlPlaceholder": "ਅਧਿਕਾਰਤ Omniroute ਰਜਿਸਟਰੀ ਲਈ ਖਾਲੀ ਛੱਡੋ",
-    "saveMarketplaceUrl": "ਸੰਭਾਲੋ ਅਤੇ ਮੁੜ ਲੋਡ ਕਰੋ",
-    "marketplaceUrlSaved": "ਮਾਰਕੀਟਪਲੇਸ URL ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ",
-    "marketplaceEmpty": "ਮਾਰਕੀਟਪਲੇਸ ਵਿੱਚ ਕੋਈ ਪਲੱਗਇਨ ਨਹੀਂ ਮਿਲਿਆ।",
-    "marketplaceInstallComingSoon": "ਮਾਰਕੀਟਪਲੇਸ ਤੋਂ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਸੁਵਿਧਾ ਜਲਦੀ ਆ ਰਹੀ ਹੈ।",
-    "verified": "ਪ੍ਰਮਾਣਿਤ",
-    "install": "ਇੰਸਟਾਲ ਕਰੋ",
-    "installedFromMarketplace": "ਪਲੱਗਇਨ {name} ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ!",
-    "hooks": "ਹੁੱਕਸ"
-  },
   "quotaPlans": {
     "title": "ਯੋਜਨਾਵਾਂ ਅਤੇ ਕੋਟੇ",
     "description": "ਹਰੇਕ ਪ੍ਰਦਾਤਾ ਲਈ ਕੋਟਾ ਯੋਜਨਾਵਾਂ ਸੰਰਚਿਤ ਕਰੋ — ਮਾਪ (%, ਬੇਨਤੀਆਂ, ਟੋਕਨ, $) ਅਤੇ ਸਮਾਂ-ਅਵਧੀਆਂ",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP ਸਰਵਰ",
-        "description": "67router MCP ਸਰਵਰ (107 ਟੂਲ, 3 ਟ੍ਰਾਂਸਪੋਰਟ: SSE/stdio/HTTP) ਨਾਲ ਕਨੈਕਟ ਕਰੋ। ਇਹ 32 ਅਨੁਮਤੀ ਸਕੋਪਾਂ ਵਿੱਚ ਰੂਟਿੰਗ, ਕੈਸ਼, ਕੰਪ੍ਰੈਸ਼ਨ, ਮੈਮੋਰੀ, ਹੁਨਰ, ਪ੍ਰਦਾਤਾ ਅਤੇ ਆਡਿਟ ਟੂਲਾਂ ਨੂੰ ਕਵਰ ਕਰਦਾ ਹੈ।"
+        "description": "67router MCP ਸਰਵਰ (99 ਟੂਲ, 3 ਟ੍ਰਾਂਸਪੋਰਟ: SSE/stdio/HTTP) ਨਾਲ ਕਨੈਕਟ ਕਰੋ। ਇਹ 30 ਅਨੁਮਤੀ ਸਕੋਪਾਂ ਵਿੱਚ ਰੂਟਿੰਗ, ਕੈਸ਼, ਕੰਪ੍ਰੈਸ਼ਨ, ਮੈਮੋਰੀ, ਹੁਨਰ, ਪ੍ਰਦਾਤਾ ਅਤੇ ਆਡਿਟ ਟੂਲਾਂ ਨੂੰ ਕਵਰ ਕਰਦਾ ਹੈ।"
       },
       "omni-agents-a2a": {
         "name": "ਏਜੰਟ ਅਤੇ A2A ਪ੍ਰੋਟੋਕੋਲ",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: ਮੁਲਾਂਕਣ",
         "description": "CLI ਤੋਂ ਮੁਲਾਂਕਣ ਸੂਟ ਬਣਾਓ ਅਤੇ ਚਲਾਓ, ਲਾਈਵ ਬੈਂਚਮਾਰਕ ਪ੍ਰਗਤੀ ਵੇਖੋ, ਸਕੋਰਕਾਰਡ ਵੇਖੋ, ਮਾਡਲ ਪ੍ਰਦਰਸ਼ਨ ਦੀ ਤੁਲਨਾ ਕਰੋ ਅਤੇ ਮੁਲਾਂਕਣ ਰਨਾਂ ਨੂੰ CI ਵਰਕਫਲੋਜ਼ ਨਾਲ ਏਕੀਕ੍ਰਿਤ ਕਰੋ।"
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: ਪਲੱਗਇਨ, ਹੁਨਰ ਅਤੇ ਮੈਮੋਰੀ",
-        "description": "CLI ਤੋਂ Omni Skills (ਸੂਚੀਬੱਧ ਕਰੋ, ਇੰਸਟਾਲ ਕਰੋ, ਜਾਂਚੋ, ਹਟਾਓ), ਪਲੱਗਇਨਾਂ (ਬਣਾਓ, ਸੰਰਚਿਤ ਕਰੋ) ਅਤੇ ਸਥਾਈ ਮੈਮੋਰੀ (ਖੋਜੋ, ਜੋੜੋ, ਸਾਫ਼ ਕਰੋ) ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ।"
       },
       "cli-setup": {
         "name": "CLI: ਸੈੱਟਅੱਪ ਅਤੇ ਸੰਰਚਨਾ",

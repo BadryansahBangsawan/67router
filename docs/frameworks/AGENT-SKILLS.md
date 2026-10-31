@@ -192,7 +192,7 @@ The A2A skill `list-capabilities` returns the full 45-skill catalog as a markdow
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-eval`            | cli-eval           | `omniroute simulate`    |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
+| `cli-plugins-skills`  | cli-plugins-skills | `omniroute skills`      |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
 

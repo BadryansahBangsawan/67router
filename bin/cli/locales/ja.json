@@ -1035,16 +1035,6 @@
     "system": "システムプロンプト",
     "resume": "名前を指定して保存済みセッションを再開"
   },
-  "plugin": {
-    "description": "CLIプラグイン（omniroute-cmd-*）を管理",
-    "list": "インストール済みプラグインを一覧表示",
-    "install": "npmまたはローカルパスからプラグインをインストール",
-    "remove": "インストール済みプラグインを削除",
-    "info": "インストール済みプラグインの詳細を表示",
-    "search": "利用可能なプラグインをnpmレジストリで検索",
-    "update": "インストール済みプラグインを更新",
-    "scaffold": "新しいプラグインのボイラープレートを生成"
-  },
   "launch": {
     "description": "67routerを参照するClaude Codeを起動（ローカルまたはリモート、--profile対応）",
     "token": "Claudeクライアントが送信するトークン（ANTHROPIC_AUTH_TOKEN）",

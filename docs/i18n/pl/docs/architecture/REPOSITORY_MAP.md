@@ -32,7 +32,7 @@ OmniRoute/
 ├── images/               # Zasoby graficzne marketing / README
 ├── @omniroute/           # Publikowalne pakiety towarzyszące (opencode-plugin, opencode-provider)
 ├── skills/               # Paczki skilli CLI/agent (cli-* + omni-* + config-codex-cli)
-├── examples/             # Przykładowe pluginy + starter omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Wkłady społeczności (podman/)
 ├── .source/              # Konfiguracja źródła Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Workflowy GitHub Actions + szablony issue + szablon PR
@@ -195,7 +195,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — przetwarza w tle wspomnienia z `needs_reindex=1`; wywoływana przez `POST /api/memory/reindex` i ścieżkę leniwego uzupełniania danych. (plan 21)                                                                                                                                                                 |
 | `monitoring/`                            | Kontrole kondycji, emitowanie metryk                                                                                                                                                                                                                                                                                                  |
 | `oauth/`                                 | Przepływy OAuth/importu dla 22 modułów dostawców (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                          |
-| `plugins/`                               | Rejestr wtyczek                                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Punkty podziału pamięci podręcznej promptów w stylu Anthropic                                                                                                                                                                                                                                                                         |
 | `skills/`                                | Framework umiejętności (wbudowane + marketplace + SkillsSH) — zobacz `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                      |
 | `webhookDispatcher.ts`                   | Dostarczanie webhooków z użyciem HMAC — zobacz `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                          |

@@ -2171,26 +2171,6 @@ Išsamią informaciją žr. [Įgūdžių sistema](../frameworks/SKILLS.md).
 
 ---
 
-## Papildiniai
-
-Valdykite „67router“ papildinius (trečiųjų šalių plėtinius).
-
-| Metodas | Kelias                             | Aprašymas                           |
-| ------- | ---------------------------------- | ----------------------------------- |
-| GET     | `/api/plugins`                     | Pateikti įdiegtų papildinių sąrašą  |
-| POST    | `/api/plugins/marketplace/install` | Įdiegti papildinį iš prekyvietės    |
-| DELETE  | `/api/plugins/[name]`              | Pašalinti papildinį                 |
-| POST    | `/api/plugins/[name]/activate`     | Aktyvinti papildinį                 |
-| POST    | `/api/plugins/[name]/deactivate`   | Pasyvinti papildinį                 |
-| GET     | `/api/plugins/[name]/config`       | Gauti papildinio konfigūraciją      |
-| PUT     | `/api/plugins/[name]/config`       | Atnaujinti papildinio konfigūraciją |
-
-**Autentifikavimas:** reikalingas valdymo seansas.
-
-Išsamią informaciją žr. [Papildinių sistema](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Šešėlinis maršruto parinkimas
 
 Šešėlinis / A-B paslaugų teikėjų palyginimas **nėra atskira REST sąsaja** — jis konfigūruojamas naudojant kombinuotą maršruto parinkimą (žr. [Automatiniai deriniai](../routing/AUTO-COMBO.md)). Kiekvieno derinio palyginimo metrikos pateikiamos naudojant `GET /api/combos/metrics`.

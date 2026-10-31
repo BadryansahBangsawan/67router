@@ -1035,16 +1035,6 @@
     "system": "Sistem istemi",
     "resume": "Kaydedilmiş bir oturumu adına göre sürdür"
   },
-  "plugin": {
-    "description": "CLI eklentilerini (omniroute-cmd-*) yönet",
-    "list": "Yüklü eklentileri listele",
-    "install": "npm'den veya yerel yoldan bir eklenti yükle",
-    "remove": "Yüklü bir eklentiyi kaldır",
-    "info": "Yüklü bir eklentinin ayrıntılarını göster",
-    "search": "Kullanılabilir eklentiler için npm kayıt defterinde ara",
-    "update": "Yüklü eklentileri güncelle",
-    "scaffold": "Yeni bir eklenti için başlangıç şablonu oluştur"
-  },
   "launch": {
     "description": "67router'u hedefleyen Claude Code'u başlat (yerel veya uzak, --profile ile)",
     "token": "Claude istemcisinin göndermesi gereken token (ANTHROPIC_AUTH_TOKEN)",

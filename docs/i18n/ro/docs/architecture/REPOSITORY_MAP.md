@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Resurse grafice pentru marketing / README
 ├── @omniroute/           # Pachete complementare publicabile (opencode-plugin, opencode-provider)
 ├── skills/               # Pachete de abilități pentru CLI/agenți (cli-* + omni-* + config-codex-cli)
-├── examples/             # Pluginuri demonstrative + proiect inițial omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Contribuții ale comunității (podman/)
 ├── .source/              # Configurație sursă Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Fluxuri de lucru GitHub Actions + șabloane pentru probleme + șablon PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — procesează în fundal memoriile cu `needs_reindex=1`; apelată de `POST /api/memory/reindex` și de calea de completare retroactivă leneșă. (planul 21)                                                                                                                                                              |
 | `monitoring/`                            | Verificări de sănătate, emiterea metricilor                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | Fluxuri OAuth/de import pentru 22 de module de furnizori (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                    |
-| `plugins/`                               | Registru de pluginuri                                                                                                                                                                                                                                                                                                                   |
 | `promptCache/`                           | Puncte de întrerupere pentru memoria cache a prompturilor în stil Anthropic                                                                                                                                                                                                                                                             |
 | `skills/`                                | Cadru pentru abilități (încorporate + marketplace + SkillsSH) — consultați `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                  |
 | `webhookDispatcher.ts`                   | Livrare de webhook-uri HMAC — consultați `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                                  |

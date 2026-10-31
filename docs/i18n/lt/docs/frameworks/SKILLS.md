@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Kodo vykdymas | `eval_code` (izoliuotas JavaScript/Python)  | HYBRID  |
 | Sistema       | `execute_command` (izoliuotas CLI vykdymas) | MANUAL  |
 
-### Pasirinktinio įgūdžio pridėjimas
-
-Kaip pridėti pasirinktinį įgūdį naudojant papildinių sistemą, žr. [Papildinių SDK ir įgūdžių integravimas](./PLUGIN_SDK.md).
-
 ---
 
 ## Taip pat žr.

@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # ធនធានរូបភាពសម្រាប់ទីផ្សារ / README
 ├── @omniroute/           # កញ្ចប់ជំនួយដែលអាចបោះផ្សាយបាន (opencode-plugin, opencode-provider)
 ├── skills/               # កញ្ចប់ជំនាញ CLI/ភ្នាក់ងារ (cli-* + omni-* + config-codex-cli)
-├── examples/             # កម្មវិធីបន្ថែមគំរូ + គម្រោងចាប់ផ្ដើម omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # ការរួមចំណែកពីសហគមន៍ (podman/)
 ├── .source/              # ការកំណត់រចនាសម្ព័ន្ធប្រភព Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # លំហូរការងារ GitHub Actions + គំរូបញ្ហា + គំរូ PR
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ដំណើរការ memories ដែលមាន `needs_reindex=1` នៅផ្ទៃខាងក្រោយ; ត្រូវបានហៅដោយ `POST /api/memory/reindex` និងផ្លូវ lazy-backfill។ (ផែនការ 21)                                                                                                                                                                |
 | `monitoring/`                            | ការត្រួតពិនិត្យសុខភាព និងការបញ្ចេញ metrics                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | លំហូរ OAuth/import សម្រាប់ម៉ូឌុលអ្នកផ្ដល់សេវាចំនួន 22 (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                            |
-| `plugins/`                               | បញ្ជីចុះឈ្មោះ plugin                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | ចំណុចផ្អាកឃ្លាំងសម្ងាត់ prompt តាមរចនាប័ទ្ម Anthropic                                                                                                                                                                                                                                                                        |
 | `skills/`                                | ក្របខណ្ឌជំនាញ (ភ្ជាប់មកស្រាប់ + ទីផ្សារ + SkillsSH) — សូមមើល `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                     |
 | `webhookDispatcher.ts`                   | ការបញ្ជូន webhook ដោយប្រើ HMAC — សូមមើល `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                        |

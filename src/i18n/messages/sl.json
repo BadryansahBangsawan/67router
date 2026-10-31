@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguracija",
     "aiFeaturesSection": "Funkcije umetne inteligence",
     "mcp": "Strežnik MCP",
-    "plugins": "Vtičniki",
     "apiEndpoints": "Končne točke API-ja",
     "analyticsSearch": "Iskanje",
     "analyticsUtilization": "Izkoriščenost",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Register veščin peskovnika",
     "agentSkillsSubtitle": "Register veščin A2A",
     "mcpSubtitle": "Upravljanje strežnikov MCP",
-    "pluginsSubtitle": "Tržnica vtičnikov in namestitve",
     "mediaSubtitle": "Predpomnjene predstavnostne datoteke",
     "settingsSubtitle": "Vse nastavitve",
     "settingsGeneralSubtitle": "Podatkovna zbirka in varnostne kopije",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Lestvica",
     "limits": "Omejitve",
     "profile": "Profil",
-    "plugins": "Vtičniki",
     "providerStats": "Statistika ponudnikov",
     "new": "Novo",
     "quota": "Kvota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tega nabora ni bilo mogoče odstraniti.",
     "dismiss": "Zapri"
   },
-  "plugins": {
-    "title": "Vtičniki",
-    "description": "Namestite in upravljajte vtičnike za razširitev funkcionalnosti 67router",
-    "loading": "Nalaganje vtičnikov ...",
-    "scanning": "Pregledovanje ...",
-    "scanForPlugins": "Poišči vtičnike",
-    "noPlugins": "Ni nameščenih vtičnikov",
-    "noPluginsDescription": "Mape vtičnikov postavite v ~/.omniroute/plugins/ in kliknite »Poišči«.",
-    "activate": "Aktiviraj",
-    "deactivate": "Deaktiviraj",
-    "uninstall": "Odstrani",
-    "uninstallConfirm": "Ali želite odstraniti vtičnik »{name}«?",
-    "pluginScanComplete": "Iskanje vtičnikov je končano",
-    "pluginScanFailed": "Iskanje vtičnikov ni uspelo",
-    "activated": "Vtičnik {name} je aktiviran",
-    "deactivated": "Vtičnik {name} je deaktiviran",
-    "activateFailed": "Vtičnika {name} ni bilo mogoče aktivirati",
-    "deactivateFailed": "Vtičnika {name} ni bilo mogoče deaktivirati",
-    "uninstalled": "Vtičnik {name} je odstranjen",
-    "uninstallFailed": "Vtičnika {name} ni bilo mogoče odstraniti",
-    "configure": "Konfiguriraj: {name}",
-    "configurePlugin": "Konfiguriraj",
-    "noConfigSettings": "Ta vtičnik nima nastavitev, ki bi jih bilo mogoče konfigurirati.",
-    "saving": "Shranjevanje ...",
-    "saveConfiguration": "Shrani konfiguracijo",
-    "configurationSaved": "Konfiguracija je shranjena",
-    "saveConfigurationFailed": "Konfiguracije ni bilo mogoče shraniti",
-    "pluginNotFound": "Vtičnika ni bilo mogoče najti",
-    "version": "Različica",
-    "author": "Avtor",
-    "description_label": "Opis",
-    "status": "Stanje",
-    "enabled": "Omogočeno",
-    "disabled": "Onemogočeno",
-    "installedTab": "Nameščeno",
-    "marketplaceTab": "Tržnica",
-    "marketplaceUrlLabel": "URL tržnice po meri",
-    "marketplaceUrlPlaceholder": "Za uradni register 67router pustite prazno",
-    "saveMarketplaceUrl": "Shrani in znova naloži",
-    "marketplaceUrlSaved": "URL tržnice je posodobljen",
-    "marketplaceEmpty": "Na tržnici ni bilo mogoče najti vtičnikov.",
-    "marketplaceInstallComingSoon": "Nameščanje iz tržnice bo na voljo kmalu.",
-    "verified": "Preverjeno",
-    "install": "Namesti",
-    "installedFromMarketplace": "Vtičnik {name} je nameščen!",
-    "hooks": "Kavlji"
-  },
   "quotaPlans": {
     "title": "Paketi in kvote",
     "description": "Konfigurirajte pakete kvot za posameznega ponudnika — dimenzije (%, zahteve, žetoni, $) in časovna obdobja",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Strežnik MCP",
-        "description": "Povežite se s strežnikom 67router MCP (107 orodij, 3 načini prenosa: SSE/stdio/HTTP). Vključuje orodja za usmerjanje, predpomnilnik, stiskanje, pomnilnik, veščine, ponudnike in revizijo v 32 obsegih dovoljenj."
+        "description": "Povežite se s strežnikom 67router MCP (99 orodij, 3 načini prenosa: SSE/stdio/HTTP). Vključuje orodja za usmerjanje, predpomnilnik, stiskanje, pomnilnik, veščine, ponudnike in revizijo v 30 obsegih dovoljenj."
       },
       "omni-agents-a2a": {
         "name": "Agenti in protokol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Vrednotenja",
         "description": "Ustvarjajte in izvajajte zbirke vrednotenj, spremljajte napredek primerjalnih preizkusov v živo, pregledujte poročila z ocenami, primerjajte zmogljivost modelov ter prek CLI-ja vključite izvajanja vrednotenj v delovne tokove CI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Vtičniki, spretnosti in pomnilnik",
-        "description": "Prek CLI-ja upravljajte Omni Skills (prikažite, namestite, preizkusite, odstranite), vtičnike (ustvarite, konfigurirajte) in trajni pomnilnik (iščite, dodajte, počistite)."
       },
       "cli-setup": {
         "name": "CLI: Nastavitev in konfiguracija",

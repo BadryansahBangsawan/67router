@@ -461,10 +461,6 @@ const config: SkillConfig = {
 | การรันโค้ด | `eval_code` (JavaScript/Python ที่ทำงานในแซนด์บ็อกซ์) | HYBRID |
 | ระบบ       | `execute_command` (การรัน CLI ในแซนด์บ็อกซ์)          | MANUAL |
 
-### การเพิ่มสกิลแบบกำหนดเอง
-
-ดูวิธีเพิ่มสกิลแบบกำหนดเองผ่านระบบปลั๊กอินได้ที่ [Plugin SDK และการผสานรวมสกิล](./PLUGIN_SDK.md)
-
 ---
 
 ## ดูเพิ่มเติม

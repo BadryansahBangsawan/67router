@@ -459,10 +459,6 @@ const config: SkillConfig = {
 | Code Exec | `eval_code` (sandboxed JavaScript/Python)   | HYBRID |
 | System    | `execute_command` (sandboxed CLI execution) | MANUAL |
 
-### Adding a Custom Skill
-
-See the [Plugin SDK & Skills Integration](./PLUGIN_SDK.md) for how to add a custom skill via the plugin system.
-
 ---
 
 ## See Also

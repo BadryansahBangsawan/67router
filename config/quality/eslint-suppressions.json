@@ -296,11 +296,6 @@
       "count": 1
     }
   },
-  "open-sse/mcp-server/tools/pluginTools.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
   "open-sse/services/__tests__/claudeTlsClient.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -1374,11 +1369,6 @@
     }
   },
   "src/lib/piiSanitizer.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/plugins/manager.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
@@ -2564,11 +2554,6 @@
     "@typescript-eslint/no-explicit-any": {
       "count": 6
     },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/cli-plugin-system.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
@@ -3764,57 +3749,6 @@
   "tests/unit/plan3-p0.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 20
-    }
-  },
-  "tests/unit/plugins-config-route.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-config.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-dev-mode.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "tests/unit/plugins-edge-cases.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-fs-safety.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-hooks.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-index.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 9
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 2
-    }
-  },
-  "tests/unit/plugins-manager-lifecycle.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/plugins-welcome-banner-e2e.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 4
     }
   },
   "tests/unit/pollinations-jsonmode-3981.test.ts": {

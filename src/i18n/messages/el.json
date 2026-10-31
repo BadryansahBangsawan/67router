@@ -1032,7 +1032,6 @@
     "configurationSection": "Διαμόρφωση",
     "aiFeaturesSection": "Λειτουργίες ΤΝ",
     "mcp": "Διακομιστής MCP",
-    "plugins": "Πρόσθετα",
     "apiEndpoints": "Τελικά σημεία API",
     "analyticsSearch": "Αναζήτηση",
     "analyticsUtilization": "Αξιοποίηση",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Μητρώο δεξιοτήτων sandbox",
     "agentSkillsSubtitle": "Μητρώο δεξιοτήτων A2A",
     "mcpSubtitle": "Στοιχεία ελέγχου διακομιστή MCP",
-    "pluginsSubtitle": "Marketplace και εγκαταστάσεις plugin",
     "mediaSubtitle": "Αρχεία πολυμέσων στην προσωρινή μνήμη",
     "settingsSubtitle": "Όλες οι ρυθμίσεις",
     "settingsGeneralSubtitle": "Βάση δεδομένων και αντίγραφα ασφαλείας",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Κατάταξη",
     "limits": "Όρια",
     "profile": "Προφίλ",
-    "plugins": "Πρόσθετα",
     "providerStats": "Στατιστικά παρόχων",
     "new": "Νέο",
     "quota": "Ποσόστωση",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Δεν ήταν δυνατή η αφαίρεση αυτού του συνόλου.",
     "dismiss": "Κλείσιμο"
   },
-  "plugins": {
-    "title": "Πρόσθετα",
-    "description": "Εγκατάσταση και διαχείριση πρόσθετων για την επέκταση της λειτουργικότητας του 67router",
-    "loading": "Φόρτωση πρόσθετων...",
-    "scanning": "Σάρωση...",
-    "scanForPlugins": "Σάρωση για πρόσθετα",
-    "noPlugins": "Δεν υπάρχουν εγκατεστημένα πρόσθετα",
-    "noPluginsDescription": "Τοποθετήστε τους φακέλους πρόσθετων στο ~/.omniroute/plugins/ και κάντε κλικ στην επιλογή «Σάρωση».",
-    "activate": "Ενεργοποίηση",
-    "deactivate": "Απενεργοποίηση",
-    "uninstall": "Κατάργηση εγκατάστασης",
-    "uninstallConfirm": "Να καταργηθεί η εγκατάσταση του πρόσθετου \"{name}\";",
-    "pluginScanComplete": "Η σάρωση πρόσθετων ολοκληρώθηκε",
-    "pluginScanFailed": "Η σάρωση πρόσθετων απέτυχε",
-    "activated": "Το {name} ενεργοποιήθηκε",
-    "deactivated": "Το {name} απενεργοποιήθηκε",
-    "activateFailed": "Αποτυχία ενεργοποίησης του {name}",
-    "deactivateFailed": "Αποτυχία απενεργοποίησης του {name}",
-    "uninstalled": "Το {name} καταργήθηκε",
-    "uninstallFailed": "Αποτυχία κατάργησης του {name}",
-    "configure": "Ρύθμιση: {name}",
-    "configurePlugin": "Ρύθμιση",
-    "noConfigSettings": "Αυτό το πρόσθετο δεν έχει ρυθμιζόμενες επιλογές.",
-    "saving": "Αποθήκευση...",
-    "saveConfiguration": "Αποθήκευση ρύθμισης",
-    "configurationSaved": "Η ρύθμιση αποθηκεύτηκε",
-    "saveConfigurationFailed": "Αποτυχία αποθήκευσης ρύθμισης",
-    "pluginNotFound": "Το πρόσθετο δεν βρέθηκε",
-    "version": "Έκδοση",
-    "author": "Συγγραφέας",
-    "description_label": "Περιγραφή",
-    "status": "Κατάσταση",
-    "enabled": "Ενεργό",
-    "disabled": "Ανενεργό",
-    "installedTab": "Εγκατεστημένα",
-    "marketplaceTab": "Αγορά",
-    "marketplaceUrlLabel": "Προσαρμοσμένο URL του Marketplace",
-    "marketplaceUrlPlaceholder": "Αφήστε κενό για το επίσημο μητρώο του 67router",
-    "saveMarketplaceUrl": "Αποθήκευση & Επαναφόρτωση",
-    "marketplaceUrlSaved": "Η διεύθυνση URL του Marketplace ενημερώθηκε",
-    "marketplaceEmpty": "Δεν βρέθηκαν πρόσθετα στο Marketplace.",
-    "marketplaceInstallComingSoon": "Οι εγκαταστάσεις από το Marketplace θα είναι σύντομα διαθέσιμες.",
-    "verified": "Επαληθευμένο",
-    "install": "Εγκατάσταση",
-    "installedFromMarketplace": "Το πρόσθετο {name} εγκαταστάθηκε!",
-    "hooks": "Άγκιστρα"
-  },
   "quotaPlans": {
     "title": "Πλάνα & Όρια",
     "description": "Ρυθμίστε πλάνα ορίων ανά πάροχο — διαστάσεις (%, αιτήματα, tokens, $) και χρονικά παράθυρα",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Διακομιστής MCP",
-        "description": "Σύνδεση στον διακομιστή MCP του 67router (107 εργαλεία, 3 μέθοδοι μεταφοράς: SSE/stdio/HTTP). Καλύπτει εργαλεία δρομολόγησης, κρυφής μνήμης, συμπίεσης, μνήμης, δεξιοτήτων, παρόχων και ελέγχου σε 32 πεδία δικαιωμάτων."
+        "description": "Σύνδεση στον διακομιστή MCP του 67router (99 εργαλεία, 3 μέθοδοι μεταφοράς: SSE/stdio/HTTP). Καλύπτει εργαλεία δρομολόγησης, κρυφής μνήμης, συμπίεσης, μνήμης, δεξιοτήτων, παρόχων και ελέγχου σε 30 πεδία δικαιωμάτων."
       },
       "omni-agents-a2a": {
         "name": "Πράκτορες & πρωτόκολλο A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Αξιολογήσεις",
         "description": "Δημιουργήστε και εκτελέστε σουίτες αξιολόγησης, παρακολουθήστε σε πραγματικό χρόνο την πρόοδο των benchmark, προβάλετε πίνακες βαθμολογίας, συγκρίνετε την απόδοση μοντέλων και ενσωματώστε εκτελέσεις αξιολόγησης σε ροές εργασίας CI μέσω του CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugins, Skills & Μνήμη",
-        "description": "Διαχειριστείτε Omni Skills (λίστα, εγκατάσταση, δοκιμή, αφαίρεση), plugins (δημιουργία, διαμόρφωση) και μόνιμη μνήμη (αναζήτηση, προσθήκη, εκκαθάριση) μέσω του CLI."
       },
       "cli-setup": {
         "name": "CLI: Ρύθμιση και διαμόρφωση",

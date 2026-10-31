@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Kodun icrası | `eval_code` (izolyasiya edilmiş JavaScript/Python) | HYBRID |
 | Sistem       | `execute_command` (izolyasiya edilmiş CLI icrası)  | MANUAL |
 
-### Fərdi Bacarığın Əlavə Edilməsi
-
-Plagin sistemi vasitəsilə fərdi bacarığın necə əlavə ediləcəyini öyrənmək üçün [Plugin SDK və Bacarıqların İnteqrasiyası](./PLUGIN_SDK.md) sənədinə baxın.
-
 ---
 
 ## Həmçinin baxın

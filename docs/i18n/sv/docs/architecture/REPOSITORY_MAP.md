@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Bildresurser för marknadsföring/README
 ├── @omniroute/           # Publicerbara kompletterande paket (opencode-plugin, opencode-provider)
 ├── skills/               # Färdighetspaket för CLI/agenter (cli-* + omni-* + config-codex-cli)
-├── examples/             # Exempelinsticksprogram + startmall för omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Bidrag från communityn (podman/)
 ├── .source/              # Fumadocs-källkonfiguration (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions-arbetsflöden + ärendemallar + PR-mall
@@ -188,7 +188,6 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — bearbetar minnen med `needs_reindex=1` i bakgrunden; anropas av `POST /api/memory/reindex` och sökvägen för behovsstyrd bakåtkomplettering. (plan 21)                                                                                                                                                |
 | `monitoring/`                            | Hälsokontroller och generering av mätvärden                                                                                                                                                                                                                                                                                |
 | `oauth/`                                 | OAuth-/importflöden för 22 leverantörsmoduler (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                  |
-| `plugins/`                               | Pluginregister                                                                                                                                                                                                                                                                                                             |
 | `promptCache/`                           | Brytpunkter för promptcache i Anthropic-stil                                                                                                                                                                                                                                                                               |
 | `skills/`                                | Ramverk för färdigheter (inbyggda + marknadsplats + SkillsSH) — se `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                             |
 | `webhookDispatcher.ts`                   | HMAC-leverans av webhooks — se `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                               |

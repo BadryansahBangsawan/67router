@@ -2173,26 +2173,6 @@ Lee [Usoro Nkà](../frameworks/SKILLS.md) maka nkọwa zuru ezu.
 
 ---
 
-## Plugins
-
-Jikwaa plugins 67router (ndọtị ndị ọzọ mepụtara).
-
-| Usoro  | Ụzọ                                | Nkọwa                        |
-| ------ | ---------------------------------- | ---------------------------- |
-| GET    | `/api/plugins`                     | Depụta plugins arụnyere      |
-| POST   | `/api/plugins/marketplace/install` | Wụnye plugin site n'ọma ahịa |
-| DELETE | `/api/plugins/[name]`              | Wepụ plugin arụnyere         |
-| POST   | `/api/plugins/[name]/activate`     | Mee ka plugin rụọ ọrụ        |
-| POST   | `/api/plugins/[name]/deactivate`   | Kwụsị plugin ịrụ ọrụ         |
-| GET    | `/api/plugins/[name]/config`       | Nweta nhazi plugin           |
-| PUT    | `/api/plugins/[name]/config`       | Melite nhazi plugin          |
-
-**Nkwenye njirimara:** Ọ chọrọ nnọkọ njikwa.
-
-Lee [Usoro Plugins](../frameworks/PLUGIN_SDK.md) maka nkọwa zuru ezu.
-
----
-
 ## Nduzi Shadow
 
 Ntụnyere Shadow / A-B nke ndị na-eweta ọrụ **abụghị akụkụ REST kwụụrụ onwe ya** — a na-ahazi ya site na nduzi ngwakọta (lee [Auto-Combo](../routing/AUTO-COMBO.md)). `GET /api/combos/metrics` na-enye metrik ntụnyere maka ngwakọta ọ bụla.

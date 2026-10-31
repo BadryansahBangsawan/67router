@@ -417,8 +417,6 @@ Każde narzędzie wymaga określonych zakresów:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                             |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                      |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                        |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                    |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                       |
 | `read:obsidian`       | 13 narzędzi do odczytu — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 narzędzi do zapisu — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                     |
@@ -578,7 +576,6 @@ Aby sprawdzić ostatnie wywołania, użyj panelu lub punktów końcowych REST `/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definicje narzędzi umiejętności (4 narzędzia)                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definicje narzędzi źródła kontekstu Notion (6 narzędzi)                               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definicje narzędzi grywalizacji (8 narzędzi)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Narzędzia do rejestracji wtyczek i zarządzania nimi (8 narzędzi)                      |
 | `src/app/api/mcp/status/route.ts`                                        | Punkt końcowy `/api/mcp/status`                                                       |
 | `src/app/api/mcp/tools/route.ts`                                         | Punkt końcowy `/api/mcp/tools`                                                        |
 | `src/app/api/mcp/sse/route.ts`                                           | Trasa transportu SSE `/api/mcp/sse`                                                   |

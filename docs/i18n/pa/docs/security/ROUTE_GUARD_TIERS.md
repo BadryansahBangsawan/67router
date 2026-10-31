@@ -39,7 +39,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy ਲਿਸਨਰ + ਸਿਸਟਮ ਪ੍ਰੌਕਸੀ                                               |
 | `/api/settings/mitm`                                                                                     | MITM ਇੰਟਰਸੈਪਸ਼ਨ ਸਮਰੱਥ ਕਰਦਾ ਹੈ (ਸਿਸਟਮ-ਪੱਧਰੀ ਪ੍ਰੌਕਸੀ ਸਥਿਤੀ)                                          |
 | `/api/issue-agent/`                                                                                      | ਇਸ਼ੂ ਏਜੰਟ — ਰਿਪੋ ਦੇ ਵਿਰੁੱਧ ਲੋਕਲ ਟੂਲਿੰਗ ਸਪੌਨ ਕਰਦਾ ਹੈ                                                |
-| `/api/plugins/`, `/api/plugins`                                                                          | ਪਲੱਗਇਨ — `worker_threads` + `child_process` ਰਾਹੀਂ ਲੋਡ/ਚਲਾਉਂਦਾ ਹੈ                                   |
 | `/api/middleware/`                                                                                       | ਯੂਜ਼ਰ ਮਿਡਲਵੇਅਰ — ਪ੍ਰਕਿਰਿਆ ਦੇ ਅੰਦਰ ਓਪਰੇਟਰ ਕੋਡ ਲੋਡ/ਚਲਾਉਂਦਾ ਹੈ                                        |
 | `/api/system/version`                                                                                    | ਆਟੋ-ਅੱਪਡੇਟ (ਸਿਰਫ਼ POST; GET/HEAD/OPTIONS ਛੋਟ-ਪ੍ਰਾਪਤ) — `git checkout` + `npm install` ਸਪੌਨ ਕਰਦਾ ਹੈ |
 | `/api/db-backups/exportAll`                                                                              | ਐਕਸਪੋਰਟ ਆਰਕਾਈਵ ਲਈ `tar` ਸਪੌਨ ਕਰਦਾ ਹੈ                                                               |

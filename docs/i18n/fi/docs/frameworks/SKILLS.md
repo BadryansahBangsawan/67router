@@ -463,10 +463,6 @@ const config: SkillConfig = {
 | Koodin suoritus | `eval_code` (eristetty JavaScript/Python)  | HYBRID |
 | Järjestelmä     | `execute_command` (eristetty CLI-suoritus) | MANUAL |
 
-### Mukautetun taidon lisääminen
-
-Katso ohjeet mukautetun taidon lisäämiseen liitännäisjärjestelmän kautta dokumentista [Liitännäis-SDK:n ja taitojen integrointi](./PLUGIN_SDK.md).
-
 ---
 
 ## Katso myös

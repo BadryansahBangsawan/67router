@@ -2143,26 +2143,6 @@ Consultez [Framework de compétences](../frameworks/SKILLS.md) pour plus de dét
 
 ---
 
-## Plugins
-
-Gérez les plugins 67router (extensions tierces).
-
-| Méthode | Chemin                             | Description                               |
-| ------- | ---------------------------------- | ----------------------------------------- |
-| GET     | `/api/plugins`                     | Répertorier les plugins installés         |
-| POST    | `/api/plugins/marketplace/install` | Installer un plugin depuis la marketplace |
-| DELETE  | `/api/plugins/[name]`              | Désinstaller un plugin                    |
-| POST    | `/api/plugins/[name]/activate`     | Activer un plugin                         |
-| POST    | `/api/plugins/[name]/deactivate`   | Désactiver un plugin                      |
-| GET     | `/api/plugins/[name]/config`       | Obtenir la configuration du plugin        |
-| PUT     | `/api/plugins/[name]/config`       | Mettre à jour la configuration du plugin  |
-
-**Authentification :** nécessite une session de gestion.
-
-Consultez [Framework de plugins](../frameworks/PLUGIN_SDK.md) pour plus de détails.
-
----
-
 ## Routage fantôme
 
 La comparaison fantôme / A-B des fournisseurs **ne constitue pas une interface REST autonome** — elle est configurée au moyen du routage combiné (consultez [Combinaison automatique](../routing/AUTO-COMBO.md)). Les métriques de comparaison propres à chaque combinaison sont fournies par `GET /api/combos/metrics`.

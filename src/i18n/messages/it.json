@@ -1032,7 +1032,6 @@
     "configurationSection": "Configurazione",
     "aiFeaturesSection": "Funzionalità IA",
     "mcp": "MCP",
-    "plugins": "Plugin",
     "apiEndpoints": "Endpoint API",
     "analyticsSearch": "Ricerca",
     "analyticsUtilization": "Utilizzo",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Registro delle skill della sandbox",
     "agentSkillsSubtitle": "Registro delle skill A2A",
     "mcpSubtitle": "Controlli del server MCP",
-    "pluginsSubtitle": "Marketplace dei plugin e installazioni",
     "mediaSubtitle": "File multimediali memorizzati nella cache",
     "settingsSubtitle": "Tutte le impostazioni",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Classifica",
     "limits": "Limiti",
     "profile": "Profilo",
-    "plugins": "Plugin",
     "providerStats": "Statistiche provider",
     "new": "Nuovo",
     "quota": "Quota",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Impossibile rimuovere questo pool.",
     "dismiss": "Chiudi"
   },
-  "plugins": {
-    "title": "Plugin",
-    "description": "Installa e gestisci i plugin per estendere le funzionalità di 67router",
-    "loading": "Caricamento dei plugin...",
-    "scanning": "Scansione...",
-    "scanForPlugins": "Cerca plugin",
-    "noPlugins": "Nessun plugin installato",
-    "noPluginsDescription": "Inserisci le directory dei plugin in ~/.omniroute/plugins/ e fai clic su Cerca.",
-    "activate": "Attiva",
-    "deactivate": "Disattiva",
-    "uninstall": "Disinstalla",
-    "uninstallConfirm": "Disinstallare il plugin \"{name}\"?",
-    "pluginScanComplete": "Scansione dei plugin completata",
-    "pluginScanFailed": "Scansione dei plugin non riuscita",
-    "activated": "{name} attivato",
-    "deactivated": "{name} disattivato",
-    "activateFailed": "Impossibile attivare {name}",
-    "deactivateFailed": "Impossibile disattivare {name}",
-    "uninstalled": "{name} disinstallato",
-    "uninstallFailed": "Impossibile disinstallare {name}",
-    "configure": "Configura: {name}",
-    "configurePlugin": "Configura",
-    "noConfigSettings": "Questo plugin non dispone di impostazioni configurabili.",
-    "saving": "Salvataggio...",
-    "saveConfiguration": "Salva configurazione",
-    "configurationSaved": "Configurazione salvata",
-    "saveConfigurationFailed": "Impossibile salvare la configurazione",
-    "pluginNotFound": "Plugin non trovato",
-    "version": "Versione",
-    "author": "Autore",
-    "description_label": "Descrizione",
-    "status": "Stato",
-    "enabled": "Attivato",
-    "disabled": "Disattivato",
-    "installedTab": "Installato",
-    "marketplaceTab": "Marketplace",
-    "marketplaceUrlLabel": "URL del marketplace personalizzato",
-    "marketplaceUrlPlaceholder": "Lascia vuoto per il registro ufficiale di Omniroute",
-    "saveMarketplaceUrl": "Salva e ricarica",
-    "marketplaceUrlSaved": "URL del marketplace aggiornato",
-    "marketplaceEmpty": "Nessun plugin trovato nel marketplace.",
-    "marketplaceInstallComingSoon": "Le installazioni dal marketplace saranno presto disponibili.",
-    "verified": "Verificato",
-    "install": "Installa",
-    "installedFromMarketplace": "Plugin {name} installato!",
-    "hooks": "Hook"
-  },
   "quotaPlans": {
     "title": "Piani e quote",
     "description": "Configura i piani di quota per provider — dimensioni (%, richieste, token, $) e finestre temporali",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Connettiti al server MCP di 67router (107 strumenti, 3 trasporti: SSE/stdio/HTTP). Copre routing, cache, compressione, memoria, skill, provider e strumenti di audit su 32 ambiti di autorizzazione."
+        "description": "Connettiti al server MCP di 67router (99 strumenti, 3 trasporti: SSE/stdio/HTTP). Copre routing, cache, compressione, memoria, skill, provider e strumenti di audit su 30 ambiti di autorizzazione."
       },
       "omni-agents-a2a": {
         "name": "Agenti e protocollo A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Valutazioni",
         "description": "Crea ed esegui suite di valutazione, monitora l'avanzamento dei benchmark in tempo reale, visualizza le schede di valutazione, confronta le prestazioni dei modelli e integra le esecuzioni di valutazione con i flussi di lavoro CI dalla CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Plugin, skill e memoria",
-        "description": "Gestisci le Omni Skill (elenca, installa, testa, rimuovi), i plugin (crea, configura) e la memoria persistente (cerca, aggiungi, cancella) dalla CLI."
       },
       "cli-setup": {
         "name": "CLI: Configurazione e impostazioni",

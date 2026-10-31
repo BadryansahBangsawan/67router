@@ -414,8 +414,6 @@ Kowane kayan aiki yana buƙatar takamaiman scopes:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                               |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                        |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                          |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                      |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                         |
 | `read:obsidian`       | Kayan aikin karantawa 13 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | Kayan aikin rubutawa 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                       |
@@ -573,7 +571,6 @@ Yi amfani da dashboard ko REST endpoints na `/api/mcp/audit` da `/api/mcp/audit/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ma'anar kayan aikin ƙwarewa (kayan aiki 4)                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Ma'anar kayan aikin tushen mahallin Notion (kayan aiki 6)                          |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Ma'anar kayan aikin mayar da abu tamkar wasa (kayan aiki 8)                        |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Kayan aikin rajista da sarrafa plugin (kayan aiki 8)                               |
 | `src/app/api/mcp/status/route.ts`                                        | Mashigar `/api/mcp/status`                                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | Mashigar `/api/mcp/tools`                                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | Hanyar jigilar SSE ta `/api/mcp/sse`                                               |

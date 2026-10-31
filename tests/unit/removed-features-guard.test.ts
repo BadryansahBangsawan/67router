@@ -94,6 +94,19 @@ const REMOVED_PATHS: string[] = [
   "src/app/(dashboard)/dashboard/endpoint/components/A2ADashboard.tsx",
   "src/app/(dashboard)/dashboard/audit/A2aAuditTab.tsx",
   "bin/cli/commands/a2a.mjs",
+  // plugins
+  "src/lib/plugins",
+  "src/lib/db/plugins.ts",
+  "src/lib/db/pluginMetrics.ts",
+  "src/lib/modelValidation/pluginFence.ts",
+  "src/app/api/plugins",
+  "src/app/(dashboard)/dashboard/plugins",
+  "open-sse/handlers/chatCore/pluginRequestGate.ts",
+  "open-sse/handlers/chatCore/pluginOnRequest.ts",
+  "open-sse/handlers/chatCore/pluginOnResponse.ts",
+  "open-sse/mcp-server/tools/pluginTools.ts",
+  "bin/cli/commands/plugin.mjs",
+  "bin/cli/plugins.mjs",
 ];
 
 const FORBIDDEN_IMPORTS: RegExp[] = [
@@ -163,6 +176,15 @@ const FORBIDDEN_IMPORTS: RegExp[] = [
   /\bA2A_SKILL_HANDLERS\b|\bexecuteA2ATaskWithState\b/,
   /\bA2ADashboard\b|\bA2aAuditTab\b/,
   /\bregisterA2a\b|commands\/a2a\.mjs/,
+  // plugins
+  /lib\/plugins\//,
+  /db\/(plugins|pluginMetrics)\b/,
+  /app\/api\/plugins\b/,
+  /dashboard\/plugins\b/,
+  /chatCore\/plugin(RequestGate|OnRequest|OnResponse)/,
+  /\bpluginTools\b/,
+  /\bOMNIROUTE_PLUGINS_DIR\b/,
+  /cli\/plugins\.mjs|commands\/plugin\.mjs/,
 ];
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

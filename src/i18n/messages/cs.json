@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfigurace",
     "aiFeaturesSection": "Funkce AI",
     "mcp": "MCP",
-    "plugins": "Pluginy",
     "apiEndpoints": "Koncové body API",
     "analyticsSearch": "Vyhledávání",
     "analyticsUtilization": "Využití",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Registr dovedností sandboxu",
     "agentSkillsSubtitle": "Registr dovedností A2A",
     "mcpSubtitle": "Ovládání serveru MCP",
-    "pluginsSubtitle": "Tržiště a instalace pluginů",
     "mediaSubtitle": "Mediální soubory v mezipaměti",
     "settingsSubtitle": "Všechna nastavení",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Žebříček",
     "limits": "Limity",
     "profile": "Profil",
-    "plugins": "Pluginy",
     "providerStats": "Statistiky poskytovatelů",
     "new": "Nové",
     "quota": "Kvóta",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Tento fond se nepodařilo odebrat.",
     "dismiss": "Zavřít"
   },
-  "plugins": {
-    "title": "Pluginy",
-    "description": "Instalujte a spravujte pluginy rozšiřující funkce 67router",
-    "loading": "Načítání pluginů...",
-    "scanning": "Vyhledávání...",
-    "scanForPlugins": "Vyhledat pluginy",
-    "noPlugins": "Nejsou nainstalovány žádné pluginy",
-    "noPluginsDescription": "Umístěte adresáře pluginů do ~/.omniroute/plugins/ a klikněte na Vyhledat.",
-    "activate": "Aktivovat",
-    "deactivate": "Deaktivovat",
-    "uninstall": "Odinstalovat",
-    "uninstallConfirm": "Odinstalovat plugin „{name}“?",
-    "pluginScanComplete": "Vyhledávání pluginů dokončeno",
-    "pluginScanFailed": "Vyhledávání pluginů se nezdařilo",
-    "activated": "Plugin {name} byl aktivován",
-    "deactivated": "Plugin {name} byl deaktivován",
-    "activateFailed": "Plugin {name} se nepodařilo aktivovat",
-    "deactivateFailed": "Plugin {name} se nepodařilo deaktivovat",
-    "uninstalled": "Plugin {name} byl odinstalován",
-    "uninstallFailed": "Plugin {name} se nepodařilo odinstalovat",
-    "configure": "Konfigurovat: {name}",
-    "configurePlugin": "Konfigurovat",
-    "noConfigSettings": "Tento plugin nemá žádná konfigurovatelná nastavení.",
-    "saving": "Ukládání...",
-    "saveConfiguration": "Uložit konfiguraci",
-    "configurationSaved": "Konfigurace byla uložena",
-    "saveConfigurationFailed": "Konfiguraci se nepodařilo uložit",
-    "pluginNotFound": "Plugin nebyl nalezen",
-    "version": "Verze",
-    "author": "Autor",
-    "description_label": "Popis",
-    "status": "Stav",
-    "enabled": "Povoleno",
-    "disabled": "Zakázáno",
-    "installedTab": "Nainstalováno",
-    "marketplaceTab": "Tržiště",
-    "marketplaceUrlLabel": "Vlastní URL pro Marketplace",
-    "marketplaceUrlPlaceholder": "Ponechte prázdné pro oficiální registr Omniroute",
-    "saveMarketplaceUrl": "Uložit a znovu načíst",
-    "marketplaceUrlSaved": "URL pro Marketplace byla aktualizována",
-    "marketplaceEmpty": "V Marketplace nebyly nalezeny žádné pluginy.",
-    "marketplaceInstallComingSoon": "Instalace z Marketplace budou brzy k dispozici.",
-    "verified": "Ověřeno",
-    "install": "Instalovat",
-    "installedFromMarketplace": "Plugin {name} byl nainstalován!",
-    "hooks": "Hooky"
-  },
   "quotaPlans": {
     "title": "Plány a kvóty",
     "description": "Konfigurujte plány kvót podle poskytovatele — dimenze (%, požadavky, tokeny, $) a časová okna",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP server",
-        "description": "Připojte se k MCP serveru 67router (107 nástrojů, 3 přenosy: SSE/stdio/HTTP). Zahrnuje směrování, mezipaměť, kompresi, paměť, dovednosti, poskytovatele a auditní nástroje napříč 32 rozsahy oprávnění."
+        "description": "Připojte se k MCP serveru 67router (99 nástrojů, 3 přenosy: SSE/stdio/HTTP). Zahrnuje směrování, mezipaměť, kompresi, paměť, dovednosti, poskytovatele a auditní nástroje napříč 30 rozsahy oprávnění."
       },
       "omni-agents-a2a": {
         "name": "Agenti a protokol A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Evaluace",
         "description": "Vytvářejte a spouštějte evaluační sady, sledujte průběh benchmarků v reálném čase, prohlížejte výsledkové listiny, porovnávejte výkon modelů a integrujte běhy evaluací s pracovními postupy CI z CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Pluginy, dovednosti a paměť",
-        "description": "Spravujte Omni Skills (výpis, instalace, testování, odebrání), pluginy (vytvoření, konfigurace) a trvalou paměť (vyhledávání, přidání, vymazání) z CLI."
       },
       "cli-setup": {
         "name": "CLI: Nastavení a konfigurace",

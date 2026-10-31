@@ -1032,7 +1032,6 @@
     "configurationSection": "Konfiguráció",
     "aiFeaturesSection": "MI-funkciók",
     "mcp": "MCP",
-    "plugins": "Bővítmények",
     "apiEndpoints": "API-végpontok",
     "analyticsSearch": "Keresés",
     "analyticsUtilization": "Kihasználtság",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "Sandbox-készségnyilvántartás",
     "agentSkillsSubtitle": "A2A-készségregiszter",
     "mcpSubtitle": "MCP-kiszolgáló vezérlése",
-    "pluginsSubtitle": "Bővítmény-piactér és telepítések",
     "mediaSubtitle": "Gyorsítótárazott médiafájlok",
     "settingsSubtitle": "Összes beállítás",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "Ranglista",
     "limits": "Korlátok",
     "profile": "Profil",
-    "plugins": "Bővítmények",
     "providerStats": "Szolgáltatói statisztikák",
     "new": "Új",
     "quota": "Kvóta",
@@ -11455,53 +11452,6 @@
     "removeFailed": "Nem sikerült eltávolítani ezt a készletet.",
     "dismiss": "Bezárás"
   },
-  "plugins": {
-    "title": "Bővítmények",
-    "description": "Bővítmények telepítése és kezelése a 67router funkcióinak kibővítéséhez",
-    "loading": "Bővítmények betöltése...",
-    "scanning": "Keresés...",
-    "scanForPlugins": "Bővítmények keresése",
-    "noPlugins": "Nincsenek telepített bővítmények",
-    "noPluginsDescription": "Helyezze a bővítménykönyvtárakat a ~/.omniroute/plugins/ könyvtárba, majd kattintson a Keresés gombra.",
-    "activate": "Aktiválás",
-    "deactivate": "Deaktiválás",
-    "uninstall": "Eltávolítás",
-    "uninstallConfirm": "Eltávolítja a(z) „{name}” bővítményt?",
-    "pluginScanComplete": "A bővítmények keresése befejeződött",
-    "pluginScanFailed": "A bővítmények keresése sikertelen",
-    "activated": "{name} aktiválva",
-    "deactivated": "{name} deaktiválva",
-    "activateFailed": "A(z) {name} aktiválása sikertelen",
-    "deactivateFailed": "A(z) {name} deaktiválása sikertelen",
-    "uninstalled": "{name} eltávolítva",
-    "uninstallFailed": "Nem sikerült eltávolítani: {name}",
-    "configure": "Konfigurálás: {name}",
-    "configurePlugin": "Konfigurálás",
-    "noConfigSettings": "Ehhez a bővítményhez nincsenek konfigurálható beállítások.",
-    "saving": "Mentés...",
-    "saveConfiguration": "Konfiguráció mentése",
-    "configurationSaved": "Konfiguráció mentve",
-    "saveConfigurationFailed": "Nem sikerült menteni a konfigurációt",
-    "pluginNotFound": "A bővítmény nem található",
-    "version": "Verzió",
-    "author": "Szerző",
-    "description_label": "Leírás",
-    "status": "Állapot",
-    "enabled": "Engedélyezve",
-    "disabled": "Letiltva",
-    "installedTab": "Telepítve",
-    "marketplaceTab": "Piactér",
-    "marketplaceUrlLabel": "Egyéni Marketplace URL",
-    "marketplaceUrlPlaceholder": "Hagyd üresen a hivatalos Omniroute registry használatához",
-    "saveMarketplaceUrl": "Mentés és újratöltés",
-    "marketplaceUrlSaved": "Marketplace URL frissítve",
-    "marketplaceEmpty": "Nem találhatók bővítmények a Marketplace-en.",
-    "marketplaceInstallComingSoon": "A Marketplace-telepítések hamarosan elérhetők lesznek.",
-    "verified": "Ellenőrzött",
-    "install": "Telepítés",
-    "installedFromMarketplace": "A(z) {name} bővítmény telepítve!",
-    "hooks": "Hookok"
-  },
   "quotaPlans": {
     "title": "Csomagok és kvóták",
     "description": "Kvótacsomagok konfigurálása szolgáltatónként — dimenziók (%, kérések, tokenek, $) és időablakok",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "MCP-szerver",
-        "description": "Csatlakozás az 67router MCP-szerverhez (107 eszköz, 3 transzport: SSE/stdio/HTTP). Lefedi az útvonalválasztást, a gyorsítótárat, a tömörítést, a memóriát, a képességeket, a szolgáltatókat és az audit eszközöket 32 jogosultsági körben."
+        "description": "Csatlakozás az 67router MCP-szerverhez (99 eszköz, 3 transzport: SSE/stdio/HTTP). Lefedi az útvonalválasztást, a gyorsítótárat, a tömörítést, a memóriát, a képességeket, a szolgáltatókat és az audit eszközöket 30 jogosultsági körben."
       },
       "omni-agents-a2a": {
         "name": "Ágensek és A2A protokoll",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: Kiértékelések",
         "description": "Hozzon létre és futtasson kiértékelési csomagokat, kövesse élőben a benchmarkok előrehaladását, tekintse meg az eredménylapokat, hasonlítsa össze a modellek teljesítményét, és integrálja a kiértékelési futtatásokat a CI-munkafolyamatokba a CLI-ből."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: Bővítmények, skillek és memória",
-        "description": "Kezelje az Omni Skilleket (listázás, telepítés, tesztelés, eltávolítás), a bővítményeket (létrehozás, konfigurálás) és a perzisztens memóriát (keresés, hozzáadás, törlés) a CLI-ből."
       },
       "cli-setup": {
         "name": "CLI: Beállítás és konfiguráció",

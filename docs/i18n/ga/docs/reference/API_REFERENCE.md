@@ -2153,26 +2153,6 @@ Féach [Creat Scileanna](../frameworks/SKILLS.md) chun na sonraí iomlána a fh�
 
 ---
 
-## Breiseáin
-
-Bainistigh breiseáin 67router (eisínteachtaí tríú páirtí).
-
-| Modh   | Conair                             | Cur Síos                           |
-| ------ | ---------------------------------- | ---------------------------------- |
-| GET    | `/api/plugins`                     | Liostaigh na breiseáin shuiteáilte |
-| POST   | `/api/plugins/marketplace/install` | Suiteáil breiseán ón margadh       |
-| DELETE | `/api/plugins/[name]`              | Díshuiteáil breiseán               |
-| POST   | `/api/plugins/[name]/activate`     | Gníomhachtaigh breiseán            |
-| POST   | `/api/plugins/[name]/deactivate`   | Díghníomhachtaigh breiseán         |
-| GET    | `/api/plugins/[name]/config`       | Faigh cumraíocht breiseáin         |
-| PUT    | `/api/plugins/[name]/config`       | Nuashonraigh cumraíocht breiseáin  |
-
-**Fíordheimhniú:** Teastaíonn seisiún bainistíochta.
-
-Féach [Creat Breiseán](../frameworks/PLUGIN_SDK.md) chun na sonraí iomlána a fháil.
-
----
-
 ## Ródú Scátha
 
 **Ní dromchla REST neamhspleách é** comparáid scátha / A-B idir soláthraithe — cumraítear é trí ródú teaglama (féach [Teaglama Uathoibríoch](../routing/AUTO-COMBO.md)). Soláthraíonn `GET /api/combos/metrics` méadrachtaí comparáide do gach teaglama.

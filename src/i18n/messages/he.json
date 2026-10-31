@@ -1032,7 +1032,6 @@
     "configurationSection": "הגדרות",
     "aiFeaturesSection": "תכונות AI",
     "mcp": "MCP",
-    "plugins": "תוספים",
     "apiEndpoints": "נקודות קצה של API",
     "analyticsSearch": "חיפוש",
     "analyticsUtilization": "ניצולת",
@@ -1129,7 +1128,6 @@
     "omniSkillsSubtitle": "מאגר מיומנויות Sandbox",
     "agentSkillsSubtitle": "מאגר מיומנויות A2A",
     "mcpSubtitle": "בקרות לשרתי MCP",
-    "pluginsSubtitle": "חנות תוספים והתקנות",
     "mediaSubtitle": "קובצי מדיה במטמון",
     "settingsSubtitle": "כל ההגדרות",
     "settingsGeneralSubtitle": "App basics",
@@ -1486,7 +1484,6 @@
     "leaderboard": "לוח מובילים",
     "limits": "מגבלות",
     "profile": "פרופיל",
-    "plugins": "תוספים",
     "providerStats": "סטטיסטיקות ספקים",
     "new": "חדש",
     "quota": "מכסה",
@@ -11455,53 +11452,6 @@
     "removeFailed": "לא ניתן להסיר את המאגר הזה.",
     "dismiss": "סגירה"
   },
-  "plugins": {
-    "title": "תוספים",
-    "description": "התקנה וניהול של תוספים להרחבת הפונקציונליות של 67router",
-    "loading": "התוספים נטענים...",
-    "scanning": "מתבצעת סריקה...",
-    "scanForPlugins": "סריקה לאיתור תוספים",
-    "noPlugins": "לא מותקנים תוספים",
-    "noPluginsDescription": "יש למקם תיקיות של תוספים בתוך ~/.omniroute/plugins/ וללחוץ על סריקה.",
-    "activate": "הפעלה",
-    "deactivate": "השבתה",
-    "uninstall": "הסרת התקנה",
-    "uninstallConfirm": "להסיר את התוסף \"{name}\"?",
-    "pluginScanComplete": "סריקת התוספים הושלמה",
-    "pluginScanFailed": "סריקת התוספים נכשלה",
-    "activated": "{name} הופעל",
-    "deactivated": "{name} הושבת",
-    "activateFailed": "הפעלת {name} נכשלה",
-    "deactivateFailed": "השבתת {name} נכשלה",
-    "uninstalled": "התקנת {name} הוסרה",
-    "uninstallFailed": "הסרת {name} נכשלה",
-    "configure": "הגדרת תצורה: {name}",
-    "configurePlugin": "הגדרת תצורה",
-    "noConfigSettings": "לתוסף זה אין הגדרות הניתנות להתאמה.",
-    "saving": "שומר...",
-    "saveConfiguration": "שמירת התצורה",
-    "configurationSaved": "התצורה נשמרה",
-    "saveConfigurationFailed": "שמירת התצורה נכשלה",
-    "pluginNotFound": "התוסף לא נמצא",
-    "version": "גרסה",
-    "author": "מחבר",
-    "description_label": "תיאור",
-    "status": "מצב",
-    "enabled": "מופעל",
-    "disabled": "מושבת",
-    "installedTab": "מותקן",
-    "marketplaceTab": "מרקטפלייס",
-    "marketplaceUrlLabel": "כתובת URL מותאמת אישית למרקטפלייס",
-    "marketplaceUrlPlaceholder": "השאר ריק עבור המאגר הרשמי של Omniroute",
-    "saveMarketplaceUrl": "שמירה וטעינה מחדש",
-    "marketplaceUrlSaved": "כתובת ה-URL של המרקטפלייס עודכנה",
-    "marketplaceEmpty": "לא נמצאו תוספים במרקטפלייס.",
-    "marketplaceInstallComingSoon": "התקנות מהמרקטפלייס יהיו זמינות בקרוב.",
-    "verified": "מאומת",
-    "install": "התקנה",
-    "installedFromMarketplace": "התוסף {name} הותקן!",
-    "hooks": "נקודות חיבור"
-  },
   "quotaPlans": {
     "title": "תוכניות ומכסות",
     "description": "הגדר תוכניות מכסה לכל ספק — ממדים (%, בקשות, טוקנים, $) וחלונות זמן",
@@ -12142,7 +12092,7 @@
       },
       "omni-mcp": {
         "name": "שרת MCP",
-        "description": "התחבר לשרת ה-MCP של 67router (‏107 כלים, 3 תעבורות: SSE/stdio/HTTP). מכסה ניתוב, מטמון, דחיסה, זיכרון, מיומנויות, ספקים וכלי ביקורת על פני 32 טווחי הרשאות."
+        "description": "התחבר לשרת ה-MCP של 67router (‏99 כלים, 3 תעבורות: SSE/stdio/HTTP). מכסה ניתוב, מטמון, דחיסה, זיכרון, מיומנויות, ספקים וכלי ביקורת על פני 30 טווחי הרשאות."
       },
       "omni-agents-a2a": {
         "name": "סוכנים ופרוטוקול A2A",
@@ -12227,10 +12177,6 @@
       "cli-eval": {
         "name": "CLI: הערכות",
         "description": "צור והרץ ערכות הערכה, צפה בהתקדמות ביצועי ייחוס (benchmarks) בזמן אמת, הצג כרטיסי ניקוד, השווה ביצועי מודלים ושלווה הרצות הערכה עם תהליכי עבודה של CI מה-CLI."
-      },
-      "cli-plugins-skills": {
-        "name": "CLI: תוספים, מיומנויות וזיכרון",
-        "description": "נהל מיומנויות Omni (הצגה, התקנה, בדיקה, הסרה), תוספים (יצירה, הגדרה) וזיכרון מתמיד (חיפוש, הוספה, ניקוי) מה-CLI."
       },
       "cli-setup": {
         "name": "CLI: הגדרה ותצורה",

@@ -588,13 +588,6 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     icon: "auto_fix_high",
   },
   MCP_ITEM,
-  {
-    id: "plugins",
-    href: "/dashboard/plugins",
-    i18nKey: "plugins",
-    subtitleKey: "pluginsSubtitle",
-    icon: "extension",
-  },
 ];
 
 const GAMIFICATION_GROUP: SidebarItemGroup = {
