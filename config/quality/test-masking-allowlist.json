@@ -46,7 +46,7 @@
         "src/lib/a2a/taskExecution.ts",
         "src/app/.well-known/agent.json"
       ],
-      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay; this suite's TaskManager-only cases (expired completed/submitted tasks, cleanupExpired keeping cancelled tasks) moved to tests/unit/a2a-task-store-kept.test.ts."
     },
     "tests/e2e/playground-compare.spec.ts": {
       "sourceRemoved": [
@@ -398,7 +398,7 @@
         "src/lib/a2a/taskExecution.ts",
         "src/app/.well-known/agent.json"
       ],
-      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay; this suite's TaskManager-only cases (expired completed/submitted tasks, cleanupExpired keeping cancelled tasks) moved to tests/unit/a2a-task-store-kept.test.ts."
     },
     "tests/unit/ui/evals-tab-smoke.test.tsx": {
       "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],

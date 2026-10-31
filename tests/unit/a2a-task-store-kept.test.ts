@@ -42,3 +42,72 @@ test("Conductor still mirrors its tasks into the A2A task store", () => {
   const bridge = read("src/lib/conductor/bridge.ts") + read("src/lib/conductor/boot.ts");
   assert.match(bridge, /a2a/i, "Conductor no longer references the A2A task store");
 });
+
+// ── TaskManager TTL semantics Conductor relies on ────────────────────────────────────────
+// Conductor-mirrored tasks live in this manager. A terminal task that outlives its TTL must
+// keep its state; only tasks still in flight (submitted/working) may be expired to "failed".
+// These cases came from the removed t09-a2a-lifecycle suite and exercise only kept code.
+
+const noopPersistence = {
+  upsert: () => {},
+  appendEvent: () => {},
+  purge: () => 0,
+};
+
+const ttlManagers: Array<{ destroy(): void }> = [];
+
+async function createManager() {
+  const { A2ATaskManager } = await import("../../src/lib/a2a/taskManager.ts");
+  const tm = new A2ATaskManager(5, noopPersistence as never);
+  ttlManagers.push(tm);
+  return tm;
+}
+
+test.afterEach(() => {
+  while (ttlManagers.length > 0) ttlManagers.pop()?.destroy();
+});
+
+const expire = (task: { expiresAt: string }) => {
+  task.expiresAt = new Date(Date.now() - 1_000).toISOString();
+};
+
+test("an expired completed task stays completed when read back", async () => {
+  const tm = await createManager();
+  const task = tm.createTask({
+    skill: "conductor-cli-claude",
+    messages: [{ role: "user", content: "hello" }],
+  });
+  tm.updateTask(task.id, "working");
+  tm.updateTask(task.id, "completed", [{ type: "text", content: "done" }]);
+  expire(task);
+
+  assert.doesNotThrow(() => tm.getTask(task.id));
+  assert.equal(tm.getTask(task.id)?.state, "completed");
+});
+
+test("an expired submitted task becomes failed without throwing", async () => {
+  const tm = await createManager();
+  const task = tm.createTask({
+    skill: "conductor-cli-claude",
+    messages: [{ role: "user", content: "hello" }],
+  });
+  expire(task);
+
+  assert.doesNotThrow(() => tm.getTask(task.id));
+  assert.equal(tm.getTask(task.id)?.state, "failed");
+});
+
+test("cleanupExpired keeps a cancelled task cancelled", async () => {
+  const tm = await createManager();
+  const task = tm.createTask({
+    skill: "conductor-cli-claude",
+    messages: [{ role: "user", content: "cancel me" }],
+  });
+  tm.updateTask(task.id, "cancelled");
+  expire(task);
+
+  // private in TS only; callable at runtime for this regression test
+  (tm as unknown as { cleanupExpired(): void }).cleanupExpired();
+
+  assert.equal(tm.getTask(task.id)?.state, "cancelled");
+});
