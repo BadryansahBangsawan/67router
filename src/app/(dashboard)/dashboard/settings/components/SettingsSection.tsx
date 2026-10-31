@@ -52,7 +52,8 @@ export function SettingsSection({
               </h2>
             )}
             {description != null && (
-              <p className="mt-0.5 text-[13px] leading-5 text-text-muted">{description}</p>
+              // A <div>, not a <p>: callers pass rich descriptions (several lines, grids).
+              <div className="mt-0.5 text-[13px] leading-5 text-text-muted">{description}</div>
             )}
           </div>
           {action != null && <div className="flex shrink-0 items-center gap-2">{action}</div>}

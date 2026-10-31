@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Card, Toggle } from "@/shared/components";
-import Icon from "@/shared/components/Icon";
 import { useTranslations } from "next-intl";
+import { SettingsSection } from "./SettingsSection";
 import { NumberField } from "./ResilienceFields";
 
 type QuotaPreflightSettings = {
@@ -101,24 +101,13 @@ export default function QuotaPreflightCard() {
   if (!value) return null;
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-4">
-        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted shrink-0">
-          <Icon name="battery_alert" size={20} />
-        </div>
-        <div>
-          <h3 className="text-base font-semibold tracking-[-0.01em]">
-            {tx("quotaPreflightTitle", "Quota Preflight Cutoff")}
-          </h3>
-          <p className="text-xs text-text-muted">
-            {tx(
-              "quotaPreflightSubtitle",
-              "Skip accounts that are out of quota before sending the request upstream"
-            )}
-          </p>
-        </div>
-      </div>
-
+    <SettingsSection
+      title={tx("quotaPreflightTitle", "Quota Preflight Cutoff")}
+      description={tx(
+        "quotaPreflightSubtitle",
+        "Skip accounts that are out of quota before sending the request upstream"
+      )}
+    >
       <div className="flex flex-col gap-4">
         <div className="flex items-start sm:items-center justify-between gap-4">
           <div className="flex-1 min-w-0">
@@ -177,6 +166,6 @@ export default function QuotaPreflightCard() {
           </>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

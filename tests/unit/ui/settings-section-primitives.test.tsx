@@ -49,6 +49,36 @@ describe("SettingsSection", () => {
     expect(section.querySelector('[data-slot="settings-section-card"]')).toBeTruthy();
   });
 
+  it("accepts a rich description (paragraphs, grids) without nesting <p> in <p>", () => {
+    const { container } = render(
+      <SettingsSection
+        title="Request queue"
+        description={
+          <>
+            <p>First line</p>
+            <div>Scope: global</div>
+          </>
+        }
+      >
+        <p>body</p>
+      </SettingsSection>
+    );
+    expect(screen.getByText("First line")).toBeTruthy();
+    expect(screen.getByText("Scope: global")).toBeTruthy();
+    expect(container.querySelector("p p")).toBeNull();
+    expect(container.querySelector("p div")).toBeNull();
+  });
+
+  it("renders nothing in the header-right slot when action is null", () => {
+    const { container } = render(
+      <SettingsSection title="Background degradation" action={null}>
+        <p>body</p>
+      </SettingsSection>
+    );
+    const header = container.querySelector("h2")?.parentElement?.parentElement as HTMLElement;
+    expect(header.children).toHaveLength(1);
+  });
+
   it("omits the card when there are no children (header-only section)", () => {
     const { container } = render(<SettingsSection title="Semantic cache" />);
     expect(container.querySelector('[data-slot="settings-section-card"]')).toBeNull();

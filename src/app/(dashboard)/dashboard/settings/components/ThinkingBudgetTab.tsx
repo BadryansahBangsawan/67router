@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { RadioGroup, RadioGroupItem } from "@omniroute/ui-kit/radio-group";
 import { Slider } from "@omniroute/ui-kit/slider";
-import { Card } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
+import { SettingsSection } from "./SettingsSection";
 
 // Dedicated i18n keys — do NOT reuse settings.auto / autoDesc (those are routing
 // "Auto Combo" strings and previously made Thinking Budget look like a routing mode).
@@ -89,25 +89,22 @@ export default function ThinkingBudgetTab() {
   };
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-5">
-        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
-          <Icon name="psychology" size={20} />
-        </div>
-        <div>
-          <h3 className="text-base font-semibold tracking-[-0.01em]">{t("thinkingBudgetTitle")}</h3>
-          <p className="text-sm text-text-muted">{t("thinkingBudgetDesc")}</p>
-          <p className="text-xs text-text-muted mt-1 leading-relaxed">
-            {t("thinkingBudgetIndependenceHint")}
-          </p>
-        </div>
-        {status === "saved" && (
-          <span className="ml-auto text-xs font-medium text-success flex items-center gap-1">
+    <SettingsSection
+      title={t("thinkingBudgetTitle")}
+      description={
+        <>
+          <p>{t("thinkingBudgetDesc")}</p>
+          <p className="text-xs mt-1 leading-relaxed">{t("thinkingBudgetIndependenceHint")}</p>
+        </>
+      }
+      action={
+        status === "saved" ? (
+          <span className="text-xs font-medium text-success flex items-center gap-1">
             <Icon name="check_circle" size={14} /> {t("saved")}
           </span>
-        )}
-      </div>
-
+        ) : null
+      }
+    >
       {/* Mode selector */}
       <RadioGroup
         aria-label={t("thinkingBudgetTitle")}
@@ -166,6 +163,6 @@ export default function ThinkingBudgetTab() {
           </RadioGroup>
         </div>
       )}
-    </Card>
+    </SettingsSection>
   );
 }
