@@ -14,15 +14,10 @@
 - [`POST /api/v1/messages`](#post-apiv1messages)
 - [`POST /api/v1/messages/count_tokens`](#post-apiv1messagescounttokens)
 - [`POST /api/v1/responses`](#post-apiv1responses)
-- [`POST /api/v1/embeddings`](#post-apiv1embeddings)
-- [`GET /api/v1/multimodal-embeddings`](#get-apiv1multimodal-embeddings)
-- [`POST /api/v1/multimodal-embeddings`](#post-apiv1multimodal-embeddings)
-- [`POST /api/v1/providers/{provider}/embeddings`](#post-apiv1providersproviderembeddings)
 - [`POST /api/v1/images/generations`](#post-apiv1imagesgenerations)
 - [`POST /api/v1/providers/{provider}/images/generations`](#post-apiv1providersproviderimagesgenerations)
 - [`POST /api/v1/audio/speech`](#post-apiv1audiospeech)
 - [`POST /api/v1/audio/transcriptions`](#post-apiv1audiotranscriptions)
-- [`POST /api/v1/rerank`](#post-apiv1rerank)
 - [`GET /api/v1`](#get-apiv1)
 - [`GET /api/v1/providers/{provider}/models`](#get-apiv1providersprovidermodels)
 - [`GET /api/v1/management/proxy-subscriptions`](#get-apiv1managementproxy-subscriptions)
@@ -256,50 +251,6 @@ curl -X POST http://localhost:20128/api/v1/responses \
   -d '{}'
 ```
 
-### POST /api/v1/embeddings
-
-Create embeddings
-
-```bash
-curl -X POST http://localhost:20128/api/v1/embeddings \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### GET /api/v1/multimodal-embeddings
-
-List embedding models (Jina multimodal-embeddings alias)
-
-```bash
-curl http://localhost:20128/api/v1/multimodal-embeddings \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### POST /api/v1/multimodal-embeddings
-
-Create embeddings (Jina multimodal-embeddings alias)
-
-Same handler as `POST /api/v1/embeddings`. Provided so Jina-compatible clients that call `/v1/multimodal-embeddings` do not receive HTTP 404 `unknown_route`.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/multimodal-embeddings \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/providers/{provider}/embeddings
-
-Create embeddings (provider-specific)
-
-```bash
-curl -X POST http://localhost:20128/api/v1/providers/{provider}/embeddings \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
 ### POST /api/v1/images/generations
 
 Generate images
@@ -343,19 +294,6 @@ Audio-to-text transcription endpoint.
 
 ```bash
 curl -X POST http://localhost:20128/api/v1/audio/transcriptions \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### POST /api/v1/rerank
-
-Rerank documents
-
-Document reranking endpoint.
-
-```bash
-curl -X POST http://localhost:20128/api/v1/rerank \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{}'

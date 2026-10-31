@@ -196,5 +196,3 @@ allowed scopes sourced from `OMNIROUTE_MCP_SCOPES` or the API key's scope contex
 
 - [MCP Server](./MCP-SERVER.md) — transports, scope enforcement, full tool inventory.
 - [Notion Context Source](./NOTION_CONTEXT.md) — the other built-in context source.
-- [Memory System](./MEMORY.md) — persistent conversational memory (complementary
-  context layer, injected automatically rather than tool-fetched).

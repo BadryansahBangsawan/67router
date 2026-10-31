@@ -78,11 +78,10 @@ lastUpdated: 2026-10-18
 7. Document in `docs/frameworks/EMBEDDED-SERVICES.md` (update §1 service table + §4 API reference) and `docs/openapi.yaml`.
 8. Write tests: unit (`tests/unit/services/`), integration (`tests/integration/services/`, gated by `RUN_SERVICES_INT=1`), and update `docs/ops/RELEASE_CHECKLIST.md` smoke section.
 
-## Adding a New Guardrail / Eval / Skill / Webhook event / Log-export destination
+## Adding a New Guardrail / Eval / Webhook event / Log-export destination
 
 - Guardrail: `src/lib/guardrails/` → docs: `docs/security/GUARDRAILS.md`
 - Eval suite: `src/lib/evals/` → docs: `docs/frameworks/EVALS.md`
-- Skill (sandbox): `src/lib/skills/` → docs: `docs/frameworks/SKILLS.md`
 - Log-export destination: add `src/lib/logExport/destinations/<name>.ts` + one line in
   `src/lib/logExport/registry.ts` → docs: `docs/frameworks/LOG-EXPORT.md`. The runner, REST layer
   and dashboard form all read the registry, so nothing else changes.

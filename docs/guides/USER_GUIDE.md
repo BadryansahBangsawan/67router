@@ -23,8 +23,6 @@ Complete guide for configuring providers, creating combos, integrating CLI tools
 - [Advanced Features](#-advanced-features)
 - [Auto-Routing (Zero-config)](#-auto-routing-zero-config)
 - [MCP & A2A Integration](#-mcp--a2a-integration)
-- [Skills System](#-skills-system)
-- [Memory System](#-memory-system)
 - [Cloud Agents](#-cloud-agents)
 - [Programmatic Management](#-programmatic-management)
 - [Internal CLI](#-internal-cli)
@@ -1244,31 +1242,6 @@ Use the SSE URL `http://localhost:20128/api/mcp/sse` and a Bearer API key genera
 ### Scopes
 
 MCP currently defines 32 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory and [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for the JSON-RPC schema.
-
----
-
-## 🧠 Skills System
-
-OmniRoute exposes an extensible **skill framework** (`src/lib/skills/`) so agents and the A2A endpoint can run domain-specific routines (e.g. `code-review`, `summarize`, `extract-facts`, `web-research`).
-
-- **Marketplace UI** — Browse and install skills from **Dashboard → Skills**
-- **Per-key scopes** — Restrict which API keys can invoke which skills
-- **Custom skills** — Drop a TypeScript file in `src/lib/a2a/skills/`, register it, and it becomes immediately invocable over A2A
-
-Full reference: [SKILLS.md](../frameworks/SKILLS.md).
-
----
-
-## 💾 Memory System
-
-OmniRoute persists **long-term conversational memory** with hybrid retrieval:
-
-- **SQLite FTS5** for keyword search across past turns
-- **Qdrant vector store** (optional) for semantic recall
-- **Automatic fact extraction** — entities, preferences, and decisions are summarized after each session and stored in the `memory_facts` table
-- Memories are scoped per API key and per session
-
-Manage memories in **Dashboard → Memory** (search, edit, export, purge). The HTTP surface (`/api/memory/*`) lets agents push and query facts programmatically — see [MEMORY.md](../frameworks/MEMORY.md).
 
 ---
 

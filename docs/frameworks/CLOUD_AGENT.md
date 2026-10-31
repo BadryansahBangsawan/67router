@@ -391,8 +391,6 @@ No Cloud-Agent-specific env vars exist today — every secret lives in the
 
 - [A2A-SERVER.md](./A2A-SERVER.md)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md)
-- [SKILLS.md](./SKILLS.md)
-- [MEMORY.md](./MEMORY.md)
 - Source: `src/lib/cloudAgent/`
 - Routes: `src/app/api/v1/agents/tasks/`, `src/app/api/cloud/`
 - Dashboard: `src/app/(dashboard)/dashboard/cloud-agents/page.tsx`

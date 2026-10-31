@@ -52,18 +52,16 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │       ├── limits/       # Rate limits dashboard
 │   │   │       ├── logs/         # Request, Proxy, Audit, Console logs (tabbed)
 │   │   │       ├── media/        # Image/video/music generation + transcription
-│   │   │       ├── memory/       # Memory system dashboard
 │   │   │       ├── onboarding/   # Onboarding wizard
 │   │   │       ├── playground/   # Model playground (Monaco editor, streaming)
 │   │   │       ├── providers/    # Provider management (OAuth + API key + free)
 │   │   │       ├── search-tools/ # Search tools configuration
 │   │   │       ├── settings/     # Settings tabs (General, Appearance, Security, Routing, Resilience, Advanced)
-│   │   │       ├── skills/       # Skills system dashboard
 │   │   │       ├── translator/   # Format translator + debug tools
 │   │   │       └── usage/        # Usage history
 │   │   ├── api/                  # REST API endpoints (100+ route directories)
-│   │   │   ├── v1/               # OpenAI-compatible API (chat, completions, models, embeddings,
-│   │   │   │                     #   images, audio, videos, music, rerank, search,
+│   │   │   ├── v1/               # OpenAI-compatible API (chat, completions, models,
+│   │   │   │                     #   images, audio, videos, music, search,
 │   │   │   │                     #   responses, messages, registered-keys, quotas, accounts)
 │   │   │   ├── v1beta/           # Gemini-compatible API
 │   │   │   ├── a2a/              # A2A agent management API
@@ -72,8 +70,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │   ├── providers/        # Provider CRUD and batch testing
 │   │   │   ├── models/           # Dashboard model listing and aliases
 │   │   │   ├── combos/           # Combo CRUD (multi-model fallback chains)
-│   │   │   ├── memory/           # Memory system API
-│   │   │   ├── skills/           # Skills system API
 │   │   │   ├── evals/            # Eval runner API
 │   │   │   ├── mcp/              # MCP HTTP transport API
 │   │   │   ├── search/           # Search provider API
@@ -128,25 +124,14 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │   ├── migrationRunner.ts # Schema migration runner
 │   │   │   └── migrations/       # 209 versioned SQL migration files
 │   │   ├── evals/                # Eval runner and scheduler
-│   │   ├── memory/               # Persistent conversational memory
-│   │   │   ├── extraction.ts     # Memory extraction from conversations
-│   │   │   ├── injection.ts      # Memory injection into context
-│   │   │   ├── retrieval.ts      # Memory retrieval/search
-│   │   │   ├── store.ts          # Memory persistence layer
-│   │   │   └── summarization.ts  # Memory summarization
 │   │   ├── oauth/                # OAuth providers, services, and utilities
 │   │   │   ├── constants/        # Default OAuth credentials (overridable via env)
 │   │   │   ├── providers/        # Provider-specific OAuth configs
 │   │   │   ├── services/         # Provider-specific token exchange logic
 │   │   │   └── utils/            # PKCE, callback server, token helpers
 │   │   ├── plugins/              # Plugin system
-│   │   ├── skills/               # Extensible skill framework
-│   │   │   ├── registry.ts       # Skill registration
-│   │   │   ├── executor.ts       # Skill execution engine
-│   │   │   ├── sandbox.ts        # Skill sandbox environment
-│   │   │   ├── builtin/          # Built-in skills
-│   │   │   ├── interception.ts   # Skill request interception
-│   │   │   └── injection.ts      # Skill context injection
+│   │   ├── skills/               # Built-in web_search/web_fetch tool interception + server-owned tool loop
+│   │   │   └── interception.ts   # Built-in tool call interception
 │   │   ├── usage/                # Usage tracking system
 │   │   │   ├── callLogs.ts       # Call log persistence
 │   │   │   ├── costCalculator.ts # Cost calculation engine
@@ -199,17 +184,15 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   ├── handlers/                 # Request handlers per API type (25 handlers)
 │   │   ├── chatCore.ts           # Main chat completions handler
 │   │   ├── responsesHandler.ts   # OpenAI Responses API handler
-│   │   ├── embeddings.ts         # Embedding generation
 │   │   ├── imageGeneration.ts    # Image generation (GPT-Image, FLUX, SD, etc.)
 │   │   ├── videoGeneration.ts    # Video generation
 │   │   ├── musicGeneration.ts    # Music generation
 │   │   ├── audioSpeech.ts        # Text-to-speech
 │   │   ├── audioTranscription.ts # Speech-to-text (Whisper, Deepgram, AssemblyAI)
-│   │   ├── rerank.ts             # Reranking API
 │   │   └── search.ts             # Web search API
 │   ├── mcp-server/               # Built-in MCP server (107 tools, 3 transports: stdio/SSE/streamable-HTTP)
 │   │   ├── server.ts             # MCP server core (tool registration, scope enforcement)
-│   │   ├── tools/                # Tool implementations (advancedTools, memoryTools, skillTools)
+│   │   ├── tools/                # Tool implementations (advancedTools, compressionTools, …)
 │   │   ├── schemas/              # Zod input schemas (tools, audit, a2a)
 │   │   ├── scopeEnforcement.ts   # Scope-based access control (32 scopes)
 │   │   ├── audit.ts              # Tool call audit logging
@@ -262,7 +245,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   ├── i18n/                     # 66-language translated docs
 │   ├── architecture/             # ARCHITECTURE.md, CODEBASE_DOCUMENTATION.md, REPOSITORY_MAP.md, AUTHZ_GUIDE.md, RESILIENCE_GUIDE.md, QUALITY_GATES.md
 │   ├── reference/                # API_REFERENCE.md, PROVIDER_REFERENCE.md, CLI-TOOLS.md
-│   ├── frameworks/               # MCP-SERVER.md (107 tools), A2A-SERVER.md, SKILLS.md, MEMORY.md, CLOUD_AGENT.md, EVALS.md
+│   ├── frameworks/               # MCP-SERVER.md (107 tools), A2A-SERVER.md, CLOUD_AGENT.md, EVALS.md
 │   ├── routing/                  # AUTO-COMBO.md (16-factor scoring), REASONING_REPLAY.md
 │   ├── security/                 # GUARDRAILS.md, COMPLIANCE.md, STEALTH_GUIDE.md, PUBLIC_CREDS.md, ERROR_SANITIZATION.md
 │   ├── guides/                   # USER_GUIDE.md, TROUBLESHOOTING.md, ELECTRON_GUIDE.md, I18N.md
@@ -289,8 +272,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **Provider Icons**: 130+ provider logos via `@lobehub/icons` (SVG) with PNG fallback
 - **Model Auto-Sync**: 24h scheduler refreshes model lists across connected providers
 - **Registered Keys API**: Auto-provision API keys via `POST /api/v1/registered-keys` with quota enforcement
-- **Memory System**: Persistent conversational memory with extraction, injection, retrieval, and summarization
-- **Skills System**: Extensible skill framework with registry, executor, sandbox, built-in and custom skills
 - **Cloud Agents**: Codex Cloud, Cursor, Devin, Jules — autonomous coding agents with task lifecycle management
 - **Guardrails Framework**: Hot-reloadable registry with vision-bridge, pii-masker, prompt-injection (priority-ordered)
 - **MITM Proxy**: Certificate management, DNS handling, and target routing
@@ -325,8 +306,6 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **Playground** — Test any model with Monaco editor, streaming responses
 - **Media** — Image/video/music generation (GPT-Image, FLUX, etc.) + audio transcription (up to 2GB files)
 - **Search Tools** — Search provider configuration and testing
-- **Memory** — Memory system management and visualization
-- **Skills** — Skills framework management and execution
 - **Translator** — Format debugging: playground, chat tester, test bench, live monitor
 - **Settings** — General, Appearance (7 color themes), Security (TLS/CLI fingerprint, IP filter), Routing, Resilience, Advanced
 - **Endpoint** — Unified: Endpoint Proxy, MCP Server, A2A Server, API Endpoints (tabbed)
@@ -335,7 +314,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **API Manager** — API key management with scoped permissions
 
 ### Protocol Support
-- **OpenAI-compatible** — `/v1/chat/completions`, `/v1/models`, `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/transcriptions`, `/v1/audio/speech`, `/v1/rerank`, `/v1/videos/generations`, `/v1/music/generations`
+- **OpenAI-compatible** — `/v1/chat/completions`, `/v1/models`, `/v1/images/generations`, `/v1/audio/transcriptions`, `/v1/audio/speech`, `/v1/videos/generations`, `/v1/music/generations`
 - **Anthropic** — `/v1/messages`, `/v1/messages/count_tokens`
 - **OpenAI Responses** — `/v1/responses`
 - **Gemini** — `/v1beta/models`, `/v1beta/models/{...path}`
@@ -348,13 +327,13 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 ### MCP Server (107 Tools)
 
 107 tools across modules: **42 canonical** (health, combos, quotas, routing, cost, models, cache,
-diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool**, **notion**,
+diagnostics) plus **agentSkill**, **pool**, **notion**,
 **obsidian**, **localCorpus**, **gamification**, and **plugin** modules. Full per-tool inventory:
 `docs/frameworks/MCP-SERVER.md`.
 
 **MCP Auth Scopes (33):** e.g. `read:health`, `read:combos`, `write:combos`, `read:quota`,
 `read:usage`, `read:models`, `execute:completions`, `execute:search`, `write:budget`,
-`write:resilience`, plus memory/skills/pool/plugin scopes — full list in
+`write:resilience`, plus pool/plugin scopes — full list in
 `docs/frameworks/MCP-SERVER.md`.
 
 ### Provider Categories
@@ -383,7 +362,7 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 
 5. **SSE proxy pipeline:** The proxy pipeline is middleware-based: request → auth resolution → rate limiting → circuit breaker → format translation → upstream call → response translation → SSE streaming back to client.
 
-6. **SQLite for persistence:** All state (providers, combos, logs, settings, API keys, memory, skills) stored in a single SQLite database via 147 domain-specific modules. All DB operations go through `src/lib/db/` modules, never raw SQL in routes.
+6. **SQLite for persistence:** All state (providers, combos, logs, settings, API keys) stored in a single SQLite database via 147 domain-specific modules. All DB operations go through `src/lib/db/` modules, never raw SQL in routes.
 
 7. **OAuth with PKCE:** OAuth flows use PKCE for security. Token refresh handled by background job (`tokenHealthCheck.ts`).
 
@@ -392,8 +371,6 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 9. **DB architecture:** `localDb.ts` is a re-export layer only — real logic lives in 147 `src/lib/db/` modules with 209 SQL migrations.
 
 10. **Upstream headers:** Custom headers merged in executors after default auth; same header name replaces executor value. Forbidden header names in `src/shared/constants/upstreamHeaders.ts`.
-
-11. **Memory/Skills cross-cutting systems:** Memory and Skills affect the MCP tools, request pipeline, and A2A skills. Memory provides persistent context across sessions; Skills provide extensible tool execution with sandbox isolation.
 
 12. **Domain policy engine:** `src/domain/` contains policy engine modules (policyEngine, comboResolver, costRules, degradation, fallbackPolicy, lockoutPolicy, modelAvailability, providerExpiration, quotaCache, configAudit) that govern routing decisions independently from the pipeline.
 
@@ -413,7 +390,6 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 9. Response translation: provider → OpenAI format
 10. omniModel tag sanitization (strip internal tags)
 11. SSE streaming back to client
-12. Memory extraction (if memory system enabled)
 13. Usage logging and cost calculation
 
 ### OAuth Flow
@@ -449,10 +425,6 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 
 12. **Pricing data** syncs from LiteLLM via `src/lib/pricingSync.ts`. Use `sync_pricing` MCP tool or API endpoint.
 
-13. **Memory system** in `src/lib/memory/` provides extraction, injection, retrieval, summarization, and persistent store. Exposed via MCP memory tools and `/api/memory/ API.
-
-14. **Skills system** in `src/lib/skills/` provides registry, executor, sandbox isolation, built-in skills, custom skill support, request interception, and context injection. Exposed via MCP skill tools and `/api/skills/` API.
-
 15. **Zod v4** is used for all validation. Import from `zod` package. Provider schemas validated at module load time.
 
 16. **Context Relay** strategy (`context-relay`) is split across two layers: `combo.ts` decides if a handoff should be generated after a successful turn; `chat.ts` injects the handoff only after account resolution. Handoff data lives in `context_handoffs` SQLite table. Config: `handoffThreshold`, `handoffModel`, `handoffProviders`.
@@ -477,7 +449,7 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 - **375-provider catalog** with 150+ free tiers, one-click account imports, and bulk key add
 - **20 routing strategies** — including `fusion` (parallel panel + judge synthesis), `pipeline`, `reset-aware`, `reset-window`, `headroom`, and `context-relay`
 - **16-factor Auto-Combo scoring** with bandit exploration and progressive cooldown
-- **MCP server expanded to 107 tools / 32 scopes** (canonical + memory/skill/agentSkill/githubSkill/pool/notion/obsidian/localCorpus/gamification/plugin modules)
+- **MCP server expanded to 107 tools / 32 scopes** (canonical + agentSkill/pool/notion/obsidian/localCorpus/gamification/plugin modules)
 - **Cloud Agents** (Codex Cloud, Cursor, Devin, Jules), **Guardrails**, **Evals**, **Webhooks**, **Compliance** frameworks
 - **Embedded services** manager (install/start/stop bundled services from the dashboard)
 - **Prompt compression** (RTK + Caveman codecs) saving up to ~95% tokens on eligible traffic
@@ -498,6 +470,6 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 - **Protocols**: `docs/frameworks/MCP-SERVER.md`, `docs/frameworks/A2A-SERVER.md`, `docs/frameworks/AGENT_PROTOCOLS_GUIDE.md`, `docs/frameworks/CLOUD_AGENT.md`
 - **Routing & resilience**: `docs/routing/AUTO-COMBO.md`, `docs/architecture/RESILIENCE_GUIDE.md`
 - **Security**: `docs/architecture/AUTHZ_GUIDE.md`, `docs/security/GUARDRAILS.md`, `docs/security/COMPLIANCE.md`, `docs/security/STEALTH_GUIDE.md`
-- **Extensibility**: `docs/frameworks/SKILLS.md`, `docs/frameworks/MEMORY.md`, `docs/frameworks/EVALS.md`, `docs/routing/REASONING_REPLAY.md`
+- **Extensibility**: `docs/frameworks/EVALS.md`, `docs/routing/REASONING_REPLAY.md`
 - **Platform**: `docs/guides/ELECTRON_GUIDE.md`, `docs/ops/TUNNELS_GUIDE.md`
 - **AI agents**: `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`

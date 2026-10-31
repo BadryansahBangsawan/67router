@@ -14,14 +14,6 @@ All requests require a valid Bearer token or session cookie. Obtain a token via 
 
 ## Endpoints
 
-- [`GET /api/settings/memory`](references/endpoints.md#get-apisettingsmemory)
-- [`PUT /api/settings/memory`](references/endpoints.md#put-apisettingsmemory)
-- [`GET /api/settings/qdrant`](references/endpoints.md#get-apisettingsqdrant)
-- [`PUT /api/settings/qdrant`](references/endpoints.md#put-apisettingsqdrant)
-- [`GET /api/settings/qdrant/health`](references/endpoints.md#get-apisettingsqdranthealth)
-- [`POST /api/settings/qdrant/search`](references/endpoints.md#post-apisettingsqdrantsearch)
-- [`POST /api/settings/qdrant/cleanup`](references/endpoints.md#post-apisettingsqdrantcleanup)
-- [`GET /api/settings/qdrant/embedding-models`](references/endpoints.md#get-apisettingsqdrantembedding-models)
 - [`GET /api/settings`](references/endpoints.md#get-apisettings)
 - [`PATCH /api/settings`](references/endpoints.md#patch-apisettings)
 - [`POST /api/settings/purge-request-history`](references/endpoints.md#post-apisettingspurge-request-history)

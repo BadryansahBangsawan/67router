@@ -65,8 +65,8 @@ spawn-capable prefixes and fails CI if any is not classified local-only.
 | `/api/jobs`, `/api/jobs/`                                                                                | Job runner control — executes scheduled host-side work                                          |
 | `/api/oauth/cursor/auto-import`                                                                          | `execFile("which", ["cursor"])` before importing creds                                          |
 | `/api/oauth/kiro/auto-import`                                                                            | Reads Kiro CLI credential files from the host                                                   |
-| `/api/skills/collect/`                                                                                   | Skill collection — detects/installs local tooling                                               |
-| `/api/skills/install`, `/api/skills/executions`                                                          | Skill handler registration + execution — reach the sandbox container spawn (GHSA-jx89)          |
+| `/api/skills/collect/`                                                                                   | Skill Collector (removed in 67router; prefix kept loopback-only)                                |
+| `/api/skills/install`, `/api/skills/executions`                                                          | Skills framework (removed in 67router; prefixes kept loopback-only, GHSA-jx89)                  |
 | `/api/discovery/`                                                                                        | Local network/provider discovery probes                                                         |
 | `/api/vnc-session` (`VNC_ROUTE_PREFIX`)                                                                  | Spawns a headful browser + VNC session for interactive logins                                   |
 | `/api/acp/agents`                                                                                        | ACP — discovers and spawns local CLI agent binaries                                             |

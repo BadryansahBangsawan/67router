@@ -101,8 +101,6 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — IDE agent bridge.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — agent skills catalog.
 - [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — cloud agent runtime and providers.
-- [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).
-- [MEMORY.md](frameworks/MEMORY.md) — persistent memory (FTS5 + Qdrant).
 - [EVALS.md](frameworks/EVALS.md) — eval suites.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — gamification & leaderboard system.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — embedded sidecar services (9Router, CLIProxyAPI).

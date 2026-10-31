@@ -230,7 +230,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-inference",
     name: "Inference (OpenAI-compatible)",
     description:
-      "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), rerank, and the Responses API. The primary integration surface for AI agents.",
+      "The core OpenAI-compatible inference endpoints: chat completions, images, audio (TTS/STT), and the Responses API. The primary integration surface for AI agents.",
     category: "api",
     area: "inference",
     icon: "hub",
@@ -394,9 +394,8 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "cli-plugins-skills",
-    name: "CLI: Plugins, Skills & Memory",
-    description:
-      "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI.",
+    name: "CLI: Plugins",
+    description: "Manage plugins (list, install, scaffold, configure) from the CLI.",
     category: "cli",
     area: "cli-plugins-skills",
     icon: "extension",

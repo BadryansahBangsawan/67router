@@ -288,6 +288,5 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 - [A2A-SERVER.md](./A2A-SERVER.md) — A2A deep dive
 - [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Cloud Agents deep dive
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — External CLI integrations (uses ACP)
-- [SKILLS.md](./SKILLS.md) — Skills framework (different from A2A skills — local execution sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint reference
 - Source: `src/lib/{a2a,acp,cloudAgent}/`

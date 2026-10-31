@@ -782,7 +782,6 @@ omniroute completion                   # Generate shell completion
 | `/v1/chat/completions`     | Standard chat (all providers) | All modern tools            |
 | `/v1/responses`            | Responses API (OpenAI format) | Codex, agentic workflows    |
 | `/v1/completions`          | Legacy text completions       | Older tools using `prompt:` |
-| `/v1/embeddings`           | Text embeddings               | RAG, search                 |
 | `/v1/images/generations`   | Image generation              | GPT-Image, Flux, etc.       |
 | `/v1/audio/speech`         | Text-to-speech                | ElevenLabs, OpenAI TTS      |
 | `/v1/audio/transcriptions` | Speech-to-text                | Deepgram, AssemblyAI        |
